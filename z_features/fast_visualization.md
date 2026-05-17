@@ -127,11 +127,122 @@ er = result.max_log_likelihood_tracer.einstein_radius_via_zero_contour_from()
 assert np.isfinite(er) and er > 0, "Einstein radius latent unconstrained — viz regression"
 ```
 
-(Exact attribute paths depend on each Analysis type — `FitInterferometer` uses
-visibilities, `FitPoint` uses image-plane positions, `FitQuantity` uses the
-target field. The assertion *shape* is consistent: "the JIT viz path
-produced a non-zero, finite, parametrised output for each dataset type's
-characteristic plot.")
+### Per-dataset assertion shapes
+
+The imaging block above is the template. Each dataset has a slightly different
+"the JIT viz path produced a non-trivial output" shape — characterised by what
+fails when the viz path silently degenerates (i.e. the failure mode the
+assertion is meant to catch).
+
+#### Imaging (`AnalysisImaging` → `FitImaging`)
+
+Failure mode caught: source-plane reconstruction = 0 (the 2026-05-16 Euclid
+case).
+
+```python
+fit = result.max_log_likelihood_fit
+src = fit.galaxy_image_dict[("galaxies", "source")].array
+assert float(src.sum()) > 0.0, "source image all-zero (viz regression)"
+
+tracer = result.max_log_likelihood_tracer
+tc = tracer.tangential_critical_curve_list_via_zero_contour_from()
+assert len(tc) > 0, "no tangential critical curves (zero_contour regression)"
+
+er = tracer.einstein_radius_via_zero_contour_from()
+assert np.isfinite(er) and er > 0, "einstein_radius latent unconstrained (zero_contour regression)"
+```
+
+#### Interferometer (`AnalysisInterferometer` → `FitInterferometer`)
+
+**Identical lensing-side assertions as imaging** — the source-plane image and
+critical-curve / Einstein-radius computations come from the same `Tracer`.
+The 2026-05-16 all-zero-source-plane bug class applies here unchanged. Plus
+one interferometer-specific assertion on visibilities:
+
+```python
+fit = result.max_log_likelihood_fit
+src = fit.galaxy_image_dict[("galaxies", "source")].array
+assert float(src.sum()) > 0.0, "source image all-zero (viz regression)"
+
+tracer = result.max_log_likelihood_tracer
+tc = tracer.tangential_critical_curve_list_via_zero_contour_from()
+assert len(tc) > 0, "no tangential critical curves (zero_contour regression)"
+
+er = tracer.einstein_radius_via_zero_contour_from()
+assert np.isfinite(er) and er > 0, "einstein_radius latent unconstrained (zero_contour regression)"
+
+# Interferometer-specific: model visibilities must not collapse to zero.
+mv = np.asarray(fit.model_visibilities)
+assert np.isfinite(mv).all() and np.abs(mv).sum() > 0.0, "model visibilities all-zero / nan"
+```
+
+#### Point source (`AnalysisPoint` → `FitPointDataset`)
+
+No source-plane reconstructed *image* (the model is image-plane positions).
+The failure-mode characteristic is "deflections evaluated as zero so source-
+plane positions all land at (0, 0)" — the analogue of the imaging all-zero-
+source bug.
+
+```python
+fit = result.max_log_likelihood_fit
+sp = np.asarray(fit.positions_source_plane)
+data_n = len(fit.positions)
+assert len(sp) == data_n, "lost source-plane positions (deflection regression)"
+assert np.isfinite(sp).all(), "non-finite source-plane positions"
+assert float(np.max(np.linalg.norm(sp - sp.mean(axis=0), axis=1))) > 0.0, \
+    "source-plane positions all coincident at one point (deflection collapse)"
+
+# Lensing-side latents still apply — same Tracer machinery.
+tracer = result.max_log_likelihood_tracer
+er = tracer.einstein_radius_via_zero_contour_from()
+assert np.isfinite(er) and er > 0, "einstein_radius latent unconstrained"
+```
+
+(Note: `FitPointDataset` has no `galaxy_image_dict` and no per-fit critical-
+curve plot in its default subplot, so the imaging assertions don't transfer
+directly. The point-source viz subplot is dominated by the
+positions-on-image-plane scatter overlay; the position-collapse assertion is
+its analogue of the source-plane-all-zero check.)
+
+#### Quantity (`AnalysisQuantity` → `FitQuantity`)
+
+No lensing. The viz subplot is the model field vs the target field with a
+residual map. Failure mode: model field collapses to zeros (e.g. a JAX
+tracer for the field passed through an `np.*` op silently returns zero).
+
+```python
+fit = result.max_log_likelihood_fit
+model = np.asarray(fit.model.array)
+data = np.asarray(fit.dataset.data.array)
+assert np.isfinite(model).all(), "model field has nan/inf"
+assert float(np.abs(model).sum()) > 0.0, "model field all-zero"
+# Residual should not exceed pure-data RMS by an order of magnitude (lower
+# bound on "fit did something").
+rms_resid = float(np.sqrt(np.mean(np.asarray(fit.residual_map.array) ** 2)))
+rms_data = float(np.sqrt(np.mean(data ** 2)))
+assert rms_resid < 10.0 * rms_data, f"residual {rms_resid} >> data {rms_data} (fit collapsed)"
+```
+
+#### Ellipse (`AnalysisEllipse` → `FitEllipse`)
+
+No lensing, no inversion — perimeter-sampled intensities along an ellipse.
+Failure mode is the perimeter intensities being NaN (a JAX trace through the
+ellipse-multipole helpers losing tracer values — exactly the 2026-05-15
+`fix: vmap-blocker bugs in convert.py and FitEllipse cached_property` family).
+
+```python
+fit = result.max_log_likelihood_fit
+intensities = np.asarray(fit.intensities)  # per-perimeter-sample
+assert np.isfinite(intensities).all(), "ellipse perimeter intensities have nan/inf"
+assert float(np.abs(intensities).sum()) > 0.0, "ellipse intensities all-zero"
+# figure_of_merit must be finite (catches log_det / inversion collapse).
+assert np.isfinite(float(fit.figure_of_merit)), "FoM nan/inf — fit collapsed"
+```
+
+(Exact attribute names — `fit.intensities` vs `fit.intensities_perimeter`
+etc. — will be verified against the current `FitEllipse` API when the prompt
+is authored; the principle is "the per-perimeter array that drives the chi²
+is non-zero and finite.")
 
 ### Coverage audit (as of 2026-05-17)
 
