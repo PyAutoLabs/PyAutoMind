@@ -3461,3 +3461,28 @@
     matching existing convention. Tracker z_features/group_lensing_workspace.md
     now has 4 sub-prompts remaining (los_halos, mass_stellar_dark,
     scaling_relation, subhalo_sensitivity).
+
+## rectangular-adapt-cdf
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/322
+- completed: 2026-05-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/323
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/71
+- note: |
+    Scope pivoted mid-session — original plan was a multi-component
+    density framework (magnification + brightness + residual + caustic
+    weighted into one mesh_weight_map). User pulled the brakes; empirical
+    ghost_peak experiment confirmed the real problem was the separable
+    per-axis CDF on multi-modal sources (not the signal richness). Shipped
+    RectangularRotatedAdaptImage as Path A (brightness-weighted PCA
+    pre-rotation). Path B (multi-sub-mesh) prompt-scoped at
+    PyAutoPrompt/autoarray/rectangular_multi_submesh.md as the next step
+    for arbitrary K >= 3 non-collinear peaks.
+
+    Phase 2 density_components framework (compose_density +
+    uniform_density_component, 9 tests) kept as scaffolding for future
+    multi-signal work even though Path A didn't end up using it.
+
+    Demo package rect_adapt_duo shipped under autolens_workspace_developer
+    with a documented chi^2 caveat (rotated mesh delivers ~2x effective
+    resolution per real peak, so under-smooths at fixed regularization;
+    real lens-modelling search would tune coefficient per mesh).
