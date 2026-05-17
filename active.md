@@ -122,3 +122,4 @@
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-adapt-cdf
 - repos:
   - PyAutoArray: feature/rectangular-adapt-cdf
+  - autolens_workspace_developer: feature/rectangular-adapt-cdf
