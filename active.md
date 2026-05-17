@@ -4,6 +4,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-extra-galaxies
 - repos:
+  - autogalaxy_workspace: feature/interferometer-extra-galaxies
 
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
