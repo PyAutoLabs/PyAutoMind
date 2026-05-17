@@ -11,6 +11,11 @@ on:
 
 permissions:
   contents: read
+  # claude-code-action@v1 requires OIDC to fetch a short-lived GitHub
+  # token for repo metadata calls (see `src/github/token.ts:138` —
+  # `setupGitHubToken` → `getOidcToken`). Without this the action exits
+  # with `Could not fetch an OIDC token` before reaching the prompt.
+  id-token: write
 
 jobs:
   pyauto-update-digest:
