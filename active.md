@@ -1,3 +1,22 @@
+## group-scaling-relation
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/167
+- session: claude --resume "group-scaling-relation"
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/group-scaling-relation
+- repos:
+- note: |
+    Conflict override on 2026-05-17 — interferometer-multi-gaussian-expansion
+    is also active on autolens_workspace but touches different feature dirs
+    (interferometer/features/multi_gaussian_expansion vs imaging/features/
+    scaling_relation + group/features/scaling_relation). User confirmed parallel
+    work is fine; both worktrees coexist.
+
+    Two-stage task per the prompt:
+      1. imaging/features/scaling_relation/ — add fit.py + likelihood_function.py.
+      2. group/features/scaling_relation/ — add fit.py + likelihood_function.py
+         using the three-tier API (main lens, individually-modelled extras,
+         scaling-tier extras).
+
 ## interferometer-shapelets
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/170
 - session: claude --resume "interferometer-shapelets"
