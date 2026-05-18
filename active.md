@@ -5,6 +5,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/external-potential
 - repos:
+  - PyAutoGalaxy: feature/external-potential
 - summary: |
     Add `ag.mp.ExternalPotential` mass profile (Powell 2022 Eq 4) as a
     sibling of `ExternalShear` in autogalaxy/profiles/mass/sheets/.
