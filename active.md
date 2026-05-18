@@ -61,3 +61,11 @@
       (workspace) extend convolution.py + new convolution_oversampled.py + simulator.py
 
 
+
+## docs-mass-rst-sync
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/519
+- session: claude --resume "docs-mass-rst-sync"
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/docs-mass-rst-sync
+- repos:
+  - PyAutoLens: feature/docs-mass-rst-sync
