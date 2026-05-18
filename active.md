@@ -74,3 +74,4 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/cluster-modeling-v2
 - repos:
+  - autolens_workspace: feature/cluster-modeling-v2
