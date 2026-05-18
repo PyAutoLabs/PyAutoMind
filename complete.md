@@ -1,4 +1,11 @@
 
+## external-potential-priors-and-jit
+- issue: (none — follow-up to #419 / #422)
+- completed: 2026-05-18
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/423
+- workspace-test-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/101
+- notes: Closed two gaps from the external-potential ship the same day: (1) `af.Model(ag.mp.ExternalPotential)` was crashing at runtime because there was no library-default prior YAML — added `autogalaxy/config/priors/mass/sheets/external_potential.yaml` mirroring ExternalShear's gamma priors (Uniform(-0.3, 0.3), Absolute width_modifier 0.05) for all six γ/τ/δ components plus Gaussian(0, 0.1) centre matching Isothermal/MassSheet; (2) no JAX JIT parity test, fixed by adding an ExternalPotential block to `autolens_workspace_test/scripts/profiles_jit.py` parallel to the ExternalShear block (deflections + convergence on Grid2DIrregular and Grid2D.uniform). The new block forced a small extension to `check_profile_method` — added `atol` kwarg (default 0.0, existing callers unaffected) because ExternalPotential's convergence `κ = τ₁·x + τ₂·y` legitimately crosses zero on the τ-null line, where the rtol-only `assert_allclose` blows up on sub-machine-precision (2e-19) reductions; passing `atol=1e-12` puts a sub-physical floor under the comparison. Verified: `af.Model(ag.mp.ExternalPotential).instance_from_prior_medians()` returns an 8-param model (centre + γ/τ/δ); profiles_jit.py prints "All profiles_jit.py checks passed." and 909/909 PyAutoGalaxy tests stay green. grids.yaml entry skipped — grep confirmed no library code reads `radial_minimum` or `"grids"` (the 14 workspace copies are vestigial). Follow-up note posted on closed issue #419 so @Sketos sees the priors landed. Also updated `autolens_workspace_test/CLAUDE.md` and `scripts/CLAUDE.md` to list `mp.ExternalPotential` in the profiles_jit coverage.
+
 ## external-potential
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/419
 - user-facing: true (reporter @Sketos)
