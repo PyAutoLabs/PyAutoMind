@@ -87,3 +87,12 @@
 - worktree: ~/Code/PyAutoLabs-wt/cluster-scaling-members
 - repos:
   - autolens_workspace: feature/cluster-scaling-members
+
+## ep-profiling-breakdown
+- issue: https://github.com/Jammy2211/ic50_workspace/issues/6
+- session: claude --resume "ep-profiling-breakdown"
+- status: workspace-dev
+- repos:
+  - ic50_workspace: feature/ep-profiling-breakdown
+- note: |
+    z_projects/ic50_workspace — no worktree (see [[reference_ic50_workspace_nonstandard]]).
