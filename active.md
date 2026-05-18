@@ -60,3 +60,10 @@
       8. End-to-end library integration test
       (workspace) extend convolution.py + new convolution_oversampled.py + simulator.py
 
+## subplot-fit-mid-zoom
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/517
+- session: claude --resume "subplot-fit-mid-zoom"
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/subplot-fit-mid-zoom
+- repos:
+
