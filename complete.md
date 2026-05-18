@@ -1,4 +1,10 @@
 
+## workspace-version-mismatch-advice
+- issue: (none — direct request)
+- completed: 2026-05-18
+- library-pr: https://github.com/PyAutoLabs/PyAutoConf/pull/107
+- notes: Rewrote `WorkspaceVersionMismatchError` message in PyAutoConf/autoconf/workspace.py to give directional update advice. Workspace newer than library → `pip install --upgrade <lib>==<workspace_version>` (lib derived by stripping `_workspace` from the workspace folder name: `autolens_workspace` → `autolens`, etc.). Library newer than workspace → `cd <workspace_root> && git pull origin main`. Unparseable versions fall back to showing both. Dropped the `git clone --branch <version> <workspace-repo-url>` instruction since we no longer cut workspace version branches. Bypass instructions (`workspace_version_check: False`) and the `main`-branch IMPORTANT note are preserved. Four private helpers added (`_parse_version`, `_library_name_from_workspace`, `_update_library_block`, `_update_workspace_block`); public surface unchanged. All 14 `test_workspace.py` tests pass without modification (assertions matched both old and new message). Zero workspace-script references to the error or its message text. Merged directly without smoke tests — error fires only on import-time version mismatch, which smoke tests don't exercise.
+
 ## multipole-light-profiles
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/418
 - completed: 2026-05-18
