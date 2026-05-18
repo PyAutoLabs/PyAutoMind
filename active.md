@@ -64,15 +64,6 @@
 
 
 
-## profile-guide-followup-cleanup
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/182
-- session: claude --resume "profile-guide-followup-cleanup"
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/profile-guide-followup-cleanup
-- repos:
-  - autogalaxy_workspace: feature/profile-guide-followup-cleanup
-  - autolens_workspace: feature/profile-guide-followup-cleanup
-
 ## source-science-parametric
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/72
 - session: claude --resume "source-science-parametric"
@@ -80,3 +71,11 @@
 - worktree: ~/Code/PyAutoLabs-wt/source-science-parametric
 - repos:
   - autolens_workspace_developer: feature/source-science-parametric
+
+## weak-visualization
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/496
+- session: claude --resume "weak-visualization"
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/weak-visualization
+- repos:
+  - PyAutoLens: feature/weak-visualization
