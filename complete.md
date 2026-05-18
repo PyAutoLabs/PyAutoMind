@@ -3617,3 +3617,10 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/520
 - repos: PyAutoLens
 - notes: Pure rST docs sync — brought PyAutoLens/docs/api/mass.rst into line with the al.mp.* / al.lmp.* / al.lmp_linear.* namespaces it documents. Added missing entries to Total (dPIE family), Mass Sheets (ExternalPotential), Stellar (GaussianGradient, SersicCore*), Dark (cNFW family, virial-mass variants). Moved PointMass out of Total into a new Point Mass section that also lists SMBH / SMBHBinary. Added two new sections at the bottom: Stellar Light+Mass [ag.lmp] and Linear Light+Mass [ag.lmp_linear]. No Python code touched. Surfaced as follow-up while writing the autolens_workspace mass / light+mass guides (#178 / #180).
+
+## profile-return-type-fixes
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/424
+- completed: 2026-05-18
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/425
+- repos: PyAutoGalaxy
+- notes: Two profile-return-type bugs flagged while writing the autolens_workspace profiles guides. (1) Basis.image_2d_list_from's LightProfileLinear placeholder was a raw xp.zeros((N,)) ndarray, so Basis.image_2d_from returned a raw ndarray instead of Array2D when every constituent was linear (the MGE case) — wrapped in aa.Array2D(values=..., mask=grid.mask). (2) dPIEPotential.convergence_2d_from was decorated @aa.decorators.to_vector_yx (copy-paste from the deflections method directly above) instead of @aa.decorators.to_array — wrapped the scalar convergence as a VectorYX2D. Swapped to @to_array; dPIEPotentialSph already had the correct decorator. Regression tests added in test_basis.py and test_dual_pseudo_isothermal_potential.py. 911 tests pass. No workspace migration needed — workarounds in autolens_workspace/scripts/guides/profiles/{light,mass}.py are obsolete but harmless.
