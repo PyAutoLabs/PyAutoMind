@@ -78,3 +78,10 @@
   - PyAutoLens: feature/subplot-fit-mid-zoom
   - PyAutoArray: feature/subplot-fit-mid-zoom
 
+
+## mass-profiles-guide
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/178
+- session: claude --resume "mass-profiles-guide"
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/mass-profiles-guide
+- repos:
