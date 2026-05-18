@@ -67,3 +67,4 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/light-mass-profiles-guide
 - repos:
+  - autolens_workspace: feature/light-mass-profiles-guide
