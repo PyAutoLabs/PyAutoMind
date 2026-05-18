@@ -1,4 +1,10 @@
 
+## ic50-graphical-fit
+- issue: https://github.com/Jammy2211/ic50_workspace/issues/1
+- completed: 2026-05-18
+- workspace-pr: https://github.com/Jammy2211/ic50_workspace/pull/2
+- notes: Added graphical-model fit variant of the EP pipeline in `z_projects/ic50_workspace`. New `scripts/graphical_sim.py` + `scripts/graphical_real.py` mirror the EP scripts but fit the full factor graph (33 params for the sim run: 5×3 Hill + 5×3 coef_matrix + 3 coef_mean) in a single Dynesty search over `factor_graph.global_prior_model` instead of EP message passing. `scripts/util.py` extended with `GraphicalLinearAnalysis` (reads `hill_coef` as a free param via the shared-prior wiring in `build_model_linear`; Gaussian regression constraint with fixed `DEFAULT_REGRESSION_SIGMAS = (0.5, 0.5, 6000.0)` matching `coef_matrix_prior_sigmas`), `run_graphical_fit`, and a `write_graphical_summary` shim. `write_ep_summary` parameterised with `method=` kwarg so the same writer produces `<method>_<name>_summary.{txt,json}` for both paths; column headers neutralised to `mean` / `σ`. **No worktree** — `z_projects/ic50_workspace` lives outside `$PYAUTO_MAIN/<repo>` so the worktree helper can't manage it; worked directly on `feature/ic50-graphical-fit` in the canonical checkout and ran the ship step in Opus (the Sonnet-subagent delegation in `/ship_workspace` assumes a worktree path). **No `pending-release` label** on `Jammy2211/ic50_workspace` — `ensure_workspace_labels.sh` doesn't cover this repo; PR was opened without the label. Proper-run validation (no `PYAUTO_TEST_MODE`) was deferred — both scripts only smoke-tested under test mode. Notebook regeneration via `PyAutoBuild/autobuild/generate.py ic50` picked up the two new scripts and also produced notebook-serialization-format drift in four unrelated notebooks (`simulator`, `likelihood_function`, `preprocess_real`, `least_squares`); all committed together to keep `notebooks/` in sync with the current generator.
+
 ## external-potential-priors-and-jit
 - issue: (none — follow-up to #419 / #422)
 - completed: 2026-05-18

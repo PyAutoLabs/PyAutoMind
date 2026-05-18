@@ -1,3 +1,10 @@
+## likelihood-function-assertions
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/102
+- session: claude --resume "likelihood-function-assertions"
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-function-assertions
+- repos:
+
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
 - session: claude --resume "profile-smoke-test-runtime"
@@ -68,16 +75,4 @@
 - repos:
   - PyAutoLens: feature/subplot-fit-mid-zoom
   - PyAutoArray: feature/subplot-fit-mid-zoom
-
-## ic50-graphical-fit
-- issue: https://github.com/Jammy2211/ic50_workspace/issues/1
-- session: claude --resume "ic50-graphical-fit"
-- status: workspace-dev
-- repos:
-  - ic50_workspace: feature/ic50-graphical-fit
-- note: |
-    Works in the canonical checkout at z_projects/ic50_workspace — no worktree
-    because admin_jammy/software/worktree.sh expects top-level $PYAUTO_MAIN/<repo>
-    and cannot handle the z_projects/ nesting. Post-merge cleanup will be a plain
-    branch delete (no worktree_remove call).
 
