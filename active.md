@@ -60,3 +60,9 @@
       8. End-to-end library integration test
       (workspace) extend convolution.py + new convolution_oversampled.py + simulator.py
 
+## multipole-light-profiles
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/418
+- session: claude --resume "multipole-light-profiles"
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/multipole-light-profiles
+- repos:
