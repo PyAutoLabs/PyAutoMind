@@ -66,4 +66,6 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/subplot-fit-mid-zoom
 - repos:
+  - PyAutoLens: feature/subplot-fit-mid-zoom
+  - PyAutoArray: feature/subplot-fit-mid-zoom
 
