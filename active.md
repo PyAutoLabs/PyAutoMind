@@ -72,3 +72,10 @@
 - repos:
   - autogalaxy_workspace: feature/profile-guide-followup-cleanup
   - autolens_workspace: feature/profile-guide-followup-cleanup
+
+## source-science-parametric
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/72
+- session: claude --resume "source-science-parametric"
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/source-science-parametric
+- repos:

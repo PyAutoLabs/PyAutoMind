@@ -16,5 +16,8 @@ First, can you run the simulator, and then set up model fit using a Sersic sourc
 and source magnificaition to the truth. For this sipmple example, I expect we will get acccurate results.
 
 Then do the same thing but for a Multi Gaussian Expansion (See @autolens_workspace/scripts/imaging/features/multi_gaussian_expansion)
-lens light model, but keep the Sersic sourcde. Then do another fit, with the source also an MGE. WE can then assess
-the results and decide where to go next.w
+lens light model, but keep the Sersic sourcde. Then do another fit, with the source also an MGE. 
+
+I believe with codex a startinbg point is already there, but expand and build on this to the point we can be
+confident our source magnitdue calculations for parametric sources. We will then follow up with RectangularAdaptImage
+and Delaunay fits and source magnitude / magnification comparisons.
