@@ -74,7 +74,8 @@
 ## weak-fit
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/524
 - session: claude --resume "weak-fit"
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/525
 - worktree: ~/Code/PyAutoLabs-wt/weak-fit
 - repos:
   - PyAutoLens: feature/weak-fit
