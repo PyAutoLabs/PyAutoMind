@@ -1,8 +1,9 @@
 ## multipole-scaled-jax
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/426
 - session: claude --resume "multipole-scaled-jax"
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/multipole-scaled-jax
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/427
 - repos:
   - PyAutoGalaxy: feature/multipole-scaled-jax
 - conflict-override: |
