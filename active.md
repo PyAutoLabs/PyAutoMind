@@ -4,6 +4,11 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/multipole-scaled-jax
 - repos:
+  - PyAutoGalaxy: feature/multipole-scaled-jax
+- conflict-override: |
+    cluster-csv-api also holds PyAutoGalaxy via feature/cluster-csv-api. This
+    task edits autogalaxy/ellipse/ellipse/ellipse_multipole.py; cluster-csv-api
+    is workspace-dev with no overlap on the ellipse module. Disjoint diffs.
 
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
