@@ -83,5 +83,5 @@
 - worktree: ~/Code/PyAutoLabs-wt/cluster-csv-api
 - repos:
   - PyAutoGalaxy: feature/cluster-csv-api
-- note: PyAutoLens re-exports of new helpers deferred — PyAutoLens currently held by weak-fit. Workspace consumption (via al.X) blocked until either weak-fit ships or this task picks up PyAutoLens later.
+  - PyAutoLens: feature/cluster-csv-api
 
