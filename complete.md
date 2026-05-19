@@ -1,4 +1,11 @@
 
+## source-science-parametric
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/72
+- completed: 2026-05-19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/73
+- repos: autolens_workspace_developer
+- notes: First in a planned series of source-science recovery tests. Refactored Codex baseline `fit_compare.py` to add posterior expansion (50 draws via `samples.draw_randomly_via_pdf`) with per-draw `FitImaging.tracer_linear_light_profiles_to_light_profiles` to solve MGE intensities; added structured JSON + Markdown comparison + per-fit subplot PNGs. Bumped `path_prefix`/`unique_tag` to `source_science_v3` because cached v2 MGE samples were incompatible with current `mge_model_from` (PyAutoGalaxy commit `44f8db0b` made per-basis `ell_comps` independent). Headline finding: no parametric model recovers truth within posterior 1σ on any quantity, highest-evidence model (MGE+MGE) has worst recovery (magnification -44%, magnitude -0.77 mag); MGE source likely absorbs diffuse residual flux into wide-σ Gaussians, inflating source-plane flux ~2× while image-plane flux only inflates ~14%. Tutorial assessment caught 2 real bugs in `autolens_workspace` pixelization tutorial (line 280 noise-map interpolation passes wrong array; line 156/235 missing pixel-area factor) — held for follow-up issue since that workspace is held by another active task. Standalone summary persisted at `source_science/results/1_summary.md` for the planned series. Next experiments (separate issues): `radius_break` re-test to match truth's `SersicCore` default 0.025, MGE σ-cap test, then `RectangularAdaptImage` + `Delaunay` pixelization comparisons.
+
 ## cluster-scaling-members
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/184
 - completed: 2026-05-18

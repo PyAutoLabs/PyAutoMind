@@ -64,14 +64,6 @@
 
 
 
-## source-science-parametric
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/72
-- session: claude --resume "source-science-parametric"
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/source-science-parametric
-- repos:
-  - autolens_workspace_developer: feature/source-science-parametric
-
 ## weak-fit
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/524
 - session: claude --resume "weak-fit"
