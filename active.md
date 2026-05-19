@@ -60,13 +60,6 @@
       8. End-to-end library integration test
       (workspace) extend convolution.py + new convolution_oversampled.py + simulator.py
 
-## cluster-test-workspace
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/104
-- session: claude --resume "cluster-test-workspace"
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/cluster-test-workspace
-- repos:
-  - autolens_workspace_test: feature/cluster-test-workspace
 
 
 
