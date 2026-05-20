@@ -104,6 +104,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/truncated-gaussian-fast-path
 - repos:
+  - PyAutoFit: feature/truncated-gaussian-fast-path
 - summary: |
     Replace scipy.stats.norm.cdf/ppf inside
     TruncatedGaussianPrior.value_for with direct erf/erfinv calls from
