@@ -79,26 +79,3 @@
     searches/, searches_minimal/ — stash before /start_workspace cuts
     the feature/graphical-ep-scale-up worktree.
 
-## drawer-jax-fom-coerce
-- issue: (chat-reported, no GitHub issue)
-- session: claude --resume "drawer-jax-fom-coerce"
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/drawer-jax-fom-coerce
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1283
-- repos:
-  - PyAutoFit: feature/drawer-jax-fom-coerce
-- summary: |
-    User reported `TypeError: Object of type ArrayImpl is not JSON serializable`
-    running autogalaxy_workspace ellipse.py with af.Drawer + use_jax=True.
-    AbstractInitializer.figure_of_metric returned the raw fitness output;
-    under JAX-backed Fitness that is a 0-d jax.Array which propagated into
-    Drawer's search_internal["log_posterior_list"] → samples_info → save_json
-    → json.dump → crash. Drawer is the only search that puts the full
-    search_internal dict into samples_info, which is why no other search
-    exposes the same bug. Fitness.call_wrap's existing float() coercion only
-    fires when use_jax_jit=True; Drawer constructs Fitness with use_jax_jit
-    =False so it never covered this path. Fix: coerce at the producer.
-
-    Internal-only change (no API surface affected, no workspace scripts
-    reference the private symbol). Library suite 1259 passed / 1 skipped.
-
