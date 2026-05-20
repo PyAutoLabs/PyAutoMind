@@ -66,6 +66,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/graphical-ep-scale-up
 - repos:
+  - autofit_workspace_developer: feature/graphical-ep-scale-up
 - summary: |
     Scaffold top-level `graphical/` and `ep/` example packages in
     autofit_workspace_developer adapted from z_projects/concr/scripts/toy/.
