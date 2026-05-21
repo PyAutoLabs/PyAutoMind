@@ -35,68 +35,198 @@ So the unlock for "JAX-jit'd visualization" is mostly **enablement** of code
 that already exists, plus a regression net to prevent the next default flip
 from silently shipping broken on dataset types that have no end-to-end test.
 
-## Phase A — Flip `critical_curves_method` default to `zero_contour`
+## Update — what we discovered after writing this tracker (2026-05-21)
 
-**Scope:** one-line config change in PyAutoGalaxy, plus workspace-config
-mirroring. Unlocks JAX-jittable critical curves / caustics for every fit by
-default.
+Two findings shift the sequencing meaningfully.
 
-**Prompt file:** `autogalaxy/critical_curves_method_default_zero_contour.md` (to author)
+**1. The April 2026 zero_contour revert.** A separate, earlier attempt to
+flip `critical_curves_method` to `zero_contour` shipped on **2026-04-18**
+(PyAutoGalaxy commit `aea3bc95`) and was **reverted on 2026-04-19**
+(commit `abd7b717`). The revert message describes the *same shape* of
+silent-zero failure as the 2026-05-16 Euclid regression that prompted this
+tracker — `ZeroSolver` raising inside model-fits and the exception getting
+swallowed by `_compute_critical_curve_lines` at
+`PyAutoLens/autolens/imaging/plot/fit_imaging_plots.py:52`
+(`except Exception: return None, None, None, None`). So Phase D's
+"regression net" is not optional polish — it is the **prerequisite for any
+future Phase A flip to be safe**.
+
+**2. `zero_contour` has a cache-busting performance bug.** A CPU benchmark
+on an SIE + circular source shows:
+
+| Method | First call | Warm calls |
+|---|---|---|
+| marching_squares | 32 ms | 32 ms |
+| zero_contour (current code, closure busts cache) | 10300 ms | ~10300 ms |
+| zero_contour (reused `f`/solver) | 10679 ms | **66 ms** |
+| zero_contour, JIT disabled (`JAX_DISABLE_JIT=1`) | >10 min (timeout) | n/a |
+
+`_critical_curve_list_via_zero_contour` at
+`PyAutoGalaxy/autogalaxy/operate/lens_calc.py:1167-1170` builds a fresh
+`f = self._make_eigen_fn(...)` and `solver = ZeroSolver(...)` on every call,
+so JAX cannot reuse its compiled function cache and every call pays the
+full ~10 s compile cost. With `(f, solver)` cached, warm calls drop to
+~66 ms — *under* the 100 ms threshold needed for it to be a sensible
+default for any JIT'd likelihood function. **This is the real reason the
+April default flip failed**, not just the broad-except / silent-zero issue.
+
+This also tells us where `zero_contour` belongs and where it doesn't:
+JIT'd likelihood / latent code (Phase B's call sites) gets ZeroSolver
+baked into the outer XLA graph so per-iteration cost is negligible. A
+plain one-shot plotting call still has to pay the 10 s compile, then
+warm runs at ~66 ms — so `marching_squares` stays the natural default
+for non-JIT, single-call plotting, and `zero_contour` becomes the default
+for any JIT'd context. Phase A's config flip is therefore not an
+unconditional switch but a re-statement of this rule: the config switch
+controls the *plotter's* default (stays `marching_squares` for non-JIT
+ergonomics), while JIT'd callers route via the explicit
+`_via_zero_contour_from()` methods regardless of config.
+
+**3. `BackgroundQuickUpdate` already shipped.** Phase C's "no subprocess
+complexity" preference is already realised — PyAutoFit commit `1fee93174`
+adds `autofit/non_linear/quick_update.py::BackgroundQuickUpdate`, a daemon
+`threading.Thread` with latest-only drop backpressure, wired into the
+Nautilus sampler at `search/nest/nautilus/search.py:196,216` via the
+`background_quick_update` kwarg. So Phase C reduces to "wire
+`IPython.display.update_display(fig, display_id=...)` into the existing
+`perform_quick_update` path" — no new subprocess / IPC architecture
+needed. Phase F (subprocess viz) is now likely obsolete.
+
+These findings produce a new **Phase A′** (below) as a hard prerequisite
+for Phase A, and a small retargeting of Phase B.
+
+## Phase A′ — Fix `zero_contour` perf + safety so it can be a default
+
+**Scope:** address both findings above so the eventual Phase A config flip
+can ship safely. No config flip in this phase — that's Phase A.
+
+**Prompt file:** `autogalaxy/fast_viz_zero_contour_perf_fix.md`
+
+Three coupled changes, one PR pair:
+
+1. **PyAutoGalaxy** `autogalaxy/operate/lens_calc.py` — cache `(f, solver)`
+   inside `LensCalc` keyed on `(kind, pixel_scales, tol, max_newton)` so
+   subsequent calls reuse JAX's compiled function cache. Target: warm
+   call < 100 ms on CPU.
+
+2. **PyAutoLens** `autolens/imaging/plot/fit_imaging_plots.py:52` — replace
+   the bare `except Exception: return None, None, None, None` with
+   specific recoverable catches (`ModuleNotFoundError` for missing
+   `jax_zero_contour`, `ValueError` for "no zero crossings" from
+   `_init_guess_from_coarse_grid`). Anything else is logged with
+   `logger.warning(..., exc_info=True)` and still returns the no-overlay
+   tuple — silent collapse becomes a loud warning.
+
+3. **autolens_workspace_test** `scripts/imaging/modeling_visualization_jit.py`
+   — add the first `__Visualization Sanity__` block per the Phase D
+   template, plus an explicit perf assertion that re-running
+   `tangential_critical_curve_list_via_zero_contour_from()` on the same
+   `LensCalc` stays under 100 ms on the second call. Regression net both
+   for the silent-zero failure mode *and* for any future code change that
+   re-introduces the closure-cache-busting bug.
+
+Verification step: `/smoke_test` against
+`euclid_strong_lens_modeling_pipeline` after the library changes land,
+to confirm the pipeline scripts still run cleanly.
+
+## Phase A — Make the plotter dispatch context-aware (revised scope)
+
+> *Original scope (flip the YAML default to `zero_contour`) is superseded
+> by the 2026-05-21 benchmark finding above. With the cache fix from
+> Phase A′, `zero_contour` is fast under JIT but still pays a one-time
+> ~10 s compile on first non-JIT call. Keeping `marching_squares` as the
+> plotter default avoids that compile hit for one-shot plotting.*
+
+**Revised scope:** instead of flipping the YAML, make the plotter
+dispatch in `autogalaxy/plot/plot_utils.py::_critical_curves_from`
+context-aware. Inside a JAX trace (detect via `jax.core.is_traced(...)`
+or equivalent), route to `_via_zero_contour_from()` unconditionally —
+`marching_squares` isn't JAX-traceable anyway, so the config switch in
+this path is meaningless. Outside a trace, honour the YAML default
+(`marching_squares`). The end-user experience is: one-shot plots remain
+snappy, JIT'd likelihood / latent paths transparently get the
+JAX-traceable path.
+
+**Prompt file:** `autogalaxy/critical_curves_method_context_aware.md` (to author after Phase A′ ships)
 
 Touches:
-- `PyAutoGalaxy/autogalaxy/config/visualize/general.yaml:8` — flip
-  `marching_squares` → `zero_contour`.
-- Each workspace's `config/visualize/general.yaml` — mirror, since workspace
-  configs override library defaults (see auto-memory
-  `feedback_workspace_config_default_true`).
-- New unit test: viz path with `use_jax=True` produces non-empty critical
-  curves overlay on a synthetic SIE + circular source.
+- `PyAutoGalaxy/autogalaxy/plot/plot_utils.py::_critical_curves_from` —
+  add tracer-detection branch.
+- `PyAutoGalaxy/autogalaxy/config/visualize/general.yaml` — leave at
+  `marching_squares`; update inline comment to document the auto-routing
+  behaviour for JIT'd callers.
+- Unit test: under `jax.jit`, the plotter routes to zero_contour even
+  with `marching_squares` configured.
 
-**Risk:** `jax_zero_contour` not installed on every environment (Python <3.11
-gates it out). The existing `_critical_curves_method_resolved` fallback in
-`plot_utils.py` already handles this — verify the fallback fires correctly on
-a Python 3.10 env (or skip the test there).
+**Risk:** `jax.core.is_traced` is not a stable public API. If the
+detection helper needs to be hardened, the simpler fallback is "ask the
+caller to pass `xp` and route on `xp is not np`" — already the pattern
+elsewhere in the codebase. Pick whichever has fewer footguns at
+implementation time.
 
 ## Phase B — Migrate latent-variable call sites to `_via_zero_contour`
 
 **Scope:** swap `tracer.einstein_radius_from(grid=...)` (legacy, marching
-squares) for `tracer.einstein_radius_via_zero_contour_from()` (JAX-jittable)
-in every latent-variable call site. Once done, drop the `self._use_jax = False`
-workaround in `compute_latent_samples` (this is what forced Euclid latents
-onto numpy for the Einstein radius).
+squares, not JAX-traceable) for
+`tracer.einstein_radius_via_zero_contour_from()` (JAX-traceable, fast under
+JIT after Phase A′ caching). Once done, drop the `self._use_jax = False`
+workaround pattern wherever it forces Euclid-style latents onto numpy for
+the Einstein radius.
 
-**Prompt file:** `autolens_workspace_test/einstein_radius_zero_contour_migration.md` (to author)
+**Prompt file:** `euclid_strong_lens_modeling_pipeline/einstein_radius_zero_contour_migration.md` (to author)
 
-Known call sites to migrate:
-- `z_projects/euclid/scripts/util.py:compute_latent_variables` (line ~580) —
-  computes `effective_einstein_radius` via the old method; the
-  `compute_latent_samples` workaround forces numpy.
-- `z_projects/euclid_pre_f2f/scripts/util.py` and `z_projects/euclid_group`
-  (audit — likely same pattern).
+> `z_projects/euclid` is **live science work** (the DR1 catalogue paper) and
+> must not be edited as part of this roadmap. The canonical
+> library-development twin is `euclid_strong_lens_modeling_pipeline/`, which
+> is the workspace this prompt targets. After the pipeline workspace is
+> green, the science branch picks up the change on its own cadence.
+
+Known call sites to migrate (pipeline workspace):
+- `euclid_strong_lens_modeling_pipeline/util.py:491` — the
+  `effective_einstein_radius` latent is currently **commented out** here.
+  Re-enable it via `einstein_radius_via_zero_contour_from()` and add it
+  back to the returned tuple at line 506.
 - `autolens_workspace/scripts/guides/results/latent.py` — audit.
 
-For each migrated script, end-to-end test under `use_jax=True` and confirm
-the JAX path stays on; no `_use_jax = False` flip required.
+Verification: `/smoke_test` against `euclid_strong_lens_modeling_pipeline`
+must run cleanly under `use_jax=True`, confirming both that the latent
+computes and that the JAX path stays on (no `_use_jax = False` flip
+required).
 
 ## Phase C — Live Jupyter cell rendering via `IPython.display.update_display`
 
-**Scope:** in `perform_quick_update`, additionally call
-`IPython.display.update_display(fig, display_id="fit_progress")` when running
-inside a Jupyter kernel. Cell updates in place during the fit. No subprocess
-needed.
+**Scope reduction (2026-05-21):** the "render off the main thread" half
+of this phase already shipped in PyAutoFit commit `1fee93174`. That
+commit added `autofit/non_linear/quick_update.py::BackgroundQuickUpdate`
+— a daemon `threading.Thread` with a latest-only drop backpressure
+policy and a `_convert_jax_to_numpy(instance)` step so the worker thread
+never touches JAX/GPU state — and wired it into the Nautilus sampler at
+`search/nest/nautilus/search.py:196,216` behind the `background_quick_update`
+kwarg. No subprocess, no pickle, no IPC machinery needed. So Phase C
+reduces to the IPython display layer.
 
-**Prompt file:** `autofit/quick_update_display_id.md` (to author)
+**Remaining scope:** in `perform_quick_update` (the function the background
+thread calls), additionally call
+`IPython.display.update_display(fig, display_id="fit_progress")` when
+running inside a Jupyter kernel. Cell updates in place during the fit;
+falls back to writing PNG only when not in a kernel.
+
+**Prompt file:** `autofit/quick_update_display_id.md` (to author after Phase A′ ships)
 
 Touches:
-- `PyAutoFit/autofit/non_linear/quick_update.py` — detect IPython kernel via
-  `get_ipython()`, set a stable `display_id` on first call, `update_display`
-  on subsequent calls.
+- `PyAutoFit/autofit/non_linear/quick_update.py::BackgroundQuickUpdate._process_pending`
+  (the call site that invokes `analysis.perform_quick_update`) — detect
+  IPython kernel via `get_ipython()`, set a stable `display_id` on first
+  call, `update_display` on subsequent calls.
+- The visualizer call sites that produce the figure (`subplot_fit.png`)
+  — return the `matplotlib.figure.Figure` alongside the save so the
+  display layer can hand it to `IPython.display`.
 - Falls back gracefully outside Jupyter (still writes PNG to disk).
 - Smoke test: a notebook-style script that runs a tiny Nautilus fit and
   observes the display message stream.
 
-Depends on **Phase A** landing first (so the rendered figure is JAX-jit
-fast enough to be worth watching).
+Depends on **Phase A′** landing first (so the rendered figure's critical
+curves / latents are JAX-jit fast enough to be worth watching).
 
 ## Phase D — Per-dataset end-to-end JAX-jit visualization tests
 
