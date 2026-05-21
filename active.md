@@ -1,12 +1,3 @@
-## viz-sanity-rollout-jit-scripts
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/112
-- session: claude --resume "viz-sanity-rollout-jit-scripts"
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/viz-sanity-rollout-jit-scripts
-- repos:
-  - autolens_workspace_test: feature/viz-sanity-rollout-jit-scripts
-  - autogalaxy_workspace_test: feature/viz-sanity-rollout-jit-scripts
-
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
 - session: claude --resume "profile-smoke-test-runtime"
