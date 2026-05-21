@@ -150,6 +150,57 @@ Three tests:
   calls use `update_display(...)` with the same id. Mock the IPython
   imports so the test runs without a live kernel.
 
+### 5. Document in `autofit_workspace/scripts/cookbooks/analysis.py`
+
+The analysis cookbook currently has zero coverage of
+`iterations_per_quick_update`, `background_quick_update`, or any other
+live-visualization mechanic (verified: `grep "quick_update" cookbooks/analysis.py`
+returns no matches). After the library change lands, add a new section
+after the existing `__Visualization__` section (line ~198) titled
+`__Live Quick-Update Visualization__` covering:
+
+1. **What `iterations_per_quick_update` does** — the search calls
+   `analysis.perform_quick_update(paths, instance)` every N likelihood
+   evaluations using the current best-fit `instance`, producing
+   `subplot_fit.png` etc. in the output folder so users can monitor the
+   fit without waiting for completion.
+2. **The `background_quick_update=True` opt-in** (Nautilus today) —
+   runs the render on a daemon `threading.Thread` so the search isn't
+   paused while matplotlib saves PNGs. Latest-only drop policy: if a
+   new best-fit arrives before the previous render finishes, the older
+   request is silently replaced.
+3. **What this PR adds** — when running inside a Jupyter or Colab
+   kernel, the cell that ran `search.fit(...)` **auto-updates in
+   place** during the fit. A single image element refreshes every
+   `iterations_per_quick_update` likelihood evaluations rather than a
+   wall of stacked frames. No code change needed by the user; the
+   `BackgroundQuickUpdate` worker detects the kernel and pushes the
+   freshly-written `subplot_fit.png` via `IPython.display.update_display`
+   with a stable `display_id`.
+4. **Script mode unchanged** — when running outside a kernel
+   (`python my_fit.py`), the PNGs still land on disk and nothing is
+   displayed inline. No new dependency at search time; `IPython` is
+   only imported when actually running inside a kernel.
+5. **Opt-out** — `PYAUTO_DISABLE_IPYTHON_DISPLAY=1` skips the display
+   step even when running inside a kernel, for papermill / automated
+   nbconvert pipelines that don't want display side effects.
+6. **A small worked example** at the bottom of the section: a 5-line
+   snippet showing `af.Nautilus(iterations_per_quick_update=50,
+   number_of_cores=1, ...)` with `background_quick_update=True`, plus
+   a brief note about how to view the output (cell shows the live
+   image; PNG also on disk at `paths.image_path / "subplot_fit.png"`).
+
+Style: match the surrounding cookbook prose (`"""..."""` blocks with
+`__Section__` headers, prose explaining the concept then a code
+example). Don't include a runnable Nautilus fit in the cookbook itself
+— the existing convention is to comment out non-trivial searches and
+just show the API shape.
+
+After the script is updated, regenerate the corresponding notebook via
+PyAutoBuild's `py_to_notebook` (or it'll regenerate automatically on
+the next `/pre_build`). The workspace PR should include the regenerated
+`.ipynb`.
+
 ## Smoke validation
 
 After implementation, create a tiny notebook-style script (Python `.py`
