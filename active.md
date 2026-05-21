@@ -1,13 +1,3 @@
-## quick-update-display-id
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1289
-- session: claude --resume "quick-update-display-id"
-- status: workspace-dev
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1290 (merged)
-- worktree: ~/Code/PyAutoLabs-wt/quick-update-display-id
-- repos:
-  - PyAutoFit: feature/quick-update-display-id
-  - autofit_workspace: feature/quick-update-display-id
-
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
 - session: claude --resume "profile-smoke-test-runtime"
