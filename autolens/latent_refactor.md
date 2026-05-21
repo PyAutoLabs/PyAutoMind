@@ -14,6 +14,8 @@ the actual calculations being done here -- we dont want lensing to be stuck in a
 These should all be paired with a config file, config/latent.yaml, which allows users to turn on and off via bools 
 the output of every latent variable and means that when off compute_latent_variables does not waste compute on them. This may
 required us to interface and update the autofit source code a bit, do an assessment of if thats worth it.
+
+This work should be done on PyAutoLens and PyAutoGalaxy so both have this first class latent variable API.
  
 Create autolesn and autogalaxy Workspace example explaining what latent variables are (good descriptions already in autofit_workspace, 
 what their errors and whatnot correspond to, explain posterior draws. Expand autofit workspace is key context is missing.
@@ -25,3 +27,16 @@ latents to the modeling enables this loading and inspection thereafter.
 Workspace example also includes a section showing users how to extend Analysis object's with their own latent variables,
 by niheriting the Analysis and over wrtiting the LATENT_KEYS And compute_latent_variables method. Encourage them
 to submit source code extension for all users. 
+
+Add a smoke test in autolens_workspace_test which runs often in claude (e.g. a high class smoke test) which 
+does a proper run on all latent variables to ensure the functionality works, obviously make it use just like
+one draw, this may benefit from using PYAUTO_TEST_MODE to do it in an efficient but representative way.
+
+In autolens_profiling add a package latent which does run time profiling on the output of all the variables
+and produces README.md information in the style of the repo.
+
+Turn this into a break down of features and put itin z_features, as this is now many tasks which should be performed
+sequentially one after another.
+
+Finally, is there some fancy or complicated math we should do when the priors or distributions of parameters to
+latent variables gets a bit complicated? e.g. mapping a uniform thing to a log10 thing?
