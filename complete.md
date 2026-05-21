@@ -3795,3 +3795,12 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1285
 - repos: PyAutoFit
 - notes: First sub-task issued from the graphical-ep-scale-up scoping pass (PyAutoPrompt/graphical_ep/{graphical,ep}_scoping.md). Replaced scipy.stats.norm.cdf/ppf inside TruncatedGaussianPrior.value_for and TruncatedNormalMessage.value_for with direct scipy.special.ndtr / ndtri (and the jax.scipy.special equivalents) via a new shared private helper autofit.mapper.prior._erf_helpers.truncated_normal_value_for. ndtr/ndtri are the Cephes routines that scipy.stats.norm.cdf/ppf already wrap — bit-exact equivalent at the algorithm level, just without the _distn_infrastructure dispatch. Measured speedup on the autofit_workspace_developer toy 1D Gaussian baseline: graphical N=3 22.8s→5.6s (4.04× / 75% reduction); EP N=3 251.9s→76.3s (3.30× / 70% reduction). The cProfile-projected reductions were ~30% (graphical) / ~17% (EP) — the real numbers were 2–4× larger because cProfile's own wrapper overhead masked the true scipy.stats cost. Worth remembering: cProfile-projected speedups are lower bounds, not point estimates. Initial draft used erf/erfinv directly (matching GaussianPrior's JAX branch); switched to ndtr/ndtri after extreme-unit tests at unit ∈ {1e-6, 1-1e-6} for half-bounded truncations showed 1e-11 rel disagreement with the pre-fix path — ndtr/ndtri eliminate that entirely (same Cephes path). Also caught a test-oracle gotcha: scipy.stats.truncnorm.ppf has its own tail-safe branching that neither the old nor new prior-side code matches — the right oracle is the OLD scipy.stats.norm.cdf/ppf composition (bit-exact to the new ndtr/ndtri form). Pytest suite 1398/0 (1 skipped) including 145 new bit-exact equivalence tests on (mean, sigma, lower, upper) × unit grid. Follow-up workspace PR queued to refresh autofit_workspace_developer/{graphical,ep}/profiles/baseline.json with the post-fix numbers.
+
+## split-likelihood-profiling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/19
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/20
+- shipped: 2026-05-21
+- summary: |
+    Split likelihood/ into likelihood_breakdown/ + likelihood_runtime/.
+    14 scripts (5 breakdown + 9 runtime) plus moved sweep+aggregate harness.
+    Per-package READMEs document methodology + when-to-use.

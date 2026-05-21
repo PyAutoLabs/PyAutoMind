@@ -62,11 +62,3 @@
 
 
 
-## split-likelihood-profiling
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/19
-- session: claude --resume "split-likelihood-profiling"
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/split-likelihood-profiling
-- repos:
-  - autolens_profiling: feature/split-likelihood-profiling
-  - autolens_workspace_developer: feature/split-likelihood-profiling
