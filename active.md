@@ -1,3 +1,10 @@
+## quantity-modeling-viz-jit
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/56
+- session: claude --resume "quantity-modeling-viz-jit"
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/quantity-modeling-viz-jit
+- repos:
+
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
 - session: claude --resume "profile-smoke-test-runtime"
