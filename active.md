@@ -1,10 +1,18 @@
 ## test-mode-output-path
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1291
 - session: claude --resume "test-mode-output-path"
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1292
 - worktree: ~/Code/PyAutoLabs-wt/test-mode-output-path
 - repos:
   - PyAutoFit: feature/test-mode-output-path
+- summary: |
+    Library PR up but held — smoke surfaced 7 aggregator-script
+    failures in autolens_workspace_test and autogalaxy_workspace_test.
+    Pattern: scripts set PYAUTO_TEST_MODE=1 inline then scrape a bare
+    output path; PR writes to output/test_mode/<db>/ instead. Fix is
+    workspace-side (use paths.output_path, not bare reconstruction).
+    Next: /start_workspace to migrate the 7 aggregator scripts.
 
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
