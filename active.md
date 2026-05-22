@@ -4,6 +4,8 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/viz-sanity-rollout-jax-scripts
 - repos:
+  - autolens_workspace_test: feature/viz-sanity-rollout-jax-scripts
+  - autogalaxy_workspace_test: feature/viz-sanity-rollout-jax-scripts
 
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
