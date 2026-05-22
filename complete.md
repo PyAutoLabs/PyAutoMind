@@ -1,4 +1,10 @@
 
+## quantity-modeling-viz-jit
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/56
+- completed: 2026-05-22
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/57
+- notes: Phase D.2.b.i of z_features/fast_visualization.md. Authors the missing autogalaxy_workspace_test/scripts/quantity/modeling_visualization_jit.py — first script to exercise AnalysisQuantity + use_jax=True + JIT-cached fit_for_visualization end-to-end. Mirrors the imaging variant's Part-1 / Sanity / Part-2 structure but with quantity-specific setup: inline-synthesized convergence dataset from IsothermalSph (no FITS), parametric IsothermalSph mass model with tight priors, AnalysisQuantity(func_str="convergence_2d_from"). Part 1 caching probe shows 264x speedup on second fit_for_visualization call (compile ~2.4s, cached ~9ms). __Visualization Sanity__ block (non-lensing template from PR #54) passes: |model_data|.sum() = 290.87, figure_of_merit = 1005.17. **Part 2 (live Nautilus quick-update) intentionally omitted** because the mirrored block triggers a pre-existing library limitation: PyAutoGalaxy/autogalaxy/profiles/geometry_profiles.py:168 does `xp.array(self.centre)` which raises TracerArrayConversionError under jax.vmap (Nautilus fitness path) when self.centre is a tuple of traced scalars. The imaging variant doesn't hit this because light-profile MGE Gaussians traverse a different decorator path. Quantity + IsothermalSph is the first dataset type to expose this site under vmap. Follow-up library fix prompt authored at PyAutoPrompt/autogalaxy/geometry_profiles_centre_jax_traceable.md proposing xp.stack([self.centre[0], self.centre[1]]) as the safe form. When that lands, Part 2 is a clean mirror of the imaging variant's block — documented inline in the script's docstring. CI: smoke 3.12 + 3.13 all green (no pre-existing red — last task's autogalaxy imaging/visualization.py flake didn't reproduce this run). Phase D.2.b remaining: ellipse (D.2.b.ii) and weak lensing (D.2.b.iii).
+
 ## viz-sanity-rollout-jax-scripts
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/114
 - completed: 2026-05-21
