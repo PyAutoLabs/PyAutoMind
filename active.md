@@ -4,6 +4,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/geom-profiles-centre-jax-traceable
 - repos:
+  - PyAutoGalaxy: feature/geom-profiles-centre-jax-traceable
 
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
