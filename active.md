@@ -1,3 +1,10 @@
+## latent-module-autolens
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/533
+- session: claude --resume "latent-module-autolens"
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/latent-module-autolens
+- repos:
+
 ## jax-interface-audit
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/331
 - session: claude --resume "jax-interface-audit"
