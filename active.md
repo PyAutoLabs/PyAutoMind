@@ -1,3 +1,10 @@
+## latent-smoke-test
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/120
+- session: claude --resume "latent-smoke-test"
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/latent-smoke-test
+- repos:
+
 ## jax-interface-audit
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/331
 - session: claude --resume "jax-interface-audit"
