@@ -4,6 +4,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/euclid-latent-migration
 - repos:
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-latent-migration
 
 ## jax-interface-audit
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/331
