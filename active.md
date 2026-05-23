@@ -5,14 +5,6 @@
 - worktree: ~/Code/PyAutoLabs-wt/jax-interface-audit
 - repos:
 
-## latent-module-autogalaxy
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/439
-- session: claude --resume "latent-module-autogalaxy"
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/latent-module-autogalaxy
-- repos:
-  - PyAutoGalaxy: feature/latent-module-autogalaxy
-
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
 - session: claude --resume "profile-smoke-test-runtime"
