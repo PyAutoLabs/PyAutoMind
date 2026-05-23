@@ -1,11 +1,3 @@
-## latent-tutorial-autogalaxy
-- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/96
-- session: claude --resume "latent-tutorial-autogalaxy"
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/latent-tutorial-autogalaxy
-- repos:
-  - autogalaxy_workspace: feature/latent-tutorial-autogalaxy
-
 ## jax-interface-audit
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/331
 - session: claude --resume "jax-interface-audit"
