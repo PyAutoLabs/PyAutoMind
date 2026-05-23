@@ -156,6 +156,9 @@ PyAutoPrompt/
 ├── issued/                  ← prompts that have been routed via /start_dev
 │   └── autolens_workspace_developer/   ← per-target subdirs preserved
 │
+├── z_features/              ← multi-task epic trackers (one tracker → many sub-prompts)
+│   └── complete/            ← archived trackers (all sub-prompts shipped)
+│
 ├── z_vault/                 ← deferred prompts (z_ prefix sorts last in listings)
 │
 ├── autoprompt/              ← prompts about THIS repo's own infrastructure
@@ -240,6 +243,48 @@ Each task is an H2 section:
 - notes: |
     Long-form description of what landed, gotchas, follow-ups.
 ```
+
+### `z_features/` (multi-task epics)
+
+`z_features/` holds **umbrella trackers** for multi-task epics — single
+markdown files listing a sequence of sub-prompts that ship as their own PRs
+under `autofit/`, `autogalaxy/`, etc. The tracker itself never becomes an
+issue; only its sub-prompts do.
+
+```
+z_features/
+├── latent_refactor.md            ← tracker (lists sub-prompt links)
+├── ellipse_fitting_jax.md
+├── ...
+└── complete/                     ← archived trackers (all sub-prompts shipped)
+```
+
+Use this pattern when a single ask decomposes into 5+ dependent sub-tasks.
+`/start_dev z_features/<tracker>.md` runs in **audit-only mode** — it reports
+which sub-prompts are not-yet-issued / in-flight / shipped, and offers to
+move the tracker to `z_features/complete/` once everything has landed.
+
+**Naming convention for clean audit:** the audit derives task-name
+candidates from each sub-prompt's `issued/` filename stem with `_`→`-`. For
+the audit to auto-match against `complete.md` headings, **the task slug in
+`active.md` / `complete.md` must equal the issued filename's stem after
+that transform**.
+
+| Issued filename | Task slug that matches | Task slug that does NOT match |
+|---|---|---|
+| `issued/latent_module_autogalaxy.md` | `latent-module-autogalaxy` ✓ | `latent-autogalaxy-module` ✗ |
+| `issued/latent_smoke_test.md` | `latent-smoke-test` ✓ | `smoke-test-latent` ✗ |
+| `issued/latent_variables_tutorial_expand_autofit.md` | `latent-variables-tutorial-expand-autofit` ✓ | `latent-tutorial-autofit` ✗ |
+
+The third row is the trap — if `/start_dev` renames the prompt on move
+(e.g. appends a repo suffix for disambiguation) and `active.md`'s task slug
+diverges from the issued stem, the audit will report the sub-prompt as
+"in flight" forever and never archive the tracker. The cure is to either:
+
+- Pick the task slug at `/start_dev` time to match the eventual issued
+  filename stem, or
+- Manually archive the tracker (`mv z_features/<name>.md z_features/complete/`
+  + `prompt_sync_push`) when you know it's all shipped.
 
 ---
 
