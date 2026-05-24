@@ -15,15 +15,6 @@
   - PyAutoLens: feature/simulator-use-jax
   - PyAutoGalaxy: feature/simulator-use-jax
 
-## test-mode-skip-latents
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1294
-- session: claude --resume "test-mode-skip-latents"
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/test-mode-skip-latents
-- repos:
-  - PyAutoFit: feature/test-mode-skip-latents
-  - PyAutoConf: feature/test-mode-skip-latents
-
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
 - session: claude --resume "profile-smoke-test-runtime"

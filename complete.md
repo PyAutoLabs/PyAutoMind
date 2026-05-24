@@ -1,4 +1,11 @@
 
+## test-mode-skip-latents
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1294
+- completed: 2026-05-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoConf/pull/109, https://github.com/PyAutoLabs/PyAutoFit/pull/1295
+- repos: PyAutoConf, PyAutoFit
+- notes: Short-circuited `SearchUpdater._compute_latent_samples` to return `None` when the new `autoconf.test_mode.skip_latents()` helper fires — `is_test_mode()` OR `PYAUTO_SKIP_LATENTS=1`. Eliminates the 100-sample post-fit latent dispatch loop in `PYAUTO_TEST_MODE` runs, which under PyAutoGalaxy's `AnalysisDataset.LATENT_BATCH_MODE = "jit"` override (forced by the einstein-radius latent's `ZeroSolver` not being vmap-compatible) was ~750s per SLaM fit on CPU. End-to-end `slam_start_here.py` smoke went from > 5-min timeout (still inside `source_lp[1]` latent loop) to **29.6s** with the full smoke env set — all 5 SLaM stages run to completion. Validation: PyAutoConf 95/95, PyAutoFit 1413/1414 + 1 skip, new `test_autofit/non_linear/search/test_updater.py` 3/3, full smoke 44/44 across all 6 workspaces (including `cookbooks/latent_variables.py` and `latent/latent_variables_smoke.py` which exercise the latent path explicitly). Merge order mattered — PyAutoConf #109 first since PyAutoFit imports `skip_latents` at module load. **Follow-up queued (TBA):** deeper architectural fix at `PyAutoPrompt/autogalaxy/latent_batch_mode_per_latent.md` — split `LATENT_BATCH_MODE` per-latent so fast latents `vmap` while `einstein_radius` stays jit-per-sample. That's the real-mode SLaM perf fix; this PR only unblocked smoke testing. New env var `PYAUTO_SKIP_LATENTS=1` is also available for power users who want to bypass the post-fit latent pass in real-mode runs.
+
 ## live-visual-update
 - completed: 2026-05-22
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1293
