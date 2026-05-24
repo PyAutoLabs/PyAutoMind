@@ -11,6 +11,9 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/simulator-use-jax
 - repos:
+  - PyAutoArray: feature/simulator-use-jax
+  - PyAutoLens: feature/simulator-use-jax
+  - PyAutoGalaxy: feature/simulator-use-jax
 
 ## test-mode-skip-latents
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1294
