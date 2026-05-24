@@ -25,7 +25,7 @@ __Outstanding__ (sequenced)
      (no existing block at line 33; tracker note was about per-dataset start_here, not top-level)
    - `autogalaxy_workspace/start_here.py` — add new __JAX__ block post-__Galaxies__
 
-3. Phase 2 — library: Simulator.use_jax (one prompt: `autoarray/simulator_use_jax.md`, TBA — unblocked)
+3. Phase 2 — library: Simulator.use_jax ([`autoarray/simulator_use_jax.md`](../autoarray/simulator_use_jax.md), authored 2026-05-24 — ready to `/start_dev`)
    - PyAutoArray `SimulatorImaging` / `SimulatorInterferometer` signature gains `use_jax=True`
    - PyAutoLens / PyAutoGalaxy simulator subclasses thread it through; auto-register
      Tracer/Imaging/Interferometer as pytrees on first call
@@ -36,31 +36,33 @@ __Outstanding__ (sequenced)
 
 4. Phase 3 — per-dataset-type doc passes (autolens_workspace) — one prompt each
    **Priority — core API (do these first):**
-   - 3a `autolens_workspace/jax_docs_imaging.md` (TBA)
-   - 3b `autolens_workspace/jax_docs_interferometer.md` (TBA)
-   - 3d `autolens_workspace/jax_docs_point_source.md` (TBA)
+   - 3a [`autolens_workspace/jax_docs_imaging.md`](../autolens_workspace/jax_docs_imaging.md) (authored, ready)
+   - 3b [`autolens_workspace/jax_docs_interferometer.md`](../autolens_workspace/jax_docs_interferometer.md) (authored, ready)
+   - 3d [`autolens_workspace/jax_docs_point_source.md`](../autolens_workspace/jax_docs_point_source.md) (authored, ready)
 
-   **Deferred — advanced / in-dev (author only if 3a/3b/3d shipped clean):**
-   - 3c `autolens_workspace/jax_docs_multi.md` (TBA — multi/start_here.py already has __JAX__)
-   - 3e `autolens_workspace/jax_docs_group.md` (TBA — optional)
-   - 3f `autolens_workspace/jax_docs_cluster.md` (TBA — defer until cluster is out of in-dev;
-     when authored, mostly a migration showing cluster/simulator.py before/after Phase 2)
+   **Deferred — advanced / in-dev (author/issue only after 3a/3b/3d ship clean — see banner inside each prompt file):**
+   - 3c [`autolens_workspace/jax_docs_multi.md`](../autolens_workspace/jax_docs_multi.md) (authored, deferred)
+   - 3e [`autolens_workspace/jax_docs_group.md`](../autolens_workspace/jax_docs_group.md) (authored, deferred — optional)
+   - 3f [`autolens_workspace/jax_docs_cluster.md`](../autolens_workspace/jax_docs_cluster.md) (authored, deferred — defer until cluster is out of in-dev)
 
 5. Phase 4 — mirror to autogalaxy_workspace — one prompt each
-   - 4a `autogalaxy_workspace/jax_docs_imaging.md` (TBA — highest priority)
-   - 4b `autogalaxy_workspace/jax_docs_interferometer.md` (TBA)
-   - 4c `autogalaxy_workspace/jax_docs_multi.md` (TBA — defer behind 4a/4b)
+   - 4a [`autogalaxy_workspace/jax_docs_imaging.md`](../autogalaxy_workspace/jax_docs_imaging.md) (authored, ready — highest priority)
+   - 4b [`autogalaxy_workspace/jax_docs_interferometer.md`](../autogalaxy_workspace/jax_docs_interferometer.md) (authored, ready)
+   - 4c [`autogalaxy_workspace/jax_docs_multi.md`](../autogalaxy_workspace/jax_docs_multi.md) (authored, deferred behind 4a/4b)
 
 6. Phase 5 — guides
-   - 5a `autolens_workspace/jax_docs_guide_data_structures.md` (TBA)
-   - 5b `autolens_workspace/jax_docs_guide_galaxies.md` (TBA)
-   - 5c `autolens_workspace/jax_docs_guide_tracer.md` (TBA)
-   - 5d `autolens_workspace/jax_docs_guide_lens_calc.md` (TBA — advanced xp story lives here)
-   - 5e `autogalaxy_workspace/jax_docs_guides.md` (TBA — galaxies + data_structures mirror)
+   - 5a [`autolens_workspace/jax_docs_guide_data_structures.md`](../autolens_workspace/jax_docs_guide_data_structures.md) (authored, ready)
+   - 5b [`autolens_workspace/jax_docs_guide_galaxies.md`](../autolens_workspace/jax_docs_guide_galaxies.md) (authored, ready)
+   - 5c [`autolens_workspace/jax_docs_guide_tracer.md`](../autolens_workspace/jax_docs_guide_tracer.md) (authored, ready)
+   - 5d [`autolens_workspace/jax_docs_guide_lens_calc.md`](../autolens_workspace/jax_docs_guide_lens_calc.md) (authored, ready — advanced xp story lives here)
+   - 5e [`autogalaxy_workspace/jax_docs_guides.md`](../autogalaxy_workspace/jax_docs_guides.md) (authored, ready — galaxies + data_structures mirror)
 
-Per [[feedback_no_bulk_issue_queues]], sub-prompts past Phase 0 remain deliberately
-unauthored. Each gets authored and issued only when its predecessor is close to
-shipping, so the prompts don't age out against the design that emerged from Phase 0.
+All 15 sub-prompts (Phase 1-5) were authored 2026-05-24 in a single pass by
+explicit user request, then sequenced for execution. Per
+[[feedback_no_bulk_issue_queues]], **issue them to GitHub one at a time
+via `/start_dev`** when each is ready to ship — do NOT bulk-file the
+GitHub issues. The "deferred" markers above + the in-file banners enforce
+the sequencing: 3c/3e/3f and 4c wait until their core siblings ship clean.
 
 __Related__
 
