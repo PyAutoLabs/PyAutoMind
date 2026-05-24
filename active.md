@@ -1,3 +1,10 @@
+## test-mode-skip-latents
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1294
+- session: claude --resume "test-mode-skip-latents"
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/test-mode-skip-latents
+- repos:
+
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183
 - session: claude --resume "profile-smoke-test-runtime"
