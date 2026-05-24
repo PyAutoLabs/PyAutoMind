@@ -3987,3 +3987,9 @@
 - completed: 2026-05-24
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/101
 - notes: Phase 4a + 4b combined. 8 scripts in autogalaxy_workspace/scripts/{imaging,interferometer}/ now carry __JAX__ prose; the 2 simulator.py files carry runnable __JAX Variant__ blocks using post-Phase-2 ag.SimulatorImaging(use_jax=True) and ag.SimulatorInterferometer(use_jax=True). Mirror of autolens_workspace#202 / PR #203 (Phase 3a/b/d combined). Same Array2D.native @jax.jit limitation flagged in variants; eager JAX works. Phase 4c (multi) deferred per scope anchor. Worktree removed; feature branch deleted local + origin.
+
+## jax-docs-autolens-guides
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/204 (CLOSED)
+- completed: 2026-05-24
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/205
+- notes: Phase 5a + 5b + 5c + 5d bundled. 4 guides in autolens_workspace/scripts/guides/ now carry __JAX__ sections. lens_calc.py (5d) is the canonical home for the "JIT-it-yourself" pattern — @jax.jit + xp=jnp pairing rule, mismatch ValueError, decorator vs jax.jit(bound_method), cache identity footgun, closure vs traced argument, LensCalc if-xp-is-np return-type discipline. The other three (data_structures, galaxies, tracer) cover the prerequisite pieces (.array story, host transfer, pytree registration, multi-plane under JIT, performance framing) and cross-reference lens_calc.py for the advanced material. Phase 5e (autogalaxy guides mirror) remains deferred per scope anchor. Phase 5a-5d closes out the autolens side of jax_user_intro. Worktree removed; feature branch deleted local + origin.
