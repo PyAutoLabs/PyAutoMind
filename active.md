@@ -65,3 +65,4 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/mass-self-consistency-tests
 - repos:
+  - autolens_workspace_test: feature/mass-self-consistency-tests
