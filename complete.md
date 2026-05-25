@@ -1,4 +1,10 @@
 
+## array2d-native-jit-safety
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/338
+- completed: 2026-05-25
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/339
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/123, https://github.com/PyAutoLabs/autolens_workspace/pull/208, https://github.com/PyAutoLabs/autogalaxy_workspace/pull/104
+
 ## test-mode-skip-latents
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1294
 - completed: 2026-05-24

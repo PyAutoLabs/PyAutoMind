@@ -60,13 +60,3 @@
       8. End-to-end library integration test
       (workspace) extend convolution.py + new convolution_oversampled.py + simulator.py
 
-## array2d-native-jit-safety
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/338
-- status: workspace-dev
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/339
-- worktree: ~/Code/PyAutoLabs-wt/array2d-native-jit-safety
-- repos:
-  - PyAutoArray: feature/array2d-native-jit-safety
-  - autolens_workspace_test: feature/array2d-native-jit-safety
-  - autolens_workspace: feature/array2d-native-jit-safety
-  - autogalaxy_workspace: feature/array2d-native-jit-safety
