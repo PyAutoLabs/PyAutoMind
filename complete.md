@@ -4029,3 +4029,8 @@
 - completed: 2026-05-26
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/449
 - notes: Phase 3 of mass profiles refactor epic (PyAutoGalaxy#445). Added potential_2d_via_mge_from to MGEDecomposer using E1 exponential integral (Shajib 2019, cross-validated against Jax-Lensing-Profiles). Replaced zero-returning methods across 10 profiles: PointMass/MassSheet got analytic potentials, cNFW got MGE convergence+potential, remaining 7 profiles got MGE potential. 12 files changed, 406 tests pass. Self-consistency 0.3% (laplacian=2kappa). Next phase: spring clean (autogalaxy/mass_profiles_spring_clean.md).
+
+## mass-profiles-spring-clean
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/450
+- completed: 2026-05-26
+- notes: Phase 4 of mass profiles refactor epic (PyAutoGalaxy#445). Audit-only — no code changes needed. xp threading already complete (Phases 2-3 covered it), decorators consistent, no dead code remaining. mass_to_light_ratio naming asymmetry documented but not fixed (breaking change). Closed without PR.
