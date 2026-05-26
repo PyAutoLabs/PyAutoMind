@@ -4017,3 +4017,9 @@
 - completed: 2026-05-26
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/124
 - notes: Phase 1 of mass profiles refactor epic (PyAutoGalaxy#445). Added scripts/mass/ with 7 files testing 42 mass profiles via numerical differentiation of lensing relations. 56 PASS / 1 FAIL (NFWSph grad(psi)=alpha at 11% — genuine finding) / 69 SKIP (zero-returning or not-implemented potentials). Key debugging: autoarray Grid2D.uniform has y decreasing along axis 0 — np.gradient needs negative spacing. Some profiles return raw ndarray instead of autoarray types. Next phase: CSE JAX port (autogalaxy/cse_jax_port.md).
+
+## cse-jax-port
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/446
+- completed: 2026-05-26
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/447
+- notes: Phase 2 of mass profiles refactor epic (PyAutoGalaxy#445). Threaded xp=np through all MassProfileCSE forward-path methods and replaced np.sqrt/np.vstack with xp equivalents. NFW callers now thread xp=xp. Decomposition solver stays NumPy-only (one-time setup, not JIT-traced). 406 unit tests pass. Next phase: MGE/CSE fallback mechanism (autogalaxy/mge_cse_fallback.md).
