@@ -65,3 +65,4 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/mge-cse-fallback
 - repos:
+  - PyAutoGalaxy: feature/mge-cse-fallback
