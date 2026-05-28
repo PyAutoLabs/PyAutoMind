@@ -1,4 +1,14 @@
 
+## quick-update-docs-followup
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/66 (CLOSED 2026-05-28)
+- completed: 2026-05-28
+- workspace-pr:
+  - https://github.com/PyAutoLabs/autofit_workspace/pull/67
+  - https://github.com/PyAutoLabs/autogalaxy_workspace/pull/105
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/210
+- repos: autofit_workspace, autogalaxy_workspace, autolens_workspace
+- notes: Items 3, 4, 5 of `issued/on_the_fly_docs.md`. Items 1/2 were verified done before starting — `__Live Visual Update__` section already shipped in `scripts/imaging/start_here.py` across autolens and autogalaxy (plus ~50 modeling scripts). Item 3 rewrote the autofit cookbook `__Live Quick-Update Visualization__` section to treat `background_quick_update` and `live_visual_update` as **independent** library flags (the original prompt conflated them as one feature), added an Analysis API surface subsection covering `perform_quick_update`, `supports_background_update`, `supports_jax_visualization`, mentioned `Fitness.manage_quick_update` as the dispatcher, and added a commented custom-override example. Item 4 mirrored both library defaults (`quick_update_background: false`, `live_visual_update: false`) into each workspace's `config/general.yaml` under both `updates:` and `hpc:` — needed because workspace yaml shadows library defaults per the established override pattern. Item 5 was already correctly handled in the existing cookbook (uses `IPython.display.update_display` with a stable `display_id`, NOT `clear_output(wait=True)` as the original prompt asked for — the prompt was outdated). Pre-existing autofit_workspace smoke failure on `scripts/overview/overview_1_the_basics.py` (`AttributeError: 'str' object has no attribute 'model_data_from'`) reproduced independently on canonical `main`; not introduced by this task — worth its own triage prompt later. Skipped optional one-sentence polish to autolens/autogalaxy `start_here.py` to avoid unnecessary churn — cookbook is canonical for the API details.
+
 ## smoke-test-optimization
 - issue: https://github.com/rhayes777/PyAutoFit/issues/1183 (CLOSED 2026-04-10)
 - completed: 2026-05-28 (active.md cleanup; substantive work landed 2026-04-10)
