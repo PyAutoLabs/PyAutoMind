@@ -4094,3 +4094,11 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/341, https://github.com/PyAutoLabs/PyAutoGalaxy/pull/462, https://github.com/PyAutoLabs/PyAutoLens/pull/548
 - repos: PyAutoArray, PyAutoGalaxy, PyAutoLens
 - notes: Changed 38 @property to @functools.cached_property on FitDataset/FitImaging/FitInterferometer. Eliminates redundant recomputation cascades (model_data was recomputed 2-3x per visualization pass at 5-20s each for Delaunay inversions). Safe because Fit objects are immutable after construction. 2072 tests pass.
+
+## weak-dataset-from-json
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/554
+- completed: 2026-05-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/342, https://github.com/PyAutoLabs/PyAutoLens/pull/555
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/212
+- repos: PyAutoArray, PyAutoLens, autolens_workspace
+- notes: Added `values` property on `aa.VectorYX2DIrregular` (mirrors `Grid2DIrregular.values` / `ArrayIrregular.values`) so dictable's `instance_as_dict` serializes both constructor args. Fixes `al.from_json(WeakDataset)` round-trip; `ShearYX2DIrregular` inherits the fix. Workspace tutorial `scripts/weak/fit.py` simplified to load `dataset.json` via `al.from_json` instead of inline reconstruction.
