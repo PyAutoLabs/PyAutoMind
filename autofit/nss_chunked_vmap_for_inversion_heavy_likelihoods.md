@@ -36,40 +36,32 @@ probe value (16 for HST Delaunay). That fix prevents some OOMs but
 isn't enough on its own: NSS keeps additional state per particle
 that scales worse than Nautilus's straight likelihood batches.
 
-## Update — likely actual root cause: `jax.pure_callback` × vmap pytree blow-up
+## Update — control test confirms vmap fan-out is the root cause
 
-After filing the initial version of this prompt, a closer audit of the
-Delaunay code path turned up `jax.pure_callback` usage in
+After filing the initial version, a closer audit of the Delaunay path
+turned up `jax.pure_callback` usage at
 `PyAutoArray:autoarray/inversion/mesh/interpolator/delaunay.py:80,249`
-(both call sites wrap `scipy.spatial.Delaunay` to run the triangulation
-on CPU). Under `jax.vmap` — which is exactly what blackjax NSS does over
-`num_delete` — `pure_callback` is known to balloon the lowered HLO
-graph: each vmapped instance gets a separate host callback, each with
-its own input/output buffer slot in the compiled program. The project
-memory note `feedback_jax_pure_callback_const_fold.md` warns about
-related single-JIT-vs-vmap discrepancies on the same library.
+(wrapping `scipy.spatial.Delaunay`), so the obvious suspicion was that
+the callback's HLO retention under vmap was the cause. The decisive
+control was to submit the same cell with `RectangularAdaptImage`
+(pure-JAX mesh, no callback) at essentially identical memory budget
+per the probe (931 vs 922 MB / replica on HST).
 
-The decisive comparison is `searches/nss/imaging/pixelization × hst ×
-fp64` — `RectangularAdaptImage` has essentially the same memory budget
-as Delaunay per the `vram/config.py` probe (931 vs 922 MB / replica,
-both cap at batch=16 on HST) but its mesh interpolator is **pure JAX**.
-That run is queued (job 322604 against Nautilus 322603); pending its
-result this prompt has two scenarios:
+Result (A100 jobs 322603 Nautilus + 322604 NSS, run 2026-05-28):
+**NSS pixelization OOMs at 28,055,330,400 bytes, identical site
+(`mapper_util.py:315` → `scatter_op`), to ~1.4% of NSS Delaunay's
+27,668,233,200 bytes.** The 387 MB delta matches the 9 MB/replica
+budget difference, scaled by num_delete=16 and the scatter's ~3×
+working-set overhead.
 
-- **Scenario A** — NSS pixelization fits, NSS Delaunay OOM'd. The
-  immediate fix is in PyAutoArray, not blackjax: replace the
-  `pure_callback`-wrapped Delaunay triangulation with a JAX-native
-  implementation (or memoize the triangulation since the source-mesh
-  connectivity is fixed once `image_plane_mesh_grid` is computed). The
-  chunked-vmap proposal below is still useful as a generic memory safety
-  net but is no longer the headline.
-- **Scenario B** — NSS pixelization also OOMs. The vmap-over-num_delete
-  fan-out itself is the bottleneck regardless of callback content. The
-  chunked-vmap fix below is the right primary intervention.
+The `pure_callback` is NOT the root cause for the NSS OOM. The
+chunked-vmap fix proposed below is the right primary intervention.
 
-The rest of this document focuses on scenario B (chunked vmap as the
-generic fix). A separate prompt covers scenario A — see
-`PyAutoPrompt/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`.
+A separate prompt
+(`PyAutoPrompt/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`)
+still tracks the `pure_callback` as a minor efficiency follow-up — it's
+not free under vmap, just not the dominant cost — but that prompt no
+longer claims to fix the OOM.
 
 ## The bug
 

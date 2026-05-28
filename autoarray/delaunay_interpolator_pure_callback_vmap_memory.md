@@ -1,4 +1,22 @@
-# PyAutoArray Delaunay interpolator's `pure_callback` vs vmap — investigate VRAM blow-up
+# PyAutoArray Delaunay interpolator's `pure_callback` vs vmap — minor efficiency follow-up
+
+## Status
+
+**Not the root cause of the NSS Delaunay A100 OOM.** The control test
+(NSS pixelization × HST × fp64, A100 job 322604) crashed at
+**28,055,330,400 bytes** — identical site (`mapper_util.py:315` →
+`scatter_op`), within 1.4% of NSS Delaunay's 27,668,233,200 bytes —
+despite `RectangularAdaptImage` using zero `pure_callback`. The OOM
+is a vmap-fan-out × inversion-scatter problem; see
+`PyAutoPrompt/autofit/nss_chunked_vmap_for_inversion_heavy_likelihoods.md`
+for the actual fix.
+
+This prompt is kept as a minor efficiency cleanup — the `pure_callback`
+in the Delaunay interpolator still adds compile-time HLO surface and
+host-callback round-trips that aren't free, even if they aren't what
+runs the GPU out of memory.
+
+
 
 ## Context
 
