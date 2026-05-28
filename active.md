@@ -3,6 +3,9 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/quick-update-docs-followup
 - repos:
+  - autofit_workspace: feature/quick-update-docs-followup
+  - autogalaxy_workspace: feature/quick-update-docs-followup
+  - autolens_workspace: feature/quick-update-docs-followup
 
 ## weak-dataset-from-json
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/554
