@@ -3,3 +3,9 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/quick-update-docs-followup
 - repos:
+
+## weak-dataset-from-json
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/554
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/weak-dataset-from-json
+- repos:
