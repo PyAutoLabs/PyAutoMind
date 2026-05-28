@@ -4,3 +4,5 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/optional-dep-latents-soft-fail
 - repos:
+  - PyAutoGalaxy: feature/optional-dep-latents-soft-fail
+  - PyAutoLens: feature/optional-dep-latents-soft-fail
