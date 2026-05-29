@@ -6,3 +6,4 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/nss-chunked-vmap
 - repos:
+  - PyAutoFit: feature/nss-chunked-vmap
