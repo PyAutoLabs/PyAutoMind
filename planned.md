@@ -32,3 +32,35 @@
 
     Sibling smoke scripts to check while triaging: image_plane.py,
     source_plane.py in the same dir — they share the seed dataset.
+
+## nfw-truncated-potential-accuracy
+- prompt: PyAutoPrompt/autogalaxy/nfw_truncated_potential_accuracy.md
+- status: planned
+- filed: 2026-06-05
+- classification: library (accuracy bug)
+- suggested-branch: feature/nfw-truncated-potential-accuracy
+- summary: |
+    Pre-existing accuracy bug surfaced while shipping dark-matter-potentials.
+    NFWTruncatedSph.potential_2d_from (MGE) fails grad(psi)=alpha self-
+    consistency in autolens_workspace_test/scripts/mass/dark.py (med 7.1e-2 vs
+    ~8e-4 for every other NFW/gNFW/cNFW variant). Deflections pass, only the
+    potential is off — likely the MGE sigma range (radii_max = truncation_radius
+    * 5) is too narrow. Reproduce on clean main first.
+- affected-repos:
+  - PyAutoGalaxy
+
+## piemass-potential
+- prompt: PyAutoPrompt/autogalaxy/piemass_potential.md
+- status: planned
+- filed: 2026-06-05
+- classification: library (missing feature)
+- suggested-branch: feature/piemass-potential
+- summary: |
+    PIEMass (Lenstool-ported PIE) has no potential_2d_from, so it now raises a
+    clean NotImplementedError (post dark-matter-potentials) and crashes tracer
+    visualization (potential FITS extension) — same class as the original NFW
+    bug, different profile. No MGE/CSE decomposition hook exists; needs an
+    analytic port (Kassiola & Kovner 1993, or the dPIEMass r_s->inf limit) or a
+    new convergence-MGE hook. Validate via grad(psi)=alpha self-consistency.
+- affected-repos:
+  - PyAutoGalaxy
