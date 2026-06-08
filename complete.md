@@ -4236,3 +4236,9 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1312 (merged f8bf8e7)
 - repos: PyAutoFit
 - notes: Test-only release hygiene fix for optional NSS dependency. Added `requires_nss` skip guards to NSS tests that instantiate `af.NSS` or require the matching `nss` / `blackjax.ns` stack, while keeping pure checkpoint serialization tests and the explicit unavailable-extra ImportError test active. Verified locally in the task worktree: targeted NSS tests `4 passed, 13 skipped`; full PyAutoFit suite `1412 passed, 14 skipped, 37 warnings`. PR CI passed on Python 3.12/3.13, NSS fork tests, offline regex guard, and fresh `autofit[nss]` install before merge.
+
+## nss-optional-dependency-workspace
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/70
+- completed: 2026-06-08
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/71 (merged d1a3dd1)
+- notes: Guarded `scripts/searches/nest.py` so environments without `autofit[nss]` skip only the optional NSS block. Verified targeted script, PyAutoBuild `autofit scripts/searches` runner, local smoke subset, and GitHub smoke CI on 3.12/3.13.
