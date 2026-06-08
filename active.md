@@ -11,6 +11,7 @@
   - PyAutoGalaxy
 - notes: Initial implementation phase scoped to PyAutoGalaxy because PyAutoLens is currently claimed by datacube-shared-state. PyAutoLens substructure batching/validation should follow after that claim clears if source changes are needed there.
 - repos:
+  - PyAutoGalaxy: feature/kaplinghat-sidm-cored-nfw
 
 ## datacube-shared-state
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/565
