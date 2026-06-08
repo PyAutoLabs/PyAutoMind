@@ -22,13 +22,13 @@
 ## datacube-shared-state
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/565
 - session: claude --resume <session-id>
-- status: library-shipped (curvature); slice-2b + workspace pending
+- status: library-shipped (curvature + mapper, ~97%); workspace (Phase 5) pending
 - library-pr:
   - https://github.com/PyAutoLabs/PyAutoArray/pull/344
   - https://github.com/PyAutoLabs/PyAutoLens/pull/566
 - worktree: ~/Code/PyAutoLabs-wt/datacube-shared-state
 - epic: z_features/analysis_shared_state.md (sub-task B — lensing datacube consumer)
-- remaining: slice-2b mapper-sharing (library); Phase 5 datacube scripts + autolens_workspace_test + autolens_profiling
+- remaining: Phase 5 — datacube scripts opt into shared_preloads; autolens_workspace_test fast-assert + JAX assertion; autolens_profiling re-measure
 - repos:
   - PyAutoLens: feature/datacube-shared-state
   - PyAutoArray: feature/datacube-shared-state
