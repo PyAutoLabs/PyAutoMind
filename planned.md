@@ -1,13 +1,3 @@
-## nss-test-optional-dep-skip
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1309
-- prompt: PyAutoPrompt/issued/nss_test_optional_dep_skip.md
-- planned: 2026-06-01
-- classification: library (test-only)
-- suggested-branch: feature/nss-test-optional-dep-skip
-- blocked-by: (cleared 2026-06-07 — analysis-shared-state shipped; PyAutoFit free, ready to /start_library)
-- affected-repos:
-  - PyAutoFit
-
 ## jax-point-source-point-smoke-sentinel
 - prompt: PyAutoPrompt/issued/jax_point_source_point_smoke_sentinel.md
 - status: planned
