@@ -3,7 +3,7 @@
 ## kaplinghat-sidm-cored-nfw
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/564
 - session: codex --resume <session-id>
-- status: library-prs-created, workspace-impact-pending
+- status: workspace-dev
 - library-pr:
   - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/471
   - https://github.com/PyAutoLabs/PyAutoLens/pull/567
@@ -17,3 +17,4 @@
 - repos:
   - PyAutoGalaxy: feature/kaplinghat-sidm-cored-nfw
   - PyAutoLens: feature/kaplinghat-sidm-cored-nfw
+  - autolens_workspace_test: feature/kaplinghat-sidm-cored-nfw
