@@ -16,6 +16,7 @@
   - PyAutoGalaxy: feature/kaplinghat-sidm-cored-nfw
   - PyAutoLens: feature/kaplinghat-sidm-cored-nfw
 - local-commits:
+  - PyAutoGalaxy: 8aa03972 feat: support vmapped Kaplinghat deflections (local follow-up branch feature/kaplinghat-sidm-cored-nfw-vmapped; original PR worktree is read-only in this sandbox)
   - PyAutoLens: 3fd6dd6d7 feat: support Kaplinghat halos in substructure arrays
 
 ## datacube-shared-state
