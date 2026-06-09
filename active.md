@@ -23,7 +23,13 @@
 
 ## latent-class-phase2
 - session: claude (local)
-- status: library-dev
+- status: prs-created (pending-release, DO NOT merge until release done + PyAutoFit #1315 lands)
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/472
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/568
+  - https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/20
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/219
+  - https://github.com/PyAutoLabs/autogalaxy_workspace/pull/111
 - worktree: ~/Code/PyAutoLabs-wt/latent-class-phase2
 - suggested-branch: feature/latent-class-phase2
 - classification: library
