@@ -4271,3 +4271,12 @@
   - https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/65 (merged 627a8fa)
 - repos: PyAutoFit, autofit_workspace_test, autogalaxy_workspace, autogalaxy_workspace_test
 - notes: Fixed the first grouped release failures after the latent refactor. PyAutoFit now skips latent sample computation when an analysis has no enabled latent keys; workspace scripts were updated to match the current `use_jax` / `supports_jax_visualization` contract; the Autogalaxy results guide reloads its saved combined FITS with unchecked noise-map validation; and Autogalaxy ellipse JAX release-build env overrides were added. Verified targeted release reruns, PyAutoFit full suite, PyAutoBuild section checks, and PR CI before merge. Kaplinghat branches were not touched.
+
+## howto-tutorial-release-fixes
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/15
+- completed: 2026-06-09
+- workspace-prs:
+  - https://github.com/PyAutoLabs/HowToGalaxy/pull/12 (merged 0605b56)
+  - https://github.com/PyAutoLabs/HowToLens/pull/16 (merged 3ae228b)
+- repos: HowToGalaxy, HowToLens
+- notes: Fixed the unblocked HowTo tutorial release failures. HowToGalaxy's mapper tutorial now selects valid mapper pixel indexes dynamically for both full and small release datasets. HowToLens filters non-finite traced source-plane coordinates before plotting and keeps the intentionally bad annular mask non-empty under `PYAUTO_SMALL_DATASETS=1`. Verified targeted scripts, PyAutoBuild sections for HowToGalaxy chapter 4 and HowToLens chapters 1 and 2, and PR CI before merge.
