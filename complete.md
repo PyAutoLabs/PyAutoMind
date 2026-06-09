@@ -4322,3 +4322,10 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/36 (merged b5a6a43)
 - repos: autofit_workspace_test
 - notes: Fixed the database scrape release failures by making `scripts/database/scrape/grid_search.py` and `scripts/database/scrape/sensitivity.py` use `autoconf.test_mode.with_test_mode_segment(Path("output"))` for both sqlite cleanup and scrape-directory selection. This matches PyAutoFit's `output/test_mode/...` search and database paths under `PYAUTO_TEST_MODE`, while preserving normal `output/...` behavior outside test mode. Verified both direct PyAutoBuild repro commands, the full `autofit_test scripts/database/scrape` PyAutoBuild directory run (5/5 passed), and PR CI on Python 3.12/3.13 before merge.
+
+## autolens-results-aggregator-valid-dataset
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/220
+- completed: 2026-06-09
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/221 (merged 256ce20)
+- repos: autolens_workspace
+- notes: Fixed the results aggregator release failures by making `_quick_fit.py` reuse `output/results_folder` only when it contains at least one `image/dataset.fits`, regenerating stale/incompatible helper output otherwise. Updated the aggregator scripts to use the same valid-dataset guard and to pass the test-mode-aware `results_path` to `Aggregator.from_directory`. Verified the two reported scripts directly, the full `autolens scripts/guides/results/aggregator` PyAutoBuild directory run, and PR CI on Python 3.12/3.13 before merge.
