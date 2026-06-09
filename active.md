@@ -1,5 +1,17 @@
 # Active Tasks
 
+## howto-tutorial-release-fixes
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/15
+- session: codex --resume <session-id>
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/howto-tutorial-release-fixes
+- suggested-branch: feature/howto-tutorial-release-fixes
+- classification: workspace
+- affected-repos:
+  - HowToGalaxy
+  - HowToLens
+- repos:
+
 ## kaplinghat-sidm-cored-nfw
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/564
 - session: codex --resume <session-id>
