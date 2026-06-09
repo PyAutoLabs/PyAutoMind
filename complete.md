@@ -4249,3 +4249,14 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1314 (merged 2e41016)
 - repos: PyAutoFit
 - notes: Expanded `PYAUTO_TEST_MODE=2/3` bypass-mode fake results from two to four deterministic samples so downstream latent-variable and multi-batch sample checks can run while still skipping the real sampler. Verified targeted `test_abstract_search.py` coverage, full PyAutoFit suite (`1413 passed, 14 skipped`), three latent robustness release blockers, PR CI, and local smoke across configured workspaces (`46 passed, 0 failed, 2 skipped`).
+
+## latent-class-redesign (Phases 1 + 2)
+- completed: 2026-06-09
+- prompt: autofit/latent_class_redesign.md
+- summary: First-class `Latent` extension class decoupling latent variables from `Analysis` (mirrors Visualizer/Result). Phase 1 = PyAutoFit engine extraction (`af.Latent`, `latent_samples_from`) + back-compat shim; Phase 2 = `LatentLens`/`LatentGalaxy` + `Analysis.Latent` in the libraries, `LatentEuclid` in the pipeline, and migrated custom-latent tutorials/workflow scripts in both workspaces.
+- prs (all merged):
+  - PyAutoFit #1310 (per-batch NaN masking fix), #1311 (degenerate edge cases), #1315 (Phase 1 Latent class)
+  - PyAutoConf #112 (PYAUTO_LATENT_NAN_INJECT hook)
+  - PyAutoGalaxy #472, PyAutoLens #568 (Phase 2 libs)
+  - euclid_strong_lens_modeling_pipeline #20, autolens_workspace #219, autogalaxy_workspace #111
+- remaining (Phase 3, NOT done — separate follow-up): migrate z_projects/* (euclid, euclid_pre_f2f, cowls_diana) off the legacy compute_latent_variables override path; optionally remove the Phase-1 back-compat shim.
