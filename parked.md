@@ -6,6 +6,29 @@ unindexed worktrees or stashes. Move an entry back to `active.md` (or to
 `planned.md` if re-scoping is needed) when work resumes; move to
 `complete.md` once shipped.
 
+## kaplinghat-sidm-cored-nfw
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/564
+- parked: 2026-06-09
+- status: parked-outside-current-release
+- library-pr:
+  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/471
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/567
+- workspace-pr:
+  - https://github.com/PyAutoLabs/autolens_workspace_test/pull/139
+- worktree: ~/Code/PyAutoLabs-wt/kaplinghat-sidm-cored-nfw
+- suggested-branch: feature/kaplinghat-sidm-cored-nfw
+- classification: library
+- affected-repos:
+  - PyAutoGalaxy
+  - PyAutoLens
+  - autolens_workspace_test
+- notes: |
+    Parked outside the current release train per user instruction that
+    Kaplinghat should not be included in this release. Removed `pending-release`
+    from PyAutoGalaxy#471, PyAutoLens#567, and autolens_workspace_test#139.
+    Worktree remains on disk for later resume, but active repo claims were
+    released so current release-failure fixes can use autolens_workspace_test.
+
 ## psf-oversampling
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/299 (OPEN)
 - parked: 2026-05-06
