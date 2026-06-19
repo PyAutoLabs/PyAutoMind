@@ -21,3 +21,25 @@ What to implement:
   default when working inside a project, shared `wiki/literature/` only on explicit promotion.
 - Have @autolens_assistant/skills/start-new-project.md scaffold the project-local bibliography
   home and explain the hybrid rule in the project's thin docs.
+
+Deferred feature — validate through real assistant usage before implementing:
+
+- Add a **Scientific context and papers** step to science-project creation. Prompt the user for
+  papers they already consider important (local PDFs, arXiv IDs/URLs, DOIs, or a bibliography),
+  while always allowing them to skip the step and add papers later.
+- Use the project description to inspect the assistant's existing literature wiki and identify
+  what relevant work is already covered.
+- Search the external literature for additional relevant papers, then present a reviewable
+  shortlist separated into: user-supplied papers, existing wiki coverage, and newly discovered
+  candidates. Do not silently ingest every search result.
+- After user approval, ingest project-specific selections into the project-local bibliography;
+  retain deliberate promotion as the only route into the shared literature wiki.
+- Record enough provenance for each accepted reference to distinguish verified paper metadata
+  from abstract-level or search-derived summaries. Keep local PDF paths and files out of the
+  committed bibliography; persist public references such as arXiv IDs and DOIs instead.
+
+This guided intake is intentionally a future enhancement. Use the assistant on real science
+projects first to learn when users naturally supply papers, how much literature searching they
+want during setup, and whether project creation is the right point for a potentially lengthy
+review. The initial implementation should be shaped by that evidence rather than making the
+creation workflow heavy by default.
