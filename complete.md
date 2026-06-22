@@ -4336,3 +4336,10 @@
 - workspace-pr: https://github.com/Jammy2211/euclid_assistant/pull/2 (merged d11686a)
 - repos: euclid_assistant
 - notes: Added deterministic duplicate-key detection for referenced `.bib` files and inline bibliographies, including source locations, focused tests, Style Guide provenance, and updated wiki coverage. Verified the full test suite and all four paper audits before merge.
+
+## lensing-transient-citations
+- issue: https://github.com/PyAutoLabs/PyAutoPaper/issues/3
+- completed: 2026-06-22
+- project-docs-pr: https://github.com/PyAutoLabs/PyAutoPaper/pull/4 (merged 5b0c247 into PR #2 branch)
+- repos: PyAutoPaper
+- notes: Migrated five lensed-supernova and plasma-lensing entries to verified claim-oriented citations. No ambiguous keys or aliases; citation validation and 5 tests passed.
