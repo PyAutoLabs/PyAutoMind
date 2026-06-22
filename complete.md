@@ -4329,3 +4329,10 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/221 (merged 256ce20)
 - repos: autolens_workspace
 - notes: Fixed the results aggregator release failures by making `_quick_fit.py` reuse `output/results_folder` only when it contains at least one `image/dataset.fits`, regenerating stale/incompatible helper output otherwise. Updated the aggregator scripts to use the same valid-dataset guard and to pass the test-mode-aware `results_path` to `Aggregator.from_directory`. Verified the two reported scripts directly, the full `autolens scripts/guides/results/aggregator` PyAutoBuild directory run, and PR CI on Python 3.12/3.13 before merge.
+
+## bib-duplicate-keys
+- issue: https://github.com/Jammy2211/euclid_assistant/issues/1
+- completed: 2026-06-22
+- workspace-pr: https://github.com/Jammy2211/euclid_assistant/pull/2 (merged d11686a)
+- repos: euclid_assistant
+- notes: Added deterministic duplicate-key detection for referenced `.bib` files and inline bibliographies, including source locations, focused tests, Style Guide provenance, and updated wiki coverage. Verified the full test suite and all four paper audits before merge.
