@@ -4343,3 +4343,10 @@
 - project-docs-pr: https://github.com/PyAutoLabs/PyAutoPaper/pull/4 (merged 5b0c247 into PR #2 branch)
 - repos: PyAutoPaper
 - notes: Migrated five lensed-supernova and plasma-lensing entries to verified claim-oriented citations. No ambiguous keys or aliases; citation validation and 5 tests passed.
+
+## microlensing-imf-citation
+- issue: https://github.com/PyAutoLabs/PyAutoPaper/issues/5
+- completed: 2026-06-22
+- project-docs-pr: https://github.com/PyAutoLabs/PyAutoPaper/pull/6 (merged ba90e30 into PR #2 branch)
+- repos: PyAutoPaper
+- notes: Migrated the Jiménez-Vicente & Mediavilla lens-galaxy IMF entry. No ambiguous keys or aliases; citation validation and 5 tests passed.
