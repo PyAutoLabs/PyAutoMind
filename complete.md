@@ -1,4 +1,15 @@
 
+## remaining-citation-migration
+- issue: https://github.com/PyAutoLabs/PyAutoPaper/issues/11
+- completed: 2026-06-23
+- project-docs-pr: https://github.com/PyAutoLabs/PyAutoPaper/pull/12
+- merged-into: PyAutoPaper `feature/literature-citation-layer` at `8c262074ca78b413d6652784d06757cf10ce1e6a`
+- validation:
+  - `make validate-literature-citations`
+  - `pytest -q` (`5 passed`)
+  - `git diff --check`
+- notes: Consolidated final citation migration after earlier topic PRs. Migrated remaining `*_wiki/sources/*.md` entries away from legacy `File:` paths and filename-inferred summaries. Final audit recorded 247 canonical claim-oriented entries and 390 explicit identity/key TODO entries for unresolved, ambiguous, or unsafe matches. No aliases added.
+
 ## jax-substructure-simulator
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/542 (CLOSED — core delivered; 2 follow-up gaps queued)
 - completed: 2026-06-09
