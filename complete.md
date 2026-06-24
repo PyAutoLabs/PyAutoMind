@@ -1,4 +1,11 @@
 
+## rename-pyautopulse-to-pyautoheart
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/17
+- completed: 2026-06-24
+- project-docs-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/18 (merged a2543d0)
+- repos: PyAutoHeart
+- notes: Renamed the PyAutoPulse project identity to PyAutoHeart across docs, package metadata, canonical `heart/` implementation paths, CLI entry point `pyauto-heart`, workflow display names, tests, and compatibility documentation. Preserved transition compatibility via `pulse` and `pyautopulse` shims, `pyauto-pulse` wrapper, `PULSE_*` environment aliases, and stable reusable workflow filenames. Copilot review follow-ups fixed GitHub repository transition assumptions and atomic sidecar state writes; README readiness wording intentionally remains advisory during the Build/Hands migration. Local checkout moved from `PyAutoPulse` to `PyAutoHeart` with a `PyAutoPulse -> PyAutoHeart` symlink for old paths. Follow-up remains: rename the GitHub repository and migrate downstream `uses: PyAutoLabs/PyAutoPulse/.github/workflows/...` references once redirects are confirmed.
+
 ## remaining-citation-migration
 - issue: https://github.com/PyAutoLabs/PyAutoPaper/issues/11
 - completed: 2026-06-23
