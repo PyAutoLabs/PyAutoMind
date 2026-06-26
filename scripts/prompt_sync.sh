@@ -15,13 +15,19 @@
 # Replaces the previous admin_jammy/software/admin_sync.sh which operated on
 # admin_jammy/prompt/. PyAutoMind is now the home of prompts and registry.
 
-PROMPT_REPO="${PROMPT_REPO:-$HOME/Code/PyAutoLabs/PyAutoMind}"
+# An explicitly set PROMPT_REPO is always honoured as-is (a missing path then
+# surfaces as a normal error rather than being silently redirected). Only when
+# PROMPT_REPO is unset do we apply the default and the rename fallback below.
+if [ -z "${PROMPT_REPO:-}" ]; then
+  PROMPT_REPO="$HOME/Code/PyAutoLabs/PyAutoMind"
 
-# Backwards compatibility: before the PyAutoPrompt -> PyAutoMind rename the repo
-# lived at PyAutoLabs/PyAutoPrompt. If the new path is absent but the old one is
-# present (a checkout not yet renamed), fall back to it so sourcing still works.
-if [ ! -d "$PROMPT_REPO" ] && [ -d "$HOME/Code/PyAutoLabs/PyAutoPrompt" ]; then
-  PROMPT_REPO="$HOME/Code/PyAutoLabs/PyAutoPrompt"
+  # Backwards compatibility: before the PyAutoPrompt -> PyAutoMind rename the
+  # repo lived at PyAutoLabs/PyAutoPrompt. If the new default path is absent but
+  # the old one is present (a checkout not yet renamed), fall back to it so
+  # sourcing still works.
+  if [ ! -d "$PROMPT_REPO" ] && [ -d "$HOME/Code/PyAutoLabs/PyAutoPrompt" ]; then
+    PROMPT_REPO="$HOME/Code/PyAutoLabs/PyAutoPrompt"
+  fi
 fi
 
 # Commit and push any new untracked .md files at the repo root or under
