@@ -8,10 +8,12 @@ Universal entry point for starting work on a new task. Reads a prompt file, crea
 /start_dev <prompt-file-path>
 ```
 
-The path is relative to `PyAutoMind/`. Examples:
-- `/start_dev autofit/logging.md`
-- `/start_dev autoarray/psf_oversampling.md`
-- `/start_dev autolens/dark_matter_sight_lines.md`
+The path is relative to `PyAutoMind/`. Prompts live under `<work-type>/<target>/`
+(see README "Prompt taxonomy"); pre-migration `<target>/<name>.md` paths still
+resolve. Examples:
+- `/start_dev bug/autofit/factor_graph_3_14_instance_iteration.md`
+- `/start_dev feature/autoarray/oversampling.md`
+- `/start_dev refactor/autofit/latent_class_redesign.md`
 - `/start_dev z_features/<epic>.md` — audit-only mode (see Step 1b). Checks linked sub-prompts and archives the tracker to `z_features/complete/` if everything is shipped. Does **not** create an issue.
 
 ## Steps
@@ -36,7 +38,7 @@ If the normalized path starts with `z_features/`, do **not** treat the file as a
 
 **a. Parse the tracker for sub-prompt references.** Scan the file for:
 - Markdown links: `[label](relative/path.md)` — take the path inside the parens.
-- Bare relative paths: `<subdir>/<name>.md` where `<subdir>` is one of the known PyAutoMind subdirs (`autoconf/`, `autofit/`, `autoarray/`, `autogalaxy/`, `autolens/`, `autofit_workspace/`, `autogalaxy_workspace/`, `autolens_workspace/`, `autolens_workspace_test/`, `autogalaxy_workspace_test/`, `euclid_strong_lens_modeling_pipeline/`, `howtolens/`, `howtogalaxy/`, `admin_jammy/`, etc.).
+- Bare relative paths. After the work-type migration these are `<work-type>/<target>/<name>.md` where `<work-type>` is one of `feature/`, `bug/`, `refactor/`, `docs/`, `test/`, `release/`, `maintenance/`, `research/`, `experiment/`, `triage/`. Older `<target>/<name>.md` paths (`autofit/…`, `autoarray/…`, `autogalaxy/…`, `autolens/…`, `cluster/…`, `weak/…`, etc.) still appear in pre-migration trackers — accept both forms.
 
 Dedupe; resolve any `../` segments relative to the tracker's own directory. Skip references that point inside `z_features/` itself (self-references / sibling trackers).
 
@@ -50,8 +52,8 @@ Dedupe; resolve any `../` segments relative to the tracker's own directory. Skip
 ```
 | Sub-prompt | Status | Notes |
 |------------|--------|-------|
-| autogalaxy/foo.md | shipped | matched `autogalaxy-wst-foo` in complete.md, PR #123 |
-| autogalaxy/bar.md | not yet issued | still in autogalaxy/ |
+| feature/autogalaxy/foo.md | shipped | matched `autogalaxy-wst-foo` in complete.md, PR #123 |
+| feature/autogalaxy/bar.md | not yet issued | still in feature/autogalaxy/ |
 ```
 
 Follow with a one-line summary: `N shipped / M in flight / K not yet issued / U unknown`.

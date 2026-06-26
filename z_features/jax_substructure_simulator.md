@@ -30,18 +30,18 @@ __What's already done__ (no work needed):
 
 __Outstanding__ (sequenced):
 
-1. [jax_substructure/1_vmap_subhalo_deflections.md](../jax_substructure/1_vmap_subhalo_deflections.md) —
+1. [feature/jax_substructure/1_vmap_subhalo_deflections.md](../feature/jax_substructure/1_vmap_subhalo_deflections.md) —
    vectorized deflection path: represent N halos as `(max_N, n_params)` arrays,
    `jax.vmap` the profile deflection function, sum with mask. Integration test
    comparing against the existing Tracer Python-loop result.
-2. [jax_substructure/2_tracer_lax_scan.md](../jax_substructure/2_tracer_lax_scan.md) —
+2. [feature/jax_substructure/2_tracer_lax_scan.md](../feature/jax_substructure/2_tracer_lax_scan.md) —
    `jax.lax.scan` over planes: precomputed scaling-factor matrix, fixed-shape
    per-plane halo stacks, one scan op replaces the nested Python loops in
    `tracer_util.traced_grid_2d_list_from`.
-3. [jax_substructure/3_simulator_jax_e2e.md](../jax_substructure/3_simulator_jax_e2e.md) —
+3. [feature/jax_substructure/3_simulator_jax_e2e.md](../feature/jax_substructure/3_simulator_jax_e2e.md) —
    end-to-end `jax.jit(simulate)`: wire PSF convolution, add `prng_key` support
    for Poisson noise, thread xp through over-sampling, smoke test on a
    representative substructure configuration.
-4. [jax_substructure/4_vmap_batched_simulation.md](../jax_substructure/4_vmap_batched_simulation.md) —
+4. [feature/jax_substructure/4_vmap_batched_simulation.md](../feature/jax_substructure/4_vmap_batched_simulation.md) —
    stretch goal: `vmap(jit(simulate))(thetas, keys)` for ~1024 images per GPU
    launch. Depends on all three previous prompts.

@@ -26,13 +26,29 @@ bold() { printf "\033[1m%s\033[0m\n" "$1"; }
 dim()  { printf "\033[2m%s\033[0m\n" "$1"; }
 
 # ---------- Counts per category ----------
+#
+# Prompts are now organised by WORK TYPE at the first folder level
+# (feature/, bug/, refactor/, …) with the target repo/domain as the second
+# level. Lifecycle/meta folders (issued/, z_features/, z_vault/, shelved/,
+# autoprompt/, triage/) keep their own names. See README "Prompt taxonomy".
 
-bold "== Prompt inventory =="
+WORK_TYPES=(feature bug refactor docs test release maintenance research experiment)
+LIFECYCLE_DIRS=(triage issued z_features z_vault shelved autoprompt)
+
+bold "== Prompt inventory (by work type) =="
 printf "%-35s %s\n" "category" "count"
 printf "%-35s %s\n" "----------------------------------" "-----"
 
-for dir in autoarray autofit autogalaxy autolens autolens_workspace_developer \
-           autobuild cluster weak workspaces autoprompt z_vault issued; do
+for dir in "${WORK_TYPES[@]}"; do
+  if [ -d "$ROOT/$dir" ]; then
+    count=$(find "$ROOT/$dir" -type f -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
+    printf "%-35s %s\n" "$dir/" "$count"
+  fi
+done
+
+echo ""
+bold "== Lifecycle / meta =="
+for dir in "${LIFECYCLE_DIRS[@]}"; do
   if [ -d "$ROOT/$dir" ]; then
     count=$(find "$ROOT/$dir" -type f -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
     printf "%-35s %s\n" "$dir/" "$count"
@@ -95,8 +111,7 @@ fi
 
 if [ "${1:-}" = "--full" ]; then
   bold "== Full prompt list =="
-  for dir in autoarray autofit autogalaxy autolens autolens_workspace_developer \
-             autobuild cluster weak workspaces autoprompt z_vault issued; do
+  for dir in "${WORK_TYPES[@]}" "${LIFECYCLE_DIRS[@]}"; do
     [ -d "$ROOT/$dir" ] || continue
     files=$(find "$ROOT/$dir" -type f -name "*.md" 2>/dev/null | sort)
     [ -z "$files" ] && continue

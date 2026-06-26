@@ -1,3 +1,8 @@
+<!-- TRIAGE: needs manual review before routing. Session-resume fragment with
+     little standalone context. Likely work-type `test` (verify jax.jit/jax.grad
+     parity for critical-curve/caustic calcs), target `autolens_workspace_test`.
+     Re-file to test/autolens_workspace_test/ once confirmed. -->
+
 [resume]
 
 claude --resume 015b4ac4-0900-4d06-b39a-e1f1bd31af80 

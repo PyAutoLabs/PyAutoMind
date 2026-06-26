@@ -1,12 +1,12 @@
 __Outstanding__ (sequenced)
 
-1. [cluster/2_scaling_relation.md](../cluster/2_scaling_relation.md) —
+1. [2_scaling_relation.md](../issued/2_scaling_relation.md) —
    make scaling-relation members the default in the three
    `autolens_workspace/scripts/cluster/` scripts (10 low-mass members on a
    luminosity–mass scaling relation, always via the CSV interface mirroring
    `imaging/features/scaling_relation/`). Simulator extension must still
    produce multiple images in the right positions.
-2. [cluster/3_test_workspace.md](../cluster/3_test_workspace.md) —
+2. [3_test_workspace.md](../issued/3_test_workspace.md) —
    stand up `autolens_workspace_test/scripts/cluster/`:
    - `simulator.py` re-using the workspace simulator (so scaling galaxies
      flow through into every downstream test).
@@ -21,12 +21,12 @@ __Outstanding__ (sequenced)
    - `scripts/jax_likelihood_functions/cluster/single_plane.py` +
      `multi_plane.py` with numerical assertions against the perturbation
      test case.
-3. [cluster/4_likelihood_function.md](../cluster/4_likelihood_function.md) —
+3. [4_likelihood_function.md](../issued/4_likelihood_function.md) —
    `autolens_workspace/scripts/cluster/likelihood_function.py` step-by-step
    walkthrough: source-plane chi² first, then image-plane chi². Comment
    density and structure should match the other workspace
    `likelihood_function.py` scripts.
-4. [cluster/5_profiling.md](../cluster/5_profiling.md) — two scripts in
+4. [feature/cluster/5_profiling.md](../feature/cluster/5_profiling.md) — two scripts in
    `autolens_profiling/likelihood/cluster/` that time the source-plane and
    image-plane likelihood paths, following the per-model breakdown style of
    the rest of `autolens_profiling/likelihood/`. Depends on (3) for the
