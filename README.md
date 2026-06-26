@@ -385,17 +385,27 @@ absolute path.
 
 ```bash
 cd ~/Code/PyAutoLabs
-git clone git@github.com:PyAutoLabs/PyAutoMind.git
+# Until the GitHub-side rename (PyAutoPrompt -> PyAutoMind) lands, clone the old
+# URL into a PyAutoMind/ directory: the old URL works now and redirects after the
+# rename, and the documented commands all assume a `PyAutoMind/` checkout. Once
+# the rename lands, `git clone git@github.com:PyAutoLabs/PyAutoMind.git` works too.
+git clone git@github.com:PyAutoLabs/PyAutoPrompt.git PyAutoMind
 git clone git@github.com:Jammy2211/admin_jammy.git    # if not already present
 bash admin_jammy/skills/install.sh                     # symlinks skills + commands
 ```
 
-> **Note on the rename.** This repository was renamed from **PyAutoPrompt** to
-> **PyAutoMind**. GitHub redirects the old `PyAutoLabs/PyAutoPrompt` URL to the
-> new one, so existing clones keep working; update your remote with
-> `git remote set-url origin git@github.com:PyAutoLabs/PyAutoMind.git` and (optionally)
-> rename your local checkout directory to `PyAutoMind` when convenient. The sync
-> helpers fall back to a `PyAutoPrompt` checkout if the renamed one is absent.
+> **Note on the rename.** This repository is being renamed from **PyAutoPrompt**
+> to **PyAutoMind**. The GitHub-side rename is a separate admin action; once it
+> lands, GitHub redirects the old `PyAutoLabs/PyAutoPrompt` URL to the new one, so
+> existing clones keep working — update your remote with
+> `git remote set-url origin git@github.com:PyAutoLabs/PyAutoMind.git`.
+>
+> **The local checkout directory must be named `PyAutoMind`** (or symlinked with
+> `ln -s PyAutoPrompt PyAutoMind`). The skill and script docs reference
+> `PyAutoMind/...` paths directly — e.g. `source PyAutoMind/scripts/prompt_sync.sh`
+> and `git -C PyAutoMind …` — so a directory still named `PyAutoPrompt` will break
+> those commands. (The `prompt_sync.sh` fallback only covers automatic
+> `PROMPT_REPO` resolution, not these literal documented paths.)
 
 `install.sh` auto-discovers skills from both `admin_jammy/skills/` and
 `PyAutoMind/skills/` and creates symlinks under `~/.claude/skills/` and

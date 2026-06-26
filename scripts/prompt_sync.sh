@@ -30,12 +30,25 @@ if [ -z "${PROMPT_REPO:-}" ]; then
   fi
 fi
 
+# Fail loudly if PROMPT_REPO is not an actual git checkout. Without this the
+# sync functions below silently no-op (git -C <missing> errors are swallowed and
+# they return 0), so a missing or mis-set path would look like "nothing to sync"
+# instead of a misconfiguration. Returns non-zero (we are sourced, never exit).
+_prompt_sync_require_repo() {
+  if ! git -C "$PROMPT_REPO" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "prompt_sync: PROMPT_REPO is not a git checkout: $PROMPT_REPO" >&2
+    echo "  set PROMPT_REPO to your PyAutoMind checkout, or clone it first." >&2
+    return 1
+  fi
+}
+
 # Commit and push any new untracked .md files at the repo root or under
 # category dirs as one "sync new task ideas" commit. Each new file is listed
 # individually in the commit body so the history shows which prompts arrived.
 # Excludes issued/ (handled by prompt_sync_push when skills move files there)
 # and tmp/ (scratch).
 prompt_sync_new_prompts() {
+  _prompt_sync_require_repo || return 1
   local untracked
   untracked=$(git -C "$PROMPT_REPO" ls-files --others --exclude-standard \
     -- '*.md' '*/*.md' \
@@ -59,6 +72,7 @@ prompt_sync_new_prompts() {
 # and push. Used by skills at task milestones (issue filed, repos
 # registered, task shipped, etc.). No-op if nothing is staged.
 prompt_sync_push() {
+  _prompt_sync_require_repo || return 1
   local subject="${1:-prompt: sync PyAutoMind}"
   ( cd "$PROMPT_REPO" && \
     git add -A && \
