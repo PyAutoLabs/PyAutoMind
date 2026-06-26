@@ -8,7 +8,7 @@ across Prior subclasses"), we audited every prior and message in PyAutoFit
 for similar latent math bugs.
 
 Full audit lives at:
-`PyAutoPrompt/autofit/priors_and_messages_math_audit.md`
+`PyAutoMind/research/autofit/priors_and_messages_math_audit.md`
 
 This folder breaks that audit into a logical, dependency-ordered sequence
 of standalone GitHub issues. The intent is to land them one by one so
@@ -38,7 +38,7 @@ review before any code change.
 When ready to action one of these issues, run:
 
 ```
-/create_issue priors/<file>.md
+/create_issue bug/priors/<file>.md
 ```
 
 That files the issue. The agent should NOT call `/start_dev` against

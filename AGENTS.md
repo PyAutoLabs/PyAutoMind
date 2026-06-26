@@ -23,10 +23,16 @@ For the full workflow narrative, conventions, and registry schemas, read
 
 ## Layout (operational)
 
-- **Prompts** — `<category>/<name>.md` (free-form markdown, one task per file).
-  Categories: `autoarray/`, `autofit/`, `autogalaxy/`, `autolens/`, `autobuild/`,
-  `cluster/`, `weak/`, `workspaces/`, `autolens_workspace_developer/`,
-  `autoprompt/`, `z_vault/`.
+- **Prompts** — `<work-type>/<target>/<name>.md` (free-form markdown, one task
+  per file). The **first** folder is the *kind of work*; the **second** is the
+  *target repo or domain*. Work-types: `feature/`, `bug/`, `refactor/`, `docs/`,
+  `test/`, `release/`, `maintenance/`, `research/`, `experiment/` (plus `triage/`
+  for prompts whose classification is still unclear). PyAutoBrain routes by the
+  first folder — see [README.md](README.md) "Prompt taxonomy" and `ROUTING.md`.
+  Lifecycle/meta folders are **not** work-types and keep their own names:
+  `issued/` (routed prompts), `z_features/` (multi-task epic trackers),
+  `z_vault/` (deferred), `shelved/`, and `autoprompt/` (prompts about this repo's
+  own infrastructure).
 - **Registry** — root-level markdown files: `active.md`, `complete.md`,
   `planned.md`, `parked.md`, `queue.md`, `priority.md`, `ideas.md`. Mutate
   these only via the skills in `skills/` so commit messages stay consistent.
@@ -52,13 +58,19 @@ For the full workflow narrative, conventions, and registry schemas, read
 
 ## When you are asked to add a new prompt
 
-Write the file under the appropriate category. Don't touch `active.md` or
-`issued/` directly — those are managed by `/start_dev` / `/create_issue`.
+Write the file under `<work-type>/<target>/<name>.md` — pick the work-type from
+the list above (use `triage/` if genuinely unsure) and the target repo/domain as
+the second folder, e.g. `feature/autolens/potential_corrections.md` or
+`bug/autoarray/mask_edge_case.md`. Don't touch `active.md` or `issued/` directly
+— those are managed by `/start_dev` / `/create_issue`.
 
 ## When you are asked to start work on an existing prompt
 
-Use `/start_dev <category>/<name>.md`. It will route to `/start_library` or
-`/start_workspace` based on the repos referenced in the prompt body.
+Use `/start_dev <work-type>/<target>/<name>.md` (older `<target>/<name>.md` paths
+from before the taxonomy migration still work too). It will route to
+`/start_library` or `/start_workspace` based on the repos referenced in the
+prompt body — routing keys off the `@RepoName` references in the content, not the
+folder.
 
 ## When in doubt
 

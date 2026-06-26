@@ -12,10 +12,12 @@ Convert a prompt file into a tracked GitHub issue with a human-readable plan and
 /create-issue <prompt-file-path>
 ```
 
-The path is relative to `PyAutoMind/`. Examples:
-- `/create-issue autofit/logging.md`
-- `/create-issue autoarray/psf_oversampling.md`
-- `/create-issue autolens/dark_matter_sight_lines.md`
+The path is relative to `PyAutoMind/`. Prompts live under `<work-type>/<target>/`
+(see README "Prompt taxonomy"); pre-migration `<target>/<name>.md` paths still
+resolve. Examples:
+- `/create-issue bug/autofit/factor_graph_3_14_instance_iteration.md`
+- `/create-issue feature/autoarray/oversampling.md`
+- `/create-issue bug/priors/01_log_gaussian_with_limits_crash.md`
 
 ## Steps
 

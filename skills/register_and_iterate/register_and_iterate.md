@@ -12,7 +12,10 @@ gates.
 /register_and_iterate --queue          # reads PyAutoMind/queue.md
 ```
 
-Prompts are paths relative to `PyAutoMind/` (e.g. `autolens/fit_imaging_pytree_rectangular.md`).
+Prompts are paths relative to `PyAutoMind/`, now organised by work type
+(e.g. `feature/autolens/fit_imaging_pytree_rectangular.md`; see README "Prompt
+taxonomy"). Pre-migration `<target>/<name>.md` paths still resolve, which is why
+the historical `# DONE` queue entries below keep their old `autolens/…` form.
 
 ## Autonomy Contract
 

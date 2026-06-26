@@ -24,7 +24,7 @@
     source_plane.py in the same dir — they share the seed dataset.
 
 ## nfw-truncated-potential-accuracy
-- prompt: PyAutoMind/autogalaxy/nfw_truncated_potential_accuracy.md
+- prompt: PyAutoMind/bug/autogalaxy/nfw_truncated_potential_accuracy.md
 - status: planned
 - filed: 2026-06-05
 - classification: library (accuracy bug)
@@ -40,7 +40,7 @@
   - PyAutoGalaxy
 
 ## piemass-potential
-- prompt: PyAutoMind/autogalaxy/piemass_potential.md
+- prompt: PyAutoMind/feature/autogalaxy/piemass_potential.md
 - status: planned
 - filed: 2026-06-05
 - classification: library (missing feature)

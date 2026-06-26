@@ -141,7 +141,7 @@ fine — write naturally, the AI fills in the rest.
   idea               ── you write it in ideas.md
     │
     ▼
-  draft prompt       ── you write a markdown file under <category>/<name>.md
+  draft prompt       ── you write a markdown file under <work-type>/<target>/<name>.md
     │
     ▼
   /start_dev         ── reads the prompt, audits the code, drafts an issue,
@@ -192,18 +192,25 @@ PyAutoMind/
 ├── priority.md              ← hand-curated priority hints
 ├── queue.md                 ← processing queue for /register_and_iterate
 │
-├── autoarray/               ← prompts targeting PyAutoArray
-├── autofit/                 ← prompts targeting PyAutoFit
-├── autogalaxy/              ← prompts targeting PyAutoGalaxy
-├── autolens/                ← prompts targeting PyAutoLens
-├── autolens_workspace_developer/   ← prompts targeting the dev workspace
+│   PROMPTS — organised by WORK TYPE (first folder), then TARGET (second folder).
+│   See "Prompt taxonomy" below and ROUTING.md.
+├── feature/                 ← new user-facing or scientific capabilities
+│   ├── autoarray/  autofit/  autogalaxy/  autolens/  autolens_assistant/  …
+│   ├── workspaces/          ← any *_workspace repo
+│   ├── pyautobrain/         ← prompts that implement PyAutoBrain agents
+│   ├── jax_substructure/  weak/  cluster/   ← numbered topic series (kept together)
+├── bug/                     ← incorrect behaviour, crashes, regressions
+│   ├── autofit/  autogalaxy/  autolens/  autoarray/  priors/  …
+├── refactor/                ← internal restructuring, no intended behaviour change
+├── docs/                    ← documentation, tutorials, notebooks, examples
+├── test/                    ← test coverage, smoke tests, validation scripts
+├── release/                 ← packaging, versions, deployment, release readiness
+├── maintenance/             ← dependency updates, hygiene, cleanup, small tech debt
+├── research/                ← exploratory scientific / algorithmic investigation
+├── experiment/              ← prototypes, spikes, proof-of-concept work
+├── triage/                  ← classification still unclear; needs manual review
 │
-├── autobuild/                   ← prompts targeting build/release infrastructure (PyAutoBuild)
-├── workspaces/              ← prompts targeting any *_workspace repo
-│
-├── cluster/                 ← cluster-lensing prompt series (numbered)
-├── weak/                    ← weak-lensing prompt series (numbered)
-│
+│   LIFECYCLE / META — not work-types; keep their own names.
 ├── issued/                  ← prompts that have been routed via /start_dev
 │   └── autolens_workspace_developer/   ← per-target subdirs preserved
 │
@@ -211,8 +218,9 @@ PyAutoMind/
 │   └── complete/            ← archived trackers (all sub-prompts shipped)
 │
 ├── z_vault/                 ← deferred prompts (z_ prefix sorts last in listings)
+├── shelved/                 ← shelved prompts
 │
-├── autoprompt/              ← prompts about THIS repo's own infrastructure
+├── autoprompt/              ← prompts about THIS repo's own infrastructure (meta)
 │
 ├── scripts/
 │   ├── status.sh            ← prompt inventory helper
@@ -243,17 +251,78 @@ replaces the previous `admin_jammy/software/admin_sync.sh` which operated on
 
 ---
 
+## Prompt taxonomy
+
+PyAutoMind organises **intent by the kind of thinking required; PyAutoBrain uses
+that structure to choose the right reasoning agent.**
+
+Prompts live at `<work-type>/<target>/<name>.md`:
+
+- The **first folder** answers *what kind of thinking or agent is needed?* — the
+  work type.
+- The **second folder** answers *what domain or repository is affected?* — the
+  target repo (`autoarray`, `autofit`, `autogalaxy`, `autolens`,
+  `autolens_assistant`, `pyautobrain`, …), a workspace bucket (`workspaces`), or
+  a topic series (`jax_substructure`, `weak`, `cluster`, `priors`).
+
+### Work types → PyAutoBrain agents
+
+| Folder | Holds | Future PyAutoBrain agent |
+|--------|-------|--------------------------|
+| `feature/` | new user-facing or scientific capabilities | feature planner |
+| `bug/` | incorrect behaviour, crashes, regressions | debugger |
+| `refactor/` | internal restructuring, no intended behaviour change | refactor architect |
+| `docs/` | documentation, tutorials, notebooks, examples | documentation agent |
+| `test/` | test coverage, smoke tests, validation scripts | test engineer |
+| `release/` | packaging, versions, deployment, release readiness | release engineer |
+| `maintenance/` | dependency updates, hygiene, cleanup, small tech debt | hygiene agent |
+| `research/` | exploratory scientific / algorithmic investigation | research analyst |
+| `experiment/` | prototypes, spikes, proof-of-concept work | prototype agent |
+
+`triage/` holds prompts whose classification is still unclear — file there with a
+short note and re-home once the work type is obvious. The full mapping (and the
+note that the agents themselves live in PyAutoBrain, not here) is in
+[`ROUTING.md`](ROUTING.md).
+
+### Good prompt paths
+
+```
+feature/autolens/potential_corrections.md
+bug/autoarray/mask_edge_case.md
+refactor/autofit/result_object_cleanup.md
+docs/workspaces/pixelization_tutorial.md
+research/autofit/sbi_design.md
+experiment/autoarray/jax_sparse_mapping.md
+```
+
+### Not work-types
+
+`issued/`, `z_features/`, `z_vault/`, `shelved/` are **workflow lifecycle**
+folders, and `autoprompt/` holds **meta** prompts about this repo's own
+infrastructure. They keep their own names and are not routed by work type.
+
+### Migration note
+
+The repository previously used the target repo as the first folder
+(`autoarray/foo.md`). Those prompts have moved to `<work-type>/autoarray/foo.md`.
+Routing always keyed off the `@RepoName` references in a prompt's body, not its
+folder, so the skills accept both old and new paths during the transition — but
+new prompts should use the work-type layout.
+
+---
+
 ## Conventions
 
 ### Naming
 
 - Prompt filenames are lowercase `kebab_or_snake_case.md`.
 - Numbered series use a leading number: `0_docs.md`, `1_simulator.md`. Skipping a
-  number (e.g. `weak/2_*.md` not present) is fine — it usually means a step was
-  consolidated or deferred.
-- Category dirs match the target repo name (lowercased, no `Py` prefix):
-  `autoarray/`, `autofit/`, `autogalaxy/`, `autolens/`. Workspace prompts go
-  under `workspaces/` regardless of which workspace.
+  number (e.g. `feature/weak/2_*.md` not present) is fine — it usually means a
+  step was consolidated or deferred.
+- **First folder = work type** (`feature/`, `bug/`, …); **second folder = target**
+  repo or domain (lowercased, no `Py` prefix): `feature/autoarray/`,
+  `bug/autofit/`, `refactor/autogalaxy/`. Workspace prompts go under
+  `<work-type>/workspaces/` regardless of which workspace. See "Prompt taxonomy".
 
 ### Prompt file format
 
@@ -265,6 +334,24 @@ Free-form markdown. Strong conventions:
 - One prompt = one task = one PR (ideally). If a prompt outlines several
   loosely-related changes, split before issuing.
 - No frontmatter required. Title in the first line is helpful but optional.
+- **Optional metadata header.** A prompt may carry a light, human-writable header
+  near the top so both people and PyAutoBrain can see its type/target at a glance.
+  This is a convention, not a schema — never required, no YAML frontmatter:
+
+  ```markdown
+  # Short task title
+
+  Type: feature
+  Target: PyAutoLens
+  Repos:
+  - PyAutoLens
+  - autolens_workspace
+
+  Status: draft
+  ```
+
+  When present, `Type:` should match the work-type folder. The goal is light
+  structure, not bureaucracy — prompts stay free-form prose.
 
 ### `active.md` schema
 
