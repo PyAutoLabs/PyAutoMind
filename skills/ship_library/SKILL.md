@@ -1,6 +1,6 @@
 ---
 name: ship-library
-description: Ship PyAutoLabs source-library changes. Use when Codex needs to inspect diffs, draft commit messages and PR bodies with API-change summaries, run library tests, commit, push, create pending-release PRs, analyze downstream workspace impact, update GitHub issues, and move PyAutoPrompt task state.
+description: Ship PyAutoLabs source-library changes. Use when Codex needs to inspect diffs, draft commit messages and PR bodies with API-change summaries, run library tests, commit, push, create pending-release PRs, analyze downstream workspace impact, update GitHub issues, and move PyAutoMind task state.
 ---
 
 # Ship Library

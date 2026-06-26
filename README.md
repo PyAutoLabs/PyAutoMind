@@ -1,14 +1,64 @@
-# PyAutoPrompt
+# PyAutoMind
 
-**The starting point of the PyAuto workflow.**
+**The Mind of the PyAuto organism — its ideas, intent, goals and priorities.**
 
-Every piece of work in the PyAuto ecosystem starts as a markdown file
-describing a task in **plain English**. You write what you want — that's it.
-An AI agent (or a human) picks it up and turns it into a tracked GitHub issue,
-a feature branch, and a merged pull request.
+The PyAuto ecosystem is evolving into a software organism, and this repository
+is its **Mind**: the place where the organism's *ideas, intentions, goals,
+priorities and future direction* are captured. Although it began life as a
+prompt repository, it has grown into the home of everything the organism *wants
+to become* — ideas, prompts, active and completed work, planning, priorities,
+workflow state and project direction.
+
+It is still the **starting point of the PyAuto workflow**. Every piece of work
+in the ecosystem starts here as a markdown file describing an intent in **plain
+English**. You write what you want — that's it. An AI agent (or a human) picks
+it up and turns it into a tracked GitHub issue, a feature branch, and a merged
+pull request.
 
 No template to fill in, no special syntax. **If you can describe the change
 in a GitHub issue, you can drive the workflow.**
+
+The Mind decides *what* the organism wants to become; the Brain
+([PyAutoBrain, currently the PyAutoAgent repo](https://github.com/PyAutoLabs/PyAutoAgent))
+decides *how* to achieve it. See [The PyAuto organism](#the-pyauto-organism) below.
+
+## The PyAuto organism
+
+The PyAuto ecosystem is organised as a software **organism**, with each
+repository playing the role of an organ:
+
+```
+  Mind   →   Brain   →   Hands   →   Heart
+  ideas      reasoning   execution    health
+  intent     & planning  & delivery   & readiness
+  goals
+  priorities                ↘     ↙
+                            Memory
+                       accumulated knowledge
+```
+
+| Organ | Repository | Role |
+|-------|------------|------|
+| **Mind** | **PyAutoMind** (this repo) | What the organism *wants to become*: ideas, intent, goals, priorities, future work. |
+| **Brain** | [PyAutoBrain](https://github.com/PyAutoLabs/PyAutoAgent) *(repo currently named PyAutoAgent)* | *How* to achieve those goals: reasoning, planning, routing work. |
+| **Hands** | [PyAutoBuild](https://github.com/PyAutoLabs/PyAutoBuild) *(the "Hands")* | Execution and delivery: building, testing, releasing. |
+| **Heart** | [PyAutoHeart](https://github.com/PyAutoLabs/PyAutoHeart) | Health and release-readiness: monitoring, checks, the "is it safe to ship?" gate. |
+| **Memory** | [PyAutoMemory](https://github.com/PyAutoLabs/PyAutoPaper) *(repo currently named PyAutoPaper)* | Accumulated knowledge: papers, wikis, reference material. |
+
+> The organism names (PyAutoBrain, PyAutoMemory) are the target identities; some
+> repos are mid-rename, so the links point at the current repository names noted
+> in italics. PyAutoBuild ("Hands") and PyAutoHeart keep their repository names.
+
+**Why this repository is the Mind.** Work in PyAuto begins as *intent* — an
+idea, a goal, a priority — long before it becomes code. This repository is where
+that intent lives and is shaped: raw ideas in `ideas.md`, scoped intentions as
+prompt files, the priorities that order them, and the workflow state that tracks
+what the organism is currently pursuing. It does not reason about *how* to build
+something (that is the Brain) or carry the work out (that is the Hands); it holds
+the organism's **wants and direction**. Everything downstream — planning,
+execution, health checks — flows from the intent captured here.
+
+---
 
 ## What a prompt looks like
 
@@ -130,7 +180,7 @@ Two slash commands operate over the prompt registry without starting work:
 ## Repository layout
 
 ```
-PyAutoPrompt/
+PyAutoMind/
 ├── README.md                ← this file
 ├── .gitignore
 │
@@ -315,7 +365,7 @@ The PyAuto workflow has three repos with distinct roles:
 
 | Repo | Purpose |
 |------|---------|
-| **PyAutoPrompt** (this repo) | Prompts, registry, prompt-coupled skills. The starting point. |
+| **PyAutoMind** (this repo) | The Mind: ideas, intent, goals, priorities, the prompt registry and prompt-coupled skills. The starting point. |
 | **admin_jammy** | Personal admin notes (`euclid.md`, `grants.md`, …) and general PyAuto tooling (`software/worktree.sh`, `software/admin_sync.sh`, generic skills like `audit_docs`, `dep_audit`, `repo_cleanup`). |
 | **PyAutoPaper** | Personal paper-management repo: source PDFs (gitignored) plus topical LLM wikis (`lensing_wiki/`, `smbh_wiki/`, `cti_wiki/`, `methods_wiki/`, `galaxies_wiki/`) and a reading queue (`reading-queue.md`, moved from `admin_jammy/papers.md`). |
 | **`PyAuto*` libraries and `*_workspace*` repos** | Where the actual code work happens. Each task gets a feature branch + worktree under `~/Code/PyAutoLabs-wt/<task-name>/`. |
@@ -323,7 +373,7 @@ The PyAuto workflow has three repos with distinct roles:
 Helper scripts that this repo's skills source:
 
 - `admin_jammy/software/worktree.sh` — task worktree management (create, remove, conflict check).
-- `admin_jammy/software/admin_sync.sh` — admin_jammy/PyAutoPrompt sync helpers.
+- `admin_jammy/software/admin_sync.sh` — admin_jammy/PyAutoMind sync helpers.
 
 These intentionally live in `admin_jammy/software/` because they're general
 multi-repo tooling, not prompt-specific. The skills that need them source by
@@ -335,11 +385,28 @@ absolute path.
 
 ```bash
 cd ~/Code/PyAutoLabs
-git clone git@github.com:PyAutoLabs/PyAutoPrompt.git
+# Until the GitHub-side rename (PyAutoPrompt -> PyAutoMind) lands, clone the old
+# URL into a PyAutoMind/ directory: the old URL works now and redirects after the
+# rename, and the documented commands all assume a `PyAutoMind/` checkout. Once
+# the rename lands, `git clone git@github.com:PyAutoLabs/PyAutoMind.git` works too.
+git clone git@github.com:PyAutoLabs/PyAutoPrompt.git PyAutoMind
 git clone git@github.com:Jammy2211/admin_jammy.git    # if not already present
 bash admin_jammy/skills/install.sh                     # symlinks skills + commands
 ```
 
+> **Note on the rename.** This repository is being renamed from **PyAutoPrompt**
+> to **PyAutoMind**. The GitHub-side rename is a separate admin action; once it
+> lands, GitHub redirects the old `PyAutoLabs/PyAutoPrompt` URL to the new one, so
+> existing clones keep working — update your remote with
+> `git remote set-url origin git@github.com:PyAutoLabs/PyAutoMind.git`.
+>
+> **The local checkout directory must be named `PyAutoMind`** (or symlinked with
+> `ln -s PyAutoPrompt PyAutoMind`). The skill and script docs reference
+> `PyAutoMind/...` paths directly — e.g. `source PyAutoMind/scripts/prompt_sync.sh`
+> and `git -C PyAutoMind …` — so a directory still named `PyAutoPrompt` will break
+> those commands. (The `prompt_sync.sh` fallback only covers automatic
+> `PROMPT_REPO` resolution, not these literal documented paths.)
+
 `install.sh` auto-discovers skills from both `admin_jammy/skills/` and
-`PyAutoPrompt/skills/` and creates symlinks under `~/.claude/skills/` and
+`PyAutoMind/skills/` and creates symlinks under `~/.claude/skills/` and
 `~/.claude/commands/`. Re-run any time after pulling new skills from either repo.

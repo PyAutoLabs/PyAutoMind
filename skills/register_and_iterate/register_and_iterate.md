@@ -9,10 +9,10 @@ gates.
 
 ```
 /register_and_iterate <prompt1>[,<prompt2>,...]
-/register_and_iterate --queue          # reads PyAutoPrompt/queue.md
+/register_and_iterate --queue          # reads PyAutoMind/queue.md
 ```
 
-Prompts are paths relative to `PyAutoPrompt/` (e.g. `autolens/fit_imaging_pytree_rectangular.md`).
+Prompts are paths relative to `PyAutoMind/` (e.g. `autolens/fit_imaging_pytree_rectangular.md`).
 
 ## Autonomy Contract
 
@@ -33,7 +33,7 @@ testing, and post-merge cleanup runs unattended.
 
 ### 1. Resume or start the task
 
-Read `PyAutoPrompt/active.md`. If the prompt's derived task name is already an active
+Read `PyAutoMind/active.md`. If the prompt's derived task name is already an active
 entry, resume it — source the worktree's `activate.sh`, verify the feature branch, continue.
 Otherwise invoke `/start_dev <prompt>` followed by `/start_library` logic inline (create
 issue, create worktree, register repos in `active.md`).
@@ -44,11 +44,11 @@ The derived task name is the filename stem (e.g. `fit_imaging_pytree_rectangular
 ### 2. Check dependencies
 
 Parse the prompt's `__Depends on__` section. For each dependency, verify it appears in
-`PyAutoPrompt/complete.md`. If a dependency is missing, stop and tell the user:
+`PyAutoMind/complete.md`. If a dependency is missing, stop and tell the user:
 
 ```
 Cannot start <this task>: dependency <dep task> has not shipped.
-  Dependency prompt: PyAutoPrompt/<dep path>
+  Dependency prompt: PyAutoMind/<dep path>
   Run /register_and_iterate on the dependency first, or remove it from this queue.
 ```
 
@@ -160,7 +160,7 @@ and start the next prompt. If queue is empty, print a final summary and stop.
 
 ## Queue Mode
 
-When invoked with `--queue`, read the queue from `PyAutoPrompt/queue.md`:
+When invoked with `--queue`, read the queue from `PyAutoMind/queue.md`:
 
 ```markdown
 # Pytree variant queue

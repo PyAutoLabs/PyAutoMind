@@ -1,6 +1,6 @@
 ---
 name: start-workspace
-description: Set up PyAutoLabs workspace or tutorial repository development. Use when Codex needs to attach or create workspace worktrees, inspect upstream library PR API changes, identify affected scripts, register workspace repos in PyAutoPrompt, and prepare workspace-only or library-follow-up work.
+description: Set up PyAutoLabs workspace or tutorial repository development. Use when Codex needs to attach or create workspace worktrees, inspect upstream library PR API changes, identify affected scripts, register workspace repos in PyAutoMind, and prepare workspace-only or library-follow-up work.
 ---
 
 # Start Workspace

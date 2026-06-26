@@ -1,6 +1,6 @@
 # Start Dev For User: Pick Up a User-Filed GitHub Issue
 
-Variant of `/start_dev` whose starting point is a GitHub issue **opened by an external user** rather than a `PyAutoPrompt/` prompt file. Same downstream routing (classify → branch survey → register → `/start_library` or `/start_workspace`), but with two extra responsibilities:
+Variant of `/start_dev` whose starting point is a GitHub issue **opened by an external user** rather than a `PyAutoMind/` prompt file. Same downstream routing (classify → branch survey → register → `/start_library` or `/start_workspace`), but with two extra responsibilities:
 
 1. **Conversational, milestone-driven updates posted back to the issue** so the reporter can follow progress without reading code or commits.
 2. **An explicit clarification gate** — user-filed issues are often incomplete, so the skill stops and asks for missing info before producing a plan.
@@ -30,7 +30,7 @@ These apply to every issue comment this skill (and its downstream successors) po
 
 ### 0. Check for parked handoff tasks
 
-Identical to `/start_dev` step 0 — check `PyAutoPrompt/active.md` for any task with a `location:` field matching the current environment (`ready-for-cli` on the laptop, `ready-for-mobile` on mobile/server). If one exists, offer to resume it before starting fresh. If the user picks resume, hand off to `/handoff resume` and stop.
+Identical to `/start_dev` step 0 — check `PyAutoMind/active.md` for any task with a `location:` field matching the current environment (`ready-for-cli` on the laptop, `ready-for-mobile` on mobile/server). If one exists, offer to resume it before starting fresh. If the user picks resume, hand off to `/handoff resume` and stop.
 
 ### 1. Resolve and read the issue
 
@@ -136,7 +136,7 @@ Before producing a plan, decide whether the issue is **actionable**. Heuristics 
      gh issue edit <n> --repo <owner>/<repo> --add-label needs-info
    ```
 
-5. Add a partial entry to `PyAutoPrompt/active.md`:
+5. Add a partial entry to `PyAutoMind/active.md`:
    ```markdown
    ## <task-name>
    - issue: <issue-url>
@@ -151,7 +151,7 @@ Before producing a plan, decide whether the issue is **actionable**. Heuristics 
    once the reporter replies.
    ```
 
-7. **Stop.** Do not run plan generation, branch survey, or routing. Do not push PyAutoPrompt — the partial registration will be picked up by the next push or by the resumed run.
+7. **Stop.** Do not run plan generation, branch survey, or routing. Do not push PyAutoMind — the partial registration will be picked up by the next push or by the resumed run.
 
 ### 6. Generate the plan
 
@@ -254,7 +254,7 @@ The legacy unregistered-feature-branch warning from `/start_dev` step 9 also app
 
 #### 10a. Route to planned.md (conflict — task is queued)
 
-Add the entry to `PyAutoPrompt/planned.md`:
+Add the entry to `PyAutoMind/planned.md`:
 
 ```markdown
 ## <task-name>
@@ -288,7 +288,7 @@ Skip to step 13.
 
 #### 10b. Route to active.md (no conflict — task can start)
 
-Add the entry to `PyAutoPrompt/active.md`:
+Add the entry to `PyAutoMind/active.md`:
 
 ```markdown
 ## <task-name>
@@ -332,10 +332,10 @@ Display:
 
 **Optional third milestone comment.** Ask the developer via `AskUserQuestion` whether to post a brief "Plan looks good — starting work now" comment to the issue. Default to **not** posting unless they confirm — if they're moving straight into `/start_library`, that skill (once updated for `user-facing: true` mode) can post the "starting work" milestone instead. Posting both would be a noisy double comment.
 
-### 13. Push PyAutoPrompt
+### 13. Push PyAutoMind
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: route <task-name> (#<issue>) → <next-skill> [user-facing]"
 ```
 

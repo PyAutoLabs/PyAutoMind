@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# PyAutoPrompt registry status.
+# PyAutoMind registry status.
 #
 # Prints prompt inventory grouped by category, plus the current state of
 # active.md / planned.md / complete.md.
 #
 # Usage:
-#   bash PyAutoPrompt/scripts/status.sh [--full | --repos]
+#   bash PyAutoMind/scripts/status.sh [--full | --repos]
 #
 # Without args: counts + active task list + last 5 completed.
 # With --full:  also lists every prompt under every category.

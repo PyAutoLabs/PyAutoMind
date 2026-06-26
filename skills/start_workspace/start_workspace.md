@@ -36,9 +36,9 @@ If the repo appears under the **same** task (resuming work), that's fine — pro
 
 ## Mode Detection
 
-Read `PyAutoPrompt/active.md` to find the current issue URL.
+Read `PyAutoMind/active.md` to find the current issue URL.
 
-If no matching issue is found in `active.md`, check `PyAutoPrompt/planned.md` — the task may have been queued there because of a conflict when `/start_dev` ran. If found in `planned.md`:
+If no matching issue is found in `active.md`, check `PyAutoMind/planned.md` — the task may have been queued there because of a conflict when `/start_dev` ran. If found in `planned.md`:
 
 1. Re-run the conflict guard against the task's `affected-repos`
 2. If the conflict is **resolved**: move the entry from `planned.md` to `active.md` (using the active.md format with `status: workspace-dev`) and proceed
@@ -130,7 +130,7 @@ If the helper exits non-zero, stop and surface the failure to the user — `/shi
 
 ### L7. Register repos in active.md
 
-Update the task's entry in `PyAutoPrompt/active.md` to add workspace repos and update status. The `worktree:` field is already present from `/start_library` — keep it as-is and just extend the `repos:` list:
+Update the task's entry in `PyAutoMind/active.md` to add workspace repos and update status. The `worktree:` field is already present from `/start_library` — keep it as-is and just extend the `repos:` list:
 
 ```markdown
 ## <task-name>
@@ -151,7 +151,7 @@ The library repos from the earlier phase remain listed. The workspace repos are 
 After updating active.md, push the change:
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: register <task-name> workspace repos in active.md"
 ```
 
@@ -225,7 +225,7 @@ If a branch with the same name already exists (e.g. resuming work), `worktree_cr
 
 ### S4. Register repos in active.md
 
-Update the task's entry in `PyAutoPrompt/active.md` to add workspace repos and record the worktree path:
+Update the task's entry in `PyAutoMind/active.md` to add workspace repos and record the worktree path:
 
 ```markdown
 ## <task-name>
@@ -242,7 +242,7 @@ The `worktree:` field is what `worktree_check_conflict` reads to detect collisio
 After updating active.md, push the change:
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: register <task-name> standalone-workspace repos in active.md"
 ```
 

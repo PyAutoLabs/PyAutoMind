@@ -1,6 +1,6 @@
 ---
 name: create-issue
-description: Convert a prompt file from PyAutoPrompt/ into a GitHub issue with overview, plan, and starting AI prompt.
+description: Convert a prompt file from PyAutoMind/ into a GitHub issue with overview, plan, and starting AI prompt.
 user-invocable: true
 ---
 
@@ -12,7 +12,7 @@ Convert a prompt file into a tracked GitHub issue with a human-readable plan and
 /create-issue <prompt-file-path>
 ```
 
-The path is relative to `PyAutoPrompt/`. Examples:
+The path is relative to `PyAutoMind/`. Examples:
 - `/create-issue autofit/logging.md`
 - `/create-issue autoarray/psf_oversampling.md`
 - `/create-issue autolens/dark_matter_sight_lines.md`
@@ -21,10 +21,10 @@ The path is relative to `PyAutoPrompt/`. Examples:
 
 ### 0. Sync new prompt ideas
 
-Before reading the requested prompt, sweep up any other ideas the user has dropped into `PyAutoPrompt/` since the last task — these accumulate locally and would otherwise be lost in the next merge.
+Before reading the requested prompt, sweep up any other ideas the user has dropped into `PyAutoMind/` since the last task — these accumulate locally and would otherwise be lost in the next merge.
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_new_prompts
 ```
 
@@ -32,7 +32,7 @@ prompt_sync_new_prompts
 
 ### 1. Read the prompt file
 
-Read the file at `PyAutoPrompt/<argument>`. If the file doesn't exist, report the error and list available prompt files in that subdirectory.
+Read the file at `PyAutoMind/<argument>`. If the file doesn't exist, report the error and list available prompt files in that subdirectory.
 
 ### 2. Identify target repositories
 
@@ -166,7 +166,7 @@ Display:
 
 ### 9. Update active.md
 
-Add a line to `PyAutoPrompt/active.md` with the issue URL and the original prompt file:
+Add a line to `PyAutoMind/active.md` with the issue URL and the original prompt file:
 
 ```
 <task-name>: <issue-url> | claude --resume <session-id>
@@ -174,20 +174,20 @@ Add a line to `PyAutoPrompt/active.md` with the issue URL and the original promp
 
 ### 10. Move the prompt file
 
-Move the original prompt file to `PyAutoPrompt/issued/`:
+Move the original prompt file to `PyAutoMind/issued/`:
 
 ```bash
-mv PyAutoPrompt/<path> PyAutoPrompt/issued/<filename>
+mv PyAutoMind/<path> PyAutoMind/issued/<filename>
 ```
 
 If a file with the same name already exists in `issued/`, append a timestamp suffix.
 
-### 11. Push PyAutoPrompt
+### 11. Push PyAutoMind
 
-After active.md is updated and the prompt file has been moved into `issued/`, push the PyAutoPrompt state so the new entry is visible from any other machine:
+After active.md is updated and the prompt file has been moved into `issued/`, push the PyAutoMind state so the new entry is visible from any other machine:
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: file issue for <task-name> (#<issue>)"
 ```
 

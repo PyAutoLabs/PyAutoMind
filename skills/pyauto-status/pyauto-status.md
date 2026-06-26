@@ -14,7 +14,7 @@ Show a dashboard of all active work across all repositories. Use this to check f
 
 Read all three registry files:
 
-**`PyAutoPrompt/planned.md`** — tasks with issues created but blocked from starting:
+**`PyAutoMind/planned.md`** — tasks with issues created but blocked from starting:
 
 ```markdown
 ## <task-name>
@@ -28,7 +28,7 @@ Read all three registry files:
   - <repo2>
 ```
 
-**`PyAutoPrompt/active.md`** — tasks currently in progress:
+**`PyAutoMind/active.md`** — tasks currently in progress:
 
 ```markdown
 ## <task-name>
@@ -40,7 +40,7 @@ Read all three registry files:
   - <repo>: <branch>
 ```
 
-**`PyAutoPrompt/complete.md`** — recently completed tasks (show last 5 for context).
+**`PyAutoMind/complete.md`** — recently completed tasks (show last 5 for context).
 
 ### 2. Live scan all repositories and worktrees
 
@@ -202,7 +202,7 @@ Based on the flags, suggest next steps:
 - Otherwise → **mobile mode** (follow this section)
 
 **Mobile behavior:**
-1. Pull latest `PyAutoPrompt` to get current registry files
+1. Pull latest `PyAutoMind` to get current registry files
 2. Read `planned.md`, `active.md`, and `complete.md` as normal
 3. For each repo listed in active tasks, check branch state via GitHub API instead of local git:
    ```bash

@@ -6,11 +6,11 @@ Ship source-code library changes (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLe
 
 ### 1. Identify Affected Repositories
 
-Read `PyAutoPrompt/active.md` to find the current task's `worktree:` field and its `repos:` list. These are the repos shipped in this session.
+Read `PyAutoMind/active.md` to find the current task's `worktree:` field and its `repos:` list. These are the repos shipped in this session.
 
 ```bash
 source admin_jammy/software/worktree.sh
-WT_ROOT="$(grep -A1 '^## <task-name>' PyAutoPrompt/active.md | grep 'worktree:' | awk '{print $3}')"
+WT_ROOT="$(grep -A1 '^## <task-name>' PyAutoMind/active.md | grep 'worktree:' | awk '{print $3}')"
 # or simpler: WT_ROOT=~/Code/PyAutoLabs-wt/<task-name>
 source "$WT_ROOT/activate.sh"
 ```
@@ -211,10 +211,10 @@ Update `active.md` — change the task's status to `library-shipped, workspace-p
 
 Do NOT move to `complete.md`. The work is not finished yet.
 
-Push the PyAutoPrompt update so the new status is visible from any other machine:
+Push the PyAutoMind update so the new status is visible from any other machine:
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: <task-name> library shipped (#<library-pr>) — workspace-pending"
 ```
 
@@ -263,10 +263,10 @@ source "$WT_ROOT/activate.sh"
 
   Remove the entire task block from `active.md`.
 
-  Push the PyAutoPrompt update:
+  Push the PyAutoMind update:
 
   ```bash
-  source PyAutoPrompt/scripts/prompt_sync.sh
+  source PyAutoMind/scripts/prompt_sync.sh
   prompt_sync_push "prompt: ship <task-name> (#<issue>) → complete"
   ```
 

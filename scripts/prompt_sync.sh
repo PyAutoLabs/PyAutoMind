@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# prompt_sync.sh — keep PyAutoPrompt in sync with origin during task lifecycle.
+# prompt_sync.sh — keep PyAutoMind in sync with origin during task lifecycle.
 #
-# Sourced by skills that mutate PyAutoPrompt registry files (active.md,
+# Sourced by skills that mutate PyAutoMind registry files (active.md,
 # complete.md, planned.md, queue.md, ...) so we never accumulate local-only
 # changes that drift from origin.
 #
-#   source PyAutoPrompt/scripts/prompt_sync.sh
+#   source PyAutoMind/scripts/prompt_sync.sh
 #   prompt_sync_new_prompts                    # scan + commit + push new prompts
 #   prompt_sync_push "prompt: <subject>"       # commit + push current state
 #
@@ -13,9 +13,34 @@
 # multiple times in the same session.
 #
 # Replaces the previous admin_jammy/software/admin_sync.sh which operated on
-# admin_jammy/prompt/. PyAutoPrompt is now the home of prompts and registry.
+# admin_jammy/prompt/. PyAutoMind is now the home of prompts and registry.
 
-PROMPT_REPO="${PROMPT_REPO:-$HOME/Code/PyAutoLabs/PyAutoPrompt}"
+# An explicitly set PROMPT_REPO is always honoured as-is (a missing path then
+# surfaces as a normal error rather than being silently redirected). Only when
+# PROMPT_REPO is unset do we apply the default and the rename fallback below.
+if [ -z "${PROMPT_REPO:-}" ]; then
+  PROMPT_REPO="$HOME/Code/PyAutoLabs/PyAutoMind"
+
+  # Backwards compatibility: before the PyAutoPrompt -> PyAutoMind rename the
+  # repo lived at PyAutoLabs/PyAutoPrompt. If the new default path is absent but
+  # the old one is present (a checkout not yet renamed), fall back to it so
+  # sourcing still works.
+  if [ ! -d "$PROMPT_REPO" ] && [ -d "$HOME/Code/PyAutoLabs/PyAutoPrompt" ]; then
+    PROMPT_REPO="$HOME/Code/PyAutoLabs/PyAutoPrompt"
+  fi
+fi
+
+# Fail loudly if PROMPT_REPO is not an actual git checkout. Without this the
+# sync functions below silently no-op (git -C <missing> errors are swallowed and
+# they return 0), so a missing or mis-set path would look like "nothing to sync"
+# instead of a misconfiguration. Returns non-zero (we are sourced, never exit).
+_prompt_sync_require_repo() {
+  if ! git -C "$PROMPT_REPO" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "prompt_sync: PROMPT_REPO is not a git checkout: $PROMPT_REPO" >&2
+    echo "  set PROMPT_REPO to your PyAutoMind checkout, or clone it first." >&2
+    return 1
+  fi
+}
 
 # Commit and push any new untracked .md files at the repo root or under
 # category dirs as one "sync new task ideas" commit. Each new file is listed
@@ -23,6 +48,7 @@ PROMPT_REPO="${PROMPT_REPO:-$HOME/Code/PyAutoLabs/PyAutoPrompt}"
 # Excludes issued/ (handled by prompt_sync_push when skills move files there)
 # and tmp/ (scratch).
 prompt_sync_new_prompts() {
+  _prompt_sync_require_repo || return 1
   local untracked
   untracked=$(git -C "$PROMPT_REPO" ls-files --others --exclude-standard \
     -- '*.md' '*/*.md' \
@@ -46,7 +72,8 @@ prompt_sync_new_prompts() {
 # and push. Used by skills at task milestones (issue filed, repos
 # registered, task shipped, etc.). No-op if nothing is staged.
 prompt_sync_push() {
-  local subject="${1:-prompt: sync PyAutoPrompt}"
+  _prompt_sync_require_repo || return 1
+  local subject="${1:-prompt: sync PyAutoMind}"
   ( cd "$PROMPT_REPO" && \
     git add -A && \
     if git diff --cached --quiet; then return 0; fi && \
