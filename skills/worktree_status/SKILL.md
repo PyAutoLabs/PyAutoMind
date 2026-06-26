@@ -1,6 +1,6 @@
 ---
 name: worktree_status
-description: Show the state of every task-scoped git worktree under ~/Code/PyAutoLabs-wt/, cross-referenced with PyAutoPrompt/active.md. Use this to see which parallel tasks are in flight and which repos each one is holding.
+description: Show the state of every task-scoped git worktree under ~/Code/PyAutoLabs-wt/, cross-referenced with PyAutoMind/active.md. Use this to see which parallel tasks are in flight and which repos each one is holding.
 ---
 
 # Worktree Status
@@ -95,7 +95,7 @@ If there are no warnings, omit the Warnings section entirely.
 Only if warnings are present:
 
 - **Orphan:** "Run `worktree_remove <task>` if this work is abandoned. Otherwise, re-register it in `active.md`."
-- **Missing:** "Edit `PyAutoPrompt/active.md` to remove the stale entry, or re-create the worktree with `worktree_create <task> <repos...>` if the work is resuming."
+- **Missing:** "Edit `PyAutoMind/active.md` to remove the stale entry, or re-create the worktree with `worktree_create <task> <repos...>` if the work is resuming."
 - **Repo mismatch:** "Either the worktree needs more repos (`git worktree add` inside the root) or `active.md` needs correcting. Investigate before the next `ship_library` run."
 
 ## Notes
@@ -115,7 +115,7 @@ Only if warnings are present:
 
 On mobile/server there are no worktrees — this skill degrades gracefully:
 
-1. Read `PyAutoPrompt/active.md` and display task entries with their `location:`, `status:`, and `repos:` fields
+1. Read `PyAutoMind/active.md` and display task entries with their `location:`, `status:`, and `repos:` fields
 2. For each task with a `worktree:` field, note that the worktree is on the laptop (not accessible from here)
 3. Check branch state via GitHub API for each repo:
    ```bash

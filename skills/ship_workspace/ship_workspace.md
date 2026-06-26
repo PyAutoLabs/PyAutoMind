@@ -8,7 +8,7 @@ This skill ships **scripts, notebooks, and configs only**. It must never touch l
 
 ### 1. Identify Affected Workspace Repositories
 
-Read `PyAutoPrompt/active.md` to find the current task's `worktree:` field and its `repos:` list. The workspace repos listed under this task are the ones to be shipped.
+Read `PyAutoMind/active.md` to find the current task's `worktree:` field and its `repos:` list. The workspace repos listed under this task are the ones to be shipped.
 
 ```bash
 source admin_jammy/software/worktree.sh
@@ -42,7 +42,7 @@ For each affected workspace repo:
 
 - Inspect the diff (`git -C "$WT_ROOT/<workspace>" diff main --stat` then `git -C "$WT_ROOT/<workspace>" diff main`).
 - Draft a **concise commit message**.
-- Check `PyAutoPrompt/active.md` for the issue URL, then fetch issue comments and look for a "Library PR Created" comment. If one exists, capture the library PR URL for inclusion in the `## Upstream PR` section.
+- Check `PyAutoMind/active.md` for the issue URL, then fetch issue comments and look for a "Library PR Created" comment. If one exists, capture the library PR URL for inclusion in the `## Upstream PR` section.
 - Draft the **full PR body** following the PR body format below.
 
 #### PR body format
@@ -151,7 +151,7 @@ If the user declines, skip merging — the PR stays open for manual review.
 
 Check these sources in order:
 
-1. **`PyAutoPrompt/active.md`** — look for a line containing a GitHub issue URL that matches this task.
+1. **`PyAutoMind/active.md`** — look for a line containing a GitHub issue URL that matches this task.
 2. **PR branch name** — if the branch name matches a known issue pattern, search for issues with matching keywords.
 3. **Ask the user** — if neither source works, ask for the issue URL.
 
@@ -193,7 +193,7 @@ SHIP_EOF
 
 #### 5d. Move from `active.md` to `complete.md`
 
-Move the entire task entry from `PyAutoPrompt/active.md` to `PyAutoPrompt/complete.md`.
+Move the entire task entry from `PyAutoMind/active.md` to `PyAutoMind/complete.md`.
 
 In `complete.md`, append the completed entry:
 
@@ -207,10 +207,10 @@ In `complete.md`, append the completed entry:
 
 Remove the entire task block from `active.md`.
 
-Push the PyAutoPrompt update so the completion is visible from any other machine:
+Push the PyAutoMind update so the completion is visible from any other machine:
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: ship <task-name> (#<issue>) → complete"
 ```
 
@@ -225,7 +225,7 @@ If the task has a `location:` field in `active.md`:
   Instead of moving to `complete.md`, run the `/handoff park` logic:
   - Set `location:` to `ready-for-<other>` (cli if on mobile, mobile if on cli)
   - Ask for a summary of what's done and what remains
-  - Commit and push `PyAutoPrompt`
+  - Commit and push `PyAutoMind`
 
 Return the PR URL(s) to the user when done.
 

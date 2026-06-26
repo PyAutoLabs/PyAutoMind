@@ -1,5 +1,5 @@
 ## jax-point-source-point-smoke-sentinel
-- prompt: PyAutoPrompt/issued/jax_point_source_point_smoke_sentinel.md
+- prompt: PyAutoMind/issued/jax_point_source_point_smoke_sentinel.md
 - status: planned
 - filed: 2026-05-21
 - classification: library (triage; routing TBD by bisect)
@@ -24,7 +24,7 @@
     source_plane.py in the same dir — they share the seed dataset.
 
 ## nfw-truncated-potential-accuracy
-- prompt: PyAutoPrompt/autogalaxy/nfw_truncated_potential_accuracy.md
+- prompt: PyAutoMind/autogalaxy/nfw_truncated_potential_accuracy.md
 - status: planned
 - filed: 2026-06-05
 - classification: library (accuracy bug)
@@ -40,7 +40,7 @@
   - PyAutoGalaxy
 
 ## piemass-potential
-- prompt: PyAutoPrompt/autogalaxy/piemass_potential.md
+- prompt: PyAutoMind/autogalaxy/piemass_potential.md
 - status: planned
 - filed: 2026-06-05
 - classification: library (missing feature)

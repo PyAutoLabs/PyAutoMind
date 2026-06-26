@@ -1,6 +1,6 @@
 ---
 name: ship-workspace
-description: Ship PyAutoLabs workspace and tutorial repository changes. Use when Codex needs to validate changed scripts, commit, push, create pending-release workspace PRs, enforce the library-first merge gate, cross-reference upstream library PRs, update GitHub issues, and move PyAutoPrompt task state.
+description: Ship PyAutoLabs workspace and tutorial repository changes. Use when Codex needs to validate changed scripts, commit, push, create pending-release workspace PRs, enforce the library-first merge gate, cross-reference upstream library PRs, update GitHub issues, and move PyAutoMind task state.
 ---
 
 # Ship Workspace

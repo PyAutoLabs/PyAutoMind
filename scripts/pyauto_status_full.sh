@@ -14,7 +14,7 @@
 #   - Pointer to triage.md if present (free-form analytical clustering)
 #
 # Usage:
-#   source ~/Code/PyAutoLabs/PyAutoPrompt/scripts/pyauto_status_full.sh
+#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/pyauto_status_full.sh
 #   pyauto-status-full
 #
 # Override the run path (e.g. to inspect a specific historical run)
@@ -22,7 +22,7 @@
 #   pyauto-status-full ~/Code/PyAutoLabs/PyAutoBuild/test_results/runs/2026-04-29T14-48-47Z
 #
 # Note: this shell function shares its name with the /pyauto-status-full
-# slash command (PyAutoPrompt/skills/pyauto-status-full/) but lives in a
+# slash command (PyAutoMind/skills/pyauto-status-full/) but lives in a
 # different namespace. The slash command is the conversational layer; this
 # function is the same data, printed straight to stdout, no Claude needed.
 

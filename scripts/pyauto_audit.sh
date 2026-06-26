@@ -14,7 +14,7 @@
 # Run on demand. Always exits 0 — informational, the user reads + decides.
 #
 # Usage:
-#   source ~/Code/PyAutoLabs/PyAutoPrompt/scripts/pyauto_audit.sh
+#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/pyauto_audit.sh
 #   pyauto-audit
 #
 # Override via env vars:

@@ -7,7 +7,7 @@
 # under 10 seconds — fetches are parallelised one background job per repo.
 #
 # Usage:
-#   source ~/Code/PyAutoLabs/PyAutoPrompt/scripts/pyauto_status.sh
+#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/pyauto_status.sh
 #   pyauto-status
 #
 # Override the repo root (e.g. for testing) via PYAUTO_STATUS_ROOT.
@@ -35,7 +35,7 @@
 #                             Suppressed when no JSONs exist.
 #
 # Note: this shell function shares its name with the /pyauto-status slash
-# command (PyAutoPrompt/skills/pyauto-status/) but lives in a different
+# command (PyAutoMind/skills/pyauto-status/) but lives in a different
 # namespace. The slash command shows workflow registry status (planned /
 # active / complete tasks); this function shows git sync state.
 

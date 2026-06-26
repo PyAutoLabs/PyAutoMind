@@ -1,6 +1,6 @@
 ---
 name: start-library
-description: Set up PyAutoLabs source-library development after start-dev has created or registered an issue. Use when Codex needs to create or resume task worktrees for PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, or PyAutoLens, register claimed repos in PyAutoPrompt, and prepare the session for source-code edits.
+description: Set up PyAutoLabs source-library development after start-dev has created or registered an issue. Use when Codex needs to create or resume task worktrees for PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, or PyAutoLens, register claimed repos in PyAutoMind, and prepare the session for source-code edits.
 ---
 
 # Start Library

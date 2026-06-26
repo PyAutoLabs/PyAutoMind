@@ -8,7 +8,7 @@ Universal entry point for starting work on a new task. Reads a prompt file, crea
 /start_dev <prompt-file-path>
 ```
 
-The path is relative to `PyAutoPrompt/`. Examples:
+The path is relative to `PyAutoMind/`. Examples:
 - `/start_dev autofit/logging.md`
 - `/start_dev autoarray/psf_oversampling.md`
 - `/start_dev autolens/dark_matter_sight_lines.md`
@@ -28,7 +28,7 @@ Both of these resolve to `autogalaxy/adapt_images_pytree_fix.md`:
 - `autogalaxy/adapt_images_pytree_fix.md`
 - `autogalaxy/[adapt_images_pytree_fix.md](autogalaxy/adapt_images_pytree_fix.md)`
 
-Read the file at `PyAutoPrompt/<normalized-argument>`. If the file doesn't exist, report the error and list available prompt files in that subdirectory.
+Read the file at `PyAutoMind/<normalized-argument>`. If the file doesn't exist, report the error and list available prompt files in that subdirectory.
 
 ### 1b. z_features tracker detection (audit-only branch)
 
@@ -36,13 +36,13 @@ If the normalized path starts with `z_features/`, do **not** treat the file as a
 
 **a. Parse the tracker for sub-prompt references.** Scan the file for:
 - Markdown links: `[label](relative/path.md)` — take the path inside the parens.
-- Bare relative paths: `<subdir>/<name>.md` where `<subdir>` is one of the known PyAutoPrompt subdirs (`autoconf/`, `autofit/`, `autoarray/`, `autogalaxy/`, `autolens/`, `autofit_workspace/`, `autogalaxy_workspace/`, `autolens_workspace/`, `autolens_workspace_test/`, `autogalaxy_workspace_test/`, `euclid_strong_lens_modeling_pipeline/`, `howtolens/`, `howtogalaxy/`, `admin_jammy/`, etc.).
+- Bare relative paths: `<subdir>/<name>.md` where `<subdir>` is one of the known PyAutoMind subdirs (`autoconf/`, `autofit/`, `autoarray/`, `autogalaxy/`, `autolens/`, `autofit_workspace/`, `autogalaxy_workspace/`, `autolens_workspace/`, `autolens_workspace_test/`, `autogalaxy_workspace_test/`, `euclid_strong_lens_modeling_pipeline/`, `howtolens/`, `howtogalaxy/`, `admin_jammy/`, etc.).
 
 Dedupe; resolve any `../` segments relative to the tracker's own directory. Skip references that point inside `z_features/` itself (self-references / sibling trackers).
 
 **b. Determine status for each sub-prompt.** For each referenced path:
-- File exists at `PyAutoPrompt/<referenced-path>` → **not yet issued**.
-- File exists at `PyAutoPrompt/issued/<basename>` → **issued**; derive task-name candidates from the filename stem (with `_`→`-`) and from any `## <task-name>` headings inside the tracker body, then grep `PyAutoPrompt/complete.md` for `^## <candidate>$`. Match → **shipped** (record the matching heading and any adjacent PR URL). No match → **in flight**.
+- File exists at `PyAutoMind/<referenced-path>` → **not yet issued**.
+- File exists at `PyAutoMind/issued/<basename>` → **issued**; derive task-name candidates from the filename stem (with `_`→`-`) and from any `## <task-name>` headings inside the tracker body, then grep `PyAutoMind/complete.md` for `^## <candidate>$`. Match → **shipped** (record the matching heading and any adjacent PR URL). No match → **in flight**.
 - File not found at either location → **unknown** (link rot — warn).
 
 **c. Report.** Print a table with one row per referenced sub-prompt:
@@ -59,17 +59,17 @@ Follow with a one-line summary: `N shipped / M in flight / K not yet issued / U 
 **d. Decide.**
 
 - **Any non-shipped entries** (in flight, not yet issued, or unknown): stop. List the remaining work and tell the user what's outstanding. Do **NOT** move the tracker. Do **NOT** run `prompt_sync_push`.
-- **All shipped**: before moving anything, verify PyAutoPrompt is on `main` and otherwise clean (same guard as Step 12 — `prompt_sync_push` does `git add -A` and never switches branches). If clean, show the proposed archive command and ask the user for explicit confirmation:
+- **All shipped**: before moving anything, verify PyAutoMind is on `main` and otherwise clean (same guard as Step 12 — `prompt_sync_push` does `git add -A` and never switches branches). If clean, show the proposed archive command and ask the user for explicit confirmation:
 
   ```bash
-  mkdir -p PyAutoPrompt/z_features/complete
-  mv PyAutoPrompt/z_features/<filename> PyAutoPrompt/z_features/complete/<filename>
+  mkdir -p PyAutoMind/z_features/complete
+  mv PyAutoMind/z_features/<filename> PyAutoMind/z_features/complete/<filename>
   ```
 
   After the user confirms, run the move, then push:
 
   ```bash
-  source PyAutoPrompt/scripts/prompt_sync.sh
+  source PyAutoMind/scripts/prompt_sync.sh
   prompt_sync_push "prompt: archive completed z_features tracker — <stem>"
   ```
 
@@ -234,7 +234,7 @@ Legacy check (for tasks still on the pre-worktree flow): if the target repo's ma
 
 #### 9a. Route to planned.md (conflict — task is queued)
 
-Add the entry to `PyAutoPrompt/planned.md` instead of `active.md`:
+Add the entry to `PyAutoMind/planned.md` instead of `active.md`:
 
 ```markdown
 ## <task-name>
@@ -265,7 +265,7 @@ Skip to step 10 (move prompt file).
 
 #### 9b. Route to active.md (no conflict — task can start)
 
-Add the entry to `PyAutoPrompt/active.md`:
+Add the entry to `PyAutoMind/active.md`:
 
 ```markdown
 ## <task-name>
@@ -284,10 +284,10 @@ The `worktree:` field records where the task's worktree root will live. The dire
 
 ### 10. Move the prompt file
 
-Move the original prompt file to `PyAutoPrompt/issued/`:
+Move the original prompt file to `PyAutoMind/issued/`:
 
 ```bash
-mv PyAutoPrompt/<path> PyAutoPrompt/issued/<filename>
+mv PyAutoMind/<path> PyAutoMind/issued/<filename>
 ```
 
 If a file with the same name already exists in `issued/`, append a timestamp suffix.
@@ -316,12 +316,12 @@ Display:
 - What's blocking it and when it might clear
 - Reminder to run `/status` to check when repos become available
 
-### 12. Push PyAutoPrompt
+### 12. Push PyAutoMind
 
-After active.md / planned.md and the prompt-file move are settled, push the PyAutoPrompt state so the new entry is visible from any other machine:
+After active.md / planned.md and the prompt-file move are settled, push the PyAutoMind state so the new entry is visible from any other machine:
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: route <task-name> (#<issue>) → <next-skill>"
 ```
 
@@ -329,10 +329,10 @@ Substitute the actual task name, issue number, and the routing destination (`/st
 
 ## Step 0a — Sync new prompt ideas
 
-Before reading the requested prompt, sweep up any other ideas the user has dropped into `PyAutoPrompt/` since the last task — these accumulate locally and would otherwise be lost in the next merge.
+Before reading the requested prompt, sweep up any other ideas the user has dropped into `PyAutoMind/` since the last task — these accumulate locally and would otherwise be lost in the next merge.
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_new_prompts
 ```
 
@@ -340,7 +340,7 @@ prompt_sync_new_prompts
 
 ## Step 0 — Check for parked handoff tasks
 
-Before creating a new task, check `PyAutoPrompt/active.md` for any tasks with a `location:` field matching `ready-for-<current-env>`:
+Before creating a new task, check `PyAutoMind/active.md` for any tasks with a `location:` field matching `ready-for-<current-env>`:
 
 - On CLI (laptop): look for `location: ready-for-cli`
 - On mobile/server: look for `location: ready-for-mobile`

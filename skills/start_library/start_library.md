@@ -38,9 +38,9 @@ If the repo appears under the **same** task (resuming work), that's fine — pro
 
 ### 2. Read the active issue
 
-Read `PyAutoPrompt/active.md` to find the current issue URL.
+Read `PyAutoMind/active.md` to find the current issue URL.
 
-If no matching issue is found in `active.md`, check `PyAutoPrompt/planned.md` — the task may have been queued there because of a conflict when `/start_dev` ran. If found in `planned.md`:
+If no matching issue is found in `active.md`, check `PyAutoMind/planned.md` — the task may have been queued there because of a conflict when `/start_dev` ran. If found in `planned.md`:
 
 1. Re-run the conflict check (step 1) against the task's `affected-repos`
 2. If the conflict is **resolved**: move the entry from `planned.md` to `active.md` (using the active.md format with `status: library-dev`) and proceed
@@ -99,7 +99,7 @@ All subsequent skills (`ship_library`, `smoke_test`, etc.) source this script au
 
 ### 6. Register repos in active.md
 
-After the worktree is created, update the task's entry in `PyAutoPrompt/active.md` to record the worktree path and claimed repos:
+After the worktree is created, update the task's entry in `PyAutoMind/active.md` to record the worktree path and claimed repos:
 
 ```markdown
 ## <task-name>
@@ -117,7 +117,7 @@ The `worktree:` field is what `worktree_check_conflict` reads to detect collisio
 After updating active.md, push the change so other machines see the registered repos:
 
 ```bash
-source PyAutoPrompt/scripts/prompt_sync.sh
+source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: register <task-name> library repos in active.md"
 ```
 

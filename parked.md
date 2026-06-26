@@ -84,11 +84,11 @@ unindexed worktrees or stashes. Move an entry back to `active.md` (or to
 
 ## pyauto-update-digest
 - parked: 2026-05-17 (worktree last touched)
-- classification: workflow (PyAutoPrompt)
+- classification: workflow (PyAutoMind)
 - location: orphan worktree at ~/Code/PyAutoLabs-wt/pyauto-update-digest/
 - branch: feature/pyauto-update-digest (clean, no changes)
 - notes: |
-    Orphan worktree containing only a clean PyAutoPrompt checkout on the
+    Orphan worktree containing only a clean PyAutoMind checkout on the
     branch. No staged or unstaged changes. Action: `worktree_remove
     pyauto-update-digest`.
 

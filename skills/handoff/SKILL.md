@@ -6,7 +6,7 @@ user-invocable: true
 
 # Handoff: Cross-Environment Work Management
 
-Automate the commit-push-status cycle when transitioning work between laptop CLI and mobile/server environments. Uses `PyAutoPrompt/active.md` as the single source of truth and git branches as the unit of work.
+Automate the commit-push-status cycle when transitioning work between laptop CLI and mobile/server environments. Uses `PyAutoMind/active.md` as the single source of truth and git branches as the unit of work.
 
 ## Usage
 
@@ -82,7 +82,7 @@ State transitions:
 
 1. **Detect environment** (cli or mobile)
 
-2. **Identify the active task.** Read `PyAutoPrompt/active.md` and find the task whose `location:` is `<env>-in-progress`. If multiple tasks match, ask the user which one to park. If no task has a `location:` field yet (legacy entry), infer from context — it's likely `cli-in-progress` if on laptop.
+2. **Identify the active task.** Read `PyAutoMind/active.md` and find the task whose `location:` is `<env>-in-progress`. If multiple tasks match, ask the user which one to park. If no task has a `location:` field yet (legacy entry), infer from context — it's likely `cli-in-progress` if on laptop.
 
 3. **For each repo in the task's `repos:` list**, commit and push working changes:
 
@@ -132,12 +132,12 @@ State transitions:
        Next: update workspace scripts to use new API
    ```
 
-6. **Commit and push PyAutoPrompt** so active.md syncs across machines:
+6. **Commit and push PyAutoMind** so active.md syncs across machines:
 
    ```bash
-   git -C PyAutoPrompt add active.md
-   git -C PyAutoPrompt commit -m "handoff: park <task-name> → ready-for-<other>"
-   git -C PyAutoPrompt push
+   git -C PyAutoMind add active.md
+   git -C PyAutoMind commit -m "handoff: park <task-name> → ready-for-<other>"
+   git -C PyAutoMind push
    ```
 
 ### `--complete` flag
@@ -155,10 +155,10 @@ If `handoff park --complete` is used:
 
 1. **Detect environment** (cli or mobile)
 
-2. **Pull latest PyAutoPrompt** to get current active.md:
+2. **Pull latest PyAutoMind** to get current active.md:
 
    ```bash
-   git -C PyAutoPrompt pull --ff-only
+   git -C PyAutoMind pull --ff-only
    ```
 
 3. **Read `active.md`** and filter tasks where `location:` matches `ready-for-<current-env>`:
@@ -251,15 +251,15 @@ If `handoff park --complete` is used:
 
 7. **Update `active.md`:**
    - Set `location:` to `<current-env>-in-progress`
-   - Commit and push PyAutoPrompt
+   - Commit and push PyAutoMind
 
 ## `handoff status` — Show All Task Locations
 
 ### Steps
 
-1. **Pull latest PyAutoPrompt:**
+1. **Pull latest PyAutoMind:**
    ```bash
-   git -C PyAutoPrompt pull --ff-only
+   git -C PyAutoMind pull --ff-only
    ```
 
 2. **Read `active.md`** and display all tasks with their handoff state:
@@ -321,7 +321,7 @@ When cloning repos on mobile/server, use these orgs:
 
 ## active.md Format
 
-The handoff skill expects and maintains this format in `PyAutoPrompt/active.md`:
+The handoff skill expects and maintains this format in `PyAutoMind/active.md`:
 
 ```markdown
 ## task-name
@@ -352,5 +352,5 @@ All other fields are maintained by existing skills (start_dev, start_library, sh
 - The handoff skill never modifies code — it only commits existing changes, pushes, and updates active.md.
 - On CLI, it respects the worktree system — repos are accessed via `$WT_ROOT/<repo>`, never the main checkout.
 - On mobile, repos are expected to be in the current working directory (cloned fresh per session).
-- `PyAutoPrompt` must be a git repo with a remote for the push/pull to work. If it's not, warn the user.
+- `PyAutoMind` must be a git repo with a remote for the push/pull to work. If it's not, warn the user.
 - The `summary:` field is free-form text written by the user. Keep it concise — 2-3 lines max.

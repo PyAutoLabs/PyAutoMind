@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# prompt_sync.sh — keep PyAutoPrompt in sync with origin during task lifecycle.
+# prompt_sync.sh — keep PyAutoMind in sync with origin during task lifecycle.
 #
-# Sourced by skills that mutate PyAutoPrompt registry files (active.md,
+# Sourced by skills that mutate PyAutoMind registry files (active.md,
 # complete.md, planned.md, queue.md, ...) so we never accumulate local-only
 # changes that drift from origin.
 #
-#   source PyAutoPrompt/scripts/prompt_sync.sh
+#   source PyAutoMind/scripts/prompt_sync.sh
 #   prompt_sync_new_prompts                    # scan + commit + push new prompts
 #   prompt_sync_push "prompt: <subject>"       # commit + push current state
 #
@@ -13,9 +13,16 @@
 # multiple times in the same session.
 #
 # Replaces the previous admin_jammy/software/admin_sync.sh which operated on
-# admin_jammy/prompt/. PyAutoPrompt is now the home of prompts and registry.
+# admin_jammy/prompt/. PyAutoMind is now the home of prompts and registry.
 
-PROMPT_REPO="${PROMPT_REPO:-$HOME/Code/PyAutoLabs/PyAutoPrompt}"
+PROMPT_REPO="${PROMPT_REPO:-$HOME/Code/PyAutoLabs/PyAutoMind}"
+
+# Backwards compatibility: before the PyAutoPrompt -> PyAutoMind rename the repo
+# lived at PyAutoLabs/PyAutoPrompt. If the new path is absent but the old one is
+# present (a checkout not yet renamed), fall back to it so sourcing still works.
+if [ ! -d "$PROMPT_REPO" ] && [ -d "$HOME/Code/PyAutoLabs/PyAutoPrompt" ]; then
+  PROMPT_REPO="$HOME/Code/PyAutoLabs/PyAutoPrompt"
+fi
 
 # Commit and push any new untracked .md files at the repo root or under
 # category dirs as one "sync new task ideas" commit. Each new file is listed
@@ -46,7 +53,7 @@ prompt_sync_new_prompts() {
 # and push. Used by skills at task milestones (issue filed, repos
 # registered, task shipped, etc.). No-op if nothing is staged.
 prompt_sync_push() {
-  local subject="${1:-prompt: sync PyAutoPrompt}"
+  local subject="${1:-prompt: sync PyAutoMind}"
   ( cd "$PROMPT_REPO" && \
     git add -A && \
     if git diff --cached --quiet; then return 0; fi && \
