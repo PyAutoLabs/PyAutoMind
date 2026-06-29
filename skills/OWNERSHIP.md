@@ -57,23 +57,34 @@ without breaking those references — but it would still be undiscoverable until
 
 ## Ownership table
 
-Ownership rule (from the prompt): **Mind** = intent/task-registry · **Brain** =
-reasoning/agent-orchestration · **Build** = execution/release/build · **Heart** =
-health/validation/readiness · `admin_jammy` should not own canonical organism
-workflow skills.
+Ownership rule, reconciled with the **actual** organism boundary docs
+(`PyAutoBrain/AGENTS.md`, `PyAutoBuild/AGENTS.md`) rather than the aspirational
+mapping in `skill_redesign.md`:
+
+- **Mind** = intent / task-registry state.
+- **Brain** = reasoning + how-work-gets-done. **It owns the development workflow**
+  — PyAutoBrain/AGENTS.md names "the existing `start_dev → ship_library/
+  ship_workspace` workflow" as what its Feature Agent's decision *consumes*.
+- **Build (Hands)** = **release/packaging executor only** — "packaging, tagging,
+  notebook generation, and PyPI publication via `release.yml`" (its primitives:
+  `pre_build`, `generate`, `run*`, `tag_and_merge`). It is **not** a general
+  dev-work git executor; the `start_*`/`ship_*` feature workflow only *calls*
+  Build's release step at actual release time.
+- **Heart** = health / validation / readiness gates.
+- `admin_jammy` should not own canonical organism workflow skills.
 
 | Skill | Current source | Symlink? | Tracked? | Current owner | Recommended owner | Action taken |
 |-------|----------------|----------|----------|---------------|-------------------|--------------|
 | `create_issue` | `PyAutoMind/skills/create_issue/` | no | yes | PyAutoMind | **PyAutoMind** (correct) | none — keep |
 | `handoff` | `PyAutoMind/skills/handoff/` | no | yes | PyAutoMind | **PyAutoMind** (registry/work-state) | none — keep |
-| `register_and_iterate` | `PyAutoMind/skills/register_and_iterate/` | no | yes | PyAutoMind | **PyAutoMind** today; orchestration loop → PyAutoBrain at redesign | defer to redesign |
+| `register_and_iterate` | `PyAutoMind/skills/register_and_iterate/` | no | yes | PyAutoMind | **PyAutoBrain** (dev-workflow orchestration loop; ends in `/ship_library`+`/ship_workspace`) | defer to redesign |
 | `plan_branches` | `PyAutoMind/skills/plan_branches/` | no | yes | PyAutoMind | **PyAutoBrain** (planning/reasoning) | defer to redesign |
 | `start_dev` | `PyAutoMind/skills/start_dev/` | no | yes | PyAutoMind | **PyAutoBrain** (classification/routing entry point) + PyAutoMind registry interface | defer to redesign |
 | `start_dev_for_user` | `PyAutoMind/skills/start_dev_for_user/` | no | yes | PyAutoMind | **PyAutoBrain** (routing variant) | defer to redesign |
-| `start_library` | `PyAutoMind/skills/start_library/` | no | yes | PyAutoMind | **PyAutoBuild** (worktrees/branches) + PyAutoMind registry interface | defer to redesign |
-| `start_workspace` | `PyAutoMind/skills/start_workspace/` | no | yes | PyAutoMind | **PyAutoBuild** (worktrees/branches) | defer to redesign |
-| `ship_library` | `PyAutoMind/skills/ship_library/` | no | yes | PyAutoMind | **PyAutoBuild** (commit/PR/release) + PyAutoHeart gate | defer to redesign |
-| `ship_workspace` | `PyAutoMind/skills/ship_workspace/` | no | yes | PyAutoMind | **PyAutoBuild** (commit/PR/release) + PyAutoHeart gate | defer to redesign |
+| `start_library` | `PyAutoMind/skills/start_library/` | no | yes | PyAutoMind | **PyAutoBrain** (dev-cycle worktree/branch setup the Brain drives) + PyAutoMind registry interface | defer to redesign |
+| `start_workspace` | `PyAutoMind/skills/start_workspace/` | no | yes | PyAutoMind | **PyAutoBrain** (dev-cycle worktree/branch setup) | defer to redesign |
+| `ship_library` | `PyAutoMind/skills/ship_library/` | no | yes | PyAutoMind | **PyAutoBrain** dev-workflow (commit/feature-PR) → PyAutoHeart gate → **PyAutoBuild** only for the release/packaging step | defer to redesign |
+| `ship_workspace` | `PyAutoMind/skills/ship_workspace/` | no | yes | PyAutoMind | **PyAutoBrain** dev-workflow (commit/feature-PR) → PyAutoHeart gate → **PyAutoBuild** only for release/packaging | defer to redesign |
 | `pyauto-status` | `PyAutoMind/skills/pyauto-status/` | no | yes | PyAutoMind | **PyAutoHeart** (status/readiness view; reads Mind registry) | defer to redesign |
 | `pyauto-status-full` | `PyAutoMind/skills/pyauto-status-full/` | no | yes | PyAutoMind | **PyAutoHeart** | defer to redesign |
 | `worktree_status` | `PyAutoMind/skills/worktree_status/` | no | yes | PyAutoMind | **PyAutoHeart** (diagnostic) / reads Mind registry | defer to redesign |
@@ -111,9 +122,10 @@ prerequisites made explicit.
 
 ## Prerequisites to unblock the physical move (for the redesign task)
 
-1. Add discovery roots for `PyAutoBrain/skills/`, `PyAutoBuild/skills/`, and
-   `PyAutoHeart/skills/` to `admin_jammy/skills/install.sh` (out of this
-   session's scope).
+1. Add discovery roots for `PyAutoBrain/skills/` and `PyAutoHeart/skills/` to
+   `admin_jammy/skills/install.sh` (out of this session's scope). **PyAutoBuild
+   gets no skills dir** — it owns no workflow skills; the `ship_*` skills only
+   *call* Build's release primitives, they don't live there.
 2. Create a `skills/` convention in each target repo.
 3. Move each skill per the **Recommended owner** column, preserving the
    `name:` / command names so `/start_dev`, `/ship_library`, etc. keep working.
