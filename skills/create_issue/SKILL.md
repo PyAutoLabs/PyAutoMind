@@ -6,6 +6,13 @@ user-invocable: true
 
 Convert a prompt file into a tracked GitHub issue with a human-readable plan and detailed implementation spec.
 
+A **PyAutoMind** skill — Mind owns the prompt registry and turns *intent* into a
+tracked issue. (`/start_dev` is the fuller Brain-routed entry point that also
+classifies, registers in `active.md`, and hands off to `/start_library` /
+`/start_workspace`; use `/create-issue` when you only want the issue.) Reasoning
+depth, the organ boundary and the execution-environment model are described in
+PyAutoBrain `skills/WORKFLOW.md`.
+
 ## Usage
 
 ```
@@ -42,19 +49,9 @@ Scan the prompt content for repository references. The user's prompts use the `@
 
 Count references per repo to determine the primary (most-referenced) repository. If it's ambiguous (equal counts or no references), ask the user which repo should own the issue.
 
-**Local directory to GitHub repo mapping:**
-
-| Local Directory | GitHub Repo |
-|----------------|-------------|
-| `PyAutoConf` | `rhayes777/PyAutoConf` |
-| `PyAutoFit` | `rhayes777/PyAutoFit` |
-| `PyAutoArray` | `Jammy2211/PyAutoArray` |
-| `PyAutoGalaxy` | `Jammy2211/PyAutoGalaxy` |
-| `PyAutoLens` | `Jammy2211/PyAutoLens` |
-| `autofit_workspace` | `Jammy2211/autofit_workspace` |
-| `autogalaxy_workspace` | `Jammy2211/autogalaxy_workspace` |
-| `autolens_workspace` | `Jammy2211/autolens_workspace` |
-| `HowToLens` | `Jammy2211/HowToLens` |
+**Local directory → GitHub owner mapping:** PyAutoConf/PyAutoFit → `rhayes777/`;
+PyAutoArray/PyAutoGalaxy/PyAutoLens and all `*_workspace*`/HowTo repos →
+`Jammy2211/`. (Full table in PyAutoBrain `skills/WORKFLOW.md`.)
 
 ### 3. Explore the referenced code
 
