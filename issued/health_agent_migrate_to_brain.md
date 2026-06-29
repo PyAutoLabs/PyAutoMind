@@ -16,7 +16,7 @@ outputs and emits a GREEN / YELLOW / RED decision. It performs no checks itself.
 ## Tasks
 
 1. In `@PyAutoBrain`, create the canonical Health Agent from
-   `health_agent.md`, registered the way Brain discovers its specialist agents
+   `health_agent/health_agent.md`, registered the way Brain discovers its specialist agents
    (`agents/<name>/AGENTS.md` + an entrypoint script). Keep each `.md` under 200
    lines. Preserve verbatim: adoption of `pyauto-heart readiness --json` as the
    authoritative verdict; reading PyAutoHeart's `capabilities.yaml` as an

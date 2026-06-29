@@ -14,7 +14,7 @@
     `pyauto-heart readiness --json` adoption, the abstract-provider manifest
     reading, the GREEN/YELLOW/RED output schema (Summary / Warnings /
     Recommendations / Blocking Issues), gate semantics, and hard boundaries.
-    Removed `health_agent.md` from PyAutoHeart and repointed its README at the
+    Removed `health_agent/health_agent.md` from PyAutoHeart and repointed its README at the
     Brain location; kept `capabilities.yaml` / `capabilities.md` /
     `pyautobuild_boundary_audit.md` in Heart (Heart self-describing its
     capabilities). The manifest is read abstractly from Heart, never vendored
