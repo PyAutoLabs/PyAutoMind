@@ -216,7 +216,9 @@ pick them up with no Brain edits.
 Out of scope here (later milestones): M1 = the TestPyPI-only mode in `release.yml`
 (separate prompt, prerequisite); M3 = actually re-pointing `workspace-validation.yml`
 at TestPyPI wheels + release profile; M4 = the full `validate` orchestrator
-sequencing Stages 0–3; M5 = polish of the mobile UX.
+sequencing Stages 0–3; M5 = the unified health dashboard (GitHub web + CLI/venv
++ mobile), which subsumes the original "mobile UX polish" — see
+`feature/pyautoheart/health_dashboard.md`.
 
 ## Validation
 
