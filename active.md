@@ -19,3 +19,4 @@
 - worktree: ~/Code/PyAutoLabs-wt/aggregator-output-contracts
 - suggested-branch: feature/aggregator-output-contracts
 - repos:
+  - PyAutoFit: feature/aggregator-output-contracts
