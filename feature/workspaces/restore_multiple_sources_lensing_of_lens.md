@@ -2,11 +2,11 @@ Once https://github.com/PyAutoLabs/PyAutoLens/issues/480 is fixed (PointSolver
 magnification filter must use `plane_redshift`, not the tracer's last plane),
 revisit `@autolens_workspace/scripts/point_source/features/multiple_sources/`.
 
-First, lets fix https://github.com/PyAutoLabs/PyAutoLens/issues/480, I want
+First, let's fix https://github.com/PyAutoLabs/PyAutoLens/issues/480. I want
 you to first validate that the cause of the issue described there is
-acitually right. I'm a bit unsure I totally buy it, so do some epxlpicit
+actually right. I'm a bit unsure I totally buy it, so do some explicit
 tests which more directly remove the mass profile but also edit the
-magnification_threshold setting. I'm happy to be convinced, but need a bit
+`magnification_threshold` setting. I'm happy to be convinced, but need a bit
 more confirmation.
 
 When that workspace example was first written (autolens_workspace issue #97),
