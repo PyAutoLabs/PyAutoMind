@@ -20,3 +20,6 @@
 - suggested-branch: feature/aggregator-output-contracts
 - repos:
   - PyAutoFit: feature/aggregator-output-contracts
+  - autogalaxy_workspace: feature/aggregator-output-contracts
+  - autolens_workspace: feature/aggregator-output-contracts
+  - autolens_workspace_test: feature/aggregator-output-contracts
