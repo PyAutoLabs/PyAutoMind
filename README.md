@@ -170,9 +170,10 @@ The slash commands above are skills hosted across the organism (Brain, Heart) bu
 all read/write Mind's registry via workspace-root-anchored paths. One operates
 over the registry without starting work:
 
-- `/pyauto-status` — dashboard of `active.md`, `planned.md`, `complete.md`
-  (a PyAutoHeart status view). Continuity across execution environments needs no
-  special step — any environment reads `active.md` and resumes an in-flight task.
+- `/health status` — dashboard of `active.md`, `planned.md`, `complete.md`
+  (a PyAutoHeart status view, reached through the single `/health` door).
+  Continuity across execution environments needs no special step — any
+  environment reads `active.md` and resumes an in-flight task.
 
 ---
 
@@ -234,8 +235,11 @@ PyAutoMind/
 `OWNERSHIP.md`). The development-workflow skills were re-homed to the organs that
 own them — **PyAutoBrain** (`start_dev`, `start_dev_for_user`, `plan_branches`,
 `start_library`, `start_workspace`, `ship_library`, `ship_workspace`,
-`register_and_iterate`), **PyAutoHeart** (`pyauto-status`, `pyauto-status-full`,
-`worktree_status`), and **autolens_profiling** (`profile_likelihood`). The
+`register_and_iterate`, `health` [the single health door, with `check` sweep +
+`status` dashboard legs]), **PyAutoHeart** (`pyauto-status-full`,
+`worktree_status`, and the health-leg procedures `health_sweep/` +
+`pyauto-status/` that `/health` drives), and **autolens_profiling**
+(`profile_likelihood`). The
 `handoff` skill was retired (PyAutoBrain runs uniformly across execution
 environments — see `OWNERSHIP.md`). General PyAuto tooling (release prep,
 dependency audits, smoke tests, lint sweeps) lives in `admin_jammy/skills/`.
@@ -435,7 +439,7 @@ flags anything in `z_vault/` that's been sitting for a while.
 
 ### From inside Claude Code
 
-- `/pyauto-status` — dashboard of registry state (active, planned, recent complete; PyAutoHeart)
+- `/health status` — dashboard of registry state (active, planned, recent complete; PyAutoHeart, via the `/health` door)
 - `/start_dev <work-type>/<target>/<name>.md` — read a prompt and route it (PyAutoBrain)
 - `/worktree_status` — cross-references registry with task worktrees (PyAutoHeart)
 

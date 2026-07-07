@@ -15,3 +15,14 @@
   - autogalaxy_workspace: feature/aggregator-output-contracts
   - autolens_workspace: feature/aggregator-output-contracts
   - autolens_workspace_test: feature/aggregator-output-contracts
+
+## bug-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/18
+- session: claude
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/bug-agent
+- library-pr: none
+- workspace-prs: none
+- suggested-branch: feature/bug-agent
+- repos:
+  - PyAutoBrain: feature/bug-agent
