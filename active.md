@@ -26,3 +26,16 @@
 - suggested-branch: feature/bug-agent
 - repos:
   - PyAutoBrain: feature/bug-agent
+
+## health-one-door
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/pull/17
+- session: claude
+- status: pr-open, merge-pending
+- worktree: ~/Code/PyAutoLabs-wt/health-one-door
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/17
+- workspace-prs:
+  - https://github.com/PyAutoLabs/PyAutoHeart/pull/30
+- suggested-branch: feature/health-one-door
+- repos:
+  - PyAutoBrain: feature/health-one-door
+  - PyAutoHeart: feature/health-one-door
