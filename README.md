@@ -235,11 +235,11 @@ PyAutoMind/
 `OWNERSHIP.md`). The development-workflow skills were re-homed to the organs that
 own them — **PyAutoBrain** (`start_dev`, `start_dev_for_user`, `plan_branches`,
 `start_library`, `start_workspace`, `ship_library`, `ship_workspace`,
-`register_and_iterate`, `health` [the single health door, with `check` sweep +
-`status` dashboard legs]), **PyAutoHeart** (`pyauto-status-full`,
-`worktree_status`, and the health-leg procedures `health_sweep/` +
-`pyauto-status/` that `/health` drives), and **autolens_profiling**
-(`profile_likelihood`). The
+`register_and_iterate`, `health` [the single health door, with `check` sweep,
+`status` dashboard, and `full` release-run legs]), **PyAutoHeart**
+(`worktree_status`, and the health-leg procedures `health_sweep/`,
+`pyauto-status/`, and `pyauto-status-full/` that `/health` drives), and
+**autolens_profiling** (`profile_likelihood`). The
 `handoff` skill was retired (PyAutoBrain runs uniformly across execution
 environments — see `OWNERSHIP.md`). General PyAuto tooling (release prep,
 dependency audits, smoke tests, lint sweeps) lives in `admin_jammy/skills/`.

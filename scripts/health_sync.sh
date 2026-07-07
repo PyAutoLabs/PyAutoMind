@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# pyauto_status.sh — cross-repo sync status dashboard.
+# health_sync.sh — cross-repo git-sync dashboard.
 #
-# Defines a shell function `pyauto-status` that prints, for every git repo
-# under ~/Code/PyAutoLabs/, the branch, upstream tracking ref, behind/ahead
-# counts vs @{u}, dirty file count, and a flag column. Designed to run in
-# under 10 seconds — fetches are parallelised one background job per repo.
+# Defines `_health_sync` (run via the `health` dispatcher: bare `health` or
+# `health sync`) that prints, for every git repo under ~/Code/PyAutoLabs/, the
+# branch, upstream tracking ref, behind/ahead counts vs @{u}, dirty file count,
+# and a flag column. Designed to run in under 10 seconds — fetches are
+# parallelised one background job per repo.
 #
-# Usage:
-#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/pyauto_status.sh
-#   pyauto-status
+# Usage (normally sourced via ~/.bashrc, run through the `health` dispatcher):
+#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/health_sync.sh
+#   health          # (or: health sync)
 #
 # Override the repo root (e.g. for testing) via PYAUTO_STATUS_ROOT.
 #
@@ -34,17 +35,17 @@
 #                             (committed by the autobuild release pipeline).
 #                             Suppressed when no JSONs exist.
 #
-# Note: this shell function shares its name with the /pyauto-status slash
-# command (PyAutoHeart/skills/pyauto-status/) but lives in a different
-# namespace. The slash command shows workflow registry status (planned /
-# active / complete tasks); this function shows git sync state.
+# Note: distinct from the Claude `/health status` command (the active-work
+# registry dashboard). This shell command shows git *sync* state across repos;
+# `/health status` shows planned / active / complete tasks. Different views,
+# both under the "health" vocabulary.
 
 PYAUTO_STATUS_ROOT="${PYAUTO_STATUS_ROOT:-$HOME/Code/PyAutoLabs}"
 
-pyauto-status() {
+_health_sync() {
   local root="$PYAUTO_STATUS_ROOT"
   if [[ ! -d "$root" ]]; then
-    echo "pyauto-status: $root does not exist" >&2
+    echo "health sync: $root does not exist" >&2
     return 1
   fi
 
@@ -61,7 +62,7 @@ pyauto-status() {
   )
 
   if [[ ${#repos[@]} -eq 0 ]]; then
-    echo "pyauto-status: no git repos found under $root"
+    echo "health sync: no git repos found under $root"
     return 0
   fi
 

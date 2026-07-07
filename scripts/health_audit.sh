@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# pyauto_audit.sh — on-demand structural repo-health audit.
+# health_audit.sh — on-demand structural repo-health audit.
 #
-# Defines a shell function `pyauto-audit` that scans ~/Code/PyAutoLabs/ for
-# state the dashboard (`pyauto-status`) doesn't surface:
+# Defines `_health_audit` (run via `health audit`) that scans ~/Code/PyAutoLabs/
+# for state the git-sync dashboard (`health` / `health sync`) doesn't surface:
 #
 #   1. Top-level directories with no .git (intentionally-not-a-repo or bug).
 #      Skip prefixes "." (hidden) and "z_" (user's personal/staging convention).
@@ -13,9 +13,9 @@
 #
 # Run on demand. Always exits 0 — informational, the user reads + decides.
 #
-# Usage:
-#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/pyauto_audit.sh
-#   pyauto-audit
+# Usage (normally sourced via ~/.bashrc, run through the `health` dispatcher):
+#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/health_audit.sh
+#   health audit
 #
 # Override via env vars:
 #   PYAUTO_AUDIT_ROOT         scan root (default $HOME/Code/PyAutoLabs)
@@ -26,10 +26,10 @@ PYAUTO_AUDIT_ROOT="${PYAUTO_AUDIT_ROOT:-$HOME/Code/PyAutoLabs}"
 PYAUTO_AUDIT_STASH_DAYS="${PYAUTO_AUDIT_STASH_DAYS:-14}"
 PYAUTO_AUDIT_BRANCH_DAYS="${PYAUTO_AUDIT_BRANCH_DAYS:-30}"
 
-pyauto-audit() {
+_health_audit() {
   local root="$PYAUTO_AUDIT_ROOT"
   if [[ ! -d "$root" ]]; then
-    echo "pyauto-audit: $root does not exist" >&2
+    echo "health audit: $root does not exist" >&2
     return 1
   fi
 
@@ -108,6 +108,6 @@ pyauto-audit() {
     for line in "${branch_lines[@]}"; do echo "  $line"; done
     printed=true
   fi
-  [[ "$printed" == "false" ]] && echo "pyauto-audit: clean (no findings under $root)"
+  [[ "$printed" == "false" ]] && echo "health audit: clean (no findings under $root)"
   return 0
 }
