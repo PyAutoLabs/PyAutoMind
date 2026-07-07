@@ -4496,3 +4496,14 @@
 - project-docs-pr: https://github.com/PyAutoLabs/PyAutoPaper/pull/10 (merged 11fb895 into PR #2 branch)
 - repos: PyAutoPaper
 - notes: Migrated three Lyman-alpha WDM and GD-1 stream-perturber entries. No ambiguous keys or aliases; citation validation and 5 tests passed.
+
+## aggregator-output-contracts
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1324
+- completed: 2026-07-07
+- library-pr: none; PyAutoFit PR https://github.com/PyAutoLabs/PyAutoFit/pull/1326 closed as unnecessary
+- workspace-prs:
+  - https://github.com/PyAutoLabs/autogalaxy_workspace/pull/122 (merged 3fcfc07)
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/229 (merged 512add1)
+  - https://github.com/PyAutoLabs/autolens_workspace_test/pull/146 (merged 76982f6)
+- repos: autogalaxy_workspace, autolens_workspace, autolens_workspace_test
+- notes: Centralised Autogalaxy and Autolens results/workflow examples on `_quick_fit.py`, generating two release-mode fits in `output/results_folder` with full Nautilus samples, aggregator CSV/PNG/FITS artefacts, and latent summaries. Removed workspace-side test-mode path handling and kept user-facing scripts on plain `output/results_folder`; release smoke unsets `PYAUTO_TEST_MODE` for results guides instead. Fixed Autolens result FITS reload noise-map validation and the workspace-test convolution image directory. Verified fresh smoke after clearing `output`: autogalaxy_workspace 8/8, autolens_workspace 9/9, autolens_workspace_test 15/15.
