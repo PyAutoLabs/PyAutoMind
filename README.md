@@ -474,8 +474,8 @@ cd ~/Code/PyAutoLabs
 git clone git@github.com:PyAutoLabs/PyAutoMind.git    # the Mind (this repo)
 git clone git@github.com:PyAutoLabs/PyAutoBrain.git   # dev-workflow skills
 git clone git@github.com:PyAutoLabs/PyAutoHeart.git   # status / readiness skills
-git clone git@github.com:Jammy2211/admin_jammy.git    # installer + general tooling
-bash admin_jammy/skills/install.sh                     # symlinks skills + commands
+git clone git@github.com:Jammy2211/admin_jammy.git    # general tooling (optional)
+bash PyAutoBrain/bin/install.sh                        # symlinks skills + commands
 ```
 
 > **The local checkout directory must be named `PyAutoMind`.** The skills and
