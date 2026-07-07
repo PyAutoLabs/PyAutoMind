@@ -3,7 +3,7 @@
 Originally an **ownership/location audit** (PR #26); this version records the
 **completed relocation** done by the skill-redesign task (`autoprompt/skill_redesign.md`).
 Each workflow skill now lives in the organ that owns its responsibility, command
-names preserved, discovery wired up via `admin_jammy/skills/install.sh`.
+names preserved, discovery wired up via `PyAutoBrain/bin/install.sh`.
 
 ## What moved (and why)
 
@@ -63,7 +63,7 @@ lines.)
 
 ## Discovery
 
-`admin_jammy/skills/install.sh` now scans these roots and symlinks skills into
+`PyAutoBrain/bin/install.sh` now scans these roots and symlinks skills into
 `~/.claude/skills/` and commands into `~/.claude/commands/`:
 
 - `admin_jammy/skills/` — general PyAuto tooling
@@ -96,9 +96,9 @@ The moves were paired with the redesign in `autoprompt/skill_redesign.md`:
 
 ## Validation
 
-- `bash admin_jammy/skills/install.sh` → every moved `/command` resolves.
+- `bash PyAutoBrain/bin/install.sh` → every moved `/command` resolves.
 - `find <each skills dir> -type l` → no stray symlinks in source.
-- `bash admin_jammy/skills/check_skill_line_counts.sh` → all primary workflow
+- `bash PyAutoBrain/bin/check_skill_line_counts.sh` → all primary workflow
   skill files within 200 lines.
 - Grep for stale `PyAutoMind/skills/` workflow paths and mobile/remote-mode terms
   → clean across the moved skills.
