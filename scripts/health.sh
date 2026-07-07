@@ -17,19 +17,14 @@
 
 health() {
   local sub="${1:-sync}"
+  # Consume the subcommand token only if one was actually given, so bare
+  # `health` (defaults to sync) and `health <sub> <args…>` both pass the
+  # remaining "$@" straight through to the implementation.
+  [ "$#" -gt 0 ] && shift
   case "$sub" in
-    sync)
-      shift 2>/dev/null || true
-      _health_sync "$@"
-      ;;
-    release)
-      shift
-      _health_release "$@"
-      ;;
-    audit)
-      shift
-      _health_audit "$@"
-      ;;
+    sync)    _health_sync "$@" ;;
+    release) _health_release "$@" ;;
+    audit)   _health_audit "$@" ;;
     -h|--help|help)
       cat <<'EOF'
 health — local health/dev shell dispatcher (mirrors the Claude /health door).
