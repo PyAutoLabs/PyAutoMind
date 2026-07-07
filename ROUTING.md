@@ -47,6 +47,15 @@ PyAutoBrain consumes. The agents themselves are **not** implemented here — the
 live in PyAutoBrain. Prompts that *implement*
 those agents are ordinary `feature/pyautobrain/*.md` prompts.
 
+## The command surface
+
+Humans reach this routing through the short PyAutoBrain **commands** (`/feature`,
+`/build`, `/health`, `/bug`, `/refactor`, `/docs`, `/research`, plus the `/route`
+NL router). The work-type verbs map onto the folders above; `/route` infers the
+work-type from free text. The Brain stays implicit — *users speak in short
+commands; PyAutoBrain performs the routing.* Bodies + the boundary live in
+`PyAutoBrain/skills/COMMANDS.md`.
+
 ## Not routed by work type
 
 `issued/`, `z_features/`, `z_vault/`, `shelved/` are workflow-lifecycle folders;
