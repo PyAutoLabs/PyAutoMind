@@ -11,9 +11,8 @@ workflow state. Every task that ends up as a PR in PyAutoConf, PyAutoFit,
 PyAutoArray, PyAutoGalaxy, PyAutoLens, or any of the `*_workspace*` repos begins
 as a markdown file here.
 
-This repository was renamed from **PyAutoPrompt** to **PyAutoMind**; the role is
-unchanged, but it is now framed as the organism's Mind (intent and direction)
-rather than merely a prompt store. The organism's other organs are the Brain
+PyAutoMind is the organism's Mind (intent and direction). The organism's other
+organs are the Brain
 (PyAutoBrain — reasoning and planning), the Hands (PyAutoBuild — execution), the
 Heart (PyAutoHeart — health and readiness) and Memory (PyAutoMemory — accumulated
 knowledge). See [README.md](README.md) for the full picture.

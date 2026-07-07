@@ -45,10 +45,6 @@ repository playing the role of an organ:
 | **Heart** | [PyAutoHeart](https://github.com/PyAutoLabs/PyAutoHeart) | Health and release-readiness: monitoring, checks, the "is it safe to ship?" gate. |
 | **Memory** | [PyAutoMemory](https://github.com/PyAutoLabs/PyAutoMemory) | Accumulated knowledge: literature summaries, wikis, scientific and project knowledge. |
 
-> All organ repositories now carry their organism names. PyAutoAgent was renamed
-> to PyAutoBrain and PyAutoPaper to PyAutoMemory; GitHub redirects the old URLs.
-> PyAutoBuild ("Hands") and PyAutoHeart keep their repository names.
-
 **Why this repository is the Mind.** Work in PyAuto begins as *intent* — an
 idea, a goal, a priority — long before it becomes code. This repository is where
 that intent lives and is shaped: raw ideas in `ideas.md`, scoped intentions as
