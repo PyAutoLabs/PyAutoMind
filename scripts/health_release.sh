@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# pyauto_status_full.sh — release-prep run dashboard.
+# health_release.sh — release-prep run dashboard.
 #
-# Defines a shell function `pyauto-status-full` that reads the latest
+# Defines `_health_release` (run via `health release`) that reads the latest
 # PyAutoBuild full release-prep run (the one symlinked from
 # PyAutoBuild/test_results/latest/) and prints a dashboard:
 #
@@ -13,27 +13,29 @@
 #   - Slow-skip / needs-fix banner counts
 #   - Pointer to triage.md if present (free-form analytical clustering)
 #
-# Usage:
-#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/pyauto_status_full.sh
-#   pyauto-status-full
+# Usage (normally sourced via ~/.bashrc, run through the `health` dispatcher):
+#   source ~/Code/PyAutoLabs/PyAutoMind/scripts/health_release.sh
+#   health release
 #
-# Override the run path (e.g. to inspect a specific historical run)
-# by passing it as the first argument:
-#   pyauto-status-full ~/Code/PyAutoLabs/PyAutoBuild/test_results/runs/2026-04-29T14-48-47Z
+# Override the run path (e.g. to inspect a specific historical run) by passing
+# it as the first argument:
+#   health release ~/Code/PyAutoLabs/PyAutoBuild/test_results/runs/2026-04-29T14-48-47Z
 #
-# Note: this shell function shares its name with the /pyauto-status-full
-# slash command (PyAutoHeart/skills/pyauto-status-full/) but lives in a
-# different namespace. The slash command is the conversational layer; this
-# function is the same data, printed straight to stdout, no Claude needed.
+# Sibling helpers: health-report / health-json / health-triage open the last
+# run's report.md / report.json / triage.md.
+#
+# Note: distinct from the Claude `/health full` command (the conversational
+# layer over the same run artefacts). This function prints straight to stdout,
+# no Claude needed.
 
 PYAUTO_STATUS_FULL_DEFAULT="${PYAUTO_STATUS_FULL_DEFAULT:-$HOME/Code/PyAutoLabs/PyAutoBuild/test_results/latest}"
 
-pyauto-status-full() {
+_health_release() {
   local run_dir="${1:-$PYAUTO_STATUS_FULL_DEFAULT}"
 
   if [[ ! -e "$run_dir" ]]; then
     cat >&2 <<EOF
-pyauto-status-full: no run found at $run_dir
+health release: no run found at $run_dir
 
 To produce one, from PyAutoBuild root:
   source ../activate.sh
@@ -47,7 +49,7 @@ EOF
 
   local report_json="$run_dir/report.json"
   if [[ ! -f "$report_json" ]]; then
-    echo "pyauto-status-full: $report_json missing — run incomplete?" >&2
+    echo "health release: $report_json missing — run incomplete?" >&2
     return 1
   fi
 
@@ -158,11 +160,11 @@ if slow_skips or nf_skips:
 # Pointers
 print("Pointers")
 print("-" * 76)
-print(f"  Markdown report:  {run_dir}/report.md       {DIM}(pyauto-report){RST}")
-print(f"  Run JSON:         {run_dir}/report.json     {DIM}(pyauto-json){RST}")
+print(f"  Markdown report:  {run_dir}/report.md       {DIM}(health-report){RST}")
+print(f"  Run JSON:         {run_dir}/report.json     {DIM}(health-json){RST}")
 triage = run_dir / "triage.md"
 if triage.exists():
-    print(f"  {GREEN}Triage notes:     {triage}{RST}  {DIM}(pyauto-triage){RST}")
+    print(f"  {GREEN}Triage notes:     {triage}{RST}  {DIM}(health-triage){RST}")
 PY
 }
 
@@ -186,16 +188,16 @@ _pyauto_run_file() {
   printf '%s' "$target"
 }
 
-# pyauto-report [run-dir] — view report.md in the pager.
-pyauto-report() {
+# health-report [run-dir] — view report.md in the pager.
+health-report() {
   local f
   f="$(_pyauto_run_file report.md "$1")" || return 1
   "${PAGER:-less}" "$f"
 }
 
-# pyauto-json [run-dir] — view report.json. Uses jq for color + paging when
+# health-json [run-dir] — view report.json. Uses jq for color + paging when
 # available, falls back to plain cat otherwise.
-pyauto-json() {
+health-json() {
   local f
   f="$(_pyauto_run_file report.json "$1")" || return 1
   if command -v jq >/dev/null 2>&1; then
@@ -205,8 +207,8 @@ pyauto-json() {
   fi
 }
 
-# pyauto-triage [run-dir] — view triage.md in the pager.
-pyauto-triage() {
+# health-triage [run-dir] — view triage.md in the pager.
+health-triage() {
   local f
   f="$(_pyauto_run_file triage.md "$1")" || return 1
   "${PAGER:-less}" "$f"
