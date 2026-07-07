@@ -1,3 +1,21 @@
+## brain-agent-commands
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/pull/16
+- completed: 2026-07-07
+- repos: PyAutoBrain (PR #16, squash-merged); PyAutoMind (ROUTING pointer + registry)
+- branch: feature/brain-agent-commands
+- validation:
+  - `check_skill_line_counts.sh`: all 24 primary skill files ≤200 lines
+  - installer discovery: all 9 verbs → flat `~/.claude/commands/<verb>.md` symlinks resolve
+  - no-bypass grep: every command body routes via `pyauto-brain` or `start_dev`
+- notes: |
+    Thin command veneer over the existing bin/pyauto-brain router — the Brain is
+    implicit. Real conductors: /feature /build /health. Work-type entries (route
+    through start_dev pre-tagged, no fictional agent): /bug /refactor /docs
+    /research. NL router /route + debug passthrough /brain. Shared prose in
+    PyAutoBrain/skills/COMMANDS.md (reference-only). Follow-ups: promote
+    bug/refactor/docs/research to dedicated conductors; reconcile /health with
+    /health_check and /pyauto-status.
+
 ## remove-pulse-compat
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/20
 - completed: 2026-07-06
