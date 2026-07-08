@@ -21,9 +21,8 @@
 ## psf-oversample-simulator
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/482
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/482#issuecomment-4917590167
-- local-commits: 5 repos on feature/psf-oversample-simulator, unpushed
+- status: library-shipped, awaiting-merge
+- prs: PyAutoArray#359 -> PyAutoGalaxy#483 -> PyAutoLens#575 -> autolens_workspace#233 + autolens_workspace_test#150
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-simulator
 - repos:
