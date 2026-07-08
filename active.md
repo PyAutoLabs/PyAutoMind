@@ -10,10 +10,13 @@
 
 ## samplers-faculty
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/54
-- status: library-dev
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/54#issuecomment-4916002862
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/samplers-faculty
 - repos:
+  - PyAutoBrain: feature/samplers-faculty
+  - PyAutoMemory: feature/samplers-faculty
 
 ## profiling-polish-design
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/52
