@@ -3,7 +3,8 @@
 ## autonomy-contract
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/34
 - session: claude --resume session_013UptUDNTYiB7izaQJBAKgS
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/35
 - worktree: ~/Code/PyAutoLabs-wt/autonomy-contract
 - repos:
   - PyAutoBrain: feature/autonomy-contract
