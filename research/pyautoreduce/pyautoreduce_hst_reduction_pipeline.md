@@ -1,7 +1,7 @@
-# PyAutoData: new HST data-reduction project for lens modeling
+# PyAutoReduce: new HST data-reduction project for lens modeling
 
 Type: research
-Target: PyAutoData (new repo — name open to suggestions)
+Target: PyAutoReduce (new repo)
 Difficulty: large
 Autonomy: supervised
 Priority: normal
@@ -11,6 +11,7 @@ I want to make a new project, PyAutoData (but feel free to suggest better names)
 
 ## Intake notes (2026-07-08)
 
+- **Name decided:** PyAutoReduce (user confirmed 2026-07-08; original prose above says "PyAutoData" — superseded).
 - **New repo** — no existing PyAuto* repo is the target; creating the repo is part of the work. Once named, add it to `PyAutoMind/repos.yaml` and run `repos_sync.py --write`.
 - **Phase 1 (this prompt):** deep research + thorough plan for HST/ACS reduction matching SLACS-quality data products (drizzled mosaic, PSF estimate, RMS noise map with Poisson counts), plus tile-download/cut-out strategy to limit disk use. Reference dataset: `/mnt/c/Users/Jammy/Science/subhalo/dataset/slacs`.
 - **Phase 2 (skeleton only for now, fleshed out later):** WFC3 / other HST wavelengths, JWST, other instruments, per-exposure `_flt` frames with cosmic rays.
