@@ -15,3 +15,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | psf-oversample-inversion (#356) | supervised | tests PASS 860+940+334 / smoke n-a-opt-in (workspace tests deferred to phase 3 by human) / review CLEAN / heart YELLOW-human-approved | pr-open (PyAutoArray#357; set at merge) |
 | 2026-07-08 | ep-graphical-docs (PyAutoFit#1333) | supervised | tests 200/200 (graphical+messages; docs-only diff) / smoke n/a (no behaviour change) / review pending at sign-off / heart pending at sign-off | parked (ship sign-off question) |
 | 2026-07-08 | assistant-deep-audit (phase A, #35) | supervised | tests n/a (doc repo, stated) / smoke n/a (no script surface) / human review pending / heart YELLOW pre-existing (no ack) | parked |
+| 2026-07-08 | assistant-deep-audit (phase A, #35) | supervised | tests n/a (doc repo) / smoke n/a / review human-approved / heart pre-existing YELLOW (no ack needed at doc scope) | PR #36 open |

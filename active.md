@@ -54,12 +54,12 @@
 
 ## assistant-deep-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
-- status: awaiting-input (phase A complete; parked at ship sign-off)
-- question: https://github.com/PyAutoLabs/autolens_assistant/issues/35#issuecomment-4916852524
+- status: workspace-dev (phase A: PR #36 open, awaiting-merge; phase B: tooling in progress)
+- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/36
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs/autolens_assistant (in-place)
 - repos:
-  - autolens_assistant: feature/assistant-deep-audit
+  - autolens_assistant: feature/assistant-deep-audit, feature/assistant-deep-audit-tooling
 
 ## fix-zero-contour-warm-threshold
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/147
