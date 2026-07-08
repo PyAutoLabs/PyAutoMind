@@ -58,7 +58,7 @@
 ## profiling-vram-validation
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/54
 - status: awaiting-input
-- question: (ship sign-off + Heart-YELLOW ack — latest issue comment)
+- question: https://github.com/PyAutoLabs/autolens_profiling/issues/54#issuecomment-4917021388
 - autonomy: supervised (--auto, launched 2026-07-08, plan approved in-session)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-vram-validation
 - repos:
