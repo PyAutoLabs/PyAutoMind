@@ -44,3 +44,19 @@ Depends on nothing; should land before the "PyAutoLens for LensTool users" flags
 will use this convention.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-07-08 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/fa55f70e-2cea-4887-bf12-61f81cff042f/scratchpad/p2_scaling_relation_lenstool.md -->
+
+__Research findings (deep-research pass, 2026-07-08)__
+
+- LensTool convention operates on sigma and r_cut, anchored to a reference magnitude/luminosity
+  (usually the BCG or L*): sigma_LT_i = sigma_LT_ref * (L_i/L_0)^alpha,
+  r_cut_i = r_cut_ref * (L_i/L_0)^beta_cut. Canonical Faber-Jackson: alpha = 0.25 -> since
+  b0 ∝ sigma^2, the b0 exponent is 2*alpha = 0.5 (the value to fix as default).
+- Measured values (Bergamini et al. 2019, MUSE kinematics of cluster members): alpha = 0.27-0.28
+  (b0 exponent ≈ 0.55); beta_cut = gamma - 2*alpha + 1 with fundamental-plane gamma = 0.2,
+  giving beta_cut ≈ 0.64-0.66 (vs 0.5 canonical). Prose should present 0.5 as the default with
+  the Bergamini kinematic calibration as the documented refinement, and note the mass-follows-light
+  degeneracy: r_cut_ref and sigma_ref are strongly degenerate (total member mass ∝ sigma^2 * r_cut),
+  which is why beta_cut is never sampled freely.
+- Reference anchoring in papers is via magnitudes: L_i/L_0 = 10^(0.4*(m_0 - m_i)); the CSV schema
+  should accept either luminosities or magnitudes, and the reference row should be identifiable
+  (BCG/BGG flag or explicit L_0 value).

@@ -39,3 +39,26 @@ of the LensTool-parity series — file findings on any irreconcilable convention
 prominently, since they determine how close the flagship example can get.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-07-08 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/fa55f70e-2cea-4887-bf12-61f81cff042f/scratchpad/p1_dpie_lenstool_param.md -->
+
+__Research findings (deep-research pass, 2026-07-08)__
+
+- **Velocity-dispersion chain (confirmed):** LensTool's .par `v_disp` is the *fiducial*
+  sigma_LT, related to the dPIE central velocity dispersion by sigma_0 = sqrt(3/2) * sigma_LT
+  (Bergamini et al. 2019, arXiv:1905.13236; Eliasdottir et al. 2007 App. A). sigma_LT is
+  Eliasdottir's sigma_dPIE. Chain to autolens: E0(Eliasdottir) = 6*pi*(sigma_LT/c)^2 * D_LS/D_S,
+  and b0 = E0 * (rs^2 - ra^2)/rs^2 = 4*pi*(sigma_0/c)^2 * D_LS/D_S in the rs->inf limit — both
+  relations already in the dPIEMass docstring. `from_lenstool` should take sigma_LT (what users
+  read out of .par files / papers) and document the sqrt(3/2) trap loudly.
+- **Ellipticity (the main open trap):** the port's `_ellip()` uses |ell_comps| directly as the
+  Kassiola & Kovner eps in r_em^2 = x^2/(1+eps)^2 + y^2/(1-eps)^2, i.e. eps = (a-b)/(a+b) —
+  consistent with PyAuto's standard ell_comps magnitude. LensTool .par files and papers quote
+  ellipticity as e = (a^2-b^2)/(a^2+b^2) (verify against LensTool source `ci05`/`piemd` — the
+  wiki page projets.lam.fr/projects/lenstool/wiki/piemd was unreachable during research; use the
+  public git repo git-cral.univ-lyon1.fr or github mirror). The converter must map
+  e_par -> q -> eps=(1-q)/(1+q) and be validated numerically, including position-angle convention
+  (LensTool angle is counter-clockwise from x-axis? — verify) vs PyAuto's phi from north.
+- **Radius units:** LensTool .par `core_radius` / `cut_radius` are in arcsec (variants
+  `core_radius_kpc` / `cut_radius_kpc` in kpc); support both in the converter via cosmology.
+- **Parity references:** M(R) closed form for ra=0: M(R) = (pi*sigma_0^2/G)(R + r_cut -
+  sqrt(r_cut^2 + R^2)) (Bergamini 2019 App. C) — good analytic anchor for the mass/convergence
+  parity test alongside lenstronomy's PJAFFE/dPIE as an independent implementation.
