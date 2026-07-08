@@ -3,7 +3,7 @@
 Type: research
 Target: PyAutoBuild
 Difficulty: medium
-Autonomy: human-required
+Autonomy: supervised
 Priority: normal
 Status: formalised
 

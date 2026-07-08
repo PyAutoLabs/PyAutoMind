@@ -1,5 +1,13 @@
 # Active Tasks
 
+## version-pinning-design-review
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118
+- session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
+- status: research — investigation running; deliverable is a design-review report on the issue (no code, no PR)
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- worktree: none (read-only research)
+- repos:
+
 ## kxs-design
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
