@@ -3,11 +3,11 @@
 ## psf-oversample-docs
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/234
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/235
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-docs
 - repos:
-  - PyAutoArray: feature/psf-oversample-docs
   - autolens_workspace: feature/psf-oversample-docs
 
 ## ep-analytic-updates-scope

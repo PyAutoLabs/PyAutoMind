@@ -31,3 +31,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | psf-oversample-simulator (#482) | supervised | tests PASS 863+946+336 (simulate-and-fit in all 3 projects, human req) / smoke scripts-run-clean / review CLEAN / heart YELLOW-human-approved | merged-unchanged (5 PRs, chain order; catalogue regen added post-open) |
 | 2026-07-08 | ep-analytic-updates-scope (PyAutoFit#1337) | supervised | research (read-only): inventory + gap repro + ranked candidates posted / other gates n/a | parked (prioritisation on #1337) |
 | 2026-07-08 | ep-review phase 7 ideation (umbrella) | supervised | research (read-only): 11 ideas → ideas.md / other gates n/a | complete |
+| 2026-07-08 | psf-oversample-docs (#234) | supervised | tests n/a (docs) / guide-runs-clean / review CLEAN / heart YELLOW | pr-open (autolens_workspace#235; set at merge) |
