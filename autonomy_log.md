@@ -29,3 +29,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | clone-mitosis-agent (design, Brain#57) | supervised | line-count guard ok / smoke n/a (doc) / review human pending / heart pre-existing YELLOW | parked at sign-off |
 | 2026-07-08 | ep-deterministic-reconcile (PyAutoFit#1336) | supervised | research (read-only): census + analysis + recommendation posted / other gates n/a | parked (decision A/B/C on #1336) |
 | 2026-07-08 | psf-oversample-simulator (#482) | supervised | tests PASS 863+946+336 (simulate-and-fit in all 3 projects, human req) / smoke scripts-run-clean / review CLEAN / heart YELLOW-human-approved | pr-open (5 PRs; set at merge) |
+| 2026-07-08 | ep-analytic-updates-scope (PyAutoFit#1337) | supervised | research (read-only): inventory + gap repro + ranked candidates posted / other gates n/a | parked (prioritisation on #1337) |

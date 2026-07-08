@@ -137,6 +137,15 @@ one. Output: a recommendation with migration cost estimate.
 ### Phase 6 — Analytic likelihood updates (scoping)
 **Issued:** PyAutoFit#1337 (2026-07-08) — task `ep-analytic-updates-scope`
 (--auto, supervised, read-only).
+**Complete (2026-07-08), prioritisation pending:** exact machinery exists +
+an undocumented duck-typed analytic-projection contract (ProbitModel /
+LinearModel in regression tests). Gap: declarative path never uses it —
+PriorFactor wraps the bound method and strips the hooks (in-code TODO at
+declarative/factor/prior.py:22), so every declarative EP fit pays one
+optimiser run per free parameter per cycle for closed-form updates.
+Ranked candidates on #1337: (1) exact PriorFactors ~1 day; (2) document
+the contract; (3) first-class linear-Gaussian factor (IC50's global factor
+is exactly this shape); (4)/(5) blocked by fix batches.
 Scope exact/conjugate factor updates in the EP source — factors whose
 tilted-distribution moments are available in closed form should skip the
 sampler entirely. Map which message families and likelihood forms admit

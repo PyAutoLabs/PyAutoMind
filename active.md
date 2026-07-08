@@ -3,7 +3,8 @@
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: research — phase 6 of research/graphical_ep/ep_framework_review.md (read-only; scoping verdict lands on the issue)
+- status: awaiting-input — phase 6 complete; scoping verdict on #1337 (ranked candidates 1-5; recommend 1+2 then 3) pending prioritisation
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1337#issuecomment-4917840042
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: none (read-only)
 - repos:
