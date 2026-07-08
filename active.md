@@ -1,5 +1,15 @@
 # Active Tasks
 
+## kxs-cache
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
+- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/364
+- autonomy: supervised (--auto)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-cache
+- repos:
+  - PyAutoArray: feature/kxs-cache
+
 ## jwst-nircam-cosmos-web
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9

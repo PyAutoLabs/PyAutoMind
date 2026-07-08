@@ -47,3 +47,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | release-stamping-slim (PyAutoBuild#120) | supervised | tests 71 pass / smoke n/a (workflow-only) / review human-signoff / heart YELLOW-acked-in-session | PR-open (#121) |
 | 2026-07-08 | version-check-compat-floor (PyAutoConf#118) | supervised | tests 117 pass / smoke n/a / review human-signoff / heart YELLOW-acked | merged-unchanged (#119) |
 | 2026-07-08 | release-stamping-slim (PyAutoBuild#120) | supervised | tests 71 pass / smoke n/a / review human-signoff / heart YELLOW-acked | merged-unchanged (#121) |
+| 2026-07-08 | kxs-cache (#362 follow-up) | supervised | tests PASS 867 / perf x750 / review CLEAN / heart YELLOW-human-cadence | pr-open (PyAutoArray#364) |
