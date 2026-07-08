@@ -84,8 +84,8 @@
 
 ## assistant-deep-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
-- status: awaiting-input (PRs #36 + #37 open; phase C complete, parked at ship sign-off)
-- question: https://github.com/PyAutoLabs/autolens_assistant/issues/35 (PR C sign-off comment)
+- status: awaiting-merge (all phases shipped: PRs #36, #37, #38 open as drafts)
+- prs: https://github.com/PyAutoLabs/autolens_assistant/pulls (36 recipes, 37 tooling, 38 wiki)
 - pr: https://github.com/PyAutoLabs/autolens_assistant/pull/36
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs/autolens_assistant (in-place)
@@ -99,3 +99,12 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/fix-zero-contour-warm-threshold
 - repos:
   - autolens_workspace_test: feature/fix-zero-contour-warm-threshold
+
+## fix-latent-variables-fast
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/230
+- status: workspace-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/231, https://github.com/PyAutoLabs/autogalaxy_workspace/pull/123
+- worktree: /home/jammy/Code/PyAutoLabs-wt/fix-latent-variables-fast
+- repos:
+  - autolens_workspace: feature/fix-latent-variables-fast
+  - autogalaxy_workspace: feature/fix-latent-variables-fast
