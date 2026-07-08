@@ -20,7 +20,9 @@
 ## hst-acs-phase1
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/2
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: library-dev
+- status: awaiting-input — implementation complete + validated (53 tests; parity 0.941/0.925 deterministic; review FINDINGS resolved); parked at ship sign-off incl. Heart YELLOW ack
+- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/2#issuecomment-4918311185
+- local-commits: 5 on feature/hst-acs-phase1, unpushed
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place — single new repo, no parallel claims)
 - repos:
