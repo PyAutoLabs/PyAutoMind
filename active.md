@@ -17,16 +17,6 @@
 
 
 
-## samplers-faculty
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/54
-- status: awaiting-merge
-- prs: PyAutoMemory#16 (merge first), PyAutoBrain#55
-- autonomy: supervised (--auto, launched 2026-07-08)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/samplers-faculty
-- repos:
-  - PyAutoBrain: feature/samplers-faculty
-  - PyAutoMemory: feature/samplers-faculty
-
 ## profiling-polish-design
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/52
 - status: awaiting-merge

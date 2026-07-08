@@ -1,3 +1,31 @@
+## samplers-faculty
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/54 (closed)
+- completed: 2026-07-08
+- prs: https://github.com/PyAutoLabs/PyAutoMemory/pull/16 (merged), https://github.com/PyAutoLabs/PyAutoBrain/pull/55 (merged)
+- notes: |
+    New Brain faculty (the fourth): agents/faculties/samplers/ — the "motor
+    faculty" (samplers as gaits). AGENTS.md judgment tables (sampler<->
+    likelihood match, gradient/JAX constraints incl. chunked-vmap for
+    inversion-heavy likelihoods, initialization providers vs consumers,
+    four promotion criteria) + deterministic read-only SamplerSurface
+    entrypoint (samplers.sh/_samplers.py, stdlib-only): inventories the
+    three script tiers (searches_minimal / searches archive /
+    workspace_test scripts/searches), the PyAutoFit search catalogue
+    (package-per-sampler layout: non_linear/search/<group>/<pkg>/), the
+    minimal-tier benchmark table, and tier gaps. Live gap findings at ship:
+    nest/nss, mle/drawer, mle/pyswarms, nest/ultranest have no
+    workspace_test integration script — the nss one is a real candidate task.
+    skills/sampler_pipeline/ drives prototype -> profile -> promote through
+    start_dev (MLTracker contract, honest-benchmarking rules, promote-or-
+    archive). Science backing in PyAutoMemory methods_wiki: 4 new concept
+    pages (hamiltonian-monte-carlo, gpu-nested-sampling filled existing
+    index red-links; initialization-chaining; sampler-benchmarks campaign
+    record). install.sh auto-discovered the skill (symlink live).
+    Calibration: supervised --auto, parked once at ship sign-off,
+    approved-unchanged, merged-unchanged. Gotcha: a concurrent session was
+    pushing to the Mind checkout mid-run — staged Mind writes by explicit
+    filename instead of prompt_sync_push (git add -A) throughout.
+
 ## psf-oversample-design
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/353
 - completed: 2026-07-08
