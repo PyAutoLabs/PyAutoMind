@@ -1,5 +1,12 @@
 # Active Tasks
 
+## ep-priors-fable-reassess
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1330
+- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
+- status: research
+- worktree: none (read-only reassessment on PyAutoFit main @ 0f26ff2d8; verdicts land in PyAutoMind bug/priors)
+- repos:
+
 ## psf-oversample-core
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/354
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7

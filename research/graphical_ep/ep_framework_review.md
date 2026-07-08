@@ -42,6 +42,7 @@ Grounding material for the review (read, don't bulk-load):
 ## Phases (split into separate issues/PRs at start_dev time — issue each as its predecessor nears shipping, not upfront)
 
 ### Phase 0 — Fable reassessment of the Opus priors/messages findings
+**Issued:** PyAutoFit#1330 (2026-07-08) — task `ep-priors-fable-reassess`.
 Re-verify each of `bug/priors/01–14` and the confirmed-bug list in
 `priors_and_messages_math_audit.md` against clean PyAutoFit `main`:
 reproduce, confirm/refute the math, re-rank severity. Output: updated
