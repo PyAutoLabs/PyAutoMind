@@ -40,3 +40,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | kxs-core (#362 p2) | supervised | tests PASS 863+946+336 (adaptive GT exact; pixelized kxs proven) / smoke deferred-p3 / review CLEAN / heart YELLOW-human-approved | pr-open (3 PRs; p3 blocked ext; p4 fork parked) |
 | 2026-07-08 | version-check-compat-floor (PyAutoConf#118) | supervised | tests 117 pass (+7 new) / smoke n/a (library-only, no downstream edits) / review pending-at-signoff / heart YELLOW (no ack) | parked |
 | 2026-07-08 | release-stamping-slim (PyAutoBuild#120) | supervised | tests 71 pass / smoke n/a (workflow-only) / review pending-at-signoff / heart YELLOW (no ack) | parked |
+| 2026-07-08 | wfc3-reduction | supervised | tests 62/62 / smoke n/a / review FINDINGS(1H+2L)→resolved / heart YELLOW | parked |
