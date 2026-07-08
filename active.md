@@ -29,15 +29,6 @@
 - worktree: none (read-only)
 - repos:
 
-## pyautoreduce-hst-design
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/1
-- session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: awaiting-input — spike complete, parity closes (units e-/s; noise matches with R applied; ~7% scale offset → phase 1); design docs await user review before phase-1 prompt is filed
-- autonomy: supervised (interactive session)
-- worktree: none (new repo, work on main — pre-release, no consumers)
-- repos:
-  - PyAutoReduce: main
-
 ## ep-deterministic-reconcile
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1336
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
