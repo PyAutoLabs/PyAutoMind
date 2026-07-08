@@ -37,7 +37,8 @@
 
 ## autolens-assistant-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/33
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/34
 - worktree: /home/jammy/Code/PyAutoLabs/autolens_assistant (in-place)
 - repos:
   - autolens_assistant: feature/autolens-assistant-audit
