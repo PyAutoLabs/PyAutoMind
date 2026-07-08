@@ -1,13 +1,5 @@
 # Active Tasks
 
-## intake-formalise
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/32
-- session: claude --resume 56ebb185-5a7a-4346-be27-2046576a332e
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/intake-formalise
-- repos:
-  - PyAutoBrain: feature/intake-formalise
-
 ## kaplinghat-sidm-cored-nfw
 - worktree: /home/jammy/Code/PyAutoLabs-wt/kaplinghat-sidm-cored-nfw
   - PyAutoGalaxy: feature/kaplinghat-sidm-cored-nfw
