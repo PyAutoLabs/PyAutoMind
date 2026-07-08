@@ -3,7 +3,8 @@
 ## ep-graphical-docs
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1333
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: library-dev
+- status: awaiting-input — implementation complete (README + docstrings, 200 tests pass, uncommitted in worktree); parked at ship sign-off
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1333#issuecomment-4916792355
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/ep-graphical-docs
 - repos:
@@ -51,15 +52,6 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-vram-validation
 - repos:
   - autolens_profiling: feature/profiling-vram-validation
-
-## fix-aggregator-dataset-fits
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/478
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/479 (library-first), https://github.com/PyAutoLabs/PyAutoLens/pull/574
-- worktree: /home/jammy/Code/PyAutoLabs-wt/fix-aggregator-dataset-fits
-- repos:
-  - PyAutoGalaxy: feature/fix-aggregator-dataset-fits
-  - PyAutoLens: feature/fix-aggregator-dataset-fits
 
 ## assistant-deep-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
