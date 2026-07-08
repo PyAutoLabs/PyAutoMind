@@ -45,19 +45,6 @@
 - worktree: none (read-only research)
 - repos:
 
-## kxs-core
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-shipped, awaiting-merge + phase-4 fork
-- prs: PyAutoArray#363 -> PyAutoGalaxy#486 -> autolens_workspace#236
-- question: simulator-adoption fork (a/b/c) on the issue; phase 3 blocked by dpie-lenstool-param (autolens_workspace_test)
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-core
-- repos:
-  - PyAutoArray: feature/kxs-core
-  - PyAutoGalaxy: feature/kxs-core
-  - autolens_workspace: feature/kxs-core
-
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
