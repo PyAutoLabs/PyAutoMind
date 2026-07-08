@@ -3,8 +3,8 @@
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: awaiting-input — phase 6 complete; scoping verdict on #1337 (ranked candidates 1-5; recommend 1+2 then 3) pending prioritisation
-- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1337#issuecomment-4917840042
+- status: complete-pending-pickup — phase 6 done; implementation plan for all 4 WPs on #1338 (plan-only, human-directed no-implement); backlog anchor feature/autofit/ep_analytic_updates.md
+- plan: https://github.com/PyAutoLabs/PyAutoFit/issues/1338
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: none (read-only)
 - repos:

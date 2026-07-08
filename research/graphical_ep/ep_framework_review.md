@@ -146,6 +146,9 @@ optimiser run per free parameter per cycle for closed-form updates.
 Ranked candidates on #1337: (1) exact PriorFactors ~1 day; (2) document
 the contract; (3) first-class linear-Gaussian factor (IC50's global factor
 is exactly this shape); (4)/(5) blocked by fix batches.
+**Plan filed (2026-07-08):** PyAutoFit#1338 — self-contained 4-WP
+implementation plan (plan-only per user; pick-up possibly by Opus).
+Backlog anchor: feature/autofit/ep_analytic_updates.md.
 Scope exact/conjugate factor updates in the EP source — factors whose
 tilted-distribution moments are available in closed form should skip the
 sampler entirely. Map which message families and likelihood forms admit
