@@ -6,6 +6,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/intake-formalise
 - repos:
+  - PyAutoBrain: feature/intake-formalise
 
 ## kaplinghat-sidm-cored-nfw
 - worktree: /home/jammy/Code/PyAutoLabs-wt/kaplinghat-sidm-cored-nfw
