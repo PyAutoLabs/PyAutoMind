@@ -1,36 +1,29 @@
-__Outstanding__ (sequenced)
+__Outstanding__ (sequenced — the "home straight" to mature cluster modeling, filed 2026-07-08)
 
-1. [2_scaling_relation.md](../issued/2_scaling_relation.md) —
-   make scaling-relation members the default in the three
-   `autolens_workspace/scripts/cluster/` scripts (10 low-mass members on a
-   luminosity–mass scaling relation, always via the CSV interface mirroring
-   `imaging/features/scaling_relation/`). Simulator extension must still
-   produce multiple images in the right positions.
-2. [3_test_workspace.md](../issued/3_test_workspace.md) —
-   stand up `autolens_workspace_test/scripts/cluster/`:
-   - `simulator.py` re-using the workspace simulator (so scaling galaxies
-     flow through into every downstream test).
-   - Move `scripts/imaging/visualization_cluster.py` →
-     `scripts/cluster/visualization.py`.
-   - Likelihood sanity check: source-plane chi² (`FitPositionsSource`) and
-     image-plane chi² (`FitPositionsImagePair`) against perturbed mass-model
-     inputs (0.1% / 1% / 5%) — chi² ≈ 0 at the truth, log-likelihood drops
-     monotonically as perturbation grows.
-   - Multi-redshift variant: max-likelihood only when per-source redshifts
-     are correct.
-   - `scripts/jax_likelihood_functions/cluster/single_plane.py` +
-     `multi_plane.py` with numerical assertions against the perturbation
-     test case.
-3. [4_likelihood_function.md](../issued/4_likelihood_function.md) —
-   `autolens_workspace/scripts/cluster/likelihood_function.py` step-by-step
-   walkthrough: source-plane chi² first, then image-plane chi². Comment
-   density and structure should match the other workspace
-   `likelihood_function.py` scripts.
-4. [feature/cluster/5_profiling.md](../feature/cluster/5_profiling.md) — two scripts in
+1. [feature/cluster/5_profiling.md](../feature/cluster/5_profiling.md) — two scripts in
    `autolens_profiling/likelihood/cluster/` that time the source-plane and
    image-plane likelihood paths, following the per-model breakdown style of
-   the rest of `autolens_profiling/likelihood/`. Depends on (3) for the
-   reference step-by-step decomposition.
+   the rest of `autolens_profiling/likelihood/`.
+2. [feature/cluster/6_dpie_lenstool_parameterization.md](../feature/cluster/6_dpie_lenstool_parameterization.md)
+   — LensTool-native (sigma, r_core, r_cut) dPIE parameterization + numerical
+   parity validation against LensTool conventions.
+3. [feature/cluster/7_scaling_relation_lenstool_convention.md](../feature/cluster/7_scaling_relation_lenstool_convention.md)
+   — reparameterize the scaling tier to the LensTool/referee convention:
+   reference-anchored normalization, beta fixed at 0.5 by default, r_cut scaling.
+4. [feature/cluster/9_cluster_visualization.md](../feature/cluster/9_cluster_visualization.md)
+   — cluster-scale visualization: per-plane critical curves/caustics, large-FoV
+   defaults, aplt promotion (subsumes the deferred aplt item below).
+5. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
+   — deliberate over/under-prediction handling in the point-source likelihood
+   + `guides/` documentation of the choices.
+6. [docs/cluster/8_lenstool_users_example.md](../docs/cluster/8_lenstool_users_example.md)
+   — flagship "PyAutoLens for LensTool users" example on real data
+   (candidate: SMACS J0723), reproducing a published LensTool model; depends
+   on (2) and (3), exercised by (4) and (5). A real prospective user is
+   available for beta-testing back-and-forth once a draft exists.
+
+   Issue one at a time as the predecessor nears shipping
+   ([[feedback_no_bulk_issue_queues]]).
 
 __Shipped__
 
@@ -45,6 +38,15 @@ __Shipped__
   Produces three reference PNGs (overlaid positions, per-source grid, cluster-tuned
   critical curves) into `autolens_workspace/dataset/cluster/simple/`. Library-side `aplt`
   promotion is deferred — see __Deferred__ below.
+- 2_scaling_relation — `cluster-scaling-members` (see complete.md). Scaling-relation
+  tier made the cluster default: 10 members on `b0 = 0.3 * L^1.0`, `scaling_galaxies.csv`
+  CSV interface, `start_here.py` rewritten and unparked (subsumed the Deferred item).
+- 3_test_workspace — `cluster-test-workspace` (items 1–4 of 8 shipped; see complete.md).
+  csv_api.py, simulator.py, visualization.py move, likelihood_sanity.py (precision-floor
+  finding documented; follow-up queued as #106).
+- 4_likelihood_function — `cluster-likelihood-function` (see complete.md).
+  ~780-line step-by-step walkthrough of source-plane and image-plane chi²,
+  validated against library likelihoods exactly.
 - 2_modeling_cluster — `cluster-modeling-v2` (autolens_workspace#174, PR #175, 2026-05-18).
   Full rewrite of `scripts/cluster/modeling.py` against the multi-plane simulator:
   `al.list_from_csv` for per-source redshifts, JSON centres for main lenses + host halo,
@@ -54,11 +56,10 @@ __Shipped__
 
 __Deferred (future prompts, after Outstanding chain lands)__
 
-- `cluster/start_here.py` rewrite — currently parked in `no_run.yaml`; needs to follow
-  whatever shape `modeling.py` settles into once scaling-relation members are in.
-- Lens/source CSV API — `lens_galaxies.csv` + `source_galaxies.csv` mirroring
-  `al.galaxy_table_from_csv` from `imaging/features/scaling_relation/`. Only worth doing
-  once the rewritten cluster `modeling.py` has matured through Outstanding #1.
-- `aplt` plotter promotion — promote the most useful patterns from the visualization
-  prototype (per-source colouring, per-image-group zoom grid, cluster-tuned critical-curve
-  overlay) into the library `aplt` / `Visuals2D` / `Include2D` interfaces.
+- ~~`cluster/start_here.py` rewrite~~ — done, subsumed into `cluster-scaling-members`.
+- Lens/source CSV API — largely subsumed by `cluster-csv-api` (family CSVs are now the
+  first-class cluster API); revisit only if a residual gap surfaces.
+- ~~`aplt` plotter promotion~~ — subsumed into
+  [feature/cluster/9_cluster_visualization.md](../feature/cluster/9_cluster_visualization.md).
+- PointSolver precision floor in cluster source-plane chi² (#106 investigation) —
+  interacts with over/under-prediction penalties (see 10_solver_over_under_prediction.md).
