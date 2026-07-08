@@ -16,9 +16,10 @@
 ## ep-diagnostics
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1335
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: library-dev
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- note: parallel to ep-graphical-docs claim on PyAutoFit (PR #1334, docs-only) — disjoint files, human-directed; re-verify disjointness at ship
+- status: awaiting-input — implementation complete (diagnostics module + wiring + F3 fix; full suite 1429 pass/14 skip; uncommitted); parked at ship sign-off incl. Heart YELLOW ack
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1335#issuecomment-4917484045
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack yet)
+- note: parallel to ep-graphical-docs claim on PyAutoFit (PR #1334, docs-only) — disjointness re-verified at sign-off: zero file overlap
 - worktree: /home/jammy/Code/PyAutoLabs-wt/ep-diagnostics
 - repos:
   - PyAutoFit: feature/ep-diagnostics
