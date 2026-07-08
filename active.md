@@ -1,5 +1,13 @@
 # Active Tasks
 
+## ep-deterministic-reconcile
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1336
+- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
+- status: research — phase 5 of research/graphical_ep/ep_framework_review.md (read-only; recommendation lands on #1336)
+- autonomy: supervised (--auto, launched 2026-07-08)
+- worktree: none (read-only)
+- repos:
+
 ## psf-oversample-simulator
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/482
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7

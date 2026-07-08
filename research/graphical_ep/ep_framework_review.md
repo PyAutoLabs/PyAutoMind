@@ -118,6 +118,8 @@ Design should coordinate with the inspection/aggregation ideas already in
 `graphical_scoping.md` (its limitation 3).
 
 ### Phase 5 — Deterministic variables reconciliation
+**Issued:** PyAutoFit#1336 (2026-07-08) — task `ep-deterministic-reconcile`
+(--auto, supervised, read-only).
 The IC50 cancer use case composes deterministic quantities via the EP
 composition machinery (locate the old rhayes777 PR that added this) but
 does not use the low-level `deterministic_variable` API in
