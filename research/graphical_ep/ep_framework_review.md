@@ -135,6 +135,8 @@ does not use the low-level `deterministic_variable` API in
 one. Output: a recommendation with migration cost estimate.
 
 ### Phase 6 — Analytic likelihood updates (scoping)
+**Issued:** PyAutoFit#1337 (2026-07-08) — task `ep-analytic-updates-scope`
+(--auto, supervised, read-only).
 Scope exact/conjugate factor updates in the EP source — factors whose
 tilted-distribution moments are available in closed form should skip the
 sampler entirely. Map which message families and likelihood forms admit
