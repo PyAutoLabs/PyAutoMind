@@ -1,3 +1,23 @@
+## samples-parameter-paths
+- prompt: PyAutoMind/bug/health_fixes/samples_parameter_paths.md
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1327 (open, parked)
+- status: parked
+- filed: 2026-07-08
+- classification: library (PyAutoFit) — bug, health_fixes cluster
+- suggested-branch: feature/samples-parameter-paths
+- blocked-by: clean-output CI re-validation (does NOT reproduce on current main)
+- summary: |
+    Investigated the PyAutoHeart #27 release KeyError in
+    parameter_lists_for_paths. Does NOT reproduce on current main: two legs
+    (shapelets 125-prior Basis; multi-analysis 22-prior) pass in-memory AND via
+    true from-disk reload (model.json + samples.csv), plus all synthetic
+    round-trips. The 745117bd7 fix (May 2026) was already in main at the
+    2026-07-06 run; failure most consistent with STALE cached output/ in the
+    release run. No library fix warranted — parked pending a clean-output CI
+    re-run. Sibling health_fixes/ prompts from the same run are suspect too.
+    Full trail: PyAutoFit#1327 comments.
+- affected-repos:
+
 ## heart-ci-linkage
 - prompt: PyAutoMind/feature/pyautoheart/ci_linkage.md
 - status: planned

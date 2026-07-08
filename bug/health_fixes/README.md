@@ -13,7 +13,7 @@ Each failing script is assigned to exactly one prompt:
 
 | Prompt | Scripts | Primary concern |
 |---|---:|---|
-| [samples_parameter_paths.md](../../issued/samples_parameter_paths.md) — issued [PyAutoFit#1327](https://github.com/PyAutoLabs/PyAutoFit/issues/1327) | 9 | PyAutoFit result/sample path resolution |
+| [samples_parameter_paths.md](samples_parameter_paths.md) — ⚠️ parked, does not reproduce on current `main` ([PyAutoFit#1327](https://github.com/PyAutoLabs/PyAutoFit/issues/1327), blocked on clean-CI re-validation) | 9 | PyAutoFit result/sample path resolution |
 | [autofit_sampler_database.md](autofit_sampler_database.md) | 9 | Emcee NaNs and database output discovery |
 | [aggregator_output_contracts.md](aggregator_output_contracts.md) | 7 | Result/aggregator prerequisites and generated paths |
 | [jax_runtime_and_parity.md](jax_runtime_and_parity.md) | 6 | JAX/TFP compatibility and likelihood parity |
