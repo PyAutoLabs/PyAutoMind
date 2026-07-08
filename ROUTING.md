@@ -18,7 +18,7 @@ domain is affected.
 |------------------|--------|-------------------|
 | `feature/`       | new user-facing or scientific capabilities | feature planner |
 | `bug/`           | incorrect behaviour, crashes, regressions | debugger |
-| `refactor/`      | internal restructuring, no intended behaviour change | refactor architect |
+| `refactor/`      | internal restructuring, no intended behaviour change | Refactor Agent (conductor; default-safe under `--auto`) |
 | `docs/`          | documentation, tutorials, notebooks, examples | documentation agent |
 | `test/`          | test coverage, smoke tests, validation scripts | test engineer |
 | `release/`       | packaging, versions, deployment, release readiness | release engineer |
