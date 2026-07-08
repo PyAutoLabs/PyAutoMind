@@ -1,5 +1,12 @@
 # Deep research: Can we speed up Delaunay in PyAutoArray?
 
+Type: research
+Target: PyAutoArray
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 ## UPDATE 2026-05-16 — status of the alternatives
 
 The picture has narrowed sharply since this doc was written. Two of the
@@ -450,3 +457,5 @@ Phase 2 (B):
 - Source: nnls-vmap-speedup findings
   (`z_projects/profiling/FINDINGS_nnls_v2.md`, issue PyAutoArray#307
   closed 2026-05-11)
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

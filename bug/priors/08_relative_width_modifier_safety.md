@@ -1,5 +1,12 @@
 # `@PyAutoFit` `RelativeWidthModifier` produces zero / negative sigma for parameters near 0
 
+Type: bug
+Target: priors
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A9
 and C7).
@@ -167,3 +174,5 @@ The reviewer should consider:
    which is the right scope.** Include the config audit list so the
    reviewer can judge migration cost.
 7. **Stop. Do not implement until the reviewer chooses A, B, or C.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

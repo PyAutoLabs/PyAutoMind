@@ -1,5 +1,12 @@
 # `@PyAutoFit` Add property-based correctness tests for every `Prior` subclass
 
+Type: bug
+Target: priors
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding C3).
 
@@ -184,3 +191,5 @@ For each property, pick the tolerance carefully:
 7. **Stop. Do not implement until prompts 01-08 are at least acked
    in their own issues.** This prompt is the safety net for the fixes,
    not a substitute for them.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,3 +1,12 @@
+# `wiki/literature/` is the assistant's shared, self-contained base reference for strong-lensing
+
+Type: feature
+Target: autolens_assistant
+Difficulty: large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 `wiki/literature/` is the assistant's shared, self-contained base reference for strong-lensing
 science (decoupled from any external paper repo; see @autolens_assistant/wiki/literature/AGENTS.md).
 Spun-off science projects refer back to it rather than copying it. Open question: when a paper
@@ -43,3 +52,5 @@ projects first to learn when users naturally supply papers, how much literature 
 want during setup, and whether project creation is the right point for a potentially lengthy
 review. The initial implementation should be shaped by that evidence rather than making the
 creation workflow heavy by default.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

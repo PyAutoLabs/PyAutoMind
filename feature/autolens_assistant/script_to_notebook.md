@@ -1,3 +1,12 @@
+# Now that `autolens_assistant` generates scripts in the PyAutoLens narrative-docstring
+
+Type: feature
+Target: autolens_assistant
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Now that `autolens_assistant` generates scripts in the PyAutoLens narrative-docstring
 style (title + `__Contents__` header, per-section `"""__Section__"""` docstrings — see
 issue PyAutoLabs/autolens_assistant#6), we should add a **script -> notebook converter**
@@ -25,3 +34,5 @@ What I want:
 
 Cite the workspace converter as the reference if one exists; only build from scratch if it
 genuinely doesn't.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

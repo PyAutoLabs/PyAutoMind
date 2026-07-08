@@ -1,3 +1,12 @@
+# Context: PyAutoLens issue #542 asks for a JIT/vmap-able multi-plane substructure
+
+Type: feature
+Target: jax_substructure
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Context: PyAutoLens issue #542 asks for a JIT/vmap-able multi-plane substructure
 forward simulator. This is prompt 1 of 4 — building the vectorized per-plane
 deflection computation that everything else stacks on top of.
@@ -111,3 +120,5 @@ zero deflection.
 - The macro lens (PowerLaw + ExternalShear) doesn't need vmapping here — there's
   only one macro lens per realization. It will be called directly in prompt 2.
 - Light profiles (source image) are also not in scope here — just mass deflections.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

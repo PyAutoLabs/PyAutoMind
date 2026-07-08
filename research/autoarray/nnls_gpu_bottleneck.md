@@ -1,5 +1,12 @@
 ## Speed up NNLS on consumer GPUs by hacking jaxnnls itself
 
+Type: research
+Target: PyAutoArray
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 > **SUPERSEDED BY** `nnls_vmap_optimization.md` (2026-05-11).
 >
 > This prompt's framing is single-JIT-on-GPU at MGE-only K=40 scale.
@@ -172,3 +179,5 @@ pipelines, not just MGE.
   numerical tolerance.
 - vmap-batch sizing on the sampler side. That's a PyAutoFit concern, not
   PyAutoArray.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

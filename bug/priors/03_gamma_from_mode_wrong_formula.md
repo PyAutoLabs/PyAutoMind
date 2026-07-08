@@ -1,5 +1,12 @@
 # `@PyAutoFit` `GammaMessage.from_mode` produces a Gamma that matches neither the requested mode nor variance
 
+Type: bug
+Target: priors
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A3).
 
@@ -152,3 +159,5 @@ closer (in different ways).
    family.** This is a math + API design call, not a mechanical fix.
 6. **Stop. Do not implement until the reviewer specifies the desired
    invariant.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

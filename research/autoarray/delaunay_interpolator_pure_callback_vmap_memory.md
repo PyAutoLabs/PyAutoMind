@@ -1,5 +1,12 @@
 # PyAutoArray Delaunay interpolator's `pure_callback` vs vmap — minor efficiency follow-up
 
+Type: research
+Target: PyAutoArray
+Difficulty: too-large
+Autonomy: supervised
+Priority: low
+Status: formalised
+
 ## Status
 
 **Not the root cause of the NSS Delaunay A100 OOM.** The control test
@@ -186,3 +193,5 @@ padding contract.
   Delaunay OOMs at 27.7 GB); job 322601 (Nautilus Delaunay
   completes at 37.4 GB peak); jobs 322603 + 322604 (pixelization
   control pair, in flight).
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

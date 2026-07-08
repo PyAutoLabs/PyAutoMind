@@ -1,5 +1,12 @@
 # Surface live visual updates in assistant search guidance
 
+Type: feature
+Target: autolens_assistant
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 The `live_visual_update` capability is already implemented in PyAutoFit and documented broadly
 throughout `autolens_workspace`. This task is only about making `autolens_assistant` aware of the
 existing option at the point where it configures or launches a search. Do not reimplement the
@@ -61,3 +68,5 @@ Acceptance checks:
 > )), I think this is probably just something I want to make sure the assistant has in a good context point to ask or remind the user, but maybe not in AGENT.md given we are trying to keep its length down
 >
 > go
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

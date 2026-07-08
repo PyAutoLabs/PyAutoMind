@@ -1,3 +1,12 @@
+# I actually think the Build Agent should be the second
+
+Type: feature
+Target: PyAutoBrain
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 I actually think the Build Agent should be the second canonical PyAutoBrain agent, because it demonstrates that Brain agents don't execute directly—they coordinate organs.
 
 The flow becomes:
@@ -329,3 +338,5 @@ Treat release as part of the initial Build Agent scope, because PyAutoBuild curr
 Document that a future PyAutoBrain Release Agent may be split out. In that future architecture, the Release Agent will make release-specific decisions about versioning, changelogs, PyPI/tags and human approval, consult the Health Agent for readiness, and then request execution from the Build Agent / PyAutoBuild.
 
 So: one agent now, clean seam for two later.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

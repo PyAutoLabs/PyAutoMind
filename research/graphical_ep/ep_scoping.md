@@ -1,5 +1,12 @@
 # Expectation Propagation Scale-Up — Scoping
 
+Type: research
+Target: graphical_ep
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Companion baseline package: `autofit_workspace_developer/ep/`. This
 document is grounded in the profile data emitted by that package's
 `profiles/baseline.json` and `profiles/N10_hotspots.txt`. The "IC50 tier
@@ -254,3 +261,5 @@ follow-up prompts.)
 > Sequence: cProfile attribution → suppress plotting + folder cleanup
 > → Laplace global → measure at N=100 → sampler reuse + parallelisation
 > → orchestration profile.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

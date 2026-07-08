@@ -1,3 +1,12 @@
+# Can create a list of InversionMatrix objects for each dataset
+
+Type: feature
+Target: PyAutoArray
+Difficulty: medium
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Can create a list of InversionMatrix objects for each dataset + tracer and then have a new class which takes a list of
 these objects and creates a combined curvature_reg matrix from them, which solves for all datasets simultaneously.
 
@@ -10,3 +19,5 @@ Multi analysis API can easily be used for model parameterization, with CombineAn
 the log likelihood fuinction (which maybe uses a special type of Fit object).
 
 [This was not written as a claud Prompt, expan dfully the day I use it]
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

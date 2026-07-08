@@ -1,3 +1,12 @@
+# Restore absolute NumPy likelihood regression baselines in the `_workspace_test`
+
+Type: test
+Target: workspaces
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Restore absolute NumPy likelihood regression baselines in the `_workspace_test`
 repositories.
 
@@ -118,3 +127,5 @@ NUMBA_CACHE_DIR=/tmp/numba_cache MPLCONFIGDIR=/tmp/matplotlib python <script>
 - The final PR summary lists which scripts gained absolute baselines and which
   objective each baseline pins (`log_likelihood`, `figure_of_merit`, or
   factor-graph summed likelihood).
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,3 +1,12 @@
+# Context: PyAutoLens issue #542, prompt 2 of 4. Prompt 1
+
+Type: feature
+Target: jax_substructure
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Context: PyAutoLens issue #542, prompt 2 of 4. Prompt 1 built vmapped per-plane
 deflection functions. This prompt wires them into a `jax.lax.scan` over redshift
 planes to replace the Python loops in multi-plane ray-tracing.
@@ -159,3 +168,5 @@ Put tests in `autolens_workspace_test/scripts/jax_substructure/`.
 - Pytree registration: `autoarray/abstract_ndarray.py` has `register_instance_pytree`.
   The new function takes raw arrays, so pytree registration isn't needed for
   the function itself — just ensure inputs are plain `jnp.arrays`.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

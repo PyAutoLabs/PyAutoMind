@@ -1,3 +1,12 @@
+# The assistant protects generated code with a PreToolUse hook that
+
+Type: feature
+Target: autolens_assistant
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 The assistant protects generated code with a PreToolUse hook that blocks PyAuto* symbols
 written from memory that don't exist in the installed stack — @autolens_assistant/.claude/hooks/validate_pyauto_code.py,
 backed by @autolens_assistant/autoassistant/audit_skill_apis.py and wired in
@@ -22,3 +31,5 @@ Decision + implementation (lean: do it via refer-back, don't copy `autoassistant
   `AGENTS.md` via refer-back — state this in the generated project docs so it isn't a silent gap.
 
 Decide whether the gate is on by default in generated projects or opt-in during setup.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

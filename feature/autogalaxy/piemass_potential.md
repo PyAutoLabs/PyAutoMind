@@ -1,5 +1,12 @@
 # `PIEMass.potential_2d_from`: implement the missing lensing potential
 
+Type: feature
+Target: PyAutoGalaxy
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Follow-up from the dark-matter potential work (PyAutoGalaxy
 `feature/dark-matter-potentials`). That branch implemented
 `potential_2d_from` for every elliptical/spherical NFW/gNFW variant and
@@ -54,3 +61,5 @@ Self-consistency via finite differencing (the `dark.py` pattern in
 `test__potential_2d_from` to `test_autogalaxy/profiles/mass/total/`. If
 the analytic route is taken, also cross-check it against an MGE potential
 of the same profile at zero/low ellipticity.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,3 +1,12 @@
+# The - RectangularMagnification light adaptive pixelization visualization show signs of
+
+Type: bug
+Target: PyAutoArray
+Difficulty: small
+Autonomy: safe
+Priority: normal
+Status: formalised
+
 The - RectangularMagnification light adaptive pixelization visualization show signs of issue.
 
 In the file @autolens_workspace_develope/@plotting_alignment, I have made lots of visuals of the
@@ -22,3 +31,5 @@ Thereofre I think this plotting code @PyAutoArray/autoarray/plot/inversion.py:
 May be causing a small shift or misalignment?
 
 Can you give me an assesment of of the code and if you think such an issue is feasible?
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

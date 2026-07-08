@@ -1,5 +1,12 @@
 # `@PyAutoFit` `NormalMessage` silently accepts negative sigma; `TruncatedNormalMessage` rejects it
 
+Type: bug
+Target: priors
+Difficulty: large
+Autonomy: supervised
+Priority: low
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A6).
 
@@ -167,3 +174,5 @@ constructing.
    (RelativeWidthModifier safety), which leans on this check.**
 7. **Stop. Do not implement until the strict-vs-permissive question
    is settled.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,5 +1,12 @@
 # `@PyAutoFit` `TruncatedNormalMessage` pdf does not integrate to 1 via the generic interface
 
+Type: bug
+Target: priors
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A4).
 
@@ -162,3 +169,5 @@ but it's worth a quick numerical check.
    only the generic interface path; `log_prior_from_value` and
    sampling are unaffected.**
 7. **Stop. Do not implement until the math is confirmed.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

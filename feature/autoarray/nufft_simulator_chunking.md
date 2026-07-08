@@ -1,3 +1,12 @@
+# The `al.SimulatorInterferometer` path that uses `al.TransformerNUFFT` (nufftax-backed) can't scale to
+
+Type: feature
+Target: PyAutoArray
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 The `al.SimulatorInterferometer` path that uses `al.TransformerNUFFT` (nufftax-backed) can't scale to ALMA-realistic visibility counts. At ~5M visibilities on an 800×800 real-space grid it OOMs on an A100 (80 GB) with a single ~15.7 GB allocation; at 10M it's ~31 GB. The likelihood path scales fine to the same regime because `apply_sparse_operator` precomputes a small W-Tilde matrix bounded by `N_source_pixels` (~thousands), not by `N_visibilities`. The simulator has no equivalent escape valve — every forward call does one dense nufftax spread.
 
 The blocker is upstream in nufftax. `nufftax.transforms.nufft2.nufft2d2` calls `_interp_2d_dispatch` → `interp_2d_impl` which, at line `fw_gathered = fw_flat[:, indices_flat].reshape(-1, M, kernel_params.nspread, kernel_params.nspread)`, materialises the full gather buffer in one shot. With `M = 5_000_000` and the default `eps=1e-6` (nspread=14), that's `2 × 5e6 × 14² × 8 ≈ 15.7 GB` for a single intermediate, and JAX's other intermediates push us past A100 headroom even with `XLA_PYTHON_CLIENT_PREALLOCATE=false`.
@@ -20,3 +29,5 @@ Verification: re-run `autolens_profiling/simulators/interferometer.py --instrume
 Note: the runtime path also has its own ALMA-scale OOM, but it's a different one — see the sibling prompt `@PyAutoPrompt/autoarray/alma_apply_sparse_operator_oom.md` for the `apply_sparse_operator` precompute issue. Both need to land before the full A100 sweep (alma + alma_high × interferometer/delaunay + datacube/delaunay × fp64 + mp) can run end-to-end.
 
 **This task feeds back into the open profiling work**: the A100 sweep on `autolens_profiling/likelihood_runtime/{interferometer,datacube}/delaunay.py × {sma, alma, alma_high} × {fp64, mp}` was started today, shipped the 4 SMA-only cells, and explicitly punted alma_high on this blocker. Once this prompt's chunking lands (and the sibling `alma_apply_sparse_operator_oom` prompt clears the alma-scale precompute OOM), come back and re-run the 4 alma_high SLURM submits at `@z_projects/profiling/hpc/batch_gpu/submit_{interferometer,datacube}_delaunay_a100_alma_high_{fp64,mp}` to fill in the missing rows of `comparison.json` and `@autolens_profiling/likelihood_runtime/OPTIMIZATION_NOTES.md`.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,5 +1,12 @@
 # Census of priors and messages — confirmed bugs + redesign ideas
 
+Type: research
+Target: PyAutoFit
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 ## Why this exists
 
 After the LogUniformPrior sign-convention bug was fixed in PyAutoFit
@@ -255,3 +262,5 @@ per attribute.
 - `PyAutoFit/test_autofit` — property tests
 - (Possibly) `autofit_workspace_test` — regression chains comparing
   pre/post-fix `from_mode` and prior-passing behaviour
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

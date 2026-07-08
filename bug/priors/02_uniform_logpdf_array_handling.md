@@ -1,5 +1,12 @@
 # `@PyAutoFit` `UniformPrior.logpdf` does not handle array inputs
 
+Type: bug
+Target: priors
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A7).
 
@@ -111,3 +118,5 @@ that, but the reviewer should confirm.
    `epsilon = 1e-14` snap is still load-bearing or whether a clean
    `np.where(in_bounds, message.logpdf, -np.inf)` would be cleaner.
 7. **Stop. Do not implement until the open question is resolved.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

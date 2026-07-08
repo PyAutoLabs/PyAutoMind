@@ -1,5 +1,12 @@
 # `einstein_radius_jit_from`: replace static init_guess with a JAX-native seed finder
 
+Type: refactor
+Target: PyAutoGalaxy
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Small follow-up to the Phase B work (PyAutoGalaxy #435, PyAutoFit #1288,
 pipeline #15). Drops the requirement that callers pass a static
 `init_guess` to `LensCalc.einstein_radius_jit_from(...)`.
@@ -141,3 +148,5 @@ else:
   blocking the JAX trace).
 - `feedback_jax_closure_cache_busts` (memory) — relevant if benchmarking
   the new default's warm-call latency.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

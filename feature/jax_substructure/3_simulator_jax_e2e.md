@@ -1,3 +1,12 @@
+# Context: PyAutoLens issue #542, prompt 3 of 4. Prompts 1-2
+
+Type: feature
+Target: jax_substructure
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Context: PyAutoLens issue #542, prompt 3 of 4. Prompts 1-2 built the vectorized
 deflection and scan-based ray-tracing. This prompt wires them through PSF
 convolution and Poisson noise to produce the end-to-end `jax.jit(simulate)`
@@ -173,3 +182,5 @@ Put tests in `autolens_workspace_test/scripts/jax_substructure/`.
   otherwise defer to prompt 4.
 - Don't modify the existing SimulatorImaging class beyond adding the
   `prng_key` parameter to the noise functions in preprocess.py.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

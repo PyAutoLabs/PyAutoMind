@@ -1,3 +1,12 @@
+# So I’d document it as
+
+Type: feature
+Target: PyAutoBrain
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 So I’d document it as:
 
 Feature Agent, the growth function of PyAutoBrain.
@@ -291,3 +300,5 @@ Create one PR titled:
 Implement initial PyAutoBrain Feature Agent
 
 My only tweak would be: long term, I’d maybe have Growth Agent as the organism-facing name and Feature Agent as the engineering-facing name. But for Codex and repo clarity, Feature Agent is the safer first implementation.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

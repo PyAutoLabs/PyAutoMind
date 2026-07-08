@@ -1,3 +1,12 @@
+# autolens_profiling is now a mature project, with a good separation
+
+Type: maintenance
+Target: autolens_profiling
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 autolens_profiling is now a mature project, with a good separation of different tasks into packages (instruments, latent, likelihood_breakdown, etc)
 
 I have run it for imaging, interferometer and datacube all individually, and got good profiling results, but at times
@@ -30,3 +39,7 @@ has basically been how that often then side tracked us to do fixes to the soruce
 profiling. Perhaps we should run vram first to make sure we dont have memory issues or other bugs crop up.
 
 Dont do any searches, we are profiling likelihood functions here.
+
+Maybe also a dashboard on the GitHub readme which shows all key results at a high level?
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

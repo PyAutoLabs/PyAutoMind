@@ -1,3 +1,12 @@
+# Once https://github.com/PyAutoLabs/PyAutoLens/issues/480 is fixed (PointSolver
+
+Type: feature
+Target: workspaces
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Once https://github.com/PyAutoLabs/PyAutoLens/issues/480 is fixed (PointSolver
 magnification filter must use `plane_redshift`, not the tracer's last plane),
 revisit `@autolens_workspace/scripts/point_source/features/multiple_sources/`.
@@ -37,3 +46,5 @@ PointSolver bug is fixed:
 6. Update the script docstrings and the folder/feature README to mention the
    lensing-of-lens richness again, and remove any "simplified to work around
    PyAutoLens #480" comments.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

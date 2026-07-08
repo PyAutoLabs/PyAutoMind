@@ -1,3 +1,12 @@
+# The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced
+
+Type: test
+Target: workspaces
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced
 pre-existing failures that were commented out to get the green baseline. Re-enable each
 entry once its underlying bug is fixed.
@@ -52,3 +61,5 @@ Pick one approach (override vs strip-committed-data) and apply consistently.
   Matérn-kernel JAX likelihood functions can import.
 - `autofit_workspace_test` CI installs `nautilus-sampler` so
   `scripts/searches/Nautilus.py` runs.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

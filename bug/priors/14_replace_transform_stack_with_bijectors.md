@@ -1,5 +1,12 @@
 # `@PyAutoFit` Refactor: replace hand-rolled `AbstractDensityTransform` with `tfp.bijectors` / `numpyro.distributions.transforms`
 
+Type: bug
+Target: priors
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding C5).
 
@@ -189,3 +196,5 @@ one release cycle.
   JAX-native priors`).
 - This prompt is **not** about refactoring the EP machinery — only
   the transform stack underneath `TransformedMessage`.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -5,6 +5,9 @@ Target: PyAutoHeart
 Repos:
 - PyAutoHeart
 Status: planned
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
 Milestone: M0 — foundational; the release-validation gate
 (`feature/pyautoheart/release_validation.md`) builds on a trustworthy CI signal.
 
@@ -81,3 +84,5 @@ top of it.
 
 "PyAutoHeart: release-grade CI linkage (per-workflow gating, workspace coverage,
 server-first signal, registry refresh)".
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

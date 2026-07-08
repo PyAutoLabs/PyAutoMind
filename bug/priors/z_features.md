@@ -1,5 +1,12 @@
 # Priors & Messages cleanup — tracker
 
+Type: bug
+Target: priors
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 ## Why this folder exists
 
 After fixing the `LogUniformPrior` sign-convention bug in PyAutoFit commit
@@ -110,3 +117,5 @@ The tests are the safety net.
 source of truth, fewer classes, replace the hand-rolled transform stack
 with a library) but each is a multi-week effort and would be disruptive
 to land without the bugfix + test infrastructure underneath.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

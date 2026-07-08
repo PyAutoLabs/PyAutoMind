@@ -1,5 +1,12 @@
 # `@PyAutoFit` `TransformedMessage` reversal convention is undocumented foot-gun
 
+Type: bug
+Target: priors
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding C6).
 
@@ -163,3 +170,5 @@ would have made this self-evident.
    roadmap".
 6. **Stop. Do not implement until acked.** This is a doc / API change
    so the bar for review is mostly "is the explanation correct?"
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

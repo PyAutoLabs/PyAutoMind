@@ -1,5 +1,12 @@
 # `@PyAutoFit` `FixedMessage.logpdf_cache` is an unbounded class-level dict
 
+Type: bug
+Target: priors
+Difficulty: large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A8).
 
@@ -120,3 +127,5 @@ and the aliasing.
    intentional** (i.e. is there a known hot path that benefits from
    it?). If not, option 1 is the right answer.
 7. **Stop. Do not implement until acked.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

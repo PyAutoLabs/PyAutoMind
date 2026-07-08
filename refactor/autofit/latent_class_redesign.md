@@ -1,5 +1,12 @@
 # Redesign latent variables: a first-class `Latent` class that separates definition / engine / output / config
 
+Type: refactor
+Target: PyAutoFit
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 ## Motivation
 
 Latent-variable handling is currently entangled inside `autofit.Analysis`, which has
@@ -162,3 +169,5 @@ class-attribute extension pattern. Latent feature history for reference: first-c
 latent APIs in autogalaxy (#441) and autolens (#534), `LATENT_BATCH_MODE` (#1288-era),
 raw-flux + soft-fail magzero (#463/#557), global masking (#1310), degenerate edge cases
 (#1311).
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

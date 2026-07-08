@@ -1,3 +1,12 @@
+# Context: PyAutoLens issue #542 follow-up (Gap 2, deferred during the
+
+Type: feature
+Target: jax_substructure
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Context: PyAutoLens issue #542 follow-up (Gap 2, deferred during the original
 4-prompt substructure-simulator series). Prompt 1
 (`1_vmap_subhalo_deflections.md`) asked for a standalone integration test that
@@ -78,3 +87,5 @@ consistent in structure with the existing `test_scan_multiplane.py` /
   `test_scan_multiplane.py`.
 - Reuse the existing `galaxies_to_halo_arrays` + `vmapped_deflections_from`; only
   extend `galaxies_to_halo_arrays` if the MCR-variant risk above materialises.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

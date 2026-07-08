@@ -5,6 +5,9 @@ Target: PyAutoLabs org (all repositories) — GitHub config, not a code repo
 Repos:
 - (org-level) PyAutoLabs — applies to all repositories, present and future
 Status: planned
+Difficulty: large
+Autonomy: supervised
+Priority: normal
 
 ## Why
 
@@ -67,3 +70,5 @@ the Copilot-review rule before scripting; the UI path above is the verified one.
 Written during the M4 release-validation-orchestrator session (PyAutoBrain #8),
 where Copilot review was requested manually on the PR — this task exists so that
 manual step becomes unnecessary going forward.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -8,6 +8,9 @@ Repos:
 - autolens_workspace / autogalaxy_workspace / autofit_workspace
 - PyAutoBuild (run_python.py profile selection)
 Status: planned
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
 Milestone: M3 — closes Gaps A & B from `feature/pyautoheart/release_validation.md`;
 depends on M1 (TestPyPI rehearsal) and M2 (report + gate).
 
@@ -84,3 +87,5 @@ Heart's concern. The scripts run as the workspace ships them.
 
 "Release env profile + wheel-based validation run" (workspace env_vars + the
 PyAutoHeart validation workflow + PyAutoBuild run_python profile selection).
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,5 +1,12 @@
 ## Re-baseline the MGE imaging JIT profiling regression value
 
+Type: test
+Target: autolens_workspace_developer
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 `@autolens_workspace_developer/jax_profiling/jit/imaging/mge.py` hardcodes a
 regression assertion at the bottom:
 
@@ -60,3 +67,5 @@ The fft-mixed-precision-fix work scoped its plan to PyAutoArray +
 autogalaxy_workspace_test + autolens_workspace_test. `autolens_workspace_developer`
 was never in scope, and the mge.py drift is independent of the fix. Bundling
 it in would have inflated the PR's blast radius without clear benefit.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

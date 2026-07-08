@@ -1,5 +1,12 @@
 # Fix release JAX runtime compatibility and likelihood parity
 
+Type: bug
+Target: health_fixes
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 ## Context
 
 Six JAX likelihood scripts failed with the rehearsed release stack. CI included
@@ -30,3 +37,5 @@ Owners: @PyAutoArray, @PyAutoFit, @PyAutoGalaxy, @PyAutoLens,
    regularization; do not merely loosen tolerances without a numerical error budget.
 5. Add library regression tests and rerun all six scripts in both fresh processes and
    their normal directory sequence.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

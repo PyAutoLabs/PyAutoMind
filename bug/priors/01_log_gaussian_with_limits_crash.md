@@ -1,5 +1,12 @@
 # `@PyAutoFit` `LogGaussianPrior.with_limits` will crash on first call (and so will `_new_for_base_message`)
 
+Type: bug
+Target: priors
+Difficulty: medium
+Autonomy: safe
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A1).
 
@@ -120,3 +127,5 @@ the kwargs should never have been there.
    we want a second pair of eyes.
 6. **Stop. Do not call `/start_dev` until the issue has at least one
    confirmation ack.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

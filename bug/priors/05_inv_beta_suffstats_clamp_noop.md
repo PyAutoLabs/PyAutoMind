@@ -1,5 +1,12 @@
 # `@PyAutoFit` `inv_beta_suffstats` negative-clamp branch is a no-op
 
+Type: bug
+Target: priors
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A2).
 
@@ -145,3 +152,5 @@ failed fit, and silently substituting `0.5` could mask a real problem.
    change; the reviewer's preference matters.
 7. **Stop. Do not implement until the clamp-vs-raise question is
    resolved.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

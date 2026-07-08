@@ -1,3 +1,12 @@
+# A science project created by `start-new-project` is a separate, self-contained
+
+Type: feature
+Target: autolens_assistant
+Difficulty: small
+Autonomy: safe
+Priority: high
+Status: formalised
+
 A science project created by `start-new-project` is a separate, self-contained repo that
 **refers back** to the `autolens_assistant` copilot for its `skills/` and `wiki/` rather than
 vendoring a copy. The model is already locked and partly implemented in
@@ -24,3 +33,5 @@ What to implement:
 Touches the generated scaffold + thin `AGENTS.md` produced by
 @autolens_assistant/skills/start-new-project.md. No change to the assistant's own constitution
 beyond what the source-of-truth section already establishes.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

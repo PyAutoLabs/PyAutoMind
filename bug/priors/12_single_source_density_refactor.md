@@ -1,5 +1,12 @@
 # `@PyAutoFit` Refactor: each density should live in one place, not three
 
+Type: bug
+Target: priors
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding C1).
 
@@ -151,3 +158,5 @@ kwarg as today; everything else inherits.
 6. **Stop. Implementation only after a design review.** The likely
    path is multiple sub-PRs landing over weeks; do not bundle them
    into one issue.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

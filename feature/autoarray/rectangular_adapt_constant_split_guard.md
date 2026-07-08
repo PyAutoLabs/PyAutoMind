@@ -1,3 +1,12 @@
+# Users keep combining `RectangularAdaptDensity` meshes with `ConstantSplit`
+
+Type: feature
+Target: PyAutoArray
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Users keep combining `RectangularAdaptDensity` meshes with `ConstantSplit`
 regularization in pixelized source models, for example:
 
@@ -124,3 +133,5 @@ Do not paper over this by clipping indices or returning an all-zero
 reconstruction. This should be a hard, user-facing configuration error until
 the split-regularization stencil code is redesigned to support rectangular
 adaptive meshes.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

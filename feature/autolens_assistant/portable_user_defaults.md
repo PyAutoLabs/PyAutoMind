@@ -1,5 +1,12 @@
 # Portable user defaults and environment discovery
 
+Type: feature
+Target: autolens_assistant
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 `autolens_assistant` already separates user and environment state across appropriate sources:
 
 - durable scientific context, interaction preference, and HPC access constraints live in
@@ -45,3 +52,5 @@ the friction. If repetition remains low, retain the current design and do not im
 > same tools
 
 > ok then this sounds like another PyAutoPrompt if one isnt already there
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

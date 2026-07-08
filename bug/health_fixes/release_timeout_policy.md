@@ -1,5 +1,12 @@
 # Resolve release-profile timeout scripts deliberately
 
+Type: bug
+Target: health_fixes
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 ## Context
 
 Five scripts exceeded PyAutoBuild's 300-second per-script cap in release run
@@ -31,3 +38,5 @@ Owners: @autogalaxy_workspace, @autolens_workspace, @PyAutoFit, @PyAutoGalaxy,
 4. Do not silently raise the global cap. Do not use cached outputs as pass evidence.
 5. Validate optimized scripts from clean state or validate that the runner reports the
    chosen scripts as skipped with their documented reasons.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

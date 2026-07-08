@@ -5,6 +5,9 @@ Target: PyAutoBuild
 Repos:
 - PyAutoBuild
 Status: planned
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
 Milestone: M1 — prerequisite for `feature/pyautoheart/release_validation.md` (M2)
 
 ## Why
@@ -63,3 +66,5 @@ flow; it just exposes "build + TestPyPI, then halt" as a first-class mode.
 ## PR
 
 "PyAutoBuild: TestPyPI-only rehearsal mode in release.yml".
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

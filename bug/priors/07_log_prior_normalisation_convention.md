@@ -1,5 +1,12 @@
 # `@PyAutoFit` `log_prior_from_value` convention is inconsistent across priors
 
+Type: bug
+Target: priors
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding A5).
 
@@ -164,3 +171,5 @@ Once chosen, the change is:
    so the reviewer can see which choice is least disruptive.
 6. **Stop. This is a design decision, not a bug fix.** Implementation
    proceeds only after the reviewer signs off on the convention.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

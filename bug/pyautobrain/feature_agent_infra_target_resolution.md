@@ -1,3 +1,12 @@
+# Feature Agent misclassifies PyAutoBrain-infra prompts as research-first
+
+Type: bug
+Target: PyAutoBrain
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Feature Agent misclassifies PyAutoBrain-infra prompts as research-first.
 
 ## Symptom
@@ -43,3 +52,5 @@ classify sensibly.
 
 Found while shipping the Bug Agent (PyAutoBrain#18); the misfire was overridden by
 hand during that task.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,5 +1,12 @@
 # Claude Development Prompt: Arcsecond Tick Label Decimal Placement
 
+Type: feature
+Target: PyAutoArray
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 You are working in the PyAutoLens / PyAutoArray plotting codebase.
 
 ## Goal
@@ -71,3 +78,5 @@ The same call without `arcsec_after_decimal=True` should preserve the current de
 ## Notes
 
 This request comes from paper-figure generation, where editing Matplotlib labels after `aplt.plot_array` works but creates fragile layout and whitespace side effects. The source-level option should keep normal PyAutoLens layout behavior intact.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

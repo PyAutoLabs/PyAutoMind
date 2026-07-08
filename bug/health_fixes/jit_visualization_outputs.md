@@ -1,5 +1,12 @@
 # Fix JIT quick-update visualization output regressions
 
+Type: bug
+Target: health_fixes
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 ## Context
 
 Four test-workspace scripts expect real release-profile searches to invoke the JIT-cached
@@ -28,3 +35,5 @@ Owners: @PyAutoFit, @PyAutoGalaxy, @PyAutoLens, @autogalaxy_workspace_test, and
 4. Add focused tests proving quick updates invoke visualization and write the expected
    artifact for ellipse, imaging, interferometer, and point-source analyses.
 5. Run owning-library tests and all four scripts under the release profile.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

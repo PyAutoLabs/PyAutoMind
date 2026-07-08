@@ -1,3 +1,12 @@
+# Follow-up to `rectangular_adapt_cdf.md` (issue #322) and Path A
+
+Type: feature
+Target: PyAutoArray
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Follow-up to `rectangular_adapt_cdf.md` (issue #322) and Path A
 (`RectangularRotatedAdaptImage`). The PCA-rotation hack we shipped fully
 fixes the ghost-peak failure for K=2 (and approximately-colinear K) but
@@ -105,3 +114,5 @@ JAX compatibility checklist (preserved from Path A):
 - The segmentation is a once-per-fit numpy step, not traced.
 
 Suggested branch name when the prompt is issued: `feature/rectangular-multi-submesh`.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

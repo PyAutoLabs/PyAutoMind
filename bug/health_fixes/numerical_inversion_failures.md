@@ -1,5 +1,12 @@
 # Fix release-profile numerical inversion failures
 
+Type: bug
+Target: health_fixes
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 ## Context
 
 Two interferometer scripts fail in inversion paths with non-positive-definite matrices.
@@ -24,3 +31,5 @@ Owners: @PyAutoArray, @PyAutoGalaxy, @PyAutoLens, @autogalaxy_workspace, and
 4. Fix the owning library for valid inputs. Do not catch `LinAlgError` or alter the script
    to hide a genuine inversion failure.
 5. Add numerical regression tests and rerun both scripts repeatedly under the profile.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

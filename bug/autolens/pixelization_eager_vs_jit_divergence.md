@@ -1,5 +1,12 @@
 # Investigate eager `FitImaging.figure_of_merit` vs JIT/step-by-step divergence in rectangular pixelization
 
+Type: bug
+Target: PyAutoLens
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 ## Context
 
 Surfaced by the eager-numpy regression assertions added in
@@ -139,3 +146,5 @@ Expect:
 - The divergence is ~0.02%, which is well within the regime where Bayesian
   model comparison decisions could flip, so treat this as a real bug until
   proven otherwise (not just a rounding artefact).
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,3 +1,12 @@
+# Context: PyAutoLens issue #542 follow-up (Gap 1, deferred during the
+
+Type: feature
+Target: jax_substructure
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Context: PyAutoLens issue #542 follow-up (Gap 1, deferred during the original
 4-prompt substructure-simulator series). Prompt 3 (`3_simulator_jax_e2e.md`)
 asked for a `prng_key` parameter on the Poisson-noise path so the OO
@@ -96,3 +105,5 @@ asserting the rows differ.
 - Default `None` preserves all existing seed-based call sites exactly.
 - Do not refactor the broader noise/over-sampler machinery (prompt 3's Gap 2 was
   intentionally bypassed by going jnp-native in the standalone path).
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

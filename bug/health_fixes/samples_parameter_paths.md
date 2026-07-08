@@ -1,5 +1,12 @@
 # Fix release result/sample parameter-path regressions
 
+Type: bug
+Target: health_fixes
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 ## Context
 
 PyAutoHeart release validation run `28784914443` exposed a family of workspace
@@ -36,3 +43,5 @@ Primary repository: @PyAutoFit. Downstream verification repositories:
 
 Preserve tutorial prose and make workspace edits only where a script genuinely uses a
 retired API rather than exposing a library defect.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

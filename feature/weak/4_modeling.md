@@ -1,3 +1,12 @@
+# We are now going to add weak lensing modeling
+
+Type: feature
+Target: weak
+Difficulty: large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 We are now going to add weak lensing modeling.
 
 First, we need to create the analysis.py module, so inspect @autolens_workspace/scripts/weak and
@@ -14,3 +23,5 @@ parts.
 
 Finally, read @autolens_workspace/scripts/imaging/modeling.py and then make an equivalent for
 weak lensing.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

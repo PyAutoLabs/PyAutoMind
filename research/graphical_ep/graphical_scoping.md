@@ -1,5 +1,12 @@
 # Graphical Model Scale-Up — Scoping
 
+Type: research
+Target: graphical_ep
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Companion baseline package: `autofit_workspace_developer/graphical/`. This
 document is grounded in the profile data emitted by that package's
 `profiles/baseline.json` and `profiles/N10_hotspots.txt`. Re-running the
@@ -200,3 +207,5 @@ JSON schema is stable.
   both numpy and JAX call into. The dependency-graph note in
   PyAutoFit's CLAUDE.md says "shared utilities go in autoconf" — lean
   toward autoconf if the helper is non-trivial.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

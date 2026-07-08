@@ -1,3 +1,12 @@
+# autolens_workspace
+
+Type: maintenance
+Target: workspaces
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 autolens_workspace:
 
 scripts/group/fit.py: The script loads main_lens_centres but doesnt use them in fit.py, they are the right centres (But check they are otuput via simulator.py) and then make them used
@@ -56,3 +65,5 @@ if (result_path / "files" / "tracer.json").exists():
     )
 
 Make sure other modeling.py examples at the base of packages (e.g. group, cluster, interferometeR) have the equivalent section.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -6,6 +6,9 @@ Repos:
 - PyAutoHeart
 - PyAutoBrain
 Status: planned
+Difficulty: large
+Autonomy: supervised
+Priority: high
 Milestone: M5 — the unified health dashboard. Supersedes and expands the
 one-line "M5 = polish of the mobile UX" placeholder in
 `feature/pyautoheart/release_validation.md` (line ~219): mobile polish is now
@@ -214,3 +217,5 @@ because every repo was on the dev branch — a vivid reminder that the health
 signal exists but has nowhere unified to *appear*. Expands the M5 placeholder in
 `feature/pyautoheart/release_validation.md` from "mobile UX polish" to the full
 one-dashboard-three-surfaces design the user asked for.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

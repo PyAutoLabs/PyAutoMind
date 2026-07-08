@@ -1,5 +1,12 @@
 # `NFWTruncatedSph.potential_2d_from`: MGE potential fails `grad(psi)=alpha` self-consistency
 
+Type: bug
+Target: PyAutoGalaxy
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Pre-existing accuracy bug surfaced while fixing the missing dark-matter
 potentials (PyAutoGalaxy `feature/dark-matter-potentials`, the
 `NFW`/`gNFW`/`gNFWSph` + `NFWSph` work). `NFWTruncatedSph` already *has* a
@@ -73,3 +80,5 @@ profile presumably uses a different (wider) range — compare them.
 `PYAUTO_MASS_MODE=full python scripts/mass/dark.py` in
 `autolens_workspace_test` — the `NFWTruncatedSph` row must flip
 `grad(p)=a` from FAIL to PASS, joining the other dark profiles at ~1e-3.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

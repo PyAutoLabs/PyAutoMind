@@ -9,6 +9,9 @@ Repos:
 - autolens_workspace_test / autogalaxy_workspace_test / autofit_workspace_test (env profiles)
 - autolens_workspace / autogalaxy_workspace / autofit_workspace (env profiles)
 Status: planned
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
 Milestone: M2 (this prompt) — depends on M1 (`feature/pyautobuild/release_yml_testpypi_rehearsal_mode.md`)
 
 ## Why
@@ -231,3 +234,5 @@ sequencing Stages 0–3; M5 = the unified health dashboard (GitHub web + CLI/ven
 ## PR
 
 One PR per milestone. This one: "PyAutoHeart: release-validation report + readiness gate".
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

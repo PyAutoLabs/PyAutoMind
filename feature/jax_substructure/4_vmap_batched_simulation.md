@@ -1,3 +1,12 @@
+# Context: PyAutoLens issue #542, prompt 4 of 4 (stretch goal).
+
+Type: feature
+Target: jax_substructure
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Context: PyAutoLens issue #542, prompt 4 of 4 (stretch goal). Prompts 1-3 built
 `jax.jit(simulate_substructure)` for a single realization. This prompt extends
 it to `vmap(jit(simulate))(thetas, keys)` for batched evaluation — ~1024 lensed
@@ -135,3 +144,5 @@ Put tests in `autolens_workspace_test/scripts/jax_substructure/`.
   don't try to implement gradient checkpointing in this prompt.
 - The LOSSampler conversion helper is simple numpy reshaping, not a refactor
   of the sampler itself.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

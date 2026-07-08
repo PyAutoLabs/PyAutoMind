@@ -1,5 +1,12 @@
 # Make autofit.messages safe under JAX jit trace (xp.array → xp.stack)
 
+Type: bug
+Target: PyAutoFit
+Difficulty: large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 ## Problem
 
 Several `messages/` files build small fixed-length arrays from individual
@@ -135,3 +142,5 @@ Treat that as a stretch goal; the primary fix is the 10 sites above.
 Single PR against PyAutoFit `main`. Suggested branch:
 `feature/messages-xp-stack-jax-trace`. Title:
 `Use xp.stack in autofit.messages so JAX jit can trace small fixed arrays`.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

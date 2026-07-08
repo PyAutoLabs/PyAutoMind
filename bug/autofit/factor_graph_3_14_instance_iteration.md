@@ -1,5 +1,12 @@
 # Investigate FactorGraphModel instance shape on Python 3.14
 
+Type: bug
+Target: PyAutoFit
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 ## Problem
 
 `autofit_workspace/scripts/overview/overview_1_the_basics.py` runs cleanly
@@ -140,3 +147,5 @@ So either:
 - The change is unit-tested in `test_autofit/` with a numpy-only
   factor-graph round-trip test that would have caught the 3.14 shape
   collapse on 3.13 too if the structure had been wrong there.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

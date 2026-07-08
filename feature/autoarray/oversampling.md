@@ -1,3 +1,12 @@
+# A point spread function is used to blur images via
+
+Type: feature
+Target: PyAutoArray
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 A point spread function is used to blur images via 2d convolution.
 
 This blurring occurs predominantly in the package @PyAutoArray/autoarray/operators/convolver.py.
@@ -56,3 +65,5 @@ result we can test the source code against.
 over sampled PSFs in a real simulation. We can extend this script to show how to use over sampled PSFs in a real simulation.
 
 Come up with a plan to implement over sampled PSFs.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

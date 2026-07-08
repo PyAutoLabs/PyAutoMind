@@ -1,3 +1,12 @@
+# Implement the first PyAutoBrain specialist agent: Health Agent
+
+Type: feature
+Target: PyAutoBrain
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Implement the first PyAutoBrain specialist agent: Health Agent.
 
 Context
@@ -166,3 +175,5 @@ If implementing the Health Agent as a Claude skill or markdown-based agent defin
 
 keep each .md file under 200 lines,
 follow Cl
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -1,3 +1,12 @@
+# The refer-back model (see @autolens_assistant/skills/start-new-project.md) means a spun-off
+
+Type: docs
+Target: autolens_assistant
+Difficulty: medium
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 The refer-back model (see @autolens_assistant/skills/start-new-project.md) means a spun-off
 science project is reproducible **standalone**: `config/`, `scripts/`, `data/` and `results/`
 are copied into the project, so cloning it is enough to re-run the analysis. The AI copilot is
@@ -18,3 +27,5 @@ What to implement:
 
 Small task — depends on the assistant-ref env var name being settled
 (`science_project_assistant_ref.md`).
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

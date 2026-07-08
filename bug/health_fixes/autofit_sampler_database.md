@@ -1,5 +1,12 @@
 # Fix Autofit release sampler and database regressions
 
+Type: bug
+Target: health_fixes
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 ## Context
 
 Release run `28784914443` failed two @autofit_workspace cookbooks and seven
@@ -33,3 +40,5 @@ Primary library: @PyAutoFit.
 4. Fix library defects in PyAutoFit. Change script assertions only when the documented
    output contract intentionally changed, with an explicit explanation.
 5. Add unit/integration coverage, run PyAutoFit pytest, and rerun all nine scripts.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

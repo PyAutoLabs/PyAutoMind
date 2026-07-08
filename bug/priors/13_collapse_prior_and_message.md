@@ -1,5 +1,12 @@
 # `@PyAutoFit` Refactor: collapse the `Prior` / `Message` two-layer hierarchy
 
+Type: bug
+Target: priors
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding C4).
 
@@ -167,3 +174,5 @@ the codebase ~half as legible as it could be.
 6. Coordinate with prompt 12 in the same conversation — the reviewer
    may want a combined design rather than two separate issues.
 7. **Stop. No code changes until a design is approved.**
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

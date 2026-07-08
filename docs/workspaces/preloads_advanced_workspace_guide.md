@@ -1,5 +1,12 @@
 # Advanced workspace guide: `Preloads` (PyAutoArray)
 
+Type: docs
+Target: workspaces
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
 Write an **advanced** guide, in both `@autolens_workspace` and `@autogalaxy_workspace`, on the
 `Preloads` API (`aa.PreloadsInterferometer`, `aa.AbstractPreloads`, and `PreloadsImaging` if added)
 — what preloads are, when they are safe to use, and how to use them.
@@ -51,3 +58,5 @@ interferometer datacube feature scripts so the preloads guide sits alongside the
 - `PyAutoPrompt/issued/datacube_shared_state_consumer.md` — sub-task B (the consumer that motivates
   preloads).
 - `PyAutoPrompt/z_features/analysis_shared_state.md` — the epic.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->
