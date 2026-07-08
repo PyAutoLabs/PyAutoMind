@@ -13,13 +13,11 @@
 ## psf-oversample-workspace
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/232
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/autolens_workspace/issues/232#issuecomment-4917383780
-- local-commits: PyAutoArray 60b60ffa + autolens_workspace_test e2bb74d (feature/psf-oversample-workspace, unpushed)
+- status: library-shipped, awaiting-merge
+- prs: PyAutoArray#358 (merge first), autolens_workspace_test#149
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-workspace
 - repos:
-  - autolens_workspace: feature/psf-oversample-workspace
   - autolens_workspace_test: feature/psf-oversample-workspace
   - PyAutoArray: feature/psf-oversample-workspace
 
