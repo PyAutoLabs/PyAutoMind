@@ -1,5 +1,15 @@
 # Active Tasks
 
+## ep-examples-tests
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/81
+- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-08, plan approved in-session, no heart-ack)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/ep-examples-tests
+- repos:
+  - autofit_workspace: feature/ep-examples-tests
+  - autofit_workspace_test: feature/ep-examples-tests
+
 ## psf-oversample-galaxy
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/480
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7

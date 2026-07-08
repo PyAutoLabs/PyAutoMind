@@ -96,6 +96,8 @@ stated math line-by-line. Lives with the source (module docstrings and/or
 `autofit/graphical/README` + docs pages).
 
 ### Phase 3 — End-to-end examples + integration tests
+**Issued:** autofit_workspace#81 (2026-07-08) — task `ep-examples-tests`
+(--auto, supervised, plan approved in-session; worktree ep-examples-tests).
 - New `autofit_workspace/scripts` examples in house style, including a
   step-by-step low-level-API EP run-through in the mould of
   `autolens_workspace/scripts/imaging/likelihood_function.py` (build the
