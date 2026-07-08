@@ -56,6 +56,14 @@
 
 
 
+## profiling-drift-check
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/37
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, plan on issue)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-drift-check
+- repos:
+  - PyAutoHeart: feature/profiling-drift-check
+
 ## profiling-vram-validation
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/54
 - status: awaiting-merge
