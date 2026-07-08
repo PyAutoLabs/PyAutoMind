@@ -1,3 +1,29 @@
+## bug-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/18
+- completed: 2026-07-08
+- repos: PyAutoBrain (PR #20, merge-committed)
+- branch: feature/bug-agent
+- validation:
+  - CLI modes: specific / selection (severity-first) / difficulty-constrained
+    (--difficulty/--model/--budget/--ambitious/--impact) / health — all pass;
+    --json emits a valid BugDecision; line-count guard passes; Feature Agent unaffected
+  - health mode: consults the vitals faculty (verdict) + scans filed PyAutoHeart
+    issues (#27/#19/#10/#7), per-issue category hint, routes to bug/health_fixes/
+  - Copilot review: 13 findings, all real, all fixed in 65a70ce (JSON stdout
+    pollution, exec-vs-trap temp leak, dead bug/ in-flight down-ranking, single-file
+    scope, docs/research re-home, doc/code honesty on health-mode claims)
+- notes: |
+    New PyAutoBrain conductor agents/conductors/bug/ — the organism's immune
+    system (organism-facing: Immune Agent). Reuses the Feature Agent core by import
+    (parse/difficulty/memory/down-rank), adds classify/reproduction/fix_locus/
+    health_mode. Conductor-only with a documented seam for a future read-only
+    diagnosis faculty; consults vitals, never Heart directly. Fundamental principle:
+    a precise response with NO AUTOIMMUNITY — user-facing workspace scripts are
+    documentation, so prefer a general library-source fix. /bug promoted from a
+    work-type entry to a real conductor across the command surface. Follow-up filed:
+    bug/pyautobrain/feature_agent_infra_target_resolution.md (Feature Agent can't
+    resolve the pyautobrain infra target; misfired research-first on this prompt).
+
 ## health-api
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/pull/19
 - completed: 2026-07-07
