@@ -157,12 +157,4 @@
 - affected-repos:
   - PyAutoGalaxy
 
-## psf-oversample-galaxy-consumer
-- issue: (not yet filed — file when unblocked, prompt: feature/autoarray/oversampling_phase_2c_autogalaxy_consumer.md)
-- planned: 2026-07-08
-- classification: library
-- suggested-branch: feature/psf-oversample-galaxy
-- blocked-by: kaplinghat-sidm-cored-nfw (using PyAutoGalaxy); also sequenced after psf-oversample-core (#354) merges
-- affected-repos:
-  - PyAutoGalaxy
 
