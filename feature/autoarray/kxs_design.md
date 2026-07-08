@@ -78,11 +78,31 @@ Rationale, grounded:
   `over_sample_size = s` (k_i on the blurring region buys nothing — its
   flux is smooth wings) — one line, documented.
 
+## 4b. Pixelizations — feasibility settled (user question, 2026-07-08)
+
+k×s is not merely feasible for pixelizations, it is **exact and cheaper than
+feared**. By linearity: a fine cell's model value is the mean of its k_i²
+sub-sample values, each sub-sample is Σ_src w[j,src]·source[src], so the
+fine-cell row of the k×s mapping matrix is just the mean of its sub-sample
+weight rows — the exact linear map from source pixels to the partially
+binned fine image, carrying no approximation beyond the sampling itself
+(the same status as the existing `sub_fraction` fold). Implementation
+insight: the intermediate k_i·s-resolution matrix is **never built** —
+`mapper_util.mapping_matrix_from` already scatters weighted contributions
+onto parent rows, so passing the fine-cell segment ids as parents with
+fractions 1/k_i² produces the k×s matrix directly
+(`Mapper.mapping_matrix_over_sampled_for(s)`). Memory is therefore
+n·s²×n_src — identical to the 2b matrix, independent of k. Verified: k=1
+reproduces the 2b property bit-for-bit; the full s²→1 fold of the k×s matrix
+equals `mapping_matrix` to 1e-14; an end-to-end pixelized FitImaging with
+adaptive pixelization sizes at s=2 runs with finite evidence.
+
 ## 5. Risks carried forward
 
-- The mapper row pre-bin multiplies the sub-resolution matrix build cost by
-  k_i² before reduction — profile at phase 2 exactly as the parent series
-  profiled the ×s² cube.
+- ~~The mapper row pre-bin multiplies the build cost by k_i²~~ — resolved by
+  the direct-scatter implementation above (no intermediate; scatter work
+  scales with the number of traced sub-samples, as adaptive evaluation
+  always has).
 - Simulator adoption (phase 4) changes simulated datasets — the
   re-baselining survey in the parent prompt's Risks section governs.
 
