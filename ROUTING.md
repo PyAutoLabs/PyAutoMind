@@ -61,6 +61,6 @@ commands; PyAutoBrain performs the routing.* Bodies + the boundary live in
 
 ## Not routed by work type
 
-`issued/`, `z_features/`, `z_vault/`, `shelved/` are workflow-lifecycle folders;
+`issued/`, `z_features/`, `z_vault/` are workflow-lifecycle folders;
 `autoprompt/` holds meta prompts about this repo's own infrastructure. None of
 these are work-type folders and PyAutoBrain does not route them.

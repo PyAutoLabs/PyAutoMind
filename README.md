@@ -189,7 +189,7 @@ PyAutoMind/
 ├── ideas.md                 ← raw incubating ideas, no structure required
 ├── parked.md                ← started/scoped but not in flight (stashes, orphan worktrees, deferred)
 ├── planned.md               ← issued tasks blocked from starting (created on demand)
-├── priority.md              ← hand-curated priority hints
+
 ├── queue.md                 ← processing queue for /register_and_iterate
 │
 │   PROMPTS — organised by WORK TYPE (first folder), then TARGET (second folder).
@@ -218,7 +218,7 @@ PyAutoMind/
 │   └── complete/            ← archived trackers (all sub-prompts shipped)
 │
 ├── z_vault/                 ← deferred prompts (z_ prefix sorts last in listings)
-├── shelved/                 ← shelved prompts
+
 │
 ├── autoprompt/              ← prompts about THIS repo's own infrastructure (meta)
 │
@@ -297,7 +297,7 @@ experiment/autoarray/jax_sparse_mapping.md
 
 ### Not work-types
 
-`issued/`, `z_features/`, `z_vault/`, `shelved/` are **workflow lifecycle**
+`issued/`, `z_features/`, `z_vault/` are **workflow lifecycle**
 folders, and `autoprompt/` holds **meta** prompts about this repo's own
 infrastructure. They keep their own names and are not routed by work type.
 
