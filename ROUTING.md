@@ -29,6 +29,9 @@ domain is affected.
 
 ## Targets (second folder)
 
+The canonical list of repos (with GitHub home, category and role) is
+`repos.yaml` in this repo — the organism's body map.
+
 The second folder names the affected repo or domain, e.g. `autoarray`, `autofit`,
 `autogalaxy`, `autolens`, `autolens_assistant`, `autolens_profiling`,
 `autolens_workspace_developer`, `autobuild`, `pyautobrain`; the workspace bucket

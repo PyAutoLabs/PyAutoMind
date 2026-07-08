@@ -38,6 +38,12 @@ For the full workflow narrative, conventions, and registry schemas, read
   `parked.md` holds tasks that were started or scoped but are not currently
   in flight (e.g. work parked in a stash, orphan worktrees); move back to
   `active.md` (or `planned.md` if re-scoping) when resuming.
+- **Body map** — `repos.yaml` is the single source of repo *identity* (GitHub
+  home, category, one-line role) for every repo in the workspace. The routing
+  table in the workspace-root `AGENTS.md` and the owner map in
+  `PyAutoBrain/skills/WORKFLOW.md` are generated from it, and the repo lists in
+  Heart/Build/admin scripts are drift-checked against it:
+  `python3 scripts/repos_sync.py --write`.
 - **Skills** — `skills/<name>/` are Claude Code skills/commands tightly coupled
   to the registry. They source `scripts/prompt_sync.sh` for commit/push.
 - **Scripts** — `scripts/status.sh` (inventory), `scripts/prompt_sync.sh`
