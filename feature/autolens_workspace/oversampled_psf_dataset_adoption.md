@@ -45,6 +45,13 @@ self-consistent. Deliberately its own prompt because the survey found
 
 ## Sequencing
 
+Builds on `oversampled_psf_visible_input.md` (the option-c visible-input
+pass, user-refined 2026-07-08): with the knob exposed everywhere at 1, this
+prompt becomes "flip the exposed values to 2 + save the fine psf.fits" plus
+the re-baselining survey.
+
+## Sequencing (original)
+
 After the k×s series completes (phase 3 workspace tests + refactor
 exercise). The k×s machinery it depends on is merged (PyAutoArray#363,
 PyAutoGalaxy#486, autolens_workspace#236).
