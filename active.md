@@ -10,17 +10,6 @@
 - repos:
   - PyAutoFit: feature/ep-diagnostics
 
-## psf-oversample-workspace
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/232
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-shipped, awaiting-merge
-- prs: PyAutoArray#358 (merge first), autolens_workspace_test#149
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-workspace
-- repos:
-  - autolens_workspace_test: feature/psf-oversample-workspace
-  - PyAutoArray: feature/psf-oversample-workspace
-
 ## ep-examples-tests
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/81
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
