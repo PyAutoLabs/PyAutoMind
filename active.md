@@ -27,7 +27,9 @@
 ## psf-oversample-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/356
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-dev
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/356#issuecomment-4916763342
+- local-commit: PyAutoArray efa985d2 (feature/psf-oversample-inversion, unpushed)
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-inversion
 - repos:
