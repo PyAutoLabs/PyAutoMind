@@ -87,7 +87,8 @@
 
 ## clone-mitosis-agent
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/57
-- status: library-dev (design doc)
+- status: awaiting-input (design complete; parked at ship sign-off)
+- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/57 (sign-off comment)
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoBrain (in-place)
 - repos:

@@ -26,3 +26,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | psf-oversample-workspace (#232) | supervised | tests PASS 861+944+335 / smoke imaging-trio PASS / review CLEAN / heart YELLOW-human-approved | merged-unchanged |
 | 2026-07-08 | assistant-deep-audit (all phases, #35) | supervised | tests 39p+audits / smoke n/a / review human-approved x4 / heart pre-existing YELLOW | A-C merged-unchanged, D amended (merge fix only) |
 | 2026-07-08 | ep-diagnostics (PyAutoFit#1335) | supervised | tests 1429 pass/14 skip (full suite; 7 new) / smoke n/a (additive library tooling) / review pending at sign-off / heart YELLOW pending ack | parked (ship sign-off + heart-ack question) |
+| 2026-07-08 | clone-mitosis-agent (design, Brain#57) | supervised | line-count guard ok / smoke n/a (doc) / review human pending / heart pre-existing YELLOW | parked at sign-off |
