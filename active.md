@@ -6,6 +6,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/autonomy-contract
 - repos:
+  - PyAutoBrain: feature/autonomy-contract
 - summary: |
     Task 1 of the autonomy series (feature/autonomy/): write the canonical
     PyAutoBrain/AUTONOMY.md contract (checkpoint inventory, per-level
