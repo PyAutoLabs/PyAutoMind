@@ -164,3 +164,17 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/cluster-scaling-lenstool
 - repos:
   - autolens_workspace: feature/cluster-scaling-lenstool
+
+## cluster-visualization
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/577
+- session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08; in-session one-shot ship authorization
+  + heart-ack as for cluster-scaling-lenstool)
+- note: parallel to dpie-lenstool-param claims on PyAutoLens (frozen diff: docs/api/mass.rst)
+  and autolens_workspace_test (frozen diff: scripts/cluster/lenstool_parity.py) — disjoint
+  from cluster/plot module + visualization.py; re-verify at ship
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cluster-visualization
+- repos:
+  - PyAutoLens: feature/cluster-visualization
+  - autolens_workspace_test: feature/cluster-visualization
