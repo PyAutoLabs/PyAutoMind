@@ -1,5 +1,15 @@
 # Active Tasks
 
+## psf-oversample-refactor
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/360
+- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
+- status: library-dev
+- autonomy: safe (--auto, refactor cap; launched 2026-07-08, no heart-ack)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-refactor
+- repos:
+  - PyAutoArray: feature/psf-oversample-refactor
+  - PyAutoGalaxy: feature/psf-oversample-refactor
+
 ## psf-oversample-docs
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/234
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
