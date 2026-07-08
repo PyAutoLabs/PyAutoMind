@@ -76,3 +76,11 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-preopt-campaign
 - repos:
   - autolens_profiling: feature/profiling-preopt-campaign
+
+## clone-mitosis-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/57
+- status: library-dev (design doc)
+- autonomy: supervised (--auto, launched 2026-07-08)
+- worktree: /home/jammy/Code/PyAutoLabs/PyAutoBrain (in-place)
+- repos:
+  - PyAutoBrain: feature/clone-mitosis-agent
