@@ -162,3 +162,14 @@
   - PyAutoHeart: feature/morning-status-release-rehearsal
   - PyAutoBuild: feature/morning-status-release-rehearsal
   - PyAutoMind: feature/morning-status-release-rehearsal
+
+## cluster-scaling-lenstool
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/237
+- session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-08; in-session one-shot ship authorization
+  + heart-ack: TEST RUN stale-parked scripts / VERSION SKEW autolens_assistant / worktree
+  drift from other parked tasks)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cluster-scaling-lenstool
+- repos:
+  - autolens_workspace: feature/cluster-scaling-lenstool
