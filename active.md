@@ -17,7 +17,8 @@
 
 ## profiling-polish-design
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/52
-- status: workspace-dev
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/autolens_profiling/issues/52#issuecomment-4915970488
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-polish-design
 - repos:
