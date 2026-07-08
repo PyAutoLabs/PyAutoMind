@@ -172,4 +172,17 @@ Once chosen, the change is:
 6. **Stop. This is a design decision, not a bug fix.** Implementation
    proceeds only after the reviewer signs off on the convention.
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED — design decision still open (Option A vs B).**
+Integrals of exp(log_prior_from_value): Uniform(0,2) = 2.000,
+LogUniform(0.1,10) = 4.605, Gaussian(0,1) = 2.507, LogGaussian(0,1) = 2.507,
+TruncatedNormalMessage = 1.000 — four-vs-one inconsistency exactly as
+audited. Current main's `NormalMessage.log_prior_from_value` docstring now
+documents the drop-constants convention, strengthening Option A's claim to
+be the de-facto standard. Recommend settling this inside Phase 2 of the EP
+framework review (`research/graphical_ep/ep_framework_review.md`), whose
+formal-equations documentation must state the convention either way.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

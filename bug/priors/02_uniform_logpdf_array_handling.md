@@ -119,4 +119,13 @@ that, but the reviewer should confirm.
    `np.where(in_bounds, message.logpdf, -np.inf)` would be cleaner.
 7. **Stop. Do not implement until the open question is resolved.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED — fix now (severity: low-medium).**
+Scalar path works; array input raises `ValueError` (ambiguous truth value)
+exactly as described; the `# TODO` is still in the source. Vectorised
+`np.where` fix stands; the out-of-support semantics question remains open
+and should be settled alongside prompt 07's convention decision.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

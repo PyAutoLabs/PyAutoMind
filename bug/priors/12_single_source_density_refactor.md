@@ -159,4 +159,14 @@ kwarg as today; everything else inherits.
    path is multiple sub-PRs landing over weeks; do not bundle them
    into one issue.
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: still valid — design discussion; sequence behind the EP review.**
+Three-place density encoding intact on main. Do not open the design issue
+until Phases 1–2 of `research/graphical_ep/ep_framework_review.md` land:
+the EP statistics review will inventory exactly which message operations the
+factor graph needs, which is the load-bearing input to this hierarchy
+design. Bundle with prompt 13.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -170,4 +170,16 @@ but it's worth a quick numerical check.
    sampling are unaffected.**
 7. **Stop. Do not implement until the math is confirmed.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED, numerically exact — highest-priority math fix (severity: high for EP).**
+Integral of pdf via the generic `MessageInterface.logpdf` = 2.2663, matching
+the predicted error factor sigma*exp(mu^2/(2 sigma^2)) = 2.2663 to 4 d.p.;
+`log_prior_from_value` and scipy truncnorm both = 1.0000. The generic
+exponential-family path is precisely what `autofit/graphical` consumes, so
+this is the first fix to land ahead of the EP statistics review (Phase 1 of
+`research/graphical_ep/ep_framework_review.md`). Proposed fix (add the
+Gaussian log-partition term) verified correct analytically.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

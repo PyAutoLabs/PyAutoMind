@@ -160,4 +160,18 @@ closer (in different ways).
 6. **Stop. Do not implement until the reviewer specifies the desired
    invariant.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED, sharpened — fix after invariant decision (severity: medium, latent).**
+Correction to the audit: the mean DOES match the requested mode exactly
+(beta = alpha/m forces mean = m). The variance is what's wrong, and it is
+*inversely* wrong: `from_mode(2, V=0.25)` yields var = 2.0; `from_mode(2, V=4)`
+yields var = 0.235 — `alpha = 1 + m**2 * V` has V in the numerator where it
+belongs in the denominator. Reproducer note: V=1 cannot discriminate
+`1 + m**2*V` from `1 + m**2/V`; test at V != 1. Interpretation B
+(`alpha = m**2/V`, `beta = m/V`; matches mean+variance, consistent with the
+Normal family) remains the leading candidate. No callers found; latent until
+Gamma messages enter an EP projection.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

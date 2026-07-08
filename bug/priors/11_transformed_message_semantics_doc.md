@@ -171,4 +171,15 @@ would have made this self-evident.
 6. **Stop. Do not implement until acked.** This is a doc / API change
    so the bar for review is mostly "is the explanation correct?"
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: still valid — cheap; coordinate with EP review Phase 2.**
+Anchors re-verified on main: asymmetric reversal (`composed_transform.py`
+reversed at :185 vs forward at :196) and `LinearShiftTransform` storing
+`np.reciprocal(self.scale)` (`transform.py:175`) both unchanged. The
+docstring work here should be authored as part of Phase 2 of
+`research/graphical_ep/ep_framework_review.md` (formal-equations docs) so
+the convention is stated once.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

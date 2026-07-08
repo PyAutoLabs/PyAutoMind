@@ -153,4 +153,14 @@ failed fit, and silently substituting `0.5` could mask a real problem.
 7. **Stop. Do not implement until the clamp-vs-raise question is
    resolved.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED — fix now (severity: medium).**
+Forcing NR off the rails: warning fires, returned a = b = -498.8 — the clamp
+is a no-op (local `b` overwritten two lines later). One-line fix. On
+clamp-vs-raise: lean **raise** — a projection that went negative is a failed
+fit and silently substituting 0.5 masks it (house rule: no silent guards;
+fix/expose the producer).
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

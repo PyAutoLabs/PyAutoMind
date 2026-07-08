@@ -128,4 +128,18 @@ the kwargs should never have been there.
 6. **Stop. Do not call `/start_dev` until the issue has at least one
    confirmation ack.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED — fix now (severity: medium-high).**
+`with_limits` raises `TypeError: __init__() got an unexpected keyword argument
+'lower_limit'` as predicted. `_new_for_base_message` also crashes, but via a
+different path than the audit predicted: `self.lower_limit` resolves through
+`Prior.__getattr__` to the message, and the call then fails with
+`AttributeError: 'TransformedMessage' object has no attribute 'instance'`.
+Same conclusion — this branch has never run end-to-end. Note
+`NormalMessage.from_mode` on current main now defensively pops
+`lower_limit`/`upper_limit` kwargs, a workaround in the same family.
+Proposed fix stands (drop the kwargs; a log-Gaussian has support (0, inf)).
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

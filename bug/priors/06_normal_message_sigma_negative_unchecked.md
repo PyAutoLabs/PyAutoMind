@@ -175,4 +175,15 @@ constructing.
 7. **Stop. Do not implement until the strict-vs-permissive question
    is settled.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED — fix now (severity: medium; prerequisite for 08).**
+`NormalMessage(0, sigma=-1)` constructs silently with deceptive
+`variance = 1.0`; `TruncatedNormalMessage` raises `MessageException`;
+`GaussianPrior.with_limits(5, 5)` constructs with sigma = 0. The
+`assert_sigma_non_negative` call is still commented out and its JAX branch
+is still broken as described. Lean **sigma <= 0 rejected** (strict), with a
+numpy-only check; JAX path defers to NaN propagation.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

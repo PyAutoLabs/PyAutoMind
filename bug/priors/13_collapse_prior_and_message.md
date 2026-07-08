@@ -175,4 +175,13 @@ the codebase ~half as legible as it could be.
    may want a combined design rather than two separate issues.
 7. **Stop. No code changes until a design is approved.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: still valid — bundle with 12 behind the EP review.**
+`Prior.__getattr__` delegation unchanged (`abstract.py:201-204`). Same
+sequencing note as prompt 12: the EP framework review's Phase 1/2 output
+(which operations are EP-only vs user-facing) is the prerequisite design
+input.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

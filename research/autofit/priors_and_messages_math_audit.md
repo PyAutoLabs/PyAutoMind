@@ -7,6 +7,14 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 
+> **Fable re-validation (2026-07-08, main @ `0f26ff2d8`, PyAutoFit#1330):**
+> all nine A-findings reproduce on clean main — none aged out. Per-finding
+> verdicts, severity re-ranks and corrections (notably A3: mean matches, the
+> variance is inversely wrong) live in `bug/priors/01–14.md` under
+> `## Fable verdict`. This census stays as the historical record; consult the
+> verdict blocks, not this file, for current status. C-findings 11–14 are
+> sequenced behind `research/graphical_ep/ep_framework_review.md` Phases 1–2.
+
 ## Why this exists
 
 After the LogUniformPrior sign-convention bug was fixed in PyAutoFit

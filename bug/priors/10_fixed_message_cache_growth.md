@@ -128,4 +128,12 @@ and the aliasing.
    it?). If not, option 1 is the right answer.
 7. **Stop. Do not implement until acked.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED — fix now (severity: low-medium; one-line).**
+Cache grew 0 -> 500 over 500 distinct shapes; same-shape calls return the
+same object and mutating one corrupts the other (aliasing verified).
+Option 1 (`np.zeros_like(x)`, no cache) remains the right fix.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

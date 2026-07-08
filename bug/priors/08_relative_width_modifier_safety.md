@@ -175,4 +175,14 @@ The reviewer should consider:
    reviewer can judge migration cost.
 7. **Stop. Do not implement until the reviewer chooses A, B, or C.**
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: CONFIRMED — fix after prompt 06 (severity: medium).**
+`RelativeWidthModifier(0.5)(-1.0) = -0.5` flows into `GaussianPrior`
+silently; `value_for(0.84) = -0.497` (scale flipped). Zero mean gives
+sigma = 0 degenerate prior. Implicit default `RelativeWidthModifier(0.5)`
+still in place. Options A/B/C decision still required; prompt 06 landing
+first turns this from silent to loud as designed.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

@@ -24,6 +24,14 @@
 
 
 
+## profiling-vram-validation
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/54
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-08, plan approved in-session)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-vram-validation
+- repos:
+  - autolens_profiling: feature/profiling-vram-validation
+
 ## kaplinghat-sidm-cored-nfw
 - worktree: /home/jammy/Code/PyAutoLabs-wt/kaplinghat-sidm-cored-nfw
   - PyAutoGalaxy: feature/kaplinghat-sidm-cored-nfw

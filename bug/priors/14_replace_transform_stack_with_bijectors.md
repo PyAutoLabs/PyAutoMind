@@ -197,4 +197,13 @@ one release cycle.
 - This prompt is **not** about refactoring the EP machinery — only
   the transform stack underneath `TransformedMessage`.
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: still valid — go/no-go after 12/13.**
+Hand-rolled transform stack unchanged. One update: JAX-native priors have
+since landed in main, which weakens the dependency-cost objection to
+numpyro (JAX is already in the optional stack). Still the largest item;
+no code before a design green light.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

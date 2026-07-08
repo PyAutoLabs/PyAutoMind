@@ -192,4 +192,16 @@ For each property, pick the tolerance carefully:
    in their own issues.** This prompt is the safety net for the fixes,
    not a substitute for them.
 
+
+## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
+
+**Verdict: still wanted, unchanged — schedule after 01–08 land.**
+Coverage gap re-verified: `check_dist_norm`-style sweeps in
+`test_autofit/graphical/functionality/test_messages.py` still exclude
+`TruncatedNormalMessage`, `LogGaussianPrior`, prior subclasses and
+transformed messages — which is why 04 survived. Keep library-level property
+tests numpy-only (house rule); EP-level integration coverage is Phase 3 of
+`research/graphical_ep/ep_framework_review.md` and complements, not
+replaces, this.
+
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->
