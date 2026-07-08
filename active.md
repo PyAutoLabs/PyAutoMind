@@ -58,6 +58,14 @@
 
 
 
+## profiling-preopt-campaign
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-08; local-CPU leg, RAL down)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-preopt-campaign
+- repos:
+  - autolens_profiling: feature/profiling-preopt-campaign
+
 ## assistant-deep-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
 - status: awaiting-input (PRs #36/#37/#38 open; phase D complete, parked at ship sign-off)
