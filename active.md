@@ -1,5 +1,18 @@
 # Active Tasks
 
+## psf-oversample-simulator
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/482
+- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-simulator
+- repos:
+  - PyAutoGalaxy: feature/psf-oversample-simulator
+  - PyAutoArray: feature/psf-oversample-simulator
+  - PyAutoLens: feature/psf-oversample-simulator
+  - autolens_workspace: feature/psf-oversample-simulator
+  - autolens_workspace_test: feature/psf-oversample-simulator
+
 ## ep-diagnostics
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1335
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
