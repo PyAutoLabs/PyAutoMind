@@ -6,3 +6,4 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/samples-parameter-paths
 - repos:
+  - PyAutoFit: feature/samples-parameter-paths
