@@ -77,10 +77,36 @@ oversampled convolution then compose instead of excluding each other.
 - Fits-loaded PSFs (real instrument kernels) stay at s=1 unless a fine
   kernel exists; only the Gaussian `from_gaussian` simulators adopt s=2.
 
+## Workflow — mirror the oversampling series (user instruction, 2026-07-08)
+
+Phase like the parent series, each phase its own issue/PR behind the
+library-first gate:
+
+1. **Design + ground truth** (no source edits): settle the pre-bin placement
+   fork (§ Scope 2) with file/line grounding; extend the brute-force ground
+   truth with the adaptive-k_i partial-bin reference (evaluate at
+   [k_i·s], partial-bin to s, convolve, bin — pinned numbers the later
+   phases assert against). Mechanism: adaptive evaluation → partial bin to a
+   uniform s-resolution fine image → PSF convolve at s → bin s→1.
+2. **Core library** (PyAutoArray + PyAutoGalaxy callers): the divisibility
+   rule, the partial pre-bin, wiring; unit tests pinned to phase-1 numbers;
+   s=1 and k=1 strict parity.
+3. **Workspace tests** (autolens_workspace_test): extend
+   `convolution_over_sampled.py` with an adaptive-evaluation + s=2
+   FitImaging leg and a simulate→fit round trip on an adaptive grid.
+4. **Simulator adoption + docs** (autolens_workspace): simulator scripts to
+   s=2 (re-baselining survey first, per Risks); update the simulator and
+   over_sampling guide prose to say adaptive evaluation now composes with
+   oversampled convolution.
+5. **Refactor exercise** (Refactor Agent, behaviour-preserving, last): sweep
+   everything the k×s work touched — in particular whatever the pre-bin
+   decision adds to `convolver.py`/`over_sample_util.py` — against the full
+   test surface built by phases 1–4.
+
 ## Sequencing
 
-After the two currently-parked series items ship (docs PR
-autolens_workspace#235; refactor #360) — the k×s work builds on the
-refactored helpers. Library-first merge gate as usual.
+Phase 1 (design) can start immediately. Phases 2+ require the parent
+series' refactor PRs merged (PyAutoArray#361, PyAutoGalaxy#484) — the k×s
+work builds on the consolidated helpers. Library-first merge gate as usual.
 
 Parent series: `issued/oversampling.md` (design `oversampling_design.md` §3).
