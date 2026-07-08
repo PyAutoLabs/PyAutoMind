@@ -79,6 +79,8 @@ wiki index. PyAutoMemory is personal: the public Phase 2 docs in PyAutoFit
 must carry their own equations and never reference PyAutoMemory.
 
 ### Phase 2 — Formal documentation of the graphical package
+**Issued:** PyAutoFit#1333 (2026-07-08) — task `ep-graphical-docs`
+(--auto, supervised; worktree ep-graphical-docs).
 Package-level documentation stating the exact Bayesian machinery in formal
 equations — factor graph definition, the approximating family
 q(θ) = Π q_i, cavity q^{\i}, tilted distribution, moment-matching KL

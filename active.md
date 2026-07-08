@@ -1,5 +1,14 @@
 # Active Tasks
 
+## ep-graphical-docs
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1333
+- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/ep-graphical-docs
+- repos:
+  - PyAutoFit: feature/ep-graphical-docs
+
 ## ep-priors-fable-reassess
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1330
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
