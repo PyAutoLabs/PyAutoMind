@@ -21,8 +21,6 @@
   - autofit_workspace: feature/ep-examples-tests
   - autofit_workspace_test: feature/ep-examples-tests
 
-  - PyAutoGalaxy: feature/psf-oversample-galaxy
-
 ## ep-graphical-docs
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1333
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
