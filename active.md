@@ -32,14 +32,15 @@
 ## kxs-core
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: awaiting-input
-- question: phase-2 ship sign-off on the issue (latest comment)
-- local-commits: PyAutoArray + PyAutoGalaxy on feature/kxs-core, unpushed
+- status: library-shipped, awaiting-merge + phase-4 fork
+- prs: PyAutoArray#363 -> PyAutoGalaxy#486 -> autolens_workspace#236
+- question: simulator-adoption fork (a/b/c) on the issue; phase 3 blocked by dpie-lenstool-param (autolens_workspace_test)
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-core
 - repos:
   - PyAutoArray: feature/kxs-core
   - PyAutoGalaxy: feature/kxs-core
+  - autolens_workspace: feature/kxs-core
 
 ## hst-acs-phase1
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/2
