@@ -149,7 +149,9 @@
 ## morning-status-release-rehearsal
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/39
 - session: claude --resume ff9a8b2f-fda0-4bab-8962-1814843aa374
-- status: library-dev
+- status: shipped, awaiting-merge — verification done (rehearsal run 28969344875 green from branch; morning_health collect+compose verified locally; post-merge dispatch of morning_health is the final leg)
+- prs: PyAutoBuild#119 + PyAutoHeart#40 + PyAutoMind#41 (independent; merge Mind last is tidiest — its morning_health reads the others)
+- post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/morning-status-release-rehearsal
 - repos:
