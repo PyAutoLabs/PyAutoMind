@@ -1,5 +1,15 @@
 # Active Tasks
 
+## psf-oversample-docs
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/234
+- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-docs
+- repos:
+  - PyAutoArray: feature/psf-oversample-docs
+  - autolens_workspace: feature/psf-oversample-docs
+
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
