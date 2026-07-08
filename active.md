@@ -3,7 +3,8 @@
 ## version-pinning-design-review
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: research — investigation running; deliverable is a design-review report on the issue (no code, no PR)
+- status: awaiting-input — design review delivered; R1–R4 recommendations + 3 proposed follow-up prompts pending human decision (R1 urgent: pip-install path broken by yanked 2026.7.6.649)
+- question: https://github.com/PyAutoLabs/PyAutoBuild/issues/118#issuecomment-4918353026
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: none (read-only research)
 - repos:
@@ -21,10 +22,9 @@
 ## hst-acs-phase1
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/2
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: awaiting-input — implementation complete + validated (53 tests; parity 0.941/0.925 deterministic; review FINDINGS resolved); parked at ship sign-off incl. Heart YELLOW ack
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/2#issuecomment-4918311185
-- local-commits: 5 on feature/hst-acs-phase1, unpushed
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/3
+- autonomy: supervised (--auto, launched 2026-07-08; heart YELLOW reason set acked by maintainer at sign-off)
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place — single new repo, no parallel claims)
 - repos:
   - PyAutoReduce: feature/hst-acs-phase1
