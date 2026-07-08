@@ -22,3 +22,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | assistant-deep-audit (phase C wiki+workflow, #35) | supervised | audit 0 broken + idiom clean / smoke n/a / review human pending / heart pre-existing YELLOW | parked at sign-off |
 | 2026-07-08 | profiling-drift-check (PyAutoHeart#37) | supervised | tests 217/217 / smoke n/a (organism repo) / review CLEAN / heart YELLOW-acked in-session | merged-unchanged (PyAutoHeart#38) |
 | 2026-07-08 | assistant-deep-audit (phase D AGENTS+tooling, #35) | supervised | audit 0 broken / smoke n/a / review human pending / heart pre-existing YELLOW | parked at sign-off |
+| 2026-07-08 | ep-examples-tests (autofit_workspace#81) | supervised | tests: tutorial validated end-to-end + 3 integration scripts PASS / smoke n/a (new scripts, not in curated lists) / review pending at sign-off / heart YELLOW pending ack | parked (ship sign-off + heart-ack question) |

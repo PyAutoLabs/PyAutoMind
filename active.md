@@ -13,8 +13,9 @@
 ## ep-examples-tests
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/81
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: workspace-dev
-- autonomy: supervised (--auto, launched 2026-07-08, plan approved in-session, no heart-ack)
+- status: awaiting-input — implementation complete + validated (tutorial converges 49.96±0.12; 3 integration scripts PASS; uncommitted); parked at ship sign-off incl. Heart YELLOW ack
+- question: https://github.com/PyAutoLabs/autofit_workspace/issues/81#issuecomment-4917307451
+- autonomy: supervised (--auto, launched 2026-07-08, plan approved in-session, no heart-ack yet)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/ep-examples-tests
 - repos:
   - autofit_workspace: feature/ep-examples-tests
