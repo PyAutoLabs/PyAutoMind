@@ -13,8 +13,9 @@
 ## version-pinning-design-review
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: awaiting-input — design review delivered; R1–R4 recommendations + 3 proposed follow-up prompts pending human decision (R1 urgent: pip-install path broken by yanked 2026.7.6.649)
-- question: https://github.com/PyAutoLabs/PyAutoBuild/issues/118#issuecomment-4918353026
+- status: approved-on-hold — R1–R4 endorsed by maintainer 2026-07-08; file follow-up prompts (R1 first: pip-install path broken by yanked 2026.7.6.649) after morning-status-release-rehearsal (PyAutoHeart#39) ships; R4 rides that task
+- decision: https://github.com/PyAutoLabs/PyAutoBuild/issues/118#issuecomment-4918433908
+- blocked-by: morning-status-release-rehearsal (release-pipeline rework in flight, claims PyAutoBuild)
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: none (read-only research)
 - repos:
