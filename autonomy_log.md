@@ -17,3 +17,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | assistant-deep-audit (phase A, #35) | supervised | tests n/a (doc repo, stated) / smoke n/a (no script surface) / human review pending / heart YELLOW pre-existing (no ack) | parked |
 | 2026-07-08 | assistant-deep-audit (phase A, #35) | supervised | tests n/a (doc repo) / smoke n/a / review human-approved / heart pre-existing YELLOW (no ack needed at doc scope) | PR #36 open |
 | 2026-07-08 | psf-oversample-galaxy (#480) | supervised | tests PASS 943+335 / smoke deferred-to-phase-3 / review CLEAN / heart YELLOW-unack | parked |
+| 2026-07-08 | assistant-deep-audit (phase B tooling, #35) | supervised | tests 39p / smoke n/a / review human pending / heart pre-existing YELLOW | parked at sign-off |

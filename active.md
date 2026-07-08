@@ -65,7 +65,8 @@
 
 ## assistant-deep-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
-- status: workspace-dev (phase A: PR #36 open, awaiting-merge; phase B: tooling in progress)
+- status: awaiting-input (phase A: PR #36 open; phase B complete, parked at ship sign-off)
+- question: https://github.com/PyAutoLabs/autolens_assistant/issues/35 (PR B sign-off comment)
 - pr: https://github.com/PyAutoLabs/autolens_assistant/pull/36
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs/autolens_assistant (in-place)
