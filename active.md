@@ -22,6 +22,7 @@
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-inversion
 - repos:
+  - PyAutoArray: feature/psf-oversample-inversion
   - PyAutoArray: feature/psf-oversample-core
 
 
