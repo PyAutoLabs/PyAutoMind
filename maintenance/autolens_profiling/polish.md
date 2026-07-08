@@ -5,7 +5,7 @@ Target: autolens_profiling
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: formalised (phased 2026-07-08 → polish_phase_1_design.md … polish_phase_4_breakdown_dashboard.md; work proceeds through the phase prompts)
 
 autolens_profiling is now a mature project, with a good separation of different tasks into packages (instruments, latent, likelihood_breakdown, etc)
 
@@ -43,3 +43,13 @@ Dont do any searches, we are profiling likelihood functions here.
 Maybe also a dashboard on the GitHub readme which shows all key results at a high level?
 
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->
+
+The above was written before PyAutoBrain became a thing, but I think the real end point here is tha also
+PyAutoBrain should have a dediciated agent which does profiling and uses this workspace. The agent should
+not be autolens lensing specific, but it should understand all these different tasks which profile
+the likelihood function, latent, etc, and thus I think it hsould know what autofit is. It should know
+about JAX, CPU, GPU.
+
+I think the agent should also do profiling we havent fully covered in the autolens_profiling project yet (e.g.
+jax compiluation function times for likelihood functions, speeding up more general functions which are flgagged
+as slow by integration tests). Maybe these things should be future plans for the agent.

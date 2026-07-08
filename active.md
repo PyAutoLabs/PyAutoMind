@@ -8,6 +8,13 @@
 
 
 
+## profiling-polish-design
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/52
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-08)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-polish-design
+- repos:
+
 ## kaplinghat-sidm-cored-nfw
 - worktree: /home/jammy/Code/PyAutoLabs-wt/kaplinghat-sidm-cored-nfw
   - PyAutoGalaxy: feature/kaplinghat-sidm-cored-nfw
