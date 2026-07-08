@@ -5,7 +5,16 @@ Target: PyAutoArray
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: split-into-phases
+Phases:
+- oversampling_phase_1_design.md
+- oversampling_phase_2_core_api.md
+- oversampling_phase_3_workspace_examples.md
+- oversampling_phase_4_docs.md
+
+<!-- Split by the Feature Agent on 2026-07-08 (score 14, too-large for one PR).
+     Work proceeds through the phase prompts above; this file is the parent
+     record, not an executable task. -->
 
 A point spread function is used to blur images via 2d convolution.
 
