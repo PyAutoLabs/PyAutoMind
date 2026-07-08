@@ -1,6 +1,6 @@
 ---
 name: create-issue
-description: Convert a prompt file from PyAutoMind/ into a GitHub issue with overview, plan, and starting AI prompt, then register and move it. The Mind issue+registry primitive that start_dev delegates to.
+description: Convert a PyAutoMind prompt file into a GitHub issue and register it — the Mind issue and registry primitive that start_dev delegates to.
 user-invocable: true
 ---
 
