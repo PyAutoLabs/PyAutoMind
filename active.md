@@ -1,16 +1,5 @@
 # Active Tasks
 
-## auto-dev-mode
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/40
-- session: claude --resume session_013UptUDNTYiB7izaQJBAKgS
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/auto-dev-mode
-- repos:
-  - PyAutoBrain: feature/auto-dev-mode
-- summary: |
-    Autonomy series task 4: --auto mode in start_dev/ship_* skill bodies —
-    plan-to-issue for safe, four-leg ship gate, stop-at-PR, calibration
-    append. Batch run 2-9.
 
 
 
