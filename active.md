@@ -125,11 +125,12 @@
 
 ## dpie-lenstool-param
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/485
+- session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
 - status: library-dev
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- note: parallel to psf-oversample-refactor claim on PyAutoGalaxy (awaiting-merge, frozen
-  diff = autogalaxy/operate/image.py only) — disjointness verified vs dPIE files; re-verify
-  at ship sign-off
+- note: psf-oversample-refactor's PyAutoGalaxy PR #484 observed merged at worktree creation
+  (HEAD 6fd900a4) — the parallel-claim concern resolved itself; its active.md entry is stale
 - worktree: /home/jammy/Code/PyAutoLabs-wt/dpie-lenstool-param
 - repos:
   - PyAutoGalaxy: feature/dpie-lenstool-param
+  - autolens_workspace_test: feature/dpie-lenstool-param
