@@ -53,3 +53,10 @@
   - autogalaxy_workspace: feature/aggregator-output-contracts
   - autolens_workspace: feature/aggregator-output-contracts
   - autolens_workspace_test: feature/aggregator-output-contracts
+
+## autolens-assistant-audit
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/33
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/autolens_assistant (in-place)
+- repos:
+  - autolens_assistant: feature/autolens-assistant-audit
