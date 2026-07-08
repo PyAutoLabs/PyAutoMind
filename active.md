@@ -6,3 +6,4 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/intake-census-dashboard
 - repos:
+  - PyAutoBrain: feature/intake-census-dashboard
