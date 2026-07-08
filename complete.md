@@ -1,3 +1,29 @@
+## version-check-compat-floor
+- issue: https://github.com/PyAutoLabs/PyAutoConf/issues/118 (closed)
+- completed: 2026-07-08
+- prs: PyAutoConf#119 (merged 452f0f7)
+- notes: |
+    R2 of the version-pinning design review (PyAutoBuild#118). check_version
+    enforces a compatibility floor, not exact match: floor precedence
+    minimum_library_version -> workspace_version (legacy, as floor) ->
+    version.txt; installed < floor raises; newer passes with git-pull warn
+    beyond 30 days; unparseable warns; advice never suggests == pins.
+    117 tests (7 new). Heart YELLOW 6-reason set acked in-session at ship.
+    Follow-up: workspace general.yaml adoption of the new key.
+
+## release-stamping-slim
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/120 (closed)
+- completed: 2026-07-08
+- prs: PyAutoBuild#121 (merged e912219; merge-gated after PyAutoConf#119)
+- notes: |
+    R3-core of the pinning review: releases are wheels+tags only. Scheduled
+    versions <date>.1 (run_number fallback removed — the .641-.649 accident
+    mechanism); __init__ sed stamps build-tree only, no commit-back, branch
+    push dropped, tag push kept; release_workspaces no longer writes
+    version.txt/general.yaml pins or README stamps. Notebook regen + Colab
+    bumps kept per-release (Q2 answered by maintainer: same cadence, rides
+    each release). 71 tests. Follow-ups: Heart version_skew floor-vs-tag
+    rework (check now inert); __version__ via importlib.metadata (polish).
 ## kxs-core
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362 (open — series tracker; phases 3 + refactor pending)
 - completed: 2026-07-08 (phase 2 + phase-4 docs leg)
