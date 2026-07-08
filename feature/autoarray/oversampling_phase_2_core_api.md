@@ -8,7 +8,19 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: split-into-phases
+Phases:
+- oversampling_phase_2a_convolver_dataset.md
+- oversampling_phase_2b_inversion_wiring.md
+- oversampling_phase_2c_autogalaxy_consumer.md
+
+<!-- Split by the Feature Agent on 2026-07-08 (score 10, too-large for one
+     PR) after the phase-1 design was approved (PyAutoArray#353). The cut
+     follows the design note's execution sketch: 2a = Convolver + dataset
+     (design steps 1-4 autoarray side), 2b = inversion wiring (step 5),
+     2c = PyAutoGalaxy consumer (step 4 galaxy side; also blocked by the
+     kaplinghat-sidm-cored-nfw PyAutoGalaxy claim). This file is the split
+     record, not an executable task. -->
 
 Phase 2 of 4 of `feature/autoarray/oversampling.md`. Requires the phase-1
 design note and numerical ground truth (`oversampling_phase_1_design.md`) —
