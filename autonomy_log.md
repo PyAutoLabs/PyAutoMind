@@ -24,3 +24,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | assistant-deep-audit (phase D AGENTS+tooling, #35) | supervised | audit 0 broken / smoke n/a / review human pending / heart pre-existing YELLOW | parked at sign-off |
 | 2026-07-08 | ep-examples-tests (autofit_workspace#81) | supervised | tests: tutorial validated end-to-end + 3 integration scripts PASS / smoke n/a (new scripts, not in curated lists) / review pending at sign-off / heart YELLOW pending ack | parked (ship sign-off + heart-ack question) |
 | 2026-07-08 | psf-oversample-workspace (#232) | supervised | tests PASS 861+944+335 / smoke imaging-trio PASS / review CLEAN / heart YELLOW-human-approved | merged-unchanged |
+| 2026-07-08 | assistant-deep-audit (all phases, #35) | supervised | tests 39p+audits / smoke n/a / review human-approved x4 / heart pre-existing YELLOW | A-C merged-unchanged, D amended (merge fix only) |
