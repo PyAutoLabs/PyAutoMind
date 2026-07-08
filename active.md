@@ -3,7 +3,7 @@
 ## pyautoreduce-hst-design
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/1
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: library-dev — repo bootstrapped + design docs pushed; spike (SLACS parity prototype) in progress
+- status: awaiting-input — spike complete, parity closes (units e-/s; noise matches with R applied; ~7% scale offset → phase 1); design docs await user review before phase-1 prompt is filed
 - autonomy: supervised (interactive session)
 - worktree: none (new repo, work on main — pre-release, no consumers)
 - repos:
