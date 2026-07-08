@@ -1,5 +1,15 @@
 # Active Tasks
 
+## version-check-compat-floor
+- issue: https://github.com/PyAutoLabs/PyAutoConf/issues/118
+- session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- note: R2 of PyAutoBuild#118 design review; R3 (PyAutoBuild refactor) follows once this nears shipping
+- worktree: /home/jammy/Code/PyAutoLabs-wt/version-check-compat-floor
+- repos:
+  - PyAutoConf: feature/version-check-compat-floor
+
 ## wfc3-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/4
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
@@ -13,9 +23,8 @@
 ## version-pinning-design-review
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: approved-on-hold — R1–R4 endorsed by maintainer 2026-07-08; file follow-up prompts (R1 first: pip-install path broken by yanked 2026.7.6.649) after morning-status-release-rehearsal (PyAutoHeart#39) ships; R4 rides that task
+- status: follow-ups-in-flight — hold lifted 2026-07-08 (PyAutoHeart#39 shipped: rehearsal crons live, R4 done bar run_number residue); R2 → version-check-compat-floor (PyAutoConf#118); R3 files when R2 nears shipping; R1 PyPI-side = batched question to maintainer on the issue
 - decision: https://github.com/PyAutoLabs/PyAutoBuild/issues/118#issuecomment-4918433908
-- blocked-by: morning-status-release-rehearsal (release-pipeline rework in flight, claims PyAutoBuild)
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: none (read-only research)
 - repos:
