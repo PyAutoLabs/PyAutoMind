@@ -10,9 +10,8 @@
 ## psf-oversample-core
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/354
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/PyAutoArray/issues/354#issuecomment-4916322847
-- local-commit: PyAutoArray 4eceda06 (feature/psf-oversample-core, unpushed)
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/355
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-core
 - repos:
