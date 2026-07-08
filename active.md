@@ -1,5 +1,15 @@
 # Active Tasks
 
+## ep-diagnostics
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1335
+- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- note: parallel to ep-graphical-docs claim on PyAutoFit (PR #1334, docs-only) — disjoint files, human-directed; re-verify disjointness at ship
+- worktree: /home/jammy/Code/PyAutoLabs-wt/ep-diagnostics
+- repos:
+  - PyAutoFit: feature/ep-diagnostics
+
 ## psf-oversample-workspace
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/232
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7

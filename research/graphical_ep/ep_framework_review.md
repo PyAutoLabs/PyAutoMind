@@ -107,6 +107,9 @@ stated math line-by-line. Lives with the source (module docstrings and/or
   posteriors). Library unit tests stay numpy-only.
 
 ### Phase 4 — EP diagnostics and monitoring tooling
+**Issued:** PyAutoFit#1335 (2026-07-08) — task `ep-diagnostics`
+(--auto, supervised; worktree ep-diagnostics, parallel to the parked
+ep-graphical-docs claim, disjoint files).
 Built-in tools for analysing a finished EP fit and monitoring a running
 one: end-of-example analysis function calls, visuals emitted during EP
 (message-field evolution, per-factor KL history), and text/metadata files
