@@ -132,3 +132,14 @@
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoBrain (in-place)
 - repos:
   - PyAutoBrain: feature/clone-mitosis-agent
+
+## dpie-lenstool-param
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/485
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- note: parallel to psf-oversample-refactor claim on PyAutoGalaxy (awaiting-merge, frozen
+  diff = autogalaxy/operate/image.py only) — disjointness verified vs dPIE files; re-verify
+  at ship sign-off
+- worktree: /home/jammy/Code/PyAutoLabs-wt/dpie-lenstool-param
+- repos:
+  - PyAutoGalaxy: feature/dpie-lenstool-param
