@@ -10,7 +10,9 @@
 ## psf-oversample-core
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/354
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-dev
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/354#issuecomment-4916322847
+- local-commit: PyAutoArray 4eceda06 (feature/psf-oversample-core, unpushed)
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-core
 - repos:
@@ -31,10 +33,6 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-vram-validation
 - repos:
   - autolens_profiling: feature/profiling-vram-validation
-
-## kaplinghat-sidm-cored-nfw
-- worktree: /home/jammy/Code/PyAutoLabs-wt/kaplinghat-sidm-cored-nfw
-  - PyAutoGalaxy: feature/kaplinghat-sidm-cored-nfw
 
 ## aggregator-output-contracts
 - worktree: /home/jammy/Code/PyAutoLabs-wt/aggregator-output-contracts
