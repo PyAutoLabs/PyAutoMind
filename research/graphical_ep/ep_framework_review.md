@@ -120,6 +120,14 @@ Design should coordinate with the inspection/aggregation ideas already in
 ### Phase 5 — Deterministic variables reconciliation
 **Issued:** PyAutoFit#1336 (2026-07-08) — task `ep-deterministic-reconcile`
 (--auto, supervised, read-only).
+**Complete (2026-07-08), decision pending:** rhayes777 PR located (#1153,
+declarative deterministic via compound priors — its test is commented out);
+census: factor_out unreachable from declarative API, compound priors
+invisible to EP. Key analysis: compound/shared-variable patterns are
+statistically TIGHTER (relation exact inside factors); factor_out trades
+exactness for modularity (z gets messages, q(z) factorised from parents).
+Recommendation A on #1336: keep both, document trade-off, resurrect the
+#1153 test. IC50 needs no migration.
 The IC50 cancer use case composes deterministic quantities via the EP
 composition machinery (locate the old rhayes777 PR that added this) but
 does not use the low-level `deterministic_variable` API in

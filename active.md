@@ -3,7 +3,8 @@
 ## ep-deterministic-reconcile
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1336
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: research — phase 5 of research/graphical_ep/ep_framework_review.md (read-only; recommendation lands on #1336)
+- status: awaiting-input — phase 5 complete; recommendation A (keep both, document trade-off, resurrect #1153 test) on #1336 pending decision
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1336#issuecomment-4917522033
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: none (read-only)
 - repos:

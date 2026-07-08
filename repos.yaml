@@ -89,6 +89,10 @@ repos:
     github: PyAutoLabs/PyAutoLens
     category: library
     role: "Strong-lensing modelling built on the libraries above."
+  PyAutoReduce:
+    github: PyAutoLabs/PyAutoReduce
+    category: library
+    role: "Data reduction of HST (and future JWST/other) imaging into modeling-ready datasets for PyAutoLens/PyAutoGalaxy."
 
   # --- workspaces ---------------------------------------------------------
   autofit_workspace:
