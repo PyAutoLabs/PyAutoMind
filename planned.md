@@ -158,3 +158,13 @@
   - PyAutoGalaxy
 
 
+
+## psf-oversample-workspace
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/232
+- planned: 2026-07-08
+- classification: workspace
+- suggested-branch: feature/psf-oversample-workspace
+- blocked-by: fix-latent-variables-fast (using autolens_workspace); fix-zero-contour-warm-threshold (using autolens_workspace_test)
+- affected-repos:
+  - autolens_workspace
+  - autolens_workspace_test

@@ -10,14 +10,6 @@
   - autofit_workspace: feature/ep-examples-tests
   - autofit_workspace_test: feature/ep-examples-tests
 
-## psf-oversample-galaxy
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/480
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/481
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-galaxy
-- repos:
   - PyAutoGalaxy: feature/psf-oversample-galaxy
 
 ## ep-graphical-docs
