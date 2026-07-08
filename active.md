@@ -87,6 +87,9 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
 - status: workspace-dev
 - autonomy: supervised (--auto, launched 2026-07-08; local-CPU leg, RAL down)
+- campaign: local-CPU matrix in flight (background); interruption-safe — resume with
+  sweep.py --skip-gpu --skip-existing (dense, then --sparse imaging pass), then
+  aggregate.py; full cold-resume steps on the issue (comment of 2026-07-08 evening)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-preopt-campaign
 - repos:
   - autolens_profiling: feature/profiling-preopt-campaign
