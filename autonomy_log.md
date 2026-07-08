@@ -43,3 +43,5 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | wfc3-reduction | supervised | tests 62/62 / smoke n/a / review FINDINGS(1H+2L)→resolved / heart YELLOW | parked |
 | 2026-07-08 | hst-acs-phase1 | supervised | tests 53/53 / smoke n/a / review resolved / heart YELLOW acked | merged-unchanged (#3) |
 | 2026-07-08 | wfc3-reduction | supervised | tests 62/62 / smoke n/a / review 1H+2L resolved / heart YELLOW acked | PR-open (#5) |
+| 2026-07-08 | version-check-compat-floor (PyAutoConf#118) | supervised | tests 117 pass / smoke n/a / review human-signoff / heart YELLOW-acked-in-session | PR-open (#119) |
+| 2026-07-08 | release-stamping-slim (PyAutoBuild#120) | supervised | tests 71 pass / smoke n/a (workflow-only) / review human-signoff / heart YELLOW-acked-in-session | PR-open (#121) |

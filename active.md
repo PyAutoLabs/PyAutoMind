@@ -3,9 +3,10 @@
 ## release-stamping-slim
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/120
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: awaiting-input — implementation complete + validated (71 pass, YAML clean; uncommitted in worktree); parked at ship sign-off incl. Heart YELLOW ack
-- question: https://github.com/PyAutoLabs/PyAutoBuild/issues/120#issuecomment-4918606381
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- status: library-shipped, awaiting-merge — MERGE GATE: merge PyAutoConf#119 first
+- pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/121
+- autonomy: supervised (--auto, launched 2026-07-08; heart YELLOW 6-reason set acked in-session at ship)
+- heart-ack: workspace validation not passing (5 failed) / 58 stale parked scripts / autolens_assistant pinned behind / install verification not run / no release validation for current source / PyAutoMind open PR 9d old
 - note: R3-core of PyAutoBuild#118; merge-gated behind PyAutoConf#118 (R2). PyAutoBuild claim by
   morning-status-release-rehearsal observed stale at creation (its 3 PRs all merged)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/release-stamping-slim
@@ -15,9 +16,10 @@
 ## version-check-compat-floor
 - issue: https://github.com/PyAutoLabs/PyAutoConf/issues/118
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: awaiting-input — implementation complete + validated (117 pass, 7 new tests; scenario probe clean; uncommitted in worktree); parked at ship sign-off incl. Heart YELLOW ack
-- question: https://github.com/PyAutoLabs/PyAutoConf/issues/118#issuecomment-4918563894
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoConf/pull/119
+- autonomy: supervised (--auto, launched 2026-07-08; heart YELLOW 6-reason set acked in-session at ship)
+- heart-ack: workspace validation not passing (5 failed) / 58 stale parked scripts / autolens_assistant pinned behind / install verification not run / no release validation for current source / PyAutoMind open PR 9d old
 - note: R2 of PyAutoBuild#118 design review; R3 (PyAutoBuild stamping) proceeding in parallel
 - worktree: /home/jammy/Code/PyAutoLabs-wt/version-check-compat-floor
 - repos:
