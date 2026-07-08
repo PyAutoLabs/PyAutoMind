@@ -9,7 +9,7 @@ Dedicated agents for PyAuto:
 
 - release agent
 - feature agent.
-- refactor agent
+- [formalised -> feature/autonomy/6_refactor_conductor.md] refactor agent
 - optimize agent
 - See ChatGPT conversaion.
 
