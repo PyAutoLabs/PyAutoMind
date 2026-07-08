@@ -63,7 +63,7 @@
 ## ep-graphical-docs
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1333
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: library-shipped, awaiting-merge
+- status: library-shipped, awaiting-merge (extended 2026-07-08: seam contract — README §8 lowering table, AGENTS.md seam rule, 4 seam tests replacing the dead #1153 test; suite 1425 pass)
 - pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1334
 - autonomy: supervised (--auto, launched 2026-07-08; heart YELLOW acked in-session at ship)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/ep-graphical-docs
