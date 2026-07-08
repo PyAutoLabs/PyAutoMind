@@ -11,7 +11,7 @@
 ## ep-statistics-audit
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1332
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: research — phase 1 of research/graphical_ep/ep_framework_review.md; statistics audit of autofit/graphical (read-only)
+- status: phase-1-complete — F1–F9 verdict table on #1332; EP wiki page shipped (PyAutoMemory methods_wiki); EP fix batch (F1+F2+F3+F4+F8) pends #1331 guidance; Phase 2 (docs) ready to start
 - worktree: none (read-only audit on PyAutoFit main; findings land in PyAutoMind + issue #1332)
 - repos:
 

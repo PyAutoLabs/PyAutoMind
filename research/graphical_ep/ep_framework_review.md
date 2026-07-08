@@ -54,6 +54,13 @@ prompts, and a retirement decision on the old audit census.
 
 ### Phase 1 — EP statistics correctness review (the wider Fable review)
 **Issued:** PyAutoFit#1332 (2026-07-08) — task `ep-statistics-audit`.
+**Complete (2026-07-08):** findings F1–F9 on #1332 (2 confirmed EP-layer
+bugs w/ repro: MeanField log_norm→plates ctor slip; Gamma+Beta KL reversed
+vs Normal; truncated-KL error quantified 1.5%→140%; evidence bookkeeping
+broken in 3 legs; dead quasi-Newton code). Core EP update algebra verified
+correct. Wiki write-up shipped:
+`PyAutoMemory/methods_wiki/concepts/expectation-propagation.md`.
+Recommended EP fix batch F1+F2+F3+F4+F8 pends #1331 guidance.
 Audit the statistics of `autofit/graphical`: message algebra
 (natural/canonical parameterisations, sufficient statistics, log-normalisers),
 cavity distribution computation, tilted-distribution moment matching / KL
