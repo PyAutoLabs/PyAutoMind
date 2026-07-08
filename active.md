@@ -48,8 +48,6 @@
 - worktree: none (read-only audit on PyAutoFit main; findings land in PyAutoMind + issue #1332)
 - repos:
 
-  - PyAutoArray: feature/psf-oversample-inversion
-  - PyAutoArray: feature/psf-oversample-core
 
 
 
