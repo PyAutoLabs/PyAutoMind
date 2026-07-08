@@ -1,0 +1,150 @@
+# repos.yaml — the organism's body map: the single source of repo IDENTITY.
+#
+# Identity only: GitHub home, category, one-line role. Per-organ POLICY stays
+# with the organ that owns it — what Heart polls/gates lives in
+# PyAutoHeart/config/repos.yaml; what pre_build formats/generates lives in
+# PyAutoBuild/pre_build.sh. Those files must agree with this one on identity;
+# `scripts/repos_sync.py --check` enforces it (including against the actual
+# `git remote` of every local checkout).
+#
+# After editing this file:
+#
+#   python3 PyAutoMind/scripts/repos_sync.py --write
+#
+# regenerates the routing table in <workspace-root>/AGENTS.md and the owner
+# map in PyAutoBrain/skills/WORKFLOW.md, then re-runs the drift checks.
+#
+# Categories with `collapse: true` render as ONE row (label + role) in the
+# routing table, to keep it token-lean; other categories render one row per
+# repo using the repo's own `role:`.
+
+categories:
+  organ: {}
+  library: {}
+  workspace:
+    collapse: true
+    label: "autofit/autogalaxy/autolens_workspace"
+    role: "User-facing example scripts, tutorials, configs for each library."
+  workspace_test:
+    collapse: true
+    label: "\\*_workspace_test"
+    role: "Regression, smoke and parity scripts (code-heavy, doc-light)."
+  workspace_developer:
+    collapse: true
+    label: "\\*_workspace_developer"
+    role: "Developer / profiling / experiment scripts (code-heavy, doc-light)."
+  howto:
+    collapse: true
+    label: "HowToFit / HowToGalaxy / HowToLens"
+    role: "Narrative teaching tutorials."
+  assistant:
+    collapse: true
+    label: "autolens_assistant / euclid_assistant"
+    role: "Science-assistant workspaces (see lensing pointer below)."
+  pipeline: {}
+  project: {}
+  admin: {}
+
+repos:
+  # --- organs -----------------------------------------------------------
+  PyAutoMind:
+    github: PyAutoLabs/PyAutoMind
+    category: organ
+    role: "Intent, goals, priorities, workflow state; every task starts as a markdown prompt here."
+  PyAutoBrain:
+    github: PyAutoLabs/PyAutoBrain
+    category: organ
+    role: "Reasoning/orchestration layer; how work is decomposed and routed; the specialist agents."
+  PyAutoBuild:
+    github: PyAutoLabs/PyAutoBuild
+    category: organ
+    role: "Packaging, tagging, notebook generation, PyPI release execution."
+  PyAutoHeart:
+    github: PyAutoLabs/PyAutoHeart
+    category: organ
+    role: "Health/readiness — the authoritative \"is it safe to release?\" verdict."
+  PyAutoMemory:
+    github: PyAutoLabs/PyAutoMemory
+    category: organ
+    role: "Long-term scientific/software/project knowledge (see science pointer below)."
+
+  # --- scientific libraries ----------------------------------------------
+  PyAutoConf:
+    github: PyAutoLabs/PyAutoConf
+    category: library
+    role: "Shared config + shared utilities used across the stack."
+  PyAutoFit:
+    github: PyAutoLabs/PyAutoFit
+    category: library
+    role: "Model-fitting / non-linear search / aggregator library."
+  PyAutoArray:
+    github: PyAutoLabs/PyAutoArray
+    category: library
+    role: "Data structures (arrays, grids, masks), inversions, interferometry."
+  PyAutoGalaxy:
+    github: PyAutoLabs/PyAutoGalaxy
+    category: library
+    role: "Galaxy light/mass profiles and galaxy modelling."
+  PyAutoLens:
+    github: PyAutoLabs/PyAutoLens
+    category: library
+    role: "Strong-lensing modelling built on the libraries above."
+
+  # --- workspaces ---------------------------------------------------------
+  autofit_workspace:
+    github: PyAutoLabs/autofit_workspace
+    category: workspace
+  autogalaxy_workspace:
+    github: PyAutoLabs/autogalaxy_workspace
+    category: workspace
+  autolens_workspace:
+    github: PyAutoLabs/autolens_workspace
+    category: workspace
+  autofit_workspace_test:
+    github: PyAutoLabs/autofit_workspace_test
+    category: workspace_test
+  autogalaxy_workspace_test:
+    github: PyAutoLabs/autogalaxy_workspace_test
+    category: workspace_test
+  autolens_workspace_test:
+    github: PyAutoLabs/autolens_workspace_test
+    category: workspace_test
+  autofit_workspace_developer:
+    github: Jammy2211/autofit_workspace_developer
+    category: workspace_developer
+  autolens_workspace_developer:
+    github: PyAutoLabs/autolens_workspace_developer
+    category: workspace_developer
+
+  # --- tutorials ----------------------------------------------------------
+  HowToFit:
+    github: PyAutoLabs/HowToFit
+    category: howto
+  HowToGalaxy:
+    github: PyAutoLabs/HowToGalaxy
+    category: howto
+  HowToLens:
+    github: PyAutoLabs/HowToLens
+    category: howto
+
+  # --- assistants / pipelines / projects ----------------------------------
+  autolens_assistant:
+    github: PyAutoLabs/autolens_assistant
+    category: assistant
+  euclid_assistant:
+    github: Jammy2211/euclid_assistant
+    category: assistant
+  euclid_strong_lens_modeling_pipeline:
+    github: PyAutoLabs/euclid_strong_lens_modeling_pipeline
+    category: pipeline
+    role: "Euclid pipeline glue (library/pipeline changes go here, not z_projects/euclid)."
+  autolens_profiling:
+    github: PyAutoLabs/autolens_profiling
+    category: project
+    role: "JAX likelihood-profiling runs and results."
+
+  # --- admin ---------------------------------------------------------------
+  admin_jammy:
+    github: Jammy2211/admin_jammy
+    category: admin
+    role: "Local tooling, worktree helpers, some skills."
