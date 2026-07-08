@@ -14,3 +14,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | psf-oversample-core (#354) | supervised | tests PASS 857+933+331 / smoke waived-at-signoff / review CLEAN / heart YELLOW-human-approved | merged-unchanged |
 | 2026-07-08 | psf-oversample-inversion (#356) | supervised | tests PASS 860+940+334 / smoke n-a-opt-in / review CLEAN / heart YELLOW-unack | parked |
 | 2026-07-08 | ep-graphical-docs (PyAutoFit#1333) | supervised | tests 200/200 (graphical+messages; docs-only diff) / smoke n/a (no behaviour change) / review pending at sign-off / heart pending at sign-off | parked (ship sign-off question) |
+| 2026-07-08 | assistant-deep-audit (phase A, #35) | supervised | tests n/a (doc repo, stated) / smoke n/a (no script surface) / human review pending / heart YELLOW pre-existing (no ack) | parked |
