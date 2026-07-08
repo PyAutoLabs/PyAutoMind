@@ -134,3 +134,14 @@
 - repos:
   - PyAutoGalaxy: feature/dpie-lenstool-param
   - autolens_workspace_test: feature/dpie-lenstool-param
+
+## morning-status-release-rehearsal
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/39
+- session: claude --resume ff9a8b2f-fda0-4bab-8962-1814843aa374
+- status: library-dev
+- autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/morning-status-release-rehearsal
+- repos:
+  - PyAutoHeart: feature/morning-status-release-rehearsal
+  - PyAutoBuild: feature/morning-status-release-rehearsal
+  - PyAutoMind: feature/morning-status-release-rehearsal

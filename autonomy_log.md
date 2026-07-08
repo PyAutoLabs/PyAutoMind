@@ -36,3 +36,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | kxs-design (#362) | supervised | tests n/a (design) / ground-truth k=1 exact / review n-a / heart YELLOW | approved-unchanged (design; phase 2 continues) |
 | 2026-07-08 | hst-acs-phase1 | supervised | tests 53/53 / smoke n/a / review FINDINGS→resolved / heart YELLOW | parked |
 | 2026-07-08 | hst-acs-phase1 | supervised | tests 53/53 / smoke n/a / review FINDINGS→resolved / heart YELLOW (acked) | PR-open (#3) |
+| 2026-07-08 | version-pinning-design-review (#118) | supervised | tests n/a (research) / smoke n/a / review n/a (no code) / heart n/a | parked (report delivered; follow-ups pending human) |
