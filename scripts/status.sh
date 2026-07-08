@@ -29,11 +29,11 @@ dim()  { printf "\033[2m%s\033[0m\n" "$1"; }
 #
 # Prompts are now organised by WORK TYPE at the first folder level
 # (feature/, bug/, refactor/, …) with the target repo/domain as the second
-# level. Lifecycle/meta folders (issued/, z_features/, z_vault/, shelved/,
+# level. Lifecycle/meta folders (issued/, z_features/, z_vault/,
 # autoprompt/, triage/) keep their own names. See README "Prompt taxonomy".
 
 WORK_TYPES=(feature bug refactor docs test release maintenance research experiment)
-LIFECYCLE_DIRS=(triage issued z_features z_vault shelved autoprompt)
+LIFECYCLE_DIRS=(triage issued z_features z_vault autoprompt)
 
 bold "== Prompt inventory (by work type) =="
 printf "%-35s %s\n" "category" "count"

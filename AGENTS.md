@@ -28,11 +28,14 @@ For the full workflow narrative, conventions, and registry schemas, read
   first folder — see [README.md](README.md) "Prompt taxonomy" and `ROUTING.md`.
   Lifecycle/meta folders are **not** work-types and keep their own names:
   `issued/` (routed prompts), `z_features/` (multi-task epic trackers),
-  `z_vault/` (deferred), `shelved/`, and `autoprompt/` (prompts about this repo's
-  own infrastructure).
-- **Registry** — root-level markdown files: `active.md`, `complete.md`,
-  `planned.md`, `parked.md`, `queue.md`, `priority.md`, `ideas.md`. Mutate
-  these only via the skills in `skills/` so commit messages stay consistent.
+  `z_vault/` (deferred prompts — the former `shelved/` merged here), and
+  `autoprompt/` (prompts about this repo's own infrastructure).
+- **Registry** — root-level markdown files, each with one job: `active.md`
+  (in-flight tasks), `planned.md` (scoped, not started), `complete.md`
+  (shipped), `parked.md` (started but not in flight), `queue.md` (ordered
+  input for `register_and_iterate --queue`), `ideas.md` (raw inbox swept by
+  `/intake`). Mutate these only via the skills in `skills/` so commit
+  messages stay consistent.
   `parked.md` holds tasks that were started or scoped but are not currently
   in flight (e.g. work parked in a stash, orphan worktrees); move back to
   `active.md` (or `planned.md` if re-scoping) when resuming.
