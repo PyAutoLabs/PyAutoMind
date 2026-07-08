@@ -15,13 +15,12 @@
 - worktree: none (read-only audit on PyAutoFit main; findings land in PyAutoMind + issue #1332)
 - repos:
 
-## psf-oversample-core
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/354
+## psf-oversample-inversion
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/356
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/355
+- status: library-dev
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-core
+- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-inversion
 - repos:
   - PyAutoArray: feature/psf-oversample-core
 
@@ -41,12 +40,14 @@
 - repos:
   - autolens_profiling: feature/profiling-vram-validation
 
-## aggregator-output-contracts
-- worktree: /home/jammy/Code/PyAutoLabs-wt/aggregator-output-contracts
-  - PyAutoFit: feature/aggregator-output-contracts
-  - autogalaxy_workspace: feature/aggregator-output-contracts
-  - autolens_workspace: feature/aggregator-output-contracts
-  - autolens_workspace_test: feature/aggregator-output-contracts
+## fix-aggregator-dataset-fits
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/478
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/479 (library-first), https://github.com/PyAutoLabs/PyAutoLens/pull/574
+- worktree: /home/jammy/Code/PyAutoLabs-wt/fix-aggregator-dataset-fits
+- repos:
+  - PyAutoGalaxy: feature/fix-aggregator-dataset-fits
+  - PyAutoLens: feature/fix-aggregator-dataset-fits
 
 ## autolens-assistant-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/33

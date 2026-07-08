@@ -166,11 +166,3 @@
 - affected-repos:
   - PyAutoGalaxy
 
-## psf-oversample-inversion
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/356
-- planned: 2026-07-08
-- classification: library
-- suggested-branch: feature/psf-oversample-inversion
-- blocked-by: psf-oversample-core (PR PyAutoArray#355 must merge first; builds on its API)
-- affected-repos:
-  - PyAutoArray
