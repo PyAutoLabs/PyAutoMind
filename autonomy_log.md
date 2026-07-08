@@ -38,3 +38,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | hst-acs-phase1 | supervised | tests 53/53 / smoke n/a / review FINDINGS→resolved / heart YELLOW (acked) | PR-open (#3) |
 | 2026-07-08 | version-pinning-design-review (#118) | supervised | tests n/a (research) / smoke n/a / review n/a (no code) / heart n/a | parked (report delivered; follow-ups pending human) |
 | 2026-07-08 | kxs-core (#362 p2) | supervised | tests PASS 863+946+336 (adaptive GT exact; pixelized kxs proven) / smoke deferred-p3 / review CLEAN / heart YELLOW-human-approved | pr-open (3 PRs; p3 blocked ext; p4 fork parked) |
+| 2026-07-08 | version-check-compat-floor (PyAutoConf#118) | supervised | tests 117 pass (+7 new) / smoke n/a (library-only, no downstream edits) / review pending-at-signoff / heart YELLOW (no ack) | parked |

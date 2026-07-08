@@ -3,9 +3,10 @@
 ## version-check-compat-floor
 - issue: https://github.com/PyAutoLabs/PyAutoConf/issues/118
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: library-dev
+- status: awaiting-input — implementation complete + validated (117 pass, 7 new tests; scenario probe clean; uncommitted in worktree); parked at ship sign-off incl. Heart YELLOW ack
+- question: https://github.com/PyAutoLabs/PyAutoConf/issues/118#issuecomment-4918563894
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- note: R2 of PyAutoBuild#118 design review; R3 (PyAutoBuild refactor) follows once this nears shipping
+- note: R2 of PyAutoBuild#118 design review; R3 (PyAutoBuild stamping) proceeding in parallel
 - worktree: /home/jammy/Code/PyAutoLabs-wt/version-check-compat-floor
 - repos:
   - PyAutoConf: feature/version-check-compat-floor
