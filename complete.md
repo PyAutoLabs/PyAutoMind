@@ -4793,3 +4793,10 @@
   - https://github.com/PyAutoLabs/autolens_workspace_test/pull/146 (merged 76982f6)
 - repos: autogalaxy_workspace, autolens_workspace, autolens_workspace_test
 - notes: Centralised Autogalaxy and Autolens results/workflow examples on `_quick_fit.py`, generating two release-mode fits in `output/results_folder` with full Nautilus samples, aggregator CSV/PNG/FITS artefacts, and latent summaries. Removed workspace-side test-mode path handling and kept user-facing scripts on plain `output/results_folder`; release smoke unsets `PYAUTO_TEST_MODE` for results guides instead. Fixed Autolens result FITS reload noise-map validation and the workspace-test convolution image directory. Verified fresh smoke after clearing `output`: autogalaxy_workspace 8/8, autolens_workspace 9/9, autolens_workspace_test 15/15.
+
+## profiling-polish-design
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/52 (closed)
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/53 (merged 2026-07-08)
+- prompt: issued/polish_phase_1_design.md (phase 1 of maintenance/autolens_profiling/polish.md)
+- summary: design lock-in + results/dashboard groundwork; PreOptimizationTimes convention defined; next phase: polish_phase_2_vram.md
+
