@@ -40,6 +40,16 @@
     approved-unchanged, merged-unchanged. Gotcha: a concurrent session was
     pushing to the Mind checkout mid-run — staged Mind writes by explicit
     filename instead of prompt_sync_push (git add -A) throughout.
+    Follow-ups merged same day after user review: PyAutoBrain#56 — skill
+    reframed as a development skill with reference.md playbook (repo-URL
+    ingestion contract w/ six-dimension API classification validated
+    against nessai + jaxns, bring-your-own-likelihood Stage 1b via the
+    two-function af.Model/Analysis adapter or Fitness._vmap, --auto
+    two-task mapping). Target UX: /sampler_pipeline <github-url> --auto.
+    Conductor question settled: stays faculty+skill (consult-graph: feature
+    agent must be able to consult it); flip trigger = trials become a
+    frequent human verb AND promote scoring hardens into a scriptable
+    SamplerDecision core.
 
 ## psf-oversample-design
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/353
