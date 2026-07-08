@@ -67,8 +67,17 @@
 
 ## profiling-vram-validation
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/54
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/autolens_profiling/issues/54#issuecomment-4917021388
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/55
+- heart-ack:
+  - workspace validation not passing (5 failed, 2026-07-08)
+  - 58 stale parked scripts
+  - 63 script timing regressions
+  - autolens_assistant pinned behind installed
+  - install verification not run
+  - no release validation for current source
+  - open PRs: PyAutoGalaxy 30d, PyAutoLens 30d, PyAutoMind 8d, autolens_workspace_test 29d
+- note: RAL HPC down — A100 probe leg deferred; ingest is a follow-up session when RAL returns
 - autonomy: supervised (--auto, launched 2026-07-08, plan approved in-session)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-vram-validation
 - repos:
