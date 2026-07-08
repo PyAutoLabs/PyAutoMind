@@ -49,3 +49,11 @@
 - repos:
   - PyAutoGalaxy: feature/fix-aggregator-dataset-fits
   - PyAutoLens: feature/fix-aggregator-dataset-fits
+
+## assistant-deep-audit
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
+- status: workspace-dev (phase A: skill prose review)
+- autonomy: supervised (--auto, launched 2026-07-08)
+- worktree: /home/jammy/Code/PyAutoLabs/autolens_assistant (in-place)
+- repos:
+  - autolens_assistant: feature/assistant-deep-audit
