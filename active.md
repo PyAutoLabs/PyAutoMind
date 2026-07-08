@@ -37,7 +37,8 @@
 ## psf-oversample-design
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/353
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-dev
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/353#issuecomment-4915958994
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-design
 - repos:
