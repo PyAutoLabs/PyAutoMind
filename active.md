@@ -14,6 +14,7 @@
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-polish-design
 - repos:
+  - autolens_profiling: feature/profiling-polish-design
 
 ## kaplinghat-sidm-cored-nfw
 - worktree: /home/jammy/Code/PyAutoLabs-wt/kaplinghat-sidm-cored-nfw
