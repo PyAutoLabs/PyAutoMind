@@ -127,11 +127,12 @@
 ## dpie-lenstool-param
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/485
 - session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
-- status: awaiting-input — implementation complete + validated (from_lenstool constructors,
-  analytic pi05 potential replacing 15%-wrong MGE, _ellip min-clamp; PyAutoGalaxy 952 pass,
-  downstream PyAutoLens 336 pass, parity script 6/6; uncommitted); parked at ship sign-off
-  incl. Heart YELLOW ack
-- question: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/485 (sign-off comment)
+- status: library-shipped, awaiting-merge
+- prs: PyAutoGalaxy#487 (library) + PyAutoLens#576 (docs mirror) + autolens_workspace_test#151
+  (parity script; library-first merge order)
+- notes: wrapper classes dPIEMassLenstool/Sph added per in-session user directive; ship
+  authorized in-session ("one shot") incl. Heart YELLOW ack; smoke = guides/profiles/mass.py
+  pass, cluster start_here/modeling timeout pre-existing (control on canonical main also 124)
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - note: psf-oversample-refactor's PyAutoGalaxy PR #484 observed merged at worktree creation
   (HEAD 6fd900a4) — the parallel-claim concern resolved itself; its active.md entry is stale
