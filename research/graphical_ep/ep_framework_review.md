@@ -43,6 +43,9 @@ Grounding material for the review (read, don't bulk-load):
 
 ### Phase 0 — Fable reassessment of the Opus priors/messages findings
 **Issued:** PyAutoFit#1330 (2026-07-08) — task `ep-priors-fable-reassess`.
+**Complete (2026-07-08):** all 9 reproducible findings confirmed on main @
+`0f26ff2d8`; verdicts in `bug/priors/*.md`; decision hub for fixes:
+PyAutoFit#1331 (awaiting maintainer + contributor guidance).
 Re-verify each of `bug/priors/01–14` and the confirmed-bug list in
 `priors_and_messages_math_audit.md` against clean PyAutoFit `main`:
 reproduce, confirm/refute the math, re-rank severity. Output: updated
@@ -50,6 +53,7 @@ per-bug verdicts (fix / park / close), written back into the `bug/priors`
 prompts, and a retirement decision on the old audit census.
 
 ### Phase 1 — EP statistics correctness review (the wider Fable review)
+**Issued:** PyAutoFit#1332 (2026-07-08) — task `ep-statistics-audit`.
 Audit the statistics of `autofit/graphical`: message algebra
 (natural/canonical parameterisations, sufficient statistics, log-normalisers),
 cavity distribution computation, tilted-distribution moment matching / KL
