@@ -1,16 +1,5 @@
 # Active Tasks
 
-## ship-gate
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/38
-- session: claude --resume session_013UptUDNTYiB7izaQJBAKgS
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/ship-gate
-- repos:
-  - PyAutoBrain: feature/ship-gate
-- summary: |
-    Autonomy series task 3: audited autonomous-ship gate definition in
-    AUTONOMY.md (four legs + applicability + YELLOW reason-set
-    acknowledgement) + gate links in ship_* bodies. Batch run 2-9.
 
 
 ## kaplinghat-sidm-cored-nfw
