@@ -29,8 +29,15 @@
 
 ## profiling-polish-design
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/52
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/autolens_profiling/issues/52#issuecomment-4915970488
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/53
+- heart-ack:
+  - workspace validation not passing (7 failed, 2026-06-09)
+  - 55 stale parked scripts
+  - autolens_assistant pinned behind installed
+  - install verification not run
+  - no release validation for current source
+  - open PRs: PyAutoGalaxy 30d, PyAutoLens 29d, PyAutoMind 8d, autolens_workspace_test 29d
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-polish-design
 - repos:

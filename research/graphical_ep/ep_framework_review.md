@@ -58,6 +58,14 @@ step. Validate against the three grounded use cases (HowToFit ch3, IC50,
 cosmology). Output: a findings census in the style of the priors audit,
 each finding with a minimal reproduction.
 
+The statistical write-up from this review also lands in the PyAutoMemory
+wiki: a new `PyAutoMemory/methods_wiki/concepts/expectation-propagation.md`
+concept page (the EP algorithm as PyAutoFit implements it — formal
+equations, approximating family, moment matching, damping, known
+pitfalls/findings), linked from `concepts/bayesian-inference.md` and the
+wiki index. PyAutoMemory is personal: the public Phase 2 docs in PyAutoFit
+must carry their own equations and never reference PyAutoMemory.
+
 ### Phase 2 — Formal documentation of the graphical package
 Package-level documentation stating the exact Bayesian machinery in formal
 equations — factor graph definition, the approximating family
