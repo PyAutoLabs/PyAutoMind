@@ -3,9 +3,9 @@
 ## jwst-nircam-cosmos-web
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: library-dev
+- status: library-dev — implementation complete (75 tests; adapters+dispatch+ERR-noise+PSF lit synthesis); FOUR-BAND INTEGRATION RUNNING OVERNIGHT (scripts/output/overnight_all_bands.log; per-band validation_summary.json); morning: parity table -> review+heart -> park at sign-off (checkpoint comment: issues/6#issuecomment-4919235074)
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- note: branch from main; wfc3-reduction (PR #5) awaiting merge in same repo — disjoint new files except adapter.py/combine.py/pipeline.py seams
+- note: STACKED on feature/wfc3-reduction (PR #5 awaiting merge) — shares adapter/pipeline seams, rebases onto main after #5 merges; 7 local commits unpushed
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
 - repos:
   - PyAutoReduce: feature/jwst-nircam
