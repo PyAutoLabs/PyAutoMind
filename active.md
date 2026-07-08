@@ -1,5 +1,15 @@
 # Active Tasks
 
+## psf-oversample-workspace
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/232
+- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-workspace
+- repos:
+  - autolens_workspace: feature/psf-oversample-workspace
+  - autolens_workspace_test: feature/psf-oversample-workspace
+
 ## ep-examples-tests
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/81
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
@@ -83,20 +93,3 @@
 - worktree: /home/jammy/Code/PyAutoLabs/autolens_assistant (in-place)
 - repos:
   - autolens_assistant: feature/assistant-deep-audit, feature/assistant-deep-audit-tooling, feature/assistant-deep-audit-wiki
-
-## fix-zero-contour-warm-threshold
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/147
-- status: workspace-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/148
-- worktree: /home/jammy/Code/PyAutoLabs-wt/fix-zero-contour-warm-threshold
-- repos:
-  - autolens_workspace_test: feature/fix-zero-contour-warm-threshold
-
-## fix-latent-variables-fast
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/230
-- status: workspace-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/231, https://github.com/PyAutoLabs/autogalaxy_workspace/pull/123
-- worktree: /home/jammy/Code/PyAutoLabs-wt/fix-latent-variables-fast
-- repos:
-  - autolens_workspace: feature/fix-latent-variables-fast
-  - autogalaxy_workspace: feature/fix-latent-variables-fast
