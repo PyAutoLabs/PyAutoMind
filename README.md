@@ -374,8 +374,12 @@ Each task is an H2 section:
 ## <task-name-kebab-case>
 - issue: https://github.com/<owner>/<repo>/issues/<n>
 - session: claude --resume <session-id>           # optional
-- status: <library-dev | workspace-dev | ready-to-ship | …>
+- status: <library-dev | workspace-dev | ready-to-ship | awaiting-input | …>
 - location: <cli-in-progress | ready-for-mobile | …>   # optional, used by /handoff
+- question: <issue-comment-url>   # optional; set when status is awaiting-input
+                                  # (checkpoint-and-continue — PyAutoBrain/AUTONOMY.md)
+- heart-ack:                      # optional; --auto launches: the exact YELLOW
+  - <reason line acknowledged at launch>   # reason set the human acknowledged
 - worktree: ~/Code/PyAutoLabs-wt/<task-name>
 - repos:
   - <RepoName>: feature/<branch-name>
