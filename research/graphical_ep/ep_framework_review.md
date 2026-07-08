@@ -81,6 +81,12 @@ must carry their own equations and never reference PyAutoMemory.
 ### Phase 2 — Formal documentation of the graphical package
 **Issued:** PyAutoFit#1333 (2026-07-08) — task `ep-graphical-docs`
 (--auto, supervised; worktree ep-graphical-docs).
+**Shipped at PR-open (2026-07-08):** PyAutoFit#1334 — new
+`autofit/graphical/README.md` (formal spec, 16 numbered equations,
+code-anchored) + statistical docstrings (damped update, KL contract,
+transform composition convention incl. bug/priors/11 doc half, project
+moment matching, F5 fix). Full suite 1422 pass/14 skip; no API changes;
+workspace impact none. Merge is human.
 Package-level documentation stating the exact Bayesian machinery in formal
 equations — factor graph definition, the approximating family
 q(θ) = Π q_i, cavity q^{\i}, tilted distribution, moment-matching KL
