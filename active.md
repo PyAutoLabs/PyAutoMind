@@ -69,10 +69,10 @@
 
 ## assistant-deep-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
-- status: awaiting-merge (all phases shipped: PRs #36, #37, #38 open as drafts)
+- status: awaiting-input (PRs #36/#37/#38 open; phase D complete, parked at ship sign-off)
 - prs: https://github.com/PyAutoLabs/autolens_assistant/pulls (36 recipes, 37 tooling, 38 wiki)
 - pr: https://github.com/PyAutoLabs/autolens_assistant/pull/36
 - autonomy: supervised (--auto, launched 2026-07-08)
 - worktree: /home/jammy/Code/PyAutoLabs/autolens_assistant (in-place)
 - repos:
-  - autolens_assistant: feature/assistant-deep-audit, feature/assistant-deep-audit-tooling, feature/assistant-deep-audit-wiki
+  - autolens_assistant: feature/assistant-deep-audit, feature/assistant-deep-audit-tooling, feature/assistant-deep-audit-wiki, feature/assistant-deep-audit-general
