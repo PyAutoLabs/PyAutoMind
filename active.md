@@ -1,5 +1,13 @@
 # Active Tasks
 
+## kxs-design
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
+- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
+- status: library-dev (design-only, no worktree; deliverables land in PyAutoMind feature/autoarray)
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- worktree: none
+- repos:
+
 ## hst-acs-phase1
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/2
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
