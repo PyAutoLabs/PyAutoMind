@@ -13,9 +13,8 @@
 ## psf-oversample-galaxy
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/480
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/480#issuecomment-4916967670
-- local-commit: PyAutoGalaxy a4e6561c (feature/psf-oversample-galaxy, unpushed)
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/481
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-galaxy
 - repos:
@@ -46,14 +45,6 @@
 - worktree: none (read-only audit on PyAutoFit main; findings land in PyAutoMind + issue #1332)
 - repos:
 
-## psf-oversample-inversion
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/356
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/357
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-inversion
-- repos:
   - PyAutoArray: feature/psf-oversample-inversion
   - PyAutoArray: feature/psf-oversample-core
 
