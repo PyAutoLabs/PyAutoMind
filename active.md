@@ -1,5 +1,15 @@
 # Active Tasks
 
+## wfc3-reduction
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/4
+- session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- note: stacked on feature/hst-acs-phase1 (PR #3 awaiting merge) — same repo, same session, deliberate
+- worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
+- repos:
+  - PyAutoReduce: feature/wfc3-reduction
+
 ## version-pinning-design-review
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
