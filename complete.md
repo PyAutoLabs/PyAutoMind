@@ -1,3 +1,25 @@
+## psf-oversample-refactor
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/360 (closed)
+- completed: 2026-07-08
+- prs: PyAutoArray#361 + PyAutoGalaxy#484 (merged, mains green)
+- notes: |
+    Series refactor, conservative cut per Refactor Agent too-large verdict.
+    Four oversampled Convolver helper bodies -> two shared engines (net -31);
+    operate/image s>1 switch -> _psf_evaluation_grids_from; gitignore for
+    test_autoarray/output. Invariant exact (863/946/336 unchanged, np/jax
+    parity 2e-16). Deferred: convolver/ package split (recorded on #360).
+    Calibration: merged-unchanged.
+
+## kxs-design
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362 (phase 1 leg; issue stays open for the series)
+- completed: 2026-07-08
+- notes: |
+    kxs phase 1. kxs_design.md + kxs_ground_truth.py in feature/autoarray/:
+    mechanism = adaptive eval -> partial bin to uniform s -> convolve -> bin;
+    k=1 reduces exactly to parent s=2 reference; adaptive k in {2,1} numbers
+    pinned. Fork decided: (b) caller-side util, segment map cached on
+    OverSampler; equality rule relaxes to divisibility. Approved unchanged.
+
 ## psf-oversample-docs
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/234 (closed)
 - completed: 2026-07-08

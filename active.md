@@ -8,14 +8,15 @@
 - worktree: none (read-only research)
 - repos:
 
-## kxs-design
+## kxs-core
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/PyAutoArray/issues/362#issuecomment-4918292813
+- status: library-dev
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- worktree: none
+- worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-core
 - repos:
+  - PyAutoArray: feature/kxs-core
+  - PyAutoGalaxy: feature/kxs-core
 
 ## hst-acs-phase1
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/2
@@ -27,17 +28,6 @@
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place — single new repo, no parallel claims)
 - repos:
   - PyAutoReduce: feature/hst-acs-phase1
-
-## psf-oversample-refactor
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/360
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-shipped, awaiting-merge
-- prs: PyAutoArray#361 + PyAutoGalaxy#484 (independent)
-- autonomy: safe (--auto, refactor cap; launched 2026-07-08, no heart-ack)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-refactor
-- repos:
-  - PyAutoArray: feature/psf-oversample-refactor
-  - PyAutoGalaxy: feature/psf-oversample-refactor
 
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
