@@ -1,29 +1,14 @@
 # Active Tasks
 
-## release-stamping-slim
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/120
-- session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: library-shipped, awaiting-merge — MERGE GATE: merge PyAutoConf#119 first
-- pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/121
-- autonomy: supervised (--auto, launched 2026-07-08; heart YELLOW 6-reason set acked in-session at ship)
-- heart-ack: workspace validation not passing (5 failed) / 58 stale parked scripts / autolens_assistant pinned behind / install verification not run / no release validation for current source / PyAutoMind open PR 9d old
-- note: R3-core of PyAutoBuild#118; merge-gated behind PyAutoConf#118 (R2). PyAutoBuild claim by
-  morning-status-release-rehearsal observed stale at creation (its 3 PRs all merged)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/release-stamping-slim
+## jwst-nircam-cosmos-web
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6
+- session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- note: branch from main; wfc3-reduction (PR #5) awaiting merge in same repo — disjoint new files except adapter.py/combine.py/pipeline.py seams
+- worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
 - repos:
-  - PyAutoBuild: feature/release-stamping-slim
-
-## version-check-compat-floor
-- issue: https://github.com/PyAutoLabs/PyAutoConf/issues/118
-- session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoConf/pull/119
-- autonomy: supervised (--auto, launched 2026-07-08; heart YELLOW 6-reason set acked in-session at ship)
-- heart-ack: workspace validation not passing (5 failed) / 58 stale parked scripts / autolens_assistant pinned behind / install verification not run / no release validation for current source / PyAutoMind open PR 9d old
-- note: R2 of PyAutoBuild#118 design review; R3 (PyAutoBuild stamping) proceeding in parallel
-- worktree: /home/jammy/Code/PyAutoLabs-wt/version-check-compat-floor
-- repos:
-  - PyAutoConf: feature/version-check-compat-floor
+  - PyAutoReduce: feature/jwst-nircam
 
 ## wfc3-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/4
@@ -39,7 +24,7 @@
 ## version-pinning-design-review
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: follow-ups-in-flight — hold lifted 2026-07-08 (PyAutoHeart#39 shipped: rehearsal crons live, R4 done bar run_number residue); R2 → version-check-compat-floor (PyAutoConf#118); R3 files when R2 nears shipping; R1 PyPI-side = batched question to maintainer on the issue
+- status: R2+R3 merged 2026-07-08 (PyAutoConf#119, PyAutoBuild#121); Q2 answered (notebook/Colab cadence stays per-release); ONLY Q1 open — maintainer flips vars.RELEASE_MODE=live or dispatches a release to realign PyPI + unbreak new users; follow-up prompts filed: workspace floor adoption, Heart version_skew rework
 - decision: https://github.com/PyAutoLabs/PyAutoBuild/issues/118#issuecomment-4918433908
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: none (read-only research)
