@@ -18,5 +18,6 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | assistant-deep-audit (phase A, #35) | supervised | tests n/a (doc repo) / smoke n/a / review human-approved / heart pre-existing YELLOW (no ack needed at doc scope) | PR #36 open |
 | 2026-07-08 | psf-oversample-galaxy (#480) | supervised | tests PASS 944+335 (incl. user-directed linear-lp addition) / smoke deferred-to-phase-3 / review CLEAN / heart YELLOW-human-approved | amended (linear-lp addition user-directed; merged #481) |
 | 2026-07-08 | assistant-deep-audit (phase B tooling, #35) | supervised | tests 39p / smoke n/a / review human pending / heart pre-existing YELLOW | parked at sign-off |
-| 2026-07-08 | profiling-vram-validation (autolens_profiling#54) | supervised | tests 25/25 (downstream n/a) / smoke repo-gate + live 9-cell sweep / review CLEAN / heart YELLOW-acked at ship sign-off | PR-open (autolens_profiling#55) |
+| 2026-07-08 | profiling-vram-validation (autolens_profiling#54) | supervised | tests 25/25 (downstream n/a) / smoke repo-gate + live 9-cell sweep / review CLEAN / heart YELLOW-acked at ship sign-off | merged-unchanged (autolens_profiling#55) |
 | 2026-07-08 | assistant-deep-audit (phase C wiki+workflow, #35) | supervised | audit 0 broken + idiom clean / smoke n/a / review human pending / heart pre-existing YELLOW | parked at sign-off |
+| 2026-07-08 | profiling-drift-check (PyAutoHeart#37) | supervised | tests 217/217 / smoke n/a (organism repo) / review CLEAN / heart YELLOW-acked in-session | PR-open (PyAutoHeart#38) |
