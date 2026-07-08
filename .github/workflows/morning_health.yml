@@ -1,0 +1,137 @@
+name: pyauto-morning-health
+
+# ONE aggregated morning verdict — "All is OK" or "Problem: …" — posted to
+# Slack. This replaces the per-workflow GitHub failure emails whose bloat led
+# to the 2026-07-06 org-wide cron pause: the routine builds run again, and this
+# is the single place their outcomes surface each morning.
+#
+# Deterministic bash + jq only — no LLM in the health path (contrast
+# morning_status.yml, the Claude-summarised user-facing digest; separate
+# audience, separate message).
+#
+# Sources (every repo is public, so the only secret is the Slack webhook):
+#   * Heart's Pages badge.json — the authoritative readiness verdict
+#     (GREEN/YELLOW/RED), refreshed daily at 05:00 UTC by
+#     PyAutoHeart/heart-health.yml.
+#   * The latest completed heart-health run — freshness stamp (>26 h = stale;
+#     the verdict is reported with its age rather than pretending currency).
+#   * The latest scheduled/dispatched run of each routine workflow: the daily
+#     release (rehearsal), python matrix, workspace validation, url check,
+#     nss install smoke. A run older than its cadence window is itself a
+#     problem (a cron that stopped firing should not fail silent).
+
+on:
+  schedule:
+    # 06:00 UTC daily, one hour after heart-health's 05:00. GitHub cron
+    # jitters 0–3 h under load, so the ordering is best-effort — hence the
+    # staleness stamp above instead of an assumed fresh verdict.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  morning-health:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BOARD_URL: https://pyautolabs.github.io/PyAutoHeart/
+    steps:
+      - name: Collect Heart verdict + routine run conclusions
+        run: |
+          set -euo pipefail
+          now=$(date -u +%s)
+          : > checks.jsonl
+
+          # ---- Heart readiness verdict (Pages badge) + freshness ------------
+          verdict=$(curl -fsS --max-time 30 "${BOARD_URL}badge.json" \
+                      | jq -r '.message' || echo "UNREACHABLE")
+          hh=$(gh api "repos/PyAutoLabs/PyAutoHeart/actions/workflows/heart-health.yml/runs?status=completed&per_page=1" \
+                 --jq '.workflow_runs[0] // empty | {conclusion, updated_at, html_url}')
+          if [ -n "$hh" ]; then
+            hh_conc=$(jq -r '.conclusion' <<<"$hh")
+            hh_url=$(jq -r '.html_url' <<<"$hh")
+            hh_age_h=$(( (now - $(date -u -d "$(jq -r '.updated_at' <<<"$hh")" +%s)) / 3600 ))
+          else
+            hh_conc="missing"; hh_url="$BOARD_URL"; hh_age_h=9999
+          fi
+          ok=true
+          note=""
+          case "$verdict" in GREEN*) ;; *) ok=false ;; esac
+          [ "$hh_conc" = "success" ] || { ok=false; note=" (health run: ${hh_conc})"; }
+          if [ "$hh_age_h" -gt 26 ]; then ok=false; note="${note} (verdict is ${hh_age_h}h old)"; fi
+          jq -nc --argjson ok "$ok" \
+                 --arg line "Heart verdict: *${verdict}*${note} — <${BOARD_URL}|board> / <${hh_url}|run>" \
+                 '{ok: $ok, line: $line}' >> checks.jsonl
+
+          # ---- Routine workflows: latest non-PR run within cadence window ----
+          check_wf() {  # repo workflow-file label max-age-days
+            local repo="$1" wf="$2" label="$3" max_days="$4"
+            local run conc url age_d ok line
+            run=$(gh api "repos/${repo}/actions/workflows/${wf}/runs?status=completed&exclude_pull_requests=true&per_page=1" \
+                    --jq '.workflow_runs[0] // empty | {conclusion, updated_at, html_url}')
+            if [ -z "$run" ]; then
+              jq -nc --arg line "${label}: no completed runs yet" '{ok: false, line: $line}' >> checks.jsonl
+              return
+            fi
+            conc=$(jq -r '.conclusion' <<<"$run")
+            url=$(jq -r '.html_url' <<<"$run")
+            age_d=$(( (now - $(date -u -d "$(jq -r '.updated_at' <<<"$run")" +%s)) / 86400 ))
+            ok=true; line="${label}: ${conc} (${age_d}d ago) — <${url}|run>"
+            [ "$conc" = "success" ] || ok=false
+            if [ "$age_d" -gt "$max_days" ]; then
+              ok=false; line="${label}: cron has not fired for ${age_d}d (last: ${conc}) — <${url}|run>"
+            fi
+            jq -nc --argjson ok "$ok" --arg line "$line" '{ok: $ok, line: $line}' >> checks.jsonl
+          }
+
+          # Daily weekday release (rehearsal): 4-day window covers weekends.
+          check_wf PyAutoLabs/PyAutoBuild release.yml            "Daily release (rehearsal)" 4
+          check_wf PyAutoLabs/PyAutoBuild python_matrix.yml      "Python matrix (weekly)"    8
+          check_wf PyAutoLabs/PyAutoHeart workspace-validation.yml "Workspace validation (weekly)" 8
+          check_wf PyAutoLabs/PyAutoHeart url-check.yml          "URL check (weekly)"        8
+          check_wf PyAutoLabs/PyAutoFit  nss_install_smoke.yml   "NSS install smoke (weekly)" 8
+
+          cat checks.jsonl
+
+      - name: Compose Slack payload
+        run: |
+          set -euo pipefail
+          uk_date=$(TZ=Europe/London date '+%Y-%m-%d (%a)')
+          jq -s --arg uk_date "$uk_date" '
+            (all(.[]; .ok)) as $all_ok
+            | {
+                text: ("PyAuto morning health — " + $uk_date + " — " + (if $all_ok then "all is OK" else "PROBLEM" end)),
+                blocks: (
+                  [ { type: "header",
+                      text: { type: "plain_text",
+                              text: ((if $all_ok then "☀️ " else "⚠️ " end) + "PyAuto morning health — " + $uk_date) } } ]
+                  + (if $all_ok
+                     then [ { type: "section",
+                              text: { type: "mrkdwn",
+                                      text: ("*All is OK.*\n" + (map(.line) | join("\n"))) } } ]
+                     else [ { type: "section",
+                              text: { type: "mrkdwn",
+                                      text: ("*Problem:*\n" + (map(select(.ok | not) | "• " + .line) | join("\n"))) } },
+                            { type: "section",
+                              text: { type: "mrkdwn",
+                                      text: ("OK:\n" + ((map(select(.ok) | "• " + .line) | join("\n")) // "—")) } } ]
+                     end)
+                )
+              }' checks.jsonl > slack_payload.json
+          jq . slack_payload.json
+
+      - name: POST to Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_UPDATE_WEBHOOK_URL }}
+        run: |
+          if [ ! -s slack_payload.json ]; then
+            echo "::error::slack_payload.json missing or empty"
+            exit 1
+          fi
+          curl -sS -X POST \
+               -H "Content-Type: application/json" \
+               --data @slack_payload.json \
+               --fail-with-body \
+               "$SLACK_WEBHOOK_URL"

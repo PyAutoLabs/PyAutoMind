@@ -1,16 +1,15 @@
 name: pyauto-update-digest
 
 on:
-  # --- PAUSED 2026-07-06: routine cron disabled org-wide; re-enable by uncommenting ---
-  # schedule:
-  #   # GitHub Actions cron is UTC-only and jitters by 0–3h under load (every
-  #   # historical scheduled run of the previous version landed at UTC 07:19–
-  #   # 08:41, never anywhere near the nominal 05:00/06:00 slot). 05:00 UTC
-  #   # nominally fires at UK 06:00 (BST) / 05:00 (GMT); with realistic jitter
-  #   # actual delivery is roughly UK 06:00–09:00 in summer, 05:00–08:00 in
-  #   # winter. That's "morning" — close enough for a digest, and one cron
-  #   # means no per-day dedupe state.
-  #   - cron: "0 5 * * *"
+  schedule:
+    # GitHub Actions cron is UTC-only and jitters by 0–3h under load (every
+    # historical scheduled run of the previous version landed at UTC 07:19–
+    # 08:41, never anywhere near the nominal 05:00/06:00 slot). 05:00 UTC
+    # nominally fires at UK 06:00 (BST) / 05:00 (GMT); with realistic jitter
+    # actual delivery is roughly UK 06:00–09:00 in summer, 05:00–08:00 in
+    # winter. That's "morning" — close enough for a digest, and one cron
+    # means no per-day dedupe state.
+    - cron: "0 5 * * *"
   workflow_dispatch: {}
 
 permissions:
