@@ -1,0 +1,107 @@
+# EP framework review — statistics, docs, diagnostics, deterministic variables
+
+Type: research
+Target: graphical_ep
+Difficulty: too-large
+Autonomy: supervised
+Priority: high
+Status: formalised
+
+## Original request (verbatim)
+
+So, we used Opus to do a review of messages and priors in autofit, which led to all the issues in bug/priors. I want us reassess this using Fable, and for us to go on to do a wider review of the Expectation propagation framework (source code PyAutoFit/autofit/graphical, with examples giving a run through of the graphical / EP modeling in HowToFit/scripts/chapter_3_graphical_models, and the cancer use case in /mnt/c/Users/Jammy/Science/ic50_workspace, and cosmology in /mnt/c/Users/Jammy/Science/concr/scripts/cosmology . Tasks include: (i) assessing if priors, messages and the underlying statistics of EP in autofit has bugs we should fix; (ii) documentation of the graphical package (including formal bayesian equations which ensure an AI agent knows exactly what bayes statistics are being used) and more thorough integration tests in autofit_workspace_test (see autofit_workspace_test/scripts/graphical) and more thorough end-to-end example scripts, written in the style of eamples in autofit_workspace/scripts, which explain the EP framework, its stats and allow for step-by-step run trhoughs of th eEP framework, e.g. something written in the style of something like autolens_workspace/scripts/imaging/likelihood_function.py which allows a user to run EP at the lower level API step-by-step and follow what is happening; (iii) currently there are not many built in tools for analysing the results of an EP fit or monitoring how the fit is progress, can we add more of these (could be funciton calls at end of examples, visuals output during EP and text file metadata in the output folder; (iv) deterministic variables in the cancer use case use inbuilt aspects of the EP composition (find an old PR by rhayes777 on this) but do not use the determinitic_variable API in the low level EP code, should we do anything about that?; (v) scope out analytic likelihood updates in the EP source code; (vi) What other features can we plan? This is obviously a huge prompt, so use your fable magic to plan everything out thoroughly
+
+## Scope and relationship to existing backlog
+
+This is the **correctness / documentation / diagnostics / feature** umbrella
+for the EP framework. It complements — does not duplicate — the two
+performance-focused companions in this folder:
+
+- `ep_scoping.md` — EP scale-up / per-fit overhead (performance).
+- `graphical_scoping.md` — joint-graph scale-up (performance).
+
+It directly supersedes-or-revalidates two existing artefacts:
+
+- `bug/priors/01–14` — the Opus-era review findings. Phase 0 reassesses
+  every one on clean `main` before any fixing (clusters age out; verify
+  reproduction first).
+- `research/autofit/priors_and_messages_math_audit.md` — the parked Opus
+  census that spawned `bug/priors`. Phase 0 folds its confirmed-bug list
+  into the reassessment; retire or update it once the Fable verdicts land.
+
+Grounding material for the review (read, don't bulk-load):
+
+- Source: `PyAutoFit/autofit/graphical/`, `PyAutoFit/autofit/messages/`,
+  `PyAutoFit/autofit/mapper/prior/`.
+- Tutorial walk-through: `HowToFit/scripts/chapter_3_graphical_models/`.
+- Real use cases: cancer IC50 — `/mnt/c/Users/Jammy/Science/ic50_workspace`
+  (non-standard z_projects layout); cosmology —
+  `/mnt/c/Users/Jammy/Science/concr/scripts/cosmology`.
+- Existing integration tests: `autofit_workspace_test/scripts/graphical/`.
+
+## Phases (split into separate issues/PRs at start_dev time — issue each as its predecessor nears shipping, not upfront)
+
+### Phase 0 — Fable reassessment of the Opus priors/messages findings
+Re-verify each of `bug/priors/01–14` and the confirmed-bug list in
+`priors_and_messages_math_audit.md` against clean PyAutoFit `main`:
+reproduce, confirm/refute the math, re-rank severity. Output: updated
+per-bug verdicts (fix / park / close), written back into the `bug/priors`
+prompts, and a retirement decision on the old audit census.
+
+### Phase 1 — EP statistics correctness review (the wider Fable review)
+Audit the statistics of `autofit/graphical`: message algebra
+(natural/canonical parameterisations, sufficient statistics, log-normalisers),
+cavity distribution computation, tilted-distribution moment matching / KL
+projection direction, damping, the mean-field approximation, EPHistory
+convergence criteria (KL divergence evaluation), and the Laplace optimiser
+step. Validate against the three grounded use cases (HowToFit ch3, IC50,
+cosmology). Output: a findings census in the style of the priors audit,
+each finding with a minimal reproduction.
+
+### Phase 2 — Formal documentation of the graphical package
+Package-level documentation stating the exact Bayesian machinery in formal
+equations — factor graph definition, the approximating family
+q(θ) = Π q_i, cavity q^{\i}, tilted distribution, moment-matching KL
+projection, message update and damping rule, deterministic-variable
+handling — written so an AI agent (or human) can verify code against the
+stated math line-by-line. Lives with the source (module docstrings and/or
+`autofit/graphical/README` + docs pages).
+
+### Phase 3 — End-to-end examples + integration tests
+- New `autofit_workspace/scripts` examples in house style, including a
+  step-by-step low-level-API EP run-through in the mould of
+  `autolens_workspace/scripts/imaging/likelihood_function.py` (build the
+  factor graph by hand, run one EP update per cell, inspect messages).
+- Thicken `autofit_workspace_test/scripts/graphical/` integration coverage
+  (deterministic variables, EP vs joint-fit parity, convergence on known
+  posteriors). Library unit tests stay numpy-only.
+
+### Phase 4 — EP diagnostics and monitoring tooling
+Built-in tools for analysing a finished EP fit and monitoring a running
+one: end-of-example analysis function calls, visuals emitted during EP
+(message-field evolution, per-factor KL history), and text/metadata files
+in the output folder (iteration log, convergence table, per-factor status).
+Design should coordinate with the inspection/aggregation ideas already in
+`graphical_scoping.md` (its limitation 3).
+
+### Phase 5 — Deterministic variables reconciliation
+The IC50 cancer use case composes deterministic quantities via the EP
+composition machinery (locate the old rhayes777 PR that added this) but
+does not use the low-level `deterministic_variable` API in
+`autofit/graphical`. Decide: unify on one path, document both, or deprecate
+one. Output: a recommendation with migration cost estimate.
+
+### Phase 6 — Analytic likelihood updates (scoping)
+Scope exact/conjugate factor updates in the EP source — factors whose
+tilted-distribution moments are available in closed form should skip the
+sampler entirely. Map which message families and likelihood forms admit
+analytic updates, what the API would look like, and expected speed-up
+(ties into `ep_scoping.md` performance work).
+
+### Phase 7 — Feature ideation
+From everything learned above, propose further EP features (e.g. richer
+message families, structured/correlated approximations, convergence
+guarantees/diagnostics, parallel factor updates). Output: provenance-tagged
+`ideas.md` bullets or new prompts, not code.
+
+<!-- formalised by the Intake (Conception) Agent on 2026-07-08 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/3589268b-e5c9-4b32-b655-d07f732ea300/scratchpad/ep_review_intake.md; header and phase plan hand-fixed post-apply (title, docs→research, PyAutoFit→graphical_ep, re-homed from docs/autofit/) -->
