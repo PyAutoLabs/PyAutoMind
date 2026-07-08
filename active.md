@@ -26,9 +26,8 @@
 ## wfc3-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/4
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: awaiting-input — implementation complete + validated (62 tests; UVIS matches Bayer published params; IR internally validated; review HIGH+2LOW fixed); parked at ship sign-off incl. Heart YELLOW ack + base-branch fork
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/4#issuecomment-4918658601
-- local-commits: 4 on feature/wfc3-reduction (stacked on hst-acs-phase1), unpushed
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/5
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - note: stacked on feature/hst-acs-phase1 (PR #3 awaiting merge) — same repo, same session, deliberate
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
@@ -56,16 +55,6 @@
   - PyAutoArray: feature/kxs-core
   - PyAutoGalaxy: feature/kxs-core
   - autolens_workspace: feature/kxs-core
-
-## hst-acs-phase1
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/2
-- session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/3
-- autonomy: supervised (--auto, launched 2026-07-08; heart YELLOW reason set acked by maintainer at sign-off)
-- worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place — single new repo, no parallel claims)
-- repos:
-  - PyAutoReduce: feature/hst-acs-phase1
 
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337

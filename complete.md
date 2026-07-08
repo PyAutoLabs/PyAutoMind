@@ -1,3 +1,18 @@
+## hst-acs-phase1
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/2 (closed)
+- completed: 2026-07-08
+- prs: PyAutoReduce#3 (squash-merged 3577c2f)
+- notes: |
+    HST/ACS pipeline phase 1: TargetSpec + acs_wfc adapter, MAST acquire
+    (HAP hygiene, CRDS sync, size-capped evicting cache), AstroDrizzle
+    wrapper (pixfrac/kernel dials, WHT diagnostic, single-exposure branch),
+    Bayer noise recipe w/ Casertano R, tier-1 ePSF, WCS-intact packaging +
+    reduction.json. 53 tests. Parity on slacs0008-0004: data 0.941 / noise
+    0.925 (recipe closes); ~6% legacy flux scale accepted-as-documented
+    (research/pyautoreduce/legacy_flux_scale_parity.md chases it, low pri).
+    PyAutoLens comparative fits + 2nd/3rd lens parity deferred by user.
+    Review FINDINGS resolved pre-ship; heart YELLOW acked by maintainer.
+
 ## psf-oversample-refactor
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/360 (closed)
 - completed: 2026-07-08
