@@ -33,3 +33,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | ep-review phase 7 ideation (umbrella) | supervised | research (read-only): 11 ideas → ideas.md / other gates n/a | complete |
 | 2026-07-08 | psf-oversample-docs (#234) | supervised | tests n/a (docs) / guide-runs-clean / review CLEAN / heart YELLOW-human-approved | merged-unchanged |
 | 2026-07-08 | psf-oversample-refactor (#360) | safe | tests PASS 863+946+336 unchanged / smoke n-a-refactor / review CLEAN / heart YELLOW-human-approved | pr-open (PyAutoArray#361 + PyAutoGalaxy#484; set at merge) |
+| 2026-07-08 | kxs-design (#362) | supervised | tests n/a (design) / ground-truth k=1 exact / review n-a / heart YELLOW | parked (design sign-off) |

@@ -3,7 +3,8 @@
 ## kxs-design
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-dev (design-only, no worktree; deliverables land in PyAutoMind feature/autoarray)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/362#issuecomment-4918292813
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - worktree: none
 - repos:
