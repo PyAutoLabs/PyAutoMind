@@ -58,15 +58,6 @@
 
 
 
-## profiling-drift-check
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/37
-- status: awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/38
-- autonomy: supervised (--auto, launched 2026-07-08, plan on issue)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-drift-check
-- repos:
-  - PyAutoHeart: feature/profiling-drift-check
-
 ## assistant-deep-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
 - status: awaiting-input (PRs #36/#37/#38 open; phase D complete, parked at ship sign-off)
