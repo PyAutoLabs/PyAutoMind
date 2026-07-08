@@ -1,5 +1,16 @@
 # Active Tasks
 
+## release-stamping-slim
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/120
+- session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
+- note: R3-core of PyAutoBuild#118; merge-gated behind PyAutoConf#118 (R2). PyAutoBuild claim by
+  morning-status-release-rehearsal observed stale at creation (its 3 PRs all merged)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/release-stamping-slim
+- repos:
+  - PyAutoBuild: feature/release-stamping-slim
+
 ## version-check-compat-floor
 - issue: https://github.com/PyAutoLabs/PyAutoConf/issues/118
 - session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
