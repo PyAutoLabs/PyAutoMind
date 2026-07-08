@@ -12,24 +12,13 @@
 ## psf-oversample-refactor
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/360
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: awaiting-input
-- question: see issue comment (ship word; Heart YELLOW gated the safe-level autonomous ship)
-- local-commits: PyAutoArray + PyAutoGalaxy on feature/psf-oversample-refactor, unpushed
+- status: library-shipped, awaiting-merge
+- prs: PyAutoArray#361 + PyAutoGalaxy#484 (independent)
 - autonomy: safe (--auto, refactor cap; launched 2026-07-08, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-refactor
 - repos:
   - PyAutoArray: feature/psf-oversample-refactor
   - PyAutoGalaxy: feature/psf-oversample-refactor
-
-## psf-oversample-docs
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/234
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: workspace-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/235
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-oversample-docs
-- repos:
-  - autolens_workspace: feature/psf-oversample-docs
 
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
