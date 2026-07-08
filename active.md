@@ -3,7 +3,7 @@
 ## ep-priors-fable-reassess
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1330
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: research
+- status: phase-0-complete — verdicts in bug/priors/*.md + issue table posted; awaiting user decisions (fix-batch go-ahead; 03 invariant; 05 raise-vs-clamp; 06 strictness) before Phase 1
 - worktree: none (read-only reassessment on PyAutoFit main @ 0f26ff2d8; verdicts land in PyAutoMind bug/priors)
 - repos:
 
