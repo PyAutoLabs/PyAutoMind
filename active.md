@@ -80,7 +80,7 @@
 
 ## assistant-deep-audit
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/35
-- status: awaiting-input (PRs #36/#37/#38 open; phase D complete, parked at ship sign-off)
+- status: awaiting-merge (audit complete: PRs #36, #37, #38, #39 open as drafts)
 - prs: https://github.com/PyAutoLabs/autolens_assistant/pulls (36 recipes, 37 tooling, 38 wiki)
 - pr: https://github.com/PyAutoLabs/autolens_assistant/pull/36
 - autonomy: supervised (--auto, launched 2026-07-08)
