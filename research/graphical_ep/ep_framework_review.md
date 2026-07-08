@@ -5,7 +5,9 @@ Target: graphical_ep
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: execution-complete (2026-07-08) — all 8 phases done; shipped or
+parked on human review (see the per-phase annotations below and the
+wrap-up on PyAutoFit#1330)
 
 ## Original request (verbatim)
 
@@ -156,6 +158,12 @@ analytic updates, what the API would look like, and expected speed-up
 (ties into `ep_scoping.md` performance work).
 
 ### Phase 7 — Feature ideation
+**Complete (2026-07-08):** 11 provenance-tagged ideas appended to
+`PyAutoMind/ideas.md` (`[from: ep-review*]`) — adaptive damping,
+block-Gaussian mean field, power EP, EP health report, warm-started
+factor searches, StochasticEPOptimiser audit, evidence-correct model
+comparison, hierarchical exact updates, resumable EP, JAX-native Laplace,
+HowToFit ch3 refresh. No prompts bulk-issued (intake sweeps ideas.md).
 From everything learned above, propose further EP features (e.g. richer
 message families, structured/correlated approximations, convergence
 guarantees/diagnostics, parallel factor updates). Output: provenance-tagged
