@@ -63,6 +63,12 @@ the second folder, e.g. `feature/autolens/potential_corrections.md` or
 `bug/autoarray/mask_edge_case.md`. Don't touch `active.md` or `issued/` directly
 — those are managed by `/start_dev` / `/create_issue`.
 
+To skip the manual filing, run **`/intake`** (the PyAutoBrain Intake/Conception
+Agent): it classifies a raw idea into the right `<work-type>/<target>/` folder,
+writes the light header (incl. the optional `Difficulty:/Autonomy:/Priority:`
+keys — see README "Prompt file format"), and files the prompt for you. It files a
+prompt only; `/start_dev` remains the separate next step.
+
 ## When you are asked to start work on an existing prompt
 
 Use `/start_dev <work-type>/<target>/<name>.md` (older `<target>/<name>.md` paths

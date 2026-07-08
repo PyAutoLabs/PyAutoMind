@@ -346,12 +346,22 @@ Free-form markdown. Strong conventions:
   Repos:
   - PyAutoLens
   - autolens_workspace
-
+  Difficulty: medium        # small | medium | large | too-large
+  Autonomy: supervised      # safe | supervised | human-required
+  Priority: normal          # low | normal | high
   Status: draft
   ```
 
   When present, `Type:` should match the work-type folder. The goal is light
   structure, not bureaucracy — prompts stay free-form prose.
+
+  The optional `Difficulty:` / `Autonomy:` / `Priority:` keys let both people and
+  PyAutoBrain see, at a glance, how hard a task is, whether an agent can safely
+  take it on, and how urgent it is. The **Intake (Conception) Agent** writes these
+  automatically when it formalises a raw idea (`/intake`), sourcing `Difficulty:`
+  from the shared sizing faculty the Feature Agent also uses — so the value shown
+  up front is the one the Feature Agent later acts on. Still a convention, not a
+  schema: all keys remain optional and there is **no YAML frontmatter**.
 
 ### `active.md` schema
 
