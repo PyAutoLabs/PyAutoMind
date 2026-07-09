@@ -2,7 +2,8 @@
 
 ## delaunay-qhull-callback
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367
-- status: awaiting-input — phase 1 implementation complete + parity-validated (visibility-walk locator, NOT the planned 2-ring — see issue update; JIT−eager 5.4e-9, 873 tests pass, uncommitted); parked at ship sign-off incl. Heart YELLOW ack; phase 2 (autolens_workspace_test parity suite) follows behind the library-first gate
+- status: library-shipped, workspace-pending — PR #368 open (commit 041d5f60, 873 tests, review CLEAN, pending-release); merge stays human; phase 2 = autolens_workspace_test parity suite on the claimed branch behind the library-first gate
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/368
 - question: https://github.com/PyAutoLabs/PyAutoArray/issues/367#issuecomment-4925762140 (answered in-session: ship approved)
 - autonomy: supervised (--auto, launched 2026-07-09; refactor @ too-large, effective min(supervised, safe)=supervised; ship sign-off + heart-ack given in-session 2026-07-09)
 - heart-ack:

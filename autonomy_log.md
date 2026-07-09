@@ -73,3 +73,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | weak-strong-lensing | supervised | tests 357-pass / smoke sim+fit+TEST_MODE+real-joint-fit / review human-signoff / heart YELLOW-acked-set | merged-unchanged (587+251, 2026-07-09) |
 | 2026-07-09 | csv-api-lenstool (PyAutoGalaxy#490) | supervised | tests 12 new + 962 suite / smoke lenstool example end-to-end at identical 0.0680" parity post-port / review CLEAN / heart-ack carried | merged-unchanged (#491+#252; loud guards stood) |
 | 2026-07-09 | weak-real-data (7a) | supervised | tests 364-pass / smoke n-a-library / review n-a-parked / heart YELLOW-acked-set | merged-unchanged (589+253, 2026-07-09; merge pre-authorized by human) |
+| 2026-07-09 | delaunay-qhull-callback (PyAutoArray#367) | supervised | tests 873-pass / smoke n-a (no active delaunay smoke entry; production parity gate 5.4e-9 instead) / review CLEAN / heart YELLOW-acked-set in-session | PR-open (#368) |
