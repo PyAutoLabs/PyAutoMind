@@ -17,6 +17,7 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-strong-lensing
 - repos:
   - autolens_workspace: feature/weak-strong-lensing (parallel claim, catalogue-regen coordination noted)
+  - PyAutoLens: feature/weak-strong-lensing (scope extension: mixed-graph combined-visualization fix, commit 7d8139a9)
 
 
 ## refactor-post-phase3
