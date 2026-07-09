@@ -15,7 +15,7 @@
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
 - session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
-- status: workspace-dev — phase 0 (orient + legacy-dataset inspection)
+- status: workspace-dev — phases 0-2 done (pixel parity: data ratio 1.04; legacy noise lacks R=1.364; legacy frame is rot270 of north-up; acquire duplicate-exposure bug filed bug/pyautoreduce/); phase 3: both Nautilus parity fits sampling in background (resume: prototypes/slacs1430_parity_fit.py legacy|autoreduce, Nautilus auto-resumes)
 - autonomy: safe effective (--auto launched 2026-07-09; plan human-approved in-session pre-launch; no heart-ack given)
 - note: keck-ao pattern — analysis on PyAutoReduce main, NO worktree claim (frame-products holds it); outputs gitignored scripts/output/; script commit + PR gated until claim releases; autolens_assistant is driver-only (public template, no commits, scratch only)
 - worktree: none (analysis on PyAutoReduce main; branch feature/slacs1430-acs-parity only at ship)
