@@ -1,5 +1,14 @@
 # Active Tasks
 
+## docs-theming-hub
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/1
+- session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
+- status: library-dev — phases B+C of docs middle path (phase A = rtd-hygiene, merged); hub repo created 2026-07-09, site work on its main; theming on feature/docs-theming-hub
+- autonomy: supervised effective (--auto chain from 2026-07-09 launch; human directed "do everything else you can now then stop for the night" — PRs end at PR-open, batched ack question for morning)
+- note: zero-cost (pyautolabs.github.io default domain; RETROFIT.md documents paid-domain flip); shared pyauto.css accents Fit #e0700e / Galaxy #0d9488 / Lens #7c4dff; Fit .gitignore docs/_static must be lifted
+- worktree: ~/Code/PyAutoLabs-wt/docs-theming-hub
+- repos:
+
 ## assistant-ref-mechanics
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/43
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26

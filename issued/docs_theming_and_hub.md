@@ -5,11 +5,11 @@ Target: libraries
 Difficulty: medium
 Autonomy: supervised
 Priority: medium
-Status: planned
+Status: formalised
 
-**Do not issue yet** — issue when phase A ([rtd_hygiene.md](rtd_hygiene.md)) nears
-shipping (no bulk-issuing of prompt series). Phase A carries the census findings and the
-RTD/CI hygiene scope; this prompt holds the decision record and phases B/C.
+Phase A (rtd_hygiene, PyAutoFit#1341) merged 2026-07-09 — this prompt graduates.
+Phase A carried the census findings and the RTD/CI hygiene scope; this prompt holds the
+decision record and phases B/C.
 
 ## Original request (verbatim)
 
