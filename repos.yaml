@@ -147,6 +147,11 @@ repos:
     category: project
     role: "JAX likelihood-profiling runs and results."
 
+  pyautolabs.github.io:
+    github: PyAutoLabs/pyautolabs.github.io
+    category: project
+    role: "Public front door \u2014 static docs hub served at pyautolabs.github.io (GitHub Pages)."
+
   # --- admin ---------------------------------------------------------------
   admin_jammy:
     github: Jammy2211/admin_jammy
