@@ -1,11 +1,19 @@
 # Active Tasks
 
+## keck-ao-reduction
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/11
+- status: library-dev — implementing K1–K3 per the #9 design (drizzle backend + B1938+666 anchor user-adopted 2026-07-09)
+- autonomy: supervised (--auto, launched 2026-07-09; feature @ large)
+- note: carries the #9 write leg (docs/design/keck_ao.md); #9 closes when this merges. Built on post-refactor main 371721f (PR #10 merged human-directed this session)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/keck-ao-reduction
+- repos:
+  - PyAutoReduce: feature/keck-ao-reduction
+
 ## keck-ao-reduction-plan
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/9
-- status: awaiting-input — research complete; full draft keck_ao.md + phasing (K1–K3) + 3 batched decisions on the issue (combine backend, validation anchor, sequencing; recommendations stated, proceeding on them unless redirected)
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/9#issuecomment-4924402662
+- status: resolved-pending-merge — batched decisions answered in-session 2026-07-09 (drizzle backend, B1938+666 anchor; sequencing resolved by #10 merge); the design-doc deliverable ships on keck-ao-reduction's branch; close #9 when PyAutoReduce#11's PR merges
+- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/9#issuecomment-4924402662 (answered)
 - autonomy: supervised (--auto, launched 2026-07-09)
-- note: PyAutoReduce claimed by refactor-post-phase3 (in-place) — no repo claim taken; the docs/design/keck_ao.md write leg + PR is parked until that task ships (then worktree ~/Code/PyAutoLabs-wt/keck-ao-reduction-plan, branch feature/keck-ao-reduction-plan; adopt post-refactor module names)
 - worktree: none (read-only)
 - repos:
 
@@ -24,13 +32,12 @@
 ## refactor-post-phase3
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: library-shipped, awaiting-merge
+- status: MERGED 2026-07-09 (371721f, squash) — human-directed merge in the keck-ao session (user authorized in-conversation); main checkout returned to main; PyAutoReduce claim released. Entry ready to retire to complete.md by its owning session (branch deletion via repo_cleanup)
 - pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/10
 - notes: witnesses byte-identical both paths; 2 disclosed fix riders (CPDIS fobj, ePSF window +20) caught by baseline capture
 - autonomy: default present-and-wait (refactor cap safe; no --auto given)
-- worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
+- worktree: released (was in-place)
 - repos:
-  - PyAutoReduce: refactor/post-phase3-consolidation
 
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
