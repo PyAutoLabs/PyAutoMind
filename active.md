@@ -128,7 +128,7 @@
 ## morning-status-release-rehearsal
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/39
 - session: claude --resume ff9a8b2f-fda0-4bab-8962-1814843aa374
-- status: awaiting-input — PRs all MERGED 2026-07-08; final leg blocked: PYAUTO_UPDATE_WEBHOOK_URL secret is malformed (curl exit 3; digest has failed daily at the same POST since 2026-05-17 = likely the original email bloat). User must re-set the secret, then re-dispatch morning_health.yml on Mind main
+- status: RESOLVED 2026-07-09 (by session 5d58ef6a) — user re-set BOTH May-17 secrets (webhook + CLAUDE_CODE_OAUTH_TOKEN); morning_health dispatched → Slack POST success; digest needed 3 more CI fixes on Mind main (checkout, show_full_output, allowedTools Write; 51e869e/d042289/0b78d5f) → fully green, delivered. Details: issues/39#issuecomment-4924031684. Entry ready to retire to complete.md by its owning session
 - prs: PyAutoBuild#119 + PyAutoHeart#40 + PyAutoMind#41 (independent; merge Mind last is tidiest — its morning_health reads the others)
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
