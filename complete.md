@@ -5375,3 +5375,9 @@
 - prompt: issued/profiling_agent.md (incl. the phase-1 design decision)
 - summary: profiling conductor live — the proprioceptive function (campaign/ingest/triage); /profiling command installed; future modes (JAX compile-time, slow-function hunting) staged in the prompt
 
+
+## colab-maturity
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/124 (left open as phase tracker for colab-link-rot)
+- completed: 2026-07-09
+- library-pr: PyAutoConf#120 + PyAutoBuild#125 + PyAutoHeart#44 (all merged 2026-07-09)
+- note: Colab maturity phase 1. setup_colab rewritten around a _PROJECTS registry (6 notebook repos, for_autofit/for_howto* added, GPU-detect + import-time-env-mutation fixes, --depth 1 tag-pinned clones, first 15 unit tests); build_util.inject_colab_setup() injects the setup cell into every generated notebook (coverage 9/489 -> all at next release, hand-written setups skipped, unknown project raises); url_check.sh forbids blob/main + workspace chapter_* Colab URL forms (Monday sweep intentionally red until phase 2). Census in issued/colab_maturity.md.
