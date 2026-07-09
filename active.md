@@ -131,3 +131,12 @@
 - repos:
   - PyAutoArray: feature/nnls-solver-optimization
 - note: rectangular+MGE is the priority; Phase A profiling runs standalone in autolens_profiling/scratch/nnls_speedup/ (no claim on autolens_profiling — profiling-preopt-campaign holds it); go/no-go + Delaunay next-target verdict due on the issue before source edits
+
+## nautilus-nn-bottleneck
+- issue: https://github.com/Jammy2211/autofit_workspace_developer/issues/18
+- session: claude --resume 28036441-6e24-4792-859a-b002a8716be2
+- status: workspace-dev
+- autonomy: supervised (no --auto; plan approved in-session 2026-07-09)
+- note: research task — profile Nautilus NN-training/overhead anatomy on fast likelihoods, tuning sweep + vectorized=True batching, GPU-MLP/async-training prototypes, JAX-ification verdict; PyAutoFit READ-ONLY (claimed by ep-diagnostics + ep-graphical-docs; wrapper changes escalate as follow-up prompts)
+- worktree: ~/Code/PyAutoLabs-wt/nautilus-nn-bottleneck
+- repos:
