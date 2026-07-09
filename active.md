@@ -114,18 +114,6 @@
 - repos:
   - autolens_assistant: feature/assistant-wiki-release
 
-## regen-workspace-notebooks
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/255
-- session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
-- status: workspace-shipped, awaiting-merge — PR at PR-open per --auto contract (merge human)
-- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/256
-- autonomy: safe (--auto, launched 2026-07-09; maintenance cap safe; ends at PR-open)
-- heart-ack: 2026-07-09 — YELLOW set ⊆ maintainer-acked set at #592 ship (workspace-validation stale-fail; 58 parked scripts; assistant pin-behind; 10d Mind PR); user instruction 'both --auto to PR-open'
-- worktree: ~/Code/PyAutoLabs-wt/regen-workspace-notebooks
-- note: follow-up from #592 — regenerate all notebooks + catalogue (global drift); generated-artifact only, no scripts/ edits
-- repos:
-  - autolens_workspace: feature/regen-workspace-notebooks
-
 ## colab-sim-verify-install
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/45
 - session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
@@ -138,15 +126,3 @@
   - PyAutoConf: feature/colab-sim-verify-install
   - PyAutoHeart: feature/colab-sim-verify-install
 
-## plot-rst-functional-rewrite
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/595
-- session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
-- status: library-shipped, awaiting-merge — 2 PRs at PR-open per --auto contract (merge human)
-- prs: PyAutoLens#596 + PyAutoGalaxy#494
-- autonomy: supervised (--auto, launched 2026-07-09; docs medium→effective supervised; user pre-authorized 'both --auto to PR-open')
-- heart-ack: 2026-07-09 — YELLOW set ⊆ maintainer-acked set at #592 ship (workspace-validation stale-fail; 58 parked scripts; assistant pin-behind; 10d Mind PR)
-- worktree: ~/Code/PyAutoLabs-wt/plot-rst-functional-rewrite
-- note: follow-up from #592 — document the functional plot API in plot.rst (autogalaxy+autolens); PyAutoFit deferred behind #1334
-- repos:
-  - PyAutoLens: feature/plot-rst-functional-rewrite
-  - PyAutoGalaxy: feature/plot-rst-functional-rewrite

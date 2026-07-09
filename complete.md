@@ -5406,3 +5406,15 @@
 - completed: 2026-07-09
 - prs: PyAutoLens#594 + PyAutoGalaxy#493 (merged 2026-07-09)
 - note: Final Colab-maturity leg, human-directed claim override ("just do the merge dont worry about the block"); zero file overlap with release-docs-polish-learn-paths verified. Fixed 6 dead docs/howto* Colab links (tutorial_5_complex_source, tutorial_11 double extension, tutorial_5_model_fit renumber, 3 removed chapter_optional entries) + purged 6 stale allowlist Colab entries. All Colab URLs in both repos machine-verified.
+
+## regen-workspace-notebooks
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/255 (closed)
+- completed: 2026-07-09
+- prs: autolens_workspace#256 (merged-unchanged 2026-07-09, squash)
+- note: follow-up from #592 (--auto safe). Regenerated 258 notebooks + llms-full.txt + workspace_index.json from scripts/ via PyAutoBuild generate.py; 0 scripts/ changes. Verified deterministic (two runs byte-identical) + all valid JSON. Cleared the global generated-artifact drift.
+
+## plot-rst-functional-rewrite
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/595 (closed)
+- completed: 2026-07-09
+- prs: PyAutoLens#596 + PyAutoGalaxy#494 (both merged-unchanged 2026-07-09, squash)
+- note: follow-up from #592 (--auto supervised, maintainer pre-authorized to PR-open). Added functional-API 'Plot Customization' (title/colormap/use_log10/output_* kwargs; config/visualize defaults) + 'Figure Output' (autoarray.plot.Output) sections to plot.rst, grounded on dir(autolens.plot)/dir(autoarray.plot) + workspace plot guide; re-audit clean, docutils parses, CRLF-safe. PyAutoFit plot.rst still deferred behind ep-graphical-docs #1334 (same removed-OO issue).
