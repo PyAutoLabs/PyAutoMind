@@ -6,6 +6,7 @@
 - autonomy: safe (--auto, launched 2026-07-09; feature cap safe at ≤ medium; ends at PR-open)
 - worktree: ~/Code/PyAutoLabs-wt/alma-interferometer
 - repos:
+  - PyAutoReduce: feature/alma-interferometer
 
 ## keck-ao-acceptance-checks
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13
