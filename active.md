@@ -127,7 +127,8 @@
 ## colab-maturity
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/124
 - session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
-- status: library-dev
+- status: library-shipped, awaiting-merge — merge PyAutoConf#120 + PyAutoBuild#125 together (injection ↔ registry coupling); PyAutoHeart#44 independent (turns Monday sweep red until phase 2)
+- library-pr: https://github.com/PyAutoLabs/PyAutoConf/pull/120 + https://github.com/PyAutoLabs/PyAutoBuild/pull/125 + https://github.com/PyAutoLabs/PyAutoHeart/pull/44
 - autonomy: default present-and-wait (plan approved in-session 2026-07-09; approved through PR-open)
 - phase-2: parked prompt feature/workspaces/colab_link_rot.md (issue when this nears ship)
 - worktree: ~/Code/PyAutoLabs-wt/colab-maturity
