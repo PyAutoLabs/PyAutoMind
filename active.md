@@ -3,7 +3,9 @@
 ## weak-likelihood-function
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/245
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: workspace-dev
+- status: awaiting-input — guide written+validated+committed LOCALLY (914c45ae; by-hand == FitWeak == AnalysisWeak to 8 d.p.); parked at ship sign-off
+- question: (sign-off comment on autolens_workspace#245)
+- resume: on approval push + open pending-release PR + merge on green + close #245
 - autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
 - note: weak series step 5 — workspace-only likelihood guide; no library change
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-likelihood-function
