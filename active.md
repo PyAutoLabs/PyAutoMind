@@ -1,19 +1,5 @@
 # Active Tasks
 
-## weak-small-datasets
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/583
-- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: shipped, awaiting-merge — approved in-session; CI running; merge autoarray-first
-- autoarray-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/366
-- autolens-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/584
-- autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
-- note: weak series step 9 — catalogue cap for PYAUTO_SMALL_DATASETS; autoarray helper + autolens simulator consumer; merge autoarray first
-- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-small-datasets
-- repos:
-  - PyAutoArray: feature/weak-small-datasets
-  - PyAutoLens: feature/weak-small-datasets
-
-
 ## refactor-post-phase3
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
@@ -87,7 +73,6 @@
 - status: phase-1-complete — F1–F9 verdict table on #1332; EP wiki page shipped (PyAutoMemory methods_wiki); EP fix batch (F1+F2+F3+F4+F8) pends #1331 guidance; Phase 2 (docs) ready to start
 - worktree: none (read-only audit on PyAutoFit main; findings land in PyAutoMind + issue #1332)
 - repos:
-
 
 
 ## profiling-preopt-campaign
