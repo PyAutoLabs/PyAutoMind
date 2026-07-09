@@ -86,8 +86,15 @@ jobs:
             jq -nc --argjson ok "$ok" --arg line "$line" '{ok: $ok, line: $line}' >> checks.jsonl
           }
 
-          # Daily weekday release (rehearsal): 4-day window covers weekends.
-          check_wf PyAutoLabs/PyAutoBuild release.yml            "Daily release (rehearsal)" 4
+          # Nightly release driver (PyAutoBrain nightly-release.yml, 02:00 UTC
+          # cron — Build's release.yml no longer has one). The workflow runs
+          # every night even while the kill switch pauses releases (it exits
+          # cleanly at step 0), so its latest run is the heartbeat and this
+          # check is the design's missing-outcome watchdog: silence from the
+          # nightly always means the driver itself broke. max-age 0d: by the
+          # 06:00 digest, last night's 02:00 run is hours old; a single missed
+          # night already shows 1d and flags.
+          check_wf PyAutoLabs/PyAutoBrain nightly-release.yml    "Nightly release driver"    0
           check_wf PyAutoLabs/PyAutoBuild python_matrix.yml      "Python matrix (weekly)"    8
           check_wf PyAutoLabs/PyAutoHeart workspace-validation.yml "Workspace validation (weekly)" 8
           check_wf PyAutoLabs/PyAutoHeart url-check.yml          "URL check (weekly)"        8
