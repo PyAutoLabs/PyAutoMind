@@ -2,9 +2,10 @@
 
 ## keck-ao-reduction-plan
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/9
-- status: research-dev — read-only literature/design phase (SHARP papers, NIRC2 tooling); findings land on the issue
+- status: awaiting-input — research complete; full draft keck_ao.md + phasing (K1–K3) + 3 batched decisions on the issue (combine backend, validation anchor, sequencing; recommendations stated, proceeding on them unless redirected)
+- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/9#issuecomment-4924402662
 - autonomy: supervised (--auto, launched 2026-07-09)
-- note: PyAutoReduce claimed by refactor-post-phase3 (in-place) — no repo claim taken; the docs/design/keck_ao.md write leg + PR is parked until that task ships (then worktree ~/Code/PyAutoLabs-wt/keck-ao-reduction-plan, branch feature/keck-ao-reduction-plan)
+- note: PyAutoReduce claimed by refactor-post-phase3 (in-place) — no repo claim taken; the docs/design/keck_ao.md write leg + PR is parked until that task ships (then worktree ~/Code/PyAutoLabs-wt/keck-ao-reduction-plan, branch feature/keck-ao-reduction-plan; adopt post-refactor module names)
 - worktree: none (read-only)
 - repos:
 
