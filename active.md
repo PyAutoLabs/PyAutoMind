@@ -102,23 +102,6 @@
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
-## release-docs-polish-learn-paths
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/592
-- session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
-- status: library+workspace-shipped, awaiting-merge — 3 PRs at PR-open per the --auto contract (merge is human); human gave ship sign-off 2026-07-09. All phases A+B+C done. PyAutoFit audit parked behind ep-graphical-docs (#1334)
-- prs: PyAutoLens#593 + PyAutoGalaxy#492 + autolens_workspace#254 (library-first: merge #593+#492 before #254)
-- question: https://github.com/PyAutoLabs/PyAutoLens/issues/592#issuecomment-4926734538
-- follow-ups filed: docs/autolens/plot_rst_functional_api_rewrite.md; maintenance/autolens_workspace/regenerate_notebooks_catalogue.md
-- autonomy: supervised (--auto, launched 2026-07-09; docs cap at too-large → effective supervised)
-- heart-ack: 2026-07-09 ship — human-acked YELLOW set {workspace validation not passing; 58 stale parked scripts; autolens_assistant pinned behind; 3 script timing regressions; PyAutoMind open PR 10d old}
-- worktree: ~/Code/PyAutoLabs-wt/release-docs-polish-learn-paths
-- phases: A=API-docs audit — MAJOR finding: plot.rst (both repos) documents removed OO plot subsystem (MatPlot2D/Cmap/*Scatter ~34 entries) + individual removals (OverSampling/PointDict/SetupAdapt/PySwarms) + Chameleon re-point + Convolver dedupe; PARKED pending prune-vs-rewrite decision (rec C). PyAutoFit PARKED behind #1334 · B=cluster de-flag DONE (autolens_workspace; weak already clean) · C=3-ways-to-learn DONE (overview_2 + index.md + start_here§418 + both READMEs)
-- note: discovered pre-existing global workspace notebook/catalogue drift (~30 files) — discarded, kept only the 2 notebooks matching edited scripts; flagged as a separate maintenance task
-- repos:
-  - PyAutoLens: feature/release-docs-polish-learn-paths
-  - PyAutoGalaxy: feature/release-docs-polish-learn-paths
-  - autolens_workspace: feature/release-docs-polish-learn-paths
-
 ## assistant-wiki-release
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/40
 - status: workspace-dev
