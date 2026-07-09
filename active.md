@@ -14,9 +14,10 @@
 
 ## delaunay-qhull-callback
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367
-- status: awaiting-input — phase 2 parity suite complete + validated (delaunay.py assert tightened to 1e-8 Δ~7e-15; new delaunay_near_caustic.py eager≡jit≡vmap at 1e-8, Δ~3e-10; uncommitted); parked at phase-2 ship sign-off. Library PR #368 open (review CLEAN), merge human, library-first gate
+- status: shipped, awaiting-merge — both PRs at PR-open, merge human: library PyAutoArray#368 FIRST, then autolens_workspace_test#155 (library-first gate). Post-merge follow-ups: A100 re-profile (RAL down), fnnls deep-dive (separate task), worktree cleanup
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/367#issuecomment-4925955234 (answered in-session: phase-2 ship approved)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/368
-- question: https://github.com/PyAutoLabs/PyAutoArray/issues/367#issuecomment-4925955234 (phase-2 ship sign-off)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/155
 - autonomy: supervised (--auto, launched 2026-07-09; refactor @ too-large, effective min(supervised, safe)=supervised; ship sign-off + heart-ack given in-session 2026-07-09)
 - heart-ack:
   - workspace validation not passing (5 failed, 2026-07-08T11-25-50Z)
