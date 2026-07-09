@@ -36,9 +36,11 @@
 
 ## jax-autodiff-gradients-audit
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/87
-- status: workspace-dev — 3-phase research audit (light profiles / pixelized sources / point-source χ² + weak lensing); plan approved in-session 2026-07-09
-- autonomy: supervised (no --auto; plan approved via Plan Mode; library fixes escalate as follow-up tasks, not made here)
-- note: PyAutoArray/PyAutoGalaxy/PyAutoLens/autolens_profiling READ-ONLY (autolens_profiling held by profiling-preopt-campaign, PyAutoArray by nnls-solver-optimization); rectangular-mesh anchor paper arXiv:2606.30620
+- status: shipped, awaiting-merge — all 3 phases complete 2026-07-09; PRs open: workspace_test#157 (FD gradient suite) + workspace_developer#88 (audit README); Heart YELLOW acked by user at ship
+- prs: https://github.com/PyAutoLabs/autolens_workspace_test/pull/157 + https://github.com/PyAutoLabs/autolens_workspace_developer/pull/88
+- headline: RectangularAdaptDensity (os_pix=1) likelihood is piecewise-constant in mass/shear (AD-zero correct; staircase); RectangularUniform exact (AD=FD 7 s.f.); Delaunay pure_callback no-JVP re-confirmed; Sérsic/linear/MGE/point-source/weak all FD-validated; 5 follow-up bullets in ideas.md
+- autonomy: supervised (no --auto; plan approved via Plan Mode; YELLOW ack in-session)
+- note: rectangular-mesh anchor paper arXiv:2606.30620; wiki page methods_wiki/concepts/autodiff-implicit-diff.md shipped
 - worktree: /home/jammy/Code/PyAutoLabs-wt/jax-autodiff-gradients-audit
 - repos:
   - autolens_workspace_developer: feature/jax-autodiff-gradients-audit
