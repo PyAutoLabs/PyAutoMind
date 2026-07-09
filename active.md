@@ -1,5 +1,16 @@
 # Active Tasks
 
+## weak-viz-profiles
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/581
+- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
+- status: library-dev
+- autonomy: supervised (--auto continuation, launched 2026-07-09, heart-yellow reason set acknowledged by user at weak-modeling sign-off this session)
+- note: weak series step 6 (shear profile + Kaiser-Squires); workspace demo via parallel worktree alongside lenstool-example (scripts/weak/ zero overlap, 4th use); user direction 2026-07-09: weak workspace data scripts adopt al.util.dataset.should_simulate auto-simulation pattern (fit.py + modeling.py in this task's workspace PR)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-viz-profiles
+- repos:
+  - PyAutoLens: feature/weak-viz-profiles
+
+
 ## psf-visible-input
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/242
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
