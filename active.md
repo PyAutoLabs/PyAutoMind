@@ -118,3 +118,11 @@
   - PyAutoLens: feature/release-docs-polish-learn-paths
   - PyAutoGalaxy: feature/release-docs-polish-learn-paths
   - autolens_workspace: feature/release-docs-polish-learn-paths
+
+## assistant-wiki-release
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/40
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-09; docs header supervised → effective supervised; plan on the issue; no launch-time Heart ack)
+- scope: wiki/core completeness vs autolens_workspace + llms.txt audit; 14 stub skill recipes OUT of scope (question on the issue)
+- worktree: none (autolens_assistant develops in-place)
+- repos:
