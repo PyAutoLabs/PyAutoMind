@@ -3,7 +3,9 @@
 ## psf-visible-input
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/242
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: workspace-dev (flagship pass)
+- status: workspace-shipped, awaiting-merge (flagship pass)
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/243
+- question: wider-chain pattern (i follow-up now / ii fold into adoption-a) on #242
 - autonomy: supervised (--auto, launched 2026-07-09)
 - note: PARALLEL claim on autolens_workspace alongside weak-modeling — zero script overlap verified 2026-07-09 (their diff: cluster/lenstool + weak/ + generated catalogue only); catalogue conflict recipe: re-run regenerate_navigator.py post-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/psf-visible-input
