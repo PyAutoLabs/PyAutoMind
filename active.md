@@ -107,8 +107,8 @@
 ## nightly-release-implementation
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/127 (reused phase-1 tracker; approved plan posted there)
 - session: claude (Fable) 2026-07-09
-- status: library-dev — phase 2: build the merged design (docs/nightly_release_design.md §10); nothing armed (NIGHTLY_RELEASES unset, dry_run defaults true)
-- autonomy: human-required (prompt header; default present-and-wait run; plan approved in-session 2026-07-09)
+- status: library-shipped, awaiting-merge — 4 PRs open 2026-07-09: PyAutoBrain#63 (driver+scheduler) / PyAutoBuild#129 (cron removal) / PyAutoHeart#47 (release-ci profile) / PyAutoMind#43 (digest watchdog); merge Brain+Build same day; nothing armed (NIGHTLY_RELEASES unset, dry_run defaults true); release-blocker label live + applied to Build#126
+- autonomy: human-required (prompt header; default present-and-wait run; plan approved in-session 2026-07-09; shipped on the same acked Heart-YELLOW reason set as the phase-1 ship)
 - worktree: ~/Code/PyAutoLabs-wt/nightly-release-implementation
 - repos:
   - PyAutoBrain: feature/nightly-release-implementation
