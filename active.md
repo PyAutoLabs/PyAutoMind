@@ -1,7 +1,7 @@
 # Active Tasks
 
 ## kxs-surface-refactor
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/489
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/488
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
 - status: library-dev
 - autonomy: safe (--auto, refactor cap; RefactorDecision too-large->conservative cut)
