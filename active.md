@@ -1,5 +1,15 @@
 # Active Tasks
 
+## jax-autodiff-gradients-audit
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/87
+- status: workspace-dev — 3-phase research audit (light profiles / pixelized sources / point-source χ² + weak lensing); plan approved in-session 2026-07-09
+- autonomy: supervised (no --auto; plan approved via Plan Mode; library fixes escalate as follow-up tasks, not made here)
+- note: PyAutoArray/PyAutoGalaxy/PyAutoLens/autolens_profiling READ-ONLY (autolens_profiling held by profiling-preopt-campaign, PyAutoArray by nnls-solver-optimization); rectangular-mesh anchor paper arXiv:2606.30620
+- worktree: /home/jammy/Code/PyAutoLabs-wt/jax-autodiff-gradients-audit
+- repos:
+  - autolens_workspace_developer: feature/jax-autodiff-gradients-audit
+  - autolens_workspace_test: feature/jax-autodiff-gradients-audit
+
 ## keck-ao-acceptance-checks
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13
 - status: parked-resumable (laptop reset) — check 3 done: plate-scale finding (adapter 9.942 wrong; 9.952 pre-2015/9.971 post; fix gated); check 4 fit CHECKPOINTED ~1h in (94MB checkpoint.hdf5); resume command on the issue's interim comment
