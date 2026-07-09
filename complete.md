@@ -1,3 +1,17 @@
+## jwst-nircam-cosmos-web
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6 (closed)
+- completed: 2026-07-09
+- prs: PyAutoReduce#7 (squash-merged f91d79c)
+- notes: |
+    JWST/NIRCam phase 3: backend dispatch (astrodrizzle|jwst_image3),
+    nircam_sw/lw adapters, ERR-based noise x R, footprint filter (OOM
+    lesson: image3 in_memory=False; SW visits 52/64 exposures off-target),
+    bad-pixel masking policy, PSF tiering from ShOpt/PSFEx/Zhuang&Shen
+    literature. Four-band COSMOS-Web ring validation: internal closures
+    0.88-1.08 all bands; parity order-unity per maintainer bar (demo =
+    bespoke team pipeline; close-not-reproduce). 83 tests. Env: jwst 2.0.1,
+    scipy 1.17.1. NIRCam refinements deferred to roadmap by user.
+
 ## wfc3-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/4 (closed)
 - completed: 2026-07-09

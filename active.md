@@ -1,5 +1,14 @@
 # Active Tasks
 
+## refactor-post-phase3
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
+- session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
+- status: library-dev — witness baselines capturing from main f91d79c; then behaviour-preserving consolidation per approved plan
+- autonomy: default present-and-wait (refactor cap safe; no --auto given)
+- worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
+- repos:
+  - PyAutoReduce: refactor/post-phase3-consolidation
+
 ## kxs-surface-refactor
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/488
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
@@ -23,17 +32,6 @@
   - PyAutoLens: feature/weak-viz-profiles
   - autolens_workspace: feature/weak-viz-profiles (parallel to lenstool-example, scripts/weak/ + catalogue only)
 
-
-## jwst-nircam-cosmos-web
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6
-- session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/7
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- note: STACKED on feature/wfc3-reduction (PR #5 awaiting merge) — shares adapter/pipeline seams, rebases onto main after #5 merges; 7 local commits unpushed
-- worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
-- repos:
-  - PyAutoReduce: feature/jwst-nircam
 
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
