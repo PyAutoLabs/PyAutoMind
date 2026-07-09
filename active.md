@@ -157,9 +157,11 @@
 ## nautilus-nn-bottleneck
 - issue: https://github.com/Jammy2211/autofit_workspace_developer/issues/18
 - session: claude --resume 28036441-6e24-4792-859a-b002a8716be2
-- status: workspace-dev
+- status: awaiting-input — phases 1-4 complete (anatomy: NN 40-52% + geometry 25-38% of wall; n_networks=0 = 2-3.2x zero-code win, quality intact; JAX-MLP prototype NEGATIVE on CPU 4-6x slower; verdict: JAX-ifying nautilus infeasible-as-port); 7 files uncommitted in worktree; parked at ship sign-off
+- question: https://github.com/Jammy2211/autofit_workspace_developer/issues/18#issuecomment-4929292947
 - autonomy: supervised effective (--auto launched 2026-07-09 in-session; plan approved via AskUserQuestion same session; no heart-ack given — ship leg 4 needs GREEN/STALE else park)
-- note: research task — profile Nautilus NN-training/overhead anatomy on fast likelihoods, tuning sweep + vectorized=True batching, GPU-MLP/async-training prototypes, JAX-ification verdict; PyAutoFit READ-ONLY (claimed by ep-diagnostics + ep-graphical-docs; wrapper changes escalate as follow-up prompts)
+- on-approve: commit/push/PR (pending-release) via four-leg gate + file follow-ups refactor/autofit/nautilus_n_networks_fast_likelihood_default.md and research/autolens_profiling/nautilus_n_networks_gpu_validation.md
+- note: research task; PyAutoFit READ-ONLY (claimed by ep-diagnostics + ep-graphical-docs; wrapper changes escalate as follow-up prompts)
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-nn-bottleneck
 - repos:
   - autofit_workspace_developer: feature/nautilus-nn-bottleneck

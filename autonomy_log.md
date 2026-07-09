@@ -91,3 +91,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | regen-workspace-notebooks (#255) | safe | tests n/a / smoke n/a / review CLEAN / heart YELLOW⊆acked | merged-unchanged (autolens_workspace#256; human merge) |
 | 2026-07-09 | plot-rst-functional-rewrite (#595) | supervised | tests n/a / smoke n/a / review CLEAN / heart YELLOW⊆acked | merged-unchanged (PyAutoLens#596+PyAutoGalaxy#494; human merge) |
 | 2026-07-09 | assistant-wiki-release (#40) | supervised | tests n/a (docs; api-audit 0/117 + citations 0/391) / smoke n/a (docs-only) / review mechanical-clean / heart YELLOW human-acked at sign-off | amended (human-directed scope addition: --check-citations mode; PR#41 human-merged) |
+| 2026-07-09 | nautilus-nn-bottleneck (#18) | supervised | tests pending / smoke pending / review pending / heart pending (gate runs at ship after sign-off) | parked (ship sign-off question on issue #18) |
