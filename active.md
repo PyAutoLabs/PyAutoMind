@@ -1,5 +1,14 @@
 # Active Tasks
 
+## slacs1430-acs-parity
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
+- session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
+- status: workspace-dev — phase 0 (orient + legacy-dataset inspection)
+- autonomy: safe effective (--auto launched 2026-07-09; plan human-approved in-session pre-launch; no heart-ack given)
+- note: keck-ao pattern — analysis on PyAutoReduce main, NO worktree claim (frame-products holds it); outputs gitignored scripts/output/; script commit + PR gated until claim releases; autolens_assistant is driver-only (public template, no commits, scratch only)
+- worktree: none (analysis on PyAutoReduce main; branch feature/slacs1430-acs-parity only at ship)
+- repos:
+
 ## frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/16
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
