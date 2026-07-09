@@ -5400,3 +5400,9 @@
 - completed: 2026-07-09
 - prs: PyAutoLens#593 + PyAutoGalaxy#492 + autolens_workspace#254 (all merged-unchanged 2026-07-09, squash; library-first)
 - note: release-docs polish (--auto supervised, four-leg gate; human ship sign-off + human-acked YELLOW). Phase A = pruned removed OO plotting subsystem + dead refs from PyAutoGalaxy/PyAutoLens docs/api/*.rst (re-audit clean, CRLF-safe); Phase B = de-flagged cluster lensing as mature (weak already clean); Phase C = "Three Ways to Learn PyAutoLens" (manual/chat-assistant/agentic) in overview_2 + start_here + both READMEs + docs/index. PyAutoFit API-docs audit parked behind ep-graphical-docs #1334. Follow-ups filed: docs/autolens/plot_rst_functional_api_rewrite.md; maintenance/autolens_workspace/regenerate_notebooks_catalogue.md. Unblocks colab-link-rot-libdocs (planned.md).
+
+## colab-link-rot-libdocs
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/124 (phase tracker)
+- completed: 2026-07-09
+- prs: PyAutoLens#594 + PyAutoGalaxy#493 (merged 2026-07-09)
+- note: Final Colab-maturity leg, human-directed claim override ("just do the merge dont worry about the block"); zero file overlap with release-docs-polish-learn-paths verified. Fixed 6 dead docs/howto* Colab links (tutorial_5_complex_source, tutorial_11 double extension, tutorial_5_model_fit renumber, 3 removed chapter_optional entries) + purged 6 stale allowlist Colab entries. All Colab URLs in both repos machine-verified.
