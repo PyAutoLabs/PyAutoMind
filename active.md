@@ -3,7 +3,9 @@
 ## weak-real-data
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/588
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: library-dev — phase 7a (catalog IO + reduced shear, no external data needed)
+- status: awaiting-input — 7a DONE committed locally (47b8888b: from_arrays/csv/fits loaders, weights, redshifts, reduced shear end to end; suite 364 green; parked at ship sign-off) + 7b DATA QUESTION (real A2744 pyRRG catalog found on jwst branch, needs quality cuts; recommend honest-demo framing; options a-d on issue)
+- question: (batched comment on PyAutoLens#588)
+- resume: on 7a approval push+PR library half; 7b per data-choice answer; catalog cached at scratchpad/abell2744_galaxies.fits (re-download: raw.githubusercontent.com/davidharvey1986/pyRRG/jwst/trainStarGalClass/TrainingData/abell2744_galaxies.fits)
 - autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
 - note: weak series step 7 (final leg), phased: 7a library, 7b workspace real-data example (data acquisition first, fallback = published-format mock + parked question). PARALLEL to point-pairing-policies' PyAutoLens claim (autolens/point/ vs autolens/weak/ disjoint, that task is awaiting-merge). autolens_workspace attach deferred to 7b (three sibling-session claims in flight, all disjoint; catalogue regen on whichever merges last)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-real-data
