@@ -122,3 +122,13 @@
 - note: follow-up from #592 — regenerate all notebooks + catalogue (global drift); generated-artifact only, no scripts/ edits
 - repos:
   - autolens_workspace: feature/regen-workspace-notebooks
+
+## colab-sim-verify-install
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/45
+- session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
+- status: library-dev
+- autonomy: safe (user-approved proposal in-session 2026-07-09; plan on the issue)
+- worktree: ~/Code/PyAutoLabs-wt/colab-sim-verify-install
+- repos:
+  - PyAutoConf: feature/colab-sim-verify-install
+  - PyAutoHeart: feature/colab-sim-verify-install
