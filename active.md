@@ -15,7 +15,8 @@
 
 ## delaunay-qhull-callback
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367
-- status: library-dev — phase 1: PyAutoArray qhull-only callback + JAX 2-ring point location; phase 2 (autolens_workspace_test parity suite) follows behind the library-first gate
+- status: awaiting-input — phase 1 implementation complete + parity-validated (visibility-walk locator, NOT the planned 2-ring — see issue update; JIT−eager 5.4e-9, 873 tests pass, uncommitted); parked at ship sign-off incl. Heart YELLOW ack; phase 2 (autolens_workspace_test parity suite) follows behind the library-first gate
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/367#issuecomment-4925762140
 - autonomy: supervised (--auto, launched 2026-07-09; refactor @ too-large, effective min(supervised, safe)=supervised; no heart-ack given)
 - note: hard requirement — likelihood numerically unchanged (eager xp=np path is the reference and is untouched); PoC + saved outputs in autolens_profiling/scratch/delaunay_speedup/; do NOT touch fnnls/NNLS (separate follow-up)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/delaunay-qhull-callback
