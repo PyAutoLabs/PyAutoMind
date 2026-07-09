@@ -34,18 +34,6 @@
 - worktree: none (analysis on PyAutoReduce main; branch feature/slacs1430-acs-parity only at ship)
 - repos:
 
-## jax-autodiff-gradients-audit
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/87
-- status: shipped, awaiting-merge — all 3 phases complete 2026-07-09; PRs open: workspace_test#157 (FD gradient suite) + workspace_developer#88 (audit README); Heart YELLOW acked by user at ship
-- prs: https://github.com/PyAutoLabs/autolens_workspace_test/pull/157 + https://github.com/PyAutoLabs/autolens_workspace_developer/pull/88
-- headline: RectangularAdaptDensity (os_pix=1) likelihood is piecewise-constant in mass/shear (AD-zero correct; staircase); RectangularUniform exact (AD=FD 7 s.f.); Delaunay pure_callback no-JVP re-confirmed; Sérsic/linear/MGE/point-source/weak all FD-validated; 5 follow-up bullets in ideas.md
-- autonomy: supervised (no --auto; plan approved via Plan Mode; YELLOW ack in-session)
-- note: rectangular-mesh anchor paper arXiv:2606.30620; wiki page methods_wiki/concepts/autodiff-implicit-diff.md shipped
-- worktree: /home/jammy/Code/PyAutoLabs-wt/jax-autodiff-gradients-audit
-- repos:
-  - autolens_workspace_developer: feature/jax-autodiff-gradients-audit
-  - autolens_workspace_test: feature/jax-autodiff-gradients-audit
-
 ## keck-ao-acceptance-checks
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13
 - status: parked-resumable (laptop reset) — check 3 done: plate-scale finding (adapter 9.942 wrong; 9.952 pre-2015/9.971 post; fix gated); check 4 fit CHECKPOINTED ~1h in (94MB checkpoint.hdf5); resume command on the issue's interim comment
