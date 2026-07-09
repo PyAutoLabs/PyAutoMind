@@ -136,7 +136,7 @@
 - issue: https://github.com/Jammy2211/autofit_workspace_developer/issues/18
 - session: claude --resume 28036441-6e24-4792-859a-b002a8716be2
 - status: workspace-dev
-- autonomy: supervised (no --auto; plan approved in-session 2026-07-09)
+- autonomy: supervised effective (--auto launched 2026-07-09 in-session; plan approved via AskUserQuestion same session; no heart-ack given — ship leg 4 needs GREEN/STALE else park)
 - note: research task — profile Nautilus NN-training/overhead anatomy on fast likelihoods, tuning sweep + vectorized=True batching, GPU-MLP/async-training prototypes, JAX-ification verdict; PyAutoFit READ-ONLY (claimed by ep-diagnostics + ep-graphical-docs; wrapper changes escalate as follow-up prompts)
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-nn-bottleneck
 - repos:
