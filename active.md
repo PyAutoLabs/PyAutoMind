@@ -12,7 +12,8 @@
 ## frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/16
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: library-dev
+- status: library-shipped, awaiting-merge — suite 169/169; Heart YELLOW acked in-session at ship (reasons pre-existing, non-PyAutoReduce); real-data slacs0008 validation still open (PR checklist)
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/18
 - autonomy: supervised (no --auto; plan approved via Plan Mode 2026-07-09; v1 = frames+noise+CR/DQ+WCS, deepCR user-directed, no per-frame PSF)
 - note: JWST sub-part split to research/pyautoreduce/jwst_individual_frame_feasibility.md; keck-ao-acceptance task also touches PyAutoReduce but claims no worktree (analysis on main, parked)
 - worktree: ~/Code/PyAutoLabs-wt/frame-products
