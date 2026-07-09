@@ -1,3 +1,21 @@
+## version-pinning-design-review
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118 (closed)
+- completed: 2026-07-09
+- prs: PyAutoConf#119 + PyAutoBuild#121 (merged, gated order) — via child tasks
+- notes: |
+    Design review of stack-wide exact version pinning. Found: accidental
+    2026.6.25.641-.649 series = scheduled release cron publishing
+    run_number versions (no yank issue ever tracked); yanked .649 still
+    recorded on all mains -> new-user pip path broken. Verdict: keep ==
+    sibling pins; replace workspace exact-match with compatibility floor.
+    Shipped: R2 floor check (version-check-compat-floor), R3-core
+    wheels+tags-only (release-stamping-slim), R4 rehearsal gating (via
+    PyAutoHeart#39). Q2: notebook/Colab cadence stays per-release.
+    Rehearsal on new pipeline green (2026.7.8.1.dev65201, run 28973384455).
+    OPEN human action (on the closed issue): flip vars.RELEASE_MODE=live or
+    dispatch rehearsal=false for first real release -> realigns PyPI,
+    unbreaks new users; then run workspace floor adoption + Heart
+    version_skew rework (prompts filed in feature/).
 ## kxs-cache
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362 (follow-up leg)
 - completed: 2026-07-08

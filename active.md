@@ -21,15 +21,6 @@
 - repos:
   - PyAutoReduce: feature/wfc3-reduction
 
-## version-pinning-design-review
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118
-- session: claude --resume 5d58ef6a-dde4-4f02-be05-0c80c0be0302
-- status: R2+R3 merged 2026-07-08 (PyAutoConf#119, PyAutoBuild#121); Q2 answered (notebook/Colab cadence stays per-release); ONLY Q1 open — maintainer flips vars.RELEASE_MODE=live or dispatches a release to realign PyPI + unbreak new users; follow-up prompts filed: workspace floor adoption, Heart version_skew rework
-- decision: https://github.com/PyAutoLabs/PyAutoBuild/issues/118#issuecomment-4918433908
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- worktree: none (read-only research)
-- repos:
-
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
