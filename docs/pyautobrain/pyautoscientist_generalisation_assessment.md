@@ -1,0 +1,141 @@
+# PyAutoScientist generalisation — feasibility assessment
+
+Companion scoping note for `pyautoscientist_generalisation.md` (the intake
+prompt). Research only — no changes made. Assessed 2026-07-09 against the live
+checkouts.
+
+**Verdict: feasible, moderate effort, and it does not require splitting off
+from the repos in daily use.** The architecture has already done the hard part:
+domain facts live in declarative tables and policy files, not in algorithms,
+and the framework/instance boundary happens to align with existing repo
+boundaries. The recommended model is *reference implementation + template
+instance*, with the live lensing stack kept as the worked example rather than
+purged.
+
+## 1. Where the domain coupling actually lives (audit)
+
+Raw counts of lensing/astronomy references: Heart ~230, Build ~105, Brain
+~100, Mind ~5, Memory ~everything (by design). But the *kind* of reference is
+what matters, and it is remarkably uniform — module-level constant tables and
+config rows, almost never logic:
+
+- **PyAutoMind** — already nearly domain-clean. `repos.yaml` (the body map) is
+  the single source of repo identity; `scripts/` are generic; the work-type
+  taxonomy is generic. The *content* (prompts, `active.md`, `complete.md`) is
+  inherently instance data.
+- **PyAutoBrain** — reasoning, conductor/faculty architecture, `AUTONOMY.md`
+  (0 domain hits) and `ORGANISM.md` are fully generic. Coupling is confined to
+  constant tables: `agents/faculties/sizing/_sizing.py` (LIBRARY/WORKSPACE
+  repo sets, REPO_ALIASES, MEMORY_WIKIS science vocabulary), intake's
+  TARGET_SIGNALS, feature's repo→wiki map, refactor's repo→test-dir map,
+  release's LIBRARIES tuple and `nightly.sh` TAG_REPO — plus lensing examples
+  woven through the skills prose.
+- **PyAutoHeart** — heaviest count but cleanest seam: `config/repos.yaml` is
+  already an explicit *policy* file (what to poll/gate) checked for drift
+  against the body map. Remaining hardcodes: `version_skew.py`'s
+  workspace→(library, package) map, `readiness.py`'s DEFAULT_LIBRARIES tuple,
+  and `url_check_live.py`'s bespoke URL-fixup rules (instance "immune
+  memory" — pure config for an adopter).
+- **PyAutoBuild** — a declarative `run_workspace <repo> <package> <flags>
+  <library>` table in `pre_build.sh` plus small maps in `autobuild/*.py`
+  (`run_all.py`, `slow_skip_check.py`, navigator scripts).
+- **PyAutoMemory** — content is 100% domain *by design*; the generic asset is
+  the shape (sub-wikis, bibliographies, `index.md`, reading queue). The
+  coupling point to the rest of the organism is Brain's MEMORY_WIKIS keyword
+  map.
+
+Portability is already decent: `bin/install.sh` and `agents/_common.sh`
+resolve the workspace root relative to the checkout (one `~/Code/PyAutoLabs`
+fallback); `repos_sync.py --check` already enforces identity/policy agreement.
+Generalisation is largely *finishing a migration the design already started*:
+move the remaining constant tables into per-organ policy files keyed off the
+body map's categories.
+
+## 2. The satellite pattern is already abstracted
+
+`repos.yaml` categories — organ / library / workspace / workspace_test /
+workspace_developer / howto / assistant / pipeline / project / admin — *are*
+the generalised PyAutoProject pattern. An adopter does not need literal
+`PyAutoProject` / `autoproject_workspace` stub repos; they need the **category
+contract** documented: what each satellite kind is for, and what the organism
+expects of it (Heart's version_skew expects workspace→(library, package);
+pre_build expects a `run_workspace` row; Brain sizing expects the repo in the
+right set). Document the contract first; an optional cookiecutter that stamps
+out a library+workspace+howto skeleton can come later if demand appears.
+
+## 3. Open-sourcing without splitting: framework vs instance
+
+The split that matters is framework vs instance, and it already falls on repo
+boundaries:
+
+- **Framework organs (Brain, Heart, Build)** — code + skills, already public.
+  Once their tables are config, others use *these same repos* directly; no
+  fork of daily-use code, no divergence.
+- **Instance organs (Mind, Memory)** — these are Jammy's committed state and
+  science; an adopter must not fork the backlog. Ship *skeletons*: either a
+  `template/` directory inside each repo, or two tiny generated
+  `*-template` repos stamped from the structure. Either way the daily-use
+  repos are untouched — this is publishing a mould, not splitting the clay.
+
+All five organs are already public on GitHub, but **four of five have no
+LICENSE** (only PyAutoBuild does) — legally all-rights-reserved. Adding
+licenses (and deciding one for Memory's *content* vs its *structure*) is a
+prerequisite for any adoption story.
+
+## 4. Docs: one ReadTheDocs, "PyAutoScientist"
+
+- **Home**: per the ORGANISM.md growth rule (no new organs by default), start
+  the docs source as `PyAutoBrain/docs/` — Brain already owns the canonical
+  organism prose (`ORGANISM.md`) — published to RTD under the
+  `pyautoscientist` project name. Split into a dedicated docs repo only if it
+  outgrows that.
+- **Content**: (1) concepts — the organism, organs, call chain,
+  conductors/faculties, growth rule; (2) adoption guide — "bring your own
+  body": write your `repos.yaml`, per-organ policy, Mind/Memory skeletons;
+  (3) per-organ reference; (4) the category contract from §2; (5) the worked
+  example — the live lensing instance. **Do not purge lensing from the
+  docs**: a generic framework documented against a real, running,
+  battle-tested instance is far more credible than a sanitised one. Label it
+  as the example.
+- **READMEs**: shrink every organ README to ~20–40 human-written lines — what
+  it is, one table or diagram, link to the RTD. This directly fixes the
+  "long AI-written README" problem, and ORGANISM.md stays the single canonical
+  organs page.
+- **pyautolabs.github.io** gains one card linking the PyAutoScientist docs;
+  per-project library docs stay on their existing RTD (matches the hub's
+  stated design).
+
+## 5. Honest caveats
+
+- **The real adoption cost is not the lensing coupling** — it's the stack
+  assumptions: Claude Code (`~/.claude` skills/commands/hooks), `gh` CLI,
+  single-maintainer trunk-based flow, worktree layout, GitHub Actions + PyPI
+  releases. Position the offering as an *opinionated reference implementation
+  of an agentic dev organism*, not a turnkey framework, and state the
+  prerequisites up front.
+- **Maintenance drag**: generic docs and templates must track a fast-moving
+  personal system. Mitigate by extending the existing `repos_sync.py` drift
+  pattern to docs, and by keeping the worked example = the live system (no
+  second thing to maintain).
+- **Audience**: solo/small-team maintainers of multi-repo scientific Python
+  stacks using agentic tooling — niche but real, and the docs double as the
+  best available marketing for the PyAuto stack itself.
+
+## 6. Suggested phasing (for start_dev to split)
+
+- **A — config extraction** (the bulk; touches tested code): Heart
+  version_skew/readiness/URL rules → `config/`; Build tables → a policy YAML
+  consumed by `pre_build.sh`/`run_all.py`; Brain constant tables → derived
+  from `repos.yaml` where identity, policy file where vocabulary. One PR per
+  organ, each behind its test suite.
+- **B — licenses + README rewrites** (prose, fast): pick licenses, shrink the
+  five READMEs.
+- **C — PyAutoScientist RTD**: `PyAutoBrain/docs/`, concepts + adoption guide
+  + category contract + worked example.
+- **D — instance templates**: Mind/Memory skeletons; optional cookiecutter.
+- **E — open the doors**: CONTRIBUTING, issue templates, hub card,
+  announcement.
+
+Every phase leaves the daily workflow untouched and the live instance as the
+canonical example, so the work can proceed incrementally with no split and no
+freeze.
