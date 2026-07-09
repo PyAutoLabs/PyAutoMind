@@ -8,9 +8,15 @@ checkouts.
 from the repos in daily use.** The architecture has already done the hard part:
 domain facts live in declarative tables and policy files, not in algorithms,
 and the framework/instance boundary happens to align with existing repo
-boundaries. The recommended model is *reference implementation + template
-instance*, with the live lensing stack kept as the worked example rather than
-purged.
+boundaries. The recommended model is *docs-first reference implementation*,
+with the live lensing stack kept as the worked example rather than purged.
+
+**Revised after the adversarial pass in §7:** there is exactly **one live
+organism — the current one**. The generic offering is (a) docs and (b) a
+demand-gated *generated* skeleton, never a second running system and never
+the live organs made multi-tenant. All behaviour-touching work is deferred
+until a concrete adopter exists; the phases in §6 are ordered by risk to the
+live setup, not by logical appeal.
 
 ## 1. Where the domain coupling actually lives (audit)
 
@@ -69,8 +75,11 @@ The split that matters is framework vs instance, and it already falls on repo
 boundaries:
 
 - **Framework organs (Brain, Heart, Build)** — code + skills, already public.
-  Once their tables are config, others use *these same repos* directly; no
-  fork of daily-use code, no divergence.
+  In principle reusable; **but see §7** — they carry committed instance
+  policy/state today, so "others use these same repos directly" is not honest
+  without relocation surgery. The corrected model: others *copy from* these
+  repos (via docs and a generated skeleton); only Jammy's instance runs them
+  live.
 - **Instance organs (Mind, Memory)** — these are Jammy's committed state and
   science; an adopter must not fork the backlog. Ship *skeletons*: either a
   `template/` directory inside each repo, or two tiny generated
@@ -121,21 +130,86 @@ prerequisite for any adoption story.
   stacks using agentic tooling — niche but real, and the docs double as the
   best available marketing for the PyAuto stack itself.
 
-## 6. Suggested phasing (for start_dev to split)
+## 6. Suggested phasing (for start_dev to split) — risk-ordered per §7
 
-- **A — config extraction** (the bulk; touches tested code): Heart
-  version_skew/readiness/URL rules → `config/`; Build tables → a policy YAML
-  consumed by `pre_build.sh`/`run_all.py`; Brain constant tables → derived
-  from `repos.yaml` where identity, policy file where vocabulary. One PR per
-  organ, each behind its test suite.
-- **B — licenses + README rewrites** (prose, fast): pick licenses, shrink the
-  five READMEs.
-- **C — PyAutoScientist RTD**: `PyAutoBrain/docs/`, concepts + adoption guide
-  + category contract + worked example.
-- **D — instance templates**: Mind/Memory skeletons; optional cookiecutter.
-- **E — open the doors**: CONTRIBUTING, issue templates, hub card,
-  announcement.
+Zero-risk to the live setup (do first; touch no agent-read files, no code):
 
-Every phase leaves the daily workflow untouched and the live instance as the
-canonical example, so the work can proceed incrementally with no split and no
-freeze.
+- **A — licenses + README rewrites**: pick licenses, shrink the five
+  READMEs. READMEs are human-facing only — agents load `AGENTS.md`/skills,
+  not READMEs — so this cannot regress behaviour. `AGENTS.md` files and
+  skill bodies are explicitly **out of scope**.
+- **B — PyAutoScientist RTD**: `PyAutoBrain/docs/`, concepts + adoption guide
+  + category contract + worked example. All **new** prose; it documents the
+  skills, it never rewrites them.
+- **C — hub card + CONTRIBUTING** with an explicit stability disclaimer:
+  the organs are a living reference implementation, main moves fast, no
+  compatibility promises — copy, don't track.
+
+Demand-gated (only when a concrete adopter exists):
+
+- **D — config extraction** (touches tested code paths in Heart/Build/Brain
+  for zero personal benefit until someone needs it): Heart
+  version_skew/readiness/URL rules → `config/`; Build tables → policy YAML;
+  Brain constant tables → derived from `repos.yaml` where identity, policy
+  file where vocabulary. One PR per organ, behind its test suite.
+- **E — generated skeleton**: a `pyautoscientist-template` stamped from the
+  live repos by a script (the `repos_sync.py` pattern: single source,
+  generated view, drift-checked). Regeneration, not manual duplication.
+
+Never:
+
+- Making the live organs multi-tenant (serving Jammy and strangers from one
+  deployment/config surface).
+- Stability guarantees on organ `main` branches.
+- Genericisation passes over `skills/*.md` — those files are the production
+  prompts symlinked into `~/.claude`.
+
+## 7. Adversarial pass: protecting the live setup (added 2026-07-09)
+
+A second, deliberately hostile look at the §3 claim that others could "use
+these very repos". Three findings kill the naive version of that idea:
+
+1. **The framework organs carry committed instance matter.** Heart's
+   `config/repos.yaml` is Jammy's polling/gating policy; Build has
+   `test_results/` (committed autolens run outputs) and `to_do_list/`;
+   Brain's skills prose references Jammy-specific workflow in 15+ files
+   (`admin_jammy`, worktree layout, GitHub handles). Anyone cloning the
+   organs today clones the instance. Making these repos genuinely
+   multi-tenant means relocating policy and state out of them — invasive
+   surgery on tested, working code, with zero benefit to the live setup.
+
+2. **The organs are hot.** Last 90 days: Brain 75 commits, Heart 71, Build
+   138, Mind 838. This is living personal infrastructure, not a stable
+   library. Offering the live repos as "the framework" creates an implied
+   stability contract: either Jammy slows down (direct damage to the setup's
+   main virtue — the freedom to churn tooling daily), or external users
+   tracking `main` break constantly (dead-project optics, support burden).
+
+3. **The skills are production prompts.** `skills/*.md` bodies are symlinked
+   into `~/.claude/commands/` — they *are* the agents' behaviour, and the
+   prose is battle-tested. A "genericisation pass" over them is editing
+   production prompts to please hypothetical readers; the regression risk
+   lands entirely on the working setup.
+
+**Answer to "will I have two PyAutoBrains and double the repos?" — No,
+provided the model is corrected as follows.** There is exactly one live
+PyAutoBrain (and Heart, Build, Mind, Memory): the current ones, unchanged.
+The generic offering is not a running system; it is:
+
+- **Docs** (the PyAutoScientist RTD) describing the architecture with the
+  live organism as the labelled worked example — new prose, zero behaviour
+  surface; and
+- **later, only if demand appears**, a *generated* skeleton repo stamped
+  from the live repos by a script — the `repos_sync.py` single-source →
+  generated-view pattern already in use. Updating the generic version is
+  re-running the generator, not maintaining a parallel organism. If someone
+  forks the skeleton and diverges, that divergence is theirs; improvements
+  come back as ordinary PRs to take or leave.
+
+The double-maintenance trap only springs if the generic thing is
+hand-maintained or the live organs become dual-purpose. Both are listed as
+"Never" in §6. The honest costs that do remain: writing and keeping the RTD
+truthful (docs drift is real; mitigate with drift checks and by keeping the
+worked example = the live system), and the social cost of visitors filing
+issues against a fast-moving personal system (mitigate with the
+CONTRIBUTING disclaimer).
