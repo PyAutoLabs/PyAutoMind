@@ -120,3 +120,12 @@
 - note: follow-up from #592 — regenerate all notebooks + catalogue (global drift); generated-artifact only, no scripts/ edits
 - repos:
   - autolens_workspace: feature/regen-workspace-notebooks
+
+## colab-link-rot-libdocs
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/124 (phase tracker; no separate issue — final leg)
+- session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
+- status: workspace-dev — human-directed 2026-07-09 ("just do the merge dont worry about the block"): claim overlap with release-docs-polish-learn-paths accepted; file-level overlap verified zero (this leg: docs/howto* chapter pages + .url_check_allowlist.txt; theirs: README.md, docs/index.md, docs/overview/overview_2)
+- worktree: ~/Code/PyAutoLabs-wt/colab-link-rot-libdocs
+- repos:
+  - PyAutoLens: feature/colab-link-rot-libdocs
+  - PyAutoGalaxy: feature/colab-link-rot-libdocs
