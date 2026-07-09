@@ -22,18 +22,23 @@ self-consistent. Deliberately its own prompt because the survey found
 1. `scripts/imaging/simulator.py`: executed simulation at s=2 (fine
    `from_gaussian` PSF, adaptive radial evaluation via the k×s coupling —
    already library-supported); saved `psf.fits` at the fine resolution.
-2. **Loader migration**: every script loading the start-here `simple`
+2. **Wider-chain visible-input pass (absorbed 2026-07-09, decision ii on
+   autolens_workspace#242)**: the ~70 non-flagship loaders gain the
+   `convolve_over_sample_size_lp` kwarg in the same pass that flips values —
+   one touch, not two. The flagship chain already carries the documented
+   `psf_convolve_over_sample_size` variable (PR #243).
+3. **Loader migration**: every script loading the start-here `simple`
    dataset passes `convolve_over_sample_size_lp=2`,
    `convolve_over_sample_size_pixelization=2` (and relies on `from_fits`'s
    default `psf_pixel_scales = pixel_scales / s`). Survey first: enumerate
    the exact loader list (~76) and any that reuse the psf for other
    purposes; migrate mechanically; the diff is wide but shallow.
-3. Feature-dataset simulators stay s=1 in this prompt — stage them as
+4. Feature-dataset simulators stay s=1 in this prompt — stage them as
    follow-ups per dataset chain once the start-here pattern is proven.
-4. Re-baselining: any script or smoke entry pinning numbers against the
+5. Re-baselining: any script or smoke entry pinning numbers against the
    start-here dataset re-baselines in the same PR; navigator catalogue
    regenerated.
-5. autolens_workspace_test / autogalaxy_workspace parity: survey whether
+6. autolens_workspace_test / autogalaxy_workspace parity: survey whether
    their scripts load the start-here dataset (they mostly self-simulate);
    fix any that do.
 

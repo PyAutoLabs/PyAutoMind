@@ -11,28 +11,6 @@
   - PyAutoLens: feature/weak-viz-profiles
 
 
-## psf-visible-input
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/242
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: workspace-shipped, awaiting-merge (flagship pass)
-- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/243
-- question: wider-chain pattern (i follow-up now / ii fold into adoption-a) on #242
-- autonomy: supervised (--auto, launched 2026-07-09)
-- note: PARALLEL claim on autolens_workspace alongside weak-modeling — zero script overlap verified 2026-07-09 (their diff: cluster/lenstool + weak/ + generated catalogue only); catalogue conflict recipe: re-run regenerate_navigator.py post-merge
-- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-visible-input
-- repos:
-  - autolens_workspace: feature/psf-visible-input (parallel to weak-modeling claim, zero overlap)
-
-## kxs-refactor
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/365
-- autonomy: safe (--auto, refactor cap; launched 2026-07-09)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-refactor
-- repos:
-  - PyAutoArray: feature/kxs-refactor
-
 ## jwst-nircam-cosmos-web
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9

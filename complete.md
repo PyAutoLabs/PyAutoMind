@@ -1,3 +1,26 @@
+## kxs-refactor
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362 (closed — series complete)
+- completed: 2026-07-09
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/365 (merged)
+- notes: |
+    k x s refactor exercise: segment-id construction vectorized (62->9.7ms
+    cold; warm cache path unchanged); ids bit-identical; suite 867. Process
+    note: executed WITHOUT a fresh Refactor Agent invocation (parent-series
+    decision wrongly treated as covering it) — future refactor legs re-invoke
+    the agent. Calibration: merged-unchanged.
+
+## psf-visible-input
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/242 (closed)
+- completed: 2026-07-09
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/243 (merged)
+- notes: |
+    Option-c flagship pass: psf_convolve_over_sample_size = 1 visible input
+    + prose in imaging start_here/modeling/fit/likelihood_function loaders
+    and the simulator. Zero behaviour change. Parallel claim alongside
+    weak-modeling (zero script overlap verified; catalogue regen produced
+    zero diff). Wider ~70-loader pass folded into adoption prompt (a) per
+    human decision (ii). Calibration: merged-unchanged.
+
 ## weak-modeling
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/579
 - completed: 2026-07-09
