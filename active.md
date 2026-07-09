@@ -187,7 +187,8 @@
 ## csv-api-lenstool
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/490
 - session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
-- status: library-dev — stress-test phase
+- status: library-shipped, awaiting-merge
+- prs: PyAutoGalaxy#491 + autolens_workspace#252 (stacked on #250; merge order 250 → 491 → 252)
 - autonomy: supervised (--auto, in-session directive 2026-07-09; heart-ack carried)
 - note: parallel claims as per cluster-small-datasets entry (scripts/cluster/ disjoint);
   PyAutoGalaxy unclaimed post-merges

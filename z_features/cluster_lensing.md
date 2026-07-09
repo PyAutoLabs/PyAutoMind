@@ -14,7 +14,12 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
    — **at PR-open 2026-07-09** (autolens_workspace#249; PRs #250 + PyAutoBuild#123):
    should_simulate guards, lenstool small-mode gates, cluster scripts UN-PARKED from
    no_run.yaml with 24s/26s evidence. Awaiting merge.
-4. Beta-tester iteration on the shipped Lenstool example (scripts/cluster/lenstool/) — the
+4. csv-api-lenstool — **at PR-open 2026-07-09** (PyAutoGalaxy#490; PRs #491 +
+   autolens_workspace#252 stacked on #250): CSV API stress-tested + extended (light variants,
+   loud guards, GalaxyTable.properties, H0/Om0 flats); Lenstool example ported onto canonical
+   mass.csv (149 dPIEMassLenstool rows, the .par file as a table) at identical 0.0680" parity.
+   Awaiting merge (order: 250 → 491 → 252).
+5. Beta-tester iteration on the shipped Lenstool example (scripts/cluster/lenstool/) — the
    user-facing back-and-forth; no prompt filed yet, driven by tester feedback.
    — flagship "PyAutoLens for LensTool users" example on real data
    (candidate: SMACS J0723), reproducing a published LensTool model; depends
