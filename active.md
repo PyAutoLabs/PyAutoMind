@@ -145,7 +145,7 @@
 ## nnls-bpp-admm-experiment
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/370
 - session: claude --resume a67dda1e-835b-43c6-b90f-a2190e349ad0
-- status: workspace-dev (scratch prototyping)
-- worktree: (none — untracked scratch/nnls_speedup in canonical autolens_profiling; no repo claims)
+- status: COMPLETE — negative result, both candidates failed gates (2026-07-09): BPP machine-exact but 36-53 factorizations vs PDIP 19-21; ADMM plateaus rel dObj ~3e-6 vs required 1e-10. Ledger closed on #369/#370: PDIP near-optimal for this problem class; remaining routes are problem-level (n, conditioning, positivity model)
+- worktree: (none — probes in autolens_profiling/scratch/nnls_speedup/, untracked)
 - repos:
-- note: BPP phase 1 first, then ADMM, then gate decision; promotion into PyAutoArray needs fresh plan+approval and is blocked-by nnls-solver-optimization's parked PyAutoArray claim until that resolves; baselines + testbed shared with #369
+- note: offer #370 closure to user; no code shipped, nothing to merge
