@@ -5431,3 +5431,9 @@
 - completed: 2026-07-09
 - prs: PyAutoConf#121 + PyAutoHeart#46 (merged 2026-07-09)
 - note: verify_install check F simulates the Colab bootstrap end-to-end (venv + fake google.colab incl. output submodule for JAX's colab_lib + injected cell verbatim + tag-matched clone + real notebook cell). SKIPs until the next release ships the setup_colab registry, then self-activates. PyAutoConf gained the workspace_dir override. First run found PyAutoBuild#126: ~28/49 workspace datasets are committed 15x15 smoke artifacts (evidence corrected on the issue: no release-lineage re-smallification; 2026-05-21 pre-build commits wrote them to main). Rider: checks A/C clone from PyAutoLabs owner.
+
+## nightly-release-activity-gate
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/127 (OPEN — phase 2 pending)
+- completed: 2026-07-09 (phase 1)
+- prs: PyAutoBuild#128 (docs/nightly_release_design.md) + PyAutoBrain#62 (AUTONOMY.md standing grant) — both merged 2026-07-09, human-directed ("go") after design review
+- note: phase-1 design for unattended nightly live PyPI releases. Approved design: Brain-scheduled driver (nightly.sh + nightly-release.yml) composing the M1-M4 release-validation machinery; activity gate over 11 release-relevant repos (pipeline self-commits excluded); Heart GREEN required (no force input; needs phase-2 release-gate CI evidence profile); loud skip/stop via PYAUTO_RELEASE_WEBHOOK_URL; NIGHTLY_RELEASES kill switch; release.yml cron REMOVED in phase 2 (live hazard while it survives: RELEASE_MODE=live would release ungated at 2AM). AUTONOMY.md release cap now carries its sole dated exception (grant attaches to the schedule, not the pipeline). Phase 2 = feature/pyautobuild/nightly_release_implementation.md. Arming blockers: next manual live release + PyAutoBuild#126.
