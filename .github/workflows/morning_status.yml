@@ -34,6 +34,12 @@ jobs:
         PyAutoLabs/autogalaxy_workspace
         PyAutoLabs/autolens_workspace
     steps:
+      # claude-code-action@v1 agent mode runs `git config` in the workspace at
+      # startup (configureGitAuth) and dies with "fatal: not in a git
+      # directory" if nothing is checked out — so the checkout is load-bearing
+      # even though the digest itself only reads the GitHub API.
+      - uses: actions/checkout@v4
+
       - name: Fetch commits to main from the last 24h
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
