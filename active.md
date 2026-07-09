@@ -2,7 +2,9 @@
 
 ## keck-ao-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/11
-- status: library-dev — implementing K1–K3 per the #9 design (drizzle backend + B1938+666 anchor user-adopted 2026-07-09)
+- status: awaiting-input — implementation + review fixes committed LOCALLY (7d8d4d6 + 8f3d67e, unpushed; 110 tests pass; B1938+666 validated: closure 0.883, PSF FWHM 72 mas); parked at ship sign-off incl. Heart YELLOW ack
+- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/11#issuecomment-4926185724
+- resume: on approval push branch + open PR (body = sign-off comment) + calibration-log row; merge/close #9+#11 remain human
 - autonomy: supervised (--auto, launched 2026-07-09; feature @ large)
 - note: carries the #9 write leg (docs/design/keck_ao.md); #9 closes when this merges. Built on post-refactor main 371721f (PR #10 merged human-directed this session)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/keck-ao-reduction
