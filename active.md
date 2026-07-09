@@ -158,7 +158,8 @@
 ## cluster-small-datasets
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/249
 - session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
-- status: workspace-dev — diagnosing fast-mode hot spots
+- status: workspace-shipped, awaiting-merge
+- prs: autolens_workspace#250 + PyAutoBuild#123 (merge together)
 - autonomy: supervised (--auto, "continue --auto" 2026-07-09; heart-ack carried)
 - note: parallel to weak-strong-lensing + frozen point-pairing-policies claims on
   autolens_workspace (scripts/cluster/ disjoint); navigator-catalogue regen rebase needed by

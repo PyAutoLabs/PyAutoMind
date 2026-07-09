@@ -10,12 +10,10 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
    unmatched_model_policy on PairRepeat (magnification_filter default), Hungarian
    under-prediction reward fixed, no-image floors, pairing guide. Awaiting merge
    (default-policy choice batched on the issue).
-3. [feature/cluster/11_small_datasets_cluster.md](../feature/cluster/11_small_datasets_cluster.md)
-   — PYAUTO_SMALL_DATASETS + canonical should_simulate auto-sim guard for the cluster path
-   (filed 2026-07-09): extend the existing PointSolver/grid small-mode across simulator + scripts,
-   migrate manual existence checks to al.util.dataset.should_simulate (weak twin in flight via
-   PyAutoLens#581 / feature/weak/9_small_datasets), add env_vars.yaml cluster entries, and
-   un-park cluster/start_here + modeling from no_run.yaml (the success criterion).
+3. [issued/11_small_datasets_cluster.md](../issued/11_small_datasets_cluster.md)
+   — **at PR-open 2026-07-09** (autolens_workspace#249; PRs #250 + PyAutoBuild#123):
+   should_simulate guards, lenstool small-mode gates, cluster scripts UN-PARKED from
+   no_run.yaml with 24s/26s evidence. Awaiting merge.
 4. Beta-tester iteration on the shipped Lenstool example (scripts/cluster/lenstool/) — the
    user-facing back-and-forth; no prompt filed yet, driven by tester feedback.
    — flagship "PyAutoLens for LensTool users" example on real data
