@@ -142,3 +142,16 @@
 - repos:
   - PyAutoLens: feature/point-pairing-policies
   - autolens_workspace: feature/point-pairing-policies
+
+## cluster-small-datasets
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/249
+- session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
+- status: workspace-dev — diagnosing fast-mode hot spots
+- autonomy: supervised (--auto, "continue --auto" 2026-07-09; heart-ack carried)
+- note: parallel to weak-strong-lensing + frozen point-pairing-policies claims on
+  autolens_workspace (scripts/cluster/ disjoint); navigator-catalogue regen rebase needed by
+  whichever open branch merges last; PyAutoBuild unclaimed
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cluster-small-datasets
+- repos:
+  - autolens_workspace: feature/cluster-small-datasets
+  - PyAutoBuild: feature/cluster-small-datasets
