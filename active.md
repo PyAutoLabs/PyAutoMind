@@ -124,3 +124,16 @@
   - PyAutoLens: feature/release-docs-polish-learn-paths
   - PyAutoGalaxy: feature/release-docs-polish-learn-paths
   - autolens_workspace: feature/release-docs-polish-learn-paths
+
+## colab-link-rot
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/21
+- session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
+- status: workspace-dev
+- autonomy: safe (--auto, launched 2026-07-09 in-session; header safe, difficulty medium; plan on the issue)
+- phase-tracker: https://github.com/PyAutoLabs/PyAutoBuild/issues/124
+- worktree: ~/Code/PyAutoLabs-wt/colab-link-rot
+- repos:
+  - HowToFit: feature/colab-link-rot
+  - HowToGalaxy: feature/colab-link-rot
+  - HowToLens: feature/colab-link-rot
+  - euclid_strong_lens_modeling_pipeline: feature/colab-link-rot

@@ -159,3 +159,14 @@
 
 
 
+
+## colab-link-rot-libdocs
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/21 (deferred leg; tracker PyAutoBuild#124)
+- planned: 2026-07-09
+- classification: library-docs
+- suggested-branch: feature/colab-link-rot-libdocs
+- blocked-by: release-docs-polish-learn-paths (using PyAutoLens, PyAutoGalaxy)
+- affected-repos:
+  - PyAutoLens
+  - PyAutoGalaxy
+- note: docs/howtolens + docs/howtogalaxy dead Colab links (chapter_optional, renamed pixelization tutorials) + .url_check_allowlist.txt Colab-entry purges. Mechanical; fold into the successor session once the blocker ships.

@@ -1,8 +1,16 @@
 # Colab link rot: fix stale/wrong URLs + purge allowlists (phase 2 of colab-maturity)
 
-Status: parked — issue when phase 1 (colab-maturity, PyAutoBuild/PyAutoConf/PyAutoHeart)
-nears shipping. Phase 1 adds Heart forbidden-URL patterns that will turn the Monday
-url-check sweep red until this phase lands — that is the intended forcing function.
+Autonomy: safe
+Difficulty: medium
+Status: launched 2026-07-09 --auto (human-directed in-session after merging phase 1).
+Phase 1 merged 2026-07-09 (PyAutoConf#120, PyAutoBuild#125, PyAutoHeart#44); the new
+Heart forbidden-URL patterns turn the Monday sweep red until this phase lands.
+
+SCOPE SPLIT at launch: PyAutoLens + PyAutoGalaxy are claimed by
+release-docs-polish-learn-paths (awaiting-input, uncommitted) — their docs/howto*
+dead-link fixes + allowlist purges are DEFERRED to a follow-up leg blocked on that
+task. This run covers the unclaimed repos: HowToFit, HowToGalaxy, HowToLens,
+euclid_strong_lens_modeling_pipeline.
 
 ## Context
 
