@@ -1,14 +1,5 @@
 # Active Tasks
 
-## alma-interferometer
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/14
-- status: library-shipped, awaiting-merge — PR #15 open at gate: 143 tests, smoke n/a, review CLEAN after 2 fixed bugs, Heart RED (unrelated release-docs worktree dirt) human-acked in-session ("just do the push"). Merge is human; then retire entry + validate G09v1.40 prototype when Aris's reference files arrive
-- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/15
-- autonomy: safe (--auto, launched 2026-07-09; feature cap safe at ≤ medium; ends at PR-open)
-- worktree: ~/Code/PyAutoLabs-wt/alma-interferometer
-- repos:
-  - PyAutoReduce: feature/alma-interferometer
-
 ## keck-ao-acceptance-checks
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13
 - status: test-dev — running acceptance checks 3-4 (astrometry + plate-scale audit; PyAutoLens Einstein-radius fit) on the merged phase-4 reduction
