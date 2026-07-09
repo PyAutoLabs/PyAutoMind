@@ -20,16 +20,6 @@
 - repos:
   - PyAutoReduce: refactor/post-phase3-consolidation
 
-## kxs-surface-refactor
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/488
-- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/489
-- autonomy: safe (--auto, refactor cap; RefactorDecision too-large->conservative cut)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-surface-refactor
-- repos:
-  - PyAutoGalaxy: feature/kxs-surface-refactor
-
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300

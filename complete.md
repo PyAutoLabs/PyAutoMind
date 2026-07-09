@@ -1,3 +1,17 @@
+## kxs-surface-refactor
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/488 (closed)
+- completed: 2026-07-09
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/489 (merged)
+- notes: |
+    The proper agent-first k x s refactor (repaying the 2026-07-09 routing
+    miss): RefactorDecision too-large -> conservative cut; one
+    _convolved_from_evaluations core replaces the tail of all three
+    blurred-image variants; PyAutoArray surface assessed clean, no edits
+    (recorded on #488). Witnesses 956/867/347 + 14-section workspace script
+    unchanged, zero test edits. Incidents handled: canonical workspace_test
+    on another session's branch (witness run from origin/main content);
+    Mind stash drop recovered via fsck. Calibration: merged-unchanged.
+
 ## weak-viz-profiles
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/581
 - completed: 2026-07-09
