@@ -1,5 +1,14 @@
 # Active Tasks
 
+## frame-products
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/16
+- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
+- status: library-dev
+- autonomy: supervised (no --auto; plan approved via Plan Mode 2026-07-09; v1 = frames+noise+CR/DQ+WCS, deepCR user-directed, no per-frame PSF)
+- note: JWST sub-part split to research/pyautoreduce/jwst_individual_frame_feasibility.md; keck-ao-acceptance task also touches PyAutoReduce but claims no worktree (analysis on main, parked)
+- worktree: ~/Code/PyAutoLabs-wt/frame-products
+- repos:
+
 ## jax-autodiff-gradients-audit
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/87
 - status: workspace-dev — 3-phase research audit (light profiles / pixelized sources / point-source χ² + weak lensing); plan approved in-session 2026-07-09
