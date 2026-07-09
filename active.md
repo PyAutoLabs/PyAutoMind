@@ -109,3 +109,4 @@
 - scope: wiki/core completeness vs autolens_workspace + llms.txt audit; 14 stub skill recipes OUT of scope (question on the issue)
 - worktree: none (autolens_assistant develops in-place)
 - repos:
+  - autolens_assistant: feature/assistant-wiki-release
