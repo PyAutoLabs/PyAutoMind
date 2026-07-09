@@ -5418,3 +5418,9 @@
 - completed: 2026-07-09
 - prs: PyAutoLens#596 + PyAutoGalaxy#494 (both merged-unchanged 2026-07-09, squash)
 - note: follow-up from #592 (--auto supervised, maintainer pre-authorized to PR-open). Added functional-API 'Plot Customization' (title/colormap/use_log10/output_* kwargs; config/visualize defaults) + 'Figure Output' (autoarray.plot.Output) sections to plot.rst, grounded on dir(autolens.plot)/dir(autoarray.plot) + workspace plot guide; re-audit clean, docutils parses, CRLF-safe. PyAutoFit plot.rst still deferred behind ep-graphical-docs #1334 (same removed-OO issue).
+
+## colab-sim-verify-install
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/45 (auto-closed on merge)
+- completed: 2026-07-09
+- prs: PyAutoConf#121 + PyAutoHeart#46 (merged 2026-07-09)
+- note: verify_install check F simulates the Colab bootstrap end-to-end (venv + fake google.colab incl. output submodule for JAX's colab_lib + injected cell verbatim + tag-matched clone + real notebook cell). SKIPs until the next release ships the setup_colab registry, then self-activates. PyAutoConf gained the workspace_dir override. First run found PyAutoBuild#126: ~28/49 workspace datasets are committed 15x15 smoke artifacts (evidence corrected on the issue: no release-lineage re-smallification; 2026-05-21 pre-build commits wrote them to main). Rider: checks A/C clone from PyAutoLabs owner.
