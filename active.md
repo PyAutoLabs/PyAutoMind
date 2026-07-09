@@ -136,8 +136,10 @@
 ## plot-rst-functional-rewrite
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/595
 - session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
-- status: library-dev
+- status: library-shipped, awaiting-merge — 2 PRs at PR-open per --auto contract (merge human)
+- prs: PyAutoLens#596 + PyAutoGalaxy#494
 - autonomy: supervised (--auto, launched 2026-07-09; docs medium→effective supervised; user pre-authorized 'both --auto to PR-open')
+- heart-ack: 2026-07-09 — YELLOW set ⊆ maintainer-acked set at #592 ship (workspace-validation stale-fail; 58 parked scripts; assistant pin-behind; 10d Mind PR)
 - worktree: ~/Code/PyAutoLabs-wt/plot-rst-functional-rewrite
 - note: follow-up from #592 — document the functional plot API in plot.rst (autogalaxy+autolens); PyAutoFit deferred behind #1334
 - repos:
