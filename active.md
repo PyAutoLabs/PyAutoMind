@@ -103,19 +103,6 @@
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
-
-## nightly-release-implementation
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/127 (reused phase-1 tracker; approved plan posted there)
-- session: claude (Fable) 2026-07-09
-- status: library-shipped, awaiting-merge — 4 PRs open 2026-07-09: PyAutoBrain#63 (driver+scheduler) / PyAutoBuild#129 (cron removal) / PyAutoHeart#47 (release-ci profile) / PyAutoMind#43 (digest watchdog); merge Brain+Build same day; nothing armed (NIGHTLY_RELEASES unset, dry_run defaults true); release-blocker label live + applied to Build#126
-- autonomy: human-required (prompt header; default present-and-wait run; plan approved in-session 2026-07-09; shipped on the same acked Heart-YELLOW reason set as the phase-1 ship)
-- worktree: ~/Code/PyAutoLabs-wt/nightly-release-implementation
-- repos:
-  - PyAutoBrain: feature/nightly-release-implementation
-  - PyAutoBuild: feature/nightly-release-implementation
-  - PyAutoHeart: feature/nightly-release-implementation
-- note: PyAutoMind morning_health repoint rides a plain branch on the canonical Mind checkout (no worktree claim)
-
 ## nnls-solver-optimization
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/369
 - session: claude --resume a67dda1e-835b-43c6-b90f-a2190e349ad0
