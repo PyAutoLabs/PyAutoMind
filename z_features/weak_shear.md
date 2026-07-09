@@ -14,5 +14,6 @@ queued (dependency order — 4 is the keystone, 6 is independent):
 - [feature/weak/6_visualization_profiles.md](../feature/weak/6_visualization_profiles.md) — tangential/cross shear radial profile plotter (γ_t/γ_x binned, cross-shear B-mode null test) + Kaiser-Squires convergence map. Independent of 4.
 - [feature/weak/7_real_data.md](../feature/weak/7_real_data.md) — real-data example on Abell 2744 public shear catalog; needs catalog loader + reduced-shear (g = γ/(1−κ)) + Σ_crit scaling. Depends on 4; profits from 6.
 - [feature/weak/8_strong_lensing.md](../feature/weak/8_strong_lensing.md) — `scripts/weak/features/strong_lensing/{simulator,fit,modeling}.py` combined SL+WL via summed `AnalysisImaging + AnalysisWeak`. Depends on 4.
+- [feature/weak/9_small_datasets.md](../feature/weak/9_small_datasets.md) — `PYAUTO_SMALL_DATASETS=1` smoke-mode support: cap `via_tracer_random_positions_from` galaxy count + migrate `modeling.py` to `should_simulate`. Enables fast workspace-test smoke coverage of `scripts/weak/`. Independent; small/safe.
 
 Issue steps one at a time as each predecessor nears shipping (no bulk-issuing).
