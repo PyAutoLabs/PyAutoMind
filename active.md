@@ -1,5 +1,14 @@
 # Active Tasks
 
+## kxs-workspace-tests
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
+- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
+- status: workspace-dev
+- autonomy: supervised (--auto, launched 2026-07-09, no heart-ack)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-workspace-tests
+- repos:
+  - autolens_workspace_test: feature/kxs-workspace-tests
+
 ## weak-modeling
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/579
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853

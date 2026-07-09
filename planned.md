@@ -168,14 +168,6 @@
   - PyAutoBrain
 
 
-## kxs-workspace-tests
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362 (phase 3)
-- planned: 2026-07-08
-- classification: workspace
-- suggested-branch: feature/kxs-workspace-tests
-- blocked-by: dpie-lenstool-param (using autolens_workspace_test, PyAutoGalaxy)
-- affected-repos:
-  - autolens_workspace_test
 
 ## oversampled-psf-visible-input
 - issue: (file on start — prompt: feature/autolens_workspace/oversampled_psf_visible_input.md)
