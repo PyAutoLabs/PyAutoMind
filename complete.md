@@ -1,5 +1,17 @@
 ## clone-mitosis-agent
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/57 (closed)
+
+## keck-ao-reduction
+- completed: 2026-07-09
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/11 (closed)
+- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/12 (merged 44a8d1a, squash)
+- summary: Keck NIRC2 AO reduction live (phase 4) — KOA acquire seam, ground calibrate/sky stages, nirc2_native drizzle-pixmap combine, MCDS-aware noise, provisional-PSF epoch candidates; validated on SHARP I B1938+666 (closure 0.883, FWHM 72 mas, 110 tests); review gate 9 findings fixed
+- followups: acceptance checks 3-4 (HST astrometry + PyAutoLens Einstein-radius invariance) and keck_ao.md open items — file as new prompts
+
+## keck-ao-reduction-plan
+- completed: 2026-07-09
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/9 (closed)
+- summary: Keck-AO research task — SHARP literature pass + tooling survey + draft design; delivered as docs/design/keck_ao.md via keck-ao-reduction's PR #12
+
 - completed: 2026-07-09
 - pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/59 (merged, squash 4af8a756)
 - notes: |

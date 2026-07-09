@@ -1,24 +1,5 @@
 # Active Tasks
 
-## keck-ao-reduction
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/11
-- status: awaiting-input — implementation + review fixes committed LOCALLY (7d8d4d6 + 8f3d67e, unpushed; 110 tests pass; B1938+666 validated: closure 0.883, PSF FWHM 72 mas); parked at ship sign-off incl. Heart YELLOW ack
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/11#issuecomment-4926185724
-- resume: on approval push branch + open PR (body = sign-off comment) + calibration-log row; merge/close #9+#11 remain human
-- autonomy: supervised (--auto, launched 2026-07-09; feature @ large)
-- note: carries the #9 write leg (docs/design/keck_ao.md); #9 closes when this merges. Built on post-refactor main 371721f (PR #10 merged human-directed this session)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/keck-ao-reduction
-- repos:
-  - PyAutoReduce: feature/keck-ao-reduction
-
-## keck-ao-reduction-plan
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/9
-- status: resolved-pending-merge — batched decisions answered in-session 2026-07-09 (drizzle backend, B1938+666 anchor; sequencing resolved by #10 merge); the design-doc deliverable ships on keck-ao-reduction's branch; close #9 when PyAutoReduce#11's PR merges
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/9#issuecomment-4924402662 (answered)
-- autonomy: supervised (--auto, launched 2026-07-09)
-- worktree: none (read-only)
-- repos:
-
 ## refactor-post-phase3
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
