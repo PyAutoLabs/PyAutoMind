@@ -1,3 +1,11 @@
+## weak-sigma-crit-jax
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/590
+- completed: 2026-07-09
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/591 (merged)
+- workspace-test-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/156 (merged)
+- notes: Weak series step 10 (--auto supervised, same-session). Per-galaxy sigma_crit scaling: FitWeak._redshift_scale_factors uses cosmology.scaling_factor_between_redshifts_from(z_lens, z_i, z_ref) — exactly beta_i/beta_ref, zero at/below lens plane, unity at source plane; reduced datasets scale BOTH gamma and kappa (g=s*g/(1-s*k)). Factors are concrete numpy constants (redshifts never sampled) so they stay outside JAX traces — this is the key design point that made scaling+JAX coexist on one branch. JAX: xp threaded through fit statistics; model_shear returns raw array on jnp path (LensCalc guard); _register_fit_weak_pytrees mirrors AnalysisPoint with no_flatten=(dataset,_xp,_redshift_scale_factors). GOTCHA: jax.jit(analysis.fit_from)(instance) fails cold on ModelInstance — pytree model registration happens in the Fitness path, so validation MUST go through fitness._vmap (the standing memory rule, reconfirmed). workspace_test parity script at scripts/jax_likelihood_functions/weak/ (plain + scaled variants); un-parks fast_visualization D.2.b.iii. use_jax default stays False on AnalysisWeak.
+
+
 ## delaunay-qhull-callback
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367 (closed)
 - completed: 2026-07-09

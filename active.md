@@ -12,19 +12,6 @@
   - PyAutoFit: feature/factor-graph-viz-dispatch (parallel claim, declarative/collection.py only)
 
 
-## weak-sigma-crit-jax
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/590
-- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: shipped, awaiting-merge — CI running; merge on green (authorized)
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/591
-- workspace-test-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/156
-- autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set + merge authorization carried in-session)
-- note: weak follow-ups 1+2 (sigma_crit scaling + FitWeak JAX) on one branch — both rework FitWeak; workspace_test parity script at validation time
-- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-sigma-crit-jax
-- repos:
-  - PyAutoLens: feature/weak-sigma-crit-jax
-  - autolens_workspace_test: feature/weak-sigma-crit-jax (parallel to delaunay-qhull-callback — imaging vs new weak/ dir, disjoint)
-
 ## keck-ao-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/11
 - status: library-dev — implementing K1–K3 per the #9 design (drizzle backend + B1938+666 anchor user-adopted 2026-07-09)
