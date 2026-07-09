@@ -4,24 +4,10 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
    `autolens_profiling/likelihood/cluster/` that time the source-plane and
    image-plane likelihood paths, following the per-model breakdown style of
    the rest of `autolens_profiling/likelihood/`.
-2. [issued/6_dpie_lenstool_parameterization.md](../issued/6_dpie_lenstool_parameterization.md)
-   — **at PR-open 2026-07-09** (PyAutoGalaxy#485; PRs PyAutoGalaxy#487 +
-   PyAutoLens#576 + awt#151): from_lenstool constructors, dPIEMassLenstool/Sph
-   model-fitting wrappers, analytic pi05 potential (replaced 15%-wrong MGE),
-   6-leg parity script. Awaiting merge.
-3. [issued/7_scaling_relation_lenstool_convention.md](../issued/7_scaling_relation_lenstool_convention.md)
-   — **at PR-open 2026-07-09** (autolens_workspace#237): cluster + group scaling
-   tiers reference-anchored, exponent fixed 0.5, rs scaling; tier 2→1 params.
-   Awaiting merge. Follow-up noted: imaging/features/scaling_relation, group/slam.py,
-   guides/advanced/multi_plane.py still show the old form.
-4. [issued/9_cluster_visualization.md](../issued/9_cluster_visualization.md)
-   — **at PR-open 2026-07-09** (PyAutoLens#577; PRs PyAutoLens#578 + awt#152):
-   autolens/cluster/plot aplt helpers incl. per-plane critical curves/caustics
-   (subsumed the deferred aplt item below). Awaiting merge.
-5. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
+2. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
    — deliberate over/under-prediction handling in the point-source likelihood
    + `guides/` documentation of the choices.
-6. [docs/cluster/8_lenstool_users_example.md](../docs/cluster/8_lenstool_users_example.md)
+3. [docs/cluster/8_lenstool_users_example.md](../docs/cluster/8_lenstool_users_example.md) — **in dev 2026-07-09**
    — flagship "PyAutoLens for LensTool users" example on real data
    (candidate: SMACS J0723), reproducing a published LensTool model; depends
    on (2) and (3), exercised by (4) and (5). A real prospective user is
@@ -31,6 +17,16 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
    ([[feedback_no_bulk_issue_queues]]).
 
 __Shipped__
+
+- 6_dpie_lenstool_parameterization — `dpie-lenstool-param` (PyAutoGalaxy#485; PRs #487 +
+  PyAutoLens#576 + awt#151, merged 2026-07-09). from_lenstool constructors, dPIEMassLenstool/Sph
+  model-fitting wrappers, analytic pi05 potential (replaced 15%-wrong MGE), _ellip min-clamp,
+  6-leg parity script. Conventions verified against the Lenstool C source.
+- 7_scaling_relation_lenstool_convention — `cluster-scaling-lenstool` (autolens_workspace#237;
+  PR #238 merged 2026-07-09). Cluster + group tiers reference-anchored, exponent fixed 0.5,
+  rs ∝ L^0.5; tier 2→1 params (N=13→12). Referee-comment response closed.
+- 9_cluster_visualization — `cluster-visualization` (PyAutoLens#577; PRs #578 + awt#152, merged
+  2026-07-09). autolens/cluster/plot aplt helpers incl. per-plane critical curves/caustics.
 
 - 0_simulator_cluster — `cluster-simulator` (autolens_workspace#77, PyAutoLens#465, 2026-04-20)
   and v2 `cluster-simulator-jax-multiplane` (autolens_workspace#91, 2026-04-27). Built the

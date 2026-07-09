@@ -127,3 +127,13 @@
   - PyAutoHeart: feature/morning-status-release-rehearsal
   - PyAutoBuild: feature/morning-status-release-rehearsal
   - PyAutoMind: feature/morning-status-release-rehearsal
+
+## lenstool-example
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/239
+- session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
+- status: workspace-dev — phase 1 (data prep) starting
+- autonomy: supervised (--auto, launched 2026-07-09; in-session authorization "merge PRs and
+  then do 8_lenstool_user_example"; heart-ack carried per prior tasks)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/lenstool-example
+- repos:
+  - autolens_workspace: feature/lenstool-example
