@@ -57,3 +57,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | kxs-workspace-tests (#362 p3) | supervised | scripts-run-clean (adaptive legs chi2~0) / review CLEAN / heart YELLOW-human-cadence | merged-unchanged |
 | 2026-07-09 | kxs-refactor (#362 exercise) | safe | tests PASS 867 / ids bit-identical, 62->9.7ms / review CLEAN / heart YELLOW-cadence | merged-unchanged |
 | 2026-07-09 | psf-visible-input (#242 flagship) | supervised | scripts run/compile clean / zero behaviour change / review CLEAN / heart YELLOW-cadence | merged-unchanged (wider chain folded into adoption-a per human ii) |
+| 2026-07-09 | jwst-nircam-cosmos-web | supervised | tests 83/83 / smoke n/a / review FINDINGS(6)→5 fixed / heart YELLOW | parked |
