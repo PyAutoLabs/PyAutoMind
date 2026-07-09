@@ -72,4 +72,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | cluster-small-datasets (autolens_workspace#249) | supervised | tests timed evidence 24s/26s/2s/175s under authoritative sweep env from clean regen / smoke = the evidence itself / review CLEAN / heart-ack carried | merged-unchanged (#250+#123, 2026-07-09) |
 | 2026-07-09 | weak-strong-lensing | supervised | tests 357-pass / smoke sim+fit+TEST_MODE+real-joint-fit / review human-signoff / heart YELLOW-acked-set | merged-unchanged (587+251, 2026-07-09) |
 | 2026-07-09 | csv-api-lenstool (PyAutoGalaxy#490) | supervised | tests 12 new + 962 suite / smoke lenstool example end-to-end at identical 0.0680" parity post-port / review CLEAN / heart-ack carried | merged-unchanged (#491+#252; loud guards stood) |
-| 2026-07-09 | weak-real-data (7a) | supervised | tests 364-pass / smoke n-a-library / review n-a-parked / heart YELLOW-acked-set | parked (7a sign-off + 7b data question) |
+| 2026-07-09 | weak-real-data (7a) | supervised | tests 364-pass / smoke n-a-library / review n-a-parked / heart YELLOW-acked-set | 7a merged-unchanged (589); 7b pr-open (253), merge pre-authorized |
