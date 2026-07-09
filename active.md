@@ -107,7 +107,8 @@
 ## nightly-release-activity-gate
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/127
 - session: claude (Fable) 2026-07-09
-- status: library-dev — phase 1 (design note + AUTONOMY.md doctrine edit); phase 2 (release.yml implementation) prompts only after the design PR is approved
+- status: library-shipped, awaiting design review — PR review IS the phase-1 design review; phase 2 (Brain nightly driver + release.yml cron removal + Heart release-gate profile) prompts only after approval
+- prs: PyAutoBuild#128 (design note) + PyAutoBrain#62 (AUTONOMY.md standing grant) — docs-only, review together; shipped on user-acked Heart YELLOW (reasons unrelated)
 - autonomy: human-required (prompt header; default present-and-wait run)
 - worktree: ~/Code/PyAutoLabs-wt/nightly-release-activity-gate
 - repos:
