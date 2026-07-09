@@ -90,6 +90,10 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Everything this job touches is public commit metadata, and the
+          # default-hidden output masks real failures (an expired token reads
+          # as "slack_payload.json missing" three steps later).
+          show_full_output: true
           prompt: |
             Read `pushes_to_main.json` in this directory. It has shape:
 
