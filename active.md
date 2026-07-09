@@ -24,25 +24,13 @@
 ## jwst-nircam-cosmos-web
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: awaiting-input — four-band integration complete (internal closures pass all bands; parity order-unity per maintainer bar; review 6 findings -> 5 fixed; 83 tests); parked at ship sign-off incl. Heart YELLOW ack + base fork (#5 merge first recommended)
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/6#issuecomment-4923999832
-- local-commits: 14 on feature/jwst-nircam (stacked on wfc3-reduction/PR #5), unpushed
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/7
 - autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
 - note: STACKED on feature/wfc3-reduction (PR #5 awaiting merge) — shares adapter/pipeline seams, rebases onto main after #5 merges; 7 local commits unpushed
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
 - repos:
   - PyAutoReduce: feature/jwst-nircam
-
-## wfc3-reduction
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/4
-- session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: library-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/5
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack)
-- note: stacked on feature/hst-acs-phase1 (PR #3 awaiting merge) — same repo, same session, deliberate
-- worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
-- repos:
-  - PyAutoReduce: feature/wfc3-reduction
 
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337

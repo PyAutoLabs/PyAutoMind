@@ -1,3 +1,17 @@
+## wfc3-reduction
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/4 (closed)
+- completed: 2026-07-09
+- prs: PyAutoReduce#5 (squash-merged)
+- notes: |
+    WFC3 UVIS + IR adapters (phase 2). UVIS validated against published
+    Bayer et al. 1803.05952 F390W reduction of J0252+0039 (sky RMS 0.00226
+    vs ~0.002 e-/s, R=1.5 shift-and-add); IR F160W internally validated
+    (71-star ePSF post saturation-cap fix). Two loud-failure guards
+    demonstrated (pixfrac speckle; detector-defect blob) -> dial fixes
+    documented in wfc3.md. Review 1 HIGH (per-exposure saturation cap,
+    fixed) + 2 LOW. 62 tests. UVIS ePSF refresh deferred to next natural
+    UVIS reduction (maintainer).
+
 ## kxs-refactor
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362 (closed — series complete)
 - completed: 2026-07-09
