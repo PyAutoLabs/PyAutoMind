@@ -9,6 +9,7 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-sigma-crit-jax
 - repos:
   - PyAutoLens: feature/weak-sigma-crit-jax
+  - autolens_workspace_test: feature/weak-sigma-crit-jax (parallel to delaunay-qhull-callback — imaging vs new weak/ dir, disjoint)
 
 
 ## delaunay-qhull-callback
