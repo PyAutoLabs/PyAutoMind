@@ -104,9 +104,12 @@
 
 ## assistant-wiki-release
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/40
-- status: workspace-dev
+- status: awaiting-input — implementation complete + validated (36 files, +329/−156; committed LOCALLY as 6adacdd on feature/assistant-wiki-release, NOT pushed); parked at ship sign-off incl. Heart YELLOW ack
+- question: https://github.com/PyAutoLabs/autolens_assistant/issues/40#issuecomment-4927136677
 - autonomy: supervised (--auto, launched 2026-07-09; docs header supervised → effective supervised; plan on the issue; no launch-time Heart ack)
-- scope: wiki/core completeness vs autolens_workspace + llms.txt audit; 14 stub skill recipes OUT of scope (question on the issue)
+- scope: wiki/core completeness vs autolens_workspace + llms.txt audit; 14 stub skill recipes OUT of scope (wiki companions verified complete)
+- notes: audit_skill_apis 0/117 broken; provenance 0 errors; all citations+links resolve; bonus staleness class fixed (Project:path cites at pre-refactor layouts; removed Plane class purged)
+- resume: on approval → push branch, open PR at PR-open (validation checklist in body), append autonomy_log row, set awaiting-merge
 - worktree: none (autolens_assistant develops in-place)
 - repos:
   - autolens_assistant: feature/assistant-wiki-release

@@ -87,3 +87,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | release-docs-polish-learn-paths (#592) | supervised | tests n/a / smoke n/a / review CLEAN / heart YELLOW-acked (5 chronic) | merged-unchanged (PyAutoLens#593+PyAutoGalaxy#492+autolens_workspace#254; human ship+merge) |
 | 2026-07-09 | regen-workspace-notebooks (#255) | safe | tests n/a / smoke n/a (deterministic nb from unchanged scripts) / review CLEAN / heart YELLOW⊆acked | pr-open (autolens_workspace#256; awaiting human merge) |
 | 2026-07-09 | plot-rst-functional-rewrite (#595) | supervised | tests n/a / smoke n/a / review CLEAN / heart YELLOW⊆acked | pr-open (PyAutoLens#596+PyAutoGalaxy#494; awaiting human merge) |
+| 2026-07-09 | assistant-wiki-release | supervised | tests n/a (docs repo; api-audit 0/117) / smoke n/a (docs-only; provenance 0 err) / review surface-prepared, mechanical-clean / heart YELLOW (no launch ack) | parked |
