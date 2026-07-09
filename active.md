@@ -120,7 +120,8 @@
 ## colab-link-rot
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/21
 - session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge — 4 PRs at PR-open per the --auto contract (merge is human)
+- prs: HowToLens#22 + HowToGalaxy#16 + HowToFit#13 + euclid_strong_lens_modeling_pipeline#24
 - autonomy: safe (--auto, launched 2026-07-09 in-session; header safe, difficulty medium; plan on the issue)
 - phase-tracker: https://github.com/PyAutoLabs/PyAutoBuild/issues/124
 - worktree: ~/Code/PyAutoLabs-wt/colab-link-rot

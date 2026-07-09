@@ -82,3 +82,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | profiling-agent (PyAutoBrain#60) | supervised | tests n/a (CLI-validated live) / smoke n/a (organism repo) / review CLEAN / heart YELLOW-acked in-session | merged-unchanged (PyAutoBrain#61) |
 | 2026-07-09 | release-docs-polish-learn-paths (#592) | supervised | tests n/a (docs-only) / smoke n/a / review pending / heart n/a | parked |
 | 2026-07-09 | alma-interferometer (PyAutoReduce#14) | safe | tests 143-pass (downstream n/a, standalone) / smoke n/a (no workspace consumers) / review CLEAN-after-2-fixed-bugs / heart RED-unrelated-worktree-dirt human-acked in-session | merged-unchanged (PyAutoReduce#15, squash 11a2484; human-directed merge in-session) |
+| 2026-07-09 | colab-link-rot (HowToLens#21) | safe | tests n/a (no test dirs) / smoke n/a (README-only) / review CLEAN / heart YELLOW-within-launch-ack | PR-open (HowToLens#22, HowToGalaxy#16, HowToFit#13, euclid#24) |
