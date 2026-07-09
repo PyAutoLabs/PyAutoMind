@@ -140,7 +140,8 @@
 
 ## health-sync-noise-filter
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/41
-- status: library-dev
+- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/42
+- status: library-shipped, awaiting-merge — no workspace impact (Heart-internal); Heart YELLOW acked in-session at ship
 - note: also carries the /repo_cleanup cadence leg (startup hygiene nudge off ~/.cache/pyauto/repo_cleanup_last_audit.json); Brain-skill stamp write is a follow-up (PyAutoBrain claimed by clone-mitosis-agent)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/health-sync-noise-filter
 - repos:
