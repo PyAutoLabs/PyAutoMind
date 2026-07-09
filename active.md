@@ -141,8 +141,8 @@
 ## nnls-solver-optimization
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/369
 - session: claude --resume a67dda1e-835b-43c6-b90f-a2190e349ad0
-- status: library-dev
+- status: info-shipped, implementation PARKED (user decision 2026-07-09) — findings + ledger on the issue; validated knob implementation preserved on pushed branch feature/nnls-solver-optimization (d8a1c84a), NOT for merge
 - worktree: ~/Code/PyAutoLabs-wt/nnls-solver-optimization
 - repos:
   - PyAutoArray: feature/nnls-solver-optimization
-- note: rectangular+MGE is the priority; Phase A profiling runs standalone in autolens_profiling/scratch/nnls_speedup/ (no claim on autolens_profiling — profiling-preopt-campaign holds it); go/no-go + Delaunay next-target verdict due on the issue before source edits
+- note: awaiting A100 addendum only — RAL job 330046 queued (euclid-ral-gpu-[1-2] down); when it runs, rsync scratch/nnls_speedup results back, post addendum to #369, then offer issue closure + worktree cleanup. Scratch harness + real systems in autolens_profiling/scratch/nnls_speedup/ (canonical checkout, untracked) are the shared testbed for the BPP/ADMM follow-up
