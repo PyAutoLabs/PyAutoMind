@@ -19,11 +19,18 @@ instead. Design first, then implement behind human review.
 
 ## Design constraints (from the 2026-07-09 session that conceived this)
 
-- **Releases stay `human-required` under the autonomy contract** — this task
-  automates the *dispatch cadence*, not the human accountability. The design
-  must say explicitly where the human sits: e.g. the nightly run prepares and
-  validates everything and pages for a one-tap approval, or the human
-  pre-authorises a bounded window; pick one and defend it.
+- **DECIDED endpoint (user, 2026-07-09): once the next manual release
+  succeeds, nightly runs perform FULL LIVE PyPI RELEASES unattended** — no
+  per-release human approval. This is a deliberate, scoped exception to the
+  autonomy contract's "release is always human-required" invariant, so phase 1
+  must include the dated doctrine edit to `PyAutoBrain/AUTONOMY.md`: the
+  scheduled-nightly path (activity-gated, Heart-GREEN-gated) is
+  human-pre-authorised as a standing grant; manual and agent-initiated
+  releases stay `human-required`. The human's role moves to: a kill switch
+  (e.g. a `NIGHTLY_RELEASES` repo var to pause the schedule), paging on any
+  red/anomaly, and reviewing the morning digest of what shipped. `pre_build`'s
+  human minor-version ask must be automated on this path (date scheme derives
+  it).
 - **Activity gate**: "work merged in the past 24h" needs a concrete definition
   — merged PRs / pushed commits to `main` across the 5 libraries, 3
   workspaces, 3 HowTo repos (the release-relevant set from `repos.yaml`).
