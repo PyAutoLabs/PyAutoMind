@@ -131,7 +131,8 @@
 ## point-pairing-policies
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/585
 - session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
-- status: library-dev — audit complete (on the issue); implementing policies + tests, then guide
+- status: library-shipped, awaiting-merge
+- prs: PyAutoLens#586 (library) + autolens_workspace#248 (guide; library-first merge order)
 - autonomy: supervised (--auto, "continue --auto" 2026-07-09; heart-ack carried; design defaults
   batched on the issue)
 - note: parallel to weak-small-datasets (PyAutoLens; autolens/point/ vs autolens/weak/ disjoint)

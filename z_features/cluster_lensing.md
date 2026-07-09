@@ -5,9 +5,11 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
    8-digit LL parity with the production fits; source-plane 3.1 ms vs image-plane solve
    0.32 s/call + 10.5 s compile/plane. simulators/cluster.py synced to the scaling-tier
    truth. Awaiting merge.
-2. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
-   — deliberate over/under-prediction handling in the point-source likelihood
-   + `guides/` documentation of the choices.
+2. [issued/10_solver_over_under_prediction.md](../issued/10_solver_over_under_prediction.md)
+   — **at PR-open 2026-07-09** (PyAutoLens#585; PRs #586 + autolens_workspace#248):
+   unmatched_model_policy on PairRepeat (magnification_filter default), Hungarian
+   under-prediction reward fixed, no-image floors, pairing guide. Awaiting merge
+   (default-policy choice batched on the issue).
 3. [feature/cluster/11_small_datasets_cluster.md](../feature/cluster/11_small_datasets_cluster.md)
    — PYAUTO_SMALL_DATASETS + canonical should_simulate auto-sim guard for the cluster path
    (filed 2026-07-09): extend the existing PointSolver/grid small-mode across simulator + scripts,
