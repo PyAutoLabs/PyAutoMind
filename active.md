@@ -20,9 +20,9 @@
 ## weak-strong-lensing
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/247
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: awaiting-input — all three scripts + library viz fix committed LOCALLY (workspace c7dc5c78, PyAutoLens 7d8139a9; suite 357 green; real joint fit recovered er=1.5999 vs 1.6); parked at ship sign-off
-- question: (sign-off comment on autolens_workspace#247)
-- resume: on approval push both + PRs library-first + merge on green + close #247; then start_dev issued/7_real_data.md
+- status: shipped, awaiting-merge — approved in-session; CI running; merge library-first
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/587
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/251
 - autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
 - note: weak series step 8 — combined SL+WL features example (FactorGraphModel joint fit). PARALLEL to point-pairing-policies on autolens_workspace (scripts/weak/features/ vs scripts/guides/ disjoint); both branches regenerate the navigator catalogue — whichever merges second regenerates on main (that session already plans re-verify at ship)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-strong-lensing
