@@ -1,5 +1,16 @@
 # Active Tasks
 
+## weak-real-data
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/588
+- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
+- status: library-dev — phase 7a (catalog IO + reduced shear, no external data needed)
+- autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
+- note: weak series step 7 (final leg), phased: 7a library, 7b workspace real-data example (data acquisition first, fallback = published-format mock + parked question). PARALLEL to point-pairing-policies' PyAutoLens claim (autolens/point/ vs autolens/weak/ disjoint, that task is awaiting-merge). autolens_workspace attach deferred to 7b (three sibling-session claims in flight, all disjoint; catalogue regen on whichever merges last)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-real-data
+- repos:
+  - PyAutoLens: feature/weak-real-data (parallel claim, autolens/weak/ only)
+
+
 ## delaunay-qhull-callback
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367
 - status: library-dev — phase 1: PyAutoArray qhull-only callback + JAX 2-ring point location; phase 2 (autolens_workspace_test parity suite) follows behind the library-first gate
