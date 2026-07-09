@@ -213,3 +213,61 @@ truthful (docs drift is real; mitigate with drift checks and by keeping the
 worked example = the live system), and the social cost of visitors filing
 issues against a fast-moving personal system (mitigate with the
 CONTRIBUTING disclaimer).
+
+## 8. The real ambition: adopters run their OWN organisms (added 2026-07-09)
+
+Clarified intent: PyAutoScientist is not "docs people crib from" — it is the
+**basis for someone else's AI dev workflow**, driving projects completely
+independent of PyAutoFit/PyAutoLens. That kills the §7 stamped-skeleton model
+for the organs: a stamped copy has no upgrade path, so every adopter becomes
+an orphaned fork. The model that serves this ambition without creating a
+second PyAutoBrain is the **config-diff fork**:
+
+- **One upstream: the live organs.** Adopters fork Brain/Heart/Build and edit
+  *only the declared config surfaces* — Heart's `config/repos.yaml`,
+  pre_build's `run_workspace` table, Brain's constant tables — plus their own
+  Mind (from a skeleton) holding their own `repos.yaml` body map with their
+  own libraries/workspaces/categories. Because their diff is confined to
+  config, `git pull` from upstream stays clean: they get every improvement
+  Jammy ships, Jammy maintains exactly what he maintains today.
+- **The mechanism already exists.** Nothing reads the body map at runtime;
+  the organism works by *hand-maintained mirrors + drift checks*
+  (`repos_sync.py --check` already knows every config surface:
+  `check_heart`, `check_pre_build`, `check_labels`, `check_origins`) and by
+  *generated prose blocks* (`repos_sync:begin/end` markers in AGENTS.md and
+  WORKFLOW.md). An adopter edits their body map, runs `repos_sync --write`,
+  and their fork's routing tables and doc blocks regenerate from *their*
+  repos — the generation pattern is the parameterisation mechanism, already
+  battle-tested in-repo.
+- **Domain independence is confirmed** by the §1 audit: organ logic is
+  domain-free; everything lensing-specific sits in the config surfaces the
+  adopter replaces. Memory's generic asset is its shape; the MEMORY_WIKIS
+  keyword map is adopter config like everything else.
+
+What upstream must do to enable this (all self-beneficial or cheap):
+
+1. **Evacuate run-state from the organs**: gitignore Build's
+   `test_results/` and `to_do_list/` (repo hygiene Jammy benefits from
+   anyway; committed run outputs would collide with any fork's own runs).
+2. **The tenant firewall**: extend `repos_sync.py --check` with a check that
+   no instance fact (repo name, owner, path) appears in organ code outside
+   the declared config surfaces. This keeps future changes from silently
+   breaking the clean-pull property — and doubles as drift hygiene for the
+   live system.
+3. **Docs** (§4 unchanged) plus an adoption guide written against the fork
+   model: fork, replace config surfaces, `repos_sync --write`, go.
+4. **Demand-gated, later**: teach `repos_sync --write` to *stamp* the organ
+   config surfaces from the body map + per-repo policy fields (it already
+   stamps doc blocks). That turns "edit five mirrors" into "edit one file,
+   regenerate" — for adopters and for Jammy alike. This is the only real
+   engineering in the whole plan, and it removes his own hand-mirroring
+   burden, so it pays for itself even with zero adopters.
+
+**Still one PyAutoBrain.** Upstream is the live repo; N downstream forks are
+owned by their adopters; divergence is confined by design to config. The §6
+"Never" list gains a sharper phrasing: never one *shared deployment* serving
+multiple humans — but N private deployments of the same code is exactly how
+this should work. Residual honest costs: upstream-maintainer social load
+(issues/PRs from strangers — pace set by the CONTRIBUTING disclaimer), and
+the hard prerequisites (Claude Code, `gh`, worktree layout) which the docs
+must state up front rather than apologise for.
