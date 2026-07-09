@@ -79,3 +79,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | factor-graph-viz-dispatch | safe (refactor cap) | tests 1424-pass / smoke n-a / review human-directive / heart YELLOW-acked-set | merged-unchanged (1340, 2026-07-09) |
 | 2026-07-09 | keck-ao-reduction (PyAutoReduce#11) | supervised | tests 110-pass-worktree, downstream n/a / smoke n/a-no-script-surface / review 8-angles-10-findings-9-fixed-CLEAN / heart YELLOW-6-chronic-unacked | parked (awaiting-input: ship sign-off on #11; branch local-only) |
 | 2026-07-09 | keck-ao-reduction (PyAutoReduce#11) | supervised | tests 110-pass / smoke n-a / review 9-of-10-fixed-CLEAN / heart YELLOW-acked-at-signoff | merged-unchanged (#12, 2026-07-09; human ship+merge) |
+| 2026-07-09 | profiling-agent (PyAutoBrain#60) | supervised | tests n/a (CLI-validated live) / smoke n/a (organism repo) / review CLEAN / heart YELLOW-acked in-session | PR-open (PyAutoBrain#61) |
