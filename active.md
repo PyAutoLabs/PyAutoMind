@@ -122,4 +122,5 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/nnls-solver-optimization
 - repos:
+  - PyAutoArray: feature/nnls-solver-optimization
 - note: rectangular+MGE is the priority; Phase A profiling runs standalone in autolens_profiling/scratch/nnls_speedup/ (no claim on autolens_profiling — profiling-preopt-campaign holds it); go/no-go + Delaunay next-target verdict due on the issue before source edits
