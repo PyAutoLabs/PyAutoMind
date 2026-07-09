@@ -7,7 +7,13 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
 2. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
    — deliberate over/under-prediction handling in the point-source likelihood
    + `guides/` documentation of the choices.
-3. Beta-tester iteration on the shipped Lenstool example (scripts/cluster/lenstool/) — the
+3. [feature/cluster/11_small_datasets_cluster.md](../feature/cluster/11_small_datasets_cluster.md)
+   — PYAUTO_SMALL_DATASETS + canonical should_simulate auto-sim guard for the cluster path
+   (filed 2026-07-09): extend the existing PointSolver/grid small-mode across simulator + scripts,
+   migrate manual existence checks to al.util.dataset.should_simulate (weak twin in flight via
+   PyAutoLens#581 / feature/weak/9_small_datasets), add env_vars.yaml cluster entries, and
+   un-park cluster/start_here + modeling from no_run.yaml (the success criterion).
+4. Beta-tester iteration on the shipped Lenstool example (scripts/cluster/lenstool/) — the
    user-facing back-and-forth; no prompt filed yet, driven by tester feedback.
    — flagship "PyAutoLens for LensTool users" example on real data
    (candidate: SMACS J0723), reproducing a published LensTool model; depends

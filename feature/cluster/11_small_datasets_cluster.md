@@ -43,3 +43,22 @@ Grounding (2026-07-09 session):
   example scripts into the smoke set (small curated subset rule — only if genuinely fast).
 
 <!-- formalised by the Intake (Conception) Agent on 2026-07-09 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/fa55f70e-2cea-4887-bf12-61f81cff042f/scratchpad/intake_small_datasets.md -->
+
+__Addendum (user direction, 2026-07-09): standardize the auto-simulation guard__
+
+Data-consuming workspace scripts should use the canonical auto-simulation pattern, as the imaging
+scripts do:
+
+    if al.util.dataset.should_simulate(str(dataset_path)):
+        import subprocess, sys
+        subprocess.run([sys.executable, "scripts/cluster/simulator.py"], check=True)
+
+The cluster scripts currently use hand-rolled existence checks (`modeling.py` / `start_here.py`
+test data.fits + scaling_galaxies.csv manually) and `lenstool/data.py` uses its own download
+caching. As part of this task, migrate the cluster scripts to `al.util.dataset.should_simulate`
+— which also carries the PYAUTO_SMALL_DATASETS delete-and-regenerate semantic that makes the
+small-mode dataset actually get built small (see autoarray/util/dataset_util.py). The weak-lensing
+twin of this migration is already in flight (weak-viz-profiles, PyAutoLens#581, plus
+feature/weak/9_small_datasets.md) — mirror its conventions so imaging, weak and cluster all tell
+the same auto-sim story. For lenstool/data.py, downloads are not simulations: keep the download
+caching, but gate the expensive legs (96 MB mosaic/cutout) off under PYAUTO_SMALL_DATASETS.
