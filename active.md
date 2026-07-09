@@ -24,7 +24,9 @@
 ## refactor-post-phase3
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: library-dev — witness baselines capturing from main f91d79c; then behaviour-preserving consolidation per approved plan
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/10
+- notes: witnesses byte-identical both paths; 2 disclosed fix riders (CPDIS fobj, ePSF window +20) caught by baseline capture
 - autonomy: default present-and-wait (refactor cap safe; no --auto given)
 - worktree: /home/jammy/Code/PyAutoLabs/PyAutoReduce (in-place)
 - repos:
