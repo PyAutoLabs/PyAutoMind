@@ -3,9 +3,9 @@
 ## weak-small-datasets
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/583
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: awaiting-input — both repos committed LOCALLY (PyAutoArray 2bf9ad37 +22, PyAutoLens 6b29d3bf +6; suites 869/356 green; modeling.py smoke run 30s @ 25 galaxies); parked at ship sign-off
-- question: (sign-off comment on PyAutoLens#583)
-- resume: on approval push both + PRs + merge autoarray-first on green + close #583
+- status: shipped, awaiting-merge — approved in-session; CI running; merge autoarray-first
+- autoarray-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/366
+- autolens-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/584
 - autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
 - note: weak series step 9 — catalogue cap for PYAUTO_SMALL_DATASETS; autoarray helper + autolens simulator consumer; merge autoarray first
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-small-datasets
@@ -17,9 +17,8 @@
 ## weak-likelihood-function
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/245
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: awaiting-input — guide written+validated+committed LOCALLY (914c45ae; by-hand == FitWeak == AnalysisWeak to 8 d.p.); parked at ship sign-off
-- question: (sign-off comment on autolens_workspace#245)
-- resume: on approval push + open pending-release PR + merge on green + close #245
+- status: shipped, awaiting-merge — approved in-session; CI running
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/246
 - autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
 - note: weak series step 5 — workspace-only likelihood guide; no library change
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-likelihood-function
