@@ -1,5 +1,16 @@
 # Active Tasks
 
+## weak-modeling
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/579
+- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-09, no heart-ack)
+- note: keystone of the weak home-straight (blocks series 5/7/8); workspace follow-up deferred — autolens_workspace claimed by lenstool-example; use the proven parallel-worktree pattern (scripts/weak/ zero overlap) if still claimed at workspace time
+- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-modeling
+- repos:
+  - PyAutoLens: feature/weak-modeling
+
+
 ## jwst-nircam-cosmos-web
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
@@ -122,11 +133,7 @@
 - prs: PyAutoBuild#119 + PyAutoHeart#40 + PyAutoMind#41 (independent; merge Mind last is tidiest — its morning_health reads the others)
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/morning-status-release-rehearsal
-- repos:
-  - PyAutoHeart: feature/morning-status-release-rehearsal
-  - PyAutoBuild: feature/morning-status-release-rehearsal
-  - PyAutoMind: feature/morning-status-release-rehearsal
+- cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
 ## lenstool-example
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/239
