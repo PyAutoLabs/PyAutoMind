@@ -94,6 +94,11 @@ jobs:
           # default-hidden output masks real failures (an expired token reads
           # as "slack_payload.json missing" three steps later).
           show_full_output: true
+          # Default permission mode denies all writes, so Claude summarises
+          # the commits and then can't save slack_payload.json. The job's
+          # GITHUB_TOKEN is contents:read, so nothing written here can leave
+          # the runner except via the POST step.
+          claude_args: '--allowedTools "Write"'
           prompt: |
             Read `pushes_to_main.json` in this directory. It has shape:
 
