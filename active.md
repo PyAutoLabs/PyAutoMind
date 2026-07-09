@@ -27,20 +27,6 @@
 - worktree: none (read-only)
 - repos:
 
-## weak-strong-lensing
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/247
-- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: shipped, awaiting-merge — approved in-session; CI running; merge library-first
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/587
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/251
-- autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
-- note: weak series step 8 — combined SL+WL features example (FactorGraphModel joint fit). PARALLEL to point-pairing-policies on autolens_workspace (scripts/weak/features/ vs scripts/guides/ disjoint); both branches regenerate the navigator catalogue — whichever merges second regenerates on main (that session already plans re-verify at ship)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-strong-lensing
-- repos:
-  - autolens_workspace: feature/weak-strong-lensing (parallel claim, catalogue-regen coordination noted)
-  - PyAutoLens: feature/weak-strong-lensing (scope extension: mixed-graph combined-visualization fix, commit 7d8139a9)
-
-
 ## refactor-post-phase3
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
@@ -115,7 +101,6 @@
 - status: phase-1-complete — F1–F9 verdict table on #1332; EP wiki page shipped (PyAutoMemory methods_wiki); EP fix batch (F1+F2+F3+F4+F8) pends #1331 guidance; Phase 2 (docs) ready to start
 - worktree: none (read-only audit on PyAutoFit main; findings land in PyAutoMind + issue #1332)
 - repos:
-
 
 ## profiling-preopt-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
