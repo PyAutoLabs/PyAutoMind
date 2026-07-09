@@ -115,3 +115,11 @@
   - PyAutoBuild: feature/nightly-release-implementation
   - PyAutoHeart: feature/nightly-release-implementation
 - note: PyAutoMind morning_health repoint rides a plain branch on the canonical Mind checkout (no worktree claim)
+
+## nnls-solver-optimization
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/369
+- session: claude --resume a67dda1e-835b-43c6-b90f-a2190e349ad0
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/nnls-solver-optimization
+- repos:
+- note: rectangular+MGE is the priority; Phase A profiling runs standalone in autolens_profiling/scratch/nnls_speedup/ (no claim on autolens_profiling — profiling-preopt-campaign holds it); go/no-go + Delaunay next-target verdict due on the issue before source edits
