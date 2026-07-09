@@ -4,11 +4,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1341
 - session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
 - status: library-dev — Galaxy+Lens legs only; PyAutoFit leg HELD (repo claimed by ep-diagnostics + ep-graphical-docs; do not create a PyAutoFit worktree until those claims release or the human overrides on the issue)
-- question: pending (PyAutoFit-leg routing — see issue comment)
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1341#issuecomment-4929226227 (PyAutoFit-leg routing)
 - autonomy: supervised effective (--auto launched 2026-07-09; docs/medium caps safe, header supervised binds; plan human-approved in-session pre-launch; no heart-ack given)
 - note: phase A of docs middle path; phases B+C parked in docs/libraries/docs_theming_and_hub.md (do NOT issue until this ships); RTD-dashboard human legs (reconnect pyautofit RTD → PyAutoLabs, repoint galaxy/lens URLs) are claim-independent and can run any time
 - worktree: ~/Code/PyAutoLabs-wt/rtd-hygiene
 - repos:
+  - PyAutoGalaxy: feature/rtd-hygiene
+  - PyAutoLens: feature/rtd-hygiene
 
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
