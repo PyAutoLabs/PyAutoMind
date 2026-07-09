@@ -7,10 +7,8 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
 2. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
    — deliberate over/under-prediction handling in the point-source likelihood
    + `guides/` documentation of the choices.
-3. [issued/8_lenstool_users_example.md](../issued/8_lenstool_users_example.md) — **at PR-open 2026-07-09**
-   (autolens_workspace#239; PR #240). Reconstructs Mahler et al. 2023's published Lenstool model of
-   SMACS J0723 via from_lenstool (0.068" median source-plane parity) + composes the exact refit.
-   Awaiting merge; then beta-tester iteration.
+3. Beta-tester iteration on the shipped Lenstool example (scripts/cluster/lenstool/) — the
+   user-facing back-and-forth; no prompt filed yet, driven by tester feedback.
    — flagship "PyAutoLens for LensTool users" example on real data
    (candidate: SMACS J0723), reproducing a published LensTool model; depends
    on (2) and (3), exercised by (4) and (5). A real prospective user is
@@ -20,6 +18,12 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
    ([[feedback_no_bulk_issue_queues]]).
 
 __Shipped__
+
+- 8_lenstool_users_example — `lenstool-example` (autolens_workspace#239; PR #240 merged
+  2026-07-09). Flagship "PyAutoLens for Lenstool users" example: reconstructs Mahler et al.
+  2023's published SMACS J0723 Lenstool model via from_lenstool at 0.068" median source-plane
+  parity (published image-plane rms 0.32") and composes the exact input.par refit. Documents the
+  final-plane multi-plane normalization convention.
 
 - 6_dpie_lenstool_parameterization — `dpie-lenstool-param` (PyAutoGalaxy#485; PRs #487 +
   PyAutoLens#576 + awt#151, merged 2026-07-09). from_lenstool constructors, dPIEMassLenstool/Sph
