@@ -1,3 +1,10 @@
+## health-sync-noise-filter
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/41 (closed)
+- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/42
+- status: complete — merged 2026-07-09 (PR #42); no workspace impact; worktree + branches cleaned
+- completed: 2026-07-09
+- note: also carries the /repo_cleanup cadence leg (startup hygiene nudge off ~/.cache/pyauto/repo_cleanup_last_audit.json); Brain-skill stamp write is a follow-up (PyAutoBrain claimed by clone-mitosis-agent)
+
 ## version-pinning-design-review
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/118 (closed)
 - completed: 2026-07-09
@@ -649,7 +656,6 @@
   - `make test` (`35 passed, 1 skipped`)
   - `git diff --check`
 - notes: Extended the Euclid name italicisation check for full named-after-person satellite names, including an inferred James Webb Space Telescope case, while keeping acronyms roman. Added authors-only draft front-matter guidance from local Euclid/A&A source-paper conventions: initials-plus-surname author names, lead-author email only unless requested, and unresolved affiliations left as placeholders when affiliations can wait. Also made optional root-level `euclid.bib` source-discovery fixture handling robust in clean worktrees.
-
 
 ## rename-pyautopulse-to-pyautoheart
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/17
