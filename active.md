@@ -148,7 +148,10 @@
 ## cluster-scaling-lenstool
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/237
 - session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/238
+- note: tracer.png/galaxies_images.png regeneration may push-append to the branch
+  (background render); non-blocking
 - autonomy: supervised (--auto, launched 2026-07-08; in-session one-shot ship authorization
   + heart-ack: TEST RUN stale-parked scripts / VERSION SKEW autolens_assistant / worktree
   drift from other parked tasks)
