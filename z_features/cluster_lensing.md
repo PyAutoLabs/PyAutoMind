@@ -4,15 +4,20 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
    `autolens_profiling/likelihood/cluster/` that time the source-plane and
    image-plane likelihood paths, following the per-model breakdown style of
    the rest of `autolens_profiling/likelihood/`.
-2. [feature/cluster/6_dpie_lenstool_parameterization.md](../feature/cluster/6_dpie_lenstool_parameterization.md)
-   — LensTool-native (sigma, r_core, r_cut) dPIE parameterization + numerical
-   parity validation against LensTool conventions.
-3. [feature/cluster/7_scaling_relation_lenstool_convention.md](../feature/cluster/7_scaling_relation_lenstool_convention.md)
-   — reparameterize the scaling tier to the LensTool/referee convention:
-   reference-anchored normalization, beta fixed at 0.5 by default, r_cut scaling.
-4. [feature/cluster/9_cluster_visualization.md](../feature/cluster/9_cluster_visualization.md)
-   — cluster-scale visualization: per-plane critical curves/caustics, large-FoV
-   defaults, aplt promotion (subsumes the deferred aplt item below).
+2. [issued/6_dpie_lenstool_parameterization.md](../issued/6_dpie_lenstool_parameterization.md)
+   — **at PR-open 2026-07-09** (PyAutoGalaxy#485; PRs PyAutoGalaxy#487 +
+   PyAutoLens#576 + awt#151): from_lenstool constructors, dPIEMassLenstool/Sph
+   model-fitting wrappers, analytic pi05 potential (replaced 15%-wrong MGE),
+   6-leg parity script. Awaiting merge.
+3. [issued/7_scaling_relation_lenstool_convention.md](../issued/7_scaling_relation_lenstool_convention.md)
+   — **at PR-open 2026-07-09** (autolens_workspace#237): cluster + group scaling
+   tiers reference-anchored, exponent fixed 0.5, rs scaling; tier 2→1 params.
+   Awaiting merge. Follow-up noted: imaging/features/scaling_relation, group/slam.py,
+   guides/advanced/multi_plane.py still show the old form.
+4. [issued/9_cluster_visualization.md](../issued/9_cluster_visualization.md)
+   — **at PR-open 2026-07-09** (PyAutoLens#577; PRs PyAutoLens#578 + awt#152):
+   autolens/cluster/plot aplt helpers incl. per-plane critical curves/caustics
+   (subsumed the deferred aplt item below). Awaiting merge.
 5. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
    — deliberate over/under-prediction handling in the point-source likelihood
    + `guides/` documentation of the choices.

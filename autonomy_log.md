@@ -49,3 +49,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-08 | release-stamping-slim (PyAutoBuild#120) | supervised | tests 71 pass / smoke n/a / review human-signoff / heart YELLOW-acked | merged-unchanged (#121) |
 | 2026-07-08 | kxs-cache (#362 follow-up) | supervised | tests PASS 867 / perf x750 / review CLEAN / heart YELLOW-human-cadence | merged-unchanged |
 | 2026-07-08 | dpie-lenstool-param (PyAutoGalaxy#485) | supervised | tests 956+336 downstream / smoke guides-mass pass (cluster scripts timeout pre-existing, control-verified) / review CLEAN / heart YELLOW-acked in-session | PR-open (#487, PyAutoLens#576, awt#151; wrapper classes user-directed mid-run) |
+| 2026-07-09 | cluster-visualization (PyAutoLens#577) | supervised | tests 6 new + 342 suite / smoke integration script end-to-end (per-plane physics assert) / review CLEAN / heart YELLOW-acked in-session | PR-open (#578, awt#152) |

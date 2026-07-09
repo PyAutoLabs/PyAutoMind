@@ -159,7 +159,9 @@
 ## cluster-visualization
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/577
 - session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- prs: PyAutoLens#578 (library) + autolens_workspace_test#152 (integration script;
+  library-first merge order)
 - autonomy: supervised (--auto, launched 2026-07-08; in-session one-shot ship authorization
   + heart-ack as for cluster-scaling-lenstool)
 - note: parallel to dpie-lenstool-param claims on PyAutoLens (frozen diff: docs/api/mass.rst)
