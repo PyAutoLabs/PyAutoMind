@@ -157,15 +157,5 @@
 - affected-repos:
   - PyAutoGalaxy
 
-## profiling-agent
-- issue: (not yet created — start_dev runs when unblocked)
-- planned: 2026-07-08
-- classification: library (PyAutoBrain organism repo)
-- suggested-branch: feature/profiling-agent
-- blocked-by: clone-mitosis-agent (using PyAutoBrain)
-- prompt: feature/pyautobrain/profiling_agent.md
-- affected-repos:
-  - PyAutoBrain
-
 
 

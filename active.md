@@ -92,6 +92,14 @@
 - worktree: none (read-only audit on PyAutoFit main; findings land in PyAutoMind + issue #1332)
 - repos:
 
+## profiling-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/60
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-09; design phase pre-approved in prompt)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-agent
+- repos:
+  - PyAutoBrain: feature/profiling-agent
+
 ## profiling-preopt-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
 - status: workspace-dev
