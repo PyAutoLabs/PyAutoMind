@@ -64,6 +64,6 @@ second conductor demonstrates consult demand — doctrine says let faculties
 multiply behind conductors, not ahead of them.
 
 **Implementation remains blocked** on the PyAutoBrain claim
-(clone-mitosis-agent, sign-off pending on PyAutoBrain#57); this decision
+(clone-mitosis-agent, shipped as PyAutoBrain#59); this decision
 makes the task implementation-ready the moment it clears.
 

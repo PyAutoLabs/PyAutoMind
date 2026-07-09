@@ -1,3 +1,21 @@
+## clone-mitosis-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/57 (closed)
+- completed: 2026-07-09
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/59 (merged, squash 4af8a756)
+- notes: |
+    Design-only deliverable (prompt was "design, not yet implement"): merged
+    agents/conductors/clone/DESIGN.md + AGENTS.md pointer — no clone.sh/_clone.py/
+    CLI wiring. Clone Agent (pyauto-brain clone) / Mitosis Agent: CloneDecision
+    (dry-run first), mandatory clone-mode question (exact-clone | differentiated-
+    sibling | lightweight-seed), organ boundary (Brain plans / Build executes /
+    Heart validates / Memory cites-not-copies), reference-owned template seam
+    (autolens_assistant modes/maintainer.md Assistant-as-template), analyze/apply/
+    audit modes, phased v0→v2. Prerequisite met: reference-assistant audit landed.
+    Shipping cleared the PyAutoBrain claim → unblocks profiling_agent (its design
+    phase was already settled: conductor verdict, first increment scoped).
+    Follow-ups (phased, filed as predecessors near shipping, never bulk-issued):
+    v0 analyze-only, v1 seed births, v2 differentiated siblings.
+
 ## factor-graph-viz-dispatch
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1339
 - completed: 2026-07-09

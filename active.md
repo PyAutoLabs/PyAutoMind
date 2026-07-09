@@ -103,15 +103,6 @@
 - repos:
   - autolens_profiling: feature/profiling-preopt-campaign
 
-## clone-mitosis-agent
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/57
-- status: awaiting-input (design complete; parked at ship sign-off)
-- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/57 (sign-off comment)
-- autonomy: supervised (--auto, launched 2026-07-08)
-- worktree: /home/jammy/Code/PyAutoLabs/PyAutoBrain (in-place)
-- repos:
-  - PyAutoBrain: feature/clone-mitosis-agent
-
 ## morning-status-release-rehearsal
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/39
 - session: claude --resume ff9a8b2f-fda0-4bab-8962-1814843aa374
