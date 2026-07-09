@@ -103,3 +103,15 @@
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
+
+## nightly-release-implementation
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/127 (reused phase-1 tracker; approved plan posted there)
+- session: claude (Fable) 2026-07-09
+- status: library-dev — phase 2: build the merged design (docs/nightly_release_design.md §10); nothing armed (NIGHTLY_RELEASES unset, dry_run defaults true)
+- autonomy: human-required (prompt header; default present-and-wait run; plan approved in-session 2026-07-09)
+- worktree: ~/Code/PyAutoLabs-wt/nightly-release-implementation
+- repos:
+  - PyAutoBrain: feature/nightly-release-implementation
+  - PyAutoBuild: feature/nightly-release-implementation
+  - PyAutoHeart: feature/nightly-release-implementation
+- note: PyAutoMind morning_health repoint rides a plain branch on the canonical Mind checkout (no worktree claim)
