@@ -114,8 +114,10 @@
 ## regen-workspace-notebooks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/255
 - session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge — PR at PR-open per --auto contract (merge human)
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/256
 - autonomy: safe (--auto, launched 2026-07-09; maintenance cap safe; ends at PR-open)
+- heart-ack: 2026-07-09 — YELLOW set ⊆ maintainer-acked set at #592 ship (workspace-validation stale-fail; 58 parked scripts; assistant pin-behind; 10d Mind PR); user instruction 'both --auto to PR-open'
 - worktree: ~/Code/PyAutoLabs-wt/regen-workspace-notebooks
 - note: follow-up from #592 — regenerate all notebooks + catalogue (global drift); generated-artifact only, no scripts/ edits
 - repos:
