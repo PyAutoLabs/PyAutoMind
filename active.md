@@ -3,7 +3,9 @@
 ## weak-small-datasets
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/583
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: library-dev
+- status: awaiting-input — both repos committed LOCALLY (PyAutoArray 2bf9ad37 +22, PyAutoLens 6b29d3bf +6; suites 869/356 green; modeling.py smoke run 30s @ 25 galaxies); parked at ship sign-off
+- question: (sign-off comment on PyAutoLens#583)
+- resume: on approval push both + PRs + merge autoarray-first on green + close #583
 - autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
 - note: weak series step 9 — catalogue cap for PYAUTO_SMALL_DATASETS; autoarray helper + autolens simulator consumer; merge autoarray first
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-small-datasets
