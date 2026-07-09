@@ -1,5 +1,17 @@
 # Active Tasks
 
+## weak-small-datasets
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/583
+- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
+- status: library-dev
+- autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
+- note: weak series step 9 — catalogue cap for PYAUTO_SMALL_DATASETS; autoarray helper + autolens simulator consumer; merge autoarray first
+- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-small-datasets
+- repos:
+  - PyAutoArray: feature/weak-small-datasets
+  - PyAutoLens: feature/weak-small-datasets
+
+
 ## weak-likelihood-function
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/245
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
