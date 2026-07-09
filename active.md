@@ -1,5 +1,15 @@
 # Active Tasks
 
+## delaunay-qhull-callback
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367
+- status: library-dev — phase 1: PyAutoArray qhull-only callback + JAX 2-ring point location; phase 2 (autolens_workspace_test parity suite) follows behind the library-first gate
+- autonomy: supervised (--auto, launched 2026-07-09; refactor @ too-large, effective min(supervised, safe)=supervised; no heart-ack given)
+- note: hard requirement — likelihood numerically unchanged (eager xp=np path is the reference and is untouched); PoC + saved outputs in autolens_profiling/scratch/delaunay_speedup/; do NOT touch fnnls/NNLS (separate follow-up)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/delaunay-qhull-callback
+- repos:
+  - PyAutoArray: feature/delaunay-qhull-callback
+  - autolens_workspace_test: feature/delaunay-qhull-callback (phase 2)
+
 ## keck-ao-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/11
 - status: library-dev — implementing K1–K3 per the #9 design (drizzle backend + B1938+666 anchor user-adopted 2026-07-09)
