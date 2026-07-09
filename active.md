@@ -20,20 +20,6 @@
 - repos:
   - PyAutoArray: feature/kxs-refactor
 
-## weak-modeling
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/579
-- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: shipped, awaiting-merge — library PR + workspace PR open (merge library first); human approved ship 2026-07-09 incl. Heart YELLOW reason set
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/580
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/241
-- autonomy: supervised (--auto, launched 2026-07-09; ship sign-off given on issue 2026-07-09)
-- note: keystone of the weak home-straight (blocks series 5/7/8); workspace half done via parallel worktree alongside lenstool-example (zero file overlap — lenstool diff is root metadata only)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-modeling
-- repos:
-  - PyAutoLens: feature/weak-modeling
-  - autolens_workspace: feature/weak-modeling (parallel to lenstool-example claim, zero overlap)
-
-
 ## jwst-nircam-cosmos-web
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
