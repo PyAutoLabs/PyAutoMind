@@ -3,10 +3,10 @@
 ## weak-modeling
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/579
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: awaiting-input — BOTH halves implemented+validated+committed LOCALLY (PyAutoLens 8a0733d47: AnalysisWeak, 347 tests pass; autolens_workspace 58f42a9a: scripts/weak/modeling.py, Nautilus recovered truth 1sigma); nothing pushed; parked at ship sign-off (supervised, Heart YELLOW no launch ack)
-- question: https://github.com/PyAutoLabs/PyAutoLens/issues/579#issuecomment-4923779032
-- resume: on approval push both branches + open PRs with the draft bodies in the question comment (library PR pending-release; workspace PR behind library-first merge gate), append autonomy_log outcome
-- autonomy: supervised (--auto, launched 2026-07-09, no heart-ack)
+- status: shipped, awaiting-merge — library PR + workspace PR open (merge library first); human approved ship 2026-07-09 incl. Heart YELLOW reason set
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/580
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/241
+- autonomy: supervised (--auto, launched 2026-07-09; ship sign-off given on issue 2026-07-09)
 - note: keystone of the weak home-straight (blocks series 5/7/8); workspace half done via parallel worktree alongside lenstool-example (zero file overlap — lenstool diff is root metadata only)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-modeling
 - repos:

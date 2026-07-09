@@ -53,3 +53,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | cluster-scaling-lenstool (autolens_workspace#237) | supervised | tests structural (N=12 + anchoring asserts; workspace repo) / smoke simulator end-to-end on new truth / review CLEAN / heart YELLOW-acked in-session | merged-unchanged (#238 + catalogue-regen follow-up, 2026-07-09) |
 | 2026-07-09 | lenstool-example (autolens_workspace#239) | supervised | tests in-run verification (0.068" parity vs published model; 72-param composition assert) / smoke data.py + modeling.py end-to-end / review CLEAN / heart-ack carried in-session | merged-unchanged (#240, 2026-07-09) |
 | 2026-07-09 | weak-modeling | supervised | tests 347-pass / smoke n-a-parked / review n-a-parked / heart YELLOW-no-ack | parked |
+| 2026-07-09 | weak-modeling | supervised | tests 347-pass / smoke n-a / review human-signoff / heart YELLOW-acked-at-signoff | pr-open (580+241), merge pending |
