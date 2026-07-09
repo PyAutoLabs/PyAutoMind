@@ -140,3 +140,4 @@
 - note: research task — profile Nautilus NN-training/overhead anatomy on fast likelihoods, tuning sweep + vectorized=True batching, GPU-MLP/async-training prototypes, JAX-ification verdict; PyAutoFit READ-ONLY (claimed by ep-diagnostics + ep-graphical-docs; wrapper changes escalate as follow-up prompts)
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-nn-bottleneck
 - repos:
+  - autofit_workspace_developer: feature/nautilus-nn-bottleneck
