@@ -3,7 +3,8 @@
 ## kxs-workspace-tests
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/154
 - autonomy: supervised (--auto, launched 2026-07-09, no heart-ack)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-workspace-tests
 - repos:
@@ -114,10 +115,6 @@
 
 
 
-
-
-
-
 ## profiling-preopt-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
 - status: workspace-dev
@@ -147,11 +144,3 @@
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
-## health-sync-noise-filter
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/41
-- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/42
-- status: library-shipped, awaiting-merge — no workspace impact (Heart-internal); Heart YELLOW acked in-session at ship
-- note: also carries the /repo_cleanup cadence leg (startup hygiene nudge off ~/.cache/pyauto/repo_cleanup_last_audit.json); Brain-skill stamp write is a follow-up (PyAutoBrain claimed by clone-mitosis-agent)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/health-sync-noise-filter
-- repos:
-  - PyAutoHeart: feature/health-sync-noise-filter
