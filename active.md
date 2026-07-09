@@ -1,5 +1,12 @@
 # Active Tasks
 
+## keck-ao-acceptance-checks
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13
+- status: test-dev — running acceptance checks 3-4 (astrometry + plate-scale audit; PyAutoLens Einstein-radius fit) on the merged phase-4 reduction
+- autonomy: default present-and-wait (no --auto); analysis read-only in prototypes/, doc/adapter edits gated on user review
+- worktree: none (analysis on PyAutoReduce main; branch only if an edit is approved)
+- repos:
+
 ## refactor-post-phase3
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
