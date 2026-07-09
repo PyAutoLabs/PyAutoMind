@@ -3,9 +3,9 @@
 ## rtd-hygiene
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1341
 - session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
-- status: awaiting-input — Galaxy+Lens+Heart legs implemented, committed locally on feature/rtd-hygiene, NOT pushed; parked at ship sign-off incl. Heart YELLOW ack (gate: tests 962/373/244 pass, smoke n/a docs-only, review CLEAN, Heart YELLOW unacked); PyAutoFit leg separately HELD (repo claimed by ep-diagnostics + ep-graphical-docs)
-- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1341#issuecomment-4929394878 (ship sign-off + YELLOW ack); also pending: #issuecomment-4929226227 (PyAutoFit-leg routing)
-- ship-note: on ack push 3 branches + 3 pending-release PRs; PyAutoHeart PR must merge FIRST (Galaxy/Lens docs.yml callers reference docs-build.yml@main); scope riders disclosed on issue (PyAutoHeart repo added per CI idiom, .gitignore sphinx artifacts, warning baselines 105/134)
+- status: library-shipped, awaiting-merge — Heart#48 + Galaxy#495 + Lens#597 open (pending-release verified); Heart YELLOW acked in-session at ship 2026-07-09 (4 pre-existing reasons on #1341); MERGE ORDER: Heart#48 first (callers reference docs-build.yml@main); PyAutoFit leg still HELD (human chose wait-for-EP-claims); RTD dashboard human legs still open
+- prs: https://github.com/PyAutoLabs/PyAutoHeart/pull/48 + https://github.com/PyAutoLabs/PyAutoGalaxy/pull/495 + https://github.com/PyAutoLabs/PyAutoLens/pull/597
+- ship-note: after Heart#48 merges re-trigger Galaxy/Lens docs checks; if CI warning count differs from local baselines (105/134) recalibrate docs/sphinx_warning_baseline.txt once with justification; scope riders disclosed on issue
 - autonomy: supervised effective (--auto launched 2026-07-09; docs/medium caps safe, header supervised binds; plan human-approved in-session pre-launch; no heart-ack given)
 - note: phase A of docs middle path; phases B+C parked in docs/libraries/docs_theming_and_hub.md (do NOT issue until this ships); RTD-dashboard human legs (reconnect pyautofit RTD → PyAutoLabs, repoint galaxy/lens URLs) are claim-independent and can run any time
 - worktree: ~/Code/PyAutoLabs-wt/rtd-hygiene
