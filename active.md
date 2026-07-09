@@ -101,3 +101,12 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
+
+## release-docs-polish-learn-paths
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/592
+- session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
+- status: library-dev
+- autonomy: supervised (--auto, launched 2026-07-09; docs cap at too-large → effective supervised; ship sign-off parks per AUTONOMY.md, no launch-time Heart ack)
+- worktree: ~/Code/PyAutoLabs-wt/release-docs-polish-learn-paths
+- phases: A=API-docs audit (autogalaxy+autolens; PyAutoFit PARKED behind ep-graphical-docs worktree) · B=cluster de-flag (autolens_workspace; weak already clean) · C=3-ways-to-learn (overview_2 + start_here§418 + both READMEs + docs/index framing)
+- repos:
