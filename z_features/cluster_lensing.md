@@ -7,7 +7,10 @@ __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, f
 2. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
    — deliberate over/under-prediction handling in the point-source likelihood
    + `guides/` documentation of the choices.
-3. [docs/cluster/8_lenstool_users_example.md](../docs/cluster/8_lenstool_users_example.md) — **in dev 2026-07-09**
+3. [issued/8_lenstool_users_example.md](../issued/8_lenstool_users_example.md) — **at PR-open 2026-07-09**
+   (autolens_workspace#239; PR #240). Reconstructs Mahler et al. 2023's published Lenstool model of
+   SMACS J0723 via from_lenstool (0.068" median source-plane parity) + composes the exact refit.
+   Awaiting merge; then beta-tester iteration.
    — flagship "PyAutoLens for LensTool users" example on real data
    (candidate: SMACS J0723), reproducing a published LensTool model; depends
    on (2) and (3), exercised by (4) and (5). A real prospective user is

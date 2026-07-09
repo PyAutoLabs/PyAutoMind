@@ -138,7 +138,10 @@
 ## lenstool-example
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/239
 - session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
-- status: workspace-dev — phase 1 (data prep) starting
+- status: workspace-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/240
+- note: parity headline 0.068" median source-plane rms vs published 0.32" image-plane rms;
+  next step after merge = beta-tester iteration loop
 - autonomy: supervised (--auto, launched 2026-07-09; in-session authorization "merge PRs and
   then do 8_lenstool_user_example"; heart-ack carried per prior tasks)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/lenstool-example
