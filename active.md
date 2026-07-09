@@ -129,7 +129,9 @@
 ## colab-sim-verify-install
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/45
 - session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
-- status: library-dev
+- status: library-shipped, awaiting-merge — merge PyAutoConf#121 + PyAutoHeart#46 together (check F calls the workspace_dir override); check F self-activates at the next release (SKIP until then)
+- prs: https://github.com/PyAutoLabs/PyAutoConf/pull/121 + https://github.com/PyAutoLabs/PyAutoHeart/pull/46
+- found: PyAutoBuild#126 — released datasets are 15×15 smoke artifacts (check F's first catch; separate bug, prompt in issued/)
 - autonomy: safe (user-approved proposal in-session 2026-07-09; plan on the issue)
 - worktree: ~/Code/PyAutoLabs-wt/colab-sim-verify-install
 - repos:
