@@ -130,3 +130,6 @@
 - phase-2: parked prompt feature/workspaces/colab_link_rot.md (issue when this nears ship)
 - worktree: ~/Code/PyAutoLabs-wt/colab-maturity
 - repos:
+  - PyAutoConf: feature/colab-maturity
+  - PyAutoBuild: feature/colab-maturity
+  - PyAutoHeart: feature/colab-maturity
