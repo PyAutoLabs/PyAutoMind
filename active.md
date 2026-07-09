@@ -105,10 +105,12 @@
 ## release-docs-polish-learn-paths
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/592
 - session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
-- status: awaiting-input — ALL phases A+B+C implemented in worktree (uncommitted); Phase A done via option C (pruned dead OO plot.rst sections + mechanical fixes; re-audit clean, CRLF preserved); awaiting ship sign-off (supervised → human). PyAutoFit audit parked behind ep-graphical-docs (#1334)
+- status: library+workspace-shipped, awaiting-merge — 3 PRs at PR-open per the --auto contract (merge is human); human gave ship sign-off 2026-07-09. All phases A+B+C done. PyAutoFit audit parked behind ep-graphical-docs (#1334)
+- prs: PyAutoLens#593 + PyAutoGalaxy#492 + autolens_workspace#254 (library-first: merge #593+#492 before #254)
 - question: https://github.com/PyAutoLabs/PyAutoLens/issues/592#issuecomment-4926734538
 - follow-ups filed: docs/autolens/plot_rst_functional_api_rewrite.md; maintenance/autolens_workspace/regenerate_notebooks_catalogue.md
-- autonomy: supervised (--auto, launched 2026-07-09; docs cap at too-large → effective supervised; ship sign-off parks per AUTONOMY.md, no launch-time Heart ack)
+- autonomy: supervised (--auto, launched 2026-07-09; docs cap at too-large → effective supervised)
+- heart-ack: 2026-07-09 ship — human-acked YELLOW set {workspace validation not passing; 58 stale parked scripts; autolens_assistant pinned behind; 3 script timing regressions; PyAutoMind open PR 10d old}
 - worktree: ~/Code/PyAutoLabs-wt/release-docs-polish-learn-paths
 - phases: A=API-docs audit — MAJOR finding: plot.rst (both repos) documents removed OO plot subsystem (MatPlot2D/Cmap/*Scatter ~34 entries) + individual removals (OverSampling/PointDict/SetupAdapt/PySwarms) + Chameleon re-point + Convolver dedupe; PARKED pending prune-vs-rewrite decision (rec C). PyAutoFit PARKED behind #1334 · B=cluster de-flag DONE (autolens_workspace; weak already clean) · C=3-ways-to-learn DONE (overview_2 + index.md + start_here§418 + both READMEs)
 - note: discovered pre-existing global workspace notebook/catalogue drift (~30 files) — discarded, kept only the 2 notebooks matching edited scripts; flagged as a separate maintenance task
@@ -116,17 +118,3 @@
   - PyAutoLens: feature/release-docs-polish-learn-paths
   - PyAutoGalaxy: feature/release-docs-polish-learn-paths
   - autolens_workspace: feature/release-docs-polish-learn-paths
-
-## colab-link-rot
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/21
-- session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
-- status: workspace-shipped, awaiting-merge — 4 PRs at PR-open per the --auto contract (merge is human)
-- prs: HowToLens#22 + HowToGalaxy#16 + HowToFit#13 + euclid_strong_lens_modeling_pipeline#24
-- autonomy: safe (--auto, launched 2026-07-09 in-session; header safe, difficulty medium; plan on the issue)
-- phase-tracker: https://github.com/PyAutoLabs/PyAutoBuild/issues/124
-- worktree: ~/Code/PyAutoLabs-wt/colab-link-rot
-- repos:
-  - HowToFit: feature/colab-link-rot
-  - HowToGalaxy: feature/colab-link-rot
-  - HowToLens: feature/colab-link-rot
-  - euclid_strong_lens_modeling_pipeline: feature/colab-link-rot

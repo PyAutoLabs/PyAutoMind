@@ -5388,3 +5388,9 @@
 - completed: 2026-07-09
 - library-pr: PyAutoConf#120 + PyAutoBuild#125 + PyAutoHeart#44 (all merged 2026-07-09)
 - note: Colab maturity phase 1. setup_colab rewritten around a _PROJECTS registry (6 notebook repos, for_autofit/for_howto* added, GPU-detect + import-time-env-mutation fixes, --depth 1 tag-pinned clones, first 15 unit tests); build_util.inject_colab_setup() injects the setup cell into every generated notebook (coverage 9/489 -> all at next release, hand-written setups skipped, unknown project raises); url_check.sh forbids blob/main + workspace chapter_* Colab URL forms (Monday sweep intentionally red until phase 2). Census in issued/colab_maturity.md.
+
+## colab-link-rot
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/21 (closed)
+- completed: 2026-07-09
+- prs: HowToLens#22 + HowToGalaxy#16 + HowToFit#13 + euclid_strong_lens_modeling_pipeline#24 (all merged-unchanged 2026-07-09)
+- note: Colab maturity phase 2 (--auto safe, four-leg gate). 71 HowToLens blob/main links pinned to 2026.7.6.649 + 3 dead filenames; 28 HowToGalaxy wrong-repo links repointed + chapter 3/4 entries aligned to actual tutorials (had been copied from HowToLens); 2 HowToFit dead links (tutorial_4_why_modeling_is_hard retitle; hierachical filename typo left as follow-up); euclid intro link canonicalized; 33 allowlist Colab entries purged. Deferred leg colab-link-rot-libdocs (PyAutoLens/PyAutoGalaxy docs + allowlists) in planned.md, blocked on release-docs-polish-learn-paths. Phase tracker PyAutoBuild#124 open until Monday sweep green.
