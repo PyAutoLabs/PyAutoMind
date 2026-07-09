@@ -5065,3 +5065,58 @@
 - prompt: issued/profiling_drift_check.md
 - summary: profiling_drift vitals leg live — scans autolens_profiling result JSONs for pinned_drift; readiness YELLOW + dashboard section
 
+
+## dpie-lenstool-param
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/485 (closed)
+- completed: 2026-07-09
+- prs: PyAutoGalaxy#487 + PyAutoLens#576 + autolens_workspace_test#151 (all merged)
+- notes: Lenstool-native dPIE parameterization, end to end. Conventions verified against the
+  Lenstool C source (shallow clone of git-cral): b0 = 6·(648000/c²)·σ_LT²·(D_LS/D_S) with σ_LT
+  the fiducial v_disp (σ0 = √(3/2)σ_LT trap documented loudly); .par ellipticite = (a²−b²)/(a²+b²)
+  → epot = (1−q)/(1+q) = |ell_comps| (set_lens.c conversion); rc/rcut ↔ ra/rs one-to-one.
+  Shipped from_lenstool classmethods + dPIEMassLenstool/Sph wrapper profiles (model-fitting in
+  Lenstool parameters — user-directed mid-run scope addition; angle arg renamed angle_pos after
+  colliding with EllProfile.angle()). Two correctness fixes surfaced by parity work:
+  (1) dPIEMass.potential_2d_from was an MGE approximation 6–15% off vs ci05f deflections for
+  elliptical profiles — replaced with the analytic KK93 I0.5 potential ported from Lenstool pi05
+  (e_pcpx.c), ∇ψ now matches deflections to 1.7e-8; (2) _ellip() min-clamps at 1e-5 (Lenstool
+  set_lens.c identical), fixing NaN deflections at ell_comps=(0,0). 6-leg parity script in
+  workspace_test (1e-7–1e-10) incl. a .par recipe for true-Lenstool reference regeneration.
+  Gotchas: analytical_hessian_2d_from is profile-frame (det/magnification rotation-invariant,
+  documented); cluster start_here/modeling are NOT smoke-able (>500s TEST_MODE even on main,
+  control-verified — memory saved); prior configs must accompany new model-fittable profiles.
+  Foundation for docs/cluster/8_lenstool_users_example.md.
+
+## cluster-visualization
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/577 (closed)
+- completed: 2026-07-09
+- prs: PyAutoLens#578 + autolens_workspace_test#152 (both merged)
+- notes: autolens/cluster/plot/ package (weak/plot pattern) re-exported into aplt:
+  plot_positions_overlay, plot_image_group_zooms, plot_critical_curves, plot_caustics,
+  subplot_cluster_dataset. Headline: per-source-plane critical curves/caustics for multi-plane
+  tracers via LensCalc(use_multi_plane=True, plane_j=j) — each source redshift has its own curve
+  set. Integration script (rewritten prototype) validates the physics: z=1 plane 3 tangential
+  curves outermost 13.35", z=2 one at 22.53" (radius grows with source redshift). Numpy-path only
+  (contour solvers not vmap-safe; grid guidance in docstrings). Subsumed the tracker's deferred
+  aplt-promotion item. Follow-up candidates noted on the issue: caustic × source-position overlay,
+  Include2D-level integration after the flagship example exercises the API on real data.
+
+## cluster-scaling-lenstool
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/237 (closed)
+- completed: 2026-07-09
+- pr: autolens_workspace#238 (merged)
+- notes: Cluster + group scaling relations moved to the Lenstool/community convention, closing the
+  referee-comment response: b0_i = b0_ref·(L_i/L_ref)^0.5 (and einstein_radius_ref for the group
+  Isothermal tier) anchored to the brightest scaling member, exponents FIXED at Faber-Jackson 0.5,
+  rs_i scaled ∝ L^0.5 on the cluster dPIE tier; tier dimensionality 2→1 (cluster N=13→12).
+  Bergamini+19 kinematic slopes documented as the refinement; freeing the exponent shown as a
+  one-line systematics test. Cluster dataset regenerated on the new truth (b0_ref=0.12 @
+  L_ref=0.40; both sources still triply imaged); group dataset untouched by construction (equal
+  member luminosities → ratios 1 — check this trick when changing conventions). 10 scripts across
+  scripts/cluster/ + scripts/group/features/scaling_relation/. Gotchas: (1) navigator-catalogue CI
+  leg — any workspace script-prose change needs `python PyAutoBuild/autobuild/regenerate_navigator.py
+  autolens` committed, or 'Catalogue staleness' fails the PR; (2) subplot_tracer on the 14-galaxy
+  multi-plane tracer is pathologically slow (>29 min), so tracer.png/galaxies_images.png were
+  dropped from the committed dataset (old-truth artifacts anyway) — regenerate-on-use; the slow-viz
+  fix is the shipped cluster plotters (PyAutoLens#578). Follow-up filed on the issue: imaging/
+  features/scaling_relation, group/slam.py, guides/advanced/multi_plane.py still show the old form.
