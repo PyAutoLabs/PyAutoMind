@@ -1,5 +1,16 @@
 # Active Tasks
 
+## weak-sigma-crit-jax
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/590
+- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
+- status: library-dev
+- autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set + merge authorization carried in-session)
+- note: weak follow-ups 1+2 (sigma_crit scaling + FitWeak JAX) on one branch — both rework FitWeak; workspace_test parity script at validation time
+- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-sigma-crit-jax
+- repos:
+  - PyAutoLens: feature/weak-sigma-crit-jax
+
+
 ## delaunay-qhull-callback
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367
 - status: library-shipped, workspace-pending — PR #368 open (commit 041d5f60, 873 tests, review CLEAN, pending-release); merge stays human; phase 2 = autolens_workspace_test parity suite on the claimed branch behind the library-first gate
