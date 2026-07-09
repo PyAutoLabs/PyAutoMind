@@ -61,6 +61,6 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | wfc3-reduction | supervised | tests 62/62 / smoke n/a / review 1H+2L resolved / heart YELLOW acked | merged-unchanged (#5) |
 | 2026-07-09 | jwst-nircam-cosmos-web | supervised | tests 83/83 / smoke n/a / review 6→5 fixed / heart YELLOW acked | PR-open (#7) |
 | 2026-07-09 | weak-viz-profiles | supervised | tests 352-pass / smoke n-a-parked / review n-a-parked / heart YELLOW-same-acked-set | parked |
-| 2026-07-09 | weak-viz-profiles | supervised | tests 352-pass / smoke n-a / review human-signoff / heart YELLOW-acked-set | pr-open (582+244), merge pending |
+| 2026-07-09 | weak-viz-profiles | supervised | tests 352-pass / smoke n-a / review human-signoff / heart YELLOW-acked-set | merged-unchanged (582+244, 2026-07-09) |
 | 2026-07-09 | jwst-nircam-cosmos-web | supervised | tests 83/83 / smoke n/a / review 6→5 fixed / heart YELLOW acked | merged-unchanged (#7) |
 | 2026-07-09 | kxs-surface-refactor (#488) | safe | witnesses PASS 956+867+347+script14 unchanged / agent-decision obtained / review CLEAN / heart YELLOW-cadence | pr-open (PyAutoGalaxy#489) |

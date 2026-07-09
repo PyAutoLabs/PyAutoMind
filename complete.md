@@ -1,3 +1,11 @@
+## weak-viz-profiles
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/581
+- completed: 2026-07-09
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/582 (merged)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/244 (merged)
+- notes: Step 6 of the weak series (--auto supervised, same-session continuation after step 4). Added `aplt.plot_shear_profile` (binned gamma_t data-vs-model + gamma_x B-mode null test; public .ellipticities/.phis accessors only) and `aplt.plot_convergence_map` (Kaiser-Squires E/B-mode FFT inversion of the gridded catalogue, dependency-free Gaussian smoothing). KEY TEST INSIGHT: SIS-based tests are rotation-invariant and CANNOT catch an axis-parity (mirror) error in a KS inversion — added an elliptical-lens (q=0.5, 45deg) orientation regression test (reconstructs at 47.1deg). gamma_x null tolerances: hessian finite-differencing leaves ~1e-9 residuals (1e-6 atol), growing like 1/r for galaxies near the centre (1e-5 atol off-centre). Workspace: fit.py shear-profile section, simulator.py convergence-map section, and the should_simulate auto-simulation pattern adopted in fit.py + modeling.py (user direction mid-run; prompt 9 updated to not duplicate). Navigator catalogue regenerated IN-BRANCH so the staleness CI leg passed first time (lesson from PR #241). Dataset regeneration churn restored before commit. chi2 437.510/400 DoF bit-identical to step-3 value. Fifth+sixth uses of the parallel-worktree pattern went clean.
+
+
 ## jwst-nircam-cosmos-web
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/6 (closed)
 - completed: 2026-07-09

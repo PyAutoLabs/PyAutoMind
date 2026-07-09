@@ -19,20 +19,6 @@
 - repos:
   - PyAutoGalaxy: feature/kxs-surface-refactor
 
-## weak-viz-profiles
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/581
-- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: shipped, awaiting-merge — CI running; merge library-first on green (approved in-session 2026-07-09)
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/582
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/244
-- autonomy: supervised (--auto continuation, launched 2026-07-09, heart-yellow reason set acknowledged by user at weak-modeling sign-off this session)
-- note: weak series step 6 (shear profile + Kaiser-Squires); workspace demo via parallel worktree alongside lenstool-example (scripts/weak/ zero overlap, 4th use); user direction 2026-07-09: weak workspace data scripts adopt al.util.dataset.should_simulate auto-simulation pattern (fit.py + modeling.py in this task's workspace PR)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-viz-profiles
-- repos:
-  - PyAutoLens: feature/weak-viz-profiles
-  - autolens_workspace: feature/weak-viz-profiles (parallel to lenstool-example, scripts/weak/ + catalogue only)
-
-
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
@@ -101,8 +87,6 @@
 
 
 
-
-
 ## profiling-preopt-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
 - status: workspace-dev
@@ -131,7 +115,6 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
-
 
 ## cluster-likelihood-breakdown
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/57
