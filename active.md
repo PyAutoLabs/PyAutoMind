@@ -2,7 +2,8 @@
 
 ## keck-ao-acceptance-checks
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13
-- status: test-dev — running acceptance checks 3-4 (astrometry + plate-scale audit; PyAutoLens Einstein-radius fit) on the merged phase-4 reduction
+- status: parked-resumable (laptop reset) — check 3 done: plate-scale finding (adapter 9.942 wrong; 9.952 pre-2015/9.971 post; fix gated); check 4 fit CHECKPOINTED ~1h in (94MB checkpoint.hdf5); resume command on the issue's interim comment
+- resume: re-run prototypes/b1938_lens_fit.py (Nautilus auto-resumes from output/b1938_keck_acceptance identity path); then report θ_E vs 0.45" on #13; then propose keck_ao.md parity appendix + epoch-aware native_scale adapter fix (present-and-wait)
 - autonomy: default present-and-wait (no --auto); analysis read-only in prototypes/, doc/adapter edits gated on user review
 - worktree: none (analysis on PyAutoReduce main; branch only if an edit is approved)
 - repos:
