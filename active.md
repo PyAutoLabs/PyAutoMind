@@ -1,23 +1,17 @@
 # Active Tasks
 
-## weak-real-data
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/588
-- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: shipped, awaiting-merge — 7a MERGED (PyAutoLens#589); 7b PR open, CI running, merge pre-authorized by human ("--auto merge whatever")
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/589 (merged)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/253
-- autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
-- note: weak series step 7 (final leg), phased: 7a library, 7b workspace real-data example (data acquisition first, fallback = published-format mock + parked question). PARALLEL to point-pairing-policies' PyAutoLens claim (autolens/point/ vs autolens/weak/ disjoint, that task is awaiting-merge). autolens_workspace attach deferred to 7b (three sibling-session claims in flight, all disjoint; catalogue regen on whichever merges last)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-real-data
-- repos:
-  - PyAutoLens: feature/weak-real-data (parallel claim, autolens/weak/ only)
-
-
 ## delaunay-qhull-callback
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367
 - status: awaiting-input — phase 1 implementation complete + parity-validated (visibility-walk locator, NOT the planned 2-ring — see issue update; JIT−eager 5.4e-9, 873 tests pass, uncommitted); parked at ship sign-off incl. Heart YELLOW ack; phase 2 (autolens_workspace_test parity suite) follows behind the library-first gate
-- question: https://github.com/PyAutoLabs/PyAutoArray/issues/367#issuecomment-4925762140
-- autonomy: supervised (--auto, launched 2026-07-09; refactor @ too-large, effective min(supervised, safe)=supervised; no heart-ack given)
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/367#issuecomment-4925762140 (answered in-session: ship approved)
+- autonomy: supervised (--auto, launched 2026-07-09; refactor @ too-large, effective min(supervised, safe)=supervised; ship sign-off + heart-ack given in-session 2026-07-09)
+- heart-ack:
+  - workspace validation not passing (5 failed, 2026-07-08T11-25-50Z)
+  - 58 stale parked script(s)
+  - autolens_assistant: pinned BEHIND installed 2026.7.6.649
+  - install verification not run
+  - no release validation for current source
+  - PyAutoMind: open PR 9d old
 - note: hard requirement — likelihood numerically unchanged (eager xp=np path is the reference and is untouched); PoC + saved outputs in autolens_profiling/scratch/delaunay_speedup/; do NOT touch fnnls/NNLS (separate follow-up)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/delaunay-qhull-callback
 - repos:

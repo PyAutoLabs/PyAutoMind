@@ -1,3 +1,11 @@
+## weak-real-data
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/588
+- completed: 2026-07-09
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/589 (merged)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/253 (merged)
+- notes: Step 7 (final leg) of the weak series, phased 7a/7b (--auto supervised; human answered the batched 7a-signoff+7b-data question with "approve 7a, go with (a) --auto merge whatever" — merge pre-authorization recorded). 7a: WeakDataset.from_arrays/to_csv/from_csv/from_fits (loaders default is_reduced=True — real catalogs measure ellipticities), weights= (sigma=w^-0.5), redshift storage, reduced shear end to end (SimulatorShearYX(reduced=True), FitWeak model g=gamma/(1-kappa); mislabel-guard test). 7b: real A2744 data from pyRRG jwst branch trainStarGalClass/TrainingData/abell2744_galaxies.fits (commit-pinned runtime download 0ccc29fb, NOT redistributed); 6585 sources -> only ~1600 with measured shapes -> 382 after |e|<1 + err + 10-130" cuts; weighted-mean gamma_t S/N only ~1.5 (training-data depth) BUT correct radial concentration + null B-mode — prose REWRITTEN mid-task from "compare to literature" to honest workflow-demo framing after measuring the detection significance (initial framing overpromised). NFW posterior broad, centre loosely near core. DATA LESSON: the "catalogues available from the pyRRG repo" claim in Harvey & Massey 2024 resolves to training-data files on the jwst branch, not the published DR1 shear catalog; a metrology-grade reproduction needs the UNCOVER/MAST products or author contact. Sixth+seventh parallel-worktree uses clean; catalogue regenerated in-branch again.
+
+
 ## weak-strong-lensing
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/247
 - completed: 2026-07-09

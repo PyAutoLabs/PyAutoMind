@@ -1,19 +1,17 @@
-Weak gravitational lensing series — multi-step epic adding `WeakDataset`, simulator, plotter, fit, modeling and likelihood-function tutorial across PyAutoLens + autolens_workspace, culminating in a real-data cluster analysis and a combined strong+weak example (the "home-straight push", scoped 2026-07-09).
+Weak gravitational lensing series — COMPLETE (2026-07-09). Multi-step epic that added `WeakDataset`, simulator, plotters, fit, modeling, likelihood-function tutorial, combined strong+weak analysis, smoke support and a real-data example across PyAutoLens + autolens_workspace. All steps shipped; this tracker is ready to archive.
 
-Science scope: cluster/group-scale weak shear as the large-radius complement to strong lensing — Niemiec et al. 2020 hybrid-Lenstool (arXiv:2002.04635, joint SL+WL cluster reconstruction) and Oguri et al. 2012 Sloan Giant Arcs Survey (arXiv:1109.2594, stacked SL+WL of 28 group/cluster lenses). NOT cosmic shear or galaxy-galaxy lensing.
+Science scope: cluster/group-scale weak shear as the large-radius complement to strong lensing — Niemiec et al. 2020 hybrid-Lenstool (arXiv:2002.04635) and Oguri et al. 2012 SGAS (arXiv:1109.2594). Not cosmic shear / galaxy-galaxy lensing.
 
-shipped: weak_0_docs (`weak-lensing-shear-docs`, PyAutoGalaxy #366, 2026-04-25)
-shipped: [weak_1_simulator.md](../issued/weak_1_simulator.md) (`weak-shear-simulator`, PyAutoLens #473 + autolens_workspace #84, 2026-05-04)
-shipped: [weak_2_visualization.md](../issued/weak_2_visualization.md) (`weak-visualization`, PyAutoLens #496 — 5 quiver plotters in `autolens/weak/plot/`)
-shipped: [3_fit.md](../issued/3_fit.md) (`weak-fit` — `al.FitWeak` + 4 fit plotters + workspace `scripts/weak/fit.py`)
-shipped: `weak-dataset-from-json` follow-up (`al.from_json(WeakDataset)` round-trip fix)
+shipped: weak_0_docs (PyAutoGalaxy #366, 2026-04-25)
+shipped: weak_1_simulator (PyAutoLens #473 + workspace #84, 2026-05-04)
+shipped: weak_2_visualization (PyAutoLens #496 — 5 quiver plotters)
+shipped: 3_fit (`al.FitWeak` + 4 fit plotters + workspace fit.py) + from_json fix
+shipped 2026-07-09 (the "home-straight push", one --auto session):
+- 4_modeling — `al.AnalysisWeak` + workspace modeling.py (PyAutoLens #580 + workspace #241; issue #579)
+- 5_likelihood_function — workspace likelihood guide (workspace #246; issue #245)
+- 6_visualization_profiles — tangential/cross shear profile + Kaiser-Squires maps (PyAutoLens #582 + workspace #244; issue #581)
+- 8_strong_lensing — combined SL+WL via FactorGraphModel + mixed-graph viz fix (PyAutoLens #587 + workspace #251; issue #247)
+- 9_small_datasets — PYAUTO_SMALL_DATASETS catalogue cap (PyAutoArray #366 + PyAutoLens #584; issue #583)
+- 7_real_data — catalog IO + reduced shear + real A2744 pyRRG example (PyAutoLens #589 + workspace #253; issue #588)
 
-queued (dependency order — 4 is the keystone, 6 is independent):
-- [feature/weak/4_modeling.md](../feature/weak/4_modeling.md) — `AnalysisWeak` mirroring the imaging model API + workspace `modeling.py`. Blocks 5, 7, 8.
-- [feature/weak/5_likelihood_function.md](../feature/weak/5_likelihood_function.md) — `scripts/weak/likelihood_function.py` in the standard workspace style.
-- [feature/weak/6_visualization_profiles.md](../feature/weak/6_visualization_profiles.md) — tangential/cross shear radial profile plotter (γ_t/γ_x binned, cross-shear B-mode null test) + Kaiser-Squires convergence map. Independent of 4.
-- [feature/weak/7_real_data.md](../feature/weak/7_real_data.md) — real-data example on Abell 2744 public shear catalog; needs catalog loader + reduced-shear (g = γ/(1−κ)) + Σ_crit scaling. Depends on 4; profits from 6.
-- [feature/weak/8_strong_lensing.md](../feature/weak/8_strong_lensing.md) — `scripts/weak/features/strong_lensing/{simulator,fit,modeling}.py` combined SL+WL via summed `AnalysisImaging + AnalysisWeak`. Depends on 4.
-- [feature/weak/9_small_datasets.md](../feature/weak/9_small_datasets.md) — `PYAUTO_SMALL_DATASETS=1` smoke-mode support: cap `via_tracer_random_positions_from` galaxy count + migrate `modeling.py` to `should_simulate`. Enables fast workspace-test smoke coverage of `scripts/weak/`. Independent; small/safe.
-
-Issue steps one at a time as each predecessor nears shipping (no bulk-issuing).
+Follow-up candidates (not queued): per-galaxy sigma_crit scaling (redshift storage + extension point shipped in 7a); metrology-grade A2744 reproduction if the published DR1 shear catalog is sourced (UNCOVER/MAST or author contact); PyAutoFit-side per-type dispatch of visualize_combined; JAX support for FitWeak (pytree registration).
