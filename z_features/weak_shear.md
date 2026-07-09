@@ -14,4 +14,4 @@ shipped 2026-07-09 (the "home-straight push", one --auto session):
 - 9_small_datasets — PYAUTO_SMALL_DATASETS catalogue cap (PyAutoArray #366 + PyAutoLens #584; issue #583)
 - 7_real_data — catalog IO + reduced shear + real A2744 pyRRG example (PyAutoLens #589 + workspace #253; issue #588)
 
-Follow-up candidates (not queued): per-galaxy sigma_crit scaling (redshift storage + extension point shipped in 7a); metrology-grade A2744 reproduction if the published DR1 shear catalog is sourced (UNCOVER/MAST or author contact); PyAutoFit-side per-type dispatch of visualize_combined; JAX support for FitWeak (pytree registration).
+Follow-ups shipped 2026-07-09 (user-directed "do all of these"): sigma_crit scaling + FitWeak JAX (step 10, PyAutoLens #591 + workspace_test #156; issue #590); FactorGraphModel per-type visualize_combined dispatch (PyAutoFit #1340; issue #1339). Remaining candidate (not queued): metrology-grade A2744 reproduction if the published DR1 shear catalog is sourced (UNCOVER/MAST or author contact).
