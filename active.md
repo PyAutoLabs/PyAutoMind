@@ -2,7 +2,8 @@
 
 ## alma-interferometer
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/14
-- status: library-dev
+- status: parked-at-ship-gate — implementation + review-fix complete (local commits 4c95833 + f050a30, unpushed); gate legs 1-3 pass (143 tests, smoke n/a, review CLEAN after fixes); leg 4 Heart RED on PyAutoLens uncommitted docs edit owned by release-docs-polish-learn-paths (#592). Resume: clear that dirt, re-run /ship_library alma-interferometer --auto
+- gate-state: https://github.com/PyAutoLabs/PyAutoReduce/issues/14#issuecomment-4926764642
 - autonomy: safe (--auto, launched 2026-07-09; feature cap safe at ≤ medium; ends at PR-open)
 - worktree: ~/Code/PyAutoLabs-wt/alma-interferometer
 - repos:
