@@ -1,5 +1,12 @@
 # Active Tasks
 
+## alma-interferometer
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/14
+- status: library-dev
+- autonomy: safe (--auto, launched 2026-07-09; feature cap safe at ≤ medium; ends at PR-open)
+- worktree: ~/Code/PyAutoLabs-wt/alma-interferometer
+- repos:
+
 ## keck-ao-acceptance-checks
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13
 - status: test-dev — running acceptance checks 3-4 (astrometry + plate-scale audit; PyAutoLens Einstein-radius fit) on the merged phase-4 reduction
