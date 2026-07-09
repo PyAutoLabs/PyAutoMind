@@ -110,3 +110,6 @@
 - worktree: ~/Code/PyAutoLabs-wt/release-docs-polish-learn-paths
 - phases: A=API-docs audit (autogalaxy+autolens; PyAutoFit PARKED behind ep-graphical-docs worktree) · B=cluster de-flag (autolens_workspace; weak already clean) · C=3-ways-to-learn (overview_2 + start_here§418 + both READMEs + docs/index framing)
 - repos:
+  - PyAutoLens: feature/release-docs-polish-learn-paths
+  - PyAutoGalaxy: feature/release-docs-polish-learn-paths
+  - autolens_workspace: feature/release-docs-polish-learn-paths
