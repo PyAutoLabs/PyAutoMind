@@ -1,5 +1,16 @@
 # Active Tasks
 
+## weak-likelihood-function
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/245
+- session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
+- status: workspace-dev
+- autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set acknowledged in-session)
+- note: weak series step 5 — workspace-only likelihood guide; no library change
+- worktree: /home/jammy/Code/PyAutoLabs-wt/weak-likelihood-function
+- repos:
+  - autolens_workspace: feature/weak-likelihood-function
+
+
 ## refactor-post-phase3
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
 - session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
