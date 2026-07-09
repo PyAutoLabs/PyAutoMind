@@ -169,11 +169,3 @@
 
 
 
-## oversampled-psf-visible-input
-- issue: (file on start — prompt: feature/autolens_workspace/oversampled_psf_visible_input.md)
-- planned: 2026-07-08
-- classification: workspace
-- suggested-branch: feature/psf-visible-input
-- blocked-by: cluster-scaling-lenstool (using autolens_workspace)
-- affected-repos:
-  - autolens_workspace

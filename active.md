@@ -1,14 +1,24 @@
 # Active Tasks
 
-## kxs-workspace-tests
+## psf-visible-input
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/242
+- session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
+- status: workspace-dev (flagship pass)
+- autonomy: supervised (--auto, launched 2026-07-09)
+- note: PARALLEL claim on autolens_workspace alongside weak-modeling — zero script overlap verified 2026-07-09 (their diff: cluster/lenstool + weak/ + generated catalogue only); catalogue conflict recipe: re-run regenerate_navigator.py post-merge
+- worktree: /home/jammy/Code/PyAutoLabs-wt/psf-visible-input
+- repos:
+  - autolens_workspace: feature/psf-visible-input (parallel to weak-modeling claim, zero overlap)
+
+## kxs-refactor
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: workspace-shipped, awaiting-merge
-- pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/154
-- autonomy: supervised (--auto, launched 2026-07-09, no heart-ack)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-workspace-tests
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/365
+- autonomy: safe (--auto, refactor cap; launched 2026-07-09)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-refactor
 - repos:
-  - autolens_workspace_test: feature/kxs-workspace-tests
+  - PyAutoArray: feature/kxs-refactor
 
 ## weak-modeling
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/579
