@@ -168,3 +168,15 @@
 - repos:
   - autolens_workspace: feature/cluster-small-datasets
   - PyAutoBuild: feature/cluster-small-datasets
+
+## csv-api-lenstool
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/490
+- session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
+- status: library-dev — stress-test phase
+- autonomy: supervised (--auto, in-session directive 2026-07-09; heart-ack carried)
+- note: parallel claims as per cluster-small-datasets entry (scripts/cluster/ disjoint);
+  PyAutoGalaxy unclaimed post-merges
+- worktree: /home/jammy/Code/PyAutoLabs-wt/csv-api-lenstool
+- repos:
+  - PyAutoGalaxy: feature/csv-api-lenstool
+  - autolens_workspace: feature/csv-api-lenstool
