@@ -5368,3 +5368,10 @@
   Lenstool example ported: mass.csv = the .par file as a table (149 rows, header is the .par
   vocabulary), one al.galaxies_from_csv_tables call reconstructs at identical 0.0680" parity;
   refit halos originate from galaxy_af_models_from_csv_tables with input.par priors promoted.
+
+## profiling-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/60 (closed)
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/61 (merged 2026-07-09)
+- prompt: issued/profiling_agent.md (incl. the phase-1 design decision)
+- summary: profiling conductor live — the proprioceptive function (campaign/ingest/triage); /profiling command installed; future modes (JAX compile-time, slow-function hunting) staged in the prompt
+
