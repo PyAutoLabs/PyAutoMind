@@ -15,3 +15,11 @@ Hygiene agent decision. Research and debate whether PyAutoBrain should grow a de
 <!-- formalised by the Intake (Conception) Agent on 2026-07-08 from user-intake;
      re-homed maintenance/ -> research/ in conversation: the deliverable is a design
      decision (investigation before implementation), maintenance is the subject -->
+
+<!-- 2026-07-09 update: substantially pre-answered by the hygiene split shipped
+     in a parallel session (Heart observes noise dashboard + 7-day nudge;
+     Brain repo_cleanup skill mutates — PyAutoHeart PR #42). The debate's
+     remaining question is whether that split needs a conductor at all, or is
+     complete as observe+skill. See also the profiling-agent boundary note in
+     feature/pyautobrain/profiling_agent.md. -->
+
