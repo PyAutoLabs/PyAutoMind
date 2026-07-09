@@ -12,12 +12,12 @@
 ## kxs-surface-refactor
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/488
 - session: claude --resume 4bcb5c3c-c067-4955-8bcd-8a7d93128ca7
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/489
 - autonomy: safe (--auto, refactor cap; RefactorDecision too-large->conservative cut)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/kxs-surface-refactor
 - repos:
   - PyAutoGalaxy: feature/kxs-surface-refactor
-  - PyAutoArray: feature/kxs-surface-refactor
 
 ## weak-viz-profiles
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/581
