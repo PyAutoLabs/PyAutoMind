@@ -144,3 +144,11 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/lenstool-example
 - repos:
   - autolens_workspace: feature/lenstool-example
+
+## health-sync-noise-filter
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/41
+- status: library-dev
+- note: also carries the /repo_cleanup cadence leg (startup hygiene nudge off ~/.cache/pyauto/repo_cleanup_last_audit.json); Brain-skill stamp write is a follow-up (PyAutoBrain claimed by clone-mitosis-agent)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/health-sync-noise-filter
+- repos:
+  - PyAutoHeart: feature/health-sync-noise-filter
