@@ -110,3 +110,13 @@
 - worktree: none (autolens_assistant develops in-place)
 - repos:
   - autolens_assistant: feature/assistant-wiki-release
+
+## regen-workspace-notebooks
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/255
+- session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
+- status: workspace-dev
+- autonomy: safe (--auto, launched 2026-07-09; maintenance cap safe; ends at PR-open)
+- worktree: ~/Code/PyAutoLabs-wt/regen-workspace-notebooks
+- note: follow-up from #592 — regenerate all notebooks + catalogue (global drift); generated-artifact only, no scripts/ edits
+- repos:
+  - autolens_workspace: feature/regen-workspace-notebooks
