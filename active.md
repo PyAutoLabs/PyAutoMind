@@ -1,5 +1,13 @@
 # Active Tasks
 
+## keck-ao-reduction-plan
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/9
+- status: research-dev — read-only literature/design phase (SHARP papers, NIRC2 tooling); findings land on the issue
+- autonomy: supervised (--auto, launched 2026-07-09)
+- note: PyAutoReduce claimed by refactor-post-phase3 (in-place) — no repo claim taken; the docs/design/keck_ao.md write leg + PR is parked until that task ships (then worktree ~/Code/PyAutoLabs-wt/keck-ao-reduction-plan, branch feature/keck-ao-reduction-plan)
+- worktree: none (read-only)
+- repos:
+
 ## weak-strong-lensing
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/247
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
