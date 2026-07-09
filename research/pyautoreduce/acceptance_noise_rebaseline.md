@@ -36,3 +36,8 @@ Task: formally re-baseline the acceptance comparison —
 3. Check whether any downstream modeling dataset already reduced with the
    duplicated-input pipeline needs regenerating (any target reduced before
    2026-07-09; cached targets carry duplicates until evicted).
+4. Settle direct-vs-HAP family preference: PR #18 keeps the direct cal
+   family (consistent with the align stage's a-priori-WCS design); the
+   slacs1430 session's bug prompt suggested preferring the Gaia-aligned HAP
+   copies instead (bug/pyautoreduce/acquire_duplicate_exposure_families.md,
+   now resolved) — decide with WCS-diagnostic evidence.
