@@ -22,27 +22,6 @@
   - PyAutoLens: feature/weak-sigma-crit-jax
   - autolens_workspace_test: feature/weak-sigma-crit-jax (parallel to delaunay-qhull-callback — imaging vs new weak/ dir, disjoint)
 
-
-## delaunay-qhull-callback
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/367
-- status: shipped, awaiting-merge — both PRs at PR-open, merge human: library PyAutoArray#368 FIRST, then autolens_workspace_test#155 (library-first gate). Post-merge follow-ups: A100 re-profile (RAL down), fnnls deep-dive (separate task), worktree cleanup
-- question: https://github.com/PyAutoLabs/PyAutoArray/issues/367#issuecomment-4925955234 (answered in-session: phase-2 ship approved)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/368
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/155
-- autonomy: supervised (--auto, launched 2026-07-09; refactor @ too-large, effective min(supervised, safe)=supervised; ship sign-off + heart-ack given in-session 2026-07-09)
-- heart-ack:
-  - workspace validation not passing (5 failed, 2026-07-08T11-25-50Z)
-  - 58 stale parked script(s)
-  - autolens_assistant: pinned BEHIND installed 2026.7.6.649
-  - install verification not run
-  - no release validation for current source
-  - PyAutoMind: open PR 9d old
-- note: hard requirement — likelihood numerically unchanged (eager xp=np path is the reference and is untouched); PoC + saved outputs in autolens_profiling/scratch/delaunay_speedup/; do NOT touch fnnls/NNLS (separate follow-up)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/delaunay-qhull-callback
-- repos:
-  - PyAutoArray: feature/delaunay-qhull-callback
-  - autolens_workspace_test: feature/delaunay-qhull-callback (phase 2)
-
 ## keck-ao-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/11
 - status: library-dev — implementing K1–K3 per the #9 design (drizzle backend + B1938+666 anchor user-adopted 2026-07-09)
