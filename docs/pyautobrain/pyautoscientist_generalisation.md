@@ -1,21 +1,19 @@
 # Generalise the organism into PyAutoScientist: adoption assessment + unified docs
 
 Type: docs
-Target: PyAutoLens
+Target: PyAutoBrain
 Repos:
-- PyAutoLens
-- autolens_workspace
 - PyAutoBrain
+- PyAutoMind
+- PyAutoMemory
 - PyAutoBuild
 - PyAutoHeart
-- PyAutoMemory
-- PyAutoMind
+- PyAutoLens
+- autolens_workspace
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
-
-# Generalise the organism into PyAutoScientist: adoption assessment + unified docs
 
 Assess how the organism repos (@PyAutoBrain, @PyAutoMind, @PyAutoMemory,
 @PyAutoBuild, @PyAutoHeart) can be generalised so other people can adopt the
