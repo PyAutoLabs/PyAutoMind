@@ -157,3 +157,11 @@
 - repos:
   - PyAutoArray: feature/nnls-solver-optimization
 - note: awaiting A100 addendum only — RAL job 330046 queued (euclid-ral-gpu-[1-2] down); when it runs, rsync scratch/nnls_speedup results back, post addendum to #369, then offer issue closure + worktree cleanup. Scratch harness + real systems in autolens_profiling/scratch/nnls_speedup/ (canonical checkout, untracked) are the shared testbed for the BPP/ADMM follow-up
+
+## nnls-bpp-admm-experiment
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/370
+- session: claude --resume a67dda1e-835b-43c6-b90f-a2190e349ad0
+- status: workspace-dev (scratch prototyping)
+- worktree: (none — untracked scratch/nnls_speedup in canonical autolens_profiling; no repo claims)
+- repos:
+- note: BPP phase 1 first, then ADMM, then gate decision; promotion into PyAutoArray needs fresh plan+approval and is blocked-by nnls-solver-optimization's parked PyAutoArray claim until that resolves; baselines + testbed shared with #369
