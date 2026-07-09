@@ -3,12 +3,15 @@
 ## weak-modeling
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/579
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: library-dev
+- status: awaiting-input — BOTH halves implemented+validated+committed LOCALLY (PyAutoLens 8a0733d47: AnalysisWeak, 347 tests pass; autolens_workspace 58f42a9a: scripts/weak/modeling.py, Nautilus recovered truth 1sigma); nothing pushed; parked at ship sign-off (supervised, Heart YELLOW no launch ack)
+- question: https://github.com/PyAutoLabs/PyAutoLens/issues/579#issuecomment-4923779032
+- resume: on approval push both branches + open PRs with the draft bodies in the question comment (library PR pending-release; workspace PR behind library-first merge gate), append autonomy_log outcome
 - autonomy: supervised (--auto, launched 2026-07-09, no heart-ack)
-- note: keystone of the weak home-straight (blocks series 5/7/8); workspace follow-up deferred — autolens_workspace claimed by lenstool-example; use the proven parallel-worktree pattern (scripts/weak/ zero overlap) if still claimed at workspace time
+- note: keystone of the weak home-straight (blocks series 5/7/8); workspace half done via parallel worktree alongside lenstool-example (zero file overlap — lenstool diff is root metadata only)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-modeling
 - repos:
   - PyAutoLens: feature/weak-modeling
+  - autolens_workspace: feature/weak-modeling (parallel to lenstool-example claim, zero overlap)
 
 
 ## jwst-nircam-cosmos-web
