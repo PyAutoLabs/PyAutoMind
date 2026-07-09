@@ -1,11 +1,15 @@
-# Docs infrastructure: RTD hygiene, shared PyAuto theming, GitHub Pages hub
+# Docs infrastructure phases B+C: shared PyAuto theming + GitHub Pages hub
 
 Type: docs
 Target: libraries
 Difficulty: medium
 Autonomy: supervised
-Priority: high
-Status: formalised
+Priority: medium
+Status: planned
+
+**Do not issue yet** — issue when phase A ([rtd_hygiene.md](rtd_hygiene.md)) nears
+shipping (no bulk-issuing of prompt series). Phase A carries the census findings and the
+RTD/CI hygiene scope; this prompt holds the decision record and phases B/C.
 
 ## Original request (verbatim)
 
@@ -32,49 +36,7 @@ this task may hard-bake the `pyautolabs.github.io` hostname in a way that makes 
 retrofit require restructuring (use relative links inside the hub; the RTD sites keep
 their canonical `*.readthedocs.io` URLs regardless).
 
-## Census findings driving this task (2026-07-09 review)
-
-1. **pyautofit.readthedocs.io has not built since 2026-05-06.** The RTD project points at
-   `rhayes777/PyAutoFit.git`; its webhook/connection did not survive the org migration.
-   16 docs commits (incl. the Jammy2211→PyAutoLabs URL audit #1265 and the Latent cookbook
-   migration) have never reached the live site. PyAutoGalaxy/PyAutoLens RTD point at old
-   `Jammy2211/...` URLs but their webhooks survived and build fine (built 2026-07-09).
-2. **No docs build in CI** in any repo, and all three `.readthedocs.yaml` set
-   `fail_on_warning: false` → docs rot silently (the stale `plot.rst` / PyAutoLens#592 is
-   the proof; that content rewrite stays a separate task).
-3. **Dead/duplicate configs:** PyAutoFit `readthedocs.yml` (py3.11) and PyAutoGalaxy
-   `readthedocs.yaml` duplicate the live `.readthedocs.yaml` (py3.12) with drifted
-   contents; PyAutoFit `docs/requirements.txt` (SQLAlchemy==1.3.20 etc.) is superseded by
-   the pyproject `[docs]` extra RTD actually installs.
-4. **conf.py drift:** PyAutoLens typo `nnumpydoc_class_members_toctree` (setting silently
-   ignored → Lens runs different numpydoc config than Galaxy); PyAutoFit and PyAutoLens
-   declare `html_static_path = ["_static"]` + `pied-piper-admonition.css` that do not
-   exist on disk; PyAutoFit's autodoc block diverges wholesale from Galaxy/Lens (no
-   `sphinx_autodoc_typehints` despite shipping it in the extra, different
-   `autoclass_content`); all three carry a dead `html_context` block
-   (`github_version: "master"`) Furo never reads; only PyAutoLens has brand colors
-   (`#7C4DFF`).
-5. Only `latest` is published (no `stable`/tags) — acceptable under nightly releases;
-   record as a deliberate decision, not in scope to change.
-
-## Scope
-
-### Phase A — RTD hygiene
-
-- **Human legs (RTD dashboard, walk the user through them):** reconnect the `pyautofit`
-  RTD project to `PyAutoLabs/PyAutoFit` and confirm a fresh build goes live; update the
-  `pyautogalaxy`/`pyautolens` RTD repo URLs to the PyAutoLabs org.
-- Delete dead configs: `PyAutoFit/readthedocs.yml`, `PyAutoGalaxy/readthedocs.yaml`,
-  `PyAutoFit/docs/requirements.txt`.
-- Converge the three `docs/conf.py`: fix the `nnumpydoc` typo, remove dead `html_context`
-  blocks, align the autodoc/numpydoc/typehints configuration on the Galaxy/Lens variant
-  (verify PyAutoFit API pages still render before/after), fix or create the missing
-  `_static` assets.
-- Add a docs CI job to each of the three repos: build the Sphinx docs on PRs touching
-  `docs/` or the package (at minimum `sphinx-build`; ideally `-W` once the existing
-  warning baseline is triaged — if `-W` is not immediately achievable, fail on
-  warning-count regression instead).
-
+## Scope (phases B+C; phase A in rtd_hygiene.md)
 ### Phase B — shared bespoke theming
 
 - One shared PyAuto brand layer for Furo across PyAutoFit/PyAutoGalaxy/PyAutoLens: palette
