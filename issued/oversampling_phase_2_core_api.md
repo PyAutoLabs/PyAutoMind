@@ -1,5 +1,7 @@
 # Oversampled PSF convolution — phase 2: core library API
 
+> **RETIRED 2026-07-09 (reconcile pass).** Superseded by phases 2a/2b/2c, all merged: core PyAutoArray#355, inversion #357, autogalaxy consumer PyAutoGalaxy#481 (complete.md: psf-oversample-core/inversion/galaxy). This umbrella phase-2 prompt is fully covered.
+
 Type: feature
 Target: PyAutoArray
 Repos:

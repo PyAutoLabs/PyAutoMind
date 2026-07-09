@@ -1,5 +1,7 @@
 ## Speed up NNLS on consumer GPUs by hacking jaxnnls itself
 
+> **RETIRED 2026-07-09 (reconcile pass).** Superseded by `nnls_vmap_optimization.md` (2026-05-11), which itself closed without library changes (PyAutoArray#307, complete.md: nnls-vmap-speedup): the 8.8× "regression" was a batch=3 measurement artifact, production vmap targets were already met, and the real Delaunay bottleneck is the scipy `pure_callback`. Findings: z_projects/profiling/FINDINGS_nnls_v2.md. The pure-JAX Delaunay follow-up lives in research/autoarray/delaunay_research.md (kept live).
+
 Type: research
 Target: PyAutoArray
 Difficulty: too-large

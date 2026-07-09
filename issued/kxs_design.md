@@ -1,5 +1,7 @@
 # k×s coupling — design note (phase 1)
 
+> **RETIRED 2026-07-09 (reconcile pass).** The k×s series shipped and closed: PyAutoArray#362 closed as "series complete" via #363/#364/#365 + PyAutoGalaxy#486/#489 + autolens_workspace#236 / autolens_workspace_test#154 (complete.md: kxs-design/core/cache/refactor/workspace-tests/surface-refactor). This phase-1 design note is now historical.
+
 Deliverable of `kxs_phase_1_design.md` (PyAutoLabs/PyAutoArray#362).
 Companion ground truth: `kxs_ground_truth.py` (same directory). Grounded
 against the refactored helpers on the `feature/psf-oversample-refactor`

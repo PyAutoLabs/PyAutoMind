@@ -1,3 +1,4 @@
+# RETIRED 2026-07-09 (reconcile pass): companion of oversampling_design.md; oversampling series shipped (PyAutoArray#353 et al). Historical.
 """
 Brute-force numerical ground truth for oversampled PSF convolution.
 

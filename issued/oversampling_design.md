@@ -1,5 +1,7 @@
 # Oversampled PSF convolution — design note (phase 1)
 
+> **RETIRED 2026-07-09 (reconcile pass).** Deliverable of the shipped phase-1 design (PyAutoArray#353, complete.md: psf-oversample-design). The full oversampling series is shipped — see the oversampling.md close-out. Historical.
+
 Deliverable of `oversampling_phase_1_design.md` (PyAutoLabs/PyAutoArray#353).
 Companion ground truth: `oversampling_ground_truth.py` (same directory).
 File/line references are against `feature/psf-oversample-design` worktree

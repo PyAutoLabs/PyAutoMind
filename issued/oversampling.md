@@ -1,5 +1,7 @@
 # A point spread function is used to blur images via
 
+> **RETIRED 2026-07-09 (reconcile pass).** All four phases shipped: phase 1 design (PyAutoArray#353), phase 2 core/inversion/galaxy (#355/#357/PyAutoGalaxy#481), phase 3 workspace (#358), phase 4 docs (autolens_workspace#235), plus simulator (#359) and series refactor (#361/PyAutoGalaxy#484). This parent record is now historical.
+
 Type: feature
 Target: PyAutoArray
 Difficulty: too-large

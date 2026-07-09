@@ -1,3 +1,4 @@
+# RETIRED 2026-07-09 (reconcile pass): companion of kxs_design.md; k×s series shipped/closed (PyAutoArray#362). Historical.
 """
 Brute-force ground truth for the k×s evaluation/convolution coupling.
 
