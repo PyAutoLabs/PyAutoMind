@@ -113,8 +113,9 @@
 ## release-docs-polish-learn-paths
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/592
 - session: claude --resume b7b89cda-1dac-48c9-8880-7d467cd91f58
-- status: awaiting-input — Phase B+C implemented in worktree (uncommitted), ready for ship sign-off; Phase A parked on a scope decision (plot.rst OO-plotting subsystem removed); PyAutoFit audit parked behind ep-graphical-docs (#1334)
-- question: https://github.com/PyAutoLabs/PyAutoLens/issues/592#issuecomment-4926608065
+- status: awaiting-input — ALL phases A+B+C implemented in worktree (uncommitted); Phase A done via option C (pruned dead OO plot.rst sections + mechanical fixes; re-audit clean, CRLF preserved); awaiting ship sign-off (supervised → human). PyAutoFit audit parked behind ep-graphical-docs (#1334)
+- question: https://github.com/PyAutoLabs/PyAutoLens/issues/592#issuecomment-4926734538
+- follow-ups filed: docs/autolens/plot_rst_functional_api_rewrite.md; maintenance/autolens_workspace/regenerate_notebooks_catalogue.md
 - autonomy: supervised (--auto, launched 2026-07-09; docs cap at too-large → effective supervised; ship sign-off parks per AUTONOMY.md, no launch-time Heart ack)
 - worktree: ~/Code/PyAutoLabs-wt/release-docs-polish-learn-paths
 - phases: A=API-docs audit — MAJOR finding: plot.rst (both repos) documents removed OO plot subsystem (MatPlot2D/Cmap/*Scatter ~34 entries) + individual removals (OverSampling/PointDict/SetupAdapt/PySwarms) + Chameleon re-point + Convolver dedupe; PARKED pending prune-vs-rewrite decision (rec C). PyAutoFit PARKED behind #1334 · B=cluster de-flag DONE (autolens_workspace; weak already clean) · C=3-ways-to-learn DONE (overview_2 + index.md + start_here§418 + both READMEs)
