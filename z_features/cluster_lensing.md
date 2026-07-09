@@ -1,9 +1,10 @@
 __Outstanding__ (sequenced — the "home straight" to mature cluster modeling, filed 2026-07-08)
 
-1. [feature/cluster/5_profiling.md](../feature/cluster/5_profiling.md) — two scripts in
-   `autolens_profiling/likelihood/cluster/` that time the source-plane and
-   image-plane likelihood paths, following the per-model breakdown style of
-   the rest of `autolens_profiling/likelihood/`.
+1. [issued/5_profiling.md](../issued/5_profiling.md) — **at PR-open 2026-07-09**
+   (autolens_profiling#57; PR #58): likelihood_breakdown/cluster/{source_plane,image_plane}.py,
+   8-digit LL parity with the production fits; source-plane 3.1 ms vs image-plane solve
+   0.32 s/call + 10.5 s compile/plane. simulators/cluster.py synced to the scaling-tier
+   truth. Awaiting merge.
 2. [feature/cluster/10_solver_over_under_prediction.md](../feature/cluster/10_solver_over_under_prediction.md)
    — deliberate over/under-prediction handling in the point-source likelihood
    + `guides/` documentation of the choices.

@@ -134,7 +134,8 @@
 ## cluster-likelihood-breakdown
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/57
 - session: claude --resume fa55f70e-2cea-4887-bf12-61f81cff042f
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/58
 - autonomy: supervised (--auto, launched 2026-07-09 "do the next task --auto"; heart-ack carried)
 - note: parallel to profiling-preopt-campaign claim on autolens_profiling (active background
   campaign; its diff = likelihood_runtime/sweep.py + scripts/build_baseline.py) — new files in

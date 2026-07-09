@@ -65,3 +65,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-09 | jwst-nircam-cosmos-web | supervised | tests 83/83 / smoke n/a / review 6→5 fixed / heart YELLOW acked | merged-unchanged (#7) |
 | 2026-07-09 | kxs-surface-refactor (#488) | safe | witnesses PASS 956+867+347+script14 unchanged / agent-decision obtained / review CLEAN / heart YELLOW-cadence | merged-unchanged |
 | 2026-07-09 | weak-likelihood-function | supervised | tests n-a-docs / smoke script-ran-asserts-pass / review n-a-parked / heart YELLOW-acked-set | parked |
+| 2026-07-09 | cluster-likelihood-breakdown (autolens_profiling#57) | supervised | tests in-run LL assert rtol 1e-4 (8-digit match) / smoke both scripts end-to-end from clean + SMOKE=1 + ruff / review CLEAN / heart-ack carried in-session | PR-open (autolens_profiling#58) |
