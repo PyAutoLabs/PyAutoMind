@@ -3,7 +3,8 @@
 ## factor-graph-viz-dispatch
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1339
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: library-dev
+- status: shipped, awaiting-merge — CI running; merge on green (authorized)
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1340
 - autonomy: safe effective (refactor cap; --auto continuation 2026-07-09; merge authorization carried in-session)
 - note: weak follow-up 3 — FactorGraphModel groups factors by Visualizer class for visualize_combined. PARALLEL to ep-diagnostics + ep-graphical-docs PyAutoFit claims (expectation_propagation/ + messages/ vs declarative/collection.py — disjoint)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/factor-graph-viz-dispatch
@@ -14,7 +15,9 @@
 ## weak-sigma-crit-jax
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/590
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
-- status: library-dev
+- status: shipped, awaiting-merge — CI running; merge on green (authorized)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/591
+- workspace-test-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/156
 - autonomy: supervised (--auto continuation, launched 2026-07-09; heart-yellow set + merge authorization carried in-session)
 - note: weak follow-ups 1+2 (sigma_crit scaling + FitWeak JAX) on one branch — both rework FitWeak; workspace_test parity script at validation time
 - worktree: /home/jammy/Code/PyAutoLabs-wt/weak-sigma-crit-jax
