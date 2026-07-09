@@ -8,6 +8,7 @@
 - note: JWST sub-part split to research/pyautoreduce/jwst_individual_frame_feasibility.md; keck-ao-acceptance task also touches PyAutoReduce but claims no worktree (analysis on main, parked)
 - worktree: ~/Code/PyAutoLabs-wt/frame-products
 - repos:
+  - PyAutoReduce: feature/frame-products
 
 ## jax-autodiff-gradients-audit
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/87
