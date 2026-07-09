@@ -78,7 +78,15 @@ the settled adoption model (§8). This prompt is the execution order.
    implementation, `main` moves fast, copy/fork-and-pull, no compatibility
    promises. **Hub card** on pyautolabs.github.io linking the RTD.
 
-## Phase 3 — demand-gated (do NOT start until a concrete adopter exists)
+## Phase 3 — demand-gated
+
+Trigger: a concrete adopter exists **or** a launch is committed (paper /
+announcement / deliberate user-acquisition push). If the trigger is a launch,
+do not go straight to publishing: recruit 1–3 friendly beta adopters after
+Phase 2 and let their friction shape this phase — they are also the paper's
+case studies, and they prove the adoption path end-to-end before strangers
+try it. A launch additionally needs a turnkey quickstart on top of the items
+below (an `init` bootstrap: zero → running organism in ~an hour).
 
 - Config extraction: Heart `version_skew`/`readiness`/URL rules → `config/`;
   Build tables → policy YAML; Brain constant tables → derived from
