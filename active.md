@@ -121,3 +121,12 @@
   - PyAutoLens: feature/release-docs-polish-learn-paths
   - PyAutoGalaxy: feature/release-docs-polish-learn-paths
   - autolens_workspace: feature/release-docs-polish-learn-paths
+
+## colab-maturity
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/124
+- session: claude --resume 8040482d-4834-4cb4-8a87-1eb499ed48bd
+- status: library-dev
+- autonomy: default present-and-wait (plan approved in-session 2026-07-09; approved through PR-open)
+- phase-2: parked prompt feature/workspaces/colab_link_rot.md (issue when this nears ship)
+- worktree: ~/Code/PyAutoLabs-wt/colab-maturity
+- repos:
