@@ -1,7 +1,7 @@
 # Active Tasks
 
 ## factor-graph-viz-dispatch
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1342
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1339
 - session: claude --resume bf688af1-ea6f-4fcf-b475-ccf3989da853
 - status: library-dev
 - autonomy: safe effective (refactor cap; --auto continuation 2026-07-09; merge authorization carried in-session)
