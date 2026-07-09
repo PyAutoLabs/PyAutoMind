@@ -103,3 +103,13 @@
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
+
+## nightly-release-activity-gate
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/127
+- session: claude (Fable) 2026-07-09
+- status: library-dev — phase 1 (design note + AUTONOMY.md doctrine edit); phase 2 (release.yml implementation) prompts only after the design PR is approved
+- autonomy: human-required (prompt header; default present-and-wait run)
+- worktree: ~/Code/PyAutoLabs-wt/nightly-release-activity-gate
+- repos:
+  - PyAutoBuild: feature/nightly-release-activity-gate
+  - PyAutoBrain: feature/nightly-release-activity-gate
