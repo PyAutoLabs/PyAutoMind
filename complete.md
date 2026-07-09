@@ -5263,3 +5263,48 @@
   curves through 149 profiles cost ~10 min/plane in numpy — JAX-side speedup filed as follow-up
   idea; (c) galcat.cat has 146 uncommented rows vs 144 best.par members (2 potfile exclusions) —
   refit uses the catalogue, documented. NEXT: beta-tester iteration loop on this example.
+
+## cluster-likelihood-breakdown
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/57 (closed)
+- completed: 2026-07-09
+- pr: autolens_profiling#58 (merged; + ruff-format fix commit — repo lints with `ruff format --check`, not just `ruff check`)
+- notes: likelihood_breakdown/cluster/{source_plane,image_plane}.py in house style; 8-digit LL
+  parity with production fits (getting there documented three production-formula facts: chi²
+  weights distances by |mu|², name pairing hands the fit the model Point centre, noise norm uses
+  sigma/mu). Source-plane 3.1 ms vs image-plane solve 0.32 s/call + 10.5 s compile/plane (the
+  ~100x ratio, per-step). simulators/cluster.py synced to the scaling-tier truth.
+
+## point-pairing-policies
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/585 (closed)
+- completed: 2026-07-09
+- prs: PyAutoLens#586 + autolens_workspace#248 (merged)
+- notes: unmatched_model_policy on FitPositionsImagePairRepeat (magnification_filter default —
+  demagnified-central convention, |mu|<0.1 exempt; penalize/ignore via class-attr pattern);
+  Hungarian under-prediction reward fixed (all-caps warning retired); no_image_residual finite
+  floors; n_unmatched_model_positions diagnostic; guides/point_source_pairing.py with the
+  "search source-plane, validate image-plane" workflow. magnification_filter default stood at merge.
+
+## cluster-small-datasets
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/249 (closed)
+- completed: 2026-07-09
+- prs: autolens_workspace#250 + PyAutoBuild#123 (merged)
+- notes: cluster scripts UN-PARKED from no_run.yaml — 24s/26s from clean regen under the sweep
+  env (the parking predated the library small-mode hooks; fix was wiring). should_simulate
+  guards canonical; lenstool data.py mosaic gated; lenstool modeling.py search behind
+  LENSTOOL_EXAMPLE_RUN_FIT only (TEST_MODE had put the 72-param factor graph into
+  reduced-iterations mode). GOTCHA: always `source activate.sh` in evidence shells — one run
+  against canonical measured a phantom 7% parity drift that was really the missing worktree env.
+
+## csv-api-lenstool
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/490 (closed)
+- completed: 2026-07-09
+- prs: PyAutoGalaxy#491 + autolens_workspace#252 (merged, stacked on #250)
+- notes: CSV API stress-tested against user requirements (harness → 12 unit tests): .par-style
+  dPIEMassLenstool rows, NFW redshift args, shear+PowerLaw sparse, multipoles, PointFlux,
+  flux/time-delay data columns all passed as-is. Five gaps fixed: light-variant qualified class
+  names (linear.Sersic); loud typo-column guard (silent default was the worst footgun); loud
+  duplicate-row guard; GalaxyTable.properties (floats/strings, nothing dropped); dPIEMassLenstool
+  H0/Om0 flat args (a run's cosmology is now CSV-able — the gap measured at 0.3% in b0).
+  Lenstool example ported: mass.csv = the .par file as a table (149 rows, header is the .par
+  vocabulary), one al.galaxies_from_csv_tables call reconstructs at identical 0.0680" parity;
+  refit halos originate from galaxy_af_models_from_csv_tables with input.par priors promoted.

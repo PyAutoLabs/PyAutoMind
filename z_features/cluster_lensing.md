@@ -1,35 +1,18 @@
-__Outstanding__ (sequenced — the "home straight" to mature cluster modeling, filed 2026-07-08)
+__Outstanding__
 
-1. [issued/5_profiling.md](../issued/5_profiling.md) — **at PR-open 2026-07-09**
-   (autolens_profiling#57; PR #58): likelihood_breakdown/cluster/{source_plane,image_plane}.py,
-   8-digit LL parity with the production fits; source-plane 3.1 ms vs image-plane solve
-   0.32 s/call + 10.5 s compile/plane. simulators/cluster.py synced to the scaling-tier
-   truth. Awaiting merge.
-2. [issued/10_solver_over_under_prediction.md](../issued/10_solver_over_under_prediction.md)
-   — **at PR-open 2026-07-09** (PyAutoLens#585; PRs #586 + autolens_workspace#248):
-   unmatched_model_policy on PairRepeat (magnification_filter default), Hungarian
-   under-prediction reward fixed, no-image floors, pairing guide. Awaiting merge
-   (default-policy choice batched on the issue).
-3. [issued/11_small_datasets_cluster.md](../issued/11_small_datasets_cluster.md)
-   — **at PR-open 2026-07-09** (autolens_workspace#249; PRs #250 + PyAutoBuild#123):
-   should_simulate guards, lenstool small-mode gates, cluster scripts UN-PARKED from
-   no_run.yaml with 24s/26s evidence. Awaiting merge.
-4. csv-api-lenstool — **at PR-open 2026-07-09** (PyAutoGalaxy#490; PRs #491 +
-   autolens_workspace#252 stacked on #250): CSV API stress-tested + extended (light variants,
-   loud guards, GalaxyTable.properties, H0/Om0 flats); Lenstool example ported onto canonical
-   mass.csv (149 dPIEMassLenstool rows, the .par file as a table) at identical 0.0680" parity.
-   Awaiting merge (order: 250 → 491 → 252).
-5. Beta-tester iteration on the shipped Lenstool example (scripts/cluster/lenstool/) — the
-   user-facing back-and-forth; no prompt filed yet, driven by tester feedback.
-   — flagship "PyAutoLens for LensTool users" example on real data
-   (candidate: SMACS J0723), reproducing a published LensTool model; depends
-   on (2) and (3), exercised by (4) and (5). A real prospective user is
-   available for beta-testing back-and-forth once a draft exists.
-
-   Issue one at a time as the predecessor nears shipping
-   ([[feedback_no_bulk_issue_queues]]).
+1. **Beta-tester iteration** on `scripts/cluster/lenstool/` — the only remaining home-straight
+   item. Onboarding note prepared 2026-07-09 (see issue trail); driven by tester feedback, no
+   prompt filed until it arrives.
 
 __Shipped__
+
+- 5_profiling — `cluster-likelihood-breakdown` (autolens_profiling#57; PR #58 merged 2026-07-09).
+- 10_solver_over_under_prediction — `point-pairing-policies` (PyAutoLens#585; PRs #586 + awt
+  workspace#248 merged 2026-07-09).
+- 11_small_datasets_cluster — `cluster-small-datasets` (autolens_workspace#249; PRs #250 +
+  PyAutoBuild#123 merged 2026-07-09). Cluster scripts un-parked.
+- csv-api-lenstool — (PyAutoGalaxy#490; PRs #491 + #252 merged 2026-07-09). CSV API
+  stress-tested/extended; Lenstool example on the canonical interface at 0.0680" parity.
 
 - 8_lenstool_users_example — `lenstool-example` (autolens_workspace#239; PR #240 merged
   2026-07-09). Flagship "PyAutoLens for Lenstool users" example: reconstructs Mahler et al.
