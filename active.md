@@ -7,17 +7,6 @@
 - worktree: none (read-only on main, keck-ao pattern; probes in scratch)
 - repos:
 
-## keck-frame-feasibility
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/31
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — assessment complete, verdict GO-gated-on-acceptance (sequence: #13 acceptance -> frame-vs-stack outlier pass -> Keck frames branch); note drafted, uncommitted; parked at sign-off
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/31 (assessment comment)
-- autonomy: supervised effective (--auto chain 2026-07-10); recommendation is the checkpoint
-- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
-- worktree: ~/Code/PyAutoLabs-wt/keck-frame-feasibility (docs-only ship)
-- repos:
-  - PyAutoReduce: feature/keck-frame-feasibility
-
 ## kernel-forward-chunking
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/376
 - status: library-dev — chunk kernel-CDF forward (lax.map blocks jax / block loop np; block ~O(100MB) peak at production scale); invariant = float-identical numerics; witnesses = test_autoarray + both jax_grad scripts unchanged + OOM-scale probe (M≈246k, N≈15.4k)
