@@ -1,7 +1,7 @@
 # Active Tasks
 
 ## jwst-frame-feasibility
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/23
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/24
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
 - status: research — delta audit + literature scan; deliverable = docs/design/jwst.md go/no-go note
 - autonomy: supervised effective (--auto chain 2026-07-10); go/no-go recommendation is the checkpoint
