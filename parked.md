@@ -54,18 +54,6 @@ unindexed worktrees or stashes. Move an entry back to `active.md` (or to
       8. End-to-end library integration test
       (workspace) extend convolution.py + new convolution_oversampled.py + simulator.py
 
-## rectangular-spline-cdf
-- parked: 2026-05-08
-- classification: library (PyAutoArray)
-- location: PyAutoArray stash@{0} ("On rectangular-spline-cdf: ... 727-line rectangular.py refactor + tests, parked 2026-05-08 from worktree before worktree_remove")
-- notes: |
-    727-line refactor of autoarray/inversion/mesh/interpolator/rectangular.py + 51
-    lines of test updates, parked as a git stash on canonical PyAutoArray when its
-    worktree was removed. To resume, create a feature branch off main and
-    `git stash apply` (do NOT pop — keep the stash until merged). The refactor
-    splits forward/reverse spline interpolation into jax-friendly variants and
-    consolidates numpy fallbacks; quick-look diff before applying.
-
 ## lens-config-robustness
 - parked: 2026-05-19 (worktree last touched)
 - classification: workspace (autolens_workspace_developer)
