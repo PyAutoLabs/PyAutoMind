@@ -1,7 +1,7 @@
 # autofit_assistant: the deferred skill tranche (chain/custom/simulate/plot/debug)
 
 Type: feature
-Target: PyAutoFit
+Target: autofit_assistant
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
