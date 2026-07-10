@@ -1,3 +1,18 @@
+## human-led-tone-sweep
+- prompt: PyAutoMind/docs/pyautobrain/human_led_tone_sweep.md
+- status: planned
+- filed: 2026-07-10
+- classification: docs (PyAutoBrain + organ READMEs + RTD docs) — tone only
+- suggested-branch: docs/human-led-tone-sweep
+- summary: |
+    Sweep the human-led, natural-language-first framing (settled on the org
+    front page, PyAutoLabs/.github PR #2) through ORGANISM.md, the six organ
+    READMEs and the pyautoscientist RTD docs. Tagline voice: "an agentic AI
+    ecosystem for human-led, natural-language software development"; the
+    human leads, agents are the labour. Rewording only — no boundary or
+    contract changes.
+- affected-repos:
+
 ## samples-parameter-paths
 - prompt: PyAutoMind/bug/health_fixes/samples_parameter_paths.md
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1327 (open, parked)
