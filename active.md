@@ -9,17 +9,6 @@
 - worktree: none (analysis on PyAutoReduce main; branch feature/pj011646-wfc3-parity only at ship)
 - repos:
 
-## jwst-frame-feasibility
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/24
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — assessment complete, verdict GO-phased; design note drafted (uncommitted in worktree); parked at sign-off
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/24 (assessment comment)
-- autonomy: supervised effective (--auto chain 2026-07-10); go/no-go recommendation is the checkpoint
-- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
-- worktree: ~/Code/PyAutoLabs-wt/jwst-frame-feasibility
-- repos:
-  - PyAutoReduce: feature/jwst-frame-feasibility
-
 ## pyautoscientist-phase3a
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/71
 - status: awaiting-input — all deliverables complete 2026-07-10 (spawn_spec.md; template family seeded+validated PRIVATE: PyAutoProject/autoproject_workspace/autoproject_workspace_test, template-flagged; 3b series drafted; Nerves role live); parked on batched questions
