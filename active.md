@@ -1,5 +1,16 @@
 # Active Tasks
 
+## stpsf-tier2b
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/29
+- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
+- status: library-dev — STPSF tier-2b fallback for JWST frame PSFs (user-directed "lift PSF coverage"; 3/6 -> 6/6 target on F115W)
+- autonomy: supervised effective (--auto chain 2026-07-10; plan on issue); parks at ship sign-off
+- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
+- note: env needs stpsf + reference data install (not in venv yet); validation reruns frames packaging on cached F115W _crf files
+- worktree: ~/Code/PyAutoLabs-wt/stpsf-tier2b
+- repos:
+  - PyAutoReduce: feature/stpsf-tier2b
+
 ## pyautoscientist-4b
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/75
 - status: library-dev — Brain identity sets ← repos.yaml runtime (strict); vocabulary → PyAutoBrain/config/policy.yaml (aliases, MEMORY_WIKIS, TARGET_SIGNALS, wiki/test-dir maps, nightly TAG_REPO); Heart url_check_live fixups → config; seam test per move (Brain suite thin); Mind allowlist shrink
