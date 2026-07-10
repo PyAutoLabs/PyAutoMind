@@ -117,3 +117,23 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
+
+## afa-wiki-currency-wiring
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/138
+- session: (this CLI session, 2026-07-10)
+- status: shipped — PR-open (PyAutoBuild#139 + artifact-rename autofit_assistant#7; merge order #7 first); awaiting human merge
+- autonomy: safe effective (--auto launched 2026-07-10; gates: tests 100/100, smoke n/a, review CLEAN self-review, heart YELLOW acked)
+- heart-ack: acknowledged by user 2026-07-10 (in-session question, covers this launch + afa-skill-tranche), exact reason set: [workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); autolens_assistant pinned BEHIND installed 2026.7.6.649; manifest drift tenant firewall 1 mismatch vs repos.yaml; PyAutoMind open PR 10d old; install verification not run; no release validation for current source] — binds to these two launches only; any new reason or RED parks
+- worktree: none (in-place: PyAutoBuild on feature/afa-wiki-currency-wiring)
+- repos:
+  - PyAutoBuild: feature/afa-wiki-currency-wiring
+
+## afa-skill-tranche
+- issue: (created at start — autofit_assistant)
+- session: (this CLI session, 2026-07-10)
+- status: workspace-dev — authoring af_chain_searches / af_custom_analysis / af_simulate_dataset / af_plot_fit / af_debug_fit_failure per issued/deferred_skill_tranche.md
+- autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds); heart-ack: same set as afa-wiki-currency-wiring above (one in-session ack covering both)
+- note: Feature-Agent research re-home overruled (prompt fully scoped); recipes must execute against installed stack; four currency legs at ship
+- worktree: none (in-place: autofit_assistant on feature/afa-skill-tranche)
+- repos:
+  - autofit_assistant: feature/afa-skill-tranche
