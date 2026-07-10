@@ -40,26 +40,10 @@
 - worktree: none (analysis on PyAutoReduce main; branch feature/pj011646-wfc3-parity only at ship)
 - repos:
 
-## rectangular-kernel-cdf-mesh
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/374
-- status: shipped, awaiting-merge — SUCCESS CRITERION MET: strict FD ALL params in every config (imaging os_pix=1 bw=0.1 + os_pix=4 + production shape; interferometer sparse production shape), eager-vs-JIT everywhere, parity beats/2.7e-5/6.3e-4/3.9e-5; PRs: PyAutoArray#374 + workspace_test#161 + workspace_developer#90 (all pending-release, library-first); rect-adapt #375 folded in by merge + verified visually+numerically (comment on #372) — merge order #375→#374→#161+#90, whichever library PR lands second is a no-op; batched sign-off question on #373 (os1 parity→no-degradation; G ≤1e-3 at 6.3e-4 floor; FD-step-sweep semantics)
-- workspace-prs: https://github.com/PyAutoLabs/autolens_workspace_test/pull/161 + https://github.com/PyAutoLabs/autolens_workspace_developer/pull/90
-- followups (unfiled, queue discipline): chunked kernel forward (O(M×N) mem, 60GB @ 15k px os4); solver branch-flip investigation (point-width <1e-15, ΔLL 1.6e-3–14, PDIP tie-break suspect); sampler trials (prompt-deferred, now unblocked)
-- autonomy: supervised effective (--auto continued in-session 2026-07-10 after human plan approval + library-ship sign-off; human directed "continue --auto" → proceed to PR-open, merge stays human)
-- heart-ack: in-session 2026-07-10 — exact set: workspace validation not passing (3 failed 2026-07-09T09-48-30Z); 58 stale parked scripts; autolens_assistant pinned BEHIND installed; PyAutoMind open PR 10d old; install verification not run; no release validation for current source. Binds to exactly this set; any new reason parks.
-- claim-override: human-directed 2026-07-10 — proceeds alongside rect-adapt's PyAutoArray claim ("distinct hunks, they don't clash"); coordinate merge order at ship
-- note: same-file adjacency with parked rect-adapt wt (#372, uncommitted, edges_transformed hunk only) — distinct hunks in mesh_geometry/rectangular.py, clean merge either order; workspace leg (autolens_workspace_test jax_grad + autolens_workspace_developer README row) follows library PR
-- worktree: ~/Code/PyAutoLabs-wt/rectangular-kernel-cdf-mesh
-- repos:
-  - PyAutoArray: feature/rectangular-kernel-cdf-mesh
-  - autolens_workspace_test: feature/rectangular-kernel-cdf-mesh
-  - autolens_workspace_developer: feature/rectangular-kernel-cdf-mesh
-
 ## rect-adapt
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/372
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: library-shipped, awaiting-merge — sign-off answered in-conversation (go --auto); suite 877 re-run at ship; PR MERGEABLE against advanced main; merge stays human per contract
+- status: MERGED 2026-07-10 (human-directed via kernel-cdf session, coordinated order #375→#374; issue #372 closed with verification upthread) — entry ready to retire to complete.md by its owning session
 - pr: https://github.com/PyAutoLabs/PyAutoArray/pull/375
 - autonomy: supervised effective (--auto chain 2026-07-09; bug cap binds over safe header; ship sign-off will park with question per contract)
 - heart-ack: same 6-reason set as the assistant-ref-mechanics entry (in-session 2026-07-09); binds to exactly that set, any new reason parks

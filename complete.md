@@ -1,3 +1,10 @@
+## rectangular-kernel-cdf-mesh
+- completed: 2026-07-10
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373 (closed)
+- prs: PyAutoArray#374 + autolens_workspace_test#161 + autolens_workspace_developer#90 (all merged 2026-07-10, human-directed, order #375→#374→workspace)
+- summary: kernel-density CDF meshes RectangularKernelAdapt{Density,Image} (Enzi RTU) shipped opt-in — strict FD certified on ALL params in every config incl. the two dead corners (imaging os_pix=1 bw=0.1, interferometer sparse production shape); FoM parity beats/2.7e-5/6.3e-4/3.9e-5; FD-step-sweep harness added to jax_grad/util.py (solver branch flips <1e-15 wide, ΔLL 1.6e-3–14, pre-existing); rect-adapt #372/#375 folded in + verified visually (kernel_cdf_alignment.py, node containment + mapper-faithfulness 0.01–0.07 cells); stash@{0} rejected + parked.md retired; 893 library tests green
+- followups: kernel-forward chunking + solver branch-flip investigation (starting 2026-07-10); sampler trials (unblocked, unfiled)
+
 ## stpsf-tier2b
 - completed: 2026-07-10
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/29 (closed)
