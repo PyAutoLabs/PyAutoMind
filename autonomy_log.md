@@ -112,3 +112,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-10 | pyautoscientist-3b-smoke (Heart#51) | supervised | tests n-a (CI-only) / smoke = the 18 matrix jobs green through the reusable / review n-a / heart in-session-acked set | merged-unchanged (10 PRs) |
 | 2026-07-10 | pyautoscientist-3b-clone (Brain#73) | supervised | tests 12 pass / smoke case-study 0-unclassified / review n-a / heart in-session-acked set | merged-unchanged (2 PRs) |
 | 2026-07-10 | pyautoscientist-3b-config 4a (Heart#53) | supervised | tests 244+78 pass / smoke slow_skip+run_all exercised / review n-a / heart in-session-acked set | merged-unchanged (3 PRs) |
+| 2026-07-10 | jwst-frame-products (#27) | supervised | tests 194 pass + F115W end-to-end validated / smoke n-a (no downstream consumer) / review pending / heart pending (gate at ship) | parked (ship sign-off on issue #27) |
