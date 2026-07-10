@@ -1,5 +1,7 @@
 # PyAutoMind
 
+📖 **Full documentation → <https://pyautoscientist.readthedocs.io>** — the whole PyAutoScientist organism, including how to fork and run your own.
+
 The Mind of the PyAuto organism: every piece of work in the ecosystem starts
 here, as a markdown file describing what you want in plain English. An AI
 agent (or a human) picks the file up and turns it into a tracked GitHub
