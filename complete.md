@@ -1,5 +1,11 @@
+## api-baseline-refresh
+- issue: none (human-directed same-session quick task, prompt issued/api_baseline_refresh.md)
+- completed: 2026-07-10
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/60 (MERGED)
+- notes: baseline re-pinned 2026.5.29.4 → released 2026.7.9.1 (clean venv, PYTHONPATH-leak caught); clears wiki-currency version-drift leg + Heart "pinned BEHIND" yellow; release-step path bug already fixed on Build main c09f293
+
 ## assistant-benchmarks
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/57 (open — ready to close)
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/57 (closed)
 - completed: 2026-07-10
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/58 (MERGED) + https://github.com/PyAutoLabs/PyAutoBrain/pull/79 (MERGED, clone partition)
 - notes: benchmarks/ package live (4 frozen cards, harness, protocol, clone boundary); hard-card wording simplified pre-publication per author; ship+merge human-directed in-conversation with in-session Heart-YELLOW ack; follow-up = research/autolens_assistant/benchmark_calibration_runs.md (launching same session)

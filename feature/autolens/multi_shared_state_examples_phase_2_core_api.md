@@ -1,22 +1,30 @@
 # Multi-dataset shared-state — Phase 2: core library API
 
+Autonomy: safe
+(feature, difficulty medium — mirrors the shipped PyAutoArray#344 / PyAutoLens#566
+consumer pattern; sized at issue by the launching session, --auto granted by the
+user 2026-07-10 with the H-removal amendment.)
+
 Phase 2 of 4 of `feature/autolens/multi_shared_state_examples.md`. Phase 1
 design is **locked** (PyAutoLens#599, design-note comment, decisions D1–D6) —
 implement it, do not re-open it.
 
 ## Scope (locked by Phase 1 — see #599 D1/D5/D6)
 
-- **PyAutoArray:** new fields on `aa.AbstractPreloads` (dataset-type-agnostic,
+- **PyAutoArray:** new field on `aa.AbstractPreloads` (dataset-type-agnostic,
   per D5): `source_plane_mesh_grid` (traced mesh centres + triangulation via
-  the existing mesh-geometry objects) and `regularization_matrix` (mesh-
-  geometry-only `H`). New `PreloadsImaging` sibling whose docstring records the
-  invariance contract: mesh/`H` are shareable across exposures under one lens
-  model; the mapper, curvature matrix and blurred mapping matrix are NOT
+  the existing mesh-geometry objects). **NO `regularization_matrix` preload**
+  (user amendment 2026-07-10: regularization may be data-dependent, e.g.
+  adaptive regularization — each factor builds its own `H`).
+  New `PreloadsImaging` sibling whose docstring records the
+  invariance contract: the mesh geometry is shareable across exposures under
+  one lens model; the mapper, curvature matrix, blurred mapping matrix and
+  regularization matrix are NOT
   (unlike the datacube, whose channels share one grid — its whole-mapper +
   `F` preload stays untouched). JAX pytree registration.
 - **PyAutoLens:** `AnalysisImaging.shared_preloads` flag + `shared_state_from`
   (lead factor, per D6): apply the lead's `aa.DatasetModel` offset → trace the
-  lead image-mesh once → return `PreloadsImaging(source_plane_mesh_grid, H)`.
+  lead image-mesh once → return `PreloadsImaging(source_plane_mesh_grid=...)`.
   `shared=` threaded through `log_likelihood_function` → `fit_from` →
   `FitImaging` → `TracerToInversion` (mirror PR#566's threading). NEW reuse
   path in `TracerToInversion`: when `preloads.source_plane_mesh_grid` is set,

@@ -24,3 +24,5 @@ edits, not just a re-pin. Consider whether the nightly-release cadence needs
 this refresh automated post-release (PyAutoBuild already regenerates the
 baseline before wiki-currency at release time — investigate why the pin is
 still behind despite that ordering).
+
+<!-- COMPLETED 2026-07-10 same-day, human-directed ("do this if quick"): re-pin shipped as autolens_assistant PR#60 (MERGED). Root cause of staleness: release-step script-path bug, already fixed on PyAutoBuild main c09f293; nightly re-pin now a no-op. No wiki content invalidated (drift additive; symbol audit green on released stack). -->
