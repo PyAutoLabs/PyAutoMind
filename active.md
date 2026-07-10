@@ -147,11 +147,11 @@
 
 ## slack-release-notes
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/141
-- status: awaiting-input (--auto parked at ship gate 2026-07-10 — Heart YELLOW, no reason set acked at launch)
+- status: library-shipped, awaiting-merge (--auto reached PR-open 2026-07-10; Heart YELLOW acked by human at go-ahead)
 - autonomy: safe (--auto, launched 2026-07-10; feature cap, small difficulty)
-- question: https://github.com/PyAutoLabs/PyAutoBuild/issues/141#issuecomment-4938367089
-- gate: tests PASS 112+23 · smoke n/a (build repo) · review CLEAN · Heart YELLOW (5 organism-scope reasons, none touch branch)
-- branch pushed: feature/slack-release-notes @ 29c357b (NO PR — resume = ack YELLOW set -> open PR, end at PR-open; merge human)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/142 (pending-release)
+- gate: tests PASS 112+23 · smoke n/a (build repo) · review CLEAN · Heart YELLOW-acked-5-set (organism-scope, none touch branch)
+- branch: feature/slack-release-notes @ 29c357b — merge is human
 - worktree: /home/jammy/Code/PyAutoLabs-wt/slack-release-notes
 - repos:
   - PyAutoBuild: feature/slack-release-notes
