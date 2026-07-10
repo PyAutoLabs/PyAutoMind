@@ -26,17 +26,6 @@
 - repos:
   - PyAutoReduce: feature/per-frame-psf
 
-## nightly-loud-failure
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/67
-- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/69
-- session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
-- status: library-shipped, awaiting-merge — PR Brain#69 open (pending-release); tests 12/12; three failure paths live-validated via --no-dispatch; Heart YELLOW acked in-session at ship 2026-07-10
-- autonomy: default present-and-wait (no --auto); ship sign-off + Heart-YELLOW ack will be asked in-session
-- note: anchor manually reset to 2026-07-09T06:05:39Z pending fix; secrets now set on PyAutoBrain; tonight's nightly expected to stop loudly at Heart YELLOW
-- worktree: ~/Code/PyAutoLabs-wt/nightly-loud-failure
-- repos:
-  - PyAutoBrain: feature/nightly-loud-failure
-
 ## priors-messages-fixes
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1344
 - session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
