@@ -1,5 +1,16 @@
 # Active Tasks
 
+## jwst-frame-products
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/27
+- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
+- status: library-dev — implementing the 7 feasibility deltas (docs/design/jwst.md #24); key divergence: JWST masking = dq & DO_NOT_USE (ramps remove CRs; JUMP_DET pixels are good), vs HST any-nonzero
+- autonomy: supervised effective (--auto launched 2026-07-10; plan on issue); ship sign-off parks per contract
+- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
+- note: validation = COSMOS-Web ring F115W from warm cal cache (image3 in_memory=False, jwst 1.14.0 pin); slacs1430 note about PyAutoReduce claim now points here
+- worktree: ~/Code/PyAutoLabs-wt/jwst-frame-products
+- repos:
+  - PyAutoReduce: feature/jwst-frame-products
+
 ## preopt-breakdown-dashboard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
 - status: workspace-dev — laptop-CPU breakdown campaign IN FLIGHT (8 cells sequential: imaging hst dense+sparse, interferometer+datacube alma_high); Q1 platform-matrix batched on #59
