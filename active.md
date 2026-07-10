@@ -11,18 +11,6 @@
 - repos:
   - PyAutoFit: feature/priors-messages-fixes
 
-## frame-registration
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/19
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — implementation complete + 176 tests pass (uncommitted in worktree per contract); parked at ship sign-off + fixed-vs-free recommendation
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/19 (sign-off comment)
-- autonomy: supervised effective (--auto chain 2026-07-09/10); recommendation (fixed-vs-free shifts) + ship sign-off park as one batched question
-- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
-- note: PSF follow-up queued as feature/pyautoreduce/per_frame_psf.md (user: "Then do the PSF work"); slacs1430 phase-4 ship also wants PyAutoReduce — this task ships small and releases fast; disjoint files (package/frames.py+docs vs scripts/+prototypes/)
-- worktree: ~/Code/PyAutoLabs-wt/frame-registration
-- repos:
-  - PyAutoReduce: feature/frame-registration
-
 ## rectangular-kernel-cdf-mesh
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/374
