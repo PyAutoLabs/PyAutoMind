@@ -23,23 +23,6 @@
 - repos:
   - autolens_assistant: feature/benchmark-calibration
 
-## solver-branch-flips
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/377
-- status: findings-posted (issue #377 comment 2026-07-10) — flips are JIT-ONLY (eager clean; XLA-fusion ulp crossing a discrete threshold); solver EXONERATED (persists unconstrained, tol-invariant); interior bilinear crossings continuous; CONCRETE DEFECT: linear rank-CDF forward is discontinuous at the data bbox edge (U jumps 1/(N+1) at the max point, measured 1.25e-3 weight redistribution at 1e-13 crossing); kernel-config amplifier still graph-fusion-localized. Recommendations on issue: linear-CDF clamp fix (own gated task, FoM-impact check), kernel-side in-graph instrumentation (follow-up), step-sweep already shipped
-- autonomy: supervised effective (research; human-directed follow-up 2026-07-10 "do these two"); small clearly-safe fix may ship behind gates, else file follow-up
-- worktree: none (read-only on main, keck-ao pattern; probes in scratch)
-- repos:
-
-## kernel-forward-chunking
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/376
-- status: shipped, awaiting-merge — PR#378 (library) + workspace_developer#91 (README, merge after) at PR-open; witnesses ALL GREEN: 894 tests, block-invariance test, both jax_grad scripts byte-identical, OOM scale 60GB→1.06GB peak; Heart YELLOW same-6-set acked in-session at ship; CPU ~10min/eval at scale = arithmetic (GPU is production target)
-- autonomy: safe effective (refactor cap; human-directed follow-up 2026-07-10 "do these two"; plan on issue #376)
-- claim-override: rect-adapt's PyAutoArray claim is vestigial (PR#375 MERGED today, entry awaiting its session's retirement) — proceeding under the same human coordination
-- note: follow-up 2 (research/autoarray/solver_branch_flips.md → issued next) runs read-only on main, no claim
-- worktree: ~/Code/PyAutoLabs-wt/kernel-forward-chunking
-- repos:
-  - PyAutoArray: feature/kernel-forward-chunking
-
 ## markdown-example-renderings
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134
 - status: library-dev — build generate_markdown.py (execute curated scripts → nbconvert md + PNGs) in PyAutoBuild, then autolens pilot (root start_here + imaging five + guides trio); phase 2 (other dataset types/workspaces/HowTo) files as a new prompt at ship

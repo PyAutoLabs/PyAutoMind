@@ -1,3 +1,15 @@
+## kernel-forward-chunking
+- completed: 2026-07-10
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/376 (closed)
+- prs: PyAutoArray#378 + autolens_workspace_developer#91 (merged 2026-07-10, human-directed)
+- summary: kernel-CDF forward chunked into fixed 512-query blocks (lax.map jax / block loop np) — float-identical (block-invariance test; 894 suite; both jax_grad scripts byte-identical); 60 GB OOM → 1.06 GB peak at M≈246k × N≈15.4k; CPU ~10 min/eval at scale = erf arithmetic, GPU is production target; README caveat resolved
+
+## solver-branch-flips
+- completed: 2026-07-10 (findings delivered; issue #377 stays OPEN as anchor for remaining legs)
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/377 (open)
+- summary: research deliverable met — flips are JIT-only (eager clean; XLA-fusion ulp × discrete threshold); positive-only solver EXONERATED (persists unconstrained, tol-invariant); interior bilinear crossings continuous; CONFIRMED amplifier: linear rank-CDF forward discontinuous at data bbox edge (U jumps 1/(N+1) at the max point, measured)
+- followups (on #377, unfiled): linear-CDF clamp-convention fix (own gated task, FoM-impact check); kernel-config in-graph localization (jax.debug instrumentation)
+
 ## api-baseline-refresh
 - issue: none (human-directed same-session quick task, prompt issued/api_baseline_refresh.md)
 - completed: 2026-07-10
