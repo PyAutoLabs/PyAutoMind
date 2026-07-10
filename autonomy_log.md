@@ -131,5 +131,5 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-10 | multi-shared-state-scoped-preloads | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked-same-set | merged-unchanged |
 | 2026-07-10 | multi-shared-state-examples-phase-3 | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked-same-set | merged-unchanged |
 | 2026-07-10 | markdown-example-renderings | safe | tests 100 pass (Build; ws n/a) / smoke superseded-by-build (all 9 curated executed real) / review CLEAN (2 findings fixed in-run) / heart YELLOW-acked-7-set | merged-unchanged |
-| 2026-07-10 | afa-wiki-currency-wiring | safe | tests 100/100 / smoke n/a / review CLEAN / heart YELLOW-acked-in-session | PR-open (Build#139) |
-| 2026-07-10 | afa-skill-tranche | supervised | tests 53/53 / smoke n/a / review recipes-executed / heart YELLOW-acked-in-session | PR-open (autofit#9) |
+| 2026-07-10 | afa-wiki-currency-wiring | safe | tests 100/100 / smoke n/a / review CLEAN / heart YELLOW-acked-in-session | merged-unchanged (Build#139) |
+| 2026-07-10 | afa-skill-tranche | supervised | tests 53/53 / smoke n/a / review recipes-executed / heart YELLOW-acked-in-session | merged-unchanged (autofit#9) |

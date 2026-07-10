@@ -1,3 +1,9 @@
+## afa-wiki-currency-wiring + afa-skill-tranche
+- issues: PyAutoBuild#138 + autofit_assistant#8 (both closed)
+- completed: 2026-07-10
+- prs: PyAutoBuild#139 + autofit_assistant#7 (artifact rename) + autofit_assistant#9 — all MERGED same day, merged-unchanged
+- summary: both autofit_assistant follow-ups shipped in one --auto session (one in-session Heart-YELLOW ack covering both launches). Wiring: release.yml regenerates the assistant's API baseline from the released wheels (+tags) and runs the five-leg wiki-currency check with a drift-issue job — closes the version-staleness loop permanently (with the --write-baseline dev-stack guard, PR#5, as the local half); found+fixed the upload-artifact@v4 name collision (both assistants' checks in one release run → autofit artifact renamed wiki-drift-report-autofit). Tranche: af_chain_searches / af_custom_analysis / af_simulate_dataset / af_plot_fit / af_debug_fit_failure — roster complete at 19 skills; recipes-must-execute caught af.ex.plot_profile_1d requiring pathlib.Path (str TypeErrors on / join), now documented.
+
 ## markdown-example-renderings
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134 (closed)
 - completed: 2026-07-10
