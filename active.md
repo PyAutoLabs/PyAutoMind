@@ -2,16 +2,10 @@
 
 ## human-led-tone-sweep
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/81
-- status: shipped, awaiting-merge — six PRs at PR-open 2026-07-10: Brain#82 (ORGANISM.md+README+docs), Mind#55, Heart#57, Build#136, Memory#19, Conf#122 (pending-release label); merge stays human
-- claim-note: PyAutoBuild overlap with markdown-example-renderings is file-disjoint (this task touches README.md only; that worktree touches autobuild/ + docs/internals.md) — proceeding under human approval 2026-07-10
-- note: PyAutoMemory's dirty reading-queue.md is the user's own edit — untouched
-- worktree: none (in-place: six organ repos on docs/human-led-tone-sweep)
+- status: shipped, awaiting-merge — Brain#82 (ORGANISM.md definition + PyAutoScientist docs) + Conf#122 (Nerves sentence; pending-release label) at PR-open 2026-07-10; scope trimmed per maintainer review (human-led voice only on agentic-AI pitch surfaces; organ READMEs state abstraction) — Mind#55/Heart#57/Build#136/Memory#19 withdrawn no-op, branches deleted; merge stays human
+- worktree: none (in-place: PyAutoBrain + PyAutoConf on docs/human-led-tone-sweep)
 - repos:
   - PyAutoBrain: docs/human-led-tone-sweep
-  - PyAutoMind: docs/human-led-tone-sweep
-  - PyAutoHeart: docs/human-led-tone-sweep
-  - PyAutoBuild: docs/human-led-tone-sweep
-  - PyAutoMemory: docs/human-led-tone-sweep
   - PyAutoConf: docs/human-led-tone-sweep
 
 ## benchmark-calibration
