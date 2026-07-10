@@ -10,18 +10,6 @@
   - autolens_assistant: feature/assistant-benchmarks
   - PyAutoBrain: feature/assistant-benchmarks
 
-## keck-frame-products
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/33
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — implementation + B1938 validation complete (202 tests; 39/39 frames, target inversion 0.8px band, outlier pass ~0.4%/frame, 39/39 epoch-matched PSF stamps); uncommitted; parked at ship sign-off
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/33 (sign-off comment)
-- autonomy: supervised effective (--auto chain 2026-07-10; user go-ahead on #31 sequence); parks at ship sign-off
-- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
-- note: plate-scale caveat rides products (#13 owns the fix); B1938 work dir has all 39 prepared frames -> cheap real validation
-- worktree: ~/Code/PyAutoLabs-wt/keck-frame-products
-- repos:
-  - PyAutoReduce: feature/keck-frame-products
-
 ## solver-branch-flips
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/377
 - status: findings-posted (issue #377 comment 2026-07-10) — flips are JIT-ONLY (eager clean; XLA-fusion ulp crossing a discrete threshold); solver EXONERATED (persists unconstrained, tol-invariant); interior bilinear crossings continuous; CONCRETE DEFECT: linear rank-CDF forward is discontinuous at the data bbox edge (U jumps 1/(N+1) at the max point, measured 1.25e-3 weight redistribution at 1e-13 crossing); kernel-config amplifier still graph-fusion-localized. Recommendations on issue: linear-CDF clamp fix (own gated task, FoM-impact check), kernel-side in-graph instrumentation (follow-up), step-sweep already shipped
