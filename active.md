@@ -1,5 +1,15 @@
 # Active Tasks
 
+## psf-convolution-docstring
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/257
+- status: workspace-dev — normalize __PSF Convolution__ section across 41 simulator.py (3 full-section reference files + 38 input-only) in autolens_workspace + autogalaxy_workspace
+- autonomy: supervised (user said "go, all in one" — both workspaces this session)
+- note: Tier A = imaging/simulator.py (both) + autolens group/simulator.py (full __PSF Convolution__ header+Contents+prose); Tier B = convolve_over_sample_size=1 on from_gaussian; 10 autogalaxy CRLF files edited CRLF-safe; interferometer/point-multiple/weak-base out of scope
+- worktree: ~/Code/PyAutoLabs-wt/psf-convolution-docstring
+- repos:
+  - autolens_workspace: feature/psf-convolution-docstring
+  - autogalaxy_workspace: feature/psf-convolution-docstring
+
 ## rect-adapt
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/372
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
