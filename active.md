@@ -1,5 +1,15 @@
 # Active Tasks
 
+## kernel-forward-chunking
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/376
+- status: library-dev — chunk kernel-CDF forward (lax.map blocks jax / block loop np; block ~O(100MB) peak at production scale); invariant = float-identical numerics; witnesses = test_autoarray + both jax_grad scripts unchanged + OOM-scale probe (M≈246k, N≈15.4k)
+- autonomy: safe effective (refactor cap; human-directed follow-up 2026-07-10 "do these two"; plan on issue #376)
+- claim-override: rect-adapt's PyAutoArray claim is vestigial (PR#375 MERGED today, entry awaiting its session's retirement) — proceeding under the same human coordination
+- note: follow-up 2 (research/autoarray/solver_branch_flips.md → issued next) runs read-only on main, no claim
+- worktree: ~/Code/PyAutoLabs-wt/kernel-forward-chunking
+- repos:
+  - PyAutoArray: feature/kernel-forward-chunking
+
 ## opus-wrapup (executed on Fable)
 - issues: PyAutoMind#51 (prompt_sync, MERGED+closed) · PyAutoMind#53 (spawn family CI, MERGED+closed; family smoke green live) · clone v1 = next leg
 - status: library-dev — leg 3/3: clone v1 lightweight-seed (Build primitive clone_seed + _clone.py --apply --mode + Heart newborn checklist + first birth autofit_assistant PRIVATE)
