@@ -22,6 +22,9 @@ Usage:
   * PyAutoBuild/pre_build.sh               — run_workspace repos exist
   * admin_jammy/software/ensure_workspace_labels.sh — owner/name pairs match
   * the `origin` remote of every local checkout — manifest matches reality
+  * the tenant firewall — no instance fact (satellite repo name, GitHub
+    owner, workspace path) in Brain/Heart/Build *.py / *.sh outside the
+    declared config surfaces (FIREWALL_ALLOWLIST below)
 
 Exit code 0 = no drift; 1 = drift found (each mismatch printed).
 """
@@ -171,6 +174,147 @@ def check_labels(root, repos):
     return problems
 
 
+# --------------------------------------------------------------------------
+# Tenant firewall
+# --------------------------------------------------------------------------
+#
+# The framework organs (Brain, Heart, Build) must stay adoptable as a
+# config-diff fork: an adopter replaces only the declared config surfaces
+# and pulls upstream cleanly. This check keeps instance facts — satellite
+# repo names, GitHub owners, workspace paths — from leaking into organ code
+# outside those surfaces. Skills prose (*.md) and AGENTS.md are out of scope
+# by design (production prompts, never genericised).
+
+FIREWALL_ORGANS = ("PyAutoBrain", "PyAutoHeart", "PyAutoBuild")
+
+# The declared config surfaces, frozen as a per-file token baseline (seeded
+# 2026-07-10 from the live mains; the §1 inventory of the PyAutoScientist
+# assessment names the load-bearing ones). Semantics: a NEW instance fact in
+# a listed file, or ANY instance fact in an unlisted file, is drift. Phase-3
+# config extraction shrinks this list; never grow it casually — a new entry
+# means a new file an adopting fork must rewrite.
+FIREWALL_ALLOWLIST = {
+    "PyAutoBrain/agents/_common.sh": {"PyAutoLabs"},
+    "PyAutoBrain/agents/conductors/bug/_bug.py": {"PyAutoArray"},
+    "PyAutoBrain/agents/conductors/bug/bug.sh": {"PyAutoLabs"},
+    "PyAutoBrain/agents/conductors/health/health.sh": {"PyAutoConf"},
+    "PyAutoBrain/agents/conductors/intake/_intake.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace"},
+    "PyAutoBrain/agents/conductors/profiling/_profiling.py": {"PyAutoLabs", "autolens_profiling"},
+    "PyAutoBrain/agents/conductors/profiling/profiling.sh": {"autolens_profiling"},
+    "PyAutoBrain/agents/conductors/refactor/_refactor.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
+    "PyAutoBrain/agents/conductors/release/activity_gate.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoBrain/agents/conductors/release/nightly.sh": {"PyAutoLabs", "PyAutoLens"},
+    "PyAutoBrain/agents/conductors/release/rehearse.sh": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
+    "PyAutoBrain/agents/conductors/release/validate.sh": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
+    "PyAutoBrain/agents/faculties/memory/_memory.py": {"autolens_assistant"},
+    "PyAutoBrain/agents/faculties/memory/memory.sh": {"autolens_assistant"},
+    "PyAutoBrain/agents/faculties/review/_review.py": {"PyAutoLabs"},
+    "PyAutoBrain/agents/faculties/review/review.sh": {"PyAutoLabs"},
+    "PyAutoBrain/agents/faculties/samplers/_samplers.py": {"PyAutoFit", "autofit_workspace_developer", "autofit_workspace_test"},
+    "PyAutoBrain/agents/faculties/samplers/samplers.sh": {"PyAutoFit", "autofit_workspace_developer", "autofit_workspace_test"},
+    "PyAutoBrain/agents/faculties/sizing/_sizing.py": {"autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_assistant", "autolens_profiling", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoBrain/bin/check_skill_line_counts.sh": {"admin_jammy", "autolens_profiling"},
+    "PyAutoBrain/bin/install.sh": {"PyAutoFit", "PyAutoLabs", "admin_jammy", "autolens_profiling"},
+    "PyAutoBrain/tests/test_activity_gate.py": {"HowToFit", "HowToLens", "PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoLens", "autolens_workspace"},
+    "PyAutoBuild/autobuild/aggregate_results.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoBuild/autobuild/build_util.py": {"PyAutoConf"},
+    "PyAutoBuild/autobuild/bump_colab_urls.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoBuild/autobuild/create_analysis_issue.py": {"PyAutoLabs"},
+    "PyAutoBuild/autobuild/generate_autofit.py": {"autofit_workspace"},
+    "PyAutoBuild/autobuild/generate_release_notes.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
+    "PyAutoBuild/autobuild/navigator.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
+    "PyAutoBuild/autobuild/repro_command.py": {"PyAutoLabs", "autogalaxy_workspace_test"},
+    "PyAutoBuild/autobuild/run_all.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoLabs", "autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_workspace", "autolens_workspace_test", "euclid_strong_lens_modeling_pipeline"},
+    "PyAutoBuild/autobuild/slow_skip_check.py": {"autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoBuild/autobuild/tag_and_merge.sh": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
+    "PyAutoBuild/pre_build.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "admin_jammy", "autofit_workspace", "autofit_workspace_developer", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_assistant", "autolens_workspace", "autolens_workspace_developer", "autolens_workspace_test", "euclid_strong_lens_modeling_pipeline"},
+    "PyAutoBuild/tests/test_bump_colab_urls.py": {"Jammy2211", "PyAutoFit", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoBuild/tests/test_release_notes.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
+    "PyAutoBuild/tests/test_run_all_history.py": {"HowToLens", "autogalaxy_workspace_test", "euclid_strong_lens_modeling_pipeline"},
+    "PyAutoBuild/tests/test_workspace_config_precedence.py": {"autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoHeart/heart/_color.sh": {"PyAutoFit"},
+    "PyAutoHeart/heart/_common.sh": {"PyAutoLabs"},
+    "PyAutoHeart/heart/checks/ci_status.py": {"autolens_workspace"},
+    "PyAutoHeart/heart/checks/manifest_drift.py": {"PyAutoLabs", "admin_jammy"},
+    "PyAutoHeart/heart/checks/profiling_drift.py": {"PyAutoLabs", "autolens_profiling", "autolens_workspace_test"},
+    "PyAutoHeart/heart/checks/script_timing.py": {"PyAutoLabs"},
+    "PyAutoHeart/heart/checks/test_run.py": {"PyAutoLabs"},
+    "PyAutoHeart/heart/checks/url_check.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "Jammy2211", "PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoHeart/heart/checks/url_check_live.py": {"Jammy2211", "PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "admin_jammy", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoHeart/heart/checks/url_sweep.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace", "euclid_strong_lens_modeling_pipeline"},
+    "PyAutoHeart/heart/checks/verify_install.sh": {"PyAutoConf", "PyAutoLabs", "PyAutoLens", "autolens_workspace"},
+    "PyAutoHeart/heart/checks/version_skew.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_assistant", "autolens_workspace", "euclid_strong_lens_modeling_pipeline"},
+    "PyAutoHeart/heart/checks/worktree_drift.sh": {"PyAutoLabs"},
+    "PyAutoHeart/heart/dashboard.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_profiling", "pyautolabs.github.io"},
+    "PyAutoHeart/heart/fix.py": {"PyAutoFit", "PyAutoLabs"},
+    "PyAutoHeart/heart/readiness.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_profiling", "autolens_workspace_test"},
+    "PyAutoHeart/heart/shell/heart_prompt.sh": {"PyAutoLabs"},
+    "PyAutoHeart/heart/state.py": {"PyAutoFit"},
+    "PyAutoHeart/heart/tick.sh": {"autolens_profiling"},
+    "PyAutoHeart/heart/validate.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoHeart/scripts/health_audit.sh": {"PyAutoLabs"},
+    "PyAutoHeart/scripts/health_release.sh": {"PyAutoLabs"},
+    "PyAutoHeart/scripts/health_sync.sh": {"PyAutoLabs", "admin_jammy"},
+    "PyAutoHeart/tests/test_ci_status.py": {"PyAutoFit", "PyAutoLens", "autolens_workspace"},
+    "PyAutoHeart/tests/test_dashboard.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace"},
+    "PyAutoHeart/tests/test_manifest_drift.py": {"PyAutoConf", "PyAutoFit", "PyAutoLabs"},
+    "PyAutoHeart/tests/test_noise.py": {"HowToFit", "autolens_workspace_test"},
+    "PyAutoHeart/tests/test_readiness.py": {"HowToLens", "PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autogalaxy_workspace", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoHeart/tests/test_state.py": {"PyAutoArray", "PyAutoFit"},
+    "PyAutoHeart/tests/test_test_run.py": {"autofit_workspace", "autolens_workspace"},
+    "PyAutoHeart/tests/test_url_check.py": {"HowToFit", "HowToGalaxy", "HowToLens", "Jammy2211", "PyAutoFit", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoHeart/tests/test_validate.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoHeart/tests/test_verify_install_script.py": {"Jammy2211", "PyAutoLabs", "autolens_workspace"},
+    "PyAutoHeart/tests/test_version_skew.py": {"HowToFit", "PyAutoFit", "PyAutoLens", "autofit_workspace", "autolens_assistant", "autolens_workspace", "autolens_workspace_test"},
+}
+
+
+def firewall_tokens(repos):
+    """Instance facts to hunt for: every non-organ repo name, every GitHub
+    owner, and the local workspace home. Organ names are framework identity
+    (a fork keeps them), so they are not tokens."""
+    tokens = {name for name, r in repos.items() if r["category"] != "organ"}
+    tokens |= {owner_of(r) for r in repos.values()}
+    tokens.add("/home/jammy")
+    return sorted(tokens, key=len, reverse=True)
+
+
+def check_tenant_firewall(root, repos):
+    pattern = re.compile(
+        "|".join(
+            r"(?<![A-Za-z0-9_])" + re.escape(t) + r"(?![A-Za-z0-9_])"
+            for t in firewall_tokens(repos)
+        )
+    )
+    problems = []
+    for organ in FIREWALL_ORGANS:
+        base = root / organ
+        if not base.is_dir():
+            continue  # not checked out in this environment
+        for path in sorted(base.rglob("*")):
+            if path.suffix not in (".py", ".sh") or not path.is_file():
+                continue
+            rel = path.relative_to(root).as_posix()
+            if "__pycache__" in rel:
+                continue
+            hits = {}
+            for lineno, line in enumerate(
+                path.read_text(errors="replace").splitlines(), start=1
+            ):
+                for m in pattern.finditer(line):
+                    hits.setdefault(m.group(0), lineno)
+            new = {t: n for t, n in hits.items() if t not in FIREWALL_ALLOWLIST.get(rel, ())}
+            if new:
+                facts = ", ".join(
+                    f"'{tok}' (line {lineno})" for tok, lineno in sorted(new.items())
+                )
+                listed = "allowlisted file" if rel in FIREWALL_ALLOWLIST else "unlisted file"
+                problems.append(
+                    f"{rel}: new instance fact(s) in {listed} — {facts}"
+                )
+    return problems
+
+
 def normalize_remote(url):
     url = url.strip().removesuffix(".git")
     m = re.match(r"git@github\.com:(.+)", url)
@@ -231,6 +375,7 @@ def main():
         "PyAutoBuild/pre_build.sh": check_pre_build(root, repos),
         "ensure_workspace_labels.sh": check_labels(root, repos),
         "local checkout origins": check_origins(root, repos),
+        "tenant firewall (organ code)": check_tenant_firewall(root, repos),
     }
     drift = False
     for label, problems in checks.items():
