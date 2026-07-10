@@ -1,3 +1,8 @@
+## pyautoscientist-phase3a
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/71 (closed)
+- completed: 2026-07-10
+- summary: Phase 3a (--auto supervised, launched "go --auto") — spawn_spec.md partition rules (3b implements mechanically); template family seeded, validated, template-flagged and PUBLIC (PyAutoProject + autoproject_workspace + autoproject_workspace_test; 1D Gaussian norm=25 SNR~20; pytest 3/3, start_here 30.11/24.49/4.77 vs 30/25/5, fit_quick pass; packaged priors via conf.instance.register + priors/model.yaml confirmed); Nerves role promoted in repos.yaml (rename deferred, package name never); 3b series drafted (spawn+RTD-walkthrough folded in, smoke-reusable, clone-seed, config-extraction) — issue one-at-a-time, Opus-executable. Template repos stay OUT of the live body map (products, not parts).
+
 ## jwst-frame-feasibility
 - completed: 2026-07-10
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/24 (closed)

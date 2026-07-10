@@ -9,16 +9,6 @@
 - worktree: none (analysis on PyAutoReduce main; branch feature/pj011646-wfc3-parity only at ship)
 - repos:
 
-## pyautoscientist-phase3a
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/71
-- status: awaiting-input — all deliverables complete 2026-07-10 (spawn_spec.md; template family seeded+validated PRIVATE: PyAutoProject/autoproject_workspace/autoproject_workspace_test, template-flagged; 3b series drafted; Nerves role live); parked on batched questions
-- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/71#issuecomment-4933806663 (flip repos public? RTD template-family walkthrough now or with 3b-1?)
-- autonomy: supervised effective (--auto 2026-07-10; plan on issue; checkpoint-and-continue honoured)
-- heart-ack: the 6-reason YELLOW set acked twice in-session 2026-07-10; no ship gate ran (new repos + Mind docs only, no organ PRs)
-- note: validation = pytest 3/3, start_here end-to-end (30.11/24.49/4.77 vs 30/25/5), fit_quick smoke pass; SNR fix norm=1→25 during validation; template repos stay OUT of live body map (products, not parts)
-- worktree: none
-- repos:
-
 ## rectangular-kernel-cdf-mesh
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/374
