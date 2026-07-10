@@ -2,7 +2,7 @@
 
 ## human-led-tone-sweep
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/81
-- status: docs-dev — tone-only sweep of organ READMEs + Brain docs/ to the human-led natural-language framing (org front page, .github PR #2, is the reference voice); one PR per repo touched, merge stays human
+- status: shipped, awaiting-merge — six PRs at PR-open 2026-07-10: Brain#82 (ORGANISM.md+README+docs), Mind#55, Heart#57, Build#136, Memory#19, Conf#122 (pending-release label); merge stays human
 - claim-note: PyAutoBuild overlap with markdown-example-renderings is file-disjoint (this task touches README.md only; that worktree touches autobuild/ + docs/internals.md) — proceeding under human approval 2026-07-10
 - note: PyAutoMemory's dirty reading-queue.md is the user's own edit — untouched
 - worktree: none (in-place: six organ repos on docs/human-led-tone-sweep)
