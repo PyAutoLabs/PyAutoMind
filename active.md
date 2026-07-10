@@ -1,5 +1,16 @@
 # Active Tasks
 
+## codex-organ-skill-wrappers
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/85
+- status: library-dev
+- autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved rollout plan); no Heart YELLOW acknowledgement given
+- depends-on: codex-brain-skill-wrappers / PyAutoBrain#84
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-organ-skill-wrappers
+- repos:
+  - PyAutoMind: feature/codex-organ-skill-wrappers
+  - PyAutoHeart: feature/codex-organ-skill-wrappers
+  - PyAutoBuild: feature/codex-organ-skill-wrappers
+
 ## codex-brain-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/84
 - status: library-dev
