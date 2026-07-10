@@ -26,13 +26,15 @@
 ## rectangular-kernel-cdf-mesh
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/374
-- status: library-shipped, workspace-pending — kernel-CDF meshes RectangularKernelAdapt{Density,Image} on PR#374 (pending-release; 892 tests green; function-level JAX sanity eager==JIT 1e-13, AD==FD ~5e-10; Heart YELLOW 6-reason set acked in-session at ship); stash@{0} preamble DONE (rejected, parked.md retired, decision on issue); NEXT = workspace leg: jax_grad certification (strict FD ALL params, imaging os_pix=1+4 + interferometer sparse + eager-vs-JIT + FoM parity few e-4) + developer README rows — certification gates PR#374 merge
+- status: workspace-dev — library leg DONE on PR#374 (pending-release; 892 tests green; function-level JAX sanity eager==JIT 1e-13, AD==FD ~5e-10; Heart YELLOW 6-reason set acked in-session at ship); stash@{0} preamble DONE (rejected, parked.md retired, decision on issue); NOW = jax_grad certification (strict FD ALL params, imaging os_pix=1+4 + interferometer sparse + eager-vs-JIT + FoM parity few e-4) + developer README rows — certification gates PR#374 merge
 - autonomy: supervised (prompt header; no --auto — present-and-wait at ship gates)
 - claim-override: human-directed 2026-07-10 — proceeds alongside rect-adapt's PyAutoArray claim ("distinct hunks, they don't clash"); coordinate merge order at ship
 - note: same-file adjacency with parked rect-adapt wt (#372, uncommitted, edges_transformed hunk only) — distinct hunks in mesh_geometry/rectangular.py, clean merge either order; workspace leg (autolens_workspace_test jax_grad + autolens_workspace_developer README row) follows library PR
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-kernel-cdf-mesh
 - repos:
   - PyAutoArray: feature/rectangular-kernel-cdf-mesh
+  - autolens_workspace_test: feature/rectangular-kernel-cdf-mesh
+  - autolens_workspace_developer: feature/rectangular-kernel-cdf-mesh
 
 ## psf-convolution-docstring
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/257
