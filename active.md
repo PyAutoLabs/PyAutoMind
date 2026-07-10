@@ -56,18 +56,6 @@
 - repos:
   - PyAutoArray: feature/rect-adapt
 
-## docs-theming-hub
-- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/1
-- session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
-- status: shipped, awaiting-merge — hub LIVE at pyautolabs.github.io (Pages, main); theming PRs open: Fit#1343 + Galaxy#496 + Lens#598 (pending-release; suites 1424/962/373; review CLEAN; Heart YELLOW = same set as tonight's ack, treated launch-acked, disclosed on PRs); morning checklist on pyautolabs.github.io#1
-- autonomy: supervised effective (--auto chain from 2026-07-09 launch; human directed "do everything else you can now then stop for the night" — PRs end at PR-open, batched ack question for morning)
-- note: zero-cost (pyautolabs.github.io default domain; RETROFIT.md documents paid-domain flip); shared pyauto.css accents Fit #e0700e / Galaxy #0d9488 / Lens #7c4dff; Fit .gitignore docs/_static must be lifted
-- worktree: ~/Code/PyAutoLabs-wt/docs-theming-hub
-- repos:
-  - PyAutoFit: feature/docs-theming-hub
-  - PyAutoGalaxy: feature/docs-theming-hub
-  - PyAutoLens: feature/docs-theming-hub
-
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
 - session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
