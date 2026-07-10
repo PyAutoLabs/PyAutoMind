@@ -293,6 +293,60 @@ is documented at <https://pyautoscientist.readthedocs.io>.
 
 # --------------------------------------------------------------------------
 
+FAMILY_SMOKE_CALLER = """name: Smoke Tests
+
+# Thin caller for the reusable smoke-test workflow (owned by your Heart
+# fork). The chain is just your own library: its dependencies (autoconf,
+# autofit) install from PyPI via pip in smoke_install.sh.
+
+on: [push, pull_request]
+
+jobs:
+  smoke:
+    uses: {owner}/PyAutoHeart/.github/workflows/smoke-tests.yml@main
+    with:
+      chain: "PyAutoProject"
+    secrets: inherit
+"""
+
+FAMILY_SMOKE_INSTALL = """#!/usr/bin/env bash
+# Workspace-owned install epilogue for the reusable Smoke Tests workflow.
+# The template library's dependencies (autoconf, autofit) come from PyPI.
+set -e
+
+pip install ./PyAutoProject
+"""
+
+FAMILY_RUN_SMOKE = '''#!/usr/bin/env python3
+"""Minimal smoke runner: execute every script listed in smoke_tests.txt
+(repo-root-relative, one per line, # comments allowed); fail on the first
+nonzero exit. The reusable Smoke Tests workflow invokes this."""
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+TIMEOUT = int(os.environ.get("SMOKE_TIMEOUT_SECS", "600"))
+
+env = dict(os.environ, MPLBACKEND="Agg")
+scripts = [
+    line.strip()
+    for line in (ROOT / "smoke_tests.txt").read_text().splitlines()
+    if line.strip() and not line.strip().startswith("#")
+]
+for script in scripts:
+    print(f"== smoke: {script}", flush=True)
+    result = subprocess.run(
+        [sys.executable, script], cwd=ROOT, env=env, timeout=TIMEOUT
+    )
+    if result.returncode != 0:
+        sys.exit(f"smoke FAILED: {script} (exit {result.returncode})")
+print(f"smoke OK: {len(scripts)} script(s)")
+'''
+
+
 def tracked_files(repo):
     out = subprocess.run(
         ["git", "-C", str(repo), "ls-files"],
@@ -469,6 +523,28 @@ def stamp_family(root, family_dir):
         (rdir / "LICENSE").write_text(license_text)
         (rdir / "CONTRIBUTING.md").write_text(CONTRIBUTING_FAMILY.format(repo=repo))
         stamped.append(repo)
+    for repo, smoke_seed in (
+        ("autoproject_workspace", "scripts/start_here.py"),
+        ("autoproject_workspace_test", "scripts/fit_quick.py"),
+    ):
+        rdir = family_dir / repo
+        if not rdir.is_dir():
+            continue
+        wf = rdir / ".github" / "workflows"
+        sc = rdir / ".github" / "scripts"
+        wf.mkdir(parents=True, exist_ok=True)
+        sc.mkdir(parents=True, exist_ok=True)
+        (wf / "smoke_tests.yml").write_text(
+            FAMILY_SMOKE_CALLER.format(owner="PyAutoLabs")
+        )
+        (sc / "smoke_install.sh").write_text(FAMILY_SMOKE_INSTALL)
+        (sc / "smoke_install.sh").chmod(0o755)
+        (sc / "run_smoke.py").write_text(FAMILY_RUN_SMOKE)
+        (sc / "run_smoke.py").chmod(0o755)
+        smoke_txt = rdir / "smoke_tests.txt"
+        if not smoke_txt.exists():
+            smoke_txt.write_text(smoke_seed + "\n")
+
     ws = family_dir / "autoproject_workspace"
     if ws.is_dir():
         (ws / "config").mkdir(exist_ok=True)
