@@ -154,7 +154,8 @@
 ## autofit-assistant-birth
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/1
 - session: (this CLI session, 2026-07-10)
-- status: workspace-dev — Phase 0 skeleton hand-authored direct to main (empty-repo birth; PR impossible for first push); phases 1-4 (workspace pairing / stats wiki / domain adaptation+demos / benchmarks+publish) via feature PRs, stacked if a prior phase is unmerged
+- status: workspace-dev — Phase 0 SHIPPED to main (3667f84); Phase 1 BUILT (d388ce1 local, 50/50 tests, audit/citations/idioms clean) PARKED awaiting-input at ship sign-off; Phase 2 (stats wiki) continuing on stacked branch
+- question: https://github.com/PyAutoLabs/autofit_assistant/issues/1#issuecomment-4936403760 (2 scope calls: benchmark harness->Phase 4; 5 skills deferred to 1b/3)
 - autonomy: supervised effective (--auto launched 2026-07-10; header supervised = feature too-large cap; NO heart-ack given — any Heart YELLOW at ship parks)
 - launch-gates: answered in-session 2026-07-10 — repo PUBLIC at birth (dedicated repo-creation question); Phase 0 HAND-AUTHORED (clone-v1 plan as file-inventory checklist only); demos = 1D Gaussian + SNe cosmology distance-modulus fit
 - note: Feature-Agent research re-home OVERRULED at launch (scoping done at intake; design in prompt); absorbs research/autofit_assistant/autofit_assistant_planning.md (retire at ship); PyAutoMemory never referenced in public output (Phase 2 pages are generalised rewrites)

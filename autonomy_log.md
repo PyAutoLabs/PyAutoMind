@@ -124,3 +124,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-10 | kernel-forward-chunking (PyAutoArray#376) | safe | tests 894 + block-invariance + both jax_grad byte-identical + OOM-scale probe 1.06GB / smoke n-a (jax_grad = surface, re-run) / review CLEAN / heart YELLOW acked in-session | merged-unchanged (#378 + #91 merged 2026-07-10 human-directed; #376 closed) |
 | 2026-07-10 | pj011646-wfc3-parity (PyAutoReduce#25) | safe | tests 202 pass / smoke n-a (scripts-only) / review CLEAN / heart YELLOW unacked -> parked | parked (ship sign-off question on #25; pixel-parity PASS verdicts posted; fits queued for quiet machine) |
 | 2026-07-10 | multi-shared-state-core-api | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked | pr-open |
+| 2026-07-10 | autofit-assistant-birth (phase 1) | supervised | tests 50/50 / smoke n/a (no downstream surface) / review parked-to-human / heart n/a-at-park | parked |
