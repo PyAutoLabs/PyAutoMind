@@ -1,15 +1,5 @@
 # Active Tasks
 
-## pyautoscientist-3b-config
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/53
-- status: library-dev — 4a slice: Heart (version_skew WORKSPACE_LIBRARY + readiness/dashboard DEFAULT_LIBRARIES → config/repos.yaml, strict no-fallback) + Build (run_all WORKSPACES + slow_skip defaults → autobuild/config/workspaces.yaml) + Mind allowlist SHRINK; Brain tables = 4b for Opus (12-test suite, deliberate)
-- autonomy: supervised effective (--auto chain 2026-07-10); heart-ack: the in-session 6-reason set
-- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-3b-config
-- repos:
-  - PyAutoHeart: feature/pyautoscientist-3b-config
-  - PyAutoBuild: feature/pyautoscientist-3b-config
-  - PyAutoMind: feature/pyautoscientist-3b-config
-
 ## jwst-frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/27
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
