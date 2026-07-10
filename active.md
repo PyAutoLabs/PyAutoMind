@@ -12,8 +12,9 @@
 ## markdown-example-renderings
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134
 - status: library-dev — build generate_markdown.py (execute curated scripts → nbconvert md + PNGs) in PyAutoBuild, then autolens pilot (root start_here + imaging five + guides trio); phase 2 (other dataset types/workspaces/HowTo) files as a new prompt at ship
-- autonomy: safe effective (--auto launched 2026-07-10; docs ≤ medium after phasing; plan on issue; NO heart-ack given — any Heart YELLOW at ship parks)
-- note: execution never TEST_MODE; modeling images via completed-run resume cache (first build pays one real sampling run); images committed — verify .gitignore doesn't swallow markdown/ outputs
+- autonomy: safe effective (--auto launched 2026-07-10; docs ≤ medium after phasing; plan on issue)
+- heart-ack: in-session 2026-07-10 — exact 7-reason set: workspace validation not passing (3 failed 2026-07-09T09-48-30Z); 58 stale parked scripts; autolens_assistant pinned BEHIND installed; manifest drift tenant firewall 1 mismatch; PyAutoMind open PR 10d old; install verification not run; no release validation for current source. Binds to exactly this set; any new reason parks.
+- note: execution never TEST_MODE; modeling images via completed-run resume cache (first build pays one real sampling run; resume proven 122s vs 1h55m); images committed — verify .gitignore doesn't swallow markdown/ outputs
 - worktree: ~/Code/PyAutoLabs-wt/markdown-example-renderings
 - repos:
   - PyAutoBuild: feature/markdown-example-renderings
@@ -127,15 +128,3 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
-
-## autofit-assistant-birth
-- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/1
-- session: (this CLI session, 2026-07-10)
-- status: complete-pending-merge — ALL 4 PHASES DONE: Phase 0 on main; Phases 1-3 = PR#2; Phase 4 (benchmarks+hpc+llms.txt+wiki-currency CI) = PR#3 stacked on #2 (retarget after #2 merges); newborn checklist legs 1-3 green, leg 4 (chat-surface smoke) human post-merge; follow-ups to file: PyAutoBuild release wiring, deferred skill tranche (chain/custom_analysis/simulate/plot_fit/debug) (d388ce1 tooling+9 skills 50/50 tests; afa0ffa 16-page wiki provenance-stamped; 6e1426c domain-adaptation skills + demos validated: Gaussian recovers truth, SNe Om=0.344 H0=73.1 vs Brout22); ALL parked behind one ship sign-off; Phase 4 (benchmarks/hpc/llms.txt/CI) deliberately queued until sign-off (cards bind to reviewable README/demos)
-- pr: https://github.com/PyAutoLabs/autofit_assistant/pull/2 (phases 1-3, awaiting human merge)
-- autonomy: supervised effective (--auto launched 2026-07-10; header supervised = feature too-large cap; NO heart-ack given — any Heart YELLOW at ship parks)
-- launch-gates: answered in-session 2026-07-10 — repo PUBLIC at birth (dedicated repo-creation question); Phase 0 HAND-AUTHORED (clone-v1 plan as file-inventory checklist only); demos = 1D Gaussian + SNe cosmology distance-modulus fit
-- note: Feature-Agent research re-home OVERRULED at launch (scoping done at intake; design in prompt); absorbs research/autofit_assistant/autofit_assistant_planning.md (retire at ship); PyAutoMemory never referenced in public output (Phase 2 pages are generalised rewrites)
-- worktree: none (in-place: ~/Code/PyAutoLabs/autofit_assistant, new clone)
-- repos:
-  - autofit_assistant: main (phase 0), then feature/afa-phase-<n>

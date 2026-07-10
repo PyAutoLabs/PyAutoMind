@@ -1,3 +1,9 @@
+## autofit-assistant-birth
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/1 (closed)
+- completed: 2026-07-10
+- prs: autofit_assistant#2 (phases 1-3) + #3 (phase 4) — both MERGED same day; birth commit 3667f84 direct to main (empty-repo)
+- summary: autofit_assistant born PUBLIC and fully built in one --auto supervised session (launch gates: public at birth, hand-authored, demos = gaussian + SNe cosmology). 14 skills (af_wrap_likelihood + af_adapt_to_domain are the differentiators), 16-page provenance-stamped stats wiki, autoassistant tooling port (52/52 tests), benchmarks (3 cards, parity-enforced), hpc/, llms.txt, wiki-currency CI — whose first PR run CORRECTLY caught the baseline pinning local source (2026.7.6.649) vs live release (2026.7.9.1); honest re-pin 62c34d2 in a clean venv (ambient PYTHONPATH had aliased local source). Demos validated with real fits: gaussian recovers truth; Pantheon+ flat-LCDM gives Om=0.344 H0=73.1 (Brout22-consistent, diagonal-errors caveat documented). Newborn checklist legs 1-3 green; leg 4 = autofit_assistant#4 checklist (human). Follow-ups filed: feature/pyautobuild/autofit_assistant_wiki_currency_wiring.md, feature/autofit_assistant/deferred_skill_tranche.md. Research anchor retired.
+
 ## human-led-tone-sweep
 - completed: 2026-07-10
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/81 (closed)
