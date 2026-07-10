@@ -1,5 +1,16 @@
 # Active Tasks
 
+## keck-frame-products
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/33
+- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
+- status: library-dev — A: offsets->provenance; B: frame-vs-stack outlier masks; C: native frames branch (prepared-frames seam, offset registration, native PSF-star stamps)
+- autonomy: supervised effective (--auto chain 2026-07-10; user go-ahead on #31 sequence); parks at ship sign-off
+- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
+- note: plate-scale caveat rides products (#13 owns the fix); B1938 work dir has all 39 prepared frames -> cheap real validation
+- worktree: ~/Code/PyAutoLabs-wt/keck-frame-products
+- repos:
+  - PyAutoReduce: feature/keck-frame-products
+
 ## solver-branch-flips
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/377
 - status: research — root-cause the measure-thin solver branch flips (width <1e-15, ΔLL 1.6e-3–14, PDIP/fnnls tie-break suspect); reproduce at known bad input → instrument solve internals → mechanism tests (nnls_solver_tol, unconstrained control) → recommendation on issue
