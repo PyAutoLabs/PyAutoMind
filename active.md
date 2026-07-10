@@ -1,13 +1,5 @@
 # Active Tasks
 
-## ep-hierarchical-regression
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1352
-- status: library-dev — FIX = seed the inherently-stochastic test (user steer 2026-07-10: "it's inherent randomness, seeding is good if feasible"). test_full_hierachical fits a MARGINAL hierarchical EP model; Laplace refinement (n_refine=3) draws from global np.random (NormalMessage.sample), so fixed point (good vs sigma-collapse) depends on ambient RNG + variable-id ordering left by prior tests. #1351 (Monte-Carlo KL tests in test_ep_statistics_fixes.py) shifted state into a failing region. Fix: np.random.seed(0) right before the fit. Optimiser fix A (controlled refine RNG) BUILT then REVERTED — insufficient alone (id-order also flips; A+C still flips under id-offset sweep). Shipping test-seed only (1-file diff). Validated: graphical suite 216 pass. NEXT: ship_library
-- note: seed makes CI green; test stays inherently stochastic (residual id-order sensitivity documented, not chased per user "keep it feasible"). isolation failure PRE-EXISTING at all commits (CI regression is the in-suite flip). Found during /health check green-light sweep 2026-07-10 (otherwise-green: 2474 lib + 47 smoke). #1352 comments carry full RNG+id-order root-cause evidence
-- worktree: ~/Code/PyAutoLabs-wt/ep-hierarchical-regression
-- repos:
-  - PyAutoFit: feature/ep-hierarchical-regression
-
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
