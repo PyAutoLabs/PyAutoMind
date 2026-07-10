@@ -13,8 +13,9 @@
 
 ## codex-brain-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/84
-- status: library-dev
+- status: awaiting-input — parked at Heart YELLOW acknowledgement (tests 30 pass; smoke n/a; review CLEAN; commit 619457b local, not pushed)
 - autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved two-phase plan on issue); no Heart YELLOW acknowledgement given
+- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/84#issuecomment-4939097480
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-brain-skill-wrappers
 - repos:
   - PyAutoBrain: feature/codex-brain-skill-wrappers
