@@ -1,17 +1,5 @@
 # Active Tasks
 
-## stpsf-tier2b
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/29
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — implementation + validation complete (197 tests; F115W 6/6 frames with PSFs: 3 tier-1 + 3 stpsf-tier2b incl. clamped edge case; cupy import-block pin); uncommitted; parked at ship sign-off
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/29 (sign-off comment)
-- autonomy: supervised effective (--auto chain 2026-07-10; plan on issue); parks at ship sign-off
-- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
-- note: env needs stpsf + reference data install (not in venv yet); validation reruns frames packaging on cached F115W _crf files
-- worktree: ~/Code/PyAutoLabs-wt/stpsf-tier2b
-- repos:
-  - PyAutoReduce: feature/stpsf-tier2b
-
 ## markdown-example-renderings
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134
 - status: library-dev — build generate_markdown.py (execute curated scripts → nbconvert md + PNGs) in PyAutoBuild, then autolens pilot (root start_here + imaging five + guides trio); phase 2 (other dataset types/workspaces/HowTo) files as a new prompt at ship
