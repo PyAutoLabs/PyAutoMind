@@ -19,14 +19,17 @@
 # surfaces as a normal error rather than being silently redirected). Only when
 # PROMPT_REPO is unset do we apply the default and the rename fallback below.
 if [ -z "${PROMPT_REPO:-}" ]; then
-  PROMPT_REPO="$HOME/Code/PyAutoLabs/PyAutoMind"
+  # Self-locating default: this script lives at <Mind checkout>/scripts/, so
+  # its parent-of-parent IS the Mind repo — correct in the live workspace and
+  # in any fork, whatever the workspace root is named.
+  PROMPT_REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
   # Backwards compatibility: before the PyAutoPrompt -> PyAutoMind rename the
-  # repo lived at PyAutoLabs/PyAutoPrompt. If the new default path is absent but
-  # the old one is present (a checkout not yet renamed), fall back to it so
+  # repo lived at PyAutoLabs/PyAutoPrompt. If the resolved default is somehow
+  # absent but a sibling PyAutoPrompt checkout exists, fall back to it so
   # sourcing still works.
-  if [ ! -d "$PROMPT_REPO" ] && [ -d "$HOME/Code/PyAutoLabs/PyAutoPrompt" ]; then
-    PROMPT_REPO="$HOME/Code/PyAutoLabs/PyAutoPrompt"
+  if [ ! -d "$PROMPT_REPO" ] && [ -d "$(dirname "$PROMPT_REPO")/PyAutoPrompt" ]; then
+    PROMPT_REPO="$(dirname "$PROMPT_REPO")/PyAutoPrompt"
   fi
 fi
 
