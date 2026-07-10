@@ -1,5 +1,16 @@
 # Active Tasks
 
+## pyautoscientist-4b
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/75
+- status: library-dev — Brain identity sets ← repos.yaml runtime (strict); vocabulary → PyAutoBrain/config/policy.yaml (aliases, MEMORY_WIKIS, TARGET_SIGNALS, wiki/test-dir maps, nightly TAG_REPO); Heart url_check_live fixups → config; seam test per move (Brain suite thin); Mind allowlist shrink
+- autonomy: supervised effective (--auto "do all of phase 4" 2026-07-10); heart-ack: the in-session 6-reason set
+- note: behaviour-identical spot-check = pyauto-brain feature/intake dry-runs before/after; pattern = 4a (Heart#53)
+- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-4b
+- repos:
+  - PyAutoBrain: feature/pyautoscientist-4b
+  - PyAutoHeart: feature/pyautoscientist-4b
+  - PyAutoMind: feature/pyautoscientist-4b
+
 ## markdown-example-renderings
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134
 - status: library-dev — build generate_markdown.py (execute curated scripts → nbconvert md + PNGs) in PyAutoBuild, then autolens pilot (root start_here + imaging five + guides trio); phase 2 (other dataset types/workspaces/HowTo) files as a new prompt at ship
