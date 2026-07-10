@@ -1,5 +1,15 @@
 # Active Tasks
 
+## assistant-benchmarks
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/57
+- status: workspace-dev — build benchmarks/ package (4 frozen prompt cards + rubrics), autoassistant/benchmark.py harness (new-run/score/report), protocol docs, README sync (includes user's pending SLACS header edit), clone-boundary classification (maintainer.md + _clone.py patterns — unclassified files hard-fail births)
+- autonomy: supervised effective (--auto launched 2026-07-10; feature cap at too-large; plan on issue #57; NO heart-ack given — any Heart YELLOW at ship parks)
+- note: in-place feature branches both repos (assistant-ref-mechanics precedent); PyAutoBrain edit ships as its own small PR; follow-up calibration-campaign prompt files at ship, not before
+- worktree: none (in-place: autolens_assistant + PyAutoBrain on feature/assistant-benchmarks)
+- repos:
+  - autolens_assistant: feature/assistant-benchmarks
+  - PyAutoBrain: feature/assistant-benchmarks
+
 ## keck-frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/33
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
