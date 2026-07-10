@@ -21,3 +21,7 @@
 - [from: research jax-autodiff-gradients-audit (#87) · source_plane probe] Fix `Grid2DIrregular.grid_2d_via_deflection_grid_from` xp propagation so the point-source likelihood's forward `jax.jit` works (gradients already work; the jit gap blocks fast batched sampling).
 - [from: research jax-autodiff-gradients-audit (#87) · interferometer probe] Interferometer MGE FD correctness test: probe is 9/9 finite but no autodiff-vs-finite-difference validation exists for the visibility-space likelihood — add `jax_grad/interferometer_mge.py` on the pattern of the imaging suite.
 - [from: research jax-autodiff-gradients-audit (#87) · validated-likelihood set] NUTS/HMC sampler trial on the FD-validated likelihoods (weak lensing, point-source source-plane, imaging with RectangularUniform or parametric sources) via the sampler pipeline — gradients are now certified correct end-to-end, removing the main risk that stalled gradient-based inference.
+- [from: PyAutoBuild/to_do_list, evacuated 2026-07-10 by pyautoscientist-phase1] Test different numpy, scipy, scikit-learn, threadpoolctl, joblib versions.
+- [from: PyAutoBuild/to_do_list] Tests using full dynesty runs with inversion, BrightnessImageNN pix, with parallel processing.
+- [from: PyAutoBuild/to_do_list] Workspace tagging.
+- [from: PyAutoBuild/to_do_list] Remove annoying report.log and root.log once and for all.
