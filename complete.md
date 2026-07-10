@@ -1,3 +1,9 @@
+## markdown-example-renderings
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134 (closed)
+- completed: 2026-07-10
+- prs: PyAutoBuild#137 (generator) + autolens_workspace#263 (9 executed pages) — both MERGED same day (700042de / 49277d04), human-authorized in-session
+- summary: executed-markdown example pages, GitHub-browsable with real output images. generate_markdown.py (curated config/build/markdown_examples.yaml; never TEST_MODE; features/ refused; tracked-file restore; local-path redaction; stale *_files cleanup; 22 tests) + autolens pilot: root start_here, imaging five, guides trio (83 PNGs ~19M, README links). Both Nautilus fits ran real (2h05m + 1h55m, once); resume cache proven 122s and copied to canonical output/ before worktree cleanup. Review found+fixed path leakage + orphan PNGs pre-ship. Calibration: merged-unchanged. Phase 2 rollout prompt filed (docs/pyautobuild/markdown_example_renderings_rollout.md) — run on Opus per user; cluster runtime + HowTo curated list are human calls.
+
 ## autofit-assistant-birth
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/1 (closed)
 - completed: 2026-07-10

@@ -9,19 +9,6 @@
 - repos:
   - autolens_assistant: feature/benchmark-calibration
 
-## markdown-example-renderings
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134
-- status: shipped, awaiting-merge — BOTH PRs open behind four-leg gate: PyAutoBuild#137 (generator, 100 tests) + autolens_workspace#263 (9 executed pages, 83 PNGs, README links); merge order #137 first (library-first gate); phase-2 rollout prompt filed docs/pyautobuild/markdown_example_renderings_rollout.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/137
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/263
-- autonomy: safe effective (--auto launched 2026-07-10; docs ≤ medium after phasing; plan on issue); calibration row appended at PR-open
-- heart-ack: in-session 2026-07-10 — exact 7-reason set: workspace validation not passing (3 failed 2026-07-09T09-48-30Z); 58 stale parked scripts; autolens_assistant pinned BEHIND installed; manifest drift tenant firewall 1 mismatch; PyAutoMind open PR 10d old; install verification not run; no release validation for current source. Binds to exactly this set; any new reason parks.
-- note: execution never TEST_MODE; modeling images via completed-run resume cache (first build pays one real sampling run; resume proven 122s vs 1h55m); images committed — verify .gitignore doesn't swallow markdown/ outputs
-- worktree: ~/Code/PyAutoLabs-wt/markdown-example-renderings
-- repos:
-  - PyAutoBuild: feature/markdown-example-renderings
-  - autolens_workspace: feature/markdown-example-renderings
-
 ## preopt-breakdown-dashboard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
 - status: workspace-dev — laptop-CPU baseline FINAL (0.89-1.14x of May = NO library drift; F-matrix 42-48% every mesh cell; note in results/notes/preopt_breakdown_baseline.md); branch pushed 029dcc4; RAL GPU BACK -> all 15 A100 breakdown jobs DISPATCHED 330058-330072 (datacube trio running; HPC libs 2026.7.9.1 vs local 2026.7.6.649, per-JSON versions keep tiers attributable); NEXT = ingest A100 results (<=4h walltime), then dashboard leg (gated on phase-3 baseline tag), then ship sign-off (parks)

@@ -9,10 +9,10 @@ Status: formalised
 
 Roll the executed-markdown rendering system (built in phase 1: PyAutoBuild
 generate_markdown.py + the autolens_workspace pilot, PRs PyAutoBuild#137 +
-autolens_workspace#263, issue PyAutoBuild#134) out to the rest of the
-user-decided curated list. Prerequisite: phase-1 PRs merged. The generator is
+autolens_workspace#263 — BOTH MERGED 2026-07-10, issue PyAutoBuild#134 closed)
+out to the rest of the user-decided curated list. The generator is
 repo-agnostic, so this is config + execution + README links per repo — no new
-tooling expected.
+tooling expected. User direction 2026-07-10: run this phase on Opus.
 
 Scope (from the user's 2026-07-10 decision, minus what phase 1 shipped):
 
