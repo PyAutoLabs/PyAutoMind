@@ -1,5 +1,14 @@
 # Active Tasks
 
+## pj011646-wfc3-parity
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/25
+- session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
+- status: workspace-dev — phase 0 (inspect Aris dataset, resolve coordinates/program)
+- autonomy: safe effective (--auto launched 2026-07-10; plan human-approved in-session pre-launch; no heart-ack given)
+- note: keck-ao/slacs1430 pattern — analysis on PyAutoReduce main, NO worktree claim (jwst-frame-feasibility holds it); ship gated on claim release or human direction; autolens_assistant driver-only (in-place branch belongs to assistant-ref-mechanics — scratch writes only); model-parity fits SERIAL on quiet machine (~5.5GB)
+- worktree: none (analysis on PyAutoReduce main; branch feature/pj011646-wfc3-parity only at ship)
+- repos:
+
 ## jwst-frame-feasibility
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/24
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
