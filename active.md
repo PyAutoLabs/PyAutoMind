@@ -15,6 +15,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
 - status: library-dev — kernel-density CDF transform (Enzi RTU) as opt-in mesh variant RectangularKernelAdapt{Density,Image}; success = strict FD on ALL params in jax_grad scripts (imaging os_pix=1+4, interferometer sparse) + eager-vs-JIT + FoM parity; sampler work OUT of scope; stash@{0} inspection preamble (retire parked.md rectangular-spline-cdf)
 - autonomy: supervised (prompt header; no --auto — present-and-wait at ship gates)
+- claim-override: human-directed 2026-07-10 — proceeds alongside rect-adapt's PyAutoArray claim ("distinct hunks, they don't clash"); coordinate merge order at ship
 - note: same-file adjacency with parked rect-adapt wt (#372, uncommitted, edges_transformed hunk only) — distinct hunks in mesh_geometry/rectangular.py, clean merge either order; workspace leg (autolens_workspace_test jax_grad + autolens_workspace_developer README row) follows library PR
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-kernel-cdf-mesh
 - repos:
