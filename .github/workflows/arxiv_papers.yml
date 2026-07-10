@@ -1,0 +1,173 @@
+name: pyauto-arxiv-papers
+
+# A daily digest of new strong-lensing papers from arXiv, summarised by Claude
+# and posted to Slack #papers. Sibling of morning_status.yml (the commit
+# digest) — same three-step shape: fetch data → Claude summarises into
+# slack_payload.json → POST to a Slack incoming webhook. The only new secret is
+# the #papers webhook; the Claude step reuses CLAUDE_CODE_OAUTH_TOKEN (the
+# Claude subscription OAuth token already set for the commit digest — no
+# Anthropic API key, no metered billing).
+#
+# Scope (user, 2026-07-10): STRONG LENSING ONLY — astro-ph.CO / astro-ph.GA
+# papers whose abstract/title names strong lensing (tightest signal). Format:
+# CURATED — 1–3 AI-chosen highlights with short summaries, then a compact list.
+# Cadence: weekday mornings, skip silently on empty (no quiet-day post).
+#
+# Timing: arXiv's daily astro-ph announcement goes live ~00:00–01:00 UTC. This
+# runs nominally 06:00 UTC; GitHub cron jitters 0–3 h *later* under load, so
+# actual delivery is UK ~07:00–10:00 — firmly after the overnight announcement,
+# so it reads as "this morning's papers" for UK scientists (the user's
+# requirement). Mon–Fri only: arXiv does not announce new astro-ph at weekends,
+# and Monday's run uses a 72 h look-back to sweep the weekend's submissions.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  # claude-code-action@v1 needs OIDC to mint a short-lived GitHub token at
+  # startup (setupGitHubToken → getOidcToken); without it the action exits
+  # before reaching the prompt. Same requirement as morning_status.yml.
+  id-token: write
+
+jobs:
+  arxiv-papers:
+    runs-on: ubuntu-latest
+    steps:
+      # claude-code-action runs `git config` in the workspace at startup and
+      # dies with "fatal: not in a git directory" if nothing is checked out —
+      # so the checkout is load-bearing even though the digest only reads the
+      # arXiv API. (Also gives the fetch step its committed helper script.)
+      - uses: actions/checkout@v4
+
+      - name: Fetch new strong-lensing papers from arXiv
+        id: fetch
+        run: |
+          set -euo pipefail
+          # Monday sweeps Fri-evening → Sunday submissions (72 h); other
+          # weekdays take the previous day (24 h). Windows anchored to wall-clock
+          # `now`, so consecutive runs cover disjoint day-bands (gapless; cron
+          # jitter yields at worst a rare boundary duplicate, never a gap).
+          dow=$(date -u +%u)   # 1=Mon … 7=Sun
+          if [ "$dow" = "1" ]; then
+            export LOOKBACK_HOURS=72
+          else
+            export LOOKBACK_HOURS=24
+          fi
+          export UK_DATE="$(TZ=Europe/London date '+%Y-%m-%d (%a)')"
+
+          python3 .github/scripts/arxiv_fetch.py
+
+          count=$(python3 -c "import json;print(json.load(open('arxiv_papers.json'))['count'])")
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "Fetched $count strong-lensing paper(s) in the last ${LOOKBACK_HOURS}h."
+
+      - name: Summarise papers with Claude
+        # Skip the Claude call entirely on empty days — no post, no usage.
+        if: ${{ steps.fetch.outputs.count != '0' }}
+        uses: anthropics/claude-code-action@v1
+        with:
+          # Claude subscription OAuth token — NOT an API key. Reused from the
+          # commit digest; a once-daily summary of a handful of abstracts is
+          # negligible against the subscription's usage allowance.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Default-hidden output masks real failures (an expired token reads as
+          # "slack_payload.json missing" in the POST step) — surface everything.
+          show_full_output: true
+          # Default permission mode denies all writes, so Claude could summarise
+          # but not save slack_payload.json. Allow only Write; the runner's
+          # GITHUB_TOKEN is contents:read, so nothing here can leave the runner
+          # except via the POST step.
+          claude_args: '--allowedTools "Write"'
+          prompt: |
+            Read `arxiv_papers.json` in this directory. It has shape:
+
+              { "uk_date": "YYYY-MM-DD (Mon)",
+                "since": "<ISO-UTC>",
+                "until": "<ISO-UTC>",
+                "count": <int>,
+                "papers": [ { "title": "<title>",
+                              "authors": ["<name>", ...],
+                              "abstract": "<full abstract>",
+                              "url": "https://arxiv.org/abs/XXXX.XXXXXvN",
+                              "primary_category": "astro-ph.CO",
+                              "published": "<ISO-UTC submission date>" }, ... ] }
+
+            Each paper is a new strong-gravitational-lensing paper announced on
+            arXiv in the last day (astro-ph.CO / astro-ph.GA).
+
+            Audience: strong-lensing researchers (working astronomers) reading
+            #papers over their morning coffee. Tone: concise, scientific,
+            plain — say what the paper is *about* and why it might matter, not
+            marketing.
+
+            First, DROP anything that is clearly not genuinely about strong
+            gravitational lensing despite matching the keyword search (e.g. a
+            weak-lensing or microlensing paper that merely mentions the phrase
+            "strong lensing" in passing, or a paper where lensing is incidental).
+            Use the abstract to judge. If that leaves nothing, follow the
+            empty-day rule below.
+
+            Then produce a Slack post:
+
+              - HIGHLIGHTS: pick the 1–3 most notable surviving papers. For each,
+                write a 2–3 sentence plain-language summary (what they did + the
+                headline result / why it's interesting). Lead each with the
+                title in bold and a link.
+              - THE REST: a compact bulleted list of the remaining surviving
+                papers, one line each: `• <title> — <first author> et al. (<link>)`.
+                (If ≤3 papers total, everything is a highlight and this list is
+                omitted.)
+
+            Convert to Slack mrkdwn: links are `<url|text>`, bold is `*text*`.
+
+            Write `slack_payload.json` in the repo root with this exact shape:
+
+              {
+                "text": "New strong-lensing papers — <uk_date>",
+                "blocks": [
+                  { "type": "header",
+                    "text": { "type": "plain_text",
+                              "text": "New strong-lensing papers — <uk_date>" } },
+                  { "type": "section",
+                    "text": { "type": "mrkdwn",
+                              "text": "<intro: e.g. '*N* new strong-lensing paper(s) on arXiv today.'>" } },
+                  { "type": "section",
+                    "text": { "type": "mrkdwn",
+                              "text": "*<title>* (<link>)\n<2–3 sentence summary>" } }
+                ]
+              }
+
+            Add one section block per highlight, then (if any) a final section
+            block holding the "*More:*" bulleted list of the rest.
+
+            IF, after dropping off-topic papers, NOTHING genuinely about strong
+            lensing remains: do NOT write slack_payload.json at all (leave it
+            absent). The POST step skips when the file is missing — an empty day
+            makes no post.
+
+            Do not POST anything yourself, do not commit, do not modify any
+            other file.
+
+      - name: POST to Slack
+        if: ${{ steps.fetch.outputs.count != '0' }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_PAPERS_WEBHOOK_URL }}
+        run: |
+          # No payload = a genuinely empty day (fetch found rows, but Claude
+          # judged none genuinely on-topic). Skip silently, do not fail.
+          if [ ! -s slack_payload.json ]; then
+            echo "No slack_payload.json — nothing genuinely on-topic today, skipping post."
+            exit 0
+          fi
+          if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
+            echo "::error::PYAUTO_PAPERS_WEBHOOK_URL not set — create the #papers Slack incoming webhook and add it as a repo secret."
+            exit 1
+          fi
+          curl -sS -X POST \
+               -H "Content-Type: application/json" \
+               --data @slack_payload.json \
+               --fail-with-body \
+               "$SLACK_WEBHOOK_URL"
