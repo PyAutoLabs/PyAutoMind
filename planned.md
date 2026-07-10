@@ -1,13 +1,3 @@
-## preopt-breakdown-dashboard
-- prompt: PyAutoMind/issued/polish_phase_4_breakdown_dashboard.md
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
-- planned: 2026-07-10
-- classification: workspace
-- suggested-branch: feature/preopt-breakdown-dashboard
-- blocked-by: profiling-preopt-campaign (using autolens_profiling; #56 — phase-3 PreOptimizationTimes baseline must also be tagged, not just the claim released)
-- affected-repos:
-  - autolens_profiling
-
 ## mcmc-corner-smoke
 - prompt: bug/autofit_workspace/searches_mcmc_corner_no_dynamic_range.md
 - planned: 2026-07-09

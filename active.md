@@ -1,5 +1,14 @@
 # Active Tasks
 
+## preopt-breakdown-dashboard
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
+- status: workspace-dev — phase 4 of polish (likelihood_breakdown PreOptimizationTimes + README dashboard)
+- autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds over maintenance cap safe; plan on issue; no heart-ack given — any Heart YELLOW at ship parks)
+- claim-override: human-directed 2026-07-10 — proceeds alongside profiling-preopt-campaign's autolens_profiling claim ("i dont see a clash"); phase 4 works likelihood_breakdown/ + README, phase 3 works likelihood_runtime/ — distinct paths; coordinate merge order at ship (README/build tooling may touch both — rebase on campaign branch if needed)
+- note: dashboard deliverable depends on phase-3 PreOptimizationTimes runtime baseline (not yet tagged); breakdown runs (deliverable 1) proceed independently; HPC CPU/A100 legs gated on RAL availability
+- worktree: ~/Code/PyAutoLabs-wt/preopt-breakdown-dashboard
+- repos:
+
 ## pyautoscientist-3b-spawn
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/46
 - status: library-dev — spawn.py against docs/pyautobrain/spawn_spec.md (mechanical; ambiguities batch on #46) + spawn-drift CI + /spawn skill + Mind/Memory templates (create PRIVATE, flip-public batches) + RTD template-family walkthrough (PyAutoBrain adoption guide)
@@ -37,8 +46,8 @@
 ## rect-adapt
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/372
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — implementation complete + full suite 877 pass (uncommitted in worktree per contract); parked at ship sign-off
-- question: https://github.com/PyAutoLabs/PyAutoArray/issues/372#issuecomment-4932908179
+- status: library-shipped, awaiting-merge — sign-off answered in-conversation (go --auto); suite 877 re-run at ship; PR MERGEABLE against advanced main; merge stays human per contract
+- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/375
 - autonomy: supervised effective (--auto chain 2026-07-09; bug cap binds over safe header; ship sign-off will park with question per contract)
 - heart-ack: same 6-reason set as the assistant-ref-mechanics entry (in-session 2026-07-09); binds to exactly that set, any new reason parks
 - note: consumers of edges_transformed = plot/inversion.py pcolormesh + mesh_geometry/rectangular_rotated.py — both inherit the fix; mcmc-corner-smoke (nightly blocker) queued in planned.md on autofit_workspace/PyAutoFit claims
