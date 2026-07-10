@@ -140,7 +140,8 @@
 ## multi-shared-state-core-api
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/379
 - session: (this CLI session, 2026-07-10)
-- status: library-dev
+- status: pr-open (awaiting human merge — PyAutoArray#380 first, then PyAutoLens#600)
+- prs: PyAutoArray#380 + PyAutoLens#600 (both pending-release; gate record on issue #379)
 - worktree: ~/Code/PyAutoLabs-wt/multi-shared-state-core-api
 - repos:
   - PyAutoArray
