@@ -1,3 +1,15 @@
+## pyautoscientist-3b-clone
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/73 (closed)
+- completed: 2026-07-10
+- prs: PyAutoBrain#74 + PyAutoMind#48 (both merged 2026-07-10)
+- summary: clone (Mitosis) agent v0 live per DESIGN.md phasing — analyze mode emits CloneDecision (domain analysis via ast, partition seeded from the reference's Assistant-as-template section with exit-4 seam guard, generation plan, Heart validation legs, mandatory clone-mode question); case study PyAutoFit→autofit_assistant: 40/247/92/0 unclassified (pressure mechanism caught .claude/.gemini mirrors + init-slam on first run); --apply refuses pending v1 (seed births via Build primitive + Heart newborn checklist — files as its own prompt when picked up). Firewall allowlist rider enumerated exactly.
+
+## pyautoscientist-3b-smoke
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/51 (closed)
+- completed: 2026-07-10
+- prs: Heart#52 (reusable) + 9 conversions all merged 2026-07-10: autolens_workspace#259 (parity proof), autofit_workspace#84, autogalaxy_workspace#125, autofit_workspace_test#40, autogalaxy_workspace_test#68, autolens_workspace_test#160 (disjoint claim-override), HowToFit#14, HowToGalaxy#17, HowToLens#23
+- summary: smoke_tests.yml generalised — Heart-owned reusable (chain input + repository_owner checkouts = zero instance facts, adopter forks reuse unmodified) + workspace-owned smoke_install.sh epilogues (exact pip parity incl. NSS git pins, jax<0.7 pins, autoconf force-reinstall quirks); all 18 matrix jobs green through the reusable; ~900 duplicated lines deleted; workflow NAME unchanged so Heart gating untouched. Follow-up: spawn stamps thin callers into the template family (spec-gated, now unblocked).
+
 ## pyautoscientist-3b-spawn
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/46 (closed)
 - completed: 2026-07-10

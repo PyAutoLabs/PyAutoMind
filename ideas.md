@@ -25,3 +25,4 @@
 - [from: PyAutoBuild/to_do_list] Tests using full dynesty runs with inversion, BrightnessImageNN pix, with parallel processing.
 - [from: PyAutoBuild/to_do_list] Workspace tagging.
 - [from: PyAutoBuild/to_do_list] Remove annoying report.log and root.log once and for all.
+- [from: pyautoscientist-3b-smoke, 2026-07-10] Extend spawn --stamp-family to stamp the smoke thin-caller workflow + a starter smoke_install.sh into the template family (spec-gated on the reusable smoke workflow, which is now live).

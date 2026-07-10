@@ -1,34 +1,5 @@
 # Active Tasks
 
-## pyautoscientist-3b-clone
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/73
-- status: library-dev — clone agent v0 (analyze/CloneDecision) implemented + case-study validated (PyAutoFit→autofit_assistant: partition 40/247/92/0 unclassified after .claude-mirror + init-slam pattern classification); Brain suite 12 pass; firewall allowlist rider in Mind
-- autonomy: supervised effective (--auto chain 2026-07-10); heart-ack: the in-session 6-reason set
-- note: v0 = decision only per DESIGN.md phasing; v1 (seed births via Build primitive + Heart newborn checklist) files when v0 ships; unclassified-pressure worked as designed (caught the reference's .claude/.gemini mirrors absent from maintainer.md prose — reference-side note NOT yet filed, rider question)
-- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-3b-clone
-- repos:
-  - PyAutoBrain: feature/pyautoscientist-3b-clone
-  - PyAutoMind: feature/pyautoscientist-3b-clone
-
-## pyautoscientist-3b-smoke
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/51
-- status: library-dev — Heart#52 (reusable) MERGED; autolens_workspace#259 parity run in flight (both matrix jobs executing through the reusable); sweep committed UNPUSHED in 8 repos, push+PR on parity green
-- claim-override: human-approved 2026-07-10 — autolens_workspace_test parallel DISJOINT alongside rectangular-kernel-cdf-mesh (theirs: jax_grad scripts; mine: .github/ only)
-- autonomy: supervised effective (--auto chain 2026-07-10 "do Phase 3 in fable"); heart-ack: the in-session 6-reason set
-- note: disclosed parity delta = PyAutoBuild PYTHONPATH always set (test/HowTo tier ignores it); workflow NAME stays "Smoke Tests" so Heart gating unchanged; spawn stamps thin callers as follow-up once this ships
-- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-3b-smoke
-- repos:
-  - PyAutoHeart: feature/pyautoscientist-3b-smoke
-  - autofit_workspace: feature/pyautoscientist-3b-smoke
-  - autogalaxy_workspace: feature/pyautoscientist-3b-smoke
-  - autolens_workspace: feature/pyautoscientist-3b-smoke
-  - autofit_workspace_test: feature/pyautoscientist-3b-smoke
-  - autogalaxy_workspace_test: feature/pyautoscientist-3b-smoke
-  - autolens_workspace_test: feature/pyautoscientist-3b-smoke
-  - HowToFit: feature/pyautoscientist-3b-smoke
-  - HowToGalaxy: feature/pyautoscientist-3b-smoke
-  - HowToLens: feature/pyautoscientist-3b-smoke
-
 ## jwst-frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/27
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
