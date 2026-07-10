@@ -16,7 +16,7 @@
 ## per-frame-psf
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/21
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — implementation complete, 181 tests pass, real-data validated (3/3 slacs0008 frames: 69/96/70 stars, FWHM 2.0-2.8 native px); uncommitted in worktree; parked at ship sign-off
+- status: awaiting-input — implementation complete incl. user-directed psf_from_frames scope amendment (mosaic PSF = drop-convolved Jacobian-resampled exptime-weighted combination of frame ePSFs; slacs0008: 3.5% FWHM agreement vs 100-star mosaic ePSF, combined sharper as predicted); 187 tests; uncommitted; parked at ship sign-off
 - question: https://github.com/PyAutoLabs/PyAutoReduce/issues/21 (sign-off comment)
 - autonomy: supervised effective (--auto chain 2026-07-09/10; plan on issue); parks at ship sign-off
 - heart-ack: same 6-reason set as prior entries this chain; any new reason parks
