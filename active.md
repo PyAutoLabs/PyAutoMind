@@ -38,7 +38,7 @@
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
 - session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
-- status: shipped, awaiting-merge — close-out 2026-07-10 (human-directed): pixel-parity PASS verdict on #17; scripts PR open; model-parity leg PARKED as #17's open checklist item (fits checkpointed; run serially on a quiet machine, ~5.5GB each; three OOMs against jax_grad workloads)
+- status: MERGED 2026-07-10 (0face12, squash; human-authorized in-session) — branches deleted; #17 stays OPEN for the parked model-parity leg only; entry retires to complete.md once that leg's verdict lands
 - pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/23
 - resume(model-parity leg): `~/venv/PyAuto/bin/python prototypes/slacs1430_parity_fit.py autoreduce` then `... legacy` from PyAutoReduce root; compare fit_summary_*.json; verdict on #17
 - note: acquire-dupe bug prompt RETIRED (fixed on main by #18's is_direct_product; my run disclosed on PR#23 as HAP-family); PJ011646 WFC3 follow-up prompt queued (methodology notes on #17)
