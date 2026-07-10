@@ -146,13 +146,3 @@
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
-## slack-release-notes
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/141
-- status: library-shipped, awaiting-merge (--auto reached PR-open 2026-07-10; Heart YELLOW acked by human at go-ahead)
-- autonomy: safe (--auto, launched 2026-07-10; feature cap, small difficulty)
-- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/142 (pending-release)
-- gate: tests PASS 112+23 · smoke n/a (build repo) · review CLEAN · Heart YELLOW-acked-5-set (organism-scope, none touch branch)
-- branch: feature/slack-release-notes @ 29c357b — merge is human
-- worktree: /home/jammy/Code/PyAutoLabs-wt/slack-release-notes
-- repos:
-  - PyAutoBuild: feature/slack-release-notes
