@@ -23,7 +23,12 @@ name: pyauto-arxiv-papers
 on:
   schedule:
     - cron: "0 6 * * 1-5"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      lookback_hours:
+        description: "Override the look-back window (hours) for a manual test-fire. Blank = the normal weekday logic (24h, 72h on Mondays)."
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -50,11 +55,19 @@ jobs:
           # weekdays take the previous day (24 h). Windows anchored to wall-clock
           # `now`, so consecutive runs cover disjoint day-bands (gapless; cron
           # jitter yields at worst a rare boundary duplicate, never a gap).
-          dow=$(date -u +%u)   # 1=Mon … 7=Sun
-          if [ "$dow" = "1" ]; then
-            export LOOKBACK_HOURS=72
+          # A manual dispatch may override the window (so a test-fire isn't
+          # hostage to today's possibly-empty band); otherwise use the weekday
+          # logic.
+          override="${{ github.event.inputs.lookback_hours }}"
+          if [ -n "$override" ]; then
+            export LOOKBACK_HOURS="$override"
           else
-            export LOOKBACK_HOURS=24
+            dow=$(date -u +%u)   # 1=Mon … 7=Sun
+            if [ "$dow" = "1" ]; then
+              export LOOKBACK_HOURS=72
+            else
+              export LOOKBACK_HOURS=24
+            fi
           fi
           export UK_DATE="$(TZ=Europe/London date '+%Y-%m-%d (%a)')"
 
