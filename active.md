@@ -34,8 +34,9 @@
 
 ## pyautoscientist-phase1
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/65
-- status: library-dev — Phase 1 only (licences MIT [Memory = MIT structure + CC-BY 4.0 content, human-decided], 5 organ README rewrites ~20-40 lines, Build to_do_list evacuation+gitignore, repos_sync check_tenant_firewall); phases 2/3 anchored by issued/pyautoscientist_generalisation.md
+- status: shipped, awaiting-merge — all 5 PRs open 2026-07-10: Brain#66, Mind#44 (firewall+REFERENCE split), Heart#49, Memory#17, Build#131; suites 8/244/78 pass; repos_sync --check green both roots incl. new firewall; Heart YELLOW (6 pre-existing reasons) acked in-session at ship; phases 2/3 anchored by issued/pyautoscientist_generalisation.md
 - autonomy: supervised (no --auto; present-and-wait at every checkpoint; one PR per repo, 5 PRs)
+- note-firewall: allowlist = frozen per-file token baseline over 72 files (broader than assessment §1 headline; disclosed on Mind#44); new fact in listed file or any fact in new file fails --check
 - note: Mind README is agent-load-bearing → schemas relocate verbatim to REFERENCE.md, agent pointers untouched; acceptance = zero diffs to skill bodies/AGENTS.md/hooks/runtime code except additive firewall check + Build gitignore; test_results/ already untracked (assessment claim stale)
 - worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-phase1
 - repos:
