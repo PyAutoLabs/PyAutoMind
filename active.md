@@ -8,6 +8,7 @@
 - note: dashboard deliverable depends on phase-3 PreOptimizationTimes runtime baseline (not yet tagged); breakdown runs (deliverable 1) proceed independently; HPC CPU/A100 legs gated on RAL availability
 - worktree: ~/Code/PyAutoLabs-wt/preopt-breakdown-dashboard
 - repos:
+  - autolens_profiling: feature/preopt-breakdown-dashboard
 
 ## pyautoscientist-3b-spawn
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/46
