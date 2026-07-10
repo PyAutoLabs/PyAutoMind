@@ -3,7 +3,8 @@
 ## rect-adapt
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/372
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: library-dev — bug CONFIRMED via delta-function repro (plot shifts reconstruction ~1.5 mesh px in y); fix = mapper-consistent node-midpoint edges in RectangularMeshGeometry.edges_transformed
+- status: awaiting-input — implementation complete + full suite 877 pass (uncommitted in worktree per contract); parked at ship sign-off
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/372#issuecomment-4932908179
 - autonomy: supervised effective (--auto chain 2026-07-09; bug cap binds over safe header; ship sign-off will park with question per contract)
 - heart-ack: same 6-reason set as the assistant-ref-mechanics entry (in-session 2026-07-09); binds to exactly that set, any new reason parks
 - note: consumers of edges_transformed = plot/inversion.py pcolormesh + mesh_geometry/rectangular_rotated.py — both inherit the fix; mcmc-corner-smoke (nightly blocker) queued in planned.md on autofit_workspace/PyAutoFit claims
