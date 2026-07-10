@@ -5776,3 +5776,16 @@
   - https://github.com/PyAutoLabs/autolens_profiling/pull/60 (merged)
 - repos: PyAutoArray, PyAutoLens, autolens_workspace, autolens_workspace_test, autolens_profiling
 - notes: Docstring'd shared-mesh API sections on the multi feature examples (same_wavelength headline + wavelength_dependence + imaging_and_interferometer + dataset_offsets cross-ref); multi shared_preloads parity script (identical-exposure bit-parity numpy+JAX, g+r shared-mesh vmap==jit; in smoke_tests.txt); runtime measurement 1.14x at hst x 4 exposures (mesh-only, consistency-first framing per #599 D1). REVIEW FIND: cross-dataset-type preloads hazard in merged phase 2 (lead's shared preloads reach every factor; an interferometer mapper/F would silently corrupt an imaging fit) fixed via dataset-scoped consumption (_preloads_scoped: same-type identity, cross-type mesh-only view) + interferometer shared_state_from now populates mesh fields (D5 both directions). TRAP recorded: crashed JAX runs can poison the gitignored lensed_source.fits adapt cache with in-mask NaNs (qhull NaN error) — delete + regenerate. Simulators deliberately untouched (dataset_offsets demos shifts). Same-lambda literal joint stacked inversion remains the un-issued multi_joint_stack_inversion follow-up prompt.
+
+## multi-shared-state-examples (EPIC — phases 1-4 + follow-up)
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/599 (CLOSED — epic anchor/design)
+- completed: 2026-07-10
+- library-pr:
+  - https://github.com/PyAutoLabs/PyAutoArray/pull/380 + /381
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/600 + /601
+- workspace-pr:
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/261 + /262
+  - https://github.com/PyAutoLabs/autolens_workspace_test/pull/162
+  - https://github.com/PyAutoLabs/autolens_profiling/pull/60
+- repos: PyAutoArray, PyAutoLens, autolens_workspace, autolens_workspace_test, autolens_profiling
+- notes: Full epic conceived, designed, built, tested, measured, documented and merged in one day under --auto (three safe runs, all merged-unchanged). Design #599 D1-D6: shared object = source-plane mesh geometry ONLY (user amendment excluded H — adaptive reg is data-dependent; PSFs/offsets exclude F/L/mapper). Same-lambda "one reconstruction" = shared-mesh-per-factor; the literal joint stacked inversion is the un-issued multi_joint_stack_inversion follow-up prompt (feature/autolens/, write when wanted). Phase-4 prompt consumed without its own issue (1-line README diff; epic anchor #599 carried it). Phase-4 prompt file remains in feature/autolens/ — superseded, safe to treat as complete.
