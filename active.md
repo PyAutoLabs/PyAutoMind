@@ -2,7 +2,8 @@
 
 ## pyautoscientist-3b-smoke
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/51
-- status: library-dev — Heart reusable smoke-tests.yml (ceremony) + per-repo smoke_install.sh epilogues (exact pip parity) + thin callers; convert autolens_workspace first (PR run = parity proof), then sweep 7; autolens_workspace_test BATCHED (claimed by rectangular-kernel-cdf-mesh — disjoint override or defer)
+- status: library-dev — Heart#52 (reusable) MERGED; autolens_workspace#259 parity run in flight (both matrix jobs executing through the reusable); sweep committed UNPUSHED in 8 repos, push+PR on parity green
+- claim-override: human-approved 2026-07-10 — autolens_workspace_test parallel DISJOINT alongside rectangular-kernel-cdf-mesh (theirs: jax_grad scripts; mine: .github/ only)
 - autonomy: supervised effective (--auto chain 2026-07-10 "do Phase 3 in fable"); heart-ack: the in-session 6-reason set
 - note: disclosed parity delta = PyAutoBuild PYTHONPATH always set (test/HowTo tier ignores it); workflow NAME stays "Smoke Tests" so Heart gating unchanged; spawn stamps thin callers as follow-up once this ships
 - worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-3b-smoke
@@ -13,6 +14,7 @@
   - autolens_workspace: feature/pyautoscientist-3b-smoke
   - autofit_workspace_test: feature/pyautoscientist-3b-smoke
   - autogalaxy_workspace_test: feature/pyautoscientist-3b-smoke
+  - autolens_workspace_test: feature/pyautoscientist-3b-smoke
   - HowToFit: feature/pyautoscientist-3b-smoke
   - HowToGalaxy: feature/pyautoscientist-3b-smoke
   - HowToLens: feature/pyautoscientist-3b-smoke
