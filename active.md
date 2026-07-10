@@ -1,5 +1,14 @@
 # Active Tasks
 
+## pyautoscientist-phase3a
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/71
+- status: in-progress — spawn spec + template family seed (PyAutoProject/autoproject_workspace/autoproject_workspace_test, created PRIVATE, flip-public parked) + 3b prompt drafts + Nerves role promotion; design = docs/pyautobrain/pyautoscientist_phase3_research.md, four calls human-locked 2026-07-10
+- autonomy: supervised effective (--auto launched 2026-07-10 "go --auto"; feature/large cap; plan on issue; judgment gates park as batched questions on #71)
+- heart-ack: the 6-reason YELLOW set acked twice in-session 2026-07-10 (workspace validation 3-failed / 58 stale parked / assistant pinned behind / Mind PR 10d / install verification / release validation); binds to exactly that set
+- note: Mind work = direct-to-main docs/prompts (registry-adjacent precedent); template repos are NEW (no claims, no live surface); zero organ-code diffs; Fable deadline 2026-07-12 drives judgment-first ordering
+- worktree: none (Mind docs direct; new repos cloned to scratch)
+- repos:
+
 ## prior-width-safety
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1346
 - session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
