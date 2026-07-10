@@ -12,21 +12,6 @@
 - repos:
   - PyAutoFit: feature/prior-width-safety
 
-## pyautoscientist-phase2
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/68
-- status: shipped, awaiting-merge — all 6 PRs open 2026-07-10: Brain#70 (docs source), Heart#50 (docs-only CI mode — MERGE FIRST, Brain#70 Docs check depends on it @main), Mind#45, Memory#18, Build#132, hub#2; sphinx 0 warnings, suites 8/244/78, repos_sync --check green; Heart YELLOW (same 6-reason set as Phase 1 ack) acked in-session; human leg post-merge = import pyautoscientist on readthedocs.org → PyAutoLabs/PyAutoBrain
-- autonomy: supervised (no --auto; present-and-wait at ship sign-off + Heart YELLOW ack)
-- claim-override: human-approved 2026-07-10 — parallel DISJOINT PyAutoBrain claim alongside nightly-loud-failure (#67, nightly driver files); phase 2 touches docs/**, CONTRIBUTING.md, README.md one line, .github/workflows/docs.yml — zero overlap, coordinate merge order at ship
-- note: prose is judgment-tier (RTD pages written in-session, no delegation); acceptance = phase 1-2 acceptance on the issued prompt; Heart docs-build.yml extension is additive CI config (disclosed)
-- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-phase2
-- repos:
-  - PyAutoBrain: feature/pyautoscientist-phase2
-  - PyAutoMind: feature/pyautoscientist-phase2
-  - PyAutoHeart: feature/pyautoscientist-phase2
-  - PyAutoMemory: feature/pyautoscientist-phase2
-  - PyAutoBuild: feature/pyautoscientist-phase2
-  - pyautolabs.github.io: feature/pyautoscientist-phase2
-
 ## per-frame-psf
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/21
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
