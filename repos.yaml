@@ -72,7 +72,7 @@ repos:
   PyAutoConf:
     github: PyAutoLabs/PyAutoConf
     category: library
-    role: "Shared config + shared utilities used across the stack."
+    role: "The Nerves — the configuration/serialization layer connecting workspace conventions to libraries (layered config, version handshake, test_mode); the sixth organ, delivered as the `autoconf` package."
   PyAutoFit:
     github: PyAutoLabs/PyAutoFit
     category: library

@@ -5,6 +5,12 @@
 - summary: per-frame native ePSFs live (psf/frame_epsf.py: sky-subtracted, DQ local-median patch in ESTIMATOR input only — 2.8% flag density kills rejection-on-contact; insufficient-stars = recorded+loud not hard stop) + user-directed psf_from_frames option (psf/frame_combine.py: mosaic PSF = exptime-weighted combination of frame ePSFs, drop-convolved + Jacobian-resampled; loud when no frame contributes). slacs0008: 3/3 frames viable (69/96/70 stars, FWHM 2.0-2.8 native px); combined vs 100-star mosaic ePSF agree 3.5% moment-FWHM, combined sharper as predicted. Sky-subtraction audit confirmed at every layer pre-ship (user check). 187 tests. Ship human-authorized in-conversation ("If so ship it"); Heart YELLOW ⊆ acked set
 - followups: TinyTim/model tier-2 PSF (roadmap); frames->PyAutoLens multi-exposure fitting task still unfiled (deliberate — waits on consumer design); loud registration print retire-deliberately note stands
 
+## prior-width-safety
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1346 (closed)
+- completed: 2026-07-10
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1348 (merged cf0cc4bbb, merged-unchanged incl. disclosed D2 amendment)
+- summary: Phase 2 of #1331 — RelativeWidthModifier abs(mean)+opt-in absolute_floor, default-path width guard (parameter-named PriorException), sigma<0 rejected on both message classes (agree; sigma=0 point-mass idiom preserved on evidence), 11 regression tests; #1331 batch now fully landed bar parked design items 09/11/12/13/14
+
 ## pyautoscientist-phase2
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/68 (closed)
 - completed: 2026-07-10

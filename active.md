@@ -9,19 +9,6 @@
 - worktree: none (Mind docs direct; new repos cloned to scratch)
 - repos:
 
-## prior-width-safety
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1346
-- session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
-- status: library-shipped, awaiting-merge — PR #1348 open (pending-release); suite 1447 pass/14 skip; smoke 2/2 PASS (priors_xp_dispatch + emcee_gaussian_bias_check); D2 ADJUSTED strict->permissive on evidence (sigma=0 is load-bearing point-mass idiom: latent simple_model_for_kwargs, from_mode(cov=0), model_relative pins sigma==0; 20 tests broke under strict; disclosed on #1346) — sigma<0 rejected on both classes (now agree), width guard scoped to default-modifier path
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1348
-- autonomy: supervised (--auto, human instructed live 2026-07-10 post Phase-1 merge)
-- heart-ack: same 6-reason set as priors-messages-fixes (live in-session 2026-07-10); any new reason parks
-- claim-override: human-approved pattern 2026-07-10 (Phase-1 precedent) — parallel DISJOINT PyAutoFit claim alongside ep-graphical-docs (#1334) + ep-diagnostics (#1335), both autofit/graphical; this is width_modifier/prior_model/messages, zero overlap
-- note: only leg of the #1331 batch with real sampling-behaviour impact (prior-passing width in chaining): negative-mean chained params get positive widths (was sign-flipped), mean=0 unconfigured params fail loud with guidance (was silent delta-freeze); bug/priors 09/11/12/13/14 remain parked design work
-- worktree: ~/Code/PyAutoLabs-wt/prior-width-safety
-- repos:
-  - PyAutoFit: feature/prior-width-safety
-
 ## rectangular-kernel-cdf-mesh
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/374
