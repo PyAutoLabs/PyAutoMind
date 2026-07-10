@@ -14,7 +14,8 @@
 - issues: PyAutoMind#51 (prompt_sync, MERGED+closed) · PyAutoMind#53 (spawn family CI, MERGED+closed; family smoke green live) · clone v1 = next leg
 - status: library-dev — leg 3/3: clone v1 lightweight-seed (Build primitive clone_seed + _clone.py --apply --mode + Heart newborn checklist + first birth autofit_assistant PRIVATE)
 - autonomy: supervised effective (--auto chain 2026-07-10 "do the opus tasks to wrap up fully"); heart-ack: the in-session 6-reason set
-- worktree: ~/Code/PyAutoLabs-wt/clone-v1 (created next)
+- claim-override: human-approved 2026-07-10 — parallel DISJOINT PyAutoBuild claim alongside markdown-example-renderings (#134: generate_markdown.py+test+internals doc; mine: new clone_seed.py only); both additive, either merge order clean
+- worktree: ~/Code/PyAutoLabs-wt/clone-v1
 - repos:
   - PyAutoBrain: feature/clone-v1
   - PyAutoBuild: feature/clone-v1
