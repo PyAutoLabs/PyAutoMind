@@ -83,42 +83,12 @@
 - worktree: none (read-only)
 - repos:
 
-## ep-diagnostics
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1335
-- session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21 (took over from 3589268b at ship)
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1349
-- status: library-shipped, awaiting-merge — human-approved 2026-07-10; PR #1349 (pending-release); branch merged w/ current main pre-validation, suite 1457 pass/14 skip
-- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1335#issuecomment-4917484045
-- autonomy: supervised (--auto, launched 2026-07-08, no heart-ack yet)
-- note: parallel to ep-graphical-docs claim on PyAutoFit (PR #1334, docs-only) — disjointness re-verified at sign-off: zero file overlap
-- worktree: /home/jammy/Code/PyAutoLabs-wt/ep-diagnostics
-- repos:
-  - PyAutoFit: feature/ep-diagnostics
-
-## ep-examples-tests
-- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/81
-- session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21 (took over from 3589268b at ship)
-- status: workspace-shipped, awaiting-merge — human-approved 2026-07-10; PRs autofit_workspace#82 + autofit_workspace_test#39 (pending-release); 3 integration scripts re-validated PASS against post-#1345/#1348 main incl. Heart YELLOW ack
-- question: https://github.com/PyAutoLabs/autofit_workspace/issues/81#issuecomment-4917307451
-- autonomy: supervised (--auto, launched 2026-07-08, plan approved in-session, no heart-ack yet)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/ep-examples-tests
-- repos:
-  - autofit_workspace: feature/ep-examples-tests
-  - autofit_workspace_test: feature/ep-examples-tests
-
 ## ep-priors-fable-reassess
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1330
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
 - status: awaiting-input — phase 0 complete; decision hub PyAutoFit#1331 open for maintainer/contributor guidance (fix-batch + 5 decisions)
 - question: https://github.com/PyAutoLabs/PyAutoFit/issues/1331
 - worktree: none (read-only reassessment on PyAutoFit main @ 0f26ff2d8; verdicts land in PyAutoMind bug/priors)
-- repos:
-
-## ep-statistics-audit
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1332
-- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: phase-1-complete — F1–F9 verdict table on #1332; EP wiki page shipped (PyAutoMemory methods_wiki); EP fix batch (F1+F2+F3+F4+F8) pends #1331 guidance; Phase 2 (docs) ready to start
-- worktree: none (read-only audit on PyAutoFit main; findings land in PyAutoMind + issue #1332)
 - repos:
 
 ## profiling-preopt-campaign

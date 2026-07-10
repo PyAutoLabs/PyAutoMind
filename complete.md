@@ -3,6 +3,23 @@
 - completed: 2026-07-10
 - summary: Phase 3a (--auto supervised, launched "go --auto") — spawn_spec.md partition rules (3b implements mechanically); template family seeded, validated, template-flagged and PUBLIC (PyAutoProject + autoproject_workspace + autoproject_workspace_test; 1D Gaussian norm=25 SNR~20; pytest 3/3, start_here 30.11/24.49/4.77 vs 30/25/5, fit_quick pass; packaged priors via conf.instance.register + priors/model.yaml confirmed); Nerves role promoted in repos.yaml (rename deferred, package name never); 3b series drafted (spawn+RTD-walkthrough folded in, smoke-reusable, clone-seed, config-extraction) — issue one-at-a-time, Opus-executable. Template repos stay OUT of the live body map (products, not parts).
 
+## ep-diagnostics
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1335 (closed)
+- completed: 2026-07-10
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1349 (merged 1a06bbc14)
+- summary: EP review Phase 4 — EPDiagnostics collector, live CSV/PNG artifacts, graph_factors.png, mean_field_summary, check_sigma_collapse (F10 guard), F3 fix; suite 1457/14 on merged main; follow-up docs/autofit_workspace/ep_walkthrough_mean_field_summary.md
+
+## ep-examples-tests
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/81 (closed)
+- completed: 2026-07-10
+- workspace-prs: autofit_workspace#82 + autofit_workspace_test#39 (both merged)
+- summary: EP review Phase 3 — step-by-step EP walkthrough (converges 49.96±0.12) + 3 integration scripts (parity/deterministic/exact), re-validated on post-#1345/#1348 main; surfaced F10
+
+## ep-statistics-audit
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1332 (open — findings census stays as reference)
+- completed: 2026-07-10 (audit phase)
+- summary: F1-F10 census + EP wiki page; fixes dispersed: F3/F10->#1349, F5->#1334, F7c->#1345; remainder executes as bug/autofit/ep_statistics_fix_batch.md (F1/F2/F4/F8); F6+F7b+F9 parked with own notes
+
 ## jwst-frame-feasibility
 - completed: 2026-07-10
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/24 (closed)
