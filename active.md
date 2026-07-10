@@ -1,5 +1,16 @@
 # Active Tasks
 
+## per-frame-psf
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/21
+- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
+- status: library-dev — tier-1 per-frame ePSF (full native chip, DQ NaN-screen, unit-aware saturation cap); insufficient-stars = recorded outcome not hard stop (disclosed deviation)
+- autonomy: supervised effective (--auto chain 2026-07-09/10; plan on issue); parks at ship sign-off
+- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
+- note: follows frame-registration (#19, merged); Brain again said research-first, overridden with user ordering + prompt's settled v1 route (frame-products precedent)
+- worktree: ~/Code/PyAutoLabs-wt/per-frame-psf
+- repos:
+  - PyAutoReduce: feature/per-frame-psf
+
 ## nightly-loud-failure
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/67
 - session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
