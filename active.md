@@ -17,15 +17,6 @@
   - HowToGalaxy: feature/pyautoscientist-3b-smoke
   - HowToLens: feature/pyautoscientist-3b-smoke
 
-## science-project-api-gate
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/47
-- status: workspace-dev — scaffold thin .claude/settings.json code-gate (refer-back resolve: $AUTOLENS_ASSISTANT → sibling → sources/) + cross-tool caveat in generated AGENTS.md; default-on fail-open (user decision in-session)
-- autonomy: default present-and-wait at ship (issue body + default-on user-approved in-session 2026-07-10)
-- note: task 2 of the autolens_assistant batch (after #45/#46 merged); queue: per_project_literature (core hybrid) → script_to_notebook → live_visual_update_context → portable_user_defaults (discovery-half). In-place on autolens_assistant main checkout; untracked james.bib present — personal, untouched
-- worktree: none (in-place branch feature/science-project-api-gate)
-- repos:
-  - autolens_assistant: feature/science-project-api-gate
-
 ## jwst-frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/27
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
