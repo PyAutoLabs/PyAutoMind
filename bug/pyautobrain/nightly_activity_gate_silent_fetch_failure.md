@@ -33,6 +33,20 @@ Root cause chain:
    morning digest showed nothing wrong) and "could not persist
    NIGHTLY_LAST_WINDOW_END".
 
+## Second hole (found by the 2026-07-10 08:03 dry-run, WITH a working token)
+
+With secrets set, a `dry_run: true` dispatch still skipped: the anchor variable
+`NIGHTLY_LAST_WINDOW_END` did not exist yet, and the anchor read
+(`anchor="$(gh api .../variables/$ANCHOR_VAR --jq .value 2>/dev/null || true)"`)
+captured the **404 JSON error body on stdout** instead of empty — so the
+`[[ -z "$anchor" ]]` 24h-fallback never fired and the commits fetch ran with
+`since={"message":"Not Found",...}` → all fetches failed → `[]` → 💤 again.
+Worse, the skip path then *persisted* `WINDOW_END` as the new anchor, silently
+shrinking the next window past the missed activity (manually reset to
+2026-07-09T06:05:39Z on 2026-07-10). Fix: validate the anchor against
+`^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$` and fall back to 24h on any
+mismatch; and never advance the anchor on a night whose fetches errored.
+
 ## Fix
 
 - **Human/config leg (not code):** set the two secrets on PyAutoBrain
