@@ -15,7 +15,8 @@
 ## per-frame-psf
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/21
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: library-dev — tier-1 per-frame ePSF (full native chip, DQ NaN-screen, unit-aware saturation cap); insufficient-stars = recorded outcome not hard stop (disclosed deviation)
+- status: awaiting-input — implementation complete, 181 tests pass, real-data validated (3/3 slacs0008 frames: 69/96/70 stars, FWHM 2.0-2.8 native px); uncommitted in worktree; parked at ship sign-off
+- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/21 (sign-off comment)
 - autonomy: supervised effective (--auto chain 2026-07-09/10; plan on issue); parks at ship sign-off
 - heart-ack: same 6-reason set as prior entries this chain; any new reason parks
 - note: follows frame-registration (#19, merged); Brain again said research-first, overridden with user ordering + prompt's settled v1 route (frame-products precedent)
