@@ -2,7 +2,8 @@
 
 ## preopt-breakdown-dashboard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
-- status: workspace-dev — phase 4 of polish (likelihood_breakdown PreOptimizationTimes + README dashboard)
+- status: workspace-dev — laptop-CPU breakdown campaign IN FLIGHT (8 cells sequential: imaging hst dense+sparse, interferometer+datacube alma_high); Q1 platform-matrix batched on #59
+- campaign: driver scratchpad/breakdown_campaign.sh (session a66a757a), logs scratchpad/breakdown_logs/; interruption-safe — each cell's JSON persists to results/breakdown/ on completion; cold-resume = rerun remaining cells' commands from the driver (skip cells whose v-current JSON exists)
 - autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds over maintenance cap safe; plan on issue; no heart-ack given — any Heart YELLOW at ship parks)
 - claim-override: human-directed 2026-07-10 — proceeds alongside profiling-preopt-campaign's autolens_profiling claim ("i dont see a clash"); phase 4 works likelihood_breakdown/ + README, phase 3 works likelihood_runtime/ — distinct paths; coordinate merge order at ship (README/build tooling may touch both — rebase on campaign branch if needed)
 - note: dashboard deliverable depends on phase-3 PreOptimizationTimes runtime baseline (not yet tagged); breakdown runs (deliverable 1) proceed independently; HPC CPU/A100 legs gated on RAL availability
