@@ -9,7 +9,7 @@
 - note: Phase 2 (decisions 5+2 — RelativeWidthModifier abs+floor with strict sigma>0, mean=0 chained regression test) is a SEPARATE follow-up issued as Phase 1 nears shipping — this is the only leg with real sampling-behaviour impact (prior-passing width in search chaining). bug/priors files 06+08 held for Phase 2; 09/11/12/13/14 parked design work per #1331.
 - worktree: ~/Code/PyAutoLabs-wt/priors-messages-fixes
 - repos:
-  - PyAutoFit: bug/priors-messages-fixes
+  - PyAutoFit: feature/priors-messages-fixes
 
 ## frame-registration
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/19
