@@ -1,5 +1,14 @@
 # Active Tasks
 
+## jwst-frame-feasibility
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/23
+- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
+- status: research — delta audit + literature scan; deliverable = docs/design/jwst.md go/no-go note
+- autonomy: supervised effective (--auto chain 2026-07-10); go/no-go recommendation is the checkpoint
+- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
+- worktree: none (analysis on PyAutoReduce main; branch feature/jwst-frame-feasibility only at ship)
+- repos:
+
 ## pyautoscientist-phase3a
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/71
 - status: in-progress — spawn spec + template family seed (PyAutoProject/autoproject_workspace/autoproject_workspace_test, created PRIVATE, flip-public parked) + 3b prompt drafts + Nerves role promotion; design = docs/pyautobrain/pyautoscientist_phase3_research.md, four calls human-locked 2026-07-10
