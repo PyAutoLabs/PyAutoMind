@@ -13,7 +13,8 @@
 ## keck-frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/33
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: library-dev — A: offsets->provenance; B: frame-vs-stack outlier masks; C: native frames branch (prepared-frames seam, offset registration, native PSF-star stamps)
+- status: awaiting-input — implementation + B1938 validation complete (202 tests; 39/39 frames, target inversion 0.8px band, outlier pass ~0.4%/frame, 39/39 epoch-matched PSF stamps); uncommitted; parked at ship sign-off
+- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/33 (sign-off comment)
 - autonomy: supervised effective (--auto chain 2026-07-10; user go-ahead on #31 sequence); parks at ship sign-off
 - heart-ack: same 6-reason set as prior entries this chain; any new reason parks
 - note: plate-scale caveat rides products (#13 owns the fix); B1938 work dir has all 39 prepared frames -> cheap real validation
