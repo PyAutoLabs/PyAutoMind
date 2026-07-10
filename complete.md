@@ -1,3 +1,9 @@
+## human-led-tone-sweep
+- completed: 2026-07-10
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/81 (closed)
+- prs: PyAutoBrain#82 (da492c0) + PyAutoConf#122 (6e8e0e8, pending-release) MERGED; Mind#55/Heart#57/Build#136/Memory#19 withdrawn no-op per review
+- summary: human-led natural-language framing landed on the agentic-AI pitch surfaces — org front page (.github PRs #1+#2), ORGANISM.md definition line, PyAutoScientist docs landing ("fork it and lead your own"), Conf Nerves sentence; maintainer principle recorded: organ/library READMEs state role+abstraction plainly, human-led voice only where agentic AI is explicitly pitched
+
 ## kernel-forward-chunking
 - completed: 2026-07-10
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/376 (closed)

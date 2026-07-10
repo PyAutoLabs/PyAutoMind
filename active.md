@@ -1,13 +1,5 @@
 # Active Tasks
 
-## human-led-tone-sweep
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/81
-- status: shipped, awaiting-merge — Brain#82 (ORGANISM.md definition + PyAutoScientist docs) + Conf#122 (Nerves sentence; pending-release label) at PR-open 2026-07-10; scope trimmed per maintainer review (human-led voice only on agentic-AI pitch surfaces; organ READMEs state abstraction) — Mind#55/Heart#57/Build#136/Memory#19 withdrawn no-op, branches deleted; merge stays human
-- worktree: none (in-place: PyAutoBrain + PyAutoConf on docs/human-led-tone-sweep)
-- repos:
-  - PyAutoBrain: docs/human-led-tone-sweep
-  - PyAutoConf: docs/human-led-tone-sweep
-
 ## benchmark-calibration
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/59
 - status: workspace-dev — first calibration campaign: teacher × {sonnet, haiku} + easy × {sonnet} via claude-code-subagent harness, serial (memory); records → benchmarks/runs/, RESULTS.md regen, rubric verdict on issue; PR at end
