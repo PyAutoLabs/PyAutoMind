@@ -4,6 +4,12 @@
 - library-pr: PyAutoBrain#69 (merged 2026-07-10)
 - summary: nightly driver hardening — token probe, fetch errors page (never 💤), anchor validation w/ 24h fallback, no anchor advance on error nights or dry-runs; 12 unit tests + three live --no-dispatch path validations; found via the 2026-07-10 silent-skip incidents (secrets were also missing on PyAutoBrain — set by human same day; anchor manually reset to 2026-07-09T06:05:39Z)
 
+## priors-messages-fixes
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1344 (closed)
+- completed: 2026-07-10
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1345 (merged c0b6c94b8, merged-unchanged)
+- summary: Phase 1 of #1331 priors/messages batch — 7 fixes (01/02/04/10 + decisions 1/3/4), 12 regression tests, Fable math re-verification; Phase 2 (decisions 5+2 width-modifier pair) filed as follow-up
+
 ## frame-registration
 - completed: 2026-07-10
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/19 (closed)

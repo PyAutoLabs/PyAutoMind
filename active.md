@@ -1,5 +1,17 @@
 # Active Tasks
 
+## prior-width-safety
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1346
+- session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
+- status: library-dev — Phase 2 of #1331: D5 RelativeWidthModifier abs(mean)+opt-in absolute_floor landed WITH D2 strict sigma>0 (NormalMessage numpy path; TruncatedNormal <0 -> <=0); width<=0 at prior passing raises parameter-named PriorException; mean=0 chained regression test
+- autonomy: supervised (--auto, human instructed live 2026-07-10 post Phase-1 merge)
+- heart-ack: same 6-reason set as priors-messages-fixes (live in-session 2026-07-10); any new reason parks
+- claim-override: human-approved pattern 2026-07-10 (Phase-1 precedent) — parallel DISJOINT PyAutoFit claim alongside ep-graphical-docs (#1334) + ep-diagnostics (#1335), both autofit/graphical; this is width_modifier/prior_model/messages, zero overlap
+- note: only leg of the #1331 batch with real sampling-behaviour impact (prior-passing width in chaining): negative-mean chained params get positive widths (was sign-flipped), mean=0 unconfigured params fail loud with guidance (was silent delta-freeze); bug/priors 09/11/12/13/14 remain parked design work
+- worktree: ~/Code/PyAutoLabs-wt/prior-width-safety
+- repos:
+  - PyAutoFit: feature/prior-width-safety
+
 ## pyautoscientist-phase2
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/68
 - status: library-dev — pyautoscientist RTD in PyAutoBrain/docs/ (Sphinx+Furo+MyST, docs CI caller → Heart reusable docs-build.yml with additive docs-only case, baseline 0, shared pyauto.css), adoption guide (config-diff fork §8), category contract, worked example; CONTRIBUTING ×5 + README RTD-link lines; hub section on pyautolabs.github.io. Human leg post-merge: import pyautoscientist project on readthedocs.org → PyAutoLabs/PyAutoBrain
@@ -25,19 +37,6 @@
 - worktree: ~/Code/PyAutoLabs-wt/per-frame-psf
 - repos:
   - PyAutoReduce: feature/per-frame-psf
-
-## priors-messages-fixes
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1344
-- session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
-- status: library-shipped, awaiting-merge — PR #1345 open (pending-release); full suite 1437 pass/14 skip; Fable re-verification passed (model switched in-session pre-ship: #04 logpdf==truncnorm pointwise + EP log_norm telescope repaired, D3 exact mean+var, D4 hooks recover scipy densities); smoke: priors_xp_dispatch PASS, emcee_gaussian_bias_check PASS (post-PR)
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1345
-- autonomy: supervised (--auto, launched 2026-07-10; effective = min(header safe, bug cap supervised)); ship instructed live in-session post-Fable-verification
-- heart-ack: live in-session 2026-07-10 — exact 6-reason set: workspace validation 3-fail (2026-07-09), 58 stale parked scripts, autolens_assistant pin behind, PyAutoMind PR 10d old, install verification not run, no release validation for current source; any new reason parks
-- claim-override: human-approved 2026-07-10 — parallel DISJOINT PyAutoFit claim alongside ep-graphical-docs (#1334, awaiting-merge) + ep-diagnostics (#1335), both in autofit/graphical; this batch is autofit/mapper/prior + autofit/messages, zero file overlap
-- note: Phase 2 (decisions 5+2 — RelativeWidthModifier abs+floor with strict sigma>0, mean=0 chained regression test) is a SEPARATE follow-up issued as Phase 1 nears shipping — this is the only leg with real sampling-behaviour impact (prior-passing width in search chaining). bug/priors files 06+08 held for Phase 2; 09/11/12/13/14 parked design work per #1331.
-- worktree: ~/Code/PyAutoLabs-wt/priors-messages-fixes
-- repos:
-  - PyAutoFit: feature/priors-messages-fixes
 
 ## rectangular-kernel-cdf-mesh
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
