@@ -1,5 +1,16 @@
 # Active Tasks
 
+## priors-messages-fixes
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1344
+- session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
+- status: library-dev — Phase 1 (safe batch): #1331 fixes 01/02/04/10 + decisions 1/3/4. EP-isolated or numerically inert for standard non-linear searches. Resolves awaiting-input on #1330/#1331; unblocks #1332 fix batch.
+- autonomy: supervised (--auto, launched 2026-07-10; effective = min(header safe, bug cap supervised)); no heart-ack yet → ship gate parks on any Heart YELLOW
+- claim-override: human-approved 2026-07-10 — parallel DISJOINT PyAutoFit claim alongside ep-graphical-docs (#1334, awaiting-merge) + ep-diagnostics (#1335), both in autofit/graphical; this batch is autofit/mapper/prior + autofit/messages, zero file overlap
+- note: Phase 2 (decisions 5+2 — RelativeWidthModifier abs+floor with strict sigma>0, mean=0 chained regression test) is a SEPARATE follow-up issued as Phase 1 nears shipping — this is the only leg with real sampling-behaviour impact (prior-passing width in search chaining). bug/priors files 06+08 held for Phase 2; 09/11/12/13/14 parked design work per #1331.
+- worktree: ~/Code/PyAutoLabs-wt/priors-messages-fixes
+- repos:
+  - PyAutoFit: bug/priors-messages-fixes
+
 ## frame-registration
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/19
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
