@@ -3,7 +3,8 @@
 ## stpsf-tier2b
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/29
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: library-dev — STPSF tier-2b fallback for JWST frame PSFs (user-directed "lift PSF coverage"; 3/6 -> 6/6 target on F115W)
+- status: awaiting-input — implementation + validation complete (197 tests; F115W 6/6 frames with PSFs: 3 tier-1 + 3 stpsf-tier2b incl. clamped edge case; cupy import-block pin); uncommitted; parked at ship sign-off
+- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/29 (sign-off comment)
 - autonomy: supervised effective (--auto chain 2026-07-10; plan on issue); parks at ship sign-off
 - heart-ack: same 6-reason set as prior entries this chain; any new reason parks
 - note: env needs stpsf + reference data install (not in venv yet); validation reruns frames packaging on cached F115W _crf files
