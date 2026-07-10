@@ -148,3 +148,16 @@
 - worktree: none (in-place: ~/Code/PyAutoLabs/autofit_assistant, new clone)
 - repos:
   - autofit_assistant: main (phase 0), then feature/afa-phase-<n>
+
+## multi-shared-state-examples-phase-3-workspace-examples
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/260
+- session: (this CLI session, 2026-07-10)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/multi-shared-state-phase-3
+- repos:
+  - autolens_workspace
+  - autolens_workspace_test
+  - autolens_profiling
+- autonomy: safe effective (feature/medium, --auto granted by user 2026-07-10; plan on issue #260; four-leg gate; ends at PR-open, merge human)
+- conflict-override: autolens_workspace claim markdown-example-renderings touches only markdown/ renders (0 files under scripts/multi/) — zero overlap, proceeding in fresh worktree
+- epic: phase 3/4 of multi_shared_state_examples (phase 2 merged 2026-07-10: PyAutoArray#380 + PyAutoLens#600)

@@ -1,8 +1,10 @@
 # Multi-dataset shared-state — Phase 3: workspace examples + parity test
 
-Phase 3 of 4 of `feature/autolens/multi_shared_state_examples.md`. **Blocked on
-Phase 2** (the imaging shared-state API must be on `main`). Update with the
-locked API before issuing.
+Autonomy: safe
+(feature, difficulty medium — docstring'd sections on existing examples + parity/profiling
+scripts mirroring the shipped datacube pattern; --auto granted by user 2026-07-10.)
+
+Phase 3 of 4 of `feature/autolens/multi_shared_state_examples.md`. UNBLOCKED 2026-07-10: phase 2 merged (PyAutoArray#380 f8a32d43b + PyAutoLens#600 1513236da). Locked API: `aa.PreloadsImaging(source_plane_mesh_grid, image_plane_mesh_grid)`; `AnalysisImaging(shared_preloads=True)` + `shared_state_from`; `shared=`/`preloads=` threading. NO regularization preload (user amendment). Shared path applies to image-mesh pixelizations (Overlay via AdaptImages).
 
 ## Scope
 
