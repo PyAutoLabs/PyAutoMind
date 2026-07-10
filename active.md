@@ -1,5 +1,19 @@
 # Active Tasks
 
+## human-led-tone-sweep
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/81
+- status: docs-dev — tone-only sweep of organ READMEs + Brain docs/ to the human-led natural-language framing (org front page, .github PR #2, is the reference voice); one PR per repo touched, merge stays human
+- claim-note: PyAutoBuild overlap with markdown-example-renderings is file-disjoint (this task touches README.md only; that worktree touches autobuild/ + docs/internals.md) — proceeding under human approval 2026-07-10
+- note: PyAutoMemory's dirty reading-queue.md is the user's own edit — untouched
+- worktree: none (in-place: six organ repos on docs/human-led-tone-sweep)
+- repos:
+  - PyAutoBrain: docs/human-led-tone-sweep
+  - PyAutoMind: docs/human-led-tone-sweep
+  - PyAutoHeart: docs/human-led-tone-sweep
+  - PyAutoBuild: docs/human-led-tone-sweep
+  - PyAutoMemory: docs/human-led-tone-sweep
+  - PyAutoConf: docs/human-led-tone-sweep
+
 ## benchmark-calibration
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/59
 - status: workspace-dev — first calibration campaign: teacher × {sonnet, haiku} + easy × {sonnet} via claude-code-subagent harness, serial (memory); records → benchmarks/runs/, RESULTS.md regen, rubric verdict on issue; PR at end
