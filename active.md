@@ -3,7 +3,8 @@
 ## prior-width-safety
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1346
 - session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
-- status: library-dev — Phase 2 of #1331: D5 RelativeWidthModifier abs(mean)+opt-in absolute_floor landed WITH D2 strict sigma>0 (NormalMessage numpy path; TruncatedNormal <0 -> <=0); width<=0 at prior passing raises parameter-named PriorException; mean=0 chained regression test
+- status: library-shipped, awaiting-merge — PR #1348 open (pending-release); suite 1447 pass/14 skip; D2 ADJUSTED strict->permissive on evidence (sigma=0 is load-bearing point-mass idiom: latent simple_model_for_kwargs, from_mode(cov=0), model_relative pins sigma==0; 20 tests broke under strict; disclosed on #1346) — sigma<0 rejected on both classes (now agree), width guard scoped to default-modifier path
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1348
 - autonomy: supervised (--auto, human instructed live 2026-07-10 post Phase-1 merge)
 - heart-ack: same 6-reason set as priors-messages-fixes (live in-session 2026-07-10); any new reason parks
 - claim-override: human-approved pattern 2026-07-10 (Phase-1 precedent) — parallel DISJOINT PyAutoFit claim alongside ep-graphical-docs (#1334) + ep-diagnostics (#1335), both autofit/graphical; this is width_modifier/prior_model/messages, zero overlap
