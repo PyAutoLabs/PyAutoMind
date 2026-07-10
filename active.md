@@ -10,8 +10,10 @@
 
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
-- status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). Ship as 3 sequential PRs: PR1 cluster → PR2 group+imaging feature examples → PR3 SLaM pipelines
-- note: CONCURRENT with markdown-renderings-workspaces batch 2a (#264) by user override 2026-07-10 — file sets disjoint (2a edits config/*.yaml, cluster EXCLUDED; ours edits scripts/). Start with PR1 (cluster) = zero overlap with 2a. Watch for notebook-regen collisions on group/imaging at merge time
+- status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
+- pr1: https://github.com/PyAutoLabs/autolens_workspace/pull/267 (cluster; pending-release; Heart YELLOW ambient-acked at ship; b0/rs preserved <1%, ra now scales; dataset regenerated; cluster/simple gitignore-allowlisted)
+- gotcha: notebook regen (generate.py autolens) surfaces PRE-EXISTING drift — 5 multi/features notebooks + llms-full.txt/workspace_index.json catalogue restated on main; MUST revert those and stage cluster-only (did so for PR1). cluster simulator preview-plot step crashes on matplotlib._api.check_getitem (pre-existing venv bug, post-write, cosmetic)
+- note: CONCURRENT with markdown-renderings-workspaces batch 2a (#264) by user override 2026-07-10 — file sets disjoint (2a edits config/*.yaml, cluster EXCLUDED; ours edits scripts/). Watch for notebook-regen collisions on group/imaging at merge time
 - worktree: ~/Code/PyAutoLabs-wt/lenstool-scaling-reference-magnitude
 - repos:
   - autolens_workspace: feature/lenstool-scaling-reference-magnitude
