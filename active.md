@@ -1,5 +1,15 @@
 # Active Tasks
 
+## markdown-example-renderings
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134
+- status: library-dev — build generate_markdown.py (execute curated scripts → nbconvert md + PNGs) in PyAutoBuild, then autolens pilot (root start_here + imaging five + guides trio); phase 2 (other dataset types/workspaces/HowTo) files as a new prompt at ship
+- autonomy: safe effective (--auto launched 2026-07-10; docs ≤ medium after phasing; plan on issue; NO heart-ack given — any Heart YELLOW at ship parks)
+- note: execution never TEST_MODE; modeling images via completed-run resume cache (first build pays one real sampling run); images committed — verify .gitignore doesn't swallow markdown/ outputs
+- worktree: ~/Code/PyAutoLabs-wt/markdown-example-renderings
+- repos:
+  - PyAutoBuild: feature/markdown-example-renderings
+  - autolens_workspace: feature/markdown-example-renderings
+
 ## jwst-frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/27
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
