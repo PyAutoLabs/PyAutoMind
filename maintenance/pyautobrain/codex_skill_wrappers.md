@@ -3,12 +3,12 @@
 Type: maintenance
 Target: PyAutoBrain
 Repos:
-- PyAutoBrain
-- PyAutoMind
-- PyAutoHeart
-- PyAutoBuild
-- autolens_profiling
-- admin_jammy
+- @PyAutoBrain
+- @PyAutoMind
+- @PyAutoHeart
+- @PyAutoBuild
+- @autolens_profiling
+- @admin_jammy
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
