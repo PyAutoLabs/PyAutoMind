@@ -143,3 +143,11 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
+
+## multi-shared-state-examples-phase-1-design
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/599
+- session: (this CLI session, 2026-07-10)
+- status: library-dev
+- worktree: none — design-only phase (deliverable = design note + locked API sketch on the issue; no source edits)
+- repos:
+- notes: Phase 1/4 of feature/autolens/multi_shared_state_examples (parent + phase-1 prompts in issued/; phases 2-4 prompts staged in feature/autolens/, deliberately un-issued). Claims no repos, so it does not conflict with kernel-forward-chunking / rect-adapt (PyAutoArray) or markdown-example-renderings (autolens_workspace); those claims matter from Phase 2 on.
