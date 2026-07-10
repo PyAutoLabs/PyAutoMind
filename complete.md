@@ -1,3 +1,9 @@
+## rtd-hygiene
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1341
+- completed: 2026-07-10
+- library-prs: PyAutoHeart#48 + PyAutoGalaxy#495 + PyAutoLens#597 + PyAutoFit#1342 (all merged 2026-07-09)
+- summary: RTD hygiene phase A — dead configs deleted, conf.py converged, Heart-owned docs-build CI live on 3 libs (baselines 67/105/134); RTD projects repointed to PyAutoLabs; pyautofit.readthedocs.io revived (dead since 2026-05-06; webhook host+secret fix); verified via addons API
+
 ## assistant-ref-mechanics
 - completed: 2026-07-09
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/43 (closed)

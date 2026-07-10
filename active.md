@@ -24,15 +24,6 @@
   - PyAutoGalaxy: feature/docs-theming-hub
   - PyAutoLens: feature/docs-theming-hub
 
-## rtd-hygiene
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1341
-- session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
-- status: code-complete, awaiting-human-legs — all 4 PRs MERGED 2026-07-09 (Heart#48, Galaxy#495, Lens#597, Fit#1342; human-authorized in-session; docs CI live, baselines 105/134/67 held in CI); worktree removed, branches deleted, claims released
-- remaining: RTD dashboard legs (human, 2026-07-10): reconnect pyautofit → PyAutoLabs/PyAutoFit (site dead since 2026-05-06), repoint galaxy/lens URLs; verify via addons API, then retire to complete.md
-- autonomy: supervised effective (--auto 2026-07-09); Heart YELLOW acked in-session at ship; Fit claim override human-directed ("they don't clash")
-- worktree: released
-- repos:
-
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
 - session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
