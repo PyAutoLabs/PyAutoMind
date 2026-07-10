@@ -22,18 +22,6 @@
 - repos:
   - PyAutoFit: feature/prior-width-safety
 
-## per-frame-psf
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/21
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — implementation complete incl. user-directed psf_from_frames scope amendment (mosaic PSF = drop-convolved Jacobian-resampled exptime-weighted combination of frame ePSFs; slacs0008: 3.5% FWHM agreement vs 100-star mosaic ePSF, combined sharper as predicted); 187 tests; uncommitted; parked at ship sign-off
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/21 (sign-off comment)
-- autonomy: supervised effective (--auto chain 2026-07-09/10; plan on issue); parks at ship sign-off
-- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
-- note: follows frame-registration (#19, merged); Brain again said research-first, overridden with user ordering + prompt's settled v1 route (frame-products precedent)
-- worktree: ~/Code/PyAutoLabs-wt/per-frame-psf
-- repos:
-  - PyAutoReduce: feature/per-frame-psf
-
 ## rectangular-kernel-cdf-mesh
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/374
