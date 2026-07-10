@@ -33,8 +33,7 @@
 
 ## pyautoscientist-3b-spawn
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/46
-- status: awaiting-input — implementation complete + validated (spawn dry-run 0 unmatched/canary clean/round-trip clean; templates published PRIVATE+flagged; sphinx 0 warnings; uncommitted in worktree per contract); parked at ship sign-off
-- question: https://github.com/PyAutoLabs/PyAutoMind/issues/46 (batch: ship 2 PRs, classifications, flip-public, prompt_sync follow-up)
+- status: shipped, awaiting-merge — Mind#47 (spawn+spec+CI+skill) + Brain#72 (RTD walkthrough, pending-release); all 4 batch answers approved in-session (ship, classifications, templates flipped PUBLIC, prompt_sync follow-up filed as maintenance draft)
 - autonomy: supervised effective (--auto "continue --auto" 2026-07-10; plan on #46)
 - heart-ack: the 6-reason YELLOW set acked repeatedly in-session 2026-07-10; binds to exactly that set
 - note: 2 PRs (Mind: script+workflow+skill; Brain: docs walkthrough); template repos direct-push private (products, not parts — stay OUT of live body map); spec deviation protocol = batch, don't decide
