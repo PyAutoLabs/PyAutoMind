@@ -4,6 +4,12 @@
 - prs: PyAutoMind#47 + PyAutoBrain#72 (both merged 2026-07-10)
 - summary: spawn generator live (partition rules from spawn_spec.md as data; canary privacy scan caught real lensing residue in the wiki schema → domain-neutral asset; validation: 0 unmatched, round-trip clean, drift negative test, repos_sync green inside template); PyAutoMind-template + PyAutoMemory-template published PUBLIC + template-flagged with SPAWNED_FROM provenance; spawn_drift.yml weekly CI; /spawn skill; RTD adoption walkthrough rebuilt around "Use this template" (all 5 template repos). Follow-up drafted: maintenance/pyautomind/prompt_sync_self_locating.md (hardcoded root breaks adopters).
 
+## ep-followups-batch
+- issues: PyAutoFit#1353 (closed), autofit_workspace#83 (closed), #1336 (closed, RecA), #1352 (open — triaged, deep fix parked)
+- completed: 2026-07-10
+- prs: PyAutoFit#1354 (merged ffc04d83) + autofit_workspace#85 (merged 831b08ba)
+- summary: F6 exact truncated KL (MC-verified) + F7b sampler evidence on log_norm (F7 all legs fixed; evidence trustworthy w/ nested factor searches) + README §5/§6 (RecA recorded) + walkthrough __Diagnostics__ section; #1352 reclassified deterministic test-order dependence (id-counter->EP-update-order hypothesis)
+
 ## ep-statistics-fix-batch
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1350 (closed)
 - completed: 2026-07-10
