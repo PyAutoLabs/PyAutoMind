@@ -12,18 +12,6 @@
   - PyAutoGalaxy: feature/docs-theming-hub
   - PyAutoLens: feature/docs-theming-hub
 
-## assistant-ref-mechanics
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/43
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: library-shipped, awaiting-merge — 4-leg gate passed (tests 39 + audits / smoke n/a / review CLEAN / heart YELLOW⊆ack); run ended at PR-open per contract
-- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/44
-- autonomy: safe effective (--auto launched 2026-07-09 post frame-products merge; header safe, feature/small cap safe; plan on the issue per contract)
-- heart-ack: workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); autolens_assistant pinned BEHIND installed; PyAutoMind open PR 10d old; install verification not run; no release validation for current source — acked in-session 2026-07-09 (frame-products ship stretch); binds to exactly this set, any new reason parks
-- note: prompt audit at start_dev: resolution order/env var/assistant_ref already shipped in skills/start-new-project.md — task narrowed to the mismatch-warning mechanics + generated-AGENTS.md mirror; Brain pick 1 (point_source_light) queued on rtd-hygiene's PyAutoGalaxy claim
-- worktree: none (autolens_assistant develops in-place; branch feature/assistant-ref-mechanics)
-- repos:
-  - autolens_assistant: feature/assistant-ref-mechanics
-
 ## rtd-hygiene
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1341
 - session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
