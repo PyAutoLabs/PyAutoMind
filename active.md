@@ -1,5 +1,15 @@
 # Active Tasks
 
+## pyautoscientist-3b-clone
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/73
+- status: library-dev — clone agent v0 (analyze/CloneDecision) implemented + case-study validated (PyAutoFit→autofit_assistant: partition 40/247/92/0 unclassified after .claude-mirror + init-slam pattern classification); Brain suite 12 pass; firewall allowlist rider in Mind
+- autonomy: supervised effective (--auto chain 2026-07-10); heart-ack: the in-session 6-reason set
+- note: v0 = decision only per DESIGN.md phasing; v1 (seed births via Build primitive + Heart newborn checklist) files when v0 ships; unclassified-pressure worked as designed (caught the reference's .claude/.gemini mirrors absent from maintainer.md prose — reference-side note NOT yet filed, rider question)
+- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-3b-clone
+- repos:
+  - PyAutoBrain: feature/pyautoscientist-3b-clone
+  - PyAutoMind: feature/pyautoscientist-3b-clone
+
 ## script-to-notebook
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/51
 - status: workspace-dev — stdlib-only autoassistant/to_notebook.py (adapts PyAutoBuild build_util py_to_notebook + add_notebook_quotes semantics, cited as reference) + al_to_notebook skill + README/symlink registration; e2e verify vs PyAutoBuild output
