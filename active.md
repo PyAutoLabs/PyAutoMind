@@ -1,5 +1,16 @@
 # Active Tasks
 
+## markdown-renderings-workspaces
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/264
+- status: workspace-dev — batch 2a: extend autolens config (interferometer/point_source/multi/group/weak, cluster EXCLUDED) + new autogalaxy config (root+imaging/interferometer/multi/ellipse/guides) + new autofit config (overview 1-3); sequential real builds (autofit fast-first → autogalaxy → autolens-remaining); ship 3 PRs
+- autonomy: safe effective (--auto launched 2026-07-10 post plan-approval; docs cap safe ≤ medium; plan on issue); NO heart-ack given this launch — any Heart YELLOW at ship parks for ack
+- note: generator on main (repo-agnostic); never TEST_MODE; ~8-20h cumulative real sampling (~13 fits); resumable (each page persists, re-run resumes from cache); tracked-dataset regen dirt in all 3 main checkouts is stale (worktree branches clean); HowTo = batch 2b (issued/markdown_renderings_howto.md, after 2a merges)
+- worktree: ~/Code/PyAutoLabs-wt/markdown-renderings-workspaces
+- repos:
+  - autolens_workspace: feature/markdown-renderings-workspaces
+  - autogalaxy_workspace: feature/markdown-renderings-workspaces
+  - autofit_workspace: feature/markdown-renderings-workspaces
+
 ## benchmark-calibration
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/59
 - status: workspace-dev — first calibration campaign: teacher × {sonnet, haiku} + easy × {sonnet} via claude-code-subagent harness, serial (memory); records → benchmarks/runs/, RESULTS.md regen, rubric verdict on issue; PR at end
