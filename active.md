@@ -1,14 +1,5 @@
 # Active Tasks
 
-## per-project-literature
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/49
-- status: workspace-dev — core hybrid only: wiki/project/bibliography.md scaffold + AGENTS.md Literature bullet + al_ingest_paper target selection (project-local default, shared on explicit promotion); guided intake stays deferred/evidence-gated
-- autonomy: default present-and-wait at ship (issue + single-page location user-approved in-session 2026-07-10)
-- note: task 3 of the autolens_assistant batch; queue: script_to_notebook → live_visual_update_context → portable_user_defaults (discovery-half). In-place on autolens_assistant main; untracked james.bib — personal, untouched
-- worktree: none (in-place branch feature/per-project-literature)
-- repos:
-  - autolens_assistant: feature/per-project-literature
-
 ## pyautoscientist-3b-smoke
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/51
 - status: library-dev — Heart#52 (reusable) MERGED; autolens_workspace#259 parity run in flight (both matrix jobs executing through the reusable); sweep committed UNPUSHED in 8 repos, push+PR on parity green
