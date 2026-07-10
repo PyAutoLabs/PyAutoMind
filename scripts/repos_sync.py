@@ -198,6 +198,8 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBrain/agents/conductors/bug/_bug.py": {"PyAutoArray"},
     "PyAutoBrain/agents/conductors/bug/bug.sh": {"PyAutoLabs"},
     "PyAutoBrain/agents/conductors/health/health.sh": {"PyAutoConf"},
+    "PyAutoBrain/agents/conductors/clone/_clone.py": {"HowToFit", "PyAutoFit", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autolens_assistant"},
+    "PyAutoBrain/agents/conductors/clone/clone.sh": {"HowToFit", "PyAutoFit", "autofit_workspace", "autolens_assistant"},
     "PyAutoBrain/agents/conductors/intake/_intake.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace"},
     "PyAutoBrain/agents/conductors/profiling/_profiling.py": {"PyAutoLabs", "autolens_profiling"},
     "PyAutoBrain/agents/conductors/profiling/profiling.sh": {"autolens_profiling"},
