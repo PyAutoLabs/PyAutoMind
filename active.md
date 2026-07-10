@@ -29,7 +29,7 @@
 ## priors-messages-fixes
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1344
 - session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
-- status: library-shipped, awaiting-merge — PR #1345 open (pending-release); full suite 1437 pass/14 skip; Fable re-verification passed (model switched in-session pre-ship: #04 logpdf==truncnorm pointwise + EP log_norm telescope repaired, D3 exact mean+var, D4 hooks recover scipy densities); smoke: priors_xp_dispatch PASS, emcee_gaussian_bias_check running at ship-time
+- status: library-shipped, awaiting-merge — PR #1345 open (pending-release); full suite 1437 pass/14 skip; Fable re-verification passed (model switched in-session pre-ship: #04 logpdf==truncnorm pointwise + EP log_norm telescope repaired, D3 exact mean+var, D4 hooks recover scipy densities); smoke: priors_xp_dispatch PASS, emcee_gaussian_bias_check PASS (post-PR)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1345
 - autonomy: supervised (--auto, launched 2026-07-10; effective = min(header safe, bug cap supervised)); ship instructed live in-session post-Fable-verification
 - heart-ack: live in-session 2026-07-10 — exact 6-reason set: workspace validation 3-fail (2026-07-09), 58 stale parked scripts, autolens_assistant pin behind, PyAutoMind PR 10d old, install verification not run, no release validation for current source; any new reason parks
