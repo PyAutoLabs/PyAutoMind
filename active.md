@@ -152,3 +152,15 @@
 - repos:
 - notes: Phase 1/4 of feature/autolens/multi_shared_state_examples (parent + phase-1 prompts in issued/; phases 2-4 prompts staged in feature/autolens/, deliberately un-issued). Claims no repos, so it does not conflict with kernel-forward-chunking / rect-adapt (PyAutoArray) or markdown-example-renderings (autolens_workspace); those claims matter from Phase 2 on.
 - status-update 2026-07-10: DESIGN DELIVERED — decisions D1-D6 posted as the design-note comment on #599 (shared object = source-plane mesh geometry + H on AbstractPreloads; same-lambda = shared-mesh-per-factor now, joint stacked inversion as explicit follow-up prompt multi_joint_stack_inversion; shifts via existing aa.DatasetModel, known-by-default). Phase 2-3 prompts updated with the locked decisions. AWAITING user review of D2 especially ("one source" = per-factor-on-identical-mesh now, literal joint solve deferred) before issuing Phase 2 and closing #599's phase-1 leg.
+
+## multi-shared-state-core-api
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/379
+- session: (this CLI session, 2026-07-10)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/multi-shared-state-core-api
+- repos:
+  - PyAutoArray
+  - PyAutoLens
+- autonomy: safe effective (feature/medium, --auto granted by user 2026-07-10; plan on issue #379; four-leg ship gate; ends at PR-open, merge human)
+- conflict-override: PyAutoArray claims kernel-forward-chunking + rect-adapt verified zero file overlap (both touch only inversion/mesh/ kernel-CDF files; this task touches preloads/ + imaging analysis) — proceeding in a fresh worktree rather than parking in planned.md
+- epic: phase 2/4 of multi_shared_state_examples (design locked on PyAutoLens#599 incl. H-removal amendment)
