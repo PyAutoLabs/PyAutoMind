@@ -71,8 +71,11 @@ content):
   `workspace_version` → the placeholder `0000.0.0.0`).
 - `autoproject_workspace/config/build/copy_files.yaml` — empty list + usage
   comment.
-- `.github/workflows/` thin callers — stamped **only after** 3b-2 (the
-  reusable smoke workflow) ships; until then spawn leaves workflows alone.
+- `.github/workflows/smoke_tests.yml` thin caller (chain =
+  `PyAutoProject` only — the template's deps come from PyPI) + starter
+  `.github/scripts/smoke_install.sh` + a generic `run_smoke.py` runner +
+  `smoke_tests.txt` seeds, into workspace + workspace_test (unblocked by
+  3b-2, the reusable smoke workflow; Mind#53).
 - `LICENSE` (MIT, from PyAutoBrain's), `CONTRIBUTING.md` (the four-organ
   pointer text with the repo name substituted).
 
