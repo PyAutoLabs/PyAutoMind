@@ -63,8 +63,8 @@ lines.)
 
 ## Discovery
 
-`PyAutoBrain/bin/install.sh` now scans these roots and symlinks skills into
-`~/.claude/skills/` and commands into `~/.claude/commands/`:
+`PyAutoBrain/bin/install.sh` now scans these roots, symlinks skills into both
+Claude and Codex skill homes, and preserves commands in `~/.claude/commands/`:
 
 - `admin_jammy/skills/` — general PyAuto tooling
 - `PyAutoMind/skills/` — registry-coupled (`create_issue`)

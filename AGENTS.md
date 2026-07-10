@@ -45,8 +45,9 @@ For the full workflow narrative, conventions, and registry schemas, read
   `PyAutoBrain/skills/WORKFLOW.md` are generated from it, and the repo lists in
   Heart/Build/admin scripts are drift-checked against it:
   `python3 scripts/repos_sync.py --write`.
-- **Skills** — `skills/<name>/` are Claude Code skills/commands tightly coupled
-  to the registry. They source `scripts/prompt_sync.sh` for commit/push.
+- **Skills** — `skills/<name>/` are agent skills and command bodies tightly
+  coupled to the registry. Claude and Codex discovery is installed by
+  PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.
 - **Scripts** — `scripts/status.sh` (inventory), `scripts/prompt_sync.sh`
   (commit/push helpers).
 

@@ -1,7 +1,6 @@
 ---
 name: create-issue
 description: Convert a PyAutoMind prompt file into a GitHub issue and register it — the Mind issue and registry primitive that start_dev delegates to.
-user-invocable: true
 ---
 
 Turn a `PyAutoMind/` prompt into a tracked GitHub issue and register it.
