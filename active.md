@@ -61,16 +61,6 @@
   - autolens_workspace_test: feature/rectangular-kernel-cdf-mesh
   - autolens_workspace_developer: feature/rectangular-kernel-cdf-mesh
 
-## psf-convolution-docstring
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/257
-- status: shipped, awaiting-merge — 41 simulator.py normalized (3 full-section + 38 input-only); PRs open behind pending-release: autolens_workspace#258 + autogalaxy_workspace#124; Heart YELLOW at ship (all reasons pre-existing/unrelated, user-acked in-session 2026-07-10)
-- autonomy: supervised (user said "go, all in one"; YELLOW-ack given in-session; merge stays human)
-- note: Tier A = imaging/simulator.py (both) + autolens group/simulator.py (full __PSF Convolution__ header+Contents+prose); Tier B = convolve_over_sample_size=1 on from_gaussian; 10 autogalaxy CRLF files edited CRLF-safe; interferometer/point-multiple/weak-base out of scope. OPEN judgment call flagged on #257: group + autogalaxy-imaging over-sample note stops at guides/advanced/over_sampling.py (no __Oversampled PSF__ appendix in those files) — offer stands to port the appendix. Validation: 40/40 compile, 5 sims run end-to-end, notebooks+catalogue regenerated
-- worktree: ~/Code/PyAutoLabs-wt/psf-convolution-docstring
-- repos:
-  - autolens_workspace: feature/psf-convolution-docstring
-  - autogalaxy_workspace: feature/psf-convolution-docstring
-
 ## rect-adapt
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/372
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
