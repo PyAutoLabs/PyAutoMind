@@ -12,11 +12,12 @@
 
 ## pyautoscientist-phase3a
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/71
-- status: in-progress — spawn spec + template family seed (PyAutoProject/autoproject_workspace/autoproject_workspace_test, created PRIVATE, flip-public parked) + 3b prompt drafts + Nerves role promotion; design = docs/pyautobrain/pyautoscientist_phase3_research.md, four calls human-locked 2026-07-10
-- autonomy: supervised effective (--auto launched 2026-07-10 "go --auto"; feature/large cap; plan on issue; judgment gates park as batched questions on #71)
-- heart-ack: the 6-reason YELLOW set acked twice in-session 2026-07-10 (workspace validation 3-failed / 58 stale parked / assistant pinned behind / Mind PR 10d / install verification / release validation); binds to exactly that set
-- note: Mind work = direct-to-main docs/prompts (registry-adjacent precedent); template repos are NEW (no claims, no live surface); zero organ-code diffs; Fable deadline 2026-07-12 drives judgment-first ordering
-- worktree: none (Mind docs direct; new repos cloned to scratch)
+- status: awaiting-input — all deliverables complete 2026-07-10 (spawn_spec.md; template family seeded+validated PRIVATE: PyAutoProject/autoproject_workspace/autoproject_workspace_test, template-flagged; 3b series drafted; Nerves role live); parked on batched questions
+- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/71#issuecomment-4933806663 (flip repos public? RTD template-family walkthrough now or with 3b-1?)
+- autonomy: supervised effective (--auto 2026-07-10; plan on issue; checkpoint-and-continue honoured)
+- heart-ack: the 6-reason YELLOW set acked twice in-session 2026-07-10; no ship gate ran (new repos + Mind docs only, no organ PRs)
+- note: validation = pytest 3/3, start_here end-to-end (30.11/24.49/4.77 vs 30/25/5), fit_quick smoke pass; SNR fix norm=1→25 during validation; template repos stay OUT of live body map (products, not parts)
+- worktree: none
 - repos:
 
 ## rectangular-kernel-cdf-mesh
