@@ -1,3 +1,13 @@
+## mcmc-corner-smoke
+- prompt: bug/autofit_workspace/searches_mcmc_corner_no_dynamic_range.md
+- planned: 2026-07-09
+- classification: workspace (possibly library rider in PyAutoFit corner wrapper)
+- suggested-branch: bug/mcmc-corner-smoke
+- blocked-by: ep-examples-tests (using autofit_workspace, uncommitted work); PyAutoFit held by docs-theming-hub + ep-diagnostics + ep-graphical-docs
+- priority-note: NIGHTLY BLOCKER — release_ready=false / Heart GREEN blocked until fixed; pick up the moment a claim releases
+- affected-repos:
+  - autofit_workspace
+
 ## samples-parameter-paths
 - prompt: PyAutoMind/bug/health_fixes/samples_parameter_paths.md
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1327 (open, parked)
