@@ -1,3 +1,10 @@
+## jwst-frame-products
+- completed: 2026-07-10
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/27 (closed)
+- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/28 (merged 7202e98, squash)
+- summary: JWST frame products live — 7 feasibility deltas implemented (_crf capture+consume, native MJy/sr + derived manifest units, BKGLEVEL sky, ramp-jump+outlier CR provenance, DO_NOT_USE-only DQ policy [JUMP_DET = good data], filename-stem identity, peak_max=None ePSF, guard HST+JWST); manifest schema v2; registration reliability guard added after F115W validation exposed ~200px mask-geometry artifacts (best-covered reference, >20%-masked pairs flagged, headline needs a clean PAIR else null/UNMEASURED); COSMOS-Web F115W end-to-end: 6 chips, 3/6 tier-1 frame ePSFs, combined mosaic PSF from the 3; 194 tests; human-directed ship+merge ("ship it")
+- followups: STPSF tier-2b (next, user-directed "lift PSF coverage"); gwcs target_pixel; duplicate frame-ePSF compute when both flags on
+
 ## pyautoscientist-3b-config
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/53 (closed)
 - completed: 2026-07-10

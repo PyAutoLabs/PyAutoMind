@@ -10,18 +10,6 @@
   - PyAutoBuild: feature/markdown-example-renderings
   - autolens_workspace: feature/markdown-example-renderings
 
-## jwst-frame-products
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/27
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: awaiting-input — implementation + COSMOS-Web F115W validation complete (194 tests; crf capture ✓, BKGLEVEL ✓, 3/6 frame ePSFs, combined mosaic PSF ✓, registration reliability guard added after ~200px mask artifacts); uncommitted; parked at ship sign-off
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/27 (sign-off comment)
-- autonomy: supervised effective (--auto launched 2026-07-10; plan on issue); ship sign-off parks per contract
-- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
-- note: validation = COSMOS-Web ring F115W from warm cal cache (image3 in_memory=False, jwst 1.14.0 pin); slacs1430 note about PyAutoReduce claim now points here
-- worktree: ~/Code/PyAutoLabs-wt/jwst-frame-products
-- repos:
-  - PyAutoReduce: feature/jwst-frame-products
-
 ## preopt-breakdown-dashboard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
 - status: workspace-dev — imaging leg DONE 5/5 clean; HEADLINE: real >=~1.8x library slowdown on mesh cells since May (identical cell configs; confirmed vs phase-3 quiet-machine runtime; F-matrix ~50% everywhere); alma_high cells on retry (root cause = missing dataset + auto-simulate OOM; seeded 234MB from phase-3 wt); laptop numbers = ambient-load fallback tier; A100 leg dispatch-ready (15 submits, 3bb613a) but RAL GPU nodes DOWN
