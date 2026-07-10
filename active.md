@@ -10,7 +10,8 @@
 ## keck-frame-feasibility
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/31
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: research — code audit + science case; deliverable = keck_ao.md go/no-go note
+- status: awaiting-input — assessment complete, verdict GO-gated-on-acceptance (sequence: #13 acceptance -> frame-vs-stack outlier pass -> Keck frames branch); note drafted, uncommitted; parked at sign-off
+- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/31 (assessment comment)
 - autonomy: supervised effective (--auto chain 2026-07-10); recommendation is the checkpoint
 - heart-ack: same 6-reason set as prior entries this chain; any new reason parks
 - worktree: ~/Code/PyAutoLabs-wt/keck-frame-feasibility (docs-only ship)
