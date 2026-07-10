@@ -1,5 +1,13 @@
 # Active Tasks
 
+## ep-hierarchical-regression
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1352
+- status: library-dev — fix EP factor-schedule order-dependence. EPOptimiser update order derives from set(factor_graph.factors) → process-global itertools.count() id-hash → convergence to a good vs sigma-collapsed fixed point depends on process history. Fix = deterministic stable factor ordering (approach 1, user-approved 2026-07-10). Root cause PROVEN via id-offset probe (N-sweep flips PASS/FAIL at fixed commit/seed); #1351 innocent trigger (added test_ep_statistics_fixes.py, shifting the id offset into a failing region — its F1/F2/F4/F8 math exonerated)
+- note: touches CORE EP optimiser (blast radius = every graphical/EP fit) — validate full test_autofit/graphical suite AND verify the good fixed point is reached across id offsets; isolation failure of test_full_hierachical is PRE-EXISTING at all commits (the CI regression is the in-suite flip, not isolation). Found during /health check green-light sweep 2026-07-10 (otherwise-green: 2474 lib tests + 47 workspace smoke)
+- worktree: ~/Code/PyAutoLabs-wt/ep-hierarchical-regression
+- repos:
+  - PyAutoFit: feature/ep-hierarchical-regression
+
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). Ship as 3 sequential PRs: PR1 cluster → PR2 group+imaging feature examples → PR3 SLaM pipelines
