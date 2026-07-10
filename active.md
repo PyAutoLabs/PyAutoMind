@@ -2,8 +2,10 @@
 
 ## shareable-science-projects
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/45
-- status: workspace-dev — docs emphasis pass: generated-project README template + Collaborate fork-and-continue + Publish paper-companion framing in start-new-project.md, plus top-level README open-source-your-paper pitch
-- autonomy: default present-and-wait at ship (scope + issue body user-approved in-session 2026-07-10; implementation proceeds, ship sign-off human)
+- status: shipped, awaiting-merge — PR https://github.com/PyAutoLabs/autolens_assistant/pull/46 (58998e4; docs-only, citations check clean); ship sign-off given in-session; merge stays human
+- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/46
+- heart-ack: standing 6-reason YELLOW set (same set human-acked repeatedly in-session 2026-07-10); binds to exactly that set
+- autonomy: default present-and-wait (scope + issue body + ship all user-approved in-session 2026-07-10)
 - note: head of the autolens_assistant batch — queue sequenced after ship: science_project_api_gate → science_project_per_project_literature (core hybrid only) → script_to_notebook (reuse PyAutoBuild autobuild/generate.py) → live_visual_update_context → portable_user_defaults (rescoped discovery-half); stub_skill_recipes stays open as rolling queue (NOT done). In-place on the autolens_assistant main checkout (public template, no personal content); untracked james.bib present — personal, untouched
 - worktree: none (in-place branch feature/shareable-science-projects)
 - repos:
