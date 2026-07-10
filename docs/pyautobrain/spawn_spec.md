@@ -36,8 +36,8 @@ deliberately, never silently shipped into a template.
 | 3 | `README.md` | KEEP verbatim (already generic post-Phase-1) |
 | 4 | `repos.yaml` | SUBSTITUTE → the **template body map**: the five organ rows kept with `github:` owner replaced by `YOURORG`; all live satellite rows replaced by the PyAutoProject family rows (`PyAutoProject` category `library`, `autoproject_workspace` category `workspace`, `autoproject_workspace_test` category `workspace_test`) + a commented-out `autoproject_assistant` row ("uncomment when the clone agent seeds it") |
 | 5 | `active.md`, `planned.md`, `complete.md`, `parked.md`, `ideas.md`, `queue.md`, `autonomy_log.md` | EMPTY → header line + schema pointer comment only (e.g. `# Active Tasks` + `<!-- schema: REFERENCE.md -->`); autonomy_log keeps its schema header rows |
-| 6 | `feature/ bug/ refactor/ docs/ test/ release/ maintenance/ research/ experiment/ triage/` | SKELETON → keep the work-type dir with a single `.gitkeep`; drop all prompts and target subdirs |
-| 7 | `issued/ z_features/ z_vault/ autoprompt/ docs/` | DROP (lifecycle + instance content; docs/ holds live scoping notes) |
+| 6 | `feature/ bug/ refactor/ docs/ test/ release/ maintenance/ research/ experiment/ triage/` | SKELETON → keep the work-type dir with a single `.gitkeep`; drop all prompts and target subdirs (`docs/` is a work-type — its live scoping notes drop with the rest of its content) |
+| 7 | `issued/ z_features/ z_vault/ autoprompt/` + instance root docs (`dashboard.md`, `overview.md`) + legacy pre-migration prompt dirs (`autolens/`) | DROP (lifecycle + instance content) |
 | 8 | `skills/**` | KEEP verbatim (`OWNERSHIP.md`, `create_issue/` are generic) |
 | 9 | `.github/**` | KEEP verbatim EXCEPT workflows that reference live secrets/repos beyond the org placeholder — those SUBSTITUTE `PyAutoLabs` → `YOURORG` and keep |
 
@@ -45,14 +45,14 @@ deliberately, never silently shipped into a template.
 
 | # | Pattern | Action |
 |---|---------|--------|
-| 1 | `bibliography/*.py`, `bibliography/README.md`, `Makefile`, `LICENSE`, `CONTRIBUTING.md`, `AGENTS.md`, `CLAUDE.md`, `.gitignore` | KEEP verbatim (tooling + schema + policy) |
+| 1 | `bibliography/*.py`, `bibliography/README.md`, `scripts/`, `tests/`, `Makefile`, `LICENSE`, `CONTRIBUTING.md`, `AGENTS.md`, `CLAUDE.md`, `.gitignore` | KEEP verbatim (tooling + schema + policy — scripts/tests are the citation-validation tooling the Makefile drives) |
 | 2 | `bibliography/*.bib` and any bibliography data files | EMPTY → file kept with header comment ("populated by your literature") |
-| 3 | `lensing_wiki/CLAUDE.md` (the schema definition) | SUBSTITUTE → becomes `example_wiki/CLAUDE.md` verbatim (the schema is the asset) |
+| 3 | the wiki schema | GENERATE → `example_wiki/CLAUDE.md` is a **domain-neutral schema asset** held inside spawn (the live `lensing_wiki/CLAUDE.md` is lensing-flavoured throughout — a verbatim copy fails the canary test; the generic rewrite preserves the schema, drops the domain) |
 | 4 | `*_wiki/**` (all live sub-wikis, all pages) | DROP; generate instead ONE `example_wiki/` containing the schema CLAUDE.md (rule 3), an `index.md` skeleton listing zero sources, and one `sources/EXAMPLE_stub.md` demonstrating the stub format (hand-written once, stored inside spawn as a heredoc/template asset — not copied from live content) |
 | 5 | `index.md` | SUBSTITUTE → skeleton: intro line + a table with the single `example_wiki/` row + "add sub-wikis following the same schema" |
 | 6 | `reading-queue.md` | EMPTY → header + section-format comment |
-| 7 | `README.md` | SUBSTITUTE `PyAutoLabs` → `YOURORG`; the sub-wiki table → the single example row |
-| 8 | root `*.bib` legacy files, PDFs, any personal notes | DROP |
+| 7 | `README.md` | GENERATE → a template README asset held inside spawn (text surgery on the live README is brittle across edits; the asset keeps `--check` round-trips stable) |
+| 8 | root `*.bib` legacy files, PDFs, legacy paper-notes families (`CTI/`, `DarkMatterModels/`, `Medical/`, `LightProFFits/`, `euclid.sty`, loose paper stubs), any personal notes | DROP |
 
 **Privacy invariant (hard rule):** no live wiki page, bibliography entry,
 reading-queue line, prompt, or registry entry may ever appear in a template
@@ -82,7 +82,8 @@ content):
 |-------|-------------|
 | `PyAutoLabs` (owner positions only — GitHub slugs, URLs) | `YOURORG` |
 | live satellite repo rows in body-map contexts | the PyAutoProject family |
-| version pins | `0000.0.0.0` placeholder |
+| version pins (spawned Mind/Memory contexts) | `0000.0.0.0` placeholder |
+| the family workspace pin | the family's own release version (`0.1.0` at seed) — it must MATCH the template library's `__version__` |
 
 Never blanket-substitute repo-name strings inside KEEP-verbatim scripts —
 `scripts/` reads identity from `repos.yaml` at runtime, which is exactly why
