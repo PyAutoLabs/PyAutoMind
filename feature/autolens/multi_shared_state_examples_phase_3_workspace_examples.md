@@ -10,9 +10,14 @@ Add **docstring'd sections to the existing examples** (per the parent prompt —
 extend, don't rewrite) under `autolens_workspace/scripts/multi/features/`:
 
 - `same_wavelength/` — the headline case: per-exposure pixel offsets, one
-  shared/shifted Delaunay mesh, single source reconstruction (per the Phase 1
-  semantics). Shifts default known/fixed; show the optional free (dy,dx)
-  nuisance-parameter variant with Gaussian priors from registration residuals.
+  shared/shifted Delaunay mesh. Per the locked Phase 1 semantics (#599 D2:
+  option (b)), each exposure keeps its own reconstruction but all live on the
+  **identical** source-plane mesh (pixel-by-pixel comparable; their differences
+  are diagnostic of registration/PSF quality). The prose must be honest that
+  this is not a literal single joint solve — that precision variant is the
+  `multi_joint_stack_inversion` follow-up. Shifts default known/fixed; show the
+  optional free (dy,dx) nuisance-parameter variant with Gaussian priors from
+  registration residuals.
 - `wavelength_dependence/` (and/or `pixelization/` if the design routed it
   there) — shared shifted mesh, independent per-dataset reconstructions.
 - `imaging_and_interferometer/` — the cross-dataset-type variant.
