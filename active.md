@@ -11,8 +11,10 @@
 
 ## markdown-example-renderings
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/134
-- status: library-dev — build generate_markdown.py (execute curated scripts → nbconvert md + PNGs) in PyAutoBuild, then autolens pilot (root start_here + imaging five + guides trio); phase 2 (other dataset types/workspaces/HowTo) files as a new prompt at ship
-- autonomy: safe effective (--auto launched 2026-07-10; docs ≤ medium after phasing; plan on issue)
+- status: shipped, awaiting-merge — BOTH PRs open behind four-leg gate: PyAutoBuild#137 (generator, 100 tests) + autolens_workspace#263 (9 executed pages, 83 PNGs, README links); merge order #137 first (library-first gate); phase-2 rollout prompt filed docs/pyautobuild/markdown_example_renderings_rollout.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/137
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/263
+- autonomy: safe effective (--auto launched 2026-07-10; docs ≤ medium after phasing; plan on issue); calibration row appended at PR-open
 - heart-ack: in-session 2026-07-10 — exact 7-reason set: workspace validation not passing (3 failed 2026-07-09T09-48-30Z); 58 stale parked scripts; autolens_assistant pinned BEHIND installed; manifest drift tenant firewall 1 mismatch; PyAutoMind open PR 10d old; install verification not run; no release validation for current source. Binds to exactly this set; any new reason parks.
 - note: execution never TEST_MODE; modeling images via completed-run resume cache (first build pays one real sampling run; resume proven 122s vs 1h55m); images committed — verify .gitignore doesn't swallow markdown/ outputs
 - worktree: ~/Code/PyAutoLabs-wt/markdown-example-renderings

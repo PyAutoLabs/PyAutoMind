@@ -130,3 +130,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-10 | autofit-assistant-birth (phase 4) | supervised | tests 52/52 / smoke n/a / review human-sign-off-chain / heart newborn-legs-1-3-green | amended (#3: CI version-drift leg caught stale baseline post-open; self-corrected 62c34d2, then merged) |
 | 2026-07-10 | multi-shared-state-scoped-preloads | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked-same-set | merged-unchanged |
 | 2026-07-10 | multi-shared-state-examples-phase-3 | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked-same-set | merged-unchanged |
+| 2026-07-10 | markdown-example-renderings | safe | tests 100 pass (Build; ws n/a) / smoke superseded-by-build (all 9 curated executed real) / review CLEAN (2 findings fixed in-run) / heart YELLOW-acked-7-set | PR-open (#137, ws#263) |
