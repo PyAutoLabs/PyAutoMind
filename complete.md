@@ -5752,3 +5752,13 @@
 - prs: autolens_workspace#258 (merged e53a0062, squash) + autogalaxy_workspace#124 (merged f611b8f4, squash)
 - summary: Normalized PSF-convolution docs across 41 simulator.py (both workspaces). Tier A (3 reference files: imaging/simulator.py both + autolens group/simulator.py) got a __PSF Convolution__ docstring section in __Contents__ with the over-sample note as prose (not `#` comments) + `convolve_over_sample_size = 1`. Tier B (38 others) got just `convolve_over_sample_size=1` on from_gaussian — no over-sampling examples. 10 autogalaxy CRLF files edited CRLF-safe (1-line diffs). Interferometer/point-multiple/weak-base out of scope (no real-space PSF). Notebooks+navigator catalogue regenerated. Validation: 40/40 compile, 5 representative sims run end-to-end. Heart YELLOW at ship (all reasons pre-existing/unrelated, user-acked); user directed merge in-session.
 - overreach-corrected: mid-turn I ported the full __Oversampled PSF__ runnable appendix into group + autogalaxy-imaging (misread "same doc"); user stopped it ("normal simulator.py files should just have value 1 + docs, not oversampling examples") — reverted while still uncommitted, PRs never contained it. Lesson: "reference file gets the section" ≠ "port the runnable appendix"; normal examples get the flag + one-line docs only.
+
+## multi-shared-state-core-api
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/379 (CLOSED)
+- completed: 2026-07-10
+- epic: multi_shared_state_examples phase 2/4 (design PyAutoLens#599 D1-D6 + reg amendment)
+- library-pr:
+  - https://github.com/PyAutoLabs/PyAutoArray/pull/380 (merged f8a32d43b)
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/600 (merged 1513236da)
+- repos: PyAutoArray, PyAutoLens
+- notes: Imaging shared-state consumer under --auto safe (four-leg gate: 896+962+378 tests, six-workspace smoke all green after contention reruns, review CLEAN w/ end-to-end FactorGraph bit-identical parity + compute-once, Heart YELLOW 7-reason set human-acked). Shared object = source-plane mesh geometry ONLY (aa.PreloadsImaging; no H per user amendment, no F/L/mapper — per-exposure PSFs/offsets). TracerToInversion pg-list preload consult; FitImaging preloads threading; pytree no_flatten. Two CRLF diff-inflation traps caught (autoarray __init__.py, autolens test file). Merged + cleaned same day; phase 3 follows.
