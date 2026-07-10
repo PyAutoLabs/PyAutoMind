@@ -2,10 +2,17 @@
 
 Type: feature
 Target: autolens_assistant
-Difficulty: large
+Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+
+**Rescoped by user decision 2026-07-10:** implement the **environment-discovery half now** —
+inspect Git/GitHub identity and authentication, available SSH host aliases where practical, and
+the existing profile/project configuration *before* asking the user questions, with the
+precedence order below. The `~/.config/autolens_assistant/user.yaml` defaults-file half stays
+**evidence-gated and deferred** exactly as written: do not add the YAML until real multi-project
+usage shows which non-discoverable values recur.
 
 `autolens_assistant` already separates user and environment state across appropriate sources:
 
