@@ -148,3 +148,14 @@
 - conflict-override: PyAutoArray claims kernel-forward-chunking + rect-adapt verified zero file overlap (both touch only inversion/mesh/ kernel-CDF files; this task touches preloads/ + imaging analysis) — proceeding in a fresh worktree rather than parking in planned.md
 - epic: phase 2/4 of multi_shared_state_examples (design locked on PyAutoLens#599 incl. H-removal amendment)
 - heart-ack: acknowledged by user 2026-07-10 (in-session question), exact reason set: [workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); autolens_assistant pinned BEHIND installed 2026.7.6.649; manifest drift tenant firewall 1 mismatch vs repos.yaml; PyAutoMind open PR 10d old; install verification not run; no release validation for current source] — binds to this launch only; any new reason or RED parks the run
+
+## autofit-assistant-birth
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/1
+- session: (this CLI session, 2026-07-10)
+- status: workspace-dev — Phase 0 skeleton hand-authored direct to main (empty-repo birth; PR impossible for first push); phases 1-4 (workspace pairing / stats wiki / domain adaptation+demos / benchmarks+publish) via feature PRs, stacked if a prior phase is unmerged
+- autonomy: supervised effective (--auto launched 2026-07-10; header supervised = feature too-large cap; NO heart-ack given — any Heart YELLOW at ship parks)
+- launch-gates: answered in-session 2026-07-10 — repo PUBLIC at birth (dedicated repo-creation question); Phase 0 HAND-AUTHORED (clone-v1 plan as file-inventory checklist only); demos = 1D Gaussian + SNe cosmology distance-modulus fit
+- note: Feature-Agent research re-home OVERRULED at launch (scoping done at intake; design in prompt); absorbs research/autofit_assistant/autofit_assistant_planning.md (retire at ship); PyAutoMemory never referenced in public output (Phase 2 pages are generalised rewrites)
+- worktree: none (in-place: ~/Code/PyAutoLabs/autofit_assistant, new clone)
+- repos:
+  - autofit_assistant: main (phase 0), then feature/afa-phase-<n>
