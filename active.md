@@ -1,5 +1,13 @@
 # Active Tasks
 
+## lenstool-scaling-reference-magnitude
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
+- status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). Ship as 3 sequential PRs: PR1 cluster → PR2 group+imaging feature examples → PR3 SLaM pipelines
+- note: CONCURRENT with markdown-renderings-workspaces batch 2a (#264) by user override 2026-07-10 — file sets disjoint (2a edits config/*.yaml, cluster EXCLUDED; ours edits scripts/). Start with PR1 (cluster) = zero overlap with 2a. Watch for notebook-regen collisions on group/imaging at merge time
+- worktree: ~/Code/PyAutoLabs-wt/lenstool-scaling-reference-magnitude
+- repos:
+  - autolens_workspace: feature/lenstool-scaling-reference-magnitude
+
 ## markdown-renderings-workspaces
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/264
 - status: workspace-dev — batch 2a: extend autolens config (interferometer/point_source/multi/group/weak, cluster EXCLUDED) + new autogalaxy config (root+imaging/interferometer/multi/ellipse/guides) + new autofit config (overview 1-3); sequential real builds (autofit fast-first → autogalaxy → autolens-remaining); ship 3 PRs
