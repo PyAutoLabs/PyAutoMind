@@ -1,17 +1,5 @@
 # Active Tasks
 
-## assistant-benchmarks
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/57
-- status: awaiting-input — BUILD COMPLETE, parked at ship sign-off (supervised + Heart YELLOW unacked). Committed locally, NOT pushed: autolens_assistant a5ad099 (benchmarks/ package: 4 frozen cards + rubrics, benchmark.py new-run/score/report harness, protocol docs, README sync incl. user's SLACS header edit, maintainer.md boundary, citation sweep extended) + PyAutoBrain 8d4575c (_clone.py partition patterns; analyze witness unclassified 0). Tests 52+22 pass; citations clean
-- question: https://github.com/PyAutoLabs/autolens_assistant/issues/57#issuecomment-4935507958
-- resume: on "ship" answer — push both feature/assistant-benchmarks branches, open assistant PR (ref #57) + Brain PR (cross-ref), no pending-release label (not in release train), stop at PR-open; PyAutoBrain main checkout was restored to main (branch exists locally)
-- autonomy: supervised effective (--auto launched 2026-07-10; feature cap at too-large; plan on issue #57; NO heart-ack given — Heart YELLOW at ship parked as contracted)
-- note: follow-up calibration-campaign prompt filed at research/autolens_assistant/benchmark_calibration_runs.md
-- worktree: none (in-place: autolens_assistant + PyAutoBrain on feature/assistant-benchmarks)
-- repos:
-  - autolens_assistant: feature/assistant-benchmarks
-  - PyAutoBrain: feature/assistant-benchmarks
-
 ## solver-branch-flips
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/377
 - status: findings-posted (issue #377 comment 2026-07-10) — flips are JIT-ONLY (eager clean; XLA-fusion ulp crossing a discrete threshold); solver EXONERATED (persists unconstrained, tol-invariant); interior bilinear crossings continuous; CONCRETE DEFECT: linear rank-CDF forward is discontinuous at the data bbox edge (U jumps 1/(N+1) at the max point, measured 1.25e-3 weight redistribution at 1e-13 crossing); kernel-config amplifier still graph-fusion-localized. Recommendations on issue: linear-CDF clamp fix (own gated task, FoM-impact check), kernel-side in-graph instrumentation (follow-up), step-sweep already shipped
