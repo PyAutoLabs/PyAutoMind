@@ -5762,3 +5762,17 @@
   - https://github.com/PyAutoLabs/PyAutoLens/pull/600 (merged 1513236da)
 - repos: PyAutoArray, PyAutoLens
 - notes: Imaging shared-state consumer under --auto safe (four-leg gate: 896+962+378 tests, six-workspace smoke all green after contention reruns, review CLEAN w/ end-to-end FactorGraph bit-identical parity + compute-once, Heart YELLOW 7-reason set human-acked). Shared object = source-plane mesh geometry ONLY (aa.PreloadsImaging; no H per user amendment, no F/L/mapper — per-exposure PSFs/offsets). TracerToInversion pg-list preload consult; FitImaging preloads threading; pytree no_flatten. Two CRLF diff-inflation traps caught (autoarray __init__.py, autolens test file). Merged + cleaned same day; phase 3 follows.
+
+## multi-shared-state-examples-phase-3-workspace-examples
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/260 (CLOSED)
+- completed: 2026-07-10
+- epic: multi_shared_state_examples phase 3/4 (+ the scoped-preloads library follow-up)
+- library-pr:
+  - https://github.com/PyAutoLabs/PyAutoArray/pull/381 (merged)
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/601 (merged)
+- workspace-pr:
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/261 (merged)
+  - https://github.com/PyAutoLabs/autolens_workspace_test/pull/162 (merged)
+  - https://github.com/PyAutoLabs/autolens_profiling/pull/60 (merged)
+- repos: PyAutoArray, PyAutoLens, autolens_workspace, autolens_workspace_test, autolens_profiling
+- notes: Docstring'd shared-mesh API sections on the multi feature examples (same_wavelength headline + wavelength_dependence + imaging_and_interferometer + dataset_offsets cross-ref); multi shared_preloads parity script (identical-exposure bit-parity numpy+JAX, g+r shared-mesh vmap==jit; in smoke_tests.txt); runtime measurement 1.14x at hst x 4 exposures (mesh-only, consistency-first framing per #599 D1). REVIEW FIND: cross-dataset-type preloads hazard in merged phase 2 (lead's shared preloads reach every factor; an interferometer mapper/F would silently corrupt an imaging fit) fixed via dataset-scoped consumption (_preloads_scoped: same-type identity, cross-type mesh-only view) + interferometer shared_state_from now populates mesh fields (D5 both directions). TRAP recorded: crashed JAX runs can poison the gitignored lensed_source.fits adapt cache with in-mask NaNs (qhull NaN error) — delete + regenerate. Simulators deliberately untouched (dataset_offsets demos shifts). Same-lambda literal joint stacked inversion remains the un-issued multi_joint_stack_inversion follow-up prompt.
