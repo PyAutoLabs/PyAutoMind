@@ -22,7 +22,7 @@
 
 ## preopt-breakdown-dashboard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
-- status: workspace-dev — laptop-CPU breakdown campaign IN FLIGHT (8 cells sequential: imaging hst dense+sparse, interferometer+datacube alma_high); Q1 platform-matrix batched on #59
+- status: workspace-dev — Q1 ANSWERED (GPU-first doctrine): A100 = canonical breakdown, CPU = fallback, HPC-CPU leg dropped; 15 submit_breakdown_* committed (3bb613a), A100 leg dispatch-ready but RAL GPU nodes DOWN (login up); laptop-CPU fallback leg in flight (mge done 150s, 7 cells behind)
 - campaign: driver scratchpad/breakdown_campaign.sh (session a66a757a), logs scratchpad/breakdown_logs/; interruption-safe — each cell's JSON persists to results/breakdown/ on completion; cold-resume = rerun remaining cells' commands from the driver (skip cells whose v-current JSON exists)
 - autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds over maintenance cap safe; plan on issue; no heart-ack given — any Heart YELLOW at ship parks)
 - claim-override: human-directed 2026-07-10 — proceeds alongside profiling-preopt-campaign's autolens_profiling claim ("i dont see a clash"); phase 4 works likelihood_breakdown/ + README, phase 3 works likelihood_runtime/ — distinct paths; coordinate merge order at ship (README/build tooling may touch both — rebase on campaign branch if needed)
