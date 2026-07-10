@@ -106,24 +106,14 @@
 
 ## ep-examples-tests
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/81
-- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: awaiting-input — implementation complete + validated (tutorial converges 49.96±0.12; 3 integration scripts PASS; uncommitted); parked at ship sign-off incl. Heart YELLOW ack
+- session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21 (took over from 3589268b at ship)
+- status: workspace-shipped, awaiting-merge — human-approved 2026-07-10; PRs autofit_workspace#82 + autofit_workspace_test#39 (pending-release); 3 integration scripts re-validated PASS against post-#1345/#1348 main incl. Heart YELLOW ack
 - question: https://github.com/PyAutoLabs/autofit_workspace/issues/81#issuecomment-4917307451
 - autonomy: supervised (--auto, launched 2026-07-08, plan approved in-session, no heart-ack yet)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/ep-examples-tests
 - repos:
   - autofit_workspace: feature/ep-examples-tests
   - autofit_workspace_test: feature/ep-examples-tests
-
-## ep-graphical-docs
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1333
-- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: library-shipped, awaiting-merge (extended 2026-07-08: seam contract — README §8 lowering table, AGENTS.md seam rule, 4 seam tests replacing the dead #1153 test; suite 1425 pass)
-- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1334
-- autonomy: supervised (--auto, launched 2026-07-08; heart YELLOW acked in-session at ship)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/ep-graphical-docs
-- repos:
-  - PyAutoFit: feature/ep-graphical-docs
 
 ## ep-priors-fable-reassess
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1330
