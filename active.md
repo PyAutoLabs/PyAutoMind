@@ -1,5 +1,20 @@
 # Active Tasks
 
+## pyautoscientist-phase2
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/68
+- status: library-dev — pyautoscientist RTD in PyAutoBrain/docs/ (Sphinx+Furo+MyST, docs CI caller → Heart reusable docs-build.yml with additive docs-only case, baseline 0, shared pyauto.css), adoption guide (config-diff fork §8), category contract, worked example; CONTRIBUTING ×5 + README RTD-link lines; hub section on pyautolabs.github.io. Human leg post-merge: import pyautoscientist project on readthedocs.org → PyAutoLabs/PyAutoBrain
+- autonomy: supervised (no --auto; present-and-wait at ship sign-off + Heart YELLOW ack)
+- claim-override: human-approved 2026-07-10 — parallel DISJOINT PyAutoBrain claim alongside nightly-loud-failure (#67, nightly driver files); phase 2 touches docs/**, CONTRIBUTING.md, README.md one line, .github/workflows/docs.yml — zero overlap, coordinate merge order at ship
+- note: prose is judgment-tier (RTD pages written in-session, no delegation); acceptance = phase 1-2 acceptance on the issued prompt; Heart docs-build.yml extension is additive CI config (disclosed)
+- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-phase2
+- repos:
+  - PyAutoBrain: feature/pyautoscientist-phase2
+  - PyAutoMind: feature/pyautoscientist-phase2
+  - PyAutoHeart: feature/pyautoscientist-phase2
+  - PyAutoMemory: feature/pyautoscientist-phase2
+  - PyAutoBuild: feature/pyautoscientist-phase2
+  - pyautolabs.github.io: feature/pyautoscientist-phase2
+
 ## per-frame-psf
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/21
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
