@@ -45,7 +45,7 @@
 ## pj011646-wfc3-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/25
 - session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
-- status: workspace-dev — phase 0 (inspect Aris dataset, resolve coordinates/program)
+- status: workspace-dev — phases 0-2 done (target=14653 F160W 5exp; DQ-512 blob hole -> bits-dial bug filed bug/pyautoreduce/wfc3_ir_dq_bits_dial.md, final_bits=512 workaround in script; orientation id-71.1deg corr 0.997; data ratio 1.016; noise x4.9 decomposed = R 2.39 x ours-conservative 1.58 x aris-underpredicts 1.3, aris map = 0.62x his own sky scatter; PSF 0.259 vs 0.202); phase 3 fits QUEUED behind free memory (watcher armed; laptop at 12/15GB from other sessions)
 - autonomy: safe effective (--auto launched 2026-07-10; plan human-approved in-session pre-launch; no heart-ack given)
 - note: keck-ao/slacs1430 pattern — analysis on PyAutoReduce main, NO worktree claim (jwst-frame-feasibility holds it); ship gated on claim release or human direction; autolens_assistant driver-only (in-place branch belongs to assistant-ref-mechanics — scratch writes only); model-parity fits SERIAL on quiet machine (~5.5GB)
 - worktree: none (analysis on PyAutoReduce main; branch feature/pj011646-wfc3-parity only at ship)
