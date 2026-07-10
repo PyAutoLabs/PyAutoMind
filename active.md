@@ -2,9 +2,11 @@
 
 ## assistant-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/57
-- status: workspace-dev — build benchmarks/ package (4 frozen prompt cards + rubrics), autoassistant/benchmark.py harness (new-run/score/report), protocol docs, README sync (includes user's pending SLACS header edit), clone-boundary classification (maintainer.md + _clone.py patterns — unclassified files hard-fail births)
-- autonomy: supervised effective (--auto launched 2026-07-10; feature cap at too-large; plan on issue #57; NO heart-ack given — any Heart YELLOW at ship parks)
-- note: in-place feature branches both repos (assistant-ref-mechanics precedent); PyAutoBrain edit ships as its own small PR; follow-up calibration-campaign prompt files at ship, not before
+- status: awaiting-input — BUILD COMPLETE, parked at ship sign-off (supervised + Heart YELLOW unacked). Committed locally, NOT pushed: autolens_assistant a5ad099 (benchmarks/ package: 4 frozen cards + rubrics, benchmark.py new-run/score/report harness, protocol docs, README sync incl. user's SLACS header edit, maintainer.md boundary, citation sweep extended) + PyAutoBrain 8d4575c (_clone.py partition patterns; analyze witness unclassified 0). Tests 52+22 pass; citations clean
+- question: https://github.com/PyAutoLabs/autolens_assistant/issues/57#issuecomment-4935507958
+- resume: on "ship" answer — push both feature/assistant-benchmarks branches, open assistant PR (ref #57) + Brain PR (cross-ref), no pending-release label (not in release train), stop at PR-open; PyAutoBrain main checkout was restored to main (branch exists locally)
+- autonomy: supervised effective (--auto launched 2026-07-10; feature cap at too-large; plan on issue #57; NO heart-ack given — Heart YELLOW at ship parked as contracted)
+- note: follow-up calibration-campaign prompt filed at research/autolens_assistant/benchmark_calibration_runs.md
 - worktree: none (in-place: autolens_assistant + PyAutoBrain on feature/assistant-benchmarks)
 - repos:
   - autolens_assistant: feature/assistant-benchmarks
