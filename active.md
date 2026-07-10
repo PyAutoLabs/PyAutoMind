@@ -129,9 +129,8 @@
   - PyAutoBuild: feature/afa-wiki-currency-wiring
 
 ## afa-skill-tranche
-- issue: (created at start — autofit_assistant)
-- session: (this CLI session, 2026-07-10)
-- status: workspace-dev — authoring af_chain_searches / af_custom_analysis / af_simulate_dataset / af_plot_fit / af_debug_fit_failure per issued/deferred_skill_tranche.md
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/8
+- status: shipped — PR-open (autofit_assistant#9, 837e39b; ship sign-off human in-session); awaiting human merge; skill roster complete at 19
 - autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds); heart-ack: same set as afa-wiki-currency-wiring above (one in-session ack covering both)
 - note: Feature-Agent research re-home overruled (prompt fully scoped); recipes must execute against installed stack; four currency legs at ship
 - worktree: none (in-place: autofit_assistant on feature/afa-skill-tranche)
