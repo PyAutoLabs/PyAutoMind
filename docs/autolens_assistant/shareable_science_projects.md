@@ -1,14 +1,55 @@
-# Shareable science projects: with autolens_assistant a user can make a
+# Shareable science projects — fork/clone-and-continue + open-source-your-paper emphasis
 
-Type: triage
-Target: workspaces
-Repos:
-- autolens_assistant
-Difficulty: small
-Autonomy: safe
-Priority: normal
+Type: docs
+Target: autolens_assistant
+Difficulty: medium
+Autonomy: supervised
+Priority: high
 Status: formalised
 
-Shareable science projects: with autolens_assistant a user can make a science project which becomes its own github repo; encourage easy sharing so a collaborator can fork or clone it and continue the work with their own autolens_assistant; emphasise this in the autolens_assistant design; make user-facing aspects clear that this is a great way to open-source the whole project behind a paper (data, results, all python scripts).
+A science project created by `start-new-project` already becomes its own git/GitHub repo with
+a Create → Work → Collaborate → Publish lifecycle, a paper-hardening Publish gate, Zenodo/DOI
+minting and CITATION.cff. What is missing is the **user-facing emphasis**: the design should
+make sharing the default expectation, and pitch the project repo as the natural open-source
+companion to a paper.
 
-<!-- formalised by the Intake (Conception) Agent on 2026-07-10 from user-intake -->
+Three surfaces (all verified against the current repo state):
+
+1. **Generated project `README.md` template — currently missing.** The Create scaffold in
+   `@autolens_assistant/skills/start-new-project.md` generates no `README.md`, yet the Publish
+   gate references one (data-availability statement). Add a README template to the Create
+   scaffold that says, near the top:
+   - this repo runs **standalone** for reproducing the analysis (env via `activate.sh`, code
+     in `scripts/`, provenance in `results/manifests/`);
+   - **fork or clone it and continue the work**: point your own `autolens_assistant` at it
+     (`$AUTOLENS_ASSISTANT` → sibling → clone-on-demand, already implemented) — see `AGENTS.md`;
+   - a placeholder data-availability section the Publish gate later fills in.
+   This absorbs `docs/autolens_assistant/science_project_collaborator_clone.md` (its
+   assistant-ref dependency is settled; that prompt is retired into this one).
+
+2. **`start-new-project.md` Collaborate phase.** Actively encourage sharing, and spell out the
+   fork-and-continue flow for a collaborator arriving at a cloned/forked project with their own
+   assistant: what they get (skills + wiki via refer-back, the API code-gate, the journal), and
+   what their first session looks like.
+
+3. **`autolens_assistant` top-level `README.md`.** User-facing pitch: a science project is a
+   wonderful way to **open-source the whole project behind a paper** — data (or its
+   availability statement), results, and every python script — with the existing Publish
+   gate / Zenodo / CITATION.cff machinery as the substance. Agentic-AI framing is first-class
+   (per the user-docs framing rule); no llms.txt mechanics.
+
+Keep the generated README short — the detail lives in the project's thin `AGENTS.md` and the
+skill itself. The repo is a generic public template: no personal content.
+
+## Original request
+
+> I want it so that with autolens assistant a user can basically make a science project which
+> becomes its own github repo, and then they should be encouraged to be able to easily share
+> that project and another friend could come in, fork or clone it and cotinue the work with
+> their own autolens assistant. Emphassie this aspect in the autolens_assistant design. Also
+> make it clear this would be a wonderful way to put up the open-source repo that goes with a
+> paper, so make sure autolens_assistant has user-facing aspects which make it clear its great
+> for open sourceing a whole project (data, results, all python scripts).
+
+<!-- formalised by the Intake (Conception) Agent on 2026-07-10 from user-intake; re-homed and
+     expanded from triage/ by the routing session (verified scope, user-approved) -->
