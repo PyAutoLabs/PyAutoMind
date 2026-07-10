@@ -1,16 +1,5 @@
 # Active Tasks
 
-## shareable-science-projects
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/45
-- status: shipped, awaiting-merge — PR https://github.com/PyAutoLabs/autolens_assistant/pull/46 (58998e4; docs-only, citations check clean); ship sign-off given in-session; merge stays human
-- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/46
-- heart-ack: standing 6-reason YELLOW set (same set human-acked repeatedly in-session 2026-07-10); binds to exactly that set
-- autonomy: default present-and-wait (scope + issue body + ship all user-approved in-session 2026-07-10)
-- note: head of the autolens_assistant batch — queue sequenced after ship: science_project_api_gate → science_project_per_project_literature (core hybrid only) → script_to_notebook (reuse PyAutoBuild autobuild/generate.py) → live_visual_update_context → portable_user_defaults (rescoped discovery-half); stub_skill_recipes stays open as rolling queue (NOT done). In-place on the autolens_assistant main checkout (public template, no personal content); untracked james.bib present — personal, untouched
-- worktree: none (in-place branch feature/shareable-science-projects)
-- repos:
-  - autolens_assistant: feature/shareable-science-projects
-
 ## jwst-frame-products
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/27
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
