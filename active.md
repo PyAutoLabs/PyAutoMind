@@ -140,7 +140,7 @@
 ## autofit-assistant-birth
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/1
 - session: (this CLI session, 2026-07-10)
-- status: workspace-dev — Phase 0 SHIPPED to main (3667f84); Phase 1 BUILT (d388ce1 local, 50/50 tests, audit/citations/idioms clean) PARKED awaiting-input at ship sign-off; Phase 2 (stats wiki) continuing on stacked branch
+- status: awaiting-input — Phase 0 SHIPPED to main (3667f84); Phases 1-3 BUILT+VERIFIED on stacked local branches (d388ce1 tooling+9 skills 50/50 tests; afa0ffa 16-page wiki provenance-stamped; 6e1426c domain-adaptation skills + demos validated: Gaussian recovers truth, SNe Om=0.344 H0=73.1 vs Brout22); ALL parked behind one ship sign-off; Phase 4 (benchmarks/hpc/llms.txt/CI) deliberately queued until sign-off (cards bind to reviewable README/demos)
 - question: https://github.com/PyAutoLabs/autofit_assistant/issues/1#issuecomment-4936403760 (2 scope calls: benchmark harness->Phase 4; 5 skills deferred to 1b/3)
 - autonomy: supervised effective (--auto launched 2026-07-10; header supervised = feature too-large cap; NO heart-ack given — any Heart YELLOW at ship parks)
 - launch-gates: answered in-session 2026-07-10 — repo PUBLIC at birth (dedicated repo-creation question); Phase 0 HAND-AUTHORED (clone-v1 plan as file-inventory checklist only); demos = 1D Gaussian + SNe cosmology distance-modulus fit
