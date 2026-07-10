@@ -126,7 +126,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-10 | multi-shared-state-core-api | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked | pr-open |
 | 2026-07-10 | autofit-assistant-birth (phase 1) | supervised | tests 50/50 / smoke n/a (no downstream surface) / review parked-to-human / heart n/a-at-park | parked |
 | 2026-07-10 | multi-shared-state-core-api | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked | merged-unchanged |
-| 2026-07-10 | autofit-assistant-birth (phases 1-3) | supervised | tests 50/50 / smoke n/a / review human-sign-off / heart no-ack-not-reached | PR-open (#2) |
-| 2026-07-10 | autofit-assistant-birth (phase 4) | supervised | tests 52/52 / smoke n/a / review human-sign-off-chain / heart newborn-legs-1-3-green | PR-open (#3) |
+| 2026-07-10 | autofit-assistant-birth (phases 1-3) | supervised | tests 50/50 / smoke n/a / review human-sign-off / heart no-ack-not-reached | merged-unchanged (#2) |
+| 2026-07-10 | autofit-assistant-birth (phase 4) | supervised | tests 52/52 / smoke n/a / review human-sign-off-chain / heart newborn-legs-1-3-green | amended (#3: CI version-drift leg caught stale baseline post-open; self-corrected 62c34d2, then merged) |
 | 2026-07-10 | multi-shared-state-scoped-preloads | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked-same-set | merged-unchanged |
 | 2026-07-10 | multi-shared-state-examples-phase-3 | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked-same-set | merged-unchanged |
