@@ -1,7 +1,8 @@
 # PyAutoMind
 
-The Mind of the PyAuto organism: every piece of work in the ecosystem starts
-here, as a markdown file describing what you want in plain English. An AI
+The Mind of the PyAuto organism — where you lead: every piece of work in the
+ecosystem starts here, as a markdown file describing what you want in plain
+English. An AI
 agent (or a human) picks the file up and turns it into a tracked GitHub
 issue, a feature branch, and a merged pull request. No template, no special
 syntax — if you can describe the change in a GitHub issue, you can drive the
