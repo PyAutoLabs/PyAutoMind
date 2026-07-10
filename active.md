@@ -34,20 +34,6 @@
 - repos:
   - PyAutoArray: feature/rectangular-kernel-cdf-mesh
 
-## pyautoscientist-phase1
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/65
-- status: shipped, awaiting-merge — all 5 PRs open 2026-07-10: Brain#66, Mind#44 (firewall+REFERENCE split), Heart#49, Memory#17, Build#131; suites 8/244/78 pass; repos_sync --check green both roots incl. new firewall; Heart YELLOW (6 pre-existing reasons) acked in-session at ship; phases 2/3 anchored by issued/pyautoscientist_generalisation.md
-- autonomy: supervised (no --auto; present-and-wait at every checkpoint; one PR per repo, 5 PRs)
-- note-firewall: allowlist = frozen per-file token baseline over 72 files (broader than assessment §1 headline; disclosed on Mind#44); new fact in listed file or any fact in new file fails --check
-- note: Mind README is agent-load-bearing → schemas relocate verbatim to REFERENCE.md, agent pointers untouched; acceptance = zero diffs to skill bodies/AGENTS.md/hooks/runtime code except additive firewall check + Build gitignore; test_results/ already untracked (assessment claim stale)
-- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-phase1
-- repos:
-  - PyAutoBrain: feature/pyautoscientist-phase1
-  - PyAutoMind: feature/pyautoscientist-phase1
-  - PyAutoHeart: feature/pyautoscientist-phase1
-  - PyAutoMemory: feature/pyautoscientist-phase1
-  - PyAutoBuild: feature/pyautoscientist-phase1
-
 ## psf-convolution-docstring
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/257
 - status: workspace-dev — normalize __PSF Convolution__ section across 41 simulator.py (3 full-section reference files + 38 input-only) in autolens_workspace + autogalaxy_workspace
