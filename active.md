@@ -1,5 +1,15 @@
 # Active Tasks
 
+## nightly-loud-failure
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/67
+- session: claude --resume 3b933eca-2c18-4b0a-9360-b2818f9e4bc6
+- status: library-dev — driver hardening (fetch errors + anchor validation page loudly, never 💤); plan approved in-conversation 2026-07-10 ("do 1")
+- autonomy: default present-and-wait (no --auto); ship sign-off + Heart-YELLOW ack will be asked in-session
+- note: anchor manually reset to 2026-07-09T06:05:39Z pending fix; secrets now set on PyAutoBrain; tonight's nightly expected to stop loudly at Heart YELLOW
+- worktree: ~/Code/PyAutoLabs-wt/nightly-loud-failure
+- repos:
+  - PyAutoBrain: feature/nightly-loud-failure
+
 ## priors-messages-fixes
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1344
 - session: claude --resume 3fadc152-c0a8-442c-91e3-d4787a0b2d21
