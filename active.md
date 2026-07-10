@@ -27,7 +27,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/374
 - status: workspace-dev — library leg DONE on PR#374 (pending-release; 892 tests green; function-level JAX sanity eager==JIT 1e-13, AD==FD ~5e-10; Heart YELLOW 6-reason set acked in-session at ship); stash@{0} preamble DONE (rejected, parked.md retired, decision on issue); NOW = jax_grad certification (strict FD ALL params, imaging os_pix=1+4 + interferometer sparse + eager-vs-JIT + FoM parity few e-4) + developer README rows — certification gates PR#374 merge
-- autonomy: supervised (prompt header; no --auto — present-and-wait at ship gates)
+- autonomy: supervised effective (--auto continued in-session 2026-07-10 after human plan approval + library-ship sign-off; human directed "continue --auto" → proceed to PR-open, merge stays human)
+- heart-ack: in-session 2026-07-10 — exact set: workspace validation not passing (3 failed 2026-07-09T09-48-30Z); 58 stale parked scripts; autolens_assistant pinned BEHIND installed; PyAutoMind open PR 10d old; install verification not run; no release validation for current source. Binds to exactly this set; any new reason parks.
 - claim-override: human-directed 2026-07-10 — proceeds alongside rect-adapt's PyAutoArray claim ("distinct hunks, they don't clash"); coordinate merge order at ship
 - note: same-file adjacency with parked rect-adapt wt (#372, uncommitted, edges_transformed hunk only) — distinct hunks in mesh_geometry/rectangular.py, clean merge either order; workspace leg (autolens_workspace_test jax_grad + autolens_workspace_developer README row) follows library PR
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-kernel-cdf-mesh
