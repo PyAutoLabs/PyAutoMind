@@ -1,5 +1,16 @@
 # Active Tasks
 
+## frame-registration
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/19
+- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
+- status: library-dev — assessment DONE (relative registration 0.05-0.12 px empirical, FIT_REL_GSC242 group solution; findings on issue); implementing manifest registration block
+- autonomy: supervised effective (--auto chain 2026-07-09/10); recommendation (fixed-vs-free shifts) + ship sign-off park as one batched question
+- heart-ack: same 6-reason set as prior entries this chain; any new reason parks
+- note: PSF follow-up queued as feature/pyautoreduce/per_frame_psf.md (user: "Then do the PSF work"); slacs1430 phase-4 ship also wants PyAutoReduce — this task ships small and releases fast; disjoint files (package/frames.py+docs vs scripts/+prototypes/)
+- worktree: ~/Code/PyAutoLabs-wt/frame-registration
+- repos:
+  - PyAutoReduce: feature/frame-registration
+
 ## rectangular-kernel-cdf-mesh
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
 - status: library-dev — kernel-density CDF transform (Enzi RTU) as opt-in mesh variant RectangularKernelAdapt{Density,Image}; success = strict FD on ALL params in jax_grad scripts (imaging os_pix=1+4, interferometer sparse) + eager-vs-JIT + FoM parity; sampler work OUT of scope; stash@{0} inspection preamble (retire parked.md rectangular-spline-cdf)
