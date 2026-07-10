@@ -6,8 +6,9 @@
 - status: research — delta audit + literature scan; deliverable = docs/design/jwst.md go/no-go note
 - autonomy: supervised effective (--auto chain 2026-07-10); go/no-go recommendation is the checkpoint
 - heart-ack: same 6-reason set as prior entries this chain; any new reason parks
-- worktree: none (analysis on PyAutoReduce main; branch feature/jwst-frame-feasibility only at ship)
+- worktree: ~/Code/PyAutoLabs-wt/jwst-frame-feasibility
 - repos:
+  - PyAutoReduce: feature/jwst-frame-feasibility
 
 ## pyautoscientist-phase3a
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/71
