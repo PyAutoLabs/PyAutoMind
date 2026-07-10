@@ -1,5 +1,12 @@
 # Active Tasks
 
+## solver-branch-flips
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/377
+- status: research — root-cause the measure-thin solver branch flips (width <1e-15, ΔLL 1.6e-3–14, PDIP/fnnls tie-break suspect); reproduce at known bad input → instrument solve internals → mechanism tests (nnls_solver_tol, unconstrained control) → recommendation on issue
+- autonomy: supervised effective (research; human-directed follow-up 2026-07-10 "do these two"); small clearly-safe fix may ship behind gates, else file follow-up
+- worktree: none (read-only on main, keck-ao pattern; probes in scratch)
+- repos:
+
 ## keck-frame-feasibility
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/31
 - session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
