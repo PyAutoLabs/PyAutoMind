@@ -1,5 +1,27 @@
 # Active Tasks
 
+## rectangular-kernel-cdf-mesh
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/373
+- status: library-dev — kernel-density CDF transform (Enzi RTU) as opt-in mesh variant RectangularKernelAdapt{Density,Image}; success = strict FD on ALL params in jax_grad scripts (imaging os_pix=1+4, interferometer sparse) + eager-vs-JIT + FoM parity; sampler work OUT of scope; stash@{0} inspection preamble (retire parked.md rectangular-spline-cdf)
+- autonomy: supervised (prompt header; no --auto — present-and-wait at ship gates)
+- note: same-file adjacency with parked rect-adapt wt (#372, uncommitted, edges_transformed hunk only) — distinct hunks in mesh_geometry/rectangular.py, clean merge either order; workspace leg (autolens_workspace_test jax_grad + autolens_workspace_developer README row) follows library PR
+- worktree: ~/Code/PyAutoLabs-wt/rectangular-kernel-cdf-mesh
+- repos:
+  - PyAutoArray: feature/rectangular-kernel-cdf-mesh
+
+## pyautoscientist-phase1
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/65
+- status: library-dev — Phase 1 only (licences MIT [Memory = MIT structure + CC-BY 4.0 content, human-decided], 5 organ README rewrites ~20-40 lines, Build to_do_list evacuation+gitignore, repos_sync check_tenant_firewall); phases 2/3 anchored by issued/pyautoscientist_generalisation.md
+- autonomy: supervised (no --auto; present-and-wait at every checkpoint; one PR per repo, 5 PRs)
+- note: Mind README is agent-load-bearing → schemas relocate verbatim to REFERENCE.md, agent pointers untouched; acceptance = zero diffs to skill bodies/AGENTS.md/hooks/runtime code except additive firewall check + Build gitignore; test_results/ already untracked (assessment claim stale)
+- worktree: ~/Code/PyAutoLabs-wt/pyautoscientist-phase1
+- repos:
+  - PyAutoBrain: feature/pyautoscientist-phase1
+  - PyAutoMind: feature/pyautoscientist-phase1
+  - PyAutoHeart: feature/pyautoscientist-phase1
+  - PyAutoMemory: feature/pyautoscientist-phase1
+  - PyAutoBuild: feature/pyautoscientist-phase1
+
 ## psf-convolution-docstring
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/257
 - status: workspace-dev — normalize __PSF Convolution__ section across 41 simulator.py (3 full-section reference files + 38 input-only) in autolens_workspace + autogalaxy_workspace
