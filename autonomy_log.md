@@ -126,3 +126,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-10 | multi-shared-state-core-api | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked | pr-open |
 | 2026-07-10 | autofit-assistant-birth (phase 1) | supervised | tests 50/50 / smoke n/a (no downstream surface) / review parked-to-human / heart n/a-at-park | parked |
 | 2026-07-10 | multi-shared-state-core-api | safe | tests ✅ / smoke ✅ / review CLEAN / heart YELLOW-acked | merged-unchanged |
+| 2026-07-10 | autofit-assistant-birth (phases 1-3) | supervised | tests 50/50 / smoke n/a / review human-sign-off / heart no-ack-not-reached | PR-open (#2) |
