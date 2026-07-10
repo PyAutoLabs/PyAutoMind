@@ -134,3 +134,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-10 | afa-wiki-currency-wiring | safe | tests 100/100 / smoke n/a / review CLEAN / heart YELLOW-acked-in-session | merged-unchanged (Build#139) |
 | 2026-07-10 | afa-skill-tranche | supervised | tests 53/53 / smoke n/a / review recipes-executed / heart YELLOW-acked-in-session | merged-unchanged (autofit#9) |
 | 2026-07-10 | slack-release-notes | safe | tests ✅ 112+23 / smoke n/a (build repo) / review CLEAN / heart YELLOW-acked-5-set (human go-ahead after park) | merged-unchanged (Build#142) |
+| 2026-07-10 | arxiv-papers-digest | safe | tests n/a / smoke n/a (organism repo) / review CLEAN / heart YELLOW-acked-in-session | PR-open #58 (pending human merge) |
