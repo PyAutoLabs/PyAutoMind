@@ -21,7 +21,7 @@ in `skill_redesign.md`:
 
 | Skill | New home | Recommended owner | Action taken |
 |-------|----------|-------------------|--------------|
-| `create_issue` | `PyAutoMind/skills/` | **PyAutoMind** — the issue+registry **primitive** (Brain's `/start_dev` delegates the issue write to it; runnable standalone) | kept in Mind |
+| `create_issue` | `PyAutoMind/skills/` | **PyAutoMind** — the issue+registry **primitive** (Brain's `start-dev` delegates the issue write to it; runnable standalone) | kept in Mind |
 | `start_dev` | `PyAutoBrain/skills/` | **PyAutoBrain** (classification/routing entry) | **moved → Brain** |
 | `start_dev_for_user` | `PyAutoBrain/skills/` | **PyAutoBrain** (routing variant) | **moved → Brain** |
 | `plan_branches` | `PyAutoBrain/skills/` | **PyAutoBrain** (planning) | **moved → Brain** |
@@ -70,6 +70,7 @@ Claude and Codex skill homes, and preserves commands in `~/.claude/commands/`:
 - `PyAutoMind/skills/` — registry-coupled (`create_issue`)
 - `PyAutoBrain/skills/` — development-workflow
 - `PyAutoHeart/skills/` — status / readiness
+- `PyAutoBuild/skills/` — release execution
 - `autolens_profiling/skills/` — science profiling
 
 **PyAutoBuild's `skills/` root holds release-execution skills only** (`pre_build`)
