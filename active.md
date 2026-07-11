@@ -66,7 +66,8 @@
 - status: workspace-dev — A100 tier COMPLETE for imaging(9)+datacube(4); four-way split MEASURED (330079): triangulation+interpolation 26.6ms = ~27% of full likelihood = TOP optimization target (qhull callback few ms; JAX walk/interp is the work item); NNLS confirmed 65% pix / 34% delaunay per solver ledger; interferometer alma_high = gpu_unusable_breakdown (61.44GB column NUFFT; PyAutoArray follow-up prompt TO FILE); REMAINING = follow-up prompt + dashboard leg (gated on phase-3 baseline tag) + ship sign-off (parks)
 - campaign: driver scratchpad/breakdown_campaign.sh (session a66a757a), logs scratchpad/breakdown_logs/; interruption-safe — each cell's JSON persists to results/breakdown/ on completion; cold-resume = rerun remaining cells' commands from the driver (skip cells whose v-current JSON exists)
 - autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds over maintenance cap safe; plan on issue; no heart-ack given — any Heart YELLOW at ship parks)
-- claim-override: human-directed 2026-07-10 — proceeds alongside profiling-preopt-campaign's autolens_profiling claim ("i dont see a clash"); phase 4 works likelihood_breakdown/ + README, phase 3 works likelihood_runtime/ — distinct paths; coordinate merge order at ship (README/build tooling may touch both — rebase on campaign branch if needed)
+- claim-override: human-directed 2026-07-10 — proceeded alongside profiling-preopt-campaign's autolens_profiling claim; phase 4 works likelihood_breakdown/ + README, phase 3 worked likelihood_runtime/ — distinct paths.
+- phase-3-gate CLEARED 2026-07-11: profiling-preopt-campaign SHIPPED+MERGED (PR#62, #56 closed) — PreOptimizationTimes runtime baseline now on autolens_profiling main (results/baselines/PreOptimizationTimes/ + scripts/build_baseline.py). Dashboard leg is UNBLOCKED. Before building dashboard: rebase feature/preopt-breakdown-dashboard onto origin/main (picks up the baseline + refreshed READMEs; README/build tooling overlap resolves here), then build_readme.py grows the baseline column automatically.
 - note: dashboard deliverable depends on phase-3 PreOptimizationTimes runtime baseline (not yet tagged); breakdown runs (deliverable 1) proceed independently; HPC CPU/A100 legs gated on RAL availability
 - worktree: ~/Code/PyAutoLabs-wt/preopt-breakdown-dashboard
 - repos:
@@ -150,18 +151,6 @@
 - worktree: none (read-only reassessment on PyAutoFit main @ 0f26ff2d8; verdicts land in PyAutoMind bug/priors)
 - repos:
 
-## profiling-preopt-campaign
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
-- status: ship-parked — frozen "done enough" 2026-07-11 (user-directed); PR #62 open (pending-release), merge is human. Later profiling-agent re-run extends same cells (laptop-GPU + HPC-A100).
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/62 (PreOptimizationTimes runtime baseline; 12 cells; imaging+interferometer+datacube local CPU fp64/mp dense+sparse)
-- wrap-2026-07-11: rebased onto origin/main (clean; ahead 5/behind 7 unrelated paths), committed stray datacube results, ran likelihood_runtime/aggregate.py over all cells (1→12 comparison.json), built results/baselines/PreOptimizationTimes/ + refreshed READMEs. datacube/delaunay/sma headline renders — (raw JSON lacks headline field; cosmetic, refreshes on re-aggregate).
-- unblocks: #59 preopt-breakdown-dashboard dashboard leg (was gated on this runtime baseline) once #62 merges
-- autonomy: supervised (--auto, launched 2026-07-08; local-CPU leg, RAL down)
-- resume (future re-run): sweep.py --skip-gpu --skip-existing (dense, then --sparse imaging pass), then likelihood_runtime/aggregate.py, then scripts/build_baseline.py --name PreOptimizationTimes; cold-resume steps on the issue
-- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-preopt-campaign
-- repos:
-  - autolens_profiling: feature/profiling-preopt-campaign
-
 ## morning-status-release-rehearsal
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/39
 - session: claude --resume ff9a8b2f-fda0-4bab-8962-1814843aa374
@@ -180,3 +169,12 @@
 - repos:
   - PyAutoArray: feature/matrix-nufftax-py312
   - PyAutoBuild: feature/matrix-nufftax-py312
+
+## assistant-pin-bump-2026-7-9-1
+- issue: (none — interactive fix from /health; PR self-tracked)
+- status: awaiting-merge — autolens_assistant version.txt + config/general.yaml pinned 2026.5.29.4 while api_audit_baseline.json already 2026.7.9.1 (regen'd 07-10); bumped both to 2026.7.9.1. Clears Heart version_skew YELLOW. PR #62
+- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/62 (2 files; baseline already current on main — verified via clean-venv --write-baseline, date-only noise reverted; --check-version exit 0 vs 2026.7.9.1 wheels)
+- autonomy: human-directed interactive (user "b) yes, proper regen" 2026-07-11); merge human
+- note: CO-CLAIMS autolens_assistant with benchmark-calibration (in-place) — DISJOINT (ours: version.txt + config/general.yaml; theirs: benchmarks/**); isolated worktree used, removed post-PR
+- repos:
+  - autolens_assistant: feature/pin-bump-2026-7-9-1
