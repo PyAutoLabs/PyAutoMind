@@ -136,3 +136,5 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-10 | slack-release-notes | safe | tests ✅ 112+23 / smoke n/a (build repo) / review CLEAN / heart YELLOW-acked-5-set (human go-ahead after park) | merged-unchanged (Build#142) |
 | 2026-07-10 | arxiv-papers-digest | safe | tests n/a / smoke n/a (organism repo) / review CLEAN / heart YELLOW-acked-in-session | merged-unchanged (#58, user-directed merge) |
 | 2026-07-11 | autofit-navigator-catalogue-refresh (#86) | safe | tests n/a (generated-artifact-only diff; no source/test dir) / smoke n/a (no script surface changed) / review CLEAN (deterministic regen, check_navigator green, idempotent) / heart YELLOW-acked-5-set (RED cleared pre-ship via PyAutoFit local ff-sync) | merged-unchanged (#87, human-directed merge 2026-07-11) |
+| 2026-07-11 | codex-brain-skill-wrappers (Brain#84) | safe | tests 30 pass / smoke n-a (skill/docs only) / review CLEAN / heart YELLOW unacked 7-reason set | parked |
+| 2026-07-11 | codex-organ-skill-wrappers (Brain#85) | safe | tests Heart 244 pass + Build 112 pass/1 skip / smoke n-a (skill/docs only) / review CLEAN / heart YELLOW unacked 7-reason set | parked |

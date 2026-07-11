@@ -2,8 +2,9 @@
 
 ## codex-organ-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/85
-- status: library-dev
+- status: awaiting-input — parked at Heart YELLOW acknowledgement (Heart 244 pass; Build 112 pass/1 skip; smoke n/a; review CLEAN; branches local, not pushed)
 - autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved rollout plan); no Heart YELLOW acknowledgement given
+- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/85#issuecomment-4944532087
 - depends-on: codex-brain-skill-wrappers / PyAutoBrain#84
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-organ-skill-wrappers
 - repos:
@@ -13,9 +14,9 @@
 
 ## codex-brain-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/84
-- status: awaiting-input — parked at Heart YELLOW acknowledgement (tests 30 pass; smoke n/a; review CLEAN; commit 619457b local, not pushed)
+- status: awaiting-input — parked at current Heart YELLOW acknowledgement (tests 30 pass; smoke n/a; review CLEAN; commits local, not pushed)
 - autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved two-phase plan on issue); no Heart YELLOW acknowledgement given
-- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/84#issuecomment-4939097480
+- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/84#issuecomment-4944532098
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-brain-skill-wrappers
 - repos:
   - PyAutoBrain: feature/codex-brain-skill-wrappers
