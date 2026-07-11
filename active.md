@@ -65,17 +65,6 @@
 - repos:
   - autolens_assistant: feature/benchmark-calibration
 
-## preopt-breakdown-dashboard
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
-- status: ship-parked — all three deliverables done 2026-07-11 (A100 breakdown tier + four-way split + dashboard baseline column); PR #63 open (pending-release), merge is human. Follow-up prompt FILED.
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/63 (breakdown A100 tier + PreOptimizationTimes baseline column + four-way split; 56 files; build_readme --check idempotent, ruff clean)
-- wrap-2026-07-11: merged origin/main (picked up #62 baseline; 3 generated READMEs conflicted → regenerated from merged build_readme.py, not hand-merged), fixed stale Roadmap row 7 (queued→shipped), regenerated dashboards (baseline column + Platform column now populated). Findings: four-way split triangulation+interpolation ~27% = top opt target; NNLS 65% pix/34% delaunay; no library drift since May (0.89–1.14× scatter), F-matrix dominates mesh cells.
-- follow-up FILED: feature/autoarray/nufft_mapping_matrix_column_chunking.md (alma_high gpu_unusable_breakdown = 61.44GB one-shot mapping-matrix column NUFFT; needs column-chunked NUFFT; un-issued backlog, cross-refs [[nufft_simulator_chunking]]). Re-run alma_high + lift classification once it lands.
-- autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds over maintenance cap safe; plan on issue; no heart-ack given — Heart NOT re-run at this ship: data/docs/tooling only, no library source touched)
-- worktree: ~/Code/PyAutoLabs-wt/preopt-breakdown-dashboard
-- repos:
-  - autolens_profiling: feature/preopt-breakdown-dashboard
-
 ## pj011646-wfc3-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/25
 - session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
