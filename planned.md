@@ -2,7 +2,7 @@
 - prompt: PyAutoMind/issued/remove_nss_sampler_and_infra.md
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356
 - planned: 2026-07-11
-- classification: refactor — cross-repo NSS-infra removal, phases 3-6 (the blocked slice of active task remove-nss-sampler; core PyAutoFit+autofit_workspace proceeding now)
+- classification: refactor — cross-repo NSS-infra removal, phases 3-6 (core Phases 1-2 + stash MERGED 2026-07-11 → complete.md remove-nss-sampler; PyAutoFit#1357/autofit_workspace#88/dev#20. af.NSS now gone from the library — remainder is pure infra cleanup, safe to land whenever the repos free up)
 - blocked-by: codex-organ-skill-wrappers (holds PyAutoBuild/PyAutoHeart/PyAutoMind); preopt-breakdown-dashboard + profiling-preopt-campaign (hold autolens_profiling)
 - suggested-branch: refactor/remove-nss-sampler
 - affected-repos:

@@ -1,3 +1,9 @@
+## remove-nss-sampler (core — Phases 1-2 + stash)
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356 (OPEN — Phases 3-6 remainder still blocked → planned.md remove-nss-sampler-remainder)
+- completed: 2026-07-11
+- prs: PyAutoFit#1357 + autofit_workspace#88 + autofit_workspace_developer#20 (all MERGED, merge-commit, library-first; pending-release)
+- summary: Removed the NSS nested slice sampler (`af.NSS`) and its infrastructure — bespoke git+ install / CI / build machinery not justified by measured perf (faster per-eval on MGE but OOM-prone on pix/delaunay via vmap fan-out); can return as a real pip install later. PyAutoFit#1357: deleted autofit/non_linear/search/nest/nss module+tests, af.NSS export, [nss] extra + git+ footgun comment block, AGENTS notes (1393-line del, PUBLIC API removal); blackjax RETAINED (BlackJAXNUTS uses it). autofit_workspace#88: removed the Search:NSS tutorial section from scripts/searches/nest.py + regenerated notebook (22→20 cells). autofit_workspace_developer#20: PRESERVED the impl at searches/nss/ (alongside ultranest/pyswarms) — module relativized as drop-in, tests verbatim vs library paths, README with pinned handley-lab/blackjax@ef45acd2 + yallup/nss@69159b0f SHAs + re-mainline checklist, example.py. Gate: test_autofit 1471p/1s/0f; downstream galaxy/lens import-clean; review CLEAN; Heart YELLOW (ambient non-NSS, human-acked in-session). --auto supervised. Worktree + local branches cleaned up. Trap: arviz entered the stack ONLY via nss (Required-by: nss) — removal sheds that footgun.
+
 ## preopt-breakdown-dashboard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59 (closed)
 - completed: 2026-07-11

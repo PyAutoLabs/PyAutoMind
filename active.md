@@ -1,19 +1,5 @@
 # Active Tasks
 
-## remove-nss-sampler
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356
-- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1356#issuecomment-4944839204 (ANSWERED — approved + heart-ack given 2026-07-11)
-- status: pr-open (merge human) — ship approved 2026-07-11. 3 pending-release PRs open: PyAutoFit#1357 (library, merge FIRST) → autofit_workspace#88 (behind library-first gate) + autofit_workspace_developer#20 (stash, independent). Gate: test_autofit 1471p/1s/0f; downstream galaxy/lens import-clean; review CLEAN; Heart YELLOW acked. Phases 3-6 STILL BLOCKED → planned.md remove-nss-sampler-remainder.
-- pr: PyAutoFit#1357 | autofit_workspace#88 | autofit_workspace_developer#20 (all pending-release)
-- heart-ack: given 2026-07-11 for the ambient YELLOW set (workspace-validation-stale / parked-scripts / autolens_assistant-skew / repos.yaml-drift / old-PyAutoMind-PR / install+release-validation-not-run) — non-NSS, binds this ship only
-- stash: human-directed scope add 2026-07-11 — NSS implementation preserved verbatim in autofit_workspace_developer/searches/nss/ (module relativized as drop-in + verbatim tests + README reuse recipe w/ pinned blackjax/nss SHAs + example.py) so it can be re-mainlined when nss ships on PyPI. Sits alongside ultranest/pyswarms parked samplers.
-- autonomy: supervised effective (--auto launched 2026-07-11; refactor cap safe ∧ header supervised; 6-repo public-API removal). Ships park as a consolidated sign-off question on #1356; run ends short of PR-open, merge stays human.
-- worktree: ~/Code/PyAutoLabs-wt/remove-nss-sampler
-- repos:
-  - PyAutoFit: feature/remove-nss-sampler
-  - autofit_workspace: feature/remove-nss-sampler
-  - autofit_workspace_developer: feature/remove-nss-sampler
-
 ## codex-organ-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/85
 - status: awaiting-input — parked at Heart YELLOW acknowledgement (Heart 244 pass; Build 112 pass/1 skip; smoke n/a; review CLEAN; branches local, not pushed)
