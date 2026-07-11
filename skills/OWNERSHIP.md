@@ -21,7 +21,7 @@ in `skill_redesign.md`:
 
 | Skill | New home | Recommended owner | Action taken |
 |-------|----------|-------------------|--------------|
-| `create_issue` | `PyAutoMind/skills/` | **PyAutoMind** — the issue+registry **primitive** (Brain's `/start_dev` delegates the issue write to it; runnable standalone) | kept in Mind |
+| `create_issue` | `PyAutoMind/skills/` | **PyAutoMind** — the issue+registry **primitive** (Brain's `start-dev` delegates the issue write to it; runnable standalone) | kept in Mind |
 | `start_dev` | `PyAutoBrain/skills/` | **PyAutoBrain** (classification/routing entry) | **moved → Brain** |
 | `start_dev_for_user` | `PyAutoBrain/skills/` | **PyAutoBrain** (routing variant) | **moved → Brain** |
 | `plan_branches` | `PyAutoBrain/skills/` | **PyAutoBrain** (planning) | **moved → Brain** |
@@ -31,8 +31,8 @@ in `skill_redesign.md`:
 | `ship_workspace` | `PyAutoBrain/skills/` | **PyAutoBrain** dev-workflow → Heart gate (Build only at release) | **moved → Brain** |
 | `register_and_iterate` | `PyAutoBrain/skills/` | **PyAutoBrain** (dev-workflow orchestration loop) | **moved → Brain** |
 | `repo_cleanup` | `PyAutoBrain/skills/` | **PyAutoBrain** (between-tasks git hygiene; Heart observes, Brain decides + executes — natural home is a future Cleanup Agent) | **moved → Brain** (from admin_jammy) |
-| `pyauto-status` | `PyAutoHeart/skills/` | **PyAutoHeart** (active-work dashboard) | **retired as command → `/health status` leg (`pyauto-status/reference.md`)** |
-| `pyauto-status-full` | `PyAutoHeart/skills/` | **PyAutoHeart** (release-run dashboard) | **retired as command → `/health full` leg (`pyauto-status-full/reference.md`)** |
+| `pyauto-status` | `PyAutoHeart/skills/` | **PyAutoHeart** (active-work dashboard) | **retired as command -> `$health status` leg (`/health status` in Claude; `pyauto-status/reference.md`)** |
+| `pyauto-status-full` | `PyAutoHeart/skills/` | **PyAutoHeart** (release-run dashboard) | **retired as command -> `$health full` leg (`/health full` in Claude; `pyauto-status-full/reference.md`)** |
 | `worktree_status` | `PyAutoHeart/skills/` | **PyAutoHeart** (diagnostic) | **moved → Heart** |
 | `profile_likelihood` | `autolens_profiling/skills/` | **`autolens_profiling`** (science profiling) | **moved → autolens_profiling** |
 | `handoff` | — (removed) | — | **deleted** — the phone↔laptop park/resume dance is obsolete now PyAutoBrain runs uniformly across execution environments; `active.md` is the shared task state, so any environment resumes a task directly |
@@ -63,13 +63,14 @@ lines.)
 
 ## Discovery
 
-`PyAutoBrain/bin/install.sh` now scans these roots and symlinks skills into
-`~/.claude/skills/` and commands into `~/.claude/commands/`:
+`PyAutoBrain/bin/install.sh` now scans these roots, symlinks skills into both
+Claude and Codex skill homes, and preserves commands in `~/.claude/commands/`:
 
 - `admin_jammy/skills/` — general PyAuto tooling
 - `PyAutoMind/skills/` — registry-coupled (`create_issue`)
 - `PyAutoBrain/skills/` — development-workflow
 - `PyAutoHeart/skills/` — status / readiness
+- `PyAutoBuild/skills/` — release execution
 - `autolens_profiling/skills/` — science profiling
 
 **PyAutoBuild's `skills/` root holds release-execution skills only** (`pre_build`)

@@ -34,7 +34,7 @@ For the full workflow narrative, conventions, and registry schemas, read
   (in-flight tasks), `planned.md` (scoped, not started), `complete.md`
   (shipped), `parked.md` (started but not in flight), `queue.md` (ordered
   input for `register_and_iterate --queue`), `ideas.md` (raw inbox swept by
-  `/intake`). Mutate these only via the skills in `skills/` so commit
+  `$intake`, `/intake` in Claude). Mutate these only via the skills in `skills/` so commit
   messages stay consistent.
   `parked.md` holds tasks that were started or scoped but are not currently
   in flight (e.g. work parked in a stash, orphan worktrees); move back to
@@ -45,8 +45,9 @@ For the full workflow narrative, conventions, and registry schemas, read
   `PyAutoBrain/skills/WORKFLOW.md` are generated from it, and the repo lists in
   Heart/Build/admin scripts are drift-checked against it:
   `python3 scripts/repos_sync.py --write`.
-- **Skills** — `skills/<name>/` are Claude Code skills/commands tightly coupled
-  to the registry. They source `scripts/prompt_sync.sh` for commit/push.
+- **Skills** — `skills/<name>/` are agent skills and command bodies tightly
+  coupled to the registry. Claude and Codex discovery is installed by
+  PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.
 - **Scripts** — `scripts/status.sh` (inventory), `scripts/prompt_sync.sh`
   (commit/push helpers).
 
@@ -68,21 +69,23 @@ Write the file under `<work-type>/<target>/<name>.md` — pick the work-type fro
 the list above (use `triage/` if genuinely unsure) and the target repo/domain as
 the second folder, e.g. `feature/autolens/potential_corrections.md` or
 `bug/autoarray/mask_edge_case.md`. Don't touch `active.md` or `issued/` directly
-— those are managed by `/start_dev` / `/create_issue`.
+— those are managed by `$start-dev` and `$create-issue` (`/start_dev` and
+`/create_issue` in Claude).
 
-To skip the manual filing, run **`/intake`** (the PyAutoBrain Intake/Conception
-Agent): it classifies a raw idea into the right `<work-type>/<target>/` folder,
+To skip the manual filing, run **`$intake`** (`/intake` in Claude), the
+PyAutoBrain Intake/Conception Agent. It classifies a raw idea into the right
+`<work-type>/<target>/` folder,
 writes the light header (incl. the optional `Difficulty:/Autonomy:/Priority:`
 keys — see README "Prompt file format"), and files the prompt for you. It files a
-prompt only; `/start_dev` remains the separate next step.
+prompt only; `$start-dev` (`/start_dev` in Claude) remains the separate next step.
 
 ## When you are asked to start work on an existing prompt
 
-Use `/start_dev <work-type>/<target>/<name>.md` (older `<target>/<name>.md` paths
-from before the taxonomy migration still work too). It will route to
-`/start_library` or `/start_workspace` based on the repos referenced in the
-prompt body — routing keys off the `@RepoName` references in the content, not the
-folder.
+Use `$start-dev <work-type>/<target>/<name>.md` (`/start_dev` in Claude). Older
+`<target>/<name>.md` paths from before the taxonomy migration still work. It
+routes to `$start-library` or `$start-workspace` (`/start_library` or
+`/start_workspace` in Claude) based on the repos referenced in the prompt body;
+routing keys off `@RepoName` references in the content, not the folder.
 
 ## When in doubt
 

@@ -10,9 +10,11 @@ drives them. Change the spec first, then mirror the tables in the script.
 ## Usage
 
 ```
-/spawn              # dry-run: file plan + canary scan (default, read-only)
-/spawn --apply      # regenerate AND force-sync the published template repos
+$spawn              # dry-run: file plan + canary scan (default, read-only)
+$spawn --apply      # regenerate AND force-sync the published template repos
 ```
+
+In Claude, invoke the same skill as `/spawn`.
 
 ## Steps
 
