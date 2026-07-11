@@ -1,3 +1,9 @@
+## codex-skill-wrappers (Phases 1-3)
+- completed: 2026-07-11
+- issues: PyAutoBrain#84 + PyAutoBrain#85 + autolens_profiling#61 (closed)
+- prs: PyAutoBrain#86 + PyAutoMind#60 + PyAutoHeart#59 + PyAutoBuild#145 + autolens_profiling#64 (all merged, merge commits)
+- summary: Added Codex discovery across the PyAuto agent and workflow surfaces while preserving Claude commands and skill links. Phase 1 added thin `SKILL.md` wrappers for every public PyAutoBrain conductor/faculty and dual-harness installer coverage (30 tests; all 30 mandatory-load budgets pass). Phase 2 added `spawn`, `review-release`, `verify-install`, and `pre-build` wrappers plus explicit cross-harness ownership/routing (Heart 244 tests; Build 112 passed/1 skipped; composed installer and review clean). Phase 3 normalized `profile_likelihood` to Codex `profile-likelihood` while retaining Claude `/profile_likelihood`; profiling CI passed ruff, dashboard idempotence, links, and smoke. User explicitly directed PR+merge despite the ambient Heart YELLOW gate; no executable science or library API changed.
+
 ## remove-nss-sampler (core — Phases 1-2 + stash)
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356 (OPEN — Phases 3-6 remainder still blocked → planned.md remove-nss-sampler-remainder)
 - completed: 2026-07-11
