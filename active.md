@@ -2,12 +2,14 @@
 
 ## remove-nss-sampler
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356
-- status: library-dev — remove NSS sampler + cross-repo infra (6-repo refactor). This run scoped to the unclaimed core: PyAutoFit (Phase 1 — af.NSS export + [nss] extra + nss module/tests removal; PUBLIC API removal) + autofit_workspace (Phase 2 — nest.py NSS tutorial section). Phases 3-6 BLOCKED by active claims → see planned.md remove-nss-sampler-remainder.
+- status: library-dev — remove NSS sampler + cross-repo infra (6-repo refactor). This run scoped to the unclaimed core: PyAutoFit (Phase 1 — af.NSS export + [nss] extra + nss module/tests removal; PUBLIC API removal) DONE + autofit_workspace (Phase 2 — nest.py NSS tutorial section, script+notebook) DONE. Phases 3-6 BLOCKED by active claims → see planned.md remove-nss-sampler-remainder.
+- stash: human-directed scope add 2026-07-11 — NSS implementation preserved verbatim in autofit_workspace_developer/searches/nss/ (module relativized as drop-in + verbatim tests + README reuse recipe w/ pinned blackjax/nss SHAs + example.py) so it can be re-mainlined when nss ships on PyPI. Sits alongside ultranest/pyswarms parked samplers.
 - autonomy: supervised effective (--auto launched 2026-07-11; refactor cap safe ∧ header supervised; 6-repo public-API removal). Ships park as a consolidated sign-off question on #1356; run ends short of PR-open, merge stays human.
 - worktree: ~/Code/PyAutoLabs-wt/remove-nss-sampler
 - repos:
-  - PyAutoFit: refactor/remove-nss-sampler
-  - autofit_workspace: refactor/remove-nss-sampler
+  - PyAutoFit: feature/remove-nss-sampler
+  - autofit_workspace: feature/remove-nss-sampler
+  - autofit_workspace_developer: feature/remove-nss-sampler
 
 ## codex-organ-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/85
@@ -63,12 +65,11 @@
 
 ## preopt-breakdown-dashboard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
-- status: workspace-dev — A100 tier COMPLETE for imaging(9)+datacube(4); four-way split MEASURED (330079): triangulation+interpolation 26.6ms = ~27% of full likelihood = TOP optimization target (qhull callback few ms; JAX walk/interp is the work item); NNLS confirmed 65% pix / 34% delaunay per solver ledger; interferometer alma_high = gpu_unusable_breakdown (61.44GB column NUFFT; PyAutoArray follow-up prompt TO FILE); REMAINING = follow-up prompt + dashboard leg (gated on phase-3 baseline tag) + ship sign-off (parks)
-- campaign: driver scratchpad/breakdown_campaign.sh (session a66a757a), logs scratchpad/breakdown_logs/; interruption-safe — each cell's JSON persists to results/breakdown/ on completion; cold-resume = rerun remaining cells' commands from the driver (skip cells whose v-current JSON exists)
-- autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds over maintenance cap safe; plan on issue; no heart-ack given — any Heart YELLOW at ship parks)
-- claim-override: human-directed 2026-07-10 — proceeded alongside profiling-preopt-campaign's autolens_profiling claim; phase 4 works likelihood_breakdown/ + README, phase 3 worked likelihood_runtime/ — distinct paths.
-- phase-3-gate CLEARED 2026-07-11: profiling-preopt-campaign SHIPPED+MERGED (PR#62, #56 closed) — PreOptimizationTimes runtime baseline now on autolens_profiling main (results/baselines/PreOptimizationTimes/ + scripts/build_baseline.py). Dashboard leg is UNBLOCKED. Before building dashboard: rebase feature/preopt-breakdown-dashboard onto origin/main (picks up the baseline + refreshed READMEs; README/build tooling overlap resolves here), then build_readme.py grows the baseline column automatically.
-- note: dashboard deliverable depends on phase-3 PreOptimizationTimes runtime baseline (not yet tagged); breakdown runs (deliverable 1) proceed independently; HPC CPU/A100 legs gated on RAL availability
+- status: ship-parked — all three deliverables done 2026-07-11 (A100 breakdown tier + four-way split + dashboard baseline column); PR #63 open (pending-release), merge is human. Follow-up prompt FILED.
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/63 (breakdown A100 tier + PreOptimizationTimes baseline column + four-way split; 56 files; build_readme --check idempotent, ruff clean)
+- wrap-2026-07-11: merged origin/main (picked up #62 baseline; 3 generated READMEs conflicted → regenerated from merged build_readme.py, not hand-merged), fixed stale Roadmap row 7 (queued→shipped), regenerated dashboards (baseline column + Platform column now populated). Findings: four-way split triangulation+interpolation ~27% = top opt target; NNLS 65% pix/34% delaunay; no library drift since May (0.89–1.14× scatter), F-matrix dominates mesh cells.
+- follow-up FILED: feature/autoarray/nufft_mapping_matrix_column_chunking.md (alma_high gpu_unusable_breakdown = 61.44GB one-shot mapping-matrix column NUFFT; needs column-chunked NUFFT; un-issued backlog, cross-refs [[nufft_simulator_chunking]]). Re-run alma_high + lift classification once it lands.
+- autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds over maintenance cap safe; plan on issue; no heart-ack given — Heart NOT re-run at this ship: data/docs/tooling only, no library source touched)
 - worktree: ~/Code/PyAutoLabs-wt/preopt-breakdown-dashboard
 - repos:
   - autolens_profiling: feature/preopt-breakdown-dashboard
