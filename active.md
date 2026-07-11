@@ -1,5 +1,13 @@
 # Active Tasks
 
+## starred-epsf-backend
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/35
+- status: library-dev — optional STARRED super-sampled ePSF back-end for PyAutoReduce PSF stage. Design settled (2026-07-11 deep research): STARRED PSF-recon = standalone field-star ePSF (Moffat+starlet), reduction-stage Tier-1b, NOT the mislabelled Tier-3 target-reconstruction; two-channel deconvolution stays modelling-stage/out-of-scope. First edits: doc correction (hst_acs_pipeline Tier-3 → Tier-1b) + psf/starred_epsf.py seam mirroring fallback.py.
+- constraints: STARRED is GPL-3.0-or-later → optional extra `pyautoreduce[starred]`, lazy import, GPL-isolated, never core. Depends on jax → prototypes/integration only, unit tests numpy/astropy (pytest.importorskip). Crux = drizzle-consistency of the super-sampled PSF onto mosaic grid (rebin vs frame_combine drop-convolve + WCS-Jacobian).
+- worktree: (pending start_library — off origin/main; NOT the dirty feature/pj011646-wfc3-parity checkout)
+- repos:
+  - PyAutoReduce: feature/starred-epsf-backend
+
 ## restore-truncated-howto-tutorials
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/26
 - status: workspace-dev — restore LLM-bootstrap-truncated HowTo tutorial scripts + add tutorial-completeness CI linter. Phase 1 HowToLens (confirmed ch1 tutorial_1 + tutorial_2 end mid-docstring promising a plot, no code, no Wrap Up); phases 2-3 HowToGalaxy then HowToFit, each own PR. Docs-only, library-free.
