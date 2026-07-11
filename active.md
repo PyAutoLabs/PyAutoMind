@@ -4,7 +4,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/35
 - status: library-dev — optional STARRED super-sampled ePSF back-end for PyAutoReduce PSF stage. Design settled (2026-07-11 deep research): STARRED PSF-recon = standalone field-star ePSF (Moffat+starlet), reduction-stage Tier-1b, NOT the mislabelled Tier-3 target-reconstruction; two-channel deconvolution stays modelling-stage/out-of-scope. First edits: doc correction (hst_acs_pipeline Tier-3 → Tier-1b) + psf/starred_epsf.py seam mirroring fallback.py.
 - constraints: STARRED is GPL-3.0-or-later → optional extra `pyautoreduce[starred]`, lazy import, GPL-isolated, never core. Depends on jax → prototypes/integration only, unit tests numpy/astropy (pytest.importorskip). Crux = drizzle-consistency of the super-sampled PSF onto mosaic grid (rebin vs frame_combine drop-convolve + WCS-Jacobian).
-- worktree: (pending start_library — off origin/main; NOT the dirty feature/pj011646-wfc3-parity checkout)
+- progress: worktree live; doc correction (hst_acs_pipeline Tier-1b + jwst/keck_ao mirror) + optional back-end seam psf/starred_epsf.py (lazy GPL/JAX-isolated import, loud hard-stop) committed local c6f83c2, 18 psf tests pass, NOT pushed. NEXT = prototype spike (install starred + real ACS mosaic) to resolve drizzle-consistency crux before wiring build_starred_epsf.
+- worktree: ~/Code/PyAutoLabs-wt/starred-epsf-backend (off origin/main; NOT the dirty feature/pj011646-wfc3-parity checkout)
 - repos:
   - PyAutoReduce: feature/starred-epsf-backend
 
