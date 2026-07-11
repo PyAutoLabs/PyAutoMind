@@ -139,4 +139,4 @@
 - worktree: ~/Code/PyAutoLabs-wt/import-time-heart-leg
 - repos:
   - PyAutoHeart: feature/import-time-heart-leg
-- next: PyAutoBrain hygiene perf mode reads ~/.pyauto-heart/import_time.json when present (fallback = own subprocess scan); library-first small follow-on PR
+- brain-follow-on: DONE — PyAutoBrain#93 (pending-release; worktree ~/Code/PyAutoLabs-wt/hygiene-perf-heart-consult on feature/hygiene-perf-heart-consult). hygiene perf prefers Heart import_time.json when present (regression counts), else subprocess scan; graceful degrade so no hard merge-order dep on #62; 37p / review CLEAN. Two PRs open: PyAutoHeart#62 (leg) + PyAutoBrain#93 (consult)
