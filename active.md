@@ -129,10 +129,10 @@
 
 ## hygiene-agent
 - session: claude --resume 01Tw3EwV55k6VzxorYng3Kfn
-- status: library-dev — phased epic; P1 MERGED, P2 filed & ready (worktree not yet cut)
+- status: library-dev — phased epic; P1 MERGED, P2 PR-open, P3 to file
 - phase-1: MERGED 2026-07-11 (PyAutoBrain#88 squash; issue #87 CLOSED) — conductor scaffold + boundaries; install.sh re-run (/hygiene live in Claude+Codex), worktree removed, branch deleted, calibration row logged
-- phase-2: modes — issue Brain#89; absorb repo_cleanup (→ tidy) + cli_noise_clean (→ noise), consult dep_audit (→ deps) + audit_docs (→ docs), default prioritized worklist. DESIGN FORK to confirm at impl: conductor reasons+delegates (never mutates) → each mode drives the skill's AUDIT + prioritizes + points at the skill for EXECUTION; the skills stay the executors (repo_cleanup's destructive git mechanics stay in the skill, NOT moved into the conductor)
-- phase-3: perf mode (test/script/import timing) + optional PyAutoHeart legs (import_time / cli_noise) — file after P2 nears shipping
+- phase-2: PR-OPEN PyAutoBrain#90 (pending-release; issue Brain#89; worktree ~/Code/PyAutoLabs-wt/hygiene-agent-phase-2 on feature/hygiene-agent-phase-2). Modes tidy/noise/deps/docs LIVE as pre-scan+delegate; gate tests 34p / smoke n-a / review CLEAN flags-none / heart YELLOW unacked. RESOLVED fork: all 4 skills are agent-run markdown (3 Heart-owned) so conductor can't execute them → modes are PRE-SCAN + ROUTE (typed debris/surface/advisory; only debris ranks); skills stay executors. post-merge: install.sh + worktree cleanup (squash → branch -D)
+- phase-3: perf mode (test/script/import timing) + optional PyAutoHeart legs (import_time / cli_noise) — file after P2 merges
 - autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack; parks at ship sign-off)
 - refs: umbrella issued/hygiene_agent.md; decision research/pyautobrain/hygiene_agent_decision.md (decided: conductor, no repo)
 - repos:
