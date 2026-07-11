@@ -1,13 +1,5 @@
 # Active Tasks
 
-## starred-jwst-validation
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/39 (JWST leg of STARRED stellar-field validation; siblings #35 MERGED / #37 WFC3 CLOSED)
-- status: SW LEG DONE — photutils WINS on undersampled JWST SW (commit 801cabf, #39 comment-4948425314). Reduced M92 NIRCam SW F150W prog 1334 (calwebb_image3). On real stars (crowded, min_sep 13px, 81 stars): empirical conc 0.31; photutils 0.32 matches (radial rms 0.007), STARRED 0.25 UNDER-concentrated + excess extended-channel wings (fwhm 11.8px) → photutils wins. STARRED BROADENS on undersampled SW (0.03", ~1.7px FWHM) = confirms #35 adversarial prediction. REGIME MAP: STARRED wins well-sampled (WFC3/UVIS #37), loses undersampled SW → conditional upgrade, not universal.
-- next: OPTIONAL LW leg (F277W well-sampled @0.06", 8 CAL = lighter) to complete regime map — if STARRED wins LW, discriminator=SAMPLING not instrument (clean recommendation). Then close-out (PR scripts + doc the regime + close #39). Traps: JWST peak_max=None (surface-brightness, no sat cut); M92 SW extremely crowded (min_sep 25→7 stars, 13→84); pipeline _psf OK on JWST but _package cutout PartialOverlapError (M92 center near mosaic edge) → package data/noise manually from work/*_i2d.fits SCI+ERR extensions at a well-covered region; starred stage in ~/venv/starred w/ autoreduce on PYTHONPATH.
-- worktree: ~/Code/PyAutoLabs-wt/starred-jwst-validation (off main a3b1ea5, STARRED+WFC3 merged)
-- repos:
-  - PyAutoReduce: feature/starred-jwst-validation
-
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
