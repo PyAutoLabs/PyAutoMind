@@ -120,13 +120,3 @@
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
 
-## import-time-heart-leg
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/61
-- status: pr-open — import_time Heart leg (off-tick daily, advisory non-gating); Brain perf-consult follow-on next
-- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/62 (pending-release; gate tests 251p / smoke n-a / review CLEAN / heart YELLOW unacked)
-- design: OFF-TICK (import autolens ~sec ≫ <30s tick budget, rule 3); subprocess measure via HYGIENE_PYTHON (Heart never imports science stack, rule 4); rolling baseline + ratio classify like script_timing; advisory dashboard section, NOT in readiness gating set. Run: `python -m heart.checks.import_time` (cron/on-demand)
-- autonomy: supervised effective (--auto 2026-07-11; feature-medium; no heart-ack; parked→live sign-off)
-- worktree: ~/Code/PyAutoLabs-wt/import-time-heart-leg
-- repos:
-  - PyAutoHeart: feature/import-time-heart-leg
-- brain-follow-on: DONE — PyAutoBrain#93 (pending-release; worktree ~/Code/PyAutoLabs-wt/hygiene-perf-heart-consult on feature/hygiene-perf-heart-consult). hygiene perf prefers Heart import_time.json when present (regression counts), else subprocess scan; graceful degrade so no hard merge-order dep on #62; 37p / review CLEAN. Two PRs open: PyAutoHeart#62 (leg) + PyAutoBrain#93 (consult)
