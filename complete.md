@@ -1,3 +1,9 @@
+## profiling-preopt-campaign
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56 (closed)
+- completed: 2026-07-11
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/62 (MERGED, squash; pending-release)
+- summary: Phase-3 (likelihood_runtime) leg of the polish.md PreOptimizationTimes campaign, frozen "done enough" at user direction after the --auto run (launched 2026-07-08) stalled with RAL HPC down. Wrap-up: rebased feature/profiling-preopt-campaign onto origin/main (clean; ahead-5/behind-7 all unrelated paths), committed stray datacube delaunay results, ran likelihood_runtime/aggregate.py across all cells (comparison.json 1→12), froze results/baselines/PreOptimizationTimes/ + refreshed READMEs. Baseline: imaging (mge/pix/delaunay × ao/hst/jwst) + interferometer (× sma/alma) + datacube (delaunay/sma), local CPU fp64/mp dense+sparse. Deferred to a later profiling-agent re-run: laptop-GPU + HPC-A100 legs (extend same cells, refresh in place). Cosmetic: datacube/delaunay/sma headline renders — (raw JSON lacks the headline field). Cleared the phase-3 gate for preopt-breakdown-dashboard (#59) dashboard leg. Worktree + branch cleaned up.
+
 ## autofit-navigator-catalogue-refresh
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/86 (closed)
 - completed: 2026-07-11
