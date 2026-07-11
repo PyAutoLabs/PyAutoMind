@@ -1,6 +1,10 @@
-## ep-hierarchical-regression
+## autofit-navigator-catalogue-refresh
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/86 (closed)
+- completed: 2026-07-11
+- pr: https://github.com/PyAutoLabs/autofit_workspace/pull/87 (MERGED, squash; pending-release)
+- summary: Regenerated the stale navigator catalogue (llms-full.txt + workspace_index.json), clearing the Navigator Check "Catalogue staleness" RED on autofit_workspace main (831b08b, the EP #85 merge). Root cause: EP statistics-completion added scripts/features/expectation_propagation.py + a cross-ref from graphical_models.py, but the generated catalogue was never regenerated. Fix = regenerate_navigator.py autofit; catalogue-only +28/-1; check_navigator green; idempotent. --auto safe (maintenance cap); Heart YELLOW-acked-5-set at ship; the sole hard-RED driver (PyAutoFit local main 2 behind origin) was a false-positive stale checkout, ff-synced pre-ship. Found via /health morning sweep 2026-07-11. Co-claimed autofit_workspace with parked markdown-renderings-workspaces (file-disjoint, human-approved parallel).
 
-- **autofit-navigator-catalogue-refresh** (autofit_workspace #86 → PR#87, MERGED 2026-07-11) — regenerated stale navigator catalogue (llms-full.txt + workspace_index.json) after EP#85; cleared Navigator Check "Catalogue staleness" RED on main. --auto safe; catalogue-only +28/-1. Found via /health morning sweep.
+## ep-hierarchical-regression
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1352 (closed)
 - completed: 2026-07-10
 - pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1355 (MERGED, main de6534dfb)
