@@ -1,3 +1,13 @@
+> **⚠️ RETIRED 2026-07-11 — initiative reversed.** `af.NSS` was removed from
+> PyAutoFit ([#1356](https://github.com/PyAutoLabs/PyAutoFit/issues/1356)): the
+> bespoke git+ install / CI / build machinery this roadmap built was not justified
+> by measured performance (faster per-eval on MGE but OOM-prone on pixelization /
+> Delaunay via vmap fan-out). The working implementation is preserved verbatim at
+> `autofit_workspace_developer/searches/nss/` — with a re-mainline checklist and
+> the pinned blackjax/nss SHAs — so NSS can return cheaply once `nss` ships as a
+> genuine PyPI package. The phases and sub-prompts below are **void**, kept as the
+> historical record of the initiative.
+
 # `nss_jit` as a first-class PyAutoFit sampler — Sequenced Roadmap
 
 This z_feature decomposes the multi-phase initiative to make `nss_jit`

@@ -1,3 +1,5 @@
+> **⚠️ RETIRED 2026-07-11** — `af.NSS` was removed from PyAutoFit ([#1356](https://github.com/PyAutoLabs/PyAutoFit/issues/1356)); this prompt is void. Implementation preserved at `autofit_workspace_developer/searches/nss/` for re-mainlining when `nss` ships on PyPI.
+
 Add checkpointing + on-the-fly visualization to `af.NSS`.
 
 This is **Phases 2 and 3** of `z_features/nss_first_class_sampler.md`. Both

@@ -1,3 +1,5 @@
+> **⚠️ RETIRED 2026-07-11** — `af.NSS` was removed from PyAutoFit ([#1356](https://github.com/PyAutoLabs/PyAutoFit/issues/1356)); this prompt is void. Implementation preserved at `autofit_workspace_developer/searches/nss/` for re-mainlining when `nss` ships on PyPI.
+
 # Skip `af.NSS` unit tests when the optional `nss` dependency is absent
 
 Primary repo: **@PyAutoFit** (test-only change).
