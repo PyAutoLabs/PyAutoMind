@@ -1,5 +1,16 @@
 # Active Tasks
 
+## markdown-renderings-howto
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/24
+- status: workspace-dev — batch 2b: chapter_1_introduction executed-markdown for HowToFit(6)/HowToGalaxy(6)/HowToLens(9); FAST build (HowToGalaxy+HowToLens ch1 = zero searches; HowToFit = 3 fast 1D fits); datasets present (no simulator pre-run); ship 3 PRs
+- autonomy: safe effective (--auto launched 2026-07-11 post 2a ship; docs cap safe ≤ medium; plan on issue #24); NO heart-ack this launch — Heart YELLOW at ship acks-or-parks
+- note: generator on main; never TEST_MODE; markdown/ not gitignored in any HowTo repo (verified); follows 2a (workspaces PRs af#90/ag#127/al#270 awaiting-merge); [[markdown-example-renderings]]
+- worktree: ~/Code/PyAutoLabs-wt/markdown-renderings-howto
+- repos:
+  - HowToFit: feature/markdown-renderings-howto
+  - HowToGalaxy: feature/markdown-renderings-howto
+  - HowToLens: feature/markdown-renderings-howto
+
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
