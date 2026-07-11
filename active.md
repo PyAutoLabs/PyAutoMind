@@ -2,7 +2,8 @@
 
 ## markdown-renderings-howto
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/24
-- status: workspace-dev — batch 2b: chapter_1_introduction executed-markdown for HowToFit(6)/HowToGalaxy(6)/HowToLens(9); FAST build (HowToGalaxy+HowToLens ch1 = zero searches; HowToFit = 3 fast 1D fits); datasets present (no simulator pre-run); ship 3 PRs
+- status: shipped, awaiting-merge — 3 PRs open: HowToFit#15 (6) + HowToGalaxy#18 (6, +setup_notebook fix on tutorial_3_fitting) + HowToLens#25 (9, +setup_notebook fix on tutorial_7_fitting). Verified: 0 path leaks, index links resolve, no embedded errors. Gate: tests n/a / smoke superseded / review CLEAN / Heart YELLOW 6-set acked 2026-07-11. Surfaced+fixed 2 tutorials missing setup_notebook (failed nbconvert CWD); broader audit filed bug/howto/missing_setup_notebook_audit.md
+- prs: HowToFit#15, HowToGalaxy#18, HowToLens#25
 - autonomy: safe effective (--auto launched 2026-07-11 post 2a ship; docs cap safe ≤ medium; plan on issue #24); NO heart-ack this launch — Heart YELLOW at ship acks-or-parks
 - note: generator on main; never TEST_MODE; markdown/ not gitignored in any HowTo repo (verified); follows 2a (workspaces PRs af#90/ag#127/al#270 awaiting-merge); [[markdown-example-renderings]]
 - worktree: ~/Code/PyAutoLabs-wt/markdown-renderings-howto
