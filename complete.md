@@ -1,3 +1,9 @@
+## restore-truncated-howto-tutorials
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/26 (CLOSED)
+- prs: HowToLens#27 + HowToGalaxy#19 + HowToFit#16 — all MERGED 2026-07-11 (docs-only, library-free)
+- completed: 2026-07-11
+- summary: /intake → --auto supervised. HowToLens ch1 tutorial_1/tutorial_2 were cut off mid-docstring — an LLM output-token cutoff during the workspace bootstrap (frozen at the truncated length since commit #1, original source gone). Restored tutorial_1 (429→672, log10+Galaxies+Units+WrapUp adapted from the complete 654-line HowToGalaxy sibling) and tutorial_2 (214→391, ray-tracing grids/images/Galaxies/Tracer/Mappings/WrapUp from guides/tracer.py). These two were the ONLY genuine truncations across all three HowTo repos. Prevention: .github/scripts/check_tutorials_complete.py + a `tutorials-complete` CI job in all 3 repos requiring every non-stub tutorial to reach a terminal __Wrap Up__/__Summary__ section (a truncation never does). Also filled HowToGalaxy's empty tutorial_4_methods (0 bytes since bootstrap → not-written stub) + normalized 12 complete-but-unmarked tutorials across the 3 repos. Smoke 6/6 + 4/4 + 10/10; all CI green incl the new check. Heart YELLOW (6 ambient reasons) acked in-session at each ship; merges human-approved. Worktree + branches cleaned. Traps in [[project_howto_truncation_restore]] (linter must live in .github/scripts not scripts/, else notebook-gen converts it; revert dataset/ before staging; single-backslash LaTeX in docstrings).
+
 ## codex-skill-wrappers (Phases 1-3)
 
 ## markdown-renderings-workspaces

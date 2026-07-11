@@ -11,19 +11,6 @@
 - repos:
   - PyAutoReduce: feature/starred-epsf-backend
 
-## restore-truncated-howto-tutorials
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/26
-- status: awaiting-merge — ALL 3 PHASES SHIPPED (each own PR, all pending-release). Ph1 HowToLens#27: restored ch1 tutorial_1 (429→672)+tutorial_2 (214→391) truncated tails + linter + CI + 5 normalizations, smoke 6/6. Ph2 HowToGalaxy#19: filled empty tutorial_4_methods (stub) + 3 normalizations + linter + CI, smoke 4/4. Ph3 HowToFit#16: 4 normalizations (incl 2 commented-code endings + 1 "Finish.") + linter + CI, smoke 10/10. Prevention = .github/scripts/check_tutorials_complete.py requiring terminal __Wrap Up__/__Summary__ (a truncation never reaches it). #26 closes when all 3 merge. Docs-only, library-free.
-- pr: https://github.com/PyAutoLabs/HowToLens/pull/27 (ph1) + https://github.com/PyAutoLabs/HowToGalaxy/pull/19 (ph2) + https://github.com/PyAutoLabs/HowToFit/pull/16 (ph3)
-- autonomy: supervised effective (--auto launched 2026-07-11 in-session; docs cap safe@≤medium, header `supervised` binds as min)
-- heart-ack: 6-reason YELLOW set acked by maintainer in-session 2026-07-11 (workspace-validation-3-failed-2026-07-09 / 58-stale-parked-scripts / autolens_assistant-pin-behind / PyAutoMind-open-PR-11d / install-verification-not-run / no-release-validation); IDENTICAL set at all 3 ships; binds to exactly that set, any new reason parks
-- note: truncation signature = final docstring promises a plot/code that never follows — NOT merely a missing `__Wrap Up__` header (dealing_with_failure / bayesian_regularization end on genuine prose conclusions and are complete). Deliberate stubs ch1 tutorial_4_point_sources / tutorial_5_lensing_formalism are NOT truncation. HowToGalaxy tutorial_1 (654 lines) = complete reference sibling used to restore HowToLens tutorial_1. LINTER LIVES IN .github/scripts/ (NOT scripts/ — else notebook-gen converts it). dataset/ dirty on all 3 repos = generated artifacts, revert before staging.
-- worktree: ~/Code/PyAutoLabs-wt/restore-truncated-howto-tutorials
-- repos:
-  - HowToLens: feature/restore-truncated-howto-tutorials
-  - HowToGalaxy: feature/restore-truncated-howto-tutorials
-  - HowToFit: feature/restore-truncated-howto-tutorials
-
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
@@ -130,13 +117,3 @@
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
-## hygiene-agent
-- session: claude --resume 01Tw3EwV55k6VzxorYng3Kfn
-- status: library-dev — phased epic; P1+P2 MERGED, P3 PR-open (final core phase → conductor complete on merge)
-- phase-1: MERGED 2026-07-11 (PyAutoBrain#88 squash; issue #87 CLOSED) — conductor scaffold + boundaries; /hygiene live, worktree+branch cleaned
-- phase-2: MERGED 2026-07-11 (PyAutoBrain#90 squash; issue #89 CLOSED) — modes tidy/noise/deps/docs LIVE as pre-scan+delegate (all 4 target skills agent-run markdown, 3 Heart-owned → route only; typed debris/surface/advisory, only debris ranks; skills stay executors); install.sh re-run, worktree+branch cleaned
-- phase-3: PR-OPEN PyAutoBrain#92 (pending-release; issue Brain#91; worktree ~/Code/PyAutoLabs-wt/hygiene-agent-phase-3). perf mode LIVE: import-cost pre-scan (subprocess `python -c import` via HYGIENE_PYTHON, conductor never imports JAX; new 'timing' kind) + consult Heart script_timing/test_run + delegate /refactor; default defers perf timing (spawns imports); nothing staged now. gate tests 36p / smoke n-a / review CLEAN flags-none / heart YELLOW unacked. Standing Heart import_time leg DEFERRED (PyAutoBrain-only). post-merge: install.sh + worktree cleanup (squash → branch -D) → EPIC COMPLETE, retire entry to complete.md
-- autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack; parks at ship sign-off)
-- refs: umbrella issued/hygiene_agent.md; decision research/pyautobrain/hygiene_agent_decision.md (decided: conductor, no repo)
-- repos:
-  - PyAutoBrain: feature/hygiene-agent-phase-3
