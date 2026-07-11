@@ -2,7 +2,8 @@
 
 ## howto-markdown-resync
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/28
-- status: workspace-dev — re-sync 4 stale HowTo ch1 markdown pages (rendered pre-restore): HowToLens tutorial_1+tutorial_2 (re-render, restored), HowToFit tutorial_5 (re-render, normalized), HowToGalaxy tutorial_4_methods (DROP from config = stub). markdown/ only, no scripts/CI
+- status: shipped, awaiting-merge — 3 PRs: HowToLens#29 (tutorial_1+tutorial_2 re-rendered from restored scripts, now full) + HowToFit#17 (tutorial_5 re-render) + HowToGalaxy#20 (drop tutorial_4_methods stub). Verified 0 leaks, links resolve, restored content full. Gate: tests n/a/smoke superseded/review CLEAN/Heart YELLOW 6-set acked 2026-07-11
+- prs: HowToLens#29, HowToFit#17, HowToGalaxy#20
 - autonomy: safe effective (--auto launched 2026-07-11; docs small; plan on issue #28); NO heart-ack this launch — Heart YELLOW acks-or-parks
 - worktree: ~/Code/PyAutoLabs-wt/howto-markdown-resync
 - repos:
