@@ -1,14 +1,5 @@
 # Active Tasks
 
-## starred-wfc3-validation
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/37 (WFC3 leg of the deferred stellar-field STARRED comparison; parent #35 MERGED)
-- status: VALIDATION DONE — STARRED WINS on real WFC3 stars (commit 06b74ec, #37 comment-4948298371). STARRED is instrument-agnostic (NO new code for WFC3). Reduced Omega Cen (NGC 5139) WFC3/UVIS F606W proposal 15733 (6×60s). On real stars: empirical star-stack conc 0.58 (STELLAR truth); STARRED conc 0.54 matches it + clean, photutils 0.39 under-concentrated + neighbor-contaminated (crowding); radial rms 0.020 vs 0.021; STARRED wins. BONUS: photutils build_epsf 61x61 psf_full FAILS (non-positive flux) on this field, STARRED delivers both. Answers #37.
-- traps: Omega Cen CORE too crowded (min_sep kills isolated stars → 0-1) — used a moderate-density mosaic region (centre 4457,3495) with 22 isolated stars; pipeline _psf FAILS (photutils psf_full non-positive) BEFORE _package → data.fits/noise_map.fits NOT written, packaged manually from work/*_drc_sci.fits + noise_map_from(sci,wht,360,1.0); MAST 403 F606W → pin proposal_ids; comparison starred stage in ~/venv/starred w/ autoreduce on PYTHONPATH.
-- next: CLOSE-OUT (user decision) — optionally PR the WFC3 example (reduce_omegacen_wfc3.py) + validation prototype + close #37; consider a hardening issue for photutils psf_full non-positive-flux crash on crowded fields.
-- worktree: ~/Code/PyAutoLabs-wt/starred-wfc3-validation (off main a31d408, STARRED merged)
-- repos:
-  - PyAutoReduce: feature/starred-wfc3-validation
-
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
