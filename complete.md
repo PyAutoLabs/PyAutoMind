@@ -1,3 +1,13 @@
+## matrix-nufftax-py312
+- prs: PyAutoArray#382 + PyAutoBuild#144 (both MERGED 2026-07-11, squash)
+- completed: 2026-07-11
+- summary: Fixed the chronic PyAutoBuild "Python Version Matrix" weekly red. 38 failures/job = nufftax ModuleNotFoundError — default Interferometer transformer is TransformerNUFFT (nufftax), which is python>=3.12-gated in PyAutoArray [optional]; matrix installed bare -e ./PyAutoArray so nufftax/pynufft absent everywhere, and on 3.9-3.11 nufftax can't install by design (org: <3.12 not officially supported). PyAutoArray#382 = conftest pytest_collection_modifyitems skips default-nufftax interferometer/transformer tests when nufftax absent (keeps DFT+pynufft); PyAutoBuild#144 = matrix installs PyAutoArray[optional]. Verified local py3.12: present→pass, blocked→skip clean. Matrix re-dispatched post-merge to confirm green. From /health 2026-07-11.
+
+## assistant-pin-bump-2026-7-9-1
+- pr: autolens_assistant#62 (MERGED 2026-07-11, squash)
+- completed: 2026-07-11
+- summary: Bumped autolens_assistant version.txt + config/general.yaml from 2026.5.29.4 to 2026.7.9.1 (api_audit_baseline.json was already 2026.7.9.1, regen'd 07-10 — pin lagged, tripping Heart version_skew). Verified via clean-venv --write-baseline (baseline unchanged bar date) + --check-version exit 0 vs real 2026.7.9.1 wheels. Clears the version_skew YELLOW. From /health 2026-07-11.
+
 ## profiling-preopt-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56 (closed)
 - completed: 2026-07-11

@@ -160,21 +160,4 @@
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
-## matrix-nufftax-py312
-- issue: (none — interactive fix from /health; PRs self-tracked)
-- status: awaiting-merge — fixes PyAutoBuild "Python Version Matrix" weekly red (chronic since June; 38 nufftax ModuleNotFoundError per job). autolens_assistant general.yaml:57 = 3.9-3.11 "not officially supported". Two paired PRs open
-- prs: PyAutoArray#382 (conftest pytest_collection_modifyitems skips default-nufftax interferometer/transformer tests when nufftax absent; keeps DFT+pynufft) + PyAutoBuild#144 (matrix installs PyAutoArray[optional] → nufftax/pynufft present on 3.12/3.13). Both needed for green matrix; land together
-- verified: local py3.12.10 — nufftax present: 13+43 pass 0 skip (hook inert); nufftax blocked: test_transformer 5 pass (DFT+pynufft) / 8 skip (nufftax), interferometer files 43 skip clean no errors
-- autonomy: human-directed interactive (user "a) yes" 2026-07-11; chose keep-3.9-3.11+skip-nufftax); merge human
-- repos:
-  - PyAutoArray: feature/matrix-nufftax-py312
-  - PyAutoBuild: feature/matrix-nufftax-py312
 
-## assistant-pin-bump-2026-7-9-1
-- issue: (none — interactive fix from /health; PR self-tracked)
-- status: awaiting-merge — autolens_assistant version.txt + config/general.yaml pinned 2026.5.29.4 while api_audit_baseline.json already 2026.7.9.1 (regen'd 07-10); bumped both to 2026.7.9.1. Clears Heart version_skew YELLOW. PR #62
-- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/62 (2 files; baseline already current on main — verified via clean-venv --write-baseline, date-only noise reverted; --check-version exit 0 vs 2026.7.9.1 wheels)
-- autonomy: human-directed interactive (user "b) yes, proper regen" 2026-07-11); merge human
-- note: CO-CLAIMS autolens_assistant with benchmark-calibration (in-place) — DISJOINT (ours: version.txt + config/general.yaml; theirs: benchmarks/**); isolated worktree used, removed post-PR
-- repos:
-  - autolens_assistant: feature/pin-bump-2026-7-9-1
