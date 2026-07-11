@@ -1,5 +1,14 @@
 # Active Tasks
 
+## restore-truncated-howto-tutorials
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/26
+- status: workspace-dev — restore LLM-bootstrap-truncated HowTo tutorial scripts + add tutorial-completeness CI linter. Phase 1 HowToLens (confirmed ch1 tutorial_1 + tutorial_2 end mid-docstring promising a plot, no code, no Wrap Up); phases 2-3 HowToGalaxy then HowToFit, each own PR. Docs-only, library-free.
+- autonomy: supervised effective (--auto launched 2026-07-11 in-session; docs cap safe@≤medium, header `supervised` binds as min; no heart-ack given)
+- note: truncation signature = final docstring promises a plot/code that never follows — NOT merely a missing `__Wrap Up__` header (tutorial_4_dealing_with_failure / tutorial_4_bayesian_regularization end on genuine prose conclusions and are complete). Deliberate stubs ch1 tutorial_4_point_sources / tutorial_5_lensing_formalism are NOT truncation. HowToGalaxy tutorial_1 (654 lines) = complete reference sibling. dataset/ dirty on all 3 repos = generated artifacts, ignore.
+- worktree: ~/Code/PyAutoLabs-wt/restore-truncated-howto-tutorials
+- repos:
+  - HowToLens: feature/restore-truncated-howto-tutorials
+
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
