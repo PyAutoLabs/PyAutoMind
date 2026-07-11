@@ -1,12 +1,5 @@
 # Active Tasks
 
-## starred-frame-epsf
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/41 (STARRED per-frame ePSF for frame-products mode; sibling #36 back-end)
-- status: IMPLEMENTED (branch feature/starred-frame-epsf, off main w/ all STARRED merged). build_starred_frame_epsf (native-pixel STARRED ePSF per exposure; ERR-based noise; None on few-stars like photutils frame builder; NO drizzle resample) + shared _prepare_frame refactor (both back-ends 1 selection path) + dispatch package/frames._frame_psf on spec.psf_backend. 209 tests pass, black-clean. STARRED is instrument-agnostic so per-frame is its NATIVE use case (super-res from undersampled dithered stars).
-- next: VALIDATE (user chose WFC3+JWST) — download 1 Omega Cen WFC3/UVIS FLC (well-sampled) + 1 M92 NIRCam SW CAL (undersampled), build STARRED vs photutils frame ePSF, compare vs empirical frame-star stack. CAVEAT #37/#39: frames MORE undersampled than mosaic → STARRED may broaden more; validate not assume. Then PR + close #41. Traps: build_starred_frame_epsf runs in ~/venv/starred w/ autoreduce on PYTHONPATH; 2-venv (photutils PyAuto / STARRED starred venv).
-- worktree: ~/Code/PyAutoLabs-wt/starred-frame-epsf (off main)
-- repos:
-  - PyAutoReduce: feature/starred-frame-epsf
 
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
