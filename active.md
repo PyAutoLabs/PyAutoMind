@@ -124,13 +124,11 @@
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
 ## hygiene-agent
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/87
 - session: claude --resume 01Tw3EwV55k6VzxorYng3Kfn
-- status: pr-open
-- worktree: ~/Code/PyAutoLabs-wt/hygiene-agent
-- autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack at launch; parked at ship → shipped on live human sign-off)
+- status: library-dev — phased epic; P1 MERGED, P2 filed & ready (worktree not yet cut)
+- phase-1: MERGED 2026-07-11 (PyAutoBrain#88 squash; issue #87 CLOSED) — conductor scaffold + boundaries; install.sh re-run (/hygiene live in Claude+Codex), worktree removed, branch deleted, calibration row logged
+- phase-2: modes — issue Brain#89; absorb repo_cleanup (→ tidy) + cli_noise_clean (→ noise), consult dep_audit (→ deps) + audit_docs (→ docs), default prioritized worklist. DESIGN FORK to confirm at impl: conductor reasons+delegates (never mutates) → each mode drives the skill's AUDIT + prioritizes + points at the skill for EXECUTION; the skills stay the executors (repo_cleanup's destructive git mechanics stay in the skill, NOT moved into the conductor)
+- phase-3: perf mode (test/script/import timing) + optional PyAutoHeart legs (import_time / cli_noise) — file after P2 nears shipping
+- autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack; parks at ship sign-off)
+- refs: umbrella issued/hygiene_agent.md; decision research/pyautobrain/hygiene_agent_decision.md (decided: conductor, no repo)
 - repos:
-  - PyAutoBrain: feature/hygiene-agent
-- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/88 (pending-release; gate: tests 30p / smoke n-a / review CLEAN / heart YELLOW unacked)
-- post-merge: re-run `bash PyAutoBrain/bin/install.sh` (registers /hygiene command + Codex skill); worktree cleanup; then file phase 2 (absorb repo_cleanup + cli_noise_clean, consult dep_audit + audit_docs) as it nears — phase 3 (perf + Heart legs) after
-- phases: 1 scaffold+boundaries (this PR) → 2 modes → 3 perf+Heart-legs; umbrella issued/hygiene_agent.md, decision research/pyautobrain/hygiene_agent_decision.md (decided: conductor, no repo)
