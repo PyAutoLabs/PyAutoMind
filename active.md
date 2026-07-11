@@ -108,3 +108,11 @@
 
 
 
+
+## hygiene-file-modes
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/96
+- status: pr-open PyAutoBrain#97 — 3 cheap org-specific hygiene modes (crlf/config/artifacts), demonstrated-need (no lint in CI; CRLF/config-drift/output-leak gotchas). Conductor-only, no Heart legs. Live: crlf 649 CRLF .py files, config 17 drifted keys, artifacts 4 leaks. worktree hygiene-file-modes; on merge: install.sh not needed (no new skill files), worktree cleanup, retire entry
+- design: crlf=git grep CRLF (debris→/refactor); config=_hygiene_config.py recursive yaml key-diff lib↔workspace (surface→/refactor); artifacts=tracked outputs?/ + stray data-ext outside fixtures (debris→/repo_cleanup). Default ranking picks highest-count debris (tidy/crlf/artifacts). Grounding: 649 CRLF real, config pairs real, artifacts low-FP via output_test exclusion
+- autonomy: supervised effective (--auto 2026-07-11; feature-medium; no heart-ack; parked→live sign-off)
+- repos:
+  - PyAutoBrain: feature/hygiene-file-modes
