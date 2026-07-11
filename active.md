@@ -1,5 +1,13 @@
 # Active Tasks
 
+## starred-wfc3-validation
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/37 (WFC3 leg of the deferred stellar-field STARRED comparison; parent #35 MERGED)
+- status: validation — full stellar-field WFC3 validation of the merged STARRED Tier-1b ePSF (#36). KEY: STARRED is instrument-agnostic (psf_backend dispatch, not per-detector) → NO new code for WFC3. Reducing a GENUINELY STELLAR field to escape the #37 galaxy-contamination wall: Omega Cen (NGC 5139) WFC3/UVIS F606W, proposal 15733 (6×60s @ mean pointing 201.69283/-47.47906, ~10" off core), cutout 401² @0.0396"/px. Then STARRED-vs-photutils ePSF comparison on REAL stars.
+- next: reduction running (bg); on success → prototypes/starred_vs_epsf_omegacen.py comparison (concentration + radial vs empirical stack, STRICT stellar star-selection). Traps: Omega Cen core is crowded (10" off → still dense, but HST resolves isolated bright stars; sat cut handles 60s saturation); MAST 403 F606W exposures across proposals → MUST pin proposal_ids=("15733",); comparison runs in ~/venv/starred w/ autoreduce on PYTHONPATH.
+- worktree: ~/Code/PyAutoLabs-wt/starred-wfc3-validation (off main a31d408, STARRED merged)
+- repos:
+  - PyAutoReduce: feature/starred-wfc3-validation
+
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
