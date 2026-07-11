@@ -1,4 +1,6 @@
 ## ep-hierarchical-regression
+
+- **autofit-navigator-catalogue-refresh** (autofit_workspace #86 → PR#87, MERGED 2026-07-11) — regenerated stale navigator catalogue (llms-full.txt + workspace_index.json) after EP#85; cleared Navigator Check "Catalogue staleness" RED on main. --auto safe; catalogue-only +28/-1. Found via /health morning sweep.
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1352 (closed)
 - completed: 2026-07-10
 - pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1355 (MERGED, main de6534dfb)

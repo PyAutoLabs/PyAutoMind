@@ -42,16 +42,6 @@
   - autogalaxy_workspace: feature/markdown-renderings-workspaces
   - autofit_workspace: feature/markdown-renderings-workspaces
 
-## autofit-navigator-catalogue-refresh
-- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/86
-- status: awaiting-merge — SHIPPED to PR-open. Regenerated navigator catalogue (llms-full.txt + workspace_index.json) after EP #85 merge; fixed Navigator Check "Catalogue staleness" RED on autofit_workspace main (831b08b). PR #87 catalogue-only (+28/-1); CI "Catalogue staleness" job PASS on PR. Merge stays human
-- pr: https://github.com/PyAutoLabs/autofit_workspace/pull/87 (pending-release; catalogue-only)
-- autonomy: safe effective (--auto launched 2026-07-11 via /health; maintenance cap safe; plan on issue #86); heart-ack GIVEN at ship 2026-07-11 for the 5-reason YELLOW set (workspace-validation-3fail-stale-0709 / 58-parked-scripts / autolens_assistant-pin-skew / manifest-drift-x5 / PyAutoMind-PR-11d) — binds this ship only. Also cleared the sole hard-RED driver pre-ship (PyAutoFit local main was behind origin by 2 → ff-synced; false-positive stale checkout)
-- note: CO-CLAIMS autofit_workspace with markdown-renderings-workspaces (parked) — file sets DISJOINT: theirs = README.md + config/build/markdown_examples.yaml + markdown/**; ours = llms-full.txt + workspace_index.json. Human-approved parallel 2026-07-11. Found via /health morning sweep
-- worktree: ~/Code/PyAutoLabs-wt/autofit-navigator-catalogue-refresh
-- repos:
-  - autofit_workspace: feature/autofit-navigator-catalogue-refresh
-
 ## benchmark-calibration
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/59
 - status: workspace-dev — first calibration campaign: teacher × {sonnet, haiku} + easy × {sonnet} via claude-code-subagent harness, serial (memory); records → benchmarks/runs/, RESULTS.md regen, rubric verdict on issue; PR at end
