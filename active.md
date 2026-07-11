@@ -2,8 +2,9 @@
 
 ## codex-profile-skill-metadata
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/61
-- status: workspace-dev
+- status: awaiting-input — parked at Heart YELLOW acknowledgement (skill validation pass; installer assertions pass; smoke n/a; review CLEAN; commits local, not pushed)
 - autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved rollout plan)
+- question: https://github.com/PyAutoLabs/autolens_profiling/issues/61#issuecomment-4946694497
 - worktree: /home/jammy/Code/PyAutoLabs-wt/codex-profile-skill-metadata
 - repos:
   - autolens_profiling: feature/codex-profile-skill-metadata
@@ -146,4 +147,3 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
-
