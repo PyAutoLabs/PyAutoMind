@@ -1,17 +1,5 @@
 # Active Tasks
 
-## markdown-renderings-howto
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/24
-- status: shipped, awaiting-merge — 3 PRs open: HowToFit#15 (6) + HowToGalaxy#18 (6, +setup_notebook fix on tutorial_3_fitting) + HowToLens#25 (9, +setup_notebook fix on tutorial_7_fitting). Verified: 0 path leaks, index links resolve, no embedded errors. Gate: tests n/a / smoke superseded / review CLEAN / Heart YELLOW 6-set acked 2026-07-11. Surfaced+fixed 2 tutorials missing setup_notebook (failed nbconvert CWD); broader audit filed bug/howto/missing_setup_notebook_audit.md
-- prs: HowToFit#15, HowToGalaxy#18, HowToLens#25
-- autonomy: safe effective (--auto launched 2026-07-11 post 2a ship; docs cap safe ≤ medium; plan on issue #24); NO heart-ack this launch — Heart YELLOW at ship acks-or-parks
-- note: generator on main; never TEST_MODE; markdown/ not gitignored in any HowTo repo (verified); follows 2a (workspaces PRs af#90/ag#127/al#270 awaiting-merge); [[markdown-example-renderings]]
-- worktree: ~/Code/PyAutoLabs-wt/markdown-renderings-howto
-- repos:
-  - HowToFit: feature/markdown-renderings-howto
-  - HowToGalaxy: feature/markdown-renderings-howto
-  - HowToLens: feature/markdown-renderings-howto
-
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
@@ -21,19 +9,6 @@
 - worktree: ~/Code/PyAutoLabs-wt/lenstool-scaling-reference-magnitude
 - repos:
   - autolens_workspace: feature/lenstool-scaling-reference-magnitude
-
-## markdown-renderings-workspaces
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/264
-- status: shipped, awaiting-merge — 3 PRs open behind four-leg gate: autofit_workspace#90 (3 pages) + autogalaxy_workspace#127 (18 pages; ellipse/modeling EXCLUDED = timeout, follow-up) + autolens_workspace#270 (21 new pages, index 30). Verified: 0 path leaks, all index links resolve, no embedded errors, corner PNGs present. Gate: tests n/a / smoke superseded-by-build / review CLEAN / Heart YELLOW 6-set acked in-session 2026-07-11. cluster excluded (runtime). Leftovers follow-up: docs/pyautobuild/markdown_renderings_2a_leftovers.md (ellipse/modeling long-timeout + PNG size ~61M autolens/22M autogalaxy)
-- prs: autofit_workspace#90, autogalaxy_workspace#127, autolens_workspace#270
-- autonomy: safe effective (--auto launched 2026-07-10 post plan-approval; docs cap safe ≤ medium; plan on issue); Heart YELLOW 6-reason set acked in-session 2026-07-11 at ship (binds this run only)
-- note: generator on main (repo-agnostic); never TEST_MODE; ~8-20h cumulative real sampling (~13 fits); resumable (each page persists, re-run resumes from cache); tracked-dataset regen dirt in all 3 main checkouts is stale (worktree branches clean); HowTo = batch 2b (issued/markdown_renderings_howto.md, after 2a merges)
-- env-fix 2026-07-10: matplotlib 3.11.0 (installed 11:41 by another session, unpinned) broke arviz-plots/corner (matplotlib.style.core removed) → every modeling.py corner_cornerpy crashed AFTER banking its fit. Downgraded shared venv to matplotlib==3.10.9 (user-approved); corner OK. VERDICT: one-off in THIS venv, NOT a user/CI exposure — corner==2.2.2 (PyAutoFit's real dep) works on mpl 3.11; arviz is NOT a PyAuto dep (here only via `nss` sampler trial, Required-by: nss) and corner guards its arviz backend (corner.corner:210); no lib/workspace imports arviz. NO matplotlib pin needed; bug prompt retired. RE-RENDER NEEDED post-build: autogalaxy imaging/modeling + ellipse/modeling (failed pre-fix; fits cached — `generate_markdown.py autogalaxy --only <name>` resumes fast). autolens modeling all ran post-fix (fine). Spot-check corner PNG present on one autolens + one autogalaxy modeling page before ship.
-- worktree: ~/Code/PyAutoLabs-wt/markdown-renderings-workspaces
-- repos:
-  - autolens_workspace: feature/markdown-renderings-workspaces
-  - autogalaxy_workspace: feature/markdown-renderings-workspaces
-  - autofit_workspace: feature/markdown-renderings-workspaces
 
 ## benchmark-calibration
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/59

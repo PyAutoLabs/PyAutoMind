@@ -1,4 +1,17 @@
 ## codex-skill-wrappers (Phases 1-3)
+
+## markdown-renderings-workspaces
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/264 (closed)
+- completed: 2026-07-11
+- prs: autofit_workspace#90 (afc384a) + autogalaxy_workspace#127 (04f0d8b9) + autolens_workspace#270 (632c776a) — all MERGED 2026-07-11 (human-directed)
+- summary: batch 2a executed-markdown for the 3 workspaces (autofit 3 overview, autogalaxy 18, autolens +21 → index 30). cluster + ellipse/modeling excluded (runtime/timeout, follow-up). Traps: shared-venv matplotlib 3.11 broke corner→arviz-plots mid-build (downgraded 3.10.9; one-off, arviz nss-only, no pin); machine reboot mid-build resumed from cache; fits bank BEFORE plot cell so crashes never lose sampling. Calibration merged-unchanged. Leftovers: docs/pyautobuild/markdown_renderings_2a_leftovers.md.
+
+## markdown-renderings-howto
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/24 (closed)
+- completed: 2026-07-11
+- prs: HowToFit#15 (62788e5) + HowToGalaxy#18 (3429dc5) + HowToLens#25 (93b520a) — all MERGED 2026-07-11
+- summary: batch 2b executed-markdown for HowTo chapter_1 (6/6/9). FAST (ch1 = few/no searches). Surfaced+fixed 2 tutorials (tutorial_3_fitting, tutorial_7_fitting) MISSING setup_notebook → nbconvert CWD=notebook-dir broke relative paths; added line + regenerated notebooks. Broader audit filed bug/howto/missing_setup_notebook_audit.md. Calibration merged-unchanged. Completes the markdown-renderings rollout (phase1 + 2a + 2b, 8 PRs).
+
 - completed: 2026-07-11
 - issues: PyAutoBrain#84 + PyAutoBrain#85 + autolens_profiling#61 (closed)
 - prs: PyAutoBrain#86 + PyAutoMind#60 + PyAutoHeart#59 + PyAutoBuild#145 + autolens_profiling#64 (all merged, merge commits)
