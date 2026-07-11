@@ -11,15 +11,6 @@
   - autolens_profiling  (Phase 5: searches/nss/ subtree + sweep.py/_samplers.py de-register; keep results/notes)
   - PyAutoMind  (Phase 6: retire z_features/complete/nss_first_class_sampler.md epic + void issued/nss_* prompts)
 
-## codex-profile-skill-metadata
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/61
-- planned: 2026-07-10
-- classification: workspace
-- suggested-branch: feature/codex-profile-skill-metadata
-- blocked-by: preopt-breakdown-dashboard and profiling-preopt-campaign (active autolens_profiling claims)
-- affected-repos:
-  - autolens_profiling
-
 ## samples-parameter-paths
 - prompt: PyAutoMind/bug/health_fixes/samples_parameter_paths.md
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1327 (open, parked)
@@ -178,5 +169,4 @@
     new convergence-MGE hook. Validate via grad(psi)=alpha self-consistency.
 - affected-repos:
   - PyAutoGalaxy
-
 
