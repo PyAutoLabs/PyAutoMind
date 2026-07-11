@@ -1,3 +1,38 @@
+## remove-nss-sampler (core — Phases 1-2 + stash)
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356 (OPEN — Phases 3-6 remainder still blocked → planned.md remove-nss-sampler-remainder)
+- completed: 2026-07-11
+- prs: PyAutoFit#1357 + autofit_workspace#88 + autofit_workspace_developer#20 (all MERGED, merge-commit, library-first; pending-release)
+- summary: Removed the NSS nested slice sampler (`af.NSS`) and its infrastructure — bespoke git+ install / CI / build machinery not justified by measured perf (faster per-eval on MGE but OOM-prone on pix/delaunay via vmap fan-out); can return as a real pip install later. PyAutoFit#1357: deleted autofit/non_linear/search/nest/nss module+tests, af.NSS export, [nss] extra + git+ footgun comment block, AGENTS notes (1393-line del, PUBLIC API removal); blackjax RETAINED (BlackJAXNUTS uses it). autofit_workspace#88: removed the Search:NSS tutorial section from scripts/searches/nest.py + regenerated notebook (22→20 cells). autofit_workspace_developer#20: PRESERVED the impl at searches/nss/ (alongside ultranest/pyswarms) — module relativized as drop-in, tests verbatim vs library paths, README with pinned handley-lab/blackjax@ef45acd2 + yallup/nss@69159b0f SHAs + re-mainline checklist, example.py. Gate: test_autofit 1471p/1s/0f; downstream galaxy/lens import-clean; review CLEAN; Heart YELLOW (ambient non-NSS, human-acked in-session). --auto supervised. Worktree + local branches cleaned up. Trap: arviz entered the stack ONLY via nss (Required-by: nss) — removal sheds that footgun.
+
+## preopt-breakdown-dashboard
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59 (closed)
+- completed: 2026-07-11
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/63 (MERGED, squash; pending-release)
+- summary: Phase-4 (likelihood_breakdown + dashboard) leg of the polish.md PreOptimizationTimes campaign. Delivered: A100 breakdown tier (imaging mge/pix/delaunay × hst dense+sparse + datacube, fp64+mp, GPU-first doctrine); four-way split of the delaunay inversion-setup block (triangulation+interpolation ≈27% of full likelihood = top optimization target; NNLS 65% pix / 34% delaunay); build_readme.py Platform column + auto-populated PreOptimizationTimes baseline column; results/notes/preopt_breakdown_baseline.md (verdict: no library drift since May, 0.89–1.14× scatter, F-matrix dominates mesh cells). Wrap-up (this session, after #62 cleared the phase-3 gate): merged origin/main (3 generated READMEs conflicted → regenerated from merged build_readme.py, not hand-merged), fixed stale Roadmap row 7, ruff-format fix for lint (delaunay split-setup + build_readme). CI green (ruff check+format, build_readme --check idempotence, lychee, smoke import). Heart NOT re-run — data/docs/tooling only, no library source. Worktree + branch cleaned up.
+- follow-up filed (un-issued backlog): feature/autoarray/nufft_mapping_matrix_column_chunking.md — alma_high interferometer breakdown stays gpu_unusable_breakdown (inversion-matrix extraction NUFFTs all 1500 mapping-matrix columns onto the 1600² grid at once = 61.44 GB fp64, OOMs A100; existing 1M-vis chunking chunks the gather not the columns). Needs column-chunked mapping-matrix NUFFT at the PyAutoArray/nufftax boundary; cross-refs the sibling simulator-NUFFT chunking prompt. Re-run + lift the classification once it lands.
+
+## matrix-nufftax-py312
+- prs: PyAutoArray#382 + PyAutoBuild#144 (both MERGED 2026-07-11, squash)
+- completed: 2026-07-11
+- summary: Fixed the chronic PyAutoBuild "Python Version Matrix" weekly red. 38 failures/job = nufftax ModuleNotFoundError — default Interferometer transformer is TransformerNUFFT (nufftax), which is python>=3.12-gated in PyAutoArray [optional]; matrix installed bare -e ./PyAutoArray so nufftax/pynufft absent everywhere, and on 3.9-3.11 nufftax can't install by design (org: <3.12 not officially supported). PyAutoArray#382 = conftest pytest_collection_modifyitems skips default-nufftax interferometer/transformer tests when nufftax absent (keeps DFT+pynufft); PyAutoBuild#144 = matrix installs PyAutoArray[optional]. Verified local py3.12: present→pass, blocked→skip clean. Matrix re-dispatched post-merge to confirm green. From /health 2026-07-11.
+
+## assistant-pin-bump-2026-7-9-1
+- pr: autolens_assistant#62 (MERGED 2026-07-11, squash)
+- completed: 2026-07-11
+- summary: Bumped autolens_assistant version.txt + config/general.yaml from 2026.5.29.4 to 2026.7.9.1 (api_audit_baseline.json was already 2026.7.9.1, regen'd 07-10 — pin lagged, tripping Heart version_skew). Verified via clean-venv --write-baseline (baseline unchanged bar date) + --check-version exit 0 vs real 2026.7.9.1 wheels. Clears the version_skew YELLOW. From /health 2026-07-11.
+
+## profiling-preopt-campaign
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56 (closed)
+- completed: 2026-07-11
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/62 (MERGED, squash; pending-release)
+- summary: Phase-3 (likelihood_runtime) leg of the polish.md PreOptimizationTimes campaign, frozen "done enough" at user direction after the --auto run (launched 2026-07-08) stalled with RAL HPC down. Wrap-up: rebased feature/profiling-preopt-campaign onto origin/main (clean; ahead-5/behind-7 all unrelated paths), committed stray datacube delaunay results, ran likelihood_runtime/aggregate.py across all cells (comparison.json 1→12), froze results/baselines/PreOptimizationTimes/ + refreshed READMEs. Baseline: imaging (mge/pix/delaunay × ao/hst/jwst) + interferometer (× sma/alma) + datacube (delaunay/sma), local CPU fp64/mp dense+sparse. Deferred to a later profiling-agent re-run: laptop-GPU + HPC-A100 legs (extend same cells, refresh in place). Cosmetic: datacube/delaunay/sma headline renders — (raw JSON lacks the headline field). Cleared the phase-3 gate for preopt-breakdown-dashboard (#59) dashboard leg. Worktree + branch cleaned up.
+
+## autofit-navigator-catalogue-refresh
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/86 (closed)
+- completed: 2026-07-11
+- pr: https://github.com/PyAutoLabs/autofit_workspace/pull/87 (MERGED, squash; pending-release)
+- summary: Regenerated the stale navigator catalogue (llms-full.txt + workspace_index.json), clearing the Navigator Check "Catalogue staleness" RED on autofit_workspace main (831b08b, the EP #85 merge). Root cause: EP statistics-completion added scripts/features/expectation_propagation.py + a cross-ref from graphical_models.py, but the generated catalogue was never regenerated. Fix = regenerate_navigator.py autofit; catalogue-only +28/-1; check_navigator green; idempotent. --auto safe (maintenance cap); Heart YELLOW-acked-5-set at ship; the sole hard-RED driver (PyAutoFit local main 2 behind origin) was a false-positive stale checkout, ff-synced pre-ship. Found via /health morning sweep 2026-07-11. Co-claimed autofit_workspace with parked markdown-renderings-workspaces (file-disjoint, human-approved parallel).
+
 ## ep-hierarchical-regression
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1352 (closed)
 - completed: 2026-07-10
@@ -5820,3 +5855,13 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/142 (merged 682c3c9, squash)
 - repos: PyAutoBuild
 - notes: #pipreleases success post now embeds the full PyAutoLens release notes (which already aggregate upstream Fit/Array/Galaxy via "Upstream Changes") + links to all four GitHub release pages. New autobuild/slack_release_notes.py reads back the published Lens GitHub Release (gh release view), converts GitHub-md->Slack-mrkdwn, falls back to the one-liner if unfetchable; failure post unchanged. announce_release now needs publish_release_notes (kept in always() so failures still page), checks out repo + PAT_PYAUTOLABS as GH_TOKEN for the cross-repo read. --auto safe run: parked at ship gate on unacked Heart YELLOW, then human acked the 5-reason organism-scope set -> PR-open -> merged. Verified end-to-end against the LIVE 2026.7.9.1 release. Notes only appear on the NEXT live release (workflow YAML, not CI-exercisable).
+
+## matrix-jax-skip
+- prs: PyAutoArray#383 + PyAutoFit#1358 + PyAutoGalaxy#497 + PyAutoLens#604 (all MERGED 2026-07-11, squash)
+- completed: 2026-07-11
+- summary: Second layer of the Python Version Matrix fix (after nufftax layer #382/#144). 11 unit tests across 4 repos exercise jax-only paths (vmapped profiles / blackjax NUTS / NUFFT sparse operator / use_jax=True) and hard-failed on the NumPy-only matrix with ModuleNotFoundError: jax (jax ships via [optional], absent on the matrix; can't install on 3.9 anyway). Guarded each with pytest.mark.skipif(importlib.util.find_spec("jax") is None); numpy tests in same files untouched. Doctrine-aligned (unit tests numpy-only). Verified: jax-absent clean venv → guarded skip + rest pass; jax-present dev env → collect clean; all 4 PR CIs green (3.12/3.13 run the guarded tests). Matrix re-dispatched (run 29150117854) to confirm end-to-end green. From /health 2026-07-11.
+
+## matrix-blackjax-and-smoke-guards
+- prs: PyAutoFit#1359 (blackjax unit guard) + autofit_workspace#89 + autolens_workspace#269 + autogalaxy_workspace#126 (smoke guards) + PyAutoFit#1360 (remove orphaned nss_install_smoke.yml) — all MERGED 2026-07-11
+- completed: 2026-07-11
+- summary: Final layers of the Python Version Matrix fix (after nufftax #382/#144 and jax #383/#1358/#497/#604). (1) blackjax unit: #1358 guarded the 2 _times_from_positions NUTS tests on jax, but they need BLACKJAX (jax installs on 3.11+ via [optional] chain, blackjax lives in autofit[optional] which the matrix omits) → #1359 re-guards on find_spec("blackjax"). (2) Smoke: 3 workspace example scripts hit ModuleNotFoundError on optional backends — searches/mcmc.py (blackjax NUTS section), interferometer/modeling.py + start_here.py (nufftax) → added find_spec guards that print+sys.exit(0) when backend absent; verified against clean 2026.7.9.1 venv (mcmc runs Emcee+Zeus then skips NUTS). (3) NSS cleanup: nss_install_smoke.yml was orphaned (af.NSS + [nss] extra already removed from main; my stale memory said parked-unpushed but it LANDED) — ran on every PR installing nonexistent autofit[nss] → deleted. blackjax is NUTS's (mainline, [optional]); NSS used a DIFFERENT handley-lab fork — unrelated. From /health 2026-07-11.

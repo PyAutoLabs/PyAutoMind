@@ -1,3 +1,16 @@
+## remove-nss-sampler-remainder
+- prompt: PyAutoMind/issued/remove_nss_sampler_and_infra.md
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356
+- planned: 2026-07-11
+- classification: refactor — cross-repo NSS-infra removal, phases 3-6 (core Phases 1-2 + stash MERGED 2026-07-11 → complete.md remove-nss-sampler; PyAutoFit#1357/autofit_workspace#88/dev#20. af.NSS now gone from the library — remainder is pure infra cleanup, safe to land whenever the repos free up)
+- blocked-by: codex-organ-skill-wrappers (holds PyAutoBuild/PyAutoHeart/PyAutoMind); preopt-breakdown-dashboard + profiling-preopt-campaign (hold autolens_profiling)
+- suggested-branch: refactor/remove-nss-sampler
+- affected-repos:
+  - PyAutoBuild  (Phase 3: release.yml [nss] git+ footgun guard, unittest_nss job, --ignore .../nss)
+  - PyAutoHeart  (Phase 4: tests/test_ci_status.py nss fixture, docs/release_validation.md)
+  - autolens_profiling  (Phase 5: searches/nss/ subtree + sweep.py/_samplers.py de-register; keep results/notes)
+  - PyAutoMind  (Phase 6: retire z_features/complete/nss_first_class_sampler.md epic + void issued/nss_* prompts)
+
 ## samples-parameter-paths
 - prompt: PyAutoMind/bug/health_fixes/samples_parameter_paths.md
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1327 (open, parked)
@@ -156,6 +169,4 @@
     new convergence-MGE hook. Validate via grad(psi)=alpha self-consistency.
 - affected-repos:
   - PyAutoGalaxy
-
-
 

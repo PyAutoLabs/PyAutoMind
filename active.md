@@ -1,9 +1,19 @@
 # Active Tasks
 
+## codex-profile-skill-metadata
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/61
+- status: awaiting-input — parked at Heart YELLOW acknowledgement (skill validation pass; installer assertions pass; smoke n/a; review CLEAN; commits local, not pushed)
+- autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved rollout plan)
+- question: https://github.com/PyAutoLabs/autolens_profiling/issues/61#issuecomment-4946694497
+- worktree: /home/jammy/Code/PyAutoLabs-wt/codex-profile-skill-metadata
+- repos:
+  - autolens_profiling: feature/codex-profile-skill-metadata
+
 ## codex-organ-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/85
-- status: library-dev
+- status: awaiting-input — parked at current six-reason Heart YELLOW acknowledgement (Heart 244 pass; Build 112 pass/1 skip; smoke n/a; review CLEAN; branches local, not pushed)
 - autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved rollout plan); no Heart YELLOW acknowledgement given
+- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/85#issuecomment-4946711027
 - depends-on: codex-brain-skill-wrappers / PyAutoBrain#84
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-organ-skill-wrappers
 - repos:
@@ -13,8 +23,9 @@
 
 ## codex-brain-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/84
-- status: library-dev
+- status: awaiting-input — parked at current six-reason Heart YELLOW acknowledgement (tests 30 pass; smoke n/a; review CLEAN; commits local, not pushed)
 - autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved two-phase plan on issue); no Heart YELLOW acknowledgement given
+- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/84#issuecomment-4946711021
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-brain-skill-wrappers
 - repos:
   - PyAutoBrain: feature/codex-brain-skill-wrappers
@@ -34,7 +45,7 @@
 - status: workspace-dev — batch 2a: extend autolens config (interferometer/point_source/multi/group/weak, cluster EXCLUDED) + new autogalaxy config (root+imaging/interferometer/multi/ellipse/guides) + new autofit config (overview 1-3); sequential real builds (autofit fast-first → autogalaxy → autolens-remaining); ship 3 PRs
 - autonomy: safe effective (--auto launched 2026-07-10 post plan-approval; docs cap safe ≤ medium; plan on issue); NO heart-ack given this launch — any Heart YELLOW at ship parks for ack
 - note: generator on main (repo-agnostic); never TEST_MODE; ~8-20h cumulative real sampling (~13 fits); resumable (each page persists, re-run resumes from cache); tracked-dataset regen dirt in all 3 main checkouts is stale (worktree branches clean); HowTo = batch 2b (issued/markdown_renderings_howto.md, after 2a merges)
-- env-fix 2026-07-10: matplotlib 3.11.0 (installed 11:41 by another session, unpinned) broke arviz-plots/corner (matplotlib.style.core removed) → every modeling.py corner_cornerpy crashed AFTER banking its fit. Downgraded shared venv to matplotlib==3.10.9 (user-approved); corner OK. Ecosystem bug filed bug/pyautoconf/matplotlib_311_arviz_plots_corner_crash.md (cap matplotlib<3.11). RE-RENDER NEEDED post-build: autogalaxy imaging/modeling + ellipse/modeling (failed pre-fix; fits cached — `generate_markdown.py autogalaxy --only <name>` resumes fast). autolens modeling all ran post-fix (fine). Spot-check corner PNG present on one autolens + one autogalaxy modeling page before ship.
+- env-fix 2026-07-10: matplotlib 3.11.0 (installed 11:41 by another session, unpinned) broke arviz-plots/corner (matplotlib.style.core removed) → every modeling.py corner_cornerpy crashed AFTER banking its fit. Downgraded shared venv to matplotlib==3.10.9 (user-approved); corner OK. VERDICT: one-off in THIS venv, NOT a user/CI exposure — corner==2.2.2 (PyAutoFit's real dep) works on mpl 3.11; arviz is NOT a PyAuto dep (here only via `nss` sampler trial, Required-by: nss) and corner guards its arviz backend (corner.corner:210); no lib/workspace imports arviz. NO matplotlib pin needed; bug prompt retired. RE-RENDER NEEDED post-build: autogalaxy imaging/modeling + ellipse/modeling (failed pre-fix; fits cached — `generate_markdown.py autogalaxy --only <name>` resumes fast). autolens modeling all ran post-fix (fine). Spot-check corner PNG present on one autolens + one autogalaxy modeling page before ship.
 - worktree: ~/Code/PyAutoLabs-wt/markdown-renderings-workspaces
 - repos:
   - autolens_workspace: feature/markdown-renderings-workspaces
@@ -49,17 +60,6 @@
 - worktree: none (in-place: autolens_assistant on feature/benchmark-calibration)
 - repos:
   - autolens_assistant: feature/benchmark-calibration
-
-## preopt-breakdown-dashboard
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/59
-- status: workspace-dev — A100 tier COMPLETE for imaging(9)+datacube(4); four-way split MEASURED (330079): triangulation+interpolation 26.6ms = ~27% of full likelihood = TOP optimization target (qhull callback few ms; JAX walk/interp is the work item); NNLS confirmed 65% pix / 34% delaunay per solver ledger; interferometer alma_high = gpu_unusable_breakdown (61.44GB column NUFFT; PyAutoArray follow-up prompt TO FILE); REMAINING = follow-up prompt + dashboard leg (gated on phase-3 baseline tag) + ship sign-off (parks)
-- campaign: driver scratchpad/breakdown_campaign.sh (session a66a757a), logs scratchpad/breakdown_logs/; interruption-safe — each cell's JSON persists to results/breakdown/ on completion; cold-resume = rerun remaining cells' commands from the driver (skip cells whose v-current JSON exists)
-- autonomy: supervised effective (--auto launched 2026-07-10; header supervised binds over maintenance cap safe; plan on issue; no heart-ack given — any Heart YELLOW at ship parks)
-- claim-override: human-directed 2026-07-10 — proceeds alongside profiling-preopt-campaign's autolens_profiling claim ("i dont see a clash"); phase 4 works likelihood_breakdown/ + README, phase 3 works likelihood_runtime/ — distinct paths; coordinate merge order at ship (README/build tooling may touch both — rebase on campaign branch if needed)
-- note: dashboard deliverable depends on phase-3 PreOptimizationTimes runtime baseline (not yet tagged); breakdown runs (deliverable 1) proceed independently; HPC CPU/A100 legs gated on RAL availability
-- worktree: ~/Code/PyAutoLabs-wt/preopt-breakdown-dashboard
-- repos:
-  - autolens_profiling: feature/preopt-breakdown-dashboard
 
 ## pj011646-wfc3-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/25
@@ -138,17 +138,6 @@
 - question: https://github.com/PyAutoLabs/PyAutoFit/issues/1331
 - worktree: none (read-only reassessment on PyAutoFit main @ 0f26ff2d8; verdicts land in PyAutoMind bug/priors)
 - repos:
-
-## profiling-preopt-campaign
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
-- status: workspace-dev
-- autonomy: supervised (--auto, launched 2026-07-08; local-CPU leg, RAL down)
-- campaign: local-CPU matrix in flight (background); interruption-safe — resume with
-  sweep.py --skip-gpu --skip-existing (dense, then --sparse imaging pass), then
-  aggregate.py; full cold-resume steps on the issue (comment of 2026-07-08 evening)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-preopt-campaign
-- repos:
-  - autolens_profiling: feature/profiling-preopt-campaign
 
 ## morning-status-release-rehearsal
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/39
