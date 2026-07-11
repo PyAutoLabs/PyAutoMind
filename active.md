@@ -108,10 +108,3 @@
 
 
 
-## hygiene-perf-phase4
-- issue: PyAutoHeart#63 (4a) + PyAutoHeart#65 (4b) + PyAutoBrain (perf aggregation #94) + 4c issued/hygiene_function_profiling.md
-- status: pr-open — reopened perf scope (original prompt asked for unit-test/workspace-testmode/function timing; shipped perf covered import only). ALL 3 BUILT. 6 PRs OPEN: PyAutoHeart#64 (4a unit_test_timing) + PyAutoHeart#66 (4b workspace_testmode_timing, amended: DEFAULT_SCRIPTS path fix scripts/imaging/start_here.py) + PyAutoBrain#94 (perf aggregates all timing legs) + PyAutoBrain#95 (4c perf --profile function profiling). 4c crux (likelihood-exclusion filter) VALIDATED against a real autogalaxy modeling profile: self-ranking drops likelihood entry points (wrap fit at ~0 self), excludes name/JAX/no-source; surfaces model-composition hotspots (replace_promise 433k calls etc)
-- design: all legs mirror import_time — OFF-TICK (heavy → daily cron/on-demand, NOT tick.sh), subprocess run (rule 4, injected runner for stdlib tests), rolling baseline + ratio classify, ADVISORY dashboard (local-only family, NOT gating). 4a/4b dashboard+state edits anchored at DIFFERENT lines to avoid merge conflicts. perf reads PERF_HEART_LEGS=(import_time unit_test_timing workspace_testmode_timing), file-guarded → new legs light up with no conductor change
-- autonomy: supervised effective (--auto 2026-07-11; feature-medium; no heart-ack; parked→live sign-off)
-- worktrees: hygiene-unit-test-timing + hygiene-ws-testmode-timing (PyAutoHeart), hygiene-perf-timing-legs + hygiene-function-profiling (PyAutoBrain) — clean up on merge
-- next: MERGE the 6 PRs (Heart legs #64/#66 first, then Brain #94 then #95; #94 rewrites prescan_perf, #95 adds --profile in different regions → should merge clean); then install.sh + worktree cleanup + retire entry. Phase-4 complete = all 3 original-prompt perf capabilities delivered
