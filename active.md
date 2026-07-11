@@ -109,8 +109,11 @@
 ## hygiene-agent
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/87
 - session: claude --resume 01Tw3EwV55k6VzxorYng3Kfn
-- status: library-dev
+- status: pr-open
 - worktree: ~/Code/PyAutoLabs-wt/hygiene-agent
-- autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack at launch; parks at ship sign-off)
+- autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack at launch; parked at ship → shipped on live human sign-off)
 - repos:
   - PyAutoBrain: feature/hygiene-agent
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/88 (pending-release; gate: tests 30p / smoke n-a / review CLEAN / heart YELLOW unacked)
+- post-merge: re-run `bash PyAutoBrain/bin/install.sh` (registers /hygiene command + Codex skill); worktree cleanup; then file phase 2 (absorb repo_cleanup + cli_noise_clean, consult dep_audit + audit_docs) as it nears — phase 3 (perf + Heart legs) after
+- phases: 1 scaffold+boundaries (this PR) → 2 modes → 3 perf+Heart-legs; umbrella issued/hygiene_agent.md, decision research/pyautobrain/hygiene_agent_decision.md (decided: conductor, no repo)
