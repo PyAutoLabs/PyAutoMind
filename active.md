@@ -1,5 +1,13 @@
 # Active Tasks
 
+## starred-jwst-validation
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/39 (JWST leg of STARRED stellar-field validation; siblings #35 MERGED / #37 WFC3 CLOSED)
+- status: validation — JWST/NIRCam leg of STARRED Tier-1b validation. STARRED instrument-agnostic → NO new code. Reducing a genuinely STELLAR field: M92 (NGC 6341) NIRCam SW F150W, program 1334 (JWST astrometric calib field, 1245s, 8 dithers × 4 SW det = 32 CAL). SW UNDERSAMPLED @0.03" (FWHM ~1.7px) = the interesting stress test (#35 adversarial flagged ~24% broaden undersampled; parallels the extragalactic F115W that couldn't be tested). Then STARRED-vs-photutils on real stars.
+- next: reduction running (bg, calwebb_image3); on success → prototypes/starred_vs_epsf_m92.py (concentration + radial vs empirical stack). Traps: JWST surface-brightness units → peak_max=None (NO saturation cut, unlike WFC3); M92 core crowded → use mid-density mosaic region; pipeline _psf may fail (photutils) before _package → package data/noise manually from work/*_i2d/_drz; comparison starred stage in ~/venv/starred w/ autoreduce on PYTHONPATH.
+- worktree: ~/Code/PyAutoLabs-wt/starred-jwst-validation (off main a3b1ea5, STARRED+WFC3 merged)
+- repos:
+  - PyAutoReduce: feature/starred-jwst-validation
+
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
