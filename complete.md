@@ -1,4 +1,11 @@
 ## restore-truncated-howto-tutorials
+
+## howto-markdown-resync
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/28 (closed)
+- completed: 2026-07-11
+- prs: HowToLens#29 (ab01aaca) + HowToFit#17 (e738b085) + HowToGalaxy#20 (442db308) — all MERGED 2026-07-11
+- summary: re-synced 4 stale HowTo ch1 markdown pages after the truncation-restore work merged post-batch-2b. HowToLens tutorial_1+tutorial_2 re-rendered from restored scripts (were truncated → now full, 16+14 imgs); HowToFit tutorial_5 re-render; HowToGalaxy tutorial_4_methods dropped (stub). markdown/+1 config entry only, no scripts/CI. Calibration merged-unchanged.
+
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/26 (CLOSED)
 - prs: HowToLens#27 + HowToGalaxy#19 + HowToFit#16 — all MERGED 2026-07-11 (docs-only, library-free)
 - completed: 2026-07-11
