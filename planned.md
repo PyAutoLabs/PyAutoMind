@@ -1,3 +1,16 @@
+## remove-nss-sampler-remainder
+- prompt: PyAutoMind/issued/remove_nss_sampler_and_infra.md
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356
+- planned: 2026-07-11
+- classification: refactor — cross-repo NSS-infra removal, phases 3-6 (the blocked slice of active task remove-nss-sampler; core PyAutoFit+autofit_workspace proceeding now)
+- blocked-by: codex-organ-skill-wrappers (holds PyAutoBuild/PyAutoHeart/PyAutoMind); preopt-breakdown-dashboard + profiling-preopt-campaign (hold autolens_profiling)
+- suggested-branch: refactor/remove-nss-sampler
+- affected-repos:
+  - PyAutoBuild  (Phase 3: release.yml [nss] git+ footgun guard, unittest_nss job, --ignore .../nss)
+  - PyAutoHeart  (Phase 4: tests/test_ci_status.py nss fixture, docs/release_validation.md)
+  - autolens_profiling  (Phase 5: searches/nss/ subtree + sweep.py/_samplers.py de-register; keep results/notes)
+  - PyAutoMind  (Phase 6: retire z_features/complete/nss_first_class_sampler.md epic + void issued/nss_* prompts)
+
 ## codex-profile-skill-metadata
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/61
 - planned: 2026-07-10

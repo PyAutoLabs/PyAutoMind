@@ -1,5 +1,14 @@
 # Active Tasks
 
+## remove-nss-sampler
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356
+- status: library-dev — remove NSS sampler + cross-repo infra (6-repo refactor). This run scoped to the unclaimed core: PyAutoFit (Phase 1 — af.NSS export + [nss] extra + nss module/tests removal; PUBLIC API removal) + autofit_workspace (Phase 2 — nest.py NSS tutorial section). Phases 3-6 BLOCKED by active claims → see planned.md remove-nss-sampler-remainder.
+- autonomy: supervised effective (--auto launched 2026-07-11; refactor cap safe ∧ header supervised; 6-repo public-API removal). Ships park as a consolidated sign-off question on #1356; run ends short of PR-open, merge stays human.
+- worktree: ~/Code/PyAutoLabs-wt/remove-nss-sampler
+- repos:
+  - PyAutoFit: refactor/remove-nss-sampler
+  - autofit_workspace: refactor/remove-nss-sampler
+
 ## codex-organ-skill-wrappers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/85
 - status: awaiting-input — parked at Heart YELLOW acknowledgement (Heart 244 pass; Build 112 pass/1 skip; smoke n/a; review CLEAN; branches local, not pushed)
