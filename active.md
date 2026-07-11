@@ -1,35 +1,5 @@
 # Active Tasks
 
-## codex-profile-skill-metadata
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/61
-- status: awaiting-input — parked at Heart YELLOW acknowledgement (skill validation pass; installer assertions pass; smoke n/a; review CLEAN; commits local, not pushed)
-- autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved rollout plan)
-- question: https://github.com/PyAutoLabs/autolens_profiling/issues/61#issuecomment-4946694497
-- worktree: /home/jammy/Code/PyAutoLabs-wt/codex-profile-skill-metadata
-- repos:
-  - autolens_profiling: feature/codex-profile-skill-metadata
-
-## codex-organ-skill-wrappers
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/85
-- status: awaiting-input — parked at current six-reason Heart YELLOW acknowledgement (Heart 244 pass; Build 112 pass/1 skip; smoke n/a; review CLEAN; branches local, not pushed)
-- autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved rollout plan); no Heart YELLOW acknowledgement given
-- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/85#issuecomment-4946711027
-- depends-on: codex-brain-skill-wrappers / PyAutoBrain#84
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-organ-skill-wrappers
-- repos:
-  - PyAutoMind: feature/codex-organ-skill-wrappers
-  - PyAutoHeart: feature/codex-organ-skill-wrappers
-  - PyAutoBuild: feature/codex-organ-skill-wrappers
-
-## codex-brain-skill-wrappers
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/84
-- status: awaiting-input — parked at current six-reason Heart YELLOW acknowledgement (tests 30 pass; smoke n/a; review CLEAN; commits local, not pushed)
-- autonomy: safe effective (--auto launched 2026-07-10; maintenance cap; approved two-phase plan on issue); no Heart YELLOW acknowledgement given
-- question: https://github.com/PyAutoLabs/PyAutoBrain/issues/84#issuecomment-4946711021
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-brain-skill-wrappers
-- repos:
-  - PyAutoBrain: feature/codex-brain-skill-wrappers
-
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
