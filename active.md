@@ -115,3 +115,11 @@
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
 
 
+
+## hygiene-perf-phase4
+- issue: PyAutoHeart#63 (4a) + PyAutoHeart#65 (4b) + PyAutoBrain (perf aggregation) ; 4c PyAutoMind feature/pyautobrain/hygiene_function_profiling.md (NOT started)
+- status: pr-open — reopened perf scope (original prompt asked for unit-test/workspace-testmode/function timing; shipped perf covered import only). 4 PRs OPEN: PyAutoHeart#64 (4a unit_test_timing leg) + PyAutoHeart#66 (4b workspace_testmode_timing leg) + PyAutoBrain#94 (perf aggregates all timing legs, pre-wires 4b) ; 4c function-profiling NEXT
+- design: all legs mirror import_time — OFF-TICK (heavy → daily cron/on-demand, NOT tick.sh), subprocess run (rule 4, injected runner for stdlib tests), rolling baseline + ratio classify, ADVISORY dashboard (local-only family, NOT gating). 4a/4b dashboard+state edits anchored at DIFFERENT lines to avoid merge conflicts. perf reads PERF_HEART_LEGS=(import_time unit_test_timing workspace_testmode_timing), file-guarded → new legs light up with no conductor change
+- autonomy: supervised effective (--auto 2026-07-11; feature-medium; no heart-ack; parked→live sign-off)
+- worktrees: hygiene-unit-test-timing (PyAutoHeart), hygiene-ws-testmode-timing (PyAutoHeart), hygiene-perf-timing-legs (PyAutoBrain) — clean up on merge
+- next: 4c function profiling (feature/pyautobrain/hygiene_function_profiling.md) — cProfile normal-mode run, EXCLUDE likelihood frames (crux/boundary vs profiling agent), one-shot HygieneDecision → /refactor; large+supervised
