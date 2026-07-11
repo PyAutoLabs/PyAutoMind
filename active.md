@@ -11,8 +11,10 @@
 
 ## restore-truncated-howto-tutorials
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/26
-- status: workspace-dev — restore LLM-bootstrap-truncated HowTo tutorial scripts + add tutorial-completeness CI linter. Phase 1 HowToLens (confirmed ch1 tutorial_1 + tutorial_2 end mid-docstring promising a plot, no code, no Wrap Up); phases 2-3 HowToGalaxy then HowToFit, each own PR. Docs-only, library-free.
-- autonomy: supervised effective (--auto launched 2026-07-11 in-session; docs cap safe@≤medium, header `supervised` binds as min; no heart-ack given)
+- status: awaiting-merge — PHASE 1 HowToLens shipped → PR#27 (pending-release). Restored ch1 tutorial_1 (429→672) + tutorial_2 (214→391) truncated tails; added .github/scripts/check_tutorials_complete.py + tutorials_complete.yml CI (require terminal __Wrap Up__); normalized 5 complete-but-unmarked tutorials; notebooks+catalogue regenerated; smoke 6/6. Phases 2-3 (HowToGalaxy, HowToFit) NOT yet started, each own PR. Docs-only, library-free.
+- pr: https://github.com/PyAutoLabs/HowToLens/pull/27
+- autonomy: supervised effective (--auto launched 2026-07-11 in-session; docs cap safe@≤medium, header `supervised` binds as min)
+- heart-ack: 6-reason YELLOW set acked by maintainer in-session 2026-07-11 at phase-1 ship (workspace-validation-3-failed-2026-07-09 / 58-stale-parked-scripts / autolens_assistant-pin-behind / PyAutoMind-open-PR-11d / install-verification-not-run / no-release-validation); binds to exactly that set, any new reason parks
 - note: truncation signature = final docstring promises a plot/code that never follows — NOT merely a missing `__Wrap Up__` header (tutorial_4_dealing_with_failure / tutorial_4_bayesian_regularization end on genuine prose conclusions and are complete). Deliberate stubs ch1 tutorial_4_point_sources / tutorial_5_lensing_formalism are NOT truncation. HowToGalaxy tutorial_1 (654 lines) = complete reference sibling. dataset/ dirty on all 3 repos = generated artifacts, ignore.
 - worktree: ~/Code/PyAutoLabs-wt/restore-truncated-howto-tutorials
 - repos:
