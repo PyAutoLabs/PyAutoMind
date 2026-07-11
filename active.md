@@ -1,5 +1,15 @@
 # Active Tasks
 
+## howto-markdown-resync
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/28
+- status: workspace-dev — re-sync 4 stale HowTo ch1 markdown pages (rendered pre-restore): HowToLens tutorial_1+tutorial_2 (re-render, restored), HowToFit tutorial_5 (re-render, normalized), HowToGalaxy tutorial_4_methods (DROP from config = stub). markdown/ only, no scripts/CI
+- autonomy: safe effective (--auto launched 2026-07-11; docs small; plan on issue #28); NO heart-ack this launch — Heart YELLOW acks-or-parks
+- worktree: ~/Code/PyAutoLabs-wt/howto-markdown-resync
+- repos:
+  - HowToLens: feature/howto-markdown-resync
+  - HowToGalaxy: feature/howto-markdown-resync
+  - HowToFit: feature/howto-markdown-resync
+
 ## starred-epsf-backend
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/35
 - status: library-dev — optional STARRED super-sampled ePSF back-end for PyAutoReduce PSF stage. Design settled (2026-07-11 deep research): STARRED PSF-recon = standalone field-star ePSF (Moffat+starlet), reduction-stage Tier-1b, NOT the mislabelled Tier-3 target-reconstruction; two-channel deconvolution stays modelling-stage/out-of-scope. First edits: doc correction (hst_acs_pipeline Tier-3 → Tier-1b) + psf/starred_epsf.py seam mirroring fallback.py.
