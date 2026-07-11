@@ -170,3 +170,13 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
+
+## matrix-nufftax-py312
+- issue: (none — interactive fix from /health; PRs self-tracked)
+- status: awaiting-merge — fixes PyAutoBuild "Python Version Matrix" weekly red (chronic since June; 38 nufftax ModuleNotFoundError per job). autolens_assistant general.yaml:57 = 3.9-3.11 "not officially supported". Two paired PRs open
+- prs: PyAutoArray#382 (conftest pytest_collection_modifyitems skips default-nufftax interferometer/transformer tests when nufftax absent; keeps DFT+pynufft) + PyAutoBuild#144 (matrix installs PyAutoArray[optional] → nufftax/pynufft present on 3.12/3.13). Both needed for green matrix; land together
+- verified: local py3.12.10 — nufftax present: 13+43 pass 0 skip (hook inert); nufftax blocked: test_transformer 5 pass (DFT+pynufft) / 8 skip (nufftax), interferometer files 43 skip clean no errors
+- autonomy: human-directed interactive (user "a) yes" 2026-07-11; chose keep-3.9-3.11+skip-nufftax); merge human
+- repos:
+  - PyAutoArray: feature/matrix-nufftax-py312
+  - PyAutoBuild: feature/matrix-nufftax-py312
