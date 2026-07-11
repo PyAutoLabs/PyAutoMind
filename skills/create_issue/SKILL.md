@@ -10,21 +10,21 @@ assemble the issue body, create the issue, register the task in `active.md`, mov
 the prompt to `issued/`, and push Mind state. The *reasoning* (classify repos,
 explore code, generate the plan) belongs to **PyAutoBrain**:
 
-- **Called by Brain.** `start-dev` (`/start_dev` in Claude) does the triage/planning via the
+- **Called by Brain.** `$start-dev` (`/start_dev` in Claude) does the triage/planning via the
   Feature Agent and then **delegates the issue write to this skill**, passing the
   primary repo, title, plan and suggested branch. Brain does not re-implement
   issue creation.
-- **Runnable standalone.** You can run `create-issue` (`/create_issue` in Claude) by itself when you just
+- **Runnable standalone.** You can run `$create-issue` (`/create_issue` in Claude) by itself when you just
   want an issue from a prompt without full triage or worktree routing — it does a
   *light* pass to fill any inputs the caller didn't supply. For deep
-  classification + dev-environment setup, use `start-dev` instead.
+  classification + dev-environment setup, use `$start-dev` instead.
 
 Organ boundary and the execution-environment model: PyAutoBrain `skills/WORKFLOW.md`.
 
 ## Usage
 
 ```
-create-issue <prompt-file-path>    # /create_issue in Claude
+$create-issue <prompt-file-path>    # /create_issue in Claude
 ```
 
 Path relative to `PyAutoMind/`. Prompts live under `<work-type>/<target>/` (see
@@ -34,7 +34,7 @@ Examples: `bug/autofit/factor_graph_instance_iteration.md`,
 
 ## Inputs
 
-These come from the **caller** (Brain/`start_dev`) when delegated, or from a
+These come from the **caller** (Brain/`$start-dev`) when delegated, or from a
 **light standalone pass** here when run directly:
 
 | Input | From caller | Standalone fallback |
@@ -64,7 +64,7 @@ Read `PyAutoMind/<argument>`. If missing, report and list prompts in that folder
 
 If the caller supplied repo/title/plan/branch, use them **verbatim**. Otherwise
 do the light standalone pass from the Inputs table (don't run a full Brain
-triage — that's `start-dev`).
+triage — that's `$start-dev`).
 
 ### 3. Assemble + create the issue
 
@@ -115,7 +115,7 @@ ISSUE_EOF
 ### 4. Register the task in active.md (Mind)
 
 Add the task entry to `PyAutoMind/active.md` with the issue URL (schema in
-README). **If the caller is handling registration itself** — e.g. `start-dev`
+README). **If the caller is handling registration itself** — e.g. `$start-dev`
 routing a conflicted task to `planned.md` — skip this step and let it register.
 
 ### 5. Move the prompt to issued/

@@ -34,7 +34,7 @@ For the full workflow narrative, conventions, and registry schemas, read
   (in-flight tasks), `planned.md` (scoped, not started), `complete.md`
   (shipped), `parked.md` (started but not in flight), `queue.md` (ordered
   input for `register_and_iterate --queue`), `ideas.md` (raw inbox swept by
-  `/intake`). Mutate these only via the skills in `skills/` so commit
+  `$intake`, `/intake` in Claude). Mutate these only via the skills in `skills/` so commit
   messages stay consistent.
   `parked.md` holds tasks that were started or scoped but are not currently
   in flight (e.g. work parked in a stash, orphan worktrees); move back to
@@ -69,21 +69,21 @@ Write the file under `<work-type>/<target>/<name>.md` — pick the work-type fro
 the list above (use `triage/` if genuinely unsure) and the target repo/domain as
 the second folder, e.g. `feature/autolens/potential_corrections.md` or
 `bug/autoarray/mask_edge_case.md`. Don't touch `active.md` or `issued/` directly
-— those are managed by `start-dev` and `create-issue` (`/start_dev` and
+— those are managed by `$start-dev` and `$create-issue` (`/start_dev` and
 `/create_issue` in Claude).
 
-To skip the manual filing, run **`intake`** (`/intake` in Claude), the
+To skip the manual filing, run **`$intake`** (`/intake` in Claude), the
 PyAutoBrain Intake/Conception Agent. It classifies a raw idea into the right
 `<work-type>/<target>/` folder,
 writes the light header (incl. the optional `Difficulty:/Autonomy:/Priority:`
 keys — see README "Prompt file format"), and files the prompt for you. It files a
-prompt only; `start-dev` (`/start_dev` in Claude) remains the separate next step.
+prompt only; `$start-dev` (`/start_dev` in Claude) remains the separate next step.
 
 ## When you are asked to start work on an existing prompt
 
-Use `start-dev <work-type>/<target>/<name>.md` (`/start_dev` in Claude). Older
+Use `$start-dev <work-type>/<target>/<name>.md` (`/start_dev` in Claude). Older
 `<target>/<name>.md` paths from before the taxonomy migration still work. It
-routes to `start-library` or `start-workspace` (`/start_library` or
+routes to `$start-library` or `$start-workspace` (`/start_library` or
 `/start_workspace` in Claude) based on the repos referenced in the prompt body;
 routing keys off `@RepoName` references in the content, not the folder.
 
