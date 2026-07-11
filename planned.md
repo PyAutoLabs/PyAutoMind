@@ -1,13 +1,3 @@
-## remove-nss-sampler-remainder (Phase 5 only — autolens_profiling still blocked)
-- prompt: PyAutoMind/issued/remove_nss_sampler_and_infra.md
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1356
-- planned: 2026-07-11
-- classification: refactor — cross-repo NSS-infra removal. Phases 1-2+stash MERGED (complete.md remove-nss-sampler). Phases 3/4/6 SHIPPED to PR 2026-07-11 (organ unblocked, codex-organ merged): PyAutoBuild#146 (release.yml), PyAutoHeart#60 (test fixture + release_validation doc), PyAutoFit#1361 (copilot-instructions straggler); Phase 6 (retire nss_first_class_sampler epic + void 8 issued/nss_* prompts) done inline on main. ONLY Phase 5 remains.
-- blocked-by: preopt-breakdown-dashboard + profiling-preopt-campaign (hold autolens_profiling; dirty=14)
-- suggested-branch: feature/remove-nss-sampler-phase5
-- affected-repos:
-  - autolens_profiling  (Phase 5: searches/nss/ subtree + sweep.py/_samplers.py/_setup.py/_runner.py de-register; keep results/notes as historical evidence)
-
 ## samples-parameter-paths
 - prompt: PyAutoMind/bug/health_fixes/samples_parameter_paths.md
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1327 (open, parked)
