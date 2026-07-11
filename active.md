@@ -152,11 +152,12 @@
 
 ## profiling-preopt-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/56
-- status: workspace-dev
+- status: ship-parked — frozen "done enough" 2026-07-11 (user-directed); PR #62 open (pending-release), merge is human. Later profiling-agent re-run extends same cells (laptop-GPU + HPC-A100).
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/62 (PreOptimizationTimes runtime baseline; 12 cells; imaging+interferometer+datacube local CPU fp64/mp dense+sparse)
+- wrap-2026-07-11: rebased onto origin/main (clean; ahead 5/behind 7 unrelated paths), committed stray datacube results, ran likelihood_runtime/aggregate.py over all cells (1→12 comparison.json), built results/baselines/PreOptimizationTimes/ + refreshed READMEs. datacube/delaunay/sma headline renders — (raw JSON lacks headline field; cosmetic, refreshes on re-aggregate).
+- unblocks: #59 preopt-breakdown-dashboard dashboard leg (was gated on this runtime baseline) once #62 merges
 - autonomy: supervised (--auto, launched 2026-07-08; local-CPU leg, RAL down)
-- campaign: local-CPU matrix in flight (background); interruption-safe — resume with
-  sweep.py --skip-gpu --skip-existing (dense, then --sparse imaging pass), then
-  aggregate.py; full cold-resume steps on the issue (comment of 2026-07-08 evening)
+- resume (future re-run): sweep.py --skip-gpu --skip-existing (dense, then --sparse imaging pass), then likelihood_runtime/aggregate.py, then scripts/build_baseline.py --name PreOptimizationTimes; cold-resume steps on the issue
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-preopt-campaign
 - repos:
   - autolens_profiling: feature/profiling-preopt-campaign
