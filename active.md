@@ -129,10 +129,11 @@
 
 ## hygiene-agent
 - session: claude --resume 01Tw3EwV55k6VzxorYng3Kfn
-- status: library-dev — phased epic; P1 MERGED, P2 PR-open, P3 to file
-- phase-1: MERGED 2026-07-11 (PyAutoBrain#88 squash; issue #87 CLOSED) — conductor scaffold + boundaries; install.sh re-run (/hygiene live in Claude+Codex), worktree removed, branch deleted, calibration row logged
-- phase-2: PR-OPEN PyAutoBrain#90 (pending-release; issue Brain#89; worktree ~/Code/PyAutoLabs-wt/hygiene-agent-phase-2 on feature/hygiene-agent-phase-2). Modes tidy/noise/deps/docs LIVE as pre-scan+delegate; gate tests 34p / smoke n-a / review CLEAN flags-none / heart YELLOW unacked. RESOLVED fork: all 4 skills are agent-run markdown (3 Heart-owned) so conductor can't execute them → modes are PRE-SCAN + ROUTE (typed debris/surface/advisory; only debris ranks); skills stay executors. post-merge: install.sh + worktree cleanup (squash → branch -D)
-- phase-3: perf mode (test/script/import timing) + optional PyAutoHeart legs (import_time / cli_noise) — file after P2 merges
+- status: library-dev — phased epic; P1+P2 MERGED, P3 in progress (final core phase)
+- phase-1: MERGED 2026-07-11 (PyAutoBrain#88 squash; issue #87 CLOSED) — conductor scaffold + boundaries; /hygiene live, worktree+branch cleaned
+- phase-2: MERGED 2026-07-11 (PyAutoBrain#90 squash; issue #89 CLOSED) — modes tidy/noise/deps/docs LIVE as pre-scan+delegate (all 4 target skills agent-run markdown, 3 Heart-owned → route only; typed debris/surface/advisory, only debris ranks; skills stay executors); install.sh re-run, worktree+branch cleaned
+- phase-3: IN PROGRESS — perf mode; issue Brain#91; worktree ~/Code/PyAutoLabs-wt/hygiene-agent-phase-3 on feature/hygiene-agent-phase-3. import-cost pre-scan (subprocess `python -c import`, conductor never imports JAX) + consult Heart script_timing/test_run + delegate to refactor/bug; flip perf live (nothing staged after). Standing Heart import_time leg DEFERRED (PyAutoBrain-only phase)
 - autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack; parks at ship sign-off)
 - refs: umbrella issued/hygiene_agent.md; decision research/pyautobrain/hygiene_agent_decision.md (decided: conductor, no repo)
 - repos:
+  - PyAutoBrain: feature/hygiene-agent-phase-3
