@@ -113,3 +113,4 @@
 - worktree: ~/Code/PyAutoLabs-wt/hygiene-agent
 - autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack at launch; parks at ship sign-off)
 - repos:
+  - PyAutoBrain: feature/hygiene-agent
