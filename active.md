@@ -132,10 +132,10 @@
 
 ## hygiene-agent
 - session: claude --resume 01Tw3EwV55k6VzxorYng3Kfn
-- status: library-dev — phased epic; P1+P2 MERGED, P3 in progress (final core phase)
+- status: library-dev — phased epic; P1+P2 MERGED, P3 PR-open (final core phase → conductor complete on merge)
 - phase-1: MERGED 2026-07-11 (PyAutoBrain#88 squash; issue #87 CLOSED) — conductor scaffold + boundaries; /hygiene live, worktree+branch cleaned
 - phase-2: MERGED 2026-07-11 (PyAutoBrain#90 squash; issue #89 CLOSED) — modes tidy/noise/deps/docs LIVE as pre-scan+delegate (all 4 target skills agent-run markdown, 3 Heart-owned → route only; typed debris/surface/advisory, only debris ranks; skills stay executors); install.sh re-run, worktree+branch cleaned
-- phase-3: IN PROGRESS — perf mode; issue Brain#91; worktree ~/Code/PyAutoLabs-wt/hygiene-agent-phase-3 on feature/hygiene-agent-phase-3. import-cost pre-scan (subprocess `python -c import`, conductor never imports JAX) + consult Heart script_timing/test_run + delegate to refactor/bug; flip perf live (nothing staged after). Standing Heart import_time leg DEFERRED (PyAutoBrain-only phase)
+- phase-3: PR-OPEN PyAutoBrain#92 (pending-release; issue Brain#91; worktree ~/Code/PyAutoLabs-wt/hygiene-agent-phase-3). perf mode LIVE: import-cost pre-scan (subprocess `python -c import` via HYGIENE_PYTHON, conductor never imports JAX; new 'timing' kind) + consult Heart script_timing/test_run + delegate /refactor; default defers perf timing (spawns imports); nothing staged now. gate tests 36p / smoke n-a / review CLEAN flags-none / heart YELLOW unacked. Standing Heart import_time leg DEFERRED (PyAutoBrain-only). post-merge: install.sh + worktree cleanup (squash → branch -D) → EPIC COMPLETE, retire entry to complete.md
 - autonomy: supervised effective (--auto 2026-07-11; feature-medium cap safe ∧ header supervised; no heart-ack; parks at ship sign-off)
 - refs: umbrella issued/hygiene_agent.md; decision research/pyautobrain/hygiene_agent_decision.md (decided: conductor, no repo)
 - repos:
