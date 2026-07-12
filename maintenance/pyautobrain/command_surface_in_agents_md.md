@@ -15,8 +15,16 @@ Status: complete
      generated from the bin/pyauto-brain agent registry (the single source), drift-
      checked by two Brain CI tests. Scope change: the block is NOT duplicated into
      every organ — PyAutoBrain is guaranteed loaded in every session, so the surface
-     lives once in Brain's auto-loaded AGENTS.md and reaches everywhere. Per-tool
-     slash sugar remains deferred. See the epic's Outcome section. -->
+     lives once in Brain's auto-loaded AGENTS.md and reaches everywhere. See the
+     epic's Outcome section.
+
+     UPDATE 2026-07-12: the previously-deferred per-tool layer was then built too —
+     install.sh --write/--check-project-discovery commits a .claude/ + .codex/
+     discovery tree (relative symlinks into each repo's own skills/) so slash
+     commands + skills register on Claude Code web/cloud and Codex, where the
+     user-level ~/.claude symlinks don't travel. Per-repo (Mind/Brain/Heart/Build),
+     single-source, drift-checked. -->
+
 
 Generate the command surface into AGENTS.md. Make the PyAuto command surface
 (`intake`, `route`, `start_dev`, `ship_*`, the conductor verbs, etc.)
