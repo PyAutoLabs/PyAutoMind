@@ -16,6 +16,15 @@ Usage:
   * <root>/AGENTS.md                       — the repo routing table
   * <root>/PyAutoBrain/skills/WORKFLOW.md  — the GitHub owner map
 
+and, between `<!-- repos_sync:map:begin -->` / `<!-- repos_sync:map:end -->`
+markers, the compact **organism map** in each organ repo's own AGENTS.md
+(<root>/<organ>/AGENTS.md). The map is the always-loaded orientation an agent
+sees first: the peer organs, their roles, the call chain and the
+conductor/faculty rule — so a session opened in one repo still knows the whole
+organism. A repo opts in by adding the map markers to its AGENTS.md; organ
+repos (or roots) that are absent, or lack the markers, are skipped rather than
+failing the run.
+
 --check (always run) verifies, against the manifest:
 
   * PyAutoHeart/config/repos.yaml          — polled repos exist, owners match
@@ -39,6 +48,8 @@ import yaml
 
 MARK_BEGIN = "<!-- repos_sync:begin -->"
 MARK_END = "<!-- repos_sync:end -->"
+MAP_BEGIN = "<!-- repos_sync:map:begin -->"
+MAP_END = "<!-- repos_sync:map:end -->"
 
 
 def load_manifest(mind_root):
@@ -103,18 +114,74 @@ def owner_map(categories, repos):
     return "\n".join(lines)
 
 
-def replace_block(path, content):
+def system_map(categories, repos):
+    """The compact organism orientation block for each organ repo's AGENTS.md.
+
+    A pure function of the body map (`repos.yaml`, organ rows) plus the three
+    stable invariants from `PyAutoBrain/ORGANISM.md` (call chain, the
+    conductor/faculty split, the no-new-organs-by-default rule). This is the
+    always-loaded map a session sees first — it exists so a session opened in a
+    single repo still knows it is one *peer organ* among others, not a part of
+    another.
+    """
+    organs = {n: r for n, r in repos.items() if r["category"] == "organ"}
+    lines = [
+        "**You are one organ of the PyAuto organism** — an agentic ecosystem for",
+        "human-led, natural-language software development. The organs below are",
+        "peer repositories; this repo is one of them, not a part of another.",
+        "Canonical boundaries live in `PyAutoBrain/ORGANISM.md`; the full body map",
+        "(every repo, not just organs) is `PyAutoMind/repos.yaml`.",
+        "",
+        "| Organ | Repo | Role |",
+        "|-------|------|------|",
+    ]
+    for name, repo in organs.items():
+        lines.append(f"| **{repo.get('organ', name)}** | {name} | {repo['role']} |")
+    lines += [
+        "",
+        "Call chain (always this order): **Brain → Heart (gate) → Build "
+        "(execute)**. Brain agents are **conductors** (front-door; a human "
+        "drives them; they decide *and* act) or **faculties** (read-only "
+        "opinions the conductors consult; they judge and stop). New capability "
+        "grows as a faculty, not a new organ, unless it owns state or effects no "
+        "existing organ can.",
+        "",
+        "Generated from `PyAutoMind/repos.yaml` + `PyAutoBrain/ORGANISM.md`; edit "
+        "there, then run `python3 PyAutoMind/scripts/repos_sync.py --write`.",
+    ]
+    return "\n".join(lines)
+
+
+def replace_block(path, content, begin=MARK_BEGIN, end=MARK_END):
     text = path.read_text()
-    if MARK_BEGIN not in text or MARK_END not in text:
+    if begin not in text or end not in text:
         raise SystemExit(f"repos_sync: no marker block in {path}")
-    pattern = re.compile(
-        re.escape(MARK_BEGIN) + r".*?" + re.escape(MARK_END), re.DOTALL
-    )
-    new = pattern.sub(f"{MARK_BEGIN}\n{content}\n{MARK_END}", text, count=1)
+    pattern = re.compile(re.escape(begin) + r".*?" + re.escape(end), re.DOTALL)
+    new = pattern.sub(f"{begin}\n{content}\n{end}", text, count=1)
     changed = new != text
     if changed:
         path.write_text(new)
     return changed
+
+
+def write_block(path, content, begin=MARK_BEGIN, end=MARK_END, *, required):
+    """Fill a marked block, tolerant of partial checkouts.
+
+    An absent file is always skipped (a partial/web checkout won't have every
+    organ or the workspace-root AGENTS.md). A present file missing its markers
+    is a hard error for `required` targets (the routing table / owner map,
+    which must stay generated) but a soft skip for opt-in targets (an organ
+    repo that has not yet added the map markers)."""
+    if not path.exists():
+        print(f"skipped (absent): {path}")
+        return
+    if begin not in path.read_text() or end not in path.read_text():
+        if required:
+            raise SystemExit(f"repos_sync: no marker block in {path}")
+        print(f"skipped (no map markers): {path}")
+        return
+    changed = replace_block(path, content, begin, end)
+    print(f"{'updated' if changed else 'unchanged'}: {path}")
 
 
 # --------------------------------------------------------------------------
@@ -367,13 +434,16 @@ def main():
     categories, repos = load_manifest(mind_root)
 
     if args.write:
-        targets = {
-            root / "AGENTS.md": routing_table(categories, repos),
-            root / "PyAutoBrain/skills/WORKFLOW.md": owner_map(categories, repos),
-        }
-        for path, content in targets.items():
-            changed = replace_block(path, content)
-            print(f"{'updated' if changed else 'unchanged'}: {path}")
+        write_block(root / "AGENTS.md", routing_table(categories, repos),
+                    required=True)
+        write_block(root / "PyAutoBrain/skills/WORKFLOW.md",
+                    owner_map(categories, repos), required=True)
+        smap = system_map(categories, repos)
+        for name, repo in repos.items():
+            if repo["category"] != "organ":
+                continue
+            write_block(root / name / "AGENTS.md", smap, MAP_BEGIN, MAP_END,
+                        required=False)
 
     checks = {
         "PyAutoHeart/config/repos.yaml": check_heart(root, repos),

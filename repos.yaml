@@ -50,22 +50,27 @@ repos:
   PyAutoMind:
     github: PyAutoLabs/PyAutoMind
     category: organ
+    organ: Mind
     role: "Intent, goals, priorities, workflow state; every task starts as a markdown prompt here."
   PyAutoBrain:
     github: PyAutoLabs/PyAutoBrain
     category: organ
+    organ: Brain
     role: "Reasoning/orchestration layer; how work is decomposed and routed; the specialist agents."
   PyAutoBuild:
     github: PyAutoLabs/PyAutoBuild
     category: organ
+    organ: Hands
     role: "Packaging, tagging, notebook generation, PyPI release execution."
   PyAutoHeart:
     github: PyAutoLabs/PyAutoHeart
     category: organ
+    organ: Heart
     role: "Health/readiness — the authoritative \"is it safe to release?\" verdict."
   PyAutoMemory:
     github: PyAutoLabs/PyAutoMemory
     category: organ
+    organ: Memory
     role: "Long-term scientific/software/project knowledge (see science pointer below)."
 
   # --- scientific libraries ----------------------------------------------
