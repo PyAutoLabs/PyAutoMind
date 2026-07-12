@@ -275,13 +275,15 @@ def check_labels(root, repos):
 # Generated-block drift (the organism map is written into each organ)
 # --------------------------------------------------------------------------
 #
-# The organism-map block is duplicated into every organ's AGENTS.md on purpose:
-# a web/single-repo session loads only that repo's committed files, so the map
-# must physically live there, not behind a cross-repo link. Duplication is only
-# safe if divergence is caught — so, mirroring how the command surface is checked
-# by install.sh --check-agents-surface, this verifies each organ's map block
-# still equals what system_map() generates. A block that was hand-edited, or left
-# stale after a repos.yaml change without a --write, is reported as drift.
+# The organism-map block is generated into any organ that opts in via the map
+# markers. In practice that is PyAutoBrain, which is loaded in every session
+# (web, mobile/code, local), so its auto-loaded AGENTS.md carries the map into
+# every session's context — one copy, no per-organ duplication. Wherever a copy
+# exists it must not drift from the manifest, so — mirroring how the command
+# surface is checked by install.sh --check-agents-surface — this verifies each
+# present map block still equals what system_map() generates. A block that was
+# hand-edited, or left stale after a repos.yaml change without a --write, is
+# reported as drift.
 
 
 def check_map_blocks(root, repos, smap):
