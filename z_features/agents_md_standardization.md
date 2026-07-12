@@ -33,6 +33,10 @@ The kickoff below is the full instruction; the chat should follow it verbatim.
 3. Already-built: `scripts/repos_sync.py` `system_map` + `write_block` (the
    `<!-- repos_sync:map -->` block) — applied only to Mind and Brain so far;
    roll it out to the remaining organ repos (Heart, Build, Memory).
+4. `maintenance/pyautomind/history_policy_generated_block.md` — single-source the
+   `## Never rewrite history` safety text as a generated `<!-- repos_sync:history -->`
+   block in **every** repo's `AGENTS.md` (keep the text inline; kill the manual
+   copy). NOT a deletion.
 
 `AGENTS.md` is auto-loaded and gives you the organism map + boundaries.
 
@@ -47,6 +51,8 @@ even though only these two are open — bring the others in as needed.
   canonical `@AGENTS.md` pointer.
 - Organ repos (category `organ`) → also the generated map block and the new
   command-surface block at the top of `AGENTS.md`.
+- Any repo that HAS an `AGENTS.md` → also the generated `## Never rewrite history`
+  block (byte-identical to the text it replaces — do not soften it).
 - Repos with NO `AGENTS.md` → do NOT auto-create one; record them in the report
   for a human.
 
@@ -86,6 +92,8 @@ separate list of every repo missing an `AGENTS.md`.
 ## Scope split (matches the specs)
 
 - `CLAUDE.md` `@AGENTS.md` pointer → **all** repos that have an `AGENTS.md`.
+- `## Never rewrite history` block → **all** repos that have an `AGENTS.md`
+  (universal safety policy).
 - map block + command-surface block → **organ** repos only (the "you are one
   organ" framing doesn't fit libraries/workspaces).
 
