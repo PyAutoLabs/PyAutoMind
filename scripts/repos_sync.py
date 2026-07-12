@@ -50,6 +50,24 @@ MARK_BEGIN = "<!-- repos_sync:begin -->"
 MARK_END = "<!-- repos_sync:end -->"
 MAP_BEGIN = "<!-- repos_sync:map:begin -->"
 MAP_END = "<!-- repos_sync:map:end -->"
+HISTORY_BEGIN = "<!-- repos_sync:history:begin -->"
+HISTORY_END = "<!-- repos_sync:history:end -->"
+
+# The universal "never rewrite history" safety policy is single-sourced in a
+# markdown file (so it can be edited without touching this generator) and
+# generated (verbatim) into a repos_sync:history block in every repo's AGENTS.md
+# that opts in. Unlike the organism map / command surface — which live once in
+# PyAutoBrain because Brain is loaded in every session — this stays inline in
+# every repo on purpose: it is a git-operation safety rule that also serves a
+# human (or non-Brain tool) reading a single repo directly on GitHub. Inline
+# everywhere, but one source of truth + a drift check, so the copies can't drift.
+# Do not soften the text (it guards the 2026-04-27 `git init` fresh-start
+# incident that cost ~40 commits).
+HISTORY_POLICY_FILE = "policy/never_rewrite_history.md"
+
+
+def load_history_policy(mind_root):
+    return (mind_root / HISTORY_POLICY_FILE).read_text().rstrip("\n")
 
 # The canonical content-free CLAUDE.md pointer. Guidance is agent-agnostic and
 # lives in AGENTS.md (read natively by Codex, Cursor, etc.); Claude Code loads
@@ -208,7 +226,7 @@ def write_block(path, content, begin=MARK_BEGIN, end=MARK_END, *, required):
     if begin not in path.read_text() or end not in path.read_text():
         if required:
             raise SystemExit(f"repos_sync: no marker block in {path}")
-        print(f"skipped (no map markers): {path}")
+        print(f"skipped (no markers): {path}")
         return
     changed = replace_block(path, content, begin, end)
     print(f"{'updated' if changed else 'unchanged'}: {path}")
@@ -300,6 +318,27 @@ def check_map_blocks(root, repos, smap):
         if extract_block(text, MAP_BEGIN, MAP_END) != smap:
             problems.append(
                 f"'{name}': organism-map block is stale — run "
+                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
+            )
+    return problems
+
+
+def check_history_blocks(root, repos, hpol):
+    """Every AGENTS.md that opts into the repos_sync:history markers must carry
+    the canonical policy verbatim. Single source (policy/never_rewrite_history.md)
+    + this check is what lets the safety text live inline in every repo without
+    drifting."""
+    problems = []
+    for name in repos:
+        agents = root / name / "AGENTS.md"
+        if not agents.exists():
+            continue
+        text = agents.read_text()
+        if HISTORY_BEGIN not in text or HISTORY_END not in text:
+            continue  # opt-in: repo hasn't added the history markers yet
+        if extract_block(text, HISTORY_BEGIN, HISTORY_END) != hpol:
+            problems.append(
+                f"'{name}': never-rewrite-history block is stale — run "
                 f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
             )
     return problems
@@ -568,6 +607,7 @@ def main():
     categories, repos = load_manifest(mind_root)
 
     smap = system_map(categories, repos)
+    hpol = load_history_policy(mind_root)
 
     if args.write:
         write_block(root / "AGENTS.md", routing_table(categories, repos),
@@ -579,6 +619,11 @@ def main():
                 continue
             write_block(root / name / "AGENTS.md", smap, MAP_BEGIN, MAP_END,
                         required=False)
+        # The history policy is universal — written into every repo (not just
+        # organs) that has added the markers.
+        for name in repos:
+            write_block(root / name / "AGENTS.md", hpol,
+                        HISTORY_BEGIN, HISTORY_END, required=False)
         write_claude_md_pointers(root, repos)
 
     checks = {
@@ -588,6 +633,7 @@ def main():
         "local checkout origins": check_origins(root, repos),
         "tenant firewall (organ code)": check_tenant_firewall(root, repos),
         "organism-map blocks (generated)": check_map_blocks(root, repos, smap),
+        "never-rewrite-history blocks (generated)": check_history_blocks(root, repos, hpol),
         "CLAUDE.md → AGENTS.md pointers": check_claude_md_pointers(root, repos),
     }
     drift = False
