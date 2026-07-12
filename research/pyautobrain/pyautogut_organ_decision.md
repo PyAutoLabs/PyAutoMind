@@ -96,10 +96,19 @@ and ecosystem-scale answers converge on one place.
 
 - **Payload = durable git refs, never markdown.** Fragile forms (local unmerged
   branches, stashes) are first materialised as real commits on a remote — pushed
-  under an archive namespace (e.g. `refs/archive/condemned/<name>`, which stays
-  out of `git branch -a`) into PyAutoGut as the attic remote — *before* the
+  under an archive namespace into PyAutoGut as the attic remote — *before* the
   local copy is deleted. Recovery is a checkout. A stash becomes a branch/commit
   via `git stash branch` or a tagged stash commit.
+  <!-- Implementation revision (2026-07-12, during the repo_skeleton build): the
+       namespace is `refs/heads/archive/condemned/<name>` (a branch prefix), NOT
+       a custom `refs/archive/condemned/*`. GitHub only accepts pushes to
+       refs/heads/* and refs/tags/*, so the custom namespace is unpushable. The
+       "out of git branch -a" nicety is relaxed to "filter with
+       `git branch --list 'archive/condemned/*'`". Tags (refs/tags/condemned/*)
+       were the alternative — hidden + immutable — but rejected: immutability
+       blocks re-pointing, and they were unusable in the cloud session's git
+       proxy. -->
+
 - **Catalog = a manifest in the Mind** (`condemned.md`, symmetric to
   `parked.md`): one entry per item — `type` (branch/stash/file/test), `locator`,
   `confidence`, `reason`, `merged?`, `condemned` date, `sweep-after` date,

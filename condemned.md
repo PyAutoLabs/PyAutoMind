@@ -8,9 +8,11 @@ awaiting elimination*, recoverable right up until it is voided.
 
 This is the **index**; the payload is durable **git refs**, not markdown. Fragile
 forms (local unmerged branches, stashes) are first materialised as real commits
-and pushed under the archive namespace `refs/archive/condemned/<name>` (which
-stays out of `git branch -a`) into **PyAutoGut** as the attic remote — *before*
-the local copy is deleted. Recovery is a checkout. The organ (PyAutoGut) holds
+and pushed under the archive namespace `refs/heads/archive/condemned/<name>`
+(a branch prefix — GitHub only accepts pushes to `refs/heads/*` and
+`refs/tags/*`, so a custom `refs/archive/*` namespace is unpushable; filter with
+`git branch --list 'archive/condemned/*'`) into **PyAutoGut** as the attic remote
+— *before* the local copy is deleted. Recovery is a checkout. The organ (PyAutoGut) holds
 and voids; the Brain hygiene conductor drives (decides what to condemn, triggers
 a sweep), mirroring the Heart ↔ vitals template. See the decision:
 `research/pyautobrain/pyautogut_organ_decision.md`.
@@ -42,7 +44,7 @@ One `##` block per item. Fields:
 - `breaks-if-wrong` — what is lost if this was a false positive (informs the
   gate)
 - `archive-ref` — the durable ref + SHA to recover from
-  (`refs/archive/condemned/<name>` @ `<sha>`), or `n/a` for a merged branch /
+  (`refs/heads/archive/condemned/<name>` @ `<sha>`), or `n/a` for a merged branch /
   committed deletion whose bytes live in remote history (record the pre-delete
   SHA instead)
 
@@ -67,7 +69,7 @@ One `##` block per item. Fields:
 - condemned: 2026-07-12
 - sweep-after: 2026-08-12
 - breaks-if-wrong: loses ~3 exploratory commits (delaunay prototype)
-- archive-ref: refs/archive/condemned/abandoned-spike @ 0de4514
+- archive-ref: refs/heads/archive/condemned/abandoned-spike @ 0de4514
 -->
 
 <!-- No live condemned entries yet — the hygiene `tidy` drive seam
