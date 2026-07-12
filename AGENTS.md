@@ -90,6 +90,8 @@ routing keys off `@RepoName` references in the content, not the folder.
 ## When in doubt
 
 Read [README.md](README.md). It is current as of the last commit on this branch.
+
+<!-- repos_sync:history:begin -->
 ## Never rewrite history
 
 NEVER perform these operations on any repo with a remote:
@@ -113,3 +115,4 @@ and any other agent. The "Initial commit — fresh start for AI workflow" patter
 that appeared independently on origin and local for three workspace repos is
 exactly what this rule prevents — it costs ~40 commits of redundant local work
 every time it happens.
+<!-- repos_sync:history:end -->
