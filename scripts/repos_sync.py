@@ -51,6 +51,25 @@ MARK_END = "<!-- repos_sync:end -->"
 MAP_BEGIN = "<!-- repos_sync:map:begin -->"
 MAP_END = "<!-- repos_sync:map:end -->"
 
+# The canonical content-free CLAUDE.md pointer. Guidance is agent-agnostic and
+# lives in AGENTS.md (read natively by Codex, Cursor, etc.); Claude Code loads
+# CLAUDE.md, not AGENTS.md, so every repo that has an AGENTS.md keeps a CLAUDE.md
+# whose only job is to `@`-import it (Anthropic's documented bridge — imported in
+# full at launch, recursive to depth 4). Kept as a real, greppable file (not a
+# symlink) so it can carry a Claude-only section later and avoids Windows symlink
+# friction. This is the body already committed to Mind and Brain.
+CLAUDE_MD_POINTER = """\
+@AGENTS.md
+
+<!-- Guidance is agent-agnostic and lives in AGENTS.md (read natively by Codex,
+     Cursor, etc.). Claude Code loads CLAUDE.md, not AGENTS.md, so this file exists
+     only to import that one source. Keep it a pointer — put content in AGENTS.md. -->
+"""
+
+# An `@AGENTS.md` import on its own line — the real bridge, not prose that merely
+# mentions AGENTS.md (the dead-pointer failure mode that motivated this check).
+CLAUDE_IMPORT_RE = re.compile(r"(?m)^@AGENTS\.md\s*$")
+
 
 def load_manifest(mind_root):
     data = yaml.safe_load((mind_root / "repos.yaml").read_text())
@@ -239,6 +258,76 @@ def check_labels(root, repos):
                 f"'{repos[name]['github']}'"
             )
     return problems
+
+
+# --------------------------------------------------------------------------
+# CLAUDE.md → AGENTS.md pointer (repo hygiene)
+# --------------------------------------------------------------------------
+#
+# Standard: guidance lives in the agnostic AGENTS.md; Claude Code reads
+# CLAUDE.md, so every repo that HAS an AGENTS.md keeps a content-free CLAUDE.md
+# that `@`-imports it. This is a pure function of "is this repo checked out and
+# does it have an AGENTS.md?", so it lives here beside the other body-map drift
+# checks. Repos with no AGENTS.md are reported (for a human) but not auto-stubbed
+# — writing real per-repo guidance is its own work, out of scope here. Absent
+# (not-checked-out) repos are skipped, exactly like the map-block generation, so
+# this runs cleanly in a partial/web checkout.
+
+
+def claude_md_is_pointer(text):
+    """A CLAUDE.md counts as compliant iff it `@`-imports AGENTS.md on its own
+    line (a real import that expands into context), not merely prose naming it."""
+    return CLAUDE_IMPORT_RE.search(text) is not None
+
+
+def check_claude_md_pointers(root, repos):
+    problems = []
+    for name in repos:
+        repo_dir = root / name
+        if not repo_dir.is_dir():
+            continue  # not checked out in this environment
+        if not (repo_dir / "AGENTS.md").exists():
+            continue  # AGENTS-less repos are reported separately, not drift
+        claude = repo_dir / "CLAUDE.md"
+        if not claude.exists():
+            problems.append(f"'{name}': has AGENTS.md but no CLAUDE.md pointer")
+        elif not claude_md_is_pointer(claude.read_text()):
+            problems.append(
+                f"'{name}': CLAUDE.md does not @-import AGENTS.md (dead pointer)"
+            )
+    return problems
+
+
+def repos_without_agents_md(root, repos):
+    """Checked-out repos that have no AGENTS.md at all — the pointer is
+    meaningless without a target, so these are reported for a human to write
+    real guidance rather than auto-stubbed."""
+    return [
+        name
+        for name in repos
+        if (root / name).is_dir() and not (root / name / "AGENTS.md").exists()
+    ]
+
+
+def write_claude_md_pointers(root, repos):
+    """Create the canonical pointer wherever a checked-out repo has an AGENTS.md
+    but a missing or non-compliant CLAUDE.md. Idempotent: a repo already carrying
+    the `@AGENTS.md` import is left untouched; a repo with no AGENTS.md is
+    skipped (nothing to point at)."""
+    for name in repos:
+        repo_dir = root / name
+        if not repo_dir.is_dir():
+            continue
+        if not (repo_dir / "AGENTS.md").exists():
+            print(f"skipped (no AGENTS.md): {repo_dir / 'CLAUDE.md'}")
+            continue
+        claude = repo_dir / "CLAUDE.md"
+        if claude.exists() and claude_md_is_pointer(claude.read_text()):
+            print(f"unchanged: {claude}")
+            continue
+        verb = "rewrote (dead pointer)" if claude.exists() else "created"
+        claude.write_text(CLAUDE_MD_POINTER)
+        print(f"{verb}: {claude}")
 
 
 # --------------------------------------------------------------------------
@@ -444,6 +533,7 @@ def main():
                 continue
             write_block(root / name / "AGENTS.md", smap, MAP_BEGIN, MAP_END,
                         required=False)
+        write_claude_md_pointers(root, repos)
 
     checks = {
         "PyAutoHeart/config/repos.yaml": check_heart(root, repos),
@@ -451,6 +541,7 @@ def main():
         "ensure_workspace_labels.sh": check_labels(root, repos),
         "local checkout origins": check_origins(root, repos),
         "tenant firewall (organ code)": check_tenant_firewall(root, repos),
+        "CLAUDE.md → AGENTS.md pointers": check_claude_md_pointers(root, repos),
     }
     drift = False
     for label, problems in checks.items():
@@ -459,6 +550,16 @@ def main():
         for p in problems:
             drift = True
             print(f"  ✗ {p}")
+
+    # AGENTS-less repos are reported (for a human to write real guidance), never
+    # auto-stubbed, and never fail the run.
+    missing = repos_without_agents_md(root, repos)
+    if missing:
+        print(f"note: {len(missing)} checked-out repo(s) have no AGENTS.md "
+              f"(pointer not applicable — needs human-written guidance):")
+        for name in missing:
+            print(f"  • {name}")
+
     sys.exit(1 if drift else 0)
 
 
