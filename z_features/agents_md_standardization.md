@@ -7,7 +7,7 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: complete
 
 Epic tracker for three filed standardizations that share one root cause — *web/
 mobile sessions load only committed, agent-agnostic repo files* — and should be
@@ -92,3 +92,37 @@ separate list of every repo missing an `AGENTS.md`.
 <!-- filed 2026-07-12 from a /remote-control conversation as the runnable epic
      over the three same-day maintenance specs. Root cause shared: web/mobile
      loads only committed agent-agnostic repo files, not user-level ~/.claude. -->
+
+## Outcome (2026-07-12)
+
+**Key design change during execution — the shared blocks are NOT duplicated.**
+The epic assumed each organ needs its own embedded organism-map + command-surface
+block (single-repo web sessions load only the open repo). That assumption was
+corrected: **PyAutoBrain is guaranteed loaded in every web/mobile session**, so
+its auto-loaded `AGENTS.md` already carries both shared blocks into every
+session's context. They therefore live **once, in PyAutoBrain** — removed from
+Mind/Heart/Build/Memory. Spec 1 (the per-repo `CLAUDE.md` pointer) is unchanged:
+that is the one thing every repo still needs for its own guidance to load.
+
+**Tooling shipped** (drift-checks the single Brain copy against its source):
+- `PyAutoMind/scripts/repos_sync.py`: `check_claude_md_pointers` + a `--write`
+  pointer sweep + AGENTS-less report; `check_map_blocks` (the map block was
+  generated but never checked — now it is).
+- `PyAutoBrain/bin/install.sh`: `--write-agents-surface` / `--check-agents-surface`
+  generate the command surface from the `bin/pyauto-brain` registry (made
+  sourceable); guarded by two new Brain CI tests.
+
+**Compliance sweep (every repo in `repos.yaml`):**
+- Organs (5): Mind/Brain carry the tooling; Brain holds both shared blocks;
+  Heart/Build/Memory got the `@AGENTS.md` pointer — **merged** (PyAutoHeart#67,
+  PyAutoBuild#147, PyAutoMemory#21).
+- Non-organ, reachable (20): **17 already compliant** (AGENTS.md + `@AGENTS.md`
+  pointer) — zero PRs needed; the library/workspace rollout had already happened.
+- **No `AGENTS.md` → reported, not auto-created:** `autolens_workspace_developer`,
+  `euclid_strong_lens_modeling_pipeline`, `pyautolabs.github.io`.
+- **Unreachable this session** (`add_repo` cross-tier block; not `pyautolabs`):
+  `Jammy2211/autofit_workspace_developer`, `Jammy2211/euclid_assistant`,
+  `Jammy2211/admin_jammy` — need a session rooted on one of them.
+- **Body-map gap fixed:** `autofit_assistant` existed in the org but was missing
+  from `repos.yaml` (its siblings were present) — added under `assistant`, so the
+  drift checks now cover it. (It was already pointer-compliant.)

@@ -9,7 +9,15 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: complete
+
+<!-- RESOLVED 2026-07-12 (via z_features/agents_md_standardization.md). Landed as
+     spec'd: check_claude_md_pointers + a --write pointer sweep + an AGENTS-less
+     report in repos_sync.py; recommendation (a) taken (enforce the pointer only
+     where an AGENTS.md exists; report AGENTS-less repos, never auto-stub); root-
+     of-repo only. Sweep found every reachable AGENTS.md-bearing repo already
+     carries a working @AGENTS.md pointer (organs fixed this session: Heart#67,
+     Build#147, Memory#21). See the epic's Outcome section for the full report. -->
 
 Standardize CLAUDE.md → AGENTS.md across the ecosystem. Sweep **every repo in
 `PyAutoMind/repos.yaml`** so each one carries a `CLAUDE.md` that is a thin,
