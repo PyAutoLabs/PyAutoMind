@@ -183,6 +183,17 @@ def replace_block(path, content, begin=MARK_BEGIN, end=MARK_END):
     return changed
 
 
+def extract_block(text, begin, end):
+    """Return the exact content --write would have placed between the markers,
+    or None if the marker pair is absent or empty. The counterpart to
+    replace_block, used by the drift check so a generated block that has been
+    hand-edited or left stale (repos.yaml changed without a --write) is caught."""
+    m = re.search(
+        re.escape(begin) + r"\n(.*?)\n" + re.escape(end), text, re.DOTALL
+    )
+    return m.group(1) if m else None
+
+
 def write_block(path, content, begin=MARK_BEGIN, end=MARK_END, *, required):
     """Fill a marked block, tolerant of partial checkouts.
 
@@ -256,6 +267,38 @@ def check_labels(root, repos):
             problems.append(
                 f"ensure_workspace_labels targets '{slug}', manifest says "
                 f"'{repos[name]['github']}'"
+            )
+    return problems
+
+
+# --------------------------------------------------------------------------
+# Generated-block drift (the organism map is written into each organ)
+# --------------------------------------------------------------------------
+#
+# The organism-map block is duplicated into every organ's AGENTS.md on purpose:
+# a web/single-repo session loads only that repo's committed files, so the map
+# must physically live there, not behind a cross-repo link. Duplication is only
+# safe if divergence is caught — so, mirroring how the command surface is checked
+# by install.sh --check-agents-surface, this verifies each organ's map block
+# still equals what system_map() generates. A block that was hand-edited, or left
+# stale after a repos.yaml change without a --write, is reported as drift.
+
+
+def check_map_blocks(root, repos, smap):
+    problems = []
+    for name, repo in repos.items():
+        if repo["category"] != "organ":
+            continue
+        agents = root / name / "AGENTS.md"
+        if not agents.exists():
+            continue  # not checked out, or an organ without its own AGENTS.md
+        text = agents.read_text()
+        if MAP_BEGIN not in text or MAP_END not in text:
+            continue  # opt-in: an organ that has not added the map markers
+        if extract_block(text, MAP_BEGIN, MAP_END) != smap:
+            problems.append(
+                f"'{name}': organism-map block is stale — run "
+                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
             )
     return problems
 
@@ -522,12 +565,13 @@ def main():
     root = args.root or mind_root.parent
     categories, repos = load_manifest(mind_root)
 
+    smap = system_map(categories, repos)
+
     if args.write:
         write_block(root / "AGENTS.md", routing_table(categories, repos),
                     required=True)
         write_block(root / "PyAutoBrain/skills/WORKFLOW.md",
                     owner_map(categories, repos), required=True)
-        smap = system_map(categories, repos)
         for name, repo in repos.items():
             if repo["category"] != "organ":
                 continue
@@ -541,6 +585,7 @@ def main():
         "ensure_workspace_labels.sh": check_labels(root, repos),
         "local checkout origins": check_origins(root, repos),
         "tenant firewall (organ code)": check_tenant_firewall(root, repos),
+        "organism-map blocks (generated)": check_map_blocks(root, repos, smap),
         "CLAUDE.md → AGENTS.md pointers": check_claude_md_pointers(root, repos),
     }
     drift = False
