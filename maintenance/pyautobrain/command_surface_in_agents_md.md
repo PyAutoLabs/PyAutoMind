@@ -8,7 +8,15 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: complete
+
+<!-- RESOLVED 2026-07-12 (via z_features/agents_md_standardization.md). Landed via
+     recommendation (a): install.sh --write-agents-surface / --check-agents-surface,
+     generated from the bin/pyauto-brain agent registry (the single source), drift-
+     checked by two Brain CI tests. Scope change: the block is NOT duplicated into
+     every organ — PyAutoBrain is guaranteed loaded in every session, so the surface
+     lives once in Brain's auto-loaded AGENTS.md and reaches everywhere. Per-tool
+     slash sugar remains deferred. See the epic's Outcome section. -->
 
 Generate the command surface into AGENTS.md. Make the PyAuto command surface
 (`intake`, `route`, `start_dev`, `ship_*`, the conductor verbs, etc.)
