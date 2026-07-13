@@ -1,6 +1,13 @@
 # Active Tasks
 
 
+## eceb-editorial-revision
+- issue: https://github.com/Jammy2211/euclid_assistant/issues/6
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/eceb-editorial-revision
+- repos:
+
+
 ## lenstool-scaling-reference-magnitude
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265
 - status: workspace-dev — LensTool reference-magnitude (mag0) scaling-relation convention; explicit fixed reference luminosity (not max-of-sample), fixed exponent 0.5, full dPIE r_core/r_cut/b0 scaling (add ra_ref). 3 sequential PRs: [PR1 cluster = OPEN #267, unmerged] → PR2 group+imaging feature examples → PR3 SLaM pipelines
