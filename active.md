@@ -3,7 +3,8 @@
 
 ## verify-install-check-f-fix
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/70
-- status: library-dev
+- status: awaiting-input — both fixes done + verified (bash -n, driver py_compile, test 5p, cosmos_web_ring bundled). Parked at ship sign-off (supervised); NOT committed/pushed. Full F PASS needs a TestPyPI rehearsal re-run. Resume: ship_library gate → commit/push → PR.
+- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/70#issuecomment-4961101996
 - worktree: ~/Code/PyAutoLabs-wt/verify-install-check-f-fix
 - autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto" batch; no heart-ack given)
 - note: harness-only (PyAutoHeart heart/checks/verify_install.sh check_f). Fix1 F_driver loads bundled cosmos_web_ring (pixel_scales=0.06) not stale simple; Fix2 pin all 5 PyAuto pkgs to $TARGET_VERSION for coherent dev stack. Full PASS needs TestPyPI rehearsal re-run (out of band).
