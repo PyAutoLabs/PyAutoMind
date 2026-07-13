@@ -3,10 +3,11 @@
 
 ## jax-gradient-optimizer-benchmark
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95
-- status: workspace-dev
+- status: awaiting-input — all 5 candidates ran + written up; PARKED at ship sign-off (supervised). NOT committed/pushed. Resume: run ship_workspace gate → commit/push → PR on feature/jax-gradient-optimizer-benchmark (workspace-only, 6 scripts + findings.md + comparison.txt; per-run summaries gitignored).
+- question: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95#issuecomment-4961983910
 - worktree: ~/Code/PyAutoLabs-wt/jax-gradient-optimizer-benchmark
 - autonomy: supervised (--auto launched 2026-07-13 in-session; plan approved in-conversation incl. MAP objective via "do MAP, and go --auto"; no heart-ack given)
-- note: experiment/workspaces; searches_minimal JAX gradient optimizers on the MGE likelihood. Phase 1 = optax Adam/ADABelief + jaxopt L-BFGS (MAP, cold-start); Phase 2 = numpyro SVI + jaxopt Levenberg-Marquardt. Workspace-only, no PyAutoFit source. Compile-probe first; park with partial results if grad-path compile prohibitive on CPU. Ship sign-off parks (supervised).
+- result: single cold-start ALL fail wrong-basin (Adam r_E4.89 / ADABelief 5.01 / L-BFGS 4.42 / SVI 3.54±0.07); multi-start Adam 12× WINS (r_E1.600, logL+31788, 2/12 basin) = GIGA-Lens recipe. LM deferred (single-start→same basin; needs residual-vector). Follow-up filed: experiment/workspaces/next_wave_population_gradient_samplers_on_the.md (SVGD/flowMC/GGNS/SMC-HMC + converged Nautilus).
 - repos:
   - autolens_workspace_developer: feature/jax-gradient-optimizer-benchmark
 
