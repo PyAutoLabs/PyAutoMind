@@ -1,5 +1,18 @@
 # Released workspace datasets are 15×15 smoke artifacts
 
+Status: superseded
+
+<!-- SUPERSEDED 2026-07-13 by bug/pyautobuild/release_ships_simulated_datasets.md.
+     Deeper research disproved this prompt's "repair the data by regenerating
+     full-size and committing" leg: simulated datasets should NOT be committed at
+     all (each workspace .gitignore ignores dataset/** except a small allowlist of
+     REAL data), and examples already self-provision via al.util.dataset.should_simulate().
+     The real defect is (a) pre_build.sh's `git add -f dataset/` force-committing
+     simulated data against .gitignore, and (b) a minority of scripts loading
+     simulated data without the should_simulate guard. See the successor prompt for
+     the corrected 4-leg fix (stop leak / add guards / purge / guard-check) and the
+     cross-repo audit. This 15×15 framing is retained for the original evidence. -->
+
 Autonomy: supervised
 Difficulty: medium
 Found: 2026-07-09, by the first run of verify_install check F (Colab simulation) —
