@@ -1,0 +1,5 @@
+## howtogalaxy-sub2
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/36
+- completed: 2026-04-21
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/37
+- note: Sub-task 2 of 3 of the HowToGalaxy extraction. Deleted `scripts/howtogalaxy/` + `notebooks/howtogalaxy/` (70 files) now that the series lives at PyAutoLabs/HowToGalaxy. Relocated the sersic simulator dependency to `scripts/imaging/simulator_sersic.py` (matches sibling `simulator.py` / `simulator_sample.py`) and rewrote all 9 non-tutorial script callers plus their 9 notebook counterparts. Slimmed HowToGalaxy sections of README.rst, start_here.py/.ipynb, CLAUDE.md, scripts/README.rst, notebooks/README.rst to a single external-repo pointer; rewrote 3 in-script prose references in imaging/interferometer/ellipse modeling.py plus notebook equivalents; dropped howtogalaxy-specific entries from config/build/env_vars.yaml and no_run.yaml. Sub-task 3 of 3 (PyAutoGalaxy docs/README/Colab URLs pointing at new repo) still pending.

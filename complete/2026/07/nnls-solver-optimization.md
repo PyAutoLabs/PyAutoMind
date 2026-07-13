@@ -1,0 +1,6 @@
+## nnls-solver-optimization
+- completed: 2026-07-09
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/369 (closed)
+- prs: https://github.com/PyAutoLabs/PyAutoArray/pull/371 (merged, pending-release)
+- summary: NNLS positive-only solver optimization. Phase A on real extracted production systems (rect n=1581 / Delaunay n=1560, pixelization+MGE-60 HST, post-#368): NNLS = 20% of eval on CPU, 34% on RTX 2060 (grows on accelerators; latency-bound). Delaunay verdict: mesh/scipy machinery no longer the target post-#368; residual is callback vmap serialization (A100 job 330046 quantifies, still queued). Shipped: per-fit Settings(nnls_solver_tol, nnls_max_iter), default off = bit-identical upstream (solutions + gradients validated); tol 1e-6 saves ~15-20% of solve, dlog_ev ~1e-8; vendored driver autoarray/util/jax_nnls.py. Consumer-laptop feasibility established: full eval 0.88s fp64 on RTX 2060 (6.8x its CPU); mixed precision not the consumer rescue (F+NNLS stay fp64 = 84%). Ledger doc committed: autolens_profiling results/notes/nnls_solver_ledger.md (b5e15fa)
+- followups: A100 addendum to closed #369 when RAL GPU nodes return (job 330046 queued; results land in scratch/nnls_speedup/); workspace configs need no mirroring (Settings-based, no yaml keys)

@@ -1,0 +1,14 @@
+## datacube-shared-state
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/565
+- completed: 2026-06-08
+- epic: z_features/analysis_shared_state.md (sub-task B — lensing datacube consumer)
+- library-pr:
+  - https://github.com/PyAutoLabs/PyAutoArray/pull/344
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/566
+- workspace-pr:
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/218
+  - https://github.com/PyAutoLabs/autolens_workspace_test/pull/138
+  - https://github.com/PyAutoLabs/autolens_profiling/pull/47
+- repos: PyAutoArray, PyAutoLens, autolens_workspace, autolens_workspace_test, autolens_profiling
+- notes: Claude completed and merged the datacube shared-state library and workspace PRs, but hit a session limit before clearing the PyAutoPrompt active entry. Codex verified the relevant local checkouts are on merged main commits and retired the stale active claim so subsequent workspace-test work can proceed.
+- followups: FULLY CLOSED 2026-07-10 — the Phase 5 re-measure (the last dangling deliverable) ran and is recorded: 4.06× per-likelihood at sma × 4 ch (unshared 1282.7 ms → shared 316.1 ms, local CPU fp64, v2026.7.6.649; autolens_profiling `675a902` + OPTIMIZATION_NOTES.md). Verified on current main that both curvature and Slice-2b mapper sharing shipped. Stale-open issues PyAutoLens#565 + PyAutoFit#1307 closed. Only remainder: the authoritative alma_high A100 run, tracked in `autolens_profiling/likelihood_runtime/OPTIMIZATION_NOTES.md` (needs RAL login node).

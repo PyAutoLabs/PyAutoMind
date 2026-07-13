@@ -1,0 +1,6 @@
+## weak-strong-lensing
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/247
+- completed: 2026-07-09
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/587 (merged)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/251 (merged)
+- notes: Step 8 of the weak series (--auto supervised, same-session). scripts/weak/features/strong_lensing/{simulator,fit,modeling}.py — one tracer -> imaging arcs + 400-galaxy shear field to 10"; joint fit via AnalysisFactor/FactorGraphModel with FULLY SHARED priors (same model object to both factors); NumPy graph loop because AnalysisWeak is NumPy (AnalysisImaging(use_jax=False) inside the graph). Real joint Nautilus fit recovered er=1.5999 (1.5993-1.6005) vs 1.6. KEY LIBRARY BUG FOUND: first mixed-dataset FactorGraphModel crashed combined visualization — PyAutoFit routes ALL factors' analyses into the lead factor's Visualizer.visualize_combined; VisualizerImaging/Interferometer assumed homogeneity ('FitWeak' has no 'data'). Fix: filter to own Analysis type, early-return BEFORE plotter construction (paths.image_path untouched — regression test asserts this). Both visualizer files are CRLF (match with \r\n in scripted edits). Possible upstream follow-up: PyAutoFit could dispatch visualize_combined per analysis type rather than lead-factor-takes-all.

@@ -1,0 +1,13 @@
+## jax-substructure-simulator
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/542 (CLOSED — core delivered; 2 follow-up gaps queued)
+- completed: 2026-06-09
+- epic: jax_substructure/ (prompts 1-4: vmap deflections → lax.scan multi-plane → e2e jit simulate → vmap batched)
+- library-prs:
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/543
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/544
+- workspace-prs:
+  - https://github.com/PyAutoLabs/autolens_workspace_test/pull/127
+  - https://github.com/PyAutoLabs/autolens_workspace_test/pull/128
+  - https://github.com/PyAutoLabs/autolens_workspace_test/pull/129
+- repos: PyAutoLens, PyAutoGalaxy, autolens_workspace_test
+- notes: Retroactive close-out — the 4 `jax_substructure/` prompts shipped to `main` over PRs PyAutoLens #543 (scan) + #544 (e2e), additional PyAutoLens commits `b744801` (batched_simulate) / `4e93ecc` (parameterize lens/source/light), PyAutoGalaxy direct commits (`8a317dfc` jnp.where NaN-safe mask, `a4b8ce22`) for the generic `vmapped_deflections_from` classmethod on the abstract mass profile, and workspace_test #127/#128/#129, but the work was never recorded here and issue #542 was left OPEN. Delivered: `autolens/lens/substructure_util.py` (`precompute_scaling_matrix`, `galaxies_to_halo_arrays`, `traced_grids_via_scan`, `simulate_substructure`, `los_realizations_to_arrays`, `batched_simulate_substructure`), the generic `Profile.vmapped_deflections_from` (covers any mass profile exposing `radial_deflection_from`), and 3 workspace_test scripts (`test_scan_multiplane.py`, `test_simulate_e2e.py`, `test_batched_simulate.py`). **Two prompt sub-items were sidestepped/deferred and are now queued as follow-up prompts:** (1) `jax_substructure/5_prng_key_vmap_noise.md` — prompt 3's Gap 1: `preprocess.poisson_noise_via_data_eps_from` still derives its `PRNGKey` internally from the int `seed` (`seed=-1` → `int(time.time())`), so the OO `SimulatorImaging` path can't be vmapped over a batch of noise keys; the standalone `simulate_substructure` sidesteps this by calling `jax.random.poisson(prng_key, ...)` directly. The fix is an optional `prng_key` param (PyAutoArray, → /ship_library). (2) `jax_substructure/6_deflection_equivalence_test.md` — prompt 1's dedicated old-vs-vmapped deflection-equivalence test (all 4 dark-matter profile types + masked-slot-zero) was never authored as a standalone script; validation is only folded into the scan/e2e tests. Note `galaxies_to_halo_arrays` only branches `cNFWSph` vs. truncated, so that test may surface a small MCR-variant extension (workspace_test, → /ship_workspace). Prompt-4 stretch memory-estimator / sub-batching helper remains unbuilt (not requested).

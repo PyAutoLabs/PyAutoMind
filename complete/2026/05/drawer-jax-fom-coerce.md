@@ -1,0 +1,6 @@
+## drawer-jax-fom-coerce
+- issue: (chat-reported, no GitHub issue)
+- completed: 2026-05-20
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1283
+- repos: PyAutoFit
+- notes: User reported `TypeError: Object of type ArrayImpl is not JSON serializable` from `af.Drawer` + `use_jax=True` (autogalaxy_workspace ellipse.py-style code). Root cause: `AbstractInitializer.figure_of_metric` returned the raw fitness output, which under JAX-backed Fitness is a 0-d `jax.Array`. Drawer is uniquely affected because it stuffs the full `search_internal` dict (with raw `log_posterior_list`) into `samples_info` — other searches build scalar-metadata-only `samples_info`. Existing `Fitness.call_wrap` float() coercion (fitness.py:243) only fires with `use_jax_jit=True`, and Drawer constructs Fitness with the default `use_jax_jit=False`, so it never covered this codepath. Fix: one-line `return float(figure_of_merit)` at the producer in initializer.py; function annotation was already `Optional[float]`. Regression test uses numpy 0-d fitness (library unit tests stay numpy-only per project rule) and asserts both `type(fom) is float` and `json.dumps` round-trip. No API surface affected, zero workspace script references to the private symbol. Full PyAutoFit suite green (1259 passed / 1 skipped).

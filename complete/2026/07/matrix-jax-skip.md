@@ -1,0 +1,4 @@
+## matrix-jax-skip
+- prs: PyAutoArray#383 + PyAutoFit#1358 + PyAutoGalaxy#497 + PyAutoLens#604 (all MERGED 2026-07-11, squash)
+- completed: 2026-07-11
+- summary: Second layer of the Python Version Matrix fix (after nufftax layer #382/#144). 11 unit tests across 4 repos exercise jax-only paths (vmapped profiles / blackjax NUTS / NUFFT sparse operator / use_jax=True) and hard-failed on the NumPy-only matrix with ModuleNotFoundError: jax (jax ships via [optional], absent on the matrix; can't install on 3.9 anyway). Guarded each with pytest.mark.skipif(importlib.util.find_spec("jax") is None); numpy tests in same files untouched. Doctrine-aligned (unit tests numpy-only). Verified: jax-absent clean venv → guarded skip + rest pass; jax-present dev env → collect clean; all 4 PR CIs green (3.12/3.13 run the guarded tests). Matrix re-dispatched (run 29150117854) to confirm end-to-end green. From /health 2026-07-11.

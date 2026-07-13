@@ -1,0 +1,5 @@
+## preprocess-poisson-noise-sign-fix
+- issue: none — surfaced by /health_check on 2026-04-27
+- completed: 2026-04-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/290
+- notes: Fixed sign of Poisson noise term in `autoarray.preprocess.poisson_noise_via_data_eps_from`. Old code returned `data − noisy`, so `data_eps_with_poisson_noise_added` produced `2·data − noisy_data` (mirrored skew — same mean and variance, but Poisson's positive skew flipped negative). Now returns `noisy − data` so `data + noise = noisy_data`. Also rewrapped result via `data_eps.with_new_array(...)` to preserve `Array2D` type (the in-progress edit had inadvertently let numpy's operator dispatch return a raw ndarray, breaking `.native` access in callers). Regenerated expected values for 2 unit tests + 4 simulator tests; 748/748 PyAutoArray pytest green. Behavioural change only — no public signatures touched. Workspace simulators that use `add_poisson_noise_to_data=True` will produce correctly-skewed data going forward; previously committed dataset/*.fits files remain valid (just systematically different) and will refresh on next simulator run.

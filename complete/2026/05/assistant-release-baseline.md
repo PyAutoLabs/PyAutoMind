@@ -1,0 +1,6 @@
+## assistant-release-baseline
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/96
+- completed: 2026-05-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/97, https://github.com/PyAutoLabs/autolens_assistant/pull/13
+- repos: PyAutoBuild, autolens_assistant
+- notes: Final part of the Kernel2D/API-drift series. Registered autolens_assistant as a release-pipeline workspace: pre_build.sh run_workspace entry, verify_workspace_versions.sh WORKSPACES entry (7->8), release.yml release_workspaces matrix entry + a gated "Regenerate API audit baseline" step that installs the released wheels and runs the assistant's own work/audit_skill_apis.py --write-baseline, committing wiki/core/api_audit_baseline.json alongside the version stamp. Added autolens_assistant/config/general.yaml version block (workspace_version 2026.5.21.1) which silences the "cannot verify the workspace / no version.workspace_version" warning that opened the whole investigation. Verified locally: YAML valid, bash -n clean, verify_workspace_versions all 8 ok, import warning gone, drift-check clean. CI path (release.yml) unvalidated until next real release (gated to write_api_baseline==true so other workspaces unaffected). Series complete: PR#10 tooling+policy, PR#12 wiki cleanup, PR#97/#13 release automation.

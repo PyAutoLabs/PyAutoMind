@@ -125,10 +125,14 @@ flight) — the second of the three lifecycle states (`draft/ → active/ →
 complete/`; issue #71). Use `git mv` to preserve history:
 
 ```bash
+mkdir -p PyAutoMind/active
 git -C PyAutoMind mv <draft-path> active/<filename>
 ```
 
-Timestamp-suffix the filename if one already exists in `active/`.
+The `mkdir -p` matters on a **freshly-spawned** Mind, where `active/` does not
+yet exist (it holds only instance state, so the template ships without it) —
+`git mv` errors if the destination dir is missing. Timestamp-suffix the
+filename if one already exists in `active/`.
 
 ### 6. Push Mind
 
