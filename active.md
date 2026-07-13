@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## ep-negative-sigma-crash
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1363
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ep-negative-sigma-crash
+- note: nightly workspace-validation RED — EP guide crashes with NormalMessage sigma<0 (stochastic). Library fix in autofit/graphical + messages/normal.py; guide untouched (no autoimmunity). Guard at normal.py:45 stays for prior passing; NaturalNormal (normal.py:508) is the EP-safe vehicle
+- autonomy: default present-and-wait (no --auto; plan human-approved in-session 2026-07-13)
+- repos:
+  - PyAutoFit: feature/ep-negative-sigma-crash
+
+
 ## eceb-editorial-revision
 - issue: https://github.com/Jammy2211/euclid_assistant/issues/6
 - status: workspace-dev
