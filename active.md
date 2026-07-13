@@ -3,7 +3,8 @@
 
 ## verify-install-check-f-fix
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/70
-- status: awaiting-input — both fixes done + verified (bash -n, driver py_compile, test 5p, cosmos_web_ring bundled). Parked at ship sign-off (supervised); NOT committed/pushed. Full F PASS needs a TestPyPI rehearsal re-run. Resume: ship_library gate → commit/push → PR.
+- status: shipped, awaiting-merge — PR PyAutoHeart#71 (pytest 263p; bash -n + driver py_compile OK); human ship sign-off "ship all" 2026-07-13 despite Heart RED (release-hold reasons). Full F PASS needs TestPyPI rehearsal re-run. Merge/close human.
+- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/71
 - question: https://github.com/PyAutoLabs/PyAutoHeart/issues/70#issuecomment-4961101996
 - worktree: ~/Code/PyAutoLabs-wt/verify-install-check-f-fix
 - autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto" batch; no heart-ack given)
@@ -14,7 +15,9 @@
 
 ## jax-pytree-leaf-registration
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1365
-- status: awaiting-input — implementation done + verified (shapelet repro flattens; leaf types not registered; existing jax_assertions still pass). Parked at ship sign-off (supervised); NOT committed/pushed. Resume: ship_library gate → commit/push → library-first PR (PyAutoFit) then autofit_workspace_test PR.
+- status: shipped, awaiting-merge — PRs PyAutoFit#1366 (pytest 1473p/1s) + autofit_workspace_test#42 (behind lib); human ship sign-off "ship all" 2026-07-13 despite Heart RED (release-hold). Merge/close human (library-first).
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1366
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/42
 - question: https://github.com/PyAutoLabs/PyAutoFit/issues/1365#issuecomment-4961041130
 - worktree: ~/Code/PyAutoLabs-wt/jax-pytree-leaf-registration
 - autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto" batch; no heart-ack given)
@@ -36,7 +39,9 @@
 
 ## matern-tfp-jax-compat
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/385
-- status: awaiting-input — implementation done + verified (repro on jax 0.10.2+tfp0.25 crashes; tfp-nightly fixes; parity script passes; matern unit tests 2p). Parked at ship sign-off (supervised); NOT committed/pushed. Resume: run ship_library gate → commit/push → library-first PR, then autogalaxy_workspace_test PR.
+- status: shipped, awaiting-merge — PRs PyAutoArray#386 (pytest 897p) + autogalaxy_workspace_test#70 (behind lib); human ship sign-off "ship all" 2026-07-13 despite Heart RED (release-hold). Merge/close human (library-first).
+- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/386
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/70
 - question: https://github.com/PyAutoLabs/PyAutoArray/issues/385#issuecomment-4960930740
 - worktree: ~/Code/PyAutoLabs-wt/matern-tfp-jax-compat
 - autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto"; fix strategy chosen via AskUserQuestion = tfp-nightly pin; no heart-ack given)
