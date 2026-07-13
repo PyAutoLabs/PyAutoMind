@@ -5,6 +5,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
 - status: awaiting-merge — PR-A OPEN + pushed (human-authorized push+PR 2026-07-13). Gate: Brain pytest 46p / smoke n-a / review pending / Heart YELLOW UNACKED. Merge Mind#72 (structure) first, then Brain#109 (skills); merge stays human. Post-merge: (a) republish PyAutoMind-template (spawn_drift red until then), (b) PR-B migrate/split behind review manifest; Phase-2 wiki filed+parked
 - prs: PyAutoMind#72 (structure+engine+rewire) + PyAutoBrain#109 (skills)
+- pr-b-prep: manifest dry-run posted #71 (comment 4960037639): split-complete 554 records (04/05/06/07/unknown = 144/212/28/158/13); migrate 440 active = 3 stay / 146 complete-ledger-backed / 291 UNSURE. Design Q pending: split-complete folds original prompt into record → does migrate drop-or-separate the done active/ files? PR-B runs post-merge behind full manifest
 - autonomy: supervised effective (--auto launched 2026-07-13; feature cap at Difficulty large = supervised; plan written to issue #71 per contract; no heart-ack given → ship parks)
 - note: docs/ fork resolved (only Type:-headed prompts → draft/docs/; docs/pyautobrain reference stays). lifecycle.py check green; draft→active→complete round-trip smoke passed. Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
 - worktree: ~/Code/PyAutoLabs-wt/lifecycle-state-split
