@@ -1,6 +1,19 @@
 # Active Tasks
 
 
+## release-datasets-group-b
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/151
+- status: workspace-dev — 4 PRs open (purge all committed simulated datasets; all self-provision via .exists()+subprocess). Smoke: autofit 10/10, HowToFit 10/10, HowToGalaxy 4/4, HowToLens 6/6. Awaiting CI→merge (user-directed, same as Group A). Via PyAutoGut (condemned.md)
+- autonomy: supervised (--auto continuation; user directed "do group b"; merge human-directed)
+- prs: autofit_workspace#92 + HowToFit#19 + HowToGalaxy#22 + HowToLens#31 (pending-release)
+- worktree: ~/Code/PyAutoLabs-wt/release-datasets-group-b
+- repos:
+  - autofit_workspace: feature/release-datasets-group-b
+  - HowToFit: feature/release-datasets-group-b
+  - HowToGalaxy: feature/release-datasets-group-b
+  - HowToLens: feature/release-datasets-group-b
+
+
 ## eceb-editorial-revision
 - issue: https://github.com/Jammy2211/euclid_assistant/issues/6
 - status: workspace-dev
