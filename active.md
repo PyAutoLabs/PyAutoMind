@@ -3,9 +3,10 @@
 
 ## lifecycle-state-split
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
-- status: library-dev — PR-A (rewire) then PR-B (migrate 444 issued/ + split complete.md); Phase 2 wiki (complete_archive_wiki.md) parked until PR-B nears
+- status: awaiting-input — PR-A engine done + committed locally (b108910, scripts/lifecycle.py, NOT pushed); parked on a docs/ conflation fork before the mass git-mv. Mass move + skill/script/spawn rewire + template republish all coupled to the answer; PR-B (migrate/split) is the separate follow-up
+- question: https://github.com/PyAutoLabs/PyAutoMind/issues/71#issuecomment-4959799012
 - autonomy: supervised effective (--auto launched 2026-07-13; feature cap at Difficulty large = supervised; plan written to issue #71 per contract; no heart-ack given → ship parks)
-- note: also edits PyAutoBrain skills (create_issue/ship_*/start_dev/intake); Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
+- note: lifecycle.py validated on live complete.md (554 entries parse, check green). Also edits PyAutoBrain skills (create_issue/ship_*/start_dev/intake). Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
 - worktree: ~/Code/PyAutoLabs-wt/lifecycle-state-split
 - repos:
   - PyAutoMind: feature/lifecycle-state-split
