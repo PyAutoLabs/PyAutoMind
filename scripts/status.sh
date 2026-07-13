@@ -32,11 +32,11 @@ dim()  { printf "\033[2m%s\033[0m\n" "$1"; }
 #   active/                        issued, in flight
 #   complete/<YYYY>/<MM>/          shipped
 # Draft prompts are organised by WORK TYPE (feature/, bug/, …) under draft/.
-# Meta folders (z_features/, z_vault/, autoprompt/) keep their own names.
-# See README "Prompt taxonomy".
+# See README "Prompt taxonomy". (The former z_features/ z_vault/ autoprompt/
+# meta folders were retired into complete/archive/ on 2026-07-13.)
 
 WORK_TYPES=(feature bug refactor docs test release maintenance research experiment triage)
-LIFECYCLE_DIRS=(active complete z_features z_vault autoprompt)
+LIFECYCLE_DIRS=(active complete)
 
 bold "== Draft prompts (by work type) =="
 printf "%-35s %s\n" "category" "count"

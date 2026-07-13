@@ -163,14 +163,10 @@ PyAutoMind/
 │   ├── AGENTS.md            ← archive schema + how to look records up
 │   └── 2026/07/<slug>.md    ← bucketed by completion date (zero-padded months)
 │
-│   LIFECYCLE / META — not work-types; keep their own names.
-├── z_features/              ← multi-task epic trackers (one tracker → many sub-prompts)
-│   └── complete/            ← archived trackers (all sub-prompts shipped)
-│
-├── z_vault/                 ← deferred prompts (z_ prefix sorts last in listings)
-
-│
-├── autoprompt/              ← prompts about THIS repo's own infrastructure (meta)
+│   (complete/archive/ holds retired non-record material — see below)
+├── complete/archive/        ← skipped by lifecycle.py check/index
+│   ├── epics/               ← retired multi-task epic trackers (former z_features/)
+│   └── shelved/             ← deferred prompts + dev notes (former z_vault/)
 │
 ├── scripts/
 │   ├── status.sh            ← prompt inventory helper
@@ -249,9 +245,10 @@ experiment/autoarray/jax_sparse_mapping.md
 
 ### Not work-types
 
-`active/`, `complete/`, `z_features/`, `z_vault/` are **workflow lifecycle**
-folders, and `autoprompt/` holds **meta** prompts about this repo's own
-infrastructure. They keep their own names and are not routed by work type.
+`active/` and `complete/` are **workflow lifecycle** folders, not routed by work
+type. `complete/archive/` holds retired non-record material — `epics/` (former
+`z_features/` trackers) and `shelved/` (former `z_vault/` deferred prompts + dev
+notes) — and is skipped by `lifecycle.py check`/`index`.
 
 ### Migration note
 
@@ -351,47 +348,13 @@ Each task is an H2 section:
     Long-form description of what landed, gotchas, follow-ups.
 ```
 
-### `z_features/` (multi-task epics)
+### Epic trackers (retired 2026-07-13)
 
-`z_features/` holds **umbrella trackers** for multi-task epics — single
-markdown files listing a sequence of sub-prompts that ship as their own PRs
-under `autofit/`, `autogalaxy/`, etc. The tracker itself never becomes an
-issue; only its sub-prompts do.
-
-```
-z_features/
-├── latent_refactor.md            ← tracker (lists sub-prompt links)
-├── ellipse_fitting_jax.md
-├── ...
-└── complete/                     ← archived trackers (all sub-prompts shipped)
-```
-
-Use this pattern when a single ask decomposes into 5+ dependent sub-tasks.
-`/start_dev z_features/<tracker>.md` runs in **audit-only mode** — it reports
-which sub-prompts are not-yet-issued / in-flight / shipped, and offers to
-move the tracker to `z_features/complete/` once everything has landed.
-
-**Naming convention for clean audit:** the audit derives task-name
-candidates from each sub-prompt's `active/` filename stem with `_`→`-`. For
-the audit to auto-match against `complete.md` headings, **the task slug in
-`active.md` / `complete.md` must equal the issued filename's stem after
-that transform**.
-
-| Issued filename | Task slug that matches | Task slug that does NOT match |
-|---|---|---|
-| `active/latent_module_autogalaxy.md` | `latent-module-autogalaxy` ✓ | `latent-autogalaxy-module` ✗ |
-| `active/latent_smoke_test.md` | `latent-smoke-test` ✓ | `smoke-test-latent` ✗ |
-| `active/latent_variables_tutorial_expand_autofit.md` | `latent-variables-tutorial-expand-autofit` ✓ | `latent-tutorial-autofit` ✗ |
-
-The third row is the trap — if `/start_dev` renames the prompt on move
-(e.g. appends a repo suffix for disambiguation) and `active.md`'s task slug
-diverges from the issued stem, the audit will report the sub-prompt as
-"in flight" forever and never archive the tracker. The cure is to either:
-
-- Pick the task slug at `/start_dev` time to match the eventual issued
-  filename stem, or
-- Manually archive the tracker (`mv z_features/<name>.md z_features/complete/`
-  + `prompt_sync_push`) when you know it's all shipped.
+Multi-task **epic trackers** (umbrella markdown files listing a sequence of
+sub-prompts) formerly lived in `z_features/`. That folder was retired into
+`complete/archive/epics/` once the `draft/ → active/ → complete/` lifecycle made
+its `z_`-prefixed home redundant. The per-task completion records live in
+`complete/<YYYY>/<MM>/`; the archived trackers keep the epic-level narrative.
 
 ---
 
@@ -404,7 +367,7 @@ bash scripts/status.sh
 ```
 
 Prints counts per category, lists the active and recently-completed tasks, and
-flags anything in `z_vault/` that's been sitting for a while.
+and lists the recently-completed tasks.
 
 ### From inside Claude Code
 

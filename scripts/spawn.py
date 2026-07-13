@@ -57,10 +57,9 @@ MIND_RULES = [
     ("draft/*", "SKELETON"),
     ("complete/AGENTS.md", "KEEP"),
     ("active/*", "DROP"), ("complete/*", "DROP"),
-    ("z_features/*", "DROP"), ("z_vault/*", "DROP"),
-    ("autoprompt/*", "DROP"), ("docs/*", "DROP"),
-    # Instance root docs + legacy pre-migration prompt dirs:
-    ("dashboard.md", "DROP"), ("overview.md", "DROP"), ("autolens/*", "DROP"),
+    ("docs/*", "DROP"),
+    # Instance root docs:
+    ("dashboard.md", "DROP"), ("overview.md", "DROP"),
     ("skills/*", "KEEP"), ("policy/*", "KEEP"),
     (".github/*", "KEEP_SUB"),
     # Agent-discovery symlinks are install artifacts (recreated by the

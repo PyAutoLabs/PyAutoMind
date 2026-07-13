@@ -36,10 +36,11 @@ For the full workflow narrative, conventions, and registry schemas, read
     numerical order. `scripts/lifecycle.py` owns the moves and drift-checks
     them.
 
-  Meta folders are **not** lifecycle states and keep their own names:
-  `z_features/` (multi-task epic trackers), `z_vault/` (deferred prompts — the
-  former `shelved/` merged here), and `autoprompt/` (prompts about this repo's
-  own infrastructure).
+  Retired non-record material lives in **`complete/archive/`** (skipped by
+  `lifecycle.py check`/`index`): `archive/epics/` (former `z_features/`
+  multi-task trackers) and `archive/shelved/` (former `z_vault/` deferred
+  prompts + dev notes). The old `z_features/`, `z_vault/` and `autoprompt/`
+  top-level folders were retired here on 2026-07-13.
 - **Registry** — root-level markdown files, each with one job: `active.md`
   (in-flight tasks), `planned.md` (scoped, not started), `complete.md`
   (shipped), `parked.md` (started but not in flight), `queue.md` (ordered
@@ -64,11 +65,10 @@ For the full workflow narrative, conventions, and registry schemas, read
 ## Hard rules
 
 1. **Never rewrite history on any branch with a remote.** No `git init` over an
-   existing repo, no `git push --force` to `main`. The 2026-04-27 drift incident
-   that motivated `autoprompt/03_history_rewrite_guard.md` is the reason.
+   existing repo, no `git push --force` to `main`. (Motivated by the 2026-04-27
+   drift incident.)
 2. **Pull before edit.** `git fetch && git status` first, every time. If behind
-   `origin/main`, `git pull --ff-only` before touching anything. See
-   `autoprompt/04_source_of_truth_rule.md`.
+   `origin/main`, `git pull --ff-only` before touching anything.
 3. **One prompt = one task = one PR.** If a prompt outlines multiple
    loosely-related changes, split into separate prompt files before issuing.
 4. **`tmp/` is scratch.** Never commit anything under it.

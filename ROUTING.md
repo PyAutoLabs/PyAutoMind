@@ -62,6 +62,6 @@ commands; PyAutoBrain performs the routing.* Bodies + the boundary live in
 
 ## Not routed by work type
 
-`active/`, `complete/`, `z_features/`, `z_vault/` are workflow-lifecycle
-folders; `autoprompt/` holds meta prompts about this repo's own infrastructure.
-None of these are work-type folders and PyAutoBrain does not route them.
+`active/` and `complete/` are workflow-lifecycle folders (with
+`complete/archive/` for retired epic trackers + shelved prompts). None of these
+are work-type folders and PyAutoBrain does not route them.
