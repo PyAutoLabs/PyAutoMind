@@ -3,8 +3,9 @@
 
 ## release-ships-simulated-datasets
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/126
-- status: library-dev — Group A (autolens+autogalaxy) + universal leg 1 (pre_build -f drop) + leg 4 (Heart allowlist guard); Phase-2 audit complete (CWD gate PASS, orphans classified) — see #126 body
-- autonomy: supervised effective (--auto launched 2026-07-13; bug work-type cap binds; plan written to #126; ship sign-off parks with a question per AUTONOMY.md; NO heart-ack given → any Heart YELLOW/RED parks)
+- status: awaiting-input — parked at ship sign-off + design fork. Leg 1 (pre_build -f drop) DONE + committed local 4600e6f (PyAutoBuild, NOT pushed). Legs 2-4 parked: path-based provisioning map diverges from plan (A purge-safe 9+4, B needs-guard 9+7, C orphan/ambiguous 14+10) — guard-ownership + orphan dispositions need a call. Phase-2 audit complete (CWD gate PASS)
+- autonomy: supervised effective (--auto launched 2026-07-13; bug work-type cap binds; plan written to #126; NO heart-ack given → any Heart YELLOW/RED parks)
+- question: https://github.com/PyAutoLabs/PyAutoBuild/issues/126#issuecomment-4957801694
 - note: Group B (autofit/HowToFit/HowToGalaxy/HowToLens bare-`dataset/` committed-by-design vs purge) split out to bug/pyautobuild/release_datasets_group_b_policy.md (human-required). Do-not-blind-purge orphans: autolens 7, autogalaxy 5 (listed in #126). autolens_workspace freed by PR#267 merge.
 - worktree: ~/Code/PyAutoLabs-wt/release-ships-simulated-datasets
 - repos:
