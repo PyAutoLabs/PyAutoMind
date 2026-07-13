@@ -5,7 +5,9 @@
 - issue: https://github.com/Jammy2211/euclid_assistant/issues/6
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/eceb-editorial-revision
+- note: private manuscript companion is /mnt/c/Users/Jammy/Science/euclid/paper on the same feature branch
 - repos:
+  - euclid_assistant: feature/eceb-editorial-revision
 
 
 ## lenstool-scaling-reference-magnitude
