@@ -3,7 +3,7 @@
 
 ## release-ships-simulated-datasets
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/126
-- status: awaiting-input — legs 1+3(core) SHIPPED as PRs (merge human): PyAutoBuild#150 (leg 1 -f drop), autolens_workspace#272 (purge 19 dirs/145 files), autogalaxy_workspace#129 (purge 13/93). Smoke-validated 9/9 + 8/8. Guard signal CORRECTED (.exists() idiom → leg 2 moot; A purge-safe 17+11, B=1, C 14+10). Purges recorded via PyAutoGut (condemned.md). PARKED on remaining-~12-C decision (regenerable-non-smoke + dead-archive + datacube/database→Group B); leg 4 lands after C clears
+- status: awaiting-input — legs 1+3 SHIPPED as PRs (merge human): PyAutoBuild#150 (leg 1), autolens#272 (purge 28 dirs), autogalaxy#129 (purge 17). Smoke 9/9 + 8/8 (re-run after each expansion). Guard signal CORRECTED (.exists() idiom → leg 2 moot). User steer applied: simpleold killed, many_visibilities KEPT (active). Remaining tracked: samples population (DRIFT — needs auto-simulate guard at provisioning point, name-collides w/ search samples.csv), interferometer/dark_matter_subhalo (verify), database/simple__{0,1,2}→Group B. Leg 4 (pre_build allowlist assertion) after samples clears. All via PyAutoGut (condemned.md)
 - autonomy: supervised effective (--auto launched 2026-07-13, user greenlit surgery "go" + route purges via PyAutoGut; NO heart-ack → any Heart YELLOW/RED parks; merge always human)
 - prs: PyAutoBuild#150 + autolens_workspace#272 + autogalaxy_workspace#129 (all pending-release)
 - question: https://github.com/PyAutoLabs/PyAutoBuild/issues/126#issuecomment-4958040857
