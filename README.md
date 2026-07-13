@@ -1,5 +1,7 @@
 # PyAutoMind
 
+🧬 **PyAutoScientist → <https://github.com/PyAutoLabs/PyAutoScientist>** — this repo is one organ of the PyAuto organism.
+
 📖 **Full documentation → <https://pyautoscientist.readthedocs.io>** — the whole PyAutoScientist organism, including how to fork and run your own.
 
 The Mind of the PyAuto organism: every piece of work in the ecosystem starts
