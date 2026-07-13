@@ -198,7 +198,7 @@ dependency audits, smoke tests, lint sweeps) lives in `admin_jammy/skills/`.
 
 `scripts/prompt_sync.sh` is sourced by skills that mutate registry files
 (`active.md`, `complete.md`, etc.) to commit and push back to origin. It
-replaces the previous `admin_jammy/software/admin_sync.sh` which operated on
+replaces a now-removed `admin_sync.sh` helper that formerly operated on
 `admin_jammy/prompt/`.
 
 ---
@@ -421,18 +421,16 @@ The PyAuto workflow has three repos with distinct roles:
 | Repo | Purpose |
 |------|---------|
 | **PyAutoMind** (this repo) | The Mind: ideas, intent, goals, priorities, the prompt registry and prompt-coupled skills. The starting point. |
-| **admin_jammy** | Personal admin notes (`euclid.md`, `grants.md`, …) and general PyAuto tooling (`software/worktree.sh`, `software/admin_sync.sh`, generic skills like `audit_docs`, `dep_audit`, `repo_cleanup`). |
+| **admin_jammy** | Personal admin notes only (`euclid.md`, `grants.md`, `week.md`, `travel.md`, …). Formerly also held PyAuto tooling under `software/`; that has moved out (worktree/label scripts → `PyAutoBrain/bin/`, generic skills → Brain/Heart). |
 | **PyAutoMemory** | The Memory organ: topical LLM wikis (`lensing_wiki/`, `smbh_wiki/`, `cti_wiki/`, `methods_wiki/`, `galaxies_wiki/`) and a reading queue (`reading-queue.md`, moved from `admin_jammy/papers.md`). |
 | **`PyAuto*` libraries and `*_workspace*` repos** | Where the actual code work happens. Each task gets a feature branch + worktree under `~/Code/PyAutoLabs-wt/<task-name>/`. |
 
 Helper scripts that this repo's skills source:
 
-- `admin_jammy/software/worktree.sh` — task worktree management (create, remove, conflict check).
-- `admin_jammy/software/admin_sync.sh` — admin_jammy/PyAutoMind sync helpers.
+- `PyAutoBrain/bin/worktree.sh` — task worktree management (create, remove, conflict check).
 
-These intentionally live in `admin_jammy/software/` because they're general
-multi-repo tooling, not prompt-specific. The skills that need them source by
-absolute path.
+These live in `PyAutoBrain/bin/` because they're general organism-wide tooling,
+not prompt-specific. The skills that need them source by absolute path.
 
 ---
 

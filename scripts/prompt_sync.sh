@@ -12,7 +12,7 @@
 # Both functions are no-ops when there is nothing to do, and safe to call
 # multiple times in the same session.
 #
-# Replaces the previous admin_jammy/software/admin_sync.sh which operated on
+# Replaces a now-removed admin_sync.sh helper that formerly operated on
 # admin_jammy/prompt/. PyAutoMind is now the home of prompts and registry.
 
 # An explicitly set PROMPT_REPO is always honoured as-is (a missing path then

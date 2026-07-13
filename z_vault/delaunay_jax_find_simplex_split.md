@@ -25,7 +25,7 @@ Pull it back with:
 git -C ~/Code/PyAutoLabs/PyAutoArray fetch origin feature/delaunay-jax-find-simplex
 git -C ~/Code/PyAutoLabs/PyAutoArray checkout feature/delaunay-jax-find-simplex
 # OR via worktree:
-source ~/Code/PyAutoLabs/admin_jammy/software/worktree.sh
+source ~/Code/PyAutoLabs/PyAutoBrain/bin/worktree.sh
 worktree_create delaunay-jax-find-simplex PyAutoArray
 git -C ~/Code/PyAutoLabs-wt/delaunay-jax-find-simplex/PyAutoArray reset --hard origin/feature/delaunay-jax-find-simplex
 source ~/Code/PyAutoLabs-wt/delaunay-jax-find-simplex/activate.sh
@@ -129,7 +129,7 @@ more than reproducibility").
 ### 1. Recreate the worktree and activate
 
 ```bash
-source ~/Code/PyAutoLabs/admin_jammy/software/worktree.sh
+source ~/Code/PyAutoLabs/PyAutoBrain/bin/worktree.sh
 worktree_create delaunay-jax-find-simplex PyAutoArray
 cd ~/Code/PyAutoLabs-wt/delaunay-jax-find-simplex/PyAutoArray
 git fetch origin feature/delaunay-jax-find-simplex
@@ -229,7 +229,7 @@ EOF
 
 After PR merges:
 ```bash
-source ~/Code/PyAutoLabs/admin_jammy/software/worktree.sh
+source ~/Code/PyAutoLabs/PyAutoBrain/bin/worktree.sh
 worktree_remove delaunay-jax-find-simplex
 git -C ~/Code/PyAutoLabs/PyAutoArray checkout main
 git -C ~/Code/PyAutoLabs/PyAutoArray pull --ff-only

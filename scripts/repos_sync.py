@@ -29,7 +29,7 @@ failing the run.
 
   * PyAutoHeart/config/repos.yaml          — polled repos exist, owners match
   * PyAutoBuild/pre_build.sh               — run_workspace repos exist
-  * admin_jammy/software/ensure_workspace_labels.sh — owner/name pairs match
+  * PyAutoBrain/bin/ensure_workspace_labels.sh — owner/name pairs match
   * the `origin` remote of every local checkout — manifest matches reality
   * the tenant firewall — no instance fact (satellite repo name, GitHub
     owner, workspace path) in Brain/Heart/Build *.py / *.sh outside the
@@ -270,7 +270,7 @@ def check_pre_build(root, repos):
 
 
 def check_labels(root, repos):
-    script = root / "admin_jammy/software/ensure_workspace_labels.sh"
+    script = root / "PyAutoBrain/bin/ensure_workspace_labels.sh"
     if not script.exists():
         return []
     block = re.search(r"REPOS=\((.*?)\)", script.read_text(), re.DOTALL)
@@ -457,10 +457,12 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBrain/agents/faculties/sizing/_sizing.py": {"PyAutoFit"},
     "PyAutoBrain/bin/check_skill_line_counts.sh": {"admin_jammy", "autolens_profiling"},
     "PyAutoBrain/bin/clean_slate.sh": {"PyAutoLabs"},
+    "PyAutoBrain/bin/ensure_workspace_labels.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "Jammy2211", "PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_workspace", "autolens_workspace_test", "euclid_strong_lens_modeling_pipeline"},
     "PyAutoBrain/bin/install.sh": {"PyAutoFit", "PyAutoLabs", "admin_jammy", "autolens_profiling"},
     "PyAutoBrain/bin/overnight_status.sh": {"PyAutoLabs", "autolens_assistant"},
     "PyAutoBrain/bin/pull_all_main.sh": {"PyAutoLabs"},
     "PyAutoBrain/bin/version_drift.sh": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoBrain/bin/worktree.sh": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "admin_jammy", "autolens_workspace"},
     "PyAutoBrain/tests/test_activity_gate.py": {"HowToFit", "HowToLens", "PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoLens", "autolens_workspace"},
     "PyAutoBrain/tests/test_policy_seams.py": {"PyAutoFit", "PyAutoLens", "autolens_workspace"},
     "PyAutoBrain/tests/test_review_inplace.py": {"PyAutoArray", "PyAutoLabs"},

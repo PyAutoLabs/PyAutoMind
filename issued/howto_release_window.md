@@ -62,7 +62,7 @@ for repo in autolens_workspace autogalaxy_workspace autofit_workspace HowToFit \
 done
 ```
 
-Better still, write `admin_jammy/software/ensure_workspace_labels.sh` (or a Python
+Better still, write `PyAutoBrain/bin/ensure_workspace_labels.sh` (or a Python
 script) that idempotently asserts the label exists with the right config across
 a hardcoded list of repos. Run it manually after creating any new workspace-style
 repo. Could also be invoked at the top of `pre_build.sh` so each release run
@@ -126,7 +126,7 @@ unlabeled — silently. Two fixes worth considering:
 
 ## Files likely to change
 
-- `admin_jammy/software/ensure_workspace_labels.sh` — new helper
+- `PyAutoBrain/bin/ensure_workspace_labels.sh` — new helper
 - `PyAutoBuild/pre_build.sh` — optionally invoke the helper at the top
 - `PyAutoBuild/CLAUDE.md` — add HowToFit to the table, and euclid_pipeline as a
   `false` row
