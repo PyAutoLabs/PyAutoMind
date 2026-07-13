@@ -13,13 +13,14 @@
 
 ## matern-tfp-jax-compat
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/385
-- status: library-dev
+- status: awaiting-input — implementation done + verified (repro on jax 0.10.2+tfp0.25 crashes; tfp-nightly fixes; parity script passes; matern unit tests 2p). Parked at ship sign-off (supervised); NOT committed/pushed. Resume: run ship_library gate → commit/push → library-first PR, then autogalaxy_workspace_test PR.
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/385#issuecomment-4960930740
 - worktree: ~/Code/PyAutoLabs-wt/matern-tfp-jax-compat
 - autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto"; fix strategy chosen via AskUserQuestion = tfp-nightly pin; no heart-ack given)
-- note: library+workspace; PyAutoArray dep-pin + kv_xp docstring, autogalaxy_workspace_test JAX Matern parity assertion. Follow-up filed: vendor bessel_kve to drop tfp.
+- note: library+workspace; PyAutoArray dep-pin (optional extra) + kv_xp docstring, autogalaxy_workspace_test scripts/jax_assertions/matern_regularization.py parity. Follow-up to file: matern_vendor_bessel_kve (drop tfp).
 - repos:
-  - PyAutoArray: fix/matern-tfp-jax-compat
-  - autogalaxy_workspace_test: fix/matern-tfp-jax-compat
+  - PyAutoArray: feature/matern-tfp-jax-compat
+  - autogalaxy_workspace_test: feature/matern-tfp-jax-compat
 
 
 ## eceb-editorial-revision
