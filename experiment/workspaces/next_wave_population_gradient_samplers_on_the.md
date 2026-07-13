@@ -62,10 +62,19 @@ populations. Baseline to beat = **multi-start Adam** (r_E 1.600, 2/12 starts,
 
 ★ = start here (zero / installed deps, easiest).
 
+**Bonus (for fun — user request):** **jaxns** — JAX-native nested sampling
+(pip-installable, Apache). It is a *sampler*, not a fast optimizer, so it sits
+outside this wave's core question — but include it as the **JAX-native
+nested-sampling reference point**: it makes the many-live-point robustness
+concrete on-device and gives a preview of the deferred full-sampling wave (and a
+fairer NS baseline than the Python-callback Nautilus). Report its end-to-end
+wallclock + sample count alongside the optimizers, clearly labelled as the
+sampler reference.
+
 **Deferred to the later full-sampling wave (do NOT build in this one):** tempered
-SMC + HMC, flowMC, jaxns, SVGD-as-posterior, and a converged nested-sampling
-posterior baseline. Those answer "what is the posterior?"; this wave answers
-"what is the robust MAP, fastest?".
+SMC + HMC, flowMC, SVGD-as-posterior, and a converged Nautilus posterior
+baseline. Those answer "what is the posterior?"; this wave answers "what is the
+robust MAP, fastest?" (with jaxns as a single sampler cameo for context).
 
 ## Deliverable
 

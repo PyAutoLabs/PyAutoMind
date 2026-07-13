@@ -3,8 +3,8 @@
 
 ## jax-gradient-optimizer-benchmark
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95
-- status: awaiting-input — all 5 candidates ran + written up; PARKED at ship sign-off (supervised). NOT committed/pushed. Resume: run ship_workspace gate → commit/push → PR on feature/jax-gradient-optimizer-benchmark (workspace-only, 6 scripts + findings.md + comparison.txt; per-run summaries gitignored).
-- question: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95#issuecomment-4961983910
+- status: awaiting-merge — SHIPPED (human sign-off "go, ship" 2026-07-13; committed 6344258, pushed). PR open, workspace-only. Shipped through organism-scoped Heart RED (held release + stale 2026-07-09 run; nothing branch-related). Merge stays human → then move to complete/.
+- pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/96
 - worktree: ~/Code/PyAutoLabs-wt/jax-gradient-optimizer-benchmark
 - autonomy: supervised (--auto launched 2026-07-13 in-session; plan approved in-conversation incl. MAP objective via "do MAP, and go --auto"; no heart-ack given)
 - result: single cold-start ALL fail wrong-basin (Adam r_E4.89 / ADABelief 5.01 / L-BFGS 4.42 / SVI 3.54±0.07); multi-start Adam 12× WINS (r_E1.600, logL+31788, 2/12 basin) = GIGA-Lens recipe. LM deferred (single-start→same basin; needs residual-vector). Follow-up filed: experiment/workspaces/next_wave_population_gradient_samplers_on_the.md (SVGD/flowMC/GGNS/SMC-HMC + converged Nautilus).
