@@ -5996,3 +5996,6 @@
 
 ## morning-routine phase 2 — enriched signals + mobile/codex (2026-07-13)
 - shipped: PyAutoBrain#108 merged (issue #107 closed). Added bin/overnight_status.sh + bin/version_drift.sh (gh-API), made /morning environment-aware (full local; gh-API glance on mobile Claude Code chat / Codex). Live via install.sh.
+
+## repos-sync public front-door organ tables (2026-07-13)
+- shipped: PyAutoMind#70 + .github#3 + PyAutoScientist#1 merged (issue #69 closed). repos_sync now generates the organ table into the .github + PyAutoScientist READMEs (repos_sync:organs markers) and presence-checks the pyautolabs.github.io blurb, wired into --write/--check — a new organ in repos.yaml can no longer silently drop from the public front door (as Gut had). Public front door = 7 (incl. Nerves via front_door:true flag); internal AGENTS.md maps stay the 6 category:organ repos. Also: PyAutoScientist repo born + linked atop all 7 organ READMEs earlier this session.
