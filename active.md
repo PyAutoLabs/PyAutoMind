@@ -1,6 +1,19 @@
 # Active Tasks
 
 
+## release-ships-simulated-datasets
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/126
+- status: library-dev — Group A (autolens+autogalaxy) + universal leg 1 (pre_build -f drop) + leg 4 (Heart allowlist guard); Phase-2 audit complete (CWD gate PASS, orphans classified) — see #126 body
+- autonomy: supervised effective (--auto launched 2026-07-13; bug work-type cap binds; plan written to #126; ship sign-off parks with a question per AUTONOMY.md; NO heart-ack given → any Heart YELLOW/RED parks)
+- note: Group B (autofit/HowToFit/HowToGalaxy/HowToLens bare-`dataset/` committed-by-design vs purge) split out to bug/pyautobuild/release_datasets_group_b_policy.md (human-required). Do-not-blind-purge orphans: autolens 7, autogalaxy 5 (listed in #126). autolens_workspace freed by PR#267 merge.
+- worktree: ~/Code/PyAutoLabs-wt/release-ships-simulated-datasets
+- repos:
+  - PyAutoBuild: feature/release-ships-simulated-datasets
+  - PyAutoHeart: feature/release-ships-simulated-datasets
+  - autolens_workspace: feature/release-ships-simulated-datasets
+  - autogalaxy_workspace: feature/release-ships-simulated-datasets
+
+
 ## eceb-editorial-revision
 - issue: https://github.com/Jammy2211/euclid_assistant/issues/6
 - status: workspace-dev
