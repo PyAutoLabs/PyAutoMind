@@ -212,6 +212,68 @@ def cmd_split_complete(args) -> int:
 
 
 # --------------------------------------------------------------------------- #
+# record  (single-entry: the go-forward ship_* hook)
+# --------------------------------------------------------------------------- #
+def cmd_record(args) -> int:
+    """Write ONE dated record from its complete.md entry, keeping complete.md and
+    the record paired 1:1 by slug. Called by ship_library/ship_workspace after the
+    rich entry is appended to complete.md, so a new completion lands as a dated
+    record (not just a complete.md append + a thin active/ prompt)."""
+    entries = parse_complete_md()
+    slug = args.slug
+    entry = entries.get(slug)
+    if entry is None:  # tolerate kebab/space variants
+        want = safe_name(slug)
+        cand = [s for s in entries if safe_name(s) == want]
+        if cand:
+            slug, entry = cand[0], entries[cand[0]]
+    if entry is None:
+        print(f"lifecycle record: no complete.md entry for {args.slug!r} "
+              f"(append it first)", file=sys.stderr)
+        return 1
+    date = entry["date"]
+    if args.date:
+        m = re.match(r"(\d{4})-(\d{2})-(\d{2})", args.date)
+        if not m:
+            print(f"lifecycle record: bad --date {args.date!r}", file=sys.stderr)
+            return 1
+        date = (m.group(1), m.group(2))
+
+    dest = complete_bucket(date) / f"{safe_name(slug)}.md"
+    body = "\n".join(entry["lines"]).rstrip() + "\n"
+    # fold the original active/ prompt (explicit --prompt, else guess from slug)
+    prompt = None
+    if args.prompt:
+        p = ACTIVE_DIR / args.prompt
+        if p.exists():
+            prompt = p
+    if prompt is None:
+        guess = ACTIVE_DIR / f"{safe_name(slug).replace('-', '_')}.md"
+        if guess.exists():
+            prompt = guess
+    if prompt is not None:
+        body += "\n## Original prompt\n\n" + prompt.read_text(errors="replace")
+
+    print(f"record: {dest.relative_to(ROOT)}"
+          + (f"  (+folds active/{prompt.name})" if prompt else ""))
+    if not args.apply:
+        print("(dry run; pass --apply)")
+        return 0
+    import subprocess
+
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(body)
+    subprocess.run(["git", "-C", str(ROOT), "add", str(dest)],
+                   capture_output=True, text=True)
+    if prompt is not None:
+        r = subprocess.run(["git", "-C", str(ROOT), "rm", "-q", str(prompt)],
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            prompt.unlink(missing_ok=True)
+    return 0
+
+
+# --------------------------------------------------------------------------- #
 # migrate  (legacy issued/ -> active/ was a wholesale rename in PR-A; here we
 #           classify those files into still-active vs complete)
 # --------------------------------------------------------------------------- #
@@ -326,6 +388,13 @@ def main() -> int:
     mg = sub.add_parser("migrate", help="classify legacy active/ files into active vs complete")
     mg.add_argument("--apply", action="store_true")
     mg.set_defaults(func=cmd_migrate)
+
+    r = sub.add_parser("record", help="write one dated record from its complete.md entry (ship_* hook)")
+    r.add_argument("slug", help="the complete.md heading slug for the shipped task")
+    r.add_argument("--date", help="completion date YYYY-MM-DD (else from complete.md)")
+    r.add_argument("--prompt", help="active/ prompt filename to fold + remove")
+    r.add_argument("--apply", action="store_true")
+    r.set_defaults(func=cmd_record)
 
     c = sub.add_parser("check", help="drift guard (non-zero exit on drift)")
     c.set_defaults(func=cmd_check)
