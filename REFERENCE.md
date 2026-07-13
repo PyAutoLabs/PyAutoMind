@@ -88,12 +88,12 @@ fine — write naturally, the AI fills in the rest.
   idea               ── you write it in ideas.md
     │
     ▼
-  draft prompt       ── you write a markdown file under <work-type>/<target>/<name>.md
-    │
+  draft prompt       ── you write a markdown file under
+    │                   draft/<work-type>/<target>/<name>.md
     ▼
   /start_dev         ── reads the prompt, audits the code, drafts an issue,
     │                   creates the GitHub issue, registers the task in
-    │                   active.md, moves the prompt to issued/
+    │                   active.md, moves the prompt draft/ → active/
     ▼
   active.md entry    ── the task is now tracked across machines and sessions
     │
@@ -111,8 +111,9 @@ fine — write naturally, the AI fills in the rest.
   /ship_workspace
     │
     ▼
-  PR merged          ── post-merge cleanup deletes the worktree, removes the
-    │                   active.md entry, appends a summary to complete.md
+  PR merged          ── post-merge cleanup deletes the worktree, moves the
+    │                   active.md entry to complete.md, and advances the prompt
+    │                   file active/ → complete/<YYYY>/<MM>/ (lifecycle.py move)
     ▼
   done
 ```
@@ -144,28 +145,25 @@ PyAutoMind/
 
 ├── queue.md                 ← processing queue for /register_and_iterate
 │
-│   PROMPTS — organised by WORK TYPE (first folder), then TARGET (second folder).
+│   PROMPT-FILE LIFECYCLE (issue #71): draft/ → active/ → complete/YYYY/MM/.
+│   Drafts are organised by WORK TYPE (first folder), then TARGET (second).
 │   See "Prompt taxonomy" below and ROUTING.md.
-├── feature/                 ← new user-facing or scientific capabilities
-│   ├── autoarray/  autofit/  autogalaxy/  autolens/  autolens_assistant/  …
-│   ├── workspaces/          ← any *_workspace repo
-│   ├── pyautobrain/         ← prompts that implement PyAutoBrain agents
-│   ├── jax_substructure/  weak/  cluster/   ← numbered topic series (kept together)
-├── bug/                     ← incorrect behaviour, crashes, regressions
-│   ├── autofit/  autogalaxy/  autolens/  autoarray/  priors/  …
-├── refactor/                ← internal restructuring, no intended behaviour change
-├── docs/                    ← documentation, tutorials, notebooks, examples
-├── test/                    ← test coverage, smoke tests, validation scripts
-├── release/                 ← packaging, versions, deployment, release readiness
-├── maintenance/             ← dependency updates, hygiene, cleanup, small tech debt
-├── research/                ← exploratory scientific / algorithmic investigation
-├── experiment/              ← prototypes, spikes, proof-of-concept work
-├── triage/                  ← classification still unclear; needs manual review
+├── draft/                   ← NOT STARTED (intaken, pre /start_dev)
+│   ├── feature/             ← new user-facing or scientific capabilities
+│   │   ├── autoarray/  autofit/  autogalaxy/  autolens/  workspaces/  pyautobrain/  …
+│   ├── bug/                 ← incorrect behaviour, crashes, regressions
+│   ├── refactor/            ← internal restructuring, no intended behaviour change
+│   ├── docs/                ← documentation, tutorials, notebooks, examples
+│   ├── test/  release/  maintenance/  research/  experiment/
+│   └── triage/              ← classification still unclear; needs manual review
+│
+├── active/                  ← ISSUED, in flight (moved here by /start_dev)
+│
+├── complete/                ← SHIPPED — rich completion records (see complete/AGENTS.md)
+│   ├── AGENTS.md            ← archive schema + how to look records up
+│   └── 2026/07/<slug>.md    ← bucketed by completion date (zero-padded months)
 │
 │   LIFECYCLE / META — not work-types; keep their own names.
-├── issued/                  ← prompts that have been routed via /start_dev
-│   └── autolens_workspace_developer/   ← per-target subdirs preserved
-│
 ├── z_features/              ← multi-task epic trackers (one tracker → many sub-prompts)
 │   └── complete/            ← archived trackers (all sub-prompts shipped)
 │
@@ -176,6 +174,7 @@ PyAutoMind/
 │
 ├── scripts/
 │   ├── status.sh            ← prompt inventory helper
+│   ├── lifecycle.py         ← prompt-file lifecycle engine (move/split/check)
 │   └── prompt_sync.sh       ← commit/push helpers sourced by skills
 │
 └── skills/                  ← Mind-owned skills + the ownership audit
@@ -208,7 +207,8 @@ replaces a now-removed `admin_sync.sh` helper that formerly operated on
 PyAutoMind organises **intent by the kind of thinking required; PyAutoBrain uses
 that structure to choose the right reasoning agent.**
 
-Prompts live at `<work-type>/<target>/<name>.md`:
+Prompts start at `draft/<work-type>/<target>/<name>.md` (and advance
+`draft/ → active/ → complete/YYYY/MM/`; issue #71):
 
 - The **first folder** answers *what kind of thinking or agent is needed?* — the
   work type.
@@ -249,7 +249,7 @@ experiment/autoarray/jax_sparse_mapping.md
 
 ### Not work-types
 
-`issued/`, `z_features/`, `z_vault/` are **workflow lifecycle**
+`active/`, `complete/`, `z_features/`, `z_vault/` are **workflow lifecycle**
 folders, and `autoprompt/` holds **meta** prompts about this repo's own
 infrastructure. They keep their own names and are not routed by work type.
 
@@ -372,16 +372,16 @@ which sub-prompts are not-yet-issued / in-flight / shipped, and offers to
 move the tracker to `z_features/complete/` once everything has landed.
 
 **Naming convention for clean audit:** the audit derives task-name
-candidates from each sub-prompt's `issued/` filename stem with `_`→`-`. For
+candidates from each sub-prompt's `active/` filename stem with `_`→`-`. For
 the audit to auto-match against `complete.md` headings, **the task slug in
 `active.md` / `complete.md` must equal the issued filename's stem after
 that transform**.
 
 | Issued filename | Task slug that matches | Task slug that does NOT match |
 |---|---|---|
-| `issued/latent_module_autogalaxy.md` | `latent-module-autogalaxy` ✓ | `latent-autogalaxy-module` ✗ |
-| `issued/latent_smoke_test.md` | `latent-smoke-test` ✓ | `smoke-test-latent` ✗ |
-| `issued/latent_variables_tutorial_expand_autofit.md` | `latent-variables-tutorial-expand-autofit` ✓ | `latent-tutorial-autofit` ✗ |
+| `active/latent_module_autogalaxy.md` | `latent-module-autogalaxy` ✓ | `latent-autogalaxy-module` ✗ |
+| `active/latent_smoke_test.md` | `latent-smoke-test` ✓ | `smoke-test-latent` ✗ |
+| `active/latent_variables_tutorial_expand_autofit.md` | `latent-variables-tutorial-expand-autofit` ✓ | `latent-tutorial-autofit` ✗ |
 
 The third row is the trap — if `/start_dev` renames the prompt on move
 (e.g. appends a repo suffix for disambiguation) and `active.md`'s task slug
@@ -409,7 +409,7 @@ flags anything in `z_vault/` that's been sitting for a while.
 ### From inside Claude Code
 
 - `/health status` — dashboard of registry state (active, planned, recent complete; PyAutoHeart, via the `/health` door)
-- `/start_dev <work-type>/<target>/<name>.md` — read a prompt and route it (PyAutoBrain)
+- `/start_dev draft/<work-type>/<target>/<name>.md` — read a prompt and route it (PyAutoBrain)
 - `/worktree_status` — cross-references registry with task worktrees (PyAutoHeart)
 
 ---

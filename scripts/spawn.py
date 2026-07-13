@@ -50,8 +50,14 @@ MIND_RULES = [
     ("active.md", "EMPTY"), ("planned.md", "EMPTY"), ("complete.md", "EMPTY"),
     ("parked.md", "EMPTY"), ("condemned.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
     ("autonomy_log.md", "SPECIAL:autonomy_log"),
-] + [(f"{wt}/*", "SKELETON") for wt in MIND_WORK_TYPES] + [
-    ("issued/*", "DROP"), ("z_features/*", "DROP"), ("z_vault/*", "DROP"),
+    # Prompt-file lifecycle (issue #71): draft/ (not-started) -> active/
+    # (in-flight) -> complete/YYYY/MM (shipped). A fresh template ships an empty
+    # draft/ skeleton; active/ + complete/ records are instance state (DROP),
+    # but the complete/ archive SCHEMA is template content (KEEP, first-match).
+    ("draft/*", "SKELETON"),
+    ("complete/AGENTS.md", "KEEP"),
+    ("active/*", "DROP"), ("complete/*", "DROP"),
+    ("z_features/*", "DROP"), ("z_vault/*", "DROP"),
     ("autoprompt/*", "DROP"), ("docs/*", "DROP"),
     # Instance root docs + legacy pre-migration prompt dirs:
     ("dashboard.md", "DROP"), ("overview.md", "DROP"), ("autolens/*", "DROP"),

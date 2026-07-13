@@ -16,15 +16,19 @@ What lives here:
 | File / folder | What it is |
 |---------------|------------|
 | `ideas.md` | raw incubating ideas, no structure required |
-| `<work-type>/<target>/*.md` | scoped prompts (`feature/`, `bug/`, `docs/`, …) |
-| `active.md`, `planned.md`, `complete.md` | the task registry: in flight, queued, done |
-| `issued/` | prompts that have become tracked issues |
+| `draft/<work-type>/<target>/*.md` | scoped prompts, **not started** (`feature/`, `bug/`, `docs/`, …) |
+| `active/<name>.md` | **issued** prompts — an open issue, in flight |
+| `complete/<YYYY>/<MM>/<slug>.md` | **shipped** — the rich completion record (`complete/AGENTS.md`) |
+| `active.md`, `planned.md`, `complete.md` | the task ledger: in flight, queued, done |
 | `repos.yaml` | the body map — the single source of repo identity |
-| `scripts/` | registry sync + drift checks (`repos_sync.py`) |
+| `scripts/` | registry sync + drift checks (`repos_sync.py`, `lifecycle.py`) |
 
-A prompt flows: idea → prompt file → `/start_dev` → GitHub issue +
-`active.md` entry → worktree development → PR → `complete.md`. The registry
-is shared state, so any machine or session can pick up an in-flight task.
+A prompt flows through three file states that mirror the ledger: idea →
+`draft/…` → `/start_dev` → GitHub issue + `active/` + `active.md` entry →
+worktree development → PR → merge → `complete/<YYYY>/<MM>/` +
+`complete.md`. `scripts/lifecycle.py` advances the file and drift-checks the
+invariant. The registry is shared state, so any machine or session can pick up
+an in-flight task.
 
 The schemas and conventions — prompt taxonomy, prompt file format, the
 `active.md` / `complete.md` schemas, epic trackers, bootstrap on a new
