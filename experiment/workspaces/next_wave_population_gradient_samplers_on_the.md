@@ -29,17 +29,36 @@ that robustness in eval count (no gradients); GIGA-Lens gets the same robustness
 with gradients (many starts) and so needs far fewer evals to the basin. The next
 wave should **unify many-points robustness WITH gradient efficiency.**
 
-## Candidates (prototype in searches_minimal, same MGE likelihood + harness)
+## Selection constraint (from the user)
 
-| Candidate | Principle | Notes |
-|-----------|-----------|-------|
-| **SVGD** (Stein Variational Gradient Descent) | N particles + gradient + kernel **repulsion** → deterministic particle VI, mode-covering | the direct "interacting multi-start"; Liu & Wang 2016. Add **Branching SVGD** (arXiv:2506.13916) for multimodality |
-| **flowMC** (Gabrié et al.) | ensemble of gradient (MALA/HMC) local chains + a learned **normalizing-flow** global proposal | JAX-native; proven on gravitational waves (`jim`). Population + gradients + learned global structure |
-| **gradient-guided nested sampling** | nested-sampling live-point population + **gradient-informed** proposals | arXiv:2312.03911 — the literal synthesis of the insight (nested sampling's robustness + gradients) |
-| **SMC + HMC** | population of particles annealed with **gradient (HMC)** moves | extend the existing `blackjax_smc.py`; pocoMC (Karamanis) = SMC + normalizing-flow preconditioning (existing `pocomc_simple.py`) |
+Candidate codes must be **open source, easy to implement, and JAX-native.**
+This rules out pocoMC (numpy/torch normalizing flows, not JAX-native) and
+bespoke gradient-guided-nested-sampling research code (no clean maintained
+JAX-native implementation). It *favours* **blackjax** — already installed and a
+JAX-native (Apache-2.0) dependency of this workspace, with the population +
+gradient primitives built in, so SVGD and tempered-SMC+HMC are near-zero-effort
+and follow the existing `blackjax_nuts.py` / `blackjax_smc.py` pattern.
 
-Reference/contrast: **multi-start Adam** (this run's winner) and a **converged
-Nautilus** (see below).
+## Candidates (prototype in searches_minimal, same MGE MAP objective + harness)
+
+| Candidate | Principle | Implementation (JAX-native, open source) |
+|-----------|-----------|------------------------------------------|
+| **SVGD** ★ | N particles + gradient + kernel **repulsion** → deterministic particle VI, mode-covering ("interacting multi-start") | `blackjax.svgd` — **already installed**, zero new deps. Liu & Wang 2016 |
+| **tempered SMC + HMC** ★ | population of particles annealed with **gradient (HMC/NUTS)** moves | `blackjax.adaptive_tempered_smc` — **already installed**; extends the existing `blackjax_smc.py` |
+| **flowMC** | ensemble of gradient (MALA/HMC) chains + a learned **normalizing-flow** global proposal | pip-installable, JAX-native (MIT), clean high-level API; proven on gravitational waves (`jim`). Gabrié et al. 2022 |
+| **jaxns** | **JAX-native nested sampling** — the many-live-point robustness, natively on-device | pip-installable, JAX-native (Apache). The fair JAX-native analog of Nautilus for the converged NS comparison |
+
+★ = start here (blackjax, no new dependency, easiest). flowMC / jaxns each add
+one pip-installable JAX-native package. **Dropped by the constraint:** pocoMC
+(not JAX-native), gradient-guided nested sampling (no clean JAX-native code),
+Branching SVGD (research code — fold its branching idea into the blackjax SVGD
+prototype instead if plain SVGD stays mode-collapsed).
+
+Reference/contrast: **multi-start Adam** (this run's winner), plus a **converged
+nested-sampling** baseline — via **jaxns** (JAX-native, apples-to-apples on
+device) and/or a converged **Nautilus** run (the incumbent; note Nautilus itself
+is a Python-callback sampler, NOT JAX-native, which is exactly why its per-eval
+JAX benefit is throttled).
 
 ## Deliverable
 
