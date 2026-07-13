@@ -1,3 +1,9 @@
+## lifecycle-state-split (draft/active/complete prompt-file lifecycle + archive wiki — MERGED)
+- completed: 2026-07-13
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
+- prs: PyAutoMind#72 (structure+engine+rewire) + #73 (557 dated records, active/ 440→7, complete.md kept+paired) + #74 (lifecycle.py record) + #75 (Phase-2 index wiki) + PyAutoBrain#109 (skills) + #110 (ship_* record hook) — all MERGED (squash) 2026-07-13.
+- summary: Split the flat 444-file issued/ pile into a draft/ -> active/ -> complete/<YYYY>/<MM> prompt-FILE lifecycle mirroring the active.md -> complete.md ledger. scripts/lifecycle.py (stdlib) owns move/record/split-complete/migrate/index/check. complete.md split into 557 dated rich records under complete/YYYY/MM (kept + paired 1:1 by slug, check-enforced); active/ pruned 440->7 in-flight (287 done/legacy dropped, git-recoverable). Phase-2: generated token-light complete/index.md (curated Highlights band + per-bucket links/hooks), lifecycle_drift.yml CI (check + index --check). create_issue -> active/, ship_* -> lifecycle.py record. Templates republished. TRAP: spawn.py template coupling forces structural+spawn+republish atomic; docs/ mixed prompts+specs (only Type:-headed moved to draft/docs/); #74/#75 both touched lifecycle.py subparser -> rebased #75.
+
 ## refactor-post-phase3 (PyAutoReduce post-phase-3 refactor — MERGED)
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8 (CLOSED)
 - completed: 2026-07-09 (present-and-wait; human-directed merge in the keck-ao session). Retired to complete.md 2026-07-13 (/morning; worktree was already released).
