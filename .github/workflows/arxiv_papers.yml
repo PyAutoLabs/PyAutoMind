@@ -13,16 +13,20 @@ name: pyauto-arxiv-papers
 # CURATED — 1–3 AI-chosen highlights with short summaries, then a compact list.
 # Cadence: weekday mornings, skip silently on empty (no quiet-day post).
 #
-# Timing: arXiv's daily astro-ph announcement goes live ~00:00–01:00 UTC. This
-# runs nominally 06:00 UTC; GitHub cron jitters 0–3 h *later* under load, so
-# actual delivery is UK ~07:00–10:00 — firmly after the overnight announcement,
-# so it reads as "this morning's papers" for UK scientists (the user's
-# requirement). Mon–Fri only: arXiv does not announce new astro-ph at weekends,
-# and Monday's run uses a 72 h look-back to sweep the weekend's submissions.
+# Timing: arXiv announces new astro-ph at 20:00 US Eastern, Sun–Thu, which is
+# ~01:00 UK (00:00 UTC in summer / 01:00 UTC in winter) — the papers are live in
+# the small hours, NOT the morning. GitHub cron only ever jitters *later* (0–3 h
+# under load), never earlier, so there is no way to pin an exact delivery time;
+# the nominal is set early enough that even a worst-case slip still lands before
+# a UK scientist wakes. Nominal 02:00 UTC (03:00 BST / 02:00 GMT) → worst case
+# ~05:00–06:00 UK, so the digest is already waiting in #papers over morning
+# coffee, ~2 h after the overnight announcement. Mon–Fri only: arXiv does not
+# announce at weekends, and Monday's run uses a 72 h look-back to sweep the
+# weekend's submissions.
 
 on:
   schedule:
-    - cron: "0 6 * * 1-5"
+    - cron: "0 2 * * 1-5"
   workflow_dispatch:
     inputs:
       lookback_hours:
