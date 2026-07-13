@@ -53,6 +53,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ACTIVE_DIR = ROOT / "active"
 COMPLETE_DIR = ROOT / "complete"
+# complete/archive/ holds non-record material (retired epic trackers, shelved
+# prompts) — NOT dated task records, so check/index skip it.
+ARCHIVE_DIR = COMPLETE_DIR / "archive"
 DRAFT_DIR = ROOT / "draft"
 ACTIVE_MD = ROOT / "active.md"
 COMPLETE_MD = ROOT / "complete.md"
@@ -365,7 +368,7 @@ def _all_records() -> "list[tuple[str, str, Path]]":
         return []
     recs = []
     for f in COMPLETE_DIR.rglob("*.md"):
-        if f.name in ("index.md", "AGENTS.md"):
+        if f.name in ("index.md", "AGENTS.md") or ARCHIVE_DIR in f.parents:
             continue
         bucket = "/".join(f.relative_to(COMPLETE_DIR).parts[:-1]) or "unknown"
         recs.append((bucket, f.stem, f))
@@ -461,7 +464,7 @@ def cmd_check(args) -> int:
 
     if COMPLETE_DIR.exists():
         for f in COMPLETE_DIR.rglob("*.md"):
-            if f.name in ("index.md", "AGENTS.md"):
+            if f.name in ("index.md", "AGENTS.md") or ARCHIVE_DIR in f.parents:
                 continue
             slug = f.stem
             if slug not in {safe_name(s) for s in c_slugs}:
@@ -474,6 +477,8 @@ def cmd_check(args) -> int:
     if ACTIVE_DIR.exists() and COMPLETE_DIR.exists():
         active_names = {f.name for f in ACTIVE_DIR.glob("*.md")}
         for f in COMPLETE_DIR.rglob("*.md"):
+            if ARCHIVE_DIR in f.parents:
+                continue
             if f.name in active_names:
                 problems.append(f"file in both active/ and complete/: {f.name}")
 
