@@ -11,7 +11,9 @@ name: pyauto-arxiv-papers
 # Scope (user, 2026-07-10): STRONG LENSING ONLY — astro-ph.CO / astro-ph.GA
 # papers whose abstract/title names strong lensing (tightest signal). Format:
 # CURATED — 1–3 AI-chosen highlights with short summaries, then a compact list.
-# Cadence: weekday mornings, skip silently on empty (no quiet-day post).
+# Cadence: weekday mornings. Empty days STILL post a short "no new strong-
+# lensing papers today" heartbeat (user, 2026-07-13) — so silence in #papers
+# always means a broken run, never a genuinely empty one.
 #
 # Timing: arXiv announces new astro-ph at 20:00 US Eastern, Sun–Thu, which is
 # ~01:00 UK (00:00 UTC in summer / 01:00 UTC in winter) — the papers are live in
@@ -81,8 +83,37 @@ jobs:
           echo "count=$count" >> "$GITHUB_OUTPUT"
           echo "Fetched $count strong-lensing paper(s) in the last ${LOOKBACK_HOURS}h."
 
+      - name: Build the "no new papers" notice
+        # A genuinely empty day (zero keyword hits). We skip Claude entirely to
+        # spend no subscription usage, but still write the heartbeat payload so
+        # the POST step below has something to send. uk_date is read from
+        # arxiv_papers.json, which the fetch always writes even at count=0.
+        if: ${{ steps.fetch.outputs.count == '0' }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          uk_date = json.load(open("arxiv_papers.json"))["uk_date"]
+          title = f"No new strong-lensing papers — {uk_date}"
+          payload = {
+              "text": title,
+              "blocks": [
+                  {"type": "header",
+                   "text": {"type": "plain_text", "text": title}},
+                  {"type": "section",
+                   "text": {"type": "mrkdwn",
+                            "text": "No new strong-lensing papers on arXiv today. :telescope:"}},
+              ],
+          }
+          with open("slack_payload.json", "w") as f:
+              json.dump(payload, f, indent=2)
+          print(f"Wrote no-papers heartbeat for {uk_date}.")
+          PY
+
       - name: Summarise papers with Claude
-        # Skip the Claude call entirely on empty days — no post, no usage.
+        # Skip Claude on empty days to spend zero subscription usage — the
+        # heartbeat above already wrote the notice. This runs only when there is
+        # something to summarise.
         if: ${{ steps.fetch.outputs.count != '0' }}
         uses: anthropics/claude-code-action@v1
         with:
@@ -161,23 +192,39 @@ jobs:
             block holding the "*More:*" bulleted list of the rest.
 
             IF, after dropping off-topic papers, NOTHING genuinely about strong
-            lensing remains: do NOT write slack_payload.json at all (leave it
-            absent). The POST step skips when the file is missing — an empty day
-            makes no post.
+            lensing remains, do NOT omit the file — instead write
+            `slack_payload.json` with this exact "no new papers" notice (an empty
+            day still gets a post, so silence in #papers always signals a broken
+            run, never an empty one):
+
+              {
+                "text": "No new strong-lensing papers — <uk_date>",
+                "blocks": [
+                  { "type": "header",
+                    "text": { "type": "plain_text",
+                              "text": "No new strong-lensing papers — <uk_date>" } },
+                  { "type": "section",
+                    "text": { "type": "mrkdwn",
+                              "text": "No new strong-lensing papers on arXiv today. :telescope:" } }
+                ]
+              }
 
             Do not POST anything yourself, do not commit, do not modify any
             other file.
 
       - name: POST to Slack
-        if: ${{ steps.fetch.outputs.count != '0' }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_PAPERS_WEBHOOK_URL }}
         run: |
-          # No payload = a genuinely empty day (fetch found rows, but Claude
-          # judged none genuinely on-topic). Skip silently, do not fail.
+          # Every path now writes slack_payload.json: the count=0 step writes the
+          # "no new papers" heartbeat, and the Claude step writes either a digest
+          # or that same notice. A MISSING file here is therefore no longer an
+          # empty day — it means the Claude step failed silently (e.g. an expired
+          # CLAUDE_CODE_OAUTH_TOKEN, the failure mode show_full_output guards
+          # against). Fail loudly rather than masquerade as "nothing found".
           if [ ! -s slack_payload.json ]; then
-            echo "No slack_payload.json — nothing genuinely on-topic today, skipping post."
-            exit 0
+            echo "::error::slack_payload.json missing — the Claude summarise step failed to write it (check for an expired CLAUDE_CODE_OAUTH_TOKEN). Empty days write the no-papers notice, so this is a real failure, not a quiet day."
+            exit 1
           fi
           if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
             echo "::error::PYAUTO_PAPERS_WEBHOOK_URL not set — create the #papers Slack incoming webhook and add it as a repo secret."
