@@ -122,7 +122,8 @@
 
 ## morning-routine
 - issue: PyAutoLabs/PyAutoBrain#105
-- status: library-dev (phase 1 — core)
+- status: pr-open (phase 1 — core)
+- pr: PyAutoLabs/PyAutoBrain#106 (pending-release)
 - worktree: ~/Code/PyAutoLabs-wt/morning-routine/PyAutoBrain
 - repos: PyAutoBrain
 - scope: /morning composition skill — sync (bin/pull_all_main.sh) + clean-slate (bin/clean_slate.sh) + consult /health + prioritized digest. Phase 2 (overnight-cron sweep, version-pin drift, resume-context, /hygiene, richer digest) tracked in issued/morning_routine.md.
