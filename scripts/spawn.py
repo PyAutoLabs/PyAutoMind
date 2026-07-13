@@ -48,15 +48,18 @@ MIND_RULES = [
     ("README.md", "KEEP"),
     ("repos.yaml", "SPECIAL:body_map"),
     ("active.md", "EMPTY"), ("planned.md", "EMPTY"), ("complete.md", "EMPTY"),
-    ("parked.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
+    ("parked.md", "EMPTY"), ("condemned.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
     ("autonomy_log.md", "SPECIAL:autonomy_log"),
 ] + [(f"{wt}/*", "SKELETON") for wt in MIND_WORK_TYPES] + [
     ("issued/*", "DROP"), ("z_features/*", "DROP"), ("z_vault/*", "DROP"),
     ("autoprompt/*", "DROP"), ("docs/*", "DROP"),
     # Instance root docs + legacy pre-migration prompt dirs:
     ("dashboard.md", "DROP"), ("overview.md", "DROP"), ("autolens/*", "DROP"),
-    ("skills/*", "KEEP"),
+    ("skills/*", "KEEP"), ("policy/*", "KEEP"),
     (".github/*", "KEEP_SUB"),
+    # Agent-discovery symlinks are install artifacts (recreated by the
+    # PyAutoBrain installer), not source content — drop them from the template.
+    (".claude/*", "DROP"), (".codex/*", "DROP"),
 ]
 
 MEMORY_RULES = [
@@ -463,6 +466,10 @@ def canary_scan(out_dir):
     hits = []
     for path in sorted(out_dir.rglob("*")):
         if not path.is_file():
+            continue
+        # spawn.py itself defines CANARY_TOKENS; its token list is generator
+        # machinery, not instance content, so exclude it from its own scan.
+        if path.relative_to(out_dir).as_posix() == "scripts/spawn.py":
             continue
         text = path.read_text(errors="replace").lower()
         for token in CANARY_TOKENS:
