@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## verify-install-check-f-fix
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/70
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/verify-install-check-f-fix
+- autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto" batch; no heart-ack given)
+- note: harness-only (PyAutoHeart heart/checks/verify_install.sh check_f). Fix1 F_driver loads bundled cosmos_web_ring (pixel_scales=0.06) not stale simple; Fix2 pin all 5 PyAuto pkgs to $TARGET_VERSION for coherent dev stack. Full PASS needs TestPyPI rehearsal re-run (out of band).
+- repos:
+  - PyAutoHeart: feature/verify-install-check-f-fix
+
+
 ## jax-pytree-leaf-registration
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1365
 - status: awaiting-input — implementation done + verified (shapelet repro flattens; leaf types not registered; existing jax_assertions still pass). Parked at ship sign-off (supervised); NOT committed/pushed. Resume: ship_library gate → commit/push → library-first PR (PyAutoFit) then autofit_workspace_test PR.
