@@ -108,3 +108,14 @@ One `##` block per item. Fields:
 - sweep-after: 2026-08-13
 - breaks-if-wrong: a non-self-provisioning script would hit missing data; smoke confirms regeneration (autofit 10/10, HowToFit 10/10, HowToGalaxy 4/4, HowToLens 6/6)
 - archive-ref: n/a — committed deletion; bytes recoverable from remote history at pre-purge SHAs autofit_workspace `1254a2fe`, HowToFit `ccc19584`, HowToGalaxy `caf1657c`, HowToLens `554be8b4`
+
+## pj011646-wfc3-parity/superseded-branch
+- type: branch
+- locator: feature/pj011646-wfc3-parity (PyAutoReduce, tip bd9806b) — scripts/reduce_pj011646.py (wfc3_ir production reduction) + prototypes/pj011646_parity_fit.py (model-parity fit); PyAutoReduce#25.
+- confidence: 0.9
+- reason: superseded — the human is redoing the PJ011646 WFC3-IR reduction fresh via a new autolens-assistant approach (not the PyAutoReduce prototype path). Branch never pushed / no PR; pixel-parity verdict already captured on #25 (closed superseded). Kept recoverable in case the fresh redo wants the reduction/fit scripts as reference.
+- merged: no
+- condemned: 2026-07-13
+- sweep-after: 2026-10-11
+- breaks-if-wrong: loses the working wfc3_ir reduction script (program 14653, F160W, final_bits=512 workaround) + the model-parity fit harness; recoverable via `pyauto-gut recover pj011646-wfc3-parity` until voided.
+- archive-ref: refs/heads/archive/condemned/pj011646-wfc3-parity on PyAutoReduce origin (bd9806b)

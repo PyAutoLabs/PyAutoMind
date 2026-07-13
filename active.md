@@ -31,16 +31,6 @@
 - repos:
   - autolens_assistant: feature/benchmark-calibration
 
-## pj011646-wfc3-parity
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/25
-- session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
-- status: awaiting-input — parked at ship sign-off (gate: tests 202 pass / smoke n-a / review CLEAN / Heart YELLOW 6-reason set UNACKED); branch feature/pj011646-wfc3-parity committed locally bd9806b, NOT pushed; phases 0-2 verdicts on #25; model-parity fits parked (2 OOMs at n_live=100, laptop contended)
-- autonomy: safe effective (--auto launched 2026-07-10; plan human-approved in-session pre-launch; no heart-ack given)
-- note: keck-ao/slacs1430 pattern — analysis on PyAutoReduce main, NO worktree claim (jwst-frame-feasibility holds it); ship gated on claim release or human direction; autolens_assistant driver-only (in-place branch belongs to assistant-ref-mechanics — scratch writes only); model-parity fits SERIAL on quiet machine (~5.5GB)
-- question: https://github.com/PyAutoLabs/PyAutoReduce/issues/25#issuecomment-4936211921
-- worktree: none (analysis on PyAutoReduce main; branch feature/pj011646-wfc3-parity only at ship)
-- repos:
-
 
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
