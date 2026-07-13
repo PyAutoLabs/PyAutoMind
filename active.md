@@ -3,9 +3,10 @@
 
 ## release-ships-simulated-datasets
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/126
-- status: awaiting-input — parked at ship sign-off + design fork. Leg 1 (pre_build -f drop) DONE + committed local 4600e6f (PyAutoBuild, NOT pushed). Legs 2-4 parked: path-based provisioning map diverges from plan (A purge-safe 9+4, B needs-guard 9+7, C orphan/ambiguous 14+10) — guard-ownership + orphan dispositions need a call. Phase-2 audit complete (CWD gate PASS)
-- autonomy: supervised effective (--auto launched 2026-07-13; bug work-type cap binds; plan written to #126; NO heart-ack given → any Heart YELLOW/RED parks)
-- question: https://github.com/PyAutoLabs/PyAutoBuild/issues/126#issuecomment-4957801694
+- status: awaiting-input — legs 1+3(core) SHIPPED as PRs (merge human): PyAutoBuild#150 (leg 1 -f drop), autolens_workspace#272 (purge 19 dirs/145 files), autogalaxy_workspace#129 (purge 13/93). Smoke-validated 9/9 + 8/8. Guard signal CORRECTED (.exists() idiom → leg 2 moot; A purge-safe 17+11, B=1, C 14+10). Purges recorded via PyAutoGut (condemned.md). PARKED on remaining-~12-C decision (regenerable-non-smoke + dead-archive + datacube/database→Group B); leg 4 lands after C clears
+- autonomy: supervised effective (--auto launched 2026-07-13, user greenlit surgery "go" + route purges via PyAutoGut; NO heart-ack → any Heart YELLOW/RED parks; merge always human)
+- prs: PyAutoBuild#150 + autolens_workspace#272 + autogalaxy_workspace#129 (all pending-release)
+- question: https://github.com/PyAutoLabs/PyAutoBuild/issues/126#issuecomment-4958040857
 - note: Group B (autofit/HowToFit/HowToGalaxy/HowToLens bare-`dataset/` committed-by-design vs purge) split out to bug/pyautobuild/release_datasets_group_b_policy.md (human-required). Do-not-blind-purge orphans: autolens 7, autogalaxy 5 (listed in #126). autolens_workspace freed by PR#267 merge.
 - worktree: ~/Code/PyAutoLabs-wt/release-ships-simulated-datasets
 - repos:
