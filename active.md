@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## jax-gradient-optimizer-benchmark
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-gradient-optimizer-benchmark
+- autonomy: supervised (--auto launched 2026-07-13 in-session; plan approved in-conversation incl. MAP objective via "do MAP, and go --auto"; no heart-ack given)
+- note: experiment/workspaces; searches_minimal JAX gradient optimizers on the MGE likelihood. Phase 1 = optax Adam/ADABelief + jaxopt L-BFGS (MAP, cold-start); Phase 2 = numpyro SVI + jaxopt Levenberg-Marquardt. Workspace-only, no PyAutoFit source. Compile-probe first; park with partial results if grad-path compile prohibitive on CPU. Ship sign-off parks (supervised).
+- repos:
+  - autolens_workspace_developer: feature/jax-gradient-optimizer-benchmark
+
+
 ## matern-tfp-jax-compat
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/385
 - status: library-dev
