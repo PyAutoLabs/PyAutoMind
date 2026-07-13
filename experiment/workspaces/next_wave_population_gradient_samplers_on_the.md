@@ -1,4 +1,9 @@
-# Next-wave population gradient samplers on the MGE lens likelihood
+# Next-wave population gradient optimizers on the MGE lens likelihood
+
+<!-- Scope: fast many-points OPTIMIZERS (MAP point estimates). Full Bayesian
+     samplers (SMC/HMC/nested/flowMC/SVGD-as-VI) are a deferred later wave.
+     Filename kept as ..._samplers_... (stable id); the work is optimizers. -->
+
 
 Type: experiment
 Target: workspaces
@@ -29,46 +34,52 @@ that robustness in eval count (no gradients); GIGA-Lens gets the same robustness
 with gradients (many starts) and so needs far fewer evals to the basin. The next
 wave should **unify many-points robustness WITH gradient efficiency.**
 
-## Selection constraint (from the user)
+## Selection constraints (from the user)
 
-Candidate codes must be **open source, easy to implement, and JAX-native.**
-This rules out pocoMC (numpy/torch normalizing flows, not JAX-native) and
-bespoke gradient-guided-nested-sampling research code (no clean maintained
-JAX-native implementation). It *favours* **blackjax** — already installed and a
-JAX-native (Apache-2.0) dependency of this workspace, with the population +
-gradient primitives built in, so SVGD and tempered-SMC+HMC are near-zero-effort
-and follow the existing `blackjax_nuts.py` / `blackjax_smc.py` pattern.
+1. **Fast OPTIMIZERS, not full samplers — yet.** This wave stays in the
+   point-estimate (MAP/MLE) regime that multi-start Adam won in. Methods that
+   produce a *posterior* — tempered SMC, HMC/NUTS, nested sampling (jaxns,
+   Nautilus), flowMC, and SVGD-run-as-variational-inference — are **DEFERRED to
+   a later full-sampling wave**, once the robust *fast optimizer* is settled.
+   (SMC/HMC are Bayesian samplers, not maximum-likelihood optimizers — they do
+   not belong in this wave.)
+2. **Open source, easy, JAX-native.** Favours reusing the existing multi-start
+   harness (zero deps) and the installed JAX-native libs: `optax`, `jaxopt`,
+   `evosax` (JAX-native evolutionary strategies), `blackjax`.
 
-## Candidates (prototype in searches_minimal, same MGE MAP objective + harness)
+## Candidates (fast many-points OPTIMIZERS; searches_minimal, same MGE MAP objective + harness)
+
+Theme: *smarter ways to spend many points to find the MAP fast and robustly* —
+independent multi-start (done) → multi-start of better local rules → interacting
+populations. Baseline to beat = **multi-start Adam** (r_E 1.600, 2/12 starts,
+~1254 s end-to-end) on robustness (fraction of starts → truth) and wallclock.
 
 | Candidate | Principle | Implementation (JAX-native, open source) |
 |-----------|-----------|------------------------------------------|
-| **SVGD** ★ | N particles + gradient + kernel **repulsion** → deterministic particle VI, mode-covering ("interacting multi-start") | `blackjax.svgd` — **already installed**, zero new deps. Liu & Wang 2016 |
-| **tempered SMC + HMC** ★ | population of particles annealed with **gradient (HMC/NUTS)** moves | `blackjax.adaptive_tempered_smc` — **already installed**; extends the existing `blackjax_smc.py` |
-| **flowMC** | ensemble of gradient (MALA/HMC) chains + a learned **normalizing-flow** global proposal | pip-installable, JAX-native (MIT), clean high-level API; proven on gravitational waves (`jim`). Gabrié et al. 2022 |
-| **jaxns** | **JAX-native nested sampling** — the many-live-point robustness, natively on-device | pip-installable, JAX-native (Apache). The fair JAX-native analog of Nautilus for the converged NS comparison |
+| **Multi-start of other local optimizers** ★ | reuse the multi-start harness with L-BFGS, ADABelief, Lion, and **Levenberg-Marquardt / Gauss-Newton** — does the local rule matter within multi-start? multi-start LM = the high-value form of the deferred single-start wildcard | `optax` + `jaxopt` (installed), **zero new deps**; reuse `multi_start_adam.py` |
+| **CMA-ES** ★ | *interacting* population optimizer — adapts a covariance from the population each generation; the classic robust global optimizer. Tests whether a smart ES matches multi-start gradient descent, and whether the gradient even helps vs. a good ES | `evosax` (JAX-native, **installed**); also PSO / Differential Evolution from evosax |
+| **SVGD as a mode-finder** | many particles + gradient + kernel **repulsion**, take the **best particle** as the point estimate — "interacting multi-start" that uses gradients AND particle interaction | `blackjax.svgd` (**installed**). Borderline VI — used here purely as an optimizer, not for the posterior |
 
-★ = start here (blackjax, no new dependency, easiest). flowMC / jaxns each add
-one pip-installable JAX-native package. **Dropped by the constraint:** pocoMC
-(not JAX-native), gradient-guided nested sampling (no clean JAX-native code),
-Branching SVGD (research code — fold its branching idea into the blackjax SVGD
-prototype instead if plain SVGD stays mode-collapsed).
+★ = start here (zero / installed deps, easiest).
 
-Reference/contrast: **multi-start Adam** (this run's winner), plus a **converged
-nested-sampling** baseline — via **jaxns** (JAX-native, apples-to-apples on
-device) and/or a converged **Nautilus** run (the incumbent; note Nautilus itself
-is a Python-callback sampler, NOT JAX-native, which is exactly why its per-eval
-JAX benefit is throttled).
+**Deferred to the later full-sampling wave (do NOT build in this one):** tempered
+SMC + HMC, flowMC, jaxns, SVGD-as-posterior, and a converged nested-sampling
+posterior baseline. Those answer "what is the posterior?"; this wave answers
+"what is the robust MAP, fastest?".
 
 ## Deliverable
 
-End-to-end **wallclock** and **number of samples/likelihood-evals** (overheads
-included — JIT compile vs per-eval vs eval-count) for each candidate, versus
-multi-start Adam and a **converged Nautilus** run (the existing Nautilus rows are
-smoke configs, ~100 evals, non-converged — a real converged run, est. ~10–50k
-evals / ~1 h on the JAX path, is needed for the apples-to-apples comparison the
-insight demands). Report which reach the true basin and at what cost. Record
-durable findings in `PyAutoMemory/methods_wiki/concepts/sampler-benchmarks.md`.
+End-to-end **wallclock** and **number of likelihood-evals** (overheads included
+— JIT compile vs per-eval vs eval-count) for each optimizer, plus the
+**robustness** metric that actually matters here: **fraction of starts/particles
+that reach the true basin** (r_E ≈ 1.6) and time-to-first-basin-hit. All against
+the **multi-start Adam** baseline. Report which reach the truth and at what cost;
+extend `output/comparison.txt` + the findings writeup. Record durable findings in
+`PyAutoMemory/methods_wiki/concepts/sampler-benchmarks.md`.
+
+_(The converged nested-sampling / Nautilus wallclock-and-samples comparison
+belongs to the later full-sampling wave — it is a posterior baseline, not a fast
+optimizer.)_
 
 ## Grounding
 
