@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## next-wave-population-optimizers
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/97
+- status: workspace-dev — Phase 1 (multi_start_lbfgs + cmaes/evosax). Follow-up to #95; fast OPTIMIZERS only (samplers deferred), + jaxns cameo for fun.
+- worktree: ~/Code/PyAutoLabs-wt/next-wave-population-optimizers
+- autonomy: supervised (--auto continued from #95 session via "go...do next task" 2026-07-13; experiment cap; ship parks for human sign-off)
+- note: branch feature/next-wave-population-optimizers STACKED on feature/jax-gradient-optimizer-benchmark (PR#96 unmerged) — reuses _grad_setup.py + multi_start_adam.py; REBASE onto main once #96 merges. Reuses #95 MAP harness. Metric = fraction of starts/particles → truth basin (r_E≈1.6) + wallclock + evals vs multi-start Adam baseline.
+- repos:
+  - autolens_workspace_developer: feature/next-wave-population-optimizers
+
+
 ## jax-gradient-optimizer-benchmark
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95
 - status: awaiting-merge — SHIPPED (human sign-off "go, ship" 2026-07-13; committed 6344258, pushed). PR open, workspace-only. Shipped through organism-scoped Heart RED (held release + stale 2026-07-09 run; nothing branch-related). Merge stays human → then move to complete/.
