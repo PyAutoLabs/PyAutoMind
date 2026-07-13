@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## jax-pytree-leaf-registration
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1365
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-pytree-leaf-registration
+- autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto" batch; no heart-ack given)
+- note: library+workspace; root cause = register_model registers leaf type `int` (from af.Model(int) n/m shapelet args) → _partition vars(int) crash. Fix = _walk skips cls whose instances lack __dict__. PyAutoFit/autofit/jax/pytrees.py + autofit_workspace_test jax_assertions regression.
+- repos:
+  - PyAutoFit: feature/jax-pytree-leaf-registration
+  - autofit_workspace_test: feature/jax-pytree-leaf-registration
+
+
 ## jax-gradient-optimizer-benchmark
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95
 - status: workspace-dev
