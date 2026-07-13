@@ -3,10 +3,11 @@
 
 ## ep-negative-sigma-crash
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1363
-- status: library-dev
+- status: awaiting-input — implemented + gated, parked at supervised ship sign-off. Fix committed locally a6aae649f on feature/ep-negative-sigma-crash (NOT pushed). Gate: tests 1473p / smoke EP-guide-live past crash point / review CLEAN / Heart YELLOW score 50 (stale test_run 2026-07-09 + 58 stale parked scripts) UNACKED. Needs human: ack YELLOW set + authorize PR-open
+- autonomy: effective supervised (--auto 2026-07-13; bug cap supervised binds over safe header; ship sign-off parks per contract). No heart-ack given at launch
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1363#issuecomment-4959220559
 - worktree: ~/Code/PyAutoLabs-wt/ep-negative-sigma-crash
-- note: nightly workspace-validation RED — EP guide crashes with NormalMessage sigma<0 (stochastic). Library fix in autofit/graphical + messages/normal.py; guide untouched (no autoimmunity). Guard at normal.py:45 stays for prior passing; NaturalNormal (normal.py:508) is the EP-safe vehicle
-- autonomy: default present-and-wait (no --auto; plan human-approved in-session 2026-07-13)
+- note: root cause = HierarchicalFactor draws slope from GaussianPrior(sigma=truncated hyper-prior lower_limit=0); EP proposes sigma<0 → Factor.__call__ built GaussianPrior(sigma<0) → strict NormalMessage guard crash. Fix: Factor.__call__ catches exc.MessageException → -inf (zero density). Guide untouched. Rider: test_full_hierachical order/RNG-flaky pre-existing on main
 - repos:
   - PyAutoFit: feature/ep-negative-sigma-crash
 
