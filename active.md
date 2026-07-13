@@ -3,9 +3,9 @@
 
 ## lifecycle-state-split
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
-- status: awaiting-merge — PR-A OPEN + pushed (human-authorized push+PR 2026-07-13). Gate: Brain pytest 46p / smoke n-a / review pending / Heart YELLOW UNACKED. Merge Mind#72 (structure) first, then Brain#109 (skills); merge stays human. Post-merge: (a) republish PyAutoMind-template (spawn_drift red until then), (b) PR-B migrate/split behind review manifest; Phase-2 wiki filed+parked
-- prs: PyAutoMind#72 (structure+engine+rewire) + PyAutoBrain#109 (skills)
-- pr-b-prep: manifest dry-run posted #71 (comment 4960037639): split-complete 554 records (04/05/06/07/unknown = 144/212/28/158/13); migrate 440 active = 3 stay / 146 complete-ledger-backed / 291 UNSURE. Design Q pending: split-complete folds original prompt into record → does migrate drop-or-separate the done active/ files? PR-B runs post-merge behind full manifest
+- status: awaiting-merge (PR-B) — PR-A MERGED (Mind#72 + Brain#109 squash 2026-07-13); templates republished (spawn dry-run canary clean, both pushed). PR-B OPEN Mind#73 (drop/fold framing user-approved): 557 dated records under complete/YYYY/MM + dropped 147 provably-done active/ originals (active 440→293); check green. Merge stays human. TWO follow-ups needed: (1) the 293 unclassifiable legacy active/ prompts (only 3 match live active.md) — bulk-drop vs complete/_legacy/ vs triage, your call; (2) retire complete.md by converting ship_* to write records directly (under-scoped in PR-A). Phase-2 wiki filed+parked
+- prs: PyAutoMind#72 (structure) + PyAutoBrain#109 (skills) MERGED; PyAutoMind#73 (dated archive + drops) OPEN
+- worktree-branch: feature/lifecycle-migrate (PR-B) in ~/Code/PyAutoLabs-wt/lifecycle-state-split
 - autonomy: supervised effective (--auto launched 2026-07-13; feature cap at Difficulty large = supervised; plan written to issue #71 per contract; no heart-ack given → ship parks)
 - note: docs/ fork resolved (only Type:-headed prompts → draft/docs/; docs/pyautobrain reference stays). lifecycle.py check green; draft→active→complete round-trip smoke passed. Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
 - worktree: ~/Code/PyAutoLabs-wt/lifecycle-state-split
