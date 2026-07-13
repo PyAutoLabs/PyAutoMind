@@ -24,15 +24,21 @@ X" reads one record, not a 6000-line file.
 ## How to look something up (token-light — RAG is dead)
 
 1. Read `complete/index.md` (the curated navigation — grouped `[[slug]]` links
-   with one-line hooks). *(Built by the follow-up Phase-2 task
-   `complete_archive_wiki.md`; until then, grep the dated buckets.)*
-2. Follow one or two `[[slug]]` links to the records you need.
+   with one-line hooks, grouped by date, `unknown` last). It is **generated**
+   from the records by `scripts/lifecycle.py index` — regenerate with
+   `lifecycle.py index --apply`; a hand-curated **Highlights** band between the
+   `CURATED` markers survives regeneration.
+2. Follow one or two links to the records you need.
 3. Only then grep a specific `complete/<YYYY>/<MM>/` bucket.
 
 ## Provenance
 
-- Records are **written by the ship skills** via `lifecycle.py`, not by hand.
+- Records are **written by the ship skills** via `lifecycle.py record`, not by
+  hand, and stay paired 1:1 by slug with the `complete.md` ledger.
+- `index.md` is generated (`lifecycle.py index`); `lifecycle.py index --check`
+  fails on staleness (CI).
 - `scripts/lifecycle.py check` guards the invariant (no slug in both `active.md`
   and `complete.md`; every record has a ledger entry; no file in two states).
 - The historical bulk was produced once by `lifecycle.py split-complete` from
-  `complete.md`; `complete.md` is retired once that split is verified.
+  `complete.md`. `complete.md` is **kept** as the chronological ledger, paired to
+  the records.

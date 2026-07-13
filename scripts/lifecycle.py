@@ -332,6 +332,121 @@ def cmd_migrate(args) -> int:
 
 
 # --------------------------------------------------------------------------- #
+# index  (Phase 2: token-light navigation over the complete/ archive)
+# --------------------------------------------------------------------------- #
+INDEX_MD = COMPLETE_DIR / "index.md"
+CURATED_START = "<!-- CURATED:START -->"
+CURATED_END = "<!-- CURATED:END -->"
+GEN_START = "<!-- GENERATED:START — edit records, not this block; regenerate with `lifecycle.py index --apply` -->"
+GEN_END = "<!-- GENERATED:END -->"
+
+
+def _record_hook(path: Path) -> str:
+    """One-line hook for a record: the H2 parenthetical, else the summary snippet."""
+    try:
+        text = path.read_text(errors="replace")
+    except OSError:
+        return ""
+    first = text.splitlines()[0] if text else ""
+    m = re.search(r"\((.*)\)\s*$", first)
+    hook = m.group(1).strip() if m else ""
+    # a bare date / trivial paren is no hook — fall back to the summary line
+    if not hook or re.fullmatch(r"[\d\-/ ]+|MERGED|complete|done", hook, re.I):
+        sm = re.search(r"^-\s*summary:\s*(.+)$", text, re.MULTILINE)
+        if sm:
+            hook = sm.group(1)
+    hook = re.sub(r"\s+", " ", hook).strip(" |")
+    return (hook[:110] + "…") if len(hook) > 111 else hook
+
+
+def _all_records() -> "list[tuple[str, str, Path]]":
+    """(bucket, slug, path) for every complete/ record, newest bucket first."""
+    if not COMPLETE_DIR.exists():
+        return []
+    recs = []
+    for f in COMPLETE_DIR.rglob("*.md"):
+        if f.name in ("index.md", "AGENTS.md"):
+            continue
+        bucket = "/".join(f.relative_to(COMPLETE_DIR).parts[:-1]) or "unknown"
+        recs.append((bucket, f.stem, f))
+
+    def _key(r):
+        b = r[0]
+        if b == "unknown":
+            return (1, 0, 0, r[1])          # unknown bucket sorts last
+        parts = b.split("/")
+        y = int(parts[0])
+        m = int(parts[1]) if len(parts) > 1 else 0
+        return (0, -y, -m, r[1])            # dated: reverse-chronological, then slug
+
+    recs.sort(key=_key)
+    return recs
+
+
+def _render_index(curated: str) -> str:
+    recs = _all_records()
+    from collections import OrderedDict
+    by_bucket: "OrderedDict[str, list]" = OrderedDict()
+    for bucket, slug, path in recs:
+        by_bucket.setdefault(bucket, []).append((slug, path))
+    lines = [
+        "# complete/ — finished-work archive index",
+        "",
+        "Token-light navigation over the finished-work records (schema:",
+        "[`AGENTS.md`](AGENTS.md)). **Generated** from the records by",
+        "`scripts/lifecycle.py index` — read this, follow one or two links, and",
+        "only then grep a dated bucket. Curators: edit the band between the CURATED",
+        "markers; everything below GENERATED is rebuilt.",
+        "",
+        f"{len(recs)} records across {len(by_bucket)} buckets.",
+        "",
+        CURATED_START,
+        curated.strip() or "## Highlights\n\n_(curate hard-won records here — survives regeneration.)_",
+        CURATED_END,
+        "",
+        GEN_START,
+        "",
+    ]
+    for bucket, items in by_bucket.items():
+        lines.append(f"## {bucket}")
+        lines.append("")
+        for slug, path in sorted(items):
+            hook = _record_hook(path)
+            rel = path.relative_to(COMPLETE_DIR).as_posix()
+            lines.append(f"- [{slug}]({rel})" + (f" — {hook}" if hook else ""))
+        lines.append("")
+    lines.append(GEN_END)
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def _existing_curated() -> str:
+    if not INDEX_MD.exists():
+        return ""
+    text = INDEX_MD.read_text(errors="replace")
+    if CURATED_START in text and CURATED_END in text:
+        return text.split(CURATED_START, 1)[1].split(CURATED_END, 1)[0].strip()
+    return ""
+
+
+def cmd_index(args) -> int:
+    rendered = _render_index(_existing_curated())
+    if args.check:
+        current = INDEX_MD.read_text(errors="replace") if INDEX_MD.exists() else ""
+        if current != rendered:
+            print("lifecycle index: DRIFT — complete/index.md is stale; "
+                  "run `lifecycle.py index --apply`", file=sys.stderr)
+            return 1
+        print("lifecycle index: OK")
+        return 0
+    if args.apply:
+        INDEX_MD.write_text(rendered)
+        print(f"wrote {INDEX_MD.relative_to(ROOT)} ({len(_all_records())} records)")
+    else:
+        print(rendered)
+    return 0
+
+
+# --------------------------------------------------------------------------- #
 # check
 # --------------------------------------------------------------------------- #
 def cmd_check(args) -> int:
@@ -395,6 +510,11 @@ def main() -> int:
     r.add_argument("--prompt", help="active/ prompt filename to fold + remove")
     r.add_argument("--apply", action="store_true")
     r.set_defaults(func=cmd_record)
+
+    ix = sub.add_parser("index", help="generate complete/index.md (token-light archive navigation)")
+    ix.add_argument("--apply", action="store_true", help="write complete/index.md")
+    ix.add_argument("--check", action="store_true", help="fail if index.md is stale (CI)")
+    ix.set_defaults(func=cmd_index)
 
     c = sub.add_parser("check", help="drift guard (non-zero exit on drift)")
     c.set_defaults(func=cmd_check)

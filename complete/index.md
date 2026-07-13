@@ -1,0 +1,591 @@
+# complete/ — finished-work archive index
+
+Token-light navigation over the finished-work records (schema:
+[`AGENTS.md`](AGENTS.md)). **Generated** from the records by
+`scripts/lifecycle.py index` — read this, follow one or two links, and
+only then grep a dated bucket. Curators: edit the band between the CURATED
+markers; everything below GENERATED is rebuilt.
+
+557 records across 5 buckets.
+
+<!-- CURATED:START -->
+## Highlights
+
+_(curate hard-won records here — survives regeneration.)_
+<!-- CURATED:END -->
+
+<!-- GENERATED:START — edit records, not this block; regenerate with `lifecycle.py index --apply` -->
+
+## 2026/07
+
+- [afa-wiki-currency-wiring-afa-skill-tranche](2026/07/afa-wiki-currency-wiring-afa-skill-tranche.md) — both autofit_assistant follow-ups shipped in one --auto session (one in-session Heart-YELLOW ack covering both…
+- [aggregator-output-contracts](2026/07/aggregator-output-contracts.md)
+- [alma-interferometer](2026/07/alma-interferometer.md) — ALMA interferometer reduction live (phase 5) — first visibility-domain product family: calibrated MS → al.Inte…
+- [api-baseline-refresh](2026/07/api-baseline-refresh.md)
+- [assistant-benchmarks](2026/07/assistant-benchmarks.md)
+- [assistant-deep-audit](2026/07/assistant-deep-audit.md)
+- [assistant-pin-bump-2026-7-9-1](2026/07/assistant-pin-bump-2026-7-9-1.md) — Bumped autolens_assistant version.txt + config/general.yaml from 2026.5.29.4 to 2026.7.9.1 (api_audit_baseline…
+- [assistant-ref-mechanics](2026/07/assistant-ref-mechanics.md) — science-project -> assistant refer-back mechanics complete — non-blocking provenance-drift check in start-new-…
+- [assistant-wiki-release](2026/07/assistant-wiki-release.md) — wiki/core release-complete vs autolens_workspace — gaps filled (LOS halos, sky background via DatasetModel, de…
+- [auto-dev-mode](2026/07/auto-dev-mode.md)
+- [autofit-assistant-birth](2026/07/autofit-assistant-birth.md) — autofit_assistant born PUBLIC and fully built in one --auto supervised session (launch gates: public at birth,…
+- [autofit-navigator-catalogue-refresh](2026/07/autofit-navigator-catalogue-refresh.md) — Regenerated the stale navigator catalogue (llms-full.txt + workspace_index.json), clearing the Navigator Check…
+- [autofit-navigator-catalogue-staleness](2026/07/autofit-navigator-catalogue-staleness.md) — regenerate — MERGED
+- [autolens-assistant-audit](2026/07/autolens-assistant-audit.md)
+- [autonomy-contract](2026/07/autonomy-contract.md)
+- [brain-agent-commands](2026/07/brain-agent-commands.md)
+- [bug-agent](2026/07/bug-agent.md)
+- [checkpoint-continue](2026/07/checkpoint-continue.md)
+- [cluster-likelihood-breakdown](2026/07/cluster-likelihood-breakdown.md)
+- [cluster-scaling-lenstool](2026/07/cluster-scaling-lenstool.md)
+- [cluster-small-datasets](2026/07/cluster-small-datasets.md)
+- [cluster-visualization](2026/07/cluster-visualization.md)
+- [colab-link-rot](2026/07/colab-link-rot.md)
+- [colab-link-rot-libdocs](2026/07/colab-link-rot-libdocs.md)
+- [colab-maturity](2026/07/colab-maturity.md)
+- [colab-sim-verify-install](2026/07/colab-sim-verify-install.md)
+- [csv-api-lenstool](2026/07/csv-api-lenstool.md)
+- [delaunay-qhull-callback](2026/07/delaunay-qhull-callback.md)
+- [docs-theming-hub](2026/07/docs-theming-hub.md) — phases B+C of docs middle path — hub LIVE at pyautolabs.github.io (Pages; RETROFIT.md = paid-domain flip); sha…
+- [dpie-lenstool-param](2026/07/dpie-lenstool-param.md)
+- [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
+- [ep-diagnostics](2026/07/ep-diagnostics.md) — EP review Phase 4 — EPDiagnostics collector, live CSV/PNG artifacts, graph_factors.png, mean_field_summary, ch…
+- [ep-examples-tests](2026/07/ep-examples-tests.md) — EP review Phase 3 — step-by-step EP walkthrough (converges 49.96±0.12) + 3 integration scripts (parity/determi…
+- [ep-followups-batch](2026/07/ep-followups-batch.md) — F6 exact truncated KL (MC-verified) + F7b sampler evidence on log_norm (F7 all legs fixed; evidence trustworth…
+- [ep-graphical-docs](2026/07/ep-graphical-docs.md) — EP review Phase 2 — autofit/graphical README formal spec (16 equations) + statistical docstrings + seam contra…
+- [ep-hierarchical-regression](2026/07/ep-hierarchical-regression.md) — Fixed the red PyAutoFit Tests workflow on main (found during a /health check green-light sweep — the only red …
+- [ep-negative-sigma-crash](2026/07/ep-negative-sigma-crash.md) — EP hierarchical factor sigma<0 — MERGED
+- [ep-statistics-audit](2026/07/ep-statistics-audit.md) — F1-F10 census + EP wiki page; fixes dispersed: F3/F10->#1349, F5->#1334, F7c->#1345; remainder executes as bug…
+- [ep-statistics-fix-batch](2026/07/ep-statistics-fix-batch.md) — #1332 F1 (MeanField log_norm->plates ctor slip) + F2 (Gamma/Beta KL direction, MC-certified) + F4 (exoneration…
+- [factor-graph-viz-dispatch](2026/07/factor-graph-viz-dispatch.md)
+- [frame-products](2026/07/frame-products.md) — opt-in per-exposure frame products live — TargetSpec.frame_products packages every calibrated _flc/_flt SCI ch…
+- [frame-registration](2026/07/frame-registration.md) — inter-exposure registration quantified + extracted — frames/manifest.json per-frame registration block (WCS so…
+- [health-api](2026/07/health-api.md)
+- [health-one-door](2026/07/health-one-door.md)
+- [health-sync-noise-filter](2026/07/health-sync-noise-filter.md)
+- [howto-markdown-resync](2026/07/howto-markdown-resync.md) — re-synced 4 stale HowTo ch1 markdown pages after the truncation-restore work merged post-batch-2b. HowToLens t…
+- [hst-acs-phase1](2026/07/hst-acs-phase1.md)
+- [human-led-tone-sweep](2026/07/human-led-tone-sweep.md) — human-led natural-language framing landed on the agentic-AI pitch surfaces — org front page (.github PRs #1+#2…
+- [hygiene-agent](2026/07/hygiene-agent.md) — Phases 1-3 — conductor complete
+- [hygiene-file-modes](2026/07/hygiene-file-modes.md) — crlf / config / artifacts — complete
+- [hygiene-perf-phase4](2026/07/hygiene-perf-phase4.md) — unit-test / workspace-testmode / function profiling — complete
+- [import-time-heart-leg](2026/07/import-time-heart-leg.md) — hygiene follow-up — complete
+- [intake-agent](2026/07/intake-agent.md)
+- [intake-census-dashboard](2026/07/intake-census-dashboard.md)
+- [intake-formalise](2026/07/intake-formalise.md)
+- [intake-reconcile](2026/07/intake-reconcile.md)
+- [jax-autodiff-gradients-audit](2026/07/jax-autodiff-gradients-audit.md) — 3-phase JAX autodiff gradients audit complete in one supervised session — every smooth likelihood FD-certified…
+- [jwst-frame-feasibility](2026/07/jwst-frame-feasibility.md) — JWST per-frame feasibility answered — GO, phased. Should: strongest case = NIRCam SW undersampling (subpixel d…
+- [jwst-frame-products](2026/07/jwst-frame-products.md) — JWST frame products live — 7 feasibility deltas implemented (_crf capture+consume, native MJy/sr + derived man…
+- [jwst-nircam-cosmos-web](2026/07/jwst-nircam-cosmos-web.md)
+- [keck-ao-reduction](2026/07/keck-ao-reduction.md) — Keck NIRC2 AO reduction live (phase 4) — KOA acquire seam, ground calibrate/sky stages, nirc2_native drizzle-p…
+- [keck-ao-reduction-plan](2026/07/keck-ao-reduction-plan.md) — Keck-AO research task — SHARP literature pass + tooling survey + draft design; delivered as docs/design/keck_a…
+- [keck-frame-feasibility](2026/07/keck-frame-feasibility.md) — Keck per-frame feasibility answered — GO in principle (strongest science case: frame-to-frame AO PSF variabili…
+- [keck-frame-products](2026/07/keck-frame-products.md) — Keck frame products live — the #31 GO sequence executed: mapping constants (origin/scale_ratio/sci_path) into …
+- [kernel-forward-chunking](2026/07/kernel-forward-chunking.md) — kernel-CDF forward chunked into fixed 512-query blocks (lax.map jax / block loop np) — float-identical (block-…
+- [kxs-cache](2026/07/kxs-cache.md)
+- [kxs-core](2026/07/kxs-core.md)
+- [kxs-design](2026/07/kxs-design.md)
+- [kxs-refactor](2026/07/kxs-refactor.md)
+- [kxs-surface-refactor](2026/07/kxs-surface-refactor.md)
+- [kxs-workspace-tests](2026/07/kxs-workspace-tests.md)
+- [lenstool-example](2026/07/lenstool-example.md)
+- [lenstool-scaling-reference-magnitude](2026/07/lenstool-scaling-reference-magnitude.md) — PR1 cluster + PR2 group/imaging — complete; PR3 SLaM deferred
+- [live-visual-update-context](2026/07/live-visual-update-context.md) — task 5 of the autolens_assistant batch — al_configure_search ask-once Live visual updates branch (script viewe…
+- [manifest-drift-organ-registration](2026/07/manifest-drift-organ-registration.md) — firewall + spawn spec + pointer sweep — complete
+- [markdown-example-renderings](2026/07/markdown-example-renderings.md) — executed-markdown example pages, GitHub-browsable with real output images. generate_markdown.py (curated confi…
+- [markdown-renderings-howto](2026/07/markdown-renderings-howto.md) — batch 2b executed-markdown for HowTo chapter_1 (6/6/9). FAST (ch1 = few/no searches). Surfaced+fixed 2 tutoria…
+- [markdown-renderings-workspaces](2026/07/markdown-renderings-workspaces.md) — batch 2a executed-markdown for the 3 workspaces (autofit 3 overview, autogalaxy 18, autolens +21 → index 30). …
+- [matrix-blackjax-and-smoke-guards](2026/07/matrix-blackjax-and-smoke-guards.md) — Final layers of the Python Version Matrix fix (after nufftax #382/#144 and jax #383/#1358/#497/#604). (1) blac…
+- [matrix-jax-skip](2026/07/matrix-jax-skip.md) — Second layer of the Python Version Matrix fix (after nufftax layer #382/#144). 11 unit tests across 4 repos ex…
+- [matrix-nufftax-py312](2026/07/matrix-nufftax-py312.md) — Fixed the chronic PyAutoBuild "Python Version Matrix" weekly red. 38 failures/job = nufftax ModuleNotFoundErro…
+- [mcmc-corner-smoke](2026/07/mcmc-corner-smoke.md) — The `searches/mcmc.py` "no dynamic range" release-smoke crash (nightly-release blocker) was a **library** bug,…
+- [memory-faculty](2026/07/memory-faculty.md)
+- [multi-shared-state-core-api](2026/07/multi-shared-state-core-api.md)
+- [multi-shared-state-examples](2026/07/multi-shared-state-examples.md) — EPIC — phases 1-4 + follow-up
+- [multi-shared-state-examples-phase-3-workspace-examples](2026/07/multi-shared-state-examples-phase-3-workspace-examples.md)
+- [nautilus-nn-bottleneck](2026/07/nautilus-nn-bottleneck.md) — Nautilus overhead research — anatomy on fast likelihoods (NN training 40-52% + bound geometry 25-38% of wall; …
+- [nightly-loud-failure](2026/07/nightly-loud-failure.md) — nightly driver hardening — token probe, fetch errors page (never 💤), anchor validation w/ 24h fallback, no anc…
+- [nightly-release-activity-gate](2026/07/nightly-release-activity-gate.md)
+- [nightly-release-implementation](2026/07/nightly-release-implementation.md)
+- [nnls-bpp-admm-experiment](2026/07/nnls-bpp-admm-experiment.md) — BPP and ADMM prototyped against the real systems as PDIP alternatives; BOTH FAILED gates. BPP: sign-init 95% c…
+- [nnls-solver-optimization](2026/07/nnls-solver-optimization.md) — NNLS positive-only solver optimization. Phase A on real extracted production systems (rect n=1581 / Delaunay n…
+- [opus-wrapup](2026/07/opus-wrapup.md) — executed on Fable
+- [per-frame-psf](2026/07/per-frame-psf.md) — per-frame native ePSFs live (psf/frame_epsf.py: sky-subtracted, DQ local-median patch in ESTIMATOR input only …
+- [per-project-literature](2026/07/per-project-literature.md) — task 3 of the autolens_assistant batch — hybrid literature rule live: Create scaffolds wiki/project/bibliograp…
+- [plot-rst-functional-rewrite](2026/07/plot-rst-functional-rewrite.md)
+- [point-pairing-policies](2026/07/point-pairing-policies.md)
+- [preopt-breakdown-dashboard](2026/07/preopt-breakdown-dashboard.md) — Phase-4 (likelihood_breakdown + dashboard) leg of the polish.md PreOptimizationTimes campaign. Delivered: A100…
+- [prior-width-safety](2026/07/prior-width-safety.md) — Phase 2 of #1331 — RelativeWidthModifier abs(mean)+opt-in absolute_floor, default-path width guard (parameter-…
+- [priors-messages-fixes](2026/07/priors-messages-fixes.md) — Phase 1 of #1331 priors/messages batch — 7 fixes (01/02/04/10 + decisions 1/3/4), 12 regression tests, Fable m…
+- [profiling-preopt-campaign](2026/07/profiling-preopt-campaign.md) — Phase-3 (likelihood_runtime) leg of the polish.md PreOptimizationTimes campaign, frozen "done enough" at user …
+- [psf-convolution-docstring](2026/07/psf-convolution-docstring.md) — Normalized PSF-convolution docs across 41 simulator.py (both workspaces). Tier A (3 reference files: imaging/s…
+- [psf-oversample-core](2026/07/psf-oversample-core.md)
+- [psf-oversample-design](2026/07/psf-oversample-design.md)
+- [psf-oversample-docs](2026/07/psf-oversample-docs.md)
+- [psf-oversample-galaxy](2026/07/psf-oversample-galaxy.md)
+- [psf-oversample-inversion](2026/07/psf-oversample-inversion.md)
+- [psf-oversample-refactor](2026/07/psf-oversample-refactor.md)
+- [psf-oversample-simulator](2026/07/psf-oversample-simulator.md)
+- [psf-oversample-workspace](2026/07/psf-oversample-workspace.md)
+- [psf-visible-input](2026/07/psf-visible-input.md)
+- [pyautogut-organ](2026/07/pyautogut-organ.md) — Gut organ + hygiene drive seam — complete
+- [pyautoreduce-hst-design](2026/07/pyautoreduce-hst-design.md)
+- [pyautoscientist-3b-clone](2026/07/pyautoscientist-3b-clone.md) — clone (Mitosis) agent v0 live per DESIGN.md phasing — analyze mode emits CloneDecision (domain analysis via as…
+- [pyautoscientist-3b-config](2026/07/pyautoscientist-3b-config.md) — config extraction 4a — Heart version_skew map → config/repos.yaml `version_skew:` block (incl. unpolled assist…
+- [pyautoscientist-3b-smoke](2026/07/pyautoscientist-3b-smoke.md) — smoke_tests.yml generalised — Heart-owned reusable (chain input + repository_owner checkouts = zero instance f…
+- [pyautoscientist-3b-spawn](2026/07/pyautoscientist-3b-spawn.md) — spawn generator live (partition rules from spawn_spec.md as data; canary privacy scan caught real lensing resi…
+- [pyautoscientist-4b](2026/07/pyautoscientist-4b.md) — config extraction COMPLETE — Brain identity sets derive from repos.yaml categories at runtime (strict superset…
+- [pyautoscientist-phase1](2026/07/pyautoscientist-phase1.md) — PyAutoScientist Phase 1 (zero behaviour risk) — MIT LICENSE on Brain/Mind/Heart, MIT+CC-BY-4.0 split on Memory…
+- [pyautoscientist-phase2](2026/07/pyautoscientist-phase2.md) — PyAutoScientist Phase 2 — the pyautoscientist RTD source in PyAutoBrain/docs/ (13 MyST pages: concepts, per-or…
+- [pyautoscientist-phase3a](2026/07/pyautoscientist-phase3a.md) — Phase 3a (--auto supervised, launched "go --auto") — spawn_spec.md partition rules (3b implements mechanically…
+- [rect-adapt](2026/07/rect-adapt.md) — rectangular adaptive-mesh edges — MERGED
+- [rectangular-kernel-cdf-mesh](2026/07/rectangular-kernel-cdf-mesh.md) — kernel-density CDF meshes RectangularKernelAdapt{Density,Image} (Enzi RTU) shipped opt-in — strict FD certifie…
+- [refactor-conductor](2026/07/refactor-conductor.md)
+- [refactor-post-phase3](2026/07/refactor-post-phase3.md) — PyAutoReduce post-phase-3 refactor — MERGED
+- [regen-workspace-notebooks](2026/07/regen-workspace-notebooks.md)
+- [release-datasets-group-b](2026/07/release-datasets-group-b.md) — bare-`dataset/` repos — purged & MERGED
+- [release-docs-polish-learn-paths](2026/07/release-docs-polish-learn-paths.md)
+- [release-ships-simulated-datasets](2026/07/release-ships-simulated-datasets.md) — Group A — all 4 legs complete & MERGED; Group B separate
+- [release-stamping-slim](2026/07/release-stamping-slim.md)
+- [remove-nss-sampler](2026/07/remove-nss-sampler.md) — ALL phases MERGED + dev-clean
+- [remove-pulse-compat](2026/07/remove-pulse-compat.md)
+- [review-faculty](2026/07/review-faculty.md)
+- [rtd-hygiene](2026/07/rtd-hygiene.md) — RTD hygiene phase A — dead configs deleted, conf.py converged, Heart-owned docs-build CI live on 3 libs (basel…
+- [run-queue](2026/07/run-queue.md)
+- [samplers-faculty](2026/07/samplers-faculty.md)
+- [scholar-intake](2026/07/scholar-intake.md)
+- [science-project-api-gate](2026/07/science-project-api-gate.md) — task 2 of the autolens_assistant batch — Create scaffold generates a thin .claude/settings.json wiring the PyA…
+- [science-project-collaborator-clone](2026/07/science-project-collaborator-clone.md) — absorbed
+- [script-to-notebook](2026/07/script-to-notebook.md) — task 4 of the autolens_assistant batch — stdlib-only autoassistant/to_notebook.py (adapts PyAutoBuild py_to_no…
+- [shareable-science-projects](2026/07/shareable-science-projects.md) — docs emphasis pass, head of the autolens_assistant batch — generated-project README.md template added to the s…
+- [ship-gate](2026/07/ship-gate.md)
+- [slack-release-notes](2026/07/slack-release-notes.md)
+- [solver-branch-flips](2026/07/solver-branch-flips.md) — research deliverable met — flips are JIT-only (eager clean; XLA-fusion ulp × discrete threshold); positive-onl…
+- [starred-epsf-backend](2026/07/starred-epsf-backend.md) — Optional STARRED (COSMOGRAIL, arXiv:2402.08725) Tier-1b super-sampled ePSF back-end for the PSF stage, born fr…
+- [starred-frame-epsf](2026/07/starred-frame-epsf.md) — Extended STARRED Tier-1b (#36) to the per-exposure FRAME-PRODUCTS mode. build_starred_frame_epsf (autoreduce/p…
+- [starred-jwst-validation](2026/07/starred-jwst-validation.md) — JWST/NIRCam leg of the STARRED Tier-1b validation (sibling of #37 WFC3). STARRED instrument-agnostic → NO new …
+- [starred-wfc3-validation](2026/07/starred-wfc3-validation.md) — WFC3/HST leg of #37 — the definitive stellar-field science comparison the F115W (#35) attempt couldn't do (ext…
+- [stpsf-tier2b](2026/07/stpsf-tier2b.md) — JWST per-frame PSF coverage lifted 3/6 -> 6/6 (F115W validated) — STPSF tier-2b at frame DETECTOR + target pos…
+- [stub-skill-recipes-fill-in](2026/07/stub-skill-recipes-fill-in.md) — retired by user decision
+- [user-defaults-discovery](2026/07/user-defaults-discovery.md) — batch finale (task 6, rescoped discovery-half) — start-new-project step 0 environment-discovery preflight: rea…
+- [version-check-compat-floor](2026/07/version-check-compat-floor.md)
+- [version-pinning-design-review](2026/07/version-pinning-design-review.md)
+- [weak-likelihood-function](2026/07/weak-likelihood-function.md)
+- [weak-modeling](2026/07/weak-modeling.md)
+- [weak-real-data](2026/07/weak-real-data.md)
+- [weak-sigma-crit-jax](2026/07/weak-sigma-crit-jax.md)
+- [weak-small-datasets](2026/07/weak-small-datasets.md)
+- [weak-strong-lensing](2026/07/weak-strong-lensing.md)
+- [weak-viz-profiles](2026/07/weak-viz-profiles.md)
+- [wfc3-reduction](2026/07/wfc3-reduction.md)
+
+## 2026/06
+
+- [analysis-shared-state](2026/06/analysis-shared-state.md)
+- [autofit-scrape-test-mode-paths](2026/06/autofit-scrape-test-mode-paths.md)
+- [autogalaxy-results-start-here-noise-map](2026/06/autogalaxy-results-start-here-noise-map.md)
+- [autolens-jax-simulator-release-fixes](2026/06/autolens-jax-simulator-release-fixes.md)
+- [autolens-results-aggregator-valid-dataset](2026/06/autolens-results-aggregator-valid-dataset.md)
+- [bib-duplicate-keys](2026/06/bib-duplicate-keys.md)
+- [dark-matter-potentials](2026/06/dark-matter-potentials.md)
+- [datacube-delaunay-release-memory](2026/06/datacube-delaunay-release-memory.md)
+- [datacube-shared-state](2026/06/datacube-shared-state.md)
+- [euclid-assistant-style-guide-sweep](2026/06/euclid-assistant-style-guide-sweep.md)
+- [health-agent-relocate-brain](2026/06/health-agent-relocate-brain.md)
+- [howto-tutorial-release-fixes](2026/06/howto-tutorial-release-fixes.md)
+- [jax-substructure-simulator](2026/06/jax-substructure-simulator.md)
+- [latent-class-redesign](2026/06/latent-class-redesign.md) — Phases 1 + 2
+- [latent-jax-release-failures](2026/06/latent-jax-release-failures.md)
+- [lens-config-robustness](2026/06/lens-config-robustness.md)
+- [lensing-transient-citations](2026/06/lensing-transient-citations.md)
+- [microlensing-imf-citation](2026/06/microlensing-imf-citation.md)
+- [nss-optional-dependency-workspace](2026/06/nss-optional-dependency-workspace.md)
+- [nss-test-optional-dep-skip](2026/06/nss-test-optional-dep-skip.md)
+- [pyauto-update-digest](2026/06/pyauto-update-digest.md)
+- [remaining-citation-migration](2026/06/remaining-citation-migration.md)
+- [rename-pyautopulse-to-pyautoheart](2026/06/rename-pyautopulse-to-pyautoheart.md)
+- [sparse-vs-dense-profile](2026/06/sparse-vs-dense-profile.md)
+- [specific-lenses-citations](2026/06/specific-lenses-citations.md)
+- [strip-non-jit-noise-add-alma-high-res](2026/06/strip-non-jit-noise-add-alma-high-res.md)
+- [test-mode-fake-sample-count](2026/06/test-mode-fake-sample-count.md)
+- [wdm-lya-citations](2026/06/wdm-lya-citations.md)
+
+## 2026/05
+
+- [ag-ellipse-quantity-pytree](2026/05/ag-ellipse-quantity-pytree.md)
+- [ag-interferometer-jax-viz](2026/05/ag-interferometer-jax-viz.md)
+- [ag-interferometer-kwargs](2026/05/ag-interferometer-kwargs.md)
+- [ag-quantity-fit-from](2026/05/ag-quantity-fit-from.md)
+- [ag-quantity-jax-viz](2026/05/ag-quantity-jax-viz.md)
+- [ag-workspace-test-gitignore-fix](2026/05/ag-workspace-test-gitignore-fix.md)
+- [aggregator-mge-queries](2026/05/aggregator-mge-queries.md)
+- [aggregator-quick-fit](2026/05/aggregator-quick-fit.md)
+- [al-assistant-style](2026/05/al-assistant-style.md)
+- [alma-apply-sparse-operator-oom](2026/05/alma-apply-sparse-operator-oom.md)
+- [alma-datacube](2026/05/alma-datacube.md)
+- [analysis-ellipse-jax](2026/05/analysis-ellipse-jax.md)
+- [api-drift-baseline-check](2026/05/api-drift-baseline-check.md)
+- [array2d-native-jit-safety](2026/05/array2d-native-jit-safety.md)
+- [assistant-release-baseline](2026/05/assistant-release-baseline.md)
+- [autogalaxy-extras-mge-option](2026/05/autogalaxy-extras-mge-option.md)
+- [autogalaxy-viz-dispatch-swap](2026/05/autogalaxy-viz-dispatch-swap.md)
+- [autogalaxy-wst-jax-grad-imaging](2026/05/autogalaxy-wst-jax-grad-imaging.md)
+- [autogalaxy-wst-jax-grad-interferometer](2026/05/autogalaxy-wst-jax-grad-interferometer.md)
+- [autogalaxy-wst-jax-grad-multi](2026/05/autogalaxy-wst-jax-grad-multi.md)
+- [autogalaxy-wst-model-composition](2026/05/autogalaxy-wst-model-composition.md)
+- [autolens-interferometer-jax-viz](2026/05/autolens-interferometer-jax-viz.md)
+- [blackjax-nuts-example](2026/05/blackjax-nuts-example.md)
+- [blackjax-nuts-search](2026/05/blackjax-nuts-search.md)
+- [bootstrap](2026/05/bootstrap.md)
+- [cache-fit-properties](2026/05/cache-fit-properties.md)
+- [ci-actions](2026/05/ci-actions.md)
+- [cluster-c-point-source-rebaseline](2026/05/cluster-c-point-source-rebaseline.md)
+- [cluster-csv-api](2026/05/cluster-csv-api.md)
+- [cluster-csv-redshifts](2026/05/cluster-csv-redshifts.md)
+- [cluster-e-missing-simulator-output](2026/05/cluster-e-missing-simulator-output.md)
+- [cluster-f-api-drift](2026/05/cluster-f-api-drift.md)
+- [cluster-f-jax-baseline-oom](2026/05/cluster-f-jax-baseline-oom.md)
+- [cluster-f-sensitivity-job-dataset](2026/05/cluster-f-sensitivity-job-dataset.md)
+- [cluster-g-interferometer-pixelization-plot](2026/05/cluster-g-interferometer-pixelization-plot.md)
+- [cluster-h-hpc-pathlib-fix](2026/05/cluster-h-hpc-pathlib-fix.md)
+- [cluster-likelihood-function](2026/05/cluster-likelihood-function.md)
+- [cluster-modeling-v2](2026/05/cluster-modeling-v2.md)
+- [cluster-point-tuple-prior](2026/05/cluster-point-tuple-prior.md)
+- [cluster-scaling-members](2026/05/cluster-scaling-members.md)
+- [cluster-test-workspace](2026/05/cluster-test-workspace.md)
+- [cluster-visualization-profiling](2026/05/cluster-visualization-profiling.md)
+- [cluster-viz-prototype](2026/05/cluster-viz-prototype.md)
+- [contents-block-bullets](2026/05/contents-block-bullets.md)
+- [convergence-func-xp](2026/05/convergence-func-xp.md)
+- [critical-curves-linewidth](2026/05/critical-curves-linewidth.md)
+- [cse-jax-port](2026/05/cse-jax-port.md)
+- [datacube-3d-fits-relocate](2026/05/datacube-3d-fits-relocate.md)
+- [datacube-centre-and-4d](2026/05/datacube-centre-and-4d.md)
+- [datacube-hannah-preset](2026/05/datacube-hannah-preset.md)
+- [datacube-likelihood-walkthrough](2026/05/datacube-likelihood-walkthrough.md)
+- [datacube-positions-delaunay](2026/05/datacube-positions-delaunay.md)
+- [datacube-sparse-operator](2026/05/datacube-sparse-operator.md)
+- [delaunay-jax-profiling](2026/05/delaunay-jax-profiling.md)
+- [disable-model-graph](2026/05/disable-model-graph.md)
+- [docs-mass-rst-sync](2026/05/docs-mass-rst-sync.md)
+- [drawer-jax-fom-coerce](2026/05/drawer-jax-fom-coerce.md)
+- [ellipse-fit-masked-loop-tests](2026/05/ellipse-fit-masked-loop-tests.md)
+- [ellipse-jax-likelihood-tests](2026/05/ellipse-jax-likelihood-tests.md)
+- [ellipse-modeling-viz-jit](2026/05/ellipse-modeling-viz-jit.md)
+- [ellipse-visualization-test](2026/05/ellipse-visualization-test.md)
+- [ellipse-xp](2026/05/ellipse-xp.md)
+- [ep-profiling-breakdown](2026/05/ep-profiling-breakdown.md)
+- [euclid-latent-migration](2026/05/euclid-latent-migration.md)
+- [euclid-version-bump-2026-5-1-4](2026/05/euclid-version-bump-2026-5-1-4.md)
+- [external-potential](2026/05/external-potential.md)
+- [external-potential-priors-and-jit](2026/05/external-potential-priors-and-jit.md)
+- [fast-plots-env-coverage](2026/05/fast-plots-env-coverage.md)
+- [fast-viz-zero-contour-perf](2026/05/fast-viz-zero-contour-perf.md)
+- [fft-mixed-precision-fix](2026/05/fft-mixed-precision-fix.md)
+- [fit-ellipse-jax](2026/05/fit-ellipse-jax.md)
+- [fix-interferometer-sparse-curvature](2026/05/fix-interferometer-sparse-curvature.md)
+- [flux-latents-raw](2026/05/flux-latents-raw.md)
+- [graphical-ep-scale-up](2026/05/graphical-ep-scale-up.md)
+- [grid-respect-small-datasets](2026/05/grid-respect-small-datasets.md)
+- [group-double-einstein-ring](2026/05/group-double-einstein-ring.md)
+- [group-list-based-api](2026/05/group-list-based-api.md)
+- [group-mass-stellar-dark](2026/05/group-mass-stellar-dark.md)
+- [group-pixelization-delaunay-fixes](2026/05/group-pixelization-delaunay-fixes.md)
+- [group-scaling-relation](2026/05/group-scaling-relation.md)
+- [group-slam-prior-clamp](2026/05/group-slam-prior-clamp.md)
+- [hilbert-offset-centre-mask](2026/05/hilbert-offset-centre-mask.md)
+- [ic50-graphical-fit](2026/05/ic50-graphical-fit.md)
+- [ic50-hpc-setup](2026/05/ic50-hpc-setup.md)
+- [imaging-from-fits-small-datasets-cap](2026/05/imaging-from-fits-small-datasets-cap.md)
+- [info-exclude-identifier-fields](2026/05/info-exclude-identifier-fields.md) — `model.info` was rendering `pytree_token N` lines for every
+- [instrument-readme-dashboard](2026/05/instrument-readme-dashboard.md)
+- [interferometer-extra-galaxies](2026/05/interferometer-extra-galaxies.md)
+- [interferometer-linear-light-profiles](2026/05/interferometer-linear-light-profiles.md)
+- [interferometer-multi-gaussian-expansion](2026/05/interferometer-multi-gaussian-expansion.md)
+- [interferometer-nufftax-updates](2026/05/interferometer-nufftax-updates.md)
+- [interferometer-shapelets](2026/05/interferometer-shapelets.md)
+- [jax-assertions-env-override](2026/05/jax-assertions-env-override.md)
+- [jax-bump-floor-0-7](2026/05/jax-bump-floor-0-7.md)
+- [jax-dataset-model](2026/05/jax-dataset-model.md)
+- [jax-docs-autogalaxy-datasets](2026/05/jax-docs-autogalaxy-datasets.md)
+- [jax-docs-autogalaxy-deferred](2026/05/jax-docs-autogalaxy-deferred.md)
+- [jax-docs-autolens-deferred](2026/05/jax-docs-autolens-deferred.md)
+- [jax-docs-autolens-guides](2026/05/jax-docs-autolens-guides.md)
+- [jax-docs-core-datasets](2026/05/jax-docs-core-datasets.md)
+- [jax-interface-audit](2026/05/jax-interface-audit.md)
+- [jax-interp-2d](2026/05/jax-interp-2d.md)
+- [jax-likelihood-datacube](2026/05/jax-likelihood-datacube.md)
+- [jax-phase3-adoption](2026/05/jax-phase3-adoption.md)
+- [jax-start-here-intros](2026/05/jax-start-here-intros.md)
+- [jax-viz-default-broken](2026/05/jax-viz-default-broken.md)
+- [jit-datacube-delaunay](2026/05/jit-datacube-delaunay.md)
+- [jit-interferometer-stepwise](2026/05/jit-interferometer-stepwise.md)
+- [jit-regression-constant-drift](2026/05/jit-regression-constant-drift.md)
+- [jit-visualization-env-overrides](2026/05/jit-visualization-env-overrides.md)
+- [knn-barycentric](2026/05/knn-barycentric.md) — NEGATIVE result
+- [latent-module-autogalaxy](2026/05/latent-module-autogalaxy.md)
+- [latent-module-autolens](2026/05/latent-module-autolens.md)
+- [latent-prior-mapping-investigation](2026/05/latent-prior-mapping-investigation.md)
+- [latent-profiling](2026/05/latent-profiling.md)
+- [latent-smoke-test](2026/05/latent-smoke-test.md)
+- [latent-source-flux-linear-fix](2026/05/latent-source-flux-linear-fix.md)
+- [latent-tutorial-autofit](2026/05/latent-tutorial-autofit.md)
+- [latent-tutorial-autogalaxy](2026/05/latent-tutorial-autogalaxy.md)
+- [latent-tutorial-autolens](2026/05/latent-tutorial-autolens.md)
+- [light-mass-profiles-guide](2026/05/light-mass-profiles-guide.md)
+- [light-profiles-guide](2026/05/light-profiles-guide.md)
+- [likelihood-function-assertions](2026/05/likelihood-function-assertions.md)
+- [likelihood-jit-mirror](2026/05/likelihood-jit-mirror.md)
+- [live-visual-update](2026/05/live-visual-update.md)
+- [log-prior-sign-convention](2026/05/log-prior-sign-convention.md)
+- [ludlow16-jax-native](2026/05/ludlow16-jax-native.md)
+- [many-vis-prep-dft](2026/05/many-vis-prep-dft.md)
+- [mass-profiles-docs](2026/05/mass-profiles-docs.md)
+- [mass-profiles-guide](2026/05/mass-profiles-guide.md)
+- [mass-profiles-spring-clean](2026/05/mass-profiles-spring-clean.md)
+- [mass-self-consistency-tests](2026/05/mass-self-consistency-tests.md)
+- [mass-test-modes](2026/05/mass-test-modes.md)
+- [mesh-geometry-picklable](2026/05/mesh-geometry-picklable.md)
+- [mge-cse-fallback](2026/05/mge-cse-fallback.md)
+- [mge-potential-elliptical](2026/05/mge-potential-elliptical.md)
+- [mge-profiling-a100](2026/05/mge-profiling-a100.md)
+- [mge-source-truth-tests](2026/05/mge-source-truth-tests.md)
+- [move-basis-regularization-to-developer](2026/05/move-basis-regularization-to-developer.md)
+- [multi-viz-imaging-small-datasets-override](2026/05/multi-viz-imaging-small-datasets-override.md)
+- [multipole-light-profiles](2026/05/multipole-light-profiles.md)
+- [multipole-light-profiles-linear](2026/05/multipole-light-profiles-linear.md)
+- [multipole-scaled-jax](2026/05/multipole-scaled-jax.md)
+- [nfw-jax-port](2026/05/nfw-jax-port.md)
+- [nfw-mcr-ludlow-jit](2026/05/nfw-mcr-ludlow-jit.md)
+- [nfw-sph-potential-mismatch](2026/05/nfw-sph-potential-mismatch.md)
+- [nnls-vmap-speedup](2026/05/nnls-vmap-speedup.md)
+- [nss-checkpointing-and-visualization](2026/05/nss-checkpointing-and-visualization.md)
+- [nss-chunked-init](2026/05/nss-chunked-init.md)
+- [nss-chunked-vmap](2026/05/nss-chunked-vmap.md)
+- [nss-install-extra](2026/05/nss-install-extra.md)
+- [nss-search-wrapper](2026/05/nss-search-wrapper.md)
+- [nss-tutorial-dispatch](2026/05/nss-tutorial-dispatch.md)
+- [nufftax-citation-docs](2026/05/nufftax-citation-docs.md)
+- [optional-dep-latents-soft-fail](2026/05/optional-dep-latents-soft-fail.md)
+- [output-folder-layout-tutorials](2026/05/output-folder-layout-tutorials.md)
+- [park-double-einstein-ring](2026/05/park-double-einstein-ring.md)
+- [park-modeling-viz-jit-slow](2026/05/park-modeling-viz-jit-slow.md)
+- [pixelization-clumpy-galaxy](2026/05/pixelization-clumpy-galaxy.md)
+- [point-simulator-realistic-errors](2026/05/point-simulator-realistic-errors.md)
+- [point-source-fit-positions-len](2026/05/point-source-fit-positions-len.md)
+- [point-source-jax-viz](2026/05/point-source-jax-viz.md)
+- [priors-jax-native](2026/05/priors-jax-native.md)
+- [profile-guide-followup-cleanup](2026/05/profile-guide-followup-cleanup.md)
+- [profile-return-type-fixes](2026/05/profile-return-type-fixes.md)
+- [quantity-modeling-viz-jit](2026/05/quantity-modeling-viz-jit.md)
+- [quick-fit-smoke-mode-fix](2026/05/quick-fit-smoke-mode-fix.md)
+- [quick-update-display-id](2026/05/quick-update-display-id.md)
+- [quick-update-docs-followup](2026/05/quick-update-docs-followup.md)
+- [rectangular-adapt-cdf](2026/05/rectangular-adapt-cdf.md)
+- [results-start-here-fits-hdu-fix](2026/05/results-start-here-fits-hdu-fix.md)
+- [results-start-here-fits-hdu-fix-autolens](2026/05/results-start-here-fits-hdu-fix-autolens.md)
+- [rst-to-myst-md](2026/05/rst-to-myst-md.md)
+- [rst-to-myst-md-pass2](2026/05/rst-to-myst-md-pass2.md)
+- [rst-to-myst-md-pass3](2026/05/rst-to-myst-md-pass3.md)
+- [sample-kwargs-mixed-keys](2026/05/sample-kwargs-mixed-keys.md)
+- [scaling-relation-csv-loader](2026/05/scaling-relation-csv-loader.md)
+- [scaling-relation-update](2026/05/scaling-relation-update.md)
+- [script-docstring-style](2026/05/script-docstring-style.md)
+- [searches-nautilus-mirror](2026/05/searches-nautilus-mirror.md)
+- [simulator-use-jax-pr1-pointsolver](2026/05/simulator-use-jax-pr1-pointsolver.md)
+- [simulator-use-jax-pr2-imaging](2026/05/simulator-use-jax-pr2-imaging.md)
+- [simulator-use-jax-pr3-interferometer](2026/05/simulator-use-jax-pr3-interferometer.md)
+- [simulator-use-jax-pr4-xp-mismatch](2026/05/simulator-use-jax-pr4-xp-mismatch.md)
+- [simulators-mirror](2026/05/simulators-mirror.md)
+- [smoke-test-optimization](2026/05/smoke-test-optimization.md)
+- [smoke-workspace-actions](2026/05/smoke-workspace-actions.md)
+- [source-science-no-lens-light](2026/05/source-science-no-lens-light.md)
+- [source-science-parametric](2026/05/source-science-parametric.md)
+- [subhalo-redshift-jax-fix](2026/05/subhalo-redshift-jax-fix.md)
+- [subhalo-refine-source-fix](2026/05/subhalo-refine-source-fix.md)
+- [subplot-fit-mid-zoom](2026/05/subplot-fit-mid-zoom.md)
+- [test-mode-output-path](2026/05/test-mode-output-path.md)
+- [test-mode-skip-latents](2026/05/test-mode-skip-latents.md)
+- [truncated-gaussian-fast-path](2026/05/truncated-gaussian-fast-path.md)
+- [unify-jax-visualization](2026/05/unify-jax-visualization.md)
+- [unpark-ellipse-scripts](2026/05/unpark-ellipse-scripts.md)
+- [url-check](2026/05/url-check.md)
+- [url-check-ci](2026/05/url-check-ci.md)
+- [use-jax-for-vis-default](2026/05/use-jax-for-vis-default.md)
+- [use-pathlib](2026/05/use-pathlib.md)
+- [visualize-combined-quick-update-kwarg](2026/05/visualize-combined-quick-update-kwarg.md)
+- [viz-jax-pytree-fix](2026/05/viz-jax-pytree-fix.md)
+- [viz-sanity-rollout-jax-scripts](2026/05/viz-sanity-rollout-jax-scripts.md)
+- [viz-sanity-rollout-jit-scripts](2026/05/viz-sanity-rollout-jit-scripts.md)
+- [viz-subprocess-feasibility](2026/05/viz-subprocess-feasibility.md)
+- [weak-dataset-from-json](2026/05/weak-dataset-from-json.md)
+- [weak-fit](2026/05/weak-fit.md)
+- [weak-shear-simulator](2026/05/weak-shear-simulator.md)
+- [weak-visualization](2026/05/weak-visualization.md)
+- [wiki-current-api-only](2026/05/wiki-current-api-only.md)
+- [workspace-version-mismatch-advice](2026/05/workspace-version-mismatch-advice.md)
+
+## 2026/04
+
+- [adapt-images-mesh-grid-lookup](2026/04/adapt-images-mesh-grid-lookup.md)
+- [adapt-images-pytree-fix](2026/04/adapt-images-pytree-fix.md)
+- [ag-imaging-scripts](2026/04/ag-imaging-scripts.md)
+- [aggregator-output-png](2026/04/aggregator-output-png.md)
+- [analysis-interferometer-pytree](2026/04/analysis-interferometer-pytree.md)
+- [assertions-fix](2026/04/assertions-fix.md)
+- [auto-generate-mask-extra-galaxies](2026/04/auto-generate-mask-extra-galaxies.md)
+- [autobuild-bash-cli](2026/04/autobuild-bash-cli.md)
+- [autobuild-release-prep](2026/04/autobuild-release-prep.md)
+- [autofit-smoke-cleanup](2026/04/autofit-smoke-cleanup.md)
+- [autofit-workspace-plot-update](2026/04/autofit-workspace-plot-update.md)
+- [autogalaxy-wst-ci](2026/04/autogalaxy-wst-ci.md)
+- [autogalaxy-wst-jax-lh-imaging](2026/04/autogalaxy-wst-jax-lh-imaging.md)
+- [autogalaxy-wst-jax-lh-interferometer](2026/04/autogalaxy-wst-jax-lh-interferometer.md)
+- [autogalaxy-wst-jax-lh-multi](2026/04/autogalaxy-wst-jax-lh-multi.md)
+- [autoprompt-cleanup](2026/04/autoprompt-cleanup.md)
+- [caustic-pixel-scale](2026/04/caustic-pixel-scale.md)
+- [cli-noise-clean](2026/04/cli-noise-clean.md)
+- [cluster-simulator](2026/04/cluster-simulator.md)
+- [cluster-simulator-jax-multiplane](2026/04/cluster-simulator-jax-multiplane.md)
+- [csvable](2026/04/csvable.md) — moved generic CSV reader/writer to new autoconf.csvable, left PointDataset-specific schema layer in autolens.p…
+- [dashboard-dirty-listing](2026/04/dashboard-dirty-listing.md)
+- [dashboard-followup-commands](2026/04/dashboard-followup-commands.md)
+- [dashboard-test-summary](2026/04/dashboard-test-summary.md)
+- [data-typing-simplify](2026/04/data-typing-simplify.md)
+- [db-scrape-build-dataset-path](2026/04/db-scrape-build-dataset-path.md)
+- [default-branch-release-to-main](2026/04/default-branch-release-to-main.md)
+- [deflections-integral-fix](2026/04/deflections-integral-fix.md)
+- [dependency-sweep](2026/04/dependency-sweep.md)
+- [eager-numpy-regression-assertions](2026/04/eager-numpy-regression-assertions.md)
+- [env-var-rename](2026/04/env-var-rename.md)
+- [fit-imaging-pytree](2026/04/fit-imaging-pytree.md)
+- [fit-imaging-pytree-delaunay](2026/04/fit-imaging-pytree-delaunay.md)
+- [fit-imaging-pytree-delaunay-mge](2026/04/fit-imaging-pytree-delaunay-mge.md)
+- [fit-imaging-pytree-lp](2026/04/fit-imaging-pytree-lp.md)
+- [fit-imaging-pytree-mge-group](2026/04/fit-imaging-pytree-mge-group.md)
+- [fit-imaging-pytree-rectangular](2026/04/fit-imaging-pytree-rectangular.md)
+- [fit-imaging-pytree-rectangular-dspl](2026/04/fit-imaging-pytree-rectangular-dspl.md)
+- [fit-imaging-pytree-rectangular-mge](2026/04/fit-imaging-pytree-rectangular-mge.md)
+- [fit-interferometer-pytree-mge](2026/04/fit-interferometer-pytree-mge.md)
+- [fit-interferometer-pytree-mge-group](2026/04/fit-interferometer-pytree-mge-group.md)
+- [fit-interferometer-pytree-rectangular](2026/04/fit-interferometer-pytree-rectangular.md)
+- [fit-point-pytree](2026/04/fit-point-pytree.md)
+- [fix-autoarray-root-log](2026/04/fix-autoarray-root-log.md)
+- [fix-interferometer-jax-profiling-cwd](2026/04/fix-interferometer-jax-profiling-cwd.md)
+- [grid-irregular-xp-propagation](2026/04/grid-irregular-xp-propagation.md)
+- [group-dict-api](2026/04/group-dict-api.md)
+- [group-features](2026/04/group-features.md)
+- [group-two-main-galaxies](2026/04/group-two-main-galaxies.md)
+- [history-rewrite-guard](2026/04/history-rewrite-guard.md)
+- [howto-release-window](2026/04/howto-release-window.md)
+- [howtofit-bootstrap](2026/04/howtofit-bootstrap.md)
+- [howtofit-docs-update](2026/04/howtofit-docs-update.md)
+- [howtofit-register](2026/04/howtofit-register.md)
+- [howtogalaxy-bootstrap](2026/04/howtogalaxy-bootstrap.md)
+- [howtogalaxy-sub2](2026/04/howtogalaxy-sub2.md)
+- [howtogalaxy-sub3](2026/04/howtogalaxy-sub3.md)
+- [howtolens-bootstrap](2026/04/howtolens-bootstrap.md)
+- [howtolens-docs-update](2026/04/howtolens-docs-update.md)
+- [imaging-delaunay-gradients](2026/04/imaging-delaunay-gradients.md)
+- [imaging-mge-pytree-migration](2026/04/imaging-mge-pytree-migration.md)
+- [import-optimization](2026/04/import-optimization.md)
+- [integrate-euclid-pipeline](2026/04/integrate-euclid-pipeline.md)
+- [interferometer-data-prep](2026/04/interferometer-data-prep.md)
+- [interferometer-delaunay-jax-profiling](2026/04/interferometer-delaunay-jax-profiling.md)
+- [interferometer-delaunay-no-lens-light](2026/04/interferometer-delaunay-no-lens-light.md)
+- [interferometer-jax-profiling](2026/04/interferometer-jax-profiling.md)
+- [interferometer-jax-profiling-pixelization](2026/04/interferometer-jax-profiling-pixelization.md)
+- [interferometer-mge-gradients](2026/04/interferometer-mge-gradients.md)
+- [jax-likelihood-interferometer-parity](2026/04/jax-likelihood-interferometer-parity.md)
+- [jax-likelihood-multi-parity](2026/04/jax-likelihood-multi-parity.md)
+- [jax-likelihood-multi-per-band-priors](2026/04/jax-likelihood-multi-per-band-priors.md)
+- [jax-likelihood-point-source-parity](2026/04/jax-likelihood-point-source-parity.md)
+- [jax-likelihood-poisson-regen](2026/04/jax-likelihood-poisson-regen.md)
+- [jax-mge-gradients](2026/04/jax-mge-gradients.md)
+- [jax-nested](2026/04/jax-nested.md)
+- [jax-profiling-jit-coverage](2026/04/jax-profiling-jit-coverage.md)
+- [jax-visualization](2026/04/jax-visualization.md)
+- [jit-viz-pixelization-tests](2026/04/jit-viz-pixelization-tests.md)
+- [latent-fitexception-safe](2026/04/latent-fitexception-safe.md)
+- [lens-calc-guide](2026/04/lens-calc-guide.md)
+- [lens-calc-hessian-richardson](2026/04/lens-calc-hessian-richardson.md)
+- [linear-light-profile-intensity-dict-pytree](2026/04/linear-light-profile-intensity-dict-pytree.md)
+- [merge-fast-plot-env-vars](2026/04/merge-fast-plot-env-vars.md)
+- [merge-pytree-scripts](2026/04/merge-pytree-scripts.md)
+- [merge-results-start-here](2026/04/merge-results-start-here.md)
+- [merge-search-and-plot-scripts](2026/04/merge-search-and-plot-scripts.md)
+- [mge-fix](2026/04/mge-fix.md)
+- [mge-gradients-pytree-migration](2026/04/mge-gradients-pytree-migration.md)
+- [mge-jit-visualization](2026/04/mge-jit-visualization.md)
+- [model-composition-integration](2026/04/model-composition-integration.md)
+- [multiple-sources-modeling](2026/04/multiple-sources-modeling.md)
+- [nautilus-pool-teardown](2026/04/nautilus-pool-teardown.md)
+- [nnls-gradient-nan-fix](2026/04/nnls-gradient-nan-fix.md)
+- [nnls-target-kappa-fix](2026/04/nnls-target-kappa-fix.md)
+- [numba-docs-deprioritize](2026/04/numba-docs-deprioritize.md)
+- [on-the-fly-modeling](2026/04/on-the-fly-modeling.md)
+- [pin-dependency-versions](2026/04/pin-dependency-versions.md) — Release workflow pins PyAuto inter-deps (==VERSION) in wheel only, not committed to main. Python version check…
+- [pixelization-pytree-migration](2026/04/pixelization-pytree-migration.md)
+- [point-csv-examples](2026/04/point-csv-examples.md) — added CSV I/O examples to point_source/simulator.py, cluster/simulator.py, cluster/modeling.py, and double_ein…
+- [point-dataset-csv](2026/04/point-dataset-csv.md)
+- [point-solver-auto-jax](2026/04/point-solver-auto-jax.md)
+- [point-source-gradients](2026/04/point-source-gradients.md)
+- [point-source-jax-profiling](2026/04/point-source-jax-profiling.md)
+- [positions-test-mode-fallback](2026/04/positions-test-mode-fallback.md)
+- [preprocess-poisson-noise-sign-fix](2026/04/preprocess-poisson-noise-sign-fix.md)
+- [pyauto-audit](2026/04/pyauto-audit.md)
+- [pyauto-status-shell](2026/04/pyauto-status-shell.md)
+- [pyauto-test-mode-rename](2026/04/pyauto-test-mode-rename.md)
+- [pyautoprompt-path-cleanup](2026/04/pyautoprompt-path-cleanup.md)
+- [python-313](2026/04/python-313.md)
+- [rectangular-spline-mesh](2026/04/rectangular-spline-mesh.md)
+- [register-howto-repos](2026/04/register-howto-repos.md)
+- [release-fixes-apr-2026](2026/04/release-fixes-apr-2026.md)
+- [release-url-sweep-and-tag-pinning](2026/04/release-url-sweep-and-tag-pinning.md)
+- [remove-deflection-integral](2026/04/remove-deflection-integral.md)
+- [remove-pyswarms-ultranest](2026/04/remove-pyswarms-ultranest.md)
+- [restore-data-preparation-scripts](2026/04/restore-data-preparation-scripts.md)
+- [results-json-load-docs](2026/04/results-json-load-docs.md)
+- [samples-simplify](2026/04/samples-simplify.md)
+- [search-config-cleanup](2026/04/search-config-cleanup.md)
+- [search-interface-simple](2026/04/search-interface-simple.md)
+- [search-refactor](2026/04/search-refactor.md)
+- [search-update-refactor](2026/04/search-update-refactor.md)
+- [searches-minimal](2026/04/searches-minimal.md)
+- [setup-notebook-boilerplate](2026/04/setup-notebook-boilerplate.md)
+- [skip-degenerate-radial-caustic](2026/04/skip-degenerate-radial-caustic.md)
+- [slam-dspl-modernize](2026/04/slam-dspl-modernize.md)
+- [smoke-notebooks](2026/04/smoke-notebooks.md)
+- [smoke-test-fast](2026/04/smoke-test-fast.md)
+- [test-mode-bypass](2026/04/test-mode-bypass.md)
+- [test-mode-separate](2026/04/test-mode-separate.md)
+- [test-mode-visualize](2026/04/test-mode-visualize.md)
+- [test-no-run-reasons-fix](2026/04/test-no-run-reasons-fix.md)
+- [title-prefix-subplots](2026/04/title-prefix-subplots.md)
+- [transform-decorator](2026/04/transform-decorator.md)
+- [truncated-normal-gradient-hessian](2026/04/truncated-normal-gradient-hessian.md)
+- [tupleprior-pytree-fix](2026/04/tupleprior-pytree-fix.md)
+- [unit-test-profiling](2026/04/unit-test-profiling.md) — PyAutoGalaxy
+- [verify-install-release-checks](2026/04/verify-install-release-checks.md)
+- [weak-lensing-shear-docs](2026/04/weak-lensing-shear-docs.md)
+- [welcome-start-here-fixes](2026/04/welcome-start-here-fixes.md)
+- [workspace-gitignore-noise](2026/04/workspace-gitignore-noise.md)
+- [workspace-version-config-check](2026/04/workspace-version-config-check.md)
+
+## unknown
+
+- [clone-mitosis-agent](unknown/clone-mitosis-agent.md)
+- [codex-skill-wrappers](unknown/codex-skill-wrappers.md) — Phases 1-3
+- [howtolens-workspace-cleanup](unknown/howtolens-workspace-cleanup.md)
+- [morning-routine-phase-1-core-morning-skill](unknown/morning-routine-phase-1-core-morning-skill.md) — 2026-07-13
+- [morning-routine-phase-2-enriched-signals-mobile-codex](unknown/morning-routine-phase-2-enriched-signals-mobile-codex.md) — 2026-07-13
+- [profiling-agent](unknown/profiling-agent.md) — profiling conductor live — the proprioceptive function (campaign/ingest/triage); /profiling command installed;…
+- [profiling-drift-check](unknown/profiling-drift-check.md) — profiling_drift vitals leg live — scans autolens_profiling result JSONs for pinned_drift; readiness YELLOW + d…
+- [profiling-polish-design](unknown/profiling-polish-design.md) — design lock-in + results/dashboard groundwork; PreOptimizationTimes convention defined; next phase: polish_pha…
+- [profiling-vram-validation](unknown/profiling-vram-validation.md) — vram-first validation — 9/9 cells green on CPU; probe-over-table resolution + non-GPU clamp; record-and-flag p…
+- [repos-sync-public-front-door-organ-tables](unknown/repos-sync-public-front-door-organ-tables.md) — 2026-07-13
+- [restore-truncated-howto-tutorials](unknown/restore-truncated-howto-tutorials.md)
+- [split-likelihood-profiling](unknown/split-likelihood-profiling.md)
+
+<!-- GENERATED:END -->

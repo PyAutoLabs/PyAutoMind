@@ -1,0 +1,38 @@
+name: Lifecycle Drift
+
+# Guards the prompt-file lifecycle (issue #71): the draft/ -> active/ ->
+# complete/YYYY/MM invariant and the generated complete/index.md. Fails on:
+#   - lifecycle check drift (a slug in both active.md and complete.md; a
+#     complete/ record with no complete.md entry; a file in two states);
+#   - a stale complete/index.md (regenerate with `lifecycle.py index --apply`).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "active/**"
+      - "complete/**"
+      - "complete.md"
+      - "active.md"
+      - "scripts/lifecycle.py"
+  pull_request:
+    paths:
+      - "active/**"
+      - "complete/**"
+      - "complete.md"
+      - "active.md"
+      - "scripts/lifecycle.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: lifecycle check
+        run: python3 scripts/lifecycle.py check
+      - name: index freshness
+        run: python3 scripts/lifecycle.py index --check
