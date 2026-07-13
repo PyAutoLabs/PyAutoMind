@@ -72,6 +72,26 @@ One `##` block per item. Fields:
 - archive-ref: refs/heads/archive/condemned/abandoned-spike @ 0de4514
 -->
 
-<!-- No live condemned entries yet — the hygiene `tidy` drive seam
-     (feature/pyautobrain/hygiene_pyautogut_drive_seam.md) populates this file
-     once PyAutoGut exists as the attic remote. -->
+## release-datasets/autolens-regenerable
+- type: file
+- locator: autolens_workspace dataset/ (19 non-allowlisted simulated dirs — category A + multi): group/{dark_matter_subhalo,operated,simple,simple__no_lens_light,sky_background}, imaging/{dark_matter_subhalo,extra_galaxies,lens_light_asymmetric,light_operated,simple,simple__no_lens_light,sky_background}, interferometer/{extra_galaxies,simple}, point_source/{deblending,simple}, weak/simple, multi/{imaging,interferometer}
+- confidence: 0.98
+- reason: force-committed by pre_build's old `git add -f` (fixed PyAutoBuild#150); each is regenerated on demand by a guarded example script (`should_simulate()`/`not dataset_path.exists()` → simulator subprocess). Removing from tracking so the tree matches `.gitignore`. #126 leg 3.
+- merged: no
+- condemned: 2026-07-13
+- sweep-after: 2026-08-13
+- breaks-if-wrong: a consumer that does not self-provision would hit missing data at runtime; smoke (9/9) confirms the example entries regenerate post-purge
+- archive-ref: n/a — committed deletion; bytes recoverable from remote history at pre-purge SHA `8625a1de` (autolens_workspace) via `git checkout 8625a1de -- dataset/<dir>`
+
+## release-datasets/autogalaxy-regenerable
+- type: file
+- locator: autogalaxy_workspace dataset/ (13 non-allowlisted simulated dirs — category A + multi): imaging/{asymmetric,clumpy,extra_galaxies,operated,sersic_x2,simple,simple__sersic,sky_background}, interferometer/{clumpy,extra_galaxies,simple}, multi/{imaging,interferometer}
+- confidence: 0.98
+- reason: as above (#126 leg 3); regenerated on demand by guarded example scripts.
+- merged: no
+- condemned: 2026-07-13
+- sweep-after: 2026-08-13
+- breaks-if-wrong: as above; smoke (8/8) confirms regeneration post-purge
+- archive-ref: n/a — committed deletion; bytes recoverable from remote history at pre-purge SHA `e940f8cd` (autogalaxy_workspace)
+
+<!-- Remaining non-allowlisted dirs (deferred, see PyAutoBuild#126): regenerable-but-not-smoke-covered (imaging/simulated_lens, interferometer/simulated_lens, point_source/simulated_lens, imaging/simulated_galaxy, interferometer/simulated_galaxy, imaging/dark_matter_subhalo_no_lens_light, point_source/start_here_example, imaging/ellipse); genuinely-dead → archive-ref then purge (cluster/csv_api_example, imaging/misc, imaging/samples, point_source/samples, interferometer/many_visibilities, interferometer/simpleold); needs-human (interferometer/datacube nested-real; database/simple__{0,1,2} → Group B committed-by-design). -->
