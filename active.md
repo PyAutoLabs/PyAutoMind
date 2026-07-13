@@ -3,10 +3,10 @@
 
 ## lifecycle-state-split
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
-- status: awaiting-input — PR-A engine done + committed locally (b108910, scripts/lifecycle.py, NOT pushed); parked on a docs/ conflation fork before the mass git-mv. Mass move + skill/script/spawn rewire + template republish all coupled to the answer; PR-B (migrate/split) is the separate follow-up
-- question: https://github.com/PyAutoLabs/PyAutoMind/issues/71#issuecomment-4959799012
+- status: awaiting-input — PR-A COMPLETE (structure + rewire), parked at supervised ship sign-off. Commits (local, NOT pushed): PyAutoMind b108910+be95921 (issued/→active/ 440 files, work-types→draft/, complete/+lifecycle.py, spawn/status/sync/docs); PyAutoBrain 873169a (create_issue/ship_*/start_dev/intake). Gate: Brain pytest 46p / smoke n-a / review pending / Heart YELLOW UNACKED. Needs human: authorize push+PR-open + merge. Post-merge: (a) republish PyAutoMind-template, (b) PR-B migrate/split
+- question: https://github.com/PyAutoLabs/PyAutoMind/issues/71#issuecomment-4959942948
 - autonomy: supervised effective (--auto launched 2026-07-13; feature cap at Difficulty large = supervised; plan written to issue #71 per contract; no heart-ack given → ship parks)
-- note: lifecycle.py validated on live complete.md (554 entries parse, check green). Also edits PyAutoBrain skills (create_issue/ship_*/start_dev/intake). Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
+- note: docs/ fork resolved (only Type:-headed prompts → draft/docs/; docs/pyautobrain reference stays). lifecycle.py check green; draft→active→complete round-trip smoke passed. Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
 - worktree: ~/Code/PyAutoLabs-wt/lifecycle-state-split
 - repos:
   - PyAutoMind: feature/lifecycle-state-split
