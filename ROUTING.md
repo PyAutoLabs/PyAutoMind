@@ -10,9 +10,10 @@ maps that to a reasoning agent.
 
 ## The map
 
-Prompts live at `<work-type>/<target>/<name>.md`. The **work-type** (first folder)
-determines the agent; the **target** (second folder) tells the agent which repo or
-domain is affected.
+Draft prompts live at `draft/<work-type>/<target>/<name>.md`. The **work-type**
+(first folder under `draft/`) determines the agent; the **target** (second
+folder) tells the agent which repo or domain is affected. Once issued the file
+advances to `active/`, and on merge to `complete/<YYYY>/<MM>/` (issue #71).
 
 | Work-type folder | Intent | PyAutoBrain agent |
 |------------------|--------|-------------------|
@@ -61,6 +62,6 @@ commands; PyAutoBrain performs the routing.* Bodies + the boundary live in
 
 ## Not routed by work type
 
-`issued/`, `z_features/`, `z_vault/` are workflow-lifecycle folders;
-`autoprompt/` holds meta prompts about this repo's own infrastructure. None of
-these are work-type folders and PyAutoBrain does not route them.
+`active/`, `complete/`, `z_features/`, `z_vault/` are workflow-lifecycle
+folders; `autoprompt/` holds meta prompts about this repo's own infrastructure.
+None of these are work-type folders and PyAutoBrain does not route them.

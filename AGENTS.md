@@ -20,16 +20,26 @@ For the full workflow narrative, conventions, and registry schemas, read
 
 ## Layout (operational)
 
-- **Prompts** — `<work-type>/<target>/<name>.md` (free-form markdown, one task
-  per file). The **first** folder is the *kind of work*; the **second** is the
-  *target repo or domain*. Work-types: `feature/`, `bug/`, `refactor/`, `docs/`,
-  `test/`, `release/`, `maintenance/`, `research/`, `experiment/` (plus `triage/`
-  for prompts whose classification is still unclear). PyAutoBrain routes by the
-  first folder — see [README.md](README.md) "Prompt taxonomy" and `ROUTING.md`.
-  Lifecycle/meta folders are **not** work-types and keep their own names:
-  `issued/` (routed prompts), `z_features/` (multi-task epic trackers),
-  `z_vault/` (deferred prompts — the former `shelved/` merged here), and
-  `autoprompt/` (prompts about this repo's own infrastructure).
+- **Prompt lifecycle (issue #71)** — a prompt file advances through three
+  top-level state folders, mirroring the task ledger:
+  - `draft/<work-type>/<target>/<name>.md` — intaken, **not started**. The
+    first folder under `draft/` is the *kind of work*; the second is the
+    *target repo or domain*. Work-types: `feature/`, `bug/`, `refactor/`,
+    `docs/`, `test/`, `release/`, `maintenance/`, `research/`, `experiment/`
+    (plus `triage/` for prompts whose classification is still unclear).
+    PyAutoBrain routes by the work-type folder — see [README.md](README.md)
+    "Prompt taxonomy" and `ROUTING.md`.
+  - `active/<name>.md` — **issued** (an open GitHub issue / in flight). The
+    ship skills advance the file to `complete/` on merge.
+  - `complete/<YYYY>/<MM>/<slug>.md` — **shipped**; the rich completion record
+    (see `complete/AGENTS.md`). Months are zero-padded so lexical order is
+    numerical order. `scripts/lifecycle.py` owns the moves and drift-checks
+    them.
+
+  Meta folders are **not** lifecycle states and keep their own names:
+  `z_features/` (multi-task epic trackers), `z_vault/` (deferred prompts — the
+  former `shelved/` merged here), and `autoprompt/` (prompts about this repo's
+  own infrastructure).
 - **Registry** — root-level markdown files, each with one job: `active.md`
   (in-flight tasks), `planned.md` (scoped, not started), `complete.md`
   (shipped), `parked.md` (started but not in flight), `queue.md` (ordered
@@ -65,24 +75,25 @@ For the full workflow narrative, conventions, and registry schemas, read
 
 ## When you are asked to add a new prompt
 
-Write the file under `<work-type>/<target>/<name>.md` — pick the work-type from
-the list above (use `triage/` if genuinely unsure) and the target repo/domain as
-the second folder, e.g. `feature/autolens/potential_corrections.md` or
-`bug/autoarray/mask_edge_case.md`. Don't touch `active.md` or `issued/` directly
-— those are managed by `$start-dev` and `$create-issue` (`/start_dev` and
-`/create_issue` in Claude).
+Write the file under `draft/<work-type>/<target>/<name>.md` — pick the work-type
+from the list above (use `triage/` if genuinely unsure) and the target
+repo/domain as the second folder, e.g. `draft/feature/autolens/potential_corrections.md`
+or `draft/bug/autoarray/mask_edge_case.md`. Don't touch `active.md`, `active/`
+or `complete/` directly — those are managed by `$start-dev`, `$create-issue`
+and the ship skills (`/start_dev` and `/create_issue` in Claude).
 
 To skip the manual filing, run **`$intake`** (`/intake` in Claude), the
 PyAutoBrain Intake/Conception Agent. It classifies a raw idea into the right
-`<work-type>/<target>/` folder,
+`draft/<work-type>/<target>/` folder,
 writes the light header (incl. the optional `Difficulty:/Autonomy:/Priority:`
 keys — see README "Prompt file format"), and files the prompt for you. It files a
 prompt only; `$start-dev` (`/start_dev` in Claude) remains the separate next step.
 
 ## When you are asked to start work on an existing prompt
 
-Use `$start-dev <work-type>/<target>/<name>.md` (`/start_dev` in Claude). Older
-`<target>/<name>.md` paths from before the taxonomy migration still work. It
+Use `$start-dev draft/<work-type>/<target>/<name>.md` (`/start_dev` in Claude).
+Older `<work-type>/<target>/<name>.md` and bare `<target>/<name>.md` paths from
+before the lifecycle migration still resolve. It
 routes to `$start-library` or `$start-workspace` (`/start_library` or
 `/start_workspace` in Claude) based on the repos referenced in the prompt body;
 routing keys off `@RepoName` references in the content, not the folder.

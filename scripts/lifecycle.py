@@ -284,7 +284,7 @@ def cmd_check(args) -> int:
 
     if COMPLETE_DIR.exists():
         for f in COMPLETE_DIR.rglob("*.md"):
-            if f.name == "index.md":
+            if f.name in ("index.md", "AGENTS.md"):
                 continue
             slug = f.stem
             if slug not in {safe_name(s) for s in c_slugs}:

@@ -27,22 +27,25 @@ dim()  { printf "\033[2m%s\033[0m\n" "$1"; }
 
 # ---------- Counts per category ----------
 #
-# Prompts are now organised by WORK TYPE at the first folder level
-# (feature/, bug/, refactor/, …) with the target repo/domain as the second
-# level. Lifecycle/meta folders (issued/, z_features/, z_vault/,
-# autoprompt/, triage/) keep their own names. See README "Prompt taxonomy".
+# Prompt files run through three lifecycle states (issue #71):
+#   draft/<work-type>/<target>/   not started (intaken, pre start_dev)
+#   active/                        issued, in flight
+#   complete/<YYYY>/<MM>/          shipped
+# Draft prompts are organised by WORK TYPE (feature/, bug/, …) under draft/.
+# Meta folders (z_features/, z_vault/, autoprompt/) keep their own names.
+# See README "Prompt taxonomy".
 
-WORK_TYPES=(feature bug refactor docs test release maintenance research experiment)
-LIFECYCLE_DIRS=(triage issued z_features z_vault autoprompt)
+WORK_TYPES=(feature bug refactor docs test release maintenance research experiment triage)
+LIFECYCLE_DIRS=(active complete z_features z_vault autoprompt)
 
-bold "== Prompt inventory (by work type) =="
+bold "== Draft prompts (by work type) =="
 printf "%-35s %s\n" "category" "count"
 printf "%-35s %s\n" "----------------------------------" "-----"
 
 for dir in "${WORK_TYPES[@]}"; do
-  if [ -d "$ROOT/$dir" ]; then
-    count=$(find "$ROOT/$dir" -type f -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
-    printf "%-35s %s\n" "$dir/" "$count"
+  if [ -d "$ROOT/draft/$dir" ]; then
+    count=$(find "$ROOT/draft/$dir" -type f -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
+    printf "%-35s %s\n" "draft/$dir/" "$count"
   fi
 done
 
@@ -68,7 +71,13 @@ count_h2() {
 }
 active_count=$(count_h2 "$ROOT/active.md")
 planned_count=$(count_h2 "$ROOT/planned.md")
-complete_count=$(count_h2 "$ROOT/complete.md")
+# complete/ records are the source of truth once split (issue #71); fall back to
+# the legacy complete.md ledger until it is retired.
+complete_count=$(find "$ROOT/complete" -type f -name "*.md" \
+  ! -name AGENTS.md ! -name index.md 2>/dev/null | wc -l | tr -d ' ')
+if [ "$complete_count" -eq 0 ]; then
+  complete_count=$(count_h2 "$ROOT/complete.md")
+fi
 
 bold "== Registry =="
 printf "active.md     %s task(s) in flight\n"  "$active_count"
@@ -111,7 +120,7 @@ fi
 
 if [ "${1:-}" = "--full" ]; then
   bold "== Full prompt list =="
-  for dir in "${WORK_TYPES[@]}" "${LIFECYCLE_DIRS[@]}"; do
+  for dir in "${WORK_TYPES[@]/#/draft/}" "${LIFECYCLE_DIRS[@]}"; do
     [ -d "$ROOT/$dir" ] || continue
     files=$(find "$ROOT/$dir" -type f -name "*.md" 2>/dev/null | sort)
     [ -z "$files" ] && continue

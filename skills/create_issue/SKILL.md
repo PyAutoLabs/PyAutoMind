@@ -7,7 +7,7 @@ Turn a `PyAutoMind/` prompt into a tracked GitHub issue and register it.
 
 A **PyAutoMind** primitive — it owns the mechanical **issue + registry write**:
 assemble the issue body, create the issue, register the task in `active.md`, move
-the prompt to `issued/`, and push Mind state. The *reasoning* (classify repos,
+the prompt to `active/`, and push Mind state. The *reasoning* (classify repos,
 explore code, generate the plan) belongs to **PyAutoBrain**:
 
 - **Called by Brain.** `$start-dev` (`/start_dev` in Claude) does the triage/planning via the
@@ -118,13 +118,17 @@ Add the task entry to `PyAutoMind/active.md` with the issue URL (schema in
 README). **If the caller is handling registration itself** — e.g. `$start-dev`
 routing a conflicted task to `planned.md` — skip this step and let it register.
 
-### 5. Move the prompt to issued/
+### 5. Move the prompt to active/
+
+The prompt advances from `draft/` (not started) to `active/` (issued, in
+flight) — the second of the three lifecycle states (`draft/ → active/ →
+complete/`; issue #71). Use `git mv` to preserve history:
 
 ```bash
-mv PyAutoMind/<path> PyAutoMind/issued/<filename>
+git -C PyAutoMind mv <draft-path> active/<filename>
 ```
 
-Timestamp-suffix the filename if one already exists in `issued/`.
+Timestamp-suffix the filename if one already exists in `active/`.
 
 ### 6. Push Mind
 
@@ -133,7 +137,7 @@ source PyAutoMind/scripts/prompt_sync.sh
 prompt_sync_push "prompt: file issue for <task-name> (#<issue>)"
 ```
 
-If step 0 already pushed, this carries only the active.md + `issued/` changes.
+If step 0 already pushed, this carries only the active.md + `active/` changes.
 
 ## Notes
 
