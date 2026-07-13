@@ -1,21 +1,6 @@
 # Active Tasks
 
 
-## release-ships-simulated-datasets
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/126
-- status: ALL 4 LEGS COMPLETE for Group A — ready for review/merge (human). PRs: PyAutoBuild#150 (leg1 -f drop + leg4 allowlist guard), autolens#272 (purge ~205 files), autogalaxy#129 (purge ~107). Final smoke 9/9 + 8/8. Leg 2 moot (.exists() idiom). samples was guarded-provisioned→purged; dm_subhalo (no consumer)→purged; simpleold killed; many_visibilities + database/simple__{0,1,2} allowlisted (kept). Leg-4 guard caught los_halos mixed-dir leak. All purges via PyAutoGut (condemned.md). Group B = separate prompt (guard skips bare-dataset repos). Retire to complete.md on merge
-- autonomy: supervised effective (--auto launched 2026-07-13, user greenlit surgery "go" + route purges via PyAutoGut; NO heart-ack → any Heart YELLOW/RED parks; merge always human)
-- prs: PyAutoBuild#150 + autolens_workspace#272 + autogalaxy_workspace#129 (all pending-release)
-- question: https://github.com/PyAutoLabs/PyAutoBuild/issues/126#issuecomment-4958040857
-- note: Group B (autofit/HowToFit/HowToGalaxy/HowToLens bare-`dataset/` committed-by-design vs purge) split out to bug/pyautobuild/release_datasets_group_b_policy.md (human-required). Do-not-blind-purge orphans: autolens 7, autogalaxy 5 (listed in #126). autolens_workspace freed by PR#267 merge.
-- worktree: ~/Code/PyAutoLabs-wt/release-ships-simulated-datasets
-- repos:
-  - PyAutoBuild: feature/release-ships-simulated-datasets
-  - PyAutoHeart: feature/release-ships-simulated-datasets
-  - autolens_workspace: feature/release-ships-simulated-datasets
-  - autogalaxy_workspace: feature/release-ships-simulated-datasets
-
-
 ## eceb-editorial-revision
 - issue: https://github.com/Jammy2211/euclid_assistant/issues/6
 - status: workspace-dev
