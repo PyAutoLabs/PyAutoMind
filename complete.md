@@ -5960,3 +5960,6 @@
 
 ## morning-routine phase 1 — core /morning skill (2026-07-13)
 - shipped: PyAutoBrain#106 merged (issue #105 closed). /morning composition skill: sync (bin/pull_all_main.sh) + clean-slate (bin/clean_slate.sh) + consult /health + prioritized digest. Scripts moved out of workspace-root/admin_jammy into PyAutoBrain/bin/ (PYAUTO_ROOT). Live via install.sh (Claude + Codex).
+
+## morning-routine phase 2 — enriched signals + mobile/codex (2026-07-13)
+- shipped: PyAutoBrain#108 merged (issue #107 closed). Added bin/overnight_status.sh + bin/version_drift.sh (gh-API), made /morning environment-aware (full local; gh-API glance on mobile Claude Code chat / Codex). Live via install.sh.
