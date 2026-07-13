@@ -1,32 +1,6 @@
 # Active Tasks
 
 
-## verify-install-check-f-fix
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/70
-- status: shipped, awaiting-merge — PR PyAutoHeart#71 (pytest 263p; bash -n + driver py_compile OK); human ship sign-off "ship all" 2026-07-13 despite Heart RED (release-hold reasons). Full F PASS needs TestPyPI rehearsal re-run. Merge/close human.
-- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/71
-- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/70#issuecomment-4961101996
-- worktree: ~/Code/PyAutoLabs-wt/verify-install-check-f-fix
-- autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto" batch; no heart-ack given)
-- note: harness-only (PyAutoHeart heart/checks/verify_install.sh check_f). Fix1 F_driver loads bundled cosmos_web_ring (pixel_scales=0.06) not stale simple; Fix2 pin all 5 PyAuto pkgs to $TARGET_VERSION for coherent dev stack. Full PASS needs TestPyPI rehearsal re-run (out of band).
-- repos:
-  - PyAutoHeart: feature/verify-install-check-f-fix
-
-
-## jax-pytree-leaf-registration
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1365
-- status: shipped, awaiting-merge — PRs PyAutoFit#1366 (pytest 1473p/1s) + autofit_workspace_test#42 (behind lib); human ship sign-off "ship all" 2026-07-13 despite Heart RED (release-hold). Merge/close human (library-first).
-- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1366
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/42
-- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1365#issuecomment-4961041130
-- worktree: ~/Code/PyAutoLabs-wt/jax-pytree-leaf-registration
-- autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto" batch; no heart-ack given)
-- note: library+workspace; root cause = register_model registers leaf type `int` (from af.Model(int) n/m shapelet args) → _partition vars(int) crash. Fix = _walk skips cls whose instances lack __dict__ (_instances_carry_dict). PyAutoFit/autofit/jax/pytrees.py + autofit_workspace_test scripts/jax_assertions/pytree_leaf_registration.py.
-- repos:
-  - PyAutoFit: feature/jax-pytree-leaf-registration
-  - autofit_workspace_test: feature/jax-pytree-leaf-registration
-
-
 ## jax-gradient-optimizer-benchmark
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95
 - status: workspace-dev
@@ -35,20 +9,6 @@
 - note: experiment/workspaces; searches_minimal JAX gradient optimizers on the MGE likelihood. Phase 1 = optax Adam/ADABelief + jaxopt L-BFGS (MAP, cold-start); Phase 2 = numpyro SVI + jaxopt Levenberg-Marquardt. Workspace-only, no PyAutoFit source. Compile-probe first; park with partial results if grad-path compile prohibitive on CPU. Ship sign-off parks (supervised).
 - repos:
   - autolens_workspace_developer: feature/jax-gradient-optimizer-benchmark
-
-
-## matern-tfp-jax-compat
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/385
-- status: shipped, awaiting-merge — PRs PyAutoArray#386 (pytest 897p) + autogalaxy_workspace_test#70 (behind lib); human ship sign-off "ship all" 2026-07-13 despite Heart RED (release-hold). Merge/close human (library-first).
-- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/386
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/70
-- question: https://github.com/PyAutoLabs/PyAutoArray/issues/385#issuecomment-4960930740
-- worktree: ~/Code/PyAutoLabs-wt/matern-tfp-jax-compat
-- autonomy: supervised (--auto launched 2026-07-13 in-session; plan human-approved pre-launch via "go --auto"; fix strategy chosen via AskUserQuestion = tfp-nightly pin; no heart-ack given)
-- note: library+workspace; PyAutoArray dep-pin (optional extra) + kv_xp docstring, autogalaxy_workspace_test scripts/jax_assertions/matern_regularization.py parity. Follow-up to file: matern_vendor_bessel_kve (drop tfp).
-- repos:
-  - PyAutoArray: feature/matern-tfp-jax-compat
-  - autogalaxy_workspace_test: feature/matern-tfp-jax-compat
 
 
 ## eceb-editorial-revision

@@ -6024,3 +6024,26 @@
 
 ## repos-sync public front-door organ tables (2026-07-13)
 - shipped: PyAutoMind#70 + .github#3 + PyAutoScientist#1 merged (issue #69 closed). repos_sync now generates the organ table into the .github + PyAutoScientist READMEs (repos_sync:organs markers) and presence-checks the pyautolabs.github.io blurb, wired into --write/--check — a new organ in repos.yaml can no longer silently drop from the public front door (as Gut had). Public front door = 7 (incl. Nerves via front_door:true flag); internal AGENTS.md maps stay the 6 category:organ repos. Also: PyAutoScientist repo born + linked atop all 7 organ READMEs earlier this session.
+
+## matern-kernel-tfp-jax-incompat
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/385 (closed)
+- completed: 2026-07-13
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/386 (merged, squash)
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/70 (merged, squash)
+- repos: PyAutoArray, autogalaxy_workspace_test
+- summary: JAX Matern-kernel regularization crashed at import on the release stack (release-validation run 29266305445): stable tensorflow-probability==0.25.0 references jax.interpreters.xla.pytype_aval_mappings (removed from modern JAX) → crash under jax 0.10.2. Reproduced clean-env. No stable tfp is compatible (0.25.0 is latest on PyPI) and jax.scipy.special has no kv/kve for the continuous nu prior, so FIX = pin tfp-nightly==0.26.0.dev20260713 (verified computes bessel_kve on jax 0.10.2) + correct kv_xp docstring/ImportError. Regression: autogalaxy_workspace_test scripts/jax_assertions/matern_regularization.py (np-vs-jax parity nu=0.5+1.7, jitted). Tests 897p. Shipped supervised --auto → human "ship all" through Heart RED (release-hold reasons). Durable follow-up filed: draft/refactor/autoarray/matern_vendor_bessel_kve.md (vendor bessel_kve, drop tfp — nightly is prune-fragile). See project_release_2026_07_13_blocked_3bugs.
+
+## jax-pytree-partition-vars-no-dict
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1365 (closed)
+- completed: 2026-07-13
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1366 (merged, squash)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/42 (merged, squash)
+- repos: PyAutoFit, autofit_workspace_test
+- summary: JAX shapelet fit crashed in jax.vmap(jax.jit) with "vars() argument must have __dict__ attribute" (release-validation run 29266305445). Root cause was NOT the prompt's __slots__ guess: af.Model(ShapeletPolar) wraps its int n/m args as af.Model(int), and register_model._walk registered builtins.int as a pytree node → JAX ran the instance-flatten _partition(5) on every int leaf → vars(5) crash. Confirmed int in _REGISTERED_INSTANCE_CLASSES; reproduced in pure autofit via af.Model(int). FIX (producer-side, no silent guard per feedback_no_silent_guards): autofit/jax/pytrees.py adds _instances_carry_dict(cls) = any("__dict__" in vars(k) for k in cls.__mro__); _walk gates registration on it, leaving int/float/str and __slots__ classes as opaque JAX leaves. Regression: autofit_workspace_test scripts/jax_assertions/pytree_leaf_registration.py. Tests 1473p/1s; shapelet repro now flattens; existing jax_assertions no-regression. Shipped supervised --auto → human "ship all" through Heart RED. See project_release_2026_07_13_blocked_3bugs.
+
+## verify-install-check-f-autosimulate-and-dep-pin
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/70 (closed)
+- completed: 2026-07-13
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/71 (merged, squash)
+- repos: PyAutoHeart
+- summary: verify_install Check F (Colab simulation) FAILed while the real install path (A/C/D) was green, failing the whole verify_install_release job (release-validation run 29266305445). Harness-only, heart/checks/verify_install.sh check_f. Two fixes: (1) F_driver loaded stale unbundled dataset/imaging/simple/*.fits — current imaging/start_here.py loads the BUNDLED cosmos_web_ring JWST dataset (pixel_scales=0.06, why Check A passes) → switched to it, no simulator needed (the prompt's "auto-simulate simple" framing was outdated); (2) the emulated-Colab install pinned only autolens to the dev version letting the 4 sibling deps resolve to released PyPI → pin all 5 PyAuto pkgs to $TARGET_VERSION for a coherent dev stack (later verbatim pip install autoconf --no-deps then finds dev autoconf satisfied → no-op). Verified bash -n + driver py_compile + tests 263p + cosmos_web_ring bundled; full F PASS still needs a live TestPyPI rehearsal re-run (network + fresh 5-pkg dev upload). Shipped supervised --auto → human "ship all" through Heart RED. See project_release_2026_07_13_blocked_3bugs.
