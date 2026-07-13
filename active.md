@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## lifecycle-state-split
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
+- status: library-dev — PR-A (rewire) then PR-B (migrate 444 issued/ + split complete.md); Phase 2 wiki (complete_archive_wiki.md) parked until PR-B nears
+- autonomy: supervised effective (--auto launched 2026-07-13; feature cap at Difficulty large = supervised; plan written to issue #71 per contract; no heart-ack given → ship parks)
+- note: also edits PyAutoBrain skills (create_issue/ship_*/start_dev/intake); Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
+- worktree: ~/Code/PyAutoLabs-wt/lifecycle-state-split
+- repos:
+  - PyAutoMind: feature/lifecycle-state-split
+  - PyAutoBrain: feature/lifecycle-state-split
+
+
 ## ep-negative-sigma-crash
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1363
 - status: awaiting-input — implemented + gated, parked at supervised ship sign-off. Fix committed locally a6aae649f on feature/ep-negative-sigma-crash (NOT pushed). Gate: tests 1473p / smoke EP-guide-live past crash point / review CLEAN / Heart YELLOW score 50 (stale test_run 2026-07-09 + 58 stale parked scripts) UNACKED. Needs human: ack YELLOW set + authorize PR-open
