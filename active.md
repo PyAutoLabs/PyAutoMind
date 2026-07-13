@@ -14,11 +14,11 @@
 
 ## ep-negative-sigma-crash
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1363
-- status: awaiting-input — implemented + gated, parked at supervised ship sign-off. Fix committed locally a6aae649f on feature/ep-negative-sigma-crash (NOT pushed). Gate: tests 1473p / smoke EP-guide-live past crash point / review CLEAN / Heart YELLOW score 50 (stale test_run 2026-07-09 + 58 stale parked scripts) UNACKED. Needs human: ack YELLOW set + authorize PR-open
-- autonomy: effective supervised (--auto 2026-07-13; bug cap supervised binds over safe header; ship sign-off parks per contract). No heart-ack given at launch
-- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1363#issuecomment-4959220559
+- status: library-shipped, awaiting-merge — PR #1364 open (pending-release). Human ship sign-off given at supervised checkpoint 2026-07-13 (YELLOW-acked as unrelated). Option (iii) no workspace impact (HierarchicalFactor public API unchanged). Merge stays human
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1364
+- autonomy: effective supervised (--auto 2026-07-13; bug cap supervised binds over safe header; ship checkpoint human-confirmed)
 - worktree: ~/Code/PyAutoLabs-wt/ep-negative-sigma-crash
-- note: root cause = HierarchicalFactor draws slope from GaussianPrior(sigma=truncated hyper-prior lower_limit=0); EP proposes sigma<0 → Factor.__call__ built GaussianPrior(sigma<0) → strict NormalMessage guard crash. Fix: Factor.__call__ catches exc.MessageException → -inf (zero density). Guide untouched. Rider: test_full_hierachical order/RNG-flaky pre-existing on main
+- note: root cause = HierarchicalFactor draws slope from GaussianPrior(sigma=truncated hyper-prior lower_limit=0); Laplace/Newton optimiser overshoots below 0 in TEST_MODE=1 → Factor.__call__ built GaussianPrior(sigma<0) → strict NormalMessage guard crash. Fix: Factor.__call__ catches exc.MessageException → -inf (zero density). Validated base-crash-vs-fix-clean in nightly test-mode. Guide untouched. Rider: test_full_hierachical order/RNG-flaky pre-existing on main
 - repos:
   - PyAutoFit: feature/ep-negative-sigma-crash
 
