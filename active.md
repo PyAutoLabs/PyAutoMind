@@ -62,16 +62,6 @@
 - worktree: none (analysis on PyAutoReduce main; branch only if an edit is approved)
 - repos:
 
-## refactor-post-phase3
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/8
-- session: claude --resume be7cb926-7874-4cc2-8c05-64c9644a64d9
-- status: MERGED 2026-07-09 (371721f, squash) — human-directed merge in the keck-ao session (user authorized in-conversation); main checkout returned to main; PyAutoReduce claim released. Entry ready to retire to complete.md by its owning session (branch deletion via repo_cleanup)
-- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/10
-- notes: witnesses byte-identical both paths; 2 disclosed fix riders (CPDIS fobj, ePSF window +20) caught by baseline capture
-- autonomy: default present-and-wait (refactor cap safe; no --auto given)
-- worktree: released (was in-place)
-- repos:
-
 ## ep-analytic-updates-scope
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337
 - session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
