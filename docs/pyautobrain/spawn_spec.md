@@ -35,11 +35,12 @@ deliberately, never silently shipped into a template.
 | 2 | `REFERENCE.md`, `AGENTS.md`, `CLAUDE.md`, `LICENSE`, `CONTRIBUTING.md`, `ROUTING.md`, `.gitignore` | KEEP verbatim |
 | 3 | `README.md` | KEEP verbatim (already generic post-Phase-1) |
 | 4 | `repos.yaml` | SUBSTITUTE → the **template body map**: the five organ rows kept with `github:` owner replaced by `YOURORG`; all live satellite rows replaced by the PyAutoProject family rows (`PyAutoProject` category `library`, `autoproject_workspace` category `workspace`, `autoproject_workspace_test` category `workspace_test`) + a commented-out `autoproject_assistant` row ("uncomment when the clone agent seeds it") |
-| 5 | `active.md`, `planned.md`, `complete.md`, `parked.md`, `ideas.md`, `queue.md`, `autonomy_log.md` | EMPTY → header line + schema pointer comment only (e.g. `# Active Tasks` + `<!-- schema: REFERENCE.md -->`); autonomy_log keeps its schema header rows |
+| 5 | `active.md`, `planned.md`, `complete.md`, `parked.md`, `condemned.md`, `ideas.md`, `queue.md`, `autonomy_log.md` | EMPTY → header line + schema pointer comment only (e.g. `# Active Tasks` + `<!-- schema: REFERENCE.md -->`); autonomy_log keeps its schema header rows |
 | 6 | `feature/ bug/ refactor/ docs/ test/ release/ maintenance/ research/ experiment/ triage/` | SKELETON → keep the work-type dir with a single `.gitkeep`; drop all prompts and target subdirs (`docs/` is a work-type — its live scoping notes drop with the rest of its content) |
 | 7 | `issued/ z_features/ z_vault/ autoprompt/` + instance root docs (`dashboard.md`, `overview.md`) + legacy pre-migration prompt dirs (`autolens/`) | DROP (lifecycle + instance content) |
-| 8 | `skills/**` | KEEP verbatim (`OWNERSHIP.md`, `create_issue/` are generic) |
+| 8 | `skills/**`, `policy/**` | KEEP verbatim (`OWNERSHIP.md`, `create_issue/` are generic; `policy/` is org-agnostic safety text) |
 | 9 | `.github/**` | KEEP verbatim EXCEPT workflows that reference live secrets/repos beyond the org placeholder — those SUBSTITUTE `PyAutoLabs` → `YOURORG` and keep |
+| 10 | `.claude/**`, `.codex/**` | DROP — agent-discovery symlinks are install artifacts recreated by the PyAutoBrain installer, not source content |
 
 ### PyAutoMemory → PyAutoMemory-template
 
@@ -58,7 +59,9 @@ deliberately, never silently shipped into a template.
 reading-queue line, prompt, or registry entry may ever appear in a template
 output. The implementation must include a test asserting the generated tree
 contains none of a canary list of live-content markers (e.g. known paper
-keys, `slacs`, `Nightingale`).
+keys, `slacs`, `Nightingale`). The one exception is `scripts/spawn.py` itself,
+which *defines* the canary-token list as generator machinery; the scan skips it
+so its own definition is not mistaken for leaked instance content.
 
 ### Template-family mechanical layers (stamped, not hand-maintained)
 
