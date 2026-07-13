@@ -3,7 +3,7 @@
 
 ## next-wave-population-optimizers
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/97
-- status: workspace-dev — Phase 1 (multi_start_lbfgs + cmaes/evosax). Follow-up to #95; fast OPTIMIZERS only (samplers deferred), + jaxns cameo for fun.
+- status: workspace-dev, Phase-1 done (committed aacdac2, pushed WIP; NOT PR'd — supervised parks ship). CHECKPOINT for user direction. Result: interacting-population needs BOTH diversity AND gradients. cmaes COLLAPSES (r_E7.999, 0/16 — worse than single start); sv_cmaes (Stein repulsion, gradient-free) PREVENTS collapse (r_E2.605, still improving, 0/8 — diverse but slow); svgd (repulsion+gradient = ideal) COMPILE-PROHIBITIVE on CPU (~16x fused grad graphs >10GB) → GPU/HPC. Winner stays multi-start Adam (independence+gradient). Remaining/optional: SVGD-on-GPU, multi-start ADABelief/Lion, jaxns cameo.
 - worktree: ~/Code/PyAutoLabs-wt/next-wave-population-optimizers
 - autonomy: supervised (--auto continued from #95 session via "go...do next task" 2026-07-13; experiment cap; ship parks for human sign-off)
 - note: branch feature/next-wave-population-optimizers STACKED on feature/jax-gradient-optimizer-benchmark (PR#96 unmerged) — reuses _grad_setup.py + multi_start_adam.py; REBASE onto main once #96 merges. Reuses #95 MAP harness. Metric = fraction of starts/particles → truth basin (r_E≈1.6) + wallclock + evals vs multi-start Adam baseline.
