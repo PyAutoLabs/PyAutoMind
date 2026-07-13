@@ -3,7 +3,7 @@
 
 ## lifecycle-state-split
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
-- status: awaiting-merge (PR-B) — PR-A MERGED (Mind#72 + Brain#109 squash 2026-07-13); templates republished (spawn dry-run canary clean, both pushed). PR-B OPEN Mind#73 (drop/fold framing user-approved): 557 dated records under complete/YYYY/MM + dropped 147 provably-done active/ originals (active 440→293); check green. Merge stays human. TWO follow-ups needed: (1) the 293 unclassifiable legacy active/ prompts (only 3 match live active.md) — bulk-drop vs complete/_legacy/ vs triage, your call; (2) retire complete.md by converting ship_* to write records directly (under-scoped in PR-A). Phase-2 wiki filed+parked
+- status: awaiting-merge (PR-B) — PR-A MERGED (Mind#72 + Brain#109 squash 2026-07-13); templates republished. PR-B OPEN Mind#73 (updated per user 2026-07-13): 557 dated records complete/YYYY/MM + active/ 440→7 (dropped 287 done/legacy: 51 numbered + 81 cited + token-overlap remainder; kept 7 in-flight-matched; git-recoverable). complete.md KEPT + paired 1:1 by slug to records (check enforces). create_issue gained mkdir -p active/. check green. Merge stays human. Only follow-up: ship_* to also-write the dated record for NEW completions (small, own PR). Phase-2 wiki filed+parked
 - prs: PyAutoMind#72 (structure) + PyAutoBrain#109 (skills) MERGED; PyAutoMind#73 (dated archive + drops) OPEN
 - worktree-branch: feature/lifecycle-migrate (PR-B) in ~/Code/PyAutoLabs-wt/lifecycle-state-split
 - autonomy: supervised effective (--auto launched 2026-07-13; feature cap at Difficulty large = supervised; plan written to issue #71 per contract; no heart-ack given → ship parks)
