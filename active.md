@@ -41,17 +41,6 @@
 - worktree: none (analysis on PyAutoReduce main; branch feature/pj011646-wfc3-parity only at ship)
 - repos:
 
-## rect-adapt
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/372
-- session: claude --resume 4bf88e6b-682d-4590-906f-77b68d059b26
-- status: MERGED 2026-07-10 (human-directed via kernel-cdf session, coordinated order #375→#374; issue #372 closed with verification upthread) — entry ready to retire to complete.md by its owning session
-- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/375
-- autonomy: supervised effective (--auto chain 2026-07-09; bug cap binds over safe header; ship sign-off will park with question per contract)
-- heart-ack: same 6-reason set as the assistant-ref-mechanics entry (in-session 2026-07-09); binds to exactly that set, any new reason parks
-- note: consumers of edges_transformed = plot/inversion.py pcolormesh + mesh_geometry/rectangular_rotated.py — both inherit the fix; mcmc-corner-smoke (nightly blocker) queued in planned.md on autofit_workspace/PyAutoFit claims
-- worktree: ~/Code/PyAutoLabs-wt/rect-adapt
-- repos:
-  - PyAutoArray: feature/rect-adapt
 
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17

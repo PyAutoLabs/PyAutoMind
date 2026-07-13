@@ -1,3 +1,9 @@
+## rect-adapt (rectangular adaptive-mesh edges — MERGED)
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/372 (CLOSED)
+- completed: 2026-07-10 (--auto chain; human-directed merge via the kernel-cdf session; coordinated order #375→#374). Retired to complete.md + worktree/branch cleaned 2026-07-13 (/morning).
+- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/375 — MERGED (squash) 2026-07-10.
+- summary: rectangular adaptive-mesh `edges_transformed` fix. Consumers `plot/inversion.py` (pcolormesh) + `mesh_geometry/rectangular_rotated.py` both inherit it. Verification upthread on #372. Follow-up mcmc-corner-smoke (a nightly blocker) was queued in planned.md on autofit_workspace/PyAutoFit claims.
+
 ## ep-negative-sigma-crash (EP hierarchical factor sigma<0 — MERGED)
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1363 (CLOSED)
 - completed: 2026-07-13 (--auto; effective supervised = min(safe header, bug cap); human ship sign-off + YELLOW-ack + merge at the checkpoint)
