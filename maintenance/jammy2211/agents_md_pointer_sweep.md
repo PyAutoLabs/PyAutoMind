@@ -9,7 +9,16 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: complete
+
+<!-- RESOLVED 2026-07-13. euclid_assistant CLAUDE.md -> content-free @AGENTS.md
+     pointer + canonical AGENTS.md header (Jammy2211/euclid_assistant#7, merged
+     squash). The other two repos needed no change: autofit_workspace_developer
+     already carries a compliant @AGENTS.md pointer; admin_jammy has no AGENTS.md
+     (record-only per this prompt's rule — slated to leave PyAutoLabs). Reached
+     them from a local full checkout rather than a Jammy2211-rooted session.
+     repos_sync.py --check now reports "CLAUDE.md -> AGENTS.md pointers: OK". -->
+
 
 Follow-up from the ecosystem AGENTS.md/CLAUDE.md standardization epic
 (`z_features/agents_md_standardization.md`, completed 2026-07-12). That sweep
