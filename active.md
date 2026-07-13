@@ -3,8 +3,8 @@
 
 ## lifecycle-state-split
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
-- status: awaiting-input — PR-A COMPLETE (structure + rewire), parked at supervised ship sign-off. Commits (local, NOT pushed): PyAutoMind b108910+be95921 (issued/→active/ 440 files, work-types→draft/, complete/+lifecycle.py, spawn/status/sync/docs); PyAutoBrain 873169a (create_issue/ship_*/start_dev/intake). Gate: Brain pytest 46p / smoke n-a / review pending / Heart YELLOW UNACKED. Needs human: authorize push+PR-open + merge. Post-merge: (a) republish PyAutoMind-template, (b) PR-B migrate/split
-- question: https://github.com/PyAutoLabs/PyAutoMind/issues/71#issuecomment-4959942948
+- status: awaiting-merge — PR-A OPEN + pushed (human-authorized push+PR 2026-07-13). Gate: Brain pytest 46p / smoke n-a / review pending / Heart YELLOW UNACKED. Merge Mind#72 (structure) first, then Brain#109 (skills); merge stays human. Post-merge: (a) republish PyAutoMind-template (spawn_drift red until then), (b) PR-B migrate/split behind review manifest; Phase-2 wiki filed+parked
+- prs: PyAutoMind#72 (structure+engine+rewire) + PyAutoBrain#109 (skills)
 - autonomy: supervised effective (--auto launched 2026-07-13; feature cap at Difficulty large = supervised; plan written to issue #71 per contract; no heart-ack given → ship parks)
 - note: docs/ fork resolved (only Type:-headed prompts → draft/docs/; docs/pyautobrain reference stays). lifecycle.py check green; draft→active→complete round-trip smoke passed. Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
 - worktree: ~/Code/PyAutoLabs-wt/lifecycle-state-split
