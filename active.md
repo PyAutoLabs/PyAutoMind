@@ -3,9 +3,9 @@
 
 ## lifecycle-state-split
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/71
-- status: awaiting-merge (PR-B) — PR-A MERGED (Mind#72 + Brain#109 squash 2026-07-13); templates republished. PR-B OPEN Mind#73 (updated per user 2026-07-13): 557 dated records complete/YYYY/MM + active/ 440→7 (dropped 287 done/legacy: 51 numbered + 81 cited + token-overlap remainder; kept 7 in-flight-matched; git-recoverable). complete.md KEPT + paired 1:1 by slug to records (check enforces). create_issue gained mkdir -p active/. check green. Merge stays human. Only follow-up: ship_* to also-write the dated record for NEW completions (small, own PR). Phase-2 wiki filed+parked
-- prs: PyAutoMind#72 (structure) + PyAutoBrain#109 (skills) MERGED; PyAutoMind#73 (dated archive + drops) OPEN
-- worktree-branch: feature/lifecycle-migrate (PR-B) in ~/Code/PyAutoLabs-wt/lifecycle-state-split
+- status: awaiting-merge (3 follow-up PRs) — PR-A + PR-B MERGED 2026-07-13 (structure + 557 dated records + active/ 440→7 + complete.md kept/paired); templates republished. THREE follow-up PRs OPEN: (a) Mind#74 + Brain#110 — lifecycle.py `record` command + ship_* call it (go-forward: new completions write paired dated record); (b) Mind#75 — Phase-2 wiki: lifecycle.py `index` generates complete/index.md (557 records, curated Highlights band, index --check CI + lifecycle_drift.yml). All merge human. Epic essentially complete once these 3 land
+- prs: MERGED PyAutoMind#72+#73, PyAutoBrain#109; OPEN PyAutoMind#74 (record) + PyAutoBrain#110 (ship record) + PyAutoMind#75 (Phase-2 index wiki)
+- branches (in ~/Code/PyAutoLabs-wt/lifecycle-state-split): feature/lifecycle-ship-record (Mind+Brain), feature/complete-index (Mind)
 - autonomy: supervised effective (--auto launched 2026-07-13; feature cap at Difficulty large = supervised; plan written to issue #71 per contract; no heart-ack given → ship parks)
 - note: docs/ fork resolved (only Type:-headed prompts → draft/docs/; docs/pyautobrain reference stays). lifecycle.py check green; draft→active→complete round-trip smoke passed. Mind-internal, no downstream library API impact. Two stray codex worktrees on PyAutoMind (codex-organ-skill-wrappers, codex-skill-bookkeeping) — land before they grow
 - worktree: ~/Code/PyAutoLabs-wt/lifecycle-state-split
