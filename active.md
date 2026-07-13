@@ -121,3 +121,11 @@
 
 
 
+
+## repos-sync-public-organ-tables
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/69
+- session: claude Code (--auto, supervised)
+- status: pr-open x3 — awaiting human merge; ended at PR-open (Heart not GREEN); ship sign-off given by user
+- prs: PyAutoMind#70 (repos_sync generator + 2 drift checks) + .github#3 + PyAutoScientist#1 (repos_sync:organs marker adoption)
+- worktree: ~/Code/PyAutoLabs-wt/repos-sync-public-organ-tables/PyAutoMind (+ feature branches on .github & PyAutoScientist main checkouts, cloned this session)
+- post-merge: remove worktree + delete 3 feature branches; restore .github & PyAutoScientist checkouts to main
