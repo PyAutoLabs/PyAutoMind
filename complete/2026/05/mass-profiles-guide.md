@@ -1,0 +1,6 @@
+## mass-profiles-guide
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/178
+- completed: 2026-05-18
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/179
+- repos: autolens_workspace
+- notes: New scripts/guides/profiles/mass.py in autolens_workspace — single-page tour of every lensing mass profile (Total / Mass Sheets / Multipoles / Point Mass), paired-companion to scripts/guides/profiles/light.py. Detailed example builds al.mp.Isothermal and plots convergence + log10 potential + deflection magnitude + lensed-source image via Tracer. Mass Sheets section covers ExternalShear, MassSheet, ExternalPotential. Point Mass section covers PointMass / SMBH / SMBHBinary via Galaxy wrapper (PointMass family returns raw ndarray for convergence, not Array2D — same kind of library quirk as Basis). PowerLawMultipole positioned after Model Instance (paralleling revised light.py order). Library quirks worked around in the guide rather than fixed upstream: dPIEMass(ell_comps=(0,0)) divide-by-zero, deflections_yx_2d_from returning VectorYX2D (plot via np.hypot + Array2D wrap), dPIEPotential.convergence_2d_from incorrectly returning VectorYX2D. Stellar / dark / lmp / lmp_linear profiles deferred to a separate light_and_mass_profiles.py guide (starting immediately as follow-up task).

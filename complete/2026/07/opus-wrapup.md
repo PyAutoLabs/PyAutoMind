@@ -1,0 +1,5 @@
+## opus-wrapup (executed on Fable)
+- issues: PyAutoMind#51 + PyAutoMind#53 + PyAutoBrain#77 (all closed)
+- completed: 2026-07-10
+- prs: Mind#52 (prompt_sync self-locating) · Mind#54 (spawn stamps family smoke CI; both family repos' first Smoke runs GREEN through the reusable with chain=PyAutoProject/PyPI deps — adopter path proven live) · Brain#78 + Build#135 + Heart#56 (clone v1)
+- summary: the three post-Phase-4 remainders, all shipped same-day. Clone v1: --apply --mode lightweight-seed emits the plan JSON → Build's new plan-driven clone_seed.py executes (private-first); Heart docs/newborn_validation.md is the publish gate. First birth executed end-to-end as v1's proof (autofit_assistant, private: 134 files, clean substitutions incl. derived al_→af_ prefix, 341-entry PENDING queue) — then **DELETED at human direction** (maintainer will build the real autofit assistant from his own prompt, not clone, on this occasion; the machinery stands proven and regenerates it in one command). v2 files on demand. Build claim-override (disjoint from #134) human-approved. PyAutoScientist backlog is now EMPTY.

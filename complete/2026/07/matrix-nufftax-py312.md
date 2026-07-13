@@ -1,0 +1,4 @@
+## matrix-nufftax-py312
+- prs: PyAutoArray#382 + PyAutoBuild#144 (both MERGED 2026-07-11, squash)
+- completed: 2026-07-11
+- summary: Fixed the chronic PyAutoBuild "Python Version Matrix" weekly red. 38 failures/job = nufftax ModuleNotFoundError — default Interferometer transformer is TransformerNUFFT (nufftax), which is python>=3.12-gated in PyAutoArray [optional]; matrix installed bare -e ./PyAutoArray so nufftax/pynufft absent everywhere, and on 3.9-3.11 nufftax can't install by design (org: <3.12 not officially supported). PyAutoArray#382 = conftest pytest_collection_modifyitems skips default-nufftax interferometer/transformer tests when nufftax absent (keeps DFT+pynufft); PyAutoBuild#144 = matrix installs PyAutoArray[optional]. Verified local py3.12: present→pass, blocked→skip clean. Matrix re-dispatched post-merge to confirm green. From /health 2026-07-11.

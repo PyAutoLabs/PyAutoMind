@@ -1,0 +1,5 @@
+## howtogalaxy-sub3
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/362
+- completed: 2026-04-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/363
+- note: Sub-task 3 of 3 — and final step — of the HowToGalaxy extraction. Migrated every HowToGalaxy URL across README, docs toctree, per-chapter pages, `docs/general/workspace.rst`, `docs/howtogalaxy/howtogalaxy.rst`, `docs/overview/overview_2_new_user_guide.rst`, `paper/paper.md`, and `CLAUDE.md` to the new `PyAutoLabs/HowToGalaxy` repo at tag `2026.4.13.6` (matches workspace version at extraction). Colab URLs drop the redundant `howtogalaxy/` segment since the new repo root *is* the tutorial series. Prose rewritten to frame HowToGalaxy as a standalone repo. Umbrella issue PyAutoLabs/autogalaxy_workspace#35 now fully closed (all 3 sub-tasks merged). Follow-up still pending: register HowToGalaxy in PyAutoBuild so `/pre_build` can create future version tags automatically (matches the HowToLens follow-up from PyAutoLens PR #468).

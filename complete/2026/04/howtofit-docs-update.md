@@ -1,0 +1,6 @@
+## howtofit-docs-update
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1230
+- completed: 2026-04-22
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1231
+- umbrella: https://github.com/PyAutoLabs/autofit_workspace/issues/38 (sub-3 of 3)
+- note: Sub-3 of the HowToFit extraction. Deleted `docs/howtofit/` Sphinx chapter tree (4 .rst files, ~174 lines), removed the `:caption: Tutorials:` toctree block from `docs/index.rst`, and rewrote every `pyautofit.readthedocs.io/howtofit/…` and `Jammy2211/autofit_workspace/…/howtofit/…` URL across 19 files to point at the standalone `PyAutoLabs/HowToFit` repo. Touched: 7 `docs/api/*.rst` cross-refs, `docs/general/workspace.rst` (HowToFit section rewritten to "standalone repo" framing), `docs/features/graphical.rst` (2 prose refs hyperlinked), `docs/overview/statistical_methods.rst`, `docs/cookbooks/multiple_datasets.rst`, `docs/science_examples/astronomy.rst`, `README.rst` (header link + body refs), `paper/paper.md` (JOSS paper prose — URL + framing only, no scientific content altered), plus two README-style refs in `docs/index.rst` caught by the verification grep after first pass. Docs-only: 1232 unit tests pass unchanged; no API surface modified. Follow-up still pending on umbrella issue #38: register `howtofit` build target in PyAutoBuild.

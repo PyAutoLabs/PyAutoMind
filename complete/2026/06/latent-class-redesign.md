@@ -1,0 +1,186 @@
+## latent-class-redesign (Phases 1 + 2)
+- completed: 2026-06-09
+- prompt: autofit/latent_class_redesign.md
+- summary: First-class `Latent` extension class decoupling latent variables from `Analysis` (mirrors Visualizer/Result). Phase 1 = PyAutoFit engine extraction (`af.Latent`, `latent_samples_from`) + back-compat shim; Phase 2 = `LatentLens`/`LatentGalaxy` + `Analysis.Latent` in the libraries, `LatentEuclid` in the pipeline, and migrated custom-latent tutorials/workflow scripts in both workspaces.
+- prs (all merged):
+  - PyAutoFit #1310 (per-batch NaN masking fix), #1311 (degenerate edge cases), #1315 (Phase 1 Latent class)
+  - PyAutoConf #112 (PYAUTO_LATENT_NAN_INJECT hook)
+  - PyAutoGalaxy #472, PyAutoLens #568 (Phase 2 libs)
+  - euclid_strong_lens_modeling_pipeline #20, autolens_workspace #219, autogalaxy_workspace #111
+- remaining (Phase 3, NOT done — separate follow-up): migrate z_projects/* (euclid, euclid_pre_f2f, cowls_diana) off the legacy compute_latent_variables override path; optionally remove the Phase-1 back-compat shim.
+
+## Original prompt
+
+# Redesign latent variables: a first-class `Latent` class that separates definition / engine / output / config
+
+Type: refactor
+Target: PyAutoFit
+Difficulty: too-large
+Autonomy: supervised
+Priority: normal
+Status: formalised
+
+## Motivation
+
+Latent-variable handling is currently entangled inside `autofit.Analysis`, which has
+made it bulky and hard to evolve (the last two bug-fix passes — #1310 per-batch
+masking, #1311 degenerate edge cases — both had to surgically edit a ~180-line method
+buried in `analysis.py`). The codebase is independently moving output concerns OUT of
+`Analysis` into dedicated, user-subclassable classes — `Visualizer` and `Result` are
+declared as `Analysis.Visualizer = ...` / `Analysis.Result = ...` class attributes, and
+`SearchUpdater` was already extracted from `NonLinearSearch` (`be1bb75af`). Latents
+should follow the same path: decouple latent *output* from the `Analysis` exactly as the
+updater decouples search output, so concerns are separated and latent *output config*
+(an active need in downstream projects, e.g. the Euclid pipeline) has a clean home.
+
+This is a deliberate redesign + refactor, not a mechanical file move. Think it through in
+Opus before coding; mechanical phases can be delegated to Sonnet.
+
+## Current architecture (what exists today — read before designing)
+
+Four concerns live on / around `Analysis`:
+
+1. **Definition** — `Analysis.compute_latent_variables(self, parameters, model)` (abstract;
+   user overrides). `autofit/non_linear/analysis/analysis.py`.
+2. **Selection / config** — `Analysis.LATENT_KEYS` (autolens/autogalaxy make it a
+   `@property` reading `latent_keys_enabled()`), backed by a module-level
+   `LATENT_FUNCTIONS` registry + a `config/latent.yaml` `key: bool` toggle file
+   (library defaults + workspace overrides; autoconf lowercases keys; unknown keys
+   warn-and-drop). See `autolens/analysis/latent.py`, `autogalaxy/imaging/model/latent.py`.
+3. **Batched evaluation engine** — `Analysis.compute_latent_samples(self, samples, batch_size)`:
+   `LATENT_BATCH_MODE` ("vmap" default / "jit" for vmap-incompatible inner calls),
+   per-sample NaN/inf masking (global col-then-row + greedy salvage), `inject_latent_nans`
+   test hook, soft-fail. The bulk of the bloat.
+4. **Output orchestration + config** — `SearchUpdater._compute_latent_samples`
+   (`autofit/non_linear/search/updater.py`) reads `output.yaml` flags
+   (`latent_during_fit`, `latent_after_fit`, `latent_draw_via_pdf`,
+   `latent_draw_via_pdf_size`), draws via PDF, calls `analysis.compute_latent_samples`,
+   and saves `latent/samples.csv` + `latent/latent_summary.json`.
+
+The Visualizer precedent to mirror: base `Visualizer` in
+`autofit/non_linear/analysis/visualize.py` (all `@staticmethod`, first arg `analysis`);
+`Analysis.Visualizer = Visualizer` (analysis.py); `Analysis.__getattr__` forwards
+`visualize*`/`should_visualize*` to `self.Visualizer`; `SearchUpdater.visualize` calls
+`analysis.visualize(...)`; users subclass `af.Visualizer` (e.g. `VisualizerImaging`).
+
+## Problems with the status quo
+
+- `Analysis` owns definition + selection + the heavy engine — bloated, hard to test in
+  isolation, inconsistent with the `Visualizer`/`Result` "declare a class" direction.
+- Users extend latents by overriding a **method** (`compute_latent_variables`) + a
+  property (`LATENT_KEYS`), not by subclassing a **class** — diverging from where
+  visualization is heading (subclass a `Visualizer`).
+- Latent **output config** is split across `config/latent.yaml` (which latents) and
+  `output.yaml` (when/how) with no single owner — awkward as projects want richer
+  per-latent output control.
+- Documentation: the "define your own latent" guidance exists only buried inside the
+  results tutorials (`autolens_workspace/scripts/guides/results/latent_variables.py:197-244`
+  "Extending with a Custom Latent"; autogalaxy equivalent ~169-219; autofit cookbook
+  `cookbooks/analysis.py:644-708`) and is method-override based — there is no standalone,
+  discoverable guide, and these examples will need rewriting to whatever new API lands.
+
+## Proposed design
+
+Introduce a first-class `Latent` class, mirroring `Visualizer`/`Result`, that owns the
+latent concerns and is declared on the analysis. New module
+`autofit/non_linear/analysis/latent.py`:
+
+- **`class Latent`** (base): the user-/library-subclassed extension point.
+  - `keys(analysis) -> list[str]` — which latents are enabled (default: empty; a library
+    subclass reads `config/latent.yaml` + its registry).
+  - `variables(analysis, parameters, model) -> tuple | dict` — compute one sample's
+    latents (replaces `compute_latent_variables`).
+  - `BATCH_MODE = "vmap"` (replaces `LATENT_BATCH_MODE`).
+  - **DECIDED: static methods, mirroring `Visualizer`** — `@staticmethod keys(analysis)`
+    and `@staticmethod variables(analysis, parameters, model)`. Per-fit state (e.g.
+    `magzero`) is reached via the passed `analysis.kwargs`. No instance lifecycle.
+- **Engine as a module function** in `latent.py`:
+  `latent_samples_from(latent, analysis, samples, batch_size)` — the batching, vmap/jit
+  dispatch, masking and salvage moved verbatim out of `Analysis.compute_latent_samples`.
+  Testable in isolation; reused by every package. This alone achieves the original
+  "slim analysis.py" goal.
+- **`Analysis.Latent = Latent`** class attribute (mirror `Visualizer`/`Result`).
+  `SearchUpdater._compute_latent_samples` calls a single entry point
+  (`analysis.latent_samples_from(samples, batch_size)` delegating to the engine with
+  `self.Latent`, OR the updater calls `latent_samples_from(analysis.Latent, analysis, ...)`).
+  Keep output orchestration (output.yaml flags, PDF draw, save csv/summary) in the updater.
+- **Library latents become `Latent` subclasses**: e.g. `LensLatent(af.Latent)` in
+  `autolens/analysis/latent.py`, `GalaxyLatent(af.Latent)` in autogalaxy — `keys()` reads
+  the yaml via `latent_keys_enabled()`, `variables()` builds the `{fit, magzero, xp}`
+  context and dispatches `LATENT_FUNCTIONS`. `AnalysisImaging` declares `Latent = LensLatent`.
+  The registry + yaml toggles stay (good config story) but move inside the class.
+- **Latent output config — DECIDED: keep `output.yaml` latent_* flags as-is**, read by the
+  updater. No `LatentConfig` in this redesign (smallest blast radius); a richer per-latent
+  output config can be a separate follow-up once the class/engine split has landed.
+
+Net separation: **definition+selection** = `Latent` subclass; **engine** = `latent.py`
+function; **output+config** = `SearchUpdater` (+ optional `LatentConfig`); `Analysis`
+just declares `Latent = ...`.
+
+## Backwards compatibility — phased, not big-bang
+
+Many call sites override `compute_latent_variables` + `LATENT_KEYS`: autolens, autogalaxy,
+the Euclid pipeline (`euclid_strong_lens_modeling_pipeline/util.py` aperture latents),
+workspace tutorials, the autofit cookbook. A big-bang multi-repo break is risky.
+
+- **Phase 1 (PyAutoFit):** add `Latent` + engine extraction + `Analysis.Latent`. Provide a
+  **back-compat default `Latent`** that delegates to `analysis.compute_latent_variables` /
+  `LATENT_KEYS` if those are still overridden, so existing subclasses keep working
+  unchanged. Move latent engine tests into `test_autofit/non_linear/analysis/test_latent.py`.
+  `analysis.py` slimmed. No behaviour change.
+- **Phase 2 (PyAutoGalaxy + PyAutoLens):** ship `GalaxyLatent` / `LensLatent`, declare
+  `Latent = ...` on `AnalysisImaging`; relocate the per-package latent tests. Keep the
+  registry + yaml.
+- **Phase 3 (workspaces + Euclid pipeline + docs):** migrate `util.py` aperture latents and
+  the workspace tutorials to subclass `Latent`; write the standalone **"Define your own
+  latent variable"** guide (see docs gap) against the new class API.
+- **Phase 4 (optional):** deprecate then remove `compute_latent_variables` / `LATENT_KEYS`
+  overrides once nothing depends on them.
+
+Issue each phase as its own task when its predecessor is close to shipping (do not queue
+all upfront).
+
+## Design decisions
+
+Resolved (locked):
+- **Static methods, mirroring `Visualizer`** (`@staticmethod` taking `analysis`).
+- **Keep `output.yaml` latent_* flags as-is** — no `LatentConfig` in this redesign.
+- **Phased migration with a Phase-1 back-compat shim** (de-risks the multi-repo break).
+
+Still open (decide in Opus when Phase 1 is picked up):
+- **Name** — `Latent` (recommended; mirrors `Visualizer`/`Result`) vs
+  `LatentMaker`/`LatentComputer`.
+- **Method names** — `keys()` / `variables()` vs keeping `compute_latent_variables` for
+  continuity (affects how thin the back-compat shim is).
+
+## Documentation gap (close in Phase 3)
+
+- Existing custom-latent guidance is buried and method-based (cite above). After the
+  redesign it must be rewritten to subclassing `Latent`.
+- Write a dedicated, discoverable **"Define your own latent variable"** example
+  (autolens_workspace + autogalaxy_workspace, and an autofit_workspace cookbook entry):
+  the quick local path (subclass `Latent`), the library-contribution path (add to the
+  registry + yaml), when to choose which, magzero/xp/JAX threading, and how the latent
+  reaches `latent.csv` / the aggregator. This was never written as a first-class tutorial.
+
+## Acceptance / verification
+
+- `analysis.py` no longer contains the latent batching/masking body; latent logic lives in
+  `latent.py`; `analysis.py` measurably slimmer.
+- `pytest test_autofit` green (excluding the pre-existing `nss` optional-dep ImportErrors).
+- Phase 1 is a pure refactor: PyAutoGalaxy/PyAutoLens unchanged and still green; the three
+  `*_workspace_test/latent_nan_robustness.py` integration guards and the
+  `latent_variables_smoke.py` still pass.
+- No behaviour change through Phases 1–3 (config-driven outputs identical); only the
+  extension *mechanism* changes.
+
+## Notes / context
+
+Sequenced after the latent NaN-robustness fixes (PyAutoFit #1310, #1311 — merged).
+Prior art: `SearchUpdater` extraction (`be1bb75af`), the `Visualizer`/`Result`
+class-attribute extension pattern. Latent feature history for reference: first-class
+latent APIs in autogalaxy (#441) and autolens (#534), `LATENT_BATCH_MODE` (#1288-era),
+raw-flux + soft-fail magzero (#463/#557), global masking (#1310), degenerate edge cases
+(#1311).
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->
