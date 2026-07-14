@@ -1,3 +1,12 @@
+## inversion-testmode-singular-guard
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/388 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/389 (merged 1ff90287, squash)
+- repos: PyAutoArray
+- summary: release-tail singular/non-PD inversion FAILs (slam/cpu_fast_modeling) were a flaky TEST_MODE artifact, not a conditioning bug — test-mode-gated dummy at inversion raise-sites (is_test_mode()), no conditioning floor. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass 542p/0f/0t); Heart YELLOW. See project_inversion_testmode_singular_guard.
+
+## Original prompt
+
 # Test-mode-gate the singular/non-PD inversion crash in PyAutoArray
 
 Type: bug

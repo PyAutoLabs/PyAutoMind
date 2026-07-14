@@ -1,3 +1,12 @@
+## aggregator-quick-fit-consolidation
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/274 (closed)
+- completed: 2026-07-14
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/275 (merged c17ddfa5, squash)
+- repos: autolens_workspace
+- summary: guides/results tutorials ran own capped fits pruning to 2 samples vs deep [-10]/[9] IndexError → consolidate onto _quick_fit's 300-sample fit (match model: +shear, Sersic→MGE). Release-tail item E. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass); Heart YELLOW. See project_aggregator_indexerror_samples_weight_threshold.
+
+## Original prompt
+
 # Aggregator scripts crash with IndexError (empty results) on release wheels
 
 Type: bug

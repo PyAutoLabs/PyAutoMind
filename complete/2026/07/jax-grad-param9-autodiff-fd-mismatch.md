@@ -1,3 +1,12 @@
+## jax-grad-param9-autodiff-fd-mismatch
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164 (closed)
+- completed: 2026-07-14
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/165 (merged 6c4ff26a)
+- repos: autolens_workspace_test
+- summary: jax_grad imaging pixelization parameter-9 autodiff-vs-FD mismatch → parameter-specific documented FD exclusion. Release-tail item B. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass); Heart YELLOW.
+
+## Original prompt
+
 # jax_grad imaging pixelization: autodiff vs finite-difference mismatch at parameter 9
 
 Type: bug

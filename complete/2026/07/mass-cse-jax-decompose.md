@@ -1,3 +1,12 @@
+## mass-cse-jax-decompose
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/499 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/500 (merged b8bc0a3e, squash)
+- repos: PyAutoGalaxy
+- summary: incomplete Sérsic-stellar-mass CSE→JAX port (chaining.py FAIL) — thread xp through Sersic CSE deflection path, branch-free cse_settings_from, jnp.linalg.lstsq on JAX path. NOT jax-0.10.2. Release-tail item F. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass); Heart YELLOW. See project_cse_mass_jax_trace_bug.
+
+## Original prompt
+
 # group/mass_stellar_dark chaining fails with a JAX exception on release wheels
 
 Type: bug

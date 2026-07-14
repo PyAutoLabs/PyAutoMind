@@ -1,3 +1,12 @@
+## database-latent-wheel-load
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1368 (merged, squash)
+- repos: PyAutoFit
+- summary: database scripts failed on release wheels loading latent variables → AssertionError. Release-tail item D. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass 542p/0f/0t); Heart YELLOW.
+
+## Original prompt
+
 # Database scripts fail on release wheels: "Failed to load latent variables" → AssertionError
 
 Type: bug

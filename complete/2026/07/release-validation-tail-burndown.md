@@ -1,3 +1,11 @@
+## release-validation-tail-burndown
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/72 (closed)
+- completed: 2026-07-14
+- repos: (epic — coordinated PyAutoConf/Fit/Array/Galaxy/Lens + workspaces)
+- summary: EPIC/capstone. Burned down the 18f/5t mode=release tail. All real correctness bugs fixed+merged+validated on wheels (A jax-drift, B param9 #164, D database #1367, E aggregator #274, F CSE #499, G interferometer #606, inversion #388, + jax_grad-config/timeout/shapelets-delaunay no_run). Structural perf-flake tail resolved by SLOW-no_run'ing the flaky real-search population (alwt#169, agwt#73) — lean choice over a reverted advisory tier (#74). Fresh mode=release run v2026.7.14.1.dev66001 = 542p/0f/0t/87s → release_ready true → Heart RED→YELLOW (score 65, zero RED). See project_release_2026_07_13_blocked_3bugs.
+
+## Original prompt
+
 # Release-validation tail burn-down — clear the 18f/5t so mode=release goes GREEN
 
 Type: test

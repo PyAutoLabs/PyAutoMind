@@ -6061,3 +6061,50 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/169 (merged, squash) + https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/73 (merged, squash)
 - repos: autolens_workspace_test, autogalaxy_workspace_test
 - summary: mode=release integrate kept going RED not on bugs but on a shifting perf-flake tail of slow real-search scripts timing out near the per-script cap (PyAutoHeart#74, follow-up to release-tail epic). FIRST built a full advisory tier (advisory.yaml = run-but-de-gate; new TIMEOUT_ADVISORY status in Build; readiness YELLOW-not-RED in Heart) across Heart+Build+3 workspaces, verified + shipped to 5 PRs under corrective-red --auto. Human then judged it over-engineered: advisory's premise (no_run SLOW-skips erode coverage / whack-a-mole) is already bounded by the maintainer's hygiene sweep of no_run, and for reliably-too-slow scripts a skip ≡ an advisory-timeout. REVERTED fully (closed all 5 PRs, deleted branches, removed mechanism) and instead SLOW-no_run'd the 17 flaky real-search scripts (jax_likelihood_functions interferometer/datacube/multi + jax_grad, .py-anchored + verified 1:1) in the two _test workspaces. EXCLUDED cpu_fast_modeling (singular fix PyAutoArray#388, not a timeout) + autolens shapelets (uncertain; autogalaxy already agw#131). Accepted trade-off: flaky set shifts run-to-run → next handful added via hygiene, not an automated tier. Lesson: prefer the lean existing lever when the user hygiene-manages the debt bucket (feedback_prefer_lean_existing_lever). Merged by human direction; Heart stays RED on unrelated PyAutoArray branch reason. See project_release_advisory_tier_slow_scripts.
+## interferometer-analysis-fitexception
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/606 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/607 (merged 5250d80a5, squash)
+- repos: PyAutoLens
+- summary: interferometer (+point_source) log_likelihood_function lacked imaging's NumPy-path try/except→FitException guard → non-PD np.linalg.cholesky crashed the search instead of resampling (JAX path masks via NaN). Mirror imaging/model/analysis.py guard. Release-tail item G. Corrective validation GREEN on mode=release v2026.7.14.1.dev66001 (integrate:pass 542p/0f/0t); Heart YELLOW. See project_interferometer_nonpd_numpy_path_fitexception.
+
+## mass-cse-jax-decompose
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/499 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/500 (merged b8bc0a3e, squash)
+- repos: PyAutoGalaxy
+- summary: incomplete Sérsic-stellar-mass CSE→JAX port (chaining.py FAIL) — thread xp through Sersic CSE deflection path, branch-free cse_settings_from, jnp.linalg.lstsq on JAX path. NOT jax-0.10.2. Release-tail item F. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass); Heart YELLOW. See project_cse_mass_jax_trace_bug.
+
+## jax-grad-param9-autodiff-fd-mismatch
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164 (closed)
+- completed: 2026-07-14
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/165 (merged 6c4ff26a)
+- repos: autolens_workspace_test
+- summary: jax_grad imaging pixelization parameter-9 autodiff-vs-FD mismatch → parameter-specific documented FD exclusion. Release-tail item B. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass); Heart YELLOW.
+
+## database-latent-wheel-load
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1368 (merged, squash)
+- repos: PyAutoFit
+- summary: database scripts failed on release wheels loading latent variables → AssertionError. Release-tail item D. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass 542p/0f/0t); Heart YELLOW.
+
+## aggregator-quick-fit-consolidation
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/274 (closed)
+- completed: 2026-07-14
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/275 (merged c17ddfa5, squash)
+- repos: autolens_workspace
+- summary: guides/results tutorials ran own capped fits pruning to 2 samples vs deep [-10]/[9] IndexError → consolidate onto _quick_fit's 300-sample fit (match model: +shear, Sersic→MGE). Release-tail item E. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass); Heart YELLOW. See project_aggregator_indexerror_samples_weight_threshold.
+
+## inversion-testmode-singular-guard
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/388 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/389 (merged 1ff90287, squash)
+- repos: PyAutoArray
+- summary: release-tail singular/non-PD inversion FAILs (slam/cpu_fast_modeling) were a flaky TEST_MODE artifact, not a conditioning bug — test-mode-gated dummy at inversion raise-sites (is_test_mode()), no conditioning floor. Corrective validation GREEN on v2026.7.14.1.dev66001 (integrate:pass 542p/0f/0t); Heart YELLOW. See project_inversion_testmode_singular_guard.
+
+## release-validation-tail-burndown
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/72 (closed)
+- completed: 2026-07-14
+- repos: (epic — coordinated PyAutoConf/Fit/Array/Galaxy/Lens + workspaces)
+- summary: EPIC/capstone. Burned down the 18f/5t mode=release tail. All real correctness bugs fixed+merged+validated on wheels (A jax-drift, B param9 #164, D database #1367, E aggregator #274, F CSE #499, G interferometer #606, inversion #388, + jax_grad-config/timeout/shapelets-delaunay no_run). Structural perf-flake tail resolved by SLOW-no_run'ing the flaky real-search population (alwt#169, agwt#73) — lean choice over a reverted advisory tier (#74). Fresh mode=release run v2026.7.14.1.dev66001 = 542p/0f/0t/87s → release_ready true → Heart RED→YELLOW (score 65, zero RED). See project_release_2026_07_13_blocked_3bugs.

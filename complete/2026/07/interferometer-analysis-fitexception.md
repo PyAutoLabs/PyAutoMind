@@ -1,3 +1,12 @@
+## interferometer-analysis-fitexception
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/606 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/607 (merged 5250d80a5, squash)
+- repos: PyAutoLens
+- summary: interferometer (+point_source) log_likelihood_function lacked imaging's NumPy-path try/except→FitException guard → non-PD np.linalg.cholesky crashed the search instead of resampling (JAX path masks via NaN). Mirror imaging/model/analysis.py guard. Release-tail item G. Corrective validation GREEN on mode=release v2026.7.14.1.dev66001 (integrate:pass 542p/0f/0t); Heart YELLOW. See project_interferometer_nonpd_numpy_path_fitexception.
+
+## Original prompt
+
 # interferometer/model_fit crashes: LinAlgError "Matrix is not positive definite" on release wheels
 
 Type: bug
