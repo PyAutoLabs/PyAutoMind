@@ -1,3 +1,12 @@
+## pyautolens-jax-joss-paper (PyAutoLens-JAX JOSS paper scaffold — MERGED)
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/608 (CLOSED)
+- completed: 2026-07-14 (supervised; human acknowledged Heart YELLOW and directed merge)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/609 — MERGED (merge commit eab44c046730bba72442b7c57896a1bf6bedad56)
+- summary: Added `paper_jax/` alongside the published `paper/`, with the exact PyAutoLens-JAX title, author-supplied Summary and Statement of need, end-to-end benchmark draft, current JOSS section scaffold, bibliography, build instructions, and AI disclosure. The existing paper was unchanged.
+- validation: 381 PyAutoLens tests passed; four GitHub Python 3.12/3.13 jobs passed; downstream smoke gate passed 53 checks across six workspaces with 0 failures and 2 configured skips. Docker was unavailable locally, so the documented Inara PDF command was not executed.
+
+## Original prompt
+
 # Set up the PyAutoLens-JAX JOSS paper
 
 Type: docs
