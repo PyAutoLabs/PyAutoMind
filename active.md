@@ -23,12 +23,12 @@
 
 ## mass-cse-jax-decompose
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/499
-- status: library-shipped, awaiting-merge — P1 PR open pending-release; human ship sign-off given in-session; merge stays human
+- status: merged-awaiting-corrective-validation — P1 merged; fresh wheels + release-integration rerun + new Heart verdict remain; issue kept open
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/500
+- merge: b8bc0a3e09f57b403cd25b74ec668d01caa745f4 — squash-merged by explicit human direction 2026-07-14; issue #499 kept open until release-validation reruns on wheels
 - worktree: ~/Code/PyAutoLabs-wt/mass-cse-jax-decompose
-- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; ship sign-off given in-session issuecomment-4969172226; no heart-ack; bug cap)
-- commit: 68a2a00d (feature/mass-cse-jax-decompose)
-- note: phased — P1 unblock mass_stellar_dark/chaining.py DONE (thread xp through Sersic CSE deflection path; branch-free cse_settings_from static 50/80 counts; jnp.linalg.lstsq on JAX path). Validated: chaining.py green 0-tb, 432 mass tests pass, jit round-trip ~1e-11, numpy-vs-jax ≤2e-5 for n∈[1,4]. NFW deflects analytically (HK24) so out of deflection CSE scope. Workspace-impact (iii): internal API, but ~1e-3 numpy deflection change reaches 3 regression scripts (mass_via_integral/sersic*.py, mass/stellar.py) — smoke re-run wanted, golden refresh if shift. P2 follow-up: n<1 lstsq parity gap 3e-3 + add mp.Sersic to profiles_jit.py. Real library bug (incomplete CSE JAX port), not jax-0.10.2 regression.
+- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; ship sign-off + merge given in-session issuecomment-4969172226; no heart-ack; bug cap)
+- note: P1 DONE+MERGED. Fixes release-validation tail item (chaining.py FAIL in run 29279095224) — thread xp through Sersic CSE deflection path; branch-free cse_settings_from static 50/80 counts; jnp.linalg.lstsq on JAX path. Validated: chaining.py green 0-tb, 432 mass tests pass, jit round-trip ~1e-11, numpy-vs-jax ≤2e-5 n∈[1,4], regression mass_via_integral/sersic*.py pass rtol=1e-3. NFW deflects analytically (HK24) so out of scope. P2 DROPPED by human (integration test fixed): n<1 lstsq gap 3e-3 documented, below CSE approx error, not release-gating; profiles_jit.py harness addition not pursued. Real library bug (incomplete CSE JAX port), not jax-0.10.2 regression.
 - repos:
   - PyAutoGalaxy: feature/mass-cse-jax-decompose
 

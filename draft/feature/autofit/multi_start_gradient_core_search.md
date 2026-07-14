@@ -3,7 +3,8 @@
 Type: feature
 Target: PyAutoFit
 Repos:
-- PyAutoFit
+- @PyAutoFit
+- @autofit_workspace_test
 Difficulty: large
 Autonomy: supervised
 Priority: normal
