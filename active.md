@@ -7,6 +7,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/pyautolens-jax-joss-paper
 - repos:
+  - PyAutoLens: feature/pyautolens-jax-joss-paper
 
 ## multi-start-gradient-search
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1369
