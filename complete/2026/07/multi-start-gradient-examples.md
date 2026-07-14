@@ -1,3 +1,12 @@
+## multi-start-gradient-examples
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/94 (closed)
+- completed: 2026-07-14
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/95 (merged f23254bd, squash)
+- repos: autofit_workspace
+- summary: Phase 2 (redefined config→examples) of the multi-start gradient search promotion (Fit#1369). Added a MultiStartAdam section to scripts/searches/mle.py (JAX use_jax=True analysis, standard fit plot; ADABelief/Lion noted) + regenerated notebooks/searches/mle.ipynb. Original "config/packaged defaults" phase dropped (searches have no per-search config; new searches add zero config keys). Validated end-to-end (recovers 50/25/10). Finding: the searches need NO pytree registration in user scripts (instance built inside traced objective). --auto safe; Heart YELLOW human-acked. See project_multi_start_gradient_search_promotion.
+
+## Original prompt
+
 # Multi-start gradient searches — autofit_workspace example (Phase 2)
 
 Type: docs

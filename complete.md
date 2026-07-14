@@ -6131,3 +6131,10 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/43 (merged 0a81c457, squash)
 - repos: PyAutoFit, autofit_workspace_test
 - summary: Phase 1 of promoting the benchmark-winning multi-start gradient MAP optimizer to first-class PyAutoFit searches. AbstractMultiStartGradient(AbstractMLE) + af.MultiStartAdam/MultiStartADABelief/MultiStartLion (distinct class per optax rule, mirroring AbstractBFGS→BFGS/LBFGS): N broad multi-starts vmapped over the af.Fitness seam, fixed self-normalised optax step per start, best-basin MAP + per-start diagnostics via standard samples/result; optax added to the jax extra. Library unit tests numpy-only; JAX end-to-end truth-basin validation in autofit_workspace_test (scripts/searches/MultiStartAdam.py, recovers 1D Gaussian 50/25/10). --auto parked on Heart RED, resumed human-present after RED→YELLOW ack. Phases 2 (config/defaults) + 3 (workspace examples) not yet issued. See project_multi_start_gradient_search_promotion.
+
+## multi-start-gradient-examples
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/94 (closed)
+- completed: 2026-07-14
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/95 (merged f23254bd, squash)
+- repos: autofit_workspace
+- summary: Phase 2 (redefined config→examples) of the multi-start gradient search promotion (Fit#1369). Added a MultiStartAdam section to scripts/searches/mle.py (JAX use_jax=True analysis, standard fit plot; ADABelief/Lion noted) + regenerated notebooks/searches/mle.ipynb. Original "config/packaged defaults" phase dropped (searches have no per-search config; new searches add zero config keys). Validated end-to-end (recovers 50/25/10). Finding: the searches need NO pytree registration in user scripts (instance built inside traced objective). --auto safe; Heart YELLOW human-acked. See project_multi_start_gradient_search_promotion.
