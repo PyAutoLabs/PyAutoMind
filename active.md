@@ -204,3 +204,13 @@
 - note: consolidate guides/results tutorials onto one _quick_fit.py. start_here/galaxies_fits/samples each ran their own capped n_like_max=300 fit that prunes to 2 samples (no samples_weight_threshold=None) → deep from_sample_index(-10)/parameter_lists[9] IndexError. Fix = keep inline model but match it to _quick_fit (add shear; samples.py Sersic→MGE) so search.fit() resumes _quick_fit's 300-sample fit (identifier=[search,model,unique_tag], analysis-independent — verified). NOT PyAutoFit#1368 (release unsets PYAUTO_TEST_MODE for guides/results/). Resolves release-validation tail cluster E (PyAutoHeart#72).
 - repos:
   - autolens_workspace: feature/aggregator-quick-fit-consolidation
+
+## release-advisory-tier-slow-scripts
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/74
+- session: claude (start_dev 2026-07-14)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/release-advisory-tier-slow-scripts
+- classification: both (Heart+Build mechanism first; *_test workspace advisory.yaml seeds = ship_workspace follow-up)
+- branch: feature/release-advisory-tier-slow-scripts
+- note: mode=release advisory tier — TIMEOUT_ADVISORY status + advisory.yaml registry so a declared-slow real-search timeout is YELLOW not integrate-RED; non-advisory timeout stays RED. Heart owns policy (validate.py/readiness.py/workspace-validation.yml), Build owns runner (result_collector/build_util/run_python/aggregate_results). The path to a shippable mode=release YELLOW after PyAutoHeart#72's real bugs. Cross-ref PyAutoHeart#72.
+- repos:
