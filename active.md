@@ -173,12 +173,20 @@
 
 ## aggregator-quick-fit-consolidation
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/274
-- status: awaiting-input — fix IMPLEMENTED + VALIDATED in worktree (UNCOMMITTED); supervised ship parks at Heart RED
+- status: corrective-PR-open — awaiting human merge; fresh wheels + release-integration rerun + new Heart verdict remain; issue kept open
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/275
+- commit: 62de0068 (pushed feature/aggregator-quick-fit-consolidation)
 - worktree: ~/Code/PyAutoLabs-wt/aggregator-quick-fit-consolidation
 - autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
-- question: https://github.com/PyAutoLabs/autolens_workspace/issues/274#issuecomment-4969374346
-- corrective-red-candidate: this fix causally repairs Heart RED reason "release validation FAILED (stage integrate)" (aggregator×2, cluster E of PyAutoHeart#72). Ship blocked: Heart RED forbids commit/push/PR at every level; the corrective-PR exception is a live human act that never fires under --auto. Awaiting human authorization quoting that reason.
-- validation: ordered guides/results run under env_vars_release.yaml = 14/14 pass (was 2 IndexError); identifier aceb0b5a matches _quick_fit primary; both fits 300 samples, no 2-sample fit; queries.py unique_tag match fixed. Diff: 8 files (+90/−22), 4 scripts + 4 regenerated notebooks; uncommitted in worktree.
+- corrective-red:
+  - reason: release validation FAILED (stage integrate)
+  - authorization: https://github.com/PyAutoLabs/autolens_workspace/issues/274#issuecomment-4969425505
+  - causal-map: Heart integrate failure → #274 aggregator IndexError (shallow tutorial fits pruned to 2 samples) → consolidate onto _quick_fit's 300-sample fit → PR #275
+  - scope: one pending-release PR only; no merge, issue close, release, or rehearsal; merge stays a separate human act
+  - sibling-red: PyAutoLens + PyAutoGalaxy behind origin; workspace validation 3 failed (2026-07-09); 58 stale parked scripts; PyAutoMind open PR 14d old; install verification not run — all remain, Heart stays RED
+  - tests: n/a (workspace, no pytest); smoke = ordered guides/results under env_vars_release.yaml 14/14 pass (was 2 IndexError); both fits 300 samples, no 2-sample fit; identifier aceb0b5a matches _quick_fit primary; queries.py unique_tag match fixed
+  - validation: after human merge, build fresh wheels, rerun release integration on main, obtain a new Heart verdict before any release decision
+  - review: self-CLEAN — commit 62de0068; 8 files (+90/−22), 4 scripts + 4 regenerated notebooks; scope-clean
 - note: consolidate guides/results tutorials onto one _quick_fit.py. start_here/galaxies_fits/samples each ran their own capped n_like_max=300 fit that prunes to 2 samples (no samples_weight_threshold=None) → deep from_sample_index(-10)/parameter_lists[9] IndexError. Fix = keep inline model but match it to _quick_fit (add shear; samples.py Sersic→MGE) so search.fit() resumes _quick_fit's 300-sample fit (identifier=[search,model,unique_tag], analysis-independent — verified). NOT PyAutoFit#1368 (release unsets PYAUTO_TEST_MODE for guides/results/). Resolves release-validation tail cluster E (PyAutoHeart#72).
 - repos:
   - autolens_workspace: feature/aggregator-quick-fit-consolidation
