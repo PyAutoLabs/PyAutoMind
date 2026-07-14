@@ -2,16 +2,6 @@
 
 
 
-## benchmark-calibration
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/59
-- status: workspace-dev — first calibration campaign: teacher × {sonnet, haiku} + easy × {sonnet} via claude-code-subagent harness, serial (memory); records → benchmarks/runs/, RESULTS.md regen, rubric verdict on issue; PR at end
-- autonomy: supervised effective (human-directed launch 2026-07-10 in-conversation, continuing #57 --auto chain; heart-ack: same set as #58 ship, in-session)
-- note: judge = claude-fable-5 (this session) for judged rows; operator replies honest/minimal via SendMessage; failures recorded
-- worktree: none (in-place: autolens_assistant on feature/benchmark-calibration)
-- repos:
-  - autolens_assistant: feature/benchmark-calibration
-
-
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
 - session: claude --resume cc79d958-a1aa-45cb-b088-bd6cae94aa86
