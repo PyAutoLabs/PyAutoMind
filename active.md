@@ -31,21 +31,4 @@
 - worktree: none (read-only)
 - repos:
 
-## ep-deterministic-reconcile
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1336
-- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: awaiting-input — phase 5 complete; recommendation A (keep both, document trade-off, resurrect #1153 test) on #1336 pending decision
-- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1336#issuecomment-4917522033
-- autonomy: supervised (--auto, launched 2026-07-08)
-- worktree: none (read-only)
-- repos:
-
-## ep-priors-fable-reassess
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1330
-- session: claude --resume 3589268b-e5c9-4b32-b655-d07f732ea300
-- status: awaiting-input — phase 0 complete; decision hub PyAutoFit#1331 open for maintainer/contributor guidance (fix-batch + 5 decisions)
-- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1331
-- worktree: none (read-only reassessment on PyAutoFit main @ 0f26ff2d8; verdicts land in PyAutoMind bug/priors)
-- repos:
-
 
