@@ -219,14 +219,22 @@
   - PyAutoHeart#75: https://github.com/PyAutoLabs/PyAutoHeart/pull/75
   - PyAutoBuild#153: https://github.com/PyAutoLabs/PyAutoBuild/pull/153
 - status-detail: IMPLEMENTED+VERIFIED+SHIPPED-to-PR. Build: result_collector/build_util/run_python/aggregate_results (+test_advisory_tier) commit 8e502f4. Heart: validate.py/readiness.py/workspace-validation.yml/docs +tests commit eeb41df. Unit green (Build 118p; full Heart 268p); E2E via run_python verified (undeclared timeout→exit1/RED; advisory-only→exit0; aggregate ready True). Pre-existing unrelated Build fail: test_pre_build_skill (admin_jammy/PyAutoBrain manifest drift, fails on clean main).
+- workspace-pr:
+  - autogalaxy_workspace_test#72: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/72
+  - autolens_workspace_test#168: https://github.com/PyAutoLabs/autolens_workspace_test/pull/168
+  - autolens_workspace#276: https://github.com/PyAutoLabs/autolens_workspace/pull/276
+- workspace-seed: 19 advisory.yaml entries across 3 workspaces (autolens_workspace_test 9, autogalaxy_workspace_test 8, autolens_workspace 2), all .py-anchored + verified to match exactly one real script. autolens workspace conflict-claims (aggregator/epic) waived by human ("no conflict"). autofit_test + user autogalaxy skipped (no currently-running flakers; their named scripts already no_run-skipped e.g. agw#131 shapelets).
 - corrective-red:
   - reason: release validation FAILED (stage integrate)
   - authorization: in-session human "go --auto" + explicit corrective-PR authorization 2026-07-14
-  - scope: PR-open on Heart#75 + Build#153 only; no merge, no release. Other RED reason (PyAutoArray on feature/ticks-minus-in-math) is unrelated sibling, untouched — Heart stays RED.
-- followup: seed config/build/advisory.yaml in *_test (+ user) workspaces (re-val #3/#4 flip-flop population) — IN PROGRESS this session per human direction; mechanism is a graceful no-op until Build#153 merges + workspaces seeded.
+  - scope: PR-open on Heart#75 + Build#153 + 3 workspace seeds only; no merge, no release. Other RED reason (PyAutoArray on feature/ticks-minus-in-math) is unrelated sibling, untouched — Heart stays RED.
+- followup: (1) merge library-first (Build#153 → Heart#75 → workspace seeds), rerun mode=release, expect GREEN/YELLOW; (2) consider migrating recently-SLOW-no_run'd real-search entries → advisory to restore coverage (deliberate, tied to Profiling Agent); (3) pre-existing test_pre_build_skill manifest drift (admin_jammy vs PyAutoBrain) — separate hygiene fix.
 - repos:
   - PyAutoHeart: feature/release-advisory-tier-slow-scripts
   - PyAutoBuild: feature/release-advisory-tier-slow-scripts
+  - autogalaxy_workspace_test: feature/release-advisory-tier-slow-scripts
+  - autolens_workspace_test: feature/release-advisory-tier-slow-scripts
+  - autolens_workspace: feature/release-advisory-tier-slow-scripts
 
 ## inversion-testmode-singular-guard
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/388
