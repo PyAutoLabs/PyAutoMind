@@ -3,10 +3,11 @@
 
 ## jax-grad-param9-autodiff-fd-mismatch
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164
-- status: workspace-dev
+- status: awaiting-input — ship gate Heart RED; corrective-PR authorization required
 - worktree: ~/Code/PyAutoLabs-wt/jax-grad-param9-mismatch
 - autonomy: supervised (--auto launched 2026-07-14; overlap explicitly acknowledged by human; no heart-ack)
 - note: parallel autolens_workspace_test claim is accepted because release-validation-tail-burndown changes only jax_likelihood_functions/multi/rectangular*.py; this task changes jax_grad/imaging_pixelization.py
+- question: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164#issuecomment-4968099580
 - repos:
   - autolens_workspace_test: feature/jax-grad-param9-mismatch
 
