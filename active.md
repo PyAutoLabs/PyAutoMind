@@ -231,13 +231,21 @@
 ## inversion-testmode-singular-guard
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/388
 - session: claude (start_dev/--auto 2026-07-14)
-- status: blocked (Heart RED — ship gate)
+- status: library-shipped, awaiting-merge (corrective-red PR-open; merge stays human)
 - worktree: ~/Code/PyAutoLabs-wt/inversion-testmode-singular-guard
 - classification: library (PyAutoArray) — bug, supervised
-- autonomy: supervised (--auto launched 2026-07-14; effective=supervised; human ship sign-off given; blocked at Heart-RED leg)
-- blocked-by: Heart RED — reasons: (1) 'PyAutoArray: on branch feature/ticks-minus-in-math (not main)'; (2) 'release validation FAILED (stage integrate)'. Corrective-PR exception N/A (never fires under --auto; fix doesn't causally repair either reason). Resume /ship_library when Heart clears (PyAutoArray→main + integrate passing).
-- block-comment: https://github.com/PyAutoLabs/PyAutoArray/issues/388#issuecomment-4971551270
-- local-commit: 48fae1ac on feature/inversion-testmode-singular-guard (implemented + tested, NOT pushed; resume /ship_library on Heart clear)
+- autonomy: supervised (--auto launched 2026-07-14; effective=supervised; human ship sign-off given; corrective-PR exception human-authorized in-session)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/389
+- corrective-red:
+  - reason: 'release validation FAILED (stage integrate)'
+  - authorization: https://github.com/PyAutoLabs/PyAutoArray/issues/388#issuecomment-4971632324 (in-session human authorization 2026-07-14)
+  - causal-map: integrate FAILs slam.py + cpu_fast_modeling.py (run 29341418859) → unguarded test-mode singular inversion → 4-site is_test_mode() dummy guard (commit 48fae1ac) → PR #389. Follow-up to PyAutoLens#607 (guarded real path only).
+  - scope: one pending-release PR (#389) only; NO merge/close/release/rehearsal. Merge = separate human act.
+  - sibling-red: 'PyAutoArray: on branch feature/ticks-minus-in-math (not main)' remains → Heart stays RED until PyAutoArray→main + integrate re-validates on fresh wheels.
+  - caveat: FAILs did NOT reproduce deterministically on clean main; test-mode-gated fix; causal confirmation only via post-merge re-validation.
+  - tests: test_autoarray/inversion/ 233 passed (incl. +2 numpy guard tests); real-mode numerics byte-for-byte unchanged.
+  - review: self-CLEAN — commit 48fae1ac, 3 files (+101/-12), no mixed scope.
+  - validation: after human merge → fresh wheels → re-run release integration on main → new Heart verdict before any release decision.
 - evidence: 4 raise-sites gated on is_test_mode() (2 inversion_util + 2 abstract log-det); +2 numpy unit tests; test_autoarray/inversion/ 233 passed
 - note: test-mode-gate the singular/non-PD inversion crash (release tail FAILs slam.py + cpu_fast_modeling.py). Flaky TEST_MODE tail, NOT deterministic bug — real inference guarded by resample. Gate 4 inversion raise-sites on is_test_mode() to return benign dummies; NO conditioning floor (would perturb real numerics). Cross-ref PyAutoHeart#72, PyAutoLens#607.
 - repos:
