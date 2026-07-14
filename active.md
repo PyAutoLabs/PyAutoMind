@@ -3,12 +3,20 @@
 
 ## interferometer-analysis-fitexception
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/606
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/PyAutoLens/issues/606#issuecomment-4969024309
+- status: library-shipped, awaiting-merge — corrective-red; fresh wheels + release-integration rerun + new Heart verdict remain after a human merge
+- pr: https://github.com/PyAutoLabs/PyAutoLens/pull/607
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-analysis-fitexception
-- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack) — bug cap; ship sign-off parks with a question
-- note: resolves release-validation tail item G (PyAutoHeart#72). NOT jax-0.10.2 drift — interferometer log_likelihood_function lacks the imaging analysis's NumPy-path try/except→FitException guard, so a non-PD inversion (np.linalg.cholesky at abstract.py:743) crashes the search instead of resampling; JAX path masks it via NaN. Fix = mirror imaging/model/analysis.py:132-144. Reproduced on jax 0.10.2 with PYAUTO_DISABLE_JAX=1.
-- state: fix implemented + validated in worktree (UNCOMMITTED); diff in the question comment. Validation: numpy-path model_fit.py now completes (was LinAlgError crash); 22 interferometer unit tests pass; jax branch unchanged. Parked for ship sign-off (A ship narrow / B expand to point_source / C hold). On A/B → run ship_library.
+- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; scope B chosen by human → point_source guard added; no heart-ack)
+- note: resolves release-validation tail item G (PyAutoHeart#72). NOT jax-0.10.2 drift — interferometer (and point_source) log_likelihood_function lacked the imaging analysis's NumPy-path try/except→FitException guard, so a non-PD inversion (np.linalg.cholesky at abstract.py:743) crashed the search instead of resampling; JAX path masks it via NaN. Fix = mirror imaging/model/analysis.py:132-144. Reproduced on jax 0.10.2 with PYAUTO_DISABLE_JAX=1.
+- corrective-red:
+  - reason: release validation FAILED (stage integrate)
+  - authorization: https://github.com/PyAutoLabs/PyAutoLens/issues/606#issuecomment-4969093660
+  - causal-map: Heart integrate failure → #606 NumPy-path unguarded Cholesky log-det crash → two-file try/except→FitException guard mirroring imaging → commit 904cd64e3 → PR #607
+  - scope: exception authorized one pending-release PR (two-file analysis guard) only; no merge, issue close, release, or rehearsal; merge stays a separate human act
+  - sibling-red: workspace validation 3 failed (2026-07-09); 58 stale parked scripts; PyAutoMind open PR 14d old; install verification not run — all remain, Heart stays RED
+  - tests: full test_autolens/ 381 passed (incl. 22 interferometer + 58 point); numpy-path model_fit.py real search now completes (was LinAlgError crash); jax branch unchanged
+  - validation: after human merge, build fresh wheels, rerun release integration on main, obtain a new Heart verdict before any release decision
+  - review: self-CLEAN — commit 904cd64e3; two files (+20/−5), mirrors imaging pattern, no mixed scope
 - repos:
   - PyAutoLens: feature/interferometer-analysis-fitexception
 
