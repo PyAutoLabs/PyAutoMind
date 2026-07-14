@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## multi-start-gradient-search
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1369
+- status: library-dev — Phase 1 of promote-multi-start-gradient-map-optimizer: core search + samples/result + 3 rule-classes (af.MultiStartAdam/MultiStartADABelief/MultiStartLion). JAX e2e validation in autofit_workspace_test (library-first gate). Phases 2 (config/defaults) + 3 (workspace examples) not yet issued.
+- worktree: ~/Code/PyAutoLabs-wt/multi-start-gradient-search
+- autonomy: supervised (plan approved in-session 2026-07-14)
+- note: PyAutoFit softly claimed by database-latent-wheel-load (#1368 merged, corrective-validation only) — human-approved parallel worktree, no source collision.
+- claims:
+  - PyAutoFit: feature/multi-start-gradient-search
+  - autofit_workspace_test: feature/multi-start-gradient-search
+
 ## interferometer-analysis-fitexception
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/606
 - status: merged-awaiting-corrective-validation — fresh wheels, release-integration rerun, and a new Heart verdict remain; issue kept open
