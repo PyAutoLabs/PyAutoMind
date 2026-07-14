@@ -10,14 +10,6 @@
 - repos:
   - autofit_workspace: feature/multi-start-gradient-examples
 
-## eceb-editorial-revision
-- issue: https://github.com/Jammy2211/euclid_assistant/issues/6
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/eceb-editorial-revision
-- note: private manuscript companion is /mnt/c/Users/Jammy/Science/euclid/paper on the same feature branch
-- repos:
-  - euclid_assistant: feature/eceb-editorial-revision
-
 
 ## benchmark-calibration
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/59
