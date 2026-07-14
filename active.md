@@ -213,6 +213,10 @@
 - classification: both (Heart+Build mechanism first; *_test workspace advisory.yaml seeds = ship_workspace follow-up)
 - branch: feature/release-advisory-tier-slow-scripts
 - note: mode=release advisory tier — TIMEOUT_ADVISORY status + advisory.yaml registry so a declared-slow real-search timeout is YELLOW not integrate-RED; non-advisory timeout stays RED. Heart owns policy (validate.py/readiness.py/workspace-validation.yml), Build owns runner (result_collector/build_util/run_python/aggregate_results). The path to a shippable mode=release YELLOW after PyAutoHeart#72's real bugs. Cross-ref PyAutoHeart#72.
+- autonomy: supervised (--auto launched 2026-07-14; effective=supervised; implementation approved in-session)
+- status-detail: IMPLEMENTED+VERIFIED, ship parked at Heart-RED gate (leg 4). Build: result_collector/build_util/run_python/aggregate_results (+test_advisory_tier). Heart: validate.py/readiness.py/workspace-validation.yml/docs +tests. Unit green (Build advisory 20p; Heart validate+readiness 99p; full Heart 268p); E2E via run_python verified (undeclared timeout→exit1/RED; advisory-only→exit0; aggregate ready True). Pre-existing unrelated Build fail: test_pre_build_skill (admin_jammy/PyAutoBrain manifest drift, fails on clean main).
+- ship-blocked: Heart RED (score 10). red_reasons at launch: [1] "PyAutoArray: on branch feature/ticks-minus-in-math (not main)" — unrelated sibling; [2] "release validation FAILED (stage integrate)" — the structural release-tail RED this feature is the sanctioned fix for. --auto cannot acknowledge RED; awaiting explicit human authorization of the corrective-PR exception naming reason [2].
+- followup: seed config/build/advisory.yaml in *_test workspaces (re-val #3/#4 flip-flop population) = ship_workspace task; mechanism is a graceful no-op until seeded.
 - repos:
   - PyAutoHeart: feature/release-advisory-tier-slow-scripts
   - PyAutoBuild: feature/release-advisory-tier-slow-scripts
