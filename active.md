@@ -1,6 +1,13 @@
 # Active Tasks
 
 
+## pyautolens-jax-joss-paper
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/608
+- session: codex
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/pyautolens-jax-joss-paper
+- repos:
+
 ## multi-start-gradient-search
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1369
 - status: blocked-heart-red — implementation COMPLETE + verified on branch (uncommitted in worktree); autonomous ship blocked by Heart RED (organism-scope, not this branch). Core search + samples/result + 3 rule-classes (af.MultiStartAdam/MultiStartADABelief/MultiStartLion) done; JAX e2e validation in autofit_workspace_test (library-first gate) still pending. Phases 2 (config/defaults) + 3 (workspace examples) not yet issued.
