@@ -208,11 +208,12 @@
 ## inversion-testmode-singular-guard
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/388
 - session: claude (start_dev/--auto 2026-07-14)
-- status: library-shipped, awaiting-merge (corrective-red PR-open; merge stays human)
-- worktree: ~/Code/PyAutoLabs-wt/inversion-testmode-singular-guard
+- status: merged-awaiting-corrective-validation — fresh wheels, release-integration rerun, and a new Heart verdict remain; issue kept open
+- worktree: removed post-merge 2026-07-14 (branch feature/inversion-testmode-singular-guard deleted local+remote; corrective validation runs in CI on main)
 - classification: library (PyAutoArray) — bug, supervised
-- autonomy: supervised (--auto launched 2026-07-14; effective=supervised; human ship sign-off given; corrective-PR exception human-authorized in-session)
+- autonomy: supervised (--auto launched 2026-07-14; effective=supervised; human ship sign-off given; corrective-PR exception human-authorized in-session; merge given in-session)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/389
+- merge: 1ff90287fc7654f864fb4c51cba7ea69686a7b66 — squash-merged by explicit human direction 2026-07-14; issue #388 kept open until release-validation reruns on wheels
 - corrective-red:
   - reason: 'release validation FAILED (stage integrate)'
   - authorization: https://github.com/PyAutoLabs/PyAutoArray/issues/388#issuecomment-4971632324 (in-session human authorization 2026-07-14)
