@@ -329,6 +329,13 @@ Each task is an H2 section:
                                   # (checkpoint-and-continue — PyAutoBrain/AUTONOMY.md)
 - heart-ack:                      # optional; --auto launches: the exact YELLOW
   - <reason line acknowledged at launch>   # reason set the human acknowledged
+- corrective-red:                 # optional; set when shipping under the
+  reason: <exact Heart RED reason string>  # human-authorized corrective-PR
+  authorization: <issue-comment-url>       # exception (PyAutoBrain/AUTONOMY.md
+                                           # "Corrective-PR exception for Heart
+                                           # RED"): names the one RED reason the
+                                           # PR repairs + the human's live
+                                           # authorization comment
 - worktree: ~/Code/PyAutoLabs-wt/<task-name>
 - repos:
   - <RepoName>: feature/<branch-name>
