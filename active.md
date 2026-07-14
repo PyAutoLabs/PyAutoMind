@@ -1,17 +1,6 @@
 # Active Tasks
 
 
-## corrective-pr-heart-red
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/112
-- status: awaiting-merge — SHIPPED 2026-07-14 (present-and-wait; human authorized ship through organism-scoped Heart RED "Ship through the RED", nothing branch-related). Both PRs open, 58 tests pass. Merge stays human → then move to complete/. Design: human-only exception (never --auto; "Heart RED never acknowledged autonomously" verbatim) + name-one-of-several RED reasons.
-- prs: PyAutoBrain#113 + PyAutoMind#78 (same branch; merge together)
-- worktree: ~/Code/PyAutoLabs-wt/corrective-pr-heart-red
-- autonomy: supervised (feature cap; no --auto — present-and-wait; hard-invariant doctrine change)
-- repos:
-  - PyAutoBrain: feature/corrective-pr-heart-red
-  - PyAutoMind: feature/corrective-pr-heart-red
-
-
 ## database-latent-wheel-load
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367
 - status: blocked — implementation + tests complete locally; ship gate is Heart RED (`release validation FAILED (stage integrate)`)
