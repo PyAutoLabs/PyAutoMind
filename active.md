@@ -1,6 +1,14 @@
 # Active Tasks
 
 
+## database-latent-wheel-load
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/database-latent-wheel-load
+- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
+- repos:
+
+
 ## release-validation-tail-burndown
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/72
 - status: in-progress (supervised --auto) — ROOT CAUSE = jax 0.9.2(dev)→0.10.2(release) numerical drift on pixelized JAX inversions (isolated: only jax varied; rectangular Δ2.6e-4, mge Δ1.8e-3 rel). Human approved strategy (ii) loosen golden + keep round-trip, AND "match dev to release". DONE: (1) bumped ~/venv/PyAuto jax→0.10.2 (whole tail now reproducible in dev); (2) cluster A fixed+validated (autolens_workspace_test multi/rectangular.py+rectangular_mge.py: golden→gross-guard rtol=1e-2, exact check=vmap==jit round-trip). Committed d1d3cfe LOCAL (not pushed). Flagged to user: mge 1.8e-3 (7×) as possible (iv)-investigate.
@@ -109,7 +117,6 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
-
 
 
 
