@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## jax-grad-param9-autodiff-fd-mismatch
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-grad-param9-mismatch
+- autonomy: supervised (--auto launched 2026-07-14; overlap explicitly acknowledged by human; no heart-ack)
+- note: parallel autolens_workspace_test claim is accepted because release-validation-tail-burndown changes only jax_likelihood_functions/multi/rectangular*.py; this task changes jax_grad/imaging_pixelization.py
+- repos:
+  - autolens_workspace_test: feature/jax-grad-param9-mismatch
+
+
 ## database-latent-wheel-load
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367
 - status: blocked — implementation + tests complete locally; ship gate is Heart RED (`release validation FAILED (stage integrate)`)
@@ -120,4 +130,3 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
-

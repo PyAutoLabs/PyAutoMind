@@ -1,12 +1,3 @@
-## jax-grad-param9-autodiff-fd-mismatch
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164
-- planned: 2026-07-14
-- classification: workspace
-- suggested-branch: feature/jax-grad-param9-mismatch
-- blocked-by: release-validation-tail-burndown (claims autolens_workspace_test)
-- affected-repos:
-  - autolens_workspace_test
-
 ## lenstool-scaling-slam (PR3 of the lenstool reference-magnitude series)
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265 (parent; PR1 #267 + PR2 #268 merged)
 - status: planned — never started; branch/worktree released 2026-07-13 when the autolens_workspace claim was freed
