@@ -205,29 +205,6 @@
 - repos:
   - autolens_workspace: feature/aggregator-quick-fit-consolidation
 
-## release-advisory-tier-slow-scripts
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/74
-- session: claude (start_dev 2026-07-14)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/release-advisory-tier-slow-scripts
-- classification: both (Heart+Build mechanism first; *_test workspace advisory.yaml seeds = ship_workspace follow-up)
-- branch: feature/release-advisory-tier-slow-scripts
-- autonomy: supervised (--auto launched 2026-07-14; effective=supervised)
-- status: workspace-no-run PRs open (advisory tier REVERTED per human decision — chose no_run + hygiene over a new mechanism)
-- pivot: the advisory tier was built, verified, and shipped to 5 PRs (Heart#75, Build#153, alwt#168, agwt#72, alw#276) under corrective-red, then FULLY REVERTED on human reflection: all 5 PRs closed, all local+remote branches deleted, mechanism removed. Rationale: advisory's core premise (no_run SLOW-skips erode coverage forever / whack-a-mole never converges) is handled by the maintainer's hygiene sweep of no_run; and for reliably-too-slow scripts a skip and an advisory-timeout are equivalent (timed-out script asserts nothing). Leaner = no_run + hygiene.
-- workspace-pr (no_run SLOW, the chosen approach):
-  - autolens_workspace_test#169: https://github.com/PyAutoLabs/autolens_workspace_test/pull/169 (9 SLOW entries)
-  - autogalaxy_workspace_test#73: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/73 (8 SLOW entries)
-- no-run-set: the real-search JAX likelihood/gradient flakers (jax_likelihood_functions interferometer/datacube/multi families + jax_grad/interferometer), .py-anchored + verified 1:1. EXCLUDED: cpu_fast_modeling (singular FAIL being fixed by PyAutoArray#388 [[project_inversion_testmode_singular_guard]], NOT a timeout), autolens group/shapelets (uncertain; autogalaxy shapelets already agw#131). autofit_test unaffected.
-- corrective-red:
-  - reason: release validation FAILED (stage integrate)
-  - authorization: in-session human "go --auto" + corrective-PR authorization 2026-07-14 (originally for the advisory PRs; now covers the 2 no_run PRs, same unblock intent)
-  - scope: PR-open on alwt#169 + agwt#73 only; no merge, no release. Other RED reason (PyAutoArray on feature/ticks-minus-in-math) unrelated sibling — Heart stays RED.
-- followup: (1) merge alwt#169 + agwt#73, rerun mode=release (flaky set may shift → next handful added via hygiene, per the accepted no_run+hygiene model); (2) pre-existing test_pre_build_skill manifest drift (admin_jammy vs PyAutoBrain) — separate hygiene fix.
-- repos:
-  - autolens_workspace_test: feature/release-advisory-tier-slow-scripts
-  - autogalaxy_workspace_test: feature/release-advisory-tier-slow-scripts
-
 ## inversion-testmode-singular-guard
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/388
 - session: claude (start_dev/--auto 2026-07-14)

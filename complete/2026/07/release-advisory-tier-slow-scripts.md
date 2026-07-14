@@ -1,3 +1,12 @@
+## release-advisory-tier-slow-scripts
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/74 (closed)
+- completed: 2026-07-14
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/169 (merged, squash) + https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/73 (merged, squash)
+- repos: autolens_workspace_test, autogalaxy_workspace_test
+- summary: mode=release integrate kept going RED not on bugs but on a shifting perf-flake tail of slow real-search scripts timing out near the per-script cap (PyAutoHeart#74, follow-up to release-tail epic). FIRST built a full advisory tier (advisory.yaml = run-but-de-gate; new TIMEOUT_ADVISORY status in Build; readiness YELLOW-not-RED in Heart) across Heart+Build+3 workspaces, verified + shipped to 5 PRs under corrective-red --auto. Human then judged it over-engineered: advisory's premise (no_run SLOW-skips erode coverage / whack-a-mole) is already bounded by the maintainer's hygiene sweep of no_run, and for reliably-too-slow scripts a skip ≡ an advisory-timeout. REVERTED fully (closed all 5 PRs, deleted branches, removed mechanism) and instead SLOW-no_run'd the 17 flaky real-search scripts (jax_likelihood_functions interferometer/datacube/multi + jax_grad, .py-anchored + verified 1:1) in the two _test workspaces. EXCLUDED cpu_fast_modeling (singular fix PyAutoArray#388, not a timeout) + autolens shapelets (uncertain; autogalaxy already agw#131). Accepted trade-off: flaky set shifts run-to-run → next handful added via hygiene, not an automated tier. Lesson: prefer the lean existing lever when the user hygiene-manages the debt bucket (feedback_prefer_lean_existing_lever). Merged by human direction; Heart stays RED on unrelated PyAutoArray branch reason. See project_release_advisory_tier_slow_scripts.
+
+## Original prompt
+
 # mode=release should tier slow real-search scripts as advisory, not RED-block on the perf tail
 
 Type: feature
