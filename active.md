@@ -6,7 +6,7 @@
 - status: merged-awaiting-corrective-validation — fresh wheels, release-integration rerun, and a new Heart verdict remain; issue kept open
 - pr: https://github.com/PyAutoLabs/PyAutoLens/pull/607
 - merge: 5250d80a51f77513adf462290d5319e2ea85aed1 — squash-merged by explicit human direction 2026-07-14; issue #606 remains open
-- worktree: ~/Code/PyAutoLabs-wt/interferometer-analysis-fitexception
+- worktree: removed post-merge 2026-07-14 (branch feature/interferometer-analysis-fitexception deleted local+remote; corrective validation runs in CI on main, not the worktree)
 - autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; scope B chosen by human → point_source guard added; no heart-ack)
 - note: resolves release-validation tail item G (PyAutoHeart#72). NOT jax-0.10.2 drift — interferometer (and point_source) log_likelihood_function lacked the imaging analysis's NumPy-path try/except→FitException guard, so a non-PD inversion (np.linalg.cholesky at abstract.py:743) crashed the search instead of resampling; JAX path masks it via NaN. Fix = mirror imaging/model/analysis.py:132-144. Reproduced on jax 0.10.2 with PYAUTO_DISABLE_JAX=1.
 - corrective-red:
@@ -18,8 +18,7 @@
   - tests: full test_autolens/ 381 passed (incl. 22 interferometer + 58 point); numpy-path model_fit.py real search now completes (was LinAlgError crash); jax branch unchanged
   - validation: after human merge, build fresh wheels, rerun release integration on main, obtain a new Heart verdict before any release decision
   - review: self-CLEAN — commit 904cd64e3; two files (+20/−5), mirrors imaging pattern, no mixed scope
-- repos:
-  - PyAutoLens: feature/interferometer-analysis-fitexception
+- repos-merged: PyAutoLens (feature/interferometer-analysis-fitexception → main 5250d80a5; branch deleted; no live worktree claim)
 
 
 ## mass-cse-jax-decompose
