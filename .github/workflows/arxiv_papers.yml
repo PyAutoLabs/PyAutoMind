@@ -10,7 +10,8 @@ name: pyauto-arxiv-papers
 #
 # Scope (user, 2026-07-10): STRONG LENSING ONLY — astro-ph.CO / astro-ph.GA
 # papers whose abstract/title names strong lensing (tightest signal). Format:
-# CURATED — 1–3 AI-chosen highlights with short summaries, then a compact list.
+# CURATED — 1–3 AI-chosen highlights, each with an author byline and a
+# 4–5 sentence summary, then a compact list of the rest.
 # Cadence: weekday mornings. Empty days STILL post a short "no new strong-
 # lensing papers today" heartbeat (user, 2026-07-13) — so silence in #papers
 # always means a broken run, never a genuinely empty one.
@@ -161,9 +162,11 @@ jobs:
             Then produce a Slack post:
 
               - HIGHLIGHTS: pick the 1–3 most notable surviving papers. For each,
-                write a 2–3 sentence plain-language summary (what they did + the
-                headline result / why it's interesting). Lead each with the
-                title in bold and a link.
+                write a 4–5 sentence plain-language summary (what they did + the
+                method / data used + the headline result + why it's interesting
+                or any caveats). Lead each with the title in bold and a link,
+                then a byline line naming the authors: list the first up to 5
+                authors, followed by "et al." if there are more than 5.
               - THE REST: a compact bulleted list of the remaining surviving
                 papers, one line each: `• <title> — <first author> et al. (<link>)`.
                 (If ≤3 papers total, everything is a highlight and this list is
@@ -184,7 +187,7 @@ jobs:
                               "text": "<intro: e.g. '*N* new strong-lensing paper(s) on arXiv today.'>" } },
                   { "type": "section",
                     "text": { "type": "mrkdwn",
-                              "text": "*<title>* (<link>)\n<2–3 sentence summary>" } }
+                              "text": "*<title>* (<link>)\n_<authors: first up to 5, then 'et al.' if more>_\n<4–5 sentence summary>" } }
                 ]
               }
 
