@@ -173,9 +173,10 @@
 
 ## aggregator-quick-fit-consolidation
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/274
-- status: corrective-PR-open — awaiting human merge; fresh wheels + release-integration rerun + new Heart verdict remain; issue kept open
+- status: merged-awaiting-corrective-validation — fresh wheels + release-integration rerun + new Heart verdict remain; issue kept open
 - pr: https://github.com/PyAutoLabs/autolens_workspace/pull/275
-- commit: 62de0068 (pushed feature/aggregator-quick-fit-consolidation)
+- merge: c17ddfa5715d81b60cb3a607af08815f9257588e — squash-merged by explicit human direction 2026-07-14; all CI green (smoke 3.12/3.13, navigator, catalogue); issue #274 kept open
+- commit: 62de0068 (feature/aggregator-quick-fit-consolidation)
 - worktree: ~/Code/PyAutoLabs-wt/aggregator-quick-fit-consolidation
 - autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
 - corrective-red:
