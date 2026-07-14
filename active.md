@@ -3,9 +3,14 @@
 
 ## multi-start-gradient-search
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1369
-- status: library-dev — Phase 1 of promote-multi-start-gradient-map-optimizer: core search + samples/result + 3 rule-classes (af.MultiStartAdam/MultiStartADABelief/MultiStartLion). JAX e2e validation in autofit_workspace_test (library-first gate). Phases 2 (config/defaults) + 3 (workspace examples) not yet issued.
+- status: blocked-heart-red — implementation COMPLETE + verified on branch (uncommitted in worktree); autonomous ship blocked by Heart RED (organism-scope, not this branch). Core search + samples/result + 3 rule-classes (af.MultiStartAdam/MultiStartADABelief/MultiStartLion) done; JAX e2e validation in autofit_workspace_test (library-first gate) still pending. Phases 2 (config/defaults) + 3 (workspace examples) not yet issued.
 - worktree: ~/Code/PyAutoLabs-wt/multi-start-gradient-search
-- autonomy: supervised (plan approved in-session 2026-07-14)
+- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
+- heart-red-block:
+  - launched --auto 2026-07-14; effective level supervised (min of header=supervised, feature-large cap=supervised)
+  - Heart RED at ship (score 0): PyAutoGalaxy 1 behind origin; PyAutoLens 1 behind origin; release validation FAILED (stage integrate). All pre-existing release-tail reasons, unrelated to this feature.
+  - Contract: Heart RED forbids commit/push/PR-open at every autonomy level; --auto never acknowledges RED. Corrective-PR exception N/A (feature repairs no named RED reason). Nothing shipped; no code modified to pass a leg.
+  - resume: when Heart clears to GREEN/STALE (or YELLOW human-acked), run ship_library to commit/push/PR on PyAutoFit#1369; branch legs 1-3 are green (see issue).
 - note: PyAutoFit softly claimed by database-latent-wheel-load (#1368 merged, corrective-validation only) — human-approved parallel worktree, no source collision. autofit_workspace_test worktree deferred to post-library-merge (library-first gate).
 - repos:
   - PyAutoFit: feature/multi-start-gradient-search
