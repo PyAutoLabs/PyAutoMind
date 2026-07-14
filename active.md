@@ -4,7 +4,7 @@
 ## pyautolens-jax-joss-paper
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/608
 - session: codex
-- status: library-dev
+- status: blocked-heart-red — manuscript scaffold complete and structurally validated; uncommitted in worktree; ship_library blocked by unrelated Heart RED reasons
 - worktree: ~/Code/PyAutoLabs-wt/pyautolens-jax-joss-paper
 - repos:
   - PyAutoLens: feature/pyautolens-jax-joss-paper
