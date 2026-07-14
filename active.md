@@ -43,29 +43,6 @@
   - autolens_workspace_test: feature/release-validation-tail-burndown
 
 
-## next-wave-population-optimizers
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/97
-- status: A100 CAMPAIGN COMPLETE 2026-07-14 (committed d53dc10/89c3be7 pushed; NOT PR'd — supervised, ship parks). Full arc done: robust MAP needs BOTH diversity AND gradients. CPU: cmaes COLLAPSES (r_E7.999 0/16); sv_cmaes (repulsion, gradient-free) near-but-slow (r_E2.605 0/8); single-start all wrong-basin. A100 (RAL): multi-start Adam 128× = GIGA-Lens scaling PROVEN (23/128 basin, p_hit0.18 stable ~18%/start, r_E1.600 +31788, compile85s); SVGD (repulsion+gradient) REACHES TRUTH (best r_E1.595 +17999, posterior-spread 0/16-final; compile90s, 300steps 105s). Verdict: multi-start Adam=best GPU-scalable point est; SVGD=basin+posterior. Findings: searches_minimal/next_wave_findings.md.
-- RAL PIPELINE ESTABLISHED (reusable): euclid_jump (RAL, key-auth, A100 80GB gpu partition); cloned autolens_workspace_developer@feature branch at /mnt/ral/jnightin/; overlay venv /mnt/ral/jnightin/scratch/nextwave_venv (blackjax1.3, base CUDA jax0.4.38 kept via NOT-in-overlay + PYTHONPATH); blackjax1.3 copy at scratch/bjx13; sbatch nextwave_multistart.sbatch + nextwave_svgd.sbatch; logs /mnt/ral/jnightin/nextwave_logs/. TRAPS: overlay --system-site-packages from venv-python inherits SYSTEM not base venv (missing dill/jax-cuda) → use BASE python + PYTHONPATH overlay-sp; don't pip jaxlib into overlay (CPU wheel shadows CUDA); login-node import jax hangs (CUDA init, no GPU) → JAX_PLATFORMS=cpu or metadata-only; RAL GPU float32 (x64 off); SVGD step MUST be jitted (retrace-per-step else). NEXT (optional): jaxns cameo, multi-start ADABelief/Lion, deeper SVGD. Merge PR#96 first → rebase.
-- also-pending: PR#96 (task jax-gradient-optimizer-benchmark) awaiting human MERGE; on merge this branch rebases onto main.
-- worktree: ~/Code/PyAutoLabs-wt/next-wave-population-optimizers
-- autonomy: supervised (--auto continued from #95 session via "go...do next task" 2026-07-13; experiment cap; ship parks for human sign-off)
-- note: branch feature/next-wave-population-optimizers STACKED on feature/jax-gradient-optimizer-benchmark (PR#96 unmerged) — reuses _grad_setup.py + multi_start_adam.py; REBASE onto main once #96 merges. Reuses #95 MAP harness. Metric = fraction of starts/particles → truth basin (r_E≈1.6) + wallclock + evals vs multi-start Adam baseline.
-- repos:
-  - autolens_workspace_developer: feature/next-wave-population-optimizers
-
-
-## jax-gradient-optimizer-benchmark
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95
-- status: awaiting-merge — SHIPPED (human sign-off "go, ship" 2026-07-13; committed 6344258, pushed). PR open, workspace-only. Shipped through organism-scoped Heart RED (held release + stale 2026-07-09 run; nothing branch-related). Merge stays human → then move to complete/.
-- pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/96
-- worktree: ~/Code/PyAutoLabs-wt/jax-gradient-optimizer-benchmark
-- autonomy: supervised (--auto launched 2026-07-13 in-session; plan approved in-conversation incl. MAP objective via "do MAP, and go --auto"; no heart-ack given)
-- result: single cold-start ALL fail wrong-basin (Adam r_E4.89 / ADABelief 5.01 / L-BFGS 4.42 / SVI 3.54±0.07); multi-start Adam 12× WINS (r_E1.600, logL+31788, 2/12 basin) = GIGA-Lens recipe. LM deferred (single-start→same basin; needs residual-vector). Follow-up filed: experiment/workspaces/next_wave_population_gradient_samplers_on_the.md (SVGD/flowMC/GGNS/SMC-HMC + converged Nautilus).
-- repos:
-  - autolens_workspace_developer: feature/jax-gradient-optimizer-benchmark
-
-
 ## eceb-editorial-revision
 - issue: https://github.com/Jammy2211/euclid_assistant/issues/6
 - status: workspace-dev
