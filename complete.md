@@ -6138,3 +6138,17 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/95 (merged f23254bd, squash)
 - repos: autofit_workspace
 - summary: Phase 2 (redefined config→examples) of the multi-start gradient search promotion (Fit#1369). Added a MultiStartAdam section to scripts/searches/mle.py (JAX use_jax=True analysis, standard fit plot; ADABelief/Lion noted) + regenerated notebooks/searches/mle.ipynb. Original "config/packaged defaults" phase dropped (searches have no per-search config; new searches add zero config keys). Validated end-to-end (recovers 50/25/10). Finding: the searches need NO pytree registration in user scripts (instance built inside traced objective). --auto safe; Heart YELLOW human-acked. See project_multi_start_gradient_search_promotion.
+
+## jax-gradient-optimizer-benchmark
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/95 (closed)
+- completed: 2026-07-13
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/96 (merged)
+- repos: autolens_workspace_developer
+- summary: Workspace-only benchmark (searches_minimal/) of JAX gradient-based optimizers on the HST MGE lens likelihood (AnalysisImaging(use_jax=True), jax.value_and_grad; no PyAutoFit source change), grounded in Herculens / Enzi et al. 2026 (arXiv:2606.30620). Cold-start candidates optax Adam, ADABelief, jaxopt L-BFGS, numpyro SVI, jaxopt Levenberg-Marquardt against _metrics.MLTracker (evals/time-to-ML, robustness = distance to simulator-truth logL). Key finding: EVERY single cold-start method locks onto the WRONG basin (r_E ~3.5–5.0, logL ~-158000) while 12-start Adam (GIGA-Lens recipe) recovers truth (r_E 1.600, logL +31788, ~2/12 starts). Failure is basin selection, not optimizer/speed. Established the RAL A100 pipeline; motivated the next-wave follow-up. See project_jax_gradient_optimizer_benchmark.
+
+## next-wave-population-optimizers
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/97 (closed)
+- completed: 2026-07-13
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/98 (merged)
+- repos: autolens_workspace_developer
+- summary: Follow-up to jax-gradient-optimizer-benchmark (#95/PR96) — fast many-points OPTIMIZERS (MAP, not full Bayesian samplers) on the MGE lens likelihood, testing whether population/diversity buys robustness. Candidates (searches_minimal, same MGE MAP harness): multi-start of other local rules (L-BFGS/ADABelief/Lion/Levenberg-Marquardt), CMA-ES (evosax), SVGD-as-mode-finder (blackjax.svgd), plus a jaxns nested-sampling reference cameo. Baseline to beat = multi-start Adam (r_E 1.600, 2/12 starts, ~1254 s). Finding: robust MAP needs diversity + gradients; SVGD (A100) best (r_E 1.595). Full-sampling wave (tempered SMC/HMC/flowMC/converged Nautilus) explicitly deferred. RAL A100 pipeline used. See project_jax_gradient_optimizer_benchmark.

@@ -16,7 +16,7 @@ Status: formalised
 
 ## The insight this builds on
 
-Follow-up to `experiment/workspaces/benchmark_jax_gradient_based_optimizers_on_the.md`
+Follow-up to `complete/2026/07/jax-gradient-optimizer-benchmark.md`
 (autolens_workspace_developer#95). That run established, on the HST MGE lens
 likelihood, that **every single cold-start method fails the same way** —
 optax Adam (r_E 4.89), ADABelief (5.01), jaxopt L-BFGS (4.42) and numpyro SVI
