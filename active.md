@@ -212,29 +212,21 @@
 - worktree: ~/Code/PyAutoLabs-wt/release-advisory-tier-slow-scripts
 - classification: both (Heart+Build mechanism first; *_test workspace advisory.yaml seeds = ship_workspace follow-up)
 - branch: feature/release-advisory-tier-slow-scripts
-- note: mode=release advisory tier — TIMEOUT_ADVISORY status + advisory.yaml registry so a declared-slow real-search timeout is YELLOW not integrate-RED; non-advisory timeout stays RED. Heart owns policy (validate.py/readiness.py/workspace-validation.yml), Build owns runner (result_collector/build_util/run_python/aggregate_results). The path to a shippable mode=release YELLOW after PyAutoHeart#72's real bugs. Cross-ref PyAutoHeart#72.
-- autonomy: supervised (--auto launched 2026-07-14; effective=supervised; implementation approved in-session)
-- status: library-shipped, workspace-pending (corrective-red PR-open; merge stays human)
-- library-pr:
-  - PyAutoHeart#75: https://github.com/PyAutoLabs/PyAutoHeart/pull/75
-  - PyAutoBuild#153: https://github.com/PyAutoLabs/PyAutoBuild/pull/153
-- status-detail: IMPLEMENTED+VERIFIED+SHIPPED-to-PR. Build: result_collector/build_util/run_python/aggregate_results (+test_advisory_tier) commit 8e502f4. Heart: validate.py/readiness.py/workspace-validation.yml/docs +tests commit eeb41df. Unit green (Build 118p; full Heart 268p); E2E via run_python verified (undeclared timeout→exit1/RED; advisory-only→exit0; aggregate ready True). Pre-existing unrelated Build fail: test_pre_build_skill (admin_jammy/PyAutoBrain manifest drift, fails on clean main).
-- workspace-pr:
-  - autogalaxy_workspace_test#72: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/72
-  - autolens_workspace_test#168: https://github.com/PyAutoLabs/autolens_workspace_test/pull/168
-  - autolens_workspace#276: https://github.com/PyAutoLabs/autolens_workspace/pull/276
-- workspace-seed: 19 advisory.yaml entries across 3 workspaces (autolens_workspace_test 9, autogalaxy_workspace_test 8, autolens_workspace 2), all .py-anchored + verified to match exactly one real script. autolens workspace conflict-claims (aggregator/epic) waived by human ("no conflict"). autofit_test + user autogalaxy skipped (no currently-running flakers; their named scripts already no_run-skipped e.g. agw#131 shapelets).
+- autonomy: supervised (--auto launched 2026-07-14; effective=supervised)
+- status: workspace-no-run PRs open (advisory tier REVERTED per human decision — chose no_run + hygiene over a new mechanism)
+- pivot: the advisory tier was built, verified, and shipped to 5 PRs (Heart#75, Build#153, alwt#168, agwt#72, alw#276) under corrective-red, then FULLY REVERTED on human reflection: all 5 PRs closed, all local+remote branches deleted, mechanism removed. Rationale: advisory's core premise (no_run SLOW-skips erode coverage forever / whack-a-mole never converges) is handled by the maintainer's hygiene sweep of no_run; and for reliably-too-slow scripts a skip and an advisory-timeout are equivalent (timed-out script asserts nothing). Leaner = no_run + hygiene.
+- workspace-pr (no_run SLOW, the chosen approach):
+  - autolens_workspace_test#169: https://github.com/PyAutoLabs/autolens_workspace_test/pull/169 (9 SLOW entries)
+  - autogalaxy_workspace_test#73: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/73 (8 SLOW entries)
+- no-run-set: the real-search JAX likelihood/gradient flakers (jax_likelihood_functions interferometer/datacube/multi families + jax_grad/interferometer), .py-anchored + verified 1:1. EXCLUDED: cpu_fast_modeling (singular FAIL being fixed by PyAutoArray#388 [[project_inversion_testmode_singular_guard]], NOT a timeout), autolens group/shapelets (uncertain; autogalaxy shapelets already agw#131). autofit_test unaffected.
 - corrective-red:
   - reason: release validation FAILED (stage integrate)
-  - authorization: in-session human "go --auto" + explicit corrective-PR authorization 2026-07-14
-  - scope: PR-open on Heart#75 + Build#153 + 3 workspace seeds only; no merge, no release. Other RED reason (PyAutoArray on feature/ticks-minus-in-math) is unrelated sibling, untouched — Heart stays RED.
-- followup: (1) merge library-first (Build#153 → Heart#75 → workspace seeds), rerun mode=release, expect GREEN/YELLOW; (2) consider migrating recently-SLOW-no_run'd real-search entries → advisory to restore coverage (deliberate, tied to Profiling Agent); (3) pre-existing test_pre_build_skill manifest drift (admin_jammy vs PyAutoBrain) — separate hygiene fix.
+  - authorization: in-session human "go --auto" + corrective-PR authorization 2026-07-14 (originally for the advisory PRs; now covers the 2 no_run PRs, same unblock intent)
+  - scope: PR-open on alwt#169 + agwt#73 only; no merge, no release. Other RED reason (PyAutoArray on feature/ticks-minus-in-math) unrelated sibling — Heart stays RED.
+- followup: (1) merge alwt#169 + agwt#73, rerun mode=release (flaky set may shift → next handful added via hygiene, per the accepted no_run+hygiene model); (2) pre-existing test_pre_build_skill manifest drift (admin_jammy vs PyAutoBrain) — separate hygiene fix.
 - repos:
-  - PyAutoHeart: feature/release-advisory-tier-slow-scripts
-  - PyAutoBuild: feature/release-advisory-tier-slow-scripts
-  - autogalaxy_workspace_test: feature/release-advisory-tier-slow-scripts
   - autolens_workspace_test: feature/release-advisory-tier-slow-scripts
-  - autolens_workspace: feature/release-advisory-tier-slow-scripts
+  - autogalaxy_workspace_test: feature/release-advisory-tier-slow-scripts
 
 ## inversion-testmode-singular-guard
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/388
