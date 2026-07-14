@@ -13,11 +13,18 @@
 
 ## database-latent-wheel-load
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367
-- status: blocked — implementation + tests complete locally; ship gate is Heart RED (`release validation FAILED (stage integrate)`)
+- status: corrective-red-authorized — implementation + tests complete locally; review then one pending-release PR
 - worktree: ~/Code/PyAutoLabs-wt/database-latent-wheel-load
 - autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
-- blocker: https://github.com/PyAutoLabs/PyAutoFit/issues/1367#issuecomment-4967286690
-- resume: re-run `/ship_library` after Heart is no longer RED; no commit/push/PR exists
+- corrective-red:
+  - reason: release validation FAILED (stage integrate)
+  - authorization: https://github.com/PyAutoLabs/PyAutoFit/issues/1367#issuecomment-4967751375
+  - corrective-issue: PyAutoFit#1367
+  - causal: release profile PYAUTO_TEST_MODE=0 was treated as enabled by raw string truthiness, routing database output under output/test_mode and causing the stage-integrate database scrapers to find zero searches
+  - scope: existing two-file producer fix and regression tests only; one pending-release PR; no merge, issue close, release, rehearsal, or unrelated changes
+  - tests: 14 focused passed; 1475 full-suite passed and 1 skipped; all 6 release-profile database scripts passed on exact wheel dependencies
+  - validation: after separate human merge approval, build fresh wheels, rerun release integration validation, and obtain a new Heart verdict
+- prior-blocker: https://github.com/PyAutoLabs/PyAutoFit/issues/1367#issuecomment-4967286690
 - repos:
   - PyAutoFit: feature/database-latent-wheel-load
 
