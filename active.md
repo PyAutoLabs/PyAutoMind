@@ -24,10 +24,11 @@
 
 ## mass-cse-jax-decompose
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/499
-- status: library-dev
+- status: awaiting-input — P1 implemented + validated in worktree (uncommitted); supervised ship-PR sign-off parks per AUTONOMY.md
 - worktree: ~/Code/PyAutoLabs-wt/mass-cse-jax-decompose
-- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
-- note: phased — P1 unblock mass_stellar_dark/chaining.py (thread xp + traceable cse_settings_from/decompose, freeze total_cses/sample_points to static ~50/80); P2 Sersic-range + NFW parity harden. Real library bug (incomplete CSE JAX port), not a jax-0.10.2 regression.
+- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack; bug cap; ship sign-off parks with a question)
+- question: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/499#issuecomment-4969172226
+- note: phased — P1 unblock mass_stellar_dark/chaining.py DONE (thread xp through Sersic CSE deflection path; branch-free cse_settings_from with static 50/80 counts; jnp.linalg.lstsq on JAX path). Validated: chaining.py green 0-tb, 432 mass tests pass, jit round-trip ~1e-11, numpy-vs-jax ≤2e-5 for n∈[1,4]. NFW deflects analytically (HK24) so out of deflection CSE scope. P2 follow-up: n<1 lstsq parity gap 3e-3 + add mp.Sersic to profiles_jit.py. Real library bug (incomplete CSE JAX port), not jax-0.10.2 regression.
 - repos:
   - PyAutoGalaxy: feature/mass-cse-jax-decompose
 
