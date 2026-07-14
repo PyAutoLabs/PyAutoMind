@@ -227,3 +227,14 @@
 - repos:
   - PyAutoHeart: feature/release-advisory-tier-slow-scripts
   - PyAutoBuild: feature/release-advisory-tier-slow-scripts
+
+## inversion-testmode-singular-guard
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/388
+- session: claude (start_dev/--auto 2026-07-14)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/inversion-testmode-singular-guard
+- classification: library (PyAutoArray) — bug, supervised
+- autonomy: supervised (--auto launched 2026-07-14; effective=supervised; plan written to issue #388; ship sign-off parks for human)
+- note: test-mode-gate the singular/non-PD inversion crash (release tail FAILs slam.py + cpu_fast_modeling.py). Flaky TEST_MODE tail, NOT deterministic bug — real inference guarded by resample. Gate 4 inversion raise-sites on is_test_mode() to return benign dummies; NO conditioning floor (would perturb real numerics). Cross-ref PyAutoHeart#72, PyAutoLens#607.
+- repos:
+  - PyAutoArray: feature/inversion-testmode-singular-guard
