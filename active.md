@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## release-validation-tail-burndown
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/72
+- status: awaiting-input — RE-SCOPED at first-cluster diagnosis: tail is largely dev(jax0.9.2)↔release(jax0.10.2) ENV DRIFT, not 9 code bugs. Clusters A (jax_likelihood multi/rectangular golden) + C (imaging/modeling_visualization_jit) both PASS on dev venv (jax0.9.2, source), FAIL only on release wheels (jax0.10.2). NOT reproducible locally → can't fix/validate without a jax-0.10.2 repro env. Parked at the ENV DECISION fork (bump dev venv to jax0.10.2 / parallel venv / CI-only) before per-cluster triage. Per no-silent-guards: NOT loosening any golden/tolerance until reproducible on release stack.
+- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/72
+- autonomy: supervised (--auto launched 2026-07-14 "continue and start --auto"; test cap; no heart-ack)
+- worktree: none (diagnosis-only on main; no edits until env fork resolved)
+- resume: choose repro-env approach on #72 → stand up jax-0.10.2 stack → per cluster classify real-regression vs golden-drift vs timeout → fix at right layer → re-validate mode=release. Prompt inventory: active/release_validation_tail_burndown_2026_07.md. 3 blocker bugs DONE—don't reopen.
+- repos:
+
+
 ## next-wave-population-optimizers
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/97
 - status: PAUSED for the night 2026-07-13 (user→bed, resume tomorrow). Phase-1 done+committed (aacdac2/197456a, pushed WIP on feature/next-wave-population-optimizers; NOT PR'd — supervised). Result: interacting-population needs BOTH diversity AND gradients. cmaes COLLAPSES (r_E7.999, 0/16); sv_cmaes (Stein repulsion, gradient-free) PREVENTS collapse (r_E2.605, still improving, 0/8, slow); svgd (repulsion+gradient=ideal) CPU-compile-prohibitive → needs GPU. Winner stays multi-start Adam.
