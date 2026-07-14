@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## mass-cse-jax-decompose
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/499
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mass-cse-jax-decompose
+- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
+- note: phased — P1 unblock mass_stellar_dark/chaining.py (thread xp + traceable cse_settings_from/decompose, freeze total_cses/sample_points to static ~50/80); P2 Sersic-range + NFW parity harden. Real library bug (incomplete CSE JAX port), not a jax-0.10.2 regression.
+- repos:
+  - PyAutoGalaxy: feature/mass-cse-jax-decompose
+
+
 ## jax-grad-param9-autodiff-fd-mismatch
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164
 - status: merged-awaiting-corrective-validation — fresh wheels, release integration rerun, and a new Heart verdict remain
