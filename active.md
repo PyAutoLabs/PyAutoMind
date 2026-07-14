@@ -3,9 +3,11 @@
 
 ## database-latent-wheel-load
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367
-- status: library-dev
+- status: blocked — implementation + tests complete locally; ship gate is Heart RED (`release validation FAILED (stage integrate)`)
 - worktree: ~/Code/PyAutoLabs-wt/database-latent-wheel-load
 - autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
+- blocker: https://github.com/PyAutoLabs/PyAutoFit/issues/1367#issuecomment-4967286690
+- resume: re-run `/ship_library` after Heart is no longer RED; no commit/push/PR exists
 - repos:
   - PyAutoFit: feature/database-latent-wheel-load
 
@@ -118,5 +120,4 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
-
 
