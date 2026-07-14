@@ -13,7 +13,8 @@
 
 ## database-latent-wheel-load
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367
-- status: corrective-red-authorized — implementation + tests complete locally; review then one pending-release PR
+- status: awaiting-human-merge — corrective pending-release PR open; merge remains a separate human decision
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1368
 - worktree: ~/Code/PyAutoLabs-wt/database-latent-wheel-load
 - autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
 - corrective-red:
@@ -24,6 +25,7 @@
   - scope: existing two-file producer fix and regression tests only; one pending-release PR; no merge, issue close, release, rehearsal, or unrelated changes
   - tests: 14 focused passed; 1475 full-suite passed and 1 skipped; all 6 release-profile database scripts passed on exact wheel dependencies
   - validation: after separate human merge approval, build fresh wheels, rerun release integration validation, and obtain a new Heart verdict
+- review: CLEAN — commit 2ff67195c; one causal commit, two files, no mixed or unrelated scope
 - prior-blocker: https://github.com/PyAutoLabs/PyAutoFit/issues/1367#issuecomment-4967286690
 - repos:
   - PyAutoFit: feature/database-latent-wheel-load
