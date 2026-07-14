@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## interferometer-analysis-fitexception
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/606
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-analysis-fitexception
+- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack) — bug cap; ship sign-off parks with a question
+- note: resolves release-validation tail item G (PyAutoHeart#72). NOT jax-0.10.2 drift — interferometer log_likelihood_function lacks the imaging analysis's NumPy-path try/except→FitException guard, so a non-PD inversion (np.linalg.cholesky at abstract.py:743) crashes the search instead of resampling; JAX path masks it via NaN. Fix = mirror imaging/model/analysis.py:132-144. Reproduced on jax 0.10.2 with PYAUTO_DISABLE_JAX=1.
+- repos:
+  - PyAutoLens: feature/interferometer-analysis-fitexception
+
+
 ## mass-cse-jax-decompose
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/499
 - status: library-dev
