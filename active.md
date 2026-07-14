@@ -1,6 +1,15 @@
 # Active Tasks
 
 
+## multi-start-gradient-examples
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/94
+- status: workspace-dev — Phase 2 (redefined config→examples) of multi-start gradient search promotion (Fit#1369 shipped). Add MultiStartAdam section to autofit_workspace scripts/searches/mle.py + regen notebook.
+- worktree: ~/Code/PyAutoLabs-wt/multi-start-gradient-examples
+- autonomy: safe (--auto launched 2026-07-14; docs cap safe; plan on issue)
+- heart-ack: pending re-ack at ship — YELLOW set changed since Phase-1 ack (new "release validation stale: source moved since rehearsal" from Fit#1370 merge); user present, merge pre-authorized.
+- repos:
+  - autofit_workspace: feature/multi-start-gradient-examples
+
 ## eceb-editorial-revision
 - issue: https://github.com/Jammy2211/euclid_assistant/issues/6
 - status: workspace-dev
