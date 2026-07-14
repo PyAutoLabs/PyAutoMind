@@ -1,3 +1,13 @@
+## multi-start-gradient-search
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1369 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1370 (merged 63cd4e22, squash)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/43 (merged 0a81c457, squash)
+- repos: PyAutoFit, autofit_workspace_test
+- summary: Phase 1 of promoting the benchmark-winning multi-start gradient MAP optimizer to first-class PyAutoFit searches. AbstractMultiStartGradient(AbstractMLE) + af.MultiStartAdam/MultiStartADABelief/MultiStartLion (distinct class per optax rule, mirroring AbstractBFGS→BFGS/LBFGS): N broad multi-starts vmapped over the af.Fitness seam, fixed self-normalised optax step per start, best-basin MAP + per-start diagnostics via standard samples/result; optax added to the jax extra. Library unit tests numpy-only; JAX end-to-end truth-basin validation in autofit_workspace_test (scripts/searches/MultiStartAdam.py, recovers 1D Gaussian 50/25/10). --auto parked on Heart RED, resumed human-present after RED→YELLOW ack. Phases 2 (config/defaults) + 3 (workspace examples) not yet issued. See project_multi_start_gradient_search_promotion.
+
+## Original prompt
+
 # Multi-start gradient MAP search — core search + samples/result (Phase 1)
 
 Type: feature

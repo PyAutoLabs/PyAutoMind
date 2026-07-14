@@ -9,17 +9,6 @@
 - repos:
   - PyAutoLens: feature/pyautolens-jax-joss-paper
 
-## multi-start-gradient-search
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1369
-- status: library-shipped, workspace-pending — library PR#1370 squash-merged to main (63cd4e22) 2026-07-14 after Heart RED→YELLOW + human YELLOW-ack + merge auth ("heart now yellow merge all in"). af.MultiStartAdam/ADABelief/Lion on main (additive). REMAINING Phase-1 leg: autofit_workspace_test JAX truth-basin validation (library-first gate now satisfied). Phases 2 (config/defaults) + 3 (workspace examples) not yet issued.
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1370
-- worktree: ~/Code/PyAutoLabs-wt/multi-start-gradient-search (PyAutoFit branch merged+deleted; worktree retained for workspace_test follow-on)
-- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session)
-- heart-ack:
-  - acked 2026-07-14 (Heart YELLOW score 65, 0 RED): workspace validation not passing (3 failed 2026-07-09); 58 stale parked scripts; PyAutoMind open PR 15d old; install verification not run.
-- repos:
-  - PyAutoFit: feature/multi-start-gradient-search (MERGED 63cd4e22)
-
 ## eceb-editorial-revision
 - issue: https://github.com/Jammy2211/euclid_assistant/issues/6
 - status: workspace-dev

@@ -6108,3 +6108,11 @@
 - completed: 2026-07-14
 - repos: (epic — coordinated PyAutoConf/Fit/Array/Galaxy/Lens + workspaces)
 - summary: EPIC/capstone. Burned down the 18f/5t mode=release tail. All real correctness bugs fixed+merged+validated on wheels (A jax-drift, B param9 #164, D database #1367, E aggregator #274, F CSE #499, G interferometer #606, inversion #388, + jax_grad-config/timeout/shapelets-delaunay no_run). Structural perf-flake tail resolved by SLOW-no_run'ing the flaky real-search population (alwt#169, agwt#73) — lean choice over a reverted advisory tier (#74). Fresh mode=release run v2026.7.14.1.dev66001 = 542p/0f/0t/87s → release_ready true → Heart RED→YELLOW (score 65, zero RED). See project_release_2026_07_13_blocked_3bugs.
+
+## multi-start-gradient-search
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1369 (closed)
+- completed: 2026-07-14
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1370 (merged 63cd4e22, squash)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/43 (merged 0a81c457, squash)
+- repos: PyAutoFit, autofit_workspace_test
+- summary: Phase 1 of promoting the benchmark-winning multi-start gradient MAP optimizer to first-class PyAutoFit searches. AbstractMultiStartGradient(AbstractMLE) + af.MultiStartAdam/MultiStartADABelief/MultiStartLion (distinct class per optax rule, mirroring AbstractBFGS→BFGS/LBFGS): N broad multi-starts vmapped over the af.Fitness seam, fixed self-normalised optax step per start, best-basin MAP + per-start diagnostics via standard samples/result; optax added to the jax extra. Library unit tests numpy-only; JAX end-to-end truth-basin validation in autofit_workspace_test (scripts/searches/MultiStartAdam.py, recovers 1D Gaussian 50/25/10). --auto parked on Heart RED, resumed human-present after RED→YELLOW ack. Phases 2 (config/defaults) + 3 (workspace examples) not yet issued. See project_multi_start_gradient_search_promotion.
