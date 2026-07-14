@@ -159,3 +159,13 @@
 - post-merge: dispatch morning_health.yml on Mind main (Slack POST leg); flip vars.RELEASE_MODE=live on PyAutoBuild when satisfied (human)
 - autonomy: human-required effective (release cap; --auto launched 2026-07-08, plan approved in-session; ship sign-off + merge human)
 - cleanup 2026-07-09: worktree removed + feature branches (local+remote) deleted via /repo_cleanup — all PRs were merged; remaining leg (webhook secret + morning_health.yml dispatch) is human-only and needs no repo claim
+
+
+## aggregator-quick-fit-consolidation
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/274
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/aggregator-quick-fit-consolidation
+- autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
+- note: consolidate guides/results tutorials onto one _quick_fit.py. start_here/galaxies_fits/samples each run their own capped n_like_max=300 fit that prunes to 2 samples (no samples_weight_threshold=None) → deep from_sample_index(-10)/parameter_lists[9] IndexError. Fix = keep inline model but match it to _quick_fit (add shear; samples.py Sersic→MGE) so search.fit() resumes _quick_fit's 300-sample fit (identifier=[search,model,unique_tag], analysis-independent — verified). NOT PyAutoFit#1368 (release unsets PYAUTO_TEST_MODE for guides/results/). Resolves release-validation tail cluster E (PyAutoHeart#72).
+- repos:
+  - autolens_workspace: feature/aggregator-quick-fit-consolidation
