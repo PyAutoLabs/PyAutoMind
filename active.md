@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## corrective-pr-heart-red
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/112
+- status: library-dev — human-authorized corrective-PR exception for Heart RED. Plan approved in-session (present-and-wait, no --auto). Design decisions: human-only path (never under --auto; "Heart RED never acknowledged autonomously" stays verbatim) + name-one-of-several RED reasons (PR scopes which reason it clears; siblings remain, release blocked until all clear).
+- worktree: ~/Code/PyAutoLabs-wt/corrective-pr-heart-red
+- autonomy: supervised (feature cap; no --auto — present-and-wait; hard-invariant doctrine change)
+- repos:
+  - PyAutoBrain: feature/corrective-pr-heart-red
+  - PyAutoMind: feature/corrective-pr-heart-red
+
+
 ## database-latent-wheel-load
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367
 - status: blocked — implementation + tests complete locally; ship gate is Heart RED (`release validation FAILED (stage integrate)`)
