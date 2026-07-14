@@ -3,9 +3,10 @@
 
 ## jax-grad-param9-autodiff-fd-mismatch
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164
-- status: awaiting-merge — corrective PR open; merge remains human and release remains blocked
+- status: merged-awaiting-corrective-validation — fresh wheels, release integration rerun, and a new Heart verdict remain
 - worktree: ~/Code/PyAutoLabs-wt/jax-grad-param9-mismatch
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/165
+- merge: 6c4ff26ae3b0305d92d81f82b926ccb96373c578 — merge commit created by explicit human monitor-and-merge direction on 2026-07-14; issue remains open
 - autonomy: supervised (--auto launched 2026-07-14; overlap explicitly acknowledged by human; corrective-PR exception authorized in-session)
 - note: parallel autolens_workspace_test claim is accepted because release-validation-tail-burndown changes only jax_likelihood_functions/multi/rectangular*.py; this task changes jax_grad/imaging_pixelization.py
 - corrective-red:
@@ -13,7 +14,10 @@
   - authorization: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164#issuecomment-4968314436
   - causal-map: Heart integrate failure → issue #164 jax_grad parameter-9 diagnosis → parameter-specific documented FD exclusion → PR #165
   - sibling-red: PyAutoFit: 1 commit(s) behind origin (not addressed)
-  - scope: one pending-release PR only; no merge, issue close, release, or release rehearsal
+  - scope: the exception authorized one pending-release PR only; merge was separately human-authorized; no issue close, release, or release rehearsal
+  - tests: imaging passed on JAX 0.9.2 and 0.10.2; interferometer passed on 0.10.2; 52 smoke checks passed with 3 declared skips; all four PR smoke jobs passed on Python 3.12 and 3.13
+  - validation: build fresh wheels, rerun release integration on main, and obtain a new Heart verdict before closing the issue or making a release decision
+  - review: CLEAN — reviewed head 540e093de2313e330b179a876399aab3650955fd remained unchanged through merge
 - repos:
   - autolens_workspace_test: feature/jax-grad-param9-mismatch
 
