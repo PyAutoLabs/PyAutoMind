@@ -3,12 +3,14 @@
 
 ## release-validation-tail-burndown
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/72
-- status: awaiting-input — RE-SCOPED at first-cluster diagnosis: tail is largely dev(jax0.9.2)↔release(jax0.10.2) ENV DRIFT, not 9 code bugs. Clusters A (jax_likelihood multi/rectangular golden) + C (imaging/modeling_visualization_jit) both PASS on dev venv (jax0.9.2, source), FAIL only on release wheels (jax0.10.2). NOT reproducible locally → can't fix/validate without a jax-0.10.2 repro env. Parked at the ENV DECISION fork (bump dev venv to jax0.10.2 / parallel venv / CI-only) before per-cluster triage. Per no-silent-guards: NOT loosening any golden/tolerance until reproducible on release stack.
-- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/72
-- autonomy: supervised (--auto launched 2026-07-14 "continue and start --auto"; test cap; no heart-ack)
-- worktree: none (diagnosis-only on main; no edits until env fork resolved)
-- resume: choose repro-env approach on #72 → stand up jax-0.10.2 stack → per cluster classify real-regression vs golden-drift vs timeout → fix at right layer → re-validate mode=release. Prompt inventory: active/release_validation_tail_burndown_2026_07.md. 3 blocker bugs DONE—don't reopen.
+- status: in-progress (supervised --auto) — ROOT CAUSE = jax 0.9.2(dev)→0.10.2(release) numerical drift on pixelized JAX inversions (isolated: only jax varied; rectangular Δ2.6e-4, mge Δ1.8e-3 rel). Human approved strategy (ii) loosen golden + keep round-trip, AND "match dev to release". DONE: (1) bumped ~/venv/PyAuto jax→0.10.2 (whole tail now reproducible in dev); (2) cluster A fixed+validated (autolens_workspace_test multi/rectangular.py+rectangular_mge.py: golden→gross-guard rtol=1e-2, exact check=vmap==jit round-trip). Committed d1d3cfe LOCAL (not pushed). Flagged to user: mge 1.8e-3 (7×) as possible (iv)-investigate.
+- worktree: ~/Code/PyAutoLabs-wt/release-validation-tail-burndown (autolens_workspace_test on feature/release-validation-tail-burndown)
+- resume: triage remaining clusters ON jax 0.10.2 (now reproducible): jax_grad×2 (slow>2min, likely same golden pattern), viz_jit×3 (autogalaxy_workspace_test — add repo to worktree), database×6, aggregator×2, chaining/slam/group, interferometer, timeouts×5 (shapelets/modeling needs release-profile fast-mode flag). Non-JAX clusters NOT yet confirmed pass-on-0.9.2 → may be real bugs. Then commit/push → PR(s), re-validate mode=release. Inventory: active/release_validation_tail_burndown_2026_07.md. 3 blocker bugs DONE—don't reopen.
+- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/72#issuecomment-4966720654 (mge-drift-investigate optional; else continue)
+- autonomy: supervised (--auto launched 2026-07-14 "continue and start --auto"; test cap; no heart-ack; ship parks for human sign-off)
+- ENV NOTE: ~/venv/PyAuto is now jax 0.10.2 (was 0.9.2) — affects concurrent sessions (next-wave gradient optimizers tuned on 0.9.2). Stale jax_cuda12_plugin 0.9.2 (GPU only) + jax-finufft<0.8 conflict (unused). See [[reference_laptop_gpu_jax_setup]].
 - repos:
+  - autolens_workspace_test: feature/release-validation-tail-burndown
 
 
 ## next-wave-population-optimizers
