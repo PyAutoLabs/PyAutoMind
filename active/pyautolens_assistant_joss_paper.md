@@ -36,6 +36,22 @@ Experienced PyAutoLens users often know exactly which scientific analysis they w
 
 New users face a complementary challenge: they may not yet know which modelling approach, software abstractions, or examples are appropriate for the task they are learning. PyAutoLens has grown from galaxy-scale imaging analyses to support point-source lenses, group- and cluster-scale systems, weak lensing, interferometry, simulations, and joint analyses, accompanied by well over one hundred worked examples across the autolens_workspace. Navigating this material while simultaneously learning gravitational-lensing science, Bayesian inference, and the PyAutoLens API can be overwhelming. PyAutoLens-Assistant enables users to describe their immediate goal in natural language and receive targeted explanations, example code, and pointers to the relevant documentation. Its teaching mode also explains the underlying science and numerical methods, encourages follow-up questions, and supports learning rather than simply returning code.
 
+## Software design draft supplied by the author
+
+### How It Works
+
+PyAutoLens-Assistant is a version-controlled knowledge and workflow layer that enables general-purpose AI systems to use PyAutoLens reliably. Its architecture separates three components: instructions define assistant behaviour, skills describe how to perform specific tasks, and wiki pages provide the underlying technical and scientific knowledge. For a given request, the assistant selects the relevant skill, consults the associated wiki material, and adapts tested examples from the `autolens_workspace` rather than generating PyAutoLens code from memory. Generated scripts follow the established workspace structure and can be checked against the installed API, reducing the risk of outdated or invented syntax.
+
+Two reference wikis provide complementary context. The core wiki organizes the PyAutoLens API, modelling concepts, datasets, inference methods, and operational guidance, linking these to procedural skills and relevant workspace examples. The literature wiki provides scientific context through pages on lensing concepts, named surveys and systems, and bibliographies of published papers. Users can also ingest papers relevant to a project, after which they become part of the assistant’s persistent scientific context.
+
+PyAutoLens-Assistant can be used through a browser-based conversational assistant or a local agentic coding tool. For systems such as ChatGPT or Claude, `llms.txt` acts as the machine-readable entry point: it asks the assistant to verify repository access and directs it through the canonical read order of instructions, skills, relevant wiki pages, and runnable workspace examples. In this mode, users can ask questions, receive scientific explanations, locate examples, interpret errors and figures, and generate draft end-to-end scripts, although the assistant cannot normally inspect local files or execute code.
+
+For full computational workflows, PyAutoLens-Assistant can instead be used with agentic tools such as Claude Code or Codex. These tools load the repository instructions directly and can inspect datasets, write and run scripts, generate diagnostic plots, debug failures, and iteratively refine an analysis. The resulting Python code, configuration, outputs, and modelling decisions remain explicit and inspectable.
+
+The assistant operates in two interaction modes. **Assistant mode** is intended for users who want a task completed efficiently, with concise explanations and support ranging from interactive coding to phased end-to-end analysis. **Teacher mode** prioritizes learning by explaining what each stage does and why, making assumptions explicit, and directing users to relevant documentation and examples. Both modes use the same scientific capabilities, reproducibility requirements, and safety checks.
+
+For agentic work, each analysis can be stored in a separate project repository containing its data, configuration, scripts, results, and project journal. This separates the shared assistant knowledge base from the scientific project while preserving a complete record that can be shared with collaborators or released alongside a publication.
+
 ## Original request verbatim
 
 > ok, the second paper is PyAutoLens-Assistant and its title is PyAutoLens-Assistant: Using Natural Language and AI to Analyse Gravitational Lenses, make another JOSS paper and template
