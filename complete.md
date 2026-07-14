@@ -1,3 +1,22 @@
+## slacs1430-acs-parity (SLACS1430+4105 ACS reduction vs legacy — pixel parity PASS — SHIPPED)
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17 (STAYS OPEN for the optional model-parity fit leg)
+- completed: 2026-07-10 (pixel parity verdict + scripts); active.md entry retired 2026-07-14 (/morning, human-directed)
+- pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/23 — MERGED (0face12, squash).
+- summary: PyAutoReduce production reduction of slacs1430+4105 reproduces the trusted legacy dataset up to fully-understood differences (astrometry: legacy is rot270 of north-up; photometry flux ratio 1.040; noise ratio ≈1.35=R, legacy family internally inconsistent on the correlated-noise correction; PSF tier-1 ePSF 0.129″ vs 0.120″). Acquire dup-product bug independently fixed on main by #18's is_direct_product. Full verdict table: issues/17 close-out comment 2026-07-10.
+- residual (not blocking retirement): the optional model-level parity fits are checkpointed/OOM'd (NOT RUN) — #17 stays OPEN with that as its last checklist item (resume: `prototypes/slacs1430_parity_fit.py autoreduce`/`legacy`, serially on a quiet machine). Methodology notes seed the queued PJ011646 WFC3 follow-up.
+
+## keck-ao-acceptance-checks (Keck-AO checks 3–4 — plate-scale finding delivered — INTERIM, retired)
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13 (STAYS OPEN — real finding + resumable fit)
+- completed: interim 2026-07-09; active.md entry retired 2026-07-14 (/morning, human-directed — no longer actively tracked)
+- summary: Check 3 delivered a concrete result — the adapter's narrow-camera `native_scale` (9.942 mas) is wrong for both epochs; truth is 9.952 mas pre-2015 (Yelda 2010; B1938 raw PIXSCALE 0.009952 agrees) / 9.971 mas post-2015 (Service 2016), so shipped phase-4 mosaics read θ_E ~0.10% low. Proposed fix (gated on review): epoch-aware `native_scale` selected with the distortion solution. Check 4 lens fit (SIE+shear+Sersic, Nautilus) ran ~1h CPU, not converged, 94MB checkpoint.
+- residual (not blocking retirement): the epoch-aware `native_scale` fix + the check-4 θ_E-vs-0.45″ convergence are documented on #13 with resume commands; #13 stays OPEN as the backlog anchor. The 94MB checkpoint was on a laptop that reset — may need re-running from scratch on a quiet machine.
+
+## ep-analytic-updates-scope (EP phase 6 — scope analytic conjugate updates — plan DELIVERED)
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1337 (CLOSED — research deliverable done)
+- plan: https://github.com/PyAutoLabs/PyAutoFit/issues/1338 (STAYS OPEN — implementation backlog, 4 WPs)
+- completed: 2026-07-08 (scoping/plan); active.md entry retired 2026-07-14 (/morning, human-directed)
+- summary: Read-only research phase 6 scoped analytic (conjugate) likelihood updates for the EP framework and delivered a four-work-package implementation plan on #1338 (exact PriorFactors, projection contract, linear-Gaussian, conjugate table) — plan-only per human direction (no implement). Backlog anchor: feature/autofit/ep_analytic_updates.md. #1337 (the research task) closed as its deliverable lives on #1338, which stays open for future implementation.
+
 ## ep-priors-fable-reassess (priors/messages — 9 bugs fixed + 5 decisions resolved — SHIPPED)
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1330 + decision hub #1331 (both stay OPEN for parked design work only)
 - completed: 2026-07-10 (fixes shipped); active.md entry retired 2026-07-14 (/morning, human-directed after verification)
