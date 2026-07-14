@@ -6152,3 +6152,10 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/98 (merged)
 - repos: autolens_workspace_developer
 - summary: Follow-up to jax-gradient-optimizer-benchmark (#95/PR96) — fast many-points OPTIMIZERS (MAP, not full Bayesian samplers) on the MGE lens likelihood, testing whether population/diversity buys robustness. Candidates (searches_minimal, same MGE MAP harness): multi-start of other local rules (L-BFGS/ADABelief/Lion/Levenberg-Marquardt), CMA-ES (evosax), SVGD-as-mode-finder (blackjax.svgd), plus a jaxns nested-sampling reference cameo. Baseline to beat = multi-start Adam (r_E 1.600, 2/12 starts, ~1254 s). Finding: robust MAP needs diversity + gradients; SVGD (A100) best (r_E 1.595). Full-sampling wave (tempered SMC/HMC/flowMC/converged Nautilus) explicitly deferred. RAL A100 pipeline used. See project_jax_gradient_optimizer_benchmark.
+
+## multi-start-gradient-guides
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/277 (closed) + https://github.com/PyAutoLabs/autogalaxy_workspace/issues/132 (closed)
+- completed: 2026-07-14
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/278 (merged aac9321c) + https://github.com/PyAutoLabs/autogalaxy_workspace/pull/133 (merged 4d91e878)
+- repos: autolens_workspace, autogalaxy_workspace
+- summary: Phase 3 of the multi-start gradient search promotion (Fit#1369). Added a MultiStartAdam config section to scripts/guides/modeling/searches.py in both user workspaces, after LBFGS, framed as the optimizer that works on complex lens/galaxy parameter spaces (wide multi-start) where single-start LBFGS fails. Config-only guides (construct search objects, no fits — per human, intent is API discovery not a data run). Contents updated; notebooks regenerated. --auto safe; Heart YELLOW human-acked (set unchanged from Phase-2 ack). Scope was user-workspaces-only (test workspaces skipped per human). See project_multi_start_gradient_search_promotion.

@@ -1,14 +1,6 @@
 # Active Tasks
 
 
-## multi-start-gradient-guides
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/277 (autolens) + https://github.com/PyAutoLabs/autogalaxy_workspace/issues/132 (autogalaxy)
-- status: workspace-dev — Phase 3 of multi-start gradient search promotion (Fit#1369 shipped). Add MultiStartAdam config section to scripts/guides/modeling/searches.py in autolens_workspace + autogalaxy_workspace (config-only guide, no fit) + regen notebooks. Per human: config-only is intended (users learn the search exists + API).
-- worktree: ~/Code/PyAutoLabs-wt/multi-start-gradient-guides
-- autonomy: safe (--auto launched 2026-07-14; docs cap safe; plan on issues; heart-ack carries from in-session YELLOW ack, re-verify at each ship)
-- repos:
-  - autolens_workspace: feature/multi-start-gradient-guides
-  - autogalaxy_workspace: feature/multi-start-gradient-guides
 
 ## slacs1430-acs-parity
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/17
