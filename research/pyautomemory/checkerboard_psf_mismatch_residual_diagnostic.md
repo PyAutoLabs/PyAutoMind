@@ -1,6 +1,6 @@
-# Checkerboard PSF-mismatch residual diagnostic: research and document the central checkerboard/aliasing
+# Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers
 
-Type: bug
+Type: research
 Target: PyAutoMemory
 Repos:
 - autolens_assistant
