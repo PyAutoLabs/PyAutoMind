@@ -6198,3 +6198,10 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/278 (merged aac9321c) + https://github.com/PyAutoLabs/autogalaxy_workspace/pull/133 (merged 4d91e878)
 - repos: autolens_workspace, autogalaxy_workspace
 - summary: Phase 3 of the multi-start gradient search promotion (Fit#1369). Added a MultiStartAdam config section to scripts/guides/modeling/searches.py in both user workspaces, after LBFGS, framed as the optimizer that works on complex lens/galaxy parameter spaces (wide multi-start) where single-start LBFGS fails. Config-only guides (construct search objects, no fits — per human, intent is API discovery not a data run). Contents updated; notebooks regenerated. --auto safe; Heart YELLOW human-acked (set unchanged from Phase-2 ack). Scope was user-workspaces-only (test workspaces skipped per human). See project_multi_start_gradient_search_promotion.
+
+## multi-start-adam-profiling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/67 (closed)
+- completed: 2026-07-14
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/68 (merged e703d894, squash)
+- repos: autolens_profiling
+- summary: Registered af.MultiStartAdam (Fit#1369) as a first-class profiling sampler in autolens_profiling/searches/, scoped to imaging/mge (benchmark-proven MAP cell). build_multi_start_adam + SAMPLER_BUILDERS row + multi_start_adam/imaging/mge.py cell + sweep.py CELLS entry; made n_live sampler-aware (null for MAP optimizers) + _sampler_config_dict records n_starts/n_steps. Add+register only (no profiling run — A100 sweep is the profiling agent's job). Also reconciled pre-existing simulators/README.md build_readme drift (gate-required). --auto-style ship, Heart YELLOW acked (set unchanged). Scope was user-chosen imaging/mge-only. Completes the multi-start gradient search promotion's profiling leg. See project_multi_start_gradient_search_promotion.
