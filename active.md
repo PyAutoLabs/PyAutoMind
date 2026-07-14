@@ -214,3 +214,5 @@
 - branch: feature/release-advisory-tier-slow-scripts
 - note: mode=release advisory tier — TIMEOUT_ADVISORY status + advisory.yaml registry so a declared-slow real-search timeout is YELLOW not integrate-RED; non-advisory timeout stays RED. Heart owns policy (validate.py/readiness.py/workspace-validation.yml), Build owns runner (result_collector/build_util/run_python/aggregate_results). The path to a shippable mode=release YELLOW after PyAutoHeart#72's real bugs. Cross-ref PyAutoHeart#72.
 - repos:
+  - PyAutoHeart: feature/release-advisory-tier-slow-scripts
+  - PyAutoBuild: feature/release-advisory-tier-slow-scripts
