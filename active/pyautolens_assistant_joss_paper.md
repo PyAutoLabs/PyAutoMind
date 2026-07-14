@@ -52,6 +52,24 @@ The assistant operates in two interaction modes. **Assistant mode** is intended 
 
 For agentic work, each analysis can be stored in a separate project repository containing its data, configuration, scripts, results, and project journal. This separates the shared assistant knowledge base from the scientific project while preserving a complete record that can be shared with collaborators or released alongside a publication.
 
+## Benchmark examples draft supplied by the author
+
+### Benchmark Examples
+
+PyAutoLens-Assistant is evaluated using three frozen benchmark prompts distributed with the repository. These represent progressively more demanding scientific workflows and are run using multiple conversational and agentic AI systems. Each benchmark records the full interaction, generated code, executed analysis where applicable, scientific outputs, and a rubric-based score, enabling direct comparison between different models, tools, and interaction modes.
+
+The first benchmark uses **Teacher mode** to simulate Euclid-like imaging of a simple strong lens, fit the simulated data, and recover the lens model. The assistant must explain the purpose of each stage, including model composition, simulation, masking, non-linear inference, and interpretation of the recovered parameters. This benchmark tests whether the assistant can provide scientifically accurate guidance while helping a new user understand an end-to-end PyAutoLens workflow.
+
+The second benchmark uses **Assistant mode** to model JWST imaging of the COSMOS-Web Ring. The assistant must inspect the supplied dataset, perform the required data-preparation steps, construct an appropriate lens-light and mass model with a pixelized source reconstruction, run the analysis, and present the reconstructed source and fit residuals. This benchmark tests the assistant’s ability to convert a concise scientific request into a complete and reproducible modelling workflow with limited user intervention.
+
+The third benchmark requests a more autonomous analysis of the strong lens SLACS0946+1006. The assistant must reproduce a reported dark-matter subhalo detection through Bayesian model comparison, compare alternative subhalo mass profiles, preserve all intermediate models and results for inspection, and determine whether the analysis should run locally or on high-performance computing resources. This benchmark tests long-horizon planning, scientific decision-making, project-state management, and the ability to execute a complex analysis across multiple stages.
+
+The benchmark suite is run across different AI systems and access modes, including browser-based conversational assistants and local agentic coding tools. Results will be reported using metrics such as task completion, scientific correctness, API validity, reproducibility, degree of autonomy, number of user interventions, wall-clock time, and computational cost. Together, the benchmarks test the two principal use cases of PyAutoLens-Assistant: teaching new users how to perform gravitational-lens analyses and enabling experienced users to execute complex workflows efficiently from natural-language specifications.
+
+### Drafting note
+
+The repository currently contains four frozen benchmark prompts. Before publication, either add the omitted `hard_group_multi.md` benchmark to this section or reframe these as three selected benchmark examples.
+
 ## Original request verbatim
 
 > ok, the second paper is PyAutoLens-Assistant and its title is PyAutoLens-Assistant: Using Natural Language and AI to Analyse Gravitational Lenses, make another JOSS paper and template
