@@ -3,11 +3,17 @@
 
 ## jax-grad-param9-autodiff-fd-mismatch
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164
-- status: awaiting-input — ship gate Heart RED; corrective-PR authorization required
+- status: awaiting-merge — corrective PR open; merge remains human and release remains blocked
 - worktree: ~/Code/PyAutoLabs-wt/jax-grad-param9-mismatch
-- autonomy: supervised (--auto launched 2026-07-14; overlap explicitly acknowledged by human; no heart-ack)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/165
+- autonomy: supervised (--auto launched 2026-07-14; overlap explicitly acknowledged by human; corrective-PR exception authorized in-session)
 - note: parallel autolens_workspace_test claim is accepted because release-validation-tail-burndown changes only jax_likelihood_functions/multi/rectangular*.py; this task changes jax_grad/imaging_pixelization.py
-- question: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164#issuecomment-4968099580
+- corrective-red:
+  - reason: release validation FAILED (stage integrate)
+  - authorization: https://github.com/PyAutoLabs/autolens_workspace_test/issues/164#issuecomment-4968314436
+  - causal-map: Heart integrate failure → issue #164 jax_grad parameter-9 diagnosis → parameter-specific documented FD exclusion → PR #165
+  - sibling-red: PyAutoFit: 1 commit(s) behind origin (not addressed)
+  - scope: one pending-release PR only; no merge, issue close, release, or release rehearsal
 - repos:
   - autolens_workspace_test: feature/jax-grad-param9-mismatch
 

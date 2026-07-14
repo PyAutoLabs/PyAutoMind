@@ -4,7 +4,8 @@ Append-only record of `--auto` workflow runs — the evidence base for raising
 or lowering the per-work-type autonomy caps in `PyAutoBrain/AUTONOMY.md` (the
 autonomy contract). One row per run, appended at PR-open or on parking.
 
-Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
+Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
+`corrective`.
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
@@ -180,3 +181,4 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked`.
 | 2026-07-14 | database-latent-wheel-load (PyAutoFit#1367) | corrective-red (human-authorized) | tests 1475p/1s full PyAutoFit + 14p focused / smoke 6/6 release-profile database scripts on exact wheel deps / review CLEAN (2ff67195c, two causal files) / heart RED (`release validation FAILED (stage integrate)`) | merged-unchanged (corrective PyAutoFit#1368 squash 4724e20a1 by separate human `merge`; authorization issuecomment-4967751375; no issue close/release; fresh wheels + integration rerun + new Heart verdict required) |
 | 2026-07-14 | jax-gradient-optimizer-benchmark (autolens_workspace_developer#95) | supervised | tests n/a (workspace experiment) / smoke n/a (searches_minimal ran directly) / review self / heart RED organism-scoped human-shipped | MERGED-unchanged (PR#96 squash, human "go,ship"→"the merge" 2026-07-14; #95 CLOSED; prompt→complete/2026/07; worktree+branch cleaned) |
 | 2026-07-14 | next-wave-population-optimizers (autolens_workspace_developer#97) | supervised | tests n/a (workspace experiment) / smoke n/a (CPU+A100 runs = validation) / review self / heart RED organism-scoped human-authorized | MERGED-unchanged (PR#98 squash+delete-branch, human "the merge" 2026-07-14; #97 CLOSED; A100 GIGA-Lens scaling proven + SVGD reaches truth; ADABelief/Lion local-rule-secondary; prompt→complete/; worktree cleaned) |
+| 2026-07-14 | jax-grad-param9-autodiff-fd-mismatch (autolens_workspace_test#164) | corrective-red (human-authorized) | tests imaging JAX 0.9.2+0.10.2 pass, interferometer 0.10.2 pass / smoke 52p/0f/3 declared skips / review CLEAN / heart RED (`release validation FAILED (stage integrate)`) | corrective (PR#165 open pending-release; authorization issuecomment-4968314436; sibling RED `PyAutoFit: 1 commit(s) behind origin` remains; no merge/release) |
