@@ -214,9 +214,16 @@
 - branch: feature/release-advisory-tier-slow-scripts
 - note: mode=release advisory tier — TIMEOUT_ADVISORY status + advisory.yaml registry so a declared-slow real-search timeout is YELLOW not integrate-RED; non-advisory timeout stays RED. Heart owns policy (validate.py/readiness.py/workspace-validation.yml), Build owns runner (result_collector/build_util/run_python/aggregate_results). The path to a shippable mode=release YELLOW after PyAutoHeart#72's real bugs. Cross-ref PyAutoHeart#72.
 - autonomy: supervised (--auto launched 2026-07-14; effective=supervised; implementation approved in-session)
-- status-detail: IMPLEMENTED+VERIFIED, ship parked at Heart-RED gate (leg 4). Build: result_collector/build_util/run_python/aggregate_results (+test_advisory_tier). Heart: validate.py/readiness.py/workspace-validation.yml/docs +tests. Unit green (Build advisory 20p; Heart validate+readiness 99p; full Heart 268p); E2E via run_python verified (undeclared timeout→exit1/RED; advisory-only→exit0; aggregate ready True). Pre-existing unrelated Build fail: test_pre_build_skill (admin_jammy/PyAutoBrain manifest drift, fails on clean main).
-- ship-blocked: Heart RED (score 10). red_reasons at launch: [1] "PyAutoArray: on branch feature/ticks-minus-in-math (not main)" — unrelated sibling; [2] "release validation FAILED (stage integrate)" — the structural release-tail RED this feature is the sanctioned fix for. --auto cannot acknowledge RED; awaiting explicit human authorization of the corrective-PR exception naming reason [2].
-- followup: seed config/build/advisory.yaml in *_test workspaces (re-val #3/#4 flip-flop population) = ship_workspace task; mechanism is a graceful no-op until seeded.
+- status: library-shipped, workspace-pending (corrective-red PR-open; merge stays human)
+- library-pr:
+  - PyAutoHeart#75: https://github.com/PyAutoLabs/PyAutoHeart/pull/75
+  - PyAutoBuild#153: https://github.com/PyAutoLabs/PyAutoBuild/pull/153
+- status-detail: IMPLEMENTED+VERIFIED+SHIPPED-to-PR. Build: result_collector/build_util/run_python/aggregate_results (+test_advisory_tier) commit 8e502f4. Heart: validate.py/readiness.py/workspace-validation.yml/docs +tests commit eeb41df. Unit green (Build 118p; full Heart 268p); E2E via run_python verified (undeclared timeout→exit1/RED; advisory-only→exit0; aggregate ready True). Pre-existing unrelated Build fail: test_pre_build_skill (admin_jammy/PyAutoBrain manifest drift, fails on clean main).
+- corrective-red:
+  - reason: release validation FAILED (stage integrate)
+  - authorization: in-session human "go --auto" + explicit corrective-PR authorization 2026-07-14
+  - scope: PR-open on Heart#75 + Build#153 only; no merge, no release. Other RED reason (PyAutoArray on feature/ticks-minus-in-math) is unrelated sibling, untouched — Heart stays RED.
+- followup: seed config/build/advisory.yaml in *_test (+ user) workspaces (re-val #3/#4 flip-flop population) — IN PROGRESS this session per human direction; mechanism is a graceful no-op until Build#153 merges + workspaces seeded.
 - repos:
   - PyAutoHeart: feature/release-advisory-tier-slow-scripts
   - PyAutoBuild: feature/release-advisory-tier-slow-scripts
