@@ -13,8 +13,9 @@
 
 ## database-latent-wheel-load
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1367
-- status: awaiting-human-merge — corrective pending-release PR open; merge remains a separate human decision
+- status: merged-awaiting-corrective-validation — fresh wheels, release integration rerun, and a new Heart verdict remain
 - pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1368
+- merge: 4724e20a1 — squash-merged by explicit human direction on 2026-07-14; issue remains open
 - worktree: ~/Code/PyAutoLabs-wt/database-latent-wheel-load
 - autonomy: supervised (--auto launched 2026-07-14; plan approved in-session; no heart-ack)
 - corrective-red:
@@ -22,9 +23,9 @@
   - authorization: https://github.com/PyAutoLabs/PyAutoFit/issues/1367#issuecomment-4967751375
   - corrective-issue: PyAutoFit#1367
   - causal: release profile PYAUTO_TEST_MODE=0 was treated as enabled by raw string truthiness, routing database output under output/test_mode and causing the stage-integrate database scrapers to find zero searches
-  - scope: existing two-file producer fix and regression tests only; one pending-release PR; no merge, issue close, release, rehearsal, or unrelated changes
+  - scope: existing two-file producer fix and regression tests only; one pending-release PR; the exception itself authorized no merge, issue close, release, rehearsal, or unrelated changes; merge was separately human-authorized
   - tests: 14 focused passed; 1475 full-suite passed and 1 skipped; all 6 release-profile database scripts passed on exact wheel dependencies
-  - validation: after separate human merge approval, build fresh wheels, rerun release integration validation, and obtain a new Heart verdict
+  - validation: build fresh wheels, rerun release integration validation, and obtain a new Heart verdict before closing the issue or making a release decision
 - review: CLEAN — commit 2ff67195c; one causal commit, two files, no mixed or unrelated scope
 - prior-blocker: https://github.com/PyAutoLabs/PyAutoFit/issues/1367#issuecomment-4967286690
 - repos:
