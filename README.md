@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="PyAutoMind" width="400">
+</p>
+
 # PyAutoMind
 
 🧬 **PyAutoScientist → <https://github.com/PyAutoLabs/PyAutoScientist>** — this repo is one organ of the PyAuto organism.
