@@ -2,7 +2,7 @@
 
 ## wire-verify-install-leg
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/76
-- status: library-dev — starting implementation
+- status: PR OPEN https://github.com/PyAutoLabs/PyAutoHeart/pull/77 — awaiting human merge (release cap = human-required). 276 tests pass, CI green 3.12+3.13. New tests verified failing on unfixed source; leg proven to flip both directions via the real CI sequence.
 - worktree: ~/Code/PyAutoLabs-wt/wire-verify-install-leg (PyAutoHeart on feature/wire-verify-install-leg)
 - autonomy: human-required (effective) — launched --auto, but work-type `release` caps at human-required (AUTONOMY.md:56); min(safe, human-required) = human-required, so --auto changed nothing. Plan approved by human 2026-07-15. Run ends at PR-open; merge/close stay human.
 - goal: Stage 3 runs verify_install A-E against the TestPyPI wheels and passes, but the result is never ingested, so readiness reports "install verification not run" — one of 3 legs holding Heart at YELLOW 70. Verified on main 2026-07-15: ~/.pyauto-heart/verify_install.json ABSENT; validation_report.json from the real release run ingested fine (integrate pass, 543p/0f) with zero verify_install trace. Discard point = validate.py:563-569, sidecar read ONLY in the fail direction; a PASS contributes nothing.
