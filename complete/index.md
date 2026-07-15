@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-575 records across 5 buckets.
+578 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -115,8 +115,11 @@ _(curate hard-won records here — survives regeneration.)_
 - [multi-shared-state-core-api](2026/07/multi-shared-state-core-api.md)
 - [multi-shared-state-examples](2026/07/multi-shared-state-examples.md) — EPIC — phases 1-4 + follow-up
 - [multi-shared-state-examples-phase-3-workspace-examples](2026/07/multi-shared-state-examples-phase-3-workspace-examples.md)
+- [multi-start-adam-profiling](2026/07/multi-start-adam-profiling.md) — Registered af.MultiStartAdam (Fit#1369) as a first-class profiling sampler in autolens_profiling/searches/, sc…
 - [multi-start-gradient-examples](2026/07/multi-start-gradient-examples.md) — Phase 2 (redefined config→examples) of the multi-start gradient search promotion (Fit#1369). Added a MultiStar…
+- [multi-start-gradient-guides](2026/07/multi-start-gradient-guides.md) — Phase 3 of the multi-start gradient search promotion (Fit#1369). Added a MultiStartAdam config section to scri…
 - [multi-start-gradient-search](2026/07/multi-start-gradient-search.md) — Phase 1 of promoting the benchmark-winning multi-start gradient MAP optimizer to first-class PyAutoFit searche…
+- [multistart-adam-release-jax](2026/07/multistart-adam-release-jax.md)
 - [nautilus-nn-bottleneck](2026/07/nautilus-nn-bottleneck.md) — Nautilus overhead research — anatomy on fast likelihoods (NN training 40-52% + bound geometry 25-38% of wall; …
 - [next-wave-population-optimizers](2026/07/next-wave-population-optimizers.md)
 - [nightly-loud-failure](2026/07/nightly-loud-failure.md) — nightly driver hardening — token probe, fetch errors page (never 💤), anchor validation w/ 24h fallback, no anc…

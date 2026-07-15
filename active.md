@@ -15,19 +15,6 @@
 - repos:
   - PyAutoMind: feature/arxiv-digest-announcement-window
 
-## multistart-adam-release-jax
-- issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/44
-- status: shipped, PR OPEN awaiting human merge — https://github.com/PyAutoLabs/autofit_workspace_test/pull/45 (pending-release, MERGEABLE). Human signed off on ship in-session 2026-07-15.
-- worktree: ~/Code/PyAutoLabs-wt/multistart-adam-release-jax (autofit_workspace_test on feature/multistart-adam-release-jax; committed 615b229 + pushed)
-- autonomy: supervised (bug cap; launched --auto 2026-07-15)
-- finding: nightly-release RED 5 nights = one shard, one cause. autofit_workspace_test/config/build/env_vars_release.yaml pins PYAUTO_DISABLE_JAX=1 + PYAUTO_TEST_MODE=0, so MultiStartAdam (JAX-native, hard-guards on analysis._use_jax) really runs and raises. NOT the perf-flake tail. Regression from the #43/PyAutoFit#1370 multi-start promotion.
-- fix: 3 `set: {PYAUTO_DISABLE_JAX: "0"}` overrides in env_vars_release.yaml (MultiStartAdam + Dynesty_jax + Nautilus_jax, the latter two were passing VACUOUSLY on the numpy path) + 1 `unset: [PYAUTO_TEST_MODE, PYAUTO_DISABLE_JAX]` in env_vars.yaml (smoke) so the per-PR gate can catch this class at all.
-- verified: all 3 scripts exit 0 with JAX on (MultiStartAdam recovers 50.156/25.196/9.858 vs truth 50/25/10); resolver driven over real configs — no substring over-match (Nautilus.py/DynestyStatic stay DISABLE_JAX=1).
-- TRAP: two env profiles — env_vars.yaml is the per-PR SMOKE gate, env_vars_release.yaml is mode=release. Reading the wrong one yields a plausible-but-wrong fix. Smoke's TEST_MODE=2 bypasses the sampler before _fit, so smoke could never have caught this.
-- repos:
-  - autofit_workspace_test: feature/multistart-adam-release-jax
-
-
 ## pixelized-gradient-experiment
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/100
 - status: in-progress, PAUSED for bedtime 2026-07-14 — feasibility ANSWERED (pix gradients DO work; certified test imaging_pixelization.py passed exit 0). RESUME = build the sampler experiment on the CORRECT config.
