@@ -16,14 +16,3 @@
 - repos:
   - autolens_workspace_developer: feature/pixelized-gradient-experiment
 
-
-
-## weak-lensing-cluster-scale
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/279
-- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/280 (open, NOT merged)
-- status: workspace-dev — PR open. scripts/weak/ simple example rescaled galaxy-scale theta_E=1.6" -> cluster-scale theta_E=25", 1500 galaxies in a 50-200" weak-regime annulus, sigma=0.25; modeling priors widened to cluster scale.
-- autonomy: supervised (feature)
-- verified: autolens 2026.7.15.1 clean venv — simulator ~16 sigma detection (median |gamma|=0.085); fit.py/likelihood_function.py chi^2=2974 for 3000 dof (by-hand==FitWeak==AnalysisWeak); modeling.py einstein_radius 24.3" (1-sigma 22.9-25.8, truth 25.0 within 0.5 sigma).
-- follow-up: notebooks/weak/*.ipynb + markdown/weak/*.md regenerate from scripts via PyAutoBuild at build/release; on merge advance active/weak_lensing_cluster_scale.md -> complete/.
-- repos:
-  - autolens_workspace: claude/weak-lensing-cluster-scale

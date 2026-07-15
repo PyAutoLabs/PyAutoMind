@@ -1,3 +1,16 @@
+## weak-lensing-cluster-scale (weak/simple example rescaled galaxy-scale → genuine cluster-scale weak lens — SHIPPED)
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/279 (CLOSED)
+- completed: 2026-07-15
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/280 — MERGED (db5e79e6, squash). smoke (3.12/3.13) + navigator CI green.
+- summary: the `scripts/weak/` simple example used a galaxy-scale Isothermal theta_E=1.6" lens with 200 galaxies in a 3.0" square that reached inward to r~0.14"; its "31 sigma detection" came from near-Einstein-radius galaxies in the strong/intermediate regime (median per-galaxy |gamma|/sigma ~1.1), NOT genuinely weak shear — the same 200-galaxy catalogue restricted to a true 5-20" weak annulus drops to ~3 sigma. Rescaled to a cluster: Isothermal theta_E=25" (sigma_v ~1200-1400 km/s), axis_ratio=0.8, z_l=0.5; 1500 background galaxies drawn uniform-in-area in a 50-200" annulus (outside the strong-lensing core, ~45 gal/arcmin^2) via an explicit Grid2DIrregular + simulator.via_tracer_from; noise_sigma=0.25.
+- KEY (priors track the system's scale): the default Isothermal priors are galaxy-scale — einstein_radius UniformPrior 0-8" (which EXCLUDES a 25" lens entirely) and centre GaussianPrior sigma=0.1" — so modeling.py now widens them to cluster scale (einstein_radius 0-60", centre sigma=20") with a "Cluster-Scale Priors" note. Synced hand-picked truth in fit.py/likelihood_function.py (einstein_radius=25.0, axis_ratio=0.8) and the chi^2 ~ 2N sanity number (400 -> 3000).
+- verified (autolens 2026.7.15.1, clean venv, all 4 scripts run): simulator -> 1500-galaxy 50-200" annulus, detection S/N ~16 sigma, median |gamma|=0.085 max 0.27 (every galaxy weak, below the 0.25 shape noise); fit.py/likelihood_function.py chi^2=2974 for 3000 dof, by-hand == FitWeak == AnalysisWeak; modeling.py (Nautilus ~2 min) einstein_radius recovered 24.3" (1-sigma 22.9-25.8, truth 25.0 within 0.5 sigma), ellipticity + centre within ~1 sigma.
+- scope: left scripts/features/strong_lensing/ unchanged (deliberately galaxy-scale joint strong+weak example).
+- follow-up: notebooks/weak/*.ipynb + markdown/weak/*.md regenerate from the scripts via PyAutoBuild at build/release — the PR carried only the .py source.
+- origin: surfaced during a weak-package review; user directed the rescale. Design values verified end-to-end BEFORE filing the Mind prompt.
+
+## Original prompt
+
 # Weak-lensing `simple` example: rescale to a genuine cluster-scale lens
 
 Type: feature

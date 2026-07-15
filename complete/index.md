@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-579 records across 5 buckets.
+583 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -117,6 +117,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [multi-shared-state-examples](2026/07/multi-shared-state-examples.md) — EPIC — phases 1-4 + follow-up
 - [multi-shared-state-examples-phase-3-workspace-examples](2026/07/multi-shared-state-examples-phase-3-workspace-examples.md)
 - [multi-start-adam-profiling](2026/07/multi-start-adam-profiling.md) — Registered af.MultiStartAdam (Fit#1369) as a first-class profiling sampler in autolens_profiling/searches/, sc…
+- [multi-start-batch-size](2026/07/multi-start-batch-size.md) — Added batch_size to AbstractMultiStartGradient (MultiStartAdam/ADABelief/Lion). The searches vmapped every sta…
 - [multi-start-gradient-examples](2026/07/multi-start-gradient-examples.md) — Phase 2 (redefined config→examples) of the multi-start gradient search promotion (Fit#1369). Added a MultiStar…
 - [multi-start-gradient-guides](2026/07/multi-start-gradient-guides.md) — Phase 3 of the multi-start gradient search promotion (Fit#1369). Added a MultiStartAdam config section to scri…
 - [multi-start-gradient-search](2026/07/multi-start-gradient-search.md) — Phase 1 of promoting the benchmark-winning multi-start gradient MAP optimizer to first-class PyAutoFit searche…
@@ -148,6 +149,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [psf-oversample-workspace](2026/07/psf-oversample-workspace.md)
 - [psf-visible-input](2026/07/psf-visible-input.md)
 - [pyautogut-organ](2026/07/pyautogut-organ.md) — Gut organ + hygiene drive seam — complete
+- [pyautolens-assistant-joss-paper](2026/07/pyautolens-assistant-joss-paper.md) — JOSS paper #2 scaffolded next to the software — SHIPPED
 - [pyautolens-jax-joss-paper](2026/07/pyautolens-jax-joss-paper.md) — PyAutoLens-JAX JOSS paper scaffold — MERGED
 - [pyautoreduce-hst-design](2026/07/pyautoreduce-hst-design.md)
 - [pyautoscientist-3b-clone](2026/07/pyautoscientist-3b-clone.md) — clone (Mitosis) agent v0 live per DESIGN.md phasing — analyze mode emits CloneDecision (domain analysis via as…
@@ -193,6 +195,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [verify-install-check-f-autosimulate-and-dep-pin](2026/07/verify-install-check-f-autosimulate-and-dep-pin.md)
 - [version-check-compat-floor](2026/07/version-check-compat-floor.md)
 - [version-pinning-design-review](2026/07/version-pinning-design-review.md)
+- [weak-lensing-cluster-scale](2026/07/weak-lensing-cluster-scale.md) — weak/simple example rescaled galaxy-scale → genuine cluster-scale weak lens — SHIPPED
 - [weak-likelihood-function](2026/07/weak-likelihood-function.md)
 - [weak-modeling](2026/07/weak-modeling.md)
 - [weak-real-data](2026/07/weak-real-data.md)
@@ -201,6 +204,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [weak-strong-lensing](2026/07/weak-strong-lensing.md)
 - [weak-viz-profiles](2026/07/weak-viz-profiles.md)
 - [wfc3-reduction](2026/07/wfc3-reduction.md)
+- [wire-verify-install-leg](2026/07/wire-verify-install-leg.md)
 
 ## 2026/06
 
