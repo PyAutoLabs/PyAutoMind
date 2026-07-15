@@ -5,6 +5,8 @@ Target: PyAutoBuild
 Repos:
 - PyAutoBuild
 - PyAutoHeart
+- PyAutoConf
+- autolens_assistant
 Difficulty: medium
 Autonomy: supervised
 Priority: high
@@ -66,4 +68,87 @@ every main on each release" vs. an alternative that keeps mains authoritative.
 `scripts/yank_pypi_browser_console.js` (the yank list), PyAutoHeart/PyAutoConf
 test fixtures, and PyAutoMind history.
 
+## Findings 2026-07-15 — the fork above, with evidence
+
+Triggered again by the `autolens_assistant` session-start drift check reporting
+`autolens: 2026.7.15.1 -> 2026.7.9.1` (all five libraries, exit 1) after the
+`2026.7.15.1` release. **This section adds evidence for the fork the "Constraints
+/ design note" above deliberately deferred; it does not decide it.**
+
+### Measured, not inferred
+
+- The local checkout **is exactly the release**: `git describe --tags` in
+  PyAutoLens = `2026.7.15.1`; all five repos clean vs `origin/main`.
+- `origin/main` carries `__version__ = "2026.7.9.1"` for **all five** libraries.
+  **There are no stamps on main to pull.** The only unpulled commits were
+  `Release 2026.7.15.1: bump Colab URL tag refs`, touching zero `__init__.py`.
+- The `2026.7.15.1` **tag itself** also carries `__version__ = "2026.7.9.1"`.
+- The published wheel `autolens-2026.7.15.1-py3-none-any.whl` **does** carry
+  `__version__ = "2026.7.15.1"`. `release.yml:403` behaves exactly as documented.
+- The drift check reports **only** version-string drift and **zero API-surface-hash
+  drift** — the documented and installed APIs are byte-identical. The version
+  comparison is redundant with the hash it already computes, and strictly worse.
+
+### Root cause of the false positive (new)
+
+`autolens_assistant`'s `api_audit_baseline.json` is generated in a **clean venv
+against real wheels**, where stamps are correct (see
+`complete/2026/07/assistant-pin-bump-2026-7-9-1.md`: *"Verified via clean-venv
+`--write-baseline` … vs real 2026.7.9.1 wheels"*). The daily driver runs the
+libraries from **source checkouts on PYTHONPATH**, where stamps are frozen by
+design under #120. **Baseline is wheel-derived, check is source-derived ⇒ a
+structurally permanent false positive, independent of release cadence.**
+
+Consequence for fork (a): committing stamps back to main **would not reliably fix
+this**. It would hold only between pulling and the next release, and return
+mid-cycle. The Symptom above is real, but this particular trigger is not evidence
+for (a).
+
+### The wider pattern
+
+PyAutoConf#118 / PyAutoBuild#120 moved the model to compatibility **floors**
+(`autoconf/workspace.py:146` — older raises, newer passes) and made releases
+wheels+tags-only. **The consumers were never updated.** Three now read a floor as
+an exact pin:
+
+1. `autolens_assistant` `audit_skill_apis.py --check-version` — exact equality on
+   `__version__`; the last exact-pin holdout in the stack.
+2. `PyAutoHeart` `version_skew` — "compares frozen stamps"
+   (`draft/feature/pyautoheart/version_skew_floor_rework.md`).
+3. Workspace floors not yet adopted
+   (`draft/feature/workspaces/minimum_library_version_adoption.md` — *floors need
+   an installable version*).
+
+This reframes the fork: the defect may be **the consumers misreading the model**,
+not the missing commits.
+
+### The part the floor model does NOT excuse
+
+After `2026.7.9.1`, mains carried floors pointing at the **yanked** `2026.7.6.649`.
+A floor must always name an *installable* version. That is a genuine bug and worth
+fixing whichever fork wins — and it is the strongest surviving argument in the
+Symptom above.
+
+### Recommendation to weigh (explicitly not decided)
+
+Fork (b), *keep mains authoritative*: adopt installable floors, rework the two
+stale consumers, and make the assistant check source-checkout-aware (`git
+describe` when a module resolves to a checkout, else `__version__`) — or drop its
+version equality entirely in favour of the API-surface hash that already passes.
+Then rewrite or shelve this prompt with the reasoning recorded.
+
+Counterweight for (a): #120 removed the commit-backs after they caused stale CI
+storms, an email flood and an org-wide cron pause. Re-adding them rebuilds that
+engine. But (a) is the only fork that makes `__version__` on main *true*, which is
+the recurring human expectation — see below.
+
+### Note for whoever picks this up
+
+This idea has now surfaced by hand **twice**: the 15-repo bump on 2026-07-13, and
+again 2026-07-15. A memory documenting the floor design did not prevent either.
+Documenting the trap is not working — prefer **deleting the false signal** that
+prompts the urge (the exact-equality check) over explaining why the signal is
+wrong.
+
 <!-- formalised by the Intake (Conception) Agent on 2026-07-13 from user-intake; re-homed triage/ -> bug/pyautobuild/ by hand (classifier low-confidence) -->
+<!-- Findings 2026-07-15 appended by hand from a CLI session (/intake, folded into this prompt rather than filed as a duplicate research/ prompt). -->
