@@ -1,16 +1,5 @@
 # Active Tasks
 
-## wire-verify-install-leg
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/76
-- status: PR OPEN https://github.com/PyAutoLabs/PyAutoHeart/pull/77 — awaiting human merge (release cap = human-required). 276 tests pass, CI green 3.12+3.13. New tests verified failing on unfixed source; leg proven to flip both directions via the real CI sequence.
-- worktree: ~/Code/PyAutoLabs-wt/wire-verify-install-leg (PyAutoHeart on feature/wire-verify-install-leg)
-- autonomy: human-required (effective) — launched --auto, but work-type `release` caps at human-required (AUTONOMY.md:56); min(safe, human-required) = human-required, so --auto changed nothing. Plan approved by human 2026-07-15. Run ends at PR-open; merge/close stay human.
-- goal: Stage 3 runs verify_install A-E against the TestPyPI wheels and passes, but the result is never ingested, so readiness reports "install verification not run" — one of 3 legs holding Heart at YELLOW 70. Verified on main 2026-07-15: ~/.pyauto-heart/verify_install.json ABSENT; validation_report.json from the real release run ingested fine (integrate pass, 543p/0f) with zero verify_install trace. Discard point = validate.py:563-569, sidecar read ONLY in the fail direction; a PASS contributes nothing.
-- design: carry `index` (testpypi|pypi) in the sidecar; embed it in the stage report; `validate --ingest` persists it to HEART_STATE_DIR/verify_install.json (the file readiness already reads); readiness names the index in its reason so a TestPyPI pass never reads as proof a PyPI install works. Human decided 2026-07-15: accept testpypi evidence for this leg, WITH provenance recorded.
-- out of scope (prompt says follow-ups, not this task): ops re-run of weekly mode=smoke to refresh the stale test_run leg; hygiene triage of 58 stale parked no_run scripts.
-- repos:
-  - PyAutoHeart: feature/wire-verify-install-leg
-
 
 ## pixelized-gradient-experiment
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/100
