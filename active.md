@@ -13,17 +13,3 @@
   - autolens_workspace_developer: feature/pixelized-gradient-experiment
 
 
-## pyautolens-assistant-joss-paper
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/69
-- status: awaiting-merge — PR open, not merged
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/71
-- worktree: ~/Code/PyAutoLabs-wt/pyautolens-assistant-joss-paper
-- autonomy: supervised (docs)
-- heart-ack: shipped at Heart YELLOW score 55 (no RED), author-acknowledged 2026-07-15. Acknowledged reasons, verbatim: "workspace validation not passing (3 failed, 2026-07-09T09-48-30Z)"; "58 stale parked script(s)". Both pre-date the branch and are unrelated to this docs-only change; the ack never extends to new reasons.
-- note: unblocked 2026-07-15 — the blocking benchmark-calibration task (autolens_assistant#59) is closed. Scaffolds `autolens_assistant/paper/` (paper.md, paper.bib, README.md, .gitignore), mirroring the `PyAutoLens/paper_jax/` sibling. Consolidates the author's four drafted sections out of the prompt file and into the manuscript.
-- decisions: benchmark section reframed to "three representative examples" (repo ships 4 prompts incl. hard_group_multi; author chose reframe over adding a 4th paragraph). Author block mirrors the JAX paper (sole corresponding author).
-- open: benchmarks/RESULTS.md records ZERO runs for all 4 benchmarks, so benchmark-results prose stays future-tense; report real results before submission.
-- repos:
-  - autolens_assistant: feature/pyautolens-assistant-joss-paper
-
-
