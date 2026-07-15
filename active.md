@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## arxiv-digest-announcement-window
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/79
+- status: library-dev, started 2026-07-15 — root cause confirmed, plan on the issue, implementing.
+- worktree: ~/Code/PyAutoLabs-wt/arxiv-digest-announcement-window (PyAutoMind on feature/arxiv-digest-announcement-window)
+- autonomy: supervised (bug cap; prompt header said safe, min() → supervised)
+- finding: #papers digest drops papers permanently. `arxiv_fetch.py` filters on `<published>` (v1 submission) within a rolling 24h/72h window, but the arXiv API only indexes papers at *announcement*, 1–3 days later. Confirmed: a 72h re-run returns both papers missed on 2026-07-15 (2607.12129, 2607.12209), so the keyword query is fine. Fix = anchor the window to arXiv's announcement bands (20:00 ET Sun–Thu; 14:00 ET Mon–Fri deadlines), computed via zoneinfo for DST.
+- note: worktree used deliberately so PyAutoMind's main checkout stays on main — `prompt_sync_push` does `git add -A` on the current branch, so registry ops must not run from the feature branch.
+- backfill: after merge, one `workflow_dispatch` with lookback_hours=168 to recover already-dropped papers.
+- repos:
+  - PyAutoMind: feature/arxiv-digest-announcement-window
+
 ## multistart-adam-release-jax
 - issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/44
 - status: awaiting-input — implemented + verified, parked at ship sign-off (supervised cap). Question on the issue.
