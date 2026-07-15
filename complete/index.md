@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-578 records across 5 buckets.
+579 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -23,6 +23,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [aggregator-quick-fit-consolidation](2026/07/aggregator-quick-fit-consolidation.md) — guides/results tutorials ran own capped fits pruning to 2 samples vs deep [-10]/[9] IndexError → consolidate o…
 - [alma-interferometer](2026/07/alma-interferometer.md) — ALMA interferometer reduction live (phase 5) — first visibility-domain product family: calibrated MS → al.Inte…
 - [api-baseline-refresh](2026/07/api-baseline-refresh.md)
+- [arxiv-digest-announcement-window](2026/07/arxiv-digest-announcement-window.md)
 - [assistant-benchmarks](2026/07/assistant-benchmarks.md)
 - [assistant-deep-audit](2026/07/assistant-deep-audit.md)
 - [assistant-pin-bump-2026-7-9-1](2026/07/assistant-pin-bump-2026-7-9-1.md) — Bumped autolens_assistant version.txt + config/general.yaml from 2026.5.29.4 to 2026.7.9.1 (api_audit_baseline…
