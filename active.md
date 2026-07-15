@@ -1,20 +1,6 @@
 # Active Tasks
 
 
-## arxiv-digest-announcement-window
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/79
-- status: shipped, PR OPEN awaiting human merge — https://github.com/PyAutoLabs/PyAutoMind/pull/80. Human signed off on ship in-session 2026-07-15 ("go"); band-vs-seen-ID design accepted.
-- commit: 409f746 on feature/arxiv-digest-announcement-window (pushed + PR'd)
-- backfill: DONE 2026-07-15 — human chose the narrow window. Run 29398900801 from main, lookback_hours=40, Slack POST ok. Both 2607.12129 + 2607.12209 delivered to #papers, MOA microlensing false-positive correctly dropped by Claude, ZERO duplicates (168h sweep not needed).
-- worktree: ~/Code/PyAutoLabs-wt/arxiv-digest-announcement-window (PyAutoMind on feature/arxiv-digest-announcement-window)
-- autonomy: supervised (bug cap; prompt header said safe, min() → supervised)
-- finding: #papers digest drops papers permanently. `arxiv_fetch.py` filters on `<published>` (v1 submission) within a rolling 24h/72h window, but the arXiv API only indexes papers at *announcement*, 1–3 days later. Confirmed: a 72h re-run returns both papers missed on 2026-07-15 (2607.12129, 2607.12209), so the keyword query is fine. Fix = anchor the window to arXiv's announcement bands (20:00 ET Sun–Thu; 14:00 ET Mon–Fri deadlines), computed via zoneinfo for DST.
-- note: worktree used deliberately so PyAutoMind's main checkout stays on main — `prompt_sync_push` does `git add -A` on the current branch, so registry ops must not run from the feature branch.
-- gap analysis: only real gap was Mon 18:00 → Tue 02:00 UTC (weekend region empty). Last posted paper Mon 13:40, first gap paper Mon 18:58 → a 5.3h dead zone let a rolling W=40 hit the gap with zero duplicates.
-- TRAP: claude-code-action REFUSES to run from a branch that edits its own workflow file ("Workflow validation failed... identical content to the default branch"). So a workflow-editing PR canNOT be smoke-tested in real CI pre-merge, and the backfill had to run from main (it only needs the legacy rolling window, which main already has). First live outing of the band path = first scheduled run after merge (Thu 02:00 UTC, band Tue 18:00..Wed 18:00) — worth a glance.
-- repos:
-  - PyAutoMind: feature/arxiv-digest-announcement-window
-
 ## pixelized-gradient-experiment
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/100
 - status: in-progress, PAUSED for bedtime 2026-07-14 — feasibility ANSWERED (pix gradients DO work; certified test imaging_pixelization.py passed exit 0). RESUME = build the sampler experiment on the CORRECT config.
