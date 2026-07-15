@@ -3,8 +3,9 @@
 
 ## arxiv-digest-announcement-window
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/79
-- status: awaiting-input — implemented + verified, parked at ship sign-off (supervised cap). Question on the issue: open the PR?, backfill scope (posts to #papers, so needs a go-ahead), band-vs-seen-ID design check.
-- commit: 409f746 on feature/arxiv-digest-announcement-window (pushed, NOT PR'd)
+- status: shipped, PR OPEN awaiting human merge — https://github.com/PyAutoLabs/PyAutoMind/pull/80. Human signed off on ship in-session 2026-07-15 ("go"); band-vs-seen-ID design accepted.
+- commit: 409f746 on feature/arxiv-digest-announcement-window (pushed + PR'd)
+- OPEN QUESTION: backfill still needs an explicit option choice — posts a real catch-up digest to #papers and would duplicate anything already sent this week. Options (a) fire lookback_hours=168 and accept duplicates, (b) narrower window over the known gap only, (c) skip. NOT fired.
 - worktree: ~/Code/PyAutoLabs-wt/arxiv-digest-announcement-window (PyAutoMind on feature/arxiv-digest-announcement-window)
 - autonomy: supervised (bug cap; prompt header said safe, min() → supervised)
 - finding: #papers digest drops papers permanently. `arxiv_fetch.py` filters on `<published>` (v1 submission) within a rolling 24h/72h window, but the arXiv API only indexes papers at *announcement*, 1–3 days later. Confirmed: a 72h re-run returns both papers missed on 2026-07-15 (2607.12129, 2607.12209), so the keyword query is fine. Fix = anchor the window to arXiv's announcement bands (20:00 ET Sun–Thu; 14:00 ET Mon–Fri deadlines), computed via zoneinfo for DST.
