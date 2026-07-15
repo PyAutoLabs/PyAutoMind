@@ -30,21 +30,35 @@ A pixelized multi-start gradient MAP fit on an **A100 80GB**, float64:
 - search: `af.MultiStartAdam(n_starts=16, n_steps=300, batch_size=4)` — the
   batched `value_and_grad` is tiled by `jax.lax.map(..., batch_size=)`
   (PyAutoFit#1373/#1374).
-- **XLA spent >30 minutes compiling a single fusion** (`input_reduce_fusion`),
-  with the job still not past its first likelihood call at 1h04m wall.
+- **XLA spends >30 minutes compiling a single fusion** (`input_reduce_fusion`),
+  repeatedly, at several points in the run.
 - The *same* fusion took **7m36s** in the simpler FD probe
   (`jax.value_and_grad` of the same likelihood, no `lax.map`), so the
   scan-of-vmap structure appears to make it dramatically worse.
-- Related signal from the unbatched attempt: XLA reported
-  `Autotuning failed for HLO: %input_transpose_fusion ... All configs failed
-  during profiling` — i.e. **autotuning is benchmarking configs**, which is both
-  slow and allocation-hungry.
+- **Latent variables cost 453 s for a SINGLE sample** (`Time to compute latent
+  variables: 453.35 seconds for 1 samples`), compile-dominated — the same
+  `input_reduce_fusion` recompiles in the latent path
+  (`LATENT_BATCH_MODE='jit'`, per-sample jit).
+- Total: a 300-step, 16-start fit took **~35 min wall, almost entirely compile**.
+
+## MEASURED: autotuning is NOT the cause (tested 2026-07-15 — do not re-chase)
+
+The unbatched attempt reported `Autotuning failed for HLO ... All configs failed
+during profiling`, which made XLA autotuning the obvious suspect. **It was
+tested and ruled out.** Two otherwise-identical A100 runs:
+
+| | autotune ON (330377) | `--xla_gpu_autotune_level=0` (330378) |
+|---|---|---|
+| wall_s | 2100.1 | 2090.1 |
+| max logL | -39887.864 | -39887.864 |
+| einstein_radius | 1.4169 | 1.4169 |
+
+**Identical to the decimal — autotuning made no measurable difference.** (The
+autotuned job *appeared* slower only because it was additionally paying for a
+`print_vram_use` compile, and was observed mid-flight.) The autotune-failure
+message is a symptom of the 58 GiB allocation, not the cause of slow compiles.
 
 ## Leads worth investigating (not yet tested)
-
-- **`--xla_gpu_autotune_level`** — autotuning profiles many configs per fusion;
-  lowering/disabling it may collapse compile time (at some run-time cost). This
-  is the prime suspect for the pathology above.
 - **Persistent compilation cache** (`jax_compilation_cache_dir`) — the phase-3
   benchmark already used one; make it standard so repeat cells pay compile once.
 - **`XLA_FLAGS=--xla_dump_to=`** — dump the HLO for the pathological fusion and
