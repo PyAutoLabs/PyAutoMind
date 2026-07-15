@@ -15,8 +15,8 @@
 
 ## multistart-adam-release-jax
 - issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/44
-- status: awaiting-input — implemented + verified, parked at ship sign-off (supervised cap). Question on the issue.
-- worktree: ~/Code/PyAutoLabs-wt/multistart-adam-release-jax (autofit_workspace_test on feature/multistart-adam-release-jax; edits NOT committed)
+- status: shipped, PR OPEN awaiting human merge — https://github.com/PyAutoLabs/autofit_workspace_test/pull/45 (pending-release, MERGEABLE). Human signed off on ship in-session 2026-07-15.
+- worktree: ~/Code/PyAutoLabs-wt/multistart-adam-release-jax (autofit_workspace_test on feature/multistart-adam-release-jax; committed 615b229 + pushed)
 - autonomy: supervised (bug cap; launched --auto 2026-07-15)
 - finding: nightly-release RED 5 nights = one shard, one cause. autofit_workspace_test/config/build/env_vars_release.yaml pins PYAUTO_DISABLE_JAX=1 + PYAUTO_TEST_MODE=0, so MultiStartAdam (JAX-native, hard-guards on analysis._use_jax) really runs and raises. NOT the perf-flake tail. Regression from the #43/PyAutoFit#1370 multi-start promotion.
 - fix: 3 `set: {PYAUTO_DISABLE_JAX: "0"}` overrides in env_vars_release.yaml (MultiStartAdam + Dynesty_jax + Nautilus_jax, the latter two were passing VACUOUSLY on the numpy path) + 1 `unset: [PYAUTO_TEST_MODE, PYAUTO_DISABLE_JAX]` in env_vars.yaml (smoke) so the per-PR gate can catch this class at all.
