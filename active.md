@@ -20,7 +20,7 @@
 - prompt: active/consolidation_sweep.md
 - note: behaviour-preserving consolidation: adapter-owned max_single_exposure_seconds (pipeline._psf branches), shared psf/moments.moment_fwhm, jwst_rms fold into rms, cache_inject gitignore rider. Witness: test_autoreduce (229/3skip baseline).
 - repos:
-  - PyAutoReduce: refactor/consolidation-sweep
+  - PyAutoReduce: feature/consolidation-sweep
 
 ## aggregator-sqlite
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1377
