@@ -9,8 +9,6 @@ Autonomy: safe
 Priority: normal
 Status: formalised
 
-# SLaM resume overhead: profile inter-stage costs, judge speed-up vs checkpointing
-
 It is common for a user to set off a lens model, get so far, and then resume that model. For SLaM pipelines,
 this can take time if it has to do tasks between each stage, which makes doing the science slower.
 
