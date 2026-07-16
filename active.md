@@ -106,6 +106,16 @@
   - PyAutoBuild: feature/pre-build-slim
 
 
+## env-profile-redesign
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161
+- status: library-dev (research — verified map + target design + migration; implementation as separate green steps)
+- worktree: ~/Code/PyAutoLabs-wt/env-profile-redesign
+- autonomy: supervised
+- prompt: active/env_profile_and_validation_gate_redesign.md
+- parent: build-chain-umbrella (Phase 3, epic PyAutoBuild#155)
+- repos:
+  - PyAutoBuild: feature/env-profile-redesign
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: coordinating — Phases 0-2 shipped/awaiting-merge: 0a+#157/#158/#159/#160+audit#84 MERGED; 0b Brain#128 PR-open; fix-1 Heart#85 PR-open. Next: Phase 3 (env-profile brief), Phase 4 (version fork + version_skew rework + README pins + installable-floors invariant), Phase 5 (agent failure modes). Satellites: howto simulator stage; verify_install exercise run pairs with next rehearsal
