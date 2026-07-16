@@ -4,7 +4,9 @@
 ## eyes-paper-critique
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
 - session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/129
+- heart-ack: 2026-07-16 human ack of RED for PR-open ("continue" after verdict shown; same 6 unrelated organism-level reasons, third identical ack today — firewall drift ×6 is parallel-session, branch greps clean); merge stays human
 - worktree: ~/Code/PyAutoLabs-wt/eyes-paper-critique
 - autonomy: supervised
 - prompt: active/eyes_paper_informed_critique.md
