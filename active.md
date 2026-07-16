@@ -69,8 +69,7 @@
 
 ## env-profile-validator
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 1; epic #155)
-- status: library-shipped, awaiting-merge — PR PyAutoBuild#163 (step-1 validator; found 3 dead patterns + 15 vacuous-JAX scripts on first run)
-- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/163
+- status: MERGED #163 — recording completion next
 - worktree: ~/Code/PyAutoLabs-wt/env-profile-validator
 - autonomy: supervised
 - repos:
@@ -78,7 +77,8 @@
 
 ## agent-failure-modes
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/130
-- status: library-dev (research — design doc; parallel PR from main, PyAutoBrain deliberately NOT claimed: eyes-paper-critique holds it, zero file overlap [docs/ only])
+- status: library-shipped, awaiting-merge — doc PR PyAutoBrain#131
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/131
 - worktree: none (manual worktree for the doc branch)
 - autonomy: supervised
 - prompt: active/agent_failure_modes_structural_mitigations.md
