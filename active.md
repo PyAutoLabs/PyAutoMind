@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## consolidation-sweep
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/48
+- session: claude (CLI, 2026-07-16)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/consolidation-sweep
+- autonomy: safe (--auto; refactor cap)
+- prompt: active/consolidation_sweep.md
+- note: behaviour-preserving consolidation: adapter-owned max_single_exposure_seconds (pipeline._psf branches), shared psf/moments.moment_fwhm, jwst_rms fold into rms, cache_inject gitignore rider. Witness: test_autoreduce (229/3skip baseline).
+- repos:
+  - PyAutoReduce: refactor/consolidation-sweep
+
 ## aggregator-sqlite
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1377
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
