@@ -1,6 +1,30 @@
 # Active Tasks
 
 
+## community-voice-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/119
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/community-voice-agent
+- autonomy: human-required
+- prompt: active/community_communication_agent_listen_and_respond.md
+- note: birth the community conductor — alias changed "the Voice"→"the Ears" (workspace-agent #118 shipped as the Voice; Broca=workspace speaks, Wernicke=community hears). Includes /wake_up community sensory leg. Watch: ic50-assistant-seed also claims PyAutoBrain (clone/ only, no expected overlap).
+- repos:
+  - PyAutoBrain: feature/community-voice-agent
+
+
+## ic50-assistant-seed
+- issue: https://github.com/Jammy2211/ic50_assistant/issues/1
+- status: in-progress — Phase 1 (seed) shipped; PRs open; Phases 2-5 pending
+- worktree: ~/Code/PyAutoLabs-wt/ic50-assistant-seed
+- autonomy: supervised
+- prompt: active/build_ic50_assistant_from_autofit_assistant.md
+- note: build ic50_assistant (PyAutoFit domain assistant, EP/graphical IC50) seeded from autofit_assistant. Phase 1 generalised the Clone Agent (reference profiles) — PyAutoBrain#120 + autofit_assistant#11 — and birthed PRIVATE Jammy2211/ic50_assistant (birth c3487afc1). PyAutoBrain claimed by workspace-agent; this is a small parallel PR, no file overlap (clone/ only), user-approved. Phases 2-5 (IC50 wiki+papers, ic50_* demo skills, RAL/HPC, validation) checkpoint before start. Downstream: ic50_workspace → closed science-project repo.
+- repos:
+  - PyAutoBrain: feature/ic50-assistant-seed
+  - autofit_assistant: feature/ic50-assistant-seed
+  - ic50_assistant: main (born via clone_seed)
+
+
 ## assistant-euclid-mode
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/73
 - status: workspace-dev
