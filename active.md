@@ -1,6 +1,18 @@
 # Active Tasks
 
 
+## eyes-conductor
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
+- session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/eyes-conductor
+- autonomy: supervised
+- prompt: active/eyes_conductor.md
+- parent: eyes-agent epic (#117, Phase 2 of 3; Phase 1 MERGED autolens_workspace_test#170)
+- note: parallel-PR override (user-approved 2026-07-16): community-ears-v2-prs claims PyAutoBrain (#125); eyes adds new files + additive-only lines in AGENTS.md/bin/pyauto-brain — no overlap expected. Firewall: core takes workspace path arg, no instance tokens in .py/.sh
+- repos:
+  - PyAutoBrain: feature/eyes-conductor
+
 ## inject-stage-hst-imaging
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/46
 - session: claude (CLI, 2026-07-16)
