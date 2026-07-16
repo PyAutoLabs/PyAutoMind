@@ -4,7 +4,9 @@
 ## inject-jwst
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/52
 - session: claude (CLI, 2026-07-16)
-- status: library-dev
+- status: library-shipped, awaiting-merge — PR PyAutoReduce#53 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/53
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; release validation stale (5 libs) — note install-verification cleared vs earlier lists
 - worktree: ~/Code/PyAutoLabs-wt/inject-jwst
 - autonomy: supervised (--auto; Feature Agent sized large)
 - prompt: active/inject_stage_jwst.md
