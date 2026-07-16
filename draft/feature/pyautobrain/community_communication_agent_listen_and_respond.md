@@ -9,8 +9,6 @@ Autonomy: human-required
 Priority: normal
 Status: formalised
 
-# Community communication agent — listen and respond to user GitHub issues
-
 I need to think about how I communicate with users and people who put up github issues with requests for new features,
 bugs, etc.
 
