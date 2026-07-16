@@ -4,7 +4,7 @@
 ## simulate-injection-feasibility
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/44
 - session: claude (CLI, 2026-07-16)
-- status: library-dev
+- status: awaiting-input — parked at ship gate on Heart RED (docs-only deliverable written + tests pass in worktree, uncommitted; gate state on issue #44). Resume: human RED ack → commit → review leg → PR
 - worktree: ~/Code/PyAutoLabs-wt/simulate-injection-feasibility
 - autonomy: supervised (--auto; research cap)
 - prompt: active/simulated_lens_through_reduction_pipeline.md
