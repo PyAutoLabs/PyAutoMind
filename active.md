@@ -10,6 +10,7 @@
 - prompt: active/simulated_lens_through_reduction_pipeline.md
 - note: research deliverable = docs/design/simulate.md feasibility verdict (frame-level injection + simobserve) + phased follow-up prompts; docs-only, no autoreduce/ source edits.
 - repos:
+  - PyAutoReduce: feature/simulate-injection-feasibility
 
 ## aggregator-profiling
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
