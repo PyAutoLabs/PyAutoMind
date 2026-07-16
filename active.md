@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## coolest-standard-support
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/612
+- session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/coolest-standard-support
+- autonomy: supervised
+- prompt: active/coolest_standard_support.md
+- note: follow-up prompt draft/feature/autolens/coolest_powerlaw_herculens_parity.md stays in draft until this ships
+- repos:
+
 ## community-voice-agent
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/119
 - status: library-dev
