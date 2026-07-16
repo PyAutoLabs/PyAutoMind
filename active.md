@@ -85,7 +85,8 @@
 
 ## pre-build-audit
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156
-- status: library-dev (research — audit + design doc; edits behind plan approval)
+- status: library-shipped, awaiting-merge — PR PyAutoBuild#157 (audit doc; corrective-PR exception for Heart RED, human-authorized 2026-07-16)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/157
 - worktree: ~/Code/PyAutoLabs-wt/pre-build-audit
 - autonomy: supervised
 - prompt: active/pre_build_git_add_failure_audit.md
