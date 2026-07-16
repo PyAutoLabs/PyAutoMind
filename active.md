@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## viz-render-gallery
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
+- session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/viz-render-gallery
+- autonomy: supervised
+- prompt: active/visualization_eyes_agent.md
+- parent: eyes-agent epic (#117, Phase 1 of 3; Phase 2 blocked by workspace-agent's PyAutoBrain claim)
+- repos:
+
 ## memory-structure-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/24
 - status: library-dev
@@ -9,6 +19,8 @@
 - prompt: active/pyautomemory_structure_cleanup.md
 - note: PyAutoBrain leg (memory-faculty glob) is a small parallel PR from main — repo claimed by workspace-agent, parallel PR user-approved 2026-07-16 (no file overlap); PyAutoBrain deliberately NOT claimed here
 - repos:
+  - PyAutoMemory: feature/memory-structure-cleanup
+  - PyAutoMind: feature/memory-structure-cleanup
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
