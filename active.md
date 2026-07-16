@@ -26,7 +26,9 @@
 ## consolidation-sweep
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/48
 - session: claude (CLI, 2026-07-16)
-- status: library-dev
+- status: library-shipped, awaiting-merge — PR PyAutoReduce#49 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/49
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; install verification not run; release validation stale (5 libs)
 - worktree: ~/Code/PyAutoLabs-wt/consolidation-sweep
 - autonomy: safe (--auto; refactor cap)
 - prompt: active/consolidation_sweep.md
