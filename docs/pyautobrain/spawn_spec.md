@@ -49,12 +49,12 @@ deliberately, never silently shipped into a template.
 |---|---------|--------|
 | 1 | `bibliography/*.py`, `bibliography/README.md`, `scripts/`, `tests/`, `Makefile`, `LICENSE`, `CONTRIBUTING.md`, `AGENTS.md`, `CLAUDE.md`, `.gitignore` | KEEP verbatim (tooling + schema + policy — scripts/tests are the citation-validation tooling the Makefile drives) |
 | 2 | `bibliography/*.bib` and any bibliography data files | EMPTY → file kept with header comment ("populated by your literature") |
-| 3 | the wiki schema | GENERATE → `example_wiki/CLAUDE.md` is a **domain-neutral schema asset** held inside spawn (the live `lensing_wiki/CLAUDE.md` is lensing-flavoured throughout — a verbatim copy fails the canary test; the generic rewrite preserves the schema, drops the domain) |
-| 4 | `*_wiki/**` (all live sub-wikis, all pages) | DROP; generate instead ONE `example_wiki/` containing the schema CLAUDE.md (rule 3), an `index.md` skeleton listing zero sources, and one `sources/EXAMPLE_stub.md` demonstrating the stub format (hand-written once, stored inside spawn as a heredoc/template asset — not copied from live content) |
-| 5 | `index.md` | SUBSTITUTE → skeleton: intro line + a table with the single `example_wiki/` row + "add sub-wikis following the same schema" |
+| 3 | `wiki/CLAUDE.md` (the shared schema) | KEEP verbatim — since the wiki/ restructure (PyAutoMemory#24) the schema is a single domain-neutral file at `wiki/CLAUDE.md`, kept canary-clean at the source (its examples carry no instance tokens), so spawn no longer maintains a duplicate schema asset |
+| 4 | `wiki/*` (all live sub-wikis, all pages) | DROP; generate instead ONE `wiki/example/` containing a slim scope-only `CLAUDE.md` (the schema is inherited from rule 3, not copied), an `index.md` skeleton listing zero sources, and one `sources/EXAMPLE_stub.md` demonstrating the stub format (hand-written once, stored inside spawn as a heredoc/template asset — not copied from live content) |
+| 5 | `index.md` | SUBSTITUTE → skeleton: intro line + a table with the single `wiki/example/` row + "add sub-wikis following the same schema" |
 | 6 | `reading-queue.md` | EMPTY → header + section-format comment |
 | 7 | `README.md` | GENERATE → a template README asset held inside spawn (text surgery on the live README is brittle across edits; the asset keeps `--check` round-trips stable) |
-| 8 | root `*.bib` legacy files, PDFs, legacy paper-notes families (`CTI/`, `DarkMatterModels/`, `Medical/`, `LightProFFits/`, `euclid.sty`, loose paper stubs), any personal notes | DROP |
+| 8 | `.github/**` | KEEP with owner substitution; `logo.png` (instance branding) | DROP. The old legacy-family DROP rules (root `*.bib`, PDFs, `CTI/` etc.) are retired — those files are gone from the live repo and PyAutoMemory's structure lint (`make validate-structure`, in CI) prevents their return at the source |
 
 **Privacy invariant (hard rule):** no live wiki page, bibliography entry,
 reading-queue line, prompt, or registry entry may ever appear in a template
