@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## jax-compile-time-research
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
+- session: claude (CLI bg job b44b0e0f, 2026-07-16)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-compile-time-research
+- autonomy: supervised (--auto; research cap)
+- prompt: active/jax_compile_time_is_prohibitive_for_complex.md
+- note: parallel-claim override (user-approved 2026-07-16): slam-resume-profiling (#70) also claims autolens_profiling — different subtrees (it owns slam/resume paths; this task adds NEW jax_compile/ dir only, touches nothing existing). Research deliverable = compile-time probe + research note answering "jit boundaries in source vs settings/small changes". autolens_workspace_developer is READ-ONLY evidence (claimed by pixelized-gradient-experiment). Companion (separate task): draft/feature/autolens_profiling/jax_compile_time_profiling.md industrializes the probe. Established: autotune ruled out; lax.map scan-of-vmap >> plain value_and_grad (7m36s vs >30min same fusion); persistent cache warming in play on RAL job 330513.
+- repos:
+  - autolens_profiling: feature/jax-compile-time-research
+
 ## eyes-conductor
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
 - session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
