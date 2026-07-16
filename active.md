@@ -7,6 +7,7 @@
 - status: library-shipped, awaiting-merge — PR PyAutoReduce#53 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-16
 - library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/53
 - heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; release validation stale (5 libs) — note install-verification cleared vs earlier lists
+- resume: merge PR#53 → post-merge cleanup (record via lifecycle.py, drop entry, worktree_remove inject-jwst) → frees the PyAutoReduce claim for phase 3 (/start_dev draft/feature/pyautoreduce/inject_alma_simobserve.md --auto). Optional evidence first: COSMOS-Web recovery run (prototypes/inject_recovery_jwst.py, needs jwst stack, heavy). Keck 2b stays in draft (registration design question).
 - worktree: ~/Code/PyAutoLabs-wt/inject-jwst
 - autonomy: supervised (--auto; Feature Agent sized large)
 - prompt: active/inject_stage_jwst.md
