@@ -24,18 +24,6 @@
 - repos:
 
 
-## delete-pyautoheart-shim
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/80
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/81 (pending-release)
-- status: library-shipped, awaiting-merge
-- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); install verification not run; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
-- worktree: ~/Code/PyAutoLabs-wt/delete-pyautoheart-shim
-- autonomy: supervised
-- prompt: active/delete_pyautoheart_shim.md
-- note: human overrode the heart-state-clobber repo-claim block ("go"); moot anyway — its PR #79 merged before this branch was cut from origin/main (0319c1a includes it). No file overlap (heart/checks/ vs pyautoheart/+pyproject.toml).
-- repos:
-  - PyAutoHeart: feature/delete-pyautoheart-shim
-
 ## coolest-standard-support
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/612
 - session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124

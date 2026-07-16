@@ -1,3 +1,11 @@
+## delete-pyautoheart-shim
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/80 (CLOSED)
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/81 (merged ed67f18)
+- summary: deleted the dead pyautoheart/ compat shim (6-line `from heart import *`, zero importers workspace-wide) and dropped "pyautoheart*" from packages.find in pyproject.toml — a leftover the Pulse-retirement Phase 2 (#28) missed after the PyAutoPulse→PyAutoHeart rename (#18). Distribution name unchanged. Verified: 280 tests, importer grep, CLI. heart/→autoheart rename explicitly out of scope (Heart never installs into site-packages; revisit only if it ships as a package).
+- heart: shipped through unrelated organism-scope RED on explicit user ack (reasons verbatim in PR body + active.md heart-ack at the time). Smoke test skipped as vacuous — no workspace script imports PyAutoHeart.
+- concurrency: user overrode the heart-state-clobber repo-claim block ("go"); moot — its PR #79 had already merged into the origin/main this branch was cut from.
+
 ## memory-structure-cleanup (wiki/ + bibliography restructure, structure lint, template sync — SHIPPED)
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/24 (CLOSED; design note posted as issue comment)
 - completed: 2026-07-16
