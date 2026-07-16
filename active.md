@@ -27,7 +27,9 @@
 ## aggregator-profiling
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
-- status: library-dev
+- status: shipped, awaiting-merge (library-first: PyAutoFit#1376 before autofit_workspace_test#48)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1376 (pending-release)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/48 (pending-release)
 - worktree: ~/Code/PyAutoLabs-wt/aggregator-profiling
 - autonomy: supervised
 - prompt: active/aggregator_profiling_harness_and_result_loading.md
