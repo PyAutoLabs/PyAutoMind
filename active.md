@@ -68,7 +68,8 @@
 
 ## heart-state-clobber
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/78
-- status: library-dev
+- status: library-shipped, awaiting-merge (corrective-PR exception for Heart RED, human-authorized 2026-07-16)
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/79
 - worktree: ~/Code/PyAutoLabs-wt/heart-state-clobber
 - autonomy: supervised
 - parent: build-chain-umbrella (Phase 0a)
