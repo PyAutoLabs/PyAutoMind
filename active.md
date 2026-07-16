@@ -92,7 +92,8 @@
 
 ## env-profile-validator
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 1; epic #155)
-- status: library-dev → shipping
+- status: library-shipped, awaiting-merge — PR PyAutoBuild#163 (step-1 validator; found 3 dead patterns + 15 vacuous-JAX scripts on first run)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/163
 - worktree: ~/Code/PyAutoLabs-wt/env-profile-validator
 - autonomy: supervised
 - repos:
