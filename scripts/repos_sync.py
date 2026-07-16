@@ -556,7 +556,7 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBuild/autobuild/generate_autofit.py": {"autofit_workspace"},
     "PyAutoBuild/autobuild/generate_markdown.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
     "PyAutoBuild/autobuild/generate_release_notes.py": {"PyAutoArray", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
-    "PyAutoBuild/autobuild/navigator.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
+    "PyAutoBuild/autobuild/navigator.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoCTI", "PyAutoConf", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
     "PyAutoBuild/autobuild/repro_command.py": {"PyAutoLabs", "autogalaxy_workspace_test"},
     "PyAutoBuild/autobuild/run_all.py": {"HowToLens", "PyAutoLabs", "autolens_workspace", "euclid_strong_lens_modeling_pipeline"},
     "PyAutoBuild/autobuild/slack_release_notes.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
