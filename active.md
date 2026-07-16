@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## inject-jwst
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/52
+- session: claude (CLI, 2026-07-16)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/inject-jwst
+- autonomy: supervised (--auto; Feature Agent sized large)
+- prompt: active/inject_stage_jwst.md
+- note: phase 2a of simulate.md — JWST _cal injection; input contract Jy/pixel (flux-exact via PIXAR_SR; nominal e_per_dn=2 shapes Poisson width only, disclosed); ERR variance added pre-image3; gate widens to jwst_image3. 2b (Keck registration design) stays in draft.
+- repos:
+  - PyAutoReduce: feature/inject-jwst
+
 ## aggregator-sqlite
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1377
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
