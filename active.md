@@ -80,11 +80,13 @@
 ## viz-render-gallery
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
 - session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/170
 - worktree: ~/Code/PyAutoLabs-wt/viz-render-gallery
 - autonomy: supervised
 - prompt: active/visualization_eyes_agent.md
 - parent: eyes-agent epic (#117, Phase 1 of 3; Phase 2 blocked by workspace-agent's PyAutoBrain claim)
+- heart-ack: 2026-07-16 human ack of RED for PR-open (6 unrelated organism-level reasons: PyAutoLens paper_jax dirt, stale 07-09 workspace validation, 58 parked scripts, firewall drift ×2, install verification not run, release validation stale); merge stays human
 - repos:
   - autolens_workspace_test: feature/viz-render-gallery
 
