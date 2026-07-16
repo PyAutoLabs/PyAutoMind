@@ -75,6 +75,15 @@
 - repos:
   - PyAutoHeart: feature/heart-state-clobber
 
+## slope-hierarchy
+- issue: https://github.com/Jammy2211/slope_hierarchy/issues/1
+- status: workspace-dev — Phase 1 scaffold DONE (private repo born, commit 1c595ba); next: Phase 1 simulator
+- worktree: /mnt/c/Users/Jammy/Science/slope_hierarchy (external science project on its own main — no PyAutoLabs worktree; ic50_workspace-style non-standard)
+- autonomy: supervised
+- prompt: active/ep_hierarchical_power_law_slopes.md
+- note: hierarchical power-law slope recovery from N simulated imaging lenses — BlackJAX-NUTS joint fit vs EP parity (values AND errors), RAL scale-up, and end-to-end exercise of the 2026-07 EP diagnostics (PyAutoFit#1330 wave). PyAutoFit is exercised NOT edited: EP defects file as new bug prompts via intake. No PyAutoLabs repo claimed.
+- repos:
+
 ## pixelized-gradient-experiment
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/100
 - status: in-progress — A100 pipeline WORKING. Gradient question SETTLED (yes). Search question OPEN. Nautilus baseline job 330379 running on RAL (submitted 2026-07-15, 4h limit).
