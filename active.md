@@ -26,8 +26,8 @@
 
 ## jax-compile-time-research
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
-- session: claude (CLI bg job b44b0e0f, 2026-07-16)
-- status: workspace-dev
+- session: claude (CLI, resumed 2026-07-16 evening; was bg job b44b0e0f)
+- status: workspace-dev — MGE CPU matrix DONE (grad ≈ 13-15× jit compile; lax.map∘vag 47×); persistent cache CERTIFIED locally (warm 117s→2.3s, 51×; trace ~14s uncacheable); RAL 330513 confirmed 1h10m fusion DID serialize (1.7MB entry); A100 warm-repeat job 330534 pending (nautilus 0 16 — args MUST match or shapes miss cache); local pixelization jit+vag CPU probe running. Remaining: pix numbers, A100 warm verdict, piecewise-jit prototype (cold-compile half of core question)
 - worktree: ~/Code/PyAutoLabs-wt/jax-compile-time-research
 - autonomy: supervised (--auto; research cap)
 - prompt: active/jax_compile_time_is_prohibitive_for_complex.md
