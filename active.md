@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## assistant-euclid-mode
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/73
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/assistant-euclid-mode
+- autonomy: supervised
+- prompt: active/extend_autolens_assistant_with_a_euclid_mode.md
+- note: 3 phases, one PR each — P0 pipeline cleanup (profiling/+skills/ removal), P1 euclid_* skills, P2 wiki/euclid/ literature wiki; euclid_assistant is read-only bib source, NOT claimed
+- repos:
+
+
 ## viz-render-gallery
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
 - session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
