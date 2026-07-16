@@ -20,7 +20,7 @@ advances to `active/`, and on merge to `complete/<YYYY>/<MM>/` (issue #71).
 | `feature/`       | new user-facing or scientific capabilities | feature planner |
 | `bug/`           | incorrect behaviour, crashes, regressions | debugger |
 | `refactor/`      | internal restructuring, no intended behaviour change | Refactor Agent (conductor; default-safe under `--auto`) |
-| `docs/`          | documentation, tutorials, notebooks, examples | documentation agent |
+| `docs/`          | documentation, tutorials, notebooks, examples | documentation agent; workspace/HowTo *example authorship* → Workspace Agent (conductor) |
 | `test/`          | test coverage, smoke tests, validation scripts | test engineer |
 | `release/`       | packaging, versions, deployment, release readiness | release engineer |
 | `maintenance/`   | dependency updates, hygiene, cleanup, small technical debt | hygiene agent |
