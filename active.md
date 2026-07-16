@@ -3,7 +3,9 @@
 
 ## delete-pyautoheart-shim
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/80
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/81 (pending-release)
+- status: library-shipped, awaiting-merge
+- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); install verification not run; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
 - worktree: ~/Code/PyAutoLabs-wt/delete-pyautoheart-shim
 - autonomy: supervised
 - prompt: active/delete_pyautoheart_shim.md
