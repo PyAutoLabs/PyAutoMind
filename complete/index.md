@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-612 records across 5 buckets.
+615 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -62,6 +62,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [dpie-lenstool-param](2026/07/dpie-lenstool-param.md)
 - [eceb-editorial-revision](2026/07/eceb-editorial-revision.md) — ECEB wiki rules — EC A&A template assets — MERGED
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
+- [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
 - [ep-analytic-updates-scope](2026/07/ep-analytic-updates-scope.md) — EP phase 6 — scope analytic conjugate updates — plan DELIVERED
 - [ep-deterministic-reconcile](2026/07/ep-deterministic-reconcile.md) — EP phase 5 — three deterministic-variable mechanisms — DECIDED
 - [ep-diagnostics](2026/07/ep-diagnostics.md) — EP review Phase 4 — EPDiagnostics collector, live CSV/PNG artifacts, graph_factors.png, mean_field_summary, ch…
@@ -74,6 +75,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [ep-statistics-audit](2026/07/ep-statistics-audit.md) — F1-F10 census + EP wiki page; fixes dispersed: F3/F10->#1349, F5->#1334, F7c->#1345; remainder executes as bug…
 - [ep-statistics-fix-batch](2026/07/ep-statistics-fix-batch.md) — #1332 F1 (MeanField log_norm->plates ctor slip) + F2 (Gamma/Beta KL direction, MC-certified) + F4 (exoneration…
 - [eyes-conductor](2026/07/eyes-conductor.md) — epic #117 Phase 2
+- [eyes-paper-critique](2026/07/eyes-paper-critique.md) — epic #117 CLOSED
 - [factor-graph-viz-dispatch](2026/07/factor-graph-viz-dispatch.md)
 - [frame-products](2026/07/frame-products.md) — opt-in per-exposure frame products live — TargetSpec.frame_products packages every calibrated _flc/_flt SCI ch…
 - [frame-registration](2026/07/frame-registration.md) — inter-exposure registration quantified + extracted — frames/manifest.json per-frame registration block (WCS so…
@@ -218,6 +220,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [starred-wfc3-validation](2026/07/starred-wfc3-validation.md) — WFC3/HST leg of #37 — the definitive stellar-field science comparison the F115W (#35) attempt couldn't do (ext…
 - [stpsf-tier2b](2026/07/stpsf-tier2b.md) — JWST per-frame PSF coverage lifted 3/6 -> 6/6 (F115W validated) — STPSF tier-2b at frame DETECTOR + target pos…
 - [stub-skill-recipes-fill-in](2026/07/stub-skill-recipes-fill-in.md) — retired by user decision
+- [survey-cutouts](2026/07/survey-cutouts.md)
 - [user-defaults-discovery](2026/07/user-defaults-discovery.md) — batch finale (task 6, rescoped discovery-half) — start-new-project step 0 environment-discovery preflight: rea…
 - [verify-install-check-f-autosimulate-and-dep-pin](2026/07/verify-install-check-f-autosimulate-and-dep-pin.md)
 - [version-check-compat-floor](2026/07/version-check-compat-floor.md)

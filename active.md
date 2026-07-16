@@ -1,19 +1,6 @@
 # Active Tasks
 
 
-## survey-cutouts
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/50
-- session: claude (CLI, 2026-07-16)
-- status: library-shipped, awaiting-merge — PR PyAutoReduce#51 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-16
-- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/51
-- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; install verification not run; release validation stale (5 libs)
-- worktree: ~/Code/PyAutoLabs-wt/survey-cutouts
-- autonomy: safe (--auto; feature≤medium cap)
-- prompt: active/ground_based_instruments_optional_noise_psf.md
-- note: third adapter domain "cutout" — fetch+package pre-reduced survey coadds for color context (legacy_surveys/DES griz + invvar noise, sdss via astroquery, panstarrs fitscut); noise/PSF explicitly optional; HSC auth-gated deferred; unWISE/GALEX assessment in docs/design/surveys.md.
-- repos:
-  - PyAutoReduce: feature/survey-cutouts
-
 ## test-mode-representative-samples-phase-1-design
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1378
 - session: claude --resume fceb9fd4-59ed-4cb4-acc0-bd4c04c23839
