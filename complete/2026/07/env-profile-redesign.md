@@ -1,3 +1,11 @@
+## env-profile-redesign
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/162 (merged)
+- summary: env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session-1 checkpoint); invariant decided (human): NumPy stays the validated release reference for ag/al — option (a) rejected on over-reach guard + measured JIT compile cost; design: derivation rule (jax_*/*_jax/*_jit) replaces hand lists, loud runner guard, one resolver + scrubbed baseline, PR-time validate_env_profiles, profile rename; 8-step migration, each green alone, landing as separate tasks (#161 stays the parent issue).
+
+## Original prompt
+
 # Redesign the env-profile + validation-gate system so this class of bug cannot happen
 
 Type: research

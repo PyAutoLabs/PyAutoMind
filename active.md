@@ -87,16 +87,6 @@
 
 
 
-## env-profile-redesign
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161
-- status: library-shipped, awaiting-merge — design doc PR PyAutoBuild#162 (invariant decided; 8-step migration lands as separate tasks post-merge)
-- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/162
-- worktree: ~/Code/PyAutoLabs-wt/env-profile-redesign
-- autonomy: supervised
-- prompt: active/env_profile_and_validation_gate_redesign.md
-- parent: build-chain-umbrella (Phase 3, epic PyAutoBuild#155)
-- repos:
-  - PyAutoBuild: feature/env-profile-redesign
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
