@@ -168,3 +168,4 @@
 - worktree: ~/Code/PyAutoLabs-wt/slam-resume-profiling
 - prompt: active/slam_resume_overhead_profile_inter_stage_costs.md
 - repos:
+  - autolens_profiling: feature/slam-resume-profiling
