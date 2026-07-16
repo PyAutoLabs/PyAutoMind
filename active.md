@@ -20,6 +20,8 @@
 - prompt: active/coolest_standard_support.md
 - note: follow-up prompt draft/feature/autolens/coolest_powerlaw_herculens_parity.md stays in draft until this ships
 - repos:
+  - PyAutoGalaxy: feature/coolest-standard-support
+  - PyAutoLens: feature/coolest-standard-support
 
 ## community-voice-agent
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/119
