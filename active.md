@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## jax-joss-benchmarks
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-joss-benchmarks
+- autonomy: supervised
+- prompt: active/autolens_jax_joss_benchmark_repo.md
+- note: 5-phase epic (one-shot attempt per user); new repo autolens_jax_joss (PyAutoLabs, public) born alongside; datasets SDP.81 / RXJ1131 / A2744 user-approved
+- repos:
+
+
 ## delete-pyautoheart-shim
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/80
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/81 (pending-release)
