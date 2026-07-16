@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-605 records across 5 buckets.
+608 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -71,12 +71,14 @@ _(curate hard-won records here — survives regeneration.)_
 - [ep-priors-fable-reassess](2026/07/ep-priors-fable-reassess.md) — priors/messages — 9 bugs fixed + 5 decisions resolved — SHIPPED
 - [ep-statistics-audit](2026/07/ep-statistics-audit.md) — F1-F10 census + EP wiki page; fixes dispersed: F3/F10->#1349, F5->#1334, F7c->#1345; remainder executes as bug…
 - [ep-statistics-fix-batch](2026/07/ep-statistics-fix-batch.md) — #1332 F1 (MeanField log_norm->plates ctor slip) + F2 (Gamma/Beta KL direction, MC-certified) + F4 (exoneration…
+- [eyes-conductor](2026/07/eyes-conductor.md) — epic #117 Phase 2
 - [factor-graph-viz-dispatch](2026/07/factor-graph-viz-dispatch.md)
 - [frame-products](2026/07/frame-products.md) — opt-in per-exposure frame products live — TargetSpec.frame_products packages every calibrated _flc/_flt SCI ch…
 - [frame-registration](2026/07/frame-registration.md) — inter-exposure registration quantified + extracted — frames/manifest.json per-frame registration block (WCS so…
 - [health-api](2026/07/health-api.md)
 - [health-one-door](2026/07/health-one-door.md)
 - [health-sync-noise-filter](2026/07/health-sync-noise-filter.md)
+- [heart-evidence-audit](2026/07/heart-evidence-audit.md) — readiness evidence-chain audit (build-chain campaign #155 Phase 2). Per-leg evidence map; findings A (test_run…
 - [heart-state-clobber](2026/07/heart-state-clobber.md) — PyAutoHeart test suite clobbered live ~/.pyauto-heart state; run() made side-effect-free in test_run + version…
 - [howto-markdown-resync](2026/07/howto-markdown-resync.md) — re-synced 4 stale HowTo ch1 markdown pages after the truncation-restore work merged post-batch-2b. HowToLens t…
 - [hst-acs-phase1](2026/07/hst-acs-phase1.md)
@@ -85,6 +87,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [hygiene-file-modes](2026/07/hygiene-file-modes.md) — crlf / config / artifacts — complete
 - [hygiene-perf-phase4](2026/07/hygiene-perf-phase4.md) — unit-test / workspace-testmode / function profiling — complete
 - [import-time-heart-leg](2026/07/import-time-heart-leg.md) — hygiene follow-up — complete
+- [inject-stage-hst-imaging](2026/07/inject-stage-hst-imaging.md)
 - [intake-agent](2026/07/intake-agent.md)
 - [intake-census-dashboard](2026/07/intake-census-dashboard.md)
 - [intake-formalise](2026/07/intake-formalise.md)
