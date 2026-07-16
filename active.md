@@ -38,9 +38,11 @@
 
 ## community-voice-agent
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/119
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/122
 - worktree: ~/Code/PyAutoLabs-wt/community-voice-agent
 - autonomy: human-required
+- heart-ack: RED (6 unrelated reasons — PyAutoLens dirt, stale 07-09 validation, 58 parked, firewall drift ×2, install-verify not run, release-validation stale) acknowledged by human for PR-open only, 2026-07-16
 - prompt: active/community_communication_agent_listen_and_respond.md
 - note: birth the community conductor — alias changed "the Voice"→"the Ears" (workspace-agent #118 shipped as the Voice; Broca=workspace speaks, Wernicke=community hears). Includes /wake_up community sensory leg. Watch: ic50-assistant-seed also claims PyAutoBrain (clone/ only, no expected overlap).
 - repos:
