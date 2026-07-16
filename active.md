@@ -1,6 +1,22 @@
 # Active Tasks
 
 
+## build-chain-umbrella
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
+- status: coordinating — epic over 6 phases; Phase 0a (heart-state-clobber) in flight, Phase 0b blocked (PyAutoBrain claimed ×2), Phases 1-5 issued sequentially as predecessors ship
+- prompt: active/build_chain_umbrella.md (full decomposition)
+- autonomy: supervised
+- repos:
+
+## heart-state-clobber
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/78
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/heart-state-clobber
+- autonomy: supervised
+- parent: build-chain-umbrella (Phase 0a)
+- repos:
+  - PyAutoHeart: feature/heart-state-clobber
+
 ## workspace-agent
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/116
 - status: library-dev
