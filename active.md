@@ -74,7 +74,7 @@
 
 ## memory-structure-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/24
-- status: library-dev
+- status: PRs open, awaiting merge — Memory#25 (restructure) -> Mind#82 (template sync) + Brain#121 (faculty glob, parallel-PR exception); design note posted on #24
 - worktree: ~/Code/PyAutoLabs-wt/memory-structure-cleanup
 - autonomy: supervised
 - prompt: active/pyautomemory_structure_cleanup.md
