@@ -81,7 +81,7 @@
 
 ## pixelized-gradient-experiment
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/100
-- status: in-progress — A100 pipeline WORKING. Gradient question SETTLED (yes). Search question OPEN. Nautilus baseline job 330379 running on RAL (submitted 2026-07-15, 4h limit).
+- status: in-progress — A100 pipeline WORKING. Gradient question SETTLED (yes). Search question OPEN. Nautilus baseline: 330379 CANCELLED at 1h07 mid input_reduce_fusion compile (never sampled); RE-SUBMITTED as job 330513 (2026-07-16, 12h limit, cache dir already set — compile must complete once to warm it). Log: pixgrad_logs/samp_pixgrad_nautilus_330513.log.
 - worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (autolens_workspace_developer on feature/pixelized-gradient-experiment, pushed, NOT PR'd)
 - autonomy: supervised (research)
 - SETTLED: pix likelihoods ARE gradient-differentiable. A100 FD probe (kernel-CDF RectangularKernelAdaptDensity(bandwidth=0.1), os_pix=1, x64): every mass/shear param FD-matched ~1e-6 (einstein_radius rel=8.8e-7), logL +25537 at a truth-centred point. My earlier "no" was a methodology error (human caught it). NEVER use adaptive meshes at os_pix=1 (certified staircase = dead mass gradient); kernel-CDF is live at os_pix=1, adaptive needs os_pix=4.
@@ -105,7 +105,7 @@
 
 ## lr-free-multi-start-optimizers
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/101
-- status: workspace-dev — phase 1 (MGE local wiring) starting; pixelized phase GATED on #100's Nautilus arbiter (job 330379 was CANCELLED mid input_reduce_fusion compile at 1h07, never sampled — re-submit with JAX_COMPILATION_CACHE_DIR)
+- status: workspace-dev — phase 1 (MGE local wiring) starting; pixelized phase GATED on #100's Nautilus arbiter (330379 cancelled mid-compile; re-submitted as 330513, 12h, 2026-07-16 — cache dir was already set, it needed wall time)
 - worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (STACKED branch feature/lr-free-multi-start-optimizers on feature/pixelized-gradient-experiment; repo claim shared with #100 by design, user-approved, precedent #97-on-#96)
 - autonomy: supervised (experiment)
 - prompt: active/lr_free_multi_start_optimizers.md
