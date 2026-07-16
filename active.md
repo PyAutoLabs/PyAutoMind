@@ -28,7 +28,9 @@
 ## eyes-conductor
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
 - session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/127
+- heart-ack: 2026-07-16 human ack of RED for PR-open (same 6 unrelated organism-level reasons as viz-render-gallery; firewall drift is parallel-session, this branch greps clean); merge stays human
 - worktree: ~/Code/PyAutoLabs-wt/eyes-conductor
 - autonomy: supervised
 - prompt: active/eyes_conductor.md
