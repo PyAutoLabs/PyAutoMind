@@ -17,3 +17,11 @@
   - autolens_workspace_developer: feature/pixelized-gradient-experiment
 
 
+
+## wake-up-skill-rename
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/114
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/wake-up-skill-rename (PyAutoBrain on feature/wake-up-skill-rename)
+- autonomy: supervised (refactor)
+- repos:
+  - PyAutoBrain: feature/wake-up-skill-rename
