@@ -33,6 +33,8 @@
 - prompt: active/autolens_jax_joss_benchmark_repo.md
 - note: 5-phase epic (one-shot attempt per user); new repo autolens_jax_joss (PyAutoLabs, public) born alongside; datasets SDP.81 / RXJ1131 / A2744 user-approved
 - repos:
+  - autolens_workspace: feature/jax-joss-benchmarks
+  - autolens_jax_joss: main (born this task)
 
 
 ## coolest-standard-support
@@ -49,15 +51,16 @@
 
 ## ic50-assistant-seed
 - issue: https://github.com/Jammy2211/ic50_assistant/issues/1
-- status: in-progress — Phase 1 (seed) shipped; PRs open; Phases 2-5 pending
+- status: awaiting-input — Phase 1 (seed) shipped; Phases 2-4 (domain adaptation) authored+pushed, PARKED at ship sign-off (supervised --auto); Phase 5 (run demonstrations) pending
+- question: https://github.com/Jammy2211/ic50_assistant/issues/1#issuecomment-4990016860
 - worktree: ~/Code/PyAutoLabs-wt/ic50-assistant-seed
 - autonomy: supervised
 - prompt: active/build_ic50_assistant_from_autofit_assistant.md
-- note: build ic50_assistant (PyAutoFit domain assistant, EP/graphical IC50) seeded from autofit_assistant. Phase 1 generalised the Clone Agent (reference profiles) — PyAutoBrain#120 + autofit_assistant#11 — and birthed PRIVATE Jammy2211/ic50_assistant (birth c3487afc1). PyAutoBrain claimed by workspace-agent; this is a small parallel PR, no file overlap (clone/ only), user-approved. Phases 2-5 (IC50 wiki+papers, ic50_* demo skills, RAL/HPC, validation) checkpoint before start. Downstream: ic50_workspace → closed science-project repo.
+- note: build ic50_assistant (PyAutoFit domain assistant, EP/graphical IC50) seeded from autofit_assistant. Phase 1 = Clone Agent reference-profiled (PyAutoBrain#120 + autofit_assistant#11, OPEN) + PRIVATE Jammy2211/ic50_assistant born (c3487afc1). Phases 2-4 = domain adaptation on ic50_assistant branch feature/ic50-domain-adaptation (b404fc2, pushed, NO PR yet — supervised parks at ship): AGENTS reframe, profile, literature wiki (5 real papers), 6 ic50_* skills, HPC skill; validated (citations/links/tests green). Phase 5 = execute the fits (some HPC-scale) — checkpoint compute first. Downstream: ic50_workspace → closed science repo. PyAutoBrain claim: clone/-only parallel PR, no overlap, user-approved.
 - repos:
   - PyAutoBrain: feature/ic50-assistant-seed
   - autofit_assistant: feature/ic50-assistant-seed
-  - ic50_assistant: main (born via clone_seed)
+  - ic50_assistant: feature/ic50-domain-adaptation (pushed; PR awaiting human sign-off)
 
 
 ## assistant-euclid-mode
