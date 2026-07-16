@@ -1,6 +1,19 @@
 # Active Tasks
 
 
+## aggregator-sqlite
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1377
+- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
+- status: library-dev (bug — assessment-first; source fixes checkpointed after the failure survey)
+- worktree: ~/Code/PyAutoLabs-wt/aggregator-sqlite
+- autonomy: supervised
+- prompt: active/exercise_fix_and_assess_the_sqlite_results.md
+- note: aggregator Phase D (goal 3 of #1375): exercise sqlite scrape/build with the merged mock harness, cheap fixes only, written assessment of the direct-write (session) path; add database build/query stages to the profiling grid. "If its hard to fix dont bother."
+- repos:
+  - PyAutoFit: feature/aggregator-sqlite
+  - autofit_workspace_test: feature/aggregator-sqlite
+
+
 ## jax-compile-time-research
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
 - session: claude (CLI bg job b44b0e0f, 2026-07-16)
@@ -74,7 +87,8 @@
 
 ## heart-evidence-audit
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/83
-- status: library-dev (research — per-leg evidence map + verdict-worth judgment; fixes behind plan approval)
+- status: library-shipped, awaiting-merge — audit doc PR PyAutoHeart#84; evidence map + findings A/B/C + finding-3 resolution on #83; fix PRs behind plan approval
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/84
 - worktree: ~/Code/PyAutoLabs-wt/heart-evidence-audit
 - autonomy: supervised
 - prompt: active/readiness_evidence_chain_audit.md
@@ -84,7 +98,8 @@
 
 ## pre-build-slim
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156 (Phase 1 step 3; epic #155)
-- status: library-dev — human decided 2026-07-16: DELETE the dataset/config sweep vestige
+- status: library-shipped, awaiting-merge — PR PyAutoBuild#160 (sweep vestige deleted)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/160
 - worktree: ~/Code/PyAutoLabs-wt/pre-build-slim
 - autonomy: supervised
 - repos:
@@ -92,7 +107,7 @@
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
-- status: coordinating — 0a MERGED; 0b parser fix queued (Brain claims); Phase 1 DONE (#157/#158/#159 merged; step 3 parked on dataset/config-sweep decision); Phase 2 (heart-evidence-audit) in flight
+- status: coordinating — 0a MERGED; 0b parser fix queued; Phase 1 #157/#158/#159 merged + step-3 #160 PR-open; Phase 2 audit #84 PR-open (findings A/B/C + finding-3 resolved; fix PRs pending plan approval); new satellite: howto_validation_needs_simulator_stage
 - prompt: active/build_chain_umbrella.md (full decomposition)
 - autonomy: supervised
 - repos:
