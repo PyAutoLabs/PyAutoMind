@@ -1,14 +1,3 @@
-## delete-pyautoheart-shim
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/80
-- prompt: active/delete_pyautoheart_shim.md
-- planned: 2026-07-16
-- classification: library (PyAutoHeart) — maintenance
-- suggested-branch: feature/delete-pyautoheart-shim
-- blocked-by: heart-state-clobber (claims PyAutoHeart; build-chain umbrella Phase 0a, issue PyAutoHeart#78)
-- summary: delete the dead pyautoheart/ compat shim (from heart import *, zero importers — Pulse-retirement #28 Phase-2 leftover) and drop "pyautoheart*" from packages.find in pyproject.toml. Two-file change, no overlap with heart-state-clobber's files (heart/checks/), but the repo claim blocks it. Plan on the issue; user pre-approved.
-- affected-repos:
-  - PyAutoHeart
-
 ## brain-lifecycle-path-fixes (build-chain umbrella Phase 0b)
 - issue: none yet (issued when unblocked)
 - planned: 2026-07-16
