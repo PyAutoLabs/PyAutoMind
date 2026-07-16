@@ -61,20 +61,11 @@
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
-- status: coordinating — epic over 6 phases; Phase 0a (heart-state-clobber) in flight, Phase 0b blocked (PyAutoBrain claimed ×2), Phases 1-5 issued sequentially as predecessors ship
+- status: coordinating — epic over 6 phases; Phase 0a MERGED (PyAutoHeart#79, 2026-07-16), Phase 0b blocked (PyAutoBrain claimed ×2), Phase 1 (pre_build audit) next
 - prompt: active/build_chain_umbrella.md (full decomposition)
 - autonomy: supervised
 - repos:
 
-## heart-state-clobber
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/78
-- status: library-shipped, awaiting-merge (corrective-PR exception for Heart RED, human-authorized 2026-07-16)
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/79
-- worktree: ~/Code/PyAutoLabs-wt/heart-state-clobber
-- autonomy: supervised
-- parent: build-chain-umbrella (Phase 0a)
-- repos:
-  - PyAutoHeart: feature/heart-state-clobber
 
 ## slope-hierarchy
 - issue: https://github.com/Jammy2211/slope_hierarchy/issues/1

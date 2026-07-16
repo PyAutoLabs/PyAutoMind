@@ -1,3 +1,9 @@
+## heart-state-clobber
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/78
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/79 (merged)
+- summary: PyAutoHeart test suite clobbered live ~/.pyauto-heart state; run() made side-effect-free in test_run + version_skew (sibling found by empirical sweep), persist moved to main() (tick unchanged), suite-wide HEART_STATE_DIR conftest sandbox + regression tests. Build-chain umbrella Phase 0a (epic PyAutoBuild#155). Shipped under human-authorized corrective-PR exception (Heart RED).
+
 ## pyautolens-assistant-joss-paper (JOSS paper #2 scaffolded next to the software — SHIPPED)
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/69 (CLOSED)
 - completed: 2026-07-15
