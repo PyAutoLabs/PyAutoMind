@@ -4,7 +4,9 @@
 ## simulate-injection-feasibility
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/44
 - session: claude (CLI, 2026-07-16)
-- status: awaiting-input — parked at ship gate on Heart RED (docs-only deliverable written + tests pass in worktree, uncommitted; gate state on issue #44). Resume: human RED ack → commit → review leg → PR
+- status: library-shipped, awaiting-merge — PR PyAutoReduce#45 (pending-release); shipped through unrelated Heart RED on user ack 2026-07-16 ("go" at resume, recorded on #44)
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/45
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×2; install verification not run; release validation stale (5 libs)
 - worktree: ~/Code/PyAutoLabs-wt/simulate-injection-feasibility
 - autonomy: supervised (--auto; research cap)
 - prompt: active/simulated_lens_through_reduction_pipeline.md
