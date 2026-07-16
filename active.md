@@ -1,6 +1,14 @@
 # Active Tasks
 
 
+## workspace-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/116
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/workspace-agent
+- autonomy: supervised
+- repos:
+  - PyAutoBrain: feature/workspace-agent
+
 ## pixelized-gradient-experiment
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/100
 - status: in-progress — A100 pipeline WORKING. Gradient question SETTLED (yes). Search question OPEN. Nautilus baseline job 330379 running on RAL (submitted 2026-07-15, 4h limit).
