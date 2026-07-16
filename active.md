@@ -99,6 +99,14 @@
 - repos:
   - PyAutoBuild: feature/pre-build-slim
 
+## heart-testrun-wiring
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/83 (fix 1 of the audit; epic PyAutoBuild#155)
+- status: library-dev → shipping
+- worktree: ~/Code/PyAutoLabs-wt/heart-testrun-wiring
+- autonomy: supervised
+- repos:
+  - PyAutoHeart: feature/heart-testrun-wiring
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: coordinating — 0a MERGED; 0b parser fix queued; Phase 1 #157/#158/#159 merged + step-3 #160 PR-open; Phase 2 audit #84 PR-open (findings A/B/C + finding-3 resolved; fix PRs pending plan approval); new satellite: howto_validation_needs_simulator_stage
