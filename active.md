@@ -87,7 +87,8 @@
 
 ## heart-testrun-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/83 (fix 1 of the audit; epic PyAutoBuild#155)
-- status: library-dev → shipping
+- status: library-shipped, awaiting-merge — PR PyAutoHeart#85
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/85
 - worktree: ~/Code/PyAutoLabs-wt/heart-testrun-wiring
 - autonomy: supervised
 - repos:
@@ -95,7 +96,7 @@
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
-- status: coordinating — 0a MERGED; 0b parser fix queued; Phase 1 #157/#158/#159 merged + step-3 #160 PR-open; Phase 2 audit #84 PR-open (findings A/B/C + finding-3 resolved; fix PRs pending plan approval); new satellite: howto_validation_needs_simulator_stage
+- status: coordinating — Phases 0-2 shipped/awaiting-merge: 0a+#157/#158/#159/#160+audit#84 MERGED; 0b Brain#128 PR-open; fix-1 Heart#85 PR-open. Next: Phase 3 (env-profile brief), Phase 4 (version fork + version_skew rework + README pins + installable-floors invariant), Phase 5 (agent failure modes). Satellites: howto simulator stage; verify_install exercise run pairs with next rehearsal
 - prompt: active/build_chain_umbrella.md (full decomposition)
 - autonomy: supervised
 - repos:
