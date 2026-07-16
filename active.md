@@ -1,6 +1,19 @@
 # Active Tasks
 
 
+## aggregator-profiling
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
+- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/aggregator-profiling
+- autonomy: supervised
+- prompt: active/aggregator_profiling_harness_and_result_loading.md
+- note: Phase A harness (autofit_workspace_test scripts/profiling/aggregator/) then Phase B speedups (PyAutoFit aggregator). autolens_workspace_test leg deferred — repo claimed by viz-render-gallery. sqlite (goal 3) = separate follow-up prompt when A+B near ship.
+- repos:
+  - PyAutoFit: feature/aggregator-profiling
+  - autofit_workspace_test: feature/aggregator-profiling
+
+
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: workspace-dev
