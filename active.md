@@ -69,19 +69,10 @@
 
 
 
-## agent-failure-modes
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/130
-- status: library-shipped, awaiting-merge — doc PR PyAutoBrain#131
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/131
-- worktree: none (manual worktree for the doc branch)
-- autonomy: supervised
-- prompt: active/agent_failure_modes_structural_mitigations.md
-- parent: build-chain-umbrella (Phase 5, epic PyAutoBuild#155)
-- repos:
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
-- status: coordinating — Phases 0-2 shipped/awaiting-merge: 0a+#157/#158/#159/#160+audit#84 MERGED; 0b Brain#128 PR-open; fix-1 Heart#85 PR-open. Next: Phase 3 (env-profile brief), Phase 4 (version fork + version_skew rework + README pins + installable-floors invariant), Phase 5 (agent failure modes). Satellites: howto simulator stage; verify_install exercise run pairs with next rehearsal
+- status: ALL PHASES COMPLETE 2026-07-16 (16+ merged PRs; 3 refusal mechanisms live incl. guard v1.1; epic #155 = remaining-queue tracker: Ph3 steps 2-8, Ph4 four tasks, Ph2 satellites, Ph5 items 3-6)
 - prompt: active/build_chain_umbrella.md (full decomposition)
 - autonomy: supervised
 - repos:
