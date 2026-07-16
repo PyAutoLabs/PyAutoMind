@@ -25,19 +25,6 @@
 - note: phase 1/4 of the test-mode size-realistic-samples umbrella (draft/feature/autofit/test_mode_representative_outputs_size_realistic.md). DESIGN COMPLETE 2026-07-16 — D1-D4 posted (#1378 comment): knob PYAUTO_TEST_MODE_SAMPLES default 4 / accessor in autoconf via existing autofit shim / N==4 literal branch untouched / N>4 vectorized numpy -> production Sample.from_lists path / weights exp(-i/(N/10)) w_min>=4.5e-10 at N<=1e5 (threshold 1e-10; bypass write path never prunes — updater.py only). Production parity target measured: 10,187 rows x 21 cols = 9.07 MB (hst_fast source_lp[1]). Awaiting human validation of D1-D4, then close #1378 + issue phase 2 once aggregator-sqlite's PyAutoFit claim frees (#1376 awaiting merge).
 - repos:
 
-## consolidation-sweep
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/48
-- session: claude (CLI, 2026-07-16)
-- status: library-shipped, awaiting-merge — PR PyAutoReduce#49 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-16
-- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/49
-- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; install verification not run; release validation stale (5 libs)
-- worktree: ~/Code/PyAutoLabs-wt/consolidation-sweep
-- autonomy: safe (--auto; refactor cap)
-- prompt: active/consolidation_sweep.md
-- note: behaviour-preserving consolidation: adapter-owned max_single_exposure_seconds (pipeline._psf branches), shared psf/moments.moment_fwhm, jwst_rms fold into rms, cache_inject gitignore rider. Witness: test_autoreduce (229/3skip baseline).
-- repos:
-  - PyAutoReduce: feature/consolidation-sweep
-
 ## aggregator-sqlite
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1377
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae

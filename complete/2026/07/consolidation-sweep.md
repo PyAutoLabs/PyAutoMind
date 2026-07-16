@@ -1,3 +1,15 @@
+## consolidation-sweep
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/48
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/49 (squash ac0318e06)
+- Behaviour-preserving consolidation sweep (user's "run the refactor agent on PyAutoReduce" intake ask): InstrumentAdapter.max_single_exposure_seconds absorbs pipeline._psf's per-observatory peak-cap branches (HST EXPTIME vs Keck ITIME×COADDS; JWST None); shared psf/moments.moment_fwhm replaces two identical second-moment helpers; noise/jwst_rms folded into noise/rms. Net −4 lines. Suite baseline-identical 229/3skip = the witness.
+- Riders: .gitignore prototypes/cache_inject/; inject_recovery_slacs.py absolute-path fix (drizzle combine chdir breaks relative cache paths — found by the first real-data run).
+- Checked-and-rejected candidates recorded in the prompt: mad_sigma already shared; combine dispatch already centralised; frames vs keck_frames divergence deliberate.
+- Trap: Brain policy test_witness map lacked pyautoreduce (fixed earlier same day, PyAutoBrain 0f2076f) — Refactor Agent falsely claimed the repo unwitnessed.
+- Adapter seam now clean for the ground-based instruments feature (draft/feature/pyautoreduce/ground_based_instruments_optional_noise_psf.md).
+
+## Original prompt
+
 # Consolidation sweep: mine PyAutoReduce for code-consolidation refactor opportunities
 
 Type: refactor
