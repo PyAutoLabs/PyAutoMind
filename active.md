@@ -1,6 +1,18 @@
 # Active Tasks
 
 
+## eyes-paper-critique
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
+- session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/eyes-paper-critique
+- autonomy: supervised
+- prompt: active/eyes_paper_informed_critique.md
+- parent: eyes-agent epic (#117, Phase 3 of 3 — FINAL; Phases 1+2 MERGED). Epic closes when this ships
+- note: small core addition (eyes review --against <reference-dir> + optional `reference` note-schema field) + skill-prose Phase-3 step; first real paper run deferred to the /eyes maiden voyage
+- repos:
+  - PyAutoBrain: feature/eyes-paper-critique
+
 ## test-mode-representative-samples-phase-1-design
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1378
 - session: claude --resume fceb9fd4-59ed-4cb4-acc0-bd4c04c23839
