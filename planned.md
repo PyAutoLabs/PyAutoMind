@@ -1,4 +1,16 @@
 
+## test-mode-representative-samples-phase-2-core-api
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1379
+- planned: 2026-07-16
+- classification: library (PyAutoConf → PyAutoFit; PyAutoConf PR merges first)
+- suggested-branch: feature/test-mode-representative-samples
+- blocked-by: aggregator-sqlite (using PyAutoFit; #1377 in flight)
+- prompt: active/test_mode_representative_outputs_size_realistic_phase_2_core_api.md
+- summary: implement PYAUTO_TEST_MODE_SAMPLES per the LOCKED D1-D4 design on PyAutoFit#1378 (do not re-derive; phase 1 record complete/2026/07/test-mode-representative-samples-phase-1-design.md). Phase 2/4 of the test-mode size-realistic-samples umbrella; phases 3 (autolens_profiling recipe) + 4 (docs) issue after this merges.
+- affected-repos:
+  - PyAutoFit
+  - PyAutoConf
+
 ## brain-lifecycle-path-fixes (build-chain umbrella Phase 0b)
 - issue: none yet (issued when unblocked)
 - planned: 2026-07-16
