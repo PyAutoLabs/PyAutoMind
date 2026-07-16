@@ -11,6 +11,11 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 
+Split (2026-07-16, Feature Agent: too-large, score 14): this file is the **umbrella** —
+issue the phase files, not this one. Phases (same folder):
+`..._phase_1_design.md` → `..._phase_2_core_api.md` → `..._phase_3_workspace_examples.md`
+→ `..._phase_4_docs.md`. Issue each phase only as its predecessor nears shipping.
+
 Original request (verbatim):
 
 ok, as a side project could we scope out if there would be a way to extend PYAUTO_TEST_MODE to do these runs
