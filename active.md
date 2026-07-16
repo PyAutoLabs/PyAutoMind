@@ -147,3 +147,11 @@
   - PyAutoMind: feature/retire-complete-ledger
   - PyAutoBrain: feature/retire-complete-ledger
   - PyAutoHeart: feature/retire-complete-ledger
+
+## slam-resume-profiling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/70
+- session: claude --resume ce78c7e9-3f34-4983-bb53-8840527c1fb6
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/slam-resume-profiling
+- prompt: active/slam_resume_overhead_profile_inter_stage_costs.md
+- repos:
