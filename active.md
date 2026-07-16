@@ -81,6 +81,16 @@
   - PyAutoMemory: feature/memory-structure-cleanup
   - PyAutoMind: feature/memory-structure-cleanup
 
+## pre-build-audit
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156
+- status: library-dev (research — audit + design doc; edits behind plan approval)
+- worktree: ~/Code/PyAutoLabs-wt/pre-build-audit
+- autonomy: supervised
+- prompt: active/pre_build_git_add_failure_audit.md
+- parent: build-chain-umbrella (Phase 1, epic PyAutoBuild#155)
+- repos:
+  - PyAutoBuild: feature/pre-build-audit
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: coordinating — epic over 6 phases; Phase 0a MERGED (PyAutoHeart#79, 2026-07-16), Phase 0b blocked (PyAutoBrain claimed ×2), Phase 1 (pre_build audit) next
