@@ -122,3 +122,16 @@
 - intakes filed: draft/feature/autolens_profiling/jax_compile_time_profiling.md (Fable, tomorrow — compile is ~all the wall time; autotune RULED OUT: 2100s vs 2090s identical), draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
 - repos:
   - autolens_workspace_developer: feature/pixelized-gradient-experiment
+
+## retire-complete-ledger
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/81
+- session: claude --resume 863c9a43-47ad-4b84-a27a-1a5e47a5bf64
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/retire-complete-ledger
+- autonomy: supervised
+- prompt: active/retire_the_legacy_pyautomind_complete_md_ledger.md
+- note: PARALLEL claims user-approved 2026-07-16 (overlap verified before start) — Mind also claimed by memory-structure-cleanup (their Mind diff = scripts/spawn.py only; spawn.py EXCLUDED from this branch, filed as 1-line rider on #81); Brain also claimed by community-voice-agent + ic50-assistant-seed (zero file overlap with this branch's file set); Heart also claimed by delete-pyautoheart-shim (no commits yet; this branch touches only skills/pyauto-status/reference.md there)
+- repos:
+  - PyAutoMind: feature/retire-complete-ledger
+  - PyAutoBrain: feature/retire-complete-ledger
+  - PyAutoHeart: feature/retire-complete-ledger
