@@ -65,7 +65,7 @@
 
 ## ic50-assistant-seed
 - issue: https://github.com/Jammy2211/ic50_assistant/issues/1
-- status: awaiting-input — Phase 1 (seed) shipped; Phases 2-4 (domain adaptation) authored+pushed, PARKED at ship sign-off (supervised --auto); Phase 5 (run demonstrations) pending
+- status: awaiting-input — Phase 1 (seed) shipped; Phases 2-4 (domain adaptation) authored+pushed; Phase 5 demonstrations RUN (goals 1-3 ✅: ep_sim 33/33 within 3σ, EP scaling ~linear, real drug_1003/1073 fits; goal 4 partial — LS↔EP done, random_forest blocked → ic50_workspace#8). PARKED at ship sign-off (supervised --auto) — human opens/merges domain-adaptation PR
 - question: https://github.com/Jammy2211/ic50_assistant/issues/1#issuecomment-4990016860
 - worktree: ~/Code/PyAutoLabs-wt/ic50-assistant-seed
 - autonomy: supervised
