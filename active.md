@@ -117,7 +117,7 @@
 
 ## pixelized-gradient-experiment
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/100
-- status: in-progress — A100 pipeline WORKING. Gradient question SETTLED (yes). Search question OPEN. Nautilus baseline: 330379 CANCELLED at 1h07 mid input_reduce_fusion compile (never sampled); RE-SUBMITTED as job 330513 (2026-07-16, 12h limit, cache dir already set — compile must complete once to warm it). Log: pixgrad_logs/samp_pixgrad_nautilus_330513.log.
+- status: in-progress — A100 pipeline WORKING. Gradient question SETTLED (yes). Search question OPEN. Nautilus baseline 330513 COMPLETE 2026-07-16 (1h32: 1h10 compile + 22m sampling): CONVERGED 27840 calls, N_eff 1233, logZ +17345.4, max logL +17418.9 at r_E=1.3102 — inside slack 0.3 tol by 0.01 only; 8k nats BELOW the FD probe's +25537 truth point (which IS in-model) → reads as pixelized source-degeneracy dominant mode. Optimizer bar = +17419 (adam's -39888 is 57k nats under it). RAL compile cache now WARM; pixgrad_pyautofit worktree safe to delete.
 - worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (autolens_workspace_developer on feature/pixelized-gradient-experiment, pushed, NOT PR'd)
 - autonomy: supervised (research)
 - SETTLED: pix likelihoods ARE gradient-differentiable. A100 FD probe (kernel-CDF RectangularKernelAdaptDensity(bandwidth=0.1), os_pix=1, x64): every mass/shear param FD-matched ~1e-6 (einstein_radius rel=8.8e-7), logL +25537 at a truth-centred point. My earlier "no" was a methodology error (human caught it). NEVER use adaptive meshes at os_pix=1 (certified staircase = dead mass gradient); kernel-CDF is live at os_pix=1, adaptive needs os_pix=4.
@@ -141,7 +141,7 @@
 
 ## lr-free-multi-start-optimizers
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/101
-- status: workspace-dev — phase 1 (MGE local wiring) starting; pixelized phase GATED on #100's Nautilus arbiter (330379 cancelled mid-compile; re-submitted as 330513, 12h, 2026-07-16 — cache dir was already set, it needed wall time)
+- status: workspace-dev — GATE ANSWERED (see #100 entry: Nautilus +17419 @ r_E 1.31 = optimizer bar). Phase 1 MGE (laptop GPU 12x300): prodigy (lr-free) RECOVERS TRUTH +31787.9 r_E 1.600; ademamix +31786; adopt+adam in-basin; remaining 6 rules re-running detached (first run killed by session teardown — summaries for dog/mechanic/momo/schedule_free/dowg/dadapt in output/ are STALE SMOKE artifacts until rerun lands). Phase 2a SUBMITTED: adam lr sweep RAL jobs 330529/330530/330531 (PIX_LR=1e-3/3e-3/3e-2, 16 starts, batch 4, warm cache). Phase 2b (lr-free rules on pix) needs a standalone pix_lr_free.py — af.AbstractMultiStartGradient inits optimizer state on the STACKED params, which couples the lr-free rules' global scalar estimates across starts (library promotion must vmap init/update)
 - worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (STACKED branch feature/lr-free-multi-start-optimizers on feature/pixelized-gradient-experiment; repo claim shared with #100 by design, user-approved, precedent #97-on-#96)
 - autonomy: supervised (experiment)
 - prompt: active/lr_free_multi_start_optimizers.md
