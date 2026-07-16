@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## inject-stage-hst-imaging
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/46
+- session: claude (CLI, 2026-07-16)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/inject-stage-hst-imaging
+- autonomy: safe (--auto; feature≤medium cap)
+- prompt: active/inject_stage_hst_imaging.md
+- note: Phase 1 of #44 verdict — opt-in inject stage (Balrog-style SSI into real _flc frames) on the HST astrodrizzle path; TargetSpec inject_* dials, autoreduce/inject/, _inject hook, numpy/astropy tests, prototypes/ recovery script.
+- repos:
+  - PyAutoReduce: feature/inject-stage-hst-imaging
+
 ## cti-resurrection-phase0
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/82
 - session: claude (CLI, 2026-07-16)
