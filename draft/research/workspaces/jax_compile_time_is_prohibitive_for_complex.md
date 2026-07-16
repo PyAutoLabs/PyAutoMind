@@ -23,4 +23,20 @@ This will become prohibitive for users, in some cases the compile time is longer
 
 Its time to research and asses what we can do about it:
 
+## Core question (user clarification, 2026-07-16)
+
+Do we need to put JAX compiles in the source code to break up compilation (e.g. jit
+boundaries inside the likelihood so it compiles in pieces), or can we speed things up
+via smaller source code changes or JAX settings (persistent compilation cache,
+donate/static argnums, avoiding closure cache-busts, compiler flags)? We may need to
+think hard about how JAX is implemented throughout the source code — the answer decides
+whether this stays a research note or spawns a library-wide restructuring task.
+
+Known prior evidence to start from:
+- Pixelized gradient sampling on the A100: compile dominates (~453s per latent sample).
+- Fresh-closure-per-call JIT cache-busting is a known trap in this stack; cache
+  (closure, solver) on the instance.
+- JAX-native samplers (multi_start_adam etc.) appear worse than jit-only samplers —
+  test whether jax.grad/value_and_grad compounds compile cost vs plain jax.jit.
+
 <!-- formalised by the Intake (Conception) Agent on 2026-07-16 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/eaea5567-d274-4de9-928f-921aa1a3c8c7/scratchpad/intake_jax_compile_time.md -->

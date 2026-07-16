@@ -1,4 +1,4 @@
-# Run the refactor agent on PyAutoReduce and look for more
+# Consolidation sweep: mine PyAutoReduce for code-consolidation refactor opportunities
 
 Type: refactor
 Target: pyautoreduce
