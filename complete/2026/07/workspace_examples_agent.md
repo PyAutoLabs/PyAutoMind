@@ -75,3 +75,9 @@ register, is the right shape:
 
 <!-- formalised via /intake on 2026-07-16 (intake classifier misrouted to
 docs/autoreduce; header hand-fixed per feedback_intake_target_handfix) -->
+
+## Shipped
+
+- PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/118 (merged baaef3a, 2026-07-16); issue #116 closed.
+- Decided: conductor (not faculty), one agent with workspace|howto registers; split trigger recorded in agents/conductors/workspace/AGENTS.md.
+- v0 decision-only: plan mode (WorkspaceDecision) + survey mode (catalogue inventory/diff — the autoreduce_workspace bootstrap tool).
