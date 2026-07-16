@@ -1,17 +1,6 @@
 # Active Tasks
 
 
-## jax-compile-time-research
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
-- session: claude (CLI bg job b44b0e0f, 2026-07-16)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/jax-compile-time-research
-- autonomy: supervised (--auto; research cap)
-- prompt: active/jax_compile_time_is_prohibitive_for_complex.md
-- note: research deliverable = compile-time probe + research note in autolens_profiling answering "jit boundaries in source vs settings/small changes". autolens_workspace_developer is READ-ONLY evidence (claimed by pixelized-gradient-experiment — not claimed here). Companion (separate task): draft/feature/autolens_profiling/jax_compile_time_profiling.md industrializes the probe across the cell grid. Established: autotune ruled out; lax.map scan-of-vmap >> plain value_and_grad compile (7m36s vs >30min same fusion).
-- repos:
-  - autolens_profiling: feature/jax-compile-time-research
-
 ## simulate-injection-feasibility
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/44
 - session: claude (CLI, 2026-07-16)
