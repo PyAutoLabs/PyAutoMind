@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## simulate-injection-feasibility
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/44
+- session: claude (CLI, 2026-07-16)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/simulate-injection-feasibility
+- autonomy: supervised (--auto; research cap)
+- prompt: active/simulated_lens_through_reduction_pipeline.md
+- note: research deliverable = docs/design/simulate.md feasibility verdict (frame-level injection + simobserve) + phased follow-up prompts; docs-only, no autoreduce/ source edits.
+- repos:
+
 ## aggregator-profiling
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
