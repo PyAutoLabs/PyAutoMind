@@ -1,6 +1,18 @@
 # Active Tasks
 
 
+## cti-resurrection-phase0
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/82
+- session: claude (CLI, 2026-07-16)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-resurrection-phase0
+- autonomy: supervised
+- prompt: active/cti_resurrection_phase0_resurrect_and_register.md
+- note: Phase 0 of the CTI resurrection epic (6 phases; later phases get own prompts). Org transfer Jammy2211→PyAutoLabs DONE 2026-07-16 (user-approved). Scope: workspace clone + repos.yaml registration, arcticpy 2.6 spike (hard C++ dep, THE risk), setup.py→pyproject floors, non-viz import fixes, unit tests green with plot subpackage quarantined for Phase 1 (viz Plotter→matplotlib migration).
+- repos:
+  - PyAutoCTI: feature/cti-resurrection-phase0
+
+
 ## community-ears-v2-prs
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/125
 - status: library-dev
