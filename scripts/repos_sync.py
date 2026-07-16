@@ -61,10 +61,11 @@ ORGANS_END = "<!-- repos_sync:organs:end -->"
 # that opts in. Unlike the organism map / command surface — which live once in
 # PyAutoBrain because Brain is loaded in every session — this stays inline in
 # every repo on purpose: it is a git-operation safety rule that also serves a
-# human (or non-Brain tool) reading a single repo directly on GitHub. Inline
-# everywhere, but one source of truth + a drift check, so the copies can't drift.
-# Do not soften the text (it guards the 2026-04-27 `git init` fresh-start
-# incident that cost ~40 commits).
+# cold agent (or human) reading a single repo directly on GitHub, which never
+# loads the workspace root. Inline everywhere, but one source of truth + a
+# drift check, so the copies can't drift. The text is deliberately terse — it
+# rides in every repo's AGENTS.md, so every extra line is paid in context in
+# every session; keep it to the prohibition + the clean-tree recovery command.
 HISTORY_POLICY_FILE = "policy/never_rewrite_history.md"
 
 
