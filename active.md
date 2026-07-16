@@ -128,7 +128,10 @@
 ## retire-complete-ledger
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/81
 - session: claude --resume 863c9a43-47ad-4b84-a27a-1a5e47a5bf64
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: PyAutoMind#83 + PyAutoBrain#123 (pending-release) + PyAutoHeart#82 (pending-release)
+- heart-ack: user-authorized ship through unrelated RED 2026-07-16 — reasons verbatim: "PyAutoLens: 1 uncommitted source change(s)"; "workspace validation not passing (3 failed, 2026-07-09T09-48-30Z)"; "58 stale parked script(s)"; "manifest drift: tenant firewall (organ code) — 2 mismatch(es) vs PyAutoMind/repos.yaml"; "install verification not run"; "release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)" — ack does NOT extend to new reasons
+- rider: after memory-structure-cleanup merges, drop ("complete.md","EMPTY") from scripts/spawn.py + spawn_spec.md row, republish template (on #81)
 - worktree: ~/Code/PyAutoLabs-wt/retire-complete-ledger
 - autonomy: supervised
 - prompt: active/retire_the_legacy_pyautomind_complete_md_ledger.md
