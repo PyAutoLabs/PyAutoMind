@@ -36,22 +36,6 @@
   - PyAutoCTI: feature/cti-resurrection-phase0
 
 
-## aggregator-profiling
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
-- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
-- status: shipped, awaiting-merge (library-first: PyAutoFit#1376 before autofit_workspace_test#48)
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1376 (pending-release)
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/48 (pending-release)
-- worktree: ~/Code/PyAutoLabs-wt/aggregator-profiling
-- autonomy: supervised
-- prompt: active/aggregator_profiling_harness_and_result_loading.md
-- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); manifest drift: tenant firewall (organ code) — 4 mismatch(es) vs PyAutoMind/repos.yaml; install verification not run; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acked 2026-07-16, PR-open only
-- note: Phase A harness (autofit_workspace_test scripts/profiling/aggregator/) then Phase B speedups (PyAutoFit aggregator). autolens_workspace_test leg deferred — repo claimed by viz-render-gallery. sqlite (goal 3) = separate follow-up prompt when A+B near ship.
-- repos:
-  - PyAutoFit: feature/aggregator-profiling
-  - autofit_workspace_test: feature/aggregator-profiling
-
-
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: workspace-dev — repo born+pushed (10 benchmarks), workspace branch pushed (3 start_here real-data rewrites + 2 new joint scripts + rxj1131/a2744 datasets); smokes running locally; A100 job 330501 queued on RAL; SDP.81 leg blocked on CASA export (data_prep shipped)

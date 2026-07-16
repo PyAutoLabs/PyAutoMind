@@ -1,3 +1,16 @@
+## aggregator-profiling
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1376 (MERGED)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/48 (MERGED)
+- summary: Aggregator profiling harness (autofit_workspace_test scripts/profiling/aggregator/ — mock results via real DirectoryPaths, one-axis timing grid, PYAUTO_TEST_MODE tiny cell) + low-hanging speedups in PyAutoFit (single-walk scan with skip-already-extracted zips; 1 sweep instead of 8 rglobs per SearchOutput; cached samples_summary/latent_summary/id; AggregateCSV row caching + double column.value() fix; samples.csv headers split once). Measured: values("samples") −45% @10k samples, −34% @1000 results; AggregateCSV −25% on complex models.
+- findings: samples-per-result is the scaling axis (full csv parse), not n_results — the scan is ~0.2ms/result at 3000. values("samples") at 3000×1k OOMs (~6.6GB, SearchOutput caches Samples) — open follow-up. Summary loads ~10ms/result dominated by from_dict deserialization — deeper follow-up, not low-hanging.
+- traps: gh api labels -f "labels[]=x" 422s (use JSON --input); benchmark grids poisoned by concurrent pytest (run serially, idle machine); background `cmd | tail` masks OOM kills (pipeline exit = tail's 0, check dmesg).
+- shipped through 6-reason pre-existing Heart RED on user ack (PR-open; merge separately human-approved same day).
+- follow-ups: Phase C lens-level profiling in autolens_workspace_test (blocked on viz-render-gallery claim at ship time); Phase D sqlite database build path (prompt filed at completion).
+
+## Original prompt
+
 # Aggregator profiling harness and result-loading speedups (sqlite follow-up)
 
 Type: feature
