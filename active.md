@@ -52,7 +52,7 @@
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
-- status: workspace-dev — repo born+pushed (10 benchmarks), workspace branch pushed (3 start_here real-data rewrites + 2 new joint scripts + rxj1131/a2744 datasets); smokes running locally; A100 job 330501 queued on RAL; SDP.81 leg blocked on CASA export (data_prep shipped)
+- status: workspace-shipped, awaiting-merge — PR autolens_workspace#282 open (pending-release, notebooks regenerated); JOSS repo live with 10 benchmarks; 4 official A100 rows on RAL (point_source 5.95m / group 8.44m / imaging 10.0m / weak 0.75m). OVERNIGHT: RAL 330501 (cluster, 7h+ at bedtime) + 330527 (strong_and_weak -> imaging_and_point_source -> multi_band -> imaging --search nautilus). RESUME: (1) check both job logs + pull results/*.json from /mnt/ral/jnightin/autolens_jax_joss/results/ -> commit to JOSS repo + regen RESULTS.md; (2) resubmit clean viz-off re-timings of point_source/group/imaging (330501 rows carry viz overhead); (3) local saw_smoke2 (weak/features/strong_lensing/a2744.py TEST_MODE) died with session — optional, A100 strong_and_weak validates same composition; (4) final issue update + offer merge. FINDINGS: imaging cold-start Adam missed basin (logL -3e7, known open search question) -> nautilus row queued; cluster >>5min target, needs tuning (point-solver depth x 7 sources); weak JAX-viz crash = PyAutoLens#614
 - worktree: ~/Code/PyAutoLabs-wt/jax-joss-benchmarks
 - autonomy: supervised
 - prompt: active/autolens_jax_joss_benchmark_repo.md
@@ -124,9 +124,10 @@
 ## slam-resume-profiling
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/70
 - session: claude --resume ce78c7e9-3f34-4983-bb53-8840527c1fb6
-- status: workspace-dev
+- status: workspace-dev — harness pushed (9129d49+0af2d6e); --fast chain running detached overnight (setsid python, pid in scratchpad slam_fast.pid, log slam_fast_cold3.log; stage 2/5 sampling at bedtime)
 - worktree: ~/Code/PyAutoLabs-wt/slam-resume-profiling
 - prompt: active/slam_resume_overhead_profile_inter_stage_costs.md
+- note: resume checklist = (1) check overnight run: output/pipeline_resume/hst_fast/ stage dirs + results/pipeline_resume/*_fast.json (record will be mode=partial — stages 2-5 sampled); (2) rerun `python3 pipeline_resume/slam_resume.py --fast` for the PURE resume record; (3) decomposition sanity → full-fidelity cold+resume (no --fast; n_batch 50/20 needs uncontended RAM, OOM'd twice at higher batch); (4) judgment on #70 — key pre-findings: adapt images already persisted per stage in files/ + agg_util.adapt_images_from loader exists (targeted load-not-recompute beats checkpoint system); resume also pays zip→unzip per stage; test-mode sibling PyAutoFit#1378 makes cold runs instant later. Parallel claim: jax-compile-time-research adds jax_compile/ only, no overlap.
 - repos:
   - autolens_profiling: feature/slam-resume-profiling
 
