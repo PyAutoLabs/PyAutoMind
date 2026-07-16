@@ -13,20 +13,154 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 
-PyAutoBuild is the centre of gravity. This is a big umbrella combining many different issues and bug reports — five already-filed PyAutoMind draft briefs that all touch the build/release/validation chain — which need to be brought together into one main coordinated fix of build stuff. The umbrella's job is to sequence and unify them, not to re-derive their content; each component brief is the authoritative statement of its own problem.
+PyAutoBuild is the centre of gravity. This umbrella combines five already-filed
+PyAutoMind draft briefs (plus their filed satellites) that all touch the
+build/release/validation chain, so the work is sequenced as a single campaign
+instead of five disconnected drafts. The umbrella's job is to sequence and
+unify; each component brief remains the authoritative statement of its own
+problem — read it in full before starting its phase.
 
-Component briefs (all filed and pushed in PyAutoMind):
+## Component briefs
 
-1. draft/research/pyautobuild/pre_build_git_add_failure_audit.md — pre_build.sh has exactly three failure-tolerant sites (:55, :79, :88) and all three are implicated: :79 was bug 1 (fatal under set -e, fixed in PyAutoBuild#154); :88 is bug 2 (glob exits 128, swallowed; filed and unfixed); :55 is new — it seds README.rst README.md, but no workspace has a README.rst, so it exits 2 on every run in every repo; its || true is permanently load-bearing, and a real sed failure is indistinguishable from the expected one; the "Bumping README version" banner prints regardless. Three sites, three hits — the idiom itself is the suspect, not the individual lines. The brief leads with the design question: if release.yml regenerates and commits these artifacts on the runner anyway, what is pre_build's local commit for? Bug 2 has been silently no-op'ing that staging for an unknown time with no visible consequence — the best deliverable may be a smaller file, not a more defensive one (the PyAutoBuild#47 shape), but do not assume that because it's tidier. One claim is recorded as unverified in the brief: the earlier statement that the README bump "wasn't committed" rested on a version grep that matched other strings and proves nothing.
+1. **`draft/research/pyautobuild/pre_build_git_add_failure_audit.md`**
+   (research, medium, Model: Fable) — pre_build.sh has exactly three
+   failure-tolerant sites (:55, :79, :88) and all three are implicated: :79 was
+   bug 1 (fatal under set -e, fixed PyAutoBuild#154); :88 is bug 2 (unmatched
+   glob → git rejects the whole pathspec list, exit 128 swallowed by `|| true`,
+   nothing staged — filed, unfixed); :55 seds a README.rst no workspace has, so
+   its `|| true` is permanently load-bearing and a real sed failure is
+   indistinguishable from the expected one. Three sites, three hits — the idiom
+   is the suspect. Leads with the design question: release.yml regenerates and
+   commits the same artifacts on the runner, so what is pre_build's local
+   commit for? Redundant (delete it — the #47 shape) or load-bearing in an
+   unexercised case? Find out; do not assume the tidier answer. Known
+   unverified claim inside: whether the README bump edits but goes uncommitted.
 
-2. draft/bug/pyautobuild/release_version_sync_back_to_main.md — the release version sync-back-to-main bug.
+2. **`draft/bug/pyautobuild/release_version_sync_back_to_main.md`** (bug,
+   medium) — a release leaves `__version__` stamps and workspace pins frozen on
+   main (by design since PyAutoBuild#120's floor model) while Colab URLs move,
+   producing recurring "drift" alarms and two hand-done 15-repo bumps. The
+   2026-07-15 findings reframe it as an undecided fork: (a) re-add commit-backs
+   to main (rejected once — they caused stale CI storms and an org-wide cron
+   pause) vs (b) keep mains authoritative and fix the three consumers that
+   still read a floor as an exact pin (assistant `--check-version`, Heart
+   `version_skew`, workspaces without floors). Evidence leans (b). The genuine
+   bug either way: after 2026.7.9.1 the floors named the *yanked*
+   2026.7.6.649 — a floor must always name an installable version.
 
-3. draft/research/pyautoheart/readiness_evidence_chain_audit.md — the PyAutoHeart readiness evidence-chain audit.
+3. **`draft/research/pyautoheart/readiness_evidence_chain_audit.md`**
+   (research, large, Model: Fable) — four measured integrity failures in the
+   evidence behind Heart's release verdict, found in one half-day: (1) the
+   install-verification leg discarded every PASS for months (fixed, PR#77);
+   (2) Heart's own test suite clobbers live `~/.pyauto-heart` state (filed, see
+   satellites); (3) the `test_run` leg's history is incomparable across runs —
+   the smoke surface silently doubled and 30 failures trace to missing
+   simulated datasets, possibly downstream of PyAutoBuild#150 dropping
+   `git add -f dataset/` (**unestablished — settle it**); (4) the Brain feature
+   agent's path parser misroutes post-lifecycle-split prompts (now filed, see
+   satellites). Core deliverables: a per-leg evidence map (artifact, writer,
+   has the writer ever run, is the leg satisfiable at all) and a judgment on
+   what the GREEN gate is worth today — whether the nightly's standing grant
+   should stand, narrow, or pause. **Its own instruction: read the pre_build
+   audit first; findings 3 and 5 intersect it.**
 
-4. draft/research/workspaces/env_profile_and_validation_gate_redesign.md (pushed, e58bd8a) — a design brief, not a fix task; it explicitly licences taking as long as needed (running scripts both ways, resolving every config, running the suites). Contains: a verified map of the current env-profile/validation-gate system, with a warning it may be wrong; eight observed failure modes with evidence (silent overrides, vacuous tests, hand-maintained "remember to add your script" lists, release config untestable at PR time, inconsistent siblings, silent pattern over-match, duplicated resolvers, layered duplicate env reads); what was already tried and rejected with evidence (smoke_tests.txt promotion can't work; the static guard false-positives); a "Trust nothing here" section listing the authoring agent's four wrong conclusions and their shared shape (verifying the path already assumed and calling it proof) — treat the doc as a lead sheet, not truth; method including the adversarial pass and the standing preference to delete traps rather than document them; and a guard against over-reach — do NOT copy the DISABLE_JAX: "0" reasoning to the ag/al siblings, where ag/al default use_jax=True and the var is genuinely load-bearing. Open question flagged rather than guessed: whether mode=release validating the NumPy path for most of the ag/al surface is intended — possibly a larger fidelity gap than the original bug, or entirely deliberate.
+4. **`draft/research/workspaces/env_profile_and_validation_gate_redesign.md`**
+   (research, large, Model: Fable) — redesign the env-profile + validation-gate
+   system after one missing YAML line held nightly-release red for five nights.
+   Eight observed failure modes (silent override, vacuous tests,
+   hand-maintained lists, release config untestable at PR time, inconsistent
+   siblings, silent pattern over-match, duplicated resolvers, layered duplicate
+   env reads); already-tried-and-rejected list (smoke_tests.txt promotion,
+   static guard, loud warning — killed by adversarial review; writing it down —
+   refuted by a note that did not fire one day later). Target: a verified map,
+   a design that makes the failure modes structurally hard, an incremental
+   migration path, and an answer to the open question: is mode=release
+   validating the NumPy path for most of the ag/al surface intended? Guard: do
+   NOT copy autofit_workspace_test's DISABLE_JAX reasoning to ag/al, where
+   use_jax defaults True and the var is genuinely load-bearing.
 
-5. draft/research/pyautobrain/agent_failure_modes_structural_mitigations.md (63961ef) — where the first brief asks how to fix a config system, this one asks how to fix the agent. Itemised catalogue of fourteen distinct errors from one day, each with what was claimed, what was true, what it cost, and what caught it, grouped into five shapes: A. verification that only confirms what was assumed (5, purest is A5: ran a real script, got real green output, called it proof — of the one path where the assumption already held); B. trusting a stored belief over the repo (2); C. recall instead of enumeration (2); D. tools and heuristics trusted without validation (3); E. shared-state and convention errors (4). Two load-bearing findings: a note naming the exact trap, written the day before, did not fire — same trap, same repo, same agent, one day later — which refutes "write it down", so the brief forbids proposing documentation as a primary mechanism unless it can be explained why it beats that datum; and repos.yaml (the canonical body map, all 30 repos) contained every repo missed by hand-listing five times but was never reached for — a note that existed and didn't fire, and a tool that existed and wasn't reached, suggesting the problem is less "we lack the right artifact" than "nothing routes the agent to it while deciding". Hypothesis handed over to attack: sorted by what caught them, mechanisms that REFUSED an action caught ~100% (worktree_remove blocking a dirty worktree, git refusing to delete checked-out branches — which surfaced a hidden .worktrees/ dir no scan knew about, the lifecycle drift guard); mechanisms that INFORMED caught nothing; human intervention caught the three worst via one adversarial pass, after a broken fix had been built and offered. Most dangerous category: null results that look like findings — a merge-tree sweep failed on all 57 branches and rendered as a tidy column of ?? INSPECT; the only clean save all day was deliberately testing git cherry against a branch whose answer was already known, and it failed the test — that habit fired once by luck and should be made systematic. Two honesty clauses: a "Trust nothing here" section noting a prior confident conclusion was flatly wrong, and a selection-bias note — the catalogue holds only the mistakes that were eventually noticed; A2 (a false claim shipped into a commit message, caught by chance) suggests the unnoticed set isn't empty, and the brief asks for an estimate of its size rather than pretending it's zero.
+5. **`draft/research/pyautobrain/agent_failure_modes_structural_mitigations.md`**
+   (research, large, Model: Fable) — the companion asking how to stop the
+   *agent* producing these bugs: fourteen itemised errors from one session in
+   five shapes (verification that confirms the assumption ×5, stored belief
+   over repo ×2, recall instead of enumeration ×2, unvalidated tools ×3,
+   shared-state/convention ×4). Load-bearing findings: a note naming the exact
+   trap did not fire one day later (documentation is refuted as a primary
+   mechanism); repos.yaml held every hand-listing miss and was never reached
+   for. Hypothesis to attack: mechanisms that REFUSED an action caught ~100%,
+   mechanisms that INFORMED caught 0%. Deliverables: validated taxonomy, ranked
+   structural mitigations demonstrated against the catalogue, honest attack on
+   the memory system, an estimate of the unnoticed-error set.
 
-The ask: one coordinating prompt over these five, so the build-stuff fix is sequenced as a single campaign (PyAutoBuild pre_build/release chain, PyAutoHeart evidence chain, workspace env-profile/validation gates, and the agent-level structural mitigations) instead of five disconnected drafts.
+## Filed satellites (in scope, referenced by the briefs)
 
-<!-- formalised by the Intake (Conception) Agent on 2026-07-16 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/cecfcdd2-0518-4607-80c0-25e0f04e3ec0/scratchpad/intake_raw.md -->
+- `draft/bug/pyautoheart/test_suite_clobbers_live_heart_state.md` (small,
+  HIGH) — brief 3's finding 2, filed separately. Also a **precondition**:
+  brief 3 forbids running Heart's suite against a live state dir until fixed.
+- `draft/bug/pyautobuild/root_level_git_add_stages_nothing_on_unmatched_glob.md`
+  (small) — brief 1's bug 2. **Hold the fix**: brief 1's design answer may
+  delete the line instead of hardening it; fixing it first pre-empts the audit.
+- `draft/bug/pyautobrain/feature_agent_path_parser_predates_lifecycle_split.md`
+  (small, safe) — brief 3's finding 4, filed 2026-07-16 while decomposing this
+  umbrella. Sibling: `draft/bug/pyautobrain/intake_writes_legacy_layout.md`
+  (the writer side of the same pre-#71 assumption).
+- `draft/feature/workspaces/minimum_library_version_adoption.md` (small, HIGH)
+  and `draft/feature/pyautoheart/version_skew_floor_rework.md` (small) — the
+  two floor-model consumers brief 2's fork (b) would execute; the version_skew
+  rework depends on the adoption landing first.
+
+## Task decomposition (worked out 2026-07-16)
+
+**Phase 0 — small unblockers (independent, land first, in any order):**
+- Fix `test_suite_clobbers_live_heart_state` (design-first per its brief:
+  prefer `run()` returning the summary and only the CLI persisting; sweep
+  `heart/checks/` for siblings; decide deliberately on the autouse fixture).
+  Unblocks Phase 2's method safely.
+- Fix `intake_writes_legacy_layout` + `feature_agent_path_parser_...` (both
+  small/safe Brain fixes; the second is the reader side of the first).
+
+**Phase 1 — pre_build audit (brief 1).** First research phase: brief 3 says
+read it first, and its design answer decides both the fate of the glob bug
+(fix vs delete the line) and the #150→missing-datasets question brief 3's
+finding 3 hangs on. Output: the failure-class enumeration, the
+redundant-vs-load-bearing verdict, a target design (possibly a smaller file).
+
+**Phase 2 — Heart evidence-chain audit (brief 3).** After Phase 1 (consumes
+its #150 verdict) and Phase 0 (safe suite runs). Output: per-leg evidence map,
+the what-is-GREEN-worth judgment, and the human decision on the nightly's
+standing grant.
+
+**Phase 3 — env-profile/validation-gate redesign (brief 4).** Parallelisable
+with Phases 1–2 (different surface), but reconcile before finalising: its
+answer to the ag/al mode=release NumPy question feeds brief 3's "what does the
+verdict validate", and both feed the same release chain. Output: design doc +
+incremental migration plan.
+
+**Phase 4 — version-model fork (brief 2).** Decide fork (a)/(b) with Phases
+1–3 evidence in hand; current evidence leans (b): land
+`minimum_library_version_adoption`, then `version_skew_floor_rework`, rework
+the assistant `--check-version` to be source-checkout-aware (or drop equality
+for the API-surface hash), enforce "a floor names an installable version"
+whichever fork wins, then rewrite or shelve the sync-back prompt with the
+reasoning recorded. Never re-add stamp commit-backs without confronting the
+#120 history (CI storms, cron pause).
+
+**Phase 5 — agent failure-mode mitigations (brief 5).** Last, deliberately:
+every earlier phase's "Trust nothing here" section, plus any new errors made
+during Phases 0–4, are additional catalogue data; the refusals-vs-reminders
+hypothesis should be tested against the enlarged set. Its mitigations then
+protect all future campaigns.
+
+**Cross-cutting constraints (from the briefs; apply to every phase):**
+- Research briefs are Model: Fable, supervised, design-first — plan approval
+  before implementation; judgment, not merged fixes, is the deliverable.
+- Never dispatch `release.yml` as a test — `rehearsal` defaults to `false` = a
+  real PyPI release. `workspace-validation.yml mode=smoke` is safe.
+- Never reintroduce `git add -f` for `dataset/` (#126/#150).
+- Do not copy DISABLE_JAX reasoning across af/ag/al surfaces (use_jax defaults
+  differ).
+- Prefer deleting the trap to hardening or documenting it.
+- Each brief carries a "Trust nothing here" section: treat every inherited
+  number as re-measurable and re-measure it.
+
+<!-- filed 2026-07-16 by /intake (umbrella over five existing drafts); task decomposition added same day after reading all component briefs + satellites in full -->
