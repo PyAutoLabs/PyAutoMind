@@ -108,7 +108,7 @@
 
 ## slope-hierarchy
 - issue: https://github.com/Jammy2211/slope_hierarchy/issues/1
-- status: workspace-dev — Phases 1-3 scripts SHIPPED + smoke-tested (sim verified exact truth-logL round-trip; NUTS jax.grad through full hierarchical graph CONFIRMED via 1-dataset probe, compile-dominated on CPU). Phase 4 IN FLIGHT: RAL job 330484 (one_by_one ×5, gpu) running under monitor; graphical+ep submit next. Traps fixed: lp_snr intensity not serialized; hpc/sync first-push race (bug prompt filed); PROJECT_PATH/PYAUTO_HPC_BASE not in sbatch env
+- status: workspace-dev — GOAL 1 ACHIEVED: warm-started NUTS parent mean 2.028 [2.000,2.063] / sigma 0.143 [0.117,0.185] vs truth 2.0/0.1 (job 330508, 1h42m A100; cold start FREEZES — warm start from one_by_one medians mandatory). Per-lens recovery clean after over-sampling fix ([8,4,2]). Undamped EP sigma-COLLAPSED and the #1335 F10 diagnostics CAUGHT it (goal 4 validated); damped EP delta=0.5 = RAL job 330532 IN FLIGHT (goal-2 parity next). Upstream prompts filed: feature/autofit/ep_optimise_expose_updater_delta.md, bug/autolens_assistant/hpc_sync_first_push_race.md. Traps: see wiki/project/2026-07-16-first-science-results.md
 - worktree: /mnt/c/Users/Jammy/Science/slope_hierarchy (external science project on its own main — no PyAutoLabs worktree; ic50_workspace-style non-standard)
 - autonomy: supervised
 - prompt: active/ep_hierarchical_power_law_slopes.md
