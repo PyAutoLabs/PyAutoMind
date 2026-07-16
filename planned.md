@@ -1,3 +1,13 @@
+## community-voice-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/119
+- planned: 2026-07-16
+- classification: library (PyAutoBrain infrastructure) — feature
+- suggested-branch: feature/community-voice-agent
+- blocked-by: workspace-agent (claims PyAutoBrain; also edits bin/pyauto-brain + AGENTS.md + skills/COMMANDS.md)
+- summary: birth the community conductor ("the Voice") — scan/triage user-filed issues, draft-for-approval replies, route via start_dev_for_user; adds the /wake_up community sensory leg. Prompt: active/community_communication_agent_listen_and_respond.md.
+- affected-repos:
+  - PyAutoBrain
+
 ## brain-lifecycle-path-fixes (build-chain umbrella Phase 0b)
 - issue: none yet (issued when unblocked)
 - planned: 2026-07-16
