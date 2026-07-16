@@ -10,6 +10,7 @@
 - prompt: active/visualization_eyes_agent.md
 - parent: eyes-agent epic (#117, Phase 1 of 3; Phase 2 blocked by workspace-agent's PyAutoBrain claim)
 - repos:
+  - autolens_workspace_test: feature/viz-render-gallery
 
 ## memory-structure-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/24
