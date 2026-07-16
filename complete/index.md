@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-599 records across 5 buckets.
+602 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -146,6 +146,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [per-project-literature](2026/07/per-project-literature.md) — task 3 of the autolens_assistant batch — hybrid literature rule live: Create scaffolds wiki/project/bibliograp…
 - [plot-rst-functional-rewrite](2026/07/plot-rst-functional-rewrite.md)
 - [point-pairing-policies](2026/07/point-pairing-policies.md)
+- [pre-build-audit](2026/07/pre-build-audit.md) — pre_build git-add failure-class audit (build-chain campaign #155 Phase 1). Measured: root-glob staging a 13/13…
 - [preopt-breakdown-dashboard](2026/07/preopt-breakdown-dashboard.md) — Phase-4 (likelihood_breakdown + dashboard) leg of the polish.md PreOptimizationTimes campaign. Delivered: A100…
 - [prior-width-safety](2026/07/prior-width-safety.md) — Phase 2 of #1331 — RelativeWidthModifier abs(mean)+opt-in absolute_floor, default-path width guard (parameter-…
 - [priors-messages-fixes](2026/07/priors-messages-fixes.md) — Phase 1 of #1331 priors/messages batch — 7 fixes (01/02/04/10 + decisions 1/3/4), 12 regression tests, Fable m…
@@ -197,6 +198,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [script-to-notebook](2026/07/script-to-notebook.md) — task 4 of the autolens_assistant batch — stdlib-only autoassistant/to_notebook.py (adapts PyAutoBuild py_to_no…
 - [shareable-science-projects](2026/07/shareable-science-projects.md) — docs emphasis pass, head of the autolens_assistant batch — generated-project README.md template added to the s…
 - [ship-gate](2026/07/ship-gate.md)
+- [simulate-injection-feasibility](2026/07/simulate-injection-feasibility.md)
 - [slack-release-notes](2026/07/slack-release-notes.md)
 - [slacs1430-acs-parity](2026/07/slacs1430-acs-parity.md) — SLACS1430+4105 ACS reduction vs legacy — pixel parity PASS — SHIPPED
 - [solver-branch-flips](2026/07/solver-branch-flips.md) — research deliverable met — flips are JIT-only (eager clean; XLA-fusion ulp × discrete threshold); positive-onl…
@@ -210,6 +212,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [verify-install-check-f-autosimulate-and-dep-pin](2026/07/verify-install-check-f-autosimulate-and-dep-pin.md)
 - [version-check-compat-floor](2026/07/version-check-compat-floor.md)
 - [version-pinning-design-review](2026/07/version-pinning-design-review.md)
+- [viz-render-gallery](2026/07/viz-render-gallery.md) — Eyes agent Phase 1
 - [wake-up-skill-rename](2026/07/wake-up-skill-rename.md) — Renamed the /morning composition skill to /wake_up to fit the organism analogy (the organism wakes: syncs its …
 - [weak-likelihood-function](2026/07/weak-likelihood-function.md)
 - [weak-modeling](2026/07/weak-modeling.md)

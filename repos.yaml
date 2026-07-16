@@ -117,6 +117,10 @@ repos:
     github: PyAutoLabs/PyAutoReduce
     category: library
     role: "Data reduction of HST (and future JWST/other) imaging into modeling-ready datasets for PyAutoLens/PyAutoGalaxy."
+  PyAutoCTI:
+    github: PyAutoLabs/PyAutoCTI
+    category: library
+    role: "Charge Transfer Inefficiency (CTI) calibration and modelling for CCD imaging (arctic clocking; Euclid VIS heritage)."
 
   # --- workspaces ---------------------------------------------------------
   autofit_workspace:
@@ -128,6 +132,9 @@ repos:
   autolens_workspace:
     github: PyAutoLabs/autolens_workspace
     category: workspace
+  autocti_workspace:
+    github: PyAutoLabs/autocti_workspace
+    category: workspace
   autofit_workspace_test:
     github: PyAutoLabs/autofit_workspace_test
     category: workspace_test
@@ -136,6 +143,9 @@ repos:
     category: workspace_test
   autolens_workspace_test:
     github: PyAutoLabs/autolens_workspace_test
+    category: workspace_test
+  autocti_workspace_test:
+    github: PyAutoLabs/autocti_workspace_test
     category: workspace_test
   autofit_workspace_developer:
     github: Jammy2211/autofit_workspace_developer

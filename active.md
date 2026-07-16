@@ -24,19 +24,6 @@
   - PyAutoBrain: feature/community-ears-v2-prs
 
 
-## simulate-injection-feasibility
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/44
-- session: claude (CLI, 2026-07-16)
-- status: library-shipped, awaiting-merge — PR PyAutoReduce#45 (pending-release); shipped through unrelated Heart RED on user ack 2026-07-16 ("go" at resume, recorded on #44)
-- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/45
-- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×2; install verification not run; release validation stale (5 libs)
-- worktree: ~/Code/PyAutoLabs-wt/simulate-injection-feasibility
-- autonomy: supervised (--auto; research cap)
-- prompt: active/simulated_lens_through_reduction_pipeline.md
-- note: research deliverable = docs/design/simulate.md feasibility verdict (frame-level injection + simobserve) + phased follow-up prompts; docs-only, no autoreduce/ source edits.
-- repos:
-  - PyAutoReduce: feature/simulate-injection-feasibility
-
 ## aggregator-profiling
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
