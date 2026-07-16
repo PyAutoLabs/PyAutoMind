@@ -1,6 +1,6 @@
 # Aggregator profiling harness and result-loading speedups (sqlite follow-up)
 
-Type: bug
+Type: feature
 Target: PyAutoFit
 Repos:
 - PyAutoFit
@@ -11,8 +11,6 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
-
-Aggregator profiling harness and result-loading speedups (sqlite follow-up)
 
 The PyAutoFit Aggregator is used to load and inspection modeling results, including workflow variants
 for .fits, .csv and .png files.
