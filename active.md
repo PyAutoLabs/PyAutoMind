@@ -9,6 +9,8 @@
 - prompt: active/extend_autolens_assistant_with_a_euclid_mode.md
 - note: 3 phases, one PR each — P0 pipeline cleanup (profiling/+skills/ removal), P1 euclid_* skills, P2 wiki/euclid/ literature wiki; euclid_assistant is read-only bib source, NOT claimed
 - repos:
+  - autolens_assistant: feature/assistant-euclid-mode
+  - euclid_strong_lens_modeling_pipeline: feature/assistant-euclid-mode
 
 
 ## viz-render-gallery
