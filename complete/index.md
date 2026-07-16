@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-598 records across 5 buckets.
+599 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -26,6 +26,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [arxiv-digest-announcement-window](2026/07/arxiv-digest-announcement-window.md)
 - [assistant-benchmarks](2026/07/assistant-benchmarks.md)
 - [assistant-deep-audit](2026/07/assistant-deep-audit.md)
+- [assistant-euclid-mode](2026/07/assistant-euclid-mode.md)
 - [assistant-pin-bump-2026-7-9-1](2026/07/assistant-pin-bump-2026-7-9-1.md) — Bumped autolens_assistant version.txt + config/general.yaml from 2026.5.29.4 to 2026.7.9.1 (api_audit_baseline…
 - [assistant-ref-mechanics](2026/07/assistant-ref-mechanics.md) — science-project -> assistant refer-back mechanics complete — non-blocking provenance-drift check in start-new-…
 - [assistant-wiki-release](2026/07/assistant-wiki-release.md) — wiki/core release-complete vs autolens_workspace — gaps filled (LOS halos, sky background via DatasetModel, de…
