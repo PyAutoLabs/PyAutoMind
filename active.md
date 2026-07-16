@@ -20,7 +20,7 @@
 
 ## wake-up-skill-rename
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/114
-- status: library-dev
+- status: PR open — https://github.com/PyAutoLabs/PyAutoBrain/pull/115 (awaiting human merge)
 - worktree: ~/Code/PyAutoLabs-wt/wake-up-skill-rename (PyAutoBrain on feature/wake-up-skill-rename)
 - autonomy: supervised (refactor)
 - repos:
