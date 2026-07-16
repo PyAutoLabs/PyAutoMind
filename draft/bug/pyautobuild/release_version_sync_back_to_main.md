@@ -152,3 +152,33 @@ wrong.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-07-13 from user-intake; re-homed triage/ -> bug/pyautobuild/ by hand (classifier low-confidence) -->
 <!-- Findings 2026-07-15 appended by hand from a CLI session (/intake, folded into this prompt rather than filed as a duplicate research/ prompt). -->
+
+## DECIDED 2026-07-16 — fork (b): mains stay authoritative
+
+Human decision (build-chain campaign PyAutoBuild#155 Phase 4, "follow the
+recommendation"): do **not** re-add stamp/pin commit-backs to main — that
+rebuilds the CI-storm/cron-pause engine #120 removed, and the 2026-07-15
+findings showed it would not even fix the recurring trigger (wheel-derived
+baseline vs source-derived check is release-cadence-independent).
+
+Execution programme (each its own task, serialised on claims):
+1. `draft/feature/workspaces/minimum_library_version_adoption.md` — adopt
+   installable floors in the 7 workspace configs, drop legacy keys.
+   (autolens_workspace currently claimed by jax-joss-benchmarks — serialise.)
+2. `draft/feature/pyautoheart/version_skew_floor_rework.md` — re-point the
+   Heart leg at floors-vs-release-tags, and make it enforce the one invariant
+   nothing guards today: **a floor must name an installable (non-yanked)
+   version** (Phase 2 audit finding B: the current leg is unfailable by
+   releases). Depends on 1.
+3. `autolens_assistant` `--check-version`: source-checkout-aware (git
+   describe for checkouts) or drop version equality for the API-surface hash
+   that already passes — kills the structurally-permanent false positive.
+4. README version pins: per the Phase 1 audit (#157) they are orphaned;
+   under fork (b) the runner owns them or they leave the READMEs in favour of
+   "install the latest release" — decide in task 1's plan alongside the
+   floors.
+
+This prompt stays filed as the Phase 4 tracker until tasks 1–3 ship; the
+Symptom section above remains accurate history, and the "15-repo hand bump"
+urge it documents is answered by deleting the false signals (3), not by
+resurrecting commit-backs.
