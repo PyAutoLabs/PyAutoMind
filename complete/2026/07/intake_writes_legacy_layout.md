@@ -25,3 +25,7 @@ written path starts with `draft/`.
 Also note (separate, judgment-level): the classifier misroutes Target when the
 raw text mentions library names in context (see
 feedback_intake_target_handfix) — this prompt is only about the layout drift.
+
+## Resolution
+
+Fixed on PyAutoBrain main by 5f54aae ("intake: migrate the conductor to the Mind#71 lifecycle layout") — verified: `_intake.py` now writes `draft/<work-type>/<target>/`. Retired from draft/ without a dedicated issue (fixed same-day by a parallel session).

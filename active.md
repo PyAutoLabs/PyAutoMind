@@ -41,11 +41,13 @@
 
 ## workspace-agent
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/116
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/118
 - worktree: ~/Code/PyAutoLabs-wt/workspace-agent
 - autonomy: supervised
+- note: no workspace impact (Brain CLI/skill infra only); Heart RED at ship time was unrelated (parallel-session PyAutoLens dirt + stale 07-09 validation) — PR-open on user ack, merge human
 - repos:
-  - PyAutoBrain: feature/workspace-agent
+  - PyAutoBrain: feature/workspace-agent (pushed, PR #118)
 
 ## pixelized-gradient-experiment
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/100
