@@ -67,13 +67,6 @@
 
 
 
-## env-profile-validator
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 1; epic #155)
-- status: MERGED #163 — recording completion next
-- worktree: ~/Code/PyAutoLabs-wt/env-profile-validator
-- autonomy: supervised
-- repos:
-  - PyAutoBuild: feature/env-profile-validator
 
 ## agent-failure-modes
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/130
