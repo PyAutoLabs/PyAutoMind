@@ -89,20 +89,10 @@
   - ic50_assistant: feature/ic50-domain-adaptation (pushed; PR awaiting human sign-off)
 
 
-## pre-build-audit
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156
-- status: audit #157 + step-1 #158 MERGED; step-2 PR PyAutoBuild#159 awaiting merge (release.yml owned staging); step 3 needs the dataset/config-sweep human decision (audit doc §6)
-- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/159 (impl step 2); #157, #158 merged
-- worktree: ~/Code/PyAutoLabs-wt/pre-build-audit
-- autonomy: supervised
-- prompt: active/pre_build_git_add_failure_audit.md
-- parent: build-chain-umbrella (Phase 1, epic PyAutoBuild#155)
-- repos:
-  - PyAutoBuild: feature/pre-build-audit
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
-- status: coordinating — epic over 6 phases; Phase 0a MERGED (PyAutoHeart#79, 2026-07-16), Phase 0b blocked (PyAutoBrain claimed ×2), Phase 1 (pre_build audit) next
+- status: coordinating — 0a MERGED; 0b parser fix queued (Brain claims); Phase 1 DONE (#157/#158/#159 merged; step 3 parked on dataset/config-sweep decision); Phase 2 (heart-evidence-audit) in flight
 - prompt: active/build_chain_umbrella.md (full decomposition)
 - autonomy: supervised
 - repos:

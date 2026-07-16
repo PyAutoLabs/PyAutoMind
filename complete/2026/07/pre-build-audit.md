@@ -1,3 +1,11 @@
+## pre-build-audit
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/157 (audit doc), #158 (step 1: dead-lines), #159 (step 2: release.yml owned staging) — all merged
+- summary: pre_build git-add failure-class audit (build-chain campaign #155 Phase 1). Measured: root-glob staging a 13/13 no-op; README pins orphaned (stale on origin) — ownership deferred to Phase 4; llms-full/index reached main only via the Colab step's git add -A sweep. Steps 1+2 of the target design merged; step 3 (shrink pre_build; dataset/config sweep vestige) parked on a human decision (audit doc §6). All ships under human-authorized corrective-PR exceptions (Heart RED).
+
+## Original prompt
+
 # Audit pre_build.sh for the silent/fatal git-add failure class — and ask what its local commit is even for
 
 Type: research

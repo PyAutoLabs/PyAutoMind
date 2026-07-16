@@ -1,3 +1,11 @@
+## pre-build-slim-step3 (build-chain umbrella Phase 1, step 3)
+- issue: PyAutoBuild#156 (parent; step tracked there)
+- planned: 2026-07-16
+- classification: library (PyAutoBuild) — refactor
+- blocked-by: human decision — delete or keep the dataset/config "sweep human dirt into a release" vestige (docs/pre_build_failure_audit.md §6; it is #126's leak mechanism, but deleting it makes releases require clean mains)
+- affected-repos:
+  - PyAutoBuild
+
 ## jax-compile-time-research
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
 - planned: 2026-07-16
