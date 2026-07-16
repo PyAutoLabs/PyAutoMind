@@ -95,17 +95,6 @@
 - repos:
   - autolens_workspace_test: feature/viz-render-gallery
 
-## memory-structure-cleanup
-- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/24
-- status: PRs open, awaiting merge — Memory#25 (restructure) -> Mind#82 (template sync) + Brain#121 (faculty glob, parallel-PR exception); design note posted on #24
-- worktree: ~/Code/PyAutoLabs-wt/memory-structure-cleanup
-- autonomy: supervised
-- prompt: active/pyautomemory_structure_cleanup.md
-- note: PyAutoBrain leg (memory-faculty glob) is a small parallel PR from main — repo claimed by workspace-agent, parallel PR user-approved 2026-07-16 (no file overlap); PyAutoBrain deliberately NOT claimed here
-- repos:
-  - PyAutoMemory: feature/memory-structure-cleanup
-  - PyAutoMind: feature/memory-structure-cleanup
-
 ## pre-build-audit
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156
 - status: library-dev (research — audit + design doc; edits behind plan approval)

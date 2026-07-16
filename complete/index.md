@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-579 records across 5 buckets.
+587 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -67,6 +67,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [health-api](2026/07/health-api.md)
 - [health-one-door](2026/07/health-one-door.md)
 - [health-sync-noise-filter](2026/07/health-sync-noise-filter.md)
+- [heart-state-clobber](2026/07/heart-state-clobber.md) — PyAutoHeart test suite clobbered live ~/.pyauto-heart state; run() made side-effect-free in test_run + version…
 - [howto-markdown-resync](2026/07/howto-markdown-resync.md) — re-synced 4 stale HowTo ch1 markdown pages after the truncation-restore work merged post-batch-2b. HowToLens t…
 - [hst-acs-phase1](2026/07/hst-acs-phase1.md)
 - [human-led-tone-sweep](2026/07/human-led-tone-sweep.md) — human-led natural-language framing landed on the agentic-AI pitch surfaces — org front page (.github PRs #1+#2…
@@ -78,6 +79,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [intake-census-dashboard](2026/07/intake-census-dashboard.md)
 - [intake-formalise](2026/07/intake-formalise.md)
 - [intake-reconcile](2026/07/intake-reconcile.md)
+- [intake_writes_legacy_layout](2026/07/intake_writes_legacy_layout.md)
 - [interferometer-analysis-fitexception](2026/07/interferometer-analysis-fitexception.md) — interferometer (+point_source) log_likelihood_function lacked imaging's NumPy-path try/except→FitException gua…
 - [inversion-testmode-singular-guard](2026/07/inversion-testmode-singular-guard.md) — release-tail singular/non-PD inversion FAILs (slam/cpu_fast_modeling) were a flaky TEST_MODE artifact, not a c…
 - [jax-autodiff-gradients-audit](2026/07/jax-autodiff-gradients-audit.md) — 3-phase JAX autodiff gradients audit complete in one supervised session — every smooth likelihood FD-certified…
@@ -113,10 +115,12 @@ _(curate hard-won records here — survives regeneration.)_
 - [matrix-nufftax-py312](2026/07/matrix-nufftax-py312.md) — Fixed the chronic PyAutoBuild "Python Version Matrix" weekly red. 38 failures/job = nufftax ModuleNotFoundErro…
 - [mcmc-corner-smoke](2026/07/mcmc-corner-smoke.md) — The `searches/mcmc.py` "no dynamic range" release-smoke crash (nightly-release blocker) was a **library** bug,…
 - [memory-faculty](2026/07/memory-faculty.md)
+- [memory-structure-cleanup](2026/07/memory-structure-cleanup.md) — wiki/ + bibliography restructure, structure lint, template sync — SHIPPED
 - [multi-shared-state-core-api](2026/07/multi-shared-state-core-api.md)
 - [multi-shared-state-examples](2026/07/multi-shared-state-examples.md) — EPIC — phases 1-4 + follow-up
 - [multi-shared-state-examples-phase-3-workspace-examples](2026/07/multi-shared-state-examples-phase-3-workspace-examples.md)
 - [multi-start-adam-profiling](2026/07/multi-start-adam-profiling.md) — Registered af.MultiStartAdam (Fit#1369) as a first-class profiling sampler in autolens_profiling/searches/, sc…
+- [multi-start-batch-size](2026/07/multi-start-batch-size.md) — Added batch_size to AbstractMultiStartGradient (MultiStartAdam/ADABelief/Lion). The searches vmapped every sta…
 - [multi-start-gradient-examples](2026/07/multi-start-gradient-examples.md) — Phase 2 (redefined config→examples) of the multi-start gradient search promotion (Fit#1369). Added a MultiStar…
 - [multi-start-gradient-guides](2026/07/multi-start-gradient-guides.md) — Phase 3 of the multi-start gradient search promotion (Fit#1369). Added a MultiStartAdam config section to scri…
 - [multi-start-gradient-search](2026/07/multi-start-gradient-search.md) — Phase 1 of promoting the benchmark-winning multi-start gradient MAP optimizer to first-class PyAutoFit searche…
@@ -148,6 +152,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [psf-oversample-workspace](2026/07/psf-oversample-workspace.md)
 - [psf-visible-input](2026/07/psf-visible-input.md)
 - [pyautogut-organ](2026/07/pyautogut-organ.md) — Gut organ + hygiene drive seam — complete
+- [pyautolens-assistant-joss-paper](2026/07/pyautolens-assistant-joss-paper.md) — JOSS paper #2 scaffolded next to the software — SHIPPED
 - [pyautolens-jax-joss-paper](2026/07/pyautolens-jax-joss-paper.md) — PyAutoLens-JAX JOSS paper scaffold — MERGED
 - [pyautoreduce-hst-design](2026/07/pyautoreduce-hst-design.md)
 - [pyautoscientist-3b-clone](2026/07/pyautoscientist-3b-clone.md) — clone (Mitosis) agent v0 live per DESIGN.md phasing — analyze mode emits CloneDecision (domain analysis via as…
@@ -193,6 +198,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [verify-install-check-f-autosimulate-and-dep-pin](2026/07/verify-install-check-f-autosimulate-and-dep-pin.md)
 - [version-check-compat-floor](2026/07/version-check-compat-floor.md)
 - [version-pinning-design-review](2026/07/version-pinning-design-review.md)
+- [wake-up-skill-rename](2026/07/wake-up-skill-rename.md) — Renamed the /morning composition skill to /wake_up to fit the organism analogy (the organism wakes: syncs its …
 - [weak-likelihood-function](2026/07/weak-likelihood-function.md)
 - [weak-modeling](2026/07/weak-modeling.md)
 - [weak-real-data](2026/07/weak-real-data.md)
@@ -201,6 +207,8 @@ _(curate hard-won records here — survives regeneration.)_
 - [weak-strong-lensing](2026/07/weak-strong-lensing.md)
 - [weak-viz-profiles](2026/07/weak-viz-profiles.md)
 - [wfc3-reduction](2026/07/wfc3-reduction.md)
+- [wire-verify-install-leg](2026/07/wire-verify-install-leg.md)
+- [workspace_examples_agent](2026/07/workspace_examples_agent.md)
 
 ## 2026/06
 
