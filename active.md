@@ -91,6 +91,16 @@
 
 
 
+## heart-evidence-audit
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/83
+- status: library-dev (research — per-leg evidence map + verdict-worth judgment; fixes behind plan approval)
+- worktree: ~/Code/PyAutoLabs-wt/heart-evidence-audit
+- autonomy: supervised
+- prompt: active/readiness_evidence_chain_audit.md
+- parent: build-chain-umbrella (Phase 2, epic PyAutoBuild#155)
+- repos:
+  - PyAutoHeart: feature/heart-evidence-audit
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: coordinating — 0a MERGED; 0b parser fix queued (Brain claims); Phase 1 DONE (#157/#158/#159 merged; step 3 parked on dataset/config-sweep decision); Phase 2 (heart-evidence-audit) in flight
