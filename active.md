@@ -40,7 +40,9 @@
 ## inject-stage-hst-imaging
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/46
 - session: claude (CLI, 2026-07-16)
-- status: library-dev
+- status: library-shipped, awaiting-merge — PR PyAutoReduce#47 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/47
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×4; install verification not run; release validation stale (5 libs)
 - worktree: ~/Code/PyAutoLabs-wt/inject-stage-hst-imaging
 - autonomy: safe (--auto; feature≤medium cap)
 - prompt: active/inject_stage_hst_imaging.md
