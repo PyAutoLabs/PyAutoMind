@@ -63,21 +63,6 @@
   - PyAutoGalaxy: feature/coolest-standard-support
   - PyAutoLens: feature/coolest-standard-support
 
-## ic50-assistant-seed
-- issue: https://github.com/Jammy2211/ic50_assistant/issues/1
-- status: awaiting-input — Phase 1 (seed) shipped; Phases 2-4 (domain adaptation) authored+pushed; Phase 5 demonstrations RUN (goals 1-3 ✅: ep_sim 33/33 within 3σ, EP scaling ~linear, real drug_1003/1073 fits; goal 4 partial — LS↔EP done, random_forest blocked → ic50_workspace#8). PARKED at ship sign-off (supervised --auto) — human opens/merges domain-adaptation PR
-- question: https://github.com/Jammy2211/ic50_assistant/issues/1#issuecomment-4990016860
-- worktree: ~/Code/PyAutoLabs-wt/ic50-assistant-seed
-- autonomy: supervised
-- prompt: active/build_ic50_assistant_from_autofit_assistant.md
-- note: build ic50_assistant (PyAutoFit domain assistant, EP/graphical IC50) seeded from autofit_assistant. Phase 1 = Clone Agent reference-profiled (PyAutoBrain#120 + autofit_assistant#11, OPEN) + PRIVATE Jammy2211/ic50_assistant born (c3487afc1). Phases 2-4 = domain adaptation on ic50_assistant branch feature/ic50-domain-adaptation (b404fc2, pushed, NO PR yet — supervised parks at ship): AGENTS reframe, profile, literature wiki (5 real papers), 6 ic50_* skills, HPC skill; validated (citations/links/tests green). Phase 5 = execute the fits (some HPC-scale) — checkpoint compute first. Downstream: ic50_workspace → closed science repo. PyAutoBrain claim: clone/-only parallel PR, no overlap, user-approved.
-- repos:
-  - PyAutoBrain: feature/ic50-assistant-seed
-  - autofit_assistant: feature/ic50-assistant-seed
-  - ic50_assistant: feature/ic50-domain-adaptation (pushed; PR awaiting human sign-off)
-
-
-
 ## heart-evidence-audit
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/83
 - status: library-dev (research — per-leg evidence map + verdict-worth judgment; fixes behind plan approval)
@@ -128,3 +113,13 @@
 - prompt: active/slam_resume_overhead_profile_inter_stage_costs.md
 - repos:
   - autolens_profiling: feature/slam-resume-profiling
+
+## lr-free-multi-start-optimizers
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/101
+- status: workspace-dev — phase 1 (MGE local wiring) starting; pixelized phase GATED on #100's Nautilus arbiter (job 330379 was CANCELLED mid input_reduce_fusion compile at 1h07, never sampled — re-submit with JAX_COMPILATION_CACHE_DIR)
+- worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (STACKED branch feature/lr-free-multi-start-optimizers on feature/pixelized-gradient-experiment; repo claim shared with #100 by design, user-approved, precedent #97-on-#96)
+- autonomy: supervised (experiment)
+- prompt: active/lr_free_multi_start_optimizers.md
+- sibling drafts: draft/research/autolens_workspace_developer/jax_native_posterior_sampler_wave.md (issue when this ships — do not bulk-issue)
+- repos:
+  - autolens_workspace_developer: feature/lr-free-multi-start-optimizers
