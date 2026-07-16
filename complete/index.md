@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-615 records across 5 buckets.
+616 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -221,6 +221,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [stpsf-tier2b](2026/07/stpsf-tier2b.md) — JWST per-frame PSF coverage lifted 3/6 -> 6/6 (F115W validated) — STPSF tier-2b at frame DETECTOR + target pos…
 - [stub-skill-recipes-fill-in](2026/07/stub-skill-recipes-fill-in.md) — retired by user decision
 - [survey-cutouts](2026/07/survey-cutouts.md)
+- [test-mode-representative-samples-phase-1-design](2026/07/test-mode-representative-samples-phase-1-design.md)
 - [user-defaults-discovery](2026/07/user-defaults-discovery.md) — batch finale (task 6, rescoped discovery-half) — start-new-project step 0 environment-discovery preflight: rea…
 - [verify-install-check-f-autosimulate-and-dep-pin](2026/07/verify-install-check-f-autosimulate-and-dep-pin.md)
 - [version-check-compat-floor](2026/07/version-check-compat-floor.md)

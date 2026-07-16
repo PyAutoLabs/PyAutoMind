@@ -1,16 +1,6 @@
 # Active Tasks
 
 
-## test-mode-representative-samples-phase-1-design
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1378
-- session: claude --resume fceb9fd4-59ed-4cb4-acc0-bd4c04c23839
-- status: library-dev (design-only phase — no source edits, no worktree; claims NO repos)
-- worktree: none (phase 2 creates ~/Code/PyAutoLabs-wt/test-mode-representative-samples)
-- autonomy: supervised
-- prompt: active/test_mode_representative_outputs_size_realistic_phase_1_design.md
-- note: phase 1/4 of the test-mode size-realistic-samples umbrella (draft/feature/autofit/test_mode_representative_outputs_size_realistic.md). DESIGN COMPLETE 2026-07-16 — D1-D4 posted (#1378 comment): knob PYAUTO_TEST_MODE_SAMPLES default 4 / accessor in autoconf via existing autofit shim / N==4 literal branch untouched / N>4 vectorized numpy -> production Sample.from_lists path / weights exp(-i/(N/10)) w_min>=4.5e-10 at N<=1e5 (threshold 1e-10; bypass write path never prunes — updater.py only). Production parity target measured: 10,187 rows x 21 cols = 9.07 MB (hst_fast source_lp[1]). Awaiting human validation of D1-D4, then close #1378 + issue phase 2 once aggregator-sqlite's PyAutoFit claim frees (#1376 awaiting merge).
-- repos:
-
 ## aggregator-sqlite
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1377
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
