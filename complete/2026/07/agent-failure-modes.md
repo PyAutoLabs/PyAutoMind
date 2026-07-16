@@ -1,3 +1,11 @@
+## agent-failure-modes
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/130
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/131 (doc) + #132 (mitigations 1+2) + #133 (guard v1.1) — all merged
+- summary: campaign #155 Phase 5 capstone. A-E catalogue validated by measurement; enlarged out-of-sample (F1-F5); taxonomy compressed to two root causes; refusals-vs-informs hypothesis sharpened (informs fail even as live self-awareness; refusals ~100% with measured false-positive cost). Mitigations 1+2 SHIPPED and WIRED: pipefail agent-shell default (BASH_EXECUTION_STRING discriminator; $0 approach measured wrong pre-ship) + Mind commit guard. The guard's first live hour produced two false positives on its own author; v1.1 (token-level clause parsing) shipped same hour with both incidents as regression tests — the F5 cost column, lived. Items 3-6 = enumerated follow-ups.
+
+## Original prompt
+
 # Investigate how the organism can stop its agents making these mistakes
 
 Type: research
