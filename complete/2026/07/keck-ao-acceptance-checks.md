@@ -1,3 +1,11 @@
+## keck-ao-acceptance-checks (Keck-AO checks 3–4 — plate-scale finding delivered — INTERIM, retired)
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/13 (STAYS OPEN — real finding + resumable fit)
+- completed: interim 2026-07-09; active.md entry retired 2026-07-14 (/morning, human-directed — no longer actively tracked)
+- summary: Check 3 delivered a concrete result — the adapter's narrow-camera `native_scale` (9.942 mas) is wrong for both epochs; truth is 9.952 mas pre-2015 (Yelda 2010; B1938 raw PIXSCALE 0.009952 agrees) / 9.971 mas post-2015 (Service 2016), so shipped phase-4 mosaics read θ_E ~0.10% low. Proposed fix (gated on review): epoch-aware `native_scale` selected with the distortion solution. Check 4 lens fit (SIE+shear+Sersic, Nautilus) ran ~1h CPU, not converged, 94MB checkpoint.
+- residual (not blocking retirement): the epoch-aware `native_scale` fix + the check-4 θ_E-vs-0.45″ convergence are documented on #13 with resume commands; #13 stays OPEN as the backlog anchor. The 94MB checkpoint was on a laptop that reset — may need re-running from scratch on a quiet machine.
+
+## Original prompt
+
 # Keck-AO acceptance checks 3-4 — astrometry + Einstein-radius invariance
 
 Type: test

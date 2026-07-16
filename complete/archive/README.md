@@ -1,7 +1,7 @@
 # complete/archive/ — retired non-record material
 
 This holds material that isn't a **dated task record** (those live in
-`complete/<YYYY>/<MM>/` and pair 1:1 with `complete.md`). `lifecycle.py`
+`complete/<YYYY>/<MM>/` and are the completion ledger). `lifecycle.py`
 `check` and `index` deliberately **skip** this directory.
 
 - **`epics/`** — retired multi-task **epic trackers** (formerly `z_features/`).
