@@ -13,17 +13,6 @@
   - PyAutoCTI: feature/cti-resurrection-phase0
 
 
-## community-ears-v2-prs
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/125
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/community-ears-v2-prs
-- autonomy: human-required
-- prompt: active/community_ears_v2_external_prs.md
-- note: community conductor v2 — scan/triage hear external PRs + review requests. Parallel-PR override (user "go"): ic50-assistant-seed claims PyAutoBrain but is clone/-only (PR #120, zero overlap); retire-complete-ledger claim is STALE (Brain PR #123 merged, worktree deleted).
-- repos:
-  - PyAutoBrain: feature/community-ears-v2-prs
-
-
 ## aggregator-profiling
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae

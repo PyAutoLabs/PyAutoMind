@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-602 records across 5 buckets.
+604 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -38,6 +38,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autonomy-contract](2026/07/autonomy-contract.md)
 - [brain-agent-commands](2026/07/brain-agent-commands.md)
 - [bug-agent](2026/07/bug-agent.md)
+- [build_ic50_assistant_from_autofit_assistant](2026/07/build_ic50_assistant_from_autofit_assistant.md)
 - [checkpoint-continue](2026/07/checkpoint-continue.md)
 - [cluster-likelihood-breakdown](2026/07/cluster-likelihood-breakdown.md)
 - [cluster-scaling-lenstool](2026/07/cluster-scaling-lenstool.md)
@@ -47,6 +48,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [colab-link-rot-libdocs](2026/07/colab-link-rot-libdocs.md)
 - [colab-maturity](2026/07/colab-maturity.md)
 - [colab-sim-verify-install](2026/07/colab-sim-verify-install.md)
+- [community-ears-v2-prs](2026/07/community-ears-v2-prs.md) — CLOSED via PR
 - [community-voice-agent](2026/07/community-voice-agent.md) — birth of the community conductor — the Ears, the organism's receptive language function (Wernicke to the Works…
 - [corrective-pr-heart-red](2026/07/corrective-pr-heart-red.md) — human-authorized corrective-PR exception for Heart RED — MERGED
 - [csv-api-lenstool](2026/07/csv-api-lenstool.md)
