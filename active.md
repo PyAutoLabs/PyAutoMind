@@ -1,20 +1,6 @@
 # Active Tasks
 
 
-## eyes-paper-critique
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
-- session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/129
-- heart-ack: 2026-07-16 human ack of RED for PR-open ("continue" after verdict shown; same 6 unrelated organism-level reasons, third identical ack today — firewall drift ×6 is parallel-session, branch greps clean); merge stays human
-- worktree: ~/Code/PyAutoLabs-wt/eyes-paper-critique
-- autonomy: supervised
-- prompt: active/eyes_paper_informed_critique.md
-- parent: eyes-agent epic (#117, Phase 3 of 3 — FINAL; Phases 1+2 MERGED). Epic closes when this ships
-- note: small core addition (eyes review --against <reference-dir> + optional `reference` note-schema field) + skill-prose Phase-3 step; first real paper run deferred to the /eyes maiden voyage
-- repos:
-  - PyAutoBrain: feature/eyes-paper-critique
-
 ## test-mode-representative-samples-phase-1-design
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1378
 - session: claude --resume fceb9fd4-59ed-4cb4-acc0-bd4c04c23839
@@ -92,7 +78,8 @@
 
 ## env-profile-redesign
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161
-- status: library-dev (research — verified map + target design + migration; implementation as separate green steps)
+- status: library-shipped, awaiting-merge — design doc PR PyAutoBuild#162 (invariant decided; 8-step migration lands as separate tasks post-merge)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/162
 - worktree: ~/Code/PyAutoLabs-wt/env-profile-redesign
 - autonomy: supervised
 - prompt: active/env_profile_and_validation_gate_redesign.md
