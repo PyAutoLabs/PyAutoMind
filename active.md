@@ -1,15 +1,41 @@
 # Active Tasks
 
 
-## delete-pyautoheart-shim
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/80
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/delete-pyautoheart-shim
-- autonomy: supervised
-- prompt: active/delete_pyautoheart_shim.md
-- note: human overrode the heart-state-clobber repo-claim block ("go"); moot anyway — its PR #79 merged before this branch was cut from origin/main (0319c1a includes it). No file overlap (heart/checks/ vs pyautoheart/+pyproject.toml).
+## simulate-injection-feasibility
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/44
+- session: claude (CLI, 2026-07-16)
+- status: awaiting-input — parked at ship gate on Heart RED (docs-only deliverable written + tests pass in worktree, uncommitted; gate state on issue #44). Resume: human RED ack → commit → review leg → PR
+- worktree: ~/Code/PyAutoLabs-wt/simulate-injection-feasibility
+- autonomy: supervised (--auto; research cap)
+- prompt: active/simulated_lens_through_reduction_pipeline.md
+- note: research deliverable = docs/design/simulate.md feasibility verdict (frame-level injection + simobserve) + phased follow-up prompts; docs-only, no autoreduce/ source edits.
 - repos:
-  - PyAutoHeart: feature/delete-pyautoheart-shim
+  - PyAutoReduce: feature/simulate-injection-feasibility
+
+## aggregator-profiling
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1375
+- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/aggregator-profiling
+- autonomy: supervised
+- prompt: active/aggregator_profiling_harness_and_result_loading.md
+- note: Phase A harness (autofit_workspace_test scripts/profiling/aggregator/) then Phase B speedups (PyAutoFit aggregator). autolens_workspace_test leg deferred — repo claimed by viz-render-gallery. sqlite (goal 3) = separate follow-up prompt when A+B near ship.
+- repos:
+  - PyAutoFit: feature/aggregator-profiling
+  - autofit_workspace_test: feature/aggregator-profiling
+
+
+## jax-joss-benchmarks
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-joss-benchmarks
+- autonomy: supervised
+- prompt: active/autolens_jax_joss_benchmark_repo.md
+- note: 5-phase epic (one-shot attempt per user); new repo autolens_jax_joss (PyAutoLabs, public) born alongside; datasets SDP.81 / RXJ1131 / A2744 user-approved
+- repos:
+  - autolens_workspace: feature/jax-joss-benchmarks
+  - autolens_jax_joss: main (born this task)
+
 
 ## coolest-standard-support
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/612
@@ -23,33 +49,23 @@
   - PyAutoGalaxy: feature/coolest-standard-support
   - PyAutoLens: feature/coolest-standard-support
 
-## community-voice-agent
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/119
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/community-voice-agent
-- autonomy: human-required
-- prompt: active/community_communication_agent_listen_and_respond.md
-- note: birth the community conductor — alias changed "the Voice"→"the Ears" (workspace-agent #118 shipped as the Voice; Broca=workspace speaks, Wernicke=community hears). Includes /wake_up community sensory leg. Watch: ic50-assistant-seed also claims PyAutoBrain (clone/ only, no expected overlap).
-- repos:
-  - PyAutoBrain: feature/community-voice-agent
-
-
 ## ic50-assistant-seed
 - issue: https://github.com/Jammy2211/ic50_assistant/issues/1
-- status: in-progress — Phase 1 (seed) shipped; PRs open; Phases 2-5 pending
+- status: awaiting-input — Phase 1 (seed) shipped; Phases 2-4 (domain adaptation) authored+pushed, PARKED at ship sign-off (supervised --auto); Phase 5 (run demonstrations) pending
+- question: https://github.com/Jammy2211/ic50_assistant/issues/1#issuecomment-4990016860
 - worktree: ~/Code/PyAutoLabs-wt/ic50-assistant-seed
 - autonomy: supervised
 - prompt: active/build_ic50_assistant_from_autofit_assistant.md
-- note: build ic50_assistant (PyAutoFit domain assistant, EP/graphical IC50) seeded from autofit_assistant. Phase 1 generalised the Clone Agent (reference profiles) — PyAutoBrain#120 + autofit_assistant#11 — and birthed PRIVATE Jammy2211/ic50_assistant (birth c3487afc1). PyAutoBrain claimed by workspace-agent; this is a small parallel PR, no file overlap (clone/ only), user-approved. Phases 2-5 (IC50 wiki+papers, ic50_* demo skills, RAL/HPC, validation) checkpoint before start. Downstream: ic50_workspace → closed science-project repo.
+- note: build ic50_assistant (PyAutoFit domain assistant, EP/graphical IC50) seeded from autofit_assistant. Phase 1 = Clone Agent reference-profiled (PyAutoBrain#120 + autofit_assistant#11, OPEN) + PRIVATE Jammy2211/ic50_assistant born (c3487afc1). Phases 2-4 = domain adaptation on ic50_assistant branch feature/ic50-domain-adaptation (b404fc2, pushed, NO PR yet — supervised parks at ship): AGENTS reframe, profile, literature wiki (5 real papers), 6 ic50_* skills, HPC skill; validated (citations/links/tests green). Phase 5 = execute the fits (some HPC-scale) — checkpoint compute first. Downstream: ic50_workspace → closed science repo. PyAutoBrain claim: clone/-only parallel PR, no overlap, user-approved.
 - repos:
   - PyAutoBrain: feature/ic50-assistant-seed
   - autofit_assistant: feature/ic50-assistant-seed
-  - ic50_assistant: main (born via clone_seed)
+  - ic50_assistant: feature/ic50-domain-adaptation (pushed; PR awaiting human sign-off)
 
 
 ## assistant-euclid-mode
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/73
-- status: workspace-dev
+- status: awaiting-merge — PRs open: euclid_strong_lens_modeling_pipeline#27 (P0), autolens_assistant#74 (P1+P2); shipped through unrelated Heart RED on user ack 2026-07-16
 - worktree: ~/Code/PyAutoLabs-wt/assistant-euclid-mode
 - autonomy: supervised
 - prompt: active/extend_autolens_assistant_with_a_euclid_mode.md
@@ -70,20 +86,10 @@
 - repos:
   - autolens_workspace_test: feature/viz-render-gallery
 
-## memory-structure-cleanup
-- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/24
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/memory-structure-cleanup
-- autonomy: supervised
-- prompt: active/pyautomemory_structure_cleanup.md
-- note: PyAutoBrain leg (memory-faculty glob) is a small parallel PR from main — repo claimed by workspace-agent, parallel PR user-approved 2026-07-16 (no file overlap); PyAutoBrain deliberately NOT claimed here
-- repos:
-  - PyAutoMemory: feature/memory-structure-cleanup
-  - PyAutoMind: feature/memory-structure-cleanup
-
 ## pre-build-audit
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156
-- status: library-dev (research — audit + design doc; edits behind plan approval)
+- status: library-shipped, awaiting-merge — PR PyAutoBuild#157 (audit doc; corrective-PR exception for Heart RED, human-authorized 2026-07-16)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/157
 - worktree: ~/Code/PyAutoLabs-wt/pre-build-audit
 - autonomy: supervised
 - prompt: active/pre_build_git_add_failure_audit.md
@@ -122,3 +128,28 @@
 - intakes filed: draft/feature/autolens_profiling/jax_compile_time_profiling.md (Fable, tomorrow — compile is ~all the wall time; autotune RULED OUT: 2100s vs 2090s identical), draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
 - repos:
   - autolens_workspace_developer: feature/pixelized-gradient-experiment
+
+## retire-complete-ledger
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/81
+- session: claude --resume 863c9a43-47ad-4b84-a27a-1a5e47a5bf64
+- status: library-shipped, awaiting-merge
+- library-pr: PyAutoMind#83 + PyAutoBrain#123 (pending-release) + PyAutoHeart#82 (pending-release)
+- heart-ack: user-authorized ship through unrelated RED 2026-07-16 — reasons verbatim: "PyAutoLens: 1 uncommitted source change(s)"; "workspace validation not passing (3 failed, 2026-07-09T09-48-30Z)"; "58 stale parked script(s)"; "manifest drift: tenant firewall (organ code) — 2 mismatch(es) vs PyAutoMind/repos.yaml"; "install verification not run"; "release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)" — ack does NOT extend to new reasons
+- rider: after memory-structure-cleanup merges, drop ("complete.md","EMPTY") from scripts/spawn.py + spawn_spec.md row, republish template (on #81)
+- worktree: ~/Code/PyAutoLabs-wt/retire-complete-ledger
+- autonomy: supervised
+- prompt: active/retire_the_legacy_pyautomind_complete_md_ledger.md
+- note: PARALLEL claims user-approved 2026-07-16 (overlap verified before start) — Mind also claimed by memory-structure-cleanup (their Mind diff = scripts/spawn.py only; spawn.py EXCLUDED from this branch, filed as 1-line rider on #81); Brain also claimed by community-voice-agent + ic50-assistant-seed (zero file overlap with this branch's file set); Heart also claimed by delete-pyautoheart-shim (no commits yet; this branch touches only skills/pyauto-status/reference.md there)
+- repos:
+  - PyAutoMind: feature/retire-complete-ledger
+  - PyAutoBrain: feature/retire-complete-ledger
+  - PyAutoHeart: feature/retire-complete-ledger
+
+## slam-resume-profiling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/70
+- session: claude --resume ce78c7e9-3f34-4983-bb53-8840527c1fb6
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/slam-resume-profiling
+- prompt: active/slam_resume_overhead_profile_inter_stage_costs.md
+- repos:
+  - autolens_profiling: feature/slam-resume-profiling

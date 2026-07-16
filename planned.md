@@ -1,3 +1,15 @@
+## jax-compile-time-research
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
+- planned: 2026-07-16
+- classification: workspace (autolens_profiling) — research
+- suggested-branch: feature/jax-compile-time-research
+- blocked-by: slam-resume-profiling (using autolens_profiling; issue #70, session ce78c7e9)
+- autonomy: supervised (--auto; research cap — plan human-approved 2026-07-16, resume straight into start_workspace when the claim frees)
+- prompt: active/jax_compile_time_is_prohibitive_for_complex.md
+- summary: compile-time probe + research note in autolens_profiling answering "jit boundaries in source vs settings/small changes". Full plan on issue #71. autolens_workspace_developer is READ-ONLY evidence (claimed by pixelized-gradient-experiment — never claim it here). Companion (separate task): draft/feature/autolens_profiling/jax_compile_time_profiling.md industrializes the probe across the cell grid. Established: autotune ruled out; lax.map scan-of-vmap >> plain value_and_grad compile (7m36s vs >30min same fusion).
+- affected-repos:
+  - autolens_profiling
+
 ## brain-lifecycle-path-fixes (build-chain umbrella Phase 0b)
 - issue: none yet (issued when unblocked)
 - planned: 2026-07-16
@@ -174,22 +186,3 @@
     new convergence-MGE hook. Validate via grad(psi)=alpha self-consistency.
 - affected-repos:
   - PyAutoGalaxy
-
-
-## retire-complete-ledger
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/81
-- planned: 2026-07-16
-- classification: library
-- suggested-branch: feature/retire-complete-ledger
-- blocked-by: memory-structure-cleanup (using PyAutoMind); community-voice-agent + ic50-assistant-seed (using PyAutoBrain); heart-state-clobber (using PyAutoHeart)
-- summary: |
-    Retire the 6,274-line complete.md ledger; the dated complete/ records +
-    generated index.md become the sole completion ledger. Backfill 8 missing
-    records first; rework lifecycle.py (record --from-file, post-retirement
-    check invariants, delete spent split-complete/migrate); repoint ship_*
-    skills, memory faculty, intake reconcile (Brain) and pyauto-status (Heart).
-    Coordinate: memory-structure-cleanup's parallel PR touches _memory.py too.
-- affected-repos:
-  - PyAutoMind
-  - PyAutoBrain
-  - PyAutoHeart

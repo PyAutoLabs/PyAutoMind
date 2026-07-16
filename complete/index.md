@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-594 records across 5 buckets.
+597 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -46,10 +46,12 @@ _(curate hard-won records here — survives regeneration.)_
 - [colab-link-rot-libdocs](2026/07/colab-link-rot-libdocs.md)
 - [colab-maturity](2026/07/colab-maturity.md)
 - [colab-sim-verify-install](2026/07/colab-sim-verify-install.md)
+- [community-voice-agent](2026/07/community-voice-agent.md) — birth of the community conductor — the Ears, the organism's receptive language function (Wernicke to the Works…
 - [corrective-pr-heart-red](2026/07/corrective-pr-heart-red.md) — human-authorized corrective-PR exception for Heart RED — MERGED
 - [csv-api-lenstool](2026/07/csv-api-lenstool.md)
 - [database-latent-wheel-load](2026/07/database-latent-wheel-load.md) — database scripts failed on release wheels loading latent variables → AssertionError. Release-tail item D. Corr…
 - [delaunay-qhull-callback](2026/07/delaunay-qhull-callback.md)
+- [delete_pyautoheart_shim](2026/07/delete_pyautoheart_shim.md)
 - [docs-theming-hub](2026/07/docs-theming-hub.md) — phases B+C of docs middle path — hub LIVE at pyautolabs.github.io (Pages; RETROFIT.md = paid-domain flip); sha…
 - [dpie-lenstool-param](2026/07/dpie-lenstool-param.md)
 - [eceb-editorial-revision](2026/07/eceb-editorial-revision.md) — ECEB wiki rules — EC A&A template assets — MERGED
@@ -120,6 +122,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [matrix-nufftax-py312](2026/07/matrix-nufftax-py312.md) — Fixed the chronic PyAutoBuild "Python Version Matrix" weekly red. 38 failures/job = nufftax ModuleNotFoundErro…
 - [mcmc-corner-smoke](2026/07/mcmc-corner-smoke.md) — The `searches/mcmc.py` "no dynamic range" release-smoke crash (nightly-release blocker) was a **library** bug,…
 - [memory-faculty](2026/07/memory-faculty.md)
+- [memory-structure-cleanup](2026/07/memory-structure-cleanup.md) — wiki/ + bibliography restructure, structure lint, template sync — SHIPPED
 - [morning-status-release-rehearsal](2026/07/morning-status-release-rehearsal.md) — morning Slack digest + release rehearsal — RESOLVED
 - [multi-shared-state-core-api](2026/07/multi-shared-state-core-api.md)
 - [multi-shared-state-examples](2026/07/multi-shared-state-examples.md) — EPIC — phases 1-4 + follow-up
