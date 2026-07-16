@@ -32,7 +32,7 @@
 ## jax-compile-time-research
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
 - session: claude (CLI, resumed 2026-07-16 evening; was bg job b44b0e0f)
-- status: workspace-dev — MGE CPU matrix DONE (grad ≈ 13-15× jit compile; lax.map∘vag 47×); persistent cache CERTIFIED locally (warm 117s→2.3s, 51×; trace ~14s uncacheable); RAL 330513 confirmed 1h10m fusion DID serialize (1.7MB entry); A100 warm-repeat job 330534 pending (nautilus 0 16 — args MUST match or shapes miss cache); local pixelization jit+vag CPU probe running. Remaining: pix numbers, A100 warm verdict, piecewise-jit prototype (cold-compile half of core question)
+- status: workspace-dev — VERDICT FIRMING: settings suffice so far. Cache certified BOTH scales (local 117s→2.3s 51×; A100 warm-repeat 330534 wall 937s vs 5518s cold, 5.9×, 70min fusion compile GONE). CORRECTION: morning matrix 388/851s were LOAD ARTIFACTS — idle CPU compile flat ~105-125s across vmap/lax.map/pyloop (diff ≈6× jit, batching free); pyloop_vag transform added, no win. Pixelization compiles FAST on CPU (5s/31s) — pathology is op-pattern/GPU-fusion-specific. OVERNIGHT: A/B cold-compile jobs 330536 (plain vag) + 330537 (lax.map adam) w/ fresh caches + HLO dump of input_reduce module — read logs compileab_*_33053{6,7}.log tomorrow. Remaining: A/B verdict, HLO analysis, then FINDINGS.md + spawned follow-up (config rollout: cache-dir-by-default)
 - worktree: ~/Code/PyAutoLabs-wt/jax-compile-time-research
 - autonomy: supervised (--auto; research cap)
 - prompt: active/jax_compile_time_is_prohibitive_for_complex.md
