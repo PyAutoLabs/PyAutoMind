@@ -63,18 +63,6 @@
   - ic50_assistant: feature/ic50-domain-adaptation (pushed; PR awaiting human sign-off)
 
 
-## assistant-euclid-mode
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/73
-- status: awaiting-merge — PRs open: euclid_strong_lens_modeling_pipeline#27 (P0), autolens_assistant#74 (P1+P2); shipped through unrelated Heart RED on user ack 2026-07-16
-- worktree: ~/Code/PyAutoLabs-wt/assistant-euclid-mode
-- autonomy: supervised
-- prompt: active/extend_autolens_assistant_with_a_euclid_mode.md
-- note: 3 phases, one PR each — P0 pipeline cleanup (profiling/+skills/ removal), P1 euclid_* skills, P2 wiki/euclid/ literature wiki; euclid_assistant is read-only bib source, NOT claimed
-- repos:
-  - autolens_assistant: feature/assistant-euclid-mode
-  - euclid_strong_lens_modeling_pipeline: feature/assistant-euclid-mode
-
-
 ## viz-render-gallery
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
 - session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
@@ -128,22 +116,6 @@
 - intakes filed: draft/feature/autolens_profiling/jax_compile_time_profiling.md (Fable, tomorrow — compile is ~all the wall time; autotune RULED OUT: 2100s vs 2090s identical), draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
 - repos:
   - autolens_workspace_developer: feature/pixelized-gradient-experiment
-
-## retire-complete-ledger
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/81
-- session: claude --resume 863c9a43-47ad-4b84-a27a-1a5e47a5bf64
-- status: library-shipped, awaiting-merge
-- library-pr: PyAutoMind#83 + PyAutoBrain#123 (pending-release) + PyAutoHeart#82 (pending-release)
-- heart-ack: user-authorized ship through unrelated RED 2026-07-16 — reasons verbatim: "PyAutoLens: 1 uncommitted source change(s)"; "workspace validation not passing (3 failed, 2026-07-09T09-48-30Z)"; "58 stale parked script(s)"; "manifest drift: tenant firewall (organ code) — 2 mismatch(es) vs PyAutoMind/repos.yaml"; "install verification not run"; "release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)" — ack does NOT extend to new reasons
-- rider: after memory-structure-cleanup merges, drop ("complete.md","EMPTY") from scripts/spawn.py + spawn_spec.md row, republish template (on #81)
-- worktree: ~/Code/PyAutoLabs-wt/retire-complete-ledger
-- autonomy: supervised
-- prompt: active/retire_the_legacy_pyautomind_complete_md_ledger.md
-- note: PARALLEL claims user-approved 2026-07-16 (overlap verified before start) — Mind also claimed by memory-structure-cleanup (their Mind diff = scripts/spawn.py only; spawn.py EXCLUDED from this branch, filed as 1-line rider on #81); Brain also claimed by community-voice-agent + ic50-assistant-seed (zero file overlap with this branch's file set); Heart also claimed by delete-pyautoheart-shim (no commits yet; this branch touches only skills/pyauto-status/reference.md there)
-- repos:
-  - PyAutoMind: feature/retire-complete-ledger
-  - PyAutoBrain: feature/retire-complete-ledger
-  - PyAutoHeart: feature/retire-complete-ledger
 
 ## slam-resume-profiling
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/70

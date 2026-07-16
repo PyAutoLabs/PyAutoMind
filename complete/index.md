@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-597 records across 5 buckets.
+598 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -185,6 +185,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [release-validation-tail-burndown](2026/07/release-validation-tail-burndown.md) — EPIC/capstone. Burned down the 18f/5t mode=release tail. All real correctness bugs fixed+merged+validated on w…
 - [remove-nss-sampler](2026/07/remove-nss-sampler.md) — ALL phases MERGED + dev-clean
 - [remove-pulse-compat](2026/07/remove-pulse-compat.md)
+- [retire-complete-ledger](2026/07/retire-complete-ledger.md) — complete.md retired — the dated records ARE the ledger; first record written via the new record --from-file pa…
 - [review-faculty](2026/07/review-faculty.md)
 - [rtd-hygiene](2026/07/rtd-hygiene.md) — RTD hygiene phase A — dead configs deleted, conf.py converged, Heart-owned docs-build CI live on 3 libs (basel…
 - [run-queue](2026/07/run-queue.md)
