@@ -136,10 +136,13 @@
 
 ## lr-free-multi-start-optimizers
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/101
-- status: workspace-dev — GATE ANSWERED (see #100 entry: Nautilus +17419 @ r_E 1.31 = optimizer bar). Phase 1 MGE (laptop GPU 12x300): prodigy (lr-free) RECOVERS TRUTH +31787.9 r_E 1.600; ademamix +31786; adopt+adam in-basin; remaining 6 rules re-running detached (first run killed by session teardown — summaries for dog/mechanic/momo/schedule_free/dowg/dadapt in output/ are STALE SMOKE artifacts until rerun lands). Phase 2a SUBMITTED: adam lr sweep RAL jobs 330529/330530/330531 (PIX_LR=1e-3/3e-3/3e-2, 16 starts, batch 4, warm cache). Phase 2b (lr-free rules on pix) needs a standalone pix_lr_free.py — af.AbstractMultiStartGradient inits optimizer state on the STACKED params, which couples the lr-free rules' global scalar estimates across starts (library promotion must vmap init/update)
-- worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (STACKED branch feature/lr-free-multi-start-optimizers on feature/pixelized-gradient-experiment; repo claim shared with #100 by design, user-approved, precedent #97-on-#96)
+- status: workspace-dev — phase 1 COMPLETE, phase 2a COMPLETE (negative), phase 2b OVERNIGHT job 330535
+- worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (branch feature/lr-free-multi-start-optimizers @ 555eb4e, STACKED on #100's branch, pushed; RAL checkout synced to same commit)
 - autonomy: supervised (experiment)
 - prompt: active/lr_free_multi_start_optimizers.md
-- sibling drafts: draft/research/autolens_workspace_developer/jax_native_posterior_sampler_wave.md (issue when this ships — do not bulk-issue)
+- PHASE 1 (MGE, 12x300, laptop GPU) COMPLETE: ALL 10 rules basin-hit; prodigy (lr-free) BIT-IDENTICAL to tuned adam optimum (+31787.84, r_E 1.5997). Findings: searches_minimal/lr_free_findings.md (committed). Wiring rules for any promotion: per-start vmapped optimizer state (lr-free global scalars couple under stacked params — af.AbstractMultiStartGradient can NOT carry them as-is) + optax.apply_if_finite (forwards momo value= kwarg on optax>=0.2.5).
+- PHASE 2a (pix adam lr sweep 1e-3/3e-3/3e-2, jobs 330529-31) COMPLETE, NEGATIVE: best -28462 @ lr 3e-3 (vs 1e-2's -39888) — no lr within 46k nats of the Nautilus bar +17419. LR MIS-SCALING RULED OUT. Warm cache = 17-20min/job.
+- RESUME (morning): (1) read /mnt/ral/jnightin/pixgrad_logs/samp_pixlr_free_330535.log (phase 2b: prodigy/dadapt/mechanic on pix via pix_lr_free.py, submitted 2026-07-16 ~22:20, 8h limit). If they also stall ~-28k → failure is landscape/step-budget: next levers = PIX_N_STEPS=3000 rerun (env exists in pix_lr_free.py) and/or warm starts near the Nautilus mode r_E 1.31. (2) Then findings doc phase-2 section + ship_workspace (PR against main; branch stacked on #100's — coordinate merge order with #100). (3) Ship gate: offer merge + issue close per feedback_prompt_merge_close.
+- next after ship: issue draft/research/autolens_workspace_developer/jax_native_posterior_sampler_wave.md (do not bulk-issue)
 - repos:
   - autolens_workspace_developer: feature/lr-free-multi-start-optimizers
