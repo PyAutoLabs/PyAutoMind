@@ -96,15 +96,6 @@
   - PyAutoLens: feature/coolest-standard-support
 
 
-## pre-build-slim
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156 (Phase 1 step 3; epic #155)
-- status: library-shipped, awaiting-merge — PR PyAutoBuild#160 (sweep vestige deleted)
-- library-pr: https://github.com/PyAutoLabs/PyAutoBuild/pull/160
-- worktree: ~/Code/PyAutoLabs-wt/pre-build-slim
-- autonomy: supervised
-- repos:
-  - PyAutoBuild: feature/pre-build-slim
-
 
 ## env-profile-redesign
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161
