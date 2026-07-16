@@ -44,6 +44,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/aggregator-profiling
 - autonomy: supervised
 - prompt: active/aggregator_profiling_harness_and_result_loading.md
+- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); manifest drift: tenant firewall (organ code) — 4 mismatch(es) vs PyAutoMind/repos.yaml; install verification not run; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acked 2026-07-16, PR-open only
 - note: Phase A harness (autofit_workspace_test scripts/profiling/aggregator/) then Phase B speedups (PyAutoFit aggregator). autolens_workspace_test leg deferred — repo claimed by viz-render-gallery. sqlite (goal 3) = separate follow-up prompt when A+B near ship.
 - repos:
   - PyAutoFit: feature/aggregator-profiling
