@@ -105,14 +105,6 @@
 - repos:
   - PyAutoBuild: feature/pre-build-slim
 
-## heart-testrun-wiring
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/83 (fix 1 of the audit; epic PyAutoBuild#155)
-- status: library-shipped, awaiting-merge — PR PyAutoHeart#85
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/85
-- worktree: ~/Code/PyAutoLabs-wt/heart-testrun-wiring
-- autonomy: supervised
-- repos:
-  - PyAutoHeart: feature/heart-testrun-wiring
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
