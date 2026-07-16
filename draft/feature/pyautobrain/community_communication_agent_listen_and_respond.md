@@ -36,8 +36,9 @@ conductor organ analogy.
   must carry the analogy, e.g. "the Voice — the organism's language faculty
   (Broca + Wernicke): it hears the community and speaks back", matching how
   intake opens as "the Conception Agent".
-- **Scope: one prompt, two legs.** (1) Sensory leg: the `/morning` skill gains a
-  summary of open issues/comments raised by non-Jammy humans across all repos.
+- **Scope: one prompt, two legs.** (1) Sensory leg: the `/wake_up` skill (renamed
+  from `/morning`, PR merged 2026-07-16) gains a summary of open issues/comments
+  raised by non-Jammy humans across all repos.
   (2) Conductor leg: a new PyAutoBrain `/community` conductor that reads a user-filed
   issue, judges whether context is sufficient (else drafts a clarifying question),
   routes actionable work via the existing `start_dev_for_user` / dev-workflow
@@ -45,7 +46,7 @@ conductor organ analogy.
 - **Autonomy is load-bearing:** human-required. All outward messages to real users
   are drafts gated on Jammy; the agent assesses and drafts, the human sends/approves.
 - **Anchors on existing machinery:** `start_dev_for_user` (dispatch primitive for
-  user-filed issues), `/morning` (where the summary leg lands), the
+  user-filed issues), `/wake_up` (where the summary leg lands), the
   user-facing-issue update cadence memory (~5 milestones for bugs, 4 for features).
 - **Difficulty: medium** (sizer said small; new conductor + morning leg +
   conversation-state handling across ~25 repos).
