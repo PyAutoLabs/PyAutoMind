@@ -87,6 +87,14 @@
 - repos:
   - PyAutoHeart: feature/heart-evidence-audit
 
+## pre-build-slim
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156 (Phase 1 step 3; epic #155)
+- status: library-dev — human decided 2026-07-16: DELETE the dataset/config sweep vestige
+- worktree: ~/Code/PyAutoLabs-wt/pre-build-slim
+- autonomy: supervised
+- repos:
+  - PyAutoBuild: feature/pre-build-slim
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: coordinating — 0a MERGED; 0b parser fix queued (Brain claims); Phase 1 DONE (#157/#158/#159 merged; step 3 parked on dataset/config-sweep decision); Phase 2 (heart-evidence-audit) in flight
