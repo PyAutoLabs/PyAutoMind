@@ -89,16 +89,6 @@
   - PyAutoGalaxy: feature/coolest-standard-support
   - PyAutoLens: feature/coolest-standard-support
 
-## heart-evidence-audit
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/83
-- status: library-shipped, awaiting-merge — audit doc PR PyAutoHeart#84; evidence map + findings A/B/C + finding-3 resolution on #83; fix PRs behind plan approval
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/84
-- worktree: ~/Code/PyAutoLabs-wt/heart-evidence-audit
-- autonomy: supervised
-- prompt: active/readiness_evidence_chain_audit.md
-- parent: build-chain-umbrella (Phase 2, epic PyAutoBuild#155)
-- repos:
-  - PyAutoHeart: feature/heart-evidence-audit
 
 ## pre-build-slim
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156 (Phase 1 step 3; epic #155)

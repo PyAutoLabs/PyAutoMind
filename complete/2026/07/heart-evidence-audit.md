@@ -1,3 +1,11 @@
+## heart-evidence-audit
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/83
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/84 (merged)
+- summary: readiness evidence-chain audit (build-chain campaign #155 Phase 2). Per-leg evidence map; findings A (test_run server-first path unreachable from every real entrypoint), B (version_skew unfailable by releases), C (verify_install never satisfied post-PR#77); finding 3 resolved (HowTo* smoke passed on force-committed datasets purged by #151 — pre-existing falsehood, not a regression; satellite prompt filed). Verdict-worth: gate holds partly by paralysis; nightly grant kept formally, treated inoperative until test_run wiring fixed + one verify_install ingest runs. Five fix items in doc §5; fix PRs follow separately.
+
+## Original prompt
+
 # Audit the evidence chain behind Heart's release verdict — can the GREEN gate be trusted at all?
 
 Type: research
