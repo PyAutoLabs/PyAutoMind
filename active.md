@@ -77,19 +77,6 @@
   - ic50_assistant: feature/ic50-domain-adaptation (pushed; PR awaiting human sign-off)
 
 
-## viz-render-gallery
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/117
-- session: claude --resume 4a4bf99d-519c-4acc-9ac7-036e2850c56f
-- status: workspace-shipped, awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/170
-- worktree: ~/Code/PyAutoLabs-wt/viz-render-gallery
-- autonomy: supervised
-- prompt: active/visualization_eyes_agent.md
-- parent: eyes-agent epic (#117, Phase 1 of 3; Phase 2 blocked by workspace-agent's PyAutoBrain claim)
-- heart-ack: 2026-07-16 human ack of RED for PR-open (6 unrelated organism-level reasons: PyAutoLens paper_jax dirt, stale 07-09 workspace validation, 58 parked scripts, firewall drift ×2, install verification not run, release validation stale); merge stays human
-- repos:
-  - autolens_workspace_test: feature/viz-render-gallery
-
 ## pre-build-audit
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/156
 - status: audit MERGED (#157); step-1 impl PR PyAutoBuild#158 awaiting merge (dead-lines deletion); steps 2-3 planned

@@ -1,3 +1,63 @@
+# Visualization render harness + gallery + manifest (Eyes agent Phase 1)
+
+## Outcome
+
+Phase 1 of the Eyes agent epic (PyAutoBrain#117, stays OPEN for Phases 2–3)
+shipped and MERGED on 2026-07-16: autolens_workspace_test#170 (commit
+b82b356), adding `scripts/gallery/`:
+
+- `gallery_build.py` — walks `scripts/<domain>/images/**` (imaging,
+  interferometer, point_source, multi, cluster) and emits a contact-sheet
+  `gallery.html`, a machine-readable `viz_manifest.yaml` (the "every figure
+  the project outputs" inventory the future Eyes conductor consumes — 41 png
+  + 8 fits at ship time) and, with `--embed`, a single self-contained
+  `gallery_embedded.html`. `--check` verifies gallery ↔ manifest ↔ disk in
+  both directions. Outputs land under gitignored `output/gallery/`.
+- `gallery_run.sh` — per-domain runner from the workspace root; default =
+  fast tier (imaging 153s, interferometer 132s, point_source 23s, multi
+  96s/139s); cluster (803s) demoted to a slow tier; `--all` adds slow + JAX
+  variants.
+
+The critique loop was proven both ways in-session: the agent read the PNGs
+directly (dataset + delaunay fit spot-checks), and the 20 MB embedded gallery
+was delivered to the human via FromWSL.
+
+## Key decisions
+
+- Epic phased at start_dev: Phase 1 harness/gallery (this task, workspace
+  only) → Phase 2 Eyes conductor in PyAutoBrain (was blocked by the
+  workspace-agent claim; PR #118) → Phase 3 paper-informed critique. The
+  Feature Agent's "re-home as research" was rejected — intake had already
+  settled the design.
+- The Eyes conductor (Phase 2) reasons and delegates like the hygiene
+  conductor; it will never edit plot source. Its edit surface is the
+  functional plot API (`aplt.subplot_*`) + `config/visualize` yaml — the old
+  `MatPlot2D`/`Output` plotter classes no longer exist.
+- Manifest is generated from produced outputs, not a committed
+  expected-list (the visualization scripts already own expected-output
+  derivation from the Visualizer source; a committed manifest would drift).
+- Shipped through Heart RED on explicit human ack (6 organism-level reasons
+  unrelated to the change, recorded verbatim in the active.md heart-ack line);
+  merge was a separate human act.
+
+## Gotchas
+
+- The workspace_test visualization scripts must run from the workspace ROOT
+  (they resolve `scripts/...` simulator paths relative to cwd) — running from
+  `scripts/<domain>/` breaks the dataset self-bootstrap.
+- Tooling drift found en route: the Feature Agent cannot parse `draft/`-
+  prefixed prompt paths (mis-reads work-type/target, resolves no repos) —
+  same lifecycle-split family as the intake root-write bug.
+
+## Future work
+
+- Phase 2: Eyes conductor (`agents/conductors/eyes/`?) consuming
+  `viz_manifest.yaml` + the gallery; Phase 3: paper-informed restyling.
+- Possible later: per-project viz-manifest contract for other projects
+  (PyAutoFit/PyAutoGalaxy workspaces) once the conductor exists.
+
+## Original prompt
+
 # Visualization eyes agent — render, judge, update PyAuto visuals
 
 Type: feature
