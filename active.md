@@ -40,7 +40,7 @@
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
-- status: workspace-dev
+- status: workspace-dev — repo born+pushed (10 benchmarks), workspace branch pushed (3 start_here real-data rewrites + 2 new joint scripts + rxj1131/a2744 datasets); smokes running locally; A100 job 330501 queued on RAL; SDP.81 leg blocked on CASA export (data_prep shipped)
 - worktree: ~/Code/PyAutoLabs-wt/jax-joss-benchmarks
 - autonomy: supervised
 - prompt: active/autolens_jax_joss_benchmark_repo.md
