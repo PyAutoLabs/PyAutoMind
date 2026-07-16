@@ -62,7 +62,7 @@
 
 ## assistant-euclid-mode
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/73
-- status: workspace-dev
+- status: awaiting-merge — PRs open: euclid_strong_lens_modeling_pipeline#27 (P0), autolens_assistant#74 (P1+P2); shipped through unrelated Heart RED on user ack 2026-07-16
 - worktree: ~/Code/PyAutoLabs-wt/assistant-euclid-mode
 - autonomy: supervised
 - prompt: active/extend_autolens_assistant_with_a_euclid_mode.md
