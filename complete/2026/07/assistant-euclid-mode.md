@@ -1,3 +1,75 @@
+# Assistant euclid mode — pipeline-paired skills + dedicated euclid wiki
+
+## Outcome
+
+Euclid mode shipped end-to-end on 2026-07-16; issue
+https://github.com/PyAutoLabs/autolens_assistant/issues/73 closed, both PRs MERGED:
+
+- euclid_strong_lens_modeling_pipeline#27 (Phase 0) — removed `profiling/` and
+  `skills/` (nothing referenced either); fixed stale `scripts/README.md` file
+  list and `initial_lens_model.py` docstring (`pipelines/` → `scripts/`,
+  Jammy2211 → PyAutoLabs URL).
+- autolens_assistant#74 (Phases 1+2, two commits on one branch since they
+  cross-reference) —
+  - Five `euclid_*` skills pairing the pipeline: `euclid_setup_pipeline`
+    (install, dataset layout, black-box `start_here.py`), `euclid_prepare_data`
+    (segmentation validation + GUI mask/centre tools), `euclid_model_lens`
+    (staged progression: initial MGE+SIE → Sersic photometry → lens-only
+    subtraction → multi-waveband → full SLaM, with a goal→stage table),
+    `euclid_workflow_products` (csv/fits/png aggregator products),
+    `euclid_hpc_runs` (`hpc/sync` + SLURM arrays). New `euclid_<task>`
+    domain-mode naming convention registered in `skills/README.md`; routing
+    note in AGENTS.md; pipeline added to `sources.yaml`.
+  - `wiki/euclid/` — fourth sub-wiki on the literature schema: 7 entities
+    (euclid-mission, vis, nisp, euclid-wide-survey, ext-surveys, q1-dr1-releases,
+    ou-phz), 4 concepts (euclid-psf, zero-point-corrections, psf-homogenisation,
+    euclid-photo-z), 4 sources pages (strong-lensing Discovery Engines A–F +
+    ERO/NGC 6505, mission-data, forecasts, dr1-image-processing), bibliography.
+
+## Key decisions
+
+- "Mode" = skills family + sub-wiki, NOT a `modes/` interaction preset
+  (modes stay teacher/assistant only) — user-approved at plan time.
+- Bibliography keys are the Euclid Collaboration's own (`Q1-SP048`,
+  `EuclidSkyOverview`, `Q1-TP004`…), 21 entries copied VERBATIM from
+  euclid_assistant's shared `euclid.bib`; 9 pre-Euclid classics (Ma06,
+  Huterer06, Amara&Réfrégier07, Kitching08, HSC Miyazaki18, CFIS Ibata17,
+  Pan-STARRS Chambers16, DES Abbott21, Boucaud16) verified against public
+  arXiv/Crossref metadata (every DOI resolved + title-matched) before entry.
+  `bibkey_aliases.yaml` maps author-year names and the two overlapping
+  `autolens_literature.bib` keys (EuclidCollaboration2025→Q1-SP048,
+  2025b→Q1-SP052).
+- `Euclid_DR1_impact_image_processing.pdf` (Fogliardi et al. 2026 draft, values
+  preliminary) ingested as content only into
+  `wiki/euclid/sources/euclid-dr1-image-processing.md`; PDF NOT committed to
+  the public repo; NO bib entries for in-prep DR1 papers (Aussel/Lines/
+  Holloway/Nightingale/Nersesian/Vincken/Kümmel/McCracken/Polenta 2026) until
+  public metadata exists.
+- Shipped through an unrelated Heart RED ("PyAutoLens: 1 uncommitted source
+  change(s)") on explicit user ack; no scripts changed (markdown/deletions/
+  docstrings), pipeline python compileall-verified, citation validator green.
+
+## Traps / notes for future sessions
+
+- `autolens_assistant` has NO `pending-release` label — assistant PRs ship
+  unlabelled (the label guard covers workspace repos only).
+- The Q1 Discovery Engine key mapping (papers ↔ collab bib keys): A=Q1-SP048
+  Walmsley, B=Q1-SP052 Rojas, C=Q1-SP053 Lines, D=Q1-SP054 Li (double source
+  plane), E=Q1-SP059 Holloway, F=Q1-Ecker; SP085=Lines sims-to-sky ML;
+  Q1-Vincken=AstroVink ViT; TP002=McCracken VIS, TP003=Polenta NIR,
+  TP004=Romelli MER (Kümmel 2nd author — "Kümmel 2026" is the in-prep DR1 MER
+  update), TP005=Tucci PHZ.
+- This same session fixed the intake conductor + sizing faculty for the Mind#71
+  lifecycle layout (draft/ prefix, census/reconcile against active/ +
+  complete/) and re-homed two root-level stray prompts.
+
+## Follow-up
+
+User will model a small fraction of lenses through euclid mode and iterate on
+features/functionality the Euclid science paper needs (new tasks as they arise).
+
+## Original prompt
+
 # Extend autolens_assistant with a euclid mode
 
 Type: feature

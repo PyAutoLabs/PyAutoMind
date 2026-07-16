@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## community-ears-v2-prs
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/125
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/community-ears-v2-prs
+- autonomy: human-required
+- prompt: active/community_ears_v2_external_prs.md
+- note: community conductor v2 — scan/triage hear external PRs + review requests. Parallel-PR override (user "go"): ic50-assistant-seed claims PyAutoBrain but is clone/-only (PR #120, zero overlap); retire-complete-ledger claim is STALE (Brain PR #123 merged, worktree deleted).
+- repos:
+  - PyAutoBrain: feature/community-ears-v2-prs
+
+
 ## simulate-injection-feasibility
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/44
 - session: claude (CLI, 2026-07-16)
@@ -42,11 +53,12 @@
 ## coolest-standard-support
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/612
 - session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/coolest-standard-support
 - autonomy: supervised
 - prompt: active/coolest_standard_support.md
-- note: follow-up prompt draft/feature/autolens/coolest_powerlaw_herculens_parity.md stays in draft until this ships
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/501 (merge first), https://github.com/PyAutoLabs/PyAutoLens/pull/613
+- note: shipped through Heart RED (6 pre-existing unrelated reasons) on user ack 2026-07-16. Phase C after merge: minimal autolens_workspace COOLEST guide + workspace_test round-trip script. Follow-up prompt draft/feature/autolens/coolest_powerlaw_herculens_parity.md stays in draft until this merges
 - repos:
   - PyAutoGalaxy: feature/coolest-standard-support
   - PyAutoLens: feature/coolest-standard-support
