@@ -15,20 +15,6 @@
 - repos:
   - PyAutoReduce: feature/inject-jwst
 
-## aggregator-sqlite
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1377
-- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
-- status: library-dev (bug — assessment-first; source fixes checkpointed after the failure survey)
-- worktree: ~/Code/PyAutoLabs-wt/aggregator-sqlite
-- autonomy: supervised
-- prompt: active/exercise_fix_and_assess_the_sqlite_results.md
-- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); manifest drift: tenant firewall (organ code) — 6 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acked 2026-07-16, ship + merge
-- note: aggregator Phase D (goal 3 of #1375): exercise sqlite scrape/build with the merged mock harness, cheap fixes only, written assessment of the direct-write (session) path; add database build/query stages to the profiling grid. "If its hard to fix dont bother."
-- repos:
-  - PyAutoFit: feature/aggregator-sqlite
-  - autofit_workspace_test: feature/aggregator-sqlite
-
-
 ## jax-compile-time-research
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
 - session: claude (CLI, resumed 2026-07-16 evening; was bg job b44b0e0f)

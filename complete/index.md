@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-616 records across 5 buckets.
+618 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -22,6 +22,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [aggregator-output-contracts](2026/07/aggregator-output-contracts.md)
 - [aggregator-profiling](2026/07/aggregator-profiling.md) — Aggregator profiling harness (autofit_workspace_test scripts/profiling/aggregator/ — mock results via real Dir…
 - [aggregator-quick-fit-consolidation](2026/07/aggregator-quick-fit-consolidation.md) — guides/results tutorials ran own capped fits pruning to 2 samples vs deep [-10]/[9] IndexError → consolidate o…
+- [aggregator-sqlite](2026/07/aggregator-sqlite.md) — Aggregator Phase D — sqlite database exercised + assessed. Fixed: db Aggregator slicing inverted (agg[:5] on 2…
 - [alma-interferometer](2026/07/alma-interferometer.md) — ALMA interferometer reduction live (phase 5) — first visibility-domain product family: calibrated MS → al.Inte…
 - [api-baseline-refresh](2026/07/api-baseline-refresh.md)
 - [arxiv-digest-announcement-window](2026/07/arxiv-digest-announcement-window.md)
@@ -63,6 +64,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [eceb-editorial-revision](2026/07/eceb-editorial-revision.md) — ECEB wiki rules — EC A&A template assets — MERGED
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
 - [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
+- [env-profile-validator](2026/07/env-profile-validator.md) — env-profile redesign migration step 1 (campaign #155 Phase 3): validate_env_profiles PR-time config check (sch…
 - [ep-analytic-updates-scope](2026/07/ep-analytic-updates-scope.md) — EP phase 6 — scope analytic conjugate updates — plan DELIVERED
 - [ep-deterministic-reconcile](2026/07/ep-deterministic-reconcile.md) — EP phase 5 — three deterministic-variable mechanisms — DECIDED
 - [ep-diagnostics](2026/07/ep-diagnostics.md) — EP review Phase 4 — EPDiagnostics collector, live CSV/PNG artifacts, graph_factors.png, mean_field_summary, ch…

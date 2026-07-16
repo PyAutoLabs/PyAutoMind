@@ -1,3 +1,15 @@
+## aggregator-sqlite
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1377
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1380 (MERGED)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/49 (MERGED)
+- summary: Aggregator Phase D — sqlite database exercised + assessed. Fixed: db Aggregator slicing inverted (agg[:5] on 26 → 21; old test passed by 2-fit coincidence) + DatabasePaths.save/load_samples_summary implemented (direct-write fits never stored the summary — silent abstract no-op). Workspace: 4 database scripts fixed (manual output/ paths missing the test-mode segment — the standing workspace-validation failures), 8/8 now pass; mock harness stamps per-copy unique_tag (db keys fits by identifier; copies collapsed 25→1); new profile_database.py sqlite-vs-directory grid.
+- verdict: sqlite offers NO loading-speed advantage — build ~0.4s/result, ORM values("samples") 2-10× slower than the post-#1376 directory Aggregator; queries fast once built; single-file (HPC inodes) is the real use case. Making it fast = ORM reconstruction work, recorded as out of low-hanging scope. Direct-write path NOT broken at smoke level (contrary to suspicion) — its real gap was the missing samples_summary, now fixed.
+- traps: open_database silently prepends conf output_path (+test_mode segment) to relative sqlite paths — decoy empty file appears at the literal path; use absolute paths. Direct-write stores minimised samples by design (save_all_samples=False → ~1 row). generate_mock_results leaves conf.instance.output_path pushed.
+- shipped+merged through 5-reason pre-existing Heart RED on user ack (ship+merge) — this pair fixes part of the workspace-validation reason.
+
+## Original prompt
+
 # Exercise, fix and assess the sqlite results database build path
 
 Type: bug
