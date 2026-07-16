@@ -1,3 +1,16 @@
+## community-voice-agent
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/119 (CLOSED via PR)
+- completed: 2026-07-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/122 (merged 16338af)
+- summary: birth of the community conductor — the Ears, the organism's receptive language function (Wernicke to the Workspace Agent's Broca/Voice #118): `pyauto-brain community` scan (open issues by non-self humans across every repos.yaml home, bot-filtered, awaiting-response = last word not ours, ranked by waiting days) + triage <ref> (context-sufficiency signals, clarifying-question seeds, comment tail); /community skill drafts every outward reply for human approval and routes actionable work via /start_dev_for_user; /wake_up gained the community scan step + 💬 digest category. Read-only + stdlib-only; conversation state stays on GitHub labels + active.md user-facing entries. 6 hermetic contract tests (stub gh via COMMUNITY_GH; proves no mutating endpoint hit, no file writes); 75 total passed; live-verified both modes.
+- naming: intake-approved alias was "the Voice" but workspace-agent #118 merged first carrying it — resolved to "the Ears" mid-task (Broca produces = workspace speaks through examples; Wernicke comprehends = community hears and converses; the human remains the mouth). Analogy carried in the conductor AGENTS.md first line per the founding prompt's requirement.
+- first live scan: 7 open external issues, 5 awaiting response — all @rhayes777, 54 days (input-validation series PyAutoArray#333/#332, PyAutoGalaxy#440, PyAutoLens#532/#531); plus @mwiet PyAutoLens#564 + @HRSAstro PyAutoMind#18 (ours-to-watch). Ready-made first /community session.
+- heart: shipped through unrelated organism-scope RED on explicit user ack (6 reasons verbatim in PR body; heart-ack was in active.md). Workspace impact: none (Brain CLI/skill infra); smoke tests n/a.
+- concurrency: task queued in planned.md blocked-by workspace-agent, unblocked the same morning when #118 merged + claim cleaned; the Mind sweeper's auto-commit carried the draft→active prompt move mid-registration (pathspec-limited commits kept sessions untangled); ic50 #120 (clone/-only) open in parallel, no overlap.
+- v2 staged (recorded in conductor AGENTS.md): external PRs / review requests out of scope for v1.
+
+## Original prompt
+
 # Community communication agent — listen and respond to user GitHub issues
 
 Type: feature
