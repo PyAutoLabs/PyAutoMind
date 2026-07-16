@@ -47,7 +47,7 @@ MIND_RULES = [
     (".gitignore", "KEEP"),
     ("README.md", "KEEP"),
     ("repos.yaml", "SPECIAL:body_map"),
-    ("active.md", "EMPTY"), ("planned.md", "EMPTY"), ("complete.md", "EMPTY"),
+    ("active.md", "EMPTY"), ("planned.md", "EMPTY"),
     ("parked.md", "EMPTY"), ("condemned.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
     ("autonomy_log.md", "SPECIAL:autonomy_log"),
     # Prompt-file lifecycle (issue #71): draft/ (not-started) -> active/

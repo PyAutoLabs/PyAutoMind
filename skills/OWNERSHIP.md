@@ -77,7 +77,7 @@ Claude and Codex skill homes, and preserves commands in `~/.claude/commands/`:
 — it owns no *dev-workflow* skills; `ship_*` live in Brain and only call its
 release step. Registry
 references stay workspace-root-anchored (`PyAutoMind/active.md`,
-`PyAutoMind/complete.md`, `source PyAutoMind/scripts/prompt_sync.sh`), which
+`PyAutoMind/complete/`, `source PyAutoMind/scripts/prompt_sync.sh`), which
 resolve from any sibling repo, so the moved skills keep working unchanged.
 
 ## Redesign summary

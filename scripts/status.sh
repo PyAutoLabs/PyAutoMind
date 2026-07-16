@@ -2,7 +2,7 @@
 # PyAutoMind registry status.
 #
 # Prints prompt inventory grouped by category, plus the current state of
-# active.md / planned.md / complete.md.
+# active.md / planned.md / the complete/ records.
 #
 # Usage:
 #   bash PyAutoMind/scripts/status.sh [--full | --repos]
@@ -71,18 +71,15 @@ count_h2() {
 }
 active_count=$(count_h2 "$ROOT/active.md")
 planned_count=$(count_h2 "$ROOT/planned.md")
-# complete/ records are the source of truth once split (issue #71); fall back to
-# the legacy complete.md ledger until it is retired.
+# complete/ records are the sole completion ledger (issues #71, #81; the
+# monolithic complete.md was retired 2026-07-16 — history in git).
 complete_count=$(find "$ROOT/complete" -type f -name "*.md" \
-  ! -name AGENTS.md ! -name index.md 2>/dev/null | wc -l | tr -d ' ')
-if [ "$complete_count" -eq 0 ]; then
-  complete_count=$(count_h2 "$ROOT/complete.md")
-fi
+  ! -name AGENTS.md ! -name index.md ! -path "*/archive/*" 2>/dev/null | wc -l | tr -d ' ')
 
 bold "== Registry =="
 printf "active.md     %s task(s) in flight\n"  "$active_count"
 printf "planned.md    %s task(s) queued\n"     "$planned_count"
-printf "complete.md   %s task(s) recorded\n"   "$complete_count"
+printf "complete/     %s task(s) recorded\n"   "$complete_count"
 
 echo ""
 
@@ -102,17 +99,20 @@ if [ "$active_count" -gt 0 ]; then
 fi
 
 # ---------- Recently completed (last 5) ----------
+# complete/index.md is generated reverse-chronologically (lifecycle.py index),
+# so the first 5 record links are the most recent completions.
 
-if [ "$complete_count" -gt 0 ]; then
+if [ -f "$ROOT/complete/index.md" ]; then
   bold "== Recently completed (last 5) =="
   awk '
-    /^## / {
+    /^<!-- GENERATED:START/ { gen=1; next }
+    gen && /^- \[/ {
       if (count >= 5) exit
-      name=$0; sub(/^## /, "", name)
+      name=$0; sub(/^- \[/, "", name); sub(/\].*/, "", name)
       printf " - %s\n", name
       count++
     }
-  ' "$ROOT/complete.md"
+  ' "$ROOT/complete/index.md"
   echo ""
 fi
 

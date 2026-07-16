@@ -2,7 +2,7 @@
 # prompt_sync.sh — keep PyAutoMind in sync with origin during task lifecycle.
 #
 # Sourced by skills that mutate PyAutoMind registry files (active.md,
-# complete.md, planned.md, queue.md, ...) so we never accumulate local-only
+# planned.md, queue.md, the complete/ records, ...) so we never accumulate local-only
 # changes that drift from origin.
 #
 #   source PyAutoMind/scripts/prompt_sync.sh

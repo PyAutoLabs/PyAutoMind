@@ -3,7 +3,7 @@
 The registry schemas, prompt conventions, and workflow detail for this repo.
 Moved verbatim from `README.md` on 2026-07-10 — agent docs that point at
 README sections ("Prompt taxonomy", "Prompt file format", the `active.md` /
-`complete.md` schemas) resolve here, one link from the README.
+completion-record schemas) resolve here, one link from the README.
 
 ---
 
@@ -111,9 +111,9 @@ fine — write naturally, the AI fills in the rest.
   /ship_workspace
     │
     ▼
-  PR merged          ── post-merge cleanup deletes the worktree, moves the
-    │                   active.md entry to complete.md, and advances the prompt
-    │                   file active/ → complete/<YYYY>/<MM>/ (lifecycle.py move)
+  PR merged          ── post-merge cleanup deletes the worktree, drops the
+    │                   active.md entry, and writes the dated completion record
+    │                   complete/<YYYY>/<MM>/<slug>.md (lifecycle.py record)
     ▼
   done
 ```
@@ -122,7 +122,7 @@ The slash commands above are skills hosted across the organism (Brain, Heart) bu
 all read/write Mind's registry via workspace-root-anchored paths. One operates
 over the registry without starting work:
 
-- `/health status` — dashboard of `active.md`, `planned.md`, `complete.md`
+- `/health status` — dashboard of `active.md`, `planned.md`, `complete/`
   (a PyAutoHeart status view, reached through the single `/health` door).
   Continuity across execution environments needs no special step — any
   environment reads `active.md` and resumes an in-flight task.
@@ -138,7 +138,6 @@ PyAutoMind/
 ├── .gitignore
 │
 ├── active.md                ← tasks currently in progress (one ## section per task)
-├── complete.md              ← finished tasks (most recent first)
 ├── ideas.md                 ← raw incubating ideas, no structure required
 ├── parked.md                ← started/scoped but not in flight (stashes, orphan worktrees, deferred)
 ├── planned.md               ← issued tasks blocked from starting (created on demand)
@@ -192,7 +191,7 @@ environments — see `OWNERSHIP.md`). General PyAuto tooling (release prep,
 dependency audits, smoke tests, lint sweeps) lives in `admin_jammy/skills/`.
 
 `scripts/prompt_sync.sh` is sourced by skills that mutate registry files
-(`active.md`, `complete.md`, etc.) to commit and push back to origin. It
+(`active.md`, `planned.md`, etc.) to commit and push back to origin. It
 replaces a now-removed `admin_sync.sh` helper that formerly operated on
 `admin_jammy/prompt/`.
 
@@ -343,7 +342,12 @@ Each task is an H2 section:
     Free-form summary of progress and next steps.
 ```
 
-### `complete.md` schema
+### Completion record (`complete/<YYYY>/<MM>/<slug>.md`) schema
+
+The dated records are the completion ledger (`complete/AGENTS.md`; the
+monolithic `complete.md` was retired 2026-07-16, issue #81). Each record opens
+with the same fields the old ledger entries carried, then the rich narrative
+and, appended by `lifecycle.py record`, the original prompt:
 
 ```markdown
 ## <task-name>
@@ -351,8 +355,11 @@ Each task is an H2 section:
 - completed: YYYY-MM-DD
 - library-pr: <url> [, <url>]
 - workspace-pr: <url> [, <url>]
-- notes: |
-    Long-form description of what landed, gotchas, follow-ups.
+- summary: <what landed, gotchas, follow-ups — free-form bullets>
+
+## Original prompt
+
+<the active/ prompt the task started from>
 ```
 
 ### Epic trackers (retired 2026-07-13)

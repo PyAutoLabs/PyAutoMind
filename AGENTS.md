@@ -42,8 +42,8 @@ For the full workflow narrative, conventions, and registry schemas, read
   prompts + dev notes). The old `z_features/`, `z_vault/` and `autoprompt/`
   top-level folders were retired here on 2026-07-13.
 - **Registry** — root-level markdown files, each with one job: `active.md`
-  (in-flight tasks), `planned.md` (scoped, not started), `complete.md`
-  (shipped), `parked.md` (started but not in flight), `queue.md` (ordered
+  (in-flight tasks), `planned.md` (scoped, not started), `parked.md` (started
+  but not in flight), `queue.md` (ordered
   input for `register_and_iterate --queue`), `ideas.md` (raw inbox swept by
   `$intake`, `/intake` in Claude). Mutate these only via the skills in `skills/` so commit
   messages stay consistent.

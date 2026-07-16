@@ -22,20 +22,21 @@ What lives here:
 | `ideas.md` | raw incubating ideas, no structure required |
 | `draft/<work-type>/<target>/*.md` | scoped prompts, **not started** (`feature/`, `bug/`, `docs/`, …) |
 | `active/<name>.md` | **issued** prompts — an open issue, in flight |
-| `complete/<YYYY>/<MM>/<slug>.md` | **shipped** — the rich completion record (`complete/AGENTS.md`) |
-| `active.md`, `planned.md`, `complete.md` | the task ledger: in flight, queued, done |
+| `complete/<YYYY>/<MM>/<slug>.md` | **shipped** — the rich completion record IS the ledger (`complete/AGENTS.md`) |
+| `active.md`, `planned.md` | the live task ledger: in flight, queued |
 | `repos.yaml` | the body map — the single source of repo identity |
 | `scripts/` | registry sync + drift checks (`repos_sync.py`, `lifecycle.py`) |
 
 A prompt flows through three file states that mirror the ledger: idea →
 `draft/…` → `/start_dev` → GitHub issue + `active/` + `active.md` entry →
-worktree development → PR → merge → `complete/<YYYY>/<MM>/` +
-`complete.md`. `scripts/lifecycle.py` advances the file and drift-checks the
-invariant. The registry is shared state, so any machine or session can pick up
+worktree development → PR → merge → the dated record
+`complete/<YYYY>/<MM>/<slug>.md` (the sole completion ledger; the monolithic
+`complete.md` was retired 2026-07-16, issue #81). `scripts/lifecycle.py`
+advances the file and drift-checks the invariant. The registry is shared state, so any machine or session can pick up
 an in-flight task.
 
 The schemas and conventions — prompt taxonomy, prompt file format, the
-`active.md` / `complete.md` schemas, epic trackers, bootstrap on a new
+`active.md` / completion-record schemas, epic trackers, bootstrap on a new
 machine — are in [REFERENCE.md](REFERENCE.md). How agents should operate
 this repo is in [AGENTS.md](AGENTS.md).
 

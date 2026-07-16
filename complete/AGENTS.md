@@ -8,14 +8,14 @@ complete/unknown/<slug>.md          # entries with no derivable completion date
 ```
 
 This is the third and final state of a prompt's lifecycle
-(`draft/ → active/ → complete/`), advanced by `scripts/lifecycle.py move` when
-`ship_library` / `ship_workspace` records a task done — in lockstep with the
-`active.md → complete.md` ledger move.
+(`draft/ → active/ → complete/`), written by `scripts/lifecycle.py record` when
+`ship_library` / `ship_workspace` records a task done. The dated records **are**
+the completion ledger — the task's `active.md` entry is simply removed.
 
 ## What a record holds
 
 Each `<slug>.md` is the **rich completion record** (the substance that used to
-live as one `## <slug>` section in the monolithic `complete.md`): the summary,
+live as one `## <slug>` section in the retired monolithic `complete.md`): the summary,
 PRs, key traps/findings, worktree notes — plus, appended under
 `## Original prompt`, the prompt the task started from. The rich record is the
 point: an agent looking up "have we hit this before / what did we learn about
@@ -33,12 +33,13 @@ X" reads one record, not a 6000-line file.
 
 ## Provenance
 
-- Records are **written by the ship skills** via `lifecycle.py record`, not by
-  hand, and stay paired 1:1 by slug with the `complete.md` ledger.
+- Records are **written by the ship skills** via
+  `lifecycle.py record <slug> --date <YYYY-MM-DD> --from-file <body> --apply`,
+  not by hand. They are the **sole** completion ledger.
 - `index.md` is generated (`lifecycle.py index`); `lifecycle.py index --check`
   fails on staleness (CI).
-- `scripts/lifecycle.py check` guards the invariant (no slug in both `active.md`
-  and `complete.md`; every record has a ledger entry; no file in two states).
+- `scripts/lifecycle.py check` guards the invariant (no `active.md` slug has a
+  record — finished work must leave `active.md`; no file in two states).
 - The historical bulk was produced once by `lifecycle.py split-complete` from
-  `complete.md`. `complete.md` is **kept** as the chronological ledger, paired to
-  the records.
+  the monolithic `complete.md` ledger, which was **retired** on 2026-07-16
+  (issue #81) after a parity backfill — its full history is in git.
