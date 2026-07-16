@@ -1,7 +1,7 @@
-# Research: JAX-native posterior sampler wave — implement and benchmark the
+# JAX-native posterior sampler wave — ranked shortlist from the 2026-07-16 deep-research session
 
-Type: feature
-Target: workspaces
+Type: research
+Target: autolens_workspace_developer
 Repos:
 - autolens_workspace_developer
 Difficulty: large

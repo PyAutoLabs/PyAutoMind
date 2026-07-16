@@ -1,11 +1,11 @@
-# Experiment: benchmark learning-rate-free multi-start gradient optimizers on the pixelized likelihood
+# Learning-rate-free multi-start gradient optimizers on the pixelized likelihood
 
-Type: bug
-Target: workspaces
+Type: experiment
+Target: autolens_workspace_developer
 Repos:
 - autolens_workspace_developer
 Difficulty: medium
-Autonomy: safe
+Autonomy: supervised
 Priority: normal
 Status: formalised
 
