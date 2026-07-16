@@ -1,6 +1,15 @@
 # Active Tasks
 
 
+## memory-structure-cleanup
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/24
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/memory-structure-cleanup
+- autonomy: supervised
+- prompt: active/pyautomemory_structure_cleanup.md
+- note: PyAutoBrain leg (memory-faculty glob) is a small parallel PR from main — repo claimed by workspace-agent, parallel PR user-approved 2026-07-16 (no file overlap); PyAutoBrain deliberately NOT claimed here
+- repos:
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: coordinating — epic over 6 phases; Phase 0a (heart-state-clobber) in flight, Phase 0b blocked (PyAutoBrain claimed ×2), Phases 1-5 issued sequentially as predecessors ship
