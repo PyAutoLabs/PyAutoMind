@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## compile-census-final
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/77
+- session: claude (CLI, 2026-07-17)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/compile-census-final
+- autonomy: supervised (research cap)
+- prompt: active/final_compile_time_census_and_remaining_speedup.md
+- note: coda to #71/#74 — census of compile UX with cache #128 + autotune-off #132 defaults live (cold+warm, CPU+A100), plus remaining-lever analysis (jax.export vs tracing floor; compile-parallelism flags; warm floor). Writes only jax_compile/. Parallel claim precedent with #70 applies if it still holds autolens_profiling.
+- repos:
+  - autolens_profiling: feature/compile-census-final
+
 ## cti-resurrection-phase4
 - issue: https://github.com/PyAutoLabs/autocti_workspace/issues/1
 - session: claude (CLI, 2026-07-17)
