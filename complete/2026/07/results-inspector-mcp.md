@@ -1,3 +1,11 @@
+## results-inspector-mcp
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/12 (closed)
+- completed: 2026-07-17
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/13 (core, MERGED) + https://github.com/PyAutoLabs/autolens_assistant/pull/75 (lens layer, MERGED)
+- summary: Read-only results-inspector MCP stdio server in both assistants — 7 core tools over PyAutoFit output dirs (list fits by evidence, model/posterior/search summaries, inline images) + 3 lens tools (al.agg enum specs → AggregateImages/AggregateFITS). Symmetric af_/al_ skills with Claude Desktop config; audit_skill_apis scans autoassistant/mcp/; tests fixture = real tiny LBFGS fit (format drift fails loudly). Scope guardrails: glue-not-code (logic belongs in PyAutoFit), read-only (no optimise/compute — PyAutoMCP's flattening trap explicitly rejected), tiers 2/3 (tunnel/hosted remote MCP) documented not built. Gotchas: stdout is the JSON-RPC channel (autofit prints AND logging stdout handlers rerouted to stderr); MCP clients spawn servers with minimal env (PYTHONPATH must be in client config); SearchOutput.image() reads image/ not files/ (docstring wrong); af.Aggregator is the DB one, directory one is autofit.aggregator.Aggregator; AggregateImages reads image/fit.png (name from subplot_filename enum-class mapping). Deliberately no pending-release label (assistants outside release chain). Shipped under human RED-ack (unrelated PyAutoLens dirty JOSS draft). Follow-ups: user's Claude Desktop acceptance walkthrough; core graduation to autofit[mcp] extra if it earns it; coordinate with Richard (rhayes777/PyAutoMCP + aggregator-agent prior art).
+
+## Original prompt
+
 # Add a read-only "results-inspector" MCP server to the AI assistants
 
 Type: feature
