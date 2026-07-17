@@ -47,3 +47,14 @@
 - note: hierarchical power-law slope recovery from N simulated imaging lenses — BlackJAX-NUTS joint fit vs EP parity (values AND errors), RAL scale-up, and end-to-end exercise of the 2026-07 EP diagnostics (PyAutoFit#1330 wave). PyAutoFit is exercised NOT edited: EP defects file as new bug prompts via intake. No PyAutoLabs repo claimed.
 - repos:
 
+
+## potential-correction-interferometer
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/623
+- session: claude (CLI, 2026-07-17)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/potential-correction-interferometer
+- autonomy: supervised
+- prompt: active/potential_correction_interferometer.md
+- note: extend al.pc (potential corrections, #618) to Interferometer in visibility space. PRIORITY (user): the SPARSE-OPERATOR / w-tilde route — curvature blocks in real space ((D_s D_psi)^T (T^H C^-1 T) (D_s D_psi)), scales with n_pix not n_vis; dense transform_mapping_matrix route = small-n_vis parity reference only. Then iterative-engine dataset seam + analyses; workspace_test follow-up (jax_likelihood_functions/interferometer + interferometer subhalo_recovery). dense_util xp kernels unchanged. Cite Cao et al. 2025 throughout.
+- repos:
+  - PyAutoLens: feature/potential-correction-interferometer
