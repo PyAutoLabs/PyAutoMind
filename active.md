@@ -87,9 +87,10 @@
 ## slam-resume-fastpath
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/502
 - session: claude --resume ce78c7e9-3f34-4983-bb53-8840527c1fb6
-- status: library-dev
+- status: library-shipped, awaiting smoke + merge — PRs PyAutoGalaxy#504 (merge first) + PyAutoLens#619 (both pending-release, suites 985p/387p); shipped through Heart RED on human ack 2026-07-17; six-workspace smoke in flight
 - worktree: ~/Code/PyAutoLabs-wt/slam-resume-fastpath
 - autonomy: supervised
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/504, https://github.com/PyAutoLabs/PyAutoLens/pull/619
 - prompt: active/slam_resume_fast_path_load_persisted_adapt.md
 - note: implements the #70 judgment (adapt disk-first in PyAutoGalaxy + positions persist/reload in PyAutoLens; PRs ag-first). Step 1 = A-vs-B hook decision (result-property lazy vs lazy maker), recorded on the issue. autolens_profiling used READ-ONLY for validation (claimed by jax-compile-time-research — no edits). PyAutoLens main has unrelated dirty paper_jax/paper.md (JOSS draft) — warning only, worktree cut from origin/main.
 - repos:
