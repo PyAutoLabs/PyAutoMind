@@ -27,15 +27,19 @@
 ## coolest-standard-support
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/612
 - session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124
-- status: library-shipped, workspace-pending
+- status: workspace-shipped, awaiting-merge — library PRs ag#501 + al#613 + al#615 (relative-path fix) all MERGED 2026-07-17; workspace PRs open, library-first gate satisfied
 - worktree: ~/Code/PyAutoLabs-wt/coolest-standard-support
 - autonomy: supervised
 - prompt: active/coolest_standard_support.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/501 (merge first), https://github.com/PyAutoLabs/PyAutoLens/pull/613
-- note: shipped through Heart RED (6 pre-existing unrelated reasons) on user ack 2026-07-16. Phase C after merge: minimal autolens_workspace COOLEST guide + workspace_test round-trip script. Follow-up prompt draft/feature/autolens/coolest_powerlaw_herculens_parity.md stays in draft until this merges
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/501 (MERGED), https://github.com/PyAutoLabs/PyAutoLens/pull/613 (MERGED), https://github.com/PyAutoLabs/PyAutoLens/pull/615 (MERGED, corrective)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/283, https://github.com/PyAutoLabs/autolens_workspace_test/pull/173
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall; install verification not run; release validation stale (5 libs)
+- note: workspace repos claimed by jax-joss-benchmarks / viz-render-gallery — additive-only parallel PRs, zero file overlap, user "go" 2026-07-17. notebooks/weak/*.ipynb are STALE on autolens_workspace main (generator regenerates them; excluded here). On merge: complete via lifecycle.py record, then issue follow-up prompt draft/feature/autolens/coolest_powerlaw_herculens_parity.md
 - repos:
-  - PyAutoGalaxy: feature/coolest-standard-support
-  - PyAutoLens: feature/coolest-standard-support
+  - PyAutoGalaxy: feature/coolest-standard-support (merged)
+  - PyAutoLens: feature/coolest-standard-support (merged)
+  - autolens_workspace: feature/coolest-standard-support
+  - autolens_workspace_test: feature/coolest-standard-support
 
 
 ## build-chain-umbrella
@@ -85,7 +89,7 @@
 ## slam-resume-profiling
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/70
 - session: claude --resume ce78c7e9-3f34-4983-bb53-8840527c1fb6
-- status: workspace-dev, READY TO RESUME (2026-07-17) — PYAUTO_TEST_MODE_SAMPLES LIVE on main (PyAutoConf#126 + PyAutoFit#1381 merged; canonical checkouts synced). Test-mode epic phase 3 FOLDED IN (see #70 comment: size-parity vs 10,187rows/9.07MB target, README recipe + deltas, idle benchmarks). Harness pushed 9129d49+0af2d6e+96acde6 incl. test-mode readiness (output/test_mode namespacing followed; _testmode artifact suffix)
+- status: workspace-shipped, awaiting-merge — PR autolens_profiling#75 (pending-release); shipped through Heart RED on human ack 2026-07-17 (5 pre-existing reasons, none from this branch)
 - worktree: ~/Code/PyAutoLabs-wt/slam-resume-profiling
 - prompt: active/slam_resume_overhead_profile_inter_stage_costs.md
 - note: resume recipe (post-#1379): (1) PYAUTO_TEST_MODE=2 PYAUTO_TEST_MODE_SAMPLES=~10000 python3 pipeline_resume/slam_resume.py --reset → instant cold with production-size samples.csv (~10k rows/9MB parity target from #1378); (2) SAME env vars on the rerun for the pure resume record (output lives under output/test_mode/); (3) decomposition → judgment on #70 — pre-findings: adapt images already persisted per stage in files/ + agg_util.adapt_images_from loader exists (targeted load-not-recompute beats checkpoint system); resume also pays zip→unzip per stage; test-mode resume skips latents (small known delta). WSL rebooted overnight 2026-07-17 killing the --fast chain mid-stage-2 (stage-1 output + stage-2 checkpoint remain under output/pipeline_resume/hst_fast if a real-sampling record is ever wanted). Parallel claim: jax-compile-time-research adds jax_compile/ only, no overlap.
