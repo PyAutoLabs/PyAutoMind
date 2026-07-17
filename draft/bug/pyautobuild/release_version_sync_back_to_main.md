@@ -182,3 +182,20 @@ This prompt stays filed as the Phase 4 tracker until tasks 1–3 ship; the
 Symptom section above remains accurate history, and the "15-repo hand bump"
 urge it documents is answered by deleting the false signals (3), not by
 resurrecting commit-backs.
+
+## Phase 4 task 1 DONE 2026-07-17 — floors adopted, installable
+
+`version.minimum_library_version: 2026.7.9.1` adopted across all 7 workspaces
+(autofit/autogalaxy/autolens_workspace, HowTo{Fit,Galaxy,Lens}, euclid pipeline
+— PRs #97/#134/#288/#20/#23/#32/#28, all merged). Behavioural no-op (autoconf
+already resolved that value via workspace_version fallback). **Installable
+confirmed:** PyPI shows 2026.6.x–2026.7.6.649 YANKED, 2026.7.9.1/2026.7.15.1 ok
+— the floor names a non-yanked release, closing the "floor must be installable"
+half of this bug. `workspace_version` deliberately KEPT until task 2.
+
+Remaining Phase 4: task 2 = version_skew rework
+(draft/feature/pyautoheart/version_skew_floor_rework.md, now unblocked) — point
+Heart's leg at floors-vs-release-tags AND enforce "a floor names an installable
+version"; then remove the legacy workspace_version/version.txt. Task 3 =
+assistant --check-version source-checkout-aware (or drop equality for the API
+hash). Task 4 = README pins (orphaned per Phase 1 audit).
