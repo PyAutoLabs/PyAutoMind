@@ -1,6 +1,19 @@
 # Active Tasks
 
 
+## aggregate-images-fits
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1385
+- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/aggregate-images-fits
+- autonomy: supervised
+- prompt: active/aggregate_images_fits_profiling.md
+- note: final aggregator-arc leg — png/fits workflow aggregators never profiled; AggregateFITS._hdus re-opens the source fits per HDU + leaks handles (code-read). Harness payload upgrade + stages, then low-hanging fixes.
+- repos:
+  - PyAutoFit: feature/aggregate-images-fits
+  - autofit_workspace_test: feature/aggregate-images-fits
+
+
 ## cti-resurrection-phase1
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/84
 - session: claude (CLI, 2026-07-17)
