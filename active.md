@@ -52,3 +52,15 @@
 - repos:
   - autolens_workspace_developer: feature/potential-correction-uv-campaign
   - PyAutoLens: feature/potential-correction-uv-campaign
+
+## dpie-lenstool-default
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/506
+- session: claude (CLI, 2026-07-17)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/dpie-lenstool-default
+- autonomy: supervised
+- prompt: active/dpie_lenstool_default_parameterization.md
+- audit: paper/convention audit COMPLETE 2026-07-17 (on #506 — conventions verified vs Eliasdottir07 App A / Bergamini19 / 6-leg parity script; swap is pure re-parameterization)
+- note: swap dPIEMass/dPIEMassSph default to Lenstool-native parameterization (approved: internal variant → dPIEMassB0/dPIEMassB0Sph + from_b0 classmethod); workspace follow-up (autolens_workspace + autolens_workspace_test) absorbs lenstool-scaling-slam (SLaM PR3 of autolens_workspace#265)
+- repos:
+  - PyAutoGalaxy: feature/dpie-lenstool-default

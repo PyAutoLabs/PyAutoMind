@@ -175,17 +175,3 @@
     new convergence-MGE hook. Validate via grad(psi)=alpha self-consistency.
 - affected-repos:
   - PyAutoGalaxy
-
-## dpie-lenstool-default
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/506
-- planned: 2026-07-17
-- classification: both (library first: PyAutoGalaxy; workspace follow-up: autolens_workspace + autolens_workspace_test)
-- suggested-branch: feature/dpie-lenstool-default
-- blocked-by: potential-correction-port (using PyAutoGalaxy; phase-2 PR PyAutoGalaxy#505 in flight — export/__init__ overlap risk with the dPIE rename)
-- prompt: active/dpie_lenstool_default_parameterization.md
-- audit: paper/convention audit COMPLETE 2026-07-17 (posted to #506 — all conventions verified vs Eliasdottir07 App A / Bergamini19 / parity script; swap is pure re-parameterization)
-- note: swap dPIEMass/dPIEMassSph to the Lenstool-native parameterization (approved naming: internal variant → dPIEMassB0/dPIEMassB0Sph + from_b0 classmethod); paper-audit conventions; workspace sweep absorbs lenstool-scaling-slam (SLaM PR3 of autolens_workspace#265 — supersedes that planned entry)
-- affected-repos:
-  - PyAutoGalaxy
-  - autolens_workspace
-  - autolens_workspace_test
