@@ -12,23 +12,6 @@
 - repos:
   - autocti_workspace: feature/cti-resurrection-phase4
 
-## coolest-powerlaw-herculens
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/616
-- session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124
-- status: shipped, awaiting-merge — all 3 PRs open; parity PROVEN (herculens EPL theta_E == COOLEST intermediate exactly); merge order ag#503 -> al#617 -> awst#175
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/503, https://github.com/PyAutoLabs/PyAutoLens/pull/617
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/175
-- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall x7; release validation stale (5 libs) — acked 2026-07-17, both legs
-- worktree: ~/Code/PyAutoLabs-wt/coolest-powerlaw-herculens
-- autonomy: supervised
-- prompt: active/coolest_powerlaw_herculens_parity.md
-- note: follow-up to #612 (merged). PowerLawIntermediate (intermediate-axis theta_E, COOLEST-identity PEMD mapping) + herculens parity script. awst leg = additive parallel PR (repo claimed by viz-render-gallery, zero overlap, established pattern)
-- repos:
-  - PyAutoGalaxy: feature/coolest-powerlaw-herculens
-  - PyAutoLens: feature/coolest-powerlaw-herculens
-  - autolens_workspace_test: feature/coolest-powerlaw-herculens
-
-
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: MERGED 2026-07-17 (#282) — worktree removed, branch deleted. Epic remains open for: SDP.81 CASA export leg (data_prep/sdp81/ -> 2 interferometry benchmarks + interferometer/start_here rewrite) and cluster-benchmark tuning (draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md). 8/8 runnable A100 rows committed (autolens_jax_joss@64204f6)

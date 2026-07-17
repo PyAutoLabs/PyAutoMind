@@ -1,3 +1,12 @@
+## coolest-powerlaw-herculens
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/616
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/503, https://github.com/PyAutoLabs/PyAutoLens/pull/617
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/175
+- summary: Follow-up to #612. Added `ag.mp.PowerLawIntermediate` — elliptical power-law whose einstein_radius is the COOLEST intermediate-axis θ_E (θ_int = √q·(2/(1+q))^(1/(γ−1))·θ_PL) — via a behavior-preserving `einstein_radius_major_from(xp)` hook in PowerLawCore/PowerLaw (existing profiles numerically unchanged; full suites 988+387 green; explicit numeric pin test). COOLEST PEMD mapping for it is an identity; `mass_profile_from(..., intermediate=True)` and `al from_coolest(intermediate=True)` rebuild PEMDs in that parameterisation. Priors-config block added (af.Model verified). awst `scripts/coolest_herculens_parity.py` PROVES the direct link: herculens 0.3.0 EPL theta_E IS the COOLEST intermediate-axis convention exactly (probe ratio 1.0 — the SPEMD √((1+q²)/(2q)) factor does not apply to EPL); same COOLEST template gives matching convergence (rtol 1e-8) and deflections (rtol 1e-6) in both codes, incl. spherical limit. herculens installs alongside pinned jax 0.10.2 cleanly (objax/utax/parameterized only), env-only, never a library dep. Shipped through Heart RED (5 pre-existing unrelated reasons) on user ack; awst leg was an additive parallel PR (repo claimed by viz-render-gallery, zero overlap).
+
+## Original prompt
+
 # PowerLawIntermediate profile + herculens power-law parity via COOLEST
 
 Type: feature
