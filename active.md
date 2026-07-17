@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## cti-resurrection-phase1
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/84
+- session: claude (CLI, 2026-07-17)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-resurrection-phase1
+- autonomy: supervised
+- prompt: active/cti_resurrection_phase1_viz_migration.md
+- note: Phase 1 of the CTI resurrection epic (Phase 0 complete: #82/#83 merged 2026-07-17, record complete/2026/07/cti-resurrection-phase0.md). Rewrite the quarantined Plotter/PlotterInterface viz layer on the matplotlib function API mirroring PyAutoGalaxy; region overlays become CTI-local helpers; un-quarantine plot tests. TRAP: worktree activate.sh lacks PyAutoCTI on PYTHONPATH — prepend manually.
+- repos:
+  - PyAutoCTI: feature/cti-resurrection-phase1
+
 ## aggregator-lens-profiling
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/171
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
