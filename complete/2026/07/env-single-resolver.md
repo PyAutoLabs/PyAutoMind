@@ -1,0 +1,5 @@
+## env-single-resolver
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 2; epic #155)
+- completed: 2026-07-17
+- library-pr: autofit_workspace_test#52, autogalaxy_workspace_test#74, autolens_workspace_test#174 — all merged (smoke gates green on 3.12+3.13)
+- summary: env-profile redesign migration step 2 — one resolver. The three run_smoke.py forks (byte-identical to each other, already drifted from canonical: their load_env_config hardcoded env_vars.yaml, so the PR gate could never read the release profile) now import PyAutoBuild autobuild/env_config. No infra needed: PyAutoHeart's reusable smoke-tests.yml already clones PyAutoBuild and puts autobuild/ on PYTHONPATH; sibling-checkout fallback keeps local runs working. Verified by resolve-diff against the REAL workspaces: 61/61 smoke scripts (11+34+16) resolve byte-identical envs old vs new. Steps 3-8 (scrubbed baseline, derivation rule, marker guard, rename, library one-reader fold, sentinel) remain on #161.
