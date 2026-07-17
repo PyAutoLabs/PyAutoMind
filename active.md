@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## pix-nonfinite-localisation
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/104
+- session: claude (CLI, 2026-07-17)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/pix-nonfinite-localisation
+- autonomy: supervised (--auto launch; effective = min(header supervised, bug cap supervised))
+- prompt: active/pixelized_likelihood_nonfinite_regions.md
+- note: Phase 1 = LOCALISE ONLY (diagnosis, no library edits) per the Brain Bug Agent's investigate-first verdict. Stagewise finite-probe over the #101 pixelized objective to name WHICH intermediate goes non-finite. Phase 2 (the PyAutoArray fix) files as its own issue once the site is named. Two planning corrections: (1) pix_lr_free.py records LAST-FINITE params, not the NaN-producing ones — the cheap reproduction is the step-0 broad draws with finite loss + NaN grad that pix_lr_free.py:124-130 silently rejects; (2) 13/16 deaths are at r_E 2.6-6.4 vs truth 1.6 (the "arcs miss the mesh" garbage regime) — only starts 2 (r_E 1.36) and 12 (r_E 1.43) die near the Nautilus mode 1.31, and those in-basin deaths are the real bug candidates. Candidate sites ranked in the issue: abstract.py:719/:754 (JAX cholesky returns NaN not raises), inversion_util.py:333-335 (NNLS Jacobi 1/sqrt(diag)), rectangular_kernel.py:123 (0/0 weight-map normalise). Run local GPU first (~/venv/PyAutoGPU, warm compile cache), RAL A100 only for trajectory replay. PyAutoLens NOT claimed (conflict w/ potential-correction-port; not in the likelihood path anyway).
+- repos:
+
 ## cti-resurrection-phase4
 - issue: https://github.com/PyAutoLabs/autocti_workspace/issues/1
 - session: claude (CLI, 2026-07-17)
