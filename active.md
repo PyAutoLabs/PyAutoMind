@@ -12,20 +12,6 @@
 - repos:
   - PyAutoCTI: feature/cti-resurrection-phase2
 
-## aggregate-images-fits
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1385
-- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/aggregate-images-fits
-- autonomy: supervised
-- prompt: active/aggregate_images_fits_profiling.md
-- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); manifest drift: tenant firewall (organ code) — 6 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acked 2026-07-17, ship + merge
-- note: final aggregator-arc leg — png/fits workflow aggregators never profiled; AggregateFITS._hdus re-opens the source fits per HDU + leaks handles (code-read). Harness payload upgrade + stages, then low-hanging fixes.
-- repos:
-  - PyAutoFit: feature/aggregate-images-fits
-  - autofit_workspace_test: feature/aggregate-images-fits
-
-
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: workspace-shipped, awaiting-merge — PR autolens_workspace#282 open (pending-release, notebooks regenerated); JOSS repo live with 10 benchmarks; 4 official A100 rows on RAL (point_source 5.95m / group 8.44m / imaging 10.0m / weak 0.75m). OVERNIGHT: RAL 330501 (cluster, 7h+ at bedtime) + 330527 (strong_and_weak -> imaging_and_point_source -> multi_band -> imaging --search nautilus). RESUME: (1) check both job logs + pull results/*.json from /mnt/ral/jnightin/autolens_jax_joss/results/ -> commit to JOSS repo + regen RESULTS.md; (2) resubmit clean viz-off re-timings of point_source/group/imaging (330501 rows carry viz overhead); (3) local saw_smoke2 (weak/features/strong_lensing/a2744.py TEST_MODE) died with session — optional, A100 strong_and_weak validates same composition; (4) final issue update + offer merge. FINDINGS: imaging cold-start Adam missed basin (logL -3e7, known open search question) -> nautilus row queued; cluster >>5min target, needs tuning (point-solver depth x 7 sources); weak JAX-viz crash = PyAutoLens#614
