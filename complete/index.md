@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-643 records across 5 buckets.
+645 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -144,6 +144,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [lenstool-scaling-reference-magnitude](2026/07/lenstool-scaling-reference-magnitude.md) — PR1 cluster + PR2 group/imaging — complete; PR3 SLaM deferred
 - [lifecycle-state-split](2026/07/lifecycle-state-split.md) — draft/active/complete prompt-file lifecycle + archive wiki — MERGED
 - [live-visual-update-context](2026/07/live-visual-update-context.md) — task 5 of the autolens_assistant batch — al_configure_search ask-once Live visual updates branch (script viewe…
+- [lr-free-multi-start-optimizers](2026/07/lr-free-multi-start-optimizers.md)
 - [manifest-drift-organ-registration](2026/07/manifest-drift-organ-registration.md) — firewall + spawn spec + pointer sweep — complete
 - [markdown-example-renderings](2026/07/markdown-example-renderings.md) — executed-markdown example pages, GitHub-browsable with real output images. generate_markdown.py (curated confi…
 - [markdown-renderings-howto](2026/07/markdown-renderings-howto.md) — batch 2b executed-markdown for HowTo chapter_1 (6/6/9). FAST (ch1 = few/no searches). Surfaced+fixed 2 tutoria…
@@ -176,6 +177,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [opus-wrapup](2026/07/opus-wrapup.md) — executed on Fable
 - [per-frame-psf](2026/07/per-frame-psf.md) — per-frame native ePSFs live (psf/frame_epsf.py: sky-subtracted, DQ local-median patch in ESTIMATOR input only …
 - [per-project-literature](2026/07/per-project-literature.md) — task 3 of the autolens_assistant batch — hybrid literature rule live: Create scaffolds wiki/project/bibliograp…
+- [pixelized-gradient-experiment](2026/07/pixelized-gradient-experiment.md)
 - [plot-rst-functional-rewrite](2026/07/plot-rst-functional-rewrite.md)
 - [point-pairing-policies](2026/07/point-pairing-policies.md)
 - [pre-build-audit](2026/07/pre-build-audit.md) — pre_build git-add failure-class audit (build-chain campaign #155 Phase 1). Measured: root-glob staging a 13/13…

@@ -1,3 +1,25 @@
+# Learning-rate-free multi-start optimizers
+
+- Issue: autolens_workspace_developer#101 (closed) · PR #103 (merged 2026-07-17, after #102)
+- Branch: feature/lr-free-multi-start-optimizers (stacked on #100's)
+
+MGE (12x300, 10 rules): every rule basin-hits; Prodigy (lr-free) bit-identical to hand-tuned
+adam (+31787.84, r_E 1.5997) — the lr hyperparameter deletes at zero cost on parametric cells.
+Pixelized: elimination chain (lr sweep, 10 rules, start bands incl. FD-certified narrow, fixed
+reg) proved the #100 failure is trajectory NaN mortality — hard non-finite walls throughout
+(even step 0: 2-3/16 NaN grads). Resurrection (redraw dead start + reinit per-start vmapped
+optax state) converts the landscape to searchable: adam -51201 -> +1718 @ r_E 1.570 over 3000
+steps, still improving — but converged Nautilus reaches +17419 in ~22 min warm, so the MGE
+speed conclusion INVERTS on inversion-heavy cells. Promotion spec (drafted,
+draft/feature/autofit/multistart_resurrection_and_contrib_rules.md): optax.contrib lookup +
+per-start vmapped state (stacked state couples lr-free global scalars) + restart-on-death
+(apply_if_finite latches at the cliff). Highest-leverage follow-up (drafted,
+draft/bug/autoarray/pixelized_likelihood_nonfinite_regions.md): localise the NaN with the
+preserved death-point coordinates. Deliverables: searches_minimal/{lr_free_multistart,
+pix_lr_free}.py, lr_free_findings.md, lr_free_results/.
+
+## Original prompt
+
 # Learning-rate-free multi-start gradient optimizers on the pixelized likelihood
 
 Type: experiment
