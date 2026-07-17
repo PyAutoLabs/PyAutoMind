@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-656 records across 5 buckets.
+658 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -76,6 +76,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [delaunay-qhull-callback](2026/07/delaunay-qhull-callback.md)
 - [delete_pyautoheart_shim](2026/07/delete_pyautoheart_shim.md)
 - [docs-theming-hub](2026/07/docs-theming-hub.md) — phases B+C of docs middle path — hub LIVE at pyautolabs.github.io (Pages; RETROFIT.md = paid-domain flip); sha…
+- [dpie-developer-scripts](2026/07/dpie-developer-scripts.md) — Trivial API-update follow-up to dpie-lenstool-default (#506). Three developer scripts (visualization_profiling…
 - [dpie-lenstool-default](2026/07/dpie-lenstool-default.md) — Made the Lenstool-native parameterization the DEFAULT dPIE. `dPIEMass`/`dPIEMassSph` now take the `.par`-file …
 - [dpie-lenstool-param](2026/07/dpie-lenstool-param.md)
 - [eceb-editorial-revision](2026/07/eceb-editorial-revision.md) — ECEB wiki rules — EC A&A template assets — MERGED
@@ -101,6 +102,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [fitness-nan-guard-contract](2026/07/fitness-nan-guard-contract.md)
 - [frame-products](2026/07/frame-products.md) — opt-in per-exposure frame products live — TargetSpec.frame_products packages every calibrated _flc/_flt SCI ch…
 - [frame-registration](2026/07/frame-registration.md) — inter-exposure registration quantified + extracted — frames/manifest.json per-frame registration block (WCS so…
+- [gradient-safe-logdet](2026/07/gradient-safe-logdet.md)
 - [health-api](2026/07/health-api.md)
 - [health-one-door](2026/07/health-one-door.md)
 - [health-sync-noise-filter](2026/07/health-sync-noise-filter.md)
