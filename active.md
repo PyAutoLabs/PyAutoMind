@@ -57,14 +57,14 @@
 ## potential-correction-port
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/618
 - session: claude (CLI, 2026-07-17)
-- status: phases 1-4 SHIPPED — 1 MERGED (PyAutoArray #390); OPEN: PyAutoGalaxy #505, PyAutoLens #621, PyAutoLens #622 (STACKED on #621, xp-API dense kernels + IterFit LM engine); next = Phase 5 iterative-bug hunt vs Vegetti Nat.Astron. papers (leads on issue #618: split_cross NaN FIXED, LM jitter 220c815, gauge/anchor degeneracy, src-gradient at updated positions)
+- status: phases 1-4 ALL MERGED 2026-07-17 (Array#390, Galaxy#505, Lens#621+#622); library legs cleaned. NOW: Phase 5 = iterative-bug hunt vs Vegetti Nat.Astron. papers (leads on #618) + Phase 6 = workspace layers (autolens_workspace guide + autolens_workspace_test incl. jax_likelihood_functions tier + golden parity vs tar demo) — ws repos claimed
 - worktree: ~/Code/PyAutoLabs-wt/potential-correction-port
 - autonomy: supervised
 - prompt: active/potential_correction_port.md
-- library-pr: PyAutoArray#390 MERGED · PyAutoGalaxy#505 OPEN · PyAutoLens#621 OPEN · PyAutoLens#622 OPEN-STACKED (all pending-release; Heart RED acked — 5 pre-existing unrelated reasons; merge order: 621 before/with 622)
+- library-pr: ALL MERGED — Array#390 · Galaxy#505 · Lens#621 · Lens#622 (Heart RED acked throughout — 5 pre-existing unrelated reasons)
 - note: port caoxiaoyue/lensing_potential_correction (gravitational imaging: joint source+dpsi evidence inversion) into the stack; cite caoxiaoyue/potential_correction_paper (Cao et al. 2025). Phase 1 = PyAutoArray (masked-grid diff operators, curvature/4th-order mask regs, coarse-mesh itp matrix — reuse existing kernel regs). Phases 2 (PyAutoGalaxy Input* mass profiles + GRF) and 3 (autolens/potential_correction subpackage) QUEUED behind slam-resume-fastpath's PyAutoGalaxy+PyAutoLens claims — claim those repos here only after it ships. NumPy/numba only; JAX port is a known follow-up. No GPy/multiprocess/powerbox/numba-scipy deps.
 - repos:
-  - PyAutoGalaxy: feature/potential-correction-port
-  - PyAutoLens: feature/potential-correction-port
+  - autolens_workspace: feature/potential-correction-port
+  - autolens_workspace_test: feature/potential-correction-port
 
 
