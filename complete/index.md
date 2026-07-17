@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-652 records across 5 buckets.
+653 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -186,6 +186,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [point-pairing-policies](2026/07/point-pairing-policies.md)
 - [potential-correction-interferometer](2026/07/potential-correction-interferometer.md) — Extended al.pc (potential corrections, epic #618) to Interferometer data with the SPARSE-OPERATOR (w-tilde) ro…
 - [potential-correction-port](2026/07/potential-correction-port.md) — Ported caoxiaoyue/lensing_potential_correction (Cao et al. 2025) into the stack as first-class source: PyAutoA…
+- [potential-correction-uv-campaign](2026/07/potential-correction-uv-campaign.md)
 - [pre-build-audit](2026/07/pre-build-audit.md) — pre_build git-add failure-class audit (build-chain campaign #155 Phase 1). Measured: root-glob staging a 13/13…
 - [pre-build-slim](2026/07/pre-build-slim.md) — step 3 of the pre_build audit — sweep vestige DELETED (human decision): black on staged dirs only, dataset/con…
 - [preopt-breakdown-dashboard](2026/07/preopt-breakdown-dashboard.md) — Phase-4 (likelihood_breakdown + dashboard) leg of the polish.md PreOptimizationTimes campaign. Delivered: A100…

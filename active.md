@@ -41,18 +41,6 @@
 - library-pr: PyAutoBrain#137 + autolens_assistant#76 — BOTH MERGED 2026-07-17 (Phase 0)
 - repos:
 
-## potential-correction-uv-campaign
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/627
-- session: claude (CLI, 2026-07-17)
-- status: workspace-dev (research campaign)
-- worktree: ~/Code/PyAutoLabs-wt/potential-correction-uv-campaign
-- autonomy: supervised
-- prompt: active/potential_correction_realistic_uv_campaign.md
-- note: Phase A COMPLETE (harness pushed to feature/potential-correction-uv-campaign, NOT PR'd). SDP.81 ABSENT on RAL (prep job 330605 install failed silently - jax-joss resume item) -> ALMA-like synthesis uv instead. LOCAL-TIER RESULTS on #627: one-shot CERTIFIED (corr 0.83 / 0.72 local, peak 0.14 arcsec, 6.2 sigma; evidence max = best recovery at Matern c=2e3); iterative failure mode CHARACTERIZED - the source block absorbs the perturbation (result insensitive to 1000x dpsi-reg sweep, chi2/dof 0.59 over-fit); evidence self-protects (iterative < one-shot in ALL configs). MID-TIER ITERATIVE CERTIFIED 2026-07-17 (0.839/0.34 arcsec/9.2 sigma == one-shot) via warm start + FORMULATION BUG FIX (al PR#629 OPEN: LM objective double-counted state dpsi — lens re-trace AND linear G-term; warm start exposed it as ANTI-correlation -0.83; fix = source-block chi2/gradient + increment semantics; imaging engine unaffected). BUG WAS INTERFEROMETER-ONLY (imaging kernels residual-based). Phase C SHIPPED+MERGED: al#630 (imaging x0 parity) + ws#285 (guide interferometer section). RAL LEG COMPLETE 2026-07-17 (job 330633): full-tier mass sweep done, table posted to #627 (1e9 detected 4.1sig 0.51"; floor between 1e8-1e9; ~3min/mass A100). ws feature layer MERGED (ws#286: start_here + likelihood_function interferometer). REMAINING: merge autolens_workspace_developer PR#107 (campaign harness); close #618/#623/#627 (user's call); then worktree cleanup per ship_workspace. (2) full tier + mass sweep on RAL A100 --use-jax (refresh mirror first). ONE-SHOT now certified at TWO tiers (local 6.2 sigma, mid 9.3 sigma). HARNESS LESSONS pushed: precision-operator cache MUST be noise-keyed (T^H C^-1 T); regime gate predicts iterative failure. (uniform joint-coefficient grid RULED OUT locally 2026-07-17 - stiff source breaks the regime gate, evidence collapses; table+verdict on #627; sc=1/c=2e3 one-shot remains evidence max) + ENGINE ENHANCEMENT SHIPPED: PyAutoLens PR #628 OPEN (reg_optimize_every - per-iteration Laplace-evidence re-optimization of reg strengths at fixed F,D; local validation corr 0.13->0.41, peak 1.20->0.44 arcsec; 439 tests; default off). (IterDpsiSrcInvInterferometerAnalysis + search); consider per-iteration reg re-optimization (Koopmans/Vegetti) as an engine enhancement; RAL needs mirror refresh (12 merges today) + nohup/setsid/sentinel + precision-operator cache. Then Phase C = interferometer section in ws guides/advanced/potential_correction.py.
-- repos:
-  - autolens_workspace_developer: feature/potential-correction-uv-campaign
-  - PyAutoLens: feature/potential-correction-uv-campaign
-
 ## dpie-lenstool-default
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/506
 - session: claude (CLI, 2026-07-17)
