@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## cti-resurrection-phase4
+- issue: https://github.com/PyAutoLabs/autocti_workspace/issues/1
+- session: claude (CLI, 2026-07-17)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-resurrection-phase4
+- autonomy: supervised
+- prompt: active/cti_resurrection_phase4_workspace.md
+- note: Phase 4 of the CTI resurrection epic (0-3 merged). 118 scripts / 79 notebooks onto current APIs: plot function API (70 scripts), simulator/fitsable/priors drift, config sync, TEST_MODE validation. Notebooks regenerate at release (Phase 5).
+- repos:
+  - autocti_workspace: feature/cti-resurrection-phase4
+
 ## coolest-powerlaw-herculens
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/616
 - session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124
