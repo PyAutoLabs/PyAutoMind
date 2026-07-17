@@ -87,6 +87,15 @@
 - repos:
 
 
+## ep-projection-weights
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1382
+- status: awaiting-input — issue filed 2026-07-17; PAUSED at user request for external review of the issue before implementation begins
+- worktree: ~/Code/PyAutoLabs-wt/ep-projection-weights (not yet created — /start_library on resume)
+- autonomy: supervised
+- prompt: active/ep_projection_linear_weights_as_log.md
+- note: EP sampler-factor projection feeds LINEAR samples.weight_list into AbstractMessage.project (requires LOG weights) -> boundary attractor -> sigma-collapse. Root-caused by slope-hierarchy (Jammy2211/slope_hierarchy#1); that project's goal 2 is blocked on this fix. One focused PR: seam fix + regression test + call-site audit (Bug Agent's too-large sizing is keyword-driven, overridden in plan). Suggested branch feature/ep-projection-weights; PyAutoFit unclaimed, main clean.
+- repos:
+
 ## slope-hierarchy
 - issue: https://github.com/Jammy2211/slope_hierarchy/issues/1
 - status: workspace-dev — goals 1/3/4 DELIVERED; goal 2 BLOCKED on upstream fix. EP collapse ROOT-CAUSED 2026-07-17: Result.projected_model feeds LINEAR samples.weight_list into AbstractMessage.project which requires LOG weights (exp(w-max) ≈ uniform ⇒ canonical-space boundary attractor ⇒ cavity poisoned ⇒ honest sigma-collapse; damping irrelevant — δ=0.5 job 330532 collapsed identically; probe 330591 proved fit RIGHT 2.0448 / projection WRONG 2.9875±0.011). Bug prompt: draft/bug/autofit/ep_projection_linear_weights_as_log.md (next action = /start_dev it). After the fix merges: clear output/<sample>/ep on RAL, rerun submit_ep, parity table, then N=25-50 scale-up
