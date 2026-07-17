@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## inject-keck
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/54
+- session: claude (CLI, 2026-07-17)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/inject-keck
+- autonomy: supervised (--auto; prompt header — registration design was judgment-shaped, now resolved on #54)
+- prompt: active/inject_stage_keck.md
+- note: phase 2b of simulate.md — Keck prepared-frame injection; placement rides measured offsets (offsets_to_reference pre-pass + mosaic-centre target convention + pixmap inversion), NEVER raw header WCS; inject_psf required (epoch-matched auto = follow-up); no ERR path (keck noise constructed downstream). Batched judgment items on the issue.
+- repos:
+  - PyAutoReduce: feature/inject-keck
+
 ## test-mode-representative-samples
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1379
 - session: claude --resume fceb9fd4-59ed-4cb4-acc0-bd4c04c23839
