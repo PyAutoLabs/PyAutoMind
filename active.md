@@ -28,6 +28,17 @@
   - PyAutoFit: feature/aggregator-lens-profiling
 
 
+## jax-cache-default
+- issue: https://github.com/PyAutoLabs/PyAutoConf/issues/127
+- session: claude (CLI, 2026-07-17)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-cache-default
+- autonomy: supervised
+- prompt: active/enable_the_jax_persistent_compilation_cache_by.md
+- note: rollout of autolens_profiling#71 verdict. Target corrected autofit->PyAutoConf (jax_wrapper.py owns JAX env defaults; env-based => NO workspace config mirroring). Includes XLA_FLAGS clobber bug fix (wrapper overwrites user flags — made --xla_dump_to look inert in #71; historical autotune ruled-out claim now UNPROVEN). Ship validation must prove env-only path sets jax.config (probe set env AND config). Ripple: correct #71 note + PR#73 README.
+- repos:
+  - PyAutoConf: feature/jax-cache-default
+
 ## jax-compile-time-research
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
 - session: claude (CLI, resumed 2026-07-16 evening; was bg job b44b0e0f)
