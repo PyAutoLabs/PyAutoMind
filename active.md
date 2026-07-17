@@ -1,6 +1,20 @@
 # Active Tasks
 
 
+## cti-resurrection-phase5
+- issue: https://github.com/PyAutoLabs/autocti_workspace_test/issues/1
+- session: claude (CLI, 2026-07-17)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-resurrection-phase5
+- autonomy: supervised
+- prompt: active/cti_resurrection_phase5_wst_and_release_wiring.md
+- note: FINAL phase of the CTI resurrection epic (0-4 merged). workspace_test rebuild (preserve Euclid tvac/temporal heritage as legacy/), curated smoke list (exclude TM2 assertion-tie scripts), Heart+Build registration, notebook regeneration. Release itself stays human/nightly.
+- repos:
+  - autocti_workspace_test: feature/cti-resurrection-phase5
+  - autocti_workspace: feature/cti-resurrection-phase5
+  - PyAutoHeart: feature/cti-resurrection-phase5
+  - PyAutoBuild: feature/cti-resurrection-phase5
+
 ## pix-nonfinite-localisation
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/104
 - session: claude (CLI, 2026-07-17)
