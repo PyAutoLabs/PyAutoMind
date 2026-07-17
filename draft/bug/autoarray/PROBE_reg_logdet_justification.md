@@ -99,6 +99,114 @@ fragile — which sharply narrows what a fix is allowed to do.**
   change. Unclear whether this generalises to Delaunay/Voronoi meshes, whose
   topology varies per model.
 
+## 2b. THE ADAPTIVE SCHEMES — the ones that actually matter for science
+
+The analysis above was developed on `reg.Constant`, because that is what the
+#101/#104 harness uses. **The human points out that the ADAPTIVE schemes
+(`reg.Adapt` and friends) are the main ones used for production science.** They
+are, and it makes this worse, not better. Verify all of the following
+independently.
+
+**C6 — `Adapt` has the identical structure and the identical absolute floor.**
+`adapt.py:106-122` scatters, per edge `(i,j)` with weight `w`: `+w` into
+`diag[i]` and `diag[j]`, `-w` into `[i,j]` and `[j,i]`, plus `xp.full((S,), 1e-8)`
+on the diagonal. Row sums cancel to zero => it is a **weighted Laplacian with the
+same constant null mode**, lifted by the **same absolute 1e-8**. So C1-C4 carry
+over unchanged.
+
+**C7 — `Adapt`'s coefficient enters at the FOURTH power, so it is ~100x more
+fragile than `Constant`.** The chain double-squares:
+- `adapt.py:45-47` `adapt_regularization_weights_from` returns
+  `(inner*ps + outer*(1-ps)) ** 2.0`
+- `adapt.py:84` `weighted_regularization_matrix_from` then does
+  `reg_w = regularization_weights ** 2`
+
+Measured on the real functions (30x30 4-connected mesh, `inner=outer=c`,
+`pixel_signals=0.5`):
+
+```
+        c  edge weight     eig_max     eig_min noise~eps*|H|     chol
+  1.0e+01    1.000e+04   1.596e+05   9.995e-09     1.776e-11       ok    <- eig_min IS the 1e-8 lift
+  5.0e+01    6.250e+06   9.973e+07   2.756e-08     1.110e-08       ok    <- CROSSOVER: lift ~ noise
+  1.0e+02    1.000e+08   1.596e+09   2.451e-07     1.776e-07       ok    <- eig_min is now pure NOISE
+  1.0e+03    1.000e+12   1.596e+13   2.753e-03     1.776e-03       ok
+  1.0e+04    1.000e+16   1.596e+17  -8.803e+00     1.776e+01   RAISES
+  1.0e+06    1.000e+24   1.596e+25  -4.974e+09     1.776e+09   RAISES
+
+Constant, same mesh (2nd power, for comparison):
+  1.0e+04   7.978e+08   1.226e-07     8.882e-08       ok
+  1.0e+06   7.978e+12   1.376e-03     8.882e-04       ok
+```
+
+**C8 — this sits INSIDE the production prior.** Both `Adapt.inner_coefficient`
+and `Adapt.outer_coefficient` (and `Constant.coefficient`) carry
+`LogUniform(1e-6, 1e6)` in `autogalaxy_workspace/config/priors/regularization/`.
+For `Adapt`, `c > ~50` (the crossover) is roughly **4.3 of 12 decades ~ 36% of
+prior volume**, and `c > 1e4` (hard Cholesky failure) roughly **17%**. If that is
+right, the issue is NOT confined to the broad-prior gradient-search regime; it is
+inside the prior of the scheme used for published science. A sampler that
+resamples those points is silently truncating part of its own prior from the
+evidence integral.
+
+**C9 — is the double-square intentional?** `Adapt`'s coefficient enters at the
+4th power; `Constant`'s at the 2nd. Yet both were given **identical**
+`LogUniform(1e-6, 1e6)` priors, which therefore mean very different things.
+Either this is deliberate and undocumented, or `adapt.py:84` squares something
+`adapt.py:47` already squared. Note `adapt_regularization_weights_from`'s
+docstring says the weights "define the effective regularization coefficient of
+every mesh parameter" — if the weights ARE the effective coefficient, squaring
+them once in the matrix builder is the Constant-consistent behaviour and the
+`**2.0` at line 47 is the anomaly. **This may be a separate bug, or entirely
+intentional. Do not assume. The plotted `regularization_weights` are also
+user-facing.**
+
+Additional questions for section 4: does the crossover matter in practice — i.e.
+what inner/outer coefficients do REAL adaptive fits actually converge to? If
+production posteriors sit at `c ~ 1-10`, everything above is confined to
+exploration and the urgency drops sharply. If they sit above ~50, published
+evidence values are being computed with an `eig_min` that is rounding noise. The
+same question applies to the other adaptive/kernel schemes
+(`adapt_split.py`, `matern_adapt_kernel.py`, `gaussian_kernel.py`,
+`brightness_zeroth.py`, ...) — check whether they share the `1e-8` floor and the
+null mode, or whether some (e.g. the `*_zeroth` variants, which add a zeroth-order
+term) lift the null mode properly and are therefore immune. **A scheme that adds a
+genuine zeroth-order diagonal term has NO null mode and may be the existing,
+already-correct answer.**
+
+**C10 — the codebase may ALREADY contain the principled fix, and that reframes
+everything.** `constant_zeroth.py:68-72`:
+
+```python
+reg_coeff = coefficient_zeroth**2.0
+# Identity matrix scaled by reg_coeff does exactly sum_i reg_coeff * e_i e_i^T
+zeroth = xp.eye(P) * reg_coeff
+return const + zeroth
+```
+
+So `ConstantZeroth` builds `H = lam^2*L + 1e-8*I + lam_z^2*I`. That
+`lam_z^2 * I` is a **genuine zeroth-order prior term** which lifts the null mode
+by a **model-scaled** amount rather than an absolute 1e-8 — i.e. it is
+structurally immune to everything above, provided `coefficient_zeroth` is not
+driven tiny by its own prior (check that prior).
+
+The strong implication to test: **the `1e-8` in `Constant`/`Adapt` is an
+undocumented stand-in for the zeroth-order term that the `*_zeroth` schemes make
+explicit and proper.** `Constant`/`Adapt` encode a rank-deficient (improper,
+flat-on-the-constant-mode) prior; the `*_zeroth` variants make it proper. If so,
+the honest options change shape entirely:
+
+- (a) **Do nothing to the source.** Document that `Constant`/`Adapt` have an
+  improper prior whose `log det` is only conditionally well-defined, and that
+  gradient-based / high-coefficient work should use a `*_zeroth` variant. Zero
+  science risk; no published evidence moves.
+- (b) Make the `1e-8` principled (pseudo-determinant, or an explicit tiny
+  zeroth-order term) — with the C4 constraint that the lam-dependence must not
+  change.
+- (c) The relative lift — which C4 suggests is a REGRESSION.
+
+**Evaluate (a) seriously before (b) or (c).** "The library already has the right
+tool and the user picked the other one" is a legitimate and cheap verdict.
+
 ## 3. The evidence (reproduce it — do not take it on trust)
 
 Real `regularization_matrix_reduced` (900x900) at two parameter points from the
