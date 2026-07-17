@@ -1,6 +1,18 @@
 # Active Tasks
 
 
+## test-mode-representative-samples
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1379
+- session: claude --resume fceb9fd4-59ed-4cb4-acc0-bd4c04c23839
+- status: library-dev (phase 2/4 core API; unblocked 2026-07-16 — aggregator-sqlite shipped, PyAutoFit#1380 merged, claim freed; no override needed)
+- worktree: ~/Code/PyAutoLabs-wt/test-mode-representative-samples
+- autonomy: supervised
+- prompt: active/test_mode_representative_outputs_size_realistic_phase_2_core_api.md
+- note: implement PYAUTO_TEST_MODE_SAMPLES per LOCKED D1-D4 on PyAutoFit#1378 (do not re-derive; record complete/2026/07/test-mode-representative-samples-phase-1-design.md). PyAutoConf PR merges FIRST (accessor), PyAutoFit second. Phases 3+4 in draft/ until this merges.
+- repos:
+  - PyAutoFit: feature/test-mode-representative-samples
+  - PyAutoConf: feature/test-mode-representative-samples
+
 ## aggregator-lens-profiling
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/171
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
