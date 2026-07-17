@@ -39,7 +39,7 @@
 ## jax-compile-time-research
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/71
 - session: claude (CLI, resumed 2026-07-16 evening; was bg job b44b0e0f)
-- status: workspace-dev — VERDICT FIRMING: settings suffice so far. Cache certified BOTH scales (local 117s→2.3s 51×; A100 warm-repeat 330534 wall 937s vs 5518s cold, 5.9×, 70min fusion compile GONE). CORRECTION: morning matrix 388/851s were LOAD ARTIFACTS — idle CPU compile flat ~105-125s across vmap/lax.map/pyloop (diff ≈6× jit, batching free); pyloop_vag transform added, no win. Pixelization compiles FAST on CPU (5s/31s) — pathology is op-pattern/GPU-fusion-specific. OVERNIGHT: A/B cold-compile jobs 330536 (plain vag) + 330537 (lax.map adam) w/ fresh caches + HLO dump of input_reduce module — read logs compileab_*_33053{6,7}.log tomorrow. Remaining: A/B verdict, HLO analysis, then FINDINGS.md + spawned follow-up (config rollout: cache-dir-by-default)
+- status: workspace-shipped, awaiting-merge — PR autolens_profiling#73 (pending-release); VERDICT: settings suffice, no restructure (research note jax_compile/README.md). Heart RED 5 pre-existing unrelated reasons human-acked 2026-07-17 for PR-open. Follow-up filed: draft/feature/autofit/enable_the_jax_persistent_compilation_cache_by.md. Pending: HLO-dump artifact (RAL job 330587) to attach to #71; then merge (human) → lifecycle record + worktree cleanup
 - worktree: ~/Code/PyAutoLabs-wt/jax-compile-time-research
 - autonomy: supervised (--auto; research cap)
 - prompt: active/jax_compile_time_is_prohibitive_for_complex.md
