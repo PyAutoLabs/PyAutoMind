@@ -35,7 +35,7 @@
 ## potential-correction-interferometer
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/623
 - session: claude (CLI, 2026-07-17)
-- status: phase-1-shipped (PyAutoLens PR #624 OPEN — sparse w-tilde route verified ≡ dense; awaiting merge); phase 2 = iterative seam + workspace_test scripts
+- status: phases 1+2a SHIPPED — #624 MERGED (sparse-route joint fit), #625 OPEN (iterative LM engine + dpsi_mask arc restriction; awaiting merge). OPEN DEFECT diagnosed (comment on #623): InputPotential nearest-extrapolation outside an arc-restricted dpsi mesh scrambles the iterative re-trace — FIX NEXT: zero-fill extrapolation mode in ag.mp.InputPotential/LinearNDInterpolatorExt, then re-validate the held wst scripts (subhalo_recovery_interferometer.py drafted UNCOMMITTED in worktree; one-shot passes corr 0.35/0.13", iterative blocked on the fix)
 - worktree: ~/Code/PyAutoLabs-wt/potential-correction-interferometer
 - autonomy: supervised
 - prompt: active/potential_correction_interferometer.md
