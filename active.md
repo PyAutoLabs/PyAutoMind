@@ -8,6 +8,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/aggregate-images-fits
 - autonomy: supervised
 - prompt: active/aggregate_images_fits_profiling.md
+- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); manifest drift: tenant firewall (organ code) — 6 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acked 2026-07-17, ship + merge
 - note: final aggregator-arc leg — png/fits workflow aggregators never profiled; AggregateFITS._hdus re-opens the source fits per HDU + leaks handles (code-read). Harness payload upgrade + stages, then low-hanging fixes.
 - repos:
   - PyAutoFit: feature/aggregate-images-fits
