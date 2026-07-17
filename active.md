@@ -17,7 +17,8 @@
 ## test-mode-representative-samples
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1379
 - session: claude --resume fceb9fd4-59ed-4cb4-acc0-bd4c04c23839
-- status: library-dev (phase 2/4 core API; unblocked 2026-07-16 — aggregator-sqlite shipped, PyAutoFit#1380 merged, claim freed; no override needed)
+- status: library-shipped, awaiting-merge — PyAutoConf#126 (merge FIRST) + PyAutoFit#1381, both pending-release; Heart RED acked for PR-open 2026-07-17 (5 pre-existing unrelated reasons)
+- library-pr: https://github.com/PyAutoLabs/PyAutoConf/pull/126 (merge first), https://github.com/PyAutoLabs/PyAutoFit/pull/1381
 - worktree: ~/Code/PyAutoLabs-wt/test-mode-representative-samples
 - autonomy: supervised
 - prompt: active/test_mode_representative_outputs_size_realistic_phase_2_core_api.md
