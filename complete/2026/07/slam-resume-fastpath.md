@@ -1,3 +1,11 @@
+## slam-resume-fastpath
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/502 (closed)
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/504 (MERGED, first), https://github.com/PyAutoLabs/PyAutoLens/pull/619 (MERGED, second — imports _append_to_search_zip from ag)
+- summary: SLaM resume fast-path implementing the #70 judgment — cache-aside keyed on the upstream result's own paths: galaxy_name_image_dict_via_result_from memoizes the raw per-galaxy dict to files/galaxy_images_{model,snr}.fits; positions_likelihood_from memoizes solved positions to files/multiple_image_positions[_plane_<z>].json; threshold math stays live; zero public-API/script change; first-arrival computes+writes, staleness guarded by search identifiers, NullPaths always computes. Validated via pipeline_resume instant recipe: inter-stage resume 151s/130s/128s -> 0.3s/0.0s/0.1s (remaining floor = imports + stage-1 check_likelihood_function compile). Suites 985p/387p; six-workspace smoke 44p/0f/5s, zero tracebacks (2026-07-09's 3 known failures did not reproduce). Gotchas: paths.restore() wipes post-completion files/ writes — caches MUST be appended into the search .zip (_append_to_search_zip; future public home in PyAutoFit paths is a candidate); the viz-gated fits_adapt_images artifact was NOT relied on (only written when plots.yaml enables it). Shipped through Heart RED on human ack (5 pre-existing reasons). Mechanical ship + smoke delegated to Sonnet subagents per WORKFLOW.md.
+
+## Original prompt
+
 # SLaM resume fast-path: load persisted adapt images and positions likelihood
 
 Type: feature
