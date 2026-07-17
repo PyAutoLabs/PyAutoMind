@@ -11,6 +11,7 @@
 - note: Phase 3 of the CTI resurrection epic (0-2 merged #83/#85/#87). Modern CI (ag pattern + arcticpy step), worktree.sh/labels plumbing (PyAutoBrain — possible zero-overlap parallel claim with ic50-assistant-seed), readthedocs.yaml. Build/Heart registration DEFERRED to Phase 5 deliberately.
 - repos:
   - PyAutoCTI: feature/cti-resurrection-phase3
+  - PyAutoBrain: feature/cti-resurrection-phase3
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
