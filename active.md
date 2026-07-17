@@ -1,6 +1,18 @@
 # Active Tasks
 
 
+## aggregator-lens-profiling
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/171
+- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/aggregator-lens-profiling
+- autonomy: supervised
+- prompt: active/aggregator_profiling_lens_leg.md
+- note: aggregator Phase C (final leg of #1375 arc; A+B+D merged). Lens-level profiling — what TracerAgg/FitImagingAgg reconstruction adds on top of generic loading. MockSearch+fixtures template, no samplers.
+- repos:
+  - autolens_workspace_test: feature/aggregator-lens-profiling
+
+
 ## inject-jwst
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/52
 - session: claude (CLI, 2026-07-16)
