@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-632 records across 5 buckets.
+633 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -228,6 +228,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [simulate-injection-feasibility](2026/07/simulate-injection-feasibility.md)
 - [slack-release-notes](2026/07/slack-release-notes.md)
 - [slacs1430-acs-parity](2026/07/slacs1430-acs-parity.md) — SLACS1430+4105 ACS reduction vs legacy — pixel parity PASS — SHIPPED
+- [slam-resume-profiling](2026/07/slam-resume-profiling.md) — New pipeline_resume/ tier profiles the full 5-stage SLaM chain cold vs resume with per-component decomposition…
 - [solver-branch-flips](2026/07/solver-branch-flips.md) — research deliverable met — flips are JIT-only (eager clean; XLA-fusion ulp × discrete threshold); positive-onl…
 - [starred-epsf-backend](2026/07/starred-epsf-backend.md) — Optional STARRED (COSMOGRAIL, arXiv:2402.08725) Tier-1b super-sampled ePSF back-end for the PSF stage, born fr…
 - [starred-frame-epsf](2026/07/starred-frame-epsf.md) — Extended STARRED Tier-1b (#36) to the per-exposure FRAME-PRODUCTS mode. build_starred_frame_epsf (autoreduce/p…

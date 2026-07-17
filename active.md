@@ -70,16 +70,6 @@
 - repos:
   - autolens_workspace_developer: feature/pixelized-gradient-experiment
 
-## slam-resume-profiling
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/70
-- session: claude --resume ce78c7e9-3f34-4983-bb53-8840527c1fb6
-- status: workspace-shipped, awaiting-merge — PR autolens_profiling#75 (pending-release); shipped through Heart RED on human ack 2026-07-17 (5 pre-existing reasons, none from this branch)
-- worktree: ~/Code/PyAutoLabs-wt/slam-resume-profiling
-- prompt: active/slam_resume_overhead_profile_inter_stage_costs.md
-- note: resume recipe (post-#1379): (1) PYAUTO_TEST_MODE=2 PYAUTO_TEST_MODE_SAMPLES=~10000 python3 pipeline_resume/slam_resume.py --reset → instant cold with production-size samples.csv (~10k rows/9MB parity target from #1378); (2) SAME env vars on the rerun for the pure resume record (output lives under output/test_mode/); (3) decomposition → judgment on #70 — pre-findings: adapt images already persisted per stage in files/ + agg_util.adapt_images_from loader exists (targeted load-not-recompute beats checkpoint system); resume also pays zip→unzip per stage; test-mode resume skips latents (small known delta). WSL rebooted overnight 2026-07-17 killing the --fast chain mid-stage-2 (stage-1 output + stage-2 checkpoint remain under output/pipeline_resume/hst_fast if a real-sampling record is ever wanted). Parallel claim: jax-compile-time-research adds jax_compile/ only, no overlap.
-- repos:
-  - autolens_profiling: feature/slam-resume-profiling
-
 ## lr-free-multi-start-optimizers
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/101
 - status: workspace-dev — DIAGNOSIS COMPLETE + RESURRECTION BREAKTHROUGH; long-budget run 330598 (3000 steps) in flight
