@@ -13,6 +13,42 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 
+## CAMPAIGN STATE + REMAINING PICKUP QUEUE (updated 2026-07-17)
+
+This entry is the single index for the build-chain campaign. It stays in
+`active.md` so `/morning` and `/health` surface it; each remaining item below
+is a filed `draft/` prompt that `/feature` (or `/start_dev <path>`) picks up.
+(Hygiene/Health don't own this — their scans are narrow; the pickup path is
+`/feature` over these prompts + this tracker.)
+
+**DONE (merged):** Phase 0a-b · Phase 1 (audit + 3 pre_build steps) · Phase 2
+(evidence audit + test_run fix + verify_install run + surface recording) ·
+Phase 3 steps 1-3 (validator #163, single resolver, scrubbed base #165) ·
+Phase 4 task 1 (floors 2026.7.9.1 ×7) · Phase 5 all 6 items + 2 guard fixes +
+API-gate F5. ~40 PRs; 6 live refusal/routing mechanisms.
+
+**REMAINING — pick up via `/feature` / `/start_dev`, recommended order:**
+1. `draft/feature/pyautoheart/version_skew_floor_rework.md` — Phase 4 task 2;
+   UNBLOCKED by floors; enforces "floor names an installable version". Do next.
+2. `draft/feature/pyautobuild/version_model_consumers_and_readme_pins.md` —
+   Phase 4 tasks 3-4 (assistant --check-version; orphaned README pins; then
+   remove legacy workspace_version/version.txt). After task 2.
+3. `draft/bug/workspaces/howto_validation_needs_simulator_stage.md` — Phase 2
+   §5.5; ~30 HowTo tutorials adopt `should_simulate` (judgment prose; own
+   session). Fork (b) decided; do NOT restore committed datasets.
+4. `draft/feature/workspaces/env_profile_migration_steps_4_to_8.md` — Phase 3
+   steps 4-8; step 4 (15-script JAX triage) is RELEASE-SURFACE RISK, do
+   carefully; steps 5-8 follow. Least urgent (steps 1-3 already delivered the
+   core value).
+5. `draft/bug/pyautobrain/mind_commit_guard_v13_fail_open_on_complex_shell.md`
+   — guard v1.3: fail open on complex shell, OR decide the commit-guard's fate
+   (3 FPs on author, 0 confirmed catches). Small.
+
+Epic tracker: PyAutoBuild#155. Env-profile sub-issue: PyAutoBuild#161. Agent
+failure-modes: PyAutoBrain#130. Full component-brief detail is below.
+
+---
+
 PyAutoBuild is the centre of gravity. This umbrella combines five already-filed
 PyAutoMind draft briefs (plus their filed satellites) that all touch the
 build/release/validation chain, so the work is sequenced as a single campaign
