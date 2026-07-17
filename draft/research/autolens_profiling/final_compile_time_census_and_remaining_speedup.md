@@ -4,7 +4,6 @@ Type: research
 Target: autolens_profiling
 Repos:
 - autolens_profiling
-- autolens_profiling
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
