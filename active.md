@@ -8,6 +8,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/prior-config-cache
 - autonomy: supervised
 - prompt: active/prior_config_cache.md
+- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); manifest drift: tenant firewall (organ code) — 6 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acked 2026-07-17, ship + merge
 - note: the aggregator arc's recorded deeper follow-up — 77% of summary/model load is default-prior config machinery; path_value_tuples re-sorted per lookup + linear scan + repeated identical queries. Instance-level caches (fresh instance per conf push = natural invalidation).
 - repos:
   - PyAutoConf: feature/prior-config-cache
