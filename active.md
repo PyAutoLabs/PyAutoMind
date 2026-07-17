@@ -1,6 +1,17 @@
 # Active Tasks
 
 
+## cti-resurrection-phase2
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/86
+- session: claude (CLI, 2026-07-17)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-resurrection-phase2
+- autonomy: supervised
+- prompt: active/cti_resurrection_phase2_autofit_sync.md
+- note: Phase 2 of the CTI resurrection epic (Phases 0+1 merged #83/#85). Port the 5 skipped multi-analysis aggregator tests to AnalysisFactor/FactorGraphModel + autofit drift sweep. TRAP: worktree activate.sh lacks PyAutoCTI on PYTHONPATH — prepend manually.
+- repos:
+  - PyAutoCTI: feature/cti-resurrection-phase2
+
 ## aggregate-images-fits
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1385
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
