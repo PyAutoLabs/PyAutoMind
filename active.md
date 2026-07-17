@@ -42,6 +42,7 @@
 - note: extend al.pc (potential corrections, #618) to Interferometer in visibility space. PRIORITY (user): the SPARSE-OPERATOR / w-tilde route — curvature blocks in real space ((D_s D_psi)^T (T^H C^-1 T) (D_s D_psi)), scales with n_pix not n_vis; dense transform_mapping_matrix route = small-n_vis parity reference only. Then iterative-engine dataset seam + analyses; workspace_test follow-up (jax_likelihood_functions/interferometer + interferometer subhalo_recovery). dense_util xp kernels unchanged. Cite Cao et al. 2025 throughout.
 - repos:
   - PyAutoLens: feature/potential-correction-interferometer
+  - PyAutoGalaxy: feature/potential-correction-interferometer
 
 
 ## autocti-assistant
