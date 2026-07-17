@@ -105,3 +105,12 @@
 - repos:
   - PyAutoGalaxy: feature/slam-resume-fastpath
   - PyAutoLens: feature/slam-resume-fastpath
+
+## results-inspector-mcp
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/12
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/results-inspector-mcp
+- autonomy: supervised
+- prompt: active/results_inspector_mcp.md
+- note: read-only FastMCP results-inspector; Phase 1 = autofit_assistant core (~8 aggregator tools + af_ skill + audit wiring), Phase 2 = autolens_assistant mirror + lens_tools + al_ skill. No recompute in v1; PyAutoFit contingent-only. Prior art rhayes777/PyAutoMCP (drop optimise/compute).
+- repos:
