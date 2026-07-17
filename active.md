@@ -56,7 +56,7 @@
 ## dpie-lenstool-default
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/506
 - session: claude (CLI, 2026-07-17)
-- status: library-shipped, workspace-pending
+- status: workspace-dev
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/509 (pending-release; 1003 tests passed; Heart RED acked — 6 pre-existing unrelated reasons)
 - worktree: ~/Code/PyAutoLabs-wt/dpie-lenstool-default
 - autonomy: supervised
@@ -65,3 +65,5 @@
 - note: swap dPIEMass/dPIEMassSph default to Lenstool-native parameterization (approved: internal variant → dPIEMassB0/dPIEMassB0Sph + from_b0 classmethod); workspace follow-up (autolens_workspace + autolens_workspace_test) absorbs lenstool-scaling-slam (SLaM PR3 of autolens_workspace#265)
 - repos:
   - PyAutoGalaxy: feature/dpie-lenstool-default
+  - autolens_workspace: feature/dpie-lenstool-default
+  - autolens_workspace_test: feature/dpie-lenstool-default
