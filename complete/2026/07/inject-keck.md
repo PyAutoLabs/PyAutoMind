@@ -1,3 +1,15 @@
+## inject-keck
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/54
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/55 (squash 78ac5d303)
+- Phase 2b of simulate.md: Keck prepared-frame injection, offset-based placement — offsets_to_reference pre-pass + mosaic_geometry (lifted from combine, shared) + target-at-mosaic-centre convention + frame-products pixmap inversion; NEVER raw header WCS. inject_position = offset-from-target. inject_psf REQUIRED (epoch-specific AO PSF; auto tier-A = follow-up). No ERR bookkeeping (keck noise constructed from mosaic downstream). Hook moved post-_ground_prepare for all paths (no-op for HST/JWST). render_via_pixmap shared core. Suite 250/3skip incl. placement-consistency property test.
+- Design fact: consistently-placed injection leaves re-measured phase-correlation registration unchanged in expectation; recovery spike (B1938+666) includes the offsets with/without check.
+- Trap: mosaic_geometry extraction initially dropped local ny,nx still used by combine — existing nirc2 combine tests caught it pre-commit (the witness working).
+- OPEN validation: B1938+666 recovery run (needs KOA spec YAML + tier-A PSF candidate); COSMOS-Web JWST recovery run also still pending.
+- Batched judgment items (validated at merge): inject_psf-required; offset-from-target semantics.
+
+## Original prompt
+
 # Inject stage phase 2b: Keck injection into prepared frames (offset-based registration)
 
 Type: feature

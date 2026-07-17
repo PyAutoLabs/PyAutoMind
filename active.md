@@ -1,19 +1,6 @@
 # Active Tasks
 
 
-## inject-keck
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/54
-- session: claude (CLI, 2026-07-17)
-- status: library-shipped, awaiting-merge — PR PyAutoReduce#55 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-17; 2 batched judgment items on #54 (inject_psf-required; offset-from-target semantics)
-- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/55
-- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; release validation stale (5 libs)
-- worktree: ~/Code/PyAutoLabs-wt/inject-keck
-- autonomy: supervised (--auto; prompt header — registration design was judgment-shaped, now resolved on #54)
-- prompt: active/inject_stage_keck.md
-- note: phase 2b of simulate.md — Keck prepared-frame injection; placement rides measured offsets (offsets_to_reference pre-pass + mosaic-centre target convention + pixmap inversion), NEVER raw header WCS; inject_psf required (epoch-matched auto = follow-up); no ERR path (keck noise constructed downstream). Batched judgment items on the issue.
-- repos:
-  - PyAutoReduce: feature/inject-keck
-
 ## aggregator-lens-profiling
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/171
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae

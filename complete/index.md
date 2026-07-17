@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-621 records across 5 buckets.
+622 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -96,6 +96,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [hygiene-perf-phase4](2026/07/hygiene-perf-phase4.md) — unit-test / workspace-testmode / function profiling — complete
 - [import-time-heart-leg](2026/07/import-time-heart-leg.md) — hygiene follow-up — complete
 - [inject-jwst](2026/07/inject-jwst.md)
+- [inject-keck](2026/07/inject-keck.md)
 - [inject-stage-hst-imaging](2026/07/inject-stage-hst-imaging.md)
 - [intake-agent](2026/07/intake-agent.md)
 - [intake-census-dashboard](2026/07/intake-census-dashboard.md)
