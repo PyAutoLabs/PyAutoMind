@@ -4,7 +4,9 @@
 ## inject-alma-simobserve
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/56
 - session: claude (CLI, 2026-07-17)
-- status: library-dev
+- status: library-shipped, awaiting-merge — PR PyAutoReduce#57 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/57
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; release validation stale (5 libs)
 - worktree: ~/Code/PyAutoLabs-wt/inject-alma-simobserve
 - autonomy: safe (--auto; feature cap)
 - prompt: active/inject_alma_simobserve.md
