@@ -26,6 +26,16 @@
   - autolens_jax_joss: main (born this task)
 
 
+## env-single-resolver
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 2; epic #155)
+- status: library-dev — one resolver: run_smoke imports autobuild/env_config, fork deleted x3
+- worktree: ~/Code/PyAutoLabs-wt/env-single-resolver
+- autonomy: supervised
+- repos:
+  - autofit_workspace_test: feature/env-single-resolver
+  - autogalaxy_workspace_test: feature/env-single-resolver
+  - autolens_workspace_test: feature/env-single-resolver
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: ALL PHASES COMPLETE 2026-07-16 (16+ merged PRs; 3 refusal mechanisms live incl. guard v1.1; epic #155 = remaining-queue tracker: Ph3 steps 2-8, Ph4 four tasks, Ph2 satellites, Ph5 items 3-6)
