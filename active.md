@@ -19,17 +19,6 @@
 - repos:
   - autolens_workspace_developer: feature/pix-nonfinite-localisation
 
-## cti-resurrection-phase4
-- issue: https://github.com/PyAutoLabs/autocti_workspace/issues/1
-- session: claude (CLI, 2026-07-17)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/cti-resurrection-phase4
-- autonomy: supervised
-- prompt: active/cti_resurrection_phase4_workspace.md
-- note: Phase 4 of the CTI resurrection epic (0-3 merged). 118 scripts / 79 notebooks onto current APIs: plot function API (70 scripts), simulator/fitsable/priors drift, config sync, TEST_MODE validation. Notebooks regenerate at release (Phase 5).
-- repos:
-  - autocti_workspace: feature/cti-resurrection-phase4
-  - PyAutoCTI: feature/cti-resurrection-phase4
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
@@ -40,7 +29,6 @@
 - note: 5-phase epic (one-shot attempt per user); new repo autolens_jax_joss (PyAutoLabs, public) born alongside; datasets SDP.81 / RXJ1131 / A2744 user-approved
 - repos:
   - autolens_jax_joss: main (born this task)
-
 
 
 ## build-chain-umbrella
