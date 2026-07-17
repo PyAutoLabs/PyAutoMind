@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-625 records across 5 buckets.
+627 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -109,6 +109,8 @@ _(curate hard-won records here — survives regeneration.)_
 - [interferometer-analysis-fitexception](2026/07/interferometer-analysis-fitexception.md) — interferometer (+point_source) log_likelihood_function lacked imaging's NumPy-path try/except→FitException gua…
 - [inversion-testmode-singular-guard](2026/07/inversion-testmode-singular-guard.md) — release-tail singular/non-PD inversion FAILs (slam/cpu_fast_modeling) were a flaky TEST_MODE artifact, not a c…
 - [jax-autodiff-gradients-audit](2026/07/jax-autodiff-gradients-audit.md) — 3-phase JAX autodiff gradients audit complete in one supervised session — every smooth likelihood FD-certified…
+- [jax-cache-default](2026/07/jax-cache-default.md) — + XLA_FLAGS clobber fix
+- [jax-compile-time-research](2026/07/jax-compile-time-research.md)
 - [jax-grad-param9-autodiff-fd-mismatch](2026/07/jax-grad-param9-autodiff-fd-mismatch.md) — jax_grad imaging pixelization parameter-9 autodiff-vs-FD mismatch → parameter-specific documented FD exclusion…
 - [jax-gradient-optimizer-benchmark](2026/07/jax-gradient-optimizer-benchmark.md)
 - [jax-pytree-partition-vars-no-dict](2026/07/jax-pytree-partition-vars-no-dict.md)

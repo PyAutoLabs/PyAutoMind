@@ -1,3 +1,14 @@
+# JAX persistent compilation cache by default (+ XLA_FLAGS clobber fix)
+
+- **Issue:** PyAutoConf#127 (closed) · **PR:** PyAutoConf#128 (merged 2026-07-17)
+- **Repos:** PyAutoConf (`autoconf/jax_wrapper.py`, new `test_autoconf/test_jax_wrapper.py`)
+- **What:** `JAX_COMPILATION_CACHE_DIR` defaults to `$XDG_CACHE_HOME/pyauto_jax` / `~/.cache/pyauto_jax` when unset (pre-set respected; empty string disables); `JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS` defaults to 1; first-compile UX log line. Bug fix: wrapper now APPENDS the constant_folding disable to existing `XLA_FLAGS` instead of overwriting (was silently discarding user/job flags — --xla_dump_to, autotune).
+- **Why:** rollout of autolens_profiling#71 verdict — warm compiles for every user, no workspace config changes (env-based; target corrected autofit→PyAutoConf at start_dev).
+- **Tests/verification:** 9 new env-handling tests (no JAX import); 147 autoconf; 1493 PyAutoFit downstream against the branch; fresh-process proof env-only path reaches jax.config and writes cache entries.
+- **Heart:** RED at both PR-opens (5 pre-existing unrelated reasons), human-acked contemporaneously; merges human (2026-07-17).
+
+## Original prompt
+
 # Enable the JAX persistent compilation cache by default across the stack
 
 Type: feature

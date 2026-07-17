@@ -1,3 +1,15 @@
+# JAX compile-time research — settings suffice, no restructure
+
+- **Issue:** autolens_profiling#71 (closed) · **PR:** autolens_profiling#73 (merged 2026-07-17)
+- **Repos:** autolens_profiling (additive `jax_compile/`: probe.py, README research note, results)
+- **Question:** jit boundaries inside the source to break up compilation, vs settings/small changes?
+- **Verdict:** settings suffice. Persistent compilation cache certified both scales (local MGE vag 117s→2.3s, 51×; A100 pixelized Nautilus end-to-end 5518s→937s, 5.9× — the 1h10m input_reduce_fusion compile serializes to 1.7MB). lax.map/vmap batching exonerated by controlled A/B (7m23s vs 7m24s identical). Differentiation is 11–15× jit's compile (inherent to AD). Compile cost is op-pattern-driven, not complexity-driven. Piecewise source jit-boundaries rejected by evidence.
+- **Key traps recorded:** XLA compiles on HOST CPUs — compile timings load-sensitive even for GPU jobs (morning matrix wrong by up to 7×); slow-compile alarm banner re-fires during ONE compile; autoconf jax_wrapper CLOBBERED XLA_FLAGS (fixed in PyAutoConf#128) — made dump flags look inert and invalidated the 2026-07-15 "autotune ruled out" A/B (now unproven).
+- **Follow-ups:** cache-by-default SHIPPED same day (PyAutoConf#127/#128); cold-compile reduction research filed (draft/research/workspaces/investigate_ways_to_reduce_the_cold_jax.md); HLO artifact un-parked (re-run after #128).
+- **Provenance:** started by bg session b44b0e0f 2026-07-16 (dup issue #72 filed by evening session, closed); resumed and completed by evening/morning session 2026-07-16/17.
+
+## Original prompt
+
 # JAX compile time is prohibitive for complex likelihood functions and JAX-native samplers
 
 Type: research
