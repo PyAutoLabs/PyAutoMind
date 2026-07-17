@@ -97,13 +97,3 @@
   - PyAutoGalaxy: feature/potential-correction-port
   - PyAutoLens: feature/potential-correction-port
 
-## test-mode-bypass-completed
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1387
-- session: claude --resume ce78c7e9-3f34-4983-bb53-8840527c1fb6
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/test-mode-bypass-completed
-- autonomy: supervised
-- prompt: active/test_mode_bypass_never_writes_the_completed.md
-- note: one-line fix + test (paths.completed() in _fit_bypass_test_mode). Rider deferred: remove the stopgap in autolens_profiling pipeline_resume/slam_resume.py once compile-census-final frees that repo (stopgap is a no-op after this fix).
-- repos:
-  - PyAutoFit: feature/test-mode-bypass-completed

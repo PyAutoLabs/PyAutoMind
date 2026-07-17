@@ -1,3 +1,11 @@
+## test-mode-bypass-completed
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1387 (closed)
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1388 (MERGED)
+- summary: One-line fix — _fit_bypass_test_mode now calls paths.completed() before returning (mirrors start_resume_fit), so PYAUTO_TEST_MODE=2/3 bypassed fits are resumable; new TestBypassWritesCompleted asserts the marker lands in the output zip (test config remove_files:true leaves only the zip — assert zip membership, not paths.is_complete) and a poisoned second fit() takes result_via_completed_fit. Suite 1497p/1s. Rider still open: remove the now-no-op stopgap in autolens_profiling pipeline_resume/slam_resume.py when compile-census-final frees that repo.
+
+## Original prompt
+
 # Test-mode bypass never writes the .completed marker, so bypassed fits
 
 Type: bug
