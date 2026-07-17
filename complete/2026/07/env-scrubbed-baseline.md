@@ -1,0 +1,5 @@
+## env-scrubbed-baseline
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 3; epic #155)
+- completed: 2026-07-17
+- library-pr: PyAutoBuild#165 (PYAUTO_ base scrub) + autofit_workspace_test#54 / autogalaxy_workspace_test#75 / autolens_workspace_test#180 (smoke profiles own SKIP_WORKSPACE_VERSION_CHECK) — all merged
+- summary: env-profile redesign migration step 3 — scrubbed base env. build_env_for_script strips the managed PYAUTO_ family from ambient before applying the profile (only PYAUTO_*, not infra vars — deny-list not allowlist, corrected from doc §5). Smoke profiles gain SKIP_WORKSPACE_VERSION_CHECK so the mega-run's ambient injection isn't lost to the scrub. Proven byte-identical on the real mega-run CI env (not synthetic); ambient PYAUTO_SKIP_API_GATE leak 65->0. Coordinated 4-repo set merged together; all smoke gates green (autolens after the subhalo_recovery fix #181 landed). NEAR-MISS avoided: first attempt's synthetic-clean-env proof missed the CI env: injection; this time proved against both PR-gate and mega-run envs. Steps 4-8 remain on #161.

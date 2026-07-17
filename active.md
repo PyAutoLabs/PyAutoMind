@@ -15,18 +15,6 @@
 
 
 
-## env-scrubbed-baseline
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 3; epic #155)
-- status: shipped-but-HELD — 4 PRs (PyAutoBuild#165 + afwt#54/agwt#75/alwt#180); autofit+autogalaxy smoke GREEN, autolens#180 red on PRE-EXISTING subhalo_recovery regression (main also red; bug filed draft/bug/autolens/subhalo_recovery_iterative_dkappa_collapsed.md). Coordinated set — merge all 4 once autolens smoke green
-- worktree: ~/Code/PyAutoLabs-wt/env-scrubbed-baseline
-- autonomy: supervised
-- repos:
-  - PyAutoBuild: feature/env-scrubbed-baseline
-  - autofit_workspace_test: feature/env-scrubbed-baseline
-  - autogalaxy_workspace_test: feature/env-scrubbed-baseline
-  - autolens_workspace_test: feature/env-scrubbed-baseline
-
-
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
