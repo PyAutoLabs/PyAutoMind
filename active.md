@@ -25,6 +25,7 @@
 - repos:
   - autolens_workspace_test: feature/aggregator-lens-profiling
   - autofit_workspace_test: feature/aggregator-lens-profiling
+  - PyAutoFit: feature/aggregator-lens-profiling
 
 
 ## jax-compile-time-research
