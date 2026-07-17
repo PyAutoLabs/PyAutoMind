@@ -85,11 +85,13 @@
 
 ## ep-projection-weights
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1382
-- status: awaiting-input — issue filed 2026-07-17; PAUSED at user request for external review of the issue before implementation begins
+- status: library-shipped, awaiting-merge — PR PyAutoFit#1383 (pending-release); tests 1494p/1s; shipped through Heart RED (same 6 pre-existing unrelated reasons) on explicit user PR-open instruction 2026-07-17
 - worktree: ~/Code/PyAutoLabs-wt/ep-projection-weights (not yet created — /start_library on resume)
 - autonomy: supervised
 - prompt: active/ep_projection_linear_weights_as_log.md
-- note: EP sampler-factor projection feeds LINEAR samples.weight_list into AbstractMessage.project (requires LOG weights) -> boundary attractor -> sigma-collapse. Root-caused by slope-hierarchy (Jammy2211/slope_hierarchy#1); that project's goal 2 is blocked on this fix. One focused PR: seam fix + regression test + call-site audit (Bug Agent's too-large sizing is keyword-driven, overridden in plan). Suggested branch feature/ep-projection-weights; PyAutoFit unclaimed, main clean.
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1383
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; release validation stale (5 libs)
+- note: TWO stacked defects fixed (investigation upgraded during impl): PRIMARY = TransformedMessage.project never transformed samples to base space (equal-weight cluster at 2.05 projected to 2.97); secondary = linear weights fed to log-weight moment match. Regression test fails on either alone. slope-hierarchy goal 2 unblocks on merge (rerun submit_ep after clearing output/<sample>/ep on RAL).
 - repos:
 
 ## slope-hierarchy
