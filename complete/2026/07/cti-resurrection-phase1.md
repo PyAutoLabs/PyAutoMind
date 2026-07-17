@@ -1,3 +1,13 @@
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/84 (closed)
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/85 (merged 0aad137eb)
+- summary: CTI resurrection Phase 1 — visualization rewritten on the matplotlib function API, ending the Phase-0 quarantine. Deleted the Plotter/PlotterInterface object stack (5 Plotter + 3 PlotterInterface classes, abstract_plotters, get_visuals). New: autocti/util/plot_utils.py (plot_cti_1d primitive: errorbar/log-y/zero-line/text annotations + region title/text/FPR-mask helpers), per-domain function modules dataset_1d/plot/{dataset_1d_plots,fit_plots}.py + charge_injection/plot/{imaging_ci_plots,fit_ci_plots}.py (subplot_*/figure_*/*_list/fits_fit), config-gated orchestrators model/plotter.py + PlotterDataset1D/PlotterImagingCI mirroring autogalaxy/analysis/plotter.py, autocti/plot/__init__.py rebuilt as the function namespace, visualize.yaml plots schema simplified to ag-style keys. During-fit visualization runs end-to-end again. Tests: quarantine removed, plot tests rewritten (plot_patch modernized to intercept Figure.savefig); 266 passed / 5 skipped (was 236/5).
+- traps: autoarray's subplot_save does NOT unpack list-valued output formats — every entry point must do `output_format[0]` when given the config list (first bug found: files saved as `data.['png']`). ag's plot_patch patches BOTH pyplot.savefig and matplotlib.figure.Figure.savefig (the function API saves via fig.savefig). CTI cannot import autogalaxy's plot_utils (dependency direction) — the helpers were ported, not imported.
+- heart: shipped + merged through the same 5 pre-existing CTI-unrelated organism-scope RED reasons on human ack 2026-07-17 ("Ship + merge").
+- epic-next: Phase 2 autofit sync (5 skipped aggregator tests -> AnalysisFactor/FactorGraphModel; consider mirroring ag's deletion of aggregator tests) starts immediately per the same human authorization.
+
+## Original prompt
+
 # CTI resurrection — Phase 1: Plotter → matplotlib visualization migration
 
 Type: feature
