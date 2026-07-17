@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-618 records across 5 buckets.
+620 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -19,6 +19,7 @@ _(curate hard-won records here — survives regeneration.)_
 ## 2026/07
 
 - [afa-wiki-currency-wiring-afa-skill-tranche](2026/07/afa-wiki-currency-wiring-afa-skill-tranche.md) — both autofit_assistant follow-ups shipped in one --auto session (one in-session Heart-YELLOW ack covering both…
+- [agent-failure-modes](2026/07/agent-failure-modes.md) — campaign #155 Phase 5 capstone. A-E catalogue validated by measurement; enlarged out-of-sample (F1-F5); taxono…
 - [aggregator-output-contracts](2026/07/aggregator-output-contracts.md)
 - [aggregator-profiling](2026/07/aggregator-profiling.md) — Aggregator profiling harness (autofit_workspace_test scripts/profiling/aggregator/ — mock results via real Dir…
 - [aggregator-quick-fit-consolidation](2026/07/aggregator-quick-fit-consolidation.md) — guides/results tutorials ran own capped fits pruning to 2 samples vs deep [-10]/[9] IndexError → consolidate o…
@@ -94,6 +95,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [hygiene-file-modes](2026/07/hygiene-file-modes.md) — crlf / config / artifacts — complete
 - [hygiene-perf-phase4](2026/07/hygiene-perf-phase4.md) — unit-test / workspace-testmode / function profiling — complete
 - [import-time-heart-leg](2026/07/import-time-heart-leg.md) — hygiene follow-up — complete
+- [inject-jwst](2026/07/inject-jwst.md)
 - [inject-stage-hst-imaging](2026/07/inject-stage-hst-imaging.md)
 - [intake-agent](2026/07/intake-agent.md)
 - [intake-census-dashboard](2026/07/intake-census-dashboard.md)

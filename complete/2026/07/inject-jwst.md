@@ -1,3 +1,14 @@
+## inject-jwst
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/52
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/53 (squash c7283f50e)
+- Phase 2a of simulate.md: JWST _cal injection. Per-adapter input-units contract (InstrumentAdapter.inject_units): HST e-/s per pixel; JWST Jy per pixel via the frame's own PIXAR_SR — electrons_per_input × sci_per_electron reduces to 1/(PIXAR_SR·1e6), injected MEAN flux-exact and gain-free; nominal e_per_dn=2 sizes Poisson width only (disclosed in provenance units_note). _chip_units replaces the scalar factor; injected variance enters frame ERR before image3 resamples (the JWST noise stage reads propagated ERR). Gate = (hst,astrodrizzle)|(jwst,jwst_image3). Suite 246/3skip.
+- Trap: review caught a REAL NameError — no-overlap injection referenced units_note before assignment; initialize loop-note vars before the loop. Regression test added.
+- OPEN: COSMOS-Web recovery run (prototypes/inject_recovery_jwst.py, F150W prog 1727) never run — heavy (image3 twice); schedule with 2b validation.
+- Next: phase 2b Keck (registration design: offsets_to_reference pre-pass, NOT header WCS) in flight; phase 3 ALMA simobserve in draft.
+
+## Original prompt
+
 # Inject stage phase 2a: extend synthetic-source injection to JWST _cal frames
 
 Type: feature
