@@ -27,13 +27,12 @@
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
-- status: awaiting-merge — PR autolens_workspace#282 open (pending-release). COMPLETE first A100 sweep committed (autolens_jax_joss@64204f6): 8/8 runnable rows + imaging Adam-vs-Nautilus comparison (Nautilus finds pixelized basin +7357 in 16.3m; Adam cold-start does not). Cluster-scale rows compile-dominated (~90min fusion compile) — tuning prompt drafted (draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md). Remaining: HUMAN merge #282; SDP.81 CASA export unblocks interferometer+imaging_and_interferometer+start_here rewrite (data_prep/sdp81/); weak JAX-viz = PyAutoLens#614
+- status: MERGED 2026-07-17 (#282) — worktree removed, branch deleted. Epic remains open for: SDP.81 CASA export leg (data_prep/sdp81/ -> 2 interferometry benchmarks + interferometer/start_here rewrite) and cluster-benchmark tuning (draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md). 8/8 runnable A100 rows committed (autolens_jax_joss@64204f6)
 - worktree: ~/Code/PyAutoLabs-wt/jax-joss-benchmarks
 - autonomy: supervised
 - prompt: active/autolens_jax_joss_benchmark_repo.md
 - note: 5-phase epic (one-shot attempt per user); new repo autolens_jax_joss (PyAutoLabs, public) born alongside; datasets SDP.81 / RXJ1131 / A2744 user-approved
 - repos:
-  - autolens_workspace: feature/jax-joss-benchmarks
   - autolens_jax_joss: main (born this task)
 
 
