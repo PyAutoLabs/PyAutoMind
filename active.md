@@ -43,3 +43,14 @@
 - repos:
   - PyAutoBrain: feature/autocti-assistant
   - autolens_assistant: feature/autocti-assistant
+
+## potential-correction-uv-campaign
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/627
+- session: claude (CLI, 2026-07-17)
+- status: workspace-dev (research campaign)
+- worktree: ~/Code/PyAutoLabs-wt/potential-correction-uv-campaign
+- autonomy: supervised
+- prompt: active/potential_correction_realistic_uv_campaign.md
+- note: iterative dkappa-RECOVERY certification for al.pc interferometer (#623 engineering all merged) on the REAL SDP.81 uv coverage (/mnt/ral/jnightin/autolens_jax_joss/dataset/interferometer/sdp81*, 3 tiers). Phase A harness in autolens_workspace_developer/potential_correction_campaign/ (simulate SIE+NFW through real uv, source mesh sized for chi2/dof~1, one-shot + iterative sparse route, xp=jnp); Phase B RAL/A100 detached runs (refresh RAL mirror FIRST — needs today's 12 merges; nohup+setsid+sentinel; cache precision operator); Phase C results + interferometer section in ws guides/advanced/potential_correction.py. Traps on issue #627.
+- repos:
+  - autolens_workspace_developer: feature/potential-correction-uv-campaign
