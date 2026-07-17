@@ -1,3 +1,15 @@
+> **RESOLVED 2026-07-17 — verdict: JUSTIFIED BUT NOT AS PROPOSED.** An independent
+> reviewer ran every check on their own machine. Confirmed C1, C4 (d log det/d log lam
+> = 1798 to machine precision — the current evidence is scientifically sound), C6/C7,
+> C8. **REFUTED C10**: ConstantZeroth is dead code (two bugs) — the "existing tool"
+> escape hatch does not exist (filed: constant_zeroth_broken_dead_code.md). Decision:
+> relative lift = regression (C4); pseudo-determinant = breaks archived comparability;
+> do-nothing = defensible (~0.2 nats). The ONLY endorsed change is an OPT-IN,
+> NON-DEFAULT gradient-safe log-det for comparison — see
+> draft/feature/autoarray/gradient_safe_logdet_settings_option.md. The double-square
+> (C9) spun out to its own probe. This file is retained as the adversarial brief of
+> record; the verification work is done.
+
 # PROBE: is changing `log_det_regularization_matrix_term` absolutely justified?
 
 **This is an adversarial review request, not an implementation task. Your job is

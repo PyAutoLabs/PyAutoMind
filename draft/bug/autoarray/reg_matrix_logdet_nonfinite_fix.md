@@ -1,3 +1,5 @@
+# [WITHDRAWN 2026-07-17] superseded by draft/feature/autoarray/gradient_safe_logdet_settings_option.md — the verdict ruled out changing the DEFAULT log-det (C4: current lam-dependence is correct to machine precision). Kept for provenance only. Do NOT start.
+
 # Fix the non-finite log_det_regularization_matrix_term (pix NaN phase 2)
 
 Type: bug
