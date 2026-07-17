@@ -1,17 +1,6 @@
 # Active Tasks
 
 
-## gradient-safe-logdet
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/391
-- session: claude (CLI, 2026-07-17)
-- status: library-shipped, awaiting-merge — PyAutoArray#392 (pending-release, MERGEABLE). Merge stays HUMAN. Follow-up at ship: JAX grad-finiteness assertion -> autogalaxy_workspace_test (option i, new coverage; autolens_wst is claimed by dpie-lenstool-default).
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/392 (926 tests passed = every existing log_evidence test unchanged = byte-identical default; Heart RED acked contemporaneously — 5 pre-existing unrelated reasons, RED verbatim "PyAutoLens: 1 uncommitted source change(s)")
-- worktree: ~/Code/PyAutoLabs-wt/gradient-safe-logdet
-- autonomy: supervised
-- prompt: active/gradient_safe_logdet_settings_option.md
-- note: The ONLY endorsed change from the reg-logdet adversarial-review verdict (do NOT change the default; C4 = current lam-dependence correct to machine precision). Settings.log_det_method (Optional->conf fallback, like use_positive_only_solver): default "cholesky" byte-identical; opt-in "slogdet" = finite where Cholesky NaNs, identical where PD, general incl. Adapt. Applies to BOTH log-det terms via shared _log_det_symmetric_from helper. NO workspace config mirroring needed — packaged-only keys layer through production config (VERIFIED, like nnls_target_kappa; my earlier single-path Config KeyError test was artificial). slogdet is actually MORE accurate than cholesky on ill-conditioned PD matrices (matches numpy log det exactly; cholesky ~2.5e-7 off) — another reason it's non-default/for-comparison.
-- repos:
-  - PyAutoArray: feature/gradient-safe-logdet
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
