@@ -16,19 +16,6 @@
 
 
 
-## floors-adoption
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155 (Phase 4 task 1; via draft/feature/workspaces/minimum_library_version_adoption.md)
-- status: library-dev — add minimum_library_version=2026.7.9.1 floor to 7 workspace configs (behavioral no-op; canonical-key migration)
-- worktree: ~/Code/PyAutoLabs-wt/floors-adoption
-- autonomy: supervised
-- repos:
-  - autofit_workspace: feature/floors-adoption
-  - autogalaxy_workspace: feature/floors-adoption
-  - autolens_workspace: feature/floors-adoption
-  - HowToFit: feature/floors-adoption
-  - HowToGalaxy: feature/floors-adoption
-  - HowToLens: feature/floors-adoption
-  - euclid_strong_lens_modeling_pipeline: feature/floors-adoption
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155

@@ -1,0 +1,5 @@
+## floors-adoption
+- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155 (Phase 4 task 1)
+- completed: 2026-07-17
+- library-pr: autofit_workspace#97, autogalaxy_workspace#134, autolens_workspace#288, HowToFit#20, HowToGalaxy#23, HowToLens#32, euclid_strong_lens_modeling_pipeline#28 — all merged
+- summary: Phase 4 task 1 — adopt version.minimum_library_version floor (2026.7.9.1) across all 7 workspace config/general.yaml, migrating off the legacy workspace_version key. Behavioural no-op (autoconf resolves the same value; both were 2026.7.9.1). Floor is INSTALLABLE — verified PyPI: 2026.6.x-2026.7.6.649 YANKED, 2026.7.9.1/2026.7.15.1 ok (this closes the campaign's recurring floor-must-be-installable bug). workspace_version KEPT for now (removal sequenced after version_skew rework, Phase 4 task 2, which still reads it). All 6 smoke gates green (euclid no gate). Comment documents bump-deliberately rule. Follow-ups: Phase 4 task 2 version_skew rework (draft/feature/pyautoheart/version_skew_floor_rework.md) now unblocked; then task 3 assistant --check-version, task 4 README pins + legacy-key removal.
