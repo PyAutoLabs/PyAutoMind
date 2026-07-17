@@ -4,7 +4,9 @@
 ## inject-keck
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/54
 - session: claude (CLI, 2026-07-17)
-- status: library-dev
+- status: library-shipped, awaiting-merge — PR PyAutoReduce#55 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-17; 2 batched judgment items on #54 (inject_psf-required; offset-from-target semantics)
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/55
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; release validation stale (5 libs)
 - worktree: ~/Code/PyAutoLabs-wt/inject-keck
 - autonomy: supervised (--auto; prompt header — registration design was judgment-shaped, now resolved on #54)
 - prompt: active/inject_stage_keck.md
