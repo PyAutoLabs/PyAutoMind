@@ -110,7 +110,7 @@
 
 ## results-inspector-mcp
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/12
-- status: workspace-dev
+- status: awaiting-merge (PRs autofit_assistant#13 + autolens_assistant#75 open; shipped 2026-07-17 with human RED-ack, unrelated PyAutoLens dirty file)
 - worktree: ~/Code/PyAutoLabs-wt/results-inspector-mcp
 - autonomy: supervised
 - prompt: active/results_inspector_mcp.md
