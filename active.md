@@ -1,19 +1,6 @@
 # Active Tasks
 
 
-## inject-alma-simobserve
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/56
-- session: claude (CLI, 2026-07-17)
-- status: library-shipped, awaiting-merge — PR PyAutoReduce#57 (pending-release); shipped through unrelated Heart RED on contemporaneous user ack 2026-07-17
-- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/57
-- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; release validation stale (5 libs)
-- worktree: ~/Code/PyAutoLabs-wt/inject-alma-simobserve
-- autonomy: safe (--auto; feature cap)
-- prompt: active/inject_alma_simobserve.md
-- note: phase 3 (FINAL) of simulate.md — simobserve acquire-alternative for the visibility branch; inject_image Jy/pixel → 4-axis skymodel → headless simobserve → existing split/extract/assemble/package; alma_sim_* dials; mode 2 (uv-plane injection into real MS) DEFERRED with recorded reason.
-- repos:
-  - PyAutoReduce: feature/inject-alma-simobserve
-
 ## aggregator-lens-profiling
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/171
 - session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae

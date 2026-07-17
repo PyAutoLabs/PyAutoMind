@@ -1,3 +1,15 @@
+## inject-alma-simobserve
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/56
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/57 (squash 85893f692)
+- Phase 3 (FINAL) of simulate.md: simobserve acquire-alternative on the visibility branch. inject_image (Jy/pixel) → 4-axis Jy/pixel skymodel (RA---SIN/DEC--SIN/STOKES/FREQ) → headless simobserve (alma_sim_* dials; pwv=0 noiseless) → existing split/extract/assemble/package unchanged → al.Interferometer.from_fits. Sim MS: single field id 0, spw 0 — alma_uids/field/spws not required in sim mode; cache lifecycle bypassed (source=simobserve). Imaging gate admits visibility-domain injection; cutout domain stays rejected. Suite 260/3skip (10 new casatools-free tests).
+- DEFERRED with recorded reason (simulate.md): uv-plane injection into a real MS (true Balrog analogue) — needs FT-at-uv-points + phase-centre machinery; file as own prompt if real-MS calibration systematics matter.
+- Trap: the phase-2b gate test asserting alma+inject raises became stale by design — the rejection WAS the old contract; updated to cutout-rejection.
+- OPEN evidence across the inject arc: COSMOS-Web JWST recovery, B1938+666 Keck recovery + re-registration check, casatasks spike (prototypes/inject_alma_simobserve_spike.py; casatasks not in dev venv, rides the alma extra).
+- The simulate.md verdict is now FULLY BUILT: #45 verdict, #47 HST (validated 0.971), #53 JWST, #55 Keck, #57 ALMA.
+
+## Original prompt
+
 # Inject stage phase 3: ALMA — simobserve acquire-alternative + uv-plane injection
 
 Type: feature
