@@ -1,17 +1,6 @@
 # Active Tasks
 
 
-## cti-resurrection-phase2
-- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/86
-- session: claude (CLI, 2026-07-17)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/cti-resurrection-phase2
-- autonomy: supervised
-- prompt: active/cti_resurrection_phase2_autofit_sync.md
-- note: Phase 2 of the CTI resurrection epic (Phases 0+1 merged #83/#85). Port the 5 skipped multi-analysis aggregator tests to AnalysisFactor/FactorGraphModel + autofit drift sweep. TRAP: worktree activate.sh lacks PyAutoCTI on PYTHONPATH — prepend manually.
-- repos:
-  - PyAutoCTI: feature/cti-resurrection-phase2
-
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: workspace-shipped, awaiting-merge — PR autolens_workspace#282 open (pending-release, notebooks regenerated); JOSS repo live with 10 benchmarks; 4 official A100 rows on RAL (point_source 5.95m / group 8.44m / imaging 10.0m / weak 0.75m). OVERNIGHT: RAL 330501 (cluster, 7h+ at bedtime) + 330527 (strong_and_weak -> imaging_and_point_source -> multi_band -> imaging --search nautilus). RESUME: (1) check both job logs + pull results/*.json from /mnt/ral/jnightin/autolens_jax_joss/results/ -> commit to JOSS repo + regen RESULTS.md; (2) resubmit clean viz-off re-timings of point_source/group/imaging (330501 rows carry viz overhead); (3) local saw_smoke2 (weak/features/strong_lensing/a2744.py TEST_MODE) died with session — optional, A100 strong_and_weak validates same composition; (4) final issue update + offer merge. FINDINGS: imaging cold-start Adam missed basin (logL -3e7, known open search question) -> nautilus row queued; cluster >>5min target, needs tuning (point-solver depth x 7 sources); weak JAX-viz crash = PyAutoLens#614

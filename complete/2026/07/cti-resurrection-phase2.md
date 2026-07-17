@@ -1,3 +1,13 @@
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/86 (closed)
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/87 (merged 12a3eca97)
+- summary: CTI resurrection Phase 2 — autofit sync. The 5 multi-analysis aggregator tests quarantined in Phase 0 (analysis summing removed from PyAutoFit) are ported to af.AnalysisFactor + af.FactorGraphModel and pass; the suite is now 271 passed / 0 skipped / 0 failed with no quarantines anywhere. Loaders: new _cti_list_from helper in aggregator/{fit_dataset_1d,fit_imaging_ci}.py extracts per-dataset CTI models from single-analysis OR factor-graph instances. Conftest: aggregator_from accepts a list of analyses, builds the graph with the model shared across factors, and rebuilds the mock samples against global_prior_model. Drift sweep clean; visualize_*_combined multi-dataset path exercised end-to-end by the graph fits.
+- traps: a factor-graph global_prior_model instance carries the per-factor child instances PLUS the FactorGraphModel itself as a trailing child — filter children by hasattr(child, "<component>") when unpacking. Samples built against the single shared model DON'T resolve against global_prior_model (paths gain per-factor prefixes like ('0','cti',...)) — rebuild Sample.from_lists against the global model. The database scraper error surfaces as a misleading sqlalchemy NoResultFound (the real KeyError is swallowed into the except branch's item.instance evaluation).
+- heart: shipped + merged through the same pre-existing CTI-unrelated organism-scope RED reasons on human ack 2026-07-17 ("Ship + merge + Phase 3").
+- epic-next: Phase 3 CI + ecosystem plumbing (GitHub Actions rework, worktree.sh/labels/Build/Heart registration, RTD/docs hub) starts immediately per the same human authorization.
+
+## Original prompt
+
 # CTI resurrection — Phase 2: autofit sync (factor-graph aggregator port)
 
 Type: feature
