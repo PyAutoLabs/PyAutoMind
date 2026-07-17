@@ -17,7 +17,7 @@
 
 ## env-scrubbed-baseline
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 3; epic #155)
-- status: library-dev — PYAUTO_-prefix base scrub + smoke profiles self-sufficient (SKIP_WORKSPACE_VERSION_CHECK); proven mega-run byte-identical, leak 65->0
+- status: shipped-but-HELD — 4 PRs (PyAutoBuild#165 + afwt#54/agwt#75/alwt#180); autofit+autogalaxy smoke GREEN, autolens#180 red on PRE-EXISTING subhalo_recovery regression (main also red; bug filed draft/bug/autolens/subhalo_recovery_iterative_dkappa_collapsed.md). Coordinated set — merge all 4 once autolens smoke green
 - worktree: ~/Code/PyAutoLabs-wt/env-scrubbed-baseline
 - autonomy: supervised
 - repos:
