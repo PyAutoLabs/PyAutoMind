@@ -51,7 +51,7 @@
 ## potential-correction-interferometer
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/623
 - session: claude (CLI, 2026-07-17)
-- status: library-dev
+- status: phase-1-shipped (PyAutoLens PR #624 OPEN — sparse w-tilde route verified ≡ dense; awaiting merge); phase 2 = iterative seam + workspace_test scripts
 - worktree: ~/Code/PyAutoLabs-wt/potential-correction-interferometer
 - autonomy: supervised
 - prompt: active/potential_correction_interferometer.md
