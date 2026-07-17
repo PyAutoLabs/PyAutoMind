@@ -1,3 +1,14 @@
+# Default XLA GPU autotuning off in jax_wrapper
+
+- **Issue:** PyAutoConf#131 (closed) · **PR:** PyAutoConf#132 (merged 2026-07-17)
+- **Repos:** PyAutoConf (`autoconf/jax_wrapper.py`, tests)
+- **What:** append `--xla_gpu_autotune_level=0` to XLA_FLAGS unless the user already sets an autotune level (any preset respected + suppresses the default); INFO log line. Pattern of #128.
+- **Why:** autolens_profiling#74 verdict 2 — autotuning dominates cold GPU compiles (~7m30/fusion) with no measured eval gain on PyAuto likelihoods.
+- **Tests:** 151 autoconf (3 new + 2 updated) + 1496 PyAutoFit downstream; fresh-process both-paths verification.
+- **Heart:** RED (5 pre-existing unrelated reasons, list identical to #76's ack), human-acked per ship; merges human 2026-07-17.
+
+## Original prompt
+
 # Default XLA GPU autotuning off in the autoconf jax_wrapper (env-respecting,
 
 Type: feature

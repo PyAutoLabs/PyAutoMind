@@ -1,3 +1,14 @@
+# Cold JAX compile research — autotuning is the cost; verdict 2
+
+- **Issue:** autolens_profiling#74 (closed) · **PR:** autolens_profiling#76 (merged 2026-07-17)
+- **Repos:** autolens_profiling (jax_compile/ additions: findings 6–8 + verdict 2, trace_profile.py, A100 matrix results)
+- **Headline:** the pathological ~7m30 cold GPU compile IS XLA autotuning — hidden behind the pre-#128 XLA_FLAGS clobber (every prior "autotune off" run, incl. the 2026-07-15 "ruled out" A/B, silently ran autotune-on). Off: 17× cold probe (498s→29s), −40% cold full fit (2081s→1253s), bit-identical fixed-input logL, steady-eval parity (A100 matrix; 4800-eval fit faster end-to-end).
+- **Closed directions:** tracing floor is jax-internal (58% jax / 34% stdlib / 7% autoarray — no PyAuto lever); cache-proliferation + pre-warming deprioritized (cold now ~seconds); upstream XLA report moot (fusion explained; HLO dump artifact retained, RAL job 330596).
+- **Implementation:** PyAutoConf#131/#132 (merged same day) — wrapper defaults --xla_gpu_autotune_level=0, env-respecting.
+- **Combined effect with #128:** worst-case first-fit UX ~70 min → ~30 s; restarts warm from disk.
+
+## Original prompt
+
 # Investigate ways to reduce the COLD JAX compile time itself
 
 Type: research

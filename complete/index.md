@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-636 records across 5 buckets.
+639 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -41,6 +41,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autofit-navigator-catalogue-staleness](2026/07/autofit-navigator-catalogue-staleness.md) — regenerate — MERGED
 - [autolens-assistant-audit](2026/07/autolens-assistant-audit.md)
 - [autonomy-contract](2026/07/autonomy-contract.md)
+- [autotune-off-default](2026/07/autotune-off-default.md)
 - [brain-agent-commands](2026/07/brain-agent-commands.md)
 - [brain-lifecycle-path-fixes](2026/07/brain-lifecycle-path-fixes.md) — the shared sizing faculty's parse_prompt now covers the full Mind lifecycle layout — draft/ state folder strip…
 - [bug-agent](2026/07/bug-agent.md)
@@ -54,6 +55,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [colab-link-rot-libdocs](2026/07/colab-link-rot-libdocs.md)
 - [colab-maturity](2026/07/colab-maturity.md)
 - [colab-sim-verify-install](2026/07/colab-sim-verify-install.md)
+- [cold-compile-reduction](2026/07/cold-compile-reduction.md)
 - [community-ears-v2-prs](2026/07/community-ears-v2-prs.md) — CLOSED via PR
 - [community-voice-agent](2026/07/community-voice-agent.md) — birth of the community conductor — the Ears, the organism's receptive language function (Wernicke to the Works…
 - [consolidation-sweep](2026/07/consolidation-sweep.md)
@@ -74,6 +76,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
 - [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
 - [env-profile-validator](2026/07/env-profile-validator.md) — env-profile redesign migration step 1 (campaign #155 Phase 3): validate_env_profiles PR-time config check (sch…
+- [env-single-resolver](2026/07/env-single-resolver.md) — env-profile redesign migration step 2 — one resolver. The three run_smoke.py forks (byte-identical to each oth…
 - [ep-analytic-updates-scope](2026/07/ep-analytic-updates-scope.md) — EP phase 6 — scope analytic conjugate updates — plan DELIVERED
 - [ep-deterministic-reconcile](2026/07/ep-deterministic-reconcile.md) — EP phase 5 — three deterministic-variable mechanisms — DECIDED
 - [ep-diagnostics](2026/07/ep-diagnostics.md) — EP review Phase 4 — EPDiagnostics collector, live CSV/PNG artifacts, graph_factors.png, mean_field_summary, ch…
