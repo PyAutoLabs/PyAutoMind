@@ -1,0 +1,5 @@
+## branch-contribution-tool
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/130 (Phase 5 item 4)
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/139 (merged; live)
+- summary: blessed `branch_contribution` tool (PyAutoBrain/bin) — the ONE tested answer to "does this branch contribute content not already in main?" (D1/D2 failure class, hand-rolled 3x/2-wrong). Verdicts MERGED/ABSORBED/CONTRIBUTES/UNKNOWN with honest squash caveat + exit codes. --self-test constructs known-answer repos and asserts each verdict (D2's validate-against-ground-truth as CI); building the cases caught 2 test-setup subtleties (identical-sha cherry-pick, single-patch fake-squash). Wired into repo_cleanup skill so it's actually reached (C2). 143 passed. Also found: Phase 5 item 5 (router->body-map) is ALREADY DONE — sizing faculty loads repos.yaml dynamically; conductors derive from it; C1/C2 were agent shell-sweeps not conductor code. Item 6 (falsified-by checkpoint lines) remains.
