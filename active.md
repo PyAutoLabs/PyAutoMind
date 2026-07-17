@@ -1,6 +1,18 @@
 # Active Tasks
 
 
+## prior-config-cache
+- issue: https://github.com/PyAutoLabs/PyAutoConf/issues/129
+- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/prior-config-cache
+- autonomy: supervised
+- prompt: active/prior_config_cache.md
+- note: the aggregator arc's recorded deeper follow-up — 77% of summary/model load is default-prior config machinery; path_value_tuples re-sorted per lookup + linear scan + repeated identical queries. Instance-level caches (fresh instance per conf push = natural invalidation).
+- repos:
+  - PyAutoConf: feature/prior-config-cache
+
+
 ## cti-resurrection-phase2
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/86
 - session: claude (CLI, 2026-07-17)
