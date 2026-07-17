@@ -44,7 +44,7 @@
 ## dpie-lenstool-default
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/506
 - session: claude (CLI, 2026-07-17)
-- status: workspace-dev
+- status: shipped, awaiting-merge — library PyAutoGalaxy#509 + workspace autolens_workspace#287 + autolens_workspace_test#179 (all pending-release; merge order library-first; Heart RED acked twice — 6 pre-existing unrelated reasons)
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/509 (pending-release; 1003 tests passed; Heart RED acked — 6 pre-existing unrelated reasons)
 - worktree: ~/Code/PyAutoLabs-wt/dpie-lenstool-default
 - autonomy: supervised
