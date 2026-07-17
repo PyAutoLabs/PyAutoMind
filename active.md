@@ -60,7 +60,7 @@
 
 ## lr-free-multi-start-optimizers
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/101
-- status: workspace-dev — DIAGNOSIS COMPLETE + RESURRECTION BREAKTHROUGH; long-budget run 330598 (3000 steps) in flight
+- status: EXPERIMENT COMPLETE — awaiting ship decision (PR merge-order with #100; branch stacked)
 - worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (branch feature/lr-free-multi-start-optimizers @ 555eb4e, STACKED on #100's branch, pushed; RAL checkout synced to same commit)
 - autonomy: supervised (experiment)
 - prompt: active/lr_free_multi_start_optimizers.md
@@ -68,7 +68,9 @@
 - PHASE 2a (pix adam lr sweep 1e-3/3e-3/3e-2, jobs 330529-31) COMPLETE, NEGATIVE: best -28462 @ lr 3e-3 (vs 1e-2's -39888) — no lr within 46k nats of the Nautilus bar +17419. LR MIS-SCALING RULED OUT. Warm cache = 17-20min/job.
 - DIAGNOSIS CHAIN COMPLETE (jobs 330588/89/92/93): NaN mortality 16/16→0/16 by step 50 in BOTH broad and FD-certified narrow bands; reg pinned at 1.0 does NOT help; deaths scattered (reg 1e-4..4e3, r_E 1.36..6.4) → pixelized likelihood has HARD NON-FINITE WALLS everywhere (invalid inversions); even step 0 has only 13-14/16 finite grads. #100 failure = objective property, not optimizer knob.
 - RESURRECTION WORKS (330595, 600 steps): redraw dead starts + reinit vmapped opt state each step → population stays alive (14-16/16), adam@1e-2 climbs -51201→-21443 @ r_E 1.5690 (truth band) STILL IMPROVING at 575; prodigy -26946 @ r_E 1.258. Bar +17419 not yet reached. PROMOTION DESIGN IMPLICATION: af.MultiStart* needs restart-on-death, not just NaN-guards (apply_if_finite latches at the cliff).
-- RESUME: (1) read job 330598 (pixresur3k: adam+prodigy, 3000 steps, ~2.5h loop) — does descent reach/approach +17419? (2) Final findings section in lr_free_findings.md (MGE prodigy==adam; pix mortality diagnosis; resurrection viability). (3) ship_workspace (branch STACKED on #100's — coordinate merge order). (4) Draft follow-up prompts: localise-the-NaN library bug (PyAutoArray/Lens) + PyAutoFit multi-start resurrection+contrib-rules promotion. (5) Ship gate: offer merge + issue close per feedback_prompt_merge_close.
+- FINAL (330598, 3000 steps, 2.7h): adam+resurrect -51201 -> +1718 @ r_E 1.5704 (STILL improving; crossed positive logL); prodigy -15844 @ 1.2795. VERDICT: pix landscape searchable ONLY with restart-on-death, but Nautilus wins decisively there (+17419 in ~22min warm vs +1718 in 2.7h) — MGE conclusion INVERTS on inversion-heavy cells; gradient MAP recommendation confined to parametric likelihoods (where prodigy = lr-free at zero cost). Findings COMPLETE + pushed (lr_free_findings.md @ 1b3aef9).
+- FOLLOW-UP DRAFTS FILED (no issues yet): draft/bug/autoarray/pixelized_likelihood_nonfinite_regions.md (localise-the-NaN, highest leverage) + draft/feature/autofit/multistart_resurrection_and_contrib_rules.md (promotion spec).
+- SHIP: awaiting human decision on PR base (stacked on #100's unmerged branch: PR-to-main carries #100's commits; stacked PR base=feature/pixelized-gradient-experiment needs #100 merged first). Then ship_workspace + offer merge/close per feedback_prompt_merge_close.
 - next after ship: issue draft/research/autolens_workspace_developer/jax_native_posterior_sampler_wave.md (do not bulk-issue)
 - repos:
   - autolens_workspace_developer: feature/lr-free-multi-start-optimizers
