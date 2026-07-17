@@ -113,13 +113,14 @@
 
 ## lr-free-multi-start-optimizers
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/101
-- status: workspace-dev — phase 1 COMPLETE, phase 2a COMPLETE (negative), phase 2b OVERNIGHT job 330535
+- status: workspace-dev — phases 1+2a+2b COMPLETE; NaN-MORTALITY hypothesis testing (jobs 330588 broad / 330589 narrow)
 - worktree: ~/Code/PyAutoLabs-wt/pixelized-gradient-experiment (branch feature/lr-free-multi-start-optimizers @ 555eb4e, STACKED on #100's branch, pushed; RAL checkout synced to same commit)
 - autonomy: supervised (experiment)
 - prompt: active/lr_free_multi_start_optimizers.md
 - PHASE 1 (MGE, 12x300, laptop GPU) COMPLETE: ALL 10 rules basin-hit; prodigy (lr-free) BIT-IDENTICAL to tuned adam optimum (+31787.84, r_E 1.5997). Findings: searches_minimal/lr_free_findings.md (committed). Wiring rules for any promotion: per-start vmapped optimizer state (lr-free global scalars couple under stacked params — af.AbstractMultiStartGradient can NOT carry them as-is) + optax.apply_if_finite (forwards momo value= kwarg on optax>=0.2.5).
 - PHASE 2a (pix adam lr sweep 1e-3/3e-3/3e-2, jobs 330529-31) COMPLETE, NEGATIVE: best -28462 @ lr 3e-3 (vs 1e-2's -39888) — no lr within 46k nats of the Nautilus bar +17419. LR MIS-SCALING RULED OUT. Warm cache = 17-20min/job.
-- RESUME (morning): (1) read /mnt/ral/jnightin/pixgrad_logs/samp_pixlr_free_330535.log (phase 2b: prodigy/dadapt/mechanic on pix via pix_lr_free.py, submitted 2026-07-16 ~22:20, 8h limit). If they also stall ~-28k → failure is landscape/step-budget: next levers = PIX_N_STEPS=3000 rerun (env exists in pix_lr_free.py) and/or warm starts near the Nautilus mode r_E 1.31. (2) Then findings doc phase-2 section + ship_workspace (PR against main; branch stacked on #100's — coordinate merge order with #100). (3) Ship gate: offer merge + issue close per feedback_prompt_merge_close.
+- PHASE 2b (330535, 42min warm) NEGATIVE + DIAGNOSTIC: prodigy -50683 / dadapt -49124 / mechanic -50375, all r_E~1.427, 0/16 finals near truth. SMOKING GUN: best-history FROZEN bit-identical from step 25→275 for ALL rules (MGE identical wiring descends 300 steps) → hypothesis = broad starts walk off NaN cliffs within ~25 steps; apply_if_finite latches them AT the non-finite point (af.MultiStart* without guard = outright NaN death). If confirmed, #100's failure = broad-start NaN mortality, NOT lr/budget/rule.
+- RESUME: (1) read jobs 330588 (broad, finite-count diag) + 330589 (narrow U(0.4,0.6) FD-certified band) — narrow-alive+broad-dead confirms mortality → next lever = restart-dead-starts / NaN-resample strategy (library-relevant), not optimizer choice. (2) Then findings phase-2 section + ship_workspace (branch STACKED on #100's — coordinate merge order). (3) Ship gate: offer merge + issue close per feedback_prompt_merge_close.
 - next after ship: issue draft/research/autolens_workspace_developer/jax_native_posterior_sampler_wave.md (do not bulk-issue)
 - repos:
   - autolens_workspace_developer: feature/lr-free-multi-start-optimizers
