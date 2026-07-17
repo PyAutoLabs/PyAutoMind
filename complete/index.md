@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-622 records across 5 buckets.
+623 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -57,6 +57,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [consolidation-sweep](2026/07/consolidation-sweep.md)
 - [corrective-pr-heart-red](2026/07/corrective-pr-heart-red.md) — human-authorized corrective-PR exception for Heart RED — MERGED
 - [csv-api-lenstool](2026/07/csv-api-lenstool.md)
+- [cti-resurrection-phase0](2026/07/cti-resurrection-phase0.md) — Phase 0 of the CTI resurrection epic; issue stays the epic tracker or closes per phase
 - [database-latent-wheel-load](2026/07/database-latent-wheel-load.md) — database scripts failed on release wheels loading latent variables → AssertionError. Release-tail item D. Corr…
 - [delaunay-qhull-callback](2026/07/delaunay-qhull-callback.md)
 - [delete_pyautoheart_shim](2026/07/delete_pyautoheart_shim.md)

@@ -50,19 +50,6 @@
 - repos:
   - autolens_profiling: feature/jax-compile-time-research
 
-## cti-resurrection-phase0
-- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/82
-- session: claude (CLI, 2026-07-16)
-- status: library-shipped, awaiting-merge — PR PyAutoCTI#83 (pending-release); tests 236p/5s
-- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/83
-- heart-ack: 2026-07-16 human ack of RED for PR-open (6 pre-existing CTI-unrelated reasons: PyAutoLens uncommitted source; workspace validation 3-failed 2026-07-09; 58 stale parked scripts; manifest drift tenant-firewall ×6; install verification not run; release validation stale 5 libs); merge stays human
-- worktree: ~/Code/PyAutoLabs-wt/cti-resurrection-phase0
-- autonomy: supervised
-- prompt: active/cti_resurrection_phase0_resurrect_and_register.md
-- note: Phase 0 of the CTI resurrection epic (6 phases; later phases get own prompts). Org transfer Jammy2211→PyAutoLabs DONE. arcticpy 2.6 WORKS on py3.12/numpy2.2 (needs libgsl-dev headers; naive pip install DOWNGRADES numpy — use --no-build-isolation --no-deps; recipe in PyAutoCTI/AGENTS.md). Viz layer quarantined for Phase 1 (Plotter→matplotlib). 5 aggregator tests skipped for Phase 2 (analysis summing → AnalysisFactor/FactorGraphModel). Next after merge: Phase 1 viz-migration prompt. Follow-ups: worktree.sh doesn't know CTI repos (Phase 3); ag ellipse_multipole.yaml still has stale gaussian_limits (latent bug, file separately).
-- repos:
-  - PyAutoCTI: feature/cti-resurrection-phase0
-
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
@@ -88,10 +75,6 @@
 - repos:
   - PyAutoGalaxy: feature/coolest-standard-support
   - PyAutoLens: feature/coolest-standard-support
-
-
-
-
 
 
 ## build-chain-umbrella
