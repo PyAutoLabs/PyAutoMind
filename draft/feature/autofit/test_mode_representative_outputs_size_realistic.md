@@ -16,7 +16,9 @@ issue the phase files, not this one. Status 2026-07-17: phase 1 (design) COMPLET
 (PyAutoFit#1378; record complete/2026/07/); phase 2 (core API) COMPLETE + MERGED
 (PyAutoConf#126 + PyAutoFit#1381); phase 3 ABSORBED into the slam-resume-profiling
 task (autolens_profiling#70 — owns the pipeline_resume subtree; prompt retired);
-remaining: `..._phase_4_docs.md` (issue once #70's recipe leg ships).
+phase 4 ABSORBED 2026-07-17 (survey: RTD has NO test-mode surface — docs story =
+phase-2 docstrings + autofit_workspace#96 AGENTS.md one-liner + #70's README recipe;
+prompt retired). EPIC CLOSES when #70 ships its recipe leg.
 
 Original request (verbatim):
 
