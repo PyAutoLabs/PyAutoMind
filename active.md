@@ -27,13 +27,6 @@
   - autolens_workspace_test: feature/env-scrubbed-baseline
 
 
-## review-falsified-by
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/130 (Phase 5 item 6)
-- status: library-dev — review faculty surfaces load-bearing claims; unsupported = FINDING (reader-enforced)
-- worktree: ~/Code/PyAutoLabs-wt/review-falsified-by
-- autonomy: supervised
-- repos:
-  - PyAutoBrain: feature/review-falsified-by
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
