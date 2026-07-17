@@ -23,6 +23,14 @@
 
 
 
+## api-gate-clause-scope
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/130 (Phase 5 item — F5 API-gate false positive)
+- status: library-dev — clause-scope the API gate so a .py in a non-python clause isn't scanned
+- worktree: ~/Code/PyAutoLabs-wt/api-gate-clause-scope
+- autonomy: supervised
+- repos:
+  - autolens_assistant: feature/api-gate-clause-scope
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: ALL PHASES COMPLETE 2026-07-16 (16+ merged PRs; 3 refusal mechanisms live incl. guard v1.1; epic #155 = remaining-queue tracker: Ph3 steps 2-8, Ph4 four tasks, Ph2 satellites, Ph5 items 3-6)
