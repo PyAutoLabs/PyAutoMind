@@ -1,6 +1,18 @@
 # Active Tasks
 
 
+## coolest-powerlaw-herculens
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/616
+- session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/coolest-powerlaw-herculens
+- autonomy: supervised
+- prompt: active/coolest_powerlaw_herculens_parity.md
+- note: follow-up to #612 (merged). PowerLawIntermediate (intermediate-axis theta_E, COOLEST-identity PEMD mapping) + herculens parity script. awst leg = additive parallel PR (repo claimed by viz-render-gallery, zero overlap, established pattern)
+- repos:
+  - PyAutoGalaxy: feature/coolest-powerlaw-herculens
+  - PyAutoLens: feature/coolest-powerlaw-herculens
+
 ## cti-resurrection-phase3
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/88
 - session: claude (CLI, 2026-07-17)
