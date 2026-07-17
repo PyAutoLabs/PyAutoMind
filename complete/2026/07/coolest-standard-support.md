@@ -1,3 +1,12 @@
+## coolest-standard-support
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/612
+- completed: 2026-07-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/501, https://github.com/PyAutoLabs/PyAutoLens/pull/613, https://github.com/PyAutoLabs/PyAutoLens/pull/615 (corrective: relative paths)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/283, https://github.com/PyAutoLabs/autolens_workspace_test/pull/173
+- summary: COOLEST standard interop for Euclid DR1 prep — conversion layer at the model I/O boundary, internals unchanged (Slack-thread consensus with Sonnenfeld/Galan; user-confirmed scope). `autogalaxy/interop/coolest/` gives dict-in/dict-out converters for Sersic(+Sph), Isothermal(+Sph)→SIE, PowerLaw(+Sph)→PEMD, NFW(+Sph), ExternalShear, MassSheet→ConvergenceSheet with derived + numerically certified factors (θ_cool = √q·(2/(1+q))^(1/(γ−1))·θ_ag; Sersic r_eff already intermediate-axis; φ_cool = angle−90° East-of-North). `autolens/interop/coolest.py` adds to_coolest/from_coolest COOLEST JSON template I/O (`coolest` optional extra + test/dev/optional extras; shear/sheets as MassField entities; NFW Σ_crit from cosmology; Einstein-radius definition documented vs the DR1 tangential-critical-curve definition). Workspace guide `guides/coolest_interop.py` + workspace_test `coolest_round_trip.py` validate end-to-end (round trip to 8.9e-16). Gotchas: a guides/coolest.py shadows the coolest package (hence coolest_interop.py); coolest JSONSerializer rejects relative paths (fixed #615); PyAutoBuild generate.py stages the notebooks it writes (git restore --source=HEAD needed); notebooks/weak/*.ipynb stale on autolens_workspace main (excluded, needs its own sweep). Shipped through Heart RED (6 pre-existing unrelated reasons) on user ack. Follow-up drafted: draft/feature/autolens/coolest_powerlaw_herculens_parity.md (PowerLawIntermediate profile + herculens EPL parity via shared COOLEST file).
+
+## Original prompt
+
 # COOLEST standard support throughout PyAutoGalaxy and PyAutoLens
 
 Type: feature

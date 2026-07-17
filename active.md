@@ -13,24 +13,6 @@
   - autolens_jax_joss: main (born this task)
 
 
-## coolest-standard-support
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/612
-- session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124
-- status: workspace-shipped, awaiting-merge — library PRs ag#501 + al#613 + al#615 (relative-path fix) all MERGED 2026-07-17; workspace PRs open, library-first gate satisfied
-- worktree: ~/Code/PyAutoLabs-wt/coolest-standard-support
-- autonomy: supervised
-- prompt: active/coolest_standard_support.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/501 (MERGED), https://github.com/PyAutoLabs/PyAutoLens/pull/613 (MERGED), https://github.com/PyAutoLabs/PyAutoLens/pull/615 (MERGED, corrective)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/283, https://github.com/PyAutoLabs/autolens_workspace_test/pull/173
-- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall; install verification not run; release validation stale (5 libs)
-- note: workspace repos claimed by jax-joss-benchmarks / viz-render-gallery — additive-only parallel PRs, zero file overlap, user "go" 2026-07-17. notebooks/weak/*.ipynb are STALE on autolens_workspace main (generator regenerates them; excluded here). On merge: complete via lifecycle.py record, then issue follow-up prompt draft/feature/autolens/coolest_powerlaw_herculens_parity.md
-- repos:
-  - PyAutoGalaxy: feature/coolest-standard-support (merged)
-  - PyAutoLens: feature/coolest-standard-support (merged)
-  - autolens_workspace: feature/coolest-standard-support
-  - autolens_workspace_test: feature/coolest-standard-support
-
-
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: ALL PHASES COMPLETE 2026-07-16 (16+ merged PRs; 3 refusal mechanisms live incl. guard v1.1; epic #155 = remaining-queue tracker: Ph3 steps 2-8, Ph4 four tasks, Ph2 satellites, Ph5 items 3-6)
