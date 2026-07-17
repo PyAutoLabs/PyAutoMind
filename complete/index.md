@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-624 records across 5 buckets.
+625 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -20,6 +20,7 @@ _(curate hard-won records here — survives regeneration.)_
 
 - [afa-wiki-currency-wiring-afa-skill-tranche](2026/07/afa-wiki-currency-wiring-afa-skill-tranche.md) — both autofit_assistant follow-ups shipped in one --auto session (one in-session Heart-YELLOW ack covering both…
 - [agent-failure-modes](2026/07/agent-failure-modes.md) — campaign #155 Phase 5 capstone. A-E catalogue validated by measurement; enlarged out-of-sample (F1-F5); taxono…
+- [aggregator-lens-profiling](2026/07/aggregator-lens-profiling.md) — Aggregator Phase C (lens leg) + PYAUTO_TEST_MODE_SAMPLES integration. New autolens_workspace_test scripts/prof…
 - [aggregator-output-contracts](2026/07/aggregator-output-contracts.md)
 - [aggregator-profiling](2026/07/aggregator-profiling.md) — Aggregator profiling harness (autofit_workspace_test scripts/profiling/aggregator/ — mock results via real Dir…
 - [aggregator-quick-fit-consolidation](2026/07/aggregator-quick-fit-consolidation.md) — guides/results tutorials ran own capped fits pruning to 2 samples vs deep [-10]/[9] IndexError → consolidate o…

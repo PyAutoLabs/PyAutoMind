@@ -12,21 +12,6 @@
 - repos:
   - PyAutoCTI: feature/cti-resurrection-phase1
 
-## aggregator-lens-profiling
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/171
-- session: claude --resume aa483bab-3f5b-4ffe-b121-c968ff80ffae
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/aggregator-lens-profiling
-- autonomy: supervised
-- prompt: active/aggregator_profiling_lens_leg.md
-- heart-ack: PyAutoLens: 1 uncommitted source change(s); workspace validation not passing (3 failed, 2026-07-09T09-48-30Z); 58 stale parked script(s); manifest drift: tenant firewall (organ code) — 6 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoConf, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acked 2026-07-17, ship + merge
-- note: aggregator Phase C (final leg of #1375 arc; A+B+D merged) + PYAUTO_TEST_MODE_SAMPLES integration (Fit#1381 merged): both harnesses' templates now written via real TEST_MODE=2 bypass fits (canonical generator, hand-rolled samples deleted); db grid gains representative lens-scale cell (21 params x 10k rows).
-- repos:
-  - autolens_workspace_test: feature/aggregator-lens-profiling
-  - autofit_workspace_test: feature/aggregator-lens-profiling
-  - PyAutoFit: feature/aggregator-lens-profiling
-
-
 ## jax-cache-default
 - issue: https://github.com/PyAutoLabs/PyAutoConf/issues/127
 - session: claude (CLI, 2026-07-17)
