@@ -30,7 +30,8 @@
 ## jax-cache-default
 - issue: https://github.com/PyAutoLabs/PyAutoConf/issues/127
 - session: claude (CLI, 2026-07-17)
-- status: library-dev
+- status: library-shipped, awaiting-merge — PR PyAutoConf#128 (pending-release); tests 147 autoconf + 1493 PyAutoFit downstream; heart RED 5 pre-existing unrelated reasons human-acked 2026-07-17 for PR-open
+- library-pr: https://github.com/PyAutoLabs/PyAutoConf/pull/128
 - worktree: ~/Code/PyAutoLabs-wt/jax-cache-default
 - autonomy: supervised
 - prompt: active/enable_the_jax_persistent_compilation_cache_by.md
