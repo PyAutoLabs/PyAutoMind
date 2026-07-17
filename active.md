@@ -4,7 +4,8 @@
 ## fitness-nan-guard-contract
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1391
 - session: claude (CLI, 2026-07-17)
-- status: library-shipped, workspace-pending
+- status: ALL 3 PRs OPEN, awaiting-merge — LIBRARY-FIRST GATE: merge PyAutoFit#1392 BEFORE autofit_workspace_test#53 and autolens_workspace_developer#106
+- workspace-prs: https://github.com/PyAutoLabs/autofit_workspace_test/pull/53 (the 6-assertion contract script; all pass on CPU in seconds) + https://github.com/PyAutoLabs/autolens_workspace_developer/pull/106 (corrects the 2 disproved claims that shipped in #105)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1392 (pending-release, MERGEABLE; docstring+comment only, NO behaviour change, NO API change; pytest 1499 passed/1 skipped = no delta; Heart RED acked contemporaneously — same 5 pre-existing unrelated reasons as #105, RED verbatim "PyAutoLens: 1 uncommitted source change(s)")
 - worktree: ~/Code/PyAutoLabs-wt/fitness-nan-guard-contract
 - autonomy: supervised
