@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-647 records across 5 buckets.
+649 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -69,6 +69,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [cti-resurrection-phase2](2026/07/cti-resurrection-phase2.md) — closed
 - [cti-resurrection-phase3](2026/07/cti-resurrection-phase3.md) — closed
 - [cti-resurrection-phase4](2026/07/cti-resurrection-phase4.md) — closed
+- [cti-resurrection-phase5](2026/07/cti-resurrection-phase5.md) — closed
 - [database-latent-wheel-load](2026/07/database-latent-wheel-load.md) — database scripts failed on release wheels loading latent variables → AssertionError. Release-tail item D. Corr…
 - [delaunay-qhull-callback](2026/07/delaunay-qhull-callback.md)
 - [delete_pyautoheart_shim](2026/07/delete_pyautoheart_shim.md)
@@ -178,6 +179,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [opus-wrapup](2026/07/opus-wrapup.md) — executed on Fable
 - [per-frame-psf](2026/07/per-frame-psf.md) — per-frame native ePSFs live (psf/frame_epsf.py: sky-subtracted, DQ local-median patch in ESTIMATOR input only …
 - [per-project-literature](2026/07/per-project-literature.md) — task 3 of the autolens_assistant batch — hybrid literature rule live: Create scaffolds wiki/project/bibliograp…
+- [pix-nonfinite-localisation](2026/07/pix-nonfinite-localisation.md) — phase 1 — LOCALISED
 - [pixelized-gradient-experiment](2026/07/pixelized-gradient-experiment.md)
 - [plot-rst-functional-rewrite](2026/07/plot-rst-functional-rewrite.md)
 - [point-pairing-policies](2026/07/point-pairing-policies.md)
