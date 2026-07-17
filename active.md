@@ -15,7 +15,10 @@
 ## coolest-powerlaw-herculens
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/616
 - session: claude --resume 5c96151b-044f-49e4-aa35-e01ceb863124
-- status: library-dev
+- status: shipped, awaiting-merge — all 3 PRs open; parity PROVEN (herculens EPL theta_E == COOLEST intermediate exactly); merge order ag#503 -> al#617 -> awst#175
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/503, https://github.com/PyAutoLabs/PyAutoLens/pull/617
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/175
+- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall x7; release validation stale (5 libs) — acked 2026-07-17, both legs
 - worktree: ~/Code/PyAutoLabs-wt/coolest-powerlaw-herculens
 - autonomy: supervised
 - prompt: active/coolest_powerlaw_herculens_parity.md
@@ -23,6 +26,7 @@
 - repos:
   - PyAutoGalaxy: feature/coolest-powerlaw-herculens
   - PyAutoLens: feature/coolest-powerlaw-herculens
+  - autolens_workspace_test: feature/coolest-powerlaw-herculens
 
 
 ## jax-joss-benchmarks
