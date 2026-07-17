@@ -12,6 +12,7 @@
 - repos:
   - PyAutoCTI: feature/cti-resurrection-phase3
   - PyAutoBrain: feature/cti-resurrection-phase3
+  - PyAutoHeart: feature/cti-resurrection-phase3
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
