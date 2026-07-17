@@ -166,6 +166,9 @@ repos:
     category: howto
 
   # --- assistants / pipelines / projects ----------------------------------
+  autocti_assistant:
+    github: PyAutoLabs/autocti_assistant
+    category: assistant
   autofit_assistant:
     github: PyAutoLabs/autofit_assistant
     category: assistant
