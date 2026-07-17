@@ -87,11 +87,12 @@
 ## potential-correction-port
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/618
 - session: claude (CLI, 2026-07-17)
-- status: phase-1-shipped (PyAutoArray PR open, awaiting merge); phases 2-3 queued
+- status: library-dev — phase 1 MERGED (PyAutoArray #390, worktree leg cleaned); phases 2 (PyAutoGalaxy) + 3 (PyAutoLens) in progress, unblocked by slam-resume-fastpath shipping
 - worktree: ~/Code/PyAutoLabs-wt/potential-correction-port
 - autonomy: supervised
 - prompt: active/potential_correction_port.md
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/390 (pending-release; 923 tests passed; smoke 44/44 across 6 workspaces; Heart RED acked — 5 pre-existing unrelated reasons)
 - note: port caoxiaoyue/lensing_potential_correction (gravitational imaging: joint source+dpsi evidence inversion) into the stack; cite caoxiaoyue/potential_correction_paper (Cao et al. 2025). Phase 1 = PyAutoArray (masked-grid diff operators, curvature/4th-order mask regs, coarse-mesh itp matrix — reuse existing kernel regs). Phases 2 (PyAutoGalaxy Input* mass profiles + GRF) and 3 (autolens/potential_correction subpackage) QUEUED behind slam-resume-fastpath's PyAutoGalaxy+PyAutoLens claims — claim those repos here only after it ships. NumPy/numba only; JAX port is a known follow-up. No GPy/multiprocess/powerbox/numba-scipy deps.
 - repos:
-  - PyAutoArray: feature/potential-correction-port
+  - PyAutoGalaxy: feature/potential-correction-port
+  - PyAutoLens: feature/potential-correction-port
