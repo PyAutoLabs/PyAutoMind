@@ -94,8 +94,6 @@
 - worktree: ~/Code/PyAutoLabs-wt/preserve-in-zip
 - autonomy: supervised
 - prompt: active/promote_the_search_zip_preservation_helper_to.md
-- note: behaviour-preserving promotion of _append_to_search_zip (ag) to AbstractPaths.preserve_in_zip (Fit) + caller switches in ag/al; 3 PRs Fit-first. User-authorized ship+merge under quoted Heart RED (batched ack 2026-07-17).
+- note: behaviour-preserving promotion of _append_to_search_zip (ag) to AbstractPaths.preserve_in_zip (Fit). PHASE 1 (now): Fit method + test, ship+merge (user-authorized under quoted Heart RED, batched ack 2026-07-17). PHASE 2 (rider, BLOCKED): ag/al caller switch + private-helper deletion — PyAutoGalaxy/PyAutoLens claimed by potential-correction-port; do when freed (checklist on Fit#1389).
 - repos:
   - PyAutoFit: feature/preserve-in-zip
-  - PyAutoGalaxy: feature/preserve-in-zip
-  - PyAutoLens: feature/preserve-in-zip
