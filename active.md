@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## gradient-safe-logdet
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/391
+- session: claude (CLI, 2026-07-17)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/gradient-safe-logdet
+- autonomy: supervised
+- prompt: active/gradient_safe_logdet_settings_option.md
+- note: The ONLY endorsed change from the reg-logdet adversarial-review verdict (do NOT change the default; C4 = current lam-dependence correct to machine precision). Add Settings.log_det_method (Optional->conf fallback, like use_positive_only_solver): default "cholesky" byte-identical; opt-in "slogdet" = finite where Cholesky NaNs, identical where PD, general incl. Adapt. Applies to BOTH log-det terms (reg AND curvature-reg) per human decision. Config key log_det_method:cholesky in autoarray/config/general.yaml + mirror into workspace configs. RELEASE GATE = byte-identical figure_of_merit at default. slogdet-finite-where-cholesky-NaN validated at #104 seed-0 draw 12/35 via the 30s LOCAL spectrum script (NOT the A100 — 10.9GiB was value_and_grad). JAX grad-finiteness assertion -> autogalaxy_workspace_test at ship (autolens_wst is claimed by dpie-lenstool-default).
+- repos:
+
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: PARKED-ON-JOB — #282 MERGED+cleaned; 8/8 runnable A100 rows committed (autolens_jax_joss@64204f6). SDP.81 prep = detached RAL job 330608 (330605 diagnosed: empty extracted/ leftover skipped untar via test-d guard; casatools import needs ~/.casa/data — both fixed; 42GB tarball CACHED, no re-download) (45GB ALMA Band6 download -> casatools venv -> 3-level export -> installs dataset/interferometer/{sdp81,sdp81_mid,sdp81_full} in /mnt/ral/jnightin/autolens_jax_joss). RESUME (short session): (1) check log /mnt/ral/jnightin/sdp81_prep_330608.log — expect 'SDP81 PREP ALL DONE' + per-level visibility counts; failure modes: casatools pip wheel on py3.12 (fallback = monolithic CASA tarball), datacolumn, MS_LIST empty (check find patterns); (2) sbatch interferometry benchmarks on A100: benchmarks/interferometer.py at --nvis default/mid/full + benchmarks/imaging_and_interferometer.py (pattern: /mnt/ral/jnightin/autolens_jax_joss/run_rest.sbatch); (3) scp results/*.json back, regen RESULTS.md, commit (guard: explicit file paths); (4) copy small sdp81/ product locally, rewrite scripts/interferometer/start_here.py on NEW branch (start_workspace; #282 merged) using it — decide hosting (commit few-MB FITS to workspace w/ .gitignore allowlist + git add -f, or Zenodo+SDP81_URL); (5) final issue #281 update. Also pending: cluster-tuning prompt draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md; weak JAX-viz PyAutoLens#614
