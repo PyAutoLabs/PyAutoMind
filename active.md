@@ -11,6 +11,7 @@
 - note: Phase 4 of the CTI resurrection epic (0-3 merged). 118 scripts / 79 notebooks onto current APIs: plot function API (70 scripts), simulator/fitsable/priors drift, config sync, TEST_MODE validation. Notebooks regenerate at release (Phase 5).
 - repos:
   - autocti_workspace: feature/cti-resurrection-phase4
+  - PyAutoCTI: feature/cti-resurrection-phase4
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
