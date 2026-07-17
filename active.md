@@ -93,3 +93,5 @@
 - prompt: active/slam_resume_fast_path_load_persisted_adapt.md
 - note: implements the #70 judgment (adapt disk-first in PyAutoGalaxy + positions persist/reload in PyAutoLens; PRs ag-first). Step 1 = A-vs-B hook decision (result-property lazy vs lazy maker), recorded on the issue. autolens_profiling used READ-ONLY for validation (claimed by jax-compile-time-research — no edits). PyAutoLens main has unrelated dirty paper_jax/paper.md (JOSS draft) — warning only, worktree cut from origin/main.
 - repos:
+  - PyAutoGalaxy: feature/slam-resume-fastpath
+  - PyAutoLens: feature/slam-resume-fastpath
