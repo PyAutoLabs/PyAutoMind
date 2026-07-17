@@ -26,6 +26,14 @@
   - autogalaxy_workspace_test: feature/env-scrubbed-baseline
   - autolens_workspace_test: feature/env-scrubbed-baseline
 
+## branch-contribution-tool
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/130 (Phase 5 item 4 — blessed instrument)
+- status: library-dev — one tested command for "does this branch contribute content to main?" (D1/D2 failure class)
+- worktree: ~/Code/PyAutoLabs-wt/branch-contribution-tool
+- autonomy: supervised
+- repos:
+  - PyAutoBrain: feature/branch-contribution-tool
+
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: ALL PHASES COMPLETE 2026-07-16 (16+ merged PRs; 3 refusal mechanisms live incl. guard v1.1; epic #155 = remaining-queue tracker: Ph3 steps 2-8, Ph4 four tasks, Ph2 satellites, Ph5 items 3-6)
