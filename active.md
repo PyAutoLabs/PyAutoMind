@@ -4,7 +4,8 @@
 ## fitness-nan-guard-contract
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1391
 - session: claude (CLI, 2026-07-17)
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1392 (pending-release, MERGEABLE; docstring+comment only, NO behaviour change, NO API change; pytest 1499 passed/1 skipped = no delta; Heart RED acked contemporaneously — same 5 pre-existing unrelated reasons as #105, RED verbatim "PyAutoLens: 1 uncommitted source change(s)")
 - worktree: ~/Code/PyAutoLabs-wt/fitness-nan-guard-contract
 - autonomy: supervised
 - prompt: active/fitness_where_guard_nan_gradient.md
@@ -12,6 +13,9 @@
 - established: (1) The trap is NARROWER than "guard never protects gradients" — it fires only when the masked branch's DERIVATIVE is non-finite. sqrt(x<0) and cholesky(non-PD) NaN their derivative => fires. log(x<0) is NaN in value but d/dx=1/x stays finite => 0*-1=0, NO trap. (2) An OUTPUT-side double-where DOES NOT FIX IT (measured: current grad=nan, output-side double-where grad=nan, input-side safe-x grad=0.0) — by the time Fitness.call sees log_likelihood the NaN derivative is ALREADY ON THE TAPE. (3) => the fix CANNOT live in Fitness.call; it belongs at each NaN source (for pix: draft/bug/autoarray/reg_matrix_logdet_nonfinite_fix.md). Repro is ~20 lines of CPU JAX — NO A100 (an earlier draft of the prompt wrongly demanded the #104 probe, ~11 GiB).
 - out-of-scope: search-level gradient sanitiser where(isfinite(g),g,0) — fabricates a zero gradient at invalid points; #101 showed apply_if_finite latches. Restart/resample is the principled response (draft/feature/autofit/multistart_resurrection_and_contrib_rules.md).
 - repos:
+  - PyAutoFit: feature/fitness-nan-guard-contract
+  - autofit_workspace_test: feature/fitness-nan-guard-contract
+  - autolens_workspace_developer: feature/fitness-nan-guard-contract
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
