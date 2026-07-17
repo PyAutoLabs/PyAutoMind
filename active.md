@@ -34,17 +34,6 @@
 - repos:
 
 
-## ep-projection-weights
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1382
-- status: library-shipped, awaiting-merge — PR PyAutoFit#1383 (pending-release); tests 1494p/1s; shipped through Heart RED (same 6 pre-existing unrelated reasons) on explicit user PR-open instruction 2026-07-17
-- worktree: ~/Code/PyAutoLabs-wt/ep-projection-weights (not yet created — /start_library on resume)
-- autonomy: supervised
-- prompt: active/ep_projection_linear_weights_as_log.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1383
-- heart-ack: PyAutoLens uncommitted source; workspace validation 3-failed (2026-07-09); 58 stale parked scripts; manifest drift tenant-firewall ×6; release validation stale (5 libs)
-- note: TWO stacked defects fixed (investigation upgraded during impl): PRIMARY = TransformedMessage.project never transformed samples to base space (equal-weight cluster at 2.05 projected to 2.97); secondary = linear weights fed to log-weight moment match. Regression test fails on either alone. slope-hierarchy goal 2 unblocks on merge (rerun submit_ep after clearing output/<sample>/ep on RAL).
-- repos:
-
 ## slope-hierarchy
 - issue: https://github.com/Jammy2211/slope_hierarchy/issues/1
 - status: workspace-dev — goals 1/3/4 DELIVERED; goal 2 BLOCKED on upstream fix. EP collapse ROOT-CAUSED 2026-07-17: Result.projected_model feeds LINEAR samples.weight_list into AbstractMessage.project which requires LOG weights (exp(w-max) ≈ uniform ⇒ canonical-space boundary attractor ⇒ cavity poisoned ⇒ honest sigma-collapse; damping irrelevant — δ=0.5 job 330532 collapsed identically; probe 330591 proved fit RIGHT 2.0448 / projection WRONG 2.9875±0.011). Bug prompt: draft/bug/autofit/ep_projection_linear_weights_as_log.md (next action = /start_dev it). After the fix merges: clear output/<sample>/ep on RAL, rerun submit_ep, parity table, then N=25-50 scale-up

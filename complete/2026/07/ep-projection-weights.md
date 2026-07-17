@@ -1,3 +1,38 @@
+# ep-projection-weights — EP projection fixed (two stacked defects)
+
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1382 (closed)
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1383 (MERGED 2026-07-17, b32e58b16)
+- repo: PyAutoFit (feature/ep-projection-weights, worktree removed post-merge)
+
+Every sampler-driven EP factor update projected its posterior to a message pinned
+near a prior bound (boundary attractor → cavity poisoning → hierarchical F10
+sigma-collapse). Root-caused by the slope_hierarchy science project deliberately
+exercising the 2026-07 EP wave (Jammy2211/slope_hierarchy#1).
+
+Two stacked defects, both fixed:
+1. PRIMARY — `TransformedMessage.project` never transformed samples into the base
+   message's space (every other method routes through `@transform`; project alone
+   didn't). Equal-weighted samples at 2.05 inside UniformPrior(1.5,3.0) projected
+   to 2.97 — 0.2s unit repro, no sampler needed.
+2. Secondary — `Result.projected_model` fed LINEAR `weight_list` into the
+   log-weight moment match (`w = exp(log_w − max)`); now converted (zeros → −inf
+   drop out, all-zero raises). `Prior.project` kwarg renamed to `log_weight_list`.
+
+Regression test `test_projected_model_moments` (nested-sampling-shaped weights
+through a UniformPrior) fails on either defect alone. test_autofit 1494p/1s.
+Shipped through acked Heart RED (6 pre-existing unrelated reasons) on explicit
+user PR-open + merge instructions.
+
+Traps/lessons: the diagnosis "linear-as-log weights" from forensics alone was
+incomplete — implementing the regression test exposed the deeper transform defect
+(verify-the-fix empirically before filing). Historic sampler-driven EP results
+(concr-era H0) may carry the same projection bias.
+
+Follow-ups: slope_hierarchy goal-2 parity rerun (unblocked); related API-gap
+prompt draft/feature/autofit/ep_optimise_expose_updater_delta.md still in draft.
+
+## Original prompt
+
 # EP sampler-factor projection feeds LINEAR weights into log-weight moment matching → boundary attractor → sigma-collapse
 
 Type: bug
