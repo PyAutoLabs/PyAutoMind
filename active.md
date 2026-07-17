@@ -56,7 +56,8 @@
 ## dpie-lenstool-default
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/506
 - session: claude (CLI, 2026-07-17)
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/509 (pending-release; 1003 tests passed; Heart RED acked — 6 pre-existing unrelated reasons)
 - worktree: ~/Code/PyAutoLabs-wt/dpie-lenstool-default
 - autonomy: supervised
 - prompt: active/dpie_lenstool_default_parameterization.md
