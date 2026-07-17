@@ -44,18 +44,3 @@
 - note: hierarchical power-law slope recovery from N simulated imaging lenses — BlackJAX-NUTS joint fit vs EP parity (values AND errors), RAL scale-up, and end-to-end exercise of the 2026-07 EP diagnostics (PyAutoFit#1330 wave). PyAutoFit is exercised NOT edited: EP defects file as new bug prompts via intake. No PyAutoLabs repo claimed.
 - repos:
 
-
-## dpie-lenstool-default
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/506
-- session: claude (CLI, 2026-07-17)
-- status: shipped, awaiting-merge — library PyAutoGalaxy#509 + workspace autolens_workspace#287 + autolens_workspace_test#179 (all pending-release; merge order library-first; Heart RED acked twice — 6 pre-existing unrelated reasons)
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/509 (pending-release; 1003 tests passed; Heart RED acked — 6 pre-existing unrelated reasons)
-- worktree: ~/Code/PyAutoLabs-wt/dpie-lenstool-default
-- autonomy: supervised
-- prompt: active/dpie_lenstool_default_parameterization.md
-- audit: paper/convention audit COMPLETE 2026-07-17 (on #506 — conventions verified vs Eliasdottir07 App A / Bergamini19 / 6-leg parity script; swap is pure re-parameterization)
-- note: swap dPIEMass/dPIEMassSph default to Lenstool-native parameterization (approved: internal variant → dPIEMassB0/dPIEMassB0Sph + from_b0 classmethod); workspace follow-up (autolens_workspace + autolens_workspace_test) absorbs lenstool-scaling-slam (SLaM PR3 of autolens_workspace#265)
-- repos:
-  - PyAutoGalaxy: feature/dpie-lenstool-default
-  - autolens_workspace: feature/dpie-lenstool-default
-  - autolens_workspace_test: feature/dpie-lenstool-default

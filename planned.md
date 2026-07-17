@@ -15,6 +15,7 @@
 - filed: 2026-07-13
 - classification: workspace (autolens_workspace) — docs
 - summary: apply the LensTool reference-magnitude (mag0) scaling convention (fixed reference luminosity, exponent 0.5, full dPIE r_core/r_cut/b0 + ra_ref scaling) to the SLaM pipelines, mirroring what #267 (cluster) and #268 (group+imaging) did for the example scripts. See complete.md `lenstool-scaling-reference-magnitude` for the delivered pattern + the notebook-regen catalogue-drift gotcha.
+- SUPERSEDED 2026-07-17: delivered inside dpie-lenstool-default (PyAutoGalaxy#506 workspace PR autolens_workspace#287) — group SLaM scaling tiers now use the reference-anchored convention. Remove on next planned.md sweep.
 
 ## samples-parameter-paths
 - prompt: PyAutoMind/bug/health_fixes/samples_parameter_paths.md

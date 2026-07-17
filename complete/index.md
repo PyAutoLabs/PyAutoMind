@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-653 records across 5 buckets.
+656 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -28,6 +28,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [aggregator-sqlite](2026/07/aggregator-sqlite.md) — Aggregator Phase D — sqlite database exercised + assessed. Fixed: db Aggregator slicing inverted (agg[:5] on 2…
 - [alma-interferometer](2026/07/alma-interferometer.md) — ALMA interferometer reduction live (phase 5) — first visibility-domain product family: calibrated MS → al.Inte…
 - [api-baseline-refresh](2026/07/api-baseline-refresh.md)
+- [api-gate-clause-scope](2026/07/api-gate-clause-scope.md) — fixed the F5 API-gate false positive (docs/agent_failure_modes.md). The PreToolUse gate latched saw_python for…
 - [arxiv-digest-announcement-window](2026/07/arxiv-digest-announcement-window.md)
 - [assistant-benchmarks](2026/07/assistant-benchmarks.md)
 - [assistant-deep-audit](2026/07/assistant-deep-audit.md)
@@ -36,6 +37,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [assistant-ref-mechanics](2026/07/assistant-ref-mechanics.md) — science-project -> assistant refer-back mechanics complete — non-blocking provenance-drift check in start-new-…
 - [assistant-wiki-release](2026/07/assistant-wiki-release.md) — wiki/core release-complete vs autolens_workspace — gaps filled (LOS halos, sky background via DatasetModel, de…
 - [auto-dev-mode](2026/07/auto-dev-mode.md)
+- [autocti-assistant](2026/07/autocti-assistant.md) — closed
 - [autofit-assistant-birth](2026/07/autofit-assistant-birth.md) — autofit_assistant born PUBLIC and fully built in one --auto supervised session (launch gates: public at birth,…
 - [autofit-navigator-catalogue-refresh](2026/07/autofit-navigator-catalogue-refresh.md) — Regenerated the stale navigator catalogue (llms-full.txt + workspace_index.json), clearing the Navigator Check…
 - [autofit-navigator-catalogue-staleness](2026/07/autofit-navigator-catalogue-staleness.md) — regenerate — MERGED
@@ -74,6 +76,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [delaunay-qhull-callback](2026/07/delaunay-qhull-callback.md)
 - [delete_pyautoheart_shim](2026/07/delete_pyautoheart_shim.md)
 - [docs-theming-hub](2026/07/docs-theming-hub.md) — phases B+C of docs middle path — hub LIVE at pyautolabs.github.io (Pages; RETROFIT.md = paid-domain flip); sha…
+- [dpie-lenstool-default](2026/07/dpie-lenstool-default.md) — Made the Lenstool-native parameterization the DEFAULT dPIE. `dPIEMass`/`dPIEMassSph` now take the `.par`-file …
 - [dpie-lenstool-param](2026/07/dpie-lenstool-param.md)
 - [eceb-editorial-revision](2026/07/eceb-editorial-revision.md) — ECEB wiki rules — EC A&A template assets — MERGED
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
