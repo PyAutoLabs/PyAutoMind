@@ -42,17 +42,3 @@
 - note: hierarchical power-law slope recovery from N simulated imaging lenses — BlackJAX-NUTS joint fit vs EP parity (values AND errors), RAL scale-up, and end-to-end exercise of the 2026-07 EP diagnostics (PyAutoFit#1330 wave). PyAutoFit is exercised NOT edited: EP defects file as new bug prompts via intake. No PyAutoLabs repo claimed.
 - repos:
 
-## potential-correction-port
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/618
-- session: claude (CLI, 2026-07-17)
-- status: phases 1-4 ALL MERGED 2026-07-17 (Array#390, Galaxy#505, Lens#621+#622); library legs cleaned. NOW: Phase 5 = iterative-bug hunt vs Vegetti Nat.Astron. papers (leads on #618) + Phase 6 = workspace layers (autolens_workspace guide + autolens_workspace_test incl. jax_likelihood_functions tier + golden parity vs tar demo) — ws repos claimed
-- worktree: ~/Code/PyAutoLabs-wt/potential-correction-port
-- autonomy: supervised
-- prompt: active/potential_correction_port.md
-- library-pr: ALL MERGED — Array#390 · Galaxy#505 · Lens#621 · Lens#622 (Heart RED acked throughout — 5 pre-existing unrelated reasons)
-- note: port caoxiaoyue/lensing_potential_correction (gravitational imaging: joint source+dpsi evidence inversion) into the stack; cite caoxiaoyue/potential_correction_paper (Cao et al. 2025). Phase 1 = PyAutoArray (masked-grid diff operators, curvature/4th-order mask regs, coarse-mesh itp matrix — reuse existing kernel regs). Phases 2 (PyAutoGalaxy Input* mass profiles + GRF) and 3 (autolens/potential_correction subpackage) QUEUED behind slam-resume-fastpath's PyAutoGalaxy+PyAutoLens claims — claim those repos here only after it ships. NumPy/numba only; JAX port is a known follow-up. No GPy/multiprocess/powerbox/numba-scipy deps.
-- repos:
-  - autolens_workspace: feature/potential-correction-port
-  - autolens_workspace_test: feature/potential-correction-port
-
-
