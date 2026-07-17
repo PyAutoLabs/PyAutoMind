@@ -12,9 +12,11 @@ Priority: normal
 Status: formalised
 
 Split (2026-07-16, Feature Agent: too-large, score 14): this file is the **umbrella** —
-issue the phase files, not this one. Phases (same folder):
-`..._phase_1_design.md` → `..._phase_2_core_api.md` → `..._phase_3_workspace_examples.md`
-→ `..._phase_4_docs.md`. Issue each phase only as its predecessor nears shipping.
+issue the phase files, not this one. Status 2026-07-17: phase 1 (design) COMPLETE
+(PyAutoFit#1378; record complete/2026/07/); phase 2 (core API) COMPLETE + MERGED
+(PyAutoConf#126 + PyAutoFit#1381); phase 3 ABSORBED into the slam-resume-profiling
+task (autolens_profiling#70 — owns the pipeline_resume subtree; prompt retired);
+remaining: `..._phase_4_docs.md` (issue once #70's recipe leg ships).
 
 Original request (verbatim):
 
