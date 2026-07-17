@@ -12,13 +12,6 @@
   - autolens_jax_joss: main (born this task)
 
 
-## env-scrubbed-baseline
-- issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/161 (migration step 3; epic #155)
-- status: library-dev — scrubbed base env (deny managed keys, not allowlist — safer deviation from doc §5)
-- worktree: ~/Code/PyAutoLabs-wt/env-scrubbed-baseline
-- autonomy: supervised
-- repos:
-  - PyAutoBuild: feature/env-scrubbed-baseline
 
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
