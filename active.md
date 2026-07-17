@@ -1,7 +1,6 @@
 # Active Tasks
 
 
-
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: PARKED-ON-JOB — #282 MERGED+cleaned; 8/8 runnable A100 rows committed (autolens_jax_joss@64204f6). SDP.81 prep = detached RAL job 330608 (330605 diagnosed: empty extracted/ leftover skipped untar via test-d guard; casatools import needs ~/.casa/data — both fixed; 42GB tarball CACHED, no re-download) (45GB ALMA Band6 download -> casatools venv -> 3-level export -> installs dataset/interferometer/{sdp81,sdp81_mid,sdp81_full} in /mnt/ral/jnightin/autolens_jax_joss). RESUME (short session): (1) check log /mnt/ral/jnightin/sdp81_prep_330608.log — expect 'SDP81 PREP ALL DONE' + per-level visibility counts; failure modes: casatools pip wheel on py3.12 (fallback = monolithic CASA tarball), datacolumn, MS_LIST empty (check find patterns); (2) sbatch interferometry benchmarks on A100: benchmarks/interferometer.py at --nvis default/mid/full + benchmarks/imaging_and_interferometer.py (pattern: /mnt/ral/jnightin/autolens_jax_joss/run_rest.sbatch); (3) scp results/*.json back, regen RESULTS.md, commit (guard: explicit file paths); (4) copy small sdp81/ product locally, rewrite scripts/interferometer/start_here.py on NEW branch (start_workspace; #282 merged) using it — decide hosting (commit few-MB FITS to workspace w/ .gitignore allowlist + git add -f, or Zenodo+SDP81_URL); (5) final issue #281 update. Also pending: cluster-tuning prompt draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md; weak JAX-viz PyAutoLens#614
@@ -30,19 +29,6 @@
 - resume: (1) read damped-EP job 330532 (submitted 2026-07-16 ~18:00, delta=0.5, 12h limit): `ssh euclid_jump "grep -A3 'Parent recovery' /mnt/ral/jnightin/slope_hierarchy/hpc/batch_gpu/output/output.330532_0.out"` + its ep_diagnostics.results (did damping cure the F10 collapse?); (2) scp results/ep_sample_n5_seed42_delta0.5.json back; (3) build the goal-2 parity table EP-vs-NUTS (NUTS numbers in results/graphical_nuts_sample_n5_seed42.json) and post to issue #1; (4) if parity holds → scale-up sample (N=25-50, new simulate + resubmit chain; remember output-clear + truth-file force-sync traps); if collapse persists → try delta 0.2-0.3 or per-factor sampler optimisers per the F10 hint
 - note: hierarchical power-law slope recovery from N simulated imaging lenses — BlackJAX-NUTS joint fit vs EP parity (values AND errors), RAL scale-up, and end-to-end exercise of the 2026-07 EP diagnostics (PyAutoFit#1330 wave). PyAutoFit is exercised NOT edited: EP defects file as new bug prompts via intake. No PyAutoLabs repo claimed.
 - repos:
-
-
-## potential-correction-interferometer
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/623
-- session: claude (CLI, 2026-07-17)
-- status: fix-wave SHIPPED — PRs OPEN awaiting merge: PyAutoGalaxy#508 (zero-fill extrapolation), PyAutoLens#626 (Marquardt LM damping + zero-fill wiring), autolens_workspace_test#177 (validation script, smoke-wired). Stall FULLY diagnosed+fixed (2 causes); remaining on #623 = jax_likelihood_functions/interferometer script + realistic-uv iterative-recovery campaign
-- worktree: ~/Code/PyAutoLabs-wt/potential-correction-interferometer
-- autonomy: supervised
-- prompt: active/potential_correction_interferometer.md
-- note: extend al.pc (potential corrections, #618) to Interferometer in visibility space. PRIORITY (user): the SPARSE-OPERATOR / w-tilde route — curvature blocks in real space ((D_s D_psi)^T (T^H C^-1 T) (D_s D_psi)), scales with n_pix not n_vis; dense transform_mapping_matrix route = small-n_vis parity reference only. Then iterative-engine dataset seam + analyses; workspace_test follow-up (jax_likelihood_functions/interferometer + interferometer subhalo_recovery). dense_util xp kernels unchanged. Cite Cao et al. 2025 throughout.
-- repos:
-  - PyAutoLens: feature/potential-correction-interferometer
-  - PyAutoGalaxy: feature/potential-correction-interferometer
 
 
 ## autocti-assistant

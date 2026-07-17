@@ -1,3 +1,15 @@
+## potential-correction-interferometer
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/623
+- completed: 2026-07-17
+- library-pr: PyAutoLens#624, PyAutoLens#625, PyAutoGalaxy#508, PyAutoLens#626 (all MERGED)
+- workspace-pr: autolens_workspace_test#177, autolens_workspace_test#178 (both MERGED)
+- summary: Extended al.pc (potential corrections, epic #618) to Interferometer data with the SPARSE-OPERATOR (w-tilde) route as primary per user requirement — joint curvature [f|G]^T Wtilde [f|G] via InterferometerSparseOperator FFT machinery over extent-indexed COO triplets, data vector via the dirty image, chi2 via one NUFFT (or the normal-equation identity in the LM loop: ZERO per-candidate NUFFTs) — cost scales with real-space pixels, independent of n_vis. FitDpsiSrcInterferometer + IterFitDpsiSrcInterferometer + both analyses + dpsi_mask (arc-restricted mesh with row embedding). Sparse ≡ dense certified; chi2 identity ≡ direct NUFFT certified; xp=np ≡ xp=jnp ≡ jitted certified (wst#178). One-shot subhalo recovery corr 0.35 / peak 0.13" (wst#177).
+- bugs-found-and-fixed: (1) InputPotential nearest-extrapolation smeared constant spurious deflections outside an arc-restricted dpsi mesh across the re-trace grid → extrapolate="zero" mode (ag#508). (2) LM damping mu*I is scale-blind — visibility curvatures ~1e11 left ~4 usable decades below the 1e15 cap → "damping exceeded" stalls → Marquardt scaling mu*diag(H) in dense_util.solve_lm_step_from (al#626; also benefits the imaging engine).
+- traps: aa.Settings has no use_w_tilde; grids.border_relocator is an instance property (class hasattr false-negative); 4000 random vis on 64x64 OOM-kills WSL; uv beyond real-space Nyquist explodes chi2; global dkappa corr is sidelobe-limited under sparse random uv (assert parity+peak+gauge at smoke scale); LAPACK-vs-XLA slogdet differs beyond rtol 1e-10 at visibility condition numbers (use 1e-8).
+- follow-up: draft/research/autolens/potential_correction_realistic_uv_campaign.md — iterative RECOVERY certification on a B1938-like/ALMA-like configuration (smoke scale cannot: source mesh cannot reach chi2/dof~1, corrections absorb source-model error).
+
+## Original prompt
+
 # Claude Development Prompt: Potential corrections for interferometer data
 
 Type: feature

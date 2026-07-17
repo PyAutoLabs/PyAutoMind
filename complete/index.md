@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-650 records across 5 buckets.
+652 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -95,6 +95,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [eyes-conductor](2026/07/eyes-conductor.md) — epic #117 Phase 2
 - [eyes-paper-critique](2026/07/eyes-paper-critique.md) — epic #117 CLOSED
 - [factor-graph-viz-dispatch](2026/07/factor-graph-viz-dispatch.md)
+- [fitness-nan-guard-contract](2026/07/fitness-nan-guard-contract.md)
 - [frame-products](2026/07/frame-products.md) — opt-in per-exposure frame products live — TargetSpec.frame_products packages every calibrated _flc/_flt SCI ch…
 - [frame-registration](2026/07/frame-registration.md) — inter-exposure registration quantified + extracted — frames/manifest.json per-frame registration block (WCS so…
 - [health-api](2026/07/health-api.md)
@@ -183,6 +184,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [pixelized-gradient-experiment](2026/07/pixelized-gradient-experiment.md)
 - [plot-rst-functional-rewrite](2026/07/plot-rst-functional-rewrite.md)
 - [point-pairing-policies](2026/07/point-pairing-policies.md)
+- [potential-correction-interferometer](2026/07/potential-correction-interferometer.md) — Extended al.pc (potential corrections, epic #618) to Interferometer data with the SPARSE-OPERATOR (w-tilde) ro…
 - [potential-correction-port](2026/07/potential-correction-port.md) — Ported caoxiaoyue/lensing_potential_correction (Cao et al. 2025) into the stack as first-class source: PyAutoA…
 - [pre-build-audit](2026/07/pre-build-audit.md) — pre_build git-add failure-class audit (build-chain campaign #155 Phase 1). Measured: root-glob staging a 13/13…
 - [pre-build-slim](2026/07/pre-build-slim.md) — step 3 of the pre_build audit — sweep vestige DELETED (human decision): black on staged dirs only, dataset/con…
