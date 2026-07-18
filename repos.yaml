@@ -3,7 +3,7 @@
 # Identity only: GitHub home, category, one-line role. Per-organ POLICY stays
 # with the organ that owns it — what Heart polls/gates lives in
 # PyAutoHeart/config/repos.yaml; what pre_build formats/generates lives in
-# PyAutoBuild/pre_build.sh. Those files must agree with this one on identity;
+# PyAutoHands/pre_build.sh. Those files must agree with this one on identity;
 # `scripts/repos_sync.py --check` enforces it (including against the actual
 # `git remote` of every local checkout).
 #
@@ -67,8 +67,8 @@ repos:
     organ: Brain
     role: "Reasoning/orchestration layer; how work is decomposed and routed; the specialist agents."
     public_role: "The reasoning layer that works out *how* — classifying, planning and routing each task through specialist agents."
-  PyAutoBuild:
-    github: PyAutoLabs/PyAutoBuild
+  PyAutoHands:
+    github: PyAutoLabs/PyAutoHands
     category: organ
     organ: Hands
     role: "Packaging, tagging, notebook generation, PyPI release execution."

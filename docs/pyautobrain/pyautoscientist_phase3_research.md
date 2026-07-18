@@ -17,10 +17,10 @@ a satellite must follow:
 
 | Convention | Where it actually lives | Satellite carries only |
 |------------|------------------------|------------------------|
-| scripts → notebooks conversion (docstring-cell format, scratch/ exclusion) | `PyAutoBuild/autobuild/generate.py` + `build_util` | plain `.py` files under `scripts/` |
+| scripts → notebooks conversion (docstring-cell format, scratch/ exclusion) | `PyAutoHands/autobuild/generate.py` + `build_util` | plain `.py` files under `scripts/` |
 | Which files ship into notebooks | `config/build/copy_files.yaml` — **workspace-local override already supported** (generate.py prefers it over autobuild's keyed dict) | one small YAML |
 | Version pinning + runtime staleness warning | `autoconf/workspace.py` reads `config/general.yaml → version.workspace_version`; Heart's `version_skew.py` reads the same file | one YAML key |
-| Navigator/catalogue check | **reusable workflow** `PyAutoBuild/.github/workflows/navigator_check.yml@main` | a 6-line thin caller |
+| Navigator/catalogue check | **reusable workflow** `PyAutoHands/.github/workflows/navigator_check.yml@main` | a 6-line thin caller |
 | Docs build check | **reusable workflow** `PyAutoHeart/.github/workflows/docs-build.yml@main` (Phase 2 added the docs-only mode) | a thin caller |
 | Release pipeline membership | `pre_build.sh` `run_workspace` row + Heart `config/repos.yaml` row | nothing |
 | Config layering (packaged defaults ← workspace override) | the `autoconf` package at runtime | a `config/` directory in the documented shape |
