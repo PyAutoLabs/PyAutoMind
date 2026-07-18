@@ -8,7 +8,7 @@ names preserved, discovery wired up via `PyAutoBrain/bin/install.sh`.
 ## What moved (and why)
 
 Ownership reconciled with the **actual** organism boundary docs
-(`PyAutoBrain/AGENTS.md`, `PyAutoBuild/AGENTS.md`), not the aspirational mapping
+(`PyAutoBrain/AGENTS.md`, `PyAutoHands/AGENTS.md`), not the aspirational mapping
 in `skill_redesign.md`:
 
 - **Mind** = intent + task-registry state.
@@ -45,7 +45,7 @@ trends toward installer + tooling only:
 - **→ PyAutoHeart** (read-only validation/readiness checks): `dep_audit`,
   `verify_install`, `review_release`, `audit_docs`, `cli_noise_clean`.
 - **→ PyAutoBrain** (dev-workflow): `update_issue`, `repo_cleanup`.
-- **→ PyAutoBuild** (release execution): `pre_build`. PyAutoBuild now has a
+- **→ PyAutoHands** (release execution): `pre_build`. PyAutoHands now has a
   `skills/` root for its **release-execution** skills only — it still owns no
   dev-workflow skills (`ship_*` live in Brain and only *call* its release step).
 - **Removed:** `start-new-project` was a duplicate of the canonical science-project
@@ -70,10 +70,10 @@ Claude and Codex skill homes, and preserves commands in `~/.claude/commands/`:
 - `PyAutoMind/skills/` — registry-coupled (`create_issue`)
 - `PyAutoBrain/skills/` — development-workflow
 - `PyAutoHeart/skills/` — status / readiness
-- `PyAutoBuild/skills/` — release execution
+- `PyAutoHands/skills/` — release execution
 - `autolens_profiling/skills/` — science profiling
 
-**PyAutoBuild's `skills/` root holds release-execution skills only** (`pre_build`)
+**PyAutoHands's `skills/` root holds release-execution skills only** (`pre_build`)
 — it owns no *dev-workflow* skills; `ship_*` live in Brain and only call its
 release step. Registry
 references stay workspace-root-anchored (`PyAutoMind/active.md`,

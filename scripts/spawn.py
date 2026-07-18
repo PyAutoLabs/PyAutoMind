@@ -122,8 +122,8 @@ repos:
     github: YOURORG/PyAutoBrain
     category: organ
     role: "Reasoning/orchestration layer; how work is decomposed and routed; the specialist agents."
-  PyAutoBuild:
-    github: YOURORG/PyAutoBuild
+  PyAutoHands:
+    github: YOURORG/PyAutoHands
     category: organ
     role: "Packaging, tagging, notebook generation, release execution."
   PyAutoHeart:
@@ -523,7 +523,7 @@ def stamp_family(root, family_dir):
         (ws / "config" / "build").mkdir(exist_ok=True)
         (ws / "config" / "build" / "copy_files.yaml").write_text(
             "# Files copied verbatim into notebooks/ (not converted) by the notebook\n"
-            "# build (PyAutoBuild generate.py reads this workspace-local list). List\n"
+            "# build (PyAutoHands generate.py reads this workspace-local list). List\n"
             "# paths relative to scripts/, e.g.:\n"
             "#\n"
             "# - util/helpers.py\n"

@@ -95,7 +95,7 @@ jobs:
           # 06:00 digest, last night's 02:00 run is hours old; a single missed
           # night already shows 1d and flags.
           check_wf PyAutoLabs/PyAutoBrain nightly-release.yml    "Nightly release driver"    0
-          check_wf PyAutoLabs/PyAutoBuild python_matrix.yml      "Python matrix (weekly)"    8
+          check_wf PyAutoLabs/PyAutoHands python_matrix.yml      "Python matrix (weekly)"    8
           check_wf PyAutoLabs/PyAutoHeart workspace-validation.yml "Workspace validation (weekly)" 8
           check_wf PyAutoLabs/PyAutoHeart url-check.yml          "URL check (weekly)"        8
           check_wf PyAutoLabs/PyAutoFit  nss_install_smoke.yml   "NSS install smoke (weekly)" 8

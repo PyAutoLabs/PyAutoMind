@@ -42,7 +42,7 @@ config rows, almost never logic:
   workspace→(library, package) map, `readiness.py`'s DEFAULT_LIBRARIES tuple,
   and `url_check_live.py`'s bespoke URL-fixup rules (instance "immune
   memory" — pure config for an adopter).
-- **PyAutoBuild** — a declarative `run_workspace <repo> <package> <flags>
+- **PyAutoHands** — a declarative `run_workspace <repo> <package> <flags>
   <library>` table in `pre_build.sh` plus small maps in `autobuild/*.py`
   (`run_all.py`, `slow_skip_check.py`, navigator scripts).
 - **PyAutoMemory** — content is 100% domain *by design*; the generic asset is
@@ -87,7 +87,7 @@ boundaries:
   repos are untouched — this is publishing a mould, not splitting the clay.
 
 All five organs are already public on GitHub, but **four of five have no
-LICENSE** (only PyAutoBuild does) — legally all-rights-reserved. Adding
+LICENSE** (only PyAutoHands does) — legally all-rights-reserved. Adding
 licenses (and deciding one for Memory's *content* vs its *structure*) is a
 prerequisite for any adoption story.
 
