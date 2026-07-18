@@ -1,3 +1,11 @@
+## tenant-firewall-drift
+- issue: filed as a PyAutoMind draft prompt (organism docs sweep #84, WS5) — no separate GitHub issue
+- completed: 2026-07-18
+- pr: https://github.com/PyAutoLabs/PyAutoMind/pull/86 (merged)
+- notes: The tenant-firewall check (scripts/repos_sync.py) was red with 10 hardcoded-instance-fact findings in Brain/Heart/Build organ code. On inspection every token was a genuine reference-instance / branded fact of the same kind the allowlist already carries for ~40 sibling files, so the resolution was to DECLARE the surfaces in FIREWALL_ALLOWLIST, not refactor. Added: community/_community.py {Jammy2211, PyAutoLabs} and workspace/_workspace.py {HowTo*, workspaces, PyAutoReduce, PyAutoLabs} (both production conductors that were simply never allowlisted when written), clone/_clone.py +autofit_assistant, docs/conf.py {PyAutoScientist}, four Brain tests (test_clone/community/mind_commit_guard/workspace_conductor), PyAutoHeart/tests/test_repo_config.py {PyAutoCTI, autocti_workspace(_test)} — introduced by the CTI-poll count test in Heart#91 — and PyAutoBuild generate_release_notes.py +PyAutoScientist. Verify: `python3 scripts/repos_sync.py` -> tenant firewall OK (was 10 mismatches); all generated checks OK. KEY: promoting PyAutoConf to organ (WS1) REMOVED PyAutoConf as a hunted token (can only reduce findings). Future Phase-3 config extraction could push some facts (e.g. community's PRIMARY_ORG) to a config surface; deferred as out of scope. Still-open sibling gap: admin_jammy has no AGENTS.md (repo not checked out in the sweep env).
+
+## Original prompt
+
 # Tenant-firewall drift: hardcoded instance facts in Brain organ code
 
 Type: maintenance

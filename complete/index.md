@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-658 records across 5 buckets.
+664 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -46,6 +46,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autotune-off-default](2026/07/autotune-off-default.md)
 - [brain-agent-commands](2026/07/brain-agent-commands.md)
 - [brain-lifecycle-path-fixes](2026/07/brain-lifecycle-path-fixes.md) — the shared sizing faculty's parse_prompt now covers the full Mind lifecycle layout — draft/ state folder strip…
+- [branch-contribution-tool](2026/07/branch-contribution-tool.md) — blessed `branch_contribution` tool (PyAutoBrain/bin) — the ONE tested answer to "does this branch contribute c…
 - [bug-agent](2026/07/bug-agent.md)
 - [build_ic50_assistant_from_autofit_assistant](2026/07/build_ic50_assistant_from_autofit_assistant.md)
 - [checkpoint-continue](2026/07/checkpoint-continue.md)
@@ -83,6 +84,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
 - [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
 - [env-profile-validator](2026/07/env-profile-validator.md) — env-profile redesign migration step 1 (campaign #155 Phase 3): validate_env_profiles PR-time config check (sch…
+- [env-scrubbed-baseline](2026/07/env-scrubbed-baseline.md) — env-profile redesign migration step 3 — scrubbed base env. build_env_for_script strips the managed PYAUTO_ fam…
 - [env-single-resolver](2026/07/env-single-resolver.md) — env-profile redesign migration step 2 — one resolver. The three run_smoke.py forks (byte-identical to each oth…
 - [ep-analytic-updates-scope](2026/07/ep-analytic-updates-scope.md) — EP phase 6 — scope analytic conjugate updates — plan DELIVERED
 - [ep-deterministic-reconcile](2026/07/ep-deterministic-reconcile.md) — EP phase 5 — three deterministic-variable mechanisms — DECIDED
@@ -100,6 +102,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [eyes-paper-critique](2026/07/eyes-paper-critique.md) — epic #117 CLOSED
 - [factor-graph-viz-dispatch](2026/07/factor-graph-viz-dispatch.md)
 - [fitness-nan-guard-contract](2026/07/fitness-nan-guard-contract.md)
+- [floors-adoption](2026/07/floors-adoption.md) — Phase 4 task 1 — adopt version.minimum_library_version floor (2026.7.9.1) across all 7 workspace config/genera…
 - [frame-products](2026/07/frame-products.md) — opt-in per-exposure frame products live — TargetSpec.frame_products packages every calibrated _flc/_flt SCI ch…
 - [frame-registration](2026/07/frame-registration.md) — inter-exposure registration quantified + extracted — frames/manifest.json per-frame registration block (WCS so…
 - [gradient-safe-logdet](2026/07/gradient-safe-logdet.md)
@@ -165,6 +168,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [mcmc-corner-smoke](2026/07/mcmc-corner-smoke.md) — The `searches/mcmc.py` "no dynamic range" release-smoke crash (nightly-release blocker) was a **library** bug,…
 - [memory-faculty](2026/07/memory-faculty.md)
 - [memory-structure-cleanup](2026/07/memory-structure-cleanup.md) — wiki/ + bibliography restructure, structure lint, template sync — SHIPPED
+- [mind-guard-cd-fix](2026/07/mind-guard-cd-fix.md) — mind_commit_guard v1.2 — honour a leading `cd` away from Mind. v1.1 keyed is-Mind-commit off the ambient cwd t…
 - [morning-status-release-rehearsal](2026/07/morning-status-release-rehearsal.md) — morning Slack digest + release rehearsal — RESOLVED
 - [multi-shared-state-core-api](2026/07/multi-shared-state-core-api.md)
 - [multi-shared-state-examples](2026/07/multi-shared-state-examples.md) — EPIC — phases 1-4 + follow-up
@@ -239,6 +243,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [results-inspector-mcp](2026/07/results-inspector-mcp.md) — Read-only results-inspector MCP stdio server in both assistants — 7 core tools over PyAutoFit output dirs (lis…
 - [retire-complete-ledger](2026/07/retire-complete-ledger.md) — complete.md retired — the dated records ARE the ledger; first record written via the new record --from-file pa…
 - [review-faculty](2026/07/review-faculty.md)
+- [review-falsified-by](2026/07/review-falsified-by.md) — adversarial pass as a checkpoint stage (item 6, the delicate one). review faculty _review.py lifts load-bearin…
 - [rtd-hygiene](2026/07/rtd-hygiene.md) — RTD hygiene phase A — dead configs deleted, conf.py converged, Heart-owned docs-build CI live on 3 libs (basel…
 - [run-queue](2026/07/run-queue.md)
 - [samplers-faculty](2026/07/samplers-faculty.md)
@@ -261,6 +266,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [stpsf-tier2b](2026/07/stpsf-tier2b.md) — JWST per-frame PSF coverage lifted 3/6 -> 6/6 (F115W validated) — STPSF tier-2b at frame DETECTOR + target pos…
 - [stub-skill-recipes-fill-in](2026/07/stub-skill-recipes-fill-in.md) — retired by user decision
 - [survey-cutouts](2026/07/survey-cutouts.md)
+- [tenant-firewall-drift](2026/07/tenant-firewall-drift.md)
 - [test-mode-bypass-completed](2026/07/test-mode-bypass-completed.md) — One-line fix — _fit_bypass_test_mode now calls paths.completed() before returning (mirrors start_resume_fit), …
 - [test-mode-representative-samples-phase-1-design](2026/07/test-mode-representative-samples-phase-1-design.md)
 - [test-mode-representative-samples-phase-2-core-api](2026/07/test-mode-representative-samples-phase-2-core-api.md)
