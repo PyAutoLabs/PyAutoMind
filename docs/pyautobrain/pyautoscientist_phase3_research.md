@@ -5,7 +5,7 @@ Research note, 2026-07-10. Companion to `pyautoscientist_generalisation_assessme
 discussion: the maintainer's vision is **more rigid** than the shipped docs'
 category contract — a literal `PyAutoProject` / `autoproject_workspace` /
 `autoproject_workspace_test` / `autoproject_assistant` family a new scientist
-adopts wholesale, with PyAutoConf promoted to the organism's "nervous system".
+adopts wholesale, with PyAutoNerves promoted to the organism's "nervous system".
 Constraints unchanged: no duplicated code, no impact on the live setup, and
 the live organs stay the single fast-moving upstream adopters tag along with.
 
@@ -26,7 +26,7 @@ a satellite must follow:
 | Config layering (packaged defaults ← workspace override) | the `autoconf` package at runtime | a `config/` directory in the documented shape |
 
 **The one gap:** `smoke_tests.yml` is a fat per-workspace copy (hard-coded
-checkout chain of PyAutoConf → … → the library) in every workspace and HowTo —
+checkout chain of PyAutoNerves → … → the library) in every workspace and HowTo —
 ~10 near-identical files in the live setup. Generalising it into a reusable
 workflow parameterised by the dependency chain is a Phase 3 work item that
 pays the live setup directly (one definition instead of ten) *and* is the
@@ -113,9 +113,9 @@ one generator maintains every fresh-slate artifact against the live source
 of truth. Drift check: a CI job re-runs spawn and fails on diff — the
 repos_sync pattern, again.
 
-## 4. PyAutoConf → PyAutoNerves: promote the role now, defer the rename
+## 4. PyAutoNerves → PyAutoNerves: promote the role now, defer the rename
 
-PyAutoConf genuinely is the nervous system — the runtime layer connecting
+PyAutoNerves genuinely is the nervous system — the runtime layer connecting
 workspace conventions to libraries (layered config with workspace override,
 version handshake, test_mode, jax_wrapper, notebook/Colab setup). The
 adopter-facing framing "your project gets `autoproject/config/` +
@@ -126,7 +126,7 @@ But the literal rename decomposes into three moves with very different costs:
 
 1. **Promote the role** — body map `role:` text, an RTD "Nerves" page beside
    the organ pages, template family wired through it. Zero risk. **Do now.**
-2. **Rename the repo** (PyAutoConf → PyAutoNerves, keep package `autoconf`)
+2. **Rename the repo** (PyAutoNerves → PyAutoNerves, keep package `autoconf`)
    — GitHub redirects help, but the name is hard-coded in every fat
    `smoke_tests.yml` checkout, docs-build.yml's dep chains, Heart config,
    pre_build, repos.yaml + all generated blocks, and the firewall allowlist.
