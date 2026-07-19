@@ -52,7 +52,7 @@ repos:
   # it falls back to `role` when absent. `front_door: true` is the mechanism for
   # adding a *non-organ* repo to that public set without making it a
   # category:organ — the internal organism map (system_map) stays strict. No
-  # repo currently uses it (Nerves/PyAutoConf, its former user, is now a full
+  # repo currently uses it (Nerves/PyAutoNerves, its former user, is now a full
   # organ); it is kept for a future library that belongs on the public front
   # door without being an organ.
   PyAutoMind:
@@ -91,12 +91,12 @@ repos:
     organ: Gut
     role: "Owns the lifecycle of condemned self-material (stale branches, stashes, dead code/tests): holds it as durable, recoverable git refs through a transit window and voids it on a sweep. The storage mirror of Memory (retention vs release)."
     public_role: "The storage mirror of Memory — holds *condemned* material (stale branches, dead code) as recoverable git refs, then voids it on a sweep."
-  PyAutoConf:
-    github: PyAutoLabs/PyAutoConf
+  PyAutoNerves:
+    github: PyAutoLabs/PyAutoNerves
     category: organ
     organ: Nerves
-    role: "The Nerves — the configuration/serialization layer connecting workspace conventions to libraries (layered config, version handshake, test_mode), delivered as the `autoconf` package."
-    public_role: "The configuration and serialization layer (`autoconf`) connecting the organism's conventions to every library."
+    role: "The Nerves — the configuration/serialization layer connecting workspace conventions to libraries (layered config, version handshake, test_mode), delivered as the `autonerves` package."
+    public_role: "The configuration and serialization layer (`autonerves`) connecting the organism's conventions to every library."
 
   # --- scientific libraries ----------------------------------------------
   PyAutoFit:
