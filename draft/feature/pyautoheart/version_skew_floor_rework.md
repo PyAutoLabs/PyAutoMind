@@ -5,7 +5,19 @@ Target: PyAutoHeart
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: fix-implemented-on-branch (claude/wake-up-u53v8z, PyAutoHeart) — pending review/merge
+
+<!-- 2026-07-19: implemented on branch claude/wake-up-u53v8z. version_skew.py now
+compares each workspace's version.minimum_library_version floor against the
+newest YYYY.M.D.B git tag of its library (local tags, no import/network);
+UNSATISFIABLE (floor > newest release) is RED, OK when satisfiable, UNKNOWN
+(STALE) when the newest release can't be resolved, BAD on unparseable input. The
+general.yaml<->version.txt MISMATCH leg and AHEAD/BEHIND were dropped. readiness.py,
+dashboard.py, capabilities.yaml and the test suites updated (289 pass). Build-chain
+#155 Phase 4 task 2. NOT DONE here (deeper, separate): yank-awareness of the floor
+(needs PyPI API), and removing the legacy workspace_version/version.txt from the 7
+workspaces. -->
+
 
 ## Context
 

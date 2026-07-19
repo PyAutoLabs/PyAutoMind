@@ -199,3 +199,36 @@ Heart's leg at floors-vs-release-tags AND enforce "a floor names an installable
 version"; then remove the legacy workspace_version/version.txt. Task 3 =
 assistant --check-version source-checkout-aware (or drop equality for the API
 hash). Task 4 = README pins (orphaned per Phase 1 audit).
+
+## Phase 4 tasks 2, 3 + legacy removal DONE 2026-07-19 — on branch claude/wake-up-u53v8z
+
+Fork (b) re-confirmed by the maintainer (a `/wake_up` session proposed the
+fork-(a) commit-back again; surfaced the 2026-07-16 decision, maintainer chose
+fork (b)). Shipped on `claude/wake-up-u53v8z` (PRs open, pending merge):
+
+- **Task 2 — Heart version_skew rework** (PyAutoHeart PR #96): now compares each
+  workspace's `minimum_library_version` floor against the newest library release
+  git tag. UNSATISFIABLE (floor > newest release) = RED — the "floor must name an
+  installable release" invariant that was previously unfailable; OK when
+  satisfiable; UNKNOWN (STALE) when unresolvable. Local tags only, no import/
+  network. readiness/dashboard/capabilities + tests updated (289 pass).
+- **Task 3 — assistant `--check-version` false positive** (autolens_assistant
+  #80, autocti_assistant #7, autofit_assistant #16): dropped the `__version__`
+  equality gate; gates on the public-API-surface hash only (versions shown for
+  context). Kills the structurally-permanent source-vs-wheel false positive that
+  drove the recurring hand-bump urge. Mirrored across all three assistant clones.
+- **Legacy removal**: dropped `workspace_version` + `version.txt` from the 6
+  workspaces that carried them (autofit/autogalaxy/autolens_workspace,
+  HowToGalaxy, HowToLens, euclid pipeline — HowToFit's local clone lacked them).
+  Behaviour-preserving: autonerves check_version prefers the floor and only falls
+  back to these. PRs: autolens_workspace #295, autogalaxy_workspace #139,
+  autofit_workspace #102, HowToLens #37, HowToGalaxy #28, euclid #31.
+
+Also fixed two adjacent false wake-up signals: repos_sync origin check made
+host-agnostic (PyAutoMind #91) and version_drift.sh reframed to stamp-consistency
+(PyAutoBrain #144).
+
+Remaining Phase 4: **task 4** (README version pins, orphaned per Phase 1 audit)
+and the **canonical PyAutoLabs/HowToFit** legacy removal (this session's clone
+was the Jammy2211 fork, which lacked the keys). Yank-awareness of a floor (PyPI
+API) is a deeper non-tick check, still unowned.

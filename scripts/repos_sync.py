@@ -671,6 +671,16 @@ def normalize_remote(url):
     m = re.match(r"https://github\.com/(.+)", url)
     if m:
         return m.group(1)
+    # Fallback: extract the trailing "<owner>/<repo>" slug from any other
+    # remote form — e.g. a cloud-session git-proxy URL like
+    # "http://user@host:port/git/<owner>/<repo>", or a local mirror. Identity
+    # is the slug, not the host, so a correct slug served behind a different
+    # host is not drift (this keeps the origin check meaningful in web/CI
+    # sessions instead of flagging every checkout). A genuinely wrong owner or
+    # repo name still fails the comparison downstream.
+    parts = [p for p in url.split("/") if p]
+    if len(parts) >= 2:
+        return "/".join(parts[-2:])
     return url
 
 
