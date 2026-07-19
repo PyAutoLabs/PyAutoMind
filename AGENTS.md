@@ -7,7 +7,7 @@ this repository.
 
 **PyAutoMind is the Mind of the PyAuto organism and the starting point of the
 PyAuto workflow.** It holds the organism's ideas, intent, goals, priorities and
-workflow state. Every task that ends up as a PR in PyAutoConf, PyAutoFit,
+workflow state. Every task that ends up as a PR in PyAutoNerves, PyAutoFit,
 PyAutoArray, PyAutoGalaxy, PyAutoLens, or any of the `*_workspace*` repos begins
 as a markdown file here.
 
