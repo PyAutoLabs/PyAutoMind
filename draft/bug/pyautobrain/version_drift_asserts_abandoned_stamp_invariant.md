@@ -7,7 +7,7 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: normal
-Status: formalised
+Status: fix-implemented-on-branch (claude/wake-up-u53v8z, PyAutoBrain) — pending review/merge
 
 `PyAutoBrain/bin/version_drift.sh` compares each library/workspace's committed
 source version stamp (`*/__init__.py` `__version__`, workspace `version.txt`)
