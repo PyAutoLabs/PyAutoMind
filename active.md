@@ -5,7 +5,8 @@
 ## multistart-contrib-vmapped-state
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1397
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1398 (pending-release; commit 19f0cdf0a)
-- status: workspace-dev — Phase 1 library PR #1398 open (optax.contrib + per-start jax.vmap state + apply_if_finite guard + af.MultiStartProdigy + optax>=0.2.5; validated numpy 7-pass, JAX Adam/Prodigy/batch4 truth-basin, dill-resume). Shipped past pre-existing Heart RED (unrelated; PyAutoFit gate green) w/ user OK. Workspace-follow: author autofit_workspace_test/scripts/searches/MultiStartProdigy.py JAX validation (additive, no migration) -> ship_workspace behind library-first merge gate.
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/58 (pending-release; commit cfc1615)
+- status: PRs-OPEN, awaiting-merge (library-first) — Phase 1 fully shipped: lib #1398 (optax.contrib + per-start jax.vmap state + apply_if_finite + af.MultiStartProdigy + optax>=0.2.5) + ws #58 (MultiStartProdigy.py JAX validation, additive/no migration). Validated: numpy 7-pass, JAX Adam/Prodigy/batch4 truth-basin, dill-resume, ws script passes. Both held for HUMAN MERGE past pre-existing/unrelated Heart RED (PyAutoLens dirty, known 632p/10f ws-validation baseline predating change, hygiene/release-stale). MERGE ORDER: #1398 then #58. On merge: lifecycle record + drop this entry, then issue Phase 2 resurrection draft.
 - worktree: ~/Code/PyAutoLabs-wt/multistart-contrib-vmapped-state
 - autonomy: supervised
 - prompt: active/multistart_contrib_and_vmapped_state.md
