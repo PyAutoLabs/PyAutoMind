@@ -39,11 +39,3 @@
 
 
 
-## autofit-smoke-optax-jax
-- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/170
-- status: review (PR #171 open, awaiting merge)
-- autonomy: safe
-- prompt: active/searches_mle_optax_smoke_dependency.md
-- note: autofit_workspace searches/mle.py MultiStartAdam needs jax+optax; fix in PyAutoHands python_matrix.yml (PyAutoFit[optional] + smoke matrix 3.11+). Filed from /wake_up 2026-07-20.
-- repos:
-  - PyAutoHands: feature/autofit-smoke-optax-jax
