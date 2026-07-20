@@ -36,6 +36,16 @@
 - repos:
 
 
+## pix-gradient-slogdet-revalidation
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/112
+- status: workspace-dev — routing to start_workspace; worktree not yet created. Toggle shipped log_det_method="slogdet" in pix harness, re-run on RAL A100 vs lr_free_results baseline, verdict whether the #100/#101 non-finite walls are gone. NO library edits (fix already merged PyAutoArray#392).
+- worktree: ~/Code/PyAutoLabs-wt/pix-gradient-slogdet-revalidation
+- autonomy: supervised
+- prompt: active/pix_gradient_landscape_revalidation.md
+- note: verification tail of the pix-NaN lineage — localisation (#104/PR#105) + fix (PyAutoArray#392) + fitness-guard contract (PyAutoFit#1391) all shipped 2026-07-17. Repro is A100-only (10.9 GiB/point OOMs laptop); replay seed-0 rejected draws (12,35), NOT last-finite recorded points.
+- repos:
+  - autolens_workspace_developer: feature/pix-gradient-slogdet-revalidation (worktree pending)
+
 
 
 
