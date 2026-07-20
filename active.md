@@ -5,13 +5,14 @@
 ## multistart-contrib-vmapped-state
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1397
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1398 (pending-release; commit 19f0cdf0a)
-- status: library-shipped, workspace-pending — Phase 1 library PR open (optax.contrib + per-start jax.vmap state + apply_if_finite guard + af.MultiStartProdigy + optax>=0.2.5). Validated: numpy unit 7-pass, JAX Adam/Prodigy/batch4 truth-basin, dill-resume round-trip. Shipped past pre-existing Heart RED (unrelated cross-repo/release-staleness; PyAutoFit gate green) w/ user OK. NEXT /start_workspace: author autofit_workspace_test/scripts/searches/MultiStartProdigy.py JAX validation (option i; additive, no migration).
+- status: workspace-dev — Phase 1 library PR #1398 open (optax.contrib + per-start jax.vmap state + apply_if_finite guard + af.MultiStartProdigy + optax>=0.2.5; validated numpy 7-pass, JAX Adam/Prodigy/batch4 truth-basin, dill-resume). Shipped past pre-existing Heart RED (unrelated; PyAutoFit gate green) w/ user OK. Workspace-follow: author autofit_workspace_test/scripts/searches/MultiStartProdigy.py JAX validation (additive, no migration) -> ship_workspace behind library-first merge gate.
 - worktree: ~/Code/PyAutoLabs-wt/multistart-contrib-vmapped-state
 - autonomy: supervised
 - prompt: active/multistart_contrib_and_vmapped_state.md
 - note: Phase 2 (restart-on-death resurrection) filed as draft/feature/autofit/multistart_resurrection_restart_on_death.md — depends on this PR's vmapped state; issue only after Phase 1 merges.
 - repos:
   - PyAutoFit: feature/multistart-contrib-vmapped-state
+  - autofit_workspace_test: feature/multistart-contrib-vmapped-state
 
 
 ## jax-joss-benchmarks
