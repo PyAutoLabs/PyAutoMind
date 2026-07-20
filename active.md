@@ -4,11 +4,12 @@
 
 ## multistart-contrib-vmapped-state
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1397
-- status: library-dev — Phase 1 of multi-start gradient v2 (#101). optax.contrib rule resolution + per-start jax.vmap optimizer state (decouples lr-free global scalars) + optax.apply_if_finite guard + af.MultiStartProdigy + optax>=0.2.5 pin. Numpy unit tests; JAX MGE parity in autofit_workspace_test. Existing Adam/ADABelief/Lion must be numerically unchanged.
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1398 (pending-release; commit 19f0cdf0a)
+- status: library-shipped, workspace-pending — Phase 1 library PR open (optax.contrib + per-start jax.vmap state + apply_if_finite guard + af.MultiStartProdigy + optax>=0.2.5). Validated: numpy unit 7-pass, JAX Adam/Prodigy/batch4 truth-basin, dill-resume round-trip. Shipped past pre-existing Heart RED (unrelated cross-repo/release-staleness; PyAutoFit gate green) w/ user OK. NEXT /start_workspace: author autofit_workspace_test/scripts/searches/MultiStartProdigy.py JAX validation (option i; additive, no migration).
 - worktree: ~/Code/PyAutoLabs-wt/multistart-contrib-vmapped-state
 - autonomy: supervised
 - prompt: active/multistart_contrib_and_vmapped_state.md
-- note: Phase 2 (restart-on-death resurrection) filed as draft/feature/autofit/multistart_resurrection_restart_on_death.md — depends on this PR's vmapped state; issue only after Phase 1 nears shipping.
+- note: Phase 2 (restart-on-death resurrection) filed as draft/feature/autofit/multistart_resurrection_restart_on_death.md — depends on this PR's vmapped state; issue only after Phase 1 merges.
 - repos:
   - PyAutoFit: feature/multistart-contrib-vmapped-state
 
