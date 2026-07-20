@@ -10,7 +10,7 @@
 - prompt: active/multistart_contrib_and_vmapped_state.md
 - note: Phase 2 (restart-on-death resurrection) filed as draft/feature/autofit/multistart_resurrection_restart_on_death.md — depends on this PR's vmapped state; issue only after Phase 1 nears shipping.
 - repos:
-  - PyAutoFit: main (clean at survey)
+  - PyAutoFit: feature/multistart-contrib-vmapped-state
 
 
 ## jax-joss-benchmarks
