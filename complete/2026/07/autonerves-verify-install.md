@@ -1,3 +1,28 @@
+# autonerves-verify-install — release-fidelity harness migrated autoconf → autonerves
+
+**Shipped 2026-07-20.** Issue [PyAutoHeart#97](https://github.com/PyAutoLabs/PyAutoHeart/issues/97), PR [#98](https://github.com/PyAutoLabs/PyAutoHeart/pull/98) (merged, squash `3c65577`).
+
+## Problem
+The `autoconf → autonerves` package rename (PyAutoConf → PyAutoNerves, merged into the libraries 2026-07-19/20) was not propagated to PyAutoHeart's release-fidelity / verify-install harness. The nightly publishes the `autonerves` wheel now, but Stage-3 still did `pip install autoconf==<today's dev>` from TestPyPI → `No matching distribution found for autoconf==2026.7.20.1.dev66901`. This broke **both** `nightly-release` (Stage 3, run 29719984654) and `workspace-validation` overnight 2026-07-20.
+
+## Fix
+Surgical 6-file migration in PyAutoHeart:
+- `heart/checks/verify_install.sh` — current-build install list (Check C/F `$TARGET_VERSION`), import checks (B/D), Colab `setup_colab` bootstrap.
+- `.github/workflows/workspace-validation.yml` — `autoconf[optional]` → `autonerves[optional]`.
+- `heart/checks/import_time.py` `DEFAULT_PACKAGES`; `tests/test_validate.py` expectation (39 passed).
+- `.github/workflows/{docs-build,lib-tests}.yml` — cosmetic help text.
+
+## Traps / notes (carry forward)
+- **NOT a blind rename.** Check A/E installs the *historical yanked release* `autoconf==2026.2.26.4` (predates the rename; no `autonerves` at that version) — that block must stay `autoconf`.
+- The `docs-build`/`lib-tests` case statements keep accepting `autoconf` as an **input alias** → `repo=PyAutoNerves` (back-compat), so `autoconf` legitimately survives there.
+- `autonerves` exposes both `[optional]` and `[jax]` extras (1:1 with the old `autoconf` extras).
+- Filed from `/wake_up` overnight-failure triage; the same rename also motivated the local dir renames PyAutoConf→PyAutoNerves / PyAutoBuild→PyAutoHands.
+
+## Validation
+`bash -n` clean; `pytest tests/test_validate.py` → 39 passed; PR CI green (pytest 3.12/3.13). Next nightly Stage-3 + workspace-validation expected green.
+
+## Original prompt
+
 # Migrate PyAutoHeart release/verify-install harness from `autoconf` to `autonerves`
 
 Type: bug
