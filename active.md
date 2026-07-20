@@ -39,10 +39,10 @@
 
 ## autonerves-verify-install
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/97
-- status: library-dev
+- status: review (PR #98 open, awaiting merge)
 - worktree: ~/Code/PyAutoLabs-wt/autonerves-verify-install
 - autonomy: safe
 - prompt: active/autoconf_autonerves_verify_install_migration.md
 - note: autoconf→autonerves rename not propagated to Heart release/verify-install harness; release blocker (nightly Stage-3 + workspace-validation). Filed from /wake_up 2026-07-20.
 - repos:
-  - PyAutoHeart: fix/autonerves-verify-install
+  - PyAutoHeart: feature/autonerves-verify-install
