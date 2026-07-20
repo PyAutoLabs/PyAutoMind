@@ -38,13 +38,13 @@
 
 ## pix-gradient-slogdet-revalidation
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/112
-- status: workspace-dev — routing to start_workspace; worktree not yet created. Toggle shipped log_det_method="slogdet" in pix harness, re-run on RAL A100 vs lr_free_results baseline, verdict whether the #100/#101 non-finite walls are gone. NO library edits (fix already merged PyAutoArray#392).
+- status: workspace-dev — BLOCKED-ON-RAL-CONNECTIVITY. Worktree created + harness toggle committed (a5b53a6 on feature/pix-gradient-slogdet-revalidation, NOT pushed). Next = launch the A100 A/B on RAL, but SSH euclid_jump is failing this session (too-many-auth-failures, then banner-exchange timeout through jump_finan). RESUME: (1) get SSH up (`! ssh -o IdentitiesOnly=yes euclid_jump hostname`; may need interactive key/2FA); (2) verify RAL PyAutoArray carries PR#392 `grep -rl log_det_method /mnt/ral/jnightin/PyAuto/PyAutoArray/autoarray/` (HPCPullPyAuto if stale); (3) sync worktree scripts to RAL; (4) run BOTH arms same seeds: baseline `PIX_LOGDET` unset (reproduce 330592 cholesky deaths) then `PIX_LOGDET=slogdet` (probe_nonfinite.sbatch, --partition=gpu --mem=64gb, ~5min ea); replay seed-0 rejected draws 12,35 — NOT last-finite recorded points; (5) measure survival%/min-death-step/step-0 NaN-grad count; (6) verdict into searches_minimal/pix_nonfinite_findings.md → ship_workspace.
 - worktree: ~/Code/PyAutoLabs-wt/pix-gradient-slogdet-revalidation
 - autonomy: supervised
 - prompt: active/pix_gradient_landscape_revalidation.md
-- note: verification tail of the pix-NaN lineage — localisation (#104/PR#105) + fix (PyAutoArray#392) + fitness-guard contract (PyAutoFit#1391) all shipped 2026-07-17. Repro is A100-only (10.9 GiB/point OOMs laptop); replay seed-0 rejected draws (12,35), NOT last-finite recorded points.
+- note: verification tail of the pix-NaN lineage — localisation (#104/PR#105) + fix (PyAutoArray#392) + fitness-guard contract (PyAutoFit#1391) all shipped 2026-07-17. Toggle is env var PIX_LOGDET=slogdet threaded via al.Settings into build_analysis (one edit covers both pix_multi_start + pix_lr_free). Repro is A100-only (10.9 GiB/point OOMs laptop).
 - repos:
-  - autolens_workspace_developer: feature/pix-gradient-slogdet-revalidation (worktree pending)
+  - autolens_workspace_developer: feature/pix-gradient-slogdet-revalidation (worktree live; commit a5b53a6 local-only)
 
 
 
