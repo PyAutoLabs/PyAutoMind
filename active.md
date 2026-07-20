@@ -2,20 +2,6 @@
 
 
 
-## multistart-contrib-vmapped-state
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1397
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1398 (pending-release; commit 19f0cdf0a)
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/58 (pending-release; commit cfc1615)
-- status: PRs-OPEN, awaiting-merge (library-first) — Phase 1 fully shipped: lib #1398 (optax.contrib + per-start jax.vmap state + apply_if_finite + af.MultiStartProdigy + optax>=0.2.5) + ws #58 (MultiStartProdigy.py JAX validation, additive/no migration). Validated: numpy 7-pass, JAX Adam/Prodigy/batch4 truth-basin, dill-resume, ws script passes. Both held for HUMAN MERGE past pre-existing/unrelated Heart RED (PyAutoLens dirty, known 632p/10f ws-validation baseline predating change, hygiene/release-stale). MERGE ORDER: #1398 then #58. On merge: lifecycle record + drop this entry, then issue Phase 2 resurrection draft.
-- worktree: ~/Code/PyAutoLabs-wt/multistart-contrib-vmapped-state
-- autonomy: supervised
-- prompt: active/multistart_contrib_and_vmapped_state.md
-- note: Phase 2 (restart-on-death resurrection) filed as draft/feature/autofit/multistart_resurrection_restart_on_death.md — depends on this PR's vmapped state; issue only after Phase 1 merges.
-- repos:
-  - PyAutoFit: feature/multistart-contrib-vmapped-state
-  - autofit_workspace_test: feature/multistart-contrib-vmapped-state
-
-
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: PARKED-ON-JOB — #282 MERGED+cleaned; 8/8 runnable A100 rows committed (autolens_jax_joss@64204f6). SDP.81 prep = detached RAL job 330608 (330605 diagnosed: empty extracted/ leftover skipped untar via test-d guard; casatools import needs ~/.casa/data — both fixed; 42GB tarball CACHED, no re-download) (45GB ALMA Band6 download -> casatools venv -> 3-level export -> installs dataset/interferometer/{sdp81,sdp81_mid,sdp81_full} in /mnt/ral/jnightin/autolens_jax_joss). RESUME (short session): (1) check log /mnt/ral/jnightin/sdp81_prep_330608.log — expect 'SDP81 PREP ALL DONE' + per-level visibility counts; failure modes: casatools pip wheel on py3.12 (fallback = monolithic CASA tarball), datacolumn, MS_LIST empty (check find patterns); (2) sbatch interferometry benchmarks on A100: benchmarks/interferometer.py at --nvis default/mid/full + benchmarks/imaging_and_interferometer.py (pattern: /mnt/ral/jnightin/autolens_jax_joss/run_rest.sbatch); (3) scp results/*.json back, regen RESULTS.md, commit (guard: explicit file paths); (4) copy small sdp81/ product locally, rewrite scripts/interferometer/start_here.py on NEW branch (start_workspace; #282 merged) using it — decide hosting (commit few-MB FITS to workspace w/ .gitignore allowlist + git add -f, or Zenodo+SDP81_URL); (5) final issue #281 update. Also pending: cluster-tuning prompt draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md; weak JAX-viz PyAutoLens#614
