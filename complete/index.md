@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-672 records across 5 buckets.
+674 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -134,6 +134,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [intake-reconcile](2026/07/intake-reconcile.md)
 - [intake_writes_legacy_layout](2026/07/intake_writes_legacy_layout.md)
 - [interferometer-analysis-fitexception](2026/07/interferometer-analysis-fitexception.md) — interferometer (+point_source) log_likelihood_function lacked imaging's NumPy-path try/except→FitException gua…
+- [interpolator-aggregator-test-mode](2026/07/interpolator-aggregator-test-mode.md)
 - [inversion-testmode-singular-guard](2026/07/inversion-testmode-singular-guard.md) — release-tail singular/non-PD inversion FAILs (slam/cpu_fast_modeling) were a flaky TEST_MODE artifact, not a c…
 - [jax-autodiff-gradients-audit](2026/07/jax-autodiff-gradients-audit.md) — 3-phase JAX autodiff gradients audit complete in one supervised session — every smooth likelihood FD-certified…
 - [jax-cache-default](2026/07/jax-cache-default.md) — + XLA_FLAGS clobber fix
@@ -196,6 +197,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [opus-wrapup](2026/07/opus-wrapup.md) — executed on Fable
 - [per-frame-psf](2026/07/per-frame-psf.md) — per-frame native ePSFs live (psf/frame_epsf.py: sky-subtracted, DQ local-median patch in ESTIMATOR input only …
 - [per-project-literature](2026/07/per-project-literature.md) — task 3 of the autolens_assistant batch — hybrid literature rule live: Create scaffolds wiki/project/bibliograp…
+- [pix-inversion-not-positive-definite](2026/07/pix-inversion-not-positive-definite.md)
 - [pix-nonfinite-localisation](2026/07/pix-nonfinite-localisation.md) — phase 1 — LOCALISED
 - [pixelized-gradient-experiment](2026/07/pixelized-gradient-experiment.md)
 - [plot-rst-functional-rewrite](2026/07/plot-rst-functional-rewrite.md)

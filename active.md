@@ -78,18 +78,6 @@
 
 
 
-## interpolator-aggregator-test-mode
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1401
-- status: library-shipped, awaiting-merge (--auto, ended at PR-open 2026-07-21) — Phase 1 of the workspaces API-drift umbrella. Fix SHIPPED: Aggregator.from_directory (autofit/aggregator/aggregator.py) now test-mode-aware — walk refactored into nested scan(); when is_test_mode() and first scan empty, retry once against <dir>.parent/"test_mode"/<dir>.name if it exists. +2 tests in test_autofit/aggregator/test_from_directory.py. Gate: tests 58/93 pass, smoke n/a, review CLEAN, Heart RED HUMAN-WAIVED (sole RED = unrelated PyAutoLens/paper_jax/paper.md WIP). Workspace impact = (iii) NONE — interpolate.py fixed by library alone, no script edit, notebook stays in sync → NO ship_workspace follow-up needed for this item.
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1402
-- worktree: ~/Code/PyAutoLabs-wt/interpolator-aggregator-test-mode
-- autonomy: supervised
-- prompt: draft/bug/workspaces/api_drift_callsite_fixes.md (INTERPOLATOR ITEM ONLY — umbrella stays in draft/; do NOT move to active/ or complete/ on ship; other 5 items become follow-up tasks)
-- note: interpolate.py:213 in-memory interpolation WORKS; only the DB/aggregator section (line 265) failed, only under test mode (real user runs fine). HowToFit tutorial_5 was paired in the umbrella but does NOT use interpolator/aggregator — EXCLUDED. interpolate.py not in smoke set. ON MERGE: drop this entry + record via lifecycle.py (prompt stays in draft/ — umbrella, do not move). Remaining 5 umbrella items open as follow-up tasks.
-- repos:
-  - PyAutoFit: feature/interpolator-aggregator-test-mode (PR#1402)
-
-
 ## blackjax-smc-gradient-kernel
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/113
 - status: workspace-dev — stage (a) of the 5-stage JAX-native posterior sampler wave. Upgrade blackjax_smc.py from RWM (cube-space, pure_callback) to a GRADIENT inner kernel sampling in PHYSICAL space (differentiable; probe_grad.py form). MALA first, HMC behind a flag; blackjax.adaptive_tempered_smc + inner_kernel_tuning; JAX-native physical-space log_prior (Gaussian/Uniform/LogUniform); preserve SMC logZ. Deliverable = searches_minimal/blackjax_smc_grad.py + smc_gradient_findings.md + comparison.txt row. MGE parametric ONLY; pixelized deferred.
