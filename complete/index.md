@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-675 records across 5 buckets.
+676 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -139,6 +139,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [jax-autodiff-gradients-audit](2026/07/jax-autodiff-gradients-audit.md) — 3-phase JAX autodiff gradients audit complete in one supervised session — every smooth likelihood FD-certified…
 - [jax-cache-default](2026/07/jax-cache-default.md) — + XLA_FLAGS clobber fix
 - [jax-compile-time-research](2026/07/jax-compile-time-research.md)
+- [jax-grad-env-vars-disable-jax](2026/07/jax-grad-env-vars-disable-jax.md)
 - [jax-grad-param9-autodiff-fd-mismatch](2026/07/jax-grad-param9-autodiff-fd-mismatch.md) — jax_grad imaging pixelization parameter-9 autodiff-vs-FD mismatch → parameter-specific documented FD exclusion…
 - [jax-gradient-optimizer-benchmark](2026/07/jax-gradient-optimizer-benchmark.md)
 - [jax-pytree-partition-vars-no-dict](2026/07/jax-pytree-partition-vars-no-dict.md)
