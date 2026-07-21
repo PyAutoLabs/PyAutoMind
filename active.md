@@ -11,15 +11,6 @@
   - autogalaxy_workspace
   - HowToGalaxy
 
-## desktop-acceptance-mcp
-- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/17
-- status: awaiting-human — manual Claude Desktop acceptance gate, no worktree/branch (no code change expected). Prep DONE by CLI: (1) fixed stale staged config C:\Users\Jammy\FromWSL\claude_desktop_config.json — PYTHONPATH swapped PyAutoConf→PyAutoNerves (autoconf→autonerves rename deleted PyAutoConf; server imports autonerves.dictable); (2) regenerated gitignored demo output autolens_assistant/scripts/scratch/mcp_demo/output — 2 DynestyStatic fits, gaussian logZ −42.55 > exponential −43.50 (~8σ, stable), each has image/data.png+model_fit.png; (3) re-verified end-to-end via real MCP stdio handshake booting `python -m autoassistant.mcp` with the fixed PYTHONPATH — 10 tools list, list_searches ranks gaussian first, JSON-RPC clean. Config known-good. REMAINING (human only): install Claude Desktop (not on Windows host as of 2026-07-17), copy config to %APPDATA%\Claude\claude_desktop_config.json, restart, drive a chat (list demo fits by evidence / best result summary / fetch data image). Pass = gaussian first + model.results block + inline plot. Bug found → separate bug/ prompt. Gates remote-tiers + autofit[mcp] follow-ups.
-- autonomy: human-required
-- prompt: active/desktop_acceptance_results_inspector_mcp.md
-- note: demo scratch is gitignored — regenerator at scratchpad/gen_mcp_demo.py if it needs rebuilding; re-run before the Desktop session if the scratch dir was swept.
-- repos:
-
-
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
@@ -65,6 +56,18 @@
 - repos:
   - autolens_workspace_developer: feature/pix-gradient-slogdet-revalidation (worktree live; commit a5b53a6 local-only)
 
+
+## slam-adapt-inversion-cascade
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/300
+- session: claude --resume 37395538-a051-4b8d-8eeb-aa3f8df67454
+- status: workspace-dev — REPRODUCED on clean main (TEST_MODE=2). Two distinct signatures in the pixelized-SLaM cluster: (1) double_einstein_ring imaging+group → adapt_data=None AttributeError at PyAutoArray inversion/mappers/abstract.py:476, phase source_pix[1]_source_1 (SAME root cause both scripts); root cause CONFIRMED real (not test-mode): reg_init=al.reg.Adapt but source_1 pixelized with NO adapt image possible (never had an LP phase, unlike source_0). (2) imaging/features/pixelization/slam → curvature/reg shape mismatch (786 vs 210) at inversion/abstract.py:366 — phase-1 diagnose real-vs-test-mode. Multi-wavelength SersicCore alpha=0 SPLIT OUT to draft/bug/autogalaxy/sersic_core_alpha_zero_division.md. Chosen fix (approved): SEED source_1 an adapt image from current tracer lensed source model (NOT Constant-reg bootstrap).
+- worktree: ~/Code/PyAutoLabs-wt/slam-adapt-inversion-cascade
+- autonomy: supervised
+- prompt: active/slam_advanced_fitexception_cascade.md
+- note: cross-ref active task pix-inversion-not-positive-definite (autogalaxy_workspace#140) for the pixelization/slam shape-mismatch — likely related inversion cluster. HowToLens paths in orig prompt are STALE (no features/ layout — uses chapter_N; find real pixelization tutorial in phase 1).
+- repos:
+  - autolens_workspace
+  - HowToLens
 
 
 
