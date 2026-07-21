@@ -1,6 +1,16 @@
 # Active Tasks
 
 
+## group4-mge-search-benchmark
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/82
+- status: workspace-dev — plan approved. Extend searches/ MGE cell to 4-lens+4-source group model (~50-55 params); benchmark MultiStart JAX gradient family in TWO modes (fixed-step n_steps=300 + auto-convergence via af.MultiStartGradientConvergence, incl. first-class multi_start_prodigy_autoconv) vs Nautilus; new simulators/group4_mge.py writes truth.json; searches/_recovery.py checks max_lh_instance vs truth. Worktree next via start_workspace.
+- worktree: ~/Code/PyAutoLabs-wt/group4-mge-search-benchmark
+- autonomy: safe
+- prompt: active/research_profiling_experiment_in_the_autolens_pr.md
+- note: single repo autolens_profiling (workspace/research, no library edits). Phased: (1) simulator+truth, (2) model cell+recovery+Nautilus anchor, (3) gradient family sweep, (4) contingency = careful init (narrow-prior/warm-start) if cold-start fails recovery.
+- repos:
+  - autolens_profiling: feature/group4-mge-search-benchmark
+
 ## ep-hierarchical-scale-collapse
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1405
 - status: reported — PyAutoFit exercised-not-edited (no worktree claimed). Cheap CPU toy diagnostic DONE; findings + minimal repro filed. Two defects reported: (1) hierarchical-EP parent scale hyperparameter COLLAPSE to ~0 with over-confident ~0 error (F10 guard misses it), (2) InitializerException hard-crash mid-EP. Awaiting fix-owner triage. slope_hierarchy#1 goal-2 write-up UNBLOCKED (comment posted).
