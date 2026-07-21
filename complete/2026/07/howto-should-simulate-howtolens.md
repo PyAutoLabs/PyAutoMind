@@ -1,3 +1,21 @@
+# HowToLens: should_simulate every dataset load; run under SMALL_DATASETS
+
+Shipped 2026-07-21 (HowToLens #39 MERGED). Slice 1/3 of the HowTo should_simulate migration
+(Build#155 Phase 2, fork b).
+
+22 raw `if not dataset_path.exists()` → `al.util.dataset.should_simulate(str(dataset_path))`
+(re-simulates stale data under the cap). Added missing guards: tutorial_0 (simple__no_lens_light),
+tutorial_7 2nd load (simple__no_lens_light__mass_sis), tutorial_6_lens_modeling (lens_sersic).
+Fixed tutorial_7 1st-load latent bug (the `howtolens` dataset is produced by tutorial_6_data.py,
+not scripts/simulator/). Removed the DEAD howtolens/ + guides/ SMALL_DATASETS-unset overrides
+(matched 0 files). Regenerated notebooks + navigator.
+
+Verified every chapter passes on a FRESH dataset/ (cloud-shard isolation) at 16x16: ch1 9/9,
+ch2 8/8, ch3 6/6, ch4 green. tutorial_5_borders + tutorial_10 stay no_run/SLOW-parked.
+Slices 2/3 HowToGalaxy + 3/3 HowToFit remain.
+
+## Original prompt
+
 # HowToLens: adopt should_simulate for every dataset load (per-repo slice 1/3)
 
 Type: bug

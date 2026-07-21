@@ -1,3 +1,23 @@
+# Smoke-profile 16x16: cap-not-unset for modeling + parity/pixelization overrides
+
+Shipped 2026-07-21. Tier 1 build-honesty from the 2026-07-20 full local build sweep.
+
+**autolens_workspace_test #186 (MERGED):** `multi/dataset_model_parity_delaunay` unset
+PYAUTO_SMALL_DATASETS (full-res physics parity test); `jax_grad/imaging_pixelization` unset +
+NEEDS_FIX-parked (override cleared the 256-vs-441 fault-mask, exposing a real "Gradient is all
+zeros" bug, same family as imaging_mge; likely needs custom_jvp).
+
+**autolens_workspace #297 (MERGED):** revised from env-unset to cap-not-unset —
+`multi/features/imaging_and_point_source/modeling.py` caps the downloaded 200x200 RXJ1131 cutout
+via `al.util.dataset.cap_array_2d_for_small_datasets` so it runs AT 16x16 (from_fits doesn't honor
+the cap; Grid2D.uniform does → was a 200-vs-16 broadcast). Notebook regenerated.
+
+Direction: move smoke/CI toward "PYAUTO_SMALL_DATASETS works everywhere", not per-script unset
+overrides. Opened under the Heart-RED corrective-PR exception (reason: workspace validation not
+passing, 10 failed).
+
+## Original prompt
+
 # Smoke-profile PYAUTO_SMALL_DATASETS overrides for 3 full-data scripts
 
 Type: bug

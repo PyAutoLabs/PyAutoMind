@@ -59,23 +59,3 @@
 
 
 
-## smoke-small-datasets-overrides
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/185
-- status: awaiting-merge — 2 PRs open (opened under Heart-RED corrective-PR exception, scoped to "workspace validation not passing (10 failed)"): autolens_workspace_test#186 + autolens_workspace#297. Verified parity-delaunay + modeling PASS. jax_grad/imaging_pixelization override exposed a real "Gradient is all zeros" bug (same family as parked imaging_mge) → honestly NEEDS_FIX-parked, belongs in Tier-3 backlog. cluster/visualization left OUT (slow + #1280).
-- worktree: ~/Code/PyAutoLabs-wt/smoke-small-datasets-overrides
-- autonomy: safe
-- prompt: active/smoke_profile_small_datasets_overrides.md
-- note: Tier 1 of the 2026-07-20 build-sweep triage. Sibling to env-profile campaign (env_profile_migration_steps_4_to_8); coordinate with its step-6 profile_smoke.yaml rename. cluster/visualization.py deliberately OUT of scope (slow + #1280).
-- repos:
-  - autolens_workspace_test: feature/smoke-small-datasets-overrides
-  - autolens_workspace: feature/smoke-small-datasets-overrides
-
-## howto-should-simulate-howtolens
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/38
-- status: awaiting-merge — PR HowToLens#39 (opened under Heart-RED corrective-PR exception, reason "workspace validation not passing (10 failed)"). DONE: 22 raw→should_simulate; added guards tutorial_0 + tutorial_7(2nd) + tutorial_6_lens_modeling(lens_sersic); FIXED tutorial_7 1st-load guard (howtolens produced by tutorial_6_data.py, was wrongly pointed at no_lens_light__mass_sis); removed DEAD howtolens/+guides/ unset overrides; notebooks+catalogue regen. VERIFIED every chapter passes on FRESH dataset (cloud-shard isolation) at 16x16: ch1 9/9 ch2 8/8 ch3 6/6 ch4 green. Slices 2/3 HowToGalaxy + 3/3 HowToFit remain.
-- worktree: ~/Code/PyAutoLabs-wt/howto-should-simulate-howtolens
-- autonomy: supervised
-- prompt: active/howto_should_simulate_howtolens.md
-- note: slice 1/3 of howto_validation_needs_simulator_stage (Build#155 Ph2). HowToLens sims = scripts/simulator/ (singular).
-- repos:
-  - HowToLens: feature/howto-should-simulate-howtolens
