@@ -83,3 +83,29 @@ Cleanup checklist (do in this task's PR set):
   (dead paths; HowToLens has no `features/` layout).
 - autolens_workspace `smoke_tests.txt` — add both delaunay scripts (regression guard; interferometer
   ~34s, heaviest entry).
+
+## Folded in (2): HowToLens practicalities + mappers NEEDS_FIX cleanup
+
+The parked 2026-04-10 HowToLens breakages (draft
+`bug/howtolens/tutorial_repair_practicalities_mappers.md`) edit the same HowToLens
+`no_run.yaml`, so they are folded here. Reproduction on clean main (2026-07-21) **overturned their
+premise** — both tutorials already run green; no script/library change:
+
+- `chapter_2_lens_modeling/tutorial_2_practicalities.py` → exit 0. The "missing ~80 lines of imports"
+  was already restored by PR #14 ("restore lost setup scaffolding"); `import autofit as af` is present
+  (line 95). The `NameError: af` NEEDS_FIX is stale.
+- `chapter_4_pixelizations/tutorial_2_mappers.py` → exit 0 with fresh full-size data (annular mask →
+  1212 image-pixels, healthy mapper). The historical `zero-size array / empty mapper` came from a
+  stale 16×16 dataset reused via the `if not dataset_path.exists()` guard (line 47) giving 4 pixels;
+  the `howtolens/` `PYAUTO_SMALL_DATASETS` override (unsets it → full-size simulate) plus library
+  hardening already resolved it — even a 4-pixel mapper now exits 0. Marker is stale.
+
+Cleanup checklist (do in this task's HowToLens PR — same `no_run.yaml` edit):
+- HowToLens `config/build/no_run.yaml` — remove the two NEEDS_FIX entries
+  `howtolens/chapter_2_lens_modeling/tutorial_2_practicalities` and
+  `howtolens/chapter_4_pixelizations/tutorial_2_mappers`.
+- Regenerate notebooks + navigator catalogue (the task already runs the howtolens generate step).
+
+Out of scope (separate follow-up prompt): `tutorial_2_mappers` self-flags "VISUALS SLIGHTLY BUGGY"
+(line 10) — it computes `indexes`/`pix_indexes` (lines 166/182/205/265) but never passes them to the
+plot calls, so image↔source mappings aren't highlighted. Pedagogical-quality bug, not a run failure.

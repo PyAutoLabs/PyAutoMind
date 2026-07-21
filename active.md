@@ -96,3 +96,13 @@
 - note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer
+
+
+## viz-refactor-asserts-1280
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/187
+- status: workspace-dev — PHASED bug (user-confirmed one issue). Phase 1 = dataset.png missing (imaging/visualization.py:269 assert fails though config subplot_dataset:true + subplot_imaging_dataset default output_filename="dataset" both correct in-tree, and sibling PNGs pass → NOT visible statically, needs a full-data repro to see actual filename emitted; trace visualize_before_fit→PlotterImaging.imaging()→subplot_imaging_dataset→subplot_save, check output_format!="show"). Phase 2 = #1280 tangential-critical-curve family (VERIFY AT FULL GRID FIRST — prompt says fails on small grids, may be sampling artifact not regression; two producers: tangential_critical_curve_list_via_zero_contour_from PyAutoGalaxy operate/lens_calc.py:1219 JAX path + tangential_critical_curve_list_from marching-squares cluster; if real, bisect vs PyAutoGalaxy abd7b717). NB PyAutoFit#1280 = MERGED revert PR (use_jax_for_visualization→False), NOT an open blocker — stale self-reference. No silent guard: producer-renamed→update assert (workspace); producer-dropped→fix producer (library, escalate to start_library). Split Phase 2 to dedicated PyAutoGalaxy bug prompt only if deep regression.
+- worktree: ~/Code/PyAutoLabs-wt/viz-refactor-asserts-1280
+- autonomy: supervised
+- prompt: active/visualization_refactor_asserts_1280.md
+- repos:
+  - autolens_workspace_test
