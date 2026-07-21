@@ -2,7 +2,8 @@
 
 ## multistart-gradient-convergence-results-phase-2
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1409
-- status: library-dev — Phase 2 of 2 (phase 1 SHIPPED+MERGED: PyAutoFit#1407 + autofit_workspace_test#60). Results contract (single cohesive PR — generic phaser over-split): (1) add converged:bool + stop_reason + convergence settings + fom_history trace to samples_info (search.py:507 samples_via_internal_from; stop_reason already persisted in search_internal); (2) new mle_plotters figure_of_merit_vs_iteration reading samples_info["fom_history"], wired into abstract_mle.py:19 plot_results via should_plot (no-op for LBFGS/Drawer); (3) harden aggregator search_output.py:320 zero-weight/NaN IndexError guard for variable-length runs + regression test (Fit#275 lineage). Unit tests numpy-only; JAX round-trip extension in autofit_workspace_test.
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1410
+- status: library-shipped, awaiting-merge — PR #1410 open (pending-release), commit 704a3b9. Results contract DONE: samples_info converged/stop_reason/convergence/fom_history; figure_of_merit_vs_iteration plotter (default-on KeyError-tolerant gate); FIX max_log_likelihood_index/max_log_posterior_index argmax→nanargmax (argmax picked NaN diagnostic rows). Gate: tests 1525p/1s, smoke mle.py, review self-CLEAN, Heart RED 2 pre-existing-unrelated human-waived. REMAINING = autofit_workspace_test JAX round-trip extension → then record complete (2-phase arc done). On merge: lifecycle.py record → complete.
 - worktree: ~/Code/PyAutoLabs-wt/multistart-gradient-convergence-results-phase-2
 - autonomy: supervised
 - prompt: active/multistart_gradient_auto_convergence_phase_2.md
