@@ -1,6 +1,14 @@
 # Active Tasks
 
 
+## desktop-acceptance-mcp
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/17
+- status: awaiting-human — manual Claude Desktop acceptance gate, no worktree/branch (no code change expected). Prep DONE by CLI: (1) fixed stale staged config C:\Users\Jammy\FromWSL\claude_desktop_config.json — PYTHONPATH swapped PyAutoConf→PyAutoNerves (autoconf→autonerves rename deleted PyAutoConf; server imports autonerves.dictable); (2) regenerated gitignored demo output autolens_assistant/scripts/scratch/mcp_demo/output — 2 DynestyStatic fits, gaussian logZ −42.55 > exponential −43.50 (~8σ, stable), each has image/data.png+model_fit.png; (3) re-verified end-to-end via real MCP stdio handshake booting `python -m autoassistant.mcp` with the fixed PYTHONPATH — 10 tools list, list_searches ranks gaussian first, JSON-RPC clean. Config known-good. REMAINING (human only): install Claude Desktop (not on Windows host as of 2026-07-17), copy config to %APPDATA%\Claude\claude_desktop_config.json, restart, drive a chat (list demo fits by evidence / best result summary / fetch data image). Pass = gaussian first + model.results block + inline plot. Bug found → separate bug/ prompt. Gates remote-tiers + autofit[mcp] follow-ups.
+- autonomy: human-required
+- prompt: active/desktop_acceptance_results_inspector_mcp.md
+- note: demo scratch is gitignored — regenerator at scratchpad/gen_mcp_demo.py if it needs rebuilding; re-run before the Desktop session if the scratch dir was swept.
+- repos:
+
 
 
 ## jax-joss-benchmarks
