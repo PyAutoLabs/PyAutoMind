@@ -1,3 +1,32 @@
+## multistart_gradient_auto_convergence_phase_1
+
+issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1406
+completed: 2026-07-21
+library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1407
+workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/60
+
+Phase 1 of 2 of auto-convergence (early-stopping) for the multi-start gradient searches (`af.MultiStartProdigy` / `MultiStartAdam` / `MultiStartADABelief` / `MultiStartLion`). Successor to the multi-start gradient v2 work (Fit#1398/#1400). Both PRs merged.
+
+### What shipped
+- **`MultiStartGradientConvergence` settings object** (`autofit/non_linear/search/mle/multi_start_gradient/convergence.py`) mirroring the `AutoCorrelationsSettings` precedent: `check_for_convergence=True`, plateau on the GLOBAL best figure-of-merit over a trailing window (`window=50`, `rtol=1e-4`, `atol=1e-3`, `min_steps=100`), `is_test_mode()` shrink hook, and a `check_if_converged(fom_history)` method. Exported as `af.MultiStartGradientConvergence`.
+- **`convergence=` param** on `AbstractMultiStartGradient.__init__` (default → auto-convergence ON). The searches now stop early by default; `n_steps` is a HARD CEILING / max budget. `stop_reason` (`"converged"`|`"max_steps"`) persisted in `search_internal` for resume + the phase-2 results contract.
+- **JAX validation** (`autofit_workspace_test/scripts/jax_assertions/multi_start_gradient_auto_convergence.py`): early-stop lands at the truth basin (converged step 158/300; 50.16/25.20/9.86) + a deterministic no-recompile guard (byte-identical value_and_grad HLO across independent builds → persistent compile cache hits on recall).
+
+### Key traps / findings
+- **The convergence check MUST run per-step, not only at the `iterations_per_full_update` boundary.** That param defaults to `None` → `iterations = n_steps` → the whole run is one chunk, so a boundary-only check would only fire at the very end and never stop early. The check runs every step (cheap NumPy plateau over the best-fom history) while checkpointing/`perform_update` stays at the boundary.
+- **best_fom is monotonically non-increasing** (updated only on a new minimum), so the plateau test is `(fom[-window] - fom[-1]) <= atol + rtol*|fom[-window]|`. Non-finite window (no finite basin yet) → not converged.
+- **Scope is PARAMETRIC ONLY (MGE/Sersic).** The check is skipped when `resurrect=True` (pixelized regime, whose best-fom climbs in breakthrough jumps a plateau check would false-stop) — pixelized behaviour is unchanged; it leans on the ceiling.
+- **`check_if_converged` must return a Python `bool`, not `np.bool_`** — the unit tests use `is True`/`is False` identity (`np.True_ is True` is False).
+- **JAX compile-cache-on-recall was already solved.** User asked to ensure recalled LH functions don't recompile; the persistent compilation cache is already default-ON via `autonerves/jax_wrapper.py` (`JAX_COMPILATION_CACHE_DIR`, compile-time arc PyAutoConf#128). Scope was **verify+guard**, not new machinery — and the search builds its `value_and_grad` identically on fresh vs resume paths (`search.py:198-208`, untouched), so the cache hit on resume holds **by construction**; the workspace guard is a regression net.
+
+### Gate (--auto library ship)
+tests 1521p/1s · smoke `searches/mle.py` early-stop fires · review self-CLEAN · Heart RED (2 pre-existing/unrelated reasons — `"PyAutoFit: 2 commit(s) behind origin"`, `"PyAutoLens: 1 uncommitted source change(s)"`) human-waived via AskUserQuestion. Both PRs human-merged.
+
+### Follow-ups
+- **Phase 2** (draft `draft/feature/autofit/multistart_gradient_auto_convergence_phase_2.md`): results contract — `converged`/`stop_reason` in `samples_info`, the fom_history convergence-trace artifact, and aggregator/samples_summary hardening for variable-length runs (guard the zero-weight/NaN diagnostic-row `IndexError`, Fit#275). Issue when picked up.
+
+## Original prompt
+
 # Auto-convergence (early stopping) for the multi-start gradient searches — Phase 1: convergence loop + settings
 
 Type: feature

@@ -1,18 +1,5 @@
 # Active Tasks
 
-## multistart-gradient-auto-convergence-phase-1
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1406
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1407
-- status: library-MERGED, workspace-pending — PR #1407 MERGED to main (merge commit 63d4e3a; opened --auto pending-release, human-waived 2 pre-existing Heart-RED reasons + merged). Library half DONE: MultiStartGradientConvergence settings (mirrors AutoCorrelationsSettings) + convergence= param default-ON on all 4 multi-start gradient searches; GLOBAL best_fom plateau check runs PER-STEP (not just iterations_per_full_update boundary, else default None=single-chunk never early-stops), checkpointing stays at boundary; n_steps HARD CEILING; stop_reason persisted for resume; skipped when resurrect=True (pixelized unchanged). Gate was tests 1521p/1s, smoke searches/mle.py early-stop fires, review self-CLEAN. JAX-cache = verify+guard only (persistent cache already default-ON via autonerves). REMAINING phase-1 = autofit_workspace_test JAX validation (early-stop → resume asserts no-recompile); record complete once that lands.
-- worktree: ~/Code/PyAutoLabs-wt/multistart-gradient-auto-convergence-phase-1
-- autonomy: supervised
-- prompt: active/multistart_gradient_auto_convergence_phase_1.md
-- next: phase-1 WORKSPACE follow-up in autofit_workspace_test (JAX: MGE early-stop → resume asserts no-recompile) via /start_workspace after merge; phase 2 (results-contract + aggregator) stays draft/feature/autofit/multistart_gradient_auto_convergence_phase_2.md — issue as this nears merge (no bulk-issue).
-- note: successor to multi-start gradient v2 (Fit#1398/#1400). User explicitly added the JAX compile-cache-on-recall requirement; found it already shipped (compile-time arc PyAutoConf#128) so scope is verify+guard not new machinery.
-- repos:
-  - PyAutoFit: feature/multistart-gradient-auto-convergence-phase-1 (MERGED #1407)
-  - autofit_workspace_test: feature/multistart-gradient-auto-convergence-phase-1 (worktree attached; JAX validation in progress)
-
 
 ## ep-hierarchical-scale-collapse
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1405

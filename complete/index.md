@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-682 records across 5 buckets.
+683 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -191,6 +191,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [multi-start-gradient-search](2026/07/multi-start-gradient-search.md) — Phase 1 of promoting the benchmark-winning multi-start gradient MAP optimizer to first-class PyAutoFit searche…
 - [multistart-adam-release-jax](2026/07/multistart-adam-release-jax.md)
 - [multistart-contrib-and-vmapped-state](2026/07/multistart-contrib-and-vmapped-state.md)
+- [multistart-gradient-auto-convergence-phase-1](2026/07/multistart-gradient-auto-convergence-phase-1.md)
 - [multistart-resurrection-restart-on-death](2026/07/multistart-resurrection-restart-on-death.md)
 - [nautilus-nn-bottleneck](2026/07/nautilus-nn-bottleneck.md) — Nautilus overhead research — anatomy on fast likelihoods (NN training 40-52% + bound geometry 25-38% of wall; …
 - [next-wave-population-optimizers](2026/07/next-wave-population-optimizers.md)
