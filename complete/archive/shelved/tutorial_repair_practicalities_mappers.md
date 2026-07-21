@@ -1,3 +1,10 @@
+> **FOLDED into slam-adapt-inversion-cascade (autolens_workspace#300) on 2026-07-21.**
+> Reproduction on clean main overturned this prompt's premise: both tutorials already run green
+> (practicalities imports restored by PR #14; mappers zero-size crash was stale 16×16 data, resolved
+> by the howtolens SMALL_DATASETS override + library hardening). Both are stale NEEDS_FIX markers.
+> Since #300 already edits `HowToLens/config/build/no_run.yaml`, the two marker removals + notebook
+> regen are folded into its HowToLens PR — see that prompt's "Folded in (2)" section. No separate issue.
+
 # HowToLens broken tutorials: tutorial_2_practicalities + tutorial_2_mappers (parked NEEDS_FIX)
 
 Type: bug
