@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-678 records across 5 buckets.
+679 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -262,6 +262,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [science-project-api-gate](2026/07/science-project-api-gate.md) — task 2 of the autolens_assistant batch — Create scaffold generates a thin .claude/settings.json wiring the PyA…
 - [science-project-collaborator-clone](2026/07/science-project-collaborator-clone.md) — absorbed
 - [script-to-notebook](2026/07/script-to-notebook.md) — task 4 of the autolens_assistant batch — stdlib-only autoassistant/to_notebook.py (adapts PyAutoBuild py_to_no…
+- [sersic-core-effective-radius-zero](2026/07/sersic-core-effective-radius-zero.md) — SersicCore.intensity_prime scalar `/ self.effective_radius` → xp.divide, so effective_radius<=0 yields inf (se…
 - [shareable-science-projects](2026/07/shareable-science-projects.md) — docs emphasis pass, head of the autolens_assistant batch — generated-project README.md template added to the s…
 - [ship-gate](2026/07/ship-gate.md)
 - [simulate-injection-feasibility](2026/07/simulate-injection-feasibility.md)
