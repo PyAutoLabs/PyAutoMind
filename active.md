@@ -2,7 +2,7 @@
 
 ## pix-inversion-not-positive-definite
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/140
-- status: workspace-dev — reproduce imaging pix case on clean main (real data) to confirm raise site = reg log-det term, then opt 3 pix scripts into log_det_method="slogdet" (opt-in; default cholesky UNCHANGED per pix-NaN decision). MGE likelihood_function "matrix singular" is DISTINCT (no reg → singular linear solve): characterise separately, config-fix or file bug/autoarray follow-up. Clean 2 stale HowToGalaxy no_run markers (features/ scripts don't exist).
+- status: awaiting-merge — PRs OPEN: autogalaxy_workspace#141 + HowToGalaxy#31 (paired, no library dep). OUTCOME INVERTED: markers were ALL STALE, NO code fix. Repro REFUTED slogdet-in-scripts: GaussianKernel PD-guarantee f1817af0 (2026-04-10, same day as markers) already fixed the LinAlgError; MGE np.linalg.solve now green too. Evidence: 40-draw numpy inversion A/B across full LogUniform prior (0 raise/0 nonfinite, cholesky AND slogdet) + all 4 scripts GREEN end-to-end in PYAUTO_TEST_MODE=2 real data. PRs remove 6 stale NEEDS_FIX markers only. Opened under corrective-PR exception for Heart RED reason "58 stale parked script(s)" — MERGE IS HUMAN. On merge: lifecycle.py record → complete.
 - worktree: ~/Code/PyAutoLabs-wt/pix-inversion-not-positive-definite
 - autonomy: supervised
 - prompt: active/pixelization_inversion_not_positive_definite.md
