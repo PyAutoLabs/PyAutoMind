@@ -2,10 +2,12 @@
 
 ## multistart-gradient-auto-convergence-phase-1
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1406
-- status: library-dev — PyAutoFit primary; JAX validation in autofit_workspace_test. Phase 1 of 2 (phase 2 = results-contract + aggregator hardening, draft at draft/feature/autofit/multistart_gradient_auto_convergence_phase_2.md; issue only as phase 1 nears shipping — no bulk-issue). Add `MultiStartGradientConvergence` settings object mirroring AutoCorrelationsSettings (check_for_convergence=True, plateau on GLOBAL best_fom over trailing window rtol/atol+min_steps, is_test_mode() shrink); wire into search.py loop at ~L302-321 iterations_per_full_update boundary; n_steps stays HARD CEILING; carry stop_reason local. Scope PARAMETRIC ONLY (MGE/Sersic); pixelized OUT — resurrect=True keeps auto conservative/off. JAX-cache: VERIFY+GUARD (do NOT build) — persistent cache already default-ON via autonerves/jax_wrapper.py (JAX_COMPILATION_CACHE_DIR); prove resumed value_and_grad HLO byte-identical so cache HITS (no recompile on recall). Unit tests numpy-only.
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1407
+- status: library-shipped, awaiting-merge — PR #1407 open (pending-release), commit 03f7fb5. Phase 1 = MultiStartGradientConvergence settings (mirrors AutoCorrelationsSettings) + convergence= param default-ON on all 4 multi-start gradient searches; GLOBAL best_fom plateau check runs PER-STEP (not just iterations_per_full_update boundary, else default None=single-chunk never early-stops), checkpointing stays at boundary; n_steps HARD CEILING; stop_reason persisted for resume; skipped when resurrect=True (pixelized unchanged). Gate: tests 1521p/1s, smoke searches/mle.py early-stop fires, review self-CLEAN, Heart RED 2 pre-existing-unrelated reasons human-waived via AskUserQuestion (--auto). JAX-cache = verify+guard only (persistent cache already default-ON via autonerves). On merge: lifecycle.py record → complete.
 - worktree: ~/Code/PyAutoLabs-wt/multistart-gradient-auto-convergence-phase-1
 - autonomy: supervised
 - prompt: active/multistart_gradient_auto_convergence_phase_1.md
+- next: phase-1 WORKSPACE follow-up in autofit_workspace_test (JAX: MGE early-stop → resume asserts no-recompile) via /start_workspace after merge; phase 2 (results-contract + aggregator) stays draft/feature/autofit/multistart_gradient_auto_convergence_phase_2.md — issue as this nears merge (no bulk-issue).
 - note: successor to multi-start gradient v2 (Fit#1398/#1400). User explicitly added the JAX compile-cache-on-recall requirement; found it already shipped (compile-time arc PyAutoConf#128) so scope is verify+guard not new machinery.
 - repos:
   - PyAutoFit: feature/multistart-gradient-auto-convergence-phase-1
