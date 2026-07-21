@@ -55,3 +55,13 @@
 - repos:
   - autolens_workspace_developer
 
+
+## drop-interferometer-delaunay-marker
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/308
+- session: claude --resume 37395538-a051-4b8d-8eeb-aa3f8df67454
+- status: workspace-dev — MARKER-ONLY. interferometer/features/pixelization/delaunay now green on main (verified 3x, fresh data, smoke env); NEEDS_FIX stale. Fixed by recent concurrent work (prime suspect PyAutoArray#396 SMALL_DATASETS 15→16 even-cap; NOT the GaussianKernel PD-guard f1817af0 — this script uses ConstantSplit/AdaptSplit). Just drop the no_run.yaml entry. Latent (out of scope): analysis.py:175-182 numpy path wraps ANY error as FitException.
+- worktree: ~/Code/PyAutoLabs-wt/drop-interferometer-delaunay-marker
+- autonomy: supervised
+- prompt: active/interferometer_delaunay_nonpd_fitexception.md
+- repos:
+  - autolens_workspace
