@@ -60,11 +60,3 @@
 
 
 
-## howto-should-simulate-howtogalaxy
-- issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/29
-- status: workspace-dev — slice 2/3 should_simulate migration (mirror HowToLens#39). sims scripts/simulators/ PLURAL.
-- worktree: ~/Code/PyAutoLabs-wt/howto-should-simulate-howtogalaxy
-- autonomy: supervised
-- prompt: active/howto_should_simulate_howtogalaxy.md
-- repos:
-  - HowToGalaxy: feature/howto-should-simulate-howtogalaxy

@@ -1,3 +1,15 @@
+# HowToGalaxy: should_simulate every dataset load; run under SMALL_DATASETS
+
+Shipped 2026-07-21 (HowToGalaxy #30 MERGED). Slice 2/3 of the HowTo should_simulate migration.
+
+17 raw exists-guards → `ag.util.dataset.should_simulate` (autogalaxy namespace — NOT al).
+tutorial_3_fitting: fixed 1st-load guard (howtogalaxy produced by tutorial_2_data.py, not
+simulators/simple.py) + added 2nd-load guard (simple). Removed dead howtogalaxy/+guides/
+SMALL_DATASETS-unset overrides. Regen notebooks+catalogue. Verified every chapter passes on
+FRESH dataset at 16x16: ch1 6/6, ch2 8/8, ch3 3/3, ch4 5/5. Sims in scripts/simulators/ (plural).
+
+## Original prompt
+
 # HowToGalaxy: should_simulate every dataset load; run under SMALL_DATASETS (slice 2/3)
 
 Type: bug
