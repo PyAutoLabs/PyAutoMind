@@ -51,13 +51,25 @@ recorded in the `jax_compile/README.md` multi-band section (findings 2 + 4).
 
 This task is the deeper dig + the fix, as **one task**:
 
-1. **Sub-investigation B — the source lever.** Determine whether a **per-factor
-   jit boundary** inside `af.FactorGraphModel.log_likelihood_function` bounds the
-   cold compile to N×single-band + a linear combine, i.e. removes the superlinear
-   heterogeneous penalty **without** padding. If it does, this is the productizable
-   PyAutoFit change; if it doesn't, document why (e.g. AD couples the factors).
-   Also confirm the `MultiStartProdigy` `batch_size` / `lax.map` transform behaves
-   the same multi-band as single-band (add a `laxmap_vag` row).
+1. **Sub-investigation B — the source lever (now concrete + validated).** The
+   dominant compile cost is the in-XLA `lax.map` scan in `MultiStartProdigy`, NOT
+   the batching itself: at vmap width 1, `pyloop_vag` (Python loop over `vmap`
+   chunks, batching hoisted out of XLA) compiled in 166 s vs `laxmap_vag` (in-XLA
+   `lax.map` scan) intractable (>30 min). **Implement Python-loop multi-start
+   batching in `MultiStartProdigy`** (the `pyloop` pattern in
+   `autolens_profiling/jax_compile/probe.py`): iterate starts in Python over small
+   `vmap` chunks so no scan is compiled; `batch_size` = vmap width becomes a
+   compile/throughput tunable (small CPU, wider GPU). Benchmark cold compile +
+   **per-eval runtime, especially on GPU/A100** vs the current `lax.map` path —
+   pyloop trades on-device loop fusion for host dispatch overhead and loses
+   composability (can't jit/scan over the whole search), so the win is clear on
+   CPU/limited-RAM but is a compile-vs-throughput trade on A100 (pick chunk width
+   per device). Clean re-confirm DONE (2026-07-21): `laxmap bs=1` compile was
+   OOM-killed (~6 GB RSS) even from a 10 GB-free start → the `lax.map` scan path is
+   memory-explosive to compile here, confound resolved in favour of the lever.
+   Secondary: whether a per-factor jit boundary inside
+   `af.FactorGraphModel.log_likelihood_function` additionally bounds the
+   heterogeneity multiplier (N×single-band + linear combine) without padding.
 2. **Sub-investigation C — multi-core / A100 rows + verdict, including the
    transform.** Add A100 (and/or multi-core CPU) multi-band rows for BOTH `vag`
    AND the production `laxmap_vag` transform (`datacube_img` /
