@@ -72,7 +72,7 @@
 
 ## howto-should-simulate-howtolens
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/38
-- status: workspace-dev — should_simulate migration (guards on every load, raw→should_simulate) + DROP the howtolens/ SMALL_DATASETS-unset workaround; goal = all tutorials run under SMALL_DATASETS=1 (16x16). 30/34 already pass; blockers = tutorial_0/tutorial_7 missing guards + tutorial_5_borders mask edge + tutorial_10 SLOW.
+- status: awaiting-merge — PR HowToLens#39 (opened under Heart-RED corrective-PR exception, reason "workspace validation not passing (10 failed)"). DONE: 22 raw→should_simulate; added guards tutorial_0 + tutorial_7(2nd) + tutorial_6_lens_modeling(lens_sersic); FIXED tutorial_7 1st-load guard (howtolens produced by tutorial_6_data.py, was wrongly pointed at no_lens_light__mass_sis); removed DEAD howtolens/+guides/ unset overrides; notebooks+catalogue regen. VERIFIED every chapter passes on FRESH dataset (cloud-shard isolation) at 16x16: ch1 9/9 ch2 8/8 ch3 6/6 ch4 green. Slices 2/3 HowToGalaxy + 3/3 HowToFit remain.
 - worktree: ~/Code/PyAutoLabs-wt/howto-should-simulate-howtolens
 - autonomy: supervised
 - prompt: active/howto_should_simulate_howtolens.md
