@@ -67,8 +67,8 @@
 - note: pixelization/slam mismatch is NOT the pix-inversion-not-positive-definite cluster (autogalaxy_workspace#140) — ruled out; it is a mesh+reg incompatibility (rectangular+AdaptSplit). HowToLens paths in orig prompt are STALE (no features/ layout — uses chapter_N; find real pixelization tutorial in phase 1).
 - folded-in: Delaunay NEEDS_FIX cleanup (was #301, closed 2026-07-21). Verified GREEN on clean main — `imaging/features/pixelization/delaunay.py` (exit 0, FitException gone) + `interferometer/features/pixelization/delaunay.py` (exit 0, (2,2)v(1032,1032) broadcast gone) + HowToLens `chapter_4/tutorial_7` (exit 0). No PyAutoArray change. This task's PR set also: remove both delaunay entries from autolens_workspace no_run.yaml, remove the 2 dead delaunay entries from HowToLens no_run.yaml, add both delaunay scripts to autolens_workspace smoke_tests.txt. Details in prompt "Folded in" section.
 - repos:
-  - autolens_workspace
-  - HowToLens
+  - autolens_workspace: feature/slam-adapt-inversion-cascade
+  - HowToLens: feature/slam-adapt-inversion-cascade
 
 
 
