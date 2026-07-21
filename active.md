@@ -1,5 +1,15 @@
 # Active Tasks
 
+## pix-inversion-not-positive-definite
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/140
+- status: workspace-dev — reproduce imaging pix case on clean main (real data) to confirm raise site = reg log-det term, then opt 3 pix scripts into log_det_method="slogdet" (opt-in; default cholesky UNCHANGED per pix-NaN decision). MGE likelihood_function "matrix singular" is DISTINCT (no reg → singular linear solve): characterise separately, config-fix or file bug/autoarray follow-up. Clean 2 stale HowToGalaxy no_run markers (features/ scripts don't exist).
+- worktree: ~/Code/PyAutoLabs-wt/pix-inversion-not-positive-definite
+- autonomy: supervised
+- prompt: active/pixelization_inversion_not_positive_definite.md
+- note: tail of pix-NaN lineage (PyAutoArray#391/#392 shipped opt-in slogdet). Scripts use GaussianKernel reg, not Constant/Adapt — reproduction must confirm site. Real surface = 3 pix scripts + 1 MGE + 2 stale-marker deletions, not "6 scripts".
+- repos:
+  - autogalaxy_workspace
+  - HowToGalaxy
 
 ## desktop-acceptance-mcp
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/17
