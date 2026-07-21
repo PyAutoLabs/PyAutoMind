@@ -50,3 +50,14 @@
 
 
 
+
+## smoke-small-datasets-overrides
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/185
+- status: workspace-dev — Tier 1 build-honesty; add 3 `unset: [PYAUTO_SMALL_DATASETS]` env_vars overrides (2 in autolens_workspace_test, 1 in autolens_workspace) for parity-delaunay, jax_grad/imaging_pixelization, multi/imaging_and_point_source/modeling. Config-only, smoke-profile, no library changes.
+- worktree: ~/Code/PyAutoLabs-wt/smoke-small-datasets-overrides
+- autonomy: safe
+- prompt: active/smoke_profile_small_datasets_overrides.md
+- note: Tier 1 of the 2026-07-20 build-sweep triage. Sibling to env-profile campaign (env_profile_migration_steps_4_to_8); coordinate with its step-6 profile_smoke.yaml rename. cluster/visualization.py deliberately OUT of scope (slow + #1280).
+- repos:
+  - autolens_workspace_test: feature/smoke-small-datasets-overrides
+  - autolens_workspace: feature/smoke-small-datasets-overrides
