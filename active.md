@@ -8,12 +8,12 @@
 - prompt: active/multistart_gradient_auto_convergence_phase_1.md
 - note: successor to multi-start gradient v2 (Fit#1398/#1400). User explicitly added the JAX compile-cache-on-recall requirement; found it already shipped (compile-time arc PyAutoConf#128) so scope is verify+guard not new machinery.
 - repos:
-  - PyAutoFit
-  - autofit_workspace_test
+  - PyAutoFit: feature/multistart-gradient-auto-convergence-phase-1
+  - autofit_workspace_test: (phase-1 JAX validation follow-up, not yet claimed)
 
 ## analysis-fitexception-masks-cause
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/638
-- status: library-dev — PyAutoLens only. 3 sites (imaging/model/analysis.py:143, interferometer:181, point:138) do `except Exception as e: raise af.exc.FitException` discarding e. Fix: `raise ... from e` at all 3 + opt-in PYAUTO_RAISE_ANALYSIS_EXCEPTIONS=1 re-raise (default OFF); do NOT narrow except (path-parity keeps catching numpy non-PD). Unit test test_autolens numpy-only. FitException behaviour itself is CORRECT (PR#607), this is observability only.
+- status: library-shipped, awaiting-merge — PR PyAutoLens#639 open (pending-release). Shared raise_fit_exception helper (autolens/analysis/exceptions.py) chains cause (raise ... from e) at all 3 sites + opt-in PYAUTO_RAISE_ANALYSIS_EXCEPTIONS=1 (default "0" wraps). Tests: test_autolens/analysis/test_exceptions.py 3 pass + 16 existing green. NO workspace impact (behaviour-preserving; only failing-fit except-branch). Opened under human-authorized Heart-RED (all reasons pre-existing/unrelated). On merge: lifecycle.py record → complete.
 - worktree: ~/Code/PyAutoLabs-wt/analysis-fitexception-masks-cause
 - autonomy: supervised
 - prompt: active/analysis_fitexception_masks_cause.md
