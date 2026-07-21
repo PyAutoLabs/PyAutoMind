@@ -73,3 +73,13 @@
 
 
 
+
+## blackjax-smc-gradient-kernel
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/113
+- status: workspace-dev — stage (a) of the 5-stage JAX-native posterior sampler wave. Upgrade blackjax_smc.py from RWM (cube-space, pure_callback) to a GRADIENT inner kernel sampling in PHYSICAL space (differentiable; probe_grad.py form). MALA first, HMC behind a flag; blackjax.adaptive_tempered_smc + inner_kernel_tuning; JAX-native physical-space log_prior (Gaussian/Uniform/LogUniform); preserve SMC logZ. Deliverable = searches_minimal/blackjax_smc_grad.py + smc_gradient_findings.md + comparison.txt row. MGE parametric ONLY; pixelized deferred.
+- worktree: ~/Code/PyAutoLabs-wt/blackjax-smc-gradient-kernel
+- autonomy: supervised
+- prompt: active/jax_native_posterior_sampler_wave.md
+- note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
+- repos:
+  - autolens_workspace_developer
