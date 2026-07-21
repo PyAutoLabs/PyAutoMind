@@ -63,5 +63,5 @@
 - autonomy: supervised
 - prompt: active/sersic_core_alpha_zero_division.md
 - repos:
-  - PyAutoGalaxy
-  - autolens_workspace
+  - PyAutoGalaxy: feature/sersic-core-effective-radius-zero
+  - autolens_workspace: feature/sersic-core-effective-radius-zero
