@@ -1,5 +1,15 @@
 # Active Tasks
 
+## analysis-fitexception-masks-cause
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/638
+- status: library-dev — PyAutoLens only. 3 sites (imaging/model/analysis.py:143, interferometer:181, point:138) do `except Exception as e: raise af.exc.FitException` discarding e. Fix: `raise ... from e` at all 3 + opt-in PYAUTO_RAISE_ANALYSIS_EXCEPTIONS=1 re-raise (default OFF); do NOT narrow except (path-parity keeps catching numpy non-PD). Unit test test_autolens numpy-only. FitException behaviour itself is CORRECT (PR#607), this is observability only.
+- worktree: ~/Code/PyAutoLabs-wt/analysis-fitexception-masks-cause
+- autonomy: supervised
+- prompt: active/analysis_fitexception_masks_cause.md
+- note: surfaced by #308/#309 delaunay re-diagnosis. Out of scope: TEST_MODE=2 bypass tolerance.
+- repos:
+  - PyAutoLens
+
 ## ep-hierarchical-scale-collapse
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1405
 - status: reported — PyAutoFit exercised-not-edited (no worktree claimed). Cheap CPU toy diagnostic DONE; findings + minimal repro filed. Two defects reported: (1) hierarchical-EP parent scale hyperparameter COLLAPSE to ~0 with over-confident ~0 error (F10 guard misses it), (2) InitializerException hard-crash mid-EP. Awaiting fix-owner triage. slope_hierarchy#1 goal-2 write-up UNBLOCKED (comment posted).
