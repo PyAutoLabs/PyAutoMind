@@ -1,3 +1,26 @@
+## analysis-fitexception-masks-cause
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/638
+- completed: 2026-07-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/639 (MERGED)
+- summary: |
+    All three numpy-path lens analyses (imaging/model/analysis.py, interferometer, point)
+    wrapped fit failures in `except Exception as e: raise af.exc.FitException` and discarded
+    e, masking the true error behind a bare FitException at analysis.py. The FitException
+    itself is correct (PR#607 path-parity: numpy non-PD LinAlgError → FitException → sampler
+    resamples, matching the JAX NaN-resample) — the defect was observability only. Fix: a
+    shared helper autolens/analysis/exceptions.py raise_fit_exception(e) chains the cause
+    (raise ... from e) so __cause__ survives, plus opt-in PYAUTO_RAISE_ANALYSIS_EXCEPTIONS=1
+    (strict "1" check, default "0" wraps) to re-raise the original unwrapped for debugging
+    (e.g. under PYAUTO_TEST_MODE where a single eval isn't absorbed by a sampler). Default
+    behaviour byte-identical; no API surface change; no workspace impact. Tests:
+    test_autolens/analysis/test_exceptions.py (3, numpy-only) + 16 existing analysis green.
+    Surfaced by the #308/#309 interferometer-Delaunay marker re-diagnosis. Out of scope
+    (separate concern, not filed): TEST_MODE=2 bypass tolerance so a single-eval FitException
+    doesn't hard-fail a smoke run. Opened+merged under human-authorized Heart-RED (all reasons
+    pre-existing/unrelated).
+
+## Original prompt
+
 # Analysis `log_likelihood_function` masks the real error behind a bare FitException
 
 Type: bug

@@ -11,15 +11,6 @@
   - PyAutoFit: feature/multistart-gradient-auto-convergence-phase-1
   - autofit_workspace_test: (phase-1 JAX validation follow-up, not yet claimed)
 
-## analysis-fitexception-masks-cause
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/638
-- status: library-shipped, awaiting-merge — PR PyAutoLens#639 open (pending-release). Shared raise_fit_exception helper (autolens/analysis/exceptions.py) chains cause (raise ... from e) at all 3 sites + opt-in PYAUTO_RAISE_ANALYSIS_EXCEPTIONS=1 (default "0" wraps). Tests: test_autolens/analysis/test_exceptions.py 3 pass + 16 existing green. NO workspace impact (behaviour-preserving; only failing-fit except-branch). Opened under human-authorized Heart-RED (all reasons pre-existing/unrelated). On merge: lifecycle.py record → complete.
-- worktree: ~/Code/PyAutoLabs-wt/analysis-fitexception-masks-cause
-- autonomy: supervised
-- prompt: active/analysis_fitexception_masks_cause.md
-- note: surfaced by #308/#309 delaunay re-diagnosis. Out of scope: TEST_MODE=2 bypass tolerance.
-- repos:
-  - PyAutoLens
 
 ## ep-hierarchical-scale-collapse
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1405

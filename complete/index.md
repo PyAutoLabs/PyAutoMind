@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-681 records across 5 buckets.
+682 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -27,6 +27,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [aggregator-quick-fit-consolidation](2026/07/aggregator-quick-fit-consolidation.md) — guides/results tutorials ran own capped fits pruning to 2 samples vs deep [-10]/[9] IndexError → consolidate o…
 - [aggregator-sqlite](2026/07/aggregator-sqlite.md) — Aggregator Phase D — sqlite database exercised + assessed. Fixed: db Aggregator slicing inverted (agg[:5] on 2…
 - [alma-interferometer](2026/07/alma-interferometer.md) — ALMA interferometer reduction live (phase 5) — first visibility-domain product family: calibrated MS → al.Inte…
+- [analysis-fitexception-masks-cause](2026/07/analysis-fitexception-masks-cause.md)
 - [api-baseline-refresh](2026/07/api-baseline-refresh.md)
 - [api-gate-clause-scope](2026/07/api-gate-clause-scope.md) — fixed the F5 API-gate false positive (docs/agent_failure_modes.md). The PreToolUse gate latched saw_python for…
 - [arxiv-digest-announcement-window](2026/07/arxiv-digest-announcement-window.md)
