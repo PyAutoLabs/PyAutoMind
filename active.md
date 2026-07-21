@@ -1,5 +1,16 @@
 # Active Tasks
 
+## multistart-gradient-convergence-results-phase-2
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1409
+- status: library-dev — Phase 2 of 2 (phase 1 SHIPPED+MERGED: PyAutoFit#1407 + autofit_workspace_test#60). Results contract (single cohesive PR — generic phaser over-split): (1) add converged:bool + stop_reason + convergence settings + fom_history trace to samples_info (search.py:507 samples_via_internal_from; stop_reason already persisted in search_internal); (2) new mle_plotters figure_of_merit_vs_iteration reading samples_info["fom_history"], wired into abstract_mle.py:19 plot_results via should_plot (no-op for LBFGS/Drawer); (3) harden aggregator search_output.py:320 zero-weight/NaN IndexError guard for variable-length runs + regression test (Fit#275 lineage). Unit tests numpy-only; JAX round-trip extension in autofit_workspace_test.
+- worktree: ~/Code/PyAutoLabs-wt/multistart-gradient-convergence-results-phase-2
+- autonomy: supervised
+- prompt: active/multistart_gradient_auto_convergence_phase_2.md
+- note: DELIBERATE coexisting PyAutoFit claim — interferometer-delaunay-flaky-fitexception also lists PyAutoFit but its 1a (#1408) is MERGED and remaining phases are autolens_workspace/PyAutoArray (stale PyAutoFit claim); user-approved proceed 2026-07-21. Successor to phase 1 ([[project_multistart_gradient_auto_convergence]]).
+- repos:
+  - PyAutoFit: feature/multistart-gradient-convergence-results-phase-2
+  - autofit_workspace_test: (JAX validation extension, not yet claimed)
+
 
 ## ep-hierarchical-scale-collapse
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1405
