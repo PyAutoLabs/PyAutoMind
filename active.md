@@ -1,17 +1,5 @@
 # Active Tasks
 
-## graduate-mcp-autofit-extra
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1403
-- status: PRs-OPEN awaiting human merge (library-first) — PyAutoFit#1404 (core, Closes #1403) then autofit_assistant#21 + autolens_assistant#86 (companions, import the core). Graduated the byte-identical MCP `tools.py` into PyAutoFit as `autofit[mcp]` (new autofit/mcp/: tools+server.core_server+bootstrap+__main__; pyproject [mcp] extra). Assistants deleted tools.py, server.py now thin launcher building core_server(). Lens layer (lens_tools.py) KEPT in autolens. CRUX FIX: pin_config MUST be inline autonerves-only in the assistant (importing autofit.mcp.bootstrap would import autofit FIRST → re-break #18 CWD fix); proven with a poison-config CWD test. VERIFIED: 3 servers (autofit 7 / autolens 10 / standalone `python -m autofit.mcp` 7) handshake from /tmp minimal env gaussian-first clean; PyAutoFit test_autofit/mcp 10/10 + autolens 10/10; skill-API audit 0 missing (launchers marker-opted-out `pyauto-api-gate: skip`). autofit_assistant test DELETED (core covered by PyAutoFit test). PyAutoFit test uses SHIPPED autofit/config (remove_files:false) not test_autofit/config (zips files away).
-- worktree: ~/Code/PyAutoLabs-wt/graduate-mcp-autofit-extra
-- autonomy: supervised
-- prompt: active/graduate_mcp_core_to_autofit_extra.md
-- repos:
-  - PyAutoFit: feature/graduate-mcp-autofit-extra (PR#1404)
-  - autofit_assistant: feature/graduate-mcp-autofit-extra (PR#21)
-  - autolens_assistant: feature/graduate-mcp-autofit-extra (PR#86)
-
-
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: PARKED-ON-JOB — #282 MERGED+cleaned; 8/8 runnable A100 rows committed (autolens_jax_joss@64204f6). SDP.81 prep = detached RAL job 330608 (330605 diagnosed: empty extracted/ leftover skipped untar via test-d guard; casatools import needs ~/.casa/data — both fixed; 42GB tarball CACHED, no re-download) (45GB ALMA Band6 download -> casatools venv -> 3-level export -> installs dataset/interferometer/{sdp81,sdp81_mid,sdp81_full} in /mnt/ral/jnightin/autolens_jax_joss). RESUME (short session): (1) check log /mnt/ral/jnightin/sdp81_prep_330608.log — expect 'SDP81 PREP ALL DONE' + per-level visibility counts; failure modes: casatools pip wheel on py3.12 (fallback = monolithic CASA tarball), datacolumn, MS_LIST empty (check find patterns); (2) sbatch interferometry benchmarks on A100: benchmarks/interferometer.py at --nvis default/mid/full + benchmarks/imaging_and_interferometer.py (pattern: /mnt/ral/jnightin/autolens_jax_joss/run_rest.sbatch); (3) scp results/*.json back, regen RESULTS.md, commit (guard: explicit file paths); (4) copy small sdp81/ product locally, rewrite scripts/interferometer/start_here.py on NEW branch (start_workspace; #282 merged) using it — decide hosting (commit few-MB FITS to workspace w/ .gitignore allowlist + git add -f, or Zenodo+SDP81_URL); (5) final issue #281 update. Also pending: cluster-tuning prompt draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md; weak JAX-viz PyAutoLens#614
