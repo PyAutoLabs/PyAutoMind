@@ -64,3 +64,16 @@
 - note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer
+
+## clear-stale-needs-fix-parks
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/191
+- status: workspace-dev — 6 NEEDS_FIX markers triaged (4 verified-fixed under PYAUTO_TEST_MODE=2 → un-park; 2 JAX benchmarks → reclassify SLOW). Editing config/build/no_run.yaml across 4 workspaces, then ship_workspace PR per repo.
+- worktree: ~/Code/PyAutoLabs-wt/clear-stale-needs-fix-parks
+- autonomy: human-required
+- prompt: active/clear_stale_needs_fix_parks.md
+- note: workspace hygiene; SLOW markers (24 total/11 stale) out of scope. Repro logs in session scratchpad.
+- repos:
+  - autolens_workspace_test: main
+  - autofit_workspace: main
+  - autogalaxy_workspace: main
+  - autolens_workspace: main
