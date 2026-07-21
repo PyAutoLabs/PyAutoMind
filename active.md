@@ -10,8 +10,8 @@
 - next: phase-1 WORKSPACE follow-up in autofit_workspace_test (JAX: MGE early-stop → resume asserts no-recompile) via /start_workspace after merge; phase 2 (results-contract + aggregator) stays draft/feature/autofit/multistart_gradient_auto_convergence_phase_2.md — issue as this nears merge (no bulk-issue).
 - note: successor to multi-start gradient v2 (Fit#1398/#1400). User explicitly added the JAX compile-cache-on-recall requirement; found it already shipped (compile-time arc PyAutoConf#128) so scope is verify+guard not new machinery.
 - repos:
-  - PyAutoFit: feature/multistart-gradient-auto-convergence-phase-1
-  - autofit_workspace_test: (phase-1 JAX validation follow-up, not yet claimed)
+  - PyAutoFit: feature/multistart-gradient-auto-convergence-phase-1 (MERGED #1407)
+  - autofit_workspace_test: feature/multistart-gradient-auto-convergence-phase-1 (worktree attached; JAX validation in progress)
 
 
 ## ep-hierarchical-scale-collapse
