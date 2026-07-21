@@ -109,3 +109,14 @@
 - prompt: active/visualization_refactor_asserts_1280.md
 - repos:
   - autolens_workspace_test
+
+
+## jax-grad-env-vars-disable-jax
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/188
+- status: workspace-dev — CONFIG bug, root cause DIAGNOSED. env_vars.yaml defaults set PYAUTO_DISABLE_JAX=1; jax_grad/imaging_{lp,mge} overrides unset PYAUTO_SMALL_DATASETS but forgot PYAUTO_DISABLE_JAX → JAX-autodiff scripts take numpy xp path while value_and_grad traces → TracerArrayConversionError (lp, positions path) / all-zero grad (mge, no positions path). NEEDS_FIX 2026-04-10 markers are STALE — all scripts pass standalone on clean main (lp/mge/pixelization[7 variants]/point_source/weak, AD=FD). Fix = ONE folder-level jax_grad/ override unset [PYAUTO_SMALL_DATASETS, PYAUTO_DISABLE_JAX] (mirrors jax_likelihood_functions/) + drop 2 stale no_run.yaml lines. NO .py edits, NO library work (custom_jvp premise overturned). 2 files: config/build/{env_vars,no_run}.yaml.
+- worktree: ~/Code/PyAutoLabs-wt/jax-grad-env-vars-disable-jax
+- autonomy: supervised
+- prompt: active/jax_grad_gradient_custom_jvp.md
+- note: CONCURRENT worktree alongside viz-refactor-asserts-1280 (#187), which also claims autolens_workspace_test — user-approved, non-overlapping files (mine = config/build/*.yaml; theirs = scripts/imaging/visualization.py).
+- repos:
+  - autolens_workspace_test
