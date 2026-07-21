@@ -1,4 +1,17 @@
 
+## remote-mcp-deployment-tiers
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/20 (design/scope shipped 2026-07-21; build gated)
+- status: DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP coordination. No code, no network surface built. Per prompt "if it earns it": build tiers 2/3 only once demonstrated demand for REMOTE access exists.
+- filed: 2026-07-21
+- prompt: draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md
+- classification: feature (autofit_assistant + autolens_assistant) — transport/deployment/auth, NOT new tools
+- suggested-branch: feature/remote-mcp-deployment-tiers
+- blocked-by: (1) demonstrated demand for remote access; (2) MANDATORY security-review skill pass before any PR — never auto-ship (network-facing arbitrary-file-read surface; intake mis-sized it small/safe)
+- summary: tier2 = opt-in `mcp.run(streamable-http)` + bearer-token ASGI middleware + `PYAUTO_MCP_ALLOWED_ROOTS` path confinement behind cloudflared/ngrok (default stays stdio); tier3 = hosted OAuth/OIDC + per-user scoping (Euclid sample triage; rhayes777/aggregator-agent consumer). Coordinate with Richard FIRST (rhayes777/PyAutoMCP = broader compute/optimise MCP, no transport/auth layer yet) — converge on profiles sharing one auth/transport layer, or share only the tunnel recipe.
+- affected-repos:
+  - autofit_assistant
+  - autolens_assistant
+
 ## brain-lifecycle-path-fixes (build-chain umbrella Phase 0b)
 - issue: none yet (issued when unblocked)
 - planned: 2026-07-16
