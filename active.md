@@ -69,3 +69,13 @@
 - repos:
   - autolens_workspace_test: feature/smoke-small-datasets-overrides
   - autolens_workspace: feature/smoke-small-datasets-overrides
+
+## howto-should-simulate-howtolens
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/38
+- status: workspace-dev — should_simulate migration (guards on every load, raw→should_simulate) + DROP the howtolens/ SMALL_DATASETS-unset workaround; goal = all tutorials run under SMALL_DATASETS=1 (16x16). 30/34 already pass; blockers = tutorial_0/tutorial_7 missing guards + tutorial_5_borders mask edge + tutorial_10 SLOW.
+- worktree: ~/Code/PyAutoLabs-wt/howto-should-simulate-howtolens
+- autonomy: supervised
+- prompt: active/howto_should_simulate_howtolens.md
+- note: slice 1/3 of howto_validation_needs_simulator_stage (Build#155 Ph2). HowToLens sims = scripts/simulator/ (singular).
+- repos:
+  - HowToLens: feature/howto-should-simulate-howtolens
