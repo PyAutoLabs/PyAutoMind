@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-680 records across 5 buckets.
+681 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -83,6 +83,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [dpie-developer-scripts](2026/07/dpie-developer-scripts.md) — Trivial API-update follow-up to dpie-lenstool-default (#506). Three developer scripts (visualization_profiling…
 - [dpie-lenstool-default](2026/07/dpie-lenstool-default.md) — Made the Lenstool-native parameterization the DEFAULT dPIE. `dPIEMass`/`dPIEMassSph` now take the `.par`-file …
 - [dpie-lenstool-param](2026/07/dpie-lenstool-param.md)
+- [drop-interferometer-delaunay-marker](2026/07/drop-interferometer-delaunay-marker.md) — Split out from #300 as "interferometer delaunay non-PD FitException". Re-diagnosis on freshly-synced main foun…
 - [eceb-editorial-revision](2026/07/eceb-editorial-revision.md) — ECEB wiki rules — EC A&A template assets — MERGED
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
 - [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
