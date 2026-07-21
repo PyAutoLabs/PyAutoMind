@@ -1,5 +1,16 @@
 # Active Tasks
 
+## multistart-gradient-auto-convergence-phase-1
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1406
+- status: library-dev — PyAutoFit primary; JAX validation in autofit_workspace_test. Phase 1 of 2 (phase 2 = results-contract + aggregator hardening, draft at draft/feature/autofit/multistart_gradient_auto_convergence_phase_2.md; issue only as phase 1 nears shipping — no bulk-issue). Add `MultiStartGradientConvergence` settings object mirroring AutoCorrelationsSettings (check_for_convergence=True, plateau on GLOBAL best_fom over trailing window rtol/atol+min_steps, is_test_mode() shrink); wire into search.py loop at ~L302-321 iterations_per_full_update boundary; n_steps stays HARD CEILING; carry stop_reason local. Scope PARAMETRIC ONLY (MGE/Sersic); pixelized OUT — resurrect=True keeps auto conservative/off. JAX-cache: VERIFY+GUARD (do NOT build) — persistent cache already default-ON via autonerves/jax_wrapper.py (JAX_COMPILATION_CACHE_DIR); prove resumed value_and_grad HLO byte-identical so cache HITS (no recompile on recall). Unit tests numpy-only.
+- worktree: ~/Code/PyAutoLabs-wt/multistart-gradient-auto-convergence-phase-1
+- autonomy: supervised
+- prompt: active/multistart_gradient_auto_convergence_phase_1.md
+- note: successor to multi-start gradient v2 (Fit#1398/#1400). User explicitly added the JAX compile-cache-on-recall requirement; found it already shipped (compile-time arc PyAutoConf#128) so scope is verify+guard not new machinery.
+- repos:
+  - PyAutoFit
+  - autofit_workspace_test
+
 ## analysis-fitexception-masks-cause
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/638
 - status: library-dev — PyAutoLens only. 3 sites (imaging/model/analysis.py:143, interferometer:181, point:138) do `except Exception as e: raise af.exc.FitException` discarding e. Fix: `raise ... from e` at all 3 + opt-in PYAUTO_RAISE_ANALYSIS_EXCEPTIONS=1 re-raise (default OFF); do NOT narrow except (path-parity keeps catching numpy non-PD). Unit test test_autolens numpy-only. FitException behaviour itself is CORRECT (PR#607), this is observability only.
