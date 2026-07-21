@@ -7,6 +7,7 @@
 - autonomy: supervised
 - prompt: active/pixelization_inversion_not_positive_definite.md
 - note: tail of pix-NaN lineage (PyAutoArray#391/#392 shipped opt-in slogdet). Scripts use GaussianKernel reg, not Constant/Adapt — reproduction must confirm site. Real surface = 3 pix scripts + 1 MGE + 2 stale-marker deletions, not "6 scripts".
+- folded-in: mask_irregular no_run un-park (draft/bug/autogalaxy/mask_irregular_silent_failure.md) — bug already fixed (PASSED 8.6s via execute_script; Convolver.from_gaussian drift fixed by PyAutoArray #360/#361). Marker removed on branch: autogalaxy_workspace (9258bf0c) + HowToGalaxy orphaned marker (b2b53fc). Ships with this task's PRs.
 - repos:
   - autogalaxy_workspace
   - HowToGalaxy
@@ -65,7 +66,9 @@
 - autonomy: supervised
 - prompt: active/slam_advanced_fitexception_cascade.md
 - note: pixelization/slam mismatch is NOT the pix-inversion-not-positive-definite cluster (autogalaxy_workspace#140) — ruled out; it is a mesh+reg incompatibility (rectangular+AdaptSplit). HowToLens paths in orig prompt are STALE (no features/ layout — uses chapter_N; find real pixelization tutorial in phase 1).
+- folded-in (TODO on resume): mask_irregular no_run un-park (draft/bug/autogalaxy/mask_irregular_silent_failure.md) — bug already fixed, verified PASSED 14.0s via execute_script. When this worktree is recreated, remove the `imaging/data_preparation/manual/mask_irregular # NEEDS_FIX` line from autolens_workspace/config/build/no_run.yaml AND HowToLens/config/build/no_run.yaml (latter orphaned, no such script). Couldn't fold directly — worktree absent from disk. Tracked on issue #300.
 - folded-in: Delaunay NEEDS_FIX cleanup (was #301, closed 2026-07-21). Verified GREEN on clean main — `imaging/features/pixelization/delaunay.py` (exit 0, FitException gone) + `interferometer/features/pixelization/delaunay.py` (exit 0, (2,2)v(1032,1032) broadcast gone) + HowToLens `chapter_4/tutorial_7` (exit 0). No PyAutoArray change. This task's PR set also: remove both delaunay entries from autolens_workspace no_run.yaml, remove the 2 dead delaunay entries from HowToLens no_run.yaml, add both delaunay scripts to autolens_workspace smoke_tests.txt. Details in prompt "Folded in" section.
+- folded-in (2): HowToLens practicalities + mappers NEEDS_FIX cleanup (draft bug/howtolens/tutorial_repair_practicalities_mappers.md, 2026-07-21). Verified GREEN on clean main — `chapter_2_lens_modeling/tutorial_2_practicalities.py` (exit 0; imports already restored by PR #14; NameError stale) + `chapter_4_pixelizations/tutorial_2_mappers.py` (exit 0; fresh full-size data → 1212-px mapper; zero-size crash was stale 16×16 data via `if not dataset_path.exists()`, already resolved by howtolens SMALL_DATASETS override + lib). No script/library change. This task's HowToLens no_run.yaml edit ALSO removes the two entries `chapter_2.../tutorial_2_practicalities` + `chapter_4.../tutorial_2_mappers`. Out-of-scope follow-up: mappers "buggy visuals" (indexes computed, never plotted). Details in prompt "Folded in (2)" section.
 - repos:
   - autolens_workspace: feature/slam-adapt-inversion-cascade
   - HowToLens: feature/slam-adapt-inversion-cascade
