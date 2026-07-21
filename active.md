@@ -53,7 +53,7 @@
 
 ## smoke-small-datasets-overrides
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/185
-- status: workspace-dev — Tier 1 build-honesty; add 3 `unset: [PYAUTO_SMALL_DATASETS]` env_vars overrides (2 in autolens_workspace_test, 1 in autolens_workspace) for parity-delaunay, jax_grad/imaging_pixelization, multi/imaging_and_point_source/modeling. Config-only, smoke-profile, no library changes.
+- status: awaiting-merge — 2 PRs open (opened under Heart-RED corrective-PR exception, scoped to "workspace validation not passing (10 failed)"): autolens_workspace_test#186 + autolens_workspace#297. Verified parity-delaunay + modeling PASS. jax_grad/imaging_pixelization override exposed a real "Gradient is all zeros" bug (same family as parked imaging_mge) → honestly NEEDS_FIX-parked, belongs in Tier-3 backlog. cluster/visualization left OUT (slow + #1280).
 - worktree: ~/Code/PyAutoLabs-wt/smoke-small-datasets-overrides
 - autonomy: safe
 - prompt: active/smoke_profile_small_datasets_overrides.md
