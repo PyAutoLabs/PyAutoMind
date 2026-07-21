@@ -1,3 +1,49 @@
+# results-inspector MCP server: run from any launcher (CWD-config + JAX stdout)
+
+**Shipped + MERGED 2026-07-21.** Issue: PyAutoLabs/autofit_assistant#18 (closed).
+PRs: autofit_assistant#19 (merge 417bb1a5) + autolens_assistant#85 (merge
+0233f482). Surfaced by the Desktop acceptance walkthrough (#17).
+
+## What shipped
+Hardened the read-only results-inspector MCP server so it runs from any
+launcher / working directory with no env babysitting. In `server.py` (both
+assistants, core byte-identical), **before** importing the autofit-backed tool
+modules:
+- `os.environ.setdefault("JAX_PLATFORMS", "cpu")` — skips jax's xla_bridge
+  backend probe, which otherwise logs to stdout during `import autofit`.
+- `_pin_config()` — `conf.instance = conf.Config(Path(__file__).resolve().parents[2]
+  / "config", ...)`, so autonerves no longer derives its config dir from
+  `os.getcwd()` (conf.py:290) and cannot crash on a foreign CWD's `desktop.ini`.
+- `with contextlib.redirect_stdout(sys.stderr): from ...import (lens_tools,) tools`
+  — swallows any residual import-time stdout. `_route_logging_to_stderr()` still
+  runs after for handlers attached during import.
+
+Also added a Windows/WSL launch note to both skills (`{af,al}_inspect_results_mcp.md`)
+showing the now-clean `wsl.exe` config (PYTHONPATH only) + the MS-Store config/log
+path.
+
+## Verification
+Real MCP stdio handshake from `/tmp` with a **minimal env** (PATH+HOME+PYTHONPATH
+only — no cd, no JAX/cache/skip vars): both servers (autofit 7 tools, autolens 10)
+initialize, `list_searches` ranks gaussian first, zero stdout noise.
+`test_mcp_tools.py` passes 10/10 in each repo. Post-merge, re-verified the plain
+config against the updated main checkout (10 tools, gaussian first, clean).
+
+## Post-merge cleanup done
+- Live packaged + staged FromWSL Claude Desktop configs reverted to the plain
+  `PYTHONPATH=… python -m autoassistant.mcp` launch line (the `cd` prefix + JAX/
+  NUMBA/MPL/SKIP env from the acceptance workaround are no longer needed).
+- Main checkouts of both assistants synced to the merged commits.
+
+## Traps
+- `--check-version` in the `wiki-currency` CI is an environmental baseline-vs-
+  installed-stack version drift (baseline pinned 2026.7.19.1, installed 2026.7.9.1);
+  it fails on clean `main` too and is unrelated to code changes — `--scope all`
+  (the real symbol audit) is the one that must pass. main is unprotected → the
+  non-required check is override-able (`gh pr merge --admin`).
+
+## Original prompt
+
 # results-inspector MCP server: harden config-path + stdout so it runs from any launcher
 
 Type: bug

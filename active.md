@@ -1,16 +1,5 @@
 # Active Tasks
 
-## mcp-server-cwd-jax-stdout
-- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/18
-- status: PRs-OPEN awaiting human merge — autofit_assistant#19 + autolens_assistant#85 (mirror). Fix = harden results-inspector MCP server to run from any launcher/CWD (bug surfaced by #17 acceptance). server.py (both, core byte-identical): before importing autofit-backed tools, `os.environ.setdefault("JAX_PLATFORMS","cpu")` + `_pin_config()` (conf.instance = Config(Path(__file__).parents[2]/"config"), CWD-independent) + `with redirect_stdout(sys.stderr): import ...tools`. Fixes (A) autonerves CWD-config crash on Windows desktop.ini, (B) jax xla_bridge stdout-at-import. VERIFIED: real MCP stdio handshake from /tmp minimal env (PATH+HOME+PYTHONPATH) both servers gaussian-first + zero stdout; test_mcp_tools 10/10 each. Also added Windows/WSL launch note to both skills. POST-MERGE: revert live+staged Desktop configs to plain launch line (drop cd + JAX/cache env); then complete lifecycle record.
-- worktree: ~/Code/PyAutoLabs-wt/mcp-server-cwd-jax-stdout
-- autonomy: human-required (ran under explicit --auto to PR-open; merge human)
-- prompt: active/mcp_server_cwd_and_jax_stdout.md
-- repos:
-  - autofit_assistant: feature/mcp-server-cwd-jax-stdout (PR#19)
-  - autolens_assistant: feature/mcp-server-cwd-jax-stdout (PR#85)
-
-
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
 - status: PARKED-ON-JOB — #282 MERGED+cleaned; 8/8 runnable A100 rows committed (autolens_jax_joss@64204f6). SDP.81 prep = detached RAL job 330608 (330605 diagnosed: empty extracted/ leftover skipped untar via test-d guard; casatools import needs ~/.casa/data — both fixed; 42GB tarball CACHED, no re-download) (45GB ALMA Band6 download -> casatools venv -> 3-level export -> installs dataset/interferometer/{sdp81,sdp81_mid,sdp81_full} in /mnt/ral/jnightin/autolens_jax_joss). RESUME (short session): (1) check log /mnt/ral/jnightin/sdp81_prep_330608.log — expect 'SDP81 PREP ALL DONE' + per-level visibility counts; failure modes: casatools pip wheel on py3.12 (fallback = monolithic CASA tarball), datacolumn, MS_LIST empty (check find patterns); (2) sbatch interferometry benchmarks on A100: benchmarks/interferometer.py at --nvis default/mid/full + benchmarks/imaging_and_interferometer.py (pattern: /mnt/ral/jnightin/autolens_jax_joss/run_rest.sbatch); (3) scp results/*.json back, regen RESULTS.md, commit (guard: explicit file paths); (4) copy small sdp81/ product locally, rewrite scripts/interferometer/start_here.py on NEW branch (start_workspace; #282 merged) using it — decide hosting (commit few-MB FITS to workspace w/ .gitignore allowlist + git add -f, or Zenodo+SDP81_URL); (5) final issue #281 update. Also pending: cluster-tuning prompt draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md; weak JAX-viz PyAutoLens#614
@@ -78,7 +67,7 @@
 
 ## blackjax-smc-gradient-kernel
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/113
-- status: workspace-dev — stage (a) of the 5-stage JAX-native posterior sampler wave. Upgrade blackjax_smc.py from RWM (cube-space, pure_callback) to a GRADIENT inner kernel sampling in PHYSICAL space (differentiable; probe_grad.py form). MALA first, HMC behind a flag; blackjax.adaptive_tempered_smc + inner_kernel_tuning; JAX-native physical-space log_prior (Gaussian/Uniform/LogUniform); preserve SMC logZ. Deliverable = searches_minimal/blackjax_smc_grad.py + smc_gradient_findings.md + comparison.txt row. MGE parametric ONLY; pixelized deferred.
+- status: workspace-dev — SCRIPT DONE + WIRING PROVEN locally; RAL CPU convergence job 330955 QUEUED (GPUs full). searches_minimal/blackjax_smc_grad.py = physical/WHITENED-space adaptive_tempered_smc, MALA(default)/HMC(--kernel hmc), JAX-native log_prior over 15 params, --tune=inner_kernel_tuning. 3 BUGS FIXED: (1) warmup at cube-0.5 median not prior-.mean (degenerate MGE point); (2) profile-CENTRE singularity 1/r at (0,0) → custom_jvp masks non-finite grad→0 (probe_grad only ran GPU, symmetric median sits ON the singularity); (3) MALA wants SCALAR step → WHITEN space z=params/prior_scale (HMC=identity mass). Laptop caps ~4 particles (16 OOMs @15GB), so quality meaningless locally → RAL. RESUME: (1) ssh euclid_jump 'squeue -u jnightin' check 330955; log /mnt/ral/jnightin/smc_grad_logs/smc_grad_cpu-330955.out; (2) pull searches_minimal/output/blackjax_smc_grad_{mala,mala_tuned}_summary.txt; assess max logL vs Nautilus -169k / nss_grad -31, logZ sanity, acc rate; (3) if converges → A100 job for representative timing (nextwave_a100.sbatch pattern; GPUs queued) + write smc_gradient_findings.md + comparison.txt row; (4) then HMC arm. Deliverable = blackjax_smc_grad.py + smc_gradient_findings.md + comparison row. MGE parametric ONLY; pixelized deferred.
 - worktree: ~/Code/PyAutoLabs-wt/blackjax-smc-gradient-kernel
 - autonomy: supervised
 - prompt: active/jax_native_posterior_sampler_wave.md

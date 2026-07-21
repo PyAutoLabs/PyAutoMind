@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-674 records across 5 buckets.
+675 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -172,6 +172,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [matrix-jax-skip](2026/07/matrix-jax-skip.md) — Second layer of the Python Version Matrix fix (after nufftax layer #382/#144). 11 unit tests across 4 repos ex…
 - [matrix-nufftax-py312](2026/07/matrix-nufftax-py312.md) — Fixed the chronic PyAutoBuild "Python Version Matrix" weekly red. 38 failures/job = nufftax ModuleNotFoundErro…
 - [mcmc-corner-smoke](2026/07/mcmc-corner-smoke.md) — The `searches/mcmc.py` "no dynamic range" release-smoke crash (nightly-release blocker) was a **library** bug,…
+- [mcp-server-cwd-jax-stdout](2026/07/mcp-server-cwd-jax-stdout.md) — CWD-config + JAX stdout
 - [memory-faculty](2026/07/memory-faculty.md)
 - [memory-structure-cleanup](2026/07/memory-structure-cleanup.md) — wiki/ + bibliography restructure, structure lint, template sync — SHIPPED
 - [mind-guard-cd-fix](2026/07/mind-guard-cd-fix.md) — mind_commit_guard v1.2 — honour a leading `cd` away from Mind. v1.1 keyed is-Mind-commit off the ambient cwd t…
