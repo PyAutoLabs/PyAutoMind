@@ -1,3 +1,11 @@
+## slam-adapt-inversion-cascade
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/300
+- completed: 2026-07-21
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/302, https://github.com/PyAutoLabs/HowToLens/pull/40
+- summary: Fixed two distinct pixelized-SLaM root causes (verified green under CI smoke env; run_smoke 9/9 + 6/6). (1) Double-Einstein-ring (imaging+group): source_pix_1_source_1 pixelizes source_1 with adaptive al.reg.Adapt but the stitched galaxy_name_image_dict omitted source_1 -> adapt_data=None crash; fixed by seeding source_1's adapt image from its light-profile model image in source_lp_result_2 (which already fits source_1 as an MGE). (2) imaging/features/pixelization/slam: RectangularAdaptImage mesh + al.reg.AdaptSplit is invalid (Split reg only works on irregular Delaunay/Voronoi; rectangular interpolator's _mappings_sizes_weights_split is a non-split stub -> AdaptSplit's pixels=len/4 gave 210x210 reg vs 786x786 curvature -> broadcast TypeError); fixed by swapping to al.reg.Adapt. Cleared now-green NEEDS_FIX markers across both repos' no_run.yaml (both double-rings, pix/slam, imaging delaunay) + 6 stale/dead HowToLens markers. SPLIT OUT to new draft prompts: multi-wavelength SersicCore alpha=0 ZeroDivisionError (bug/autogalaxy/sersic_core_alpha_zero_division.md, unrelated) and interferometer delaunay non-PD FitException at analysis.py:182 (bug/autolens/interferometer_delaunay_nonpd_fitexception.md — folded-in note's "already green" claim was WRONG; kept marker, updated reason). Candidate PyAutoArray hardening follow-up: *Split reg should fail loudly on non-splittable meshes instead of a cryptic broadcast error. Did NOT bloat smoke_tests.txt (curated-subset rule). Merge pending human (both PRs open, pending-release).
+
+## Original prompt
+
 # SLaM / advanced-pipeline inversion+adapt-image cascade
 
 Type: bug
