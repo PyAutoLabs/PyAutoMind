@@ -1,17 +1,5 @@
 # Active Tasks
 
-## multistart-gradient-convergence-results-phase-2
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1409
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1410
-- status: library-shipped, awaiting-merge — PR #1410 open (pending-release), commit 704a3b9. Results contract DONE: samples_info converged/stop_reason/convergence/fom_history; figure_of_merit_vs_iteration plotter (default-on KeyError-tolerant gate); FIX max_log_likelihood_index/max_log_posterior_index argmax→nanargmax (argmax picked NaN diagnostic rows). Gate: tests 1525p/1s, smoke mle.py, review self-CLEAN, Heart RED 2 pre-existing-unrelated human-waived. REMAINING = autofit_workspace_test JAX round-trip extension → then record complete (2-phase arc done). On merge: lifecycle.py record → complete.
-- worktree: ~/Code/PyAutoLabs-wt/multistart-gradient-convergence-results-phase-2
-- autonomy: supervised
-- prompt: active/multistart_gradient_auto_convergence_phase_2.md
-- note: DELIBERATE coexisting PyAutoFit claim — interferometer-delaunay-flaky-fitexception also lists PyAutoFit but its 1a (#1408) is MERGED and remaining phases are autolens_workspace/PyAutoArray (stale PyAutoFit claim); user-approved proceed 2026-07-21. Successor to phase 1 ([[project_multistart_gradient_auto_convergence]]).
-- repos:
-  - PyAutoFit: feature/multistart-gradient-convergence-results-phase-2
-  - autofit_workspace_test: (JAX validation extension, not yet claimed)
-
 
 ## ep-hierarchical-scale-collapse
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1405
