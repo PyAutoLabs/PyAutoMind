@@ -63,3 +63,23 @@ Affected (remove NEEDS_FIX once green):
 - HowToLens: pixelization tutorial equivalent (verify real path in phase 1)
 
 Split out (separate prompt): `multi/features/wavelength_dependence/modeling` → SersicCore alpha=0.
+
+## Folded in: Delaunay NEEDS_FIX cleanup (from #301, closed 2026-07-21)
+
+The parked 2026-04-10 **Delaunay** cluster (former `bug/autoarray/delaunay_pixelization_fit_failures.md`,
+issue #301) is the same pixelization cluster and edits the same `no_run.yaml`, so it is folded here.
+Reproduction on clean main (2026-07-21, `TEST_MODE=2 SMALL_DATASETS=1 DISABLE_JAX=1`) **overturned its
+premise** — the bugs are already fixed (interferometer non-PD numpy path `PyAutoLens#607`, zero-fill
+extrapolate, potential-correction port); no PyAutoArray change:
+
+- `imaging/features/pixelization/delaunay.py` → exit 0 (~19s) — `FitException` gone
+- `interferometer/features/pixelization/delaunay.py` → exit 0 (~34s) — `(2,2) vs (1032,1032)` broadcast gone
+- HowToLens `chapter_4_pixelizations/tutorial_7_adaptive_pixelization.py` → exit 0
+
+Cleanup checklist (do in this task's PR set):
+- autolens_workspace `config/build/no_run.yaml` — remove the `imaging/features/pixelization/delaunay`
+  and `interferometer/features/pixelization/delaunay` NEEDS_FIX entries.
+- HowToLens `config/build/no_run.yaml` — remove the two `.../features/pixelization/delaunay` entries
+  (dead paths; HowToLens has no `features/` layout).
+- autolens_workspace `smoke_tests.txt` — add both delaunay scripts (regression guard; interferometer
+  ~34s, heaviest entry).
