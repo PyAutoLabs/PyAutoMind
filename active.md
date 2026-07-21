@@ -57,8 +57,9 @@
 
 ## sersic-core-effective-radius-zero
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/514
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/515
 - session: claude --resume 37395538-a051-4b8d-8eeb-aa3f8df67454
-- status: library-dev — SersicCore.intensity_prime scalar `/ self.effective_radius` raises ZeroDivisionError when effective_radius=0 (Python scalar div); fix = xp.divide so it yields inf (resample) like Sersic's array division + JAX path. NOT alpha (alpha=3.0 Constant, probe-verified). Trigger = multi-wavelength effective_radius=wavelength*m+c, m~U(-0.1,0.1) c~U(-10,10) symmetric→test-mode median 0. Library-first: PyAutoGalaxy fix + numpy unit test, then autolens_workspace re-run multi/features/wavelength_dependence/modeling + drop no_run marker. HowToLens dead path (no such tutorial).
+- status: library-shipped, workspace-pending — PyAutoGalaxy PR#515 OPEN (pending-release). Library fix: SersicCore.intensity_prime scalar `/ self.effective_radius` raises ZeroDivisionError when effective_radius=0 (Python scalar div); fix = xp.divide so it yields inf (resample) like Sersic's array division + JAX path. NOT alpha (alpha=3.0 Constant, probe-verified). Trigger = multi-wavelength effective_radius=wavelength*m+c, m~U(-0.1,0.1) c~U(-10,10) symmetric→test-mode median 0. Library-first: PyAutoGalaxy fix + numpy unit test, then autolens_workspace re-run multi/features/wavelength_dependence/modeling + drop no_run marker. HowToLens dead path (no such tutorial).
 - worktree: ~/Code/PyAutoLabs-wt/sersic-core-effective-radius-zero
 - autonomy: supervised
 - prompt: active/sersic_core_alpha_zero_division.md
