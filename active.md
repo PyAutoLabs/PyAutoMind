@@ -2,17 +2,6 @@
 
 
 
-## multistart-resurrection
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1399
-- status: library-dev — Phase 2 of multi-start gradient v2 (#101), builds on merged Phase 1 (#1398). Add resurrect=False knob + _reinit_dead_starts (redraw dead starts' params from start band + reinit per-start vmapped opt_state, jnp.where mask merge) + n_resurrections diagnostic. Default off = MGE behaviour unchanged. Numpy unit tests; JAX validation follows.
-- worktree: ~/Code/PyAutoLabs-wt/multistart-resurrection
-- autonomy: supervised
-- prompt: active/multistart_resurrection_restart_on_death.md
-- note: pixelized landscape searchable ONLY with resurrection (apply_if_finite alone latches at cliff); but Nautilus still wins pix decisively — this makes gradient MAP viable there, not competitive.
-- repos:
-  - PyAutoFit: feature/multistart-resurrection
-
-
 
 ## jax-joss-benchmarks
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/281
