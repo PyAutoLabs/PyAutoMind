@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-676 records across 5 buckets.
+678 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -267,6 +267,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [simulate-injection-feasibility](2026/07/simulate-injection-feasibility.md)
 - [slack-release-notes](2026/07/slack-release-notes.md)
 - [slacs1430-acs-parity](2026/07/slacs1430-acs-parity.md) — SLACS1430+4105 ACS reduction vs legacy — pixel parity PASS — SHIPPED
+- [slam-adapt-inversion-cascade](2026/07/slam-adapt-inversion-cascade.md) — Fixed two distinct pixelized-SLaM root causes (verified green under CI smoke env; run_smoke 9/9 + 6/6). (1) Do…
 - [slam-resume-fastpath](2026/07/slam-resume-fastpath.md) — SLaM resume fast-path implementing the #70 judgment — cache-aside keyed on the upstream result's own paths: ga…
 - [slam-resume-profiling](2026/07/slam-resume-profiling.md) — New pipeline_resume/ tier profiles the full 5-stage SLaM chain cold vs resume with per-component decomposition…
 - [smoke-small-datasets-overrides](2026/07/smoke-small-datasets-overrides.md)
@@ -286,6 +287,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [verify-install-check-f-autosimulate-and-dep-pin](2026/07/verify-install-check-f-autosimulate-and-dep-pin.md)
 - [version-check-compat-floor](2026/07/version-check-compat-floor.md)
 - [version-pinning-design-review](2026/07/version-pinning-design-review.md)
+- [viz-refactor-asserts-1280](2026/07/viz-refactor-asserts-1280.md) — Two visualization sweep-assert failures, both diagnosed as env-config (NOT code bugs); workspace-only, no libr…
 - [viz-render-gallery](2026/07/viz-render-gallery.md) — Eyes agent Phase 1
 - [wake-up-skill-rename](2026/07/wake-up-skill-rename.md) — Renamed the /morning composition skill to /wake_up to fit the organism analogy (the organism wakes: syncs its …
 - [weak-likelihood-function](2026/07/weak-likelihood-function.md)
