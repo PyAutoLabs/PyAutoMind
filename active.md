@@ -74,6 +74,18 @@
 
 
 
+## interpolator-aggregator-test-mode
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1401
+- status: library-dev — Phase 1 of the workspaces API-drift umbrella. Reproduced on clean main: interpolate.py:265 aggregator/DB section crashes IndexError "no instances" ONLY under test mode — searches write output/test_mode/<prefix> but Aggregator.from_directory reads hardcoded output/<prefix> → 0 results → empty LinearInterpolator. Fix (Option A, approved): make Aggregator.from_directory (autofit/aggregator/aggregator.py) test-mode-aware by reusing _test_mode_segment() (autofit/non_linear/paths/abstract.py) — fall through to the test_mode sibling only when the plain dir has no metadata and the sibling exists. Unit test under test_autofit/aggregator/. Then validate autofit_workspace interpolate.py under PYAUTO_TEST_MODE=1 + regen notebook. Ship library-first.
+- worktree: ~/Code/PyAutoLabs-wt/interpolator-aggregator-test-mode
+- autonomy: supervised
+- prompt: draft/bug/workspaces/api_drift_callsite_fixes.md (INTERPOLATOR ITEM ONLY — umbrella stays in draft/; do NOT move to active/ or complete/ on ship; other 5 items become follow-up tasks)
+- note: interpolate.py:213 in-memory interpolation WORKS; only the DB/aggregator section fails, only under test mode (real user runs fine). HowToFit tutorial_5 was paired in the umbrella but does NOT use interpolator/aggregator — EXCLUDED. interpolate.py not in smoke set; umbrella NEEDS_FIX markers no longer literally in files (curated list).
+- repos:
+  - PyAutoFit
+  - autofit_workspace
+
+
 ## blackjax-smc-gradient-kernel
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/113
 - status: workspace-dev — stage (a) of the 5-stage JAX-native posterior sampler wave. Upgrade blackjax_smc.py from RWM (cube-space, pure_callback) to a GRADIENT inner kernel sampling in PHYSICAL space (differentiable; probe_grad.py form). MALA first, HMC behind a flag; blackjax.adaptive_tempered_smc + inner_kernel_tuning; JAX-native physical-space log_prior (Gaussian/Uniform/LogUniform); preserve SMC logZ. Deliverable = searches_minimal/blackjax_smc_grad.py + smc_gradient_findings.md + comparison.txt row. MGE parametric ONLY; pixelized deferred.
