@@ -3,7 +3,7 @@
 
 ## group4-mge-search-benchmark
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/82
-- status: workspace-dev — plan approved. Extend searches/ MGE cell to 4-lens+4-source group model (~50-55 params); benchmark MultiStart JAX gradient family in TWO modes (fixed-step n_steps=300 + auto-convergence via af.MultiStartGradientConvergence, incl. first-class multi_start_prodigy_autoconv) vs Nautilus; new simulators/group4_mge.py writes truth.json; searches/_recovery.py checks max_lh_instance vs truth. Worktree next via start_workspace.
+- status: workspace-dev — CODE COMPLETE (phases 1-3), BENCHMARK RUNS PENDING. Branch feature/group4-mge-search-benchmark pushed (bddedc5, no PR). DONE+VERIFIED: simulators/group4_mge.py (4 deflectors+4 sources, GROUP4_TRUTH single-source-of-truth, writes truth.json; preview shows 4 cores+arcs); searches/_setup.py dataset_class='group' _group_mge_model=54 free params (centres SEEDED near truth to break 4x4 permutation symmetry, geometry priors broad; AnalysisImaging; likelihood evals on numpy+JAX); searches/_recovery.py scores max_lh vs truth (theta_E+centre+shear, overall_pass); _runner recovery block; _samplers.py generic build_multi_start for adam/prodigy/lion/adabelief + multi_start_prodigy_autoconv (af.MultiStartGradientConvergence); 6 leaf scripts; sweep.py 6 group cells; README. ruff+smoke green. BLOCKER: multi_start_adam local CPU run sat 20min+ in JAX compile/pre-fit w/ ZERO steps — 54-param 8-galaxy vmap value_and_grad graph too heavy for CPU XLA. RESUME: (1) check if detached CPU run PID 25434 produced output/ or results JSON else kill; (2) RE-RUN ON LAPTOP GPU (~/venv/PyAutoGPU, JAX_PLATFORM_NAME=cuda JAX_PLATFORMS=cuda,cpu XLA_PYTHON_CLIENT_MEM_FRACTION=0.5, --config-name local_gpu_fp64) starting multi_start_adam then family then nautilus anchor; (3) if still too heavy dial _GROUP4_MGE_TOTAL_GAUSSIANS 10->6 and/or _MULTI_START_N_STARTS 64->32; (4) record recovery+walltime vs Nautilus, aggregate.py; (5) phase4 contingency = narrow-prior/warm-start init only if cold-start fails recovery. Env note: do NOT source worktree activate.sh locally (it repoints PYTHONPATH at /mnt/ral HPC); local libs resolve directly. Run w/ NUMBA_CACHE_DIR=/tmp/numba_cache MPLCONFIGDIR=/tmp/matplotlib PYAUTO_SKIP_WORKSPACE_VERSION_CHECK=1.
 - worktree: ~/Code/PyAutoLabs-wt/group4-mge-search-benchmark
 - autonomy: safe
 - prompt: active/research_profiling_experiment_in_the_autolens_pr.md
@@ -74,16 +74,3 @@
 - note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer
-
-## clear-stale-needs-fix-parks
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/191
-- status: workspace-dev — 6 NEEDS_FIX markers triaged (4 verified-fixed under PYAUTO_TEST_MODE=2 → un-park; 2 JAX benchmarks → reclassify SLOW). Editing config/build/no_run.yaml across 4 workspaces, then ship_workspace PR per repo.
-- worktree: ~/Code/PyAutoLabs-wt/clear-stale-needs-fix-parks
-- autonomy: human-required
-- prompt: active/clear_stale_needs_fix_parks.md
-- note: workspace hygiene; SLOW markers (24 total/11 stale) out of scope. Repro logs in session scratchpad.
-- repos:
-  - autolens_workspace_test: main
-  - autofit_workspace: main
-  - autogalaxy_workspace: main
-  - autolens_workspace: main
