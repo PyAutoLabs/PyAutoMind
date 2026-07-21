@@ -82,12 +82,14 @@
 
 ## interferometer-delaunay-flaky-fitexception
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/640
-- status: library-dev — Phase 1 (PyAutoLens + autolens_workspace): make TEST_MODE bypass tolerate a single-eval FitException as resample-equivalent (analysis.py:175-182, LOG it) so pixelization scripts don't flakily hard-fail; then un-park interferometer Delaunay no_run entry + add to smoke. Phase 2 (PyAutoArray, separate PR): fix fnnls.py:134 divide-by-zero producer. REPRO: TRUE flake not lib-race (#307's 2 CI runs same commit dce04672 ~1min apart, one qhull-NaN-fail one pass, NO lib merge between); LOCAL repro hard (250/250 fit_from draws clean → CI-thread/BLAS-dependent); 45/250 draws hit fnnls.py:134 divide-by-zero RuntimeWarning (usually benign). Two masked signatures: qhull "Points cannot contain NaN" (mesh vertices) + non-PD inversion (#309).
+- status: library-shipped, workspace-pending — Phase 1a SHIPPED as PyAutoFit#1408 (pending-release, RE-SCOPED PyAutoLens→PyAutoFit: full CI traceback showed failure runs via autofit _fit_bypass_test_mode abstract_search.py:872, not PyAutoLens analysis). Fix = TEST_MODE=2 bypass single-eval catches FitException → keep -1e99 sentinel + log; only FitException caught (real errors still fail). +2 tests, 108 search/result/samples pass. Heart RED at ship = all ambient/pre-existing (user ack'd). NEXT: Phase 1b (autolens_workspace, library-first AFTER #1408 merges) = un-park interferometer Delaunay no_run + add to smoke (via /start_workspace; workspace CI uses same-named PyAutoFit branch). Phase 2 (PyAutoArray, separate) = fix fnnls.py:134 divide-by-zero / degenerate Hilbert-mesh NaN producer. DIAGNOSIS: fails in source_pix_2 (Hilbert adaptive mesh, NOT Overlay — why 250 fit_from draws on Overlay stage were clean); TRUE flake (CI-thread-dependent, #307's 2 same-commit runs disagreed, no lib merge between).
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1408
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-delaunay-flaky-fitexception
 - autonomy: supervised
 - prompt: active/interferometer_delaunay_intermittent_qhull_nan.md
-- note: follow-up to Delaunay cleanup #301/#307 (imaging Delaunay shipped green + smoke-gated; interferometer parked). Consolidates closed autolens_workspace#300/#308/#309. Phase 1 test-mode tolerance helps ALL FitException-prone pixelization scripts, not just this one.
+- note: follow-up to Delaunay cleanup #301/#307 (imaging Delaunay shipped green + smoke-gated; interferometer parked). Consolidates closed autolens_workspace#300/#308/#309. Phase 1 test-mode tolerance helps ALL FitException-prone pixelization scripts, not just this one. Complements PyAutoLens#639 raise_fit_exception (preserves cause).
 - repos:
-  - PyAutoLens
-  - autolens_workspace
-  - PyAutoArray
+  - PyAutoFit: feature/interferometer-delaunay-flaky-fitexception (Phase 1a SHIPPED #1408)
+  - autolens_workspace: feature/interferometer-delaunay-flaky-fitexception (Phase 1b pending)
+  - PyAutoLens (not claimed — re-scoped out; issue #640 lives here)
+  - PyAutoArray (Phase 2, not yet claimed)
