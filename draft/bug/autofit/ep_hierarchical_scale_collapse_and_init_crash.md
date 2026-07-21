@@ -7,7 +7,8 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1405
 
 ## Summary
 
