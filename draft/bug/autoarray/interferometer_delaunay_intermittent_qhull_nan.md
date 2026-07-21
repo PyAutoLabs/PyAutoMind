@@ -84,3 +84,29 @@ add the script to the smoke gate (alongside the imaging Delaunay already added i
 Refs (all closed): autolens_workspace#300 (re-park), #307 (imaging added + interferometer kept
 parked w/ CI flake evidence), #308 (drop-marker, closed), #309 (non-PD re-diagnosis, closed as dup).
 Related: pixelization-inversion-not-PD, pix-NaN lineage (reg log-det slogdet fix).
+
+## Reproduction evidence (2026-07-21, start_dev)
+
+- **True flake, not a library race:** #307's two CI runs on the SAME commit (`dce04672`) started
+  ~1 min apart (16:22 vs 16:23) and NO PyAutoArray/PyAutoLens main merge occurred in that window —
+  yet one py3.12 run failed (qhull NaN) and one passed. Same code, same libraries.
+- **Local repro is hard / environment-sensitive:** 250 random prior-instance `fit_from` draws on
+  current main = 250/250 clean (0 raised) — the failure did NOT reproduce locally, consistent with
+  a CI-runner thread-count / BLAS FP-summation-order dependence.
+- **Smoking gun producer:** 45/250 draws emitted `RuntimeWarning: invalid value / divide by zero`
+  at `PyAutoArray/autoarray/util/fnnls.py:134` (`alpha = np.min(d[q] / (d[q] - s_chol[q]))`) —
+  frequent NaN/inf in the NNLS solver, usually benign locally but a candidate source of the
+  occasional fatal NaN/non-PD on CI. (Note: confirm which solver path the script's modeling uses —
+  it sets `use_positive_only_solver=False`, while a default analysis uses the positive/fnnls path.)
+
+## Phasing (Bug Agent: multi-repo, flaky, split-into-phases)
+
+- **Phase 1 — un-flake test-mode (PyAutoLens + autolens_workspace, small, environment-independent):**
+  make the `TEST_MODE` bypass tolerate a single-eval `FitException` the way a real sampler does
+  (resample / sentinel low FOM) instead of hard-failing — `analysis.py:175-182`. This un-flakes ALL
+  FitException-prone pixelization scripts in test-mode, not just this one, and does not mask real
+  breakage in a real fit. Then un-park the interferometer Delaunay `no_run` entry + add to smoke.
+  (Log the tolerated FitException so it stays visible.)
+- **Phase 2 — fix the numerical producer (PyAutoArray, deeper, separate PR):** guard/repair the
+  `fnnls.py:134` divide-by-zero and/or the traced-mesh NaN / non-PD conditioning at the producer
+  (no silent guards — fix the math). Reproduce on CI-like thread counts first.
