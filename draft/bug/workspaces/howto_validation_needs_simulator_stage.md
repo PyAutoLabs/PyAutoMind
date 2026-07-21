@@ -85,3 +85,20 @@ deletes.
 
 Follow-up worth one line in its own prompt: normalise `simulator/` vs
 `simulators/` across the three repos (inconsistent siblings).
+
+## RESOLVED 2026-07-21 — done as 3 per-repo slices
+
+- **HowToLens** (slice 1/3) — MERGED HowToLens#39 (issue #38): 22 raw guards →
+  `al.util.dataset.should_simulate`, added missing guards, fixed tutorial_7 wrong-producer
+  latent bug, removed dead `howtolens/`+`guides/` unset overrides. All chapters green on a
+  fresh dataset/ at 16x16.
+- **HowToGalaxy** (slice 2/3) — MERGED HowToGalaxy#30 (issue #29): same, `ag.` namespace,
+  tutorial_3_fitting wrong-producer fix, dead overrides removed. All chapters green fresh.
+- **HowToFit** (slice 3/3) — **NO CHANGE NEEDED.** HowToFit already self-simulates via
+  `if not path.exists(dataset_path): run scripts/simulators/simulators.py` and loads 1D JSON
+  via `af.util.numpy_array_from_json`. `af.util.dataset.should_simulate` does NOT exist
+  (autofit is autoarray-independent) and 1D data has no 16x16 cap-mismatch, so the migration
+  does not apply. Verified: chapter_1 5/5 + chapter_3 7/7 pass on a fresh dataset/ under
+  PYAUTO_SMALL_DATASETS=1; no unset workaround present. Already in the target state.
+
+Net: the Phase-2 HowTo-sim item is closed. All HowTo repos run under PYAUTO_SMALL_DATASETS.
