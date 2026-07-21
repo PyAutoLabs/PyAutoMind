@@ -60,11 +60,11 @@
 ## slam-adapt-inversion-cascade
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/300
 - session: claude --resume 37395538-a051-4b8d-8eeb-aa3f8df67454
-- status: workspace-dev — REPRODUCED on clean main (TEST_MODE=2). Two distinct signatures in the pixelized-SLaM cluster: (1) double_einstein_ring imaging+group → adapt_data=None AttributeError at PyAutoArray inversion/mappers/abstract.py:476, phase source_pix[1]_source_1 (SAME root cause both scripts); root cause CONFIRMED real (not test-mode): reg_init=al.reg.Adapt but source_1 pixelized with NO adapt image possible (never had an LP phase, unlike source_0). (2) imaging/features/pixelization/slam → curvature/reg shape mismatch (786 vs 210) at inversion/abstract.py:366 — phase-1 diagnose real-vs-test-mode. Multi-wavelength SersicCore alpha=0 SPLIT OUT to draft/bug/autogalaxy/sersic_core_alpha_zero_division.md. Chosen fix (approved): SEED source_1 an adapt image from current tracer lensed source model (NOT Constant-reg bootstrap).
+- status: workspace-dev — REPRODUCED on clean main (TEST_MODE=2). Two DISTINCT root causes (not one cluster): (1) double_einstein_ring imaging+group → adapt_data=None AttributeError at PyAutoArray inversion/mappers/abstract.py:476, phase source_pix[1]_source_1 (SAME both scripts); CONFIRMED real (not test-mode): reg_init=al.reg.Adapt but source_1 pixelized with NO adapt image possible (never had an LP phase, unlike source_0). FIX (approved): SEED source_1 an adapt image from current tracer lensed source model (NOT Constant-reg bootstrap). (2) imaging/features/pixelization/slam → DIAGNOSED (not test-mode, NOT the pix-not-PD cluster): script pairs RectangularAdaptImage mesh + al.reg.AdaptSplit (lines 482-483), but AdaptSplit/*Split reg is ONLY valid on irregular Delaunay/Voronoi meshes — sibling group/features/pixelization/slam.py:23,280 documents this rule explicitly. Mechanism: rectangular.py:310 _mappings_sizes_weights_split is a STUB returning non-split mappings; AdaptSplit.regularization_matrix_from derives pixels=len/4 assuming a real 4pt split-cross → wrong-sized reg matrix (210 vs 786 curvature) → TypeError add incompatible shapes at inversion/abstract.py:366. FIX: pair AdaptSplit with a Delaunay mesh (keeps the example's teaching intent) OR swap reg→Adapt on rectangular. Optional lib follow-up (bug/autoarray): *Split reg should fail LOUDLY on non-splittable meshes, not produce a cryptic broadcast TypeError. Multi-wavelength SersicCore alpha=0 SPLIT OUT to draft/bug/autogalaxy/sersic_core_alpha_zero_division.md.
 - worktree: ~/Code/PyAutoLabs-wt/slam-adapt-inversion-cascade
 - autonomy: supervised
 - prompt: active/slam_advanced_fitexception_cascade.md
-- note: cross-ref active task pix-inversion-not-positive-definite (autogalaxy_workspace#140) for the pixelization/slam shape-mismatch — likely related inversion cluster. HowToLens paths in orig prompt are STALE (no features/ layout — uses chapter_N; find real pixelization tutorial in phase 1).
+- note: pixelization/slam mismatch is NOT the pix-inversion-not-positive-definite cluster (autogalaxy_workspace#140) — ruled out; it is a mesh+reg incompatibility (rectangular+AdaptSplit). HowToLens paths in orig prompt are STALE (no features/ layout — uses chapter_N; find real pixelization tutorial in phase 1).
 - repos:
   - autolens_workspace
   - HowToLens
@@ -82,8 +82,8 @@
 - prompt: draft/bug/workspaces/api_drift_callsite_fixes.md (INTERPOLATOR ITEM ONLY — umbrella stays in draft/; do NOT move to active/ or complete/ on ship; other 5 items become follow-up tasks)
 - note: interpolate.py:213 in-memory interpolation WORKS; only the DB/aggregator section fails, only under test mode (real user runs fine). HowToFit tutorial_5 was paired in the umbrella but does NOT use interpolator/aggregator — EXCLUDED. interpolate.py not in smoke set; umbrella NEEDS_FIX markers no longer literally in files (curated list).
 - repos:
-  - PyAutoFit
-  - autofit_workspace
+  - PyAutoFit: feature/interpolator-aggregator-test-mode
+  - autofit_workspace: (deferred — claimed for the ship_workspace follow-up after library merges)
 
 
 ## blackjax-smc-gradient-kernel
