@@ -54,3 +54,14 @@
 - note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer
+
+## sersic-core-effective-radius-zero
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/514
+- session: claude --resume 37395538-a051-4b8d-8eeb-aa3f8df67454
+- status: library-dev — SersicCore.intensity_prime scalar `/ self.effective_radius` raises ZeroDivisionError when effective_radius=0 (Python scalar div); fix = xp.divide so it yields inf (resample) like Sersic's array division + JAX path. NOT alpha (alpha=3.0 Constant, probe-verified). Trigger = multi-wavelength effective_radius=wavelength*m+c, m~U(-0.1,0.1) c~U(-10,10) symmetric→test-mode median 0. Library-first: PyAutoGalaxy fix + numpy unit test, then autolens_workspace re-run multi/features/wavelength_dependence/modeling + drop no_run marker. HowToLens dead path (no such tutorial).
+- worktree: ~/Code/PyAutoLabs-wt/sersic-core-effective-radius-zero
+- autonomy: supervised
+- prompt: active/sersic_core_alpha_zero_division.md
+- repos:
+  - PyAutoGalaxy
+  - autolens_workspace
