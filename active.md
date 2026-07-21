@@ -28,11 +28,11 @@
 
 ## slope-hierarchy
 - issue: https://github.com/Jammy2211/slope_hierarchy/issues/1
-- status: workspace-dev — goals 1/3/4 DONE; PR PyAutoFit#1383 (projection fix) MERGED. Goal 2 = PARTIAL PARITY: EP recovers parent MEAN (2.053, agrees NUTS 2.028/truth 2.0) but underestimates SCATTER (0.004 vs NUTS 0.143/truth 0.1); damping δ=0.5 makes it WORSE (full collapse, logZ→5e7). CONVERGENCE TEST overnight: RAL job 330639 (undamped, max_steps 5→12, ~3-4h)
+- status: workspace-dev — ALL 4 GOALS ANSWERED. G1 NUTS ✓ (mean 2.028/sigma 0.143). G3 RAL pipeline ✓. G4 diagnostics ✓✓ (caught+fixed real projection bug, PR PyAutoFit#1383 MERGED). G2 = characterised partial parity: EP recovers parent MEAN (2.051, agrees NUTS) but converged SCATTER ~4× low (0.026 vs truth 0.1/NUTS 0.143), errors ~1000× too tight — documented EP scale-hyperparameter shrinkage (max_steps=5 snapshot 0.004 was under-converged; job 330639 max_steps=12 converged to 0.026, plateaued). NEXT (optional): N=25-50 scale-up (NUTS headline, EP cautionary) OR write-up. Not blocked.
 - worktree: /mnt/c/Users/Jammy/Science/slope_hierarchy (external science project on its own main — no PyAutoLabs worktree; ic50_workspace-style non-standard)
 - autonomy: supervised
 - prompt: active/ep_hierarchical_power_law_slopes.md
-- resume (2026-07-18 AM): (1) read job 330639: `ssh euclid_jump "grep -A3 'Parent recovery' /mnt/ral/jnightin/slope_hierarchy/hpc/batch_gpu/output/output.330639.out"` + collapse-count in ep_diagnostics.results; (2) PULL its ep_history.csv into repo results/ and inspect the parent-sigma trace over the 12 steps (did scatter grow toward 0.1 or stay ~0.004?); (3) if stayed crushed → goal-2 conclusion is 'EP gets mean, fundamentally misses scatter' (finalize parity table on issue #1, journal it) → then N=25-50 scale-up (simulate + submit chain; TRAPS: rm output/<sample>/ep before refits, force-sync truth files, verify RAL PyAutoFit mirror commit+content grep after any pull); if scatter grew → re-quote at converged max_steps. Also feed back to EP diagnostics: its 'try damping' hint is WRONG for this problem.
+- next: goal-2 fully answered; remaining is scale-up (N=25-50: edit simulator N + submit_* --array, rm output/<sample>/* before refits, force-sync truth files, verify RAL PyAutoFit mirror commit) or a methods write-up. NOTE repo now on autonerves (autoconf renamed, PRs #2/#3 landed 2026-07-18).
 - note: hierarchical power-law slope recovery from N simulated imaging lenses — BlackJAX-NUTS joint fit vs EP parity (values AND errors), RAL scale-up, and end-to-end exercise of the 2026-07 EP diagnostics (PyAutoFit#1330 wave). PyAutoFit is exercised NOT edited: EP defects file as new bug prompts via intake. No PyAutoLabs repo claimed.
 - repos:
 
