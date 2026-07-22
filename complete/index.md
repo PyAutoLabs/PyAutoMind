@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-695 records across 5 buckets.
+698 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -15,6 +15,10 @@ _(curate hard-won records here — survives regeneration.)_
 <!-- CURATED:END -->
 
 <!-- GENERATED:START — edit records, not this block; regenerate with `lifecycle.py index --apply` -->
+
+## 2026/07/ep_scale_collapse_assets
+
+- [EP_TOY_FINDINGS](2026/07/ep_scale_collapse_assets/EP_TOY_FINDINGS.md) — toy repro
 
 ## 2026/07
 
@@ -103,6 +107,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [ep-followups-batch](2026/07/ep-followups-batch.md) — F6 exact truncated KL (MC-verified) + F7b sampler evidence on log_norm (F7 all legs fixed; evidence trustworth…
 - [ep-graphical-docs](2026/07/ep-graphical-docs.md) — EP review Phase 2 — autofit/graphical README formal spec (16 equations) + statistical docstrings + seam contra…
 - [ep-hierarchical-regression](2026/07/ep-hierarchical-regression.md) — Fixed the red PyAutoFit Tests workflow on main (found during a /health check green-light sweep — the only red …
+- [ep-hierarchical-scale-collapse](2026/07/ep-hierarchical-scale-collapse.md)
 - [ep-negative-sigma-crash](2026/07/ep-negative-sigma-crash.md) — EP hierarchical factor sigma<0 — MERGED
 - [ep-priors-fable-reassess](2026/07/ep-priors-fable-reassess.md) — priors/messages — 9 bugs fixed + 5 decisions resolved — SHIPPED
 - [ep-projection-weights](2026/07/ep-projection-weights.md) — two stacked defects
@@ -285,6 +290,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [slam-adapt-inversion-cascade](2026/07/slam-adapt-inversion-cascade.md) — Fixed two distinct pixelized-SLaM root causes (verified green under CI smoke env; run_smoke 9/9 + 6/6). (1) Do…
 - [slam-resume-fastpath](2026/07/slam-resume-fastpath.md) — SLaM resume fast-path implementing the #70 judgment — cache-aside keyed on the upstream result's own paths: ga…
 - [slam-resume-profiling](2026/07/slam-resume-profiling.md) — New pipeline_resume/ tier profiles the full 5-stage SLaM chain cold vs resume with per-component decomposition…
+- [slope-hierarchy](2026/07/slope-hierarchy.md)
 - [slow-skip-timeout-cap-doc](2026/07/slow-skip-timeout-cap-doc.md)
 - [smoke-small-datasets-overrides](2026/07/smoke-small-datasets-overrides.md)
 - [solver-branch-flips](2026/07/solver-branch-flips.md) — research deliverable met — flips are JIT-only (eager clean; XLA-fusion ulp × discrete threshold); positive-onl…

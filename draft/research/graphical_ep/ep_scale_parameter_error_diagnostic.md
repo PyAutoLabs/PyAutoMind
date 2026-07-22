@@ -9,7 +9,15 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: execution-complete (2026-07-21) — the toy diagnostic was run and the
+verdict reached: the pathology is a FRAMEWORK property (reproduces off-boundary,
+off-lensing), specifically stochastic instability (70% recover / 7% collapse /
+23% crash over 30 identical runs), NOT a delta-method/boundary artefact. Filed as
+PyAutoFit#1405. Findings + repro: `complete/2026/07/ep_scale_collapse_assets/`
+(`EP_TOY_FINDINGS.md`, `ep_toy_diagnostic.py`). Fix work continues in
+`draft/bug/autofit/ep_hierarchical_scale_collapse_moment_match.md` and
+`draft/bug/autofit/ep_initializer_exception_should_not_abort.md`.
+DO NOT re-pick this prompt for execution.
 
 ## The question
 
