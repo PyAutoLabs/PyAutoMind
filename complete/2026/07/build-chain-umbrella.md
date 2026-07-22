@@ -1,3 +1,85 @@
+Build-chain integrity campaign — closed 2026-07-22, epic PyAutoHands#155 CLOSED.
+
+Six phases, ~45 merged PRs across PyAutoHands, PyAutoHeart, PyAutoBrain,
+PyAutoMind and 8 workspaces. The umbrella existed to sequence five separately
+filed briefs as one campaign; that job is done and the single remaining item
+(env-profile steps 4-8) has its own issue, so the coordinating entry is
+retired rather than carried.
+
+WHAT SHIPPED (by phase). Phase 0: run() side-effect-free in test_run +
+version_skew (Heart#79); full lifecycle-path coverage in the sizing faculty
+(Brain#128). Phase 1: the pre_build failure audit (docs/pre_build_failure_audit.md,
+#157) plus its three landable steps — dead lines (#158), release.yml owned
+staging (#159), and the deletion of the dataset/config "sweep human dirt into
+the release" vestige (#160). Phase 2: Heart's readiness-evidence audit (#83/#84)
+and its fixes — caller-decided fetch_cloud with local/cloud AND-agreement
+(Heart#85), report.json + test_run sidecar now stating their own surface
+(Hands#164 + Heart#86), and the first verify_install evidence ingest, which
+dropped "install verification not run" from readiness. Phase 3: env-profile
+redesign (design doc #162) steps 1-3 — validate_env_profiles (#163), the single
+resolver folding three byte-identical run_smoke forks (afwt#52/agwt#74/alwt#174),
+and the scrubbed baseline env (#165 + three smoke profiles). Phase 4: the
+version model, fork (b) — mains authoritative — as four tasks, all now done
+(floors x7; version_skew reworked to floor-vs-newest-tag, Heart#96; the
+assistant's --check-version de-gated from __version__; the orphaned README pins
+removed). Phase 5: the agent-failure-modes capstone (Brain#131) and all six
+mitigations, including the pipefail agent-shell default, the Mind commit guard,
+worktree_remove's stale-claim refusal (Brain#134), branch_contribution
+(Brain#139) and the review faculty's unverified-claim finding (Brain#140).
+
+THIS SESSION (the closeout). The 2026-07-17 pickup queue was stale by three
+items — version_skew, the Phase 4 consumers, and the HowTo simulator stage had
+all closed via other sessions. Verified each against the code rather than the
+index, then shipped the two genuinely open ones:
+
+- Phase 4 task 4, README pins (autofit_workspace#107, autofit_workspace_test#64,
+  autolens_workspace_test#198, PyAutoHands#174). The three surviving `<pkg> vX`
+  lines had had no owner since the runner bump was removed (#120/#121) and
+  pre_build's local sed never staged its edit (deleted #158); they were up to
+  ~2 months stale and, after 2026.7.9.1, one named a YANKED release. Decision:
+  drop the pins, do not re-own them — re-adding a runner sed+commit means a new
+  commit-to-main step of the kind #120/#121 deliberately removed, to maintain a
+  string no gate reads. The floor (version.minimum_library_version) is the
+  checked signal; version_skew verifies it. pre_build's VERSION variable, dead
+  since #158, was removed with them.
+- mind_commit_guard v1.3 (PyAutoBrain#148). The guard fired live three times,
+  every one a FALSE POSITIVE ON ITS OWN AUTHOR (v1.0 quoted gh body, v1.1
+  cd-away commit, v1.2 cd inside a for-loop body), against ZERO confirmed
+  catches — the `-- <files>` habit did that work. Narrowed, not retired: it may
+  now deny only when confident, failing open on compounds, subshells/brace
+  groups, and any non-clause-leading cd. 22/22 tests green, plus a live
+  PreToolUse payload check on all three historical FPs.
+
+RESIDUE (parked, not dropped): env-profile steps 4-8, prompt
+draft/feature/workspaces/env_profile_migration_steps_4_to_8.md, owned by
+PyAutoHands#161 (left OPEN). Step 4 — replacing the hand-enumerated JAX folder
+lists with the jax_*/*_jax/*_jit derivation rule, and triaging the 15
+vacuous-JAX scripts the validator found — is release-surface risk exercised
+only by the mega-run; steps 5-8 (strict validator gates, profile renames, the
+al.AnalysisDataset one-reader fold, the human-gated use_jax sentinel) follow it.
+Steps 1-3 already delivered the core value, so this is unurgent standalone work.
+
+WHAT THE CAMPAIGN LEARNED. The load-bearing finding is about refusals, and the
+campaign's own guards proved it in both directions. Brain#134's stale-claim
+refusal true-positived on the author (it blocked a worktree_remove because
+active.md still claimed a merged task — exactly failure mode F4), because its
+precondition is DECIDABLE: is this branch merged into origin/main's first-parent
+chain. mind_commit_guard false-positived on the author three times, because its
+precondition requires modelling an unbounded input space (arbitrary shell). A
+refusal whose trigger is decidable earns its keep; one that must guess spends
+its budget on false positives and trains bypass-by-default. Recorded in
+docs/agent_failure_modes.md mitigation 2.
+
+Two methodological traps worth carrying forward. (1) The step-3 near-miss: a
+synthetic clean-env resolve-diff passed 65/65 while the REAL CI env would have
+gone red, because the smoke profiles relied on a PYAUTO_ var injected by the
+workflow, not the profile — prove env changes against the real CI env, never a
+model of it. (2) Stale indexes: three of five queue items were already done, and
+following the index rather than the code would have redone them. Verify state
+at the source before working from any tracker, including this one.
+
+## Original prompt
+
 # Build-chain umbrella: one coordinated fix across five filed briefs
 
 Type: bug
@@ -13,13 +95,13 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 
-## CAMPAIGN STATE + REMAINING PICKUP QUEUE (updated 2026-07-17)
+## CAMPAIGN CLOSED 2026-07-22 — epic PyAutoHands#155 closed
 
-This entry is the single index for the build-chain campaign. It stays in
-`active.md` so `/morning` and `/health` surface it; each remaining item below
-is a filed `draft/` prompt that `/feature` (or `/start_dev <path>`) picks up.
-(Hygiene/Health don't own this — their scans are narrow; the pickup path is
-`/feature` over these prompts + this tracker.)
+The umbrella's job (sequence five filed briefs as one campaign) is done. All
+six phases shipped; the five-item pickup queue left on 2026-07-17 is now four
+done and **one parked residue**, which has its own issue and does not need a
+coordinating entry. This prompt is recorded to `complete/2026/07/` and dropped
+from `active.md`.
 
 **DONE (merged):** Phase 0a-b · Phase 1 (audit + 3 pre_build steps) · Phase 2
 (evidence audit + test_run fix + verify_install run + surface recording) ·
@@ -27,25 +109,44 @@ Phase 3 steps 1-3 (validator #163, single resolver, scrubbed base #165) ·
 Phase 4 task 1 (floors 2026.7.9.1 ×7) · Phase 5 all 6 items + 2 guard fixes +
 API-gate F5. ~40 PRs; 6 live refusal/routing mechanisms.
 
-**REMAINING — pick up via `/feature` / `/start_dev`, recommended order:**
-1. `draft/feature/pyautoheart/version_skew_floor_rework.md` — Phase 4 task 2;
-   UNBLOCKED by floors; enforces "floor names an installable version". Do next.
-2. `draft/feature/pyautobuild/version_model_consumers_and_readme_pins.md` —
-   Phase 4 tasks 3-4 (assistant --check-version; orphaned README pins; then
-   remove legacy workspace_version/version.txt). After task 2.
-3. `draft/bug/workspaces/howto_validation_needs_simulator_stage.md` — Phase 2
-   §5.5; ~30 HowTo tutorials adopt `should_simulate` (judgment prose; own
-   session). Fork (b) decided; do NOT restore committed datasets.
-4. `draft/feature/workspaces/env_profile_migration_steps_4_to_8.md` — Phase 3
-   steps 4-8; step 4 (15-script JAX triage) is RELEASE-SURFACE RISK, do
-   carefully; steps 5-8 follow. Least urgent (steps 1-3 already delivered the
-   core value).
-5. `draft/bug/pyautobrain/mind_commit_guard_v13_fail_open_on_complex_shell.md`
-   — guard v1.3: fail open on complex shell, OR decide the commit-guard's fate
-   (3 FPs on author, 0 confirmed catches). Small.
+**Queue resolution (the 2026-07-17 index was stale by 3 items):**
+1. Phase 4 task 2, version_skew floor rework — **DONE** (Heart#96, branch
+   claude/wake-up-u53v8z). `heart/checks/version_skew.py` compares each
+   workspace floor against the newest `YYYY.M.D.B` tag:
+   UNSATISFIABLE/OK/BAD/UNKNOWN. Verified 2026-07-22: 7/7 floors OK against
+   2026.7.22.1.
+2. Phase 4 tasks 3-4 — **DONE**. Task 3: `audit_skill_apis.py check_version`
+   gates on the API-surface hash only; the `__version__` equality that
+   structurally false-positived on source checkouts is informational.
+   Legacy `workspace_version`/`version.txt` removal landed with the
+   version-model-honesty epic (last holdout HowToFit#23). Task 4 closed
+   2026-07-22: the three orphaned README pins were **removed** in favour of
+   "install the latest release" + the floor (autofit_workspace#107,
+   autofit_workspace_test#64, autolens_workspace_test#198), and pre_build's
+   now-dead `VERSION` var went with them (PyAutoHands#174). Runner
+   re-ownership was considered and rejected — see the audit doc §1.1.
+3. Phase 2 §5.5, HowTo simulator stage — **DONE** (HowToLens#39,
+   HowToGalaxy#30; HowToFit needed no change — it already self-simulates and
+   `af.util.dataset.should_simulate` does not exist). Namespace differs per
+   repo: `al.` / `ag.`. The `howtolens/`+`howtogalaxy/` unset overrides were
+   DEAD (matched 0 files); the real blockers were missing/wrong-producer
+   guards.
+5. mind_commit_guard v1.3 — **DONE** (PyAutoBrain#148). Evidence decided it:
+   3 false positives on the guard's own author, 0 confirmed catches. Narrowed
+   (not retired) to deny only when confident — fails open on compounds,
+   subshells, and non-clause-leading `cd`.
 
-Epic tracker: PyAutoBuild#155. Env-profile sub-issue: PyAutoBuild#161. Agent
-failure-modes: PyAutoBrain#130. Full component-brief detail is below.
+**PARKED RESIDUE — the only remaining work, tracked on PyAutoHands#161:**
+4. `draft/feature/workspaces/env_profile_migration_steps_4_to_8.md` — Phase 3
+   steps 4-8. Step 4 (derivation rule + triage of the 15 vacuous-JAX scripts)
+   is RELEASE-SURFACE RISK and only the mega-run exercises it; steps 5-8
+   follow. Steps 1-3 already delivered the core value, so this is not urgent.
+   The prompt stays in `draft/` and picks up via `/feature` or
+   `/start_dev <path>` — no umbrella needed.
+
+Epic tracker: PyAutoHands#155 (CLOSED). Env-profile sub-issue:
+PyAutoHands#161 (OPEN, owns the residue). Agent failure-modes: PyAutoBrain#130.
+Full component-brief detail is below.
 
 ---
 

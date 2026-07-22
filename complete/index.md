@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-698 records across 6 buckets.
+699 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -56,6 +56,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [brain-lifecycle-path-fixes](2026/07/brain-lifecycle-path-fixes.md) — the shared sizing faculty's parse_prompt now covers the full Mind lifecycle layout — draft/ state folder strip…
 - [branch-contribution-tool](2026/07/branch-contribution-tool.md) — blessed `branch_contribution` tool (PyAutoBrain/bin) — the ONE tested answer to "does this branch contribute c…
 - [bug-agent](2026/07/bug-agent.md)
+- [build-chain-umbrella](2026/07/build-chain-umbrella.md)
 - [build_ic50_assistant_from_autofit_assistant](2026/07/build_ic50_assistant_from_autofit_assistant.md)
 - [checkpoint-continue](2026/07/checkpoint-continue.md)
 - [clear-stale-needs-fix-parks](2026/07/clear-stale-needs-fix-parks.md)
