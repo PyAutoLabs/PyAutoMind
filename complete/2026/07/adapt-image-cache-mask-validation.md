@@ -1,3 +1,76 @@
+A census-reported "off-by-one in multi-plane adapt-data indexing" turned out to be a stale adapt-image
+cache. `mapper_util.adaptive_pixel_signals_from` was correct all along, and the bug was not multi-plane or
+double-Einstein-ring specific.
+
+## What shipped
+
+- **PyAutoGalaxy#517** (`64790e7d`) — `_galaxy_image_dict_from_cache` now validates the cached mask against
+  the expected one and treats a mismatch as a cache miss, so adapt images are recomputed on the current
+  mask. The expected mask comes from `Result.mask` -> `analysis.dataset.mask`, which does not rebuild the
+  maximum log likelihood fit, preserving the autolens_profiling#70 caching win. Also corrected a docstring
+  that claimed cache staleness was "structurally guarded".
+- **PyAutoArray#399** (`c37e478c`) — `Mapper.pixel_signals_from` raises an `InversionException` naming the
+  stale-cache cause instead of letting a bare `IndexError` escape from five frames deeper.
+
+No workspace change was required.
+
+## Diagnosis
+
+`IndexError: index 177 is out of bounds for axis 0 with size 177` — index == size — reads as a classic
+off-by-one. It is not. Slim indexes are ordered, so when adapt data is too short the *first* out-of-range
+index always equals its length. The signature is what a **mask mismatch** looks like from inside the
+indexing.
+
+The adapt-image cache (`files/galaxy_images_snr.fits`) lives in a directory keyed by the **search
+identifier**, which encodes the model and the search but **not** the dataset. PyAutoArray `656be94b`
+(#396, merged 2026-07-19) moved the `PYAUTO_SMALL_DATASETS` cap from 15x15 to 16x16. The 2026-07-21 census
+ran against an `output/` holding pre-#396 caches: 177-pixel (15x15) adapt images against a 208-pixel
+(16x16) mask, silently loaded because the model was unchanged.
+
+Reproduction matrix (`double_einstein_ring/slam.py`, `PYAUTO_TEST_MODE=2`):
+
+| Data size | `output/` state | Result |
+|---|---|---|
+| full (100x100) | cleared | PASS (`masks equal: True`, 2828/2828) |
+| `PYAUTO_SMALL_DATASETS=1` (16x16) | cleared | PASS (208/208) |
+| either | pre-#396 caches present | IndexError: index 177 out of bounds for size 177 |
+
+The decisive step was clearing `output/`, not changing code. Any adapt/SLaM pipeline resumed across a
+dataset-shape change is affected; DSPL was simply the script whose stale census output survived.
+
+## Verification
+
+End-to-end with a planted stale cache: stock `main` reproduces the census failure exactly (same frame, same
+numbers); the branches exit 0 through `source_pix[2]` with the likelihood actually evaluated. Suites:
+PyAutoGalaxy 1006 passed, PyAutoArray 927 passed. CI green on both PRs (unittest 3.12/3.13, docs-build).
+
+## Traps worth remembering
+
+- **Poisoning a cache file on disk is silently undone.** `Paths.restore()` deletes the output directory and
+  re-extracts the search `.zip`, so a stale-cache repro must poison the archived copy inside each `.zip` as
+  well as the loose `files/` one.
+- **A completed pipeline never evaluates the likelihood.** With every search "Fit Already Completed" the
+  control passes even with poisoned caches; the downstream search outputs must be deleted to force the
+  crash.
+- **`glob` reads the brackets in `source_lp[1]` as a character class**, so globbing under a search directory
+  silently matches nothing. Build those paths directly.
+- Two early "reproductions" used `rm -rf output/slam`, a path that does not exist, leaving the real tree
+  `output/test_mode/imaging/slam_dspl` intact. Verify the `rm` actually matched something.
+- Two pre-existing PyAutoArray tests passed an unmasked 49-pixel `image_7x7` against a 9-pixel mask, which
+  the new guard correctly rejected. The all-ones fixture meant the wrong indexing never showed; both were
+  rebuilt on the data's own mask with assertions unchanged.
+
+## Follow-up
+
+**PyAutoFit#1414** — `Paths.preserve_in_zip` only adds a member absent from the zip and never replaces one,
+so an invalidated cache is recomputed and written loose but the archived stale copy survives `restore()`.
+Such a search misses its cache on every run rather than once: correct, but without the caching win until
+its output is cleared. Recorded in the PyAutoGalaxy docstring.
+
+Shipped behind Heart YELLOW (score 52, no RED), human-acknowledged; no reason related to this change.
+
+## Original prompt
+
 # Stale adapt-image cache silently loaded across a dataset-shape change (IndexError in pixel signals)
 
 Type: bug
