@@ -84,3 +84,15 @@
 - note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer
+
+
+## ell-comps-kwargs-keyerror
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/143
+- status: workspace-dev — DIAGNOSIS SETTLED, both NEEDS_FIX markers are STALE. Root cause was library-side model-composition/kwargs drift, already fixed upstream between 2026-04 and 2026-07; NOT a stale call-site (model block byte-identical to marker commit 48dad395). DECISIVE TEST: the unmodified April-10 script run against today's installed library exits 0 with zero KeyError. HowToGalaxy's marker was NEVER valid — its entry is the literal path `autogalaxy_workspace/scripts/imaging/modeling`, copy-pasted from the workspace list; HowToGalaxy holds only chapter_*/ + simulators/, so the substring pattern matches ZERO files. Work = delete one line from each repo's config/build/no_run.yaml. No script changes → NO notebook regeneration. Smoke run timed 27.4s (<60s CI timeout), safe to un-park. PyAutoGalaxy dropped from scope.
+- worktree: ~/Code/PyAutoLabs-wt/ell-comps-kwargs-keyerror
+- autonomy: supervised
+- prompt: active/ell_comps_kwargs_keyerror_imaging_modeling.md
+- note: TRAP — running scripts/imaging/modeling.py regenerates dataset/database/simple__*/ FITS+JSON; restore with `git checkout -- dataset/` before committing (ship_workspace binary-leak). FOLLOW-UP (out of scope, same 2026-04-10 parking commit, likely stale for the same reason): `ellipse/modeling` KeyError on 'ellipses.0.centre_0', and `guides/advanced/over_sampling` plot_grid_lines kwarg.
+- repos:
+  - autogalaxy_workspace
+  - HowToGalaxy
