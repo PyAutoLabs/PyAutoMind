@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-693 records across 5 buckets.
+695 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -18,6 +18,7 @@ _(curate hard-won records here — survives regeneration.)_
 
 ## 2026/07
 
+- [adapt-image-cache-mask-validation](2026/07/adapt-image-cache-mask-validation.md)
 - [afa-wiki-currency-wiring-afa-skill-tranche](2026/07/afa-wiki-currency-wiring-afa-skill-tranche.md) — both autofit_assistant follow-ups shipped in one --auto session (one in-session Heart-YELLOW ack covering both…
 - [agent-failure-modes](2026/07/agent-failure-modes.md) — campaign #155 Phase 5 capstone. A-E catalogue validated by measurement; enlarged out-of-sample (F1-F5); taxono…
 - [aggregate-images-fits](2026/07/aggregate-images-fits.md) — Final aggregator-arc leg — the png/fits catalogue workflows profiled for the first time. Harness: mock templat…
@@ -90,6 +91,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [eceb-editorial-revision](2026/07/eceb-editorial-revision.md) — ECEB wiki rules — EC A&A template assets — MERGED
 - [ell-comps-kwargs-keyerror](2026/07/ell-comps-kwargs-keyerror.md)
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
+- [empty-hdu-scrape-and-latent-guard](2026/07/empty-hdu-scrape-and-latent-guard.md)
 - [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
 - [env-profile-validator](2026/07/env-profile-validator.md) — env-profile redesign migration step 1 (campaign #155 Phase 3): validate_env_profiles PR-time config check (sch…
 - [env-scrubbed-baseline](2026/07/env-scrubbed-baseline.md) — env-profile redesign migration step 3 — scrubbed base env. build_env_for_script strips the managed PYAUTO_ fam…

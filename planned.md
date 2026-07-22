@@ -191,7 +191,7 @@
   - PyAutoGalaxy
 
 ## latent-nan-guard-honest-run
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1413 (workspace half; library half shipped as PyAutoFit#1415)
+- issue: NEEDS A FRESH ISSUE — #1413 was auto-closed when PyAutoFit#1415 merged (its `Closes` line). Library half is DONE+MERGED; file a new issue for this workspace half at /start_dev time.
 - planned: 2026-07-22
 - classification: workspace
 - suggested-branch: feature/latent-nan-guard-honest-run
