@@ -1,22 +1,33 @@
-# group/slam PriorException: upper limit must be greater than lower limit (parked NEEDS_FIX)
+# group/slam PriorException: upper limit must be greater than lower limit (SUPERSEDED)
 
 Type: bug
 Target: autolens
 Repos:
 - autolens_workspace
 - HowToLens
-- PyAutoLens
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: superseded
 
-Parked since 2026-04-10; still parked after the 2026-07-21 census. Same failure in two repos (one
-root cause): `PriorException: upper limit must be greater than lower limit` in the group SLaM pipeline.
+SUPERSEDED 2026-07-22 by `draft/bug/autoarray/small_datasets_loader_pixel_scales.md`.
+Do not start work from this file.
 
-Affected: `autolens_workspace/scripts/group/slam` and `HowToLens/.../group/slam`.
+This prompt assumed the fault was a collapsed/inverted prior in the group SLaM pipeline,
+in `autolens_workspace` and `HowToLens`. It is not. The root cause is in **PyAutoArray**:
+`cap_array_2d_for_small_datasets` early-returns for data already at-or-below the 16x16
+`PYAUTO_SMALL_DATASETS` cap, keeping the caller's uncapped `pixel_scales` (0.1) even though
+a capped simulator wrote that data at 0.6. The frame is mislabelled 6x, the extra galaxies
+fall outside it, their non-negative linear intensity solve correctly returns exactly 0.0,
+and the `UniformPrior` upper limit collapses to 0.0. The `PriorException` is four steps
+downstream of the fault.
 
-Likely a prior-limit passed/chained in the group SLaM setup that collapses (lower >= upper) — e.g. a
-`GaussianPrior` limit derived from a previous search's value, or a hard-coded limit pair that inverted
-after an API/default change. Reproduce on clean main, fix the prior construction, remove the NEEDS_FIX
-marker from BOTH repos' config/build/no_run.yaml.
+Corrections to the assumptions recorded above:
+
+- The prior construction and the group SLaM science are **correct**; no workspace script
+  change is needed. `pixel_scales=0.1` is a true statement about the dataset in normal
+  operation and belongs in a tutorial script.
+- `HowToLens` has **no** `group/` scripts at all — its `no_run.yaml` entry is dead config.
+- The only workspace work left is removing the `group/slam` NEEDS_FIX line from
+  `autolens_workspace/config/build/no_run.yaml` and the dead one from
+  `HowToLens/config/build/no_run.yaml`. Both are carried in the superseding prompt.
