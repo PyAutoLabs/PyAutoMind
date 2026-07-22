@@ -39,7 +39,7 @@
 - prompt: active/pix_gradient_landscape_revalidation.md
 - note: verification tail of the pix-NaN lineage — localisation (#104/PR#105) + fix (PyAutoArray#392) + fitness-guard contract (PyAutoFit#1391) all shipped 2026-07-17. Toggle is env var PIX_LOGDET=slogdet threaded via al.Settings into build_analysis (one edit covers both pix_multi_start + pix_lr_free). Repro is A100-only (10.9 GiB/point OOMs laptop).
 - repos:
-  - autolens_workspace_developer: feature/pix-gradient-slogdet-revalidation (worktree live; commit a5b53a6 local-only)
+  - autolens_workspace_developer: feature/pix-gradient-slogdet-revalidation (PUSHED, 3 commits a5b53a6+6461935+15424fb; PR#114 OPEN awaiting merge)
 
 ## blackjax-smc-gradient-kernel
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/113
