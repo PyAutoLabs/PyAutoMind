@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-684 records across 5 buckets.
+686 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -53,6 +53,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [bug-agent](2026/07/bug-agent.md)
 - [build_ic50_assistant_from_autofit_assistant](2026/07/build_ic50_assistant_from_autofit_assistant.md)
 - [checkpoint-continue](2026/07/checkpoint-continue.md)
+- [clear-stale-needs-fix-parks](2026/07/clear-stale-needs-fix-parks.md)
 - [cluster-likelihood-breakdown](2026/07/cluster-likelihood-breakdown.md)
 - [cluster-scaling-lenstool](2026/07/cluster-scaling-lenstool.md)
 - [cluster-small-datasets](2026/07/cluster-small-datasets.md)
@@ -266,6 +267,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [scholar-intake](2026/07/scholar-intake.md)
 - [science-project-api-gate](2026/07/science-project-api-gate.md) — task 2 of the autolens_assistant batch — Create scaffold generates a thin .claude/settings.json wiring the PyA…
 - [science-project-collaborator-clone](2026/07/science-project-collaborator-clone.md) — absorbed
+- [scrape-general-stale-needs-fix](2026/07/scrape-general-stale-needs-fix.md)
 - [script-to-notebook](2026/07/script-to-notebook.md) — task 4 of the autolens_assistant batch — stdlib-only autoassistant/to_notebook.py (adapts PyAutoBuild py_to_no…
 - [sersic-core-effective-radius-zero](2026/07/sersic-core-effective-radius-zero.md) — SersicCore.intensity_prime scalar `/ self.effective_radius` → xp.divide, so effective_radius<=0 yields inf (se…
 - [shareable-science-projects](2026/07/shareable-science-projects.md) — docs emphasis pass, head of the autolens_assistant batch — generated-project README.md template added to the s…
