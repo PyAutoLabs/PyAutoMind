@@ -1,3 +1,90 @@
+# Unblock release validation — 4 PRs merged, all 5 shard failures cleared
+
+Cleared every `workspace-validation` shard failure blocking `nightly-release` at
+Stage 3 (integrate), and fixed the CI hang uncovered while doing it.
+
+## Outcome
+
+| PR | Change | Commit |
+|---|---|---|
+| autolens_workspace#315 | potential_correction release-env override + 2 SLOW-skips | `8231823` |
+| autofit_workspace_test#63 | MultiStartResurrect basin-level assertion | `39aa27b` |
+| autolens_workspace_test#197 | smoke per-script timeout + process-group kill | `e0fde3e` |
+| autolens_workspace_test#195 | gallery_build permanent no_run entry | `34e2c2a` |
+
+Issues: autolens_workspace#314 (closed), autolens_workspace_test#196 (open, follow-ups).
+
+## Key findings
+
+**None of the three "failures" was a library regression.** All were harness or
+assertion faults:
+
+1. `gallery_build.py` — a *build tool* run as a test. CI executes it standalone
+   without `gallery_run.sh`, so `scan_images()` is empty and it takes its
+   documented `sys.exit(1)`. Permanent (untagged) no_run entry, not SLOW/NEEDS_FIX,
+   since there is nothing to fix.
+
+2. `MultiStartResurrect.py` — `np.allclose` default `rtol=1e-5` demanded
+   near-bitwise identity between the resurrect-on/off arms. One resurrection
+   genuinely fires (`n_resurrections` 0 vs 1), consuming RNG draws, so the arms
+   diverge at the 5th significant figure (max rel delta 3.2e-5). The docstring's
+   invariant is *same basin*, which holds. Relaxed to `rtol=1e-3` (31x headroom;
+   verified it still rejects a 1% shift and any basin move). The test still fires
+   a resurrection afterwards, so it passes genuinely, not vacuously.
+
+3. `potential_correction` x2 — the release profile sets `PYAUTO_SMALL_DATASETS: "1"`
+   in `defaults:` for *every* script; the capped 15x15 grid starves the dpsi mesh
+   and `PairRegularDpsiMesh(dpsi_factor=2)` correctly refuses. The pre-existing
+   `"interferometer/start_here"` override does NOT cover these — their paths are
+   `interferometer/features/potential_correction/...`, which that substring misses.
+   Verified fails-with-cap / passes-without; 77s and 127s against the 1800s cap.
+
+**The CI hang (#196) — cause was mundane, and my first diagnosis was wrong.**
+Smoke CI had been hitting the 6-hour Actions ceiling since ~Jul 19 (0 hangs in the
+74 runs before; 10 of 12 on Jul 21). I first blamed `point_source/point.py` because
+it was the last `::group::` opened in a hung log — but groups print *before* the
+script runs, so that marks only where output stopped. With honest reporting,
+`point.py` passes in ~30s.
+
+The real cause: `run_smoke.py` had **no per-script timeout**, and
+`jax_likelihood_functions/multi/shared_preloads.py` — already SLOW-marked in
+`no_run.yaml` for flaking at the release runner's 1800s cap — was being run by the
+*fast* PR gate unbounded, because `run_smoke.py` never read `no_run.yaml`. No cap
+plus no skip = unbounded. Consequence: only 6 of 20 scripts ever ran on a hung run,
+so green history on this repo was weaker evidence than it appeared.
+
+## Traps recorded
+
+- **`::group::` marks where output stopped, not which script hung.** It is printed
+  before execution. Different hung runs stalled at different scripts.
+- **`killpg` leaves returncode -9 when the child itself is slow.** My first patch
+  mapped only `None`/`0` to 124, so CI reported `FAIL (exit -9)` instead of
+  `TIMEOUT`. The local repro missed it because there the child had already exited 0
+  and only the grandchild was alive — the branch was never exercised.
+- **Do NOT make `run_smoke.py` honour `no_run.yaml` wholesale.** Those SLOW markers
+  are calibrated against the *release* profile (1800s, real samplers); smoke runs
+  `PYAUTO_TEST_MODE=2`. Two of three overlapping entries pass in ~20-25s there, so
+  honouring it wholesale drops working coverage to fix one script.
+- **The Feature Agent misclassified this** as `too-large`/`research-first` (score 11)
+  and resolved `(none)` repos — a length+keyword heuristic on an evidence-heavy
+  prompt, plus an inability to resolve repos when the target is a category
+  (`health_fixes`) and repos appear in a table rather than as `@RepoName`.
+- **`clean_slate.sh` deletes the tracked `autolens_workspace_test/output/.gitignore`.**
+
+## Follow-ups (open in #196)
+
+1. Make `multi/shared_preloads.py` fast enough to re-enable, or confirm it is
+   permanently release-profile-only (PyAutoHeart#74).
+2. Isolate the local-vs-CI likelihood disagreement on `point.py` (local `16.131`
+   vs CI/expected `-83.380` on repo-`main` libraries). One environment is wrong.
+3. **Centralise `run_smoke.py`** — duplicated across 10 repos in 3 variants; the
+   other 9 copies still have NO timeout, so the same 6-hour hang is possible in
+   every other workspace repo. Move it into PyAutoHands beside `env_config.py`.
+4. Profile the two SLOW-skipped scripts (`cluster/start_here.py`,
+   `weak/features/strong_lensing/a2744.py`) and remove their markers.
+
+## Original prompt
+
 # Unblock release validation — 3 workspace-validation failures, none a library bug
 
 Type: bug
