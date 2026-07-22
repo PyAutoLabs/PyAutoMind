@@ -1,5 +1,16 @@
 # Active Tasks
 
+## adapt-image-cache-mask-validation
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/516
+- status: library-dev — DIAGNOSIS DONE, implementation next. Census marker's premise DISPROVED: `mapper_util.adaptive_pixel_signals_from` is CORRECT, no off-by-one, not multi-plane specific. DSPL SLaM passes on cleared output/ BOTH full-size (2828/2828, `masks equal: True`) and PYAUTO_SMALL_DATASETS=1 (208/208); crashes ONLY with census output/ left in place. Real cause = PyAutoGalaxy adapt-image FITS cache (`files/galaxy_images_snr.fits`, adapt_images.py:145) keyed ONLY by search identifier (model+search) — dataset mask NOT in the key. PyAutoArray 656be94b (#396, 2026-07-19, current main HEAD) changed SMALL_DATASETS cap 15x15->16x16, so pre-#396 caches hold 177-pixel (15x15) adapt images vs current 208-pixel (16x16) mask; same model => same identifier => stale cache silently loaded. Slim indices reach 207 against 177-length data so the FIRST out-of-range index is 177 => "index 177 out of bounds for size 177", which merely LOOKS like an off-by-one. Failing expression is the subscript `adapt_data[slim_index_for_sub_slim_index]`, NOT the xp.take (traceback ~~~~^^^^ marker). Docstring at adapt_images.py:127 claims staleness is "structurally guarded" — FALSE for dataset/mask changes.
+- worktree: ~/Code/PyAutoLabs-wt/adapt-image-cache-mask-validation
+- autonomy: supervised
+- prompt: active/double_einstein_ring_adaptive_pixel_signals_indexerror.md
+- note: user-approved scope = cache fix + loud guard + census cleanup. Expected-mask accessor is `Result.mask` -> `analysis.dataset.mask` (autogalaxy/analysis/result.py:65) which does NOT rebuild the max-lh fit, preserving the autolens_profiling#70 caching win. NOT DSPL-specific — any adapt/SLaM pipeline resumed across a dataset-shape change is affected.
+- repos:
+  - PyAutoGalaxy: feature/adapt-image-cache-mask-validation
+  - PyAutoArray: feature/adapt-image-cache-mask-validation
+
 ## interpolator-stale-needs-fix
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1411
 - status: awaiting-merge — BOTH MARKERS STALE, 2 PRs open. Library bug was already fixed by PyAutoFit c8511b553 (2026-04-12), TWO DAYS AFTER the 2026-04-10 park; it added the `if not self.instances: raise IndexError` guard in autofit/interpolator/abstract.py:98 but shipped NO test. Reproduced on clean main with output/ moved aside: autofit_workspace features/interpolate exits 0 both real and under PYAUTO_TEST_MODE=1 (aggregator IS test-mode aware — finds outputs under output/test_mode/); HowToFit tutorial_5 exits 0. PRs: PyAutoFit#1412 (adds test_no_instances, 36 passed) + HowToFit#24 (removes marker). SCOPE CORRECTION: autofit_workspace needed NO change — its marker was already removed upstream by autofit_workspace PR#103 (7154e8a); my first grep hit a stale local main. Branch dropped there.
