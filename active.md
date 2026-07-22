@@ -94,18 +94,6 @@
 - repos:
   - autolens_workspace_developer
 
-## convolver-gaussian-small-datasets-cap
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/397
-- status: library-shipped, awaiting-smoke — PR #398 open (pending-release), commit 402ffba7, PyAutoArray suite 927 passed, regression test verified RED on main. Root cause CONFIRMED + fix empirically verified in scratch. Convolver.from_gaussian builds its kernel on Grid2D.uniform, which the PYAUTO_SMALL_DATASETS cap silently shrinks to 16x16, then wraps those 256 values in an Array2D at the caller's uncapped shape_native (31,31=961) -> ArrayException. Fix = pass respect_small_datasets=False at convolver.py:721 + numpy-only regression test in test_autoarray/operators/test_convolver.py.
-- worktree: ~/Code/PyAutoLabs-wt/convolver-gaussian-small-datasets-cap
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/398
-- autonomy: supervised
-- heart-ack: 2026-07-22 YELLOW (score 52) acknowledged at ship; reasons = workspace validation not passing (10 failed, 2026-07-20T15-09-29Z) | 58 stale parked script(s) | 10 slow script(s) | PyAutoCTI: open PR 1390d old | release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens). None related to this change.
-- prompt: active/mask_irregular_small_datasets_cap.md
-- note: the prompt's own diagnosis (env-config gap, needs `unset: [PYAUTO_SMALL_DATASETS]` or mask capping) is WRONG — the traceback never reaches the mask code. Real library bug. NO workspace edits needed: autolens_workspace + autogalaxy_workspace scripts/imaging/data_preparation/manual/mask_irregular.py both go green off the library fix alone; HowToGalaxy/HowToLens do not carry the script. Latent same-bug sites at (21,21) are in non-executed fenced prose, and guides/ already unsets the flag.
-- repos:
-  - PyAutoArray: feature/convolver-gaussian-small-datasets-cap
-
 ## empty-hdu-scrape-and-latent-guard
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1413
 - session: claude --resume 2a09a7a9-3410-4f38-9039-a2a3ee3a6efe
