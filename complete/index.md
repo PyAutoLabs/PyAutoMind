@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-700 records across 6 buckets.
+701 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -218,6 +218,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [opus-wrapup](2026/07/opus-wrapup.md) — executed on Fable
 - [per-frame-psf](2026/07/per-frame-psf.md) — per-frame native ePSFs live (psf/frame_epsf.py: sky-subtracted, DQ local-median patch in ESTIMATOR input only …
 - [per-project-literature](2026/07/per-project-literature.md) — task 3 of the autolens_assistant batch — hybrid literature rule live: Create scaffolds wiki/project/bibliograp…
+- [pix-gradient-slogdet-revalidation](2026/07/pix-gradient-slogdet-revalidation.md)
 - [pix-inversion-not-positive-definite](2026/07/pix-inversion-not-positive-definite.md)
 - [pix-nonfinite-localisation](2026/07/pix-nonfinite-localisation.md) — phase 1 — LOCALISED
 - [pixelized-gradient-experiment](2026/07/pixelized-gradient-experiment.md)
