@@ -65,3 +65,15 @@
 - note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer
+
+## unblock-release-validation
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/314
+- status: workspace-dev — DIAGNOSIS COMPLETE, all 5 shard failures reproduced locally 2026-07-22; NONE is a library regression, no source edits needed. Blocking nightly-release at Stage 3 (integrate); Heart RED score 40. Fixes: (1) autolens_workspace_test no_run.yaml permanent entry for gallery/gallery_build (CI runs the build tool without gallery_run.sh first -> scan_images() empty -> documented sys.exit(1) at :159-163); (2) autofit_workspace_test MultiStartResurrect.py:112 np.allclose rtol 1e-5 -> 1e-3 (one resurrection FIRES, n_resurrections 0 vs 1, consuming RNG draws -> arms diverge at 5th sig fig, max rel delta 3.2e-5; docstring invariant is SAME BASIN not bitwise, and truth asserts at :104-106 allow +/-2.0/3.0/2.0 — NOT masking a regression); (3) autolens_workspace env_vars_release.yaml overrides: unset PYAUTO_SMALL_DATASETS for interferometer/features/potential_correction/ (blanket defaults: cap grids to 15x15 -> dpsi mesh too sparse for dpsi_factor=2, mesh.py:132 correctly refuses; VERIFIED fails with cap / passes without, start_here 58s vs 1800s cap, logZ -6.0333e+03, 6.2 sigma); (4+5) autolens_workspace no_run.yaml two "# SLOW 2026-07-22" entries for cluster/start_here.py + weak/features/strong_lensing/a2744.py (both at full 1800s cap; next-slowest siblings 137.8s and 23.6s, so script-specific not shard-wide) — user-approved SLOW-skip-now, profile-later.
+- worktree: ~/Code/PyAutoLabs-wt/unblock-release-validation
+- autonomy: safe
+- prompt: active/unblock_release_validation_2026_07_22.md
+- note: Feature Agent MISCLASSIFIED this as too-large/research-first (score 11) — a length+keyword heuristic misfiring on an evidence-heavy prompt; it also resolved "(none)" repos because target is health_fixes and repos appear in a table not as @RepoName. Work is 1-3 lines in each of 4 files, fully diagnosed, zero open questions. Follow-ups filed in issue: profile the 2 SLOW scripts; clean_slate.sh deletes the TRACKED autolens_workspace_test/output/.gitignore.
+- repos:
+  - autolens_workspace: feature/unblock-release-validation
+  - autolens_workspace_test: feature/unblock-release-validation
+  - autofit_workspace_test: feature/unblock-release-validation
