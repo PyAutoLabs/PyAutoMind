@@ -75,8 +75,6 @@
 
 
 
-
-
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: coordinating — Phases 0,1,2,5 + Ph3 steps1-3 + Ph4 task1 DONE (~40 PRs); REMAINING queued as 5 draft prompts indexed in active/build_chain_umbrella.md (pick via /feature): version_skew rework NEXT, then version-consumers, HowTo sim, env-profile steps4-8, guard v1.3
@@ -117,18 +115,6 @@
 - repos:
   - autolens_workspace_developer
 
-
-## ell-comps-kwargs-keyerror
-- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/143
-- status: AWAITING-MERGE (PR PyAutoLabs/HowToGalaxy#32 open, pending-release, MERGEABLE; commit a2dd056). SCOPE HALVED MID-TASK: autogalaxy_workspace half was ALREADY SHIPPED in PR #142 (merged 2026-07-21T21:06Z) — my local main was stale at 3c0c7e42 so I saw a marker that was already gone upstream; ALWAYS `git fetch` the target repo before trusting a marker, not just PyAutoMind. Remaining+shipped work = HowToGalaxy one-line deletion only. DIAGNOSIS SETTLED, both NEEDS_FIX markers are STALE. Root cause was library-side model-composition/kwargs drift, already fixed upstream between 2026-04 and 2026-07; NOT a stale call-site (model block byte-identical to marker commit 48dad395). DECISIVE TEST: the unmodified April-10 script run against today's installed library exits 0 with zero KeyError. HowToGalaxy's marker was NEVER valid — its entry is the literal path `autogalaxy_workspace/scripts/imaging/modeling`, copy-pasted from the workspace list; HowToGalaxy holds only chapter_*/ + simulators/, so the substring pattern matches ZERO files. Work = delete one line from each repo's config/build/no_run.yaml. No script changes → NO notebook regeneration. Smoke run timed 27.4s (<60s CI timeout), safe to un-park. PyAutoGalaxy dropped from scope.
-- worktree: ~/Code/PyAutoLabs-wt/ell-comps-kwargs-keyerror
-- autonomy: supervised
-- heart-ack: YELLOW score 52 acknowledged 2026-07-22 — workspace validation not passing (10 failed, 2026-07-20T15-09-29Z); 58 stale parked script(s); 10 slow script(s); PyAutoCTI: open PR 1390d old. red_reasons empty. Ack does NOT extend to new reasons.
-- prompt: active/ell_comps_kwargs_keyerror_imaging_modeling.md
-- note: TRAP — running scripts/imaging/modeling.py regenerates dataset/database/simple__*/ FITS+JSON; restore with `git checkout -- dataset/` before committing (ship_workspace binary-leak). FOLLOW-UP (out of scope, same 2026-04-10 parking commit, likely stale for the same reason): `ellipse/modeling` KeyError on 'ellipses.0.centre_0', and `guides/advanced/over_sampling` plot_grid_lines kwarg.
-- repos:
-  - autogalaxy_workspace
-  - HowToGalaxy
 
 ## convolver-gaussian-small-datasets-cap
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/397
