@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-686 records across 5 buckets.
+690 records across 5 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -87,6 +87,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [dpie-lenstool-param](2026/07/dpie-lenstool-param.md)
 - [drop-interferometer-delaunay-marker](2026/07/drop-interferometer-delaunay-marker.md) — Split out from #300 as "interferometer delaunay non-PD FitException". Re-diagnosis on freshly-synced main foun…
 - [eceb-editorial-revision](2026/07/eceb-editorial-revision.md) — ECEB wiki rules — EC A&A template assets — MERGED
+- [ell-comps-kwargs-keyerror](2026/07/ell-comps-kwargs-keyerror.md)
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
 - [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
 - [env-profile-validator](2026/07/env-profile-validator.md) — env-profile redesign migration step 1 (campaign #155 Phase 3): validate_env_profiles PR-time config check (sch…
@@ -138,7 +139,9 @@ _(curate hard-won records here — survives regeneration.)_
 - [intake-reconcile](2026/07/intake-reconcile.md)
 - [intake_writes_legacy_layout](2026/07/intake_writes_legacy_layout.md)
 - [interferometer-analysis-fitexception](2026/07/interferometer-analysis-fitexception.md) — interferometer (+point_source) log_likelihood_function lacked imaging's NumPy-path try/except→FitException gua…
+- [interpolate-instance-labels](2026/07/interpolate-instance-labels.md)
 - [interpolator-aggregator-test-mode](2026/07/interpolator-aggregator-test-mode.md)
+- [interpolator-stale-needs-fix](2026/07/interpolator-stale-needs-fix.md)
 - [inversion-testmode-singular-guard](2026/07/inversion-testmode-singular-guard.md) — release-tail singular/non-PD inversion FAILs (slam/cpu_fast_modeling) were a flaky TEST_MODE artifact, not a c…
 - [jax-autodiff-gradients-audit](2026/07/jax-autodiff-gradients-audit.md) — 3-phase JAX autodiff gradients audit complete in one supervised session — every smooth likelihood FD-certified…
 - [jax-cache-default](2026/07/jax-cache-default.md) — + XLA_FLAGS clobber fix
@@ -291,6 +294,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [test-mode-bypass-completed](2026/07/test-mode-bypass-completed.md) — One-line fix — _fit_bypass_test_mode now calls paths.completed() before returning (mirrors start_resume_fit), …
 - [test-mode-representative-samples-phase-1-design](2026/07/test-mode-representative-samples-phase-1-design.md)
 - [test-mode-representative-samples-phase-2-core-api](2026/07/test-mode-representative-samples-phase-2-core-api.md)
+- [tutorial-5-filtering-prose](2026/07/tutorial-5-filtering-prose.md)
 - [user-defaults-discovery](2026/07/user-defaults-discovery.md) — batch finale (task 6, rescoped discovery-half) — start-new-project step 0 environment-discovery preflight: rea…
 - [verify-install-check-f-autosimulate-and-dep-pin](2026/07/verify-install-check-f-autosimulate-and-dep-pin.md)
 - [version-check-compat-floor](2026/07/version-check-compat-floor.md)

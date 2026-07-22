@@ -1,3 +1,22 @@
+Docs/prose bug found while clearing the stale NEEDS_FIX on this tutorial (PyAutoFit#1411). Script
+always exited 0 — teaching correctness, not a crash.
+
+`tutorial_5` composes a TWO-component model (`Gaussian` + `Exponential` = 6 params) at line 291, but
+the `without_paths` section claimed removing `gaussian.centre` leaves "2 parameters; the
+normalization and sigma" — stale text from when the tutorial fitted a Gaussian alone (3 -> 2). The
+run prints 5. `without_paths` was ALWAYS CORRECT; only the prose was wrong.
+
+Also fixed in the same section: `in-profile_1d with the PyAutoFIT API` -> `in-line with the PyAutoFit
+API` (a bad find/replace of `line` -> `profile_1d`; grepped, only occurrence in the repo), and an
+unclosed parenthesis in a print label.
+
+Checked rather than assumed: the neighbouring `with_paths` labels ("containing only the Gaussian
+centre", 1 value) ARE correct and survived the model change intact.
+
+MERGED HowToFit#25. Verified exit 0, printed counts now match the prose. Notebook regenerated.
+
+## Original prompt
+
 # HowToFit tutorial_5: `without_paths` prose claims 2 parameters, model has 6
 
 Type: bug

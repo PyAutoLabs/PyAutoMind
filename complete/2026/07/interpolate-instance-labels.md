@@ -1,3 +1,27 @@
+Workspace-script bug found while clearing the stale NEEDS_FIX on this script (PyAutoFit#1411). Script
+always exited 0 and the interpolation was ALWAYS CORRECT — two compounding label bugs made the
+tutorial's headline claim unverifiable.
+
+1. OFF-BY-ONE: `ml_instances_list[0]` is the t=0 fit and `[1]` is t=1 (list built by
+   `for time in range(3)`), but both print blocks labelled them "fit 1 (t = 1)" / "fit 2 (t = 2)".
+   The reader was invited to bracket the interpolated t=1.5 value between what were actually the t=0
+   and t=1 fits, so the check demonstrated nothing.
+
+2. AGGREGATOR DOES NOT RETURN FIT ORDER: verified against a real `output/interpolate`, it loads
+   t=0, t=2, t=1. So the aggregator block printed a different "fit 2" (59.73) than the in-memory
+   block (49.96) for the SAME three fits, uncommented, as if the round-trip had changed the result.
+
+FIX: both blocks now select via an `instance_at_time()` helper so position can never drift from time
+again; prose now teaches that aggregator order is not fit order.
+
+Interpolation was never implicated — `_value_map` keys by `time` and sorts internally. After the fix
+both blocks print identical values and 54.834 visibly brackets 49.96/59.73, making the script's
+"close to 55.0" claim demonstrable for the first time.
+
+MERGED autofit_workspace#104. Verified exit 0, real run. Notebook regenerated.
+
+## Original prompt
+
 # autofit_workspace features/interpolate: instance prints are mislabelled and aggregator order is not fit order
 
 Type: bug

@@ -17,26 +17,6 @@
   - HowToLens: feature/slow-skip-timeout-cap-doc
   - HowToGalaxy: feature/slow-skip-timeout-cap-doc
 
-## tutorial-5-filtering-prose
-- issue: none (PR-only, docs fix spun out of PyAutoFit#1411)
-- status: awaiting-merge — HowToFit#25 open. Tutorial fits a TWO-component model (Gaussian+Exponential, 6 params) but the without_paths section claimed removing gaussian.centre leaves "2 parameters; the normalization and sigma" — stale text from when it fitted a Gaussian alone. Run prints 5. without_paths was ALWAYS CORRECT; only prose was wrong. Also fixed in same section: "in-profile_1d with the PyAutoFIT API" -> "in-line with the PyAutoFit API" (bad find/replace of line->profile_1d, verified only occurrence in repo) + unclosed paren in a print label. Checked neighbouring with_paths sections — their labels ARE correct (1 value), survived the model change. Verified exit 0, counts now match prose. Notebook regenerated.
-- worktree: none (in-place branch fix/tutorial-5-filtering-prose)
-- autonomy: safe
-- prompt: active/tutorial_5_without_paths_stale_prose.md
-- note: docs/prose only, no library change.
-- repos:
-  - HowToFit: fix/tutorial-5-filtering-prose
-
-## interpolate-instance-labels
-- issue: none (PR-only, workspace fix spun out of PyAutoFit#1411)
-- status: awaiting-merge — autofit_workspace#104 open. TWO compounding label bugs, interpolation itself always correct. (1) off-by-one: ml_instances_list[0] is the t=0 fit and [1] is t=1 (list built by `for time in range(3)`) but both print blocks labelled them "fit 1 (t=1)"/"fit 2 (t=2)", so the reader bracketed interpolated t=1.5 between the t=0 and t=1 fits — demonstrated nothing. (2) AGGREGATOR DOES NOT RETURN FIT ORDER: verified against real output/interpolate it loads t=0, t=2, t=1, so the agg block printed a different "fit 2" (59.73) than the in-memory block (49.96) for the SAME three fits, uncommented, as if the round-trip changed the result. Fix = both blocks select via instance_at_time() helper so position can never drift from time; prose now teaches that agg order != fit order. Verified exit 0: both blocks now print identical values and 54.834 visibly brackets 49.96/59.73, making the script's "close to 55.0" claim demonstrable for the first time.
-- worktree: none (in-place branch fix/interpolate-instance-labels)
-- autonomy: safe
-- prompt: active/interpolate_mislabelled_instance_indices.md
-- note: workspace script only. _value_map keys by time and sorts, so the interpolator was never implicated.
-- repos:
-  - autofit_workspace: fix/interpolate-instance-labels
-
 ## adapt-image-cache-mask-validation
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/516
 - status: library-dev — DIAGNOSIS DONE, implementation next. Census marker's premise DISPROVED: `mapper_util.adaptive_pixel_signals_from` is CORRECT, no off-by-one, not multi-plane specific. DSPL SLaM passes on cleared output/ BOTH full-size (2828/2828, `masks equal: True`) and PYAUTO_SMALL_DATASETS=1 (208/208); crashes ONLY with census output/ left in place. Real cause = PyAutoGalaxy adapt-image FITS cache (`files/galaxy_images_snr.fits`, adapt_images.py:145) keyed ONLY by search identifier (model+search) — dataset mask NOT in the key. PyAutoArray 656be94b (#396, 2026-07-19, current main HEAD) changed SMALL_DATASETS cap 15x15->16x16, so pre-#396 caches hold 177-pixel (15x15) adapt images vs current 208-pixel (16x16) mask; same model => same identifier => stale cache silently loaded. Slim indices reach 207 against 177-length data so the FIRST out-of-range index is 177 => "index 177 out of bounds for size 177", which merely LOOKS like an off-by-one. Failing expression is the subscript `adapt_data[slim_index_for_sub_slim_index]`, NOT the xp.take (traceback ~~~~^^^^ marker). Docstring at adapt_images.py:127 claims staleness is "structurally guarded" — FALSE for dataset/mask changes.
@@ -47,18 +27,6 @@
 - repos:
   - PyAutoGalaxy: feature/adapt-image-cache-mask-validation
   - PyAutoArray: feature/adapt-image-cache-mask-validation
-
-## interpolator-stale-needs-fix
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1411
-- status: awaiting-merge — BOTH MARKERS STALE, 2 PRs open. Library bug was already fixed by PyAutoFit c8511b553 (2026-04-12), TWO DAYS AFTER the 2026-04-10 park; it added the `if not self.instances: raise IndexError` guard in autofit/interpolator/abstract.py:98 but shipped NO test. Reproduced on clean main with output/ moved aside: autofit_workspace features/interpolate exits 0 both real and under PYAUTO_TEST_MODE=1 (aggregator IS test-mode aware — finds outputs under output/test_mode/); HowToFit tutorial_5 exits 0. PRs: PyAutoFit#1412 (adds test_no_instances, 36 passed) + HowToFit#24 (removes marker). SCOPE CORRECTION: autofit_workspace needed NO change — its marker was already removed upstream by autofit_workspace PR#103 (7154e8a); my first grep hit a stale local main. Branch dropped there.
-- worktree: none (in-place branches; 1 test + 1 yaml line)
-- autonomy: supervised
-- prompt: active/instance_interpolator_getitem_indexerror.md
-- note: prompt's premise was WRONG twice — not a bracketing/off-by-one bug (t==1.5 always worked; test_interpolator.py covers it in 4 places), and HowToFit tutorial_5 contains ZERO interpolator code so the "likely related" attribution was never true. Real cause was an empty instances list reaching self.instances[0]. HowToFit no_run.yaml now has zero entries — safe, both PyAutoHands loaders do `no_run_data or []`.
-- repos:
-  - PyAutoFit: feature/interpolator-stale-needs-fix
-  - HowToFit: feature/interpolator-stale-needs-fix
-
 
 ## group4-mge-search-benchmark
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/82
@@ -89,16 +57,12 @@
 - repos:
   - autolens_jax_joss: main (born this task)
 
-
-
-
 ## build-chain-umbrella
 - issue: https://github.com/PyAutoLabs/PyAutoBuild/issues/155
 - status: coordinating — Phases 0,1,2,5 + Ph3 steps1-3 + Ph4 task1 DONE (~40 PRs); REMAINING queued as 5 draft prompts indexed in active/build_chain_umbrella.md (pick via /feature): version_skew rework NEXT, then version-consumers, HowTo sim, env-profile steps4-8, guard v1.3
 - prompt: active/build_chain_umbrella.md (full decomposition)
 - autonomy: supervised
 - repos:
-
 
 ## slope-hierarchy
 - issue: https://github.com/Jammy2211/slope_hierarchy/issues/1
@@ -110,7 +74,6 @@
 - note: hierarchical power-law slope recovery from N simulated imaging lenses — BlackJAX-NUTS joint fit vs EP parity (values AND errors), RAL scale-up, and end-to-end exercise of the 2026-07 EP diagnostics (PyAutoFit#1330 wave). PyAutoFit is exercised NOT edited: EP defects file as new bug prompts via intake. No PyAutoLabs repo claimed.
 - repos:
 
-
 ## pix-gradient-slogdet-revalidation
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/112
 - status: workspace-dev — A100 JOB QUEUED-BUT-GPU-STARVED (330921, submitted 2026-07-20, still PENDING(Priority) after 2h+). BLOCKER: gpu partition has 2 A100 nodes but ONE is down* ("Not responding", indefinite) and the live node's 4 A100s are all held by user c4072114's multi-day jobs (2-3d TIME_LEFT, end 2026-07-23/24). SLURM est. my START ~2026-07-23 19:53 (~3 days). Not mine, cannot cancel; short-walltime backfill won't help (no gap frees for days). Job will run whenever a GPU frees — no action needed to keep it queued. RESUME (poll): Toggle committed (a5b53a6) + A/B sbatch (6461935) on feature/pix-gradient-slogdet-revalidation (local-only, NOT pushed). RAL PyAutoArray synced to PR#392 (had to repair a corrupt origin/main ref: rm .git locks + git update-ref -d refs/remotes/origin/main + fetch --prune; PR392=7 now). Harness scp'd to /mnt/ral/jnightin/autolens_workspace_developer/searches_minimal/. RESUME: (1) `ssh -o IdentitiesOnly=yes euclid_jump "sacct -j 330921 --format=JobID,State,Elapsed -X; tail -80 /mnt/ral/jnightin/pixgrad_logs/pix_slogdet_ab-330921.out"`; (2) A/B verdict = compare the two arms' "Collected X/N starts (from T draws)" (step-0 acceptance) + per-start "died after step N" reports — cholesky baseline died ~25-50, slogdet should survive to step 299; (3) verdict into searches_minimal/pix_nonfinite_findings.md → ship_workspace. Launch env: activate.sh BASE=/mnt/ral/jnightin/PyAuto, al.Settings=aa.Settings so PyAutoArray sync alone suffices.
@@ -121,7 +84,6 @@
 - repos:
   - autolens_workspace_developer: feature/pix-gradient-slogdet-revalidation (worktree live; commit a5b53a6 local-only)
 
-
 ## blackjax-smc-gradient-kernel
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/113
 - status: workspace-dev — PARKED for resume. WIRING PROVEN (float64, end-to-end); NAIVE GRADIENT SMC DOES NOT CONVERGE (the stage-(a) finding). Committed LOCAL cfcf893 on feature/blackjax-smc-gradient-kernel (blackjax_smc_grad.py + smc_grad_cpu.sbatch + smc_gradient_findings.md); NOT pushed/shipped (no converging config yet). FINDING: MGE likelihood ~1000x sharper than prior → tempering needs step to shrink ~1000x; ALL 3 step regimes collapse acceptance (RAL job 330962/330959, float64, 64p): fixed 0.02 acc0.44→0; fixed-tiny 0.001 acc~0.8 + maxL IMPROVES -165k→-121k then collapses+crash; spread-adaptive --tune step too BIG(~0.6) acc frozen 0 → FALSE λ→1 jump (garbage logZ). Tiny-step improvement = gradient IS useful; blocker = step scheduling only. WARNING: 'Converged: yes' = merely λ reached 1.0, NOT real (force-jumps λ when acc~0). 5 BUGS FIXED: warmup cube-0.5-median (not prior-.mean); profile-CENTRE 1/r singularity→custom_jvp masks nonfinite grad→0; MALA SCALAR step→WHITEN z=params/prior_scale; tune callback (rng_key,state,info) 3-arg+step-from-state.particles; FLOAT32 trap [[reference_ral_sbatch_jax_x64_not_inherited]] export JAX_ENABLE_X64=True. NEXT LEVERS (resume, MOST PROMISING FIRST): (1) WARM-START particles from multi-start Adam basin (shorten tempering path, avoid step-scale gap — prompt's stage-c idea); (2) acceptance-feedback dual-averaging step control (needs outer loop/pretuning — standard inner_kernel_tuning callback doesnt expose prev step); (3) HMC --kernel hmc + posterior mass matrix; (4) A100 rep-timing (GPUs QUEUED FULL). ENV: isolated blackjax 1.5 at /mnt/ral/jnightin/scratch/smc_grad_pylibs (RAL venv had ancient 0.1.0b1); XLA-LLVM compile-mem crashes @128p/8step (use ≤64p/3step); laptop caps ~4p (16 OOMs @15GB) → RAL only. MGE ONLY; pix deferred.
@@ -131,7 +93,6 @@
 - note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer
-
 
 ## convolver-gaussian-small-datasets-cap
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/397
