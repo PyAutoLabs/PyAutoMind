@@ -1,5 +1,16 @@
 # Active Tasks
 
+## interpolator-stale-needs-fix
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1411
+- status: awaiting-merge — BOTH MARKERS STALE, 2 PRs open. Library bug was already fixed by PyAutoFit c8511b553 (2026-04-12), TWO DAYS AFTER the 2026-04-10 park; it added the `if not self.instances: raise IndexError` guard in autofit/interpolator/abstract.py:98 but shipped NO test. Reproduced on clean main with output/ moved aside: autofit_workspace features/interpolate exits 0 both real and under PYAUTO_TEST_MODE=1 (aggregator IS test-mode aware — finds outputs under output/test_mode/); HowToFit tutorial_5 exits 0. PRs: PyAutoFit#1412 (adds test_no_instances, 36 passed) + HowToFit#24 (removes marker). SCOPE CORRECTION: autofit_workspace needed NO change — its marker was already removed upstream by autofit_workspace PR#103 (7154e8a); my first grep hit a stale local main. Branch dropped there.
+- worktree: none (in-place branches; 1 test + 1 yaml line)
+- autonomy: supervised
+- prompt: active/instance_interpolator_getitem_indexerror.md
+- note: prompt's premise was WRONG twice — not a bracketing/off-by-one bug (t==1.5 always worked; test_interpolator.py covers it in 4 places), and HowToFit tutorial_5 contains ZERO interpolator code so the "likely related" attribution was never true. Real cause was an empty instances list reaching self.instances[0]. HowToFit no_run.yaml now has zero entries — safe, both PyAutoHands loaders do `no_run_data or []`.
+- repos:
+  - PyAutoFit: feature/interpolator-stale-needs-fix
+  - HowToFit: feature/interpolator-stale-needs-fix
+
 
 ## scrape-general-stale-needs-fix
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/193
