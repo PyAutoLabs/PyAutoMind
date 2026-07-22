@@ -1,5 +1,25 @@
 # Active Tasks
 
+## tutorial-5-filtering-prose
+- issue: none (PR-only, docs fix spun out of PyAutoFit#1411)
+- status: awaiting-merge — HowToFit#25 open. Tutorial fits a TWO-component model (Gaussian+Exponential, 6 params) but the without_paths section claimed removing gaussian.centre leaves "2 parameters; the normalization and sigma" — stale text from when it fitted a Gaussian alone. Run prints 5. without_paths was ALWAYS CORRECT; only prose was wrong. Also fixed in same section: "in-profile_1d with the PyAutoFIT API" -> "in-line with the PyAutoFit API" (bad find/replace of line->profile_1d, verified only occurrence in repo) + unclosed paren in a print label. Checked neighbouring with_paths sections — their labels ARE correct (1 value), survived the model change. Verified exit 0, counts now match prose. Notebook regenerated.
+- worktree: none (in-place branch fix/tutorial-5-filtering-prose)
+- autonomy: safe
+- prompt: active/tutorial_5_without_paths_stale_prose.md
+- note: docs/prose only, no library change.
+- repos:
+  - HowToFit: fix/tutorial-5-filtering-prose
+
+## interpolate-instance-labels
+- issue: none (PR-only, workspace fix spun out of PyAutoFit#1411)
+- status: awaiting-merge — autofit_workspace#104 open. TWO compounding label bugs, interpolation itself always correct. (1) off-by-one: ml_instances_list[0] is the t=0 fit and [1] is t=1 (list built by `for time in range(3)`) but both print blocks labelled them "fit 1 (t=1)"/"fit 2 (t=2)", so the reader bracketed interpolated t=1.5 between the t=0 and t=1 fits — demonstrated nothing. (2) AGGREGATOR DOES NOT RETURN FIT ORDER: verified against real output/interpolate it loads t=0, t=2, t=1, so the agg block printed a different "fit 2" (59.73) than the in-memory block (49.96) for the SAME three fits, uncommented, as if the round-trip changed the result. Fix = both blocks select via instance_at_time() helper so position can never drift from time; prose now teaches that agg order != fit order. Verified exit 0: both blocks now print identical values and 54.834 visibly brackets 49.96/59.73, making the script's "close to 55.0" claim demonstrable for the first time.
+- worktree: none (in-place branch fix/interpolate-instance-labels)
+- autonomy: safe
+- prompt: active/interpolate_mislabelled_instance_indices.md
+- note: workspace script only. _value_map keys by time and sorts, so the interpolator was never implicated.
+- repos:
+  - autofit_workspace: fix/interpolate-instance-labels
+
 ## adapt-image-cache-mask-validation
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/516
 - status: library-dev — DIAGNOSIS DONE, implementation next. Census marker's premise DISPROVED: `mapper_util.adaptive_pixel_signals_from` is CORRECT, no off-by-one, not multi-plane specific. DSPL SLaM passes on cleared output/ BOTH full-size (2828/2828, `masks equal: True`) and PYAUTO_SMALL_DATASETS=1 (208/208); crashes ONLY with census output/ left in place. Real cause = PyAutoGalaxy adapt-image FITS cache (`files/galaxy_images_snr.fits`, adapt_images.py:145) keyed ONLY by search identifier (model+search) — dataset mask NOT in the key. PyAutoArray 656be94b (#396, 2026-07-19, current main HEAD) changed SMALL_DATASETS cap 15x15->16x16, so pre-#396 caches hold 177-pixel (15x15) adapt images vs current 208-pixel (16x16) mask; same model => same identifier => stale cache silently loaded. Slim indices reach 207 against 177-length data so the FIRST out-of-range index is 177 => "index 177 out of bounds for size 177", which merely LOOKS like an off-by-one. Failing expression is the subscript `adapt_data[slim_index_for_sub_slim_index]`, NOT the xp.take (traceback ~~~~^^^^ marker). Docstring at adapt_images.py:127 claims staleness is "structurally guarded" — FALSE for dataset/mask changes.
