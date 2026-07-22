@@ -1,5 +1,22 @@
 # Active Tasks
 
+## slow-skip-timeout-cap-doc
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/172
+- status: PRs OPEN, awaiting merge — 8 PRs. PyAutoHands#173 (code: slow_skip_check.py sources the cap from build_util.TIMEOUT_SECS instead of a hardcoded 60s, across module docstring + _BANNER_CONFIG slow footer + _REPORT_CONFIG slow intro; format_warning_banner/format_report_section take optional timeout_secs; run_all passes the in-force timeout at both slow-banner call sites; 132 tests pass). Workspace comment-only PRs: autolens_workspace#313, autolens_workspace_test#194, autogalaxy_workspace#144, autofit_workspace#105, autofit_workspace_test#62, HowToLens#43, HowToGalaxy#33. Real caps = 300s smoke (build_util.py:12 BUILD_SCRIPT_TIMEOUT default) / 1800s release (PyAutoHeart workspace-validation.yml:308). NOT a cosmetic docs fix — the 5x understatement caused a wrong SLOW-skip call on autolens_workspace_test#193 (214s script reads as over-cap at 60s, has 86s headroom at 300s).
+- worktree: ~/Code/PyAutoLabs-wt/slow-skip-timeout-cap-doc
+- autonomy: supervised
+- prompt: active/slow_skip_60s_timeout_cap_is_wrong.md
+- note: spun out of the #193 triage. TWO deliberate non-fixes recorded in PR#173: (1) 5 remaining "60s" strings live inside individual SLOW entries' own reason text (database/scrape/* dated 2026-04-10) — rewriting them without re-timing would assert something unverified; follow-up = re-time them, some may clear 300s and be un-parkable; (2) format_report_section is imported in run_all.py:164 but NEVER CALLED, so the slow-skip section may not reach report.md at all — pre-existing, worth separate investigation.
+- repos:
+  - PyAutoHands: feature/slow-skip-timeout-cap-doc
+  - autolens_workspace: feature/slow-skip-timeout-cap-doc
+  - autolens_workspace_test: feature/slow-skip-timeout-cap-doc
+  - autogalaxy_workspace: feature/slow-skip-timeout-cap-doc
+  - autofit_workspace: feature/slow-skip-timeout-cap-doc
+  - autofit_workspace_test: feature/slow-skip-timeout-cap-doc
+  - HowToLens: feature/slow-skip-timeout-cap-doc
+  - HowToGalaxy: feature/slow-skip-timeout-cap-doc
+
 ## tutorial-5-filtering-prose
 - issue: none (PR-only, docs fix spun out of PyAutoFit#1411)
 - status: awaiting-merge — HowToFit#25 open. Tutorial fits a TWO-component model (Gaussian+Exponential, 6 params) but the without_paths section claimed removing gaussian.centre leaves "2 parameters; the normalization and sigma" — stale text from when it fitted a Gaussian alone. Run prints 5. without_paths was ALWAYS CORRECT; only prose was wrong. Also fixed in same section: "in-profile_1d with the PyAutoFIT API" -> "in-line with the PyAutoFit API" (bad find/replace of line->profile_1d, verified only occurrence in repo) + unclosed paren in a print label. Checked neighbouring with_paths sections — their labels ARE correct (1 value), survived the model change. Verified exit 0, counts now match prose. Notebook regenerated.
@@ -118,10 +135,22 @@
 
 ## convolver-gaussian-small-datasets-cap
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/397
-- status: library-dev — plan approved, root cause CONFIRMED + fix empirically verified in scratch. Convolver.from_gaussian builds its kernel on Grid2D.uniform, which the PYAUTO_SMALL_DATASETS cap silently shrinks to 16x16, then wraps those 256 values in an Array2D at the caller's uncapped shape_native (31,31=961) -> ArrayException. Fix = pass respect_small_datasets=False at convolver.py:721 + numpy-only regression test in test_autoarray/operators/test_convolver.py.
+- status: library-shipped, awaiting-smoke — PR #398 open (pending-release), commit 402ffba7, PyAutoArray suite 927 passed, regression test verified RED on main. Root cause CONFIRMED + fix empirically verified in scratch. Convolver.from_gaussian builds its kernel on Grid2D.uniform, which the PYAUTO_SMALL_DATASETS cap silently shrinks to 16x16, then wraps those 256 values in an Array2D at the caller's uncapped shape_native (31,31=961) -> ArrayException. Fix = pass respect_small_datasets=False at convolver.py:721 + numpy-only regression test in test_autoarray/operators/test_convolver.py.
 - worktree: ~/Code/PyAutoLabs-wt/convolver-gaussian-small-datasets-cap
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/398
 - autonomy: supervised
+- heart-ack: 2026-07-22 YELLOW (score 52) acknowledged at ship; reasons = workspace validation not passing (10 failed, 2026-07-20T15-09-29Z) | 58 stale parked script(s) | 10 slow script(s) | PyAutoCTI: open PR 1390d old | release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens). None related to this change.
 - prompt: active/mask_irregular_small_datasets_cap.md
 - note: the prompt's own diagnosis (env-config gap, needs `unset: [PYAUTO_SMALL_DATASETS]` or mask capping) is WRONG — the traceback never reaches the mask code. Real library bug. NO workspace edits needed: autolens_workspace + autogalaxy_workspace scripts/imaging/data_preparation/manual/mask_irregular.py both go green off the library fix alone; HowToGalaxy/HowToLens do not carry the script. Latent same-bug sites at (21,21) are in non-executed fenced prose, and guides/ already unsets the flag.
 - repos:
   - PyAutoArray: feature/convolver-gaussian-small-datasets-cap
+
+## empty-hdu-scrape-and-latent-guard
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1413
+- session: claude --resume 2a09a7a9-3410-4f38-9039-a2a3ee3a6efe
+- status: library-dev — plan approved, both diagnoses reproduced BEFORE planning. Census premise WRONG for 3 of 4 scripts. (1) REAL LIBRARY BUG: autofit/database/model/array.py:187 HDU.hdu setter does `self.array = hdu.data`; the Array.array setter dereferences array.dtype unguarded, so a data-less PrimaryHDU raises AttributeError 'NoneType' has no attribute 'dtype'. User-facing — aggregate_fits.py:107 emits fits.PrimaryHDU() as the first HDU of EVERY aggregated HDUList (its own docstring L94 says so), so the sqlite scrape cannot ingest the library's own multi-extension FITS. Fix = guard None in the HDU setter + reconstruct data=None in the getter + numpy-only round-trip test. (2) ENV GAP: latent/latent_nan_robustness.py passes VACUOUSLY — TEST_MODE=2 gives 4 bypass samples AND DISABLE_JAX=1 silently flips its deliberate use_jax=True to False (PyAutoLens analysis/dataset.py:89), so the JAX column-masking branch under test is never taken (MultiStartAdam/BlackJAXNUTS precedent). Unsetting both = honest pass but 412s vs the 300s cap; TEST_MODE=1 does NOT help (455s, Nautilus is not the bottleneck: ~136s post-fit results update + ~56s latent compute). User chose: trim the script under the cap. (3) NOT BUGS: imaging/model_fit.py + latent/latent_variables_smoke.py both PASS from clean output.
+- worktree: ~/Code/PyAutoLabs-wt/empty-hdu-scrape-and-latent-guard
+- autonomy: safe
+- prompt: active/test_mode_none_samples_env_overrides.md
+- note: CONFLICT ACCEPTED — worktree_check_conflict flags PyAutoFit as claimed by interpolator-stale-needs-fix (worktree: none, in-place branch, awaiting-merge behind PR #1412). Human approved proceeding in a dedicated worktree: files disjoint (interpolator/abstract.py vs database/model/array.py) and a worktree never touches the main checkout. TRAP — root cause of all 3 false census verdicts: TEST_MODE=2 writes NO samples, so a SECOND run on a warm output tree takes the "Fit Already Completed: skipping non-linear search" path and returns result.samples=None. ALWAYS rm -rf output/test_mode/<name> before trusting a bypass-script NoneType failure. Filed as out-of-scope follow-up (PyAutoFit resume path). TRAP 2 — both workspace_test repos carry pre-existing dirty regenerated dataset FITS/JSON timestamped 2026-07-21 21:33-21:49 (yesterday's census run), NOT from this task: exclude at commit (ship_workspace binary-leak). TRAP 3 — the API gate false-positives on latent_nan_robustness.py's docstring mention of compute_latent_samples; run it with PYAUTO_SKIP_API_GATE=1.
+- repos:
