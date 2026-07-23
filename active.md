@@ -1,6 +1,20 @@
 # Active Tasks
 
 
+## no-run-config-purge
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/46
+- status: workspace-dev — census COMPLETE, implementation not yet started. 50/122 no_run.yaml entries are zero-match (HowToLens 28/30, HowToGalaxy 15/16, autolens_workspace 7/27) plus 11 dead env_vars.yaml override patterns. Root cause is BIDIRECTIONAL COPY-PASTE between the HowTo* repos and their parent workspaces, not gradual drift — 18 of HowToLens' 28 dead entries name files that exist only in autolens_workspace, and autolens_workspace carries three HowTo tutorial stems in return. `plot/visuals` RESOLVED BY TEST: file moved scripts/plot/visuals.py -> scripts/guides/plot/examples/visuals.py in 9e1a50dc4 (2025-07-18) so the skip has not applied for a year; ran it under the real build env profile (autobuild repro_command) and it PASSES clean, exit 0 no output — entry dropped as stale, NOT re-spelled. Human approved purging ALL zero-match entries incl. bare-stem prospective guards.
+- worktree: ~/Code/PyAutoLabs-wt/no-run-config-purge
+- autonomy: supervised
+- prompt: active/no_run_config_dead_entry_purge.md
+- note: CONCURRENT CLAIM, HUMAN-APPROVED. All 5 repos are also claimed by `rename-autobuild-to-autohands` (parked, blocked on Heart RED, nothing committed). File sets verified DISJOINT: grep for autobuild|PyAutoHands|PyAutoBuild across every file this task edits returns nothing; the only build config naming PyAutoHands is markdown_examples.yaml, already renamed on main and NOT edited here. Separate branch + worktree. Brain Feature Agent said too-large(19)/split-into-phases; OVERRIDDEN with human approval — the score is repo-count-driven and the change is ~61 lines of YAML across 8 files with no code, API or docs surface. Config-only; no script, notebook or library edits expected. Clean repos are autolens_workspace_test (23 entries, 0 dead), autogalaxy_workspace, autofit_workspace, both other _test workspaces, HowToFit and the euclid pipeline — do NOT touch their no_run.yaml. markdown_examples.yaml and visualise_notebooks.yaml are clean everywhere. HowToFit is in scope ONLY for 2 dead env_vars patterns (it has no no_run entries) and was 1 commit behind origin/main at survey — pull before branching. Closes the "~44 zero-match entries remain, needs a deliberate call" item left open by the 2026-07-22 ell_comps/HowTo sweep.
+- repos:
+  - HowToLens: feature/no-run-config-purge
+  - HowToGalaxy: feature/no-run-config-purge
+  - autolens_workspace: feature/no-run-config-purge
+  - HowToFit: feature/no-run-config-purge
+  - autogalaxy_workspace_test: feature/no-run-config-purge
+
 ## rename-autobuild-to-autohands
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/177
 - session: claude --resume 9f2ec381-2106-4eeb-bb89-d0a2e4aaf550
