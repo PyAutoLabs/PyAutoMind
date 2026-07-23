@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-703 records across 6 buckets.
+705 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -61,6 +61,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [build_ic50_assistant_from_autofit_assistant](2026/07/build_ic50_assistant_from_autofit_assistant.md)
 - [checkpoint-continue](2026/07/checkpoint-continue.md)
 - [clear-stale-needs-fix-parks](2026/07/clear-stale-needs-fix-parks.md)
+- [clone-skill-prefix-corruption](2026/07/clone-skill-prefix-corruption.md) — The Clone Agent's skill-prefix substitution (`al_ -> ac_`, from package initials) was applied by `clone_seed.s…
 - [cluster-likelihood-breakdown](2026/07/cluster-likelihood-breakdown.md)
 - [cluster-scaling-lenstool](2026/07/cluster-scaling-lenstool.md)
 - [cluster-small-datasets](2026/07/cluster-small-datasets.md)
@@ -86,6 +87,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [cti-resurrection-phase4](2026/07/cti-resurrection-phase4.md) — closed
 - [cti-resurrection-phase5](2026/07/cti-resurrection-phase5.md) — closed
 - [database-latent-wheel-load](2026/07/database-latent-wheel-load.md) — database scripts failed on release wheels loading latent variables → AssertionError. Release-tail item D. Corr…
+- [defunct-grids-yaml-removal](2026/07/defunct-grids-yaml-removal.md) — Deleted the 10 orphan `config/grids.yaml` copies plus 3 references (2 library `config/README.md` bullets, 1 `a…
 - [delaunay-qhull-callback](2026/07/delaunay-qhull-callback.md)
 - [delete_pyautoheart_shim](2026/07/delete_pyautoheart_shim.md)
 - [desktop-acceptance-mcp](2026/07/desktop-acceptance-mcp.md)
