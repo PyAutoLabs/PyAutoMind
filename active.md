@@ -20,7 +20,7 @@
 ## rectangular-mesh-consolidation
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/402
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/403
-- status: library-shipped, workspace-pending — PR #403 open (892/1006/448 green, YELLOW acked 2026-07-23). Workspace leg = autolens_workspace_test jax_grad variant consolidation (2 files, FD certification = merge gate). Developer-repo cleanup + Gut stash DEFERRED on blackjax-smc-gradient-kernel claim.
+- status: library-shipped, workspace-BLOCKED — PR #403 open (892/1006/448 green, YELLOW acked 2026-07-23). Workspace leg = autolens_workspace_test jax_grad variant consolidation (2 files: imaging_pixelization.py variants E/F/G merge into plain-named, interferometer.py variant D; strict-FD certification = #403 merge gate). BLOCKED on env-inline-declarations claim of autolens_workspace_test (its entry's COORDINATION note says serialise — it activated first; resume when its al_test migration releases the claim). Developer-repo cleanup + Gut stash ALSO deferred on blackjax-smc-gradient-kernel claim. On resume: delegate ship_workspace mechanical phase to OPUS subagents (user request 2026-07-23).
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-mesh-consolidation
 - autonomy: supervised
 - prompt: active/rectangular_mesh_consolidation.md
