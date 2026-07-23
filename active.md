@@ -1,5 +1,17 @@
 # Active Tasks
 
+## env-declaration-docstring-form
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/189
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/env-declaration-docstring-form
+- autonomy: supervised
+- prompt: active/env_declaration_docstring_form.md
+- note: Phase 1b follow-up from user feedback — __Env__ bottom-of-script docstring form for user workspaces (developer-only note, stripped from generated notebooks/markdown); _test repos keep '# ENV:' comments. MUST land before next pre_build (notebooks not yet regenerated with comment form). Gate: resolved-env diff IDENTICAL (pure syntax move). Phase 2 (mirror restructure) stays UN-ISSUED until this ships.
+- repos:
+  - PyAutoHands: feature/env-declaration-docstring-form
+  - autolens_workspace: feature/env-declaration-docstring-form
+  - autogalaxy_workspace: feature/env-declaration-docstring-form
+
 ## rectangular-mesh-consolidation
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/402
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/403
