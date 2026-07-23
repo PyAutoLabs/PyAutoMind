@@ -1,5 +1,29 @@
 # Active Tasks
 
+## defunct-grids-yaml-removal
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/317
+- status: workspace-dev — 13 pure file deletions (10 orphan `config/grids.yaml` + 2 library `config/README.md` bullets + 1 `autocti_assistant/PENDING.md` TODO). Nothing has read `radial_minimum` since PyAutoGalaxy 025ac7ac (2025-10-15); zero `.py` hits across all five libraries and zero hits in the installed venv. Landing as 3 PRs: (1) PyAutoCTI test config, (2) PyAutoArray+PyAutoGalaxy READMEs, (3) the 8 downstream repos.
+- worktree: ~/Code/PyAutoLabs-wt/defunct-grids-yaml-removal
+- autonomy: supervised
+- prompt: active/defunct_grids_yaml_removal.md
+- override: Brain Feature Agent returned too-large(32)/split-into-phases (4 phases) — OVERRIDDEN with user approval 2026-07-23. Score is repo-count-driven; there is no API, design or science content, so the phase split and the library-first API-change-summary handoff do not apply.
+- override: Heart RED (score 0, reason `33 stale parked script(s)`, unrelated to this diff) commit/push/PR-open block OVERRIDDEN by direct contemporaneous human authorization 2026-07-23. This is NOT the AUTONOMY.md corrective-PR exception — the diff repairs no RED reason. Authorization is task-specific, does not extend to merge, and release stays blocked until the RED reason clears on its own terms.
+- caution: CONCURRENT CLAIM, user-approved 2026-07-23. `worktree_check_conflict` flags 8 repos held by parked `rename-autobuild-to-autohands` and PyAutoCTI held by `testmode-env-drift`. File-level overlap verified ZERO in both worktrees — neither touches config/grids.yaml, config/README.md or PENDING.md. Precedent: blackjax-smc-gradient-kernel alongside a parked claim on disjoint files.
+- note: euclid_strong_lens_modeling_pipeline main carries an unrelated dirty `test_report.md` — do not sweep it into a commit. PyAutoCTI is the only deletion with a real failure mode (its test conftest points conf.instance at test_autocti/config/), so run that suite before shipping.
+- repos:
+  - autolens_workspace: feature/defunct-grids-yaml-removal
+  - autogalaxy_workspace: feature/defunct-grids-yaml-removal
+  - autolens_workspace_test: feature/defunct-grids-yaml-removal
+  - autogalaxy_workspace_test: feature/defunct-grids-yaml-removal
+  - HowToLens: feature/defunct-grids-yaml-removal
+  - HowToGalaxy: feature/defunct-grids-yaml-removal
+  - autolens_assistant: feature/defunct-grids-yaml-removal
+  - autocti_assistant: feature/defunct-grids-yaml-removal
+  - euclid_strong_lens_modeling_pipeline: feature/defunct-grids-yaml-removal
+  - PyAutoCTI: feature/defunct-grids-yaml-removal
+  - PyAutoArray: feature/defunct-grids-yaml-removal
+  - PyAutoGalaxy: feature/defunct-grids-yaml-removal
+
 ## rename-autobuild-to-autohands
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/177
 - session: claude --resume 9f2ec381-2106-4eeb-bb89-d0a2e4aaf550
