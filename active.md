@@ -28,8 +28,9 @@
 - note: Kernel-CDF meshes take over the plain names RectangularAdaptDensity/AdaptImage; linear/spline/rotated + density_components deleted from source (Gut refs). Brain scored too-large/4-phase off repo count — OVERRIDE recorded: standard library→workspace two-leg (workspace leg collapses to test/dev cleanup since user workspaces keep the plain names, zero code edits). Library leg: PyAutoArray primary; PyAutoGalaxy/PyAutoLens expected zero-diff (verify by test suite). Workspace leg AFTER library merge: autolens_workspace_test jax_grad variant consolidation (FD certification = gate); autolens_workspace_developer stash→PyAutoGut BLOCKED on blackjax-smc-gradient-kernel claim — do last/coordinate. Autodiff evidence + full file-level plan on the issue.
 - repos:
   - PyAutoArray: feature/rectangular-mesh-consolidation
-
-
+  - PyAutoLens: feature/rectangular-mesh-consolidation
+  - PyAutoGalaxy: feature/rectangular-mesh-consolidation
+- citation-leg: Enzi2026 (arXiv:2606.30620, RTU grids) added 2026-07-23 — PyAutoLens+PyAutoGalaxy docs/general/citations.md "Rectangular Mesh" section + files/citations.bib entry (adaptive rect meshes MUST cite; RectangularUniform exempt; note reg differs from paper's GP prior). WORKSPACE PART (blocked with the workspace legs, Opus-delegated): add a short paper-link paragraph to autolens_workspace/autogalaxy_workspace pixelization examples + HowToLens/HowToGalaxy ch4 rectangular tutorials — link arXiv:2606.30620, cite-when-used, one line that the paper pairs RTU with a GP prior whereas these examples use reg.Constant/reg.Adapt. Scripts only; notebooks regen at release.
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
