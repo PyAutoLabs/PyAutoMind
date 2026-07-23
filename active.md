@@ -5,6 +5,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/env-declaration-docstring-form
 - autonomy: supervised
+- heart-ack: 2026-07-23 human acknowledged YELLOW for ship (merge order given): ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - prompt: active/env_declaration_docstring_form.md
 - note: Phase 1b follow-up from user feedback — __Env__ docstring form is THE one API everywhere (user decision 2026-07-23): user workspaces = BOTTOM placement + developer-only note + stripped from generated notebooks/markdown; _test repos = NEAR TOP after module docstring (shorter template). Comment form stays parser-valid until all migrations merge, then flipped to validator error in a final change (avoids broken-CI window). MUST land before next pre_build. Gate: resolved-env diff IDENTICAL (pure syntax move). Phase 2 (mirror restructure) stays UN-ISSUED until this ships.
 - repos:
