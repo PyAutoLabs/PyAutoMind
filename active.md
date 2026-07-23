@@ -2,26 +2,6 @@
 
 
 
-## env-vars-profile-key-order
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/321
-- status: AWAITING MERGE — 10 PRs OPEN (autolens_workspace#322, autogalaxy_workspace#148, autofit_workspace#110, autolens_workspace_test#202, autogalaxy_workspace_test#84, autofit_workspace_test#67, HowToLens#49, HowToGalaxy#39, HowToFit#28, euclid#33), all labelled pending-release. autocti_workspace_test needed NO change (already canonical, no inline comments) -> 10 PRs not 11. VERIFIED: resolved-env diff before/after IDENTICAL in all 11 repos (every script x both profiles via resolve_clean from an empty base) — strictly stronger than smoke for a config-only change, so smoke was NOT re-run as the gate. validate_env_profiles verdicts byte-identical to main (5 'env_vars_release.yaml: missing' errors + 42 DISABLE_JAX derivation warnings all PRE-EXISTING). SHIPPED UNDER THE CORRECTIVE-PR EXCEPTION, human-authorized against verbatim RED 'release validation FAILED (stage integrate)' (red score 40 @2026-07-23T14:11:21Z; integrate:fail on v2026.7.22.1.dev67201 from the 2026-07-22 run) — unrelated to this diff. Stops at PR-open: NO merges. NEXT: merge the 10 PRs, then close #321.
-- worktree: ~/Code/PyAutoLabs-wt/env-vars-profile-key-order
-- autonomy: supervised
-- prompt: active/env_vars_profile_key_order.md
-- note: PROVABLY A NO-OP — `defaults` is applied by plain dict iteration (PyAutoHands/autobuild/env_config.py:68) so order is semantically irrelevant; `overrides:` (ordered pattern list, order IS load-bearing) is NOT touched. Verify by diffing RESOLVED env over all scripts before/after via resolve_clean() in PyAutoHands/autobuild/validate_env_profiles.py — diff must be EMPTY. Brain Feature Agent said too-large/4-phases off the 11-repo count alone; overridden by judgment (cosmetic, no API surface). euclid_strong_lens_modeling_pipeline main has an unrelated dirty test_report.md. Modules are PyAutoHands/autohands/{env_config,validate_env_profiles}.py — the issue body says autobuild/, which predates the autobuild->autohands rename. FOLLOW-UP FOUND, NOT FIXED: autofit_workspace_test/config/build/env_vars_release.yaml omits PYAUTO_SMALL_DATASETS and PYAUTO_FAST_PLOTS entirely, violating the release-profile doctrine that every var carries an EXPLICIT value (absent key falls through to the caller's ambient env) — needs its own prompt.
-- repos:
-  - autolens_workspace: feature/env-vars-profile-key-order
-  - autogalaxy_workspace: feature/env-vars-profile-key-order
-  - autofit_workspace: feature/env-vars-profile-key-order
-  - autolens_workspace_test: feature/env-vars-profile-key-order
-  - autogalaxy_workspace_test: feature/env-vars-profile-key-order
-  - autofit_workspace_test: feature/env-vars-profile-key-order
-  - HowToLens: feature/env-vars-profile-key-order
-  - HowToGalaxy: feature/env-vars-profile-key-order
-  - HowToFit: feature/env-vars-profile-key-order
-  - euclid_strong_lens_modeling_pipeline: feature/env-vars-profile-key-order
-  - autocti_workspace_test: feature/env-vars-profile-key-order
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-707 records across 6 buckets.
+708 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -104,6 +104,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [env-profile-validator](2026/07/env-profile-validator.md) — env-profile redesign migration step 1 (campaign #155 Phase 3): validate_env_profiles PR-time config check (sch…
 - [env-scrubbed-baseline](2026/07/env-scrubbed-baseline.md) — env-profile redesign migration step 3 — scrubbed base env. build_env_for_script strips the managed PYAUTO_ fam…
 - [env-single-resolver](2026/07/env-single-resolver.md) — env-profile redesign migration step 2 — one resolver. The three run_smoke.py forks (byte-identical to each oth…
+- [env-vars-profile-key-order](2026/07/env-vars-profile-key-order.md)
 - [ep-analytic-updates-scope](2026/07/ep-analytic-updates-scope.md) — EP phase 6 — scope analytic conjugate updates — plan DELIVERED
 - [ep-deterministic-reconcile](2026/07/ep-deterministic-reconcile.md) — EP phase 5 — three deterministic-variable mechanisms — DECIDED
 - [ep-diagnostics](2026/07/ep-diagnostics.md) — EP review Phase 4 — EPDiagnostics collector, live CSV/PNG artifacts, graph_factors.png, mean_field_summary, ch…
