@@ -5,7 +5,7 @@
 ## env-profile-derivation
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/181
 - session: claude --resume e93a467a-04b3-445e-b05f-57766e69327a
-- status: workspace-dev (phases B+C)
+- status: step-4 SHIPPED to PR-open, 3 PRs awaiting merge — merge ORDER: PyAutoHands#182 first (nightly runs run_python.py from PyAutoHands main; key inert without it), then autolens_workspace_test#203 + autogalaxy_workspace_test#85. Verified by resolved-env diff (exactly 14 al + 4 ag DISABLE_JAX changes, renames identical); 13/13 turns-ON scripts pass under JAX locally (2-12s); validator 0/0 in both repos EVEN under --strict-derivation --strict-markers (step 5 unblocked). NEXT after merges: step 5 (flip strict flags + wire validator into the 3 workspace_test PR gates), step 6 (profile rename, LAST), step 7 (one-reader fold, PyAutoFit+PyAutoLens — blocked on testmode-env-drift's PyAutoFit claim), step 8 (use_jax sentinel — ASK HUMAN first).
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/182 (Heart RED acked 2026-07-23: integrate-fail + 13f workspace validation + 33 stale parks, all pre-existing)
 - worktree: ~/Code/PyAutoLabs-wt/env-profile-derivation
 - autonomy: supervised
