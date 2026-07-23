@@ -3,7 +3,7 @@
 ## rename-autobuild-to-autohands
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/177
 - session: claude --resume 9f2ec381-2106-4eeb-bb89-d0a2e4aaf550
-- status: library-dev
+- status: blocked — PARKED AT THE SHIP GATE on Heart RED. Rename is COMPLETE and VERIFIED in the worktree but NOTHING is committed (AUTONOMY.md: RED forbids commit/push/PR-open at every autonomy level; the corrective-PR exception never fires under --auto and would not apply anyway, since this rename repairs no RED reason). Ship-time RED reasons: release validation FAILED (stage integrate); workspace validation 13 failed; 33 stale parked scripts; PyAutoFit/PyAutoGalaxy/PyAutoLens each 1 commit behind origin. Evidence: PyAutoHands 132 passed; PyAutoBrain 152 passed / 1 failed (test_skill_install missing `sizing` wrapper — PRE-EXISTING on main); repos_sync.py --check identical to main; autohands help renders; every PyAutoHands/autohands/<module> reference resolves. RESUME: wait for Heart to clear RED, then /ship_library merging Hands -> Heart -> Brain -> workspaces in ONE pass while CI is quiet.
 - worktree: ~/Code/PyAutoLabs-wt/rename-autobuild-to-autohands
 - autonomy: supervised (min of `supervised` header and the `safe` refactor cap)
 - prompt: active/rename_autobuild_to_autohands.md
