@@ -4,7 +4,6 @@ Type: refactor
 Target: PyAutoNerves
 Repos:
 - PyAutoNerves
-- PyAutoFit
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
@@ -51,9 +50,15 @@ Five steps, each independently shippable.
 `BAD_PATH` constant and the `remove_path()` helper.
 
 **Step 2 — remove dead EDEN tooling.** Delete `PyAutoNerves/eden.yaml` and
-`scripts/edenise.py`; delete `PyAutoFit/eden.yaml`. This completes
-`draft/refactor/pyautofit/remove_eden_packaging_tooling.md` — mark that prompt
-complete rather than duplicating it.
+`scripts/edenise.py` — the PyAutoNerves leg of
+`draft/refactor/pyautofit/remove_eden_packaging_tooling.md`.
+
+`PyAutoFit/eden.yaml` is **descoped** from this task: the branch survey on
+2026-07-23 found PyAutoFit claimed by the `testmode-env-drift` worktree
+(`feature/testmode-env-drift`, PRs open awaiting merge). `autofit.tools.edenise`
+is already gone from PyAutoFit main, so only the orphan `eden.yaml` remains
+there — a one-file follow-up once that claim releases. The eden draft stays open
+until then.
 
 **Step 3 — remove the one-shot config-migration tooling.** Delete
 `scripts/convert_config.py`, `scripts/convert_prior_configs.py`,
@@ -85,7 +90,9 @@ reverting `autonerves/__init__.py` to `2026.7.9.1`.
 
 ## Related
 
-- Closes out `draft/refactor/pyautofit/remove_eden_packaging_tooling.md`.
+- Ships the PyAutoNerves leg of
+  `draft/refactor/pyautofit/remove_eden_packaging_tooling.md`; that prompt stays
+  open for its one remaining file (`PyAutoFit/eden.yaml`).
 - Separately: PyAutoNerves#100 is fully shipped (5 library + 7 workspace PRs all
   merged; ledger at `complete/2026/04/workspace-version-config-check.md`) and was
   simply never closed on GitHub. Close it as part of this pass.

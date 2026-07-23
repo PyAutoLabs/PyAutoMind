@@ -2,6 +2,16 @@
 
 
 
+## purge-autoconf-era-legacy
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/137
+- status: library-dev — starting. 4 steps, each independently shippable: (0) delete untracked rename leftovers autoconf/ test_autoconf/ autoconf.egg-info/ build/ bad/ (no PR); (1) test_config.py BAD_PATH -> tmp_path so bad/ stops regenerating; (2) delete eden.yaml + scripts/edenise.py; (3) delete scripts/ + priors/ + json_prior/generate.py + its test; (4) trim PR #136 to its fixture half. Then close #100.
+- worktree: ~/Code/PyAutoLabs-wt/purge-autoconf-era-legacy
+- autonomy: supervised
+- prompt: active/purge_autoconf_era_legacy.md
+- note: `git grep -ril autoconf` over TRACKED files returns NOTHING — the autoconf sightings are untracked working-copy cruft, not tracked drift. But autoconf/ is pycache-only and STILL resolves as a namespace package (shadows imports), so it is not inert. bad/ is regenerated every test run by test_config.py:44 os.makedirs into CWD. edenise.py + convert_prior_configs.py are ALREADY broken on their own imports (autofit.tools.edenise removed; oyaml undeclared). GUARDRAIL: json_prior/config.py stays (live, re-exported from __init__); only sibling generate.py goes. GUARDRAIL: do NOT bump __version__ on main — wheels+tags-only per Build#118/#120, main is deliberately stale; that is why #136 is trimmed not merged. PyAutoFit/eden.yaml DESCOPED (PyAutoFit claimed by testmode-env-drift) — one-file follow-up, eden draft stays open.
+- repos:
+  - PyAutoNerves: feature/purge-autoconf-era-legacy
+
 ## env-profile-derivation
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/181
 - session: claude --resume e93a467a-04b3-445e-b05f-57766e69327a
