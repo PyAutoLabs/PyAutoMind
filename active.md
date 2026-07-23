@@ -19,7 +19,8 @@
 
 ## rectangular-mesh-consolidation
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/402
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/403
+- status: library-shipped, workspace-pending — PR #403 open (892/1006/448 green, YELLOW acked 2026-07-23). Workspace leg = autolens_workspace_test jax_grad variant consolidation (2 files, FD certification = merge gate). Developer-repo cleanup + Gut stash DEFERRED on blackjax-smc-gradient-kernel claim.
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-mesh-consolidation
 - autonomy: supervised
 - prompt: active/rectangular_mesh_consolidation.md
