@@ -1,5 +1,22 @@
 # Active Tasks
 
+## env-inline-declarations
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/187
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/env-inline-declarations
+- autonomy: supervised
+- prompt: active/env_inline_declarations.md
+- note: Phase 1b of 2026-07-23 test-maintainability plan (1a=#185 MERGED). Mechanism-first: env_config declaration parser+validator (PyAutoHands PR 1), then per-repo override->declaration migrations (pilot autofit_workspace_test 9, then ag_test 15, al_test 21, autocti_test 0-confirm, user trio). Verify per repo: EMPTY resolved-env diff, empty base (same harness as #185: 674/0). Sizing override recorded on issue (repo-count proxy). COORDINATION: rectangular-mesh-consolidation plans future autolens_workspace_test leg — serialise on that repo if it activates first. Successors drafted, not issued: mirror_restructure_and_cull -> eyes_gallery_repoint; independent: test_results_relayout.
+- repos:
+  - PyAutoHands: feature/env-inline-declarations
+  - autolens_workspace_test: feature/env-inline-declarations
+  - autogalaxy_workspace_test: feature/env-inline-declarations
+  - autofit_workspace_test: feature/env-inline-declarations
+  - autocti_workspace_test: feature/env-inline-declarations
+  - autolens_workspace: feature/env-inline-declarations
+  - autofit_workspace: feature/env-inline-declarations
+  - autogalaxy_workspace: feature/env-inline-declarations
+
 ## rectangular-mesh-consolidation
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/402
 - status: library-dev
