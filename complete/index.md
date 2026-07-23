@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-706 records across 6 buckets.
+707 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -276,6 +276,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [remove-dead-copy-files](2026/07/remove-dead-copy-files.md)
 - [remove-nss-sampler](2026/07/remove-nss-sampler.md) — ALL phases MERGED + dev-clean
 - [remove-pulse-compat](2026/07/remove-pulse-compat.md)
+- [rename-autobuild-to-autohands](2026/07/rename-autobuild-to-autohands.md) — renamed the Hands payload package and CLI `autobuild` -> `autohands`, closing the seam left by the earlier PyA…
 - [results-inspector-mcp](2026/07/results-inspector-mcp.md) — Read-only results-inspector MCP stdio server in both assistants — 7 core tools over PyAutoFit output dirs (lis…
 - [retire-complete-ledger](2026/07/retire-complete-ledger.md) — complete.md retired — the dated records ARE the ledger; first record written via the new record --from-file pa…
 - [review-faculty](2026/07/review-faculty.md)
