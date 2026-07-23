@@ -5,16 +5,27 @@
 ## env-profile-derivation
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/181
 - session: claude --resume e93a467a-04b3-445e-b05f-57766e69327a
-- status: step 4 MERGED (Hands#182 + al#203 + ag#85, 2026-07-23; live main 0/0 under strict flags). Step 5 at PR-open: PyAutoHeart#100 (strict validate step in the reusable smoke workflow — central, all 9 callers gate on merge, guarded on env_vars_release.yaml presence; acceptance verified exit-1 on injected override). Step 6 RE-SCOPED bigger than brief: rename sweep = ~14 repos/40+ live files (user workspaces ALSO have env_vars_release.yaml; 10 vendored run_smoke.py hardcode the name) — own session, needs discovery-with-fallback (prefer profile_smoke.yaml, fall back env_vars.yaml). Step 7 blocked on testmode-env-drift PyAutoFit claim. Step 8 = ASK HUMAN first, may be declined.
+- status: steps 4+5 MERGED (Hands#182, al#203, ag#85, Heart#100, 2026-07-23). Step 6 IN FLIGHT: stage 1 (dual-name tooling) MERGED = Hands#183 + Heart#101; stage 2 = 12 rename PRs OPEN awaiting CI then merge (autofit_ws#113, ag_ws#149, al_ws#323, af_wst#69, ag_wst#86, al_wst#204, HowToFit#30, HowToGalaxy#40, HowToLens#50, autocti_wst#7, euclid#34, Brain#154). VERIFIED: renamed profiles resolve byte-identical to origin/main old files over all 288 _test scripts; strict validator 0/0 ×3; global grep = only run_smoke.py legacy-fallback lines. Stage 3 (drop legacy fallbacks + validator errors on old names) = follow-up AFTER all 12 merge, recorded on #181. Step 7 blocked on testmode-env-drift PyAutoFit claim. Step 8 = ASK HUMAN first, may be declined.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/182 (Heart RED acked 2026-07-23: integrate-fail + 13f workspace validation + 33 stale parks, all pre-existing)
 - worktree: ~/Code/PyAutoLabs-wt/env-profile-derivation
 - autonomy: supervised
 - prompt: active/env_profile_migration_steps_4_to_8.md
 - note: env-profile migration STEP 4 only this session (derivation rule); steps 5-8 are later phases on #181 (step 7 queued behind testmode-env-drift's PyAutoFit claim; step 8 human-gated). Human decisions 2026-07-23: rename the 2 mid-stem _jit_ files (keep rule shape); scrape/ = triage NumPy first, folder rename only if JAX truly required. Merge order: PyAutoHands first, then al/ag workspace_test.
 - repos:
-  - PyAutoHands: feature/env-profile-derivation
-  - autolens_workspace_test: feature/env-profile-derivation
-  - autogalaxy_workspace_test: feature/env-profile-derivation
+  - PyAutoHands: feature/env-profile-rename (step-4 branch merged)
+  - PyAutoHeart: feature/env-profile-rename (merged)
+  - autolens_workspace_test: feature/env-profile-rename
+  - autogalaxy_workspace_test: feature/env-profile-rename
+  - autofit_workspace_test: feature/env-profile-rename
+  - autofit_workspace: feature/env-profile-rename
+  - autogalaxy_workspace: feature/env-profile-rename
+  - autolens_workspace: feature/env-profile-rename
+  - HowToFit: feature/env-profile-rename
+  - HowToGalaxy: feature/env-profile-rename
+  - HowToLens: feature/env-profile-rename
+  - autocti_workspace_test: feature/env-profile-rename
+  - euclid_strong_lens_modeling_pipeline: feature/env-profile-rename
+  - PyAutoBrain: feature/env-profile-rename
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
