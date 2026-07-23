@@ -1,3 +1,66 @@
+Removed all three per-project config fallbacks from `PyAutoHands/autobuild/config/`,
+making each workspace's `config/build/` the single source of truth. Started as a
+one-file question about `copy_files.yaml`; the user asked mid-run to extend the
+sweep to the HowTo\* and `_test` workspaces, which turned up two siblings — one of
+them a live crash.
+
+**9 PRs, all merged:** PyAutoHands#176 (the change), PyAutoBrain#149 (doc line),
+PyAutoMind#94 (`spawn.py` seeds `no_run.yaml` instead), and 6 workspace deletions
+(autofit_workspace#108, autogalaxy_workspace#145, autolens_workspace#316,
+autofit_workspace_test#65, autogalaxy_workspace_test#80,
+autolens_workspace_test#199).
+
+## What was removed, and why each was dead
+
+- **`copy_files.yaml`** — the copy-as-is mechanism, removed entirely. Every entry
+  was stale or empty, so `is_copy_file()` was unconditionally `False`. The
+  decisive proof was **zero `.py` files in any `notebooks/` tree** across all
+  build targets: `generate.py` rmtree's `notebooks/` and rebuilds it, and
+  copy-as-is was the only path that writes a `.py` there — so the feature had
+  produced no output in any build.
+- **`visualise_notebooks.yaml`** — a **comment-only husk**, so `yaml.safe_load`
+  returned `None` and `run.py` called `None.get(project)` →
+  `AttributeError`. This **crashed `autobuild run <target> --visualise`** for the
+  four targets lacking their own file (HowToFit, HowToGalaxy, HowToLens, euclid).
+  Reproduced on `main`, then fixed. `copy_files` used `.get(...) or []` and
+  survived; this call site omitted the `or []` *after* the `.get`.
+- **`no_run.yaml`** — unreachable (all 10 targets already owned one) but holding
+  ~50 lines of stale duplicated skip rules that silently no-op'd when edited.
+
+`workspaces.yaml` was kept: it is build *policy* (the run matrix), not config.
+
+## Traps recorded
+
+- **A comment-only YAML loads as `None`, not `{}`.** That is what made the
+  visualise fallback a crash rather than a no-op.
+- **There are TEN build targets, not 9** — `workspaces.yaml` also lists `euclid`
+  → `euclid_strong_lens_modeling_pipeline`. Enumerate from `workspaces.yaml`,
+  never from a directory listing. I initially missed it.
+- **`run.py` now REQUIRES `config/build/no_run.yaml`** (raises
+  `FileNotFoundError`). That is why `spawn.py` had to *swap* its emission to
+  `no_run.yaml` rather than just drop `copy_files.yaml` — otherwise every newly
+  spawned workspace would fail its first build.
+- The two deleted precedence tests **never imported `generate.py`** — they
+  re-implemented its if/else inline and asserted on their own fixture, testing a
+  *copy* of the logic. No real coverage was lost.
+
+## Verification
+
+132/132 PyAutoHands tests pass on merged `main`. Behaviour-preservation was
+proved empirically rather than assumed: regenerating `autofit_workspace` **and**
+`HowToLens` (a target that genuinely used the deleted fallback) produced
+byte-identical `notebooks/` trees versus `main`.
+
+## Process note
+
+The Brain Feature Agent scored this `too-large (25)` and proposed a 4-phase split
+with a design phase. Overridden — the score tracked the 9-repo count, not
+complexity (~13 lines of code removed), and the flagged "public-API ripple" risk
+did not apply since `is_copy_file` was module-local and its branch provably never
+taken. The standard 2-wave library-first split was the right shape.
+
+## Original prompt
+
 # Remove the dead copy_files.yaml build-config mechanism
 
 Type: refactor

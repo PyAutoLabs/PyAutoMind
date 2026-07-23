@@ -1,22 +1,5 @@
 # Active Tasks
 
-## remove-dead-copy-files
-- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/175
-- status: SHIPPED — 9 PRs OPEN awaiting merge. MERGE ORDER: PyAutoHands#176 FIRST, then Brain#149 + Mind#94, then the 6 workspace PRs (autofit_workspace#108, autogalaxy_workspace#145, autolens_workspace#316, autofit_workspace_test#65, autogalaxy_workspace_test#80, autolens_workspace_test#199). SCOPE GREW from copy_files alone to ALL THREE autobuild/config fallbacks after the user asked to extend the sweep to HowTo/_test. copy_files: inert (every entry stale/empty, is_copy_file unconditionally False, ZERO .py in any notebooks/ tree across all TEN build targets — workspaces.yaml also lists euclid, which I'd initially missed). visualise_notebooks: the fallback was a COMMENT-ONLY husk so safe_load→None and run.py did None.get(project) → AttributeError CRASH on `--visualise` for the 4 targets lacking their own file (HowToFit/HowToGalaxy/HowToLens/euclid) — reproduced then fixed. no_run: UNREACHABLE (all 10 targets own one) but held ~50 lines of stale duplicated skip rules that silently no-op'd when edited. VERIFIED: 132/132 tests; regenerating autofit_workspace AND HowToLens (a target that USED the fallback) gives byte-identical notebooks/ trees vs main.
-- worktree: ~/Code/PyAutoLabs-wt/remove-dead-copy-files
-- autonomy: supervised (--auto; effective = min(header supervised, refactor cap safe))
-- prompt: active/remove_dead_copy_files_build_config.md
-- note: TRAP for future config work — `autobuild/config/` now holds ONLY workspaces.yaml (build POLICY = the run matrix, NOT workspace config); config/build/ is the single source of truth. run.py now REQUIRES no_run.yaml (raises FileNotFoundError) — which is why Mind#94 makes spawn.py seed no_run.yaml instead of copy_files.yaml, else every spawned workspace fails its first build. KEPT: `copy_to_notebooks()` (normal convert path + .rst/.md sweeps call it) and the `<project>` CLI arg (help text blamed copy_files but it's really inject_colab_setup). The 2 deleted precedence tests never imported generate.py — they re-implemented its if/else inline, testing a COPY of the logic, so no real coverage lost. Brain scored this too-large(25) + proposed 4 phases — OVERRIDDEN (score driven by repo count, not complexity; no public API, branch provably never taken); 2-wave library-first split was right. NOTE: new test_copy_files_mechanism_fully_removed stays RED in a full local checkout until the 6 workspace PRs merge (passes in CI, siblings not checked out) — intended signal. Pre-existing unrelated failure on Brain main: test_every_public_agent_has_a_skill_wrapper (missing 'sizing' wrapper).
-- repos:
-  - PyAutoHands: feature/remove-dead-copy-files
-  - PyAutoBrain: feature/remove-dead-copy-files
-  - autofit_workspace: feature/remove-dead-copy-files
-  - autogalaxy_workspace: feature/remove-dead-copy-files
-  - autolens_workspace: feature/remove-dead-copy-files
-  - autofit_workspace_test: feature/remove-dead-copy-files
-  - autogalaxy_workspace_test: feature/remove-dead-copy-files
-  - autolens_workspace_test: feature/remove-dead-copy-files
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.

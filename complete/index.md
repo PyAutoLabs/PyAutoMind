@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-702 records across 6 buckets.
+703 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -270,6 +270,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [release-ships-simulated-datasets](2026/07/release-ships-simulated-datasets.md) — Group A — all 4 legs complete & MERGED; Group B separate
 - [release-stamping-slim](2026/07/release-stamping-slim.md)
 - [release-validation-tail-burndown](2026/07/release-validation-tail-burndown.md) — EPIC/capstone. Burned down the 18f/5t mode=release tail. All real correctness bugs fixed+merged+validated on w…
+- [remove-dead-copy-files](2026/07/remove-dead-copy-files.md)
 - [remove-nss-sampler](2026/07/remove-nss-sampler.md) — ALL phases MERGED + dev-clean
 - [remove-pulse-compat](2026/07/remove-pulse-compat.md)
 - [results-inspector-mcp](2026/07/results-inspector-mcp.md) — Read-only results-inspector MCP stdio server in both assistants — 7 core tools over PyAutoFit output dirs (lis…
