@@ -1,5 +1,22 @@
 # Active Tasks
 
+## remove-dead-copy-files
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/175
+- status: library-dev — starting. Removing the dead `copy_files.yaml` notebook-build mechanism. Deep dive PROVED it inert: every config entry stale or empty (autofit_workspace's 3 howtofit paths + autolens_workspace's hyper_mode/extensions.py exist in NO repo; 4 workspace files are `[]`; PyAutoHands fallback keyed dict has 4 keys ALL null incl. BSc_Galaxies_Project which isn't even in the workspace), so `is_copy_file()` is unconditionally False, and ZERO .py files exist in any notebooks/ tree across all 9 build targets (generate.py rmtree's notebooks/ and rebuilds, and copy-as-is is the only path writing a .py there — so it has produced nothing). Exhaustive grep across all repos/filetypes found no CI, release-pipeline, packaging or second-generate.py consumer. PR1 = PyAutoHands + 1 PyAutoBrain doc line; PR2 = 6 workspace yaml deletions after PR1 merges.
+- worktree: ~/Code/PyAutoLabs-wt/remove-dead-copy-files
+- autonomy: supervised (--auto; effective = min(header supervised, refactor cap safe))
+- prompt: active/remove_dead_copy_files_build_config.md
+- note: KEEP `copy_to_notebooks()` (normal convert path + .rst/.md sweeps call it) and KEEP the `<project>` CLI arg (help text justifies it via copy_files but it's really used by inject_colab_setup — only the text changes). The 2 doomed tests never import generate.py — they re-implement its if/else inline, so deleting them loses no real coverage; copy_files.yaml moves into `test_dead_autobuild_files_removed` alongside the notebooks_remove.yaml/env_vars.yaml precedent. Brain scored this too-large(25) + proposed 4 phases — OVERRIDDEN (score driven by 9-repo count, not complexity; no public API, branch provably never taken). DEFERRED: PyAutoMind scripts/spawn.py:523 + docs/pyautobrain/spawn_spec.md:76 still emit/spec the file — blocked on the arxiv-digest task's PyAutoMind claim (PR #93); file as follow-up once merged.
+- repos:
+  - PyAutoHands: feature/remove-dead-copy-files
+  - PyAutoBrain: feature/remove-dead-copy-files
+  - autofit_workspace: feature/remove-dead-copy-files
+  - autogalaxy_workspace: feature/remove-dead-copy-files
+  - autolens_workspace: feature/remove-dead-copy-files
+  - autofit_workspace_test: feature/remove-dead-copy-files
+  - autogalaxy_workspace_test: feature/remove-dead-copy-files
+  - autolens_workspace_test: feature/remove-dead-copy-files
+
 ## arxiv-digest-strong-lensing-term
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/92
 - status: PR #93 OPEN awaiting merge. Recall bug (NOT the #79 window bug, NOT a cat: bug): arXiv:2607.19459 says "strong gravitational lenses" / "gravitational lensing simulations", matching none of the 17 `_ABS` phrases. Fix = add abs:"strong gravitational lensing" (measured +5 papers since 2026-06-01; "gravitational lenses" would add 27, mostly weak-lensing/GW — rejected). Also added --livecheck: intersects the production QUERY with id_list of every paper a past query missed (#79 pair + this one), runs in the workflow before the fetch, does not age out; proven non-vacuous by removing the term. TRAP: the planned offline "abstract text matches a term" regression is IMPOSSIBLE — arXiv matched via stemming lensing<->lenses and the literal phrase is NOT in the abstract.
