@@ -4,7 +4,7 @@
 
 ## hygiene-orphan-config-files
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/155
-- status: library-dev — starting. Unblocked 2026-07-23: env-profile-rename's 6 blocking PRs all MERGED (PyAutoBrain#154 + 5 siblings) and that task's active.md entry was closed out by its own session while this worktree was building. ZERO file overlap regardless (that branch touched 6 docs/agent files, none `_hygiene_config.py`).
+- status: ALL 10 PRs OPEN awaiting merge (workspace_test smoke CI pending; PyAutoBrain has no CI, 16 tests passed locally). Part1 detector PyAutoBrain#156 (closes #155). Part2 cleanup: autocti_assistant#11 autocti_workspace#6 autocti_workspace_test#9 autofit_workspace_developer#24(Jammy2211) autofit_workspace_test#71 autogalaxy_workspace_test#88 autolens_assistant#89 autolens_workspace_test#206 euclid#35. ACCEPTANCE PASSED: detector re-finds real pre-#317 grids.yaml blob + flags non_linear today + silent on build/priors. DETECTOR FOUND A THIRD CLUSTER not in the brief: visualize/include.yaml dead in 2 test repos (no lib ships it, nothing reads conf visualize.include, no Include2D class, user-facing dropped it) — folded into autogalaxy_workspace_test#88 + autolens_workspace_test#206. EDGE CASE recorded: autofit_workspace_developer config shares no live file so mirror-heuristic skips it; its 2 dead files swept manually (a config tree that is ENTIRELY dead orphans is invisible to a mirror-based check). CTI test config (test_autocti/config/non_linear.yaml) is a FILE not a dir — untouched.
 - worktree: ~/Code/PyAutoLabs-wt/hygiene-orphan-config-files
 - autonomy: supervised
 - prompt: active/hygiene_orphan_config_files.md
