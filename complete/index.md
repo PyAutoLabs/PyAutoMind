@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-705 records across 6 buckets.
+706 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -218,6 +218,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [nightly-release-implementation](2026/07/nightly-release-implementation.md)
 - [nnls-bpp-admm-experiment](2026/07/nnls-bpp-admm-experiment.md) — BPP and ADMM prototyped against the real systems as PDIP alternatives; BOTH FAILED gates. BPP: sign-init 95% c…
 - [nnls-solver-optimization](2026/07/nnls-solver-optimization.md) — NNLS positive-only solver optimization. Phase A on real extracted production systems (rect n=1581 / Delaunay n…
+- [no-run-config-purge](2026/07/no-run-config-purge.md)
 - [opus-wrapup](2026/07/opus-wrapup.md) — executed on Fable
 - [per-frame-psf](2026/07/per-frame-psf.md) — per-frame native ePSFs live (psf/frame_epsf.py: sky-subtracted, DQ local-median patch in ESTIMATOR input only …
 - [per-project-literature](2026/07/per-project-literature.md) — task 3 of the autolens_assistant batch — hybrid literature rule live: Create scaffolds wiki/project/bibliograp…
