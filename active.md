@@ -2,6 +2,25 @@
 
 
 
+## hygiene-orphan-config-files
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/155
+- status: library-dev — starting. Unblocked 2026-07-23: env-profile-rename's 6 blocking PRs all MERGED (PyAutoBrain#154 + 5 siblings) and that task's active.md entry was closed out by its own session while this worktree was building. ZERO file overlap regardless (that branch touched 6 docs/agent files, none `_hygiene_config.py`).
+- worktree: ~/Code/PyAutoLabs-wt/hygiene-orphan-config-files
+- autonomy: supervised
+- prompt: active/hygiene_orphan_config_files.md
+- note: Part 1 (PyAutoBrain) = reachability-based orphan-config-FILE check in `_hygiene_config.py` + owner-map suppression (build/* -> PyAutoHands, priors/* -> JSONPriorConfig path) + test coverage. ACCEPTANCE: flag grids.yaml on pre-#317 tree + non_linear today, silent on build/* and priors/*. Part 2 = delete ~26 dead `non_linear/{nest,mle,mcmc}.yaml` across 9 repos (verified 2026-07-23 nothing reads conf.instance["non_linear"] for them; Nautilus defaults from Python sig search.py:41 n_live=3000 vs yaml 200). GridSearch.yaml IS live — keep. autocti repos have the real failure mode (test conftest points conf.instance at test_autocti/config/) — run their suites after deleting.
+- repos:
+  - PyAutoBrain: feature/hygiene-orphan-config-files
+  - autocti_assistant: feature/hygiene-orphan-config-files
+  - autocti_workspace: feature/hygiene-orphan-config-files
+  - autocti_workspace_test: feature/hygiene-orphan-config-files
+  - autofit_workspace_developer: feature/hygiene-orphan-config-files
+  - autofit_workspace_test: feature/hygiene-orphan-config-files
+  - autogalaxy_workspace_test: feature/hygiene-orphan-config-files
+  - autolens_assistant: feature/hygiene-orphan-config-files
+  - autolens_workspace_test: feature/hygiene-orphan-config-files
+  - euclid_strong_lens_modeling_pipeline: feature/hygiene-orphan-config-files
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
