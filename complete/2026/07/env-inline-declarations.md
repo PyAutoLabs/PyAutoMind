@@ -1,3 +1,70 @@
+## Outcome — SHIPPED, 7 PRs merged 2026-07-23
+
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/187 (closed).
+Merged: PyAutoHands#188 (mechanism: `# ENV:` parser + apply_profile hook +
+validator, merged FIRST), autofit_workspace_test#72 (pilot),
+autogalaxy_workspace_test#89, autolens_workspace_test#207,
+autolens_workspace#326, autogalaxy_workspace#152 (migrations), then
+PyAutoHeart#104 (CI flag flip — deliberately last). autocti_workspace_test +
+autofit_workspace: nothing to ship (verified clean). Shipped under
+human-acknowledged Heart YELLOW (workspace-validation backlog + 33 stale
+parks, both pre-existing).
+
+**231 scripts now declare env intent in-file**; the failure class "script
+moved → override silently orphaned → wrong env" is structurally closed:
+declarations travel with files, apply LAST in resolution (no profile pattern
+can defeat them), and `--strict-declarations` in the PR gate errors on new
+declarable pattern-overrides.
+
+## Design decisions that mattered
+
+- **UNSET semantics** (not set-"0"): mirrors the old unset-overrides exactly →
+  smoke resolution byte-identical to HEAD (provable no-op); reader semantics
+  verified absent ≡ "0"/off for all four vars (test_mode.py:14,
+  analysis.py:68, mask_2d.py:363 et al., plot/utils.py:15 et al.).
+- **Smoke-profile overrides only migrated.** Release-only `set:{VAR:"0"}`
+  overrides are profile POLICY (release fidelity), not script intent — a
+  profile-agnostic declaration would have changed smoke behaviour. Left.
+- **The jax-on-unmarked carve-out**: an override unsetting DISABLE_JAX that
+  matches non-jax-marked scripts (al_test `database/scrape/`) CANNOT migrate —
+  release would flip "1"→absent = numpy→JAX, a real behaviour change. The
+  validator's strict check skips exactly this shape.
+- **Diff gate with one equivalence class**: literal equality except
+  (declarable var, old "0" → new absent). Zero violations across 7 repos ×
+  both profiles.
+- **CI flag flip sequenced last** — flipping before the migrations merged
+  would have failed their own PR CI.
+
+## Residual overrides (legitimate, by design)
+
+autofit_workspace_test `features/assertion` (set TEST_MODE "1");
+al_test `database/scrape/` (jax-on-unmarked); autofit_workspace's two
+plotter overrides (release pins TEST_MODE=1 + non-declarable
+PYAUTO_SKIP_FIT_OUTPUT); mixed remainders keep only non-declarable vars
+(PYAUTO_SKIP_FIT_OUTPUT, PYAUTO_SKIP_VISUALIZATION); all release-profile
+`set:` overrides. Non-declarable skip vars are a possible future token
+extension if they ever churn.
+
+## Gotchas
+
+- Declarations are PROFILE-AGNOSTIC — before migrating any per-profile
+  override, check the OTHER profile's resolution for the matched scripts.
+- 189 PyAutoHands tests (26 new). Harnesses:
+  scratchpad verify_declarations.py pattern (old = HEAD profile with
+  declarations monkeypatched off; new = worktree; empty base).
+- autogalaxy_workspace push hit one 90s timeout; single retry clean.
+
+## Follow-ups
+
+- Phase 2 (next): mirror restructure + cull of autolens_workspace_test —
+  draft/refactor/autolens_workspace_test/mirror_restructure_and_cull.md.
+  Restructure is now near-free (declarations travel with files).
+- Then: eyes_gallery_repoint, test_results_relayout (drafted).
+- Optional future: extend token vocabulary to the non-declarable skip vars
+  if their override lists ever churn.
+
+## Original prompt
+
 # In-file `# ENV:` declarations: script env requirements travel with the script (Phase 1b)
 
 Type: feature
