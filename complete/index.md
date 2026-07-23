@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-708 records across 6 buckets.
+709 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -46,6 +46,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [auto-dev-mode](2026/07/auto-dev-mode.md)
 - [autocti-assistant](2026/07/autocti-assistant.md) — closed
 - [autofit-assistant-birth](2026/07/autofit-assistant-birth.md) — autofit_assistant born PUBLIC and fully built in one --auto supervised session (launch gates: public at birth,…
+- [autofit-dead-env-knobs](2026/07/autofit-dead-env-knobs.md)
 - [autofit-navigator-catalogue-refresh](2026/07/autofit-navigator-catalogue-refresh.md) — Regenerated the stale navigator catalogue (llms-full.txt + workspace_index.json), clearing the Navigator Check…
 - [autofit-navigator-catalogue-staleness](2026/07/autofit-navigator-catalogue-staleness.md) — regenerate — MERGED
 - [autofit-smoke-optax-jax](2026/07/autofit-smoke-optax-jax.md)
