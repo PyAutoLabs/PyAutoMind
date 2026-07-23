@@ -1,5 +1,15 @@
 # Active Tasks
 
+## rectangular-mesh-consolidation
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/402
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/rectangular-mesh-consolidation
+- autonomy: supervised
+- prompt: active/rectangular_mesh_consolidation.md
+- note: Kernel-CDF meshes take over the plain names RectangularAdaptDensity/AdaptImage; linear/spline/rotated + density_components deleted from source (Gut refs). Brain scored too-large/4-phase off repo count — OVERRIDE recorded: standard library→workspace two-leg (workspace leg collapses to test/dev cleanup since user workspaces keep the plain names, zero code edits). Library leg: PyAutoArray primary; PyAutoGalaxy/PyAutoLens expected zero-diff (verify by test suite). Workspace leg AFTER library merge: autolens_workspace_test jax_grad variant consolidation (FD certification = gate); autolens_workspace_developer stash→PyAutoGut BLOCKED on blackjax-smc-gradient-kernel claim — do last/coordinate. Autodiff evidence + full file-level plan on the issue.
+- repos:
+  - PyAutoArray: feature/rectangular-mesh-consolidation
+
 
 
 ## env-resolver-unification
