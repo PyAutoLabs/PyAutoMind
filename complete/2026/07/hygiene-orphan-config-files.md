@@ -1,3 +1,20 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/155
+- library-pr:
+  - PyAutoLabs/PyAutoBrain#156
+- workspace-pr:
+  - PyAutoLabs/autocti_assistant#11
+  - PyAutoLabs/autocti_workspace#6
+  - PyAutoLabs/autocti_workspace_test#9
+  - Jammy2211/autofit_workspace_developer#24
+  - PyAutoLabs/autofit_workspace_test#71
+  - PyAutoLabs/autogalaxy_workspace_test#88
+  - PyAutoLabs/autolens_assistant#89
+  - PyAutoLabs/autolens_workspace_test#206
+  - PyAutoLabs/euclid_strong_lens_modeling_pipeline#35
+- notes: Closed the /hygiene orphan-config-FILE blind spot recorded as the open follow-up of the grids.yaml removal (autolens_workspace#317). `_hygiene_config.py` iterated only LIBRARY yamls and skipped any without a workspace counterpart, so a workspace config file the libraries never shipped was structurally invisible — how dead grids.yaml survived ~1yr in 10 repos. THE SIGNAL: the earlier prototype flagged by FILENAME orphanhood (~120 hits, nearly all legit) and was rightly abandoned; the honest test is REACHABILITY (does anything READ it), which separates the noise by OWNER — build/* -> PyAutoHands (suppress), priors/* -> JSONPriorConfig class-path resolution (suppress), non_linear/{nest,mle,mcmc} -> nothing (DEAD). Suppression = explicit ORPHAN_OWNERS map IN the checker, deliberately NOT a per-repo .hygieneignore (20 files + a staleable config surface = the failure mode being fixed). THE ELEGANT PART: the library's own shipped set IS the reachability oracle — it ships non_linear/GridSearch.yaml (live) but not nest/mle/mcmc (dead), so orphan-vs-library-set keeps the live one and surfaces the dead ones with ZERO per-file rules. Mirror self-scoping (scan only repos whose config shares >=1 file with the lib set) excludes organ repos with no hardcoded list. ACCEPTANCE (non-negotiable, all passed): reconstructed the REAL pre-#317 grids.yaml blob (git cat-file -p ce99ca12b^:config/grids.yaml) in a temp tree and proved the detector re-finds it; flags non_linear today; silent on build/priors. 16 tests pass. THE DETECTOR FOUND A THIRD DEAD CLUSTER not in the brief: visualize/include.yaml in 2 test repos (no lib ships it, nothing reads conf visualize.include, no Include2D class, user-facing workspaces already dropped it) — folded into the cleanup. Post-merge the detector reports 0 orphan files on synced main (was 26+2); only 19 pre-existing key-mirror items remain. EDGE CASE recorded: autofit_workspace_developer config shares no live file so the mirror-heuristic skips it — its 2 dead files swept manually (a config tree that is ENTIRELY dead orphans is invisible to a mirror check). GOTCHAS: autofit_workspace_developer is owned by Jammy2211 not PyAutoLabs (PyAutoLabs gh api pulls 404'd — resolve owner from git remote); PyAutoCTI/test_autocti/config/non_linear.yaml is a FILE not a dir (different layout, untouched); 2 assistant PRs merged with PRE-EXISTING unrelated red (wiki-currency drift + boundary's 4 unclassified docs/images files — both fail on every recent PR to those repos, neither required, did not block earlier grids.yaml merge). This task was env-profile-derivation-blocked earlier the same day; unblocked when its 6 rename PRs merged.
+
+## Original prompt
+
 # Give /hygiene sight of orphan config FILES (reachability, not filename match)
 
 Type: feature

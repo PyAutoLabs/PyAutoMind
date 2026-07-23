@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-711 records across 6 buckets.
+712 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -143,6 +143,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [human-led-tone-sweep](2026/07/human-led-tone-sweep.md) — human-led natural-language framing landed on the agentic-AI pitch surfaces — org front page (.github PRs #1+#2…
 - [hygiene-agent](2026/07/hygiene-agent.md) — Phases 1-3 — conductor complete
 - [hygiene-file-modes](2026/07/hygiene-file-modes.md) — crlf / config / artifacts — complete
+- [hygiene-orphan-config-files](2026/07/hygiene-orphan-config-files.md)
 - [hygiene-perf-phase4](2026/07/hygiene-perf-phase4.md) — unit-test / workspace-testmode / function profiling — complete
 - [import-time-heart-leg](2026/07/import-time-heart-leg.md) — hygiene follow-up — complete
 - [inject-alma-simobserve](2026/07/inject-alma-simobserve.md)

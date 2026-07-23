@@ -2,25 +2,6 @@
 
 
 
-## hygiene-orphan-config-files
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/155
-- status: ALL 10 PRs OPEN awaiting merge (workspace_test smoke CI pending; PyAutoBrain has no CI, 16 tests passed locally). Part1 detector PyAutoBrain#156 (closes #155). Part2 cleanup: autocti_assistant#11 autocti_workspace#6 autocti_workspace_test#9 autofit_workspace_developer#24(Jammy2211) autofit_workspace_test#71 autogalaxy_workspace_test#88 autolens_assistant#89 autolens_workspace_test#206 euclid#35. ACCEPTANCE PASSED: detector re-finds real pre-#317 grids.yaml blob + flags non_linear today + silent on build/priors. DETECTOR FOUND A THIRD CLUSTER not in the brief: visualize/include.yaml dead in 2 test repos (no lib ships it, nothing reads conf visualize.include, no Include2D class, user-facing dropped it) — folded into autogalaxy_workspace_test#88 + autolens_workspace_test#206. EDGE CASE recorded: autofit_workspace_developer config shares no live file so mirror-heuristic skips it; its 2 dead files swept manually (a config tree that is ENTIRELY dead orphans is invisible to a mirror-based check). CTI test config (test_autocti/config/non_linear.yaml) is a FILE not a dir — untouched.
-- worktree: ~/Code/PyAutoLabs-wt/hygiene-orphan-config-files
-- autonomy: supervised
-- prompt: active/hygiene_orphan_config_files.md
-- note: Part 1 (PyAutoBrain) = reachability-based orphan-config-FILE check in `_hygiene_config.py` + owner-map suppression (build/* -> PyAutoHands, priors/* -> JSONPriorConfig path) + test coverage. ACCEPTANCE: flag grids.yaml on pre-#317 tree + non_linear today, silent on build/* and priors/*. Part 2 = delete ~26 dead `non_linear/{nest,mle,mcmc}.yaml` across 9 repos (verified 2026-07-23 nothing reads conf.instance["non_linear"] for them; Nautilus defaults from Python sig search.py:41 n_live=3000 vs yaml 200). GridSearch.yaml IS live — keep. autocti repos have the real failure mode (test conftest points conf.instance at test_autocti/config/) — run their suites after deleting.
-- repos:
-  - PyAutoBrain: feature/hygiene-orphan-config-files
-  - autocti_assistant: feature/hygiene-orphan-config-files
-  - autocti_workspace: feature/hygiene-orphan-config-files
-  - autocti_workspace_test: feature/hygiene-orphan-config-files
-  - autofit_workspace_developer: feature/hygiene-orphan-config-files
-  - autofit_workspace_test: feature/hygiene-orphan-config-files
-  - autogalaxy_workspace_test: feature/hygiene-orphan-config-files
-  - autolens_assistant: feature/hygiene-orphan-config-files
-  - autolens_workspace_test: feature/hygiene-orphan-config-files
-  - euclid_strong_lens_modeling_pipeline: feature/hygiene-orphan-config-files
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
