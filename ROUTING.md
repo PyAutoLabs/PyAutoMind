@@ -35,7 +35,7 @@ The canonical list of repos (with GitHub home, category and role) is
 
 The second folder names the affected repo or domain, e.g. `autoarray`, `autofit`,
 `autogalaxy`, `autolens`, `autolens_assistant`, `autolens_profiling`,
-`autolens_workspace_developer`, `autobuild`, `pyautobrain`; the workspace bucket
+`autolens_workspace_developer`, `autohands`, `pyautobrain`; the workspace bucket
 `workspaces`; or a topic series kept together as a unit (`jax_substructure`,
 `weak`, `cluster`, `priors`).
 
