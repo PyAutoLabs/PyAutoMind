@@ -11,6 +11,7 @@
 - prompt: active/env_profile_migration_steps_4_to_8.md
 - note: env-profile migration STEP 4 only this session (derivation rule); steps 5-8 are later phases on #181 (step 7 queued behind testmode-env-drift's PyAutoFit claim; step 8 human-gated). Human decisions 2026-07-23: rename the 2 mid-stem _jit_ files (keep rule shape); scrape/ = triage NumPy first, folder rename only if JAX truly required. Merge order: PyAutoHands first, then al/ag workspace_test.
 - repos:
+  - PyAutoHands: feature/env-profile-derivation
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
