@@ -1,5 +1,16 @@
 # Active Tasks
 
+## test-mirror-restructure
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/211
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/test-mirror-restructure
+- autonomy: supervised
+- heart-ack: 2026-07-23 human acknowledged YELLOW for overnight run + ship: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
+- prompt: active/mirror_restructure_and_cull.md
+- note: Phase 2 of test-maintainability plan. MOVE-ONLY tonight (zero deletions): mirror taxonomy per 2026-07-23 survey mapping; gallery STAYS (Eyes coupling); profiling STAYS (autolens_workspace_developer claimed by blackjax-smc-gradient-kernel — move deferred to when that ships); cull = SEPARATE human decision list posted to issue #211, nothing deleted without human. Gates: per-script resolved env + should_skip identical under new paths; smoke_tests.txt entries exist; validator all-strict 0; git mv history. Sizing override again (score 12 repo-count proxy; uniform mechanical moves).
+- repos:
+  - autolens_workspace_test: feature/test-mirror-restructure
+
 ## rectangular-mesh-consolidation
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/402
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/403
