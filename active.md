@@ -4,7 +4,7 @@
 
 ## env-resolver-unification
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/185
-- status: workspace-dev
+- status: IMPLEMENTATION COMPLETE, uncommitted in worktree — SHIP BLOCKED at Heart gate (RED: "release validation FAILED (stage integrate)"; this task is not the RED fix, so corrective-PR exception does not apply). Verified: 674 resolved-env entries, 0 diffs; 15/15 validator tests; all 6 repos + Family-A strict controls validate clean. Scope corrections on issue comment. RESUME: on human ship authorization or RED clearing, run ship_workspace (drafts + delegated commit/push/PR per repo; note autofit_workspace_test has NO changes — no PR for it).
 - worktree: ~/Code/PyAutoLabs-wt/env-resolver-unification
 - autonomy: supervised
 - prompt: active/env_resolver_family_b_unification.md
