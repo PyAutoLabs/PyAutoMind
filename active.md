@@ -2,6 +2,26 @@
 
 
 
+## env-vars-profile-key-order
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/321
+- status: workspace-dev — starting. One canonical `defaults:` key order for every `config/build/env_vars*.yaml`; 5 release profiles reorder, 12 files comment-column align only.
+- worktree: ~/Code/PyAutoLabs-wt/env-vars-profile-key-order
+- autonomy: supervised
+- prompt: active/env_vars_profile_key_order.md
+- note: PROVABLY A NO-OP — `defaults` is applied by plain dict iteration (PyAutoHands/autobuild/env_config.py:68) so order is semantically irrelevant; `overrides:` (ordered pattern list, order IS load-bearing) is NOT touched. Verify by diffing RESOLVED env over all scripts before/after via resolve_clean() in PyAutoHands/autobuild/validate_env_profiles.py — diff must be EMPTY. Brain Feature Agent said too-large/4-phases off the 11-repo count alone; overridden by judgment (cosmetic, no API surface). euclid_strong_lens_modeling_pipeline main has an unrelated dirty test_report.md.
+- repos:
+  - autolens_workspace: feature/env-vars-profile-key-order
+  - autogalaxy_workspace: feature/env-vars-profile-key-order
+  - autofit_workspace: feature/env-vars-profile-key-order
+  - autolens_workspace_test: feature/env-vars-profile-key-order
+  - autogalaxy_workspace_test: feature/env-vars-profile-key-order
+  - autofit_workspace_test: feature/env-vars-profile-key-order
+  - HowToLens: feature/env-vars-profile-key-order
+  - HowToGalaxy: feature/env-vars-profile-key-order
+  - HowToFit: feature/env-vars-profile-key-order
+  - euclid_strong_lens_modeling_pipeline: feature/env-vars-profile-key-order
+  - autocti_workspace_test: feature/env-vars-profile-key-order
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
