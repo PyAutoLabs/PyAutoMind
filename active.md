@@ -6,11 +6,14 @@
 - worktree: ~/Code/PyAutoLabs-wt/env-declaration-docstring-form
 - autonomy: supervised
 - prompt: active/env_declaration_docstring_form.md
-- note: Phase 1b follow-up from user feedback — __Env__ bottom-of-script docstring form for user workspaces (developer-only note, stripped from generated notebooks/markdown); _test repos keep '# ENV:' comments. MUST land before next pre_build (notebooks not yet regenerated with comment form). Gate: resolved-env diff IDENTICAL (pure syntax move). Phase 2 (mirror restructure) stays UN-ISSUED until this ships.
+- note: Phase 1b follow-up from user feedback — __Env__ docstring form is THE one API everywhere (user decision 2026-07-23): user workspaces = BOTTOM placement + developer-only note + stripped from generated notebooks/markdown; _test repos = NEAR TOP after module docstring (shorter template). Comment form stays parser-valid until all migrations merge, then flipped to validator error in a final change (avoids broken-CI window). MUST land before next pre_build. Gate: resolved-env diff IDENTICAL (pure syntax move). Phase 2 (mirror restructure) stays UN-ISSUED until this ships.
 - repos:
   - PyAutoHands: feature/env-declaration-docstring-form
   - autolens_workspace: feature/env-declaration-docstring-form
   - autogalaxy_workspace: feature/env-declaration-docstring-form
+  - autofit_workspace_test: feature/env-declaration-docstring-form
+  - autogalaxy_workspace_test: feature/env-declaration-docstring-form
+  - autolens_workspace_test: feature/env-declaration-docstring-form
 
 ## rectangular-mesh-consolidation
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/402
