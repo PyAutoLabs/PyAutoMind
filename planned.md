@@ -1,3 +1,24 @@
+## hygiene-orphan-config-files
+- issue: none yet (issued when unblocked)
+- planned: 2026-07-23
+- classification: feature (PyAutoBrain) + config cleanup across 9 workspace/test/assistant repos
+- suggested-branch: feature/hygiene-orphan-config-files
+- blocked-by: env-profile-derivation step 6 (`feature/env-profile-rename`, PyAutoBrain#154 OPEN) claims PyAutoBrain + autocti_workspace_test + autofit_workspace_test + autogalaxy_workspace_test + autolens_workspace_test + euclid_strong_lens_modeling_pipeline — 6 of this task's 10 repos. NOTE: zero FILE-level overlap (that branch touches 6 docs/agent files in PyAutoBrain, none of them `_hygiene_config.py` or `tests/test_hygiene_conductor.py`), so this is a claim-level block only. Unblocks the moment #154 and its sibling rename PRs merge.
+- prompt: draft/feature/pyautobrain/hygiene_orphan_config_files.md
+- summary: `/hygiene config` cannot see orphan config FILES — `_hygiene_config.py:67` skips any library yaml lacking a workspace counterpart, and the loop only iterates LIBRARY yamls, so a workspace file with no library counterpart is structurally invisible. That is how dead `grids.yaml` survived ~1yr in 10 repos. The earlier prototype flagged by FILENAME orphanhood (120 instances / 30 distinct, nearly all legitimate) and was correctly not shipped; the right signal is REACHABILITY (does anything READ it), which separates the noise by OWNER: `build/*` -> PyAutoHands (~39, legit), `priors/*` -> JSONPriorConfig path resolution (~40, legit), `non_linear/{nest,mle,mcmc}.yaml` -> NOTHING (~26, DEAD). Suppression = explicit owner map in the checker, deliberately NOT a per-repo .hygieneignore (20 new files + a config surface that can itself go stale = the failure mode being fixed). ACCEPTANCE TEST: must flag grids.yaml on the pre-deletion tree, flag non_linear today, stay silent on build/* and priors/*.
+- finding: `config/non_linear/{nest,mle,mcmc}.yaml` is DEAD in 9 repos — verified 2026-07-23 that no library reads `conf.instance["non_linear"]` for them (all 6 libs checked); Nautilus takes defaults from the Python signature (`search/nest/nautilus/search.py:41` `n_live: int = 3000`) while `nest.yaml` says `n_live: 200`. The 3 user-facing workspaces already dropped them. `non_linear/GridSearch.yaml` IS live — do not remove.
+- affected-repos:
+  - PyAutoBrain
+  - autocti_assistant
+  - autocti_workspace
+  - autocti_workspace_test
+  - autofit_workspace_developer
+  - autofit_workspace_test
+  - autogalaxy_workspace_test
+  - autolens_assistant
+  - autolens_workspace_test
+  - euclid_strong_lens_modeling_pipeline
+
 
 ## remote-mcp-deployment-tiers
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/20 (design/scope shipped 2026-07-21; build gated)
