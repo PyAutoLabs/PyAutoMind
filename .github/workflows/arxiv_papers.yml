@@ -68,6 +68,13 @@ jobs:
       - name: Self-test the announcement-band window
         run: python3 .github/scripts/arxiv_fetch.py --selftest
 
+      # Recall guard: asks arXiv whether today's query still returns the papers
+      # past versions of it missed (PyAutoMind#79, #92). Uses the same API as
+      # the fetch below, so it adds no new failure mode — only a real recall
+      # regression can fail it.
+      - name: Live-check the query against known missed papers
+        run: python3 .github/scripts/arxiv_fetch.py --livecheck
+
       - name: Fetch newly announced strong-lensing papers from arXiv
         id: fetch
         run: |
