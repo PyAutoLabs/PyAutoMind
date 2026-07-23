@@ -1,5 +1,15 @@
 # Active Tasks
 
+## rename-autobuild-to-autohands
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/177
+- session: claude --resume 9f2ec381-2106-4eeb-bb89-d0a2e4aaf550
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/rename-autobuild-to-autohands
+- autonomy: supervised (min of `supervised` header and the `safe` refactor cap)
+- prompt: active/rename_autobuild_to_autohands.md
+- note: EXPECT TO PARK AT THE SHIP GATE. Heart was RED (score 0) at launch — 13 test failures, 33 stale parked scripts, release validation integrate:fail. None caused by this task and the corrective-PR exception does not apply, so per AUTONOMY.md RED forbids commit/push/PR-open at every autonomy level. Landing is ATOMIC, no shim: merge order Hands -> Heart -> Brain -> workspaces, in one pass while CI is quiet, because the directory move breaks PyAutoHeart/workspace-validation.yml and every workspace run_smoke.py on merge. Brain Feature Agent said too-large(37)/split-into-phases; overridden with human approval (score is repo-count-driven and phases would violate atomic landing). PRESERVE: PyAutoBuild#NNN citations, rhayes777/PyAutoBuild url_fixups patterns, the pyautobuild->pyautohands policy alias, ~150 Mind historical records, planned.md:121 + dashboard.md:92 prompt-path pointers, and the two gitignored settings.local.json allowlists. Deep sweep caught PyAutoMind/scripts/repos_sync.py:558-570 (hard-coded autobuild dict keys, breaks silently) and ROUTING.md:38 as the only LIVE Mind files.
+- repos:
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
