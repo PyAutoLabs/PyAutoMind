@@ -2,16 +2,6 @@
 
 
 
-## purge-autoconf-era-legacy
-- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/137
-- status: PRs OPEN awaiting merge, CI green on both. #138 (steps 1-3, three atomic commits: tmp_path fix, EDEN removal, scripts/+priors/ removal; 151->149 passed, the 2 lost are test_generate's own). #136 TRIMMED+force-pushed to fixtures-only, retitled "test: re-anchor the version-handshake test fixtures" (151 passed). Step 0 done locally, no diff exists. #100 CLOSED after re-verifying all 12 PRs merged + behaviour live on main. PACKAGING DEVIATION from approved plan: steps 1-3 shipped as ONE PR with three atomic commits rather than three PRs — same revertability, one repo, one reviewer.
-- worktree: ~/Code/PyAutoLabs-wt/purge-autoconf-era-legacy
-- autonomy: supervised
-- prompt: active/purge_autoconf_era_legacy.md
-- note: `git grep -ril autoconf` over TRACKED files returns NOTHING — the autoconf sightings are untracked working-copy cruft, not tracked drift. But autoconf/ is pycache-only and STILL resolves as a namespace package (shadows imports), so it is not inert. bad/ is regenerated every test run by test_config.py:44 os.makedirs into CWD. edenise.py + convert_prior_configs.py are ALREADY broken on their own imports (autofit.tools.edenise removed; oyaml undeclared). GUARDRAIL: json_prior/config.py stays (live, re-exported from __init__); only sibling generate.py goes. GUARDRAIL: do NOT bump __version__ on main — wheels+tags-only per Build#118/#120, main is deliberately stale; that is why #136 is trimmed not merged. PyAutoFit/eden.yaml DESCOPED (PyAutoFit claimed by testmode-env-drift) — one-file follow-up, eden draft stays open.
-- repos:
-  - PyAutoNerves: feature/purge-autoconf-era-legacy
-
 ## env-profile-derivation
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/181
 - session: claude --resume e93a467a-04b3-445e-b05f-57766e69327a
