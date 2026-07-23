@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-710 records across 6 buckets.
+711 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -101,6 +101,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [ell-comps-kwargs-keyerror](2026/07/ell-comps-kwargs-keyerror.md)
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
 - [empty-hdu-scrape-and-latent-guard](2026/07/empty-hdu-scrape-and-latent-guard.md)
+- [env-profile-derivation](2026/07/env-profile-derivation.md) — Env-profile migration steps 4-8 (build-chain Phase 3 finale), 32 PRs in one day, all merged with branch+main C…
 - [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
 - [env-profile-validator](2026/07/env-profile-validator.md) — env-profile redesign migration step 1 (campaign #155 Phase 3): validate_env_profiles PR-time config check (sch…
 - [env-scrubbed-baseline](2026/07/env-scrubbed-baseline.md) — env-profile redesign migration step 3 — scrubbed base env. build_env_for_script strips the managed PYAUTO_ fam…
