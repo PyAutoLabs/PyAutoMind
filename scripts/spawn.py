@@ -521,12 +521,13 @@ def stamp_family(root, family_dir):
             "  workspace_version: 0.1.0\n"
         )
         (ws / "config" / "build").mkdir(exist_ok=True)
-        (ws / "config" / "build" / "copy_files.yaml").write_text(
-            "# Files copied verbatim into notebooks/ (not converted) by the notebook\n"
-            "# build (PyAutoHands generate.py reads this workspace-local list). List\n"
-            "# paths relative to scripts/, e.g.:\n"
+        (ws / "config" / "build" / "no_run.yaml").write_text(
+            "# Scripts/notebooks the build must NOT execute (PyAutoHands run.py\n"
+            "# reads this workspace-local list). Every workspace must own this\n"
+            "# file — run.py raises if it is missing — but an empty list is valid\n"
+            "# and skips nothing. List paths relative to scripts/, e.g.:\n"
             "#\n"
-            "# - util/helpers.py\n"
+            "# - gui/mask  # GUI scripts cannot be run headless\n"
             "[]\n"
         )
     return stamped
