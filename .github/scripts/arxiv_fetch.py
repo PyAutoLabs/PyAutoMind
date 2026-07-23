@@ -34,6 +34,14 @@ and 2607.12209, submitted Mon 2026-07-13 evening, announced Wed 00:00 UTC, and
 by then already too old for Wednesday's 24 h look-back (PyAutoMind#79). Setting
 LOOKBACK_HOURS restores the old rolling window for manual test-fires and
 backfills.
+
+The second recorded miss, 2607.19459 on 2026-07-21, was a *recall* failure, not
+a window one: its band and category were both correct, but its abstract says
+"strong gravitational lenses" and "gravitational lensing simulations" and never
+any of the phrases then in the query, so `"strong gravitational lensing"` was
+added to it (PyAutoMind#92). The two failure modes look identical from the
+outside — a paper that never appears — so when one is reported, check the band
+and `cat:` clause before assuming either.
 """
 import datetime as dt
 import json
@@ -60,18 +68,27 @@ DEADLINE_DAYS = {0, 1, 2, 3, 4}  # Mon-Fri
 # vocabulary (many strong-lensing papers never use the literal phrase "strong
 # lensing" — e.g. a lens-modelling / lensed-quasar paper), and the Claude step
 # downstream drops the handful of keyword false-positives. Deliberately omits
-# the broad catch-alls "gravitational lensing" / "weak lensing" / "microlensing"
-# so the net stays strong-lensing-shaped. `cat:` also matches cross-lists, so a
-# strong-lensing paper whose primary category is elsewhere (e.g. astro-ph.HE) is
-# still caught. Validated 2026-07-10: catches the Li+Collett WFI2033 lensed-quasar
-# paper that the narrow phrase-only query missed; ~1.5 papers/day, ~2 off-topic
-# per fortnight for Claude to drop.
+# the *bare* catch-alls "gravitational lensing" / "weak lensing" /
+# "microlensing" so the net stays strong-lensing-shaped; the qualified
+# "strong gravitational lensing" is kept, since the qualifier does that job
+# itself. `cat:` also matches cross-lists, so a strong-lensing paper whose
+# primary category is elsewhere (e.g. astro-ph.IM) is still caught. Validated
+# 2026-07-10: catches the Li+Collett WFI2033 lensed-quasar paper that the narrow
+# phrase-only query missed; ~1.5 papers/day, ~2 off-topic per fortnight for
+# Claude to drop.
+#
+# Note that arXiv stems most of these singular/plural pairs interchangeably
+# ("lensed galaxy"/"galaxies", "Einstein ring"/"rings", "lensed arc"/"arcs" each
+# return the same papers) — but "gravitational lens" does *not* match
+# "gravitational lenses", so do not assume a singular term covers its plural
+# when adding to this list; measure it.
 _ABS = [
-    "strong lensing", "strongly lensed", "gravitationally lensed",
-    "gravitational lens", "lensed quasar", "lensed galaxy", "lensed source",
-    "lensed images", "lensed arc", "Einstein ring", "Einstein radius",
-    "lens modelling", "lens modeling", "multiply imaged", "quadruply imaged",
-    "doubly imaged", "double source plane",
+    "strong lensing", "strong gravitational lensing", "strongly lensed",
+    "gravitationally lensed", "gravitational lens", "lensed quasar",
+    "lensed galaxy", "lensed source", "lensed images", "lensed arc",
+    "Einstein ring", "Einstein radius", "lens modelling", "lens modeling",
+    "multiply imaged", "quadruply imaged", "doubly imaged",
+    "double source plane",
 ]
 _TI = ["lens modelling", "lens modeling", "lensed quasar", "Einstein ring"]
 QUERY = (
@@ -206,6 +223,14 @@ def _selftest() -> int:
     ]:
         check(f"{name} falls in the Wed band", start < ts <= end)
 
+    # Regression (PyAutoMind#92): the term that recovers the 2607.19459 recall
+    # miss must stay in the query. This is all that can be asserted offline —
+    # arXiv matched that paper by stemming ("lensing" <-> "lenses"); its
+    # abstract literally contains only "strong gravitational lenses", so a
+    # substring test against the abstract text would wrongly fail. `--livecheck`
+    # asserts the real behaviour against the API.
+    check('_ABS keeps "strong gravitational lensing"', "strong gravitational lensing" in _ABS)
+
     # Cron only ever fires late: a run slipped 3 h must compute the same band.
     for nominal in ("2026-07-15T02:00:00+00:00", "2026-07-14T02:00:00+00:00"):
         base = dt.datetime.fromisoformat(nominal)
@@ -229,9 +254,56 @@ def _selftest() -> int:
     return 1 if failures else 0
 
 
+KNOWN_MATCHES = {
+    # Papers a past version of QUERY missed, kept as live recall regressions.
+    "2607.12129": "lensed-arc candidate in MACS J0308.9+2645 (PyAutoMind#79)",
+    "2607.12209": "NGC 6505 Einstein ring, OSN recovery (PyAutoMind#79)",
+    "2607.19459": "diffusion + RIM pixel-space lens posteriors (PyAutoMind#92)",
+}
+
+
+def _livecheck() -> int:
+    """Assert QUERY still matches every paper in KNOWN_MATCHES. Needs network.
+
+    `id_list` intersects with `search_query`, so this asks arXiv directly
+    "would today's query return this paper?" — independent of how long ago it
+    was published, unlike a look-back over recent results. Runs in the workflow
+    just before the fetch, which needs the same API anyway, so it adds no new
+    failure mode beyond a genuine recall regression.
+    """
+    params = urllib.parse.urlencode(
+        {
+            "search_query": QUERY,
+            "id_list": ",".join(KNOWN_MATCHES),
+            "max_results": len(KNOWN_MATCHES) * 2,
+        }
+    )
+    req = urllib.request.Request(
+        f"https://export.arxiv.org/api/query?{params}",
+        headers={"User-Agent": "PyAutoLabs-papers-digest/1.0"},
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        root = ET.fromstring(resp.read())
+    returned = {
+        (entry.findtext(f"{ATOM}id") or "").rsplit("/", 1)[-1].split("v")[0]
+        for entry in root.findall(f"{ATOM}entry")
+    }
+    missing = [i for i in KNOWN_MATCHES if i not in returned]
+    for arxiv_id, why in KNOWN_MATCHES.items():
+        hit = arxiv_id not in missing
+        print(f"  [{'ok' if hit else 'FAIL'}] {arxiv_id} — {why}", file=sys.stderr)
+    print(
+        f"livecheck: {'PASS' if not missing else f'{len(missing)} NO LONGER MATCHED'}",
+        file=sys.stderr,
+    )
+    return 1 if missing else 0
+
+
 def main() -> int:
     if "--selftest" in sys.argv:
         return _selftest()
+    if "--livecheck" in sys.argv:
+        return _livecheck()
 
     now = dt.datetime.now(dt.timezone.utc)
     # An explicit LOOKBACK_HOURS restores the legacy rolling window, for manual
