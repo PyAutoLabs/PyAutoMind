@@ -2,7 +2,7 @@
 
 ## env-inline-declarations
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/187
-- status: workspace-dev
+- status: AWAITING MERGE — 6 PRs open (YELLOW-ack ship 2026-07-23): Hands#188 (mechanism, merge FIRST), autofit_wst#72, autogalaxy_wst#89, autolens_wst#207, autolens_ws#326, autogalaxy_ws#152. No-change: autocti_wst, autofit_ws (verified clean). POST-MERGE: one-line PyAutoHeart PR adding --strict-declarations to smoke-tests.yml (all 7 repos already 0-error under it); then lifecycle record + drop entry + worktree cleanup; then issue Phase 2 (draft/refactor/autolens_workspace_test/mirror_restructure_and_cull.md).
 - worktree: ~/Code/PyAutoLabs-wt/env-inline-declarations
 - autonomy: supervised
 - heart-ack: 2026-07-23 human acknowledged YELLOW for ship: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
