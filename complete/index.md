@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-703 records across 6 buckets.
+704 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -86,6 +86,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [cti-resurrection-phase4](2026/07/cti-resurrection-phase4.md) — closed
 - [cti-resurrection-phase5](2026/07/cti-resurrection-phase5.md) — closed
 - [database-latent-wheel-load](2026/07/database-latent-wheel-load.md) — database scripts failed on release wheels loading latent variables → AssertionError. Release-tail item D. Corr…
+- [defunct-grids-yaml-removal](2026/07/defunct-grids-yaml-removal.md) — Deleted the 10 orphan `config/grids.yaml` copies plus 3 references (2 library `config/README.md` bullets, 1 `a…
 - [delaunay-qhull-callback](2026/07/delaunay-qhull-callback.md)
 - [delete_pyautoheart_shim](2026/07/delete_pyautoheart_shim.md)
 - [desktop-acceptance-mcp](2026/07/desktop-acceptance-mcp.md)

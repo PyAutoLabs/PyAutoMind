@@ -1,3 +1,22 @@
+## defunct-grids-yaml-removal
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/317
+- completed: 2026-07-23
+- prs: autolens_workspace#318, autogalaxy_workspace#146, autolens_workspace_test#200, autogalaxy_workspace_test#81, HowToLens#45, HowToGalaxy#36, autolens_assistant#87, autocti_assistant#8, euclid_strong_lens_modeling_pipeline#32, PyAutoCTI#97, PyAutoArray#401, PyAutoGalaxy#519 — ALL MERGED
+- summary: Deleted the 10 orphan `config/grids.yaml` copies plus 3 references (2 library `config/README.md` bullets, 1 `autocti_assistant/PENDING.md` TODO). The `radial_minimum:` mapping had been unread since PyAutoGalaxy `025ac7ac` "remove relocate_to_radial_minimum" (2025-10-15), which followed `82622f74` (2025-04-03); the library default configs already shipped none. Zero `.py` hits across all five libraries and zero hits in the installed venv. Two copies were self-evidently unread: autocti_assistant had the key misspelled `radiac_minimum` (clone sed artifact) and PyAutoCTI's still listed `EllipticalSersic`/`SphericalNFW` names retired years ago. Verified post-delete: PyAutoCTI 271 passed (its conftest points conf.instance at that dir — the only real failure mode), workspace config loads, and profiles return finite values at exactly (0,0), the case radial_minimum used to guard. Final sweep: zero hits outside Mind records.
+- gotchas:
+  - **RED acknowledgement must be sought against `pyauto-heart readiness --json`, NOT the `pyauto-brain vitals` summary.** The summary showed 1 RED reason; the JSON had 7. The human authorization was initially given against the 1-reason quote, which does not satisfy AUTONOMY.md — re-sought against the full verbatim list before any commit.
+  - `gh pr create` fails on this workspace's SSH remotes (`/usr/bin/git: exit status 128`) — used `gh api repos/O/R/pulls -X POST` for all 12.
+  - `gh api .../labels -X POST -f "labels[]=x"` returns **422** ("`labels[]` is not a permitted key"). Working form: `echo '{"labels":["x"]}' | gh api ... --input -`. The flag form fails silently if stderr is suppressed.
+  - Brain Feature Agent scored this `too-large (32)` → 4-phase split + library-first API handoff. Repo-count-driven false signal (same as rename-autobuild-to-autohands); no API surface existed. Overridden.
+  - `worktree_check_conflict` flagged 9 of 12 repos against two parked tasks; file-level overlap verified zero, ran concurrently.
+  - Two CI failures on merge were **pre-existing main defects**, both proven unrelated: autolens_assistant `boundary` (4 unclassified `docs/images/*` files, all on main) and autocti_assistant `wiki-currency` (main's `cecdb67` rewrote the checker to gate on API-surface hash and landed without a wiki-currency run; our PR was the first to exercise it).
+- follow-ups:
+  - **The `/hygiene config` audit has a structural blind spot** that let this orphan survive ~1 year: it diffs library config keys against workspace config keys, so a workspace config file with NO library counterpart is invisible to it. Sibling prompt `draft/maintenance/workspaces/config_key_mirror_drift.md` covers the opposite direction (keys missing from workspaces). Neither catches an orphan FILE.
+  - autocti_assistant `wiki-currency` is red on main and needs its own fix (see gotcha above).
+  - autolens_assistant `boundary` is red on main — 4 files need classifying in `modes/maintainer.md` + `_clone.py` REFERENCE_PROFILES.
+
+## Original prompt
+
 # Delete the defunct grids.yaml config across every workspace
 
 Type: maintenance
