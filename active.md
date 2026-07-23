@@ -2,6 +2,16 @@
 
 
 
+## env-profile-derivation
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/181
+- session: claude --resume e93a467a-04b3-445e-b05f-57766e69327a
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/env-profile-derivation
+- autonomy: supervised
+- prompt: active/env_profile_migration_steps_4_to_8.md
+- note: env-profile migration STEP 4 only this session (derivation rule); steps 5-8 are later phases on #181 (step 7 queued behind testmode-env-drift's PyAutoFit claim; step 8 human-gated). Human decisions 2026-07-23: rename the 2 mid-stem _jit_ files (keep rule shape); scrape/ = triage NumPy first, folder rename only if JAX truly required. Merge order: PyAutoHands first, then al/ag workspace_test.
+- repos:
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
