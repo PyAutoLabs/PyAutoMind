@@ -73,8 +73,9 @@ content):
 - `autoproject_workspace/config/general.yaml` — the version block shape
   (from the live `autolens_workspace` file, values reset:
   `workspace_version` → the placeholder `0000.0.0.0`).
-- `autoproject_workspace/config/build/copy_files.yaml` — empty list + usage
-  comment.
+- `autoproject_workspace/config/build/no_run.yaml` — empty list + usage
+  comment. Required: the build's `run.py` raises if a workspace has no
+  `no_run.yaml`.
 - `.github/workflows/smoke_tests.yml` thin caller (chain =
   `PyAutoProject` only — the template's deps come from PyPI) + starter
   `.github/scripts/smoke_install.sh` + a generic `run_smoke.py` runner +
