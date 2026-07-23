@@ -8,7 +8,26 @@
 - autonomy: supervised (min of `supervised` header and the `safe` refactor cap)
 - prompt: active/rename_autobuild_to_autohands.md
 - note: EXPECT TO PARK AT THE SHIP GATE. Heart was RED (score 0) at launch — 13 test failures, 33 stale parked scripts, release validation integrate:fail. None caused by this task and the corrective-PR exception does not apply, so per AUTONOMY.md RED forbids commit/push/PR-open at every autonomy level. Landing is ATOMIC, no shim: merge order Hands -> Heart -> Brain -> workspaces, in one pass while CI is quiet, because the directory move breaks PyAutoHeart/workspace-validation.yml and every workspace run_smoke.py on merge. Brain Feature Agent said too-large(37)/split-into-phases; overridden with human approval (score is repo-count-driven and phases would violate atomic landing). PRESERVE: PyAutoBuild#NNN citations, rhayes777/PyAutoBuild url_fixups patterns, the pyautobuild->pyautohands policy alias, ~150 Mind historical records, planned.md:121 + dashboard.md:92 prompt-path pointers, and the two gitignored settings.local.json allowlists. Deep sweep caught PyAutoMind/scripts/repos_sync.py:558-570 (hard-coded autobuild dict keys, breaks silently) and ROUTING.md:38 as the only LIVE Mind files.
+- caution: PyAutoMind is BOTH a worktree repo here (for repos_sync.py + ROUTING.md) and the task-state repo. Do every active.md / prompt_sync operation in the CANONICAL checkout (~/Code/PyAutoLabs/PyAutoMind, on main); only touch repos_sync.py + ROUTING.md inside the worktree. Different files, so they do not collide.
 - repos:
+  - PyAutoHands: feature/rename-autobuild-to-autohands
+  - PyAutoBrain: feature/rename-autobuild-to-autohands
+  - PyAutoHeart: feature/rename-autobuild-to-autohands
+  - autolens_workspace: feature/rename-autobuild-to-autohands
+  - autogalaxy_workspace: feature/rename-autobuild-to-autohands
+  - autofit_workspace: feature/rename-autobuild-to-autohands
+  - autolens_workspace_test: feature/rename-autobuild-to-autohands
+  - autogalaxy_workspace_test: feature/rename-autobuild-to-autohands
+  - autofit_workspace_test: feature/rename-autobuild-to-autohands
+  - autocti_workspace_test: feature/rename-autobuild-to-autohands
+  - HowToLens: feature/rename-autobuild-to-autohands
+  - HowToGalaxy: feature/rename-autobuild-to-autohands
+  - HowToFit: feature/rename-autobuild-to-autohands
+  - autolens_assistant: feature/rename-autobuild-to-autohands
+  - autofit_assistant: feature/rename-autobuild-to-autohands
+  - autocti_assistant: feature/rename-autobuild-to-autohands
+  - PyAutoMind: feature/rename-autobuild-to-autohands
+  - admin_jammy: feature/rename-autobuild-to-autohands
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
