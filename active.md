@@ -1,5 +1,15 @@
 # Active Tasks
 
+## arxiv-digest-strong-lensing-term
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/92
+- status: library-dev — starting. Recall bug (NOT the #79 window bug, NOT a cat: bug): arXiv:2607.19459 says "strong gravitational lenses" / "gravitational lensing simulations", matching none of the 17 `_ABS` phrases. Fix = add abs:"strong gravitational lensing" (measured +5 papers since 2026-06-01; "gravitational lenses" would add 27, mostly weak-lensing/GW — rejected).
+- worktree: none (branch in the PyAutoMind main checkout, per #79 precedent)
+- autonomy: safe
+- prompt: active/arxiv-digest-strong-gravitational-lensing-term.md
+- note: also measured that arXiv stems most `_ABS` singular/plural pairs interchangeably, but abs:"gravitational lens" does NOT match "gravitational lenses". Post-merge step = workflow_dispatch with lookback_hours~72 to backfill the paper into #papers (ASK first — it re-posts anything else in that window).
+- repos:
+  - PyAutoMind: feature/arxiv-digest-strong-lensing-term
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
