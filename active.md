@@ -5,7 +5,7 @@
 ## env-profile-derivation
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/181
 - session: claude --resume e93a467a-04b3-445e-b05f-57766e69327a
-- status: library-shipped, workspace-pending
+- status: workspace-dev (phases B+C)
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/182 (Heart RED acked 2026-07-23: integrate-fail + 13f workspace validation + 33 stale parks, all pre-existing)
 - worktree: ~/Code/PyAutoLabs-wt/env-profile-derivation
 - autonomy: supervised
@@ -13,6 +13,8 @@
 - note: env-profile migration STEP 4 only this session (derivation rule); steps 5-8 are later phases on #181 (step 7 queued behind testmode-env-drift's PyAutoFit claim; step 8 human-gated). Human decisions 2026-07-23: rename the 2 mid-stem _jit_ files (keep rule shape); scrape/ = triage NumPy first, folder rename only if JAX truly required. Merge order: PyAutoHands first, then al/ag workspace_test.
 - repos:
   - PyAutoHands: feature/env-profile-derivation
+  - autolens_workspace_test: feature/env-profile-derivation
+  - autogalaxy_workspace_test: feature/env-profile-derivation
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
