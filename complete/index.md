@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-704 records across 6 buckets.
+705 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -61,6 +61,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [build_ic50_assistant_from_autofit_assistant](2026/07/build_ic50_assistant_from_autofit_assistant.md)
 - [checkpoint-continue](2026/07/checkpoint-continue.md)
 - [clear-stale-needs-fix-parks](2026/07/clear-stale-needs-fix-parks.md)
+- [clone-skill-prefix-corruption](2026/07/clone-skill-prefix-corruption.md) — The Clone Agent's skill-prefix substitution (`al_ -> ac_`, from package initials) was applied by `clone_seed.s…
 - [cluster-likelihood-breakdown](2026/07/cluster-likelihood-breakdown.md)
 - [cluster-scaling-lenstool](2026/07/cluster-scaling-lenstool.md)
 - [cluster-small-datasets](2026/07/cluster-small-datasets.md)
