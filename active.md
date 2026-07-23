@@ -2,7 +2,7 @@
 
 ## arxiv-digest-strong-lensing-term
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/92
-- status: library-dev — starting. Recall bug (NOT the #79 window bug, NOT a cat: bug): arXiv:2607.19459 says "strong gravitational lenses" / "gravitational lensing simulations", matching none of the 17 `_ABS` phrases. Fix = add abs:"strong gravitational lensing" (measured +5 papers since 2026-06-01; "gravitational lenses" would add 27, mostly weak-lensing/GW — rejected).
+- status: PR #93 OPEN awaiting merge. Recall bug (NOT the #79 window bug, NOT a cat: bug): arXiv:2607.19459 says "strong gravitational lenses" / "gravitational lensing simulations", matching none of the 17 `_ABS` phrases. Fix = add abs:"strong gravitational lensing" (measured +5 papers since 2026-06-01; "gravitational lenses" would add 27, mostly weak-lensing/GW — rejected). Also added --livecheck: intersects the production QUERY with id_list of every paper a past query missed (#79 pair + this one), runs in the workflow before the fetch, does not age out; proven non-vacuous by removing the term. TRAP: the planned offline "abstract text matches a term" regression is IMPOSSIBLE — arXiv matched via stemming lensing<->lenses and the literal phrase is NOT in the abstract.
 - worktree: none (branch in the PyAutoMind main checkout, per #79 precedent)
 - autonomy: safe
 - prompt: active/arxiv-digest-strong-gravitational-lensing-term.md
