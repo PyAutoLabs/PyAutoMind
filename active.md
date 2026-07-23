@@ -2,6 +2,15 @@
 
 
 
+## env-resolver-unification
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/185
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/env-resolver-unification
+- autonomy: supervised
+- prompt: active/env_resolver_family_b_unification.md
+- note: Phase 1a of 2026-07-23 test-maintainability plan (drafted successors: env_inline_declarations → mirror_restructure_and_cull → eyes_gallery_repoint; independent: test_results_relayout — issue each as predecessor nears shipping, no bulk-issue). Sizing override recorded on issue: uniform 9-repo mechanical migration, NOT phased. Verify per repo by EMPTY resolved-env diff (resolve_clean, empty base). Supersedes draft/refactor/workspaces/unify_pyauto_env_injection_into_profiles.md (archive it in this task).
+- repos:
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
