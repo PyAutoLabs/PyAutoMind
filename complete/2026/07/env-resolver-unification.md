@@ -1,3 +1,70 @@
+## Outcome — SHIPPED, 8 PRs merged 2026-07-23
+
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/185 (closed).
+Merged (order mattered for the first pair): PyAutoHands#186 (validator: release
+profile optional), PyAutoHeart#103 (smoke-tests.yml validates every
+smoke-profile workspace), then HowToFit#32, HowToGalaxy#42, HowToLens#52,
+autolens_workspace#325, autofit_workspace#115, autogalaxy_workspace#151
+(run_smoke fork → shared `autohands/env_config.py` resolver).
+autofit_workspace_test shipped nothing (see corrections). Shipped under a
+human-authorized Heart-RED exception (RED = "release validation FAILED (stage
+integrate)", pre-existing and unrelated).
+
+## Verification
+
+- Resolved-env diff harness: OLD fork logic vs shared `apply_profile`, empty
+  base, over smoke lists ∪ smoke notebooks ∪ every `.py` under `scripts/` —
+  **674 entries across 6 repos, 0 diffs**. Only behavioural change is the
+  ambient `PYAUTO_*` scrub; verified nothing in the per-PR gate injects any
+  (no `PYAUTO_SKIP_WORKSPACE_VERSION_CHECK` injection in the reusable workflow
+  or callers — the old aged-draft concern applies to the mega-run path, which
+  already used env_config and was green 2026-07-21).
+- 15/15 validator tests (2 new: missing-smoke errors; smoke-only passes).
+- All 6 migrated repos validate clean (user trio under
+  `--strict-derivation --strict-markers`); Family-A strict controls
+  (autolens/autofit_workspace_test) still clean.
+- HowTo trio's migrated run_smoke.py is byte-identical to the Family-A
+  template; user trio preserved notebook machinery + the autogalaxy
+  `_BUILD_DIR` one-liner difference.
+
+## Corrections found during execution (both premise bugs, both verified)
+
+1. **Issue step 5 was stale**: autofit_workspace_test's release profile was
+   already redesigned 2026-07-15 (`PYAUTO_DISABLE_JAX: "0"` default,
+   `overrides: []`, in-file rationale why name-derivation is unneeded there —
+   af.Analysis defaults use_jax=False, scripts opt in). Dropped; zero changes
+   in that repo.
+2. **"Six exempt repos" was wrong**: the three user workspaces carry
+   `profile_release.yaml` and were already strict-validated; only the HowTo
+   trio was exempt — and `validate_env_profiles.py` hard-required BOTH
+   profiles, so closing the workflow exemption alone would have failed the
+   HowTos on `profile_release.yaml: missing`. Fix: release profile now
+   optional in `validate_workspace` (smoke stays required); a `_test` repo
+   losing its release profile still fails loudly in the release runner.
+
+## Gotchas for future sweeps
+
+- The "one resolver" invariant claimed by env_profile_redesign.md §5 held only
+  for Family A until this task; treat doc claims of unification as unverified
+  until grepped (same lesson as the rename campaigns).
+- `gh pr create` fails with "not a git repository" from the worktree ROOT —
+  run it from inside each repo dir (worktree root is not itself a git repo).
+- Family-A run_smoke WRAPPER drift remains (autolens_workspace_test has the
+  #196 Popen/SIGKILL timeout wrapper; the other three have the older
+  subprocess.run variant) — deliberately out of scope; hygiene follow-up.
+
+## Follow-ups
+
+- **Phase 1b** (next, unblocked by this): in-file `# ENV:` declarations —
+  draft/feature/workspaces/env_inline_declarations.md.
+- Then Phase 2 (mirror restructure + cull), eyes-gallery repoint, and the
+  independent test_results relayout (all drafted 2026-07-23).
+- Superseded draft archived: refactor/workspaces/
+  unify_pyauto_env_injection_into_profiles.md (its SKIP_WORKSPACE_VERSION_CHECK
+  finding shipped with #161 step 3; remainder folded into this task).
+
+## Original prompt
+
 # Env resolver unification: collapse the six Family-B run_smoke.py forks onto env_config (Phase 1a)
 
 Type: refactor

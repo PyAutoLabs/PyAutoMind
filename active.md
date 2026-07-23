@@ -12,24 +12,6 @@
 
 
 
-## env-resolver-unification
-- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/185
-- status: AWAITING MERGE — 8 PRs open (human-authorized RED ship 2026-07-23): Hands#186 (validator, merge FIRST), Heart#103 (workflow, merge SECOND), HowToFit#32, HowToGalaxy#42, HowToLens#52, autolens_workspace#325, autofit_workspace#115, autogalaxy_workspace#151. autofit_workspace_test = zero changes, no PR. Verified 674 entries/0 diffs; 15/15 validator tests. POST-MERGE: lifecycle.py record + drop this entry + worktree cleanup + archive superseded draft/refactor/workspaces/unify_pyauto_env_injection_into_profiles.md + issue Phase 1b (draft/feature/workspaces/env_inline_declarations.md).
-- worktree: ~/Code/PyAutoLabs-wt/env-resolver-unification
-- autonomy: supervised
-- prompt: active/env_resolver_family_b_unification.md
-- note: Phase 1a of 2026-07-23 test-maintainability plan (drafted successors: env_inline_declarations → mirror_restructure_and_cull → eyes_gallery_repoint; independent: test_results_relayout — issue each as predecessor nears shipping, no bulk-issue). Sizing override recorded on issue: uniform 9-repo mechanical migration, NOT phased. Verify per repo by EMPTY resolved-env diff (resolve_clean, empty base). Supersedes draft/refactor/workspaces/unify_pyauto_env_injection_into_profiles.md (archive it in this task). SCOPE CORRECTION: issue step 5 (autofit_workspace_test derive_jax_markers) is STALE — profile already redesigned 2026-07-15 (DISABLE_JAX=0 default, overrides:[], documented rationale why derivation is unneeded there); dropped from scope, note on issue at ship.
-- repos:
-  - autolens_workspace: feature/env-resolver-unification
-  - autofit_workspace: feature/env-resolver-unification
-  - autogalaxy_workspace: feature/env-resolver-unification
-  - HowToFit: feature/env-resolver-unification
-  - HowToGalaxy: feature/env-resolver-unification
-  - HowToLens: feature/env-resolver-unification
-  - autofit_workspace_test: feature/env-resolver-unification
-  - PyAutoHands: feature/env-resolver-unification
-  - PyAutoHeart: feature/env-resolver-unification
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
