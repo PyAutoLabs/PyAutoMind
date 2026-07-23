@@ -5,6 +5,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/env-inline-declarations
 - autonomy: supervised
+- heart-ack: 2026-07-23 human acknowledged YELLOW for ship: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - prompt: active/env_inline_declarations.md
 - note: Phase 1b of 2026-07-23 test-maintainability plan (1a=#185 MERGED). Mechanism-first: env_config declaration parser+validator (PyAutoHands PR 1), then per-repo override->declaration migrations (pilot autofit_workspace_test 9, then ag_test 15, al_test 21, autocti_test 0-confirm, user trio). Verify per repo: EMPTY resolved-env diff, empty base (same harness as #185: 674/0). Sizing override recorded on issue (repo-count proxy). COORDINATION: rectangular-mesh-consolidation plans future autolens_workspace_test leg — serialise on that repo if it activates first. Successors drafted, not issued: mirror_restructure_and_cull -> eyes_gallery_repoint; independent: test_results_relayout.
 - repos:
