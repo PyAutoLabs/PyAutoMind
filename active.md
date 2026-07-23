@@ -4,7 +4,7 @@
 
 ## purge-autoconf-era-legacy
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/137
-- status: library-dev — starting. 4 steps, each independently shippable: (0) delete untracked rename leftovers autoconf/ test_autoconf/ autoconf.egg-info/ build/ bad/ (no PR); (1) test_config.py BAD_PATH -> tmp_path so bad/ stops regenerating; (2) delete eden.yaml + scripts/edenise.py; (3) delete scripts/ + priors/ + json_prior/generate.py + its test; (4) trim PR #136 to its fixture half. Then close #100.
+- status: PRs OPEN awaiting merge, CI green on both. #138 (steps 1-3, three atomic commits: tmp_path fix, EDEN removal, scripts/+priors/ removal; 151->149 passed, the 2 lost are test_generate's own). #136 TRIMMED+force-pushed to fixtures-only, retitled "test: re-anchor the version-handshake test fixtures" (151 passed). Step 0 done locally, no diff exists. #100 CLOSED after re-verifying all 12 PRs merged + behaviour live on main. PACKAGING DEVIATION from approved plan: steps 1-3 shipped as ONE PR with three atomic commits rather than three PRs — same revertability, one repo, one reviewer.
 - worktree: ~/Code/PyAutoLabs-wt/purge-autoconf-era-legacy
 - autonomy: supervised
 - prompt: active/purge_autoconf_era_legacy.md
