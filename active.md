@@ -5,7 +5,8 @@
 ## env-profile-derivation
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/181
 - session: claude --resume e93a467a-04b3-445e-b05f-57766e69327a
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/182 (Heart RED acked 2026-07-23: integrate-fail + 13f workspace validation + 33 stale parks, all pre-existing)
 - worktree: ~/Code/PyAutoLabs-wt/env-profile-derivation
 - autonomy: supervised
 - prompt: active/env_profile_migration_steps_4_to_8.md
