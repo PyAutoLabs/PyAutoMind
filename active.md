@@ -8,8 +8,17 @@
 - worktree: ~/Code/PyAutoLabs-wt/env-resolver-unification
 - autonomy: supervised
 - prompt: active/env_resolver_family_b_unification.md
-- note: Phase 1a of 2026-07-23 test-maintainability plan (drafted successors: env_inline_declarations → mirror_restructure_and_cull → eyes_gallery_repoint; independent: test_results_relayout — issue each as predecessor nears shipping, no bulk-issue). Sizing override recorded on issue: uniform 9-repo mechanical migration, NOT phased. Verify per repo by EMPTY resolved-env diff (resolve_clean, empty base). Supersedes draft/refactor/workspaces/unify_pyauto_env_injection_into_profiles.md (archive it in this task).
+- note: Phase 1a of 2026-07-23 test-maintainability plan (drafted successors: env_inline_declarations → mirror_restructure_and_cull → eyes_gallery_repoint; independent: test_results_relayout — issue each as predecessor nears shipping, no bulk-issue). Sizing override recorded on issue: uniform 9-repo mechanical migration, NOT phased. Verify per repo by EMPTY resolved-env diff (resolve_clean, empty base). Supersedes draft/refactor/workspaces/unify_pyauto_env_injection_into_profiles.md (archive it in this task). SCOPE CORRECTION: issue step 5 (autofit_workspace_test derive_jax_markers) is STALE — profile already redesigned 2026-07-15 (DISABLE_JAX=0 default, overrides:[], documented rationale why derivation is unneeded there); dropped from scope, note on issue at ship.
 - repos:
+  - autolens_workspace: feature/env-resolver-unification
+  - autofit_workspace: feature/env-resolver-unification
+  - autogalaxy_workspace: feature/env-resolver-unification
+  - HowToFit: feature/env-resolver-unification
+  - HowToGalaxy: feature/env-resolver-unification
+  - HowToLens: feature/env-resolver-unification
+  - autofit_workspace_test: feature/env-resolver-unification
+  - PyAutoHands: feature/env-resolver-unification
+  - PyAutoHeart: feature/env-resolver-unification
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
