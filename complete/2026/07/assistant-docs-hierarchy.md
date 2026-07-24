@@ -1,3 +1,12 @@
+## assistant-docs-hierarchy
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/647
+- completed: 2026-07-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/648, https://github.com/PyAutoLabs/PyAutoGalaxy/pull/522
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/330, https://github.com/PyAutoLabs/autogalaxy_workspace/pull/156
+- summary: Added distinct AI Assistant and Human-Readable Documentation sections across the PyAutoLens and PyAutoGalaxy READMEs, RTD landing pages, Start Here pages, New User Guides, and workspace READMEs. Repaired the flattened workspace installation and Colab layout. All library tests, Sphinx builds, workspace smoke tests, and GitHub checks passed; no API, scripts, or notebooks changed.
+
+## Original prompt
+
 # Clarify AI Assistant and human-readable documentation options
 
 ## Original request

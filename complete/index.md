@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-718 records across 6 buckets.
+720 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -39,6 +39,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [arxiv-digest-strong-lensing-term](2026/07/arxiv-digest-strong-lensing-term.md)
 - [assistant-benchmarks](2026/07/assistant-benchmarks.md)
 - [assistant-deep-audit](2026/07/assistant-deep-audit.md)
+- [assistant-docs-hierarchy](2026/07/assistant-docs-hierarchy.md) — Added distinct AI Assistant and Human-Readable Documentation sections across the PyAutoLens and PyAutoGalaxy R…
 - [assistant-euclid-mode](2026/07/assistant-euclid-mode.md)
 - [assistant-first-docs](2026/07/assistant-first-docs.md) — Unified PyAutoLens and PyAutoGalaxy README, Read the Docs, and workspace onboarding around a single AI Assista…
 - [assistant-pin-bump-2026-7-9-1](2026/07/assistant-pin-bump-2026-7-9-1.md) — Bumped autolens_assistant version.txt + config/general.yaml from 2026.5.29.4 to 2026.7.9.1 (api_audit_baseline…
@@ -303,6 +304,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [shareable-science-projects](2026/07/shareable-science-projects.md) — docs emphasis pass, head of the autolens_assistant batch — generated-project README.md template added to the s…
 - [ship-gate](2026/07/ship-gate.md)
 - [simulate-injection-feasibility](2026/07/simulate-injection-feasibility.md)
+- [simulator-auto-bootstrap](2026/07/simulator-auto-bootstrap.md) — PR #214
 - [slack-release-notes](2026/07/slack-release-notes.md)
 - [slacs1430-acs-parity](2026/07/slacs1430-acs-parity.md) — SLACS1430+4105 ACS reduction vs legacy — pixel parity PASS — SHIPPED
 - [slam-adapt-inversion-cascade](2026/07/slam-adapt-inversion-cascade.md) — Fixed two distinct pixelized-SLaM root causes (verified green under CI smoke env; run_smoke 9/9 + 6/6). (1) Do…
