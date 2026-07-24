@@ -23,6 +23,17 @@
 - repos:
   - PyAutoBrain: feature/hygiene-adjacent-docstrings
 
+## profiling-dataset-auto-simulate
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/88
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/profiling-dataset-auto-simulate
+- autonomy: supervised
+- heart-ack: 2026-07-24 human ack covers this ship (extended three-reason ack recorded on the completed dpie-simulator-port task; STOP if the reason set grows beyond those three or any gate fails)
+- prompt: active/dataset_auto_simulate.md
+- note: #213 recipe for autolens_profiling; BYTE-identity required (baselines calibrated against committed bytes); dPIE fix merged (#87) so cluster family verifiable. Non-reproducible => committed + protective note.
+- repos:
+  - autolens_profiling: feature/profiling-dataset-auto-simulate
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
