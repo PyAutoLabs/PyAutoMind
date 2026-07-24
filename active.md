@@ -45,6 +45,12 @@
 - note: Merge 81 scanner-confirmed adjacent documentation boundaries with exact ordered-text witnesses. Start with the six unclaimed repos; autolens_workspace is deferred until simulator-jax-sections-code-cells releases its active worktree claim. Branch approved as feature/merge-adjacent-docstrings. HowToFit is a verified zero-finding target.
 - blocked-repo: autolens_workspace — simulator-jax-sections-code-cells
 - repos:
+  - autocti_workspace: feature/merge-adjacent-docstrings
+  - autofit_workspace: feature/merge-adjacent-docstrings
+  - autogalaxy_workspace: feature/merge-adjacent-docstrings
+  - HowToFit: feature/merge-adjacent-docstrings
+  - HowToGalaxy: feature/merge-adjacent-docstrings
+  - HowToLens: feature/merge-adjacent-docstrings
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
