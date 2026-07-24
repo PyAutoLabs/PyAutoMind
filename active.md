@@ -2,7 +2,7 @@
 
 ## simulator-auto-bootstrap
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/213
-- status: workspace-dev
+- status: awaiting-library-merge
 - worktree: ~/Code/PyAutoLabs-wt/simulator-auto-bootstrap
 - autonomy: supervised
 - prompt: active/simulator_auto_bootstrap.md
@@ -58,6 +58,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/assistant-first-docs
 - heart-ack: 2026-07-24 human acknowledged YELLOW for ship: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)", "release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)"]
 - library-pr: PyAutoLens#646, PyAutoGalaxy#521
+- workspace-pr: autolens_workspace#329, autogalaxy_workspace#155
 - prompt: active/unify_ai_assistant_getting_started.md
 - repos:
   - PyAutoLens: feature/assistant-first-docs
