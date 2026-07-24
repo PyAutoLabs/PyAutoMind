@@ -12,11 +12,13 @@
 
 ## remove-inline-standalones
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/160
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/remove-inline-standalones
 - autonomy: safe
 - prompt: active/matplotlib_inline_standalones.md
-- note: User-approved first task in the ordered matplotlib-inline cleanup; remove five standalone comments in AutoGalaxy/AutoLens before starting the dependent AutoCTI bootstrap sweep. The overlapping Colab-bootstrap PRs merged and released both claims before setup. AutoLens main-checkout formatting changes remain isolated and untouched.
+- workspace-prs: autogalaxy_workspace#161 + autolens_workspace#337
+- heart-ack: user acknowledged YELLOW reasons at ship — workspace validation not passing (13 failed, 2026-07-21T19-05-22Z); 33 stale parked scripts; tenant-firewall manifest drift (3 mismatches); release validation stale after PyAutoFit/PyAutoArray/PyAutoGalaxy/PyAutoLens source moves.
+- note: Five standalone comments removed; generated notebook JSON + diff checks pass; targeted smoke 19/19 PASS (AutoGalaxy 8/8, AutoLens 11/11). Both PRs carry pending-release. Full AutoLens generator exposed unrelated partial-tree churn, which was restored before commit; no residual unrelated diff. Merge both before starting the dependent AutoCTI bootstrap sweep.
 - repos:
   - autogalaxy_workspace: feature/remove-inline-standalones
   - autolens_workspace: feature/remove-inline-standalones
