@@ -1,3 +1,19 @@
+## Outcome — SHIPPED + MERGED 2026-07-24 (al_test#219 + Brain#158 + developer#115)
+Issue #218 closed. gallery/ -> repo root of autolens_workspace_test (Eyes
+harness is a build tool, not a test; #195 standalone-run shape structurally
+dead — outside the run-set); gallery_build parents[2]->parents[1], gallery_run
+cd depth fixed, enumeration verified post-#217; PyAutoBrain Eyes refs
+repointed (7 tests pass). profiling/aggregator pair -> developer
+aggregator_profiling/ (deferred from #211; blackjax claim released; docstrings
+re-homed; developer main checkout carries UNRELATED unregistered dirty work in
+searches_minimal/source_science — left alone, surfaced). Zero coverage lost:
+all 5 removed run-set entries were skip-at-HEAD. Dead no_run patterns
+(gallery PERMANENT, profiling CULL-DEMOTE) removed.
+GOTCHA: autolens_workspace_developer is PyAutoLabs-owned (only
+autofit_workspace_developer is Jammy2211).
+
+## Original prompt
+
 # Eyes gallery: extract gallery/ from autolens_workspace_test scripts tree
 
 Type: refactor

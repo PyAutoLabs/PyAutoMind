@@ -1,3 +1,13 @@
+## Outcome — SHIPPED + MERGED 2026-07-24 (PR #333)
+Issue #332 closed. One-line release override mirrors the interferometer
+sibling: imaging/features/potential_correction/ sets SMALL_DATASETS=0 in
+release (dpsi_factor=2 mesh starved under the cap — July #315 shape; found
+during #213). Declaration alternative REJECTED — would lift the smoke cap
+too. Smoke byte-identical (273 scripts); release changes exactly the one
+matched script.
+
+## Original prompt
+
 # Release profile: imaging potential_correction runs mesh-starved under SMALL_DATASETS
 
 Type: bug
