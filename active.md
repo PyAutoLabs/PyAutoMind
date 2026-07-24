@@ -25,17 +25,6 @@
 - repos:
   - PyAutoHands: feature/notebook-adjacent-docstrings
 
-## dpie-simulator-port
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/86
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/dpie-simulator-port
-- autonomy: supervised
-- heart-ack: 2026-07-24 human EXTENDED ack to three YELLOW reasons ("go" after boundary stop): ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)", "manifest drift: tenant firewall (organ code) — 3 mismatch(es) vs PyAutoMind/repos.yaml (unrelated concurrent clean_slate work)"] — covers this task AND dataset_auto_simulate
-- prompt: active/cluster_simulators_dpie_api_drift.md
-- note: port cluster/group/group4_mge simulators to post-#506 dPIE parameterisation (physically-equivalent conversion from the #506 diff). Verifies via the #84-blocked full cluster smoke-run. SEQUENCED BEFORE dataset_auto_simulate (same repo; auto-simulate byte-verification needs working simulators). Batch ack at ship.
-- repos:
-  - autolens_profiling: feature/dpie-simulator-port
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
