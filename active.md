@@ -1,5 +1,14 @@
 # Active Tasks
 
+## remove-inline-standalones
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/160
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/remove-inline-standalones
+- autonomy: safe
+- prompt: active/matplotlib_inline_standalones.md
+- note: User-approved first task in the ordered matplotlib-inline cleanup; remove five standalone comments in AutoGalaxy/AutoLens before starting the dependent AutoCTI bootstrap sweep. The overlapping Colab-bootstrap PRs merged and released both claims before setup. AutoLens main-checkout formatting changes remain isolated and untouched.
+- repos:
+
 ## clean-packaging-debris
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/159
 - status: library-shipped, awaiting-merge
