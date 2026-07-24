@@ -150,7 +150,7 @@ repos:
     github: PyAutoLabs/autocti_workspace_test
     category: workspace_test
   autofit_workspace_developer:
-    github: Jammy2211/autofit_workspace_developer
+    github: PyAutoLabs/autofit_workspace_developer
     category: workspace_developer
   autolens_workspace_developer:
     github: PyAutoLabs/autolens_workspace_developer
