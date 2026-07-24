@@ -8,6 +8,8 @@
 - prompt: active/hide_autonerves_colab_autogalaxy_rollout.md
 - note: AutoGalaxy product-family rollout after merged PyAutoHands#195/PyAutoHeart#107; update 4 handwritten setup scripts and regenerate autogalaxy_workspace + HowToGalaxy.
 - repos:
+  - autogalaxy_workspace: feature/hide-autonerves-colab-autogalaxy
+  - HowToGalaxy: feature/hide-autonerves-colab-autogalaxy
 
 ## hide-autonerves-colab-bootstrap
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/194
