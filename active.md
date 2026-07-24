@@ -1,5 +1,14 @@
 # Active Tasks
 
+## notebook-adjacent-docstrings
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/196
+- session: codex
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/notebook-adjacent-docstrings
+- autonomy: supervised
+- prompt: active/back_to_back_docstrings_notebook.md
+- repos:
+
 ## remove-inline-standalones
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/160
 - status: workspace-dev
