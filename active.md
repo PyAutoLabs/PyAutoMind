@@ -6,6 +6,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/simulator-auto-bootstrap
 - autonomy: supervised
 - prompt: active/simulator_auto_bootstrap.md
+- heart-ack: 2026-07-24 human acknowledged YELLOW for ship+merge: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - note: Phase 2b (human decision on #211): should_simulate auto-bootstrap, uncommit regenerable datasets (tip-removal ONLY, never-rewrite rule), declaration audit dividend, potential_correction SMALL_DATASETS blind-spot check. Paths post-#212. weak/ = reference implementation. Ship needs fresh YELLOW ack at ship time.
 - repos:
   - autolens_workspace_test: feature/simulator-auto-bootstrap
