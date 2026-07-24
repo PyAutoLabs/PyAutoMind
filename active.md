@@ -59,3 +59,5 @@
 - worktree: ~/Code/PyAutoLabs-wt/assistant-docs-hierarchy
 - prompt: active/clarify_assistant_and_human_docs_options.md
 - repos:
+  - PyAutoLens: feature/assistant-docs-hierarchy
+  - PyAutoGalaxy: feature/assistant-docs-hierarchy
