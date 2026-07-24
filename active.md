@@ -27,10 +27,11 @@
 - worktree: ~/Code/PyAutoLabs-wt/eyes-gallery-repoint
 - autonomy: supervised
 - prompt: active/eyes_gallery_repoint.md
-- note: option (a): gallery -> repo root of autolens_workspace_test; PyAutoBrain Eyes refs + gallery_build parents[2] + gallery_run cd depth repoint in lockstep; kill the #195 standalone-run shape. Batch ack at ship.
+- note: option (a): gallery -> repo root of autolens_workspace_test; PyAutoBrain Eyes refs + gallery_build parents[2] + gallery_run cd depth repoint in lockstep; kill the #195 standalone-run shape. SCOPE EXTENDED (blackjax claim released, human confirmed 2026-07-24): profiling/aggregator -> autolens_workspace_developer (2 sibling-coupled files move together; zero live references; developer main checkout has 23 dirty files in searches_minimal/source_science/plotting_alignment — UNREGISTERED work from another session, no overlap, left alone). Batch ack at ship.
 - repos:
   - autolens_workspace_test: feature/eyes-gallery-repoint
   - PyAutoBrain: feature/eyes-gallery-repoint
+  - autolens_workspace_developer: feature/eyes-gallery-repoint
 
 ## potential-correction-asymmetry
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/332
