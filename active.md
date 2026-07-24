@@ -2,10 +2,13 @@
 
 ## workspace-start-here-colab-links
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/649
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/workspace-start-here-colab-links
 - autonomy: supervised
 - prompt: active/fix_workspace_start_here_colab_links.md
+- library-pr:
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/650
+  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/523
 - note: Coordinated docs-only correction. Generic introductory Colab links should target each workspace-root start_here.ipynb; explicitly imaging-specific links stay on notebooks/imaging/start_here.ipynb. Exact release-tag root notebooks were verified to contain setup_colab.for_autolens / setup_colab.for_autogalaxy.
 - repos:
   - PyAutoLens: feature/workspace-start-here-colab-links
