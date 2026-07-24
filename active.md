@@ -59,3 +59,5 @@
 - worktree: ~/Code/PyAutoLabs-wt/assistant-first-docs
 - prompt: active/unify_ai_assistant_getting_started.md
 - repos:
+  - PyAutoLens: feature/assistant-first-docs
+  - PyAutoGalaxy: feature/assistant-first-docs
