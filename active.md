@@ -1,5 +1,14 @@
 # Active Tasks
 
+## hide-autonerves-colab-bootstrap
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/194
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-bootstrap
+- autonomy: human-required
+- prompt: active/hide_autonerves_colab_bootstrap_api.md
+- note: Phase 1 of 2 — change the Hands injection template and Heart check F while preserving autonerves as the private fresh-Colab bootstrap; the six-workspace regeneration follows in its own task.
+- repos:
+
 ## ag-simulator-bootstrap
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/94
 - status: workspace-dev
