@@ -1,16 +1,4 @@
 
-## start-here-jax-simplify
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/336
-- planned: 2026-07-24
-- classification: workspace — docs
-- suggested-branch: feature/start-here-jax-simplify
-- prompt: active/start_here_jax_section_simplify.md
-- blocked-by: hide-autonerves-colab-autolens (using autolens_workspace) + hide-autonerves-colab-autogalaxy (using autogalaxy_workspace, awaiting-merge)
-- summary: Trim the ~83-line `__JAX__` section of each root start_here.py to a short new-user "JAX is auto-enabled for modeling" section; move the technical material (opt-outs, @jax.jit patterns, return-type contract) to a new scripts/guides/using_jax.py in BOTH workspaces (ag mirror has no lens_calc pointer). Register both guides in navigator catalogues + regen notebooks. Feature-Agent large/phased score overridden to single task (repo-count proxy). Both blockers regenerate start_here.ipynb — serialize.
-- affected-repos:
-  - autolens_workspace
-  - autogalaxy_workspace
-
 ## remote-mcp-deployment-tiers
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/20 (design/scope shipped 2026-07-21; build gated)
 - status: DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP coordination. No code, no network surface built. Per prompt "if it earns it": build tiers 2/3 only once demonstrated demand for REMOTE access exists.

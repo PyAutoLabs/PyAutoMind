@@ -1,5 +1,16 @@
 # Active Tasks
 
+## start-here-jax-simplify
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/336
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/start-here-jax-simplify
+- autonomy: supervised
+- prompt: active/start_here_jax_section_simplify.md
+- note: Trim each root start_here.py __JAX__ section to a short new-user version; move technical material to new scripts/guides/using_jax.py in both workspaces (ag mirror, no lens_calc pointer). Former blockers (colab rollouts + remove-inline-standalones) all merged before branch creation — branches cut from post-merge origin/main, no rebase debt. User authorized the start while remove-inline-standalones' stale claim was still in active.md.
+- repos:
+  - autolens_workspace: feature/start-here-jax-simplify
+  - autogalaxy_workspace: feature/start-here-jax-simplify
+
 ## notebook-adjacent-docstrings
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/196
 - session: codex
@@ -9,30 +20,6 @@
 - prompt: active/back_to_back_docstrings_notebook.md
 - repos:
   - PyAutoHands: feature/notebook-adjacent-docstrings
-
-## remove-inline-standalones
-- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/160
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/remove-inline-standalones
-- autonomy: safe
-- prompt: active/matplotlib_inline_standalones.md
-- workspace-prs: autogalaxy_workspace#161 + autolens_workspace#337
-- heart-ack: user acknowledged YELLOW reasons at ship — workspace validation not passing (13 failed, 2026-07-21T19-05-22Z); 33 stale parked scripts; tenant-firewall manifest drift (3 mismatches); release validation stale after PyAutoFit/PyAutoArray/PyAutoGalaxy/PyAutoLens source moves.
-- note: Five standalone comments removed; generated notebook JSON + diff checks pass; targeted smoke 19/19 PASS (AutoGalaxy 8/8, AutoLens 11/11). Both PRs carry pending-release. Full AutoLens generator exposed unrelated partial-tree churn, which was restored before commit; no residual unrelated diff. Merge both before starting the dependent AutoCTI bootstrap sweep.
-- repos:
-  - autogalaxy_workspace: feature/remove-inline-standalones
-  - autolens_workspace: feature/remove-inline-standalones
-
-## clean-packaging-debris
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/159
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/clean-packaging-debris
-- autonomy: supervised
-- prompt: active/clean_generated_packaging_debris.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/160
-- note: PR open at ccb7b88 with pending-release label. Validation: 19 targeted + 157 remaining Brain tests pass; the sizing-wrapper failure is pre-existing on main. Brain-only operational CLI change, so workspace smoke is n/a. Heart YELLOW (workspace failures, stale parked scripts, manifest drift, stale rehearsal) explicitly acknowledged by the user. Concurrent profiling-mirror-taxonomy changed only agents/conductors/profiling/_profiling.py at ship time; no overlap.
-- repos:
-  - PyAutoBrain: feature/clean-packaging-debris
 
 ## profiling-mirror-taxonomy
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/84
