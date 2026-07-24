@@ -15,11 +15,12 @@
 ## hygiene-adjacent-docstrings
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/162
 - session: codex
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/hygiene-adjacent-docstrings
 - autonomy: supervised
 - prompt: active/adjacent_docstring_hygiene.md
-- note: Phase 2 of PyAutoHands#196. Add a read-only AST-backed Hygiene mode, exact human/JSON findings, default ranking, and /refactor delegation. Approved branch feature/hygiene-adjacent-docstrings; preserve the unrelated canonical PyAutoBrain skills/WORKFLOW.md edit by using the isolated task worktree.
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/163
+- note: Phase 2 of PyAutoHands#196. The read-only AST-backed Hygiene mode is shipped to an open pending-release PR. It reports root entry scripts plus scripts/**/*.py, exact human/JSON findings, default ranking, and /refactor delegation. Final live inventory before cleanup: 81 boundaries in 58 files across 6/7 repos with zero parse errors. Phase 3 is draft/maintenance/workspaces/merge_adjacent_docstrings.md.
 - repos:
   - PyAutoBrain: feature/hygiene-adjacent-docstrings
 
