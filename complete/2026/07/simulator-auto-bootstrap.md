@@ -1,3 +1,44 @@
+## Outcome — SHIPPED + MERGED 2026-07-24 (PR #214)
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/213
+(closed). Consumers auto-bootstrap datasets via should_simulate + subprocess
+(the autolens_workspace idiom); 11 seed-verified regenerable dataset dirs left
+the repo tip (~2.6MB, 49 files, 32 FITS), gitignored; 11 simulators demoted to
+BOOTSTRAP-TARGET no_run entries. History untouched (tip-removal only).
+
+## The catches that mattered
+
+- **point_source/simple is NON-reproducible**: regeneration yields LL -1e99 vs
+  the hardcoded -83.38049778 (point.py:244, image_plane.py:143). Kept
+  committed + a PROTECTIVE no_run entry on its simulator so a standalone
+  mega-run can never overwrite the reference bytes. Lesson: seed-in-code is
+  not proof of reproducibility — verify by regenerating against the literals.
+- cluster/test is a two-stage csv_api → simulator chain over hand-authored
+  CSVs — not bootstrappable; kept. sma.fits is a simulator INPUT (external SMA
+  template); kept.
+- The pattern was HALF-ADOPTED already — most consumers carried bootstraps;
+  the real work was the removal safety + two missing bootstraps
+  (multi/visualization_*) that would have broken after git rm.
+- Declaration audit: exactly ONE full_datasets removal (imaging/model_fit,
+  verified at 15x15); convolution.py's rationale was WRONG (real need = mesh
+  geometry, not committed data) — corrected in its __Env__ prose.
+- model_fit's TEST_MODE=2 corner-on-None crash: pre-existing, proven identical
+  on HEAD (stale-fake shape [[feedback_stale_test_mode_output_fakes_nonetype]]).
+
+## Blind-spot confirmed → follow-up filed
+
+autolens_workspace release profile exempts interferometer
+features/potential_correction from SMALL_DATASETS (:56-57) but NOT the imaging
+sibling → runs mesh-starved (July #315 shape). Filed:
+draft/bug/autolens_workspace/potential_correction_small_datasets_asymmetry.md.
+
+## Follow-ups
+5 cull low-confidence flags on #211 (human); profiling/ move (blackjax claim);
+eyes_gallery_repoint; test_results_relayout (Phase 3, drafted); optional
+later: explicit history purge of removed FITS (separate human decision).
+
+## Original prompt
+
 # autolens_workspace_test: adopt auto-simulation, uncommit regenerable datasets (Phase 2b)
 
 Type: refactor
