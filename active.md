@@ -1,18 +1,5 @@
 # Active Tasks
 
-## start-here-jax-simplify
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/336
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/start-here-jax-simplify
-- autonomy: supervised
-- prompt: active/start_here_jax_section_simplify.md
-- workspace-pr: autolens_workspace#338 + autogalaxy_workspace#162
-- heart-ack: user acknowledged YELLOW at ship (workspace validation 13f stale census 2026-07-21; 33 stale parked scripts; tenant-firewall manifest drift x3; release validation stale) — none touch this docs-only change
-- note: Shipped with targeted smoke PASS (root start_here.py + guide in both repos). Both PRs also true-up a stale .script_sizes.json snapshot (drift inherited from earlier merged sweeps; new using_jax.py entry included). ag guide fixes stale api/data_structures.py cross-ref. NEXT: merge both PRs (standalone, no library gate), then lifecycle record + close #336.
-- repos:
-  - autolens_workspace: feature/start-here-jax-simplify
-  - autogalaxy_workspace: feature/start-here-jax-simplify
-
 ## notebook-adjacent-docstrings
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/196
 - session: codex
@@ -24,6 +11,28 @@
 - note: Commit 6916814; 218 PyAutoHands tests pass. User acknowledged Heart YELLOW (workspace validation not passing; 33 stale parked scripts). The initial parallel/manual smoke harness reported 8 failures, but triage showed two harness defects: regenerated notebooks ran from /tmp instead of the workspace root, and scripts sharing auto-simulated datasets ran concurrently. The canonical per-workspace runners pass all affected suites (AutoFit 10/10, AutoGalaxy 8/8, AutoLens 11/11); combined downstream result is 58 passed, 0 failed, 2 configured skips. Phase 2 may proceed; do not merge PR #197 without human approval.
 - repos:
   - PyAutoHands: feature/notebook-adjacent-docstrings
+
+## hygiene-adjacent-docstrings
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/162
+- session: codex
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hygiene-adjacent-docstrings
+- autonomy: supervised
+- prompt: active/adjacent_docstring_hygiene.md
+- note: Phase 2 of PyAutoHands#196. Add a read-only AST-backed Hygiene mode, exact human/JSON findings, default ranking, and /refactor delegation. Approved branch feature/hygiene-adjacent-docstrings; preserve the unrelated canonical PyAutoBrain skills/WORKFLOW.md edit by using the isolated task worktree.
+- repos:
+  - PyAutoBrain: feature/hygiene-adjacent-docstrings
+
+## profiling-dataset-auto-simulate
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/88
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/profiling-dataset-auto-simulate
+- autonomy: supervised
+- heart-ack: 2026-07-24 human ack covers this ship (extended three-reason ack recorded on the completed dpie-simulator-port task; STOP if the reason set grows beyond those three or any gate fails)
+- prompt: active/dataset_auto_simulate.md
+- note: #213 recipe for autolens_profiling; BYTE-identity required (baselines calibrated against committed bytes); dPIE fix merged (#87) so cluster family verifiable. Non-reproducible => committed + protective note.
+- repos:
+  - autolens_profiling: feature/profiling-dataset-auto-simulate
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95

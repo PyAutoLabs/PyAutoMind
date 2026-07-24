@@ -1,3 +1,11 @@
+## start-here-jax-simplify
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/336
+- completed: 2026-07-24
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/338 + https://github.com/PyAutoLabs/autogalaxy_workspace/pull/162
+- summary: Trimmed the ~83-line __JAX__ section of the root start_here.py in autolens_workspace AND autogalaxy_workspace to a short new-user version (JAX auto-enabled for modeling with the [jax] extra, one-time compile log line, NumPy fallback) and moved the technical material to a new scripts/guides/using_jax.py in each (auto-enabled internals, disabling JAX via use_jax=False / PYAUTO_DISABLE_JAX=1, writing @jax.jit yourself, JIT-ing library methods, return-type contract). Guides registered in navigator catalogues; notebooks regenerated per-file (avoided full generate.py rebuild churn). Gotchas: ag's old section cited nonexistent scripts/guides/api/data_structures.py — fixed to the real path after verifying content; autolens.jax.register_tracer_classes verified in installed stack before reuse; Feature-Agent large/phased score overridden (repo-count proxy, cosmetic single change); both PRs trued-up a stale .script_sizes.json snapshot inherited from earlier merged sweeps; task started while a stale active.md claim (remove-inline-standalones) was still registered — its PRs had already merged, so branches cut clean from post-merge main.
+
+## Original prompt
+
 # Simplify start_here.py JAX section; move technical detail to guides/using_jax.py
 
 Difficulty: easy
