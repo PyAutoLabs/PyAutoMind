@@ -1,5 +1,15 @@
 # Active Tasks
 
+## simulator-auto-bootstrap
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/213
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/simulator-auto-bootstrap
+- autonomy: supervised
+- prompt: active/simulator_auto_bootstrap.md
+- note: Phase 2b (human decision on #211): should_simulate auto-bootstrap, uncommit regenerable datasets (tip-removal ONLY, never-rewrite rule), declaration audit dividend, potential_correction SMALL_DATASETS blind-spot check. Paths post-#212. weak/ = reference implementation. Ship needs fresh YELLOW ack at ship time.
+- repos:
+  - autolens_workspace_test: feature/simulator-auto-bootstrap
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
