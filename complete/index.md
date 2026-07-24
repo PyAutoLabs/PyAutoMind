@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-732 records across 6 buckets.
+733 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -294,6 +294,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [release-stamping-slim](2026/07/release-stamping-slim.md)
 - [release-validation-tail-burndown](2026/07/release-validation-tail-burndown.md) — EPIC/capstone. Burned down the 18f/5t mode=release tail. All real correctness bugs fixed+merged+validated on w…
 - [remove-dead-copy-files](2026/07/remove-dead-copy-files.md)
+- [remove-inline-standalones](2026/07/remove-inline-standalones.md) — Removed five inert standalone `%matplotlib inline` comments from the AutoGalaxy and AutoLens top-level script/…
 - [remove-nss-sampler](2026/07/remove-nss-sampler.md) — ALL phases MERGED + dev-clean
 - [remove-pulse-compat](2026/07/remove-pulse-compat.md)
 - [rename-autobuild-to-autohands](2026/07/rename-autobuild-to-autohands.md) — renamed the Hands payload package and CLI `autobuild` -> `autohands`, closing the seam left by the earlier PyA…
