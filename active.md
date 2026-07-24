@@ -37,6 +37,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/profiling-mirror-taxonomy
 - autonomy: supervised
+- heart-ack: 2026-07-24 human acknowledged YELLOW for ship+merge: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - prompt: active/mirror_scripts_taxonomy.md
 - note: UNBLOCKED (group4 merged PR#83, claim released). Dataset-first inversion: scripts/<dataset>/<task>/, cluster/ first-class (group4 cells -> scripts/cluster/, human decision), datacube under interferometer, agnostic -> scripts/misc/<task>/. LOCKED: results/config/dataset stay at root, results section names stable; fix parents[1] import model FIRST; 28 sbatch rewrites; Brain profiling conductor lockstep (companion PR); RAL re-sync = post-merge step. Gates on issue #84. Fresh YELLOW ack at ship.
 - repos:
