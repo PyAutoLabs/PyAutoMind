@@ -11,20 +11,6 @@
 - repos:
   - autolens_workspace_test: feature/test-mirror-restructure
 
-## rectangular-mesh-consolidation
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/402
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/403
-- status: library-MERGED 2026-07-23 (human "merge all") — PyAutoArray#403 + citations PyAutoLens#644 + PyAutoGalaxy#520 all MERGED (403 needed a main-merge: version 2026.7.23.1 + LF restore, main's bump commit had CRLF'd autoarray/__init__.py). HowTo PRs HowToLens#53 + HowToGalaxy#43 MERGED on green CI. jax_grad leg COMPLETE: wst#209 MERGED 2026-07-24 (re-certified strict FD; imaging reference LLs re-derived, dspl pins bandwidth=0.1 documented; absorbed __Env__ docstring migration in merge). REMAINING: (2) user-workspace pixelization example citation paragraphs — blocked same claim holder (autolens_workspace/autogalaxy_workspace); (3) developer-repo cleanup + Gut stash — blocked on blackjax-smc-gradient-kernel. On resume: Opus-delegated ship, regen notebooks+navigator for any HowTo/workspace edits.
-- worktree: ~/Code/PyAutoLabs-wt/rectangular-mesh-consolidation
-- autonomy: supervised
-- prompt: active/rectangular_mesh_consolidation.md
-- note: Kernel-CDF meshes take over the plain names RectangularAdaptDensity/AdaptImage; linear/spline/rotated + density_components deleted from source (Gut refs). Brain scored too-large/4-phase off repo count — OVERRIDE recorded: standard library→workspace two-leg (workspace leg collapses to test/dev cleanup since user workspaces keep the plain names, zero code edits). Library leg: PyAutoArray primary; PyAutoGalaxy/PyAutoLens expected zero-diff (verify by test suite). Workspace leg AFTER library merge: autolens_workspace_test jax_grad variant consolidation (FD certification = gate); autolens_workspace_developer stash→PyAutoGut BLOCKED on blackjax-smc-gradient-kernel claim — do last/coordinate. Autodiff evidence + full file-level plan on the issue.
-- repos:
-  - PyAutoArray: feature/rectangular-mesh-consolidation
-  - PyAutoLens: feature/rectangular-mesh-consolidation
-  - PyAutoGalaxy: feature/rectangular-mesh-consolidation
-- citation-leg: Enzi2026 (arXiv:2606.30620, RTU grids) added 2026-07-23 — PyAutoLens+PyAutoGalaxy docs/general/citations.md "Rectangular Mesh" section + files/citations.bib entry (adaptive rect meshes MUST cite; RectangularUniform exempt; note reg differs from paper's GP prior). WORKSPACE PART (blocked with the workspace legs, Opus-delegated): add a short paper-link paragraph to autolens_workspace/autogalaxy_workspace pixelization examples + HowToLens/HowToGalaxy ch4 rectangular tutorials — link arXiv:2606.30620, cite-when-used, one line that the paper pairs RTU with a GP prior whereas these examples use reg.Constant/reg.Adapt. Scripts only; notebooks regen at release.
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.

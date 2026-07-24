@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-712 records across 6 buckets.
+716 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -101,9 +101,12 @@ _(curate hard-won records here — survives regeneration.)_
 - [ell-comps-kwargs-keyerror](2026/07/ell-comps-kwargs-keyerror.md)
 - [emcee-loguniform-nan](2026/07/emcee-loguniform-nan.md)
 - [empty-hdu-scrape-and-latent-guard](2026/07/empty-hdu-scrape-and-latent-guard.md)
+- [env-declaration-docstring-form](2026/07/env-declaration-docstring-form.md)
+- [env-inline-declarations](2026/07/env-inline-declarations.md)
 - [env-profile-derivation](2026/07/env-profile-derivation.md) — Env-profile migration steps 4-8 (build-chain Phase 3 finale), 32 PRs in one day, all merged with branch+main C…
 - [env-profile-redesign](2026/07/env-profile-redesign.md) — env-profile + validation-gate redesign (campaign #155 Phase 3). Verified map (incl. correcting a wrong session…
 - [env-profile-validator](2026/07/env-profile-validator.md) — env-profile redesign migration step 1 (campaign #155 Phase 3): validate_env_profiles PR-time config check (sch…
+- [env-resolver-unification](2026/07/env-resolver-unification.md)
 - [env-scrubbed-baseline](2026/07/env-scrubbed-baseline.md) — env-profile redesign migration step 3 — scrubbed base env. build_env_for_script strips the managed PYAUTO_ fam…
 - [env-single-resolver](2026/07/env-single-resolver.md) — env-profile redesign migration step 2 — one resolver. The three run_smoke.py forks (byte-identical to each oth…
 - [env-vars-profile-key-order](2026/07/env-vars-profile-key-order.md)
@@ -268,6 +271,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [pyautoscientist-phase3a](2026/07/pyautoscientist-phase3a.md) — Phase 3a (--auto supervised, launched "go --auto") — spawn_spec.md partition rules (3b implements mechanically…
 - [rect-adapt](2026/07/rect-adapt.md) — rectangular adaptive-mesh edges — MERGED
 - [rectangular-kernel-cdf-mesh](2026/07/rectangular-kernel-cdf-mesh.md) — kernel-density CDF meshes RectangularKernelAdapt{Density,Image} (Enzi RTU) shipped opt-in — strict FD certifie…
+- [rectangular-mesh-consolidation](2026/07/rectangular-mesh-consolidation.md) — Consolidated PyAutoArray's rectangular mesh family from 8 mesh classes / 5 interpolators / 2 geometries down t…
 - [refactor-conductor](2026/07/refactor-conductor.md)
 - [refactor-post-phase3](2026/07/refactor-post-phase3.md) — PyAutoReduce post-phase-3 refactor — MERGED
 - [regen-workspace-notebooks](2026/07/regen-workspace-notebooks.md)
