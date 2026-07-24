@@ -17,6 +17,27 @@
   - autogalaxy_workspace: feature/workspace-start-here-colab-links
   - euclid_strong_lens_modeling_pipeline: feature/workspace-start-here-colab-links
 
+## test-results-relayout
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/192
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/test-results-relayout
+- autonomy: supervised
+- prompt: active/test_results_relayout.md
+- note: Phase 3 — run_logs/ Mind-style hierarchy, lockstep 8-site writer+reader change (Hands+Heart), fixes LIVE health_sync stale-dashboard bug. Traps: tick.sh -d guard + health_sync compgen guard move in lockstep. Fresh YELLOW ack at ship.
+- repos:
+  - PyAutoHands: feature/test-results-relayout
+  - PyAutoHeart: feature/test-results-relayout
+
+## autogalaxy-test-mirror
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/92
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/autogalaxy-test-mirror
+- autonomy: supervised
+- prompt: active/autogalaxy_test_mirror_subfolders.md
+- note: autolens recipe (#212+#216) in ONE pass — mirror + task subfolders + prefix strip; jax_* segment rule; simulator bootstrap = follow-up (inventory only). Fresh YELLOW ack at ship.
+- repos:
+  - autogalaxy_workspace_test: feature/autogalaxy-test-mirror
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
