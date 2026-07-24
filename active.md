@@ -2,13 +2,13 @@
 
 ## workspace-start-here-colab-links
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/649
-- status: PRs OPEN awaiting merge — library PRs first, then workspace PRs
+- status: library PRs MERGED; workspace PRs awaiting CI / merge approval
 - worktree: ~/Code/PyAutoLabs-wt/workspace-start-here-colab-links
 - autonomy: supervised
 - prompt: active/fix_workspace_start_here_colab_links.md
 - library-pr:
-  - https://github.com/PyAutoLabs/PyAutoLens/pull/650
-  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/523
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/650 (merged d231441f)
+  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/523 (merged 3dd05d46)
 - workspace-pr:
   - https://github.com/PyAutoLabs/autolens_workspace/pull/331
   - https://github.com/PyAutoLabs/autogalaxy_workspace/pull/157
