@@ -1,26 +1,5 @@
 # Active Tasks
 
-## workspace-start-here-colab-links
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/649
-- status: library PRs MERGED; workspace PRs awaiting CI / merge approval
-- worktree: ~/Code/PyAutoLabs-wt/workspace-start-here-colab-links
-- autonomy: supervised
-- prompt: active/fix_workspace_start_here_colab_links.md
-- library-pr:
-  - https://github.com/PyAutoLabs/PyAutoLens/pull/650 (merged d231441f)
-  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/523 (merged 3dd05d46)
-- workspace-pr:
-  - https://github.com/PyAutoLabs/autolens_workspace/pull/331
-  - https://github.com/PyAutoLabs/autogalaxy_workspace/pull/157
-  - https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/36
-- note: Coordinated docs-only correction. Generic introductory Colab links should target each workspace-root start_here.ipynb; explicitly imaging-specific links stay on notebooks/imaging/start_here.ipynb. Exact release-tag root notebooks were verified to contain setup_colab.for_autolens / setup_colab.for_autogalaxy.
-- repos:
-  - PyAutoLens: feature/workspace-start-here-colab-links
-  - PyAutoGalaxy: feature/workspace-start-here-colab-links
-  - autolens_workspace: feature/workspace-start-here-colab-links
-  - autogalaxy_workspace: feature/workspace-start-here-colab-links
-  - euclid_strong_lens_modeling_pipeline: feature/workspace-start-here-colab-links
-
 ## test-results-relayout
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/192
 - status: workspace-dev
@@ -72,13 +51,3 @@
 - note: 5-phase epic (one-shot attempt per user); new repo autolens_jax_joss (PyAutoLabs, public) born alongside; datasets SDP.81 / RXJ1131 / A2744 user-approved
 - repos:
   - autolens_jax_joss: main (born this task)
-
-## blackjax-smc-gradient-kernel
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/113
-- status: workspace-dev — **IT SAMPLES**. Warm-started gradient SMC WORKING: acc 0.80->0.17 across tempering (was 0.000), particles move, max logL climbs to ~31781 vs Prodigy MLE 31787.93, einstein_radius 1.5998 vs TRUTH 1.6. RAL job 331058 RUNNING (3 arms @128p: MALA auto-step, MALA+tune, HMC; warm start --refresh'd for full covariance). Committed LOCAL a467fad+6867762 (+2b455e4, cfcf893) on feature/blackjax-smc-gradient-kernel; NOT pushed. THREE COMPOUNDING CAUSES, each MEASURED not guessed: (1) prior-whitening does NOT whiten the POSTERIOR — 269x anisotropy in prior-whitened coords (einstein_radius prior scale 8.0 vs posterior std 2e-4 => sigma_z 5.3e-5 vs 1.4e-2 loosest); scalar step tuned to mean is 88x too big for tightest => whiten by warm-start posterior scale; (2) DIAGONAL whitening insufficient — posterior CORRELATED (Laplace cov condition number 568, |r|=0.95 between 2 params) leaves a TILTED ridge => whiten by CHOLESKY of FULL covariance, add log|det L| to evidence; (3) step targeted REFERENCE width (sigma=1) but reference is INFLATED so posterior sigma~1/inflate => overshoot by inflate^2; MEASURED eps=1.148->acc 0.00, eps=0.1->acc 0.94 => auto step now targets posterior width (eps=0.287 @ inflate=2). ALSO FIXED an experiment-confounding bug: --step-size had a NUMERIC default so passing that same value explicitly was indistinguishable from not passing it -> silently auto-scaled -> a step bracket returned BYTE-IDENTICAL arms. Now default=None. Earlier fixed: MALA eps is a SQUARED length (proposal len=sqrt(2*eps)); tune callback 3-arg (rng_key,state,info); centre 1/r singularity custom_jvp mask; FLOAT32 sbatch [[reference_ral_sbatch_jax_x64_not_inherited]]. INFRA: _warm_start.py SHARED across stages (a)-(e) — multi-start Prodigy -> cached output/warm_start.json (mle + std + FULL cov + logL). EVIDENCE PRESERVED via geometric bridge from normalised Gaussian ref g: logprior_fn:=log g, loglikelihood_fn:=log prior+log L-log g (integral g=1 => true logZ), + LOG_PRIOR_NORM + log|det L| Jacobian. RESUME: (1) check 331058 /mnt/ral/jnightin/smc_grad_logs/smc_warm_ok-331058.out — KEY Q: does --tune HOLD acceptance near ~0.57 as lambda->1 (fixed step decays 0.80->0.17)? does HMC beat MALA? (2) compare logZ (~31690-31798) vs Nautilus + write comparison.txt row; (3) A100 rep-timing (GPUs were full); (4) stage (b) ChEES-HMC reusing _warm_start. NOTE RAL cached warm_start.json MUST be --refresh'd if it predates the cov field else silent diagonal fallback. MGE ONLY; pix deferred.
-- worktree: ~/Code/PyAutoLabs-wt/blackjax-smc-gradient-kernel
-- autonomy: supervised
-- prompt: active/jax_native_posterior_sampler_wave.md
-- note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
-- repos:
-  - autolens_workspace_developer

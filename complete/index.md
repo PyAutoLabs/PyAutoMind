@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-720 records across 6 buckets.
+722 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -321,6 +321,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [stpsf-tier2b](2026/07/stpsf-tier2b.md) — JWST per-frame PSF coverage lifted 3/6 -> 6/6 (F115W validated) — STPSF tier-2b at frame DETECTOR + target pos…
 - [stub-skill-recipes-fill-in](2026/07/stub-skill-recipes-fill-in.md) — retired by user decision
 - [survey-cutouts](2026/07/survey-cutouts.md)
+- [task-subfolder-grouping](2026/07/task-subfolder-grouping.md) — PR #217
 - [tenant-firewall-drift](2026/07/tenant-firewall-drift.md)
 - [test-mirror-restructure](2026/07/test-mirror-restructure.md)
 - [test-mode-bypass-completed](2026/07/test-mode-bypass-completed.md) — One-line fix — _fit_bypass_test_mode now calls paths.completed() before returning (mirrors start_resume_fit), …
@@ -344,6 +345,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [weak-viz-profiles](2026/07/weak-viz-profiles.md)
 - [wfc3-reduction](2026/07/wfc3-reduction.md)
 - [wire-verify-install-leg](2026/07/wire-verify-install-leg.md)
+- [workspace-start-here-colab-links](2026/07/workspace-start-here-colab-links.md) — Generic PyAutoLens and PyAutoGalaxy introduction links now open each workspace-root start_here.ipynb rather th…
 - [workspace_examples_agent](2026/07/workspace_examples_agent.md)
 
 ## 2026/06

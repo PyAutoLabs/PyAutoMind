@@ -1,0 +1,12 @@
+## workspace-start-here-colab-links
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/649
+- completed: 2026-07-24
+- library-pr:
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/650 (merged d231441f)
+  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/523 (merged 3dd05d46)
+- workspace-pr:
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/331 (merged df4228b8)
+  - https://github.com/PyAutoLabs/autogalaxy_workspace/pull/157 (merged 9e0e18c0)
+  - https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/36 (merged 83c29b46)
+- summary: Generic PyAutoLens and PyAutoGalaxy introduction links now open each workspace-root start_here.ipynb rather than the imaging-specific notebook. Explicit imaging tutorial links were intentionally preserved. The pinned root notebooks were verified to contain setup_colab.for_autolens or setup_colab.for_autogalaxy. Validation passed with 448 PyAutoLens tests, 1,006 PyAutoGalaxy tests, and workspace smoke totals of 11/11, 8/8, and 6/6.
+- notes: The unrelated euclid_strong_lens_modeling_pipeline main-checkout modification to test_report.md was preserved and never entered the task worktree.
