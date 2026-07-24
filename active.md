@@ -1,18 +1,5 @@
 # Active Tasks
 
-## start-here-jax-simplify
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/336
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/start-here-jax-simplify
-- autonomy: supervised
-- prompt: active/start_here_jax_section_simplify.md
-- workspace-pr: autolens_workspace#338 + autogalaxy_workspace#162
-- heart-ack: user acknowledged YELLOW at ship (workspace validation 13f stale census 2026-07-21; 33 stale parked scripts; tenant-firewall manifest drift x3; release validation stale) — none touch this docs-only change
-- note: Shipped with targeted smoke PASS (root start_here.py + guide in both repos). Both PRs also true-up a stale .script_sizes.json snapshot (drift inherited from earlier merged sweeps; new using_jax.py entry included). ag guide fixes stale api/data_structures.py cross-ref. NEXT: merge both PRs (standalone, no library gate), then lifecycle record + close #336.
-- repos:
-  - autolens_workspace: feature/start-here-jax-simplify
-  - autogalaxy_workspace: feature/start-here-jax-simplify
-
 ## notebook-adjacent-docstrings
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/196
 - session: codex
