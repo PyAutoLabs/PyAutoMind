@@ -12,11 +12,12 @@
 
 ## hide-autonerves-colab-autogalaxy
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/158
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-autogalaxy
 - autonomy: human-required
 - prompt: active/hide_autonerves_colab_autogalaxy_rollout.md
-- note: AutoGalaxy product-family rollout after merged PyAutoHands#195/PyAutoHeart#107; update 4 handwritten setup scripts and regenerate autogalaxy_workspace + HowToGalaxy.
+- workspace-pr: autogalaxy_workspace#159 + HowToGalaxy#44
+- note: AutoGalaxy scripts and notebooks shipped with targeted smoke PASS. Four real-output markdown pages were explicitly deferred by the user; the exploratory full sweep also exposed an unrelated AutoLens-test timeout and invalid generic Euclid runner path.
 - repos:
   - autogalaxy_workspace: feature/hide-autonerves-colab-autogalaxy
   - HowToGalaxy: feature/hide-autonerves-colab-autogalaxy
