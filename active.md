@@ -1,5 +1,16 @@
 # Active Tasks
 
+## hide-autonerves-colab-autolens
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/334
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-autolens
+- autonomy: human-required
+- prompt: active/hide_autonerves_colab_autolens_rollout.md
+- note: AutoLens product-family rollout after merged PyAutoHands#195/PyAutoHeart#107; update 8 handwritten setup scripts and regenerate autolens_workspace + HowToLens. Pre-existing main-checkout formatting changes remain isolated and untouched.
+- repos:
+  - autolens_workspace: feature/hide-autonerves-colab-autolens
+  - HowToLens: feature/hide-autonerves-colab-autolens
+
 ## hide-autonerves-colab-autofit
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/116
 - status: awaiting-merge
