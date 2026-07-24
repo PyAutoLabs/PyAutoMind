@@ -25,6 +25,16 @@
 - repos:
   - PyAutoHands: feature/notebook-adjacent-docstrings
 
+## hygiene-adjacent-docstrings
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/162
+- session: codex
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hygiene-adjacent-docstrings
+- autonomy: supervised
+- prompt: active/adjacent_docstring_hygiene.md
+- note: Phase 2 of PyAutoHands#196. Add a read-only AST-backed Hygiene mode, exact human/JSON findings, default ranking, and /refactor delegation. Approved branch feature/hygiene-adjacent-docstrings; preserve the unrelated canonical PyAutoBrain skills/WORKFLOW.md edit by using the isolated task worktree.
+- repos:
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
