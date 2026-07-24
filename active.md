@@ -1,5 +1,14 @@
 # Active Tasks
 
+## hide-autonerves-colab-autogalaxy
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/158
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-autogalaxy
+- autonomy: human-required
+- prompt: active/hide_autonerves_colab_autogalaxy_rollout.md
+- note: AutoGalaxy product-family rollout after merged PyAutoHands#195/PyAutoHeart#107; update 4 handwritten setup scripts and regenerate autogalaxy_workspace + HowToGalaxy.
+- repos:
+
 ## hide-autonerves-colab-bootstrap
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/194
 - status: library-shipped, workspace-pending
@@ -7,7 +16,7 @@
 - autonomy: human-required
 - prompt: active/hide_autonerves_colab_bootstrap_api.md
 - library-pr: PyAutoHands#195 + PyAutoHeart#107
-- note: Phase 1 shipped to open pending-release PRs (216p Hands, 289p Heart, verify_install F PASS). Workspace impact is 527 files (12 source + 515 generated notebooks); phase 2 prompt is draft/refactor/workspaces/hide_autonerves_colab_workspace_rollout.md.
+- note: Phase 1 merged (216p Hands, 289p Heart, verify_install F PASS). Workspace impact is 527 files (12 source + 515 generated notebooks); phase 2 is split into AutoGalaxy, AutoFit, and AutoLens product-family prompts.
 - repos:
   - PyAutoHands: feature/hide-autonerves-colab-bootstrap
   - PyAutoHeart: feature/hide-autonerves-colab-bootstrap
