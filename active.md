@@ -2,11 +2,12 @@
 
 ## hide-autonerves-colab-autolens
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/334
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-autolens
 - autonomy: human-required
 - prompt: active/hide_autonerves_colab_autolens_rollout.md
-- note: AutoLens product-family rollout after merged PyAutoHands#195/PyAutoHeart#107; update 8 handwritten setup scripts and regenerate autolens_workspace + HowToLens. Pre-existing main-checkout formatting changes remain isolated and untouched.
+- workspace-pr: autolens_workspace#335 + HowToLens#54
+- note: AutoLens scripts, notebooks, and catalogues shipped with targeted autolens_workspace + HowToLens smoke PASS. Six real-output markdown pages were explicitly deferred; pre-existing main-checkout formatting changes remain isolated and untouched.
 - repos:
   - autolens_workspace: feature/hide-autonerves-colab-autolens
   - HowToLens: feature/hide-autonerves-colab-autolens
@@ -47,12 +48,13 @@
 
 ## hide-autonerves-colab-bootstrap
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/194
-- status: library-shipped, workspace-pending
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-bootstrap
 - autonomy: human-required
 - prompt: active/hide_autonerves_colab_bootstrap_api.md
 - library-pr: PyAutoHands#195 + PyAutoHeart#107
-- note: Phase 1 merged (216p Hands, 289p Heart, verify_install F PASS). Workspace impact is 527 files (12 source + 515 generated notebooks); phase 2 is split into AutoGalaxy, AutoFit, and AutoLens product-family prompts.
+- workspace-pr: autogalaxy_workspace#159 + HowToGalaxy#44 + autofit_workspace#117 + HowToFit#33 + autolens_workspace#335 + HowToLens#54
+- note: Phase 1 merged (216p Hands, 289p Heart, verify_install F PASS). All three phase-2 product families are shipped with targeted smoke PASS and await merge; ten curated real-output markdown pages were explicitly deferred by the user.
 - repos:
   - PyAutoHands: feature/hide-autonerves-colab-bootstrap
   - PyAutoHeart: feature/hide-autonerves-colab-bootstrap
