@@ -32,18 +32,6 @@
 - repos:
   - PyAutoHands: feature/notebook-adjacent-docstrings
 
-## profiling-mirror-taxonomy
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/84
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/profiling-mirror-taxonomy
-- autonomy: supervised
-- heart-ack: 2026-07-24 human acknowledged YELLOW for ship+merge: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
-- prompt: active/mirror_scripts_taxonomy.md
-- note: UNBLOCKED (group4 merged PR#83, claim released). Dataset-first inversion: scripts/<dataset>/<task>/, cluster/ first-class (group4 cells -> scripts/cluster/, human decision), datacube under interferometer, agnostic -> scripts/misc/<task>/. LOCKED: results/config/dataset stay at root, results section names stable; fix parents[1] import model FIRST; 28 sbatch rewrites; Brain profiling conductor lockstep (companion PR); RAL re-sync = post-merge step. Gates on issue #84. Fresh YELLOW ack at ship.
-- repos:
-  - autolens_profiling: feature/profiling-mirror-taxonomy
-  - PyAutoBrain: feature/profiling-mirror-taxonomy
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
