@@ -8,6 +8,7 @@
 - autonomy: supervised
 - prompt: active/back_to_back_docstrings_notebook.md
 - repos:
+  - PyAutoHands: feature/notebook-adjacent-docstrings
 
 ## remove-inline-standalones
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/160
