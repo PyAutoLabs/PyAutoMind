@@ -34,6 +34,7 @@
 - prompt: active/adjacent_docstring_hygiene.md
 - note: Phase 2 of PyAutoHands#196. Add a read-only AST-backed Hygiene mode, exact human/JSON findings, default ranking, and /refactor delegation. Approved branch feature/hygiene-adjacent-docstrings; preserve the unrelated canonical PyAutoBrain skills/WORKFLOW.md edit by using the isolated task worktree.
 - repos:
+  - PyAutoBrain: feature/hygiene-adjacent-docstrings
 
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
