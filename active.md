@@ -5,6 +5,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/test-results-relayout
 - autonomy: supervised
+- heart-ack: 2026-07-24 human acknowledged YELLOW for ship+merge: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - prompt: active/test_results_relayout.md
 - note: Phase 3 — run_logs/ Mind-style hierarchy, lockstep 8-site writer+reader change (Hands+Heart), fixes LIVE health_sync stale-dashboard bug. Traps: tick.sh -d guard + health_sync compgen guard move in lockstep. Fresh YELLOW ack at ship.
 - repos:
@@ -16,6 +17,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/autogalaxy-test-mirror
 - autonomy: supervised
+- heart-ack: 2026-07-24 human acknowledged YELLOW for ship+merge: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - prompt: active/autogalaxy_test_mirror_subfolders.md
 - note: autolens recipe (#212+#216) in ONE pass — mirror + task subfolders + prefix strip; jax_* segment rule; simulator bootstrap = follow-up (inventory only). Fresh YELLOW ack at ship.
 - repos:
