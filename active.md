@@ -8,6 +8,8 @@
 - prompt: active/hide_autonerves_colab_bootstrap_api.md
 - note: Phase 1 of 2 — change the Hands injection template and Heart check F while preserving autonerves as the private fresh-Colab bootstrap; the six-workspace regeneration follows in its own task.
 - repos:
+  - PyAutoHands: feature/hide-autonerves-colab-bootstrap
+  - PyAutoHeart: feature/hide-autonerves-colab-bootstrap
 
 ## ag-simulator-bootstrap
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/94
