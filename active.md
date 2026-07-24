@@ -1,5 +1,15 @@
 # Active Tasks
 
+## clean-packaging-debris
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/159
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/clean-packaging-debris
+- autonomy: supervised
+- prompt: active/clean_generated_packaging_debris.md
+- note: User explicitly authorized this PyAutoBrain task to proceed concurrently with profiling-mirror-taxonomy; their files were clean and non-overlapping at task start. Coordinate if either diff reaches the other's files.
+- repos:
+  - PyAutoBrain: feature/clean-packaging-debris
+
 ## hide-autonerves-colab-autogalaxy
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/158
 - status: workspace-dev
