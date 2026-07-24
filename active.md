@@ -2,11 +2,12 @@
 
 ## hide-autonerves-colab-autofit
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/116
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-autofit
 - autonomy: human-required
 - prompt: active/hide_autonerves_colab_autofit_rollout.md
-- note: AutoFit product-family rollout after merged PyAutoHands#195/PyAutoHeart#107; generated notebooks only, with no handwritten source changes expected.
+- workspace-pr: autofit_workspace#117 + HowToFit#33
+- note: AutoFit-family notebooks and catalogues shipped with targeted autofit_workspace + HowToFit smoke PASS; no handwritten source changes.
 - repos:
   - autofit_workspace: feature/hide-autonerves-colab-autofit
   - HowToFit: feature/hide-autonerves-colab-autofit
