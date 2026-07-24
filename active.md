@@ -44,9 +44,10 @@
 ## assistant-docs-hierarchy
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/647
 - session: codex
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/assistant-docs-hierarchy
 - heart-ack: 2026-07-24 human acknowledged YELLOW for ship: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)", "release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)"]
+- library-pr: PyAutoLens#648, PyAutoGalaxy#522
 - prompt: active/clarify_assistant_and_human_docs_options.md
 - repos:
   - PyAutoLens: feature/assistant-docs-hierarchy
