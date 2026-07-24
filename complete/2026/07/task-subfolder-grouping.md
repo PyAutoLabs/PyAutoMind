@@ -1,3 +1,39 @@
+## Outcome — SHIPPED + MERGED 2026-07-24 (PR #217)
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/216
+(closed). Task subfolders restored inside dataset folders (jax_likelihood/
+jax_grad/ visualization/ simulator/ substructure/ datacube/; singletons at
+root); redundant prefixes stripped; weak/ promoted out of misc/ to mirror
+autolens_workspace's top-level weak/ (misc/weak.py -> weak/jax_grad.py also
+resolved the file/dir coexistence). 65+ git-mv renames, zero deletions.
+
+## Design decisions
+- jax_likelihood vs jax_grad split by PROVENANCE (recovered from the #212
+  rename map), not name-guessing.
+- visualization/ filenames kept where stripping would silently DEMARK
+  _jax/_jit name markers; multi/visualization/ stripped (marker-safe).
+- Simulators consolidated ONLY into existing simulator/ dirs
+  (simulator_* -> simulator/{simple,dspl}); multi/ and cluster/ simulators
+  stayed (no existing dir -> zero consumer churn).
+- jax_* SEGMENT RULE enforced: only jax-declared scripts under jax_*
+  subfolders (release derivation re-fires there; declarations applied last
+  keep the resolved dict identical — verified per script).
+
+## Gotchas
+- 41 consumer spawn paths + BOOTSTRAP-TARGET no_run entries must move
+  together; one false positive caught (a prose ref to the autolens_workspace
+  repo's simulator — different repo, restored).
+- util shims re-depth on every level change; misc/weak.py's bare
+  `import util` relied on script-dir and needed a shim when moved.
+- gallery_run.sh hard-codes visualization script paths — 8 rewritten.
+
+## Follow-ups
+Same recipe for autogalaxy_workspace_test (mirror + subfolders in one pass —
+cheaper than two); profiling/ move (blackjax claim); eyes_gallery_repoint;
+test_results_relayout (Phase 3); potential_correction asymmetry bug (drafted).
+
+## Original prompt
+
 # autolens_workspace_test: task subfolders inside dataset folders + prefix cleanup (Phase 2c)
 
 Type: refactor

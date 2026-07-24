@@ -17,16 +17,6 @@
   - autogalaxy_workspace: feature/workspace-start-here-colab-links
   - euclid_strong_lens_modeling_pipeline: feature/workspace-start-here-colab-links
 
-## task-subfolder-grouping
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/216
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/task-subfolder-grouping
-- autonomy: supervised
-- prompt: active/task_subfolder_grouping.md
-- note: Phase 2c (user feedback on merged #212): task subfolders inside dataset folders (jax_likelihood/ jax_grad/ visualization/ simulator/ substructure/, singletons at root), strip redundant prefixes/suffixes (imaging_lp->jax_grad/lp; *_datacube->datacube/; misc/weak.py->weak/jax_grad.py). CRITICAL: jax_* subfolder re-triggers release derivation — only jax-declared scripts under jax_* segments; zero-diff gate catches misplacement. Bootstrap spawn paths + BOOTSTRAP-TARGET no_run entries move together. Fresh YELLOW ack needed at ship.
-- repos:
-  - autolens_workspace_test: feature/task-subfolder-grouping
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
