@@ -2,11 +2,12 @@
 
 ## hide-autonerves-colab-bootstrap
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/194
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-bootstrap
 - autonomy: human-required
 - prompt: active/hide_autonerves_colab_bootstrap_api.md
-- note: Phase 1 of 2 — change the Hands injection template and Heart check F while preserving autonerves as the private fresh-Colab bootstrap; the six-workspace regeneration follows in its own task.
+- library-pr: PyAutoHands#195 + PyAutoHeart#107
+- note: Phase 1 shipped to open pending-release PRs (216p Hands, 289p Heart, verify_install F PASS). Workspace impact is 527 files (12 source + 515 generated notebooks); phase 2 prompt is draft/refactor/workspaces/hide_autonerves_colab_workspace_rollout.md.
 - repos:
   - PyAutoHands: feature/hide-autonerves-colab-bootstrap
   - PyAutoHeart: feature/hide-autonerves-colab-bootstrap
