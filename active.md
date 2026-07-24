@@ -1,16 +1,5 @@
 # Active Tasks
 
-## test-mirror-restructure
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/211
-- status: AWAITING MERGE — restructure PR #212 open (all 7 gates passed: 130 scripts, resolved env + should_skip identical, validator all-strict 0, 117 git-mv renames). Cull decisions recorded on #211: mass_via_integral KEEP-AND-RUN (human 2026-07-24); simulators -> Phase 2b auto-bootstrap (draft/refactor/autolens_workspace_test/simulator_auto_bootstrap.md, issue AFTER #212 merges); 5 low-confidence flags await human markup. profiling/ move still deferred on blackjax-smc claim.
-- worktree: ~/Code/PyAutoLabs-wt/test-mirror-restructure
-- autonomy: supervised
-- heart-ack: 2026-07-23 human acknowledged YELLOW for overnight run + ship: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
-- prompt: active/mirror_restructure_and_cull.md
-- note: Phase 2 of test-maintainability plan. MOVE-ONLY tonight (zero deletions): mirror taxonomy per 2026-07-23 survey mapping; gallery STAYS (Eyes coupling); profiling STAYS (autolens_workspace_developer claimed by blackjax-smc-gradient-kernel — move deferred to when that ships); cull = SEPARATE human decision list posted to issue #211, nothing deleted without human. Gates: per-script resolved env + should_skip identical under new paths; smoke_tests.txt entries exist; validator all-strict 0; git mv history. Sizing override again (score 12 repo-count proxy; uniform mechanical moves).
-- repos:
-  - autolens_workspace_test: feature/test-mirror-restructure
-
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.

@@ -1,3 +1,45 @@
+## Outcome — RESTRUCTURE SHIPPED + MERGED 2026-07-24 (PR #212); cull routed onward
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/211 (OPEN —
+remains the cull ledger). Move-only mirror restructure merged: scripts/ now
+mirrors autolens_workspace (imaging/ interferometer/ point_source/ cluster/
+multi/ + misc/), 130 scripts in → 130 out, 117 git-mv renames, only 0-byte
+__init__ deletions. Two collision renames (datacube → *_datacube). gallery/ +
+profiling/ deliberately untouched (Eyes coupling; blackjax developer-repo claim).
+
+## Why it was cheap
+The __Env__ declaration system (Phases 1a/1b/#189) made env config travel with
+the files: the whole 130-script move needed only 16 no_run pattern updates +
+one override pattern edit. KEY GATE SUBTLETY: release-mode derive_jax_markers
+loses the path-marker when jax scripts leave jax_* folders — exactly
+compensated by their in-file `jax` declarations (verified empirically per
+script, both profiles, empty base: 0 diffs).
+
+## Cull outcome (decision list on #211)
+0 deletes recommended; human decisions 2026-07-24: mass_via_integral
+KEEP-AND-RUN (live cross-validation of analytic deflections vs independent
+scipy-quad integrals — nothing else covers it); the 17 simulator demotes
+SUPERSEDED by Phase 2b (auto-bootstrap via should_simulate + uncommit
+regenerable datasets, tip-removal only — never-rewrite rule). 5 low-confidence
+flags still await human markup. Blind spot found: user imaging
+potential_correction runs under SMALL_DATASETS=1 (mesh-starving) while its
+interferometer sibling is exempted — fold the fix into Phase 2b or a config
+follow-up.
+
+## Gotchas
+- jax_grad's `import util` resolves via sys.path[0]=script dir — movers needed
+  the mass/-style sys.path shim; misc/weak.py stays co-located, no shim.
+- file/dir name coexistences kept deliberately: imaging/simulator.py +
+  imaging/simulator/, misc/weak.py + misc/weak/.
+- Sibling-simulator subprocess spawns are workspace-root-relative path strings
+  — 11 targets rewritten and existence-verified.
+
+## Follow-ups
+Phase 2b simulator_auto_bootstrap (issued next); 5 cull flags; profiling/ move
+on blackjax ship; eyes_gallery_repoint; test_results_relayout (drafted).
+
+## Original prompt
+
 # autolens_workspace_test: mirror-taxonomy restructure + earn-your-slot cull (Phase 2)
 
 Type: refactor
