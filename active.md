@@ -2,7 +2,7 @@
 
 ## workspace-start-here-colab-links
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/649
-- status: library-shipped, workspace-pending
+- status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/workspace-start-here-colab-links
 - autonomy: supervised
 - prompt: active/fix_workspace_start_here_colab_links.md
@@ -13,6 +13,9 @@
 - repos:
   - PyAutoLens: feature/workspace-start-here-colab-links
   - PyAutoGalaxy: feature/workspace-start-here-colab-links
+  - autolens_workspace: feature/workspace-start-here-colab-links
+  - autogalaxy_workspace: feature/workspace-start-here-colab-links
+  - euclid_strong_lens_modeling_pipeline: feature/workspace-start-here-colab-links
 
 ## task-subfolder-grouping
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/216
