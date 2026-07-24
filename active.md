@@ -54,9 +54,10 @@
 ## assistant-first-docs
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/645
 - session: codex
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/assistant-first-docs
 - heart-ack: 2026-07-24 human acknowledged YELLOW for ship: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)", "release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)"]
+- library-pr: PyAutoLens#646, PyAutoGalaxy#521
 - prompt: active/unify_ai_assistant_getting_started.md
 - repos:
   - PyAutoLens: feature/assistant-first-docs
