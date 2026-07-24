@@ -1,7 +1,7 @@
 # Remove obsolete AutoCTI notebook bootstrap
 
 Type: refactor
-Target: autocti
+Target: autocti_workspace
 Repos:
 - @autocti_workspace
 - @autocti_workspace_test
@@ -11,7 +11,7 @@ Priority: normal
 Status: formalised
 
 Depends on:
-- `draft/refactor/workspaces/matplotlib_inline_standalones.md`
+- `complete/2026/07/remove-inline-standalones.md`
 
 Remove or replace the obsolete `%matplotlib inline` plus `pyprojroot`
 bootstrap throughout maintained AutoCTI workspace scripts and notebooks and
