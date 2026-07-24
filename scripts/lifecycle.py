@@ -198,6 +198,17 @@ def cmd_record(args) -> int:
                            capture_output=True, text=True)
         if r.returncode != 0:
             prompt.unlink(missing_ok=True)
+
+    # Freshen complete/index.md in the same step so a shipped record never
+    # leaves it stale — the Lifecycle Drift guard runs `index --check` on every
+    # push to main touching complete/**, and the separate `index --apply` step
+    # was easy to forget (failing runs + maintainer emails). Same effect as
+    # cmd_index --apply, folded in so the two can't drift apart.
+    INDEX_MD.write_text(_render_index(_existing_curated()))
+    subprocess.run(["git", "-C", str(ROOT), "add", str(INDEX_MD)],
+                   capture_output=True, text=True)
+    print(f"index: refreshed {INDEX_MD.relative_to(ROOT)} "
+          f"({len(_all_records())} records)")
     return 0
 
 
