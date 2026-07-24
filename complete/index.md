@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-738 records across 6 buckets.
+739 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -319,6 +319,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [ship-gate](2026/07/ship-gate.md)
 - [simulate-injection-feasibility](2026/07/simulate-injection-feasibility.md)
 - [simulator-auto-bootstrap](2026/07/simulator-auto-bootstrap.md) — PR #214
+- [simulator-jax-sections-code-cells](2026/07/simulator-jax-sections-code-cells.md) — Converted the fenced ```python blocks inside the __JAX Variant__ / __Oversampled PSF__ docstring sections of i…
 - [slack-release-notes](2026/07/slack-release-notes.md)
 - [slacs1430-acs-parity](2026/07/slacs1430-acs-parity.md) — SLACS1430+4105 ACS reduction vs legacy — pixel parity PASS — SHIPPED
 - [slam-adapt-inversion-cascade](2026/07/slam-adapt-inversion-cascade.md) — Fixed two distinct pixelized-SLaM root causes (verified green under CI smoke env; run_smoke 9/9 + 6/6). (1) Do…

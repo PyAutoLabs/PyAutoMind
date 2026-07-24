@@ -1,3 +1,11 @@
+## simulator-jax-sections-code-cells
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/339
+- completed: 2026-07-24
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/340 (MERGED)
+- summary: Converted the fenced ```python blocks inside the __JAX Variant__ / __Oversampled PSF__ docstring sections of imaging/interferometer/point_source simulator.py into real code cells (setup live, executing line commented with run-time/overwrite note), retitled with (Advanced), added to __Contents__, updated 5 cross-refs. Content fixes surfaced by making code real: interferometer snippet referenced nonexistent real_space_grid and had stale "pynufft not JAX-traceable" claim (installed TransformerNUFFT is JAX-native nufftax; live code now uses it — DFT would be enormous on the 800x800/1M-vis setup at that point); adjacent docstrings in imaging merged (current generator renders the second as a literal ''' code cell until PyAutoHands#197 merges); point_source commented var named positions_jax to avoid shadowing the saved positions. Validated: py_compile x7, three simulators rc=0 under smoke profile (dataset/ untouched — SKIP_VISUALIZATION no-ops writers), check_sizes OK, notebooks + navigator catalogue regenerated, CI 4/4 green. Heart YELLOW human-acked (3 reasons, recorded in entry). Ops: Mind checkout was on a concurrent session's branch all session — every registry write went via detached temp worktrees to main.
+
+## Original prompt
+
 # Simulator JAX / Oversampled-PSF sections: fenced code blocks → real code cells
 
 **Work type:** docs (workspace)

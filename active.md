@@ -73,14 +73,3 @@
 - repos:
   - autolens_jax_joss: main (born this task)
 
-## simulator-jax-sections-code-cells
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/339
-- session: claude --resume 5028c921-5f5d-4142-8c9b-a86da5c3641e
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/simulator-jax-sections-code-cells
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/340
-- heart-ack: 2026-07-24 human ack for this ship covers exactly: workspace validation not passing (13 failed, 2026-07-21T19-05-22Z); 33 stale parked script(s); manifest drift: tenant firewall (3 mismatches vs repos.yaml). STOP if the reason set grows.
-- prompt: active/simulator_jax_sections_real_code_cells.md
-- note: Convert fenced ```python blocks inside the __JAX Variant__ / __Oversampled PSF__ docstring sections of imaging/interferometer/point_source simulator.py into real code cells; comment out only the executing line (run-time / dataset-overwrite note); retitle with (Advanced) and add to __Contents__; update 5 cross-refs.
-- repos:
-  - autolens_workspace: feature/simulator-jax-sections-code-cells
