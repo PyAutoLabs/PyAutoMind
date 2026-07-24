@@ -8,6 +8,8 @@
 - prompt: active/fix_workspace_start_here_colab_links.md
 - note: Coordinated docs-only correction. Generic introductory Colab links should target each workspace-root start_here.ipynb; explicitly imaging-specific links stay on notebooks/imaging/start_here.ipynb. Exact release-tag root notebooks were verified to contain setup_colab.for_autolens / setup_colab.for_autogalaxy.
 - repos:
+  - PyAutoLens: feature/workspace-start-here-colab-links
+  - PyAutoGalaxy: feature/workspace-start-here-colab-links
 
 ## task-subfolder-grouping
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/216
