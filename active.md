@@ -1,5 +1,36 @@
 # Active Tasks
 
+## ag-simulator-bootstrap
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/94
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/ag-simulator-bootstrap
+- autonomy: supervised
+- prompt: active/simulator_auto_bootstrap_ag.md
+- note: autolens#213 analogue; #92 inventory says all 4 datasets clean-regenerable, no protective cases. Batch YELLOW ack at ship with the other two.
+- repos:
+  - autogalaxy_workspace_test: feature/ag-simulator-bootstrap
+
+## eyes-gallery-repoint
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/218
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/eyes-gallery-repoint
+- autonomy: supervised
+- prompt: active/eyes_gallery_repoint.md
+- note: option (a): gallery -> repo root of autolens_workspace_test; PyAutoBrain Eyes refs + gallery_build parents[2] + gallery_run cd depth repoint in lockstep; kill the #195 standalone-run shape. Batch ack at ship.
+- repos:
+  - autolens_workspace_test: feature/eyes-gallery-repoint
+  - PyAutoBrain: feature/eyes-gallery-repoint
+
+## potential-correction-asymmetry
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/332
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/potential-correction-asymmetry
+- autonomy: supervised
+- prompt: active/potential_correction_small_datasets_asymmetry.md
+- note: mirror the interferometer release override for the imaging sibling (declaration rejected — would slow smoke). One intended release-side resolved-env change. Batch ack at ship.
+- repos:
+  - autolens_workspace: feature/potential-correction-asymmetry
+
 ## testmode-env-drift
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/95
 - status: PRs OPEN awaiting merge — PyAutoCTI#96 (delete dead fixture) + PyAutoFit#1417 (docstring). KEY FINDING: the obvious fix (rename PYAUTOFIT_TEST_MODE -> PYAUTO_TEST_MODE) is WRONG. Nothing reads PYAUTOFIT_TEST_MODE so the aggregator autouse fixture was always a no-op; making the var LIVE actually enables test mode, which bypasses sampling so the aggregator has no samples -> 6/13 tests FAIL. Measured 3 ways: baseline(dead var)=13 passed; renamed=6 failed/7 passed; fixture DELETED=13 passed. Shipped the deletion (behaviour-preserving, deletes the trap). Two gitignored .claude/settings.local.json allowlists deliberately LEFT ALONE — rewriting them would change what those commands do; they are stale permission strings, not a defect.
