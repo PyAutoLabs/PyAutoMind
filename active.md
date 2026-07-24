@@ -1,5 +1,14 @@
 # Active Tasks
 
+## autocti-notebook-bootstrap
+- issue: https://github.com/PyAutoLabs/autocti_workspace/issues/7
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/autocti-notebook-bootstrap
+- autonomy: safe
+- prompt: active/matplotlib_inline_bootstrap.md
+- note: User-approved second task in the ordered matplotlib-inline cleanup. Replace 79 public-workspace old bootstrap blocks, regenerate 79 notebooks through PyAutoHands conversion, clean 26 non-legacy workspace-test scripts, and preserve all 13 legacy occurrences verbatim. No library/API or release-wiring changes.
+- repos:
+
 ## start-here-jax-simplify
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/336
 - status: workspace-dev
