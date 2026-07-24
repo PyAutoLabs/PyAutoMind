@@ -8,6 +8,8 @@
 - prompt: active/matplotlib_inline_standalones.md
 - note: User-approved first task in the ordered matplotlib-inline cleanup; remove five standalone comments in AutoGalaxy/AutoLens before starting the dependent AutoCTI bootstrap sweep. The overlapping Colab-bootstrap PRs merged and released both claims before setup. AutoLens main-checkout formatting changes remain isolated and untouched.
 - repos:
+  - autogalaxy_workspace: feature/remove-inline-standalones
+  - autolens_workspace: feature/remove-inline-standalones
 
 ## clean-packaging-debris
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/159
