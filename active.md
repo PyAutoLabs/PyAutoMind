@@ -39,6 +39,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/dpie-simulator-port
 - autonomy: supervised
+- heart-ack: 2026-07-24 human PRE-authorized YELLOW ship+merge for this task AND the queued dataset_auto_simulate follow-on ("go" before completion): ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"] — STOP and re-ask if the reason set changes or any gate fails
 - prompt: active/cluster_simulators_dpie_api_drift.md
 - note: port cluster/group/group4_mge simulators to post-#506 dPIE parameterisation (physically-equivalent conversion from the #506 diff). Verifies via the #84-blocked full cluster smoke-run. SEQUENCED BEFORE dataset_auto_simulate (same repo; auto-simulate byte-verification needs working simulators). Batch ack at ship.
 - repos:
