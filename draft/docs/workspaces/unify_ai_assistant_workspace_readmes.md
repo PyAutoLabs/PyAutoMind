@@ -1,19 +1,18 @@
-# Phase 1: Unify AI assistant guidance in library documentation
+# Phase 2: Make workspace READMEs assistant-first
 
-Update the library READMEs and Read the Docs sources for @PyAutoLens and
-@PyAutoGalaxy. Present one concise **AI Assistant** route covering conversation
-agents (for example ChatGPT) and coding agents (for example Claude Code and
-Codex), then direct readers to the relevant assistant repository for its full
-scope.
+Update @autolens_workspace and @autogalaxy_workspace after the library and Read
+the Docs phase. Put one concise **AI Assistant** route first in Getting Started,
+covering conversation agents (for example ChatGPT) and coding agents (for
+example Claude Code and Codex), with the full setup and capabilities left to the
+relevant assistant repository.
 
-Put the assistant first in each Getting Started section. Introduce the remaining
-links as human-readable documentation and examples. Remove the duplicated
-**AI chat assistant**, **Fully agentic AI**, and **Three Ways to Learn
-PyAutoLens** framing from the scoped library and Read the Docs pages.
+Preserve the existing installation, Google Colab, notebook, and browsable
+example routes. Remove **Three Ways to Learn PyAutoLens** from the lens workspace
+README and describe the remaining resources as human-readable documentation and
+examples.
 
 The intended PyAutoGalaxy assistant URL must resolve before its links are
-published. Phase 2 is tracked separately in
-`draft/docs/workspaces/unify_ai_assistant_workspace_readmes.md`.
+published.
 
 ## Original request
 
