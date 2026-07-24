@@ -54,3 +54,12 @@
 - note: 5-phase epic (one-shot attempt per user); new repo autolens_jax_joss (PyAutoLabs, public) born alongside; datasets SDP.81 / RXJ1131 / A2744 user-approved
 - repos:
   - autolens_jax_joss: main (born this task)
+
+## simulator-jax-sections-code-cells
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/339
+- session: claude --resume 5028c921-5f5d-4142-8c9b-a86da5c3641e
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/simulator-jax-sections-code-cells
+- prompt: active/simulator_jax_sections_real_code_cells.md
+- note: Convert fenced ```python blocks inside the __JAX Variant__ / __Oversampled PSF__ docstring sections of imaging/interferometer/point_source simulator.py into real code cells; comment out only the executing line (run-time / dataset-overwrite note); retitle with (Advanced) and add to __Contents__; update 5 cross-refs.
+- repos:
