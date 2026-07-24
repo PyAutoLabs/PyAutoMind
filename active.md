@@ -2,11 +2,12 @@
 
 ## clean-packaging-debris
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/159
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/clean-packaging-debris
 - autonomy: supervised
 - prompt: active/clean_generated_packaging_debris.md
-- note: User explicitly authorized this PyAutoBrain task to proceed concurrently with profiling-mirror-taxonomy; their files were clean and non-overlapping at task start. Coordinate if either diff reaches the other's files.
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/160
+- note: PR open at ccb7b88 with pending-release label. Validation: 19 targeted + 157 remaining Brain tests pass; the sizing-wrapper failure is pre-existing on main. Brain-only operational CLI change, so workspace smoke is n/a. Heart YELLOW (workspace failures, stale parked scripts, manifest drift, stale rehearsal) explicitly acknowledged by the user. Concurrent profiling-mirror-taxonomy changed only agents/conductors/profiling/_profiling.py at ship time; no overlap.
 - repos:
   - PyAutoBrain: feature/clean-packaging-debris
 
