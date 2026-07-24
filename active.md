@@ -2,11 +2,13 @@
 
 ## start-here-jax-simplify
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/336
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/start-here-jax-simplify
 - autonomy: supervised
 - prompt: active/start_here_jax_section_simplify.md
-- note: Trim each root start_here.py __JAX__ section to a short new-user version; move technical material to new scripts/guides/using_jax.py in both workspaces (ag mirror, no lens_calc pointer). Former blockers (colab rollouts + remove-inline-standalones) all merged before branch creation — branches cut from post-merge origin/main, no rebase debt. User authorized the start while remove-inline-standalones' stale claim was still in active.md.
+- workspace-pr: autolens_workspace#338 + autogalaxy_workspace#162
+- heart-ack: user acknowledged YELLOW at ship (workspace validation 13f stale census 2026-07-21; 33 stale parked scripts; tenant-firewall manifest drift x3; release validation stale) — none touch this docs-only change
+- note: Shipped with targeted smoke PASS (root start_here.py + guide in both repos). Both PRs also true-up a stale .script_sizes.json snapshot (drift inherited from earlier merged sweeps; new using_jax.py entry included). ag guide fixes stale api/data_structures.py cross-ref. NEXT: merge both PRs (standalone, no library gate), then lifecycle record + close #336.
 - repos:
   - autolens_workspace: feature/start-here-jax-simplify
   - autogalaxy_workspace: feature/start-here-jax-simplify
