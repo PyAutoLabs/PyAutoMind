@@ -28,3 +28,10 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - note: WAVE TRACKER — this parks the whole JAX-native posterior sampler wave (stages b ChEES-HMC, c MCLMC+harmonic, d flowMC, e jaxns still remain). Do NOT move the prompt to complete/ — stage (a) shipped its findings but the wave continues as a separate run after the refactor. Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer: feature/blackjax-smc-gradient-kernel (pushed, tip 6867762)
+
+## group4-mge-search-benchmark
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/82
+- parked: 2026-07-24 — code + first GPU results MERGED (PR #83); worktree/claim RELEASED
+- remaining: gradient-family sweep (prodigy/lion/adabelief/prodigy_autoconv) + Nautilus anchor on laptop GPU (~/venv/PyAutoGPU, JAX_PLATFORM_NAME=cuda JAX_PLATFORMS=cuda,cpu XLA_PYTHON_CLIENT_MEM_FRACTION=0.5, --config-name local_gpu_fp64), then recovery/walltime aggregation. Warm output preserved in main checkout output/searches/.
+- note: RESUME FROM NEW PATHS once the scripts/<dataset>/<task>/ restructure lands — group4 cells move to scripts/cluster/ (human taxonomy decision). If compile still too heavy: dial _GROUP4_MGE_TOTAL_GAUSSIANS 10->6 and/or _MULTI_START_N_STARTS 64->32.
+
