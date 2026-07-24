@@ -2,7 +2,7 @@
 
 ## test-mirror-restructure
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/211
-- status: PARKED FOR MORNING RESUME (human request 2026-07-23 night) — issue #211 filed, worktree created and VERIFIED CLEAN (zero edits landed; both overnight agents stopped in discovery phase). RESUME = relaunch two agents: (1) move-only mirror restructure per the move map on issue #211 (gates: identical resolved env + should_skip per script, smoke list exists, validator all-strict, git-mv history; NOTE from stopped agent: many scripts spawn sibling simulators by workspace-root-relative path — enumerate and fix those references during moves); (2) read-only cull decision list to scratchpad+issue (13 candidates + ~90 release-only tail; mass_via_integral and LL-literal scripts protected). heart-ack below stands for the ship.
+- status: AWAITING MERGE — restructure PR #212 open (all 7 gates passed: 130 scripts, resolved env + should_skip identical, validator all-strict 0, 117 git-mv renames). Cull decisions recorded on #211: mass_via_integral KEEP-AND-RUN (human 2026-07-24); simulators -> Phase 2b auto-bootstrap (draft/refactor/autolens_workspace_test/simulator_auto_bootstrap.md, issue AFTER #212 merges); 5 low-confidence flags await human markup. profiling/ move still deferred on blackjax-smc claim.
 - worktree: ~/Code/PyAutoLabs-wt/test-mirror-restructure
 - autonomy: supervised
 - heart-ack: 2026-07-23 human acknowledged YELLOW for overnight run + ship: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
