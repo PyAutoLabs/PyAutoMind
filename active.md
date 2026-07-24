@@ -51,3 +51,11 @@
 - note: WAVE TRACKER — stages (b) ChEES-HMC, (c) MCLMC+harmonic, (d) flowMC, (e) jaxns remain. Do NOT move prompt to complete/ on stage-(a) ship; issue next stage only as this one nears shipping (no bulk-issue). Concurrent worktree alongside parked pix-gradient-slogdet-revalidation claim (different files). Gradient path certified OK_HMC_VIABLE (probe_grad.py); baseline nss_grad row = logZ -31.47.
 - repos:
   - autolens_workspace_developer
+
+## assistant-first-docs
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/645
+- session: codex
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/assistant-first-docs
+- prompt: active/unify_ai_assistant_getting_started.md
+- repos:
