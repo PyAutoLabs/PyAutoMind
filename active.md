@@ -16,12 +16,12 @@
 ## notebook-adjacent-docstrings
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/196
 - session: codex
-- status: library-shipped, smoke-failed
+- status: library-shipped, smoke-passed
 - worktree: ~/Code/PyAutoLabs-wt/notebook-adjacent-docstrings
 - autonomy: supervised
 - prompt: active/back_to_back_docstrings_notebook.md
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/197
-- note: Commit 6916814; 218 PyAutoHands tests pass. User acknowledged Heart YELLOW (workspace validation not passing; 33 stale parked scripts). Downstream smoke: 49 passed, 8 failed, 3 configured skips. Failures are six notebook dataset/simulator-path errors plus two AutoLens Delaunay missing-dataset errors; see issue comment 5070732344. Do not merge or start dependent phase 2 until the smoke failure is triaged.
+- note: Commit 6916814; 218 PyAutoHands tests pass. User acknowledged Heart YELLOW (workspace validation not passing; 33 stale parked scripts). The initial parallel/manual smoke harness reported 8 failures, but triage showed two harness defects: regenerated notebooks ran from /tmp instead of the workspace root, and scripts sharing auto-simulated datasets ran concurrently. The canonical per-workspace runners pass all affected suites (AutoFit 10/10, AutoGalaxy 8/8, AutoLens 11/11); combined downstream result is 58 passed, 0 failed, 2 configured skips. Phase 2 may proceed; do not merge PR #197 without human approval.
 - repos:
   - PyAutoHands: feature/notebook-adjacent-docstrings
 
@@ -30,7 +30,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/dpie-simulator-port
 - autonomy: supervised
-- heart-ack: 2026-07-24 human PRE-authorized YELLOW ship+merge for this task AND the queued dataset_auto_simulate follow-on ("go" before completion): ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"] — STOP and re-ask if the reason set changes or any gate fails
+- heart-ack: 2026-07-24 human EXTENDED ack to three YELLOW reasons ("go" after boundary stop): ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)", "manifest drift: tenant firewall (organ code) — 3 mismatch(es) vs PyAutoMind/repos.yaml (unrelated concurrent clean_slate work)"] — covers this task AND dataset_auto_simulate
 - prompt: active/cluster_simulators_dpie_api_drift.md
 - note: port cluster/group/group4_mge simulators to post-#506 dPIE parameterisation (physically-equivalent conversion from the #506 diff). Verifies via the #84-blocked full cluster smoke-run. SEQUENCED BEFORE dataset_auto_simulate (same repo; auto-simulate byte-verification needs working simulators). Batch ack at ship.
 - repos:
