@@ -1,3 +1,11 @@
+## hide-autonerves-colab-autofit
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/116
+- completed: 2026-07-24
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/117; https://github.com/PyAutoLabs/HowToFit/pull/33
+- summary: Merged regenerated AutoFit and HowToFit notebooks/catalogues using the product-level setup API and private fresh-Colab backend. No handwritten scripts changed; both targeted smoke runners passed.
+
+## Original prompt
+
 # Remove direct `autonerves.setup_colab` imports from AutoFit examples
 
 Type: refactor

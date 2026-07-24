@@ -1,3 +1,11 @@
+## hide-autonerves-colab-autogalaxy
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/158
+- completed: 2026-07-24
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/159; https://github.com/PyAutoLabs/HowToGalaxy/pull/44
+- summary: Merged the AutoGalaxy public/private Colab bootstrap rollout with four handwritten setup scripts and regenerated notebooks/catalogues. Targeted AutoGalaxy-family smoke passed; four curated real-output Markdown pages were explicitly deferred.
+
+## Original prompt
+
 # Remove direct `autonerves.setup_colab` imports from AutoGalaxy examples
 
 Type: refactor

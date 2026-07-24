@@ -1,3 +1,12 @@
+## hide-autonerves-colab-bootstrap
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/194
+- completed: 2026-07-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/195; https://github.com/PyAutoLabs/PyAutoHeart/pull/107
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/159; https://github.com/PyAutoLabs/HowToGalaxy/pull/44; https://github.com/PyAutoLabs/autofit_workspace/pull/117; https://github.com/PyAutoLabs/HowToFit/pull/33; https://github.com/PyAutoLabs/autolens_workspace/pull/335; https://github.com/PyAutoLabs/HowToLens/pull/54
+- summary: Completed the end-to-end Colab API boundary: product APIs are user-facing outside Colab, while fresh Colab privately installs and imports autonerves. Shared generator/install verification and all three workspace families merged; ten curated real-output Markdown pages remain as an explicitly deferred follow-up.
+
+## Original prompt
+
 # Hide `autonerves` behind the Colab bootstrap
 
 Type: refactor

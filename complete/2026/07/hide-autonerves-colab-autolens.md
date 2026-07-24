@@ -1,3 +1,11 @@
+## hide-autonerves-colab-autolens
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/334
+- completed: 2026-07-24
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/335; https://github.com/PyAutoLabs/HowToLens/pull/54
+- summary: Merged the AutoLens public/private Colab bootstrap rollout across eight handwritten setup scripts and regenerated notebooks/catalogues. Targeted local smoke and the GitHub Python 3.12/3.13 matrix passed; six curated real-output Markdown pages were explicitly deferred, and unrelated main-checkout formatting edits remained untouched.
+
+## Original prompt
+
 # Remove direct `autonerves.setup_colab` imports from AutoLens examples
 
 Type: refactor

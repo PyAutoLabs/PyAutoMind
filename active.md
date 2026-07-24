@@ -1,29 +1,5 @@
 # Active Tasks
 
-## hide-autonerves-colab-autolens
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/334
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-autolens
-- autonomy: human-required
-- prompt: active/hide_autonerves_colab_autolens_rollout.md
-- workspace-pr: autolens_workspace#335 + HowToLens#54
-- note: AutoLens scripts, notebooks, and catalogues shipped with targeted autolens_workspace + HowToLens smoke PASS. Six real-output markdown pages were explicitly deferred; pre-existing main-checkout formatting changes remain isolated and untouched.
-- repos:
-  - autolens_workspace: feature/hide-autonerves-colab-autolens
-  - HowToLens: feature/hide-autonerves-colab-autolens
-
-## hide-autonerves-colab-autofit
-- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/116
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-autofit
-- autonomy: human-required
-- prompt: active/hide_autonerves_colab_autofit_rollout.md
-- workspace-pr: autofit_workspace#117 + HowToFit#33
-- note: AutoFit-family notebooks and catalogues shipped with targeted autofit_workspace + HowToFit smoke PASS; no handwritten source changes.
-- repos:
-  - autofit_workspace: feature/hide-autonerves-colab-autofit
-  - HowToFit: feature/hide-autonerves-colab-autofit
-
 ## clean-packaging-debris
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/159
 - status: library-dev
@@ -33,31 +9,6 @@
 - note: User explicitly authorized this PyAutoBrain task to proceed concurrently with profiling-mirror-taxonomy; their files were clean and non-overlapping at task start. Coordinate if either diff reaches the other's files.
 - repos:
   - PyAutoBrain: feature/clean-packaging-debris
-
-## hide-autonerves-colab-autogalaxy
-- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/158
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-autogalaxy
-- autonomy: human-required
-- prompt: active/hide_autonerves_colab_autogalaxy_rollout.md
-- workspace-pr: autogalaxy_workspace#159 + HowToGalaxy#44
-- note: AutoGalaxy scripts and notebooks shipped with targeted smoke PASS. Four real-output markdown pages were explicitly deferred by the user; the exploratory full sweep also exposed an unrelated AutoLens-test timeout and invalid generic Euclid runner path.
-- repos:
-  - autogalaxy_workspace: feature/hide-autonerves-colab-autogalaxy
-  - HowToGalaxy: feature/hide-autonerves-colab-autogalaxy
-
-## hide-autonerves-colab-bootstrap
-- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/194
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/hide-autonerves-colab-bootstrap
-- autonomy: human-required
-- prompt: active/hide_autonerves_colab_bootstrap_api.md
-- library-pr: PyAutoHands#195 + PyAutoHeart#107
-- workspace-pr: autogalaxy_workspace#159 + HowToGalaxy#44 + autofit_workspace#117 + HowToFit#33 + autolens_workspace#335 + HowToLens#54
-- note: Phase 1 merged (216p Hands, 289p Heart, verify_install F PASS). All three phase-2 product families are shipped with targeted smoke PASS and await merge; ten curated real-output markdown pages were explicitly deferred by the user.
-- repos:
-  - PyAutoHands: feature/hide-autonerves-colab-bootstrap
-  - PyAutoHeart: feature/hide-autonerves-colab-bootstrap
 
 ## profiling-mirror-taxonomy
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/84
