@@ -63,3 +63,4 @@
 - prompt: active/simulator_jax_sections_real_code_cells.md
 - note: Convert fenced ```python blocks inside the __JAX Variant__ / __Oversampled PSF__ docstring sections of imaging/interferometer/point_source simulator.py into real code cells; comment out only the executing line (run-time / dataset-overwrite note); retitle with (Advanced) and add to __Contents__; update 5 cross-refs.
 - repos:
+  - autolens_workspace: feature/simulator-jax-sections-code-cells
