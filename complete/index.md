@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-716 records across 6 buckets.
+718 records across 6 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -40,6 +40,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [assistant-benchmarks](2026/07/assistant-benchmarks.md)
 - [assistant-deep-audit](2026/07/assistant-deep-audit.md)
 - [assistant-euclid-mode](2026/07/assistant-euclid-mode.md)
+- [assistant-first-docs](2026/07/assistant-first-docs.md) — Unified PyAutoLens and PyAutoGalaxy README, Read the Docs, and workspace onboarding around a single AI Assista…
 - [assistant-pin-bump-2026-7-9-1](2026/07/assistant-pin-bump-2026-7-9-1.md) — Bumped autolens_assistant version.txt + config/general.yaml from 2026.5.29.4 to 2026.7.9.1 (api_audit_baseline…
 - [assistant-ref-mechanics](2026/07/assistant-ref-mechanics.md) — science-project -> assistant refer-back mechanics complete — non-blocking provenance-drift check in start-new-…
 - [assistant-wiki-release](2026/07/assistant-wiki-release.md) — wiki/core release-complete vs autolens_workspace — gaps filled (LOS halos, sky background via DatasetModel, de…
@@ -319,6 +320,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [stub-skill-recipes-fill-in](2026/07/stub-skill-recipes-fill-in.md) — retired by user decision
 - [survey-cutouts](2026/07/survey-cutouts.md)
 - [tenant-firewall-drift](2026/07/tenant-firewall-drift.md)
+- [test-mirror-restructure](2026/07/test-mirror-restructure.md)
 - [test-mode-bypass-completed](2026/07/test-mode-bypass-completed.md) — One-line fix — _fit_bypass_test_mode now calls paths.completed() before returning (mirrors start_resume_fit), …
 - [test-mode-representative-samples-phase-1-design](2026/07/test-mode-representative-samples-phase-1-design.md)
 - [test-mode-representative-samples-phase-2-core-api](2026/07/test-mode-representative-samples-phase-2-core-api.md)

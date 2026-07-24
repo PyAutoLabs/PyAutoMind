@@ -1,3 +1,12 @@
+## assistant-first-docs
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/645
+- completed: 2026-07-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/646, https://github.com/PyAutoLabs/PyAutoGalaxy/pull/521
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/329, https://github.com/PyAutoLabs/autogalaxy_workspace/pull/155
+- summary: Unified PyAutoLens and PyAutoGalaxy README, Read the Docs, and workspace onboarding around a single AI Assistant route; removed the Three Ways structure; retained Colab guidance. All docs builds, library tests, workspace smoke tests, and GitHub checks passed. The future PyAutoGalaxy assistant URL is intentionally allowed to return 404 until its repository is created.
+
+## Original prompt
+
 # Phase 1: Unify AI assistant guidance in library documentation
 
 Update the library READMEs and Read the Docs sources for @PyAutoLens and
