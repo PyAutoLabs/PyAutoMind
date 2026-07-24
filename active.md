@@ -41,6 +41,11 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/merge-adjacent-docstrings
 - autonomy: supervised
+- heart-ack: 2026-07-24 human acknowledged this workspace ship with the exact YELLOW reasons below; any new reason or RED verdict requires a fresh stop
+  - workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)
+  - 33 stale parked script(s)
+  - manifest drift: tenant firewall (organ code) — 3 mismatch(es) vs PyAutoMind/repos.yaml
+  - release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
 - prompt: active/merge_adjacent_docstrings.md
 - note: Merge 81 scanner-confirmed adjacent documentation boundaries with exact ordered-text witnesses. The initial autolens_workspace conflict cleared after PR #340 merged; its worktree is now attached from the post-merge origin/main. Branch approved as feature/merge-adjacent-docstrings. HowToFit is a verified zero-finding target.
 - repos:
@@ -72,4 +77,3 @@
 - note: 5-phase epic (one-shot attempt per user); new repo autolens_jax_joss (PyAutoLabs, public) born alongside; datasets SDP.81 / RXJ1131 / A2744 user-approved
 - repos:
   - autolens_jax_joss: main (born this task)
-
