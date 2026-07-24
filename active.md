@@ -24,17 +24,6 @@
 - repos:
   - PyAutoBrain: feature/hygiene-adjacent-docstrings
 
-## profiling-dataset-auto-simulate
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/88
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/profiling-dataset-auto-simulate
-- autonomy: supervised
-- heart-ack: 2026-07-24 human ack covers this ship (extended three-reason ack recorded on the completed dpie-simulator-port task; STOP if the reason set grows beyond those three or any gate fails)
-- prompt: active/dataset_auto_simulate.md
-- note: #213 recipe for autolens_profiling; BYTE-identity required (baselines calibrated against committed bytes); dPIE fix merged (#87) so cluster family verifiable. Non-reproducible => committed + protective note.
-- repos:
-  - autolens_profiling: feature/profiling-dataset-auto-simulate
-
 ## merge-adjacent-docstrings
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/341
 - session: codex
