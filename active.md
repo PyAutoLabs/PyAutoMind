@@ -17,6 +17,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/ag-simulator-bootstrap
 - autonomy: supervised
+- heart-ack: 2026-07-24 human acknowledged YELLOW for batch ship+merge: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - prompt: active/simulator_auto_bootstrap_ag.md
 - note: autolens#213 analogue; #92 inventory says all 4 datasets clean-regenerable, no protective cases. Batch YELLOW ack at ship with the other two.
 - repos:
@@ -27,6 +28,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/eyes-gallery-repoint
 - autonomy: supervised
+- heart-ack: 2026-07-24 human acknowledged YELLOW for batch ship+merge: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - prompt: active/eyes_gallery_repoint.md
 - note: option (a): gallery -> repo root of autolens_workspace_test; PyAutoBrain Eyes refs + gallery_build parents[2] + gallery_run cd depth repoint in lockstep; kill the #195 standalone-run shape. SCOPE EXTENDED (blackjax claim released, human confirmed 2026-07-24): profiling/aggregator -> autolens_workspace_developer (2 sibling-coupled files move together; zero live references; developer main checkout has 23 dirty files in searches_minimal/source_science/plotting_alignment — UNREGISTERED work from another session, no overlap, left alone). Batch ack at ship.
 - repos:
@@ -39,6 +41,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/potential-correction-asymmetry
 - autonomy: supervised
+- heart-ack: 2026-07-24 human acknowledged YELLOW for batch ship+merge: ["workspace validation not passing (13 failed, 2026-07-21T19-05-22Z)", "33 stale parked script(s)"]
 - prompt: active/potential_correction_small_datasets_asymmetry.md
 - note: mirror the interferometer release override for the imaging sibling (declaration rejected — would slow smoke). One intended release-side resolved-env change. Batch ack at ship.
 - repos:
