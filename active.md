@@ -25,10 +25,12 @@
 ## notebook-adjacent-docstrings
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/196
 - session: codex
-- status: library-dev
+- status: library-shipped, smoke-failed
 - worktree: ~/Code/PyAutoLabs-wt/notebook-adjacent-docstrings
 - autonomy: supervised
 - prompt: active/back_to_back_docstrings_notebook.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/197
+- note: Commit 6916814; 218 PyAutoHands tests pass. User acknowledged Heart YELLOW (workspace validation not passing; 33 stale parked scripts). Downstream smoke: 49 passed, 8 failed, 5 configured skips. Failures are six notebook dataset/simulator-path errors plus two AutoLens Delaunay missing-dataset errors; see issue comment 5070732344. Do not merge or start dependent phase 2 until the smoke failure is triaged.
 - repos:
   - PyAutoHands: feature/notebook-adjacent-docstrings
 
