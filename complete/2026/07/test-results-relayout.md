@@ -1,3 +1,34 @@
+## Outcome — SHIPPED + MERGED 2026-07-24 (Hands#193 + Heart#106, lockstep pair)
+
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/192 (closed).
+test_results/ → run_logs/ with runs/<run-type>/<YYYY>/<MM>/<timestamp>/,
+regenerated index.md (newest-first, per-project pass/fail), AGENTS.md,
+latest symlink kept, --run-type arg (smoke default — run_all has NO release
+path today; release runs pass the flag). 20 historical runs migrated on disk
+(the folder is gitignored — state, not history), 14 stale April flat files
+deleted. All 8 reader sites moved in lockstep (checks consts, tick.sh guard,
+health_release, health_sync). PyAutoBrain vitals manifest updated directly.
+
+## The live bug fixed
+health_sync's "Last autohands run" dashboard line had read the legacy flat
+test_results/*.json (last written 2026-04-26) — silently showing April data
+for months. Now reads run_logs/latest/report.json (verified real values).
+
+## Gotchas
+- The two silent-breakage traps from the reader-map research (tick.sh -d
+  guard; health_sync compgen guard) were the whole reason for lockstep; a
+  brief fail-safe degraded-tick window existed between disk migration and
+  merge (anticipated, attributable).
+- readiness_evidence_audit.md's old path mention deliberately KEPT — dated
+  measured record; rewriting would falsify history.
+- Worktree path resolution: Heart readers resolve ~/Code/PyAutoLabs from
+  parents[3]-name check — worktrees fall back to the main checkout.
+
+## Follow-ups
+None blocking. Future: release-prep mega-runs should pass --run-type release.
+
+## Original prompt
+
 # PyAutoHands run-log relayout: Mind-style hierarchy + index, rename test_results (Phase 3)
 
 Type: maintenance
