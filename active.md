@@ -27,7 +27,7 @@
 ## merge-adjacent-docstrings
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/341
 - session: codex
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/merge-adjacent-docstrings
 - autonomy: supervised
 - heart-ack: 2026-07-24 human acknowledged this workspace ship with the exact YELLOW reasons below; any new reason or RED verdict requires a fresh stop
@@ -36,7 +36,14 @@
   - manifest drift: tenant firewall (organ code) — 3 mismatch(es) vs PyAutoMind/repos.yaml
   - release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
 - prompt: active/merge_adjacent_docstrings.md
-- note: Merge 81 scanner-confirmed adjacent documentation boundaries with exact ordered-text witnesses. The initial autolens_workspace conflict cleared after PR #340 merged; its worktree is now attached from the post-merge origin/main. Branch approved as feature/merge-adjacent-docstrings. HowToFit is a verified zero-finding target.
+- workspace-prs:
+  - https://github.com/PyAutoLabs/autocti_workspace/pull/9
+  - https://github.com/PyAutoLabs/autofit_workspace/pull/118
+  - https://github.com/PyAutoLabs/autogalaxy_workspace/pull/163
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/342
+  - https://github.com/PyAutoLabs/HowToGalaxy/pull/45
+  - https://github.com/PyAutoLabs/HowToLens/pull/55
+- note: Open pending-release PRs merge 80 boundaries across 57 scripts; merged autolens PR #340 had already removed the 81st. HowToFit is a verified zero-change target. Final Hygiene scan is 0 findings/0 parse errors; exact prose-transform and compile witnesses pass; post-generation validation is AutoFit 10/10, AutoGalaxy 8/8, AutoLens 11/11, HowToGalaxy 4/4, HowToLens 6/6, and AutoCTI direct rc=0. Nothing is merged; issue #341 remains open pending human review.
 - repos:
   - autocti_workspace: feature/merge-adjacent-docstrings
   - autofit_workspace: feature/merge-adjacent-docstrings
