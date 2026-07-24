@@ -1,7 +1,7 @@
-# Notebook generation mis-renders back-to-back docstring blocks as a code cell
+# Phase 1: Notebook generation must handle back-to-back docstrings
 
 Type: bug
-Target: PyAutoBuild
+Target: PyAutoHands
 Difficulty: small
 Autonomy: supervised
 Priority: normal
@@ -33,3 +33,52 @@ cells), with a unit test pinning the case.
 Found 2026-07-10 while validating autolens_assistant#51 (script→notebook converter)
 against the pipeline on identical input: 25/26 cells byte-identical, this artifact was the
 26th.
+
+## Requested scope
+
+@PyAutoHands must make notebook generation robust to consecutive top-level docstring
+blocks, so this formatting cannot break generation even before source hygiene is applied.
+
+The Hygiene scanner and source cleanup requested at the same time are tracked as dependent
+phases in `draft/feature/pyautobrain/adjacent_docstring_hygiene.md` and
+`draft/maintenance/workspaces/merge_adjacent_docstrings.md`, following the Bug Agent's
+required multi-repo split.
+
+## Original user request (verbatim)
+
+Double docstring formatting like this currently breaks ntoebook generate:   GPU; not wrong, but slower than `jnp.sqrt(...)` if you're inside a hot
+  loop. For one-off analysis code, don't worry about it.
+- The `.array` property of `aa.Array2D` etc. is the raw backing array — a
+  `numpy.ndarray` on the NumPy path, a `jax.Array` on the JAX path.
+
+The `data_structures.py` guide (`scripts/guides/data_structures.py`) covers
+the wrapper-vs-raw-array distinction in detail.
+"""
+
+"""
+__Units__
+ in the corresponding start_here.ipynb it looks like this: 
+# %%
+'''
+__Units__
+
+The units used throughout the strong lensing literature vary, therefore lets quickly describe the units used in
+**PyAutoLens**.
+
+The `Tracer` object and all mass profiles describe their quantities in terms of angles, which are defined in units
+of arc-seconds. To convert these to physical units (e.g. kiloparsecs), we use the redshift of the lens and source
+galaxies and an input cosmology. A run through of all normal unit conversions is given in guides in the workspace
+outlined below.
+
+The use of angles in arc-seconds has an important property, it means that for a two-plane strong lens system 
+(e.g. a lens galaxy at one redshift and source galaxy at another redshift) lensing calculations are independent of
+the galaxies' redshifts and the input cosmology. This has a number of benefits, for example it makes it straight
+forward to compare the lensing properties of different strong lens systems even when the redshifts of the galaxies
+are unknown.
+
+Multi-plane lensing is when there are more than two planes. The tracer fully supports this, if you input 3+ galaxies
+with different redshifts into the tracer it will use their redshifts and its cosmology to perform multi-plane lensing
+calculations that depend on them.
+
+__Extensibility__
+, can you make it so that the generate function that builds notebooks in autohands does not let these things break notebook generation and can you make it so the hygeine agent looks for and merges these in the scripts of all worskpaces, HowTos

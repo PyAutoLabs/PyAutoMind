@@ -1,4 +1,4 @@
-# Phase 2: Detect and clean adjacent script docstrings through Hygiene
+# Phase 2: Detect adjacent script docstrings through Hygiene
 
 Type: feature
 Target: PyAutoBrain
@@ -17,10 +17,13 @@ documentation blocks separated only by whitespace. The Hygiene Agent must preser
 reasoning-only boundary: report exact findings and delegate safe, mechanical merges through
 the development workflow rather than editing repositories during its read-only pre-scan.
 
-Use the new capability to merge confirmed adjacent documentation blocks in the affected
-workspace and HowTo scripts. Preserve prose and notebook section semantics, do not merge
-ordinary string literals or docstrings separated by executable code, and validate that the
-cleaned scripts still generate structurally correct notebooks.
+Expose the scan as a first-class Hygiene mode in human and JSON output, include repository,
+file and line locations, include it in the default ranked worklist, and route findings to
+`/refactor`. Restrict matches to consecutive top-level triple-quoted expression blocks;
+ordinary string literals and documentation separated by executable code must not be flagged.
+
+Applying the reported merges is the dependent phase
+`draft/maintenance/workspaces/merge_adjacent_docstrings.md`.
 
 ## Original user request (verbatim)
 
