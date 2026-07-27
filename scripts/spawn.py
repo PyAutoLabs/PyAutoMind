@@ -43,9 +43,15 @@ MIND_WORK_TYPES = (
 MIND_RULES = [
     ("scripts/*", "KEEP"),
     ("REFERENCE.md", "KEEP"), ("AGENTS.md", "KEEP"), ("CLAUDE.md", "KEEP"),
-    ("LICENSE", "KEEP"), ("CONTRIBUTING.md", "KEEP"), ("ROUTING.md", "KEEP"),
+    ("LICENSE", "KEEP"), ("ROUTING.md", "KEEP"),
     (".gitignore", "KEEP"),
     ("README.md", "KEEP"),
+    # Org-wide pointer docs. Generic prose, but each names the owning org and
+    # links the canonical copy in that org's PyAutoScientist — so they take the
+    # same owner substitution .github/** does rather than a verbatim KEEP.
+    # Verbatim would stamp "Contributing to PyAutoLabs" into a fresh-slate
+    # template spawned for somebody else's org.
+    ("AI_POLICY.md", "KEEP_SUB"), ("CONTRIBUTING.md", "KEEP_SUB"),
     ("repos.yaml", "SPECIAL:body_map"),
     ("active.md", "EMPTY"), ("planned.md", "EMPTY"),
     ("parked.md", "EMPTY"), ("condemned.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
@@ -72,8 +78,10 @@ MIND_RULES = [
 MEMORY_RULES = [
     ("bibliography/*.py", "KEEP"), ("bibliography/README.md", "KEEP"),
     ("scripts/*", "KEEP"), ("tests/*", "KEEP"),
-    ("Makefile", "KEEP"), ("LICENSE", "KEEP"), ("CONTRIBUTING.md", "KEEP"),
+    ("Makefile", "KEEP"), ("LICENSE", "KEEP"),
     ("AGENTS.md", "KEEP"), ("CLAUDE.md", "KEEP"), (".gitignore", "KEEP"),
+    # Same org-wide pointer docs as MIND_RULES — owner substitution.
+    ("AI_POLICY.md", "KEEP_SUB"), ("CONTRIBUTING.md", "KEEP_SUB"),
     ("bibliography/*", "EMPTY"),
     (".github/*", "KEEP_SUB"),
     # The shared wiki schema is template content; the sub-wikis are instance

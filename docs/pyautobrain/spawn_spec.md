@@ -32,8 +32,9 @@ deliberately, never silently shipped into a template.
 | # | Pattern | Action |
 |---|---------|--------|
 | 1 | `scripts/**` | KEEP verbatim (generic tooling: repos_sync, prompt_sync, status, spawn itself) |
-| 2 | `REFERENCE.md`, `AGENTS.md`, `CLAUDE.md`, `LICENSE`, `CONTRIBUTING.md`, `ROUTING.md`, `.gitignore` | KEEP verbatim |
+| 2 | `REFERENCE.md`, `AGENTS.md`, `CLAUDE.md`, `LICENSE`, `ROUTING.md`, `.gitignore` | KEEP verbatim |
 | 3 | `README.md` | KEEP verbatim (already generic post-Phase-1) |
+| 3b | `AI_POLICY.md`, `CONTRIBUTING.md` | KEEP with owner substitution — both are org-wide pointer docs: generic prose that names the owning org and links the canonical copy inside that org's `PyAutoScientist`. They take the same `PyAutoLabs` → `YOURORG` substitution as rule 9 rather than a verbatim KEEP; verbatim would stamp a literal "Contributing to PyAutoLabs" into a template spawned for another org |
 | 4 | `repos.yaml` | SUBSTITUTE → the **template body map**: the five organ rows kept with `github:` owner replaced by `YOURORG`; all live satellite rows replaced by the PyAutoProject family rows (`PyAutoProject` category `library`, `autoproject_workspace` category `workspace`, `autoproject_workspace_test` category `workspace_test`) + a commented-out `autoproject_assistant` row ("uncomment when the clone agent seeds it") |
 | 5 | `active.md`, `planned.md`, `parked.md`, `condemned.md`, `ideas.md`, `queue.md`, `autonomy_log.md` | EMPTY → header line + schema pointer comment only (e.g. `# Active Tasks` + `<!-- schema: REFERENCE.md -->`); autonomy_log keeps its schema header rows |
 | 6 | `draft/**` (the work-type dirs `feature/ bug/ refactor/ docs/ test/ release/ maintenance/ research/ experiment/ triage/` now live under `draft/`) | SKELETON → keep a single `draft/.gitkeep`; drop all draft prompts and their work-type/target subdirs (a fresh Mind starts with an empty `draft/`; intake recreates the work-type subdirs on demand) |
@@ -47,7 +48,8 @@ deliberately, never silently shipped into a template.
 
 | # | Pattern | Action |
 |---|---------|--------|
-| 1 | `bibliography/*.py`, `bibliography/README.md`, `scripts/`, `tests/`, `Makefile`, `LICENSE`, `CONTRIBUTING.md`, `AGENTS.md`, `CLAUDE.md`, `.gitignore` | KEEP verbatim (tooling + schema + policy — scripts/tests are the citation-validation tooling the Makefile drives) |
+| 1 | `bibliography/*.py`, `bibliography/README.md`, `scripts/`, `tests/`, `Makefile`, `LICENSE`, `AGENTS.md`, `CLAUDE.md`, `.gitignore` | KEEP verbatim (tooling + schema + policy — scripts/tests are the citation-validation tooling the Makefile drives) |
+| 1b | `AI_POLICY.md`, `CONTRIBUTING.md` | KEEP with owner substitution — same org-wide pointer docs as the Mind table's rule 3b |
 | 2 | `bibliography/*.bib` and any bibliography data files | EMPTY → file kept with header comment ("populated by your literature") |
 | 3 | `wiki/CLAUDE.md` (the shared schema) | KEEP verbatim — since the wiki/ restructure (PyAutoMemory#24) the schema is a single domain-neutral file at `wiki/CLAUDE.md`, kept canary-clean at the source (its examples carry no instance tokens), so spawn no longer maintains a duplicate schema asset |
 | 4 | `wiki/*` (all live sub-wikis, all pages) | DROP; generate instead ONE `wiki/example/` containing a slim scope-only `CLAUDE.md` (the schema is inherited from rule 3, not copied), an `index.md` skeleton listing zero sources, and one `sources/EXAMPLE_stub.md` demonstrating the stub format (hand-written once, stored inside spawn as a heredoc/template asset — not copied from live content) |

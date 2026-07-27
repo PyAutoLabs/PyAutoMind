@@ -133,7 +133,7 @@
   - PyAutoBuild
 
 ## jax-point-source-point-smoke-sentinel
-- prompt: PyAutoMind/issued/jax_point_source_point_smoke_sentinel.md
+- prompt: draft/bug/autolens/jax_point_source_point_smoke_sentinel.md
 - status: planned
 - filed: 2026-05-21
 - classification: library (triage; routing TBD by bisect)
