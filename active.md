@@ -34,3 +34,10 @@
 - prompt: active/pixelized_multistart_prodigy_cpu.md
 - repos:
   - autolens_workspace_developer: feature/pix-prodigy-cpu
+
+## point-source-chi-squared-variants
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/657
+- session: claude --resume daaa46f9-aac5-48e2-9146-1202a92d879e
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-source-chi-squared-variants
+- repos:
