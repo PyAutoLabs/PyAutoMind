@@ -461,7 +461,34 @@ def generate_mind(mind_root, out_dir):
     readme = out_dir / "README.md"
     if readme.exists():
         readme.write_text(TEMPLATE_README_BANNER + readme.read_text())
+    stamp_complete_index(out_dir)
     return warns
+
+
+def stamp_complete_index(out_dir):
+    """Stamp the template's empty-archive `complete/index.md` (spec rule 6c).
+
+    Runs the GENERATED tree's own `scripts/lifecycle.py`, which resolves its
+    root from `__file__` — so the index is produced by the same code, over the
+    same (empty) archive, as the template's own lifecycle self-heal.
+
+    Without this the template is permanently drifted: it ships
+    `lifecycle_drift.yml`, whose self-heal (PyAutoMind#116) regenerates this
+    file on every push to the template's `main`. Each spawn sync was therefore
+    followed within seconds by a bot commit creating a file spawn did not
+    produce, which the next `--check` reported as drift — forever.
+
+    Deliberately NOT a constant here: `lifecycle.py` owns the index format, and
+    a second copy of that text would drift from it.
+    """
+    lifecycle = out_dir / "scripts" / "lifecycle.py"
+    if not lifecycle.exists():          # rules changed; nothing to stamp
+        return
+    (out_dir / "complete").mkdir(parents=True, exist_ok=True)
+    subprocess.run(
+        [sys.executable, str(lifecycle), "index", "--apply"],
+        cwd=out_dir, check=True, capture_output=True,
+    )
 
 
 def generate_memory(memory_root, out_dir):
