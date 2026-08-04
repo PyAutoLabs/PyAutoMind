@@ -18,6 +18,13 @@ on:
       - ".github/workflows/spawn_drift.yml"
   workflow_dispatch:
 
+# One sync at a time: the proposal branch is shared, so concurrent runs would
+# be last-writer-wins on a force-push. Queue rather than cancel — a cancelled
+# run could leave a pushed branch with no PR.
+concurrency:
+  group: spawn-drift
+  cancel-in-progress: false
+
 permissions:
   contents: read
 
@@ -100,10 +107,19 @@ jobs:
           TOP="$PWD"
           opened=0
           for name in PyAutoMind-template PyAutoMemory-template; do
-            if diff -rq "regenerated/$name" "published/$name" \
-                 --exclude .git --exclude SPAWNED_FROM >/dev/null 2>&1; then
+            set +e
+            diff -rq "regenerated/$name" "published/$name" \
+              --exclude .git --exclude SPAWNED_FROM >/dev/null
+            d=$?
+            set -e
+            # diff: 0 same, 1 differs, 2 TROUBLE (missing/unreadable tree).
+            # Only 1 may mean drift; 2 must abort rather than force-push.
+            if [ "$d" = "0" ]; then
               echo "== $name: current, no PR needed"
               continue
+            elif [ "$d" != "1" ]; then
+              echo "::error::diff failed ($d) comparing $name — aborting rather than replacing a tree we could not read"
+              exit 1
             fi
             echo "== $name: drifted, preparing $BRANCH"
             work="work/$name"
@@ -129,8 +145,13 @@ jobs:
             # PR instead of opening a new one every Monday.
             git push -q -f origin "$BRANCH"
 
-            if gh pr view "$BRANCH" --repo "PyAutoLabs/$name" >/dev/null 2>&1; then
-              echo "   refreshed the existing PR"
+            open_pr=$(gh pr list --repo "PyAutoLabs/$name" --head "$BRANCH" \
+                        --state open --json number --jq 'length' 2>/dev/null || echo 0)
+            # NOT `gh pr view`: it matches merged and closed PRs too, so once a
+            # sync PR was merged the reused branch would report "refreshed"
+            # forever and silently never open another one.
+            if [ "${open_pr:-0}" != "0" ]; then
+              echo "   refreshed the existing open PR"
             else
               body="$TOP/pr-body.md"
               : > "$body"

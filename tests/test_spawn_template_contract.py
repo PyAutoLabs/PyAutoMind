@@ -78,21 +78,20 @@ MINIMAL_MIND = {
 # A .github mirroring the real one: two self-contained/generic workflows and
 # three pieces of instance automation (sibling repo lists, organ workflow
 # names, org secrets, domain vocabulary).
+# The two workflows Mind really ships are read from disk, NOT hand-copied
+# miniatures. A stale miniature is how the PAT_PYAUTOLABS reference slipped
+# past `test_no_shipped_workflow_needs_a_configured_secret` in #125: the real
+# spawn_drift.yml had grown a self-heal step the fixture knew nothing about.
+_REAL_WORKFLOWS = Path(__file__).resolve().parents[1] / ".github" / "workflows"
+
+
+def _real(name):
+    return (_REAL_WORKFLOWS / name).read_text()
+
+
 GITHUB_FILES = {
-    ".github/workflows/lifecycle_drift.yml": (
-        "name: Lifecycle Drift\non:\n  push:\n    branches: [main]\n"
-        "jobs:\n  drift:\n    runs-on: ubuntu-latest\n    steps:\n"
-        "      - uses: actions/checkout@v4\n"
-        "      - run: python3 scripts/lifecycle.py check\n"
-    ),
-    ".github/workflows/spawn_drift.yml": (
-        "name: Spawn Drift\non:\n"
-        "  schedule:\n    - cron: \"17 6 * * 1\"\n"
-        "  pull_request:\n    paths:\n      - \"scripts/spawn.py\"\n"
-        "  workflow_dispatch:\n\n"
-        "jobs:\n  drift:\n    runs-on: ubuntu-latest\n    steps:\n"
-        "      - run: git clone https://github.com/PyAutoLabs/PyAutoMind\n"
-    ),
+    ".github/workflows/lifecycle_drift.yml": _real("lifecycle_drift.yml"),
+    ".github/workflows/spawn_drift.yml": _real("spawn_drift.yml"),
     ".github/workflows/morning_status.yml": (
         "name: digest\non:\n  schedule:\n    - cron: \"0 6 * * *\"\n"
         "jobs:\n  d:\n    runs-on: ubuntu-latest\n    steps:\n"
@@ -113,6 +112,7 @@ GITHUB_FILES = {
 }
 
 DROPPED_GITHUB = [
+    ".github/workflows/spawn_drift.yml",     # rule 9b, revised to DROP in #125
     ".github/workflows/morning_status.yml",
     ".github/workflows/morning_health.yml",
     ".github/workflows/arxiv_papers.yml",
@@ -143,7 +143,7 @@ def test_instance_automation_is_not_shipped(mind_with_github):
 def test_generic_workflows_are_still_shipped(mind_with_github):
     """Guard the other direction — rule 9 must not over-drop."""
     names = {p.name for p in _shipped_workflows(mind_with_github)}
-    assert names == {"lifecycle_drift.yml", "spawn_drift.yml"}, names
+    assert names == {"lifecycle_drift.yml"}, names
 
 
 def test_no_shipped_workflow_runs_on_a_schedule(mind_with_github):
@@ -196,15 +196,6 @@ def test_a_new_mind_workflow_is_a_human_decision(tmp_path):
     assert not (out / ".github" / "workflows" / "brand_new_thing.yml").exists()
 
 
-def test_unscheduled_transform_fails_loudly_if_it_becomes_a_noop(tmp_path):
-    """If spawn_drift ever loses its schedule upstream, the rule silently stops
-    doing anything — that is how a guard rots. It must fail instead."""
-    src = tmp_path / "spawn_drift.yml"
-    src.write_text("name: x\non:\n  workflow_dispatch:\njobs: {}\n")
-    with pytest.raises(SystemExit):
-        spawn.unscheduled_workflow_body(src)
-
-
 MINIMAL_MEMORY = {
     "README.md": "# Mem\n", "AGENTS.md": "# A\n", "CLAUDE.md": "# C\n",
     "LICENSE": "MIT\n", ".gitignore": "tmp/\n", "Makefile": "all:\n",
@@ -240,108 +231,6 @@ def test_memory_github_is_also_fail_closed(tmp_path):
     assert not (out / ".github" / "workflows" / "some_new_memory_job.yml").exists()
     # …and the known-good one still ships.
     assert (out / ".github" / "workflows" / "validate.yml").exists()
-
-
-def test_unscheduled_transform_only_touches_the_on_mapping(tmp_path):
-    """A `schedule:` line inside a `run: |` block is shell, not a trigger.
-
-    The first draft matched any line starting with `schedule:` and rewrote that
-    shell line into comments — silently mangling the script. The strip is scoped
-    to the top-level `on:` mapping.
-    """
-    src = tmp_path / "spawn_drift.yml"
-    src.write_text(
-        "name: x\non:\n  schedule:\n    - cron: \"0 6 * * *\"\n  workflow_dispatch:\n"
-        "jobs:\n  j:\n    runs-on: ubuntu-latest\n    steps:\n      - run: |\n"
-        "          schedule: not a trigger\n          echo done\n"
-    )
-
-    out = spawn.unscheduled_workflow_body(src)
-
-    assert "schedule: not a trigger" in out, "the run block was corrupted"
-    assert "echo done" in out
-    spec = yaml.safe_load(out)
-    triggers = spec[True] if True in spec else spec["on"]
-    assert "schedule" not in triggers and "workflow_dispatch" in triggers
-
-
-@pytest.mark.parametrize(
-    "body",
-    [
-        # Flow style — a line-based transform cannot safely edit it.
-        'name: x\non: {schedule: [{cron: "0 6 * * *"}]}\njobs: {}\n',
-        # No schedule at all — the rule would be a silent no-op.
-        "name: x\non:\n  workflow_dispatch:\njobs: {}\n",
-    ],
-)
-def test_unscheduled_transform_fails_rather_than_guessing(tmp_path, body):
-    src = tmp_path / "spawn_drift.yml"
-    src.write_text(body)
-    with pytest.raises(SystemExit):
-        spawn.unscheduled_workflow_body(src)
-
-
-@pytest.mark.parametrize(
-    "body",
-    [
-        # Quoted `on` key — YAML 1.1 turns bare `on` into True, so some repos quote it.
-        'name: x\n"on":\n  schedule:\n    - cron: "0 6 * * *"\n  workflow_dispatch:\njobs: {}\n',
-        # Comment nested inside the schedule block.
-        'name: x\non:\n  schedule:\n    # nightly\n    - cron: "0 6 * * *"\n  workflow_dispatch:\njobs: {}\n',
-        # Comment at the SAME indent as `schedule:` — used to end block
-        # consumption early, orphaning `- cron` and emitting invalid YAML.
-        'name: x\non:\n  schedule:\n  # nightly\n    - cron: "0 6 * * *"\n  workflow_dispatch:\njobs: {}\n',
-        # Comment introducing the NEXT key must survive with that key.
-        'name: x\non:\n  schedule:\n    - cron: "0 6 * * *"\n  # manual only\n  workflow_dispatch:\njobs: {}\n',
-        # CRLF line endings.
-        'name: x\r\non:\r\n  schedule:\r\n    - cron: "0 6"\r\n  workflow_dispatch:\r\njobs: {}\r\n',
-    ],
-)
-def test_unscheduled_transform_handles_awkward_yaml(tmp_path, body):
-    src = tmp_path / "spawn_drift.yml"
-    src.write_text(body)
-    out = spawn.unscheduled_workflow_body(src)
-    spec = yaml.safe_load(out)  # must not raise — invalid YAML is the failure
-    triggers = spec[True] if True in spec else spec["on"]
-    assert "schedule" not in triggers
-    assert "workflow_dispatch" in triggers
-    assert "- cron" not in out, "orphaned cron entry left behind"
-
-
-def test_unscheduled_transform_keeps_a_workflow_call_schedule_input(tmp_path):
-    """`on.workflow_call.inputs.schedule` is an input, not a trigger.
-
-    Depth matters, not merely "somewhere under `on:`" — only a DIRECT child of
-    the top-level `on:` mapping is a trigger.
-    """
-    src = tmp_path / "spawn_drift.yml"
-    src.write_text(
-        'name: x\non:\n  schedule:\n    - cron: "0 6 * * *"\n'
-        "  workflow_call:\n    inputs:\n      schedule:\n        type: string\njobs: {}\n"
-    )
-
-    out = spawn.unscheduled_workflow_body(src)
-
-    spec = yaml.safe_load(out)
-    triggers = spec[True] if True in spec else spec["on"]
-    assert "schedule" not in triggers, "the trigger should be gone"
-    assert triggers["workflow_call"]["inputs"]["schedule"]["type"] == "string", (
-        "the workflow_call input was deleted along with the trigger"
-    )
-
-
-def test_unscheduled_transform_preserves_everything_else(tmp_path):
-    """Structural strip: only the schedule block goes."""
-    src = tmp_path / "spawn_drift.yml"
-    src.write_text(GITHUB_FILES[".github/workflows/spawn_drift.yml"])
-
-    spec = yaml.safe_load(spawn.unscheduled_workflow_body(src))
-    triggers = spec[True] if True in spec else spec["on"]
-
-    assert "schedule" not in triggers
-    assert "workflow_dispatch" in triggers
-    assert triggers["pull_request"]["paths"] == ["scripts/spawn.py"]
-    assert list(spec["jobs"]) == ["drift"]
 
 
 def test_spawn_stamps_the_templates_complete_index(tmp_path):
@@ -417,6 +306,41 @@ def test_check_exit_codes_are_the_self_heal_contract(tmp_path):
     assert _check_exit(tmp_path, published) == spawn.EXIT_DRIFT
 
 
+def test_the_workflow_only_proposes_on_the_drift_code():
+    """Pin the CONSUMER against the producer, not the producer against itself.
+
+    Every other exit-code test compares a subprocess result with constants
+    imported from the same module, so swapping `EXIT_DRIFT` and `EXIT_UNSAFE`
+    would leave them all green while the workflow still auto-proposed literal
+    exit 1 — now the unsafe one. This reads the real workflow.
+    """
+    wf = yaml.safe_load(_real("spawn_drift.yml"))
+    steps = {s.get("name"): s for s in wf["jobs"]["drift"]["steps"]}
+    propose = steps["Propose the sync PR"]
+
+    assert propose["if"] == f"steps.diff.outputs.code == '{spawn.EXIT_DRIFT}'", (
+        "the PR step must trigger on EXIT_DRIFT and nothing else — "
+        f"got {propose['if']!r} against EXIT_DRIFT={spawn.EXIT_DRIFT}"
+    )
+    for unsafe in (spawn.EXIT_UNSAFE, spawn.EXIT_CRASH):
+        assert f"'{unsafe}'" not in propose["if"], (
+            f"exit {unsafe} must never reach the proposal step"
+        )
+
+
+def test_the_workflow_handles_every_exit_code_it_can_see():
+    """An unhandled code must hit the catch-all, not fall through silently."""
+    diff_step = next(
+        s for s in yaml.safe_load(_real("spawn_drift.yml"))["jobs"]["drift"]["steps"]
+        if s.get("name") == "Regenerate + diff"
+    )
+    run = diff_step["run"]
+    arms = set(re.findall(r"^\s*([0-9]+|\*)\)", run, re.MULTILINE))
+    for code in (spawn.EXIT_CLEAN, spawn.EXIT_DRIFT, spawn.EXIT_UNSAFE):
+        assert str(code) in arms, f"exit {code} has no case arm (found {arms})"
+    assert "*" in arms, "no catch-all arm for unexpected exit codes"
+
+
 def test_a_crash_is_not_reported_as_drift(tmp_path):
     """Python exits 1 on an unhandled exception — the same code as EXIT_DRIFT.
 
@@ -439,6 +363,30 @@ def test_a_crash_is_not_reported_as_drift(tmp_path):
     assert r.returncode == spawn.EXIT_CRASH, "a crash must not look like drift"
     assert r.returncode != spawn.EXIT_DRIFT
     assert "simulated crash" in r.stderr, "the traceback must still be visible"
+
+
+def test_a_fail_closed_SystemExit_is_unsafe_not_drift(tmp_path):
+    """`SystemExit("message")` also exits 1 — the same code as EXIT_DRIFT.
+
+    The fail-closed generator paths (an unmapped EMPTY file, say) raise exactly
+    that. They are human decisions like UNMATCHED, so they must report UNSAFE;
+    otherwise the self-heal reads them as ordinary staleness.
+    """
+    broken = tmp_path / "spawn_failclosed.py"
+    broken.write_text(
+        SPAWN_PY.read_text().replace(
+            "    results = generate_all(root, out_root)",
+            "    raise SystemExit('spawn: simulated fail-closed decision')",
+        )
+    )
+    r = subprocess.run(
+        [sys.executable, str(broken), "--check", str(tmp_path)],
+        capture_output=True, text=True,
+    )
+    assert r.returncode == spawn.EXIT_UNSAFE, (
+        f"fail-closed exit must be UNSAFE, got {r.returncode}"
+    )
+    assert "simulated fail-closed decision" in r.stderr
 
 
 def test_canary_hit_reports_unsafe_not_drift(tmp_path):

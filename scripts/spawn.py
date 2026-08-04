@@ -100,7 +100,11 @@ MIND_RULES = [
     #
     # Ordered before the .github/scripts DROP and each other; first match wins.
     (".github/workflows/lifecycle_drift.yml", "KEEP"),          # 9a: self-contained
-    (".github/workflows/spawn_drift.yml", "SPECIAL:unscheduled"),  # 9b
+    # 9b: DROP (revised in #125). The self-heal makes this workflow depend on
+    # secrets.PAT_PYAUTOLABS and on published *-template repos; a fresh org has
+    # neither, so every path in it is unrunnable there and the secret reference
+    # alone breaks rule 9's no-configured-secret condition.
+    (".github/workflows/spawn_drift.yml", "DROP"),
     # 9c — instance automation: sibling repo lists, organ-specific workflow
     # names, org secrets, strong-lensing vocabulary. Every one of the 13 failing
     # runs in the published template came from these.
@@ -478,104 +482,6 @@ def empty_body(src, rel=None):
     return header + "\n\n<!-- emptied by spawn; schema: REFERENCE.md -->\n"
 
 
-def unscheduled_workflow_body(src):
-    """Drop a workflow's `schedule:` trigger (spec rule 9b).
-
-    `spawn_drift.yml` is generic machinery worth shipping, but its scheduled run
-    clones `<owner>/*-template` repos a freshly-spawned org does not have yet —
-    so on a schedule it would fail weekly and email the new owner. Stripping the
-    trigger keeps the capability (`workflow_dispatch`, `pull_request`) without
-    the noise.
-
-    Structural, not textual: only the `schedule:` key that is a DIRECT CHILD of
-    the top-level `on:` mapping is removed, together with its block. Every other
-    line is passed through unchanged, except that line endings are normalised to
-    `\\n` (`splitlines()` discards the originals).
-
-    Three near-misses this scoping exists to avoid, all found by testing rather
-    than by reading:
-      * a `schedule:` line inside a `run: |` shell block is script text, not a
-        trigger — a bare line match rewrote it into comments;
-      * `on.workflow_call.inputs.schedule` is a legitimate input, not a trigger,
-        so depth matters, not just "somewhere under `on:`";
-      * a comment sitting at the SAME indent as `schedule:` used to end block
-        consumption early, orphaning the `- cron` line and emitting invalid YAML.
-
-    Anything this cannot handle confidently (flow style, no schedule at all)
-    raises instead of guessing.
-    """
-    def substantive(idx):
-        """Next line that is neither blank nor a comment, or None."""
-        while idx < len(lines):
-            s = lines[idx].strip()
-            if s and not s.startswith("#"):
-                return idx
-            idx += 1
-        return None
-
-    lines = substitute_owner(src.read_text(errors="replace")).splitlines()
-    out, i, dropped = [], 0, False
-    on_child_indent = None       # set once we know the `on:` block's child depth
-    while i < len(lines):
-        line = lines[i]
-        stripped = line.lstrip()
-        indent_here = len(line) - len(stripped)
-        is_blank_or_comment = (not stripped) or stripped.startswith("#")
-
-        # Enter/leave the top-level `on:` mapping.
-        if indent_here == 0 and not is_blank_or_comment:
-            key = stripped.split(":", 1)[0].strip().strip("\"'")
-            if key == "on" and not stripped.split(":", 1)[1].strip():
-                nxt = substantive(i + 1)
-                on_child_indent = (
-                    len(lines[nxt]) - len(lines[nxt].lstrip()) if nxt is not None else None
-                )
-            else:
-                # Any other top-level key ends the block. Flow-style `on: {...}`
-                # lands here too and never sets a child indent, so it reaches
-                # the loud failure below rather than being edited blind.
-                on_child_indent = None
-
-        if (
-            on_child_indent is not None
-            and indent_here == on_child_indent          # DIRECT child of `on:`
-            and stripped.startswith("schedule:")
-            and not stripped.startswith("#")
-        ):
-            pad = " " * indent_here
-            out.append(pad + "# schedule: removed by spawn — a fresh org has")
-            out.append(pad + "# no published *-template repos yet, so the run")
-            out.append(pad + "# would fail until it does. Re-add once you publish.")
-            i += 1
-            # Consume the block. Blanks and comments belong to it only when
-            # deeper content follows; otherwise they introduce the NEXT key.
-            while i < len(lines):
-                s = lines[i].strip()
-                if not s or s.startswith("#"):
-                    nxt = substantive(i)
-                    if nxt is not None and (
-                        len(lines[nxt]) - len(lines[nxt].lstrip())
-                    ) > indent_here:
-                        i += 1
-                        continue
-                    break
-                if (len(lines[i]) - len(lines[i].lstrip())) <= indent_here:
-                    break
-                i += 1
-            dropped = True
-            continue
-        out.append(line)
-        i += 1
-    if not dropped:
-        # The trigger this rule exists to remove is gone — the rule is now
-        # silently a no-op, which is how a guard rots. Fail loudly instead.
-        raise SystemExit(
-            f"spawn: {src.name} has no top-level 'on: schedule:' trigger to strip.\n"
-            f"  SPECIAL:unscheduled is now a no-op — re-check spawn_spec.md rule 9b."
-        )
-    return "\n".join(out) + "\n"
-
-
 def autonomy_log_body(src=None):
     """Return the autonomy ledger's schema header WITHOUT reading the source.
 
@@ -628,8 +534,6 @@ def generate_mind(mind_root, out_dir):
             dest.write_text(substitute_owner(src.read_text(errors="replace")))
         elif action == "EMPTY":
             dest.write_text(empty_body(src, rel))
-        elif action == "SPECIAL:unscheduled":
-            dest.write_text(unscheduled_workflow_body(src))
         elif action == "SPECIAL:autonomy_log":
             dest.write_text(autonomy_log_body(src))
         elif action == "SPECIAL:body_map":
@@ -902,8 +806,17 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except SystemExit:
-        raise
+    except SystemExit as exc:
+        # main() exits with an explicit EXIT_* code. Anything else raising
+        # SystemExit is a fail-closed generator path — `empty_body()` on an
+        # unmapped EMPTY file, say — which passes a STRING, and Python turns a
+        # string exit into code 1: indistinguishable from EXIT_DRIFT. Those are
+        # human decisions, exactly like UNMATCHED, so map them to EXIT_UNSAFE
+        # rather than letting the self-heal read them as "templates are stale".
+        if isinstance(exc.code, int) or exc.code is None:
+            raise
+        print(exc.code, file=sys.stderr)
+        sys.exit(EXIT_UNSAFE)
     except BaseException:
         # An unhandled exception would otherwise exit 1 — INDISTINGUISHABLE
         # from EXIT_DRIFT, so the Spawn Drift self-heal would read a crash as
