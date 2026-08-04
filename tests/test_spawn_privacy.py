@@ -158,6 +158,43 @@ def test_glob_matched_empty_files_get_comment_headers(tmp_path, filename, lead):
 # --------------------------------------------------------------------------
 
 
+def test_autonomy_log_skeleton_never_opens_the_source(tmp_path):
+    """The ledger header is generated, not parsed (issue #123).
+
+    Passing a file that does not exist is the strongest form of the assertion:
+    if the source is never opened, no future edit to the live ledger — a row
+    inserted above the separator, a reformatted separator, a markdown
+    formatter's reflow — can change what the template ships.
+    """
+    missing = tmp_path / "autonomy_log.md"  # deliberately not created
+    body = spawn.autonomy_log_body(missing)
+    assert body == spawn.AUTONOMY_LOG_TEMPLATE
+    assert body.rstrip().endswith("|"), "the table header/separator is missing"
+
+
+@pytest.mark.parametrize(
+    "ledger",
+    [
+        # Well-formed: the case that happened to work before.
+        "| date | task |\n|------|------|\n| 2026-01-01 | LEAKME |\n",
+        # A row above the separator — copied by the old parse.
+        "| date | task |\n| 2026-01-01 | LEAKME |\n|------|------|\n",
+        # Separator reformatted — the old parse never broke, copying everything.
+        "| date | task |\n| --- | --- |\n| 2026-01-01 | LEAKME |\n",
+        # No separator at all.
+        "| date | task |\n| 2026-01-01 | LEAKME |\n",
+        # Prose above the table, as the real ledger has.
+        "# Log\n\nsome prose\n\n| date |\n|---|\n| 2026-01-01 LEAKME |\n",
+    ],
+)
+def test_autonomy_log_skeleton_is_constant_whatever_the_ledger(tmp_path, ledger):
+    """Shape assumptions about the live file are exactly what leaked before."""
+    src = tmp_path / "autonomy_log.md"
+    src.write_text(ledger)
+    assert "LEAKME" not in spawn.autonomy_log_body(src)
+    assert spawn.autonomy_log_body(src) == spawn.AUTONOMY_LOG_TEMPLATE
+
+
 def test_canary_scan_catches_a_leaked_registry_slug(tmp_path):
     """The scan must flag a person-name token, not just a science dataset."""
     (tmp_path / "planned.md").write_text(f"## {NAME_TOKEN}-audit-phases\n")
@@ -250,7 +287,17 @@ def fake_workspace(tmp_path):
             "active.md": ledger, "planned.md": ledger, "parked.md": ledger,
             "condemned.md": ledger, "ideas.md": f"- {LIVE_MARKER} idea line.\n",
             "queue.md": ledger,
-            "autonomy_log.md": f"| a | b |\n|---|---|\n| {LIVE_MARKER} | row |\n",
+            # Hostile on BOTH known axes (issue #123): a live row ABOVE the
+            # separator, and the separator itself cosmetically reformatted to
+            # `| --- |`. The old parse copied lines until one started with
+            # "|---", so the first leaked that row and the second never broke
+            # at all — it copied the entire ledger.
+            "autonomy_log.md": (
+                f"| date | task |\n"
+                f"| {LIVE_MARKER} | row above the separator |\n"
+                f"| --- | --- |\n"
+                f"| {LIVE_MARKER} | row below the separator |\n"
+            ),
             "README.md": "# Mind\n", "AGENTS.md": "# Agents\n",
             "REFERENCE.md": "# Ref\n", "ROUTING.md": "# Routing\n",
             "CLAUDE.md": "# Claude\n", "LICENSE": "MIT\n", ".gitignore": "tmp/\n",

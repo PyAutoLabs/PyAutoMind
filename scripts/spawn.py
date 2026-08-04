@@ -170,6 +170,30 @@ EMPTY_COMMENTS = {
 # Generated assets
 # --------------------------------------------------------------------------
 
+# The autonomy ledger's schema header, GENERATED rather than parsed out of the
+# live file (spec rule 5; issue #123). The old implementation copied lines
+# until one started with "|---", which leaked two ways: a row inserted above
+# the separator was copied, and a cosmetically reformatted separator
+# ("| --- |") meant the break never fired — 231 live task records into a
+# public repo. The canary scan does not cover this; a leaked row with no
+# dataset or person token scans clean.
+#
+# Byte-identical to what the parse produced for the current ledger, so
+# adopting it introduces no template drift.
+AUTONOMY_LOG_TEMPLATE = """\
+# Autonomy calibration log
+
+Append-only record of `--auto` workflow runs — the evidence base for raising
+or lowering the per-work-type autonomy caps in `PyAutoBrain/AUTONOMY.md` (the
+autonomy contract). One row per run, appended at PR-open or on parking.
+
+Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
+`corrective`.
+
+| date | task | effective level | gates (tests/smoke/review/heart) | outcome |
+|------|------|-----------------|----------------------------------|---------|
+"""
+
 BODY_MAP_TEMPLATE = """\
 # repos.yaml — the body map: the single source of repo IDENTITY.
 #
@@ -532,14 +556,22 @@ def unscheduled_workflow_body(src):
     return "\n".join(out) + "\n"
 
 
-def autonomy_log_body(src):
-    lines = src.read_text(errors="replace").splitlines()
-    kept = []
-    for line in lines:
-        kept.append(line)
-        if line.startswith("|---"):
-            break
-    return "\n".join(kept) + "\n"
+def autonomy_log_body(src=None):
+    """Return the autonomy ledger's schema header WITHOUT reading the source.
+
+    `src` is accepted and ignored so the generator's dispatch stays uniform;
+    the whole point is that no live byte reaches the template.
+
+    The previous implementation copied lines until one started with `|---`,
+    which leaked two ways (issue #123, both reproduced against the real
+    ledger): a row inserted above the separator was copied, and a cosmetically
+    reformatted separator (`| --- |`) meant the break never fired at all —
+    231 live task records into a public repo. The canary scan is no backstop
+    here: a leaked row with no dataset or person token scans clean.
+
+    Same fix as the EMPTY ledgers (#118): generate, never parse.
+    """
+    return AUTONOMY_LOG_TEMPLATE
 
 
 def substitute_owner(text):
