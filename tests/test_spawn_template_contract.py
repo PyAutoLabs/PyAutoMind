@@ -204,6 +204,43 @@ def test_unscheduled_transform_fails_loudly_if_it_becomes_a_noop(tmp_path):
         spawn.unscheduled_workflow_body(src)
 
 
+MINIMAL_MEMORY = {
+    "README.md": "# Mem\n", "AGENTS.md": "# A\n", "CLAUDE.md": "# C\n",
+    "LICENSE": "MIT\n", ".gitignore": "tmp/\n", "Makefile": "all:\n",
+    "AI_POLICY.md": "p\n", "CONTRIBUTING.md": "c\n",
+    "index.md": "# Index\n", "reading-queue.md": "# Reading queue\n",
+    "bibliography/README.md": "# Bib\n",
+    "wiki/CLAUDE.md": "# schema\n",
+    ".github/workflows/validate.yml": (
+        "name: validate\non:\n  push:\n    branches: [main]\n"
+        "jobs:\n  v:\n    runs-on: ubuntu-latest\n    steps:\n      - run: make validate\n"
+    ),
+}
+
+
+def test_memory_github_is_also_fail_closed(tmp_path):
+    """MEMORY_RULES has no `.github` catch-all either.
+
+    Closing one fail-open door and leaving the other is a half-fix, and every
+    other workflow test here drives generate_mind — so without this, reverting
+    Memory's rule to a catch-all would go unnoticed.
+    """
+    mem = tmp_path / "PyAutoMemory"
+    files = dict(MINIMAL_MEMORY)
+    files[".github/workflows/some_new_memory_job.yml"] = (
+        'name: new\non:\n  schedule:\n    - cron: "0 9 * * *"\njobs: {}\n'
+    )
+    _fake_repo(mem, files)
+    out = tmp_path / "out"
+
+    warns = spawn.generate_memory(mem, out)
+
+    assert ".github/workflows/some_new_memory_job.yml" in warns
+    assert not (out / ".github" / "workflows" / "some_new_memory_job.yml").exists()
+    # …and the known-good one still ships.
+    assert (out / ".github" / "workflows" / "validate.yml").exists()
+
+
 def test_unscheduled_transform_only_touches_the_on_mapping(tmp_path):
     """A `schedule:` line inside a `run: |` block is shell, not a trigger.
 
@@ -248,8 +285,13 @@ def test_unscheduled_transform_fails_rather_than_guessing(tmp_path, body):
     [
         # Quoted `on` key — YAML 1.1 turns bare `on` into True, so some repos quote it.
         'name: x\n"on":\n  schedule:\n    - cron: "0 6 * * *"\n  workflow_dispatch:\njobs: {}\n',
-        # Comment inside the schedule block.
+        # Comment nested inside the schedule block.
         'name: x\non:\n  schedule:\n    # nightly\n    - cron: "0 6 * * *"\n  workflow_dispatch:\njobs: {}\n',
+        # Comment at the SAME indent as `schedule:` — used to end block
+        # consumption early, orphaning `- cron` and emitting invalid YAML.
+        'name: x\non:\n  schedule:\n  # nightly\n    - cron: "0 6 * * *"\n  workflow_dispatch:\njobs: {}\n',
+        # Comment introducing the NEXT key must survive with that key.
+        'name: x\non:\n  schedule:\n    - cron: "0 6 * * *"\n  # manual only\n  workflow_dispatch:\njobs: {}\n',
         # CRLF line endings.
         'name: x\r\non:\r\n  schedule:\r\n    - cron: "0 6"\r\n  workflow_dispatch:\r\njobs: {}\r\n',
     ],
@@ -257,10 +299,34 @@ def test_unscheduled_transform_fails_rather_than_guessing(tmp_path, body):
 def test_unscheduled_transform_handles_awkward_yaml(tmp_path, body):
     src = tmp_path / "spawn_drift.yml"
     src.write_text(body)
-    spec = yaml.safe_load(spawn.unscheduled_workflow_body(src))
+    out = spawn.unscheduled_workflow_body(src)
+    spec = yaml.safe_load(out)  # must not raise — invalid YAML is the failure
     triggers = spec[True] if True in spec else spec["on"]
     assert "schedule" not in triggers
     assert "workflow_dispatch" in triggers
+    assert "- cron" not in out, "orphaned cron entry left behind"
+
+
+def test_unscheduled_transform_keeps_a_workflow_call_schedule_input(tmp_path):
+    """`on.workflow_call.inputs.schedule` is an input, not a trigger.
+
+    Depth matters, not merely "somewhere under `on:`" — only a DIRECT child of
+    the top-level `on:` mapping is a trigger.
+    """
+    src = tmp_path / "spawn_drift.yml"
+    src.write_text(
+        'name: x\non:\n  schedule:\n    - cron: "0 6 * * *"\n'
+        "  workflow_call:\n    inputs:\n      schedule:\n        type: string\njobs: {}\n"
+    )
+
+    out = spawn.unscheduled_workflow_body(src)
+
+    spec = yaml.safe_load(out)
+    triggers = spec[True] if True in spec else spec["on"]
+    assert "schedule" not in triggers, "the trigger should be gone"
+    assert triggers["workflow_call"]["inputs"]["schedule"]["type"] == "string", (
+        "the workflow_call input was deleted along with the trigger"
+    )
 
 
 def test_unscheduled_transform_preserves_everything_else(tmp_path):

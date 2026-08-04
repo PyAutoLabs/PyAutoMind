@@ -64,15 +64,36 @@ deliberately, never silently shipped into a template.
 | 7 | `README.md` | GENERATE → a template README asset held inside spawn (text surgery on the live README is brittle across edits; the asset keeps `--check` round-trips stable) |
 | 8 | `.github/workflows/validate.yml` | KEEP with owner substitution — self-contained (no schedule, no secrets, no sibling repos), so it clears the fresh-repo invariant. As in the Mind table's rule 9d there is **no `.github/**` catch-all**: a new Memory workflow is UNMATCHED and needs an explicit decision. `logo.png` (instance branding) | DROP. The old legacy-family DROP rules (root `*.bib`, PDFs, `CTI/` etc.) are retired — those files are gone from the live repo and PyAutoMemory's structure lint (`make validate-structure`, in CI) prevents their return at the source |
 
-**Fresh-repo invariant (hard rule, rule 9):** a workflow shipped into a
-template must be able to **succeed on a freshly-spawned repo with no secrets
-and no sibling repos**. A workflow that cannot is not "configuration the new
-owner will finish" — it is a scheduled job that fails on their repo and emails
-them, forever, for work they never asked for. When in doubt DROP: a spawned org
-that later builds the same organs can copy a workflow across deliberately, but
-it cannot easily discover why an inherited one keeps failing. The implementation
-must include a test asserting no shipped workflow carries a `secrets.`
-reference, a `YOURORG/` cross-repo reference, or a `schedule:` trigger.
+**Fresh-repo invariant (hard rule, rule 9):** no workflow shipped into a
+template may **fail unattended** on a freshly-spawned repo. A job that runs on
+its own and cannot succeed is not "configuration the new owner will finish" —
+it fails on their repo and emails them, forever, for work they never asked for.
+That is what produced the published template's 13 failing runs.
+
+Precisely, a shipped workflow must satisfy **both**:
+
+1. **No unattended trigger it cannot satisfy.** No `schedule:`, and nothing
+   else that fires without a human, unless it succeeds with no secrets and no
+   sibling repos. `lifecycle_drift.yml` keeps its `push:` trigger because it
+   genuinely does succeed (rule 9a).
+2. **No configured secret.** `secrets.GITHUB_TOKEN` is auto-provided by Actions
+   and allowed; anything the org must create is not.
+
+Deliberately **not** required: that every human-invoked path succeeds.
+`spawn_drift.yml` ships under rule 9b with its schedule stripped but still
+clones `<owner>/*-template`, so a manual `workflow_dispatch` in an org that has
+not published templates yet will fail. That is a human asking for it, with the
+generated comment explaining why — not an inherited job failing on its own. Do
+not "fix" this by asserting no `YOURORG/` reference: that would forbid shipping
+the generator machinery at all.
+
+When in doubt DROP. A spawned org that later builds the same organs can copy a
+workflow across deliberately; it cannot easily discover why an inherited one
+keeps failing.
+
+The implementation must include tests asserting (1) and (2) over every shipped
+workflow, and that a NEW `.github` file is UNMATCHED rather than classified by
+a catch-all (rule 9d).
 
 **Privacy invariant (hard rule):** no live wiki page, bibliography entry,
 reading-queue line, prompt, or registry entry may ever appear in a template

@@ -443,49 +443,79 @@ def unscheduled_workflow_body(src):
     trigger keeps the capability (`workflow_dispatch`, `pull_request`) without
     the noise.
 
-    Structural, not textual: the `schedule:` key and its indented block go, and
-    everything else is preserved byte for byte.
+    Structural, not textual: only the `schedule:` key that is a DIRECT CHILD of
+    the top-level `on:` mapping is removed, together with its block. Every other
+    line is passed through unchanged, except that line endings are normalised to
+    `\\n` (`splitlines()` discards the originals).
+
+    Three near-misses this scoping exists to avoid, all found by testing rather
+    than by reading:
+      * a `schedule:` line inside a `run: |` shell block is script text, not a
+        trigger — a bare line match rewrote it into comments;
+      * `on.workflow_call.inputs.schedule` is a legitimate input, not a trigger,
+        so depth matters, not just "somewhere under `on:`";
+      * a comment sitting at the SAME indent as `schedule:` used to end block
+        consumption early, orphaning the `- cron` line and emitting invalid YAML.
+
+    Anything this cannot handle confidently (flow style, no schedule at all)
+    raises instead of guessing.
     """
+    def substantive(idx):
+        """Next line that is neither blank nor a comment, or None."""
+        while idx < len(lines):
+            s = lines[idx].strip()
+            if s and not s.startswith("#"):
+                return idx
+            idx += 1
+        return None
+
     lines = substitute_owner(src.read_text(errors="replace")).splitlines()
     out, i, dropped = [], 0, False
-    in_on_block = False
+    on_child_indent = None       # set once we know the `on:` block's child depth
     while i < len(lines):
         line = lines[i]
         stripped = line.lstrip()
         indent_here = len(line) - len(stripped)
+        is_blank_or_comment = (not stripped) or stripped.startswith("#")
 
-        # Track the top-level `on:` mapping. Scoping the strip to it matters:
-        # a purely line-based match also rewrites a `schedule:` line inside a
-        # `run: |` shell block, silently mangling the script.
-        if indent_here == 0 and stripped.strip():
+        # Enter/leave the top-level `on:` mapping.
+        if indent_here == 0 and not is_blank_or_comment:
             key = stripped.split(":", 1)[0].strip().strip("\"'")
-            if key == "on" and not stripped.startswith("#"):
-                # Flow style (`on: {schedule: ...}`) has its value inline; this
-                # line-based transform cannot safely edit it, so fall through
-                # to the loud failure below rather than guess.
-                in_on_block = not stripped.split(":", 1)[1].strip()
+            if key == "on" and not stripped.split(":", 1)[1].strip():
+                nxt = substantive(i + 1)
+                on_child_indent = (
+                    len(lines[nxt]) - len(lines[nxt].lstrip()) if nxt is not None else None
+                )
             else:
-                in_on_block = False
+                # Any other top-level key ends the block. Flow-style `on: {...}`
+                # lands here too and never sets a child indent, so it reaches
+                # the loud failure below rather than being edited blind.
+                on_child_indent = None
 
-        if in_on_block and stripped.startswith("schedule:") and not stripped.startswith("#"):
-            indent = indent_here
-            out.append(" " * indent + "# schedule: removed by spawn — a fresh org has")
-            out.append(" " * indent + "# no published *-template repos yet, so the run")
-            out.append(" " * indent + "# would fail until it does. Re-add once you publish.")
+        if (
+            on_child_indent is not None
+            and indent_here == on_child_indent          # DIRECT child of `on:`
+            and stripped.startswith("schedule:")
+            and not stripped.startswith("#")
+        ):
+            pad = " " * indent_here
+            out.append(pad + "# schedule: removed by spawn — a fresh org has")
+            out.append(pad + "# no published *-template repos yet, so the run")
+            out.append(pad + "# would fail until it does. Re-add once you publish.")
             i += 1
-            # Consume the block: deeper-indented lines, plus blanks inside it.
+            # Consume the block. Blanks and comments belong to it only when
+            # deeper content follows; otherwise they introduce the NEXT key.
             while i < len(lines):
-                nxt = lines[i]
-                if not nxt.strip():
-                    # A blank only belongs to the block if more block follows.
-                    j = i
-                    while j < len(lines) and not lines[j].strip():
-                        j += 1
-                    if j < len(lines) and (len(lines[j]) - len(lines[j].lstrip())) > indent:
-                        i = j
+                s = lines[i].strip()
+                if not s or s.startswith("#"):
+                    nxt = substantive(i)
+                    if nxt is not None and (
+                        len(lines[nxt]) - len(lines[nxt].lstrip())
+                    ) > indent_here:
+                        i += 1
                         continue
                     break
-                if (len(nxt) - len(nxt.lstrip())) <= indent:
+                if (len(lines[i]) - len(lines[i].lstrip())) <= indent_here:
                     break
                 i += 1
             dropped = True
@@ -496,7 +526,7 @@ def unscheduled_workflow_body(src):
         # The trigger this rule exists to remove is gone — the rule is now
         # silently a no-op, which is how a guard rots. Fail loudly instead.
         raise SystemExit(
-            f"spawn: {src.name} has no 'schedule:' trigger to strip.\n"
+            f"spawn: {src.name} has no top-level 'on: schedule:' trigger to strip.\n"
             f"  SPECIAL:unscheduled is now a no-op — re-check spawn_spec.md rule 9b."
         )
     return "\n".join(out) + "\n"
