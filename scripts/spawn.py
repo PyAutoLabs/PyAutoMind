@@ -26,6 +26,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import traceback
 from pathlib import Path
 
 # --------------------------------------------------------------------------
@@ -41,12 +42,18 @@ OWNER_PLACEHOLDER = "YOURORG"
 #   CLEAN  0  published templates match the regenerated tree
 #   DRIFT  1  content differs — mechanical, safe to PROPOSE as a PR
 #   UNSAFE 2  UNMATCHED file class or canary hit — a HUMAN DECISION
+#   CRASH  3  unhandled exception — NOT drift (see the __main__ guard)
 #
 # EXIT_UNSAFE must never be auto-healed. A canary hit means the generated tree
 # contains live instance content, so opening a sync PR would be proposing to
-# publish a leak — exactly the #118 failure, automated. Both remain non-zero,
-# so anything treating the check as a boolean is unaffected.
-EXIT_CLEAN, EXIT_DRIFT, EXIT_UNSAFE = 0, 1, 2
+# publish a leak — exactly the #118 failure, automated.
+#
+# EXIT_CRASH exists because Python exits 1 on an unhandled exception, which is
+# indistinguishable from EXIT_DRIFT — a crash would otherwise read as "the
+# templates are stale" and the self-heal would propose a PR from whatever
+# partial tree the crash left. All of these stay non-zero, so anything treating
+# the check as a boolean is unaffected.
+EXIT_CLEAN, EXIT_DRIFT, EXIT_UNSAFE, EXIT_CRASH = 0, 1, 2, 3
 
 MIND_WORK_TYPES = (
     "feature", "bug", "refactor", "docs", "test", "release",
@@ -893,4 +900,15 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except SystemExit:
+        raise
+    except BaseException:
+        # An unhandled exception would otherwise exit 1 — INDISTINGUISHABLE
+        # from EXIT_DRIFT, so the Spawn Drift self-heal would read a crash as
+        # "the templates are stale" and try to propose a sync PR from whatever
+        # partial tree the crash left behind. Exit on a code no caller treats
+        # as actionable instead; the workflow's catch-all rejects it.
+        traceback.print_exc()
+        sys.exit(EXIT_CRASH)

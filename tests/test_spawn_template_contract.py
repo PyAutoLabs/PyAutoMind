@@ -417,6 +417,30 @@ def test_check_exit_codes_are_the_self_heal_contract(tmp_path):
     assert _check_exit(tmp_path, published) == spawn.EXIT_DRIFT
 
 
+def test_a_crash_is_not_reported_as_drift(tmp_path):
+    """Python exits 1 on an unhandled exception — the same code as EXIT_DRIFT.
+
+    Left alone, the self-heal would read a crash as "the templates are stale"
+    and try to open a sync PR from whatever partial tree the crash left behind.
+    A real crash of exactly this kind (`stamp_complete_index` on a relative
+    path) is what prompted the guard.
+    """
+    broken = tmp_path / "spawn_broken.py"
+    broken.write_text(
+        SPAWN_PY.read_text().replace(
+            "    results = generate_all(root, out_root)",
+            "    raise RuntimeError('simulated crash')",
+        )
+    )
+    r = subprocess.run(
+        [sys.executable, str(broken), "--check", str(tmp_path)],
+        capture_output=True, text=True,
+    )
+    assert r.returncode == spawn.EXIT_CRASH, "a crash must not look like drift"
+    assert r.returncode != spawn.EXIT_DRIFT
+    assert "simulated crash" in r.stderr, "the traceback must still be visible"
+
+
 def test_canary_hit_reports_unsafe_not_drift(tmp_path):
     """The interlock: a leak must be distinguishable from mechanical drift."""
     token = spawn.CANARY_TOKENS[0]
