@@ -204,6 +204,65 @@ def test_unscheduled_transform_fails_loudly_if_it_becomes_a_noop(tmp_path):
         spawn.unscheduled_workflow_body(src)
 
 
+def test_unscheduled_transform_only_touches_the_on_mapping(tmp_path):
+    """A `schedule:` line inside a `run: |` block is shell, not a trigger.
+
+    The first draft matched any line starting with `schedule:` and rewrote that
+    shell line into comments — silently mangling the script. The strip is scoped
+    to the top-level `on:` mapping.
+    """
+    src = tmp_path / "spawn_drift.yml"
+    src.write_text(
+        "name: x\non:\n  schedule:\n    - cron: \"0 6 * * *\"\n  workflow_dispatch:\n"
+        "jobs:\n  j:\n    runs-on: ubuntu-latest\n    steps:\n      - run: |\n"
+        "          schedule: not a trigger\n          echo done\n"
+    )
+
+    out = spawn.unscheduled_workflow_body(src)
+
+    assert "schedule: not a trigger" in out, "the run block was corrupted"
+    assert "echo done" in out
+    spec = yaml.safe_load(out)
+    triggers = spec[True] if True in spec else spec["on"]
+    assert "schedule" not in triggers and "workflow_dispatch" in triggers
+
+
+@pytest.mark.parametrize(
+    "body",
+    [
+        # Flow style — a line-based transform cannot safely edit it.
+        'name: x\non: {schedule: [{cron: "0 6 * * *"}]}\njobs: {}\n',
+        # No schedule at all — the rule would be a silent no-op.
+        "name: x\non:\n  workflow_dispatch:\njobs: {}\n",
+    ],
+)
+def test_unscheduled_transform_fails_rather_than_guessing(tmp_path, body):
+    src = tmp_path / "spawn_drift.yml"
+    src.write_text(body)
+    with pytest.raises(SystemExit):
+        spawn.unscheduled_workflow_body(src)
+
+
+@pytest.mark.parametrize(
+    "body",
+    [
+        # Quoted `on` key — YAML 1.1 turns bare `on` into True, so some repos quote it.
+        'name: x\n"on":\n  schedule:\n    - cron: "0 6 * * *"\n  workflow_dispatch:\njobs: {}\n',
+        # Comment inside the schedule block.
+        'name: x\non:\n  schedule:\n    # nightly\n    - cron: "0 6 * * *"\n  workflow_dispatch:\njobs: {}\n',
+        # CRLF line endings.
+        'name: x\r\non:\r\n  schedule:\r\n    - cron: "0 6"\r\n  workflow_dispatch:\r\njobs: {}\r\n',
+    ],
+)
+def test_unscheduled_transform_handles_awkward_yaml(tmp_path, body):
+    src = tmp_path / "spawn_drift.yml"
+    src.write_text(body)
+    spec = yaml.safe_load(spawn.unscheduled_workflow_body(src))
+    triggers = spec[True] if True in spec else spec["on"]
+    assert "schedule" not in triggers
+    assert "workflow_dispatch" in triggers
+
+
 def test_unscheduled_transform_preserves_everything_else(tmp_path):
     """Structural strip: only the schedule block goes."""
     src = tmp_path / "spawn_drift.yml"

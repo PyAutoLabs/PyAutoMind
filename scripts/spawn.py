@@ -448,11 +448,27 @@ def unscheduled_workflow_body(src):
     """
     lines = substitute_owner(src.read_text(errors="replace")).splitlines()
     out, i, dropped = [], 0, False
+    in_on_block = False
     while i < len(lines):
         line = lines[i]
         stripped = line.lstrip()
-        if stripped.startswith("schedule:") and not stripped.startswith("#"):
-            indent = len(line) - len(stripped)
+        indent_here = len(line) - len(stripped)
+
+        # Track the top-level `on:` mapping. Scoping the strip to it matters:
+        # a purely line-based match also rewrites a `schedule:` line inside a
+        # `run: |` shell block, silently mangling the script.
+        if indent_here == 0 and stripped.strip():
+            key = stripped.split(":", 1)[0].strip().strip("\"'")
+            if key == "on" and not stripped.startswith("#"):
+                # Flow style (`on: {schedule: ...}`) has its value inline; this
+                # line-based transform cannot safely edit it, so fall through
+                # to the loud failure below rather than guess.
+                in_on_block = not stripped.split(":", 1)[1].strip()
+            else:
+                in_on_block = False
+
+        if in_on_block and stripped.startswith("schedule:") and not stripped.startswith("#"):
+            indent = indent_here
             out.append(" " * indent + "# schedule: removed by spawn — a fresh org has")
             out.append(" " * indent + "# no published *-template repos yet, so the run")
             out.append(" " * indent + "# would fail until it does. Re-add once you publish.")
