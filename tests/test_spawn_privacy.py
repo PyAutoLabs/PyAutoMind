@@ -158,6 +158,54 @@ def test_glob_matched_empty_files_get_comment_headers(tmp_path, filename, lead):
 # --------------------------------------------------------------------------
 
 
+LIVE_AUTONOMY_LOG = Path(__file__).resolve().parents[1] / "autonomy_log.md"
+
+
+@pytest.mark.skipif(
+    not LIVE_AUTONOMY_LOG.exists(),
+    reason="no live ledger here (e.g. a freshly-spawned Mind before its first run)",
+)
+def test_autonomy_log_constant_still_matches_the_live_schema():
+    """The constant must not go stale against the ledger it models.
+
+    Generating instead of parsing removes the leak, but it also removes the
+    feedback that kept the header current: nothing else notices if the live
+    ledger grows a column and the template keeps shipping the old table. This
+    is that feedback, and it is the only check here that reads the real file.
+    """
+    live = LIVE_AUTONOMY_LOG.read_text()
+    assert live.startswith(spawn.AUTONOMY_LOG_TEMPLATE), (
+        "the live autonomy_log.md header no longer matches AUTONOMY_LOG_TEMPLATE "
+        "— update the constant (and re-run spawn --apply), do not re-add parsing"
+    )
+
+
+def test_generated_ledger_equals_the_constant_exactly(fake_workspace, tmp_path):
+    """Pin the EMITTED file, not just the helper's return value.
+
+    Asserting `autonomy_log_body(...) == AUTONOMY_LOG_TEMPLATE` alone is
+    circular — it compares the helper with what the helper returns. This checks
+    what actually lands in the template.
+    """
+    out = tmp_path / "out"
+    spawn.generate_all(fake_workspace, out)
+    shipped = out / "PyAutoMind-template" / "autonomy_log.md"
+    assert shipped.read_text() == spawn.AUTONOMY_LOG_TEMPLATE
+
+
+def test_autonomy_log_template_is_a_usable_table_header():
+    """Independent shape check, so a malformed constant cannot pass silently."""
+    lines = [ln for ln in spawn.AUTONOMY_LOG_TEMPLATE.splitlines() if ln.strip()]
+    table = [ln for ln in lines if ln.startswith("|")]
+    assert len(table) == 2, f"expected a header row + separator, got {table}"
+    header, separator = table
+    assert set(separator.replace("|", "").replace("-", "").strip()) == set(), (
+        f"second table line is not a separator: {separator!r}"
+    )
+    assert header.count("|") == separator.count("|"), "column counts disagree"
+    assert lines[0].startswith("# "), "the ledger needs its H1 title"
+
+
 def test_autonomy_log_skeleton_never_opens_the_source(tmp_path):
     """The ledger header is generated, not parsed (issue #123).
 
