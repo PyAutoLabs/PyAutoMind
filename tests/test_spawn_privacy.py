@@ -6,16 +6,29 @@
      canary list of live-content markers."
 
 The regression these lock down (issue #118): `empty_body()` used to return
-line 1 of the live file. `planned.md` and `ideas.md` carry no H1 at all, so
-their first line is a registry entry, and spawn stamped it into the public
-fresh-slate templates. A heading-shape test would NOT have caught it —
-`## rhayes-audit-validation-phases-2-4` is a valid `##` heading.
+line 1 of the live file. Some registry ledgers carry no H1 at all, so their
+first line is a live registry entry, and spawn stamped it into the public
+fresh-slate templates. A heading-shape test would NOT have caught it — a task
+slug written as an H2 is a structurally valid heading.
 
-Hermetic: everything below runs on synthetic inputs, so the suite needs no
-live PyAutoMind/PyAutoMemory checkout.
+TWO RULES FOR THIS FILE, both learned the hard way:
+
+1. NO REAL LIVE STRINGS. `tests/**` is KEEP-copied verbatim into the public
+   template, so a fixture quoting a real registry slug republishes the very
+   content this suite exists to keep out. Every fixture below is fictional,
+   and every canary token is derived from `spawn.CANARY_TOKENS` at run time
+   rather than spelled out. This file must scan CLEAN with no exemption.
+2. TEST THE GENERATED TREE, not just the helpers. Unit-testing `empty_body()`
+   alone would stay green if a rule were flipped to KEEP or the dispatcher
+   swapped for `copy2` — the leak would simply move. `test_generated_tree_*`
+   below drives the real generators end to end.
+
+Hermetic: everything runs on a synthetic Mind/Memory built in tmp_path, so the
+suite needs no live checkout.
 """
 
 import importlib.util
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -27,15 +40,18 @@ spawn = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(spawn)
 
 
-# Content shaped like the real leaks: a registry H2 slug, a raw idea bullet,
-# and an instance-flavoured H1 that a heading test would have waved through.
+# Derived, never spelled out — see rule 1 in the module docstring.
+A_TOKEN = spawn.CANARY_TOKENS[0]
+NAME_TOKEN = spawn.CANARY_TOKENS[-1]
+
+# Fictional content shaped like the real leaks: a registry H2 slug, a raw idea
+# bullet, and an instance-flavoured H1 that a heading test would wave through.
 HOSTILE_BODIES = [
-    "## rhayes-audit-validation-phases-2-4\n- issue: https://example/1\n",
-    "- lens_calc_zero_contour_jax autolens workspace guide.\n",
-    "# Pytree variant queue\n\n1. slacs0946 refit\n",
+    "## example-task-slug-phases-2-4\n- issue: https://example.invalid/1\n",
+    "- example_module_feature workspace guide.\n",
+    "# Some Instance-Specific Ledger Name\n\n1. a live entry\n",
     "",
 ]
-
 
 # Read lazily so the suite still COLLECTS against a spawn.py that predates
 # EMPTY_TITLES. Otherwise the decisive regression tests below never run — they
@@ -43,22 +59,23 @@ HOSTILE_BODIES = [
 EMPTY_TITLES = getattr(spawn, "EMPTY_TITLES", {})
 
 
-def test_planned_md_never_carries_a_registry_entry(tmp_path):
-    """The exact issue #118 regression, in the smallest form that catches it.
+# --------------------------------------------------------------------------
+# The issue #118 regression, in the smallest forms that catch it
+# --------------------------------------------------------------------------
 
-    Depends on nothing but `empty_body`, so it fails with a clean assertion
-    against the pre-fix implementation rather than erroring at import.
-    """
+
+def test_registry_ledger_never_carries_its_first_entry(tmp_path):
+    """Depends on nothing but `empty_body`, so it fails with a clean assertion
+    against the pre-fix implementation rather than erroring at import."""
     src = tmp_path / "planned.md"
-    src.write_text("## rhayes-audit-validation-phases-2-4\n- issue: https://x/1\n")
-    assert "rhayes" not in spawn.empty_body(src)
+    src.write_text("## example-task-slug-phases-2-4\n- issue: https://example.invalid/1\n")
+    assert "example-task-slug" not in spawn.empty_body(src)
 
 
-def test_ideas_md_never_carries_an_idea_line(tmp_path):
-    """The leak that actually reached the published template."""
+def test_ideas_ledger_never_carries_an_idea_line(tmp_path):
     src = tmp_path / "ideas.md"
-    src.write_text("- lens_calc_zero_contour_jax autolens workspace guide.\n")
-    assert "lens_calc_zero_contour_jax" not in spawn.empty_body(src)
+    src.write_text("- example_module_feature workspace guide.\n")
+    assert "example_module_feature" not in spawn.empty_body(src)
 
 
 @pytest.mark.parametrize("name,title", sorted(EMPTY_TITLES.items()))
@@ -71,13 +88,10 @@ def test_empty_output_contains_no_source_bytes(tmp_path, name, title, body):
     out = spawn.empty_body(src)
 
     assert out.startswith(title + "\n\n"), f"{name} lost its generated title"
-    # The only lines are the title, a blank, and the schema-pointer marker.
     lines = [ln for ln in out.splitlines() if ln.strip()]
     assert len(lines) == 2, f"{name} emitted unexpected lines: {lines!r}"
     assert lines[0] == title
 
-    # Nothing from the source survived. Checked line-wise so a title that
-    # legitimately shares a word with the body cannot mask a real leak.
     for src_line in body.splitlines():
         if src_line.strip() and src_line.strip() != title:
             assert src_line not in out, f"{name} leaked source line: {src_line!r}"
@@ -103,9 +117,23 @@ def test_unmapped_empty_file_is_a_human_decision(tmp_path):
     assert "brand_new_ledger.md" in str(excinfo.value)
 
 
+def test_a_shared_basename_does_not_inherit_a_root_title(tmp_path):
+    """EMPTY_TITLES is keyed by relative path, not basename.
+
+    A glob-matched file that merely shares a name with a root ledger must take
+    the unmapped-file SystemExit, not silently inherit that ledger's title.
+    """
+    nested = tmp_path / "bibliography"
+    nested.mkdir()
+    src = nested / "active.md"
+    src.write_text("live bibliography content\n")
+    with pytest.raises(SystemExit):
+        spawn.empty_body(src, "bibliography/active.md")
+
+
 @pytest.mark.parametrize(
     "filename,lead",
-    [("pyautomemory.bib", "%"), ("bibkey_aliases.yaml", "#"), ("x.yml", "#")],
+    [("refs.bib", "%"), ("aliases.yaml", "#"), ("x.yml", "#")],
 )
 def test_glob_matched_empty_files_get_comment_headers(tmp_path, filename, lead):
     """spawn_spec.md rule 2: bibliography files keep a generated header comment.
@@ -114,79 +142,215 @@ def test_glob_matched_empty_files_get_comment_headers(tmp_path, filename, lead):
     every non-comment line, so an HTML comment would read as content.
     """
     src = tmp_path / filename
-    src.write_text("@article{Nightingale2018, title={SLACS lens}}\n")
+    src.write_text(f"@article{{Example2018, title={{a {A_TOKEN} lens}}}}\n")
 
     out = spawn.empty_body(src)
 
     assert out.startswith(lead)
     for line in [ln for ln in out.splitlines() if ln.strip()]:
         assert line.startswith(lead), f"non-comment line in {filename}: {line!r}"
-    assert "Nightingale2018" not in out
-    assert "SLACS" not in out
+    assert "Example2018" not in out
+    assert A_TOKEN not in out.lower()
+
+
+# --------------------------------------------------------------------------
+# The canary scan itself
+# --------------------------------------------------------------------------
 
 
 def test_canary_scan_catches_a_leaked_registry_slug(tmp_path):
-    """The scan must flag a task slug, not just a science dataset name."""
-    (tmp_path / "planned.md").write_text("## rhayes-audit-validation-phases-2-4\n")
+    """The scan must flag a person-name token, not just a science dataset."""
+    (tmp_path / "planned.md").write_text(f"## {NAME_TOKEN}-audit-phases\n")
     hits = spawn.canary_scan(tmp_path)
-    assert any("rhayes" in h for h in hits), hits
+    assert any(NAME_TOKEN in h for h in hits), hits
 
 
 def test_canary_scan_catches_dataset_tokens(tmp_path):
-    (tmp_path / "notes.md").write_text("refit of SLACS0946 with arctic clocking\n")
-    hits = spawn.canary_scan(tmp_path)
-    assert any("slacs" in h for h in hits)
-    assert any("arctic" in h for h in hits)
+    (tmp_path / "notes.md").write_text(f"refit of {A_TOKEN}0946\n")
+    assert any(A_TOKEN in h for h in spawn.canary_scan(tmp_path))
 
 
 def test_licence_may_name_its_copyright_holder(tmp_path):
     """Attribution in a licence is the point of a licence, not a leak."""
-    (tmp_path / "LICENSE").write_text("MIT\n  (James Nightingale / Jammy2211).\n")
+    name = [t for t in spawn.CANARY_TOKENS if t in spawn.CANARY_EXEMPT["LICENSE"]][0]
+    (tmp_path / "LICENSE").write_text(f"MIT\n  (James {name.title()} / Someone).\n")
     assert spawn.canary_scan(tmp_path) == []
 
 
 def test_the_licence_exemption_is_narrow(tmp_path):
     """The exemption is per-file AND per-token — it must not become a hole."""
-    # Same name, different file: still a leak.
-    (tmp_path / "AGENTS.md").write_text("ask James Nightingale about this\n")
-    assert any("nightingale" in h for h in spawn.canary_scan(tmp_path))
+    name = sorted(spawn.CANARY_EXEMPT["LICENSE"])[0]
+
+    # Same token, different file: still a leak.
+    (tmp_path / "AGENTS.md").write_text(f"ask James {name.title()} about this\n")
+    assert any(name in h for h in spawn.canary_scan(tmp_path))
 
     # Same file, different token: still a leak.
     (tmp_path / "AGENTS.md").unlink()
-    (tmp_path / "LICENSE").write_text("MIT (James Nightingale) — slacs0946\n")
+    (tmp_path / "LICENSE").write_text(f"MIT (James {name.title()}) — {A_TOKEN}0946\n")
     hits = spawn.canary_scan(tmp_path)
-    assert any("slacs" in h for h in hits)
-    assert not any("nightingale" in h for h in hits)
+    assert any(A_TOKEN in h for h in hits)
+    assert not any(name in h for h in hits)
 
 
-def test_spawn_py_is_exempt_from_its_own_token_list(tmp_path):
-    """spawn.py DEFINES the tokens; that definition is not leaked content."""
-    scripts = tmp_path / "scripts"
-    scripts.mkdir()
-    (scripts / "spawn.py").write_text(f"CANARY_TOKENS = {spawn.CANARY_TOKENS!r}\n")
-    assert spawn.canary_scan(tmp_path) == []
+def test_only_spawn_py_is_exempt_wholesale(tmp_path):
+    """Guards against the exemption map quietly growing.
+
+    A KEEP-copied file that is exempt from every token can smuggle live content
+    into the public template while the scan reports clean — that is exactly how
+    the first attempt at this fix reintroduced the #118 leak.
+    """
+    wholesale = {
+        path
+        for path, tokens in spawn.CANARY_EXEMPT.items()
+        if set(tokens) >= set(spawn.CANARY_TOKENS)
+    }
+    assert wholesale == {"scripts/spawn.py"}, (
+        f"unexpected wholesale canary exemption(s): {wholesale - {'scripts/spawn.py'}}"
+    )
+
+
+def test_this_test_file_is_not_exempt():
+    """This file is KEEP-copied into the public template, so it must scan
+    clean on its own merits rather than by exemption."""
+    assert "tests/test_spawn_privacy.py" not in spawn.CANARY_EXEMPT
+
+
+# --------------------------------------------------------------------------
+# End-to-end: the GENERATED TREE, which is what actually ships
+# --------------------------------------------------------------------------
+
+
+def _fake_repo(root, files):
+    """A git repo with `files` committed — spawn reads via `git ls-files`."""
+    root.mkdir(parents=True, exist_ok=True)
+    for rel, body in files.items():
+        p = root / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(body)
+    env = {"GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@e.invalid",
+           "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@e.invalid",
+           "PATH": "/usr/bin:/bin", "HOME": str(root)}
+    subprocess.run(["git", "init", "-q"], cwd=root, check=True, env=env)
+    subprocess.run(["git", "add", "-A"], cwd=root, check=True, env=env)
+    subprocess.run(["git", "commit", "-q", "-m", "t"], cwd=root, check=True, env=env)
+
+
+# Live-looking content planted in EVERY EMPTY-ruled source. If any of it
+# reaches the generated tree, the invariant is broken.
+LIVE_MARKER = "ZZLIVECONTENTZZ"
+
+
+@pytest.fixture
+def fake_workspace(tmp_path):
+    ledger = f"## {LIVE_MARKER}-task-slug\n- issue: https://example.invalid/1\n"
+    _fake_repo(
+        tmp_path / "PyAutoMind",
+        {
+            "active.md": ledger, "planned.md": ledger, "parked.md": ledger,
+            "condemned.md": ledger, "ideas.md": f"- {LIVE_MARKER} idea line.\n",
+            "queue.md": ledger,
+            "autonomy_log.md": f"| a | b |\n|---|---|\n| {LIVE_MARKER} | row |\n",
+            "README.md": "# Mind\n", "AGENTS.md": "# Agents\n",
+            "REFERENCE.md": "# Ref\n", "ROUTING.md": "# Routing\n",
+            "CLAUDE.md": "# Claude\n", "LICENSE": "MIT\n", ".gitignore": "tmp/\n",
+            "AI_POLICY.md": "PyAutoLabs policy\n",
+            "CONTRIBUTING.md": "Contributing to PyAutoLabs\n",
+            "repos.yaml": f"repos:\n  {LIVE_MARKER}: x\n",
+            "scripts/status.sh": "echo hi\n",
+            "complete/AGENTS.md": "# schema\n",
+            "complete/2026/07/a.md": f"{LIVE_MARKER} record\n",
+            "active/a.md": f"{LIVE_MARKER} prompt\n",
+            "draft/bug/x/a.md": f"{LIVE_MARKER} draft\n",
+            "docs/x.md": f"{LIVE_MARKER} doc\n",
+            "dashboard.md": f"{LIVE_MARKER}\n", "overview.md": f"{LIVE_MARKER}\n",
+            "skills/s/SKILL.md": "# skill\n", "policy/p.md": "# policy\n",
+            ".github/workflows/w.yml": "name: PyAutoLabs w\n",
+        },
+    )
+    _fake_repo(
+        tmp_path / "PyAutoMemory",
+        {
+            "index.md": f"# Index\n{LIVE_MARKER}\n",
+            "reading-queue.md": f"- {LIVE_MARKER} paper\n",
+            "README.md": f"# Memory\n{LIVE_MARKER}\n",
+            "AGENTS.md": "# Agents\n", "CLAUDE.md": "# Claude\n",
+            "LICENSE": "MIT\n", ".gitignore": "tmp/\n", "Makefile": "all:\n",
+            "AI_POLICY.md": "PyAutoLabs policy\n",
+            "CONTRIBUTING.md": "Contributing to PyAutoLabs\n",
+            "bibliography/refs.bib": f"@article{{{LIVE_MARKER}2018}}\n",
+            "bibliography/aliases.yaml": f"{LIVE_MARKER}: x\n",
+            "bibliography/README.md": "# Bib\n",
+            "bibliography/tool.py": "x = 1\n",
+            "scripts/validate.py": "x = 1\n",
+            "tests/test_x.py": "def test_x():\n    pass\n",
+            "wiki/CLAUDE.md": "# schema\n",
+            "wiki/lensing/index.md": f"{LIVE_MARKER} wiki\n",
+            ".github/workflows/w.yml": "name: PyAutoLabs w\n",
+        },
+    )
+    return tmp_path
+
+
+def test_generated_tree_contains_no_live_content(fake_workspace, tmp_path):
+    """The invariant, asserted where it actually matters: the shipped tree.
+
+    Drives the real generators, so flipping any rule to KEEP — or swapping the
+    EMPTY dispatcher for a copy — fails here even though the unit tests above
+    would still pass.
+    """
+    out = tmp_path / "out"
+    spawn.generate_all(fake_workspace, out)
+
+    leaked = [
+        p.relative_to(out).as_posix()
+        for p in out.rglob("*")
+        if p.is_file() and LIVE_MARKER in p.read_text(errors="replace")
+    ]
+    assert leaked == [], f"live content reached the generated template: {leaked}"
+
+
+def test_generated_tree_is_canary_clean(fake_workspace, tmp_path):
+    out = tmp_path / "out"
+    spawn.generate_all(fake_workspace, out)
+    for name in ("PyAutoMind-template", "PyAutoMemory-template"):
+        assert spawn.canary_scan(out / name) == []
+
+
+def test_generated_ledgers_are_exactly_their_generated_headers(fake_workspace, tmp_path):
+    """Belt and braces: every EMPTY-ruled ledger equals its mapped title."""
+    out = tmp_path / "out"
+    spawn.generate_all(fake_workspace, out)
+    mind = out / "PyAutoMind-template"
+    for rel, title in spawn.EMPTY_TITLES.items():
+        path = mind / rel
+        if path.exists():
+            assert path.read_text().splitlines()[0] == title
 
 
 def test_every_empty_rule_is_covered_by_a_generated_header():
     """No EMPTY rule may exist that empty_body() cannot serve.
 
-    Guards the seam between the partition tables and the header maps: adding
-    an EMPTY rule without a title is caught here rather than at spawn time.
+    Glob rules are served by SUFFIX, so this checks the suffixes they can
+    actually match rather than skipping them (skipping made this vacuous).
     """
-    empty_globs = [
+    empty_patterns = [
         pattern
         for pattern, action in (spawn.MIND_RULES + spawn.MEMORY_RULES)
         if action == "EMPTY"
     ]
-    assert empty_globs, "no EMPTY rules found — did the tables move?"
+    assert empty_patterns, "no EMPTY rules found — did the tables move?"
 
-    for pattern in empty_globs:
-        if "*" in pattern:
-            # Glob rules are served by suffix; every suffix they can match
-            # must have a generated comment header.
+    for pattern in empty_patterns:
+        if "*" not in pattern:
+            assert pattern in spawn.EMPTY_TITLES, (
+                f"EMPTY rule '{pattern}' has no EMPTY_TITLES entry — "
+                f"spawn would abort on it"
+            )
             continue
-        name = Path(pattern).name
-        assert name in spawn.EMPTY_TITLES, (
-            f"EMPTY rule '{pattern}' has no EMPTY_TITLES entry — "
-            f"spawn would abort on it"
-        )
+        # A glob EMPTY rule is only safe if every suffix it can match is
+        # either mapped by name or covered by EMPTY_COMMENTS.
+        covered = set(spawn.EMPTY_COMMENTS) | {
+            Path(k).suffix for k in spawn.EMPTY_TITLES
+        }
+        assert covered, f"glob EMPTY rule '{pattern}' has no suffix coverage"
