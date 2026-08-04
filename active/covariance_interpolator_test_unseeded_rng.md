@@ -7,8 +7,8 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: high
-Status: formalised
-Issue: (none yet)
+Status: issued
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1450
 
 ## The defect
 
