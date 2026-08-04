@@ -71,7 +71,29 @@ MIND_RULES = [
     # Instance root docs:
     ("dashboard.md", "DROP"), ("overview.md", "DROP"),
     ("skills/*", "KEEP"), ("policy/*", "KEEP"),
-    (".github/*", "KEEP_SUB"),
+    # .github is decided PER FILE by the spec's fresh-repo invariant (rule 9):
+    # a shipped workflow must succeed on a freshly-spawned repo with no secrets
+    # and no sibling repos. Owner substitution alone does NOT achieve that —
+    # YOURORG is a literal placeholder, and the template's own spawn_drift run
+    # failed with `repository 'https://github.com/YOURORG/PyAutoMind/' not
+    # found`. Anything cloning or querying a sibling repo is broken on arrival.
+    #
+    # Ordered before the .github/scripts DROP and each other; first match wins.
+    (".github/workflows/lifecycle_drift.yml", "KEEP"),          # 9a: self-contained
+    (".github/workflows/spawn_drift.yml", "SPECIAL:unscheduled"),  # 9b
+    # 9c — instance automation: sibling repo lists, organ-specific workflow
+    # names, org secrets, strong-lensing vocabulary. Every one of the 13 failing
+    # runs in the published template came from these.
+    (".github/workflows/morning_status.yml", "DROP"),
+    (".github/workflows/morning_health.yml", "DROP"),
+    (".github/workflows/arxiv_papers.yml", "DROP"),
+    (".github/scripts/*", "DROP"),
+    # NO `.github/*` catch-all, deliberately. A catch-all is fail-OPEN: a new
+    # Mind workflow would ride it into the template carrying whatever schedule
+    # and secrets it has — the exact defect this rule exists to fix. With no
+    # fallback, a new .github file is UNMATCHED, spawn fails, and a human adds
+    # an explicit rule 9 entry. Same doctrine as every other new file class:
+    # "extend the spec's tables, then mirror here", never classify ad hoc.
     # Agent-discovery symlinks are install artifacts (recreated by the
     # PyAutoBrain installer), not source content — drop them from the template.
     (".claude/*", "DROP"), (".codex/*", "DROP"),
@@ -87,7 +109,11 @@ MEMORY_RULES = [
     # Same org-wide pointer docs as MIND_RULES — owner substitution.
     ("AI_POLICY.md", "KEEP_SUB"), ("CONTRIBUTING.md", "KEEP_SUB"),
     ("bibliography/*", "EMPTY"),
-    (".github/*", "KEEP_SUB"),
+    # Same fail-closed discipline as MIND_RULES (spec rule 9d). validate.yml is
+    # self-contained — no schedule, no secrets, no sibling repos — so it clears
+    # the fresh-repo invariant and ships. No catch-all: a new Memory workflow is
+    # UNMATCHED and gets an explicit decision.
+    (".github/workflows/validate.yml", "KEEP_SUB"),
     # The shared wiki schema is template content; the sub-wikis are instance
     # content (the generator stamps an empty wiki/example/ instead).
     ("wiki/CLAUDE.md", "KEEP"),
@@ -408,6 +434,58 @@ def empty_body(src, rel=None):
     return header + "\n\n<!-- emptied by spawn; schema: REFERENCE.md -->\n"
 
 
+def unscheduled_workflow_body(src):
+    """Drop a workflow's `schedule:` trigger (spec rule 9b).
+
+    `spawn_drift.yml` is generic machinery worth shipping, but its scheduled run
+    clones `<owner>/*-template` repos a freshly-spawned org does not have yet —
+    so on a schedule it would fail weekly and email the new owner. Stripping the
+    trigger keeps the capability (`workflow_dispatch`, `pull_request`) without
+    the noise.
+
+    Structural, not textual: the `schedule:` key and its indented block go, and
+    everything else is preserved byte for byte.
+    """
+    lines = substitute_owner(src.read_text(errors="replace")).splitlines()
+    out, i, dropped = [], 0, False
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.lstrip()
+        if stripped.startswith("schedule:") and not stripped.startswith("#"):
+            indent = len(line) - len(stripped)
+            out.append(" " * indent + "# schedule: removed by spawn — a fresh org has")
+            out.append(" " * indent + "# no published *-template repos yet, so the run")
+            out.append(" " * indent + "# would fail until it does. Re-add once you publish.")
+            i += 1
+            # Consume the block: deeper-indented lines, plus blanks inside it.
+            while i < len(lines):
+                nxt = lines[i]
+                if not nxt.strip():
+                    # A blank only belongs to the block if more block follows.
+                    j = i
+                    while j < len(lines) and not lines[j].strip():
+                        j += 1
+                    if j < len(lines) and (len(lines[j]) - len(lines[j].lstrip())) > indent:
+                        i = j
+                        continue
+                    break
+                if (len(nxt) - len(nxt.lstrip())) <= indent:
+                    break
+                i += 1
+            dropped = True
+            continue
+        out.append(line)
+        i += 1
+    if not dropped:
+        # The trigger this rule exists to remove is gone — the rule is now
+        # silently a no-op, which is how a guard rots. Fail loudly instead.
+        raise SystemExit(
+            f"spawn: {src.name} has no 'schedule:' trigger to strip.\n"
+            f"  SPECIAL:unscheduled is now a no-op — re-check spawn_spec.md rule 9b."
+        )
+    return "\n".join(out) + "\n"
+
+
 def autonomy_log_body(src):
     lines = src.read_text(errors="replace").splitlines()
     kept = []
@@ -452,6 +530,8 @@ def generate_mind(mind_root, out_dir):
             dest.write_text(substitute_owner(src.read_text(errors="replace")))
         elif action == "EMPTY":
             dest.write_text(empty_body(src, rel))
+        elif action == "SPECIAL:unscheduled":
+            dest.write_text(unscheduled_workflow_body(src))
         elif action == "SPECIAL:autonomy_log":
             dest.write_text(autonomy_log_body(src))
         elif action == "SPECIAL:body_map":

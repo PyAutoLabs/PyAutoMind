@@ -43,7 +43,11 @@ deliberately, never silently shipped into a template.
 | 6c | `complete/index.md` | GENERATE → stamped by running the **generated tree's own** `scripts/lifecycle.py index --apply` after the tree is written (`lifecycle.py` resolves its root from `__file__`, and rule 1 already KEEPs it). The live `index.md` is still DROPped by rule 7 — this is a fresh empty-archive index, not a copy. Required because the template ships `lifecycle_drift.yml`, whose self-heal (PyAutoMind#116) regenerates this file on every push to the template's own `main`: if spawn did not produce it, each sync would be followed by a bot commit creating a file the next `--check` reports as drift, forever. Do NOT hold the text as a constant here — `lifecycle.py` owns the index format, and a second copy would drift from it |
 | 7 | `active/ complete/ z_features/ z_vault/ autoprompt/` + instance reference docs (`docs/**` now holds only reference material like `spawn_spec.md`) + instance root docs (`dashboard.md`, `overview.md`) + legacy pre-migration prompt dirs (`autolens/`) | DROP (lifecycle records + instance content) |
 | 8 | `skills/**`, `policy/**` | KEEP verbatim (`OWNERSHIP.md`, `create_issue/` are generic; `policy/` is org-agnostic safety text) |
-| 9 | `.github/**` | KEEP verbatim EXCEPT workflows that reference live secrets/repos beyond the org placeholder — those SUBSTITUTE `PyAutoLabs` → `YOURORG` and keep |
+| 9 | `.github/**` | **Per file, by the succeed-on-a-fresh-repo test below.** Not a blanket rule: owner substitution alone does NOT make a workflow work, because `YOURORG` is a literal placeholder — the template's own `spawn_drift` run failed `repository 'https://github.com/YOURORG/PyAutoMind/' not found`. See rules 9a–9c |
+| 9a | `.github/workflows/lifecycle_drift.yml` | KEEP verbatim — operates only on its own repo (checkout + local scripts) and contains no owner reference at all, so it needs no substitution and succeeds unmodified in a fresh org. Empirically the one green workflow in the template's run history |
+| 9b | `.github/workflows/spawn_drift.yml` | SPECIAL → keep with the `schedule:` trigger **stripped**. The generator machinery is generic and worth shipping, but a fresh org has no published `*-template` repos, so a weekly run would fail until it does. `pull_request` + `workflow_dispatch` remain; a comment says to re-add the schedule once templates are published |
+| 9c | `.github/workflows/{morning_status,morning_health,arxiv_papers}.yml`, `.github/scripts/**` | DROP — instance automation. They hardcode sibling repo lists, organ-specific workflow names (`PyAutoHeart`/`PyAutoBrain`/`PyAutoHands`), org secrets (`PYAUTO_PAPERS_WEBHOOK_URL`, `CLAUDE_CODE_OAUTH_TOKEN`) and, in `arxiv_fetch.py`, strong-lensing search vocabulary plus dated incident notes. All 13 failing runs in the published template came from these |
+| 9d | any other `.github/**` | **No catch-all rule — UNMATCHED by design.** A fallback here is fail-*open*: a workflow added to Mind later would ride it into the template carrying whatever schedule and secrets it has, which is precisely the defect 9a–9c fix. A new `.github` file must fail the run and get an explicit entry above, like every other new file class |
 | 10 | `.claude/**`, `.codex/**` | DROP — agent-discovery symlinks are install artifacts recreated by the PyAutoBrain installer, not source content |
 
 ### PyAutoMemory → PyAutoMemory-template
@@ -58,7 +62,17 @@ deliberately, never silently shipped into a template.
 | 5 | `index.md` | SUBSTITUTE → skeleton: intro line + a table with the single `wiki/example/` row + "add sub-wikis following the same schema" |
 | 6 | `reading-queue.md` | EMPTY → header + section-format comment |
 | 7 | `README.md` | GENERATE → a template README asset held inside spawn (text surgery on the live README is brittle across edits; the asset keeps `--check` round-trips stable) |
-| 8 | `.github/**` | KEEP with owner substitution; `logo.png` (instance branding) | DROP. The old legacy-family DROP rules (root `*.bib`, PDFs, `CTI/` etc.) are retired — those files are gone from the live repo and PyAutoMemory's structure lint (`make validate-structure`, in CI) prevents their return at the source |
+| 8 | `.github/workflows/validate.yml` | KEEP with owner substitution — self-contained (no schedule, no secrets, no sibling repos), so it clears the fresh-repo invariant. As in the Mind table's rule 9d there is **no `.github/**` catch-all**: a new Memory workflow is UNMATCHED and needs an explicit decision. `logo.png` (instance branding) | DROP. The old legacy-family DROP rules (root `*.bib`, PDFs, `CTI/` etc.) are retired — those files are gone from the live repo and PyAutoMemory's structure lint (`make validate-structure`, in CI) prevents their return at the source |
+
+**Fresh-repo invariant (hard rule, rule 9):** a workflow shipped into a
+template must be able to **succeed on a freshly-spawned repo with no secrets
+and no sibling repos**. A workflow that cannot is not "configuration the new
+owner will finish" — it is a scheduled job that fails on their repo and emails
+them, forever, for work they never asked for. When in doubt DROP: a spawned org
+that later builds the same organs can copy a workflow across deliberately, but
+it cannot easily discover why an inherited one keeps failing. The implementation
+must include a test asserting no shipped workflow carries a `secrets.`
+reference, a `YOURORG/` cross-repo reference, or a `schedule:` trigger.
 
 **Privacy invariant (hard rule):** no live wiki page, bibliography entry,
 reading-queue line, prompt, or registry entry may ever appear in a template
