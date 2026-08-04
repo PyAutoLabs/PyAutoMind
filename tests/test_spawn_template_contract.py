@@ -24,6 +24,7 @@ workflows, so spawn owns what those workflows do on arrival.
 import importlib.util
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -376,6 +377,92 @@ def test_live_complete_index_is_never_copied(tmp_path):
     text = (out / "complete" / "index.md").read_text()
     assert "LIVE-ARCHIVE-INDEX" not in text
     assert not (out / "complete" / "2026").exists()
+
+
+def _workspace_with_published(tmp_path, mind_files=None, published_edit=None):
+    """A CI-shaped layout: live repos plus a `published/` copy of the templates."""
+    mind = tmp_path / "PyAutoMind"
+    _fake_repo(mind, {**MINIMAL_MIND, **GITHUB_FILES, **(mind_files or {})})
+    _fake_repo(tmp_path / "PyAutoMemory", MINIMAL_MEMORY)
+    published = tmp_path / "published"
+    published.mkdir()
+    subprocess.run(
+        [sys.executable, str(SPAWN_PY), "--root", str(tmp_path), "--write", str(published)],
+        check=False, capture_output=True,
+    )
+    if published_edit:
+        published_edit(published)
+    return published
+
+
+def _check_exit(tmp_path, published):
+    return subprocess.run(
+        [sys.executable, str(SPAWN_PY), "--root", str(tmp_path), "--check", str(published)],
+        capture_output=True, text=True,
+    ).returncode
+
+
+def test_check_exit_codes_are_the_self_heal_contract(tmp_path):
+    """`Spawn Drift`'s self-heal branches on these; collapsing them is unsafe.
+
+    0 clean · 1 content drift (safe to propose) · 2 unsafe tree (human decision).
+    A canary hit must never reach the PR path — that would automate publishing
+    a leak, which is #118 with a robot doing it.
+    """
+    published = _workspace_with_published(tmp_path)
+    assert _check_exit(tmp_path, published) == spawn.EXIT_CLEAN
+
+    # Content drift only.
+    (published / "PyAutoMind-template" / "README.md").write_text("drifted\n")
+    assert _check_exit(tmp_path, published) == spawn.EXIT_DRIFT
+
+
+def test_canary_hit_reports_unsafe_not_drift(tmp_path):
+    """The interlock: a leak must be distinguishable from mechanical drift."""
+    token = spawn.CANARY_TOKENS[0]
+    published = _workspace_with_published(
+        tmp_path, mind_files={"REFERENCE.md": f"# R\nmentions {token}0946\n"}
+    )
+    assert _check_exit(tmp_path, published) == spawn.EXIT_UNSAFE
+
+
+def test_unmatched_file_class_reports_unsafe_not_drift(tmp_path):
+    published = _workspace_with_published(
+        tmp_path, mind_files={"brand_new_thing.md": "unclassified\n"}
+    )
+    assert _check_exit(tmp_path, published) == spawn.EXIT_UNSAFE
+
+
+def test_unsafe_outranks_drift(tmp_path):
+    """With BOTH problems present, the answer must be UNSAFE.
+
+    If drift won, the self-heal would open a PR from a tree that also carries
+    leaked content.
+    """
+    token = spawn.CANARY_TOKENS[0]
+    published = _workspace_with_published(
+        tmp_path,
+        mind_files={"REFERENCE.md": f"# R\nmentions {token}0946\n"},
+        published_edit=lambda p: (p / "PyAutoMind-template" / "README.md").write_text("drifted\n"),
+    )
+    assert _check_exit(tmp_path, published) == spawn.EXIT_UNSAFE
+
+
+def test_stamping_works_with_a_RELATIVE_output_dir(tmp_path, monkeypatch):
+    """`--write regenerated` must work, not just `--write /abs/path`.
+
+    The child resolves the script path AFTER chdir'ing to `cwd`, so a relative
+    out_dir made it unresolvable and the child died with "can't open file".
+    Every invocation to date happened to pass an absolute path, so it stayed
+    latent until a CI step naturally wrote to a relative dir.
+    """
+    mind = tmp_path / "PyAutoMind"
+    _fake_repo(mind, MINIMAL_MIND)
+    monkeypatch.chdir(tmp_path)
+
+    spawn.generate_mind(mind, Path("out_relative"))   # relative, on purpose
+
+    assert (tmp_path / "out_relative" / "complete" / "index.md").exists()
 
 
 def test_stamping_is_skipped_when_lifecycle_is_not_kept(tmp_path):

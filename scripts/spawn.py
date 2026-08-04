@@ -35,6 +35,19 @@ from pathlib import Path
 
 OWNER_PLACEHOLDER = "YOURORG"
 
+# --check exit codes. The split exists so the Spawn Drift self-heal can tell
+# "the templates are stale" from "the generator produced something unsafe":
+#
+#   CLEAN  0  published templates match the regenerated tree
+#   DRIFT  1  content differs — mechanical, safe to PROPOSE as a PR
+#   UNSAFE 2  UNMATCHED file class or canary hit — a HUMAN DECISION
+#
+# EXIT_UNSAFE must never be auto-healed. A canary hit means the generated tree
+# contains live instance content, so opening a sync PR would be proposing to
+# publish a leak — exactly the #118 failure, automated. Both remain non-zero,
+# so anything treating the check as a boolean is unaffected.
+EXIT_CLEAN, EXIT_DRIFT, EXIT_UNSAFE = 0, 1, 2
+
 MIND_WORK_TYPES = (
     "feature", "bug", "refactor", "docs", "test", "release",
     "maintenance", "research", "experiment", "triage",
@@ -639,6 +652,12 @@ def stamp_complete_index(out_dir):
     Deliberately NOT a constant here: `lifecycle.py` owns the index format, and
     a second copy of that text would drift from it.
     """
+    # Absolute, deliberately: the script path is resolved by the child AFTER it
+    # chdir's to `cwd`, so a relative --write DIR (e.g. `--write regenerated`,
+    # which is what a CI step naturally passes) made the path unresolvable from
+    # inside the new cwd and the child died with "can't open file". Every
+    # invocation to date happened to use an absolute path, so it stayed latent.
+    out_dir = out_dir.resolve()
     lifecycle = out_dir / "scripts" / "lifecycle.py"
     if not lifecycle.exists():          # rules changed; nothing to stamp
         return
@@ -847,9 +866,13 @@ def main():
         out_root = Path(args.write) if args.write else Path(tmp)
         out_root.mkdir(parents=True, exist_ok=True)
         results = generate_all(root, out_root)
-        failed = report(results)
+        # UNSAFE: the generated tree itself cannot be trusted — an unclassified
+        # file class (UNMATCHED) or leaked instance content (canary). Kept
+        # strictly apart from DRIFT below; see EXIT_* for why that matters.
+        unsafe = report(results)
+        drifted = False
 
-        if args.check and not failed:
+        if args.check and not unsafe:
             for name in results:
                 problems = diff_trees(out_root / name, Path(args.check) / name)
                 # SPAWNED_FROM records the source commit, which legitimately
@@ -858,13 +881,15 @@ def main():
                 status = "OK" if not problems else f"{len(problems)} drift(s)"
                 print(f"check {name}: {status}")
                 for p in problems:
-                    failed = True
+                    drifted = True
                     print(f"  ✗ {p}")
 
-        if args.write and not failed:
+        if args.write and not unsafe:
             print(f"written: {out_root}")
 
-    sys.exit(1 if failed else 0)
+    if unsafe:
+        sys.exit(EXIT_UNSAFE)
+    sys.exit(EXIT_DRIFT if drifted else EXIT_CLEAN)
 
 
 if __name__ == "__main__":

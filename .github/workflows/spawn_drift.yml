@@ -58,7 +58,96 @@ jobs:
             git clone --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/PyAutoLabs/$r" "$r"
           done
       - name: Regenerate + diff
+        id: diff
         run: |
           mkdir published
           mv PyAutoMind-template PyAutoMemory-template published/
+          set +e
           python3 PyAutoMind/scripts/spawn.py --root "$PWD" --check published
+          code=$?
+          set -e
+          echo "code=${code}" >> "$GITHUB_OUTPUT"
+          case "$code" in
+            0) echo "templates are current" ;;
+            1) echo "::notice::templates have drifted — proposing a sync PR" ;;
+            2) echo "::error::spawn produced an UNSAFE tree (UNMATCHED file class or canary hit). This is a human decision: extend the spec's tables or fix the partition rules. NOT auto-healed — a canary hit means the regenerated tree carries live instance content, so a sync PR would propose publishing a leak."
+               exit 1 ;;
+            *) echo "::error::spawn --check exited ${code}, which this workflow does not understand"
+               exit 1 ;;
+          esac
+
+      # Regenerate into a clean tree and open (or refresh) one sync PR per
+      # drifted template repo. Deliberately a PR, not a bot push: these repos
+      # are force-synced generated views, so an automated push would be a
+      # force-push to a published `main`. #118 — a leak that sat public for
+      # eight days — is the argument for a human seeing what gets published.
+      - name: Propose the sync PR
+        if: steps.diff.outputs.code == '1'
+        env:
+          # GITHUB_TOKEN is scoped to PyAutoMind; writing to the template repos
+          # needs the org-wide PAT (same one nightly-release.yml uses).
+          GH_TOKEN: ${{ secrets.PAT_PYAUTOLABS }}
+          BRANCH: spawn/auto-sync
+        run: |
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "::error::PAT_PYAUTOLABS is not set on this repo. The self-heal cannot open a PR on the template repos without a token that can write to them; GITHUB_TOKEN is scoped to PyAutoMind only."
+            exit 1
+          fi
+          python3 PyAutoMind/scripts/spawn.py --root "$PWD" --write regenerated
+
+          MIND_SHA=$(git -C PyAutoMind rev-parse --short HEAD)
+          MEMORY_SHA=$(git -C PyAutoMemory rev-parse --short HEAD)
+          TOP="$PWD"
+          opened=0
+          for name in PyAutoMind-template PyAutoMemory-template; do
+            if diff -rq "regenerated/$name" "published/$name" \
+                 --exclude .git --exclude SPAWNED_FROM >/dev/null 2>&1; then
+              echo "== $name: current, no PR needed"
+              continue
+            fi
+            echo "== $name: drifted, preparing $BRANCH"
+            work="work/$name"
+            git clone -q "https://x-access-token:${GH_TOKEN}@github.com/PyAutoLabs/$name" "$work" || {
+              echo "::error::cannot clone $name with PAT_PYAUTOLABS — check the token grants write to it"; exit 1; }
+
+            # Replace content wholesale; the template IS the generated tree.
+            ( cd "$work" && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + )
+            cp -a "regenerated/$name/." "$work/"
+
+            cd "$TOP/$work"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git checkout -q -B "$BRANCH"
+            git add -A
+            if git diff --cached --quiet; then
+              echo "   nothing to commit after all"; cd "$TOP"; continue
+            fi
+            git commit -q \
+              -m "spawn: regenerate from mind@${MIND_SHA} memory@${MEMORY_SHA}" \
+              -m "Proposed automatically by the Spawn Drift self-heal (PyAutoMind#125). Review the diff before merging: merging force-syncs this generated view."
+            # A stable branch, force-updated: a weekly rerun refreshes the open
+            # PR instead of opening a new one every Monday.
+            git push -q -f origin "$BRANCH"
+
+            if gh pr view "$BRANCH" --repo "PyAutoLabs/$name" >/dev/null 2>&1; then
+              echo "   refreshed the existing PR"
+            else
+              body="$TOP/pr-body.md"
+              : > "$body"
+              printf '%s\n' "Opened automatically by the \`Spawn Drift\` self-heal (PyAutoMind#125)." >> "$body"
+              printf '%s\n' "" >> "$body"
+              printf '%s\n' "This repo is a **generated view** of the live Mind/Memory. It had drifted from what \`spawn.py\` produces, so this branch carries the regenerated tree." >> "$body"
+              printf '%s\n' "" >> "$body"
+              printf '%s\n' "\`spawn --check\` reported **content drift only** (exit 1). Had it reported an UNMATCHED file class or a canary hit (exit 2) no PR would exist - that is a human decision, because a canary hit means the regenerated tree carries live instance content." >> "$body"
+              printf '%s\n' "" >> "$body"
+              printf '%s\n' "Review the diff before merging: merging force-syncs this view." >> "$body"
+              gh pr create --repo "PyAutoLabs/$name" --base main --head "$BRANCH" \
+                --title "spawn: sync this generated view with PyAutoMind" \
+                --body-file "$body" \
+                || { echo "::error::could not open the PR on $name - check PAT_PYAUTOLABS grants write there"; exit 1; }
+              echo "   opened a new PR"
+            fi
+            cd "$TOP"
+            opened=$((opened + 1))
+          done
+          echo "::notice::sync PRs opened/refreshed: ${opened}"
