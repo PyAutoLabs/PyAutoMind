@@ -10,13 +10,41 @@ name: Spawn Drift
 on:
   schedule:
     - cron: "17 6 * * 1"   # weekly, Monday 06:17 UTC
+  pull_request:
+    paths:
+      - "scripts/spawn.py"
+      - "tests/test_spawn_privacy.py"
+      - "docs/pyautobrain/spawn_spec.md"
+      - ".github/workflows/spawn_drift.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
+  # The privacy invariant (spawn_spec.md) is a property of the GENERATOR, so it
+  # is checked on every PR that touches spawn, not only on the weekly drift run.
+  # Hermetic — synthetic inputs only, no clones needed.
+  privacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - name: spawn privacy invariant
+        run: python3 -m pytest tests/test_spawn_privacy.py -q
+
   drift:
+    # A drift run that regenerates from a leaking generator would "fix" the
+    # templates by publishing instance content — so the invariant gates it.
+    needs: privacy
+    # PR runs exist to exercise the privacy job. Drift compares the PUBLISHED
+    # templates against Mind's main (this job clones main, not the PR head), so
+    # on a PR it would report unrelated pre-existing drift and go red on work
+    # that did not cause it.
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the live repos + published templates
