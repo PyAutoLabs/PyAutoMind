@@ -1,3 +1,89 @@
+# PR CI for PyAutoHands's own test suite
+
+Shipped: PyAutoLabs/PyAutoHands#230 (squash-merged as `6d5d608`, 2026-08-05).
+
+PyAutoHands had **28 test modules / ~300 tests and zero PR checks**. None of its
+three workflows was triggered by `pull_request`: `python_matrix.yml` is a weekly
+cron over the five *libraries'* suites, `navigator_check.yml` is
+`workflow_call`-only, and `release.yml`'s `python3 -m pytest` runs inside
+`${{ matrix.project.path }}` — a matrix of the five libraries, with PyAutoHands
+checked out beside them only as a helper, so `tests/` was never collected. A
+Hands PR's only gate was whatever the authoring session happened to run locally.
+
+That matters more here than for a leaf repo: `build_util` and `env_config`
+execute every workspace smoke run and every release build, so a regression
+surfaces as a mysterious workspace-CI failure three repos away.
+
+Added `.github/workflows/tests.yml` on the shape of the two existing organ
+self-test gates (PyAutoBrain `tests.yml`, PyAutoHeart `heart-tests.yml`) —
+`push: [main]` + `pull_request`, Python 3.12/3.13/3.14, pytest only,
+`cancel-in-progress` restricted to non-`main` refs. PyAutoHands is now the third
+organ with a self-test gate; Gut still has none (no workflows at all).
+
+## Findings worth keeping
+
+**The dependency set is not what reading the source suggests.** PyAutoHands has
+no `pyproject.toml`, so there is no `.[dev]` extra to install the way
+`heart-tests.yml` does, and `pytest` is not in `requirements.txt`. Derived
+empirically by starting from `pytest --collect-only` in a clean venv and adding
+one package at a time, the real set is `pytest PyYAML ipynb-py-convert Pillow`.
+Two traps: `nbformat`/`nbconvert` look required from the imports but are **not**
+(tests self-skip on their absence), while **`ipynb-py-convert` is needed as a
+CLI binary** `build_util` shells out to — not as an import, so no amount of
+reading import statements finds it. Naming packages explicitly beats
+`-r requirements.txt`, which drags in `jupyterlab` + `ipykernel` and turns a 6s
+gate into a slow one.
+
+**The gate immediately paid for itself.** The suite was not green: 9 failures.
+Seven were the missing dependencies. Two were real —
+`tests/test_python_matrix_workflow.py` still asserted that Python 3.14 lives in
+an isolated `experimental_python_314` job with `continue-on-error: true`, but
+`b038fdc` ("promote Python 3.14 to required matrix legs", following the
+PyAutoFit#1439 forkserver fix) had deliberately promoted 3.14 into the required
+unit + smoke matrices and retired that job, updating `summary.needs` and the
+banner text to match — but not the test guarding the contract. It had been
+failing unnoticed for five days because nothing ran it. **A deliberate CI-policy
+change orphaned its own guard test and nothing reported it** — which is the
+argument for the gate, discovered by building the gate.
+
+The workflow was correct and the test stale, so the test was updated to the
+promoted shape rather than the workflow reverted (human-confirmed: 3.14 required
+is the intent). Worth noting the general shape of that judgment — "never edit a
+test to mask a regression" is the right default, and the evidence that overrode
+it here was that the commit message stated the promotion as intent, referenced
+the upstream fix that unblocked it, and left `python_matrix.yml` internally
+consistent (`summary.needs` and banner both updated). Only the test lagged.
+
+**Python 3.14 was declared but never exercised on Hands's own code.** Verified
+clean before adding it to the matrix — CI ran real 3.14.6 (301 passed, 4
+skipped, ~6s, identical profile to 3.12/3.13). Added
+`test_self_test_gate_tracks_the_supported_python_set`, asserting `tests.yml`'s
+matrix equals `python_matrix.yml`'s required `unit_tests` matrix, so promoting
+or dropping a version has to touch both files. Checked the assertion is not
+vacuous — both sides parse to non-empty lists.
+
+**A green tick hid a coverage hole, and CI/local disagreement is how it
+surfaced.** CI reported 301 passed / 4 skipped against a local 302 / 3. Same
+total, so nothing was missing, but one test that passes locally *skips* in CI:
+`test_workspace_config_precedence.test_actual_workspace_files_exist` walks
+`repo_root.parent / <workspace>` asserting each of the six workspaces owns its
+`config/build/{no_run,profile_smoke,visualise_notebooks}.yaml`, and skips at the
+first one absent. In a full local workspace it asserts all six; in CI's bare
+checkout it asserts nothing. Left open deliberately — closing it means six extra
+checkouts for a repo-layout invariant, coupling a 6s gate to six other repos —
+but stated in the workflow header rather than hidden. **Generalisable habit:
+compare CI's pass/skip counts against the local baseline rather than accepting
+the green.**
+
+## Trap for next time
+
+`lifecycle.py record --prompt` only folds prompts from `active/`. This task
+never went through `/create_issue` → `active/` (the work was done in the same
+session that filed the prompt), so the draft was folded into this record by hand
+and `draft/test/pyautohands/pr_ci_for_own_test_suite.md` removed explicitly.
+
+## Original prompt
+
 # PyAutoHands PRs run zero checks — gate its own test suite on `pull_request`
 
 Type: test
