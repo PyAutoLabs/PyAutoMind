@@ -74,3 +74,17 @@
 - repo-unclaimed: PyAutoReduce is the only affected repo, listed on this single line deliberately and NOT as a 2-space `  - PyAutoReduce` sub-bullet, because worktree_check_conflict reads any such bullet as a live claim — this task holds no claim and must not block other PyAutoReduce work.
 - ordering: `draft/research/pyautoreduce/acceptance_noise_rebaseline.md` must run AFTER this lands — a bits change moves the IVM weights and therefore the noise maps, so its parity numbers would need redoing otherwise. Related but distinct, do not fold in: #61 (driz_cr flux erosion / LACosmic) and #62 (tier-1 ePSF from the CR-rejected mosaic).
 - prompt: active/hst_dq_bits_dial.md
+
+## hygiene-coverage-drift
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/197
+- status: library-dev — implementing on `claude/hygiene-coverage-drift-kso7h1` (mandated branch, both repos). Cloud session: no worktree, no `gh` CLI; issue filed via the GitHub MCP surface.
+- what it is: the hygiene conductor hardcodes `LIB_REPOS`/`ORG_REPOS`/`DOC_REPOS` in `agents/conductors/hygiene/hygiene.sh:64-66`. repos.yaml declares 6 libraries and 7 organs, so the conductor skips PyAutoCTI + PyAutoReduce, classes PyAutoNerves as a library where the manifest calls it an organ, and covers 4 of 7 organs.
+- reproduced before planning (PYAUTO_ROOT=/home/user): `hygiene crlf` prints `5 library .py w/ CRLF`; `git -C PyAutoCTI grep -Il $'\r$' -- '*.py' | wc -l` = 122, so the true count for the current repo set is 127. deps audits 5 pyproject.toml of 6; tidy scans 9 of ~17 managed checkouts.
+- why repos_sync can't catch it: the tenant-firewall entry for hygiene.sh (`scripts/repos_sync.py:525`) pins the drifted set as an ALLOWLIST, so the stale names are permitted rather than checked for coverage. The fix adds a real coverage check beside it.
+- DESIGN TRAP, do not "simplify" it away: PyAutoNerves is `category: organ` but ships a pyproject.toml. A straight category mapping would move it out of LIB_REPOS and thereby DROP it from deps/packaging — trading one coverage hole for another. Those two modes key off "repo ships a pyproject.toml", not off the category. Same reasoning makes `docs` key off `docs/api/` presence (which adds PyAutoCTI).
+- human decisions 2026-08-05: (1) derive the workspace set from `category: workspace` too, accepting +40 cosmetic CRLF from autocti_workspace (127 -> 167) so no repo name is left hardcoded; (2) deps/packaging cover any managed repo with a pyproject.toml.
+- scope: COVERAGE REPAIR ONLY. Widening surfaces a large backlog of genuine findings (CRLF, artifacts, dep caps) — triaging that backlog is a separate task and no finding is fixed here.
+- third defect folded in per the prompt: an empty/absent scan root currently reports `clean` across every array-driven mode with no warning. Adds an `unscanned` status + a banner naming the root, covering both "no repos present" and "body map unresolvable".
+- prompt: active/hygiene_under_reports_debt_by_25x_because.md
+- worktree: (none — cloud session, working in the canonical /home/user checkouts on the mandated branch)
+- repos-claimed-on-one-line: PyAutoBrain (primary) and PyAutoMind, named here deliberately and NOT as 2-space `  - Repo` bullets, because worktree_check_conflict reads any such bullet as a live claim.
