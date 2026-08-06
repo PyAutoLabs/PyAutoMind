@@ -30,6 +30,8 @@ failing the run.
   * PyAutoHeart/config/repos.yaml          — polled repos exist, owners match
   * PyAutoHands/pre_build.sh               — run_workspace repos exist
   * PyAutoBrain/bin/ensure_workspace_labels.sh — owner/name pairs match
+  * the hygiene conductor — the repo sets it scans are derived from this
+    manifest, and no repo name has been hardcoded back into an array
   * the `origin` remote of every local checkout — manifest matches reality
   * the tenant firewall — no instance fact (satellite repo name, GitHub
     owner, workspace path) in Brain/Heart/Build *.py / *.sh outside the
@@ -39,6 +41,8 @@ Exit code 0 = no drift; 1 = drift found (each mismatch printed).
 """
 
 import argparse
+import json
+import os
 import re
 import subprocess
 import sys
@@ -311,6 +315,86 @@ def check_pre_build(root, repos):
     ]
 
 
+HYGIENE_DIR = "PyAutoBrain/agents/conductors/hygiene"
+HYGIENE_SCRIPT = f"{HYGIENE_DIR}/hygiene.sh"
+HYGIENE_HELPER = f"{HYGIENE_DIR}/_hygiene_repos.py"
+
+# The hygiene conductor scans repositories, so its repo sets must equal this
+# manifest's. They used to be bash arrays, and they drifted: five libraries
+# where the manifest declared six, four organs of seven. The drift was invisible
+# because an unscanned repo yields no findings — the conductor reported clean and
+# was believed. The tenant firewall could not catch it either; its allowlist
+# PERMITTED the stale names rather than checking coverage.
+#
+# So this check has two legs, because either alone is escapable:
+#
+#   A. every reader the conductor might use returns exactly the sets declared
+#      here. Note what this can and cannot prove: the conductor reads THIS file,
+#      so a manifest edit moves both sides together and can never desynchronise
+#      them — that is the whole point of deriving. What leg A really guards is
+#      the READER, and specifically the PyYAML-free fallback, which is used only
+#      where PyYAML is absent and would otherwise be verified nowhere. A
+#      fallback parser that quietly drops a repo is precisely this bug's class,
+#      so both readers are run and both must agree with the manifest.
+#   B. no repo name is written back into a *_REPOS=(...) array literal — what
+#      stops a future edit from "simplifying" the derivation away.
+HYGIENE_ARRAY = re.compile(r"^[ \t]*[A-Za-z_]*REPOS=\(([^)]*)\)", re.M)
+HYGIENE_CATEGORIES = ("library", "organ", "workspace")
+
+
+def check_hygiene_coverage(root, repos, mind_root):
+    helper, script = root / HYGIENE_HELPER, root / HYGIENE_SCRIPT
+    if not helper.exists() or not script.exists():
+        return []  # Brain not checked out in this environment
+
+    problems = []
+    for reader in ("auto", "minimal"):
+        result = subprocess.run(
+            [sys.executable, str(helper), "--json", "--parser", reader],
+            capture_output=True,
+            text=True,
+            env={**os.environ, "PYAUTO_MIND": str(mind_root)},
+        )
+        if result.returncode != 0:
+            problems.append(
+                f"{HYGIENE_HELPER} ({reader} reader): cannot read the body map "
+                f"(exit {result.returncode}) — the conductor would scan nothing: "
+                f"{result.stderr.strip()}"
+            )
+            continue
+        try:
+            derived = json.loads(result.stdout)
+        except json.JSONDecodeError as exc:
+            problems.append(
+                f"{HYGIENE_HELPER} ({reader} reader): output is not JSON — {exc}"
+            )
+            continue
+        for category in HYGIENE_CATEGORIES:
+            declared = {n for n, r in repos.items() if r["category"] == category}
+            seen = set(derived.get(category, []))
+            for name in sorted(declared - seen):
+                problems.append(
+                    f"hygiene ({reader} reader) does not scan '{name}' ({category}) "
+                    f"— declared in the manifest but missing from the derived set"
+                )
+            for name in sorted(seen - declared):
+                problems.append(
+                    f"hygiene ({reader} reader) scans '{name}' ({category}) "
+                    f"— not in the manifest"
+                )
+
+    for match in HYGIENE_ARRAY.finditer(script.read_text()):
+        hardcoded = sorted(
+            {tok.strip("\"'") for tok in match.group(1).split()} & set(repos)
+        )
+        if hardcoded:
+            problems.append(
+                f"{HYGIENE_SCRIPT}: repo name(s) hardcoded in an array — "
+                f"{', '.join(hardcoded)}; derive them from the body map instead"
+            )
+    return problems
+
+
 def check_labels(root, repos):
     script = root / "PyAutoBrain/bin/ensure_workspace_labels.sh"
     if not script.exists():
@@ -522,7 +606,10 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBrain/agents/conductors/hygiene/_hygiene_config.py": {"PyAutoArray", "PyAutoCTI", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
     "PyAutoBrain/agents/conductors/hygiene/_hygiene_optdeps.py": {"HowToFit", "HowToGalaxy", "HowToLens", "autocti_workspace", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
     "PyAutoBrain/agents/conductors/hygiene/_hygiene_refs.py": {"PyAutoArray", "PyAutoCTI", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace"},
-    "PyAutoBrain/agents/conductors/hygiene/hygiene.sh": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    # hygiene.sh and _hygiene_repos.py carry NO entry on purpose: the conductor
+    # now derives its repo sets from the body map, so it names no instance fact
+    # at all. Re-adding an entry here would re-permit the drift that
+    # check_hygiene_coverage exists to catch.
     "PyAutoBrain/agents/conductors/clone/_clone.py": {"HowToFit", "PyAutoFit", "PyAutoLabs", "PyAutoLens", "autofit_assistant", "autofit_workspace", "autolens_assistant"},
     "PyAutoBrain/agents/conductors/clone/clone.sh": {"HowToFit", "PyAutoFit", "autofit_workspace", "autolens_assistant"},
     "PyAutoBrain/agents/conductors/community/_community.py": {"Jammy2211", "PyAutoLabs"},
@@ -562,8 +649,10 @@ FIREWALL_ALLOWLIST = {
     "PyAutoHands/autohands/aggregate_results.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
     "PyAutoHands/autohands/build_util.py": {"PyAutoNerves"},
     "PyAutoHands/autohands/bump_colab_urls.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoHands/autohands/check_search_memory.py": {"PyAutoFit", "PyAutoLabs"},
     "PyAutoHands/autohands/clone_seed.py": {"autofit_assistant"},
     "PyAutoHands/autohands/create_analysis_issue.py": {"PyAutoLabs"},
+    "PyAutoHands/autohands/env_config.py": {"PyAutoFit", "PyAutoLabs"},
     "PyAutoHands/autohands/generate_autofit.py": {"autofit_workspace"},
     "PyAutoHands/autohands/generate_markdown.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
     "PyAutoHands/autohands/generate_release_notes.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "PyAutoScientist"},
@@ -575,8 +664,12 @@ FIREWALL_ALLOWLIST = {
     "PyAutoHands/autohands/tag_and_merge.sh": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
     "PyAutoHands/pre_build.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "admin_jammy", "autofit_workspace", "autofit_workspace_developer", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_assistant", "autolens_workspace", "autolens_workspace_developer", "autolens_workspace_test", "euclid_strong_lens_modeling_pipeline"},
     "PyAutoHands/tests/test_bump_colab_urls.py": {"Jammy2211", "PyAutoFit", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoHands/tests/test_check_search_memory.py": {"PyAutoFit", "autogalaxy_workspace"},
+    "PyAutoHands/tests/test_env_config.py": {"PyAutoFit", "PyAutoLabs"},
     "PyAutoHands/tests/test_generate_markdown.py": {"PyAutoArray", "autolens_workspace"},
+    "PyAutoHands/tests/test_python_matrix_workflow.py": {"PyAutoFit"},
     "PyAutoHands/tests/test_release_notes.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
+    "PyAutoHands/tests/test_repro_command.py": {"PyAutoFit", "PyAutoLabs"},
     "PyAutoHands/tests/test_run_all_history.py": {"HowToLens", "autogalaxy_workspace_test", "euclid_strong_lens_modeling_pipeline"},
     "PyAutoHands/tests/test_slack_release_notes.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
     "PyAutoHands/tests/test_workspace_config_precedence.py": {"autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_workspace", "autolens_workspace_test"},
@@ -751,6 +844,7 @@ def main():
         "PyAutoHeart/config/repos.yaml": check_heart(root, repos),
         "PyAutoHands/pre_build.sh": check_pre_build(root, repos),
         "ensure_workspace_labels.sh": check_labels(root, repos),
+        "hygiene conductor coverage": check_hygiene_coverage(root, repos, mind_root),
         "local checkout origins": check_origins(root, repos),
         "tenant firewall (organ code)": check_tenant_firewall(root, repos),
         "organism-map blocks (generated)": check_map_blocks(root, repos, smap),

@@ -58,3 +58,12 @@
 - repo-unclaimed: PyAutoReduce is the only affected repo, listed on this single line deliberately and NOT as a 2-space `  - PyAutoReduce` sub-bullet, because worktree_check_conflict reads any such bullet as a live claim — this task holds no claim and must not block other PyAutoReduce work.
 - ordering: `draft/research/pyautoreduce/acceptance_noise_rebaseline.md` must run AFTER this lands — a bits change moves the IVM weights and therefore the noise maps, so its parity numbers would need redoing otherwise. Related but distinct, do not fold in: #61 (driz_cr flux erosion / LACosmic) and #62 (tier-1 ePSF from the CR-rejected mosaic).
 - prompt: active/hst_dq_bits_dial.md
+
+## pointmass-smbh-jax-ci
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/251
+- session: claude --resume 55538fde-c7e0-43b9-99f1-f82442d0e0be
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/pointmass-smbh-jax-ci
+- repos:
+  - autolens_workspace_test: feature/pointmass-smbh-jax-ci
+- prompt: active/pointmass_smbh_jax_ci_coverage.md

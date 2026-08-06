@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-890 records across 7 buckets.
+899 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -19,11 +19,16 @@ _(curate hard-won records here — survives regeneration.)_
 ## 2026/08
 
 - [autogalaxy-assistant](2026/08/autogalaxy-assistant.md) — epic; human to close
+- [autohands-firewall-allowlist](2026/08/autohands-firewall-allowlist.md) — auto-closed by the merge
 - [covariance-interpolator-rng-seed](2026/08/covariance-interpolator-rng-seed.md) — auto-closed by the merge
 - [database-guide-sample-weight-threshold](2026/08/database-guide-sample-weight-threshold.md) — `guides/results/database/start_here.py` ran its own Nautilus fits capped at n_like_max=300 then indexed sample…
 - [dep-floors-source-chain-ci](2026/08/dep-floors-source-chain-ci.md)
+- [ep-initializer-exception-should-not-abort](2026/08/ep-initializer-exception-should-not-abort.md)
 - [group-data-preparation-readme](2026/08/group-data-preparation-readme.md)
+- [health-conductor-stale-verdict](2026/08/health-conductor-stale-verdict.md)
 - [howto-smoke-all-tutorials](2026/08/howto-smoke-all-tutorials.md)
+- [hygiene-coverage-drift](2026/08/hygiene-coverage-drift.md)
+- [hygiene-detail-flag](2026/08/hygiene-detail-flag.md)
 - [interferometer-start-here-integrate-oom](2026/08/interferometer-start-here-integrate-oom.md)
 - [intra-family-dep-floors](2026/08/intra-family-dep-floors.md)
 - [jax-grad-smoke-timeout-budget](2026/08/jax-grad-smoke-timeout-budget.md)
@@ -34,11 +39,15 @@ _(curate hard-won records here — survives regeneration.)_
 - [nufft-parity-full-datasets](2026/08/nufft-parity-full-datasets.md)
 - [plot-array-stale-kwargs](2026/08/plot-array-stale-kwargs.md)
 - [point-source-defaults-campaign](2026/08/point-source-defaults-campaign.md) — took the point-source likelihood options from "several undocumented
+- [pointmass-smbh-jax](2026/08/pointmass-smbh-jax.md) — `al.mp.PointMass` and `al.mp.SMBH` failed every JAX-mode fit (user report on 2026.8.4.1). Two independent bugs…
 - [potential-correction-env-declaration](2026/08/potential-correction-env-declaration.md)
 - [potential-correction-validation](2026/08/potential-correction-validation.md)
+- [pr-ci-for-own-test-suite](2026/08/pr-ci-for-own-test-suite.md)
 - [pyautobrain-pr-test-ci](2026/08/pyautobrain-pr-test-ci.md) — auto-closed by the merge
+- [pyautogalaxy-mge-sigma-test](2026/08/pyautogalaxy-mge-sigma-test.md)
 - [simulator-util-to-af-ex](2026/08/simulator-util-to-af-ex.md) — moved the four 1D-Gaussian simulator helpers out of the duplicated
 - [small-datasets-loader-pixel-scales](2026/08/small-datasets-loader-pixel-scales.md)
+- [smoke-runner-jupyter-guard](2026/08/smoke-runner-jupyter-guard.md)
 - [spawn-autonomy-log-generated](2026/08/spawn-autonomy-log-generated.md)
 - [spawn-drift-self-heal](2026/08/spawn-drift-self-heal.md)
 - [spawn-empty-body-privacy-fix](2026/08/spawn-empty-body-privacy-fix.md)

@@ -1,4 +1,4 @@
-# run_smoke.py: 9 per-repo copies, 5 drifted revisions, no sync mechanism
+# run_smoke.py: three runner variants across 10 repos, no sync mechanism
 
 Type: maintenance
 Target: ci
@@ -9,7 +9,13 @@ Autonomy: supervised
 Priority: normal
 Status: draft
 
-## Finding (2026-07-25, during the notebook skip-guard fix)
+> **Re-scoped 2026-08-05.** The original finding below is preserved for history
+> but its two headline claims are now measured to be wrong: step 1 is already
+> done, and "9 copies in 5 revisions" conflates three structurally different
+> programs. Read the correction block first — it is the current statement of
+> the task.
+
+## Original finding (2026-07-25, during the notebook skip-guard fix)
 
 Every workspace's PR smoke gate runs its own copy of
 `.github/scripts/run_smoke.py`. There are **9 copies across the workspace
@@ -29,17 +35,63 @@ already import `env_config` and `build_util.py_to_notebook` from PyAutoHands);
 the exact snippet + full copy inventory is documented in
 PyAutoHands `docs/internals.md`.
 
-## Task
+## Correction (2026-08-05, measured during the jupyter-guard fix)
 
-1. Short term: roll the 2-line adoption across the 9 copies (one PR per repo,
-   mechanical).
-2. Structural: decide whether `run_smoke.py` should become a PyAutoHands-owned
-   module that the per-repo copies thin-wrap — the `env_config.py` precedent
-   exists precisely because a local copy drifted. If yes, implement the shared
-   module and reduce each repo's script to the wrapper.
+Measured across the checkouts, not inferred. There are **10** copies, not 9,
+and they are **three different programs**, not five revisions of one:
+
+| Variant | Repos | Lines | Notebook leg | `is_clean_skip_exit` |
+|---|---|---|---|---|
+| **workspace** | autofit_workspace, autogalaxy_workspace, autolens_workspace | ~266 | yes | **already adopted** |
+| **workspace_test** | autofit_workspace_test, autogalaxy_workspace_test, autocti_workspace_test | 113 | no | n/a |
+| **workspace_test + timeout** | autolens_workspace_test | 193 | no | n/a |
+| **HowTo** | HowToLens, HowToGalaxy, HowToFit | 75 | no | n/a |
+
+Consequences for the original task, in order of how much they change it:
+
+1. **Step 1 is done, and was never applicable beyond three repos.** The
+   skip-guard is adopted in all three notebook-capable copies. The other seven
+   have no `execute_notebook` at all — they never shell out to `jupyter`, so
+   there is no spurious FAIL for them to fix. The acceptance criterion "a
+   notebook exiting via the skip-guard passes every workspace's PR smoke gate"
+   is already met, because only three gates run notebooks.
+2. **The variants differ by feature, not only by drift.** `workspace_test`
+   exposes `load_smoke_scripts`/`run_one` and no notebook machinery;
+   `autolens_workspace_test` additionally carries `TIMEOUT_SECS`
+   (`BUILD_SCRIPT_TIMEOUT`) and a `_kill_group` process-group kill that no
+   other copy has. That is a capability, not staleness — a naive
+   "make them byte-identical" would delete it.
+3. **The HowTo tier is already the proposed end-state.** Those three are
+   75-line delegators (`PROJECT = "howtolens"`, straight into PyAutoHands
+   `build_util`) — the thin-wrapper design step 2 asks whether to build
+   already exists in-tree as a working precedent to copy.
+4. Real remaining drift inside the workspace variant is now **two lines**:
+   autofit_workspace and autolens_workspace are byte-identical; autogalaxy's
+   only divergence is an unused `_BUILD_DIR` intermediate variable. The
+   jupyter-guard fix (autolens_workspace#470) landed the identical patch in all
+   three, so it did not widen this.
+
+## Task (re-scoped)
+
+1. ~~Roll the 2-line skip-guard adoption across the copies.~~ **Done** — verify
+   and close out, do not redo.
+2. Decide the shared-module question **per variant**, not globally, using the
+   HowTo delegator as the reference shape:
+   - Is one PyAutoHands-owned runner with per-repo config the right target, or
+     two (notebook-capable and script-only)?
+   - Does `autolens_workspace_test`'s timeout/kill behaviour get promoted to
+     everyone, or does that repo keep a documented divergence? **Answer this
+     before writing any code** — it is the only place consolidation destroys
+     behaviour.
+3. Implement whichever shape is chosen, one PR per repo.
+4. Drop the vestigial `_BUILD_DIR` line in autogalaxy_workspace if the
+   workspace variant is not being replaced wholesale.
 
 ## Acceptance
 
-- A notebook exiting via the skip-guard passes every workspace's PR smoke gate.
-- Either all copies are byte-identical thin wrappers, or a documented reason
-  why per-repo divergence is intentional.
+- A stated, written decision on the timeout/kill divergence — promoted or
+  documented-as-intentional — before any repo is touched.
+- Each variant is either a thin wrapper over a PyAutoHands-owned module, or
+  carries a documented reason why it diverges.
+- No repo loses behaviour it has today; `autolens_workspace_test` still
+  enforces its per-script timeout.
