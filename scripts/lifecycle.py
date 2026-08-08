@@ -33,6 +33,9 @@ Subcommands
         Drift guard (mirrors repos_sync.py --check; non-zero exit on drift):
           * no active.md slug has a complete/ record (finished but still active)
           * no file lives in two states at once
+          * every registry `prompt:` path resolves, exactly rather than by
+            fallback, and into the state folder its registry implies
+          * no slug is listed in two registries at once
         Wire into /health and CI.
 
 This file is intentionally stdlib-only (no PyAuto imports) so it runs in any
@@ -82,6 +85,136 @@ def ledger_slugs(path: Path) -> "set[str]":
         if m:
             slugs.add(_slugify_h2(m.group(1)))
     return slugs
+
+
+# --------------------------------------------------------------------------- #
+# registry integrity
+#
+# The registry files are the first thing a task-selection pass reads, so a wrong
+# entry costs a whole session before it is noticed. `check` used to ignore them
+# entirely — it never opened planned.md or parked.md and never resolved a single
+# `prompt:` path, so it printed OK over a planned.md in which 8 of 12 entries
+# were wrong (2026-08-08 audit).
+# --------------------------------------------------------------------------- #
+REGISTRY_FILES = ("active.md", "planned.md", "parked.md")
+
+# A field is a ZERO-INDENT `- key: value`. Nested two-space bullets are values
+# of their parent key (`  - SomeRepo: some-branch` under `repos:`), NOT fields —
+# reading them as fields would invent keys out of branch names.
+FIELD_RE = re.compile(r"^-\s*([^:\s][^:]*?):\s*(.*)$")
+
+# Which state folder(s) each registry's prompts may live in. parked.md takes
+# BOTH: it holds tasks that were merely scoped (prompt still in draft/) and
+# tasks that were started and then parked (prompt already advanced to active/).
+EXPECTED_STATE = {
+    "active.md": {"active"},
+    "planned.md": {"draft"},
+    "parked.md": {"draft", "active"},
+}
+
+
+def registry_entries(path: Path) -> "list[tuple[str, dict]]":
+    """[(slug, {key: value})] for each `## slug` section of a registry file.
+
+    First occurrence of a key wins, matching how a reader scans the block."""
+    entries: "list[tuple[str, dict]]" = []
+    if not path.exists():
+        return entries
+    fields: "dict[str, str]" = {}
+    slug = None
+    for line in path.read_text(errors="replace").splitlines():
+        m = H2_RE.match(line)
+        if m:
+            if slug is not None:
+                entries.append((slug, fields))
+            slug, fields = _slugify_h2(m.group(1)), {}
+            continue
+        if slug is None:
+            continue
+        f = FIELD_RE.match(line)
+        if f:
+            fields.setdefault(f.group(1).strip(), f.group(2).strip())
+    if slug is not None:
+        entries.append((slug, fields))
+    return entries
+
+
+def resolve_prompt(root: Path, raw: str) -> "tuple[Path | None, str | None]":
+    """(path, state) for a registry `prompt:` value, else (None, None).
+
+    Mirrors the fallback chain AGENTS.md documents for `$start-dev`: the literal
+    path, the pre-lifecycle `PyAutoMind/<work-type>/<target>/` and bare
+    `<work-type>/<target>/` forms under draft/, and the bare filename in active/
+    or as a complete/ record. `state` is the state folder the file ACTUALLY sits
+    in, which is what makes a state contradiction visible — resolving is not the
+    same as being in the right place."""
+    rel = raw[len("PyAutoMind/"):] if raw.startswith("PyAutoMind/") else raw
+    stripped = rel[len("draft/"):] if rel.startswith("draft/") else rel
+    name = Path(rel).name
+
+    candidates = [root / rel, root / "draft" / stripped, root / "active" / name]
+    complete = root / "complete"
+    if complete.is_dir():
+        candidates += [
+            f for f in sorted(complete.rglob(name))
+            if (complete / "archive") not in f.parents
+        ]
+
+    for cand in candidates:
+        if cand.is_file():
+            try:
+                top = cand.resolve().relative_to(root.resolve()).parts[0]
+            except ValueError:
+                return cand, "outside"
+            return cand, top if top in ("draft", "active", "complete") else "other"
+    return None, None
+
+
+def registry_problems(root: Path) -> "list[str]":
+    """Drift across active.md / planned.md / parked.md."""
+    problems: "list[str]" = []
+    seen: "dict[str, str]" = {}
+
+    for reg in REGISTRY_FILES:
+        for slug, fields in registry_entries(root / reg):
+            key = safe_name(slug)
+            if key in seen and seen[key] != reg:
+                problems.append(
+                    f"slug listed in two registries: {slug} ({seen[key]} + {reg})"
+                )
+            seen.setdefault(key, reg)
+
+            raw = fields.get("prompt")
+            if not raw:
+                continue
+            # Entries annotate the path with a trailing parenthetical
+            # ("... .md (carries the phase-1 record)") — the path is the first
+            # token, the rest is prose for a human.
+            raw = raw.split()[0]
+            resolved, state = resolve_prompt(root, raw)
+            if resolved is None:
+                problems.append(f"{reg}: {slug}: prompt path does not resolve: {raw}")
+                continue
+
+            rel = resolved.relative_to(root).as_posix()
+            expected = EXPECTED_STATE[reg]
+            if state == "complete":
+                problems.append(
+                    f"{reg}: {slug}: prompt is a complete/ record (shipped but "
+                    f"still listed): {rel}"
+                )
+            elif state not in expected:
+                want = "/ or ".join(sorted(expected))
+                problems.append(
+                    f"{reg}: {slug}: prompt is in {state}/ but {reg} implies "
+                    f"{want}/: {rel}"
+                )
+            elif rel != raw:
+                problems.append(
+                    f"{reg}: {slug}: legacy prompt path, resolves only via "
+                    f"fallback: {raw} -> {rel}"
+                )
+    return problems
 
 
 def _prune_ledger_section(path: Path, slug: str) -> bool:
@@ -394,6 +527,8 @@ def cmd_check(args) -> int:
                 continue
             if f.name in active_names:
                 problems.append(f"file in both active/ and complete/: {f.name}")
+
+    problems.extend(registry_problems(ROOT))
 
     if problems:
         print("lifecycle check: DRIFT")

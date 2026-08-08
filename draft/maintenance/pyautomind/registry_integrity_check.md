@@ -49,9 +49,25 @@ fallback chain that `AGENTS.md` documents (`draft/<rel>`, bare `<rel>`,
 | Prompt file never existed in git history | 2 | `notebook-kernel-cwd-auto-simulate`, `auto-simulate-guard-wrong-simulator-target` |
 | Prompt file truly missing | 3 | `heart-ci-linkage`, `heart-release-validation`, `heart-release-profile-wheel-integration` |
 | Legacy `PyAutoMind/<type>/<target>/` path, resolves only via fallback | 3 | `samples-parameter-paths`, `nfw-truncated-potential-accuracy`, `piemass-potential` |
-| State contradiction | 1 | `build-testpypi-rehearsal-mode` — `status: planned`, but its prompt is in `active/`, i.e. issued and in flight |
+| State contradiction | 1 | `build-testpypi-rehearsal-mode` — `status: planned`, but its prompt is in `active/` |
 
-Only 4 of 12 entries have an exactly-correct prompt path.
+Only 4 of 13 entries had an exactly-correct prompt path.
+
+**Six of the thirteen were work that had already shipped.** Chasing each of the
+five missing-prompt entries to its upstream repo found the capability live on
+main in every case:
+
+| Entry | Milestone | Shipped as |
+|---|---|---|
+| `notebook-kernel-cwd-auto-simulate` | — | PyAutoHands `build_util.py:302` → `run_notebook.py`, setting `resources['metadata']['path']` |
+| `auto-simulate-guard-wrong-simulator-target` | — | autolens_workspace: 236 resolvable guards, 0 mismatches |
+| `build-testpypi-rehearsal-mode` | M1 | PyAutoHands `release.yml` — `rehearsal` dispatch input, `resolve_mode` job, downstream jobs gated `if: rehearsal != 'true'`, dev-segment version output. Entry targeted "PyAutoBuild", which is now PyAutoHands |
+| `heart-ci-linkage` | M0 | PyAutoHeart `heart/checks/ci_status.{sh,py}` + `tests/test_ci_status.py`; the script's own comment says it "replaces the old `gh run list --limit 1`" — verbatim the defect the entry described |
+| `heart-release-validation` | M2 | PyAutoHeart `pyauto-heart validate --ingest` → `heart/validate.py`, `validation_report.json`, `.github/workflows/release-integrate.yml` |
+| `heart-release-profile-wheel-integration` | M3 | PyAutoHeart `heart/validate.py` carries the named `release` profile and gates fidelity on `profile == release`; TestPyPI wheel install in `heart/checks/verify_install.sh` |
+
+The whole M0–M3 release-validation milestone chain shipped without a single
+registry entry being retired. That is the cost this check exists to prevent.
 
 ## Why `check` misses all of it
 
@@ -87,13 +103,12 @@ not change the exit-code contract (`0` OK, `1` drift).
 **Leg 2 — reconcile the 8 entries.**
 
 - Rewrite the 3 legacy paths to their exact `draft/...` form.
-- Move `build-testpypi-rehearsal-mode` to `active.md`, or correct its `status:`
-  — whichever matches the issue's real state at implementation time.
-- Remove the 2 verified-shipped entries, citing the evidence above.
-- The 3 `pyautoheart/` entries have no prompt file: either write the prompt from
-  the entry's existing `summary:` block (each carries a substantial one) or move
-  the entry to `ideas.md`. **Human call at implementation time** — these are the
-  M0–M3 release-validation milestone chain and may still be wanted.
+- Remove the 6 verified-shipped entries, citing the evidence table above. The
+  M0–M3 chain needed no reconstruction from its `summary:` blocks after all —
+  every milestone was already live upstream.
+- Removal is the right disposal, not a fabricated `complete/` record: these
+  shipped under other tasks' PRs, and inventing dated records with merge
+  evidence nobody verified would put a worse lie in a more trusted place.
 
 **Leg 3 — `tests/test_lifecycle_check.py`.** Drive the real `cmd_check` against
 fixture registry trees (tmp_path with `draft/`, `active/`, `complete/` and
@@ -111,6 +126,14 @@ asserting `OK`. Follow `test_repos_sync_hygiene_coverage.py` for style.
 - **Closing the upstream issues.** PyAutoHands#204 and autolens_workspace#359
   are still open on trackers outside this task's repo. Flagged here for a later
   `/issue_cleanup` run; this PR touches PyAutoMind only.
+- **The orphaned `active/` prompt.** Removing `build-testpypi-rehearsal-mode`
+  from planned.md leaves `active/release_yml_testpypi_rehearsal_mode.md` sitting
+  in `active/` with no registry entry — shipped work whose prompt was never
+  advanced to `complete/`. `check` does not look for prompts that no registry
+  claims, so this is invisible to it. Two follow-ups, both deliberately not
+  taken here: give that prompt a proper `complete/` record via the ship path,
+  and add an orphan-prompt check (every `active/*.md` is claimed by an
+  `active.md` or `parked.md` entry) — the mirror of the checks added here.
 - `condemned.md`, `queue.md` and `ideas.md` — different schemas, no `prompt:`
   field. Not covered.
 
