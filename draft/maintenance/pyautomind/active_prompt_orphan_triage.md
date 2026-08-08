@@ -32,7 +32,6 @@ condition is only worth gating once the backlog is at zero.
 
 ```
 active/benchmark_calibration_runs.md
-active/ep_optimise_expose_updater_delta.md
 active/euclid_eceb_editorial_revision.md
 active/fix_workspace_start_here_colab_links.md
 active/matplotlib_inline_standalones.md
@@ -41,17 +40,20 @@ active/research_profiling_experiment_in_the_autolens_pr.md
 active/workspace_version.md
 ```
 
-**One is already diagnosed.** `ep_optimise_expose_updater_delta.md` belongs to
-the `ep-optimise-updater` entry in `active.md`, which records
-`status: COMPLETE 2026-08-08` with both PRs merged (PyAutoFit #1457 →
-`3b960609`, autofit_workspace #136 → `cf8b4077`). That is finished work still
-sitting in `active.md`, so it wants the normal ship disposal:
-`lifecycle.py record ep-optimise-updater --date 2026-08-08 --from-file <body>
---prompt ep_optimise_expose_updater_delta.md --apply`, which writes the record,
-folds the prompt and drops the `active.md` section in one step. The entry
-already carries enough substance for a rich record. It is an orphan only
-because the entry declares no `prompt:` field and the slug does not match the
-filename stem.
+**One of the original eight is already cleared.**
+`ep_optimise_expose_updater_delta.md` was finished work (PyAutoFit #1457 →
+`3b960609`, autofit_workspace #136 → `cf8b4077`) whose `active.md` entry read
+`status: COMPLETE` with no `complete/` record. Recorded 2026-08-08 →
+`complete/2026/08/ep-optimise-updater.md`. It had shown up as an orphan only
+because its entry declared no `prompt:` field and its slug did not match the
+filename stem — which is the concrete argument for the third closing step below.
+
+`mge_sigma_min_workspace_sweep.md` was retired in the same pass (it was claimed,
+so never an orphan): recorded to `complete/2026/08/`, with its undischarged
+markdown debt split out to
+`draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md` so
+completion did not swallow it. `active.md` now holds only the two release
+drives.
 
 The remaining seven need the same question answered individually: **shipped,
 still in flight, or abandoned?** Answer it against the upstream repo, not from

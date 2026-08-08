@@ -1,3 +1,43 @@
+# ep-optimise-updater
+
+- shipped: 2026-08-08
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1456
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1457 (merged `3b960609`)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/136 (merged `cf8b4077`)
+- repos:
+  - PyAutoFit: feature/ep-optimise-updater
+  - autofit_workspace: feature/ep-optimise-updater
+
+## Summary
+
+Expose the existing EP updater hierarchy through the declarative
+`FactorGraphModel.optimise()` API. The public default remains `updater=None`, so
+damping is **opt-in** and existing fits retain their current behaviour. Library
+changes and seam tests landed first; the workspace followed with an
+undamped-by-default tutorial example showing the optional keyword.
+
+## Ship order and gates
+
+Library-first order was preserved: PyAutoFit #1457 merged before
+autofit_workspace #136. Required CI was green on both tested heads.
+
+The workspace gate cleared under **explicit human acknowledgement** rather than
+a clean bill of health — sandbox-only notebook IPC, a broad AutoLens runtime,
+and branch-sensitive Heart limitations were each documented before shipping.
+That acknowledgement covers that reason set only.
+
+## Bookkeeping note
+
+This record was written on 2026-08-08 by the registry-integrity follow-up, not
+by `ship_workspace` at merge time. The task finished and its `active.md` entry
+was updated to `status: COMPLETE`, but no `complete/` record was written and the
+prompt stayed in `active/` — so `lifecycle.py orphans` reported it as unclaimed
+and `lifecycle.py issues` would have flagged its closed tracking issue. The
+substance above is taken from the contemporaneous `active.md` entry, which was
+detailed; there is simply no separate ship-time trap log.
+
+## Original prompt
+
 # EP declarative optimise() cannot apply the damping its own diagnostics recommend
 
 Type: feature

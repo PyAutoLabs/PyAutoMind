@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-940 records across 7 buckets.
+942 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -28,6 +28,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [dep-floors-source-chain-ci](2026/08/dep-floors-source-chain-ci.md)
 - [empty-backlog-vs-broken-discovery](2026/08/empty-backlog-vs-broken-discovery.md) — closed on merge
 - [ep-initializer-exception-should-not-abort](2026/08/ep-initializer-exception-should-not-abort.md)
+- [ep-optimise-updater](2026/08/ep-optimise-updater.md)
 - [file-path-guard-decision](2026/08/file-path-guard-decision.md) — The file-path leg split from raw-guard-migration (leg 3 of the dataset-bulk series, autolens_workspace#354). D…
 - [group-data-preparation-readme](2026/08/group-data-preparation-readme.md)
 - [health-conductor-stale-verdict](2026/08/health-conductor-stale-verdict.md)
@@ -44,6 +45,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [jax-grad-smoke-timeout-budget](2026/08/jax-grad-smoke-timeout-budget.md)
 - [jax-likelihood-mass-sensitivity](2026/08/jax-likelihood-mass-sensitivity.md) — Audit + fix for median-literal mass blindness across all jax_likelihood/datacube scripts (phase 2 of the findi…
 - [llms-txt-census-fixes](2026/08/llms-txt-census-fixes.md)
+- [mge-sigma-min-workspace-sweep](2026/08/mge-sigma-min-workspace-sweep.md)
 - [missing-auto-simulate-guards](2026/08/missing-auto-simulate-guards.md)
 - [multi-start-auto-convergence-real-search](2026/08/multi-start-auto-convergence-real-search.md) — `scripts/jax_assertions/multi_start_gradient_auto_convergence.py` failed
 - [nautilus-1core-serial-pool](2026/08/nautilus-1core-serial-pool.md) — corrective for the Heart RED "release validation FAILED (stage
