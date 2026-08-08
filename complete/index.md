@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-935 records across 7 buckets.
+937 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -34,6 +34,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [hst-dq-bits-dial](2026/08/hst-dq-bits-dial.md)
 - [hygiene-coverage-drift](2026/08/hygiene-coverage-drift.md)
 - [hygiene-detail-flag](2026/08/hygiene-detail-flag.md)
+- [hygiene-gone-ref-counter](2026/08/hygiene-gone-ref-counter.md) — the prompt was never issued — the defects were fixed under other issues, see below
 - [hygiene-howto-refs-docstrings](2026/08/hygiene-howto-refs-docstrings.md)
 - [interferometer-delaunay-flaky-fitexception](2026/08/interferometer-delaunay-flaky-fitexception.md)
 - [interferometer-start-here-integrate-oom](2026/08/interferometer-start-here-integrate-oom.md)
@@ -545,6 +546,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [validation-searches-env-optax](2026/07/validation-searches-env-optax.md)
 - [verify-install-check-f-autosimulate-and-dep-pin](2026/07/verify-install-check-f-autosimulate-and-dep-pin.md)
 - [version-check-compat-floor](2026/07/version-check-compat-floor.md)
+- [version-drift-stamp-consistency](2026/07/version-drift-stamp-consistency.md) — the prompt was never issued — the fix shipped inside a `/wake_up` session's branch
 - [version-pinning-design-review](2026/07/version-pinning-design-review.md)
 - [viz-refactor-asserts-1280](2026/07/viz-refactor-asserts-1280.md) — Two visualization sweep-assert failures, both diagnosed as env-config (NOT code bugs); workspace-only, no libr…
 - [viz-render-gallery](2026/07/viz-render-gallery.md) — Eyes agent Phase 1
