@@ -42,6 +42,12 @@ Subcommands
         The mirror of `check`: active/ prompts that no registry entry claims.
         Report-only by default (see cmd_orphans for why it is not yet a gate).
 
+  issues
+        The ONLINE leg (needs `gh` + network, so deliberately not part of
+        `check`): every registry entry's tracking issue cross-checked against
+        GitHub. Catches finished work still listed as pending — the class no
+        offline check can see.
+
 This file is intentionally stdlib-only (no PyAuto imports) so it runs in any
 environment, including a bare template checkout.
 """
@@ -219,6 +225,118 @@ def registry_problems(root: Path) -> "list[str]":
                     f"fallback: {raw} -> {rel}"
                 )
     return problems
+
+
+# --------------------------------------------------------------------------- #
+# the online leg — tracking-issue state
+#
+# The offline checks catch STRUCTURAL rot (bad paths, state contradictions).
+# They cannot catch the class that costs most: an entry describing work that is
+# finished. The 2026-08-08 audit found six such entries, including the whole
+# M0-M3 release-validation chain, and not one was locally detectable — every one
+# had correct upstream state (a closed issue, a merged PR, a capability live on
+# main) that the Mind simply never read back. This is that read-back.
+#
+# Deliberately NOT part of `check`: it needs the network and `gh` credentials,
+# and `check` is wired into CI where it must stay hermetic.
+# --------------------------------------------------------------------------- #
+# Only TRACKING refs. A task's `library-pr:`/`workspace-pr:` are merged by
+# definition once it ships, so reporting those as closed would be pure noise.
+ISSUE_FIELDS = ("issue", "epic")
+ISSUE_URL_RE = re.compile(r"https://github\.com/([\w.-]+)/([\w.-]+)/issues/(\d+)")
+
+
+class GhUnavailable(RuntimeError):
+    """`gh` is not installed. Distinct from "gh ran and said no" so the command
+    can report "could not run" instead of the far worse "nothing to report"."""
+
+
+def registry_issue_refs(root: Path) -> "list[tuple[str, str, str]]":
+    """(registry, slug, issue_url) for every entry carrying a tracking issue.
+
+    Entries legitimately carry prose instead of a URL ("(no issue — a
+    human-authorized release drive)", "NEEDS A FRESH ISSUE — ..."); those have
+    nothing to query and are skipped rather than reported."""
+    refs = []
+    for reg in REGISTRY_FILES:
+        for slug, fields in registry_entries(root / reg):
+            for key in ISSUE_FIELDS:
+                m = ISSUE_URL_RE.search(fields.get(key, ""))
+                if m:
+                    refs.append((reg, slug, m.group(0)))
+    return refs
+
+
+def _gh_issue_states(urls: "list[str]") -> "dict[str, str]":
+    """{url: state} via the `gh` CLI. Requires gh + network; online leg only."""
+    import subprocess
+
+    states: "dict[str, str]" = {}
+    for url in urls:
+        m = ISSUE_URL_RE.match(url)
+        if not m:
+            continue
+        owner, repo, num = m.groups()
+        try:
+            r = subprocess.run(
+                ["gh", "api", f"repos/{owner}/{repo}/issues/{num}", "--jq", ".state"],
+                capture_output=True, text=True,
+            )
+        except FileNotFoundError:
+            raise GhUnavailable
+        if r.returncode != 0:
+            tail = (r.stderr.strip().splitlines() or ["error"])[-1]
+            states[url] = f"unreadable: {tail}"
+            continue
+        states[url] = r.stdout.strip()
+    return states
+
+
+def issue_problems(root: Path, fetch=None) -> "list[str]":
+    """Registry entries whose tracking issue is CLOSED — i.e. finished work
+    still listed as pending.
+
+    `fetch` maps urls -> {url: state}; injectable so the logic is testable
+    without a network."""
+    refs = registry_issue_refs(root)
+    if not refs:
+        return []
+    fetch = fetch or _gh_issue_states
+    states = fetch([url for _, _, url in refs])
+
+    problems = []
+    for reg, slug, url in refs:
+        state = states.get(url, "unknown")
+        if state == "closed":
+            problems.append(
+                f"{reg}: {slug}: tracking issue is CLOSED but the entry is still "
+                f"listed as pending: {url}"
+            )
+        elif state != "open":
+            problems.append(f"{reg}: {slug}: could not read issue state ({state}): {url}")
+    return problems
+
+
+def cmd_issues(args) -> int:
+    """Cross-check every registry entry's tracking issue against GitHub."""
+    try:
+        problems = issue_problems(ROOT)
+    except GhUnavailable:
+        print(
+            "lifecycle issues: cannot run — the `gh` CLI is not installed.\n"
+            "  This leg needs GitHub; it is deliberately separate from `check`,\n"
+            "  which stays hermetic for CI. Install gh, or run this from a\n"
+            "  session that has it.",
+            file=sys.stderr,
+        )
+        return 2
+    if not problems:
+        print(f"lifecycle issues: OK ({len(registry_issue_refs(ROOT))} tracking issue(s) open)")
+        return 0
+    print("lifecycle issues: DRIFT")
+    for p in problems:
+        print(f"  - {p}")
+    return 1
 
 
 def orphan_prompts(root: Path) -> "list[Path]":
@@ -623,6 +741,11 @@ def main() -> int:
 
     c = sub.add_parser("check", help="drift guard (non-zero exit on drift)")
     c.set_defaults(func=cmd_check)
+
+    iss = sub.add_parser(
+        "issues", help="cross-check registry tracking issues against GitHub (needs gh)"
+    )
+    iss.set_defaults(func=cmd_issues)
 
     o = sub.add_parser("orphans", help="report active/ prompts no registry claims")
     o.add_argument("--check", action="store_true",

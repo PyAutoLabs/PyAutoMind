@@ -234,6 +234,101 @@ def test_trailing_parenthetical_after_the_path_is_tolerated(tmp_path):
 
 
 # --------------------------------------------------------------------------- #
+# the online leg — tracking-issue state
+#
+# `fetch` is injected so these stay hermetic: no network, no `gh`, no live repo.
+# --------------------------------------------------------------------------- #
+GHOST_ISSUE = "https://github.com/FictionalOrg/FlywheelRepo/issues/17"
+OTHER_ISSUE = "https://github.com/FictionalOrg/FlywheelRepo/issues/18"
+
+
+def _states(mapping):
+    return lambda urls: {u: mapping.get(u, "unknown") for u in urls}
+
+
+def test_closed_tracking_issue_on_a_pending_entry_is_drift(tmp_path):
+    """The class no offline check can see: the entry reads as pending, the work
+    is finished, and only GitHub knows."""
+    (tmp_path / "planned.md").write_text(
+        _entry("sprocket-calibration", extra=f"- issue: {GHOST_ISSUE}\n")
+    )
+    problems = lifecycle.issue_problems(tmp_path, fetch=_states({GHOST_ISSUE: "closed"}))
+    assert len(problems) == 1
+    assert "CLOSED" in problems[0]
+    assert "sprocket-calibration" in problems[0]
+
+
+def test_open_tracking_issue_is_not_drift(tmp_path):
+    (tmp_path / "planned.md").write_text(
+        _entry("sprocket-calibration", extra=f"- issue: {GHOST_ISSUE}\n")
+    )
+    assert lifecycle.issue_problems(tmp_path, fetch=_states({GHOST_ISSUE: "open"})) == []
+
+
+def test_prose_instead_of_an_issue_url_is_skipped(tmp_path):
+    """Real entries carry '(no issue — a human-authorized release drive)' and
+    'NEEDS A FRESH ISSUE — ...'. There is nothing to query; not a finding."""
+    body = (
+        _entry("release-drive", extra="- issue: (no issue — a release drive)\n")
+        + _entry("needs-one", extra="- issue: NEEDS A FRESH ISSUE — file at start_dev\n")
+    )
+    (tmp_path / "active.md").write_text(body)
+    assert lifecycle.registry_issue_refs(tmp_path) == []
+    assert lifecycle.issue_problems(tmp_path, fetch=_states({})) == []
+
+
+def test_epic_field_is_treated_as_a_tracking_ref(tmp_path):
+    (tmp_path / "planned.md").write_text(
+        _entry("phased-task", extra=f"- epic: {GHOST_ISSUE} (the public watch point)\n")
+    )
+    problems = lifecycle.issue_problems(tmp_path, fetch=_states({GHOST_ISSUE: "closed"}))
+    assert len(problems) == 1
+
+
+def test_merged_pr_links_are_not_treated_as_tracking_refs(tmp_path):
+    """A shipped task's library-pr/workspace-pr are merged by definition.
+    Reporting those as closed would bury the real signal in noise."""
+    body = _entry(
+        "sprocket-calibration",
+        extra=(
+            f"- issue: {GHOST_ISSUE}\n"
+            "- library-pr: https://github.com/FictionalOrg/FlywheelRepo/pull/99\n"
+            "- workspace-pr: https://github.com/FictionalOrg/GadgetRepo/pull/12\n"
+        ),
+    )
+    (tmp_path / "active.md").write_text(body)
+    refs = lifecycle.registry_issue_refs(tmp_path)
+    assert [r[2] for r in refs] == [GHOST_ISSUE]
+
+
+def test_missing_gh_propagates_rather_than_reporting_all_clear(tmp_path):
+    """"gh is not installed" must never be mistaken for "no findings" — a check
+    that silently could not run is worse than one that fails loudly."""
+    import pytest
+
+    (tmp_path / "planned.md").write_text(
+        _entry("sprocket-calibration", extra=f"- issue: {GHOST_ISSUE}\n")
+    )
+
+    def _no_gh(urls):
+        raise lifecycle.GhUnavailable
+
+    with pytest.raises(lifecycle.GhUnavailable):
+        lifecycle.issue_problems(tmp_path, fetch=_no_gh)
+
+
+def test_unreadable_issue_state_is_reported_not_swallowed(tmp_path):
+    """A deleted repo, a revoked token or a network failure must surface — a
+    silent 'no findings' from a check that could not run is the worst outcome."""
+    (tmp_path / "planned.md").write_text(
+        _entry("sprocket-calibration", extra=f"- issue: {OTHER_ISSUE}\n")
+    )
+    problems = lifecycle.issue_problems(tmp_path, fetch=_states({}))
+    assert len(problems) == 1
+    assert "could not read issue state" in problems[0]
+
+
+# --------------------------------------------------------------------------- #
 # the mirror direction — active/ prompts no registry claims
 # --------------------------------------------------------------------------- #
 def test_unclaimed_active_prompt_is_an_orphan(tmp_path):
