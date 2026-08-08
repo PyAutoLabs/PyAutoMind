@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-939 records across 7 buckets.
+940 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -576,6 +576,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autolens-jax-simulator-release-fixes](2026/06/autolens-jax-simulator-release-fixes.md)
 - [autolens-results-aggregator-valid-dataset](2026/06/autolens-results-aggregator-valid-dataset.md)
 - [bib-duplicate-keys](2026/06/bib-duplicate-keys.md)
+- [build-testpypi-rehearsal-mode](2026/06/build-testpypi-rehearsal-mode.md)
 - [dark-matter-potentials](2026/06/dark-matter-potentials.md)
 - [datacube-delaunay-release-memory](2026/06/datacube-delaunay-release-memory.md)
 - [datacube-shared-state](2026/06/datacube-shared-state.md)

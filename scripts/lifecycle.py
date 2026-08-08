@@ -38,6 +38,10 @@ Subcommands
           * no slug is listed in two registries at once
         Wire into /health and CI.
 
+  orphans [--check]
+        The mirror of `check`: active/ prompts that no registry entry claims.
+        Report-only by default (see cmd_orphans for why it is not yet a gate).
+
 This file is intentionally stdlib-only (no PyAuto imports) so it runs in any
 environment, including a bare template checkout.
 """
@@ -215,6 +219,60 @@ def registry_problems(root: Path) -> "list[str]":
                     f"fallback: {raw} -> {rel}"
                 )
     return problems
+
+
+def orphan_prompts(root: Path) -> "list[Path]":
+    """active/*.md that no registry entry claims — the mirror of registry_problems().
+
+    `check` validates registry -> prompt. This is prompt -> registry: a prompt
+    sitting in active/ that nothing lists is work whose state nobody is
+    tracking, which is how the M0-M3 release-validation chain shipped without a
+    single entry being retired.
+
+    A prompt counts as claimed either by a registry `prompt:` path that resolves
+    to it, or by an entry whose slug matches its filename stem — many entries
+    predate the `prompt:` convention and identify their file by name alone.
+    """
+    active_dir = root / "active"
+    if not active_dir.is_dir():
+        return []
+
+    claimed: "set[Path]" = set()
+    slugs: "set[str]" = set()
+    for reg in REGISTRY_FILES:
+        for slug, fields in registry_entries(root / reg):
+            slugs.add(safe_name(slug))
+            raw = fields.get("prompt")
+            if not raw:
+                continue
+            resolved, _ = resolve_prompt(root, raw.split()[0])
+            if resolved is not None:
+                claimed.add(resolved.resolve())
+
+    orphans = []
+    for f in sorted(active_dir.glob("*.md")):
+        if f.resolve() in claimed or safe_name(f.stem) in slugs:
+            continue
+        orphans.append(f)
+    return orphans
+
+
+def cmd_orphans(args) -> int:
+    """Report active/ prompts no registry claims.
+
+    Report-only by default and deliberately NOT wired into `check`: the 2026-08-08
+    audit found 8 of 10 active/ prompts unclaimed, and each needs individual
+    triage (shipped? in flight? abandoned?) against its upstream repo before the
+    condition can be a hard gate. Pass --check once that backlog is cleared.
+    """
+    orphans = orphan_prompts(ROOT)
+    if not orphans:
+        print("lifecycle orphans: none")
+        return 0
+    print(f"lifecycle orphans: {len(orphans)} active/ prompt(s) no registry claims")
+    for f in orphans:
+        print(f"  - {f.relative_to(ROOT)}")
+    return 1 if getattr(args, "check", False) else 0
 
 
 def _prune_ledger_section(path: Path, slug: str) -> bool:
@@ -565,6 +623,11 @@ def main() -> int:
 
     c = sub.add_parser("check", help="drift guard (non-zero exit on drift)")
     c.set_defaults(func=cmd_check)
+
+    o = sub.add_parser("orphans", help="report active/ prompts no registry claims")
+    o.add_argument("--check", action="store_true",
+                   help="exit non-zero if any orphan exists (once the backlog is cleared)")
+    o.set_defaults(func=cmd_orphans)
 
     args = p.parse_args()
     return args.func(args)

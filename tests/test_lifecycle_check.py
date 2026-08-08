@@ -233,6 +233,49 @@ def test_trailing_parenthetical_after_the_path_is_tolerated(tmp_path):
     assert lifecycle.registry_problems(root) == []
 
 
+# --------------------------------------------------------------------------- #
+# the mirror direction — active/ prompts no registry claims
+# --------------------------------------------------------------------------- #
+def test_unclaimed_active_prompt_is_an_orphan(tmp_path):
+    root = _tree(
+        tmp_path,
+        active=["sprocket_calibration.md", "nobody_tracks_this.md"],
+        registries={
+            "active.md": _entry(
+                "sprocket-calibration", "active/sprocket_calibration.md"
+            )
+        },
+    )
+    orphans = [p.name for p in lifecycle.orphan_prompts(root)]
+    assert orphans == ["nobody_tracks_this.md"]
+
+
+def test_slug_match_claims_a_prompt_without_a_prompt_field(tmp_path):
+    """Many entries predate the `prompt:` convention and identify their file by
+    name alone. Requiring `prompt:` would report every one of them as an orphan."""
+    root = _tree(
+        tmp_path,
+        active=["sprocket_calibration.md"],
+        registries={"active.md": _entry("sprocket-calibration")},
+    )
+    assert lifecycle.orphan_prompts(root) == []
+
+
+def test_a_parked_entry_also_claims_its_active_prompt(tmp_path):
+    """Started-then-parked work keeps its prompt in active/ while it is listed
+    in parked.md — that prompt is tracked, not orphaned."""
+    root = _tree(
+        tmp_path,
+        active=["started_then_parked.md"],
+        registries={
+            "parked.md": _entry(
+                "started-then-parked", "active/started_then_parked.md"
+            )
+        },
+    )
+    assert lifecycle.orphan_prompts(root) == []
+
+
 def test_archive_material_does_not_satisfy_a_prompt_path(tmp_path):
     """complete/archive/ holds retired non-record material and is skipped
     everywhere else in this module; a shelved copy must not make a missing
