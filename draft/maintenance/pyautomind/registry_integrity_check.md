@@ -123,9 +123,20 @@ asserting `OK`. Follow `test_repos_sync_hygiene_coverage.py` for style.
   entry's `issue:` cross-checked against GitHub, which makes `check`
   non-hermetic and credentialed. Decided 2026-08-08 to keep `check` offline;
   filed as a follow-up idea instead.
-- **Closing the upstream issues.** PyAutoHands#204 and autolens_workspace#359
-  are still open on trackers outside this task's repo. Flagged here for a later
-  `/issue_cleanup` run; this PR touches PyAutoMind only.
+- **Closing the upstream issues.** ~~PyAutoHands#204 and autolens_workspace#359
+  are still open~~ — **wrong, corrected 2026-08-08.** Both were closed as
+  `completed` on 2026-07-28, eleven days before this audit called them open.
+  That claim was inferred from PyAutoMind's own stale registry rather than read
+  off GitHub, which is the exact mistake this task exists to stop. No
+  `/issue_cleanup` is owed.
+
+  This sharpens the conclusion. **The trackers were accurate the whole time;
+  only the Mind was stale.** Every one of the six shipped entries had correct
+  upstream state available — a closed issue, a merged PR, a live capability on
+  `main` — and none of it reached `planned.md`. The drift is not GitHub going
+  out of date, it is the Mind never reading back. That is the strongest
+  argument for the online cross-check ruled out of scope above: the signal it
+  would consult was already correct and already free.
 - **The orphaned `active/` prompt.** Removing `build-testpypi-rehearsal-mode`
   from planned.md leaves `active/release_yml_testpypi_rehearsal_mode.md` sitting
   in `active/` with no registry entry — shipped work whose prompt was never
