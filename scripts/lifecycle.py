@@ -36,11 +36,12 @@ Subcommands
           * every registry `prompt:` path resolves, exactly rather than by
             fallback, and into the state folder its registry implies
           * no slug is listed in two registries at once
+          * no active/ prompt is left unclaimed by every registry
         Wire into /health and CI.
 
-  orphans [--check]
-        The mirror of `check`: active/ prompts that no registry entry claims.
-        Report-only by default (see cmd_orphans for why it is not yet a gate).
+  orphans
+        The focused view of `check`'s last leg: active/ prompts that no registry
+        entry claims. `check` grades this too — this lists only them.
 
   issues
         The ONLINE leg (needs `gh` + network, so deliberately not part of
@@ -378,10 +379,10 @@ def orphan_prompts(root: Path) -> "list[Path]":
 def cmd_orphans(args) -> int:
     """Report active/ prompts no registry claims.
 
-    Report-only by default and deliberately NOT wired into `check`: the 2026-08-08
-    audit found 8 of 10 active/ prompts unclaimed, and each needs individual
-    triage (shipped? in flight? abandoned?) against its upstream repo before the
-    condition can be a hard gate. Pass --check once that backlog is cleared.
+    This condition is now part of `check` (it became a gate on 2026-08-08, once
+    the 8-prompt backlog the audit found was triaged to zero). The subcommand
+    stays as the focused view — `check` reports orphans alongside everything
+    else, this lists only them.
     """
     orphans = orphan_prompts(ROOT)
     if not orphans:
@@ -390,7 +391,7 @@ def cmd_orphans(args) -> int:
     print(f"lifecycle orphans: {len(orphans)} active/ prompt(s) no registry claims")
     for f in orphans:
         print(f"  - {f.relative_to(ROOT)}")
-    return 1 if getattr(args, "check", False) else 0
+    return 1
 
 
 def _prune_ledger_section(path: Path, slug: str) -> bool:
@@ -705,6 +706,10 @@ def cmd_check(args) -> int:
                 problems.append(f"file in both active/ and complete/: {f.name}")
 
     problems.extend(registry_problems(ROOT))
+    problems.extend(
+        f"active/ prompt no registry entry claims: {f.relative_to(ROOT)}"
+        for f in orphan_prompts(ROOT)
+    )
 
     if problems:
         print("lifecycle check: DRIFT")
@@ -748,8 +753,6 @@ def main() -> int:
     iss.set_defaults(func=cmd_issues)
 
     o = sub.add_parser("orphans", help="report active/ prompts no registry claims")
-    o.add_argument("--check", action="store_true",
-                   help="exit non-zero if any orphan exists (once the backlog is cleared)")
     o.set_defaults(func=cmd_orphans)
 
     args = p.parse_args()

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-942 records across 7 buckets.
+946 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -18,6 +18,7 @@ _(curate hard-won records here — survives regeneration.)_
 
 ## 2026/08
 
+- [active-prompt-orphan-triage](2026/08/active-prompt-orphan-triage.md)
 - [astropy-cap-bump](2026/08/astropy-cap-bump.md) — closed manually post-merge — "Part of" in the PR bodies does not auto-close
 - [autocti-util-dataset-export](2026/08/autocti-util-dataset-export.md) — no GitHub issue — worked directly from the draft prompt in a cloud session on explicit human instruction; the …
 - [autogalaxy-assistant](2026/08/autogalaxy-assistant.md) — epic; human to close
@@ -62,6 +63,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [pyautobrain-pr-test-ci](2026/08/pyautobrain-pr-test-ci.md) — auto-closed by the merge
 - [pyautofit_plot_rst_dead_plotters](2026/08/pyautofit_plot_rst_dead_plotters.md)
 - [pyautogalaxy-mge-sigma-test](2026/08/pyautogalaxy-mge-sigma-test.md)
+- [registry-integrity-check](2026/08/registry-integrity-check.md)
 - [script-title-underline-off-by-one](2026/08/script-title-underline-off-by-one.md)
 - [simulator-util-to-af-ex](2026/08/simulator-util-to-af-ex.md) — moved the four 1D-Gaussian simulator helpers out of the duplicated
 - [small-datasets-loader-pixel-scales](2026/08/small-datasets-loader-pixel-scales.md)
@@ -227,6 +229,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [eyes-paper-critique](2026/07/eyes-paper-critique.md) — epic #117 CLOSED
 - [factor-graph-viz-dispatch](2026/07/factor-graph-viz-dispatch.md)
 - [fitness-nan-guard-contract](2026/07/fitness-nan-guard-contract.md)
+- [fix-workspace-start-here-colab-links](2026/07/fix-workspace-start-here-colab-links.md)
 - [floors-adoption](2026/07/floors-adoption.md) — Phase 4 task 1 — adopt version.minimum_library_version floor (2026.7.9.1) across all 7 workspace config/genera…
 - [frame-products](2026/07/frame-products.md) — opt-in per-exposure frame products live — TargetSpec.frame_products packages every calibrated _flc/_flt SCI ch…
 - [frame-registration](2026/07/frame-registration.md) — inter-exposure registration quantified + extracted — frames/manifest.json per-frame registration block (WCS so…
@@ -567,6 +570,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [wire-verify-install-leg](2026/07/wire-verify-install-leg.md)
 - [workspace-readme-drift](2026/07/workspace-readme-drift.md)
 - [workspace-start-here-colab-links](2026/07/workspace-start-here-colab-links.md) — Generic PyAutoLens and PyAutoGalaxy introduction links now open each workspace-root start_here.ipynb rather th…
+- [workspace-version](2026/07/workspace-version.md)
 - [workspace_examples_agent](2026/07/workspace_examples_agent.md)
 - [worktree-drift-fixes](2026/07/worktree-drift-fixes.md)
 

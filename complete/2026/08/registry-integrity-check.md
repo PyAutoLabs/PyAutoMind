@@ -1,3 +1,60 @@
+# registry-integrity-check
+
+- shipped: 2026-08-08
+- prs: PyAutoMind#158 (`ab80c4fb`), #159 (`edbfd379`), #160 (`7a85821e`), #161 (`86c97981`), #162 (`62cd9ffe`)
+- repos:
+  - PyAutoMind
+
+## Summary
+
+`lifecycle.py check` reported OK over a `planned.md` in which 9 of 13 entries
+were wrong: `cmd_check` never opened `planned.md` or `parked.md` and never
+resolved a `prompt:` path. It now validates the registry files — path
+resolution (exact, not via the legacy fallback), state contradictions, slug
+uniqueness across registries, and unclaimed `active/` prompts — plus an online
+`issues` leg cross-checking tracking issues against GitHub.
+
+`lifecycle.py` had no test at all before this; it now has 109.
+
+## The finding that motivated it
+
+Six of the thirteen `planned.md` entries were work that had **already shipped**,
+including the entire M0–M3 release-validation milestone chain (`heart-ci-linkage`,
+`build-testpypi-rehearsal-mode`, `heart-release-validation`,
+`heart-release-profile-wheel-integration`) plus both auto-simulate entries. Not
+one had been retired. A task-selection pass spent most of a session discovering
+two of them the hard way, which is what triggered the audit.
+
+## The lesson worth keeping
+
+**The trackers were accurate the whole time; only the Mind was stale.** Every
+shipped entry had correct upstream state available — a closed issue, a merged
+PR, a capability live on `main` — and none of it ever reached `planned.md`. The
+drift is not GitHub going out of date, it is the Mind never reading back. That
+is why the online `issues` leg exists despite `check` staying hermetic.
+
+## Traps found while building it
+
+- **`parked.md` takes prompts in BOTH `draft/` and `active/`.** It holds merely-
+  scoped tasks *and* started-then-parked ones. Grading it like `planned.md`
+  flags every genuinely parked task. Caught only because a real entry failed.
+- **`- prompt:` values carry trailing prose** (`... .md (carries the phase table)`).
+  The path is the first token.
+- **Nested two-space bullets are values, not fields.** Reading `  - SomeRepo:
+  some-branch` under `repos:` as a field invents keys out of branch names.
+- **A first parser reported 207 false mismatches** in the autolens_workspace
+  guard audit by assuming `Path("a","b")` and missing the `Path("a") / b / c`
+  idiom. The corrected pass found 236 resolvable guards and 0 mismatches.
+
+## Deliberately not done
+
+Requiring a `prompt:` field on every `active.md` entry. Slug-matching exists
+only because entries predate the convention, and it is the weaker claim —
+`ep-optimise-updater` was a real entry whose real prompt failed to match on name
+alone. Worth doing; not done here.
+
+## Original prompt
+
 # Teach `lifecycle.py check` to validate the registry files
 
 Type: maintenance

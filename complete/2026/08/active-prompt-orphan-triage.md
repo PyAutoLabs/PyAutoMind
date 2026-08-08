@@ -1,3 +1,58 @@
+# active-prompt-orphan-triage
+
+- shipped: 2026-08-08
+- repos:
+  - PyAutoMind
+- follows: `complete/2026/08/registry-integrity-check.md`
+
+## Summary
+
+Triaged the 8 `active/` prompts that no registry entry claimed, disposed of
+every one, and turned `lifecycle.py orphans` from a report into a gate — it is
+now graded by `check`, and the `--check` opt-in flag is gone.
+
+`lifecycle.py orphans` reports **none**.
+
+## Disposals
+
+**Shipped — recorded, dated from the actual commit:**
+
+| Prompt | Record | Evidence |
+|---|---|---|
+| `ep_optimise_expose_updater_delta.md` | `complete/2026/08/ep-optimise-updater.md` | PyAutoFit#1457 `3b960609`, autofit_workspace#136 `cf8b4077` |
+| `workspace_version.md` | `complete/2026/07/workspace-version.md` | autolens_workspace `21702119` — `minimum_library_version: 2026.7.9.1` in `config/general.yaml` |
+| `fix_workspace_start_here_colab_links.md` | `complete/2026/07/fix-workspace-start-here-colab-links.md` | autolens_workspace `897465a6` — README Colab links now resolve to the root `start_here.ipynb` |
+
+**Not shipped — parked with the evidence:**
+
+- `matplotlib_inline_standalones.md` — VERIFIED INCOMPLETE. At least two of the
+  five standalone `# %matplotlib inline` comments survive on autolens_workspace
+  main (both `potential_correction/start_here.py`).
+- `benchmark_calibration_runs.md` — VERIFIED NOT STARTED. `benchmarks/runs/` on
+  autolens_assistant main still holds only `.gitkeep`; harness and prompt cards
+  are in place, only the campaign is missing.
+
+**In flight — claimed by an entry that lacked a `prompt:` field:**
+
+- `research_profiling_experiment_in_the_autolens_pr.md` is the
+  `group4-mge-search-benchmark` work (autolens_profiling#82/#83). The parked
+  entry existed all along; it just never named its prompt.
+
+**Unverifiable from a cloud session — parked, flagged as such:**
+
+- `euclid_eceb_editorial_revision.md` and
+  `pyautoreduce_slacs1430_acs_comparison.md` both work against local paths under
+  `/mnt/c/Users/Jammy/Science/`. Their state can only be confirmed from the
+  laptop, and the parked entries say so rather than guessing.
+
+## Note on the two unverifiable entries
+
+Parking them clears the orphan condition without asserting anything false, but
+it is the weakest disposal here — a task parked because nobody could look is not
+the same as a task parked on purpose. Re-check both from the laptop.
+
+## Original prompt
+
 # Triage the 8 orphaned active/ prompts, then make `orphans` a gate
 
 Type: maintenance
