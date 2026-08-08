@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-934 records across 7 buckets.
+935 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -69,6 +69,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [tenant-firewall-hygiene-extras](2026/08/tenant-firewall-hygiene-extras.md) — auto-closed by the merge
 - [test-mode-samples-info-hook-contract](2026/08/test-mode-samples-info-hook-contract.md) — `NonLinearSearch._test_mode_samples_info()`'s docstring told subclasses
 - [wiki-provenance-restamp](2026/08/wiki-provenance-restamp.md)
+- [worktree-claim-parser-forms](2026/08/worktree-claim-parser-forms.md) — CLOSED completed
 - [yang24-sidm-gravothermal-profile](2026/08/yang24-sidm-gravothermal-profile.md)
 
 ## 2026/07/ep_scale_collapse_assets
