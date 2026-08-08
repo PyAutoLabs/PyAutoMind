@@ -1,17 +1,5 @@
 # Active Tasks
 
-## empty-backlog-vs-broken-discovery
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/213
-- session: cloud/web session (no CLI resume id; branch `claude/automind-task-planning-tj0sdn`)
-- status: library-dev
-- worktree: none — cloud session has no `~/Code/PyAutoLabs-wt/` layout; work runs directly in the PyAutoBrain checkout on the session-designated branch
-- prompt: active/empty_backlog_vs_broken_discovery.md
-- autonomy: safe (difficulty small, priority high)
-- split-from: conductor-discovery-lifecycle-split (PyAutoBrain#211/#212, complete/2026/08) — that task fixed the broken discovery roots and deliberately left this as separate work
-- summary: a conductor's empty selection result reads the same whether the backlog is bare or the discovery root is wrong. That ambiguity — not the one-line wrong path — is why #211 survived four weeks. Add `empty_discovery_reason` to the sizing faculty distinguishing not-a-Mind / no-such-work-type / genuinely-empty, and print it from the three conductors. Diagnosis only; no change to discovery behaviour, ranking or exit codes.
-- repos:
-  - PyAutoBrain
-
 ## mge-sigma-min-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/466
 - status: BOTH PHASES MERGED 2026-08-04. Phase 1 autolens_workspace#467 -> 92019316 (issue #466 auto-closed). Phase 2 autogalaxy_workspace#203 -> 8a7df7a6, HowToLens#67 -> 4ff3135c, HowToGalaxy#61 -> 51eed3d6, autogalaxy_assistant#10 -> f6966a64. Upstream PyAutoGalaxy#549 -> 13d3023c. All worktrees removed, all branches deleted local+origin, all five canonical checkouts back on main. Code work COMPLETE; two debts remain (below).

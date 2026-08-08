@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-938 records across 7 buckets.
+939 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -26,6 +26,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [covariance-interpolator-rng-seed](2026/08/covariance-interpolator-rng-seed.md) — auto-closed by the merge
 - [database-guide-sample-weight-threshold](2026/08/database-guide-sample-weight-threshold.md) — `guides/results/database/start_here.py` ran its own Nautilus fits capped at n_like_max=300 then indexed sample…
 - [dep-floors-source-chain-ci](2026/08/dep-floors-source-chain-ci.md)
+- [empty-backlog-vs-broken-discovery](2026/08/empty-backlog-vs-broken-discovery.md) — closed on merge
 - [ep-initializer-exception-should-not-abort](2026/08/ep-initializer-exception-should-not-abort.md)
 - [file-path-guard-decision](2026/08/file-path-guard-decision.md) — The file-path leg split from raw-guard-migration (leg 3 of the dataset-bulk series, autolens_workspace#354). D…
 - [group-data-preparation-readme](2026/08/group-data-preparation-readme.md)
