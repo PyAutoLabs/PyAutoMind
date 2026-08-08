@@ -1,5 +1,45 @@
 # Active Tasks
 
+## worktree-claim-parser-forms
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/209
+- status: library-dev — implementation COMPLETE and pushed, PR open, awaiting CI + merge
+- filed: 2026-08-08
+- classification: library (PyAutoBrain) — bug, infrastructure
+- prompt: active/worktree_check_conflict_never_fires.md
+- branch: claude/automind-task-planning-ef00l2 (cloud session; NOT the `feature/<task>` convention — the session's designated branch)
+- worktree: none (cloud session — PyAutoMind + PyAutoBrain checkouts only, no ~/Code/PyAutoLabs-wt)
+- summary: |
+    `worktree_list_claimed` split `  - <repo>` claim bullets on `": "` only, so
+    the paren form `  - <repo> (<branch>)` yielded a malformed repo name and
+    `worktree_check_conflict` — the start_dev step-6 guard — exited 0 for those
+    claims. Measured over active.md history: 162 colon-form vs 139 paren-form,
+    so roughly half of all claims were invisible to the guard. Parser now
+    accepts both forms plus bare `  - <repo>`, and buffers rows per task so
+    `worktree:` is captured whichever side of the `repos:` block it sits on.
+- prompt-premise-corrected: the prompt says the paren form is "what every skill
+  and every existing entry writes". It is ~53/47 colon-to-paren and BOTH are in
+  active use — which is why dual-form tolerance is the fix and re-aligning the
+  docs on one form was rejected. A first history check appeared to contradict
+  the prompt entirely (zero paren-form) — that was a SHALLOW clone showing two
+  days, not the record; `git fetch --deepen=500` gave the real counts.
+- sizing-note: Bug Agent scored `large (8)`; not taken — prose-driven, same as
+  the mge-sigma-min-workspace-sweep precedent. Actual change is a 41-line awk
+  rewrite + tests. Prompt header `Difficulty: small` holds.
+- blast-radius-wider-than-prompt: repo_cleanup's CLAIMED protection set is the
+  `(repo, branch)` pairs from this function (skills/repo_cleanup/reference.md),
+  so malformed repos + empty branches left in-flight branches short one of
+  their three delete-guards. IN_WORKTREE and OPEN_PR still covered them — no
+  branch was lost.
+- validation: 250/250 suite green. New tests/test_worktree_conflict_guard.py
+  confirmed FAILING on all four defects before the fix. Corpus check: all 258
+  claim lines in active.md history parse to a bare repo name, 0 malformed, all
+  32 distinct names resolve against repos.yaml.
+- follow-up-available: the three entries below carry `repos-none-claimed:`
+  notes written to steer around a guard that never fired. Harmless but no
+  longer necessary — worth a sweep, deliberately NOT done here (shared ledger).
+- repos:
+  - PyAutoBrain (claude/automind-task-planning-ef00l2)
+
 ## mge-sigma-min-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/466
 - status: BOTH PHASES MERGED 2026-08-04. Phase 1 autolens_workspace#467 -> 92019316 (issue #466 auto-closed). Phase 2 autogalaxy_workspace#203 -> 8a7df7a6, HowToLens#67 -> 4ff3135c, HowToGalaxy#61 -> 51eed3d6, autogalaxy_assistant#10 -> f6966a64. Upstream PyAutoGalaxy#549 -> 13d3023c. All worktrees removed, all branches deleted local+origin, all five canonical checkouts back on main. Code work COMPLETE; two debts remain (below).
