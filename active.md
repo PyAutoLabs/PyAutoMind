@@ -1,5 +1,16 @@
 # Active Tasks
 
+## conductor-discovery-lifecycle-split
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/211
+- session: cloud/web session (no CLI resume id; branch `claude/automind-task-planning-tj0sdn`)
+- status: library-dev
+- worktree: none — cloud session has no `~/Code/PyAutoLabs-wt/` layout; work runs directly in the PyAutoBrain checkout on the session-designated branch
+- prompt: active/conductor_discovery_predates_the_lifecycle_split.md
+- autonomy: safe (difficulty small, priority high)
+- summary: the feature/bug/refactor selection modes all fail silently — their `discover()` roots at `mind/<work-type>/`, dead since the lifecycle split (PyAutoMind#71) closed 2026-07-13. 87 backlog prompts invisible to the three front doors. Unshipped residue of brain-lifecycle-path-fixes (PyAutoBrain#128), which fixed the reader (`parse_prompt`) but never the discoverer. Fix = one shared `discover_prompts(mind, work_type)` in the sizing faculty + three thin delegations + regression test + stale-path docs leg.
+- repos:
+  - PyAutoBrain
+
 ## mge-sigma-min-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/466
 - status: BOTH PHASES MERGED 2026-08-04. Phase 1 autolens_workspace#467 -> 92019316 (issue #466 auto-closed). Phase 2 autogalaxy_workspace#203 -> 8a7df7a6, HowToLens#67 -> 4ff3135c, HowToGalaxy#61 -> 51eed3d6, autogalaxy_assistant#10 -> f6966a64. Upstream PyAutoGalaxy#549 -> 13d3023c. All worktrees removed, all branches deleted local+origin, all five canonical checkouts back on main. Code work COMPLETE; two debts remain (below).
