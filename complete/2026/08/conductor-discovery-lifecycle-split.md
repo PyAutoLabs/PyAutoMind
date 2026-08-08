@@ -1,3 +1,34 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/211 (closed on merge)
+- completed: 2026-08-08
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/212 (squash-merged as `f4e9341`); Mind bookkeeping PyAutoMind#156
+- summary: the `feature`, `bug` and `refactor` selection modes all failed silently — each rooted prompt discovery at `mind/<work-type>/`, dead since the lifecycle split (#71) closed 2026-07-13 and prompts moved under `draft/<work-type>/<target>/`. 86 backlog prompts were invisible to the three front doors. Fixed with one shared `discover_prompts(mind, work_type)` in the sizing faculty plus three thin delegations, an 11-test regression suite, and a docs leg correcting stale Mind paths. CI green on both pytest legs (3.12/3.13); 261 tests pass locally (250 existing + 11 new).
+
+## Key findings
+
+- **The shipped fix for this exact bug class was half a fix.** `brain-lifecycle-path-fixes` (PyAutoBrain#128, complete/2026/07) taught the *reader* — `parse_prompt` strips the `draft/` state folder — but never the *discoverer*. Specific mode (`feature <path>`) has been correct throughout; only selection was dead. Its folded prompt explicitly warned "assume the parser is shared or copied"; the sweep caught `parse_prompt` and stopped there. **When a path assumption is found in one place, grep for the operation, not the function** — `parse_prompt` was fixed, `discover()` was three doors down.
+- **It failed silently, which is why it survived ~4 weeks.** Each verb printed a plausible "no prompts found" and exited 4. A human reads that as an empty backlog, not a broken root. The regression test that now guards it is the end-to-end one — each conductor's selection surface must be non-empty on a `draft/`-layout Mind — not the unit tests on `discover_prompts` itself.
+- **Second latent bug fixed on the way:** `bug health` probed `mind/bug/health_fixes/` and so reported health-fix prompts `absent`. They exist at `draft/bug/health_fixes/`; it now reports `present`. Same root cause wearing a different symptom, found only by sweeping the stale path strings rather than stopping at the code.
+- **The sizing heuristic mis-sized its own bug report.** Intake scored this `large` (8) — +4 for prompt verbosity, +2 for the word "architectural", +2 for a second repo — for a change that is four functions in one repo plus a test file. The header was overridden to `small`/`safe` at filing with the rationale recorded inline. Worth remembering when reading `Difficulty:` on any *detailed* prompt: the heuristic partly measures how much was written, not how much must be done.
+
+## Decided scope
+
+- **`active/` is deliberately not discovered.** It is flat (its paths carry no work-type to filter on) and holds issued, in-flight work, whereas selection answers "what should I start next". In-flight prompts referenced from `active.md` / `planned.md` stay handled by the existing down-rank.
+- **The silent-empty failure mode was left out of scope** — making an empty backlog distinguishable from a broken root is a real improvement but separate work. Not filed; file it if the pattern recurs.
+
+## Verified, no change needed
+
+`_referenced_paths` / `_referenced_bug_paths` regexes (`[\w./-]*feature/…`, `[\w./-]*bug/…`) already match `draft/`-prefixed paths, so in-flight down-ranking worked as soon as discovery did.
+
+## Debt left behind
+
+`planned.md` still lists `brain-lifecycle-path-fixes` as planned/blocked, though it shipped 2026-07-16 with its record in `complete/2026/07/`. Stale entry for the next `planned.md` sweep — deliberately not touched here to keep this task to one change.
+
+## Environment note
+
+Shipped from a cloud/web session, so there was no `~/Code/PyAutoLabs-wt/` worktree layout: work ran directly in the PyAutoBrain checkout on the session-designated branch `claude/automind-task-planning-tj0sdn` rather than `feature/<task-name>`. Tests ran via `uv run --python 3.11 --with pytest --with pyyaml pytest tests/` — the sandbox's `pytest` is a uv tool install with an isolated venv lacking `pyyaml`, which `_sizing.py` needs for the body map.
+
+## Original prompt
+
 # Conductor discovery predates the lifecycle split — feature/bug/refactor selection is dead
 
 Type: bug
