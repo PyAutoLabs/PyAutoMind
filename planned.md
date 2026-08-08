@@ -27,24 +27,6 @@
   - autofit_assistant
   - autolens_assistant
 
-## brain-lifecycle-path-fixes (build-chain umbrella Phase 0b)
-- issue: none yet (issued when unblocked)
-- planned: 2026-07-16
-- classification: library (PyAutoBrain) — bug
-- suggested-branch: feature/brain-lifecycle-path-fixes
-- blocked-by: workspace-agent + wake-up-skill-rename (both claim PyAutoBrain)
-- summary: fix the two pre-lifecycle-split path assumptions — draft/bug/pyautobrain/intake_writes_legacy_layout.md (intake writer) + draft/bug/pyautobrain/feature_agent_path_parser_predates_lifecycle_split.md (feature-agent parser; live-confirmed misroute 2026-07-16). Parent epic: PyAutoBuild#155.
-- affected-repos:
-  - PyAutoBrain
-
-## lenstool-scaling-slam (PR3 of the lenstool reference-magnitude series)
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/265 (parent; PR1 #267 + PR2 #268 merged)
-- status: planned — never started; branch/worktree released 2026-07-13 when the autolens_workspace claim was freed
-- filed: 2026-07-13
-- classification: workspace (autolens_workspace) — docs
-- summary: apply the LensTool reference-magnitude (mag0) scaling convention (fixed reference luminosity, exponent 0.5, full dPIE r_core/r_cut/b0 + ra_ref scaling) to the SLaM pipelines, mirroring what #267 (cluster) and #268 (group+imaging) did for the example scripts. See complete.md `lenstool-scaling-reference-magnitude` for the delivered pattern + the notebook-regen catalogue-drift gotcha.
-- SUPERSEDED 2026-07-17: delivered inside dpie-lenstool-default (PyAutoGalaxy#506 workspace PR autolens_workspace#287) — group SLaM scaling tiers now use the reference-anchored convention. Remove on next planned.md sweep.
-
 ## samples-parameter-paths
 - prompt: PyAutoMind/bug/health_fixes/samples_parameter_paths.md
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1327 (open, parked)
