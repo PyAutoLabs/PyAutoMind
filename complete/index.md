@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-946 records across 7 buckets.
+947 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -334,6 +334,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [memory-structure-cleanup](2026/07/memory-structure-cleanup.md) — wiki/ + bibliography restructure, structure lint, template sync — SHIPPED
 - [merge-adjacent-docstrings](2026/07/merge-adjacent-docstrings.md) — Phase 3 of the adjacent-docstrings arc (PyAutoHands#196 → PyAutoBrain#162 → here). Merged 80 adjacent-docstrin…
 - [mind-guard-cd-fix](2026/07/mind-guard-cd-fix.md) — mind_commit_guard v1.2 — honour a leading `cd` away from Mind. v1.1 keyed is-Mind-commit off the ambient cwd t…
+- [minimum-library-version-adoption](2026/07/minimum-library-version-adoption.md)
 - [morning-status-release-rehearsal](2026/07/morning-status-release-rehearsal.md) — morning Slack digest + release rehearsal — RESOLVED
 - [multi-galaxy-features-group-parity](2026/07/multi-galaxy-features-group-parity.md) — Arc close-out: all four phases of the multi_galaxy features group-parity campaign shipped across ten PRs — pha…
 - [multi-galaxy-features-parity-phase-1](2026/07/multi-galaxy-features-parity-phase-1.md)

@@ -318,6 +318,44 @@ def issue_problems(root: Path, fetch=None) -> "list[str]":
     return problems
 
 
+def draft_issue_refs(root: Path) -> "list[tuple[str, str]]":
+    """(draft_path, issue_url) for draft prompts citing a GitHub issue.
+
+    Only a handful do — drafts are pre-issue by definition — but `draft/` is
+    backlog no check grades, and it carries shipped work too (the 2026-08-08
+    sweep found `minimum_library_version_adoption` fully delivered across all
+    seven repos while still sitting in draft/)."""
+    draft = root / "draft"
+    if not draft.is_dir():
+        return []
+    refs = []
+    for f in sorted(draft.rglob("*.md")):
+        m = ISSUE_URL_RE.search(f.read_text(errors="replace"))
+        if m:
+            refs.append((str(f.relative_to(root)), m.group(0)))
+    return refs
+
+
+def draft_issue_notes(root: Path, fetch=None) -> "list[str]":
+    """ADVISORY notes on drafts whose cited issue is closed.
+
+    Deliberately weaker than `issue_problems`, and deliberately not drift. A
+    registry entry's `issue:` is its OWN tracking issue, so closed means done. A
+    draft usually cites an issue as CONTEXT — "Once #480 is fixed…", "Follow-up
+    to #57" — so closed can mean the draft is newly UNBLOCKED rather than
+    finished. Both readings are worth a human look; neither is a gate."""
+    refs = draft_issue_refs(root)
+    if not refs:
+        return []
+    fetch = fetch or _gh_issue_states
+    states = fetch([url for _, url in refs])
+    return [
+        f"{path}: cited issue is closed — shipped, or newly unblocked? {url}"
+        for path, url in refs
+        if states.get(url) == "closed"
+    ]
+
+
 def cmd_issues(args) -> int:
     """Cross-check every registry entry's tracking issue against GitHub."""
     try:
@@ -331,13 +369,28 @@ def cmd_issues(args) -> int:
             file=sys.stderr,
         )
         return 2
-    if not problems:
+    notes = []
+    if getattr(args, "drafts", False):
+        try:
+            notes = draft_issue_notes(ROOT)
+        except GhUnavailable:
+            pass  # unreachable: issue_problems above would already have raised
+
+    if problems:
+        print("lifecycle issues: DRIFT")
+        for line in problems:
+            print(f"  - {line}")
+    else:
         print(f"lifecycle issues: OK ({len(registry_issue_refs(ROOT))} tracking issue(s) open)")
-        return 0
-    print("lifecycle issues: DRIFT")
-    for p in problems:
-        print(f"  - {p}")
-    return 1
+
+    # Advisory only — never affects the exit code. A draft citing a closed issue
+    # may be shipped OR newly unblocked; that is a judgement, not drift.
+    if notes:
+        print(f"\nadvisory — {len(notes)} draft(s) citing a closed issue:")
+        for line in notes:
+            print(f"  ? {line}")
+
+    return 1 if problems else 0
 
 
 def orphan_prompts(root: Path) -> "list[Path]":
@@ -750,6 +803,8 @@ def main() -> int:
     iss = sub.add_parser(
         "issues", help="cross-check registry tracking issues against GitHub (needs gh)"
     )
+    iss.add_argument("--drafts", action="store_true",
+                     help="also flag draft/ prompts citing a closed issue (advisory)")
     iss.set_defaults(func=cmd_issues)
 
     o = sub.add_parser("orphans", help="report active/ prompts no registry claims")

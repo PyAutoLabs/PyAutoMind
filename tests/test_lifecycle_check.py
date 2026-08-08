@@ -301,6 +301,34 @@ def test_merged_pr_links_are_not_treated_as_tracking_refs(tmp_path):
     assert [r[2] for r in refs] == [GHOST_ISSUE]
 
 
+def test_draft_citing_a_closed_issue_is_advisory(tmp_path):
+    """draft/ is backlog no check grades, and it carries shipped work too. A
+    closed cited issue is worth a look — but NOT drift, because a draft usually
+    cites an issue as context ("Once #480 is fixed…"), so closed can mean newly
+    unblocked rather than finished."""
+    d = tmp_path / "draft" / "feature" / "flywheel"
+    d.mkdir(parents=True)
+    (d / "sprocket_calibration.md").write_text(f"Once {GHOST_ISSUE} is fixed, do X.\n")
+    notes = lifecycle.draft_issue_notes(tmp_path, fetch=_states({GHOST_ISSUE: "closed"}))
+    assert len(notes) == 1
+    assert "shipped, or newly unblocked?" in notes[0]
+
+
+def test_draft_with_an_open_issue_is_silent(tmp_path):
+    d = tmp_path / "draft" / "feature" / "flywheel"
+    d.mkdir(parents=True)
+    (d / "sprocket_calibration.md").write_text(f"Blocked on {GHOST_ISSUE}.\n")
+    assert lifecycle.draft_issue_notes(tmp_path, fetch=_states({GHOST_ISSUE: "open"})) == []
+
+
+def test_drafts_are_not_mixed_into_registry_drift(tmp_path):
+    """The advisory must never leak into `issue_problems`, which is the gate."""
+    d = tmp_path / "draft" / "feature" / "flywheel"
+    d.mkdir(parents=True)
+    (d / "sprocket_calibration.md").write_text(f"Once {GHOST_ISSUE} is fixed.\n")
+    assert lifecycle.issue_problems(tmp_path, fetch=_states({GHOST_ISSUE: "closed"})) == []
+
+
 def test_missing_gh_propagates_rather_than_reporting_all_clear(tmp_path):
     """"gh is not installed" must never be mistaken for "no findings" — a check
     that silently could not run is worse than one that fails loudly."""
