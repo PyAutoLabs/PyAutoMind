@@ -1,5 +1,22 @@
 # Active Tasks
 
+## autoarray-adapt-images-precondition
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/332
+- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/442 (open, CI running, `pending-release`)
+- session: web session https://claude.ai/code/session_013PgqSCLTemK5bApVAwhVM4 (`web-github` — no local worktree)
+- status: library-dev — IMPLEMENTED AND PUSHED 2026-08-09, PR open awaiting CI
+- branch: PyAutoArray `feature/autoarray-adapt-images-precondition`
+- prompt: active/rhayes_332_adapt_images_precondition_error.md
+- scope: phase 3 of the rhayes audit — #332 error legibility only. Part 2 of #332 (ConstantSplit on RectangularUniform) shipped in phase 1 and is untouched. B10, the other phase-3 item, shipped with PyAutoGalaxy#566.
+- decision recorded: chose fail-fast (option 2) over having the mesh wire the image-plane grid up itself (option 1, which the reporter suggested). Building that grid needs a weighting policy — exactly what `adapt_images` carries — so inventing one would silently make a science choice for the user. Matches phase 1's handling of the rectangular/split case.
+- diagnosis correction: the `None` is `mesh_grid` (`border_relocator.py:450`), NOT `grid` (line 446) as the prompt recorded.
+- guard site: `Delaunay.interpolator_from`, inherited by `KNearestNeighbor` and `KNNBarycentric` — one check covers all three adaptive meshes. `RectangularUniform` builds its own grid and a control test pins that the guard does not fire for it.
+- validation: 991 passed, +10 new tests. The 3 pynufft `test_transformer.py` failures are pre-existing on main (baselined), tracked by `draft/bug/autoarray/pynufft_scipy_pinv2_dev_extra.md`.
+- headline correction UPHELD: the issue claims Delaunay/KNNBarycentric are "unusable in FitImaging" — false. Re-verified on the branch that both fit with `adapt_images`, and `Delaunay + ConstantSplit` too. Control tests pin this so the posted reply cannot silently become wrong.
+- repos:
+  - PyAutoArray
+
+
 ## release-drive-2026-08-03
 - issue: (no issue — a human-authorized manual release drive, not a dev task)
 - session: claude --resume e0105850-b98b-47ff-9ada-cba04a455a65

@@ -1,3 +1,63 @@
+Phase 2 (PyAutoLens half) of the @rhayes777 API audit —
+[PyAutoLens#532](https://github.com/PyAutoLabs/PyAutoLens/issues/532).
+
+**Shipped:** PyAutoLens#696, squash-merged `65183d1` 2026-08-09. #532 closed.
+Epic PyAutoArray#415 stays open for phase 4.
+
+## Delivered — B4 only, and the issue split across two repos
+
+`Tracer(galaxies="not a list")` constructed happily and failed later with
+`AttributeError: 'str' object has no attribute 'redshift'`. It now raises `TypeError`
+at construction, naming `galaxies` and the type given.
+
+**Broader than reported:** verified on `main` that `42`, `None` and `{'a': 1}` were all
+accepted at construction too, not only the reported string.
+
+**The string is the trap.** A string *is* iterable, so `isinstance(x, Iterable)` does
+not catch it — the issue called this out and the guard checks element type, not
+iterability. Elements are duck-typed on `redshift` (so mocks and `Galaxy` subclasses
+keep working, and `redshift` is precisely the attribute whose absence caused the
+original error); `af.ModelInstance` is accepted unexamined, since that is how PyAutoFit
+hands the tracer a model's galaxies during a fit.
+
+## The negative-redshift half went to PyAutoGalaxy
+
+The other finding on this issue is guarded in **PyAutoGalaxy#566**, not here.
+`al.Galaxy` **is** `ag.Galaxy` — the class and its `redshift` assignment live at
+`autogalaxy/galaxy/galaxy.py:52`. A `Tracer`-level redshift check would have missed a
+bare `al.Galaxy(redshift=-0.5)`, which is the reported reproduction.
+
+**Lesson:** the repo an issue is *filed on* is where the user hit it, not necessarily
+where the attribute is set. Both PRs cross-reference the split so the record is not
+confusing later.
+
+## Phase 4 stays held — with a guard-rail
+
+`z_lens > z_source` is **not** implemented. Multi-plane lensing genuinely supports
+geometries that look inverted under two-plane naming, and whether it should even *warn*
+is still an open question put to @rhayes777 on #532 (no reply as of 2026-08-09).
+
+Rather than leave that implicit, a control test pins today's permissive behaviour: a
+`z_lens=1.0` / `z_source=0.5` tracer must still construct and evaluate to a finite
+image. Phase 4 cannot quietly turn it into an error without that test failing. A
+matching guard-rail sits at `Galaxy` level in PyAutoGalaxy#566.
+
+## Validation
+
+- Full suite **519 passed / 1 skipped**, **+13 new tests**
+  (`test_autolens/lens/test_tracer_validation.py`). CI green on 3.12, 3.13 and docs.
+- **Zero regressions.**
+- Controls cover list, tuple, empty list (degenerate but legal, used in chaining) and
+  `af.ModelInstance`.
+
+## Note on the tracer gate
+
+Unlike the other audit guards, this one needs no concreteness gate: it validates the
+*container*, and a JAX trace makes a galaxy's parameters traced, never the list of
+galaxies itself. Recorded in the docstring so it does not look like an omission.
+
+## Original prompt
+
 # PyAutoLens#532: `Tracer` accepts non-iterable galaxies; negative redshifts accepted
 
 Type: bug
