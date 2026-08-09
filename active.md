@@ -1,5 +1,20 @@
 # Active Tasks
 
+## autoarray-input-validation-guards
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/439
+- session: web session https://claude.ai/code/session_013PgqSCLTemK5bApVAwhVM4 (no local worktree — `web-github` environment)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/autoarray-input-validation-guards
+- prompt: active/rhayes_333_input_validation_guards.md
+- suggested-branch: feature/autoarray-input-validation-guards
+- scope: PyAutoArray#333 ONLY (B5, B6, B7, B8, B13) — the PyAutoArray half of phase 2, split out of the parent audit prompt per "one prompt = one task = one PR". Human confirmed 2026-08-09: one issue, one PR; #333-only scope.
+- sequencing: this task lands the shared validation helper (`autoarray/validate.py`); the PyAutoGalaxy#440 sibling (B9, B11, B12) + the #532 negative-redshift item IMPORT it and must follow, not run in parallel. That helper-home decision was the recorded blocker on phase 2 — see planned.md `rhayes-audit-validation-phases-2-4`.
+- binding constraint: constructors are JAX-traced. `coefficient` is a free model parameter, so guards must be type-gated on a concrete scalar (`is_concrete_scalar`) and pass tracers through — a plain `if value < 0` raises TracerBoolConversionError. Idiom: `autoarray/dataset/imaging/simulator.py:271`.
+- sizing note: Brain bug agent + sizing faculty both returned `too-large` (score 10) with a "too large for one PR" risk. Human chose one PR anyway; the score keys off prompt length, and this prompt is long because it carries phase-1 evidence. If review stalls, the pre-agreed seam is B5-B8 + helper / B13 across the 13 regularization entry points.
+- planning done in-session: branch survey (PyAutoArray main @ 5867db0, 26 remote branches, no collision), code sites confirmed against a read clone, worktree conflict check clean.
+- repos:
+  - PyAutoArray
+
 ## release-drive-2026-08-03
 - issue: (no issue — a human-authorized manual release drive, not a dev task)
 - session: claude --resume e0105850-b98b-47ff-9ada-cba04a455a65
