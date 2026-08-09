@@ -1,31 +1,14 @@
-## rhayes-audit-validation-phases-2-4
-- epic: https://github.com/PyAutoLabs/PyAutoArray/issues/415 (OPEN — the public watch point promised to @rhayes777 in all five replies)
-- status: **PHASES 1-3 ALL SHIPPED; ONLY PHASE 4 REMAINS (held on the reporter).** phase 1 MERGED and closed 2026-07-29 (PyAutoArray#417 `9411904d`, PyAutoLens#662 `2a3f1a63`, tracker #416 closed, PyAutoLens#531 closed); worktree released, no repo claims held
-- filed: 2026-07-28 · phase-1 shipped 2026-07-28
-- classification: library (PyAutoArray + PyAutoGalaxy + PyAutoLens) — bug, user-facing
-- prompt: draft/bug/autoarray/rhayes_audit_validation_and_crashes.md — CAMPAIGN RECORD ONLY as of 2026-08-09 (phase-1 completion record + the phase 2-4 table); do NOT $start-dev it, start one of the four per-issue prompts below
-- split-2026-08-09: phases 2-3 spanned 3 repos / 4 issues — more than one PR — so they were split one-prompt-per-issue:
-  - ~~rhayes_333_input_validation_guards.md~~ — PyAutoArray#333, phase 2. **SHIPPED 2026-08-09**: PyAutoArray#440 squash-merged `f2f7a4f`, #333 closed, tracker #439 closed. Record: `complete/2026/08/autoarray-input-validation-guards.md`.
-  - ~~rhayes_440_profile_validation_guards.md~~ — PyAutoGalaxy#440, phase 2 + B10. **SHIPPED 2026-08-09**: PyAutoGalaxy#566 squash-merged `a366f77`, #440 closed. Record: `complete/2026/08/autogalaxy-profile-validation-guards.md`. Also carried the negative-redshift half of #532 (see the ownership note below).
-  - ~~rhayes_532_tracer_validation_guards.md~~ — PyAutoLens#532, phase 2 (B4). **SHIPPED 2026-08-09**: PyAutoLens#696 squash-merged `65183d1`, #532 closed. Record: `complete/2026/08/autolens-tracer-validation-guards.md`.
-  - ~~rhayes_332_adapt_images_precondition_error.md~~ — PyAutoArray#332, phase 3. **SHIPPED 2026-08-09**: PyAutoArray#442 squash-merged `5dedb5e`, #332 closed. Record: `complete/2026/08/autoarray-adapt-images-precondition.md`.
-- suggested-branch: feature/api-validation-guards (per-prompt branches now; one PR each)
-- open-issues: **ALL FOUR CLOSED 2026-08-09** — PyAutoArray#333, PyAutoArray#332, PyAutoGalaxy#440, PyAutoLens#532. Only the epic PyAutoArray#415 stays open, for phase 4.
-- phase-2: **COMPLETE 2026-08-09.** All three PRs merged — PyAutoArray#440 (`f2f7a4f`), PyAutoGalaxy#566 (`a366f77`), PyAutoLens#696 (`65183d1`). Issues #333, #440, #532 all closed.
-- **#532 ownership note (worth remembering):** the negative-redshift half of PyAutoLens#532 was implemented in **PyAutoGalaxy**, not PyAutoLens. `al.Galaxy` IS `ag.Galaxy`, so the class and its `redshift` assignment live at `autogalaxy/galaxy/galaxy.py:52`; a Tracer-level check would have missed a bare `al.Galaxy(redshift=-0.5)`, which is the reported reproduction. **The repo an issue is filed on is where the user hit it, not necessarily where the attribute is set — check the assignment site before scoping.**
-- **phase-4 guard-rails ARE NOW IN PLACE.** Control tests pin today's permissive `z_lens > z_source` behaviour at both `Galaxy` (PyAutoGalaxy#566) and `Tracer` (PyAutoLens#696) level. Phase 4 cannot turn it into an error without those tests failing — which is the intended tripwire, not an obstacle.
-- shared-helper CONTRACT (established by #333, used by #440/#532 — reuse for any future guard):
-  - `from autoarray import validate`; do NOT write a repo-local `_validate_*`. PyAutoGalaxy adds only per-parameter explanations in `autogalaxy/profiles/validate.py`.
-  - Message shape: `"<name> must be <rule>; got <value!r>"` + an optional sentence of guidance. Name the parameter, state the rule, show the value.
-  - Tracer-safe form: gate every value guard on `is_concrete_scalar`; pass non-concrete values through untouched. Shape/container checks need no gate. VERIFIED against real JAX 0.11.0.
-  - Zero is permitted where it is a meaningful degenerate request (regularization coefficient, redshift); only negatives and non-finites are rejected.
-- phase-3: **COMPLETE 2026-08-09.** B10 shipped with PyAutoGalaxy#566 (tolerance pins); #332 shipped as PyAutoArray#442 (`5dedb5e`). #332 decision recorded: fail-fast naming `adapt_images` rather than having the mesh self-wire the image-plane grid (the reporter's own suggestion) — building that grid needs a weighting policy, which is what `adapt_images` carries, so self-wiring would silently make a science choice for the user. Diagnosis correction: the `None` is `mesh_grid` (`border_relocator.py:450`), NOT `grid` (line 446) as recorded here previously.
-- **NEW finding, not from the audit — needs its own prompt:** while pinning B10, the Ell/Sph **potential** was measured as well as the deflections the report covered. `Isothermal(ell_comps=(0,0))` vs `IsothermalSph` agree to 1.9e-03 RELATIVE on the potential, versus 2.4e-06 on deflections and 1.5e-06 on convergence — three orders of magnitude worse, for two forms that are analytically identical. NOT fixed; the tolerance is pinned at the observed level as a ratchet with a docstring saying so. Possibly the same class as `draft/bug/autogalaxy/nfw_truncated_potential_accuracy.md` (MGE potential accuracy) — worth investigating together.
-- phase-4 HELD: `z_lens > z_source` warning — question put to @rhayes777 on PyAutoLens#532 2026-07-28, no reply yet. Multi-plane lens-behind-source is legitimate, so warning at most, never an error.
+## isothermal-ell-sph-oversampling-at-the-cusp
+- status: planned — NOT yet a prompt file; file one via `/intake` before starting
+- found: 2026-08-09, while pinning B10 of the @rhayes777 audit (`complete/2026/08/autogalaxy-profile-validation-guards.md`)
+- classification: library (PyAutoGalaxy) — accuracy / numerical, NOT part of the audit
+- summary: `mp.Isothermal(ell_comps=(0,0))` and `mp.IsothermalSph` are the same profile analytically. Under the DEFAULT `over_sample_size=4` their **potential** disagrees by up to **7% at the central pixel** (`0.0707` vs `0.0761`). With `over_sample_size=1` the disagreement collapses to `3.2e-06` — the same order as the deflections (`2.4e-06`). So this is an **over-sampling artefact at the profile's singular centre**, not a broken potential: over-sampling averages sub-pixel values across the `r -> 0` cusp and the two forms diverge there.
+- benign baseline (explained, no action): the elliptical form clips `axis_ratio` to `0.99999` for numerical stability while `IsothermalSph` hardcodes `1.0`; that propagates into `einstein_radius_rescaled` (`0.5000025` vs `0.5`) and accounts for the ~1e-6 floor. This is what @rhayes777 reported as B10 and it is correctly pinned.
+- why it still matters: the `1e-2` tolerance pinned in `test_autogalaxy/profiles/test_validate.py::test__b10__potential_agrees_between_elliptical_and_spherical_isothermal` papers over that 7% local disagreement, and the same over-sampling-at-a-singularity behaviour may affect other singular profiles.
+- CORRECTION on the record: PyAutoGalaxy#566's PR body and the comment on PyAutoGalaxy#440 describe this as the potential agreeing "three orders of magnitude worse" at `1.9e-03` relative, framed as an accuracy defect. That normalised by the GLOBAL MAX potential and mis-attributed the cause. Superseded by the analysis above.
+- RETRACTED: the guess that this shares a root cause with `draft/bug/autogalaxy/nfw_truncated_potential_accuracy.md` (MGE decomposition). It does not — MGE is not involved.
 - affected-repos:
-  - PyAutoArray
   - PyAutoGalaxy
-  - PyAutoLens
 
 ## remote-mcp-deployment-tiers
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/20 (design/scope shipped 2026-07-21; build gated)
