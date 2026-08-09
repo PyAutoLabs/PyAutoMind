@@ -1,3 +1,74 @@
+# oversampling-kxs-coupling
+
+- shipped: 2026-07-09 (series closed; the prompt never left `draft/`)
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/362 (CLOSED — "series complete")
+- prs: PyAutoArray#363, #364, #365 · PyAutoGalaxy#486, #489 · autolens_workspace#236 · autolens_workspace_test#154 (all merged)
+- repos:
+  - PyAutoArray, PyAutoGalaxy
+  - autolens_workspace, autolens_workspace_test
+- phase-records: [[kxs-design]] [[kxs-core]] [[kxs-cache]] [[kxs-workspace-tests]] [[kxs-refactor]] [[kxs-surface-refactor]]
+
+## Summary
+
+This is the **source prompt** for the k×s coupling series — the five-phase plan
+it lays out was executed in full over 2026-07-08/09 and the series tracker
+PyAutoArray#362 was closed as "series complete". Six dated completion records
+already existed for the individual phases; only the prompt they all came from
+was never advanced out of `draft/feature/autoarray/`.
+
+Recorded 2026-08-09 by the draft/ sweep. No work is owed.
+
+## Verified against PyAutoArray main (`efaf3041`), 2026-08-09
+
+Graded against the prompt's own § Scope, not inferred from the phase records:
+
+1. **§1 relax the coupling rule — SHIPPED.**
+   `_validate_convolve_over_sample_size` (`autoarray/dataset/imaging/dataset.py:23`)
+   accepts any `over_sample_size` (int or adaptive `Array2D`) whose every entry
+   is divisible by `convolve_over_sample_size`, and raises `DatasetException`
+   naming the rule otherwise. Its docstring states the mechanism in the prompt's
+   own words — "the k x s coupling, whereby values evaluated at per-pixel sizes
+   k_i * s are partially binned to the uniform s the convolution requires".
+   The pre-change equality rule is gone.
+
+2. **§2 partial pre-bin — SHIPPED**, as
+   `over_sample_util.binned_to_convolve_size_from`
+   (`autoarray/operators/over_sampling/over_sample_util.py:205`). The placement
+   fork the prompt required a design paragraph for was settled and is recorded in
+   [[kxs-design]]. Covered by `test_over_sample_util.py` on both legs the prompt
+   asked for — `binned_to_convolve_size_from__uniform_k__equals_manual_reshape_mean`
+   and `__adaptive_k__and_identity_fast_path`.
+
+3. **§3 PyAutoGalaxy callers — SHIPPED** via PyAutoGalaxy#486 ([[kxs-core]]).
+
+4. **§4 tests — SHIPPED.** Library numpy-only tests as above; the
+   `convolution_over_sampled.py` adaptive + s=2 `FitImaging` leg the prompt
+   specifies landed as autolens_workspace_test#154 ([[kxs-workspace-tests]]:
+   lp round trip chi2=0, adaptive pixelized 6.6e-5, divisibility guard,
+   adaptive simulate→fit 1.1e-29).
+
+5. **§5 simulator adoption — DELIBERATELY RE-SCOPED, not skipped.**
+   [[kxs-core]] records the fork resolved as option (c): executed simulators stay
+   at `s=1`, and option (a) was split out as
+   `draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md`. That
+   prompt is correctly still a live draft — it is the residue of this §5, and is
+   NOT covered by this record.
+
+6. **Phase-5 refactor exercise — SHIPPED** as PyAutoGalaxy#489
+   ([[kxs-surface-refactor]]), plus the extra [[kxs-cache]] and [[kxs-refactor]]
+   legs the series added on top of the original plan.
+
+## Why it was missed
+
+Nothing upstream drifted — the trackers were right the whole time, exactly as in
+the 2026-08-08 `planned.md` prune. The prompt is stale purely because `draft/` is
+graded by no check, and slug-similarity is too weak to catch it: this file's stem
+against `kxs-core` scores a Jaccard of 0.25, well under any workable threshold.
+What found it was reading the prompt's acceptance criteria against the tree — and
+it was provable from PyAutoMind alone, since the six phase records were already
+sitting in `complete/2026/07/`.
+
+## Original prompt
 # Oversampled PSF: k×s evaluation/convolution coupling + simulator adoption
 
 Type: feature

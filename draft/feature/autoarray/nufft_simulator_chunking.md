@@ -2,10 +2,52 @@
 
 Type: feature
 Target: PyAutoArray
-Difficulty: too-large
+Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: OVERTAKEN — re-scoped 2026-08-09, see the block below before reading further
+
+## 2026-08-09 — the library work below is SHIPPED; only the wiring is left
+
+Found by the `draft/` sweep. Verified against PyAutoArray main (`efaf3041`).
+
+**Everything in § "The fix" option 1 is already on main**, delivered by
+**PyAutoArray#330 ("TransformerNUFFT: add chunk_size knob to cap nufftax gather
+buffer"), merged 2026-05-22** — roughly seven weeks BEFORE the Intake Agent
+retroactively formalised this prompt on 2026-07-08. It landed to the letter of
+the plumbing section below:
+
+- `TransformerNUFFT.__init__` takes `chunk_size: Optional[int] = None` — this
+  prompt's suggested name and its "no chunking by default" default, so the
+  small-N `sma` callers pay nothing. A non-positive value raises `ValueError`.
+- `_forward_native` (`autoarray/operators/transformer.py:681`) splits the
+  visibility axis and iterates with **`jax.lax.scan`** on the JAX path (a Python
+  loop only on the numpy path) — exactly the "do NOT use a Python `for`, it
+  unrolls and blows up JIT compile time" requirement below.
+- `image_from` — the adjoint via `nufft2d1`, which this prompt flagged as "out
+  of scope today, but flag it" — **is chunked too**, in the same shape.
+
+The sibling blocker this prompt names has also shipped: the `apply_sparse_operator`
+alma-scale precompute OOM closed 2026-05-22 as PyAutoArray#329
+([[alma-apply-sparse-operator-oom]]).
+
+**What is actually left is one wiring leg.** `complete/2026/07/interferometer-jax-jit.md`
+records it: "`chunk_size` is a `TransformerNUFFT.__init__` argument that
+`SimulatorInterferometer` **NEVER sets**, so the `lax.scan` branch is unreachable
+via the simulator." So the capability exists and is untested-in-anger from the
+simulator side. The remaining task is to plumb `chunk_size` from
+`SimulatorInterferometer` (a default chosen by the memory budget already derived
+below, ~1M for nspread=14/complex64 on a 40 GB working budget), then run the
+§ Verification below to confirm alma_high actually lands.
+
+`Difficulty:` accordingly drops `too-large` → `small`; `Priority:` stays high
+because the profiling sweep it unblocks is still blocked. Do **not** re-implement
+the chunking.
+
+Note also that `option 2` below (upstream `nufftax` `chunk_size`) was never the
+chosen scope and remains untouched — still a legitimate follow-up, still optional.
+
+---
 
 The `al.SimulatorInterferometer` path that uses `al.TransformerNUFFT` (nufftax-backed) can't scale to ALMA-realistic visibility counts. At ~5M visibilities on an 800×800 real-space grid it OOMs on an A100 (80 GB) with a single ~15.7 GB allocation; at 10M it's ~31 GB. The likelihood path scales fine to the same regime because `apply_sparse_operator` precomputes a small W-Tilde matrix bounded by `N_source_pixels` (~thousands), not by `N_visibilities`. The simulator has no equivalent escape valve — every forward call does one dense nufftax spread.
 

@@ -5,7 +5,39 @@ Target: PyAutoArray
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: STALE PREMISE — needs re-basing before it can be issued (2026-08-09)
+
+## 2026-08-09 — the implementation base named below no longer exists
+
+Found by the `draft/` sweep, verified against PyAutoArray main (`efaf3041`).
+
+Path B is written as "subclass or compose alongside" `RectangularRotatedAdaptImage`
+(Path A's mesh class), building one `RectangularSplineAdaptImage` per detected
+mode. **Neither class is on main.** The mesh package is now exactly:
+
+```
+autoarray/inversion/mesh/mesh/{delaunay,knn,rectangular_adapt_density,
+                               rectangular_adapt_image,rectangular_uniform}.py
+```
+
+They were removed by the rectangular-mesh consolidation (#402/#403), which also
+moved the kernel-CDF machinery into `mesh_geometry/rectangular.py` and
+`interpolator/rectangular.py`. So the class names, the subclassing plan, and the
+"each sub-mesh runs the existing single-mode CDF code unchanged" claim all need
+re-deriving against the consolidated classes before this can be issued.
+
+**The research context survives intact** — all four artefacts this prompt tells
+you to read first are still present in the repo: `files/cdf_audit.md`,
+`files/ghost_peak_findings.md`, `files/ghost_peak.png`, `files/pca_rotation.png`
+(plus `ghost_peak_experiment.py` / `pca_rotation_experiment.py`). The separability
+problem and the A/B/C fork are unaffected; only the code the plan attaches to moved.
+
+Before issuing: re-read the consolidated mesh classes, decide which one now plays
+Path A's role (the PCA-rotation behaviour may live as a parameter rather than a
+class), and rewrite § "The approach in more detail" step 2 against it. Everything
+below this line predates the consolidation.
+
+---
 
 Follow-up to `rectangular_adapt_cdf.md` (issue #322) and Path A
 (`RectangularRotatedAdaptImage`). The PCA-rotation hack we shipped fully

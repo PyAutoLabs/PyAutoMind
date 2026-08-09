@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-947 records across 7 buckets.
+949 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -383,6 +383,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [optional-none-default-typos](2026/07/optional-none-default-typos.md) — Fixed three PyAutoLens sites using the typing construct
 - [opus-wrapup](2026/07/opus-wrapup.md) — executed on Fable
 - [over-sample-trailing-one-to-two](2026/07/over-sample-trailing-one-to-two.md) — Replaced every trailing sub_size 1 in adaptive over-sampling schemes across five repos (169 files, 186 sites: …
+- [oversampling-kxs-coupling](2026/07/oversampling-kxs-coupling.md)
 - [parked-sweep](2026/07/parked-sweep.md)
 - [per-frame-psf](2026/07/per-frame-psf.md) — per-frame native ePSFs live (psf/frame_epsf.py: sky-subtracted, DQ local-median patch in ESTIMATOR input only …
 - [per-project-literature](2026/07/per-project-literature.md) — task 3 of the autolens_assistant batch — hybrid literature rule live: Create scaffolds wiki/project/bibliograp…
@@ -465,6 +466,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [python_312_floor_phase_4d_euclid_assistant](2026/07/python_312_floor_phase_4d_euclid_assistant.md)
 - [raw-guard-migration](2026/07/raw-guard-migration.md) — Leg 3 of the dataset-bulk series. Migrated 116 (autolens, 113 scripts) + 61 (autogalaxy, 59 scripts) raw `if n…
 - [rect-adapt](2026/07/rect-adapt.md) — rectangular adaptive-mesh edges — MERGED
+- [rectangular-adapt-constant-split-guard](2026/07/rectangular-adapt-constant-split-guard.md)
 - [rectangular-kernel-cdf-mesh](2026/07/rectangular-kernel-cdf-mesh.md) — kernel-density CDF meshes RectangularKernelAdapt{Density,Image} (Enzi RTU) shipped opt-in — strict FD certifie…
 - [rectangular-mesh-consolidation](2026/07/rectangular-mesh-consolidation.md) — Consolidated PyAutoArray's rectangular mesh family from 8 mesh classes / 5 interpolators / 2 geometries down t…
 - [refactor-conductor](2026/07/refactor-conductor.md)

@@ -56,7 +56,21 @@ Reformulation candidates (in the spirit of the opt-in slogdet, PyAutoArray#391):
 Gate any change on the `regularization.py` jax_grad script re-passing and
 on FoM parity on the numpy path.
 
-## 3. Split-family shape guard on rectangular meshes (papercut)
+## 3. Split-family shape guard on rectangular meshes (papercut) — DONE
+
+*Shipped 2026-07-28 as phase 1 of the @rhayes777 audit epic —
+PyAutoArray#417 (`9411904d`), merged. The first of the two options below is what
+landed: `Pixelization.__init__` (`autoarray/inversion/pixelization.py:154`)
+raises `PixelizationException` on any split regularization × rectangular mesh,
+driven by `AbstractMesh.supports_split_regularization` ×
+`AbstractRegularization.is_split_regularization`, with all 9 combinations
+covered by `test_autoarray/inversion/pixelization/test_split_regularization_support.py`.
+True pixel-centre crosses for the rectangular geometry were deliberately NOT
+implemented — the capability is absent by design. The
+`rectangular_adapt_constant_split_guard.md` merge question this section raises is
+therefore moot; that prompt was recorded as complete on 2026-08-09
+([[rectangular-adapt-constant-split-guard]]). Verified by the draft/ sweep against
+main `efaf3041`. **Leg 2 is now the only open work in this prompt.***
 
 `ConstantSplit`/`AdaptSplit`/`AdaptSplitZeroth` on a rectangular mesh fail
 with a raw broadcasting `TypeError` ((784,784) vs (3808,3808)): the split
