@@ -5,7 +5,7 @@
 - classification: library (PyAutoArray + PyAutoGalaxy + PyAutoLens) — bug, user-facing
 - prompt: draft/bug/autoarray/rhayes_audit_validation_and_crashes.md — CAMPAIGN RECORD ONLY as of 2026-08-09 (phase-1 completion record + the phase 2-4 table); do NOT $start-dev it, start one of the four per-issue prompts below
 - split-2026-08-09: phases 2-3 spanned 3 repos / 4 issues — more than one PR — so they were split one-prompt-per-issue:
-  - draft/bug/autoarray/rhayes_333_input_validation_guards.md — PyAutoArray#333, phase 2. **ANCHOR: owns the shared `_validate_*` home decision. Ship first.**
+  - active/rhayes_333_input_validation_guards.md — PyAutoArray#333, phase 2. **ANCHOR: owns the shared `_validate_*` home decision. Ship first.** IN FLIGHT 2026-08-09 as PyAutoArray#439 (advanced draft/ → active/); see active.md `autoarray-input-validation-guards`.
   - draft/bug/autogalaxy/rhayes_440_profile_validation_guards.md — PyAutoGalaxy#440, phase 2 + B10; blocked on the #333 helper. This prompt is PyAutoGalaxy's claim.
   - draft/bug/autolens/rhayes_532_tracer_validation_guards.md — PyAutoLens#532, phase 2 (B4 + negative redshift); blocked on the #333 helper. Phase 4 explicitly excluded.
   - draft/bug/autoarray/rhayes_332_adapt_images_precondition_error.md — PyAutoArray#332, phase 3; NO blocker, can start immediately or in parallel.
