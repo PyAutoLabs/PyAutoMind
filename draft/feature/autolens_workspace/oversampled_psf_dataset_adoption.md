@@ -60,3 +60,11 @@ the re-baselining survey.
 After the k×s series completes (phase 3 workspace tests + refactor
 exercise). The k×s machinery it depends on is merged (PyAutoArray#363,
 PyAutoGalaxy#486, autolens_workspace#236).
+
+**2026-08-09 (draft/ sweep): the series is CLOSED, not merely merged.**
+PyAutoArray#362 closed as "series complete" — all five phases plus the extra
+cache/refactor legs shipped, recorded across `complete/2026/07/kxs-*.md` and
+[[oversampling-kxs-coupling]]. So the "after the series completes" condition is
+met and this is ready to start. It remains the correct live residue of that
+series' § 5: [[kxs-core]] records the phase-4 fork resolved as option (c) —
+executed simulators stay `s=1` — with option (a) split out as this prompt.

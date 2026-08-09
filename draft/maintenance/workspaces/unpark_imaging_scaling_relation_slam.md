@@ -12,6 +12,35 @@ Status: formalised
 BLOCKED until PyAutoArray PR#431 merges and reaches the installed stack. Do not
 start before then — the script only passes with that loader fix in place.
 
+## 2026-08-09 — UNBLOCKED, both clauses satisfied
+
+Checked by the draft/ sweep. This gate has two conditions and **both** are met:
+
+1. **Merged** — PyAutoArray#431 merged `2026-08-03T18:03:14Z` (`5006f347`, "fix:
+   relabel at-or-below-cap data at the capped pixel scale", fixes #430).
+2. **Reached the installed stack** — #431 carried the `pending-release` label, and
+   the 2026-08-07 release drive published all five libraries to PyPI at
+   **2026.8.7.1** with PyAutoArray at `828d5c13`, downstream of the merge. So the
+   loader fix is in a released wheel, not just on `main`. (See `active.md`
+   § release-drive-2026-08-07.)
+
+**The park is still in place**, so the work is genuinely outstanding:
+`autolens_workspace/config/build/no_run.yaml:46` still carries
+`imaging/features/scaling_relation/slam # NEEDS_FIX 2026-07-30 - measures its
+luminosities from a preceding light stage…`.
+
+#431's own test plan states the outcome directly: *"`imaging/features/scaling_relation/slam`
+→ now exit 0 (6 real searches). Its `NEEDS_FIX` park in
+`autolens_workspace/config/build/no_run.yaml` can be removed in a separate
+workspace PR."* This prompt is that PR.
+
+**Do not also unpark the `multi_galaxy/` sibling** at line 48. The same test plan
+records that it gets past the 0.0-luminosity cause but then hits a separate latent
+script bug — `slam.py:863` computing `image_half_width` from a hardcoded
+`pixel_scale` while the mask uses `dataset_full.pixel_scales`. That is
+`draft/bug/autolens_workspace/script_local_pixel_scale_vs_dataset_pixel_scales.md`,
+confirmed still unfixed on main by this sweep. It stays parked.
+
 ## What
 
 Remove this NEEDS_FIX line from `autolens_workspace/config/build/no_run.yaml`:

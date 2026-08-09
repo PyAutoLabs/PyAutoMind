@@ -16,6 +16,37 @@ Status: formalised
 `complete/YYYY/MM/<slug>.md` per-task rich records to exist first. **Do not
 issue this until Phase 1 nears shipping** (`feedback_no_bulk_issue_queues`).
 
+## 2026-08-09 — SUBSTANTIALLY SHIPPED; only the curation is left
+
+Checked by the draft/ sweep. Phase 1 shipped
+([[lifecycle-state-split]], monolithic `complete.md` retired 2026-07-16, issue #81),
+so the dependency above is long satisfied — **and most of what this prompt asks for
+shipped with it.**
+
+`complete/index.md` exists on `main` and already is the token-light index this
+prompt specifies:
+
+- **952 records** linked, grouped by dated bucket.
+- Its own header states the lookup protocol this prompt describes almost verbatim
+  — *"read this, follow one or two links, and only then grep a dated bucket."*
+- **Generated**, by `scripts/lifecycle.py index`, with `index --check` gating
+  staleness in CI — so it cannot rot.
+- It has the curated band: `<!-- CURATED:START -->` … `<!-- CURATED:END -->`,
+  documented as surviving regeneration.
+- `complete/AGENTS.md` § "How to look something up (token-light — RAG is dead)"
+  carries the same doctrine this prompt opens with.
+
+**What is actually left is the curation, not the machinery.** The Highlights band
+is empty — it reads `_(curate hard-won records here — survives regeneration.)_`.
+So the remaining work is the editorial pass: pick the hard-won records worth
+surfacing and write the one-line hooks, in the `autolens_assistant/wiki` style
+this prompt says to study.
+
+Re-scope before issuing: drop the "build the index" legs, keep the "curate it"
+legs, and re-read § "Model to emulate" against what `lifecycle.py index` already
+generates rather than against a blank slate. `Difficulty:` medium is now
+generous.
+
 ## Problem
 
 Once `complete/` holds hundreds of per-task records, an agent still can't look

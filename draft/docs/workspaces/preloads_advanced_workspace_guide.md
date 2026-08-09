@@ -15,6 +15,26 @@ Primary repos: **@autolens_workspace**, **@autogalaxy_workspace** (workspace doc
 `Preloads` API landing in **@PyAutoArray** (the `datacube-shared-state` task, PyAutoLens#565 /
 sub-task B of the `analysis_shared_state` epic).
 
+## 2026-08-09 — UNBLOCKED, the dependency has landed
+
+Checked by the draft/ sweep. Verified the **API**, not merely the issue state:
+
+- `PyAutoArray/autoarray/__init__.py` on `main` exports `AbstractPreloads`,
+  `PreloadsImaging` and `PreloadsInterferometer`. The `Preloads` API this guide
+  documents exists and is public.
+- PyAutoLens#565 (datacube shared-state, sub-task B) closed `completed`
+  2026-07-10.
+
+Worth checking the issue state alone would have been weaker evidence: the gate is
+phrased as "the `Preloads` API landing in @PyAutoArray", which is a different repo
+from the issue that tracked the work.
+
+The guide can now be written against the shipped API. One caution: locate the
+preloads module before citing paths — guesses at `autoarray/preloads.py`,
+`autoarray/dataset/preloads.py` and `autoarray/inversion/inversion/preloads.py`
+all 404, so the import in `__init__.py` is the reliable entry point. Path-guessing
+has been wrong four times in this sweep.
+
 ## Why this guide is needed
 
 `Preloads` let a caller compute an invariant fit/inversion quantity once (e.g. the curvature matrix
