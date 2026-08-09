@@ -3,6 +3,31 @@
 Follow-up to **PyAutoFit#1434 / PR#1436**, which moved the on-the-fly update
 cadence message into the library. Do not start until #1436 has merged.
 
+## 2026-08-09 — UNBLOCKED, and the counts refreshed
+
+Checked by the draft/ sweep. **PyAutoFit#1436 merged 2026-07-30T21:49:25Z**
+(`daa0dbcb`, closes #1434), so the gate above is satisfied — this is ready to
+start, not waiting. Nothing here has shipped.
+
+Counts re-measured against autolens_workspace main (`9974f891`), which sharpens
+the table below (it estimated "14+"):
+
+| surface | count |
+|---|--:|
+| `.py` scripts still printing `On-the-fly updates every iterations_per_quick_update` | **19** |
+| of those, still carrying the "notebook cell **with** progress" typo | **16** |
+| `.ipynb` notebooks carrying the line | **54** |
+
+The notebook count is much larger than the script count because the line also
+appears in generated notebooks across sibling directories — confirm whether those
+are all regenerated from the 19 scripts, or whether some notebooks are authored
+directly, before assuming a regeneration pass covers them.
+
+For what the library now emits in its place, see PyAutoFit#1436's own summary: the
+message has two branches, because the packaged default cadence is the inf-like
+`1e99` never-sentinel, so the replacement text is either a real integer cadence or
+a statement that updates are disabled naming the config key.
+
 ## Problem
 
 23 workspace scripts print this block before `search.fit(...)`:
