@@ -30,6 +30,16 @@ __What's already done__ (no work needed):
 
 __Outstanding__ (sequenced):
 
+> **CORRECTION 2026-08-09 (draft/ sweep): items 1-4 below are NOT outstanding —
+> they SHIPPED on 2026-06-09.** See `complete/2026/06/jax-substructure-simulator.md`
+> (PyAutoLens#543 + #544, PyAutoGalaxy direct commits, autolens_workspace_test
+> #127/#128/#129), re-verified against upstream `main`. Their four prompt files
+> stayed in `draft/` for two months after shipping and were retired into that
+> record; the relative links below are therefore dead. The only live work from this
+> epic is `draft/feature/jax_substructure/5_prng_key_vmap_noise.md` and
+> `6_deflection_equivalence_test.md`, both confirmed still open. This tracker is
+> archived material — read the completion record, not this list.
+
 1. [feature/jax_substructure/1_vmap_subhalo_deflections.md](../feature/jax_substructure/1_vmap_subhalo_deflections.md) —
    vectorized deflection path: represent N halos as `(max_N, n_params)` arrays,
    `jax.vmap` the profile deflection function, sum with mask. Integration test
