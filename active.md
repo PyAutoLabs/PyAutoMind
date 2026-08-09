@@ -3,9 +3,16 @@
 ## autoarray-input-validation-guards
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/439
 - session: web session https://claude.ai/code/session_013PgqSCLTemK5bApVAwhVM4 (no local worktree — `web-github` environment)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/autoarray-input-validation-guards
+- status: library-dev — IMPLEMENTED AND PUSHED 2026-08-09, no PR opened yet (awaiting the human's go-ahead)
+- branch: PyAutoArray `feature/autoarray-input-validation-guards` @ `5bd1472` (branched from main `5867db0`)
+- worktree: ~/Code/PyAutoLabs-wt/autoarray-input-validation-guards (not used — this ran in a web session against a fresh clone)
 - prompt: active/rhayes_333_input_validation_guards.md
+- helper-home DECIDED (the blocker this task owned): `autoarray/validate.py`, public, exposing `is_concrete_scalar`, `validate_positive_finite`, `validate_non_negative_finite`, `validate_pixel_scales`, `validate_shape_native`, `validate_radii_ordered`. The #440 and #532 prompts import it — `from autoarray import validate` — rather than restating the rules. Message shape: `"<name> must be <rule>; got <value!r}"` plus an optional sentence of guidance.
+- tracer-safe form DECIDED: every value guard is gated on `is_concrete_scalar` (rejects bool, arrays, None, tracers) and passes non-concrete values through untouched. Shape checks need no gate — shapes are static under tracing. VERIFIED against real JAX 0.11.0, not just asserted: construction under `jax.jit` works, `jax.grad` flows through (grad 16.0 for `sum((c·1)²)` at c=2 over 4 params), concrete negatives still rejected.
+- scope actually delivered: guards at chokepoints, so coverage exceeded the 5 reported sites — B7 also covers `elliptical_annular` (identical hole), B5 covers every `AbstractDataset` subclass not just `Imaging`, B13 covers all 14 regularization schemes not just `Constant`. B13's negative-weight leak through `regularization_weights_from` was confirmed empirically first (`[-1. -1. -1. -1.]`) and is now closed.
+- validation: 980 passed / 52 skipped, +44 new tests. The 3 `test_transformer.py` pynufft failures are PRE-EXISTING — baselined against clean main (identical 3), already tracked by `draft/bug/autoarray/pynufft_scipy_pinv2_dev_extra.md`. ZERO regressions.
+- surprise worth recording: the anticipated risk was that chokepoint guards would surface existing tests constructing degenerate objects on purpose, needing triage. That count was ZERO — no test in the suite relied on a zero/negative pixel scale, an empty shape, a swapped annulus, a mismatched noise map, or a negative coefficient.
+- adjacent defect found, NOT fixed (worth its own prompt): `geometry_util.convert_pixel_scales_2d` tests `type(pixel_scales) is float`, so an `int` pixel scale is never widened to a tuple.
 - suggested-branch: feature/autoarray-input-validation-guards
 - scope: PyAutoArray#333 ONLY (B5, B6, B7, B8, B13) — the PyAutoArray half of phase 2, split out of the parent audit prompt per "one prompt = one task = one PR". Human confirmed 2026-08-09: one issue, one PR; #333-only scope.
 - sequencing: this task lands the shared validation helper (`autoarray/validate.py`); the PyAutoGalaxy#440 sibling (B9, B11, B12) + the #532 negative-redshift item IMPORT it and must follow, not run in parallel. That helper-home decision was the recorded blocker on phase 2 — see planned.md `rhayes-audit-validation-phases-2-4`.
