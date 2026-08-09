@@ -18,6 +18,9 @@ do not bulk-issue):
 1. **WP1** — exact PriorFactor updates in the declarative path +
    document the analytic-projection contract (~2–3 days). Start here.
    Note: rebase over / land after PyAutoFit#1334 (owns README.md).
+   **UNBLOCKED 2026-08-09 (draft/ sweep): PyAutoFit#1334 is MERGED** — it shipped
+   `autofit/graphical/README.md` as Phase 2 of the EP framework review on
+   2026-07-08 ([[ep-framework-review]]). Rebase, don't wait.
 2. **WP2** — first-class linear-Gaussian factor; validate against an
    IC50-shaped integration script (~1 week).
 3. **WP3** — Gamma–Poisson / Beta–Bernoulli conjugate factors.

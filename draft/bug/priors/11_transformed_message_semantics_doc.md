@@ -5,7 +5,36 @@ Target: priors
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: HALF SHIPPED — edge 1 is documented, edge 2 is not (2026-08-09)
+
+## 2026-08-09 — the reversal-convention half landed; the reciprocal half did not
+
+Checked by the draft/ sweep against PyAutoFit main (`3b960609`). The EP framework
+review's Phase 2 (PyAutoFit#1334, shipped 2026-07-08) explicitly carried
+"transform composition convention **incl. bug/priors/11 doc half**" — see
+[[ep-framework-review]]. Verified which half:
+
+**Edge 1 (asymmetric reversal convention) — DONE.** `_transform` and
+`_inverse_transform` in `messages/composed_transform.py` now both carry
+docstrings naming the direction each maps ("physical → base" / "base → physical")
+and stating that "the asymmetry with `_transform` is deliberate and load-bearing
+(module docstring)". `autofit/graphical/README.md` § 2 also points readers at the
+module docstring for the composition-order convention. That is the foot-gun this
+prompt's § 1 exists to defuse.
+
+**Edge 2 (`LinearShiftTransform` stores the inverse of the intuitive scale) — NOT
+DONE.** `messages/transform.py:171` is unchanged: the class still has **no
+docstring at all**, and `super().__init__(DiagonalMatrix(np.reciprocal(self.scale)))`
+sits bare — not even the `# Jacobian = 1/scale` inline comment this prompt writes
+out. The physical-vs-base kwarg confusion that compounded the LogUniform sign bug
+is still undocumented.
+
+**Remaining work is § 2 only.** Add the class docstring stating that `shift`/`scale`
+describe physical space while the stored parent Jacobian is `1/scale` because the
+transform runs physical → base, and keep the `log_det` sign explanation with it.
+`Difficulty:` drops `large` → `small` accordingly; skip § 1 entirely.
+
+---
 
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding C6).

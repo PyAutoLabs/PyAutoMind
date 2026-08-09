@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-949 records across 7 buckets.
+951 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -310,6 +310,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [kxs-refactor](2026/07/kxs-refactor.md)
 - [kxs-surface-refactor](2026/07/kxs-surface-refactor.md)
 - [kxs-workspace-tests](2026/07/kxs-workspace-tests.md)
+- [latent-samples-none-on-resumed-fit](2026/07/latent-samples-none-on-resumed-fit.md)
 - [lenstool-example](2026/07/lenstool-example.md)
 - [lenstool-scaling-reference-magnitude](2026/07/lenstool-scaling-reference-magnitude.md) — PR1 cluster + PR2 group/imaging — complete; PR3 SLaM deferred
 - [lifecycle-drift-self-heal](2026/07/lifecycle-drift-self-heal.md)
@@ -544,6 +545,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [tenant-firewall-drift](2026/07/tenant-firewall-drift.md)
 - [test-mirror-restructure](2026/07/test-mirror-restructure.md)
 - [test-mode-bypass-completed](2026/07/test-mode-bypass-completed.md) — One-line fix — _fit_bypass_test_mode now calls paths.completed() before returning (mirrors start_resume_fit), …
+- [test-mode-representative-outputs-size-realistic](2026/07/test-mode-representative-outputs-size-realistic.md)
 - [test-mode-representative-samples-phase-1-design](2026/07/test-mode-representative-samples-phase-1-design.md)
 - [test-mode-representative-samples-phase-2-core-api](2026/07/test-mode-representative-samples-phase-2-core-api.md)
 - [test-results-relayout](2026/07/test-results-relayout.md) — Hands#193 + Heart#106, lockstep pair

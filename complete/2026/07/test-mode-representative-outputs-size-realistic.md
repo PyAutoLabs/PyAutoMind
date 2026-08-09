@@ -1,3 +1,45 @@
+# test-mode-representative-outputs-size-realistic
+
+- shipped: 2026-07-17 (the epic's own closing condition was met and never actioned)
+- issues: PyAutoFit#1378 (phase 1), PyAutoFit#1381 + PyAutoConf#126 (phase 2), autolens_profiling#70 (the closing gate — CLOSED as `completed` 2026-07-17)
+- phase-records: [[test-mode-representative-samples-phase-1-design]] [[test-mode-representative-samples-phase-2-core-api]]
+- repos:
+  - PyAutoFit, PyAutoConf (now PyAutoNerves), autolens_profiling
+
+## Summary
+
+An umbrella prompt whose four phases were all resolved, tracked in the prompt's
+own status line, and whose stated exit condition then quietly came true.
+
+The prompt is explicit that it is the umbrella — *"issue the phase files, not this
+one"* — and its 2026-07-17 status block already recorded:
+
+- phase 1 (design) **COMPLETE**, PyAutoFit#1378, record in `complete/2026/07/`
+- phase 2 (core API) **COMPLETE + MERGED**, PyAutoConf#126 + PyAutoFit#1381
+- phase 3 **ABSORBED** into slam-resume-profiling (autolens_profiling#70), prompt retired
+- phase 4 **ABSORBED** (survey found RTD has no test-mode surface), prompt retired
+- *"EPIC CLOSES when #70 ships its recipe leg."*
+
+## Verified 2026-08-09
+
+**autolens_profiling#70 is closed, `state_reason: completed`, closed 2026-07-17 by
+Jammy2211** — the same day the prompt's status block was last written. So the only
+outstanding condition the umbrella named was satisfied within hours of the note
+being taken, and nothing advanced the file.
+
+Recorded by the draft/ sweep. No work is owed.
+
+## Why it was missed
+
+This one needed neither a clone nor a code read — the prompt states its own exit
+condition, and one issue-state lookup settles it. That makes it the cheapest class
+of draft/ drift to detect and a good argument for extending the advisory
+`issues --drafts` pass: #70 is named in the prompt body but is not the kind of
+citation that pass currently nets, because the prompt cites it as a *gate* rather
+than as its own tracking issue. Worth considering whether an "epic closes when X"
+idiom should be machine-readable.
+
+## Original prompt
 # Test-mode representative outputs: size-realistic samples for instant pipeline runs
 
 Type: feature

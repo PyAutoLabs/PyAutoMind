@@ -8,7 +8,28 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: PARTIALLY SHIPPED — the module is gone, `eden.yaml` is not (2026-08-09)
+
+## 2026-08-09 — half the primary scope has already landed
+
+Checked by the draft/ sweep against PyAutoFit main (`3b960609`):
+
+- **`autofit/tools/edenise` — GONE.** `autofit/tools/` now holds only
+  `__init__.py`, `add_notebook_quotes.py`, `namer.py`, `util.py`. A repo-wide
+  grep for `edenise` returns zero Python hits, so the § Guardrails
+  "confirm nothing imports it" check is settled by the removal itself.
+- **Root `eden.yaml` — STILL PRESENT.** The second half of the § Scope
+  PyAutoFit bullet is outstanding.
+
+Also note the § Scope follow-up names **PyAutoConf**, which has since been renamed
+**PyAutoNerves** (the `autonerves` package). Re-target `scripts/edenise.py` there
+before acting, and confirm it survived the rename rather than assuming the path.
+
+What is left is deleting one dead config file plus the PyAutoNerves driver, so
+`Difficulty:` drops `medium` → `small`. The guardrail about re-scoping if a live
+consumer surfaces no longer applies to the PyAutoFit leg.
+
+---
 
 ## Why
 

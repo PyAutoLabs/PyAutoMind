@@ -176,6 +176,20 @@ the codebase ~half as legible as it could be.
 7. **Stop. No code changes until a design is approved.**
 
 
+## 2026-08-09 — PREREQUISITE HAS LANDED; this is unblocked
+
+Checked by the draft/ sweep. The Fable verdict below sequences this behind
+Phases 1-2 of `research/graphical_ep/ep_framework_review.md`. That review
+**completed 2026-07-08**, all 8 phases — record [[ep-framework-review]]. Phase 1
+(EP statistics correctness review) is complete with findings F1-F9 on
+PyAutoFit#1332; Phase 2 (formal documentation of the graphical package) **shipped**
+as PyAutoFit#1334, adding `autofit/graphical/README.md` (16 numbered
+code-anchored equations) plus the statistical docstrings.
+
+So the design input this work package was waiting on — the EP review's inventory
+of which message operations the factor graph actually needs — exists. The gate is
+open; this is ready to plan, not blocked. Nothing here has shipped.
+
 ## Fable verdict (2026-07-08, PyAutoFit main @ 0f26ff2d8; PyAutoFit#1330)
 
 **Verdict: still valid — bundle with 12 behind the EP review.**
