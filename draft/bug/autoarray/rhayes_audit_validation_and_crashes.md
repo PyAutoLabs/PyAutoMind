@@ -236,3 +236,30 @@ remote. Nothing from this campaign holds a repo claim.
 Phase 2 carries two binding constraints from phase 1: constructors are **JAX-traced**, so
 no Python `if` on a possible tracer; and the negative-redshift half of #532 is *not*
 blocked on the phase-4 question — it rides with phase 2.
+
+---
+
+## Split into per-issue prompts — 2026-08-09
+
+Phases 2-3 above spanned three repos and four issues, which is more than one PR
+and so violated *one prompt = one task = one PR*. They were split into four
+issue-shaped prompts, one per still-open issue. **This file is now the campaign
+record, not a work item** — do not `$start-dev` it; start one of the four.
+
+| Prompt | Issue | Phase | Blocker |
+|---|---|---|---|
+| `draft/bug/autoarray/rhayes_333_input_validation_guards.md` | PyAutoArray#333 | 2 | none — **anchor: owns the shared `_validate_*` home decision** |
+| `draft/bug/autogalaxy/rhayes_440_profile_validation_guards.md` | PyAutoGalaxy#440 | 2 + B10 of 3 | the #333 helper |
+| `draft/bug/autolens/rhayes_532_tracer_validation_guards.md` | PyAutoLens#532 | 2 (B4 + negative redshift) | the #333 helper |
+| `draft/bug/autoarray/rhayes_332_adapt_images_precondition_error.md` | PyAutoArray#332 | 3 | none — can start immediately |
+
+**Ship #333 first.** The other two validation prompts import its helper and
+message template; started out of order, the three repos emit inconsistent errors
+for the same class of mistake, which is the failure the phase-2 note warned about.
+#332 is independent of all three and can run in parallel.
+
+**Phase 4 stays HELD and is deliberately in none of the four** — the
+`z_lens > z_source` warning waits on @rhayes777's answer to the question put on
+#532 on 2026-07-28, still unanswered as of 2026-08-09. The #532 prompt carries a
+control test pinning today's permissive behaviour so phase 4 cannot regress it
+silently.

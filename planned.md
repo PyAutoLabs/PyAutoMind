@@ -3,8 +3,13 @@
 - status: planned — phase 1 MERGED and closed 2026-07-29 (PyAutoArray#417 `9411904d`, PyAutoLens#662 `2a3f1a63`, tracker #416 closed, PyAutoLens#531 closed); worktree released, no repo claims held
 - filed: 2026-07-28 · phase-1 shipped 2026-07-28
 - classification: library (PyAutoArray + PyAutoGalaxy + PyAutoLens) — bug, user-facing
-- prompt: draft/bug/autoarray/rhayes_audit_validation_and_crashes.md (carries the phase-1 completion record + the phase 2-4 table)
-- suggested-branch: feature/api-validation-guards
+- prompt: draft/bug/autoarray/rhayes_audit_validation_and_crashes.md — CAMPAIGN RECORD ONLY as of 2026-08-09 (phase-1 completion record + the phase 2-4 table); do NOT $start-dev it, start one of the four per-issue prompts below
+- split-2026-08-09: phases 2-3 spanned 3 repos / 4 issues — more than one PR — so they were split one-prompt-per-issue:
+  - draft/bug/autoarray/rhayes_333_input_validation_guards.md — PyAutoArray#333, phase 2. **ANCHOR: owns the shared `_validate_*` home decision. Ship first.**
+  - draft/bug/autogalaxy/rhayes_440_profile_validation_guards.md — PyAutoGalaxy#440, phase 2 + B10; blocked on the #333 helper. This prompt is PyAutoGalaxy's claim.
+  - draft/bug/autolens/rhayes_532_tracer_validation_guards.md — PyAutoLens#532, phase 2 (B4 + negative redshift); blocked on the #333 helper. Phase 4 explicitly excluded.
+  - draft/bug/autoarray/rhayes_332_adapt_images_precondition_error.md — PyAutoArray#332, phase 3; NO blocker, can start immediately or in parallel.
+- suggested-branch: feature/api-validation-guards (per-prompt branches now; one PR each)
 - open-issues: PyAutoArray#332, PyAutoArray#333, PyAutoGalaxy#440, PyAutoLens#532 — all stay open until phases 2-3 land
 - phase-2 (9 constructor guards; #333 B5-B8/B13 + PyAutoGalaxy#440 B9/B11/B12): **SPLIT 2026-08-09.** The PyAutoArray half (#333: B5-B8, B13) is now IN FLIGHT as `autoarray-input-validation-guards` in active.md → PyAutoArray#439, prompt `active/rhayes_333_input_validation_guards.md`. It lands the shared helper `autoarray/validate.py` and settles the `_validate_*` home question that blocked this phase (PyAutoArray is the floor, as anticipated). **Remaining here:** PyAutoGalaxy#440 (B9, B11, B12) + the negative-redshift half of #532 — these IMPORT that helper, so they are unblocked only once #439 merges; do not start them in parallel. Constructors are JAX-traced: no Python `if` on a possible tracer.
 - phase-3 (#332 + B10): make the missing-`adapt_images` precondition legible — today it surfaces as `AttributeError: 'NoneType' object has no attribute 'array'` from `border_relocator.py:446`, naming nothing the caller controls. The regression test asserts a CLEAR FAILURE, not a successful fit. B10 is a tolerance test only (Ell/Sph 2.357e-06) — do NOT chase bit-identity.
