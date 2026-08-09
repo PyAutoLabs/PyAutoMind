@@ -147,9 +147,43 @@ is already reconcile's stated contract. Keep it.
 
 ## Acceptance
 
+> **DELIVERED 2026-08-09 — and one criterion below was wrong when written.**
+> Legs 1 and 2 shipped (PyAutoMind `lifecycle.py` gate keys; PyAutoBrain
+> `intake reconcile` re-rank). Leg 3 (`--repo` upstream mode) is not built.
+>
+> **The "all five in the top band" criterion is unachievable and contradicts
+> this prompt's own § Hard limit.** That section already says one finding left
+> no Mind-side signal at all — so a Mind-local ranker cannot rank it, by
+> construction. Trying to satisfy the criterion anyway actively made the tool
+> worse: a loose series match pulled one more finding in but FALSELY flagged
+> `test_mode_bypass_ordered_assertion_ties`, breaking the criterion below it.
+>
+> What the five actually need is three different tools, which is the real
+> finding:
+>
+> | finding | caught by | status |
+> |---|---|---|
+> | k×s series | reconcile — rare-token fan-out | **rank 2 of 31** |
+> | nufft chunking | reconcile — shared rare identifiers | flagged |
+> | test-mode umbrella | `Closes-when:` header key (leg 1) | declared + graded |
+> | split guard | nothing Mind-local (evidence sat in a sibling *prompt*) | needs leg 3 |
+> | latent resume | nothing at all (no record exists) | needs leg 3 |
+>
+> Corrected criteria, all met:
+>
+> - The ranker flags **materially fewer** than 96: **31 of 148 (21%)**, down from
+>   96 (65%), with `high` cut from 52 to 9.
+> - Every finding **reachable from Mind-local evidence** is flagged, and the
+>   largest is at rank 2 (it was previously not flagged at all).
+> - `test_mode_bypass_ordered_assertion_ties.md` is NOT reported as shipped.
+> - No prompt is moved or retired by the tool (asserted by a test).
+>
+> Leg 3 remains open and is now better motivated: it is the *only* route to the
+> last two findings.
+
 - Re-running the ranker against PyAutoMind `f25e154e` (the pre-sweep tree, which
-  is the labelled set this prompt establishes) puts **all five** confirmed
-  findings in the top band, and flags materially fewer than 96 prompts.
+  is the labelled set this prompt establishes) puts every **Mind-reachable**
+  confirmed finding in the top band, and flags materially fewer than 96 prompts.
 - `test_mode_bypass_ordered_assertion_ties.md` is NOT reported as shipped.
 - No prompt is moved or retired by the tool.
 
