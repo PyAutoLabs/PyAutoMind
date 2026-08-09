@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-952 records across 7 buckets.
+953 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -55,6 +55,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [nufft-parity-full-datasets](2026/08/nufft-parity-full-datasets.md)
 - [plot-array-stale-kwargs](2026/08/plot-array-stale-kwargs.md)
 - [point-source-defaults-campaign](2026/08/point-source-defaults-campaign.md) — took the point-source likelihood options from "several undocumented
+- [point-source-light](2026/08/point-source-light.md) — Added standard and linear point-source light profiles with total-flux normalization and oversampled PSF convol…
 - [pointmass-smbh-jax](2026/08/pointmass-smbh-jax.md) — `al.mp.PointMass` and `al.mp.SMBH` failed every JAX-mode fit (user report on 2026.8.4.1). Two independent bugs…
 - [pointmass-smbh-jax-ci](2026/08/pointmass-smbh-jax-ci.md) — CI JAX coverage for the PointMass/SMBH regression class (follow-up to PyAutoGalaxy#553/#554). `misc/profiles_j…
 - [potential-correction-env-declaration](2026/08/potential-correction-env-declaration.md)

@@ -1,3 +1,12 @@
+## point-source-light
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/561
+- completed: 2026-08-09
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/562
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/208, https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/103
+- summary: Added standard and linear point-source light profiles with total-flux normalization and oversampled PSF convolution. Added a documented user-facing simulator and generated notebook, plus integration coverage for flux conservation and linear-profile conversion. All library, navigator, and workspace smoke checks passed before the library-first squash merges. Accurate sub-pixel placement requires a PSF sampled on the matching finer grid; factor 1 remains the pixel-centred approximation.
+
+## Original prompt
+
 # We currently does not have implemented a point source of
 
 Type: feature
