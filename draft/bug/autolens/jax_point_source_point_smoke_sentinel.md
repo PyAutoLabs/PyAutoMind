@@ -10,12 +10,65 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: draft — NEEDS RE-VERIFICATION before any work (see 2026-08-09 note)
 
 > Restored 2026-07-27. This prompt file was dropped from the flat `issued/` pile
 > during the prompt-lifecycle migration (PR #71/#72) as "legacy", but the task was
 > never done — its `planned.md` entry stayed live and pointed at the deleted path.
 > Body below is the original 2026-05-21 content, verbatim.
+
+## 2026-08-09 — DO NOT execute the task below as written
+
+Surfaced by `lifecycle.py issues --drafts`, which flagged this prompt for citing
+a now-closed issue (PyAutoLens#514, closed 2026-05-16). Chasing that flag against
+upstream `main` found the prompt has been overtaken on three separate axes. None
+of this was checked by running the script — see "What is still unknown" below.
+
+**1. The target file moved.** The path this prompt names throughout,
+`scripts/jax_likelihood_functions/point_source/point.py`, is a 404 on
+`autolens_workspace_test@main`. It is now
+`scripts/point_source/jax_likelihood/point.py` (siblings `image_plane.py`,
+`source_plane.py` and a new `fluxes_time_delays.py` moved with it). Every path in
+the "Task" and "Pre-existing context" sections below needs rewriting before use.
+
+**2. The root cause looks fixed.** PyAutoLens `2a3f1a63` (2026-07-28, PR
+[#662](https://github.com/PyAutoLabs/PyAutoLens/pull/662)) — *"give
+`FitPositionsImagePairAll` a no-image floor; recover from zero images"* —
+describes exactly the mechanism this prompt reports:
+
+> `FitPositionsImagePairAll.chi_squared` returned NaN with no model positions
+> […] `fitness.py` converts a NaN log-likelihood into `resample_figure_of_merit`,
+> so the model was silently resampled instead of scored […] `FitPositionsImagePair`
+> and `FitPositionsImagePairRepeat` both already applied that floor; `PairAll` was
+> the one sibling that did not.
+
+`resample_figure_of_merit` **is** the `-1.0e99` sentinel this prompt observes, and
+`PairAll` is the fit class it exercises. That commit landed as phase 1 of the
+@rhayes777 audit epic (PyAutoArray#415), not from this prompt — so this is
+incidental repair, which is exactly the class of drift the Mind keeps missing.
+
+**3. The fit class under test changed default.** PyAutoLens `d838ca59`
+(2026-08-01, breaking) switched `AnalysisPoint` to default to
+`FitPositionsImagePairAllSolved`. The script constructs `al.AnalysisPoint(...)`
+without an explicit `fit_positions_cls`, so it no longer exercises the class this
+prompt is about. Consistent with that, `point.py` on main has gained a second
+assertion block pinned at `EXPECTED_VMAP_LOG_LIKELIHOOD_POINT_ALL_SOLVED =
+-82.33883111` — a finite value, not a sentinel.
+
+**What is still unknown.** The original `-83.38049778` assertion survives verbatim
+on main (line ~233). That proves nothing either way: this prompt's own doctrine is
+to leave a failing literal in place while the bug is open, so its presence is
+equally consistent with "still broken" and with "fixed but never re-run". Settling
+it needs one laptop run of the relocated script against current library `main` —
+which a cloud session cannot do (needs the JAX stack plus the committed seed
+dataset; note the standing "do not run under `PYAUTO_SMALL_DATASETS=1`" warning
+below, which would delete that seed data).
+
+**Next step:** run it. Then either close this prompt out as shipped-by-#662 and
+rebaseline the literal, or rewrite the paths and the fit-class assumption and
+keep it open against whatever actually reproduces.
+
+---
 
 Smoke regression surfaced during the `fast-viz-zero-contour-perf` task
 (workspace PR https://github.com/PyAutoLabs/autolens_workspace_test/pull/111).

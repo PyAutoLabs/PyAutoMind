@@ -357,6 +357,128 @@ def test_unreadable_issue_state_is_reported_not_swallowed(tmp_path):
 
 
 # --------------------------------------------------------------------------- #
+# the default fetcher itself
+#
+# Everything above injects `fetch`, which is what keeps those tests hermetic —
+# but it also means the real `_gh_issue_states` shim, the thing that runs on a
+# machine that HAS gh, was never executed by the suite. These tests drive it
+# with `subprocess.run` stubbed, so the argv, the parsing and both failure
+# modes are pinned without a network or a `gh` binary.
+#
+# `_gh_issue_states` does `import subprocess` inside the function body, which
+# rebinds the same module object from sys.modules — so patching the attribute
+# on the real module reaches it.
+# --------------------------------------------------------------------------- #
+class _Completed:
+    """Stand-in for subprocess.CompletedProcess."""
+
+    def __init__(self, returncode=0, stdout="", stderr=""):
+        self.returncode = returncode
+        self.stdout = stdout
+        self.stderr = stderr
+
+
+def _stub_run(monkeypatch, handler):
+    """Patch subprocess.run, recording every argv the shim builds."""
+    import subprocess
+
+    calls = []
+
+    def fake_run(argv, **kwargs):
+        calls.append(argv)
+        return handler(argv)
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    return calls
+
+
+def test_default_fetcher_builds_the_gh_argv_and_parses_state(monkeypatch):
+    """The happy path: one `gh api` call per URL, `.state` jq-extracted, and
+    the trailing newline gh emits stripped off."""
+    calls = _stub_run(monkeypatch, lambda argv: _Completed(stdout="open\n"))
+
+    states = lifecycle._gh_issue_states([GHOST_ISSUE])
+
+    assert states == {GHOST_ISSUE: "open"}
+    assert calls == [
+        [
+            "gh",
+            "api",
+            "repos/FictionalOrg/FlywheelRepo/issues/17",
+            "--jq",
+            ".state",
+        ]
+    ]
+
+
+def test_default_fetcher_raises_gh_unavailable_when_gh_is_missing(monkeypatch):
+    """The one error the command turns into "could not run" rather than a
+    finding — so it must be the exception type, not a state string."""
+    import pytest
+
+    def _missing(argv):
+        raise FileNotFoundError(2, "No such file or directory: 'gh'")
+
+    _stub_run(monkeypatch, _missing)
+
+    with pytest.raises(lifecycle.GhUnavailable):
+        lifecycle._gh_issue_states([GHOST_ISSUE])
+
+
+def test_default_fetcher_reports_a_failed_call_as_unreadable(monkeypatch):
+    """gh ran and said no (404, revoked token, rate limit). That is a finding,
+    not a crash — and `issue_problems` grades any non-'open' state, so the
+    string it stores must not be mistaken for 'closed'."""
+    _stub_run(
+        monkeypatch,
+        lambda argv: _Completed(
+            returncode=1,
+            stderr="gh: Not Found (HTTP 404)\n",
+        ),
+    )
+
+    states = lifecycle._gh_issue_states([GHOST_ISSUE])
+
+    assert states[GHOST_ISSUE].startswith("unreadable: ")
+    assert "HTTP 404" in states[GHOST_ISSUE]
+    assert states[GHOST_ISSUE] != "closed"
+
+
+def test_default_fetcher_survives_a_failure_with_no_stderr(monkeypatch):
+    """The `or ["error"]` fallback: a non-zero exit with empty stderr must not
+    IndexError its way out of the whole check."""
+    _stub_run(monkeypatch, lambda argv: _Completed(returncode=1, stderr="   \n"))
+
+    assert lifecycle._gh_issue_states([GHOST_ISSUE]) == {GHOST_ISSUE: "unreadable: error"}
+
+
+def test_default_fetcher_skips_anything_that_is_not_an_issue_url(monkeypatch):
+    """Guards the loop's `if not m: continue` — a malformed entry costs no
+    subprocess call and contributes no state, rather than querying nonsense."""
+    calls = _stub_run(monkeypatch, lambda argv: _Completed(stdout="open\n"))
+
+    states = lifecycle._gh_issue_states(["(no issue — a release drive)"])
+
+    assert states == {}
+    assert calls == []
+
+
+def test_default_fetcher_reads_each_url_in_a_mixed_batch(monkeypatch):
+    """Two URLs, different answers — the shim must key states by URL rather
+    than collapsing or reusing the last result."""
+
+    def _by_number(argv):
+        return _Completed(stdout="closed\n" if argv[2].endswith("/18") else "open\n")
+
+    _stub_run(monkeypatch, _by_number)
+
+    assert lifecycle._gh_issue_states([GHOST_ISSUE, OTHER_ISSUE]) == {
+        GHOST_ISSUE: "open",
+        OTHER_ISSUE: "closed",
+    }
+
+
+# --------------------------------------------------------------------------- #
 # the mirror direction — active/ prompts no registry claims
 # --------------------------------------------------------------------------- #
 def test_unclaimed_active_prompt_is_an_orphan(tmp_path):
