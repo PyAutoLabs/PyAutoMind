@@ -298,10 +298,41 @@ Free-form markdown. Strong conventions:
   Autonomy: supervised      # safe | supervised | human-required
   Priority: normal          # low | normal | high
   Status: draft
+  Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
   ```
 
   When present, `Type:` should match the work-type folder. The goal is light
   structure, not bureaucracy — prompts stay free-form prose.
+
+  **Declaring a gate — `Closes-when:` / `Blocked-by:`.** Both optional. A prompt
+  that waits on something external can say so in a form `lifecycle.py issues
+  --drafts` can grade:
+
+  ```markdown
+  Closes-when: autolens_profiling#70    # this prompt is DONE when that closes
+  Blocked-by: PyAutoArray#431, PyAutoGalaxy#486   # READY TO START when all close
+  ```
+
+  The two readings are **opposite**, which is the whole point. Prose cannot be
+  graded, so a cited issue could mean either and `--drafts` had to report every
+  one as the same ambiguous question. With a declared key the tool reports the
+  action instead: a closed `Closes-when:` says *likely shipped, verify and
+  retire*; a closed `Blocked-by:` says *ready to start*. Prompts declaring a gate
+  drop out of the ambiguous advisory list.
+
+  Notes:
+  - Accepts `Repo#123` shorthand (assumed `PyAutoLabs/`) or a full URL, and PRs
+    as well as issues. Several refs may be comma-separated.
+  - `Blocked-by:` clears only when **every** ref closes; a partly-satisfied gate
+    is reported in its own weaker band rather than as ready.
+  - Keys inside fenced code blocks are documentation and are ignored, so a prompt
+    may show the syntax without declaring a gate.
+  - Advisory, never a gate on the exit code: retiring a prompt writes to
+    `complete/` and stays a human act.
+
+  Motivated by the 2026-08-09 `draft/` sweep, where five prompts' stated gates
+  had closed without anyone noticing — including one whose exit condition was met
+  the same day it was written.
 
   The optional `Difficulty:` / `Autonomy:` / `Priority:` keys let both people and
   PyAutoBrain see, at a glance, how hard a task is, whether an agent can safely

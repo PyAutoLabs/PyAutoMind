@@ -537,3 +537,110 @@ def test_archive_material_does_not_satisfy_a_prompt_path(tmp_path):
     problems = lifecycle.registry_problems(root)
     assert len(problems) == 1
     assert "does not resolve" in problems[0]
+
+
+# --------------------------------------------------------------------------- #
+# declared draft gates (`Closes-when:` / `Blocked-by:`)
+#
+# The 2026-08-09 draft/ sweep found five prompts whose stated gate had closed,
+# and the two readings are OPPOSITE: a satisfied "epic closes when #N" means the
+# prompt is DONE, a satisfied "blocked until #N merges" means it is READY. Prose
+# cannot be graded, so `--drafts` had to report both as one ambiguous question.
+# --------------------------------------------------------------------------- #
+def _draft(root: Path, rel: str, body: str) -> Path:
+    p = root / "draft" / rel
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(body)
+    return p
+
+
+GATE_ISSUE = "https://github.com/FictionalOrg/FlywheelRepo/issues/77"
+GATE_ISSUE_2 = "https://github.com/FictionalOrg/GadgetRepo/issues/88"
+
+
+def test_closes_when_gate_closed_reads_as_shipped(tmp_path):
+    _draft(tmp_path, "bug/flywheel/sprocket.md",
+           f"# Sprocket\n\nCloses-when: {GATE_ISSUE}\n")
+    notes = lifecycle.draft_gate_notes(tmp_path, fetch=_states({GATE_ISSUE: "closed"}))
+    assert len(notes["shipped"]) == 1
+    assert "likely shipped" in notes["shipped"][0]
+    assert notes["unblocked"] == []
+
+
+def test_blocked_by_gate_closed_reads_as_unblocked(tmp_path):
+    """The opposite reading — and the whole reason the two keys are distinct."""
+    _draft(tmp_path, "bug/flywheel/sprocket.md",
+           f"# Sprocket\n\nBlocked-by: {GATE_ISSUE}\n")
+    notes = lifecycle.draft_gate_notes(tmp_path, fetch=_states({GATE_ISSUE: "closed"}))
+    assert len(notes["unblocked"]) == 1
+    assert "ready to start" in notes["unblocked"][0]
+    assert notes["shipped"] == []
+
+
+def test_open_gate_is_silent(tmp_path):
+    _draft(tmp_path, "bug/flywheel/sprocket.md",
+           f"# Sprocket\n\nBlocked-by: {GATE_ISSUE}\n")
+    notes = lifecycle.draft_gate_notes(tmp_path, fetch=_states({GATE_ISSUE: "open"}))
+    assert notes == {"shipped": [], "unblocked": [], "partial": [], "unreadable": []}
+
+
+def test_repo_hash_shorthand_is_read_as_a_gate(tmp_path):
+    """Prompts write `Repo#123`, not URLs. A URL-only extractor found 2 refs
+    across the real backlog where the shorthand form found 8."""
+    _draft(tmp_path, "bug/flywheel/sprocket.md",
+           "# Sprocket\n\nBlocked-by: FlywheelRepo#77   # the loader fix\n")
+    refs = lifecycle.draft_gate_refs(tmp_path)
+    assert len(refs) == 1
+    assert refs[0][1] == "blocked-by"
+    assert refs[0][2].endswith("/FlywheelRepo/issues/77")
+
+
+def test_partly_closed_gates_are_not_reported_as_ready(tmp_path):
+    """A prompt blocked on three PRs is unblocked when the LAST one lands.
+    Reporting per-reference would claim 'ready to start' while still blocked."""
+    _draft(tmp_path, "bug/flywheel/sprocket.md",
+           f"# Sprocket\n\nBlocked-by: {GATE_ISSUE}, {GATE_ISSUE_2}\n")
+    notes = lifecycle.draft_gate_notes(
+        tmp_path, fetch=_states({GATE_ISSUE: "closed", GATE_ISSUE_2: "open"}))
+    assert notes["unblocked"] == []
+    assert len(notes["partial"]) == 1
+    assert "1 of 2" in notes["partial"][0]
+
+
+def test_all_gates_closed_reports_once_not_per_reference(tmp_path):
+    _draft(tmp_path, "bug/flywheel/sprocket.md",
+           f"# Sprocket\n\nBlocked-by: {GATE_ISSUE}, {GATE_ISSUE_2}\n")
+    notes = lifecycle.draft_gate_notes(
+        tmp_path, fetch=_states({GATE_ISSUE: "closed", GATE_ISSUE_2: "closed"}))
+    assert len(notes["unblocked"]) == 1
+
+
+def test_a_fenced_example_is_documentation_not_a_declaration(tmp_path):
+    """The prompt that PROPOSED these keys shows them in a ```markdown block.
+    Reading that as a real gate would invent a finding out of documentation."""
+    _draft(tmp_path, "feature/mind/gate_keys.md",
+           "# Propose gate keys\n\n"
+           "Proposal:\n\n"
+           "```markdown\n"
+           f"Closes-when: {GATE_ISSUE}\n"
+           "```\n\n"
+           "That is the idea.\n")
+    assert lifecycle.draft_gate_refs(tmp_path) == []
+
+
+def test_declared_gates_are_not_repeated_as_ambiguous_advisories(tmp_path):
+    """`--drafts` asks 'shipped, or newly unblocked?' precisely because prose
+    cannot say. A prompt that DECLARED which it means must not be asked again."""
+    _draft(tmp_path, "bug/flywheel/sprocket.md",
+           f"# Sprocket\n\nBlocked-by: {GATE_ISSUE}\n\nContext: {GATE_ISSUE}\n")
+    fetch = _states({GATE_ISSUE: "closed"})
+    assert lifecycle.draft_gate_notes(tmp_path, fetch=fetch)["unblocked"]
+    assert lifecycle.draft_issue_notes(tmp_path, fetch=fetch) == []
+
+
+def test_an_undeclared_draft_still_gets_the_ambiguous_advisory(tmp_path):
+    """The fallback must survive: most prompts carry no gate key at all."""
+    _draft(tmp_path, "bug/flywheel/widget.md", f"# Widget\n\nFollow-up to {GATE_ISSUE}\n")
+    notes = lifecycle.draft_issue_notes(tmp_path, fetch=_states({GATE_ISSUE: "closed"}))
+    assert len(notes) == 1
+    assert "shipped, or newly unblocked?" in notes[0]

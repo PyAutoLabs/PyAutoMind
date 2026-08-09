@@ -343,8 +343,13 @@ def draft_issue_notes(root: Path, fetch=None) -> "list[str]":
     registry entry's `issue:` is its OWN tracking issue, so closed means done. A
     draft usually cites an issue as CONTEXT — "Once #480 is fixed…", "Follow-up
     to #57" — so closed can mean the draft is newly UNBLOCKED rather than
-    finished. Both readings are worth a human look; neither is a gate."""
-    refs = draft_issue_refs(root)
+    finished. Both readings are worth a human look; neither is a gate.
+
+    For the drafts that DO state which reading applies, see `draft_gate_notes`:
+    an explicit `Closes-when:` / `Blocked-by:` header removes exactly this
+    ambiguity, and those drafts are reported there instead of here."""
+    gated = {path for path, _, _ in draft_gate_refs(root)}
+    refs = [(p, u) for p, u in draft_issue_refs(root) if p not in gated]
     if not refs:
         return []
     fetch = fetch or _gh_issue_states
@@ -354,6 +359,133 @@ def draft_issue_notes(root: Path, fetch=None) -> "list[str]":
         for path, url in refs
         if states.get(url) == "closed"
     ]
+
+
+# --------------------------------------------------------------------------- #
+# draft gates
+#
+# The 2026-08-09 draft/ sweep found five prompts whose stated gate had since
+# closed, and the two readings are OPPOSITE: `test_mode_representative_outputs`
+# said "EPIC CLOSES when #70 ships its recipe leg" (gate closed => the prompt is
+# DONE), while `unpark_imaging_scaling_relation_slam` said "BLOCKED until
+# PyAutoArray PR#431 merges" (gate closed => the prompt is READY TO START).
+# Prose cannot be graded, so `--drafts` had to lump both into one "shipped, or
+# newly unblocked?" note. These keys let a prompt say which it means.
+# --------------------------------------------------------------------------- #
+GATE_FIELDS = ("closes-when", "blocked-by")
+#: `Repo#123` shorthand as well as full URLs — prompts overwhelmingly write the
+#: former, and a URL-only extractor found 2 refs across the backlog where the
+#: shorthand form found 8 (2026-08-09 measurement).
+GATE_REF_RE = re.compile(
+    r"https://github\.com/([\w.-]+)/([\w.-]+)/(?:issues|pull)/(\d+)"
+    r"|(?<![\w/])([A-Za-z_][\w.]*)#(\d+)\b"
+)
+_GATE_KEY_RE = re.compile(r"^\s*(closes-when|blocked-by)\s*:\s*(.+?)\s*$", re.I)
+DEFAULT_GATE_OWNER = "PyAutoLabs"
+
+
+def _gate_url(match: "re.Match") -> "str | None":
+    """Normalise either GATE_REF_RE alternative to a canonical issues URL.
+
+    `Repo#123` cannot say whether 123 is an issue or a PR, and the GitHub API
+    resolves an issues URL for both (a PR *is* an issue), so the issues form is
+    the safe canonical shape."""
+    owner, repo, num, short_repo, short_num = match.groups()
+    if owner:
+        return f"https://github.com/{owner}/{repo}/issues/{num}"
+    if short_repo:
+        return f"https://github.com/{DEFAULT_GATE_OWNER}/{short_repo}/issues/{short_num}"
+    return None
+
+
+def draft_gate_refs(root: Path) -> "list[tuple[str, str, str]]":
+    """(draft_path, gate_kind, url) for drafts carrying a gate header key.
+
+    `gate_kind` is `closes-when` or `blocked-by` — the two opposite readings.
+    A key may list several refs; each becomes its own entry, because a prompt
+    blocked on three PRs is only unblocked when the last one lands."""
+    draft = root / "draft"
+    if not draft.is_dir():
+        return []
+    refs = []
+    for f in sorted(draft.rglob("*.md")):
+        rel = str(f.relative_to(root))
+        in_fence = False
+        for line in f.read_text(errors="replace").splitlines():
+            # Fenced blocks are documentation, not declarations. Prompts that
+            # *describe* these keys (this feature's own prompt does, in a
+            # ```markdown example) must not be read as declaring them.
+            if line.lstrip().startswith("```"):
+                in_fence = not in_fence
+                continue
+            if in_fence:
+                continue
+            m = _GATE_KEY_RE.match(line)
+            if not m:
+                continue
+            kind = m.group(1).lower()
+            for ref in GATE_REF_RE.finditer(m.group(2)):
+                url = _gate_url(ref)
+                if url:
+                    refs.append((rel, kind, url))
+    return refs
+
+
+def draft_gate_notes(root: Path, fetch=None) -> "dict[str, list[str]]":
+    """Drafts whose declared gate has closed, split by what that MEANS.
+
+    Returns `{"shipped": [...], "unblocked": [...], "partial": [...],
+    "unreadable": [...]}`. Unlike `draft_issue_notes` these are unambiguous —
+    the prompt author said which reading applies — so each line states the
+    action rather than asking a question.
+
+    Aggregated PER PROMPT, not per reference: a prompt blocked on three PRs is
+    unblocked only when the last one lands, so reporting each ref separately
+    would claim "ready to start" three times while it is still blocked. A
+    partially-satisfied `Blocked-by:` is reported in its own weaker band, which
+    is the real state of `ep_analytic_updates` (its WP1 gate merged; the WP3/WP4
+    gates are open).
+
+    Still advisory, and deliberately so: a satisfied `Closes-when:` is strong
+    evidence the work is done, but retiring a prompt writes to `complete/` and
+    stays a human act (the same contract `intake reconcile` keeps)."""
+    refs = draft_gate_refs(root)
+    out = {"shipped": [], "unblocked": [], "partial": [], "unreadable": []}
+    if not refs:
+        return out
+    fetch = fetch or _gh_issue_states
+    states = fetch(sorted({url for _, _, url in refs}))
+
+    grouped: "dict[tuple[str, str], list[str]]" = {}
+    for path, kind, url in refs:
+        grouped.setdefault((path, kind), []).append(url)
+
+    for (path, kind), urls in sorted(grouped.items()):
+        got = [(u, states.get(u, "unknown")) for u in urls]
+        bad = [f"{u} ({s})" for u, s in got if s not in ("open", "closed")]
+        if bad:
+            out["unreadable"].append(
+                f"{path}: could not read {len(bad)} declared gate(s): "
+                + ", ".join(bad))
+            continue
+        closed = [u for u, s in got if s == "closed"]
+        if not closed:
+            continue
+        joined = ", ".join(closed)
+        if len(closed) < len(got):
+            still = ", ".join(u for u, s in got if s == "open")
+            out["partial"].append(
+                f"{path}: {len(closed)} of {len(got)} `{kind}:` gates closed — "
+                f"partly ready; still open: {still}")
+        elif kind == "closes-when":
+            out["shipped"].append(
+                f"{path}: every `Closes-when:` gate is CLOSED — the prompt's own "
+                f"exit condition is met, so this is very likely shipped: {joined}")
+        else:
+            out["unblocked"].append(
+                f"{path}: every `Blocked-by:` gate is CLOSED — ready to start, "
+                f"not blocked: {joined}")
+    return out
 
 
 def cmd_issues(args) -> int:
@@ -370,8 +502,10 @@ def cmd_issues(args) -> int:
         )
         return 2
     notes = []
+    gates = {"shipped": [], "unblocked": [], "partial": [], "unreadable": []}
     if getattr(args, "drafts", False):
         try:
+            gates = draft_gate_notes(ROOT)
             notes = draft_issue_notes(ROOT)
         except GhUnavailable:
             pass  # unreachable: issue_problems above would already have raised
@@ -383,10 +517,35 @@ def cmd_issues(args) -> int:
     else:
         print(f"lifecycle issues: OK ({len(registry_issue_refs(ROOT))} tracking issue(s) open)")
 
+    # Declared gates first: the prompt author said which reading applies, so
+    # these are actionable rather than a question. Still advisory — retiring a
+    # prompt writes to complete/ and stays human.
+    if gates["shipped"]:
+        print(f"\nGATE MET — {len(gates['shipped'])} draft(s) whose `Closes-when:` "
+              f"has closed (likely shipped; verify, then retire):")
+        for line in gates["shipped"]:
+            print(f"  ! {line}")
+    if gates["unblocked"]:
+        print(f"\nUNBLOCKED — {len(gates['unblocked'])} draft(s) whose `Blocked-by:` "
+              f"has closed (ready to start):")
+        for line in gates["unblocked"]:
+            print(f"  > {line}")
+    if gates["partial"]:
+        print(f"\npartly unblocked — {len(gates['partial'])} draft(s) with some "
+              f"gates closed:")
+        for line in gates["partial"]:
+            print(f"  ~ {line}")
+    if gates["unreadable"]:
+        print(f"\nunreadable — {len(gates['unreadable'])} declared gate(s):")
+        for line in gates["unreadable"]:
+            print(f"  ? {line}")
+
     # Advisory only — never affects the exit code. A draft citing a closed issue
-    # may be shipped OR newly unblocked; that is a judgement, not drift.
+    # with no declared gate may be shipped OR newly unblocked; that is a
+    # judgement, not drift. Drafts that DO declare a gate are reported above
+    # instead, so this list is the genuinely-ambiguous remainder.
     if notes:
-        print(f"\nadvisory — {len(notes)} draft(s) citing a closed issue:")
+        print(f"\nadvisory — {len(notes)} undeclared draft(s) citing a closed issue:")
         for line in notes:
             print(f"  ? {line}")
 

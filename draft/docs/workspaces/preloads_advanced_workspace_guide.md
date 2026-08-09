@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Blocked-by: PyAutoLens#565    # the Preloads API landing in PyAutoArray — CLOSED 2026-07-10
 
 Write an **advanced** guide, in both `@autolens_workspace` and `@autogalaxy_workspace`, on the
 `Preloads` API (`aa.PreloadsInterferometer`, `aa.AbstractPreloads`, and `PreloadsImaging` if added)
