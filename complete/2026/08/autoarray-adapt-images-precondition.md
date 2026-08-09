@@ -1,3 +1,78 @@
+Phase 3 of the @rhayes777 API audit —
+[PyAutoArray#332](https://github.com/PyAutoLabs/PyAutoArray/issues/332), error
+legibility for the missing-`adapt_images` precondition.
+
+**Shipped:** PyAutoArray#442, squash-merged `5dedb5e` 2026-08-09. #332 closed.
+Epic PyAutoArray#415 stays open for phase 4 only.
+
+## Delivered
+
+Omitting `adapt_images` with `Delaunay` / `KNearestNeighbor` / `KNNBarycentric` used
+to surface as `AttributeError: 'NoneType' object has no attribute 'array'` from inside
+`border_relocator.py` — naming nothing the caller controls, in a file they have never
+opened. It now raises `exc.MeshException` naming `adapt_images`, showing the
+`AdaptImages` idiom, and noting the rectangular family needs none.
+
+Guard sits at `Delaunay.interpolator_from`, inherited by `KNearestNeighbor` and
+`KNNBarycentric`, so one check covers all three adaptive meshes.
+
+## The decision this task had to make, and record
+
+The issue offered two routes and the reporter raised the first himself ("the wiring
+... probably needs to move inside the mesh classes themselves"):
+
+1. the mesh wires the image-plane grid up itself
+2. fail fast, naming `adapt_images`
+
+**Chose 2.** Building an image-plane mesh grid requires a *weighting policy* — which is
+exactly what `adapt_images` carries. Inventing one inside the mesh would silently make
+a science choice on the user's behalf, in precisely the case where they have signalled
+nothing. Matches phase 1's handling of the rectangular/split combination (#417): an
+explicit "you must supply X" rather than implementing a missing capability. The
+reasoning is stated in the PR body and in the reply on #332, and the reporter is
+invited to push back.
+
+## The trap this prompt existed to avoid — avoided
+
+The campaign prompt carried an explicit warning: an earlier revision said "any fix must
+land with a regression test built the reporter's way", which followed literally would
+assert that bare construction **succeeds** — enshrining the misreading in the issue
+headline.
+
+The tests assert the **clear failure** instead, plus controls that each adaptive mesh
+*does* build when given its grid. So if these meshes ever genuinely break, the controls
+fail and the public correction gets revisited rather than quietly becoming wrong.
+
+Re-verified the headline correction on the branch (integration level, real
+`FitImaging`): `Delaunay + Constant + adapt_images`, `KNNBarycentric + Constant +
+adapt_images`, `Delaunay + ConstantSplit + adapt_images` all fit, and
+`RectangularUniform + Constant` fits with no `adapt_images`.
+
+## Correction to the recorded diagnosis
+
+The prompt (and `planned.md`) stated the `None` was the `grid` argument at
+`border_relocator.py:446`. It is actually **`mesh_grid`** at line 450. Same fix, but
+the note was wrong and is now corrected in both places.
+
+## Validation
+
+- Full suite **991 passed / 51 skipped**, **+10 new tests**
+  (`test_autoarray/inversion/pixelization/mesh/test_adapt_images_precondition.py`).
+- The 3 `test_transformer.py` pynufft failures are **pre-existing on main** (baselined
+  by stashing and re-running), tracked by
+  `draft/bug/autoarray/pynufft_scipy_pinv2_dev_extra.md`.
+- CI green on 3.12 and 3.13. **Zero regressions.**
+
+## Not in scope, confirmed untouched
+
+Part 2 of #332 (`ConstantSplit` on `RectangularUniform`) shipped in phase 1 (#417,
+`9411904d`) covering all 9 rectangular × split combinations. The recorded phase-1
+residue — that the guard fires at `Pixelization` instantiation rather than `af.Model`
+composition time, so "fails before Nautilus starts" was never confirmed — remains an
+open follow-up, unaddressed here.
+
+## Original prompt
+
 # PyAutoArray#332: make the missing-`adapt_images` precondition fail legibly
 
 Type: bug

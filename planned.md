@@ -1,6 +1,6 @@
 ## rhayes-audit-validation-phases-2-4
 - epic: https://github.com/PyAutoLabs/PyAutoArray/issues/415 (OPEN — the public watch point promised to @rhayes777 in all five replies)
-- status: planned — phase 1 MERGED and closed 2026-07-29 (PyAutoArray#417 `9411904d`, PyAutoLens#662 `2a3f1a63`, tracker #416 closed, PyAutoLens#531 closed); worktree released, no repo claims held
+- status: **PHASES 1-3 ALL SHIPPED; ONLY PHASE 4 REMAINS (held on the reporter).** phase 1 MERGED and closed 2026-07-29 (PyAutoArray#417 `9411904d`, PyAutoLens#662 `2a3f1a63`, tracker #416 closed, PyAutoLens#531 closed); worktree released, no repo claims held
 - filed: 2026-07-28 · phase-1 shipped 2026-07-28
 - classification: library (PyAutoArray + PyAutoGalaxy + PyAutoLens) — bug, user-facing
 - prompt: draft/bug/autoarray/rhayes_audit_validation_and_crashes.md — CAMPAIGN RECORD ONLY as of 2026-08-09 (phase-1 completion record + the phase 2-4 table); do NOT $start-dev it, start one of the four per-issue prompts below
@@ -8,9 +8,9 @@
   - ~~rhayes_333_input_validation_guards.md~~ — PyAutoArray#333, phase 2. **SHIPPED 2026-08-09**: PyAutoArray#440 squash-merged `f2f7a4f`, #333 closed, tracker #439 closed. Record: `complete/2026/08/autoarray-input-validation-guards.md`.
   - ~~rhayes_440_profile_validation_guards.md~~ — PyAutoGalaxy#440, phase 2 + B10. **SHIPPED 2026-08-09**: PyAutoGalaxy#566 squash-merged `a366f77`, #440 closed. Record: `complete/2026/08/autogalaxy-profile-validation-guards.md`. Also carried the negative-redshift half of #532 (see the ownership note below).
   - ~~rhayes_532_tracer_validation_guards.md~~ — PyAutoLens#532, phase 2 (B4). **SHIPPED 2026-08-09**: PyAutoLens#696 squash-merged `65183d1`, #532 closed. Record: `complete/2026/08/autolens-tracer-validation-guards.md`.
-  - active/rhayes_332_adapt_images_precondition_error.md — PyAutoArray#332, phase 3. **IN FLIGHT 2026-08-09** as PyAutoArray#442 (PR open, CI running).
+  - ~~rhayes_332_adapt_images_precondition_error.md~~ — PyAutoArray#332, phase 3. **SHIPPED 2026-08-09**: PyAutoArray#442 squash-merged `5dedb5e`, #332 closed. Record: `complete/2026/08/autoarray-adapt-images-precondition.md`.
 - suggested-branch: feature/api-validation-guards (per-prompt branches now; one PR each)
-- open-issues: PyAutoArray#332, PyAutoGalaxy#440, PyAutoLens#532 stay open until phases 2-3 land. **PyAutoArray#333 CLOSED 2026-08-09.**
+- open-issues: **ALL FOUR CLOSED 2026-08-09** — PyAutoArray#333, PyAutoArray#332, PyAutoGalaxy#440, PyAutoLens#532. Only the epic PyAutoArray#415 stays open, for phase 4.
 - phase-2: **COMPLETE 2026-08-09.** All three PRs merged — PyAutoArray#440 (`f2f7a4f`), PyAutoGalaxy#566 (`a366f77`), PyAutoLens#696 (`65183d1`). Issues #333, #440, #532 all closed.
 - **#532 ownership note (worth remembering):** the negative-redshift half of PyAutoLens#532 was implemented in **PyAutoGalaxy**, not PyAutoLens. `al.Galaxy` IS `ag.Galaxy`, so the class and its `redshift` assignment live at `autogalaxy/galaxy/galaxy.py:52`; a Tracer-level check would have missed a bare `al.Galaxy(redshift=-0.5)`, which is the reported reproduction. **The repo an issue is filed on is where the user hit it, not necessarily where the attribute is set — check the assignment site before scoping.**
 - **phase-4 guard-rails ARE NOW IN PLACE.** Control tests pin today's permissive `z_lens > z_source` behaviour at both `Galaxy` (PyAutoGalaxy#566) and `Tracer` (PyAutoLens#696) level. Phase 4 cannot turn it into an error without those tests failing — which is the intended tripwire, not an obstacle.
@@ -19,7 +19,7 @@
   - Message shape: `"<name> must be <rule>; got <value!r>"` + an optional sentence of guidance. Name the parameter, state the rule, show the value.
   - Tracer-safe form: gate every value guard on `is_concrete_scalar`; pass non-concrete values through untouched. Shape/container checks need no gate. VERIFIED against real JAX 0.11.0.
   - Zero is permitted where it is a meaningful degenerate request (regularization coefficient, redshift); only negatives and non-finites are rejected.
-- phase-3: **B10 SHIPPED** with PyAutoGalaxy#566 (tolerance pins). **#332 IN FLIGHT** as PyAutoArray#442. Diagnosis correction from that work: the `None` is `mesh_grid` (`border_relocator.py:450`), NOT `grid` (line 446) as recorded here previously.
+- phase-3: **COMPLETE 2026-08-09.** B10 shipped with PyAutoGalaxy#566 (tolerance pins); #332 shipped as PyAutoArray#442 (`5dedb5e`). #332 decision recorded: fail-fast naming `adapt_images` rather than having the mesh self-wire the image-plane grid (the reporter's own suggestion) — building that grid needs a weighting policy, which is what `adapt_images` carries, so self-wiring would silently make a science choice for the user. Diagnosis correction: the `None` is `mesh_grid` (`border_relocator.py:450`), NOT `grid` (line 446) as recorded here previously.
 - **NEW finding, not from the audit — needs its own prompt:** while pinning B10, the Ell/Sph **potential** was measured as well as the deflections the report covered. `Isothermal(ell_comps=(0,0))` vs `IsothermalSph` agree to 1.9e-03 RELATIVE on the potential, versus 2.4e-06 on deflections and 1.5e-06 on convergence — three orders of magnitude worse, for two forms that are analytically identical. NOT fixed; the tolerance is pinned at the observed level as a ratchet with a docstring saying so. Possibly the same class as `draft/bug/autogalaxy/nfw_truncated_potential_accuracy.md` (MGE potential accuracy) — worth investigating together.
 - phase-4 HELD: `z_lens > z_source` warning — question put to @rhayes777 on PyAutoLens#532 2026-07-28, no reply yet. Multi-plane lens-behind-source is legitimate, so warning at most, never an error.
 - affected-repos:
