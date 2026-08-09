@@ -5,13 +5,18 @@
 - classification: library (PyAutoArray + PyAutoGalaxy + PyAutoLens) — bug, user-facing
 - prompt: draft/bug/autoarray/rhayes_audit_validation_and_crashes.md — CAMPAIGN RECORD ONLY as of 2026-08-09 (phase-1 completion record + the phase 2-4 table); do NOT $start-dev it, start one of the four per-issue prompts below
 - split-2026-08-09: phases 2-3 spanned 3 repos / 4 issues — more than one PR — so they were split one-prompt-per-issue:
-  - active/rhayes_333_input_validation_guards.md — PyAutoArray#333, phase 2. **ANCHOR: owns the shared `_validate_*` home decision. Ship first.** IN FLIGHT 2026-08-09 as PyAutoArray#439 (advanced draft/ → active/); see active.md `autoarray-input-validation-guards`.
-  - draft/bug/autogalaxy/rhayes_440_profile_validation_guards.md — PyAutoGalaxy#440, phase 2 + B10; blocked on the #333 helper. This prompt is PyAutoGalaxy's claim.
-  - draft/bug/autolens/rhayes_532_tracer_validation_guards.md — PyAutoLens#532, phase 2 (B4 + negative redshift); blocked on the #333 helper. Phase 4 explicitly excluded.
+  - ~~rhayes_333_input_validation_guards.md~~ — PyAutoArray#333, phase 2. **SHIPPED 2026-08-09**: PyAutoArray#440 squash-merged `f2f7a4f`, #333 closed, tracker #439 closed. Record: `complete/2026/08/autoarray-input-validation-guards.md`.
+  - draft/bug/autogalaxy/rhayes_440_profile_validation_guards.md — PyAutoGalaxy#440, phase 2 + B10. **UNBLOCKED 2026-08-09.** This prompt is PyAutoGalaxy's claim.
+  - draft/bug/autolens/rhayes_532_tracer_validation_guards.md — PyAutoLens#532, phase 2 (B4 + negative redshift). **UNBLOCKED 2026-08-09.** Phase 4 explicitly excluded.
   - draft/bug/autoarray/rhayes_332_adapt_images_precondition_error.md — PyAutoArray#332, phase 3; NO blocker, can start immediately or in parallel.
 - suggested-branch: feature/api-validation-guards (per-prompt branches now; one PR each)
-- open-issues: PyAutoArray#332, PyAutoArray#333, PyAutoGalaxy#440, PyAutoLens#532 — all stay open until phases 2-3 land
-- phase-2 (9 constructor guards; #333 B5-B8/B13 + PyAutoGalaxy#440 B9/B11/B12): **SPLIT 2026-08-09.** The PyAutoArray half (#333: B5-B8, B13) is now IN FLIGHT as `autoarray-input-validation-guards` in active.md → PyAutoArray#439, prompt `active/rhayes_333_input_validation_guards.md`. It lands the shared helper `autoarray/validate.py` and settles the `_validate_*` home question that blocked this phase (PyAutoArray is the floor, as anticipated). **Remaining here:** PyAutoGalaxy#440 (B9, B11, B12) + the negative-redshift half of #532 — these IMPORT that helper, so they are unblocked only once #439 merges; do not start them in parallel. Constructors are JAX-traced: no Python `if` on a possible tracer.
+- open-issues: PyAutoArray#332, PyAutoGalaxy#440, PyAutoLens#532 stay open until phases 2-3 land. **PyAutoArray#333 CLOSED 2026-08-09.**
+- phase-2 (9 constructor guards; #333 B5-B8/B13 + PyAutoGalaxy#440 B9/B11/B12): **HALF SHIPPED 2026-08-09.** PyAutoArray#333 done — PyAutoArray#440 merged `f2f7a4f`. **The blocker is CLEARED:** the shared helper is `autoarray/validate.py` (public), exposing `is_concrete_scalar`, `validate_positive_finite`, `validate_non_negative_finite`, `validate_pixel_scales`, `validate_shape_native`, `validate_radii_ordered`. **Remaining here:** PyAutoGalaxy#440 (B9, B11, B12) + the negative-redshift half of #532 — both now UNBLOCKED and may run in parallel with each other.
+- phase-2 CONTRACT for the two remaining prompts (do not reinvent these — import them):
+  - `from autoarray import validate`, then call the helper; do NOT write a repo-local `_validate_*`.
+  - Message shape: `"<name> must be <rule>; got <value!r}"` + an optional sentence of guidance. Name the parameter, state the rule, show the value.
+  - Tracer-safe form: every value guard is gated on `is_concrete_scalar` and passes non-concrete values through untouched. Shape checks need no gate — shapes are static under tracing. VERIFIED against real JAX 0.11.0 in the #333 work, not merely assumed.
+  - Zero is permitted where it is a meaningful degenerate request (e.g. a regularization coefficient of 0.0); only negatives and non-finites are rejected.
 - phase-3 (#332 + B10): make the missing-`adapt_images` precondition legible — today it surfaces as `AttributeError: 'NoneType' object has no attribute 'array'` from `border_relocator.py:446`, naming nothing the caller controls. The regression test asserts a CLEAR FAILURE, not a successful fit. B10 is a tolerance test only (Ell/Sph 2.357e-06) — do NOT chase bit-identity.
 - phase-4 HELD: `z_lens > z_source` warning — question put to @rhayes777 on PyAutoLens#532 2026-07-28, no reply yet. Multi-plane lens-behind-source is legitimate, so warning at most, never an error.
 - affected-repos:

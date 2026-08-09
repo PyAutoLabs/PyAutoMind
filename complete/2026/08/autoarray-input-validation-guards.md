@@ -1,3 +1,91 @@
+Phase 2 (PyAutoArray half) of the @rhayes777 API audit. Five findings on
+[PyAutoArray#333](https://github.com/PyAutoLabs/PyAutoArray/issues/333) — B5, B6, B7,
+B8, B13 — all reproducing on `main` at the start, all closed at construction.
+
+**Shipped:** PyAutoArray#440, squash-merged `f2f7a4f` 2026-08-09. Issue #333 closed;
+tracking issue #439 closed. Epic #415 stays open for phases 3-4.
+
+## Delivered
+
+Guards went in at **chokepoints**, not the five reported call sites, so coverage
+exceeded the report:
+
+| Finding | Guard site | Reach beyond the report |
+|---|---|---|
+| B6 `pixel_scales` ≤ 0 / nan | `geometry_util.convert_pixel_scales_{1d,2d}` | every `Mask2D` factory + `Grid2D.uniform` funnel through it |
+| B8 zero-length `shape_native` | `Mask2D.__init__` | every factory returns through it |
+| B7 annulus `inner >= outer` | `circular_annular` + `elliptical_annular` | the elliptical sibling had the identical hole |
+| B5 `noise_map` shape ≠ `data` | `AbstractDataset.__init__` | covers `Interferometer` and every subclass, not just `Imaging` |
+| B13 negative coefficient | all **14** regularization schemes | reporter named `Constant`; 13 siblings had the same hole |
+
+## The decision this task owned (the recorded phase-2 blocker)
+
+**Shared helper home: `autoarray/validate.py`**, public — `is_concrete_scalar`,
+`validate_positive_finite`, `validate_non_negative_finite`, `validate_pixel_scales`,
+`validate_shape_native`, `validate_radii_ordered`.
+
+**Message shape:** name the parameter, state the rule, show the received value, plus
+an optional sentence of guidance.
+
+**Tracer-safe form:** every value guard is gated on `is_concrete_scalar` and passes
+non-concrete values straight through, so a Python truth-test never reaches a tracer.
+Shape checks need no gate — shapes are static under tracing.
+
+This unblocks the two siblings, which import rather than reinvent it.
+
+## Verified, not assumed
+
+- **B13 was a live bug, not cosmetic.** Confirmed the leak empirically *before*
+  fixing: `Constant(-1.0).regularization_weights_from` returned `[-1. -1. -1. -1.]`.
+  `regularization_matrix_from` squares the coefficient and hides the sign;
+  `regularization_weights_from` returns it unsquared. The reporter had read it as
+  inert; it wasn't.
+- **Tracer-safety against real JAX 0.11.0**, not just the test stand-in: construction
+  of `reg.Constant` / `reg.Adapt` under `jax.jit` works, `jax.grad` flows through a
+  traced coefficient (grad `16.0` for `sum((c·1)²)` at `c=2` over 4 params), and a
+  concrete `-1.0` outside a trace is still rejected.
+
+## Validation
+
+- Full suite **980 passed / 52 skipped**, **+44 new tests** in
+  `test_autoarray/test_validate.py` — one regression test per finding from the
+  reporter's own snippets, plus a control per finding so no guard can pass by
+  rejecting everything.
+- The 3 `test_transformer.py` pynufft failures are **pre-existing** — baselined by
+  stashing the branch and re-running on clean `main` (identical 3). Tracked by
+  `draft/bug/autoarray/pynufft_scipy_pinv2_dev_extra.md`.
+- CI green on both `unittest (3.12)` and `unittest (3.13)`.
+- **Zero regressions.**
+
+## What the planning got wrong (worth carrying forward)
+
+- **The Bug Agent and sizing faculty both returned `too-large` (score 10) with a
+  "too large for one PR" risk.** The human chose one PR. The final diff was 130
+  insertions / 0 deletions across 16 files — small and uniform. The heuristic keys
+  off prompt length, and this prompt was long because it carried phase-1 evidence,
+  not because the change was large. **Do not let prompt length stand in for diff
+  size on a mechanical sweep.**
+- **The flagged risk of triaging existing degenerate-construction tests was ZERO.**
+  Nothing in the suite relied on a zero pixel scale, an empty shape, a swapped
+  annulus, a mismatched noise map, or a negative coefficient. Chokepoint guards were
+  cheaper than expected.
+- **A concurrent session split the same campaign on main** (`520dafc9`) while this
+  session was doing it independently. Cost one reconciliation commit. Both splits
+  reached the same four-prompt shape. Check `origin/main` for campaign-level
+  restructuring before splitting a multi-issue prompt.
+
+## Follow-ups
+
+- **Adjacent defect, found and deliberately not fixed:**
+  `geometry_util.convert_pixel_scales_2d` tests `type(pixel_scales) is float`, so an
+  `int` pixel scale is never widened to a tuple. Needs its own prompt.
+- Siblings now unblocked: `draft/bug/autogalaxy/rhayes_440_profile_validation_guards.md`
+  and `draft/bug/autolens/rhayes_532_tracer_validation_guards.md`.
+- `draft/bug/autoarray/rhayes_332_adapt_images_precondition_error.md` (phase 3) was
+  never blocked and can start any time.
+
+## Original prompt
+
 # PyAutoArray#333: constructor validation guards — and the shared `_validate_*` home
 
 Type: bug
