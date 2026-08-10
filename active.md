@@ -84,3 +84,24 @@
   build_readme --check + lychee + smoke), so scripts/misc/test/ never runs in CI
   and test_vram_config.py::test_aggregate_matches_cell_prefixed_stems is failing
   on main unnoticed. Flagged on issue #103; not folded into PR #104.
+
+## compile-axis-triage-drift
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/221
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/222 (stacked on #220, itself on #219)
+- session: cloud session https://claude.ai/code/session_01L4STU81pQP1GkMzZVvsMsv (no laptop worktree)
+- status: library-dev — COMPLETE, awaiting review. Closes the compile-axis arc:
+  all three modes now serve `--axis compile`, and AGENTS.md moves compile-time
+  profiling out of Future modes.
+- prompt: active/compile_axis_triage_drift.md
+- arc: phase 3 of 3. Phase 1 PyAutoBrain#219, phase 2 PyAutoBrain#220 +
+  autolens_profiling#104. MERGE ORDER: #219 -> #220 -> #222; each retargets to
+  main as the one below lands. autolens_profiling#104 is independent.
+- deviation-from-prompt: the prompt's five classifications assumed jax-version
+  and changed-conditions drift would reach triage. They cannot — both are
+  different comparability keys, so ingest reports them UNPINNED, never drifted.
+  Classified as bookkeeping so nothing vanishes; `host-load` added in their
+  place (what host_state was added for, and host load alone has produced 7x
+  errors in this corpus).
+- repos-claimed-on-one-line: PyAutoBrain (branch feature/compile-triage-drift).
+  Deliberately not a 2-space `  - Repo` bullet, which worktree_check_conflict
+  reads as a live worktree claim.
