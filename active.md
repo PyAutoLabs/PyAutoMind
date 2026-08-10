@@ -52,3 +52,25 @@
   Deliberately NOT written as a 2-space `  - Repo` bullet: `worktree_check_conflict`
   treats any such bullet as a live worktree claim, and there is no worktree here.
   A second session wanting PyAutoBrain should still treat this as taken.
+
+## compile-warm-baseline-dashboard
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/103
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/104 (schema leg only)
+- session: cloud session https://claude.ai/code/session_01L4STU81pQP1GkMzZVvsMsv (no laptop worktree)
+- status: workspace-dev — PARTIAL. Schema leg (cache_state / host_state /
+  record_kind / backfill of 89 records) is in PR #104. Pins + dashboard rows
+  remain; the Brain leg (`ingest --axis compile`) is blocked on PyAutoBrain#219
+  merging, since it needs that PR's `load_compile_corpus` / `compile_tier_of`.
+- prompt: active/compile_warm_baseline_dashboard.md
+- arc: phase 2 of 3 — phase 1 PyAutoBrain#218 (PR #219, CI green, awaiting merge);
+  phase 3 `draft/feature/profiling/compile_axis_triage_drift.md` not started.
+- worktree: none — cloud session; work is on pushed branches, not a
+  `~/Code/PyAutoLabs-wt/` worktree. Resume on the laptop by checking those out.
+- repos-claimed-on-one-line: autolens_profiling (branch
+  feature/compile-warm-baseline-dashboard), PyAutoBrain (branch
+  feature/compile-axis-campaign-coverage). Deliberately NOT 2-space `  - Repo`
+  bullets: `worktree_check_conflict` reads those as live worktree claims.
+- ci-gap-found: autolens_profiling runs NO pytest step (lint.yml is ruff +
+  build_readme --check + lychee + smoke), so scripts/misc/test/ never runs in CI
+  and test_vram_config.py::test_aggregate_matches_cell_prefixed_stems is failing
+  on main unnoticed. Flagged on issue #103; not folded into PR #104.
