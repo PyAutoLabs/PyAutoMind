@@ -1,5 +1,14 @@
 # Profile and speed up JAX likelihood-function compile times (all use cases)
 
+> **ABSORBED 2026-08-10 — do not start from this file.** The surviving scope (the
+> recurring cell-grid compile dashboard, per the 2026-07-28 note below) is now the
+> workspace leg of
+> `draft/feature/profiling/compile_warm_baseline_dashboard.md`, phase 2 of the
+> compile-axis arc `draft/feature/profiling/profiling_agent_jax_compile_time_scope.md`.
+> Merged there because the dashboard and the Profiling Agent that reads it are two
+> halves of one thing, and building them from opposite ends risks incompatible
+> schemas. This file is kept for its measurements and its overturned-claim trail.
+
 > **Status note (2026-07-28):** largely superseded. The compile-time arc
 > (#71→#77) shipped cache-by-default + autotune-off and closed the speedup
 > question ("settings suffice"); this prompt's "autotuning ruled out" section
