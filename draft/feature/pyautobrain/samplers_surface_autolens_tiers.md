@@ -4,6 +4,7 @@ Type: feature
 Target: pyautobrain
 Repos:
 - PyAutoBrain
+- PyAutoMind
 Difficulty: small
 Autonomy: safe
 Priority: normal
@@ -24,6 +25,12 @@ campaign) is invisible to it:
   surface the (sampler × dataset × model_type) cell matrix (the searches
   framework's `_MULTI_START_*_BY_CELL` keys and `run_search` call args make
   this greppable).
+
+PyAutoMind is in scope because naming either repo in `_samplers.py` /
+`samplers.sh` trips the tenant firewall: `scripts/repos_sync.py`'s
+`FIREWALL_ALLOWLIST` pins both files to their current three tokens, and a *new*
+instance fact in an allowlisted file is drift. The two entries must grow with
+the change.
 
 Add both as surfaces (present-if-checkout-exists, like the existing ones),
 so a conductor consulting the faculty sees where a search × likelihood

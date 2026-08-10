@@ -624,8 +624,11 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBrain/agents/faculties/memory/memory.sh": {"autolens_assistant"},
     "PyAutoBrain/agents/faculties/review/_review.py": {"PyAutoLabs"},
     "PyAutoBrain/agents/faculties/review/review.sh": {"PyAutoLabs"},
-    "PyAutoBrain/agents/faculties/samplers/_samplers.py": {"PyAutoFit", "autofit_workspace_developer", "autofit_workspace_test"},
-    "PyAutoBrain/agents/faculties/samplers/samplers.sh": {"PyAutoFit", "autofit_workspace_developer", "autofit_workspace_test"},
+    # The two autolens tokens are the findings maturation lane's experiment and
+    # mature tiers — surfaces, not new files, so the entries grow rather than
+    # the list.
+    "PyAutoBrain/agents/faculties/samplers/_samplers.py": {"PyAutoFit", "autofit_workspace_developer", "autofit_workspace_test", "autolens_profiling", "autolens_workspace_developer"},
+    "PyAutoBrain/agents/faculties/samplers/samplers.sh": {"PyAutoFit", "autofit_workspace_developer", "autofit_workspace_test", "autolens_profiling", "autolens_workspace_developer"},
     "PyAutoBrain/agents/faculties/sizing/_sizing.py": {"PyAutoFit"},
     "PyAutoBrain/docs/conf.py": {"PyAutoScientist"},
     "PyAutoBrain/bin/check_skill_line_counts.sh": {"admin_jammy", "autolens_profiling"},
