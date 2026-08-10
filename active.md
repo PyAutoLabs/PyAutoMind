@@ -34,3 +34,21 @@
 - artifacts-are-laptop-only: Actions artifact downloads are blocked from cloud/mobile sessions (egress policy 403s `productionresultssa2.blob.core.windows.net` on CONNECT) — this is what stopped the cloud session finishing the ingest. Both wiki drift reports were captured to `~/.pyauto-heart/release_20260807_wiki_drift/` while on the laptop.
 - do-not: do NOT use the nightly driver for a manual release — AUTONOMY.md forbids converting a manual release into the scheduled-nightly exception.
 - repos-none-claimed: this entry claims NO repos — deliberately on one line, NOT as 2-space `  - Repo` bullets, because `worktree_check_conflict` treats any such bullet as a live claim.
+
+## compile-axis-campaign-coverage
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/218
+- session: cloud session https://claude.ai/code/session_01L4STU81pQP1GkMzZVvsMsv (no laptop worktree — see below)
+- status: library-dev
+- prompt: active/compile_axis_campaign_coverage.md
+- arc: phase 1 of 3 — parent `draft/feature/profiling/profiling_agent_jax_compile_time_scope.md`;
+  phase 2 `draft/feature/profiling/compile_warm_baseline_dashboard.md`,
+  phase 3 `draft/feature/profiling/compile_axis_triage_drift.md`. Strictly sequential.
+- worktree: none — this is a Claude-Code-on-the-web session, which has no
+  `~/Code/PyAutoLabs-wt/` to create. Work happens on branch
+  `feature/compile-axis-campaign-coverage` in the session's own PyAutoBrain clone
+  and is pushed to origin. If the task is resumed on the laptop, create the
+  worktree then and check out the pushed branch rather than starting fresh.
+- repos-claimed-on-one-line: PyAutoBrain (branch feature/compile-axis-campaign-coverage).
+  Deliberately NOT written as a 2-space `  - Repo` bullet: `worktree_check_conflict`
+  treats any such bullet as a live worktree claim, and there is no worktree here.
+  A second session wanting PyAutoBrain should still treat this as taken.
