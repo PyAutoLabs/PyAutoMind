@@ -55,12 +55,22 @@
 
 ## compile-warm-baseline-dashboard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/103
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/104 (schema leg only)
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/104 (workspace legs)
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/220 (Brain leg; stacked on #219)
 - session: cloud session https://claude.ai/code/session_01L4STU81pQP1GkMzZVvsMsv (no laptop worktree)
-- status: workspace-dev — PARTIAL. Schema leg (cache_state / host_state /
-  record_kind / backfill of 89 records) is in PR #104. Pins + dashboard rows
-  remain; the Brain leg (`ingest --axis compile`) is blocked on PyAutoBrain#219
-  merging, since it needs that PR's `load_compile_corpus` / `compile_tier_of`.
+- status: workspace-dev — COMPLETE, awaiting review. All three legs are in PRs:
+  schema (cache_state / host_state / record_kind + backfill of 89 records),
+  pins + dashboard (25 pins, sticky, rendered via the existing sentinel-block
+  mechanism), and the Brain's `ingest --axis compile` (25 pins, 0 drifted,
+  0 unpinned against the real corpus).
+- merge-order: PyAutoBrain#219 first (PR #220 is stacked on it and retargets to
+  main once it lands); autolens_profiling#104 is independent of both.
+- corrections-found-by-running: (1) phase 1 called 4 sibling-instrument records
+  "malformed" — export_probe.py/trace_profile.py share the results tree with a
+  different schema; fixed in #219. (2) `hardware` alone pooled a laptop and a
+  32-core RAL node under `local_cpu`, so `hostname` joined the comparability
+  key. (3) pins auto-following the newest row would have baked a regression in;
+  pins are now sticky, `--repin` required.
 - prompt: active/compile_warm_baseline_dashboard.md
 - arc: phase 2 of 3 — phase 1 PyAutoBrain#218 (PR #219, CI green, awaiting merge);
   phase 3 `draft/feature/profiling/compile_axis_triage_drift.md` not started.
