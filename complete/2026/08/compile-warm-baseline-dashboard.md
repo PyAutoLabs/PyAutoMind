@@ -1,3 +1,45 @@
+# Compile-axis phase 2 — warm compile made identifiable, pinned, dashboarded
+
+- shipped: 2026-08-10
+- issues: https://github.com/PyAutoLabs/autolens_profiling/issues/103
+- prs: autolens_profiling#104 (squash 355d555) · PyAutoBrain#220 (squash 74d7b1b)
+- repos: autolens_profiling, PyAutoBrain
+- arc: phase 2 of 3
+
+## Summary
+
+Tracking **warm** compile is the point of the arc — the persistent cache turned
+117.0s into 2.3s (CPU MGE `vag`) and 5517.8s into 937.1s (A100 end-to-end), and
+nothing watched for that reverting. Both wins are *settings*.
+
+`cache_state` is now derived from what the compile DID (cache entries counted
+either side of `lowered.compile()`), 25 warm pins are committed, the dashboard
+renders through the existing sentinel-block mechanism, and
+`ingest --axis compile` reports drift.
+
+## Traps and findings
+
+- **`cache_dir` is non-empty on COLD rows too** — the cold run is the one that
+  populates the cache. Any truthiness check on it, or substring match on the tag,
+  gets warmness exactly backwards. The corpus carries ~40 ad-hoc tag spellings.
+- **`hardware` alone pools different machines.** It is only ever `local_cpu` /
+  `local_gpu_<dev>`, so one `local_cpu` label spanned a laptop (66 records) and a
+  32-core RAL node (12). The first rendered dashboard put pins from both side by
+  side under one heading — the 7x host-load hazard, live. `hostname` joined the
+  comparability key.
+- **Pins must be STICKY.** "Most recent warm row wins" meant re-deriving pins after
+  a cache regression would move the pin *onto* the regressed value and report
+  all-clear forever — exactly inverted from the purpose. `--repin` is now required.
+- **Rows predating a pin are not drift.** The first `ingest` run flagged four, all
+  measurements the pin had been *chosen over*.
+- Backfill used **end-anchored** tag matching: `mb_homo_cold_laxmap_gpu` contains
+  "cold" mid-tag and is left `unknown` rather than mislabelled.
+- `scripts/misc/test/` **ran in no workflow at all**; a pytest step was added to
+  `lint.yml` (47 tests, ~2s). Its apparent failure outside CI was a missing
+  `matplotlib` (imported at module scope by `aggregate.py`), not a defect.
+
+## Original prompt
+
 # Profiling Agent phase 2 — make warm compile machine-identifiable, pinnable, and dashboarded
 
 Type: feature

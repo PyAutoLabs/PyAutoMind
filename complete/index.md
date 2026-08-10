@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-963 records across 7 buckets.
+966 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -28,6 +28,9 @@ _(curate hard-won records here — survives regeneration.)_
 - [autohands-firewall-allowlist](2026/08/autohands-firewall-allowlist.md) — auto-closed by the merge
 - [autolens-multiplane-redshift-warning](2026/08/autolens-multiplane-redshift-warning.md)
 - [autolens-tracer-validation-guards](2026/08/autolens-tracer-validation-guards.md)
+- [compile-axis-campaign-coverage](2026/08/compile-axis-campaign-coverage.md)
+- [compile-axis-triage-drift](2026/08/compile-axis-triage-drift.md)
+- [compile-warm-baseline-dashboard](2026/08/compile-warm-baseline-dashboard.md)
 - [conductor-discovery-lifecycle-split](2026/08/conductor-discovery-lifecycle-split.md) — closed on merge
 - [covariance-interpolator-rng-seed](2026/08/covariance-interpolator-rng-seed.md) — auto-closed by the merge
 - [database-guide-sample-weight-threshold](2026/08/database-guide-sample-weight-threshold.md) — `guides/results/database/start_here.py` ran its own Nautilus fits capped at n_like_max=300 then indexed sample…

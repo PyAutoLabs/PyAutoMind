@@ -1,3 +1,41 @@
+# Compile-axis phase 3 — `triage --axis compile`, and the arc closed
+
+- shipped: 2026-08-10
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/221
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/222 (squash a50efc3)
+- repos: PyAutoBrain
+- arc: phase 3 of 3 — closes it
+
+## Summary
+
+`ingest` says a warm compile moved; that alone is useless, because a dead cache, a
+flag that stopped reaching XLA, a busy laptop and a real library regression are the
+same number. `triage --axis compile` separates them into seven classifications,
+three actionable, and names the owner.
+
+`AGENTS.md` moves compile-time profiling out of **Future modes** into the Modes
+table; all three modes now serve `--axis compile`.
+
+## Traps and findings
+
+- **The cold-scale comparison makes `cache-regression` a measurement, not a
+  guess.** 25 of 32 cell/transform keys carry both a warm and a cold row, so the
+  yardstick is real data from the same machine. Verified by injecting a synthetic
+  regression into a copy of the real workspace (warm `vag` 1.622s → its own
+  34.592s cold cost).
+- **Two of the prompt's five categories cannot reach triage by construction.** A
+  `jax_version` bump or a changed host is a *different comparability key*, so
+  `ingest` reports it as unpinned, never drifted. Classified as bookkeeping so
+  nothing vanishes; never regressions.
+- **`host-load` was added in their place** — not in the prompt, but host load alone
+  has produced 7x errors here, and a classifier that cannot say "your laptop was
+  busy" sends people chasing phantoms.
+- Boundaries now records that **release-validation script cost stayed with the
+  hygiene conductor**. It had been moved out of this agent once already; the note
+  exists to stop a third round-trip.
+
+## Original prompt
+
 # Profiling Agent phase 3 — `triage --axis compile`: classify compile drift, route the real ones
 
 Type: feature

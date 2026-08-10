@@ -1,3 +1,41 @@
+# Compile-axis phase 1 — `campaign --axis compile`
+
+- shipped: 2026-08-10
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/218
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/219 (squash cd79005)
+- repos: PyAutoBrain
+- arc: phase 1 of 3 (see compile-warm-baseline-dashboard, compile-axis-triage-drift)
+
+## Summary
+
+The Profiling Agent could not see the compile corpus `autolens_profiling` was
+already producing: `AGENTS.md` listed compile-time profiling under *Future modes*,
+`_profiling.py` had zero occurrences of "compile", and all three modes read only
+`results/runtime/` — while 93 committed probe records sat uncross-referenced.
+
+`campaign --axis compile` answers coverage: **2 of 21 grid cells**, `hst` only, no
+interferometer / datacube / `jwst` / `ao` row anywhere. That number is what
+justified phases 2 and 3.
+
+## Traps and findings
+
+- **The tier vocabularies do not interchange.** Runtime buckets by sweep *config*
+  name (`local_cpu_fp64`), folding precision into the name; a compile record has a
+  raw `hardware` string plus a **separate** `mixed_precision` bool. Reusing
+  `TIER_CONFIGS` would have mis-bucketed every row.
+- **Records must be placed by their own fields, not their path.** Results are filed
+  under `<hardware>/<model_type>`, which drops class and instrument entirely.
+- **`export_probe.py` / `trace_profile.py` share the results tree** with a different
+  schema. The first implementation reported their 4 records as "malformed", which
+  would have sent someone to fix two files that work correctly. Missing the whole
+  `(hardware, dataset_class, instrument)` identity triple means *sibling
+  instrument*; missing only some key fields is corruption.
+- Profiling was the **only conductor without a test file**, so "runtime axis
+  unchanged" had nothing to assert against. `tests/test_profiling_conductor.py` was
+  part of the work, not a bonus.
+
+## Original prompt
+
 # Profiling Agent phase 1 — `campaign --axis compile`: what compile coverage do we actually have?
 
 Type: feature
