@@ -1,3 +1,63 @@
+## feature-ranker-ignores-header-keys
+- issue: (none — shipped directly from the draft prompt in the same session that filed it)
+- completed: 2026-08-10
+- brain-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/217 (squash-MERGED as e099383; pytest 3.12 + 3.13 green, 291 passed / 0 failed)
+- prompt: draft/bug/pyautobrain/feature_ranker_ignores_header_keys.md (folded below)
+- summary: the Feature Agent's ranker now reads the prompt metadata header it was
+  always documented to act on. `declared_header()` lands in the SIZING FACULTY
+  (beside the derivation it overrides, so declared and derived stay in one place
+  and the bug/refactor conductors get the same reading for free); `_feature.py`
+  honours it — declared `Difficulty:` overrides derived, `Priority:` orders the
+  shortlist above the difficulty term, and `Status: blocked` / an unresolved
+  `Blocked-by:` sinks a prompt below everything so it can never be recommended.
+- root cause, stated exactly: REFERENCE.md promises Intake persists `Difficulty:`
+  "so the value shown up front is the one the Feature Agent later acts on".
+  `_feature.py` mentioned `Difficulty` ONCE, where it PRINTED its own re-derived
+  score. It read no header key at all. A documented round-trip with no consumer.
+- TRAP that would have broken the fix on its own bug report: the fenced-block
+  skip is load-bearing, not tidiness. The bug prompt QUOTES the offending header
+  in a ```-block, so a naive line scan makes the bug report declare ITSELF
+  blocked. Same rule, same reason, as PyAutoMind `lifecycle.py:draft_gate_refs`
+  — which had already hit this and solved it. Two smaller ones: trailing
+  `# note` comments must be split on " #" so a `Repo#123` ref survives (the live
+  backlog has both on one line), and an unrecognised `Difficulty:` value must be
+  ignored rather than trusted.
+- deliberate conservatism: `declared_blocked()` treats an unresolved `Blocked-by:`
+  as blocked, because this agent is offline and cannot tell whether the gate has
+  since closed — `lifecycle.py issues --drafts` is what resolves refs against
+  GitHub, and the output points at it. Being wrongly held back is cheap and
+  visible (still listed, own labelled band); being wrongly recommended is the
+  failure the fix exists to stop.
+- measured on the live backlog: the offending prompt
+  (`draft/feature/autonomy/10_scheduled_runs.md`) drops rank 1 -> LAST of 27;
+  TWO further blocked prompts surfaced that had NOT been spotted by hand
+  (`ep_analytic_updates`, `oversampled_psf_dataset_adoption`);
+  `draft_staleness_detection_signals` moves `too-large` #26 -> `medium` #5; five
+  declared/derived disagreements became visible instead of silent.
+- why length was a bad size proxy (recorded because it will recur): the derived
+  score weights prompt size, and a prompt GROWS AS IT ACCUMULATES FINDINGS — so
+  a long, well-documented prompt derives `too-large` for work that is not. That
+  is precisely what a declared `Difficulty:` is for, now documented in the
+  Feature Agent's AGENTS.md.
+- evidence the tests bite: reverting ONLY `_feature.py` fails 7 of the 10 new
+  tests; the 3 survivors are pure `declared_header` unit tests, which is
+  coherent since they exercise `_sizing.py`. The regression case pins the
+  offending prompt's HEADER SHAPE as a fixture, not the live file, so fixing the
+  backlog cannot silently retire it. Fixtures use invented repo names, so the
+  new test file adds no tenant-firewall instance facts (verified).
+- CI-vs-local note worth keeping: `tests/test_skill_install.py` fails 2 tests in
+  a cloud/web session (the installer reports "Environment: web-github / ci-only"
+  and skips the Codex leg the assertions expect) but passes in GitHub CI — CI
+  reported 291 passed / 0 failed. Do not chase those two locally.
+- SECOND INSTANCE OF THE SAME DEFECT CLASS, found while doing this and NOT fixed:
+  `pyauto-brain bug <this very prompt>` returned "Fix strategy: defer/re-home
+  (looks like a feature/ task, not a bug)" — because the prompt says "Feature
+  Agent" repeatedly and the Bug Agent classifies on prose keywords while
+  ignoring the declared `Type: bug` header. Same family as the ranker bug just
+  fixed, different conductor. Unfiled.
+
+## Original prompt
+
 # The Feature Agent's ranker ignores the prompt header keys it is documented to act on
 
 Type: bug
