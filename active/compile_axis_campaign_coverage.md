@@ -24,7 +24,7 @@ Measured by hand 2026-08-10 — this is what the mode should compute automatical
 - Distinct `(dataset_class, model_type, instrument)` touched: **`imaging/mge/hst`,
   `imaging/pixelization/hst`, `imaging/delaunay_matern/hst`, `imaging/knn/hst`**,
   plus two synthetic multi-band classes (`datacube_img`, `datacube_img_hetero`).
-- The runtime grid (`scripts/misc/likelihood_runtime/sweep.py::CELLS`) is **24**
+- The runtime grid (`scripts/misc/likelihood_runtime/sweep.py::CELLS`) is **21**
   `(class, model, instrument)` cells across `imaging` / `interferometer` /
   `datacube` × `hst,jwst,ao` / `sma,alma,alma_high,jvla`.
 - So: **no interferometer row, no datacube row, no `jwst`, no `ao`** — one
@@ -71,8 +71,12 @@ is untouched.
 - `pyauto-brain profiling campaign --axis compile` and
   `... --axis compile --tier a100` both run against a real `autolens_profiling`
   checkout and report done / missing / off-grid / malformed counts.
-- The reported on-grid coverage matches the hand count above (3–4 cells of 24,
-  `hst` only) on the corpus as it stands.
+- The reported on-grid coverage matches the hand count above on the corpus as it
+  stands. MEASURED once built: **11 of 147** cell×transform runs on the `local`
+  tier and **3 of 147** on `a100`, i.e. only `imaging/mge/hst` and
+  `imaging/pixelization/hst` are on-grid. (The pre-build estimate said "3–4 cells
+  of 24" — the grid is 21 cells, and `knn`/`delaunay_matern` are off-grid rather
+  than partial coverage.)
 - `--json` emits the same structure, consistent with the existing modes.
 - The runtime axis output is byte-identical to before the change (regression test).
 - No file in `autolens_profiling` is written or executed by the agent.

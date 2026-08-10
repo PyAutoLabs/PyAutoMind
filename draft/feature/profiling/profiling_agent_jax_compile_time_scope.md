@@ -84,11 +84,15 @@ a tree that is already full.
 
 Measured against the 93 committed records, 2026-08-10:
 
-1. **Coverage is 3 of 24 grid cells.** Every record is `hst`; there is **no
+1. **Coverage is 2 of 21 grid cells.** Every record is `hst`; there is **no
    interferometer, no datacube, no `jwst`, no `ao`** row, and only `local_cpu` is
    meaningfully populated (A100 has 9 rows, all `pixelization`/`mge` × `jit`/`vag`).
    Two model types present (`knn`, `delaunay_matern`) are mesh variants that are
    not in the runtime `CELLS` grid at all. → **child prompt 1**.
+
+   *(Corrected 2026-08-10 once phase 1 computed it: the grid is 21 cells, not the
+   24 first written here, and only `imaging/mge/hst` + `imaging/pixelization/hst`
+   are on-grid — 11 of 147 cell×transform runs on the local tier, 3 on A100.)*
 2. **Warm rows are not machine-identifiable.** "Warm" is encoded only in a
    free-text `tag` — ~40 distinct ad-hoc values across the corpus
    (`census-warm`, `census-warm2`, `prodigy-census-warm-retry`, `cache-warm`,
