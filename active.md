@@ -3,7 +3,8 @@
 ## test-mode-fit-exception-finalization
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1462
 - session: codex current task
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1463
 - worktree: ~/Code/PyAutoLabs-wt/test-mode-fit-exception-finalization
 - repos:
   - PyAutoFit: feature/test-mode-fit-exception-finalization
