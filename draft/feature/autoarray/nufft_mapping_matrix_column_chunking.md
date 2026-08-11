@@ -4,8 +4,68 @@ Type: feature
 Target: PyAutoArray
 Difficulty: large
 Autonomy: supervised
-Priority: normal
-Status: formalised
+Priority: low
+Status: STOOD DOWN 2026-08-11 — premise looks overtaken; read the 2026-08-11 block first
+
+## 2026-08-11 — stood down: the classification this prompt rests on no longer exists
+
+Investigated to answer "is this legacy?" — **probably yes**, on the evidence
+below, but the last step needs a human who knows the campaign's intent. Left in
+`draft/` (not archived) so it resurfaces in the dashboard and `intake reconcile`
+carrying this evidence.
+
+### The cited classification is gone
+
+This prompt's § Origin rests on the `interferometer delaunay @ alma_high` cell
+being classified `gpu_unusable_breakdown` in autolens_profiling#59. On
+autolens_profiling `main` today, **the string `gpu_unusable` appears nowhere in
+the repo** — not in code, notes, or results.
+
+The cell it names has since **run to completion on an A100**.
+`results/breakdown/datacube/delaunay_hpc_a100_fp64.json` records real output for
+`instrument: alma_high`, `model: delaunay`, `n_channels: 34`, on an
+`NVIDIA A100 80GB PCIe`, with `transformer_chunk_size: 1000000` and a populated
+`cube_log_evidence_eager` plus 34 per-channel evidences. The `mp` variant and the
+two `inversion_*` variants are present too.
+
+### Why it ran — and why that may retire this prompt
+
+The same JSON records `"dense_breakdown": false`, and the flag's source is
+explicit at `scripts/interferometer/likelihood_breakdown/datacube/delaunay.py:468`:
+
+```python
+dense_breakdown_feasible = False  # always sparse — matches production likelihood path
+```
+
+The 61.44 GB allocation this prompt exists to chunk is on the **dense** mapping-matrix
+extraction path. The consumer hardcoded that path off, not as a workaround for the
+OOM but because the **sparse path is what production actually uses**. So the
+allocation is not merely unreachable at alma_high — it is off the path the campaign
+decided to measure.
+
+If that is right, the column axis has no live consumer, and this is legacy.
+
+### Revisit when
+
+1. Someone wants `dense_breakdown_feasible = True` back — i.e. the dense
+   decomposition is judged worth measuring again. **This is the load-bearing
+   trigger**; without it there is no consumer.
+2. A production (non-breakdown) code path is found that takes the dense
+   mapping-matrix extraction at alma_high scale. Not found in this pass, but this
+   pass read the profiling repo, not every library caller.
+
+### What is NOT the reason to retire it
+
+The § below correctly states that the sibling `nufft_simulator_chunking` gather-axis
+chunking "does nothing for this allocation". That is still true and is not affected
+by any of the above — the two axes remain orthogonal. This prompt stands down on
+*absence of a consumer*, not on the sibling having covered it.
+
+**Before retiring, confirm with whoever set `dense_breakdown_feasible = False`**
+that it is a permanent design call rather than a temporary measurement choice. That
+one answer decides retire-vs-revive, and it is not inferable from the tree.
+
+---
 
 ## Origin
 

@@ -4,8 +4,92 @@ Type: feature
 Target: PyAutoArray
 Difficulty: small
 Autonomy: supervised
-Priority: high
-Status: OVERTAKEN — re-scoped 2026-08-09, see the block below before reading further
+Priority: low
+Status: STOOD DOWN 2026-08-11 — not legacy, but nothing is waiting on it; read the 2026-08-11 block first
+
+## 2026-08-11 — stood down: the gap is already worked around in production
+
+Investigated to answer "is this legacy?" — **no, but it is not motivated
+either.** The capability this prompt asks for is already reachable and in use;
+what is left is de-duplication, not enablement. Deliberately left in `draft/`
+(not archived) so it keeps appearing in the dashboard and in `intake reconcile`
+sweeps, now carrying the evidence below.
+
+### Who actually needs the batching
+
+Exactly one repo and two instrument presets, per
+`autolens_profiling/instruments/interferometer.py`:
+
+| instrument | n_visibilities | `transformer_chunk_size` |
+|---|---|---|
+| sma | 190 | `None` — "sma is tiny; one-shot" |
+| alma | 1M | `None` — "1M vis × nspread²=196 ≈ 3 GB; fits A100 one-shot" |
+| **alma_high** | **5M** | **1_000_000** |
+| **jvla** | **25M** | **1_000_000** |
+
+Note this corrects the § below: the trigger threshold is between 1M and 5M
+visibilities, not the ~1M this prompt derived. 1M is the right *chunk* size, not
+the right *trigger*.
+
+### Why it is stood down
+
+`autolens_profiling` already injects `chunk_size` through a lambda factory,
+because `transformer_class` is a factory contract rather than a class contract
+(`PyAutoArray dataset/interferometer/dataset.py:291` sets the precedent). From
+`scripts/misc/simulators/interferometer.py:101`:
+
+```python
+if transformer_choice == "nufft":
+    # Lambda inject so chunk_size flows into TransformerNUFFT.__init__
+    # without needing a transformer_kwargs API in Interferometer.from_fits.
+    def transformer_class(uv_wavelengths, real_space_mask):
+        return al.TransformerNUFFT(..., chunk_size=transformer_chunk_size)
+```
+
+That workaround is **live in 8 files** — `scripts/misc/simulators/interferometer.py`,
+`scripts/misc/searches/_setup.py`, three `scripts/interferometer/likelihood_runtime/*`
+and three `scripts/interferometer/likelihood_breakdown/*`. Five carry a near-identical
+docstring naming the API that does not exist: *"without needing a transformer_kwargs
+API on Interferometer.from_fits. Required for alma_high…"*
+
+So the alma_high simulate path is **not blocked and never was blocked** in the way
+the § at the foot claims. Verified on PyAutoArray `main` @ `5dedb5e9`: the
+`chunk_size` knob, its `jax.lax.scan` branch on forward *and* adjoint, and its 5
+tests are all present (PyAutoArray#330). Only the ergonomic hop is missing.
+
+### If it is revived, the shape is already settled
+
+The consumers converged on the API and wrote its name into their comments, so the
+design question is answered by evidence rather than opinion:
+
+- Add `transformer_kwargs: Optional[dict] = None` to `SimulatorInterferometer` and
+  `Interferometer` (incl. `from_fits`), splatted into `transformer_class(...)`.
+  Defaults to `{}`, so the default path stays byte-identical. Closes the identical
+  `eps` gap in the same stroke.
+- **Not** an explicit `chunk_size` argument: `SimulatorInterferometer` is generic
+  over three transformers, `TransformerDFT.__init__` has no `**kwargs` and is the
+  *default*, so a bare pass-through TypeErrors on the default path.
+- No default chunk size. The ~1M figure is one GPU's budget (nspread=14 /
+  complex64 / 40 GB) and belongs in the profiling caller, which already sets it.
+- Scope is **two repos**: the PyAutoArray API, then deleting the 8 duplicated
+  lambdas in autolens_profiling. A library-only PR does half the job.
+
+### Revisit when
+
+Any one of these makes it motivated again — none is true today:
+
+1. A **non-profiling** consumer needs >1M visibilities (a workspace or user
+   dataset), where the lambda workaround is not acceptable ergonomics.
+2. Someone takes on the 8-site duplication in autolens_profiling as maintenance.
+3. The `eps` gap bites independently — same hole, same fix.
+
+Latent and independent of all this: the DFT-size guard at `dataset.py:118`
+identity-checks `transformer_class == TransformerDFT`, so any `partial`/`lambda`
+factory silently disables it. Not currently triggered (the profiling code only
+lambda-wraps NUFFT, where the guard should not fire anyway). If it ever bites,
+it is its own bug prompt, not this one.
+
+---
 
 ## 2026-08-09 — the library work below is SHIPPED; only the wiring is left
 
