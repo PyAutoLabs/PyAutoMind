@@ -5,7 +5,154 @@ Target: PyAutoArray
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: OVERTAKEN — re-scoped 2026-08-09, see the block below before reading further
+Status: PLANNED — re-scoped 2026-08-09, planned 2026-08-11; read both dated blocks below before the original text
+
+## 2026-08-11 — implementation plan (Feature Agent)
+
+Planned via `pyauto-brain feature` (selection mode ranked this 1st of 27 feature
+prompts, score 13 / impact 18; specific mode emitted the `FeatureDecision`
+below), with the `memory` faculty consulted for prior art. Every claim here was
+re-verified against PyAutoArray `main` @ `5dedb5e9`.
+
+### Confirmed still true
+
+The 2026-08-09 re-scope holds. `chunk_size` is on `TransformerNUFFT.__init__`
+(`autoarray/operators/transformer.py:577`), the `jax.lax.scan` branch is live on
+**both** forward and adjoint (4 call sites, lines 699/723/805/836), and 5 tests
+cover it in `test_autoarray/operators/test_transformer.py`. **Do not
+re-implement the chunking.**
+
+The gap is exactly one hop wide. `SimulatorInterferometer.via_image_from`
+constructs `self.transformer_class(uv_wavelengths=..., real_space_mask=...)`
+(`autoarray/dataset/interferometer/simulator.py:173`) and hands
+`transformer_class=self.transformer_class` to the returned `Interferometer`,
+which reconstructs it the same 2-arg way (`dataset/interferometer/dataset.py:102`).
+No caller can reach `chunk_size` through either.
+
+### Three findings the 2026-08-09 block did not have
+
+1. **`TransformerDFT.__init__` takes only `(uv_wavelengths, real_space_mask)` —
+   no `**kwargs`** (`transformer.py:122`), and it is `SimulatorInterferometer`'s
+   *default* `transformer_class`. A naive pass-through TypeErrors on the default
+   path. `TransformerNUFFT` *does* have `**kwargs`, so the two are asymmetric.
+2. **`transformer_class` is already a factory contract, not a class contract** —
+   `dataset.py:291` passes `lambda uv_wavelengths, real_space_mask: self.transformer`.
+   So `functools.partial(TransformerNUFFT, chunk_size=...)` works *today*,
+   undiscoverably — but it silently defeats the DFT-size guard at `dataset.py:118`,
+   which identity-checks `transformer_class == TransformerDFT`. That guard hole is
+   pre-existing and independent of this task; fix it here since we are in the file.
+3. **`eps` is unreachable through the identical hole.** Same gap class, same four
+   sites. Whatever mechanism lands should close both or it will be re-litigated.
+
+### CORRECTION to this prompt's stated justification
+
+The § at the foot claims this unblocks the alma_high A100 profiling sweep. That
+is **stale**. `complete/2026/07/profiling-dataset-auto-simulate.md` records the
+alma_high dataset as deliberately **committed** (229 MB, "CANNOT be
+uncommitted"), so the sweep consumes it without simulating. And the sibling
+prompt `nufft_mapping_matrix_column_chunking.md` establishes that the
+likelihood-side alma_high cell is blocked on the **column** axis
+(`1600 × 1600 × 1500 × 16 B = 61.44 GB`), which this chunking explicitly does not
+touch — that prompt states outright that the existing visibility chunking "does
+nothing for this allocation".
+
+The two axes are orthogonal, so there is **no scope collision** — but the
+sweep-unblocking argument belongs to the sibling prompt, not this one. The honest
+justification for this task is narrower and still sound: alma_high-scale
+simulation is currently **impossible at any setting**, which blocks dataset
+regeneration and any new large-N instrument. `Priority: high` is arguably
+overstated on the corrected justification; the work is genuinely `small` either
+way.
+
+### Design decision — `transformer_kwargs`, opt-in, no default
+
+Three shapes were considered. **Chosen: a `transformer_kwargs: Optional[dict]`
+splatted into `transformer_class(...)` at the construction sites.**
+
+- Rejected *explicit `chunk_size` arg*: narrowest diff and matches this prompt's
+  letter, but hardcodes one implementation's knob into a class that is generic
+  over three transformers (DFT / NUFFT / NUFFTPyNUFFT), and `eps` would demand
+  the same treatment next. It also puts the DFT TypeError on the *default* path.
+- Rejected *document `partial()`, no API change*: smallest change, but leaves the
+  capability undiscoverable, which is precisely the state that produced this
+  prompt.
+- `transformer_kwargs` defaults to `{}`, so **the default path is byte-untouched**,
+  it closes `eps` in the same stroke, and it keeps NUFFT vocabulary out of a
+  transformer-agnostic container.
+
+**No default chunk size.** The prompt's ~1M figure is derived for
+nspread=14 / complex64 / a 40 GB budget — one GPU's memory budget does not belong
+in a library default. Two further reasons: existing NUFFT simulator callers must
+keep their exact code path (`profiling-dataset-auto-simulate.md` used *per-dataset
+byte identity* as its gate and records that NUFFT float non-determinism already
+makes alma/alma_high non-reproducible — do not perturb that), and the sma-class
+caller at 190 visibilities should pay nothing. The 1M value belongs in the
+autolens_profiling caller.
+
+### Scope
+
+Library (PyAutoArray), one PR:
+
+1. `SimulatorInterferometer.__init__` gains `transformer_kwargs: Optional[dict] = None`,
+   stored as `{}` when unset; splatted at `simulator.py:173` and forwarded to the
+   returned `Interferometer` (`simulator.py:206`).
+2. `Interferometer.__init__` gains the same parameter, splatted at `dataset.py:102`;
+   `from_fits` (`dataset.py:141`) threads it through.
+3. Raise a clear `exc.DatasetException` when `transformer_kwargs` is non-empty and
+   the chosen `transformer_class` rejects the keys, rather than surfacing a bare
+   `TypeError` from the transformer constructor.
+4. Fix the `transformer_class == TransformerDFT` identity check at `dataset.py:118`
+   so a `partial`/`lambda` factory no longer silently disables the 10k-visibility
+   DFT guard (finding 2).
+5. `apply_over_sampling`'s lambda at `dataset.py:291` returns a prebuilt instance
+   and must keep ignoring `transformer_kwargs` — assert that, do not "fix" it.
+
+Follow-on (**separate prompt, do not bundle**): set `chunk_size` at the
+autolens_profiling simulate caller. That is the workspace half and only becomes
+testable on real hardware.
+
+### Acceptance
+
+CPU-verifiable, in `test_autoarray/dataset/interferometer/` — copy the shape of
+`test_simulator_use_jax.py`, which is the existing precedent for constructor-wiring
+tests on this class:
+
+- `SimulatorInterferometer(transformer_class=TransformerNUFFT, transformer_kwargs={"chunk_size": 8})`
+  produces a transformer with `chunk_size == 8`, and its visibilities match the
+  `transformer_kwargs=None` run to within NUFFT tolerance at small N.
+- The same for the `Interferometer` returned by `via_image_from` — the knob must
+  survive the round trip, which is the specific hop that is broken today.
+- Default construction (`transformer_kwargs` unset, `TransformerDFT`) is
+  unchanged — no new kwarg reaches the transformer.
+- `transformer_kwargs={"chunk_size": 1}` against `TransformerDFT` raises the clear
+  exception from scope item 3, not a bare `TypeError`.
+- The `dataset.py:118` DFT guard still fires when `transformer_class` is a
+  `partial`/`lambda` wrapping `TransformerDFT` with >10k visibilities (regression
+  test for finding 2).
+
+**Not gated on hardware.** The A100 `alma_high` simulate run stays the closing
+confirmation, but it is a human-run step on RAL and must not block the PR — no
+CI leg can reach an A100, and per the correction above no downstream sweep is
+waiting on it.
+
+### FeatureDecision
+
+```
+Repos affected:       PyAutoArray (+ autolens_profiling, follow-on prompt)
+Difficulty:           small (declared; derived too-large — the prompt is long
+                      because it accumulated findings, not because the work grew)
+Recommended workflow: library  (corrected from the agent's `combined` — the
+                      workspace half is split to its own prompt per
+                      "one prompt = one task = one PR")
+Phase decision:       direct
+Execution plan:       start_dev → start_library → ship_library
+Risks:                Default-path byte identity (mitigated: transformer_kwargs
+                      defaults to {}); the pre-existing DFT-guard identity check
+                      is widened in the same PR and needs its own regression test.
+Next action:          start_dev draft/feature/autoarray/nufft_simulator_chunking.md
+```
+
+---
 
 ## 2026-08-09 — the library work below is SHIPPED; only the wiring is left
 
