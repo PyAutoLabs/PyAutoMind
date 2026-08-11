@@ -5,14 +5,20 @@ Target: PyAutoArray
 Difficulty: large
 Autonomy: supervised
 Priority: low
-Status: STOOD DOWN 2026-08-11 — premise looks overtaken; read the 2026-08-11 block first
+Status: SHELVED 2026-08-11 — premise looks overtaken; read the 2026-08-11 block first
 
-## 2026-08-11 — stood down: the classification this prompt rests on no longer exists
+## 2026-08-11 — shelved: the classification this prompt rests on no longer exists
 
 Investigated to answer "is this legacy?" — **probably yes**, on the evidence
-below, but the last step needs a human who knows the campaign's intent. Left in
-`draft/` (not archived) so it resurfaces in the dashboard and `intake reconcile`
-carrying this evidence.
+below, but the last step needs a human who knows the campaign's intent.
+
+Moved here from `draft/feature/autoarray/` so it stays out of task selection
+(the Feature Agent scans `draft/feature/**`, and `lifecycle.py check`/`index`
+skip `complete/archive/`). Per `complete/archive/README.md`, the revival path is
+to pull it back into `draft/feature/autoarray/` — see § Revisit when below.
+
+Shelved rather than deleted precisely because the retire decision is not mine to
+make: it turns on one question only a human can answer (see § Revisit when).
 
 ### The cited classification is gone
 

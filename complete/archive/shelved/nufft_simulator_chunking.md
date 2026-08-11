@@ -5,15 +5,19 @@ Target: PyAutoArray
 Difficulty: small
 Autonomy: supervised
 Priority: low
-Status: STOOD DOWN 2026-08-11 — not legacy, but nothing is waiting on it; read the 2026-08-11 block first
+Status: SHELVED 2026-08-11 — not legacy, but nothing is waiting on it; read the 2026-08-11 block first
 
-## 2026-08-11 — stood down: the gap is already worked around in production
+## 2026-08-11 — shelved: the gap is already worked around in production
 
 Investigated to answer "is this legacy?" — **no, but it is not motivated
 either.** The capability this prompt asks for is already reachable and in use;
-what is left is de-duplication, not enablement. Deliberately left in `draft/`
-(not archived) so it keeps appearing in the dashboard and in `intake reconcile`
-sweeps, now carrying the evidence below.
+what is left is de-duplication, not enablement.
+
+Moved here from `draft/feature/autoarray/` so it stays out of task selection
+(the Feature Agent scans `draft/feature/**`, and `lifecycle.py check`/`index`
+skip `complete/archive/`). Per `complete/archive/README.md`, the revival path is
+to pull it back into `draft/feature/autoarray/` — see § Revisit when below for
+what would justify that.
 
 ### Who actually needs the batching
 
