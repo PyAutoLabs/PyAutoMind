@@ -7,10 +7,12 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: **root cause found and reproduced; fix written and validated** (2026-08-13).
-        The originally-reported symptom is already gone — it was fixed in the
-        workspace repos on 2026-08-10, hours after the Heart run that reported it.
-        What remains is the underlying PyAutoFit defect, still live on `main`.
+Status: **implemented and pushed** (2026-08-13), awaiting PRs.
+        Branch `claude/autofit-mock-ones-parameters-bug-sv303m` in **PyAutoFit**
+        (fix + 4 regression tests) and **PyAutoGalaxy** (`MockResult` signature).
+        The originally-reported symptom was already gone before this work — it was
+        fixed in the workspace repos on 2026-08-10, hours after the Heart run that
+        reported it. This ticket fixed the underlying library defect.
 
 ## TL;DR — what changed since this prompt was first filed
 
@@ -154,23 +156,44 @@ The two pre-existing failures are unrelated and reproduce without the patch:
 `test_autofit/graphical/functionality/test_messages.py::test_beta` and
 `test_autolens/potential_correction/test_iterative_interferometer.py::test__solve_joint_optimization__identity_damping_finite`.
 
+## What was implemented
+
+Branch `claude/autofit-mock-ones-parameters-bug-sv303m` in both repos.
+
+**PyAutoFit** (`2581ecf`):
+1. New shared helper `prior_median_kwargs(model)` in `mock_samples.py`.
+2. `MockSamplesSummary.__init__` and `MockSamples.default_sample_list` both use
+   it instead of `{path: 1.0 ...}`. `_make_samples` in `mock_search.py` now
+   delegates to it too — the idiom it already used, in one place rather than three.
+3. New `test_autofit/non_linear/samples/test_mock_placeholders.py` — 4 tests using
+   a guard class that mirrors the `ell_comps` constraint, so the regression is
+   covered inside PyAutoFit with no autogalaxy dependency. Verified to fail 3/4
+   without the fix.
+
+**PyAutoGalaxy** (`96baf25`): `MockResult.__init__` accepts `samples_summary` and
+forwards it to `super()`. `al.m.MockResult` *is* `ag.m.MockResult` (re-exported,
+not a second subclass), so PyAutoLens is covered by the same change.
+
+### Post-implementation validation
+
+| Suite | Result | Baseline | Verdict |
+|---|---|---|---|
+| PyAutoFit | 1698 passed, 1 failed | 1694 passed, 1 failed | +4 new tests, no regression |
+| PyAutoGalaxy | 1081 passed, 0 failed | 1081 passed, 0 failed | clean |
+| PyAutoLens | 518 passed, 1 failed | 518 passed, 1 failed | no regression |
+| All 7 reported scripts | 7/7 pass | 7/7 pass | clean |
+| Variant B | passes | fails `(1.0, 1.0)` | fix is load-bearing |
+
+The latent call site `test_autogalaxy/analysis/analysis/test_analysis.py:40` is
+green under the full PyAutoGalaxy suite above.
+
 ## Remaining scope
 
-1. Apply the `MockSamplesSummary.__init__` fix above.
-2. Apply the same treatment to `MockSamples.default_sample_list`
-   (`mock_samples.py:41`), which carries the identical `{path: 1.0 ...}` idiom.
-   Not reached by these 7 scripts (they pass an explicit `sample_list`), but it is
-   the same latent defect.
-3. Add `samples_summary` to `ag.m.MockResult.__init__` and forward it to `super()`
-   — a one-line PyAutoGalaxy change that removes the API-narrowing wart. Check
-   `al.m.MockResult` for the same narrowing.
-4. Latent call site to re-check after the fix:
-   `pyautogalaxy/test_autogalaxy/analysis/analysis/test_analysis.py:40` builds
-   `ag.m.MockResult(max_log_likelihood_galaxies=[galaxy], model=model)` with no
-   summary — currently green, but on the same fallback path.
-5. Optional (original suggestion 4): have `MockSearch` inherit `samples_summary`
-   from a passed-in `result` instead of silently defaulting. With the fix above
-   this is no longer a correctness issue, only a tidiness one.
+Optional tidiness only (original suggestion 4): have `MockSearch` inherit
+`samples_summary` from a passed-in `result` instead of silently defaulting to
+`MockSamplesSummary.default()`. With the fix above this is no longer a
+correctness issue. Not done — it touches ~55 `MockSearch` call sites and belongs
+in its own behaviour-preserving change.
 
 **Difficulty is `small`, not `too-large`.** The original sizing assumed a 3-repo
 library+workspace coordination. The workspace half is already shipped; what is
