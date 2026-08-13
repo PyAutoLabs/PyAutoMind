@@ -7,9 +7,8 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: **implemented and pushed** (2026-08-13), awaiting PRs.
-        Branch `claude/autofit-mock-ones-parameters-bug-sv303m` in **PyAutoFit**
-        (fix + 4 regression tests) and **PyAutoGalaxy** (`MockResult` signature).
+Status: **shipped** (2026-08-13). PyAutoFit#1471 (fix + 4 regression tests) and
+        PyAutoGalaxy#569 (`MockResult` signature) both merged to `main`.
         The originally-reported symptom was already gone before this work — it was
         fixed in the workspace repos on 2026-08-10, hours after the Heart run that
         reported it. This ticket fixed the underlying library defect.
