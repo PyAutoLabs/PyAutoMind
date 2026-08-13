@@ -11,7 +11,7 @@ Tasks only — the organism's health lives with the Heart (`/health`), not here.
 | [In flight](#in-flight) (`active/`) | 8 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 136 |
+| [Backlog](#backlog) (`draft/`) | 135 |
 
 Live on GitHub: [open issues](https://github.com/search?q=org%3APyAutoLabs+is%3Aissue+is%3Aopen&type=issues) · [open pull requests](https://github.com/search?q=org%3APyAutoLabs+is%3Apr+is%3Aopen&type=prs)
 
@@ -95,10 +95,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**136** filed prompts, not started. Each section is sorted most-pickable first (priority, then size).
+**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size).
 
 <details>
-<summary><b>bug</b> — 40</summary>
+<summary><b>bug</b> — 39</summary>
 
 - [pre_build stages untracked files, publishing uncommitted human work](draft/bug/pyautohands/pre_build_stages_untracked_wip.md) — pyautohands · small · supervised · high
 - [Release does not sync __version__ stamps and workspace pins back](draft/bug/pyautobuild/release_version_sync_back_to_main.md) — pyautobuild · medium · supervised · high
@@ -111,7 +111,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 - [Fix release-profile numerical inversion failures](draft/bug/health_fixes/numerical_inversion_failures.md) — health_fixes · too-large · supervised · high
 - [Fix release result/sample parameter-path regressions](draft/bug/health_fixes/samples_parameter_paths.md) — health_fixes · too-large · supervised · high
 - [`pixel_scales` given as an `int` (or `np.float64`) is never widened](draft/bug/autoarray/pixel_scales_int_not_widened_to_tuple.md) — autoarray · small · supervised · medium
-- [PyAutoFit `MockResult` fills every parameter with 1.0, which is an](draft/bug/autofit/mock_all_ones_parameters_break_ell_comps_guard.md) — autofit · small · supervised · medium
 - [Heart script_timing baselines are orphaned by path moves and filled](draft/bug/pyautoheart/script_timing_baselines_orphaned_and_window_filled.md) — pyautoheart · small · supervised · medium
 - [jax_grad scripts fail assertions locally that PASS in CI](draft/bug/autolens_workspace_test/jax_grad_local_assertions_fail_but_pass_in_ci.md) — autolens_workspace_test · medium · supervised · medium
 - [ConstantZeroth regularization is broken twice over — dead code presenting](draft/bug/autoarray/constant_zeroth_broken_dead_code.md) — autoarray · small · supervised · normal

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-973 records across 7 buckets.
+974 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -23,6 +23,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autoarray-adapt-images-precondition](2026/08/autoarray-adapt-images-precondition.md)
 - [autoarray-input-validation-guards](2026/08/autoarray-input-validation-guards.md)
 - [autocti-util-dataset-export](2026/08/autocti-util-dataset-export.md) — no GitHub issue — worked directly from the draft prompt in a cloud session on explicit human instruction; the …
+- [autofit-mock-all-ones-ell-comps](2026/08/autofit-mock-all-ones-ell-comps.md)
 - [autogalaxy-assistant](2026/08/autogalaxy-assistant.md) — epic; human to close
 - [autogalaxy-profile-validation-guards](2026/08/autogalaxy-profile-validation-guards.md)
 - [autohands-firewall-allowlist](2026/08/autohands-firewall-allowlist.md) — auto-closed by the merge
