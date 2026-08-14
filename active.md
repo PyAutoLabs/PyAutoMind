@@ -2,6 +2,7 @@
 
 ## pix-prodigy-gpu-compat
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/125
+- prompt: active/pixelized_prodigy_laptop_gpu_phase_1_compatibility.md
 - pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/126 (OPEN, mergeable)
 - session: codex (phase 1) -> claude 2026-08-11 evening (n_starts control + phase 2)
 - status: workspace-dev — phase 1 and phase 2 COMPLETE 2026-08-13, all 13 cells landed, PR #126 ready for review
