@@ -123,7 +123,8 @@ Write these down before running, and report them honestly:
   Before reporting any counter as clean, confirm the lanes actually reached the
   regime the counter watches.
 - **A crashed run poisons the next run of the same `name`** — see
-  `draft/bug/autofit/crashed_run_poisons_resume.md`. Delete `output/<name>/`
+  `complete/2026/08/crashed-run-poisons-resume.md` — FIXED in PyAutoFit#1480, but the
+  habit is still cheaper than reasoning about it. Delete `output/<name>/`
   between arms or use unique names, and assert the recorded step count equals
   `n_steps` before believing any counter.
 - All #128 numbers are **float32 CPU, single seed**. Expect movement on fp64 and

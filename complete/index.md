@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-993 records across 7 buckets.
+996 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -32,12 +32,14 @@ _(curate hard-won records here — survives regeneration.)_
 - [border-relocator-backend-parity](2026/08/border-relocator-backend-parity.md) — Isolated the native NumPy/JAX likelihood gap to mathematically non-unique PCA axes for a near-isotropic border…
 - [border-relocator-degenerate-pca](2026/08/border-relocator-degenerate-pca.md) — Stabilized near-isotropic border PCA axes with a deterministic axis-aligned branch at a scale-aware eigenvalue…
 - [circular-ell-comps-image-gradient](2026/08/circular-ell-comps-image-gradient.md) — Replaced the Sersic image path's Cartesian-to-polar ellipticity conversion with an algebraically equivalent Ca…
+- [clipper-usage-in-search-summary](2026/08/clipper-usage-in-search-summary.md) — `search.summary` now reports prior-support clipping. `n_clipped_lane_steps`
 - [compile-axis-campaign-coverage](2026/08/compile-axis-campaign-coverage.md)
 - [compile-axis-triage-drift](2026/08/compile-axis-triage-drift.md)
 - [compile-warm-baseline-dashboard](2026/08/compile-warm-baseline-dashboard.md)
 - [conductor-discovery-lifecycle-split](2026/08/conductor-discovery-lifecycle-split.md) — closed on merge
 - [correct-circular-sersic-hazard](2026/08/correct-circular-sersic-hazard.md) — Corrected the circular Sersic hazard in the actual fitted ell_comps coordinates. The q-angle structural findin…
 - [covariance-interpolator-rng-seed](2026/08/covariance-interpolator-rng-seed.md) — auto-closed by the merge
+- [crashed-run-poisons-resume](2026/08/crashed-run-poisons-resume.md) — A run interrupted while writing output left a half-written JSON file,
 - [curvature-diag-doc-config-drift](2026/08/curvature-diag-doc-config-drift.md) — Aligned PyAutoArray's curvature-diagonal helper and Settings docs with the packaged 1e-3 default; numerical be…
 - [curvature-floor-scale-aware-prototype](2026/08/curvature-floor-scale-aware-prototype.md) — Corrected the Phase 2 conditioning denominator to the curvature entries actually floored. The absolute policy …
 - [database-guide-sample-weight-threshold](2026/08/database-guide-sample-weight-threshold.md) — `guides/results/database/start_here.py` ran its own Nautilus fits capped at n_like_max=300 then indexed sample…
@@ -105,6 +107,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [resolve-curvature-floor-doc-drift](2026/08/resolve-curvature-floor-doc-drift.md) — Reconciled the curvature-floor documentation finding after PyAutoArray#444. The detector now requires both run…
 - [resolve-sersic-ell-comps-gradient](2026/08/resolve-sersic-ell-comps-gradient.md) — Reconciled the numerical-hazard evidence after the Sersic Cartesian-radius fix. The stable conditional detecto…
 - [samplers-surface-autolens-tiers](2026/08/samplers-surface-autolens-tiers.md) — the samplers faculty's SamplerSurface now scans the findings
+- [save-json-numpy-scalar-typeerror](2026/08/save-json-numpy-scalar-typeerror.md) — Adds `NumpyEncoder` in `autofit/tools/util.py` (`np.ndarray` ->
 - [script-title-underline-off-by-one](2026/08/script-title-underline-off-by-one.md)
 - [simulator-util-to-af-ex](2026/08/simulator-util-to-af-ex.md) — moved the four 1D-Gaussian simulator helpers out of the duplicated
 - [small-datasets-loader-pixel-scales](2026/08/small-datasets-loader-pixel-scales.md)

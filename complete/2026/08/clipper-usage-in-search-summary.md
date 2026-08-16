@@ -1,3 +1,71 @@
+- library-prs: https://github.com/PyAutoLabs/PyAutoFit/pull/1478
+- merge-commits: PyAutoFit `bbceff62a8e55d57ad5bd968f9ca17c87b435288` (2026-08-16)
+- issue: none — filed from the Clipper handover and implemented in the same session
+- summary: `search.summary` now reports prior-support clipping. `n_clipped_lane_steps`
+  reaches `samples_info`, and `search_summary_from_samples` emits `Clipper`,
+  `Clipped Lane-Steps` and `Clipped Lane-Step Rate` — plus
+  `Constrained Lane-Steps`, the trapped-lane counter from #1475, which had
+  reached `samples_info` when it shipped but was never printed.
+- validation: 6 new tests; `non_linear` + `text` = 501 passed. Verified
+  end-to-end against the `search.summary` files four real searches wrote, not
+  just the formatting helper.
+- release: not performed; merged PR remains in the pending-release queue.
+
+## The premise the prompt got wrong
+
+Worth recording, because it nearly caused a rebuild of something that existed.
+The prompt as first filed claimed `search.summary` had "no search-specific
+channel at all". **False.** `search_summary_from_samples`
+(`text/text_util.py:115-161`) already read `samples.samples_info` and already
+emitted the NaN counters and their rates, key-guarded so other searches are
+unaffected. The error came from reading `search_summary_to_file` and not the
+function it calls.
+
+The real gap was two specific omissions, not a missing mechanism:
+
+- `n_clipped_lane_steps` never left `search_internal` for `samples_info`.
+- `n_constrained_lane_steps` reached `samples_info` but was never emitted.
+
+## Three cases, and the last two are the point
+
+- **No clipper** (`ClipperNone`, or a search predating the `Clipper`) — emits
+  nothing. The default path's summary is unchanged, which matters because the
+  file is read by tooling and sits in every archived run's output.
+- **Clipped and counted** (`MultiStartGradient`) — it enforces the constraint
+  itself every step via `project`, so it knows how often it fired.
+- **Clipped but not observable** (`LBFGS`, other bound-supporting scipy methods)
+  — declarative: it hands `optimize.Bounds` to scipy and lets scipy enforce, so
+  `project` is never called and no mask exists. Reporting `0` would read as
+  "never fired" when it means "cannot know". It says
+  `not measured (bounds enforced by scipy)` instead.
+
+## Decisions worth keeping
+
+- The clipper is published as its **class name**, not a bool, so a later
+  strategy needs no schema change.
+- The count is **per-lane, not per-coordinate** — a lane clipped in three
+  parameters on one step is one clipped lane-step — keeping all four counters
+  directly comparable.
+- It is a **lifetime total** restored from `search_internal`, so a resumed run
+  reports the whole run rather than the current process's share.
+
+## A finding worth more than the feature
+
+While verifying, the autolens_profiling#128 mechanism reproduced on a **toy
+3-parameter Gaussian** (`autofit.example.Gaussian`, `centre` truth 30 outside a
+`UniformPrior(5, 20)`, 4 starts x 200 steps, `learning_rate=1.0`): unclipped
+`Value-NaN Lane-Steps = 378` (94.5%), clipped `0`, with
+`Clipped Lane-Steps = 414` at rate 0.958. Far cheaper as a regression fixture
+than the `imaging/mge` cell, and a seconds-long smoke test for "is the clipper
+wired up and firing at all".
+
+## Behaviour change to remember
+
+Multi-start summaries gained a `Constrained Lane-Steps` line. Everything else is
+additive and gated.
+
+## Original prompt
+
 # Report how much the Clipper actually fired — surface the count in `search.summary`
 
 Type: feature

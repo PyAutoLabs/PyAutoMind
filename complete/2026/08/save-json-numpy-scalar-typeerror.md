@@ -1,3 +1,56 @@
+- library-prs: https://github.com/PyAutoLabs/PyAutoFit/pull/1479
+- merge-commits: PyAutoFit `b6e89cd5480018c9b9661ac2b214ec1d084e3964` (2026-08-16)
+- issue: none — split out of the prior-support Clipper prompt's "do not lose these"
+- summary: Adds `NumpyEncoder` in `autofit/tools/util.py` (`np.ndarray` ->
+  `tolist()`, `np.generic` -> `item()`, everything else deferred to the base
+  class so a genuinely unserialisable object still raises), wired into both
+  output-path writers. A successful fit could previously die at its output step
+  with `TypeError: Object of type float32 is not JSON serializable`.
+- validation: 13 new tests; full suite 1804 passed / 4 skipped / 1 failed, the
+  failure pre-existing (nautilus single-core pool) and identical on a clean tree.
+- release: not performed; merged PR remains in the pending-release queue.
+
+## Why it hid for so long
+
+`np.float64` subclasses Python's `float`, so `json` serialises it without help.
+**`np.float32` subclasses nothing `json` knows** — nor does `np.int32`/`np.int64`
+(not a Python `int` on every platform) or `np.bool_`.
+
+So a float64 run is fine, and a float32 run is fine *right up until it writes its
+results*, at which point the whole computation is discarded at the last step.
+
+It surfaced on the `imaging/mge` profiling cell during the Clipper prototype
+(autolens_profiling#128) on a path that cell had apparently never taken: it did
+**not** fire while 14 of 16 lanes were dead, because the float32 values never
+reached the saved object. **It fires precisely when lane survival improves** —
+which is what the phase-2 campaign exists to cause.
+
+## The second site the prompt never named
+
+The prompt described `paths/directory.py:80` only. Implementing it turned up
+`Samples.info_to_json` (`samples/samples.py:338`), a second bare `json.dump` —
+and the more dangerous of the two. `samples_info` is a search's own diagnostic
+channel, so **every new counter added to it is another chance to reintroduce
+this**. PyAutoFit#1478 added two counters to that very dict on the same day.
+
+That is the argument for fixing at the encoder rather than at each producer:
+the producers are search-specific and keep multiplying. The encoder closes the
+class; chasing producers closes one instance.
+
+## Guarantees asserted, not assumed
+
+- `float64` unchanged, compared byte-for-byte against a bare `json.dumps`.
+- No invented precision — `.item()` widens float32 to a Python double, and the
+  test asserts equality with `float(np.float32(0.1))` rather than a re-rounded
+  decimal.
+- Still strict — `json.dumps({"x": object()}, cls=NumpyEncoder)` raises.
+
+Reproduced against the unfixed tree before fixing:
+`paths.save_json(name="c", object_dict={"clipped": np.float32(4.0)})` raised
+exactly the reported `TypeError`.
+
+## Original prompt
+
 # `save_json` crashes on numpy scalars — a successful run dies at output
 
 Type: bug

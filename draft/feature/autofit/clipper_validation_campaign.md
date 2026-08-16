@@ -144,7 +144,8 @@ count of lanes ending pinned to a bound.
 per-coordinate** — a lane clipped in three parameters on one step is one clipped
 lane-step, matching how the other counters read. Read it from `search_internal`;
 it is **not** in `search.summary` yet
-(`draft/feature/autofit/clipper_usage_in_search_summary.md`). It is also the
+(SHIPPED — `complete/2026/08/clipper-usage-in-search-summary.md`, so read it straight
+from `search.summary`). It is also the
 sanity check on the whole arm: a `ClipperPriorBox` arm reporting **zero** clips
 has not exercised the clipper at all, and its "no change" result means nothing.
 

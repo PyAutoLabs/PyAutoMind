@@ -1,3 +1,76 @@
+- library-prs: https://github.com/PyAutoLabs/PyAutoFit/pull/1480
+- merge-commits: PyAutoFit `5c9244bc1d0c000804899a0378dcb0187f9716af` (2026-08-16)
+- issue: none — split out of the prior-support Clipper prompt's "do not lose these"
+- summary: A run interrupted while writing output left a half-written JSON file,
+  and every later run of that search name died on it — from inside an *optional*
+  sanity check — until the output directory was deleted by hand. Fixed in three
+  legs: `open_atomic` (temp file + `os.replace`) for `save_json` and
+  `save_search_internal`; `Fitness.check_log_likelihood` treating a corrupt
+  summary as absent, with a warning; and the multi-start resume guard widened so
+  corrupt state falls into the fresh-start branch below it.
+- validation: 9 new tests; full suite 1800 passed / 4 skipped / 1 failed
+  (pre-existing). Merged result with #1478 + #1479: 1819 passed.
+- release: not performed; merged PR remains in the pending-release queue.
+
+## The one fact behind all three legs
+
+**`json.JSONDecodeError` subclasses `ValueError`.** So it is neither a
+`FileNotFoundError`, a `TypeError` nor a `KeyError`, and it fell through every
+guard on the resume path — `check_log_likelihood`'s `except FileNotFoundError`
+and the multi-start `except (FileNotFoundError, TypeError, KeyError)` alike.
+Asserted directly in a test so it cannot quietly stop being true.
+
+## CORRECTION to the filed prompt — reproduce before you fix
+
+The prompt described the poisoned rerun as "a 4-second no-op run that reads as a
+clean result (zero deaths, because zero steps)". **That did not reproduce.**
+
+What reproduces against `main`, using the real trigger (a float32 killing
+`save_json` at the end of a successful fit):
+
+```
+run 1: TypeError: Object of type float32 is not JSON serializable
+run 2: JSONDecodeError: Expecting value: line 1 column 13 (char 12)
+```
+
+A hard crash naming no file and offering no remedy, on *every* rerun of that
+name. The silent-no-op variant presumably needs a **surviving**
+`search_internal`, whose restored `total_steps` short-circuits the loop — but
+the crash path deletes that directory first. Same root cause, and the fix covers
+both paths, but only the crash is evidenced. **Do not cite the no-op as
+observed.**
+
+Also worth knowing: LBFGS does *not* poison. It simply refits and overwrites.
+The hazard is specific to searches that read prior output while resuming.
+
+## Legs, and why each is separate
+
+1. **Atomicity.** `open(path, "w+")` truncates first and writes second, so any
+   failure destroys the file that was there. `open_atomic` catches
+   `BaseException`, not `Exception` — a `KeyboardInterrupt` mid-write leaves
+   identical debris. Applied to `save_search_internal` too, which matters more:
+   that is what a resumed run restores its step count and counters from.
+2. **Recovery.** `check_log_likelihood` already returned early on a *missing*
+   summary; a *corrupt* one is the same situation, since there is no
+   trustworthy old likelihood either way. It warns rather than staying silent —
+   an unreadable file is a real event, unlike a missing one.
+3. **The resume guard.** Found by audit, not by the prompt: the same narrow
+   except-tuple meant a corrupt `search_internal` raised instead of falling into
+   the fresh-start branch directly beneath it.
+
+Legs 1 and 2 are independent by design — 1 stops the debris being created, 2
+recovers from debris created by older versions, killed processes or a full disk.
+
+## Trap in testing this
+
+The end-to-end regression test must assert the second run actually **takes the
+resume path**. Without that, a run short-circuited as already-complete
+(`is_complete` -> `result_via_completed_fit`) passes the test while asserting
+nothing. The `.completed` marker also is not found by `rglob(".completed")` under
+the test config — use `paths._has_completed_path`.
+
+## Original prompt
+
 # A crashed run poisons the next run of the same name — silently, as a clean result
 
 Type: bug
