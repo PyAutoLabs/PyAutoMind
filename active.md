@@ -1,5 +1,25 @@
 # Active Tasks
 
+## clipper-validation-campaign
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/129
+- prompt: draft/feature/autofit/clipper_validation_campaign.md (still in draft/ — NOT advanced to active/, because the campaign is part-run, not issued-and-owned; move it if you formally take the task)
+- session: claude cloud (web) 2026-08-16 — **HANDOFF, work part-done, read this whole entry before running anything**
+- status: IN PROGRESS — machinery built and first arm pair measured; campaign NOT complete and NO PR opened
+- upstream: phase 1 shipped as PyAutoFit#1477 (`1f4b66a`), record `complete/2026/08/autofit-prior-support-clipper.md`. Root cause autolens_profiling#128 / the `mge-lane-death` entry below.
+- repos:
+  - autolens_profiling: claude/clipper-validation-campaign-o3jotv (pushed, 1 commit)
+- HEADLINE RESULT (imaging/mge hst, 16x150, single seed, cloud CPU float32): value-NaN lane-steps **2268 -> 47** with 1920 clips, and `max_log_likelihood` is **IDENTICAL between arms to every printed digit** (-15529.587986751998). 11 of 16 lanes end pinned to a bound. That fires **two of the four pre-registered falsification conditions**. **DO NOT WRITE PHASE 3 ON THIS EVIDENCE.**
+- NOT the caching artefact — this was the predicted way to fake an identical result, so it was checked first: the runs differ in value-NaN (2268 vs 47), grad-NaN (0 vs 9) and wall (286.5s vs 249.6s). Arm 2 genuinely ran and converged to the same best point. Likely mechanism: the winning lane never left the prior box, so clipping never touched it.
+- THE CAVEAT THAT LIMITS EVERYTHING: both arms are **~47,316 nats** from the Nautilus bar (31786.782462). Neither is converged, so the comparison happens in a regime where the search has not found the basin at all. The truth-recovery claim being graded against came from GPU/Prodigy/longer budgets. The load-bearing question is **unanswered, not answered negatively**. Do not report this as "clipping doesn't work".
+- BLOCKER, needs a decision: **multi-seed is currently impossible.** `_broad_starts` seeds with a hardcoded `np.random.default_rng(0)`, so every run draws IDENTICAL starts; seeding `random`/`numpy` perturbs only the initializer. The campaign requires >=2 seeds per arm. Fix is a small `seed` arg on `AbstractMultiStartGradient` — a PyAutoFit change, so its own prompt/PR. **The human was asked and has not answered yet.**
+- BLOCKER: the **momentum-reset arm does not exist**. Phase 1 ships the clipped mask it needs, but no reset. 11/16 pinned makes this the decisive arm.
+- what was built (all on the branch): `scripts/misc/searches/clipper_campaign.py` (the arm driver) and a `SEARCHES_CLIPPER=none|prior_box` knob in `scripts/misc/searches/_samplers.py`. Findings note at `results/notes/clipper_campaign/README.md`, raw rows in the sibling JSON.
+- why a bespoke driver: the ordinary `searches/` runner records **none** of the lane counters, and `search_internal` (where they live) is **deleted on successful completion**. The driver captures it as written, patching `save_search_internal` at **CLASS** level — `fit()` rebuilds `search.paths`, so an instance-level hook is silently discarded.
+- ENVIRONMENT (the fiddly part, reproduce exactly): py3.12 venv; `pip install autolens jaxnnls`; **then** `pip install -e <PyAutoFit checkout> --no-deps`; then assert `autofit.__file__` resolves to the checkout. The clipper is UNRELEASED, so a PyPI autofit silently has no `clipper` argument and every number would be meaningless. In this session the venv was `/tmp/.../scratchpad/venv` with PyAutoFit at `/workspace/pyautofit` — both ephemeral, so a new session rebuilds.
+- cost/feasibility measured: one 16x150 arm is ~250-290s wall on this cloud CPU box, and JIT compile dominates short runs (4x5 took ~128s). Two arms ~9 min. GPU cells (pixelized meshes) are NOT runnable from a cloud session — no HPC/SSH access.
+- next, in order: (1) a **converged budget** (GPU / more steps / Prodigy) so the comparison is meaningful; (2) the `seed` arg, then >=2 seeds/arm; (3) the momentum-reset arm; (4) remaining cells — pixelized (GPU), point_source, and the unbounded-prior negative control.
+- do-not: do NOT open a PR on the campaign branch yet — the campaign is part-run and the note would read as a verdict. Do NOT flip any default.
+
 ## mge-lane-death
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/128
 - prompt: active/mge_lane_death.md
