@@ -58,6 +58,15 @@ finding where the message is raised (grep the literal `ell_comps must satisfy` i
 when it was introduced; the channels were green on 2026-08-03 and red on 2026-08-10, so the
 regression window is that week.
 
+**Read the adjacent work first — this boundary is already under active study.**
+`draft/research/autolens_profiling/ell_comps_trapping_unmasked.md` characterises searches getting
+*stuck against this same `ell_comps` support boundary* (667 of 2400 lane-steps constrained, 27.79%,
+once prior-exit deaths were removed), and `complete/2026/08/prior-support-clipper.md` shipped
+PyAutoFit#1477 on 2026-08-16 for prior support handling. Options (1) and (2) above may already have
+a mechanism there rather than needing a new one. Note the clipper shipped *after* the 2026-08-10
+red, so it is not the cause — but it is very likely part of the answer, and the two tasks should not
+be worked in ignorance of each other.
+
 ## Not part of this task
 
 The third red job in the same digest — `wiki-currency.yml` on autolens_assistant — is **unrelated
