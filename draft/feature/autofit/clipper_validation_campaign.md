@@ -12,15 +12,36 @@ Status: formalised
 
 ## What this is
 
-The **validation phase** of the prior-support fix. It runs after
-`draft/feature/autofit/prior_support_clipper.md` lands the `Clipper` in
-`@PyAutoFit`, and it produces the evidence that justifies flipping the default.
+The **validation phase** of the prior-support fix. It produces the evidence that
+justifies flipping the default.
+
+> **UNBLOCKED 2026-08-16 — phase 1 has landed.** PyAutoFit#1477 merged as
+> `1f4b66a` (tip of `main`), shipping `AbstractClipper` / `ClipperNone` /
+> `ClipperPriorBox` in `autofit/non_linear/clipper.py`, wired into both
+> `AbstractMultiStartGradient` and `AbstractBFGS`, opt-in, default `ClipperNone`,
+> bit-identical under it. Record:
+> `complete/2026/08/prior-support-clipper.md`. This task is ready to start.
+>
+> Three things phase 1 changed for this campaign:
+> - **`n_clipped_lane_steps` already exists** — accumulated per-lane at
+>   `multi_start_gradient/search.py:863` and written to `search_internal`. Record
+>   it as a fourth counter alongside the three below. It is **not** in
+>   `search.summary`; see
+>   `draft/feature/autofit/clipper_usage_in_search_summary.md`.
+> - **The momentum-reset arm is buildable but not built.** `project` returns the
+>   clipped mask, which is what a caller needs to zero optimiser momentum, but
+>   nothing in PyAutoFit uses it yet. Arm 3 below therefore requires writing that
+>   reset in the campaign, not just flipping a flag.
+> - **The float32 `save_json` crash was NOT fixed by phase 1** — confirmed still
+>   present at `1f4b66a`. The trap below stands in full, and it will start firing
+>   precisely because clipping keeps lanes alive. See
+>   `draft/bug/autofit/save_json_numpy_scalar_typeerror.md`.
 
 Three phases, three PRs, in this order — do not merge them out of order:
 
 | phase | repo | what |
 |---|---|---|
-| 1 | `@PyAutoFit` | `Clipper` class, opt-in, bit-identical by default (`prior_support_clipper.md`) |
+| 1 | `@PyAutoFit` | ✅ **SHIPPED** — `Clipper` class, opt-in, bit-identical by default (PyAutoFit#1477 → `1f4b66a`; `complete/2026/08/prior-support-clipper.md`) |
 | **2** | **`@autolens_profiling`** | **this task — demonstrate and validate across the search cells** |
 | 3 | `@PyAutoFit` | flip the default to `ClipperPriorBox`, carrying the phase-2 re-baseline |
 
@@ -67,9 +88,17 @@ Per cell, at minimum:
    state still pushing outward; this arm is what says whether that matters.
 
 Record for every arm: `n_value_nan_lane_steps`, `n_grad_nan_lane_steps`,
-`n_constrained_lane_steps`, `n_resurrections`, **`alive N/n_starts` per step**,
-best-fit log-likelihood, wall time, and the count of lanes ending pinned to a
-bound.
+`n_constrained_lane_steps`, **`n_clipped_lane_steps`**, `n_resurrections`,
+**`alive N/n_starts` per step**, best-fit log-likelihood, wall time, and the
+count of lanes ending pinned to a bound.
+
+`n_clipped_lane_steps` ships with phase 1 and is counted **per-lane, not
+per-coordinate** — a lane clipped in three parameters on one step is one clipped
+lane-step, matching how the other counters read. Read it from `search_internal`;
+it is **not** in `search.summary` yet
+(`draft/feature/autofit/clipper_usage_in_search_summary.md`). It is also the
+sanity check on the whole arm: a `ClipperPriorBox` arm reporting **zero** clips
+has not exercised the clipper at all, and its "no change" result means nothing.
 
 **At least two seeds per arm.** Single-seed CPU numbers are what this whole
 investigation had to go back and re-derive.
@@ -169,4 +198,5 @@ not swept up as a clipping artefact.
 - Flipping any default (phase 3).
 - NUTS. It targets the log posterior from a physical start and *diverges* rather
   than dying — a different mechanism needing its own investigation.
-- Unit-cube stepping. Rejected for now in `prior_support_clipper.md`, with reasons.
+- Unit-cube stepping. Rejected for now, with reasons, in
+  `complete/2026/08/prior-support-clipper.md` (under `## Original prompt`).

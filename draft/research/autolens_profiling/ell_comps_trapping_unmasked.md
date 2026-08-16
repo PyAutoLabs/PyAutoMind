@@ -13,7 +13,8 @@ Status: formalised
 Filed 2026-08-16. This is **follow-up (2)** owed by the `mge-lane-death` task
 (`active/mge_lane_death.md`, autolens_profiling#128), which recorded it as out
 of its own boundary. Follow-up (1) is
-`draft/feature/autofit/prior_support_clipper.md`.
+`complete/2026/08/prior-support-clipper.md` (shipped 2026-08-16 as
+PyAutoFit#1477).
 
 ## What changed
 
@@ -63,7 +64,7 @@ the trapping is *there and large*, and nothing more.
 
 The real measurement is on a **clipped** run, where lanes survive under the
 declared prior. So this task runs on top of phase 1
-(`draft/feature/autofit/prior_support_clipper.md`) and can share arms with phase
+(shipped: `complete/2026/08/prior-support-clipper.md`) and can share arms with phase
 2 (`draft/feature/autofit/clipper_validation_campaign.md`), which already
 records `n_constrained_lane_steps` per arm. **Do not re-derive the diagnostic-arm
 number; measure the clipped one.**
@@ -130,7 +131,8 @@ Write these down before running, and report them honestly:
 
 ## Deliberately out of scope
 
-- The prior-support fix itself (`prior_support_clipper.md`) and its validation
+- The prior-support fix itself (shipped —
+  `complete/2026/08/prior-support-clipper.md`) and its validation
   campaign (`clipper_validation_campaign.md`).
 - Changing `ELL_COMPS_MAGNITUDE_CLAMP` or the `validate_ell_comps` guard
   threshold. The drift between them is documented in

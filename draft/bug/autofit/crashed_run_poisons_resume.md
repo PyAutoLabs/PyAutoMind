@@ -9,10 +9,12 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 
-Filed 2026-08-16. Split out of
-`draft/feature/autofit/prior_support_clipper.md` ("Two incidental bugs found
-while investigating — do not lose these", item 2), which asked for it to be
-filed separately once confirmed. It is confirmed — see Grounding.
+Filed 2026-08-16. Split out of the prior-support Clipper prompt's "Two incidental
+bugs found while investigating — do not lose these" section (item 2), which asked
+for it to be filed separately once confirmed. It is confirmed — see Grounding.
+That prompt has since shipped as PyAutoFit#1477; its record is
+`complete/2026/08/prior-support-clipper.md`. **This bug was not fixed by it** —
+verified still present at `1f4b66a`, the merge commit itself.
 
 ## The defect
 

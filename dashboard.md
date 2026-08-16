@@ -20,11 +20,11 @@ Live on GitHub: [open issues](https://github.com/search?q=org%3APyAutoLabs+is%3A
 **Highest priority** (filed as `high`) — showing 12 of 35
 
 - [`save_json` crashes on numpy scalars — a successful run dies](draft/bug/autofit/save_json_numpy_scalar_typeerror.md) — autofit · small · supervised · high
+- [Report how much the Clipper actually fired — surface the](draft/feature/autofit/clipper_usage_in_search_summary.md) — autofit · small · supervised · high
 - [pre_build stages untracked files, publishing uncommitted human work](draft/bug/pyautohands/pre_build_stages_untracked_wip.md) — pyautohands · small · supervised · high
 - [TRIAGE: needs manual review before routing](draft/triage/jax_zero_contour.md) — medium · safe · high
 - [A crashed run poisons the next run of the same](draft/bug/autofit/crashed_run_poisons_resume.md) — autofit · medium · supervised · high
 - [Clipper: demonstrate and validate on the profiling search cells](draft/feature/autofit/clipper_validation_campaign.md) — autofit · medium · supervised · high
-- [Search-agnostic prior-support enforcement: a Clipper class](draft/feature/autofit/prior_support_clipper.md) — autofit · medium · supervised · high
 - [PyAutoLens RTD docs: three-regime restructure (multi_galaxy / group / cluster)](draft/docs/autolens/docs_three_regime_restructure.md) — autolens · medium · supervised · high
 - [The `ell_comps` trapping was masked, not cleared — characterise it](draft/research/autolens_profiling/ell_comps_trapping_unmasked.md) — autolens_profiling · medium · supervised · high
 - [Optimize pixelized Prodigy settings on the laptop GPU](draft/research/autolens_workspace_developer/pixelized_prodigy_laptop_gpu_phase_2_settings.md) — autolens_workspace_developer · medium · human-required · high
@@ -148,8 +148,8 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>feature</b> — 27</summary>
 
+- [Report how much the Clipper actually fired — surface the](draft/feature/autofit/clipper_usage_in_search_summary.md) — autofit · small · supervised · high
 - [Clipper: demonstrate and validate on the profiling search cells](draft/feature/autofit/clipper_validation_campaign.md) — autofit · medium · supervised · high
-- [Search-agnostic prior-support enforcement: a Clipper class](draft/feature/autofit/prior_support_clipper.md) — autofit · medium · supervised · high
 - [Make draft/ staleness detectable — `intake reconcile` measured, and the](draft/feature/pyautomind/draft_staleness_detection_signals.md) — pyautomind · medium · supervised · high
 - [LACosmic per-frame CR masking option + decouple PSF-star pass from](draft/feature/pyautoreduce/lacosmic_cr_option_and_star_pass_decoupling.md) — pyautoreduce · medium · supervised · high
 - [Profile and speed up JAX likelihood-function compile times (all use](draft/feature/autolens_profiling/jax_compile_time_profiling.md) — autolens_profiling · large · supervised · high
