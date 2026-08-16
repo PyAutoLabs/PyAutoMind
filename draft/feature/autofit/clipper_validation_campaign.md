@@ -25,17 +25,65 @@ justifies flipping the default.
 > Three things phase 1 changed for this campaign:
 > - **`n_clipped_lane_steps` already exists** — accumulated per-lane at
 >   `multi_start_gradient/search.py:863` and written to `search_internal`. Record
->   it as a fourth counter alongside the three below. It is **not** in
->   `search.summary`; see
->   `draft/feature/autofit/clipper_usage_in_search_summary.md`.
+>   it as a fourth counter alongside the three below.
 > - **The momentum-reset arm is buildable but not built.** `project` returns the
 >   clipped mask, which is what a caller needs to zero optimiser momentum, but
 >   nothing in PyAutoFit uses it yet. Arm 3 below therefore requires writing that
 >   reset in the campaign, not just flipping a flag.
-> - **The float32 `save_json` crash was NOT fixed by phase 1** — confirmed still
->   present at `1f4b66a`. The trap below stands in full, and it will start firing
->   precisely because clipping keeps lanes alive. See
->   `draft/bug/autofit/save_json_numpy_scalar_typeerror.md`.
+> - The float32 `save_json` crash was not fixed by phase 1 — but has since been
+>   fixed, see the handover below.
+
+## SESSION HANDOVER — 2026-08-16, cloud → GPU box
+
+A cloud CPU session did everything this campaign needs except run it. **Three
+more PyAutoFit changes landed on `main` after phase 1**, all of them clearing
+traps this prompt used to have to work around:
+
+| PR | merge | what it changes for you |
+|---|---|---|
+| #1477 | `1f4b66a` | phase 1 — the `Clipper` itself |
+| #1478 | `bbceff6` | `n_clipped_lane_steps` + `n_constrained_lane_steps` now reported in **`search.summary`** |
+| #1479 | `b6e89cd` | `NumpyEncoder` — **the float32 `save_json` crash is fixed** |
+| #1480 | *see status* | atomic writes + corrupt-resume recovery — **the poisoned-rerun trap is fixed** |
+
+**All four are UNRELEASED.** They are on `main` and not on PyPI. So this task
+**must** run against a PyAutoFit checkout at or after `b6e89cd`, and
+`autofit.__file__` must be verified to resolve to that checkout before any
+number is trusted. A released wheel has none of this.
+
+**What this means for the traps below.** Two of them are now belt-and-braces
+rather than live hazards — but do **not** delete the mitigations:
+
+- The float32 crash cannot fire at `save_json` any more. Still assert the
+  recorded step count equals `n_steps` before believing a counter; that
+  assertion catches every no-op cause, not just this one.
+- A crashed run no longer wedges the next run of the same name. Deleting
+  `output/<name>/` between arms is still the cheaper habit than reasoning about
+  whether a resume was clean.
+
+**The clip count is now a validity check, not just a statistic.** Read
+`Clipped Lane-Steps` straight out of `search.summary`. **A `ClipperPriorBox`
+arm reporting zero clips has not exercised the clipper**, and its "no change"
+result means nothing — treat it as a broken arm, not a null result.
+
+**One free finding to reuse.** The #128 mechanism reproduces on a *toy
+3-parameter Gaussian* (`autofit.example.Gaussian`, `centre` truth 30 outside a
+`UniformPrior(5, 20)`, 4 starts × 200 steps, `learning_rate=1.0`): unclipped
+gave `Value-NaN Lane-Steps = 378` (94.5%) and clipped gave `0`, with
+`Clipped Lane-Steps = 414` at rate 0.958. That is a seconds-long smoke test for
+"is the clipper wired up and firing at all" before spending GPU time on the
+`imaging/mge` cell.
+
+**Still owed alongside this**, from `active.md` `mge-lane-death`: the
+GPU/float64/multi-seed confirmation of the original result, and the
+hazard-index entry for the prior-exit failure mode. Both want the same GPU
+session as this campaign, and the confirmation shares its arms.
+
+**Sequencing:** run this campaign first. Then
+`draft/research/autolens_profiling/ell_comps_trapping_unmasked.md`, which can
+share these arms — it needs `n_constrained_lane_steps` from the *clipped* run,
+and explicitly must not re-derive the 27.79% from the prior-neutered diagnostic
+arm.
 
 Three phases, three PRs, in this order — do not merge them out of order:
 
