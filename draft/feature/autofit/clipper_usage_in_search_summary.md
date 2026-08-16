@@ -12,6 +12,30 @@ Status: formalised
 Filed 2026-08-16, immediately after phase 1 shipped
 (`complete/2026/08/prior-support-clipper.md`, PyAutoFit#1477 → `1f4b66a`).
 
+> **IMPLEMENTED AND VERIFIED 2026-08-16, NOT YET PUSHED.** A cloud session wrote
+> and tested this against `1f4b66a` but could not obtain push access to
+> PyAutoFit, so it exists only as a patch: `tmp/clipper-search-summary.patch`
+> (gitignored — take a copy before relying on it; the session container is
+> ephemeral). 4 files, +243 lines, no deletions.
+>
+> Verified on Python 3.13: `test_autofit/non_linear` + `test_autofit/text` =
+> **501 passed**, 3 skipped, 1 failed. The one failure
+> (`test_nautilus.py::test__single_core_builds_no_pool`) is **pre-existing** —
+> reproduced identically on a stashed clean tree — as is the `astropy` collection
+> error in `paths/test_save_and_load.py`, both already recorded in
+> `complete/2026/08/frozen-lane-counter.md`.
+>
+> Also verified end-to-end by running four real searches and reading the
+> `search.summary` files they wrote: LBFGS default (no clipping lines), LBFGS
+> clipped (`not measured`), MultiStart default (no clipping lines), MultiStart
+> clipped (`Clipped Lane-Steps = 414`, rate `0.958`). Incidental finding worth
+> keeping: on that toy 3-parameter Gaussian the unclipped arm showed
+> `Value-NaN Lane-Steps = 378` (94.5%) and the clipped arm `0` — the #128
+> mechanism reproducing on a model with nothing astrophysical in it.
+>
+> **Someone with push rights must apply, review and open the PR.** The scope
+> below is what was built.
+
 ## What is asked for
 
 **The number of Clipper uses must be counted, and stored in `search.summary`.**
@@ -44,31 +68,33 @@ being comparable with `n_value_nan_lane_steps` and friends.
 
 ## What is missing
 
-**1. `search.summary` carries none of it.** `search.summary` is written by
-`AbstractPaths.save_summary` (`autofit/non_linear/paths/abstract.py:583-588`) via
-`text_util.search_summary_to_file` (`autofit/text/text_util.py:164-193`), whose
-entire content is:
+**1. `search.summary` does not report it.** *(Corrected 2026-08-16 — an earlier
+revision of this prompt claimed there was no search-specific channel at all.
+That was wrong, and it would have sent an implementer off to build a mechanism
+that already exists. The channel is `samples_info`.)*
 
-- `search_summary_from_samples(samples)`
-- `Log Likelihood Function Evaluation Time (seconds)`
-- `Expected Time To Run (seconds)`
-- `Speed Up Factor (e.g. due to parallelization)`
-- `Visualization Time (seconds)`
+`search.summary` is written by `AbstractPaths.save_summary`
+(`paths/abstract.py:583-588`) via `text_util.search_summary_to_file`
+(`text/text_util.py:164-193`), which calls `search_summary_from_samples`
+(`text/text_util.py:115-161`). That function **already** reads
+`samples.samples_info` and already emits, guarded on the key so searches without
+it are unaffected:
 
-Every line is derived from `samples` or from timing. There is **no
-search-specific channel at all** — `search_summary_to_file` never sees the
-search, and `save_summary` never sees `search_internal`. This is the real work:
-the counter is not hard to compute, it is hard to *route*. Adding a mechanism by
-which a search contributes its own summary lines is the actual design decision,
-and it is why this is `supervised` rather than `safe`.
+- `Resurrections`, `Value-NaN Lane-Steps`, `Gradient-NaN Lane-Steps`
+- `Value-NaN Lane-Step Rate`, `Gradient-NaN Lane-Step Rate`, denominated by
+  `n_starts * total_steps` and omitted when that is zero
 
-Prefer a general channel over a one-off `n_clipped_lane_steps` parameter
-threaded through two generic functions. The other multi-start counters
-(`n_value_nan_lane_steps`, `n_grad_nan_lane_steps`, `n_constrained_lane_steps`,
-`n_resurrections`, `stop_reason`) all have exactly the same problem and the same
-readership — anyone reading `search.summary` to find out what the search did.
-A single hook that lets a search emit key/value summary lines serves all of them
-and is barely larger than the special case.
+So the routing is solved. What is missing is narrow and specific:
+
+- `n_clipped_lane_steps` **never reaches `samples_info`** — it is written to
+  `search_internal` (`multi_start_gradient/search.py:919`) but not copied into
+  the `samples_info` dict at `search.py:1147`.
+- `n_constrained_lane_steps` **does** reach `samples_info` but is **never
+  emitted** by `search_summary_from_samples`. The trapped-lane counter from
+  PyAutoFit#1475 has been invisible in the one artefact a user reads to find out
+  what the search did, ever since it shipped.
+
+Follow the existing key-guarded pattern rather than inventing a second one.
 
 **2. The LBFGS path produces no count whatsoever.** This is the part most likely
 to be missed. `AbstractBFGS` is *declarative* — it hands `optimize.Bounds` to
@@ -86,17 +112,31 @@ emitting a `0` for LBFGS that reads as "the clipper never fired" when it means
 the same distinction `clipper_validation_campaign.md` already insists on for
 `0` versus `null`.
 
-## Scope
+## Scope — as built in the patch
 
-1. A channel by which a search contributes lines to `search.summary`. Route all
-   the multi-start counters through it, not just the clip count.
-2. `MultiStartGradient` reports `n_clipped_lane_steps` (and, given the channel,
-   its sibling counters and `stop_reason`).
-3. `LBFGS` reports that bounds were supplied and that press-count is not
-   observable — not a bare `0`.
-4. Emit nothing about clipping when the clipper is `ClipperNone`. The default
-   path must stay clean; a line saying "clipped: 0" on every existing run is
-   noise on output that many downstream tools read.
+1. `multi_start_gradient/search.py` — publish `clipper` (the strategy's class
+   name, not a bool, so a later strategy needs no schema change) and
+   `n_clipped_lane_steps` into `samples_info`, cast to `int`, read from
+   `search_internal` with a `.get(..., 0)` default so a legacy file does not
+   `KeyError` and a resumed run reports the lifetime total.
+2. `bfgs/search.py` — publish `clipper` **and deliberately no count**, with the
+   reasoning in a comment at the site.
+3. `text/text_util.py` — a `_clipper_summary_from(samples_info)` helper handling
+   the three cases (no clipper → nothing; counted → `Clipper`, `Clipped
+   Lane-Steps`, `Clipped Lane-Step Rate`; clipper but no count key →
+   `Clipped Lane-Steps = not measured (bounds enforced by scipy)`), plus the
+   one-line `Constrained Lane-Steps` emission the trapped-lane counter was
+   owed.
+4. `test_autofit/text/test_text_util.py` — 6 tests: `ClipperNone` emits nothing,
+   counted reports count and rate, no-count says not-measured and never a bare
+   `0`, absent key unaffected, constrained emitted, constrained absent when never
+   written.
+
+**One deliberate behaviour change to note in review:** multi-start summaries gain
+a `Constrained Lane-Steps` line they did not have before. Everything else is
+strictly additive and gated, so the `ClipperNone` path is otherwise unchanged. If
+a reviewer wants byte-identity for existing multi-start runs too, drop that one
+line — it is independent of the clip count.
 
 ## Traps
 
