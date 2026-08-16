@@ -2,7 +2,7 @@
 
 ## clipper-validation-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/129
-- prompt: draft/feature/autofit/clipper_validation_campaign.md (still in draft/ — NOT advanced to active/, because the campaign is part-run, not issued-and-owned; move it if you formally take the task)
+- prompt: active/clipper_validation_campaign.md (issued as autolens_profiling#129; advanced to active/ on filing, per the lifecycle)
 - session: claude cloud (web) 2026-08-16 — **HANDOFF, work part-done, read this whole entry before running anything**
 - status: IN PROGRESS — machinery built and first arm pair measured; campaign NOT complete and NO PR opened
 - upstream: phase 1 shipped as PyAutoFit#1477 (`1f4b66a`), record `complete/2026/08/autofit-prior-support-clipper.md`. Root cause autolens_profiling#128 / the `mge-lane-death` entry below.
