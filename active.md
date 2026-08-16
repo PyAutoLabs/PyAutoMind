@@ -4,7 +4,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1476
 - prompt: active/prior_support_clipper.md
 - session: claude cloud (web) 2026-08-16
-- status: library-dev
+- status: library-dev — IMPLEMENTED and pushed 2026-08-16 as `bf8c302` on `claude/autofit-clipper-prior-support-o3jotv`. No PR opened (not requested). Remaining: human review, then PR + merge.
+- validation: full `test_autofit` suite **1790 passed / 1 failed**, the one failure (`test_nautilus.py::test__single_core_builds_no_pool`) CONFIRMED PRE-EXISTING by re-running it with the changes stashed on clean `main`. New `test_autofit/non_linear/test_clipper.py` = 21 tests, all passing.
+- bit-identity gate PASSED on both searches: `LBFGS` and `MultiStartAdam` each run with no clipper argument and with an explicit `ClipperNone` return identical final parameters. TRAP HIT ONCE — the first run of the gate reported a mismatch that was the HARNESS, not the code: the initializer draws its start from `random`/`numpy` and the two runs were not reseeded. Seed before each fit or the gate lies.
+- end-to-end EFFICACY (Gaussian fit, truth deliberately OUTSIDE the prior box, 8 starts x 40 steps, CPU): value-NaN lane-steps **249 → 0**, with 252 clips recorded. The clipped run pins `centre` at 43.999986 against a `[30, 44]` box — the correct MAP answer under a prior that excludes the truth, and an independent reproduction of the momentum-pinning the prompt predicted. A first attempt at this check measured NOTHING (0 clips) because the box CONTAINED the optimum — a box the search never wants to leave does not exercise a clipper.
+- regression guards verified by inversion: patching `ClipperPriorBox` back to the naive `margin * (upper - lower)` form makes 5 tests fail, including both named guards. The guards are load-bearing, not decorative.
+- convention notes for the reviewer: `black` would reformat `bfgs/search.py` and `multi_start_gradient/search.py`, but BOTH were already unformatted on clean `main` — deliberately NOT reformatted, to keep the diff free of unrelated churn. `scipy` is imported lazily inside `_bounds_from` because no module in `autofit/` pulls scipy in at import time. Library tests stay NumPy-only per the note atop `test_multi_start_gradient.py` ("keeping JAX out of the library unit suite"); the JAX end-to-end checks above were run locally and are recorded here rather than committed.
 - worktree: ~/Code/PyAutoLabs-wt/autofit-prior-support-clipper (not created — this is a cloud session working from a direct clone at /workspace/pyautofit)
 - repos:
   - PyAutoFit: claude/autofit-clipper-prior-support-o3jotv
