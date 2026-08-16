@@ -164,6 +164,70 @@ not swept up as a clipping artefact.
 - **`0` and `null` are different findings.** Read counters with `.get()` and a
   `null` means the search never wrote the key — broken plumbing, not a clean cell.
 
+## What phase 1 actually shipped (added 2026-08-16, after it landed)
+
+Phase 1 is **MERGED**: PyAutoFit#1477 as `1f4b66a`, closing #1476. Record:
+`complete/2026/08/autofit-prior-support-clipper.md`. Four things change how this
+task must be run:
+
+1. **Arm 3 (momentum reset) does NOT exist yet.** Phase 1 ships the clipped
+   **mask** from `project`, which is what a momentum reset would need — but no
+   reset is implemented, and the search does not touch `opt_state` on a clip.
+   So arm 3 either gets a small addition first, or this campaign runs arms 1-2
+   and reports the pinned-lane count as the input to that decision. Do not
+   silently drop it: the prototype's 5/16 pinned lanes are why the arm exists.
+
+2. **A new counter to record: `n_clipped_lane_steps`**, in `search_internal`
+   alongside the existing three. Per-LANE per-step (`any(mask, axis=-1)`), same
+   convention as the others. It is the direct measure of how hard the wall is
+   being hit, and it distinguishes "clipping rarely fires" from "clipping fires
+   constantly and the population is living on the bound".
+
+3. **THE ARM-COLLISION HAZARD — read before running anything.** Verified with
+   real fits during phase 1: the `clipper` does **not** enter the search
+   identifier. `no clipper` / `ClipperNone` / `ClipperPriorBox` all resolve to
+   **the same output directory**. That is good for back-compat (existing results
+   are not orphaned) and *actively dangerous here*, because arms 1 and 2 differ
+   in exactly nothing else. Stacked with two other confirmed behaviours:
+   - a `.completed` marker makes `fit()` **short-circuit and return the cached
+     result without entering `_fit`**, and
+   - the `search_internal` folder is **deleted on successful completion**, so it
+     cannot be read back afterwards,
+
+   the failure mode is that **arm 2 silently returns arm 1's numbers**, looking
+   like a clean run. This is the same cached-result hazard #128 already recorded,
+   with a new and much sharper trigger. Mitigation, all three: give every arm a
+   **unique `name`**, delete `output/<name>/` between arms, and assert the
+   recorded `total_steps == n_steps` before believing any counter. Also worth
+   deciding as a deliverable: *should* the clipper enter the identifier? Phase 3
+   wants a re-baseline, and colliding arms make that harder.
+
+4. **The `float32` `save_json` bug is NOT fixed** (filed as a follow-up, not
+   carried by phase 1). So this prompt's trap stands and applies: capture the
+   counters **independently of the result object**. The method proven in phase 1
+   is to patch `DirectoryPaths.save_search_internal` at **class** level and copy
+   the dict as it is written — instance-level patching is silently discarded,
+   because `fit()` rebuilds `search.paths`.
+
+Two more phase-1 measurements worth carrying in as priors, both CPU/float32 on a
+toy Gaussian, so directional only:
+
+- With the truth deliberately **outside** the prior box, lane deaths went
+  **249 → 0** with 252 clips, and the clipped run pinned `centre` at the upper
+  bound. That is the "pinning is a result, not a failure" case reproducing in
+  miniature, and an independent confirmation of the momentum-pinning mechanism.
+- The **negative control this prompt asks for already passes at unit level**: a
+  `GaussianPrior` coordinate is provably untouched by `ClipperPriorBox`, and there
+  is a regression test guarding it. The cell-level negative control is still
+  worth running, but a failure there would point at the cell, not the bounds
+  extraction.
+
+Also fixed in phase 1 and relevant when reading the source: the
+`AbstractMultiStartGradient` class docstring used to claim the rule steps "on the
+unconstrained (unit-cube) parameterization". It never did — `_broad_starts` maps
+draws to physical parameters. Corrected, but older checkouts still carry the false
+sentence.
+
 ## Deliberately out of scope
 
 - Flipping any default (phase 3).
