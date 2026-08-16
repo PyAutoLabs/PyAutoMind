@@ -16,6 +16,23 @@ That prompt has since shipped as PyAutoFit#1477; its record is
 `complete/2026/08/prior-support-clipper.md`. **This bug was not fixed by it** —
 verified still present at `1f4b66a`, the merge commit itself.
 
+> **IN FLIGHT — PyAutoFit#1479 open 2026-08-16**, branch
+> `claude/autofit-save-json-numpy`. Advance to `complete/` on merge.
+>
+> Reproduced against the unfixed tree first: `paths.save_json(name="c",
+> object_dict={"clipped": np.float32(4.0)})` raises exactly
+> `TypeError: Object of type float32 is not JSON serializable`.
+>
+> Fixed with a `NumpyEncoder` in `autofit/tools/util.py`, wired into **both**
+> output-path writers — `DirectoryPaths.save_json` and, which the prompt below
+> did not name, `Samples.info_to_json` (`samples/samples.py:338`). That second
+> one is the more dangerous of the two: `samples_info` is a search's own
+> diagnostic channel, so every new counter added to it is another chance to
+> reintroduce this.
+>
+> 13 new tests. Full suite 1804 passed / 4 skipped / 1 failed, the failure
+> pre-existing (nautilus single-core pool) and identical on a clean tree.
+
 ## The defect
 
 `@PyAutoFit/autofit/non_linear/paths/directory.py:80` serialises with a bare

@@ -16,6 +16,28 @@ That prompt has since shipped as PyAutoFit#1477; its record is
 `complete/2026/08/prior-support-clipper.md`. **This bug was not fixed by it** —
 verified still present at `1f4b66a`, the merge commit itself.
 
+> **IN FLIGHT — PyAutoFit#1480 open 2026-08-16**, branch
+> `claude/autofit-crashed-run-poisons-resume`. Advance to `complete/` on merge.
+>
+> **CORRECTION, from reproducing it.** This prompt says the poisoned rerun is
+> "a 4-second no-op run that reads as a clean result". **That did not
+> reproduce.** What reproduces against `main` is a hard crash:
+> `JSONDecodeError: Expecting value: line 1 column 13 (char 12)`, naming no
+> file and offering no remedy, on every rerun of that search name. The
+> silent-no-op variant presumably needs a *surviving* `search_internal`, whose
+> restored `total_steps` short-circuits the loop — the crash path deletes it
+> first. Same root cause, and the fix covers both, but only the crash is
+> evidenced. Do not cite the no-op as observed.
+>
+> Fixed in three legs, the third of which the prompt below only hinted at:
+> (1) `open_atomic` — temp file plus `os.replace` — used by `save_json` **and**
+> `save_search_internal`; (2) `check_log_likelihood` treats a corrupt summary
+> as absent, as it already did for a missing one, warning rather than aborting
+> the run from inside an optional check; (3) the multi-start resume guard
+> widened so corrupt state falls into the fresh-start branch below it.
+>
+> 9 new tests. Full suite 1800 passed / 4 skipped / 1 failed (pre-existing).
+
 ## The defect
 
 A run that dies during output leaves a **truncated JSON file** on disk and no
