@@ -12,11 +12,9 @@ Status: formalised
 Filed 2026-08-16, immediately after phase 1 shipped
 (`complete/2026/08/prior-support-clipper.md`, PyAutoFit#1477 → `1f4b66a`).
 
-> **IMPLEMENTED AND VERIFIED 2026-08-16, NOT YET PUSHED.** A cloud session wrote
-> and tested this against `1f4b66a` but could not obtain push access to
-> PyAutoFit, so it exists only as a patch: `tmp/clipper-search-summary.patch`
-> (gitignored — take a copy before relying on it; the session container is
-> ephemeral). 4 files, +243 lines, no deletions.
+> **IN FLIGHT — PyAutoFit#1478 open 2026-08-16**, branch
+> `claude/clipper-validation-handover-ltin4j`, 4 files, +243 lines, no
+> deletions. Advance this prompt to `complete/` on merge.
 >
 > Verified on Python 3.13: `test_autofit/non_linear` + `test_autofit/text` =
 > **501 passed**, 3 skipped, 1 failed. The one failure
@@ -31,10 +29,11 @@ Filed 2026-08-16, immediately after phase 1 shipped
 > clipped (`Clipped Lane-Steps = 414`, rate `0.958`). Incidental finding worth
 > keeping: on that toy 3-parameter Gaussian the unclipped arm showed
 > `Value-NaN Lane-Steps = 378` (94.5%) and the clipped arm `0` — the #128
-> mechanism reproducing on a model with nothing astrophysical in it.
+> mechanism reproducing on a model with nothing astrophysical in it. That is a
+> far cheaper regression fixture than the `imaging/mge` cell and is worth
+> keeping whatever happens to this PR.
 >
-> **Someone with push rights must apply, review and open the PR.** The scope
-> below is what was built.
+> The scope below is what was built.
 
 ## What is asked for
 
