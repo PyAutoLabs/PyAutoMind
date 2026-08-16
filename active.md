@@ -3,10 +3,11 @@
 ## clipper-validation-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/129
 - prompt: active/clipper_validation_campaign.md (advanced from `draft/` on registration — the task is issued as #129, and `active/` is what the lifecycle means by issued/in-flight)
-- session: claude cloud (web) 2026-08-16 — registered so the campaign is not started twice
+- session: claude cloud (web) 2026-08-16 — HANDED OFF. The human is re-running phase 2 FROM SCRATCH on a laptop/GPU; this cloud session is done. Everything below is prior context to check against, not results to build on.
 - status: **IN PROGRESS, part-run.** Machinery built and the FIRST ARM PAIR MEASURED on CPU. Campaign NOT complete; NO PR opened on the work branch, deliberately.
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/130 (OPEN — the machinery + the first CPU arm pair)
 - repos:
-  - autolens_profiling: claude/clipper-validation-campaign-o3jotv (pushed, 1 commit, no PR)
+  - autolens_profiling: claude/clipper-validation-campaign-o3jotv (pushed, 2 commits)
 - WHY THIS ENTRY EXISTS: the `mge-lane-death` entry below says phase 2 "is now UNBLOCKED and is the next thing to run", which is true but incomplete — **it has been started**. Anyone picking phase 2 up (a GPU session in particular) should read this first rather than rebuilding the driver and re-running the CPU arms.
 - HEADLINE RESULT (imaging/mge hst, `multi_start_adam`, 16x150, single seed, cloud CPU float32): value-NaN lane-steps **2268 -> 47** with **1920 clips**, and `max_log_likelihood` **IDENTICAL between arms to every printed digit** (-15529.587986751998). **11 of 16 lanes end pinned** to a bound (31 coordinates). That fires **two of the four pre-registered falsification conditions** — deaths fall without the answer moving, and most survivors end pinned. **DO NOT WRITE PHASE 3 ON THIS EVIDENCE.**
 - NOT the caching artefact — that was the predicted way to fake an identical result, so it was checked first: the arms differ in value-NaN (2268 vs 47), grad-NaN (0 vs 9) and wall (286.5s vs 249.6s). Arm 2 genuinely ran and converged to the same best point. Likely mechanism: **the winning lane never left the prior box**, so clipping never touched it and every rescued lane stayed worse than the incumbent.
@@ -20,7 +21,7 @@
 - cost measured on this cloud CPU box: one 16x150 arm ~250-290s wall; JIT compile dominates short runs (4x5 took ~128s); two arms ~9 min. **GPU cells (pixelized meshes) are NOT runnable from a cloud session** — no HPC/SSH access.
 - next, in order: (1) a **converged budget** (GPU / more steps / Prodigy) so the comparison is meaningful at all; (2) the `seed` arg, then >=2 seeds/arm; (3) the momentum-reset arm; (4) remaining cells — pixelized (GPU), `point_source`, and the unbounded-prior negative control.
 - lifecycle note: main carried this prompt in `draft/` after PyAutoMind#189 was consolidated, which was correct while it was unstarted. Registering an `active.md` entry against a `draft/` prompt is exactly what `lifecycle.py check` flags — and what turned #189's `drift` check red once — so the prompt moves to `active/` with this entry. If a session decides the campaign should not be owned yet, move BOTH back together (entry to `parked.md`, prompt to `draft/`), never one without the other.
-- do-not: do NOT open a PR on `claude/clipper-validation-campaign-o3jotv` while the campaign is part-run — the findings note would read as a verdict. Do NOT flip any default.
+- do-not: do NOT flip any default (phase 3) on this evidence. The findings note and PR#130 are framed as one CPU/float32 single-seed data point at a non-converged budget, NOT a verdict — keep that framing if you extend them.
 
 ## mge-lane-death
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/128
