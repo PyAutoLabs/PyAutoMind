@@ -1,101 +1,224 @@
 - library-prs: https://github.com/PyAutoLabs/PyAutoFit/pull/1477
 - merge-commits: PyAutoFit `1f4b66a937e0012a99b078b1c8b85c52aaac7f0d` (2026-08-16)
 - issue: PyAutoFit#1476 (closed by the PR)
-- summary: Added `AbstractClipper` / `ClipperNone` / `ClipperPriorBox` in
-  `autofit/non_linear/clipper.py`, modelled on `initializer.py`, giving the
-  gradient searches search-agnostic enforcement of prior support. Wired opt-in
-  into `AbstractMultiStartGradient` (imperative `project` after
-  `optax.apply_updates`) and `AbstractBFGS` (declarative `bounds` handed to
-  scipy). `project` returns the clipped mask alongside the vector so a caller can
-  zero optimiser momentum along clipped directions. This is **phase 1** of the
-  three-phase plan; phase 2 is the validation campaign in
-  `draft/feature/autofit/clipper_validation_campaign.md`, and phase 3 (flipping
-  the default) must not be written until phase 2 has run.
-- validation: 22 tests in `test_autofit/non_linear/test_clipper.py` across five
-  classes — `TestBoundsExtraction`, `TestOrdering` (the parameter-ordering
-  correspondence the prompt flagged as load-bearing and silent if wrong),
-  `TestProject`, `TestClipperNone`, `TestSearchWiring`. Bit-identity under the
-  default was verified across 10 randomly generated models on **both** searches.
-- release: not performed; the merged PR remains in the pending-release queue.
+- summary: Shipped `AbstractClipper` / `ClipperNone` / `ClipperPriorBox` in
+  `autofit/non_linear/clipper.py`, the search-agnostic prior-support enforcement
+  the `mge-lane-death` investigation (autolens_profiling#128) asked for. Phase 1
+  of three; phase 2 is `draft/feature/autofit/clipper_validation_campaign.md`.
+- validation: 22 tests, CI green on 3.12 / 3.13 / docs, plus the out-of-suite
+  verification logged below.
+- release: not performed; merged PR remains in the pending-release queue.
 
-## The problem it fixes
+> **CONSOLIDATED 2026-08-16.** Two sessions independently wrote a completion
+> record for this task. This file is the union. The detailed body below —
+> the bound-kind design decision, the eight measured traps, the process lesson,
+> the verification log and the phase-2 harness traps — comes from the session
+> that actually shipped PyAutoFit#1477 (PyAutoMind#189, closed in favour of this
+> file). The "What shipped after" section is from the session that did the
+> follow-up work. Nothing was dropped in the merge.
 
-The gradient searches step in physical parameter space against
-`fom = -2 * (log_likelihood + sum(log_prior_list))`, with nothing constraining a
-step to the prior box. A `UniformPrior` is `-inf` outside its limits, so a lane
-that oversteps a hard prior edge reads as non-finite and is marked dead.
+Shipped the search-agnostic `Clipper` — prior-support enforcement for the
+gradient searches, as the pluggable sibling of `Initializer`. This is follow-up
+(1) owed by the `mge-lane-death` investigation (autolens_profiling#128), which
+found the MGE lane deaths are the **prior** term, not the likelihood.
 
-The failure is worse than "frozen". Because `log_prior = -inf` is *constant*
-outside the box, its derivative is zero, so the total gradient is the finite
-**likelihood** gradient and `optax.apply_if_finite` never fires. The dead lane
-keeps stepping for the rest of the run at full likelihood-and-gradient cost with
-its output discarded, wandering far. On the reference `imaging/mge` cell that was
-60.25% of lane-steps and 14 of 16 lane deaths — **while the likelihood never went
-non-finite once** (autolens_profiling#128).
+- issue: PyAutoFit#1476
+- pr: PyAutoFit#1477, **MERGED** 2026-08-16 as `1f4b66a` (squash), +798/-3 over
+  7 files. Full CI green on both runs (`unittest` 3.12, `unittest` 3.13,
+  `docs / docs-build`).
 
-## The inset is keyed on bound kind, never on unguarded `upper - lower`
+## What shipped
 
-The finding most likely to be re-derived painfully if lost:
+`AbstractClipper` / `ClipperNone` / `ClipperPriorBox` in a new
+`autofit/non_linear/clipper.py`, wired **opt-in** into the two exposed searches:
+`AbstractMultiStartGradient` projects after `optax.apply_updates`; `AbstractBFGS`
+hands box bounds to scipy (`L-BFGS-B` supports them natively — they were simply
+never passed). `project` returns the clipped **mask** as well as the vector, so a
+caller can zero optimiser momentum along clipped directions.
 
-- **two-sided finite** → relative margin. Not needed for prior support (those
-  bounds are inclusive) but to avoid parking a lane on a prior edge where the
-  model's own transforms are singular, as the interior start band already avoids.
-- **unbounded** → no inset and no width arithmetic, since `-inf + inf` is `NaN`
-  and clipping against `NaN` bounds destroys the coordinate *and* the objective.
-- **half-open and exclusive** (`LogGaussianPrior`'s `0`) → absolute
-  `strict_epsilon`, a relative margin being identically zero there.
+Default is `ClipperNone` and the PR is **bit-identical** with it. Flipping the
+default is PR 2 — `draft/feature/autofit/clipper_validation_campaign.md`, now
+unblocked.
 
-## Two traps paid for
+## The design decision worth remembering: inset by BOUND KIND, never by width
 
-- **`LogGaussianPrior` reports `(-inf, inf)`** though its support is `(0, inf)`.
-  The real support is declared in the clipper, deliberately leaving the shared
-  `Prior` class untouched — changing it there would silently alter the objective
-  for the nested samplers, where the hard box currently works correctly.
-- **scipy reads a `(lower, upper)` tuple as a sequence of `(min, max)` pairs**,
-  silently mis-fitting two-parameter models. The BFGS wiring therefore builds an
-  explicit `optimize.Bounds`. Plain `BFGS` *ignores* bounds behind a
-  `UserWarning` rather than rejecting them, so a real clipper on a
-  non-bound-supporting method raises instead.
+The obvious implementation, one relative `margin * (upper - lower)`, is wrong in
+two separate and silent ways. Both stem from computing the width unconditionally.
+Three cases instead:
 
-Also corrected the `AbstractMultiStartGradient` class docstring, which claimed
-the rule steps on the unit-cube parameterization; `_broad_starts` maps draws to
-physical parameters.
+| Bound kind | Example | Inset |
+|---|---|---|
+| two-sided finite | Uniform, LogUniform, TruncatedGaussian | relative `margin * width` |
+| unbounded | Gaussian | **none, and no width arithmetic at all** |
+| half-open, exclusive | LogGaussian's `0` | absolute `strict_epsilon` |
 
-## Default is `ClipperNone` and the change is bit-identical under it
+And note the two-sided margin is **not** for prior support — measurement showed
+those bounds are *inclusive* (`UniformPrior.log_prior(2.0) = 0.0`,
+`TruncatedGaussian.log_prior(1.0) = -0.5`), so `margin=0` would be valid. It
+exists to avoid parking a lane exactly **on** a prior edge, where the model's own
+transforms are singular — the same reason the broad-start band defaults to the
+interior `(0.15, 0.85)` rather than `(0, 1)`.
 
-Deliberate, and it follows the precedent of PyAutoFit#1475. Flipping the default
-shifts every stored multi-start benchmark, which is the comparability argument
-PyAutoFit#1472 made when deferring its own policy change. That flip is phase 3,
-and it is gated on the phase-2 re-baseline.
+## Traps, all measured against a running install
 
-## What this does NOT fix — carried forward
+1. **The naive margin turns every unbounded prior into `NaN`.** `-inf + (inf -
+   -inf) * m` is `NaN`, and clipping against `NaN` bounds destroys the coordinate
+   and the whole objective (`sum(log_prior) = nan`). This would have made the
+   feature **actively harmful** on exactly the models it targets — the MGE
+   reference model carries `GaussianPrior`s — with a symptom indistinguishable
+   from the bug being fixed. Every bit-identity test still passes against it,
+   because `ClipperNone` never computes a margin.
+2. **scipy reads `bounds=(lower_array, upper_array)` as a sequence of `(min,
+   max)` PAIRS.** At n=2 it returns a silently wrong fit (`[0.,1.]` where the
+   answer is `[1.,1.]`), no error, no warning; at every other n it raises
+   `ValueError`. So it fails loudly for most models and silently for
+   two-parameter ones. Build an explicit `optimize.Bounds`. This was the
+   *prompt's own* specified return type.
+3. **`LogGaussianPrior` misreports its own support.** Its `TransformedMessage`
+   defaults limits to `±inf` and is never passed any, yet `log_prior_from_value`
+   is `-inf` for `value <= 0`. Declared in the clipper, prior class untouched.
+4. **Plain `BFGS` does not reject bounds — it IGNORES them** behind a
+   `UserWarning` and returns the unconstrained optimum. "Guard or warn" is too
+   weak; raise.
+5. **`prior.lower_limit` resolves for every prior type** via `Prior.__getattr__`
+   delegating to the message (`AbstractMessage` defaults `±inf`). No type switch
+   needed — except for trap 3.
+6. **The NumPy and JAX paths disagree on support.**
+   `UniformPrior.log_prior_from_value` is `if xp is np: return 0.0` —
+   unconditional, no bound test. Only the JAX branch walls off the box, so LBFGS
+   is exposed only in its `analysis._use_jax` branch.
+7. **float32 makes the box check asymmetric.** `2.0000001` is not representable
+   distinctly from `2.0` and reads as in-box, while `-1e-7` against a lower bound
+   of `0.0` is caught. A test asserting "overshoot is detected" must use a bound
+   near zero or float64, or it passes vacuously.
+8. **The `AbstractMultiStartGradient` class docstring was factually wrong** —
+   claimed the rule steps "on the unconstrained (unit-cube) parameterization"
+   while `_broad_starts` maps draws to physical. That is the sentence that would
+   tell the next reader this class of bug cannot exist. Corrected.
 
-- **Lane deaths from NaN gradients.** The prototype left 5/16 lanes dying on the
-  NaN-params path; clipping is not the mechanism for those.
-- **Lanes ending pinned to a bound.** The prototype left 5/16 pinned because
-  parameters were projected while Prodigy's accumulated state kept pushing
-  outward. `project` returning the mask is what lets a caller fix this; nothing
-  yet *uses* the mask to reset momentum. That is a phase-2 arm.
-- **The `ell_comps` trapping**, which the prior-exit deaths were masking — see
-  `draft/research/autolens_profiling/ell_comps_trapping_unmasked.md`.
-- **The clip count is counted but not surfaced.** `n_clipped_lane_steps` is
-  accumulated per-lane (`multi_start_gradient/search.py:863`) and written into
-  `search_internal`, but `search.summary` carries none of it, and the LBFGS path
-  produces no count at all since scipy enforces the bounds. See
-  `draft/feature/autofit/clipper_usage_in_search_summary.md`.
+## The process lesson: a green suite is not coverage
 
-## Two incidental bugs surfaced by it, both still open
+The first commit shipped an **undefined `optimize` in `LBFGS._fit`** — any real
+`LBFGS.fit()` raised `NameError`. The **full 1790-test suite passed against it**,
+because nothing in the library suite ever executes an LBFGS fit. It was caught
+only by a randomised end-to-end stress run, after the code was already pushed.
+Fixed in the second commit with a smoke test that runs a real `LBFGS.fit()`,
+verified to fail with exactly that `NameError` if the import is removed again.
 
-Both appear on a code path the reference cell had apparently never taken, because
-they need lanes to *survive*:
+When a change touches a path, check whether anything actually *executes* it
+before trusting the suite.
 
-1. `draft/bug/autofit/save_json_numpy_scalar_typeerror.md` — `float32` is not
-   JSON serializable and `paths/directory.py:80` is a bare `json.dump`. It fires
-   at the END of a successful run, so it starts firing exactly when the fix works.
-   **Confirmed still present at `1f4b66a`** — phase 1 did not fix it.
-2. `draft/bug/autofit/crashed_run_poisons_resume.md` — the truncated file that
-   crash leaves makes the next same-named run resume into it and report a
-   zero-step no-op as a clean result.
+## Verification performed (beyond the committed tests)
+
+- **Bit-identity 10/10 on both searches** across randomly generated models mixing
+  every prior type — `no clipper arg` vs explicit `ClipperNone`.
+- **Core promise 8/8** — with `ClipperPriorBox`, final `sum(log_prior)` finite
+  every time, lane deaths **0 in every case** vs 62–96 without.
+- **End-to-end**: Gaussian fit with the truth outside the box, lane deaths
+  **249 → 0** with 252 clips; the clipped run pins `centre` at the upper bound,
+  which is the correct MAP answer under a prior excluding the truth, and an
+  independent reproduction of the momentum pinning.
+- **Guards verified by inversion** — patching back to the naive width form makes
+  5 tests fail, including both named regression guards.
+- **Resume path** — a `search_internal` lacking `n_clipped_lane_steps` resumes
+  without `KeyError`.
+- **Identifiers unchanged** — real fits produce a single identifier dir shared by
+  `no clipper` / `ClipperNone` / `ClipperPriorBox`, so existing on-disk results
+  are not orphaned. Flip side: two runs differing only in clipper currently
+  COLLIDE on one output dir — matters for PR 2's re-baseline.
+
+## Harness traps that cost time (for whoever writes the PR 2 measurements)
+
+- **`.completed` marker short-circuits `fit()`** — a resumed or re-run search
+  returns the cached result without entering `_fit`. Three successive versions of
+  a resume test "passed" while testing nothing. Also bites when a script is
+  re-run with stale output from its previous execution.
+- **`fit()` rebuilds `search.paths`**, so an instance-level monkeypatch on
+  `paths.save_search_internal` is silently discarded. Patch at CLASS level.
+- **The search_internal folder is deleted on successful completion**, so it
+  cannot be read back after the fit — capture it as it is written.
+- **Two identically-constructed searches did not resolve to the same identifier
+  dir**, so "resume" silently started fresh. The reliable method is patching
+  `DirectoryPaths.load_search_internal` at class level.
+- **Seed `random` AND `numpy` before every fit** — the initializer draws from
+  both, and an unseeded comparison reports a spurious bit-identity mismatch.
+  (This produced one false alarm on the bit-identity gate.)
+- **A box containing the optimum never exercises the clipper.** The first
+  efficacy attempt measured 0 clips for exactly this reason; put the truth
+  outside the box.
+
+## Corrections issued
+
+`test_nautilus.py::test__single_core_builds_no_pool` **passes in CI**. It failed
+only in the local py3.12 venv used for verification. It was correctly identified
+as not caused by this task (verified by stashing), but was wrongly described as
+"pre-existing on clean main" in an earlier revision of the PR body and in the
+`active.md` notes; both were corrected.
+
+## Follow-ups owed (filed, not fixed)
+
+1. `float32` is not JSON serializable in result output —
+   `autofit/non_linear/paths/directory.py:80` `save_json` raises `TypeError` at
+   the end of a successful clipped run. Surfaced only because clipping let lanes
+   survive onto a code path this cell had never taken.
+2. A crashed run poisons the next run of the same name: the half-written output
+   from (1) makes the next search with the same `name` fail with
+   `JSONDecodeError` while resuming — a 4-second no-op that *looks like* a clean
+   result. A new form of the cached-result hazard in
+   `complete/2026/08/multistart-nan-step-diagnostics.md`.
+3. Declare `LogGaussianPrior`'s `(0, ∞)` support on the prior itself, retiring
+   the clipper's special case.
+4. Decide whether the clipper should enter the search identifier — relevant to
+   PR 2's benchmark re-baseline (see "Identifiers unchanged" above).
+5. **NUTS remains out of scope** — HMC entering a `-inf` region diverges rather
+   than freezing. Different mechanism, its own task.
+
+## Repos / worktree
+
+- PyAutoFit: `claude/autofit-clipper-prior-support-o3jotv` (merged, deletable).
+- No worktree was created — this ran in a cloud session from a direct clone at
+  `/workspace/pyautofit`.
+
+## What shipped after this record was first written
+
+Three further PyAutoFit PRs landed the same day, all merged, all **unreleased**.
+Anything running against a PyPI wheel has none of them.
+
+| PR | merge | what |
+|---|---|---|
+| #1478 | `bbceff6` | `Clipper`, `Clipped Lane-Steps`, `Clipped Lane-Step Rate` and `Constrained Lane-Steps` reported in `search.summary` |
+| #1479 | `b6e89cd` | `NumpyEncoder` — closes follow-up 1 below (the `float32` `save_json` crash) |
+| #1480 | `5c9244b` | atomic writes + corrupt-resume recovery — closes follow-up 2 below |
+
+So **follow-ups 1 and 2 in the list below are now FIXED**; they are left in place
+because the reasoning that found them is the record. Their own records are
+`complete/2026/08/save-json-numpy-scalar-typeerror.md` and
+`complete/2026/08/crashed-run-poisons-resume.md`. Follow-ups 3, 4 and 5 remain
+open and 3 and 4 are now filed as prompts:
+`draft/bug/autofit/loggaussian_prior_declares_own_support.md` and
+`draft/feature/autofit/clipper_in_search_identifier.md`.
+
+Two corrections that came out of doing that follow-up work:
+
+- **Follow-up 2's symptom was misdescribed.** Both records originally said the
+  poisoned rerun is "a 4-second no-op that looks like a clean result". That
+  **did not reproduce**. What reproduces is a hard `JSONDecodeError` on every
+  rerun of the same search name. The no-op variant presumably needs a surviving
+  `search_internal` whose restored `total_steps` short-circuits the loop — and
+  the crash path deletes that directory first, as noted under the harness traps
+  above. Do not cite the no-op as observed.
+- **`n_clipped_lane_steps` was already in `search_internal` but nowhere else.**
+  #1478 carried it into `samples_info` and `search.summary`, and found that
+  `n_constrained_lane_steps` — PyAutoFit#1475's trapped-lane counter — had
+  reached `samples_info` when it shipped but was never printed, so it had been
+  invisible in `search.summary` all along.
+
+On the `test_nautilus.py::test__single_core_builds_no_pool` question raised under
+"Corrections issued" above: it is now confirmed from both sessions. It **passes
+in CI** and fails in local venvs on both 3.12 and 3.13, with the failure
+reproducing on a stashed clean tree. So "not caused by this work" is right;
+"pre-existing on clean `main`" is the wrong gloss, and the PR bodies for #1479
+and #1480 use that looser phrasing. Read it as environment-specific.
 
 ## Original prompt
 

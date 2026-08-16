@@ -91,7 +91,58 @@ Mitigation — do all three:
 
 Not a bug in itself — it is what keeps existing runs' directories stable — but
 it is precisely wrong for this campaign. Whether the clipper *should* enter the
-identifier is an open PyAutoFit question, deliberately not decided here.
+identifier is now filed as
+`draft/feature/autofit/clipper_in_search_identifier.md`, and phase 3's
+re-baseline is the reason it matters.
+
+### Harness traps that already cost a session
+
+From the phase-1 session, which paid for every one of these
+(`complete/2026/08/prior-support-clipper.md`):
+
+- **The `.completed` marker short-circuits `fit()`** — a resumed or re-run
+  search returns the cached result *without entering `_fit`*. Three successive
+  versions of a resume test "passed" while testing nothing. This is the second
+  half of the collision above.
+- **`fit()` rebuilds `search.paths`**, so an instance-level monkeypatch on
+  `paths.save_search_internal` is silently discarded. **Patch at CLASS level.**
+- **The `search_internal` folder is deleted on successful completion**, so it
+  cannot be read back after the fit. Capture it *as it is written*.
+- **Two identically-constructed searches did not resolve to the same identifier
+  dir**, so an intended "resume" silently started fresh. The reliable method is
+  patching `DirectoryPaths.load_search_internal` at class level.
+- **Seed `random` AND `numpy` before every fit** — the initializer draws from
+  both, and an unseeded comparison reports a spurious bit-identity mismatch.
+  This produced one false alarm on phase 1's bit-identity gate.
+- **A box containing the optimum never exercises the clipper.** Phase 1's first
+  efficacy attempt measured 0 clips for exactly this reason. Put the truth
+  outside the box.
+
+### Arm 3 does not exist yet — do not silently drop it
+
+Phase 1 ships the clipped **mask** from `project`, which is what a momentum
+reset needs, but **no reset is implemented** and the search does not touch
+`opt_state` on a clip. So arm 3 either gets a small addition written first, or
+this campaign runs arms 1–2 and reports the pinned-lane count as the input to
+that decision. The prototype's 5/16 pinned lanes are why the arm exists.
+
+### Two phase-1 measurements to carry in as priors
+
+Both CPU/float32 on a toy Gaussian, so directional only:
+
+- With the truth deliberately **outside** the prior box, lane deaths went
+  **249 → 0** with 252 clips, and the clipped run pinned `centre` at the upper
+  bound. That is "pinning is a result, not a failure" reproducing in miniature,
+  and an independent confirmation of the momentum-pinning mechanism.
+- **The negative control this prompt asks for already passes at unit level** — a
+  `GaussianPrior` coordinate is provably untouched by `ClipperPriorBox`, with a
+  regression test guarding it. The cell-level control is still worth running,
+  but a failure there would point at the cell, not at bounds extraction.
+
+Also relevant when reading source: the `AbstractMultiStartGradient` class
+docstring used to claim the rule steps on the unit-cube parameterization. It
+never did — `_broad_starts` maps draws to physical parameters. Corrected in
+phase 1, but older checkouts still carry the false sentence.
 
 **The clip count is a validity check, not just a statistic.** Read
 `Clipped Lane-Steps` straight out of `search.summary`. **A `ClipperPriorBox`
