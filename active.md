@@ -1,5 +1,24 @@
 # Active Tasks
 
+## autofit-prior-support-clipper
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1476
+- prompt: active/prior_support_clipper.md
+- session: claude cloud (web) 2026-08-16
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/autofit-prior-support-clipper (not created — this is a cloud session working from a direct clone at /workspace/pyautofit)
+- repos:
+  - PyAutoFit: claude/autofit-clipper-prior-support-o3jotv
+- scope: PR 1 only — `AbstractClipper` / `ClipperNone` / `ClipperPriorBox` plus opt-in wiring into `MultiStartGradient` and `LBFGS`. Default is `ClipperNone` and the PR must be BIT-IDENTICAL with it. Flipping the default is PR 2 (`draft/feature/autofit/clipper_validation_campaign.md`, held until this lands).
+- upstream-cause: autolens_profiling#128 / the `mge-lane-death` entry below — the deaths are the PRIOR term, not the likelihood. This task is follow-up (1) owed by that investigation.
+- ADVERSARIAL REVIEW BEFORE CODING (2026-08-16) — the plan was verified against a running PyAutoFit install (py3.12 venv, jax 0.11.0 / optax 0.2.8, CPU), not just read. Two of the prompt's own specifications were found to be SILENT-WRONG-ANSWER bugs and are corrected in the issue:
+  - **margin NaN**: `lower + margin*(upper-lower)` is `-inf + inf` = **NaN** for a `GaussianPrior`, and clipping against NaN bounds propagates (`sum(log_prior) = nan`). The naive form would KILL lanes on exactly the models this rescues — the MGE reference model carries GaussianPriors — with a symptom indistinguishable from the bug being fixed. Inset must be keyed on BOUND KIND, never on unguarded width arithmetic.
+  - **scipy bounds tuple**: the prompt's `bounds_from_model -> tuple[lower, upper]` is read by `optimize.minimize` as a sequence of `(min,max)` PAIRS. At n=2 it returns a silently wrong fit (`[0.,1.]` vs correct `[1.,1.]`), no error/warning; at every other n it raises `ValueError`. Must build `optimize.Bounds(lower, upper)` explicitly.
+- design (settled by measurement, replaces the prompt's single `1e-6` guess): three cases — two-sided finite bounds get a RELATIVE inset (not for prior support, which is inclusive, but to avoid parking a lane on a prior edge where likelihood transforms are singular, same reason the start band is `(0.15,0.85)`); unbounded gets NO width arithmetic at all; half-open/exclusive (`LogGaussian`'s `0`) gets an ABSOLUTE `strict_epsilon`, since a relative margin is identically zero there and would clip onto `0.0` where `log_prior=-inf`.
+- other measured findings: `prior.lower_limit` resolves for every prior type via `Prior.__getattr__` → message; `LogGaussianPrior` reports `(-inf,inf)` though its support is `(0,∞)` (special-cased in the Clipper, prior class untouched); plain `BFGS` does NOT reject bounds, it IGNORES them behind a `UserWarning` and returns the unbounded optimum (so raise); batched `(n_starts,n_params)` clipping broadcasts against `(n_params,)` bounds with no `vmap`; the momentum-pinning effect reproduces in isolation (7 of 8 steps pinned), confirming the returned mask is load-bearing.
+- doc bug to fix in the PR: the `AbstractMultiStartGradient` class docstring says it steps "on the unconstrained (unit-cube) parameterization" — false, `_broad_starts` maps draws to PHYSICAL parameters. That sentence is what would tell the next reader this bug cannot exist.
+- follow-ups to file, not fix: the two incidental bugs from #128 (float32 not JSON serializable in `paths/directory.py:80`; a crashed run poisoning the next run of the same name via `JSONDecodeError` on resume), plus declaring `LogGaussianPrior`'s `(0,∞)` support on the prior itself so the Clipper special case can be retired.
+- NOT verified: the real `imaging/mge` cell was not run, and nothing was on GPU or in float64. The 60.25% → 17.71% / 14-16 → 5/16 figures are inherited from #128, which is why the regression test asserts a direction and a wide margin rather than a figure.
+
 ## mge-lane-death
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/128
 - prompt: active/mge_lane_death.md
