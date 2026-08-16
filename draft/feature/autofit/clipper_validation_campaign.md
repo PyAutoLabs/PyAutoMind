@@ -61,10 +61,43 @@ rather than live hazards — but do **not** delete the mitigations:
   `output/<name>/` between arms is still the cheaper habit than reasoning about
   whether a resume was clean.
 
-**The clip count is now a validity check, not just a statistic.** Read
+### ⚠ THE ARM-COLLISION TRAP — read before running anything
+
+**The clipper does NOT enter the search identifier.** Verified empirically
+against PyAutoFit `main` on 2026-08-16:
+
+```
+af.MultiStartAdam(name="x")                             -> 2bada4747f74bc46bf812605a762def9
+af.MultiStartAdam(name="x", clipper=ClipperNone())      -> 2bada4747f74bc46bf812605a762def9
+af.MultiStartAdam(name="x", clipper=ClipperPriorBox())  -> 2bada4747f74bc46bf812605a762def9
+```
+
+All three resolve to the **same output directory**. Arms 1 and 2 of this
+campaign differ in *nothing else*, so they collide. Stacked with the
+`.completed` short-circuit (`is_complete` → `result_via_completed_fit`, which
+skips the search entirely), **arm 2 can silently return arm 1's numbers and
+look like a clean run** — invalidating the campaign's central comparison while
+producing output that looks perfect.
+
+Mitigation — do all three:
+
+1. **Give every arm a unique `name`** (`mge_clip_none_seed0`,
+   `mge_clip_priorbox_seed0`, …). Do not rely on the clipper to separate them,
+   because it does not.
+2. **Delete `output/<name>/` between arms** anyway.
+3. **Assert the recorded step count equals `n_steps`** before believing any
+   counter. A short-circuited run reports the *previous* run's numbers rather
+   than zeros, so a zero-check alone does not catch this.
+
+Not a bug in itself — it is what keeps existing runs' directories stable — but
+it is precisely wrong for this campaign. Whether the clipper *should* enter the
+identifier is an open PyAutoFit question, deliberately not decided here.
+
+**The clip count is a validity check, not just a statistic.** Read
 `Clipped Lane-Steps` straight out of `search.summary`. **A `ClipperPriorBox`
-arm reporting zero clips has not exercised the clipper**, and its "no change"
-result means nothing — treat it as a broken arm, not a null result.
+arm showing no clipping lines at all has not exercised the clipper** — which is
+also the signature of the collision above, since arm 1's summary carries no
+`Clipper` line. Treat it as a broken arm, not a null result.
 
 **One free finding to reuse.** The #128 mechanism reproduces on a *toy
 3-parameter Gaussian* (`autofit.example.Gaussian`, `centre` truth 30 outside a
