@@ -1,3 +1,167 @@
+Shipped the search-agnostic `Clipper` — prior-support enforcement for the
+gradient searches, as the pluggable sibling of `Initializer`. This is follow-up
+(1) owed by the `mge-lane-death` investigation (autolens_profiling#128), which
+found the MGE lane deaths are the **prior** term, not the likelihood.
+
+- issue: PyAutoFit#1476
+- pr: PyAutoFit#1477, **MERGED** 2026-08-16 as `1f4b66a` (squash), +798/-3 over
+  7 files. Full CI green on both runs (`unittest` 3.12, `unittest` 3.13,
+  `docs / docs-build`).
+
+## What shipped
+
+`AbstractClipper` / `ClipperNone` / `ClipperPriorBox` in a new
+`autofit/non_linear/clipper.py`, wired **opt-in** into the two exposed searches:
+`AbstractMultiStartGradient` projects after `optax.apply_updates`; `AbstractBFGS`
+hands box bounds to scipy (`L-BFGS-B` supports them natively — they were simply
+never passed). `project` returns the clipped **mask** as well as the vector, so a
+caller can zero optimiser momentum along clipped directions.
+
+Default is `ClipperNone` and the PR is **bit-identical** with it. Flipping the
+default is PR 2 — `draft/feature/autofit/clipper_validation_campaign.md`, now
+unblocked.
+
+## The design decision worth remembering: inset by BOUND KIND, never by width
+
+The obvious implementation, one relative `margin * (upper - lower)`, is wrong in
+two separate and silent ways. Both stem from computing the width unconditionally.
+Three cases instead:
+
+| Bound kind | Example | Inset |
+|---|---|---|
+| two-sided finite | Uniform, LogUniform, TruncatedGaussian | relative `margin * width` |
+| unbounded | Gaussian | **none, and no width arithmetic at all** |
+| half-open, exclusive | LogGaussian's `0` | absolute `strict_epsilon` |
+
+And note the two-sided margin is **not** for prior support — measurement showed
+those bounds are *inclusive* (`UniformPrior.log_prior(2.0) = 0.0`,
+`TruncatedGaussian.log_prior(1.0) = -0.5`), so `margin=0` would be valid. It
+exists to avoid parking a lane exactly **on** a prior edge, where the model's own
+transforms are singular — the same reason the broad-start band defaults to the
+interior `(0.15, 0.85)` rather than `(0, 1)`.
+
+## Traps, all measured against a running install
+
+1. **The naive margin turns every unbounded prior into `NaN`.** `-inf + (inf -
+   -inf) * m` is `NaN`, and clipping against `NaN` bounds destroys the coordinate
+   and the whole objective (`sum(log_prior) = nan`). This would have made the
+   feature **actively harmful** on exactly the models it targets — the MGE
+   reference model carries `GaussianPrior`s — with a symptom indistinguishable
+   from the bug being fixed. Every bit-identity test still passes against it,
+   because `ClipperNone` never computes a margin.
+2. **scipy reads `bounds=(lower_array, upper_array)` as a sequence of `(min,
+   max)` PAIRS.** At n=2 it returns a silently wrong fit (`[0.,1.]` where the
+   answer is `[1.,1.]`), no error, no warning; at every other n it raises
+   `ValueError`. So it fails loudly for most models and silently for
+   two-parameter ones. Build an explicit `optimize.Bounds`. This was the
+   *prompt's own* specified return type.
+3. **`LogGaussianPrior` misreports its own support.** Its `TransformedMessage`
+   defaults limits to `±inf` and is never passed any, yet `log_prior_from_value`
+   is `-inf` for `value <= 0`. Declared in the clipper, prior class untouched.
+4. **Plain `BFGS` does not reject bounds — it IGNORES them** behind a
+   `UserWarning` and returns the unconstrained optimum. "Guard or warn" is too
+   weak; raise.
+5. **`prior.lower_limit` resolves for every prior type** via `Prior.__getattr__`
+   delegating to the message (`AbstractMessage` defaults `±inf`). No type switch
+   needed — except for trap 3.
+6. **The NumPy and JAX paths disagree on support.**
+   `UniformPrior.log_prior_from_value` is `if xp is np: return 0.0` —
+   unconditional, no bound test. Only the JAX branch walls off the box, so LBFGS
+   is exposed only in its `analysis._use_jax` branch.
+7. **float32 makes the box check asymmetric.** `2.0000001` is not representable
+   distinctly from `2.0` and reads as in-box, while `-1e-7` against a lower bound
+   of `0.0` is caught. A test asserting "overshoot is detected" must use a bound
+   near zero or float64, or it passes vacuously.
+8. **The `AbstractMultiStartGradient` class docstring was factually wrong** —
+   claimed the rule steps "on the unconstrained (unit-cube) parameterization"
+   while `_broad_starts` maps draws to physical. That is the sentence that would
+   tell the next reader this class of bug cannot exist. Corrected.
+
+## The process lesson: a green suite is not coverage
+
+The first commit shipped an **undefined `optimize` in `LBFGS._fit`** — any real
+`LBFGS.fit()` raised `NameError`. The **full 1790-test suite passed against it**,
+because nothing in the library suite ever executes an LBFGS fit. It was caught
+only by a randomised end-to-end stress run, after the code was already pushed.
+Fixed in the second commit with a smoke test that runs a real `LBFGS.fit()`,
+verified to fail with exactly that `NameError` if the import is removed again.
+
+When a change touches a path, check whether anything actually *executes* it
+before trusting the suite.
+
+## Verification performed (beyond the committed tests)
+
+- **Bit-identity 10/10 on both searches** across randomly generated models mixing
+  every prior type — `no clipper arg` vs explicit `ClipperNone`.
+- **Core promise 8/8** — with `ClipperPriorBox`, final `sum(log_prior)` finite
+  every time, lane deaths **0 in every case** vs 62–96 without.
+- **End-to-end**: Gaussian fit with the truth outside the box, lane deaths
+  **249 → 0** with 252 clips; the clipped run pins `centre` at the upper bound,
+  which is the correct MAP answer under a prior excluding the truth, and an
+  independent reproduction of the momentum pinning.
+- **Guards verified by inversion** — patching back to the naive width form makes
+  5 tests fail, including both named regression guards.
+- **Resume path** — a `search_internal` lacking `n_clipped_lane_steps` resumes
+  without `KeyError`.
+- **Identifiers unchanged** — real fits produce a single identifier dir shared by
+  `no clipper` / `ClipperNone` / `ClipperPriorBox`, so existing on-disk results
+  are not orphaned. Flip side: two runs differing only in clipper currently
+  COLLIDE on one output dir — matters for PR 2's re-baseline.
+
+## Harness traps that cost time (for whoever writes the PR 2 measurements)
+
+- **`.completed` marker short-circuits `fit()`** — a resumed or re-run search
+  returns the cached result without entering `_fit`. Three successive versions of
+  a resume test "passed" while testing nothing. Also bites when a script is
+  re-run with stale output from its previous execution.
+- **`fit()` rebuilds `search.paths`**, so an instance-level monkeypatch on
+  `paths.save_search_internal` is silently discarded. Patch at CLASS level.
+- **The search_internal folder is deleted on successful completion**, so it
+  cannot be read back after the fit — capture it as it is written.
+- **Two identically-constructed searches did not resolve to the same identifier
+  dir**, so "resume" silently started fresh. The reliable method is patching
+  `DirectoryPaths.load_search_internal` at class level.
+- **Seed `random` AND `numpy` before every fit** — the initializer draws from
+  both, and an unseeded comparison reports a spurious bit-identity mismatch.
+  (This produced one false alarm on the bit-identity gate.)
+- **A box containing the optimum never exercises the clipper.** The first
+  efficacy attempt measured 0 clips for exactly this reason; put the truth
+  outside the box.
+
+## Corrections issued
+
+`test_nautilus.py::test__single_core_builds_no_pool` **passes in CI**. It failed
+only in the local py3.12 venv used for verification. It was correctly identified
+as not caused by this task (verified by stashing), but was wrongly described as
+"pre-existing on clean main" in an earlier revision of the PR body and in the
+`active.md` notes; both were corrected.
+
+## Follow-ups owed (filed, not fixed)
+
+1. `float32` is not JSON serializable in result output —
+   `autofit/non_linear/paths/directory.py:80` `save_json` raises `TypeError` at
+   the end of a successful clipped run. Surfaced only because clipping let lanes
+   survive onto a code path this cell had never taken.
+2. A crashed run poisons the next run of the same name: the half-written output
+   from (1) makes the next search with the same `name` fail with
+   `JSONDecodeError` while resuming — a 4-second no-op that *looks like* a clean
+   result. A new form of the cached-result hazard in
+   `complete/2026/08/multistart-nan-step-diagnostics.md`.
+3. Declare `LogGaussianPrior`'s `(0, ∞)` support on the prior itself, retiring
+   the clipper's special case.
+4. Decide whether the clipper should enter the search identifier — relevant to
+   PR 2's benchmark re-baseline (see "Identifiers unchanged" above).
+5. **NUTS remains out of scope** — HMC entering a `-inf` region diverges rather
+   than freezing. Different mechanism, its own task.
+
+## Repos / worktree
+
+- PyAutoFit: `claude/autofit-clipper-prior-support-o3jotv` (merged, deletable).
+- No worktree was created — this ran in a cloud session from a direct clone at
+  `/workspace/pyautofit`.
+
+## Original prompt
+
 # Search-agnostic prior-support enforcement: a Clipper class
 
 Type: feature
