@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1000 records across 7 buckets.
+1001 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -60,6 +60,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [heart-red-guarded-sample-escape](2026/08/heart-red-guarded-sample-escape.md) — Closed the escape path that kept release validation RED after
 - [howto-smoke-all-tutorials](2026/08/howto-smoke-all-tutorials.md)
 - [howtofit-stub-fork-cleanup](2026/08/howtofit-stub-fork-cleanup.md)
+- [hpc-sync-first-push-race](2026/08/hpc-sync-first-push-race.md) — `hpc/sync push()` fired the `CODE_DIRS` rsyncs in parallel before
 - [hst-dq-bits-dial](2026/08/hst-dq-bits-dial.md)
 - [hygiene-coverage-drift](2026/08/hygiene-coverage-drift.md)
 - [hygiene-detail-flag](2026/08/hygiene-detail-flag.md)
