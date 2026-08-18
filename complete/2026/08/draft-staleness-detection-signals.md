@@ -1,3 +1,84 @@
+## draft-staleness-detection-signals
+- issue: (none — both legs shipped directly from the draft prompt; the draft carried
+  the delivery annotation in place until this verify-and-retire, 2026-08-18)
+- completed: 2026-08-09 (legs 1–2; leg 3 was split out 2026-08-10 and has its own
+  record — see split-to below)
+- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/168 (squash-MERGED as
+  8d7939a8) — leg 1: the `Closes-when:` / `Blocked-by:` gate header keys
+- brain-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/215 (squash-MERGED as
+  13d222c) — leg 2: the `intake reconcile` re-rank
+- split-to: `complete/2026/08/reconcile-upstream-repo-mode.md` — leg 3, the
+  `--repo` upstream read (PyAutoBrain#224)
+- prompt: draft/feature/pyautomind/draft_staleness_detection_signals.md (folded below)
+- summary: draft/ staleness is now detectable — a prompt can declare its own exit
+  gate and `lifecycle.py issues --drafts` grades it, and `intake reconcile`'s
+  ranking was made discriminative enough for a human to actually work through
+  (65% of the backlog flagged → ~20%).
+
+## What shipped, per leg
+
+1. **Gate header keys (Mind, PR #168).** A draft can declare `Closes-when:`
+   (prompt is DONE when the ref closes) and `Blocked-by:` (READY TO START when
+   all refs close). Documented in REFERENCE.md "Declaring a gate", graded by
+   `lifecycle.py issues --drafts` with the two opposite readings reported in
+   separate bands (GATE MET vs UNBLOCKED — previously both lumped into one
+   advisory "shipped, or unblocked?" pile), backfilled onto the drafts that
+   already stated a gate in prose, covered by `tests/test_lifecycle_check.py`.
+2. **Reconcile re-rank (Brain, PR #215).** Demoted bare cross-references and
+   shared topic words; promoted identifier-presence and
+   record-body-names-deliverable. On the labelled pre-sweep tree (PyAutoMind
+   `f25e154e`): 96 → **31 of 148 flagged (21%)**, `high` cut 52 → 9, the
+   largest confirmed finding (the k×s series) at rank 2, the known trap
+   (`test_mode_bypass_ordered_assertion_ties`) NOT reported as shipped, and
+   read-only asserted by a test.
+3. **Upstream `--repo` mode (Brain, PR #224).** Split out 2026-08-10 as its own
+   prompt/task and shipped the same day — see
+   `complete/2026/08/reconcile-upstream-repo-mode.md` for the full record. It is the only signal that reaches a prompt with no
+   Mind-side trace at all.
+
+## The finding that reshaped the acceptance
+
+The original "all five confirmed findings in the top band" criterion was wrong
+when written — it contradicted the prompt's own § Hard limit (one finding left
+no Mind-side signal whatsoever). Chasing it anyway made the tool worse: a loose
+series match pulled one more finding in but falsely flagged the test-mode trap.
+The real result is that the five findings need **three different tools**:
+
+| finding | caught by |
+|---|---|
+| k×s series | reconcile — rare-token fan-out (rank 2) |
+| nufft chunking | reconcile — shared rare identifiers |
+| test-mode umbrella | `Closes-when:` header key (leg 1) |
+| split guard | leg 3 only (evidence sat in a sibling *prompt*) |
+| latent resume | leg 3 only (no record exists at all) |
+
+## Verified at retirement (2026-08-18)
+
+All three legs confirmed on `main`: the gate grading + REFERENCE.md docs +
+backfills (leg 1), the re-ranked reconcile with its ranking tests (leg 2), and
+the leg-3 completion record. A live `intake reconcile` run on the current tree
+flags 27 of 136 scanned (20%; 8 `high`, 19 `medium`) — and, fittingly, flags
+**this very prompt** at `medium` because the completion records reference it:
+the tool detected its own delivered-but-unretired parent draft.
+
+## Traps and findings
+
+- **The trap the tool is built around**: identifier presence upstream is not
+  proof of shipping — `test_mode_bypass_ordered_assertion_ties.md` names five
+  identifiers all present on PyAutoFit `main` and is confirmed NOT shipped
+  (the `try` wraps the wrong line). Reconcile therefore ranks for human review
+  and never retires a prompt itself; retiring stays human.
+- **The root cause worth its own fix**: work that ships without a Mind record
+  (PyAutoFit#1418 had none) is invisible to every Mind-local pass. The ship
+  skills failing louder is the deeper repair; leg 3 is the detection-side
+  mitigation.
+- **A delivered draft is itself drift**: this prompt sat delivered-in-place in
+  `draft/` for nine days and showed on the dashboard as planned high-priority
+  work, until its own tool flagged it. Verify-and-retire (this record) is the
+  loop closing.
+
+## Original prompt
+
 # Make draft/ staleness detectable — `intake reconcile` measured, and the three signals that actually worked
 
 Type: feature
@@ -126,8 +207,7 @@ root cause here. Worth asking separately whether the ship skills can fail louder
 catches `exc.FitException` in the TEST_MODE bypass — which looks exactly like the
 prompt's requested fix — but the catch wraps only the likelihood call, while
 `model.instance_from_vector` (where `check_assertions` actually raises on an
-ordering tie) sits on the line *before* the `try`. An identifier-presence matcher
-would score this "shipped" with high confidence and be wrong.
+ordering tie) sits on the line *before* the `try`.
 
 **So the tool must rank for human review and never retire a prompt itself** — which
 is already reconcile's stated contract. Keep it.
