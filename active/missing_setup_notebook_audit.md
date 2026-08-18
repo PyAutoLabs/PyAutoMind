@@ -73,4 +73,6 @@ opens on imports rather than a docstring, so the line went at the top of the fil
 `json.dumps(nb, indent=1)` round-trips byte-identically), because the generator is not available in
 a cloud session. A real `generate.py` run should be a no-op on these — confirm before merging.
 
-Branch `claude/howto-setup-notebook-audit-dm2j9e` in all six repos. Not merged, no PRs opened.
+Branch `claude/howto-setup-notebook-audit-dm2j9e` in all six repos, one commit each:
+HowToFit#45, HowToGalaxy#66, HowToLens#70, autofit_workspace#138, autogalaxy_workspace#211,
+autolens_workspace#485.

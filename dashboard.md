@@ -48,7 +48,7 @@ Live on GitHub: [open issues](https://github.com/search?q=org%3APyAutoLabs+is%3A
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
 - [Commit the inference-methods programme plan + knowledge ledger into autolens_profiling](active/inference_programme_ledger.md) — [issue #134](https://github.com/PyAutoLabs/autolens_profiling/issues/134) — pr-open (https://github.com/PyAutoLabs/autolens_profiling/pull/135)
-- [Audit HowTo tutorials for missing setup_notebook() line](active/missing_setup_notebook_audit.md) — branches pushed, no PRs opened
+- [Audit HowTo tutorials for missing setup_notebook() line](active/missing_setup_notebook_audit.md) — pr-open (six PRs, awaiting CI)
 - [PyAutoReduce validation: slacs1430+4105 ACS reduction vs trusted legacy dataset](active/pyautoreduce_slacs1430_acs_comparison.md)
 - [Reconstructing a stored sample raises through `ignore_assertions=True`](active/to_instance_guard_gap.md) — [issue #1486](https://github.com/PyAutoLabs/PyAutoFit/issues/1486) — library-dev — WORKSPACE HALF SHIPPED; the PyAutoFit hardening (#1486) is what remains
 - [Version-stamp sync to 2026.8.17.1 + release-sed guards](active/version_stamp_sync_and_release_sed_guards.md) — [issue #235](https://github.com/PyAutoLabs/PyAutoHands/issues/235) — pr-open (https://github.com/PyAutoLabs/PyAutoLens/pull/700)

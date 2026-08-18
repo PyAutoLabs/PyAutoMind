@@ -115,13 +115,16 @@
   - PyAutoHands: feature/version-stamp-sync-guards
 
 ## howto-setup-notebook-audit
-- issue: (none — cloud session, no issue filed)
+- issue: (none — cloud session, no issue filed; the six PRs below carry the record)
 - prompt: active/missing_setup_notebook_audit.md
 - session: cloud (Claude Code on the web), no local worktree
-- status: branches pushed, no PRs opened
-- what that means: six repos carry `claude/howto-setup-notebook-audit-dm2j9e`, each one commit on
-  top of the main it was cloned from. Nothing is merged and no PR exists — opening them (and the
-  pending-release gate, if the workspace legs need one) is the next step.
+- status: pr-open (six PRs, awaiting CI)
+- PRs: HowToFit#45 / HowToGalaxy#66 / HowToLens#70 / autofit_workspace#138 /
+  autogalaxy_workspace#211 / autolens_workspace#485 — each one commit on the branch below, on
+  top of the main it was cloned from.
+- no pending-release gate: `setup_notebook` is long-shipped in released autofit/autogalaxy/autolens
+  and is already called by every other example script in these repos, so the library-first merge
+  gate does not apply to the three workspace legs.
 - repos-none-claimed: this entry claims NO repos as 2-space `  - Repo` bullets — the work ran
   in a cloud container with no local worktree, so `worktree_check_conflict` must not read it as
   a live claim. The branches are listed as prose below.
