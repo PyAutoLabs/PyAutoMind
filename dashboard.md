@@ -11,7 +11,7 @@ Tasks only — the organism's health lives with the Heart (`/health`), not here.
 | [In flight](#in-flight) (`active/`) | 3 |
 | [Parked](#parked) (`parked.md`) | 1 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 131 |
+| [Backlog](#backlog) (`draft/`) | 130 |
 
 Live on GitHub: [open issues](https://github.com/search?q=org%3APyAutoLabs+is%3Aissue+is%3Aopen&type=issues) · [open pull requests](https://github.com/search?q=org%3APyAutoLabs+is%3Apr+is%3Aopen&type=prs)
 
@@ -34,7 +34,6 @@ Live on GitHub: [open issues](https://github.com/search?q=org%3APyAutoLabs+is%3A
 
 **Quick wins** (small enough, and safe enough to run unattended)
 
-- [Review verdicts record a disposition per lifted claim](draft/feature/pyautobrain/review_claim_dispositions.md) — pyautobrain · small · safe · normal
 - [PyAutoFit CLI-noise batch: unclosed search.log handler + four small warning](draft/maintenance/pyautofit/cli_noise_pyautofit_batch.md) — pyautofit · small · safe · normal
 - [Tenant firewall: release_run.py carries an unlisted 'PyAutoLabs' instance fact](draft/bug/pyautoheart/tenant_firewall_release_run_instance_fact.md) — pyautoheart · small · safe · normal
 - [Silence the three autonerves-rooted CLI-noise sources (fits leak, pytest collection,](draft/maintenance/pyautonerves/cli_noise_autonerves_batch.md) — pyautonerves · small · safe · normal
@@ -82,7 +81,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**131** filed prompts, not started. Each section is sorted most-pickable first (priority, then size).
+**130** filed prompts, not started. Each section is sorted most-pickable first (priority, then size).
 
 <details>
 <summary><b>bug</b> — 35</summary>
@@ -126,14 +125,13 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 28</summary>
+<summary><b>feature</b> — 27</summary>
 
 - [Decide whether the clipper belongs in the search identifier](draft/feature/autofit/clipper_in_search_identifier.md) — autofit · medium · human-required · high
 - [Profile and speed up JAX likelihood-function compile times (all use](draft/feature/autolens_profiling/jax_compile_time_profiling.md) — autolens_profiling · large · supervised · high
 - [Give the Profiling Agent a compile-time axis — the arc](draft/feature/profiling/profiling_agent_jax_compile_time_scope.md) — profiling · large · supervised · high
 - [Which other searches need prior-support handling — coverage audit after](draft/feature/autofit/prior_exit_sampler_coverage.md) — autofit · medium · supervised · medium
 - [Give PyAutoFit searches a `seed` — today no search can](draft/feature/autofit/search_seed_reproducibility.md) — autofit · medium · supervised · medium
-- [Review verdicts record a disposition per lifted claim](draft/feature/pyautobrain/review_claim_dispositions.md) — pyautobrain · small · safe · normal
 - [Can create a list of InversionMatrix objects for each dataset](draft/feature/autoarray/multiwavelength_inversion.md) — autoarray · medium · supervised · normal
 - [The project @z_projects/ic50_workspace is our IC50 use case which we](draft/feature/autofit/ep_lbfgs_jax.md) — autofit · medium · safe · normal
 - [Tune cluster-scale JOSS benchmarks toward their 5-minute targets](draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md) — autolens_workspace · medium · supervised · normal

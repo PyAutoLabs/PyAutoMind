@@ -1,3 +1,54 @@
+Review verdicts now record a **disposition per lifted claim** — the one change
+the falsified-by efficacy review ([[falsified-by-checkpoint-efficacy-review]],
+2026-08-18) recommended, moving mitigation 6 from remind-shaped to
+detect-shaped: a rote adversarial pass is now visible ledger drift instead of
+being indistinguishable from a healthy one.
+
+- completed: 2026-08-18 (same-day follow-up to the efficacy review, same
+  dashboard-work session, branch `claude/automind-falsified-by-checkpoint-cmsqsi`)
+- target: PyAutoBrain
+
+## The change
+
+When the ReviewSurface lifts any `claims to falsify`, the reviewing agent's
+verdict must carry one line per claim:
+
+```
+claim: "<lifted line>" → basis-cited: <the test/measurement/diff that shows it> | idle | FINDING (unverified-claim)
+```
+
+written by the **reviewer at verdict time**, never by the author (the
+reader-enforced shape mitigation 6 was designed around). A bare CLEAN over a
+non-empty claims surface is malformed evidence, not CLEAN — the ship
+checkpoint reader can see the omission. An empty surface requires nothing, so
+the 74–95% of ships that lift no claims gain no busywork.
+
+Surfaces touched (all PyAutoBrain):
+
+- `agents/faculties/review/AGENTS.md` — step 2a gains the disposition format;
+  step 3's verdict mapping gains the malformed-evidence rule.
+- `agents/faculties/review/_review.py` — the human-emit epilogue prints the
+  disposition instruction, guarded to fire only when claims were lifted.
+- `AUTONOMY.md` — autonomous-ship-gate review leg carries the requirement.
+- `skills/ship_library/reference.md` — the `--auto` validation-checklist gate
+  line shows where dispositions go in the PR body.
+- `docs/agent_failure_modes.md` — item 6 Outcome updated from "filed" to
+  "implemented".
+- 2 new pinning tests in `tests/test_review_claims.py` (instruction present
+  with claims, absent without); suite 351 passed.
+
+No trigger-vocabulary change — the efficacy review measured the current
+vocabulary as neither empty nor saturated and recommended none.
+
+## Dogfood note
+
+The faculty was run on the shipping branch itself: surface produced, zero
+claims lifted from the commit message, and — per the new guard — no
+disposition demand printed on the empty surface. Verdict CLEAN with no
+dispositions owed, which is exactly the no-busywork path.
+
+## Original prompt
+
 # Review verdicts record a disposition per lifted claim
 
 Type: feature
