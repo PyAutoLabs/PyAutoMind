@@ -11,10 +11,10 @@ name: Tenant Firewall Gate
 # Path-filtered to scripts/repos_sync.py (plus this file): registry/prompt
 # pushes — the overwhelming bulk of Mind traffic — never trigger it.
 #
-# PyAutoHands is deliberately NOT checked out yet: its firewall clear waits
-# behind the version-stamp task that claims the repo (PyAutoHands#235 — see
-# issue #198's checklist). Add its checkout when that leg lands; absent repos
-# are skipped by the check itself.
+# All three organs are checked out. PyAutoHands was omitted at first — its
+# firewall clear waited behind the version-stamp task that claimed the repo
+# (PyAutoHands#235) — and joined once that leg landed as PyAutoHands#237,
+# clearing the last of issue #198's 9 findings.
 
 on:
   push:
@@ -53,6 +53,11 @@ jobs:
         with:
           repository: PyAutoLabs/PyAutoHeart
           path: PyAutoHeart
+      - name: Checkout PyAutoHands
+        uses: actions/checkout@v4
+        with:
+          repository: PyAutoLabs/PyAutoHands
+          path: PyAutoHands
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
