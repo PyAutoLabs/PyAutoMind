@@ -8,7 +8,7 @@ Tasks only — the organism's health lives with the Heart (`/health`), not here.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 7 |
 | [Backlog](#backlog) (`draft/`) | 139 |
@@ -50,7 +50,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 - [Commit the inference-methods programme plan + knowledge ledger into autolens_profiling](active/inference_programme_ledger.md) — [issue #134](https://github.com/PyAutoLabs/autolens_profiling/issues/134) — pr-open (https://github.com/PyAutoLabs/autolens_profiling/pull/135)
 - [Remove standalone matplotlib-inline comments](active/matplotlib_inline_standalones.md)
-- [Find what kills MGE multi-start lanes — it is not](active/mge_lane_death.md) — [issue #128](https://github.com/PyAutoLabs/autolens_profiling/issues/128) — CAUSE FOUND 2026-08-15 (cloud CPU session) — written up on autolens_profiling#128. Remaining: GPU/float64/multi-seed…
 - [PositionsLH penalty accumulation returns 2x the LAST penalty, discarding the](active/positions_lh_penalty_accumulation_bug.md) — [issue #699](https://github.com/PyAutoLabs/PyAutoLens/issues/699) — pr-open (https://github.com/PyAutoLabs/PyAutoLens/pull/700)
 - [PyAutoReduce validation: slacs1430+4105 ACS reduction vs trusted legacy dataset](active/pyautoreduce_slacs1430_acs_comparison.md)
 - [Tenant-firewall drift: clear the 9 right + gate recurrence (Aug](active/tenant-firewall-drift-aug.md) — [issue #198](https://github.com/PyAutoLabs/PyAutoMind/issues/198) — MERGED 2026-08-17T23:13Z — all four PRs on the canonical mains, each green at merge (order held: PyAutoMind#199 → PyAutoBrain#229…
