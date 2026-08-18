@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1016 records across 7 buckets.
+1017 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -77,6 +77,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [intra-family-dep-floors](2026/08/intra-family-dep-floors.md)
 - [jax-grad-smoke-timeout-budget](2026/08/jax-grad-smoke-timeout-budget.md)
 - [jax-likelihood-mass-sensitivity](2026/08/jax-likelihood-mass-sensitivity.md) — Audit + fix for median-literal mass blindness across all jax_likelihood/datacube scripts (phase 2 of the findi…
+- [lacosmic-cr-option-and-star-pass-decoupling](2026/08/lacosmic-cr-option-and-star-pass-decoupling.md) — both deliberately OPEN — closure is the default-flip decision, not this ship
 - [llms-txt-census-fixes](2026/08/llms-txt-census-fixes.md)
 - [message-prior-xp-jax-trace](2026/08/message-prior-xp-jax-trace.md) — made the remaining message and compound-prior array-namespace paths
 - [messages-xp-stack-jax-trace](2026/08/messages-xp-stack-jax-trace.md) — replaced ten fixed-shape `xp.array([...])` message constructors
