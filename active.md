@@ -8,7 +8,9 @@
   - autolens_profiling: feature/inference-programme-ledger
 - prompt: active/inference_programme_ledger.md
 - note: docs-only (results/notes/inference/ PROGRAMME.md + DECISIONS.md + LITERATURE.md).
-  Disjoint from the registered mge-lane-death claim (research/mge-lane-death, never created).
+  The mge-lane-death claim it was recorded as disjoint from is gone — archived
+  2026-08-18 as superseded (`complete/2026/08/mge-lane-death.md`); its
+  `research/mge-lane-death` branch was never created.
   This is the canonical copy of the 2026-08-17 human-approved inference programme.
 
 ## positions-lh-penalty-accumulation
@@ -68,26 +70,6 @@
   Do not fix here.
 - do-not: do NOT weaken PyAutoGalaxy `validate_ell_comps`; do NOT edit the tutorial. Test mode is NOT
   implicated (`ENV: real_search` releases `PYAUTO_TEST_MODE`) — verified, do not re-open.
-
-## mge-lane-death
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/128
-- prompt: active/mge_lane_death.md
-- status: CAUSE FOUND 2026-08-15 (cloud CPU session) — written up on autolens_profiling#128. Remaining: GPU/float64/multi-seed confirmation, and the two follow-ups below.
-- worktree: ~/Code/PyAutoLabs-wt/mge-lane-death (not yet created)
-- repos:
-  - autolens_profiling: research/mge-lane-death (not yet created)
-- CAUSE: the deaths are in the PRIOR term, not the likelihood. The objective is `fom = -2 * (log_likelihood + sum(log_prior_list))` (`Fitness(fom_is_log_likelihood=False)`); a `UniformPrior` is `-inf` outside its box; `MultiStartGradient` steps in PHYSICAL space with no projection back onto that box. A lane crossing a hard prior edge reads as non-finite, and `resurrect=False` never redraws it, so it stays dead for every remaining step — that accumulation IS the 62%. **The likelihood never went non-finite in ~7200 lane-steps across three arms.**
-- evidence: per-lane autopsy at the death vectors — 11/14 have finite likelihood at every pipeline stage and `sum(log_prior) = -inf` with 1-2 params outside a `UniformPrior`; 2/14 have NaN params (the gradient path); 1/14 unexplained. Decisive arm: neutering `log_prior_list_from_vector` -> zeros drops value-NaN 1446 -> 215 (60.25% -> 8.96%) and survivors 2 -> 13, with all 3 residual deaths being NaN-params. A narrower hypothesis (widen the shear box, which was 10 of the 11 exits) was REFUTED — deaths moved later and got marginally worse, because widening one box only moves the wall.
-- reproduction: 16x150 cloud CPU gave 1446/18/0/0 and `alive 2/16` against the filed 1498/9/0/0 and the same 2/16. The survival identity is exact: `sum(150 - k_i) = 14*150 - 654 = 1446` = `n_value_nan_lane_steps`.
-- COUNTER-FINDING, corrects the framing: the `ell_comps` plateau was MASKED, not cleared. The baseline's `n_constrained_lane_steps = 0` was a correctly-measured zero (the positive control was sound) but it meant "nothing got that far" — lanes died of prior-exit first. With the prior deaths removed the constrained count is 667 (27.79%). #1475's trapped-lane counter is measuring a live failure mode on this cell, hidden behind a larger one. Lanes stop being dead and start being STUCK.
-- follow-ups owed (both out of this task's boundary), ALL NOW FILED 2026-08-16 — nothing from this investigation lives only inside another prompt: (1) PyAutoFit — bounded stepping (projection/clipping onto prior support) or soft-walled priors; `resurrect=True` is NOT the fix, it redraws a lane that then walks out again. **PHASE 1 SHIPPED 2026-08-16** as PyAutoFit#1477 (`1f4b66a`) → record `complete/2026/08/prior-support-clipper.md`; **PHASE 2 RAN AND SHIPPED 2026-08-16** (autolens_profiling#132 + PyAutoFit#1482, issues #129/#131 closed) → record `complete/2026/08/clipper-validation-campaign.md` — VERDICT: do NOT flip the clipper default on accuracy grounds (clipping eliminates the deaths and does not move the answer; seed dependence swings 171,272 nats and dwarfs it), and the momentum-reset arm is a clean negative. Phase 3, if ever written, must argue hygiene, not accuracy — it remains undrafted, and `draft/feature/autofit/clipper_in_search_identifier.md` is its prerequisite decision. (2) the ell_comps trapping at 27.79%, now that it is visible → `draft/research/autolens_profiling/ell_comps_trapping_unmasked.md` — note that 27.79% came from the prior-neutered DIAGNOSTIC arm and is not a citable production number; it runs on top of phase 1 and can share phase 2's arms.
-- clipper-reporting: SHIPPED 2026-08-16 as PyAutoFit#1478 (`bbceff6`) → record `complete/2026/08/clipper-usage-in-search-summary.md`. `search.summary` now reports `Clipper`, `Clipped Lane-Steps`, `Clipped Lane-Step Rate` and `Constrained Lane-Steps`. CORRECTS an earlier note here that claimed `search.summary` had no search-specific channel at all — false; `search_summary_from_samples` already read `samples_info` and already emitted the NaN counters. The real gap was two omissions, not a missing mechanism. Phase 2 reads the clip count straight from `search.summary` now, and a `ClipperPriorBox` arm reporting ZERO clips has not exercised the clipper — a broken arm, not a null result.
-- incidental PyAutoFit bugs found while investigating: BOTH SHIPPED 2026-08-16. `save_json` float32 crash → PyAutoFit#1479 (`b6e89cd`), record `complete/2026/08/save-json-numpy-scalar-typeerror.md`; fixing it turned up a second unguarded writer the prompt never named, `Samples.info_to_json`, which is the more dangerous since `samples_info` gains a counter every time a search does. Crashed-run-poisons-resume → PyAutoFit#1480 (`5c9244b`), record `complete/2026/08/crashed-run-poisons-resume.md`. CORRECTION carried in that record: the "zero-step no-op reported as a clean result" symptom did NOT reproduce; what reproduces is a hard `JSONDecodeError` on every rerun of the same search name. `JSONDecodeError` subclasses `ValueError`, which is why it slipped past every guard on the resume path. Both traps the phase-2 campaign worked around are now closed.
-- caveat: one baseline death (lane 9, step 39) re-evaluates finite in every term with all params inside their boxes — the jitted/vmapped float32 path differs from the eager recompute there, unexplained. Single seed per arm, CPU, x64 off.
-- reading the number: 62% is a survival integral, not a hazard rate — a frozen lane keeps counting every subsequent step, so the same death curve reports ~75% at 300 steps. Inverting it gives a mean death step of ~43 of 150 (mid-descent, not bad initial draws). Grade any re-run on the alive-versus-step CURVE, not on recovering the scalar.
-- ordering (deliberate, do not revert): cause-finding FIRST on the existing ~6-min CPU run, then the `resurrect=True` budget-recovery measurement, then the production/GPU/seed confirmation. Do not queue for a GPU before the cause step has been attempted.
-- boundary: investigation only. Changing the `resurrect` default is a separate PyAutoFit task — it would shift every existing multi-start benchmark.
-- upstream: PyAutoFit#1475 (`004f798`) + PyAutoGalaxy#572 (`695b27c`) shipped the trapped-lane counter; record in `complete/2026/08/frozen-lane-counter.md`.
 
 ## heart-green-validation-ingest
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/567 (open, reopened 2026-08-11T00:22Z)

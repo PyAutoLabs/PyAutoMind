@@ -1,3 +1,128 @@
+MGE multi-start lanes die on the PRIOR term, not the likelihood (lanes walk out of UniformPrior support and `resurrect=False` never redraws them — that accumulation IS the 62%)
+
+Filed against the real `imaging/mge` cell, where the frozen-lane counter reported
+`n_value_nan_lane_steps` at 62.42% and a population collapse from `alive 16/16` to
+`alive 2/16`.
+
+**Closed out 2026-08-18: cause found, written up, and every follow-up it owed
+already shipped. SUPERSEDED** — the remaining confirmation legs (GPU / float64 /
+multi-seed re-measurement of the 62%) are not carried forward as scoped; a larger
+issue now owns this direction. Tracking issue autolens_profiling#128 is still open
+and wants closing by hand.
+
+## Cause: the deaths are in the PRIOR term, not the likelihood
+
+The objective is `fom = -2 * (log_likelihood + sum(log_prior_list))`
+(`Fitness(fom_is_log_likelihood=False)`). A `UniformPrior` is `-inf` outside its
+box, and `MultiStartGradient` steps in PHYSICAL space with no projection back onto
+that box. A lane that crosses a hard prior edge reads as non-finite; `resurrect=False`
+never redraws it, so it stays dead for every remaining step. That accumulation **is**
+the 62%.
+
+**The likelihood never went non-finite in ~7200 lane-steps across three arms.**
+
+This contradicts the documented assumption it was filed against:
+`AbstractMultiStartGradient.resurrect`'s docstring held that `resurrect=False` is
+safe on the parametric (MGE-class) cell because only a measure-zero singularity is
+in play and `apply_if_finite` guards it. `apply_if_finite` does not rescue a
+value-NaN lane — it only zeroes the step. Nothing was broken; the default is simply
+wrong for this cell.
+
+## Evidence
+
+- **Per-lane autopsy at the death vectors.** 11/14 have finite likelihood at every
+  pipeline stage and `sum(log_prior) = -inf` with 1-2 params outside a
+  `UniformPrior`; 2/14 have NaN params (the gradient path); 1/14 unexplained.
+- **Decisive arm.** Neutering `log_prior_list_from_vector` to zeros drops value-NaN
+  1446 -> 215 (60.25% -> 8.96%) and survivors 2 -> 13, with all 3 residual deaths
+  being NaN-params.
+- **Refuted narrower hypothesis.** Widening the shear box (10 of the 11 exits) made
+  it marginally *worse* — deaths moved later. Widening one box only moves the wall.
+- **Reproduction.** 16x150 cloud CPU gave 1446/18/0/0 and `alive 2/16` against the
+  filed 1498/9/0/0 and the same 2/16. The survival identity is exact:
+  `sum(150 - k_i) = 14*150 - 654 = 1446` = `n_value_nan_lane_steps`.
+
+## Counter-finding: the `ell_comps` plateau was MASKED, not cleared
+
+The baseline's `n_constrained_lane_steps = 0` was a correctly-measured zero — the
+positive control was sound — but it meant "nothing got that far": lanes died of
+prior-exit first. With the prior deaths removed the constrained count is 667
+(**27.79%**). PyAutoFit#1475's trapped-lane counter is measuring a live failure mode
+on this cell, hidden behind a larger one. Lanes stop being dead and start being
+STUCK.
+
+Caveat for anyone citing it: 27.79% came from the prior-neutered DIAGNOSTIC arm and
+is **not** a citable production number.
+
+## How to read the 62% (trap)
+
+It is a **survival integral, not a hazard rate**. A frozen lane keeps counting every
+subsequent step, so the same death curve reports ~75% at 300 steps. Inverting it
+gives a mean death step of ~43 of 150 — mid-descent, not bad initial draws. **Grade
+any re-run on the alive-versus-step CURVE, not on recovering the scalar.**
+
+## What shipped out of this investigation
+
+Upstream (the instrument that made it visible):
+
+- PyAutoFit#1475 (`004f798`) + PyAutoGalaxy#572 (`695b27c`) — the trapped-lane
+  counter. Record: `complete/2026/08/frozen-lane-counter.md`.
+
+Downstream, all 2026-08-16:
+
+- **PyAutoFit#1477** (`1f4b66a`) — bounded stepping, phase 1: the prior-support
+  clipper. Record: `complete/2026/08/prior-support-clipper.md`. (`resurrect=True` is
+  NOT the fix — it redraws a lane that then walks out again.)
+- **autolens_profiling#132 + PyAutoFit#1482** — phase 2 validation (issues #129/#131
+  closed). Record: `complete/2026/08/clipper-validation-campaign.md`. VERDICT: do
+  **not** flip the clipper default on accuracy grounds — clipping eliminates the
+  deaths and does not move the answer; seed dependence swings 171,272 nats and
+  dwarfs it. The momentum-reset arm is a clean negative.
+- **PyAutoFit#1478** (`bbceff6`) — clipper reporting in `search.summary`
+  (`Clipper`, `Clipped Lane-Steps`, `Clipped Lane-Step Rate`, `Constrained
+  Lane-Steps`). Record: `complete/2026/08/clipper-usage-in-search-summary.md`. A
+  `ClipperPriorBox` arm reporting ZERO clips has not exercised the clipper — that is
+  a broken arm, not a null result.
+- **PyAutoFit#1479** (`b6e89cd`) — `save_json` float32 crash, incidental. Record:
+  `complete/2026/08/save-json-numpy-scalar-typeerror.md`. Fixing it turned up a
+  second unguarded writer the prompt never named, `Samples.info_to_json`, which is
+  the more dangerous one since `samples_info` gains a counter every time a search
+  does.
+- **PyAutoFit#1480** (`5c9244b`) — crashed-run-poisons-resume, incidental. Record:
+  `complete/2026/08/crashed-run-poisons-resume.md`. What reproduces is a hard
+  `JSONDecodeError` on every rerun of the same search name; `JSONDecodeError`
+  subclasses `ValueError`, which is why it slipped past every guard on the resume
+  path.
+
+## Not carried forward
+
+- **GPU / float64 / multi-seed confirmation** of the 62% at production budget. The
+  filed measurement stands on a single seed per arm, cloud CPU, x64 off.
+- **The `ell_comps` trapping at 27.79%**, now unmasked — drafted at
+  `draft/research/autolens_profiling/ell_comps_trapping_unmasked.md`. It runs on top
+  of phase 1 and can share phase 2's arms.
+- **Clipper phase 3**, which was never drafted. If it is ever written it must argue
+  hygiene, not accuracy; `draft/feature/autofit/clipper_in_search_identifier.md` is
+  its prerequisite decision.
+
+## Unexplained, left open
+
+One baseline death (lane 9, step 39) re-evaluates finite in every term with all
+params inside their boxes. The jitted/vmapped float32 path differs from the eager
+recompute there. Single seed per arm, CPU, x64 off.
+
+## Notes
+
+- No worktree was ever created and the `autolens_profiling` branch
+  `research/mge-lane-death` was never cut — the whole investigation ran in cloud
+  sessions against the existing ~6-min CPU run, per the task's deliberate ordering
+  (cause-finding first, GPU confirmation last).
+- The task's boundary was investigation only. Changing the `resurrect` default
+  remains a separate PyAutoFit task — it would shift every existing multi-start
+  benchmark.
+
+## Original prompt
+
 # Find what kills MGE multi-start lanes — it is not the ell_comps plateau
 
 Type: research

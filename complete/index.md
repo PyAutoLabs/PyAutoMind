@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1002 records across 7 buckets.
+1003 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -75,6 +75,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [llms-txt-census-fixes](2026/08/llms-txt-census-fixes.md)
 - [message-prior-xp-jax-trace](2026/08/message-prior-xp-jax-trace.md) — made the remaining message and compound-prior array-namespace paths
 - [messages-xp-stack-jax-trace](2026/08/messages-xp-stack-jax-trace.md) — replaced ten fixed-shape `xp.array([...])` message constructors
+- [mge-lane-death](2026/08/mge-lane-death.md) — lanes walk out of UniformPrior support and `resurrect=False` never redraws them — that accumulation IS the 62%
 - [mge-sigma-min-workspace-sweep](2026/08/mge-sigma-min-workspace-sweep.md)
 - [missing-auto-simulate-guards](2026/08/missing-auto-simulate-guards.md)
 - [multi-start-auto-convergence-real-search](2026/08/multi-start-auto-convergence-real-search.md) — `scripts/jax_assertions/multi_start_gradient_auto_convergence.py` failed

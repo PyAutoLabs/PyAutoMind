@@ -43,8 +43,9 @@ clean.
 
 ## Constraints
 
-- Wait for the `blackjax-smc-gradient-kernel` claim to release; verify the repo
-  is clean before starting (it had 23 dirty files at wrap-up).
+- The `blackjax-smc-gradient-kernel` claim is RELEASED (worktree removed 2026-07-24;
+  the parked task was shelved as superseded 2026-08-18), so this is no longer
+  blocked — but verify the repo is clean before starting (23 dirty files at wrap-up).
 - Developer repo (doc-light, not CI-gated like the workspaces); still verify
   renamed scripts import cleanly against merged main.
 - Copy any gitignored products out before any worktree teardown.
