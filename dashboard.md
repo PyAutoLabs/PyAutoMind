@@ -34,7 +34,7 @@ Live on GitHub: [open issues](https://github.com/search?q=org%3APyAutoLabs+is%3A
 
 **Quick wins** (small enough, and safe enough to run unattended)
 
-- [Has the falsified-by checkpoint stage gone rote after ten ships](draft/research/pyautobrain/has_the_falsified_by_checkpoint_stage_gone.md) — pyautobrain · small · safe · normal
+- [Review verdicts record a disposition per lifted claim](draft/feature/pyautobrain/review_claim_dispositions.md) — pyautobrain · small · safe · normal
 - [PyAutoFit CLI-noise batch: unclosed search.log handler + four small warning](draft/maintenance/pyautofit/cli_noise_pyautofit_batch.md) — pyautofit · small · safe · normal
 - [Tenant firewall: release_run.py carries an unlisted 'PyAutoLabs' instance fact](draft/bug/pyautoheart/tenant_firewall_release_run_instance_fact.md) — pyautoheart · small · safe · normal
 - [Silence the three autonerves-rooted CLI-noise sources (fits leak, pytest collection,](draft/maintenance/pyautonerves/cli_noise_autonerves_batch.md) — pyautonerves · small · safe · normal
@@ -127,13 +127,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 26</summary>
+<summary><b>feature</b> — 27</summary>
 
 - [Decide whether the clipper belongs in the search identifier](draft/feature/autofit/clipper_in_search_identifier.md) — autofit · medium · human-required · high
 - [Profile and speed up JAX likelihood-function compile times (all use](draft/feature/autolens_profiling/jax_compile_time_profiling.md) — autolens_profiling · large · supervised · high
 - [Give the Profiling Agent a compile-time axis — the arc](draft/feature/profiling/profiling_agent_jax_compile_time_scope.md) — profiling · large · supervised · high
 - [Which other searches need prior-support handling — coverage audit after](draft/feature/autofit/prior_exit_sampler_coverage.md) — autofit · medium · supervised · medium
 - [Give PyAutoFit searches a `seed` — today no search can](draft/feature/autofit/search_seed_reproducibility.md) — autofit · medium · supervised · medium
+- [Review verdicts record a disposition per lifted claim](draft/feature/pyautobrain/review_claim_dispositions.md) — pyautobrain · small · safe · normal
 - [Can create a list of InversionMatrix objects for each dataset](draft/feature/autoarray/multiwavelength_inversion.md) — autoarray · medium · supervised · normal
 - [The project @z_projects/ic50_workspace is our IC50 use case which we](draft/feature/autofit/ep_lbfgs_jax.md) — autofit · medium · safe · normal
 - [Tune cluster-scale JOSS benchmarks toward their 5-minute targets](draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md) — autolens_workspace · medium · supervised · normal
@@ -159,7 +160,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 22</summary>
+<summary><b>research</b> — 21</summary>
 
 - [The `ell_comps` trapping was masked, not cleared — characterise it](draft/research/autolens_profiling/ell_comps_trapping_unmasked.md) — autolens_profiling · medium · supervised · high
 - [Optimize pixelized Prodigy settings on the laptop GPU](draft/research/autolens_workspace_developer/pixelized_prodigy_laptop_gpu_phase_2_settings.md) — autolens_workspace_developer · medium · human-required · high
@@ -171,7 +172,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 - [Delaunay-family JAX modules never hit the persistent compilation cache](draft/research/autoarray/delaunay_callback_persistent_cache_miss.md) — autoarray · medium · supervised · medium
 - [Quick-update plotting cost — minutes per update, and it is](draft/research/autolens/quick_update_plotting_cost.md) — autolens · medium · supervised · medium
 - [Use readthedocs or migrate to GitHub docs](draft/research/autobuild/git_docs.md) — autobuild · small · supervised · normal
-- [Has the falsified-by checkpoint stage gone rote after ten ships](draft/research/pyautobrain/has_the_falsified_by_checkpoint_stage_gone.md) — pyautobrain · small · safe · normal
 - [Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix](draft/research/pyautoreduce/acceptance_noise_rebaseline.md) — pyautoreduce · small · supervised · normal
 - [Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity](draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md) — autoarray · medium · supervised · normal
 - [We have lots of examples which profile how long JAX](draft/research/autolens_workspace_developer/jax_jit_profiling.md) — autolens_workspace_developer · medium · supervised · normal
