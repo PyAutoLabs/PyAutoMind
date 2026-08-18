@@ -7,7 +7,34 @@ Repos:
 Difficulty: large
 Autonomy: human-required
 Priority: high
-Status: formalised (phased 2026-08-11; work proceeds through the phase prompts)
+Status: retired (2026-08-18 — phases shipped + direction superseded by the 2026-08-17 inference programme; human-confirmed)
+
+## Retirement (2026-08-18 — do NOT start dev on this prompt)
+
+Two independent reasons, both verified:
+
+1. **The phase work already shipped.** Phase 1 (compatibility) and phase 2
+   (characterisation) were delivered together in a single PR —
+   autolens_workspace_developer#126, merged 2026-08-13 (issue #125 closed).
+   Record: `complete/2026/08/pix-prodigy-gpu-compat.md`; results write-up on
+   wsdev main: `searches_minimal/pix_prodigy_laptop_gpu_findings.md` §1–6.
+   All four meshes have truth bars, GPU feasibility, the batch-size headline
+   (batch decides whether plain Delaunay finds truth; DelaunayNN is
+   batch-insensitive), and revised recommendations.
+2. **Forward direction is owned by the inference programme.** The 2026-08-17
+   human-approved inference-methods programme (autolens_profiling#134, merged
+   as `results/notes/inference/PROGRAMME.md` via PRs #136/#137) supersedes this
+   prompt's remaining scope: its Phase 3 is the final MultiStartProdigy
+   investigation (basin-hit probability, n_starts) and its Phase 5 is
+   pixelized/mesh global searches — with **PositionsLH fencing**, which this
+   prompt predates (pixelized profiling analyses explicitly disabled the
+   positions guard). Re-running settings sweeps without positions would redo
+   work the programme has redesigned.
+
+This prompt is **not** the programme prompt itself — it is the older per-mesh
+laptop-GPU scoping (phased 2026-08-11). Loose ends it left (DelaunayNN
+free-AdaptSplit beyond 300 steps; high-coefficient truth-bar scan for lane
+deaths) are recorded in the completion record and fall under programme Phase 5.
 
 Continue the shipped CPU investigation of `af.MultiStartProdigy` on pixelized
 source meshes using the laptop NVIDIA RTX 2060 Max-Q through the `PyAutoGPU`

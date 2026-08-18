@@ -1,3 +1,83 @@
+# release-version-sync-back-to-main
+
+**Completed:** 2026-08-18 (underlying work merged by 2026-07-22)
+**Type:** bug · **Target:** PyAutoBuild/PyAutoHands (version model) · **No new
+code PR** — this record retires the Phase 4 tracker prompt after verifying every
+sub-task against the code on `main` (branch
+`claude/release-version-stamps-pins-sync-7arym7`).
+
+## Summary
+
+The "release does not sync `__version__` stamps and workspace pins back to main"
+prompt was the **Phase 4 tracker** of the build-chain integrity campaign
+(PyAutoHands#155, closed 2026-07-22 — see
+[[build-chain-umbrella]]). The human decision of 2026-07-16 (re-confirmed
+2026-07-19) resolved its central fork as **(b): mains stay authoritative** — no
+stamp/pin commit-backs to `main`; instead fix the consumers that misread a
+compatibility floor as an exact pin, and enforce "a floor must name an
+installable release". All four Phase 4 tasks then shipped, but the final step
+the DECIDED section prescribed — *"rewrite or shelve this prompt with the
+reasoning recorded"* — never ran, so the prompt sat in `draft/` for a month
+showing on the dashboard as a not-started high-priority bug. This record is that
+missing step.
+
+## Verified 2026-08-18 against the code on `main` (not the tracker)
+
+Per the campaign's own lesson ("verify state at the source before working from
+any tracker"), each claim was re-checked in fresh clones of the repos' `main`:
+
+- **Task 1 — floors adopted** ([[floors-adoption]], 7 workspace PRs merged):
+  `config/general.yaml` carries `version.minimum_library_version: 2026.7.9.1`
+  in autofit_workspace and HowToFit (spot-checked); the value names a
+  non-yanked, installable release.
+- **Task 2 — Heart `version_skew` floor rework** (PyAutoHeart#96):
+  `heart/checks/version_skew.py` compares each workspace floor against the
+  newest `YYYY.M.D.B` release tag — UNSATISFIABLE (floor > newest release) /
+  OK / BAD / UNKNOWN. The previously unfailable "floor names an installable
+  release" invariant is now enforced.
+- **Task 3 — assistant `--check-version` de-gated** (autolens_assistant#80 +
+  clone mirrors): `autoassistant/audit_skill_apis.py::check_version` gates on
+  the public-API-surface hash only; its docstring cites "#155 Phase 4 task 3"
+  and explains the structurally-permanent source-vs-wheel `__version__` false
+  positive that the equality gate produced.
+- **Task 4 — orphaned README pins removed** (autofit_workspace#107,
+  autofit_workspace_test#64, autolens_workspace_test#198, PyAutoHands#174):
+  autofit_workspace's README carries no version pin; PyAutoHands
+  `pre_build.sh` has the `VERSION` variable and README-pin sed deleted, with an
+  in-file comment recording the decision and warning "do not re-add a README
+  version bump here or on the runner".
+- **Legacy key removal, incl. the HowToFit holdout** (HowToFit#23 and the
+  version-model-honesty epic): no `workspace_version:` key and no
+  `version.txt` in the checked workspaces; only `workspace_version_check`
+  (the bypass toggle) remains.
+
+## Key findings / traps
+
+- **The symptom was real; the proposed fix was rejected twice.** Fork (a)
+  (re-add stamp/pin commit-backs on release) was what the prompt title asked
+  for, and it was deliberately rejected — PyAutoBuild#120/#121 removed those
+  commit-backs after they caused stale CI storms, an email flood and an
+  org-wide cron pause. `__version__` on a library `main` is frozen **by
+  design**; the floor (`version.minimum_library_version`), the release tags
+  and the wheels are the live version signals.
+- **The recurring "drift" alarms were consumer bugs**, not missing commits:
+  three consumers read a floor as an exact pin. Deleting the false signal (the
+  assistant's `__version__` equality gate) worked where documenting the trap
+  twice had not.
+- **The genuine bug either way** — floors naming the yanked `2026.7.6.649` —
+  is closed: floors now name installable releases and `version_skew` RED-flags
+  a floor newer than any release. The residual gap (a floor naming a release
+  later *yanked on PyPI* — needs the PyPI API, not git tags) is acknowledged at
+  `version_skew.py:33` and now filed as
+  `draft/feature/pyautoheart/version_skew_yank_awareness.md` so it survives
+  this tracker's retirement.
+- **Tracker-drift lesson, again:** the dashboard listed this as a pickable
+  not-started bug for a month after the work merged. A tracker prompt whose
+  execution moved into an umbrella campaign must be retired by the campaign's
+  closeout, or it becomes exactly the stale index the campaign warned about.
+
+## Original prompt
+
 # Release does not sync __version__ stamps and workspace pins back to main
 
 Type: bug

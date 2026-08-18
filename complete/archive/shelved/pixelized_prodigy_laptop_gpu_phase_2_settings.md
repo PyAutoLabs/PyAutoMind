@@ -7,9 +7,22 @@ Repos:
 Difficulty: medium
 Autonomy: human-required
 Priority: high
-Status: blocked
-Blocked-by: `pixelized_prodigy_laptop_gpu_phase_1_compatibility.md`
-Parent: `pixelized_prodigy_laptop_gpu.md`
+Status: retired (2026-08-18 — delivered inside the phase-1 PR + superseded by the 2026-08-17 inference programme; human-confirmed)
+Parent: `pixelized_prodigy_laptop_gpu.md` (retired the same day, same reasons)
+
+## Retirement (2026-08-18 — do NOT start dev on this prompt)
+
+This phase was never issued separately: the phase-1 session delivered the
+phase-2 characterisation in the same PR (autolens_workspace_developer#126,
+merged 2026-08-13; record `complete/2026/08/pix-prodigy-gpu-compat.md`) —
+DelaunayNN starts curve, the 6 GB VRAM ceiling (batch 8 OOMs family-wide),
+batch-size comparison, free-vs-fixed regularization, and the four-mesh
+recommendation table this prompt asked for. Residual settings questions
+(optimal n_starts via basin-hit probability, mesh searches with wrong-mass
+basins fenced) are owned by the 2026-08-17 inference programme
+(autolens_profiling#134, `results/notes/inference/PROGRAMME.md`, Phases 3
+and 5), which redesigns them around PositionsLH — a lever this prompt
+predates.
 
 Consume the phase-1 four-mesh compatibility results and determine the
 `af.MultiStartProdigy` settings that reach the best supported likelihood in

@@ -7,7 +7,43 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: retired (2026-08-18 — superseded by the 2026-08-17 inference programme; human-confirmed)
+
+## Retirement (2026-08-18 — do NOT start dev on this prompt)
+
+The 2026-08-17 human-approved inference programme (autolens_profiling#134,
+`results/notes/inference/PROGRAMME.md` via PRs #136/#137) owns and reframes
+this prompt's core question:
+
+1. **The settings question is answered or redesigned.** Settled evidence
+   (PROGRAMME §1.2) established that basin selection, not settings, is the
+   discriminator for gradient MAP — Adam's p_hit ≈ 0.18/start is already
+   measured, and the carried-forward multi-start engine is the lr-free
+   **Prodigy**, which eliminates this prompt's `learning_rate` axis entirely
+   (that was the point of the shipped lr-free-multi-start-optimizers task).
+   The surviving knob, `n_starts`, is exactly programme **Phase 3**'s
+   reliability-curve question (n_starts {16, 64, 256} × ≥5 seeds vs
+   Nautilus/NSS budgets), and **Gate B** makes the "standard, recommended
+   option" call this prompt wanted — including the fallback classification
+   as a local/initialized optimizer. This prompt's `batch_size`-is-inert
+   note is already programme canon.
+2. **The harness gaps this prompt scoped are Phase 1's outputs.** Truth
+   scoring / basin metrics and a stable (target, config, seed, hardware) →
+   metrics axis are the Phase 1 targets registry + schema v2, superseding
+   the ad-hoc settings-grid extension of `sweep.py` proposed here.
+3. **The docs deliverable is programme §6** (evidence cards → future user
+   guides feeding workspace defaults).
+
+**Delta deliberately dropped (human decision, 2026-08-18):** the **Sersic
+lens + Sersic source model case** (a new `sersic` model type for
+`_setup.py` as a lower-complexity parametric rung) is NOT carried forward —
+programme targets v1 registers only mge / delaunay / knn / delaunay_matern /
+delaunay_nn / slam_source_pix, and that stands. Do not re-file it from this
+record.
+
+**Tracker:** this task's GitHub issue **autolens_profiling#69** was closed
+as superseded on 2026-08-18 (human-confirmed), pointing at PROGRAMME.md
+Phases 1/3 and this record.
 
 Goal: make the JAX gradient MAP optimizers (`af.MultiStartAdam` /
 `MultiStartADABelief` / `MultiStartLion`, PyAutoFit#1369/#1374) a **standard,
