@@ -12,7 +12,7 @@ files ("add this feature", "fix this bug", "write this tutorial"); AI agents
 then carry each one from idea to GitHub issue to merged pull request, with you
 approving every step.
 
-See the **[PyAutoMind Dashboard](dashboard.md)** ([mobile phone dashboard](https://pyautolabs.github.io/PyAutoMind/))
+See the **[PyAutoMind Dashboard](https://pyautolabs.github.io/PyAutoMind/)**
 for how this is used in practice: every task the Mind is holding, on one page,
 ready for AI implementation — a human picks a task, copies its `/start_dev`
 command into a Claude Code chat, and the agent takes it from there.
