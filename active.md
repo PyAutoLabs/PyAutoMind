@@ -60,3 +60,4 @@
 - FOLLOW-UP owed after ship: refresh `Vincken2026` with verified title/arXiv ID/DOI/authors once the
   paper is public, and replace the placeholder `**Supports:**` bullet with real claims.
 - repos:
+  - PyAutoMemory: feature/vincken-2026-bib-placeholder

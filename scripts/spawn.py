@@ -77,7 +77,7 @@ MIND_RULES = [
     # template spawned for somebody else's org. They live under .github/ (the
     # 2026-08 root declutter, #248) — GitHub resolves community-health files
     # there, and the Mind's root stays the task ledger.
-    (".github/AI_POLICY.md", "KEEP_SUB"), (".github/CONTRIBUTING.md", "KEEP_SUB"),
+    ("AI_POLICY.md", "KEEP_SUB"), ("CONTRIBUTING.md", "KEEP_SUB"),
     ("repos.yaml", "SPECIAL:body_map"),
     ("active.md", "EMPTY"), ("planned.md", "EMPTY"), ("epics.md", "EMPTY"),
     ("parked.md", "EMPTY"), ("condemned.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
@@ -146,7 +146,7 @@ MEMORY_RULES = [
     ("AGENTS.md", "KEEP"), ("CLAUDE.md", "KEEP"), (".gitignore", "KEEP"),
     # Same org-wide pointer docs as MIND_RULES — owner substitution; under
     # .github/ since the 2026-08 root declutter (all five organs match).
-    (".github/AI_POLICY.md", "KEEP_SUB"), (".github/CONTRIBUTING.md", "KEEP_SUB"),
+    ("AI_POLICY.md", "KEEP_SUB"), ("CONTRIBUTING.md", "KEEP_SUB"),
     ("bibliography/*", "EMPTY"),
     # Same fail-closed discipline as MIND_RULES (spec rule 9d). validate.yml is
     # self-contained — no schedule, no secrets, no sibling repos — so it clears
