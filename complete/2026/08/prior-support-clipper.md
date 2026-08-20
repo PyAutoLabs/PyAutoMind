@@ -194,9 +194,11 @@ So **follow-ups 1 and 2 in the list below are now FIXED**; they are left in plac
 because the reasoning that found them is the record. Their own records are
 `complete/2026/08/save-json-numpy-scalar-typeerror.md` and
 `complete/2026/08/crashed-run-poisons-resume.md`. Follow-ups 3, 4 and 5 remain
-open and 3 and 4 are now filed as prompts:
-`draft/bug/autofit/loggaussian_prior_declares_own_support.md` and
-`draft/feature/autofit/clipper_in_search_identifier.md`.
+open and 3 and 4 were filed as prompts:
+`draft/bug/autofit/loggaussian_prior_declares_own_support.md` and the
+identifier question — the latter **shipped 2026-08-18** (PyAutoFit#1493 /
+#1494, the clipper now enters the MLE identifiers; record
+`complete/2026/08/clipper-in-search-identifier.md`).
 
 Two corrections that came out of doing that follow-up work:
 

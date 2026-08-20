@@ -102,8 +102,10 @@ Downstream, all 2026-08-16:
   `draft/research/autolens_profiling/ell_comps_trapping_unmasked.md`. It runs on top
   of phase 1 and can share phase 2's arms.
 - **Clipper phase 3**, which was never drafted. If it is ever written it must argue
-  hygiene, not accuracy; `draft/feature/autofit/clipper_in_search_identifier.md` is
-  its prerequisite decision.
+  hygiene, not accuracy. Its prerequisite decision is now **made** — the clipper
+  entered the MLE identifiers on 2026-08-18 (record
+  `complete/2026/08/clipper-in-search-identifier.md`), so phase 3's
+  re-baseline carries one variable rather than two.
 
 ## Unexplained, left open
 

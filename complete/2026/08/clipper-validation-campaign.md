@@ -143,6 +143,14 @@ rather than live hazards — but do **not** delete the mitigations:
 
 ### ⚠ THE ARM-COLLISION TRAP — read before running anything
 
+> **SUPERSEDED 2026-08-18 — this trap no longer exists.** The clipper now
+> enters the identifier for the multi-start and (L)BFGS searches
+> (PyAutoFit#1493 / #1494, `f3767a7`), so arms differing only in clipper
+> separate by themselves. The hashes and the reasoning below are left
+> intact as the measurement that motivated the change — they were true on
+> 2026-08-16 and are false from 2026-08-18. Record:
+> `complete/2026/08/clipper-in-search-identifier.md`.
+
 **The clipper does NOT enter the search identifier.** Verified empirically
 against PyAutoFit `main` on 2026-08-16:
 
@@ -171,9 +179,10 @@ Mitigation — do all three:
 
 Not a bug in itself — it is what keeps existing runs' directories stable — but
 it is precisely wrong for this campaign. Whether the clipper *should* enter the
-identifier is now filed as
-`draft/feature/autofit/clipper_in_search_identifier.md`, and phase 3's
-re-baseline is the reason it matters.
+identifier was filed as a follow-up and **decided on 2026-08-18: it does**
+(PyAutoFit#1493 / #1494; record
+`complete/2026/08/clipper-in-search-identifier.md`). Phase 3's
+re-baseline was the reason it mattered.
 
 ### Harness traps that already cost a session
 

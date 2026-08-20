@@ -36,8 +36,9 @@
   overrode the worktree-conflict guard (PyAutoFit was claimed by stored-sample-reconstruction-guard
   and version-stamp-sync-guards; change surface disjoint from both).
 - follow-ups (filed/known at completion):
-  1. Shape C deliberately deferred: default `LBFGS` to `ClipperPriorBox` (draft
-     `draft/feature/autofit/clipper_in_search_identifier.md` is adjacent). With strict priors and
+  1. Shape C deliberately deferred: default `LBFGS` to `ClipperPriorBox` (the
+     adjacent identifier question was decided 2026-08-18 — record
+     `complete/2026/08/clipper-in-search-identifier.md`). With strict priors and
      `ClipperNone`, an LBFGS step out of the box now sees an infinite objective — C gives scipy
      declarative bounds instead.
   2. Workspace smoke literal risk: `*_workspace_test` scripts that pin literal values from

@@ -54,8 +54,9 @@ Changing what a prior reports as its support is not local:
   it has gone too far.
 - **Check the identifier.** If `lower_limit` feeds the search identifier, a
   change re-keys existing output directories and orphans stored results — the
-  same class of concern as
-  `draft/feature/autofit/clipper_in_search_identifier.md`.
+  same class of concern as the clipper identifier decision, which chose to
+  re-key and orphan rather than special-case (2026-08-18; record
+  `complete/2026/08/clipper-in-search-identifier.md`).
 
 ## Verify
 
