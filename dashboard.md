@@ -8,7 +8,7 @@ Every task the Mind is holding, on one page: what is in flight, what is parked, 
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 6 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
 | [Backlog](#backlog) (`draft/`) | 145 |
@@ -141,14 +141,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/jax_default_dependency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/latex_raw_string_docstrings.md">Raw-string the LaTeX docstrings across the six workspace repos</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/491">issue #491</a> — workspace-dev — 5 of 6 PRs MERGED; HowToLens#73 held RED (not this PR's failure)</summary>
-
-```
-/start_dev active/latex_raw_string_docstrings.md
 ```
 
 </details>
