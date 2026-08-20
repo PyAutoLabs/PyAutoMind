@@ -43,7 +43,8 @@ can follow every stage in this repository:
    — the permanent ledger of everything the organism has shipped.
 
 Alongside the lifecycle folders, the root holds the live registry:
-[`active.md`](active.md) (in flight), [`planned.md`](planned.md) (scoped, not
+[`active.md`](active.md) (in flight), [`epics.md`](epics.md) (long-running
+multi-phase programmes), [`planned.md`](planned.md) (scoped, not
 started), [`parked.md`](parked.md) (paused), [`ideas.md`](ideas.md) (raw
 inbox), and [`repos.yaml`](repos.yaml) — the body map naming every repository
 the Mind can direct.

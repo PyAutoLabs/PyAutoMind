@@ -79,7 +79,7 @@ MIND_RULES = [
     # there, and the Mind's root stays the task ledger.
     (".github/AI_POLICY.md", "KEEP_SUB"), (".github/CONTRIBUTING.md", "KEEP_SUB"),
     ("repos.yaml", "SPECIAL:body_map"),
-    ("active.md", "EMPTY"), ("planned.md", "EMPTY"),
+    ("active.md", "EMPTY"), ("planned.md", "EMPTY"), ("epics.md", "EMPTY"),
     ("parked.md", "EMPTY"), ("condemned.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
     ("autonomy_log.md", "SPECIAL:autonomy_log"),
     # Prompt-file lifecycle (issue #71): draft/ (not-started) -> active/
@@ -193,8 +193,9 @@ CANARY_TOKENS = (
 # SHARES a name (e.g. Memory's `bibliography/active.md`, caught by the broad
 # `bibliography/*` EMPTY rule) does not silently inherit a root file's title.
 EMPTY_TITLES = {
-    "dashboard.md": "# PyAutoMind task dashboard",
+    "dashboard.md": "# PyAutoMind Dashboard",
     "active.md": "# Active Tasks",
+    "epics.md": "# Epics",
     "planned.md": "# Planned",
     "parked.md": "# Parked tasks",
     "condemned.md": "# Condemned material",
