@@ -115,8 +115,8 @@ published S/N maps on source reconstructions.
    active-set solve. A compact source pins a large fraction of the mesh at zero.
 2. The noise map ignores `zeroed_ids_to_keep` under `use_edge_zeroed_pixels: true`, re-admitting the
    poorly-constrained boundary vertices the zeroing exists to remove.
-3. `use_edge_zeroed_pixels` is nested inside the positive-only branch, so turning that solver off
-   silently disables edge-zeroing.
+3. ~~`use_edge_zeroed_pixels` is nested inside the positive-only branch~~ — **withdrawn 2026-08-22:
+   intended behaviour, confirmed by the author, not a defect.**
 
 First job there is to instrument a real fit: **it was never established that a real
 `curvature_reg_matrix` is indefinite in a converged fit**, nor that the NNLS pinned fraction is

@@ -106,7 +106,7 @@ Scope: only bites when `zeroed_pixels > 0`. `Delaunay.__init__` defaults it to `
 so this is opt-in per mesh — check `rectangular_rtu_adapt_density` and any
 workspace configs before sizing the blast radius.
 
-## Defect 3 — `use_edge_zeroed_pixels` is silently ignored unless the positive-only solver is on
+## NOT A DEFECT — `use_edge_zeroed_pixels` applying only to the positive-only solver is intended
 
 This is the "does the edge-pixel handling make sense next to positive-only?"
 question, and the answer is no. The control flow (`abstract.py:509-554`):
@@ -120,16 +120,29 @@ if self.settings.use_positive_only_solver:          # default True
 return reconstruction_positive_negative_from(FULL matrix)   # edge-zeroing never consulted
 ```
 
-`use_edge_zeroed_pixels` is nested **inside** the positive-only branch. Setting
-`use_positive_only_solver: false` — a reasonable thing to do, for speed or to
-permit negative values — **silently disables edge-zeroing too**, with no warning.
-The poorly-constrained boundary vertices come straight back into the solve and
-results change for a reason the config does not express.
+`use_edge_zeroed_pixels` is nested **inside** the positive-only branch, so
+`use_positive_only_solver: false` also turns edge-zeroing off. The boundary
+vertices then re-enter the solve. That is the intended scoping — see the
+resolution below — and is recorded here only because the control flow is not
+obvious from the config, which reads as two independent switches.
 
-These are orthogonal concerns. Which parameters are *solvable* (edge-zeroing) is a
-statement about the mesh; which solver walks them is a separate choice. Edge-zeroing
-should apply to both branches, or the coupling should be made explicit and
-documented.
+**RESOLVED 2026-08-22 — this is intended, confirmed by the author.** The nesting is deliberate:
+edge-zeroing is scoped to the positive-only solver on purpose, not by oversight. It is therefore
+**not a defect** and nothing above should be read as one; the description of the control flow is
+accurate, the conclusion drawn from it was wrong.
+
+Two things this session got wrong about it, recorded so they are not repeated:
+
+1. It was called "two orthogonal concerns, silently coupled" and flagged as the most likely next
+   piece of real work. It is neither.
+2. It was twice deferred for "sign-off before touching the reconstruction path". The caution was
+   right in general; the premise that there was something to fix was not.
+
+The only residue worth anything: the coupling is **not documented**. Neither
+`Settings.use_edge_zeroed_pixels` nor `config/general.yaml` says that the setting has no effect
+when `use_positive_only_solver` is `False`. A one-line comment in the packaged config would spare
+the next reader the same wrong inference. Cosmetic, no behaviour change, do it only if someone is
+in that file anyway.
 
 ## Suggested direction (interpretation now settled; design still open)
 
@@ -380,11 +393,10 @@ Documentation only — no behaviour change, no API change.
 2. **Defect 2** — the covariance ignores `zeroed_ids_to_keep` while the reconstruction subsets by it.
    Never measured in isolation; the real fits here had 108 zeroed pixels of 784 and they are folded
    into the "pinned" counts throughout, so its separate contribution is unknown.
-3. **Defect 3** — `use_edge_zeroed_pixels` nested inside the `use_positive_only_solver` branch, so
-   turning the positive-only solver off silently disables edge-zeroing. **Untouched by any of the
-   measurement above and unambiguous at any priority.** It sits on the reconstruction path, so it
-   changes fit results and needs its own sign-off. This is the most likely next piece of real work
-   here.
+3. ~~**Defect 3**~~ — **withdrawn 2026-08-22. Not a defect.** `use_edge_zeroed_pixels` applying
+   only under the positive-only solver is intended behaviour, confirmed by the author. Previously
+   billed here as "the most likely next piece of real work"; it is not work at all. Only residue:
+   the coupling is undocumented, which is cosmetic.
 4. **The open measurement**: re-run the evidence-optimal lambda with the lens mass **free** rather
    than fixed at truth. That is the single result most likely to overturn the `low` grading.
 

@@ -137,8 +137,9 @@ found in the same property, and split into a second prompt,
 2. **Edge-zeroed pixels ignored.** `use_edge_zeroed_pixels: true` is also default; the reconstruction
    solves on `zeroed_ids_to_keep` and scatters back zeros, while the noise map inverts the *full* matrix —
    re-admitting the poorly-constrained boundary vertices the zeroing exists to remove.
-3. **`use_edge_zeroed_pixels` is nested inside the positive-only branch**, so turning the positive-only
-   solver off silently disables edge-zeroing with no warning. Two orthogonal settings, silently coupled.
+3. ~~**`use_edge_zeroed_pixels` is nested inside the positive-only branch**~~ — **withdrawn
+   2026-08-22: this is intended behaviour, confirmed by the author, not a defect.** The control-flow
+   description was accurate; calling it a bug was not.
 
 Corroboration for the numerics half: `abstract.py:805` already documents `~1e-6` evidence round-off from
 "factorizing the explicitly formed inverse" at `cond(C) ~ 1e9` on clustered traced mesh vertices — applied
