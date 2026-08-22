@@ -410,6 +410,55 @@ Documentation only — no behaviour change, no API change.
 4. **The open measurement**: re-run the evidence-optimal lambda with the lens mass **free** rather
    than fixed at truth. That is the single result most likely to overturn the `low` grading.
 
+## CAVEAT CLOSED 2026-08-22 — an imperfect mass model does NOT open the gap
+
+The `low` grading carried one named risk: every measurement fixed the lens mass at truth, and the
+reasoning was that a poor mass model would leave image-plane residuals the inversion could only
+absorb by roughening the source — i.e. *less* regularization, and low lambda is where the gap opens.
+
+A free-mass Nautilus search is thousands of ~4.5s evaluations. The hypothesis was tested directly
+instead: simulate with the **true** mass, fit with a **deliberately wrong** one, re-find
+`argmax_lambda log_evidence`.
+
+| mass model | lambda* | log evidence | pinned % | noise x med | max | flux % |
+|---|--:|--:|--:|--:|--:|--:|
+| exact (truth) | **10** | 26932.8 | 87.1% | 1.055 | 2.45 | -1.3% |
+| `E_r` +1% | **10** | 26597.5 | 87.1% | 1.071 | 2.45 | -2.1% |
+| `E_r` +3% | **10** | 23799.8 | 90.2% | 1.120 | 2.43 | -3.3% |
+| `E_r` +5% | **10** | 19011.9 | 89.5% | 1.149 | 2.41 | -1.4% |
+| axis_ratio 0.90 -> 0.85 | **10** | 25540.0 | 89.3% | 1.127 | 2.44 | -1.0% |
+| angle 45 -> 40 deg | **10** | 26751.6 | 87.0% | 1.049 | 2.44 | -1.5% |
+
+**The hypothesis is refuted.** `lambda* = 10` in every case — unchanged by a 5% Einstein-radius
+error, by an ellipticity error, or by an orientation error. The log evidence collapses as the mass
+model degrades (26933 -> 19012, a drop of ~7900) so the fits really are much worse; the optimal
+regularization simply does not move with it. The noise ratio creeps from 1.05 to 1.15 and the flux
+effect stays within -1% to -3.3%. Nothing approaches the factor-of-2 regime.
+
+Mechanism, offered as interpretation rather than measurement: a rougher source does not buy back a
+bad deflection field, so the evidence has no reason to trade regularization away for it. Mass error
+and regularization are not the substitutes the hypothesis assumed.
+
+**This was the risk most likely to overturn `low`, and it did not. The grading stands.**
+
+### Resolution limit — read before quoting "lambda* = 10"
+
+The scan is `logspace(-3, 5, 17)`, i.e. **0.5 dex per step**: adjacent grid points are 3.16 and 31.6.
+So the honest claim is *lambda\* does not move by more than one grid step across any mass error
+tested* — not that it is exactly 10, and not that a sub-factor-3 shift would have been seen. A
+finer scan would sharpen this; it would not change the conclusion, since even a factor-3 drop to
+~3 sits far above the lambda ~ 0.1-1 regime where the gap opens.
+
+### What this still does not cover
+
+- Perturbing a mass model is not the same as **fitting** a wrong one. A real search optimises mass
+  and lambda jointly and may land somewhere neither test visits.
+- Nautilus samples a **posterior** over lambda rather than taking the argmax, so some posterior mass
+  sits below lambda\*.
+- One noise realization per row; `RectangularBilinearAdaptDensity` only; Delaunay untested.
+
+Script: `scratchpad/mass_error.py` (session artefact).
+
 ## Verification
 
 - **Reproduce the symptom first.** Take a real Delaunay source fit, compute the
