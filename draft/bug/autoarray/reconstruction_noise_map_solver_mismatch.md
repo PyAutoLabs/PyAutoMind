@@ -138,11 +138,21 @@ Two things this session got wrong about it, recorded so they are not repeated:
 2. It was twice deferred for "sign-off before touching the reconstruction path". The caution was
    right in general; the premise that there was something to fix was not.
 
-The only residue worth anything: the coupling is **not documented**. Neither
-`Settings.use_edge_zeroed_pixels` nor `config/general.yaml` says that the setting has no effect
-when `use_positive_only_solver` is `False`. A one-line comment in the packaged config would spare
-the next reader the same wrong inference. Cosmetic, no behaviour change, do it only if someone is
-in that file anyway.
+The residue — the coupling being undocumented — was **fixed in
+[PyAutoArray#473](https://github.com/PyAutoLabs/PyAutoArray/pull/473)**: `config/general.yaml`,
+`Settings.use_edge_zeroed_pixels` and the nesting site in `AbstractInversion.reconstruction` all
+now state that the scoping exists and is intended, the last one explicitly saying not to "fix" it
+by hoisting the check out of the branch.
+
+**Still outstanding, and the part that actually reaches users:** every workspace ships its own copy
+of `config/general.yaml` with the *uncommented* version of this line, and the workspace config is
+the one a user reads — the packaged autoarray default is only a fallback. Confirmed in
+`autolens_workspace/config/general.yaml:19`; the other workspaces were not checked but almost
+certainly carry it too (@autogalaxy_workspace, @autolens_workspace_test,
+@autogalaxy_workspace_test, @HowToLens, @HowToGalaxy).
+
+Propagating the one-line comment there is a small, mechanical, zero-risk change across those repos.
+Worth folding into the next workspace sweep rather than raising on its own.
 
 ## Suggested direction (interpretation now settled; design still open)
 
