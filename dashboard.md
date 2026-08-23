@@ -296,6 +296,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+/start_dev draft/feature/pyautobrain/brain_board_follow_ups.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autoarray/multiwavelength_inversion.md">Can create a list of InversionMatrix objects for each dataset</a> — autoarray · medium · supervised · normal</summary>
 
 ```
@@ -308,14 +316,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: round out the morning surface</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/brain_board_follow_ups.md
 ```
 
 </details>
@@ -1328,7 +1328,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: round out the morning surface</a> |
+| 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right</a> |
 | 2026-08-22 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_xla_stall.md">multi_dataset/jax_likelihood scripts hang to the timeout cap (XLA…</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md">Untrack the generated FITS test artifacts in autoarray</a> |

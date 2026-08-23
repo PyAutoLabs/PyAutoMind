@@ -1,36 +1,38 @@
-# Brain board follow-ups: round out the morning surface
+# Brain board follow-ups: what real mornings surface
 
 Type: feature
 Target: pyautobrain
 Repos:
 - PyAutoBrain
-Difficulty: medium
+Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-08-23
 
-Follow-up features for the Brain board (shipped from
-`claude/pyautobrain-dashboard-o33z4r`; design record in
-`docs/pyautobrain/brain_board_assessment.md`). The human reviewed the first
-render: "sample looks great, maybe missing some features — we can do those in
-follow up." Candidates, most valuable first; ship as separate small PRs or one
-pass, human's call at start_dev:
+The living catch-all for Brain-board gaps found by actually using it as the
+morning door. Two rounds already shipped from this prompt (2026-08-23, both
+via branch `claude/pyautobrain-dashboard-o33z4r`):
 
-1. **Umbrella router card** — the PyAutoScientist organism board consumes the
-   new `brain | N need you / clear to work` badge.json like the other boards'
-   headlines, and links the Brain board from its where-to-work-next banner.
-2. **Single source for the sweep lists** — `bin/overnight_status.sh` and
-   `bin/version_drift.sh` read `config/policy.yaml board:` (overnight_jobs /
-   version_stamps) instead of carrying their own copies; the keep-in-step
-   comments then come out.
-3. **Devbox-published local metrics** — the Heart's `pyauto-heart publish`
-   pattern applied to the board's local-only blind spots (hygiene headline,
-   worktrees with unpushed commits), age-stamped "observed Nh ago on the dev
-   box" and expiring, so the cloud render can show them honestly.
-4. **Anything the human names from using the live board** — a week of real
-   mornings will surface the actual gaps; fold those in here before starting.
+- **Round 1** (PyAutoBrain#254 + the boards-footer arc): README dashboard
+  paragraph, per-conversation community chips, the cross-board footer on all
+  six boards, the Brain row on the organism router.
+- **Round 2** (readiness/devbox/trend arc, with PyAutoHeart#160 publishing
+  `board.json`): the Readiness & release section consumes the Heart's
+  structured blockers verbatim (their own `/bug` prompts as chips) plus the
+  Hands headline; ⏸ blocked-gate annotations render inline; `board publish`
+  (morning.sh's last step) pushes the dev-box observation — hygiene pre-scan
+  rows + worktree state, age-stamped, stale at 48h, dropped at 7d; the
+  autonomy log's tail renders as a section; the header carries the
+  self-carrying "N need you" trend sparkline.
 
-Not in scope: the full issue_cleanup audit half on the board (stays
-confirmation-gated in its own door), and auto-anything — every chip keeps
-routing through the human-gated doors.
+Remaining candidates — pick up only when a real morning shows the need:
+
+1. **Cloud-safe hygiene sensors in CI** — some hygiene modes (dep-cap drift,
+   optdeps/extras) could run in brain_board.yml against fresh checkouts,
+   making those rows live rather than devbox-stamped. Only worth it if the
+   devbox stamp proves too stale in practice.
+2. **Sweep lists single-sourced** — `bin/overnight_status.sh` and
+   `bin/version_drift.sh` read `config/policy.yaml board:` instead of their
+   own copies (the keep-in-step comments then come out).
+3. **Whatever a week of mornings surfaces** — append here before starting.
