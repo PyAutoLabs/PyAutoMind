@@ -8,7 +8,7 @@ Every task the Mind is holding, on one page: what is in flight, what is parked, 
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
 | [Backlog](#backlog) (`draft/`) | 150 |
@@ -139,14 +139,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/16_transformed_message_factor_gradient_unpack.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/bump_autoarray_autonerves_floor_after_stamp_release.md">Bump autoarray's autonerves floor once the regime stamp is released</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/482">issue #482</a> — library-dev</summary>
-
-```
-/start_dev active/bump_autoarray_autonerves_floor_after_stamp_release.md
 ```
 
 </details>
