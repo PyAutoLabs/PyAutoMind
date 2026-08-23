@@ -683,6 +683,8 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBrain/tests/test_skill_install.py": {"PyAutoLabs"},
     "PyAutoBrain/tests/test_workspace_conductor.py": {"HowToGalaxy", "HowToLens", "autolens_workspace", "autoreduce_workspace"},
     "PyAutoHands/autohands/aggregate_results.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    # PyAutoScientist: the cross-board footer nav names the organism board.
+    "PyAutoHands/autohands/board.py": {"PyAutoScientist"},
     "PyAutoHands/autohands/build_util.py": {"PyAutoNerves"},
     "PyAutoHands/autohands/bump_colab_urls.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
     "PyAutoHands/autohands/check_search_memory.py": {"PyAutoFit", "PyAutoLabs"},
@@ -724,7 +726,9 @@ FIREWALL_ALLOWLIST = {
     "PyAutoHeart/heart/checks/version_skew.py": {"PyAutoLabs"},
     "PyAutoHeart/heart/checks/workspace_testmode_timing.py": {"PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
     "PyAutoHeart/heart/checks/worktree_drift.py": {"PyAutoLabs"},
-    "PyAutoHeart/heart/dashboard.py": {"autolens_profiling", "pyautolabs.github.io"},
+    # PyAutoScientist: the cross-board footer nav names the organism board
+    # (the family's one non-organ member) — same surface as the Hands entry.
+    "PyAutoHeart/heart/dashboard.py": {"autolens_profiling", "pyautolabs.github.io", "PyAutoScientist"},
     "PyAutoHeart/heart/fix.py": {"PyAutoFit", "PyAutoLabs"},
     "PyAutoHeart/heart/readiness.py": {"autolens_profiling", "autolens_workspace_test"},
     "PyAutoHeart/heart/shell/heart_prompt.sh": {"PyAutoLabs"},
