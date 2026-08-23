@@ -33,11 +33,20 @@ button.copy{flex:0 0 auto;width:2.6rem;height:2.6rem;font-size:1.1rem;
 button.copy.ok{color:var(--ok);border-color:var(--ok)}
 details{margin:.5rem 0}
 summary{cursor:pointer;font-weight:600;padding:.4rem 0}
+table.recent{width:100%;border-collapse:collapse;font-size:.95em}
+table.recent td{border-bottom:1px solid var(--line);padding:.45rem .4rem .45rem 0;
+ vertical-align:top;overflow-wrap:anywhere}
+table.recent td.when{white-space:nowrap;color:var(--muted);font-variant-numeric:
+ tabular-nums}
+table.recent td.what{white-space:nowrap;color:var(--muted);font-size:.85em;
+ padding-top:.58rem}
+table.recent td.pick{width:2.6rem;padding-right:0}
+table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 </style>
 </head>
 <body>
 <h1>📋 PyAutoMind Dashboard</h1>
-<p>Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task.</p>
+<p>Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
 <p class="muted">In flight 1 · Parked 3 · Planned 6 · Backlog 150 · <a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md">markdown version</a></p>
 <h2>Start here</h2>
 <h3>Highest priority <span class="facets">(filed as high) — showing 12 of 17</span></h3>
@@ -58,23 +67,23 @@ summary{cursor:pointer;font-weight:600;padding:.4rem 0}
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/workspaces/bug_fix_the_tracer_fits_existence_guard.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/workspaces/bug_fix_the_tracer_fits_existence_guard.md">Bug: fix the tracer.fits existence guard in autolens_workspace imaging modeling.py</a> — <span class="facets">workspaces · small · safe · normal</span></p></div>
 <h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
-<div class="task"><button class="copy" data-cmd="/start_dev active/16_transformed_message_factor_gradient_unpack.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first call</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1501">issue #1501</a> — <span class="facets">HOLD — do not start dev. Fix-or-delete hangs off the PyAutoFit#1498 logpdf-contract</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/16_transformed_message_factor_gradient_unpack.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first call</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1501">issue #1501</a><span class="facets"> — issued 2026-08-19</span> — <span class="facets">HOLD — do not start dev. Fix-or-delete hangs off the PyAutoFit#1498 logpdf-contract</span></p></div>
 <h2>Parked <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md">markdown version</a></h2>
 <details>
 <summary>3 task(s)</summary>
-<div class="task"><button class="copy" data-cmd="/start_dev active/12_single_source_density_refactor.md" aria-label="Copy the Claude command">📋</button><p><b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/13_collapse_prior_and_message.md" aria-label="Copy the Claude command">📋</button><p><b>prior-message-collapse-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/pyautoreduce_slacs1430_acs_comparison.md" aria-label="Copy the Claude command">📋</button><p><b>pyautoreduce-slacs1430-acs-comparison</b></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/12_single_source_density_refactor.md" aria-label="Copy the Claude command">📋</button><p><b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a><span class="facets"> — parked 2026-08-18</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/13_collapse_prior_and_message.md" aria-label="Copy the Claude command">📋</button><p><b>prior-message-collapse-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a><span class="facets"> — parked 2026-08-18</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/pyautoreduce_slacs1430_acs_comparison.md" aria-label="Copy the Claude command">📋</button><p><b>pyautoreduce-slacs1430-acs-comparison</b><span class="facets"> — parked 2026-08-08</span></p></div>
 </details>
 <h2>Planned <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md">markdown version</a></h2>
 <details>
 <summary>6 task(s)</summary>
-<div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task isothermal-ell-sph-oversampling-at-the-cusp — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>isothermal-ell-sph-oversampling-at-the-cusp</b> — <span class="facets">planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md" aria-label="Copy the Claude command">📋</button><p><b>remote-mcp-deployment-tiers</b> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/20">issue #20</a> — <span class="facets">DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP…</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/samples_parameter_paths.md" aria-label="Copy the Claude command">📋</button><p><b>samples-parameter-paths</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1327">issue #1327</a> — <span class="facets">parked</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autolens/jax_point_source_point_smoke_sentinel.md" aria-label="Copy the Claude command">📋</button><p><b>jax-point-source-point-smoke-sentinel</b> — <span class="facets">planned</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autogalaxy/piemass_potential.md" aria-label="Copy the Claude command">📋</button><p><b>piemass-potential</b> — <span class="facets">planned</span></p></div>
-<div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b></p></div>
+<div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task isothermal-ell-sph-oversampling-at-the-cusp — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>isothermal-ell-sph-oversampling-at-the-cusp</b><span class="facets"> — found 2026-08-09</span> — <span class="facets">planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md" aria-label="Copy the Claude command">📋</button><p><b>remote-mcp-deployment-tiers</b> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/20">issue #20</a><span class="facets"> — filed 2026-07-21</span> — <span class="facets">DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP…</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/samples_parameter_paths.md" aria-label="Copy the Claude command">📋</button><p><b>samples-parameter-paths</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1327">issue #1327</a><span class="facets"> — filed 2026-07-08</span> — <span class="facets">parked</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autolens/jax_point_source_point_smoke_sentinel.md" aria-label="Copy the Claude command">📋</button><p><b>jax-point-source-point-smoke-sentinel</b><span class="facets"> — filed 2026-05-21</span> — <span class="facets">planned</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autogalaxy/piemass_potential.md" aria-label="Copy the Claude command">📋</button><p><b>piemass-potential</b><span class="facets"> — filed 2026-06-05</span> — <span class="facets">planned</span></p></div>
+<div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
 </details>
 <h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
 <p class="muted">150 filed prompts, not started — sorted most-pickable first (priority, then size). 23 of them belong to an epic and are listed only under Epics below.</p>
@@ -232,6 +241,130 @@ summary{cursor:pointer;font-weight:600;padding:.4rem 0}
 <summary>release — 1</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/release/autocti/cti_release_train_wiring.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/release/autocti/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — <span class="facets">autocti · medium · human-required · normal</span></p></div>
 </details>
+<a id="recent"></a><h2>Recent <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md#recent">markdown version</a></h2>
+<p class="muted">The Mind's most recent 20 task events, newest first — what was issued, parked, filed and shipped, in one place. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Work still in hand is listed first-class here; completed records fill whatever room is left.</p>
+<table class="recent">
+<tr>
+<td class="when">2026-08-23</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/pyautonerves-release-for-regime-stamp.md">pyautonerves-release-for-regime-stamp</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task pyautonerves-release-for-regime-stamp — its record is complete/2026/08/pyautonerves-release-for-regime-stamp.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-23</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/bump-autonerves-floor.md">bump-autonerves-floor</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task bump-autonerves-floor — its record is complete/2026/08/bump-autonerves-floor.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-22</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/small-datasets-regime-stamp.md">small-datasets-regime-stamp</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task small-datasets-regime-stamp — its record is complete/2026/08/small-datasets-regime-stamp.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-22</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/should-simulate-capped-branch-reuse.md">should-simulate-capped-branch-reuse</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task should-simulate-capped-branch-reuse — its record is complete/2026/08/should-simulate-capped-branch-reuse.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-22</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/plot-utils-duplicate-modules.md">plot-utils-duplicate-modules</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task plot-utils-duplicate-modules — its record is complete/2026/08/plot-utils-duplicate-modules.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-22</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/optional-dependency-skip-guards.md">optional-dependency-skip-guards</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task optional-dependency-skip-guards — its record is complete/2026/08/optional-dependency-skip-guards.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-22</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/jax-grad-local-vs-ci-assertions.md">jax-grad-local-vs-ci-assertions</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task jax-grad-local-vs-ci-assertions — its record is complete/2026/08/jax-grad-local-vs-ci-assertions.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-22</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/fits-header-comment-literal-list.md">fits-header-comment-literal-list</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task fits-header-comment-literal-list — its record is complete/2026/08/fits-header-comment-literal-list.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-21</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/queue-intake-claude.md">queue-intake-claude</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task queue-intake-claude — its record is complete/2026/08/queue-intake-claude.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-21</td>
+<td class="what">completed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/complete/2026/08/pixelization-eager-jit-divergence.md">pixelization-eager-jit-divergence</a></td>
+<td class="pick"><button class="copy" data-cmd="/memory recall the completed PyAutoMind task pixelization-eager-jit-divergence — its record is complete/2026/08/pixelization-eager-jit-divergence.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-19</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/16_transformed_message_factor_gradient_unpack.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-18</td>
+<td class="what">parked</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md#single-source-density-design">single-source-density-design</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/12_single_source_density_refactor.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-18</td>
+<td class="what">parked</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md#prior-message-collapse-design">prior-message-collapse-design</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/13_collapse_prior_and_message.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-09</td>
+<td class="what">found</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a></td>
+<td class="pick"><button class="copy" data-cmd="/route start the planned PyAutoMind task isothermal-ell-sph-oversampling-at-the-cusp — its record is in planned.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-08</td>
+<td class="what">parked</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/pyautoreduce_slacs1430_acs_comparison.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-07-22</td>
+<td class="what">planned</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#latent-nan-guard-honest-run">latent-nan-guard-honest-run</a></td>
+<td class="pick"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-07-21</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#remote-mcp-deployment-tiers">remote-mcp-deployment-tiers</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-07-08</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#samples-parameter-paths">samples-parameter-paths</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/samples_parameter_paths.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-06-05</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#piemass-potential">piemass-potential</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/feature/autogalaxy/piemass_potential.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-05-21</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#jax-point-source-point-smoke-sentinel">jax-point-source-point-smoke-sentinel</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autolens/jax_point_source_point_smoke_sentinel.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+</table>
 <h2>Epics <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/epics.md">markdown version</a></h2>
 <p class="muted">Long-running multi-phase programmes — 📋 copies a prompt that works out where the epic stands from its ledger and continues it from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone.</p>
 <div class="task"><button class="copy" data-cmd="Continue the 'JAX profiling — inference programme' epic. Its canonical state lives in autolens_profiling/results/notes/inference/PROGRAMME.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: DECISIONS.md (append-only gate log) and phase_&lt;NN&gt;_*/RESULTS.md sit beside the ledger; slices ship as autolens_profiling issues/PRs, not Mind prompts." aria-label="Copy the Claude command">📋</button><p><b>JAX profiling — inference programme</b> — <span class="facets">ledger: <code>autolens_profiling/results/notes/inference/PROGRAMME.md</code></span></p></div>

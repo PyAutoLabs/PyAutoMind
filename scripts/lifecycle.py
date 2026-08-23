@@ -29,6 +29,11 @@ Subcommands
         Generate complete/index.md (token-light navigation over the records);
         --check fails if it is stale (CI).
 
+  dates [--write | --check]
+        The date on every active/issued task: report what carries none, or
+        --write to backfill it from git history (the commit that introduced
+        the entry / moved the prompt into active/). See "task dates" below.
+
   check
         Drift guard (mirrors repos_sync.py --check; non-zero exit on drift):
           * no active.md slug has a complete/ record (finished but still active)
@@ -233,6 +238,318 @@ def registry_problems(root: Path) -> "list[str]":
                     f"fallback: {raw} -> {rel}"
                 )
     return problems
+
+
+# --------------------------------------------------------------------------- #
+# task dates
+#
+# Until 2026-08-23 the Mind dated only what it FINISHED: every complete/ record
+# carries `completed:`, but a task that had merely been picked up carried no
+# date at all. active.md rows said it in prose when a session remembered to
+# ("- issue: …/1501 (issued 2026-08-19)"), which nothing could read back — so
+# the Mind could answer "what shipped in July?" and not "what did we start?".
+#
+# The convention: every registry entry carries ONE zero-indent date field, and
+# every issued prompt an `Issued:` header line. The KEY names the event, so the
+# date reads as something that happened rather than a bare timestamp:
+#
+#     active.md    - issued: YYYY-MM-DD    the day the task got its issue
+#     planned.md   - filed:  YYYY-MM-DD    the day it was scoped
+#     parked.md    - parked: YYYY-MM-DD    the day it stopped
+#     active/*.md  Issued: YYYY-MM-DD      the prompt's own copy (survives a
+#                                          registry row going missing)
+#
+# `dates` reports what carries none; `dates --write` backfills from git — the
+# commit that first introduced the entry, or that moved the prompt into
+# active/. Retroactive by construction: the history already knows the dates,
+# they were simply never written down where a reader could see them.
+# --------------------------------------------------------------------------- #
+ISO_DATE_RE = re.compile(r"\b(\d{4}-\d{2}-\d{2})\b")
+
+# Date keys a registry entry may carry, most task-authoritative first. The
+# first one present wins, so an entry that was filed, then issued, dates from
+# the issue — the later, more specific event.
+DATE_KEYS = ("issued", "registered", "started", "planned", "filed", "parked",
+             "found", "completed", "shipped")
+
+# The key each registry's entries SHOULD carry — what `--write` inserts.
+REGISTRY_DATE_KEY = {"active.md": "issued", "planned.md": "filed",
+                     "parked.md": "parked"}
+
+# The prompt-header form. `Issued:` joins the light header convention
+# (REFERENCE.md "Prompt file format") — optional like every other key, and
+# never YAML.
+PROMPT_DATE_KEY = "Issued"
+_HEADER_FIELD_RE = re.compile(
+    r"^(Type|Target|Repos|Difficulty|Autonomy|Priority|Status|Issued|Epic|"
+    r"Phase|Blocked-by|Closes-when):", re.IGNORECASE)
+
+
+def entry_date(fields: "dict[str, str]") -> "tuple[str | None, str | None]":
+    """(date, key) for a registry entry, or (None, None) when it carries none.
+
+    Only a key from DATE_KEYS counts. A date sitting in some other field's
+    prose is invisible on purpose — `- issue: …/1501 (issued 2026-08-19)` is
+    exactly the un-machine-readable habit this convention replaces (backfill
+    still mines it, see `_prose_date`)."""
+    for key in DATE_KEYS:
+        value = fields.get(key)
+        if not value:
+            continue
+        m = ISO_DATE_RE.search(value)
+        if m:
+            return m.group(1), key
+    return None, None
+
+
+def prompt_issued_date(text: str) -> "str | None":
+    """The `Issued: YYYY-MM-DD` header of an issued prompt, else None.
+
+    Header only (first 30 lines), matching how every other prompt field is
+    read — a date deep in the prose is prose."""
+    for line in text.splitlines()[:30]:
+        m = re.match(r"Issued:\s*(\S.*)", line.strip(), re.IGNORECASE)
+        if m:
+            d = ISO_DATE_RE.search(m.group(1))
+            if d:
+                return d.group(1)
+    return None
+
+
+def _prose_date(fields: "dict[str, str]") -> "str | None":
+    """Earliest ISO date anywhere in an entry's field values.
+
+    The backfill's second source: entries that DID record when they started,
+    just not where `entry_date` looks. Earliest wins because the later dates
+    in an entry are progress notes, and the entry's own date is its first."""
+    found = sorted(m for v in fields.values() for m in ISO_DATE_RE.findall(v))
+    return found[0] if found else None
+
+
+def _git(root: Path, args: "list[str]") -> "list[str]":
+    """`git` output lines, or [] on any failure.
+
+    Empty on no git, not a repo, a fresh template checkout — the backfill
+    degrades to its other sources rather than dying."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "-C", str(root), *args],
+                             capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return []
+    if out.returncode != 0:
+        return []
+    return [ln.strip() for ln in out.stdout.splitlines() if ln.strip()]
+
+
+def _shallow_boundary(root: Path) -> "str | None":
+    """Date of the oldest commit a SHALLOW clone can see, else None.
+
+    A shallow checkout (CI, a cloud session) has no history before its
+    boundary, so `git log` reports the boundary commit as the day everything
+    older was "introduced" — every backfill in one clone would come out the
+    same wrong date. Anything at or before the boundary is therefore not
+    evidence, and the caller falls through to a slower but honest source."""
+    if _git(root, ["rev-parse", "--is-shallow-repository"])[:1] != ["true"]:
+        return None
+    dates = _git(root, ["log", "--format=%ad", "--date=short"])
+    return dates[-1] if dates else None
+
+
+def _git_dates(root: Path, args: "list[str]") -> "list[str]":
+    """`git log` short author dates for a pathspec/pickaxe, newest first."""
+    return _git(root, ["log", "--format=%ad", "--date=short", *args])
+
+
+def _oldest(dates: "list[str]", boundary: "str | None") -> "str | None":
+    """The oldest date in a `git log` answer, unless the clone truncates it."""
+    if not dates:
+        return None
+    oldest = dates[-1]
+    return None if boundary and oldest <= boundary else oldest
+
+
+def git_entry_date(root: Path, registry: str, slug: str,
+                   boundary: "str | None" = None) -> "str | None":
+    """The day this entry's `## slug` heading first appeared in its registry."""
+    return _oldest(_git_dates(root, [f"-S## {slug}", "--", registry]), boundary)
+
+
+def git_prompt_issued_date(root: Path, rel: str,
+                           boundary: "str | None" = None) -> "str | None":
+    """The day this prompt arrived in `active/` — i.e. the day it was issued.
+
+    `git mv` from draft/ records as an add at the new path, which is the event
+    wanted: the prompt entering the issued state."""
+    return _oldest(_git_dates(root, ["--diff-filter=A", "--", rel]), boundary)
+
+
+def _insert_registry_date(lines: "list[str]", start: int, key: str,
+                          date: str) -> "list[str]":
+    """Insert `- key: date` into the entry whose `## ` heading is at `start`.
+
+    Placed after the `- issue:` field (and its wrapped continuation lines) when
+    there is one, so an entry reads identity-then-date; otherwise it becomes
+    the entry's first field."""
+    i = start + 1
+    at = i
+    while i < len(lines) and not H2_RE.match(lines[i]):
+        f = FIELD_RE.match(lines[i])
+        if f and f.group(1).strip() == "issue":
+            i += 1
+            while i < len(lines) and lines[i][:1].isspace() and lines[i].strip():
+                i += 1
+            at = i
+            break
+        if f:
+            at = i
+            break
+        i += 1
+    return lines[:at] + [f"- {key}: {date}"] + lines[at:]
+
+
+def _insert_prompt_date(text: str, date: str) -> str:
+    """Insert `Issued: <date>` into a prompt's light metadata header.
+
+    After the last header field (skipping the bullet list a `Repos:` field
+    owns) when there is a header; else under the title heading; else at the
+    very top. Every existing line survives verbatim, including line endings —
+    the prompt body is the human's, not the tool's."""
+    lines = text.splitlines()
+    head = lines[:30]
+    last = max((i for i, ln in enumerate(head) if _HEADER_FIELD_RE.match(ln.strip())),
+               default=None)
+    if last is not None:
+        # A header field's value may run on: the bullet list a `Repos:` field
+        # owns, an indented wrap, or a bare continuation line ("Status: issued
+        # … / (do not start dev)"). The header block ends at the first blank
+        # line, so append there rather than splitting somebody's value in two.
+        at = last + 1
+        while at < len(lines) and lines[at].strip():
+            at += 1
+        new = lines[:at] + [f"{PROMPT_DATE_KEY}: {date}"] + lines[at:]
+    else:
+        first = next((i for i, ln in enumerate(lines) if ln.strip()), 0)
+        if lines and lines[first].lstrip().startswith("#"):
+            new = (lines[:first + 1] + ["", f"{PROMPT_DATE_KEY}: {date}"]
+                   + lines[first + 1:])
+        else:
+            new = [f"{PROMPT_DATE_KEY}: {date}", ""] + lines
+    nl = "\r\n" if "\r\n" in text else "\n"
+    return nl.join(new) + (nl if text.endswith("\n") else "")
+
+
+def undated_entries(root: Path) -> "list[dict]":
+    """Registry entries carrying no DATE_KEYS date."""
+    out = []
+    for reg in REGISTRY_FILES:
+        for slug, fields in registry_entries(root / reg):
+            date, _ = entry_date(fields)
+            if date is None:
+                out.append({"registry": reg, "slug": slug, "fields": fields})
+    return out
+
+
+def undated_prompts(root: Path) -> "list[Path]":
+    """Issued (`active/`) prompts carrying no `Issued:` header."""
+    d = root / "active"
+    return [f for f in sorted(d.glob("*.md")) if d.is_dir()
+            and prompt_issued_date(f.read_text(errors="replace")) is None]
+
+
+# A backfilled date is INFERRED, and says so in the file. A writer that knows
+# the date (create_issue, at the moment it opens the issue) writes a bare
+# `Issued: 2026-08-19`; anything reconstructed afterwards carries its source,
+# so a reader can tell "this is when it happened" from "this is our best
+# reconstruction of when it happened" without going back to git.
+BACKFILL_NOTE = "(backfilled from {source})"
+
+
+def _registry_claim(root: Path) -> "dict[str, tuple[str, str, str]]":
+    """{prompt path -> (date, key, registry)} for every dated registry entry.
+
+    The Mind's own record of when a task changed state — the best evidence
+    left for a prompt whose issue date pre-dates what this clone can see."""
+    out = {}
+    for reg in REGISTRY_FILES:
+        for _slug, fields in registry_entries(root / reg):
+            raw = (fields.get("prompt") or "").split()
+            date, key = entry_date(fields)
+            if raw and date:
+                out.setdefault(raw[0], (date, key, reg))
+    return out
+
+
+def backfill_dates(root: Path, apply: bool = False) -> "list[dict]":
+    """Date every undated registry entry and issued prompt, retroactively.
+
+    Read-only unless `apply`. Each result records where the date came from, so
+    a backfill is auditable rather than anonymous, and every inferred date is
+    annotated in the file it lands in:
+
+      `git`         the commit that introduced the entry / the active/ prompt
+      `<registry>`  the dated registry entry that claims this prompt
+      `prose`       a date the entry or prompt already stated in its own text
+      `unknown`     nothing to go on — reported, never guessed
+
+    A shallow clone cannot see far enough back for the `git` source (see
+    `_shallow_boundary`); the chain then falls through to the Mind's own
+    records, which is why they are consulted at all.
+    """
+    results = []
+    boundary = _shallow_boundary(root)
+
+    for reg in REGISTRY_FILES:
+        path = root / reg
+        if not path.exists():
+            continue
+        key = REGISTRY_DATE_KEY[reg]
+        pending = []
+        for slug, fields in registry_entries(path):
+            if entry_date(fields)[0] is not None:
+                continue
+            date, source = git_entry_date(root, reg, slug, boundary), "git"
+            if date is None:
+                date, source = _prose_date(fields), "prose"
+            if date is None:
+                source = "unknown"
+            results.append({"what": f"{reg}: {slug}", "key": key,
+                            "date": date, "source": source})
+            if date:
+                pending.append((slug, date, source))
+        if not (apply and pending):
+            continue
+        lines = path.read_text(errors="replace").splitlines()
+        # Bottom-up: inserting into a later entry cannot shift an earlier
+        # entry's heading index out from under the next insert.
+        by_slug = {s: (d, src) for s, d, src in pending}
+        heads = [(i, _slugify_h2(m.group(1)))
+                 for i, ln in enumerate(lines) if (m := H2_RE.match(ln))]
+        for i, slug in reversed(heads):
+            if slug in by_slug:
+                date, source = by_slug[slug]
+                value = f"{date} {BACKFILL_NOTE.format(source=source)}"
+                lines = _insert_registry_date(lines, i, key, value)
+        path.write_text("\n".join(lines) + "\n")
+
+    claims = _registry_claim(root)
+    for f in undated_prompts(root):
+        rel = f.relative_to(root).as_posix()
+        text = f.read_text(errors="replace")
+        date, source = git_prompt_issued_date(root, rel, boundary), "git"
+        if date is None and rel in claims:
+            claimed, claim_key, claim_reg = claims[rel]
+            date, source = claimed, f"{claim_reg} `{claim_key}:`"
+        if date is None:
+            m = ISO_DATE_RE.search(text)
+            date, source = (m.group(1), "prose") if m else (None, "unknown")
+        results.append({"what": rel, "key": PROMPT_DATE_KEY, "date": date,
+                        "source": source})
+        if date and apply:
+            value = f"{date} {BACKFILL_NOTE.format(source=source)}"
+            f.write_text(_insert_prompt_date(text, value))
+
+    return results
 
 
 # --------------------------------------------------------------------------- #
@@ -1050,6 +1367,35 @@ def cmd_index(args) -> int:
 # --------------------------------------------------------------------------- #
 # check
 # --------------------------------------------------------------------------- #
+def cmd_dates(args) -> int:
+    """Report — and with --write, backfill — the dates on active/issued tasks."""
+    root = ROOT
+    if args.write:
+        results = backfill_dates(root, apply=True)
+        wrote = [r for r in results if r["date"]]
+        for r in wrote:
+            print(f"  + {r['what']}: {r['key']}: {r['date']}  ({r['source']})")
+        unknown = [r for r in results if not r["date"]]
+        for r in unknown:
+            print(f"  ? {r['what']}: no date in git history or prose — date it by hand")
+        print(f"dates: wrote {len(wrote)}, undatable {len(unknown)}")
+        return 0
+
+    missing = undated_entries(root)
+    prompts = undated_prompts(root)
+    for e in missing:
+        key = REGISTRY_DATE_KEY[e["registry"]]
+        print(f"  - {e['registry']}: {e['slug']}: no `{key}:` date")
+    for f in prompts:
+        print(f"  - {f.relative_to(root)}: no `Issued:` header")
+    if not (missing or prompts):
+        print("dates: OK — every registry entry and issued prompt is dated")
+        return 0
+    print(f"dates: {len(missing) + len(prompts)} undated "
+          f"(run `lifecycle.py dates --write` to backfill from git history)")
+    return 1 if args.check else 0
+
+
 def cmd_check(args) -> int:
     problems: "list[str]" = []
     a_slugs = {safe_name(s) for s in ledger_slugs(ACTIVE_MD)}
@@ -1118,6 +1464,17 @@ def main() -> int:
 
     c = sub.add_parser("check", help="drift guard (non-zero exit on drift)")
     c.set_defaults(func=cmd_check)
+
+    d = sub.add_parser(
+        "dates",
+        help="report (or --write to backfill from git) the date on every "
+             "registry entry and issued prompt",
+    )
+    d.add_argument("--write", action="store_true",
+                   help="insert the missing date fields in place")
+    d.add_argument("--check", action="store_true",
+                   help="non-zero exit when anything is undated (CI)")
+    d.set_defaults(func=cmd_dates)
 
     iss = sub.add_parser(
         "issues",

@@ -2,6 +2,7 @@
 
 ## transformed-message-factor-gradient-unpack
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1501 (issued 2026-08-19)
+- issued: 2026-08-19
 - prompt: active/16_transformed_message_factor_gradient_unpack.md
 - status: HOLD — do not start dev. Fix-or-delete hangs off the PyAutoFit#1498 logpdf-contract
   decision (parked #1500 design bundle); dead code (zero production callers), crashes on first

@@ -114,9 +114,23 @@ ISSUE_EOF
 
 ### 4. Register the task in active.md (Mind)
 
-Add the task entry to `PyAutoMind/active.md` with the issue URL (schema in
-README). **If the caller is handling registration itself** — e.g. `$start-dev`
-routing a conflicted task to `planned.md` — skip this step and let it register.
+Add the task entry to `PyAutoMind/active.md` with the issue URL and today's
+date (schema in [REFERENCE.md](../../REFERENCE.md) → "`active.md` schema"):
+
+```markdown
+## <task-name>
+- issue: <issue-url>
+- issued: <YYYY-MM-DD>
+```
+
+`issued:` is the date the issue was created — this step is the only moment
+anyone knows it for certain, so write it now rather than leaving it to be
+reconstructed later (`lifecycle.py dates --write` can only infer). It is what
+the dashboard's "Recent" table reads.
+
+**If the caller is handling registration itself** — e.g. `$start-dev` routing a
+conflicted task to `planned.md` — skip this step and let it register (that
+registry's date key is `filed:`).
 
 ### 5. Move the prompt to active/
 
@@ -133,6 +147,19 @@ The `mkdir -p` matters on a **freshly-spawned** Mind, where `active/` does not
 yet exist (it holds only instance state, so the template ships without it) —
 `git mv` errors if the destination dir is missing. Timestamp-suffix the
 filename if one already exists in `active/`.
+
+Then add the prompt's own copy of the date to its light header, so an issued
+prompt stays dated even if its registry row later goes missing:
+
+```markdown
+Issued: <YYYY-MM-DD>
+```
+
+Confirm both landed before pushing:
+
+```bash
+python3 PyAutoMind/scripts/lifecycle.py dates    # OK when nothing is undated
+```
 
 ### 6. Push Mind
 

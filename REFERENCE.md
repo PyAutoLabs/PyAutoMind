@@ -300,6 +300,7 @@ Free-form markdown. Strong conventions:
   Autonomy: supervised      # safe | supervised | human-required
   Priority: normal          # low | normal | high
   Status: draft
+  Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
   ```
 
@@ -354,6 +355,7 @@ Each task is an H2 section:
 ```markdown
 ## <task-name-kebab-case>
 - issue: https://github.com/<owner>/<repo>/issues/<n>
+- issued: YYYY-MM-DD                              # the day the task was issued
 - session: claude --resume <session-id>           # optional
 - status: <library-dev | workspace-dev | ready-to-ship | awaiting-input | …>
 - location: <cli-in-progress | ready-for-mobile | …>   # optional, used by /handoff
@@ -374,6 +376,54 @@ Each task is an H2 section:
 - summary: |
     Free-form summary of progress and next steps.
 ```
+
+### Task dates
+
+The Mind used to date only what it **finished** — every completion record
+carries `completed:` — so it could answer "what shipped in July?" but not "what
+did we start?". Every task now carries a machine-readable date from the moment
+it leaves the backlog:
+
+| Where | Field | The event it dates |
+|-------|-------|--------------------|
+| `active.md` | `- issued: YYYY-MM-DD` | the day the task got its GitHub issue |
+| `planned.md` | `- filed: YYYY-MM-DD` | the day it was scoped |
+| `parked.md` | `- parked: YYYY-MM-DD` | the day it stopped |
+| `active/<name>.md` | `Issued: YYYY-MM-DD` | the prompt's own copy, in its light header |
+| `complete/<YYYY>/<MM>/<slug>.md` | `- completed: YYYY-MM-DD` | unchanged — the ledger already did this |
+
+The **key names the event**, so a merged feed can say what each date means
+rather than showing a bare timestamp. Reading is tolerant: `registered:`,
+`started:`, `planned:`, `found:` and `shipped:` are all read as dates too (the
+registries are hand-edited by many sessions, and an entry that says when it
+happened should count however it said it) — the table is what a *writer*
+should use. The most specific event wins when an entry carries several, so a
+task that was filed and later issued dates from its issue.
+
+A date inside another field's prose (`- issue: …/1501 (issued 2026-08-19)`) is
+deliberately **not** read — that is the un-parseable habit this convention
+replaces. The prompt's `Issued:` header is its own copy of the registry date,
+so an issued prompt stays dated even if its registry row goes missing.
+
+`scripts/lifecycle.py dates` reports every entry and issued prompt carrying no
+date; `dates --write` backfills them retroactively from the evidence the repo
+already holds, annotating each inferred date with where it came from:
+
+```
+Issued: 2026-08-18 (backfilled from parked.md `parked:`)
+```
+
+The sources, in order: the commit that introduced the entry or moved the prompt
+into `active/`; the dated registry entry that claims the prompt; a date the
+entry already stated in its own prose. Nothing is guessed — an entry with no
+evidence is reported for a human to date by hand. A **shallow** clone (CI, a
+cloud session) cannot see past its boundary commit, so git dates at or before
+it are discarded rather than stamping every task with the day the clone was
+made.
+
+The dashboard's [Recent](dashboard.md#recent) table is the payoff: the 20
+newest events across the whole Mind — issued, parked, filed and completed — in
+one place.
 
 ### Completion record (`complete/<YYYY>/<MM>/<slug>.md`) schema
 

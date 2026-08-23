@@ -4,7 +4,7 @@
 
 This is the markdown version of the [PyAutoMind Dashboard](https://pyautolabs.github.io/PyAutoMind/), which puts a task's command on your clipboard with a single tap of 📋.
 
-Every task the Mind is holding, on one page: what is in flight, what is parked, and the whole backlog to pick from. Pick a task and run its `/start_dev` command in a Claude Code chat to start it.
+Every task the Mind is holding, on one page: what is in flight, what is parked, and the whole backlog to pick from. Pick a task and run its `/start_dev` command in a Claude Code chat to start it. [Recent](#recent) is the same work by date — what has been happening rather than what to do next.
 
 | Where | Count |
 |-------|------:|
@@ -135,7 +135,7 @@ Every task the Mind is holding, on one page: what is in flight, what is parked, 
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first call</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1501">issue #1501</a> — HOLD — do not start dev. Fix-or-delete hangs off the PyAutoFit#1498 logpdf-contract</summary>
+<details><summary>📋 <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first call</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1501">issue #1501</a> — issued 2026-08-19 — HOLD — do not start dev. Fix-or-delete hangs off the PyAutoFit#1498 logpdf-contract</summary>
 
 ```
 /start_dev active/16_transformed_message_factor_gradient_unpack.md
@@ -150,7 +150,7 @@ Started or scoped, not currently in flight — resume by moving the row back to 
 <details>
 <summary><b>3</b> task(s)</summary>
 
-<details><summary>📋 <b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a></summary>
+<details><summary>📋 <b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a> — parked 2026-08-18</summary>
 
 ```
 /start_dev active/12_single_source_density_refactor.md
@@ -158,7 +158,7 @@ Started or scoped, not currently in flight — resume by moving the row back to 
 
 </details>
 
-<details><summary>📋 <b>prior-message-collapse-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a></summary>
+<details><summary>📋 <b>prior-message-collapse-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a> — parked 2026-08-18</summary>
 
 ```
 /start_dev active/13_collapse_prior_and_message.md
@@ -166,7 +166,7 @@ Started or scoped, not currently in flight — resume by moving the row back to 
 
 </details>
 
-<details><summary>📋 <b>pyautoreduce-slacs1430-acs-comparison</b></summary>
+<details><summary>📋 <b>pyautoreduce-slacs1430-acs-comparison</b> — parked 2026-08-08</summary>
 
 ```
 /start_dev active/pyautoreduce_slacs1430_acs_comparison.md
@@ -183,7 +183,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>6</b> task(s)</summary>
 
-<details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
+<details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
 ```
 /route start the planned PyAutoMind task isothermal-ell-sph-oversampling-at-the-cusp — its record is in planned.md
@@ -191,7 +191,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <b>remote-mcp-deployment-tiers</b> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/20">issue #20</a> — DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP…</summary>
+<details><summary>📋 <b>remote-mcp-deployment-tiers</b> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/20">issue #20</a> — filed 2026-07-21 — DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP…</summary>
 
 ```
 /start_dev draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md
@@ -199,7 +199,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <b>samples-parameter-paths</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1327">issue #1327</a> — parked</summary>
+<details><summary>📋 <b>samples-parameter-paths</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1327">issue #1327</a> — filed 2026-07-08 — parked</summary>
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
@@ -207,7 +207,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <b>jax-point-source-point-smoke-sentinel</b> — planned</summary>
+<details><summary>📋 <b>jax-point-source-point-smoke-sentinel</b> — filed 2026-05-21 — planned</summary>
 
 ```
 /start_dev draft/bug/autolens/jax_point_source_point_smoke_sentinel.md
@@ -215,7 +215,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <b>piemass-potential</b> — planned</summary>
+<details><summary>📋 <b>piemass-potential</b> — filed 2026-06-05 — planned</summary>
 
 ```
 /start_dev draft/feature/autogalaxy/piemass_potential.md
@@ -223,7 +223,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <b>latent-nan-guard-honest-run</b></summary>
+<details><summary>📋 <b>latent-nan-guard-honest-run</b> — planned 2026-07-22</summary>
 
 ```
 /route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md
@@ -1297,6 +1297,35 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 </details>
+
+## Recent
+
+The Mind's most recent 20 task events, newest first — what was issued, parked, filed and shipped, in one place. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Work still in hand is listed first-class here; completed records fill whatever room is left.
+
+| Date | Event | Task |
+|------|-------|------|
+| 2026-08-23 | completed | <a href="complete/2026/08/pyautonerves-release-for-regime-stamp.md">pyautonerves-release-for-regime-stamp</a> |
+| 2026-08-23 | completed | <a href="complete/2026/08/bump-autonerves-floor.md">bump-autonerves-floor</a> |
+| 2026-08-22 | completed | <a href="complete/2026/08/small-datasets-regime-stamp.md">small-datasets-regime-stamp</a> |
+| 2026-08-22 | completed | <a href="complete/2026/08/should-simulate-capped-branch-reuse.md">should-simulate-capped-branch-reuse</a> |
+| 2026-08-22 | completed | <a href="complete/2026/08/plot-utils-duplicate-modules.md">plot-utils-duplicate-modules</a> |
+| 2026-08-22 | completed | <a href="complete/2026/08/optional-dependency-skip-guards.md">optional-dependency-skip-guards</a> |
+| 2026-08-22 | completed | <a href="complete/2026/08/jax-grad-local-vs-ci-assertions.md">jax-grad-local-vs-ci-assertions</a> |
+| 2026-08-22 | completed | <a href="complete/2026/08/fits-header-comment-literal-list.md">fits-header-comment-literal-list</a> |
+| 2026-08-21 | completed | <a href="complete/2026/08/queue-intake-claude.md">queue-intake-claude</a> |
+| 2026-08-21 | completed | <a href="complete/2026/08/pixelization-eager-jit-divergence.md">pixelization-eager-jit-divergence</a> |
+| 2026-08-19 | issued | <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first…</a> |
+| 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
+| 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
+| 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
+| 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
+| 2026-07-22 | planned | <a href="planned.md#latent-nan-guard-honest-run">latent-nan-guard-honest-run</a> |
+| 2026-07-21 | filed | <a href="planned.md#remote-mcp-deployment-tiers">remote-mcp-deployment-tiers</a> |
+| 2026-07-08 | filed | <a href="planned.md#samples-parameter-paths">samples-parameter-paths</a> |
+| 2026-06-05 | filed | <a href="planned.md#piemass-potential">piemass-potential</a> |
+| 2026-05-21 | filed | <a href="planned.md#jax-point-source-point-smoke-sentinel">jax-point-source-point-smoke-sentinel</a> |
+
+_Dates come from each task's registry entry and each record's `completed:` — `lifecycle.py dates` reports anything undated._
 
 ## Epics
 

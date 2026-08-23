@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-08-18 (backfilled from parked.md `parked:`)
 
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding C1).

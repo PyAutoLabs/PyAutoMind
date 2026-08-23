@@ -68,7 +68,10 @@ For the full workflow narrative, conventions, and registry schemas, read
   coupled to the registry. Claude and Codex discovery is installed by
   PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.
 - **Scripts** — `scripts/status.sh` (inventory), `scripts/prompt_sync.sh`
-  (commit/push helpers).
+  (commit/push helpers), `scripts/lifecycle.py` (state moves + drift checks;
+  `lifecycle.py dates [--write]` reports/backfills the date every registry
+  entry and issued prompt carries — see [REFERENCE.md](REFERENCE.md) "Task
+  dates").
 
 ## Hard rules
 
