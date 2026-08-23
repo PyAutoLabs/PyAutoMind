@@ -11,7 +11,7 @@ Every task the Mind is holding, on one page: what is in flight, what is parked, 
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 153 |
+| [Backlog](#backlog) (`draft/`) | 154 |
 
 ## Start here
 
@@ -235,7 +235,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**153** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **23** of them belong to an epic and are listed only under [Epics](#epics) below.
+**154** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 29</summary>
@@ -1413,11 +1413,24 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
+<details>
+<summary><b>JAX profiling — inference programme</b> — 1 queued prompt(s), in order</summary>
+
 <details><summary>📋 <b>JAX profiling — inference programme</b> — ledger: `autolens_profiling/results/notes/inference/PROGRAMME.md`</summary>
 
 ```
 Continue the 'JAX profiling — inference programme' epic. Its canonical state lives in autolens_profiling/results/notes/inference/PROGRAMME.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: DECISIONS.md (append-only gate log) and phase_<NN>_*/RESULTS.md sit beside the ledger; slices ship as autolens_profiling issues/PRs, not Mind prompts.
 ```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/multistart_per_lane_best.md">Claude Development Prompt: MultiStartGradient Per-Lane Best Preservation</a> — autofit · small · supervised · high</summary>
+
+```
+/start_dev draft/feature/autofit/multistart_per_lane_best.md
+```
+
+</details>
 
 </details>
 
