@@ -422,8 +422,8 @@ it are discarded rather than stamping every task with the day the clone was
 made.
 
 The dashboard's [Recent](dashboard.md#recent) table is the payoff: the 20
-newest events across the whole Mind — issued, parked, filed and completed — in
-one place.
+newest events on the work in hand — issued, parked, filed — in one place.
+Shipped work stays out of it; `complete/index.md` is where the ledger is read.
 
 ### Completion record (`complete/<YYYY>/<MM>/<slug>.md`) schema
 

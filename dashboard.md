@@ -1300,20 +1300,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Recent
 
-The Mind's most recent 20 task events, newest first — what was issued, parked, filed and shipped, in one place. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Work still in hand is listed first-class here; completed records fill whatever room is left.
+The 10 newest things to happen to the work in hand, newest first — issued, parked, filed. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Shipped work is not here: it is read from `complete/index.md`, and a thousand records deep it would crowd out everything anyone can still act on.
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-23 | completed | <a href="complete/2026/08/pyautonerves-release-for-regime-stamp.md">pyautonerves-release-for-regime-stamp</a> |
-| 2026-08-23 | completed | <a href="complete/2026/08/bump-autonerves-floor.md">bump-autonerves-floor</a> |
-| 2026-08-22 | completed | <a href="complete/2026/08/small-datasets-regime-stamp.md">small-datasets-regime-stamp</a> |
-| 2026-08-22 | completed | <a href="complete/2026/08/should-simulate-capped-branch-reuse.md">should-simulate-capped-branch-reuse</a> |
-| 2026-08-22 | completed | <a href="complete/2026/08/plot-utils-duplicate-modules.md">plot-utils-duplicate-modules</a> |
-| 2026-08-22 | completed | <a href="complete/2026/08/optional-dependency-skip-guards.md">optional-dependency-skip-guards</a> |
-| 2026-08-22 | completed | <a href="complete/2026/08/jax-grad-local-vs-ci-assertions.md">jax-grad-local-vs-ci-assertions</a> |
-| 2026-08-22 | completed | <a href="complete/2026/08/fits-header-comment-literal-list.md">fits-header-comment-literal-list</a> |
-| 2026-08-21 | completed | <a href="complete/2026/08/queue-intake-claude.md">queue-intake-claude</a> |
-| 2026-08-21 | completed | <a href="complete/2026/08/pixelization-eager-jit-divergence.md">pixelization-eager-jit-divergence</a> |
 | 2026-08-19 | issued | <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
@@ -1325,7 +1315,7 @@ The Mind's most recent 20 task events, newest first — what was issued, parked,
 | 2026-06-05 | filed | <a href="planned.md#piemass-potential">piemass-potential</a> |
 | 2026-05-21 | filed | <a href="planned.md#jax-point-source-point-smoke-sentinel">jax-point-source-point-smoke-sentinel</a> |
 
-_Dates come from each task's registry entry and each record's `completed:` — `lifecycle.py dates` reports anything undated._
+_Dates come from each task's registry entry — `lifecycle.py dates` reports anything undated._
 
 ## Epics
 
