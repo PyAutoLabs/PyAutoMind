@@ -8,10 +8,10 @@ Every task the Mind is holding, on one page: what is in flight, what is parked, 
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 154 |
+| [Backlog](#backlog) (`draft/`) | 153 |
 
 ## Start here
 
@@ -143,6 +143,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/multistart_per_lane_best.md">Claude Development Prompt: MultiStartGradient Per-Lane Best Preservation</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1514">issue #1514</a> — issued 2026-08-23 — library-dev</summary>
+
+```
+/start_dev active/multistart_per_lane_best.md
+```
+
+</details>
+
 ## Parked
 
 Started or scoped, not currently in flight — resume by moving the row back to `active.md`. Full detail in [`parked.md`](parked.md).
@@ -235,7 +243,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**154** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
+**153** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **23** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 29</summary>
@@ -1328,6 +1336,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-23 | issued | <a href="active/multistart_per_lane_best.md">Claude Development Prompt: MultiStartGradient Per-Lane Best…</a> |
 | 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: round out the morning surface</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right</a> |
 | 2026-08-22 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_xla_stall.md">multi_dataset/jax_likelihood scripts hang to the timeout cap (XLA…</a> |
@@ -1337,12 +1346,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/libraries/defer_scipy_sparse_import.md">Defer the eager scipy.sparse import in derivative_util (~0.10 s of</a> |
-| 2026-08-22 | filed | <a href="draft/bug/workspaces/bug_fix_the_tracer_fits_existence_guard.md">Bug: fix the tracer.fits existence guard in autolens_workspace…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-22 | filed | <a href="draft/bug/workspaces/bug_fix_the_tracer_fits_existence_guard.md">Bug: fix the tracer.fits existence guard in autolens_workspace…</a> |
 | 2026-08-21 | filed | <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> |
 | 2026-08-21 | filed | <a href="draft/bug/autoarray/numba_kernel_shift_axes_swapped.md">Numba PSF gathers derive the y/x kernel shifts from the</a> |
 | 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md">Numba CPU likelihood phase 2: kernel-CDF numba fast path (the</a> |
@@ -1352,12 +1361,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-19 | filed | <a href="draft/bug/autolens/jax_likelihood_smoke_pins_stale.md">autolens_workspace_test jax_likelihood pins: 4 scripts fail smoke on…</a> |
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 | 2026-08-19 | filed | <a href="draft/bug/pyautoreduce/published_autoreduce_09_missing_312_floor.md"><code>autoreduce 0.9</code> on PyPI never got the Python 3.12 floor</a> |
-| 2026-08-19 | issued | <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-19 | issued | <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first…</a> |
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/maintenance/pyautobrain/refactor_witness_map_missing_autonerves.md">Refactor Agent witness map lacks PyAutoNerves test suite</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
@@ -1367,12 +1376,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
-| 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
 | 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 | 2026-08-17 | filed | <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> |
 | 2026-08-16 | filed | <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> |
@@ -1382,12 +1391,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
 | 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
 | 2026-08-07 | filed | <a href="draft/bug/autofit/plot_functions_discard_kwargs.md"><code>autofit.plot</code> functions accept <code>**kwargs</code> and silently discard them</a> |
-| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 | 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 | 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are</a> |
 | 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
@@ -1397,7 +1406,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> |
 | 2026-08-04 | filed | <a href="draft/bug/workspaces/aplt_output_drift_remaining_repos.md"><code>aplt.Output</code> stale-API drift in the remaining workspace repos</a> |
 | 2026-08-04 | filed | <a href="draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage</a> |
-| 2026-08-04 | filed | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> |
 
 </details>
 
@@ -1413,24 +1421,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
-<details>
-<summary><b>JAX profiling — inference programme</b> — 1 queued prompt(s), in order</summary>
-
 <details><summary>📋 <b>JAX profiling — inference programme</b> — ledger: `autolens_profiling/results/notes/inference/PROGRAMME.md`</summary>
 
 ```
 Continue the 'JAX profiling — inference programme' epic. Its canonical state lives in autolens_profiling/results/notes/inference/PROGRAMME.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: DECISIONS.md (append-only gate log) and phase_<NN>_*/RESULTS.md sit beside the ledger; slices ship as autolens_profiling issues/PRs, not Mind prompts.
 ```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/multistart_per_lane_best.md">Claude Development Prompt: MultiStartGradient Per-Lane Best Preservation</a> — autofit · small · supervised · high</summary>
-
-```
-/start_dev draft/feature/autofit/multistart_per_lane_best.md
-```
-
-</details>
 
 </details>
 

@@ -1,5 +1,14 @@
 # Active Tasks
 
+## multistart-per-lane-best
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1514 (issued 2026-08-23)
+- issued: 2026-08-23
+- prompt: active/multistart_per_lane_best.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/multistart-per-lane-best/
+- epic: jax-inference-profiling (Phase 3 pre-req, CP-3 — PROGRAMME.md §7)
+  - Repos: PyAutoFit (branch feature/multistart-per-lane-best)
+
 ## transformed-message-factor-gradient-unpack
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1501 (issued 2026-08-19)
 - issued: 2026-08-19
