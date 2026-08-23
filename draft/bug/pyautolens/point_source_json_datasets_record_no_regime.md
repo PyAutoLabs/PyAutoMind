@@ -75,6 +75,44 @@ no FITS". That is wrong: ordinary point-source datasets write a top-level
   `autolens_workspace_test#260` traps. This needs a naming-convention decision
   first, and that decision is the real work here.
 
+## Re-check log
+
+**2026-08-23 — both facts re-verified, STILL BLOCKED. Do not build.**
+Checked at the top of a `/start_dev` run; the gate in step 1 below said re-park,
+so nothing was built, no issue was opened and no branch was cut.
+
+1. **PyAutoLens#480 is still open.** Created 2026-04-28, `updated_at` identical
+   to `created_at`, no assignees, `closed_by_pull_requests: 0`. Untouched in
+   ~4 months.
+2. **`weak/simple` is still regime-invariant.** Its simulator calls
+   `simulator.via_tracer_from(tracer=tracer, grid=positions, name=dataset_name)`
+   over an explicit 1500-galaxy annulus with `np.random.default_rng(1)`. It does
+   not call `via_tracer_random_positions_from`, and the file contains no
+   `os.environ` read at all, so nothing reads `PYAUTO_SMALL_DATASETS`.
+
+Two path corrections found while re-checking — the originals below cost a search,
+so they are fixed here rather than left to bite again:
+
+- The `no_run.yaml` exclusion is in **@autolens_workspace**, not
+  autolens_workspace_test (whose `config/build/no_run.yaml` has no
+  `multiple_sources` entry at all). Line numbers omitted deliberately: the
+  original `:41-42` had already drifted. Match on the entries themselves —
+
+  ```
+  - point_source/features/multiple_sources/simulator # Blocked by PyAutoLens #480: solver finds 0 positions for intermediate-plane source
+  - point_source/features/multiple_sources/modeling # Blocked by PyAutoLens #480: same root cause as simulator above
+  ```
+
+  Note this is **two** skipped scripts, simulator *and* modeling, not one.
+- The script path is `scripts/point_source/features/multiple_sources/`, not
+  `dataset/point_source/multiple_sources` (that is the *output* directory).
+  Likewise the weak simulator is `scripts/weak/simulator.py` in
+  @autolens_workspace.
+
+Next re-check: when PyAutoLens#480 closes. That is the only trigger — fact 2 is a
+standing invariant, not a countdown, and only breaks if someone switches
+`weak/simulator.py` to the random-positions helper.
+
 ## Suggested scope
 
 1. Re-check both expiring facts above. If #480 is still open and `weak/simple`
