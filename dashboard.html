@@ -42,6 +42,10 @@ table.recent td.what{white-space:nowrap;color:var(--muted);font-size:.85em;
  padding-top:.58rem}
 table.recent td.pick{width:2.6rem;padding-right:0}
 table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
+button.more{display:block;width:100%;margin:.6rem 0;padding:.5rem;
+ border:1px solid var(--line);border-radius:8px;background:var(--btn);
+ color:var(--muted);cursor:pointer;font:inherit;font-size:.9em}
+button.more:hover{color:var(--fg)}
 </style>
 </head>
 <body>
@@ -242,7 +246,7 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 <div class="task"><button class="copy" data-cmd="/start_dev draft/release/autocti/cti_release_train_wiring.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/release/autocti/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — <span class="facets">autocti · medium · human-required · normal</span></p></div>
 </details>
 <a id="recent"></a><h2>Recent <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md#recent">markdown version</a></h2>
-<p class="muted">The 10 newest things to happen to the work in hand, newest first — issued, parked, filed. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Shipped work is not here: it is read from `complete/index.md`, and a thousand records deep it would crowd out everything anyone can still act on.</p>
+<p class="muted">The 10 newest things to happen to the work in hand, newest first — issued, parked, filed. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Shipped work is not here: it is read from <code>complete/index.md</code>, and a thousand records deep it would crowd out everything anyone can still act on.</p>
 <table class="recent">
 <tr>
 <td class="when">2026-08-19</td>
@@ -349,6 +353,18 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
   setTimeout(()=>{b.textContent="\ud83d\udccb";b.classList.remove("ok");},1200);}
 document.addEventListener("click",e=>{
   const b=e.target.closest("button.copy");if(b)copyCmd(b);});
+// Recent shows one page and reveals the next on each tap of the … button,
+// which retires itself once the feed is exhausted. Every row is already in the
+// DOM, so this never re-renders or re-sorts anything.
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button.more");if(!b)return;
+  const t=document.querySelector("table.recent");if(!t)return;
+  const hidden=[...t.querySelectorAll("tr[hidden]")];
+  const page=Number(b.dataset.page)||10;
+  hidden.slice(0,page).forEach(r=>r.removeAttribute("hidden"));
+  const left=hidden.length-Math.min(page,hidden.length);
+  if(left<=0){b.remove();return;}
+  b.textContent="… "+Math.min(page,left)+" more ("+left+" left)";});
 </script>
 </body>
 </html>
