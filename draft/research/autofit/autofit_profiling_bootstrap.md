@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Campaign: research/graphical_ep/ep_campaign.md (Phase 6)
+Filed: 2026-08-19 (backfilled from git)
 
 ## Why
 

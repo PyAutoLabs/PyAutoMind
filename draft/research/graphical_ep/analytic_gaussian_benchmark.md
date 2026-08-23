@@ -12,6 +12,7 @@ Status: formalised
 Epic: graphical-ep
 Phase: 1
 Campaign: research/graphical_ep/ep_campaign.md (Phase 1 — the keystone; start here)
+Filed: 2026-08-19 (backfilled from git)
 
 ## Why
 

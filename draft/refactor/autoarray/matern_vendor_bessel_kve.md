@@ -8,6 +8,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Filed: 2026-07-13 (backfilled from git)
 
 Durable follow-up to the Matern-kernel tfp/jax incompatibility (PyAutoArray #385).
 That bug was unblocked by pinning `tfp-nightly==0.26.0.dev20260713` in place of the

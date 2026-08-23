@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Filed: 2026-07-17 (backfilled from git)
 
 **This is a review/probe request, not an implementation task — the answer could
 be "intentional, document it" or "bug, fix it", and the two have very different

@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-03 (backfilled from git)
 
 Found while validating PyAutoArray#430 / PR#431 (the small-datasets loader fix), 2026-08-03.
 

@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-12 (backfilled from git)
 
 Single-source the "Never rewrite history" policy. The **`## Never rewrite
 history`** section is necessary safety text — it guards a documented, expensive,

@@ -15,6 +15,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 3
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # Critical curves: implement context-aware dispatch, dedupe engines, make clusters honor it
 

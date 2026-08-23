@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: low
 Status: blocked
+Filed: 2026-07-08 (backfilled from git)
 
 ## Why
 

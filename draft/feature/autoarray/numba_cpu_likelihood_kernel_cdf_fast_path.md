@@ -17,6 +17,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Filed: 2026-08-20 (backfilled from git)
 
 ## Original request (verbatim, 2026-08-20)
 

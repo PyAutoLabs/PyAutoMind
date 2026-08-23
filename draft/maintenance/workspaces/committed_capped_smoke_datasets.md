@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-22 (backfilled from git)
 
 Capped smoke datasets were committed as if they were real data.
 

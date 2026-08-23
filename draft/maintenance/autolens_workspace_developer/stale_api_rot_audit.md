@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-04 (backfilled from git)
 
 Found 2026-08-04 while fixing the `aplt.Output` drift in this repo under
 `plot-array-stale-kwargs` (HowToGalaxy#56). That task cleared `aplt.Output`

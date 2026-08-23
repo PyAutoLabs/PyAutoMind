@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-23 (backfilled from git)
 
 ## Context (2026-07-23, from the rectangular-mesh-consolidation reference re-derivation)
 

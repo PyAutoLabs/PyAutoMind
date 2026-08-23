@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-08 (backfilled from git)
 
 Seven curated `markdown/` pages still show MGE snippets **without**
 `sigma_min`, because `markdown/` was deliberately not regenerated when the

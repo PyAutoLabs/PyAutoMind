@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: RETIRED — historical record (2026-08-18); all 9 A-findings shipped, C-findings tracked in bug/priors/09,11-14
+Filed: 2026-05-16 (backfilled from git)
 
 > **2026-08-18 wrap-up.** This census's actionable content has fully
 > graduated; nothing here is left to action from this file. Outcome map:

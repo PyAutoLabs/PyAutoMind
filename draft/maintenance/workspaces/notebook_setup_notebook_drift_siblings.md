@@ -3,6 +3,7 @@
 Difficulty: small
 Autonomy: supervised
 Priority: low
+Filed: 2026-08-07 (backfilled from git)
 
 ## The problem
 

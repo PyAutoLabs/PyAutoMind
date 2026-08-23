@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-05-08 (backfilled from git)
 
 autolens_workspace:
 

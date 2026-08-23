@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: human-required
 Priority: low
 Status: draft
+Filed: 2026-08-22 (backfilled from git)
 
 ## Why this exists
 

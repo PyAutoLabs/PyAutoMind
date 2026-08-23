@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Parent: complete/2026/07/multi-galaxy-imaging-parity.md
+Filed: 2026-07-30 (backfilled from git)
 
 `multi_galaxy/` now holds the system's external shear in its own
 `shear_galaxy` at the system centre (0.0", 0.0") instead of attaching it to

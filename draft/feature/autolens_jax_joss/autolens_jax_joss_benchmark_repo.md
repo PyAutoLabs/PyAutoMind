@@ -9,6 +9,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-16 (backfilled from git)
 
 Create a repo autolens_jax_joss which provides examples to run each JAX benchmark from the PyAutoLens-JAX paper draft and reports the run time and info. These benchmarks currently do not exist.
 

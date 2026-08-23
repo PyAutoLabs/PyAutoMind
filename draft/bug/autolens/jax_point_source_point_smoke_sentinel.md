@@ -11,6 +11,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft — NEEDS RE-VERIFICATION before any work (see 2026-08-09 note)
+Filed: 2026-07-27 (backfilled from git)
 
 > Restored 2026-07-27. This prompt file was dropped from the flat `issued/` pile
 > during the prompt-lifecycle migration (PR #71/#72) as "legacy", but the task was

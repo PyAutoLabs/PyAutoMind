@@ -8,6 +8,7 @@ Status: planned
 Difficulty: large
 Autonomy: supervised
 Priority: normal
+Filed: 2026-07-02 (backfilled from git)
 
 ## Why
 

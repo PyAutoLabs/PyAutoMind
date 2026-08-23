@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-17 (backfilled from git)
 
 Follow-up to the jax-joss-benchmarks epic (autolens_workspace#281). First official
 A100 rows for the cluster-scale benchmarks landed far above the paper's

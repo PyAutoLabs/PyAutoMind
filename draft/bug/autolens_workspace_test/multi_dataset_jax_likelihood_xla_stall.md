@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Filed: 2026-08-22 (backfilled from git)
 
 ## Why this is filed now
 

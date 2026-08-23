@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: issued
 Issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/71
+Filed: 2026-08-19 (backfilled from git)
 
 `autoreduce 0.9`, published **2026-08-12**, declares on PyPI:
 

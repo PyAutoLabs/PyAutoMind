@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised — STILL REPRODUCES; see the 2026-08-09 note before grading this against main
+Filed: 2026-07-17 (backfilled from git)
 
 ## 2026-08-09 — do NOT mistake the adjacent FitException catch for this fix
 

@@ -7,6 +7,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Epic: graphical-ep
+Filed: 2026-05-20 (backfilled from git)
 
 Companion baseline package: `autofit_workspace_developer/ep/`. This
 document is grounded in the profile data emitted by that package's

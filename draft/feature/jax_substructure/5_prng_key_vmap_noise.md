@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-06-09 (backfilled from git)
 
 Context: PyAutoLens issue #542 follow-up (Gap 1, deferred during the original
 4-prompt substructure-simulator series). Prompt 3 (`3_simulator_jax_e2e.md`)

@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Blocked-by: PyAutoArray#363, PyAutoGalaxy#486, autolens_workspace#236   # the k x s machinery — all MERGED
+Filed: 2026-07-08 (backfilled from git)
 
 Option (a) of the phase-4 fork (PyAutoLabs/PyAutoArray#362, decided
 2026-07-08): flip the executed start-here simulator to

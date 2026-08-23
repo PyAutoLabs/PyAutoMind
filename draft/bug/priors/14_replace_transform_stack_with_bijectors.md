@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-05-18 (backfilled from git)
 
 Found during the priors/messages audit (see
 `PyAutoPrompt/autofit/priors_and_messages_math_audit.md`, finding C5).

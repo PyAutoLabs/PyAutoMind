@@ -9,6 +9,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-07 (backfilled from git)
 
 Filed 2026-08-07, found while fixing `docs/api/plot.rst`
 (complete/2026/08/pyautofit_plot_rst_dead_plotters.md). Deliberately left out of

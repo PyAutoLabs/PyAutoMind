@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Filed: 2026-08-04 (backfilled from git)
 
 Surfaced 2026-08-04 while listing PyAutoBrain workflow runs during the
 PR-test-CI ship (#195). Not a PyAutoBrain CI problem — filed here because the

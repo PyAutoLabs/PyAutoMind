@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: superseded
+Filed: 2026-07-29 (backfilled from git)
 
 ## Original request
 

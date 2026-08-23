@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: in-flight
+Filed: 2026-08-22 (backfilled from git)
 
 ## Where this came from
 

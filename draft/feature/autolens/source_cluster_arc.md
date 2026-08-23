@@ -15,6 +15,7 @@ Autonomy: supervised
 Priority: high
 Status: draft
 Epic: cluster-strong-lensing
+Filed: 2026-08-19 (backfilled from git)
 
 Parent tracker for a 12-phase arc (2026-08-19 intake; deep-research grounded). This
 file is never routed to start_dev directly — each phase below is its own prompt,

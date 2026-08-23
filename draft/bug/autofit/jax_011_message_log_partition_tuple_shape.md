@@ -9,6 +9,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Status: draft
+Filed: 2026-08-19 (backfilled from git)
 
 Found during the JAX-default-dependency arc (PyAutoLens#702): widening the jax
 cap in autonerves from `<0.11.0` to `<0.12.0` let CI resolve jax/jaxlib 0.11.1,

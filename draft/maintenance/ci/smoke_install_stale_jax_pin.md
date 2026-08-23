@@ -8,6 +8,7 @@ Difficulty: low
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Filed: 2026-08-22 (backfilled from git)
 
 Found 2026-08-22 while building a CI-equivalent environment to reproduce
 autolens_workspace_test#260. Latent — CI is green today — but it is green for the

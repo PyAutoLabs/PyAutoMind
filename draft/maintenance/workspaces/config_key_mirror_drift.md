@@ -10,6 +10,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-13 (backfilled from git)
 
 Filed 2026-07-12 from a `/hygiene config` audit (recursive key-path diff of
 each library `config/*.yaml` against its workspace counterpart).

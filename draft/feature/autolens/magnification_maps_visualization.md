@@ -14,6 +14,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 8
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # Magnification maps: image-plane contour maps, source-plane mesh maps, uncertainty maps
 

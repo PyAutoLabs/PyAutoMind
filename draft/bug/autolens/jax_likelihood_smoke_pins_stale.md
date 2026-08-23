@@ -8,6 +8,7 @@ Difficulty: low
 Autonomy: supervised
 Priority: normal
 Status: draft
+Filed: 2026-08-19 (backfilled from git)
 
 ## Finding (2026-08-19, control-tested during lazy-heavy-imports #1505)
 

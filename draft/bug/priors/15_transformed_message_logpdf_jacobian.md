@@ -7,6 +7,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised — issue filed (PyAutoFit#1498); caller analysis complete
 (2026-08-19, below), awaiting human adjudication of the contract choice
+Filed: 2026-08-18 (backfilled from git)
 
 Found 2026-08-18 while implementing the #1497 property sweep (prompt
 `bug/priors/09`). Same failure *shape* as census finding A4 (#1331-04): a

@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-19 (backfilled from git)
 
 Explore: dashboardify the Brain's operational surfaces with pasteable conductor prompts
 

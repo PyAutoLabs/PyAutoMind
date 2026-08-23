@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Filed: 2026-07-25 (backfilled from git)
 
 > **Re-scoped 2026-08-05.** The original finding below is preserved for history
 > but its two headline claims are now measured to be wrong: step 1 is already

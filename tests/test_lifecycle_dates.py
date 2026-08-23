@@ -254,5 +254,70 @@ def test_a_shallow_clone_is_not_evidence_of_when_anything_started(tmp_path):
     assert lifecycle._shallow_boundary(clone) == "2026-08-21"
     # The prompt's only visible "add" is the boundary commit — refused, so the
     # gap is reported honestly instead of being dated 2026-08-21.
-    assert lifecycle.git_prompt_issued_date(
-        clone, "active/sprocket_calibration.md", "2026-08-21") is None
+    assert lifecycle.git_prompt_date(
+        clone, "active/sprocket_calibration.md", "active", "2026-08-21") is None
+
+
+# --------------------------------------------------------------------------- #
+# the backlog — the largest pool of tasks, and the last to get dated
+# --------------------------------------------------------------------------- #
+def _draft(root: Path, rel: str, body=None) -> Path:
+    p = root / "draft" / rel
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(body if body is not None else _prompt())
+    return p
+
+
+def test_a_draft_is_dated_filed_and_an_issued_prompt_issued(tmp_path):
+    """The key names the state the prompt was in when the date happened, so
+    the two never have to be told apart by which folder it sits in now."""
+    root = _mind(tmp_path, active={"sprocket.md": _prompt()})
+    _draft(root, "feature/flywheel/gearbox.md")
+    keys = {r["what"].split("/")[0]: r["key"]
+            for r in lifecycle.backfill_dates(root)}
+    assert keys == {"active": "Issued", "draft": "Filed"}
+
+
+def test_a_drafts_intake_trailer_dates_it_when_git_cannot(tmp_path):
+    root = _mind(tmp_path)
+    _draft(root, "feature/flywheel/gearbox.md",
+           _prompt() + "\n<!-- formalised by the Intake (Conception) Agent on "
+                       "2026-07-09 from user-intake -->\n")
+    result = lifecycle.backfill_dates(root, apply=True)[0]
+    assert (result["date"], result["source"]) == (
+        "2026-07-09", "the prompt's intake trailer")
+    assert "Filed: 2026-07-09" in (
+        root / "draft" / "feature" / "flywheel" / "gearbox.md").read_text()
+
+
+def test_reading_a_draft_date_back(tmp_path):
+    assert lifecycle.prompt_date(_prompt(extra="Filed: 2026-07-09\n")) == (
+        "2026-07-09", "Filed")
+
+
+def test_issued_wins_over_filed_on_a_prompt_carrying_both(tmp_path):
+    """An issued prompt keeps the `Filed:` it had as a draft; the later, more
+    specific event is the one that dates the task."""
+    body = _prompt(extra="Filed: 2026-07-01\nIssued: 2026-08-19\n")
+    assert lifecycle.prompt_date(body) == ("2026-08-19", "Issued")
+
+
+def test_a_bulk_move_does_not_redate_the_whole_backlog(tmp_path):
+    """The 2026-07-13 lifecycle migration `git mv`-ed 42 prompts in one commit.
+    Without --follow all 42 date from the migration rather than from
+    themselves — a fact about the repo's plumbing, not about the work."""
+    root = _repo(tmp_path / "mind")
+    (root / "draft" / "old_home").mkdir(parents=True)
+    (root / "draft" / "old_home" / "gearbox.md").write_text(_prompt())
+    _git(root, "add", "-A")
+    _git(root, "commit", "-q", "-m", "file gearbox", "--date=2026-05-01T12:00:00")
+    (root / "draft" / "feature").mkdir(parents=True)
+    _git(root, "mv", "draft/old_home/gearbox.md", "draft/feature/gearbox.md")
+    _git(root, "commit", "-q", "-m", "lifecycle migration",
+         "--date=2026-07-13T12:00:00")
+
+    assert lifecycle.git_prompt_date(
+        root, "draft/feature/gearbox.md", "draft") == "2026-05-01"
+    # active/ takes the opposite reading: arriving there IS the event.
+    assert lifecycle.git_prompt_date(
+        root, "draft/feature/gearbox.md", "active") == "2026-07-13"

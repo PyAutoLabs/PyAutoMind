@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Filed: 2026-08-20 (backfilled from git)
 
 > Phase 1 of the CPU-likelihood speed restoration
 > (autolens_profiling#151 profiling; user request 2026-08-20 recorded verbatim

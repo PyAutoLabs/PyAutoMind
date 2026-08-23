@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Filed: 2026-07-28 (backfilled from git)
 
 Found during the MultiStartProdigy compile census (autolens_profiling#93):
 every `delaunay_matern` transform recompiles at cold cost in **every process**

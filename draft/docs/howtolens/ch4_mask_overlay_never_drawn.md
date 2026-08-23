@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-08-04 (backfilled from git)
 
 Spotted 2026-08-04 while fixing the sibling HowToGalaxy tutorial under
 `plot-array-stale-kwargs` (HowToGalaxy#56). **Not a crash** — the tutorial runs

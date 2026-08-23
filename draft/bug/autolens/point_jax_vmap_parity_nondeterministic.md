@@ -9,6 +9,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-22 (backfilled from git)
 
 `autolens_workspace_test/scripts/jax_likelihood_functions/point_source/point.py` fails its
 JAX-vs-numpy parity assert under the smoke env, and **fails differently between runs**:

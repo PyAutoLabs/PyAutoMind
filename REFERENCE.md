@@ -300,6 +300,7 @@ Free-form markdown. Strong conventions:
   Autonomy: supervised      # safe | supervised | human-required
   Priority: normal          # low | normal | high
   Status: draft
+  Filed: 2026-07-09         # optional; the day the prompt was written
   Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
   ```
@@ -389,8 +390,15 @@ it leaves the backlog:
 | `active.md` | `- issued: YYYY-MM-DD` | the day the task got its GitHub issue |
 | `planned.md` | `- filed: YYYY-MM-DD` | the day it was scoped |
 | `parked.md` | `- parked: YYYY-MM-DD` | the day it stopped |
-| `active/<name>.md` | `Issued: YYYY-MM-DD` | the prompt's own copy, in its light header |
+| `draft/**/<name>.md` | `Filed: YYYY-MM-DD` | the day the prompt was written |
+| `active/<name>.md` | `Issued: YYYY-MM-DD` | the day it got its issue, in its light header |
 | `complete/<YYYY>/<MM>/<slug>.md` | `- completed: YYYY-MM-DD` | unchanged — the ledger already did this |
+
+The backlog is the **largest** pool of tasks the Mind holds — 150 prompts
+against a handful of live rows — so `draft/` carrying a date is what lets the
+dashboard's Recent feed see most of the work at all. A prompt keeps its
+`Filed:` when it advances to `active/` and gains an `Issued:`; the later, more
+specific event is the one that dates the task.
 
 The **key names the event**, so a merged feed can say what each date means
 rather than showing a bare timestamp. Reading is tolerant: `registered:`,
@@ -413,17 +421,28 @@ already holds, annotating each inferred date with where it came from:
 Issued: 2026-08-18 (backfilled from parked.md `parked:`)
 ```
 
-The sources, in order: the commit that introduced the entry or moved the prompt
-into `active/`; the dated registry entry that claims the prompt; a date the
-entry already stated in its own prose. Nothing is guessed — an entry with no
+The sources, in order: git — the commit that introduced the entry, wrote the
+draft, or moved the prompt into `active/`; the prompt's own Intake trailer
+(`<!-- formalised by the Intake (Conception) Agent on … -->`); the dated
+registry entry that claims the prompt; a date the entry already stated in its
+own prose.
+
+The two states want **opposite** readings of the same history, and the switch is
+`--follow`. An `active/` prompt dates from the day it *arrived* there (being
+issued is a `git mv`, so following the rename back would report the wrong day);
+a `draft/` prompt dates from the day it was *written*, wherever it lived then —
+the 2026-07-13 lifecycle migration `git mv`-ed 42 prompts in one commit, and
+without `--follow` all 42 would date from the migration rather than from
+themselves. Nothing is guessed — an entry with no
 evidence is reported for a human to date by hand. A **shallow** clone (CI, a
 cloud session) cannot see past its boundary commit, so git dates at or before
 it are discarded rather than stamping every task with the day the clone was
 made.
 
-The dashboard's [Recent](dashboard.md#recent) table is the payoff: the 20
-newest events on the work in hand — issued, parked, filed — in one place.
-Shipped work stays out of it; `complete/index.md` is where the ledger is read.
+The dashboard's [Recent](dashboard.md#recent) table is the payoff: it holds the
+50 newest events on the work in hand — issued, parked, filed — and shows 10,
+opening the next 10 on each tap of `…`. Shipped work stays out of it;
+`complete/index.md` is where the ledger is read.
 
 ### Completion record (`complete/<YYYY>/<MM>/<slug>.md`) schema
 

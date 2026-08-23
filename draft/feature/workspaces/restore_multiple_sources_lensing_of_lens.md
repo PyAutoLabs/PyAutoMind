@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-04-28 (backfilled from git)
 
 Once https://github.com/PyAutoLabs/PyAutoLens/issues/480 is fixed (PointSolver
 magnification filter must use `plane_redshift`, not the tracer's last plane),

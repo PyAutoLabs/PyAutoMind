@@ -13,6 +13,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 11
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # Cluster extended-source inference: gradient-based fitting building on JAX knowledge
 

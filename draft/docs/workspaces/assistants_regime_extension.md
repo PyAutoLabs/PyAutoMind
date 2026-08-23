@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: low
 Status: in progress — autolens_assistant leg shipped 2026-07-25 (autolens_assistant#91); autogalaxy leg deferred until the autogalaxy packages exist
 Parent: draft/docs/autolens/split_lensing_regimes.md
+Filed: 2026-07-25 (backfilled from git)
 
 Once the three-regime reorganization (parent plan) has landed in
 autolens_workspace, autogalaxy_workspace and the RTD docs, extend the

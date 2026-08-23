@@ -9,6 +9,7 @@ Difficulty: large
 Autonomy: human-required
 Priority: normal
 Status: formalised
+Filed: 2026-07-17 (backfilled from git)
 
 Build the remote-MCP deployment tiers (2 and 3) for the read-only results-inspector MCP
 server, which shipped 2026-07-17 (autofit_assistant#12) with only tier 1 (local stdio for

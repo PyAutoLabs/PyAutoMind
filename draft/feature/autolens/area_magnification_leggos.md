@@ -13,6 +13,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 6
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # Area magnification (LEGGOS-style): per-pixel inversion sum as primary; ShapeSolver rehabilitate-or-retire
 

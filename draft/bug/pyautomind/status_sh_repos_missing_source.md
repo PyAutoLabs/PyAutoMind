@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-08-19 (backfilled from git)
 
 Found by the 2026-08-19 readability-pass census (#248).
 @PyAutoMind/scripts/status.sh's `--repos` branch does

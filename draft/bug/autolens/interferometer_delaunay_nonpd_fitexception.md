@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-21 (backfilled from git)
 
 Split out from `slam-adapt-inversion-cascade` (#300, autolens_workspace) during the 2026-07-21 folded-in
 Delaunay verification. The imaging Delaunay/SLaM/double-ring cluster was fixed there; this interferometer

@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-14 (backfilled from git)
 
 Three `autolens_workspace_test` JAX-likelihood scripts fail their pinned-value
 assertions on `main`, marginally over tolerance. They fail every local smoke

@@ -10,6 +10,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
+Filed: 2026-08-21 (backfilled from git)
 
 ## Original request (verbatim, 2026-08-21)
 

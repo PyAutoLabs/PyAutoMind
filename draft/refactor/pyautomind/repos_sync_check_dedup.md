@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: safe
 Priority: low
 Status: formalised
+Filed: 2026-08-19 (backfilled from git)
 
 Found by the 2026-08-19 readability-pass census (#248). Behaviour-preserving
 refactor of @PyAutoMind/scripts/repos_sync.py (940 lines, no dead functions):

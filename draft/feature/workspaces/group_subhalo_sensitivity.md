@@ -6,6 +6,7 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
+Filed: 2026-04-27 (backfilled from git)
 
 The imaging `features/advanced/subhalo/sensitivity` example needs improving and padding out before adapting to group.
 

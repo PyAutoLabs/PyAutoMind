@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-15 (backfilled from git)
 
 `Fitness.batch_size` currently serves **two unrelated concepts**, which is
 actively confusing when reasoning about GPU memory.

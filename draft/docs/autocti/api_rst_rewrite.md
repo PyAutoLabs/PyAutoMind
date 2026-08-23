@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-06 (backfilled from git)
 
 Filed 2026-08-06 from a full `/audit_docs` sweep (every autosummary entry
 verified by import + `hasattr` against installed source). PyAutoCTI's

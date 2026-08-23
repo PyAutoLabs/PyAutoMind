@@ -11,6 +11,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 5
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # Magnification at a point: surface the existing API in source_science + point package, extend to multi-plane
 

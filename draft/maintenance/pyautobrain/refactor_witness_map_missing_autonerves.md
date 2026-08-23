@@ -8,6 +8,7 @@ Difficulty: low
 Autonomy: safe
 Priority: low
 Status: draft
+Filed: 2026-08-19 (backfilled from git)
 
 ## Finding (2026-08-19, lazy-heavy-imports RefactorDecision)
 

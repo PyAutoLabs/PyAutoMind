@@ -12,6 +12,7 @@ Status: draft
 Epic: cluster-strong-lensing
 Phase: 10
 Parent: draft/docs/autolens/split_lensing_regimes.md
+Filed: 2026-07-25 (backfilled from git)
 
 Align the `scripts/cluster/` package of @autolens_workspace with the
 three-regime design (see parent plan). The mass framework (host halo(s) +

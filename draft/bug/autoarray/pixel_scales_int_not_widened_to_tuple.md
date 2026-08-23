@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Status: draft
+Filed: 2026-08-09 (backfilled from git)
 
 ## Why this exists
 

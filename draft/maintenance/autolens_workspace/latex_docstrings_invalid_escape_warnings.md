@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: SUPERSEDED 2026-08-20 — do not pick this up; see below
+Filed: 2026-08-03 (backfilled from git)
 
 ## SUPERSEDED by `draft/maintenance/workspaces/latex_raw_string_docstrings.md`
 

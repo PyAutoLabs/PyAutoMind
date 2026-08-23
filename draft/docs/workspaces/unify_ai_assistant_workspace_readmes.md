@@ -1,5 +1,7 @@
 # Phase 2: Make workspace READMEs assistant-first
 
+Filed: 2026-07-24 (backfilled from git)
+
 Update @autolens_workspace and @autogalaxy_workspace after the library and Read
 the Docs phase. Put one concise **AI Assistant** route first in Getting Started,
 covering conversation agents (for example ChatGPT) and coding agents (for

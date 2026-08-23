@@ -6,6 +6,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-07-08 (backfilled from git)
 
 PyAutoReduce phase 1 (PyAutoReduce#2, PR #3) reduces slacs0008-0004 to data
 ratio 0.941 / noise ratio 0.925 vs the legacy modeling dataset — both carry

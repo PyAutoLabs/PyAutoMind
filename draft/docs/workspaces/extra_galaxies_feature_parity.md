@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Filed: 2026-07-29 (backfilled from git)
 
 The user's request, verbatim:
 

@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-07-30 (backfilled from git)
 
 Follow-up to the multiband-pyloop-batching ship (PyAutoFit#1430 → PR#1431 +
 autolens_profiling#95, merged 2026-07-30). The dominant driver is fixed at the

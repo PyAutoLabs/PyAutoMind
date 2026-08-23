@@ -13,6 +13,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 12
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # HowToLens cluster tutorial: show a pixelized source + fix the stale cross-reference
 

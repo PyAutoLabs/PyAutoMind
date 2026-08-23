@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-08-22 (backfilled from git)
 
 Split out of PyAutoNerves#153 on 2026-08-22, which stamped the small-datasets
 regime into every FITS the stack writes and deliberately left the JSON side

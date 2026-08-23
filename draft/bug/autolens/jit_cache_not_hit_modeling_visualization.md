@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Filed: 2026-07-30 (backfilled from git)
 
 ## Symptom
 

@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-06-05 (backfilled from git)
 
 Follow-up from the dark-matter potential work (PyAutoGalaxy
 `feature/dark-matter-potentials`). That branch implemented

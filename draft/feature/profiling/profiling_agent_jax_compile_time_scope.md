@@ -9,6 +9,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: planned (arc — execute via the three child prompts below)
+Filed: 2026-07-14 (backfilled from git)
 
 > **RE-SCOPED 2026-08-10.** This prompt was filed 2026-07-14 asking the Profiling
 > Agent to *measure JAX compile/eval time of the release-validation heavy scripts

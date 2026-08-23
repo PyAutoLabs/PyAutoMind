@@ -6,6 +6,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-04-27 (backfilled from git)
 
 Can create a list of InversionMatrix objects for each dataset + tracer and then have a new class which takes a list of
 these objects and creates a combined curvature_reg matrix from them, which solves for all datasets simultaneously.

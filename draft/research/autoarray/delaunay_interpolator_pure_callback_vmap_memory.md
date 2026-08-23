@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-05-28 (backfilled from git)
 
 ## Status
 

@@ -6,6 +6,7 @@ Difficulty: medium
 Autonomy: safe
 Priority: high
 Status: formalised
+Filed: 2026-06-26 (backfilled from git)
 
 <!-- TRIAGE: needs manual review before routing. Session-resume fragment with
      little standalone context. Likely work-type `test` (verify jax.jit/jax.grad

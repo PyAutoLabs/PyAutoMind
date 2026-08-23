@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-07-16 (backfilled from git)
 
 First real findings from the Eyes conductor's live survey (PyAutoBrain#117
 Phase 2, `eyes survey autolens_workspace_test`):

@@ -26,6 +26,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Filed: 2026-07-15 (backfilled from git)
 
 `autolens_profiling` measures **run time** (per-eval cost, VRAM, wall time) but
 not **compile time**. For JAX likelihoods, XLA compilation is now a first-class

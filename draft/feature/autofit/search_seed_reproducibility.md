@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Issue: (none yet)
+Filed: 2026-08-05 (backfilled from git)
 
 ## The gap
 

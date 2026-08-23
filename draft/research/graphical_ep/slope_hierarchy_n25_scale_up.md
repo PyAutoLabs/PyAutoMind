@@ -10,6 +10,7 @@ Priority: normal
 Status: formalised
 Epic: graphical-ep
 Phase: 3
+Filed: 2026-07-22 (backfilled from git)
 
 ## Context
 

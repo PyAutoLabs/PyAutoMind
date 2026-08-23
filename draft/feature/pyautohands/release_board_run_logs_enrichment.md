@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-08-19 (backfilled from git)
 
 Follow-up to the release board (PyAutoHands#239, shipped 2026-08-19). The v1
 board is API-first because `run_logs/` (the rich local run history written by

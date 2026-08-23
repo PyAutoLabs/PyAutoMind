@@ -13,6 +13,7 @@ Phase: 2
         EP", so do not pick this up as ordinary work. The evidence below is the
         expensive part and it is already paid for.
 Issue: (none — never issued. Parent report https://github.com/PyAutoLabs/PyAutoFit/issues/1405 stays open.)
+Filed: 2026-08-11 (backfilled from git)
 
 ## Why this is `too-large` / `human-required` — read before starting
 

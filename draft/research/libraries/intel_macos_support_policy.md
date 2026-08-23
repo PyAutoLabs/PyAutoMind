@@ -11,6 +11,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Filed: 2026-08-22 (backfilled from git)
 
 ## Original request (verbatim, 2026-08-22)
 

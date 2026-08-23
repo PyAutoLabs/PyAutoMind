@@ -10,6 +10,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-30 (backfilled from git)
 
 Two defects, one destructive.
 

@@ -8,6 +8,7 @@ Priority: normal
 Status: formalised
 Epic: graphical-ep
 Phase: 4
+Filed: 2026-05-18 (backfilled from git)
 
 The project @z_projects/ic50_workspace is our IC50  use case which we are now aiming to scale up the EP framework
 to the IC50 use case.

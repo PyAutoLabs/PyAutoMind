@@ -11,6 +11,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 9
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # Cluster source_science.py: robust magnification science at cluster scale (no meshes yet)
 

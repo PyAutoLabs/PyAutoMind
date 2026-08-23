@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-08-04 (backfilled from git)
 
 Found during a `/repo_cleanup` sweep on 2026-08-04, after `clean_slate.sh`
 flagged `dataset/imaging/cosmos_web_ring` as a committed 11 MB dataset over its

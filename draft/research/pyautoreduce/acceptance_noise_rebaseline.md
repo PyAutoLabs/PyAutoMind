@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-09 (backfilled from git)
 
 Filed from the frame-products validation session (issue #16 / PR #18,
 2026-07-09), which found the MAST acquire stage had been ingesting HAP

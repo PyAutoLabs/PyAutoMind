@@ -1,5 +1,7 @@
 # interferometer/start_here.py OOM in nightly release-validation integrate leg
 
+Filed: 2026-07-31 (backfilled from git)
+
 Filed 2026-07-31 from the phase-4 ship gate of point-source-chi-squared-variants
 (#657): Heart RED traced to the nightly Release Integrate run.
 

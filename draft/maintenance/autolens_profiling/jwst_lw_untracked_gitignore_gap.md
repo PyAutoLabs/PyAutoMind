@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Filed: 2026-08-04 (backfilled from git)
 
 Found during a `/repo_cleanup` sweep on 2026-08-04.
 `autolens_profiling/dataset/imaging/jwst_lw/` (376K, 6 files) sits untracked in

@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: phases 1-3 SHIPPED; phase 4 = design (#1500) + parked 14 + findings 15-16
+Filed: 2026-05-18 (backfilled from git)
 
 > **2026-08-18 wrap-up sweep.** All nine confirmed bugs (01-08, 10) are fixed
 > and merged on PyAutoFit main — Phase 1 batch via #1344/PR#1345 (merged

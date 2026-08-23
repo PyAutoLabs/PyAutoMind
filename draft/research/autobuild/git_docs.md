@@ -6,6 +6,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-04-28 (backfilled from git)
 
 Use readthedocs or migrate to GitHub docs? Whats the state  of the art these days? easier to maintain fully in GitHub?
 

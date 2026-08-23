@@ -8,6 +8,7 @@ Priority: high
 Status: campaign map — phases route through /start_dev one at a time; this
 Epic: graphical-ep
         file is never issued itself and nothing here is bulk-issued
+Filed: 2026-08-19 (backfilled from git)
 
 Filed 2026-08-19 from James's multi-phase EP brief (raw text preserved in the
 intake session). This is the umbrella view; each phase's real content lives in

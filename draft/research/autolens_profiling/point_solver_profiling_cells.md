@@ -11,6 +11,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 2
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # PointSolver profiling cells: lensed quasar → cluster runtime tier → single/multi-source → multiplane
 

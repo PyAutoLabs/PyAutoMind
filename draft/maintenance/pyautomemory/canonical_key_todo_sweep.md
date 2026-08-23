@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-16 (backfilled from git)
 
 PyAutoMemory canonical-key TODO sweep.
 

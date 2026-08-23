@@ -7,6 +7,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Blocked-by: PyAutoFit#1334, PyAutoFit#1331, PyAutoFit#1332   # WP1 gate (MERGED); WP3/WP4 gates (open)
+Filed: 2026-07-08 (backfilled from git)
 
 The complete, self-contained implementation plan lives in
 **PyAutoFit#1338** (plan-only issue; nothing implemented). Scoping

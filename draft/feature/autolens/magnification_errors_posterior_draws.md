@@ -11,6 +11,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 7
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # Magnification errors via posterior draws, standalone in source_science
 

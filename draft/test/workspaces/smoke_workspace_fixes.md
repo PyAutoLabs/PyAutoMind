@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-04-27 (backfilled from git)
 
 The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced
 pre-existing failures that were commented out to get the green baseline. Re-enable each

@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
+Filed: 2026-08-22 (backfilled from git)
 
 Bug: fix the tracer.fits existence guard in autolens_workspace imaging modeling.py. The script crashes with FileNotFoundError because the guard checks the wrong file. It tests whether files/tracer.json exists, then reads image/tracer.fits, which TEST_MODE never writes. This fails the release smoke gate.
 

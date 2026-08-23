@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: low
 Status: draft
 Parent: draft/docs/autolens/split_lensing_regimes.md
+Filed: 2026-07-25 (backfilled from git)
 
 The contributed derivation note (H. Ding 2026, "On the definitions of b0 and
 velocity dispersion in Lenstool / dPIE") establishes that Lenstool's fiducial

@@ -10,6 +10,7 @@ Difficulty: low-medium
 Autonomy: supervised
 Priority: normal
 Status: shipped
+Filed: 2026-08-22 (backfilled from git)
 
 Re-homed 2026-08-22 from `draft/refactor/autoarray/`. The Brain Refactor Agent
 refused it there (`SUSPECT-API-CHANGE`, effective autonomy `human-required`):

@@ -9,6 +9,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-07-22 (backfilled from git)
 
 Two independent, small stale-API call-sites in HowToGalaxy, both parked since 2026-04-10 and still
 parked after the 2026-07-21 census:

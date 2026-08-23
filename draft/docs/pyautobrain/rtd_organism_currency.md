@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-19 (backfilled from git)
 
 Found by the 2026-08-19 readability census (#237). The RTD narrative
 (@PyAutoBrain/docs/, published at pyautoscientist.readthedocs.io) has drifted

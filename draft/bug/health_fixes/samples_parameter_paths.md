@@ -6,6 +6,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Filed: 2026-07-06 (backfilled from git)
 
 ## Context
 

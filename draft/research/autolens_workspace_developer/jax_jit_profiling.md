@@ -6,6 +6,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-05-10 (backfilled from git)
 
 We have lots of examples which profile how long JAX jitted functions take to run on various datasets.
 

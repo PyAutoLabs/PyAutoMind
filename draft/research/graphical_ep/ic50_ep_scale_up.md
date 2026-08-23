@@ -12,6 +12,7 @@ Status: formalised
 Epic: graphical-ep
 Phase: 4
 Campaign: research/graphical_ep/ep_campaign.md (Phase 4)
+Filed: 2026-08-19 (backfilled from git)
 
 ## Context
 

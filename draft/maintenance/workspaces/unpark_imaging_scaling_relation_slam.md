@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Blocked-by: PyAutoArray#431   # the small-datasets loader fix — MERGED 2026-08-03, released in 2026.8.7.1
+Filed: 2026-08-03 (backfilled from git)
 
 BLOCKED until PyAutoArray PR#431 merges and reaches the installed stack. Do not
 start before then — the script only passes with that loader fix in place.

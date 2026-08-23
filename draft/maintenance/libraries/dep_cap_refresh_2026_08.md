@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-06 (backfilled from git)
 
 Filed 2026-08-06 from a full `/dep_audit` (38 capped/pinned specifiers across
 8 pyprojects vs PyPI latest; no cross-repo conflicts — every duplicated

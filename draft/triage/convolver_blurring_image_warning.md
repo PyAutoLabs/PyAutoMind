@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Filed: 2026-08-06 (backfilled from git)
 
 Filed 2026-08-06 from the `/cli_noise_clean` audit. Every audited workspace
 script run (`autolens_workspace` + `autogalaxy_workspace` `imaging/simulator.py`

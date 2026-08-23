@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Filed: 2026-08-17 (backfilled from git)
 
 ## What this is
 

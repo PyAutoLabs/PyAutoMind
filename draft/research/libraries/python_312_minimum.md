@@ -1,5 +1,7 @@
 # Adopt Python 3.12 as the PyAuto ecosystem minimum
 
+Filed: 2026-07-28 (backfilled from git)
+
 ## Original request
 
 > Ok, lets remove support for anything below python3.12, do a census to make sure we simplify requriements, build server, testing, etc. Also make sure all docs are updated.

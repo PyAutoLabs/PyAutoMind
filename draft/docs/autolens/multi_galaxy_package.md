@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: high
 Status: in progress — core landed 2026-07-25; features/fit/jax legs landed 2026-07-26 (branch claude/pyautolens-doc-reorganization-w6a1l5); only the real-data swap-in remains
 Parent: draft/docs/autolens/split_lensing_regimes.md
+Filed: 2026-07-25 (backfilled from git)
 
 ## Landed (2026-07-25, this task branch)
 

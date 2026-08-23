@@ -13,6 +13,7 @@ Status: formalised
 Epic: cluster-strong-lensing
 Phase: 4
 Parent: draft/feature/autolens/source_cluster_arc.md
+Filed: 2026-08-19 (backfilled from git)
 
 # Mesh magnification correctness: simulate-and-recover across every mesh variant
 

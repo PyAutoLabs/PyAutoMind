@@ -1,6 +1,7 @@
 # Phase 2 — drop the hand-written quick-update sentence from the workspace scripts
 
 Blocked-by: PyAutoFit#1436     # moved the cadence message into the library — MERGED 2026-07-30
+Filed: 2026-07-30 (backfilled from git)
 
 Follow-up to **PyAutoFit#1434 / PR#1436**, which moved the on-the-fly update
 cadence message into the library. Do not start until #1436 has merged.
