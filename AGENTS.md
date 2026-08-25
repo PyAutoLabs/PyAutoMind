@@ -54,7 +54,14 @@ For the full workflow narrative, conventions, and registry schemas, read
   the README links): regenerate with `pyauto-brain intake --apply dashboard`
   after any registry or `draft/` change you want reflected immediately — never
   hand-edit it. `dashboard_refresh.yml` self-heals it on pushes to `main`, so a
-  missed regeneration is drift that fixes itself, not a broken page.
+  missed regeneration is drift that fixes itself, not a broken page — but it
+  heals only the **render**. A prompt that shipped and was never retired to
+  `complete/` renders faithfully, as pickable backlog, and no workflow can tell
+  the difference; retiring it is a human/skill judgement. Per task that is
+  `/prm`'s close-out (it sweeps the shipped prompt's folder and regenerates the
+  page in the same commit); across the whole backlog it is
+  `pyauto-brain intake reconcile` plus the refresh payload on the dashboard
+  itself.
   `parked.md` holds tasks that were started or scoped but are not currently
   in flight (e.g. work parked in a stash, orphan worktrees); move back to
   `active.md` (or `planned.md` if re-scoping) when resuming.

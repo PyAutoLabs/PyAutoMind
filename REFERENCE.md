@@ -135,7 +135,9 @@ over the registry without starting work:
 PyAutoMind/
 ├── README.md                ← short front page
 ├── dashboard.md             ← GENERATED task page (picks / in flight / parked / planned / backlog)
-│                              `pyauto-brain intake --apply dashboard`; CI self-heals it on main
+│                              `pyauto-brain intake --apply dashboard`; CI self-heals the RENDER on
+│                              main — never a shipped prompt nobody retired (that is /prm's close-out
+│                              per task, `intake reconcile` across the backlog)
 ├── REFERENCE.md             ← this file (schemas + conventions)
 ├── .gitignore
 │
