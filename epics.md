@@ -32,6 +32,14 @@ epic, never picked standalone.
 - title: Intermittent XLA compile stall in the JAX vmap likelihood path
 - ledger: draft/bug/ci/jax_vmap_jit_compile_stall.md
 - status: CLOSED AS PARTIAL 2026-08-23 — record complete/2026/08/jax-compile-stall-slow-vs-stall-audit.md
+- NEW EVIDENCE 2026-08-25: multi_dataset/jax_likelihood/shared_preloads.py stalled at TIMEOUT (300s) in
+  PyAutoHeart Workspace Smoke run 32902243623 — one day after the 2026-08-24 retime refuted its SLOW
+  marker and returned it to mega-run coverage. N=5 per leg measures the fast mode of a bimodal failure
+  and says nothing about the tail, so every entry that sweep readmitted carries the same uncertainty.
+  Also the epic's first occurrence via the weekly workspace-validation channel (cross-harness
+  corroboration), and smoke_tests.txt vs no_run.yaml now disagree about this script. Nothing parked.
+  See the ledger's "New occurrence — 2026-08-25" section; surfaced by
+  complete/2026/08/weekly-smoke-timings-naming.md.
 - CORRECTION (post-close-out): the captured stack shows the hang is in jax.block_until_ready, NOT in
   compilation. The epic's name and every marker calling this an "XLA compile stall" are wrong. Resume
   from "why does block_until_ready never return", not from compiler behaviour.
