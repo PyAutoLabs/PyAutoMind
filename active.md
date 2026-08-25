@@ -25,4 +25,9 @@
 - note: web-github session — no local worktree created; work done in the session clone
   and pushed to the branch above. Decision recorded on the issue: option (a), the named
   `smoke-timings-*` upload added to workspace-validation.yml's script and notebook legs.
+- verified: full weekly sweep dispatched on the branch (run 32902243623, 2026-08-25) —
+  203 artifacts = 1 report + 6 notebooks-* + 98 results-* / 98 smoke-timings-*, one-to-one,
+  no name collisions, retention split confirmed (timings 90d vs results-* 30d). The one red
+  leg (autolens_test/multi_dataset, `jax_likelihood/shared_preloads.py` TIMEOUT 300s) is the
+  filed intermittent XLA stall, not this change — the new upload ran after it and succeeded.
 
