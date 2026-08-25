@@ -1,4 +1,4 @@
-# Un-park imaging/features/scaling_relation/slam once PyAutoArray#431 merges
+# Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431 gate has cleared
 
 Type: maintenance
 Target: autolens_workspace
@@ -7,12 +7,24 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: formalised
-Blocked-by: PyAutoArray#431   # the small-datasets loader fix — MERGED 2026-08-03, released in 2026.8.7.1
+Status: formalised — ready to start (upstream gate cleared 2026-08-03)
+Was-blocked-by: PyAutoArray#431   # small-datasets loader fix — cleared, see below
 Filed: 2026-08-03 (backfilled from git)
 
-BLOCKED until PyAutoArray PR#431 merges and reaches the installed stack. Do not
-start before then — the script only passes with that loader fix in place.
+**Ready to start.** This prompt was filed as a gated task and its gate is long
+since open — both clauses were verified by the 2026-08-09 sweep below and again
+on 2026-08-25 against the Mind's own records:
+
+- **Merged** — `complete/2026/08/small-datasets-loader-pixel-scales.md` records
+  PyAutoArray PR#431 merged (`17885f38`) on 2026-08-03, closing issue #430.
+- **Reached the installed stack** — `complete/2026/08/release-drive-2026-08-07.md`
+  records all five libraries published to PyPI at **2026.8.7.1**, verified against
+  pypi.org rather than the run conclusion.
+
+The title and opening previously read "once PyAutoArray#431 merges" / "BLOCKED
+until…", which is what the dashboard rendered for three weeks after the gate
+opened — actionable work presented as waiting on something. The work itself is
+unchanged and still outstanding: the park is still in `no_run.yaml`.
 
 ## 2026-08-09 — UNBLOCKED, both clauses satisfied
 
