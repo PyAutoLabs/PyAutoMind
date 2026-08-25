@@ -8,8 +8,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: issued 2026-08-25 as autolens_workspace_test#279
 Filed: 2026-08-24
+Issued: 2026-08-25
 
 ## The failure
 
