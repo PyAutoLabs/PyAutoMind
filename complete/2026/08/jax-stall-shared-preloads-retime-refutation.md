@@ -1,3 +1,78 @@
+# A retime refuted a stall marker; one day later the script stalled
+
+PyAutoMind#329 → `5eeee59` (closing PyAutoMind#328), merged 2026-08-25.
+Evidence-recording task against the `jax-compile-stall` ledger. Filed as a
+one-line follow-up ("add `shared_preloads.py` to the family list") from
+`complete/2026/08/weekly-smoke-timings-naming.md`; the investigation found
+something materially larger.
+
+## What shipped
+
+- **`draft/bug/ci/jax_vmap_jit_compile_stall.md`** gained a
+  `## New occurrence — 2026-08-25` section, mirroring the 2026-08-24 precedent:
+  run/job ids, a ten-row sibling timing table, the retime refutation, the
+  exclusion-list disagreement, the widened affected-set shape, and the channel
+  finding.
+- **`epics.md`** — the `jax-compile-stall` entry carries a
+  `NEW EVIDENCE 2026-08-25` note so the epic's state reflects it.
+- Nothing parked, disabled, or re-marked. `autolens_workspace_test` read for
+  evidence only.
+
+## The finding
+
+`multi_dataset/jax_likelihood/shared_preloads.py` hit `TIMEOUT (300s)` in
+PyAutoHeart `Workspace Smoke` run **32902243623** (job **97978549465**,
+2026-08-25) while all nine siblings passed in 8.6–49.3s — a >6x outlier with the
+bimodal signature the ledger uses to separate a stall from slowness.
+
+**The 2026-08-24 retime had removed this entry's SLOW marker and returned it to
+coverage the day before.** Verified against `autolens_workspace_test` at
+`7fc497d`: absent from `config/build/no_run.yaml` (in mega-run/weekly coverage),
+still commented out at `smoke_tests.txt` line 15 (out of the PR gate).
+
+## Key traps / findings
+
+- **N=5 cannot refute a bimodal failure.** The retime (5 repeats per leg, 300s
+  cap; runs 32741371308 + 32741386752) removed eight PyAutoHeart#74 entries on
+  "completed 5/5 on both legs, slowest 54.5s — marker refuted". ~10 executions
+  measure the fast mode and say nothing about the tail. The retime was right
+  that the script is not *slow*; it was not powered to see that it *stalls*.
+  **The other seven entries that sweep readmitted carry identical uncertainty**
+  and are in the weekly channel now — the standing follow-up below.
+- **The two exclusion lists disagree, and different gates read different ones.**
+  `smoke_tests.txt` gates the PR run; `no_run.yaml` gates mega-run/weekly. A
+  script disabled since 2026-07-22 was therefore still able to burn a 300s cap
+  in CI. Resolve deliberately rather than by whichever file is edited next.
+- **First occurrence via the weekly `workspace-validation` channel.** Every
+  prior one came from a workspace repo's own `Smoke Tests` gate or from
+  `release-integrate`. A different, PyAutoHeart-owned, `script_matrix.py`-driven
+  harness reproducing the same signature is cross-harness corroboration that the
+  stall is not one repo's runner configuration.
+- **The common factor is wider than MGE.** `shared_preloads.py` is not an MGE
+  variant, so the ledger's "composite MGE vmap graph" shape no longer covers the
+  affected set. What the members share is heavy `multi_dataset` vmap
+  composition.
+- **A one-line follow-up note was not the whole finding.** The note said "add it
+  to the family list". Checking the workspace's actual exclusion state — rather
+  than trusting the note — is what surfaced the refutation. Cheap to do, and it
+  changed the task's meaning.
+
+## Follow-ups
+
+- **Re-check the seven other entries the 2026-08-24 sweep readmitted.** One of
+  eight hung within a day; the rest were cleared by the same under-powered
+  protocol and sit in weekly coverage. Now cheaper to settle than before: the
+  weekly `smoke-timings-*` dataset (shipped same day, PyAutoHeart#182) makes
+  per-script weekly timings globbable, so a few weeks of data answers it without
+  a bespoke sweep.
+- **Reconcile `smoke_tests.txt` vs `no_run.yaml`** for the entries where they
+  disagree — a decision, not code.
+- `pyauto-brain bug` returns `owner: unresolved` / `fix locus: unresolved` for a
+  prompt whose only repo is `@PyAutoMind`, because Mind is absent from its
+  library-repo owner map. Cosmetic; classification was otherwise sound.
+
+## Original prompt
+
 # The 2026-08-24 retime returned `shared_preloads.py` to coverage; it stalled the next day
 
 Type: bug
