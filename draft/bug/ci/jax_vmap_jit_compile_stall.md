@@ -244,3 +244,97 @@ was re-run at ~14:00 UTC to clear the gate; the script was deliberately **not**
 parked, per #109's own warning against whack-a-mole parking that strips coverage
 of the heaviest JAX paths. The per-script cap behaved exactly as designed: a 300s
 TIMEOUT and exit 1 rather than a six-hour silent hang.
+
+## New occurrence — 2026-08-25, `multi_dataset/jax_likelihood/shared_preloads.py`
+
+**This one refutes a refutation.** The entry had its SLOW marker removed the day
+before and was returned to coverage; it stalled on the next weekly run.
+
+Verified via the Actions API. PyAutoHeart `Workspace Smoke` run **32902243623**
+(2026-08-25, `workflow_dispatch` on the `weekly-smoke-timings-naming` branch),
+job `smoke / run_scripts (3.12, autolens_test, multi_dataset)` (**97978549465**).
+16 of 17 scripts passed:
+
+```
+scripts/multi_dataset/jax_likelihood/shared_preloads.py ...   TIMEOUT (300s)
+```
+
+Siblings in the same job, same commit, same runner:
+
+| Script | Result |
+|---|---|
+| `jax_likelihood/mge.py` | PASS 11.7s |
+| `jax_likelihood/rectangular_mge.py` | PASS 20.7s |
+| `jax_likelihood/mge_group.py` | PASS 49.3s |
+| `jax_likelihood/delaunay_mge.py` | PASS 20.2s |
+| `jax_likelihood/rectangular.py` | PASS 15.8s |
+| `jax_likelihood/rectangular_mge_rtu.py` | PASS 21.9s |
+| `jax_likelihood/rectangular_rtu.py` | PASS 16.3s |
+| `jax_likelihood/lp.py` | PASS 8.6s |
+| `jax_likelihood/dataset_model.py` | PASS 12.9s |
+| **`jax_likelihood/shared_preloads.py`** | **TIMEOUT (300s)** |
+
+A >6x outlier against the slowest sibling, with every other family member
+completing comfortably — the bimodal signature § "It is not one script" describes.
+
+### The 2026-08-24 retime put this script back in coverage
+
+State verified 2026-08-25 against `autolens_workspace_test` at `7fc497d`:
+
+- `config/build/no_run.yaml` — **no `shared_preloads` entry.** It is in mega-run
+  and weekly coverage.
+- `smoke_tests.txt` line 15 — still commented out: *"disabled 2026-07-22: exceeds
+  the 300s smoke cap (measured 300s+ in CI, autolens_workspace_test#196) … it is
+  the heaviest entry here and does not belong in the fast PR gate."*
+
+`shared_preloads.py` was in the PyAutoHeart#74 "flakes at the 1800s cap" SLOW
+family. The 2026-08-24 retime (5 repeats per Python leg, 300s cap; runs
+32741371308 + 32741386752) removed eight of those entries because they "completed
+5/5 on both legs (slowest 54.5s) and were removed — marker refuted, scripts back
+in mega-run coverage".
+
+**~10 executions at ≤54.5s cannot exclude a low-probability hang.** The retime
+was right that this script is not *slow*; it was not powered to see that it
+*stalls*. Its readmission to coverage is falsified by the very next weekly run.
+
+This lands § Task step 1's slow-vs-stall question on the opposite side from where
+the retime put this entry, and it is a caution about the retime protocol
+generally: for a bimodal failure, N=5 per leg measures the fast mode and says
+nothing about the tail. Any other entry readmitted by that sweep carries the same
+uncertainty.
+
+### The two exclusion lists now disagree
+
+`smoke_tests.txt` (PR gate) excludes `shared_preloads.py` as too heavy;
+`no_run.yaml` (mega-run / weekly) admits it. The gates read different lists, so a
+script disabled since July was still able to burn a 300s cap in CI. Worth
+resolving deliberately rather than by whichever list is edited next.
+
+### First occurrence on the weekly `workspace-validation` channel
+
+Every prior occurrence in this ledger comes from a workspace repo's own
+`Smoke Tests` gate or from `release-integrate`. This is the first via
+PyAutoHeart's weekly `workspace-validation.yml` sweep — a different harness
+(PyAutoHeart-owned, `script_matrix.py`-driven, honouring `no_run.yaml` and not
+`smoke_tests.txt`) reproducing the same signature. That is cross-harness
+corroboration that the stall is not an artifact of one repo's runner
+configuration.
+
+### Affected-set shape
+
+Extends the family to `multi_dataset/jax_likelihood/shared_preloads.py`, joining
+`multi_dataset/` `mge.py` (2026-08-24) and `rectangular.py` (parked 2026-08-01,
+autolens_workspace_test#245), and `imaging/` `mge_group.py` + `rectangular_mge.py`
+(parked 2026-08-23, autogalaxy_workspace_test#109). Note `shared_preloads.py` is
+not an MGE variant — it is the shared-preloads path — so the "composite MGE vmap
+graph" common factor no longer covers the whole set. What the members share is
+heavy `multi_dataset` vmap composition, not MGE specifically.
+
+**Consequence — nothing was parked.** Recorded and left in coverage, following
+this file's § "This is why quarantining is the wrong end state" and the
+2026-08-24 precedent, where `multi_dataset/jax_likelihood/mge.py` was deliberately
+not parked. Re-marking is phase 3's call with a root cause in hand.
+
+Surfaced incidentally by `complete/2026/08/weekly-smoke-timings-naming.md`
+(PyAutoHeart#182), whose verification sweep produced this run — the first
+practical dividend of the weekly timing dataset that task shipped.
