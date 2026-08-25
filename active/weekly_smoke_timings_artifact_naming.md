@@ -7,8 +7,9 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: low
-Status: draft
+Status: issued
 Filed: 2026-08-24
+Issued: 2026-08-25
 
 Follow-on gap from `complete/2026/08/smoke-timings-dataset.md` (PyAutoHands
 `d2a22f4` + PyAutoHeart#167 `3df42b5`, merged 2026-08-24). All facts below
