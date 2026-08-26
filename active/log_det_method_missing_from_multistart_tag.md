@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-08-26
 
 Two Phase 8B arms that differ only in `log_det_method` resolve to the same
 autofit output directory and identifier, so the second silently returns the
