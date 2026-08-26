@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1140 records across 7 buckets.
+1141 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -238,6 +238,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [spawn-github-instance-automation](2026/08/spawn-github-instance-automation.md)
 - [sph-transform-name-check](2026/08/sph-transform-name-check.md) — auto-closed by the merge via "Closes #555"
 - [stale-remedies-on-the-heart-board](2026/08/stale-remedies-on-the-heart-board.md)
+- [status-sh-repos-missing-source](2026/08/status-sh-repos-missing-source.md) — closed on ship
 - [stored-sample-reconstruction-guard](2026/08/stored-sample-reconstruction-guard.md) — stored samples that current model validation rejects no longer raise raw
 - [sub-312-install-tombstone](2026/08/sub-312-install-tombstone.md)
 - [tenant-firewall-drift-aug](2026/08/tenant-firewall-drift-aug.md) — issue #198; 9 → OK, and a green `--check` is only evidence for the organs actually checked out
