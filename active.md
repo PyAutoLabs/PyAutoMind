@@ -46,7 +46,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/177
 - issued: 2026-08-26
 - session: claude --resume session_017xgYipoxfBkbU9nJ1yS8tt
-- status: library-dev
+- status: workspace-dev
+- classification-correction: filed as library-dev; corrected 2026-08-26. WORKFLOW.md lists
+  autolens_profiling on NEITHER the library nor the workspace repo list — it is a project repo
+  of scripts + results with no installable source, so /start_workspace + /ship_workspace
+  ("scripts, notebooks and configs only") is the right door. Matches how the sibling #176 was
+  classified in the same repo.
 - worktree: ~/Code/PyAutoLabs-wt/results-schema-comparability-guard
 - prompt: active/results_schema_version_comparison_guard.md
 - parallel-claim: autolens_profiling is ALSO claimed by submit-wall-per-cell-throughput (#176).
