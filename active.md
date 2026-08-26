@@ -17,7 +17,8 @@
 ## repo-settings-org-enumeration
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/291
 - issued: 2026-08-26
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/292
 - prompt: active/repo_settings_org_enumeration.md
 - worktree: ~/Code/PyAutoLabs-wt/repo-settings-org-enumeration
 - repos:

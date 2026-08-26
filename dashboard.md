@@ -45,11 +45,11 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 134 |
+| [Backlog](#backlog) (`draft/`) | 138 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
@@ -75,10 +75,26 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autolens_profiling/log_det_method_missing_from_multistart_tag.md">log_det_method is missing from the MultiStart search tag, so arms collide</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens_profiling/log_det_method_missing_from_multistart_tag.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> — ci · medium · supervised · high</summary>
 
 ```
 /start_dev draft/maintenance/ci/autocti_workspace_navigator_check.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sibson_mesh_scipy_delaunay_under_jit.md">Sibson natural-neighbour mesh calls scipy Delaunay on a traced array under jit</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/sibson_mesh_scipy_delaunay_under_jit.md
 ```
 
 </details>
@@ -131,25 +147,15 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
 **Quick wins** (small enough, and safe enough to run unattended)
 
-- _(none right now)_
+<details><summary>📋 <a href="draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md">Submit scripts quote an MGE step rate for pixelized cells and get…</a> — autolens_profiling · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md
+```
+
+</details>
 
 ## In flight
 
@@ -163,7 +169,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/repo_settings_org_enumeration.md">The repo-settings sweep should enumerate the org, not the body map</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/291">issue #291</a> — issued 2026-08-26 — library-dev</summary>
+<details><summary>📋 <a href="active/repo_settings_org_enumeration.md">The repo-settings sweep should enumerate the org, not the body map</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/291">issue #291</a> — issued 2026-08-26 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/repo_settings_org_enumeration.md
@@ -255,7 +261,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**138** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -480,6 +486,171 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautomind/repos-sync-config-stamper.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>bug</b> — 20</summary>
+
+<details><summary>📋 <a href="draft/bug/autolens_profiling/log_det_method_missing_from_multistart_tag.md">log_det_method is missing from the MultiStart search tag, so arms collide</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens_profiling/log_det_method_missing_from_multistart_tag.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sibson_mesh_scipy_delaunay_under_jit.md">Sibson natural-neighbour mesh calls scipy Delaunay on a traced array under jit</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/sibson_mesh_scipy_delaunay_under_jit.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> — autofit · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/loggaussian_prior_declares_own_support.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md">Submit scripts quote an MGE step rate for pixelized cells and get…</a> — autolens_profiling · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md">Three <code>jax_likelihood</code> pins are stale by ~1.24e-4 and fail the smoke gate…</a> — workspaces · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_profiling/results_schema_version_comparison_guard.md">Phase 4 Stage 2 compares result rows across two incompatible schema versions</a> — autolens_profiling · medium · safe · normal</summary>
+
+```
+/start_dev draft/bug/autolens_profiling/results_schema_version_comparison_guard.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move is unattributed</a> — workspaces · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a> — health_fixes · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/health_fixes/release_timeout_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/z_features.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a> — autoarray · medium · human-required · low</summary>
+
+```
+/start_dev draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — pyautolens · medium · supervised · low</summary>
+
+```
+/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation integrate leg</a> — autolens</summary>
+
+```
+/start_dev draft/bug/autolens/interferometer_release_leg_oom.md
 ```
 
 </details>
@@ -786,139 +957,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autolens_profiling/cluster_gradient_search_benchmark.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>bug</b> — 16</summary>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> — autofit · small · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autofit/loggaussian_prior_declares_own_support.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md">Three <code>jax_likelihood</code> pins are stale by ~1.24e-4 and fail the smoke gate…</a> — workspaces · small · supervised · normal</summary>
-
-```
-/start_dev draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move is unattributed</a> — workspaces · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a> — health_fixes · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/health_fixes/release_timeout_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a> — priors · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a> — autoarray · medium · human-required · low</summary>
-
-```
-/start_dev draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — pyautolens · medium · supervised · low</summary>
-
-```
-/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation integrate leg</a> — autolens</summary>
-
-```
-/start_dev draft/bug/autolens/interferometer_release_leg_oom.md
 ```
 
 </details>
