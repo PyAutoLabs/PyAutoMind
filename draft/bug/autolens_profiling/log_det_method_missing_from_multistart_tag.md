@@ -4,7 +4,6 @@ Type: bug
 Target: autolens_profiling
 Repos:
 - autolens_profiling
-- PyAutoFit
 Difficulty: medium
 Autonomy: supervised
 Priority: high
@@ -57,6 +56,11 @@ and break byte-identity with recorded output paths. An unset
 `SEARCHES_LOG_DET_METHOD` must keep returning exactly today's tag. Read the env
 directly in `_samplers.py` rather than importing the resolver — `_runner`
 imports `_samplers`, so the other direction would be circular.
+
+SCOPE: **autolens_profiling only.** The fix, its test
+(`scripts/misc/test/test_searches_log_det_and_nautilus_seed.py`) and the
+submit that exercises it all live in this repo. No PyAutoFit worktree is
+needed — do not claim one.
 
 Scope note: the same class of gap may exist for other likelihood-affecting
 knobs outside `__identifier_fields__`. Report anything found; do not fix it in
