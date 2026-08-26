@@ -470,3 +470,31 @@ check reads main-HEAD conclusions, so each one is a RED row on the board and a
 Slack `#ci` notification, cleared by hand with a re-run. That treadmill — not
 the lost coverage — is now the stall's main day-to-day cost, and it is what any
 interim mitigation should target.
+
+### Re-run 2026-08-26 — the first same-commit paired observation
+
+Run 32849006683 `smoke (3.13)` was re-run (attempt 2, job 98348304309) to clear
+the Heart board. All 35 scripts passed, and the paired datum is the point:
+
+| | Attempt 1 (08-25) | Attempt 2 (08-26) |
+|---|---|---|
+| `multi_dataset/jax_likelihood/mge_group.py` | **TIMEOUT (300s)** | **PASS (41.2s)** |
+
+Same commit `e187c0e`, same Python leg, same runner image, same dependency-chain
+mains — 41.2s is **7.3x inside** the cap it exhausted 34 hours earlier. Nothing
+about the script or its inputs changed between the two attempts, so this is the
+bimodality of § "It is not one script" measured across one identity rather than
+inferred across siblings.
+
+Every other family member also passed on attempt 2 with comfortable margins
+(`mge.py` 17.4s, `rectangular_mge.py` 20.8s, `delaunay_mge.py` 27.1s,
+`interferometer/mge_group.py` 25.9s) — the same margins they showed on the
+attempt that stalled.
+
+This is precisely the observation the retry-once mitigation
+([`smoke_runner_retry_on_timeout.md`](smoke_runner_retry_on_timeout.md)) would
+produce automatically, in-job, for every occurrence, instead of requiring a
+human to notice a red board and re-run by hand.
+
+**Consequence.** `autogalaxy_workspace_test` main is green again and the board's
+`ws_ci` RED clears on the next build. The defect is untouched.
