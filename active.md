@@ -38,7 +38,9 @@
     mirroring vram/config.py; lookup RAISES on an unmeasured cell, no nearest-neighbour
     fallback), a `# WALL-BASIS:` header required on submit_search_*/submit_phase8b_*,
     check_submits.py gating every cell a submit runs against its own row + its --time, wired
-    into lint.yml; phase8b --time -> 6:00:00 from its SLOWEST cell.
+    into lint.yml; phase8b --time -> 7:00:00 from its SLOWEST cell (6:00:00 was the pre-
+    implementation estimate at 1.4x; the gate's floor for a `rates` row is 1.5x, which
+    needs 22,185 s -- past six hours).
 
 ## results-schema-comparability-guard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/177
