@@ -185,7 +185,7 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>2</b><span>In flight</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>137</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>2</b><span>In flight</span></li><li><b>3</b><span>Parked</span></li><li><b>6</b><span>Planned</span></li><li><b>137</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-08-26.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -243,12 +243,13 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 </details>
 <h2>Planned <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md">markdown version</a></h2>
 <details>
-<summary>5 task(s)</summary>
+<summary>6 task(s)</summary>
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task isothermal-ell-sph-oversampling-at-the-cusp — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>isothermal-ell-sph-oversampling-at-the-cusp</b><span class="facets"> — found 2026-08-09</span> — <span class="facets">planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md" aria-label="Copy the Claude command">📋</button><p><b>remote-mcp-deployment-tiers</b> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/20">issue #20</a><span class="facets"> — filed 2026-07-21</span> — <span class="facets">DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP…</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/samples_parameter_paths.md" aria-label="Copy the Claude command">📋</button><p><b>samples-parameter-paths</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1327">issue #1327</a><span class="facets"> — filed 2026-07-08</span> — <span class="facets">parked</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autogalaxy/piemass_potential.md" aria-label="Copy the Claude command">📋</button><p><b>piemass-potential</b><span class="facets"> — filed 2026-06-05</span> — <span class="facets">planned</span></p></div>
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md" aria-label="Copy the Claude command">📋</button><p><b>submit-wall-per-cell-throughput</b> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/176">issue #176</a><span class="facets"> — filed 2026-08-26</span></p></div>
 </details>
 <h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
 <p class="muted">137 filed prompts, not started — sorted most-pickable first (priority, then size). 25 of them belong to an epic and are listed only under Epics below.</p>
@@ -396,6 +397,12 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <table class="recent">
 <tr>
 <td class="when">2026-08-26</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#submit-wall-per-cell-throughput">submit-wall-per-cell-throughput</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-26</td>
 <td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/log_det_method_missing_from_multistart_tag.md">log_det_method is missing from the MultiStart search tag, so arms…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/log_det_method_missing_from_multistart_tag.md" aria-label="Copy the Claude command">📋</button></td>
@@ -411,6 +418,12 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/feature/pyautobrain/board_without_gh.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-26</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md">Submit scripts quote an MGE step rate for pixelized cells and get…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr>
 <td class="when">2026-08-24</td>
@@ -442,13 +455,13 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-08-24</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/release/pyautoreduce/pyautoreduce_release_induction.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-08-24</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a></td>
@@ -681,18 +694,6 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-07-31</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autolens/interferometer_release_leg_oom.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-07-31</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/research/autolens/quick_update_plotting_cost.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
