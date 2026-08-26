@@ -47,7 +47,7 @@ For the full workflow narrative, conventions, and registry schemas, read
   transit-and-void lifecycle — see PyAutoGut), `epics.md` (long-running
   multi-phase programmes and the ledger file that holds each one's state),
   `queue.md` (ordered
-  input for `register_and_iterate --queue`), `ideas.md` (raw inbox swept by
+  input for `run_queue`), `ideas.md` (raw inbox swept by
   `$intake`, `/intake` in Claude). Mutate these only via the skills in `skills/` so commit
   messages stay consistent.
   `dashboard.md` is the **generated** read-only view over all of it (the page

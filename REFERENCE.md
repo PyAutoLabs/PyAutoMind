@@ -146,7 +146,7 @@ PyAutoMind/
 ├── parked.md                ← started/scoped but not in flight (stashes, orphan worktrees, deferred)
 ├── planned.md               ← issued tasks blocked from starting (created on demand)
 
-├── queue.md                 ← processing queue for /register_and_iterate
+├── queue.md                 ← processing queue for /run_queue
 │
 │   PROMPT-FILE LIFECYCLE (issue #71): draft/ → active/ → complete/YYYY/MM/.
 │   Drafts are organised by WORK TYPE (first folder), then TARGET (second).
@@ -185,7 +185,7 @@ PyAutoMind/
 `OWNERSHIP.md`). The development-workflow skills were re-homed to the organs that
 own them — **PyAutoBrain** (`start_dev`, `start_dev_for_user`, `plan_branches`,
 `start_library`, `start_workspace`, `ship_library`, `ship_workspace`,
-`register_and_iterate`, `health` [the single health door, with `check` sweep,
+`run_queue`, `health` [the single health door, with `check` sweep,
 `status` dashboard, and `full` release-run legs]), **PyAutoHeart**
 (`worktree_status`, and the health-leg procedures `health_sweep/`,
 `pyauto-status/`, and `pyauto-status-full/` that `/health` drives), and

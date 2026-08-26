@@ -1,6 +1,6 @@
 # Queue
 
-Ordered input for `/register_and_iterate --queue`: one prompt path per line,
+Ordered input for `/run_queue`: one prompt path per line,
 processed top to bottom. Done entries are prepended with `# DONE <date>` rather
 than deleted, preserving order history.
 
