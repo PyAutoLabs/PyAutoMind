@@ -18,14 +18,22 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/175
 - issued: 2026-08-26
 - session: claude --resume session_01MdmS2jfUPi8BNjtDVBjBYX
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag
+- status: awaiting-merge
+- worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag-175
 - prompt: active/log_det_method_missing_from_multistart_tag.md
-- shares-worktree-with: submit-wall-per-cell-throughput (#176) — folded in 2026-08-26,
-  human-approved; disjoint files. COMMIT DISCIPLINE: never `git add -A` in this worktree,
-  explicit pathspecs only, or one task's uncommitted work lands in the other's commit.
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/178
+- status-note: BRANCH SPLIT 2026-08-26, human-approved. This task no longer shares a branch
+  with #176. #176 committed ef1c44b (56 files) to feature/log-det-multistart-tag, so #175 was
+  branched off origin/main as feature/log-det-multistart-tag-175 in its OWN worktree
+  (~/Code/PyAutoLabs-wt/log-det-multistart-tag-175) and its 3 files were restored in the shared
+  worktree. The two now review and merge independently. The shared worktree at
+  ~/Code/PyAutoLabs-wt/log-det-multistart-tag belongs to #176 alone.
+- heart-red-authorized: shipped 2026-08-26 on explicit human authorization while Heart was RED.
+  Verbatim reasons at ship time, neither touching autolens_profiling:
+  - autogalaxy_workspace_test: Smoke Tests failure on main
+  - release validation FAILED (stage integrate)
 - repos:
-  - autolens_profiling: feature/log-det-multistart-tag
+  - autolens_profiling: feature/log-det-multistart-tag-175
 - summary: |
     Reproduced on clean main: multi_start_unique_tag returns an identical tag for
     cholesky and slogdet arms, so the second resumes the first's .completed fit
@@ -42,6 +50,8 @@
 - worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag
 - repos:
   - autolens_profiling: feature/log-det-multistart-tag
+- branch-note: as of 2026-08-26 #175 moved OFF this branch (see its entry) — feature/
+  log-det-multistart-tag now carries #176's work alone, and the worktree is yours alone.
 - shares-worktree-with: log-det-multistart-tag (#175) — this task does NOT own a worktree of its
   own. It was blocked by #175's claim on autolens_profiling and folded into it on 2026-08-26 with
   human approval, because the two touch DISJOINT files: #175 edits scripts/misc/searches/_samplers.py
