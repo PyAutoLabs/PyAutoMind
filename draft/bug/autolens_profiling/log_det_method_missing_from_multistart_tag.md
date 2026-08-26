@@ -37,10 +37,29 @@ Blocks 20 arms / ~80 GPU-h of Phase 8B (autolens_profiling#162). The knn half
 was submitted on 2026-08-26 as job 341845; the delaunay half is held pending
 this fix.
 
-FIX: compose a log_det tag into `multi_start_unique_tag`, in the same shape as
-the existing seed/positions/bijector tags, preserving the rule that the
-default/"auto" value adds no tag so recorded output paths stay byte-identical.
-Then audit for any OTHER likelihood-affecting knob that sits outside both
-`__identifier_fields__` and the tag.
+FIX (decided 2026-08-26) — a PATH SUFFIX, not an identifier change.
+
+Do **not** touch `AbstractMultiStartGradient.__identifier_fields__` or anything
+else in PyAutoFit. `arm_unique_tag` (`_samplers.py:90`) is already just
+`"_".join(non-None parts)`, and the tag it returns sits in `output_path` above
+`name` — so it *is* the path suffix. Add one more part, mirroring the
+`bijector_tag` line directly above it:
+
+    log_det = os.environ.get("SEARCHES_LOG_DET_METHOD")
+    log_det_tag = None if not log_det else f"ld_{log_det}"
+    ...
+    return arm_unique_tag(seed_tag, pos_tag, bijector_tag, log_det_tag)
+
+Tag on the **env override only**, never on the W8-resolved default. The
+resolver at `_runner.py:744` falls back to slogdet-on-GPU for every arm alike,
+so tagging the resolved value would add a suffix to cells that never had one
+and break byte-identity with recorded output paths. An unset
+`SEARCHES_LOG_DET_METHOD` must keep returning exactly today's tag. Read the env
+directly in `_samplers.py` rather than importing the resolver — `_runner`
+imports `_samplers`, so the other direction would be circular.
+
+Scope note: the same class of gap may exist for other likelihood-affecting
+knobs outside `__identifier_fields__`. Report anything found; do not fix it in
+this change.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-26 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/cc3c117a-bb7b-499c-aa8c-f3e8f65d1bb5/scratchpad/prompts/p1.md -->
