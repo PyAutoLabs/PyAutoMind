@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_repo_spellings_split_across_keys.md">Organ repo spellings split across two normalised keys</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/287">issue #287</a> — issued 2026-08-26 — library-dev</summary>
+<details><summary>📋 <a href="active/organ_repo_spellings_split_across_keys.md">Organ repo spellings split across two normalised keys</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/287">issue #287</a> — issued 2026-08-26 — ready-to-ship — implemented and pushed on both branches; no PR opened</summary>
 
 ```
 /start_dev active/organ_repo_spellings_split_across_keys.md
