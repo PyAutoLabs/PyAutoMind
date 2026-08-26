@@ -287,3 +287,76 @@ In rough order of preference; all keep the guard armed.
 Do NOT close this by relaxing `assert_eager_jit_consistent`, and do not remove
 the `NEEDS_FIX` entry in `config/build/no_run.yaml` until the underlying solve
 is deterministic across compilation paths.
+
+---
+
+## UPDATE 2026-08-26 — reproduced with a running stack; the diagnosis above is REFUTED
+
+Built both Python legs locally (source-installed PyAutoNerves/Fit/Array/Galaxy/
+Lens; jax+jaxlib 0.11.1, jaxnnls 1.0.1, numpy 2.5.2, scipy 1.17.1, ml_dtypes
+0.6.0, opt_einsum 3.4.0, jax_zero_contour 2.0.0 — matching retime run
+32741386752 version-for-version) and reproduced the failure **bit-for-bit**:
+eager `-3164.0196392095145`, jitted `-3164.021216643465`.
+
+Three of the UPDATE 2026-08-24 conclusions do not survive contact with a
+running stack. Full evidence in autolens_workspace_test#279 (comment).
+
+### REFUTED — "Python 3.13 only"
+
+**3.12 fails identically** on the same machine: same eager value, same jitted
+value, same gap. Running both legs on one host isolates the variable in a way
+CI cannot, and CPython is not it. The §5 caveat above was correct to be
+suspicious — the CI legs differed by **runner hardware**, which changes
+reduction association inside fused kernels at ~1e-16. Either leg can tip.
+
+### REFUTED — the PDIP branch-flip / iteration-count mechanism
+
+Instrumenting `solve_nnls` (whose `pdip_iter` `solve_nnls_primal` discards)
+shows the iteration count is **identical** eager vs jit in every configuration
+(9/9 default, 8/8, 10/10 pinned). Pinning solver policy changes nothing: across
+`nnls_solver_tol` ∈ {default, 1e-8, 1e-10, 1e-12} × `nnls_max_iter` ∈ {50, 100}
+the gap is **bit-identical to the last digit** (-1.5774339503877854e-03). Fix
+direction 1 above is dead — the divergence is fixed by the solver's *inputs*.
+
+Those inputs already differ: `|Q|_F` 6.50986450897629254 (eager) vs
+6.50985096508985794 (jit); `|q|_2` 1.19701132571532654 vs 1.19711922072121180.
+The cause is upstream of the NNLS solve entirely.
+
+### ACTUAL CAUSE — a discrete cell-assignment flip in the PyAutoArray mapper
+
+`jax.debug.callback` capture inside
+`autoarray/inversion/mesh/interpolator/rectangular.py:452`: the traced grid
+differs by 8.88e-16 (1 ULP), and that flips **2 of 11312** integer cell indices,
+both in row 0 — `[18 19 18 19]` → `[18 19 26 27]` — moving 0.512 of weight a
+whole mesh row. Eager's `18 == 18` is `floor == ceil`: an exactly integer index,
+because `transform()` ends in `xp.clip(F_q, 0.0, 1.0)` and row 0 saturates,
+giving `(8-3) * 1.0 + 1 = 6.0` exactly. `ix_up = ceil(g)` collapses there.
+
+### AND UNDERNEATH — the mapper's row weights are mirrored
+
+`t_row` is measured from `ix_down`, so `ix_up` must carry `t_row`; the code has
+them swapped (columns are correctly paired). Linear-reproduction test:
+
+```
+CURRENT: reproduces col coord 0.000000 | row coord 0.999759  <-- ~a full cell
+FIXED:   reproduces col coord 0.000000 | row coord 0.000000
+```
+
+Being *consistently* mirrored keeps the surface smooth, which is why every
+FD/AD check in the workspaces passes.
+
+### Where this task now stands
+
+The fix is **PyAutoArray's**, not this repo's — filed as
+`draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`. Validated
+locally: eager/jit gap exactly 0.0, this script green on both legs (3.13 83s,
+3.12 86s vs the 300s cap), `pytest test_autoarray/` 1220 passed.
+
+It is `human-required` because it changes reconstructions library-wide —
+`imaging/jax_likelihood/rectangular.py` moves +1222.6 in log likelihood (a
+*better* fit) — and **16 scripts** here carry hardcoded `EXPECTED_LOG_*`
+constants that need regenerating, with `autogalaxy_workspace_test` on the same
+path.
+
+The `NEEDS_FIX` park **stays** until the library fix lands; this repo's eventual
+change is only regenerating constants and un-parking, library-first.

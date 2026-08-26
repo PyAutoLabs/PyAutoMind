@@ -32,11 +32,31 @@
     policy via al.Settings(nnls_solver_tol=, nnls_max_iter=) scoped to Variant B, leaving
     assert_eager_jit_consistent at rtol=1e-10 untouched at all 11 call sites, and remove the
     NEEDS_FIX park at config/build/no_run.yaml:42.
-- next: /start_workspace — but implementation needs an environment that can RUN the stack.
-  This session (claude/gradient-eager-jit-divergence-py313-5dylgx, web-github) has no PyAuto
-  install and no JAX, and the failure only manifests on a CI 3.13 leg; every verification
-  step in the plan is a measurement. Plan + issue are complete and were derived by reading
-  live sources, not by running them.
+- status-note: 2026-08-26 — BLOCKED on a PyAutoArray fix; root-caused, do not start
+  workspace dev yet. A runnable stack was built in-session (both Python legs,
+  source-installed libraries at the retime run's exact versions) and the failure
+  reproduced bit-for-bit. Findings posted to autolens_workspace_test#279.
+- refuted: the prompt's own UPDATE 2026-08-24 diagnosis, on three counts. (1) NOT
+  3.13-only — 3.12 fails identically on the same host, so the CI split was runner
+  hardware, not CPython. (2) NOT a PDIP branch flip — pdip_iter is identical eager
+  vs jit, and the gap is bit-identical across 5 solver policies. (3) So pinning
+  nnls_solver_tol/nnls_max_iter cannot work; that fix direction is dead.
+- root-cause: a discrete bilinear cell-assignment flip in PyAutoArray's rectangular
+  mapper (interpolator/rectangular.py:452). transform() ends in clip(F_q, 0, 1),
+  so saturated points land on exactly-integer indices where ix_up = ceil(g)
+  collapses onto ix_down; 1 ULP in the traced grid then jumps a point's weight a
+  whole mesh row. Underneath it the row weights are mirrored (ix_up carries
+  1 - t_row instead of t_row) — proven by a linear-reproduction test the current
+  code fails by ~a full cell in the row axis while the column axis is exact.
+- spawned: draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md — the real
+  fix, human-required. Validated locally (gap exactly 0.0, this script green on both
+  legs at 83s/86s vs the 300s cap, pytest test_autoarray/ 1220 passed) but it changes
+  reconstructions library-wide (+1222.6 logL on imaging/jax_likelihood/rectangular.py,
+  a better fit) and 16 workspace scripts' hardcoded EXPECTED_LOG_* constants need
+  regenerating, autogalaxy_workspace_test too.
+- next: hold. The NEEDS_FIX park in config/build/no_run.yaml STAYS until the library
+  fix lands; this repo's eventual change is only constant regeneration + un-parking,
+  behind the library-first gate.
 - prior-art: complete/2026/08/positive-solver-divergence-diagnosis.md (autolens_profiling#113)
   — same PDIP solver, same one-ULP-boundary class; its method was a bounded sweep of the
   public nnls_solver_tol / nnls_max_iter controls, which is the route step 3 takes.
