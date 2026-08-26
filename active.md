@@ -14,34 +14,6 @@
   filed the prompt + issue but not this entry, tripping Lifecycle Drift on main.
 - repos-none-claimed: this entry claims NO repos — one line deliberately, not 2-space bullets.
 
-## log-det-multistart-tag
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/175
-- issued: 2026-08-26
-- session: claude --resume session_01MdmS2jfUPi8BNjtDVBjBYX
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag-175
-- prompt: active/log_det_method_missing_from_multistart_tag.md
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/178
-- status-note: BRANCH SPLIT 2026-08-26, human-approved. This task no longer shares a branch
-  with #176. #176 committed ef1c44b (56 files) to feature/log-det-multistart-tag, so #175 was
-  branched off origin/main as feature/log-det-multistart-tag-175 in its OWN worktree
-  (~/Code/PyAutoLabs-wt/log-det-multistart-tag-175) and its 3 files were restored in the shared
-  worktree. The two now review and merge independently. The shared worktree at
-  ~/Code/PyAutoLabs-wt/log-det-multistart-tag belongs to #176 alone.
-- heart-red-authorized: shipped 2026-08-26 on explicit human authorization while Heart was RED.
-  Verbatim reasons at ship time, neither touching autolens_profiling:
-  - autogalaxy_workspace_test: Smoke Tests failure on main
-  - release validation FAILED (stage integrate)
-- repos:
-  - autolens_profiling: feature/log-det-multistart-tag-175
-- summary: |
-    Reproduced on clean main: multi_start_unique_tag returns an identical tag for
-    cholesky and slogdet arms, so the second resumes the first's .completed fit
-    (RAL job 340576: 20 delaunay arms -> 10 output dirs). Fix is a PATH SUFFIX in
-    autolens_profiling only -- tag on the SEARCHES_LOG_DET_METHOD env override
-    only, never on the W8-resolved default, so an unset env keeps today's exact
-    tag. No PyAutoFit change, no PyAutoFit worktree. Next: /start_workspace.
-
 ## submit-wall-per-cell-throughput
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/176
 - issued: 2026-08-26
@@ -50,14 +22,12 @@
 - worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag
 - repos:
   - autolens_profiling: feature/log-det-multistart-tag
-- branch-note: as of 2026-08-26 #175 moved OFF this branch (see its entry) — feature/
-  log-det-multistart-tag now carries #176's work alone, and the worktree is yours alone.
-- shares-worktree-with: log-det-multistart-tag (#175) — this task does NOT own a worktree of its
-  own. It was blocked by #175's claim on autolens_profiling and folded into it on 2026-08-26 with
-  human approval, because the two touch DISJOINT files: #175 edits scripts/misc/searches/_samplers.py
-  (+ its README and test); this task adds scripts/misc/wall/ and edits hpc/batch_gpu/submit_search_*,
-  hpc/README.md, .github/workflows/lint.yml, scripts/misc/test/test_wall_check_submits.py.
-  COMMIT DISCIPLINE: never `git add -A` there — explicit pathspecs only.
+- sole-owner-since: 2026-08-26 — log-det-multistart-tag (#175) SHIPPED (PR #178, merge commit
+  11d06e50) and is recorded in complete/2026/08/. It branched off origin/main as
+  feature/log-det-multistart-tag-175 and its files were restored, so this task now solely owns
+  BOTH the worktree ~/Code/PyAutoLabs-wt/log-det-multistart-tag and the branch
+  feature/log-det-multistart-tag. The shared-index commit discipline no longer applies —
+  nothing else is uncommitted there.
 - summary: |
     RAL job 340576 lost 35 of 39 arms (an overnight A100 block) because
     submit_phase8b_bijector_a100 justified --time=0:30:00 with an MGE step rate for an array
@@ -77,15 +47,15 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/results-schema-comparability-guard
 - prompt: active/results_schema_version_comparison_guard.md
-- parallel-claim: autolens_profiling is ALSO claimed by log-det-multistart-tag (#175, which
-  carries #176). Human-approved 2026-08-26 to run in a SEPARATE worktree rather than fold or
-  serialise — files are disjoint from both: #175 edits scripts/misc/searches/_samplers.py
-  (+ README, test_searches_log_det_and_nautilus_seed.py); #176 adds scripts/misc/wall/ and
-  edits hpc/batch_gpu/submit_search_*, hpc/README.md, .github/workflows/lint.yml,
-  test_wall_check_submits.py; THIS task edits scripts/misc/searches/{_metrics,aggregate}.py,
-  scripts/misc/tooling/build_readme.py, scripts/misc/test/ and regenerates the root README.md.
-  A separate checkout means a separate git index, so the shared-index commit discipline that
-  #175's worktree needs does not apply here.
+- parallel-claim: autolens_profiling is ALSO claimed by submit-wall-per-cell-throughput (#176).
+  log-det-multistart-tag (#175) SHIPPED 2026-08-26 (PR #178) and no longer claims the repo.
+  Human-approved 2026-08-26 to run in a SEPARATE worktree rather than fold or serialise — files
+  are disjoint: #176 adds scripts/misc/wall/ and edits hpc/batch_gpu/submit_search_*,
+  hpc/README.md, .github/workflows/lint.yml, test_wall_check_submits.py; THIS task edits
+  scripts/misc/searches/{_metrics,aggregate}.py, scripts/misc/tooling/build_readme.py,
+  scripts/misc/test/ and regenerates the root README.md. (#175 edited
+  scripts/misc/searches/_samplers.py + README + test_searches_log_det_and_nautilus_seed.py —
+  now on main, disjoint from both.) A separate checkout means a separate git index.
 - repos:
   - autolens_profiling: feature/results-schema-comparability-guard
 - summary: |

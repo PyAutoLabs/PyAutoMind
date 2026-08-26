@@ -11,8 +11,8 @@ Status: formalised
 Filed: 2026-08-26
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/176 (issued 2026-08-26)
 Issued: 2026-08-26
-Worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag (SHARED with log-det-multistart-tag #175 —
-  folded in 2026-08-26; disjoint files; explicit git pathspecs only, never `add -A`)
+Worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag (SOLELY this task's since 2026-08-26 —
+  log-det-multistart-tag #175 shipped in PR #178 and moved off; nothing else is uncommitted there)
 
 # Submit scripts quote an MGE step rate for pixelized cells and get killed
 
