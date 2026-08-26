@@ -1,7 +1,7 @@
 # Use readthedocs or migrate to GitHub docs
 
 Type: research
-Target: PyAutoBuild
+Target: PyAutoHands
 Difficulty: small
 Autonomy: supervised
 Priority: normal
