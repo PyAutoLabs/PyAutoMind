@@ -91,6 +91,33 @@ For the full workflow narrative, conventions, and registry schemas, read
    loosely-related changes, split into separate prompt files before issuing.
 4. **`tmp/` is scratch.** Never commit anything under it.
 
+## Running tests in a remote (web/mobile) session
+
+Two facts, both measured, both worth one line each:
+
+1. **Run the suite in parallel.** A remote container has 4 cores and the suites
+   are subprocess-heavy with no single slow test: PyAutoBrain's 554 tests take
+   96s on one core and 28s on four. `pytest-xdist` is installed by the
+   session-start hook, so the command is just:
+
+   ```
+   python3 -m pytest -q -n auto
+   ```
+
+2. **If `python3 -m pytest` or `pytest` misbehaves, the environment is stale,
+   not the code.** A session holding several organs registers no SessionStart
+   hook (Claude Code reads hooks from the project directory, which is the
+   repos' *parent*). Knock on the door directly, once, in the first turn:
+
+   ```
+   bash PyAutoMind/scripts/session_bootstrap.sh          # fix it
+   bash PyAutoMind/scripts/session_bootstrap.sh --check  # report only
+   ```
+
+   The symptom to recognise: collection `ImportError`s naming `yaml`, or
+   `No module named pytest`. Both are the session resolving a pytest that is not
+   this workspace's — never a broken test module.
+
 ## When you are asked to add a new prompt
 
 Write the file under `draft/<work-type>/<target>/<name>.md` — pick the work-type
