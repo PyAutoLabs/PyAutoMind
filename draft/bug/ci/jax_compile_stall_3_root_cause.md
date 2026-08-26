@@ -22,6 +22,28 @@ actually dumped a traceback. Diagnosing a hang that leaves no evidence is what
 produced three quarantines and no root cause; repeating it without the
 instrumentation would be a fourth.
 
+## UPDATE 2026-08-26 — the blocker's premise changed
+
+The 2026-08-25 occurrence of `multi_dataset/jax_likelihood/mge_group.py`
+(`autogalaxy_workspace_test` run 32849006683, job `smoke (3.13)`; full entry in
+the ledger [`jax_vmap_jit_compile_stall.md`](jax_vmap_jit_compile_stall.md))
+is the first whose captured tail shows the first compile **completing** —
+11.7s traced/lowered/compiled, 0.0s materialized — followed by ~270s of silence
+until the cap. Two consequences for this phase:
+
+- **Hypothesis 1 below is not where that stall was.** The `vmap`-of-`jit`
+  ordering A/B is already only contributory (80% -> 30%, p = 0.070, stall
+  survives the swap); this occurrence puts a stall wholly outside the compile
+  the ordering governs. Run the A/B for completeness, but do not treat it as the
+  leading candidate any more.
+- **Phase 1's watchdog cannot see this.** The `faulthandler` dump is armed around
+  the compile wait, so a compile that succeeds disarms it. The § "Blocked on
+  phase 1" gate above — *wait for a CI stall to dump a traceback* — cannot be
+  satisfied for post-compile stalls by what phase 1 shipped. Extending the
+  heartbeat/dump to cover the whole script run, or arming a process-level
+  watchdog in the runner instead of in `jax_compile.py`, is a **phase 1b
+  enabler** and is the cheapest way to unblock this phase.
+
 ## Reproduce deliberately
 
 Loop `imaging/jax_likelihood/mge_group.py` under its declared CI env profile

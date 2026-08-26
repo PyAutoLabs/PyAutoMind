@@ -338,3 +338,100 @@ not parked. Re-marking is phase 3's call with a root cause in hand.
 Surfaced incidentally by `complete/2026/08/weekly-smoke-timings-naming.md`
 (PyAutoHeart#182), whose verification sweep produced this run — the first
 practical dividend of the weekly timing dataset that task shipped.
+
+## New occurrence — 2026-08-25, `multi_dataset/jax_likelihood/mge_group.py`
+
+**This one moves the stall out of the instrumented region.** Every prior tail in
+this ledger ends on the `JAX jit compiling ... could take seconds or minutes...`
+line. This one ends on the *completion* line — the first compile traced, lowered,
+compiled **and materialized**, and the process then went silent for the remaining
+~270s until the cap killed it.
+
+Verified via the Actions API. `autogalaxy_workspace_test` `Smoke Tests` run
+**32849006683** (main, push, commit `e187c0e` — the SessionStart-hook commit,
+which touches no script in the suite), job `smoke / smoke (3.13)`
+(**97805460483**). 34 of 35 scripts passed:
+
+```
+scripts/multi_dataset/jax_likelihood/mge_group.py ...   TIMEOUT (300s)
+```
+
+The `smoke (3.12)` leg of the **same commit** was fully green — the per-compile
+probability described in § "It is not one script", again.
+
+### The captured tail, from the `smoke-timings-3.13` artifact
+
+Script start 12:50:19.7 (the prior script's completion), SIGKILL 12:55:19.8:
+
+```
+12:50:37  jax._src.xla_bridge - INFO - Unable to initialize backend 'tpu' ...
+12:50:38  autofit.non_linear.jax_compile - INFO - JAX jit compiling vectorized
+          (vmap) likelihood function, could take seconds or minutes...
+12:50:49  autofit...jax_compile - INFO - JAX jit compilation of vectorized (vmap)
+          likelihood function: traced, lowered and compiled in 11.7 seconds,
+          result materialized in 0.0 seconds.
+12:50:49  autofit...jax_compile - INFO - JAX jit compilation of vectorized (vmap)
+          likelihood function complete in 11.7 seconds.
+          [silence for the remaining ~270s]
+```
+
+Phase 1's compile/execute split did exactly its job and reported a **healthy**
+first call: 11.7s trace/lower/compile, 0.0s materialize. So for this occurrence
+the stall is downstream of the first `Fitness._vmap` call entirely — past
+tracing, past XLA, and past the `block_until_ready` the § CORRECTION section
+names. That is a different locus from every prior tail here, and it is the first
+one the phase 1 instrumentation could distinguish.
+
+**Caveat on "silence".** The runner PIPEs the child's stdout and SIGKILLs the
+process group at the cap, so up to one stdio buffer of writes can die unflushed.
+The claim this evidence supports is *nothing further reached the pipe after the
+compile completed* — not that the process emitted nothing. Every prior tail in
+this ledger carries the same caveat.
+
+### The watchdog could not fire — it was already disarmed
+
+PyAutoFit#1518 fixed the threshold collision recorded in § Traps (dump now
+derives from 80% of `BUILD_SCRIPT_TIMEOUT`, so 240s against this 300s cap). It
+still produced no stack, and for a new reason: the `faulthandler` dump is armed
+around the **compile wait**, which completed in 11.7s and disarmed it. A stall
+after the first compile is outside everything phase 1 shipped.
+
+So the instrumentation gap is now specific and stated: **phase 1 instrumented the
+first compile; this stall is not in the first compile.** Extending the heartbeat
+and dump to cover the whole script run — or arming a process-level watchdog in
+the runner rather than in `jax_compile.py` — is the cheapest next enabler, and it
+is a prerequisite for phase 3 in the same way phase 1 was.
+
+### Siblings in the same job, same commit, same runner
+
+Every other member of the family passed comfortably:
+
+| Script | Result |
+|---|---|
+| `multi_dataset/jax_likelihood/mge.py` | PASS 17.5s |
+| `multi_dataset/jax_likelihood/rectangular.py` | PASS 13.8s |
+| `multi_dataset/jax_likelihood/rectangular_mge.py` | PASS 20.2s |
+| `multi_dataset/jax_likelihood/delaunay.py` | PASS 13.9s |
+| `multi_dataset/jax_likelihood/delaunay_mge.py` | PASS 28.4s |
+| `interferometer/jax_likelihood/mge_group.py` | PASS 25.8s |
+| **`multi_dataset/jax_likelihood/mge_group.py`** | **TIMEOUT (300s)** |
+
+### Affected-set shape — the roles reversed
+
+This is the exact inverse of the 2026-08-24 entry above, which recorded
+`multi_dataset/jax_likelihood/mge.py` stalling while
+`multi_dataset/jax_likelihood/mge_group.py` **passed in 42.2s in the same run**.
+A day later the same two scripts swapped sides. Neither script is the property
+that stalls; that is now demonstrated within a single pair rather than inferred
+across repos.
+
+The family extends to `multi_dataset/jax_likelihood/mge_group.py`, joining
+`multi_dataset/` `mge.py` (2026-08-24), `shared_preloads.py` (2026-08-25) and
+`rectangular.py` (parked 2026-08-01, autolens_workspace_test#245), and `imaging/`
+`mge_group.py` + `rectangular_mge.py` (parked 2026-08-23,
+autogalaxy_workspace_test#109).
+
+**Consequence — nothing was parked**, following § "This is why quarantining is
+the wrong end state" and the 2026-08-24 / 2026-08-25 precedents. Left red on
+`autogalaxy_workspace_test` main pending phase 3's call; surfaced by the Heart
+board's `ws_ci` row.
