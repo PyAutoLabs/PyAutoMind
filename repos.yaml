@@ -55,6 +55,16 @@ repos:
   # repo currently uses it (Nerves/PyAutoNerves, its former user, is now a full
   # organ); it is kept for a future library that belongs on the public front
   # door without being an organ.
+  #
+  # `package:` names the import/PyPI package a repo ships, and is absent where
+  # it ships none. It is identity, not policy: it is the OTHER name the repo is
+  # known by, and prompts use it far more than the repo name (`@autofit`, not
+  # `@PyAutoFit`). PyAutoBrain derives its canonical routing key from it —
+  # the package name where a repo ships one, the repo name where it does not —
+  # so both spellings of a repo reach the same key instead of splitting across
+  # two (PyAutoBrain#287, the fourth instance of that defect). Adding a package
+  # here is what makes a new repo's spellings join automatically; omitting one a
+  # repo really ships re-opens the split.
   PyAutoMind:
     github: PyAutoLabs/PyAutoMind
     category: organ
@@ -93,6 +103,7 @@ repos:
     public_role: "Holds stale branches, dead code and other condemned material as recoverable Git references before it is permanently removed."
   PyAutoNerves:
     github: PyAutoLabs/PyAutoNerves
+    package: autonerves
     category: organ
     organ: Nerves
     role: "The Nerves — the configuration/serialization layer connecting workspace conventions to libraries (layered config, version handshake, test_mode), delivered as the `autonerves` package."
@@ -101,26 +112,32 @@ repos:
   # --- scientific libraries ----------------------------------------------
   PyAutoFit:
     github: PyAutoLabs/PyAutoFit
+    package: autofit
     category: library
     role: "Model-fitting / non-linear search / aggregator library."
   PyAutoArray:
     github: PyAutoLabs/PyAutoArray
+    package: autoarray
     category: library
     role: "Data structures (arrays, grids, masks), inversions, interferometry."
   PyAutoGalaxy:
     github: PyAutoLabs/PyAutoGalaxy
+    package: autogalaxy
     category: library
     role: "Galaxy light/mass profiles and galaxy modelling."
   PyAutoLens:
     github: PyAutoLabs/PyAutoLens
+    package: autolens
     category: library
     role: "Strong-lensing modelling built on the libraries above."
   PyAutoReduce:
     github: PyAutoLabs/PyAutoReduce
+    package: autoreduce
     category: library
     role: "Data reduction of HST (and future JWST/other) imaging into modeling-ready datasets for PyAutoLens/PyAutoGalaxy."
   PyAutoCTI:
     github: PyAutoLabs/PyAutoCTI
+    package: autocti
     category: library
     role: "Charge Transfer Inefficiency (CTI) calibration and modelling for CCD imaging (arctic clocking; Euclid VIS heritage)."
 
