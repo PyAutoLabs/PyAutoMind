@@ -14,46 +14,6 @@
   filed the prompt + issue but not this entry, tripping Lifecycle Drift on main.
 - repos-none-claimed: this entry claims NO repos — one line deliberately, not 2-space bullets.
 
-## submit-wall-per-cell-throughput
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/176
-- issued: 2026-08-26
-- prompt: active/submit_wall_estimates_per_cell_throughput.md
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/179 (opened 2026-08-26,
-  commit 7b2d716, label pending-release, MERGEABLE). No upstream library PR — the
-  library-first merge gate does not apply.
-- heart-ack: RED at ship time, human-authorized for push + PR-open ONLY, not merge —
-  "autogalaxy_workspace_test: Smoke Tests failure on main" and
-  "release validation FAILED (stage integrate)". Neither relates to autolens_profiling.
-  Recorded verbatim in the PR body. The ack covers these two reasons and no others.
-- next: /prm 179 — watch every run and matrix leg, merge, then close out.
-- worktree: ~/Code/PyAutoLabs-wt/submit-wall-per-cell-throughput
-- repos:
-  - autolens_profiling: feature/submit-wall-per-cell-throughput
-- renamed: 2026-08-26 — worktree root and branch moved off the #175 name to the task's own
-  (`git worktree repair` + `git branch -m`; activate.sh rewritten). worktree_remove derives
-  its path from the TASK NAME, so the old mismatch would have stranded the close-out.
-  Rebased onto origin/main (post-#178); 0 behind, no conflicts.
-- sole-owner-since: 2026-08-26 — log-det-multistart-tag (#175) SHIPPED (PR #178, merge commit
-  11d06e50) and is recorded in complete/2026/08/. It branched off origin/main as
-  feature/log-det-multistart-tag-175 and its files were restored, so this task now solely owns
-  BOTH the worktree ~/Code/PyAutoLabs-wt/log-det-multistart-tag and the branch
-  feature/log-det-multistart-tag. The shared-index commit discipline no longer applies —
-  nothing else is uncommitted there.
-- summary: |
-    RAL job 340576 lost 35 of 39 arms (an overnight A100 block) because
-    submit_phase8b_bijector_a100 justified --time=0:30:00 with an MGE step rate for an array
-    whose arms are mostly knn and delaunay_adapt_split. Measured 2026-08-25: mge 0.117 s/step,
-    knn 2.23 (19x), delaunay_adapt_split 4.83 (41x) -- "6x headroom" was ~8x short for knn,
-    ~16x short for delaunay. Those rates are recorded NOWHERE in the repo and only 11 of 82
-    submits state any wall basis. Fix: scripts/misc/wall/rates.py (curated per-cell table
-    mirroring vram/config.py; lookup RAISES on an unmeasured cell, no nearest-neighbour
-    fallback), a `# WALL-BASIS:` header required on submit_search_*/submit_phase8b_*,
-    check_submits.py gating every cell a submit runs against its own row + its --time, wired
-    into lint.yml; phase8b --time -> 7:00:00 from its SLOWEST cell (6:00:00 was the pre-
-    implementation estimate at 1.4x; the gate's floor for a `rates` row is 1.5x, which
-    needs 22,185 s -- past six hours).
-
 ## results-schema-comparability-guard
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/177
 - issued: 2026-08-26
@@ -66,15 +26,15 @@
   classified in the same repo.
 - worktree: ~/Code/PyAutoLabs-wt/results-schema-comparability-guard
 - prompt: active/results_schema_version_comparison_guard.md
-- parallel-claim: autolens_profiling is ALSO claimed by submit-wall-per-cell-throughput (#176).
-  log-det-multistart-tag (#175) SHIPPED 2026-08-26 (PR #178) and no longer claims the repo.
-  Human-approved 2026-08-26 to run in a SEPARATE worktree rather than fold or serialise — files
-  are disjoint: #176 adds scripts/misc/wall/ and edits hpc/batch_gpu/submit_search_*,
-  hpc/README.md, .github/workflows/lint.yml, test_wall_check_submits.py; THIS task edits
-  scripts/misc/searches/{_metrics,aggregate}.py, scripts/misc/tooling/build_readme.py,
-  scripts/misc/test/ and regenerates the root README.md. (#175 edited
-  scripts/misc/searches/_samplers.py + README + test_searches_log_det_and_nautilus_seed.py —
-  now on main, disjoint from both.) A separate checkout means a separate git index.
+- sole-claimant-since: 2026-08-26 — this task now solely claims autolens_profiling. Both
+  siblings from the job-340576 post-mortem have SHIPPED: log-det-multistart-tag (#175) in
+  PR #178, submit-wall-per-cell-throughput (#176) in PR #179 (merge b4b30ee0), each recorded
+  in complete/2026/08/. The earlier human-approved parallel-worktree arrangement no longer
+  applies — nothing else holds a checkout of this repo.
+- inherited-gate: #176 added `scripts/misc/wall/check_submits.py --check` to lint.yml. THIS
+  task edits scripts/misc/tooling/build_readme.py and regenerates the root README.md, so its
+  PR now runs that gate too. It is inert for this task's diff (it reads hpc/ submits only),
+  but a red wall-check on this PR would be real, not noise.
 - repos:
   - autolens_profiling: feature/results-schema-comparability-guard
 - summary: |
