@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1146 records across 7 buckets.
+1147 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -215,6 +215,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [release-validation-tri-state](2026/08/release-validation-tri-state.md)
 - [release-version-sync-back-to-main](2026/08/release-version-sync-back-to-main.md)
 - [remove-pynufft-legacy-transformer](2026/08/remove-pynufft-legacy-transformer.md)
+- [repo-settings-bash-e-abort](2026/08/repo-settings-bash-e-abort.md)
 - [repo-settings-org-enumeration](2026/08/repo-settings-org-enumeration.md)
 - [repos-sync-target-repo-lint-awareness](2026/08/repos-sync-target-repo-lint-awareness.md)
 - [resolve-border-relocator-hazard](2026/08/resolve-border-relocator-hazard.md) — Reconciled the likelihood hazard instrument after the border-relocator source fix. The resolved backend-diverg…
