@@ -146,7 +146,7 @@ searches. Lands cleanly with graphical_scoping.md's prompt (3).
 
 Same prompt as graphical_scoping.md's (2). 25% of EP runtime is
 prior-transform-bound; ~16% is the underlying `scipy.stats.truncnorm.cdf`.
-A direct erf-based implementation or autoconf-shared JAX-aware helper
+A direct erf-based implementation or autonerves-shared JAX-aware helper
 would knock off ~20% of EP wall time. **Single prompt that covers both
 graphical and EP** — issue once and both scaling stories benefit.
 

@@ -120,7 +120,7 @@ biggest win for scaling.
 `scipy.stats.truncnorm.cdf/ppf` call inside
 `autofit/mapper/prior/truncated_gaussian.py:value_for` with an
 erf-based closed-form (under the trunc bounds) or an
-`autoconf.jax_wrapper`-aware path that uses `jax.scipy.special.erf` /
+`autonerves.jax_wrapper`-aware path that uses `jax.scipy.special.erf` /
 `erfinv` when the consumer is JAX-jitted. Expected fit-time reduction:
 30–35% on any Dynesty workflow that uses TruncatedGaussianPrior heavily
 (this includes most of `autofit_workspace_test` and the EP scaling
@@ -206,9 +206,10 @@ JSON schema is stable.
   `AnalysisFactor`-friendly wrapper. Worth a quick read before
   scoping prompt (1).
 - Decide whether prompt (2) ships as a PyAutoFit-side change (modify
-  `truncated_gaussian.py` directly) or an autoconf-side helper that
+  `truncated_gaussian.py` directly) or an autonerves-side helper that
   both numpy and JAX call into. The dependency-graph note in
-  PyAutoFit's CLAUDE.md says "shared utilities go in autoconf" — lean
-  toward autoconf if the helper is non-trivial.
+  PyAutoFit's AGENTS.md (CLAUDE.md is a one-line import of it) says
+  "Shared utilities (e.g. `test_mode`, `jax_wrapper`) belong in
+  autonerves" — lean toward autonerves if the helper is non-trivial.
 
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

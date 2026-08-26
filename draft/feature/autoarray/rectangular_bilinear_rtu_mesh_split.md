@@ -87,7 +87,7 @@ autolens_profiling#153) — resolve/update that issue as part of this work.
    folding in the queued Enzi-citation docs draft
    (`draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md`).
    Prior configs: add `mesh/rectangular_bilinear_adapt_*.yaml`, rename the
-   RTU yamls to match the new class names (autoconf lowercases keys).
+   RTU yamls to match the new class names (autonerves lowercases keys).
 3. **_test workspace**: likelihood pin scripts
    (`scripts/{imaging,multi_dataset,interferometer}/jax_likelihood/rectangular*.py`
    and siblings) — keep RTU pin scripts alive under the renamed classes
