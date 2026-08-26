@@ -171,7 +171,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/submit_wall_estimates_per_cell_throughput.md">Submit scripts quote an MGE step rate for pixelized cells and get…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/176">issue #176</a> — issued 2026-08-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/submit_wall_estimates_per_cell_throughput.md">Submit scripts quote an MGE step rate for pixelized cells and get…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/176">issue #176</a> — issued 2026-08-26 — awaiting-merge</summary>
 
 ```
 /start_dev active/submit_wall_estimates_per_cell_throughput.md
