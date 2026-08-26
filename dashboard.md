@@ -169,7 +169,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/repo_settings_bash_e_abort.md">repo_settings.yml aborts silently under GitHub's <code>bash -e</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/293">issue #293</a> — issued 2026-08-26 — library-dev</summary>
+<details><summary>📋 <a href="active/repo_settings_bash_e_abort.md">repo_settings.yml aborts silently under GitHub's <code>bash -e</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/293">issue #293</a> — issued 2026-08-26 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/repo_settings_bash_e_abort.md
