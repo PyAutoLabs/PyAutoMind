@@ -8,6 +8,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
+Filed: 2026-08-26
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/176 (issued 2026-08-26)
+Blocked: registered in planned.md — autolens_profiling is claimed by log-det-multistart-tag (#175)
 
 # Submit scripts quote an MGE step rate for pixelized cells and get killed
 
