@@ -435,3 +435,38 @@ autogalaxy_workspace_test#109).
 the wrong end state" and the 2026-08-24 / 2026-08-25 precedents. Left red on
 `autogalaxy_workspace_test` main pending phase 3's call; surfaced by the Heart
 board's `ws_ci` row.
+
+## The `multi_dataset/jax_likelihood/` rotation — three runs, three different victims
+
+Found 2026-08-26 while verifying the occurrence above. Run **32741347675**
+(2026-08-24, merge of PR#112, job `smoke / smoke (3.13)`, job id 97476344536)
+is a **main red that was never recorded here**: 34/35 passed,
+
+```
+scripts/multi_dataset/jax_likelihood/rectangular_mge.py ...   TIMEOUT (300s)
+```
+
+Put the three consecutive `autogalaxy_workspace_test` main occurrences side by
+side and the family stops looking like a set of suspect scripts:
+
+| Run | Date | Leg | Stalled | `mge.py` | `mge_group.py` | `rectangular_mge.py` |
+|---|---|---|---|---|---|---|
+| 32680155872 | 08-24 | 3.12 | `mge.py` | **TIMEOUT** | PASS 42.2s | — |
+| 32741347675 | 08-24 | 3.13 | `rectangular_mge.py` | PASS 16.7s | PASS 39.8s | **TIMEOUT** |
+| 32849006683 | 08-25 | 3.13 | `mge_group.py` | PASS 17.5s | **TIMEOUT** | PASS 20.2s |
+
+Each run stalls **exactly one** member of `multi_dataset/jax_likelihood/`, and
+which member it is rotates. Every script in the table both stalls and passes
+comfortably within 48 hours of itself. Whatever selects the victim is per-run,
+not per-script — which is the strongest form yet of § "It is not one script",
+and it is why a per-script quarantine can never converge: parking the one that
+stalled just makes the next run pick a different one.
+
+### What this costs the Heart board
+
+Of the last five completed `Smoke Tests` runs on `autogalaxy_workspace_test`
+main, three were red on first attempt, all from this stall. Heart's `ws_ci`
+check reads main-HEAD conclusions, so each one is a RED row on the board and a
+Slack `#ci` notification, cleared by hand with a re-run. That treadmill — not
+the lost coverage — is now the stall's main day-to-day cost, and it is what any
+interim mitigation should target.
