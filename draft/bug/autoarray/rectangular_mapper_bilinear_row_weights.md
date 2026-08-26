@@ -122,12 +122,72 @@ Note `PyAutoArray/AGENTS.md`: unit tests are NumPy-only, so `test_autoarray/`
 passing is necessary but not sufficient — the workspace parity scripts are the
 real gate.
 
+## History — it is a regression, and the correct code still exists next door
+
+Traced through full history (`git log -S` on the weight expressions). The
+linear-reproduction test above, run against each historical version:
+
+| version | first appeared | partition | row err | col err |
+|---|---|---|---|---|
+| `fd11b178` original | 2025-06-24 | 1.1e-16 | **0.000000** | **0.000000** |
+| `8f007957` adaptive fork | 2025-09-15 | 1.1e-16 | 0.000000 | **0.999884** |
+| `9b1c91cf` current | 2025-09-23 | 2.2e-16 | **0.999968** | 0.000000 |
+| candidate fix | — | 1.1e-16 | **0.000000** | **0.000000** |
+
+- **2025-06-24** `fd11b178` "rectangular uses intterpolation with JAX support
+  now" introduced the mapper, and it was **correct**: `clip(floor(f), 0, N-2)`,
+  `ix + 1` (never `ceil`), each corner given its own weight.
+- **2025-09-15** `8f007957` "adpative stuff implemented" forked it for the
+  adaptive/CDF meshes and rewrote steps 4-8 with `ceil` and a
+  `delta_up`/`delta_down` form. That mirrored the **columns**, and additionally
+  dropped exactly-integer points entirely (no `1e-12` guard, so all four
+  weights were exactly 0 — partition of unity 1.0 at those points).
+- **2025-09-23** `9b1c91cf` "fixed mappings and weights" rewrote to the current
+  `t_row`/`t_col` form. It **fixed the columns and the dropped-point bug, and
+  broke the rows** — the axis that had been correct. Net: the defect moved from
+  one axis to the other.
+
+So the adaptive path has been mirrored in one axis or the other continuously
+since **2025-09-15** (~11 months), and in the current row-mirrored form since
+**2025-09-23**. It was correct for its first ~3 months.
+
+**The correct implementation is still in the package.** When the adaptive fork
+diverged, the original was left in place for the uniform mesh and survives
+verbatim at
+`autoarray/inversion/mesh/interpolator/rectangular_uniform.py:72-99`
+(`rectangular_mappings_weights_via_interpolation_from`) — it scores 0.000000 on
+both axes. The candidate fix is therefore **not a new scheme**: it restores the
+sibling interpolator's already-shipping formulation to the adaptive path. That
+also explains why Variant C (`RectangularUniform`) passes the eager/jit guard
+while Variant B fails — different interpolator, correct code.
+
+## Affected mesh classes
+
+Everything routing through `InterpolatorRectangular` — i.e. every **adaptive**
+rectangular mesh, all inheriting `interpolator_cls` from
+`RectangularRTUAdaptDensity`:
+
+- `RectangularRTUAdaptDensity`   (kernel-CDF, density-adapted)
+- `RectangularRTUAdaptImage`     (kernel-CDF, image-adapted)
+- `RectangularBilinearAdaptDensity`  (rank-CDF; subclasses RTUAdaptDensity)
+- `RectangularBilinearAdaptImage`    (rank-CDF; subclasses RTUAdaptImage)
+
+**Not** affected — they use different interpolators:
+
+- `RectangularUniform` → `InterpolatorRectangularUniform` (the correct original)
+- `Delaunay` → `InterpolatorDelaunay`; `DelaunayNN` → `InterpolatorDelaunayNN`
+- `KNearestNeighbor` / `KNNBarycentric` → `InterpolatorKNearestNeighbor`
+
+Note the class names are recent (`RectangularSplineAdapt*` 2026-04-22,
+`RectangularKernelAdapt*` 2026-07-10, consolidated 2026-07-23, split into
+`Bilinear`/`RTU` 2026-08-21) but every one of them inherits the 2025-09-23 code.
+
 ## Task
 
-1. Decide whether the corrected pairing is the intended geometry. The mirroring
-   is consistent, so an argument that the current behaviour is deliberate would
-   have to explain the linear-reproduction failure above; absent that, treat it
-   as a bug.
+1. ~~Decide whether the corrected pairing is the intended geometry.~~
+   **Answered by the history above**: correct at introduction, broken by the
+   adaptive fork, and the correct formulation still ships for the uniform mesh
+   in the same package. Treat it as a regression, not a design choice.
 2. Land the fix in PyAutoArray with a regression test asserting linear
    reproduction (`sum_i w_i * node_i == g`) and continuity across an exactly
    integer `grid_over_index` — both of which the current code fails.
@@ -140,5 +200,27 @@ real gate.
 
 - Widen `assert_eager_jit_consistent`. At `rtol=1e-10` it caught a real library
   bug; that is exactly its job.
-- Regenerate the `EXPECTED_LOG_*` constants before deciding item 1 — that would
-  bake the mirrored geometry in as the reference.
+- Regenerate the `EXPECTED_LOG_*` constants before item 1 is signed off — that
+  would bake the mirrored geometry in as the reference.
+- Treat `RectangularUniform`, `Delaunay*` or the KNN meshes as affected. They
+  use different interpolators and are correct; scope the change to
+  `InterpolatorRectangular`.
+
+## Suggested regression test
+
+The bug survived ~11 months and one "fix" commit because nothing asserted the
+interpolation property itself. A test that would have caught every broken
+version — and that `rectangular_uniform.py` also passes:
+
+```python
+# for random queries AND exactly-integer ones
+mappings, weights = adaptive_rectangular_mappings_weights_via_interpolation_from(...)
+assert np.allclose(weights.sum(axis=1), 1.0)              # partition of unity
+node_ix, node_iy = n - mappings // n, mappings % n         # linear reproduction
+assert np.allclose((weights * node_ix).sum(axis=1), grid_over_index[:, 0])
+assert np.allclose((weights * node_iy).sum(axis=1), grid_over_index[:, 1])
+```
+
+Add a continuity case too: the cell assignment either side of an exactly
+integer `grid_over_index` must agree in the limit — that is the determinism
+property the eager/jit guard was implicitly testing from three repos away.
