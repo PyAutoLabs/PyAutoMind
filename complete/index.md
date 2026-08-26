@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1141 records across 7 buckets.
+1142 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -159,6 +159,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [numerical-inversion-failures](2026/08/numerical-inversion-failures.md)
 - [one-tap-dashboard-rollout](2026/08/one-tap-dashboard-rollout.md) — the pattern (a generated page + one-tap 📋 copy-for-Claude payloads, phone
 - [optional-dependency-skip-guards](2026/08/optional-dependency-skip-guards.md) — `test_nautilus.py::test__single_core_builds_no_pool` had no skip guard
+- [organ-repo-spelling-splits](2026/08/organ-repo-spelling-splits.md) — closed on ship
 - [organism-board-final-readmes](2026/08/organism-board-final-readmes.md) — close on record
 - [paper-management-pipeline](2026/08/paper-management-pipeline.md) — auto-closed on merge
 - [per-parameter-step-scaling](2026/08/per-parameter-step-scaling.md)
