@@ -44,6 +44,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [potential-correction-validation-artifacts](#potential-correction-validation-artifacts)
 - [pyautomind/stash-pre-sync-2026-07-06](#pyautomindstash-pre-sync-2026-07-06)
 - [pyautohands/pre-2023-history](#pyautohandspre-2023-history)
+- [pyautomind/claude-session-branches-2026-08-26-batch](#pyautomindclaude-session-branches-2026-08-26-batch)
 
 <!-- toc:end -->
 
@@ -325,3 +326,51 @@ One `##` block per item. Fields:
 - sweep-after: never — original project history, void only on explicit human request
 - breaks-if-wrong: loses the entire 2021-2022 development history of PyAutoHands, including 261 commits authored by Richard Hayes and 91 by Jonathan Frawley. Recoverable via `pyauto-gut recover pyautohands-pre-2023-history` (run from the PyAutoGut checkout), then check out the branch to reabsorb.
 - archive-ref: refs/heads/archive/condemned/pyautohands-pre-2023-history on PyAutoGut origin (55da101c, 442 commits) — verified by independent clone-back: fetched tip matches, `rev-list --count` = 442, oldest 7d8743a (2021-02-12), newest 55da101 (2022-11-27). Note: PyAutoBrain `branch_archive.yml` could NOT do this — `PAT_PYAUTOLABS` lacks the `workflow` scope and GitHub rejects any PAT push that introduces `.github/workflows/release.yml`; archived from a local checkout with a `workflow`-scoped token instead.
+
+## pyautomind/claude-session-branches-2026-08-26-batch
+- type: branch
+- locator: 37 `claude/*` session branches on PyAutoLabs/PyAutoMind (2026-06-20 → 2026-08-25)
+- confidence: 0.95
+- reason: abandoned Claude Code session branches, each carrying one or a few prompt-filing commits that never landed. Verified NOT silently merged: none had a PR, and for every branch whose touched paths exist on `main` today, **zero files were byte-identical** — a later session filed a different prompt at the same path, so the path collides but the content does not. Human-authorized batch condemnation 2026-08-26 ("remove nearly all PyAutoMind ones"). The 3 `archive/condemned/*` Gut-transit refs and today's live `claude/gradient-eager-jit-divergence-py313-5dylgx` were excluded.
+- merged: no
+- condemned: 2026-08-26
+- sweep-after: 2026-11-24
+- breaks-if-wrong: loses the unlanded prompt drafts and mind-state edits on those 37 branches. Each is recoverable via `pyauto-gut recover <name>` until voided; names are `pyautomind-<branch-suffix>`.
+- archive-ref: 37 refs under `refs/heads/archive/condemned/pyautomind-*` on PyAutoGut origin — all 37 verified by fresh `ls-remote` SHA match against the pre-delete tips before any deletion. Full branch→SHA map:
+    - `claude/pyautoprompt-docs-review-2af7eg` @ `c7d623618` → `archive/condemned/pyautomind-pyautoprompt-docs-review-2af7eg` (2026-06-20)
+    - `claude/health-agent-implementation-x3z8w6` @ `23165376f` → `archive/condemned/pyautomind-health-agent-implementation-x3z8w6` (2026-06-29)
+    - `claude/weak-package-review-016kv1` @ `75e918799` → `archive/condemned/pyautomind-weak-package-review-016kv1` (2026-07-15)
+    - `claude/rename-pyautobuild-pyautohands-xqn0p4` @ `f80063350` → `archive/condemned/pyautomind-rename-pyautobuild-pyautohands-xqn0p4` (2026-07-18)
+    - `claude/rename-pyautoconf-pyautomerves-i7w9f7` @ `be4ca3f53` → `archive/condemned/pyautomind-rename-pyautoconf-pyautomerves-i7w9f7` (2026-07-18)
+    - `claude/autolens-free-ai-setup-jwpyjy` @ `ae4822372` → `archive/condemned/pyautomind-autolens-free-ai-setup-jwpyjy` (2026-08-01)
+    - `claude/autolens-guard-small-datasets-jaqyxv` @ `d4e4e0dad` → `archive/condemned/pyautomind-autolens-guard-small-datasets-jaqyxv` (2026-08-03)
+    - `claude/health-agent-full-run-myysos` @ `2ebc0f3ae` → `archive/condemned/pyautomind-health-agent-full-run-myysos` (2026-08-05)
+    - `claude/hygiene-agent-run-n9qtd5` @ `89f540454` → `archive/condemned/pyautomind-hygiene-agent-run-n9qtd5` (2026-08-05)
+    - `claude/interferometer-oom-nufft-yyz98z` @ `3e87583b3` → `archive/condemned/pyautomind-interferometer-oom-nufft-yyz98z` (2026-08-05)
+    - `claude/markdown-sigma-min-debt-82rpcb` @ `64a61f697` → `archive/condemned/pyautomind-markdown-sigma-min-debt-82rpcb` (2026-08-07)
+    - `claude/pyautomind-simple-issue-rvfp2b` @ `f6cf6419c` → `archive/condemned/pyautomind-pyautomind-simple-issue-rvfp2b` (2026-08-07)
+    - `claude/wake-up-7c3ua4` @ `2f91a2221` → `archive/condemned/pyautomind-wake-up-7c3ua4` (2026-08-11)
+    - `claude/wake-up-z3y6zi` @ `2d47239ea` → `archive/condemned/pyautomind-wake-up-z3y6zi` (2026-08-15)
+    - `claude/clipper-search-identifier-4cowi2` @ `332890828` → `archive/condemned/pyautomind-clipper-search-identifier-4cowi2` (2026-08-18)
+    - `claude/constantzeroth-regularization-cleanup-k1vd0j` @ `04731a656` → `archive/condemned/pyautomind-constantzeroth-regularization-cleanup-k1vd0j` (2026-08-18)
+    - `claude/multi-galaxy-autolens-package-g1abb3` @ `9a00355c7` → `archive/condemned/pyautomind-multi-galaxy-autolens-package-g1abb3` (2026-08-18)
+    - `claude/wake-up-x5emxb` @ `ca56cd9af` → `archive/condemned/pyautomind-wake-up-x5emxb` (2026-08-19)
+    - `claude/autolens-numba-profiling-32su4s` @ `9795eddb1` → `archive/condemned/pyautomind-autolens-numba-profiling-32su4s` (2026-08-21)
+    - `claude/bilinear-rtu-mesh-docs-pbhsxg` @ `e70134dfa` → `archive/condemned/pyautomind-bilinear-rtu-mesh-docs-pbhsxg` (2026-08-21)
+    - `claude/pyautoarray-community-triage-mh7gnp` @ `14ce1f82b` → `archive/condemned/pyautomind-pyautoarray-community-triage-mh7gnp` (2026-08-21)
+    - `claude/autoarray-pixel-scales-int-tuple-wfxlnj` @ `e69e01a4c` → `archive/condemned/pyautomind-autoarray-pixel-scales-int-tuple-wfxlnj` (2026-08-22)
+    - `claude/community-release-notification-q4ls6e` @ `7f3e6225d` → `archive/condemned/pyautomind-community-release-notification-q4ls6e` (2026-08-22)
+    - `claude/message-log-partition-tuple-shape-p7uylt` @ `466416546` → `archive/condemned/pyautomind-message-log-partition-tuple-shape-p7uylt` (2026-08-22)
+    - `claude/autolens-point-jax-vmap-parity-htyfi1` @ `a2b051444` → `archive/condemned/pyautomind-autolens-point-jax-vmap-parity-htyfi1` (2026-08-23)
+    - `claude/backport-per-script-timeout-r3w1sv` @ `785698b4c` → `archive/condemned/pyautomind-backport-per-script-timeout-r3w1sv` (2026-08-23)
+    - `claude/slowest-smoke-gate-perf-ovsuay` @ `ce2217c56` → `archive/condemned/pyautomind-slowest-smoke-gate-perf-ovsuay` (2026-08-23)
+    - `claude/stale-jax-pin-smoke-g805rn` @ `309d27f1c` → `archive/condemned/pyautomind-stale-jax-pin-smoke-g805rn` (2026-08-23)
+    - `claude/api-drift-ellipse-grid-lines-8sfjjk` @ `dba72e390` → `archive/condemned/pyautomind-api-drift-ellipse-grid-lines-8sfjjk` (2026-08-24)
+    - `claude/cti-ci-standardisation-phase-6-8uqpfd` @ `8abb854dd` → `archive/condemned/pyautomind-cti-ci-standardisation-phase-6-8uqpfd` (2026-08-24)
+    - `claude/pyauto-cti-ci-phase-5-n4idom` @ `332c4513d` → `archive/condemned/pyautomind-pyauto-cti-ci-phase-5-n4idom` (2026-08-24)
+    - `claude/pyautohands-rejects-autocti-bug-vu5ulq` @ `5c0ae8bea` → `archive/condemned/pyautomind-pyautohands-rejects-autocti-bug-vu5ulq` (2026-08-24)
+    - `claude/pynufft-removal-phase-3-ird7b8` @ `15abb314f` → `archive/condemned/pyautomind-pynufft-removal-phase-3-ird7b8` (2026-08-24)
+    - `claude/strong-lensing-papers-2026-6cpv0a` @ `f4865cebc` → `archive/condemned/pyautomind-strong-lensing-papers-2026-6cpv0a` (2026-08-24)
+    - `claude/test-mode-bypass-assertion-ties-jqi2f1` @ `96143497a` → `archive/condemned/pyautomind-test-mode-bypass-assertion-ties-jqi2f1` (2026-08-24)
+    - `claude/loggaussian-prior-support-buv5xe` @ `5dfffb4c3` → `archive/condemned/pyautomind-loggaussian-prior-support-buv5xe` (2026-08-25)
+    - `claude/pyautohands-rejects-autocti-bug-mk1yi9` @ `85f6df2af` → `archive/condemned/pyautomind-pyautohands-rejects-autocti-bug-mk1yi9` (2026-08-25)
