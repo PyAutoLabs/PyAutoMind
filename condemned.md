@@ -46,6 +46,9 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [pyautohands/pre-2023-history](#pyautohandspre-2023-history)
 - [pyautomind/claude-session-branches-2026-08-26-batch](#pyautomindclaude-session-branches-2026-08-26-batch)
 - [pyautohands/2022-era-feature-branches](#pyautohands2022-era-feature-branches)
+- [autolens_profiling/jax-optimizer-tuning](#autolens_profilingjax-optimizer-tuning)
+- [autolens_profiling/multiband-compile-ab](#autolens_profilingmultiband-compile-ab)
+- [autolens_profiling/stash-strip-non-jit-noise](#autolens_profilingstash-strip-non-jit-noise)
 
 <!-- toc:end -->
 
@@ -386,3 +389,36 @@ One `##` block per item. Fields:
 - sweep-after: never — 2022-era project history, void only on explicit human request
 - breaks-if-wrong: `build_tests` loses nothing (fully contained in the `master` archive). `dynamic_scripts` would lose its 9 unique CI commits; recoverable via `pyauto-gut recover pyautohands-feature-dynamic-scripts`.
 - archive-ref: `refs/heads/archive/condemned/pyautohands-feature-dynamic-scripts` on PyAutoGut origin (3f5eaf0, 313 commits) — verified by independent clone-back before the source branches were deleted. `feature/build_tests`: `n/a`, its content is reachable from `archive/condemned/pyautohands-pre-2023-history` (verified `git rev-list --count 55da101c..build_tests` = 0); pre-delete SHA `0c1ad5d`.
+
+## autolens_profiling/jax-optimizer-tuning
+- type: branch
+- locator: `feature/jax-optimizer-tuning` (tip fc270a2, 2 commits ahead, last touched 2026-07-15) on PyAutoLabs/autolens_profiling
+- confidence: 0.95
+- reason: the harness work behind issue #69 ("tune the JAX multi-start optimizers into a standard option"), which was **CLOSED as superseded** on 2026-08-18 (human-confirmed) by the 2026-08-17 inference programme (#134, `results/notes/inference/PROGRAMME.md`, merged via #136/#137). The `learning_rate` axis dissolved into the lr-free MultiStartProdigy; the Sersic lens + Sersic source case was *deliberately dropped* by human decision. Never opened a PR, and the `searches/` tree it edits no longer exists on `main` at all. Mind record: `complete/archive/shelved/jax_optimizer_settings_tuning.md`.
+- merged: no
+- condemned: 2026-08-26
+- sweep-after: 2026-11-26
+- breaks-if-wrong: loses 181 lines of settings-grid/truth-scoring harness across `searches/_samplers.py`, `searches/_setup.py`, `searches/sweep.py` and two `imaging/sersic.py` cells. Recoverable via `pyauto-gut recover autolens-profiling-jax-optimizer-tuning`. Note the layout mismatch: `searches/` is gone from `main`, so a reabsorb is a port, not a merge.
+- archive-ref: `refs/heads/archive/condemned/autolens-profiling-jax-optimizer-tuning` @ `fc270a2ffbf73393f6c1d85b2cb90d7a0e551bc6` on PyAutoGut — verified by independent clone-back (102 commits) before the source branch was deleted.
+
+## autolens_profiling/multiband-compile-ab
+- type: branch
+- locator: `archive/condemned/multiband-compile-ab` (tip 7735151, 3 commits ahead, last touched 2026-07-21) on PyAutoLabs/autolens_profiling
+- confidence: 0.9
+- reason: a jax_compile multi-band A/B experiment (FactorGraphModel vag compile; the finding that `lax.map` scan is the compile killer and pyloop fixes it) that someone had already named into the archive namespace **in the wrong repo** — the archive lives on PyAutoGut, not on the source repo — and never filed a `condemned.md` entry, so nothing pinned it. This entry is that missing record; the payload has been re-homed to the Gut where the namespace actually means something.
+- merged: no
+- condemned: 2026-08-26
+- sweep-after: never — its README carries the lax.map/pyloop compile finding, which is a result rather than spent scaffolding; void only on explicit human request
+- breaks-if-wrong: loses 319 lines — `jax_compile/README.md` (113 lines of experiment write-up), `jax_compile/results/local_cpu/mge.json` measurements, and `instruments/imaging.py` / `searches/_setup.py` harness. Recoverable via `pyauto-gut recover autolens-profiling-multiband-compile-ab`.
+- archive-ref: `refs/heads/archive/condemned/autolens-profiling-multiband-compile-ab` @ `7735151b89147c09d29ec98480fb03fb2bb3d21b` on PyAutoGut — verified by independent clone-back (130 commits) before the source branch was deleted.
+
+## autolens_profiling/stash-strip-non-jit-noise
+- type: stash
+- locator: `stash@{0}` in the autolens_profiling canonical checkout — "On strip-non-jit-noise-add-alma-high-res: strip-noise wip", dated 2026-06-07
+- confidence: 0.95
+- reason: 11 weeks untouched; its base branch `strip-non-jit-noise-add-alma-high-res` no longer exists on origin, and the `likelihood/` scripts it edits are not on `main`'s current tree. The diff is a strip/simplify pass (325 insertions, 778 deletions across 9 likelihood scripts — removing per-channel eager numpy baselines in favour of the JIT loop), not unlanded new work.
+- merged: no
+- condemned: 2026-08-26
+- sweep-after: 2026-11-26
+- breaks-if-wrong: loses the noise-stripping edits to `likelihood/{datacube,imaging,interferometer,point_source}/*.py`. Materialised as a real commit before the drop, per the schema's rule that a manifest merely *pointing* at a stash is worthless once it is dropped. Recoverable via `pyauto-gut recover autolens-profiling-stash-strip-non-jit-noise`.
+- archive-ref: `refs/heads/archive/condemned/autolens-profiling-stash-strip-non-jit-noise` @ `e6e72cc2dfd67a7ae5cb2fff3b0fb0ae3dc56e56` on PyAutoGut — verified by independent clone-back (9 files, 325/778 diff intact) before `git stash drop`.
