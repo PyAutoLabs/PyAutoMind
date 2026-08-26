@@ -1,3 +1,78 @@
+The repo-settings sweep now enumerates the organisation instead of deriving its
+targets from the body map, so a repo inherits "Automatically delete head
+branches" without anyone remembering to register it first.
+
+## Why the body map could not work
+
+PyAutoBrain#290 (merged the same day) had already turned the setting into a
+weekly sweep and removed `/prm`'s remote-delete step — that step was dying on a
+403 in cloud sessions while `git push origin --delete` still printed
+`Everything up-to-date` and exited 0, so every web close-out reported a
+deletion it had not performed.
+
+What #290 left was a source-of-truth problem rather than a bug: **a repo is
+created before anyone registers it in `repos.yaml`**, so the repos most in need
+of the setting were exactly the ones a body-map-derived sweep could not see.
+Nine live org repos were absent from the body map entirely; ten more registered
+ones fell outside `SWEEPABLE_CATEGORIES`. 27 of 44 org repos were swept.
+
+There was no birth-time hook to add instead — verified across all three
+candidates: the four assistants' `start-new-project.md` create a *visiting
+scientist's own* repo under *their* account; the clone conductor has no create
+call (`clone/DESIGN.md:148` still lists repo creation as an open v0 question);
+`/spawn` force-syncs template repos that already exist. Org repos are made by
+hand on github.com.
+
+## What shipped (PyAutoBrain#292, merge 475d292e0)
+
+- `repo_settings.yml` lists non-archived repos under `${{ github.repository_owner }}`
+  from the API, union `--outside-owner` for body-map repos under another account.
+- Scope-aware failure policy: an in-org PATCH refusal is an error, an
+  out-of-org one a `::warning::`. Previously *every* refusal set `failed=1`,
+  which would have reddened the weekly unattended run permanently the first
+  time it reached a personal-account repo.
+- `ORG` / `MODE` moved into the step `env:` rather than interpolated into the
+  shell.
+- `--include-self-sweeping` retired — org enumeration removed its only
+  consumer, and an unused widening flag on a module whose other modes delete
+  refs is a trap. A regression test asserts a stale caller exits 2 rather than
+  silently falling back to the narrow set.
+- `targets()` and `SWEEPABLE_CATEGORIES` untouched: the branch sweep's boundary
+  measured 25 slugs before *and* after. #290's "must not widen" assertion still
+  holds — this bypasses the boundary for one consumer rather than moving it.
+
+## Verification
+
+548 tests pass (baseline measured at 542; 542 − 1 removed + 7 new reconciles
+exactly). Because the workflow had **never executed**, its `run:` block was
+extracted and control-tested against a stubbed `gh` across 7 scenarios,
+including that an empty org listing *refuses* rather than reporting a clean
+sweep. Live enumeration returns 44 non-archived repos. The tenant-firewall
+check was proven non-vacuous by injecting a deliberate instance-fact leak
+(went RED naming file and line) and reverting.
+
+**The change validated itself on its own merge:** GitHub auto-deleted
+`feature/repo-settings-org-enumeration` when #292 landed, confirmed by
+`git ls-remote` returning nothing for the ref.
+
+All 46 live repos (44 org + 2 personal) had already been PATCHed to `true` by
+hand while filing, so the sweep's first real run should report all-already-on.
+
+## Shipped over a red Heart
+
+Heart was RED on `release validation FAILED` (`integrate:fail`,
+v2026.8.25.1.dev73701), standing since 2026-08-23 and unrelated to this diff.
+Shipped on an explicit human override recorded in the PR body — not the
+corrective-PR exception. That RED remains open and unowned.
+
+## Follow-up
+
+The workflow still has never run. Dispatch `mode: audit` before `apply`; a
+`refused (needs admin)` row is `PAT_PYAUTOLABS` scope, a human decision rather
+than a retry.
+
+## Original prompt
+
 # The repo-settings sweep should enumerate the org, not the body map
 
 Type: feature
