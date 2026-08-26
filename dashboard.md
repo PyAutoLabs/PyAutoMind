@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 134 |
+| [Backlog](#backlog) (`draft/`) | 133 |
 
 ## Start here
 
@@ -247,7 +247,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**133** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -777,7 +777,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 17</summary>
+<summary><b>bug</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
 
@@ -1233,7 +1233,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-07-31 | filed | <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> |
 | 2026-07-31 | filed | <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus…</a> |
 | 2026-07-30 | filed | <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> |
-| 2026-07-30 | filed | <a href="draft/bug/pyautohands/generate_rejects_autocti_after_deleting_notebooks.md"><code>generate.py</code> deletes notebooks/ before rejecting an unknown project</a> |
+| 2026-07-30 | filed | <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> |
 
 </details>
 
