@@ -1,3 +1,123 @@
+## gradient-eager-jit-divergence-py313 (eager/jit divergence root-caused to an 11-month PyAutoArray mapper regression — SHIPPED)
+
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/279
+- completed: 2026-08-26
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/490 (merged 158db384823687aef636882e14354241abbdc210)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/280
+- summary: |
+    `interferometer/jax_grad/gradient.py` tripped `assert_eager_jit_consistent`
+    (eager -3164.0196392095145 vs jitted -3164.021216643465). The filed prompt's
+    own investigation attributed this to a PDIP branch flip in the positive-only
+    NNLS solve, on Python 3.13 only. Building both Python legs from source and
+    reproducing the failure bit-for-bit refuted that on three counts, and the
+    real cause turned out to be a mirrored-bilinear-weights regression in
+    PyAutoArray's adaptive rectangular mapper that had been live for ~11 months.
+- refuted: |
+    1. NOT 3.13-only. Python 3.12 fails identically on the same host, so the CI
+       split was runner hardware (fused reduction association at ~1e-16), not
+       CPython. Running both legs on one machine isolated this in a way CI
+       structurally cannot.
+    2. NOT a PDIP branch flip. `pdip_iter` is identical eager vs jit (9/9, 8/8,
+       10/10), and the gap is bit-identical to the last digit across five
+       (nnls_solver_tol, nnls_max_iter) policies — which alone proves no solver
+       setting can touch it.
+    3. Therefore the prompt's preferred fix (pin solver policy via al.Settings)
+       was dead on arrival. The `(Q, q)` handed to the solver already differed.
+- root-cause: |
+    Two coupled defects in
+    `autoarray/inversion/mesh/interpolator/rectangular.py`:
+    (1) mirrored row weights — `t_row` is measured FROM `ix_down`, so `ix_up`
+    must carry `t_row`; they were swapped (columns were correctly paired);
+    (2) `ix_up = ceil(g)` collapsed onto `ix_down` wherever `g` was exactly
+    integral, which `transform()`'s closing `clip(F_q, 0, 1)` produces
+    SYSTEMATICALLY. One ULP in the traced grid then jumped a point's weight a
+    whole mesh row: 2 of 11312 cell indices flipped, `[18 19 18 19]` ->
+    `[18 19 26 27]`, moving 0.512 of weight. That is the entire 1.577e-3.
+- history: |
+    Both are regressions, dated by `git log -S` plus a linear-reproduction test
+    run against each historical version:
+      2025-06-24 fd11b178  original       row 0.000000  col 0.000000  CORRECT
+      2025-09-15 8f007957  adaptive fork  row 0.000000  col 0.999884  cols mirrored
+      2025-09-23 9b1c91cf  current        row 0.999968  col 0.000000  rows mirrored
+                 the fix                  row 0.000000  col 0.000000  CORRECT
+    The mapper was correct for its first ~3 months. The adaptive fork mirrored
+    the columns and dropped exactly-integer points entirely; "fixed mappings and
+    weights" then fixed the columns and broke the rows. The correct formulation
+    never left the package — it survives verbatim for the uniform mesh at
+    `interpolator/rectangular_uniform.py:72-99`, which is why RectangularUniform
+    (Variant C) passes the guard while the adaptive meshes fail, and what the
+    fix restores.
+- affected-meshes: RectangularRTUAdaptDensity, RectangularRTUAdaptImage,
+    RectangularBilinearAdaptDensity, RectangularBilinearAdaptImage (all inherit
+    InterpolatorRectangular). NOT RectangularUniform, Delaunay, DelaunayNN,
+    KNearestNeighbor, KNNBarycentric.
+- why-it-survived: |
+    Nothing asserted the interpolation property itself. Partition of unity held
+    to 2.2e-16 in every broken version, so plausibility checks passed; the
+    mirroring was CONSISTENT, so the surface stayed smooth and every FD/AD
+    gradient check passed; and with a pixelized source the inversion SOLVES for
+    the source values, so a geometrically wrong mapping is still a valid basis
+    and likelihood is nearly blind to it. It took a 1-ULP eager/jit divergence
+    three repos away to expose it.
+- evidence: |
+    Interpolation accuracy against ground truth, querying where the traced
+    points are, with RectangularUniform as a bit-identical control (max error,
+    smooth function): Bilinear before/after at n=64 0.1266 -> 0.0260; RTU
+    0.1068 -> 0.0034 (~31x). RTU is the LARGEST beneficiary, ruling out a
+    compensating flip. Control converges at ~O(h^2) and is unchanged.
+    On a physical model (no_lens_light dataset, truth IsothermalSph ER=1.6,
+    reg.Constant, fp64) the fix RAISES the log likelihood — RTU 1792.72 ->
+    1797.88, Bilinear 1791.40 -> 1798.66 — and improves source recovery against
+    the known true source (RTU Pearson r 0.408 -> 0.461; Bilinear 0.342 ->
+    0.469). The Bayesian evidence moves the other way, because the
+    regularization and log-determinant terms shift independently of the fit;
+    that is why the FOM (which for a pixelization IS the evidence) is not the
+    metric to judge this on.
+- regression-tests: |
+    Two added, both demonstrated FAILING on the previous implementation:
+    linear reproduction (fails by ~1.0 in the row axis) and continuity of the
+    cell assignment across integer boundaries (fails with a 5.999 jump — a
+    two-row flip). `rectangular_uniform.py` passes both as-is.
+- workspace-changes: |
+    8 hardcoded assertion constants regenerated from measurement, chosen by a
+    PAIRED 16-script sweep (fixed build vs a venv pinned to main's
+    interpolator): 8 regenerate (passed before, moved by the fix), 6 unchanged
+    (all four interferometer/jax_likelihood rectangular scripts,
+    misc/jax_assertions/sparse_operators, interferometer/datacube/rectangular),
+    2 skipped (imaging/jax_likelihood/rectangular_{mge,mge_rtu} hang to the
+    timeout on BOTH builds — the known jax vmap compile stall, so their
+    constants were never regenerated from a run that did not complete).
+    The `NEEDS_FIX` park on interferometer/jax_grad/gradient.py was removed and
+    its now-false narrative comment rewritten.
+- validation: |
+    pytest test_autoarray/ 1222 passed on Python 3.12 AND 3.13; PyAutoArray#490
+    CI green on all three checks (3.12, 3.13, nojax).
+    interferometer/jax_grad/gradient.py green on both legs, all four variants,
+    all FD/AD checks, all gradients live, eager/jit gap EXACTLY 0.0 with
+    assert_eager_jit_consistent left untouched at rtol=1e-10 (3.13 83s, 3.12
+    86s against the 300s cap). All nine touched/un-parked workspace scripts exit
+    0. Stack built from source at the versions of retime run 32741386752.
+- not-done: |
+    `KERNEL_CDF_DEFAULT_KNOTS = 64` does not scale with `mesh_pixels`, so the
+    knot-table inverse placing mesh nodes drifts from the exact forward
+    transform as the mesh refines (max |g_roundtrip - ix| 0.0055 / 0.0238 /
+    0.101 index units at n=16/32/64). Harmless at production mesh sizes;
+    recorded in #490 and in the follow-up audit prompt, not fixed here.
+    autogalaxy_workspace_test needs no changes — it asserts jax-vs-numpy
+    parity, so both backends shift together.
+- follow-ups-filed: |
+    draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md —
+      one systematic pass over every mesh interpolator using the five checks
+      that actually discriminated here.
+    draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md —
+      a speed-up on a validation script is not done until that script's lens
+      model is known to be physical and fitting; rectangular_rtu.py evaluates at
+      a mass centre 0.3" from truth, and the jax_test dataset carries lens light
+      the mass-only models have no component for.
+- release: not performed; the merged PRs remain in the pending-release queue.
+
+## Original prompt
+
 # interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only
 
 Type: bug

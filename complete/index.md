@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1138 records across 7 buckets.
+1139 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -89,6 +89,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [fits-header-comment-literal-list](2026/08/fits-header-comment-literal-list.md) — small, single-repo, cosmetic
 - [folder-list-ref-drift-sweep](2026/08/folder-list-ref-drift-sweep.md) — Fixed the 12 real defects from the 2026-08-19 hygiene refs scan — 2 autoCTI_workspace/output casing refs, 2 ho…
 - [frozen-lane-counter](2026/08/frozen-lane-counter.md) — Added a third disjoint lane counter to the multi-start gradient search
+- [gradient-eager-jit-divergence-py313](2026/08/gradient-eager-jit-divergence-py313.md) — eager/jit divergence root-caused to an 11-month PyAutoArray mapper regression — SHIPPED
 - [group-data-preparation-readme](2026/08/group-data-preparation-readme.md)
 - [hands-hygiene-leftovers](2026/08/hands-hygiene-leftovers.md)
 - [hands-raw-string-docstring-prefix](2026/08/hands-raw-string-docstring-prefix.md) — closed on merge
