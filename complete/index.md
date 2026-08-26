@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1143 records across 7 buckets.
+1144 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -20,6 +20,7 @@ _(curate hard-won records here — survives regeneration.)_
 
 - [actionable-health-board](2026/08/actionable-health-board.md) — closed on ship
 - [active-prompt-orphan-triage](2026/08/active-prompt-orphan-triage.md)
+- [api-drift-ellipse-grid-lines](2026/08/api-drift-ellipse-grid-lines.md)
 - [aplt-output-drift-remaining-repos](2026/08/aplt-output-drift-remaining-repos.md)
 - [arcticpy-install-standardisation](2026/08/arcticpy-install-standardisation.md)
 - [arxiv-inbox-pat-scope](2026/08/arxiv-inbox-pat-scope.md) — the nightly arXiv digest's inbox-filing step silently lost every paper it
