@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 136 |
+| [Backlog](#backlog) (`draft/`) | 135 |
 
 ## Start here
 
@@ -255,7 +255,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**136** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -472,163 +472,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautomind/repos-sync-config-stamper.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>bug</b> — 19</summary>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> — autofit · small · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autofit/loggaussian_prior_declares_own_support.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/howtogalaxy/small_api_drift_ellipse_and_plot_grid_lines.md">HowToGalaxy small API drifts: ellipse kwargs + plot_grid_lines (parked NEEDS_FIX)</a> — howtogalaxy · small · supervised · normal</summary>
-
-```
-/start_dev draft/bug/howtogalaxy/small_api_drift_ellipse_and_plot_grid_lines.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautohands/generate_rejects_autocti_after_deleting_notebooks.md"><code>generate.py</code> deletes notebooks/ before rejecting an unknown project</a> — pyautohands · small · supervised · normal</summary>
-
-```
-/start_dev draft/bug/pyautohands/generate_rejects_autocti_after_deleting_notebooks.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md">Three <code>jax_likelihood</code> pins are stale by ~1.24e-4 and fail the smoke gate…</a> — workspaces · small · supervised · normal</summary>
-
-```
-/start_dev draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a> — health_fixes · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/health_fixes/release_timeout_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a> — priors · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/jax_likelihood_smoke_pins_stale.md">autolens_workspace_test jax_likelihood pins: 4 scripts fail smoke on main</a> — autolens · low · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens/jax_likelihood_smoke_pins_stale.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautomind/status_sh_repos_missing_source.md">status.sh --repos sources a file that no longer exists</a> — pyautomind · small · supervised · low</summary>
-
-```
-/start_dev draft/bug/pyautomind/status_sh_repos_missing_source.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a> — autoarray · medium · human-required · low</summary>
-
-```
-/start_dev draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — pyautolens · medium · supervised · low</summary>
-
-```
-/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation integrate leg</a> — autolens</summary>
-
-```
-/start_dev draft/bug/autolens/interferometer_release_leg_oom.md
 ```
 
 </details>
@@ -942,6 +785,155 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
+<summary><b>bug</b> — 18</summary>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> — autofit · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/loggaussian_prior_declares_own_support.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/howtogalaxy/small_api_drift_ellipse_and_plot_grid_lines.md">HowToGalaxy small API drifts: ellipse kwargs + plot_grid_lines (parked NEEDS_FIX)</a> — howtogalaxy · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/howtogalaxy/small_api_drift_ellipse_and_plot_grid_lines.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautohands/generate_rejects_autocti_after_deleting_notebooks.md"><code>generate.py</code> deletes notebooks/ before rejecting an unknown project</a> — pyautohands · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/pyautohands/generate_rejects_autocti_after_deleting_notebooks.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md">Three <code>jax_likelihood</code> pins are stale by ~1.24e-4 and fail the smoke gate…</a> — workspaces · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a> — health_fixes · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/health_fixes/release_timeout_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/z_features.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/jax_likelihood_smoke_pins_stale.md">autolens_workspace_test jax_likelihood pins: 4 scripts fail smoke on main</a> — autolens · low · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens/jax_likelihood_smoke_pins_stale.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a> — autoarray · medium · human-required · low</summary>
+
+```
+/start_dev draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — pyautolens · medium · supervised · low</summary>
+
+```
+/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation integrate leg</a> — autolens</summary>
+
+```
+/start_dev draft/bug/autolens/interferometer_release_leg_oom.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>docs</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
@@ -1220,13 +1212,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-21 | filed | <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> |
 | 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md">Numba CPU likelihood phase 2: kernel-CDF numba fast path (the 49-88%…</a> |
 | 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution +…</a> |
-| 2026-08-19 | filed | <a href="draft/bug/pyautomind/status_sh_repos_missing_source.md">status.sh --repos sources a file that no longer exists</a> |
+| 2026-08-19 | filed | <a href="draft/bug/autolens/jax_likelihood_smoke_pins_stale.md">autolens_workspace_test jax_likelihood pins: 4 scripts fail smoke on…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-19 | filed | <a href="draft/bug/autolens/jax_likelihood_smoke_pins_stale.md">autolens_workspace_test jax_likelihood pins: 4 scripts fail smoke on…</a> |
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 | 2026-08-19 | issued | <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first…</a> |
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
@@ -1236,12 +1227,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
 | 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
+| 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 | 2026-08-17 | filed | <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> |
 | 2026-08-16 | filed | <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> |
 | 2026-08-14 | filed | <a href="draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md">Three <code>jax_likelihood</code> pins are stale by ~1.24e-4 and fail the smoke…</a> |
@@ -1251,12 +1242,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 | 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 | 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
+| 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
 | 2026-08-05 | filed | <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> |
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never…</a> |
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of…</a> |
@@ -1266,6 +1257,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-03 | filed | <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431…</a> |
 | 2026-07-31 | filed | <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation…</a> |
 | 2026-07-31 | filed | <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> |
+| 2026-07-31 | filed | <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus…</a> |
 
 </details>
 
