@@ -40,6 +40,58 @@ py312_ready() {
         && "$VENV/bin/python" -c 'import pytest, yaml, xdist' >/dev/null 2>&1
 }
 
+# Which interpreter will this tool actually run on?
+#
+# Not "what does its shebang say". The hook's own shims are `#!/bin/sh` plus
+# `exec "<venv>/bin/<tool>"` wrappers — deliberately, because a symlink loses
+# the venv — so sniffing `pytest`'s shebang answered `/bin/sh`, which is not an
+# interpreter that can be asked a version. The probe then reported "interpreter
+# undetermined" and, worse, SKIPPED the import check below: the check added
+# precisely because a 3.12 pytest that cannot import PyYAML fails collection in
+# a way that reads like broken source. So the two halves of the same fix
+# cancelled — the wrapper that keeps the venv made the check that verifies the
+# venv unreachable, and the session reported healthy either way.
+#
+# Follow the exec target, then sniff that.
+resolve_interpreter() {
+    local path="$1" hops=0 shebang target
+    while [ -n "$path" ] && [ "$hops" -lt 10 ]; do
+        shebang="$(head -c 256 "$path" 2>/dev/null | sed -n '1s|^#!\([^ ]*\).*|\1|p')"
+        case "$shebang" in
+            */sh|*/bash)
+                target="$(sed -n 's|^exec "\([^"]*\)".*|\1|p' "$path" 2>/dev/null | head -1)"
+                if [ -n "$target" ] && [ -x "$target" ] && [ "$target" != "$path" ]; then
+                    path="$target"; hops=$((hops + 1)); continue
+                fi
+                ;;
+        esac
+        printf '%s' "$shebang"
+        return 0
+    done
+}
+
+# A repo declares deps beyond the base set in .claude/session-python.txt; the
+# hook installs them and stamps a marker keyed to the file's checksum. Report
+# per repo, because the failure they cause names a missing module or a missing
+# binary and never says "environment" — and because a session that bootstrapped
+# through this script runs one repo's hook unless it fans out (see below).
+extras_state() {
+    local extras repo marker root rc=0
+    root="$(dirname "$MIND_DIR")"
+    for extras in "$root"/*/.claude/session-python.txt; do
+        [ -r "$extras" ] || continue
+        repo="$(basename "$(dirname "$(dirname "$extras")")")"
+        marker="$VENV/.extras-$(cksum <"$extras" | tr -d ' /')"
+        if [ -e "$marker" ]; then
+            say "$repo extras: installed"
+        else
+            say "$repo extras: declared but NOT installed — run this script with no arguments"
+            rc=1
+        fi
+    done
+    return "$rc"
+}
+
 shallow_repos() {
     local root repo out=""
     root="$(dirname "$MIND_DIR")"
@@ -61,6 +113,7 @@ if [ "${1:-}" = "--check" ]; then
     else
         say "clones: full history"
     fi
+    extras_state || rc=1
     # Check the OUTCOME, not the mechanism. The venv on PATH is one way to get
     # there; the hook also repoints /usr/local/bin/python{,3} and rebuilds the
     # uv tools on 3.12, and a session fixed that way is correct even though the
@@ -79,12 +132,18 @@ if [ "${1:-}" = "--check" ]; then
         if [ "$tool" = "python3" ]; then
             interp="$path"
         else
-            interp="$(head -c 256 "$path" 2>/dev/null | sed -n '1s|^#!\([^ ]*\).*|\1|p')"
+            interp="$(resolve_interpreter "$path")"
         fi
         real=""
         [ -n "$interp" ] && [ -x "$interp" ] && real="$("$interp" -c 'import sys; print("%d.%d" % sys.version_info[:2])' 2>/dev/null)"
         if [ -z "$real" ]; then
-            say "$tool: $path (interpreter undetermined)"
+            # A compiled tool (ruff) has no interpreter to disagree with CI
+            # about; say so rather than leaving a blank that reads like a fault.
+            if [ "$(head -c 2 "$path" 2>/dev/null)" = "#!" ]; then
+                say "$tool: $path (interpreter undetermined)"
+            else
+                say "$tool: $path (native binary — no interpreter)"
+            fi
         elif [ "$real" = "3.12" ]; then
             # The right VERSION is not the same as a usable tool. uv installs
             # each tool in its own isolated environment, so a 3.12 pytest can
@@ -123,6 +182,26 @@ CLAUDE_PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$(dirname "$MIND_DIR")}" "$HOOK" || {
     say "WARNING: bootstrap incomplete; the session may be on the container's python"
     exit 0
 }
+
+# Then every OTHER organ's own copy of the hook. A repo's declared deps are read
+# from the repo whose hook is RUNNING, and the canonical hook above derives that
+# from its own path — PyAutoMind. So a session bootstrapped through this script
+# installed PyAutoMind's declared deps and nobody else's, which is the whole
+# multi-repo case. Measured: PyAutoHands declares `ipynb-py-convert` + `Pillow`,
+# and without them 14 of its 406 tests fail on a missing module or a missing
+# binary, in a session whose bootstrap said it had succeeded.
+#
+# This is what the workspace-root fan-out does where it exists — but it is
+# written INTO a container, and every first session in a fresh container is one
+# the fan-out has never run in. Each hook is idempotent (~0.2s warm), so doing it
+# here unconditionally costs about a second and removes the dependency.
+root="$(dirname "$MIND_DIR")"
+for repo in "$root"/*/; do
+    [ "${repo%/}" = "$MIND_DIR" ] && continue
+    hook="${repo}.claude/hooks/session-start.sh"
+    [ -x "$hook" ] || continue
+    CLAUDE_PROJECT_DIR="${repo%/}" "$hook" || say "WARNING: ${repo%/} hook failed"
+done
 
 # Make the fix apply to THIS process tree too, not only to shells the session
 # starts after the env file is read. A caller that sources us gets the PATH; a

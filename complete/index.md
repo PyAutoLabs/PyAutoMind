@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1148 records across 7 buckets.
+1149 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -144,6 +144,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [missing-auto-simulate-guards](2026/08/missing-auto-simulate-guards.md)
 - [mobile-performance-review](2026/08/mobile-performance-review.md)
 - [mobile-performance-review-2](2026/08/mobile-performance-review-2.md)
+- [mobile-performance-review-3](2026/08/mobile-performance-review-3.md)
 - [multi-dataset-jax-likelihood-xla-stall](2026/08/multi-dataset-jax-likelihood-xla-stall.md) — filed 2026-08-22 after `multi_dataset/jax_likelihood/mge.py` was parked
 - [multi-start-auto-convergence-real-search](2026/08/multi-start-auto-convergence-real-search.md) — `scripts/jax_assertions/multi_start_gradient_auto_convergence.py` failed
 - [multistart-gradient-resume-fom-sanity-check](2026/08/multistart-gradient-resume-fom-sanity-check.md)

@@ -459,3 +459,223 @@ def test_check_fails_a_pytest_that_has_the_right_version_but_cannot_import(tmp_p
     assert "pytest: 3.12 OK" not in r.stderr, r.stderr
     assert "cannot import: yaml" in r.stderr, r.stderr
     assert r.returncode != 0
+
+
+# --------------------------------------------------------------------------
+# 6. Everything else the venv owns
+#
+# `python3` and `pytest` each get their own shim, so both survive a session
+# whose PATH never learns about the venv — and a multi-repo session's PATH never
+# does, because the env file that would export it is written by Claude Code
+# around a hook it does not register. Nothing else in $VENV/bin survived.
+#
+# Measured on PyAutoHands: with `ipynb-py-convert` installed into the venv, five
+# tests still failed with `FileNotFoundError: ipynb-py-convert` — the binary
+# present and unreachable — while `--check` called the session healthy.
+# --------------------------------------------------------------------------
+
+def test_a_venv_console_script_unreachable_on_path_is_shimmed(tmp_path):
+    """A declared dep's console script must be reachable, not merely installed."""
+    venv = _fake_venv(tmp_path)
+    (venv / "bin" / "widget").write_text("#!/bin/sh\necho VENV-WIDGET\n")
+    (venv / "bin" / "widget").chmod(0o755)
+
+    home = tmp_path / "home"
+    shim_dir = home / ".local" / "bin"
+    shim_dir.mkdir(parents=True)
+
+    r = _call_hook_function("point_venv_scripts_at_venv", venv=venv, extra_env={
+        "HOME": str(home), "PATH": f"{shim_dir}:{os.environ['PATH']}"})
+    assert r.returncode == 0, r.stderr
+    assert (shim_dir / "widget").exists(), "the script stayed unreachable"
+    assert str(venv / "bin" / "widget") in (shim_dir / "widget").read_text()
+    assert os.access(shim_dir / "widget", os.X_OK)
+
+
+def test_a_console_script_the_image_owns_is_left_alone(tmp_path):
+    """Same claim policy as `pytest`: a name the image owns is not ours."""
+    venv = _fake_venv(tmp_path)
+    (venv / "bin" / "widget").write_text("#!/bin/sh\necho VENV\n")
+    (venv / "bin" / "widget").chmod(0o755)
+
+    home = tmp_path / "home"
+    (home / ".local" / "bin").mkdir(parents=True)
+    system_dir = tmp_path / "usr-bin"
+    system_dir.mkdir()
+    (system_dir / "widget").write_text("#!/bin/sh\necho DISTRO\n")
+    (system_dir / "widget").chmod(0o755)
+
+    r = _call_hook_function("point_venv_scripts_at_venv", venv=venv, extra_env={
+        "HOME": str(home), "PATH": f"{system_dir}:{os.environ['PATH']}"})
+    assert r.returncode == 0, r.stderr
+    assert (system_dir / "widget").read_text() == "#!/bin/sh\necho DISTRO\n"
+    assert "outside uv's shim dir" in r.stderr, r.stderr
+
+
+def test_the_venvs_own_plumbing_is_not_shimmed(tmp_path):
+    """`python` and `pip` belong to legs 2 and to the venv; `activate` is sourced.
+
+    Shimming `pip` would silently redirect every `pip install` in the session,
+    and an `activate` shim is an executable copy of a file that only works when
+    sourced — a trap, not a fix.
+    """
+    venv = _fake_venv(tmp_path)
+    for name in ("pip", "activate", "python3.12"):
+        (venv / "bin" / name).write_text("#!/bin/sh\necho VENV\n")
+        (venv / "bin" / name).chmod(0o755)
+
+    home = tmp_path / "home"
+    shim_dir = home / ".local" / "bin"
+    shim_dir.mkdir(parents=True)
+
+    r = _call_hook_function("point_venv_scripts_at_venv", venv=venv, extra_env={
+        "HOME": str(home), "PATH": f"{shim_dir}:{os.environ['PATH']}"})
+    assert r.returncode == 0, r.stderr
+    assert not list(shim_dir.iterdir()), sorted(p.name for p in shim_dir.iterdir())
+
+
+# --------------------------------------------------------------------------
+# 7. `--check` must be able to read the hook's own shims
+# --------------------------------------------------------------------------
+
+def _fake_mind(tmp_path):
+    """A stand-in workspace: a repo dir holding this script, with siblings."""
+    mind = tmp_path / "FakeMind"
+    (mind / "scripts").mkdir(parents=True)
+    dest = mind / "scripts" / "session_bootstrap.sh"
+    dest.write_text(BOOTSTRAP.read_text())
+    dest.chmod(0o755)
+    return mind
+
+
+def test_check_resolves_the_interpreter_behind_an_exec_wrapper(tmp_path):
+    """The two halves of the previous fix cancelled each other.
+
+    The hook points `pytest` at the venv with a `#!/bin/sh` + `exec` WRAPPER,
+    because a symlink resolves past `pyvenv.cfg` and loses the venv. `--check`
+    then sniffed that wrapper's shebang, got `/bin/sh`, and reported
+    "interpreter undetermined" — skipping, silently, the import probe added
+    precisely because a 3.12 pytest that cannot import PyYAML fails collection
+    in a way that reads like broken source.
+    """
+    fake_bin = tmp_path / "bin"
+    fake_bin.mkdir()
+    interp = fake_bin / "fake-python3.12"
+    interp.write_text(
+        "#!/bin/sh\n"
+        "case \"$2\" in\n"
+        "  *version_info*) echo '3.12' ;;\n"
+        "  *find_spec*) printf 'yaml' ;;\n"
+        "esac\n"
+    )
+    interp.chmod(0o755)
+    real = fake_bin / "real-pytest"
+    real.write_text(f"#!{interp}\n")
+    real.chmod(0o755)
+    # Exactly what write_venv_shim emits.
+    shim = fake_bin / "pytest"
+    shim.write_text(f'#!/bin/sh\nexec "{real}" "$@"\n')
+    shim.chmod(0o755)
+
+    env = dict(os.environ)
+    env["PATH"] = f"{fake_bin}:{env['PATH']}"
+    r = subprocess.run(["bash", str(BOOTSTRAP), "--check"], capture_output=True,
+                       text=True, env=env, timeout=180)
+
+    assert "interpreter undetermined" not in r.stderr, r.stderr
+    assert "cannot import: yaml" in r.stderr, r.stderr
+
+
+def test_check_names_a_compiled_tool_rather_than_leaving_a_blank(tmp_path):
+    """`ruff` is a native binary; "undetermined" reads like a fault it is not."""
+    fake_bin = tmp_path / "bin"
+    fake_bin.mkdir()
+    ruff = fake_bin / "ruff"
+    ruff.write_bytes(b"\x7fELF\x02\x01\x01\x00not-really-an-elf")
+    ruff.chmod(0o755)
+
+    env = dict(os.environ)
+    env["PATH"] = f"{fake_bin}:{env['PATH']}"
+    r = subprocess.run(["bash", str(BOOTSTRAP), "--check"], capture_output=True,
+                       text=True, env=env, timeout=180)
+    assert "ruff: " in r.stderr
+    assert "native binary" in r.stderr, r.stderr
+
+
+# --------------------------------------------------------------------------
+# 8. Declared deps, per repo
+#
+# The hook reads `.claude/session-python.txt` from the repo whose copy is
+# RUNNING. The bootstrap runs the canonical hook, which derives its repo from
+# its own path — so one repo's deps installed and no one else's, in exactly the
+# multi-repo session that has to use the bootstrap at all.
+# --------------------------------------------------------------------------
+
+def test_check_reports_declared_extras_that_never_installed(tmp_path):
+    mind = _fake_mind(tmp_path)
+    sibling = tmp_path / "FakeHands"
+    (sibling / ".claude").mkdir(parents=True)
+    (sibling / ".claude" / "session-python.txt").write_text("some-package\n")
+
+    env = dict(os.environ)
+    env["PYAUTO_SESSION_VENV"] = str(tmp_path / "venv")
+    r = subprocess.run(["bash", str(mind / "scripts" / "session_bootstrap.sh"), "--check"],
+                       capture_output=True, text=True, env=env, timeout=180)
+    assert "FakeHands extras: declared but NOT installed" in r.stderr, r.stderr
+    assert r.returncode != 0
+
+
+def test_check_is_quiet_once_the_declared_extras_are_installed(tmp_path):
+    mind = _fake_mind(tmp_path)
+    sibling = tmp_path / "FakeHands"
+    (sibling / ".claude").mkdir(parents=True)
+    extras = sibling / ".claude" / "session-python.txt"
+    extras.write_text("some-package\n")
+
+    venv = tmp_path / "venv"
+    venv.mkdir()
+    stamp = subprocess.run(f"cksum <{extras} | tr -d ' /'", shell=True,
+                           capture_output=True, text=True).stdout.strip()
+    (venv / f".extras-{stamp}").touch()
+
+    env = dict(os.environ)
+    env["PYAUTO_SESSION_VENV"] = str(venv)
+    r = subprocess.run(["bash", str(mind / "scripts" / "session_bootstrap.sh"), "--check"],
+                       capture_output=True, text=True, env=env, timeout=180)
+    assert "FakeHands extras: installed" in r.stderr, r.stderr
+
+
+def test_bootstrap_runs_every_sibling_repos_hook(tmp_path):
+    """One repo's hook is not the session's environment.
+
+    PyAutoHands declares `ipynb-py-convert` + `Pillow`; a bootstrap that ran
+    only PyAutoMind's hook left 14 of its tests failing on a missing module or a
+    missing binary, having reported success.
+    """
+    mind = _fake_mind(tmp_path)
+    (mind / "policy").mkdir()
+    hook = mind / "policy" / "session_start_hook.sh"
+    hook.write_text(CANONICAL_HOOK.read_text())
+    hook.chmod(0o755)
+
+    ran = tmp_path / "ran"
+    ran.mkdir()
+    for name in ("FakeHeart", "FakeHands"):
+        sibling = tmp_path / name
+        (sibling / ".claude" / "hooks").mkdir(parents=True)
+        stub = sibling / ".claude" / "hooks" / "session-start.sh"
+        stub.write_text(f'#!/bin/sh\ntouch "{ran}/{name}"\n')
+        stub.chmod(0o755)
+
+    env = dict(os.environ)
+    env.update({
+        "CLAUDE_CODE_REMOTE": "true",
+        "PYAUTO_SESSION_SKIP_PYTHON": "1",
+        "PYAUTO_SESSION_VENV": str(tmp_path / "venv"),
+    })
+    env.pop("CLAUDE_ENV_FILE", None)
+    r = subprocess.run(["bash", str(mind / "scripts" / "session_bootstrap.sh")],
+                       capture_output=True, text=True, env=env, timeout=180)
+    assert r.returncode == 0, r.stderr
+    assert (ran / "FakeHeart").exists(), r.stderr
+    assert (ran / "FakeHands").exists(), r.stderr

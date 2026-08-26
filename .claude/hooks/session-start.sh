@@ -274,6 +274,48 @@ point_pytest_at_venv() {
     done
 }
 
+# 2c. Every OTHER console script the venv owns.
+#
+# `pytest` and `python3` survive without the venv on PATH because 2 and 2b give
+# each one its own shim. Nothing else does — and PATH is exactly what a
+# multi-repo session never gets, because the env file that exports it is written
+# by Claude Code around a hook it never registers (see leg 5). So a dependency
+# declared in `.claude/session-python.txt` that ships a CONSOLE SCRIPT rather
+# than an importable module was installed into the venv and then invisible.
+#
+# Measured, not hypothetical: PyAutoHands shells out to `ipynb-py-convert`, and
+# with the package installed its suite still failed five tests with
+# `FileNotFoundError: ipynb-py-convert` — the binary sitting in $VENV/bin,
+# unreachable, while `--check` called the session healthy. A missing binary and
+# an unreachable one are the same symptom, and neither says "environment".
+#
+# The claim policy is 2b's, because the reasoning is 2b's: a name we can reach
+# only through uv's shim dir or not at all is ours to provide; a name the image
+# owns elsewhere is not ours to overwrite.
+point_venv_scripts_at_venv() {
+    local shim_dir="${HOME}/.local/bin" entry name path
+    [ -d "$VENV/bin" ] || return 0
+    mkdir -p "$shim_dir" 2>/dev/null || return 0
+    for entry in "$VENV"/bin/*; do
+        [ -f "$entry" ] && [ -x "$entry" ] || continue
+        name="$(basename "$entry")"
+        case "$name" in
+            # python/pip are legs 2 and the venv's own plumbing; pytest is 2b.
+            # The activate family is meant to be sourced, never executed.
+            python*|pip*|pytest|py.test|activate*|deactivate*|*.bat|*.ps1|*.csh|*.fish|*.nu) continue ;;
+        esac
+        path="$(command -v "$name" 2>/dev/null)" || path=""
+        case "$path" in
+            "$VENV"/*) continue ;;
+            "") ;;
+            "$shim_dir"/*) ;;
+            *) log "WARNING: $name resolves to $path, outside uv's shim dir — left alone"; continue ;;
+        esac
+        write_venv_shim "$shim_dir/$name" "$entry" \
+            && log "$shim_dir/$name -> $entry (venv console script)"
+    done
+}
+
 # 3. The uv-managed tools — rebuilt on 3.12 only where they are not already.
 #
 # Pinned to the version already installed: this hook changes the INTERPRETER a
@@ -434,6 +476,7 @@ if ensure_venv; then
     point_system_default
     retool_uv_tools
     point_pytest_at_venv
+    point_venv_scripts_at_venv
     # Every repo in the session registers this hook, so the second copy must not
     # prepend the venv a second time.
     if [ -n "${CLAUDE_ENV_FILE:-}" ] && ! grep -qs 'PYAUTO_SESSION_PY312=' "$CLAUDE_ENV_FILE"; then
