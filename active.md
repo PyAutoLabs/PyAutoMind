@@ -21,6 +21,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag
 - repos:
+  - autolens_profiling: feature/log-det-multistart-tag
 - summary: |
     Reproduced on clean main: multi_start_unique_tag returns an identical tag for
     cholesky and slogdet arms, so the second resumes the first's .completed fit
