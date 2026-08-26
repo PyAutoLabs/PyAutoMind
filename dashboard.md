@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 132 |
+| [Backlog](#backlog) (`draft/`) | 133 |
 
 ## Start here
 
@@ -247,7 +247,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**132** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**133** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -1375,7 +1375,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Intermittent XLA compile stall in the JAX vmap likelihood path</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Intermittent XLA compile stall in the JAX vmap likelihood path</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Intermittent XLA compile stall in the JAX vmap likelihood path</b> — ledger: `draft/bug/ci/jax_vmap_jit_compile_stall.md` — CLOSED AS PARTIAL 2026-08-23 — record complete/2026/08/jax-compile-stall-slow-vs-stall-audit.md</summary>
 
@@ -1397,6 +1397,14 @@ Continue the 'Intermittent XLA compile stall in the JAX vmap likelihood path' ep
 
 ```
 /start_dev draft/bug/ci/jax_vmap_jit_compile_stall.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/ci/smoke_runner_retry_on_timeout.md">Retry a timed-out script once in the shared runner, before failing…</a> — ci · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/ci/smoke_runner_retry_on_timeout.md
 ```
 
 </details>
