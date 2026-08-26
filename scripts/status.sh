@@ -5,21 +5,33 @@
 # active.md / planned.md / the complete/ records.
 #
 # Usage:
-#   bash PyAutoMind/scripts/status.sh [--full | --repos]
+#   bash PyAutoMind/scripts/status.sh [--full]
 #
 # Without args: counts + active task list + last 5 completed.
 # With --full:  also lists every prompt under every category.
-# With --repos: delegate to pyauto-status (cross-repo git sync dashboard).
+#
+# `--repos` is retired. It used to source scripts/pyauto_status.sh and call a
+# `pyauto-status` shell function; that cross-repo git sync dashboard became a
+# leg of the Heart-owned `$health` door (`/health status` in Claude) and the
+# sourced file went with it, leaving the branch sourcing a file that is not in
+# this repo — and, because it ended in `exit 0`, reporting success while
+# printing nothing (issue #331). The replacement is an agent-driven procedure,
+# not a sourceable shell function, so there is nothing here to repoint it at;
+# the flag now just says where the dashboard went.
 
 set -uo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 if [ "${1:-}" = "--repos" ]; then
-  # shellcheck source=./pyauto_status.sh
-  source "$ROOT/scripts/pyauto_status.sh"
-  pyauto-status
-  exit 0
+  cat >&2 <<'RETIRED'
+status.sh --repos is retired.
+
+The cross-repo git sync dashboard it used to print is now a leg of the
+Heart-owned health door: run `/health status` (PyAutoHeart, via PyAutoBrain's
+`/health`). This script covers the PyAutoMind registry only.
+RETIRED
+  exit 2
 fi
 
 bold() { printf "\033[1m%s\033[0m\n" "$1"; }
