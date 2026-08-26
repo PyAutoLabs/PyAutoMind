@@ -43,6 +43,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [pyautomind/morning-status-workflow](#pyautomindmorning-status-workflow)
 - [potential-correction-validation-artifacts](#potential-correction-validation-artifacts)
 - [pyautomind/stash-pre-sync-2026-07-06](#pyautomindstash-pre-sync-2026-07-06)
+- [pyautohands/pre-2023-history](#pyautohandspre-2023-history)
 
 <!-- toc:end -->
 
@@ -313,3 +314,14 @@ One `##` block per item. Fields:
 - sweep-after: 2026-08-29
 - breaks-if-wrong: loses the pre-sync 2026-07-06 WIP; recoverable via `pyauto-gut recover pyautomind-stash--0-` until voided.
 - archive-ref: refs/heads/archive/condemned/pyautomind-stash--0- on PyAutoMind origin (9dc61c5)
+
+## pyautohands/pre-2023-history
+- type: branch
+- locator: master (PyAutoLabs/PyAutoHands, tip 55da101c — 442 commits, 2021-02-12 → 2022-11-27)
+- confidence: n/a — not condemned as trash; archived as durable ORIGINAL PROJECT HISTORY on explicit human request 2026-08-26, then removed from PyAutoHands.
+- reason: the pre-2023 history of PyAutoHands, orphaned by a later history reset. Shares **no common ancestor** with `origin/main` (`git merge-base` exits 1) and is pinned by **no tag**, so `main` contains none of its 442 commits and nothing else anywhere reaches them. Authors: Richard 261, Jonathan Frawley 91, James Nightingale 90. The 2026-08-25 org-wide audit flagged it and deliberately left it in place; removed here only once the archive was independently verified.
+- merged: no
+- condemned: 2026-08-26
+- sweep-after: never — original project history, void only on explicit human request
+- breaks-if-wrong: loses the entire 2021-2022 development history of PyAutoHands, including 261 commits authored by Richard Hayes and 91 by Jonathan Frawley. Recoverable via `pyauto-gut recover pyautohands-pre-2023-history` (run from the PyAutoGut checkout), then check out the branch to reabsorb.
+- archive-ref: refs/heads/archive/condemned/pyautohands-pre-2023-history on PyAutoGut origin (55da101c, 442 commits) — verified by independent clone-back: fetched tip matches, `rev-list --count` = 442, oldest 7d8743a (2021-02-12), newest 55da101 (2022-11-27). Note: PyAutoBrain `branch_archive.yml` could NOT do this — `PAT_PYAUTOLABS` lacks the `workflow` scope and GitHub rejects any PAT push that introduces `.github/workflows/release.yml`; archived from a local checkout with a `workflow`-scoped token instead.
