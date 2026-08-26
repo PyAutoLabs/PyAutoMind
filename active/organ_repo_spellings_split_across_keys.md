@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-08-24
+Issued: 2026-08-26
 
 Found while shipping the refactor witness-map audit (@PyAutoBrain#269 / PR #271).
 
