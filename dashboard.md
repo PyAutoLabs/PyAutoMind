@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/log_det_method_missing_from_multistart_tag.md">log_det_method is missing from the MultiStart search tag, so arms collide</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/175">issue #175</a> — issued 2026-08-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/log_det_method_missing_from_multistart_tag.md">log_det_method is missing from the MultiStart search tag, so arms collide</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/175">issue #175</a> — issued 2026-08-26 — awaiting-merge</summary>
 
 ```
 /start_dev active/log_det_method_missing_from_multistart_tag.md
