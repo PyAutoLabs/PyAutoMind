@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/results_schema_version_comparison_guard.md">Phase 4 Stage 2 compares result rows across two incompatible schema versions</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/177">issue #177</a> — issued 2026-08-26 — library-dev</summary>
+<details><summary>📋 <a href="active/results_schema_version_comparison_guard.md">Phase 4 Stage 2 compares result rows across two incompatible schema versions</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/177">issue #177</a> — issued 2026-08-26 — workspace-dev</summary>
 
 ```
 /start_dev active/results_schema_version_comparison_guard.md
