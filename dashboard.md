@@ -51,6 +51,14 @@ anything you could not verify.
 
 **Highest priority** (filed as `high`) — showing 12 of 16
 
+<details><summary>📋 <a href="draft/bug/autolens_profiling/slam_source_pix_nn_needs_adapt_split.md">slam_source_pix_nn pairs reg.Adapt with a Delaunay-family mesh and cannot jit</a> — autolens_profiling · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens_profiling/slam_source_pix_nn_needs_adapt_split.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
 ```
@@ -79,14 +87,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/maintenance/ci/autocti_workspace_navigator_check.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/sibson_mesh_scipy_delaunay_under_jit.md">Sibson natural-neighbour mesh calls scipy Delaunay on a traced array under jit</a> — autoarray · large · supervised · high</summary>
-
-```
-/start_dev draft/bug/autoarray/sibson_mesh_scipy_delaunay_under_jit.md
 ```
 
 </details>
@@ -495,10 +495,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>bug</b> — 19</summary>
 
-<details><summary>📋 <a href="draft/bug/autoarray/sibson_mesh_scipy_delaunay_under_jit.md">Sibson natural-neighbour mesh calls scipy Delaunay on a traced array under jit</a> — autoarray · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/autolens_profiling/slam_source_pix_nn_needs_adapt_split.md">slam_source_pix_nn pairs reg.Adapt with a Delaunay-family mesh and cannot jit</a> — autolens_profiling · small · supervised · high</summary>
 
 ```
-/start_dev draft/bug/autoarray/sibson_mesh_scipy_delaunay_under_jit.md
+/start_dev draft/bug/autolens_profiling/slam_source_pix_nn_needs_adapt_split.md
 ```
 
 </details>
