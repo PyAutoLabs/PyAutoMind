@@ -74,7 +74,7 @@ Phase 0 is choosing, not coding. They are not equal in cost or in permanence.
 Prefer 2 if the probe says it works, else 1. Do not build 1 before running the
 probe — it is the more complex design and option 2 would obsolete it.
 
-## Already done (2026-08-26, branch `claude/mobile-performance-review-5qwv8r`)
+## Already done (2026-08-26 — `complete/2026/08/mobile-performance-review.md`)
 
 Do not redo these; build on them.
 
@@ -109,6 +109,8 @@ Do not redo these; build on them.
 
 - `PyAutoBrain/board/AGENTS.md` → "Reading the board in a remote session"
 - `PyAutoBrain/skills/GITHUB_ACCESS.md` → the gh→MCP operation mapping
+- `PyAutoMind/complete/2026/08/mobile-performance-review.md` → the record for
+  the work this builds on, including the measurements above
 - `draft/feature/pyautobrain/brain_board_follow_ups.md` → the small-nit catch-all
   for the same board; this prompt is deliberately separate because it is not a
   nit.
