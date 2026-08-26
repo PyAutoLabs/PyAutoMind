@@ -59,3 +59,42 @@
     fallback), a `# WALL-BASIS:` header required on submit_search_*/submit_phase8b_*,
     check_submits.py gating every cell a submit runs against its own row + its --time, wired
     into lint.yml; phase8b --time -> 6:00:00 from its SLOWEST cell.
+
+## results-schema-comparability-guard
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/177
+- issued: 2026-08-26
+- session: claude --resume session_017xgYipoxfBkbU9nJ1yS8tt
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/results-schema-comparability-guard
+- prompt: active/results_schema_version_comparison_guard.md
+- parallel-claim: autolens_profiling is ALSO claimed by log-det-multistart-tag (#175, which
+  carries #176). Human-approved 2026-08-26 to run in a SEPARATE worktree rather than fold or
+  serialise — files are disjoint from both: #175 edits scripts/misc/searches/_samplers.py
+  (+ README, test_searches_log_det_and_nautilus_seed.py); #176 adds scripts/misc/wall/ and
+  edits hpc/batch_gpu/submit_search_*, hpc/README.md, .github/workflows/lint.yml,
+  test_wall_check_submits.py; THIS task edits scripts/misc/searches/{_metrics,aggregate}.py,
+  scripts/misc/tooling/build_readme.py, scripts/misc/test/ and regenerates the root README.md.
+  A separate checkout means a separate git index, so the shared-index commit discipline that
+  #175's worktree needs does not apply here.
+- repos:
+  - autolens_profiling: feature/results-schema-comparability-guard
+- summary: |
+    REPRODUCED. performance.likelihood_evals changed MEANING between results-schema v1 and v2
+    for MultiStart* searches: v1 = samples.total_samples (storage count), v2 = total_steps *
+    n_starts (reject-inclusive). One cell dir in the phase4-stage2-harvest tree,
+    results/searches/multi_start_prodigy_autoconv/imaging/mge/hst, holds both arms with
+    differing config_name, so nothing dedupes them: positions-OFF v1 reads 257 evals /
+    874.58 ms-per-eval, positions-ON v2 reads 247,808 / 2.23 ms. aggregate.py's comparison.json
+    + shared log-scale comparison.png and build_readme.py's searches table render them side by
+    side, implying a ~390x per-eval speedup that is pure counter semantics.
+    TWO FINDINGS shaping the fix: (1) the break is MultiStart-ONLY — a nested sampler's
+    total_samples was already reject-inclusive in v1, verified live on main where
+    nautilus/imaging/pixelization/hst holds a legitimate v1=58,464 beside v2=55,984, so the
+    prompt's literal "refuse when schema_version differs" guard would false-positive there;
+    guard keys on eval-counter BASIS from (schema_version, sampler family), missing key = v1.
+    (2) v1's likelihood_evals IS v2's stored_samples (both 257) — the bridge that lets a v1
+    MultiStart row render honestly instead of as a wrong eval count.
+    Also: _metrics.py::load_summary (the v1->v2 normaliser from W4/#161) has ZERO callers —
+    built for this job, never wired in. max_log_likelihood / log_evidence / raw wall stay
+    comparable and must NOT be suppressed. OPEN: merge order vs PR #174, whose harvest data
+    this guard fires on by design.

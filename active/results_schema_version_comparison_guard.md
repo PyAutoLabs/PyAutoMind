@@ -7,7 +7,9 @@ Repos:
 Difficulty: medium
 Autonomy: safe
 Priority: normal
-Status: formalised
+Status: issued
+Issued: 2026-08-26
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/177
 
 The Prodigy n256 positions-off and positions-on arms are not measured on the
 same eval counter, so their wall and throughput numbers cannot be compared.
