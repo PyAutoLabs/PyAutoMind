@@ -107,12 +107,8 @@ def test_multi_repo_layout_installs_a_workspace_root_hook(tmp_path):
     assert any("session-start.sh" in c for c in commands), commands
 
 
-def test_single_repo_layout_installs_nothing_extra(tmp_path):
-    """When the project dir IS the repo, Claude Code already found its settings.
-
-    Writing a second registration there would double-run the hook, so the leg
-    must be inert in the layout that was never broken.
-    """
+def test_single_repo_layout_adds_no_second_registration_to_the_repo(tmp_path):
+    """Claude Code already found this repo's settings; a second would double-run."""
     repo = tmp_path / "OrganOne"
     hook = _install_hook(repo)
     before = sorted(p.name for p in (repo / ".claude").iterdir())
@@ -120,6 +116,48 @@ def test_single_repo_layout_installs_nothing_extra(tmp_path):
     r = _run_hook(hook, project_dir=repo)
     assert r.returncode == 0, r.stderr
     assert sorted(p.name for p in (repo / ".claude").iterdir()) == before
+
+
+def test_a_single_repo_session_seeds_the_workspace_root(tmp_path):
+    """The leg used to be unreachable, and this is the session that reaches it.
+
+    Writing the workspace-root fan-out requires the hook to be running. The
+    hook runs only where Claude Code registers it — a session whose project dir
+    IS a repo, i.e. a SINGLE-repo session. The old early return skipped exactly
+    that session as "nothing to add", so the fan-out was never written by
+    anyone, and the multi-repo session that needed it never ran the hook to
+    write it either. Observed: a container with two single-repo sessions behind
+    it still had no `<root>/.claude`, and the next session — three organs,
+    project dir at the root — fired no hook at all.
+
+    A single-repo session sees the same sibling layout one directory up, so it
+    can seed the root for the next session in the container for free.
+    """
+    workspace = tmp_path / "workspace"
+    repo = workspace / "OrganOne"
+    hook = _install_hook(repo)
+
+    r = _run_hook(hook, project_dir=repo)
+    assert r.returncode == 0, r.stderr
+
+    fanout = workspace / ".claude" / "hooks" / "session-start.sh"
+    settings = workspace / ".claude" / "settings.json"
+    assert fanout.is_file() and os.access(fanout, os.X_OK), (
+        "a single-repo session left the root unable to register a hook"
+    )
+    assert settings.is_file()
+
+
+def test_a_workspace_root_that_is_itself_a_repo_is_left_alone(tmp_path):
+    """Then it owns its own hook, and a fan-out above it is not ours to add."""
+    root = tmp_path / "Checkout"
+    (root / ".git").mkdir(parents=True)
+    repo = root / "Nested"
+    hook = _install_hook(repo)
+
+    r = _run_hook(hook, project_dir=repo)
+    assert r.returncode == 0, r.stderr
+    assert not (root / ".claude").exists(), sorted(p.name for p in root.iterdir())
 
 
 def test_generated_fanout_runs_every_sibling_repos_hook(tmp_path):
@@ -231,3 +269,193 @@ def test_bootstrap_check_reports_rather_than_changes():
     assert r.returncode in (0, 1)
     assert "[bootstrap]" in r.stderr
     assert "unshallowing" not in r.stderr
+
+
+# --------------------------------------------------------------------------
+# 4. The interpreter a shell finds when no env file was written
+#
+# A multi-repo session gets no `CLAUDE_ENV_FILE`, so the venv is never
+# prepended to PATH and every Bash call resolves whatever the image installed.
+# These pin the two names that have to be right on their own — and the two ways
+# writing them destroyed the container the first time.
+# --------------------------------------------------------------------------
+
+DEFINE_ONLY = {"PYAUTO_SESSION_DEFINE_ONLY": "1"}
+
+
+def _call_hook_function(body, *, venv, extra_env=None):
+    """Run one leg of the hook against a directory the test owns."""
+    env = dict(os.environ)
+    env.update({"CLAUDE_CODE_REMOTE": "true", "PYAUTO_SESSION_VENV": str(venv)})
+    env.update(extra_env or {})
+    script = f'source "{CANONICAL_HOOK}"\n{body}\n'
+    return subprocess.run(["bash", "-c", script], capture_output=True, text=True,
+                          env={**env, **DEFINE_ONLY}, timeout=120)
+
+
+def _fake_venv(tmp_path):
+    """A stand-in for the session venv: its python reports the venv as prefix."""
+    venv = tmp_path / "venv"
+    (venv / "bin").mkdir(parents=True)
+    python = venv / "bin" / "python"
+    python.write_text(f'#!/bin/sh\necho "{venv}"\n')
+    python.chmod(0o755)
+    return venv
+
+
+def test_the_system_default_is_a_wrapper_because_a_symlink_loses_the_venv(tmp_path):
+    """The bug this leg exists for, proved in both directions.
+
+    A symlink to the venv's python is resolved by CPython BEFORE it looks for
+    `pyvenv.cfg`, so it lands on the base interpreter's prefix and the venv —
+    with pytest and PyYAML in it — is gone. The hook must write a wrapper.
+    """
+    venv = _fake_venv(tmp_path)
+    system_bin = tmp_path / "usr-local-bin"
+    system_bin.mkdir()
+
+    r = _call_hook_function("point_system_default", venv=venv,
+                            extra_env={"PYAUTO_SESSION_SYSTEM_BIN": str(system_bin)})
+    assert r.returncode == 0, r.stderr
+
+    default = system_bin / "python3"
+    assert not default.is_symlink(), "a symlink here resolves past the venv"
+    assert default.read_text().startswith("#!/bin/sh"), default.read_text()
+    assert str(venv / "bin" / "python") in default.read_text()
+
+
+def test_writing_the_default_replaces_a_symlink_instead_of_writing_through_it(tmp_path):
+    """The regression that destroyed a container's interpreter.
+
+    `/usr/local/bin/python3` is a SYMLINK to the real interpreter. A redirect
+    opens the link's target, so `cat >` there overwrote /usr/bin/python3.12
+    itself with the wrapper — and since the venv's python symlinks to that same
+    file, the wrapper then exec'd itself. Every `python3` in the container spun
+    at 100% CPU and the interpreter was gone.
+    """
+    venv = _fake_venv(tmp_path)
+    system_bin = tmp_path / "usr-local-bin"
+    system_bin.mkdir()
+    real = tmp_path / "real-python3.12"
+    real.write_text("#!/bin/sh\necho REAL-INTERPRETER\n")
+    real.chmod(0o755)
+    for name in ("python", "python3"):
+        (system_bin / name).symlink_to(real)
+
+    r = _call_hook_function("point_system_default", venv=venv,
+                            extra_env={"PYAUTO_SESSION_SYSTEM_BIN": str(system_bin)})
+    assert r.returncode == 0, r.stderr
+
+    assert real.read_text() == "#!/bin/sh\necho REAL-INTERPRETER\n", (
+        "the wrapper was written THROUGH the symlink and clobbered the interpreter"
+    )
+    assert not (system_bin / "python3").is_symlink()
+
+
+def test_a_target_that_links_back_through_the_destination_is_refused(tmp_path):
+    """The other way to build the same loop, and the reason for the chain walk.
+
+    If the venv was built on the system default, its python links back through
+    the path being rewritten — so the wrapper would exec itself. Refuse, and
+    leave the destination as it was.
+    """
+    system_bin = tmp_path / "usr-local-bin"
+    system_bin.mkdir()
+    real = tmp_path / "real-python3.12"
+    real.write_text("#!/bin/sh\necho REAL\n")
+    real.chmod(0o755)
+    (system_bin / "python3").symlink_to(real)
+    (system_bin / "python").symlink_to(real)
+
+    venv = tmp_path / "venv"
+    (venv / "bin").mkdir(parents=True)
+    (venv / "bin" / "python").symlink_to(system_bin / "python3")
+
+    r = _call_hook_function("point_system_default", venv=venv,
+                            extra_env={"PYAUTO_SESSION_SYSTEM_BIN": str(system_bin)})
+    assert r.returncode == 0, r.stderr
+    assert "links back through" in r.stderr, r.stderr
+    assert (system_bin / "python3").is_symlink(), "the destination was rewritten anyway"
+
+
+def test_pytest_on_path_is_pointed_at_the_venv(tmp_path):
+    """`pytest` resolves before `python3` does, and uv's copy is isolated.
+
+    $HOME/.local/bin precedes /usr/local/bin, and it holds uv's tool shims. uv
+    installs each tool in its own environment by design, so that pytest cannot
+    import PyYAML — which surfaced as four collection ImportErrors that read
+    like broken source, in a workspace whose suite was green.
+    """
+    venv = _fake_venv(tmp_path)
+    (venv / "bin" / "pytest").write_text("#!/bin/sh\necho VENV-PYTEST\n")
+    (venv / "bin" / "pytest").chmod(0o755)
+
+    home = tmp_path / "home"
+    shim_dir = home / ".local" / "bin"
+    shim_dir.mkdir(parents=True)
+    (shim_dir / "pytest").write_text("#!/bin/sh\necho UV-ISOLATED-PYTEST\n")
+    (shim_dir / "pytest").chmod(0o755)
+
+    r = _call_hook_function("point_pytest_at_venv", venv=venv, extra_env={
+        "HOME": str(home), "PATH": f"{shim_dir}:{os.environ['PATH']}"})
+    assert r.returncode == 0, r.stderr
+    assert str(venv / "bin" / "pytest") in (shim_dir / "pytest").read_text()
+
+
+def test_a_pytest_outside_uvs_shim_dir_is_left_alone(tmp_path):
+    """A distro-packaged pytest is not this hook's to overwrite."""
+    venv = _fake_venv(tmp_path)
+    (venv / "bin" / "pytest").write_text("#!/bin/sh\necho VENV\n")
+    (venv / "bin" / "pytest").chmod(0o755)
+
+    home = tmp_path / "home"
+    (home / ".local" / "bin").mkdir(parents=True)
+    system_dir = tmp_path / "usr-bin"
+    system_dir.mkdir()
+    (system_dir / "pytest").write_text("#!/bin/sh\necho DISTRO\n")
+    (system_dir / "pytest").chmod(0o755)
+
+    r = _call_hook_function("point_pytest_at_venv", venv=venv, extra_env={
+        "HOME": str(home), "PATH": f"{system_dir}:{os.environ['PATH']}"})
+    assert r.returncode == 0, r.stderr
+    assert (system_dir / "pytest").read_text() == "#!/bin/sh\necho DISTRO\n"
+    assert "outside uv's shim dir" in r.stderr, r.stderr
+
+
+# --------------------------------------------------------------------------
+# 5. `--check` reports usability, not just version
+# --------------------------------------------------------------------------
+
+def test_check_fails_a_pytest_that_has_the_right_version_but_cannot_import(tmp_path):
+    """The check answered a question it had not asked.
+
+    It resolved each tool's shebang and asked that interpreter for its version
+    — necessary, because a 3.11 mypy judges code against 3.11 rules. But uv
+    installs each tool in its OWN environment, so a 3.12 pytest can still be
+    unable to import PyYAML. `--check` printed `pytest: 3.12 OK` for exactly
+    such a pytest while the suite exited on four collection ImportErrors that
+    read like broken source. Version is necessary; it is not sufficient.
+    """
+    fake_bin = tmp_path / "bin"
+    fake_bin.mkdir()
+    interp = fake_bin / "fake-python3.12"
+    interp.write_text(
+        "#!/bin/sh\n"
+        "case \"$2\" in\n"
+        "  *version_info*) echo '3.12' ;;\n"
+        "  *find_spec*) printf 'yaml' ;;\n"
+        "esac\n"
+    )
+    interp.chmod(0o755)
+    shim = fake_bin / "pytest"
+    shim.write_text(f"#!{interp}\n")
+    shim.chmod(0o755)
+
+    env = dict(os.environ)
+    env["PATH"] = f"{fake_bin}:{env['PATH']}"
+    r = subprocess.run(["bash", str(BOOTSTRAP), "--check"], capture_output=True,
+                       text=True, env=env, timeout=180)
+
+    assert "pytest: 3.12 OK" not in r.stderr, r.stderr
+    assert "cannot import: yaml" in r.stderr, r.stderr
+    assert r.returncode != 0

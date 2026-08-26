@@ -37,7 +37,7 @@ say() { printf '[bootstrap] %s\n' "$*" >&2; }
 py312_ready() {
     [ -x "$VENV/bin/python" ] \
         && "$VENV/bin/python" -c 'import sys; raise SystemExit(sys.version_info[:2] != (3, 12))' >/dev/null 2>&1 \
-        && "$VENV/bin/python" -c 'import pytest, yaml' >/dev/null 2>&1
+        && "$VENV/bin/python" -c 'import pytest, yaml, xdist' >/dev/null 2>&1
 }
 
 shallow_repos() {
@@ -86,6 +86,21 @@ if [ "${1:-}" = "--check" ]; then
         if [ -z "$real" ]; then
             say "$tool: $path (interpreter undetermined)"
         elif [ "$real" = "3.12" ]; then
+            # The right VERSION is not the same as a usable tool. uv installs
+            # each tool in its own isolated environment, so a 3.12 pytest can
+            # still be unable to import PyYAML — and then the suite exits on
+            # collection ImportErrors that read like broken source rather than
+            # like a broken environment. Only the two tools that must import
+            # this workspace's code are checked; a linter needs no deps.
+            case "$tool" in
+                python3|pytest)
+                    if missing="$("$interp" -c 'import importlib,sys; sys.stdout.write(" ".join(m for m in ("pytest","yaml","xdist") if not importlib.util.find_spec(m)))' 2>/dev/null)" \
+                       && [ -n "$missing" ]; then
+                        say "$tool: 3.12 but cannot import: $missing ($path) — it will fail collection, not the code"; rc=1
+                        continue
+                    fi
+                    ;;
+            esac
             say "$tool: 3.12 OK ($path)"
         else
             say "$tool: running on $real, not 3.12 ($path) — its results will disagree with CI"; rc=1
