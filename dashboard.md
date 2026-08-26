@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 134 |
+| [Backlog](#backlog) (`draft/`) | 132 |
 
 ## Start here
 
@@ -247,10 +247,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**132** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 28</summary>
+<summary><b>feature</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution + operated-matrix caching</a> — autoarray · medium · supervised · high</summary>
 
@@ -460,14 +460,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autonomy/10_scheduled_runs.md">Scheduled runs — overnight queue passes with a morning report</a> — autonomy · medium · supervised · low</summary>
-
-```
-/start_dev draft/feature/autonomy/10_scheduled_runs.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> — pyautomind · hard · supervised · low</summary>
 
 ```
@@ -479,7 +471,124 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 23</summary>
+<summary><b>research</b> — 14</summary>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · supervised · medium</summary>
+
+```
+/start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · supervised · medium</summary>
+
+```
+/start_dev draft/research/autolens/quick_update_plotting_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
+
+```
+/start_dev draft/research/pyautohands/git_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · supervised · normal</summary>
+
+```
+/start_dev draft/research/pyautoreduce/acceptance_noise_rebaseline.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_workspace_developer/jax_jit_profiling.md">We have lots of examples which profile how long JAX</a> — autolens_workspace_developer · medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_workspace_developer/jax_jit_profiling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/libraries/intel_macos_support_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling epic</a> — autofit · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/autofit/autofit_profiling_bootstrap.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/multiband_compile_census_completion.md">Multi-band compile census completion — A100/multi-core + hetero GPU rows</a> — autolens_profiling · small · supervised · low</summary>
+
+```
+/start_dev draft/research/autolens_profiling/multiband_compile_census_completion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · supervised · low</summary>
+
+```
+/start_dev draft/research/pyautoreduce/legacy_flux_scale_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a> — autoarray · too-large · supervised · low</summary>
+
+```
+/start_dev draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus, point-source)</a> — autolens_profiling</summary>
+
+```
+/start_dev draft/research/autolens_profiling/cluster_gradient_search_benchmark.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> — ci · medium · supervised · high</summary>
 
@@ -517,14 +626,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/workspaces/config_key_mirror_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/euclid_crlf_line_endings.md">euclid: CRLF has reached the HPC submit scripts AGENTS.md warns about</a> — workspaces · small · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/euclid_crlf_line_endings.md
 ```
 
 </details>
@@ -661,123 +762,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>research</b> — 14</summary>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
-
-```
-/start_dev draft/research/autoarray/delaunay_research.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · supervised · medium</summary>
-
-```
-/start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · supervised · medium</summary>
-
-```
-/start_dev draft/research/autolens/quick_update_plotting_cost.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
-
-```
-/start_dev draft/research/pyautohands/git_docs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · supervised · normal</summary>
-
-```
-/start_dev draft/research/pyautoreduce/acceptance_noise_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · supervised · normal</summary>
-
-```
-/start_dev draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_workspace_developer/jax_jit_profiling.md">We have lots of examples which profile how long JAX</a> — autolens_workspace_developer · medium · supervised · normal</summary>
-
-```
-/start_dev draft/research/autolens_workspace_developer/jax_jit_profiling.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · supervised · normal</summary>
-
-```
-/start_dev draft/research/libraries/intel_macos_support_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · supervised · normal</summary>
-
-```
-/start_dev draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling epic</a> — autofit · large · supervised · normal</summary>
-
-```
-/start_dev draft/research/autofit/autofit_profiling_bootstrap.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/multiband_compile_census_completion.md">Multi-band compile census completion — A100/multi-core + hetero GPU rows</a> — autolens_profiling · small · supervised · low</summary>
-
-```
-/start_dev draft/research/autolens_profiling/multiband_compile_census_completion.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · supervised · low</summary>
-
-```
-/start_dev draft/research/pyautoreduce/legacy_flux_scale_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a> — autoarray · too-large · supervised · low</summary>
-
-```
-/start_dev draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus, point-source)</a> — autolens_profiling</summary>
-
-```
-/start_dev draft/research/autolens_profiling/cluster_gradient_search_benchmark.md
 ```
 
 </details>
@@ -1176,18 +1160,17 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 | 2026-08-24 | filed | <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods…</a> |
-| 2026-08-24 | filed | <a href="draft/maintenance/workspaces/euclid_crlf_line_endings.md">euclid: CRLF has reached the HPC submit scripts AGENTS.md warns about</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
+| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
 | 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right jax…</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md">Untrack the generated FITS test artifacts in autoarray</a> |
@@ -1197,12 +1180,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-21 | filed | <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> |
 | 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md">Numba CPU likelihood phase 2: kernel-CDF numba fast path (the 49-88%…</a> |
 | 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution +…</a> |
+| 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 | 2026-08-19 | issued | <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first…</a> |
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
@@ -1212,12 +1195,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
 | 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
 | 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
+| 2026-08-17 | filed | <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-17 | filed | <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> |
 | 2026-08-16 | filed | <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> |
 | 2026-08-14 | filed | <a href="draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md">Three <code>jax_likelihood</code> pins are stale by ~1.24e-4 and fail the smoke…</a> |
 | 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
@@ -1227,12 +1210,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 | 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
 | 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
+| 2026-08-05 | filed | <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-05 | filed | <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> |
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never…</a> |
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of…</a> |
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> |
@@ -1242,6 +1225,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-07-31 | filed | <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation…</a> |
 | 2026-07-31 | filed | <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> |
 | 2026-07-31 | filed | <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus…</a> |
+| 2026-07-30 | filed | <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> |
 
 </details>
 

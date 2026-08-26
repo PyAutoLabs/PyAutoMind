@@ -21,7 +21,6 @@ behind this layout is in git (PR #26 and the skill-redesign task, 2026-07).
 | `start_dev`, `start_dev_for_user` | `PyAutoBrain/skills/` | classification/routing entry points |
 | `plan_branches`, `start_library`, `start_workspace` | `PyAutoBrain/skills/` | planning + dev-cycle setup |
 | `ship_library`, `ship_workspace` | `PyAutoBrain/skills/` | dev-workflow → Heart gate (Build only at release) |
-| `run_queue` | `PyAutoBrain/skills/` | dev-workflow orchestration loop |
 | `repo_cleanup`, `update_issue` | `PyAutoBrain/skills/` | between-tasks git hygiene / issue upkeep |
 | `worktree_status` | `PyAutoHeart/skills/` | diagnostic |
 | `dep_audit`, `verify_install`, `review_release`, `audit_docs`, `cli_noise_clean` | `PyAutoHeart/skills/` | read-only validation / readiness checks |
