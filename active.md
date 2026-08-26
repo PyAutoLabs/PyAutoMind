@@ -13,3 +13,36 @@
 - registered: 2026-08-19 by the wake_up session — the issuing session (claude/autofit-priors-messages-audit-ylvenv)
   filed the prompt + issue but not this entry, tripping Lifecycle Drift on main.
 - repos-none-claimed: this entry claims NO repos — one line deliberately, not 2-space bullets.
+
+## organ-repo-spelling-splits
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/287
+- issued: 2026-08-26
+- prompt: active/organ_repo_spellings_split_across_keys.md
+- status: ready-to-ship — implemented and pushed on both branches; no PR opened
+  yet (PyAutoMind e160d40b, PyAutoBrain 6329db8). 515 Brain tests pass,
+  repos_sync --check all 13 legs OK, Heart NOT EVALUATED (web-github).
+- worktree: n/a — web-github session; the session's own PyAutoBrain + PyAutoMind
+  clones are the checkout, on the designated branch below (no
+  ~/Code/PyAutoLabs-wt/ worktree exists in this environment).
+- repos:
+  - PyAutoBrain: claude/organ-repo-spelling-splits-hbbms0
+  - PyAutoMind: claude/organ-repo-spelling-splits-hbbms0
+- summary: |
+    Infrastructure task (organism repos only). Fourth instance of the
+    hand-maintained-aliases vs derived-target-set defect class (#267, #269);
+    this one closes the class. Keying decision taken up front per the prompt:
+    organs key PREFIXED (`pyautobrain`), extending #271's rule — canonical key
+    is the bare package name where the repo ships one, the repo name where it
+    does not. Fix derives the bare/prefixed/package alias join from the body
+    map (new `package:` identity key in repos.yaml) and adds three coverage
+    guards to test_policy_seams.py. Sweep also covers PyAutoScientist and
+    pyautolabs.github.io, both split/unresolvable and not named in the prompt.
+    Heart unreachable from this environment — ship gate leg 4 records NOT
+    EVALUATED.
+
+    DEVIATION from the answered scope question: `pyautolabs.github.io` was
+    deliberately DE-REGISTERED rather than joined. Joining it means aliasing its
+    truncated head `pyautolabs`, which is the ORG name — `@PyAutoLabs/PyAutoFit`
+    would then resolve to the static site instead of PyAutoFit. The acceptance
+    criterion's other branch ("or is deliberately not registered") covers it, and
+    a guard pins both halves. Raised for review at ship time.
