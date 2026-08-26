@@ -36,3 +36,7 @@ Remaining candidates — pick up only when a real morning shows the need:
    `bin/version_drift.sh` read `config/policy.yaml board:` instead of their
    own copies (the keep-in-step comments then come out).
 3. **Whatever a week of mornings surfaces** — append here before starting.
+
+Filed separately, because it is not a nit: **`board_without_gh.md`** — the
+eleven legs that read GitHub through `gh api` are dark in a remote session,
+which has no `gh`. A mobile morning is mostly blind until that is closed.
