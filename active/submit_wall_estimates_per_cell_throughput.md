@@ -10,7 +10,9 @@ Priority: normal
 Status: formalised
 Filed: 2026-08-26
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/176 (issued 2026-08-26)
-Blocked: registered in planned.md — autolens_profiling is claimed by log-det-multistart-tag (#175)
+Issued: 2026-08-26
+Worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag (SHARED with log-det-multistart-tag #175 —
+  folded in 2026-08-26; disjoint files; explicit git pathspecs only, never `add -A`)
 
 # Submit scripts quote an MGE step rate for pixelized cells and get killed
 

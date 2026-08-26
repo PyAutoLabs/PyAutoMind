@@ -7,7 +7,6 @@
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
-- [submit-wall-per-cell-throughput](#submit-wall-per-cell-throughput)
 
 <!-- toc:end -->
 
@@ -81,33 +80,3 @@
 - affected-repos:
   - autolens_workspace_test
 - note: latent/latent_nan_robustness.py PASSES but VACUOUSLY under the smoke profile — TEST_MODE=2 yields only 4 bypass samples, and DISABLE_JAX=1 silently flips its deliberate AnalysisImaging(use_jax=True) to False (PyAutoLens analysis/analysis/dataset.py:89), so the JAX column-masking branch the guard exists to catch is never taken. MultiStartAdam/BlackJAXNUTS precedent. Work = (1) config/build/env_vars.yaml override for `latent/latent_nan_robustness` with unset: [PYAUTO_TEST_MODE, PYAUTO_DISABLE_JAX]; (2) trim the script under the 300s cap. MEASURED: honest run = 412s; PYAUTO_TEST_MODE=1 does NOT help (455s) — Nautilus is NOT the bottleneck (~136s post-fit results update + ~56s latent compute on 100 samples), so the lever is sample count. Script is in the curated smoke_tests.txt, which DOES read env_vars.yaml, so this lands in the per-PR gate. Adjacent to the blocker's own follow-up ("re-time the SLOW siblings"). NOT bugs, verified passing from clean output, no change needed: imaging/model_fit.py and latent/latent_variables_smoke.py.
-
-## submit-wall-per-cell-throughput
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/176
-- filed: 2026-08-26
-- prompt: draft/bug/autolens_profiling/submit_wall_estimates_per_cell_throughput.md
-- classification: workspace (autolens_profiling only) — plan APPROVED, issue filed with the
-  full two-level plan; blocked only on the worktree claim, not on any open design question.
-- suggested-branch: feature/submit-wall-per-cell-throughput
-- blocked-by: log-det-multistart-tag (using autolens_profiling) — claimed mid-session by
-  session_01MdmS2jfUPi8BNjtDVBjBYX at PyAutoMind d9bfff9d, after this task's branch survey
-  read a clean `worktree_list_claimed`. NO FILE OVERLAP: #175 edits
-  `scripts/misc/searches/_samplers.py`; this task adds `scripts/misc/wall/` and edits
-  `hpc/batch_gpu/submit_search_*` + `.github/workflows/lint.yml`. The block is the
-  one-worktree-per-repo rule, not a real collision — a human may fold this into #175's
-  worktree instead of waiting.
-- summary: |
-    RAL job 340576 lost 35 of 39 arms (an overnight A100 block) because
-    `submit_phase8b_bijector_a100` justified `--time=0:30:00` with an MGE step rate for an
-    array whose arms are mostly knn and delaunay_adapt_split. Measured 2026-08-25:
-    mge 0.117 s/step, knn 2.23 (19x), delaunay_adapt_split 4.83 (41x) -- so "6x headroom"
-    was ~8x short for knn, ~16x short for delaunay. Those rates are recorded NOWHERE in the
-    repo, and only 11 of 82 submits state any wall basis. Fix: `scripts/misc/wall/rates.py`
-    (curated per-cell table mirroring `vram/config.py`, lookup RAISES on an unmeasured cell
-    rather than falling back to a neighbour), a `# WALL-BASIS:` header required on
-    `submit_search_*`/`submit_phase8b_*`, `check_submits.py` gating every cell a submit runs
-    against its own row + its `--time`, wired into `lint.yml`; phase8b `--time` -> 6:00:00
-    from its SLOWEST cell. Sibling of #175 -- both came out of the same 340576 post-mortem
-    and both gate the Phase 8B rerun.
-- affected-repos:
-  - autolens_profiling
