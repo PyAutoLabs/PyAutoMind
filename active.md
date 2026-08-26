@@ -18,10 +18,22 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/176
 - issued: 2026-08-26
 - prompt: active/submit_wall_estimates_per_cell_throughput.md
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/log-det-multistart-tag
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/179 (opened 2026-08-26,
+  commit 7b2d716, label pending-release, MERGEABLE). No upstream library PR — the
+  library-first merge gate does not apply.
+- heart-ack: RED at ship time, human-authorized for push + PR-open ONLY, not merge —
+  "autogalaxy_workspace_test: Smoke Tests failure on main" and
+  "release validation FAILED (stage integrate)". Neither relates to autolens_profiling.
+  Recorded verbatim in the PR body. The ack covers these two reasons and no others.
+- next: /prm 179 — watch every run and matrix leg, merge, then close out.
+- worktree: ~/Code/PyAutoLabs-wt/submit-wall-per-cell-throughput
 - repos:
-  - autolens_profiling: feature/log-det-multistart-tag
+  - autolens_profiling: feature/submit-wall-per-cell-throughput
+- renamed: 2026-08-26 — worktree root and branch moved off the #175 name to the task's own
+  (`git worktree repair` + `git branch -m`; activate.sh rewritten). worktree_remove derives
+  its path from the TASK NAME, so the old mismatch would have stranded the close-out.
+  Rebased onto origin/main (post-#178); 0 behind, no conflicts.
 - sole-owner-since: 2026-08-26 — log-det-multistart-tag (#175) SHIPPED (PR #178, merge commit
   11d06e50) and is recorded in complete/2026/08/. It branched off origin/main as
   feature/log-det-multistart-tag-175 and its files were restored, so this task now solely owns
