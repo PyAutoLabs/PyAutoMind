@@ -54,7 +54,7 @@ file loads back into a full Python object with a single line — much faster and
 For example, the maximum log likelihood `Tracer` is saved as a `.json` file and the tracer image-plane images as
 a `.fits` file:
 """
-from autoconf.dictable import from_json
+from autonerves.dictable import from_json
 
 result_path = search.paths.output_path  # Points at the fit's unique output folder.
 
