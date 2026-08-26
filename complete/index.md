@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1151 records across 7 buckets.
+1152 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -224,6 +224,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [resolve-border-relocator-hazard](2026/08/resolve-border-relocator-hazard.md) — Reconciled the likelihood hazard instrument after the border-relocator source fix. The resolved backend-diverg…
 - [resolve-curvature-floor-doc-drift](2026/08/resolve-curvature-floor-doc-drift.md) — Reconciled the curvature-floor documentation finding after PyAutoArray#444. The detector now requires both run…
 - [resolve-sersic-ell-comps-gradient](2026/08/resolve-sersic-ell-comps-gradient.md) — Reconciled the numerical-hazard evidence after the Sersic Cartesian-radius fix. The stable conditional detecto…
+- [results-schema-comparability-guard](2026/08/results-schema-comparability-guard.md)
 - [review-claim-dispositions](2026/08/review-claim-dispositions.md)
 - [samplers-surface-autolens-tiers](2026/08/samplers-surface-autolens-tiers.md) — the samplers faculty's SamplerSurface now scans the findings
 - [save-json-numpy-scalar-typeerror](2026/08/save-json-numpy-scalar-typeerror.md) — Adds `NumpyEncoder` in `autofit/tools/util.py` (`np.ndarray` ->
