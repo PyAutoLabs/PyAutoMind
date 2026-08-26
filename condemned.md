@@ -45,6 +45,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [pyautomind/stash-pre-sync-2026-07-06](#pyautomindstash-pre-sync-2026-07-06)
 - [pyautohands/pre-2023-history](#pyautohandspre-2023-history)
 - [pyautomind/claude-session-branches-2026-08-26-batch](#pyautomindclaude-session-branches-2026-08-26-batch)
+- [pyautohands/2022-era-feature-branches](#pyautohands2022-era-feature-branches)
 
 <!-- toc:end -->
 
@@ -374,3 +375,14 @@ One `##` block per item. Fields:
     - `claude/test-mode-bypass-assertion-ties-jqi2f1` @ `96143497a` → `archive/condemned/pyautomind-test-mode-bypass-assertion-ties-jqi2f1` (2026-08-24)
     - `claude/loggaussian-prior-support-buv5xe` @ `5dfffb4c3` → `archive/condemned/pyautomind-loggaussian-prior-support-buv5xe` (2026-08-25)
     - `claude/pyautohands-rejects-autocti-bug-mk1yi9` @ `85f6df2af` → `archive/condemned/pyautomind-pyautohands-rejects-autocti-bug-mk1yi9` (2026-08-25)
+
+## pyautohands/2022-era-feature-branches
+- type: branch
+- locator: `feature/dynamic_scripts` (tip 3f5eaf0, 313 commits) and `feature/build_tests` (tip 0c1ad5d, 312 commits) on PyAutoLabs/PyAutoHands
+- confidence: n/a — not condemned as trash; removed alongside [[pyautohands/pre-2023-history]] on explicit human request 2026-08-26.
+- reason: siblings of the archived pre-2023 `master` — both share its ancestry and are likewise disjoint from today's `main`. `feature/build_tests` carried **0** commits not already reachable from the `master` archive, so it needed no archive of its own. `feature/dynamic_scripts` carried **9** unique commits (all Richard, 2022-10-10, CI iteration: "install and use jq", "checkout", "cd", "remove commented step") that the `master` archive did NOT cover, so it was archived separately before deletion.
+- merged: no
+- condemned: 2026-08-26
+- sweep-after: never — 2022-era project history, void only on explicit human request
+- breaks-if-wrong: `build_tests` loses nothing (fully contained in the `master` archive). `dynamic_scripts` would lose its 9 unique CI commits; recoverable via `pyauto-gut recover pyautohands-feature-dynamic-scripts`.
+- archive-ref: `refs/heads/archive/condemned/pyautohands-feature-dynamic-scripts` on PyAutoGut origin (3f5eaf0, 313 commits) — verified by independent clone-back before the source branches were deleted. `feature/build_tests`: `n/a`, its content is reachable from `archive/condemned/pyautohands-pre-2023-history` (verified `git rev-list --count 55da101c..build_tests` = 0); pre-delete SHA `0c1ad5d`.
