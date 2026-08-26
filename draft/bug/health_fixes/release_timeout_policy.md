@@ -40,13 +40,13 @@ or the numbers will not mean what the prompt assumes.
 
 ## Context
 
-Five scripts exceeded PyAutoBuild's 300-second per-script cap in release run
+Five scripts exceeded PyAutoHands's 300-second per-script cap in release run
 `28784914443`. A timeout is a release-surface policy decision, not automatically a code
 bug. Stateful local reruns are not authoritative because completed search output can make
 chained scripts resume quickly.
 
 Owners: @autogalaxy_workspace, @autolens_workspace, @PyAutoFit, @PyAutoGalaxy,
-@PyAutoLens, and @PyAutoBuild where runner evidence is needed.
+@PyAutoLens, and @PyAutoHands where runner evidence is needed.
 
 ## Scripts
 

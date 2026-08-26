@@ -4,7 +4,7 @@ Type: refactor
 Target: PyAutoFit
 Repos:
 - PyAutoFit
-- PyAutoConf
+- PyAutoNerves
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
@@ -22,9 +22,11 @@ Checked by the draft/ sweep against PyAutoFit main (`3b960609`):
 - **Root `eden.yaml` — STILL PRESENT.** The second half of the § Scope
   PyAutoFit bullet is outstanding.
 
-Also note the § Scope follow-up names **PyAutoConf**, which has since been renamed
-**PyAutoNerves** (the `autonerves` package). Re-target `scripts/edenise.py` there
-before acting, and confirm it survived the rename rather than assuming the path.
+Also note the § Scope follow-up targets **PyAutoNerves** — the repo formerly
+named PyAutoConf (now the `autonerves` package). The references throughout this
+prompt were updated to the current name on 2026-08-26; `scripts/edenise.py` has
+not been re-checked since, so confirm it survived the rename rather than
+assuming the path.
 
 What is left is deleting one dead config file plus the PyAutoNerves driver, so
 `Difficulty:` drops `medium` → `small`. The guardrail about re-scoping if a live
@@ -36,7 +38,7 @@ consumer surfaces no longer applies to the PyAutoFit leg.
 
 The Euclid **EDEN** packaging path is dormant dead code. Its per-repo `eden.ini`
 configs were removed across the org on 2026-07-13, and its only driver —
-`PyAutoConf/scripts/edenise.py` (`from autofit.tools import edenise`) — was last
+`PyAutoNerves/scripts/edenise.py` (`from autofit.tools import edenise`) — was last
 touched in 2023 and is wired into no CI or build. With the configs gone, the
 tooling is orphaned.
 
@@ -44,7 +46,7 @@ tooling is orphaned.
 
 - **PyAutoFit** (primary): remove the `autofit.tools.edenise` tooling module and
   the root `eden.yaml`.
-- **PyAutoConf** (follow-up): remove the orphaned `scripts/edenise.py` driver.
+- **PyAutoNerves** (follow-up): remove the orphaned `scripts/edenise.py` driver.
 
 ## Guardrails
 

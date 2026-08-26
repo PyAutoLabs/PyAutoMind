@@ -686,10 +686,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autobuild/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — autobuild · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
 
 ```
-/start_dev draft/research/autobuild/git_docs.md
+/start_dev draft/research/pyautohands/git_docs.md
 ```
 
 </details>

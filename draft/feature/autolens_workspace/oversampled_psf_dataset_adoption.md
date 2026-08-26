@@ -48,7 +48,7 @@ self-consistent. Deliberately its own prompt because the survey found
 
 - Wide mechanical diff — review by sampling + full smoke subset run, not
   line-by-line.
-- Notebook regeneration (PyAutoBuild) must follow the merged scripts.
+- Notebook regeneration (PyAutoHands) must follow the merged scripts.
 
 ## Sequencing
 
