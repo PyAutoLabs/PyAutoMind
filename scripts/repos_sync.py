@@ -821,19 +821,23 @@ FIREWALL_ORGANS = ("PyAutoBrain", "PyAutoHeart", "PyAutoHands")
 # a listed file, or ANY instance fact in an unlisted file, is drift. Phase-3
 # config extraction shrinks this list; never grow it casually — a new entry
 # means a new file an adopting fork must rewrite.
+#
+# 2026-08-26: seven entries dropped or narrowed. Each named the owner only
+# because it hardcoded a workspace root under $HOME; they now delegate to
+# bin/_pyauto_root.sh / agents/_pyauto_root.py, which name no absolute path
+# at all. The two resolvers carry no entry here, and must not need one.
 FIREWALL_ALLOWLIST = {
-    "PyAutoBrain/agents/_common.sh": {"PyAutoLabs"},
     "PyAutoBrain/agents/conductors/bug/_bug.py": {"PyAutoArray"},
     "PyAutoBrain/agents/conductors/bug/bug.sh": {"PyAutoLabs"},
     "PyAutoBrain/agents/conductors/health/health.sh": {"PyAutoNerves"},
-    "PyAutoBrain/agents/conductors/hygiene/_hygiene_config.py": {"PyAutoArray", "PyAutoCTI", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoBrain/agents/conductors/hygiene/_hygiene_config.py": {"PyAutoArray", "PyAutoCTI", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
     "PyAutoBrain/agents/conductors/hygiene/_hygiene_optdeps.py": {"HowToFit", "HowToGalaxy", "HowToLens", "autocti_workspace", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
     "PyAutoBrain/agents/conductors/hygiene/_hygiene_refs.py": {"PyAutoArray", "PyAutoCTI", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace"},
     # hygiene.sh and _hygiene_repos.py carry NO entry on purpose: the conductor
     # now derives its repo sets from the body map, so it names no instance fact
     # at all. Re-adding an entry here would re-permit the drift that
     # check_hygiene_coverage exists to catch.
-    "PyAutoBrain/agents/conductors/clone/_clone.py": {"HowToFit", "PyAutoFit", "PyAutoLabs", "PyAutoLens", "autofit_assistant", "autofit_workspace", "autolens_assistant"},
+    "PyAutoBrain/agents/conductors/clone/_clone.py": {"HowToFit", "PyAutoFit", "PyAutoLens", "autofit_assistant", "autofit_workspace", "autolens_assistant"},
     "PyAutoBrain/agents/conductors/clone/clone.sh": {"HowToFit", "PyAutoFit", "autofit_workspace", "autolens_assistant"},
     "PyAutoBrain/agents/conductors/community/_community.py": {"Jammy2211", "PyAutoLabs"},
     # autofit_workspace: the `_upstream_noise` docstring cites measured noise
@@ -841,16 +845,14 @@ FIREWALL_ALLOWLIST = {
     # file-spread threshold — the names ARE the finding; the code itself
     # derives its repo sets from the body map.
     "PyAutoBrain/agents/conductors/intake/_intake.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autofit_workspace", "autolens_workspace"},
-    "PyAutoBrain/agents/conductors/profiling/_profiling.py": {"PyAutoLabs", "autolens_profiling"},
+    "PyAutoBrain/agents/conductors/profiling/_profiling.py": {"autolens_profiling"},
     "PyAutoBrain/agents/conductors/profiling/profiling.sh": {"autolens_profiling"},
     "PyAutoBrain/agents/conductors/release/nightly.sh": {"PyAutoLabs", "PyAutoLens"},
     "PyAutoBrain/agents/conductors/release/rehearse.sh": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
     "PyAutoBrain/agents/conductors/release/validate.sh": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
-    "PyAutoBrain/agents/conductors/workspace/_workspace.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoLabs", "PyAutoReduce", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace", "autoreduce_workspace"},
+    "PyAutoBrain/agents/conductors/workspace/_workspace.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoReduce", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace", "autoreduce_workspace"},
     "PyAutoBrain/agents/faculties/memory/_memory.py": {"autolens_assistant"},
     "PyAutoBrain/agents/faculties/memory/memory.sh": {"autolens_assistant"},
-    "PyAutoBrain/agents/faculties/review/_review.py": {"PyAutoLabs"},
-    "PyAutoBrain/agents/faculties/review/review.sh": {"PyAutoLabs"},
     # The two autolens tokens are the findings maturation lane's experiment and
     # mature tiers — surfaces, not new files, so the entries grow rather than
     # the list.
