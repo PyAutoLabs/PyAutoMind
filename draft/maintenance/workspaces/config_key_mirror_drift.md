@@ -63,8 +63,8 @@ newer mass-profile params, worth mirroring so plots label correctly):**
 ## Scope
 
 - Add the worth-mirroring keys to the three workspace `config/*.yaml` files,
-  matching the library value/default (keep keys snake_case-lowercase — autoconf
-  lowercases yaml keys).
+  matching the library value/default (keep keys snake_case-lowercase —
+  autonerves lowercases yaml keys).
 - For each test/logging key, confirm whether the workspace should carry it
   before adding; leave out any that are deliberately library-only.
 
