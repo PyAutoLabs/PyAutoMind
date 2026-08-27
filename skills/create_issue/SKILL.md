@@ -5,6 +5,13 @@ description: Convert a PyAutoMind prompt file into a GitHub issue and register i
 
 Turn a `PyAutoMind/` prompt into a tracked GitHub issue and register it.
 
+> **Which GitHub surface are you on?** This skill spells its GitHub steps as
+> `gh` commands, which name the *operation*, not necessarily the command: a
+> Claude Code remote session has no `gh` and reaches GitHub through the
+> `mcp__github__*` tools instead. Probe once (`command -v gh`) and translate
+> via `PyAutoBrain/skills/GITHUB_ACCESS.md`. Do not install `gh` to close the
+> gap — that page records why an installed one still fails.
+
 A **PyAutoMind** primitive — it owns the mechanical **issue + registry write**:
 assemble the issue body, create the issue, register the task in `active.md`, move
 the prompt to `active/`, and push Mind state. The *reasoning* (classify repos,
@@ -173,6 +180,8 @@ If step 0 already pushed, this carries only the active.md + `active/` changes.
 ## Notes
 
 - Always present the issue body for review before creating it.
-- If `gh auth status` fails, tell the user to run `! gh auth login`.
+- On the `gh` surface, if `gh auth status` fails, tell the user to run
+  `! gh auth login`. On the MCP surface there is nothing to log into —
+  create the issue with `issue_write` and carry on.
 - The detailed plan should be thorough enough that a fresh session could start
   from the issue alone.
