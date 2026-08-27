@@ -34,6 +34,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-experiments-gut-stash
 - repos:
+  - autolens_workspace_developer: feature/rectangular-experiments-gut-stash
 - note: the prompt's `Repos:` header names PyAutoGut, but PyAutoGut is NOT modified —
   every condemned path is tracked and pushed, so the Gut's storage model calls for a
   pre-delete SHA in the catalog, not an `archive/condemned/*` payload ref. The second
