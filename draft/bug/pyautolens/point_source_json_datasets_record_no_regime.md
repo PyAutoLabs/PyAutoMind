@@ -139,9 +139,37 @@ script passes. So the invariant is one plausible simplification away from being
 reversed, with nothing in the suite to catch it. Not a reason to build now — but
 if fact 2 ever expires, that is the likely route.
 
-Next re-check: when PyAutoLens#480 closes. That is the only trigger — fact 2 is a
-standing invariant, not a countdown, and only breaks if someone switches
-`weak/simulator.py` to the random-positions helper.
+**2026-08-27 (later the same day) — THE TRIGGER HAS FIRED. #480 is fixed and closed.**
+
+PyAutoLens#480 was fixed in PyAutoLabs/PyAutoLens#712 (merged `c1bba66`) and closed,
+hours after the re-check above recorded it as still open. The record is
+`complete/2026/08/point-solver-magnification-plane-redshift.md`.
+
+**This does not make the task actionable yet, and the distinction matters.** The gate
+named in "Why it was deferred" is not #480 itself — it is the `no_run.yaml` exclusion,
+which #480 was only the *reason* for. That exclusion is in @autolens_workspace and is
+untouched: both `point_source/features/multiple_sources/{simulator,modeling}` are still
+skipped, so the script still does not run and the exposure is still not live. What
+changed is that the blocker behind the exclusion is gone, so removing it is now
+possible where before it would have failed.
+
+The remaining chain, in order:
+
+1. @autolens_workspace: revert the multi-source example to a richer multi-plane
+   configuration (#480's own text asks for this — the example was simplified to work
+   around the bug) and remove the two `multiple_sources` entries from
+   `config/build/no_run.yaml`.
+2. Then the script runs, `dataset/point_source/multiple_sources` is written for real,
+   and this prompt's exposure goes live — at which point steps 2-4 of "Suggested scope"
+   below are the actual work.
+
+So the next re-check trigger is no longer #480. **It is the `no_run.yaml` entries
+disappearing from @autolens_workspace.** Re-check by grepping that file for
+`multiple_sources`; if the entries are gone, build.
+
+Fact 2 is unchanged and remains a standing invariant: `weak/simple` still uses
+`via_tracer_from`, and only breaks if someone switches `weak/simulator.py` to the
+random-positions helper.
 
 ## Suggested scope
 
