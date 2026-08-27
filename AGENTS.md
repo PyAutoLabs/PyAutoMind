@@ -90,45 +90,52 @@ For the full workflow narrative, conventions, and registry schemas, read
    loosely-related changes, split into separate prompt files before issuing.
 4. **`tmp/` is scratch.** Never commit anything under it.
 
-## Running tests in a remote (web/mobile) session
+<!-- repos_sync:remote:begin -->
+## Remote sessions (Claude Code on web and mobile)
 
-Two facts, both measured:
+Three facts, all measured in a web/mobile container, where this file is loaded
+and little else is. They ride in every organ because a session may hold any
+subset of them — and the session that needs this most is the one holding
+several, which is exactly the session no hook fires in.
 
-1. **Bootstrap first — before the first test command, not when something looks
-   wrong.** A session holding several organs registers no SessionStart hook
-   (Claude Code reads hooks from the project directory, which is the repos'
-   *parent*), so nothing has set this session up yet:
+- **Bootstrap in the first turn, unconditionally** — before the first test
+  command, not as a remedy once something looks wrong:
 
-   ```
-   bash PyAutoMind/scripts/session_bootstrap.sh          # ~10s cold, ~1s warm
-   bash PyAutoMind/scripts/session_bootstrap.sh --check  # report only
-   ```
+  ```
+  bash PyAutoMind/scripts/session_bootstrap.sh          # ~10s cold, ~1s warm
+  bash PyAutoMind/scripts/session_bootstrap.sh --check  # report only
+  ```
 
-   This was phrased as a *remedy* — run it if `python3 -m pytest` misbehaves,
-   the symptom being `No module named pytest` or collection `ImportError`s
-   naming `yaml`. Measured 2026-08-27: that trigger no longer fires. The
-   container now ships Python 3.12 with `pytest`, `mypy`, `ruff` and `flake8`
-   all on it, so the session looks right, and the failure it still has —
-   `pytest -n auto` dying with `unrecognized arguments: -n` — reads like a bad
-   flag rather than a stale environment. A remedy keyed to a symptom is only as
-   good as the symptom; run it unconditionally instead.
+  A session holding several organs registers no SessionStart hook — Claude Code
+  reads project hooks from the project directory, which in that layout is the
+  repos' *parent*, not a repo — so nothing has set this session up. It was once
+  phrased as a remedy keyed to `No module named pytest` or collection
+  `ImportError`s naming `yaml`; that symptom stopped appearing when the
+  container image moved to Python 3.12, while the environment is still wrong in
+  ways that read like a bad command rather than a stale session (`pytest -n
+  auto` → `unrecognized arguments: -n`). The bootstrap also **unshallows the
+  clones**: a remote session clones shallow, and `git merge-base --is-ancestor`
+  then answers "not an ancestor" for a commit whose ancestry is merely absent —
+  the answer the ship and close-out procedures act on when proving a branch
+  merged.
 
-   It also **unshallows the clones**, which is the leg with teeth. A remote
-   session clones shallow — measured 2026-08-27: this repo arrived with 78 of
-   4478 commits — and `git merge-base --is-ancestor` then answers "not an
-   ancestor" for a commit whose ancestry is merely *absent* from the clone.
-   That is the answer the ship and close-out procedures act on when proving a
-   branch merged, so an unbootstrapped session can read a merged branch as
-   unmerged and stop a close-out on nothing.
+- **Then run the suite in parallel.** 4 cores, subprocess-heavy suites, no
+  single slow test: about 3.5x. `python3 -m pytest -q -n auto`, with
+  `pytest-xdist` supplied by the bootstrap above.
 
-2. **Then run the suite in parallel.** 4 cores, subprocess-heavy suites, no
-   single slow test: PyAutoBrain's 554 tests take 96s on one core and 28s on
-   four. `pytest-xdist` arrives with the bootstrap above, which is why that is
-   step 1:
-
-   ```
-   python3 -m pytest -q -n auto
-   ```
+- **There is no `gh`, and installing one does not help.** A remote session
+  reaches GitHub through the `mcp__github__*` tools, already scoped to the
+  session's repos. `gh` installs in two seconds and is a trap: it authenticates,
+  then 403s every repo-scoped call, because the egress proxy serves neither the
+  REST repo paths nor GraphQL beyond a pinned set of PR-review operations — a
+  binary that looks healthy and fails everything that matters. It also defeats
+  the surface probe, which keys off `gh auth status`. Read
+  `PyAutoBrain/skills/GITHUB_ACCESS.md` at the top of any run that touches
+  GitHub; it maps each `gh` operation onto its MCP tool. Spell that path from
+  the workspace root, as written: a multi-organ session is cwd'd at the repos'
+  *parent*, so a bare `skills/…` reads as a missing file rather than a missing
+  repo prefix.
+<!-- repos_sync:remote:end -->
 
 ## When you are asked to add a new prompt
 

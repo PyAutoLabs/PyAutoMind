@@ -77,6 +77,8 @@ MAP_BEGIN = "<!-- repos_sync:map:begin -->"
 MAP_END = "<!-- repos_sync:map:end -->"
 HISTORY_BEGIN = "<!-- repos_sync:history:begin -->"
 HISTORY_END = "<!-- repos_sync:history:end -->"
+REMOTE_BEGIN = "<!-- repos_sync:remote:begin -->"
+REMOTE_END = "<!-- repos_sync:remote:end -->"
 ORGANS_BEGIN = "<!-- repos_sync:organs:begin -->"
 ORGANS_END = "<!-- repos_sync:organs:end -->"
 
@@ -108,8 +110,30 @@ SESSION_HOOK_COMMAND = "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
 SESSION_HOOKS = "session-start hooks (generated)"
 
 
+# What a Claude Code web/mobile session must know before its first command:
+# bootstrap unconditionally, run the suite in parallel, and reach GitHub through
+# the MCP tools because there is no `gh`. Same shape as the history policy —
+# one source file, N generated copies, a drift check — and inline everywhere for
+# the same reason: a session may hold any subset of the organs, and the session
+# that needs this most (several organs, so no hook fires) is the one where only
+# repo content is guaranteed to be loaded.
+#
+# It was hand-written per repo until three passes in a row found a copy that had
+# not learned what the previous pass measured, and one pass found two organs
+# still shipping a bug a third had fixed. The per-repo halves were the argument
+# against generating it, so they are gone: no test counts, no timings, no
+# declared deps — those rot, and a rotting number in every repo's context is
+# worse than none. A repo's own dependencies stay in its
+# `.claude/session-python.txt`, which the hook reads at run time.
+REMOTE_SESSIONS_FILE = "policy/remote_sessions.md"
+
+
 def load_history_policy(mind_root):
     return (mind_root / HISTORY_POLICY_FILE).read_text().rstrip("\n")
+
+
+def load_remote_sessions(mind_root):
+    return (mind_root / REMOTE_SESSIONS_FILE).read_text().rstrip("\n")
 
 
 def load_session_hook(mind_root):
@@ -527,6 +551,30 @@ def check_history_blocks(root, repos, hpol):
         if extract_block(text, HISTORY_BEGIN, HISTORY_END) != hpol:
             problems.append(
                 f"'{name}': never-rewrite-history block is stale — run "
+                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
+            )
+    return problems
+
+
+def check_remote_blocks(root, repos, remote):
+    """Same contract as the history block: opt in with the markers, and the copy
+    must then be the canonical text verbatim.
+
+    Opt-in, not mandatory, so a repo that has not added the markers is skipped
+    rather than failing a session (or a CI leg) that cannot see it. That is also
+    the honest state of this rollout — see the module comment on
+    REMOTE_SESSIONS_FILE."""
+    problems = []
+    for name in repos:
+        agents = root / name / "AGENTS.md"
+        if not agents.exists():
+            continue
+        text = agents.read_text()
+        if REMOTE_BEGIN not in text or REMOTE_END not in text:
+            continue  # opt-in: repo hasn't added the remote-session markers yet
+        if extract_block(text, REMOTE_BEGIN, REMOTE_END) != remote:
+            problems.append(
+                f"'{name}': remote-session block is stale — run "
                 f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
             )
     return problems
@@ -1174,6 +1222,7 @@ def main():
 
     smap = system_map(categories, repos)
     hpol = load_history_policy(mind_root)
+    remote = load_remote_sessions(mind_root)
     hook_text = load_session_hook(mind_root)
 
     if args.write:
@@ -1191,6 +1240,8 @@ def main():
         for name in repos:
             write_block(root / name / "AGENTS.md", hpol,
                         HISTORY_BEGIN, HISTORY_END, required=False)
+            write_block(root / name / "AGENTS.md", remote,
+                        REMOTE_BEGIN, REMOTE_END, required=False)
         for rel, bold in PUBLIC_TABLE_TARGETS:
             write_block(root / rel, organ_public_table(repos, bold=bold),
                         ORGANS_BEGIN, ORGANS_END, required=False)
@@ -1210,6 +1261,8 @@ def main():
             lambda: check_map_blocks(root, repos, smap),
         "never-rewrite-history blocks (generated)":
             lambda: check_history_blocks(root, repos, hpol),
+        "remote-session blocks (generated)":
+            lambda: check_remote_blocks(root, repos, remote),
         "public front-door organ tables (generated)":
             lambda: check_public_tables(root, repos),
         "hub organism blurb (organs present)": lambda: check_hub_blurb(root, repos),
