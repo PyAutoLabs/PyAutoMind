@@ -65,8 +65,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/361 (issued 2026-08-27)
 - issued: 2026-08-27
 - prompt: active/pages_dashboard_publish_gap.md
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/362
 - worktree: ~/Code/PyAutoLabs-wt/pages-dashboard-publish-gap
+- heart-override: Heart was RED at ship time (`release validation FAILED (stage integrate)`,
+  score 40, ts 2026-08-27T21:04:08Z) and the human authorized shipping anyway on 2026-08-27.
+  NOT the AUTONOMY.md corrective-PR exception — that covers only a fix scoped to the RED
+  reason, and this change is unrelated to release validation. Deliberate override, recorded
+  on PR #362 under '## Ship gate — Heart override' so the merge decision stays auditable.
 - repos:
   - PyAutoMind: feature/pages-dashboard-publish-gap
 - parallel-claim: PyAutoMind is also claimed by organ-remote-block-and-uv-hook-repair
