@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 6 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 130 |
+| [Backlog](#backlog) (`draft/`) | 131 |
 
 ## Start here
 
@@ -287,7 +287,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**130** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**131** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -1505,7 +1505,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 </details>
 
 <details>
-<summary><b>Numba CPU sparse-operator likelihood — speed restoration</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Numba CPU sparse-operator likelihood — speed restoration</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Numba CPU sparse-operator likelihood — speed restoration</b> — ledger: `active/numba_cpu_likelihood_mge_convolution_and_caching.md` — phase 1 IN FLIGHT (PyAutoArray#496, 2026-08-27)</summary>
 
@@ -1519,6 +1519,14 @@ Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. 
 
 ```
 /start_dev draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
+
+```
+/start_dev draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md
 ```
 
 </details>
