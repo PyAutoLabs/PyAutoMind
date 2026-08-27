@@ -18,9 +18,16 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1530 (issued 2026-08-27)
 - issued: 2026-08-27
 - prompt: active/xla_cpu_eigen_pool_deadlock.md
-- status: workspace-dev — phase 1 (instrumentation + the ABAB dispatch) is on the branch
-  below; research follow-up to the shipped jax-compile-stall epic
+- status: workspace-dev — phase 1 DONE, root cause FOUND. Q1 and Q3 answered (run
+  33099502356, issue comment 5443451389); Q2 (minimal reproducer) and Q4 (upstream
+  filing) remain. Research follow-up to the shipped jax-compile-stall epic
   (record complete/2026/08/jax-vmap-materialisation-hang.md, PyAutoFit#1528)
+- FOUND: re-entrant thread-pool deadlock — xla::cpu::FftThunk::Execute runs ON an Eigen
+  pool worker and hands ducc0 that same pool, which fans the FFT back into it and blocks
+  on a latch. 4 workers, 4 concurrent FFT thunks, every worker waiting for a worker.
+  11/11 dumps identical. NOT oversubscription: no CFS quota on ubuntu-latest, every CPU
+  reading agrees at 4, so the pool is correctly sized and the ~15% is NOT recoverable by
+  sizing it. The flag stays.
 - branch: claude/xla-cpu-eigen-deadlock-wndbfb
 - repos:
   - autolens_workspace_test (claude/xla-cpu-eigen-deadlock-wndbfb) — retime harness gains
@@ -33,5 +40,5 @@
 - why: #1528 shipped a WORKAROUND. Every JAX script in both test workspaces now runs
   single-threaded Eigen (~15% slower on the heaviest), and that flag is load-bearing —
   removing it silently brings back seven quarantines.
-- the recoverable-cost question: if XLA's pool is merely mis-sized against the runner's
-  cgroup quota rather than genuinely deadlocked, the fix is sizing it and the 15% comes back.
+- the recoverable-cost question: ANSWERED NO — the pool is not mis-sized, it is genuinely
+  deadlocked, so the 15% comes back only via an upstream fix or a non-FFT convolution path.

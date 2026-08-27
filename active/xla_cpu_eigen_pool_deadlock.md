@@ -67,6 +67,63 @@ on both legs); the 3.12-vs-3.13 split. Do not re-run these.
 - CI picks up library branches by **matching branch name** across the dependency
   chain, so an experiment needs the same branch name in every repo it touches.
 
+## FOUND (2026-08-27, run 33099502356) — questions 1 and 3 are answered
+
+**The wedge is a re-entrant thread-pool deadlock in XLA CPU's `FftThunk`, not
+oversubscription.** 11 hangs / 12 runs, and 11 of 11 native dumps carry the
+identical signature — every dump, not a sample.
+
+All four `tf_XLAEigen` workers are parked here (frames trimmed):
+
+```
+#4  absl::CondVar::WaitCommon
+#5  ducc0::detail_threading::latch::wait()
+#8  ducc0::detail_threading::execParallel(...)
+#11 ducc0::google::r2c<double>(..., Eigen::ThreadPoolInterface*)
+#12 xla::cpu::FftThunk::Execute(xla::cpu::Thunk::ExecuteParams const&)
+#16 Eigen::ThreadPoolTempl<tsl::thread::EigenEnvironment>::WorkerLoop(int)
+```
+
+Frames 16 and 11 are the bug. `FftThunk` runs **on** an Eigen pool worker and
+hands ducc0 that same pool; ducc0 fans the FFT back **into the pool it is
+already running on** and blocks on a latch waiting for sub-tasks that need a
+free worker. Four workers, four concurrent FFT thunks, every worker waiting
+for a worker. All 26 threads in `futex_do_wait` — nothing spinning, which is
+why a month of wall-clock evidence read as "no progress" rather than "slow".
+
+The main thread is the door #1528 already knew: `jax::PyArray::BlockUntilReady`
+-> `jax::AwaitBuffersReady` -> `absl::Notification::WaitForNotificationWithTimeout`.
+
+This accounts for every previously unexplained feature: the flag works because
+without a pool `FftThunk` runs inline; the rate wanders because saturating all
+workers at once is a scheduling race; only the composite multi_dataset/MGE-group
+graphs reach it because they carry the most concurrent FFT convolutions; and the
+compile always finished first because FFT thunks execute at execution time.
+
+**Question 3 answered: NO.** The topology banner, identical on both legs —
+`os.cpu_count()` 4, `sched_getaffinity` 4, `/proc/cpuinfo` 4,
+`cpuset.cpus.effective` 0-3, and `cpu.max` **absent**: no CFS quota in force on
+`ubuntu-latest`. The pool is sized correctly and the runner advertises nothing it
+cannot schedule. So `affinity=auto` was a measured no-op (the banner says so
+rather than letting a null read as a result), the twelve runs are twelve
+controls, and **the ~15% is NOT recoverable by sizing the pool** — only by an
+upstream fix or by keeping these graphs off the FFT convolution path. The flag
+stays.
+
+Recorded on the issue: PyAutoFit#1530 (comment 5443451389). Job logs expire in
+90 days; the stacks are quoted there and here.
+
+### Still open
+
+- **Q2 minimal reproducer** — much smaller than first scoped. Not "strip the
+  multi_dataset composition": just enough concurrent FFT-backed convolutions
+  under vmap to saturate the intra-op pool, batch >= `os.cpu_count()`.
+- **Q4 upstream** — actionable now; the reproducer is what makes it land.
+- **One cheap confirmation first.** If the deadlock needs concurrent FFT thunks
+  >= pool size, pinning to one CPU must pass:
+  `--arm one:XLA_FLAGS=,affinity=1` against the control. That converts a
+  described mechanism into a demonstrated one.
+
 ## Acceptance
 
 - A native stack naming where the XLA workers are parked, or a recorded finding

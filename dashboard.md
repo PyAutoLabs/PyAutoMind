@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1530">issue #1530</a> — issued 2026-08-27 — workspace-dev — phase 1 (instrumentation + the ABAB dispatch) is on the branch</summary>
+<details><summary>📋 <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1530">issue #1530</a> — issued 2026-08-27 — workspace-dev — phase 1 DONE, root cause FOUND. Q1 and Q3 answered (run</summary>
 
 ```
 /start_dev active/xla_cpu_eigen_pool_deadlock.md
