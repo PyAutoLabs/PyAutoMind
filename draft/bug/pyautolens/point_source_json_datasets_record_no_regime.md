@@ -158,7 +158,10 @@ The remaining chain, in order:
 1. @autolens_workspace: revert the multi-source example to a richer multi-plane
    configuration (#480's own text asks for this — the example was simplified to work
    around the bug) and remove the two `multiple_sources` entries from
-   `config/build/no_run.yaml`.
+   `config/build/no_run.yaml`. **That work is already filed**, as
+   `draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md` (unblocked
+   2026-08-27); its step 7 is the `no_run.yaml` removal this prompt waits on. Do not
+   file a duplicate.
 2. Then the script runs, `dataset/point_source/multiple_sources` is written for real,
    and this prompt's exposure goes live — at which point steps 2-4 of "Suggested scope"
    below are the actual work.
