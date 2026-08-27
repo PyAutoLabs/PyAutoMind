@@ -1,3 +1,28 @@
+> **RETIRED 2026-08-27 — superseded, not actioned as written.**
+>
+> The OOM this prompt describes was root-caused and fixed before the prompt's own
+> amendment was written. See `complete/2026/08/interferometer-start-here-integrate-oom.md`:
+> `MultiStartProdigy` ran 48 starts as a single unbatched `vmap` (~86 GB in one
+> allocation); `autolens_workspace#450` set `batch_size=4` and the leg was
+> discharged by Release Integrate run 30901054267 on 2026-08-04
+> (`scripts/interferometer/start_here.py ... PASS (173.5s)`).
+>
+> Re-verified at retirement (2026-08-27):
+> - `autolens_workspace` and `autogalaxy_workspace` **both** carry `batch_size=4`
+>   on the 48-start `MultiStartProdigy` in `scripts/interferometer/start_here.py`,
+>   so the amendment's consequence 1 ("it is not autolens-specific") is closed too.
+> - The interferometer shard is green in the two most recent nightly Release
+>   Integrate runs — 32804373015 (2026-08-25, `autogalaxy`) and 33073386315
+>   (2026-08-27, `autolens`). No recurrence.
+> - The NUFFT/transformer hypothesis in "Notes for triage" was wrong: the
+>   allocation was the multi-start batch, not a dense transformer matrix.
+>
+> The amendment's consequence 2 — `JAX_TRACEBACK_FILTERING=off` in the release
+> harness — was **not** done and is still open. It was split out as its own task:
+> `draft/bug/ci/jax_traceback_filtering_release_harness.md`.
+
+---
+
 # interferometer/start_here.py OOM in nightly release-validation integrate leg
 
 Filed: 2026-07-31 (backfilled from git)

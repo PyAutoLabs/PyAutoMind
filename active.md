@@ -13,3 +13,15 @@
 - registered: 2026-08-19 by the wake_up session — the issuing session (claude/autofit-priors-messages-audit-ylvenv)
   filed the prompt + issue but not this entry, tripping Lifecycle Drift on main.
 - repos-none-claimed: this entry claims NO repos — one line deliberately, not 2-space bullets.
+
+## jax-traceback-filtering-release-harness
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/186 (issued 2026-08-27)
+- issued: 2026-08-27
+- prompt: active/jax_traceback_filtering_release_harness.md
+- status: library-dev (organ repo — PyAutoHeart CI workflow, not a PyAuto library or workspace)
+- worktree: ~/Code/PyAutoLabs-wt/jax-traceback-filtering-release-harness
+- session: web session https://claude.ai/code/session_01SFoQCsxRTGjKk2YGe4R9Rs (not `claude --resume`-able)
+- origin: split out of the retired prompt `complete/archive/shelved/interferometer_release_leg_oom.md`
+  by /start_dev on 2026-08-27, when that prompt's headline OOM was found already shipped
+  (`complete/2026/08/interferometer-start-here-integrate-oom.md`).
+- repos:
