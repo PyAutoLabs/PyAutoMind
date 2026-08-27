@@ -24,4 +24,8 @@
 - origin: split out of the retired prompt `complete/archive/shelved/interferometer_release_leg_oom.md`
   by /start_dev on 2026-08-27, when that prompt's headline OOM was found already shipped
   (`complete/2026/08/interferometer-start-here-integrate-oom.md`).
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/187 (opened 2026-08-27)
+- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/347 (registry + retirement; this session
+  is branch-scoped, so Mind state reaches main via PR rather than a direct push)
 - repos:
+  - PyAutoHeart (feature/jax-traceback-filtering-release-harness)
