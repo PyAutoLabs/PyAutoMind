@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1154 records across 7 buckets.
+1155 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -126,6 +126,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [jax-likelihood-smoke-pins-stale](2026/08/jax-likelihood-smoke-pins-stale.md)
 - [jax-stall-shared-preloads-retime-refutation](2026/08/jax-stall-shared-preloads-retime-refutation.md)
 - [jax-traceback-filtering-release-harness](2026/08/jax-traceback-filtering-release-harness.md)
+- [jax-vmap-materialisation-hang](2026/08/jax-vmap-materialisation-hang.md) — jax-compile-stall phase 3
 - [knowledge-board](2026/08/knowledge-board.md) — auto-closed on merge
 - [lacosmic-cr-option-and-star-pass-decoupling](2026/08/lacosmic-cr-option-and-star-pass-decoupling.md) — both deliberately OPEN — closure is the default-flip decision, not this ship
 - [latex-docstrings-invalid-escape-warnings](2026/08/latex-docstrings-invalid-escape-warnings.md)
