@@ -22,8 +22,8 @@
 - status: ready-to-ship — both branches pushed, no PRs opened yet (awaiting sign-off)
 - worktree: ~/Code/PyAutoLabs-wt/reconstruction-noise-map-zeroed-pixels
 - repos:
-  - PyAutoArray: feature/reconstruction-noise-map-zeroed-pixels (051cfd3e, pushed)
-  - autolens_workspace: feature/reconstruction-noise-map-zeroed-pixels (e170560, pushed)
+  - PyAutoArray: feature/reconstruction-noise-map-zeroed-pixels (a7703a2e, pushed)
+  - autolens_workspace: feature/reconstruction-noise-map-zeroed-pixels (e0484c2e, pushed)
 - summary: |
     Implemented in a web-github session directly against fresh clones — the `worktree:` path above
     is a CLAIM on the two repos, not a directory that exists. A local session resuming this will hit
@@ -38,17 +38,29 @@
     (9 unit + 1 end-to-end invariant). Full suite 1177 passed, 55 skipped. Workspace: documentation
     only, 4 scripts + 4 regenerated notebooks, no code lines changed.
 
-    TWO THINGS THE REVIEWER MUST SEE:
-    1. The magnitude of the value change on the SOLVED pixels was NOT measured on a real lens fit —
-       this environment has no PyAutoLens. Direction is mathematically guaranteed ([A^-1]_keep >=
-       (A_keep)^-1, so noise always drops); a structural proxy gives 0.983–0.992 median, but that is
-       the same kind of proxy that understated a related effect 10x in this prompt's own history.
-       Measure on a real fit before the release note quotes a number.
-    2. Found while editing the workspace, NOT fixed: `imaging` and `interferometer`
-       `source_science.py` compute `interpolated_noise_map = griddata(values=reconstruction, ...)` —
-       the reconstruction, not the noise map, then plot it as "Source Reconstruction Noise Map".
-       `group` and `multi_galaxy` pass `reconstruction_noise_map` correctly. Pre-existing, unrelated
-       to this task, and changes a displayed figure, so it needs its own sign-off. Worth an /intake.
+    MEASURED ON REAL LENS FITS (PyAutoLens/PyAutoGalaxy/PyAutoFit cloned at main and run against
+    this branch). At the evidence-optimal regularization coefficient (lambda*=1, interior to a
+    9-point grid): Rectangular 28x28, 108 of 784 zeroed — old/new p50 1.0002, p90 1.069, p99 1.44,
+    max 1.81; 21% of solved pixels move >1%, 9% >10%. Delaunay set up as the workspace's own
+    delaunay.py does (zeroed_pixels=30) — p50 1.0045, p99 1.90, max 2.37, which answers this
+    prompt's "Delaunay untested" caveat. With Delaunay's default zeroed_pixels=0 the property is
+    unchanged to the bit. Downstream source flux and magnification through the S/N >= 5 cut moved
+    0.00% in every case (lit-pixel counts identical: 7/7, 24/24, 121/121) — the pixels whose noise
+    changes most sit at the mesh edge, where there is no flux to move. The earlier structural proxy
+    predicted a uniform 1–2% shift and was wrong in shape: the real result is a negligible median
+    with a long edge-concentrated tail.
+
+    THE MEASUREMENT ALSO CAUGHT AN OVERCLAIM, now fixed. The first implementation asserted a
+    biconditional — reconstruction == 0.0 exactly where the noise map is NaN. False: the NNLS solver
+    also pins SOLVED pixels at exactly 0.0. On the 28x28 fit, 603 of 784 pixels read 0.0 while only
+    108 are NaN, so 495 well-constrained pixels would have been read as unfitted. NaN => recon == 0
+    holds; the converse does not. Library docstring, end-to-end test and all four workspace scripts
+    corrected. (The test had passed only because its 3x3 fixture solves a single pixel.)
+
+    The `griddata` bug reported earlier IS NOW FIXED on the workspace branch, per human instruction:
+    `imaging` and `interferometer` `source_science.py` interpolated `reconstruction` and plotted it
+    as the noise map; they now pass `reconstruction_noise_map`, matching their `group` and
+    `multi_galaxy` siblings. All four scripts are consistent.
 
     Scope is Defect 2 of the prompt ONLY: `reconstruction_covariance_matrix` inverts the full
     `curvature_reg_matrix` while `reconstruction` solves the `zeroed_ids_to_keep` submatrix and
