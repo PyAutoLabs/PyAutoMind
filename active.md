@@ -24,8 +24,12 @@
   Q2 CLOSED (80d7bc5): standalone reproducer, jax+numpy only, deadlocks 8/8 against 0/8
   with the workaround flag, Fisher p=0.000155. Needed a scatter feeding each FFT (else XLA
   fuses to a YnnFusionThunk and ducc0 runs inline) plus transforms above ducc0's fan-out
-  threshold. Q4 upstream is the ONLY acceptance item left — NOT yet filed, draft pending
-  human review since it posts to an external tracker. Research follow-up to the shipped jax-compile-stall epic
+  threshold. Q4 DECIDED: report written, human-reviewed and committed
+  (51512af, .github/scripts/xla_fft_pool_reentrancy_upstream.md) and deliberately NOT
+  filed — posting to jax-ml/jax is outward-facing and outside this session's scope, so it
+  needs a person; the hold is about who posts, not whether the finding stands. ALL FOUR
+  acceptance criteria now met (comment 5445381638). Ready for close-out; flag removal
+  stays a deliberate non-action until an upstream fix lands. Research follow-up to the shipped jax-compile-stall epic
   (record complete/2026/08/jax-vmap-materialisation-hang.md, PyAutoFit#1528)
 - FOUND: re-entrant thread-pool deadlock — xla::cpu::FftThunk::Execute runs ON an Eigen
   pool worker and hands ducc0 that same pool, which fans the FFT back into it and blocks
