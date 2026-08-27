@@ -62,3 +62,10 @@
 - worktree: ~/Code/PyAutoLabs-wt/harvest-0827-gate-b-pt2
 - repos:
   - autolens_profiling: feature/harvest-0827-gate-b-pt2
+
+## dashboard-bundles
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/309
+- issued: 2026-08-27
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/dashboard-bundles
+- repos:
