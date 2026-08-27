@@ -29,10 +29,15 @@ epic, never picked standalone.
 - notes: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues.
 
 ## jax-compile-stall
-- title: Intermittent XLA compile stall in the JAX vmap likelihood path
+- title: JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)
 - ledger: draft/bug/ci/jax_vmap_jit_compile_stall.md
-- status: IN FLIGHT — reopened 2026-08-27 by phase 3 (PyAutoFit#1528, task jax-stall-block-until-ready).
-  Was CLOSED AS PARTIAL 2026-08-23 — record complete/2026/08/jax-compile-stall-slow-vs-stall-audit.md
+- status: SHIPPED 2026-08-27 — all 3 phases done; record
+  complete/2026/08/jax-vmap-materialisation-hang.md. Root cause is XLA CPU's multithreaded Eigen
+  thread pool; workaround XLA_FLAGS=--xla_cpu_multi_thread_eigen=false in both test workspaces'
+  smoke AND release profiles (ABAB: 12 pass/0 hang with vs 2 pass/14 hang without, Fisher p~3e-6).
+  All 7 quarantined entries restored, 42/42 completions. PyAutoFit#1528, PRs PyAutoFit#1529,
+  PyAutoHands#269, autolens_workspace_test#281, autogalaxy_workspace_test#114.
+  NOT a root-cause fix: why the pool wedges is still unknown — follow-up filed under draft/research/ci/.
 - NEW EVIDENCE 2026-08-25: multi_dataset/jax_likelihood/shared_preloads.py stalled at TIMEOUT (300s) in
   PyAutoHeart Workspace Smoke run 32902243623 — one day after the 2026-08-24 retime refuted its SLOW
   marker and returned it to mega-run coverage. N=5 per leg measures the fast mode of a bimodal failure

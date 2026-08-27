@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 131 |
+| [Backlog](#backlog) (`draft/`) | 132 |
 
 ## Start here
 
@@ -163,14 +163,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/jax_compile_stall_3_root_cause.md">Phase 3: root-cause the XLA vmap compile stall and clear every NEEDS_FIX…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1528">issue #1528</a> — issued 2026-08-27 — library-dev</summary>
-
-```
-/start_dev active/jax_compile_stall_3_root_cause.md
-```
-
-</details>
-
 ## Parked
 
 Started or scoped, not currently in flight — resume by moving the row back to `active.md`. Full detail in [`parked.md`](parked.md).
@@ -255,7 +247,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**131** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
+**132** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -479,7 +471,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 14</summary>
+<summary><b>research</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -501,6 +493,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autolens/quick_update_plotting_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/ci/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> — ci · medium · supervised · medium</summary>
+
+```
+/start_dev draft/research/ci/xla_cpu_eigen_pool_deadlock.md
 ```
 
 </details>
@@ -1164,7 +1164,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-27 | issued | <a href="active/jax_compile_stall_3_root_cause.md">Phase 3: root-cause the XLA vmap compile stall and clear every…</a> |
+| 2026-08-27 | filed | <a href="draft/research/ci/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
@@ -1383,17 +1383,17 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Intermittent XLA compile stall in the JAX vmap likelihood path</b> — 1 queued prompt(s), in order</summary>
+<summary><b>JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Intermittent XLA compile stall in the JAX vmap likelihood path</b> — ledger: `draft/bug/ci/jax_vmap_jit_compile_stall.md` — IN FLIGHT — reopened 2026-08-27 by phase 3 (PyAutoFit#1528, task jax-stall-block-until-ready).</summary>
+<details><summary>📋 <b>JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)</b> — ledger: `draft/bug/ci/jax_vmap_jit_compile_stall.md` — SHIPPED 2026-08-27 — all 3 phases done; record</summary>
 
 ```
-Continue the 'Intermittent XLA compile stall in the JAX vmap likelihood path' epic. Its canonical state lives in draft/bug/ci/jax_vmap_jit_compile_stall.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 (watchdog) shipped in full; phases 2/3 stopped deliberately at a measured-but-not-root-caused state. The stall is instrumented and characterised (>100x bimodality inside one compile step; vmap-of-jit contributory at p=0.070 but NOT causal; the compile-cache hypothesis never tested) and NOTHING was un-quarantined. Resumed 2026-08-27 as phase 3 (PyAutoFit#1528) — NOT via draft/research/ci/smoke_timing_and_profiling.md,
+Continue the 'JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)' epic. Its canonical state lives in draft/bug/ci/jax_vmap_jit_compile_stall.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 (watchdog) shipped in full; phases 2/3 stopped deliberately at a measured-but-not-root-caused state. The stall is instrumented and characterised (>100x bimodality inside one compile step; vmap-of-jit contributory at p=0.070 but NOT causal; the compile-cache hypothesis never tested) and NOTHING was un-quarantined. Resumed 2026-08-27 as phase 3 (PyAutoFit#1528) — NOT via draft/research/ci/smoke_timing_and_profiling.md,
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/ci/jax_vmap_jit_compile_stall.md">Intermittent XLA compile stall in JAX vmap likelihood scripts — third repo…</a> — ci · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/ci/jax_vmap_jit_compile_stall.md">JAX vmap result never materialises — campaign map…</a> — ci · too-large · supervised · high</summary>
 
 ```
 /start_dev draft/bug/ci/jax_vmap_jit_compile_stall.md
