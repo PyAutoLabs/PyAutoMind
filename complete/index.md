@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1168 records across 7 buckets.
+1169 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -253,6 +253,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [small-datasets-loader-pixel-scales](2026/08/small-datasets-loader-pixel-scales.md)
 - [small-datasets-regime-stamp](2026/08/small-datasets-regime-stamp.md)
 - [small-datasets-rmtree-committed-data](2026/08/small-datasets-rmtree-committed-data.md)
+- [smoke-install-stale-jax-pin](2026/08/smoke-install-stale-jax-pin.md) — Dropped the vestigial `jax<0.7 jaxlib<0.7` pin from smoke_install.sh. Added in #82 solely to keep tensorflow-p…
 - [smoke-runner-delegation](2026/08/smoke-runner-delegation.md)
 - [smoke-runner-jupyter-guard](2026/08/smoke-runner-jupyter-guard.md)
 - [smoke-surface-retime-sweep](2026/08/smoke-surface-retime-sweep.md)

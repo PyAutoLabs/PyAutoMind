@@ -264,7 +264,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 **134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 30</summary>
+<summary><b>feature</b> — 31</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution + operated-matrix caching</a> — autoarray · medium · supervised · high</summary>
 
@@ -302,6 +302,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autofit/search_seed_reproducibility.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/intake_reconcile_absence_signal.md"><code>intake reconcile</code> cannot see a prompt that shipped with no Mind-side trace</a> — pyautobrain · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/pyautobrain/intake_reconcile_absence_signal.md
 ```
 
 </details>
@@ -634,15 +642,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 21</summary>
-
-<details><summary>📋 <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right jax…</a> — ci · low · supervised · medium</summary>
-
-```
-/start_dev draft/maintenance/ci/smoke_install_stale_jax_pin.md
-```
-
-</details>
+<summary><b>maintenance</b> — 20</summary>
 
 <details><summary>📋 <a href="draft/maintenance/autolens_workspace_developer/rectangular_experiments_gut_stash.md">autolens_workspace_developer rectangular experiments — Gut stash + rename</a> — autolens_workspace_developer · small · supervised · normal</summary>
 
@@ -1195,6 +1195,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/reconcile_duplicate_prompt_signal.md"><code>intake reconcile</code> should score prompts against each other, not only…</a> |
+| 2026-08-27 | filed | <a href="draft/feature/pyautobrain/intake_reconcile_absence_signal.md"><code>intake reconcile</code> cannot see a prompt that shipped with no Mind-side…</a> |
 | 2026-08-27 | issued | <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/organs/session_fixes_reach_only_two_organs.md">Two organs are missing this session's fixes, and the hook still ships…</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
@@ -1203,12 +1204,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |
 | 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
-| 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
@@ -1218,13 +1219,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
-| 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-22 | filed | <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right jax…</a> |
+| 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 | 2026-08-22 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the…</a> |
 | 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
