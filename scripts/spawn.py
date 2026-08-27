@@ -131,6 +131,9 @@ MIND_RULES = [
     (".github/workflows/morning_status.yml", "DROP"),
     (".github/workflows/morning_health.yml", "DROP"),
     (".github/workflows/arxiv_papers.yml", "DROP"),
+    # rule 9c, same as its sibling above: scheduled, needs the papers
+    # webhook-less cross-repo PAT, and pushes to another org repo.
+    (".github/workflows/arxiv_interests.yml", "DROP"),
     # 9c also: the tenant-firewall gate checks out three sibling organ repos by
     # name (PyAutoBrain/PyAutoHeart/PyAutoHands). A fresh org has none of them,
     # and owner substitution only turns those into YOURORG/... placeholders —
@@ -149,6 +152,12 @@ MIND_RULES = [
     # adopter has a Brain; not worth inheriting a scheduled job that fails on
     # checkout every Sunday.
     (".github/workflows/branch_sweep.yml", "DROP"),
+    # 9c also: the ledger auto-merge. It MERGES TO MAIN with the workflow
+    # token and checks out PyAutoLabs/PyAutoBrain for the dashboard render
+    # (dashboard_refresh.yml's failure mode again). A fresh org should inherit
+    # neither unasked: an adopter re-adds it once they have a Brain and have
+    # decided for themselves which of their paths are ledger.
+    (".github/workflows/mind_ledger_merge.yml", "DROP"),
     (".github/scripts/*", "DROP"),
     # NO `.github/*` catch-all, deliberately. A catch-all is fail-OPEN: a new
     # Mind workflow would ride it into the template carrying whatever schedule
@@ -209,6 +218,9 @@ MEMORY_RULES = [
     # content, the instance's overnight suggestions are not. A fresh repo gets
     # the header and no papers; PyAutoMemory#57.
     ("arxiv-inbox.md", "EMPTY"),
+    # EMPTY for the same reason: the day-batch format is template content, the
+    # instance's backlog of recommendations is not.
+    ("arxiv-interests.md", "EMPTY"),
     ("README.md", "SPECIAL:memory_readme"),
 ]
 
@@ -245,6 +257,7 @@ EMPTY_TITLES = {
     "queue.md": "# Queue",
     "reading-queue.md": "# Reading queue",
     "arxiv-inbox.md": "# arXiv inbox",
+    "arxiv-interests.md": "# arXiv interests",
 }
 
 # Generated header comments for EMPTY files matched by a glob rather than by

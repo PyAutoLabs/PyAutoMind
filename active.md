@@ -52,3 +52,60 @@
 - the recoverable-cost question: ANSWERED NO, twice over — no cgroup quota exists to
   match, and a pool of 1 costs 56-62s against control's 48.1s, i.e. what the flag already
   costs. Pool sizing recovers nothing; the 15% comes back only upstream.
+
+## numba-cpu-mge-batch-convolve-cache
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/496
+- issued: 2026-08-27
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/497
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/588
+- heart-ack: user authorised ship over RED `release validation FAILED (stage integrate)` (unrelated autolens_workspace_test rectangular_mge pin drift), 2026-08-27
+- worktree: ~/Code/PyAutoLabs-wt/numba-cpu-mge-batch-convolve-cache
+- repos:
+  - PyAutoArray: feature/numba-cpu-mge-batch-convolve-cache
+  - PyAutoGalaxy: feature/numba-cpu-mge-batch-convolve-cache
+- note: epic numba-cpu-likelihood phase 1. Plan on the issue. Item 4 (pair-loop hoist + mirror) approved
+  by user 2026-08-27 after the per-pixel-noise-map check; strict bit-identity NOT required (ulp-level BLAS
+  ordering in the mirrored half accepted, pins at rtol 1e-6 are the guard).
+
+## organ-remote-block-and-uv-hook-repair
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/360 (issued 2026-08-27)
+- issued: 2026-08-27
+- prompt: active/session_fixes_reach_only_two_organs.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/organ-remote-block-and-uv-hook-repair
+- repos:
+  - PyAutoMind: feature/organ-remote-block-and-uv-hook-repair
+  - PyAutoBrain: feature/organ-remote-block-and-uv-hook-repair
+  - PyAutoHeart: feature/organ-remote-block-and-uv-hook-repair
+  - PyAutoHands: feature/organ-remote-block-and-uv-hook-repair
+- scope-note: PyAutoBrain is claimed though the prompt omits it — it carries a generated
+  hook copy that goes stale the moment policy/session_start_hook.sh changes, and
+  firewall_gate.yml checks it out. The prompt's "all four organs" was written from a
+  session that could see two.
+- deliberately-out-of-scope: the other 30 repos carrying a stale hook copy (no gate sees
+  them; firewall_gate.yml checks out four). Filed as
+  draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md
+- co-claim RELEASED 2026-08-27: pages-dashboard-publish-gap (#361) shipped and closed out
+  (PR #362 merged 74c1450, record complete/2026/08/pages-dashboard-publish-gap.md), so
+  PyAutoMind is now claimed by this task alone. The two ran in parallel worktrees on
+  disjoint file sets — that task touched `.github/workflows/dashboard_refresh.yml` only;
+  this one touches `scripts/`, `policy/`, `tests/` and the generated `.claude/hooks/`
+  copies — and needed no serialisation.
+
+## result-instance-fallback
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1535
+- issued: 2026-08-27
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/result-instance-fallback
+- repos:
+  - PyAutoFit: feature/result-instance-fallback
+  - PyAutoLens: feature/result-instance-fallback
+
+## harvest-0827-gate-b-pt2
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/182
+- issued: 2026-08-27
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/harvest-0827-gate-b-pt2
+- repos:
+  - autolens_profiling: feature/harvest-0827-gate-b-pt2

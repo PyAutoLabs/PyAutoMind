@@ -131,6 +131,20 @@ jobs:
             return "$rc"
           }
           if check; then
+            # Fresh in the repo does NOT mean published. The commit that made it
+            # fresh is usually mind_ledger_merge.yml's, pushed with GITHUB_TOKEN,
+            # which fires no push event -- so pages_dashboard.yml's own
+            # `push: main, paths: [dashboard.html]` trigger never sees it, and the
+            # heal-path dispatch below is never reached because we return here.
+            # That stranded the published board on 2026-08-27 while main was
+            # correct, and the nightly cron takes this same path, so nothing healed
+            # it. Ask the publisher explicitly: it is idempotent and collapses under
+            # pages_dashboard.yml's `concurrency: group: pages`.
+            # DO NOT fold this back into the heal path below -- that IS the bug.
+            if [ "${GITHUB_EVENT_NAME}" != "pull_request" ]; then
+              GH_TOKEN="${{ github.token }}" gh workflow run pages_dashboard.yml --ref main \
+                || echo "::warning::could not dispatch pages_dashboard.yml — the Pages page will lag until its next trigger"
+            fi
             exit 0
           fi
           # Only PR runs error-without-healing (see the registry step above).

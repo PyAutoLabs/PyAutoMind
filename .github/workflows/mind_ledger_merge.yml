@@ -1,0 +1,285 @@
+name: Mind Ledger Merge
+
+# Lands PyAutoMind's own ledger work without anyone having to ask for it.
+#
+# THE PROBLEM. A branch-scoped session — the phone, claude.ai/code, any
+# `claude/**` flow — pushes its Mind changes to a feature branch and they stop
+# there. `prompt_sync.sh` pushes HEAD on purpose (a cloud session must not push
+# straight to main), but nothing downstream moves the branch on: no workflow so
+# much as *looks* at a `claude/**` push, because lifecycle_drift,
+# dashboard_refresh, firewall_gate and spawn_drift all trigger on `push: main`
+# or `pull_request` only. So a filed prompt, a shipped task moved to
+# `complete/`, a regenerated dashboard — all of it waits for a human to write an
+# explicit "merge that branch" prompt, and the dashboard renders a stale
+# backlog until they do.
+#
+# WHY A WORKFLOW AND NOT THE SESSION. branch_sweep.yml's reasoning, again: a
+# workflow's GITHUB_TOKEN is a *different* credential from the session's, and
+# this repo already trusts it with `contents: write` (dashboard_refresh.yml
+# commits to main with it). Running the merge here means the ledger lands from
+# any surface that can push — including a chat on a phone — and it lands
+# whether or not the session that pushed it ever comes back.
+#
+# WHAT IT WILL AND WILL NOT MERGE. Only a branch whose whole diff is *ledger*:
+# `draft/`, `active/`, `complete/`, the root registry files and the generated
+# dashboard pages. The line is drawn by scripts/ledger_merge.py — a script, so
+# it is testable and a session can predict the verdict — and it is DEFAULT
+# DENY: anything under `scripts/`, `tests/`, `.github/`, `skills/`, `policy/`,
+# `docs/`, `repos.yaml`, the prose pages, or any path nobody has classified,
+# stops the merge and leaves the branch for a human. This workflow's own file
+# is on the code side of that line, which is the intended self-consistency: it
+# cannot merge a change to itself.
+#
+# NOT A REVIEW BYPASS. Review adds nothing to a moved prompt file; it adds
+# everything to a changed script. The gate encodes precisely that distinction
+# and nothing else.
+
+on:
+  push:
+    branches: ["claude/**"]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to judge (default: the caller's ref)"
+        type: string
+        default: ""
+      mode:
+        description: "audit = classify and report only · merge = land it"
+        type: choice
+        options: [audit, merge]
+        default: audit
+      delete_branch:
+        description: "Delete the branch after a direct (non-PR) merge"
+        type: boolean
+        default: true
+
+# contents: write → the merge push to main and the branch delete.
+# pull-requests: write → merge through an open PR when the branch has one, so
+#   the PR records as MERGED rather than being orphaned by a direct push.
+# actions: write → re-dispatch the self-healing workflows on main. A push made
+#   with GITHUB_TOKEN triggers nothing, so without this the generated pages
+#   stay stale until the nightly cron (dashboard_refresh.yml learned this the
+#   hard way on 2026-08-21).
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+# Every run of this workflow ends in a push to main, so runs must not overlap:
+# two branches merging concurrently would race, and the loser would spend its
+# three attempts re-merging. Queue rather than cancel — a cancelled run can
+# leave a branch merged and undeleted.
+concurrency:
+  group: mind-ledger-merge
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    # Never in a fork or a spawned template: this job writes to main, and an
+    # adopter re-adds that deliberately (spawn.py DROPs this file for the same
+    # reason it DROPs dashboard_refresh.yml).
+    if: github.repository == 'PyAutoLabs/PyAutoMind' && github.event.deleted != true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve the branch
+        id: target
+        run: |
+          BRANCH="${{ inputs.branch }}"
+          [ -n "$BRANCH" ] || BRANCH="${{ github.ref_name }}"
+          case "$BRANCH" in
+            main|"") echo "::error::refusing to operate on '$BRANCH'"; exit 1 ;;
+            archive/condemned/*) echo "::error::'$BRANCH' is a Gut transit ref"; exit 1 ;;
+          esac
+          MODE="${{ inputs.mode }}"
+          # A push is the automatic door and merges; the manual door defaults to
+          # audit, so a human dispatching it to look never merges by accident.
+          [ "${{ github.event_name }}" = "push" ] && MODE="merge"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "Branch: \`$BRANCH\` · mode: \`$MODE\`" >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.target.outputs.branch }}
+          # Full history: the classifier diffs against the merge base with main,
+          # and `merge-base --is-ancestor` cannot answer on a shallow clone —
+          # it reports "not an ancestor" for ancestry that is merely absent.
+          fetch-depth: 0
+          path: PyAutoMind
+
+      # The dashboard renderer lives with the intake conductor, not here — the
+      # Mind holds the state, the Brain reasons over it (ORGANISM.md).
+      - uses: actions/checkout@v4
+        with:
+          repository: PyAutoLabs/PyAutoBrain
+          path: PyAutoBrain
+
+      - name: Is there anything to merge?
+        id: ahead
+        working-directory: PyAutoMind
+        run: |
+          git fetch --quiet origin main
+          HEAD_SHA=$(git rev-parse HEAD)
+          echo "head_sha=$HEAD_SHA" >> "$GITHUB_OUTPUT"
+          if git merge-base --is-ancestor "$HEAD_SHA" origin/main; then
+            echo "already in main — nothing to merge" >> "$GITHUB_STEP_SUMMARY"
+            echo "merged=already" >> "$GITHUB_OUTPUT"
+          else
+            echo "merged=no" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Classify the diff — ledger, or code?
+        id: classify
+        if: steps.ahead.outputs.merged == 'no'
+        working-directory: PyAutoMind
+        run: |
+          set +e
+          OUT=$(python3 scripts/ledger_merge.py classify --base origin/main)
+          RC=$?
+          set -e
+          echo "$OUT"
+          {
+            echo ""
+            echo "<details><summary>Classification</summary>"
+            echo ""
+            echo '```'
+            echo "$OUT"
+            echo '```'
+            echo ""
+            echo "</details>"
+          } >> "$GITHUB_STEP_SUMMARY"
+          # Exit 2 is the gate failing to run, which is not "a human's turn" —
+          # it is a broken gate, and it must fail the job rather than read as a
+          # quiet decline to merge.
+          if [ "$RC" -eq 2 ]; then
+            echo "::error::ledger_merge.py could not classify the diff"
+            exit 1
+          fi
+          if [ "$RC" -ne 0 ]; then
+            echo "verdict=code" >> "$GITHUB_OUTPUT"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "**Left for a human** — this branch changes code, not just the ledger." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "verdict=ledger" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Structural drift BLOCKS. `lifecycle.py check` catches a real
+      # inconsistency — a prompt in `active/` with no `active.md` entry, a
+      # record whose front matter contradicts the ledger — and nothing heals
+      # that automatically. Merging it would put the contradiction on main.
+      - name: Structural drift (blocking)
+        if: steps.classify.outputs.verdict == 'ledger'
+        working-directory: PyAutoMind
+        run: python3 scripts/lifecycle.py check
+
+      # Generated-page staleness DOES NOT block. `complete/index.md`, the
+      # registry contents blocks and the dashboard pages are all renders with
+      # self-healing workflows on main, so a stale render is a reason to heal
+      # after the merge, never a reason to strand the ledger. Reported, not
+      # enforced.
+      - name: Generated-page freshness (reported, healed after the merge)
+        if: steps.classify.outputs.verdict == 'ledger'
+        continue-on-error: true
+        working-directory: PyAutoMind
+        run: |
+          STALE=""
+          python3 scripts/lifecycle.py index --check || STALE="$STALE complete/index.md"
+          python3 scripts/registry_toc.py --check   || STALE="$STALE registry-contents"
+          python3 ../PyAutoBrain/agents/conductors/intake/_intake.py --mind . dashboard --check \
+            || STALE="$STALE dashboard"
+          if [ -n "$STALE" ]; then
+            echo "stale renders (will be healed on main):$STALE" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Merge into main
+        id: merge
+        if: steps.classify.outputs.verdict == 'ledger' && steps.target.outputs.mode == 'merge'
+        working-directory: PyAutoMind
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.target.outputs.branch }}
+          HEAD_SHA: ${{ steps.ahead.outputs.head_sha }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # An open PR is merged THROUGH the PR, so it records as MERGED and
+          # its review thread closes properly. A direct push would land the
+          # same commits and leave the PR reading "closed", which is a lie
+          # about what happened to the work.
+          PR=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$PR" ]; then
+            echo "open PR #$PR on this branch — merging through it"
+            gh pr merge "$PR" --merge
+            echo "via=pr#$PR" >> "$GITHUB_OUTPUT"
+            echo "Merged **#$PR** (\`$BRANCH\` → main)." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          # No PR: merge the ref directly. Each attempt rebuilds on the current
+          # tip of main, so a concurrent push never needs a rebase — the same
+          # convergence the self-heal loops use.
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            if git merge-base --is-ancestor "$HEAD_SHA" origin/main; then
+              echo "landed by a concurrent run"
+              echo "via=concurrent" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git checkout -B _ledger_merge origin/main
+            if ! git merge --no-ff "$HEAD_SHA" \
+                -m "mind: auto-merge ledger branch $BRANCH" \
+                -m "Ledger-only diff (scripts/ledger_merge.py), structural checks clean." ; then
+              git merge --abort || true
+              echo "::error::'$BRANCH' conflicts with main — resolve it by hand"
+              echo "**Conflict** — \`$BRANCH\` does not merge cleanly; left for a human." >> "$GITHUB_STEP_SUMMARY"
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              echo "merged on attempt $attempt"
+              echo "via=direct" >> "$GITHUB_OUTPUT"
+              echo "Merged \`$BRANCH\` → main (no PR; direct merge commit)." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt) — retrying on the new tip of main"
+          done
+          echo "::error::could not push the merge after 3 attempts"
+          exit 1
+
+      # A PR merge deletes its own head where the repo has "Automatically
+      # delete head branches" on; a DIRECT merge has no such hook, which is how
+      # 188 provably-spent branches piled up before branch_sweep.yml. Delete it
+      # here, on the same proof branch_sweep uses — main must actually contain
+      # the head sha — so a failed or partial merge never loses a branch.
+      - name: Delete the merged branch
+        if: steps.merge.outputs.via != '' && inputs.delete_branch != false
+        working-directory: PyAutoMind
+        env:
+          BRANCH: ${{ steps.target.outputs.branch }}
+          HEAD_SHA: ${{ steps.ahead.outputs.head_sha }}
+        run: |
+          git fetch --quiet origin main
+          if ! git merge-base --is-ancestor "$HEAD_SHA" origin/main; then
+            echo "::warning::main does not contain $HEAD_SHA — keeping '$BRANCH'"
+            exit 0
+          fi
+          if git push origin --delete "$BRANCH"; then
+            echo "Deleted \`$BRANCH\`." >> "$GITHUB_STEP_SUMMARY"
+          else
+            # Already gone (a PR merge with auto-delete on) is the common case
+            # and is not a failure — branch_sweep.yml collects anything else.
+            echo "::warning::could not delete '$BRANCH' — it may already be gone"
+          fi
+
+      # The merge push above was made with GITHUB_TOKEN, which triggers no
+      # workflows, so main's self-healing legs must be asked explicitly or the
+      # generated pages sit stale until the nightly cron.
+      - name: Heal the generated pages on main
+        if: steps.merge.outputs.via != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for wf in dashboard_refresh.yml lifecycle_drift.yml; do
+            gh workflow run "$wf" --repo "${{ github.repository }}" --ref main \
+              || echo "::warning::could not dispatch $wf — its next scheduled run will heal main"
+          done

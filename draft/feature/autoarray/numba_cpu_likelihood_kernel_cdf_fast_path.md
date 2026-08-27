@@ -10,6 +10,8 @@
 > files are disjoint from this phase's.
 
 Type: feature
+Epic: numba-cpu-likelihood
+Phase: 2
 Target: autoarray
 Repos:
 - @PyAutoArray

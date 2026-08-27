@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1155 records across 7 buckets.
+1173 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -25,11 +25,13 @@ _(curate hard-won records here — survives regeneration.)_
 - [arcticpy-install-standardisation](2026/08/arcticpy-install-standardisation.md)
 - [arxiv-inbox-pat-scope](2026/08/arxiv-inbox-pat-scope.md) — the nightly arXiv digest's inbox-filing step silently lost every paper it
 - [arxiv-inbox-tier](2026/08/arxiv-inbox-tier.md) — the nightly strong-lensing digest no longer ends in a Slack paste-block the
+- [arxiv-interests-tier](2026/08/arxiv-interests-tier.md) — a SECOND overnight suggestion tier, `arxiv-interests.md`, for everything the
 - [astropy-cap-bump](2026/08/astropy-cap-bump.md) — closed manually post-merge — "Part of" in the PR bodies does not auto-close
 - [autoarray-adapt-images-precondition](2026/08/autoarray-adapt-images-precondition.md)
 - [autoarray-input-validation-guards](2026/08/autoarray-input-validation-guards.md)
 - [autoarray-pixel-scales-scalar-widening](2026/08/autoarray-pixel-scales-scalar-widening.md)
 - [autocti-util-dataset-export](2026/08/autocti-util-dataset-export.md) — no GitHub issue — worked directly from the draft prompt in a cloud session on explicit human instruction; the …
+- [autocti-workspace-navigator-check](2026/08/autocti-workspace-navigator-check.md)
 - [autofit-mock-all-ones-ell-comps](2026/08/autofit-mock-all-ones-ell-comps.md)
 - [autofit-plot-functions-kwargs](2026/08/autofit-plot-functions-kwargs.md)
 - [autofit-sampler-database](2026/08/autofit-sampler-database.md)
@@ -41,6 +43,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autolens-tracer-validation-guards](2026/08/autolens-tracer-validation-guards.md)
 - [autoreduce-pypi-name-collision](2026/08/autoreduce-pypi-name-collision.md)
 - [blackjax-16-upgrade-smoke](2026/08/blackjax-16-upgrade-smoke.md)
+- [board-github-data-seam](2026/08/board-github-data-seam.md)
 - [border-relocator-backend-parity](2026/08/border-relocator-backend-parity.md) — Isolated the native NumPy/JAX likelihood gap to mathematically non-unique PCA axes for a near-isotropic border…
 - [border-relocator-degenerate-pca](2026/08/border-relocator-degenerate-pca.md) — Stabilized near-isotropic border PCA axes with a deterministic axis-aligned branch at a scale-aware eigenvalue…
 - [brain-readability-pass](2026/08/brain-readability-pass.md) — auto-closed on merge
@@ -112,6 +115,9 @@ _(curate hard-won records here — survives regeneration.)_
 - [inference-method-cards-seed](2026/08/inference-method-cards-seed.md)
 - [inference-programme-ledger](2026/08/inference-programme-ledger.md)
 - [intake-declared-difficulty](2026/08/intake-declared-difficulty.md) — the precedence rule "a DECLARED header key beats a value derived from
+- [intake-reconcile-absence-signal](2026/08/intake-reconcile-absence-signal.md) — leg 3 tested PRESENCE — "the prompt names things that exist
+- [interests-overpick-dedup-slack](2026/08/interests-overpick-dedup-slack.md) — the interests digest asked Claude for exactly 10 papers, and the
+- [interests-ranker-widened-categories](2026/08/interests-ranker-widened-categories.md)
 - [interferometer-delaunay-flaky-fitexception](2026/08/interferometer-delaunay-flaky-fitexception.md)
 - [interferometer-delaunay-nonpd-fitexception](2026/08/interferometer-delaunay-nonpd-fitexception.md)
 - [interferometer-start-here-integrate-oom](2026/08/interferometer-start-here-integrate-oom.md)
@@ -123,6 +129,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [jax-grad-local-vs-ci-assertions](2026/08/jax-grad-local-vs-ci-assertions.md)
 - [jax-grad-smoke-timeout-budget](2026/08/jax-grad-smoke-timeout-budget.md)
 - [jax-likelihood-mass-sensitivity](2026/08/jax-likelihood-mass-sensitivity.md) — Audit + fix for median-literal mass blindness across all jax_likelihood/datacube scripts (phase 2 of the findi…
+- [jax-likelihood-pins-duplicate-filing](2026/08/jax-likelihood-pins-duplicate-filing.md)
 - [jax-likelihood-smoke-pins-stale](2026/08/jax-likelihood-smoke-pins-stale.md)
 - [jax-stall-shared-preloads-retime-refutation](2026/08/jax-stall-shared-preloads-retime-refutation.md)
 - [jax-traceback-filtering-release-harness](2026/08/jax-traceback-filtering-release-harness.md)
@@ -135,6 +142,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [llms-txt-census-fixes](2026/08/llms-txt-census-fixes.md)
 - [local-pixel-scale-vs-dataset-pixel-scales](2026/08/local-pixel-scale-vs-dataset-pixel-scales.md)
 - [log-det-multistart-tag](2026/08/log-det-multistart-tag.md)
+- [loggaussian-prior-declares-own-support](2026/08/loggaussian-prior-declares-own-support.md) — closed by the PR's `Closes` line
 - [markdown-renderings-2a-leftovers](2026/08/markdown-renderings-2a-leftovers.md)
 - [mask1d-shape-native-scalar-widening](2026/08/mask1d-shape-native-scalar-widening.md)
 - [memory-surfaces-stale-names](2026/08/memory-surfaces-stale-names.md) — auto-closed on merge
@@ -153,6 +161,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [multistart-gradient-resume-fom-sanity-check](2026/08/multistart-gradient-resume-fom-sanity-check.md)
 - [multistart-nan-step-diagnostics](2026/08/multistart-nan-step-diagnostics.md)
 - [multistart-per-lane-best](2026/08/multistart-per-lane-best.md)
+- [natural-logpdf-clamps-neginf](2026/08/natural-logpdf-clamps-neginf.md) — closed by the PR's `Closes` line
 - [nautilus-1core-serial-pool](2026/08/nautilus-1core-serial-pool.md) — corrective for the Heart RED "release validation FAILED (stage
 - [nfw-truncated-potential-accuracy](2026/08/nfw-truncated-potential-accuracy.md)
 - [normalise-auto-simulate-guard-idiom](2026/08/normalise-auto-simulate-guard-idiom.md)
@@ -166,9 +175,11 @@ _(curate hard-won records here — survives regeneration.)_
 - [numerical-hazard-profiling](2026/08/numerical-hazard-profiling.md) — Phase 1 established the reusable numerical-hazard profiling framework, typed risk measurements, reachability a…
 - [numerical-inversion-failures](2026/08/numerical-inversion-failures.md)
 - [one-tap-dashboard-rollout](2026/08/one-tap-dashboard-rollout.md) — the pattern (a generated page + one-tap 📋 copy-for-Claude payloads, phone
+- [optimisation-state-limit-guard-truthiness](2026/08/optimisation-state-limit-guard-truthiness.md) — closed by the PR's `Closes` line
 - [optional-dependency-skip-guards](2026/08/optional-dependency-skip-guards.md) — `test_nautilus.py::test__single_core_builds_no_pool` had no skip guard
 - [organ-repo-spelling-splits](2026/08/organ-repo-spelling-splits.md) — closed on ship
 - [organism-board-final-readmes](2026/08/organism-board-final-readmes.md) — close on record
+- [pages-dashboard-publish-gap](2026/08/pages-dashboard-publish-gap.md) — `dashboard_refresh.yml` dispatched the Pages publisher only from inside its
 - [paper-management-pipeline](2026/08/paper-management-pipeline.md) — auto-closed on merge
 - [per-parameter-step-scaling](2026/08/per-parameter-step-scaling.md)
 - [persist-smoke-environments](2026/08/persist-smoke-environments.md) — Made smoke dependency environments durable and isolated per library and Python version, with version-handshake…
@@ -190,6 +201,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [power-law-omega-convergence](2026/08/power-law-omega-convergence.md) — Bounded the fixed 20-term JAX PowerLaw omega recurrence across the packaged slope and ellipticity priors, meas…
 - [pr-ci-for-own-test-suite](2026/08/pr-ci-for-own-test-suite.md)
 - [pre-build-stages-untracked-wip](2026/08/pre-build-stages-untracked-wip.md) — CLOSED completed
+- [prior-passing-loggaussian-lower-bound](2026/08/prior-passing-loggaussian-lower-bound.md) — NULL RESULT. Spot-check owed by PyAutoFit#1527, which changed the
 - [prior-property-tests](2026/08/prior-property-tests.md)
 - [prior-support-clipper](2026/08/prior-support-clipper.md) — Shipped `AbstractClipper` / `ClipperNone` / `ClipperPriorBox` in
 - [priors-and-messages-math-audit](2026/08/priors-and-messages-math-audit.md)
@@ -209,9 +221,12 @@ _(curate hard-won records here — survives regeneration.)_
 - [pynufft-scipy-pinv2-dev-extra](2026/08/pynufft-scipy-pinv2-dev-extra.md)
 - [queue-intake-claude](2026/08/queue-intake-claude.md) — auto-closed on merge
 - [readme-scientist-buttons](2026/08/readme-scientist-buttons.md)
+- [reconcile-duplicate-prompt-signal](2026/08/reconcile-duplicate-prompt-signal.md) — every signal reconcile had scored a prompt against the completion
 - [reconcile-upstream-repo-mode](2026/08/reconcile-upstream-repo-mode.md)
 - [reconstruction-noise-map-covariance-sqrt](2026/08/reconstruction-noise-map-covariance-sqrt.md)
+- [rectangular-experiments-gut-stash](2026/08/rectangular-experiments-gut-stash.md)
 - [rectangular-spline-adapt-image-jit-fix](2026/08/rectangular-spline-adapt-image-jit-fix.md)
+- [redundant-prior-limits-overrides](2026/08/redundant-prior-limits-overrides.md) — shared with its sibling; closed by the PR
 - [refactor-witness-map-audit](2026/08/refactor-witness-map-audit.md) — PyAutoBrain#269 → PR #271, merge cf969f3; stacked on #268
 - [registry-integrity-check](2026/08/registry-integrity-check.md)
 - [regularization-jax-gradient-gaps](2026/08/regularization-jax-gradient-gaps.md)
@@ -224,6 +239,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [repo-settings-bash-e-abort](2026/08/repo-settings-bash-e-abort.md)
 - [repo-settings-org-enumeration](2026/08/repo-settings-org-enumeration.md)
 - [repos-sync-target-repo-lint-awareness](2026/08/repos-sync-target-repo-lint-awareness.md)
+- [required-workflow-file-drift](2026/08/required-workflow-file-drift.md)
 - [resolve-border-relocator-hazard](2026/08/resolve-border-relocator-hazard.md) — Reconciled the likelihood hazard instrument after the border-relocator source fix. The resolved backend-diverg…
 - [resolve-curvature-floor-doc-drift](2026/08/resolve-curvature-floor-doc-drift.md) — Reconciled the curvature-floor documentation finding after PyAutoArray#444. The detector now requires both run…
 - [resolve-sersic-ell-comps-gradient](2026/08/resolve-sersic-ell-comps-gradient.md) — Reconciled the numerical-hazard evidence after the Sersic Cartesian-radius fix. The stable conditional detecto…
@@ -241,6 +257,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [small-datasets-loader-pixel-scales](2026/08/small-datasets-loader-pixel-scales.md)
 - [small-datasets-regime-stamp](2026/08/small-datasets-regime-stamp.md)
 - [small-datasets-rmtree-committed-data](2026/08/small-datasets-rmtree-committed-data.md)
+- [smoke-install-stale-jax-pin](2026/08/smoke-install-stale-jax-pin.md) — Dropped the vestigial `jax<0.7 jaxlib<0.7` pin from smoke_install.sh. Added in #82 solely to keep tensorflow-p…
 - [smoke-runner-delegation](2026/08/smoke-runner-delegation.md)
 - [smoke-runner-jupyter-guard](2026/08/smoke-runner-jupyter-guard.md)
 - [smoke-surface-retime-sweep](2026/08/smoke-surface-retime-sweep.md)
@@ -267,6 +284,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [transformed-message-semantics-doc](2026/08/transformed-message-semantics-doc.md)
 - [undo-community-file-declutter](2026/08/undo-community-file-declutter.md) — Undid the 2026-08-19 community-file declutter (#248 Mind, #32 Memory):
 - [uniform-prior-bounds-numpy-path](2026/08/uniform-prior-bounds-numpy-path.md) — auto-closed by the merge's `Closes` line
+- [untrack-fits-test-artifacts](2026/08/untrack-fits-test-artifacts.md)
 - [version-skew-yank-awareness](2026/08/version-skew-yank-awareness.md)
 - [version-stamp-sync-guards](2026/08/version-stamp-sync-guards.md) — closed by the 2026-08-19 reconcile sweep — see traps
 - [vincken-2026-bib-placeholder](2026/08/vincken-2026-bib-placeholder.md)
