@@ -113,16 +113,54 @@ stays.
 Recorded on the issue: PyAutoFit#1530 (comment 5443451389). Job logs expire in
 90 days; the stacks are quoted there and here.
 
+### CONFIRMED (run 33103725546) — a pool of one cannot deadlock
+
+ABAB again, 600s cap (raised from 300s on purpose: a one-CPU run is serial and
+slower, and a false "hang" from too tight a cap would have wrecked the test).
+
+| Arm | 3.12 | 3.13 | Pooled |
+|---|---|---|---|
+| control (pool of 4) | 1 pass / 2 hang | 0 pass / 3 hang | **1 / 5** |
+| one (affinity=1)    | 3 pass / 0 hang | 3 pass / 0 hang | **6 / 0** |
+
+Fisher exact two-sided p = 0.015 within the dispatch; p = 0.0002 pooling the
+twelve control-equivalent runs from 33099502356. All five native dumps are
+control-arm — the `one` arm never reached the 300s dump threshold, which is the
+cleanest confirmation available.
+
+Exactly what the re-entrancy predicts: with one worker ducc0 gets nthreads=1 and
+runs inline, so there is no latch to wait on. The deadlock needs >= 2 pool
+threads.
+
+CONFOUND, stated because it bounds the claim: affinity=1 changes both pool size
+and total parallelism, so it cannot separate "a pool of one cannot deadlock"
+from "one CPU serialises everything". The mechanism makes the first reading
+natural; this experiment alone does not.
+
+**And it settles the ~15% from the other side.** `one` completes in 56.2-62.5s
+against control's single completion at 48.1s — ~20-30% on a working four-thread
+run, i.e. about what the current flag already costs at ~62s. There is no cheaper
+setting: pool sizing recovers nothing, by quota-matching (no quota exists) or by
+shrinking (same cost as the flag). Recoverable only upstream.
+
 ### Still open
 
-- **Q2 minimal reproducer** — much smaller than first scoped. Not "strip the
-  multi_dataset composition": just enough concurrent FFT-backed convolutions
-  under vmap to saturate the intra-op pool, batch >= `os.cpu_count()`.
-- **Q4 upstream** — actionable now; the reproducer is what makes it land.
-- **One cheap confirmation first.** If the deadlock needs concurrent FFT thunks
-  >= pool size, pinning to one CPU must pass:
-  `--arm one:XLA_FLAGS=,affinity=1` against the control. That converts a
-  described mechanism into a demonstrated one.
+- **Q2 reproducer — PARTIAL, committed** as
+  `autolens_workspace_test/.github/scripts/xla_fft_pool_reentrancy_repro.py`
+  (fdd289a). Nothing in CI runs it. It reproduces the RE-ENTRANCY
+  deterministically (3 of 4 workers in FftThunk -> ducc0 latch::wait, held over
+  six samples; 27.8s vs 67.5s on two identical runs) but NOT a full deadlock:
+  3 of 4, never 4 of 4, so one worker always drains. Missing ingredient is
+  identified, not guessed — the script shows ZERO Worker::Parallelize /
+  CountDownAsyncValueRef / RunWaiterAndDeleteWaiterNode frames, the path two of
+  CI's four wedged workers take. Closing it needs XLA to split a kernel into
+  >1 workgroup there. Three dead ends are recorded in its docstring (large FFTs;
+  many tiny FFTs; taskset to 2-3 CPUs) so they are not re-run.
+- **Q4 upstream — FILABLE NOW.** The bug is FftThunk handing ducc0 the pool it is
+  already running on; the full deadlock is its worst case, and the committed
+  script demonstrates the re-entrancy standalone. Not yet filed.
+- Optional: pool=2/3 on the real script would map the dose-response (my local
+  pool=2/3 trials used the synthetic repro, not mge_group.py).
 
 ## Acceptance
 
