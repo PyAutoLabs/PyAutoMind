@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1173 records across 7 buckets.
+1174 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -177,6 +177,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [one-tap-dashboard-rollout](2026/08/one-tap-dashboard-rollout.md) — the pattern (a generated page + one-tap 📋 copy-for-Claude payloads, phone
 - [optimisation-state-limit-guard-truthiness](2026/08/optimisation-state-limit-guard-truthiness.md) — closed by the PR's `Closes` line
 - [optional-dependency-skip-guards](2026/08/optional-dependency-skip-guards.md) — `test_nautilus.py::test__single_core_builds_no_pool` had no skip guard
+- [organ-remote-block-and-uv-hook-repair](2026/08/organ-remote-block-and-uv-hook-repair.md)
 - [organ-repo-spelling-splits](2026/08/organ-repo-spelling-splits.md) — closed on ship
 - [organism-board-final-readmes](2026/08/organism-board-final-readmes.md) — close on record
 - [pages-dashboard-publish-gap](2026/08/pages-dashboard-publish-gap.md) — `dashboard_refresh.yml` dispatched the Pages publisher only from inside its

@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 6 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 131 |
+| [Backlog](#backlog) (`draft/`) | 132 |
 
 ## Start here
 
@@ -187,14 +187,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/session_fixes_reach_only_two_organs.md">Two organs are missing this session's fixes, and the hook still ships…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/360">issue #360</a> — issued 2026-08-27 — library-dev</summary>
-
-```
-/start_dev active/session_fixes_reach_only_two_organs.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1530">issue #1530</a> — issued 2026-08-27 — not started — research follow-up to the shipped jax-compile-stall epic</summary>
 
 ```
@@ -287,10 +279,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**131** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**132** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 27</summary>
+<summary><b>feature</b> — 28</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU (advanced/GPU)</a> — autoarray · medium · supervised · high</summary>
 
@@ -336,6 +328,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autoarray/multiwavelength_inversion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">Claude Development Prompt: Joint <code>ell_comps</code> Disk Constraint</a> — autogalaxy · medium · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md
 ```
 
 </details>
@@ -1183,20 +1183,20 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | issued | <a href="active/harvest_2026_08_27_gate_b_pt2.md"><code>@autolens_profiling</code> Harvest 2026-08-27: Gate B pt 2, recovered 8B…</a> |
 | 2026-08-27 | issued | <a href="active/result_instance_fallback_samples_persist.md"><code>@PyAutoFit</code> Bug: a rejected best point kills the run at…</a> |
 | 2026-08-27 | issued | <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> |
-| 2026-08-27 | issued | <a href="active/session_fixes_reach_only_two_organs.md">Two organs are missing this session's fixes, and the hook still ships…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md">The SessionStart hook is generated into 34 repos and current in 4</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | issued | <a href="active/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution +…</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
+| 2026-08-27 | filed | <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-27 | filed | <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |
 | 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
+| 2026-08-27 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">Claude Development Prompt: Joint <code>ell_comps</code> Disk Constraint</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |

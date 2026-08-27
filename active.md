@@ -42,31 +42,6 @@
   by user 2026-08-27 after the per-pixel-noise-map check; strict bit-identity NOT required (ulp-level BLAS
   ordering in the mirrored half accepted, pins at rtol 1e-6 are the guard).
 
-## organ-remote-block-and-uv-hook-repair
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/360 (issued 2026-08-27)
-- issued: 2026-08-27
-- prompt: active/session_fixes_reach_only_two_organs.md
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/organ-remote-block-and-uv-hook-repair
-- repos:
-  - PyAutoMind: feature/organ-remote-block-and-uv-hook-repair
-  - PyAutoBrain: feature/organ-remote-block-and-uv-hook-repair
-  - PyAutoHeart: feature/organ-remote-block-and-uv-hook-repair
-  - PyAutoHands: feature/organ-remote-block-and-uv-hook-repair
-- scope-note: PyAutoBrain is claimed though the prompt omits it — it carries a generated
-  hook copy that goes stale the moment policy/session_start_hook.sh changes, and
-  firewall_gate.yml checks it out. The prompt's "all four organs" was written from a
-  session that could see two.
-- deliberately-out-of-scope: the other 30 repos carrying a stale hook copy (no gate sees
-  them; firewall_gate.yml checks out four). Filed as
-  draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md
-- co-claim RELEASED 2026-08-27: pages-dashboard-publish-gap (#361) shipped and closed out
-  (PR #362 merged 74c1450, record complete/2026/08/pages-dashboard-publish-gap.md), so
-  PyAutoMind is now claimed by this task alone. The two ran in parallel worktrees on
-  disjoint file sets — that task touched `.github/workflows/dashboard_refresh.yml` only;
-  this one touches `scripts/`, `policy/`, `tests/` and the generated `.claude/hooks/`
-  copies — and needed no serialisation.
-
 ## result-instance-fallback
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1535
 - issued: 2026-08-27
