@@ -20,12 +20,15 @@
 - prompt: active/jax_compile_stall_3_root_cause.md
 - epic: jax-compile-stall (phase 3 of 3 — phases 1 and 2 shipped/closed-as-partial)
 - status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/jax-stall-block-until-ready
+- worktree: none — web-github session; direct clones under /home/user, no local worktree
 - classification: both (library-first — PyAutoFit merges before the workspace PRs)
 - repos:
-  - PyAutoFit
-  - autogalaxy_workspace_test
-  - autolens_workspace_test
+  - PyAutoFit: feature/jax-stall-block-until-ready
+  - autogalaxy_workspace_test: feature/jax-stall-block-until-ready
+  - autolens_workspace_test: feature/jax-stall-block-until-ready
+- branch-names-must-match: PyAutoHeart's reusable smoke-tests.yml clones the dependency chain
+  at the MATCHING branch name, so a library-side A/B only reaches workspace CI while all three
+  branches share this exact name. Do not rename one of them.
 - reframed-at-start_dev: the prompt's five hypotheses are all compile-side, but phase 2's
   faulthandler stacks (two repos, two scripts, identical) park the process in
   jax.block_until_ready — compilation completes in ~16s. Planned from the corrected
