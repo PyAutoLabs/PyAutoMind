@@ -102,8 +102,8 @@ most of the set was already fixed or tracked by the time the streak was noticed.
 | Night | Failing legs | Cause | Status |
 |---|---|---|---|
 | 07-28 | 3 × `FileNotFoundError: dataset/…/data.fits` (autogalaxy/multi, autolens/imaging) | auto-simulate guards pointed at the wrong simulator | **FIXED** — see below |
-| 07-30 | `interferometer/start_here.py` in **both** autolens and autogalaxy shards; `group/start_here.py` TIMEOUT | same OOM as 07-31, message eaten by the JAX traceback filter | `draft/bug/autolens/interferometer_release_leg_oom.md` |
-| 07-31 | `interferometer/start_here.py` → `RESOURCE_EXHAUSTED: Out of memory allocating 85898814480 bytes`; `delaunay.py` TIMEOUT | ~86 GB single allocation; XLA hang | as above; autolens_workspace_test#245 |
+| 07-30 | `interferometer/start_here.py` in **both** autolens and autogalaxy shards; `group/start_here.py` TIMEOUT | same OOM as 07-31, message eaten by the JAX traceback filter | **FIXED** — OOM `complete/2026/08/interferometer-start-here-integrate-oom.md`; filter `complete/2026/08/jax-traceback-filtering-release-harness.md` |
+| 07-31 | `interferometer/start_here.py` → `RESOURCE_EXHAUSTED: Out of memory allocating 85898814480 bytes`; `delaunay.py` TIMEOUT | 48-start `MultiStartProdigy` vmapped unbatched; XLA hang | **FIXED** — autolens_workspace#450 (`batch_size=4`), discharged by run 30901054267; autolens_workspace_test#245 |
 | 08-01 | `guides/modeling/advanced/hierarchical.py` TIMEOUT; `delaunay.py` TIMEOUT | Nautilus deadlock; XLA hang | hierarchical **FIXED** (PyAutoFit#1443); #245 |
 | 08-03 | `graphical/ep.py` — "`log_likelihood_function` is always returning `nan`" | EP initializer | `draft/bug/autofit/graphical_ep_nan_likelihood_release_leg.md` |
 | 08-04 | `guides/results/database/start_here.py` `IndexError` | `samples_weight_threshold` pruning | **FIXED + MERGED** 08-04 09:40 — autolens_workspace#465, autogalaxy_workspace#202 |
@@ -171,8 +171,13 @@ this needs its own prompt.
 
 - `draft/bug/autofit/covariance_interpolator_test_unseeded_rng.md` — Class B
   root cause. Smallest and highest value: it alone unblocks a live release.
-- `draft/bug/autolens/interferometer_release_leg_oom.md` — filed 07-31, never
-  issued; now updated with the 07-30 both-workspaces recurrence.
+- ~~`draft/bug/autolens/interferometer_release_leg_oom.md`~~ — **closed out
+  2026-08-27.** Its OOM had already shipped on 07-31 (autolens_workspace#450,
+  `batch_size=4` on the 48-start `MultiStartProdigy`;
+  `complete/2026/08/interferometer-start-here-integrate-oom.md`), so the prompt
+  was retired to `complete/archive/shelved/`. The one live part of its 08-04
+  amendment — the JAX traceback filter that ate the 07-30 message — shipped as
+  PyAutoHeart#187 (`complete/2026/08/jax-traceback-filtering-release-harness.md`).
 - `draft/bug/autofit/graphical_ep_nan_likelihood_release_leg.md` — new.
 - autolens_workspace_test#245 (delaunay hang) — already tracked, no action here.
 - Confirm on 08-05 that Check D self-healed and that PyAutoBrain#196 renders the
