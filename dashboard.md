@@ -396,6 +396,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md">Restore lensing-of-lens in the multiple_sources workspace example</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autoarray/rectangular_multi_submesh.md">Follow-up to <code>rectangular_adapt_cdf.md</code> (issue #322) and Path A</a> — autoarray · too-large · supervised · normal</summary>
 
 ```
@@ -432,14 +440,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/jax_substructure/6_deflection_equivalence_test.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md">Once https://github.com/PyAutoLabs/PyAutoLens/issues/480 is fixed (PointSolver</a> — workspaces · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
 ```
 
 </details>
