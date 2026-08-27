@@ -7,7 +7,8 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: phased
+Split-into: draft/feature/pyautobrain/board_without_gh_phase1_seam.md, draft/feature/pyautobrain/board_without_gh_phase2_legs.md
 Filed: 2026-08-26
 
 The board is the morning door, and on mobile it is mostly blind. Eleven of its
@@ -73,6 +74,27 @@ Phase 0 is choosing, not coding. They are not equal in cost or in permanence.
 
 Prefer 2 if the probe says it works, else 1. Do not build 1 before running the
 probe — it is the more complex design and option 2 would obsolete it.
+
+### The probe was run — 2026-08-27. Options 2 and 3 are dead; build 1.
+
+`$GH_TOKEN` is set, and from a subprocess it reaches exactly what it reached in
+August: nothing repo-scoped.
+
+| Request (Bearer $GH_TOKEN, direct REST) | Result |
+|---|---|
+| `GET /user` | **200** — returns the login |
+| `GET /rate_limit` | **200** |
+| `GET /repos/PyAutoLabs/PyAutoBrain` | **403** — "GitHub access is not enabled for this session. An org admin must connect the Claude GitHub App for this organization." |
+| `GET /repos/PyAutoLabs/PyAutoBrain/actions/runs` | **403** — same |
+
+So option 2 needs an org-admin action that has not happened, and option 3 dies
+on the same credential path without the install being worth trying. **Option 1
+(the injection seam) is the design**, and the header stays `Autonomy:
+supervised` because the seam is a contract between the `/board` skill and
+`_board.py` that outlives whoever writes it.
+
+Re-run the probe before starting anyway — it is four `curl`s, and the day an
+admin connects the App, option 2 obsoletes the seam.
 
 ## Already done (2026-08-26 — `complete/2026/08/mobile-performance-review.md`)
 
