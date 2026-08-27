@@ -36,6 +36,7 @@ an interpreter can be built.
 import json
 import os
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -461,6 +462,70 @@ def test_check_fails_a_pytest_that_has_the_right_version_but_cannot_import(tmp_p
     assert r.returncode != 0
 
 
+def _import_probe():
+    """The probe as the script really spells it, lifted from the script."""
+    for line in BOOTSTRAP.read_text().splitlines():
+        if line.startswith("IMPORT_PROBE="):
+            return line.split("=", 1)[1].strip().strip("'")
+    raise AssertionError("session_bootstrap.sh no longer defines IMPORT_PROBE")
+
+
+def test_the_import_probe_runs_on_a_real_interpreter():
+    """The check above drove a shell script standing in for python.
+
+    A stand-in answers whatever the fixture says, so it can never disagree with
+    the snippet — and the snippet was wrong: `import importlib` does not bind
+    `importlib.util`, so on every real CPython the probe raised AttributeError,
+    the `&&` short-circuited, and `--check` printed `3.12 OK`. Measured in a
+    fresh container on 2026-08-27, beside a `python3 -m pytest` that answered
+    `No module named pytest`.
+
+    So this one runs the real string on the real interpreter. Sufficiency, not
+    plumbing: the fixture cannot be the thing under test.
+    """
+    import importlib.util
+    import sys
+
+    r = subprocess.run([sys.executable, "-c", _import_probe()],
+                       capture_output=True, text=True, timeout=60)
+    assert r.returncode == 0, (
+        "the probe cannot run, so --check silently skips it: " + r.stderr)
+    expected = {m for m in ("pytest", "yaml", "xdist")
+                if not importlib.util.find_spec(m)}
+    assert set(r.stdout.split()) == expected
+
+
+def test_check_fails_when_the_import_probe_cannot_run(tmp_path):
+    """"Could not ask" is a failure, not a pass.
+
+    The two outcomes used to be indistinguishable — both fell through to the OK
+    line — which is what let a broken probe read as a healthy session.
+    """
+    fake_bin = tmp_path / "bin"
+    fake_bin.mkdir()
+    interp = fake_bin / "fake-python3.12"
+    interp.write_text(
+        "#!/bin/sh\n"
+        "case \"$2\" in\n"
+        "  *version_info*) echo '3.12' ;;\n"
+        "  *find_spec*) exit 1 ;;\n"   # the AttributeError case
+        "esac\n"
+    )
+    interp.chmod(0o755)
+    shim = fake_bin / "pytest"
+    shim.write_text(f"#!{interp}\n")
+    shim.chmod(0o755)
+
+    env = dict(os.environ)
+    env["PATH"] = f"{fake_bin}:{env['PATH']}"
+    r = subprocess.run(["bash", str(BOOTSTRAP), "--check"], capture_output=True,
+                       text=True, env=env, timeout=180)
+
+    assert "pytest: 3.12 OK" not in r.stderr, r.stderr
+    assert "import probe would not run" in r.stderr, r.stderr
+    assert r.returncode != 0
+
+
 # --------------------------------------------------------------------------
 # 6. Everything else the venv owns
 #
@@ -679,3 +744,111 @@ def test_bootstrap_runs_every_sibling_repos_hook(tmp_path):
     assert r.returncode == 0, r.stderr
     assert (ran / "FakeHeart").exists(), r.stderr
     assert (ran / "FakeHands").exists(), r.stderr
+
+
+# --------------------------------------------------------------------------
+# 7. uv's tool environments
+#
+# The session venv fix has a blast radius nobody costed. uv creates every tool
+# env with `bin/python` as a symlink to whatever `python3` was at install time
+# — `/usr/local/bin/python3` — and the hook then repoints THAT path at the
+# session venv. So each tool env's interpreter resolves its prefix to the venv,
+# the tool's own site-packages never reaches `sys.path`, and the console script
+# dies on `ModuleNotFoundError` with the package installed two directories away.
+#
+# Measured 2026-08-27 in a bootstrapped session: mypy, flake8, black, poetry and
+# pyright all dead this way, while `--check` reported each as `3.12 OK` — the
+# interpreter they reach IS 3.12, it is just not theirs. A session then lints
+# clean by not linting, and CI finds out.
+# --------------------------------------------------------------------------
+
+
+def _venv(path):
+    subprocess.run([sys.executable, "-m", "venv", str(path)], check=True,
+                   capture_output=True, timeout=180)
+    return path
+
+
+def _prefix_of(python):
+    r = subprocess.run([str(python), "-c", "import sys; print(sys.prefix)"],
+                       capture_output=True, text=True, timeout=60)
+    return r.stdout.strip()
+
+
+def _repair(tools_dir, venv):
+    env = dict(os.environ)
+    env["PYAUTO_UV_TOOLS_DIR"] = str(tools_dir)
+    env["PYAUTO_SESSION_VENV"] = str(venv)
+    return subprocess.run(["bash", str(BOOTSTRAP), "--repair-uv-tools"],
+                          capture_output=True, text=True, env=env, timeout=300)
+
+
+def test_a_tool_env_pointed_at_the_session_venv_is_repaired(tmp_path):
+    """The exact breakage: a tool env resolving to somebody else's prefix."""
+    session_venv = _venv(tmp_path / "session")
+    tools = tmp_path / "tools"
+    tool = _venv(tools / "widget")
+
+    # The breakage needs the WRAPPER, not a bare symlink. CPython looks for
+    # `pyvenv.cfg` beside the executable as invoked, so a tool env whose python
+    # merely symlinks elsewhere still finds its own config and is fine. What
+    # loses it is `/usr/local/bin/python3` being a shell wrapper that `exec`s
+    # the venv (it is a wrapper precisely because a symlink there lost the venv
+    # — the other half of this same script): the exec replaces argv, and the
+    # tool env is gone.
+    hijacked = tmp_path / "usr-local-python3"
+    hijacked.write_text(f'#!/bin/sh\nexec "{session_venv}/bin/python" "$@"\n')
+    hijacked.chmod(0o755)
+
+    link = tool / "bin" / "python"
+    link.unlink()
+    link.symlink_to(hijacked)
+    assert _prefix_of(link) == str(session_venv), "fixture did not reproduce it"
+
+    r = _repair(tools, session_venv)
+    assert "repointed widget" in r.stderr, r.stderr
+    assert _prefix_of(link) == str(tool)
+
+
+def test_a_healthy_tool_env_is_left_alone(tmp_path):
+    session_venv = _venv(tmp_path / "session")
+    tools = tmp_path / "tools"
+    tool = _venv(tools / "widget")
+    before = (tool / "bin" / "python").resolve()
+
+    r = _repair(tools, session_venv)
+    assert "repointed" not in r.stderr, r.stderr
+    assert (tool / "bin" / "python").resolve() == before
+
+
+def test_check_fails_a_tool_that_has_the_right_version_but_will_not_run(tmp_path):
+    """`3.12 OK` was printed for tools that answered ModuleNotFoundError.
+
+    The version probe asks the interpreter; it never asks the tool. A tool that
+    cannot run is the same class of finding as one on the wrong interpreter —
+    both mean the session is not linting what CI lints.
+    """
+    fake_bin = tmp_path / "bin"
+    fake_bin.mkdir()
+    interp = fake_bin / "fake-python3.12"
+    interp.write_text(
+        "#!/bin/sh\n"
+        "case \"$2\" in\n"
+        "  *version_info*) echo '3.12' ;;\n"
+        "  *find_spec*) printf '' ;;\n"
+        "  --version) exit 1 ;;\n"      # ModuleNotFoundError, as measured
+        "esac\n"
+    )
+    interp.chmod(0o755)
+    broken = fake_bin / "black"          # a linter, not one of the two probed
+    broken.write_text(f"#!{interp}\nimport black\n")
+    broken.chmod(0o755)
+
+    env = dict(os.environ)
+    env["PATH"] = f"{fake_bin}:{env['PATH']}"
+    r = subprocess.run(["bash", str(BOOTSTRAP), "--check"], capture_output=True,
+                       text=True, env=env, timeout=180)
+
+    assert "black: 3.12 OK" not in r.stderr, r.stderr
+    assert "will not run" in r.stderr, r.stderr
+    assert r.returncode != 0
