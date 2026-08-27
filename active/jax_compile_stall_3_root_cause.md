@@ -14,6 +14,7 @@ Epic: jax-compile-stall
 Phase: 3
 Campaign: bug/ci/jax_vmap_jit_compile_stall.md (Phase 3 — the fix; blocked on phases 1 and 2)
 Filed: 2026-08-23
+Issued: 2026-08-27
 
 ## Blocked on phase 1
 
