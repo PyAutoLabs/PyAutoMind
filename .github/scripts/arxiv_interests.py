@@ -50,23 +50,52 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import arxiv_fetch  # noqa: E402
 
 #: The reading categories. astro-ph.HE carries the black-hole and transient
-#: work that .CO/.GA do not; .IM carries the instrumentation and methods
-#: papers. `cat:` matches cross-lists, so a stats-heavy paper whose primary
-#: category is stat.ME is still caught when it cross-lists to astro-ph.
-CATEGORIES = ("astro-ph.CO", "astro-ph.GA", "astro-ph.HE", "astro-ph.IM")
+#: work that .CO/.GA do not; .IM the instrumentation and methods papers;
+#: gr-qc the black-hole theory, gravitational-wave and primordial-black-hole
+#: work that never reaches astro-ph at all; .SR the stellar populations that
+#: galaxy-evolution papers are built on; stat.ME/stat.ML the inference methods
+#: behind the Stats bucket. `cat:` matches cross-lists, so a paper whose
+#: primary category is elsewhere is still caught when it cross-lists in.
+#:
+#: The last four were added 2026-08-27, on measurement rather than taste: the
+#: first live run announced 61 papers in a band, against a design that assumed
+#: several hundred. At that volume the ranker below was filtering almost
+#: nothing (52 of 61 scored) and CANDIDATE_CAP never bound, so the four
+#: astro-ph categories were leaving the shortlist stage with no work to do.
+#: Widening spends that headroom on coverage instead of retiring the stage.
+CATEGORIES = ("astro-ph.CO", "astro-ph.GA", "astro-ph.HE", "astro-ph.IM",
+              "gr-qc", "astro-ph.SR", "stat.ME", "stat.ML")
 QUERY = " OR ".join(f"cat:{c}" for c in CATEGORIES)
 
-#: How many papers the final list holds. The human asked for ten a day.
-PICK_COUNT = 10
+#: How many papers the final list holds — the human asked for ten a day. This
+#: is NOT the number the prompt is asked for; see PICK_COUNT.
+BATCH_SIZE = 10
+
+#: How many the prompt returns, ranked most interesting first. Three more than
+#: land, because the append on the Memory side drops any paper already on the
+#: strong-lensing inbox or in the reading queue — and on the very first live
+#: run exactly that happened (2608.26039 was on both lists' radar), so a
+#: ten-pick day filed nine. The extra three are dedup slack: append takes them
+#: in order and stops at its own cap, so ordering is what makes this work, and
+#: a day with no overlap still files ten.
+#:
+#: The cap itself is deliberately NOT restated here. `interests_actions.py`
+#: owns it (its own BATCH_SIZE, the default of `append --limit`); duplicating
+#: the number across two repos is how they drift.
+OVERPICK = 3
+PICK_COUNT = BATCH_SIZE + OVERPICK
 
 #: How many the prompt gets to choose from. Enough that ten good ones are
 #: reliably in there, small enough that one prompt can read every abstract
-#: closely — the whole reason for the scoring stage.
+#: closely — the whole reason for the scoring stage. With the widened
+#: categories above this cap now BINDS on an ordinary day, which is the point:
+#: it went from decoration back to doing the job it was written for.
 CANDIDATE_CAP = 60
 
-#: Paging: the API caps a page at ~200 and a 3-day Monday band is several
-#: hundred papers. The cap is a runaway guard, not an expected limit; hitting
-#: it is reported rather than swallowed.
+#: Paging: the API caps a page at ~200. Measured 61 papers/day on the original
+#: four categories; the widened set should run a few hundred, and a 3-day
+#: Monday band several hundred more. The cap is a runaway guard, not an
+#: expected limit; hitting it is reported rather than swallowed.
 PAGE_SIZE = 200
 MAX_PAGES = 12
 
@@ -129,6 +158,30 @@ INTERESTS = {
 TITLE_WEIGHT = 3
 ABSTRACT_WEIGHT = 1
 
+#: The categories whose papers are astronomy by default, and what that is worth
+#: on top of the keyword score.
+#:
+#: This exists because of what widening CATEGORIES brings in. In stat.ME and
+#: stat.ML, "Bayesian", "posterior", "inference" and "hierarchical model" are
+#: the house vocabulary — every paper there scores on the Stats terms, so a
+#: Bayesian method for clinical trials would out-score a lens-modelling paper
+#: on keywords alone and crowd it off a 60-paper shortlist. The bonus is the
+#: tie-breaker that keeps an astronomy shortlist astronomical: a paper from a
+#: home category starts ahead, and a stats paper has to genuinely out-score it
+#: to take a slot. gr-qc counts as home — black-hole theory and GW work is the
+#: reason it was added.
+#:
+#: It is a thumb on the scale, not a filter: a strong stats paper still makes
+#: the list, and Claude still judges everything that survives.
+HOME_CATEGORIES = ("astro-ph", "gr-qc")
+HOME_BONUS = 4
+
+
+def is_home(primary_category: str | None) -> bool:
+    """Whether a paper's primary category is astronomy rather than borrowed."""
+    cat = (primary_category or "").strip()
+    return any(cat == c or cat.startswith(c + ".") for c in HOME_CATEGORIES)
+
 #: The strong-lensing net, borrowed whole from the other digest so the two
 #: cannot drift apart on what "strong lensing" means. Used only to FLAG.
 LENSING_TERMS = tuple(t.lower() for t in (arxiv_fetch._ABS + arxiv_fetch._TI))
@@ -168,12 +221,18 @@ def rank(papers: list[dict], cap: int = CANDIDATE_CAP) -> tuple[list[dict], int]
     """
     scored = []
     for p in papers:
-        total, topic, per = score(p["title"], p["abstract"])
-        if not total:
+        keywords, topic, per = score(p["title"], p["abstract"])
+        if not keywords:
             continue
+        # The bonus rides on top of a NON-ZERO keyword score, never instead of
+        # one: being an astro-ph paper is a tie-breaker among papers that are
+        # already on topic, not a way in for one that matched nothing.
+        home = is_home(p.get("primary_category"))
         scored.append({**p,
                        "topic": topic,
-                       "score": total,
+                       "score": keywords + (HOME_BONUS if home else 0),
+                       "keyword_score": keywords,
+                       "home": home,
                        "topic_scores": per,
                        "strong_lensing": is_lensing(p["title"], p["abstract"])})
     scored.sort(key=lambda p: (-p["score"], p["url"]))
@@ -264,16 +323,48 @@ def _selftest() -> int:
     check("a non-lensing paper is not flagged",
           not is_lensing("A quiescent galaxy at z=5", "JWST spectroscopy."))
 
+    check("astro-ph and gr-qc are home, stat.ML is borrowed",
+          is_home("astro-ph.GA") and is_home("gr-qc")
+          and not is_home("stat.ML") and not is_home(None))
+
     papers = [
         {"title": f"Dark matter paper {i}", "abstract": "dark matter halo",
+         "primary_category": "astro-ph.CO",
          "url": f"https://arxiv.org/abs/2608.{i:05d}"} for i in range(20)
-    ] + [{"title": "Unrelated", "abstract": "nothing", "url": "x"}]
+    ] + [{"title": "Unrelated", "abstract": "nothing",
+          "primary_category": "astro-ph.GA", "url": "x"}]
     top, scored = rank(papers, cap=5)
     check(f"rank drops the unscored and caps ({len(top)} of {scored})",
           len(top) == 5 and scored == 20)
     check("rank is deterministic", rank(papers, cap=5)[0] == top)
     check("every candidate carries a topic and a lensing flag",
           all(p["topic"] and "strong_lensing" in p for p in top))
+
+    # The bonus is a tie-breaker among on-topic papers, never a way in.
+    pair = [{"title": "Bayesian hierarchical inference for trial design",
+             "abstract": "A posterior over treatment effects.",
+             "primary_category": "stat.ME", "url": "https://arxiv.org/abs/1"},
+            {"title": "Bayesian inference for galaxy scaling relations",
+             "abstract": "A posterior over stellar mass.",
+             "primary_category": "astro-ph.GA", "url": "https://arxiv.org/abs/2"}]
+    ranked, _ = rank(pair, cap=2)
+    check(f"an astro paper outranks an equal-scoring stats one "
+          f"({ranked[0]['primary_category']} first)",
+          ranked[0]["primary_category"] == "astro-ph.GA")
+    check("the borrowed paper is kept, not filtered out", len(ranked) == 2)
+    check("the keyword score is reported alongside the boosted one",
+          ranked[0]["score"] == ranked[0]["keyword_score"] + HOME_BONUS
+          and ranked[1]["score"] == ranked[1]["keyword_score"])
+
+    off_topic = [{"title": "A new species of Antarctic lichen",
+                  "abstract": "Nothing here is astronomy at all.",
+                  "primary_category": "astro-ph.GA", "url": "https://x/3"}]
+    check("the bonus cannot admit a paper that matched nothing",
+          rank(off_topic, cap=5)[0] == [])
+
+    check(f"the prompt over-picks for dedup slack "
+          f"(asks {PICK_COUNT}, {BATCH_SIZE} land)",
+          PICK_COUNT == BATCH_SIZE + OVERPICK and OVERPICK > 0)
 
     print(f"selftest: {'PASS' if not failures else f'{failures} FAILURE(S)'}",
           file=sys.stderr)
@@ -308,6 +399,7 @@ def main() -> int:
         "until": band_end.isoformat(),
         "categories": list(CATEGORIES),
         "pick": PICK_COUNT,
+        "batch": BATCH_SIZE,
         "band_count": len(band),
         "scored_count": scored,
         "truncated": truncated,
@@ -321,6 +413,8 @@ def main() -> int:
                     "published": p["published"],
                     "topic": p["topic"],
                     "score": p["score"],
+                    "keyword_score": p["keyword_score"],
+                    "home": p["home"],
                     "strong_lensing": p["strong_lensing"]}
                    for p in candidates],
     }

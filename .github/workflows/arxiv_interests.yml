@@ -26,9 +26,15 @@ name: pyauto-arxiv-interests
 #
 # Two stages, the house pattern: a deterministic ranker
 # (.github/scripts/arxiv_interests.py) narrows a whole day of astro-ph to ~60
-# candidates, and Claude reads those abstracts and picks the ten. Neither could
-# do the other's job — no keyword query answers "most interesting", and no
-# prompt reads five hundred abstracts a day.
+# candidates, and Claude reads those abstracts and picks the day's papers.
+# Neither could do the other's job — no keyword query answers "most
+# interesting", and no prompt reads a whole day of abstracts.
+#
+# Claude is asked for MORE than land (PICK_COUNT vs the Memory-side batch cap),
+# ranked, because the append below drops papers already on the strong-lensing
+# inbox or in the reading queue and then trims to the cap. Without the slack an
+# overlap costs a slot, which is exactly what the first live run did: ten
+# picked, one already on the lensing list, nine filed.
 #
 # Timing: 02:30 UTC, half an hour behind arxiv_papers.yml, on the same Mon-Fri
 # cadence and the SAME announcement band (arxiv_fetch.announcement_band, shared
@@ -113,7 +119,8 @@ jobs:
             Read `arxiv_interest_candidates.json` in this directory. It has shape:
 
               { "uk_date": "YYYY-MM-DD (Mon)",
-                "pick": 10,
+                "pick": <how many to return>,
+                "batch": <how many actually land on the board>,
                 "band_count": <papers announced in the band>,
                 "count": <candidates below>,
                 "papers": [ { "title": "<title>",
@@ -123,14 +130,19 @@ jobs:
                               "id": "<bare arXiv id>",
                               "primary_category": "astro-ph.GA",
                               "topic": "<suggested reading-queue section>",
-                              "score": <keyword score>,
+                              "score": <ranker score, incl. category bonus>,
+                              "keyword_score": <before the bonus>,
+                              "home": true|false,
                               "strong_lensing": true|false }, ... ] }
 
             These are the papers announced on arXiv overnight that a keyword
             ranker judged closest to the reader's interests. The ranker is a
             shortlist, not a verdict: `score` and `topic` are hints from
             substring matching, and you should overrule either when the
-            abstract says otherwise.
+            abstract says otherwise. `home` is false for papers borrowed from
+            the statistics categories, which is why their `score` sits below
+            their `keyword_score` — a thumb on the scale to stop stats
+            vocabulary crowding out astronomy, not a judgement about the paper.
 
             The reader is a working astronomer whose interests are, roughly:
             supermassive black holes and AGN; dark matter (particle nature,
@@ -156,7 +168,17 @@ jobs:
             want to see it: a significant result, a new method they could use,
             a dataset or survey they work with, a genuine surprise. Prefer
             substance over volume — do not fill the list with near-duplicate
-            survey papers when a more varied ten is available.
+            survey papers when a more varied list is available.
+
+            ORDERING IS LOAD-BEARING, and it is why `pick` is larger than
+            `batch`. Only the first `batch` papers that survive filing reach
+            the board: the step below drops any paper already on the
+            strong-lensing inbox or in the reading queue, then stops at
+            `batch`. So the extra picks are dedup slack — put your strongest
+            first and your marginal ones last, because the marginal ones are
+            what a day with no overlap discards, and what a day with two
+            overlaps promotes. Do not pad: if only eight papers are genuinely
+            worth the reader's morning, return eight.
 
             For each pick, assign `topic` — the PyAutoMemory reading-queue
             section it belongs in. Use EXACTLY one of these four strings:
@@ -178,7 +200,8 @@ jobs:
                               "topic": "<one of the four strings above>" },
                             ... ] }
 
-            Most interesting first. Titles VERBATIM from the candidates file —
+            Most interesting first — see ORDERING above; the tail is what gets
+            dropped. Titles VERBATIM from the candidates file —
             do not re-word or re-case them; they are matched against the
             reading queue to avoid filing a paper twice. Strip any `arXiv:`
             prefix and any trailing `vN` from the id.
@@ -224,7 +247,11 @@ jobs:
 
           # append is idempotent and dedupes against the interests list, the
           # reading queue AND the strong-lensing inbox, so a re-run adds
-          # nothing and a paper never lands on both lists.
+          # nothing and a paper never lands on both lists. It is also what
+          # enforces the batch size: --limit defaults to interests_actions.py's
+          # own BATCH_SIZE, so the over-pick above (PICK_COUNT) is trimmed HERE,
+          # in order, after the dedup. Do not pass --limit from this side — one
+          # owner for that number, or the two repos drift.
           added=$(python3 scripts/interests_actions.py append \
                     --papers-file arxiv_interest_picks.json)
           # Unconditional, and the whole reason this step does not skip empty
