@@ -129,8 +129,10 @@ part of #1527.
 All four were filed as prompts on 2026-08-27, alongside this record, and worked the
 same day:
 
-- **1 and 2 implemented together** on PyAutoFit `claude/loggaussian-prior-support-ngh59x`
-  (`4c0f79b`, suite 2186/36 vs baseline 2178/36). No PR opened yet.
+- **1 and 2 shipped together** as PyAutoFit#1532 (issue #1531), **MERGED** `6e2d8c8` on
+  2026-08-27, CI green on all four legs, suite 2186/36 vs baseline 2178/36. Records:
+  `complete/2026/08/optimisation-state-limit-guard-truthiness.md` and
+  `complete/2026/08/redundant-prior-limits-overrides.md`. Unreleased (`pending-release`).
 - **Doing 1 exposed a live bug neither #1527 nor the prompt saw.** `VariableData.any`
   reduced through `var_all`, so it meant "is there a variable whose elements are ALL
   True" rather than "is ANY element True". `OptimisationState.valid` asks

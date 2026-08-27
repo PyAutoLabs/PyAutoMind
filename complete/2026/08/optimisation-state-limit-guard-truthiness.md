@@ -1,3 +1,79 @@
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1531 (closed by the PR's `Closes` line)
+- completed: 2026-08-27
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1532 (MERGED, merge `6e2d8c8`, head `4c0f79b`,
+  +167/-20 over 6 files, label `pending-release`)
+- summary: `OptimisationState.valid`'s limits guards rewritten from truthiness to `is not None` —
+  and, underneath that tidy-up, a **live bug** fixed: `VariableData.any` reduced through `var_all`,
+  so the limits check accepted a parameter vector with *some* components out of bounds.
+- validation: 2186 passed / 36 skipped (baseline 2178/36); CI green on all four legs.
+- release: not performed; merged PR sits in the pending-release queue.
+- sibling: shipped in the same PR as `redundant-prior-limits-overrides` — see that record.
+
+## The correction this task was really about
+
+The prompt was filed as `refactor` on the strength of a correction to **PyAutoFit#1527's own
+follow-up list**, which described the guard as:
+
+> `line_search.OptimisationState.valid` uses `if self.lower_limit and …`, which is falsy at `0.0`.
+
+That is wrong, and believing it would have produced a bug report for a bug that does not exist.
+`self.lower_limit` is not a scalar: it is a `VariableData` (`autofit/mapper/variable.py:309`, a
+`Dict[Variable, np.ndarray]` subclass), built by `MeanField.lower_limit` and passed in by
+`LaplaceOptimiser` only when `check_limits=True`. Dict truthiness is non-emptiness, so the guard was
+`False` only for a model with **no free variables**, where the check is vacuous. There is no `0.0`
+for it to be falsy at. And the EP path reads `m.lower_limit` off the **message**, which #1527
+deliberately left at `±inf` — so that code saw exactly what it saw before that fix.
+
+What remained was a readability and robustness defect: `if x` *reads* as a scalar test (which is how
+it entered the follow-up list as a `0.0` bug) and was one type change away from being one — a scalar
+would make `0.0` skip the check, a bare array would raise on the ambiguous truth value.
+
+## The bug underneath it — the actual find
+
+Writing a test for the rewritten guard is what exposed it. `VariableData.any`:
+
+```python
+def any(self) -> bool:
+    return any(VariableData.var_all(self).values())   # var_all, not var_any
+```
+
+It reduced through **`var_all`**, so it meant *"is there a variable whose elements are ALL True"*
+rather than *"is ANY element True"*. For `array([True, False])` it answered `False`.
+
+`OptimisationState.valid` asks `(self.parameters < self.lower_limit).any()`. So a parameter vector
+with **some** components outside their limits was reported **valid**, and only a variable violating
+on **every** component was caught. `MeanField`'s `if valid.any()` (`mean_field.py:501`) under-reported
+the same way, inside an EP update loop.
+
+That, not the truthiness guard, is why the Laplace limits check under-enforced. Both fixes shipped
+together, because the guard being tidied does not enforce anything without it.
+
+Blast radius, enumerated rather than assumed: the library has six `.any()` call sites. Four
+(`graphical/utils.py:539`, `multi_start_gradient/search.py:468`, `analysis/latent.py:274`, plus the
+numpy paths) are on numpy arrays and are untouched. The only `VariableData` consumers are
+`line_search.py` (×2) and `mean_field.py:501`, and all three want a real `any`.
+
+## The process lesson, paying out a third time in this lineage
+
+`OptimisationState.valid` and `VariableData.any` had **no test coverage at all**. The full 2178-test
+suite would have stayed green through any change to either — and did stay green through the bug, for
+however long it had been there.
+
+This is the same lesson as `prior-support-clipper` (#1477), where a 1790-test suite passed against an
+`LBFGS._fit` that raised `NameError` on every real call, and as `loggaussian-prior-declares-own-support`
+(#1527), whose clipper test *asserted the bug as expected behaviour*. Three times in one lineage the
+defect was in code nothing executed or nothing asserted about.
+
+The new `test_autofit/graphical/test_optimisation_state_valid.py` (8 tests) is verified by inversion:
+reverting `var_any` to `var_all` fails 3 of them, including both partial-violation cases.
+
+## Repos / worktree
+
+- PyAutoFit: `claude/loggaussian-prior-support-ngh59x` (merged, deletable).
+- No worktree — ran `web-github` against a direct clone.
+
+## Original prompt
+
 # `OptimisationState.valid` guards on dict truthiness, not on "is a limit set"
 
 Type: refactor
@@ -9,6 +85,7 @@ Autonomy: safe
 Priority: low
 Status: formalised
 Filed: 2026-08-27
+Issued: 2026-08-27
 
 Follow-up owed by `complete/2026/08/loggaussian-prior-declares-own-support.md`
 (PyAutoFit#1526 / #1527), which listed it as an open item.
