@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1160 records across 7 buckets.
+1162 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -30,6 +30,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autoarray-input-validation-guards](2026/08/autoarray-input-validation-guards.md)
 - [autoarray-pixel-scales-scalar-widening](2026/08/autoarray-pixel-scales-scalar-widening.md)
 - [autocti-util-dataset-export](2026/08/autocti-util-dataset-export.md) — no GitHub issue — worked directly from the draft prompt in a cloud session on explicit human instruction; the …
+- [autocti-workspace-navigator-check](2026/08/autocti-workspace-navigator-check.md)
 - [autofit-mock-all-ones-ell-comps](2026/08/autofit-mock-all-ones-ell-comps.md)
 - [autofit-plot-functions-kwargs](2026/08/autofit-plot-functions-kwargs.md)
 - [autofit-sampler-database](2026/08/autofit-sampler-database.md)
@@ -229,6 +230,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [repo-settings-bash-e-abort](2026/08/repo-settings-bash-e-abort.md)
 - [repo-settings-org-enumeration](2026/08/repo-settings-org-enumeration.md)
 - [repos-sync-target-repo-lint-awareness](2026/08/repos-sync-target-repo-lint-awareness.md)
+- [required-workflow-file-drift](2026/08/required-workflow-file-drift.md)
 - [resolve-border-relocator-hazard](2026/08/resolve-border-relocator-hazard.md) — Reconciled the likelihood hazard instrument after the border-relocator source fix. The resolved backend-diverg…
 - [resolve-curvature-floor-doc-drift](2026/08/resolve-curvature-floor-doc-drift.md) — Reconciled the curvature-floor documentation finding after PyAutoArray#444. The detector now requires both run…
 - [resolve-sersic-ell-comps-gradient](2026/08/resolve-sersic-ell-comps-gradient.md) — Reconciled the numerical-hazard evidence after the Sersic Cartesian-radius fix. The stable conditional detecto…

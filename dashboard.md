@@ -45,11 +45,11 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 134 |
+| [Backlog](#backlog) (`draft/`) | 132 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 17
+**Highest priority** (filed as `high`) — showing 12 of 16
 
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
@@ -71,14 +71,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> — ci · medium · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/ci/autocti_workspace_navigator_check.md
 ```
 
 </details>
@@ -143,6 +135,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
 ```
 
 </details>
@@ -255,7 +255,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
+**132** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -612,15 +612,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 22</summary>
-
-<details><summary>📋 <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> — ci · medium · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/ci/autocti_workspace_navigator_check.md
-```
-
-</details>
+<summary><b>maintenance</b> — 20</summary>
 
 <details><summary>📋 <a href="draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md">Untrack the generated FITS test artifacts in autoarray</a> — libraries · small · supervised · medium</summary>
 
@@ -682,14 +674,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/ci/heart_smoke_table_autocti.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/run_smoke_copy_drift.md">run_smoke.py: three runner variants across 10 repos, no sync mechanism</a> — ci · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/ci/run_smoke_copy_drift.md
 ```
 
 </details>
@@ -1203,7 +1187,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-24 | filed | <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
@@ -1213,12 +1196,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-22 | filed | <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right jax…</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md">Untrack the generated FITS test artifacts in autoarray</a> |
 | 2026-08-22 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the…</a> |
+| 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
 | 2026-08-21 | filed | <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> |
 | 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md">Numba CPU likelihood phase 2: kernel-CDF numba fast path (the 49-88%…</a> |
@@ -1228,12 +1211,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
 | 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
+| 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
 | 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
@@ -1243,12 +1226,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
 | 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
 | 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
+| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 | 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 | 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
 | 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
@@ -1258,6 +1241,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> |
 | 2026-08-04 | filed | <a href="draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage the streak</a> |
 | 2026-08-04 | filed | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> |
+| 2026-08-03 | filed | <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431…</a> |
 
 </details>
 
