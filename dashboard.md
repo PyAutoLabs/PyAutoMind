@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 136 |
+| [Backlog](#backlog) (`draft/`) | 135 |
 
 ## Start here
 
@@ -247,7 +247,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**136** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -777,7 +777,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 17</summary>
+<summary><b>bug</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
 
@@ -807,14 +807,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> — autofit · small · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autofit/loggaussian_prior_declares_own_support.md
 ```
 
 </details>
@@ -1237,18 +1229,17 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
 | 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 | 2026-08-17 | filed | <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> |
-| 2026-08-16 | filed | <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> |
 | 2026-08-14 | filed | <a href="draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md">Three <code>jax_likelihood</code> pins are stale by ~1.24e-4 and fail the smoke…</a> |
 | 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
 | 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
 | 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
 | 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
+| 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 | 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
 | 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
 | 2026-08-05 | filed | <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> |
@@ -1258,6 +1249,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-04 | filed | <a href="draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage the streak</a> |
 | 2026-08-04 | filed | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> |
 | 2026-08-03 | filed | <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431…</a> |
+| 2026-07-31 | filed | <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation…</a> |
 
 </details>
 

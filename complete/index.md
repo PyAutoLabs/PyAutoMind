@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1153 records across 7 buckets.
+1154 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -133,6 +133,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [llms-txt-census-fixes](2026/08/llms-txt-census-fixes.md)
 - [local-pixel-scale-vs-dataset-pixel-scales](2026/08/local-pixel-scale-vs-dataset-pixel-scales.md)
 - [log-det-multistart-tag](2026/08/log-det-multistart-tag.md)
+- [loggaussian-prior-declares-own-support](2026/08/loggaussian-prior-declares-own-support.md) — closed by the PR's `Closes` line
 - [markdown-renderings-2a-leftovers](2026/08/markdown-renderings-2a-leftovers.md)
 - [mask1d-shape-native-scalar-widening](2026/08/mask1d-shape-native-scalar-widening.md)
 - [memory-surfaces-stale-names](2026/08/memory-surfaces-stale-names.md) — auto-closed on merge
