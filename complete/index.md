@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1175 records across 7 buckets.
+1176 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -170,6 +170,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [nss-remainline-mainline-blackjax](2026/08/nss-remainline-mainline-blackjax.md)
 - [nufft-parity-full-datasets](2026/08/nufft-parity-full-datasets.md)
 - [numba-cpu-likelihood-profiling](2026/08/numba-cpu-likelihood-profiling.md)
+- [numba-cpu-mge-batch-convolve-cache](2026/08/numba-cpu-mge-batch-convolve-cache.md)
 - [numba-first-call-garbage-psf-weighted-data](2026/08/numba-first-call-garbage-psf-weighted-data.md)
 - [numba-kernel-shift-axes](2026/08/numba-kernel-shift-axes.md) — issued 2026-08-24, auto-closed by the merge
 - [numerical-hazard-profiling](2026/08/numerical-hazard-profiling.md) — Phase 1 established the reusable numerical-hazard profiling framework, typed risk measurements, reachability a…

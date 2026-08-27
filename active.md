@@ -13,22 +13,6 @@
 - the recoverable-cost question: if XLA's pool is merely mis-sized against the runner's
   cgroup quota rather than genuinely deadlocked, the fix is sizing it and the 15% comes back.
 
-## numba-cpu-mge-batch-convolve-cache
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/496
-- issued: 2026-08-27
-- prompt: active/numba_cpu_likelihood_mge_convolution_and_caching.md
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/497
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/588
-- heart-ack: user authorised ship over RED `release validation FAILED (stage integrate)` (unrelated autolens_workspace_test rectangular_mge pin drift), 2026-08-27
-- worktree: ~/Code/PyAutoLabs-wt/numba-cpu-mge-batch-convolve-cache
-- repos:
-  - PyAutoArray: feature/numba-cpu-mge-batch-convolve-cache
-  - PyAutoGalaxy: feature/numba-cpu-mge-batch-convolve-cache
-- note: epic numba-cpu-likelihood phase 1. Plan on the issue. Item 4 (pair-loop hoist + mirror) approved
-  by user 2026-08-27 after the per-pixel-noise-map check; strict bit-identity NOT required (ulp-level BLAS
-  ordering in the mirrored half accepted, pins at rtol 1e-6 are the guard).
-
 ## result-instance-fallback
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1535
 - issued: 2026-08-27
