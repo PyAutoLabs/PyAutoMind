@@ -49,6 +49,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autolens_profiling/jax-optimizer-tuning](#autolens_profilingjax-optimizer-tuning)
 - [autolens_profiling/multiband-compile-ab](#autolens_profilingmultiband-compile-ab)
 - [autolens_profiling/stash-strip-non-jit-noise](#autolens_profilingstash-strip-non-jit-noise)
+- [autolens_workspace_developer/rectangular-spline-rotated-experiments](#autolens_workspace_developerrectangular-spline-rotated-experiments)
 
 <!-- toc:end -->
 
@@ -422,3 +423,14 @@ One `##` block per item. Fields:
 - sweep-after: 2026-11-26
 - breaks-if-wrong: loses the noise-stripping edits to `likelihood/{datacube,imaging,interferometer,point_source}/*.py`. Materialised as a real commit before the drop, per the schema's rule that a manifest merely *pointing* at a stash is worthless once it is dropped. Recoverable via `pyauto-gut recover autolens-profiling-stash-strip-non-jit-noise`.
 - archive-ref: `refs/heads/archive/condemned/autolens-profiling-stash-strip-non-jit-noise` @ `e6e72cc2dfd67a7ae5cb2fff3b0fb0ae3dc56e56` on PyAutoGut — verified by independent clone-back (9 files, 325/778 diff intact) before `git stash drop`.
+
+## autolens_workspace_developer/rectangular-spline-rotated-experiments
+- type: file
+- locator: `rect_adapt_duo/` (7 files, incl. bundled `dataset/*.fits`), `searches_minimal/probe_grad_pix_adapt_image.py`, `jax_profiling/misc/pixelization_spline_vs_linear.py`, `jax_profiling/misc/pixelization_spline_fit_comparison.py`, `jax_profiling/results/jit/imaging/spline_vs_linear_fit/` (2 PNGs), `jax_profiling/results/jit/imaging/spline_vs_linear_hst_v2026.4.13.6.json`, `..._sweep.png` — 14 files, 1775 lines plus binaries, in PyAutoLabs/autolens_workspace_developer
+- confidence: 0.97
+- reason: every one of these exercises a mesh class that no longer exists in PyAutoArray. The 2026-07-23 rectangular-mesh consolidation (PyAutoArray#402/#403) deleted `RectangularSplineAdapt{Density,Image}` and `RectangularRotatedAdaptImage`; these scripts import them at module scope and cannot run at all against any `main` since. They are spent comparison experiments — the spline and rotated transforms lost to the consolidation, which chose the kernel-CDF transform instead. Not wrong code, just code whose subject the library removed. Task: autolens_workspace_developer#131, prompt `active/rectangular_experiments_gut_stash.md`.
+- merged: no
+- condemned: 2026-08-27
+- sweep-after: n/a — nothing to void. These are committed deletions on a pushed repo, so the bytes stay reachable in remote history permanently; per the entry schema's "Committed code / test deletions" rule this record exists only to pin the pre-delete SHA. There is no ref to expire and no `pyauto-gut void` step.
+- breaks-if-wrong: loses the rotated-vs-spline mesh demo (`rect_adapt_duo/compare_meshes.py` + its self-contained simulated dataset), the spline adapt-image FD gradient probe, and the spline-vs-linear pixelization profiling comparison with its measured HST results (JSON + sweep plot). The *findings* those runs produced survive in `jax_profiling/gradient/README.md` and the PyAutoArray#402 completion record; what is lost is the ability to re-run them, which already requires resurrecting three deleted library classes.
+- archive-ref: `n/a` — committed deletion; pre-delete SHA `9ae0502` on PyAutoLabs/autolens_workspace_developer `main` (the base of `feature/rectangular-experiments-gut-stash`). Recover with `git checkout 9ae0502 -- <path>`.
