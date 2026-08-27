@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 135 |
+| [Backlog](#backlog) (`draft/`) | 134 |
 
 ## Start here
 
@@ -163,6 +163,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/required_workflow_file_drift.md">Heart cannot see a required workflow that has no file…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/188">issue #188</a> — issued 2026-08-27 — ready-to-ship</summary>
+
+```
+/start_dev active/required_workflow_file_drift.md
+```
+
+</details>
+
 ## Parked
 
 Started or scoped, not currently in flight — resume by moving the row back to `active.md`. Full detail in [`parked.md`](parked.md).
@@ -247,10 +255,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 29</summary>
+<summary><b>feature</b> — 28</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution + operated-matrix caching</a> — autoarray · medium · supervised · high</summary>
 
@@ -312,14 +320,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/required_workflow_file_drift.md">Heart cannot see a required workflow that has no file…</a> — pyautoheart · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautoheart/required_workflow_file_drift.md
 ```
 
 </details>
@@ -1183,7 +1183,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |
-| 2026-08-27 | filed | <a href="draft/feature/pyautoheart/required_workflow_file_drift.md">Heart cannot see a required workflow that has no file…</a> |
+| 2026-08-27 | issued | <a href="active/required_workflow_file_drift.md">Heart cannot see a required workflow that has no file…</a> |
 | 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |

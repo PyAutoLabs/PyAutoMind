@@ -86,7 +86,7 @@ the deep/on-demand tier (not the <30 s tick), matching on each workflow's parsed
 **configuration** finding rather than red CI, since the repo's code is fine and
 its gate is not wired up. Full survey:
 https://github.com/PyAutoLabs/autocti_workspace/issues/29#issuecomment-5401319712
-Filed 2026-08-27 as `draft/feature/pyautoheart/required_workflow_file_drift.md`.
+Filed and shipped 2026-08-27 as PyAutoHeart#188 — `active/required_workflow_file_drift.md`.
 
 ## Left for separate tasks
 

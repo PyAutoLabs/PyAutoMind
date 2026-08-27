@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-08-27
+Issued: 2026-08-27
 
 `PyAutoHeart/config/repos.yaml` declares `required_workflows` per group, and
 `heart/checks/ci_status.py`'s `rollup()` scores a repo over exactly those
