@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1172 records across 7 buckets.
+1173 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -224,6 +224,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [reconcile-duplicate-prompt-signal](2026/08/reconcile-duplicate-prompt-signal.md) — every signal reconcile had scored a prompt against the completion
 - [reconcile-upstream-repo-mode](2026/08/reconcile-upstream-repo-mode.md)
 - [reconstruction-noise-map-covariance-sqrt](2026/08/reconstruction-noise-map-covariance-sqrt.md)
+- [rectangular-experiments-gut-stash](2026/08/rectangular-experiments-gut-stash.md)
 - [rectangular-spline-adapt-image-jit-fix](2026/08/rectangular-spline-adapt-image-jit-fix.md)
 - [redundant-prior-limits-overrides](2026/08/redundant-prior-limits-overrides.md) — shared with its sibling; closed by the PR
 - [refactor-witness-map-audit](2026/08/refactor-witness-map-audit.md) — PyAutoBrain#269 → PR #271, merge cf969f3; stacked on #268

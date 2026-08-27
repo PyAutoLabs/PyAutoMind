@@ -27,28 +27,6 @@
 - the recoverable-cost question: if XLA's pool is merely mis-sized against the runner's
   cgroup quota rather than genuinely deadlocked, the fix is sizing it and the 15% comes back.
 
-## rectangular-experiments-gut-stash
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/131 (issued 2026-08-27)
-- issued: 2026-08-27
-- prompt: active/rectangular_experiments_gut_stash.md
-- status: awaiting-merge — PR open, MERGE BLOCKED by Heart RED
-- pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/132 (opened 2026-08-27, label pending-release)
-- blocked-by: Heart RED `release validation FAILED (stage integrate)`. PR opened under the
-  human-authorized corrective-PR exception naming that exact reason (push + PR-open only).
-  Merge is NOT authorized under RED — resume with /prm once Heart clears.
-- worktree: ~/Code/PyAutoLabs-wt/rectangular-experiments-gut-stash
-- repos:
-  - autolens_workspace_developer: feature/rectangular-experiments-gut-stash
-- note: the prompt's `Repos:` header names PyAutoGut, but PyAutoGut is NOT modified —
-  every condemned path is tracked and pushed, so the Gut's storage model calls for a
-  pre-delete SHA in the catalog, not an `archive/condemned/*` payload ref. The second
-  repo is PyAutoMind (the `condemned.md` entry).
-- correction: the prompt's rename target (`RectangularAdapt{Density,Image}`) was deleted
-  by PyAutoArray#461 (f9aceea3, 2026-08-21). Renames are date-checked per `git blame`
-  against the 2026-07-23 consolidation — pre → `RectangularBilinearAdapt*`, post →
-  `RectangularRTUAdapt*` — per the rule commit 08d5d86 wrote into the gradient README.
-  `bandwidth=` is still live on the RTU meshes and is NOT dropped.
-
 ## numba-cpu-mge-batch-convolve-cache
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/496
 - issued: 2026-08-27
