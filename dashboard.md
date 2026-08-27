@@ -179,7 +179,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/rectangular_experiments_gut_stash.md">autolens_workspace_developer rectangular experiments — Gut stash + rename</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/131">issue #131</a> — issued 2026-08-27 — workspace-dev</summary>
+<details><summary>📋 <a href="active/rectangular_experiments_gut_stash.md">autolens_workspace_developer rectangular experiments — Gut stash + rename</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/131">issue #131</a> — issued 2026-08-27 — awaiting-merge — PR open, MERGE BLOCKED by Heart RED</summary>
 
 ```
 /start_dev active/rectangular_experiments_gut_stash.md
