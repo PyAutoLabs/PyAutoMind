@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 136 |
+| [Backlog](#backlog) (`draft/`) | 134 |
 
 ## Start here
 
@@ -163,6 +163,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1530">issue #1530</a> — issued 2026-08-27 — not started — research follow-up to the shipped jax-compile-stall epic</summary>
+
+```
+/start_dev active/xla_cpu_eigen_pool_deadlock.md
+```
+
+</details>
+
 ## Parked
 
 Started or scoped, not currently in flight — resume by moving the row back to `active.md`. Full detail in [`parked.md`](parked.md).
@@ -247,7 +255,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**136** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -785,7 +793,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 16</summary>
+<summary><b>bug</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
 
@@ -903,14 +911,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation integrate leg</a> — autolens</summary>
-
-```
-/start_dev draft/bug/autolens/interferometer_release_leg_oom.md
 ```
 
 </details>
@@ -1188,6 +1188,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-27 | issued | <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
@@ -1197,12 +1198,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 | 2026-08-24 | filed | <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods…</a> |
-| 2026-08-24 | filed | <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-24 | filed | <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
@@ -1212,12 +1213,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-22 | filed | <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right jax…</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md">Untrack the generated FITS test artifacts in autoarray</a> |
 | 2026-08-22 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the…</a> |
-| 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
 | 2026-08-21 | filed | <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> |
 | 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md">Numba CPU likelihood phase 2: kernel-CDF numba fast path (the 49-88%…</a> |
@@ -1227,12 +1228,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
 | 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
-| 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
 | 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
@@ -1242,12 +1243,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
 | 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
 | 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
-| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 | 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 | 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
 | 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
@@ -1257,7 +1258,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> |
 | 2026-08-04 | filed | <a href="draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage the streak</a> |
 | 2026-08-04 | filed | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> |
-| 2026-08-03 | filed | <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431…</a> |
 
 </details>
 
@@ -1407,25 +1407,17 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Intermittent XLA compile stall in the JAX vmap likelihood path</b> — 2 queued prompt(s), in order</summary>
+<summary><b>JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Intermittent XLA compile stall in the JAX vmap likelihood path</b> — ledger: `draft/bug/ci/jax_vmap_jit_compile_stall.md` — CLOSED AS PARTIAL 2026-08-23 — record complete/2026/08/jax-compile-stall-slow-vs-stall-audit.md</summary>
-
-```
-Continue the 'Intermittent XLA compile stall in the JAX vmap likelihood path' epic. Its canonical state lives in draft/bug/ci/jax_vmap_jit_compile_stall.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 (watchdog) shipped in full; phases 2/3 stopped deliberately at a measured-but-not-root-caused state. The stall is instrumented and characterised (>100x bimodality inside one compile step; vmap-of-jit contributory at p=0.070 but NOT causal; the compile-cache hypothesis never tested) and NOTHING was un-quarantined. Resume via draft/research/ci/smoke_timing_and_profiling.md, which is where this gets dug up. Superseded complete/2026/08/multi-dataset-jax-likelihood-xla-stall.md (was draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_xla_stall.md).
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/ci/jax_compile_stall_3_root_cause.md">Phase 3: root-cause the XLA vmap compile stall and clear every NEEDS_FIX…</a> — ci · large · supervised · high</summary>
+<details><summary>📋 <b>JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)</b> — ledger: `draft/bug/ci/jax_vmap_jit_compile_stall.md` — SHIPPED 2026-08-27 — all 3 phases done; record</summary>
 
 ```
-/start_dev draft/bug/ci/jax_compile_stall_3_root_cause.md
+Continue the 'JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)' epic. Its canonical state lives in draft/bug/ci/jax_vmap_jit_compile_stall.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 (watchdog) shipped in full; phases 2/3 stopped deliberately at a measured-but-not-root-caused state. The stall is instrumented and characterised (>100x bimodality inside one compile step; vmap-of-jit contributory at p=0.070 but NOT causal; the compile-cache hypothesis never tested) and NOTHING was un-quarantined. Resumed 2026-08-27 as phase 3 (PyAutoFit#1528) — NOT via draft/research/ci/smoke_timing_and_profiling.md,
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/ci/jax_vmap_jit_compile_stall.md">Intermittent XLA compile stall in JAX vmap likelihood scripts — third repo…</a> — ci · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/ci/jax_vmap_jit_compile_stall.md">JAX vmap result never materialises — campaign map…</a> — ci · too-large · supervised · high</summary>
 
 ```
 /start_dev draft/bug/ci/jax_vmap_jit_compile_stall.md
@@ -1522,12 +1514,11 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ## Hygiene
 
-4 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
-- `draft/bug/autolens/interferometer_release_leg_oom.md`
 - `draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md`
 - `draft/docs/workspaces/plot_coverage_followups.md`
 - `draft/research/autolens_profiling/cluster_gradient_search_benchmark.md`

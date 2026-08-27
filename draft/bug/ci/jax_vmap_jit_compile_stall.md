@@ -1,4 +1,4 @@
-# Intermittent XLA compile stall in JAX vmap likelihood scripts — third repo, still unfixed
+# JAX vmap result never materialises — campaign map (SHIPPED 2026-08-27; the "XLA compile stall" name was wrong)
 
 Type: bug
 Target: ci
@@ -145,6 +145,26 @@ process is parked in `jax.block_until_ready` / `try_to_block`, i.e. the
 of this file, and every marker calling this an "intermittent XLA compile
 stall", inherit a guess made before there was any evidence. See the record's
 final section.
+
+## SHIPPED — 2026-08-27
+
+All three phases are done. Record:
+[`complete/2026/08/jax-vmap-materialisation-hang.md`](../../../complete/2026/08/jax-vmap-materialisation-hang.md).
+
+Phase 3 established that the hang is **materialising the vmap result**, not
+compiling it — captured at `jax.block_until_ready`/`try_to_block` and at
+`jax.Array._value`, with compilation finished ~12-18s earlier. The trigger is
+XLA CPU's multithreaded Eigen thread pool; the workaround is
+`XLA_FLAGS=--xla_cpu_multi_thread_eigen=false` in both test workspaces' smoke
+and release profiles (ABAB, 12 passes/0 hangs with vs 2 passes/14 hangs
+without, Fisher exact p ~ 3e-6). All seven quarantined entries are restored,
+42/42 completions.
+
+**Why the pool wedges is still unknown** — a workaround, not a root-cause fix.
+The follow-up lives under `draft/research/ci/`.
+
+The section below is kept as the 2026-08-23 state, for the history of how this
+was worked.
 
 ## CLOSED AS PARTIAL — 2026-08-23
 
