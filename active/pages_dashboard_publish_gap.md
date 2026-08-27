@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-08-27
+Issued: 2026-08-27
 
 Found 2026-08-27 when the user reported a retired prompt
 (`smoke_install_stale_jax_pin`) still rendering as a pickable chip on
@@ -109,3 +110,12 @@ git -C PyAutoMind log -1 --format=%ci origin/main -- dashboard.html
 
 Immediate unblock (already applied on 2026-08-27, run 33114834609):
 `gh workflow run pages_dashboard.yml --repo PyAutoLabs/PyAutoMind --ref main`.
+
+<!-- Sizing: declared low; the sizing faculty derives large (8) and recommends
+     split-into-phases. Kept at low and NOT phased — the change is a handful of
+     YAML lines in one workflow file plus a replay to verify. The prompt is long
+     because the evidence chain is (three workflows, a token-recursion rule and a
+     run-history comparison), not because the work is. Same call, and the same
+     reason, as complete/2026/08/smoke-install-stale-jax-pin.md.
+     The faculty's PyAutoMemory hits (wiki/cti "trap", wiki/methods "jax") are
+     keyword collisions — neither is relevant here. -->

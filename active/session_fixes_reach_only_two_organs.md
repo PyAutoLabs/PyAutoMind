@@ -4,6 +4,7 @@ Type: maintenance
 Target: organs
 Repos:
 - PyAutoMind
+- PyAutoBrain
 - PyAutoHeart
 - PyAutoHands
 Difficulty: small
@@ -11,6 +12,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-08-27
+Issued: 2026-08-27
 
 The 2026-08-27 mobile-workflow pass shipped two things that are, by
 construction, only half-rolled-out. Both need a session with **all four organs
