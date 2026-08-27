@@ -11,7 +11,8 @@ Status: formalised
 Filed: 2026-08-27
 
 Filed 2026-08-27 from the sibling-repo sweep required by
-`complete/`-bound task `untrack-fits-test-artifacts` (PyAutoArray#494), whose
+shipped task `untrack-fits-test-artifacts` (PyAutoArray#494, record
+`complete/2026/08/untrack-fits-test-artifacts.md`), whose
 scope note said: "Leave the sibling repos alone. PyAutoGalaxy/PyAutoLens likely
 share the pattern; check, and file separately rather than widening this."
 

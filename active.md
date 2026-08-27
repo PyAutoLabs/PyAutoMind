@@ -26,23 +26,3 @@
   removing it silently brings back seven quarantines.
 - the recoverable-cost question: if XLA's pool is merely mis-sized against the runner's
   cgroup quota rather than genuinely deadlocked, the fix is sizing it and the 15% comes back.
-
-## untrack-fits-test-artifacts
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/494 (issued 2026-08-27)
-- issued: 2026-08-27
-- prompt: active/untrack_generated_fits_test_artifacts.md
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/495 (pending-release)
-- repos:
-  - PyAutoArray: feature/untrack-fits-test-artifacts
-- no-worktree: shipped from a web session (no local worktree, no gh; issue and PR
-  driven through the GitHub MCP surface). The PyAutoArray clone lives at
-  /home/user/pyautoarray on feature/untrack-fits-test-artifacts.
-- summary: |
-    Convert the six test_autoarray output_test writers to pytest tmp_path, then untrack
-    and delete the 13 tracked FITS/dat artifacts. Audit found only 1 of the 13 is a live
-    output (structures/arrays/files/array/output_test/array.fits, the file #483 flipped);
-    the other 12 are orphans no test references. Also replaces the two file-by-file
-    .gitignore lines with test_autoarray/**/output_test/ and drops a dead test_data_path
-    fixture in dataset/imaging/test_dataset.py. Verify: clean checkout, suite twice in a
-    row, git status clean after each. Siblings (PyAutoGalaxy/PyAutoLens) file separately.
