@@ -4,10 +4,11 @@ Type: bug
 Target: autoarray
 Repos:
 - @PyAutoArray
+- @autolens_workspace
 Difficulty: medium
 Autonomy: human-required
-Priority: low
-Status: draft
+Priority: medium
+Status: in-progress
 Filed: 2026-08-22 (backfilled from git)
 
 ## Why this exists
@@ -388,6 +389,82 @@ Documentation only — no behaviour change, no API change.
    here.
 4. **The open measurement**: re-run the evidence-optimal lambda with the lens mass **free** rather
    than fixed at truth. That is the single result most likely to overturn the `low` grading.
+
+## SCOPED FOR DEV 2026-08-27 — Defect 2 only; Defect 3 is closed
+
+`/start_dev` re-read this prompt against PyAutoArray `main` @ `da5ec9a0`. Three of the four open
+items are **not** live code work, so this prompt now owns exactly one:
+
+| Item | State on `main` @ `da5ec9a0` |
+|---|---|
+| Defect 1 — unconstrained covariance vs NNLS | Docstring caveat **shipped** ([#472](https://github.com/PyAutoLabs/PyAutoArray/pull/472)). The truncated-posterior maths stays deferred at `low` — "worth it only if someone needs calibrated per-pixel error bars on a very compact source". |
+| **Defect 2 — covariance ignores `zeroed_ids_to_keep`** | **LIVE. This prompt's task.** `reconstruction_covariance_matrix` (`abstract.py:844`) inverts the full `curvature_reg_matrix`; `reconstruction` (`abstract.py:516-544`) solves the `zeroed_ids_to_keep` submatrix and scatters back exact zeros. |
+| Defect 3 — `use_edge_zeroed_pixels` nested inside the positive-only branch | **CLOSED — deliberate, not a bug.** [`84b9ed4`](https://github.com/PyAutoLabs/PyAutoArray/commit/84b9ed42b583dd1473aeda259b8e9d7a3f153c10) (2026-08-22): "the author confirmed the scoping is deliberate". Documented in three places — `config/general.yaml:6`, `Settings.use_edge_zeroed_pixels`, and a comment at the nesting site itself saying explicitly not to hoist the check. The text above calling this "the most likely next piece of real work" is **stale — do not act on it**. |
+| The open measurement — evidence-optimal lambda with the lens **mass free** | Deferred. Not code work; belongs in its own `research/` prompt when someone wants it. |
+
+### Blast radius is wider than this prompt assumed
+
+The scope note above says Defect 2 "only bites when `zeroed_pixels > 0`" and that
+`Delaunay.__init__` defaults it to `0`, "so this is opt-in per mesh". That understates it.
+`RectangularRTUAdaptDensity.zeroed_pixels` (`rectangular_rtu_adapt_density.py:161`) returns the
+**entire edge ring unconditionally** — there is no opt-in and no count to set. For the
+`Rectangular*AdaptDensity` family it is always on. That is the mesh family every real-fit
+measurement in this prompt used: 108 zeroed of 784 on a 28x28 is exactly the edge ring, `4*28 - 4`.
+
+### The three index sets are not three inconsistencies — two of them are unrelated
+
+The Verification section below asks whether `curvature_reg_matrix_reduced`'s `mapper_indices`
+reduction should apply to the noise map too, and calls the inconsistency between all three "itself a
+finding". It is not. `mapper_indices` drops **linear objects that carry no regularization** (light
+profiles and the like) from the reduced matrices; it has nothing to do with edge zeroing. The
+comment `# ids of values which are on edge so zero-d and not solved for` at `abstract.py:349`,
+`:387` and `:574` is simply **wrong**, and is what makes the two look like the same concern. Correct
+the comment as part of this task. Only `zeroed_ids_to_keep` vs the noise map was ever a defect.
+
+### DECISION 2026-08-27 — excluded pixels report `NaN`
+
+The prompt recommended `0` ("matches the reconstruction's own convention and keeps plots
+working"). The human chose **`NaN`**, and the two consumer paths were checked before deciding —
+neither breaks, and `NaN` is the safer of the two:
+
+- **Plots.** `norm_from` (`plot/utils.py:270`) is the single colour-scale implementation behind
+  `plot_array` and `plot_inversion_reconstruction`. It derives `vmax` with `np.nanmax` and its
+  docstring already names "an all-`NaN` array" as a handled fallback; the linear branch returns
+  `None` and lets matplotlib autoscale, which ignores `NaN`. Unsolved pixels render blank, which is
+  what they are.
+- **CSV.** `save_reconstruction_csv` (`inversion_plots.py:395`) already writes `nan` into the
+  `noise_map` column when the covariance raises. `NaN` extends an established convention rather
+  than inventing one.
+- **`0` was the worse option, not the safer one.** `source_science.py` computes
+  `reconstruction / reconstruction_noise_map`, and the reconstruction at these pixels is exactly
+  `0.0`. Under `0` that is `0/0` -> `NaN` **plus a `RuntimeWarning` on every call**; under `NaN` the
+  `NaN` propagates silently. Both give `NaN < 5.0 == False`, so the pixels survive the `S/N >= 5`
+  cut carrying a reconstruction of `0.0` and measured flux is unchanged either way.
+
+Document the convention in the `reconstruction_noise_map` docstring **and** in the workspace
+scripts that consume it — which is why `@autolens_workspace` is now on this prompt.
+
+### This is a value change on the pixels that ARE solved
+
+Restricting the inverse is not a re-scaling of the excluded rows. For an SPD matrix
+`[A^-1]_keep >= (A_keep)^-1` in the positive-semidefinite ordering, so **every kept pixel's noise
+drops**, on every `Rectangular*AdaptDensity` fit. Needs a measured before/after on a real fit and a
+release note.
+
+**The Defect 1 bracket framing does not apply here.** These pixels are fixed at zero *by
+construction*, deterministically, before the solver runs — not selected by the data the way the NNLS
+active set is. Conditioning on them is exactly right, and there is no upper/lower bracket to
+straddle. Do not let the "restricting to the free set is not the correction" caveat in
+`reconstruction_noise_map`'s shipped docstring be read as applying to this change; it is about the
+NNLS active set only.
+
+### Structural fix, not a local patch
+
+The reason this defect exists is that the predicate deciding whether the solve subsets the system
+lives inline in `reconstruction` and nowhere else, so the covariance could never have known about
+it. Give the inversion **one** property for "which indices did the solve actually solve", have both
+`reconstruction` and `reconstruction_covariance_matrix` read it, and the two cannot drift apart
+again.
 
 ## Verification
 
