@@ -31,10 +31,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/494 (issued 2026-08-27)
 - issued: 2026-08-27
 - prompt: active/untrack_generated_fits_test_artifacts.md
-- status: library-dev — plan approved, not yet implemented
-- worktree: ~/Code/PyAutoLabs-wt/untrack-fits-test-artifacts
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/495 (pending-release)
 - repos:
   - PyAutoArray: feature/untrack-fits-test-artifacts
+- no-worktree: shipped from a web session (no local worktree, no gh; issue and PR
+  driven through the GitHub MCP surface). The PyAutoArray clone lives at
+  /home/user/pyautoarray on feature/untrack-fits-test-artifacts.
 - summary: |
     Convert the six test_autoarray output_test writers to pytest tmp_path, then untrack
     and delete the 13 tracked FITS/dat artifacts. Audit found only 1 of the 13 is a live
