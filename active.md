@@ -78,10 +78,10 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/organ-remote-block-and-uv-hook-repair
 - repos:
-  - PyAutoMind
-  - PyAutoBrain
-  - PyAutoHeart
-  - PyAutoHands
+  - PyAutoMind: feature/organ-remote-block-and-uv-hook-repair
+  - PyAutoBrain: feature/organ-remote-block-and-uv-hook-repair
+  - PyAutoHeart: feature/organ-remote-block-and-uv-hook-repair
+  - PyAutoHands: feature/organ-remote-block-and-uv-hook-repair
 - scope-note: PyAutoBrain is claimed though the prompt omits it — it carries a generated
   hook copy that goes stale the moment policy/session_start_hook.sh changes, and
   firewall_gate.yml checks it out. The prompt's "all four organs" was written from a
