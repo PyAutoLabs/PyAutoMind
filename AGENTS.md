@@ -73,6 +73,17 @@ For the full workflow narrative, conventions, and registry schemas, read
 - **Skills** — `skills/<name>/` are agent skills and command bodies tightly
   coupled to the registry. Claude and Codex discovery is installed by
   PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.
+- **Ledger auto-merge** — a push to `claude/**` whose whole diff is *ledger*
+  (`draft/`, `active/`, `complete/`, the root registry files, the dashboard
+  pages) is merged into `main` by `.github/workflows/mind_ledger_merge.yml` and
+  the branch deleted — no PR, no session step, no "please merge that" prompt.
+  Anything touching `scripts/`, `tests/`, `.github/`, `skills/`, `policy/`,
+  `docs/`, `repos.yaml` or the prose pages is left for a human, as is anything
+  unclassified (the gate is default deny). So: **push your Mind work and move
+  on** — do not leave a ledger branch hanging, and do not expect a code branch
+  to land by itself. `python3 scripts/ledger_merge.py classify --base
+  origin/main` tells you which side you are on before you push; the full
+  contract is in [REFERENCE.md](REFERENCE.md) "How the ledger lands".
 - **Scripts** — `scripts/status.sh` (inventory), `scripts/prompt_sync.sh`
   (commit/push helpers), `scripts/lifecycle.py` (state moves + drift checks;
   `lifecycle.py dates [--write]` reports/backfills the date every registry
