@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-07-24 (backfilled from git)
+Issued: 2026-08-27
 
 ## Context (split from rectangular-mesh-consolidation, PyAutoArray#402, closed 2026-07-24)
 
