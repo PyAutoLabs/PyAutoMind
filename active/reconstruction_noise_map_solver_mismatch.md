@@ -10,6 +10,7 @@ Autonomy: human-required
 Priority: medium
 Status: in-progress
 Filed: 2026-08-22 (backfilled from git)
+Issued: 2026-08-27
 
 ## Why this exists
 
