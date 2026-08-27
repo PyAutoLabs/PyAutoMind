@@ -69,3 +69,5 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/dashboard-bundles
 - repos:
+  - PyAutoBrain: feature/dashboard-bundles
+  - PyAutoMind: feature/dashboard-bundles
