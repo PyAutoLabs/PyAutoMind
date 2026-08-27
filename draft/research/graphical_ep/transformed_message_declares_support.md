@@ -101,10 +101,18 @@ It drops the priority. There is no live incorrectness to fix, so this stays what
 the title says — a design question about which layer should own the support —
 and not a bug. Two things are still worth someone's attention:
 
-- **`message.logpdf(0.0)` is `-1.798e308`, not `-inf`** (negative float max),
-  where the prior says `-inf`. Finite-but-astronomically-negative behaves
-  differently from `-inf` under any code that tests `isfinite`. Probably
-  harmless, unverified, and cheap to check.
+- ~~**`message.logpdf(0.0)` is `-1.798e308`, not `-inf`**~~ — **FIXED 2026-08-27**,
+  PyAutoFit#1534 (record `complete/2026/08/natural-logpdf-clamps-neginf.md`). It
+  was not harmless: `natural_logpdf` called `nan_to_num` with `nan=-inf` but
+  default `neginf`, so a genuine `-inf` was clamped to negative float max — and
+  `isfinite` is what `optax.apply_if_finite` and `non_linear/clipper.py` branch
+  on. `message.logpdf(0.0)` is now `-inf`, matching the prior.
+
+  **This changes the measurements above.** The table's `0.0` row read
+  `-1.798e308` when it was taken; on `main` from `5c391fd` it reads `-inf`. The
+  conclusion is unaffected — EP was already protected by the message returning a
+  clean `-inf` at *negative* values, which is the row that mattered — but re-run
+  the probe rather than trusting the printed `0.0` entry.
 - The redundancy is now *documented* rather than latent, which was most of the
   hazard. Whoever picks this up starts from the table above.
 
