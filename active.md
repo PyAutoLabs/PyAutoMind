@@ -1,24 +1,5 @@
 # Active Tasks
 
-## required-workflow-file-drift
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/188
-- issued: 2026-08-27
-- prompt: active/required_workflow_file_drift.md
-- status: ready-to-ship
-- worktree: none — remote web session; PyAutoHeart cloned flat at /home/user/pyautoheart
-- repos:
-  - PyAutoHeart: feature/required-workflow-file-drift
-- summary: |
-    Implemented and pushed in the same session that filed the prompt.
-    heart/checks/required_workflow_drift.py names a required workflow that has
-    no workflow file — the state ci_status.rollup() can only render as a
-    permanent `in_progress`, indistinguishable from a run in flight. Wired into
-    state.py, tick.sh and readiness.py (YELLOW per missing workflow; a stale
-    "unverified" reason when a repo's workflow list cannot be read, so a missing
-    gate cannot hide behind a 403). 15 new tests; full suite 656 passed; the
-    tenant-firewall gate verified clean with a canary.
-    Branch pushed, NO PR opened — awaiting the go-ahead.
-
 ## transformed-message-factor-gradient-unpack
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1501 (issued 2026-08-19)
 - issued: 2026-08-19
