@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/492">issue #492</a> — issued 2026-08-27 — library-dev</summary>
+<details><summary>📋 <a href="active/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/492">issue #492</a> — issued 2026-08-27 — ready-to-ship — both branches pushed, no PRs opened yet (awaiting sign-off)</summary>
 
 ```
 /start_dev active/reconstruction_noise_map_solver_mismatch.md
