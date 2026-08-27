@@ -16,6 +16,7 @@
 ## numba-cpu-mge-batch-convolve-cache
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/496
 - issued: 2026-08-27
+- prompt: active/numba_cpu_likelihood_mge_convolution_and_caching.md
 - status: library-shipped, awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/497
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/588
@@ -31,6 +32,7 @@
 ## result-instance-fallback
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1535
 - issued: 2026-08-27
+- prompt: active/result_instance_fallback_samples_persist.md
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/result-instance-fallback
 - repos:
@@ -40,6 +42,7 @@
 ## harvest-0827-gate-b-pt2
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/182
 - issued: 2026-08-27
+- prompt: active/harvest_2026_08_27_gate_b_pt2.md
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/harvest-0827-gate-b-pt2
 - repos:

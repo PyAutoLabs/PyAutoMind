@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/harvest_2026_08_27_gate_b_pt2.md"><code>@autolens_profiling</code> Harvest 2026-08-27: Gate B pt 2, recovered 8B rows, scorer +…</a> — issued 2026-08-27</summary>
+<details><summary>📋 <a href="active/harvest_2026_08_27_gate_b_pt2.md"><code>@autolens_profiling</code> Harvest 2026-08-27: Gate B pt 2, recovered 8B rows, scorer +…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/182">issue #182</a> — issued 2026-08-27 — workspace-dev</summary>
 
 ```
 /start_dev active/harvest_2026_08_27_gate_b_pt2.md
@@ -171,7 +171,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution + operated-matrix caching</a> — issued 2026-08-27</summary>
+<details><summary>📋 <a href="active/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution + operated-matrix caching</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/496">issue #496</a> — issued 2026-08-27 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/numba_cpu_likelihood_mge_convolution_and_caching.md
@@ -179,7 +179,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/result_instance_fallback_samples_persist.md"><code>@PyAutoFit</code> Bug: a rejected best point kills the run at results-write…</a> — issued 2026-08-27</summary>
+<details><summary>📋 <a href="active/result_instance_fallback_samples_persist.md"><code>@PyAutoFit</code> Bug: a rejected best point kills the run at results-write…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1535">issue #1535</a> — issued 2026-08-27 — library-dev</summary>
 
 ```
 /start_dev active/result_instance_fallback_samples_persist.md
