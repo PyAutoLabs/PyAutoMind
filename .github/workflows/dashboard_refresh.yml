@@ -35,6 +35,7 @@ on:
       - "parked.md"
       - "planned.md"
       - "condemned.md"
+      - "bundles.md"
       - "dashboard.md"
       - "dashboard.html"
   pull_request:
@@ -45,6 +46,7 @@ on:
       - "parked.md"
       - "planned.md"
       - "condemned.md"
+      - "bundles.md"
       - "dashboard.md"
       - "dashboard.html"
   workflow_dispatch:
