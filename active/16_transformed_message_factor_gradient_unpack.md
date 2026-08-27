@@ -5,8 +5,10 @@ Target: priors
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: issued 2026-08-19 as PyAutoFit#1501 — awaiting external verification
-(fix-or-delete hangs off the #1498 contract decision); do not start dev
+Status: issued 2026-08-19 as PyAutoFit#1501 — community PR PyAutoFit#1502
+(@trexfr-ops) fixes it and its CI is GREEN on head 1da31ed; adjudicated as
+mergeable independent of #1498 (see "Adjudication 2026-08-27" below), decision
+pending human
 Issued: 2026-08-19 (backfilled from active.md `registered:`)
 
 Same shape as census finding A1 (#1331-01): a code path that has never run
@@ -59,3 +61,17 @@ or EP path is affected.
 
 Do not fix silently ahead of the #1498 contract decision; whichever
 convention wins decides whether this method should exist at all.
+
+### Adjudication 2026-08-27
+
+Adjudicated by the Bug Agent session of 2026-08-27: option 1 (repair) wins, and
+it does not have to wait for #1498. `factor_gradient` is the gradient of
+`factor`, and `factor` stays the physical density under every #1498 option, so
+the method's contract is stable whichever convention lands — community PR
+PyAutoFit#1502 (@trexfr-ops) is therefore mergeable independent of #1498, and
+its diff was verified correct against finite differences. Its CI is GREEN on
+head 1da31ed (the maintainer updated the branch with main; the first run was red
+purely from a 46-commit-stale base). Recommended sequence: adjudicate #1498 as
+option B (base-space message contract, public `Prior.logpdf` via `factor`), then
+merge #1502 once it carries a two-transform test case (e.g. `UniformPrior(0, 2)`)
+at a tighter tolerance. Merge/close stays human.
