@@ -66,6 +66,25 @@ Restatements of what the 2026-08-26 degraded-render work established:
   link while the six uninjected legs still said `could not read`, and the render
   stayed degraded and non-green.
 
+- **PyAutoMind's PR-open event fired no workflows — twice, in one session.**
+  Both close-out PRs (#354, #357) showed **zero** check runs at open, on diffs
+  matching three path filters plus `spawn_drift.yml`, which has none. Actions
+  was healthy throughout: other PRs on the repo ran normally in the same
+  minutes, and a `workflow_dispatch` started instantly. #354 recovered the
+  moment an unrelated push produced a `synchronize` event, which fired all four
+  at once.
+
+  The 2026-08-26 record logged this as a one-off GitHub-side miss; at two
+  occurrences it is worth treating as a repeatable condition on this repo
+  rather than a blip, and the response is the one that record named: **verify
+  by dispatch, never merge unchecked**. Note that only `firewall_gate.yml` is
+  safely dispatchable here — `lifecycle_drift.yml` and `dashboard_refresh.yml`
+  self-heal `main` on a manual dispatch (they reset to `origin/main` and push),
+  so dispatching them proves nothing about the branch and writes to main.
+  Where they cannot be dispatched, run their commands locally — they are the
+  same four: `lifecycle.py check`, `lifecycle.py index --check`,
+  `registry_toc.py --check`, `intake dashboard --check`.
+
 ## Validation
 
 569 PyAutoBrain tests (`-n auto`), `ruff` clean. 8 new tests, fixture-driven,
