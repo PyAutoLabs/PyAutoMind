@@ -64,7 +64,15 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/pages-dashboard-publish-gap
 - repos:
-  - PyAutoMind
+  - PyAutoMind: feature/pages-dashboard-publish-gap
+- parallel-claim: PyAutoMind is also claimed by organ-remote-block-and-uv-hook-repair
+  (#360). worktree_check_conflict fires at REPO granularity; the human approved an OWN
+  worktree on 2026-08-27 because the file sets are disjoint — #360 touches
+  policy/remote_sessions.md, policy/session_start_hook.sh, scripts/session_bootstrap.sh
+  and the AGENTS.md marker blocks; this task touches
+  .github/workflows/dashboard_refresh.yml and nothing else. Separate worktree = separate
+  index AND separate branch, so neither task can inherit the other's commits. Deliberate
+  override, not a missed guard.
 - note: touches `.github/workflows/dashboard_refresh.yml` ONLY. Disjoint from
   rectangular-experiments-gut-stash, which touches PyAutoMind's `condemned.md` —
   no worktree conflict (worktree_check_conflict clean).
