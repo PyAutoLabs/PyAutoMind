@@ -84,3 +84,28 @@ attributes are `VariableData` keyed by free variable, `None` when
 Do **not** widen this into "make EP read the prior's declared support instead of
 the message's". That is the separate, deliberately-rejected question in
 `draft/research/graphical_ep/transformed_message_declares_support.md`.
+
+## Status 2026-08-27 — implemented, pushed, not yet PR'd
+
+Both this and its sibling `redundant_prior_limits_overrides.md` were implemented
+together on PyAutoFit branch `claude/loggaussian-prior-support-ngh59x`, commit
+`4c0f79b` — one coherent change (the limits cleanup #1527 left behind) rather
+than two PRs, which departs from "one prompt = one task = one PR" deliberately
+and is worth splitting if a reviewer prefers.
+
+Full suite **2186 passed / 36 skipped** (baseline 2178/36, +8 new tests).
+No PR opened.
+
+**A live bug turned up inside this work.** `VariableData.any` reduced through
+`var_all`, so it answered "is there a variable whose elements are ALL True"
+rather than "is ANY element True". `OptimisationState.valid` asks
+`(parameters < lower_limit).any()`, so a parameter vector with *some* components
+outside their limits was reported **valid** — only a variable violating on every
+component was caught. `MeanField`'s `valid.any()` under-reported the same way.
+Fixed in the same commit; the other four `.any()` call sites in the library are
+numpy arrays and are untouched.
+
+That bug, not the truthiness guard, is why the limits check under-enforced. This
+prompt's own framing (a readability defect) was right about the guard and missed
+the real one underneath it — found only because the guard rewrite needed a test
+and `OptimisationState.valid` had **no test coverage at all**.

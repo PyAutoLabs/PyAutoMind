@@ -126,7 +126,28 @@ part of #1527.
 4. **Downstream prior-passing spot-check** in PyAutoGalaxy / PyAutoLens, per the section above.
    Filed as `draft/test/autogalaxy/prior_passing_loggaussian_lower_bound.md`.
 
-All four were filed as prompts on 2026-08-27, alongside this record.
+All four were filed as prompts on 2026-08-27, alongside this record, and worked the
+same day:
+
+- **1 and 2 implemented together** on PyAutoFit `claude/loggaussian-prior-support-ngh59x`
+  (`4c0f79b`, suite 2186/36 vs baseline 2178/36). No PR opened yet.
+- **Doing 1 exposed a live bug neither #1527 nor the prompt saw.** `VariableData.any`
+  reduced through `var_all`, so it meant "is there a variable whose elements are ALL
+  True" rather than "is ANY element True". `OptimisationState.valid` asks
+  `(parameters < lower_limit).any()` — so a parameter vector with *some* components
+  outside their limits was reported **valid**, and `MeanField`'s `valid.any()`
+  under-reported the same way. Fixed in the same commit. That, not the truthiness
+  guard, is why the limits check under-enforced; it surfaced only because rewriting
+  the guard needed a test and `OptimisationState.valid` had **no coverage at all** —
+  the #1477 process lesson, third time it has paid out in this lineage.
+- **3 partly answered.** EP's `check_limits` path genuinely does not enforce
+  LogGaussian's support (it reads the message's `-inf`), but the message's own density
+  returns a clean `-inf` at negative values — no `NaN` — so EP is not producing wrong
+  results today. The check is redundant for this prior, not load-bearing. Measurements
+  appended to the prompt; the design question stays open at lower priority.
+- **4 done, null result** — `complete/2026/08/prior-passing-loggaussian-lower-bound.md`.
+  Neither PyAutoGalaxy nor PyAutoLens constructs a `LogGaussianPrior`, so the
+  prior-passing change has no downstream exposure.
 
 ## Repos / worktree
 

@@ -63,3 +63,50 @@ Worth answering, in this order:
   Prior/Message split this sits inside. Read it first; this may be a sub-question
   of it rather than its own task.
 - `complete/2026/08/transformed-message-semantics-doc.md`.
+
+## Measured 2026-08-27 — question 1 is answered: EP is NOT wrong today
+
+Run against a live 3.12 install on PyAutoFit `main`. The two layers do disagree,
+exactly as described above:
+
+```
+prior.lower_limit    = 0.0     (declared by #1527)
+prior.limits         = (0.0, inf)
+message.lower_limit  = -inf    (deliberately left)
+MeanField.lower_limit -> {LogGaussianPrior: -inf}   # what OptimisationState gets
+```
+
+So `OptimisationState.valid` does **not** enforce LogGaussian's support: with
+`params = -1.0`, `(params < MeanField.lower_limit).any()` is `False` and `valid`
+returns `True`, for a value whose prior density is `-inf`.
+
+**But the message's own density already rejects it, cleanly:**
+
+| value | `message.logpdf` | `prior.log_prior_from_value` |
+|---|---|---|
+| `-1.0` | `-inf` | `-inf` |
+| `-1e-9` | `-inf` | `-inf` |
+| `0.0` | `-1.798e308` | `-inf` |
+| `1e-9` | `-133.19` | `-111.29` |
+| `1.0` | `-1.229` | `-0.047` |
+
+No `NaN` — which was the failure mode worth fearing, since a `log` of a negative
+value could have produced one and poisoned the EP objective silently. It does
+not. The limits check is **redundant for this prior, not load-bearing**, and EP
+is not producing wrong results today because of the divergence.
+
+### What that does to this task
+
+It drops the priority. There is no live incorrectness to fix, so this stays what
+the title says — a design question about which layer should own the support —
+and not a bug. Two things are still worth someone's attention:
+
+- **`message.logpdf(0.0)` is `-1.798e308`, not `-inf`** (negative float max),
+  where the prior says `-inf`. Finite-but-astronomically-negative behaves
+  differently from `-inf` under any code that tests `isfinite`. Probably
+  harmless, unverified, and cheap to check.
+- The redundancy is now *documented* rather than latent, which was most of the
+  hazard. Whoever picks this up starts from the table above.
+
+Remaining open: questions 2 and 3 (which layer should own it; the EP regression
+surface). Question 1 is closed.

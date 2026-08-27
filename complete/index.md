@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1154 records across 7 buckets.
+1155 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -189,6 +189,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [power-law-omega-convergence](2026/08/power-law-omega-convergence.md) — Bounded the fixed 20-term JAX PowerLaw omega recurrence across the packaged slope and ellipticity priors, meas…
 - [pr-ci-for-own-test-suite](2026/08/pr-ci-for-own-test-suite.md)
 - [pre-build-stages-untracked-wip](2026/08/pre-build-stages-untracked-wip.md) — CLOSED completed
+- [prior-passing-loggaussian-lower-bound](2026/08/prior-passing-loggaussian-lower-bound.md) — NULL RESULT. Spot-check owed by PyAutoFit#1527, which changed the
 - [prior-property-tests](2026/08/prior-property-tests.md)
 - [prior-support-clipper](2026/08/prior-support-clipper.md) — Shipped `AbstractClipper` / `ClipperNone` / `ClipperPriorBox` in
 - [priors-and-messages-math-audit](2026/08/priors-and-messages-math-audit.md)
