@@ -101,17 +101,32 @@ part of #1527.
 
 ## Follow-ups still open
 
-1. **`OptimisationState.valid` is falsy at `0.0`.** `line_search.py` uses
-   `if self.lower_limit and …`, which now silently skips the check for exactly the prior this task
-   gave a `0.0` lower limit. Pre-existing, untouched, and the most likely of the three to bite.
-2. **Three redundant `limits` overrides.** `UniformPrior`, `LogUniformPrior` and
-   `TruncatedGaussianPrior` now duplicate the base implementation exactly. Trivial tidy-up.
-3. **Declaring limits on `TransformedMessage`.** Rejected here for the EP reasons above; if the
-   message stack ever needs to carry its own support, it is its own task with its own EP
-   regression work.
-4. **Downstream prior-passing spot-check** in PyAutoGalaxy / PyAutoLens, per the section above.
+1. **`OptimisationState.valid`'s truthiness guard** — `line_search.py:107-114` uses
+   `if self.lower_limit and …`. Filed as
+   `draft/refactor/autofit/optimisation_state_limit_guard_truthiness.md`.
 
-Nothing above was filed as a prompt at the time of writing this record.
+   **#1527's own description of this one is wrong, and the correction is the useful part.** Its
+   follow-up list calls the guard "falsy at `0.0`", implying the fix above silently disabled a
+   limit check for exactly the prior it gave a `0.0` lower limit. It did not. `self.lower_limit`
+   is a `VariableData` (`autofit/mapper/variable.py:309`, a `Dict` subclass) built by
+   `MeanField.lower_limit` and passed only when `check_limits=True`; dict truthiness is
+   non-emptiness, so the guard is `False` only for a model with no free variables, where the check
+   is vacuous. There is no `0.0` for it to be falsy at. And the EP path reads `m.lower_limit` off
+   the **message**, which this task deliberately left at `±inf` — so that code sees exactly what
+   it saw before. What remains is a readability/robustness defect: the guard reads as a scalar
+   test (which is how it entered the follow-up list as a bug) and is one type change away from
+   being one.
+2. **Three redundant `limits` overrides.** `UniformPrior`, `LogUniformPrior` and
+   `TruncatedGaussianPrior` now duplicate the base implementation exactly — except that the base
+   coerces with `float()` and they do not, so deletion is a type change, not a no-op. Filed as
+   `draft/refactor/autofit/redundant_prior_limits_overrides.md`.
+3. **Declaring limits on `TransformedMessage`.** Rejected here for the EP reasons above. The
+   residue is that the prior and its message now deliberately disagree about the support. Filed as
+   `draft/research/graphical_ep/transformed_message_declares_support.md`.
+4. **Downstream prior-passing spot-check** in PyAutoGalaxy / PyAutoLens, per the section above.
+   Filed as `draft/test/autogalaxy/prior_passing_loggaussian_lower_bound.md`.
+
+All four were filed as prompts on 2026-08-27, alongside this record.
 
 ## Repos / worktree
 
