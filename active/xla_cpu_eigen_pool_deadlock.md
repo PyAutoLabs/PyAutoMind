@@ -11,6 +11,7 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-08-27
+Issued: 2026-08-27
 
 ## Why this exists
 
