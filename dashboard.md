@@ -171,7 +171,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/pages_dashboard_publish_gap.md">The Mind board goes stale precisely when the render is correct…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/361">issue #361</a> — issued 2026-08-27 — library-dev</summary>
+<details><summary>📋 <a href="active/pages_dashboard_publish_gap.md">The Mind board goes stale precisely when the render is correct…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/361">issue #361</a> — issued 2026-08-27 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/pages_dashboard_publish_gap.md
