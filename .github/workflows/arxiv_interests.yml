@@ -1,0 +1,263 @@
+name: pyauto-arxiv-interests
+
+# The SECOND daily arXiv digest, and the sibling of arxiv_papers.yml.
+#
+# That one is strong lensing only, and it is the product: a curated Slack post
+# in #papers, with the PyAutoMemory inbox as a convenience on top. This one is
+# everything else the reader is interested in — black holes, dark matter,
+# galaxy formation, statistics — and it has no Slack leg at all. It exists to
+# fill one surface: PyAutoMemory's `arxiv-interests.md`, which the knowledge
+# board renders under the strong-lensing inbox as the day's ten, each paper
+# carrying the same 📄 ➕ 📥 📑 ✖️ actions (user, 2026-08-27).
+#
+# Why a separate workflow rather than a second leg of arxiv_papers.yml: the
+# lensing digest works, is the morning's product, and its Claude step is the
+# single point of failure for the Slack post. A broad second query, a much
+# larger prompt and a second cross-repo push do not belong on that critical
+# path — a bad day here must cost the interests list and nothing else.
+#
+# THE BACKLOG, which is the design and not an implementation detail: nothing
+# here lapses. Each run appends one dated batch of ten; the board shows the
+# OLDEST un-cleared batch and one 🧹 button clears that day and reveals the
+# next. So a week away is a week of batches to walk through, not a week of
+# lapsed suggestions — the inbox's seven-day timer is deliberately NOT copied.
+# scripts/interests_actions.py in PyAutoMemory owns that; this workflow only
+# supplies papers.
+#
+# Two stages, the house pattern: a deterministic ranker
+# (.github/scripts/arxiv_interests.py) narrows a whole day of astro-ph to ~60
+# candidates, and Claude reads those abstracts and picks the ten. Neither could
+# do the other's job — no keyword query answers "most interesting", and no
+# prompt reads five hundred abstracts a day.
+#
+# Timing: 02:30 UTC, half an hour behind arxiv_papers.yml, on the same Mon-Fri
+# cadence and the SAME announcement band (arxiv_fetch.announcement_band, shared
+# by import — two digests on different bands would leave a seam a paper can
+# fall through). Running second is load-bearing in one small way: by then the
+# lensing digest has filed its papers into arxiv-inbox.md, and the append here
+# dedupes against that file, so a paper never lands on both lists. It also
+# keeps the two cross-repo pushes off each other's toes.
+
+on:
+  schedule:
+    - cron: "30 2 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      lookback_hours:
+        description: "Rolling look-back window (hours) instead of the announcement band — for a manual test-fire or a backfill (e.g. 168 to sweep a week). Blank = the normal announcement band."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  # claude-code-action needs OIDC to mint its short-lived token at startup;
+  # without it the action exits before reaching the prompt (arxiv_papers.yml).
+  id-token: write
+
+jobs:
+  arxiv-interests:
+    runs-on: ubuntu-latest
+    steps:
+      # claude-code-action runs `git config` in the workspace at startup and
+      # dies without a checkout — load-bearing even though the fetch is all API.
+      - uses: actions/checkout@v4
+
+      # The scoring and the band maths, no network. Fires before the fetch so a
+      # regression fails loudly here rather than quietly shortlisting nothing.
+      - name: Self-test the ranker
+        run: |
+          python3 .github/scripts/arxiv_fetch.py --selftest
+          python3 .github/scripts/arxiv_interests.py --selftest
+
+      - name: Shortlist the day's candidates
+        id: fetch
+        run: |
+          set -euo pipefail
+          override="${{ github.event.inputs.lookback_hours }}"
+          if [ -n "$override" ]; then
+            export LOOKBACK_HOURS="$override"
+          fi
+          export UK_DATE="$(TZ=Europe/London date '+%Y-%m-%d (%a)')"
+
+          python3 .github/scripts/arxiv_interests.py
+
+          count=$(python3 -c "import json;print(json.load(open('arxiv_interest_candidates.json'))['count'])")
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "Shortlisted $count candidate(s)."
+
+      - name: Build the empty-day picks
+        # A band with nothing worth ranking. Skip Claude entirely (zero
+        # subscription usage) but still write the picks file, so the filing
+        # step below runs unconditionally and stamps the quiet day. Same
+        # invariant as arxiv_papers.yml: a MISSING picks file stays a real
+        # failure, never an empty day.
+        if: ${{ steps.fetch.outputs.count == '0' }}
+        run: |
+          set -euo pipefail
+          echo '{"papers": []}' > arxiv_interest_picks.json
+          echo "Nothing shortlisted — wrote an empty picks file."
+
+      - name: Pick the day's ten with Claude
+        if: ${{ steps.fetch.outputs.count != '0' }}
+        uses: anthropics/claude-code-action@v1
+        with:
+          # Claude subscription OAuth token — NOT an API key. The org pattern.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Default-hidden output masks real failures (an expired token reads
+          # as "picks file missing" downstream) — surface everything.
+          show_full_output: true
+          # Write only. The runner's GITHUB_TOKEN is contents:read, so nothing
+          # here can leave the runner except via the filing step.
+          claude_args: '--allowedTools "Write"'
+          prompt: |
+            Read `arxiv_interest_candidates.json` in this directory. It has shape:
+
+              { "uk_date": "YYYY-MM-DD (Mon)",
+                "pick": 10,
+                "band_count": <papers announced in the band>,
+                "count": <candidates below>,
+                "papers": [ { "title": "<title>",
+                              "authors": ["<name>", ...],
+                              "abstract": "<full abstract>",
+                              "url": "https://arxiv.org/abs/XXXX.XXXXXvN",
+                              "id": "<bare arXiv id>",
+                              "primary_category": "astro-ph.GA",
+                              "topic": "<suggested reading-queue section>",
+                              "score": <keyword score>,
+                              "strong_lensing": true|false }, ... ] }
+
+            These are the papers announced on arXiv overnight that a keyword
+            ranker judged closest to the reader's interests. The ranker is a
+            shortlist, not a verdict: `score` and `topic` are hints from
+            substring matching, and you should overrule either when the
+            abstract says otherwise.
+
+            The reader is a working astronomer whose interests are, roughly:
+            supermassive black holes and AGN; dark matter (particle nature,
+            substructure, cosmological probes); galaxy formation and evolution;
+            and statistical / computational methods — Bayesian inference,
+            samplers, simulation-based inference, machine learning applied to
+            astronomy. They also just like a genuinely interesting or
+            surprising result, so do not be mechanical about the four buckets.
+
+            FIRST, drop:
+              - Any paper genuinely ABOUT strong gravitational lensing.
+                Those go on a separate list and must not appear twice. The
+                `strong_lensing` flag is a keyword hint, not the answer: a
+                dark matter or cosmology paper that merely uses or mentions a
+                lensing constraint is NOT a strong-lensing paper and should
+                stay in the running. Judge from the abstract.
+              - Anything the keywords oversold — a paper whose only match is
+                one incidental phrase, and which the reader would not care
+                about.
+
+            THEN pick the `pick` most interesting of what remains (fewer only
+            if fewer survive; never more). Rank by how much this reader would
+            want to see it: a significant result, a new method they could use,
+            a dataset or survey they work with, a genuine surprise. Prefer
+            substance over volume — do not fill the list with near-duplicate
+            survey papers when a more varied ten is available.
+
+            For each pick, assign `topic` — the PyAutoMemory reading-queue
+            section it belongs in. Use EXACTLY one of these four strings:
+
+              "SMBHs"
+              "Dark Matter"
+              "Galaxy Formation / Evolution"
+              "Stats"
+
+            Pick the closest one; a paper that fits none still gets the closest
+            (there is a fallback on the other side, but it is a last resort,
+            not a bucket). You may overrule the ranker's suggestion.
+
+            Write `arxiv_interest_picks.json` in the repo root, with this exact
+            shape and nothing else:
+
+              { "papers": [ { "title": "<title verbatim>",
+                              "id": "<bare arXiv id, e.g. 2608.21253>",
+                              "topic": "<one of the four strings above>" },
+                            ... ] }
+
+            Most interesting first. Titles VERBATIM from the candidates file —
+            do not re-word or re-case them; they are matched against the
+            reading queue to avoid filing a paper twice. Strip any `arXiv:`
+            prefix and any trailing `vN` from the id.
+
+            If nothing survives the drops, do NOT omit the file — write
+            `{"papers": []}`. An empty day must still be recorded.
+
+            Do not commit, do not post anything anywhere, and do not modify any
+            file other than `arxiv_interest_picks.json`.
+
+      # --- the Memory interests list ----------------------------------------
+      # Runs on EVERY weekday, including days with nothing to file, because it
+      # also writes the `last digest: <date>` stamp — the board's evidence that
+      # a quiet list is a quiet day rather than a broken filing. Same invariant
+      # the strong-lensing inbox carries (PyAutoMemory#58); a quiet day is a
+      # one-line commit, not silence.
+      #
+      # PAT_PYAUTOLABS, not GITHUB_TOKEN: the job token is scoped to this repo
+      # and cannot write to PyAutoMemory. The line format, the batch cap and
+      # the transitions all live in PyAutoMemory's scripts/interests_actions.py
+      # — this step only supplies the papers.
+      - name: File the picks into the PyAutoMemory interests list
+        env:
+          PAT: ${{ secrets.PAT_PYAUTOLABS }}
+        run: |
+          set -euo pipefail
+          if [ ! -s arxiv_interest_picks.json ]; then
+            echo "::error::arxiv_interest_picks.json missing — the Claude step did not write it (check for an expired CLAUDE_CODE_OAUTH_TOKEN). Every path, empty days included, writes this file, so this is a real failure and today's papers were NOT filed."
+            exit 1
+          fi
+          if [ -z "${PAT:-}" ]; then
+            echo "::error::PAT_PYAUTOLABS not set — cannot write to PyAutoMemory. Today's interests batch was NOT filed."
+            exit 1
+          fi
+
+          uk_date=$(python3 -c "import json;print(json.load(open('arxiv_interest_candidates.json'))['uk_date'])")
+
+          git clone --depth 1 \
+            "https://x-access-token:${PAT}@github.com/PyAutoLabs/PyAutoMemory.git" \
+            /tmp/memory
+          cp arxiv_interest_picks.json /tmp/memory/
+          cd /tmp/memory
+
+          # append is idempotent and dedupes against the interests list, the
+          # reading queue AND the strong-lensing inbox, so a re-run adds
+          # nothing and a paper never lands on both lists.
+          added=$(python3 scripts/interests_actions.py append \
+                    --papers-file arxiv_interest_picks.json)
+          # Unconditional, and the whole reason this step does not skip empty
+          # days: it records that the digest ran at all.
+          stamped=$(python3 scripts/interests_actions.py stamp)
+          # NO sweep. The inbox has one; this list is a backlog the human
+          # clears a day at a time, and ageing batches out would silently
+          # delete the recommendations they asked to cycle through.
+          rm arxiv_interest_picks.json
+          echo "interests: ${added}, ${stamped}"
+
+          if [ -z "$(git status --porcelain -- arxiv-interests.md)" ]; then
+            echo "interests list unchanged — nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add arxiv-interests.md
+          git commit -m "interests: ${added}, ${stamped} (arXiv digest ${uk_date})"
+          # A rejected push is worth a rebase and another go — the board and the
+          # queue-action workflows commit to this same repo, and the lensing
+          # digest pushed half an hour ago. An auth failure is NOT that: the
+          # token either grants write on PyAutoMemory or it never will, and
+          # retrying only buries the reason. Split them (the arxiv_papers.yml
+          # lesson, PyAutoMemory#58).
+          for attempt in 1 2 3; do
+            if git push 2>/tmp/interests_push.err; then exit 0; fi
+            cat /tmp/interests_push.err
+            if grep -qiE 'denied|403|authentication failed' /tmp/interests_push.err; then
+              echo "::error::PAT_PYAUTOLABS cannot write to PyAutoLabs/PyAutoMemory (push denied) — the same scope the strong-lensing inbox needs. Today's batch was NOT filed, so the board shows yesterday's day at the top. After granting the scope, re-file with a workflow_dispatch carrying lookback_hours=168."
+              exit 1
+            fi
+            git pull --rebase origin main || break
+          done
+          echo "::error::could not push the interests commit after 3 attempts — today's batch was NOT filed. Re-file with a workflow_dispatch carrying lookback_hours=168 once the cause is fixed."
+          exit 1
