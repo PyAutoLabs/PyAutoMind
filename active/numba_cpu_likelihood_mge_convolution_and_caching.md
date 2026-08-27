@@ -1,6 +1,8 @@
 # Numba CPU likelihood phase 1: batched MGE convolution + operated-matrix caching
 
 Type: feature
+Epic: numba-cpu-likelihood
+Phase: 1
 Target: autoarray
 Repos:
 - @PyAutoArray
@@ -9,6 +11,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-08-27
 Filed: 2026-08-20 (backfilled from git)
 
 > Phase 1 of the CPU-likelihood speed restoration

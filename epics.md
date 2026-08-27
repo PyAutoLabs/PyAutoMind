@@ -56,3 +56,15 @@ epic, never picked standalone.
 - title: Expectation propagation (EP) campaign
 - ledger: draft/research/graphical_ep/ep_campaign.md
 - notes: umbrella phase map — each phase's real content lives in its own prompt under draft/research/graphical_ep/; the campaign file itself is never issued.
+
+## numba-cpu-likelihood
+- title: Numba CPU sparse-operator likelihood — speed restoration
+- ledger: active/numba_cpu_likelihood_mge_convolution_and_caching.md
+- status: phase 1 IN FLIGHT (PyAutoArray#496, 2026-08-27)
+- notes: Profiling shipped (autolens_profiling#151, record complete/2026/08/numba-cpu-likelihood-profiling.md);
+  first-call garbage bug shipped (complete/2026/08/numba-first-call-garbage-psf-weighted-data.md).
+  Phase 1 = MGE batched convolution + operated-matrix caching + Convolver state reuse.
+  Phase 2 = kernel-CDF numba fast path (draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md,
+  DEFERRED by user 2026-08-20 behind the Delaunay+AdaptImage fiducial). Phase 3 = numba `fnnls` positive-only
+  solver restoration against PyAutoArray 8bb449a1 — the headline 78%-of-eval finding — NOT YET FILED.
+  Ledger moves with the current phase's prompt; one issue at a time, never a bulk queue.

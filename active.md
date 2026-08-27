@@ -44,3 +44,13 @@
   against the 2026-07-23 consolidation — pre → `RectangularBilinearAdapt*`, post →
   `RectangularRTUAdapt*` — per the rule commit 08d5d86 wrote into the gradient README.
   `bandwidth=` is still live on the RTU meshes and is NOT dropped.
+
+## numba-cpu-mge-batch-convolve-cache
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/496
+- issued: 2026-08-27
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/numba-cpu-mge-batch-convolve-cache
+- repos:
+- note: epic numba-cpu-likelihood phase 1. Plan on the issue. Item 4 (pair-loop hoist + mirror) approved
+  by user 2026-08-27 after the per-pixel-noise-map check; strict bit-identity NOT required (ulp-level BLAS
+  ordering in the mirrored half accepted, pins at rtol 1e-6 are the guard).
