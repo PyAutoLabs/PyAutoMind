@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1167 records across 7 buckets.
+1168 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -128,6 +128,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [jax-grad-local-vs-ci-assertions](2026/08/jax-grad-local-vs-ci-assertions.md)
 - [jax-grad-smoke-timeout-budget](2026/08/jax-grad-smoke-timeout-budget.md)
 - [jax-likelihood-mass-sensitivity](2026/08/jax-likelihood-mass-sensitivity.md) — Audit + fix for median-literal mass blindness across all jax_likelihood/datacube scripts (phase 2 of the findi…
+- [jax-likelihood-pins-duplicate-filing](2026/08/jax-likelihood-pins-duplicate-filing.md)
 - [jax-likelihood-smoke-pins-stale](2026/08/jax-likelihood-smoke-pins-stale.md)
 - [jax-stall-shared-preloads-retime-refutation](2026/08/jax-stall-shared-preloads-retime-refutation.md)
 - [jax-traceback-filtering-release-harness](2026/08/jax-traceback-filtering-release-harness.md)
