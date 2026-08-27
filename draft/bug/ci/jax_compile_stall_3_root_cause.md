@@ -1,4 +1,4 @@
-# Phase 3: root-cause the XLA vmap compile stall and clear every NEEDS_FIX it caused
+# Phase 3: root-cause the JAX likelihood hang and clear every NEEDS_FIX it caused
 
 Type: bug
 Target: ci
@@ -12,45 +12,62 @@ Priority: high
 Status: formalised
 Epic: jax-compile-stall
 Phase: 3
-Campaign: bug/ci/jax_vmap_jit_compile_stall.md (Phase 3 — the fix; blocked on phases 1 and 2)
+Campaign: bug/ci/jax_vmap_jit_compile_stall.md (Phase 3 — the fix)
 Filed: 2026-08-23
+Unblocked: 2026-08-26 (deterministic reproducer found; see below)
 
-## Blocked on phase 1
+## UNBLOCKED 2026-08-26 — start from the deterministic reproducer
 
-Do not start this before phase 1's watchdog has shipped and a CI stall has
-actually dumped a traceback. Diagnosing a hang that leaves no evidence is what
-produced three quarantines and no root cause; repeating it without the
-instrumentation would be a fourth.
+This phase carried a gate: *do not start before phase 1's watchdog has shipped
+and a CI stall has actually dumped a traceback.* That gate is retired. It existed
+because a hang that leaves no evidence cannot be diagnosed — but the evidence
+problem has a way around it that nobody noticed.
 
-## UPDATE 2026-08-26 — the blocker's premise changed
+**`autolens_workspace_test` `imaging/jax_likelihood/mge_group` never completes.**
+Its `config/build/no_run.yaml` NEEDS_FIX entry (2026-08-24,
+autolens_workspace_test#274) records 3/3 capped at 1800s on **both** Python legs
+(run 32758924176) on top of 5/5 at 300s in phase 2 (run 32664682689) — **16/16
+lifetime executions, zero completions** — with the compile finishing in ~16s and
+the stack sitting in `jax.block_until_ready`.
 
-The 2026-08-25 occurrence of `multi_dataset/jax_likelihood/mge_group.py`
-(`autogalaxy_workspace_test` run 32849006683, job `smoke (3.13)`; full entry in
-the ledger [`jax_vmap_jit_compile_stall.md`](jax_vmap_jit_compile_stall.md))
-is the first whose captured tail shows the first compile **completing** —
-11.7s traced/lowered/compiled, 0.0s materialized — followed by ~270s of silence
-until the cap. Two consequences for this phase:
+So do not loop a script until it hangs and do not wait on CI. Run that one, under
+`py-spy`, and it hangs on the first attempt. Confirm the 16/16 claim against those
+two run IDs before building on it — it is one comment by one author — but if it
+holds, the reproduction problem this campaign has had since 2026-08-01 is solved
+and was solved two days before this phase was last touched.
 
-- **Hypothesis 1 below is not where that stall was.** The `vmap`-of-`jit`
-  ordering A/B is already only contributory (80% -> 30%, p = 0.070, stall
-  survives the swap); this occurrence puts a stall wholly outside the compile
-  the ordering governs. Run the A/B for completeness, but do not treat it as the
-  leading candidate any more.
-- **Phase 1's watchdog cannot see this.** The `faulthandler` dump is armed around
-  the compile wait, so a compile that succeeds disarms it. The § "Blocked on
-  phase 1" gate above — *wait for a CI stall to dump a traceback* — cannot be
-  satisfied for post-compile stalls by what phase 1 shipped. Extending the
-  heartbeat/dump to cover the whole script run, or arming a process-level
-  watchdog in the runner instead of in `jax_compile.py`, is a **phase 1b
-  enabler** and is the cheapest way to unblock this phase.
+**Why the ledger did not know.** That retime wrote its conclusion into a
+`no_run.yaml` comment; the campaign ledger was edited on 2026-08-24 and
+2026-08-25 and never learned it. Treat both workspaces' `smoke_tests.txt` and
+`no_run.yaml` as primary sources for this campaign, not just as its output.
 
-## Reproduce deliberately
+## First question: one defect or two?
 
-Loop `imaging/jax_likelihood/mge_group.py` under its declared CI env profile
-until it hangs, rather than waiting for CI to hit it. Attach `py-spy dump` to
-the hung process as well as reading phase 1's own `faulthandler` output — the
-two see different things, and `py-spy` can read native frames the in-process
-dump cannot.
+Settle this before testing any hypothesis, because the answer changes which ones
+are worth testing. Occurrences do not sort cleanly:
+
+| Script | Tail ends on | Behaviour |
+|---|---|---|
+| al `imaging/jax_likelihood/mge_group` | compile **completed** (~16s), then silence | **deterministic** 16/16 |
+| ag `multi_dataset/jax_likelihood/mge_group.py` | compile **completed** (11.7s), then silence | intermittent (passed 41.2s on re-run) |
+| ag `imaging/jax_likelihood/mge_group.py` | still `compiling...` | intermittent |
+| ag `imaging/jax_likelihood/rectangular_mge.py` | still `compiling...` | intermittent (3.12 stalled, 3.13 passed, same commit) |
+
+A stall *inside* the first compile and a hang *after* it returned are different
+loci. The "intermittent XLA compile stall" label was applied to both from a guess
+made before any evidence existed (see the ledger's § CORRECTION). One stack from
+the deterministic case, plus one from any intermittent one, answers it.
+
+If it is one defect, the deterministic script is simply the best specimen and
+everything below applies to all of them. If it is two, split this phase and stop
+treating the intermittent rotation and the permanent hang as one problem.
+
+## Then: hypotheses, in the order they are cheapest to test
+
+Ordering note (2026-08-26): hypothesis 1 was the campaign's leading candidate.
+It should no longer be. Phase 2's A/B already showed the stall **survives** the
+swap (80% -> 30%, p = 0.070, n=10/arm), and at least two occurrences hang after
+the compile that ordering governs. Test it for completeness, not first.
 
 ## Hypotheses, in the order they are cheapest to test
 

@@ -6,11 +6,33 @@ Repos:
 - @PyAutoHands
 Difficulty: small
 Autonomy: supervised
-Priority: high
-Status: formalised
+Priority: low
+Status: deprioritised 2026-08-26 — see banner
 Epic: jax-compile-stall
-Campaign: bug/ci/jax_vmap_jit_compile_stall.md (interim mitigation — not a phase)
+Campaign: bug/ci/jax_vmap_jit_compile_stall.md (interim mitigation — not a phase; superseded in priority by phases 3 and 4)
 Filed: 2026-08-26
+
+## DEPRIORITISED 2026-08-26 — do not start this ahead of phase 3
+
+Filed the same day and deprioritised the same day, on the human's objection that
+retrying a failing test papers over the crack. That objection is right, and this
+campaign's own history is the argument for it: the defect has been quarantined
+three times and diagnosed zero times, and this ledger's § "This is why
+quarantining is the wrong end state" says why. A retry is a fourth kind of paper
+— it removes the symptom without the diagnosis, and with it the pressure to look.
+
+The one thing this prompt offered that quarantine does not is evidence: paired
+same-commit observations at scale. That justification also weakened the day it
+was written — the 2026-08-26 re-run produced such a pair by hand (TIMEOUT 300s
+then PASS 41.2s, same commit), and phase 3 now has a deterministic 16/16
+reproducer that needs no pairing at all.
+
+**Kept, not deleted**, for two reasons: the reasoning is worth having on record if
+the board treadmill becomes intolerable before phase 3 lands, and the
+visible-retry design here (both attempt durations in the report, never a bare
+`PASS`) is the right shape if anyone ever does build it. Revisit only if phase 3
+stalls **and** the manual re-run cost is actually hurting — and never as a
+substitute for the root cause.
 
 ## Why this is filed
 

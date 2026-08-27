@@ -146,6 +146,15 @@ of this file, and every marker calling this an "intermittent XLA compile
 stall", inherit a guess made before there was any evidence. See the record's
 final section.
 
+## REOPENED — 2026-08-26
+
+Closed as partial on 2026-08-23 for want of a reproducer and a root cause. Both
+premises are now wrong: `autolens_workspace_test`
+`imaging/jax_likelihood/mge_group` hangs 16/16 (§ "Two signatures, and a
+deterministic reproducer nobody folded in"), which retires phase 3's blocking
+gate. Phase 3 is rewritten to start from it; phase 4 is added for the exclusion
+census. The 2026-08-23 close-out below is kept for the record.
+
 ## CLOSED AS PARTIAL — 2026-08-23
 
 Phase 1 shipped. Phases 2 and 3 were taken to a deliberate stopping point and the
@@ -166,7 +175,8 @@ at a time — nothing here is bulk-issued.
 |---|---|---|---|
 | 1 | ~~`jax_compile_stall_1_evidence.md`~~ **SHIPPED 2026-08-23** — record [`complete/2026/08/jax-compile-stall-evidence.md`](../../../complete/2026/08/jax-compile-stall-evidence.md) (PyAutoFit#1516, PR#1517 merged) | A stalled compile reports itself: heartbeat, `faulthandler` dump, compile-vs-execute split | PyAutoFit |
 | 2 | [`jax_compile_stall_2_slow_vs_stall_audit.md`](jax_compile_stall_2_slow_vs_stall_audit.md) | The SLOW-vs-stall question (task step 1) answered in writing; every marker carries its real reason | autogalaxy_workspace_test, autolens_workspace_test |
-| 3 | [`jax_compile_stall_3_root_cause.md`](jax_compile_stall_3_root_cause.md) | Root cause + fix; every NEEDS_FIX for this signature cleared (task steps 2–4) | PyAutoFit, both `_workspace_test` |
+| 3 | [`jax_compile_stall_3_root_cause.md`](jax_compile_stall_3_root_cause.md) — **UNBLOCKED 2026-08-26** | Root cause + fix, starting from the 16/16 deterministic reproducer; first settles one-defect-or-two | PyAutoFit, both `_workspace_test` |
+| 4 | [`jax_compile_stall_4_exclusion_census.md`](jax_compile_stall_4_exclusion_census.md) — **added 2026-08-26** | Census + reconcile all four exclusion lists; decide where campaign evidence lives. Runs independently of phase 3 | both `_workspace_test`, PyAutoHeart |
 
 Acceptance for the campaign as a whole is the § Acceptance section above; each
 phase carries only its own slice of it.
@@ -342,10 +352,19 @@ practical dividend of the weekly timing dataset that task shipped.
 ## New occurrence — 2026-08-25, `multi_dataset/jax_likelihood/mge_group.py`
 
 **This one moves the stall out of the instrumented region.** Every prior tail in
-this ledger ends on the `JAX jit compiling ... could take seconds or minutes...`
+this *ledger* ends on the `JAX jit compiling ... could take seconds or minutes...`
 line. This one ends on the *completion* line — the first compile traced, lowered,
 compiled **and materialized**, and the process then went silent for the remaining
 ~270s until the cap killed it.
+
+> **CORRECTION 2026-08-26.** This entry originally called that "the first" such
+> tail. It is not. `autolens_workspace_test`'s `no_run.yaml` entry for
+> `imaging/jax_likelihood/mge_group`, dated **2026-08-24**, already records
+> "vmap+JIT compile finishing in ~16s and then nothing for the remaining ~1784s".
+> That evidence was written into a config comment and never reached this ledger —
+> see § "Two signatures, and a deterministic reproducer nobody folded in" below.
+> What this occurrence adds is corroboration from a **second repo**, with the
+> phase 1 split timings attached.
 
 Verified via the Actions API. `autogalaxy_workspace_test` `Smoke Tests` run
 **32849006683** (main, push, commit `e187c0e` — the SessionStart-hook commit,
@@ -498,3 +517,72 @@ human to notice a red board and re-run by hand.
 
 **Consequence.** `autogalaxy_workspace_test` main is green again and the board's
 `ws_ci` RED clears on the next build. The defect is untouched.
+
+## Two signatures, and a deterministic reproducer nobody folded in
+
+Found 2026-08-26 by reading both workspaces' exclusion lists rather than this
+ledger. Two facts in `autolens_workspace_test`'s `config/build/no_run.yaml`
+change what this epic is chasing, and neither is recorded above.
+
+### 1. There is a deterministic case
+
+`no_run.yaml:32`, **NEEDS_FIX 2026-08-24** (autolens_workspace_test#274):
+
+> `imaging/jax_likelihood/mge_group` — higher-cap retime settled it: capped
+> **3/3 at 1800s on BOTH Python legs** (run 32758924176), on top of 5/5 at 300s
+> in phase 2 (run 32664682689) — **16/16 lifetime executions, zero
+> completions**. The log shows vmap+JIT compile finishing in ~16s and then
+> nothing for the remaining ~1784s: **a deterministic hang, not slowness.**
+> … the stack sits in `jax.block_until_ready`. Not performance; do not raise the
+> cap further.
+
+Phase 3's § "Reproduce deliberately" opens *"Loop `mge_group.py` under its
+declared CI env profile until it hangs, rather than waiting for CI to hit it"*,
+and phase 3 is gated on § "Blocked on phase 1" — wait for a stall to dump a
+traceback. **Both premises are obsolete.** A script that hangs 16 times out of 16
+does not need to be looped until it hangs, and does not need CI to catch it in
+the act. Whoever picks this up should start there, under `py-spy`, on the first
+attempt.
+
+This is a process failure worth naming: the retime that established 16/16 ran on
+2026-08-24 and wrote its conclusion into a `no_run.yaml` comment. This ledger was
+edited on 2026-08-24 and 2026-08-25 and never learned it. The exclusion lists
+have been accumulating primary evidence that the campaign file does not carry.
+
+### 2. The one label may cover two failure modes
+
+Sorting every recorded occurrence by *what the tail's last line was* does not
+sort them by *whether the script is deterministic*:
+
+| Script | Tail ends on | Behaviour |
+|---|---|---|
+| al `imaging/jax_likelihood/mge_group` | compile **completed** (~16s), then silence | **deterministic** — 16/16 |
+| ag `multi_dataset/jax_likelihood/mge_group.py` | compile **completed** (11.7s), then silence | **intermittent** — stalled 08-25, passed 41.2s on re-run |
+| ag `imaging/jax_likelihood/mge_group.py` | still `compiling...` | intermittent |
+| ag `imaging/jax_likelihood/rectangular_mge.py` | still `compiling...` | intermittent — 3.12 stalled, 3.13 passed, same commit |
+
+Two candidate readings, and they imply different investigations:
+
+- **One defect, two observation points.** Everything hangs in the same place, and
+  whether the completion line was emitted only reflects where the process was
+  when the cap fell. Then the deterministic case is the same bug at probability
+  1, and it is simply the best specimen.
+- **Two defects sharing a label.** A stall *inside* the first compile and a hang
+  *after* it are different failures; the "intermittent XLA compile stall" marker
+  has been applied to both since 2026-08-01 on the strength of a guess made
+  before there was evidence (see § CORRECTION).
+
+Nothing recorded so far distinguishes these, because no occurrence has produced a
+stack. The deterministic case can settle it on the first run, which is why it
+should be the campaign's entry point rather than another round of CI archaeology.
+
+### What this means for quarantine policy
+
+This ledger's standing position — quarantining is the wrong end state — was
+argued from the rotation: parking one script just lets the next run pick another.
+That argument holds for the intermittent members. It does **not** hold for
+`al imaging/jax_likelihood/mge_group`, which never completes and therefore cannot
+usefully sit in any suite until it is fixed. Its NEEDS_FIX is a correct call, and
+the entry's *"do not raise the cap further"* is the right instruction. The two
+cases need different handling, which is another reason to settle whether they are
+one defect or two.
