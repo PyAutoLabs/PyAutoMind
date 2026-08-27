@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1155 records across 7 buckets.
+1159 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -135,6 +135,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [llms-txt-census-fixes](2026/08/llms-txt-census-fixes.md)
 - [local-pixel-scale-vs-dataset-pixel-scales](2026/08/local-pixel-scale-vs-dataset-pixel-scales.md)
 - [log-det-multistart-tag](2026/08/log-det-multistart-tag.md)
+- [loggaussian-prior-declares-own-support](2026/08/loggaussian-prior-declares-own-support.md) — closed by the PR's `Closes` line
 - [markdown-renderings-2a-leftovers](2026/08/markdown-renderings-2a-leftovers.md)
 - [mask1d-shape-native-scalar-widening](2026/08/mask1d-shape-native-scalar-widening.md)
 - [memory-surfaces-stale-names](2026/08/memory-surfaces-stale-names.md) — auto-closed on merge
@@ -166,6 +167,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [numerical-hazard-profiling](2026/08/numerical-hazard-profiling.md) — Phase 1 established the reusable numerical-hazard profiling framework, typed risk measurements, reachability a…
 - [numerical-inversion-failures](2026/08/numerical-inversion-failures.md)
 - [one-tap-dashboard-rollout](2026/08/one-tap-dashboard-rollout.md) — the pattern (a generated page + one-tap 📋 copy-for-Claude payloads, phone
+- [optimisation-state-limit-guard-truthiness](2026/08/optimisation-state-limit-guard-truthiness.md) — closed by the PR's `Closes` line
 - [optional-dependency-skip-guards](2026/08/optional-dependency-skip-guards.md) — `test_nautilus.py::test__single_core_builds_no_pool` had no skip guard
 - [organ-repo-spelling-splits](2026/08/organ-repo-spelling-splits.md) — closed on ship
 - [organism-board-final-readmes](2026/08/organism-board-final-readmes.md) — close on record
@@ -190,6 +192,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [power-law-omega-convergence](2026/08/power-law-omega-convergence.md) — Bounded the fixed 20-term JAX PowerLaw omega recurrence across the packaged slope and ellipticity priors, meas…
 - [pr-ci-for-own-test-suite](2026/08/pr-ci-for-own-test-suite.md)
 - [pre-build-stages-untracked-wip](2026/08/pre-build-stages-untracked-wip.md) — CLOSED completed
+- [prior-passing-loggaussian-lower-bound](2026/08/prior-passing-loggaussian-lower-bound.md) — NULL RESULT. Spot-check owed by PyAutoFit#1527, which changed the
 - [prior-property-tests](2026/08/prior-property-tests.md)
 - [prior-support-clipper](2026/08/prior-support-clipper.md) — Shipped `AbstractClipper` / `ClipperNone` / `ClipperPriorBox` in
 - [priors-and-messages-math-audit](2026/08/priors-and-messages-math-audit.md)
@@ -212,6 +215,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [reconcile-upstream-repo-mode](2026/08/reconcile-upstream-repo-mode.md)
 - [reconstruction-noise-map-covariance-sqrt](2026/08/reconstruction-noise-map-covariance-sqrt.md)
 - [rectangular-spline-adapt-image-jit-fix](2026/08/rectangular-spline-adapt-image-jit-fix.md)
+- [redundant-prior-limits-overrides](2026/08/redundant-prior-limits-overrides.md) — shared with its sibling; closed by the PR
 - [refactor-witness-map-audit](2026/08/refactor-witness-map-audit.md) — PyAutoBrain#269 → PR #271, merge cf969f3; stacked on #268
 - [registry-integrity-check](2026/08/registry-integrity-check.md)
 - [regularization-jax-gradient-gaps](2026/08/regularization-jax-gradient-gaps.md)
