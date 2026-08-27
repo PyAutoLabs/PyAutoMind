@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1153 records across 7 buckets.
+1155 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -125,6 +125,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [jax-likelihood-mass-sensitivity](2026/08/jax-likelihood-mass-sensitivity.md) — Audit + fix for median-literal mass blindness across all jax_likelihood/datacube scripts (phase 2 of the findi…
 - [jax-likelihood-smoke-pins-stale](2026/08/jax-likelihood-smoke-pins-stale.md)
 - [jax-stall-shared-preloads-retime-refutation](2026/08/jax-stall-shared-preloads-retime-refutation.md)
+- [jax-traceback-filtering-release-harness](2026/08/jax-traceback-filtering-release-harness.md)
 - [jax-vmap-materialisation-hang](2026/08/jax-vmap-materialisation-hang.md) — jax-compile-stall phase 3
 - [knowledge-board](2026/08/knowledge-board.md) — auto-closed on merge
 - [lacosmic-cr-option-and-star-pass-decoupling](2026/08/lacosmic-cr-option-and-star-pass-decoupling.md) — both deliberately OPEN — closure is the default-flip decision, not this ship
@@ -176,6 +177,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [pixelization-eager-jit-divergence](2026/08/pixelization-eager-jit-divergence.md)
 - [plot-array-stale-kwargs](2026/08/plot-array-stale-kwargs.md)
 - [plot-utils-duplicate-modules](2026/08/plot-utils-duplicate-modules.md) — small, single-repo, behaviour-preserving
+- [point-solver-magnification-plane-redshift](2026/08/point-solver-magnification-plane-redshift.md)
 - [point-source-dataset-cap-guard](2026/08/point-source-dataset-cap-guard.md)
 - [point-source-defaults-campaign](2026/08/point-source-defaults-campaign.md) — took the point-source likelihood options from "several undocumented
 - [point-source-light](2026/08/point-source-light.md) — Added standard and linear point-source light profiles with total-flux normalization and oversampled PSF convol…

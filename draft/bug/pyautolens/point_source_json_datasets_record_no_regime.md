@@ -110,9 +110,69 @@ so they are fixed here rather than left to bite again:
   Likewise the weak simulator is `scripts/weak/simulator.py` in
   @autolens_workspace.
 
-Next re-check: when PyAutoLens#480 closes. That is the only trigger — fact 2 is a
-standing invariant, not a countdown, and only breaks if someone switches
-`weak/simulator.py` to the random-positions helper.
+**2026-08-27 — both facts re-verified, STILL BLOCKED. Do not build.**
+Second gate check in four days, same verdict: no issue was opened, no branch was
+cut, no worktree claimed.
+
+1. **PyAutoLens#480 is still open.** `updated_at` is still byte-identical to
+   `created_at` (2026-04-28T21:01:57Z) — not one edit, comment, label or
+   assignment since it was filed; still no assignees, still
+   `closed_by_pull_requests: 0`. Four months untouched.
+2. **`weak/simple` is still regime-invariant.** `scripts/weak/simulator.py:122`
+   still calls `simulator.via_tracer_from(tracer=tracer, grid=positions,
+   name=dataset_name)`, and the file still contains no `os.environ` read of any
+   kind. Its last commit is 2026-07-27, i.e. it has not moved since the previous
+   re-check either.
+
+The `no_run.yaml` entries happen to sit at `config/build/no_run.yaml:41-42` in
+@autolens_workspace again, matching the original citation the 2026-08-23 note
+found drifted. That is coincidence, not a reason to trust line numbers — keep
+matching on the entry text.
+
+One standing risk the previous note did not record (it predates that note; the
+file has not changed since 2026-07-27, so this is an omission, not a change):
+`weak/simulator.py` *advertises* the helper that would break fact 2. Its prose
+blocks at `:94-95` and `:116-117` name
+`via_tracer_random_positions_from(tracer=..., n_galaxies=..., grid_extent=...)`
+as the "quick uniform-square catalogue" alternative to the explicit annulus this
+script passes. So the invariant is one plausible simplification away from being
+reversed, with nothing in the suite to catch it. Not a reason to build now — but
+if fact 2 ever expires, that is the likely route.
+
+**2026-08-27 (later the same day) — THE TRIGGER HAS FIRED. #480 is fixed and closed.**
+
+PyAutoLens#480 was fixed in PyAutoLabs/PyAutoLens#712 (merged `c1bba66`) and closed,
+hours after the re-check above recorded it as still open. The record is
+`complete/2026/08/point-solver-magnification-plane-redshift.md`.
+
+**This does not make the task actionable yet, and the distinction matters.** The gate
+named in "Why it was deferred" is not #480 itself — it is the `no_run.yaml` exclusion,
+which #480 was only the *reason* for. That exclusion is in @autolens_workspace and is
+untouched: both `point_source/features/multiple_sources/{simulator,modeling}` are still
+skipped, so the script still does not run and the exposure is still not live. What
+changed is that the blocker behind the exclusion is gone, so removing it is now
+possible where before it would have failed.
+
+The remaining chain, in order:
+
+1. @autolens_workspace: revert the multi-source example to a richer multi-plane
+   configuration (#480's own text asks for this — the example was simplified to work
+   around the bug) and remove the two `multiple_sources` entries from
+   `config/build/no_run.yaml`. **That work is already filed**, as
+   `draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md` (unblocked
+   2026-08-27); its step 7 is the `no_run.yaml` removal this prompt waits on. Do not
+   file a duplicate.
+2. Then the script runs, `dataset/point_source/multiple_sources` is written for real,
+   and this prompt's exposure goes live — at which point steps 2-4 of "Suggested scope"
+   below are the actual work.
+
+So the next re-check trigger is no longer #480. **It is the `no_run.yaml` entries
+disappearing from @autolens_workspace.** Re-check by grepping that file for
+`multiple_sources`; if the entries are gone, build.
+
+Fact 2 is unchanged and remains a standing invariant: `weak/simple` still uses
+`via_tracer_from`, and only breaks if someone switches `weak/simulator.py` to the
+random-positions helper.
 
 ## Suggested scope
 

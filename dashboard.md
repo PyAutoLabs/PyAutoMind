@@ -45,11 +45,11 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 132 |
+| [Backlog](#backlog) (`draft/`) | 135 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
@@ -91,10 +91,26 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
+
+```
+/start_dev draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
 ```
 /start_dev draft/docs/autolens/multi_galaxy_package.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> — autolens · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autolens/cross_validate_multi_plane_ray_tracing.md
 ```
 
 </details>
@@ -127,22 +143,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
 ```
 
 </details>
@@ -247,10 +247,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**132** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
+**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 27</summary>
+<summary><b>feature</b> — 28</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution + operated-matrix caching</a> — autoarray · medium · supervised · high</summary>
 
@@ -364,6 +364,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> — autolens · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autolens/multi_plane_time_delays.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts / batch_size / n_batch)</a> — autolens_profiling · large · supervised · normal</summary>
 
 ```
@@ -384,6 +392,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautobrain/board_without_gh.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md">Restore lensing-of-lens in the multiple_sources workspace example</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
 ```
 
 </details>
@@ -424,14 +440,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/jax_substructure/6_deflection_equivalence_test.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md">Once https://github.com/PyAutoLabs/PyAutoLens/issues/480 is fixed (PointSolver</a> — workspaces · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
 ```
 
 </details>
@@ -779,6 +787,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>bug</b> — 16</summary>
 
+<details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
+
+```
+/start_dev draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
 
 ```
@@ -899,14 +915,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation integrate leg</a> — autolens</summary>
-
-```
-/start_dev draft/bug/autolens/interferometer_release_leg_oom.md
-```
-
-</details>
-
 </details>
 
 <details>
@@ -1011,7 +1019,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 5</summary>
+<summary><b>refactor</b> — 6</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
 
@@ -1037,6 +1045,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> — autolens · medium · supervised · normal</summary>
+
+```
+/start_dev draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
 
 ```
@@ -1056,7 +1072,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>test</b> — 5</summary>
+<summary><b>test</b> — 6</summary>
+
+<details><summary>📋 <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> — autolens · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autolens/cross_validate_multi_plane_ray_tracing.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · too-large · supervised · high</summary>
 
@@ -1165,75 +1189,75 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-08-27 | filed | <a href="draft/research/ci/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> |
+| 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
+| 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
+| 2026-08-27 | filed | <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |
+| 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 | 2026-08-24 | filed | <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/autocti_workspace_navigator_check.md">autocti_workspace has no Navigator Check, so its CI can never roll…</a> |
-| 2026-08-24 | filed | <a href="draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a> |
-| 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
-| 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
-| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-24 | filed | <a href="draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a> |
+| 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
+| 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
+| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
 | 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right jax…</a> |
 | 2026-08-22 | filed | <a href="draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md">Untrack the generated FITS test artifacts in autoarray</a> |
 | 2026-08-22 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the…</a> |
 | 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
-| 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
-| 2026-08-21 | filed | <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> |
-| 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md">Numba CPU likelihood phase 2: kernel-CDF numba fast path (the 49-88%…</a> |
-| 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution +…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
+| 2026-08-21 | filed | <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> |
+| 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md">Numba CPU likelihood phase 2: kernel-CDF numba fast path (the 49-88%…</a> |
+| 2026-08-20 | filed | <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution +…</a> |
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 | 2026-08-19 | issued | <a href="active/16_transformed_message_factor_gradient_unpack.md"><code>@PyAutoFit</code> <code>TransformedMessage.factor_gradient</code> crashes on first…</a> |
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
 | 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 | 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
-| 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
-| 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
-| 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
-| 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
+| 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
+| 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
+| 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 | 2026-08-17 | filed | <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> |
 | 2026-08-16 | filed | <a href="draft/bug/autofit/loggaussian_prior_declares_own_support.md"><code>LogGaussianPrior</code> misreports its own support as <code>(-inf, inf)</code></a> |
 | 2026-08-14 | filed | <a href="draft/bug/workspaces/jax_likelihood_pins_stale_by_1e4.md">Three <code>jax_likelihood</code> pins are stale by ~1.24e-4 and fail the smoke…</a> |
 | 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
 | 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
 | 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
-| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
-| 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
-| 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
-| 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
+| 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
+| 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
+| 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
 | 2026-08-05 | filed | <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> |
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never…</a> |
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of…</a> |
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> |
 | 2026-08-04 | filed | <a href="draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage the streak</a> |
 | 2026-08-04 | filed | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> |
-| 2026-08-03 | filed | <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431…</a> |
-| 2026-07-31 | filed | <a href="draft/bug/autolens/interferometer_release_leg_oom.md">interferometer/start_here.py OOM in nightly release-validation…</a> |
-| 2026-07-31 | filed | <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> |
-| 2026-07-31 | filed | <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus…</a> |
 
 </details>
 
@@ -1490,12 +1514,11 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ## Hygiene
 
-4 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
-- `draft/bug/autolens/interferometer_release_leg_oom.md`
 - `draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md`
 - `draft/docs/workspaces/plot_coverage_followups.md`
 - `draft/research/autolens_profiling/cluster_gradient_search_benchmark.md`
