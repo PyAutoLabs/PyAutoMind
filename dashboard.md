@@ -742,6 +742,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> — autolens · small · supervised · low</summary>
+
+```
+/start_dev draft/maintenance/autolens/data_temp_write_paths_not_ignored.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never extended for it</a> — autolens_profiling · small · supervised · low</summary>
 
 ```
@@ -754,14 +762,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/libraries/autolens_data_temp_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> — libraries · small · supervised · low</summary>
-
-```
-/start_dev draft/maintenance/libraries/autolens_data_temp_not_ignored.md
 ```
 
 </details>
@@ -1174,7 +1174,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-08-27 | issued | <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
-| 2026-08-27 | filed | <a href="draft/maintenance/libraries/autolens_data_temp_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
+| 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |

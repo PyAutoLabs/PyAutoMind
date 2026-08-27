@@ -1,7 +1,7 @@
 # PyAutoLens test `data_temp/` write paths are not gitignored
 
 Type: maintenance
-Target: libraries
+Target: autolens
 Repos:
 - @PyAutoLens
 Difficulty: small
@@ -15,6 +15,9 @@ shipped task `untrack-fits-test-artifacts` (PyAutoArray#494, record
 `complete/2026/08/untrack-fits-test-artifacts.md`), whose
 scope note said: "Leave the sibling repos alone. PyAutoGalaxy/PyAutoLens likely
 share the pattern; check, and file separately rather than widening this."
+
+Scope is **PyAutoLens only**. PyAutoArray and PyAutoGalaxy appear below as the
+comparison that isolates the defect, not as repos this task touches.
 
 ## What the sweep found
 
