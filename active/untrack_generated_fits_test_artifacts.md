@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-08-22 (backfilled from git)
+Issued: 2026-08-27
 
 Filed 2026-08-23 from the PyAutoArray#482/#483 floor bump, which tripped over
 this. Not a bug — a git-hygiene defect that converts unrelated upstream changes
