@@ -92,30 +92,35 @@ For the full workflow narrative, conventions, and registry schemas, read
 
 ## Running tests in a remote (web/mobile) session
 
-Two facts, both measured, both worth one line each:
+Two facts, both measured:
 
-1. **Run the suite in parallel.** A remote container has 4 cores and the suites
-   are subprocess-heavy with no single slow test: PyAutoBrain's 554 tests take
-   96s on one core and 28s on four. `pytest-xdist` is installed by the
-   session-start hook, so the command is just:
+1. **Bootstrap first — before the first test command, not when something looks
+   wrong.** A session holding several organs registers no SessionStart hook
+   (Claude Code reads hooks from the project directory, which is the repos'
+   *parent*), so nothing has set this session up yet:
+
+   ```
+   bash PyAutoMind/scripts/session_bootstrap.sh          # ~10s cold, ~1s warm
+   bash PyAutoMind/scripts/session_bootstrap.sh --check  # report only
+   ```
+
+   This was phrased as a *remedy* — run it if `python3 -m pytest` misbehaves,
+   the symptom being `No module named pytest` or collection `ImportError`s
+   naming `yaml`. Measured 2026-08-27: that trigger no longer fires. The
+   container now ships Python 3.12 with `pytest`, `mypy`, `ruff` and `flake8`
+   all on it, so the session looks right, and the failure it still has —
+   `pytest -n auto` dying with `unrecognized arguments: -n` — reads like a bad
+   flag rather than a stale environment. A remedy keyed to a symptom is only as
+   good as the symptom; run it unconditionally instead.
+
+2. **Then run the suite in parallel.** 4 cores, subprocess-heavy suites, no
+   single slow test: PyAutoBrain's 554 tests take 96s on one core and 28s on
+   four. `pytest-xdist` arrives with the bootstrap above, which is why that is
+   step 1:
 
    ```
    python3 -m pytest -q -n auto
    ```
-
-2. **If `python3 -m pytest` or `pytest` misbehaves, the environment is stale,
-   not the code.** A session holding several organs registers no SessionStart
-   hook (Claude Code reads hooks from the project directory, which is the
-   repos' *parent*). Knock on the door directly, once, in the first turn:
-
-   ```
-   bash PyAutoMind/scripts/session_bootstrap.sh          # fix it
-   bash PyAutoMind/scripts/session_bootstrap.sh --check  # report only
-   ```
-
-   The symptom to recognise: collection `ImportError`s naming `yaml`, or
-   `No module named pytest`. Both are the session resolving a pytest that is not
-   this workspace's — never a broken test module.
 
 ## When you are asked to add a new prompt
 

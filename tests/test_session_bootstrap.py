@@ -461,6 +461,70 @@ def test_check_fails_a_pytest_that_has_the_right_version_but_cannot_import(tmp_p
     assert r.returncode != 0
 
 
+def _import_probe():
+    """The probe as the script really spells it, lifted from the script."""
+    for line in BOOTSTRAP.read_text().splitlines():
+        if line.startswith("IMPORT_PROBE="):
+            return line.split("=", 1)[1].strip().strip("'")
+    raise AssertionError("session_bootstrap.sh no longer defines IMPORT_PROBE")
+
+
+def test_the_import_probe_runs_on_a_real_interpreter():
+    """The check above drove a shell script standing in for python.
+
+    A stand-in answers whatever the fixture says, so it can never disagree with
+    the snippet — and the snippet was wrong: `import importlib` does not bind
+    `importlib.util`, so on every real CPython the probe raised AttributeError,
+    the `&&` short-circuited, and `--check` printed `3.12 OK`. Measured in a
+    fresh container on 2026-08-27, beside a `python3 -m pytest` that answered
+    `No module named pytest`.
+
+    So this one runs the real string on the real interpreter. Sufficiency, not
+    plumbing: the fixture cannot be the thing under test.
+    """
+    import importlib.util
+    import sys
+
+    r = subprocess.run([sys.executable, "-c", _import_probe()],
+                       capture_output=True, text=True, timeout=60)
+    assert r.returncode == 0, (
+        "the probe cannot run, so --check silently skips it: " + r.stderr)
+    expected = {m for m in ("pytest", "yaml", "xdist")
+                if not importlib.util.find_spec(m)}
+    assert set(r.stdout.split()) == expected
+
+
+def test_check_fails_when_the_import_probe_cannot_run(tmp_path):
+    """"Could not ask" is a failure, not a pass.
+
+    The two outcomes used to be indistinguishable — both fell through to the OK
+    line — which is what let a broken probe read as a healthy session.
+    """
+    fake_bin = tmp_path / "bin"
+    fake_bin.mkdir()
+    interp = fake_bin / "fake-python3.12"
+    interp.write_text(
+        "#!/bin/sh\n"
+        "case \"$2\" in\n"
+        "  *version_info*) echo '3.12' ;;\n"
+        "  *find_spec*) exit 1 ;;\n"   # the AttributeError case
+        "esac\n"
+    )
+    interp.chmod(0o755)
+    shim = fake_bin / "pytest"
+    shim.write_text(f"#!{interp}\n")
+    shim.chmod(0o755)
+
+    env = dict(os.environ)
+    env["PATH"] = f"{fake_bin}:{env['PATH']}"
+    r = subprocess.run(["bash", str(BOOTSTRAP), "--check"], capture_output=True,
+                       text=True, env=env, timeout=180)
+
+    assert "pytest: 3.12 OK" not in r.stderr, r.stderr
+    assert "import probe would not run" in r.stderr, r.stderr
+    assert r.returncode != 0
+
+
 # --------------------------------------------------------------------------
 # 6. Everything else the venv owns
 #

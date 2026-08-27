@@ -34,6 +34,12 @@ VENV="${PYAUTO_SESSION_VENV:-$HOME/.pyauto/session-py312}"
 
 say() { printf '[bootstrap] %s\n' "$*" >&2; }
 
+# What a suite here needs before it can even collect: pytest itself, PyYAML
+# (imported at collection time), and xdist (the `-n auto` every remote-session
+# instruction names). One string, so the suite can lift it out and run it on a
+# real interpreter rather than on a stand-in that cannot disagree with it.
+IMPORT_PROBE='import importlib.util, sys; sys.stdout.write(" ".join(m for m in ("pytest", "yaml", "xdist") if not importlib.util.find_spec(m)))'
+
 py312_ready() {
     [ -x "$VENV/bin/python" ] \
         && "$VENV/bin/python" -c 'import sys; raise SystemExit(sys.version_info[:2] != (3, 12))' >/dev/null 2>&1 \
@@ -153,8 +159,25 @@ if [ "${1:-}" = "--check" ]; then
             # this workspace's code are checked; a linter needs no deps.
             case "$tool" in
                 python3|pytest)
-                    if missing="$("$interp" -c 'import importlib,sys; sys.stdout.write(" ".join(m for m in ("pytest","yaml","xdist") if not importlib.util.find_spec(m)))' 2>/dev/null)" \
-                       && [ -n "$missing" ]; then
+                    # Two failure modes, and they must not look alike.
+                    #
+                    # The probe RAN and named modules -> report them. The probe
+                    # could not run at all -> that is a failure too, and used to
+                    # be reported as success: the snippet said `import importlib`
+                    # (which does not bind `importlib.util`), so on every real
+                    # CPython it raised AttributeError, the `&&` short-circuited,
+                    # and the OK line printed. Measured in a fresh container on
+                    # 2026-08-27: `pytest: 3.12 OK` beside a `python3 -m pytest`
+                    # that answered `No module named pytest`. The test that was
+                    # meant to cover this drove a SHELL SCRIPT standing in for
+                    # python, which answered happily — so the guard and the bug
+                    # coexisted. Hence $IMPORT_PROBE, lifted out and run on a
+                    # real interpreter by the suite.
+                    if ! missing="$("$interp" -c "$IMPORT_PROBE" 2>/dev/null)"; then
+                        say "$tool: 3.12 but the import probe would not run ($path) — treat this session as unbootstrapped"; rc=1
+                        continue
+                    fi
+                    if [ -n "$missing" ]; then
                         say "$tool: 3.12 but cannot import: $missing ($path) — it will fail collection, not the code"; rc=1
                         continue
                     fi
