@@ -10,9 +10,9 @@ Priority: normal
 Status: formalised
 Filed: 2026-08-27
 Parent: draft/feature/pyautobrain/board_without_gh.md
-Blocked-by: draft/feature/pyautobrain/board_without_gh_phase1_seam.md
+After: complete/2026/08/board-github-data-seam.md (phase 1 shipped 2026-08-27, PyAutoBrain#303 — this is unblocked)
 
-Phase 2: port the four legs phase 1 did not cover onto the seam it built —
+Phase 2: port the four legs phase 1 did not cover onto the seam it built (`--github-data`; the contract is `PyAutoBrain/board/AGENTS.md` → "Reading the board in a remote session") —
 `versions: no stamps resolved` (`bin/version_drift.sh`), `community: scan
 unavailable (exit 4)` (`agents/conductors/community/_community.py`), `resume:
 pending-release PR search failed`, and `upkeep: open-issue count unavailable`.

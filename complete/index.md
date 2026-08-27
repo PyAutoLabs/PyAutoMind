@@ -43,6 +43,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autolens-tracer-validation-guards](2026/08/autolens-tracer-validation-guards.md)
 - [autoreduce-pypi-name-collision](2026/08/autoreduce-pypi-name-collision.md)
 - [blackjax-16-upgrade-smoke](2026/08/blackjax-16-upgrade-smoke.md)
+- [board-github-data-seam](2026/08/board-github-data-seam.md)
 - [border-relocator-backend-parity](2026/08/border-relocator-backend-parity.md) — Isolated the native NumPy/JAX likelihood gap to mathematically non-unique PCA axes for a near-isotropic border…
 - [border-relocator-degenerate-pca](2026/08/border-relocator-degenerate-pca.md) — Stabilized near-isotropic border PCA axes with a deterministic axis-aligned branch at a scale-aware eigenvalue…
 - [brain-readability-pass](2026/08/brain-readability-pass.md) — auto-closed on merge
