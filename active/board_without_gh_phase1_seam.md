@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-08-27
+Issued: 2026-08-27
 Parent: draft/feature/pyautobrain/board_without_gh.md
 
 Phase 1 of the board's gh-less work. The parent prompt holds the design, the

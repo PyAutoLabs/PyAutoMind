@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 137 |
+| [Backlog](#backlog) (`draft/`) | 136 |
 
 ## Start here
 
@@ -163,6 +163,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/board_without_gh_phase1_seam.md">Board phase 1: the injection seam, proven on the overnight legs</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/303">issue #303</a> — issued 2026-08-27 — library-dev — not started; routed by /start_dev, no worktree claimed yet</summary>
+
+```
+/start_dev active/board_without_gh_phase1_seam.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/xla_cpu_eigen_pool_deadlock.md">Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1530">issue #1530</a> — issued 2026-08-27 — not started — research follow-up to the shipped jax-compile-stall epic</summary>
 
 ```
@@ -255,10 +263,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**137** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
+**136** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **24** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 30</summary>
+<summary><b>feature</b> — 29</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/numba_cpu_likelihood_mge_convolution_and_caching.md">Numba CPU likelihood phase 1: batched MGE convolution + operated-matrix caching</a> — autoarray · medium · supervised · high</summary>
 
@@ -328,14 +336,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/board_without_gh_phase1_seam.md">Board phase 1: the injection seam, proven on the overnight legs</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/board_without_gh_phase1_seam.md
 ```
 
 </details>
@@ -1220,7 +1220,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |
 | 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
-| 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase1_seam.md">Board phase 1: the injection seam, proven on the overnight legs</a> |
+| 2026-08-27 | issued | <a href="active/board_without_gh_phase1_seam.md">Board phase 1: the injection seam, proven on the overnight legs</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
