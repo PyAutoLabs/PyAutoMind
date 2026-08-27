@@ -30,7 +30,10 @@
 ## numba-cpu-mge-batch-convolve-cache
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/496
 - issued: 2026-08-27
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/497
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/588
+- heart-ack: user authorised ship over RED `release validation FAILED (stage integrate)` (unrelated autolens_workspace_test rectangular_mge pin drift), 2026-08-27
 - worktree: ~/Code/PyAutoLabs-wt/numba-cpu-mge-batch-convolve-cache
 - repos:
   - PyAutoArray: feature/numba-cpu-mge-batch-convolve-cache
