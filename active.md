@@ -92,6 +92,8 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/result-instance-fallback
 - repos:
+  - PyAutoFit: feature/result-instance-fallback
+  - PyAutoLens: feature/result-instance-fallback
 
 ## harvest-0827-gate-b-pt2
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/182
@@ -99,3 +101,4 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/harvest-0827-gate-b-pt2
 - repos:
+  - autolens_profiling: feature/harvest-0827-gate-b-pt2
