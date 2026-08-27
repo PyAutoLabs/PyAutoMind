@@ -1,3 +1,77 @@
+## untrack-fits-test-artifacts
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/494
+- completed: 2026-08-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/495 (merged as a5d718e)
+- repos:
+  - PyAutoArray: feature/untrack-fits-test-artifacts
+
+### What shipped
+
+`test_autoarray` wrote test *output* into tracked paths, so any change to the
+autonerves FITS writer rewrote a committed binary and dirtied the tree for every
+contributor. PyAutoArray#483 demonstrated it: the PyAutoNerves#155 header-comment
+fix (`[""]` -> `""`) silently modified
+`structures/arrays/files/array/output_test/array.fits` the moment the autonerves
+floor moved to a release carrying it -- identical cards, values, data and byte
+size, but a modified tracked file that had to be committed into an unrelated PR.
+
+The durable fix, applied uniformly rather than file-by-file again: the nine tests
+that wrote into an `output_test/` directory now take pytest's `tmp_path` and drop
+their `rmtree`/`makedirs` preamble; the 13 exposed artifacts are untracked and
+deleted; the two file-by-file `.gitignore` lines are replaced by
+`test_autoarray/**/output_test/` as a backstop. **After a full run no
+`output_test/` directory is created anywhere in the source tree** -- the defect is
+closed at the source, not masked by an ignore rule.
+
+20 files, +48 / -106. Suite: 1177 passed, 55 skipped -- identical to the
+pre-change baseline -- run twice in a row from a clean checkout with
+`git status --porcelain` unchanged after each.
+
+### Traps
+
+- **The prompt's inventory described the symptom, not the state.** Of the 13
+  tracked files only **one** was a live output (the `array.fits` #483 flipped).
+  The other 12 were orphans: no test referenced their paths, and a repo-wide grep
+  for their basenames returned nothing. They were residue from tests deleted long
+  ago -- as were the two `.gitignore` lines, gravestones for one such test.
+  Re-derive which inventory entries are still load-bearing before acting.
+- **A fixture that looks dead may not be.** The plan called
+  `dataset/imaging/test_dataset.py::make_test_data_path` never-requested and
+  proposed deleting it; three tests do request it, and a truncated `grep | head`
+  hid them. Deleting it broke those three -- caught by the first verification run,
+  one step earlier than the prompt's "run the suite twice" guard was aimed at.
+  They now take `tmp_path`, which was the plan's real intent.
+- **The repo has three inconsistent ignore conventions**, not two: root
+  file-by-file lines, root directory lines, and **nested `.gitignore` files
+  containing `*`** (`test_autoarray/structures/files/`,
+  `test_autoarray/util/files/array/`). The third is why
+  `structures/files/output_test/data.fits` looked exposed in the plan but was in
+  fact already covered. Not consolidated here; worth knowing before the next
+  gitignore judgement in this repo.
+- **`test_uniform_1d` and `test_uniform_2d` both `rmtree`'d the same shared
+  output directory** -- a cross-module ordering hazard nobody had filed.
+  `tmp_path` removes it incidentally.
+
+### Notes
+
+- Shipped from a web session: no local worktree, no `gh`; issue, PR and merge all
+  driven through the GitHub MCP surface. PyAutoHeart was not reachable, so the
+  readiness gate ran through the documented fallback (per-repo suite, any failure
+  treated as RED). PyAutoArray was attached to the session mid-run via `add_repo`.
+- Mind state for this task was pushed to `claude/untrack-fits-test-artifacts-r1eard`
+  rather than `main`, per the session's branch instruction -- so
+  `dashboard_refresh.yml` does not heal the render until that branch merges.
+- Sibling sweep (the prompt's scope item 4) done and deliberately **not** widened
+  into #495. PyAutoGalaxy is clean -- no `output_test/`, zero tracked artifacts,
+  global `data_temp/` ignore. PyAutoLens has no tracked artifacts either, so this
+  defect was autoarray-only, but its `.gitignore` covers only the `integration/`
+  copies of `data_temp/` while its tests write to
+  `test_autolens/{imaging,interferometer}/data_temp/`; the teardown `rmtree` hides
+  the leak unless a run fails. Filed as
+  `draft/maintenance/libraries/autolens_data_temp_not_ignored.md`.
+
+## Original prompt
+
 # Untrack the generated FITS test artifacts in autoarray
 
 Type: maintenance
@@ -9,6 +83,7 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-08-22 (backfilled from git)
+Issued: 2026-08-27
 
 Filed 2026-08-23 from the PyAutoArray#482/#483 floor bump, which tripped over
 this. Not a bug — a git-hygiene defect that converts unrelated upstream changes
