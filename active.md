@@ -1,21 +1,5 @@
 # Active Tasks
 
-## board-github-data-seam
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/303 (issued 2026-08-27)
-- issued: 2026-08-27
-- prompt: active/board_without_gh_phase1_seam.md
-- status: library-dev — not started; routed by /start_dev, no worktree claimed yet
-  (this session is remote: no ~/Code/PyAutoLabs-wt, so /start_library runs on the
-  machine that picks the task up).
-- worktree: ~/Code/PyAutoLabs-wt/board-github-data-seam/ (to be created by /start_library)
-- repos: PyAutoBrain
-- phase: 1 of 2 — phase 2 is draft/feature/pyautobrain/board_without_gh_phase2_legs.md,
-  blocked-by this one; parent design + probe evidence in
-  draft/feature/pyautobrain/board_without_gh.md
-- why: the board is the morning door and eleven legs are dark on the surface it is
-  read from. The 2026-08-27 probe closed the two cheaper options — $GH_TOKEN 403s
-  every repo path — so the injection seam is the design.
-
 ## transformed-message-factor-gradient-unpack
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1501 (issued 2026-08-19)
 - issued: 2026-08-19

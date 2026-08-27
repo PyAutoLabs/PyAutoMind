@@ -8,7 +8,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: phased
-Split-into: draft/feature/pyautobrain/board_without_gh_phase1_seam.md, draft/feature/pyautobrain/board_without_gh_phase2_legs.md
+Split-into: complete/2026/08/board-github-data-seam.md (phase 1, shipped 2026-08-27), draft/feature/pyautobrain/board_without_gh_phase2_legs.md
 Filed: 2026-08-26
 
 The board is the morning door, and on mobile it is mostly blind. Eleven of its
