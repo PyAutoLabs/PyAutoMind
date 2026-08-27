@@ -852,3 +852,144 @@ def test_check_fails_a_tool_that_has_the_right_version_but_will_not_run(tmp_path
     assert "black: 3.12 OK" not in r.stderr, r.stderr
     assert "will not run" in r.stderr, r.stderr
     assert r.returncode != 0
+
+
+# --------------------------------------------------------------------------
+# 8. The repair belongs to the HOOK, not to this script
+#
+# `repair_uv_tools` shipped in session_bootstrap.sh for one pass. The bootstrap
+# is what a MULTI-repo session runs, because that session registers no
+# SessionStart hook. A SINGLE-repo session is the mirror image: the hook fires,
+# nothing calls the bootstrap, and leg 2 (`point_system_default`) breaks every
+# uv tool env on the way past. So the session that got the breakage without the
+# repair was the ordinary one.
+#
+# These drive the leg through the hook — where it now lives — and pin that the
+# hook's own flow reaches it. Section 7's tests keep driving the bootstrap seam,
+# which now forwards here; that is the point of leaving them unchanged.
+# --------------------------------------------------------------------------
+
+
+def _break_tool_env(tool, session_venv, tmp_path, name="usr-local-python3"):
+    """Reproduce the breakage: a tool env's python resolving to someone else's
+    prefix, via the wrapper `/usr/local/bin/python3` actually is."""
+    hijacked = tmp_path / name
+    hijacked.write_text(f'#!/bin/sh\nexec "{session_venv}/bin/python" "$@"\n')
+    hijacked.chmod(0o755)
+    link = tool / "bin" / "python"
+    link.unlink()
+    link.symlink_to(hijacked)
+    assert _prefix_of(link) == str(session_venv), "fixture did not reproduce it"
+    return link
+
+
+def test_the_hook_repairs_a_tool_env_pointed_at_the_session_venv(tmp_path):
+    """The same breakage as section 7, driven through the hook's own function.
+
+    Section 7 reaches it through `session_bootstrap.sh --repair-uv-tools`, which
+    is now a forward. This is the leg itself, in the file a single-repo session
+    actually runs.
+    """
+    session_venv = _venv(tmp_path / "session")
+    tools = tmp_path / "tools"
+    tool = _venv(tools / "widget")
+    link = _break_tool_env(tool, session_venv, tmp_path)
+
+    r = _call_hook_function("repair_uv_tools", venv=session_venv,
+                            extra_env={"PYAUTO_UV_TOOLS_DIR": str(tools)})
+    assert r.returncode == 0, r.stderr
+    assert "repointed widget" in r.stderr, r.stderr
+    assert _prefix_of(link) == str(tool)
+
+
+def test_the_hook_leaves_a_healthy_tool_env_alone(tmp_path):
+    session_venv = _venv(tmp_path / "session")
+    tools = tmp_path / "tools"
+    tool = _venv(tools / "widget")
+    before = (tool / "bin" / "python").resolve()
+
+    r = _call_hook_function("repair_uv_tools", venv=session_venv,
+                            extra_env={"PYAUTO_UV_TOOLS_DIR": str(tools)})
+    assert r.returncode == 0, r.stderr
+    assert "repointed" not in r.stderr, r.stderr
+    assert (tool / "bin" / "python").resolve() == before
+
+
+def test_the_hook_survives_an_unwritable_tools_dir(tmp_path):
+    """The hook runs `set -euo pipefail`; the bootstrap ran `set -u`.
+
+    Every leg of this hook is contractually non-fatal — "degrades to a logged
+    warning rather than failing the session start". A leg lifted out of a
+    laxer script is exactly where that contract gets broken silently, so the
+    failure path is driven rather than assumed.
+    """
+    session_venv = _venv(tmp_path / "session")
+    tools = tmp_path / "tools"
+    tool = _venv(tools / "widget")
+    _break_tool_env(tool, session_venv, tmp_path)
+
+    (tool / "bin").chmod(0o500)          # can read + traverse, cannot replace
+    try:
+        r = _call_hook_function("repair_uv_tools", venv=session_venv,
+                                extra_env={"PYAUTO_UV_TOOLS_DIR": str(tools)})
+    finally:
+        (tool / "bin").chmod(0o755)
+    assert r.returncode == 0, r.stderr
+    assert "could not repoint widget" in r.stderr, r.stderr
+
+
+def test_a_single_repo_session_start_repairs_the_tool_env_it_just_broke(tmp_path):
+    """End to end, through the hook's real flow — the bug itself.
+
+    Not a call-order assertion: the hook is run as the harness runs it, with a
+    session venv it can reuse, and the tool env is checked afterwards. Leg 2
+    hijacks the wrapper the tool env points at; the flow must reach leg 3b
+    before it finishes, or a single-repo session ends with a dead mypy.
+    """
+    home = tmp_path / "home"
+    (home / ".local" / "bin").mkdir(parents=True)
+
+    # A 3.12 venv for leg 2 to point the system default at, and for the tool
+    # env to be hijacked into. `ensure_venv` reuses it if it already satisfies
+    # `venv_ready` and rebuilds it otherwise — either is fine here, because
+    # what is under test is what the flow does AFTER the interpreter is sorted.
+    session_venv = tmp_path / "session"
+    subprocess.run([sys.executable, "-m", "venv", "--system-site-packages",
+                    str(session_venv)], check=True, capture_output=True, timeout=300)
+
+    repo = tmp_path / "FakeOrgan"
+    (repo / ".claude" / "hooks").mkdir(parents=True)
+    hook = repo / ".claude" / "hooks" / "session-start.sh"
+    hook.write_text(CANONICAL_HOOK.read_text())
+    hook.chmod(0o755)
+
+    tools = tmp_path / "tools"
+    tool = _venv(tools / "widget")
+    link = _break_tool_env(tool, session_venv, tmp_path)
+
+    env = dict(os.environ)
+    env.update({
+        "HOME": str(home),
+        "CLAUDE_CODE_REMOTE": "true",
+        "CLAUDE_PROJECT_DIR": str(repo),
+        "PYAUTO_SESSION_VENV": str(session_venv),
+        "PYAUTO_SESSION_SYSTEM_BIN": str(tmp_path / "usr-local-bin"),
+        "PYAUTO_UV_TOOLS_DIR": str(tools),
+    })
+    env.pop("CLAUDE_ENV_FILE", None)
+    (tmp_path / "usr-local-bin").mkdir()
+
+    r = subprocess.run(["bash", str(hook)], capture_output=True, text=True,
+                       env=env, timeout=600)
+    # The only honest reason to skip: the hook said it could not produce a 3.12
+    # interpreter at all, so the flow never reached the legs under test. Anything
+    # else is a result, including a failure.
+    for excuse in ("no Python 3.12 in this container",
+                   "could not build a 3.12 venv"):
+        if excuse in r.stderr:
+            pytest.skip(f"no 3.12 interpreter available here: {excuse}")
+    assert r.returncode == 0, r.stderr
+    assert _prefix_of(link) == str(tool), (
+        "a single-repo session start left the tool env resolving into the venv "
+        f"— the whole bug.\n{r.stderr[-2000:]}"
+    )

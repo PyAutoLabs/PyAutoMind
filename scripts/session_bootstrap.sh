@@ -98,53 +98,6 @@ extras_state() {
     return "$rc"
 }
 
-# The session's OTHER interpreters: uv's tool environments.
-#
-# uv creates each tool env with `bin/python` as a SYMLINK to whatever `python3`
-# was at install time — here `/usr/local/bin/python3`. The hook then repoints
-# that same path at the session venv, so every tool env's python now resolves
-# its prefix to the VENV: `sys.prefix` is the venv, the tool's own
-# site-packages is never on `sys.path`, and the console script dies with
-# `ModuleNotFoundError: No module named 'flake8'` — with flake8 sitting
-# installed two directories away.
-#
-# Measured 2026-08-27, post-bootstrap: mypy, flake8, black and poetry all dead
-# this way; `ruff` survived (a native binary) and `pytest` survived (its shim
-# points straight at the venv, which has pytest). `--check` called every one of
-# them "3.12 OK", because the interpreter they reach IS 3.12 — it is simply the
-# wrong one. A session then lints clean by not linting at all, and CI is the
-# thing that finds out.
-#
-# The fix is one link: a venv's `bin/python` must resolve to a BASE interpreter,
-# never to a path this hook hijacks.
-repair_uv_tools() {
-    local tools_dir base tool link prefix
-    base="$("$VENV/bin/python" -c 'import sys, os; print(os.path.join(sys.base_prefix, "bin", "python3.12"))' 2>/dev/null)"
-    [ -x "$base" ] || base="$(command -v python3.12 2>/dev/null)"
-    [ -x "$base" ] || return 0
-    tools_dir="${PYAUTO_UV_TOOLS_DIR:-$(uv tool dir 2>/dev/null || echo "$HOME/.local/share/uv/tools")}"
-    [ -d "$tools_dir" ] || return 0
-    for tool in "$tools_dir"/*/; do
-        link="${tool}bin/python"
-        [ -L "$link" ] || continue
-        # Ask the interpreter where it thinks it lives, rather than tracing the
-        # link: `/usr/local/bin/python3` is a WRAPPER SCRIPT (a symlink there
-        # would lose the venv — see the system-default note), so `readlink -f`
-        # stops at the wrapper and reports nothing about the venv behind it.
-        # sys.prefix is the outcome; anything else is the mechanism.
-        prefix="$("$link" -c 'import sys; print(sys.prefix)' 2>/dev/null)" || continue
-        [ -n "$prefix" ] || continue
-        [ "$prefix" = "${tool%/}" ] && continue   # resolves to its own env: correct
-        ln -sfn "$base" "$link"
-        prefix="$("$link" -c 'import sys; print(sys.prefix)' 2>/dev/null)"
-        if [ "$prefix" = "${tool%/}" ]; then
-            say "repointed $(basename "${tool%/}") at $base (it resolved into $VENV, not its own env)"
-        else
-            say "WARNING: $(basename "${tool%/}") still resolves to ${prefix:-nothing} — it will not run"
-        fi
-    done
-}
-
 shallow_repos() {
     local root repo out=""
     root="$(dirname "$MIND_DIR")"
@@ -154,12 +107,19 @@ shallow_repos() {
     printf '%s' "${out# }"
 }
 
-# A seam for the suite (and for a hand repair): run just this leg. The tools
+# A seam for the suite (and for a hand repair): run just that leg. The tools
 # directory and the venv are both overridable, so the test can build a pair of
 # real environments and reproduce the breakage exactly.
+#
+# The leg itself lives in the HOOK — the hook is what a single-repo session runs,
+# and that session never reaches this script. Forwarded as a subprocess, not a
+# source: the hook runs `set -euo pipefail`, and this script must not, since it
+# is a bootstrap and never a gate. `CLAUDE_CODE_REMOTE` is forced for the same
+# reason the main path forces it — a caller reaching us from a CLI verb or an
+# agent may not have it, and the hook keys off it.
 if [ "${1:-}" = "--repair-uv-tools" ]; then
-    repair_uv_tools
-    exit 0
+    [ -x "$HOOK" ] || { say "WARNING: canonical hook missing at $HOOK"; exit 0; }
+    CLAUDE_CODE_REMOTE=true exec "$HOOK" --repair-uv-tools
 fi
 
 if [ "${1:-}" = "--check" ]; then
@@ -290,10 +250,12 @@ for repo in "$root"/*/; do
     CLAUDE_PROJECT_DIR="${repo%/}" "$hook" || say "WARNING: ${repo%/} hook failed"
 done
 
-# The hook rebuilds uv's tools on 3.12; this repairs the link that rebuild
-# cannot fix from inside, because the path it depends on is one the hook itself
-# repoints afterwards.
-repair_uv_tools
+# The hook rebuilds uv's tools on 3.12 and repairs the link that rebuild cannot
+# fix from inside, so every hook run above has already done this. Kept anyway,
+# and cheap: it is idempotent, and it is the one path that still covers a hook
+# whose python leg exited early (a venv that would not build, or
+# PYAUTO_SESSION_SKIP_PYTHON) while uv's tools were already hijacked.
+CLAUDE_CODE_REMOTE=true "$HOOK" --repair-uv-tools || say "WARNING: uv tool repair failed"
 
 # Make the fix apply to THIS process tree too, not only to shells the session
 # starts after the env file is read. A caller that sources us gets the PATH; a
