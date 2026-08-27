@@ -61,34 +61,6 @@
   by user 2026-08-27 after the per-pixel-noise-map check; strict bit-identity NOT required (ulp-level BLAS
   ordering in the mirrored half accepted, pins at rtol 1e-6 are the guard).
 
-## pages-dashboard-publish-gap
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/361 (issued 2026-08-27)
-- issued: 2026-08-27
-- prompt: active/pages_dashboard_publish_gap.md
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/362
-- worktree: ~/Code/PyAutoLabs-wt/pages-dashboard-publish-gap
-- heart-override: Heart was RED at ship time (`release validation FAILED (stage integrate)`,
-  score 40, ts 2026-08-27T21:04:08Z) and the human authorized shipping anyway on 2026-08-27.
-  NOT the AUTONOMY.md corrective-PR exception — that covers only a fix scoped to the RED
-  reason, and this change is unrelated to release validation. Deliberate override, recorded
-  on PR #362 under '## Ship gate — Heart override' so the merge decision stays auditable.
-- repos:
-  - PyAutoMind: feature/pages-dashboard-publish-gap
-- parallel-claim: PyAutoMind is also claimed by organ-remote-block-and-uv-hook-repair
-  (#360). worktree_check_conflict fires at REPO granularity; the human approved an OWN
-  worktree on 2026-08-27 because the file sets are disjoint — #360 touches
-  policy/remote_sessions.md, policy/session_start_hook.sh, scripts/session_bootstrap.sh
-  and the AGENTS.md marker blocks; this task touches
-  .github/workflows/dashboard_refresh.yml and nothing else. Separate worktree = separate
-  index AND separate branch, so neither task can inherit the other's commits. Deliberate
-  override, not a missed guard.
-- note: touches `.github/workflows/dashboard_refresh.yml` ONLY. Disjoint from
-  rectangular-experiments-gut-stash, which touches PyAutoMind's `condemned.md` —
-  no worktree conflict (worktree_check_conflict clean).
-- why: the published board can strand indefinitely while `dashboard.html` on main is
-  correct; the nightly cron takes the same early-return path, so nothing heals it.
-
 ## organ-remote-block-and-uv-hook-repair
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/360 (issued 2026-08-27)
 - issued: 2026-08-27
@@ -107,9 +79,23 @@
 - deliberately-out-of-scope: the other 30 repos carrying a stale hook copy (no gate sees
   them; firewall_gate.yml checks out four). Filed as
   draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md
-- co-claims PyAutoMind with pages-dashboard-publish-gap (#361), registered by a concurrent
-  session after this task's worktree_check_conflict ran clean. Disjoint file sets — that
-  task touches `.github/workflows/dashboard_refresh.yml` only; this one touches
-  `scripts/`, `policy/`, `tests/` and the generated `.claude/hooks/` copies. Separate
-  worktrees, no serialisation needed.
+- co-claim RELEASED 2026-08-27: pages-dashboard-publish-gap (#361) shipped and closed out
+  (PR #362 merged 74c1450, record complete/2026/08/pages-dashboard-publish-gap.md), so
+  PyAutoMind is now claimed by this task alone. The two ran in parallel worktrees on
+  disjoint file sets — that task touched `.github/workflows/dashboard_refresh.yml` only;
+  this one touches `scripts/`, `policy/`, `tests/` and the generated `.claude/hooks/`
+  copies — and needed no serialisation.
 
+## result-instance-fallback
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1535
+- issued: 2026-08-27
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/result-instance-fallback
+- repos:
+
+## harvest-0827-gate-b-pt2
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/182
+- issued: 2026-08-27
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/harvest-0827-gate-b-pt2
+- repos:

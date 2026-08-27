@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1171 records across 7 buckets.
+1172 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -179,6 +179,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [optional-dependency-skip-guards](2026/08/optional-dependency-skip-guards.md) — `test_nautilus.py::test__single_core_builds_no_pool` had no skip guard
 - [organ-repo-spelling-splits](2026/08/organ-repo-spelling-splits.md) — closed on ship
 - [organism-board-final-readmes](2026/08/organism-board-final-readmes.md) — close on record
+- [pages-dashboard-publish-gap](2026/08/pages-dashboard-publish-gap.md) — `dashboard_refresh.yml` dispatched the Pages publisher only from inside its
 - [paper-management-pipeline](2026/08/paper-management-pipeline.md) — auto-closed on merge
 - [per-parameter-step-scaling](2026/08/per-parameter-step-scaling.md)
 - [persist-smoke-environments](2026/08/persist-smoke-environments.md) — Made smoke dependency environments durable and isolated per library and Python version, with version-handshake…
