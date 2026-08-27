@@ -143,9 +143,43 @@ run, i.e. about what the current flag already costs at ~62s. There is no cheaper
 setting: pool sizing recovers nothing, by quota-matching (no quota exists) or by
 shrinking (same cost as the flag). Recoverable only upstream.
 
+### Q2 CLOSED — standalone reproducer deadlocks (80d7bc5)
+
+`autolens_workspace_test/.github/scripts/xla_fft_pool_reentrancy_repro.py`.
+jax + numpy only, no PyAuto import. 8 trials per arm:
+
+    default                              0 pass / 8 hang
+    --xla_cpu_multi_thread_eigen=false   8 pass / 0 hang, 3-4s each
+
+Perfect separation, Fisher two-sided p = 0.000155. The flag does not merely
+avoid the hang, it completes the same work in seconds — which is what shows the
+script reproduces THE bug, not some other stall. Sharper than the workspace
+script it stands in for (8/8 vs ~5/6), so a reader need not run it repeatedly.
+
+**What unblocked it: mge_group.py reproduces on an ordinary 4-CPU box.** With it
+hanging locally I could dump the real HLO and read the answer instead of
+guessing upward from a synthetic graph.
+
+Two ingredients, each established by removing it:
+1. **A scatter feeding each FFT.** Without it XLA fuses the chain into a
+   YnnFusionThunk, ducc0 runs inline, no latch is taken, no deadlock. The real
+   HLO reads `fft(%wrapped_scatter.423)` for all 282 of its fft ops.
+2. **Transforms big enough for ducc0 to fan out.** 180x180 runs inline here;
+   512x512 fans out and deadlocks. ducc0's own threshold, machine-dependent.
+
+CORRECTIONS to what this record said earlier (kept, not dropped):
+- "Worker::Parallelize/CountDown/RunWaiter is the missing ingredient" — WRONG.
+  The reproducer deadlocks with zero such frames, as does the real script.
+- "CI runs 15x15 grids under PYAUTO_SMALL_DATASETS" — WRONG. mge_group.py
+  declares `ENV: jax full_datasets`, which unsets it; it runs full resolution
+  and size mattered.
+- Several "zero ducc0 frames" readings were sampling artifacts: $! was the
+  `timeout` wrapper, not python, so they watched the wrong process.
+
 ### Still open
 
-- **Q2 reproducer — PARTIAL, committed** as
+- ~~Q2 reproducer PARTIAL~~ — SUPERSEDED by the section above; kept for the
+  dead ends it records. Original text: **Q2 reproducer — PARTIAL, committed** as
   `autolens_workspace_test/.github/scripts/xla_fft_pool_reentrancy_repro.py`
   (fdd289a). Nothing in CI runs it. It reproduces the RE-ENTRANCY
   deterministically (3 of 4 workers in FftThunk -> ducc0 latch::wait, held over

@@ -21,8 +21,11 @@
 - status: workspace-dev — root cause FOUND and mechanism CONFIRMED. Q1 + Q3 answered
   (run 33099502356, comment 5443451389); confirmation run 33103725546 (comment 5444085654):
   pool of 4 = 1 pass/5 hang, pool of 1 = 6 pass/0 hang, Fisher p=0.015 (p=0.0002 pooled).
-  Q2 reproducer PARTIAL and committed (fdd289a) — reproduces the re-entrancy, not a full
-  deadlock, with the missing ingredient identified. Q4 upstream filable now, NOT yet filed. Research follow-up to the shipped jax-compile-stall epic
+  Q2 CLOSED (80d7bc5): standalone reproducer, jax+numpy only, deadlocks 8/8 against 0/8
+  with the workaround flag, Fisher p=0.000155. Needed a scatter feeding each FFT (else XLA
+  fuses to a YnnFusionThunk and ducc0 runs inline) plus transforms above ducc0's fan-out
+  threshold. Q4 upstream is the ONLY acceptance item left — NOT yet filed, draft pending
+  human review since it posts to an external tracker. Research follow-up to the shipped jax-compile-stall epic
   (record complete/2026/08/jax-vmap-materialisation-hang.md, PyAutoFit#1528)
 - FOUND: re-entrant thread-pool deadlock — xla::cpu::FftThunk::Execute runs ON an Eigen
   pool worker and hands ducc0 that same pool, which fans the FFT back into it and blocks
