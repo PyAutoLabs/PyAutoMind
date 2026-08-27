@@ -110,6 +110,35 @@ so they are fixed here rather than left to bite again:
   Likewise the weak simulator is `scripts/weak/simulator.py` in
   @autolens_workspace.
 
+**2026-08-27 — both facts re-verified, STILL BLOCKED. Do not build.**
+Second gate check in four days, same verdict: no issue was opened, no branch was
+cut, no worktree claimed.
+
+1. **PyAutoLens#480 is still open.** `updated_at` is still byte-identical to
+   `created_at` (2026-04-28T21:01:57Z) — not one edit, comment, label or
+   assignment since it was filed; still no assignees, still
+   `closed_by_pull_requests: 0`. Four months untouched.
+2. **`weak/simple` is still regime-invariant.** `scripts/weak/simulator.py:122`
+   still calls `simulator.via_tracer_from(tracer=tracer, grid=positions,
+   name=dataset_name)`, and the file still contains no `os.environ` read of any
+   kind. Its last commit is 2026-07-27, i.e. it has not moved since the previous
+   re-check either.
+
+The `no_run.yaml` entries happen to sit at `config/build/no_run.yaml:41-42` in
+@autolens_workspace again, matching the original citation the 2026-08-23 note
+found drifted. That is coincidence, not a reason to trust line numbers — keep
+matching on the entry text.
+
+One standing risk the previous note did not record (it predates that note; the
+file has not changed since 2026-07-27, so this is an omission, not a change):
+`weak/simulator.py` *advertises* the helper that would break fact 2. Its prose
+blocks at `:94-95` and `:116-117` name
+`via_tracer_random_positions_from(tracer=..., n_galaxies=..., grid_extent=...)`
+as the "quick uniform-square catalogue" alternative to the explicit annulus this
+script passes. So the invariant is one plausible simplification away from being
+reversed, with nothing in the suite to catch it. Not a reason to build now — but
+if fact 2 ever expires, that is the likely route.
+
 Next re-check: when PyAutoLens#480 closes. That is the only trigger — fact 2 is a
 standing invariant, not a countdown, and only breaks if someone switches
 `weak/simulator.py` to the random-positions helper.
