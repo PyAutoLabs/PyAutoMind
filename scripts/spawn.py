@@ -152,6 +152,12 @@ MIND_RULES = [
     # adopter has a Brain; not worth inheriting a scheduled job that fails on
     # checkout every Sunday.
     (".github/workflows/branch_sweep.yml", "DROP"),
+    # 9c also: the ledger auto-merge. It MERGES TO MAIN with the workflow
+    # token and checks out PyAutoLabs/PyAutoBrain for the dashboard render
+    # (dashboard_refresh.yml's failure mode again). A fresh org should inherit
+    # neither unasked: an adopter re-adds it once they have a Brain and have
+    # decided for themselves which of their paths are ledger.
+    (".github/workflows/mind_ledger_merge.yml", "DROP"),
     (".github/scripts/*", "DROP"),
     # NO `.github/*` catch-all, deliberately. A catch-all is fail-OPEN: a new
     # Mind workflow would ride it into the template carrying whatever schedule

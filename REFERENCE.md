@@ -475,6 +475,59 @@ its `z_`-prefixed home redundant. The per-task completion records live in
 
 ---
 
+## How the ledger lands (`mind_ledger_merge.yml`)
+
+A branch-scoped session — the phone, claude.ai/code, any `claude/**` flow —
+pushes its Mind changes to a feature branch, never to `main`
+(`prompt_sync.sh` pushes HEAD deliberately, so a cloud session cannot bypass
+review). Nothing downstream used to move that branch on: no workflow so much as
+*looks* at a `claude/**` push, because `lifecycle_drift`, `dashboard_refresh`,
+`firewall_gate` and `spawn_drift` all trigger on `push: main` or
+`pull_request` only. A filed prompt, a task moved to `complete/`, a regenerated
+dashboard — all of it waited for a human to write an explicit "merge that
+branch" prompt, and the dashboard rendered a stale backlog until they did.
+
+`.github/workflows/mind_ledger_merge.yml` closes that seam. On every push to
+`claude/**` it classifies the branch's diff against `main` and, when the whole
+diff is **ledger**, merges it and deletes the branch. No session step, no PR,
+no prompt.
+
+**Ledger** is drawn by `scripts/ledger_merge.py`, and it is **default deny**:
+
+| Ledger — merged automatically | Code — always a human |
+|---|---|
+| `draft/**`, `active/**`, `complete/**` | `scripts/`, `tests/`, `.github/`, `skills/`, `policy/`, `docs/` |
+| `active.md`, `planned.md`, `parked.md`, `condemned.md`, `epics.md`, `ideas.md`, `autonomy_log.md` | `repos.yaml`, `README.md`, `AGENTS.md`, `REFERENCE.md`, `ROUTING.md`, … |
+| `dashboard.md`, `dashboard.html` | anything unclassified — a new root file, a new top-level folder |
+
+Two exceptions inside the ledger dirs: a **dot-path** anywhere, and a file
+pytest would **collect** (`conftest.py`, `test_*.py`, `*_test.py`) — inert
+prompt assets like `draft/bug/autofit/*_assets/run_once.py` ride along, a file
+CI would execute does not. The workflow's own file and the gate script are on
+the code side of the line, so neither can auto-merge a change to itself.
+
+Predict the verdict before you push:
+
+```bash
+python3 scripts/ledger_merge.py classify --base origin/main   # exit 0 = will auto-merge
+```
+
+What blocks, and what does not:
+
+- **`lifecycle.py check` blocks.** Structural drift — a prompt in `active/`
+  with no `active.md` entry — is a real contradiction and nothing heals it.
+- **Stale renders do not block.** `complete/index.md`, the registry contents
+  blocks and the dashboard pages all self-heal on `main`, so the workflow
+  merges and then dispatches `dashboard_refresh.yml` and `lifecycle_drift.yml`
+  (a `GITHUB_TOKEN` push triggers no workflows, so they must be asked).
+- **A conflict blocks**, and the branch is left untouched.
+
+An open PR on the branch is merged **through** the PR, so it records as
+`MERGED`; a branch with no PR gets a direct merge commit and is then deleted on
+the same proof `branch_sweep.yml` uses — `main` must actually contain the head
+sha. `workflow_dispatch` runs the same gate in `audit` mode by default, so a
+manual look never merges by accident.
+
 ## Tracking and inspection
 
 ### Quick inventory
