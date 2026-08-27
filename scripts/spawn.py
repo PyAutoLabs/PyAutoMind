@@ -80,6 +80,7 @@ MIND_RULES = [
     ("AI_POLICY.md", "KEEP_SUB"), ("CONTRIBUTING.md", "KEEP_SUB"),
     ("repos.yaml", "SPECIAL:body_map"),
     ("active.md", "EMPTY"), ("planned.md", "EMPTY"), ("epics.md", "EMPTY"),
+    ("bundles.md", "EMPTY"),
     ("parked.md", "EMPTY"), ("condemned.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
     ("autonomy_log.md", "SPECIAL:autonomy_log"),
     # Prompt-file lifecycle (issue #71): draft/ (not-started) -> active/
@@ -250,6 +251,7 @@ EMPTY_TITLES = {
     "dashboard.md": "# PyAutoMind Dashboard",
     "active.md": "# Active Tasks",
     "epics.md": "# Epics",
+    "bundles.md": "# Bundles",
     "planned.md": "# Planned",
     "parked.md": "# Parked tasks",
     "condemned.md": "# Condemned material",
