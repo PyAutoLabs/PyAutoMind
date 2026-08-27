@@ -117,6 +117,29 @@ The merged `claude/smoke-copy-drift-ci-docs-ozntvv` branches across nine repos
 were not deleted — this session's git proxy refuses delete refspecs
 (`send-pack: unexpected disconnect`). They are all proven merged into `main`.
 
+## Mind-side note: a stale draft copy survived this record (removed 2026-08-27)
+
+The prompt was issued from a copy, not moved: `draft/maintenance/ci/run_smoke_copy_drift.md`
+stayed behind when the task went to `active/` and then into this record. It was a
+strict prefix of the folded copy below — identical through the re-scoped task
+list, missing only the `Issued:`/`Filed:` headers and the 2026-08-24
+re-measurement — so it kept rendering on the dashboard as pickable backlog for
+work that had already shipped. Nothing detects this: `lifecycle.py check` reports
+OK, because a `draft/` prompt with no registry entry is a valid state.
+
+Removed under `/prm`'s reconcile leg on 2026-08-27, after verifying the merged
+end state rather than trusting this record:
+
+- `autolens_workspace` and `autogalaxy_workspace` `.github/scripts/run_smoke.py`
+  are both 119-line shims on `origin/main`, and `_BUILD_DIR` — the vestigial line
+  the prompt's step 4 asked about — is gone, that step being moot once the
+  variant was replaced wholesale.
+- The acceptance criterion that consolidation must not cost
+  `autolens_workspace_test` its per-script timeout holds through the shared path:
+  `build_util.execute_scripts_in_folder` → `execute_script` → `timeout_for(env)`
+  with `run_capped(timeout=…)` and `TimeoutExpired` handling, so every delegating
+  repo enforces the cap the one repo used to carry alone.
+
 ## Original prompt
 
 # run_smoke.py: three runner variants across 10 repos, no sync mechanism

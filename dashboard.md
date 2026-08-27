@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 134 |
+| [Backlog](#backlog) (`draft/`) | 133 |
 
 ## Start here
 
@@ -247,7 +247,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**133** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -596,179 +596,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 21</summary>
-
-<details><summary>📋 <a href="draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md">Untrack the generated FITS test artifacts in autoarray</a> — libraries · small · supervised · medium</summary>
-
-```
-/start_dev draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right jax…</a> — ci · low · supervised · medium</summary>
-
-```
-/start_dev draft/maintenance/ci/smoke_install_stale_jax_pin.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_workspace_developer/rectangular_experiments_gut_stash.md">autolens_workspace_developer rectangular experiments — Gut stash + rename</a> — autolens_workspace_developer · small · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/autolens_workspace_developer/rectangular_experiments_gut_stash.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/config_key_mirror_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431 gate has cleared</a> — workspaces · small · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run passes</a> — workspaces · small · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> — autolens_workspace_developer · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> — ci · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/ci/heart_smoke_table_autocti.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/run_smoke_copy_drift.md">run_smoke.py: three runner variants across 10 repos, no sync mechanism</a> — ci · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/ci/run_smoke_copy_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> — ci · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/ci/wiki_currency_check_version_gate.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two dead deps</a> — libraries · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/libraries/dep_cap_refresh_2026_08.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a> — pyautomemory · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/pyautomemory/canonical_key_todo_sweep.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/committed_capped_smoke_datasets.md">Capped smoke datasets were committed as if they were real</a> — workspaces · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/committed_capped_smoke_datasets.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/polish.md">autolens_profiling is now a mature project, with a good separation</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/autolens_profiling/polish.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> — ci · large · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/ci/copilot_auto_review.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/read_through_issues.md">autolens_workspace</a> — workspaces · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/read_through_issues.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale docs/CI)</a> — workspaces · low-medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI install docs</a> — workspaces · low · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never extended for it</a> — autolens_profiling · small · supervised · low</summary>
-
-```
-/start_dev draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's…</a> — autolens_workspace · small · supervised · low</summary>
-
-```
-/start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in autogalaxy/autofit/HowToFit workspaces</a> — workspaces · small · supervised · low</summary>
-
-```
-/start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>bug</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
@@ -895,6 +722,171 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>maintenance</b> — 20</summary>
+
+<details><summary>📋 <a href="draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md">Untrack the generated FITS test artifacts in autoarray</a> — libraries · small · supervised · medium</summary>
+
+```
+/start_dev draft/maintenance/libraries/untrack_generated_fits_test_artifacts.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/ci/smoke_install_stale_jax_pin.md">smoke_install.sh's stale <code>jax&lt;0.7</code> pin — CI is on the right jax…</a> — ci · low · supervised · medium</summary>
+
+```
+/start_dev draft/maintenance/ci/smoke_install_stale_jax_pin.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace_developer/rectangular_experiments_gut_stash.md">autolens_workspace_developer rectangular experiments — Gut stash + rename</a> — autolens_workspace_developer · small · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/autolens_workspace_developer/rectangular_experiments_gut_stash.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/config_key_mirror_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431 gate has cleared</a> — workspaces · small · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run passes</a> — workspaces · small · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> — autolens_workspace_developer · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> — ci · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/ci/heart_smoke_table_autocti.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> — ci · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/ci/wiki_currency_check_version_gate.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two dead deps</a> — libraries · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/libraries/dep_cap_refresh_2026_08.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a> — pyautomemory · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/pyautomemory/canonical_key_todo_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/committed_capped_smoke_datasets.md">Capped smoke datasets were committed as if they were real</a> — workspaces · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/committed_capped_smoke_datasets.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/polish.md">autolens_profiling is now a mature project, with a good separation</a> — autolens_profiling · large · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/autolens_profiling/polish.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> — ci · large · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/ci/copilot_auto_review.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/read_through_issues.md">autolens_workspace</a> — workspaces · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/read_through_issues.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale docs/CI)</a> — workspaces · low-medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI install docs</a> — workspaces · low · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never extended for it</a> — autolens_profiling · small · supervised · low</summary>
+
+```
+/start_dev draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's…</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+/start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in autogalaxy/autofit/HowToFit workspaces</a> — workspaces · small · supervised · low</summary>
+
+```
+/start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
 ```
 
 </details>
