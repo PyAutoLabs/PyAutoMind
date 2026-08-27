@@ -73,6 +73,17 @@ For the full workflow narrative, conventions, and registry schemas, read
 - **Skills** — `skills/<name>/` are agent skills and command bodies tightly
   coupled to the registry. Claude and Codex discovery is installed by
   PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.
+- **Ledger auto-merge** — a push to `claude/**` whose whole diff is *ledger*
+  (`draft/`, `active/`, `complete/`, the root registry files, the dashboard
+  pages) is merged into `main` by `.github/workflows/mind_ledger_merge.yml` and
+  the branch deleted — no PR, no session step, no "please merge that" prompt.
+  Anything touching `scripts/`, `tests/`, `.github/`, `skills/`, `policy/`,
+  `docs/`, `repos.yaml` or the prose pages is left for a human, as is anything
+  unclassified (the gate is default deny). So: **push your Mind work and move
+  on** — do not leave a ledger branch hanging, and do not expect a code branch
+  to land by itself. `python3 scripts/ledger_merge.py classify --base
+  origin/main` tells you which side you are on before you push; the full
+  contract is in [REFERENCE.md](REFERENCE.md) "How the ledger lands".
 - **Scripts** — `scripts/status.sh` (inventory), `scripts/prompt_sync.sh`
   (commit/push helpers), `scripts/lifecycle.py` (state moves + drift checks;
   `lifecycle.py dates [--write]` reports/backfills the date every registry
@@ -90,32 +101,52 @@ For the full workflow narrative, conventions, and registry schemas, read
    loosely-related changes, split into separate prompt files before issuing.
 4. **`tmp/` is scratch.** Never commit anything under it.
 
-## Running tests in a remote (web/mobile) session
+<!-- repos_sync:remote:begin -->
+## Remote sessions (Claude Code on web and mobile)
 
-Two facts, both measured, both worth one line each:
+Three facts, all measured in a web/mobile container, where this file is loaded
+and little else is. They ride in every organ because a session may hold any
+subset of them — and the session that needs this most is the one holding
+several, which is exactly the session no hook fires in.
 
-1. **Run the suite in parallel.** A remote container has 4 cores and the suites
-   are subprocess-heavy with no single slow test: PyAutoBrain's 554 tests take
-   96s on one core and 28s on four. `pytest-xdist` is installed by the
-   session-start hook, so the command is just:
+- **Bootstrap in the first turn, unconditionally** — before the first test
+  command, not as a remedy once something looks wrong:
 
-   ```
-   python3 -m pytest -q -n auto
-   ```
+  ```
+  bash PyAutoMind/scripts/session_bootstrap.sh          # ~10s cold, ~1s warm
+  bash PyAutoMind/scripts/session_bootstrap.sh --check  # report only
+  ```
 
-2. **If `python3 -m pytest` or `pytest` misbehaves, the environment is stale,
-   not the code.** A session holding several organs registers no SessionStart
-   hook (Claude Code reads hooks from the project directory, which is the
-   repos' *parent*). Knock on the door directly, once, in the first turn:
+  A session holding several organs registers no SessionStart hook — Claude Code
+  reads project hooks from the project directory, which in that layout is the
+  repos' *parent*, not a repo — so nothing has set this session up. It was once
+  phrased as a remedy keyed to `No module named pytest` or collection
+  `ImportError`s naming `yaml`; that symptom stopped appearing when the
+  container image moved to Python 3.12, while the environment is still wrong in
+  ways that read like a bad command rather than a stale session (`pytest -n
+  auto` → `unrecognized arguments: -n`). The bootstrap also **unshallows the
+  clones**: a remote session clones shallow, and `git merge-base --is-ancestor`
+  then answers "not an ancestor" for a commit whose ancestry is merely absent —
+  the answer the ship and close-out procedures act on when proving a branch
+  merged.
 
-   ```
-   bash PyAutoMind/scripts/session_bootstrap.sh          # fix it
-   bash PyAutoMind/scripts/session_bootstrap.sh --check  # report only
-   ```
+- **Then run the suite in parallel.** 4 cores, subprocess-heavy suites, no
+  single slow test: about 3.5x. `python3 -m pytest -q -n auto`, with
+  `pytest-xdist` supplied by the bootstrap above.
 
-   The symptom to recognise: collection `ImportError`s naming `yaml`, or
-   `No module named pytest`. Both are the session resolving a pytest that is not
-   this workspace's — never a broken test module.
+- **There is no `gh`, and installing one does not help.** A remote session
+  reaches GitHub through the `mcp__github__*` tools, already scoped to the
+  session's repos. `gh` installs in two seconds and is a trap: it authenticates,
+  then 403s every repo-scoped call, because the egress proxy serves neither the
+  REST repo paths nor GraphQL beyond a pinned set of PR-review operations — a
+  binary that looks healthy and fails everything that matters. It also defeats
+  the surface probe, which keys off `gh auth status`. Read
+  `PyAutoBrain/skills/GITHUB_ACCESS.md` at the top of any run that touches
+  GitHub; it maps each `gh` operation onto its MCP tool. Spell that path from
+  the workspace root, as written: a multi-organ session is cwd'd at the repos'
+  *parent*, so a bare `skills/…` reads as a missing file rather than a missing
+  repo prefix.
+<!-- repos_sync:remote:end -->
 
 ## When you are asked to add a new prompt
 

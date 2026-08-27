@@ -34,6 +34,12 @@ VENV="${PYAUTO_SESSION_VENV:-$HOME/.pyauto/session-py312}"
 
 say() { printf '[bootstrap] %s\n' "$*" >&2; }
 
+# What a suite here needs before it can even collect: pytest itself, PyYAML
+# (imported at collection time), and xdist (the `-n auto` every remote-session
+# instruction names). One string, so the suite can lift it out and run it on a
+# real interpreter rather than on a stand-in that cannot disagree with it.
+IMPORT_PROBE='import importlib.util, sys; sys.stdout.write(" ".join(m for m in ("pytest", "yaml", "xdist") if not importlib.util.find_spec(m)))'
+
 py312_ready() {
     [ -x "$VENV/bin/python" ] \
         && "$VENV/bin/python" -c 'import sys; raise SystemExit(sys.version_info[:2] != (3, 12))' >/dev/null 2>&1 \
@@ -92,6 +98,53 @@ extras_state() {
     return "$rc"
 }
 
+# The session's OTHER interpreters: uv's tool environments.
+#
+# uv creates each tool env with `bin/python` as a SYMLINK to whatever `python3`
+# was at install time — here `/usr/local/bin/python3`. The hook then repoints
+# that same path at the session venv, so every tool env's python now resolves
+# its prefix to the VENV: `sys.prefix` is the venv, the tool's own
+# site-packages is never on `sys.path`, and the console script dies with
+# `ModuleNotFoundError: No module named 'flake8'` — with flake8 sitting
+# installed two directories away.
+#
+# Measured 2026-08-27, post-bootstrap: mypy, flake8, black and poetry all dead
+# this way; `ruff` survived (a native binary) and `pytest` survived (its shim
+# points straight at the venv, which has pytest). `--check` called every one of
+# them "3.12 OK", because the interpreter they reach IS 3.12 — it is simply the
+# wrong one. A session then lints clean by not linting at all, and CI is the
+# thing that finds out.
+#
+# The fix is one link: a venv's `bin/python` must resolve to a BASE interpreter,
+# never to a path this hook hijacks.
+repair_uv_tools() {
+    local tools_dir base tool link prefix
+    base="$("$VENV/bin/python" -c 'import sys, os; print(os.path.join(sys.base_prefix, "bin", "python3.12"))' 2>/dev/null)"
+    [ -x "$base" ] || base="$(command -v python3.12 2>/dev/null)"
+    [ -x "$base" ] || return 0
+    tools_dir="${PYAUTO_UV_TOOLS_DIR:-$(uv tool dir 2>/dev/null || echo "$HOME/.local/share/uv/tools")}"
+    [ -d "$tools_dir" ] || return 0
+    for tool in "$tools_dir"/*/; do
+        link="${tool}bin/python"
+        [ -L "$link" ] || continue
+        # Ask the interpreter where it thinks it lives, rather than tracing the
+        # link: `/usr/local/bin/python3` is a WRAPPER SCRIPT (a symlink there
+        # would lose the venv — see the system-default note), so `readlink -f`
+        # stops at the wrapper and reports nothing about the venv behind it.
+        # sys.prefix is the outcome; anything else is the mechanism.
+        prefix="$("$link" -c 'import sys; print(sys.prefix)' 2>/dev/null)" || continue
+        [ -n "$prefix" ] || continue
+        [ "$prefix" = "${tool%/}" ] && continue   # resolves to its own env: correct
+        ln -sfn "$base" "$link"
+        prefix="$("$link" -c 'import sys; print(sys.prefix)' 2>/dev/null)"
+        if [ "$prefix" = "${tool%/}" ]; then
+            say "repointed $(basename "${tool%/}") at $base (it resolved into $VENV, not its own env)"
+        else
+            say "WARNING: $(basename "${tool%/}") still resolves to ${prefix:-nothing} — it will not run"
+        fi
+    done
+}
+
 shallow_repos() {
     local root repo out=""
     root="$(dirname "$MIND_DIR")"
@@ -100,6 +153,14 @@ shallow_repos() {
     done
     printf '%s' "${out# }"
 }
+
+# A seam for the suite (and for a hand repair): run just this leg. The tools
+# directory and the venv are both overridable, so the test can build a pair of
+# real environments and reproduce the breakage exactly.
+if [ "${1:-}" = "--repair-uv-tools" ]; then
+    repair_uv_tools
+    exit 0
+fi
 
 if [ "${1:-}" = "--check" ]; then
     rc=0
@@ -153,13 +214,39 @@ if [ "${1:-}" = "--check" ]; then
             # this workspace's code are checked; a linter needs no deps.
             case "$tool" in
                 python3|pytest)
-                    if missing="$("$interp" -c 'import importlib,sys; sys.stdout.write(" ".join(m for m in ("pytest","yaml","xdist") if not importlib.util.find_spec(m)))' 2>/dev/null)" \
-                       && [ -n "$missing" ]; then
+                    # Two failure modes, and they must not look alike.
+                    #
+                    # The probe RAN and named modules -> report them. The probe
+                    # could not run at all -> that is a failure too, and used to
+                    # be reported as success: the snippet said `import importlib`
+                    # (which does not bind `importlib.util`), so on every real
+                    # CPython it raised AttributeError, the `&&` short-circuited,
+                    # and the OK line printed. Measured in a fresh container on
+                    # 2026-08-27: `pytest: 3.12 OK` beside a `python3 -m pytest`
+                    # that answered `No module named pytest`. The test that was
+                    # meant to cover this drove a SHELL SCRIPT standing in for
+                    # python, which answered happily — so the guard and the bug
+                    # coexisted. Hence $IMPORT_PROBE, lifted out and run on a
+                    # real interpreter by the suite.
+                    if ! missing="$("$interp" -c "$IMPORT_PROBE" 2>/dev/null)"; then
+                        say "$tool: 3.12 but the import probe would not run ($path) — treat this session as unbootstrapped"; rc=1
+                        continue
+                    fi
+                    if [ -n "$missing" ]; then
                         say "$tool: 3.12 but cannot import: $missing ($path) — it will fail collection, not the code"; rc=1
                         continue
                     fi
                     ;;
             esac
+            # Version is necessary, not sufficient — and neither is an
+            # importable pytest. The last thing left is whether the tool RUNS:
+            # a uv tool env whose python resolves into the session venv reaches
+            # a 3.12 interpreter that cannot see the tool's own site-packages,
+            # and answers ModuleNotFoundError. Ask it.
+            if ! "$path" --version >/dev/null 2>&1; then
+                say "$tool: 3.12 but will not run ($path) — run this script with no arguments"; rc=1
+                continue
+            fi
             say "$tool: 3.12 OK ($path)"
         else
             say "$tool: running on $real, not 3.12 ($path) — its results will disagree with CI"; rc=1
@@ -202,6 +289,11 @@ for repo in "$root"/*/; do
     [ -x "$hook" ] || continue
     CLAUDE_PROJECT_DIR="${repo%/}" "$hook" || say "WARNING: ${repo%/} hook failed"
 done
+
+# The hook rebuilds uv's tools on 3.12; this repairs the link that rebuild
+# cannot fix from inside, because the path it depends on is one the hook itself
+# repoints afterwards.
+repair_uv_tools
 
 # Make the fix apply to THIS process tree too, not only to shells the session
 # starts after the env file is read. A caller that sources us gets the PATH; a

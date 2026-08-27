@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1163 records across 7 buckets.
+1169 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -25,6 +25,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [arcticpy-install-standardisation](2026/08/arcticpy-install-standardisation.md)
 - [arxiv-inbox-pat-scope](2026/08/arxiv-inbox-pat-scope.md) — the nightly arXiv digest's inbox-filing step silently lost every paper it
 - [arxiv-inbox-tier](2026/08/arxiv-inbox-tier.md) — the nightly strong-lensing digest no longer ends in a Slack paste-block the
+- [arxiv-interests-tier](2026/08/arxiv-interests-tier.md) — a SECOND overnight suggestion tier, `arxiv-interests.md`, for everything the
 - [astropy-cap-bump](2026/08/astropy-cap-bump.md) — closed manually post-merge — "Part of" in the PR bodies does not auto-close
 - [autoarray-adapt-images-precondition](2026/08/autoarray-adapt-images-precondition.md)
 - [autoarray-input-validation-guards](2026/08/autoarray-input-validation-guards.md)
@@ -42,6 +43,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autolens-tracer-validation-guards](2026/08/autolens-tracer-validation-guards.md)
 - [autoreduce-pypi-name-collision](2026/08/autoreduce-pypi-name-collision.md)
 - [blackjax-16-upgrade-smoke](2026/08/blackjax-16-upgrade-smoke.md)
+- [board-github-data-seam](2026/08/board-github-data-seam.md)
 - [border-relocator-backend-parity](2026/08/border-relocator-backend-parity.md) — Isolated the native NumPy/JAX likelihood gap to mathematically non-unique PCA axes for a near-isotropic border…
 - [border-relocator-degenerate-pca](2026/08/border-relocator-degenerate-pca.md) — Stabilized near-isotropic border PCA axes with a deterministic axis-aligned branch at a scale-aware eigenvalue…
 - [brain-readability-pass](2026/08/brain-readability-pass.md) — auto-closed on merge
@@ -113,6 +115,8 @@ _(curate hard-won records here — survives regeneration.)_
 - [inference-method-cards-seed](2026/08/inference-method-cards-seed.md)
 - [inference-programme-ledger](2026/08/inference-programme-ledger.md)
 - [intake-declared-difficulty](2026/08/intake-declared-difficulty.md) — the precedence rule "a DECLARED header key beats a value derived from
+- [interests-overpick-dedup-slack](2026/08/interests-overpick-dedup-slack.md) — the interests digest asked Claude for exactly 10 papers, and the
+- [interests-ranker-widened-categories](2026/08/interests-ranker-widened-categories.md)
 - [interferometer-delaunay-flaky-fitexception](2026/08/interferometer-delaunay-flaky-fitexception.md)
 - [interferometer-delaunay-nonpd-fitexception](2026/08/interferometer-delaunay-nonpd-fitexception.md)
 - [interferometer-start-here-integrate-oom](2026/08/interferometer-start-here-integrate-oom.md)
@@ -124,6 +128,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [jax-grad-local-vs-ci-assertions](2026/08/jax-grad-local-vs-ci-assertions.md)
 - [jax-grad-smoke-timeout-budget](2026/08/jax-grad-smoke-timeout-budget.md)
 - [jax-likelihood-mass-sensitivity](2026/08/jax-likelihood-mass-sensitivity.md) — Audit + fix for median-literal mass blindness across all jax_likelihood/datacube scripts (phase 2 of the findi…
+- [jax-likelihood-pins-duplicate-filing](2026/08/jax-likelihood-pins-duplicate-filing.md)
 - [jax-likelihood-smoke-pins-stale](2026/08/jax-likelihood-smoke-pins-stale.md)
 - [jax-stall-shared-preloads-retime-refutation](2026/08/jax-stall-shared-preloads-retime-refutation.md)
 - [jax-traceback-filtering-release-harness](2026/08/jax-traceback-filtering-release-harness.md)
@@ -275,6 +280,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [transformed-message-semantics-doc](2026/08/transformed-message-semantics-doc.md)
 - [undo-community-file-declutter](2026/08/undo-community-file-declutter.md) — Undid the 2026-08-19 community-file declutter (#248 Mind, #32 Memory):
 - [uniform-prior-bounds-numpy-path](2026/08/uniform-prior-bounds-numpy-path.md) — auto-closed by the merge's `Closes` line
+- [untrack-fits-test-artifacts](2026/08/untrack-fits-test-artifacts.md)
 - [version-skew-yank-awareness](2026/08/version-skew-yank-awareness.md)
 - [version-stamp-sync-guards](2026/08/version-stamp-sync-guards.md) — closed by the 2026-08-19 reconcile sweep — see traps
 - [vincken-2026-bib-placeholder](2026/08/vincken-2026-bib-placeholder.md)

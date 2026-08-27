@@ -126,13 +126,17 @@ def announcement_band(now: dt.datetime) -> tuple:
     )
 
 
-def fetch(query: str, max_results: int) -> bytes:
+def fetch(query: str, max_results: int, start: int = 0) -> bytes:
+    """One page of the API. `start` pages a query too broad for one request —
+    the strong-lensing digest never needs it (a band is ~1.5 papers), the
+    interests digest beside it always does (a band is a whole day of astro-ph).
+    """
     params = urllib.parse.urlencode(
         {
             "search_query": query,
             "sortBy": "submittedDate",
             "sortOrder": "descending",
-            "start": 0,
+            "start": start,
             "max_results": max_results,
         }
     )
