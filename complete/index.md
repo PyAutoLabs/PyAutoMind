@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1169 records across 7 buckets.
+1171 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -115,6 +115,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [inference-method-cards-seed](2026/08/inference-method-cards-seed.md)
 - [inference-programme-ledger](2026/08/inference-programme-ledger.md)
 - [intake-declared-difficulty](2026/08/intake-declared-difficulty.md) — the precedence rule "a DECLARED header key beats a value derived from
+- [intake-reconcile-absence-signal](2026/08/intake-reconcile-absence-signal.md) — leg 3 tested PRESENCE — "the prompt names things that exist
 - [interests-overpick-dedup-slack](2026/08/interests-overpick-dedup-slack.md) — the interests digest asked Claude for exactly 10 papers, and the
 - [interests-ranker-widened-categories](2026/08/interests-ranker-widened-categories.md)
 - [interferometer-delaunay-flaky-fitexception](2026/08/interferometer-delaunay-flaky-fitexception.md)
@@ -219,6 +220,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [pynufft-scipy-pinv2-dev-extra](2026/08/pynufft-scipy-pinv2-dev-extra.md)
 - [queue-intake-claude](2026/08/queue-intake-claude.md) — auto-closed on merge
 - [readme-scientist-buttons](2026/08/readme-scientist-buttons.md)
+- [reconcile-duplicate-prompt-signal](2026/08/reconcile-duplicate-prompt-signal.md) — every signal reconcile had scored a prompt against the completion
 - [reconcile-upstream-repo-mode](2026/08/reconcile-upstream-repo-mode.md)
 - [reconstruction-noise-map-covariance-sqrt](2026/08/reconstruction-noise-map-covariance-sqrt.md)
 - [rectangular-spline-adapt-image-jit-fix](2026/08/rectangular-spline-adapt-image-jit-fix.md)
