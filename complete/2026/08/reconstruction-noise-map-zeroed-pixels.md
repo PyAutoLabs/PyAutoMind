@@ -1,3 +1,153 @@
+# reconstruction-noise-map-zeroed-pixels — the covariance now describes the solve that ran
+
+**Date:** 2026-08-27
+**Issue:** [PyAutoArray#492](https://github.com/PyAutoLabs/PyAutoArray/issues/492) (closed)
+**PRs:** [PyAutoArray#493](https://github.com/PyAutoLabs/PyAutoArray/pull/493) (MERGED, `2c06e4aa`),
+[autolens_workspace#505](https://github.com/PyAutoLabs/autolens_workspace/pull/505) (MERGED, `6e90bee0`)
+**Outcome:** shipped — Defect 2 of the solver-mismatch cluster; Defects 1 and 3 stay closed/deferred.
+
+## What this task was
+
+`AbstractInversion.reconstruction` does not always solve the full linear system. Under
+`use_edge_zeroed_pixels` it subsets `curvature_reg_matrix` to `zeroed_ids_to_keep`, solves the reduced
+problem, and scatters back **exact zeros** at the excluded pixels — the mesh's poorly-constrained
+boundary vertices, zeroed precisely to keep the inversion stable.
+
+`reconstruction_covariance_matrix` inverted the **full** matrix regardless. It re-admitted into an
+explicit inverse the very rows the solve dropped to stay stable, and `reconstruction_noise_map`
+reported a finite noise value for a pixel whose reconstruction reads exactly `0.0` because it was
+never solved for.
+
+## Three of the prompt's four open items were not live work
+
+`/start_dev` re-read the prompt against `main` @ `da5ec9a0` before planning, which cut the task down:
+
+| Item | State |
+|---|---|
+| Defect 1 — unconstrained covariance vs NNLS | Docstring caveat shipped in #472; the truncated-posterior maths stays deferred at `low`. |
+| **Defect 2** | **This task.** |
+| Defect 3 — `use_edge_zeroed_pixels` nested in the positive-only branch | **Already closed as deliberate** by [`84b9ed4`](https://github.com/PyAutoLabs/PyAutoArray/commit/84b9ed42b583dd1473aeda259b8e9d7a3f153c10) (2026-08-22). The prompt called it "the most likely next piece of real work"; that text was five days stale. |
+| Evidence-optimal lambda with free lens mass | Deferred — research, not code. |
+
+Worth remembering as a pattern: this prompt accumulated five months of measurement history and its
+own summary had gone out of date against the repo. Re-reading the target code before planning is
+what caught it; planning from the prompt alone would have produced a PR to "fix" something the
+author had deliberately documented as intended.
+
+## The structural fix
+
+The predicate deciding whether the solve subsets the system lived inline in `reconstruction` and
+nowhere else, so the covariance had no way to know. It is now one property, `solve_ids_to_keep`,
+which both read.
+
+It returns `None` — not "every index" — when the solve is full, so that path never enters the
+indexing and scatter-back code and stays byte-identical. It also reproduces the deliberate nesting
+(`use_edge_zeroed_pixels` consulted only under `use_positive_only_solver`), and the `84b9ed4` comment
+forbidding its "fix" is preserved and extended to say the property encodes it.
+
+## Excluded entries are NaN, not zero
+
+Human decision at plan time. Zero is a legitimate covariance value ("known exactly"),
+indistinguishable from a real result; these parameters were never estimated. Both consumers were
+checked **before** the decision and neither needed changing:
+
+- `norm_from` (`plot/utils.py:270`) derives colour limits with `np.nanmax` and already documents an
+  all-`NaN` fallback; its linear branch returns `None` so matplotlib autoscales past `NaN`.
+- `save_reconstruction_csv` already writes `nan` in that column when the covariance raises.
+
+`0` would have been *worse*: `source_science.py` computes `reconstruction / reconstruction_noise_map`
+and the reconstruction is exactly `0.0` there, so `0` gives `0/0` — the same `NaN`, plus a
+`RuntimeWarning` on every call. Verified by writing the CSV and rendering the mapper subplot in both
+linear and log10 scales.
+
+## Blast radius was wider than the prompt assumed
+
+The prompt scoped this as "opt-in per mesh" because `Delaunay.__init__` defaults `zeroed_pixels` to
+`0`. But `RectangularRTUAdaptDensity.zeroed_pixels` returns the **entire edge ring unconditionally** —
+no setting, no count. 108 of 784 parameters on a 28x28, 156 of 1600 on a 40x40. And the workspace's
+own `delaunay.py` example sets `zeroed_pixels=30`, so the documented Delaunay idiom hits this path
+too — which answers the prompt's standing "Delaunay untested" caveat.
+
+## The measurement, and what it corrected
+
+Measured on **real ray-traced fits** (PyAutoLens/PyAutoGalaxy/PyAutoFit cloned at `main` and run
+against the branch): Isothermal `einstein_radius=1.6` + shear, compact Sersic source, `r=3.0"` mask,
+`over_sample_size_pixelization=4`, PSF and Poisson noise, at the coefficient the Bayesian evidence
+selects (lambda* = 1, interior to a 9-point grid in every case).
+
+| mesh | zeroed | p50 | p90 | p99 | max | >1% | >10% |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| `RectangularBilinearAdaptDensity(28,28)` | 108/784 | 1.0002 | 1.069 | 1.44 | **1.81** | 21% | 9% |
+| `Delaunay`, workspace idiom, `zeroed_pixels=30` | 30/562 | 1.0045 | — | 1.90 | **2.37** | — | — |
+| `Delaunay`, default `zeroed_pixels=0` | 0 | 1.000 | — | 1.000 | 1.000 | 0% | 0% |
+
+Direction is guaranteed, not measured: `[A^-1]_keep >= (A_keep)^-1` in the PSD ordering, so every
+kept pixel's variance drops. **Downstream 0.00% in every case** — source flux and magnification
+through the `S/N >= 5` cut are unmoved, lit-pixel counts identical (7/7, 24/24, 121/121). The pixels
+whose noise changes most sit at the mesh edge, where there is no flux to move.
+
+**A structural proxy was tried first and was wrong in shape.** It predicted a uniform 1-2% shift; the
+truth is a negligible median with a long edge-concentrated tail. Same failure mode as the synthetic
+proxy earlier in this prompt's history, for the same reason — a random mapping matrix spreads data
+support across the mesh while real ray tracing concentrates it in the arc. **Do not accept a
+structural proxy for this class of question.**
+
+## The measurement caught the implementation overclaiming
+
+The first commit asserted a biconditional — `reconstruction == 0.0` exactly where the noise map is
+`NaN` — in the docstring, the end-to-end test, and the workspace prose. **False.** The non-negative
+solver also pins pixels it *did* solve for at exactly `0.0`. On the 28x28 fit, 784 parameters:
+
+```
+reconstruction == 0.0            : 603
+NaN in noise map                 : 108   <- only these were never estimated
+solved, but pinned at 0 by NNLS  : 495
+```
+
+`NaN => reconstruction == 0.0` holds; the converse does not. Anyone following the wrong wording would
+have treated 495 well-constrained pixels as unfitted. The test passed only because its 3x3 fixture
+solves a single pixel, making the two sets coincide by accident — a fixture too small to distinguish
+the claim from the truth.
+
+That split is also exactly the Defect 1 / Defect 2 boundary: the 495 pinned pixels are the NNLS
+active-set question (#472, deferred), the 108 structurally zeroed ones are this change.
+
+## Also fixed
+
+- Three comments described `mapper_indices` as "ids of values which are on edge so zero-d and not
+  solved for". It is not edge zeroing — it drops linear objects carrying no regularization. That
+  mislabel is why the prompt read three index sets as one unexplained inconsistency; two of them are
+  unrelated concerns and only one was ever a defect.
+- `imaging` and `interferometer` `source_science.py` computed
+  `interpolated_noise_map = griddata(values=reconstruction, ...)` and plotted it as "Source
+  Reconstruction Noise Map" — the reconstruction, not the noise map. `group` and `multi_galaxy` were
+  always correct. Pre-existing; found while writing the docs, reported, and fixed with sign-off.
+
+## Not done, deliberately
+
+- Defect 1's truncated-posterior maths — deferred at `low`.
+- `plot/utils.py:norm_from`'s `np.errstate(all="ignore")` does not suppress `np.nanmax`'s All-NaN
+  `RuntimeWarning`, which is issued through `warnings` rather than the FP error state. Pre-existing
+  and unreachable from this change: a per-mapper noise map cannot be all-`NaN` (a rectangular mesh is
+  at least 3x3 and keeps its interior; Delaunay zeroes a count strictly below its pixel total).
+
+## Verification
+
+PyAutoArray full suite **1177 passed, 55 skipped**; CI 3/3 legs (`unittest 3.12`, `unittest 3.13`,
+`unittest-nojax`). autolens_workspace CI 3/3 runs (Navigator Check, Script Size Guard, Smoke Tests).
+10 new tests: 9 unit cases over a 4x4 mesh (4 interior kept, 12 zeroed) and 1 end-to-end through the
+real solver asserting the NaN set equals the excluded set exactly plus the one-way implication.
+
+## Environment note
+
+Shipped from a `web-github` session with no task worktree and no `gh` — plain clones plus the GitHub
+MCP surface. PyAutoHeart was not present, so the documented fallback gate applied (the repo's own
+suite as the readiness verdict). The full PyAuto stack was installed from PyPI leaf deps with
+`PYTHONPATH` pointing at the branch checkout, which is what made the real-fit measurement possible
+at all.
+
+## Original prompt
+
 # The reconstruction noise map describes a different estimator than the default solver
 
 Type: bug

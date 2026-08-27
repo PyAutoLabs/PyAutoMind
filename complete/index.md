@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1152 records across 7 buckets.
+1153 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -208,6 +208,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [readme-scientist-buttons](2026/08/readme-scientist-buttons.md)
 - [reconcile-upstream-repo-mode](2026/08/reconcile-upstream-repo-mode.md)
 - [reconstruction-noise-map-covariance-sqrt](2026/08/reconstruction-noise-map-covariance-sqrt.md)
+- [reconstruction-noise-map-zeroed-pixels](2026/08/reconstruction-noise-map-zeroed-pixels.md)
 - [rectangular-spline-adapt-image-jit-fix](2026/08/rectangular-spline-adapt-image-jit-fix.md)
 - [refactor-witness-map-audit](2026/08/refactor-witness-map-audit.md) — PyAutoBrain#269 → PR #271, merge cf969f3; stacked on #268
 - [registry-integrity-check](2026/08/registry-integrity-check.md)
