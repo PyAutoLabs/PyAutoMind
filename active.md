@@ -31,7 +31,11 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/131 (issued 2026-08-27)
 - issued: 2026-08-27
 - prompt: active/rectangular_experiments_gut_stash.md
-- status: workspace-dev
+- status: awaiting-merge — PR open, MERGE BLOCKED by Heart RED
+- pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/132 (opened 2026-08-27, label pending-release)
+- blocked-by: Heart RED `release validation FAILED (stage integrate)`. PR opened under the
+  human-authorized corrective-PR exception naming that exact reason (push + PR-open only).
+  Merge is NOT authorized under RED — resume with /prm once Heart clears.
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-experiments-gut-stash
 - repos:
   - autolens_workspace_developer: feature/rectangular-experiments-gut-stash
