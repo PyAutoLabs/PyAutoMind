@@ -176,6 +176,48 @@ CORRECTIONS to what this record said earlier (kept, not dropped):
 - Several "zero ducc0 frames" readings were sampling artifacts: $! was the
   `timeout` wrapper, not python, so they watched the wrong process.
 
+### Q4 DECIDED (2026-08-27) — report written and reviewed, deliberately NOT filed
+
+The acceptance criterion is "an upstream issue filed, OR a recorded decision not
+to with the reason". This is the decision.
+
+**Reason:** filing posts to jax-ml/jax, a third-party tracker outside this
+session's GitHub scope (PyAutoLabs repos only) — an outward-facing act on
+someone else's project, so it needs a person behind it. The hold is about WHO
+POSTS, not about whether the finding stands; nothing in the evidence is
+provisional.
+
+The report is written, human-reviewed and committed, so filing later costs only
+the paste: autolens_workspace_test 51512af,
+`.github/scripts/xla_fft_pool_reentrancy_upstream.md`, beside the reproducer.
+Committed rather than left in scratch on purpose — the CI job logs holding the
+original stacks expire in 90 days, and a scratch dir does not survive a session.
+
+Two late measurements folded in after review:
+- float64 is NOT required: default float32 hangs 0 pass / 6 hang. Report keeps
+  the float64 block (measured 8/8) and notes the shorter form is equally good.
+- The repeat loop IS load-bearing: a single call passed 5/5, the 20-iteration
+  loop hangs 8/8. A reader who trimmed it would wrongly conclude no repro.
+
+Recorded on the issue: comment 5445381638.
+
+### ALL FOUR ACCEPTANCE CRITERIA MET
+
+| Criterion | Status |
+|---|---|
+| Native stack naming where the workers are parked | YES — 11/11 CI dumps + local + standalone |
+| Q3 answered either way | YES — no; no quota exists, pool of 1 costs what the flag costs |
+| Upstream filed OR recorded decision not to | YES — recorded decision, above |
+| Flag removed from all four profiles, family re-timed | Deliberate non-action |
+
+The last row is conditional in the prompt on "if a better fix lands", and none
+has. The workaround stays in both smoke and release profiles of both test
+workspaces; the seven entries stay un-quarantined as they are.
+
+Open follow-up whenever wanted: the filing itself. If upstream fixes FftThunk,
+the ~15% comes back and the flag can be removed from all four profiles with the
+family re-timed, exactly as the last criterion describes.
+
 ### Still open
 
 - ~~Q2 reproducer PARTIAL~~ — SUPERSEDED by the section above; kept for the
