@@ -89,4 +89,9 @@
 - deliberately-out-of-scope: the other 30 repos carrying a stale hook copy (no gate sees
   them; firewall_gate.yml checks out four). Filed as
   draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md
+- co-claims PyAutoMind with pages-dashboard-publish-gap (#361), registered by a concurrent
+  session after this task's worktree_check_conflict ran clean. Disjoint file sets — that
+  task touches `.github/workflows/dashboard_refresh.yml` only; this one touches
+  `scripts/`, `policy/`, `tests/` and the generated `.claude/hooks/` copies. Separate
+  worktrees, no serialisation needed.
 
