@@ -131,6 +131,9 @@ MIND_RULES = [
     (".github/workflows/morning_status.yml", "DROP"),
     (".github/workflows/morning_health.yml", "DROP"),
     (".github/workflows/arxiv_papers.yml", "DROP"),
+    # rule 9c, same as its sibling above: scheduled, needs the papers
+    # webhook-less cross-repo PAT, and pushes to another org repo.
+    (".github/workflows/arxiv_interests.yml", "DROP"),
     # 9c also: the tenant-firewall gate checks out three sibling organ repos by
     # name (PyAutoBrain/PyAutoHeart/PyAutoHands). A fresh org has none of them,
     # and owner substitution only turns those into YOURORG/... placeholders —
@@ -209,6 +212,9 @@ MEMORY_RULES = [
     # content, the instance's overnight suggestions are not. A fresh repo gets
     # the header and no papers; PyAutoMemory#57.
     ("arxiv-inbox.md", "EMPTY"),
+    # EMPTY for the same reason: the day-batch format is template content, the
+    # instance's backlog of recommendations is not.
+    ("arxiv-interests.md", "EMPTY"),
     ("README.md", "SPECIAL:memory_readme"),
 ]
 
@@ -245,6 +251,7 @@ EMPTY_TITLES = {
     "queue.md": "# Queue",
     "reading-queue.md": "# Reading queue",
     "arxiv-inbox.md": "# arXiv inbox",
+    "arxiv-interests.md": "# arXiv interests",
 }
 
 # Generated header comments for EMPTY files matched by a glob rather than by

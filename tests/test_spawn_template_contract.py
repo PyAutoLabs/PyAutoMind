@@ -114,6 +114,13 @@ GITHUB_FILES = {
     ".github/workflows/firewall_gate.yml": _real("firewall_gate.yml"),
     ".github/workflows/pages_dashboard.yml": _real("pages_dashboard.yml"),
     ".github/scripts/arxiv_fetch.py": "QUERY = 'strong lensing OR lensed quasar'\n",
+    ".github/workflows/arxiv_interests.yml": (
+        "name: interests\non:\n  schedule:\n    - cron: \"30 2 * * 1-5\"\n"
+        "jobs:\n  i:\n    runs-on: ubuntu-latest\n    steps:\n"
+        "      - env:\n          PAT: ${{ secrets.PAT_PYAUTOLABS }}\n"
+        "        run: echo x\n"
+    ),
+    ".github/scripts/arxiv_interests.py": "CATEGORIES = ('astro-ph.CO',)\n",
 }
 
 DROPPED_GITHUB = [
@@ -135,6 +142,8 @@ DROPPED_GITHUB = [
     # fresh repo, and takes pages:write + id-token:write.
     ".github/workflows/pages_dashboard.yml",
     ".github/scripts/arxiv_fetch.py",
+    ".github/workflows/arxiv_interests.yml",
+    ".github/scripts/arxiv_interests.py",
 ]
 
 
