@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
 | [Backlog](#backlog) (`draft/`) | 132 |
@@ -154,14 +154,6 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
-
-<details><summary>📋 <a href="active/dashboard_bundles.md">Dashboard "Bundles" — grouping tasks for Fable-orchestrated multi-task sessions</a> — issued 2026-08-27</summary>
-
-```
-/start_dev active/dashboard_bundles.md
-```
-
-</details>
 
 <details><summary>📋 <a href="active/harvest_2026_08_27_gate_b_pt2.md"><code>@autolens_profiling</code> Harvest 2026-08-27: Gate B pt 2, recovered 8B rows, scorer +…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/182">issue #182</a> — issued 2026-08-27 — workspace-shipped, awaiting-merge (Heart RED override: release validation FAILED (stage integrate))</summary>
 
@@ -1445,13 +1437,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |
-| 2026-08-27 | issued | <a href="active/dashboard_bundles.md">Dashboard "Bundles" — grouping tasks for Fable-orchestrated…</a> |
+| 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">Claude Development Prompt: Joint <code>ell_comps</code> Disk Constraint</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
@@ -1461,12 +1452,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-24 | filed | <a href="draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
+| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
 | 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 | 2026-08-22 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the…</a> |
@@ -1476,12 +1467,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
+| 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 | 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
@@ -1491,12 +1482,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
 | 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
 | 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
+| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 | 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 | 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
 | 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
@@ -1506,6 +1497,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> |
 | 2026-08-04 | filed | <a href="draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage the streak</a> |
 | 2026-08-04 | filed | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> |
+| 2026-08-03 | filed | <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431…</a> |
 
 </details>
 

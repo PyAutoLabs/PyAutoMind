@@ -1,3 +1,18 @@
+## dashboard-bundles
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/309
+- completed: 2026-08-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/310
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/365
+
+- Dashboard **Bundles** section: sets of independent prompts for one Fable-orchestrated session (Opus subagents implement); every task still renders in its usual section. Rendered between Backlog and Recent in md + html.
+- `PyAutoMind/bundles.md` = human-pinned registry (epics.md-style schema, born empty); optional `Bundle: <slug>` prompt header mirrors `Epic:`.
+- Auto proposals are render-only and deterministic: group by Target; exclude epic members / `Blocked-by:` / `human-required` / `too-large` / pinned; small=1, medium=2, large=4 pts, cap 8, ≤4 members, ≤1 large, min 2; top 8 shown by urgency with a "Showing N of M" footer. Refresh rides the existing nightly `dashboard_refresh.yml`.
+- `PyAutoBrain/skills/start_bundle` = the orchestration contract: one `/start_dev` + issue + PR per member, one shared worktree per repo, architect plans / subagents implement. Paragraph added to `skills/WORKFLOW.md`.
+- Traps: Mind PR's dashboard freshness check renders with Brain `main` → merge the Brain renderer PR first. `Blocked-by:` always counts as unresolved (renderer is offline). Shipped on human RED ack (unrelated Heart reasons).
+- Deferred: phase 2 optional Claude refinement of the auto proposals, only if the rules-based bundles feel dumb.
+
+## Original prompt
+
 # Dashboard "Bundles" — grouping tasks for Fable-orchestrated multi-task sessions
 
 Type: feature
