@@ -113,6 +113,14 @@ Two facts, both measured:
    flag rather than a stale environment. A remedy keyed to a symptom is only as
    good as the symptom; run it unconditionally instead.
 
+   It also **unshallows the clones**, which is the leg with teeth. A remote
+   session clones shallow — measured 2026-08-27: this repo arrived with 78 of
+   4478 commits — and `git merge-base --is-ancestor` then answers "not an
+   ancestor" for a commit whose ancestry is merely *absent* from the clone.
+   That is the answer the ship and close-out procedures act on when proving a
+   branch merged, so an unbootstrapped session can read a merged branch as
+   unmerged and stop a close-out on nothing.
+
 2. **Then run the suite in parallel.** 4 cores, subprocess-heavy suites, no
    single slow test: PyAutoBrain's 554 tests take 96s on one core and 28s on
    four. `pytest-xdist` arrives with the bootstrap above, which is why that is
