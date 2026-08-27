@@ -1,23 +1,5 @@
 # Active Tasks
 
-## transformed-message-factor-gradient-unpack
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1501 (issued 2026-08-19)
-- issued: 2026-08-19
-- prompt: active/16_transformed_message_factor_gradient_unpack.md
-- status: 2026-08-27 — no local dev needed; awaiting human adjudication. Community PR
-  https://github.com/PyAutoLabs/PyAutoFit/pull/1502 (@trexfr-ops) fixes this exact unpack and its
-  CI is GREEN on head 1da31ed (the maintainer updated the branch with main; the first run was red
-  purely from a 46-commit-stale base). Adjudication brief (Bug Agent session 2026-08-27):
-  `factor_gradient` is the gradient of `factor`, which stays the physical density under every
-  #1498 option, so #1502 is mergeable independent of #1498; the diff was verified correct against
-  finite differences. Recommended: adjudicate #1498 as option B (base-space message contract,
-  public `Prior.logpdf` via `factor`), then merge #1502 after a two-transform test case
-  (e.g. `UniformPrior(0, 2)`) with a tighter tolerance. Decision pending human — merge/close
-  stays human.
-- registered: 2026-08-19 by the wake_up session — the issuing session (claude/autofit-priors-messages-audit-ylvenv)
-  filed the prompt + issue but not this entry, tripping Lifecycle Drift on main.
-- repos-none-claimed: this entry claims NO repos — one line deliberately, not 2-space bullets.
-
 ## xla-cpu-eigen-pool-deadlock
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1530 (issued 2026-08-27)
 - issued: 2026-08-27

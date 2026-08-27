@@ -117,7 +117,7 @@ over them.
 | 13 | collapse_prior_and_message (→ active/) | `Prior` and `Message` carry duplicated responsibility | **design issue FILED 2026-08-18** (bundled with 12) | #1500 | — |
 | 14 | [replace_transform_stack_with_bijectors](14_replace_transform_stack_with_bijectors.md) | Replace hand-rolled `AbstractDensityTransform` with `tfp.bijectors` / `numpyro.transforms` | parked — go/no-go hangs off the #1500 design decision | — | — |
 | 15 | [transformed_message_logpdf_jacobian](15_transformed_message_logpdf_jacobian.md) | `TransformedMessage.logpdf`/`pdf` omit the transform Jacobian (new finding from the 09 sweep) | **caller analysis complete + posted to #1498 2026-08-19** (EP loop is coherently base-space; `PriorFactor` is the one hybrid seam; public `Prior.logpdf` mis-promises physical) — awaiting external verification + contract adjudication with #1500 | #1498 | — |
-| 16 | transformed_message_factor_gradient_unpack (→ active/) | `TransformedMessage.factor_gradient` crashes on first call (unpacks 4 from a 3-tuple; dead code, found by the 15 caller analysis) | **issue filed 2026-08-19** — awaiting external verification; fix-or-delete hangs off the #1498 contract decision | #1501 | — |
+| 16 | transformed_message_factor_gradient_unpack (→ complete/2026/08/) | `TransformedMessage.factor_gradient` crashes on first call (unpacks 4 from a 3-tuple; dead code, found by the 15 caller analysis) | **SHIPPED 2026-08-27** — repaired (option 1), independent of #1498; community PR #1502 merged `ae37ea817`, gradient verified vs finite differences | #1501 (closed) | #1502 |
 
 ---
 

@@ -1,3 +1,14 @@
+Fixed `TransformedMessage.factor_gradient` (`autofit/messages/composed_transform.py`), which crashed on every call with `ValueError: not enough values to unpack (expected 4, got 3)` because it unpacked four values from `_transform_det_jac`, which returns `(x, logd, logd_jacs)`.
+
+Shipped via community PR https://github.com/PyAutoLabs/PyAutoFit/pull/1502 (@trexfr-ops), merged 2026-08-27 as `ae37ea817`; closes https://github.com/PyAutoLabs/PyAutoFit/issues/1501.
+
+- Unpack corrected; gradient chain-ruled as `grad = grad * jac + logd_grad` over `reversed(logd_jacs)`, i.e. back through the transforms in reverse application order, so `factor_gradient` is the true gradient of `factor` (physical density including the log-det term).
+- Added `test_transformed_message_factor_gradient` (analytic vs numerical derivative of `factor`).
+- Maintainer verification before merge: finite-difference agreement to ~1e-10 on 2-transform (logistic + linear shift on (0, 2)) and 3-transform (log-uniform) chains with a non-flat Normal base, and on a 2-vector message. The two-transform test case recommended by the 2026-08-27 adjudication was performed as a pre-merge check rather than added to the PR.
+- Option 1 (repair) chosen; independent of #1498 since `factor` stays the physical density under every #1498 option. #1498 remains open.
+
+## Original prompt
+
 # `@PyAutoFit` `TransformedMessage.factor_gradient` crashes on first call
 
 Type: bug
