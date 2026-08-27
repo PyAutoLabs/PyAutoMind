@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1165 records across 7 buckets.
+1167 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -115,6 +115,8 @@ _(curate hard-won records here — survives regeneration.)_
 - [inference-method-cards-seed](2026/08/inference-method-cards-seed.md)
 - [inference-programme-ledger](2026/08/inference-programme-ledger.md)
 - [intake-declared-difficulty](2026/08/intake-declared-difficulty.md) — the precedence rule "a DECLARED header key beats a value derived from
+- [interests-overpick-dedup-slack](2026/08/interests-overpick-dedup-slack.md) — the interests digest asked Claude for exactly 10 papers, and the
+- [interests-ranker-widened-categories](2026/08/interests-ranker-widened-categories.md)
 - [interferometer-delaunay-flaky-fitexception](2026/08/interferometer-delaunay-flaky-fitexception.md)
 - [interferometer-delaunay-nonpd-fitexception](2026/08/interferometer-delaunay-nonpd-fitexception.md)
 - [interferometer-start-here-integrate-oom](2026/08/interferometer-start-here-integrate-oom.md)
