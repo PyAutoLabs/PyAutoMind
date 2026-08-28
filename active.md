@@ -43,6 +43,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-func-list
 - repos:
+  - PyAutoArray: feature/interferometer-sparse-func-list
 - parallel-claim: PyAutoArray also claimed by numba-cpu-nnls-iteration-reduction (util/ NNLS + Cholesky files);
   this task touches inversion/inversion/interferometer/{sparse.py,inversion_interferometer_util.py} + factory.py +
   its tests only — disjoint file sets, own worktree approved by the human 2026-08-28.
