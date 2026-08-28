@@ -19,7 +19,9 @@
 - prompt: active/numba_cpu_hst_curvature_matrix_speedup.md
 - issued: 2026-08-28
 - session: claude --resume session_01SqrSVGPrFcUB1vvDsoTw3n
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/506
+- heart-ack: Heart graded RED score 45 at ship time (`pyauto-heart readiness` ts 2026-08-28T15:02:11Z). Human authorisation 2026-08-28, verbatim: "I authorize things to override the heart RED." Scope: push + PR-open for this task ONLY; merge and release stay human; does not extend to any other task. This is a PLAIN HUMAN OVERRIDE, not the corrective-PR exception — the diff repairs none of the named reasons. Reasons quoted verbatim from `pyauto-heart readiness --json`: RED "release validation FAILED (stage integrate)"; YELLOW "workspace validation not passing (2 failed, cloud#33179766004: autolens_test scripts/imaging/rectangular_mge.py, autolens_test scripts/imaging/rectangular_mge_rtu.py)"; YELLOW "manifest drift: session-start hooks (generated) — 32 mismatch(es) vs PyAutoMind/repos.yaml". RED is pre-existing on main and unrelated: all failing scripts are on the JAX likelihood path or in autofit, in other repos; this branch touches only the numba imaging-inversion path plus an additive-only convolver.py.
 - worktree: ~/Code/PyAutoLabs-wt/numba-hst-curvature-matrix-speedup
 - parallel-claim: autolens_profiling is also claimed by `nuts-warm-start-driver-and-a100-probe`; file sets are disjoint (this task: `scripts/imaging/likelihood_breakdown/`, `results/breakdown/imaging/`, `results/notes/`; NUTS: `scripts/misc/searches/`, `scripts/imaging/searches/nuts/`, `results/notes/inference/`). Human approved an own parallel worktree 2026-08-28. COMMIT DISCIPLINE: explicit pathspecs only in autolens_profiling, never `git add -A`.
 - repos:
