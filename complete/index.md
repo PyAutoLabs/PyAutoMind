@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1178 records across 7 buckets.
+1179 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -298,6 +298,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [wiki-hygiene](2026/08/wiki-hygiene.md) — auto-closed on merge
 - [wiki-provenance-restamp](2026/08/wiki-provenance-restamp.md)
 - [worktree-claim-parser-forms](2026/08/worktree-claim-parser-forms.md) — CLOSED completed
+- [xla-cpu-eigen-pool-deadlock](2026/08/xla-cpu-eigen-pool-deadlock.md)
 - [yang24-sidm-gravothermal-profile](2026/08/yang24-sidm-gravothermal-profile.md)
 
 ## 2026/07/ep_scale_collapse_assets

@@ -1,3 +1,77 @@
+# XLA CPU's Eigen pool wedges because FftThunk re-enters it via ducc0 — root-caused, reproduced standalone, upstream report written
+
+- **Issue:** PyAutoFit#1530 · **PR:** autolens_workspace_test#282 (`64bf5db8`), PyAutoMind#364 — merged 2026-08-27
+- **Repos:** autolens_workspace_test (`.github/scripts/retime.py`, `.github/workflows/retime.yml`, two new `.github/scripts/` files)
+- **Epic:** follow-up to `jax-compile-stall` (closed by `complete/2026/08/jax-vmap-materialisation-hang.md`, PyAutoFit#1528)
+- **Status: SHIPPED.** All four acceptance criteria met. The upstream report is written and reviewed but **deliberately not filed** — see "Q4".
+
+## The headline: #1528's workaround was right, and its explanation was incomplete
+
+#1528 established *where* the JAX vmap hang happens and *what* avoids it. It could not say **why**, because `faulthandler` sees Python frames only and the wedged threads are XLA's own.
+
+They are parked here — 11 of 11 CI dumps, both Python legs, plus the real script run locally and the standalone reproducer:
+
+```
+#5  ducc0::detail_threading::latch::wait()
+#8  ducc0::detail_threading::execParallel(...)
+#11 ducc0::google::r2c<double>(..., Eigen::ThreadPoolInterface*)
+#12 xla::cpu::FftThunk::Execute(...)
+#16 Eigen::ThreadPoolTempl<tsl::thread::EigenEnvironment>::WorkerLoop(int)
+```
+
+Frames 16 and 11 are the bug. **`FftThunk` runs ON an Eigen intra-op pool worker and hands ducc0 that same pool.** ducc0 fans the transform out into the pool it is already running on and blocks on a latch waiting for sub-tasks that need a free worker. Four workers, four concurrent FFT thunks, every worker waiting for a worker. Every thread in `futex_do_wait`; nothing spins — which is why a month of wall-clock evidence read as "no progress" rather than "slow".
+
+It accounts for everything the epic could not: the flag works because without a pool the thunk runs inline; the rate wanders because saturating every worker at once is a scheduling race; only the composite `multi_dataset`/MGE-group graphs carry enough concurrent FFT convolutions to get there; and the compile always finished first because FFT thunks execute at execution time.
+
+## Question 3 answered — no, and the ~15% is not coming back that way
+
+The topology banner, identical on both legs: `os.cpu_count()` 4, `sched_getaffinity` 4, `/proc/cpuinfo` 4, `cpuset.cpus.effective` 0-3, and **`cpu.max` absent — no CFS quota in force** on `ubuntu-latest`. The pool is correctly sized; the runner advertises nothing it cannot schedule. Oversubscription is refuted by measurement, not left untested.
+
+Confirmed from the other side too (run 33103725546): pool of 4 hung **5/6**, pool of 1 passed **6/6** (Fisher two-sided p = 0.015; p = 0.0002 pooling the twelve control-equivalent runs from 33099502356). But a pool of one completes in 56.2-62.5s against control's single completion at 48.1s — about what the flag already costs at ~62s.
+
+**So pool sizing recovers nothing by any route tested.** The flag stays in both smoke and release profiles of both test workspaces; the ~15% comes back only via an upstream fix.
+
+## The reproducer, and what it cost to get
+
+`.github/scripts/xla_fft_pool_reentrancy_repro.py` — jax + numpy only, no PyAuto import. **0 pass / 8 hang** by default; **8 pass / 0 hang** with `--xla_cpu_multi_thread_eigen=false`, 3-4s each. Fisher two-sided p = 0.000155. Sharper than the workspace script it stands in for (8/8 vs ~5/6).
+
+Two ingredients, each established by removing it:
+
+1. **A scatter feeding each FFT.** Without it XLA fuses the `rfft2`/multiply/`irfft2` chain into a `YnnFusionThunk`, ducc0 runs the transform **inline**, and no latch is ever taken. The real HLO reads `fft(%wrapped_scatter.423)` for all **282** of its fft ops, because autolens scatters a masked 1-D array into a 2-D grid before convolving.
+2. **Transforms above ducc0's fan-out threshold.** At the real graph's 180x180 ducc0 runs inline here; at 512x512 it fans out and deadlocks. Machine-dependent, so the docstring says raise `S` rather than quoting 512 as a constant.
+
+## Traps recorded
+
+- **The real script reproduces on an ordinary 4-CPU box.** Discovering that was the turning point: with the hang in hand the HLO could be dumped and read, instead of guessing upward from synthetic graphs. Three failed reproducer attempts preceded it that one HLO dump would have ruled out.
+- **`ENV: jax full_datasets` beats the profile default.** `mge_group.py` declares it, so `PYAUTO_SMALL_DATASETS=1` does **not** apply and the script runs full resolution. An early conclusion that "breadth, not size, opens the window" was built on the opposite assumption and was wrong.
+- **`Worker::Parallelize` / `CountDownAsyncValueRef` / `RunWaiterAndDeleteWaiterNode` are not a precondition.** They appear in 2 of CI's 4 wedged workers and were taken for the missing ingredient; the reproducer deadlocks with **zero** such frames, as does the real script. They are one of two ways a worker arrives at the FFT thunk.
+- **`$!` after `timeout cmd &` is the `timeout` wrapper, not the child.** Several "zero ducc0 frames" stack samples watched the wrong process and had to be discarded. Sample the real pid.
+- **A single call is one lottery ticket.** The minimal snippet passed 5/5 as a single call and hangs 8/8 in a 20-iteration loop. A reader who trims the loop concludes the bug does not reproduce.
+- **`retime.py` exits 0 on a timeout by design** — workflow `success` is not the verdict. Read the `NEITHER`/`STALL` line.
+
+## Instrumentation shipped
+
+- `--arm NAME:KEY=VALUE`, repeatable — env overlays dealt **round-robin within one dispatch**, so an A/B is ABAB by construction. #1528's campaign compared arms across five dispatches while its own record says the hang rate wanders; arms minutes apart remove that drift rather than arguing about it.
+- `--dump-after SECONDS` — reads a **still-running** child's stacks (`/proc/<pid>/task/*/wchan`, `py-spy dump --native`, `gdb thread apply all bt`) before the cap kills it. Dumping after the cap dumps a corpse. The `wchan` table needs no symbols and still separates a futex deadlock from a steal-loop spin.
+- An unconditional CPU-topology banner, which says explicitly when no CFS quota is in force so a null result reads as "untestable here" rather than as a refutation.
+- Un-armed behaviour is unchanged — verified in CI on the branch (run 33119522874, `[PASS] … 57.1s`, verdict `NEITHER`, zero `[arm]` lines).
+
+## Q4: the upstream report is written, reviewed, and not filed
+
+`.github/scripts/xla_fft_pool_reentrancy_upstream.md`, beside the reproducer. Committed rather than left in scratch because the CI logs holding the original stacks expire in 90 days.
+
+**Recorded decision not to file**, taken by the human after review: filing posts to `jax-ml/jax`, a third-party tracker outside the session's scope, so it wants a person behind it. The hold is about who posts, not whether the finding stands. Filing later costs only the paste.
+
+## Heart
+
+**Not consulted** — `pyauto-heart` unreachable from the `web-github` environment, as on phases 1-3 of the parent epic. The substitute gate was a default-path `retime` dispatch over the actual changed surface (green), plus the PR's own smoke suite, which passed on both legs.
+
+## Provenance
+
+Planned, measured and shipped by one `web-github` session on 2026-08-27, against direct clones rather than worktrees. Four CI dispatches of `retime.yml` did the measuring; the local 4-CPU box did the reproducer work once the real script was found to hang there too.
+
+## Original prompt
+
 # Why does XLA CPU's Eigen thread pool wedge on the multi_dataset vmap graphs?
 
 Type: research
