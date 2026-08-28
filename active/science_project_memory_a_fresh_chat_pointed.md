@@ -12,6 +12,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-08-28
 
 # Science-project memory: a fresh chat pointed at a project folder resumes by default
 

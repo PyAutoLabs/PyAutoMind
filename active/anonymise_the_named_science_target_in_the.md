@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: low
 Status: formalised
+Issued: 2026-08-28
 
 # Anonymise the named science target in the WFC3-IR hole regression
 

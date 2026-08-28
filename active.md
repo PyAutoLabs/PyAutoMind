@@ -1,5 +1,17 @@
 # Active Tasks
 
+## anonymise-wfc3-ir-hole-regression-target
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/73
+- prompt: active/anonymise_the_named_science_target_in_the.md
+- issued: 2026-08-28
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/anonymise-wfc3-ir-hole-regression-target
+- classification: library (PyAutoReduce only)
+- repos:
+- next-skill: start_library (PyAutoReduce) -> implement the rename -> ship_library
+- note: comment/test-name/doc rename only, no behaviour change. PyAutoMind history records
+  (complete/, condemned.md, autonomy_log.md) are deliberately left untouched.
+
 ## nuts-warm-start-driver-and-a100-probe
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/187
 - prompt: active/nuts_warm_start_driver_and_a100_probe.md
