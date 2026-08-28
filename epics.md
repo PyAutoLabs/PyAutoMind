@@ -60,7 +60,7 @@ epic, never picked standalone.
 ## numba-cpu-likelihood
 - title: Numba CPU sparse-operator likelihood — speed restoration
 - ledger: complete/2026/08/numba-cpu-mge-batch-convolve-cache.md
-- status: phase 1 SHIPPED 2026-08-27; phase 2b (solver in-place buffer) SHIPPED 2026-08-21 (backfilled); phase 3 (active-set iteration reduction) DRAFTED 2026-08-27; phase 2a kernel-CDF deferred
+- status: phase 1 SHIPPED 2026-08-27; phase 2b (solver in-place buffer) SHIPPED 2026-08-21 (backfilled); phase 3a (warm-start memo + solver diagnostics) ISSUED 2026-08-27 as PyAutoArray#498, not started; phase 2a kernel-CDF deferred
 - notes: Profiling shipped (autolens_profiling#151, complete/2026/08/numba-cpu-likelihood-profiling.md);
   first-call garbage bug shipped (complete/2026/08/numba-first-call-garbage-psf-weighted-data.md).
   Phase 1 = MGE batched convolution + operated-matrix caching + Convolver state reuse (PyAutoArray#497,
@@ -69,7 +69,8 @@ epic, never picked standalone.
   behind the Delaunay+AdaptImage fiducial). Phase 2b = fnnls in-place Cholesky buffer (PyAutoArray#453/#463,
   complete/2026/08/numba-fnnls-inplace-cholesky-buffer.md — shipped untracked, backfilled). Phase 3 =
   active-set ITERATION reduction for the positive-only solve (the 72-78% Delaunay term is iteration-bound,
-  not linear-algebra-bound): draft/feature/autoarray/numba_cpu_likelihood_nnls_iteration_reduction.md.
+  not linear-algebra-bound): 3a = active/numba_cpu_likelihood_nnls_iteration_reduction.md (PyAutoArray#498);
+  3b = batched active-set moves, to file from 3a's diagnostic.
   NOTE the "restore the deleted numba fnnls" idea is RETIRED (#151 comment 5) — do not re-file it.
   Measurement prerequisite for every phase: draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md.
   One issue at a time, never a bulk queue.
