@@ -10,7 +10,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-08-27
-Blocked-by: draft/feature/pyautomind/bundle_theme_grouping.md
+Blocked-by: active/bundle_theme_grouping.md (PyAutoBrain#311)
 
 ## Premise
 

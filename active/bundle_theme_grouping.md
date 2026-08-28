@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-08-27
+Issued: 2026-08-27
 
 ## Original request (verbatim)
 
