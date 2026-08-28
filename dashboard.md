@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/ell_comps_joint_disk_constraint.md">Claude Development Prompt: Joint <code>ell_comps</code> Disk Constraint</a> — issued 2026-08-27</summary>
+<details><summary>📋 <a href="active/ell_comps_joint_disk_constraint.md">Claude Development Prompt: Joint <code>ell_comps</code> Disk Constraint</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1537">issue #1537</a> — issued 2026-08-27 — library-dev</summary>
 
 ```
 /start_dev active/ell_comps_joint_disk_constraint.md
