@@ -40,19 +40,21 @@
 - issued: 2026-08-28
 - user-facing: true
 - session: claude --resume b766a19b-260c-4b56-8d19-072fa9a34b28
-- status: library-shipped, awaiting-merge
+- status: workspace-dev (library-shipped PR #500 awaiting-merge)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/500
 - heart-ack: RED acknowledged 2026-08-28 (release integrate failure = MGE pin pair; shared_preloads.py timeout; hook-manifest drift — all unrelated)
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-func-list
 - repos:
   - PyAutoArray: feature/interferometer-sparse-func-list
+  - autolens_workspace_test: feature/interferometer-sparse-func-list
+  - autogalaxy_workspace_test: feature/interferometer-sparse-func-list
 - parallel-claim: PyAutoArray also claimed by numba-cpu-nnls-iteration-reduction (util/ NNLS + Cholesky files);
   this task touches inversion/inversion/interferometer/{sparse.py,inversion_interferometer_util.py} + factory.py +
   its tests only — disjoint file sets, own worktree approved by the human 2026-08-28.
 - note: external reporter @HRSAstro. Receipt + plan comments posted 2026-08-28 (milestones 1-2 of ~4).
   Plan: off-diag operator methods on InterferometerSparseOperator, func-list dispatch in
   InversionInterferometerSparse.curvature_matrix/data_vector, loud factory failure for unrepresentable
-  sparse routing, parity tests vs InversionInterferometerMapping. Commit 539d9ffd, PR #500 open (workspace impact: none — option iii). Next: /prm once CI green; milestone #4 (Shipped) comment at merge.
+  sparse routing, parity tests vs InversionInterferometerMapping. Commit 539d9ffd, PR #500 open (workspace impact: none — option iii). Workspace follow-up (user request 2026-08-28): sparse-vs-mapping FitInterferometer parity scripts in autolens_workspace_test + autogalaxy_workspace_test (+ imaging for autogalaxy), registered in smoke_tests.txt with `ENV: jax`. Next: /ship_workspace behind library-first gate, /prm #500 then workspace PRs; milestone #4 comment at merge.
 
 ## ell-comps-disk-constraint
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1537
