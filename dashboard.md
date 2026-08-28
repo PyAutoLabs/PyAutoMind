@@ -45,11 +45,11 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 133 |
+| [Backlog](#backlog) (`draft/`) | 134 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 14
+**Highest priority** (filed as `high`) — showing 12 of 15
 
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
@@ -123,6 +123,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
 
 ```
@@ -135,14 +143,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/samples_parameter_paths.md
 ```
 
 </details>
@@ -255,7 +255,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**133** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 29</summary>
@@ -495,12 +495,20 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 15</summary>
+<summary><b>research</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
 ```
 /start_dev draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
 ```
 
 </details>
