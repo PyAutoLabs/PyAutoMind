@@ -40,7 +40,9 @@
 - issued: 2026-08-28
 - user-facing: true
 - session: claude --resume b766a19b-260c-4b56-8d19-072fa9a34b28
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/500
+- heart-ack: RED acknowledged 2026-08-28 (release integrate failure = MGE pin pair; shared_preloads.py timeout; hook-manifest drift — all unrelated)
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-func-list
 - repos:
   - PyAutoArray: feature/interferometer-sparse-func-list
@@ -50,7 +52,7 @@
 - note: external reporter @HRSAstro. Receipt + plan comments posted 2026-08-28 (milestones 1-2 of ~4).
   Plan: off-diag operator methods on InterferometerSparseOperator, func-list dispatch in
   InversionInterferometerSparse.curvature_matrix/data_vector, loud factory failure for unrepresentable
-  sparse routing, parity tests vs InversionInterferometerMapping. Next: /start_library, then /update_issue at PR-open.
+  sparse routing, parity tests vs InversionInterferometerMapping. Commit 539d9ffd, PR #500 open (workspace impact: none — option iii). Next: /prm once CI green; milestone #4 (Shipped) comment at merge.
 
 ## ell-comps-disk-constraint
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1537
