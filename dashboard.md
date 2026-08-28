@@ -179,7 +179,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/science_project_memory_a_fresh_chat_pointed.md">Science-project memory: a fresh chat pointed at a project folder resumes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/315">issue #315</a> — issued 2026-08-28 — library-dev</summary>
+<details><summary>📋 <a href="active/science_project_memory_a_fresh_chat_pointed.md">Science-project memory: a fresh chat pointed at a project folder resumes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/315">issue #315</a> — issued 2026-08-28 — pushed, pr-blocked (Heart RED)</summary>
 
 ```
 /start_dev active/science_project_memory_a_fresh_chat_pointed.md
