@@ -63,3 +63,13 @@
 - note: Phase 1 of the F speed-up on the numba CPU path at HST: instrument F's sub-blocks, remove
   redundant passes, FFT the dense mapper×linear-func convolution if the split confirms it; >=2x on F,
   pins unchanged.
+
+## nautilus-plotter-real-search-cap
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/149
+- prompt: active/nautilus_plotter_py_corner_cornerpy_raises_value.md
+- issued: 2026-08-28
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/nautilus-plotter-real-search-cap
+- repos:
+  - autofit_workspace: feature/nautilus-plotter-real-search-cap
+- note: workspace half of nautilus-test-mode-degenerate-corner (PyAutoFit#1542) after the human declined a global test-mode budget change — ENV: real_search + explicit n_like_max in nautilus_plotter.py.
