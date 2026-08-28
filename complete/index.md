@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1184 records across 7 buckets.
+1185 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -176,6 +176,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [nufft-parity-full-datasets](2026/08/nufft-parity-full-datasets.md)
 - [numba-cpu-likelihood-profiling](2026/08/numba-cpu-likelihood-profiling.md)
 - [numba-cpu-mge-batch-convolve-cache](2026/08/numba-cpu-mge-batch-convolve-cache.md)
+- [numba-cpu-nnls-iteration-reduction](2026/08/numba-cpu-nnls-iteration-reduction.md)
 - [numba-first-call-garbage-psf-weighted-data](2026/08/numba-first-call-garbage-psf-weighted-data.md)
 - [numba-fnnls-inplace-cholesky-buffer](2026/08/numba-fnnls-inplace-cholesky-buffer.md)
 - [numba-kernel-shift-axes](2026/08/numba-kernel-shift-axes.md) — issued 2026-08-24, auto-closed by the merge
