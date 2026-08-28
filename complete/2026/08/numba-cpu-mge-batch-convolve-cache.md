@@ -29,8 +29,11 @@
   across 20+ configurations; pinned by tests in both repos.
 - gate: shipped over Heart RED `release validation FAILED (stage integrate)` (unrelated
   autolens_workspace_test `rectangular_mge{,_rtu}.py` pin drift) on explicit human authorisation.
-- epic next: phase 2 kernel-CDF fast path (deferred behind the Delaunay fiducial); phase 3 numba
-  `fnnls` positive-only solver restoration (PyAutoArray 8bb449a1) — NOT YET FILED.
+- epic next: phase 2a kernel-CDF fast path (deferred behind the Delaunay fiducial); phase 3 = NNLS
+  active-set iteration reduction (draft/feature/autoarray/numba_cpu_likelihood_nnls_iteration_reduction.md).
+  CORRECTION 2026-08-27: the "restore deleted numba fnnls (8bb449a1)" line this record first carried was
+  a stale #151 comment-4 suspicion — retired in comment 5; the in-place buffer work already shipped as
+  PyAutoArray#453/#463 (record complete/2026/08/numba-fnnls-inplace-cholesky-buffer.md).
 - affected-repos:
   - PyAutoArray
   - PyAutoGalaxy

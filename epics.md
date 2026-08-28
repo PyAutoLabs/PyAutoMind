@@ -60,11 +60,16 @@ epic, never picked standalone.
 ## numba-cpu-likelihood
 - title: Numba CPU sparse-operator likelihood — speed restoration
 - ledger: complete/2026/08/numba-cpu-mge-batch-convolve-cache.md
-- status: phase 1 SHIPPED 2026-08-27 (PyAutoArray#497 + PyAutoGalaxy#588; MGE step 3.7-5.4x); phase 2 deferred; phase 3 not filed
-- notes: Profiling shipped (autolens_profiling#151, record complete/2026/08/numba-cpu-likelihood-profiling.md);
+- status: phase 1 SHIPPED 2026-08-27; phase 2b (solver in-place buffer) SHIPPED 2026-08-21 (backfilled); phase 3 (active-set iteration reduction) DRAFTED 2026-08-27; phase 2a kernel-CDF deferred
+- notes: Profiling shipped (autolens_profiling#151, complete/2026/08/numba-cpu-likelihood-profiling.md);
   first-call garbage bug shipped (complete/2026/08/numba-first-call-garbage-psf-weighted-data.md).
-  Phase 1 = MGE batched convolution + operated-matrix caching + Convolver state reuse.
-  Phase 2 = kernel-CDF numba fast path (draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md,
-  DEFERRED by user 2026-08-20 behind the Delaunay+AdaptImage fiducial). Phase 3 = numba `fnnls` positive-only
-  solver restoration against PyAutoArray 8bb449a1 — the headline 78%-of-eval finding — NOT YET FILED.
-  Ledger moves with the current phase's prompt; one issue at a time, never a bulk queue.
+  Phase 1 = MGE batched convolution + operated-matrix caching + Convolver state reuse (PyAutoArray#497,
+  PyAutoGalaxy#588). Phase 2a = kernel-CDF numba fast path
+  (draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md, DEFERRED by user 2026-08-20
+  behind the Delaunay+AdaptImage fiducial). Phase 2b = fnnls in-place Cholesky buffer (PyAutoArray#453/#463,
+  complete/2026/08/numba-fnnls-inplace-cholesky-buffer.md — shipped untracked, backfilled). Phase 3 =
+  active-set ITERATION reduction for the positive-only solve (the 72-78% Delaunay term is iteration-bound,
+  not linear-algebra-bound): draft/feature/autoarray/numba_cpu_likelihood_nnls_iteration_reduction.md.
+  NOTE the "restore the deleted numba fnnls" idea is RETIRED (#151 comment 5) — do not re-file it.
+  Measurement prerequisite for every phase: draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md.
+  One issue at a time, never a bulk queue.

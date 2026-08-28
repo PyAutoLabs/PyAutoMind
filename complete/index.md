@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1177 records across 7 buckets.
+1178 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -173,6 +173,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [numba-cpu-likelihood-profiling](2026/08/numba-cpu-likelihood-profiling.md)
 - [numba-cpu-mge-batch-convolve-cache](2026/08/numba-cpu-mge-batch-convolve-cache.md)
 - [numba-first-call-garbage-psf-weighted-data](2026/08/numba-first-call-garbage-psf-weighted-data.md)
+- [numba-fnnls-inplace-cholesky-buffer](2026/08/numba-fnnls-inplace-cholesky-buffer.md)
 - [numba-kernel-shift-axes](2026/08/numba-kernel-shift-axes.md) — issued 2026-08-24, auto-closed by the merge
 - [numerical-hazard-profiling](2026/08/numerical-hazard-profiling.md) — Phase 1 established the reusable numerical-hazard profiling framework, typed risk measurements, reachability a…
 - [numerical-inversion-failures](2026/08/numerical-inversion-failures.md)
