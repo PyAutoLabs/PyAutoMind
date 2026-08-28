@@ -10,7 +10,7 @@
   - PyAutoArray: feature/numba-cpu-nnls-iteration-reduction
   - autolens_profiling: feature/numba-cpu-nnls-iteration-reduction
 - note: epic numba-cpu-likelihood phase 3a. 2026-08-28: implementation + measurement DONE, committed
-  LOCALLY only (PyAutoArray 105f6ea4, autolens_profiling 26cbfef; neither pushed, no PRs). Gate met:
+  LOCALLY only (PyAutoArray 105f6ea4+cfd7f802 guard, autolens_profiling 26cbfef+2ebf80b matrix; neither pushed, no PRs). 32-cell lens-model robustness matrix clean; relative fallback guard nnls_warm_start_error_tolerance=1.5 added. Gate met:
   random-walk median iterations 9.9x (euclid) / 4.0x (hst) fewer, parity 3e-14 → default TRUE shipped.
   Heart RED `release validation FAILED (stage integrate)` = the unfixed autolens_workspace_test MGE pin
   pair (rectangular_mge.py / rectangular_mge_rtu.py, still 99d63b3) — unrelated, but ship_library forbids
