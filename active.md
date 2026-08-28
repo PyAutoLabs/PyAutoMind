@@ -29,6 +29,7 @@
 
 ## ell-comps-disk-constraint
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1537
+- prompt: active/ell_comps_joint_disk_constraint.md
 - issued: 2026-08-27
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/ell-comps-disk-constraint
