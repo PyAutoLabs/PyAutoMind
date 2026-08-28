@@ -1,3 +1,21 @@
+# delaunay-nn-env-header
+
+Follow-up from #499 close-out. `misc/jax_assertions/delaunay_nn.py` / `delaunay_nn_caps.py`
+declared `ENV: jax full_datasets` but CI ran them with JAX off and small datasets.
+
+## Shipped
+- autolens_workspace_test#285 — added the `__Env__` header AND moved the docstring summary line
+  off the opening `"""`: `read_env_declaration()`'s delimiter regex only matches a bare `"""` line,
+  so a prose-on-opener docstring inverts the block parity and the whole declaration is skipped.
+  These were the only 2 of 92 `__Env__` scripts with a non-bare opener. Now resolves
+  `PYAUTO_DISABLE_JAX=None`, `PYAUTO_SMALL_DATASETS=None`; smoke runner 28.1 s / 50.6 s vs 300 s cap.
+
+## Open (not filed here)
+- `validate_env_profiles.py` is clean before and after: it detects neither a headerless `ENV:`
+  line nor a non-bare docstring opener swallowing a valid declaration. Candidate PyAutoHands task.
+
+## Original prompt
+
 # delaunay_nn jax_assertions carry a dead ENV declaration (no __Env__ header)
 
 Type: bug

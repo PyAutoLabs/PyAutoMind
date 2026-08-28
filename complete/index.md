@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1186 records across 7 buckets.
+1188 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -80,6 +80,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [dataset-allowlist-small-datasets-guard](2026/08/dataset-allowlist-small-datasets-guard.md)
 - [defer-scipy-sparse-import](2026/08/defer-scipy-sparse-import.md)
 - [delaunay-nan-probe-fix](2026/08/delaunay-nan-probe-fix.md)
+- [delaunay-nn-env-header](2026/08/delaunay-nn-env-header.md)
 - [delaunay-nn-laptop-gpu-profile](2026/08/delaunay-nn-laptop-gpu-profile.md) — Added the CPU, RTX 2060, and A100 DelaunayNN profiling sweep and result artifacts at matched PyAuto source rev…
 - [dep-floors-source-chain-ci](2026/08/dep-floors-source-chain-ci.md)
 - [dev-workflow-helpers-laptop-paths](2026/08/dev-workflow-helpers-laptop-paths.md)
@@ -174,6 +175,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [notebook-setup-notebook-regen-drift](2026/08/notebook-setup-notebook-regen-drift.md)
 - [nss-remainline-mainline-blackjax](2026/08/nss-remainline-mainline-blackjax.md)
 - [nufft-parity-full-datasets](2026/08/nufft-parity-full-datasets.md)
+- [numba-cpu-kernel-cdf-fast-path](2026/08/numba-cpu-kernel-cdf-fast-path.md)
 - [numba-cpu-likelihood-profiling](2026/08/numba-cpu-likelihood-profiling.md)
 - [numba-cpu-mge-batch-convolve-cache](2026/08/numba-cpu-mge-batch-convolve-cache.md)
 - [numba-cpu-nnls-iteration-reduction](2026/08/numba-cpu-nnls-iteration-reduction.md)

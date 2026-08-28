@@ -1,16 +1,5 @@
 # Active Tasks
 
-## delaunay-nn-env-header
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/284
-- issued: 2026-08-28
-- prompt: active/delaunay_nn_env_header.md
-- session: claude --resume b766a19b-260c-4b56-8d19-072fa9a34b28
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-env-header
-- repos:
-  - autolens_workspace_test: feature/delaunay-nn-env-header
-- note: follow-up from #499 close-out. If smoke runtime with jax+full_datasets exceeds budget, stop and report before touching tokens.
-
 ## phase8b-f2-ruling-scorer-verdict
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/185
 - issued: 2026-08-28
