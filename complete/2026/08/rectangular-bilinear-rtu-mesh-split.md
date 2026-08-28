@@ -1,3 +1,27 @@
+# Rectangular mesh split: Bilinear (fast CPU default) vs RTU (advanced/GPU) — shipped 2026-08-21, retired from the backlog 2026-08-28
+
+- **Issue:** PyAutoArray#461 · **PRs:** PyAutoArray#462 (merged 2026-08-21), autolens_workspace#495, autogalaxy_workspace#221, autolens_workspace_test `99d63b3` + `f0ef8f2` (pins regenerated)
+- **Repos:** PyAutoArray, autolens_workspace, autogalaxy_workspace, autolens_workspace_test
+- **Status: SHIPPED** (retired by hand after `intake reconcile` flagged the draft; it never went through `active/`, so no ship hook wrote a record)
+
+## Evidence that every goal landed
+
+1. **PyAutoArray** — `autoarray/inversion/mesh/mesh/__init__.py` on `main` exports exactly the four adaptive classes the prompt asked for: `RectangularBilinearAdaptDensity`, `RectangularBilinearAdaptImage` (resurrected rank-CDF), `RectangularRTUAdaptDensity`, `RectangularRTUAdaptImage` (kernel-CDF renames), with `RectangularUniform` retained. PR #462 "split rectangular adaptive meshes — Bilinear (rank-CDF) vs RTU (kernel-CDF)".
+2. **Workspaces** — `autolens_workspace`, `autogalaxy_workspace` and `HowToLens` carry zero references to the pre-split names; the pixelization examples default to `RectangularBilinearAdaptDensity` and document RTU as the advanced GPU / gradient-sampler / interferometer option. Prior configs `config/priors/mesh/rectangular_{bilinear,rtu}_adapt_{density,image}.yaml` exist.
+3. **_test workspace** — `99d63b3` "rectangular mesh split — Bilinear pins regenerated, RTU pin copies kept", then `f0ef8f2` regenerated the rectangular constants (the two `imaging/jax_likelihood/rectangular_mge*.py` pins it skipped are the standing Heart RED, tracked separately — see `project_integrate_red_imaging_mge_pins`).
+4. **autolens_profiling#153 / PROGRAMME Phase 14** — adjudicated 2026-08-21 on the issue (option 2, rank-CDF resurrection); the issue stays open for its own residuals (versioned Bilinear runtime cell, PROGRAMME row flip, interpolated-kernel-CDF lever for RTU), which are not this prompt's.
+
+The carried-in `misc/pixelization_spline_*.py` breakage no longer exists (files gone from `autolens_workspace_developer/jax_profiling/misc/`).
+
+Successors that built on this default: `numba-cpu-*` epic records and `numba-hst-curvature-matrix-speedup.md` / `-phase2.md` (all profile the `RectangularBilinearAdaptDensity` default; HST numba evaluation 21.3 s → 0.33 s by 2026-08-28).
+
+## Left open (not blocking retirement)
+
+- `autolens_workspace_test/config/priors/mesh/rectangular.yaml` still keys `RectangularAdaptDensity:` / `RectangularAdaptImage:` — a stale orphan prior file for classes that no longer exist (the _test scripts run on the renamed yamls). Hygiene sweep candidate (`project_hygiene_orphan_config_files`).
+- The Enzi-citation docs draft `draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md` was to be folded in; it remains a separate draft and stands on its own.
+
+## Original prompt
+
 # Rectangular mesh split: Bilinear (fast CPU default) vs RTU (advanced/GPU)
 
 Type: feature
