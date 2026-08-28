@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-08-28
 
 ## Request (verbatim)
 
