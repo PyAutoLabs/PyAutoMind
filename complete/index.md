@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1188 records across 7 buckets.
+1190 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -140,6 +140,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [jax-stall-shared-preloads-retime-refutation](2026/08/jax-stall-shared-preloads-retime-refutation.md)
 - [jax-traceback-filtering-release-harness](2026/08/jax-traceback-filtering-release-harness.md)
 - [jax-vmap-materialisation-hang](2026/08/jax-vmap-materialisation-hang.md) — jax-compile-stall phase 3
+- [joint-clipper-compose-with-bijector](2026/08/joint-clipper-compose-with-bijector.md) — a ball survives a COMMON linear rescale — R becomes R/s, so the blanket refusal was stronger than the geometry
 - [knowledge-board](2026/08/knowledge-board.md) — auto-closed on merge
 - [lacosmic-cr-option-and-star-pass-decoupling](2026/08/lacosmic-cr-option-and-star-pass-decoupling.md) — both deliberately OPEN — closure is the default-flip decision, not this ship
 - [latex-docstrings-invalid-escape-warnings](2026/08/latex-docstrings-invalid-escape-warnings.md)
@@ -195,6 +196,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [per-parameter-step-scaling](2026/08/per-parameter-step-scaling.md)
 - [persist-smoke-environments](2026/08/persist-smoke-environments.md) — Made smoke dependency environments durable and isolated per library and Python version, with version-handshake…
 - [phase5-smoke-ordered-trap-scripts](2026/08/phase5-smoke-ordered-trap-scripts.md)
+- [phase8b-f2-ruling-scorer-verdict](2026/08/phase8b-f2-ruling-scorer-verdict.md) — Phase 8B verdict FALSIFIED 3/4 — but PRELIMINARY 24/39, and half the rows sit outside the unit disk
 - [pix-prodigy-gpu-compat](2026/08/pix-prodigy-gpu-compat.md)
 - [pixelization-eager-jit-divergence](2026/08/pixelization-eager-jit-divergence.md)
 - [plot-array-stale-kwargs](2026/08/plot-array-stale-kwargs.md)
