@@ -27,6 +27,13 @@ body{margin:0 auto;max-width:44rem;padding:0 1rem 4rem;background:var(--bg);
  color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",
  Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%;
  overflow-wrap:anywhere}
+/* 44rem is a PHONE reading measure, and these boards are read on laptops too.
+   Above the cap the column stops being a measure and starts being a waste:
+   the data boards (Heart's check table, Mind's task lists) run ~40 short
+   lines down a 704px strip with the rest of the screen empty. One step up on
+   laptop-class viewports, and only there — every narrower screen keeps the
+   phone shape byte for byte. */
+@media(min-width:64rem){body{max-width:60rem}}
 img,svg,table{max-width:100%}
 pre{overflow-x:auto}
 a{color:var(--accent);text-decoration:none}
