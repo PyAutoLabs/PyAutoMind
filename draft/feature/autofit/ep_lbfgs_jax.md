@@ -2,6 +2,9 @@
 
 Type: feature
 Target: PyAutoFit
+Themes:
+- graphical-ep
+- samplers
 Difficulty: medium
 Autonomy: safe
 Priority: normal

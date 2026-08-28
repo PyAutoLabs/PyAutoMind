@@ -4,6 +4,9 @@ Type: feature
 Target: workspaces
 Repos:
 - workspaces
+Themes:
+- cluster
+- point-source
 Difficulty: large
 Autonomy: supervised
 Priority: high

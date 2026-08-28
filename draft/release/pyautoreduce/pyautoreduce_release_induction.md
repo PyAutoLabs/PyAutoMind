@@ -8,6 +8,9 @@ Repos:
 - PyAutoBrain
 - PyAutoHeart
 - PyAutoMind
+Themes:
+- release
+- reduce
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

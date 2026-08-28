@@ -4,6 +4,9 @@ Type: refactor
 Target: pyautomind
 Repos:
 - PyAutoMind
+Themes:
+- mind-workflow
+- hygiene
 Difficulty: medium
 Autonomy: safe
 Priority: low

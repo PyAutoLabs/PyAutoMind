@@ -5,6 +5,10 @@ Target: autolens_workspace
 Repos:
 - autolens_workspace
 - autolens_workspace_test
+Themes:
+- cluster
+- point-source
+- notebooks
 Difficulty: medium
 Autonomy: supervised
 Priority: high

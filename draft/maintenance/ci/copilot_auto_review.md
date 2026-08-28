@@ -4,6 +4,9 @@ Type: maintenance
 Target: PyAutoLabs org (all repositories) — GitHub config, not a code repo
 Repos:
 - (org-level) PyAutoLabs — applies to all repositories, present and future
+Themes:
+- ci-smoke
+- mind-workflow
 Status: planned
 Difficulty: large
 Autonomy: supervised

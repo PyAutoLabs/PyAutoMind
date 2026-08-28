@@ -7,6 +7,8 @@ Repos:
 - @PyAutoArray
 - @PyAutoGalaxy
 - @PyAutoLens
+Themes:
+- release
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

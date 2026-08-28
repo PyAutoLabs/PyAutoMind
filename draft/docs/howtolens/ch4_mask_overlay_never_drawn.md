@@ -4,6 +4,9 @@ Type: docs
 Target: howtolens
 Repos:
 - HowToLens
+Themes:
+- notebooks
+- visualization
 Difficulty: small
 Autonomy: supervised
 Priority: low

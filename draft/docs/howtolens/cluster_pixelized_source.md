@@ -6,6 +6,10 @@ Repos:
 - PyAutoLens
 - autolens_workspace
 - howtolens
+Themes:
+- cluster
+- pixelization
+- notebooks
 Difficulty: large
 Autonomy: supervised
 Priority: normal

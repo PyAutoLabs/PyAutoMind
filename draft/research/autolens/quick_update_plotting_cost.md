@@ -5,6 +5,9 @@ Target: autolens
 Repos:
 - PyAutoLens
 - PyAutoGalaxy
+Themes:
+- visualization
+- profiling
 Difficulty: medium
 Autonomy: supervised
 Priority: medium

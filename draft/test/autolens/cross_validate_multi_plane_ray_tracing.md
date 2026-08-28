@@ -6,6 +6,9 @@ Repos:
 - PyAutoGalaxy
 - PyAutoLens
 - autolens_workspace
+Themes:
+- ci-smoke
+- notebooks
 Difficulty: large
 Autonomy: supervised
 Priority: high

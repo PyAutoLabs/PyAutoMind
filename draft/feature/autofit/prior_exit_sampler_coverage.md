@@ -4,6 +4,9 @@ Type: feature
 Target: autofit
 Repos:
 - PyAutoFit
+Themes:
+- samplers
+- jax-gradient
 Difficulty: medium
 Autonomy: supervised
 Priority: medium

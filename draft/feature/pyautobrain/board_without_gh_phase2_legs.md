@@ -4,6 +4,9 @@ Type: feature
 Target: pyautobrain
 Repos:
 - PyAutoBrain
+Themes:
+- dashboard
+- mind-workflow
 Difficulty: small
 Autonomy: supervised
 Priority: normal

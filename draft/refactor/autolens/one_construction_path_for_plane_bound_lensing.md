@@ -4,6 +4,8 @@ Type: refactor
 Target: PyAutoLens
 Repos:
 - PyAutoLens
+Themes:
+- point-source
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

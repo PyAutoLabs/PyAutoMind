@@ -2,6 +2,8 @@
 
 Type: research
 Target: graphical_ep
+Themes:
+- graphical-ep
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

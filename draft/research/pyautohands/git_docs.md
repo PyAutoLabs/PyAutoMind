@@ -2,6 +2,8 @@
 
 Type: research
 Target: PyAutoHands
+Themes:
+- docs-hub
 Difficulty: small
 Autonomy: supervised
 Priority: normal

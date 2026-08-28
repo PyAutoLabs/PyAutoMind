@@ -2,6 +2,9 @@
 
 Type: feature
 Target: PyAutoGalaxy
+Themes:
+- jax-gradient
+- samplers
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

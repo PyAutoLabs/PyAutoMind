@@ -6,6 +6,9 @@ Repos:
 - autogalaxy_workspace
 - autofit_workspace
 - autolens_workspace
+Themes:
+- hygiene
+- notebooks
 Difficulty: small
 Autonomy: supervised
 Priority: normal

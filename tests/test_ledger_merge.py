@@ -32,6 +32,7 @@ def test_ledger_dirs_and_registry_files_are_ledger():
         "parked.md",
         "condemned.md",
         "epics.md",
+        "bundles.md",
         "ideas.md",
         "autonomy_log.md",
         "dashboard.md",
@@ -53,6 +54,10 @@ def test_every_code_home_needs_a_human():
         "policy/anything.md",
         "docs/pyautobrain/page.md",
         "repos.yaml",
+        # A CONTROLLED vocabulary, not registry state: a `Themes:` keyword
+        # added with no human in the loop is a grouping key nobody chose, and
+        # the dashboard groups every bundle on it.
+        "themes.md",
         "README.md",
         "AGENTS.md",
         "CLAUDE.md",

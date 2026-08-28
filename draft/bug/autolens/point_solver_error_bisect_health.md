@@ -7,6 +7,8 @@ Repos:
 - PyAutoLens
 - autolens_profiling
 - PyAutoNerves
+Themes:
+- point-source
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

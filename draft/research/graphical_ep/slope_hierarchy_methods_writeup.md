@@ -4,6 +4,9 @@ Type: docs
 Target: graphical_ep
 Repos:
 - slope_hierarchy
+Themes:
+- graphical-ep
+- samplers
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

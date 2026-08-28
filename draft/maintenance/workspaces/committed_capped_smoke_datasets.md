@@ -4,6 +4,9 @@ Type: maintenance
 Target: autolens_workspace
 Repos:
 - autolens_workspace
+Themes:
+- ci-smoke
+- hygiene
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

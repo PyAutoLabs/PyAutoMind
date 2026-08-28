@@ -2,6 +2,9 @@
 
 Type: feature
 Target: workspaces
+Themes:
+- point-source
+- notebooks
 Difficulty: large
 Autonomy: supervised
 Priority: normal

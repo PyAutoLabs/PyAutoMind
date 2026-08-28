@@ -2,6 +2,8 @@
 
 Type: feature
 Target: pyautomind
+Themes:
+- mind-workflow
 Difficulty: hard
 Autonomy: supervised
 Priority: low

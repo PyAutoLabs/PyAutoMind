@@ -2,6 +2,9 @@
 
 Type: bug
 Target: health_fixes
+Themes:
+- release
+- samplers
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

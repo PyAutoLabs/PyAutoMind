@@ -2,6 +2,9 @@
 
 Type: feature
 Target: workspaces
+Themes:
+- cluster
+- notebooks
 Difficulty: medium
 Autonomy: safe
 Priority: normal

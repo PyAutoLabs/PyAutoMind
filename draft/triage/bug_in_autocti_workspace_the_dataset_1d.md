@@ -5,6 +5,9 @@ Target: autocti
 Repos:
 - autocti
 - autocti_workspace
+Themes:
+- cti
+- notebooks
 Difficulty: large
 Autonomy: supervised
 Priority: normal

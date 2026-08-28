@@ -2,6 +2,9 @@
 
 Type: research
 Target: autolens_workspace_developer
+Themes:
+- jax-compile
+- profiling
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

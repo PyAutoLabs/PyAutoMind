@@ -5,6 +5,10 @@ Target: autolens_workspace_test
 Repos:
 - @autolens_workspace_test
 - @PyAutoArray
+Themes:
+- jax-gradient
+- interferometer
+- pixelization
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

@@ -2,6 +2,10 @@
 
 Type: research
 Target: PyAutoArray
+Themes:
+- pixelization
+- jax-compile
+- hpc-gpu
 Difficulty: too-large
 Autonomy: supervised
 Priority: low

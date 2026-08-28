@@ -81,6 +81,13 @@ MIND_RULES = [
     ("repos.yaml", "SPECIAL:body_map"),
     ("active.md", "EMPTY"), ("planned.md", "EMPTY"), ("epics.md", "EMPTY"),
     ("bundles.md", "EMPTY"),
+    # `themes.md` is the `Themes:` vocabulary the dashboard groups bundles on.
+    # EMPTY rather than KEEP: the keyword list is this org's science and
+    # tooling domains ("mge", "cti", "docs-hub"), so shipping it verbatim would
+    # stamp our subject matter into somebody else's fresh-slate Mind. An empty
+    # vocabulary simply disables the unknown-keyword warning until they write
+    # their own (see PyAutoBrain `parse_themes`).
+    ("themes.md", "EMPTY"),
     ("parked.md", "EMPTY"), ("condemned.md", "EMPTY"), ("ideas.md", "EMPTY"), ("queue.md", "EMPTY"),
     ("autonomy_log.md", "SPECIAL:autonomy_log"),
     # Prompt-file lifecycle (issue #71): draft/ (not-started) -> active/
@@ -252,6 +259,7 @@ EMPTY_TITLES = {
     "active.md": "# Active Tasks",
     "epics.md": "# Epics",
     "bundles.md": "# Bundles",
+    "themes.md": "# Themes",
     "planned.md": "# Planned",
     "parked.md": "# Parked tasks",
     "condemned.md": "# Condemned material",

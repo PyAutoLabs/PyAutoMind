@@ -4,6 +4,9 @@ Type: docs
 Target: autolens_workspace
 Repos:
 - autolens_workspace
+Themes:
+- cluster
+- notebooks
 Difficulty: small
 Autonomy: supervised
 Priority: normal

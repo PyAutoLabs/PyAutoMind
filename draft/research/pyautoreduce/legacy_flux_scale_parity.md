@@ -2,6 +2,8 @@
 
 Type: research
 Target: PyAutoReduce
+Themes:
+- reduce
 Difficulty: medium
 Autonomy: supervised
 Priority: low

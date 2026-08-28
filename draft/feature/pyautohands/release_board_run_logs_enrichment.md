@@ -4,6 +4,9 @@ Type: feature
 Target: pyautohands
 Repos:
 - PyAutoHands
+Themes:
+- dashboard
+- release
 Difficulty: small
 Autonomy: supervised
 Priority: low

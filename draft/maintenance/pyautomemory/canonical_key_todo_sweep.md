@@ -4,6 +4,9 @@ Type: maintenance
 Target: PyAutoMemory
 Repos:
 - PyAutoMemory
+Themes:
+- docs-hub
+- hygiene
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

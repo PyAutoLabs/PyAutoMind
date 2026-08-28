@@ -6,6 +6,10 @@ Repos:
 - PyAutoArray
 - autolens_workspace
 - autolens_workspace_test
+Themes:
+- pixelization
+- cluster
+- ci-smoke
 Difficulty: large
 Autonomy: supervised
 Priority: normal

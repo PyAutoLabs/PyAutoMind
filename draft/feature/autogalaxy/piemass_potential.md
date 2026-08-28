@@ -2,6 +2,9 @@
 
 Type: feature
 Target: PyAutoGalaxy
+Themes:
+- cluster
+- visualization
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal

@@ -4,6 +4,8 @@ Type: maintenance
 Target: autolens_workspace_developer
 Repos:
 - autolens_workspace_developer
+Themes:
+- hygiene
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

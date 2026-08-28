@@ -10,6 +10,9 @@ Repos:
 - @PyAutoCTI
 - @PyAutoHands
 - @PyAutoHeart
+Themes:
+- hygiene
+- interferometer
 Difficulty: low-medium
 Autonomy: supervised
 Priority: normal

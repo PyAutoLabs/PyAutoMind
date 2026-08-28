@@ -4,6 +4,8 @@ Type: feature
 Target: autofit
 Repos:
 - PyAutoFit
+Themes:
+- samplers
 Difficulty: medium
 Autonomy: supervised
 Priority: medium

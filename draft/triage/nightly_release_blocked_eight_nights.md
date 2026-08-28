@@ -6,6 +6,9 @@ Repos:
 - @PyAutoBrain
 - @PyAutoHeart
 - @PyAutoHands
+Themes:
+- release
+- mind-workflow
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

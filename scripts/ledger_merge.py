@@ -49,8 +49,12 @@ LEDGER_DIRS = ("draft/", "active/", "complete/")
 
 # Root files that are registry state or a generated render of it. Deliberately
 # NOT here: README.md, AGENTS.md, CLAUDE.md, REFERENCE.md, ROUTING.md,
-# CONTRIBUTING.md, AI_POLICY.md, repos.yaml — prose and configuration a human
-# reads, changed rarely and on purpose.
+# CONTRIBUTING.md, AI_POLICY.md, repos.yaml, themes.md — prose and
+# configuration a human reads, changed rarely and on purpose. `themes.md` sits
+# with repos.yaml rather than with the registries it resembles: it is a
+# CONTROLLED vocabulary, and the control is the human. A keyword added without
+# review is a grouping key nobody chose, and the dashboard reads it on every
+# render.
 LEDGER_FILES = (
     "active.md",
     "planned.md",

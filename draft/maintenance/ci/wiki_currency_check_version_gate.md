@@ -4,6 +4,9 @@ Type: maintenance
 Target: autocti_assistant
 Repos:
 - @autocti_assistant
+Themes:
+- assistants
+- ci-smoke
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

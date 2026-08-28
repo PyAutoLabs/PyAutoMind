@@ -6,6 +6,9 @@ Repos:
 - @PyAutoLens
 - @PyAutoArray
 - @PyAutoNerves
+Themes:
+- point-source
+- ci-smoke
 Difficulty: medium
 Autonomy: supervised
 Priority: low

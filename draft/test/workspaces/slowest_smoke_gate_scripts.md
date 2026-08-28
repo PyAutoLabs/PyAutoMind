@@ -4,6 +4,8 @@ Type: test
 Target: workspaces
 Repos:
 - autolens_workspace_test
+Themes:
+- ci-smoke
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

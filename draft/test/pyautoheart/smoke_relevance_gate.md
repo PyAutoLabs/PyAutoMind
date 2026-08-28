@@ -7,6 +7,8 @@ Repos:
 - autolens_workspace_test
 - autogalaxy_workspace_test
 - autolens_workspace
+Themes:
+- ci-smoke
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

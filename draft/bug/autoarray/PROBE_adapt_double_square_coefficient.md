@@ -4,6 +4,8 @@ Type: bug
 Target: autoarray
 Repos:
 - @PyAutoArray
+Themes:
+- pixelization
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

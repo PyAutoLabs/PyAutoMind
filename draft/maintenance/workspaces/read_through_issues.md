@@ -2,6 +2,9 @@
 
 Type: maintenance
 Target: workspaces
+Themes:
+- notebooks
+- cluster
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal

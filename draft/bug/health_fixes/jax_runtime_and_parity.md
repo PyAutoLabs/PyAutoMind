@@ -2,6 +2,9 @@
 
 Type: bug
 Target: health_fixes
+Themes:
+- release
+- ci-smoke
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

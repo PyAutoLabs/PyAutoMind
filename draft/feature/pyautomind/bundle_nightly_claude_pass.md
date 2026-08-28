@@ -5,6 +5,9 @@ Target: PyAutoMind
 Repos:
 - PyAutoMind
 - PyAutoBrain
+Themes:
+- mind-workflow
+- dashboard
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

@@ -6,6 +6,9 @@ Repos:
 - PyAutoFit
 - PyAutoArray
 - PyAutoGalaxy
+Themes:
+- release
+- hygiene
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

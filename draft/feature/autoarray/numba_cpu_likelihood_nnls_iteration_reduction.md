@@ -7,6 +7,9 @@ Target: autoarray
 Repos:
 - @PyAutoArray
 - @autolens_profiling
+Themes:
+- numba-cpu
+- pixelization
 Difficulty: large
 Autonomy: supervised
 Priority: high

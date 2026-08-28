@@ -5,6 +5,8 @@ Target: graphical_ep
 Repos:
 - PyAutoFit
 - ic50_workspace
+Themes:
+- graphical-ep
 Difficulty: large
 Autonomy: supervised
 Priority: normal

@@ -4,6 +4,9 @@ Type: feature
 Target: PyAutoLens
 Repos:
 - PyAutoLens
+Themes:
+- cluster
+- samplers
 Difficulty: large
 Autonomy: supervised
 Priority: normal

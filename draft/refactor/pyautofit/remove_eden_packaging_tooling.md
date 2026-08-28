@@ -5,6 +5,9 @@ Target: PyAutoFit
 Repos:
 - PyAutoFit
 - PyAutoNerves
+Themes:
+- hygiene
+- release
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

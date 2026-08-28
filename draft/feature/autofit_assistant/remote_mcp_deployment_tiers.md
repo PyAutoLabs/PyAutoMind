@@ -5,6 +5,8 @@ Target: autofit_assistant
 Repos:
 - autofit_assistant
 - autolens_assistant
+Themes:
+- assistants
 Difficulty: large
 Autonomy: human-required
 Priority: normal

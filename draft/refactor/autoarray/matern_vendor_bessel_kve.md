@@ -4,6 +4,9 @@ Type: refactor
 Target: autoarray
 Repos:
 - PyAutoArray
+Themes:
+- pixelization
+- hygiene
 Difficulty: large
 Autonomy: supervised
 Priority: medium

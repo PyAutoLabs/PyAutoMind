@@ -5,6 +5,10 @@ Target: autolens_workspace
 Repos:
 - autolens_jax_joss
 - autolens_workspace
+Themes:
+- profiling
+- jax-compile
+- cluster
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

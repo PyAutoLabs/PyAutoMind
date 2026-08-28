@@ -6,6 +6,8 @@ Repos:
 - PyAutoArray
 - autolens_workspace_test
 - autolens_workspace_developer
+Themes:
+- pixelization
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

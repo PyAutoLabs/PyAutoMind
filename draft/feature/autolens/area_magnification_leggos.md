@@ -6,6 +6,9 @@ Repos:
 - PyAutoLens
 - autolens_workspace
 - autolens_assistant
+Themes:
+- cluster
+- point-source
 Difficulty: large
 Autonomy: supervised
 Priority: high

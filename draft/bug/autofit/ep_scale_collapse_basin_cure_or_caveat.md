@@ -4,6 +4,8 @@ Type: bug
 Target: PyAutoFit
 Repos:
 - PyAutoFit
+Themes:
+- graphical-ep
 Difficulty: too-large
 Autonomy: human-required
 Priority: high

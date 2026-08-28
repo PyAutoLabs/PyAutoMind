@@ -4,6 +4,8 @@ Type: maintenance
 Target: organs
 Repos:
 - PyAutoMind
+Themes:
+- mind-workflow
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

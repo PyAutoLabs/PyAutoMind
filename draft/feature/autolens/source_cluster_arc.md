@@ -10,6 +10,10 @@ Repos:
 - autolens_workspace_test
 - autolens_profiling
 - HowToLens
+Themes:
+- cluster
+- point-source
+- pixelization
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
