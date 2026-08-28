@@ -45,11 +45,11 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 133 |
+| [Backlog](#backlog) (`draft/`) | 135 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 16
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
@@ -99,6 +99,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautobrain/science_project_memory_a_fresh_chat_pointed.md">Science-project memory: a fresh chat pointed at a project folder resumes…</a> — pyautobrain · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/science_project_memory_a_fresh_chat_pointed.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
 ```
@@ -139,17 +147,15 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
+**Quick wins** (small enough, and safe enough to run unattended)
+
+<details><summary>📋 <a href="draft/maintenance/autoreduce/anonymise_the_named_science_target_in_the.md">Anonymise the named science target in the WFC3-IR hole regression</a> — autoreduce · small · safe · low</summary>
 
 ```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
+/start_dev draft/maintenance/autoreduce/anonymise_the_named_science_target_in_the.md
 ```
 
 </details>
-
-**Quick wins** (small enough, and safe enough to run unattended)
-
-- _(none right now)_
 
 ## In flight
 
@@ -255,15 +261,23 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**133** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 28</summary>
+<summary><b>feature</b> — 29</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU (advanced/GPU)</a> — autoarray · medium · supervised · high</summary>
 
 ```
 /start_dev draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/science_project_memory_a_fresh_chat_pointed.md">Science-project memory: a fresh chat pointed at a project folder resumes…</a> — pyautobrain · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/science_project_memory_a_fresh_chat_pointed.md
 ```
 
 </details>
@@ -620,7 +634,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 19</summary>
+<summary><b>maintenance</b> — 20</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · supervised · normal</summary>
 
@@ -762,6 +776,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autoreduce/anonymise_the_named_science_target_in_the.md">Anonymise the named science target in the WFC3-IR hole regression</a> — autoreduce · small · safe · low</summary>
+
+```
+/start_dev draft/maintenance/autoreduce/anonymise_the_named_science_target_in_the.md
 ```
 
 </details>
