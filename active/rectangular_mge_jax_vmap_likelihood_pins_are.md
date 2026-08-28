@@ -12,6 +12,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-08-28
 
 Found 2026-08-28 by PyAutoHeart. This blocks BOTH the workspace smoke wave and
 the release integrate wave, and is the top contributor to today's local

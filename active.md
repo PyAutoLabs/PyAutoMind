@@ -39,3 +39,13 @@
 - repos:
   - PyAutoFit: feature/nautilus-test-mode-degenerate-corner
 - note: Heart RED 2026-08-28 — Nautilus/Dynesty TEST_MODE=1 gives ESS=1; corner_cornerpy guard becomes ESS-based. Workspace script untouched.
+
+## repin-rectangular-mge-after-490
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/286
+- prompt: active/rectangular_mge_jax_vmap_likelihood_pins_are.md
+- issued: 2026-08-28
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/repin-rectangular-mge-after-490
+- repos:
+  - autolens_workspace_test: feature/repin-rectangular-mge-after-490
+- note: Heart RED 2026-08-28 — bisected to PyAutoArray #490 (verified correctness fix); stale pins skipped by f0ef8f2. Re-pin only.
