@@ -17,7 +17,8 @@
 - issued: 2026-08-28
 - prompt: active/joint_clipper_compose_with_bijector.md
 - session: claude --resume 3ebe0d5d-2ca4-45f2-9d81-8521e3266e29
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1540
 - worktree: ~/Code/PyAutoLabs-wt/joint-clipper-compose-with-bijector
 - repos:
   - PyAutoFit: feature/joint-clipper-compose-with-bijector
