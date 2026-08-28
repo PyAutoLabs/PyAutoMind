@@ -21,12 +21,18 @@
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/73
 - prompt: active/anonymise_the_named_science_target_in_the.md
 - issued: 2026-08-28
-- status: library-dev
+- status: library-dev, branch-pushed, pr-blocked-heart-red
 - worktree: ~/Code/PyAutoLabs-wt/anonymise-wfc3-ir-hole-regression-target
 - classification: library (PyAutoReduce only)
 - repos:
   - PyAutoReduce: feature/anonymise-wfc3-ir-hole-regression-target
-- next-skill: start_library (PyAutoReduce) -> implement the rename -> ship_library
+- commit: b4ee3697097fe91fe332b12d61c8479a6756a3fb
+- tests: 299 passed, 3 skipped (test_autoreduce/, 2026-08-28)
+- next-skill: ship_library step 4 (open the PR) once Heart clears; PR body is drafted verbatim
+  on the issue comment https://github.com/PyAutoLabs/PyAutoReduce/issues/73#issuecomment-5458441602
+- blocked-by: Heart readiness RED 2026-08-28T21:34:42Z - red_reasons: "release validation FAILED
+  (stage integrate)". None of the RED/YELLOW reasons touch PyAutoReduce; needs a human to clear
+  the RED or authorise the AUTONOMY.md corrective-PR exception.
 - note: comment/test-name/doc rename only, no behaviour change. PyAutoMind history records
   (complete/, condemned.md, autonomy_log.md) are deliberately left untouched.
 
