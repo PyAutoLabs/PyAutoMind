@@ -9,6 +9,7 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
+Issued: 2026-08-28
 Status: formalised
 
 # Interferometer docs sweep: sparse operator now supports linear light profiles + pixelizations
