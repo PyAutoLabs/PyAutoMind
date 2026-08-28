@@ -42,14 +42,14 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 0 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 135 |
+| [Backlog](#backlog) (`draft/`) | 134 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
+**Highest priority** (filed as `high`) — showing 12 of 14
 
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
@@ -63,14 +63,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo) auto-bundling</a> — pyautomind · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/bundle_theme_grouping.md
 ```
 
 </details>
@@ -147,6 +139,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
 **Quick wins** (small enough, and safe enough to run unattended)
 
 - _(none right now)_
@@ -155,7 +155,13 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-- _(nothing in flight)_
+<details><summary>📋 <a href="active/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo) auto-bundling</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/311">issue #311</a> — issued 2026-08-27 — library-dev</summary>
+
+```
+/start_dev active/bundle_theme_grouping.md
+```
+
+</details>
 
 ## Parked
 
@@ -241,23 +247,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 30</summary>
+<summary><b>feature</b> — 29</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU (advanced/GPU)</a> — autoarray · medium · supervised · high</summary>
 
 ```
 /start_dev draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo) auto-bundling</a> — pyautomind · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/bundle_theme_grouping.md
 ```
 
 </details>
@@ -1221,40 +1219,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pyautomind — bundle 1</b> — 4 task(s) · 8 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'pyautomind — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/pyautomind/bundle_theme_grouping.md
-- draft/feature/pyautomind/complete_archive_wiki.md
-- draft/feature/pyautomind/repos-sync-config-stamper.md
-- draft/refactor/pyautomind/repos_sync_check_dedup.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo)…</a> | medium | high | formalised |
-| <a href="draft/feature/pyautomind/complete_archive_wiki.md">Token-light wiki index over the complete/ archive</a> | medium | normal | formalised |
-| <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> | hard | low | - |
-| <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> | medium | low | formalised |
-
-</details>
-
-<details>
 <summary><b>autogalaxy — bundle 1</b> — 3 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1416,6 +1380,38 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
+<details>
+<summary><b>ci — bundle 1</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'ci — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/maintenance/ci/copilot_auto_review.md
+- draft/maintenance/ci/heart_smoke_table_autocti.md
+- draft/maintenance/ci/wiki_currency_check_version_gate.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> | large | normal | planned |
+| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | medium | normal | formalised |
+| <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> | medium | normal | formalised |
+
+</details>
+
 _Showing 8 of 20 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -1433,7 +1429,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">Claude Development Prompt: Joint <code>ell_comps</code> Disk Constraint</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts +…</a> |
-| 2026-08-27 | filed | <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo)…</a> |
+| 2026-08-27 | issued | <a href="active/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo)…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
