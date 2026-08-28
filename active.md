@@ -25,8 +25,10 @@
 - issued: 2026-08-28
 - user-facing: true
 - session: claude --resume b766a19b-260c-4b56-8d19-072fa9a34b28
-- status: workspace-dev (library-shipped PR #500 awaiting-merge)
+- status: workspace-shipped, awaiting-merge (library-first: #500 then workspace PRs)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/500
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/283
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/115
 - heart-ack: RED acknowledged 2026-08-28 (release integrate failure = MGE pin pair; shared_preloads.py timeout; hook-manifest drift — all unrelated)
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-func-list
 - repos:
@@ -39,7 +41,7 @@
 - note: external reporter @HRSAstro. Receipt + plan comments posted 2026-08-28 (milestones 1-2 of ~4).
   Plan: off-diag operator methods on InterferometerSparseOperator, func-list dispatch in
   InversionInterferometerSparse.curvature_matrix/data_vector, loud factory failure for unrepresentable
-  sparse routing, parity tests vs InversionInterferometerMapping. Commit 539d9ffd, PR #500 open (workspace impact: none — option iii). Workspace follow-up (user request 2026-08-28): sparse-vs-mapping FitInterferometer parity scripts in autolens_workspace_test + autogalaxy_workspace_test (+ imaging for autogalaxy), registered in smoke_tests.txt with `ENV: jax`. Next: /ship_workspace behind library-first gate, /prm #500 then workspace PRs; milestone #4 comment at merge.
+  sparse routing, parity tests vs InversionInterferometerMapping. Commit 539d9ffd, PR #500 open (workspace impact: none — option iii). Workspace follow-up (user request 2026-08-28): sparse-vs-mapping FitInterferometer parity scripts in autolens_workspace_test + autogalaxy_workspace_test (+ imaging for autogalaxy), registered in smoke_tests.txt with `ENV: jax`. Workspace PRs open (al#283 ae977686, ag#115 a358186a); they FAIL smoke CI against PyAutoArray main until #500 merges. Next: /prm #500 (CI green ffafa86a), then /prm al#283 + ag#115; milestone #4 comment at merge. Follow-up candidates (not filed): unequal real/imag sigma degrades W~ sparse path (pre-existing); delaunay_nn*.py ENV lines lack __Env__ header so are dead.
 
 ## ell-comps-disk-constraint
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1537
