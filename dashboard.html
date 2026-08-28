@@ -117,6 +117,17 @@ button.copy{flex:0 0 auto;width:2.6rem;height:2.6rem;font-size:1.1rem;
 button.copy:hover{border-color:var(--accent);color:var(--accent)}
 button.copy.ok{color:var(--ok);border-color:var(--ok);background:transparent}
 button.copy.term{font-size:.95rem}
+/* A copy button with a WORDED face is a chip, not an icon. The rule above is
+   a fixed 2.6rem square — right for a bare clipboard glyph, a trap for a
+   label: the text wraps inside 42px into a one-word-per-line column and
+   spills out of its own box (observed on the health board's "clear them all"
+   line). Size to the label instead, and hold it on one line the way `.pill`
+   does — a chip that will not fit is elided, never allowed to push the page
+   sideways. `vertical-align:bottom` because `overflow:hidden` moves an
+   inline-block's baseline to its bottom edge. */
+button.copy.text{width:auto;height:auto;max-width:100%;padding:.34rem .62rem;
+ font-size:.85rem;font-weight:600;white-space:nowrap;overflow:hidden;
+ text-overflow:ellipsis;vertical-align:bottom}
 button.more{display:block;width:100%;margin:.7rem 0;padding:.55rem;
  border:1px dashed var(--edge);border-radius:9px;background:transparent;
  color:var(--muted);cursor:pointer;font:inherit;font-size:.9em}
