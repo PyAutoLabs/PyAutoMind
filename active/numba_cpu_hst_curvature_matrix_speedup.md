@@ -13,8 +13,9 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: active
 Filed: 2026-08-28
+Issued: 2026-08-28
 
 > Successor to epic `numba-cpu-likelihood` (`epics.md`; records `complete/2026/08/numba-cpu-*.md`).
 > That epic took the numba CPU (`use_jax=False`, `apply_sparse_operator_cpu()`) likelihood from

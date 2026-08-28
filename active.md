@@ -48,3 +48,18 @@
 - parallel-claim: autolens_workspace_test also claimed by repin-rectangular-mge-after-490 (#286); file sets disjoint (config/build/no_run.yaml vs scripts/imaging/jax_likelihood/rectangular_mge*.py); own worktree + own branch per the standing parallel-worktree practice.
 - note: Heart RED 2026-08-28 — delaunay.py 1805s timeout is the XLA FftThunk/Eigen-pool deadlock (epic), not a library or profile bug; re-quarantine + make build_util keep the faulthandler stack.
 - pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/289 + https://github.com/PyAutoLabs/PyAutoHands/pull/271
+
+## numba-hst-curvature-matrix-speedup
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/505
+- prompt: active/numba_cpu_hst_curvature_matrix_speedup.md
+- issued: 2026-08-28
+- session: claude --resume session_01SqrSVGPrFcUB1vvDsoTw3n
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/numba-hst-curvature-matrix-speedup
+- parallel-claim: autolens_profiling is also claimed by `nuts-warm-start-driver-and-a100-probe`; file sets are disjoint (this task: `scripts/imaging/likelihood_breakdown/`, `results/breakdown/imaging/`, `results/notes/`; NUTS: `scripts/misc/searches/`, `scripts/imaging/searches/nuts/`, `results/notes/inference/`). Human approved an own parallel worktree 2026-08-28. COMMIT DISCIPLINE: explicit pathspecs only in autolens_profiling, never `git add -A`.
+- repos:
+  - PyAutoArray: feature/numba-hst-curvature-matrix-speedup
+  - autolens_profiling: feature/numba-hst-curvature-matrix-speedup
+- note: Phase 1 of the F speed-up on the numba CPU path at HST: instrument F's sub-blocks, remove
+  redundant passes, FFT the dense mapper×linear-func convolution if the split confirms it; >=2x on F,
+  pins unchanged.
