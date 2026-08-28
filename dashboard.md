@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 133 |
+| [Backlog](#backlog) (`draft/`) | 134 |
 
 ## Start here
 
@@ -255,7 +255,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**133** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -1771,6 +1771,19 @@ Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. 
 
 ```
 /start_dev draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>none (successor to <code>numba_cpu_hst_curvature_matrix_speedup</code>, PyAutoArray#505)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autoarray/numba_cpu_hst_curvature_matrix_phase2.md">Numba CPU likelihood at HST resolution, phase 2: the mapper×mapper block…</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autoarray/numba_cpu_hst_curvature_matrix_phase2.md
 ```
 
 </details>
