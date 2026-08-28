@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 137 |
+| [Backlog](#backlog) (`draft/`) | 138 |
 
 ## Start here
 
@@ -247,7 +247,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**137** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**138** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -918,7 +918,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 12</summary>
+<summary><b>docs</b> — 13</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
@@ -956,6 +956,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/pyautobrain/rtd_organism_currency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/interferometer_pixelization_examples_linear_bulg.md">Interferometer pixelization examples: linear bulge + pixelization hybrid on the sparse path</a> — workspaces · small · supervised · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/interferometer_pixelization_examples_linear_bulg.md
 ```
 
 </details>
