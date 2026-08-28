@@ -10,6 +10,7 @@ Difficulty: small
 Autonomy: safe
 Priority: low
 Status: formalised
+Issued: 2026-08-28
 Filed: 2026-08-28
 
 Found by the numba-cpu-likelihood epic close-out docs sweep (2026-08-28); pre-existing, not caused by

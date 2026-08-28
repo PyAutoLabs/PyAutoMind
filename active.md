@@ -23,3 +23,15 @@
 - repos:
   - PyAutoFit: feature/joint-clipper-compose-with-bijector
 - note: Option B (approved). Compose the joint clipper with identity-kind linear maps (R -> R/s), refuse only genuinely non-linear ball pairs. Campaign follow-up (Phase 8B logit arm restated as BijectorPerPath excluding ell_comps.*) is an autolens_profiling config change, NOT in this PR.
+
+## pixelization-fit-cpu-users-docs
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/506
+- prompt: active/pixelization_fit_cpu_users_paragraph.md
+- issued: 2026-08-28
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/pixelization-fit-cpu-users-docs
+- repos:
+- note: docs sweep fallout from the numba-cpu-likelihood epic close-out (three comment/prose fixes, no
+  behaviour change). Combined workflow: PyAutoArray comment leg via /start_library + /ship_library, then
+  autolens_workspace + HowToLens via /start_workspace + /ship_workspace, then /prm. Fable session → Opus.
+
