@@ -15,7 +15,7 @@ Blocked-by: draft/feature/pyautomind/bundle_theme_grouping.md
 ## Premise
 
 **Rules render, Claude labels.** Phase 1 makes the auto-bundler deterministic
-over a `Theme:` header. This phase adds the judgment rules cannot supply,
+over a `Themes:` keyword list. This phase adds the judgment rules cannot supply,
 without making the render non-reproducible or burning tokens on the page itself.
 
 ## Scope
