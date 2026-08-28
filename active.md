@@ -26,3 +26,12 @@
   disjoint files; take that leg via /start_workspace after #183 merges). Fable session → delegate
   implementation to Opus. Measure with AUTOARRAY_NUMBA_OPERATED_MEMO=0 (harness is memo-blind).
   Phase 3b (batched active-set moves) is NOT filed — file it from 3a's diagnostic numbers.
+
+## ell-comps-disk-constraint
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1537
+- issued: 2026-08-27
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ell-comps-disk-constraint
+- repos:
+  - PyAutoFit: feature/ell-comps-disk-constraint
+  - PyAutoGalaxy: feature/ell-comps-disk-constraint
