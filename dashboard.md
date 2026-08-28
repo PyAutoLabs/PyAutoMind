@@ -155,7 +155,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo) auto-bundling</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/311">issue #311</a> — issued 2026-08-27 — library-dev</summary>
+<details><summary>📋 <a href="active/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo) auto-bundling</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/311">issue #311</a> — issued 2026-08-27 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/bundle_theme_grouping.md
