@@ -1,3 +1,16 @@
+## nautilus-plotter-real-search-cap
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/149
+- completed: 2026-08-28
+- workspace-pr: autofit_workspace#150 (merged b2550a13 -> main)
+- pair: workspace half of `nautilus-test-mode-degenerate-corner` (PyAutoFit#1542, issue PyAutoFit#1541) — record `complete/2026/08/nautilus-test-mode-degenerate-corner.md`. Merged behind the library-first gate: PyAutoFit#1542 read MERGED before this PR was merged. **Both tasks were formalised from ONE prompt file** (`nautilus_plotter_py_corner_cornerpy_raises_value.md`), which `lifecycle.py record` folded into the library record; it is reproduced verbatim below so this record stands alone.
+- what shipped: `scripts/plot/nautilus_plotter.py` declares `ENV: real_search` in its `__Env__ (Developer Only)` section — the runner releases `PYAUTO_TEST_MODE` for this one script — and caps the search with an explicit `n_like_max=3000` on `af.Nautilus`, the same lever other workspace examples use. `notebooks/plot/nautilus_plotter.ipynb` regenerated (`generate.py` strips the `__Env__` section).
+- why not a library-wide fix: a plot example needs a real posterior. Raising the global test-mode sampler budget in PyAutoFit would have fixed it too, but the human declined — it slows every release-wave search. So the library got the ESS guard (crash -> logged skip) and the one script that genuinely needs samples opts out of test mode.
+- calibration (release profile, `output/` wiped between runs — the numbers, not a guess): 300 / 500 / 1000 calls still crash, Nautilus still exploring, `N_eff = 1`; 2000 renders no corner (`N_eff = 3`); 2500 renders but at `N_eff` 13-20; **3000 gives `N_eff` 357-527 in 22-26 s, 3/3 stable** — the chosen value; natural finish is 3500 calls / 35 s.
+- validation: exit 0 under `profile_release.yaml` with the corner figure rendered, 3/3 runs. Control: `emcee_plotter.py` still runs under test mode, exit 0. Env resolution checked directly — `PYAUTO_TEST_MODE` absent for this script, still `1` for its siblings, so `real_search` is scoped to the one script and did not leak.
+- heart context: corrective PR for the Heart RED reason `release validation FAILED (stage integrate)`, run 33177898708, job `integrate / run_scripts (3.12, autofit, plot)`.
+
+## Original prompt
+
 # nautilus_plotter.py corner_cornerpy raises ValueError "range is not valid or the sample…
 
 Type: bug

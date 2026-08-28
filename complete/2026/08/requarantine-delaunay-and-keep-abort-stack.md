@@ -1,3 +1,20 @@
+## requarantine-delaunay-and-keep-abort-stack
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/287
+- completed: 2026-08-28
+- workspace-pr: autolens_workspace_test#289 (merged 20377c91 -> main)
+- library-pr: PyAutoHands#271 (merged 17308862 -> main)
+- what shipped:
+  - `autolens_workspace_test/config/build/no_run.yaml` — `multi_dataset/jax_likelihood/delaunay.py` re-quarantined as `NEEDS_FIX 2026-08-28` with the evidence; history note updated.
+  - `PyAutoHands/autohands/build_util.py` — `_timeout_output` now keeps the faulthandler stack that `kill_group` SIGABRTs the child specifically to produce.
+- diagnosis (and what it is NOT): the script hung 1805 s at the release cap in integrate run 33177898708 *after* completing vmap+JIT in 9.3 s — the second, already-compiled `fitness._vmap` call (`delaunay.py:208`, 1.8 s locally) deadlocked. Not a release-profile difference: the script's own `ENV: jax full_datasets` makes smoke and release identical for it (only `PYAUTO_TEST_MODE`/`PYAUTO_FAST_PLOTS` differ and neither is read on this path), and smoke ran the same program in 18.9 s the same day. Not Delaunay-specific: it is the XLA CPU `FftThunk`/ducc0 Eigen-pool futex deadlock root-caused in `complete/2026/08/xla-cpu-eigen-pool-deadlock.md`, which `XLA_FLAGS=--xla_cpu_multi_thread_eigen=false` (already in force on the failing run) reduces but does not eliminate. Not reproducible on an 8-core WSL box (4/4 pass). **Nothing in PyAutoArray or PyAutoLens to fix.** The script had been restored from `no_run.yaml` on 2026-08-27 by PyAutoFit#1528 on 24/24 clean re-times; this is the first hang since.
+- the Hands half, and why it mattered here: `kill_group` SIGABRTs a timed-out child precisely so the child leaves a faulthandler stack — and `_timeout_output` then kept only the last `TIMEOUT_OUTPUT_TAIL_CHARS = 2000` characters of stderr. The dump's trailing `Extension modules: ... (total: 86)` list alone is ~1900 of them, so **the one diagnostic the runner exists to capture was written and then discarded.** That is why this hang had to be attributed by family match to the eigen-pool epic instead of by its own stack. `_timeout_output` now detects a dump (`Fatal Python error:` / `Current thread 0x`), drops the `Extension modules:` paragraph, keeps the dump whole, and applies the tail cap only to the text before it. No behaviour change when no dump is present.
+- validation: skip-list discovery checked through `autohands.build_util.should_skip` on both the raw YAML list (as `run.py` passes it) and `no_run_list_with_extension_from(..., '.py')` — `delaunay.py` SKIP, `delaunay_mge.py` and `imaging/jax_likelihood/delaunay.py` still RUN — against a **baseline control** run on `no_run.yaml` at HEAD showing all three RUN before the edit. `slow_skip_check.py`'s NEEDS_FIX banner picks the new entry up. PyAutoHands: 433 tests pass plus the new `TestTimeoutOutputKeepsTheAbortStack` (noisy stderr + dump + 1887-char module list -> frames survive, module list gone, leading noise still truncated; dump-only input returned whole; plain long stderr truncates as before).
+- deliberately not smoke-run: a `autolens_workspace_test` smoke was already running in this environment for #286, and parallel smoke runs are a known false-failure source; a skip-list line exercises nothing a smoke would run. The next integrate wave is the real check.
+- follow-ups NOT in scope: a per-call heartbeat in `autofit/non_linear/jax_compile.py` (the path is silent once compiled, which is why 1805 s of nothing looked like a crash rather than a hang), and the three other #1528-restored entries that share this exposure.
+- heart context: corrective PR for the Heart RED reason `release validation FAILED (stage integrate)` — job `integrate / run_scripts (3.12, autolens_test, multi_dataset)`.
+
+## Original prompt
+
 # multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s release-profile cap — hangs after the vmap JIT…
 
 Type: bug

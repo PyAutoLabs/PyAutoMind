@@ -1,3 +1,20 @@
+## repin-rectangular-mge-after-490
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/286
+- completed: 2026-08-28
+- workspace-pr: autolens_workspace_test#288 (merged d40e7df8 -> main)
+- what shipped: re-pinned two `imaging/jax_likelihood` rectangular-MGE vmap likelihood constants —
+  `scripts/imaging/jax_likelihood/rectangular_mge.py` `-85.41696632` -> `-105.52806249`, and
+  `scripts/imaging/jax_likelihood/rectangular_mge_rtu.py` `-11.65793201` -> `-131.56973816`.
+  **No library change** — re-pin only.
+- attribution (bisected, not assumed): both moves are attributable solely to PyAutoArray #490 (`72fb01d1`), a *verified correctness fix* to the rectangular mapper's row weights and integer-bracket cells whose own PR states that downstream constants must be regenerated. The regen commit `f0ef8f2` skipped exactly these two scripts because they hung on the vmap stall that `7d803e7` fixed the next day — so the pins were never stale by neglect, they were deferred and then forgotten.
+- the scary-looking number that isn't: the RTU pin moves ~10x in relative terms, which reads like a regression. It is a near-zero baseline — the absolute move is -120 against -20 for the plain script, while #490 moved sibling pins by +-8000. Judge pin moves in absolute log-evidence, not as ratios off a value near zero.
+- correctness evidence beyond the bisect: post-fix fits are sane — no NaNs, mapper rows sum to 1, reduced chi^2 ~ 3.6, and the Bilinear and RTU meshes now agree to within 26 in log-evidence where they were 74 apart before. The fix moved the two meshes *together*, which is what a correctness fix should do.
+- validation: both scripts run to completion locally (exit 0, 60 s / 50 s) under the smoke profile with their `ENV: jax full_datasets` declaration — the eager-vs-jit round-trip asserts that sit after the pin execute for the first time and pass. Siblings `multi_dataset/jax_likelihood/rectangular_mge{,_rtu}.py` still pass untouched.
+- heart context: corrective PR for the Heart RED reason `workspace validation not passing (2 failed, cloud#33179766004: autolens_test scripts/imaging/rectangular_mge.py, autolens_test scripts/imaging/rectangular_mge_rtu.py)`.
+- parallel worktrees: `autolens_workspace_test` was claimed simultaneously by `requarantine-delaunay-and-keep-abort-stack` (#287) on its own worktree and branch; file sets disjoint (`scripts/imaging/jax_likelihood/rectangular_mge*.py` here vs `config/build/no_run.yaml` there). Both merged cleanly.
+
+## Original prompt
+
 # rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative diff off…
 
 Type: bug

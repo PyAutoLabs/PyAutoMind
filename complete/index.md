@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1194 records across 7 buckets.
+1198 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -172,6 +172,8 @@ _(curate hard-won records here — survives regeneration.)_
 - [multistart-per-lane-best](2026/08/multistart-per-lane-best.md)
 - [natural-logpdf-clamps-neginf](2026/08/natural-logpdf-clamps-neginf.md) — closed by the PR's `Closes` line
 - [nautilus-1core-serial-pool](2026/08/nautilus-1core-serial-pool.md) — corrective for the Heart RED "release validation FAILED (stage
+- [nautilus-plotter-real-search-cap](2026/08/nautilus-plotter-real-search-cap.md)
+- [nautilus-test-mode-degenerate-corner](2026/08/nautilus-test-mode-degenerate-corner.md)
 - [nfw-truncated-potential-accuracy](2026/08/nfw-truncated-potential-accuracy.md)
 - [normalise-auto-simulate-guard-idiom](2026/08/normalise-auto-simulate-guard-idiom.md)
 - [notebook-quotes-string-literal](2026/08/notebook-quotes-string-literal.md)
@@ -252,9 +254,11 @@ _(curate hard-won records here — survives regeneration.)_
 - [release-validation-tri-state](2026/08/release-validation-tri-state.md)
 - [release-version-sync-back-to-main](2026/08/release-version-sync-back-to-main.md)
 - [remove-pynufft-legacy-transformer](2026/08/remove-pynufft-legacy-transformer.md)
+- [repin-rectangular-mge-after-490](2026/08/repin-rectangular-mge-after-490.md)
 - [repo-settings-bash-e-abort](2026/08/repo-settings-bash-e-abort.md)
 - [repo-settings-org-enumeration](2026/08/repo-settings-org-enumeration.md)
 - [repos-sync-target-repo-lint-awareness](2026/08/repos-sync-target-repo-lint-awareness.md)
+- [requarantine-delaunay-and-keep-abort-stack](2026/08/requarantine-delaunay-and-keep-abort-stack.md)
 - [required-workflow-file-drift](2026/08/required-workflow-file-drift.md)
 - [resolve-border-relocator-hazard](2026/08/resolve-border-relocator-hazard.md) — Reconciled the likelihood hazard instrument after the border-relocator source fix. The resolved backend-diverg…
 - [resolve-curvature-floor-doc-drift](2026/08/resolve-curvature-floor-doc-drift.md) — Reconciled the curvature-floor documentation finding after PyAutoArray#444. The detector now requires both run…
