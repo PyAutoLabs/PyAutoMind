@@ -29,3 +29,13 @@
   deliberately LEFT at f466dce1a — it already has PR#1522; pulling to 54aa0875b would put PR#1539
   (clipper/bijector compose) under job 341978's pending phase-8B arms.
 - jobs: RAL 341981_[0,1] NUTS cold/warm probe (gpu, 45:00); RAL 341983 SMC warm research row (ral CPU, 1:30:00)
+
+## nautilus-test-mode-degenerate-corner
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1541
+- prompt: active/nautilus_plotter_py_corner_cornerpy_raises_value.md
+- issued: 2026-08-28
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/nautilus-test-mode-degenerate-corner
+- repos:
+  - PyAutoFit: feature/nautilus-test-mode-degenerate-corner
+- note: Heart RED 2026-08-28 — Nautilus/Dynesty TEST_MODE=1 gives ESS=1; corner_cornerpy guard becomes ESS-based. Workspace script untouched.

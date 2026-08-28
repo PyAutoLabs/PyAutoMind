@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-08-28
 
 Found 2026-08-28 by PyAutoHeart's Release Integrate run
 https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/33177898708, job
