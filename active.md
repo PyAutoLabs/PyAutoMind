@@ -35,6 +35,22 @@
   i.i.d. path (30-95 outer) motivates it — file from results/notes/nnls_warm_start_memo.md. Measure with AUTOARRAY_NUMBA_OPERATED_MEMO=0 (harness is memo-blind).
   Phase 3b (batched active-set moves) is NOT filed — file it from 3a's diagnostic numbers.
 
+## interferometer-sparse-func-list
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/499
+- issued: 2026-08-28
+- user-facing: true
+- session: claude --resume b766a19b-260c-4b56-8d19-072fa9a34b28
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-func-list
+- repos:
+- parallel-claim: PyAutoArray also claimed by numba-cpu-nnls-iteration-reduction (util/ NNLS + Cholesky files);
+  this task touches inversion/inversion/interferometer/{sparse.py,inversion_interferometer_util.py} + factory.py +
+  its tests only — disjoint file sets, own worktree approved by the human 2026-08-28.
+- note: external reporter @HRSAstro. Receipt + plan comments posted 2026-08-28 (milestones 1-2 of ~4).
+  Plan: off-diag operator methods on InterferometerSparseOperator, func-list dispatch in
+  InversionInterferometerSparse.curvature_matrix/data_vector, loud factory failure for unrepresentable
+  sparse routing, parity tests vs InversionInterferometerMapping. Next: /start_library, then /update_issue at PR-open.
+
 ## ell-comps-disk-constraint
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1537
 - prompt: active/ell_comps_joint_disk_constraint.md
