@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1193 records across 7 buckets.
+1194 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -123,6 +123,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [intake-reconcile-absence-signal](2026/08/intake-reconcile-absence-signal.md) — leg 3 tested PRESENCE — "the prompt names things that exist
 - [interests-overpick-dedup-slack](2026/08/interests-overpick-dedup-slack.md) — the interests digest asked Claude for exactly 10 papers, and the
 - [interests-ranker-widened-categories](2026/08/interests-ranker-widened-categories.md)
+- [interferometer-adapt-density-mesh](2026/08/interferometer-adapt-density-mesh.md)
 - [interferometer-bulge-pixelization-example](2026/08/interferometer-bulge-pixelization-example.md)
 - [interferometer-delaunay-flaky-fitexception](2026/08/interferometer-delaunay-flaky-fitexception.md)
 - [interferometer-delaunay-nonpd-fitexception](2026/08/interferometer-delaunay-nonpd-fitexception.md)

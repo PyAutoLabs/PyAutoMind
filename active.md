@@ -34,17 +34,6 @@
   - autolens_workspace_test: feature/repin-rectangular-mge-after-490
 - note: Heart RED 2026-08-28 — bisected to PyAutoArray #490 (verified correctness fix); stale pins skipped by f0ef8f2. Re-pin only.
 
-## interferometer-adapt-density-mesh
-- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/230
-- issued: 2026-08-28
-- prompt: active/interferometer_adapt_density_mesh.md
-- session: claude --resume b766a19b-260c-4b56-8d19-072fa9a34b28
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/interferometer-adapt-density-mesh
-- repos:
-  - autogalaxy_workspace: feature/interferometer-adapt-density-mesh
-- note: mesh switch in modeling.py + galaxy_reconstruction.py only; fit.py / likelihood_function.py keep RectangularUniform by design.
-
 ## requarantine-delaunay-and-keep-abort-stack
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/287
 - prompt: active/multi_dataset_jax_likelihood_delaunay_py_exceeds.md

@@ -1,3 +1,22 @@
+# interferometer-adapt-density-mesh
+
+User correction after #228: the interferometer pixelization *modeling* examples should use the
+density-adaptive `RectangularBilinearAdaptDensity` mesh (as the imaging counterparts and the lens
+workspace do); `RectangularUniform` is reserved for `fit.py` and `likelihood_function.py`.
+
+## Shipped
+- autogalaxy_workspace #231 — `interferometer/features/pixelization/modeling.py` and
+  `galaxy_reconstruction.py` switched to `RectangularBilinearAdaptDensity` (code + prose, rationale
+  sentence added); `galaxy_reconstruction.py`'s "RectangularUniform mesh … which is a triangulation"
+  description of its `scipy.spatial.Delaunay` call corrected. Notebook twins regenerated.
+
+## Checked, no change needed
+- autolens_workspace interferometer pixelization: Bilinear in fit / modeling / source_science / slam,
+  Uniform only in likelihood_function.py — already correct.
+- `RectangularBilinearAdaptDensity` needs no adapt image (used bare in the lens interferometer modeling).
+
+## Original prompt
+
 # Interferometer pixelization modeling examples should use RectangularBilinearAdaptDensity
 
 Type: docs
