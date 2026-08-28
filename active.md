@@ -34,7 +34,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1537
 - prompt: active/ell_comps_joint_disk_constraint.md
 - issued: 2026-08-27
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1538
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/589
+- heart-ack: RED acknowledged 2026-08-28 (release validation FAILED (stage integrate) — the known human-authorised override for this task; unrelated to these branches)
+- note: merge PyAutoFit#1538 FIRST — PyAutoGalaxy#589 declares geometry the PyAutoFit PR introduces the machinery to read
 - worktree: ~/Code/PyAutoLabs-wt/ell-comps-disk-constraint
 - repos:
   - PyAutoFit: feature/ell-comps-disk-constraint
