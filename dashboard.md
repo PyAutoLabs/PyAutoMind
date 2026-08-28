@@ -161,7 +161,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/joint_clipper_compose_with_bijector.md">Compose ClipperPriorBoxJoint with a bijector/scaler instead of refusing it</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1539">issue #1539</a> — issued 2026-08-28 — library-dev</summary>
+<details><summary>📋 <a href="active/joint_clipper_compose_with_bijector.md">Compose ClipperPriorBoxJoint with a bijector/scaler instead of refusing it</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1539">issue #1539</a> — issued 2026-08-28 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/joint_clipper_compose_with_bijector.md
