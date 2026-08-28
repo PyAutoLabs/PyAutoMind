@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/nuts_warm_start_driver_and_a100_probe.md">NUTS warm-start driver + A100 MCMC probe (and an SMC research row)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/187">issue #187</a> — issued 2026-08-28 — library-dev</summary>
+<details><summary>📋 <a href="active/nuts_warm_start_driver_and_a100_probe.md">NUTS warm-start driver + A100 MCMC probe (and an SMC research row)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/187">issue #187</a> — issued 2026-08-28 — pr-open</summary>
 
 ```
 /start_dev active/nuts_warm_start_driver_and_a100_probe.md
