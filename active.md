@@ -8,6 +8,10 @@
 - worktree: ~/Code/PyAutoLabs-wt/science-project-memory
 - classification: library (three independent assistant/organ repos; no workspace follow-up)
 - repos:
+  - PyAutoBrain: feature/science-project-memory
+  - autolens_assistant: feature/science-project-memory
+  - autocti_assistant: feature/science-project-memory
+  - autogalaxy_assistant: feature/science-project-memory
 - note: phased — Phase 1 PyAutoBrain `clone sync` lever, Phase 2 autolens_assistant (the
   reference copy, deliverables A-D), Phase 3 propagate to autocti_assistant +
   autogalaxy_assistant via the new sync. autofit_assistant is dry-run only (~343 lines
