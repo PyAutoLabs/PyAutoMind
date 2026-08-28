@@ -14,6 +14,7 @@
 
 ## numba-cpu-nnls-iteration-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/498
+- prompt: active/numba_cpu_likelihood_nnls_iteration_reduction.md
 - issued: 2026-08-27
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/numba-cpu-nnls-iteration-reduction
