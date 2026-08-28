@@ -155,7 +155,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/anonymise_the_named_science_target_in_the.md">Anonymise the named science target in the WFC3-IR hole regression</a> — <a href="https://github.com/PyAutoLabs/PyAutoReduce/issues/73">issue #73</a> — issued 2026-08-28 — library-dev</summary>
+<details><summary>📋 <a href="active/anonymise_the_named_science_target_in_the.md">Anonymise the named science target in the WFC3-IR hole regression</a> — <a href="https://github.com/PyAutoLabs/PyAutoReduce/issues/73">issue #73</a> — issued 2026-08-28 — library-dev, branch-pushed, pr-blocked-heart-red</summary>
 
 ```
 /start_dev active/anonymise_the_named_science_target_in_the.md
