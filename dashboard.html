@@ -376,7 +376,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/release_timeout_policy.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">health_fixes</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">priors</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/priors/z_features.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">priors</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill r">human-required</span><span class="pill n">low</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS solve…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill r">human-required</span><span class="pill n">low</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">pyautolens</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 </details>
 <details>
@@ -759,6 +759,12 @@ Contract (the `start_bundle` skill is the full body):
 <table class="recent">
 <tr>
 <td class="when">2026-08-28</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-28</td>
 <td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/numba_cpu_hst_curvature_matrix_speedup.md">Numba CPU likelihood at HST resolution: speed up the curvature matrix…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/numba_cpu_hst_curvature_matrix_speedup.md" aria-label="Copy the Claude command">📋</button></td>
@@ -811,7 +817,7 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-08-27</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a></td>
@@ -888,12 +894,6 @@ Contract (the `start_bundle` skill is the full body):
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/feature/pyautobrain/brain_board_follow_ups.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-08-22</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr hidden>
 <td class="when">2026-08-22</td>

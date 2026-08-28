@@ -1,3 +1,117 @@
+# reconstruction-noise-map-solver-mismatch — the NNLS/unconstrained gap, measured down to nothing
+
+**Date:** 2026-08-28
+**Issue:** none (research prompt, never issued)
+**PRs:** [PyAutoArray#472](https://github.com/PyAutoLabs/PyAutoArray/pull/472) (MERGED, docs),
+[PyAutoArray#473](https://github.com/PyAutoLabs/PyAutoArray/pull/473) (MERGED, docs),
+[PyAutoArray#493](https://github.com/PyAutoLabs/PyAutoArray/pull/493) (MERGED, closes
+[PyAutoArray#492](https://github.com/PyAutoLabs/PyAutoArray/issues/492))
+**Outcome:** retired at reconcile — the measurement work is finished and two of the three defects
+shipped; the third was adjudicated **not a bug**. The unshipped remainder is re-filed as
+`draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`.
+
+## What this task was
+
+`AbstractInversion.reconstruction_noise_map` reports `sqrt(diag([F + λH]^-1))` — the posterior
+covariance of the **unconstrained** Warren & Dye semi-linear inversion. But `config/general.yaml`
+ships `use_positive_only_solver: true`, so the default reconstruction is an NNLS active-set solve
+(`fnnls_cholesky`), whose posterior is a *truncated* Gaussian. The prompt alleged three defects:
+
+1. the covariance describes an estimator the solver no longer uses (the truncated-posterior maths),
+2. the covariance inverts the **full** matrix while the reconstruction subsets by `zeroed_ids_to_keep`,
+3. `use_edge_zeroed_pixels` is nested inside the positive-only branch, so turning that solver off
+   silently disables edge-zeroing.
+
+Sibling of `complete/2026/08/reconstruction-noise-map-covariance-sqrt.md` (the numerics/semantics
+half, shipped 2026-08-22 as PyAutoArray#469). This half was the estimator-level one.
+
+## The grading arc — high → medium → high → low, and why it swung
+
+Recorded in full because the swings are the finding: each re-grade came from measuring a
+progressively less wrong thing, and only the last is the operating point.
+
+| Measurement | Verdict | Grade |
+|---|---|---|
+| Reasoned, not measured ("NNLS pins a large fraction of a compact source's mesh") | premise plausible | **high** |
+| **Synthetic proxy** — real `fnnls_cholesky`, but a *random* mapping matrix | pinned fraction confirmed large (25–50%); shipped/conditional noise ratio only **1.025 median, 1.12 max** | high → **medium** |
+| **Real ray-traced fit**, hand-set λ (`RectangularBilinearAdaptDensity(28,28)`, Isothermal + shear, compact Sersic) | proxy understated by an order of magnitude — real ray tracing concentrates data support in the arc, so 87–97% pinned; ratio **1.7–2.8 median, up to 10x per pixel**; source flux through the `S/N ≥ 5` cut moved **−11% to −49%** | medium → **high** |
+| **Real fit at the *fitted* λ** — `argmax_λ log_evidence` over a 17-point grid, since `Constant.coefficient` is a free `LogUniform(1e-6, 1e6)` parameter | `λ* = 10` in every case, mid-grid. Ratio collapses to **1.007–1.263 median**; flux moves **0.0% / −1.3% / 0.0%**; pixels either side of the S/N cut 12/12, 29/30, 138/138 | high → **low** |
+
+**The Bayesian evidence self-selects away from the problematic regime.** The factor-of-2.8 gap lives
+at λ ~ 0.1–1 — under-regularized solutions the evidence penalises. The *mechanism* is real (42–97%
+of the mesh stays pinned at λ*), it just has no material numerical consequence at the operating
+point.
+
+## The framing that must survive this record
+
+The two noise maps **bracket** the truth; neither is "the right answer":
+
+- **shipped (full-matrix)** ignores `s >= 0` entirely → **overstates** (upper bound),
+- **active-set-conditional** treats the active set as known → **understates** (lower bound),
+- the true truncated-Gaussian posterior lies between.
+
+So "switch to the conditional covariance" is **not** the fix at any λ — it swaps one bound for the
+other. Anyone reopening this must start there.
+
+## What shipped
+
+- **[PyAutoArray#472](https://github.com/PyAutoLabs/PyAutoArray/pull/472)** (2026-08-22) — the
+  docstring caveat on `reconstruction_noise_map`: the covariance is that of the unconstrained solve,
+  the default solver is NNLS, the overstatement is ×1.01–×1.26 median at the evidence-optimal
+  coefficient (~2.8× below it), and the conditional covariance is *not* the correction. Docs only.
+- **[PyAutoArray#473](https://github.com/PyAutoLabs/PyAutoArray/pull/473)** (2026-08-22) — Defect 3
+  adjudicated **not a bug**: the `use_edge_zeroed_pixels`-inside-`use_positive_only_solver` nesting
+  is deliberate scoping, confirmed by the author and now documented in `config/general.yaml`, the
+  `Settings.use_edge_zeroed_pixels` docstring and a code comment.
+- **[PyAutoArray#493](https://github.com/PyAutoLabs/PyAutoArray/pull/493)** (merged 2026-08-27,
+  closes [#492](https://github.com/PyAutoLabs/PyAutoArray/issues/492)) — Defect 2 **fixed**: a new
+  `solve_ids_to_keep` property is shared by `reconstruction` and
+  `reconstruction_covariance_matrix`, so the covariance is formed on the parameters the solve
+  actually solved for. Not opt-in as the prompt assumed — `RectangularRTUAdaptDensity.zeroed_pixels`
+  is the whole edge ring unconditionally, so this was live on a shipped default mesh.
+
+## What was deliberately NOT done, and where it went
+
+Re-filed as **`draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`** (`Priority:
+low`):
+
+- **Defect 1's actual maths** — a proper truncated-Gaussian posterior for the NNLS solve. Graded
+  low: worth it only if someone needs calibrated per-pixel error bars on a very compact source,
+  where the shipped map still overstates by ~26% median (up to ~2× per pixel).
+- **The open measurement** — re-run the evidence-optimal λ with the lens **mass free** rather than
+  fixed at truth. A poor mass model may prefer a lower λ, which is the regime where the gap opens to
+  1.7–2.8×. This is the single result most likely to overturn the `low` grade, and it gates the
+  maths above.
+
+Not carried over (recorded here instead, since they are caveats on a finished measurement rather
+than work): one noise realization per row with no error bars on λ*; `RectangularBilinearAdaptDensity`
+only, Delaunay untested; evidence maximised on a grid rather than sampled, so posterior mass at
+lower λ was not explored.
+
+The measurement scripts (`scratchpad/real_fit_measure.py`, `scratchpad/sensitivity.py`,
+`scratchpad/fitted_lambda.py`) were **session artefacts and are gone** — anyone re-running must
+rebuild them from `autolens_workspace/scripts/imaging/features/pixelization/source_science.py`.
+
+## Why this is retired rather than left standing
+
+Reconcile (2026-08-28) flagged it on `shared-identifiers` with
+`complete/2026/08/reconstruction-noise-map-covariance-sqrt.md` plus `stale-status`. Adjudicated
+against PyAutoArray `origin/main`: two of the three defects and the documentation are merged, the
+third is a confirmed non-bug, and the priority is `low` on the strength of the prompt's own final
+measurement. What remained was one gating measurement and one conditional implementation — a lean
+new prompt, not a 432-line research log. No other `draft/` prompt, `active.md` entry or `epics.md`
+phase references it.
+
+## Siblings
+
+- `complete/2026/08/reconstruction-noise-map-covariance-sqrt.md` — the numerics/semantics half
+  (elementwise-sqrt NaNs, the Cholesky rewrite, PyAutoArray#469). Its "Still open — the larger half"
+  section names this prompt's three defects; read this record for their disposition.
+- `complete/2026/08/numerical-inversion-failures.md` — the refuted non-positive-definite hypothesis
+  whose reproduction gate turned up the whole cluster.
+
+## Original prompt
+
 # The reconstruction noise map describes a different estimator than the default solver
 
 Type: bug
