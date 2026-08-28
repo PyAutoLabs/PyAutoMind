@@ -169,7 +169,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/phase8b_f2_ruling_scorer_verdict.md">Phase 8B: F2 reference ruling, F5 demotion, preliminary verdict on 24/39 arms</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/185">issue #185</a> — issued 2026-08-28 — library-dev</summary>
+<details><summary>📋 <a href="active/phase8b_f2_ruling_scorer_verdict.md">Phase 8B: F2 reference ruling, F5 demotion, preliminary verdict on 24/39 arms</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/185">issue #185</a> — issued 2026-08-28 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/phase8b_f2_ruling_scorer_verdict.md
