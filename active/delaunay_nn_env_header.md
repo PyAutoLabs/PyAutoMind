@@ -8,6 +8,7 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: normal
+Issued: 2026-08-28
 Status: formalised
 
 # delaunay_nn jax_assertions carry a dead ENV declaration (no __Env__ header)

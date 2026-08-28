@@ -8,6 +8,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
+Issued: 2026-08-28
 Status: formalised
 
 # Sparse interferometer W~ path silently assumes equal real/imag noise sigma
