@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1188 records across 7 buckets.
+1187 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -175,7 +175,6 @@ _(curate hard-won records here — survives regeneration.)_
 - [notebook-setup-notebook-regen-drift](2026/08/notebook-setup-notebook-regen-drift.md)
 - [nss-remainline-mainline-blackjax](2026/08/nss-remainline-mainline-blackjax.md)
 - [nufft-parity-full-datasets](2026/08/nufft-parity-full-datasets.md)
-- [numba-cpu-kernel-cdf-fast-path](2026/08/numba-cpu-kernel-cdf-fast-path.md)
 - [numba-cpu-likelihood-profiling](2026/08/numba-cpu-likelihood-profiling.md)
 - [numba-cpu-mge-batch-convolve-cache](2026/08/numba-cpu-mge-batch-convolve-cache.md)
 - [numba-cpu-nnls-iteration-reduction](2026/08/numba-cpu-nnls-iteration-reduction.md)
