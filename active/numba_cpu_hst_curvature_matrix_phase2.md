@@ -5,6 +5,7 @@ Epic: none (successor to `numba_cpu_hst_curvature_matrix_speedup`, PyAutoArray#5
 Target: autoarray
 Repos:
 - @PyAutoArray
+- @PyAutoGalaxy
 - @autolens_profiling
 Themes:
 - numba-cpu
@@ -13,8 +14,10 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Filed: 2026-08-28
+Issued: 2026-08-28
+Blocked-by: PyAutoArray#505
 
 ## Original request
 
@@ -42,6 +45,20 @@ Post-#505 HST rectangular split (0.60 s/eval):
 
 Delaunay-1250: mapper×mapper 0.123 s of 0.76 s; F is no longer dominant there — the inversion build
 (~0.5 s) is, which is out of scope here.
+
+## Plan findings (2026-08-28)
+
+Two read-through findings changed the task's shape at planning time. First, the **MGE half of the
+cost lives in PyAutoGalaxy, not PyAutoArray**: the #505 `Convolver` batching is already applied in
+`LightProfileLinearObjFuncList.operated_mapping_matrix_override` (the 60 Gaussians are stacked into
+one convolution) and scipy already skips the length-60 axis, so the bulk of the ~0.22 s is the 120
+per-profile image evaluations, all of which recompute an identical transform and eccentric-radius
+grid because the MGE basis shares `centre`/`ell_comps` and varies only in `sigma` — hence
+`@PyAutoGalaxy` added to Repos above. Second, **two of the four mapper×mapper candidate levers are
+dead on arrival**: upper-triangle symmetry is already exploited (the sparse preload stores
+`ip1 >= ip0` and the kernel folds `A + Aᵀ`) and unique-mappings compression is already what the
+kernel iterates over. The live lever is a **two-stage reformulation** — a per-data-pixel dense
+source-space accumulator followed by contiguous AXPYs.
 
 ## Goal
 

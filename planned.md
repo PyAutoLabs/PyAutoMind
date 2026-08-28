@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [numba-hst-curvature-matrix-phase2](#numba-hst-curvature-matrix-phase2)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
@@ -9,6 +10,36 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 
 <!-- toc:end -->
+
+## numba-hst-curvature-matrix-phase2
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/507
+- planned: 2026-08-28
+- prompt: active/numba_cpu_hst_curvature_matrix_phase2.md
+- classification: both (library PyAutoArray + PyAutoGalaxy, workspace autolens_profiling)
+- suggested-branch: feature/numba-hst-curvature-matrix-phase2
+- worktree: ~/Code/PyAutoLabs-wt/numba-hst-curvature-matrix-phase2
+- next-skill: start_library (PyAutoArray first, then PyAutoGalaxy; autolens_profiling via start_workspace)
+- blocked-by: numba-hst-curvature-matrix-speedup / PyAutoArray#505 must MERGE first (using PyAutoArray + autolens_profiling; phase 2 edits the same files — `inversion_imaging_numba_util.py`, `sparse.py`, both likelihood_breakdown harness scripts, the results note). `worktree_check_conflict` also reports autolens_profiling claimed by `nuts-warm-start-driver-and-a100-probe`.
+- summary: |
+    Successor to #505. Post-#505 the HST rectangular numba evaluation is 0.60 s/eval,
+    split mapper×mapper 0.277 s (46%) + MGE operated mapping matrix ~0.22 s (37%).
+    Target ≤ ~0.35 s/eval, likelihood unchanged to pin (rtol 1e-6 where summation
+    order changes, bit-identical otherwise). Step 0 instruments the MGE row into 3
+    sub-rows + records geometry constants (checkpoint); step 1 is a bit-identical
+    hoist in `curvature_matrix_via_sparse_operator_from` behind a new oracle test;
+    step 2 is the two-stage reformulation (per-data-pixel dense source-space
+    accumulator + contiguous AXPYs, est. 1.7–2.5× on the block); step 3 caches the
+    `OverSampler.binned_array_2d_from` divisor (PyAutoArray) and adds a
+    shared-geometry fast path to `LightProfileLinearObjFuncList` (PyAutoGalaxy —
+    the 60 MGE Gaussians share centre/ell_comps, only sigma varies); step 4 is
+    paired before/after + pins + pool run + note, then ship library→workspace.
+    Planning findings: the MGE lever lives in PyAutoGalaxy (hence it is in Repos),
+    and the symmetry + unique-mappings levers are already exploited — the live
+    mapper×mapper lever is the two-stage reformulation. `prange` not planned.
+- affected-repos:
+  - PyAutoArray
+  - PyAutoGalaxy
+  - autolens_profiling
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
