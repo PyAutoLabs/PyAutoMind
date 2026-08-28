@@ -155,7 +155,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/delaunay_nn_env_header.md">delaunay_nn jax_assertions carry a dead ENV declaration (no __Env__ header)</a> — issued 2026-08-28</summary>
+<details><summary>📋 <a href="active/delaunay_nn_env_header.md">delaunay_nn jax_assertions carry a dead ENV declaration (no __Env__ header)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/284">issue #284</a> — issued 2026-08-28 — workspace-dev</summary>
 
 ```
 /start_dev active/delaunay_nn_env_header.md
@@ -171,7 +171,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_interferometer_unequal_sigma_guard.md">Sparse interferometer W~ path silently assumes equal real/imag noise sigma</a> — issued 2026-08-28</summary>
+<details><summary>📋 <a href="active/sparse_interferometer_unequal_sigma_guard.md">Sparse interferometer W~ path silently assumes equal real/imag noise sigma</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/502">issue #502</a> — issued 2026-08-28 — library-dev</summary>
 
 ```
 /start_dev active/sparse_interferometer_unequal_sigma_guard.md
