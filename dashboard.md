@@ -67,7 +67,7 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Theme:</code> header and theme-keyed (cross-repo) auto-bundling</a> — pyautomind · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo) auto-bundling</a> — pyautomind · medium · supervised · high</summary>
 
 ```
 /start_dev draft/feature/pyautomind/bundle_theme_grouping.md
@@ -254,7 +254,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Theme:</code> header and theme-keyed (cross-repo) auto-bundling</a> — pyautomind · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo) auto-bundling</a> — pyautomind · medium · supervised · high</summary>
 
 ```
 /start_dev draft/feature/pyautomind/bundle_theme_grouping.md
@@ -1247,7 +1247,7 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Difficulty | Priority | Status |
 |--------|------------|----------|--------|
-| <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Theme:</code> header and theme-keyed (cross-repo)…</a> | medium | high | formalised |
+| <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo)…</a> | medium | high | formalised |
 | <a href="draft/feature/pyautomind/complete_archive_wiki.md">Token-light wiki index over the complete/ archive</a> | medium | normal | formalised |
 | <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> | hard | low | - |
 | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> | medium | low | formalised |
@@ -1433,7 +1433,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">Claude Development Prompt: Joint <code>ell_comps</code> Disk Constraint</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts +…</a> |
-| 2026-08-27 | filed | <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Theme:</code> header and theme-keyed (cross-repo)…</a> |
+| 2026-08-27 | filed | <a href="draft/feature/pyautomind/bundle_theme_grouping.md">Bundles phase 1 — <code>Themes:</code> keyword list and theme-keyed (cross-repo)…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
