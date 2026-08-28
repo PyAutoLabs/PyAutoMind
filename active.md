@@ -22,12 +22,11 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/numba-cpu-nnls-iteration-reduction
 - repos:
-- note: epic numba-cpu-likelihood phase 3a. PLAN APPROVED-PENDING on the issue (user paused for the
-  night 2026-08-27 before /start_library ran — no worktree, no branch, no source edits exist yet).
-  RESUME: read the issue plan, then `/start_library numba-cpu-nnls-iteration-reduction PyAutoArray`
-  (PyAutoArray only — autolens_profiling is claimed by harvest-0827-gate-b-pt2 / #183, awaiting-merge,
-  disjoint files; take that leg via /start_workspace after #183 merges). Fable session → delegate
-  implementation to Opus. Measure with AUTOARRAY_NUMBA_OPERATED_MEMO=0 (harness is memo-blind).
+  - PyAutoArray: feature/numba-cpu-nnls-iteration-reduction
+- note: epic numba-cpu-likelihood phase 3a. Plan on the issue stands. Resumed 2026-08-28: worktree +
+  PyAutoArray branch created via /start_library (no source edits yet at registration). autolens_profiling
+  leg (diagnostic script + results + notes) follows via /start_workspace — #183 has MERGED so the claim
+  is free. Fable session → delegate implementation to Opus. Measure with AUTOARRAY_NUMBA_OPERATED_MEMO=0 (harness is memo-blind).
   Phase 3b (batched active-set moves) is NOT filed — file it from 3a's diagnostic numbers.
 
 ## ell-comps-disk-constraint
