@@ -19,7 +19,7 @@
 - suggested-branch: feature/numba-hst-curvature-matrix-phase2
 - worktree: ~/Code/PyAutoLabs-wt/numba-hst-curvature-matrix-phase2
 - next-skill: start_library (PyAutoArray first, then PyAutoGalaxy; autolens_profiling via start_workspace)
-- blocked-by: numba-hst-curvature-matrix-speedup / PyAutoArray#505 must MERGE first (using PyAutoArray + autolens_profiling; phase 2 edits the same files — `inversion_imaging_numba_util.py`, `sparse.py`, both likelihood_breakdown harness scripts, the results note). `worktree_check_conflict` also reports autolens_profiling claimed by `nuts-warm-start-driver-and-a100-probe`.
+- unblocked: 2026-08-28 — phase 1 MERGED (PyAutoArray#506 `1b89404b`, autolens_profiling#189 `b3fa632a`; record `complete/2026/08/numba-hst-curvature-matrix-speedup.md`). Remaining coordination note: `worktree_check_conflict` reports autolens_profiling also claimed by `nuts-warm-start-driver-and-a100-probe` — disjoint file sets, parallel worktree, explicit pathspecs on commit.
 - summary: |
     Successor to #505. Post-#505 the HST rectangular numba evaluation is 0.60 s/eval,
     split mapper×mapper 0.277 s (46%) + MGE operated mapping matrix ~0.22 s (37%).
