@@ -22,7 +22,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-test-mode-degenerate-corner
 - repos:
   - PyAutoFit: feature/nautilus-test-mode-degenerate-corner
-- note: Heart RED 2026-08-28 — Nautilus/Dynesty TEST_MODE=1 gives ESS=1; corner_cornerpy guard becomes ESS-based. Workspace script untouched.
+- note: Heart RED 2026-08-28 — PR reduced to the ESS-based corner_cornerpy guard after the human declined a global test-mode budget change; the script fix is nautilus-plotter-real-search-cap (autofit_workspace#150).
 - pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1542
 
 ## repin-rectangular-mge-after-490
@@ -68,8 +68,9 @@
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/149
 - prompt: active/nautilus_plotter_py_corner_cornerpy_raises_value.md
 - issued: 2026-08-28
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-plotter-real-search-cap
 - repos:
   - autofit_workspace: feature/nautilus-plotter-real-search-cap
 - note: workspace half of nautilus-test-mode-degenerate-corner (PyAutoFit#1542) after the human declined a global test-mode budget change — ENV: real_search + explicit n_like_max in nautilus_plotter.py.
+- pr: https://github.com/PyAutoLabs/autofit_workspace/pull/150 (library-first: PyAutoFit#1542)
