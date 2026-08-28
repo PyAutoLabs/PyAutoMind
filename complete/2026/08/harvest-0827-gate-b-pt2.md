@@ -1,3 +1,14 @@
+## harvest-0827-gate-b-pt2
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/182
+- completed: 2026-08-27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/183
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1536
+- summary: 2026-08-27 RAL A100 harvest + audit (https://claude.ai/code/artifact/d9f4b0f3-52a1-4830-a9ad-11a225b77507). Gate B pt 2 CALLED: job 341892 falsified the "0.3″ too tight" hypothesis — at 0.3″ factor 1e8→1e5 restores Prodigy 5/5 with parameters identical to positions-off, auto/0.2 at 1e8 gives 0/4; damage is penalty stiffness (transit), factor ≤1e5 licensed, 1e8 rejected, six caveats. Six crashed 8B arms rebuilt offline from search_internal.dill (`recover_multistart_from_internal.py`, byte-identical reproduction). `_targets.py` positions block now derives from the resolved threshold/factor (three arms had one target_id); 12 rows re-stamped via gated `restamp_target_block.py`; `penalty_at_best` added. Scorer: UNSCORABLE state (missing data used to read PASS/FAIL), F4 → fp64 equivalence. Five DECISIONS entries; re-check corrections (W6 1.78× is per-eval, wall 1.46×; Nautilus+positions lowers maxL 5/5; Prodigy positions 2/5 under the coded rule; phase_03 transcriptions). InferenceRefs_v1 → 9/13; knn ref flagged 480 nats below a same-target Prodigy arm.
+- traps: 341894/5 short-circuited ("Fit Already Completed") and overwrote 4 nbatch JSONs on RAL — not harvested. 341892_0 was a silent Prodigy resume ("Resuming … previous samples found", no "Fit Already Completed") — marked invalid; trap rule extended. Building models locally regenerated a gitignored dataset FITS and made every pixelized target_id look stale — the restamp reproduction control caught it.
+- open: the repaired scorer HALTS at F5 on delaunay_adapt_split[slogdet] seed0 (rel 1.06e-5) and reads F1[cholesky]/F3 falsified vs the hand reading — recorded, not adjudicated; no 8B verdict until all 341875 arms land and the F2 reference deviation has a human ruling. PR#181 MIG requeue cap still open.
+
+## Original prompt
+
 # `@autolens_profiling` Harvest 2026-08-27: Gate B pt 2, recovered 8B rows, scorer + ledger repairs
 
 Type: feature

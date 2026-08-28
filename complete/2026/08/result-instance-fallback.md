@@ -1,3 +1,14 @@
+## result-instance-fallback
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1535
+- completed: 2026-08-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1536
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/713
+- summary: A completed fit whose stored best vector the model rejects (gradient lanes settling at ell_comps outside the unit disk — finite under JAX tracing) died in `save_results` and lost samples.csv + .completed; six 2–4 h A100 Phase 8B arms were lost this way. `Result.instance` now falls back to `Samples.max_log_likelihood()` (the #1486 next-valid path) with a WARNING; `updater._save_samples` writes samples.csv/summary before materialising the instance (also lets the weight-threshold prune run — closes #1487); PyAutoLens `save_results` catches SamplesException/FitException. PyAutoFit 2251 passed, PyAutoLens 553 passed; 7 new tests fail on old code.
+- traps: shipped under a human-authorised Heart RED override (`release validation FAILED (stage integrate)`, nightly 33073386315, unrelated scripts). Crashed arms keep `search_internal.dill` (the crash pre-empts its deletion) — recoverable offline.
+- follow-ups: PyAutoGalaxy `autogalaxy/analysis/analysis/dataset.py:178` has the identical `except AttributeError`-only catch (shadowed for lens fits); joint ell_comps disk constraint — `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`.
+
+## Original prompt
+
 # `@PyAutoFit` Bug: a rejected best point kills the run at results-write and loses samples.csv
 
 Type: bug
