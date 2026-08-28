@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/numba_cpu_hst_curvature_matrix_phase2.md">Numba CPU likelihood at HST resolution, phase 2: the mapper×mapper block…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/507">issue #507</a> — issued 2026-08-28 — library-dev</summary>
+<details><summary>📋 <a href="active/numba_cpu_hst_curvature_matrix_phase2.md">Numba CPU likelihood at HST resolution, phase 2: the mapper×mapper block…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/507">issue #507</a> — issued 2026-08-28 — shipped, awaiting-merge (all three PRs open, CI watched; merge is human)</summary>
 
 ```
 /start_dev active/numba_cpu_hst_curvature_matrix_phase2.md

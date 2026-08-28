@@ -54,16 +54,22 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/507
 - prompt: active/numba_cpu_hst_curvature_matrix_phase2.md
 - issued: 2026-08-28
-- status: library-dev
+- status: shipped, awaiting-merge (all three PRs open, CI watched; merge is human)
 - worktree: ~/Code/PyAutoLabs-wt/numba-hst-curvature-matrix-phase2
 - classification: both (library PyAutoArray + PyAutoGalaxy, workspace autolens_profiling)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/508 (steps 1, 2, 3a)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/590 (step 3b)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/190 (steps 0 and 4)
+- merge-order: PyAutoArray#508 -> PyAutoGalaxy#590 -> autolens_profiling#190. PyAutoGalaxy CI clones PyAutoArray from source and checks out the same-named branch when it exists, so #590 tests against the PyAutoArray branch until #508 merges and that branch is deleted; no PyAutoGalaxy test depends on the new `OverSampler` behaviour, so #590 is green either way.
+- heart-ack: shipped over a pre-existing Heart RED (`pyauto-heart readiness --json` 2026-08-28T21:34:42Z, score 45; red_reasons `"release validation FAILED (stage integrate)"`; yellow_reasons `"workspace validation not passing (2 failed, cloud#33179766004: autolens_test scripts/imaging/rectangular_mge.py, autolens_test scripts/imaging/rectangular_mge_rtu.py)"` and `"manifest drift: session-start hooks (generated) — 32 mismatch(es) vs PyAutoMind/repos.yaml"`). Human authorisation 2026-08-28, verbatim: "prm and then kick off phase 2, I authorize the heart RED thing". Quoted verbatim in all three PR bodies.
+- result: goal met. HST rectangular 0.6214 -> 0.3334 s step total (1.86x), 0.6184 -> 0.3013 s directly timed (2.05x), target was ~0.35 s. F mapper x mapper 3.13x, MGE total 2.33x. euclid 1.57x, hst Delaunay 1.30x. All three pinned log likelihoods unchanged to every digit at rtol 1e-6; `curvature_matrix` bit-identical for step 3 alone and `allclose(rtol=1e-12)` across the phase. Pool ratio 2.05x -> 2.14x on 8 cores (no oversubscription). test_autoarray 1326 passed, test_autogalaxy 1149 passed.
 - parallel-claim: autolens_profiling is also claimed by `nuts-warm-start-driver-and-a100-probe`; file sets are disjoint (this task: `scripts/imaging/likelihood_breakdown/`, `results/breakdown/imaging/`, `results/notes/`; NUTS: `scripts/misc/searches/`, `scripts/imaging/searches/nuts/`, `results/notes/inference/`). Human approved an own parallel worktree 2026-08-28, same arrangement as phase 1. COMMIT DISCIPLINE: explicit pathspecs only in autolens_profiling, never `git add -A`.
 - predecessor: phase 1 shipped and merged 2026-08-28 — `complete/2026/08/numba-hst-curvature-matrix-speedup.md` (PyAutoArray#506 `1b89404b`, autolens_profiling#189 `b3fa632a`); PyAutoArray#505 closed.
 - repos:
   - PyAutoArray: feature/numba-hst-curvature-matrix-phase2
   - PyAutoGalaxy: feature/numba-hst-curvature-matrix-phase2
   - autolens_profiling: feature/numba-hst-curvature-matrix-phase2
-- next-skill: implementation per the approved plan (step 0 instrument checkpoint first), then ship_library PyAutoArray -> ship_library PyAutoGalaxy -> ship_workspace autolens_profiling
+- next-skill: /prm on PyAutoArray#508 once CI is green, then PyAutoGalaxy#590, then autolens_profiling#190 (library-first gate), then the completion record and worktree removal
 - summary: |
     Successor to #505. Post-#505 the HST rectangular numba evaluation is 0.60 s/eval,
     split mapper×mapper 0.277 s (46%) + MGE operated mapping matrix ~0.22 s (37%).
