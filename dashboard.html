@@ -222,7 +222,7 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>1</b><span>In flight</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>137</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>1</b><span>In flight</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>139</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-08-28.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -266,7 +266,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autolens_workspace_developer</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autonerves</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <h3>Quick wins <span class="facets">(small enough, and safe enough to run unattended)</span></h3>
-<p class="muted">(none right now)</p>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/workspaces/delaunay_nn_jax_assertions_carry_a_dead.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/workspaces/delaunay_nn_jax_assertions_carry_a_dead.md">delaunay_nn jax_assertions carry a dead ENV declaration (no __Env__ header)</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
 <div class="task"><button class="copy" data-cmd="/start_dev active/numba_cpu_likelihood_nnls_iteration_reduction.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/numba_cpu_likelihood_nnls_iteration_reduction.md">Numba CPU likelihood phase 3: cut the positive-only solve's active-set iterations…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/498">issue #498</a><span class="facets"> — issued 2026-08-27</span> — <span class="facets">shipping (Heart RED <code>release validation FAILED (stage integrate)</code> OVERRIDDEN by user 2026-08-28 for this task — being fixed…</span></p></div>
@@ -287,7 +287,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
 </details>
 <h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
-<p class="muted">137 filed prompts, not started — sorted most-pickable first (priority, then size). 26 of them belong to an epic and are listed only under Epics below.</p>
+<p class="muted">139 filed prompts, not started — sorted most-pickable first (priority, then size). 26 of them belong to an epic and are listed only under Epics below.</p>
 <details>
 <summary>feature — 28</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU (advanced/GPU)</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -339,15 +339,17 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/autolens_profiling/cluster_gradient_search_benchmark.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus, point-source)</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autolens_profiling</span></span></p></div>
 </details>
 <details>
-<summary>bug — 18</summary>
+<summary>bug — 20</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative diff off…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autogalaxy</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">health_fixes</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/jit_visualization_outputs.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">health_fixes</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/samples_parameter_paths.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">health_fixes</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/workspaces/delaunay_nn_jax_assertions_carry_a_dead.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/workspaces/delaunay_nn_jax_assertions_carry_a_dead.md">delaunay_nn jax_assertions carry a dead ENV declaration (no __Env__ header)</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s release-profile cap — hangs after the vmap JIT…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/sparse_interferometer_w_path_silently_assumes_eq.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_interferometer_w_path_silently_assumes_eq.md">Sparse interferometer W~ path silently assumes equal real/imag noise sigma</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autofit/nautilus_plotter_py_corner_cornerpy_raises_value.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/nautilus_plotter_py_corner_cornerpy_raises_value.md">nautilus_plotter.py corner_cornerpy raises ValueError "range is not valid or the sample…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autofit</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autolens</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autolens_workspace_test</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
@@ -567,6 +569,44 @@ Contract (the `start_bundle` skill is the full body):
 </table>
 </details>
 <details>
+<summary><b>autoarray — bundle 1</b> — 3 task(s) · 6 pts · auto — proposed</summary>
+<div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md
+- draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
+- draft/bug/autoarray/sparse_interferometer_w_path_silently_assumes_eq.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev &lt;member prompt&gt;` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/&lt;member-task&gt;` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model=&quot;opus&quot;, …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts." aria-label="Copy the Claude command">📋</button><p><b>Run this bundle</b> — one session, one issue and one PR per member</p></div>
+<table class="bundle">
+<tr><th>Prompt</th><th>Difficulty</th><th>Priority</th><th>Status</th></tr>
+<tr>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative…</a></td>
+<td class="facet">medium</td>
+<td class="facet">high</td>
+<td class="facet">formalised</td>
+</tr>
+<tr>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s…</a></td>
+<td class="facet">medium</td>
+<td class="facet">normal</td>
+<td class="facet">formalised</td>
+</tr>
+<tr>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_interferometer_w_path_silently_assumes_eq.md">Sparse interferometer W~ path silently assumes equal real/imag noise…</a></td>
+<td class="facet">medium</td>
+<td class="facet">normal</td>
+<td class="facet">formalised</td>
+</tr>
+</table>
+</details>
+<details>
 <summary><b>notebooks</b> — 2 task(s) · 5 pts · auto — proposed</summary>
 <div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'notebooks' — 2 INDEPENDENT tasks run in one orchestrated session.
 
@@ -595,37 +635,6 @@ Contract (the `start_bundle` skill is the full body):
 <td class="facet">howtolens</td>
 <td class="facet">small</td>
 <td class="facet">low</td>
-<td class="facet">formalised</td>
-</tr>
-</table>
-</details>
-<details>
-<summary><b>autoarray — bundle 1</b> — 2 task(s) · 4 pts · auto — proposed</summary>
-<div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md
-- draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev &lt;member prompt&gt;` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/&lt;member-task&gt;` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model=&quot;opus&quot;, …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts." aria-label="Copy the Claude command">📋</button><p><b>Run this bundle</b> — one session, one issue and one PR per member</p></div>
-<table class="bundle">
-<tr><th>Prompt</th><th>Difficulty</th><th>Priority</th><th>Status</th></tr>
-<tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative…</a></td>
-<td class="facet">medium</td>
-<td class="facet">high</td>
-<td class="facet">formalised</td>
-</tr>
-<tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s…</a></td>
-<td class="facet">medium</td>
-<td class="facet">normal</td>
 <td class="facet">formalised</td>
 </tr>
 </table>

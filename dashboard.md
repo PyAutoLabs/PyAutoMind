@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 137 |
+| [Backlog](#backlog) (`draft/`) | 139 |
 
 ## Start here
 
@@ -149,7 +149,13 @@ anything you could not verify.
 
 **Quick wins** (small enough, and safe enough to run unattended)
 
-- _(none right now)_
+<details><summary>📋 <a href="draft/bug/workspaces/delaunay_nn_jax_assertions_carry_a_dead.md">delaunay_nn jax_assertions carry a dead ENV declaration (no __Env__ header)</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/workspaces/delaunay_nn_jax_assertions_carry_a_dead.md
+```
+
+</details>
 
 ## In flight
 
@@ -247,7 +253,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**137** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**139** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -612,7 +618,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 18</summary>
+<summary><b>bug</b> — 20</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative diff off…</a> — autoarray · medium · supervised · high</summary>
 
@@ -662,6 +668,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/workspaces/delaunay_nn_jax_assertions_carry_a_dead.md">delaunay_nn jax_assertions carry a dead ENV declaration (no __Env__ header)</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/workspaces/delaunay_nn_jax_assertions_carry_a_dead.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
 
 ```
@@ -674,6 +688,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sparse_interferometer_w_path_silently_assumes_eq.md">Sparse interferometer W~ path silently assumes equal real/imag noise sigma</a> — autoarray · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autoarray/sparse_interferometer_w_path_silently_assumes_eq.md
 ```
 
 </details>
@@ -1285,6 +1307,38 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>autoarray — bundle 1</b> — 3 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md
+- draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
+- draft/bug/autoarray/sparse_interferometer_w_path_silently_assumes_eq.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative…</a> | medium | high | formalised |
+| <a href="draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s…</a> | medium | normal | formalised |
+| <a href="draft/bug/autoarray/sparse_interferometer_w_path_silently_assumes_eq.md">Sparse interferometer W~ path silently assumes equal real/imag noise…</a> | medium | normal | formalised |
+
+</details>
+
+<details>
 <summary><b>notebooks</b> — 2 task(s) · 5 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1311,36 +1365,6 @@ Contract (the `start_bundle` skill is the full body):
 |--------|------|------------|----------|--------|
 | <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> | autolens | large | high | in progress — core landed 2026-07-25… |
 | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> | howtolens | small | low | formalised |
-
-</details>
-
-<details>
-<summary><b>autoarray — bundle 1</b> — 2 task(s) · 4 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md
-- draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative…</a> | medium | high | formalised |
-| <a href="draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s…</a> | medium | normal | formalised |
 
 </details>
 
