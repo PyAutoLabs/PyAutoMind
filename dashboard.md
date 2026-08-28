@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/numba_cpu_hst_curvature_matrix_speedup.md">Numba CPU likelihood at HST resolution: speed up the curvature matrix F…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/505">issue #505</a> — issued 2026-08-28 — library-shipped, workspace-pending</summary>
+<details><summary>📋 <a href="active/numba_cpu_hst_curvature_matrix_speedup.md">Numba CPU likelihood at HST resolution: speed up the curvature matrix F…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/505">issue #505</a> — issued 2026-08-28 — library-shipped, workspace-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/numba_cpu_hst_curvature_matrix_speedup.md
