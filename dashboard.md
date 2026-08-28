@@ -155,7 +155,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s release-profile cap — hangs after the vmap JIT…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/287">issue #287</a> — issued 2026-08-28 — workspace-dev</summary>
+<details><summary>📋 <a href="active/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s release-profile cap — hangs after the vmap JIT…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/287">issue #287</a> — issued 2026-08-28 — awaiting-merge</summary>
 
 ```
 /start_dev active/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_plotter_py_corner_cornerpy_raises_value.md">nautilus_plotter.py corner_cornerpy raises ValueError "range is not valid or the sample…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1541">issue #1541</a> — issued 2026-08-28 — library-dev</summary>
+<details><summary>📋 <a href="active/nautilus_plotter_py_corner_cornerpy_raises_value.md">nautilus_plotter.py corner_cornerpy raises ValueError "range is not valid or the sample…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1541">issue #1541</a> — issued 2026-08-28 — awaiting-merge</summary>
 
 ```
 /start_dev active/nautilus_plotter_py_corner_cornerpy_raises_value.md
@@ -179,7 +179,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative diff off…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/286">issue #286</a> — issued 2026-08-28 — workspace-dev</summary>
+<details><summary>📋 <a href="active/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative diff off…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/286">issue #286</a> — issued 2026-08-28 — awaiting-merge</summary>
 
 ```
 /start_dev active/rectangular_mge_jax_vmap_likelihood_pins_are.md
