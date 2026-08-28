@@ -7,6 +7,7 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
+Issued: 2026-08-28
 Status: formalised
 
 # Interferometer pixelization examples: linear bulge + pixelization hybrid on the sparse path
