@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1179 records across 7 buckets.
+1181 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -97,6 +97,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [group-data-preparation-readme](2026/08/group-data-preparation-readme.md)
 - [hands-hygiene-leftovers](2026/08/hands-hygiene-leftovers.md)
 - [hands-raw-string-docstring-prefix](2026/08/hands-raw-string-docstring-prefix.md) — closed on merge
+- [harvest-0827-gate-b-pt2](2026/08/harvest-0827-gate-b-pt2.md) — 2026-08-27 RAL A100 harvest + audit (https://claude.ai/code/artifact/d9f4b0f3-52a1-4830-a9ad-11a225b77507). Ga…
 - [hazard-profiling-likelihood-tier](2026/08/hazard-profiling-likelihood-tier.md) — Tier-2 likelihood profiling landed with five persistent findings and corrected NNLS continuity semantics.
 - [health-conductor-stale-verdict](2026/08/health-conductor-stale-verdict.md)
 - [heart-green-validation-ingest](2026/08/heart-green-validation-ingest.md)
@@ -247,6 +248,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [resolve-border-relocator-hazard](2026/08/resolve-border-relocator-hazard.md) — Reconciled the likelihood hazard instrument after the border-relocator source fix. The resolved backend-diverg…
 - [resolve-curvature-floor-doc-drift](2026/08/resolve-curvature-floor-doc-drift.md) — Reconciled the curvature-floor documentation finding after PyAutoArray#444. The detector now requires both run…
 - [resolve-sersic-ell-comps-gradient](2026/08/resolve-sersic-ell-comps-gradient.md) — Reconciled the numerical-hazard evidence after the Sersic Cartesian-radius fix. The stable conditional detecto…
+- [result-instance-fallback](2026/08/result-instance-fallback.md) — A completed fit whose stored best vector the model rejects (gradient lanes settling at ell_comps outside the u…
 - [results-schema-comparability-guard](2026/08/results-schema-comparability-guard.md)
 - [review-claim-dispositions](2026/08/review-claim-dispositions.md)
 - [samplers-surface-autolens-tiers](2026/08/samplers-surface-autolens-tiers.md) — the samplers faculty's SamplerSurface now scans the findings
