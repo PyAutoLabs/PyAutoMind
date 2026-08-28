@@ -44,3 +44,15 @@
 - repos:
   - autogalaxy_workspace: feature/interferometer-adapt-density-mesh
 - note: mesh switch in modeling.py + galaxy_reconstruction.py only; fit.py / likelihood_function.py keep RectangularUniform by design.
+
+## requarantine-delaunay-and-keep-abort-stack
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/287
+- prompt: active/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
+- issued: 2026-08-28
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/requarantine-delaunay-and-keep-abort-stack
+- repos:
+  - autolens_workspace_test: feature/requarantine-delaunay-and-keep-abort-stack
+  - PyAutoHands: feature/requarantine-delaunay-and-keep-abort-stack
+- parallel-claim: autolens_workspace_test also claimed by repin-rectangular-mge-after-490 (#286); file sets disjoint (config/build/no_run.yaml vs scripts/imaging/jax_likelihood/rectangular_mge*.py); own worktree + own branch per the standing parallel-worktree practice.
+- note: Heart RED 2026-08-28 — delaunay.py 1805s timeout is the XLA FftThunk/Eigen-pool deadlock (epic), not a library or profile bug; re-quarantine + make build_util keep the faulthandler stack.
