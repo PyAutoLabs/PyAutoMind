@@ -60,7 +60,9 @@ Two ingredients, each established by removing it:
 
 `.github/scripts/xla_fft_pool_reentrancy_upstream.md`, beside the reproducer. Committed rather than left in scratch because the CI logs holding the original stacks expire in 90 days.
 
-**Recorded decision not to file**, taken by the human after review: filing posts to `jax-ml/jax`, a third-party tracker outside the session's scope, so it wants a person behind it. The hold is about who posts, not whether the finding stands. Filing later costs only the paste.
+**Recorded decision NOT to file — settled, not deferred.** The human reviewed the report, approved its content, and then decided against filing upstream at all. This is a closed decision, not a pending TODO: nobody should pick this record up expecting an open filing task.
+
+The finding itself is unaffected — it is the reason the flag stays. The report remains committed beside the reproducer so that if anyone ever *does* want to file, or an upstream fix appears and needs checking against our evidence, it costs only the paste.
 
 ## Heart
 

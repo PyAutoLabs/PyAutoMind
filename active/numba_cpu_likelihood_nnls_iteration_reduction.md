@@ -2,18 +2,16 @@
 
 Type: feature
 Epic: numba-cpu-likelihood
-Phase: 3
+Phase: 3a
 Target: autoarray
 Repos:
 - @PyAutoArray
 - @autolens_profiling
-Themes:
-- numba-cpu
-- pixelization
 Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-08-27
 Filed: 2026-08-27
 
 > Phase 3 of the CPU-likelihood speed restoration. Phase 1 (MGE batching +
