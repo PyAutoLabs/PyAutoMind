@@ -12,15 +12,3 @@
   adds the imaging/mge/hst leaf + A100 probe submit (cold vs warm), and settles whether the parked
   SMC prototype (wsdev#113 / RAL 331058) can be resubmitted as a research row. RAL is put on this
   feature branch to run the probe and MUST return to main after merge.
-
-## sparse-interferometer-docs-sweep
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/508
-- issued: 2026-08-28
-- prompt: active/sparse_interferometer_docs_sweep.md
-- session: claude --resume b766a19b-260c-4b56-8d19-072fa9a34b28
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/sparse-interferometer-docs-sweep
-- repos:
-  - autolens_workspace: feature/sparse-interferometer-docs-sweep
-  - autogalaxy_workspace: feature/sparse-interferometer-docs-sweep
-- note: prose-only follow-up to #499/#500 (user: no new scripts). Sweep table in session scratchpad docs_sweep_brief.md.

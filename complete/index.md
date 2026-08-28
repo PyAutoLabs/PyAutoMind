@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1191 records across 7 buckets.
+1192 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -277,6 +277,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [smoke-runner-jupyter-guard](2026/08/smoke-runner-jupyter-guard.md)
 - [smoke-surface-retime-sweep](2026/08/smoke-surface-retime-sweep.md)
 - [smoke-timings-dataset](2026/08/smoke-timings-dataset.md)
+- [sparse-interferometer-docs-sweep](2026/08/sparse-interferometer-docs-sweep.md)
 - [sparse-interferometer-unequal-sigma-guard](2026/08/sparse-interferometer-unequal-sigma-guard.md)
 - [spawn-autonomy-log-generated](2026/08/spawn-autonomy-log-generated.md)
 - [spawn-drift-self-heal](2026/08/spawn-drift-self-heal.md)
