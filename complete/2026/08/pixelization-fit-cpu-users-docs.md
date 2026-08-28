@@ -1,3 +1,28 @@
+## pixelization-fit-cpu-users-docs
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/506 (closed, completed)
+- completed: 2026-08-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/504 (MERGED caabe2d4)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/507 (MERGED b7675967)
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/75 (MERGED 527543f6)
+- origin: docs sweep at the numba-cpu-likelihood epic close-out (complete/2026/08/numba-cpu-nnls-iteration-reduction.md); none of the three was caused by the epic.
+- shipped: autolens_workspace `imaging/features/pixelization/fit.py` — the `__CPU Users__` block was the
+  interferometer paragraph (visibilities, "over hours", a `many_visibilities_preparation` path that exists
+  only under `scripts/interferometer/`); now the imaging statement (sparse operators via
+  `apply_sparse_operator_cpu()`, see `cpu_fast_modeling`). HowToLens chapter 2 tutorial 8 — one clause:
+  numba remains the CPU route for pixelized sources. PyAutoArray `settings.py` — the NNLS warm-start
+  config-fallback comments no longer claim a workspace `general.yaml` "shadows" autoarray's (autoconf falls
+  through to the packaged value; the `KeyError` fallback fires only with a sole config path and matches it).
+- verified-not-needed: workspace `general.yaml` `inversion:` blocks do not need `nnls_warm_start_memo` /
+  `nnls_warm_start_error_tolerance` (measured fallthrough `True` / `1.5` from autolens_workspace).
+- gate: shipped over Heart RED `release validation FAILED (stage integrate)` (unrelated) on explicit human
+  authorisation 2026-08-28.
+- affected-repos:
+  - autolens_workspace
+  - HowToLens
+  - PyAutoArray
+
+## Original prompt
+
 # Fix the imaging pixelization `fit.py` "CPU Users" paragraph (interferometer text pasted into imaging)
 
 Type: docs

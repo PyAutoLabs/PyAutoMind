@@ -1,7 +1,7 @@
 # NUTS warm-start driver + A100 MCMC probe (and an SMC research row)
 
 Type: feature
-Epic: inference-programme
+Epic: jax-inference-profiling
 Target: autolens_profiling
 Repos:
 - @autolens_profiling

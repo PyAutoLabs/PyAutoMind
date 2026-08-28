@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1190 records across 7 buckets.
+1191 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -199,6 +199,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [phase8b-f2-ruling-scorer-verdict](2026/08/phase8b-f2-ruling-scorer-verdict.md) — Phase 8B verdict FALSIFIED 3/4 — but PRELIMINARY 24/39, and half the rows sit outside the unit disk
 - [pix-prodigy-gpu-compat](2026/08/pix-prodigy-gpu-compat.md)
 - [pixelization-eager-jit-divergence](2026/08/pixelization-eager-jit-divergence.md)
+- [pixelization-fit-cpu-users-docs](2026/08/pixelization-fit-cpu-users-docs.md)
 - [plot-array-stale-kwargs](2026/08/plot-array-stale-kwargs.md)
 - [plot-utils-duplicate-modules](2026/08/plot-utils-duplicate-modules.md) — small, single-repo, behaviour-preserving
 - [point-solver-magnification-plane-redshift](2026/08/point-solver-magnification-plane-redshift.md)
