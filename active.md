@@ -4,7 +4,8 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/187
 - prompt: active/nuts_warm_start_driver_and_a100_probe.md
 - issued: 2026-08-28
-- status: library-dev
+- status: pr-open
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/188
 - worktree: ~/Code/PyAutoLabs-wt/nuts-warm-start-driver-and-a100-probe
 - repos:
   - autolens_profiling: feature/nuts-warm-start-driver-and-a100-probe
@@ -23,3 +24,8 @@
 - repos:
   - autogalaxy_workspace: feature/interferometer-bulge-pixelization-example
 - note: follow-up to #499/#500 docs sweep; convert canonical interferometer pixelization examples to the linear-bulge hybrid. autolens deliberately excluded (no lens light in its interferometer datasets).
+- ral: profiling clone is ON feature/nuts-warm-start-driver-and-a100-probe and MUST return to main
+  after merge (`git checkout main && git pull --ff-only && git branch -d feature/...`). PyAutoFit on RAL
+  deliberately LEFT at f466dce1a — it already has PR#1522; pulling to 54aa0875b would put PR#1539
+  (clipper/bijector compose) under job 341978's pending phase-8B arms.
+- jobs: RAL 341981_[0,1] NUTS cold/warm probe (gpu, 45:00); RAL 341983 SMC warm research row (ral CPU, 1:30:00)
