@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 138 |
+| [Backlog](#backlog) (`draft/`) | 137 |
 
 ## Start here
 
@@ -149,13 +149,7 @@ anything you could not verify.
 
 **Quick wins** (small enough, and safe enough to run unattended)
 
-<details><summary>📋 <a href="draft/docs/autolens_workspace/pixelization_fit_cpu_users_paragraph.md">Fix the imaging pixelization <code>fit.py</code> "CPU Users" paragraph…</a> — autolens_workspace · small · safe · low</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/pixelization_fit_cpu_users_paragraph.md
-```
-
-</details>
+- _(none right now)_
 
 ## In flight
 
@@ -173,6 +167,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/phase8b_f2_ruling_scorer_verdict.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/pixelization_fit_cpu_users_paragraph.md">Fix the imaging pixelization <code>fit.py</code> "CPU Users" paragraph…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/506">issue #506</a> — issued 2026-08-28 — library-dev</summary>
+
+```
+/start_dev active/pixelization_fit_cpu_users_paragraph.md
 ```
 
 </details>
@@ -261,7 +263,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**138** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**137** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -932,7 +934,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 13</summary>
+<summary><b>docs</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
@@ -994,14 +996,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/autocti/api_rst_rewrite.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/pixelization_fit_cpu_users_paragraph.md">Fix the imaging pixelization <code>fit.py</code> "CPU Users" paragraph…</a> — autolens_workspace · small · safe · low</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/pixelization_fit_cpu_users_paragraph.md
 ```
 
 </details>
@@ -1471,7 +1465,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-08-28 | issued | <a href="active/phase8b_f2_ruling_scorer_verdict.md">Phase 8B: F2 reference ruling, F5 demotion, preliminary verdict on…</a> |
-| 2026-08-28 | filed | <a href="draft/docs/autolens_workspace/pixelization_fit_cpu_users_paragraph.md">Fix the imaging pixelization <code>fit.py</code> "CPU Users" paragraph…</a> |
+| 2026-08-28 | issued | <a href="active/pixelization_fit_cpu_users_paragraph.md">Fix the imaging pixelization <code>fit.py</code> "CPU Users" paragraph…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
 | 2026-08-28 | issued | <a href="active/joint_clipper_compose_with_bijector.md">Compose ClipperPriorBoxJoint with a bijector/scaler instead of…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md">The SessionStart hook is generated into 34 repos and current in 4</a> |
