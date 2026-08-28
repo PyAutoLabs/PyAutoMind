@@ -171,7 +171,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/numba_cpu_likelihood_nnls_iteration_reduction.md">Numba CPU likelihood phase 3: cut the positive-only solve's active-set iterations…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/498">issue #498</a> — issued 2026-08-27 — library-dev</summary>
+<details><summary>📋 <a href="active/numba_cpu_likelihood_nnls_iteration_reduction.md">Numba CPU likelihood phase 3: cut the positive-only solve's active-set iterations…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/498">issue #498</a> — issued 2026-08-27 — library-dev, ready-to-ship (BLOCKED on Heart RED)</summary>
 
 ```
 /start_dev active/numba_cpu_likelihood_nnls_iteration_reduction.md
