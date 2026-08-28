@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1183 records across 7 buckets.
+1184 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -124,6 +124,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [interests-ranker-widened-categories](2026/08/interests-ranker-widened-categories.md)
 - [interferometer-delaunay-flaky-fitexception](2026/08/interferometer-delaunay-flaky-fitexception.md)
 - [interferometer-delaunay-nonpd-fitexception](2026/08/interferometer-delaunay-nonpd-fitexception.md)
+- [interferometer-sparse-func-list](2026/08/interferometer-sparse-func-list.md)
 - [interferometer-start-here-integrate-oom](2026/08/interferometer-start-here-integrate-oom.md)
 - [intra-family-dep-floors](2026/08/intra-family-dep-floors.md)
 - [jax-compile-stall-evidence](2026/08/jax-compile-stall-evidence.md) — jax-compile-stall phase 1
