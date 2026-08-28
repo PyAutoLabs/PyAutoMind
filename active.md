@@ -4,7 +4,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/498
 - prompt: active/numba_cpu_likelihood_nnls_iteration_reduction.md
 - issued: 2026-08-27
-- status: library-dev, ready-to-ship (BLOCKED on Heart RED)
+- status: shipping (Heart RED `release validation FAILED (stage integrate)` OVERRIDDEN by user 2026-08-28 for this task — being fixed elsewhere); /prm authorized
 - worktree: ~/Code/PyAutoLabs-wt/numba-cpu-nnls-iteration-reduction
 - repos:
   - PyAutoArray: feature/numba-cpu-nnls-iteration-reduction
