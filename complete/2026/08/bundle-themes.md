@@ -1,3 +1,43 @@
+- Bundles phase 1: the auto-bundler no longer groups on `Target:` (a mechanical
+  key — "three things that live in autoarray"). Prompts carry an optional
+  `Themes:` keyword list; the **first keyword is the primary theme and the
+  grouping key**, the rest are packing affinity. Bundles are now topical and
+  routinely **cross-repo**, which `Target` keying could not produce.
+- `_intake.py`: `Themes:` parsing (same list form as `Repos:`), vocabulary read
+  from `PyAutoMind/themes.md` (24 keywords), unknown-keyword ⚠️ on the card and
+  in the Hygiene count. `auto_bundles()` pools by primary theme (Target remains
+  the fallback for un-themed prompts) and packs greedily by Jaccard affinity of
+  the whole theme list, under the unchanged caps (8 pts, ≤4 members, ≤1 large,
+  min 2, top 8, pinned-before-auto); each prompt lands in at most one bundle.
+  Card titles are theme + shared secondaries (`samplers · jax-gradient`) and
+  theme-keyed cards gain a Repo column. `intake classify --themes a,b` writes
+  the header at formalisation, never blocking.
+- **Byte-identity guard**: an un-themed Mind renders exactly as it did before,
+  verified against `origin/main`'s renderer on six fixtures (md + html) and
+  pinned by `test_an_unthemed_backlog_renders_exactly_as_it_did_before_themes`.
+  12 new tests; `PyAutoBrain/tests` 618 passed.
+- Mind side: `themes.md` controlled vocabulary, `REFERENCE.md` documentation,
+  spawn/ledger rules (`themes.md` is *code* in ledger-merge terms — human
+  merge, like `repos.yaml`), workflow triggers, and a one-off Opus backfill
+  writing `Themes:` on 130 of 136 drafts (never overwriting an existing value).
+- Live result: 22 theme-keyed auto bundles + 1 Target fallback; the rendered top
+  8 all span 2-3 repos — `pixelization` (autoarray + workspaces),
+  `point-source` (autogalaxy + autolens + pyautolens), `ci-smoke`, `notebooks`,
+  `samplers · jax-gradient` (autofit + autolens_profiling), `visualization`,
+  `jax-compile`.
+- Traps: merge the Brain renderer PR **first** — the Mind PR's dashboard
+  freshness check renders with Brain `main`. The Mind PR went `CONFLICTING` on
+  the generated `dashboard.md`/`dashboard.html` while main moved 13 commits at
+  close-out; resolved by taking upstream and re-rendering, never by hand.
+  Shipped on human RED ack (unrelated Heart reasons: release `integrate`
+  failure, `shared_preloads.py` timeout, hook-manifest drift, stale PyAutoFit PR).
+- Vocabulary gap noted: no keyword yet for PyAutoMemory / knowledge-wiki work.
+- Deferred to phase 2 (`draft/feature/pyautomind/bundle_nightly_claude_pass.md`):
+  auto-assigning themes to new drafts and Claude-proposed cross-theme bundles —
+  the affinity keywords are exactly the signal that pass consumes.
+
+## Original prompt
+
 # Bundles phase 1 — `Themes:` keyword list and theme-keyed (cross-repo) auto-bundling
 
 Type: feature

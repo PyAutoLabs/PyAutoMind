@@ -1,20 +1,5 @@
 # Active Tasks
 
-
-
-## bundle-themes
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/311
-- issued: 2026-08-27
-- prompt: active/bundle_theme_grouping.md
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/312
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/366
-- heart-ack: RED acknowledged 2026-08-27 (release integrate failure, shared_preloads.py timeout, hook-manifest drift, stale PyAutoFit PR — all unrelated)
-- worktree: ~/Code/PyAutoLabs-wt/bundle-themes
-- repos:
-  - PyAutoBrain: feature/bundle-themes
-  - PyAutoMind: feature/bundle-themes
-
 ## numba-cpu-nnls-iteration-reduction
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/498
 - prompt: active/numba_cpu_likelihood_nnls_iteration_reduction.md

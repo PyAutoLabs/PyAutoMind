@@ -13,7 +13,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-08-27
-Blocked-by: active/bundle_theme_grouping.md (PyAutoBrain#311)
+Unblocked: phase 1 shipped 2026-08-28 — complete/2026/08/bundle-themes.md (PyAutoBrain#312, PyAutoMind#366)
 
 ## Premise
 
