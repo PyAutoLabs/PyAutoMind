@@ -1,3 +1,24 @@
+# sparse-interferometer-unequal-sigma-guard
+
+Follow-up from #499 close-out. `InterferometerSparseOperator` builds `W~ = Re(FᴴWF)` from the
+real-part sigma only (`psf_precision_operator_from` → `noise_map_real`), exact only when every
+visibility has `sigma_real == sigma_imag`; unequal sigmas made the sparse curvature matrix
+silently disagree with the dense path (5e-16 → 5e-10..3e-2 relative).
+
+## Shipped
+- PyAutoArray#503 — `Interferometer.apply_sparse_operator` raises `DatasetException` (count of
+  offending visibilities, max relative difference, both workarounds); docstring Precondition notes;
+  two tests (unequal raises, equal-non-uniform passes). Only entry point that sees a noise map.
+
+## Decision — general two-operator extension: NOT doing it
+Exact unequal-sigma curvature expands to a translation-invariant term (today's kernel reweighted
+by (wr+wi)/2) plus a pixel-SUM-indexed term ½(wr−wi)cos(φ_i+φ_j); the latter needs a second,
+sum-indexed kernel and assembly path in both JAX and numba (2x setup, 2x Khat, ~2x FFTs). No known
+dataset has per-part-unequal sigma (simulator constant; measurement-set weights are scalars).
+Guard is the right cost/benefit; revisit only if such a dataset appears.
+
+## Original prompt
+
 # Sparse interferometer W~ path silently assumes equal real/imag noise sigma
 
 Type: bug
