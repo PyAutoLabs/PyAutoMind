@@ -21,6 +21,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/anonymise-wfc3-ir-hole-regression-target
 - classification: library (PyAutoReduce only)
 - repos:
+  - PyAutoReduce: feature/anonymise-wfc3-ir-hole-regression-target
 - next-skill: start_library (PyAutoReduce) -> implement the rename -> ship_library
 - note: comment/test-name/doc rename only, no behaviour change. PyAutoMind history records
   (complete/, condemned.md, autonomy_log.md) are deliberately left untouched.
