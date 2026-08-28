@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 136 |
+| [Backlog](#backlog) (`draft/`) | 137 |
 
 ## Start here
 
@@ -255,7 +255,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**136** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**137** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -1781,12 +1781,20 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 </details>
 
 <details>
-<summary><b>Numba CPU sparse-operator likelihood — speed restoration</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Numba CPU sparse-operator likelihood — speed restoration</b> — 2 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Numba CPU sparse-operator likelihood — speed restoration</b> — ledger: `complete/2026/08/numba-cpu-mge-batch-convolve-cache.md` — COMPLETE 2026-08-28. phase 1 SHIPPED 2026-08-27; phase 2a CLOSED as superseded (Bilinear rank-CDF is every default since…</summary>
+<details><summary>📋 <b>Numba CPU sparse-operator likelihood — speed restoration</b> — ledger: `complete/2026/08/numba-cpu-mge-batch-convolve-cache.md` — phase 1 SHIPPED 2026-08-27; phase 2b (solver in-place buffer) SHIPPED 2026-08-21 (backfilled); phase 3a (warm-start memo + guard…</summary>
 
 ```
 Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. Its canonical state lives in complete/2026/08/numba-cpu-mge-batch-convolve-cache.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Profiling shipped (autolens_profiling#151, complete/2026/08/numba-cpu-likelihood-profiling.md);
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md">Numba CPU likelihood phase 2: kernel-CDF numba fast path (the 49-88% lever)</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autoarray/numba_cpu_likelihood_kernel_cdf_fast_path.md
 ```
 
 </details>
