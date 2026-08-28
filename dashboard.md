@@ -45,16 +45,24 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 3 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 134 |
+| [Backlog](#backlog) (`draft/`) | 137 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 16
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
 ```
 /start_dev draft/triage/jax_zero_contour.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative diff off…</a> — autoarray · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md
 ```
 
 </details>
@@ -135,14 +143,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
 ```
 
 </details>
@@ -263,7 +263,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**137** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -628,6 +628,155 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
+<summary><b>bug</b> — 18</summary>
+
+<details><summary>📋 <a href="draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative diff off…</a> — autoarray · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
+
+```
+/start_dev draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s release-profile cap — hangs after the vmap JIT…</a> — autoarray · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/nautilus_plotter_py_corner_cornerpy_raises_value.md">nautilus_plotter.py corner_cornerpy raises ValueError "range is not valid or the sample…</a> — autofit · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/nautilus_plotter_py_corner_cornerpy_raises_value.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move is unattributed</a> — workspaces · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a> — health_fixes · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/health_fixes/release_timeout_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/z_features.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a> — autoarray · medium · human-required · low</summary>
+
+```
+/start_dev draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — pyautolens · medium · supervised · low</summary>
+
+```
+/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>maintenance</b> — 19</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · supervised · normal</summary>
@@ -778,131 +927,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>bug</b> — 15</summary>
-
-<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
-
-```
-/start_dev draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move is unattributed</a> — workspaces · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a> — health_fixes · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/health_fixes/release_timeout_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a> — priors · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md">The reconstruction noise map describes a different estimator than the default solver</a> — autoarray · medium · human-required · low</summary>
-
-```
-/start_dev draft/bug/autoarray/reconstruction_noise_map_solver_mismatch.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — pyautolens · medium · supervised · low</summary>
-
-```
-/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
 ```
 
 </details>
@@ -1179,18 +1203,17 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>autoarray — bundle 1</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'pixelization' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
+- draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md
 - draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md
-- draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
-- draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
-- draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+- draft/refactor/autoarray/matern_vendor_bessel_kve.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1203,153 +1226,26 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> | autoarray | medium | high | - |
-| <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square)…</a> | autoarray | medium | normal | draft |
-| <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate…</a> | autoarray | medium | normal | formalised |
-| <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> | workspaces | medium | normal | draft |
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autoarray/rectangular_mge_jax_vmap_likelihood_pins_are.md">rectangular_mge JAX vmap likelihood pins are 0.24 / 10.3 relative…</a> | medium | high | formalised |
+| <a href="draft/feature/autoarray/rectangular_bilinear_rtu_mesh_split.md">Rectangular mesh split: Bilinear (fast CPU default) vs RTU…</a> | medium | high | - |
+| <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the…</a> | large | medium | formalised |
 
 </details>
 
 <details>
-<summary><b>point-source</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>autolens — bundle 1</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'point-source' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md
-- draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
-- draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> | autogalaxy | large | high | formalised |
-| <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> | autolens | medium | normal | formalised |
-| <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> | pyautolens | medium | low | formalised |
-
-</details>
-
-<details>
-<summary><b>ci-smoke</b> — 3 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/test/autolens/cross_validate_multi_plane_ray_tracing.md
-- draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md
-- draft/test/pyautoheart/smoke_relevance_gate.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> | autolens | large | high | formalised |
-| <a href="draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431…</a> | workspaces | small | normal | formalised — ready to start (upstream… |
-| <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> | pyautoheart | medium | normal | formalised |
-
-</details>
-
-<details>
-<summary><b>notebooks</b> — 2 task(s) · 5 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'notebooks' — 2 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'autolens — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/docs/autolens/multi_galaxy_package.md
-- draft/docs/howtolens/ch4_mask_overlay_never_drawn.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> | autolens | large | high | in progress — core landed 2026-07-25… |
-| <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> | howtolens | small | low | formalised |
-
-</details>
-
-<details>
-<summary><b>samplers · jax-gradient</b> — 3 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'samplers · jax-gradient' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autofit/prior_exit_sampler_coverage.md
-- draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
-- draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> | autofit | medium | medium | formalised |
-| <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and…</a> | autofit | small | normal | formalised |
-| <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts /…</a> | autolens_profiling | large | normal | formalised |
-
-</details>
-
-<details>
-<summary><b>visualization</b> — 3 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'visualization' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
 - draft/research/autolens/quick_update_plotting_cost.md
-- draft/feature/autoarray/arcsecond_to_decimal.md
-- draft/feature/workspaces/gallery_runner_missing_tiers.md
+- draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1362,26 +1258,121 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | autolens | medium | medium | draft |
-| <a href="draft/feature/autoarray/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> | autoarray | large | normal | formalised |
-| <a href="draft/feature/workspaces/gallery_runner_missing_tiers.md">Gallery runner: add visualization_upper + decide the…</a> | workspaces | small | low | formalised |
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> | large | high | in progress — core landed 2026-07-25… |
+| <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | medium | medium | draft |
+| <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular…</a> | medium | normal | draft |
 
 </details>
 
 <details>
-<summary><b>jax-compile</b> — 3 task(s) · 6 pts · auto — proposed</summary>
+<summary><b>ci — bundle 1</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'jax-compile' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'ci — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/ci/scheduled_runs_delivered_hours_late.md
+- draft/maintenance/ci/copilot_auto_review.md
+- draft/maintenance/ci/heart_smoke_table_autocti.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> | medium | high | - |
+| <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> | large | normal | planned |
+| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | medium | normal | formalised |
+
+</details>
+
+<details>
+<summary><b>autolens — bundle 2</b> — 3 task(s) · 7 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autolens — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/test/autolens/cross_validate_multi_plane_ray_tracing.md
+- draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
+- draft/maintenance/autolens/data_temp_write_paths_not_ignored.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> | large | high | formalised |
+| <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> | medium | normal | formalised |
+| <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> | small | low | formalised |
+
+</details>
+
+<details>
+<summary><b>autogalaxy — bundle 1</b> — 2 task(s) · 5 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autogalaxy — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md
+- draft/feature/autogalaxy/dpie_sigma0_parameterization.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> | large | high | formalised |
+| <a href="draft/feature/autogalaxy/dpie_sigma0_parameterization.md">dPIE: optional central-dispersion (sigma_0) parameterization</a> | small | low | draft |
+
+</details>
+
+<details>
+<summary><b>autoarray — bundle 2</b> — 4 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 2' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-- draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
-- draft/research/autolens_workspace_developer/jax_jit_profiling.md
+- draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
+- draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
+- draft/feature/autoarray/multiwavelength_inversion.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1394,25 +1385,28 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> | autoarray | medium | medium | formalised |
-| <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular…</a> | autolens | medium | normal | draft |
-| <a href="draft/research/autolens_workspace_developer/jax_jit_profiling.md">We have lots of examples which profile how long JAX</a> | autolens_workspace_developer | medium | normal | formalised |
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> | medium | medium | formalised |
+| <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square)…</a> | medium | normal | draft |
+| <a href="draft/bug/autoarray/multi_dataset_jax_likelihood_delaunay_py_exceeds.md">multi_dataset/jax_likelihood/delaunay.py exceeds the 1800s…</a> | medium | normal | formalised |
+| <a href="draft/feature/autoarray/multiwavelength_inversion.md">Can create a list of InversionMatrix objects for each dataset</a> | medium | normal | formalised |
 
 </details>
 
 <details>
-<summary><b>pixelization — bundle 2</b> — 2 task(s) · 5 pts · auto — proposed</summary>
+<summary><b>autofit — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'pixelization — bundle 2' — 2 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/refactor/autoarray/matern_vendor_bessel_kve.md
-- draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
+- draft/feature/autofit/prior_exit_sampler_coverage.md
+- draft/feature/autofit/search_seed_reproducibility.md
+- draft/bug/autofit/nautilus_plotter_py_corner_cornerpy_raises_value.md
+- draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1425,14 +1419,50 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the…</a> | autoarray | large | medium | formalised |
-| <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> | workspaces | small | normal | formalised |
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> | medium | medium | formalised |
+| <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> | medium | medium | formalised |
+| <a href="draft/bug/autofit/nautilus_plotter_py_corner_cornerpy_raises_value.md">nautilus_plotter.py corner_cornerpy raises ValueError "range is not…</a> | medium | normal | formalised |
+| <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and…</a> | small | normal | formalised |
 
 </details>
 
-_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>autolens_profiling — bundle 1</b> — 4 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autolens_profiling — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md
+- draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md
+- draft/research/autolens_profiling/multiband_compile_census_completion.md
+- draft/research/autolens_profiling/cluster_gradient_search_benchmark.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts /…</a> | large | normal | formalised |
+| <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never…</a> | small | low | formalised |
+| <a href="draft/research/autolens_profiling/multiband_compile_census_completion.md">Multi-band compile census completion — A100/multi-core + hetero GPU…</a> | small | low | formalised |
+| <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus…</a> | - | - | - |
+
+</details>
+
+_Showing 8 of 21 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
