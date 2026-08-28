@@ -42,17 +42,3 @@
   Plan: off-diag operator methods on InterferometerSparseOperator, func-list dispatch in
   InversionInterferometerSparse.curvature_matrix/data_vector, loud factory failure for unrepresentable
   sparse routing, parity tests vs InversionInterferometerMapping. Commit 539d9ffd, PR #500 open (workspace impact: none — option iii). Workspace follow-up (user request 2026-08-28): sparse-vs-mapping FitInterferometer parity scripts in autolens_workspace_test + autogalaxy_workspace_test (+ imaging for autogalaxy), registered in smoke_tests.txt with `ENV: jax`. Workspace PRs open (al#283 ae977686, ag#115 a358186a); they FAIL smoke CI against PyAutoArray main until #500 merges. Next: /prm #500 (CI green ffafa86a), then /prm al#283 + ag#115; milestone #4 comment at merge. Follow-up candidates (not filed): unequal real/imag sigma degrades W~ sparse path (pre-existing); delaunay_nn*.py ENV lines lack __Env__ header so are dead.
-
-## ell-comps-disk-constraint
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1537
-- prompt: active/ell_comps_joint_disk_constraint.md
-- issued: 2026-08-27
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1538
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/589
-- heart-ack: RED acknowledged 2026-08-28 (release validation FAILED (stage integrate) — the known human-authorised override for this task; unrelated to these branches)
-- note: merge PyAutoFit#1538 FIRST — PyAutoGalaxy#589 declares geometry the PyAutoFit PR introduces the machinery to read
-- worktree: ~/Code/PyAutoLabs-wt/ell-comps-disk-constraint
-- repos:
-  - PyAutoFit: feature/ell-comps-disk-constraint
-  - PyAutoGalaxy: feature/ell-comps-disk-constraint

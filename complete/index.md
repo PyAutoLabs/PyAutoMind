@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1182 records across 7 buckets.
+1183 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -84,6 +84,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [dep-floors-source-chain-ci](2026/08/dep-floors-source-chain-ci.md)
 - [dev-workflow-helpers-laptop-paths](2026/08/dev-workflow-helpers-laptop-paths.md)
 - [draft-staleness-detection-signals](2026/08/draft-staleness-detection-signals.md) — draft/ staleness is now detectable — a prompt can declare its own exit
+- [ell-comps-disk-constraint](2026/08/ell-comps-disk-constraint.md)
 - [empty-backlog-vs-broken-discovery](2026/08/empty-backlog-vs-broken-discovery.md) — closed on merge
 - [ep-hierarchical-scale-collapse-guard](2026/08/ep-hierarchical-scale-collapse-guard.md)
 - [ep-initializer-exception-should-not-abort](2026/08/ep-initializer-exception-should-not-abort.md)
