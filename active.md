@@ -18,30 +18,33 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1541
 - prompt: active/nautilus_plotter_py_corner_cornerpy_raises_value.md
 - issued: 2026-08-28
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-test-mode-degenerate-corner
 - repos:
   - PyAutoFit: feature/nautilus-test-mode-degenerate-corner
 - note: Heart RED 2026-08-28 — Nautilus/Dynesty TEST_MODE=1 gives ESS=1; corner_cornerpy guard becomes ESS-based. Workspace script untouched.
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1542
 
 ## repin-rectangular-mge-after-490
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/286
 - prompt: active/rectangular_mge_jax_vmap_likelihood_pins_are.md
 - issued: 2026-08-28
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/repin-rectangular-mge-after-490
 - repos:
   - autolens_workspace_test: feature/repin-rectangular-mge-after-490
 - note: Heart RED 2026-08-28 — bisected to PyAutoArray #490 (verified correctness fix); stale pins skipped by f0ef8f2. Re-pin only.
+- pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/288
 
 ## requarantine-delaunay-and-keep-abort-stack
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/287
 - prompt: active/multi_dataset_jax_likelihood_delaunay_py_exceeds.md
 - issued: 2026-08-28
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/requarantine-delaunay-and-keep-abort-stack
 - repos:
   - autolens_workspace_test: feature/requarantine-delaunay-and-keep-abort-stack
   - PyAutoHands: feature/requarantine-delaunay-and-keep-abort-stack
 - parallel-claim: autolens_workspace_test also claimed by repin-rectangular-mge-after-490 (#286); file sets disjoint (config/build/no_run.yaml vs scripts/imaging/jax_likelihood/rectangular_mge*.py); own worktree + own branch per the standing parallel-worktree practice.
 - note: Heart RED 2026-08-28 — delaunay.py 1805s timeout is the XLA FftThunk/Eigen-pool deadlock (epic), not a library or profile bug; re-quarantine + make build_util keep the faulthandler stack.
+- pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/289 + https://github.com/PyAutoLabs/PyAutoHands/pull/271
