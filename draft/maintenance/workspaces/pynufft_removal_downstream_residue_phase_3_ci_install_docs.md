@@ -6,6 +6,10 @@ Repos:
 - @PyAutoHands
 - @PyAutoHeart
 - @PyAutoCTI
+Themes:
+- ci-smoke
+- hygiene
+- interferometer
 Difficulty: low
 Autonomy: supervised
 Priority: normal

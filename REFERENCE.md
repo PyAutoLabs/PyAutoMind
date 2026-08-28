@@ -297,6 +297,9 @@ Free-form markdown. Strong conventions:
   Repos:
   - PyAutoLens
   - autolens_workspace
+  Themes:                   # optional; vocabulary in themes.md, primary first
+  - mge
+  - jax-gradient
   Difficulty: medium        # small | medium | large | too-large
   Autonomy: supervised      # safe | supervised | human-required
   Priority: normal          # low | normal | high
@@ -352,6 +355,31 @@ Free-form markdown. Strong conventions:
   dashboard and gains a Bundles card; it leaves only the *auto*-bundle pool,
   since it is already spoken for. A slug naming no registry entry still
   groups, loudly (⚠️ on the page), so a typo is visible rather than silent.
+
+  **Declaring what the work is ABOUT — `Themes:`.** Optional, and the same
+  list shape as `Repos:` — a bare `Themes:` line, then one `- keyword` bullet
+  each. `Target:` says where the code lives; `Themes:` says what the work is
+  about, which is usually the more useful grouping and is routinely cross-repo:
+
+  ```markdown
+  Themes:
+  - mge
+  - jax-gradient
+  ```
+
+  The **first** keyword is the primary theme and is what the dashboard's
+  auto-bundler groups on, so a card reads "three things about MGE" rather than
+  "three things that live in autoarray"; the remaining keywords are affinity,
+  deciding which prompts pack together inside that group. One to three keywords
+  is the intended shape, primary first. A prompt with no `Themes:` still
+  bundles — the bundler falls back to `Target:` — so nothing waits on a theme.
+
+  The vocabulary is [`themes.md`](themes.md), a plain markdown list a human
+  edits directly (PyAutoBrain reads that file rather than holding its own
+  copy). A keyword that is not in it still groups, loudly: ⚠️ on the bundle
+  card and a count in the dashboard's Hygiene section, so the list never rots
+  into free-text tags. The **Intake (Conception) Agent** assigns `Themes:` when
+  it formalises a prompt.
 
   The optional `Difficulty:` / `Autonomy:` / `Priority:` keys let both people and
   PyAutoBrain see, at a glance, how hard a task is, whether an agent can safely
@@ -511,7 +539,7 @@ no prompt.
 | Ledger — merged automatically | Code — always a human |
 |---|---|
 | `draft/**`, `active/**`, `complete/**` | `scripts/`, `tests/`, `.github/`, `skills/`, `policy/`, `docs/` |
-| `active.md`, `planned.md`, `parked.md`, `condemned.md`, `epics.md`, `bundles.md`, `ideas.md`, `autonomy_log.md` | `repos.yaml`, `README.md`, `AGENTS.md`, `REFERENCE.md`, `ROUTING.md`, … |
+| `active.md`, `planned.md`, `parked.md`, `condemned.md`, `epics.md`, `bundles.md`, `ideas.md`, `autonomy_log.md` | `repos.yaml`, `themes.md`, `README.md`, `AGENTS.md`, `REFERENCE.md`, `ROUTING.md`, … |
 | `dashboard.md`, `dashboard.html` | anything unclassified — a new root file, a new top-level folder |
 
 Two exceptions inside the ledger dirs: a **dot-path** anywhere, and a file

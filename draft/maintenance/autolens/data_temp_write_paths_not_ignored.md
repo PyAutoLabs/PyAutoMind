@@ -4,6 +4,8 @@ Type: maintenance
 Target: autolens
 Repos:
 - @PyAutoLens
+Themes:
+- hygiene
 Difficulty: small
 Autonomy: supervised
 Priority: low

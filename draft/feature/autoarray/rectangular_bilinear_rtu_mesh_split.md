@@ -7,6 +7,9 @@ Repos:
 - @autolens_workspace
 - @autogalaxy_workspace
 - @autolens_workspace_test
+Themes:
+- pixelization
+- numba-cpu
 Difficulty: medium
 Autonomy: supervised
 Priority: high

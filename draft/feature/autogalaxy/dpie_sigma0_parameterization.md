@@ -5,6 +5,8 @@ Target: PyAutoGalaxy
 Repos:
 - PyAutoGalaxy
 - autolens_workspace
+Themes:
+- cluster
 Difficulty: small
 Autonomy: supervised
 Priority: low

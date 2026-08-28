@@ -7,6 +7,10 @@ Repos:
 - PyAutoArray
 - PyAutoGalaxy
 - autolens_workspace
+Themes:
+- visualization
+- cluster
+- pixelization
 Difficulty: large
 Autonomy: supervised
 Priority: high

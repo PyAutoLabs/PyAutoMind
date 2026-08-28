@@ -5,6 +5,10 @@ Target: autolens_profiling
 Repos:
 - autolens_profiling
 - PyAutoFit
+Themes:
+- samplers
+- profiling
+- jax-gradient
 Difficulty: large
 Autonomy: supervised
 Priority: normal

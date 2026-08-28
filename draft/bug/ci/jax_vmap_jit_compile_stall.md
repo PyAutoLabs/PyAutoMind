@@ -6,6 +6,9 @@ Repos:
 - @autogalaxy_workspace_test
 - @autolens_workspace_test
 - @PyAutoFit
+Themes:
+- jax-compile
+- ci-smoke
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

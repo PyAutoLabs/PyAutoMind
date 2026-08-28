@@ -2,6 +2,8 @@
 
 Type: maintenance
 Target: autolens_profiling
+Themes:
+- profiling
 Difficulty: large
 Autonomy: supervised
 Priority: normal

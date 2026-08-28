@@ -5,6 +5,10 @@ Target: autolens_workspace
 Repos:
 - autolens_jax_joss (new repo)
 - autolens_workspace
+Themes:
+- profiling
+- notebooks
+- hpc-gpu
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal

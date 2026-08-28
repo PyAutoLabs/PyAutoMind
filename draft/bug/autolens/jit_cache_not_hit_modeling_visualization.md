@@ -5,6 +5,10 @@ Target: autolens
 Repos:
 - PyAutoLens
 - autolens_workspace_test
+Themes:
+- jax-compile
+- visualization
+- pixelization
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

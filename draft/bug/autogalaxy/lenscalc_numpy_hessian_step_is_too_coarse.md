@@ -5,6 +5,9 @@ Target: PyAutoGalaxy
 Repos:
 - PyAutoGalaxy
 - PyAutoLens
+Themes:
+- point-source
+- jax-gradient
 Difficulty: large
 Autonomy: supervised
 Priority: high

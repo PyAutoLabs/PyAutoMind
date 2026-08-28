@@ -2,6 +2,8 @@
 
 Type: test
 Target: workspaces
+Themes:
+- ci-smoke
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

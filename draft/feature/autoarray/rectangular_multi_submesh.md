@@ -2,6 +2,8 @@
 
 Type: feature
 Target: PyAutoArray
+Themes:
+- pixelization
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal

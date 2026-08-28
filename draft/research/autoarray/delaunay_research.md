@@ -2,6 +2,9 @@
 
 Type: research
 Target: PyAutoArray
+Themes:
+- pixelization
+- profiling
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

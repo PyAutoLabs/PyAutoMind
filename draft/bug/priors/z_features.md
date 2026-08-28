@@ -2,6 +2,8 @@
 
 Type: bug
 Target: priors
+Themes:
+- graphical-ep
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal

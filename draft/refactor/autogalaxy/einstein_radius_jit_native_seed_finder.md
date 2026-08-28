@@ -2,6 +2,8 @@
 
 Type: refactor
 Target: PyAutoGalaxy
+Themes:
+- jax-compile
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

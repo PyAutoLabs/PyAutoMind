@@ -4,6 +4,9 @@ Type: maintenance
 Target: autolens_profiling
 Repos:
 - autolens_profiling
+Themes:
+- hygiene
+- profiling
 Difficulty: small
 Autonomy: supervised
 Priority: low

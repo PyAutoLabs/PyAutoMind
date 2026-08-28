@@ -5,6 +5,10 @@ Target: workspaces
 Repos:
 - @autolens_workspace_developer
 - @PyAutoArray
+Themes:
+- pixelization
+- profiling
+- jax-gradient
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

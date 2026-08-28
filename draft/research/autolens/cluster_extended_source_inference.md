@@ -6,6 +6,10 @@ Repos:
 - PyAutoLens
 - PyAutoFit
 - autolens_profiling
+Themes:
+- cluster
+- jax-gradient
+- pixelization
 Difficulty: large
 Autonomy: supervised
 Priority: normal

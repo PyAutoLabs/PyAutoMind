@@ -5,6 +5,9 @@ Target: PyAutoMemory
 Repos:
 - autolens_assistant
 - PyAutoMemory
+Themes:
+- assistants
+- reduce
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

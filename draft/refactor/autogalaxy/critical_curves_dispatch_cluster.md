@@ -8,6 +8,9 @@ Repos:
 - PyAutoLens
 - autolens_workspace_test
 - PyAutoMind
+Themes:
+- cluster
+- jax-compile
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

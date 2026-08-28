@@ -10,6 +10,10 @@ Repos:
 - autogalaxy_workspace
 - autogalaxy_workspace_test
 - autolens_assistant
+Themes:
+- cluster
+- docs-hub
+- notebooks
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

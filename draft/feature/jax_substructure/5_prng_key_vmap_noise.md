@@ -2,6 +2,8 @@
 
 Type: feature
 Target: jax_substructure
+Themes:
+- jax-compile
 Difficulty: too-large
 Autonomy: supervised
 Priority: normal

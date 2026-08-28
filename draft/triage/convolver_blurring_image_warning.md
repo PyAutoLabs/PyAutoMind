@@ -4,6 +4,9 @@ Type: triage
 Target: PyAutoArray / workspaces
 Repos:
 - PyAutoArray
+Themes:
+- hygiene
+- ci-smoke
 Difficulty: small
 Autonomy: supervised
 Priority: normal

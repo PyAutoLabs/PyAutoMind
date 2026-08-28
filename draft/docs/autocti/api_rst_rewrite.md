@@ -4,6 +4,9 @@ Type: docs
 Target: PyAutoCTI
 Repos:
 - PyAutoCTI
+Themes:
+- docs-hub
+- cti
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

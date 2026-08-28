@@ -4,6 +4,9 @@ Type: maintenance
 Target: pyautoheart
 Repos:
 - @PyAutoHeart
+Themes:
+- ci-smoke
+- cti
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

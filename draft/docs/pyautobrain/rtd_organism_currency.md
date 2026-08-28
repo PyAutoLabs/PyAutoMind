@@ -4,6 +4,9 @@ Type: docs
 Target: pyautobrain
 Repos:
 - PyAutoBrain
+Themes:
+- docs-hub
+- mind-workflow
 Difficulty: small
 Autonomy: supervised
 Priority: normal

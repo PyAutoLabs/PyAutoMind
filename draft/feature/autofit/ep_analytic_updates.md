@@ -2,6 +2,8 @@
 
 Type: feature
 Target: PyAutoFit
+Themes:
+- graphical-ep
 Difficulty: large
 Autonomy: supervised
 Priority: normal

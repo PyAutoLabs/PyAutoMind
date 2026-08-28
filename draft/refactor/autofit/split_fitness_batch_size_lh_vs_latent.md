@@ -4,6 +4,10 @@ Type: refactor
 Target: PyAutoFit
 Repos:
 - @PyAutoFit
+Themes:
+- samplers
+- jax-gradient
+- hpc-gpu
 Difficulty: small
 Autonomy: supervised
 Priority: normal

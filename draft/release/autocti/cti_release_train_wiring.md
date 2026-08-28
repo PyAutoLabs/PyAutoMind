@@ -6,6 +6,9 @@ Repos:
 - @PyAutoHands
 - @PyAutoNerves
 - @autocti_workspace
+Themes:
+- release
+- cti
 Difficulty: medium
 Autonomy: human-required
 Priority: normal

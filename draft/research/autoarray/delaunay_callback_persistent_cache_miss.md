@@ -5,6 +5,9 @@ Target: autoarray
 Repos:
 - @PyAutoArray
 - @PyAutoNerves
+Themes:
+- jax-compile
+- pixelization
 Difficulty: medium
 Autonomy: supervised
 Priority: medium

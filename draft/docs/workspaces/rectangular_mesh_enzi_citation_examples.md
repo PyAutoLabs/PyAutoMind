@@ -5,6 +5,10 @@ Target: workspaces
 Repos:
 - autolens_workspace
 - autogalaxy_workspace
+Themes:
+- pixelization
+- notebooks
+- docs-hub
 Difficulty: small
 Autonomy: supervised
 Priority: normal

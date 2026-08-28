@@ -4,6 +4,8 @@ Type: research
 Target: pyautoreduce
 Repos:
 - PyAutoReduce
+Themes:
+- reduce
 Difficulty: small
 Autonomy: supervised
 Priority: normal

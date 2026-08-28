@@ -36,6 +36,7 @@ on:
       - "planned.md"
       - "condemned.md"
       - "bundles.md"
+      - "themes.md"
       - "dashboard.md"
       - "dashboard.html"
   pull_request:
@@ -47,6 +48,7 @@ on:
       - "planned.md"
       - "condemned.md"
       - "bundles.md"
+      - "themes.md"
       - "dashboard.md"
       - "dashboard.html"
   workflow_dispatch:

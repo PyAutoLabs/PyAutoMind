@@ -2,6 +2,10 @@
 
 Type: bug
 Target: health_fixes
+Themes:
+- visualization
+- jax-compile
+- release
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

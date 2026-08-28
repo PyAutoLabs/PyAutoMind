@@ -2,6 +2,9 @@
 
 Type: triage
 Target: ?
+Themes:
+- jax-gradient
+- jax-compile
 Difficulty: medium
 Autonomy: safe
 Priority: high

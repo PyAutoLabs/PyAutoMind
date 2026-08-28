@@ -5,6 +5,9 @@ Target: PyAutoFit
 Repos:
 - PyAutoFit
 - autofit_profiling
+Themes:
+- profiling
+- graphical-ep
 Difficulty: large
 Autonomy: supervised
 Priority: normal

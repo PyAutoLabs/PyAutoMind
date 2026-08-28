@@ -4,6 +4,10 @@ Type: research
 Target: autolens_profiling
 Repos:
 - autolens_profiling
+Themes:
+- multi-band
+- jax-compile
+- hpc-gpu
 Difficulty: small
 Autonomy: supervised
 Priority: low

@@ -4,6 +4,9 @@ Type: feature
 Target: workspaces
 Repos:
 - workspaces
+Themes:
+- cluster
+- pixelization
 Difficulty: large
 Autonomy: supervised
 Priority: normal

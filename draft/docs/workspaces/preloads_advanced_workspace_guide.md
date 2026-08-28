@@ -2,6 +2,9 @@
 
 Type: docs
 Target: workspaces
+Themes:
+- notebooks
+- interferometer
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

@@ -17,6 +17,9 @@ Phase: 2
 Target: autoarray
 Repos:
 - @PyAutoArray
+Themes:
+- numba-cpu
+- pixelization
 Difficulty: large
 Autonomy: supervised
 Priority: high

@@ -4,6 +4,9 @@ Type: feature
 Target: workspaces
 Repos:
 - autolens_workspace_test
+Themes:
+- visualization
+- ci-smoke
 Difficulty: small
 Autonomy: supervised
 Priority: low

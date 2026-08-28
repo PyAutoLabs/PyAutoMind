@@ -5,6 +5,9 @@ Epic: numba-cpu-likelihood
 Target: autolens_profiling
 Repos:
 - @autolens_profiling
+Themes:
+- numba-cpu
+- profiling
 Difficulty: small
 Autonomy: safe
 Priority: medium

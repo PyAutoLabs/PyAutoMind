@@ -4,6 +4,9 @@ Type: docs
 Target: autolens_assistant
 Repos:
 - autolens_assistant
+Themes:
+- assistants
+- cluster
 Difficulty: medium
 Autonomy: supervised
 Priority: low

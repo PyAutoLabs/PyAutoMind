@@ -2,6 +2,10 @@
 
 Type: test
 Target: autolens_workspace_developer
+Themes:
+- mge
+- jax-compile
+- profiling
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

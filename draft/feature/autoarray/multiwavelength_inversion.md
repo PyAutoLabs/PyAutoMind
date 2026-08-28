@@ -2,6 +2,9 @@
 
 Type: feature
 Target: PyAutoArray
+Themes:
+- multi-band
+- pixelization
 Difficulty: medium
 Autonomy: supervised
 Priority: normal

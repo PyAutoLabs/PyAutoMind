@@ -4,6 +4,8 @@ Type: research
 Target: graphical_ep
 Repos:
 - PyAutoFit
+Themes:
+- graphical-ep
 Difficulty: medium
 Autonomy: human-required
 Priority: low
