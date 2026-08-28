@@ -1,5 +1,18 @@
 # Active Tasks
 
+## science-project-memory
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/315
+- prompt: active/science_project_memory_a_fresh_chat_pointed.md
+- issued: 2026-08-28
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/science-project-memory
+- classification: library (three independent assistant/organ repos; no workspace follow-up)
+- repos:
+- note: phased — Phase 1 PyAutoBrain `clone sync` lever, Phase 2 autolens_assistant (the
+  reference copy, deliverables A-D), Phase 3 propagate to autocti_assistant +
+  autogalaxy_assistant via the new sync. autofit_assistant is dry-run only (~343 lines
+  diverged) — its report goes on the issue for a human. euclid_assistant is OUT OF SCOPE.
+
 ## anonymise-wfc3-ir-hole-regression-target
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/73
 - prompt: active/anonymise_the_named_science_target_in_the.md
