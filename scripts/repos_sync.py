@@ -919,6 +919,11 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBrain/tests/test_activity_gate.py": {"HowToFit", "HowToLens", "PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoLens", "autolens_workspace"},
     "PyAutoBrain/tests/test_clean_slate.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "autolens_workspace", "euclid_assistant"},
     "PyAutoBrain/tests/test_clone_conductor.py": {"autofit_assistant", "autolens_assistant"},
+    # Load-bearing real names: the sync fixture exercises the LIVE reference
+    # profile (keyed `autolens_assistant`) and the library-name resolution that
+    # maps a sibling to its own library dir, so synthetic names would test
+    # neither. The fixture is a temp dir; nothing here reaches a real checkout.
+    "PyAutoBrain/tests/test_clone_sync.py": {"PyAutoCTI", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autocti_assistant", "autogalaxy_assistant", "autolens_assistant"},
     "PyAutoBrain/tests/test_community_conductor.py": {"Jammy2211", "PyAutoFit", "PyAutoLabs", "PyAutoLens", "admin_jammy"},
     "PyAutoBrain/tests/test_hygiene_conductor.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "autofit_workspace", "autolens_workspace"},
     # Load-bearing real names: the ranking tests pin resolution against the
