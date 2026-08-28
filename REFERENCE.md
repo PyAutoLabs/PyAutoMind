@@ -304,6 +304,8 @@ Free-form markdown. Strong conventions:
   Filed: 2026-07-09         # optional; the day the prompt was written
   Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
+  Epic: cluster-strong-lensing        # optional; an entry in epics.md
+  Bundle: euclid-pipeline-tidy        # optional; an entry in bundles.md
   ```
 
   When present, `Type:` should match the work-type folder. The goal is light
@@ -338,6 +340,18 @@ Free-form markdown. Strong conventions:
   Motivated by the 2026-08-09 `draft/` sweep, where five prompts' stated gates
   had closed without anyone noticing — including one whose exit condition was met
   the same day it was written.
+
+  **Declaring group membership — `Epic:` / `Bundle:`.** Both optional, both
+  naming a slug in the matching registry file, and the two mean opposite things
+  about ORDER. `Epic: <slug>` (`epics.md`, plus an optional `Phase: <n>`) says
+  this prompt is one phase of an ordered programme: the dashboard pulls it out
+  of every pick list and shows it only under its epic, worked in phase order.
+  `Bundle: <slug>` (`bundles.md`) says the opposite — this prompt is
+  INDEPENDENT, and a human has pinned it to a set worth running in one
+  orchestrated session. A bundle member keeps its normal place on the
+  dashboard and gains a Bundles card; it leaves only the *auto*-bundle pool,
+  since it is already spoken for. A slug naming no registry entry still
+  groups, loudly (⚠️ on the page), so a typo is visible rather than silent.
 
   The optional `Difficulty:` / `Autonomy:` / `Priority:` keys let both people and
   PyAutoBrain see, at a glance, how hard a task is, whether an agent can safely
@@ -497,7 +511,7 @@ no prompt.
 | Ledger — merged automatically | Code — always a human |
 |---|---|
 | `draft/**`, `active/**`, `complete/**` | `scripts/`, `tests/`, `.github/`, `skills/`, `policy/`, `docs/` |
-| `active.md`, `planned.md`, `parked.md`, `condemned.md`, `epics.md`, `ideas.md`, `autonomy_log.md` | `repos.yaml`, `README.md`, `AGENTS.md`, `REFERENCE.md`, `ROUTING.md`, … |
+| `active.md`, `planned.md`, `parked.md`, `condemned.md`, `epics.md`, `bundles.md`, `ideas.md`, `autonomy_log.md` | `repos.yaml`, `README.md`, `AGENTS.md`, `REFERENCE.md`, `ROUTING.md`, … |
 | `dashboard.md`, `dashboard.html` | anything unclassified — a new root file, a new top-level folder |
 
 Two exceptions inside the ledger dirs: a **dot-path** anywhere, and a file

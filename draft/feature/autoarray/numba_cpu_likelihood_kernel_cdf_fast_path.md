@@ -5,9 +5,11 @@
 > Rectangular kernel-CDF work resumes afterwards.
 
 > Phase 2 of the CPU-likelihood speed restoration. Phase 1 (exact-identical
-> MGE-convolution batching + operated-mapping-matrix caching) is
-> `numba_cpu_likelihood_mge_convolution_and_caching.md` — ship it first; its
-> files are disjoint from this phase's.
+> MGE-convolution batching + operated-mapping-matrix caching) SHIPPED 2026-08-27
+> — record `complete/2026/08/numba-cpu-mge-batch-convolve-cache.md`
+> (PyAutoArray#497, PyAutoGalaxy#588). Measure with the memo-blind fix
+> (`draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md`)
+> in place, or with `AUTOARRAY_NUMBA_OPERATED_MEMO=0`.
 
 Type: feature
 Epic: numba-cpu-likelihood

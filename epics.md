@@ -59,8 +59,8 @@ epic, never picked standalone.
 
 ## numba-cpu-likelihood
 - title: Numba CPU sparse-operator likelihood — speed restoration
-- ledger: active/numba_cpu_likelihood_mge_convolution_and_caching.md
-- status: phase 1 IN FLIGHT (PyAutoArray#496, 2026-08-27)
+- ledger: complete/2026/08/numba-cpu-mge-batch-convolve-cache.md
+- status: phase 1 SHIPPED 2026-08-27 (PyAutoArray#497 + PyAutoGalaxy#588; MGE step 3.7-5.4x); phase 2 deferred; phase 3 not filed
 - notes: Profiling shipped (autolens_profiling#151, record complete/2026/08/numba-cpu-likelihood-profiling.md);
   first-call garbage bug shipped (complete/2026/08/numba-first-call-garbage-psf-weighted-data.md).
   Phase 1 = MGE batched convolution + operated-matrix caching + Convolver state reuse.
