@@ -1,3 +1,23 @@
+# interferometer-bulge-pixelization-example
+
+Follow-up to #499/#500 and the docs sweep (#508). The canonical autogalaxy interferometer pixelization
+examples reconstructed the whole `clumpy` galaxy on the mesh "for simplicity", deferring the hybrid to
+imaging; the actual reason was the sparse path's pixelization-only limitation, lifted by #500.
+
+## Shipped
+- autogalaxy_workspace #229 — `interferometer/features/pixelization/fit.py` and `modeling.py` now fit
+  a linear `Sersic` bulge + `RectangularUniform` pixelization simultaneously through the sparse-operator
+  inversion, mirroring the imaging examples; `__Linear Objects__` documents the two-entry
+  `linear_obj_list`; notebook twins regenerated.
+
+## Decisions
+- autolens_workspace deliberately NOT converted: its interferometer datasets are simulated without lens
+  light (a documented science choice), so a lens-light + pixelized-source demo would fit a component absent
+  from the data. Revisit only with a dataset that carries lens light.
+- Mesh/regularization unchanged (Bilinear meshes have no likelihood gradients on the sparse path).
+
+## Original prompt
+
 # Interferometer pixelization examples: linear bulge + pixelization hybrid on the sparse path
 
 Type: docs
