@@ -16,6 +16,7 @@ Epic: euclid-dr1-prep
 Phase: 2
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
+Issued: 2026-08-29
 
 Phase 2 of 10 in the Euclid DR1 preparation epic. **Gate: phase 1** (the script set must
 be settled before CI is wrapped around it) — **UNBLOCKED 2026-08-29**: phase 1 shipped

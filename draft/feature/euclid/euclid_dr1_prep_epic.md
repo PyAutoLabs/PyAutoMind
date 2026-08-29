@@ -187,8 +187,9 @@ Read-only survey done while filing, so each phase prompt cites real paths:
    from `Science/euclid` into the pipeline repo (scripts, `util.py`, `catalogue/scripts`,
    parameterization, docs). Drift rule: `Science/euclid` wins. Blocked 2-4; now unblocked.
    **SHIPPED 2026-08-29** — issue euclid#43 closed, PR #44 merged.
-2. `draft/test/euclid/ci_test_mode_simulated_datasets_latents.md` — committed simulated
+2. `active/ci_test_mode_simulated_datasets_latents.md` — committed simulated
    datasets + TEST-mode CI over every example script + latent unit tests. Gate: 1.
+   — **IN FLIGHT 2026-08-29** issue https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/45
 3. `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` — preserve and
    document the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing) CPU route
    and the full-JAX-GPU route. Gate: 1 (can overlap 2).
