@@ -4,7 +4,6 @@ Type: feature
 Target: autolens_workspace
 Repos:
 - autolens_workspace
-- PyAutoLens
 Themes:
 - point-source
 - euclid
