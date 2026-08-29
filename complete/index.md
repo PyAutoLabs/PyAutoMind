@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1210 records across 7 buckets.
+1211 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -104,6 +104,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [hands-hygiene-leftovers](2026/08/hands-hygiene-leftovers.md)
 - [hands-raw-string-docstring-prefix](2026/08/hands-raw-string-docstring-prefix.md) — closed on merge
 - [harvest-0827-gate-b-pt2](2026/08/harvest-0827-gate-b-pt2.md) — 2026-08-27 RAL A100 harvest + audit (https://claude.ai/code/artifact/d9f4b0f3-52a1-4830-a9ad-11a225b77507). Ga…
+- [harvest-0829-phase8b-final](2026/08/harvest-0829-phase8b-final.md)
 - [hazard-profiling-likelihood-tier](2026/08/hazard-profiling-likelihood-tier.md) — Tier-2 likelihood profiling landed with five persistent findings and corrected NNLS continuity semantics.
 - [health-conductor-stale-verdict](2026/08/health-conductor-stale-verdict.md)
 - [heart-green-validation-ingest](2026/08/heart-green-validation-ingest.md)
