@@ -17,9 +17,10 @@
 
 ## complete-archive-highlights
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/368
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/371
 - prompt: active/complete_archive_wiki.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/mind-workflow
 - repos:
   - PyAutoMind: feature/complete-archive-highlights
