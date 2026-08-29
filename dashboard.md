@@ -161,7 +161,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/515">issue #515</a> — issued 2026-08-29 — workspace-dev</summary>
+<details><summary>📋 <a href="active/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/515">issue #515</a> — issued 2026-08-29 — workspace-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/multi_plane_cross_validation_guide.md
