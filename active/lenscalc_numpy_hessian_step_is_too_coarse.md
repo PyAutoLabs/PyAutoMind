@@ -13,6 +13,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 
+Issued: 2026-08-29
 Filed: 2026-08-27
 
 LensCalc's NumPy Hessian uses a hardcoded finite-difference step that is too coarse for

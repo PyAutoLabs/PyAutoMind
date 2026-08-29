@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-08-29
 Filed: 2026-08-29
 Related: autolens_workspace#514 (the gated un-park that found this), autolens_workspace#513 (imaging sibling, passes)
 
