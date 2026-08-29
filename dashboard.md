@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 3 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 132 |
+| [Backlog](#backlog) (`draft/`) | 133 |
 
 ## Start here
 
@@ -263,7 +263,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**132** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**133** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -620,7 +620,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 19</summary>
+<summary><b>maintenance</b> — 20</summary>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/finish_the_science_project_memory_propagation_au.md">Finish the science-project memory propagation: autofit_assistant sync and autocti_assistant birth-substitution gaps</a> — pyautobrain · medium · supervised · medium</summary>
+
+```
+/start_dev draft/maintenance/pyautobrain/finish_the_science_project_memory_propagation_au.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · supervised · normal</summary>
 
