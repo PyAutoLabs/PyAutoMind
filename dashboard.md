@@ -170,7 +170,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/blackjax_smc_search.md">af.SMC: blackjax adaptive tempered SMC search</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1544">issue #1544</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/blackjax_smc_search.md">af.SMC: blackjax adaptive tempered SMC search</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1544">issue #1544</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/blackjax_smc_search.md
