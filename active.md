@@ -17,9 +17,11 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/196
 - prompt: active/overflow_flood_refs_smc_cell.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/overflow-flood-refs-smc-cell
 - classification: library (autolens_profiling only; Wave B of the overflow-flood fix wave, Wave A merged)
+- library-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/197
 - repos:
   - autolens_profiling: feature/overflow-flood-refs-smc-cell
-- next-skill: /ship_library
+- heart-at-ship: YELLOW (both reasons unrelated to this repo — autolens_workspace_test delaunay_mge timeout cloud#33229145647; release rehearsal absent). NOT acknowledged; surfaced on the PR for the human merge checkpoint.
+- next-skill: /prm (merge, then HPCPullPyAuto on RAL, then the 3 sbatch submits in the PR body)
