@@ -54,3 +54,15 @@
 - classification: library (PyAutoFit only)
 - repos:
   - PyAutoFit: feature/nautilus-serial-bound-training
+
+## log-likelihood-ceiling-default-off
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1549
+- prompt: active/log_likelihood_ceiling_default_off.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/log-likelihood-ceiling-default-off
+- classification: library (PyAutoFit) + config-only follow-up (autolens_profiling)
+- parallel-claim: PyAutoFit is also claimed by `nautilus-serial-bound-training` (awaiting-merge, PR #1548). File sets are disjoint - that branch touches only `nautilus/search.py` + its test; this one touches `fitness.py`, `nss/search.py`, the two `general.yaml` config files and the ceiling tests. Human-approved parallel worktree, own branch, own index.
+- repos:
+  - PyAutoFit: feature/log-likelihood-ceiling-default-off
+  - autolens_profiling: feature/log-likelihood-ceiling-default-off
