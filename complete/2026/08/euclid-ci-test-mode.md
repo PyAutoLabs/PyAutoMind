@@ -1,3 +1,19 @@
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/45 (CLOSED)
+- completed: 2026-08-29
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/46 (merged 361e83ba1ac29a7b80f116cdfcd4a983e1e9ba14)
+- repos: euclid_strong_lens_modeling_pipeline
+- epic: euclid-dr1-prep, phase 2 of 10 (the "strongly preferred before phase 4" gate is now satisfied)
+- commits: c78f789 (stage A — `scripts/simulator.py` + committed `euclid_dr1_like` dataset), a8ce0c3 (stage B — known-answer latent tests, DR1 column parity, repo invariants, run-level latent check), ceba36b (stage C — TEST-mode smoke workflow + unit/slow test jobs on the PyAutoHeart reusable workflow), 2633e00 (stage D — CI/dataset/simulator/test conventions docs)
+- summary: Gave `euclid_strong_lens_modeling_pipeline` its **first CI**, on committed simulated data rather than the auto-simulate convention every other PyAuto workspace uses — deliberately, because most users of this repo fit real Euclid data and auto-simulate machinery inside the example scripts would clutter that reading. A single user-facing `scripts/simulator.py` runs in two modes (fresh simulation, and `--from-result` off a user's own fit — the latter is what phase 5 inherits, flat SED for now) and produced the committed `euclid_dr1_like` dataset at 883 KB carrying the full 13/13 inspection bundle. Orphan datasets that no script consumed were removed. The test surface went from one file to 58 fast + 3 slow tests: 12 known-answer latent assertions covering every latent the Analysis computes, DR1 catalogue column parity against the reference tile bundle, repo invariants (no script auto-simulates, every script has a smoke entry), and a run-level check that a TEST-mode fit actually writes the full latent set rather than merely being able to compute it. CI is two workflows — `Smoke Tests` (every example script in TEST mode, reporting every failure not just the first) and `Tests` (unit + slow across py3.12/py3.13).
+- verification: all 9 checks green on PR #46 head `2633e00` — `Smoke Tests` run 33278353869 and `Tests` run 33278353935, both `success`; PR `CLEAN`/`MERGEABLE`. The merge to `main` fired the same two workflows on `361e83b` (runs 33280913907 `Tests`, 33280913921 `Smoke Tests`) so Heart's main-HEAD gate has something to read.
+- scope: recorded scope == filed scope — all six deliverables (committed datasets, single shared `simulator.py`, TEST-mode CI over every script, unit tests on every latent, run-level latent CI, DR1 column parity) landed in one PR; no remainder re-filed.
+- traps: this was the repo's first CI, so there was no run history to compare a new failure against — every check was a first run by construction.
+- follow-ups: Heart release-blocking gate prompt filed at `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md` (this repo's CI is not yet wired into Heart's readiness verdict); phase 5 inherits `simulator.py --from-result`, whose SED is flat for now; phase 3 (`draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md`) is next in the epic.
+- heart-ack: shipped/merged under human-acknowledged YELLOW (2026-08-29) — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)".
+- worktree: `~/Code/PyAutoLabs-wt/euclid-ci-test-mode` deliberately **left in place** at close-out — the human is deciding separately on its gitignored data products. Remove with `worktree_remove euclid-ci-test-mode` once that is settled.
+
+## Original prompt
+
 # TEST-mode CI over every Euclid example script, on committed simulated datasets, with latent-variable tests
 
 Type: test

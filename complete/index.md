@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1223 records across 7 buckets.
+1224 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -95,6 +95,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [ep-hierarchical-scale-collapse-guard](2026/08/ep-hierarchical-scale-collapse-guard.md)
 - [ep-initializer-exception-should-not-abort](2026/08/ep-initializer-exception-should-not-abort.md)
 - [ep-optimise-updater](2026/08/ep-optimise-updater.md)
+- [euclid-ci-test-mode](2026/08/euclid-ci-test-mode.md) — CLOSED
 - [euclid-crlf-line-endings](2026/08/euclid-crlf-line-endings.md) — Extended the 2026-07-25 org-wide CRLF sweep to the Euclid pipeline, the tier it
 - [euclid-pipeline-parity](2026/08/euclid-pipeline-parity.md) — CLOSED
 - [falsified-by-checkpoint-efficacy-review](2026/08/falsified-by-checkpoint-efficacy-review.md)
