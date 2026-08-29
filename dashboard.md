@@ -178,7 +178,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/log_likelihood_ceiling_default_off.md">log_likelihood_ceiling: ship the guard OFF by default — the ceiling is not…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1549">issue #1549</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/log_likelihood_ceiling_default_off.md">log_likelihood_ceiling: ship the guard OFF by default — the ceiling is not…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1549">issue #1549</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/log_likelihood_ceiling_default_off.md
@@ -194,7 +194,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/370">issue #370</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/370">issue #370</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/repos-sync-config-stamper.md
