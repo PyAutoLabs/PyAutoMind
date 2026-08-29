@@ -185,13 +185,15 @@ agent, so this routed through the Feature Agent; recorded as a follow-up.
 
 ## Found while shipping, NOT filed anywhere
 
-1. **Both assistant repos have a red `wiki-currency` on `main`.** Symbol audit
-   `--scope all` reports `missing/broken: 2` on main (1 after phase 2). The
-   survivor is `al.mesh.RectangularAdaptImage`, absent from the installed stack
-   (suggestions: `RectangularRTUAdaptImage`, `RectangularBilinearAdaptImage`).
-   @autogalaxy_assistant additionally fails `--check-citations` on
+1. ~~**Both assistant repos have a red `wiki-currency` on `main`.**~~ **FILED AND
+   FIXED** (2026-08-29) — it was filed as `wiki-currency-ci-drift` (PyAutoBrain#317)
+   and shipped in autolens_assistant#117 + autogalaxy_assistant#21. Both legs are
+   green on `main`. Record: `complete/2026/08/wiki-currency-ci-drift.md`.
+   *(Original text: symbol audit `--scope all` reported `missing/broken: 2` on main
+   (1 after phase 2), the survivor being `al.mesh.RectangularAdaptImage`;
+   @autogalaxy_assistant additionally failed `--check-citations` on
    `wiki/core/operations/sandbox.md`, citing the deleted
-   `PyAutoGalaxy:autogalaxy/plot/plot_utils.py`.
+   `PyAutoGalaxy:autogalaxy/plot/plot_utils.py`.)*
 2. **@autolens_workspace_developer committed datasets do not reproduce** from
    their own scripts — regenerating an untouched config (`sma`) yields different
    data plus a differing `SMALLDAT` header stamp.
