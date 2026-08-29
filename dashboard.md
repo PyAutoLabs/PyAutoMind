@@ -170,7 +170,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/complete_archive_wiki.md">Token-light wiki index over the complete/ archive</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/368">issue #368</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/complete_archive_wiki.md">Token-light wiki index over the complete/ archive</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/368">issue #368</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/complete_archive_wiki.md
