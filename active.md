@@ -45,30 +45,6 @@
   "manifest drift: session-start hooks (generated) — 32 mismatch(es) vs PyAutoMind/repos.yaml".
   None of these reasons is caused by this task; the human authorised PR-open and merge under RED.
 
-## anonymise-wfc3-ir-hole-regression-target
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/73
-- prompt: active/anonymise_the_named_science_target_in_the.md
-- issued: 2026-08-28
-- status: library-dev, branch-pushed, pr-blocked-heart-red
-- worktree: ~/Code/PyAutoLabs-wt/anonymise-wfc3-ir-hole-regression-target
-- classification: library (PyAutoReduce only)
-- repos:
-  - PyAutoReduce: feature/anonymise-wfc3-ir-hole-regression-target
-- commit: b4ee3697097fe91fe332b12d61c8479a6756a3fb
-- tests: 299 passed, 3 skipped (test_autoreduce/, 2026-08-28)
-- next-skill: ship_library step 4 (open the PR) once Heart clears; PR body is drafted verbatim
-  on the issue comment https://github.com/PyAutoLabs/PyAutoReduce/issues/73#issuecomment-5458441602
-- blocked-by: Heart readiness RED 2026-08-28T21:34:42Z - red_reasons: "release validation FAILED
-  (stage integrate)". None of the RED/YELLOW reasons touch PyAutoReduce; needs a human to clear
-  the RED or authorise the AUTONOMY.md corrective-PR exception.
-- note: comment/test-name/doc rename only, no behaviour change. PyAutoMind history records
-  (complete/, condemned.md, autonomy_log.md) are deliberately left untouched.
-- heart-ack: human authorisation 2026-08-28 — "open prs under red and merge i acknowledge".
-  Heart RED reason acknowledged verbatim: "release validation FAILED (stage integrate)".
-  YELLOW reasons acknowledged verbatim: "workspace validation not passing (2 failed, cloud#33179766004: autolens_test scripts/imaging/rectangular_mge.py, rectangular_mge_rtu.py)";
-  "manifest drift: session-start hooks (generated) — 32 mismatch(es) vs PyAutoMind/repos.yaml".
-  None of these reasons is caused by this task; the human authorised PR-open and merge under RED.
-
 ## witt-wynne-projection
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/510
 - issued: 2026-08-28
