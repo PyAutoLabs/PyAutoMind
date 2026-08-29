@@ -43,6 +43,7 @@ anything you could not verify.
 | Where | Count |
 |-------|------:|
 | [In flight](#in-flight) (`active/`) | 0 |
+| [Human review](#human-review) (`draft/human_review/`) | 0 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
 | [Backlog](#backlog) (`draft/`) | 141 |
@@ -162,6 +163,12 @@ anything you could not verify.
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
 - _(nothing in flight)_
+
+## Human review
+
+Shipped work waiting on **you** — tasks a human asked to check before calling them done. Nothing lands here on its own: a task only gets a review row when someone files one (`/intake` with `Type: human review`), so an empty section means nothing has been flagged, not that nothing shipped.
+
+- _(nothing awaiting review)_
 
 ## Parked
 
