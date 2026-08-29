@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 140 |
+| [Backlog](#backlog) (`draft/`) | 141 |
 
 ## Start here
 
@@ -324,7 +324,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**140** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **33** of them belong to an epic and are listed only under [Epics](#epics) below.
+**141** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -1064,59 +1064,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 6</summary>
-
-<details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
-
-```
-/start_dev draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the tensorflow-probability dependency</a> — autoarray · large · supervised · medium</summary>
-
-```
-/start_dev draft/refactor/autoarray/matern_vendor_bessel_kve.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and <code>latent_batch_size</code></a> — autofit · small · supervised · normal</summary>
-
-```
-/start_dev draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> — autolens · medium · supervised · normal</summary>
-
-```
-/start_dev draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
-
-```
-/start_dev draft/refactor/pyautofit/remove_eden_packaging_tooling.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> — pyautomind · medium · safe · low</summary>
-
-```
-/start_dev draft/refactor/pyautomind/repos_sync_check_dedup.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>test</b> — 6</summary>
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · too-large · supervised · high</summary>
@@ -1163,6 +1110,59 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/test/workspaces/smoke_workspace_fixes.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>refactor</b> — 6</summary>
+
+<details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
+
+```
+/start_dev draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the tensorflow-probability dependency</a> — autoarray · large · supervised · medium</summary>
+
+```
+/start_dev draft/refactor/autoarray/matern_vendor_bessel_kve.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and <code>latent_batch_size</code></a> — autofit · small · supervised · normal</summary>
+
+```
+/start_dev draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> — autolens · medium · supervised · normal</summary>
+
+```
+/start_dev draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
+
+```
+/start_dev draft/refactor/pyautofit/remove_eden_packaging_tooling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> — pyautomind · medium · safe · low</summary>
+
+```
+/start_dev draft/refactor/pyautomind/repos_sync_check_dedup.md
 ```
 
 </details>
@@ -1845,7 +1845,7 @@ Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. 
 </details>
 
 <details>
-<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 8 queued prompt(s), in order</summary>
+<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: `draft/feature/euclid/euclid_dr1_prep_epic.md`</summary>
 
@@ -1919,6 +1919,14 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
+<details><summary>📋 <a href="draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md">Make the Euclid pipeline's new CI release-blocking and add…</a> — pyautoheart · small · safe · medium</summary>
+
+```
+/start_dev draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md
+```
+
+</details>
+
 </details>
 
 ## Hygiene
@@ -1934,7 +1942,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-10 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+11 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -1946,6 +1954,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 - `draft/feature/euclid/resimulate_fitted_lens_simulator.md — unknown theme keyword(s): euclid, simulation`
 - `draft/bug/autoarray/delaunay_area_magnification_audit.md — unknown theme keyword(s): euclid`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
+- `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/research/euclid/dr1_prelim_10_lens_science_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/research/euclid/magnification_robustness.md — unknown theme keyword(s): euclid`
 - `draft/research/euclid/sersic_index_recovery.md — unknown theme keyword(s): euclid, priors`
