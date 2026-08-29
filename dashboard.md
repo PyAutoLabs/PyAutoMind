@@ -1217,9 +1217,9 @@ You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke' — 4 INDEPEN
 
 Members:
 - draft/bug/ci/release_smoke_ignores_env_declarations.md
+- draft/bug/ci/scheduled_runs_delivered_hours_late.md
 - draft/test/pyautoheart/smoke_relevance_gate.md
 - draft/test/workspaces/slowest_smoke_gate_scripts.md
-- draft/maintenance/ci/heart_smoke_table_autocti.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1235,23 +1235,24 @@ Contract (the `start_bundle` skill is the full body):
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
 | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> | ci | small | high | - |
+| <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> | ci | medium | high | - |
 | <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> | pyautoheart | medium | normal | formalised |
 | <a href="draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a> | workspaces | medium | normal | formalised |
-| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | ci | medium | normal | formalised |
 
 </details>
 
 <details>
-<summary><b>notebooks</b> — 2 task(s) · 5 pts · auto — proposed</summary>
+<summary><b>notebooks</b> — 3 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'notebooks' — 2 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'notebooks' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/docs/autolens/multi_galaxy_package.md
 - draft/docs/howtolens/ch4_mask_overlay_never_drawn.md
+- draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1268,6 +1269,7 @@ Contract (the `start_bundle` skill is the full body):
 |--------|------|------------|----------|--------|
 | <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> | autolens | large | high | in progress — core landed 2026-07-25… |
 | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> | howtolens | small | low | formalised |
+| <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> | workspaces | small | low | - |
 
 </details>
 
@@ -1306,6 +1308,38 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>visualization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'visualization' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autolens/quick_update_plotting_cost.md
+- draft/feature/autoarray/arcsecond_to_decimal.md
+- draft/docs/workspaces/plot_coverage_followups.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | autolens | medium | medium | draft |
+| <a href="draft/feature/autoarray/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> | autoarray | large | normal | formalised |
+| <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> | workspaces | - | - | - |
+
+</details>
+
+<details>
 <summary><b>samplers · jax-gradient</b> — 3 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1334,38 +1368,6 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> | autofit | medium | medium | formalised |
 | <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and…</a> | autofit | small | normal | formalised |
 | <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts /…</a> | autolens_profiling | large | normal | formalised |
-
-</details>
-
-<details>
-<summary><b>visualization</b> — 3 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'visualization' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/research/autolens/quick_update_plotting_cost.md
-- draft/feature/autoarray/arcsecond_to_decimal.md
-- draft/feature/workspaces/gallery_runner_missing_tiers.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | autolens | medium | medium | draft |
-| <a href="draft/feature/autoarray/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> | autoarray | large | normal | formalised |
-| <a href="draft/feature/workspaces/gallery_runner_missing_tiers.md">Gallery runner: add visualization_upper + decide the…</a> | workspaces | small | low | formalised |
 
 </details>
 
@@ -1402,18 +1404,16 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>mind-workflow</b> — 4 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>samplers — bundle 2</b> — 2 task(s) · 4 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'mind-workflow' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'samplers — bundle 2' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/feature/pyautomind/bundle_nightly_claude_pass.md
-- draft/feature/pyautomind/complete_archive_wiki.md
-- draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md
-- draft/feature/pyautomind/repos-sync-config-stamper.md
+- draft/feature/autofit/search_seed_reproducibility.md
+- draft/research/autolens_profiling/cluster_gradient_search_benchmark.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1428,25 +1428,23 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts +…</a> | pyautomind | medium | normal | formalised |
-| <a href="draft/feature/pyautomind/complete_archive_wiki.md">Token-light wiki index over the complete/ archive</a> | pyautomind | medium | normal | formalised |
-| <a href="draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md">The SessionStart hook is generated into 34 repos and current in 4</a> | organs | medium | normal | formalised |
-| <a href="draft/feature/pyautomind/repos-sync-config-stamper.md">Teach repos_sync --write to stamp organ config surfaces</a> | pyautomind | hard | low | - |
+| <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> | autofit | medium | medium | formalised |
+| <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus…</a> | autolens_profiling | - | - | - |
 
 </details>
 
 <details>
-<summary><b>point-source</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>ci-smoke — bundle 2</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'point-source' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/feature/autolens/multi_plane_time_delays.md
-- draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
-- draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+- draft/maintenance/ci/copilot_auto_review.md
+- draft/maintenance/ci/heart_smoke_table_autocti.md
+- draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1461,9 +1459,9 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> | autolens | large | normal | formalised |
-| <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> | autolens | medium | normal | formalised |
-| <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> | pyautolens | medium | low | formalised |
+| <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> | ci | large | normal | planned |
+| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | ci | medium | normal | formalised |
+| <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> | workspaces | low | normal | draft |
 
 </details>
 
