@@ -50,3 +50,4 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/witt-wynne-projection
 - repos:
+  - autolens_workspace: feature/witt-wynne-projection
