@@ -194,7 +194,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/591">issue #591</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/591">issue #591</a> — issued 2026-08-29 — library-shipped, awaiting-merge (PyAutoGalaxy PR open; PyAutoLens test-only PR opens after it merges)</summary>
 
 ```
 /start_dev active/lenscalc_numpy_hessian_step_is_too_coarse.md
