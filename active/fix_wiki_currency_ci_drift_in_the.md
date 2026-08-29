@@ -9,7 +9,8 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Status: formalised
+Status: issued
+Issued: 2026-08-28
 
 # Fix wiki-currency CI drift in the lens and galaxy assistants
 Type: maintenance
