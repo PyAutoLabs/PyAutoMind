@@ -11,4 +11,4 @@
 - epic: euclid-dr1-prep (phase 1 of 10; gates phases 2, 3, 4)
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-parity
-- next-skill: /start_workspace
+- next-skill: /ship_workspace (stages A+B → C → D → E in flight)
