@@ -51,4 +51,4 @@
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-serial-bound-training
 - classification: library (PyAutoFit only)
 - repos:
-  - PyAutoFit
+  - PyAutoFit: feature/nautilus-serial-bound-training
