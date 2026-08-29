@@ -42,15 +42,15 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 5 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 141 |
+| [Backlog](#backlog) (`draft/`) | 139 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
+**Highest priority** (filed as `high`) — showing 12 of 14
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -64,14 +64,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/triage/jax_zero_contour.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/adapt_linear_regularization.md"><code>AdaptPower</code> regularization: coefficient exponent as an input, factor-2 scatter fixed</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autoarray/adapt_linear_regularization.md
 ```
 
 </details>
@@ -148,6 +140,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
 **Quick wins** (small enough, and safe enough to run unattended)
 
 <details><summary>📋 <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by PyAutoGalaxy…</a> — autogalaxy · small · safe · medium</summary>
@@ -161,6 +161,14 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/adapt_linear_regularization.md"><code>AdaptPower</code> regularization: coefficient exponent as an input, factor-2 scatter fixed</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/511">issue #511</a> — issued 2026-08-29 — library-dev</summary>
+
+```
+/start_dev active/adapt_linear_regularization.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/blackjax_smc_search.md">af.SMC: blackjax adaptive tempered SMC search</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1544">issue #1544</a> — issued 2026-08-29 — library-dev</summary>
 
@@ -332,18 +340,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**141** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **33** of them belong to an epic and are listed only under [Epics](#epics) below.
+**139** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **33** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 29</summary>
-
-<details><summary>📋 <a href="draft/feature/autoarray/adapt_linear_regularization.md"><code>AdaptPower</code> regularization: coefficient exponent as an input, factor-2 scatter fixed</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autoarray/adapt_linear_regularization.md
-```
-
-</details>
+<summary><b>feature</b> — 28</summary>
 
 <details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · supervised · medium</summary>
 
@@ -705,7 +705,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 17</summary>
+<summary><b>bug</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -751,14 +751,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
 ```
 
 </details>
@@ -1282,40 +1274,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pixelization</b> — 4 task(s) · 7 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: inference</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'pixelization' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autoarray/adapt_linear_regularization.md
-- draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
-- draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
-- draft/bug/autoarray/adapt_scatter_factor_two.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autoarray/adapt_linear_regularization.md"><code>AdaptPower</code> regularization: coefficient exponent as an input…</a> | autoarray | medium | high | draft |
-| <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square)…</a> | autoarray | medium | normal | draft |
-| <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate…</a> | autoarray | medium | normal | formalised |
-| <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> | autoarray | small | low | documented — NOT an open bug (fixed in… |
-
-</details>
-
-<details>
 <summary><b>notebooks</b> — 2 task(s) · 5 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1346,16 +1304,17 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pixelization — bundle 2</b> — 3 task(s) · 7 pts · auto — proposed</summary>
+<summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'pixelization — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'pixelization' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/refactor/autoarray/matern_vendor_bessel_kve.md
-- draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+- draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
+- draft/bug/autoarray/adapt_scatter_factor_two.md
 - draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
 
 Contract (the `start_bundle` skill is the full body):
@@ -1372,7 +1331,8 @@ Contract (the `start_bundle` skill is the full body):
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
 | <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the…</a> | autoarray | large | medium | formalised |
-| <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> | workspaces | medium | normal | draft |
+| <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate…</a> | autoarray | medium | normal | formalised |
+| <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> | autoarray | small | low | documented — NOT an open bug (fixed in… |
 | <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> | workspaces | small | normal | formalised |
 
 </details>
@@ -1507,7 +1467,39 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 21 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>point-source</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'point-source' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/feature/autolens/multi_plane_time_delays.md
+- draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
+- draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> | autolens | large | normal | formalised |
+| <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> | autolens | medium | normal | formalised |
+| <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> | pyautolens | medium | low | formalised |
+
+</details>
+
+_Showing 8 of 20 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1518,7 +1510,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | issued | <a href="active/multi_galaxy_scaling_relation_zero_intensity_under_smoke.md">multi_galaxy/features/scaling_relation/slam measures 0.0 luminosities…</a> |
 | 2026-08-29 | issued | <a href="active/blackjax_smc_search.md">af.SMC: blackjax adaptive tempered SMC search</a> |
-| 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_regularization.md"><code>AdaptPower</code> regularization: coefficient exponent as an input…</a> |
+| 2026-08-29 | issued | <a href="active/adapt_linear_regularization.md"><code>AdaptPower</code> regularization: coefficient exponent as an input…</a> |
 | 2026-08-29 | issued | <a href="active/ci_test_mode_simulated_datasets_latents.md">TEST-mode CI over every Euclid example script, on committed simulated…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | issued | <a href="active/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> |
@@ -1950,13 +1942,12 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-11 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+10 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
-- `draft/feature/autoarray/adapt_linear_regularization.md — unknown theme keyword(s): inference`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
