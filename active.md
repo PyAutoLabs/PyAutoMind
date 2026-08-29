@@ -39,6 +39,11 @@
   structure; 56 tests pass, boundary complete. Reported not-fixed: autocti's lensing *example
   strings* (slacs_subhalo, the SLaM run row, README filename examples) and three more
   `.claude/skills/` real-file copies — human domain adaptation, not substitutions.
+- heart-ack: human authorisation 2026-08-28 — "open prs under red and merge i acknowledge".
+  Heart RED reason acknowledged verbatim: "release validation FAILED (stage integrate)".
+  YELLOW reasons acknowledged verbatim: "workspace validation not passing (2 failed, cloud#33179766004: autolens_test scripts/imaging/rectangular_mge.py, rectangular_mge_rtu.py)";
+  "manifest drift: session-start hooks (generated) — 32 mismatch(es) vs PyAutoMind/repos.yaml".
+  None of these reasons is caused by this task; the human authorised PR-open and merge under RED.
 
 ## anonymise-wfc3-ir-hole-regression-target
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/73
@@ -58,6 +63,11 @@
   the RED or authorise the AUTONOMY.md corrective-PR exception.
 - note: comment/test-name/doc rename only, no behaviour change. PyAutoMind history records
   (complete/, condemned.md, autonomy_log.md) are deliberately left untouched.
+- heart-ack: human authorisation 2026-08-28 — "open prs under red and merge i acknowledge".
+  Heart RED reason acknowledged verbatim: "release validation FAILED (stage integrate)".
+  YELLOW reasons acknowledged verbatim: "workspace validation not passing (2 failed, cloud#33179766004: autolens_test scripts/imaging/rectangular_mge.py, rectangular_mge_rtu.py)";
+  "manifest drift: session-start hooks (generated) — 32 mismatch(es) vs PyAutoMind/repos.yaml".
+  None of these reasons is caused by this task; the human authorised PR-open and merge under RED.
 
 ## witt-wynne-projection
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/510
