@@ -43,3 +43,10 @@
   the RED or authorise the AUTONOMY.md corrective-PR exception.
 - note: comment/test-name/doc rename only, no behaviour change. PyAutoMind history records
   (complete/, condemned.md, autonomy_log.md) are deliberately left untouched.
+
+## witt-wynne-projection
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/510
+- issued: 2026-08-28
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/witt-wynne-projection
+- repos:

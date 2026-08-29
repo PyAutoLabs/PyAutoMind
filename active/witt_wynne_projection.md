@@ -11,8 +11,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: active
 Filed: 2026-08-28
+Issued: 2026-08-28
 
 ## Original request (verbatim)
 
