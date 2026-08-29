@@ -155,7 +155,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/714">issue #714</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/714">issue #714</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/cross_validate_multi_plane_ray_tracing.md
