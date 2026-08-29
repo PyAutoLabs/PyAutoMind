@@ -12,3 +12,14 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-ci-test-mode
 - next-skill: /ship_workspace (stages A → B → C → D in flight)
+
+## overflow-flood-refs-smc-cell
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/196
+- prompt: active/overflow_flood_refs_smc_cell.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/overflow-flood-refs-smc-cell
+- classification: library (autolens_profiling only; Wave B of the overflow-flood fix wave, Wave A merged)
+- repos:
+  - autolens_profiling: feature/overflow-flood-refs-smc-cell
+- next-skill: /ship_library
