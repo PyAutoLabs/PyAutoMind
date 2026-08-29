@@ -1,3 +1,19 @@
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/43 (CLOSED)
+- completed: 2026-08-29
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/44 (merged 4a0d9c556fbea81eed19a51b80c3eeb5cd72178c)
+- repos: euclid_strong_lens_modeling_pipeline
+- epic: euclid-dr1-prep, phase 1 of 10 (gated phases 2, 3, 4 — now unblocked)
+- commits: db09e3b (util + script chain + full_model Delaunay), a3a407c (latent diagnostics on LatentEuclid), 593318b (catalogue/ producer tree + inspection bundle), 4c3e13a (parity docs, drift report, tests, smoke + HPC wiring), 90955ac (config drift sweep)
+- summary: Brought `euclid_strong_lens_modeling_pipeline` to parity with the DR1 analysis chain that had been living outside the organism in `Science/euclid`, so the repo is now the representative DR1 analysis rather than a partial copy. Ported the shared `util` layer including the `WORST_BAND` / PSF-FWHM handling and the full latent-variable set; ported the script chain (initial lens model -> single-Sersic -> multi-waveband, with the option to follow on from the single-Sersic fits). `full_model` — previously **unrunnable** in this repo — now runs on Delaunay + AdaptSplit. Added the `catalogue/` producer tree at 11 of 13 producers (deblending, lens mass, magnitudes and siblings) reproducing the DR1 prelim grade-AB catalogue CSV contents, plus the inspection-bundle scripts. Rewrote the latent diagnostics onto `LatentEuclid`. Closed with a config drift sweep that dropped classes no longer in the API, fixed a dead AdaptSplit prior path nothing was writing, and cleared stale keys and READMEs.
+- verification: pytest 24 passed; workspace smoke 8/8; config-sweep smoke RC 0. **This repo has no `.github/workflows/`**, so PR #44 ran zero check runs — the merge was human-authorized on that local evidence. Wiring CI for the pipeline is epic phase 2.
+- scope: recorded scope == filed scope — the full phase 1 plus the config-sweep extension merged together; no remainder re-filed.
+- traps: the config drift sweep found an AdaptSplit prior file being *read* from a path nothing wrote — a dead file that looked live. Config drift of this shape is not local to this repo: an upstream draft was filed at `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md`.
+- follow-ups: candidate upstream bug — `int(m.mesh.pixels)` raises `TypeError` in PyAutoArray (to be filed against the library); upstream config drift draft as above; phase 2 (`draft/test/euclid/ci_test_mode_simulated_datasets_latents.md`) now unblocked and carries the CI gap.
+- heart-ack: shipped/merged under human-acknowledged YELLOW (2026-08-29) — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)".
+- worktree: `~/Code/PyAutoLabs-wt/euclid-pipeline-parity` deliberately **left in place** at close-out — the human is deciding separately on its gitignored data products. Remove with `worktree_remove euclid-pipeline-parity` once that is settled.
+
+## Original prompt
+
 # Pipeline parity: port the DR1 analysis from Science/euclid into euclid_strong_lens_modeling_pipeline
 
 Type: feature
