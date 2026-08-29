@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-08-29
 Filed: 2026-08-29
 Depends-on: PyAutoLens#714 (phase 1)
 

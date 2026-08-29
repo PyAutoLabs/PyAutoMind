@@ -12,6 +12,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Blocked-by: a capped run of the script exiting 0 — see "The gate" below
+Issued: 2026-08-29
 Filed: 2026-08-24
 
 The sibling of `complete/2026/08/unpark-imaging-scaling-relation-slam.md` (shipped 2026-08-29, autolens_workspace#513),
