@@ -179,7 +179,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431 gate has cleared</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/512">issue #512</a> — issued 2026-08-29 — workspace-dev</summary>
+<details><summary>📋 <a href="active/unpark_imaging_scaling_relation_slam.md">Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431 gate has cleared</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/512">issue #512</a> — issued 2026-08-29 — workspace-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/unpark_imaging_scaling_relation_slam.md
