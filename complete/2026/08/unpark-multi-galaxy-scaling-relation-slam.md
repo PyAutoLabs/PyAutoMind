@@ -1,3 +1,15 @@
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/514 (CLOSED)
+- completed: 2026-08-29
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/516 (merged -> main)
+- repos: autolens_workspace
+- outcome: GATE FAILED — the park was NOT removed. Scope shipped = the park's reason rewritten (one line in `config/build/no_run.yaml`) to record what is now verified and what actually fails; the un-park itself is re-filed as the bug prompt below.
+- summary: Cache-free capped runs (CI-form + evidence form, 4 attempts, all exit 1 in 8–12 s). VERIFIED: autolens_workspace#501/#502's pixel-scale fix — `Standard mask radius: 3.0` / `Enlarged mask radius: 4.70` (= 0.5*16*0.6-0.1), masks populated (80 / 192 px), `lens_light[1]` and `lens_light[2]` both reach `Search complete`, no `zero-size array`. THIRD CAUSE: `luminosity_from` raises `Measured luminosity is 0.0` (slam.py:146) — every linear MGE intensity in the truncated light stages' max-likelihood sample is 0.0. The imaging sibling passes the same smoke profile with anchor 22.47 (#513) and both simulators put galaxies within ~0.35" of the origin, so this is neither the off-frame cause 1 nor a generic test-mode limit; it is specific to this script's two-stage (fixed-pair + tier) light setup.
+- re-filed: `draft/bug/autolens_workspace/multi_galaxy_scaling_relation_zero_intensity_under_smoke.md` (diagnose which stage yields the zeros; no test-mode-only luminosity fallback). Once fixed, re-run this exact gate and un-park.
+- trap: the script's `path_prefix` is `multi_galaxy/slam/` (slam.py:926), so the tree to clear is `output/test_mode/multi_galaxy/slam/` — the obvious `…/features/scaling_relation` path clears nothing and a stale tree fakes a pass ("Fit Already Completed" x2 on the first run). Now recorded in the park reason itself.
+- heart-ack: shipped/merged under human-acknowledged YELLOW (2026-08-29) — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source".
+
+## Original prompt
+
 # Un-park multi_galaxy/features/scaling_relation/slam once a capped run passes
 
 Type: maintenance

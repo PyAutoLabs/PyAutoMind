@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1213 records across 7 buckets.
+1215 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -171,6 +171,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [mobile-performance-review-3](2026/08/mobile-performance-review-3.md)
 - [multi-dataset-jax-likelihood-xla-stall](2026/08/multi-dataset-jax-likelihood-xla-stall.md) — filed 2026-08-22 after `multi_dataset/jax_likelihood/mge.py` was parked
 - [multi-plane-cross-validation](2026/08/multi-plane-cross-validation.md) — CLOSED
+- [multi-plane-guide-cross-validation](2026/08/multi-plane-guide-cross-validation.md) — CLOSED
 - [multi-start-auto-convergence-real-search](2026/08/multi-start-auto-convergence-real-search.md) — `scripts/jax_assertions/multi_start_gradient_auto_convergence.py` failed
 - [multistart-gradient-resume-fom-sanity-check](2026/08/multistart-gradient-resume-fom-sanity-check.md)
 - [multistart-nan-step-diagnostics](2026/08/multistart-nan-step-diagnostics.md)
@@ -321,6 +322,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [undo-community-file-declutter](2026/08/undo-community-file-declutter.md) — Undid the 2026-08-19 community-file declutter (#248 Mind, #32 Memory):
 - [uniform-prior-bounds-numpy-path](2026/08/uniform-prior-bounds-numpy-path.md) — auto-closed by the merge's `Closes` line
 - [unpark-imaging-scaling-relation-slam](2026/08/unpark-imaging-scaling-relation-slam.md) — CLOSED
+- [unpark-multi-galaxy-scaling-relation-slam](2026/08/unpark-multi-galaxy-scaling-relation-slam.md) — CLOSED
 - [untrack-fits-test-artifacts](2026/08/untrack-fits-test-artifacts.md)
 - [version-skew-yank-awareness](2026/08/version-skew-yank-awareness.md)
 - [version-stamp-sync-guards](2026/08/version-stamp-sync-guards.md) — closed by the 2026-08-19 reconcile sweep — see traps

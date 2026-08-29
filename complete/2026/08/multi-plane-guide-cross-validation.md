@@ -1,3 +1,15 @@
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/515 (CLOSED)
+- completed: 2026-08-29
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/715 (phase 1, merged 9e89bd7c3; record complete/2026/08/multi-plane-cross-validation.md)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/517 (merged -> main)
+- repos: autolens_workspace
+- summary: Phase 2 of PyAutoLens#714. Extended the EXISTING `scripts/guides/advanced/multi_plane.py` (no sibling guide) with a `__Cross Validation__` section (512 -> 1271 lines, runtime 1.2 s -> 5.5 s, no fits): the settled formalism (SEF 1992 §9.1 eqs 9.6/9.7b; Narayan & Bartelmann 1996 eqs 55/60; McCully+14 recursion) and the two convention traps; the runnable PyAutoLens#480 1.86-vs-27.9 truncated-tracer example (wrong -1.862 / right -27.898, ray-traced Jacobian confirms to 1.7e-8); six oracle arms each printing its residual — astropy scaling factors (2.1e-7 max rel; 1e-6/1e-10 split explained), paper recursion (bit-identical with project betas), numerical Jacobian with h-sweep stable to six figures over 1e-4..1e-7, McCully recursion (mu/kappa/gamma <= 3.2e-7 per plane), double Einstein ring closed form (radii 1.5 / 0.5 exact, one figure), exact JAX jacfwd in float64 (reproduces the #480 autodiff values; 1.5e-4 vs FD at the hardest position); and a LIVE demonstration + warning of the unfixed NumPy Richardson-step defect (`draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md`). Notebook, `llms-full.txt` and `workspace_index.json` regenerated (precedent e77f25ec). CI green: Smoke py3.12/3.13, Navigator x3, Size Guard.
+- env trade-off: one `__Env__` declaration per file (PyAutoHands env_profile_redesign §10), so the guide is now `ENV: jax full_datasets` — the nojax CI leg skips the whole guide rather than only the JAX arm. Accepted; revisit if a per-section mechanism ever lands.
+- traps: `jax.jacfwd` goes on a closure over the tracer (Tracer is not a registered pytree); both `al.Grid2DIrregular(values=..., xp=jnp)` and `traced_grid_2d_list_from(grid=..., xp=jnp)` must be jnp-typed. `run_python.py --list` takes a PATH to a list file, not an inline script name. `check_sizes.sh` guards shrinkage only, so a +761-line guide passes it.
+- heart-ack: shipped/merged under human-acknowledged YELLOW (2026-08-29) — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source".
+
+## Original prompt
+
 # Publish the multi-plane cross-validation as a workspace guide
 
 Type: docs
