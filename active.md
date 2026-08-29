@@ -16,8 +16,12 @@
 - worktree: ~/Code/PyAutoLabs-wt/wiki-currency-ci-drift
 - classification: library (two assistant repos; docs-only, no workspace follow-up)
 - repos:
-  - autolens_assistant: feature/wiki-currency-ci-drift
-  - autogalaxy_assistant: feature/wiki-currency-ci-drift
+  - autolens_assistant: feature/wiki-currency-ci-drift (b7a6964)
+  - autogalaxy_assistant: feature/wiki-currency-ci-drift (98999f3)
+- library-pr: autolens_assistant#117 (OPEN), autogalaxy_assistant#21 (OPEN)
+- ci: `wiki-currency` PASS on both PRs (1m11s / 1m9s), `boundary` PASS on both — the leg that
+  has been red on main since 2026-08-23 is green on both branches
+- next-skill: /prm on autolens_assistant#117 + autogalaxy_assistant#21
 - heart-red-at-ship: "PyAutoArray: 2 commit(s) behind origin" — verbatim from
   `pyauto-heart readiness --json` at 2026-08-29T01:56:44Z; pre-existing and unrelated
   (markdown-only changes in two other repos). Human acknowledged and authorised PR-open;
