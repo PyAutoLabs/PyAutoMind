@@ -33,14 +33,17 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/714
 - prompt: active/cross_validate_multi_plane_ray_tracing.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/715
+- workspace-impact: none (test-only; phase-2 guide filed as draft/docs/autolens_workspace/multi_plane_cross_validation_guide.md)
+- heart-ack: YELLOW acknowledged 2026-08-29 — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source"
 - worktree: ~/Code/PyAutoLabs-wt/ci-smoke-bundle-2
 - classification: library (phase 1 — PyAutoLens test module; phase 2 workspace guide filed as a follow-up prompt)
 - bundle: ci-smoke — bundle 2 (shared worktree; own branch, own PR)
 - repos:
   - PyAutoLens: feature/multi-plane-cross-validation
   - PyAutoGalaxy: feature/ci-smoke-bundle-2 (claimed, no edits expected)
-- next-skill: /ship_library
+- next-skill: /prm
 
 ## unpark-imaging-scaling-relation-slam
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/512
