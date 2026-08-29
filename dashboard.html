@@ -222,7 +222,7 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>0</b><span>In flight</span></li><li><b>0</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>141</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>0</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>141</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-08-29.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -272,7 +272,34 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <p class="muted">(nothing in flight)</p>
 <a id="human-review"></a><h2>Human review <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft/human_review">markdown version</a></h2>
 <p class="muted">Shipped work waiting on <b>you</b> — tasks a human asked to check before calling them done. Nothing lands here on its own: a task only gets a review row when someone files one (<code>/intake</code> with <code>Type: human review</code>), so an empty section means nothing has been flagged, not that nothing shipped.</p>
-<p class="muted">(nothing awaiting review)</p>
+<div class="task"><button class="copy" data-cmd="Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.
+
+1. Read the prompt: what was asked, and what it claims shipped.
+2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
+   and read the actual diff, not the description of it.
+3. Report what changed, what it does NOT cover, and anything you would have
+   done differently. Call out behaviour changes and test gaps explicitly.
+
+Change nothing while reviewing. When I sign it off, retire the prompt from the
+PyAutoMind checkout (`python3 scripts/lifecycle.py record &lt;slug&gt; --date
+&lt;YYYY-MM-DD&gt; --from-file &lt;body&gt; --apply`, then `git rm` the prompt) and
+regenerate the dashboard. If I do not sign it off, file the follow-up with
+`/intake` instead.
+" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace guide)</a><span class="tags"><span class="pill w y">👀 human_review</span><span class="pill">autolens</span><span class="pill n">normal</span></span><span class="facets"> — flagged for review 2026-08-29</span></p></div>
+<div class="task"><button class="copy" data-cmd="Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.
+
+1. Read the prompt: what was asked, and what it claims shipped.
+2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
+   and read the actual diff, not the description of it.
+3. Report what changed, what it does NOT cover, and anything you would have
+   done differently. Call out behaviour changes and test gaps explicitly.
+
+Change nothing while reviewing. When I sign it off, retire the prompt from the
+PyAutoMind checkout (`python3 scripts/lifecycle.py record &lt;slug&gt; --date
+&lt;YYYY-MM-DD&gt; --from-file &lt;body&gt; --apply`, then `git rm` the prompt) and
+regenerate the dashboard. If I do not sign it off, file the follow-up with
+`/intake` instead.
+" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)</a><span class="tags"><span class="pill w y">👀 human_review</span><span class="pill">autolens_workspace</span><span class="pill n">normal</span></span><span class="facets"> — flagged for review 2026-08-29</span></p></div>
 <h2>Parked <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md">markdown version</a></h2>
 <details>
 <summary>3 task(s)</summary>
@@ -780,6 +807,44 @@ Contract (the `start_bundle` skill is the full body):
 </tr>
 <tr>
 <td class="when">2026-08-29</td>
+<td class="what">flagged for review</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a></td>
+<td class="pick"><button class="copy" data-cmd="Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.
+
+1. Read the prompt: what was asked, and what it claims shipped.
+2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
+   and read the actual diff, not the description of it.
+3. Report what changed, what it does NOT cover, and anything you would have
+   done differently. Call out behaviour changes and test gaps explicitly.
+
+Change nothing while reviewing. When I sign it off, retire the prompt from the
+PyAutoMind checkout (`python3 scripts/lifecycle.py record &lt;slug&gt; --date
+&lt;YYYY-MM-DD&gt; --from-file &lt;body&gt; --apply`, then `git rm` the prompt) and
+regenerate the dashboard. If I do not sign it off, file the follow-up with
+`/intake` instead.
+" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-29</td>
+<td class="what">flagged for review</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a></td>
+<td class="pick"><button class="copy" data-cmd="Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.
+
+1. Read the prompt: what was asked, and what it claims shipped.
+2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
+   and read the actual diff, not the description of it.
+3. Report what changed, what it does NOT cover, and anything you would have
+   done differently. Call out behaviour changes and test gaps explicitly.
+
+Change nothing while reviewing. When I sign it off, retire the prompt from the
+PyAutoMind checkout (`python3 scripts/lifecycle.py record &lt;slug&gt; --date
+&lt;YYYY-MM-DD&gt; --from-file &lt;body&gt; --apply`, then `git rm` the prompt) and
+regenerate the dashboard. If I do not sign it off, file the follow-up with
+`/intake` instead.
+" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-29</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md" aria-label="Copy the Claude command">📋</button></td>
@@ -814,13 +879,13 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/research/graphical_ep/transformed_message_declares_support.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-08-27</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens/data_temp_write_paths_not_ignored.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-08-27</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a></td>
@@ -1053,18 +1118,6 @@ Contract (the `start_bundle` skill is the full body):
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/docs/howtolens/ch4_mask_overlay_never_drawn.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-07-31</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/research/autolens/quick_update_plotting_cost.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-07-31</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/research/autolens_profiling/cluster_gradient_search_benchmark.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
