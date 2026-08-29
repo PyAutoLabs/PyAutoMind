@@ -1,3 +1,16 @@
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/714 (CLOSED)
+- completed: 2026-08-29
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/715 (merged 9e89bd7c3 -> main)
+- repos: PyAutoLens (PyAutoGalaxy claimed in the shared bundle worktree, untouched)
+- bundle: ci-smoke — bundle 2 (shared worktree ci-smoke-bundle-2; own issue/branch/PR)
+- scope: phase 1 of the prompt (library cross-validation). Phase 2 — the workspace guide — is re-filed as `draft/docs/autolens_workspace/multi_plane_cross_validation_guide.md` (extend the EXISTING `guides/advanced/multi_plane.py`, which already cites SEF §9.1 and states the beta identity, rather than a new sibling; carries the JAX `jacfwd` arm since unit tests are numpy-only).
+- summary: New `test_autolens/lens/test_multi_plane_cross_validation.py` — independent oracles sharing no code with `tracer_util`/`LensCalc`: astropy `Planck15` angular-diameter distances for beta_ij (hand-rolled cosmology matches to 2.1e-7 worst case, all six parameters identical), the SEF 1992 §9.1 recursion written from the paper using single-plane profile deflections, a central-difference ray-traced Jacobian (mu = 1/det J, h-stable 1e-4..1e-7), and the McCully+2014 Jacobian recursion. Coverage: degenerate reductions (all mass in one plane, beta limits, deflector-at-plane-j invariance, explicit three-plane longhand), analytic two-aligned-SIS arm (closed-form positions + double-Einstein-ring radii at 1e-10), general four-plane elliptical case for every plane (positions, `deflections_between_planes_from`, magnification vs both Jacobian oracles, convergence/shear). 16 passed / 1 strict xfail; full test_autolens 569 passed; CI green py3.12/3.13/no-jax.
+- finding: NumPy `LensCalc._hessian_via_richardson` hardcoded 0.01" step reproduces the #480 control-arm defect digit for digit on the #480 fixture (mu at last plane 102-122% off, sign flipped, all four points; same route agrees to 1.3e-8 at the intermediate plane — step-size-vs-field-scale, not a broken Hessian). Pinned `xfail(strict=True)` so the fix XPASSes; tracked by `draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md`. No library source edited, no tolerance widened.
+- design note: beta-dependent assertions run twice — astropy beta at rtol 1e-6 (whole chain incl. cosmology) and the project's own beta at 1e-10 (ray-tracing algebra at full precision) — instead of widening to 1e-6. Convention traps stated in the module docstring: `deflections_between_planes_from` is the final-plane-scaled difference theta_i - theta_j, not the physical deflection at plane j; truncating a tracer to planes <= j changes every beta (1.86 vs 27.9).
+- heart-ack: shipped/merged under human-acknowledged YELLOW (2026-08-29) — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source" — both unrelated to this branch.
+
+## Original prompt
+
 # Cross-validate multi-plane ray tracing
 
 Type: test

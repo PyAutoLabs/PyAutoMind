@@ -1,3 +1,16 @@
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/512 (CLOSED)
+- completed: 2026-08-29
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/513 (merged b59229be -> main)
+- repos: autolens_workspace
+- bundle: ci-smoke — bundle 2 (shared worktree ci-smoke-bundle-2; own issue/branch/PR)
+- summary: Removed the `NEEDS_FIX 2026-07-30` park for `imaging/features/scaling_relation/slam` from `config/build/no_run.yaml` (one-line deletion). Cause was PyAutoArray#430 (loader kept uncapped pixel_scales for at-or-below-cap data), fixed by PR#431 (merged 2026-08-03, released 2026.8.7.1). Verified on a cleared tree (output/, output/test_mode/, dataset/imaging/scaling_relation removed) through the CI runner under the capped smoke profile: exit 0 in 25 s, 6 searches genuinely ran (lens_light[1], source_lp[1], source_pix[1], source_pix[2], light[1], mass_total[1]), re-measured anchor luminosity 22.47 (the value that was 0.0), 0 "Fit Already Completed". CI green (Smoke Tests py3.12/3.13, Navigator Check, Script Size Guard).
+- not legacy (checked at plan time): the park targets the current BGC-anchored slam.py (rewritten 2026-07-30 dfcda873, fixed 2026-08-24 1effab6d #501); the prompt's second half (rewrite the multi_galaxy sibling's reason) had already been done on 2026-08-24.
+- left alone, deliberately: `multi_galaxy/features/scaling_relation/slam` stays parked until a capped run of THAT script exits 0; `interferometer/…` unaffected; the script is not in the curated `smoke_tests.txt` (only modeling.py is) — it is now in scope for the discovery-based Workspace Smoke leg; adding it to the curated list is a separate decision.
+- trap: `autohands/run_python.py --report-dir` pipes script stdout and surfaces it only on failure — a passing CI-form run gives a 3-line log; run once more without `--report-dir` for grep-able evidence.
+- heart-ack: shipped/merged under human-acknowledged YELLOW (2026-08-29) — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source" — unrelated to this change.
+
+## Original prompt
+
 # Un-park imaging/features/scaling_relation/slam — the PyAutoArray#431 gate has cleared
 
 Type: maintenance

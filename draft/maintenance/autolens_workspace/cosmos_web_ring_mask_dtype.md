@@ -65,7 +65,7 @@ silently alters mask semantics is worse than the 3.4 MB.
 
 ## Related
 
-`draft/maintenance/workspaces/committed_capped_smoke_datasets.md` — a different
+`complete/2026/08/committed-capped-smoke-datasets.md` (retired 2026-08-29 as obsolete) — a different
 problem in the same tree (capped 15x15 smoke artifacts committed as real data in
 four *other* folders). cosmos_web_ring is genuine real data and is not one of
 them; do not fold these two together.
