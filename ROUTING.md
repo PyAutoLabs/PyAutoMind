@@ -26,7 +26,19 @@ advances to `active/`, and on merge to `complete/<YYYY>/<MM>/` (issue #71).
 | `maintenance/`   | dependency updates, hygiene, cleanup, small technical debt | hygiene agent |
 | `research/`      | exploratory scientific / algorithmic investigation before implementation | research analyst |
 | `experiment/`    | prototypes, spikes, proof-of-concept work | prototype agent |
+| `human_review/`  | work that already **shipped** and a human wants to read and sign off | (none — a human reviews; never auto-filed) |
 | `triage/`        | classification still unclear | (human triages, then re-homes) |
+
+`human_review/` is the one work-type nothing may infer. Every other folder is a
+reading of what a prompt is *about*; this one records a human's judgement that a
+**completed** task needs their eyes before it counts as done — so it is reachable
+only by declaring `Type: human review` (`human-review`/`human_review` read the
+same), and a task never lands there by default. Review is opt-in, not a lifecycle
+stage: an empty section means nothing was flagged, not that nothing shipped. It
+has no PyAutoBrain agent, because there is nothing left to dispatch — the work is
+done and a person is the reviewer. It surfaces as its own **Human review**
+section on `dashboard.md`, directly under *In flight*, and is deliberately not
+counted as backlog.
 
 ## Targets (second folder)
 
