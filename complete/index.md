@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1219 records across 7 buckets.
+1222 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -20,6 +20,7 @@ _(curate hard-won records here — survives regeneration.)_
 
 - [actionable-health-board](2026/08/actionable-health-board.md) — closed on ship
 - [active-prompt-orphan-triage](2026/08/active-prompt-orphan-triage.md)
+- [adapt-linear-regularization](2026/08/adapt-linear-regularization.md)
 - [anonymise-wfc3-ir-hole-regression-target](2026/08/anonymise-wfc3-ir-hole-regression-target.md)
 - [api-drift-ellipse-grid-lines](2026/08/api-drift-ellipse-grid-lines.md)
 - [aplt-output-drift-remaining-repos](2026/08/aplt-output-drift-remaining-repos.md)
@@ -44,6 +45,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [autolens-tracer-validation-guards](2026/08/autolens-tracer-validation-guards.md)
 - [autoreduce-pypi-name-collision](2026/08/autoreduce-pypi-name-collision.md)
 - [blackjax-16-upgrade-smoke](2026/08/blackjax-16-upgrade-smoke.md)
+- [blackjax-smc-search](2026/08/blackjax-smc-search.md)
 - [board-github-data-seam](2026/08/board-github-data-seam.md)
 - [border-relocator-backend-parity](2026/08/border-relocator-backend-parity.md) — Isolated the native NumPy/JAX likelihood gap to mathematically non-unique PCA axes for a near-isotropic border…
 - [border-relocator-degenerate-pca](2026/08/border-relocator-degenerate-pca.md) — Stabilized near-isotropic border PCA axes with a deterministic axis-aligned branch at a scale-aware eigenvalue…
@@ -98,6 +100,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [falsified-by-checkpoint-efficacy-review](2026/08/falsified-by-checkpoint-efficacy-review.md)
 - [feature-ranker-ignores-header-keys](2026/08/feature-ranker-ignores-header-keys.md) — the Feature Agent's ranker now reads the prompt metadata header it was
 - [file-path-guard-decision](2026/08/file-path-guard-decision.md) — The file-path leg split from raw-guard-migration (leg 3 of the dataset-bulk series, autolens_workspace#354). D…
+- [fitness-log-likelihood-ceiling](2026/08/fitness-log-likelihood-ceiling.md)
 - [fits-header-comment-literal-list](2026/08/fits-header-comment-literal-list.md) — small, single-repo, cosmetic
 - [folder-list-ref-drift-sweep](2026/08/folder-list-ref-drift-sweep.md) — Fixed the 12 real defects from the 2026-08-19 hygiene refs scan — 2 autoCTI_workspace/output casing refs, 2 ho…
 - [frozen-lane-counter](2026/08/frozen-lane-counter.md) — Added a third disjoint lane counter to the multi-start gradient search

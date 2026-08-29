@@ -1,3 +1,15 @@
+## fitness-log-likelihood-ceiling
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1543
+- completed: 2026-08-29
+- library-pr: PyAutoFit#1545 (merged f71b91efe -> main)
+- what shipped: `Fitness.call` third `xp.where` — finite |log_likelihood| above `general.test.log_likelihood_ceiling` (default 1e20; null/inf disables; read once in `__init__` as a static float, PyYAML "1e20"-string trap coerced) maps to `resample_figure_of_merit`; inside the jit/vmap region so numpy, `_jit`, `_vmap`, Nautilus n_batch and BlackJAXNUTS inherit it; `__setstate__` backfill for pre-change pickles. NSS closure lifted to module-level `nss_log_likelihood_from(model, analysis, log_likelihood_ceiling)` sharing the ceiling (`NSS_INVALID_LOG_LIKELIHOOD` sentinel). Packaged + test config mirrored.
+- why: RAL 341908_5 (`slam_source_pix_nn`) accepted finite log_l up to 3e+303 from a non-PD Adapt regularization matrix — Nautilus poisoned, never terminated (see autolens_profiling issue #194 follow-ups).
+- validation: 2337 passed / 3 skipped; new tests numpy (both signs, sentinel idempotence, config parsing) + jax jit/vmap (values inside float32 range so the magnitude guard, not isinf, fires) + NSS factory; CI 4/4 (3.12, 3.13, nojax, docs).
+- heart-ack: shipped + merged under human-authorised YELLOW ("merge", 2026-08-29) — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source". Unrelated to this change.
+- skipped: /smoke_test (no workspace impact — ceiling ~15 orders above any real likelihood); workspace general.yaml files not given the key (KeyError → 1e20 default) — follow-up if the knob should be visible.
+
+## Original prompt
+
 # Fitness: reject implausibly large finite log-likelihoods
 
 Type: bug

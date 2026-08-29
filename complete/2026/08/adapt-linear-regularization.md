@@ -1,3 +1,16 @@
+## adapt-linear-regularization
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/511
+- completed: 2026-08-29
+- library-pr: PyAutoArray#512 (merged 302d5df32 -> main), PyAutoGalaxy#592 (merged 2ee44d507 -> main; prior yamls), PyAutoLens#716 (merged af514d179 -> main; test config mirror)
+- what shipped: new regularization classes `AdaptPower`, `AdaptSplitPower`, `AdaptSplitZerothPower`, `MaternAdaptPowerKernel` (new modules — autonerves keys prior config by module.Class ↔ yaml filename, so same-module siblings would silently inherit the legacy config) with `power: float = 1.0` (effective coefficient exponent 2·power; `power=2.0` reproduces legacy bit-identically; declared `type: Constant, value: 1.0` in priors so never sampled) AND a single-scatter weighted graph Laplacian builder (edge weight 0.5·(w_i²+w_j²), symmetric, PD under non-uniform weights, numpy/JAX bit-identical, jit+grad finite) so `AdaptPower(inner=outer=c) == Constant(c)` (≤1.4e-14) and `AdaptSplitPower == ConstantSplit` (bit-identical). Legacy `Adapt*` classes, utils, numerics and identifiers untouched (human decision: identifiers/outputs/aggregator reloads must stay valid). Legacy characterised: λ⁴ (c=2 → 64 vs Constant 8) and factor-2 scatter (Adapt(1) diag = 2× Constant(1)).
+- why: the λ⁴ + LogUniform(1e-6,1e6) prior drives the regularization matrix non-PD from c≈1e4 → finite-garbage log_l floods (RAL 341908_5) and gradient NaNs. `*Power` is the gradient-safe convention for new work; migration c_new = c_old**2.
+- validation: Array 1358 / Galaxy 1152 / Lens 572 (+1 xfail); 21 new PyAutoArray tests (JAX parity behind importorskip) + 3 + 3 downstream; CI green on all three repos (Heart lib-tests clones deps at the matching branch name, so downstream went green pre-merge).
+- mind: PROBE `probe-adapt-double-square-coefficient` answered + retired; filed `draft/bug/autoarray/adapt_scatter_factor_two.md` (note: legacy carries it, *Power fixes it) and `draft/feature/autoarray/adapt_linear_default_flip.md` (deferred breaking default flip).
+- heart-ack: shipped + merged under human-authorised YELLOW ("merge", 2026-08-29) — same two reasons, unrelated.
+- follow-up: autolens_profiling Wave B switches the free-AdaptSplit targets to `AdaptSplitPower` with coefficient priors capped at 1e4 (target_ids change).
+
+## Original prompt
+
 # `AdaptPower` regularization: coefficient exponent as an input, factor-2 scatter fixed
 
 Type: feature
