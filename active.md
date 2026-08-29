@@ -76,3 +76,15 @@
 - worktree: ~/Code/PyAutoLabs-wt/witt-wynne-projection
 - repos:
   - autolens_workspace: feature/witt-wynne-projection
+
+## cmap-magma-default
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/509
+- prompt: active/cmap_magma_default.md
+- issued: 2026-08-28
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cmap-magma-default
+- classification: combined (library first, then the Euclid pipeline workspace)
+- epic: euclid-dr1-prep (phase 0 of 10; gates nothing, gated by nothing)
+- repos:
+  - PyAutoArray: feature/cmap-magma-default
+  - euclid_strong_lens_modeling_pipeline: feature/cmap-magma-default

@@ -18,6 +18,7 @@ Epic: euclid-dr1-prep
 Phase: 0
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
+Issued: 2026-08-28
 
 Phase 0 of 10 in the Euclid DR1 preparation epic. Independent of every other phase —
 it can start immediately and does not gate anything.
