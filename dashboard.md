@@ -155,7 +155,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/pipeline_parity_with_science_euclid.md">Pipeline parity: port the DR1 analysis from Science/euclid into euclid_strong_lens_modeling_pipeline</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/43">issue #43</a> — issued 2026-08-29 — workspace-dev</summary>
+<details><summary>📋 <a href="active/pipeline_parity_with_science_euclid.md">Pipeline parity: port the DR1 analysis from Science/euclid into euclid_strong_lens_modeling_pipeline</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/43">issue #43</a> — issued 2026-08-29 — awaiting-merge</summary>
 
 ```
 /start_dev active/pipeline_parity_with_science_euclid.md
