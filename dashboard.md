@@ -162,7 +162,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/adapt_linear_regularization.md"><code>AdaptPower</code> regularization: coefficient exponent as an input, factor-2 scatter fixed</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/511">issue #511</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/adapt_linear_regularization.md"><code>AdaptPower</code> regularization: coefficient exponent as an input, factor-2 scatter fixed</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/511">issue #511</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/adapt_linear_regularization.md
