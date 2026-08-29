@@ -84,4 +84,5 @@ epic, never picked standalone.
   PyAutoArray source audit that may spawn a separate bug prompt and can run alongside 6b.
   Phase 7's retroactive-update leg is explicitly allowed to conclude "no elegant solution
   — don't build it". Source of truth for all drift is /mnt/c/Users/Jammy/Science/euclid.
-  Phase 0 shipped 2026-08-28.
+  Phase 0 shipped 2026-08-28; phase 1 shipped 2026-08-29 (euclid#43 closed, PR #44
+  merged) — phases 2, 3 and 4 are now unblocked.

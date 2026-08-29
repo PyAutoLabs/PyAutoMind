@@ -18,7 +18,10 @@ Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
 
 Phase 2 of 10 in the Euclid DR1 preparation epic. **Gate: phase 1** (the script set must
-be settled before CI is wrapped around it).
+be settled before CI is wrapped around it) — **UNBLOCKED 2026-08-29**: phase 1 shipped
+(`complete/2026/08/euclid-pipeline-parity.md`, euclid#43 closed, PR #44 merged). That PR
+added no `.github/workflows/`, so this repo still has **no CI at all** — the whole gap is
+this phase's.
 
 User request (verbatim):
 

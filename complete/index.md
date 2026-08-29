@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1215 records across 7 buckets.
+1216 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -94,6 +94,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [ep-initializer-exception-should-not-abort](2026/08/ep-initializer-exception-should-not-abort.md)
 - [ep-optimise-updater](2026/08/ep-optimise-updater.md)
 - [euclid-crlf-line-endings](2026/08/euclid-crlf-line-endings.md) — Extended the 2026-07-25 org-wide CRLF sweep to the Euclid pipeline, the tier it
+- [euclid-pipeline-parity](2026/08/euclid-pipeline-parity.md) — CLOSED
 - [falsified-by-checkpoint-efficacy-review](2026/08/falsified-by-checkpoint-efficacy-review.md)
 - [feature-ranker-ignores-header-keys](2026/08/feature-ranker-ignores-header-keys.md) — the Feature Agent's ranker now reads the prompt metadata header it was
 - [file-path-guard-decision](2026/08/file-path-guard-decision.md) — The file-path leg split from raw-guard-migration (leg 3 of the dataset-bulk series, autolens_workspace#354). D…
