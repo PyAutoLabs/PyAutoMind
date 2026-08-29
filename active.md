@@ -31,12 +31,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1544
 - prompt: active/blackjax_smc_search.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/blackjax-smc-search
 - classification: library (PyAutoFit only; af.SMC blackjax adaptive tempered SMC, wave A2)
 - repos:
   - PyAutoFit: feature/blackjax-smc-search
-- next-skill: /ship_library
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1546
+- next-skill: /prm
 
 ## euclid-ci-test-mode
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/45
