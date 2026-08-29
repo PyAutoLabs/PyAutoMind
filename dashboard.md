@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 135 |
+| [Backlog](#backlog) (`draft/`) | 134 |
 
 ## Start here
 
@@ -171,6 +171,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/witt_wynne_projection.md">Witt–Wynne projection of PyAutoLens models for lensed-SN corroboration</a> — issued 2026-08-28</summary>
+
+```
+/start_dev active/witt_wynne_projection.md
+```
+
+</details>
+
 ## Parked
 
 Started or scoped, not currently in flight — resume by moving the row back to `active.md`. Full detail in [`parked.md`](parked.md).
@@ -255,10 +263,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 28</summary>
+<summary><b>feature</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · supervised · medium</summary>
 
@@ -304,14 +312,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_workspace/witt_wynne_projection.md">Witt–Wynne projection of PyAutoLens models for lensed-SN corroboration</a> — autolens_workspace · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/autolens_workspace/witt_wynne_projection.md
 ```
 
 </details>
@@ -1432,7 +1432,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 23 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1440,7 +1440,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-28 | filed | <a href="draft/feature/autolens_workspace/witt_wynne_projection.md">Witt–Wynne projection of PyAutoLens models for lensed-SN corroboration</a> |
+| 2026-08-28 | issued | <a href="active/witt_wynne_projection.md">Witt–Wynne projection of PyAutoLens models for lensed-SN corroboration</a> |
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-28 | issued | <a href="active/science_project_memory_a_fresh_chat_pointed.md">Science-project memory: a fresh chat pointed at a project folder…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
@@ -1811,12 +1811,11 @@ Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. 
 
 </details>
 
-2 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+1 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
-- `draft/feature/autolens_workspace/witt_wynne_projection.md — unknown theme keyword(s): euclid, guides`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 
 </details>
