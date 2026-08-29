@@ -14,6 +14,7 @@ Autonomy: supervised
 Priority: high
 Status: draft
 Filed: 2026-08-29
+Issued: 2026-08-29
 
 ## Original request (verbatim)
 

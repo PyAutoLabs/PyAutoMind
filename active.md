@@ -60,3 +60,17 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-ci-test-mode
 - next-skill: /ship_workspace (stages A → B → C → D in flight)
+
+## adapt-linear-regularization
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/511
+- prompt: active/adapt_linear_regularization.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/adapt-linear-regularization
+- classification: library (PyAutoArray classes/util/tests; PyAutoGalaxy + PyAutoLens prior configs, docs, composition tests)
+- parallel-claim: PyAutoGalaxy + PyAutoLens are also claimed by 'lenscalc-adaptive-hessian-step'. File sets are disjoint (lenscalc: autogalaxy/operate/lens_calc.py, test_autogalaxy/operate/test_deflections.py, test_autolens/lens/test_multi_plane_cross_validation.py; this task: config/priors/regularization/*.yaml, docs/api/pixelization.rst, new inversion tests). Own worktree + own branch taken deliberately, not a fold.
+- repos:
+  - PyAutoArray: feature/adapt-linear-regularization
+  - PyAutoGalaxy: feature/adapt-linear-regularization
+  - PyAutoLens: feature/adapt-linear-regularization
+- next-skill: /start_library

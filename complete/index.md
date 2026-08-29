@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1216 records across 7 buckets.
+1217 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -233,6 +233,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [prior-property-tests](2026/08/prior-property-tests.md)
 - [prior-support-clipper](2026/08/prior-support-clipper.md) — Shipped `AbstractClipper` / `ClipperNone` / `ClipperPriorBox` in
 - [priors-and-messages-math-audit](2026/08/priors-and-messages-math-audit.md)
+- [probe-adapt-double-square-coefficient](2026/08/probe-adapt-double-square-coefficient.md)
 - [profile-validation-resample-recovery](2026/08/profile-validation-resample-recovery.md) — Shipped the approved narrow compatibility fix: invalid profile construction is now both a direct `ValueError` …
 - [profiling-agent-compile-axis-arc](2026/08/profiling-agent-compile-axis-arc.md)
 - [purge-autocti-dataset-1d-overview](2026/08/purge-autocti-dataset-1d-overview.md) — no GitHub issue — the leftover from `autocti-util-dataset-export`, executed on direct human instruction "do th…
