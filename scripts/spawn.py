@@ -57,7 +57,7 @@ EXIT_CLEAN, EXIT_DRIFT, EXIT_UNSAFE, EXIT_CRASH = 0, 1, 2, 3
 
 MIND_WORK_TYPES = (
     "feature", "bug", "refactor", "docs", "test", "release",
-    "maintenance", "research", "experiment", "triage",
+    "maintenance", "research", "experiment", "human_review", "triage",
 )
 
 MIND_RULES = [

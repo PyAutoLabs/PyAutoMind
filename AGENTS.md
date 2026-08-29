@@ -26,7 +26,9 @@ For the full workflow narrative, conventions, and registry schemas, read
     first folder under `draft/` is the *kind of work*; the second is the
     *target repo or domain*. Work-types: `feature/`, `bug/`, `refactor/`,
     `docs/`, `test/`, `release/`, `maintenance/`, `research/`, `experiment/`
-    (plus `triage/` for prompts whose classification is still unclear).
+    (plus `triage/` for prompts whose classification is still unclear, and
+    `human_review/` for work that already shipped and a human wants to sign
+    off — declaration-only, see below).
     PyAutoBrain routes by the work-type folder — see [README.md](README.md)
     "Prompt taxonomy" and `ROUTING.md`.
   - `active/<name>.md` — **issued** (an open GitHub issue / in flight). The
@@ -151,7 +153,8 @@ several, which is exactly the session no hook fires in.
 ## When you are asked to add a new prompt
 
 Write the file under `draft/<work-type>/<target>/<name>.md` — pick the work-type
-from the list above (use `triage/` if genuinely unsure) and the target
+from the list above (use `triage/` if genuinely unsure — never `human_review/`,
+see below) and the target
 repo/domain as the second folder, e.g. `draft/feature/autolens/potential_corrections.md`
 or `draft/bug/autoarray/mask_edge_case.md`. Don't touch `active.md`, `active/`
 or `complete/` directly — those are managed by `$start-dev`, `$create-issue`
@@ -163,6 +166,23 @@ PyAutoBrain Intake/Conception Agent. It classifies a raw idea into the right
 writes the light header (incl. the optional `Difficulty:/Autonomy:/Priority:`
 keys — see README "Prompt file format"), and files the prompt for you. It files a
 prompt only; `$start-dev` (`/start_dev` in Claude) remains the separate next step.
+
+## When you are asked for a human review
+
+`draft/human_review/<target>/<name>.md` holds work that has already **shipped**
+and that a human wants to read and sign off before it counts as done. It is the
+one work-type nothing may infer: file one only when a human asks for it, by
+declaring `Type: human review` (`human-review`/`human_review` read the same) —
+`/intake` will never choose it, and no completed task acquires it by default.
+Review is opt-in, not a lifecycle stage: `/prm` and the ship skills close a task
+out exactly as before and never file a review.
+
+It renders as its own **Human review** section on `dashboard.md`, directly under
+*In flight*, and is deliberately not counted as backlog — a review is not work to
+pick up, it is work waiting on a person. Its 📋 hands out a read-and-report
+prompt, not a `/start_dev`. Sign one off by retiring the prompt the usual way
+(`scripts/lifecycle.py record …`, then regenerate the dashboard); if it does not
+pass, the follow-up is an ordinary `$intake`.
 
 ## When you are asked to start work on an existing prompt
 

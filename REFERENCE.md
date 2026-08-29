@@ -228,6 +228,20 @@ Prompts start at `draft/<work-type>/<target>/<name>.md` (and advance
 | `maintenance/` | dependency updates, hygiene, cleanup, small tech debt | hygiene agent |
 | `research/` | exploratory scientific / algorithmic investigation | research analyst |
 | `experiment/` | prototypes, spikes, proof-of-concept work | prototype agent |
+| `human_review/` | work that already shipped and a human wants to sign off | (none — a person reviews) |
+
+`human_review/` is the one work-type nothing infers. Every other folder answers
+*what is this prompt about?*; this one records a human's judgement that a
+**completed** task needs their eyes before it counts as done. File one by
+declaring `Type: human review` (`human-review`/`human_review` read the same) —
+`/intake` will never choose it for you, and no task acquires it by default.
+Review is opt-in, not a lifecycle stage, so an empty section means nothing was
+flagged, not that nothing shipped. It renders as its own **Human review** section
+on `dashboard.md`, directly under *In flight*, and is not counted as backlog: a
+review is not work to pick up, it is work waiting on you. Its 📋 hands out a
+read-and-report prompt rather than a `/start_dev`. Sign one off by retiring the
+prompt the usual way (`lifecycle.py record …`); don't sign it off and the
+follow-up is an ordinary `/intake`.
 
 `triage/` holds prompts whose classification is still unclear — file there with a
 short note and re-home once the work type is obvious. The full mapping (and the
@@ -243,6 +257,7 @@ refactor/autofit/result_object_cleanup.md
 docs/workspaces/pixelization_tutorial.md
 research/autofit/sbi_design.md
 experiment/autoarray/jax_sparse_mapping.md
+human_review/autolens/scaling_relation_fit_quality.md
 ```
 
 ### Not work-types
