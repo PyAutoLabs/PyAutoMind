@@ -5,6 +5,8 @@ Target: ci
 Repos:
 - @PyAutoMind
 - @PyAutoMemory
+Themes:
+- ci-smoke
 Difficulty: medium
 Autonomy: supervised
 Priority: high

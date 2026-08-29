@@ -11,7 +11,7 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: parked
 Filed: 2026-08-27
 Unblocked: phase 1 shipped 2026-08-28 — complete/2026/08/bundle-themes.md (PyAutoBrain#312, PyAutoMind#366)
 
@@ -46,3 +46,19 @@ without making the render non-reproducible or burning tokens on the page itself.
    registry files; `lifecycle.py check` must stay green after the commit.
 4. Tests for the merge order/origin tags and the never-overwrite rule (the
    theme-fill step must be a pure "absent → value" transform under test).
+
+## 2026-08-29 — PARKED at bundle `mind-workflow` plan time
+
+Checked before issuing. Both legs have lost their driver:
+- **Theme-fill**: the intake formaliser already writes `Themes:` at filing time
+  (`PyAutoBrain/agents/conductors/intake/_intake.py`, `_render_header`), and
+  the backfill covered 130/136. Only 7 hand-filed drafts lacked a theme on
+  2026-08-29 — filled by hand in the same commit as this note. A nightly Claude
+  run is the wrong tool for a workload that is near zero on an ordinary day.
+- **Cross-theme proposals**: no demand yet. The deterministic auto-bundler
+  renders 8 proposals today and the first bundle ever run is the one that
+  parked this prompt. Revisit when bundles have been run several times and a
+  grouping a rule cannot find has actually been wanted.
+Un-park when either driver returns; the renderer hooks (`parse_bundles`'s
+`origin` stamp, `_auto_excluded`) and `ledger_merge.LEDGER_FILES` are the three
+places phase 2 would touch.

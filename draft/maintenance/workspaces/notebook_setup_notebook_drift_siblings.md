@@ -1,5 +1,8 @@
 # Regenerate setup_notebook-drifted notebooks in autogalaxy/autofit/HowToFit workspaces
 
+Themes:
+- notebooks
+- hygiene
 Difficulty: small
 Autonomy: supervised
 Priority: low

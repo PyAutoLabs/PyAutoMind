@@ -1,6 +1,10 @@
 # Cluster-scale gradient-search benchmark (Prodigy vs Nautilus, point-source)
 
 Filed: 2026-07-31 (backfilled from git)
+Themes:
+- samplers
+- cluster
+- point-source
 
 > **ABSORBED 2026-07-31 (same day)** into
 > `draft/feature/autolens/point_source_defaults_campaign.md` (phase B, cluster tier, on

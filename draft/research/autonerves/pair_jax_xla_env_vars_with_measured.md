@@ -7,6 +7,9 @@ Repos:
 - autolens_workspace_test
 - PyAutoNerves
 - workspaces
+Themes:
+- jax-compile
+- profiling
 Difficulty: too-large
 Autonomy: supervised
 Priority: high

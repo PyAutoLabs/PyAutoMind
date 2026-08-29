@@ -4,6 +4,8 @@ Type: test
 Target: autolens_workspace
 Repos:
 - autolens_workspace
+Themes:
+- point-source
 Difficulty: medium
 Autonomy: human-required
 Priority: normal

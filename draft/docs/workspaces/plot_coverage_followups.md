@@ -1,6 +1,8 @@
 # plot coverage — follow-ups deferred from plot-coverage-gaps
 
 Filed: 2026-07-30 (backfilled from git)
+Themes:
+- visualization
 
 Four items deliberately scoped out of **plot-coverage-gaps**
 (PyAutoLens#667 / #668, autolens_workspace#404, autogalaxy_workspace#191).
