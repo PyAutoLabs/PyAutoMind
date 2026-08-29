@@ -155,7 +155,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cmap_magma_default.md">Colormap control: audit the cmap lever end-to-end and default the Euclid configs…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/509">issue #509</a> — issued 2026-08-28 — library-shipped, workspace-pending</summary>
+<details><summary>📋 <a href="active/cmap_magma_default.md">Colormap control: audit the cmap lever end-to-end and default the Euclid configs…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/509">issue #509</a> — issued 2026-08-28 — library-shipped, workspace-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/cmap_magma_default.md
