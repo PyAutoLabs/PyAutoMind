@@ -47,7 +47,8 @@
 - prompt: active/nautilus_serial_bound_training.md
 - issued: 2026-08-29
 - session: claude --resume ede55346-4e08-4851-b2b8-d9a21a49b776
-- status: library-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1548
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-serial-bound-training
 - classification: library (PyAutoFit only)
 - repos:
