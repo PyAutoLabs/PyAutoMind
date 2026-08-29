@@ -14,7 +14,7 @@ Status: formalised
 Blocked-by: a capped run of the script exiting 0 — see "The gate" below
 Filed: 2026-08-24
 
-The sibling of `draft/maintenance/workspaces/unpark_imaging_scaling_relation_slam.md`,
+The sibling of `complete/2026/08/unpark-imaging-scaling-relation-slam.md` (shipped 2026-08-29, autolens_workspace#513),
 for the entry at `config/build/no_run.yaml:48` that the sibling prompt explicitly
 told us *not* to unpark.
 
