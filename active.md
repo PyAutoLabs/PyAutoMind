@@ -13,19 +13,6 @@
   - PyAutoLens: feature/lenscalc-adaptive-hessian-step
 - next-skill: /ship_library
 
-## multi-galaxy-scaling-zero-intensity
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/518
-- prompt: active/multi_galaxy_scaling_relation_zero_intensity_under_smoke.md
-- issued: 2026-08-29
-- status: workspace-shipped, awaiting-merge (gate PASSED; park removed)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/519
-- worktree: ~/Code/PyAutoLabs-wt/multi-galaxy-scaling-zero-intensity
-- classification: workspace (autolens_workspace only; simulator geometry + slam guard; un-park on a passing gate)
-- heart-ack: YELLOW acknowledged 2026-08-29 — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source"
-- repos:
-  - autolens_workspace: feature/multi-galaxy-scaling-zero-intensity
-- next-skill: /prm
-
 ## fitness-log-likelihood-ceiling
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1543
 - prompt: active/fitness_log_likelihood_ceiling.md
