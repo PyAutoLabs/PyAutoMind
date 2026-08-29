@@ -43,7 +43,7 @@ counts as done. Nothing is broken — this is a sign-off, not a bug.
 4. **The ENV trade-off** — the guide is now `ENV: jax full_datasets`, so the nojax CI leg skips
    the whole guide. Acceptable?
 5. **The strict xfail** pins the Richardson-step defect
-   (`draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md`, in progress). Confirm
+   (`complete/2026/08/lenscalc-adaptive-hessian-step.md` — fixed in PyAutoGalaxy#593 and asserted in PyAutoLens#717, both merged 2026-08-29). Confirm
    you want it to XPASS-and-fail when the fix lands (forcing the pin's removal).
 
 Sign off by retiring this prompt (`scripts/lifecycle.py record …`); anything that does not pass

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1218 records across 7 buckets.
+1219 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -153,6 +153,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [latex-docstrings-invalid-escape-warnings](2026/08/latex-docstrings-invalid-escape-warnings.md)
 - [latex-raw-string-docstrings](2026/08/latex-raw-string-docstrings.md) — one issue, six PRs
 - [lazy-heavy-imports](2026/08/lazy-heavy-imports.md) — Deferred all heavy non-essential imports to first use. `import autolens` 4.07s → 1.2–1.3s
+- [lenscalc-adaptive-hessian-step](2026/08/lenscalc-adaptive-hessian-step.md) — CLOSED
 - [llms-txt-census-fixes](2026/08/llms-txt-census-fixes.md)
 - [local-pixel-scale-vs-dataset-pixel-scales](2026/08/local-pixel-scale-vs-dataset-pixel-scales.md)
 - [log-det-multistart-tag](2026/08/log-det-multistart-tag.md)

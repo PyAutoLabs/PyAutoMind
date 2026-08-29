@@ -37,5 +37,5 @@ will show agreement (~3e-4 vs the reference) and the prose will be wrong.
 
 Workspace scripts run against the released libraries in users' installs; the guide must not
 describe behaviour its readers cannot yet see. Un-gate when PyAutoHeart's release run for the
-version carrying #593 is published (see `complete/2026/08/lenscalc-adaptive-hessian-step.md` once
-recorded).
+version carrying #593 is published (see `complete/2026/08/lenscalc-adaptive-hessian-step.md`
+).
