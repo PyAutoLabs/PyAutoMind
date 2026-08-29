@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1222 records across 7 buckets.
+1223 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -210,6 +210,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [organ-remote-block-and-uv-hook-repair](2026/08/organ-remote-block-and-uv-hook-repair.md)
 - [organ-repo-spelling-splits](2026/08/organ-repo-spelling-splits.md) — closed on ship
 - [organism-board-final-readmes](2026/08/organism-board-final-readmes.md) — close on record
+- [overflow-flood-refs-smc-cell](2026/08/overflow-flood-refs-smc-cell.md)
 - [pages-dashboard-publish-gap](2026/08/pages-dashboard-publish-gap.md) — `dashboard_refresh.yml` dispatched the Pages publisher only from inside its
 - [paper-management-pipeline](2026/08/paper-management-pipeline.md) — auto-closed on merge
 - [per-parameter-step-scaling](2026/08/per-parameter-step-scaling.md)

@@ -1,3 +1,14 @@
+## overflow-flood-refs-smc-cell
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/196
+- completed: 2026-08-29
+- library-pr: autolens_profiling#197 (merged f284f246f -> main)
+- what shipped: (1) record corrections — 341908_5 made 90,000 Nautilus calls / 29 bounds / maxL 30,701.3 and was killed by a finite log_l overflow flood (up to 3e+303) from the λ⁴ Adapt coefficient, not a thrash (PROGRAMME ×3, targets/REFS_V1_HARVEST, DECISIONS +2 entries incl. the library stack boundary; knn ref −480 nat = same pathology); (2) `_setup._free_adapt_split(cap=1e4)` → `al.reg.AdaptSplitPower` with LogUniform(1e-6,1e4) coefficients for knn / slam_source_pix_nn / delaunay_adapt_split → 8 new target_ids (knn_fp64 ccafb8b191bc, slam_source_pix_nn_fp64 ad291b57fc62, …); legacy rows NOT restamped (they ran λ⁴ — the boundary is the point); (3) `PYTHONUNBUFFERED=1` in activate.sh SLURM block; (4) slogdet A/B submit `submit_search_nautilus_slogdet_ab_imaging_slam_source_pix_nn_a100_hst_fp64` via `build_ab_for_cell`; (5) SMC cell — `build_smc` (af.SMC) + `SAMPLER_BUILDERS`, leaf `scripts/imaging/searches/smc/mge.py`, `SEARCHES_SMC_*` README block, probe submit `submit_search_smc_imaging_mge_a100_hst_fp64_probe` (mala_warm, hmc_warm, mala_cold; warm = `prior_scaled` diagonal at the Prodigy MAP because the 16-sample source is below af.SMC's 2·n_dim=30 covariance floor — cannot test H6.1 anisotropy; Nautilus-sourced warm start owed), PROGRAMME Phase 7 in flight; (6) BONUS: `log_det_method` was absent from four of five sampler identifiers → a slogdet A/B would run once and report twice (RAL 340576's nested-path defect); shared `_samplers.log_det_arm_tag`, env-override-only so no recorded path moves (test-pinned).
+- validation: pytest 293 (+37); ruff/format; build_readme --check; check_submits --check 55/0; SMC leaf smoked in test mode; identifiers verified to change for refs 5/6/7 (no resume collision); lint CI green on both commits.
+- heart-ack: shipped + merged under human-authorised YELLOW ("prm", 2026-08-29) — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source". Unrelated.
+- next: HPCPullPyAuto (Fit b70cf7fc3 / Array 302d5df32 / Galaxy 2ee44d507 / Lens af514d179) then `sbatch --array=5,6,7 --requeue …refs_v1_array.sh`, `sbatch --requeue …slogdet_ab…slam_source_pix_nn…`, `sbatch --requeue …smc…probe` (~8 tasks, ~30 GPU-h); harvest = later session. Pre-existing: slam_source_pix_nn NaN at the PYAUTO_TEST_MODE=2 point (same on main).
+
+## Original prompt
+
 # Refs 5,6 unblock, overflow-flood record correction, slogdet A/B, SMC cell + A100 probe
 
 Type: feature
