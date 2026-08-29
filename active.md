@@ -46,10 +46,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/512
 - prompt: active/unpark_imaging_scaling_relation_slam.md
 - issued: 2026-08-29
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/513
 - worktree: ~/Code/PyAutoLabs-wt/ci-smoke-bundle-2
 - classification: workspace (autolens_workspace only)
+- heart-ack: YELLOW acknowledged 2026-08-29 — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source"
 - bundle: ci-smoke — bundle 2 (shared worktree; own branch, own PR)
 - repos:
   - autolens_workspace: feature/unpark-imaging-scaling-relation-slam
-- next-skill: /ship_workspace
+- next-skill: /prm
