@@ -162,7 +162,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/ci_test_mode_simulated_datasets_latents.md">TEST-mode CI over every Euclid example script, on committed simulated datasets…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/45">issue #45</a> — issued 2026-08-29 — workspace-dev</summary>
+<details><summary>📋 <a href="active/ci_test_mode_simulated_datasets_latents.md">TEST-mode CI over every Euclid example script, on committed simulated datasets…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/45">issue #45</a> — issued 2026-08-29 — awaiting-merge</summary>
 
 ```
 /start_dev active/ci_test_mode_simulated_datasets_latents.md
