@@ -60,7 +60,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1549
 - prompt: active/log_likelihood_ceiling_default_off.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1550
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/198
+- heart-yellow: NOT acknowledged by a human in this session — surfaced verbatim for sign-off before merge. `workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)`; stale: `release validation incomplete: no rehearsal for current source`. Both unrelated to this change; PR-open only, nothing merged.
 - worktree: ~/Code/PyAutoLabs-wt/log-likelihood-ceiling-default-off
 - classification: library (PyAutoFit) + config-only follow-up (autolens_profiling)
 - parallel-claim: PyAutoFit is also claimed by `nautilus-serial-bound-training` (awaiting-merge, PR #1548). File sets are disjoint - that branch touches only `nautilus/search.py` + its test; this one touches `fitness.py`, `nss/search.py`, the two `general.yaml` config files and the ceiling tests. Human-approved parallel worktree, own branch, own index.
