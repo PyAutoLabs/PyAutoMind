@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1213 records across 7 buckets.
+1214 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -321,6 +321,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [undo-community-file-declutter](2026/08/undo-community-file-declutter.md) — Undid the 2026-08-19 community-file declutter (#248 Mind, #32 Memory):
 - [uniform-prior-bounds-numpy-path](2026/08/uniform-prior-bounds-numpy-path.md) — auto-closed by the merge's `Closes` line
 - [unpark-imaging-scaling-relation-slam](2026/08/unpark-imaging-scaling-relation-slam.md) — CLOSED
+- [unpark-multi-galaxy-scaling-relation-slam](2026/08/unpark-multi-galaxy-scaling-relation-slam.md) — CLOSED
 - [untrack-fits-test-artifacts](2026/08/untrack-fits-test-artifacts.md)
 - [version-skew-yank-awareness](2026/08/version-skew-yank-awareness.md)
 - [version-stamp-sync-guards](2026/08/version-stamp-sync-guards.md) — closed by the 2026-08-19 reconcile sweep — see traps
