@@ -1,4 +1,4 @@
-# `*Linear` Adapt regularization: squared-once sibling classes
+# `AdaptPower` regularization: coefficient exponent as an input, factor-2 scatter fixed
 
 Type: feature
 Target: autoarray
@@ -20,7 +20,8 @@ Filed: 2026-08-29
 > do the 5 things above listed and make sure we have some SMC runs going soon
 
 (Rung 2 of the overflow-flood fix wave — see the approved plan "Overflow-flood
-fix wave + SMC on the A100", task A3.)
+fix wave + SMC on the A100", task A3, as amended 2026-08-29 by the human:
+"maximal changes, power as an input".)
 
 ## Why
 
@@ -40,38 +41,59 @@ non-positive-definite from `c ≈ 1e4` (vs `c ≈ 1e6` for `Constant`), fp64
 Cholesky returns finite garbage, and Nautilus accepted `log_l` up to 3e+303 —
 a likelihood-overflow flood that made a 6-hour GPU run never terminate.
 
+A second, independent asymmetry sits in the same builder: the non-split
+`Adapt` matrix scatters every edge **twice** (both `(i,j)` and `(j,i)` from
+each direction), so `Adapt(inner=outer=c)` is exactly `2 ×` `Constant(c)`,
+contradicting its own docstring's "numerically identical to
+`Constant(coefficient=1.0)`". Verified on main:
+`Adapt` diag `4.00000001` vs `Constant` diag `2.00000001` on a 4-connected
+3×3 mesh, ratio 2.0 on every entry. The split family does **not** carry this
+(it shares `pixel_splitted_regularization_matrix_from` with `ConstantSplit`).
+
 ## Human decisions (binding)
 
 - The existing `Adapt`, `AdaptSplit`, `AdaptSplitZeroth`, `MaternAdaptKernel`
-  classes stay **byte-for-byte**: identifiers, stored outputs and aggregator
-  reloads remain valid.
-- Corrected **siblings** are added instead: `AdaptLinear`, `AdaptSplitLinear`,
-  `AdaptSplitZerothLinear`, `MaternAdaptLinearKernel`. Distinct class paths give
+  classes and their util functions stay **byte-for-byte**: identifiers, stored
+  outputs and aggregator reloads remain valid.
+- Corrected **siblings** are added instead: `AdaptPower`, `AdaptSplitPower`,
+  `AdaptSplitZerothPower`, `MaternAdaptPowerKernel`. Distinct class paths give
   distinct `af.Model` identifiers for free.
-- The **factor-2 scatter asymmetry** (`Adapt(inner=outer=c)` is exactly 2×
-  `Constant(c)`, not equal to it) is **documented only** — filed separately as
-  `draft/bug/autoarray/adapt_scatter_factor_two.md`.
-- Making the linear classes the default is a separate, deferred, breaking
+- The new classes take **`power: float = 1.0`** as a constructor argument. The
+  effective coefficient exponent is `2 · power`, so the default `power=1.0`
+  gives the λ² convention shared with `Constant`, and `power=2.0` reproduces
+  the legacy λ⁴ classes exactly. `power` is declared
+  `type: Constant, value: 1.0` in the prior yamls so `af.Model` never samples
+  it.
+- The new classes **also fix the factor-2 scatter**: a new single-scatter
+  matrix builder beside `weighted_regularization_matrix_from` (numpy + JAX)
+  makes `AdaptPower(inner=outer=c)` equal `Constant(c)` exactly, and
+  `AdaptSplitPower(inner=outer=c)` equal `ConstantSplit(c)` exactly.
+- Making the power classes the default is a separate, deferred, breaking
   decision — filed as `draft/feature/autoarray/adapt_linear_default_flip.md`.
 
 ## Scope
 
 - `adapt.py`: `adapt_regularization_weights_from(..., power=2.0)` gains a
-  `power` keyword; default 2.0 keeps the existing numerics untouched.
-- New modules `adapt_linear.py`, `adapt_split_linear.py`,
-  `adapt_split_zeroth_linear.py`, `matern_adapt_linear_kernel.py`, each a thin
-  subclass overriding only `regularization_weights_from` to pass `power=1.0`.
+  `power` keyword; default 2.0 keeps the existing numerics untouched. New
+  `weighted_regularization_matrix_single_scatter_from` beside it (weighted
+  graph Laplacian with edge weight `0.5·(w_i² + w_j²)` — PSD, symmetric,
+  reduces to `Constant` exactly for uniform weights).
+- New modules `adapt_power.py`, `adapt_split_power.py`,
+  `adapt_split_zeroth_power.py`, `matern_adapt_power_kernel.py`.
 - Exports through `autoarray/inversion/regularization/__init__.py` → `aa.reg`
   → `ag.reg` / `al.reg`.
-- PyAutoGalaxy prior yamls (copies of the existing ones) + the PyAutoLens test
-  config mirror.
-- Tests: parity (`Linear(c)` == legacy(`sqrt(c)`)), unsquared weights,
-  numpy/JAX parity for the split path, `af.Model` identifier divergence,
-  one composition test each in PyAutoGalaxy and PyAutoLens.
+- PyAutoGalaxy prior yamls (copies of the existing ones plus the constant
+  `power`) + the PyAutoLens test config mirror.
+- Tests: `AdaptPower(inner=outer=c) == Constant(c)`,
+  `AdaptSplitPower(inner=outer=c) == ConstantSplit(c)`,
+  `power=2.0` reproduces the legacy classes, weights are unsquared at
+  `power=1.0`, numpy/JAX parity for both builders, `af.Model` identifier
+  divergence, one composition test each in PyAutoGalaxy and PyAutoLens.
 - Docs: docstrings on both old and new classes, `docs/api/pixelization.rst`
   autosummary entries in PyAutoGalaxy and PyAutoLens.
 
 ## Migration
 
-`c_new = c_old ** 2` — an `AdaptLinear` coefficient of `c` reproduces a legacy
-`Adapt` coefficient of `sqrt(c)` exactly.
+`c_new = c_old ** 2` — an `AdaptPower` coefficient of `c` reproduces a legacy
+`Adapt` coefficient of `sqrt(c)` (up to the factor-2 scatter, which the new
+class also removes; `AdaptPower(power=2.0)` is the byte-exact legacy path).
