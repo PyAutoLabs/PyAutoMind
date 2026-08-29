@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 4 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 144 |
+| [Backlog](#backlog) (`draft/`) | 143 |
 
 ## Start here
 
@@ -163,6 +163,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/finish_the_science_project_memory_propagation_au.md">Finish the science-project memory propagation: autofit_assistant sync and autocti_assistant birth-substitution gaps</a></summary>
+
+```
+/start_dev active/finish_the_science_project_memory_propagation_au.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/science_project_memory_a_fresh_chat_pointed.md">Science-project memory: a fresh chat pointed at a project folder resumes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/315">issue #315</a> — issued 2026-08-28 — pushed, pr-blocked (Heart RED)</summary>
 
 ```
@@ -263,7 +271,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**144** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**143** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -620,15 +628,132 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 20</summary>
+<summary><b>bug</b> — 15</summary>
 
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/finish_the_science_project_memory_propagation_au.md">Finish the science-project memory propagation: autofit_assistant sync and autocti_assistant birth-substitution gaps</a> — pyautobrain · medium · supervised · medium</summary>
+<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · supervised · high</summary>
 
 ```
-/start_dev draft/maintenance/pyautobrain/finish_the_science_project_memory_propagation_au.md
+/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
 ```
 
 </details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
+
+```
+/start_dev draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move is unattributed</a> — workspaces · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a> — health_fixes · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/health_fixes/release_timeout_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/z_features.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS solve…</a> — autoarray · medium · human-required · low</summary>
+
+```
+/start_dev draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — pyautolens · medium · supervised · low</summary>
+
+```
+/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>maintenance</b> — 19</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · supervised · normal</summary>
 
@@ -778,131 +903,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>bug</b> — 15</summary>
-
-<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md">LensCalc NumPy Hessian step is too coarse for multi-plane tracers</a> — autogalaxy · large · supervised · high</summary>
-
-```
-/start_dev draft/bug/autogalaxy/lenscalc_numpy_hessian_step_is_too_coarse.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md">PROBE: is Adapt's 4th-power coefficient dependence (double square) intentional?</a> — autoarray · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autoarray/PROBE_adapt_double_square_coefficient.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move is unattributed</a> — workspaces · medium · supervised · normal</summary>
-
-```
-/start_dev draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/release_timeout_policy.md">Resolve release-profile timeout scripts deliberately</a> — health_fixes · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/health_fixes/release_timeout_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/14_replace_transform_stack_with_bijectors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/priors/z_features.md">Priors &amp; Messages cleanup — tracker</a> — priors · too-large · supervised · normal</summary>
-
-```
-/start_dev draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS solve…</a> — autoarray · medium · human-required · low</summary>
-
-```
-/start_dev draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — pyautolens · medium · supervised · low</summary>
-
-```
-/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
 ```
 
 </details>

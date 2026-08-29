@@ -11,6 +11,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Folded-into: PyAutoBrain#315
 
 # Finish the science-project memory propagation: autofit_assistant sync and autocti_assistant birth-substitution gaps
 

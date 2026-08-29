@@ -3,16 +3,19 @@
 ## science-project-memory
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/315
 - prompt: active/science_project_memory_a_fresh_chat_pointed.md
+- follow-up-prompt: active/finish_the_science_project_memory_propagation_au.md (folded in,
+  not a separate issue — `Folded-into: PyAutoBrain#315`)
 - issued: 2026-08-28
 - status: pushed, pr-blocked (Heart RED)
 - worktree: ~/Code/PyAutoLabs-wt/science-project-memory
-- classification: library (three independent assistant/organ repos; no workspace follow-up)
+- classification: library (four independent assistant/organ repos; no workspace follow-up)
 - repos:
-  - PyAutoBrain: feature/science-project-memory (55e9fd4)
+  - PyAutoBrain: feature/science-project-memory (d2b1af9)
   - autolens_assistant: feature/science-project-memory (6b7c5c4)
-  - autocti_assistant: feature/science-project-memory (523015b)
+  - autocti_assistant: feature/science-project-memory (df8408d)
   - autogalaxy_assistant: feature/science-project-memory (7964ff7)
-- next-skill: open the four PRs once Heart is GREEN (or under a human-authorized corrective
+  - autofit_assistant: feature/science-project-memory (1bc7675)
+- next-skill: open the five PRs once Heart is GREEN (or under a human-authorized corrective
   exception naming the RED reason) — all branches are pushed and the work is complete
 - heart-red-at-ship: "release validation FAILED (stage integrate)" — verbatim from
   `pyauto-heart readiness --json` at 2026-08-28T21:34:42Z; not caused by this task (markdown
@@ -21,9 +24,21 @@
   Phase 2 autolens_assistant (the reference copy, deliverables A-D), Phase 3 propagated to
   autocti_assistant + autogalaxy_assistant via the new sync with the rejected hunks
   hand-resolved (autocti's orphan state.md reconciled into the template, not deleted).
-  autofit_assistant is dry-run only (diverged 193/221/56/101 lines across the four generic
-  files) — its report is on the issue for a human. euclid_assistant was OUT OF SCOPE and
-  never opened. Supporting commit already on Mind main: 2b764e48 (tenant-firewall allowlist).
+  euclid_assistant was OUT OF SCOPE and never opened. Supporting commit already on Mind
+  main: 2b764e48 (tenant-firewall allowlist).
+- follow-up-folded-in (2026-08-28): the maintenance follow-up is part of THIS task, not a new
+  issue. Leg B — the clone conductor's rename table is now one shared `name_substitutions()`
+  for birth and sync, carrying the UPPERCASE package rule birth omitted plus `DOMAIN_NOUNS` /
+  `DOMAIN_ALIASES` (the science's own noun; `microlensing` and `lensing-fluent` survive the
+  anchor); unknown target science = no domain rule + a warning, never a guess. Brain suite
+  627 -> 634 (clone-sync tests 9 -> 16). autocti_assistant re-synced: both birth gaps closed
+  from the conductor's own substitution output, its profile examples hand-adapted, and its
+  stale `.claude/skills/start-new-project.md` copy restored as the symlink every sibling has.
+  autogalaxy carries neither gap. Leg A — autofit_assistant synced (`--since ee306ac`), all
+  four rejected files hand-resolved keeping its domain adaptation and layering on #315's
+  structure; 56 tests pass, boundary complete. Reported not-fixed: autocti's lensing *example
+  strings* (slacs_subhalo, the SLaM run row, README filename examples) and three more
+  `.claude/skills/` real-file copies — human domain adaptation, not substitutions.
 
 ## anonymise-wfc3-ir-hole-regression-target
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/73
