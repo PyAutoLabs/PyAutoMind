@@ -54,12 +54,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/511
 - prompt: active/adapt_linear_regularization.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/adapt-linear-regularization
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/512
+- downstream-prs: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/592, https://github.com/PyAutoLabs/PyAutoLens/pull/716 (library-first: merge PyAutoArray#512 before these; their CI checks out the PyAutoArray main and stays red on AdaptPower until it merges)
+- heart-ack: YELLOW carried from the same reason set the human acknowledged 2026-08-29 — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source" 
 - classification: library (PyAutoArray classes/util/tests; PyAutoGalaxy + PyAutoLens prior configs, docs, composition tests)
 - parallel-claim: PyAutoGalaxy + PyAutoLens are also claimed by 'lenscalc-adaptive-hessian-step'. File sets are disjoint (lenscalc: autogalaxy/operate/lens_calc.py, test_autogalaxy/operate/test_deflections.py, test_autolens/lens/test_multi_plane_cross_validation.py; this task: config/priors/regularization/*.yaml, docs/api/pixelization.rst, new inversion tests). Own worktree + own branch taken deliberately, not a fold.
 - repos:
   - PyAutoArray: feature/adapt-linear-regularization
   - PyAutoGalaxy: feature/adapt-linear-regularization
   - PyAutoLens: feature/adapt-linear-regularization
-- next-skill: /start_library
+- next-skill: /prm (merge library-first, do NOT merge without the human)
