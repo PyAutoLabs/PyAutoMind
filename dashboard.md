@@ -45,7 +45,7 @@ anything you could not verify.
 | [In flight](#in-flight) (`active/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 134 |
+| [Backlog](#backlog) (`draft/`) | 135 |
 
 ## Start here
 
@@ -255,7 +255,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**134** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **25** of them belong to an epic and are listed only under [Epics](#epics) below.
+**135** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -1785,6 +1785,19 @@ Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. 
 
 </details>
 
+<details>
+<summary><b>euclid-dr1-prep</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/euclid/euclid_dr1_prep_epic.md">Euclid DR1 preparation — 15k-lens modelling prep…</a> — euclid · too-large · supervised · high</summary>
+
+```
+/start_dev draft/feature/euclid/euclid_dr1_prep_epic.md
+```
+
+</details>
+
+</details>
+
 ## Hygiene
 
 3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -1798,12 +1811,13 @@ Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. 
 
 </details>
 
-1 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+2 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autolens_workspace/witt_wynne_projection.md — unknown theme keyword(s): euclid, guides`
+- `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 
 </details>
 
