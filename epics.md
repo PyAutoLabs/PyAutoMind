@@ -73,3 +73,14 @@ epic, never picked standalone.
   NOTE the "restore the deleted numba fnnls" idea is RETIRED (#151 comment 5) — do not re-file it.
   Measurement prerequisite for every phase: draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md.
   One issue at a time, never a bulk queue.
+
+## euclid-dr1-prep
+- title: Euclid DR1 preparation — 15k-lens modelling prep
+- ledger: draft/feature/euclid/euclid_dr1_prep_epic.md
+- notes: 10 phased prompts under draft/ (0, 1, 2, 3, 4, 5, 6a, 6b, 6c, 7) — issue ONE at a
+  time as predecessors near shipping, no bulk issue queues. Phases 4-6b are science runs
+  on RAL (HPC, human-driven, supervised) whose deliverable is a result and a written
+  verdict, not a merged PR; never route them to an autonomous ship gate. Phase 6c is a
+  PyAutoArray source audit that may spawn a separate bug prompt and can run alongside 6b.
+  Phase 7's retroactive-update leg is explicitly allowed to conclude "no elegant solution
+  — don't build it". Source of truth for all drift is /mnt/c/Users/Jammy/Science/euclid.
