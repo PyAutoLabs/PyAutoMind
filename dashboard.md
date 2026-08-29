@@ -186,7 +186,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fitness_log_likelihood_ceiling.md">Fitness: reject implausibly large finite log-likelihoods</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1543">issue #1543</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/fitness_log_likelihood_ceiling.md">Fitness: reject implausibly large finite log-likelihoods</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1543">issue #1543</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/fitness_log_likelihood_ceiling.md
