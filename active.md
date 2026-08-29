@@ -57,10 +57,19 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/509
 - prompt: active/cmap_magma_default.md
 - issued: 2026-08-28
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/cmap-magma-default
 - classification: combined (library first, then the Euclid pipeline workspace)
 - epic: euclid-dr1-prep (phase 0 of 10; gates nothing, gated by nothing)
 - repos:
   - PyAutoArray: feature/cmap-magma-default
   - euclid_strong_lens_modeling_pipeline: feature/cmap-magma-default
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/510
+- commit: c8fe47f35e37f4ea8a51303ece0ab5f708def460
+- tests: 1337 passed, 0 failed (test_autoarray, 2026-08-28)
+- heart-ack: Heart RED at ship time for an unrelated reason, verbatim: "release validation
+  FAILED (stage integrate)". YELLOW, also unrelated, verbatim: "workspace validation not
+  passing (2 failed, cloud#33179766004: autolens_test scripts/imaging/rectangular_mge.py,
+  autolens_test scripts/imaging/rectangular_mge_rtu.py)"; "manifest drift: session-start hooks
+  (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml". PR opened under the standing human
+  authorisation recorded 2026-08-28 ("open prs under red and merge i acknowledge"); NOT merged.
