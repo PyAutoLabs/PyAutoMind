@@ -30,12 +30,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1543
 - prompt: active/fitness_log_likelihood_ceiling.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/fitness-log-likelihood-ceiling
 - classification: library (PyAutoFit only; Fitness magnitude guard + NSS closure, wave A1)
+- heart-ack: YELLOW acknowledged 2026-08-29 — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source"
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1545
 - repos:
   - PyAutoFit: feature/fitness-log-likelihood-ceiling
-- next-skill: /ship_library
+- next-skill: /prm (library-shipped, awaiting-merge)
 
 ## blackjax-smc-search
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1544
