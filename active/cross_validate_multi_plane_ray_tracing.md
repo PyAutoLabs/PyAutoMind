@@ -14,6 +14,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Model: Fable (research-grade — paper reading + derivation + narrative guide prose)
+Issued: 2026-08-29
 Filed: 2026-08-27
 
 Single-plane lensing quantities in this stack are cross-validated two independent ways.

@@ -12,6 +12,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised — ready to start (upstream gate cleared 2026-08-03)
 Was-blocked-by: PyAutoArray#431   # small-datasets loader fix — cleared, see below
+Issued: 2026-08-29
 Filed: 2026-08-03 (backfilled from git)
 
 **Ready to start.** This prompt was filed as a gated task and its gate is long

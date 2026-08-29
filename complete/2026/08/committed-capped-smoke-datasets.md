@@ -1,3 +1,10 @@
+- issue: none — retired as obsolete without an issue or PR
+- completed: 2026-08-29
+- repos: autolens_workspace (no change)
+- summary: Prompt (filed 2026-07-22) described four capped 15x15 smoke datasets (`dataset/imaging/{double_einstein_ring,mass_stellar_dark,extra_and_scaling_galaxies}`, `dataset/group/scaling_relation` + group variants) committed as if real. Verified 2026-08-29 against `autolens_workspace` main (`8ed2af05`, `fb5d8e2d` release tag): `git ls-files` tracks nothing under any of those folders, `dataset/.gitignore` is a bare `*` / `!.gitignore`, the folders are empty on disk, and `git log --all --name-status` over those paths returns nothing on any branch or stash — the only relevant history is `b5db285e` "chore: untrack gitignored dataset/ files" (2026-04-18), which predates the prompt. The related loader mislabel was fixed separately by PyAutoArray#431 (`complete/2026/08/small-datasets-loader-pixel-scales.md`). Nothing to regenerate or remove; retired from the ci-smoke — bundle 2 membership as already resolved.
+
+## Original prompt
+
 # Capped smoke datasets were committed as if they were real
 
 Type: maintenance

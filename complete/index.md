@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1209 records across 7 buckets.
+1210 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -60,6 +60,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [clipper-usage-in-search-summary](2026/08/clipper-usage-in-search-summary.md) — `search.summary` now reports prior-support clipping. `n_clipped_lane_steps`
 - [clipper-validation-campaign](2026/08/clipper-validation-campaign.md)
 - [cmap-magma-default](2026/08/cmap-magma-default.md)
+- [committed-capped-smoke-datasets](2026/08/committed-capped-smoke-datasets.md) — Prompt (filed 2026-07-22) described four capped 15x15 smoke datasets (`dataset/imaging/{double_einstein_ring,m…
 - [compile-axis-campaign-coverage](2026/08/compile-axis-campaign-coverage.md)
 - [compile-axis-triage-drift](2026/08/compile-axis-triage-drift.md)
 - [compile-warm-baseline-dashboard](2026/08/compile-warm-baseline-dashboard.md)

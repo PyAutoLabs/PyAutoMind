@@ -24,3 +24,28 @@
 - repos:
   - autolens_profiling: feature/harvest-0829-phase8b-final
 - next-skill: /ship_library
+
+## multi-plane-cross-validation
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/714
+- prompt: active/cross_validate_multi_plane_ray_tracing.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ci-smoke-bundle-2
+- classification: library (phase 1 — PyAutoLens test module; phase 2 workspace guide filed as a follow-up prompt)
+- bundle: ci-smoke — bundle 2 (shared worktree; own branch, own PR)
+- repos:
+  - PyAutoLens: feature/multi-plane-cross-validation
+  - PyAutoGalaxy: feature/ci-smoke-bundle-2 (claimed, no edits expected)
+- next-skill: /ship_library
+
+## unpark-imaging-scaling-relation-slam
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/512
+- prompt: active/unpark_imaging_scaling_relation_slam.md
+- issued: 2026-08-29
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/ci-smoke-bundle-2
+- classification: workspace (autolens_workspace only)
+- bundle: ci-smoke — bundle 2 (shared worktree; own branch, own PR)
+- repos:
+  - autolens_workspace: feature/unpark-imaging-scaling-relation-slam
+- next-skill: /ship_workspace
