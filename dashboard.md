@@ -155,7 +155,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/515">issue #515</a> — issued 2026-08-29 — workspace-dev (queued behind unpark-multi-galaxy-scaling-relation-slam in the same worktree)</summary>
+<details><summary>📋 <a href="active/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/515">issue #515</a> — issued 2026-08-29 — workspace-dev</summary>
 
 ```
 /start_dev active/multi_plane_cross_validation_guide.md
@@ -171,7 +171,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run passes</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/514">issue #514</a> — issued 2026-08-29 — workspace-dev</summary>
+<details><summary>📋 <a href="active/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run passes</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/514">issue #514</a> — issued 2026-08-29 — workspace-shipped, awaiting-merge (gate FAILED — park kept, reason rewritten; third cause filed as…</summary>
 
 ```
 /start_dev active/unpark_multi_galaxy_scaling_relation_slam.md
