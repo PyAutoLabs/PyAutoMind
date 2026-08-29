@@ -12,3 +12,15 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-parity
 - next-skill: /ship_workspace (stages A+B → C → D → E in flight)
+
+## harvest-0829-phase8b-final
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/194
+- prompt: active/harvest_0829_phase8b_final_verdict.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/harvest-0829-phase8b-final
+- classification: library (autolens_profiling only — results, ledger notes, wall rates, submit exit-code guard)
+- epic: jax-inference-profiling
+- repos:
+  - autolens_profiling: feature/harvest-0829-phase8b-final
+- next-skill: /ship_library
