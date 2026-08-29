@@ -202,7 +202,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/session_hook_reaches_only_four_of_thirty_four_repos.md">The SessionStart hook is generated into 34 repos and current in 4</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/369">issue #369</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/session_hook_reaches_only_four_of_thirty_four_repos.md">The SessionStart hook is generated into 34 repos and current in 4</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/369">issue #369</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/session_hook_reaches_only_four_of_thirty_four_repos.md
