@@ -37,9 +37,10 @@
 
 ## repos-sync-config-checks
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/370
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/373
 - prompt: active/repos-sync-config-stamper.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/mind-workflow
 - repos:
   - PyAutoMind: feature/repos-sync-config-checks
