@@ -1,3 +1,15 @@
+## science-project-memory-followup
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/315 (folded in — never opened as its own issue; the prompt carried `Folded-into: PyAutoBrain#315`)
+- completed: 2026-08-29
+- library-pr: PyAutoBrain#316 (merged 8f5f769 -> main), autofit_assistant#31 (merged d5df11f -> main), autocti_assistant#27 (merged 0242d7b -> main)
+- parent record: `complete/2026/08/science-project-memory.md`
+- what shipped: Leg (a) — autofit_assistant, which #315 deliberately stopped at a dry run for (1 hunk applied, 2 created, 4 rejected across `AGENTS.md`, `skills/start-new-project.md`, `wiki/project/README.md`, `wiki/project/_profile_template.md`; name-normalised divergence 193 / 221 / 56 / 101 lines). The human decision was taken file by file: its fitting/inference domain adaptation is deliberate and was preserved, with #315's structure layered on top. Synced `--since ee306ac`, all four rejected files hand-resolved; 56 tests pass, boundary complete. Leg (b) — the two autocti_assistant birth-time substitution gaps (the "Lensing background" heading in `_profile_template.md`, the `$AUTOLENS_ASSISTANT` variable in the scaffold) fixed **at source** in the clone conductor's substitution rules, not by hand-editing the cell: birth and sync now share one `name_substitutions()` carrying the UPPERCASE package rule that birth omitted, plus `DOMAIN_NOUNS` / `DOMAIN_ALIASES` (the science's own noun — `microlensing` and `lensing-fluent` survive the anchor); an unknown target science gets no domain rule and a warning, never a guess. autocti_assistant re-synced so the corrected substitutions land there, and its stale `.claude/skills/start-new-project.md` real-file copy restored as the symlink every sibling has. autogalaxy_assistant carries neither gap.
+- validation: PyAutoBrain suite 627 -> 634 passed; clone-sync tests 9 -> 16.
+- reported not-fixed: autocti_assistant's lensing *example strings* (slacs_subhalo, the SLaM run row, README filename examples) and three more `.claude/skills/` real-file copies — human domain adaptation, not substitutions.
+- lifecycle note: recorded as folded into #315 rather than re-filed as a separate task, per the close-out decision on the issue.
+
+## Original prompt
+
 # Finish the science-project memory propagation: autofit_assistant sync and autocti_assistant birth-substitution gaps
 
 Type: maintenance

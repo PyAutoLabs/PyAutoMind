@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1204 records across 7 buckets.
+1206 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -274,6 +274,8 @@ _(curate hard-won records here — survives regeneration.)_
 - [review-claim-dispositions](2026/08/review-claim-dispositions.md)
 - [samplers-surface-autolens-tiers](2026/08/samplers-surface-autolens-tiers.md) — the samplers faculty's SamplerSurface now scans the findings
 - [save-json-numpy-scalar-typeerror](2026/08/save-json-numpy-scalar-typeerror.md) — Adds `NumpyEncoder` in `autofit/tools/util.py` (`np.ndarray` ->
+- [science-project-memory](2026/08/science-project-memory.md)
+- [science-project-memory-followup](2026/08/science-project-memory-followup.md)
 - [script-size-guard-git-based](2026/08/script-size-guard-git-based.md) — replaced the rotting `.script_sizes.json` snapshot with a git-diff truncation
 - [script-timing-baselines-fix](2026/08/script-timing-baselines-fix.md)
 - [script-title-underline-off-by-one](2026/08/script-title-underline-off-by-one.md)
