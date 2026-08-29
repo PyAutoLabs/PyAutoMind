@@ -36,7 +36,6 @@
   - PyAutoFit: feature/fitness-log-likelihood-ceiling
 - next-skill: /ship_library
 
-
 ## blackjax-smc-search
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1544
 - prompt: active/blackjax_smc_search.md
@@ -47,6 +46,7 @@
 - repos:
   - PyAutoFit: feature/blackjax-smc-search
 - next-skill: /ship_library
+
 ## euclid-ci-test-mode
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/45
 - prompt: active/ci_test_mode_simulated_datasets_latents.md
