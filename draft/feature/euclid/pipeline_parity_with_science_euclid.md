@@ -71,8 +71,8 @@ bug fixes from the real DR1 runs. The exception the user names explicitly:
 | Pixelized Sersic variants | `sersic_lens_model_pix.py`, `sersic_lens_model_pix_waveband.py`, `multi_lens_model_pix_waveband.py` | **ABSENT** | decide: port, or fold into the above as options |
 | Galaxy-only Sersic | `scripts/galaxy_sersic_model.py` | **ABSENT** | decide |
 | Latent diagnostics | `diagnose_latent.py`, `diagnose_latent_vis_pix.py` | **ABSENT** | port — phase 2 needs these |
-| Full SLaM | — | `scripts/full_model.py` | keep; see the Delaunay question below |
-| MGE lens only | — | `scripts/mge_lens_only.py` | keep or justify |
+| Full SLaM | — | `scripts/full_model.py` | keep; switch to Delaunay per user decision below |
+| MGE lens only | — | `scripts/mge_lens_only.py` | keep (user decision) |
 
 Also absent from the pipeline repo but present in the science tree:
 `build_inspect.py`, `build_inspection_bundle.sh`, `audit_sed_outputs.py`,
@@ -118,23 +118,24 @@ The pipeline repo currently has **no `catalogue/` tree at all**.
 Do not bulk-copy all 27 — port the ones on the pairing path, plus whatever a user needs
 to reproduce the bundle, and say explicitly which were deliberately left out and why.
 
-## The Delaunay question — put this to the user before changing meshes
+## User decisions (2026-08-28, recorded verbatim-ish — these override the survey's open questions)
 
-The request says `full_model.py` should "use Delaunay and mirror the Delaunay SLaM on
-the autolens_workspace". Two facts contradict the premise:
-
-- `euclid_strong_lens_modeling_pipeline/scripts/full_model.py` currently uses
-  `RectangularAdaptImage` / adaptive-rectangular meshes (see its SOURCE PIX docstrings
-  and `mesh_pixels_yx = 28`), not Delaunay.
-- `autolens_workspace/scripts/guides/modeling/slam_start_here.py` — the canonical
-  workspace SLaM — uses `RectangularBilinearAdaptDensity` (init, line ~611) and
-  `RectangularBilinearAdaptImage` (main, line ~620). **There is no Delaunay SLaM in
-  autolens_workspace to mirror.**
-
-So: ask the user whether they want (a) `full_model.py` switched to Delaunay meshes, (b)
-`full_model.py` brought into line with the workspace's *rectangular* SLaM as it actually
-exists, or (c) a Delaunay SLaM authored in autolens_workspace first. Do not guess.
-Note that the rectangular default was itself a deliberate decision (PyAutoArray#153).
+- **Delaunay:** "delaunay slam is part of delaunay.py on workspace". The Delaunay
+  configuration to mirror is `autolens_workspace/scripts/imaging/features/pixelization/delaunay.py`
+  (image mesh + Delaunay mesh + its regularization/interpolation choices). `full_model.py`
+  switches to Delaunay meshes matching that script in *what it fits*, while keeping the
+  Euclid-specific setup (bands, latents, PSF handling) it already has. Do not ask again.
+- **Port scope is conservative:** "large drift expected and lots won't carry over — reduce
+  down to what's needed to make results". Port only the scripts on the critical path to the
+  catalogue results (initial → sersic → waveband → sersic_waveband, util.py latents/WORST_PSF
+  machinery, the catalogue/scripts that produce the reference tile's 13 files, and the
+  latent diagnostics phase 2 needs). Do **not** port the `_pix` variants, `galaxy_sersic_model.py`,
+  or the operational one-offs (`build_inspect.py`, `audit_*`, `reorganize_normies.py`) —
+  leave a short "not ported, available in Science/euclid" note in the docs instead.
+  More can be added later.
+- **`mge_lens_only.py`:** keep it in the pipeline repo ("include mge lens only").
+- **Assistant routing (phase 4):** use the existing `euclid_*` skill family as-is, "with
+  euclid stuff included" — no new `euclid_mode` is to be built.
 
 ## Deliverables
 
@@ -151,5 +152,5 @@ Note that the rectangular default was itself a deliberate decision (PyAutoArray#
 - A reader of the pipeline repo alone can run the full DR1 analysis chain end to end.
 - For each of the 13 reference-tile files, a named script in the pipeline repo produces
   it, and that mapping is written down.
-- The Delaunay question has an explicit user decision recorded, not an assumption.
+- `full_model.py` fits what `imaging/features/pixelization/delaunay.py` fits (user decision above).
 - Gates phases 2, 3 and 4.
