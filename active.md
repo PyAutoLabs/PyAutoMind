@@ -17,13 +17,17 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/194
 - prompt: active/harvest_0829_phase8b_final_verdict.md
 - issued: 2026-08-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/harvest-0829-phase8b-final
 - classification: library (autolens_profiling only — results, ledger notes, wall rates, submit exit-code guard)
 - epic: jax-inference-profiling
 - repos:
   - autolens_profiling: feature/harvest-0829-phase8b-final
-- next-skill: /ship_library
+- library-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/195
+- commit: 45c3abd
+- workspace-impact: none — autolens_profiling exports no API and no library source changed; the only executable edits are wall/rates.py (additive table row), one SLURM submit header, and a SLURM-scoped guard in activate.sh
+- heart: YELLOW at ship time, acknowledgement OUTSTANDING — reasons are release-chain and in other repos ("workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)", "release validation incomplete: no rehearsal for current source"); surfaced verbatim in the PR body for the human to answer before merge
+- next-skill: /prm (merge stays human)
 
 ## multi-plane-cross-validation
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/714
