@@ -64,6 +64,8 @@
 - status: library-shipped, awaiting-merge
 - pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1550
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/198
+- ci: both GREEN — PyAutoFit#1550 docs-build + unittest 3.12 + 3.13 + unittest-nojax all pass; autolens_profiling#198 lint pass
+- next-skill: /prm (both PRs green and awaiting the human's merge; Heart YELLOW below is unacknowledged)
 - heart-yellow: NOT acknowledged by a human in this session — surfaced verbatim for sign-off before merge. `workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)`; stale: `release validation incomplete: no rehearsal for current source`. Both unrelated to this change; PR-open only, nothing merged.
 - worktree: ~/Code/PyAutoLabs-wt/log-likelihood-ceiling-default-off
 - classification: library (PyAutoFit) + config-only follow-up (autolens_profiling)
