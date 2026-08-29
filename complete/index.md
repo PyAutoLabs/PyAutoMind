@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1202 records across 7 buckets.
+1203 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -191,6 +191,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [numba-kernel-shift-axes](2026/08/numba-kernel-shift-axes.md) — issued 2026-08-24, auto-closed by the merge
 - [numerical-hazard-profiling](2026/08/numerical-hazard-profiling.md) — Phase 1 established the reusable numerical-hazard profiling framework, typed risk measurements, reachability a…
 - [numerical-inversion-failures](2026/08/numerical-inversion-failures.md)
+- [nuts-warm-start-driver-and-a100-probe](2026/08/nuts-warm-start-driver-and-a100-probe.md)
 - [one-tap-dashboard-rollout](2026/08/one-tap-dashboard-rollout.md) — the pattern (a generated page + one-tap 📋 copy-for-Claude payloads, phone
 - [optimisation-state-limit-guard-truthiness](2026/08/optimisation-state-limit-guard-truthiness.md) — closed by the PR's `Closes` line
 - [optional-dependency-skip-guards](2026/08/optional-dependency-skip-guards.md) — `test_nautilus.py::test__single_core_builds_no_pool` had no skip guard
