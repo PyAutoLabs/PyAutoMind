@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 143 |
+| [Backlog](#backlog) (`draft/`) | 144 |
 
 ## Start here
 
@@ -161,14 +161,6 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cmap_magma_default.md">Colormap control: audit the cmap lever end-to-end and default the Euclid configs…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/509">issue #509</a> — issued 2026-08-28 — library-shipped, workspace-shipped, awaiting-merge</summary>
-
-```
-/start_dev active/cmap_magma_default.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/witt_wynne_projection.md">Witt–Wynne projection of PyAutoLens models for lensed-SN corroboration</a> — issued 2026-08-28</summary>
 
 ```
@@ -261,7 +253,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**143** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**144** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -1009,7 +1001,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>test</b> — 6</summary>
+<summary><b>test</b> — 7</summary>
 
 <details><summary>📋 <a href="draft/test/autolens/cross_validate_multi_plane_ray_tracing.md">Cross-validate multi-plane ray tracing</a> — autolens · large · supervised · high</summary>
 
@@ -1031,6 +1023,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example review</a> — autolens_workspace · medium · human-required · normal</summary>
+
+```
+/start_dev draft/test/autolens_workspace/witt_wynne_tests_and_review.md
 ```
 
 </details>
@@ -1439,9 +1439,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-08-28 | issued | <a href="active/witt_wynne_projection.md">Witt–Wynne projection of PyAutoLens models for lensed-SN corroboration</a> |
+| 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
-| 2026-08-28 | issued | <a href="active/cmap_magma_default.md">Colormap control: audit the cmap lever end-to-end and default the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/organs/session_hook_reaches_only_four_of_thirty_four_repos.md">The SessionStart hook is generated into 34 repos and current in 4</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |

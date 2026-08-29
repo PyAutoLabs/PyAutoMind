@@ -179,9 +179,10 @@ Read-only survey done while filing, so each phase prompt cites real paths:
 
 ## Phases (order is load-bearing)
 
-0. `active/cmap_magma_default.md` — colormap lever audit + magma
-   defaults in the Euclid configs. Independent; can start immediately.
-   **In flight 2026-08-28** — issue PyAutoArray#509; PRs open, awaiting merge.
+0. `complete/2026/08/cmap-magma-default.md` — colormap lever audit + magma
+   defaults in the Euclid configs. Independent; gated nothing.
+   **SHIPPED 2026-08-28** — issue PyAutoArray#509 (closed); PyAutoArray#510 and
+   euclid_strong_lens_modeling_pipeline#42 both merged.
 1. `draft/feature/euclid/pipeline_parity_with_science_euclid.md` — port the DR1 analysis
    from `Science/euclid` into the pipeline repo (scripts, `util.py`, `catalogue/scripts`,
    parameterization, docs). Drift rule: `Science/euclid` wins. Blocks 2-4.
