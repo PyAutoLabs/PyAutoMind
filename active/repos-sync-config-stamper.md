@@ -8,6 +8,7 @@ Difficulty: hard
 Autonomy: supervised
 Priority: low
 Filed: 2026-08-17 (backfilled from git)
+Issued: 2026-08-29
 
 The design's own endgame for tenant-firewall drift, specified in
 `docs/pyautobrain/pyautoscientist_generalisation_assessment.md` §8-4 and

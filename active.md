@@ -14,3 +14,30 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-ci-test-mode
 - next-skill: /prm (wait for PR #46 CI — Smoke Tests + Tests unit/slow, the repo's first runs)
+
+## complete-archive-highlights
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/368
+- prompt: active/complete_archive_wiki.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mind-workflow
+- repos:
+  - PyAutoMind: feature/complete-archive-highlights
+
+## session-hook-long-tail
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/369
+- prompt: active/session_hook_reaches_only_four_of_thirty_four_repos.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mind-workflow
+- repos:
+  - PyAutoMind: feature/session-hook-long-tail
+
+## repos-sync-config-checks
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/370
+- prompt: active/repos-sync-config-stamper.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mind-workflow
+- repos:
+  - PyAutoMind: feature/repos-sync-config-checks

@@ -11,6 +11,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-08-27
+Issued: 2026-08-29
 
 `repos_sync.py --write` installs `.claude/hooks/session-start.sh` into **every**
 checked-out repo in the manifest, not just the organs — `write_session_hooks`

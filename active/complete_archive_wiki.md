@@ -12,6 +12,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-07-13 (backfilled from git)
+Issued: 2026-08-29
 
 ## Depends on
 
