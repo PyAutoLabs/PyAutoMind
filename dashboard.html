@@ -222,7 +222,7 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>1</b><span>In flight</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>141</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>3</b><span>In flight</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>139</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-08-29.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -269,7 +269,9 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <p class="muted">(none right now)</p>
 <h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
+<div class="task"><button class="copy" data-cmd="/start_dev active/multi_plane_cross_validation_guide.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/515">issue #515</a><span class="facets"> — issued 2026-08-29</span> — <span class="facets">workspace-dev (queued behind unpark-multi-galaxy-scaling-relation-slam in the same worktree)</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/pipeline_parity_with_science_euclid.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/pipeline_parity_with_science_euclid.md">Pipeline parity: port the DR1 analysis from Science/euclid into euclid_strong_lens_modeling_pipeline</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/43">issue #43</a><span class="facets"> — issued 2026-08-29</span> — <span class="facets">awaiting-merge</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/unpark_multi_galaxy_scaling_relation_slam.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run passes</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/514">issue #514</a><span class="facets"> — issued 2026-08-29</span> — <span class="facets">workspace-dev</span></p></div>
 <h2>Parked <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md">markdown version</a></h2>
 <details>
 <summary>3 task(s)</summary>
@@ -287,7 +289,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
 </details>
 <h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
-<p class="muted">141 filed prompts, not started — sorted most-pickable first (priority, then size). 34 of them belong to an epic and are listed only under Epics below.</p>
+<p class="muted">139 filed prompts, not started — sorted most-pickable first (priority, then size). 34 of them belong to an epic and are listed only under Epics below.</p>
 <details>
 <summary>feature — 27</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autofit/prior_exit_sampler_coverage.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">autofit</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">medium</span></span></p></div>
@@ -357,9 +359,8 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">pyautolens</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 </details>
 <details>
-<summary>maintenance — 17</summary>
+<summary>maintenance — 16</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/config_key_mirror_drift.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run passes</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autolens_workspace_developer</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/ci/heart_smoke_table_autocti.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">ci</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/ci/wiki_currency_check_version_gate.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">ci</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
@@ -377,7 +378,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in autogalaxy/autofit/HowToFit workspaces</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 </details>
 <details>
-<summary>docs — 13</summary>
+<summary>docs — 12</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/multi_galaxy_package.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/split_lensing_regimes.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -386,7 +387,6 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autocti/api_rst_rewrite.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autocti</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/multi_plane_cross_validation_guide.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/howtolens/ch4_mask_overlay_never_drawn.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">howtolens</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/assistants_regime_extension.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span></span></p></div>
@@ -522,12 +522,11 @@ Contract (the `start_bundle` skill is the full body):
 </table>
 </details>
 <details>
-<summary><b>notebooks</b> — 3 task(s) · 7 pts · auto — proposed</summary>
-<div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'notebooks' — 3 INDEPENDENT tasks run in one orchestrated session.
+<summary><b>notebooks</b> — 2 task(s) · 5 pts · auto — proposed</summary>
+<div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'notebooks' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/docs/autolens/multi_galaxy_package.md
-- draft/docs/autolens_workspace/multi_plane_cross_validation_guide.md
 - draft/docs/howtolens/ch4_mask_overlay_never_drawn.md
 
 Contract (the `start_bundle` skill is the full body):
@@ -545,13 +544,6 @@ Contract (the `start_bundle` skill is the full body):
 <td class="facet">large</td>
 <td class="facet">high</td>
 <td class="facet">in progress — core landed 2026-07-25…</td>
-</tr>
-<tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a></td>
-<td class="facet">autolens_workspace</td>
-<td class="facet">medium</td>
-<td class="facet">normal</td>
-<td class="facet">formalised</td>
 </tr>
 <tr>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a></td>
@@ -787,9 +779,15 @@ Contract (the `start_bundle` skill is the full body):
 </tr>
 <tr>
 <td class="when">2026-08-29</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/multi_plane_cross_validation_guide.md" aria-label="Copy the Claude command">📋</button></td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/unpark_multi_galaxy_scaling_relation_slam.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-08-29</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/multi_plane_cross_validation_guide.md">Publish the multi-plane cross-validation as a workspace guide</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/multi_plane_cross_validation_guide.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr>
 <td class="when">2026-08-29</td>
@@ -833,7 +831,7 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens/data_temp_write_paths_not_ignored.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-08-27</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a></td>
@@ -886,12 +884,6 @@ Contract (the `start_bundle` skill is the full body):
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-08-24</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md">Un-park multi_galaxy/features/scaling_relation/slam once a capped run…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/unpark_multi_galaxy_scaling_relation_slam.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr hidden>
 <td class="when">2026-08-24</td>
