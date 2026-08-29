@@ -178,7 +178,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_serial_bound_training.md">Nautilus: train neural bounds serially so a dead pool worker cannot hang…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1547">issue #1547</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/nautilus_serial_bound_training.md">Nautilus: train neural bounds serially so a dead pool worker cannot hang…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1547">issue #1547</a> — issued 2026-08-29 — awaiting-merge</summary>
 
 ```
 /start_dev active/nautilus_serial_bound_training.md
