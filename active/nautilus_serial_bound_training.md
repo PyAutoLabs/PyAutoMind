@@ -3,6 +3,7 @@
 Target: PyAutoFit
 Type: bug
 Autonomy: safe
+Issued: 2026-08-29
 
 ## Original request (verbatim)
 

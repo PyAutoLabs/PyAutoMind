@@ -41,3 +41,14 @@
 - worktree: ~/Code/PyAutoLabs-wt/mind-workflow
 - repos:
   - PyAutoMind: feature/repos-sync-config-checks
+
+## nautilus-serial-bound-training
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1547
+- prompt: active/nautilus_serial_bound_training.md
+- issued: 2026-08-29
+- session: claude --resume ede55346-4e08-4851-b2b8-d9a21a49b776
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/nautilus-serial-bound-training
+- classification: library (PyAutoFit only)
+- repos:
+  - PyAutoFit
