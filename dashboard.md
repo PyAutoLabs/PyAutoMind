@@ -163,7 +163,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/harvest_0829_phase8b_final_verdict.md">Harvest 2026-08-29: Phase 8B FINAL verdict, W6 n_batch tail, Phase 6 NUTS…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/194">issue #194</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/harvest_0829_phase8b_final_verdict.md">Harvest 2026-08-29: Phase 8B FINAL verdict, W6 n_batch tail, Phase 6 NUTS…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/194">issue #194</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/harvest_0829_phase8b_final_verdict.md
