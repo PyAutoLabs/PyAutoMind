@@ -170,7 +170,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/overflow_flood_refs_smc_cell.md">Refs 5,6 unblock, overflow-flood record correction, slogdet A/B, SMC cell + A100…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/196">issue #196</a> — issued 2026-08-29 — library-dev</summary>
+<details><summary>📋 <a href="active/overflow_flood_refs_smc_cell.md">Refs 5,6 unblock, overflow-flood record correction, slogdet A/B, SMC cell + A100…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/196">issue #196</a> — issued 2026-08-29 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/overflow_flood_refs_smc_cell.md
