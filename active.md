@@ -24,3 +24,14 @@
 - repos:
   - autolens_workspace: feature/multi-galaxy-scaling-zero-intensity
 - next-skill: /ship_workspace
+
+## fitness-log-likelihood-ceiling
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1543
+- prompt: active/fitness_log_likelihood_ceiling.md
+- issued: 2026-08-29
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/fitness-log-likelihood-ceiling
+- classification: library (PyAutoFit only; Fitness magnitude guard + NSS closure, wave A1)
+- repos:
+  - PyAutoFit: feature/fitness-log-likelihood-ceiling
+- next-skill: /ship_library
