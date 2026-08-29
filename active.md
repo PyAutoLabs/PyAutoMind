@@ -19,11 +19,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/515
 - prompt: active/multi_plane_cross_validation_guide.md
 - issued: 2026-08-29
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/517
 - worktree: ~/Code/PyAutoLabs-wt/ci-smoke-bundle-2b
 - classification: workspace (docs; phase 2 of PyAutoLens#714, library phase merged in #715)
 - bundle: ci-smoke — bundle 2b (shared worktree; own branch, own PR)
 - heart-ack: YELLOW acknowledged 2026-08-29 — "workspace validation not passing (0 failed, 1 timeout, cloud#33229145647: autolens_test scripts/multi_dataset/delaunay_mge.py)"; "release validation incomplete: no rehearsal for current source"
 - repos:
   - autolens_workspace: feature/multi-plane-guide-cross-validation
-- next-skill: /ship_workspace
+- next-skill: /prm
