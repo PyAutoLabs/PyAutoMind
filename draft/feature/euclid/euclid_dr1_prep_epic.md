@@ -183,9 +183,9 @@ Read-only survey done while filing, so each phase prompt cites real paths:
    defaults in the Euclid configs. Independent; gated nothing.
    **SHIPPED 2026-08-28** — issue PyAutoArray#509 (closed); PyAutoArray#510 and
    euclid_strong_lens_modeling_pipeline#42 both merged.
-1. `draft/feature/euclid/pipeline_parity_with_science_euclid.md` — port the DR1 analysis
+1. `active/pipeline_parity_with_science_euclid.md` — port the DR1 analysis
    from `Science/euclid` into the pipeline repo (scripts, `util.py`, `catalogue/scripts`,
-   parameterization, docs). Drift rule: `Science/euclid` wins. Blocks 2-4.
+   parameterization, docs). Drift rule: `Science/euclid` wins. Blocks 2-4. — **IN FLIGHT 2026-08-29** issue https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/43
 2. `draft/test/euclid/ci_test_mode_simulated_datasets_latents.md` — committed simulated
    datasets + TEST-mode CI over every example script + latent unit tests. Gate: 1.
 3. `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` — preserve and

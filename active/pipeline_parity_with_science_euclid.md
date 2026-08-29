@@ -16,6 +16,7 @@ Epic: euclid-dr1-prep
 Phase: 1
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
+Issued: 2026-08-29
 
 Phase 1 of 10 in the Euclid DR1 preparation epic. **Blocks phases 2, 3 and 4.**
 
