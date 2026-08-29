@@ -23,8 +23,8 @@ before it counts as done. This is a sign-off, not a bug — the open bug is file
   the verified #502 mask fix (radius 4.70) and the new third cause (all-zero MGE intensities in
   the truncated light stages → `Measured luminosity is 0.0`). Record:
   `complete/2026/08/unpark-multi-galaxy-scaling-relation-slam.md`. Follow-up bug:
-  `draft/bug/autolens_workspace/multi_galaxy_scaling_relation_zero_intensity_under_smoke.md`
-  (in progress).
+  `complete/2026/08/multi-galaxy-scaling-zero-intensity.md` (fixed and un-parked 2026-08-29, autolens_workspace#519)
+.
 
 ## What to check (read-and-report)
 
