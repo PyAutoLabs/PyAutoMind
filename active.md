@@ -6,7 +6,7 @@
 - follow-up-prompt: active/finish_the_science_project_memory_propagation_au.md (folded in,
   not a separate issue — `Folded-into: PyAutoBrain#315`)
 - issued: 2026-08-28
-- status: pushed, pr-blocked (Heart RED)
+- status: 3 of 5 PRs merged; 2 open on a pre-existing CI red (see library-pr below)
 - worktree: ~/Code/PyAutoLabs-wt/science-project-memory
 - classification: library (four independent assistant/organ repos; no workspace follow-up)
 - repos:
@@ -15,8 +15,20 @@
   - autocti_assistant: feature/science-project-memory (df8408d)
   - autogalaxy_assistant: feature/science-project-memory (7964ff7)
   - autofit_assistant: feature/science-project-memory (1bc7675)
-- next-skill: open the five PRs once Heart is GREEN (or under a human-authorized corrective
-  exception naming the RED reason) — all branches are pushed and the work is complete
+- library-pr: PyAutoBrain#316 (MERGED 8f5f7697658d585b42fa52ea6d6c0fcdd1988bda),
+  autocti_assistant#27 (MERGED 0242d7be673673aa93c701d8b7ec37cbeba55566),
+  autofit_assistant#31 (MERGED d5df11fba0bc2e9a54bf0318d705f0a4d0b3a1f1),
+  autolens_assistant#116 (OPEN), autogalaxy_assistant#20 (OPEN)
+- next-skill: /prm on autolens_assistant#116 + autogalaxy_assistant#20 once their `wiki-currency`
+  red is resolved (or merged on the same pre-existing-red judgement their previous PRs took);
+  then record the task complete and remove the worktree
+- ci-blocker (2026-08-28): `wiki-currency` FAILS on both open PRs — autolens_assistant#116
+  "Symbol audit (--scope all) exited 1" (missing/broken: 1); autogalaxy_assistant#20 the same
+  plus "Citation paths (--check-citations) exited 1" (`wiki/core/operations/sandbox.md` cites
+  `PyAutoGalaxy:autogalaxy/plot/plot_utils.py`, absent from the source tree). Both are
+  `wiki/core` / skill-audit drift; this branch touches neither. Pre-existing: the same leg
+  failed on both repos' previous PRs (#115, #19 — pynufft residue phase 2, 2026-08-23), which
+  were merged anyway. No code was modified to make the leg pass.
 - heart-red-at-ship: "release validation FAILED (stage integrate)" — verbatim from
   `pyauto-heart readiness --json` at 2026-08-28T21:34:42Z; not caused by this task (markdown
   + one conductor mode + a hermetic test file). Reasons posted verbatim on the issue.
