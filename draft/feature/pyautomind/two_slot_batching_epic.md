@@ -90,16 +90,35 @@ Measured on `draft/` at filing (137 headed prompts):
 (`awaiting-input`), question to the issue, continue elsewhere". A batch of six
 supervised tasks returns six questions, not six PRs.
 
-The cause is one rule measuring the wrong thing —
-`PyAutoBrain/agents/conductors/intake/_intake.py:276` returns `supervised`
-whenever `repo_count > 1`, and nearly every real task names a library plus its
-workspace. Repo count is blast radius; the level is supposed to encode judgement
-required.
+**CORRECTION 2026-08-30, measured in phase 0b.** This epic was filed asserting
+that one rule caused the 120 — `_intake.py:276` returned `supervised` whenever
+`repo_count > 1`, and nearly every real task names a library plus its workspace.
+Removing it and re-deriving every prompt says otherwise:
 
-**But the evidence usually cited for relaxing it does not survive scrutiny, and
-this epic must not pretend otherwise.** `autonomy_log.md` shows 238 rows and zero
-`rejected`, against a graduation rule of "≥10 clean rows with zero rejected".
-Four things are wrong with using that here:
+| | `safe` | `supervised` | `human-required` |
+|---|---|---|---|
+| with `repo_count > 1` | 30 | 117 | 6 |
+| without it | **55** | 92 | 6 |
+
+`repo_count > 1` is the *sole* supervised trigger for **25** prompts — the
+largest single one, ahead of `large`-or-above (20) and architectural risk (17),
+but nothing like 120. The triggers overlap heavily, and the 120 are *declared*
+levels written by earlier intake runs, not one rule's output. Removing it is
+right on its merits and frees 25 prompts; it is not the unblocking of the
+backlog it was taken for. **Where that actually lives is phase 3's
+ship-sign-off change** — 19 of the 46 parked rows are the contract park
+`supervised` imposes at ship, and no grading change touches them.
+
+Also measured and reverted, recorded so it is not re-proposed: replacing
+`repo_count` with `human_judgement` as a supervised trigger made things *worse*
+(`safe` fell to 24), because the ambiguity keywords fire on 63% of prompts. It
+was the same mistake as the rule it replaced — a loose proxy standing in for a
+judgement it does not measure.
+
+The evidence usually cited for relaxing autonomy does not survive scrutiny
+either, and this epic must not pretend otherwise. `autonomy_log.md` shows 238
+rows and zero `rejected`, against a graduation rule of "≥10 clean rows with zero
+rejected". Four things are wrong with using that here:
 
 - The rows run densely 2026-07-08 → 08-01 and then stop: **about 7 rows for all
   of August, against 332 August completions.** The calibration base is July,

@@ -48,6 +48,10 @@ anything you could not verify.
 | [Planned](#planned) (`planned.md`) | 5 |
 | [Backlog](#backlog) (`draft/`) | 151 |
 
+> ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
+
+> - `draft/feature/pyautobrain/batch_grade_intake.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
+
 ## Start here
 
 **Highest priority** (filed as `high`) — showing 12 of 14

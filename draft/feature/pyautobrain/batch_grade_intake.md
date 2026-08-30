@@ -10,7 +10,7 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: shipped 2026-08-30 — PyAutoBrain branch claude/autonomous-task-batching-k8lw9t
 Epic: two-slot-batching
 Phase: 0
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md
