@@ -1212,9 +1212,42 @@ def register_session_hook(settings):
     return settings
 
 
+def session_hook_excluded(repo_spec):
+    """A manifest entry carrying `session_hook: false` is out of scope entirely.
+
+    A recorded exclusion, not drift: the repos that carry it live in a personal
+    namespace, are already outside the org-wide dev sweeps, and never had a
+    `.claude/`. Every other repo keeps the hook (PyAutoMind#369).
+    """
+    return isinstance(repo_spec, dict) and repo_spec.get("session_hook") is False
+
+
+def session_hook_counts(root, repos):
+    """The denominator for the hook leg — `(checked_out, in_scope, excluded)`.
+
+    * `excluded` — manifest repos with `session_hook: false`. They are a
+      recorded exclusion, never counted as drift, and NOT part of `in_scope`.
+    * `in_scope` — every OTHER manifest repo, whether or not it is checked out
+      here. This is the true rollout surface of the canonical hook.
+    * `checked_out` — the in-scope repos that exist on disk in this
+      environment: the only ones `--check` can inspect or `--write` can fix.
+
+    Printed beside the leg's status so a session holding four repos can see
+    that it is seeing four of thirty-four. Two regeneration waves run from
+    four-repo sessions silently re-staled the other thirty precisely because
+    the check reported `OK` with no denominator (PyAutoMind#369).
+    """
+    excluded = sum(1 for spec in repos.values() if session_hook_excluded(spec))
+    in_scope = [n for n, spec in repos.items() if not session_hook_excluded(spec)]
+    checked_out = sum(1 for name in in_scope if (root / name).is_dir())
+    return checked_out, len(in_scope), excluded
+
+
 def check_session_hooks(root, repos, hook_text):
     problems = []
-    for name in repos:
+    for name, spec in repos.items():
+        if session_hook_excluded(spec):
+            continue  # recorded manifest exclusion — see session_hook_excluded
         repo_dir = root / name
         if not repo_dir.is_dir():
             continue  # not checked out in this environment
@@ -1243,8 +1276,11 @@ def check_session_hooks(root, repos, hook_text):
 def write_session_hooks(root, repos, hook_text):
     """Install the hook + its registration in every checked-out repo. Idempotent:
     an up-to-date copy is left alone, and a settings.json that already registers
-    the hook keeps its own formatting."""
-    for name in repos:
+    the hook keeps its own formatting. Repos flagged `session_hook: false` in
+    the manifest are skipped entirely."""
+    for name, spec in repos.items():
+        if session_hook_excluded(spec):
+            continue  # recorded manifest exclusion — see session_hook_excluded
         repo_dir = root / name
         if not repo_dir.is_dir():
             continue
@@ -1373,6 +1409,12 @@ def main():
     for label, run_check in checks.items():
         problems = run_check()
         status = "OK" if not problems else f"{len(problems)} mismatch(es)"
+        if label == SESSION_HOOKS:
+            # The one leg whose blind spot is invisible in its own verdict: it
+            # skips absent repos by design, so a four-repo session reads "OK"
+            # for a 34-repo rollout surface. Say the denominator out loud.
+            seen, in_scope, excluded = session_hook_counts(root, repos)
+            status += f" ({seen} of {in_scope} checked out, {excluded} excluded)"
         print(f"check {label}: {status}")
         for p in problems:
             drift = True

@@ -1,0 +1,229 @@
+name: Propagate the SessionStart hook
+
+# WHY THIS EXISTS — the 4-repo CI blind spot.
+#
+# `repos_sync.py --write` installs `policy/session_start_hook.sh` into EVERY
+# checked-out manifest repo (34 today), because the harness reads the hook per
+# repo: it cannot live once in the workspace. But the only CI leg that runs the
+# hook drift check (firewall_gate.yml) checks out four organs, and absent repos
+# are skipped by design so a partial checkout runs clean. The result is that a
+# canonical hook edit re-stales the other thirty and NOTHING sees it — which is
+# exactly what happened twice in a row (2026-08-26 and 2026-08-27), both waves
+# regenerated from sessions that could attach only the organs.
+#
+# So the propagation is done here, from a job that can reach every repo, rather
+# than depending on whoever edits the hook happening to hold a full workspace.
+#
+# WHY EVENT-DRIVEN, NOT A CRON. The installed copies only go stale when the
+# canonical hook (or the generator that shapes it) changes, so the trigger is
+# that push. A weekly sweep would spend 30 clones a week to find nothing.
+#
+# WHY A BOT PUSH, NOT ~30 PULL REQUESTS. The commit is a byte copy of a file
+# that was already reviewed here, in this repo, on the PR that changed it —
+# the same act the manual regeneration waves performed by hand. Thirty PRs per
+# hook edit is a review queue nobody would read.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "policy/session_start_hook.sh"
+      - "scripts/repos_sync.py"
+      - ".github/workflows/session_hook_propagate.yml"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Regenerate and report the diffs, but push nothing."
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  # Two overlapping propagations would race each other's pushes across thirty
+  # repos; queue them instead of cancelling, so the later hook text wins last.
+  group: session-hook-propagate
+  cancel-in-progress: false
+
+jobs:
+  propagate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PyAutoMind (the canonical hook and the body map)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pyyaml
+
+      # Derived from the body map, never listed here: a hard-coded repo list in
+      # organ code is the drift the tenant firewall exists to catch, and it is
+      # what let two repos sit hookless with nobody able to say whether that was
+      # a decision or an oversight.
+      - name: Resolve the in-scope repos from repos.yaml
+        id: targets
+        run: |
+          set -euo pipefail
+          python3 - <<'PY' | tee -a "$GITHUB_OUTPUT"
+          import yaml
+
+          repos = yaml.safe_load(open("repos.yaml"))["repos"]
+          out = []
+          for name, spec in repos.items():
+              # `session_hook: false` is a recorded manifest exclusion.
+              if spec.get("session_hook") is False:
+                  continue
+              # PyAutoMind is the checkout running this job; its own copy is
+              # gated on every PR by firewall_gate.yml, so it is never a target.
+              if name == "PyAutoMind":
+                  continue
+              out.append(f"{name}={spec['github']}")
+          print("targets=" + " ".join(out))
+          PY
+
+      - name: Regenerate the hook in every in-scope repo and push what changed
+        env:
+          # This repo's GITHUB_TOKEN reaches only this repo; writing a commit to
+          # thirty siblings needs the org-wide PAT (spawn_drift.yml and
+          # arxiv_papers.yml use the same secret).
+          PAT: ${{ secrets.PAT_PYAUTOLABS }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -uo pipefail
+
+          if [ -z "${PAT:-}" ]; then
+            echo "::error::PAT_PYAUTOLABS is not set on this repo. The hook cannot be propagated to the sibling repos without a token that can write to them; GITHUB_TOKEN is scoped to PyAutoMind only."
+            exit 1
+          fi
+
+          targets='${{ steps.targets.outputs.targets }}'
+          if [ -z "$targets" ]; then
+            echo "::error::no in-scope repos derived from the body map — refusing to continue."
+            exit 1
+          fi
+
+          dry=0
+          [ "${DRY_RUN:-false}" = "true" ] && dry=1
+
+          # A tree of shallow clones laid out like a workspace, so the generator
+          # sees `<root>/<manifest name>` exactly as it does locally.
+          rm -rf tree && mkdir -p tree
+          failed=""
+          cloned=""
+          for entry in $targets; do
+            name="${entry%%=*}"; slug="${entry#*=}"
+            if git clone --quiet --depth 1 \
+                 "https://x-access-token:${PAT}@github.com/${slug}.git" "tree/$name"; then
+              cloned="$cloned $entry"
+            else
+              echo "::warning::clone failed for $slug — skipping"
+              failed="$failed $slug(clone)"
+            fi
+          done
+
+          # The SAME function `repos_sync.py --write` calls for this leg, called
+          # directly rather than through the CLI: the full `--write` would also
+          # rewrite the generated AGENTS.md blocks in every clone (changes this
+          # job deliberately does not commit) and then run every drift check
+          # against a half-workspace, whose origin leg would print the clones'
+          # credentialed remotes and whose exit status would have to be ignored.
+          # `set -e` is deliberately off in this step (a single repo failing
+          # must not abandon the other twenty-nine), so the generator's exit
+          # status is checked by hand. Without this, a crash here leaves every
+          # clone untouched and the loop below reports all of them "already
+          # current" — a green run that propagated nothing.
+          if ! python3 - <<'PY'
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, "scripts")
+          import repos_sync
+
+          mind_root = Path.cwd()
+          _, repos = repos_sync.load_manifest(mind_root)
+          repos_sync.write_session_hooks(
+              Path("tree"), repos, repos_sync.load_session_hook(mind_root)
+          )
+          PY
+          then
+            echo "::error::the hook generator failed — nothing has been propagated"
+            exit 1
+          fi
+
+          echo "## SessionStart hook propagation" >> "$GITHUB_STEP_SUMMARY"
+          echo >> "$GITHUB_STEP_SUMMARY"
+          [ "$dry" -eq 1 ] && printf '_dry run — nothing was pushed._\n\n' >> "$GITHUB_STEP_SUMMARY"
+
+          pushed=""
+          current=""
+          for entry in $cloned; do
+            name="${entry%%=*}"; slug="${entry#*=}"
+            repo="tree/$name"
+            echo "::group::$slug"
+
+            git -C "$repo" config user.name "github-actions[bot]"
+            git -C "$repo" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+            for rel in .claude/hooks/session-start.sh .claude/settings.json; do
+              [ -e "$repo/$rel" ] && git -C "$repo" add -- "$rel"
+            done
+
+            # A repo that .gitignore's .claude/ would have `git add` skip the
+            # file in silence, and this job would then report it "current" while
+            # its hook stayed a pass behind. Say so instead.
+            unstaged=""
+            for rel in .claude/hooks/session-start.sh .claude/settings.json; do
+              if [ -e "$repo/$rel" ] && ! git -C "$repo" ls-files --error-unmatch -- "$rel" >/dev/null 2>&1; then
+                unstaged="$unstaged $rel"
+              fi
+            done
+            if [ -n "$unstaged" ]; then
+              echo "::warning::$slug does not track$unstaged (ignored?) — hook not propagated"
+              failed="$failed $slug(untracked)"
+              rm -rf "$repo"; echo "::endgroup::"; continue
+            fi
+
+            if git -C "$repo" diff --cached --quiet; then
+              echo "already current"
+              current="$current $slug"
+              rm -rf "$repo"; echo "::endgroup::"; continue
+            fi
+
+            git -C "$repo" --no-pager diff --cached --stat
+            if [ "$dry" -eq 1 ]; then
+              pushed="$pushed $slug(would-push)"
+              rm -rf "$repo"; echo "::endgroup::"; continue
+            fi
+
+            git -C "$repo" commit --quiet \
+              -m "session: propagate the canonical SessionStart hook (repos_sync --write)"
+            if git -C "$repo" push --quiet origin HEAD; then
+              pushed="$pushed $slug"
+            else
+              echo "::warning::push failed for $slug"
+              failed="$failed $slug(push)"
+            fi
+            # The clone carries a credentialed remote; do not leave it lying about.
+            rm -rf "$repo"
+            echo "::endgroup::"
+          done
+          rm -rf tree
+
+          summarise() {
+            printf '### %s\n\n' "$1" >> "$GITHUB_STEP_SUMMARY"
+            if [ -z "${2// /}" ]; then
+              printf -- '_none_\n\n' >> "$GITHUB_STEP_SUMMARY"
+            else
+              for s in $2; do printf -- '- `%s`\n' "$s" >> "$GITHUB_STEP_SUMMARY"; done
+              printf '\n' >> "$GITHUB_STEP_SUMMARY"
+            fi
+          }
+          summarise "Pushed" "$pushed"
+          summarise "Already current" "$current"
+          summarise "Failed" "$failed"
+
+          [ -z "${failed// /}" ] || { echo "::error::one or more repos failed — see the groups above"; exit 1; }

@@ -65,6 +65,14 @@ repos:
   # two (PyAutoBrain#287, the fourth instance of that defect). Adding a package
   # here is what makes a new repo's spellings join automatically; omitting one a
   # repo really ships re-opens the split.
+  #
+  # `session_hook: false` opts a repo OUT of the generated SessionStart hook
+  # (`policy/session_start_hook.sh`, installed by `--write` into every other
+  # checked-out repo). It is a manifest exclusion, not drift: the two repos
+  # that carry it live in the personal `Jammy2211/` namespace, are excluded
+  # from the org-wide dev sweeps by category, and never had a `.claude/`. Every
+  # in-scope repo keeps the hook — a library or workspace opened alone in a web
+  # session needs Python 3.12 exactly like an organ (PyAutoMind#369).
   PyAutoMind:
     github: PyAutoLabs/PyAutoMind
     category: organ
@@ -203,6 +211,7 @@ repos:
   euclid_assistant:
     github: Jammy2211/euclid_assistant
     category: assistant
+    session_hook: false
   euclid_strong_lens_modeling_pipeline:
     github: PyAutoLabs/euclid_strong_lens_modeling_pipeline
     category: pipeline
@@ -226,3 +235,4 @@ repos:
     github: Jammy2211/admin_jammy
     category: admin
     role: "Local tooling, worktree helpers, some skills."
+    session_hook: false

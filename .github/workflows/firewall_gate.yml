@@ -8,8 +8,11 @@ name: Tenant Firewall Gate
 # mains and runs the full drift check, so an allowlist over-grant or a check
 # that stopped finding real drift fails the PR that authors it.
 #
-# Path-filtered to scripts/repos_sync.py (plus this file): registry/prompt
-# pushes — the overwhelming bulk of Mind traffic — never trigger it.
+# Path-filtered to scripts/repos_sync.py and the canonical SessionStart hook
+# it generates (plus this file): registry/prompt pushes — the overwhelming
+# bulk of Mind traffic — never trigger it. The hook joined the filter in
+# PyAutoMind#369: editing `policy/session_start_hook.sh` re-stales every
+# installed copy, and until then no gate ran on that edit at all.
 #
 # All three organs are checked out. PyAutoHands was omitted at first — its
 # firewall clear waited behind the version-stamp task that claimed the repo
@@ -21,10 +24,12 @@ on:
     branches: [main]
     paths:
       - "scripts/repos_sync.py"
+      - "policy/session_start_hook.sh"
       - ".github/workflows/firewall_gate.yml"
   pull_request:
     paths:
       - "scripts/repos_sync.py"
+      - "policy/session_start_hook.sh"
       - ".github/workflows/firewall_gate.yml"
   workflow_dispatch:
 

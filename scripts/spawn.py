@@ -147,6 +147,12 @@ MIND_RULES = [
     # and owner substitution only turns those into YOURORG/... placeholders —
     # the same failure mode as dashboard_refresh.yml.
     (".github/workflows/firewall_gate.yml", "DROP"),
+    # 9c also: the SessionStart-hook propagator. It clones every sibling repo
+    # in the manifest with secrets.PAT_PYAUTOLABS and pushes bot commits into
+    # them by name — firewall_gate.yml's org-coupled shape, multiplied by
+    # thirty, plus rule 9's no-configured-secret condition. A fresh org has no
+    # siblings to propagate into and no such secret to do it with.
+    (".github/workflows/session_hook_propagate.yml", "DROP"),
     # 9c also: the Pages publisher. It needs a GitHub Pages site the default
     # token cannot create on a fresh repo (the Hands lesson, already recorded
     # for Memory's knowledge_board.yml) and takes pages:write + id-token:write,
