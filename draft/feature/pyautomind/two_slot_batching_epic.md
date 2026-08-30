@@ -224,9 +224,18 @@ Ordered by value, not by build dependency. **The dispatcher is the least
 important part** — phases 0-4 can all be driven by hand in the slot, tapping the
 chips the dashboard already renders.
 
-0. **The review-cost model** — consequence tier, witness requirement,
-   review-minutes, readiness grade; fix `infer_autonomy`; re-grade all 137
-   prompts. `draft/feature/pyautobrain/`
+0. **The review-cost model**, split three ways on 2026-08-30 — the Feature
+   Agent derived `too-large` (score 11) against a declared `large` and
+   recommended phasing, which is this epic's own slicing rule firing on its own
+   prompt. Each child is one unattended run with its own witness:
+   - **0a** the grader — four read-only outputs on the sizing faculty.
+     `draft/feature/pyautobrain/batch_grade_faculty.md`
+   - **0b** intake writes them, `infer_autonomy` is fixed, and the autonomy
+     change ships as a dated experiment. The distribution is a **dry run** here,
+     so the rule is reviewable on its numbers before it touches 137 files.
+     `draft/feature/pyautobrain/batch_grade_intake.md`
+   - **0c** re-grade the backlog and give the dashboard a slot-shaped pick list.
+     `draft/feature/pyautomind/batch_grade_backlog.md`
 1. **The queue and the batch record** — `queue.md`, `batches/`, `Lane:`, the
    `ledger_merge.py` allowlist. `draft/feature/pyautomind/`
 2. **The `batch` conductor: plan, slice, collect** — reasoning only, no

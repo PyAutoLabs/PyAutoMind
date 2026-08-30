@@ -92,13 +92,17 @@ epic, never picked standalone.
 ## two-slot-batching
 - title: Two slots a day — the batch workflow
 - ledger: draft/feature/pyautomind/two_slot_batching_epic.md
-- notes: 9 phased prompts (0-8) across draft/feature/pyautomind/,
+- notes: 11 phased prompts (0a/0b/0c, then 1-8) across draft/feature/pyautomind/,
   draft/feature/pyautobrain/ and draft/research/euclid/ — issue ONE at a time, no
   bulk issue queues. Ordered by value, not build dependency: the DISPATCHER
   (phase 5) is the least important part and is deliberately late, because phases
   0-4 can all be driven by hand in the slot using the chips the dashboard already
   renders. Phase 0 (the review-cost model: consequence tier, witness,
-  review-minutes) is the foundation everything else is sized against. Phases 3
+  review-minutes) is the foundation everything else is sized against, and was
+  split into 0a/0b/0c on 2026-08-30 after the Feature Agent derived too-large
+  (score 11) and recommended phasing — the epic's own slicing rule firing on its
+  own prompt. 0b's distribution is a dry run so the infer_autonomy change is
+  reviewable on its numbers before 0c touches 137 files. Phases 3
   and 4 are doctrine edits marked human-required — phase 3 fixes the ship gate
   for unattended conditions (Heart at 3am, what a batch launch is, an
   independent-model adversarial leg, capped decide-and-flag, a
