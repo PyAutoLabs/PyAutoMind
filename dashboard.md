@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 139 |
+| [Backlog](#backlog) (`draft/`) | 149 |
 
 ## Start here
 
@@ -294,7 +294,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**139** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
+**149** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **44** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 26</summary>
@@ -1875,6 +1875,99 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 ```
 /start_dev draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>Two slots a day — the batch workflow</b> — 10 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Two slots a day — the batch workflow</b> — ledger: `draft/feature/pyautomind/two_slot_batching_epic.md`</summary>
+
+```
+Continue the 'Two slots a day — the batch workflow' epic. Its canonical state lives in draft/feature/pyautomind/two_slot_batching_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 9 phased prompts (0-8) across draft/feature/pyautomind/,
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_review_cost_model.md">Batch phase 0 — the review-cost model</a> — pyautobrain · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_review_cost_model.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/batch_queue_and_records.md">Batch phase 1 — the queue and the batch record</a> — pyautomind · small · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/batch_queue_and_records.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_conductor.md">Batch phase 2 — the <code>batch</code> conductor: plan, slice, collect</a> — pyautobrain · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_conductor.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_gate_unattended.md">Batch phase 3 — the gate under unattended conditions</a> — pyautobrain · large · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_gate_unattended.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">Batch phase 4 — the tier-A merge tier…</a> — pyautobrain · medium · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_notify_tier_merge.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_dispatch.md">Batch phase 5 — dispatch</a> — pyautobrain · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_dispatch.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_board.md">Batch phase 6 — the batch board</a> — pyautobrain · medium · safe · normal</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_board.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/batch_budget_loop.md">Batch phase 7 — budget and backpressure</a> — pyautomind · medium · safe · normal</summary>
+
+```
+/start_dev draft/feature/pyautomind/batch_budget_loop.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/batch_science_lane.md">Batch phase 8 — the science lane: get the laptop out…</a> — euclid · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/euclid/batch_science_lane.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/two_slot_batching_epic.md">Two slots a day — the batch workflow</a> — pyautomind · too-large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/two_slot_batching_epic.md
 ```
 
 </details>

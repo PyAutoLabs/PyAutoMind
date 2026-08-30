@@ -88,3 +88,22 @@ epic, never picked standalone.
   merged); phase 2 shipped 2026-08-29 (euclid#45 closed, PR #46 merged) — which also
   satisfies phase 4's "2 strongly preferred" gate. Next is phase 3
   (draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md).
+
+## two-slot-batching
+- title: Two slots a day — the batch workflow
+- ledger: draft/feature/pyautomind/two_slot_batching_epic.md
+- notes: 9 phased prompts (0-8) across draft/feature/pyautomind/,
+  draft/feature/pyautobrain/ and draft/research/euclid/ — issue ONE at a time, no
+  bulk issue queues. Ordered by value, not build dependency: the DISPATCHER
+  (phase 5) is the least important part and is deliberately late, because phases
+  0-4 can all be driven by hand in the slot using the chips the dashboard already
+  renders. Phase 0 (the review-cost model: consequence tier, witness,
+  review-minutes) is the foundation everything else is sized against. Phases 3
+  and 4 are doctrine edits marked human-required — phase 3 fixes the ship gate
+  for unattended conditions (Heart at 3am, what a batch launch is, an
+  independent-model adversarial leg, capped decide-and-flag, a
+  `rejected-at-review` outcome); phase 4 puts the tier-A auto-merge decision to
+  the human after a four-week shadow window, and is the ONLY phase that reduces
+  total attention rather than re-timing it. Supersedes/absorbs
+  draft/feature/pyautomind/bundle_nightly_claude_pass.md (parked 2026-08-27 for
+  want of a driver — this epic is the driver).
