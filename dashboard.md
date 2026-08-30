@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 149 |
+| [Backlog](#backlog) (`draft/`) | 151 |
 
 ## Start here
 
@@ -294,7 +294,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**149** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **44** of them belong to an epic and are listed only under [Epics](#epics) below.
+**151** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 26</summary>
@@ -1882,20 +1882,36 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 </details>
 
 <details>
-<summary><b>Two slots a day — the batch workflow</b> — 10 queued prompt(s), in order</summary>
+<summary><b>Two slots a day — the batch workflow</b> — 12 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Two slots a day — the batch workflow</b> — ledger: `draft/feature/pyautomind/two_slot_batching_epic.md`</summary>
 
 ```
-Continue the 'Two slots a day — the batch workflow' epic. Its canonical state lives in draft/feature/pyautomind/two_slot_batching_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 9 phased prompts (0-8) across draft/feature/pyautomind/,
+Continue the 'Two slots a day — the batch workflow' epic. Its canonical state lives in draft/feature/pyautomind/two_slot_batching_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 11 phased prompts (0a/0b/0c, then 1-8) across draft/feature/pyautomind/,
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_review_cost_model.md">Batch phase 0 — the review-cost model</a> — pyautobrain · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_grade_faculty.md">Batch phase 0a — the review-cost grader (sizing faculty)</a> — pyautobrain · medium · safe · high</summary>
 
 ```
-/start_dev draft/feature/pyautobrain/batch_review_cost_model.md
+/start_dev draft/feature/pyautobrain/batch_grade_faculty.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_grade_intake.md">Batch phase 0b — intake writes the grades, and the autonomy experiment</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_grade_intake.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/batch_grade_backlog.md">Batch phase 0c — re-grade the backlog, and give the dashboard…</a> — pyautomind · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/batch_grade_backlog.md
 ```
 
 </details>
