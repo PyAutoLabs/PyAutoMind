@@ -1,3 +1,15 @@
+## log-likelihood-ceiling-default-off
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1549
+- completed: 2026-08-29
+- library-pr: PyAutoFit#1550 (merged dc53a2597 -> main); autolens_profiling#198 (merged 6fe8f72b8 -> main, config opt-in)
+- what shipped: `general.test.log_likelihood_ceiling` default flipped to OFF (blank in packaged + test config; `LOG_LIKELIHOOD_CEILING_DEFAULT` = inf so a missing key disables); once-per-process `logger.warning` on the numpy path when the guard first rejects a value (jit/vmap paths documented as silent — a traced counter was deliberately skipped: host callback/donated buffer would perturb the profiled code and not survive vmap/grad); docstrings rewritten as opt-in; tests flipped to default-disabled with enabled-path tests setting the key explicitly (+ warning latch tests). autolens_profiling `config/general.yaml` opts in at 1.0e20 citing 341908_5; DECISIONS.md entry: profiling-only by human decision.
+- why: χ² and the noise-normalisation term scale with the noise-map units (positive logL is legitimate when σ<1), so an absolute ceiling could reject every prior draw on a badly-scaled external dataset — human: "odd thing", keep it opt-in.
+- validation: PyAutoFit 2375 passed / 3 skipped (ceiling files 40 passed, none skipped); CI 4/4; profiling ruff/format/build_readme/check_submits green; config resolution checked (workspace → inf, profiling → 1e20).
+- heart-ack: shipped + merged under human-authorised YELLOW ("prm", 2026-08-29) — same two unrelated reasons as the day's other tasks.
+- owed: reassess whether real PyAutoLens analyses need the ceiling once RAL 342016/7/8 are harvested — report to the human either way. Parallel PyAutoFit claim `nautilus-serial-bound-training` (PR #1548) was disjoint.
+
+## Original prompt
+
 # log_likelihood_ceiling: ship the guard OFF by default — the ceiling is not unit-safe
 
 Target: PyAutoFit
