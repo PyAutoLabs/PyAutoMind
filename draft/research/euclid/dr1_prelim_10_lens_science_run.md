@@ -19,7 +19,9 @@ Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
 
 Phase 4 of 10 in the Euclid DR1 preparation epic. **Gates: phase 1 and phase 3**
-(phase 2 strongly preferred). **Gates phase 5, and phase 7 needs its catalogue.**
+(phase 2 strongly preferred — **SATISFIED 2026-08-29**: phase 2 shipped,
+`complete/2026/08/euclid-ci-test-mode.md`, euclid#45 closed, PR #46 merged).
+**Gates phase 5, and phase 7 needs its catalogue.**
 
 **This is a science run on RAL, not a software task.** It is human-driven and
 `supervised`; it runs on wall-clock timescales of days and must never be handed to an

@@ -85,4 +85,6 @@ epic, never picked standalone.
   Phase 7's retroactive-update leg is explicitly allowed to conclude "no elegant solution
   — don't build it". Source of truth for all drift is /mnt/c/Users/Jammy/Science/euclid.
   Phase 0 shipped 2026-08-28; phase 1 shipped 2026-08-29 (euclid#43 closed, PR #44
-  merged) — phases 2, 3 and 4 are now unblocked.
+  merged); phase 2 shipped 2026-08-29 (euclid#45 closed, PR #46 merged) — which also
+  satisfies phase 4's "2 strongly preferred" gate. Next is phase 3
+  (draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md).

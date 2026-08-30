@@ -23,13 +23,22 @@ X" reads one record, not a 6000-line file.
 
 ## How to look something up (token-light — RAG is dead)
 
-1. Read `complete/index.md` (the curated navigation — grouped `[[slug]]` links
-   with one-line hooks, grouped by date, `unknown` last). It is **generated**
-   from the records by `scripts/lifecycle.py index` — regenerate with
+1. Read `complete/index.md` (the navigation — ordinary markdown links,
+   `[<slug>](<YYYY>/<MM>/<slug>.md)`, each with a one-line hook, grouped by
+   date, `unknown` last; not `[[wiki-links]]`). It is **generated** from the
+   records by `scripts/lifecycle.py index` — regenerate with
    `lifecycle.py index --apply`; a hand-curated **Highlights** band between the
    `CURATED` markers survives regeneration.
 2. Follow one or two links to the records you need.
 3. Only then grep a specific `complete/<YYYY>/<MM>/` bucket.
+
+### What earns a Highlights line
+
+Three things and nothing else: a **trap that cost a session**, a **decision that
+will be re-asked**, an **architecture invariant** worth not re-deriving. ~25-30
+entries under theme headings is the whole budget; a record that merely shipped
+something stays in the generated list. The hook states the **lesson, not the
+task** — a noun phrase, no dates, no PR numbers, two wrapped lines at most.
 
 ## Provenance
 

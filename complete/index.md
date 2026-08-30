@@ -6,12 +6,115 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1223 records across 7 buckets.
+1227 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
 
-_(curate hard-won records here — survives regeneration.)_
+### JAX, numerics & performance
+
+- [xla-cpu-eigen-pool-deadlock](2026/08/xla-cpu-eigen-pool-deadlock.md) — a JAX
+  CPU hang that is XLA's own Eigen pool re-entered by ducc0's FFT; one call is
+  one lottery ticket, so reproduce in a loop and read the HLO.
+- [jax-vmap-materialisation-hang](2026/08/jax-vmap-materialisation-hang.md) —
+  "and then silence" is the silence of stderr alone: a SIGKILLed child loses its
+  whole block-buffered stdout, so set `PYTHONUNBUFFERED` before quarantining.
+- [numba-hst-curvature-matrix-speedup](2026/08/numba-hst-curvature-matrix-speedup.md)
+  — instrument before optimising, and never route a sliding PSF window through
+  an FFT convolver unreversed; a symmetric test kernel hides the error.
+- [multistart-nan-step-diagnostics](2026/08/multistart-nan-step-diagnostics.md)
+  — an eager `jnp` reduction outside the jit costs more than the host transfer
+  it avoids; fuse per-step diagnostics into the jitted call.
+- [regularization-jax-gradient-gaps](2026/08/regularization-jax-gradient-gaps.md)
+  — an inherited term that silently evaluates to zero is the worst failure mode,
+  wrong but finite; a factorization fallback must be all-or-nothing.
+- [cluster-f-jax-baseline-oom](2026/05/cluster-f-jax-baseline-oom.md) — verify a
+  triage cluster against current main before mass-fixing: transient library
+  state ages failures out faster than the report cycle.
+
+### Release, build & CI drift
+
+- [sub-312-install-tombstone](2026/08/sub-312-install-tombstone.md) — rehearse a
+  release on TestPyPI: build isolation, the tenant firewall and a lagging JSON
+  index all bite before upload, and resolution is read off the simple index.
+- [intra-family-dep-floors](2026/08/intra-family-dep-floors.md) — an ad-hoc venv
+  inherits the dev `PYTHONPATH` and imports the source tree, so it can falsely
+  confirm an install fix; `pip --dry-run` cannot be read as a resolution.
+- [release-validation-tri-state](2026/08/release-validation-tri-state.md) — an
+  absent rehearsal is not a failed one; readiness prints a cached verdict over
+  an embedded report copy, so re-ingesting changes nothing until re-aggregation.
+- [smoke-surface-retime-sweep](2026/08/smoke-surface-retime-sweep.md) — a parked
+  script cannot report its own rot: SLOW markers hide real errors, and a
+  dispatch-only harness is green by absence until someone dispatches it.
+- [script-size-guard-git-based](2026/08/script-size-guard-git-based.md) — a
+  committed size snapshot rots; diff each changed script against its own blob at
+  the merge-base instead, leaving no baseline to update and nothing to protect.
+- [pre-build-stages-untracked-wip](2026/08/pre-build-stages-untracked-wip.md) —
+  `git add <dir>/` stages untracked files, so release automation that
+  formats-then-stages publishes stray work; validate before the first push.
+
+### Samplers & inference
+
+- [nautilus-test-mode-degenerate-corner](2026/08/nautilus-test-mode-degenerate-corner.md)
+  — a degenerate posterior is degenerate in its weights, not its row count;
+  guard corner plots on the Kish effective sample size.
+- [ep-hierarchical-scale-collapse-guard](2026/08/ep-hierarchical-scale-collapse-guard.md)
+  — a guard's unit test can be green while the guard cannot fire; feed it the
+  recorder's real output shape, and check the new tests fail on the base.
+- [stored-sample-reconstruction-guard](2026/08/stored-sample-reconstruction-guard.md)
+  — a stored sample that current model validation rejects must recover to the
+  next valid one or raise a typed exception, never a raw internal one.
+- [heart-red-guarded-sample-escape](2026/08/heart-red-guarded-sample-escape.md) —
+  a correct rejection guard is not enough while other paths reconstruct or
+  re-serve the rejected sample; find every consumer before declaring it fixed.
+- [clipper-validation-campaign](2026/08/clipper-validation-campaign.md) — budget
+  decides the answer: grade the alive-versus-step curve rather than a survival
+  percentage, and read an all-zero counter arm as broken, not as a null result.
+- [delaunay-nan-probe-fix](2026/08/delaunay-nan-probe-fix.md) — a probe that
+  builds pathological input through the public constructor inherits the public
+  validation; poison below the boundary the guard defends.
+
+### Lensing science
+
+- [point-solver-magnification-plane-redshift](2026/08/point-solver-magnification-plane-redshift.md)
+  — in a multi-plane tracer the solver must evaluate at the source's own plane;
+  two halves of one likelihood disagreeing means a half-wired argument.
+- [group-subhalo-lens-dict](2026/07/group-subhalo-lens-dict.md) — a multi-galaxy
+  script's deflector count comes from its own dataset's `main_lens_centres.json`,
+  and extra galaxies are a separate collection from main lens galaxies.
+- [nfw-truncated-potential-accuracy](2026/08/nfw-truncated-potential-accuracy.md)
+  — where a profile has a published analytic potential, port it rather than
+  re-tune the MGE approximation; `grad(psi) = alpha` is the check that finds it.
+- [over-sample-trailing-one-to-two](2026/07/over-sample-trailing-one-to-two.md) —
+  a lensed-source arc is never evaluated at sub-size 1: MGE Gaussians alias at
+  1x1 and degrade gradient searches, so adaptive schemes floor at 2x2.
+- [adapt-image-cache-mask-validation](2026/07/adapt-image-cache-mask-validation.md)
+  — a stale adapt-image cache imitates an indexing bug; a completed pipeline
+  never re-evaluates the likelihood, and `Paths.restore` re-extracts the zip.
+- [adapt-linear-regularization](2026/08/adapt-linear-regularization.md) — correct
+  a shipped regularization convention by adding sibling classes, never by
+  mutating the existing ones: identifiers and aggregator reloads must stay valid.
+
+### Mind / Brain infrastructure
+
+- [agent-failure-modes](2026/07/agent-failure-modes.md) — the measured taxonomy
+  of how agents fail here: refusals work where informs do not, and a guard's
+  first live hour is where its false positives surface.
+- [api-gate-clause-scope](2026/07/api-gate-clause-scope.md) — a `PreToolUse` gate
+  must scope its interpreter state per shell clause; a latched flag scans a later
+  clause's file arguments and blocks on symbols nothing was going to call.
+- [spawn-drift-self-heal](2026/08/spawn-drift-self-heal.md) — hand-written test
+  fixtures let the real workflow drift past the guard; point a generator's tests
+  at the actual files they exist to protect.
+- [registry-integrity-check](2026/08/registry-integrity-check.md) — a registry
+  nobody retires entries from costs a whole task-selection session; check that
+  every entry's prompt path resolves and contradicts no other lifecycle state.
+- [worktree-claim-parser-forms](2026/08/worktree-claim-parser-forms.md) — cloud
+  clones are shallow, so a history sweep silently returns nothing; check
+  `--is-shallow-repository` before concluding anything from git history.
+- [lifecycle-state-split](2026/07/lifecycle-state-split.md) — the Mind ran two
+  parallel lifecycles, prompt files and the ledger, until draft/active/complete
+  made the file's location the state; one source of truth per fact.
 <!-- CURATED:END -->
 
 <!-- GENERATED:START — edit records, not this block; regenerate with `lifecycle.py index --apply` -->
@@ -66,6 +169,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [compile-axis-campaign-coverage](2026/08/compile-axis-campaign-coverage.md)
 - [compile-axis-triage-drift](2026/08/compile-axis-triage-drift.md)
 - [compile-warm-baseline-dashboard](2026/08/compile-warm-baseline-dashboard.md)
+- [complete-archive-highlights](2026/08/complete-archive-highlights.md) — the Highlights band of complete/index.md curated — 30 lesson hooks under five themes
 - [conductor-discovery-lifecycle-split](2026/08/conductor-discovery-lifecycle-split.md) — closed on merge
 - [constant-zeroth-repair](2026/08/constant-zeroth-repair.md) — CLOSED completed
 - [correct-circular-sersic-hazard](2026/08/correct-circular-sersic-hazard.md) — Corrected the circular Sersic hazard in the actual fitted ell_comps coordinates. The q-angle structural findin…
@@ -95,6 +199,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [ep-hierarchical-scale-collapse-guard](2026/08/ep-hierarchical-scale-collapse-guard.md)
 - [ep-initializer-exception-should-not-abort](2026/08/ep-initializer-exception-should-not-abort.md)
 - [ep-optimise-updater](2026/08/ep-optimise-updater.md)
+- [euclid-ci-test-mode](2026/08/euclid-ci-test-mode.md) — CLOSED
 - [euclid-crlf-line-endings](2026/08/euclid-crlf-line-endings.md) — Extended the 2026-07-25 org-wide CRLF sweep to the Euclid pipeline, the tier it
 - [euclid-pipeline-parity](2026/08/euclid-pipeline-parity.md) — CLOSED
 - [falsified-by-checkpoint-efficacy-review](2026/08/falsified-by-checkpoint-efficacy-review.md)
@@ -160,6 +265,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [llms-txt-census-fixes](2026/08/llms-txt-census-fixes.md)
 - [local-pixel-scale-vs-dataset-pixel-scales](2026/08/local-pixel-scale-vs-dataset-pixel-scales.md)
 - [log-det-multistart-tag](2026/08/log-det-multistart-tag.md)
+- [log-likelihood-ceiling-default-off](2026/08/log-likelihood-ceiling-default-off.md)
 - [loggaussian-prior-declares-own-support](2026/08/loggaussian-prior-declares-own-support.md) — closed by the PR's `Closes` line
 - [markdown-renderings-2a-leftovers](2026/08/markdown-renderings-2a-leftovers.md)
 - [mask1d-shape-native-scalar-widening](2026/08/mask1d-shape-native-scalar-widening.md)
@@ -276,6 +382,7 @@ _(curate hard-won records here — survives regeneration.)_
 - [repin-rectangular-mge-after-490](2026/08/repin-rectangular-mge-after-490.md)
 - [repo-settings-bash-e-abort](2026/08/repo-settings-bash-e-abort.md)
 - [repo-settings-org-enumeration](2026/08/repo-settings-org-enumeration.md)
+- [repos-sync-config-checks](2026/08/repos-sync-config-checks.md) — Heart version_skew and Hands workspaces.yaml identity checked; the config stamper deferred, demand-gated
 - [repos-sync-target-repo-lint-awareness](2026/08/repos-sync-target-repo-lint-awareness.md)
 - [requarantine-delaunay-and-keep-abort-stack](2026/08/requarantine-delaunay-and-keep-abort-stack.md)
 - [required-workflow-file-drift](2026/08/required-workflow-file-drift.md)

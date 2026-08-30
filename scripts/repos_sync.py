@@ -42,8 +42,11 @@ repo's CI with a path it rejects.
 
 --check (always run) verifies, against the manifest:
 
-  * PyAutoHeart/config/repos.yaml          — polled repos exist, owners match
+  * PyAutoHeart/config/repos.yaml          — polled repos exist, owners match,
+    smoke: and version_skew: name manifest repos and manifest package names
   * PyAutoHands/pre_build.sh               — run_workspace repos exist
+  * PyAutoHands/autohands/config/workspaces.yaml — run_all repos, library
+    names/packages and slow_skip_default repos exist
   * PyAutoBrain/bin/ensure_workspace_labels.sh — owner/name pairs match
   * the hygiene conductor — the repo sets it scans are derived from this
     manifest, and no repo name has been hardcoded back into an array
@@ -385,6 +388,84 @@ def check_heart(root, repos):
         if name not in repos:
             problems.append(
                 f"Heart smoke import_names key '{name}' — not in the manifest"
+            )
+    # version_skew: <workspace repo> -> {library, package}. Heart compares the
+    # library version a workspace pins against the library repo's own, so every
+    # field here is identity the body map owns — and none of it was checked
+    # until now, while the polled list beside it was checked from the start.
+    # A workspace or library renamed in the map, or a package renamed on PyPI,
+    # skewed Heart silently. Soft-skip when absent, like the smoke: block: a
+    # Heart checkout predating it is not drift, and Heart's own loader is what
+    # decides the block is required.
+    for name, spec in (data.get("version_skew") or {}).items():
+        spec = spec or {}
+        if name not in repos:
+            problems.append(
+                f"Heart version_skew '{name}' — not in the manifest"
+            )
+        library = spec.get("library")
+        if library not in repos:
+            problems.append(
+                f"Heart version_skew '{name}' library '{library}' — "
+                f"not in the manifest"
+            )
+            continue
+        expected = repos[library].get("package")
+        if expected is None:
+            problems.append(
+                f"Heart version_skew '{name}' names library '{library}', "
+                f"which has no 'package:' in the manifest"
+            )
+        elif spec.get("package") != expected:
+            problems.append(
+                f"Heart version_skew '{name}' package "
+                f"'{spec.get('package')}', manifest says '{expected}'"
+            )
+    return problems
+
+
+def check_hands_workspaces(root, repos):
+    """The Build run matrix names repos too.
+
+    `PyAutoHands/autohands/config/workspaces.yaml` says in its own header that
+    repo identity must match the body map and that this check flags drift. It
+    said so from the day it was extracted and no leg read it, so the claim was
+    aspirational. Policy stays Hands' — the short keys, the report directories,
+    the release matrix order are all its own; only the names are checked."""
+    path = root / "PyAutoHands/autohands/config/workspaces.yaml"
+    if not path.exists():
+        return []
+    data = yaml.safe_load(path.read_text()) or {}
+    problems = []
+    for key, spec in (data.get("run_all") or {}).items():
+        repo = (spec or {}).get("repo")
+        if repo not in repos:
+            problems.append(
+                f"Hands run_all '{key}' repo '{repo}' — not in the manifest"
+            )
+    for entry in data.get("libraries") or ():
+        entry = entry or {}
+        name = entry.get("name")
+        if name not in repos:
+            problems.append(
+                f"Hands libraries entry '{name}' — not in the manifest"
+            )
+            continue
+        expected = repos[name].get("package")
+        if expected is None:
+            problems.append(
+                f"Hands libraries entry '{name}' has no 'package:' in the "
+                f"manifest"
+            )
+        elif entry.get("package") != expected:
+            problems.append(
+                f"Hands libraries '{name}' package '{entry.get('package')}', "
+                f"manifest says '{expected}'"
+            )
+    for name in data.get("slow_skip_default") or ():
+        if name not in repos:
+            problems.append(
+                f"Hands slow_skip_default '{name}' — not in the manifest"
             )
     return problems
 
@@ -1293,6 +1374,8 @@ def main():
     checks = {
         "PyAutoHeart/config/repos.yaml": lambda: check_heart(root, repos),
         "PyAutoHands/pre_build.sh": lambda: check_pre_build(root, repos),
+        "PyAutoHands/autohands/config/workspaces.yaml":
+            lambda: check_hands_workspaces(root, repos),
         "ensure_workspace_labels.sh": lambda: check_labels(root, repos),
         "hygiene conductor coverage":
             lambda: check_hygiene_coverage(root, repos, mind_root),

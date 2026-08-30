@@ -38,8 +38,11 @@ resimulate if the lens light Sersic is at the prior edge of 5 lower is to a valu
 
 - **`simulator.py` in `euclid_strong_lens_modeling_pipeline`** — a general, documented
   example: *"I have fitted a lens; resimulate it."* Any user, any fit result. This is the
-  **same** `simulator.py` phase 2 commits datasets from; coordinate with that phase
-  rather than writing a second script.
+  **same** `simulator.py` phase 2 committed its datasets from — **it now exists**
+  (`scripts/simulator.py`, shipped 2026-08-29 in
+  `complete/2026/08/euclid-ci-test-mode.md`, PR #46) with a `--from-result` mode
+  already in place, though its SED is flat for now. Extend that script; do not write
+  a second one.
 - **The 10 resimulations in `/mnt/c/Users/Jammy/Science/euclid_dr1_prelim`** — the actual
   simulated datasets built from phase 4's results. These are science outputs and live in
   the science project, not in the public repo.
