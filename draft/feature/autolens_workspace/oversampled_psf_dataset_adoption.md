@@ -10,6 +10,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Blocked-by: PyAutoArray#363, PyAutoGalaxy#486, autolens_workspace#236   # the k x s machinery — all MERGED
 Filed: 2026-07-08 (backfilled from git)
 

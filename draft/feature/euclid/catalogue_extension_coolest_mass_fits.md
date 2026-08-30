@@ -10,9 +10,12 @@ Themes:
 - euclid
 - catalogue
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: euclid-dr1-prep
 Phase: 7
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md

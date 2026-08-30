@@ -10,9 +10,12 @@ Themes:
 - hpc-gpu
 - mind-workflow
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: two-slot-batching
 Phase: 8
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md

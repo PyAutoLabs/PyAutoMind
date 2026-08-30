@@ -8,9 +8,12 @@ Themes:
 - mind-workflow
 - hygiene
 Difficulty: medium
-Autonomy: safe
+Autonomy: supervised
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
 
 Found by the 2026-08-19 readability-pass census (#248). Behaviour-preserving

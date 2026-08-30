@@ -9,6 +9,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: high
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-06-26 (backfilled from git)
 
 <!-- TRIAGE: needs manual review before routing. Session-resume fragment with

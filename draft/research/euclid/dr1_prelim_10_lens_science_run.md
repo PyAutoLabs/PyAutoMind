@@ -13,6 +13,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Epic: euclid-dr1-prep
 Phase: 4
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md

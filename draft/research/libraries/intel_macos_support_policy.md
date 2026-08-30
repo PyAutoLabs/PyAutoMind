@@ -10,9 +10,12 @@ Repos:
 Themes:
 - release
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-22 (backfilled from git)
 
 ## Original request (verbatim, 2026-08-22)

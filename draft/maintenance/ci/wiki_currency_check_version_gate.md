@@ -11,6 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-24
 
 `wiki-currency` went red on `autocti_assistant` main and was fixed on 2026-08-24

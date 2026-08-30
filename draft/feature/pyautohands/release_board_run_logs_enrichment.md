@@ -11,6 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
 
 Follow-up to the release board (PyAutoHands#239, shipped 2026-08-19). The v1

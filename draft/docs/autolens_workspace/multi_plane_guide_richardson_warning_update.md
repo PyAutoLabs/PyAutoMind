@@ -7,9 +7,12 @@ Repos:
 Themes:
 - notebooks
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Blocked-by: a PyAutoGalaxy release carrying PR#593 reaching the installed stack (workspace follows the released library, not main)
 Filed: 2026-08-29
 

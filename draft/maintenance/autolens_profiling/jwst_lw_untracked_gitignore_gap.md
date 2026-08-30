@@ -8,9 +8,12 @@ Themes:
 - hygiene
 - profiling
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-04 (backfilled from git)
 
 Found during a `/repo_cleanup` sweep on 2026-08-04.

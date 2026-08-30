@@ -8,15 +8,18 @@ Repos:
 Themes:
 - mind-workflow
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: high
 Status: shipped 2026-08-30 — PyAutoBrain branch claude/autonomous-task-batching-k8lw9t
+Consequence: notify
+Witness: the before/after `Autonomy:` distribution over all 137 draft prompts, computed as a DRY RUN and pinned in the PR body — no prompt file is written in this phase.
+Review-minutes: 0
+Unattended: ready
 Epic: two-slot-batching
 Phase: 0
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md
 Filed: 2026-08-30
 Blocked-by: phase 0a (the faculty must emit the grades before intake can write them)
-Witness: the before/after `Autonomy:` distribution over all 137 draft prompts, computed as a DRY RUN and pinned in the PR body — no prompt file is written in this phase.
 
 Depends on 0a. Read the epic for the reasoning; this is the conductor side.
 

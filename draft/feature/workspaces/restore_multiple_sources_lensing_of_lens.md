@@ -9,6 +9,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised — UNBLOCKED 2026-08-27, ready to start
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Filed: 2026-04-28 (backfilled from git)
 
 Revisit `@autolens_workspace/scripts/point_source/features/multiple_sources/` now

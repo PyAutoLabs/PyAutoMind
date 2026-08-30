@@ -10,6 +10,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: documented — NOT an open bug (fixed in the `*Power` classes, 2026-08-29)
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-29
 
 ## What this is
@@ -35,7 +38,6 @@ Because the neighbor list already contains each unordered edge `{i, j}` twice
 scatters each ordered pair once (`constant.py`: `diag = 1e-8 + c²·n_i`,
 `mat[i, neighbors[i]] -= c²`).
 
-Consequence: with uniform weights the legacy `Adapt` matrix is exactly
 **twice** the `Constant` matrix of the same coefficient (up to the shared
 `1e-8` diagonal floor). Verified on PyAutoArray `main`, 4-connected 3×3 mesh,
 `inner = outer = 1`:

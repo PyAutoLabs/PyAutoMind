@@ -6,9 +6,12 @@ Themes:
 - jax-compile
 - profiling
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-05-10 (backfilled from git)
 
 We have lots of examples which profile how long JAX jitted functions take to run on various datasets.

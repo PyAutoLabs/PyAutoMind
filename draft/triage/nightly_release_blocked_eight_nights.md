@@ -13,6 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-04 (backfilled from git)
 
 Surfaced 2026-08-04 while listing PyAutoBrain workflow runs during the

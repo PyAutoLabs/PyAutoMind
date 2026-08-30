@@ -10,6 +10,9 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-05-28 (backfilled from git)
 
 ## Status

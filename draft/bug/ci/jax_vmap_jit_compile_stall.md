@@ -13,6 +13,9 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: campaign map — phases route through /start_dev one at a time; this
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Epic: jax-compile-stall
         file is never issued itself and nothing here is bulk-issued
 Filed: 2026-08-23

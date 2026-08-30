@@ -13,6 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: cluster-strong-lensing
 Phase: 10
 Parent: draft/docs/autolens/split_lensing_regimes.md

@@ -13,6 +13,9 @@ Difficulty: large
 Autonomy: human-required
 Priority: low
 Status: deferred — decision only, do not start without an explicit human call
+Consequence: judge
+Review-minutes: 25
+Unattended: never
 Filed: 2026-08-29
 
 ## The deferred decision

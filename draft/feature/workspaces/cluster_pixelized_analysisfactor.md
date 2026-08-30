@@ -11,6 +11,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Epic: cluster-strong-lensing
 Phase: 10
 Parent: draft/feature/autolens/source_cluster_arc.md

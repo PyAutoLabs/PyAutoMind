@@ -9,6 +9,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: graphical-ep
 Phase: 4
 Filed: 2026-05-18 (backfilled from git)

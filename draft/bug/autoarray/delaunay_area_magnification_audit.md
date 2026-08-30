@@ -9,9 +9,12 @@ Themes:
 - pixelization
 - euclid
 Difficulty: small-medium
-Autonomy: safe
+Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Epic: euclid-dr1-prep
 Phase: 6
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md

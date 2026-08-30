@@ -13,6 +13,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Filed: 2026-07-22 (backfilled from git)
 
 Right now `n_starts`, `batch_size`, `n_batch` and vmap width are hand-set per

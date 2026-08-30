@@ -9,9 +9,12 @@ Themes:
 - notebooks
 - docs-hub
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-08 (backfilled from git)
 
 Seven curated `markdown/` pages still show MGE snippets **without**

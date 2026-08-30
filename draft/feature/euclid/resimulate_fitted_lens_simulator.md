@@ -9,9 +9,12 @@ Themes:
 - euclid
 - simulation
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: high
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: euclid-dr1-prep
 Phase: 5
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md

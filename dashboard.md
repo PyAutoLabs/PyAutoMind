@@ -72,7 +72,7 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · safe · high</summary>
 
 ```
 /start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
@@ -152,12 +152,100 @@ anything you could not verify.
 
 </details>
 
-**Quick wins** (small enough, and safe enough to run unattended)
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 71
+
+<details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
+
+```
+/start_dev draft/triage/jax_zero_contour.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · safe · high</summary>
+
+```
+/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by PyAutoGalaxy…</a> — autogalaxy · small · safe · medium</summary>
 
 ```
 /start_dev draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
+
+```
+/start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · safe · medium</summary>
+
+```
+/start_dev draft/feature/autofit/prior_exit_sampler_coverage.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> — autofit · medium · safe · medium</summary>
+
+```
+/start_dev draft/feature/autofit/search_seed_reproducibility.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · safe · medium</summary>
+
+```
+/start_dev draft/research/autolens/quick_update_plotting_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — small · safe · normal</summary>
+
+```
+/start_dev draft/triage/convolver_blurring_image_warning.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and <code>latent_batch_size</code></a> — autofit · small · supervised · normal</summary>
+
+```
+/start_dev draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
 ```
 
 </details>
@@ -303,7 +391,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>feature</b> — 26</summary>
 
-<details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · supervised · medium</summary>
+<details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · safe · medium</summary>
 
 ```
 /start_dev draft/feature/autofit/prior_exit_sampler_coverage.md
@@ -311,7 +399,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> — autofit · medium · supervised · medium</summary>
+<details><summary>📋 <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> — autofit · medium · safe · medium</summary>
 
 ```
 /start_dev draft/feature/autofit/search_seed_reproducibility.md
@@ -319,7 +407,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> — pyautobrain · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> — pyautobrain · small · safe · normal</summary>
 
 ```
 /start_dev draft/feature/pyautobrain/board_without_gh_phase2_legs.md
@@ -343,7 +431,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md">Tune cluster-scale JOSS benchmarks toward their 5-minute targets</a> — autolens_workspace · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md">Tune cluster-scale JOSS benchmarks toward their 5-minute targets</a> — autolens_workspace · medium · safe · normal</summary>
 
 ```
 /start_dev draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
@@ -351,7 +439,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts + proposed…</a> — pyautomind · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts + proposed…</a> — pyautomind · medium · safe · normal</summary>
 
 ```
 /start_dev draft/feature/pyautomind/bundle_nightly_claude_pass.md
@@ -495,7 +583,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/workspaces/gallery_runner_missing_tiers.md">Gallery runner: add visualization_upper + decide the modeling_visualization_jit tier</a> — workspaces · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/feature/workspaces/gallery_runner_missing_tiers.md">Gallery runner: add visualization_upper + decide the modeling_visualization_jit tier</a> — workspaces · small · safe · low</summary>
 
 ```
 /start_dev draft/feature/workspaces/gallery_runner_missing_tiers.md
@@ -532,7 +620,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · supervised · medium</summary>
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
 
 ```
 /start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
@@ -540,7 +628,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · supervised · medium</summary>
+<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · safe · medium</summary>
 
 ```
 /start_dev draft/research/autolens/quick_update_plotting_cost.md
@@ -556,7 +644,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · safe · normal</summary>
 
 ```
 /start_dev draft/research/pyautoreduce/acceptance_noise_rebaseline.md
@@ -564,7 +652,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · safe · normal</summary>
 
 ```
 /start_dev draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
@@ -572,7 +660,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_workspace_developer/jax_jit_profiling.md">We have lots of examples which profile how long JAX</a> — autolens_workspace_developer · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/autolens_workspace_developer/jax_jit_profiling.md">We have lots of examples which profile how long JAX</a> — autolens_workspace_developer · medium · safe · normal</summary>
 
 ```
 /start_dev draft/research/autolens_workspace_developer/jax_jit_profiling.md
@@ -580,7 +668,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · safe · normal</summary>
 
 ```
 /start_dev draft/research/libraries/intel_macos_support_policy.md
@@ -588,7 +676,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · safe · normal</summary>
 
 ```
 /start_dev draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
@@ -604,7 +692,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/multiband_compile_census_completion.md">Multi-band compile census completion — A100/multi-core + hetero GPU rows</a> — autolens_profiling · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/research/autolens_profiling/multiband_compile_census_completion.md">Multi-band compile census completion — A100/multi-core + hetero GPU rows</a> — autolens_profiling · small · safe · low</summary>
 
 ```
 /start_dev draft/research/autolens_profiling/multiband_compile_census_completion.md
@@ -620,7 +708,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · supervised · low</summary>
+<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · safe · low</summary>
 
 ```
 /start_dev draft/research/pyautoreduce/legacy_flux_scale_parity.md
@@ -657,7 +745,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · safe · high</summary>
 
 ```
 /start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
@@ -697,7 +785,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular scripts</a> — autolens · medium · safe · normal</summary>
 
 ```
 /start_dev draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
@@ -705,7 +793,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods diverge ~5e-7 on Python 3.13 only</a> — autolens_workspace_test · medium · safe · normal</summary>
 
 ```
 /start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
@@ -806,7 +894,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
 
 ```
 /start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
@@ -814,7 +902,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
 ```
 /start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
@@ -830,7 +918,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
 ```
 /start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
@@ -838,7 +926,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
 
 ```
 /start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
@@ -862,7 +950,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · supervised · low</summary>
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
 
 ```
 /start_dev draft/docs/workspaces/assistants_regime_extension.md
@@ -891,7 +979,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>maintenance</b> — 15</summary>
 
-<details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
 ```
 /start_dev draft/maintenance/workspaces/config_key_mirror_drift.md
@@ -907,7 +995,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> — ci · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> — ci · medium · safe · normal</summary>
 
 ```
 /start_dev draft/maintenance/ci/heart_smoke_table_autocti.md
@@ -931,7 +1019,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a> — pyautomemory · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a> — pyautomemory · medium · safe · normal</summary>
 
 ```
 /start_dev draft/maintenance/pyautomemory/canonical_key_todo_sweep.md
@@ -955,7 +1043,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/workspaces/read_through_issues.md">autolens_workspace</a> — workspaces · too-large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/maintenance/workspaces/read_through_issues.md">autolens_workspace</a> — workspaces · too-large · human-required · normal</summary>
 
 ```
 /start_dev draft/maintenance/workspaces/read_through_issues.md
@@ -979,7 +1067,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> — autolens · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> — autolens · small · safe · low</summary>
 
 ```
 /start_dev draft/maintenance/autolens/data_temp_write_paths_not_ignored.md
@@ -987,7 +1075,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never extended for it</a> — autolens_profiling · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never extended for it</a> — autolens_profiling · small · safe · low</summary>
 
 ```
 /start_dev draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md
@@ -995,7 +1083,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's…</a> — autolens_workspace · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's…</a> — autolens_workspace · small · safe · low</summary>
 
 ```
 /start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md
@@ -1003,7 +1091,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in autogalaxy/autofit/HowToFit workspaces</a> — workspaces · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in autogalaxy/autofit/HowToFit workspaces</a> — workspaces · small · safe · low</summary>
 
 ```
 /start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
@@ -1056,7 +1144,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> — pyautomind · medium · safe · low</summary>
+<details><summary>📋 <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> — pyautomind · medium · supervised · low</summary>
 
 ```
 /start_dev draft/refactor/pyautomind/repos_sync_check_dedup.md
@@ -1064,7 +1152,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · safe</summary>
+<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
 
 ```
 /start_dev draft/refactor/autoarray/sparse_operator_int32_indexes.md
@@ -1101,7 +1189,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> — pyautoheart · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> — pyautoheart · medium · safe · normal</summary>
 
 ```
 /start_dev draft/test/pyautoheart/smoke_relevance_gate.md
@@ -1117,7 +1205,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/workspaces/smoke_workspace_fixes.md">The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced</a> — workspaces · too-large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/test/workspaces/smoke_workspace_fixes.md">The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced</a> — workspaces · too-large · human-required · normal</summary>
 
 ```
 /start_dev draft/test/workspaces/smoke_workspace_fixes.md
@@ -1138,7 +1226,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — small · safe · normal</summary>
 
 ```
 /start_dev draft/triage/convolver_blurring_image_warning.md
@@ -1175,7 +1263,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date versioning)</a> — pyautoreduce · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date versioning)</a> — pyautoreduce · medium · safe · normal</summary>
 
 ```
 /start_dev draft/release/pyautoreduce/pyautoreduce_release_induction.md
@@ -1721,7 +1809,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
-<details><summary>📋 <a href="draft/research/graphical_ep/graphical_scoping.md">Graphical Model Scale-Up — Scoping</a> — graphical_ep · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/research/graphical_ep/graphical_scoping.md">Graphical Model Scale-Up — Scoping</a> — graphical_ep · too-large · human-required · high</summary>
 
 ```
 /start_dev draft/research/graphical_ep/graphical_scoping.md
@@ -1729,7 +1817,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
-<details><summary>📋 <a href="draft/research/graphical_ep/slope_hierarchy_n25_scale_up.md">slope_hierarchy: scale the hierarchical slope recovery to N=25–50</a> — graphical_ep · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/graphical_ep/slope_hierarchy_n25_scale_up.md">slope_hierarchy: scale the hierarchical slope recovery to N=25–50</a> — graphical_ep · medium · human-required · normal</summary>
 
 ```
 /start_dev draft/research/graphical_ep/slope_hierarchy_n25_scale_up.md
@@ -1753,7 +1841,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
-<details><summary>📋 <a href="draft/research/graphical_ep/ep_campaign.md">EP campaign — phase map for the 2026 Q3 graphical/EP push</a> — graphical_ep · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/research/graphical_ep/ep_campaign.md">EP campaign — phase map for the 2026 Q3 graphical/EP push</a> — graphical_ep · too-large · human-required · high</summary>
 
 ```
 /start_dev draft/research/graphical_ep/ep_campaign.md
@@ -1761,7 +1849,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
-<details><summary>📋 <a href="draft/research/graphical_ep/ep_scoping.md">Expectation Propagation Scale-Up — Scoping</a> — graphical_ep · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/research/graphical_ep/ep_scoping.md">Expectation Propagation Scale-Up — Scoping</a> — graphical_ep · too-large · human-required · high</summary>
 
 ```
 /start_dev draft/research/graphical_ep/ep_scoping.md
@@ -1769,7 +1857,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
-<details><summary>📋 <a href="draft/research/graphical_ep/slope_hierarchy_methods_writeup.md">slope_hierarchy: methods write-up (NUTS headline, EP cautionary)</a> — graphical_ep · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/graphical_ep/slope_hierarchy_methods_writeup.md">slope_hierarchy: methods write-up (NUTS headline, EP cautionary)</a> — graphical_ep · medium · safe · normal</summary>
 
 ```
 /start_dev draft/research/graphical_ep/slope_hierarchy_methods_writeup.md
@@ -1811,7 +1899,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — euclid · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — euclid · medium · safe · high</summary>
 
 ```
 /start_dev draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md
@@ -1827,7 +1915,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/euclid/resimulate_fitted_lens_simulator.md">simulator.py: resimulate a fitted Euclid lens, and resimulate the 10 prelim lenses…</a> — euclid · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/euclid/resimulate_fitted_lens_simulator.md">simulator.py: resimulate a fitted Euclid lens, and resimulate the 10 prelim lenses…</a> — euclid · medium · safe · high</summary>
 
 ```
 /start_dev draft/feature/euclid/resimulate_fitted_lens_simulator.md
@@ -1835,7 +1923,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autoarray/delaunay_area_magnification_audit.md">Audit the Delaunay pixel-area and magnification source code for correctness bugs</a> — autoarray · small-medium · safe · normal</summary>
+<details><summary>📋 <a href="draft/bug/autoarray/delaunay_area_magnification_audit.md">Audit the Delaunay pixel-area and magnification source code for correctness bugs</a> — autoarray · small-medium · supervised · normal</summary>
 
 ```
 /start_dev draft/bug/autoarray/delaunay_area_magnification_audit.md
@@ -1843,7 +1931,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-<details><summary>📋 <a href="draft/research/euclid/magnification_robustness.md">How robust are magnification estimates</a> — euclid · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/research/euclid/magnification_robustness.md">How robust are magnification estimates</a> — euclid · medium · safe · high</summary>
 
 ```
 /start_dev draft/research/euclid/magnification_robustness.md
@@ -1851,7 +1939,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-<details><summary>📋 <a href="draft/research/euclid/sersic_index_recovery.md">Do we recover Sersic indices</a> — euclid · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/research/euclid/sersic_index_recovery.md">Do we recover Sersic indices</a> — euclid · medium · safe · high</summary>
 
 ```
 /start_dev draft/research/euclid/sersic_index_recovery.md
@@ -1859,7 +1947,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/euclid/catalogue_extension_coolest_mass_fits.md">Extend the catalogue: COOLEST CSV, mass-model FITS products, and a retroactive-update feasibility…</a> — euclid · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/euclid/catalogue_extension_coolest_mass_fits.md">Extend the catalogue: COOLEST CSV, mass-model FITS products, and a retroactive-update feasibility…</a> — euclid · medium · safe · normal</summary>
 
 ```
 /start_dev draft/feature/euclid/catalogue_extension_coolest_mass_fits.md
@@ -1896,7 +1984,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_grade_faculty.md">Batch phase 0a — the review-cost grader (sizing faculty)</a> — pyautobrain · medium · safe · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_grade_faculty.md">Batch phase 0a — the review-cost grader (sizing faculty)</a> — pyautobrain · medium · supervised · high</summary>
 
 ```
 /start_dev draft/feature/pyautobrain/batch_grade_faculty.md
@@ -1904,7 +1992,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_grade_intake.md">Batch phase 0b — intake writes the grades, and the autonomy experiment</a> — pyautobrain · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_grade_intake.md">Batch phase 0b — intake writes the grades, and the autonomy experiment</a> — pyautobrain · medium · safe · high</summary>
 
 ```
 /start_dev draft/feature/pyautobrain/batch_grade_intake.md
@@ -1968,7 +2056,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautomind/batch_budget_loop.md">Batch phase 7 — spend the whole allowance</a> — pyautomind · medium · safe · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautomind/batch_budget_loop.md">Batch phase 7 — spend the whole allowance</a> — pyautomind · medium · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/pyautomind/batch_budget_loop.md
@@ -1976,7 +2064,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/research/euclid/batch_science_lane.md">Batch phase 8 — the laptop lane</a> — euclid · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/euclid/batch_science_lane.md">Batch phase 8 — the laptop lane</a> — euclid · medium · safe · normal</summary>
 
 ```
 /start_dev draft/research/euclid/batch_science_lane.md
@@ -2004,6 +2092,55 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 - `draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md`
 - `draft/docs/workspaces/plot_coverage_followups.md`
 - `draft/research/autolens_profiling/cluster_gradient_search_benchmark.md`
+
+</details>
+
+150 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+
+<details>
+<summary>Prompts with no witness</summary>
+
+- `draft/feature/autoarray/adapt_linear_default_flip.md`
+- `draft/feature/autoarray/arcsecond_to_decimal.md`
+- `draft/feature/autoarray/multiwavelength_inversion.md`
+- `draft/feature/autoarray/rectangular_multi_submesh.md`
+- `draft/feature/autofit/ep_analytic_updates.md`
+- `draft/feature/autofit/ep_lbfgs_jax.md`
+- `draft/feature/autofit/prior_exit_sampler_coverage.md`
+- `draft/feature/autofit/search_seed_reproducibility.md`
+- `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
+- `draft/feature/autogalaxy/dpie_sigma0_parameterization.md`
+- `draft/feature/autogalaxy/piemass_potential.md`
+- `draft/feature/autolens/area_magnification_leggos.md`
+- `draft/feature/autolens/magnification_errors_posterior_draws.md`
+- `draft/feature/autolens/magnification_maps_visualization.md`
+- `draft/feature/autolens/multi_plane_time_delays.md`
+- `draft/feature/autolens/point_magnification_api.md`
+- `draft/feature/autolens/source_cluster_arc.md`
+- `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
+- `draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md`
+- `draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md`
+- `draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md`
+- `draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md`
+- `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md`
+- `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md`
+- `draft/feature/euclid/euclid_dr1_prep_epic.md`
+- `draft/feature/euclid/resimulate_fitted_lens_simulator.md`
+- `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
+- `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
+- `draft/feature/pyautobrain/batch_board.md`
+- `draft/feature/pyautobrain/batch_conductor.md`
+- `draft/feature/pyautobrain/batch_dispatch.md`
+- `draft/feature/pyautobrain/batch_gate_unattended.md`
+- `draft/feature/pyautobrain/batch_notify_tier_merge.md`
+- `draft/feature/pyautobrain/board_without_gh.md`
+- `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
+- `draft/feature/pyautobrain/brain_board_follow_ups.md`
+- `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
+- `draft/feature/pyautomind/batch_budget_loop.md`
+- `draft/feature/pyautomind/batch_queue_and_records.md`
+- `draft/feature/pyautomind/bundle_nightly_claude_pass.md`
+- _… and 110 more_
 
 </details>
 

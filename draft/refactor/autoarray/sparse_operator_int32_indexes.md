@@ -2,7 +2,10 @@
 
 Target: PyAutoArray
 Type: refactor
-Autonomy: safe
+Autonomy: supervised
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 
 ## Context
 

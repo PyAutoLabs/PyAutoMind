@@ -12,12 +12,15 @@ Difficulty: medium
 Autonomy: safe
 Priority: high
 Status: draft
+Consequence: notify
+Witness: the before/after distribution of `Autonomy:`, `Consequence:` and `Unattended:` across every draft prompt, plus `lifecycle.py check` clean and a dashboard regeneration whose only diff is the new pick list and the new facets.
+Review-minutes: 0
+Unattended: ready
 Epic: two-slot-batching
 Phase: 0
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md
 Filed: 2026-08-30
 Blocked-by: phase 0b (the rule and the headers must be settled before 137 files are touched)
-Witness: the before/after distribution of `Autonomy:`, `Consequence:` and `Unattended:` across every draft prompt, plus `lifecycle.py check` clean and a dashboard regeneration whose only diff is the new pick list and the new facets.
 
 Depends on 0b, whose dry run has already shown what this will do.
 

@@ -11,6 +11,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Filed: 2026-07-13 (backfilled from git)
 
 Durable follow-up to the Matern-kernel tfp/jax incompatibility (PyAutoArray #385).

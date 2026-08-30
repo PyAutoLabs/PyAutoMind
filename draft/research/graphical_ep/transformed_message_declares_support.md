@@ -10,6 +10,9 @@ Difficulty: medium
 Autonomy: human-required
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: never
 Filed: 2026-08-27
 
 Follow-up owed by `complete/2026/08/loggaussian-prior-declares-own-support.md`

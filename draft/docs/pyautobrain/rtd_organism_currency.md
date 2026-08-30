@@ -11,6 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
 
 Found by the 2026-08-19 readability census (#237). The RTD narrative

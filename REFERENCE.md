@@ -318,11 +318,11 @@ Free-form markdown. Strong conventions:
   Difficulty: medium        # small | medium | large | too-large
   Autonomy: supervised      # safe | supervised | human-required
   Priority: normal          # low | normal | high
+  Status: draft
   Consequence: glance       # notify | glance | judge — how much review it needs
   Witness: ids bit-identical, 62 -> 9.7 ms   # what makes it checkable in minutes
   Review-minutes: 3         # a seed, not a measurement
   Unattended: ready         # ready | needs-slicing | never
-  Status: draft
   Filed: 2026-07-09         # optional; the day the prompt was written
   Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below

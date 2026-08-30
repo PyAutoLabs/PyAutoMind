@@ -13,6 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-22 (backfilled from git)
 
 Split out of PyAutoNerves#153 on 2026-08-22, which stamped the small-datasets

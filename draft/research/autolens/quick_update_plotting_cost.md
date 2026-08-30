@@ -9,9 +9,12 @@ Themes:
 - visualization
 - profiling
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: medium
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-31 (backfilled from git)
 
 ## Why

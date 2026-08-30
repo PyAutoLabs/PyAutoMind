@@ -4,7 +4,10 @@ Themes:
 - notebooks
 - hygiene
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Priority: low
 Filed: 2026-08-07 (backfilled from git)
 

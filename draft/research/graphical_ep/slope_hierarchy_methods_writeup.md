@@ -8,9 +8,12 @@ Themes:
 - graphical-ep
 - samplers
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: graphical-ep
 Model: Opus (narrative/scientific prose — see feedback_tutorial_prose_opus)
 Filed: 2026-07-22 (backfilled from git)

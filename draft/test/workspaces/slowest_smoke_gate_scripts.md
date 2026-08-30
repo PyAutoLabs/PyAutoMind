@@ -10,6 +10,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 
 The per-PR smoke gate in `autolens_workspace_test` costs ~11m20s wall-clock, of
 which ~9m13s is script execution. Three entries are 42% of that. This prompt is

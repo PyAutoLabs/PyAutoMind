@@ -7,9 +7,12 @@ Repos:
 Themes:
 - reduce
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-09 (backfilled from git)
 
 Filed from the frame-products validation session (issue #16 / PR #18,

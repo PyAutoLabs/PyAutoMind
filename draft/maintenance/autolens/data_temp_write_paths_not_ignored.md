@@ -7,9 +7,12 @@ Repos:
 Themes:
 - hygiene
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-27
 
 Filed 2026-08-27 from the sibling-repo sweep required by

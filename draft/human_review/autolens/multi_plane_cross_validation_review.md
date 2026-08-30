@@ -10,6 +10,9 @@ Themes:
 - notebooks
 Priority: normal
 Status: awaiting human review
+Consequence: judge
+Review-minutes: 25
+Unattended: never
 Filed: 2026-08-29
 
 Shipped by an agent session on 2026-08-29 in two PRs; the human asked to read it before it

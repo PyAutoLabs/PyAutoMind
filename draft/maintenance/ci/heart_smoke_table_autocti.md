@@ -8,9 +8,12 @@ Themes:
 - ci-smoke
 - cti
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-24
 
 `PyAutoHeart/heart/smoke.py` is the local smoke runner — "one isolated

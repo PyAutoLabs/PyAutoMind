@@ -8,6 +8,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised (phased 2026-07-08 → polish_phase_1_design.md … polish_phase_4_breakdown_dashboard.md; work proceeds through the phase prompts)
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Filed: 2026-05-18 (backfilled from git)
 
 autolens_profiling is now a mature project, with a good separation of different tasks into packages (instruments, latent, likelihood_breakdown, etc)

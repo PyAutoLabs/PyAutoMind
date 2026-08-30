@@ -11,6 +11,9 @@ Difficulty: large
 Autonomy: human-required
 Priority: high
 Status: draft
+Consequence: judge
+Review-minutes: 25
+Unattended: never
 Epic: two-slot-batching
 Phase: 3
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md

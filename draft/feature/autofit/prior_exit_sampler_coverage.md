@@ -8,9 +8,12 @@ Themes:
 - samplers
 - jax-gradient
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: medium
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-17 (backfilled from git)
 
 ## What this is

@@ -6,9 +6,12 @@ Themes:
 - notebooks
 - cluster
 Difficulty: too-large
-Autonomy: supervised
+Autonomy: human-required
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-05-08 (backfilled from git)
 
 autolens_workspace:

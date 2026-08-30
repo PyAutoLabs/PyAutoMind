@@ -14,6 +14,9 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-29
 
 Found by the euclid_strong_lens_modeling_pipeline config drift sweep (euclid#43 / PR #44,

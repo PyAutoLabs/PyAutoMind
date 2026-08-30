@@ -8,6 +8,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Filed: 2026-05-14 (backfilled from git)
 
 You are working in the PyAutoLens / PyAutoArray plotting codebase.

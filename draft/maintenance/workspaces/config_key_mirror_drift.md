@@ -10,9 +10,12 @@ Themes:
 - hygiene
 - notebooks
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-13 (backfilled from git)
 
 Filed 2026-07-12 from a `/hygiene config` audit (recursive key-path diff of

@@ -5,9 +5,12 @@ Target: workspaces
 Themes:
 - ci-smoke
 Difficulty: too-large
-Autonomy: supervised
+Autonomy: human-required
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-04-27 (backfilled from git)
 
 The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced

@@ -8,9 +8,12 @@ Repos:
 Themes:
 - mind-workflow
 Difficulty: medium
-Autonomy: safe
+Autonomy: supervised
 Priority: normal
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: two-slot-batching
 Phase: 7
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md

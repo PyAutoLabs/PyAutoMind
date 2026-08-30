@@ -8,9 +8,12 @@ Themes:
 - assistants
 - cluster
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: low
 Status: in progress — autolens_assistant leg shipped 2026-07-25 (autolens_assistant#91); autogalaxy leg deferred until the autogalaxy packages exist
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Parent: draft/docs/autolens/split_lensing_regimes.md
 Filed: 2026-07-25 (backfilled from git)
 

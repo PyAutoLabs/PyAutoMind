@@ -5,9 +5,12 @@ Target: PyAutoReduce
 Themes:
 - reduce
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-08 (backfilled from git)
 
 PyAutoReduce phase 1 (PyAutoReduce#2, PR #3) reduces slacs0008-0004 to data

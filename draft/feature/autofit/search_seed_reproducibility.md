@@ -7,9 +7,12 @@ Repos:
 Themes:
 - samplers
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: medium
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Issue: (none yet)
 Filed: 2026-08-05 (backfilled from git)
 

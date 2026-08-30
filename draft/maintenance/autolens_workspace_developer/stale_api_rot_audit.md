@@ -10,6 +10,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-04 (backfilled from git)
 
 Found 2026-08-04 while fixing the `aplt.Output` drift in this repo under
