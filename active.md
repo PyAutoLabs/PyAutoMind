@@ -1,15 +1,5 @@
 # Active Tasks
 
-## session-hook-long-tail
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/369
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/372
-- prompt: active/session_hook_reaches_only_four_of_thirty_four_repos.md
-- issued: 2026-08-29
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/mind-workflow
-- repos:
-  - PyAutoMind: feature/session-hook-long-tail
-
 ## nautilus-serial-bound-training
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1547
 - prompt: active/nautilus_serial_bound_training.md

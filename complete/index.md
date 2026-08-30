@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1227 records across 7 buckets.
+1228 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -400,6 +400,7 @@ markers; everything below GENERATED is rebuilt.
 - [script-timing-baselines-fix](2026/08/script-timing-baselines-fix.md)
 - [script-title-underline-off-by-one](2026/08/script-title-underline-off-by-one.md)
 - [searches-readme-dashboard](2026/08/searches-readme-dashboard.md)
+- [session-hook-long-tail](2026/08/session-hook-long-tail.md) — SessionStart hook: manifest exclusions, a visible denominator, and push-triggered propagation to the 30-repo l…
 - [shared-log-norm-helper](2026/08/shared-log-norm-helper.md) — Collapsed three copies of the matplotlib colour-norm construction into
 - [should-simulate-capped-branch-reuse](2026/08/should-simulate-capped-branch-reuse.md) — small, single-repo follow-up of the closed PyAutoNerves#153
 - [simulator-util-to-af-ex](2026/08/simulator-util-to-af-ex.md) — moved the four 1D-Gaussian simulator helpers out of the duplicated
