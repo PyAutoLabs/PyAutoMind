@@ -128,9 +128,20 @@ requirement bite at conception rather than being aspirational.
 
 Tier A is a genuine doctrine change — `AUTONOMY.md` today says merge and
 issue-close are "human, always" — and it is **the only mechanism in this epic
-that reduces total attention rather than re-timing it**. It is the human's
-decision to make, explicitly and dated, and phase 4 exists to put it to them
-with the evidence rather than to assume it.
+that reduces total attention rather than re-timing it**. The human decided on
+2026-08-30 to **shadow it for four weeks** before granting or refusing it; phase
+4 holds the protocol and the pre-registered decision rule, and the window is
+already open.
+
+**How much of the flow it can ever cover.** Bucketing all 332 August records by
+the repos their PRs name: organ repos only **56 (17%)** — the `notify` candidate
+pool; workspace/assistant/profiling only 52 (16%); touches a core library 99
+(30%); **names no PR at all — research, decisions, written verdicts — 125
+(38%)**. So the window will be well powered at roughly fifty candidates, and the
+tier's ceiling is about a sixth of throughput. Worth the doctrine change, and
+not the whole answer: the largest single bucket is judgement-shaped by nature,
+and nothing here makes a written verdict cheaper to read. Say so rather than
+letting the plan imply otherwise.
 
 ## What already exists and must be reused
 
@@ -208,7 +219,10 @@ chips the dashboard already renders.
    batch-aware Heart semantics; what a batch "launch" means; decide-and-flag,
    capped; the `rejected-at-review` outcome and the dated autonomy experiment.
    `draft/feature/pyautobrain/`
-4. **The tier-A merge tier** — the doctrine decision that buys back throughput.
+4. **The tier-A merge tier** — **decided 2026-08-30: shadow for four weeks**
+   (window closes 2026-09-27), then grant, narrow or refuse against a
+   pre-registered rule. Stage 1 rows are already being appended to
+   `autonomy_log.md`, so the window is running and is not on the critical path.
    `draft/feature/pyautobrain/`
 5. **Dispatch** — paced waves, concurrency cap, one member per library repo,
    degrade paths. `draft/feature/pyautobrain/`

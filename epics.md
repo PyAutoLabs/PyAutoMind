@@ -102,8 +102,12 @@ epic, never picked standalone.
   and 4 are doctrine edits marked human-required — phase 3 fixes the ship gate
   for unattended conditions (Heart at 3am, what a batch launch is, an
   independent-model adversarial leg, capped decide-and-flag, a
-  `rejected-at-review` outcome); phase 4 puts the tier-A auto-merge decision to
-  the human after a four-week shadow window, and is the ONLY phase that reduces
-  total attention rather than re-timing it. Supersedes/absorbs
+  `rejected-at-review` outcome); phase 4 is the tier-A auto-merge decision — the
+  human chose 2026-08-30 to SHADOW it for four weeks (window closes 2026-09-27)
+  against a pre-registered rule, and stage-1 rows are already being appended to
+  autonomy_log.md, so the window runs in parallel and is not on the critical
+  path. It is the ONLY phase that reduces total attention rather than re-timing
+  it, and its ceiling is ~17% of throughput (56 of 332 August records touch organ
+  repos only; 125 name no PR at all and are judgement-shaped by nature). Supersedes/absorbs
   draft/feature/pyautomind/bundle_nightly_claude_pass.md (parked 2026-08-27 for
   want of a driver — this epic is the driver).
