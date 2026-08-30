@@ -34,7 +34,7 @@ it" is expressible directly:
 - ref: draft/<work-type>/<target>/<name>.md    # kind: prompt
 - ref: euclid-dr1-prep                          # kind: epic-slice — take the next phase
 - ref: numba-cpu                                # kind: theme-sweep — any ready prompt on this theme
-- lane: cloud | laptop                          # optional; default cloud
+- lane: any | local-dev                         # optional; default any
 - note: <one line, optional>
 ```
 
@@ -52,7 +52,7 @@ matter more than the prose:
 # Batch 2026-09-03 pm
 - dispatched: 2026-09-03T17:40Z
 - shift: night
-- lane: cloud
+- lane: any
 - review-minutes-planned: 42
 - usage-window-at-dispatch: <5h %, weekly %, opus %>   # read from /usage
 - members:
@@ -76,14 +76,22 @@ diff and checks that actually ran.
 ## The `Lane:` header
 
 ```
-Lane: cloud | laptop
+Lane: any | local-dev
 ```
 
-`laptop` means the work needs a local dataset/output tree or an SSH endpoint no
-container has. `batch plan` never puts a `laptop` task into a cloud shift. Note
-`active.md` already carries `location:` for the `/handoff` flow — `Lane:` is the
-prompt-side static fact, `location:` stays the live per-task one. Do not merge
-them.
+Reuse the environment vocabulary `PyAutoBrain/skills/WORKFLOW.md` already
+defines (`local-dev` / `web-github` / `ci-only` / `analysis-only`) rather than
+inventing a parallel cloud/laptop one. `local-dev` means the work needs the local
+dataset and output trees, an SSH endpoint, or the human at the machine.
+
+A session **detects its own lane and refuses to plan the other**, reporting
+rather than silently dropping: *"4 local-dev tasks are ready — run this from the
+laptop."* One queue holds both lanes; the planner filters, the human does not
+maintain two backlogs. See phase 8.
+
+Note `active.md` already carries `location:` for the `/handoff` flow — `Lane:` is
+the prompt-side static fact, `location:` stays the live per-task one. Do not
+merge them.
 
 ## The `ledger_merge.py` entries
 

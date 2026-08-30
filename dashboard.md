@@ -1948,7 +1948,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautomind/batch_budget_loop.md">Batch phase 7 — budget and backpressure</a> — pyautomind · medium · safe · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautomind/batch_budget_loop.md">Batch phase 7 — spend the whole allowance</a> — pyautomind · medium · safe · normal</summary>
 
 ```
 /start_dev draft/feature/pyautomind/batch_budget_loop.md
@@ -1956,7 +1956,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/research/euclid/batch_science_lane.md">Batch phase 8 — the science lane: get the laptop out…</a> — euclid · large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/euclid/batch_science_lane.md">Batch phase 8 — the laptop lane</a> — euclid · medium · supervised · normal</summary>
 
 ```
 /start_dev draft/research/euclid/batch_science_lane.md

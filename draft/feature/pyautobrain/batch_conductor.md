@@ -36,10 +36,18 @@ The composition rule, and the one that matters:
 
 > **Σ `Review-minutes:` over tier-`glance` and tier-`judge` members ≤ 45.**
 
-Not a task count. Tier-`notify` members cost zero human minutes once phase 4
-lands and are capped separately by throughput, not by attention. In practice a
-slot holds two or three `judge` tasks, or one `judge` plus several `glance`.
-Say this in the decision, plainly, every time — the number is the whole point.
+Not a task count. That is one slot's worth, and **one slot a day is the
+baseline** (decided 2026-08-30) — a second slot is opportunistic, and nothing is
+sized on the assumption the human opens one. In practice the review-bearing half
+holds two or three `judge` tasks, or one `judge` plus several `glance`. Say the
+number in the decision, plainly, every time — it is the whole point.
+
+Then plan **the fill** on top: work that costs zero review-minutes, sized by
+whatever weekly allowance remains, because the target is to spend 100% of it
+(phase 7). Legitimate fill is tier-`notify` work, the adversarial review leg,
+slicing and witness authoring, backlog re-grading, and deeper verification of
+work that already passed. **Research and experiments are never fill** — they
+produce verdicts, and a verdict is the most expensive review there is.
 
 Other constraints, each stated as applied:
 
@@ -61,8 +69,10 @@ Other constraints, each stated as applied:
 - **One slice per epic per batch.** Epic phases are ordered, so two members of
   one epic could not run in parallel anyway. This is also what delivers "small
   bits of long tasks alongside standalone tasks".
-- **Readiness and lane.** Every member is `Unattended: ready`; a cloud shift
-  takes no `Lane: laptop` member.
+- **Readiness and lane.** Every member is `Unattended: ready`. The planner
+  **detects its own lane** and plans only that one, reporting the other's ready
+  count rather than hiding it: *"4 local-dev tasks are ready — run this from the
+  laptop."*
 
 Reuse the auto-bundler wholesale (`_intake.py:807-1008`) for grouping: the
 theme-primary pooling key and the Jaccard affinity packing are already right and
