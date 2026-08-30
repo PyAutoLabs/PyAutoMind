@@ -15,9 +15,15 @@ Status: draft
 Epic: two-slot-batching
 Filed: 2026-08-30
 
-Parent tracker for the move from **one task per chat, babysat** to **two human
-hours a day and everything else unattended**. Never routed to `/start_dev`
+Parent tracker for the move from **one task per chat, babysat** to **a bounded
+human slot and everything else unattended**. Never routed to `/start_dev`
 directly — each phase is its own prompt, issued ONE AT A TIME.
+
+The slug says "two slots" because that was the opening goal. The sizing decision
+taken 2026-08-30 is **one slot a day as the baseline, plus a fill-only floor** —
+a second slot is welcome and the planner will compose for it, but nothing is
+sized on the assumption it happens. The slug stays; nine prompt headers and
+`epics.md` point at it.
 
 ## The goal, in the human's words
 
@@ -57,8 +63,10 @@ hours than today, at 6am, from a phone.
 So the epic's real subject is **reducing human judgement per merged unit**, not
 scheduling more of it. Three levers do that, and everything else is tuning:
 
-1. **Price review honestly and compose against it.** A batch is planned against
-   a 60-minute review budget, not a task count.
+1. **Price review honestly and compose against it.** A batch's review-bearing
+   half is planned against ~45 review-minutes — **one slot a day is the
+   baseline**, a second is opportunistic — and everything above that is *fill*:
+   work that costs zero review-minutes.
 2. **Make work reviewable by construction.** The records that *are* reviewable
    in minutes are the ones carrying machine-checkable witnesses — "ids
    bit-identical, 62→9.7 ms", "31-rule byte-equality", control-tested spy
@@ -163,9 +171,17 @@ inception. No machine-readable epic phase state. No dispatcher. No review surfac
 
 ## Vocabulary
 
-- **SLOT** — a human hour, twice a day, budgeted in **review-minutes**.
+- **SLOT** — a human hour, **once a day as the baseline**, budgeted in
+  review-minutes. A second slot is a bonus, never an assumption.
 - **SHIFT** — the unattended interval between slots.
-- **BATCH** — what is dispatched into one shift.
+- **BATCH** — what is dispatched into one shift: a *review-bearing half* sized by
+  the slot, plus a *fill* sized by the remaining allowance.
+- **FILL** — work that costs zero review-minutes: tier-`notify` work, the
+  adversarial review leg, slicing, witness authoring, re-grading, deeper
+  verification. Never research — a verdict is the most expensive review there is.
+- **FLOOR** — the fill-only batch that dispatches whether or not the human turns
+  up. Fill-only is what makes it safe: a floor of review-bearing work just digs
+  the hole deeper while they are away.
 - **QUEUE** (`queue.md`) — the human's ordered wishlist; they never compose a
   batch by hand.
 - **WITNESS** — the machine-checkable claim that makes a task reviewable.
@@ -227,10 +243,51 @@ chips the dashboard already renders.
 5. **Dispatch** — paced waves, concurrency cap, one member per library repo,
    degrade paths. `draft/feature/pyautobrain/`
 6. **The batch board** — built before the slot starts. `draft/feature/pyautobrain/`
-7. **Budget and backpressure** — window readings, soft ramp, bucket reservation.
-   `draft/feature/pyautomind/`
-8. **The science lane** — prepare/execute recut, manifest-first results, the HPC
-   bridge assessment. `draft/research/euclid/`
+7. **Spend the whole allowance** — **decided 2026-08-30: target 100% of the
+   weekly limit**, so the failure mode is *underspend*. Human review capacity
+   caps the review-bearing half; the surplus goes to fill. Controlled by a weekly
+   burn-up read once per slot. `draft/feature/pyautomind/`
+8. **The laptop lane** — **decided 2026-08-30: science stays on the laptop**, and
+   the lane is made first-class rather than engineered away.
+   `draft/research/euclid/`
+
+## The laptop lane, separately
+
+**Decided 2026-08-30: science projects stay on the laptop.** Mobile sessions
+cannot easily reach RAL, and an HPC outage would block everything — a canonical
+home on RAL trades a dependency the human controls for one they do not. So the
+laptop lane is *accepted* and made first-class rather than engineered away.
+
+Closed by that decision, and recorded so nobody re-derives them: RAL as canonical
+home; a git-courier cron on the login node (its value collapses once the laptop
+must be on to hold the data anyway); a Globus Compute endpoint or a self-hosted
+GitHub runner there (same, plus both are persistent login-node processes needing
+an operator conversation). Already closed on other grounds: SSH from a Claude
+container in any variant, Open OnDemand, Cirun — and the fact that
+`euclid-dr1-prep` phases 4, 6a and 6b say in their *own prompts* that they are
+human-driven and supervised with a judged verdict as the deliverable, so no
+transport was ever going to make them unattended.
+
+What survives, and matters more now:
+
+- **The prepare / execute recut** — now the main lever, because it is the only
+  thing that moves science work into the lane that can run unattended.
+  Submission scripts, analysis code, plotting, catalogue tooling and library
+  audits (phase 6c is already flagged as the one phase that could land as a fast
+  standalone fix) are ordinary cloud work. Only the run itself is bound.
+- **Manifest-first results**, for a changed reason: not to reach RAL, but to let
+  a *cloud* session reason about outcomes while the laptop is off. The laptop
+  pushes small result JSONs, catalogue CSVs and downsized PNGs when it is on; a
+  cloud session reads those and plans the next submission without ever opening a
+  FITS file.
+
+The lane uses the vocabulary `PyAutoBrain/skills/WORKFLOW.md` already defines
+rather than a parallel one: `Lane: any | local-dev`. **A session detects its own
+lane and refuses to plan the other**, reporting rather than silently dropping —
+*"4 local-dev tasks are ready, run this from the laptop"* — and a `local-dev`
+batch is dispatched by the human, from the laptop, in a slot drained
+opportunistically when they are doing science anyway. One queue holds both lanes;
+the planner filters.
 
 ## Standing risks every phase must respect
 
