@@ -10,7 +10,7 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: high
-Status: draft
+Status: shipped 2026-08-30 — branch claude/autonomous-task-batching-k8lw9t
 Consequence: judge
 Review-minutes: 20
 Unattended: ready

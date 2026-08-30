@@ -50,8 +50,10 @@ anything you could not verify.
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
+> - `draft/feature/pyautobrain/batch_conductor.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
 > - `draft/feature/pyautobrain/batch_gate_unattended.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
 > - `draft/feature/pyautobrain/batch_grade_intake.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
+> - `draft/feature/pyautomind/batch_queue_and_records.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
 
 ## Start here
 

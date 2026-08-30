@@ -258,10 +258,13 @@ chips the dashboard already renders.
      `draft/feature/pyautobrain/batch_grade_intake.md`
    - **0c** re-grade the backlog and give the dashboard a slot-shaped pick list.
      `draft/feature/pyautomind/batch_grade_backlog.md`
-1. **The queue and the batch record** — `queue.md`, `batches/`, `Lane:`, the
-   `ledger_merge.py` allowlist. `draft/feature/pyautomind/`
-2. **The `batch` conductor: plan, slice, collect** — reasoning only, no
-   dispatch. `draft/feature/pyautobrain/`
+1. **The queue and the batch record** — **SHIPPED 2026-08-30.** `queue.md`,
+   `batches/` (both on the ledger side of `ledger_merge.py`, so batch history
+   lands without a human), and the `Lane:` header.
+   `draft/feature/pyautomind/`
+2. **The `batch` conductor** — **`plan` SHIPPED 2026-08-30**; `slice` and
+   `collect` remain. `plan` is useful alone: run it in a slot and dispatch by
+   tapping the dashboard's existing chips. `draft/feature/pyautobrain/`
 3. **The gate under unattended conditions** — **SHIPPED 2026-08-30.** All four
    doctrine changes are in `AUTONOMY.md`, dated, each with a revert condition:
    what a batch launch is (membership fixed at approval, grant expires with the

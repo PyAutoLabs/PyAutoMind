@@ -45,8 +45,14 @@ from pathlib import Path
 # Directories holding nothing but the task ledger: prompts, in-flight state and
 # the completion records. Their whole contents are ledger (subject to the
 # EXCLUDED_NAMES guard below).
-LEDGER_DIRS = ("draft/", "active/", "complete/")
+LEDGER_DIRS = ("draft/", "active/", "complete/", "batches/")
 
+# `batches/` joins the state folders (2026-08-30): a batch record is the ledger
+# of what was dispatched into one shift and what came back — the same genre as
+# `complete/`, written by the workflow, read by the next slot. It has to land
+# without a human, or the unattended system cannot record its own history
+# unattended.
+#
 # Root files that are registry state or a generated render of it. Deliberately
 # NOT here: README.md, AGENTS.md, CLAUDE.md, REFERENCE.md, ROUTING.md,
 # CONTRIBUTING.md, AI_POLICY.md, repos.yaml, themes.md — prose and
@@ -66,6 +72,7 @@ LEDGER_FILES = (
     "autonomy_log.md",
     "dashboard.md",
     "dashboard.html",
+    "queue.md",
 )
 
 # Names that are ledger by location but executable by collection. The ledger

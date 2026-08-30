@@ -323,6 +323,7 @@ Free-form markdown. Strong conventions:
   Witness: ids bit-identical, 62 -> 9.7 ms   # what makes it checkable in minutes
   Review-minutes: 3         # a seed, not a measurement
   Unattended: ready         # ready | needs-slicing | never
+  Lane: any                 # any | local-dev — where the work can run
   Filed: 2026-07-09         # optional; the day the prompt was written
   Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
@@ -410,6 +411,45 @@ Free-form markdown. Strong conventions:
   from the shared sizing faculty the Feature Agent also uses — so the value shown
   up front is the one the Feature Agent later acts on. Still a convention, not a
   schema: all keys remain optional and there is **no YAML frontmatter**.
+
+### The queue and the batch records
+
+Two ledger surfaces the batch workflow adds. Both auto-merge
+(`scripts/ledger_merge.py`): an unattended system that cannot record its own
+history unattended will not record it.
+
+- **[`queue.md`](queue.md)** — the human's ordered wishlist, and the only file
+  they maintain by hand between slots. **Order is priority**; there is no
+  `priority:` field, because moving an entry up *is* the act of prioritising it.
+  Entries are a `prompt` (one named file), an `epic-slice` (the named epic's
+  *next* phase, whatever that turns out to be), or a `theme-sweep` (anything
+  `Unattended: ready` on that primary theme). A batch is never composed here —
+  `pyauto-brain batch plan` proposes one against a review-minute budget, and the
+  human approves or edits it in the slot.
+- **`batches/<YYYY-MM-DD>-<am|pm>.md`** — one record per dispatched batch,
+  written at dispatch and appended at collection. Schema and the three fields
+  that are easy to get wrong are in [`batches/AGENTS.md`](batches/AGENTS.md).
+
+### `Lane:` — where the work can run
+
+```
+Lane: any | local-dev
+```
+
+Spelled in the environment vocabulary `PyAutoBrain/skills/WORKFLOW.md` already
+defines (`local-dev` / `web-github` / `ci-only` / `analysis-only`) rather than a
+parallel cloud/laptop one. `local-dev` means the work needs the local dataset and
+output trees, an SSH endpoint, or the human at the machine — science runs, most
+of the Euclid programme's execution half. Default `any`.
+
+**A session detects its own lane and refuses to plan the other**, reporting the
+count rather than silently dropping it: *"4 local-dev tasks are ready — run this
+from the laptop."* Detection is probed from the environment, never declared: a
+session that could be *told* where it is could plan `local-dev` work it cannot
+run. One queue holds both lanes; the planner filters.
+
+Not to be confused with `active.md`'s `location:`, which is live per-task
+handoff state. `Lane:` is a static fact about the work.
 
 ### The review-cost model
 
