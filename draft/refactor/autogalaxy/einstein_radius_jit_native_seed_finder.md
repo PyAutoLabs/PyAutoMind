@@ -8,6 +8,9 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-05-21 (backfilled from git)
 
 Small follow-up to the Phase B work (PyAutoGalaxy #435, PyAutoFit #1288,

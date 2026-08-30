@@ -13,6 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-06 (backfilled from git)
 
 Filed 2026-08-06 from a full `/dep_audit` (38 capped/pinned specifiers across

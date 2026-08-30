@@ -11,6 +11,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: phased
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Split-into: complete/2026/08/board-github-data-seam.md (phase 1, shipped 2026-08-27), draft/feature/pyautobrain/board_without_gh_phase2_legs.md
 Filed: 2026-08-26
 

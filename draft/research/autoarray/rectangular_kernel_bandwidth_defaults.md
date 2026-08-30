@@ -9,9 +9,12 @@ Repos:
 Themes:
 - pixelization
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-23 (backfilled from git)
 
 ## Context (2026-07-23, from the rectangular-mesh-consolidation reference re-derivation)

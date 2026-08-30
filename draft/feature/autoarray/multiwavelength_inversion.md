@@ -9,6 +9,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-04-27 (backfilled from git)
 
 Can create a list of InversionMatrix objects for each dataset + tracer and then have a new class which takes a list of

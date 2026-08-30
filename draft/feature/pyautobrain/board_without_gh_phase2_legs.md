@@ -8,9 +8,12 @@ Themes:
 - dashboard
 - mind-workflow
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-27
 Parent: draft/feature/pyautobrain/board_without_gh.md
 After: complete/2026/08/board-github-data-seam.md (phase 1 shipped 2026-08-27, PyAutoBrain#303 — this is unblocked)

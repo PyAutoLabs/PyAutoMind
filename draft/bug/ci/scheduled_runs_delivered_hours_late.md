@@ -8,7 +8,10 @@ Repos:
 Themes:
 - ci-smoke
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Priority: high
 Filed: 2026-08-28
 

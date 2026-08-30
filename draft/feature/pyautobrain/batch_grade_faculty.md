@@ -7,14 +7,17 @@ Repos:
 Themes:
 - mind-workflow
 Difficulty: medium
-Autonomy: safe
+Autonomy: supervised
 Priority: high
 Status: draft
+Consequence: judge
+Witness: the grade for a fixed set of sample prompts, pinned as a golden file; plus a case proving no-witness ⇒ judge, and a case proving declared beats derived.
+Review-minutes: 20
+Unattended: ready
 Epic: two-slot-batching
 Phase: 0
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md
 Filed: 2026-08-30
-Witness: the grade for a fixed set of sample prompts, pinned as a golden file; plus a case proving no-witness ⇒ judge, and a case proving declared beats derived.
 
 Read the epic's "Three consequence tiers" and "The finding that reorganises
 everything else" first — the *why* lives there and is not repeated here.

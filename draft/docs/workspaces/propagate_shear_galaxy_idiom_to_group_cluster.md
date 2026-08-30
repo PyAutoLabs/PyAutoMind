@@ -8,7 +8,10 @@ Themes:
 - cluster
 - notebooks
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Priority: normal
 Parent: complete/2026/07/multi-galaxy-imaging-parity.md
 Filed: 2026-07-30 (backfilled from git)

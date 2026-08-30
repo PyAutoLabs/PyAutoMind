@@ -17,6 +17,9 @@ Difficulty: low-medium
 Autonomy: supervised
 Priority: normal
 Status: split (phases 1-2 SHIPPED 2026-08-23; phase 3 open)
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-08-23
 
 ## Provenance

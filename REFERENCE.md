@@ -319,6 +319,11 @@ Free-form markdown. Strong conventions:
   Autonomy: supervised      # safe | supervised | human-required
   Priority: normal          # low | normal | high
   Status: draft
+  Consequence: glance       # notify | glance | judge — how much review it needs
+  Witness: ids bit-identical, 62 -> 9.7 ms   # what makes it checkable in minutes
+  Review-minutes: 3         # a seed, not a measurement
+  Unattended: ready         # ready | needs-slicing | never
+  Lane: any                 # any | local-dev — where the work can run
   Filed: 2026-07-09         # optional; the day the prompt was written
   Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
@@ -406,6 +411,93 @@ Free-form markdown. Strong conventions:
   from the shared sizing faculty the Feature Agent also uses — so the value shown
   up front is the one the Feature Agent later acts on. Still a convention, not a
   schema: all keys remain optional and there is **no YAML frontmatter**.
+
+### The queue and the batch records
+
+Two ledger surfaces the batch workflow adds. Both auto-merge
+(`scripts/ledger_merge.py`): an unattended system that cannot record its own
+history unattended will not record it.
+
+- **[`queue.md`](queue.md)** — the human's ordered wishlist, and the only file
+  they maintain by hand between slots. **Order is priority**; there is no
+  `priority:` field, because moving an entry up *is* the act of prioritising it.
+  Entries are a `prompt` (one named file), an `epic-slice` (the named epic's
+  *next* phase, whatever that turns out to be), or a `theme-sweep` (anything
+  `Unattended: ready` on that primary theme). A batch is never composed here —
+  `pyauto-brain batch plan` proposes one against a review-minute budget, and the
+  human approves or edits it in the slot.
+- **`batches/<YYYY-MM-DD>-<am|pm>.md`** — one record per dispatched batch,
+  written at dispatch and appended at collection. Schema and the three fields
+  that are easy to get wrong are in [`batches/AGENTS.md`](batches/AGENTS.md).
+
+### `Lane:` — where the work can run
+
+```
+Lane: any | local-dev
+```
+
+Spelled in the environment vocabulary `PyAutoBrain/skills/WORKFLOW.md` already
+defines (`local-dev` / `web-github` / `ci-only` / `analysis-only`) rather than a
+parallel cloud/laptop one. `local-dev` means the work needs the local dataset and
+output trees, an SSH endpoint, or the human at the machine — science runs, most
+of the Euclid programme's execution half. Default `any`.
+
+**A session detects its own lane and refuses to plan the other**, reporting the
+count rather than silently dropping it: *"4 local-dev tasks are ready — run this
+from the laptop."* Detection is probed from the environment, never declared: a
+session that could be *told* where it is could plan `local-dev` work it cannot
+run. One queue holds both lanes; the planner filters.
+
+Not to be confused with `active.md`'s `location:`, which is live per-task
+handoff state. `Lane:` is a static fact about the work.
+
+### The review-cost model
+
+`Difficulty:` measures blast radius — how far a change reaches. It cannot answer
+the question a batch has to be planned against, which is what the task will cost
+**the human** once it lands. Four keys answer that, all derived by the sizing
+faculty at conception and all overridable by declaring them:
+
+- **`Consequence:`** `notify` | `glance` | `judge` — how much review the work
+  needs. `notify` is work nobody outside this workshop consumes (docs,
+  notebooks, profiling scripts, organ-repo tooling, test-only, a refactor with a
+  byte-equality witness). `glance` is a witnessed change to a consumed repo: you
+  read the witness, not the diff. `judge` is a PI's call — a public API, a
+  default, an error contract, a science-policy question, an external reporter's
+  request.
+- **`Witness:`** free text: the machine-checkable claim that will make this
+  reviewable in minutes rather than by reading the diff. Look at what the fast
+  completion records carry — "ids bit-identical, 62 → 9.7 ms", "31-rule
+  byte-equality", "0.068″ parity vs the published model". The slow ones carry
+  prose.
+
+  **No `Witness:` means `Consequence: judge`,** however small the task looks.
+  That default is the point: choosing a cheap tier means committing, at
+  conception, to producing evidence — which is what actually makes work
+  reviewable quickly. It is also the one key nothing derives or backfills. An
+  invented witness is plausible prose with nothing behind it, which is worse
+  than none, because the value of the field is that its absence is informative.
+  So `intake formalise` will never write one, and neither should you unless you
+  mean it.
+- **`Review-minutes:`** an integer **seed**, not a measurement — tier-driven,
+  with one nudge for size. The honest numbers come from what the human actually
+  spent, recorded per batch. Never cite a value here as evidence about how long
+  something took.
+- **`Unattended:`** `ready` | `needs-slicing` | `never` — can it finish without
+  a human. Deliberately not `Difficulty:` renamed: `needs-slicing` keys off the
+  **compaction rule** — a task that would need context compaction to finish is
+  too big to run unattended — so a single-repo `large` task is still `ready`
+  while a `large` one across four repos is not.
+
+Measured over the 153 backlog prompts the day this shipped: **151 grade `judge`,
+because three carry a witness.** Given one, the same backlog grades 33 `notify` /
+104 `glance` / 16 `judge`. The whole distance between "everything costs a PI's
+hour" and "a fifth of it costs nothing" is whether prompts say what will make
+them checkable.
+
+Read `pyauto-brain sizing <prompt>` for any prompt's grades, and
+`PyAutoBrain/agents/faculties/sizing/AGENTS.md` for the rules and their known
+limits.
 
 ### `active.md` schema
 

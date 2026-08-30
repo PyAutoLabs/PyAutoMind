@@ -11,6 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-04 (backfilled from git)
 
 Spotted 2026-08-04 while fixing the sibling HowToGalaxy tutorial under

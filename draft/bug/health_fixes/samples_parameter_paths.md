@@ -9,6 +9,9 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-07-06 (backfilled from git)
 
 ## Context

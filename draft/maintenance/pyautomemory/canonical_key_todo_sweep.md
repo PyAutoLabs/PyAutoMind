@@ -8,9 +8,12 @@ Themes:
 - docs-hub
 - hygiene
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-16 (backfilled from git)
 
 PyAutoMemory canonical-key TODO sweep.

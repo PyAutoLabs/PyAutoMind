@@ -9,9 +9,12 @@ Themes:
 - jax-compile
 - hpc-gpu
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-30 (backfilled from git)
 
 Follow-up to the multiband-pyloop-batching ship (PyAutoFit#1430 → PR#1431 +

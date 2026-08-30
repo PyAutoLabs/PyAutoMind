@@ -18,6 +18,9 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: planned (epic — execute via the child prompts below)
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-07-25 (backfilled from git)
 
 Reorganize the PyAutoLens (and mirrored PyAutoGalaxy) documentation and example

@@ -8,6 +8,9 @@ Themes:
 - ci-smoke
 - mind-workflow
 Status: planned
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Difficulty: large
 Autonomy: supervised
 Priority: normal

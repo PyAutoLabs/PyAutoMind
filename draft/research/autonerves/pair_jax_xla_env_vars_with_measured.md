@@ -14,6 +14,9 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 
 # Pair JAX/XLA env vars with measured compile and run times, per backend
 

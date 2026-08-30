@@ -10,9 +10,12 @@ Themes:
 - interferometer
 - pixelization
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-24
 
 ## The failure

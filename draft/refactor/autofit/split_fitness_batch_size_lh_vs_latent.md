@@ -12,6 +12,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-15 (backfilled from git)
 
 `Fitness.batch_size` currently serves **two unrelated concepts**, which is

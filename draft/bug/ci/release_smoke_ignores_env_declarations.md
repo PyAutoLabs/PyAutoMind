@@ -10,6 +10,9 @@ Themes:
 - release
 Difficulty: small
 Autonomy: supervised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Priority: high
 Filed: 2026-08-29
 

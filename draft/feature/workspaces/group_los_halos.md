@@ -9,6 +9,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-04-27 (backfilled from git)
 
 The imaging `features/advanced/los_halos` example needs improving and padding out before adapting to group.

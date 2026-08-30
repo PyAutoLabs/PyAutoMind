@@ -94,9 +94,13 @@ MIND_RULES = [
     # (in-flight) -> complete/YYYY/MM (shipped). A fresh template ships an empty
     # draft/ skeleton; active/ + complete/ records are instance state (DROP),
     # but the complete/ archive SCHEMA is template content (KEEP, first-match).
+    # `batches/` is the same shape one step further on: a batch record is what
+    # one dispatched shift did, which is instance state, while the schema that
+    # says how to write one is template content. Same split, same first-match
+    # ordering, same reason.
     ("draft/*", "SKELETON"),
-    ("complete/AGENTS.md", "KEEP"),
-    ("active/*", "DROP"), ("complete/*", "DROP"),
+    ("complete/AGENTS.md", "KEEP"), ("batches/AGENTS.md", "KEEP"),
+    ("active/*", "DROP"), ("complete/*", "DROP"), ("batches/*", "DROP"),
     ("docs/*", "DROP"),
     # `dashboard.md` is EMPTY rather than DROP: README.md ships verbatim and
     # links it, so dropping it would hand every spawned org a broken

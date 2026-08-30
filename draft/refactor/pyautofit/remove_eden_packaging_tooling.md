@@ -12,6 +12,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: PARTIALLY SHIPPED — the module is gone, `eden.yaml` is not (2026-08-09)
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-13 (backfilled from git)
 
 ## 2026-08-09 — half the primary scope has already landed

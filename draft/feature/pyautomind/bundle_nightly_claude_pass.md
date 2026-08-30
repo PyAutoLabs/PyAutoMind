@@ -9,9 +9,12 @@ Themes:
 - mind-workflow
 - dashboard
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: parked
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-27
 Unblocked: phase 1 shipped 2026-08-28 — complete/2026/08/bundle-themes.md (PyAutoBrain#312, PyAutoMind#366)
 

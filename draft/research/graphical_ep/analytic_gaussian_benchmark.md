@@ -11,6 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: graphical-ep
 Phase: 1
 Campaign: research/graphical_ep/ep_campaign.md (Phase 1 — the keystone; start here)

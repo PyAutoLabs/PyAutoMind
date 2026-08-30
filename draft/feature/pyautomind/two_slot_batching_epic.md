@@ -12,6 +12,9 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: draft
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Epic: two-slot-batching
 Filed: 2026-08-30
 
@@ -90,16 +93,35 @@ Measured on `draft/` at filing (137 headed prompts):
 (`awaiting-input`), question to the issue, continue elsewhere". A batch of six
 supervised tasks returns six questions, not six PRs.
 
-The cause is one rule measuring the wrong thing —
-`PyAutoBrain/agents/conductors/intake/_intake.py:276` returns `supervised`
-whenever `repo_count > 1`, and nearly every real task names a library plus its
-workspace. Repo count is blast radius; the level is supposed to encode judgement
-required.
+**CORRECTION 2026-08-30, measured in phase 0b.** This epic was filed asserting
+that one rule caused the 120 — `_intake.py:276` returned `supervised` whenever
+`repo_count > 1`, and nearly every real task names a library plus its workspace.
+Removing it and re-deriving every prompt says otherwise:
 
-**But the evidence usually cited for relaxing it does not survive scrutiny, and
-this epic must not pretend otherwise.** `autonomy_log.md` shows 238 rows and zero
-`rejected`, against a graduation rule of "≥10 clean rows with zero rejected".
-Four things are wrong with using that here:
+| | `safe` | `supervised` | `human-required` |
+|---|---|---|---|
+| with `repo_count > 1` | 30 | 117 | 6 |
+| without it | **55** | 92 | 6 |
+
+`repo_count > 1` is the *sole* supervised trigger for **25** prompts — the
+largest single one, ahead of `large`-or-above (20) and architectural risk (17),
+but nothing like 120. The triggers overlap heavily, and the 120 are *declared*
+levels written by earlier intake runs, not one rule's output. Removing it is
+right on its merits and frees 25 prompts; it is not the unblocking of the
+backlog it was taken for. **Where that actually lives is phase 3's
+ship-sign-off change** — 19 of the 46 parked rows are the contract park
+`supervised` imposes at ship, and no grading change touches them.
+
+Also measured and reverted, recorded so it is not re-proposed: replacing
+`repo_count` with `human_judgement` as a supervised trigger made things *worse*
+(`safe` fell to 24), because the ambiguity keywords fire on 63% of prompts. It
+was the same mistake as the rule it replaced — a loose proxy standing in for a
+judgement it does not measure.
+
+The evidence usually cited for relaxing autonomy does not survive scrutiny
+either, and this epic must not pretend otherwise. `autonomy_log.md` shows 238
+rows and zero `rejected`, against a graduation rule of "≥10 clean rows with zero
+rejected". Four things are wrong with using that here:
 
 - The rows run densely 2026-07-08 → 08-01 and then stop: **about 7 rows for all
   of August, against 332 August completions.** The calibration base is July,
@@ -236,13 +258,19 @@ chips the dashboard already renders.
      `draft/feature/pyautobrain/batch_grade_intake.md`
    - **0c** re-grade the backlog and give the dashboard a slot-shaped pick list.
      `draft/feature/pyautomind/batch_grade_backlog.md`
-1. **The queue and the batch record** — `queue.md`, `batches/`, `Lane:`, the
-   `ledger_merge.py` allowlist. `draft/feature/pyautomind/`
-2. **The `batch` conductor: plan, slice, collect** — reasoning only, no
-   dispatch. `draft/feature/pyautobrain/`
-3. **The gate under unattended conditions** — the adversarial fifth leg;
-   batch-aware Heart semantics; what a batch "launch" means; decide-and-flag,
-   capped; the `rejected-at-review` outcome and the dated autonomy experiment.
+1. **The queue and the batch record** — **SHIPPED 2026-08-30.** `queue.md`,
+   `batches/` (both on the ledger side of `ledger_merge.py`, so batch history
+   lands without a human), and the `Lane:` header.
+   `draft/feature/pyautomind/`
+2. **The `batch` conductor** — **`plan` SHIPPED 2026-08-30**; `slice` and
+   `collect` remain. `plan` is useful alone: run it in a slot and dispatch by
+   tapping the dashboard's existing chips. `draft/feature/pyautobrain/`
+3. **The gate under unattended conditions** — **SHIPPED 2026-08-30.** All four
+   doctrine changes are in `AUTONOMY.md`, dated, each with a revert condition:
+   what a batch launch is (membership fixed at approval, grant expires with the
+   shift, the human dispatches); leg 4's shift-scoped Heart acknowledgement;
+   leg 5, the independent adversary (`review --witness … --adversary`); and
+   decide-and-flag capped at one per PR. `rejected-at-review` landed in 0b.
    `draft/feature/pyautobrain/`
 4. **The tier-A merge tier** — **decided 2026-08-30: shadow for four weeks**
    (window closes 2026-09-27), then grant, narrow or refuse against a

@@ -12,9 +12,12 @@ Themes:
 - release
 - reduce
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: never
 Filed: 2026-08-24
 
 ## Original request (verbatim)

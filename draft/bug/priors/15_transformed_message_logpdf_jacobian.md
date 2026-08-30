@@ -8,6 +8,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised — issue filed (PyAutoFit#1498); caller analysis complete
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 (2026-08-19, below), awaiting human adjudication of the contract choice
 Filed: 2026-08-18 (backfilled from git)
 

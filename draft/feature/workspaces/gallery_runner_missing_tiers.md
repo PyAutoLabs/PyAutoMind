@@ -8,9 +8,12 @@ Themes:
 - visualization
 - ci-smoke
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: low
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-16 (backfilled from git)
 
 First real findings from the Eyes conductor's live survey (PyAutoBrain#117

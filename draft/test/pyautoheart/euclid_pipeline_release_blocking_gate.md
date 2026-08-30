@@ -11,6 +11,9 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: euclid-dr1-prep
 Filed: 2026-08-29
 

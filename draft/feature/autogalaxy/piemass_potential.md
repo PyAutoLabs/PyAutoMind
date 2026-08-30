@@ -9,6 +9,9 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-06-05 (backfilled from git)
 
 Follow-up from the dark-matter potential work (PyAutoGalaxy

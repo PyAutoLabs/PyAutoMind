@@ -10,6 +10,9 @@ Difficulty: too-large
 Autonomy: human-required
 Priority: high
 Status: formalised — NOT started. Research-grade: the answer may be "inherent to
+Consequence: judge
+Review-minutes: 25
+Unattended: never
 Epic: graphical-ep
 Phase: 2
         EP", so do not pick this up as ordinary work. The evidence below is the

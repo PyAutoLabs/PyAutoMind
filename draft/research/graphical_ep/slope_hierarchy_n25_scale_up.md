@@ -8,9 +8,12 @@ Themes:
 - graphical-ep
 - samplers
 Difficulty: medium
-Autonomy: supervised
+Autonomy: human-required
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Epic: graphical-ep
 Phase: 3
 Filed: 2026-07-22 (backfilled from git)

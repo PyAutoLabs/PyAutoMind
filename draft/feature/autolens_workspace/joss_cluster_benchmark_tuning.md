@@ -10,9 +10,12 @@ Themes:
 - jax-compile
 - cluster
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-17 (backfilled from git)
 
 Follow-up to the jax-joss-benchmarks epic (autolens_workspace#281). First official

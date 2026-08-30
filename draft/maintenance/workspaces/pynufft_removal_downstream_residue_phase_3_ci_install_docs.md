@@ -14,6 +14,9 @@ Difficulty: low
 Autonomy: supervised
 Priority: normal
 Status: draft
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Filed: 2026-08-23
 
 Phase 3 of 3. Parent: `pynufft_removal_downstream_residue.md`. Independent of

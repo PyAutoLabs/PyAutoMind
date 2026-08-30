@@ -11,6 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-23
 
 The living catch-all for Brain-board gaps found by actually using it as the

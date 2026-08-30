@@ -10,9 +10,12 @@ Themes:
 - visualization
 - pixelization
 Difficulty: medium
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-30 (backfilled from git)
 
 ## Symptom

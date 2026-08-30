@@ -10,9 +10,12 @@ Themes:
 - notebooks
 - docs-hub
 Difficulty: small
-Autonomy: supervised
+Autonomy: safe
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-07-24 (backfilled from git)
 
 ## Context (split from rectangular-mesh-consolidation, PyAutoArray#402, closed 2026-07-24)

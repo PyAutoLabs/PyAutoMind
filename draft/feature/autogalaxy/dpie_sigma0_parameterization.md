@@ -11,6 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: draft
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Parent: draft/docs/autolens/split_lensing_regimes.md
 Filed: 2026-07-25 (backfilled from git)
 

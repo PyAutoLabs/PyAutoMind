@@ -11,6 +11,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: ready
 Epic: graphical-ep
 Phase: 4
 Campaign: research/graphical_ep/ep_campaign.md (Phase 4)

@@ -6,9 +6,12 @@ Themes:
 - graphical-ep
 - samplers
 Difficulty: too-large
-Autonomy: supervised
+Autonomy: human-required
 Priority: high
 Status: formalised
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
 Epic: graphical-ep
 Phase: 3
 Filed: 2026-05-20 (backfilled from git)

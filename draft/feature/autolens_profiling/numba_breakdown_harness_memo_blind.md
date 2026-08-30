@@ -12,6 +12,9 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
 Filed: 2026-08-27
 
 ## Context (found while measuring PyAutoArray#496, 2026-08-27)
