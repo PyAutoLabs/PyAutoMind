@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1225 records across 7 buckets.
+1227 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -169,6 +169,7 @@ markers; everything below GENERATED is rebuilt.
 - [compile-axis-campaign-coverage](2026/08/compile-axis-campaign-coverage.md)
 - [compile-axis-triage-drift](2026/08/compile-axis-triage-drift.md)
 - [compile-warm-baseline-dashboard](2026/08/compile-warm-baseline-dashboard.md)
+- [complete-archive-highlights](2026/08/complete-archive-highlights.md) — the Highlights band of complete/index.md curated — 30 lesson hooks under five themes
 - [conductor-discovery-lifecycle-split](2026/08/conductor-discovery-lifecycle-split.md) — closed on merge
 - [constant-zeroth-repair](2026/08/constant-zeroth-repair.md) — CLOSED completed
 - [correct-circular-sersic-hazard](2026/08/correct-circular-sersic-hazard.md) — Corrected the circular Sersic hazard in the actual fitted ell_comps coordinates. The q-angle structural findin…
@@ -381,6 +382,7 @@ markers; everything below GENERATED is rebuilt.
 - [repin-rectangular-mge-after-490](2026/08/repin-rectangular-mge-after-490.md)
 - [repo-settings-bash-e-abort](2026/08/repo-settings-bash-e-abort.md)
 - [repo-settings-org-enumeration](2026/08/repo-settings-org-enumeration.md)
+- [repos-sync-config-checks](2026/08/repos-sync-config-checks.md) — Heart version_skew and Hands workspaces.yaml identity checked; the config stamper deferred, demand-gated
 - [repos-sync-target-repo-lint-awareness](2026/08/repos-sync-target-repo-lint-awareness.md)
 - [requarantine-delaunay-and-keep-abort-stack](2026/08/requarantine-delaunay-and-keep-abort-stack.md)
 - [required-workflow-file-drift](2026/08/required-workflow-file-drift.md)
