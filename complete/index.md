@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1228 records across 7 buckets.
+1229 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -291,6 +291,7 @@ markers; everything below GENERATED is rebuilt.
 - [natural-logpdf-clamps-neginf](2026/08/natural-logpdf-clamps-neginf.md) — closed by the PR's `Closes` line
 - [nautilus-1core-serial-pool](2026/08/nautilus-1core-serial-pool.md) — corrective for the Heart RED "release validation FAILED (stage
 - [nautilus-plotter-real-search-cap](2026/08/nautilus-plotter-real-search-cap.md)
+- [nautilus-serial-bound-training](2026/08/nautilus-serial-bound-training.md)
 - [nautilus-test-mode-degenerate-corner](2026/08/nautilus-test-mode-degenerate-corner.md)
 - [nfw-truncated-potential-accuracy](2026/08/nfw-truncated-potential-accuracy.md)
 - [normalise-auto-simulate-guard-idiom](2026/08/normalise-auto-simulate-guard-idiom.md)
