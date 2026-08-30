@@ -262,9 +262,12 @@ chips the dashboard already renders.
    `ledger_merge.py` allowlist. `draft/feature/pyautomind/`
 2. **The `batch` conductor: plan, slice, collect** — reasoning only, no
    dispatch. `draft/feature/pyautobrain/`
-3. **The gate under unattended conditions** — the adversarial fifth leg;
-   batch-aware Heart semantics; what a batch "launch" means; decide-and-flag,
-   capped; the `rejected-at-review` outcome and the dated autonomy experiment.
+3. **The gate under unattended conditions** — **SHIPPED 2026-08-30.** All four
+   doctrine changes are in `AUTONOMY.md`, dated, each with a revert condition:
+   what a batch launch is (membership fixed at approval, grant expires with the
+   shift, the human dispatches); leg 4's shift-scoped Heart acknowledgement;
+   leg 5, the independent adversary (`review --witness … --adversary`); and
+   decide-and-flag capped at one per PR. `rejected-at-review` landed in 0b.
    `draft/feature/pyautobrain/`
 4. **The tier-A merge tier** — **decided 2026-08-30: shadow for four weeks**
    (window closes 2026-09-27), then grant, narrow or refuse against a
