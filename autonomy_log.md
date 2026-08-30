@@ -245,3 +245,29 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 | 2026-08-24 | tracer-fits-existence-guard (autolens_workspace#503) | supervised (header safe, bug cap supervised) | tests n/a (workspace repo, no test dir) / smoke reproduced-then-fixed: imaging/modeling.py + multi_galaxy/modeling.py exit 1 with the reported FileNotFoundError under profile_smoke + PYAUTO_TEST_MODE=1 before, exit 0 after; TEST_MODE=2 default green; check_sizes.sh OK / review not run — parked before ship, so no ReviewSurface / heart NOT EVALUATED — pyauto-heart unreachable in this web-github session | parked at ship sign-off per the supervised contract, then PR-open on human sign-off same session (/prm); merged-unchanged (PR#504 merge b19750c, human-authorized via /prm; CI green on 0c14d00 — 3 runs / 7 jobs) |
 | 2026-08-24 | euclid-crlf-line-endings (euclid_strong_lens_modeling_pipeline#40) | safe | tests UNRUNNABLE (web-github: no autolens/autofit/pytest; repo has tests/, so not n/a) / smoke UNRUNNABLE (needs stack + Euclid datasets) / review CLEAN self-assessed, faculty could not resolve checkout / heart n/a (pyauto-heart absent) | parked (branch pushed, PR held for the two unrunnable legs) |
 | 2026-08-24 | euclid-crlf-line-endings (euclid_strong_lens_modeling_pipeline#40) | safe | tests 1 passed / smoke 6-of-6 (PYAUTO_TEST_MODE=2, autolens==2026.7.29.1[jax] in a venv) / review CLEAN inline (faculty could not resolve checkout) / heart n/a (pyauto-heart absent) | PR-open (#41) — supersedes the parked row above, legs 1+2 were unrunnable then, ran after installing the stack |
+
+## Shadow window — the tier-`notify` merge decision
+
+Opened **2026-08-30**, closes **2026-09-27** (extend rather than lower the bar if
+fewer than 40 candidates land). Protocol, power calculation and the
+**pre-registered decision rule** live in
+`draft/feature/pyautobrain/batch_notify_tier_merge.md` — read it before
+appending, and before interpreting anything here.
+
+In one line: for four weeks, tier-`notify` work still waits for the human as it
+always has, but the gate's verdict and the human's action are both recorded, so
+the question "how often would auto-merge have been wrong on this organism's own
+work?" is answered with data rather than intuition.
+
+One row per tier-`notify` candidate at close-out. `human action` ∈
+`merged-unchanged` / `merged-after-substantive-change` / `not-merged`.
+**Substantive** is fixed in advance: a change the human would have minded
+finding already merged — a changed default, a user-visible error message, a
+removed or weakened test, a renamed public thing, a docs claim that was wrong.
+Typos, wording, formatting and comment polish are not.
+
+`stage: 1` rows are graded on the four-leg gate plus the witness; `stage: 2` rows
+add phase 3's independent-model adversarial leg. Never pool the two.
+
+| date | task | tier | gate (tests/smoke/review/heart/witness[/adversary]) | human action | stage |
+|------|------|------|-----------------------------------------------------|--------------|-------|

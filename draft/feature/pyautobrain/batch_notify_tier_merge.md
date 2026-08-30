@@ -1,4 +1,4 @@
-# Batch phase 4 — the tier-A merge tier (a decision, not a build)
+# Batch phase 4 — the tier-A merge tier: shadow window, then the decision
 
 Type: feature
 Target: pyautobrain
@@ -16,80 +16,120 @@ Phase: 4
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md
 Filed: 2026-08-30
 
-**This is the only phase in the epic that reduces the human's total attention
-rather than re-timing it.** Everything else moves review into two blocks; this
-removes some of it. It is therefore also the only phase that changes the
-organism's safety model, and it must be put to the human as a decision with
-evidence, not implemented because the plan said so.
+**Decided 2026-08-30: shadow it for four weeks, then decide.** The human chose
+the shadow window over granting or refusing the tier outright. This prompt is
+now the protocol for that window, and the protocol is pre-registered — the
+decision rule is fixed *before* the data arrives, so the answer cannot be
+rationalised afterwards.
 
-Do not start this as code. Start it as a written proposal on an issue.
+**Window: 2026-08-30 → 2026-09-27.**
 
-## The problem it answers
+## Why this matters more than any other phase
 
-August shipped 332 completion records, about eleven a day. There was never a
-throughput problem. The scarce resource is the human's judgement, and they are
-the PI of every decision in the organism — choosing API philosophy on behalf of
-an external reporter, ruling on a statistical gate with six caveats, deciding
-whether a number marked "not citable" may be cited.
+Everything else in the epic moves review into two blocks. This is the only
+mechanism that removes some of it. August shipped 332 completion records, about
+eleven a day, with the human in-session; there was never a throughput problem.
+The scarce resource is the human's judgement, and batching alone schedules more
+of it per hour rather than less.
 
-Batching schedules those decisions into two blocks. It does not make any of them
-cheaper. If the batch layer ships without a merge tier, the human ends up doing
-*more* AI-development hours than today, at 6am, from a phone.
+## What the tier would cover, and how much of the flow that is
 
-## The proposal
+Measured over all 332 August records, bucketed by the repos their PRs name:
 
-For tier `notify` work only — docs, notebooks, profiling scripts, organ-repo
-tooling, test-only changes, and pure refactors carrying a byte-equality witness —
-`/prm` merges without waiting for the human. The human is **notified, not
-consulted**, and can revert.
+| Bucket | Share | Tier |
+|---|---|---|
+| organ repos only (Brain, Mind, Memory, Heart, Hands, Gut, Scientist) | **56 · 17%** | the `notify` candidate pool |
+| workspace / assistant / profiling only | 52 · 16% | mostly `glance`, some `notify` |
+| touches a core library | 99 · 30% | `glance` or `judge` |
+| names no PR at all — research, decisions, verdicts | **125 · 38%** | `judge` by nature |
 
-Gate, all legs, no substitutions:
+Two honest readings of that table, and both belong in the decision:
 
-1. tests, including downstream suites where public API moved;
-2. smoke;
-3. review — CLEAN;
-4. Heart, under phase 3's shift semantics;
-5. **an independent-model adversarial review that explicitly tries to falsify
-   the run's witness** (phase 3, leg 5) — mandatory here, never optional;
-6. the witness itself holds, checked mechanically.
+1. **The window will be well powered.** At ~56 candidates a month, four weeks
+   yields roughly fifty — enough to decide on, without waiting a quarter.
+2. **The ceiling is about 17% of throughput.** Auto-merge is worth the doctrine
+   change, but it is not the answer on its own. The single biggest bucket is the
+   38% that produce no PR at all: research, decisions and written verdicts,
+   whose review *is* the judgement. Nothing in this epic makes those cheaper, and
+   the plan should stop implying otherwise. If the human wants that bucket
+   cheaper too, it is a separate question about how verdicts are structured, not
+   about merge automation.
 
-Any leg that did not *run* is a park, not a pass.
+## The protocol
 
-## What this changes in doctrine
+**Start now, cheaply.** The window is four weeks of wall-clock, so it must not
+wait on phases 1-3 or it puts the decision on the critical path twice. Two
+stages:
 
-`AUTONOMY.md` today: merge and issue-close are "human, always", at every level,
-and "an explicit future flag may extend autonomy to merge; it does not exist and
-must not be assumed." This phase is that flag, and it must be written as a dated,
-scoped, revertible edit — not as an implied consequence of batching.
+- **Stage 1 (from 2026-08-30, needs only phase 0's tier rules).** At every
+  close-out, whatever the workflow, record the row below. The gate column records
+  the four-leg gate plus whether the witness held.
+- **Stage 2 (once phase 3's adversarial leg exists).** Same rows, with the
+  fifth leg's verdict recorded too. Rows are marked `stage: 1|2` so the two are
+  never silently pooled.
 
-Scope it as narrowly as it can usefully be:
+**Where the rows live:** appended to `PyAutoMind/autonomy_log.md` as its own
+table. That file is already an append-only calibration record and already a root
+ledger file, so the window needs no new infrastructure and no allowlist edit —
+it can start today.
 
-- Tier is decided by **rules over repo class and surface** (phase 0), never by
-  the agent's own reading of its work.
-- Never available where the diff touches a public API, a default value, an error
-  contract, or a file named in an external reporter's issue — regardless of tier.
-- Never available to a run that flagged a decision (phase 3).
-- A weekly digest lists everything merged this way, so "notified" is a fact and
-  not a theory.
+One row per tier-`notify` candidate:
+
+```
+| date | task | tier | gate (tests/smoke/review/heart/witness[/adversary]) | human action | stage |
+```
+
+`human action` ∈ `merged-unchanged` / `merged-after-substantive-change` /
+`not-merged`.
+
+**"Substantive" is defined now, not later**, so the judgement at close-out is
+mechanical: a change the human would have minded finding already merged. A
+changed default, a user-visible error message, a removed or weakened test, a
+renamed public thing, a docs claim that was wrong — substantive. Typos, wording,
+formatting, comment polish — not.
+
+## The decision rule, pre-registered
+
+Over a window of **at least 40** tier-`notify` candidates:
+
+- **Grant the tier** if `merged-after-substantive-change` + `not-merged` = **0**.
+- **Grant it narrowed** if every such case falls in one identifiable sub-class
+  (say, "organ repos with no tests"): exclude that sub-class from the tier by
+  rule, and grant the rest. The exclusion is written into the doctrine edit.
+- **Refuse** otherwise, and say so plainly. The epic still works — with less
+  throughput and a longer review queue — so the decision is not loaded.
+
+Fewer than 40 candidates at the end of the window is not a pass. Extend the
+window; do not lower the bar.
+
+The base rates this is being judged against, both from this organism's own
+ledger: **20% of August records carry a correction or a retraction**, and the
+review leg on autonomous ships is today, in practice, the branch's own author.
+
+## If the answer is yes
+
+The doctrine edit in `AUTONOMY.md` must be dated, scoped and revertible.
+`AUTONOMY.md` today says merge and issue-close are "human, always" at every
+level, and that "an explicit future flag may extend autonomy to merge; it does
+not exist and must not be assumed." This is that flag. Write it as such.
+
+Scope, as narrow as it can usefully be:
+
+- Tier decided by **rules over repo class and surface** (phase 0), never by the
+  agent's own reading of its work.
+- Never where the diff touches a public API, a default, an error contract, or a
+  file named in an external reporter's issue — regardless of tier.
+- Never for a run that flagged a decision (phase 3).
+- The full six-leg gate, with any leg that did not *run* counting as a park.
+- A weekly digest of everything merged this way, so "notified" is a fact rather
+  than a theory.
 - A kill switch, in the manner of `NIGHTLY_RELEASES`.
-
-## How to decide it honestly
-
-Run it **shadowed first**. For four weeks, tier-`notify` work still waits for the
-human — but the full six-leg gate runs, the verdict is recorded, and the human
-records whether they would have merged unchanged. Then compare: how often did the
-gate say merge and the human disagree? That number, on this organism's own work,
-is the only basis on which to grant or refuse the tier.
-
-The base rates to beat, both from this repo's own ledger: 20% of August records
-carry a CORRECTION or a retraction, and the review leg on autonomous ships is
-today the branch's own author.
-
-If the shadow window is not clean, the answer is no — and the epic still works,
-just with less throughput. Say that up front so the decision is not loaded.
+- A standing revert condition: one substantive escape retires the tier pending
+  a fresh window.
 
 ## Done when
 
-- A written proposal exists on an issue, with the shadow-window results in it.
-- The human has said yes or no, dated, in `AUTONOMY.md`.
-- If yes: the edit names its scope, its kill switch and its revert condition.
+- The shadow table exists in `autonomy_log.md` and is being appended to.
+- At window close, the counts are reported against the pre-registered rule
+  before any recommendation is written.
+- The human's yes, narrowed-yes or no is recorded in `AUTONOMY.md`, dated.

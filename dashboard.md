@@ -1924,7 +1924,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">Batch phase 4 — the tier-A merge tier…</a> — pyautobrain · medium · human-required · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">Batch phase 4 — the tier-A merge tier: shadow window…</a> — pyautobrain · medium · human-required · high</summary>
 
 ```
 /start_dev draft/feature/pyautobrain/batch_notify_tier_merge.md
