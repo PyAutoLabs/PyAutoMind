@@ -45,22 +45,38 @@ endpoint, or the human at the machine. A cloud session detects its own lane and
 will not plan the other one — it reports the count instead, so nothing is
 silently dropped. One queue holds both lanes; the planner filters.
 
-## 1. Batches strip on the dashboard
+## 1. Subhalo validation follow-up wave
+- kind: prompt
+- ref: draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md
+- lane: local-dev
+- note: review tweak 2026-08-31 — human wants to inspect the _adapt_split_fix result; no subhalo[2]; RectangularBilinear runs
+
+## 2. Euclid docs + structure tidy (phase 3a addendum)
+- kind: epic-slice
+- ref: euclid-dr1-prep
+- note: review tweak 2026-08-31 folded into draft/docs/euclid/restore_pipeline_narrative_prose.md; start_here.py contradiction must be ruled at plan time
+
+## 3. numba solve vs JAX sparse operator
+- kind: prompt
+- ref: draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md
+- note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound?
+
+## 4. Batches strip on the dashboard
 - kind: prompt
 - ref: draft/feature/pyautobrain/batch_board.md
 - note: human 2026-08-31 — important, do soon; strip above "Start here", not a standalone surface
 
-## 2. Witness campaign
+## 5. Witness campaign
 - kind: prompt
 - ref: draft/feature/pyautomind/witness_campaign.md
 - note: highest-leverage backlog item (151/153 judge); human-declared witnesses only; fill work
 
-## 3. batch collect
+## 6. batch collect
 - kind: prompt
 - ref: draft/feature/pyautobrain/batch_conductor.md
 - note: next verb = collect; spec = batches/packets/TEMPLATE.md + the 2026-08-31 packet's collect-needs list
 
-## 4. Euclid Lane: recut
+## 7. Euclid Lane: recut
 - kind: prompt
 - ref: draft/research/euclid/batch_science_lane.md
 - note: leg A only — Lane: header on every remaining euclid phase, queue the `any` halves

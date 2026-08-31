@@ -232,3 +232,49 @@ Every cross-reference in the deleted prose is stale:
   a preload, a config-access idiom, a workspace path or a CLI argument is suspect.
 - The repo has no `notebooks/` tree — this prose is read in the `.py` files themselves,
   so it must read well as source, not only as generated markdown cells.
+
+## Addendum — 2026-08-31 batch review (euclid member, decision: structure-ok)
+
+The human's review of the phase-2 retrospective (packet
+`batches/packets/2026-08-31-am.html`) adds the following structural/docs items to
+this phase, verbatim:
+
+"""
+The ### Simulating a lens section is too long in README.md and should be moved below
+CLI arguments. Make this literally one paragraph pointing to the python file,
+describing it and thats it, but do give the CLI prompt too.
+
+We dont need ### The `WORST_BAND` / `WORST_PSF_*` header contract in README.md, I
+think all docs should just be in the python scripts so I guess this can be fully
+covered in util.py which I think it already is.
+
+Move ## Documentation above the "Fitting Pipelines" section.
+
+I want scripts which run lens models to be separate to stuff like
+"diagnose_latent.py", "build_inspect.py" and "diagnose_latent_vis_pix.py". Can you
+move these to a scripts/tools folder.
+
+I don't think we should have a start_here.py, seems pointless.
+
+AGENTS.md is way too long and can be significantly shortened lots of stuff feels too
+much info (CI, how to run scripts) also look for clearer mirroring with other
+workspace repos where possible.
+"""
+
+Two scope amendments this implies:
+
+- **README.md is no longer fully out of scope**: the three structural edits above
+  (Simulating-a-lens trim+move, WORST_* contract section removal, ## Documentation
+  reorder) are in scope. The rest of the READMEs stay untouched.
+- **`scripts/tools/` move**: `diagnose_latent.py`, `build_inspect.py`,
+  `diagnose_latent_vis_pix.py` move out of the model-running script tree
+  (update `smoke_tests.txt` / `config/build/no_run.yaml` registrations and the
+  bundle `.sh` accordingly — `tests/test_repo_invariants.py` enforces the lists).
+
+**UNRESOLVED — human must rule at plan time:** this phase's own doctrine (the
+human's earlier 2026-08-31 request, quoted at the top) makes `start_here.py` "the
+fully documented new user end to end guide"; the same day's batch review says "I
+don't think we should have a start_here.py, seems pointless." These cannot both
+hold. Present the choice at the plan step — (a) full narrative guide, (b) delete it
+and let README.md carry the entry-point role — and do not start the prose work
+until it is answered.
