@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 165 |
+| [Backlog](#backlog) (`draft/`) | 166 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -155,7 +155,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
 
 <details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
 
@@ -177,6 +177,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/organs/github_page_link_in_every_organ_board.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…</a> — autofit · large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
 ```
 
 </details>
@@ -241,14 +249,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/research/autolens/quick_update_plotting_cost.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — small · safe · normal</summary>
-
-```
-/start_dev draft/triage/convolver_blurring_image_warning.md
 ```
 
 </details>
@@ -389,7 +389,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**165** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**166** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -754,7 +754,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 18</summary>
+<summary><b>bug</b> — 19</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -848,6 +848,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…</a> — autofit · large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
 ```
 
 </details>
