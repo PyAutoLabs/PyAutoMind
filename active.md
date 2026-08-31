@@ -3,7 +3,8 @@
 ## autofit-prodigy-49
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1553
 - issued: 2026-08-31
-- status: library-dev (--auto safe; batch 2026-08-31-pm member autofit-prodigy-49)
+- status: library-shipped, awaiting-merge (--auto safe; batch 2026-08-31-pm member autofit-prodigy-49)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1555
 - location: web-github (remote session clone; no task worktree)
 - heart-ack:
   - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
