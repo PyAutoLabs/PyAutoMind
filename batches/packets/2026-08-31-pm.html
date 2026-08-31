@@ -593,14 +593,14 @@ footer.pagefoot {
   <h1>Slot Review &mdash; PM</h1>
   <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. This review covers the nine ready members: six delivered (five PR sets green + one research verdict) and three parked at ship. The two laptop members are in flight and carry automatically into the next batch&rsquo;s packet &mdash; but the jax-refs leg routed <strong>three legacy-reuse rulings</strong> into this slot, included below. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
   <p class="mirror-note">Science member outputs mirror to the laptop via each project&rsquo;s <code>hpc/sync pull</code> at collect; dev members are reviewed on their PRs.</p>
-  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 21:25Z (parked branches opened as PRs #274 / #1556 / #48 at the human&rsquo;s request)</p>
+  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 22:00Z (CI green on all three opened PRs: #274 3/3, #1556 4/4, euclid#48 9/9)</p>
   <p class="stampline">Permanent home: <a href="https://pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html"><code>pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html</code></a></p>
 </header>
 
 <section class="tiles" aria-label="Summary">
   <div class="tile"><span class="num">14</span><span class="cap">Members</span></div>
   <div class="tile t-healthy"><span class="num">6</span><span class="cap">Delivered</span></div>
-  <div class="tile t-suspect"><span class="num">6</span><span class="cap">Rulings (3 PRs just opened)</span></div>
+  <div class="tile t-suspect"><span class="num">6</span><span class="cap">Rulings (3 new PRs, all green)</span></div>
   <div class="tile t-running"><span class="num">2</span><span class="cap">Carried to next batch</span></div>
   <div class="tile t-minutes">
     <span class="num">130</span>
@@ -630,7 +630,7 @@ footer.pagefoot {
 <section class="panel" id="rulings">
   <h2>Rulings needed</h2>
   <ol class="rulings">
-    <li><span class="who"><a href="#m-smoke">release-smoke-env</a></span> &mdash; now <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/274">PR #274</a> &mdash; merge / amend / reject once CI reports.</li>
+    <li><span class="who"><a href="#m-smoke">release-smoke-env</a></span> &mdash; now <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/274">PR #274</a> &mdash; CI green (3/3) &mdash; merge / amend / reject.</li>
     <li><span class="who"><a href="#m-af-multi">autofit-multistart-iterations</a></span> &mdash; now <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1556">PR #1556</a> &mdash; merges last of the trio; workspace phase-2 queues either way.</li>
     <li><span class="who"><a href="#m-euclid3a">euclid-3a-prose</a></span> &mdash; now <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/48">PR #48</a> &mdash; merge / amend / reject, noting the adversary leg was NOT run and judgment call 1 (AGENTS.md scope).</li>
     <li><span class="who"><a href="#m-numba">numba-vs-jax-sparse</a></span> &mdash; rule on the verdict (&ldquo;keep both, port nothing&rdquo;); optionally /intake its two scholar-mode candidates.</li>
@@ -690,7 +690,7 @@ footer.pagefoot {
       <p class="jobs">PyAutoHands#274 (from the parked branch) · issue #272</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-suspect">PR open &middot; CI running</span>
+      <span class="chip chip-healthy">PR green &middot; 3/3 checks</span>
       <label class="ruled"><input type="checkbox" data-ruled="m-smoke"> Ruled</label>
     </div>
   </div>
@@ -709,7 +709,7 @@ footer.pagefoot {
     </div>
     <div class="block">
       <p class="label">Ruling</p>
-      <p class="decision">PR opened at your request: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/274">PyAutoHands#274</a> &mdash; merge / amend / reject once CI reports.</p>
+      <p class="decision">PR opened at your request: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/274">PyAutoHands#274</a> &mdash; CI green (3/3) &mdash; merge / amend / reject.</p>
     </div>
     <div class="block">
       <p class="label">Where to look</p>
@@ -737,7 +737,7 @@ footer.pagefoot {
       <p class="jobs">PyAutoFit#1556 (from the parked branch) · issue #1552</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-suspect">PR open &middot; CI running</span>
+      <span class="chip chip-healthy">PR green &middot; 4/4 checks</span>
       <label class="ruled"><input type="checkbox" data-ruled="m-af-multi"> Ruled</label>
     </div>
   </div>
@@ -788,7 +788,7 @@ footer.pagefoot {
       <p class="jobs">euclid#48 (from the parked branch) · issue #47</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-suspect">PR open &middot; CI running</span>
+      <span class="chip chip-healthy">PR green &middot; 9/9 checks</span>
       <label class="ruled"><input type="checkbox" data-ruled="m-euclid3a"> Ruled</label>
     </div>
   </div>
