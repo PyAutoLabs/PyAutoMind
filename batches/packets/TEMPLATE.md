@@ -91,3 +91,13 @@ semantic (separate from accent): failed `#b3261e`, suspect `#a65f00`, healthy `#
 running `#2f5fc4`, merged `#5b4bb5`, each with a `-soft` tint; dark equivalents lifted for
 contrast. Type: IBM Plex Serif (headings) / Sans (body) / Mono (paths, ids, table numerals with
 `tabular-nums`). No emoji, no decorative numbering; only real sequences get an `<ol>`.
+
+## Standalone document (learned 2026-08-31)
+
+An archived packet is served raw from Pages, with no wrapper. It MUST be a complete
+HTML document — `<!DOCTYPE html>`, `<html lang>`, `<head>` with charset + viewport,
+`<body>` — and its stylesheet MUST carry its own `[hidden] { display: none !important; }`
+reset. A fragment relying on a host wrapper (the Claude artifact viewer injects both the
+skeleton and that reset) renders in quirks mode here, and any element hidden via the
+`hidden` attribute whose class sets `display:` stays visible — the submit modal did
+exactly that on the first packet.
