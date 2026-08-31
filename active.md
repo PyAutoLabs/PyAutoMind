@@ -2,6 +2,7 @@
 
 ## numba-vs-jax-sparse
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/513
+- prompt: active/numba_solve_vs_jax_sparse_operator.md
 - issued: 2026-08-31
 - status: awaiting-input (verdict posted 2026-08-31; judge-tier research — parks
   for human review per the supervised contract; sign-off retires via close-out,
@@ -23,6 +24,7 @@
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
+- prompt: active/follow_up_wave_adapt_split_and_rectangular.md
 - issued: 2026-08-31
 - status: science-run (supervised --auto; human-dispatched from the 2026-08-31-am
   batch review's queued tweaks)
