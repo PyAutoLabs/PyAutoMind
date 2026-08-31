@@ -11,7 +11,7 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: high
-Status: draft
+Status: shipped 2026-08-30 — PyAutoMind main 1a70a6fb, merged via #374
 Consequence: notify
 Witness: the before/after distribution of `Autonomy:`, `Consequence:` and `Unattended:` across every draft prompt, plus `lifecycle.py check` clean and a dashboard regeneration whose only diff is the new pick list and the new facets.
 Review-minutes: 0

@@ -9,7 +9,7 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: shipped 2026-08-30 — PyAutoBrain main e755ddd (review-cost model in the sizing faculty)
 Consequence: judge
 Witness: the grade for a fixed set of sample prompts, pinned as a golden file; plus a case proving no-witness ⇒ judge, and a case proving declared beats derived.
 Review-minutes: 20
