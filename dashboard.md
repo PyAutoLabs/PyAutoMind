@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — issued 2026-08-31 — science-run (supervised --auto; human-dispatched from the 2026-08-31-am</summary>
+<details><summary>📋 <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — issued 2026-08-31 — runs-in-flight (supervised --auto; human-dispatched from the 2026-08-31-am</summary>
 
 ```
 /start_dev active/follow_up_wave_adapt_split_and_rectangular.md
