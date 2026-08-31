@@ -10,11 +10,12 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: normal
-Status: formalised
+Status: issued
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-08-31
+Issued: 2026-08-31
 
 Intake from the 2026-08-31-am batch review, prompted by the subhalo_validation
 end-to-end runs (numba CPU path ~x8 faster than the old code end to end). Human,
