@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 152 |
+| [Backlog](#backlog) (`draft/`) | 153 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -155,7 +155,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 72
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 73
+
+<details><summary>📋 <a href="draft/bug/pyautomemory/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures</a> — pyautomemory · medium · safe · normal</summary>
+
+```
+/start_dev draft/bug/pyautomemory/repair_queue_automation_filing_gate.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/organs/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> — organs · small · safe · normal</summary>
 
@@ -241,14 +249,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
 ```
 
 </details>
@@ -389,7 +389,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**152** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**153** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -746,7 +746,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 16</summary>
+<summary><b>bug</b> — 17</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -816,6 +816,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/priors/15_transformed_message_logpdf_jacobian.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautomemory/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures</a> — pyautomemory · medium · safe · normal</summary>
+
+```
+/start_dev draft/bug/pyautomemory/repair_queue_automation_filing_gate.md
 ```
 
 </details>
