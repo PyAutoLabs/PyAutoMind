@@ -42,23 +42,15 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 166 |
+| [Backlog](#backlog) (`draft/`) | 165 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 14
-
-<details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
-```
-
-</details>
+**Highest priority** (filed as `high`) — showing 12 of 13
 
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
@@ -148,7 +140,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
 
 <details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
 
@@ -198,14 +198,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a> — medium · safe · high</summary>
 
 ```
@@ -246,6 +238,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> — autofit · medium · safe · medium</summary>
+
+```
+/start_dev draft/feature/autofit/search_seed_reproducibility.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
@@ -254,6 +254,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/follow_up_wave_adapt_split_and_rectangular.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — issued 2026-08-31</summary>
+
+```
+/start_dev active/release_smoke_ignores_env_declarations.md
 ```
 
 </details>
@@ -388,7 +396,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**166** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
+**165** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -761,15 +769,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 21</summary>
-
-<details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
-```
-
-</details>
+<summary><b>bug</b> — 20</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · safe · high</summary>
 
@@ -1344,7 +1344,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>ci-smoke</b> — 4 task(s) · 7 pts · auto — proposed</summary>
+<summary><b>ci-smoke</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
@@ -1352,10 +1352,10 @@ Sets of INDEPENDENT tasks that make sense in one orchestrated session: an archit
 You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/ci/release_smoke_ignores_env_declarations.md
 - draft/bug/ci/scheduled_runs_delivered_hours_late.md
 - draft/test/pyautoheart/smoke_relevance_gate.md
 - draft/test/workspaces/slowest_smoke_gate_scripts.md
+- draft/maintenance/ci/heart_smoke_table_autocti.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1370,10 +1370,10 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> | ci | small | high | - |
 | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> | ci | medium | high | - |
 | <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> | pyautoheart | medium | normal | formalised |
 | <a href="draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a> | workspaces | medium | normal | formalised |
+| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | ci | medium | normal | formalised |
 
 </details>
 
@@ -1570,17 +1570,17 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>ci-smoke — bundle 2</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>point-source</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'point-source' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/maintenance/ci/copilot_auto_review.md
-- draft/maintenance/ci/heart_smoke_table_autocti.md
-- draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md
+- draft/feature/autolens/multi_plane_time_delays.md
+- draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
+- draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1595,9 +1595,9 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> | ci | large | normal | planned |
-| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | ci | medium | normal | formalised |
-| <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> | workspaces | low | normal | draft |
+| <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> | autolens | large | normal | formalised |
+| <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> | autolens | medium | normal | formalised |
+| <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> | pyautolens | medium | low | formalised |
 
 </details>
 
@@ -1609,10 +1609,10 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-31 | issued | <a href="active/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-31 | issued | <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2]…</a> |
 | 2026-08-31 | filed | <a href="draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/organs/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> |
-| 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
@@ -2230,7 +2230,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-161 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+160 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2275,7 +2275,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
 - `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 121 more_
+- _… and 120 more_
 
 </details>
 

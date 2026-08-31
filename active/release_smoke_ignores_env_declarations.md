@@ -15,6 +15,7 @@ Review-minutes: 20
 Unattended: ready
 Priority: high
 Filed: 2026-08-29
+Issued: 2026-08-31
 
 Surfaced by the 2026-08-29 live release (PyAutoHands run 33259478535): the
 release published cleanly — all 5 packages at `2026.8.29.1` on PyPI, tags,

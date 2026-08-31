@@ -1,5 +1,22 @@
 # Active Tasks
 
+## release-smoke-env-declarations
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/272
+- issued: 2026-08-31
+- status: library-dev
+- location: web-github (batch 2026-08-31-pm member release-smoke-env, --auto, effective level supervised)
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+- repos:
+  - PyAutoHands: feature/release-smoke-env-declarations
+- summary: |
+    release.yml run_smoke_tests replaces its bash loop with the canonical
+    env-aware runner (autohands/run_python.py --list smoke_tests.txt
+    --report-dir), so in-file __Env__ declarations govern release smoke runs
+    and witt_wynne.py (ENV: full_datasets) stops failing every LIVE release.
+    Plan on the issue; option 1 of the prompt (no autolens_workspace change).
+
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
