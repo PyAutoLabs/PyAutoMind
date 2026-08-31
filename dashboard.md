@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 169 |
+| [Backlog](#backlog) (`draft/`) | 170 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -157,7 +157,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
 
 <details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
 
@@ -179,6 +179,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autofit/add_resampling_info_section_to_the_bottom.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/multistartprodigy_stops_at_49_steps_when_iterati.md">MultiStartProdigy stops at 49 steps when iterations_per_quick_update=50 in @PyAutoFit</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/multistartprodigy_stops_at_49_steps_when_iterati.md
 ```
 
 </details>
@@ -243,14 +251,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autofit/prior_exit_sampler_coverage.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> — autofit · medium · safe · medium</summary>
-
-```
-/start_dev draft/feature/autofit/search_seed_reproducibility.md
 ```
 
 </details>
@@ -391,7 +391,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**169** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**170** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -756,7 +756,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 20</summary>
+<summary><b>bug</b> — 21</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -810,6 +810,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autofit/add_resampling_info_section_to_the_bottom.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/multistartprodigy_stops_at_49_steps_when_iterati.md">MultiStartProdigy stops at 49 steps when iterations_per_quick_update=50 in @PyAutoFit</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/multistartprodigy_stops_at_49_steps_when_iterati.md
 ```
 
 </details>
