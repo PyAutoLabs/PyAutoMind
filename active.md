@@ -3,7 +3,8 @@
 ## release-smoke-env-declarations
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/272
 - issued: 2026-08-31
-- status: library-dev
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoHands/issues/272#issuecomment-5483161369
 - location: web-github (batch 2026-08-31-pm member release-smoke-env, --auto, effective level supervised)
 - heart-ack:
   - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
@@ -16,6 +17,14 @@
     --report-dir), so in-file __Env__ declarations govern release smoke runs
     and witt_wynne.py (ENV: full_datasets) stops failing every LIVE release.
     Plan on the issue; option 1 of the prompt (no autolens_workspace change).
+    DONE: branch feature/release-smoke-env-declarations pushed (b7df526) —
+    release.yml routes run_smoke_tests through run_python.py --list with
+    --env-config config/build/profile_release.yaml (version-check skip lives
+    there); 5 new tests in tests/test_release_smoke_env.py; suite 419p/9s;
+    witt_wynne resolution proven against the live workspace clone.
+    PARKED at ship sign-off (supervised): question + proposed PR body at the
+    - question: link above. On "open PR": open it verbatim from the comment;
+    on amendments: rework and re-post the checkpoint. No PR is open yet.
 
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
