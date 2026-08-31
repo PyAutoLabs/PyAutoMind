@@ -12,6 +12,7 @@ Consequence: glance
 Witness: an imaging/start_here.py run using MultiStartProdigy with iterations_per_quick_update=50 runs past the first quick update (total steps well above 50) instead of terminating at 49 steps, and the interaction is covered by a PyAutoFit unit test in which a quick update mid-search does not end the search.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-08-31
 
 MultiStartProdigy stops at 49 steps when iterations_per_quick_update=50 in @PyAutoFit
 
