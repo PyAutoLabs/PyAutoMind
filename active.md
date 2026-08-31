@@ -2,6 +2,7 @@
 
 ## release-smoke-env-declarations
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/272
+- prompt: active/release_smoke_ignores_env_declarations.md
 - issued: 2026-08-31
 - status: awaiting-input
 - question: https://github.com/PyAutoLabs/PyAutoHands/issues/272#issuecomment-5483161369
@@ -29,6 +30,7 @@
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
+- prompt: active/follow_up_wave_adapt_split_and_rectangular.md
 - issued: 2026-08-31
 - status: science-run (supervised --auto; human-dispatched from the 2026-08-31-am
   batch review's queued tweaks)

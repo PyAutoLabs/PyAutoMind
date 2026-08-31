@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — issued 2026-08-31</summary>
+<details><summary>📋 <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — issued 2026-08-31 — science-run (supervised --auto; human-dispatched from the 2026-08-31-am</summary>
 
 ```
 /start_dev active/follow_up_wave_adapt_split_and_rectangular.md
@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — issued 2026-08-31</summary>
+<details><summary>📋 <a href="active/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/272">issue #272</a> — issued 2026-08-31 — awaiting-input</summary>
 
 ```
 /start_dev active/release_smoke_ignores_env_declarations.md
