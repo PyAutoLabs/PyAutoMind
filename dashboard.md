@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — issued 2026-08-31</summary>
+<details><summary>📋 <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — issued 2026-08-31 — science-run (supervised --auto; human-dispatched from the 2026-08-31-am</summary>
 
 ```
 /start_dev active/follow_up_wave_adapt_split_and_rectangular.md
@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> — issued 2026-08-31</summary>
+<details><summary>📋 <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/513">issue #513</a> — issued 2026-08-31 — awaiting-input (verdict posted 2026-08-31; judge-tier research — parks</summary>
 
 ```
 /start_dev active/numba_solve_vs_jax_sparse_operator.md
