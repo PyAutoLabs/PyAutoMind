@@ -1,5 +1,26 @@
 # Active Tasks
 
+## autofit-prodigy-49
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1553
+- issued: 2026-08-31
+- status: library-dev (--auto safe; batch 2026-08-31-pm member autofit-prodigy-49)
+- location: web-github (remote session clone; no task worktree)
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+- repos:
+  - PyAutoFit (branch feature/multistart-quick-update-49-steps)
+- summary: |
+    Investigated: MultiStartProdigy cannot stop at a quick-update boundary — the
+    multi-start step loop never reads iterations_per_quick_update and the
+    convergence gate (min_steps=100) plus the n_steps ceiling are the only stop
+    paths (empirically confirmed: cadence=50, n_steps=120 runs 120/120). The
+    reported "49 steps" is search.summary's `Total Samples = 49` line
+    (1 best + n_starts=48 per-start finals) misread as a step count. Fix:
+    report Total Steps / Stop Reason in the multi-start search.summary block,
+    disambiguate the Total Samples line, and pin the non-termination with an
+    end-to-end MultiStartProdigy regression test (the prompt's Witness).
+
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
