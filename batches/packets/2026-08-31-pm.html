@@ -591,9 +591,9 @@ footer.pagefoot {
 <header class="pagehead">
   <p class="eyebrow">31 Aug 2026 · pm · both lanes · first human-composed batch under the review workflow</p>
   <h1>Slot Review &mdash; PM</h1>
-  <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. Collected 20:57Z: five delivered (four green PRs + one research verdict), three parked at the ship checkpoint for your judgement, one still running, two laptop members pending overnight. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
+  <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. This review covers the nine ready members: six delivered (five PR sets green + one research verdict) and three parked at ship. The two laptop members are in flight and carry automatically into the next batch&rsquo;s packet &mdash; no ruling needed here. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
   <p class="mirror-note">Science member outputs mirror to the laptop via each project&rsquo;s <code>hpc/sync pull</code> at collect; dev members are reviewed on their PRs.</p>
-  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 21:04Z (organ-board finished)</p>
+  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 21:09Z (laptop members carried; review scope = 9 ready members)</p>
   <p class="stampline">Permanent home: <a href="https://pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html"><code>pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html</code></a></p>
 </header>
 
@@ -601,7 +601,7 @@ footer.pagefoot {
   <div class="tile"><span class="num">11</span><span class="cap">Members</span></div>
   <div class="tile t-healthy"><span class="num">6</span><span class="cap">Delivered</span></div>
   <div class="tile t-suspect"><span class="num">3</span><span class="cap">Parked at ship</span></div>
-  <div class="tile t-running"><span class="num">2</span><span class="cap">Laptop overnight</span></div>
+  <div class="tile t-running"><span class="num">2</span><span class="cap">Carried to next batch</span></div>
   <div class="tile t-minutes">
     <span class="num">117</span>
     <span class="cap">Est. review-minutes</span>
@@ -1099,9 +1099,8 @@ footer.pagefoot {
       <p class="jobs">draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-running">Laptop · pending</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-subhalo"> Ruled</label>
-    </div>
+      <span class="chip chip-running">Carried to next batch</span>
+          </div>
   </div>
   <div class="blocks">
     <div class="block">
@@ -1112,14 +1111,10 @@ footer.pagefoot {
       <p class="label">Status</p>
       <p>Laptop member: prompt moved to <code>active/</code> (start_dev ran on the laptop); RAL runs queue/run overnight. A cloud session cannot <code>hpc/sync pull</code> &mdash; results land in the next slot&rsquo;s packet with local mirror paths.</p>
     </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-subhalo" value="accept" data-decision="m-subhalo"><span>Leave to finish</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-subhalo" value="tweak" data-decision="m-subhalo"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-subhalo" value="reject" data-decision="m-subhalo"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-subhalo" value="defer" data-decision="m-subhalo"><span>Defer</span></label>
-      </div>
+    <div class="block">
+      <p class="label">No ruling needed</p>
+      <p>Carried automatically: this member is in flight and enters the next batch's packet without re-specification. Review it there when its results are pulled.</p>
+    </div>
       <textarea class="notetext" data-note="m-subhalo" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
     </div>
     <p class="chip chip-min">Est. 15 review-minutes &middot; judge</p>
@@ -1134,9 +1129,8 @@ footer.pagefoot {
       <p class="jobs">PROGRAMME.md rewind restart · queue anchor autolens_profiling#200</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-running">Laptop · pending</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-jaxrefs"> Ruled</label>
-    </div>
+      <span class="chip chip-running">Carried to next batch</span>
+          </div>
   </div>
   <div class="blocks">
     <div class="block">
@@ -1147,14 +1141,10 @@ footer.pagefoot {
       <p class="label">Status</p>
       <p>Laptop member — dispatched by paste this evening; submissions and legacy-reuse survey are overnight work. Readouts land in the next slot&rsquo;s packet with local mirror paths.</p>
     </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-jaxrefs" value="accept" data-decision="m-jaxrefs"><span>Leave to finish</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-jaxrefs" value="tweak" data-decision="m-jaxrefs"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-jaxrefs" value="reject" data-decision="m-jaxrefs"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-jaxrefs" value="defer" data-decision="m-jaxrefs"><span>Defer</span></label>
-      </div>
+    <div class="block">
+      <p class="label">No ruling needed</p>
+      <p>Carried automatically: this member is in flight and enters the next batch's packet without re-specification. Review it there when its results are pulled.</p>
+    </div>
       <textarea class="notetext" data-note="m-jaxrefs" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
     </div>
     <p class="chip chip-min">Est. 20 review-minutes &middot; judge</p>
@@ -1164,12 +1154,13 @@ footer.pagefoot {
 <details class="panel" id="m-notes">
   <summary>Packet-building notes</summary>
   <div class="blocks">
+    <p>Carry-forward adopted mid-slot at the human's direction: unfinished long-running members are reviewed in the batch where their results land, entering the next packet automatically; this packet's review therefore counts 9 members, not 11. </p>
     <p>Written at dispatch (18:40Z), all members PENDING per the evening-dispatch flow; the collect regenerates member sections in place and bumps the refreshed stamp. Deviation from TEMPLATE.md: pending members carry their review controls already, so early notes persist through the refresh. Composition was human-pasted (the planner proposal was not used); constraint report and expected-effects live in <code>batches/2026-08-31-pm.md</code>. Heart YELLOW acknowledged in-chat at dispatch (manifest drift + web-container CI blindness). Epic resolutions at plan time: numba-cpu &rarr; deduped into the numba-vs-jax-sparse member; jax-inference &rarr; Phase 1 only, Phase 2 queued (ordered phases); euclid &rarr; phase 3a with the start_here.py ruling already resolved by the human (Mind 32c639e5).</p>
   </div>
 </details>
 
 <div class="submitbar">
-  <p class="progresscount" id="progress-count">Ruled 0 of 11 &middot; decisions 0 of 11</p>
+  <p class="progresscount" id="progress-count">Ruled 0 of 9 &middot; decisions 0 of 9</p>
   <button type="button" class="btn btn-primary" id="btn-submit">Submit review</button>
 </div>
 
@@ -1214,9 +1205,7 @@ footer.pagefoot {
     { id: "m-af-resamp", slug: "autofit-resampling-info", health: "HEALTHY" },
     { id: "m-af-prodigy", slug: "autofit-prodigy-49", health: "HEALTHY" },
     { id: "m-af-multi", slug: "autofit-multistart-iterations", health: "PARKED" },
-    { id: "m-euclid3a", slug: "euclid-3a-prose", health: "PARKED" },
-    { id: "m-subhalo", slug: "subhalo-follow-up-wave", health: "RUNNING" },
-    { id: "m-jaxrefs", slug: "jax-inference-phase1-refs", health: "RUNNING" }
+    { id: "m-euclid3a", slug: "euclid-3a-prose", health: "PARKED" }
   ];
 
   function readState() {
