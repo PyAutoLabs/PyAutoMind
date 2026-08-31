@@ -1,6 +1,7 @@
 # Active Tasks
 
 ## subhalo-followup-adapt-split-rectangular
+- prompt: active/follow_up_wave_adapt_split_and_rectangular.md
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
 - issued: 2026-08-31
@@ -30,9 +31,10 @@
     Pulled outputs land at the next batch collect (runs outlast this session).
 
 ## memory-queue-filing-gate
+- prompt: active/repair_queue_automation_filing_gate.md
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/75
 - issued: 2026-08-31
-- status: organ-dev (--auto, effective supervised = min(safe, bug cap); batch 2026-08-31-pm)
+- status: ship — PR open (PyAutoMemory#76, decision-taken; --auto, effective supervised, batch 2026-08-31-pm; merge + close-out re-drive human)
 - location: web-github
 - heart-ack:
   - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
