@@ -20,6 +20,7 @@ on:
     branches: [main]
     paths:
       - "dashboard.html"
+      - "batches/packets/**"
   workflow_dispatch:
 
 permissions:
@@ -48,6 +49,9 @@ jobs:
         run: |
           mkdir -p _site
           cp dashboard.html _site/index.html
+          # Batch review packets (ruled public 2026-08-31) — served under /packets/
+          mkdir -p _site/packets
+          find batches/packets -maxdepth 1 -name "*.html" -exec cp {} _site/packets/ \;
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

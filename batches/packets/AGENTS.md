@@ -24,11 +24,8 @@ Rules (2026-08-31):
   review happens at the laptop. A pointer may stay remote only when the pull
   cannot fetch it by design, and must say so.
 
-**Visibility — decision pending.** This repository is public. Until the human
-rules on public-vs-private for packets (they carry science readouts, run
-paths and figures), pages are NOT committed here; the working copies live in
-the local Science mirror (e.g. `Science/inference_programme/packets/`). If the
-ruling is public, packets land here and the Pages build can serve them; if
-private, this folder holds only this doc and the archive stays in a private
-home (a private repo, or the Science mirror) with the batch record's `packet:`
-field pointing at it.
+**Visibility — ruled public, 2026-08-31.** The human ruled packets and reviews
+public in this repository, served on its Pages site, aware that the science
+numbers, figures and run paths in a packet are thereby on the open internet.
+Pages land here as `<YYYY-MM-DD>-<slot>.html`; `pages_dashboard.yml` serves
+them at `https://pyautolabs.github.io/PyAutoMind/packets/<name>.html`.
