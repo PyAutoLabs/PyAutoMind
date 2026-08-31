@@ -593,15 +593,15 @@ footer.pagefoot {
   <h1>Slot Review &mdash; PM</h1>
   <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. Collected 20:57Z: five delivered (four green PRs + one research verdict), three parked at the ship checkpoint for your judgement, one still running, two laptop members pending overnight. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
   <p class="mirror-note">Science member outputs mirror to the laptop via each project&rsquo;s <code>hpc/sync pull</code> at collect; dev members are reviewed on their PRs.</p>
-  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 20:57Z (collect)</p>
+  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 21:04Z (organ-board finished)</p>
   <p class="stampline">Permanent home: <a href="https://pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html"><code>pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html</code></a></p>
 </header>
 
 <section class="tiles" aria-label="Summary">
   <div class="tile"><span class="num">11</span><span class="cap">Members</span></div>
-  <div class="tile t-healthy"><span class="num">5</span><span class="cap">Delivered</span></div>
+  <div class="tile t-healthy"><span class="num">6</span><span class="cap">Delivered</span></div>
   <div class="tile t-suspect"><span class="num">3</span><span class="cap">Parked at ship</span></div>
-  <div class="tile t-running"><span class="num">3</span><span class="cap">Running / laptop</span></div>
+  <div class="tile t-running"><span class="num">2</span><span class="cap">Laptop overnight</span></div>
   <div class="tile t-minutes">
     <span class="num">117</span>
     <span class="cap">Est. review-minutes</span>
@@ -652,7 +652,7 @@ footer.pagefoot {
     <li><a href="#m-memq" data-nav="m-memq">memory queue filing gate<span class="mini m-healthy">PR green · 0 min</span></a></li>
     <li><a href="#m-af-resamp" data-nav="m-af-resamp">autofit resampling info<span class="mini m-healthy">PR green · 3 min</span></a></li>
     <li><a href="#m-af-prodigy" data-nav="m-af-prodigy">autofit prodigy 49<span class="mini m-healthy">PR green · 3 min</span></a></li>
-    <li><a href="#m-board" data-nav="m-board">organ board link<span class="mini m-running">Running · 3 min</span></a></li>
+    <li><a href="#m-board" data-nav="m-board">organ board link<span class="mini m-healthy">PRs green · 3 min</span></a></li>
     <li><a href="#m-subhalo" data-nav="m-subhalo">subhalo follow-up<span class="mini m-running">Laptop · 15 min</span></a></li>
     <li><a href="#m-jaxrefs" data-nav="m-jaxrefs">jax refs phase 1<span class="mini m-running">Laptop · 20 min</span></a></li>
   </ul>
@@ -1056,7 +1056,7 @@ footer.pagefoot {
   </div>
 </section>
 
-<section class="member sev-running" id="m-board">
+<section class="member sev-healthy" id="m-board">
   <div class="m-head">
     <div class="m-head-main">
       <p class="eyebrow">six organ repos · feature · in flight at collect</p>
@@ -1064,7 +1064,7 @@ footer.pagefoot {
       <p class="jobs">first PR: PyAutoHands#273 · session working across brain/heart/memory/mind/scientist</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-running">Still running</span>
+      <span class="chip chip-healthy">All PRs green</span>
       <label class="ruled"><input type="checkbox" data-ruled="m-board"> Ruled</label>
     </div>
   </div>
@@ -1075,12 +1075,12 @@ footer.pagefoot {
     </div>
     <div class="block">
       <p class="label">Status</p>
-      <p>Still running at collect (20:51Z) &mdash; the six-repo fan-out is the batch&rsquo;s widest member. <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/273">PyAutoHands#273</a> open so far; remaining organ PRs land as the session finishes. Re-check when you review, or leave to finish.</p>
+      <p>All PRs green at collect (20:51Z) &mdash; the six-repo fan-out is the batch&rsquo;s widest member. <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/273">PyAutoHands#273</a> open so far; remaining organ PRs land as the session finishes. Re-check when you review, or leave to finish.</p>
     </div>
     <div class="block review-block">
       <p class="label">Your review</p>
       <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-board" value="accept" data-decision="m-board"><span>Leave to finish</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-board" value="accept" data-decision="m-board"><span>Accept</span></label>
         <label class="rchip"><input type="radio" name="rv-m-board" value="tweak" data-decision="m-board"><span>Tweak</span></label>
         <label class="rchip"><input type="radio" name="rv-m-board" value="reject" data-decision="m-board"><span>Reject</span></label>
         <label class="rchip"><input type="radio" name="rv-m-board" value="defer" data-decision="m-board"><span>Defer</span></label>
@@ -1207,7 +1207,7 @@ footer.pagefoot {
   var REVIEW_PATH = "batches/reviews/2026-08-31-pm.md";
   var MEMBERS = [
     { id: "m-numba", slug: "numba-vs-jax-sparse", health: "HEALTHY" },
-    { id: "m-board", slug: "organ-board-github-link", health: "RUNNING" },
+    { id: "m-board", slug: "organ-board-github-link", health: "HEALTHY" },
     { id: "m-smoke", slug: "release-smoke-env", health: "PARKED" },
     { id: "m-nerves", slug: "autonerves-colab-silence", health: "HEALTHY" },
     { id: "m-memq", slug: "memory-queue-filing-gate", health: "HEALTHY" },
