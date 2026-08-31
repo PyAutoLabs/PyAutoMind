@@ -36,7 +36,6 @@
     preload) against the JAX ImagingSparseOperator + jaxnnls PDIP path; assess
     GPU-portability of the numba levers; verdict unify/port/keep posted on the
     issue. Judge-tier: verdict parks for human review, no decide-and-flag.
->>>>>>> origin/main
 
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
