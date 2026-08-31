@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 162 |
 
 ## Start here
 
@@ -436,7 +436,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
+**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 26</summary>
@@ -2048,7 +2048,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 </details>
 
 <details>
-<summary><b>Two slots a day — the batch workflow</b> — 8 queued prompt(s), in order</summary>
+<summary><b>Two slots a day — the batch workflow</b> — 10 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Two slots a day — the batch workflow</b> — ledger: `draft/feature/pyautomind/two_slot_batching_epic.md`</summary>
 
@@ -2102,6 +2102,22 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 ```
 /start_dev draft/research/euclid/batch_science_lane.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship for batch members: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/batch_carry_forward.md">Carried members: long-running batch work rolls into the next batch automatically</a> — pyautomind · small · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/batch_carry_forward.md
 ```
 
 </details>
@@ -2230,7 +2246,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-160 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+162 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2266,6 +2282,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautobrain/batch_board.md`
 - `draft/feature/pyautobrain/batch_conductor.md`
 - `draft/feature/pyautobrain/batch_dispatch.md`
+- `draft/feature/pyautobrain/batch_no_park_at_ship.md`
 - `draft/feature/pyautobrain/batch_notify_tier_merge.md`
 - `draft/feature/pyautobrain/board_without_gh.md`
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
@@ -2274,12 +2291,11 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 120 more_
+- _… and 122 more_
 
 </details>
 
-12 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+14 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2289,6 +2305,8 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/resimulate_fitted_lens_simulator.md — unknown theme keyword(s): euclid, simulation`
+- `draft/feature/pyautobrain/batch_no_park_at_ship.md — unknown theme keyword(s): batch`
+- `draft/feature/pyautomind/batch_carry_forward.md — unknown theme keyword(s): batch`
 - `draft/bug/autoarray/delaunay_area_magnification_audit.md — unknown theme keyword(s): euclid`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/docs/euclid/restore_pipeline_narrative_prose.md — unknown theme keyword(s): euclid`
