@@ -27,6 +27,8 @@ record it.
 - reviewed-at: 2026-09-04T08:30Z   # when they actually sat down
 - usage-window-at-collect: <5h %, weekly %, opus %>
 - delivered: <n>/<n>
+- packet: batches/packets/<YYYY-MM-DD>-<slot>.html
+- review: batches/reviews/<YYYY-MM-DD>-<slot>.md
 - review-minutes-actual: <n>
 - notes: |
     What actually happened. Anything that stalled, and why.
@@ -48,6 +50,18 @@ standing one, which doctrine voids.
 **`review-minutes-actual:` is the only calibration there is.** The planned figure
 is a seed from the sizing faculty; this is what the slot really cost. Without it
 the estimate never improves, and the whole batch size rests on it.
+
+**`packet:` is the page the human actually reviewed, archived.** One
+self-contained HTML file per slot under `batches/packets/` (see that folder's
+`AGENTS.md`), written at dispatch with PENDING members and refreshed at
+collect. It is the historical record of what the human was shown; a batch
+whose packet was never archived cannot be audited against what they ruled on.
+
+**`review:` is what the human said, verbatim.** The markdown their packet-page
+submission produced (or the orchestrator transcribed), one file per slot under
+`batches/reviews/`. The orchestrator parses it at close-out — merges, rulings,
+queued follow-ups all trace back to a line in this file, not to a memory of a
+conversation.
 
 **`review-at:` is the shift, and it is the human's to declare.** There is no
 schedule: a slot is whenever they come in, so at dispatch they state when they
