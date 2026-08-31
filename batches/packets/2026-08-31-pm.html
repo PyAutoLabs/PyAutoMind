@@ -593,7 +593,7 @@ footer.pagefoot {
   <h1>Slot Review &mdash; PM</h1>
   <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. This review covers the nine ready members: six delivered (five PR sets green + one research verdict) and three parked at ship. The two laptop members are in flight and carry automatically into the next batch&rsquo;s packet &mdash; but the jax-refs leg routed <strong>three legacy-reuse rulings</strong> into this slot, included below. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
   <p class="mirror-note">Science member outputs mirror to the laptop via each project&rsquo;s <code>hpc/sync pull</code> at collect; dev members are reviewed on their PRs.</p>
-  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 22:00Z (CI green on all three opened PRs: #274 3/3, #1556 4/4, euclid#48 9/9)</p>
+  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 22:53Z (jax-refs member refilled from RAL job 342091: 2 tasks ended clean, 1 running, 7 queued &mdash; earlier 22:00Z refresh: CI green on all three opened PRs, #274 3/3, #1556 4/4, euclid#48 9/9)</p>
   <p class="stampline">Permanent home: <a href="https://pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html"><code>pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html</code></a></p>
 </header>
 
@@ -1416,7 +1416,7 @@ footer.pagefoot {
       <p class="jobs">PROGRAMME.md rewind restart · queue anchor autolens_profiling#200</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-running">Carried to next batch</span>
+      <span class="chip chip-running">RUNNING &mdash; 2/10 landed &middot; carried</span>
     </div>
   </div>
   <div class="blocks">
@@ -1425,12 +1425,36 @@ footer.pagefoot {
       <p>Certify the InferenceRefs_v1 rows: legacy-MGE reuse rulings first (surfaced as packet members), fresh RAL submissions for missing/rejected rows (incl. re-queued refs 5/6/7). Phase 2 stays queued behind these baselines.</p>
     </div>
     <div class="block">
-      <p class="label">Status</p>
-      <p>Dispatched from the laptop 21:08Z: RAL job <strong>342091</strong> (<code>sbatch --array=0-8,10 --requeue</code>) running; task 9 (mge_pos) held back under the MGE reuse rule — its ruling and the two retro-baseline rulings are the three members above. Recorded on <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/201">autolens_profiling#201</a> with docs-only PR <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/202">#202</a>. Results carry to the next batch.</p>
+      <p class="label">Status &mdash; RAL job 342091, read 2026-08-31 22:53Z</p>
+      <p>Dispatched from the laptop 21:08Z: RAL job <strong>342091</strong> (<code>sbatch --array=0-8,10 --requeue</code>), config <code>hpc_a100_fp64_ref</code>, A100 80&nbsp;GB, n_live 300 (2&times; fiducial), 6:00:00 wall per task. The array runs <strong>one task at a time</strong> (the remaining seven sit <code>PENDING (Resources)</code> behind the single GPU), so this is early: <strong>2 of 10 ended, 1 running, 7 queued</strong>. Task 9 (mge_pos) was held back under the MGE reuse rule &mdash; its ruling and the two retro-baseline rulings are the three members above. Recorded on <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/201">autolens_profiling#201</a> with docs-only PR <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/202">#202</a>. Refreshed here by <code>hpc/sync pull</code> to <code>/mnt/c/Users/Jammy/Science/inference_programme/</code>. Results carry to the next batch.</p>
+    </div>
+    <div class="block">
+      <p class="label">Witness &mdash; per-task readout</p>
+      <div class="scroll">
+        <table>
+          <caption>342091 array tasks &mdash; sacct state and delivered checks (sacct state is not health evidence; the checks column is)</caption>
+          <thead><tr><th class="num">Task</th><th>Target</th><th>sacct state</th><th class="num">Elapsed</th><th>Delivered checks</th><th class="num">maxLL / logZ</th><th>Flags</th></tr></thead>
+          <tbody>
+            <tr><td class="num">0</td><td>pixelization, pos off</td><td class="mono">COMPLETED 0:0</td><td class="num mono">00:36:21</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler_wall 2093.03&nbsp;s (10% of 6&nbsp;h)</td><td class="num mono">29,835.4509<br>29,778.0569</td><td>none &mdash; finite, ~3e4</td></tr>
+            <tr><td class="num">1</td><td>delaunay_nn, pos off</td><td class="mono">COMPLETED 0:0</td><td class="num mono">00:52:55</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler_wall 3110.97&nbsp;s (15% of 6&nbsp;h)</td><td class="num mono">30,650.8283<br>30,591.1280</td><td>none &mdash; finite, ~3e4</td></tr>
+            <tr><td class="num">2</td><td>delaunay_nn, pos on (fixed 0.3, f 1e8)</td><td class="mono">RUNNING</td><td class="num mono">00:18:41</td><td>in flight on <code>euclid-ral-gpu-2</code>; <code>.err</code> clean so far; positions banner confirms 4 truth-derived points, threshold mode fixed 0.300000, factor 1e+08; config <code>hpc_a100_fp64_ref_pos_t0.3_f1e8</code>; at last log line 29 bounds / ~19,500 calls</td><td class="num mono">live logZ<br>+30,162</td><td>&mdash;</td></tr>
+            <tr><td class="num">3</td><td>slam_source_pix, pos off</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>, no node assigned</td></tr>
+            <tr><td class="num">4</td><td>slam_source_pix, pos on (auto)</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>, no node assigned</td></tr>
+            <tr><td class="num">5</td><td>slam_source_pix_nn, pos off</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>; corrected <code>AdaptSplitPower</code> target <code>sha256:ad291b57fc62</code></td></tr>
+            <tr><td class="num">6</td><td>slam_source_pix_nn, pos on (auto)</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>; corrected target <code>sha256:8021b4b697ff</code>, never previously submitted</td></tr>
+            <tr><td class="num">7</td><td>knn, pos off</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>. <strong>The suspect row has not been replaced yet:</strong> the mirror&rsquo;s <code>knn/hst/hpc_hpc_a100_fp64_ref.json</code> still reads maxLL <strong>30,077.028</strong> &mdash; the pre-fix value, 480 nats below the Prodigy arm bar 30,557.03. Do not read it as a 342091 result.</td></tr>
+            <tr><td class="num">8</td><td>delaunay_matern, pos off</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>, no node assigned</td></tr>
+            <tr><td class="num">9</td><td>mge, pos on (auto)</td><td class="mono">not submitted</td><td class="num mono">&mdash;</td><td colspan="3">deliberately excluded from the array under the MGE legacy-reuse ruling &mdash; see <a href="#m-mgepos">mge-pos-ref-reuse</a> above</td></tr>
+            <tr><td class="num">10</td><td>delaunay, pos on (auto)</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>, no node assigned</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>No overflow signature anywhere.</strong> Both landed rows sit in the ~3e4 band the corrected cells should occupy; nothing resembles the pre-fix <code>log_l</code> up to 3e+303. Both run dirs carry <code>.completed</code> and a fresh <code>2026.8.17.1</code> stamp, and neither <code>.out</code> contains <code>Fit Already Completed</code> &mdash; both started cold, no resume collision. Both finished far inside the 6&nbsp;h budget, so the wall estimate is generous, not tight.</p>
+      <p><strong>One provenance anomaly, unrelated to the array:</strong> the <code>knn</code> result row on RAL was written <code>2026-08-31 20:08:27 BST</code> &mdash; about two hours <em>before</em> 342091 went up &mdash; and no SLURM job in that window accounts for it. Its provenance is not this array; task 7 is the run that will replace it.</p>
     </div>
     <div class="block">
       <p class="label">No ruling needed</p>
-      <p>Carried automatically: this member is in flight and enters the next batch's packet without re-specification. Review it there when its results are pulled.</p>
+      <p>Carried automatically: this member is in flight and enters the next batch's packet without re-specification. Review it there when its results are pulled &mdash; the eight outstanding tasks run serially on one GPU, so the wave will not be complete for some hours.</p>
     </div>
     <p class="chip chip-min">Est. 20 review-minutes &middot; judge</p>
   </div>
