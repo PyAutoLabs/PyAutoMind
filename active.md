@@ -141,6 +141,27 @@
     stage-split corrected (grid 21.2h / refine 8.25h — disabling subhalo[2] saves
     ~8h/lens, not ~1.5h); 342027_1/_2 witnesses are refine-derived (pre-subhalo_stage
     key) — compare accordingly.
+    REFRESH 2026-08-31 23:57 BST (read-and-record: hpc/sync pull, no submits/cancels):
+    - 342093_0 COMPLETED 0:0 in 1:16:49 (8h wall). model.info reads AdaptSplit (N=3);
+      like-for-like vs the ConstantSplit baseline pix[1] (same lens, 600-px Delaunay,
+      10 free params): log evidence 18,312.473 → 19,390.673 (+1,078.20), maxLL
+      18,377.142 → 19,462.741 (+1,085.60). Reg goes flat 1.321 → inner 1e-4 / outer
+      79.76 / signal_scale 0.0164 (0.02 at the core, 23.19 in the outskirts). The
+      compact source SURVIVES and the caustic-edge knot is better resolved; BUT the
+      coherent ring residuals persist at the same amplitude in both (chi² max 54.69 →
+      63.20) — the evidence gain is the adaptive prior, not resolved arc structure.
+      Before/after figures committed to results/figures/ and embedded in the packet.
+    - 342094_0 COMPLETED 0:0 in 1:44:40 (ended 23:52:17 BST); 342095_0 dependency
+      released and RUNNING (00:04:22 of 48h) — rectangular_adapt pl_sersic_0 chain live.
+    - 342027_1 / 342027_2 still RUNNING inside subhalo[2] (1-21:02:09 of 2-00:00:00);
+      checkpoints written 23:52:09/10 (41.7/42.6 MB) — sampling, not hung. RISK: the
+      completed twin 342027_0 took 8h14m in subhalo[2]; these are 10h07m / 9h25m in
+      with ~3h to wall (2026-09-01 02:54). May be cut off with no witness; Nautilus
+      checkpoints allow a resume-resubmit.
+    - Witnesses on the mirror: still only delaunay_adapt_split/pl_sersic_0 (−0.3009,
+      CLEAN, already accepted). NEITHER pl_eff witness exists, so the parked second
+      rectangular submission stays PARKED — nothing unblocked this refresh. Command,
+      NOT run: PIPELINE=rectangular_adapt ARRAY=<1|2> bash hpc/run_chain.sh.
 
 ## memory-queue-filing-gate
 - prompt: active/repair_queue_automation_filing_gate.md
