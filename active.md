@@ -28,3 +28,23 @@
     from hpc/batch_cpu; size --time from measured stage costs (grid ≈29h of ≈34h);
     commit edits locally on main; journal run rows + rewrite wiki/project/state.md.
     Pulled outputs land at the next batch collect (runs outlast this session).
+
+## memory-queue-filing-gate
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/75
+- issued: 2026-08-31
+- status: organ-dev (--auto, effective supervised = min(safe, bug cap); batch 2026-08-31-pm)
+- location: web-github
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+- repos:
+  - pyautomemory (branch feature/memory-queue-filing-gate — web-github session clone, no worktree)
+- summary: |
+    Repair the PyAutoMemory queue automation (#69/#71/#72 stuck since
+    2026-08-28): add the PyAutoBrain sibling checkout to queue_filing.yml
+    (gate hard-broken since dcd1e2c, 2026-08-24), make queue_actions.yml's
+    push retry conflict-proof (fetch + reset --hard + re-run the idempotent
+    action script instead of rebase-and-discard), and add an if: failure()
+    report step so a failed run comments on its issue instead of silence.
+    Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
+    green queue_filing.yml run on #71 that opens a filing PR.
