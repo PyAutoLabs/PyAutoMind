@@ -4,8 +4,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/325
 - issued: 2026-08-31
 - session: claude-code-remote (batch 2026-08-31-pm member organ-board-github-link, web-github)
-- status: workspace-dev
+- status: pr-open (all five legs of the autonomous-ship gate passed 2026-08-31; merge is the human's)
 - branch: feature/organ-board-github-link
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoBrain/pull/326
+  - https://github.com/PyAutoLabs/PyAutoHeart/pull/194
+  - https://github.com/PyAutoLabs/PyAutoHands/pull/273
+  - https://github.com/PyAutoLabs/PyAutoMemory/pull/77
+  - https://github.com/PyAutoLabs/PyAutoScientist/pull/25
 - repos:
   - PyAutoBrain
   - PyAutoHeart
