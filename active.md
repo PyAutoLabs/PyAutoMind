@@ -3,9 +3,10 @@
 ## numba-vs-jax-sparse
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/513
 - issued: 2026-08-31
-- status: research (batch 2026-08-31-pm member, --auto, effective level supervised
-  = min(header safe, research work-type cap); verdict-only deliverable, no library
-  changes, no worktree)
+- status: awaiting-input (verdict posted 2026-08-31; judge-tier research — parks
+  for human review per the supervised contract; sign-off retires via close-out,
+  a failed review files an ordinary /intake follow-up)
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/513#issuecomment-5483142802
 - heart-ack:
   - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
   - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
