@@ -591,20 +591,21 @@ footer.pagefoot {
 <header class="pagehead">
   <p class="eyebrow">31 Aug 2026 · pm · both lanes · first human-composed batch under the review workflow</p>
   <h1>Slot Review &mdash; PM</h1>
-  <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. This page was opened at dispatch with every member PENDING; the collect refreshes each section in place while you read. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
+  <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; plus three legacy-reuse rulings raised by the JAX-inference member after dispatch, added at the 21:08Z refresh &mdash; nine cloud dev members and two laptop/RAL science members. This page was opened at dispatch with every member PENDING; the collect refreshes each section in place while you read. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
   <p class="mirror-note">Science member outputs mirror to the laptop via each project&rsquo;s <code>hpc/sync pull</code> at collect; dev members are reviewed on their PRs.</p>
-  <p class="stampline">Generated 2026-08-31 18:40Z &middot; not yet refreshed</p>
+  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 21:08Z (jax-inference-phase1-refs dispatched; its three legacy-reuse rulings added as members)</p>
   <p class="stampline">Permanent home: <a href="https://pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html"><code>pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html</code></a></p>
 </header>
 
 <section class="tiles" aria-label="Summary">
-  <div class="tile"><span class="num">11</span><span class="cap">Members</span></div>
+  <div class="tile"><span class="num">14</span><span class="cap">Members</span></div>
   <div class="tile t-running"><span class="num">11</span><span class="cap">Pending</span></div>
+  <div class="tile t-suspect"><span class="num">3</span><span class="cap">Rulings required</span></div>
   <div class="tile t-suspect"><span class="num">3</span><span class="cap">May park at ship</span></div>
   <div class="tile t-minutes">
-    <span class="num">117</span>
+    <span class="num">130</span>
     <span class="cap">Est. review-minutes</span>
-    <span class="sum">20 + 3 + 20 + 0 + 0 + 3 + 3 + 3 + 30 + 15 + 20</span>
+    <span class="sum">20 + 3 + 20 + 0 + 0 + 3 + 3 + 3 + 30 + 15 + 20 + 5 + 4 + 4</span>
     <span class="foot">budget uncapped this slot (human at dispatch)</span>
   </div>
 </section>
@@ -629,6 +630,9 @@ footer.pagefoot {
 <section class="panel" id="rulings">
   <h2>Rulings needed</h2>
   <ol class="rulings">
+    <li><span class="who"><a href="#m-mgepos">mge-pos-ref-reuse</a></span> &mdash; adopt the quarantined-but-reusable <code>340210_9</code> run as the <code>mge_pos_fp64</code> InferenceRefs_v1 reference, or reject it and queue array task 9 fresh.</li>
+    <li><span class="who"><a href="#m-mgefp64">mge-fp64-retro-baseline</a></span> &mdash; does the retro-adopted <code>mge_fp64</code> baseline stand under the redo standard, or does it need a fresh <code>_ref</code> run (for which no array task exists)?</li>
+    <li><span class="who"><a href="#m-delfp64">delaunay-fp64-retro-baseline</a></span> &mdash; the <code>delaunay_fp64</code> baseline rests on <code>legacy_wrong</code> (never-cite) evidence and has no array vehicle: add array task 11 now, or defer until the 342091 wave lands?</li>
     <li><span class="who"><a href="#m-af-resamp">PyAutoFit trio</a></span> &mdash; confirm the serial merge order (resampling-info &rarr; prodigy-49 &rarr; multistart-iterations) or reorder.</li>
     <li><span class="who"><a href="#m-euclid3a">euclid-3a-prose</a></span> &mdash; if parked at ship (supervised + needs-slicing), judge the branch: ship as-is, tweak, or slice.</li>
     <li><span class="who"><a href="#m-jaxrefs">jax-inference-phase1-refs</a></span> &mdash; Phase 2 (NSS re-tune redo) was <em>not</em> dispatched: it is gated on Phase 1&rsquo;s certified baselines. Approve queueing it for the next batch.</li>
@@ -651,6 +655,9 @@ footer.pagefoot {
     <li><a href="#m-af-multi" data-nav="m-af-multi">MultiStartGradient searches ignore ite<span class="mini m-suspect">Pending · 3 min</span></a></li>
     <li><a href="#m-euclid3a" data-nav="m-euclid3a">Euclid phase 3a — restore the narrativ<span class="mini m-suspect">Pending · 30 min</span></a></li>
     <li><a href="#m-subhalo" data-nav="m-subhalo">Subhalo validation follow-up wave — ad<span class="mini m-suspect">Pending · 15 min</span></a></li>
+    <li><a href="#m-mgepos" data-nav="m-mgepos">mge_pos reference — reuse the legacy r<span class="mini m-suspect">Ruling · 5 min</span></a></li>
+    <li><a href="#m-mgefp64" data-nav="m-mgefp64">mge_fp64 retro baseline — off-spec<span class="mini m-suspect">Ruling · 4 min</span></a></li>
+    <li><a href="#m-delfp64" data-nav="m-delfp64">delaunay_fp64 retro baseline — rejecte<span class="mini m-suspect">Ruling · 4 min</span></a></li>
     <li><a href="#m-jaxrefs" data-nav="m-jaxrefs">JAX inference programme — Phase 1 redo<span class="mini m-suspect">Pending · 20 min</span></a></li>
   </ul>
   <p class="navhead">Also</p>
@@ -1051,6 +1058,289 @@ footer.pagefoot {
   </div>
 </section>
 
+<section class="member" id="m-mgepos">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">autolens_profiling &middot; InferenceRefs_v1 &middot; from jax-inference-phase1-refs</p>
+      <h2>mge_pos reference &mdash; reuse the legacy row, or run it again?</h2>
+      <p class="jobs">340210_9 (2026-08-25) &middot; array task 9, deliberately excluded from 342091</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-suspect">Ruling required</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-mgepos"> Ruled</label>
+    </div>
+  </div>
+  <div class="blocks">
+
+    <div class="block">
+      <p class="label">Question</p>
+      <p>Adopt the <code>340210_9</code> legacy row as the <code>mge_pos_fp64</code> InferenceRefs_v1 reference? The 2026-08-31 rewind's MGE reuse rule put this run on the <em>reusable</em> side of the quarantine (<code>output/legacy/</code>, not <code>output/legacy_wrong/</code>), so task 9 was held back from the 342091 array rather than resubmitted. Nothing has been adopted; the row is presented for your call.</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Witness &mdash; refs spec vs the row</p>
+      <div class="scroll">
+        <table>
+          <caption>InferenceRefs_v1 reference standard against 340210_9</caption>
+          <thead><tr><th>Spec item</th><th>Required</th><th>340210_9</th><th class="num">Match</th></tr></thead>
+          <tbody>
+            <tr><td>n_live</td><td class="mono">&ge; 2&times; fiducial (200) = 400</td><td class="mono">400</td><td class="num">yes</td></tr>
+            <tr><td>seed</td><td class="mono">0</td><td class="mono">0</td><td class="num">yes</td></tr>
+            <tr><td>config name</td><td class="mono">hpc_a100_fp64_ref</td><td class="mono">hpc_a100_fp64_ref</td><td class="num">yes</td></tr>
+            <tr><td>positions</td><td class="mono">on</td><td class="mono">on</td><td class="num">yes</td></tr>
+            <tr><td>threshold</td><td class="mono">auto</td><td class="mono">auto (collapses to the 0.2 floor)</td><td class="num">yes</td></tr>
+            <tr><td>factor</td><td class="mono">1e8</td><td class="mono">1e8</td><td class="num">yes</td></tr>
+            <tr><td>priors_ref</td><td class="mono">current _targets.py</td><td class="mono">_targets.py@7f2f14765de7 (= current)</td><td class="num">yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Every line of the standard is met &mdash; this is an exact match, not a near miss. It is the only one of the three rulings on this page where that is true.</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Health evidence</p>
+      <p><code>.completed</code> marker present; PyAuto version stamp <code>2026.8.17.1</code>; <code>sampler_wall</code> 939.09 s, consistent with this cell's recorded cost (17:07 elapsed job time) and well inside budget; <code>priors_ref</code> resolves to the current <code>_targets.py</code> hash, so the row is not behind a target-stack boundary. RAL copy and the laptop mirror are identical.</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Readout</p>
+      <div class="scroll">
+        <table>
+          <caption>340210_9 &mdash; mge, positions on, tauto 0.2, factor 1e8</caption>
+          <thead><tr><th>Metric</th><th class="num">Value</th></tr></thead>
+          <tbody>
+            <tr><td>maxLL</td><td class="num">31,786.7965</td></tr>
+            <tr><td>logZ</td><td class="num">31,690.4174</td></tr>
+            <tr><td>evals</td><td class="num">96,704</td></tr>
+            <tr><td>Kish ESS</td><td class="num">7,586.1</td></tr>
+            <tr><td>sampler_wall</td><td class="num">939.09 s</td></tr>
+            <tr><td>target_id</td><td class="num mono">sha256:6b93f0e52ecd</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="block ruling">
+      <p class="label">Ruling</p>
+      <p class="decision">Accept &rarr; cite the row, <code>mv</code> its run dir back out of <code>output/legacy/</code> into the active tree, and adopt it into <code>results/baselines/InferenceRefs_v1/mge_pos_fp64/</code>. Reject &rarr; queue array task 9 fresh (one more A100 task on top of the running ten).</p>
+    </div>
+
+    <div class="block review-block">
+      <p class="label">Your review</p>
+      <div class="rchips" role="radiogroup" aria-label="Decision">
+        <label class="rchip"><input type="radio" name="rv-m-mgepos" value="accept" data-decision="m-mgepos"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-mgepos" value="tweak" data-decision="m-mgepos"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-mgepos" value="reject" data-decision="m-mgepos"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-mgepos" value="defer" data-decision="m-mgepos"><span>Defer</span></label>
+      </div>
+      <textarea class="notetext" data-note="m-mgepos" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+    </div>
+
+    <div class="block">
+      <p class="label">Where to look yourself</p>
+      <dl class="look">
+        <dt>Local mirror (run dir)</dt>
+        <dd>/mnt/c/Users/Jammy/Science/inference_programme/output/legacy/searches/nautilus/imaging/mge/hst/pos_tauto0.2_f1e8/hpc_a100_fp64_ref_pos_tauto0.2_f1e8/dc42087fb0524e78fd43eced7706b365/</dd>
+        <dt>RAL (identical)</dt>
+        <dd>/mnt/ral/jnightin/autolens_profiling/output/legacy/searches/nautilus/imaging/mge/hst/pos_tauto0.2_f1e8/&hellip;/dc42087fb0524e78fd43eced7706b365/</dd>
+        <dt>Repo artifact</dt>
+        <dd>autolens_profiling/results/searches/nautilus/imaging/mge/hst/hpc_hpc_a100_fp64_ref_pos_tauto0.2_f1e8.json</dd>
+        <dt>Ruling lands in</dt>
+        <dd>&hellip;/results/baselines/InferenceRefs_v1/mge_pos_fp64/ (+ INDEX.json / INDEX.md, and the SUBMIT_LIST.md row)</dd>
+        <dt>Dispatch record</dt>
+        <dd>autolens_profiling#201 &middot; PR #202 &middot; SUBMIT_LIST.md &sect; &ldquo;2026-08-31 &mdash; Phase 1 redo dispatch&rdquo;</dd>
+      </dl>
+    </div>
+
+    <p class="chip chip-min">Est. 5 review-minutes &middot; judge</p>
+  </div>
+</section>
+
+<section class="member" id="m-mgefp64">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">autolens_profiling &middot; InferenceRefs_v1 &middot; from jax-inference-phase1-refs</p>
+      <h2>mge_fp64 retro baseline &mdash; off-spec under the redo standard</h2>
+      <p class="jobs">results/baselines/InferenceRefs_v1/mge_fp64/</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-suspect">Ruling required</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-mgefp64"> Ruled</label>
+    </div>
+  </div>
+  <div class="blocks">
+
+    <div class="block">
+      <p class="label">Question</p>
+      <p>Does the retro-adopted <code>mge_fp64</code> baseline still stand once the redo standard is applied to it? It was adopted retrospectively from an existing run, not produced by the refs array, and it does not meet the standard the ten fresh rows are being held to.</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Witness &mdash; where it is off-spec</p>
+      <div class="scroll">
+        <table>
+          <caption>Refs standard vs the adopted mge_fp64 source run</caption>
+          <thead><tr><th>Spec item</th><th>Required</th><th>Adopted run</th><th class="num">Match</th></tr></thead>
+          <tbody>
+            <tr><td>n_live</td><td class="mono">400</td><td class="mono">200</td><td class="num">no</td></tr>
+            <tr><td>seed</td><td class="mono">0</td><td class="mono">null</td><td class="num">no</td></tr>
+            <tr><td>config name</td><td class="mono">hpc_a100_fp64_ref</td><td class="mono">hpc_a100_fp64</td><td class="num">no</td></tr>
+            <tr><td>priors_ref</td><td class="mono">current _targets.py</td><td class="mono">_targets.py@bf2c8742c334 (STALE)</td><td class="num">no</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The stale <code>priors_ref</code> is the load-bearing one: the baseline's <code>target.json</code> pins a <code>_targets.py</code> that is no longer the current definition, so anything scored against it is scored across a target-stack boundary.</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Health evidence</p>
+      <p>The run itself is healthy and on the <em>reusable</em> side of the quarantine &mdash; source run <code>mge/hst/hpc_a100_fp64/181b13114ba3c2298191185ff74f90d8</code>, now under <code>output/legacy/</code>. <code>.completed</code> present, version <code>2026.8.17.1</code>. This is a spec question, not a soundness question.</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Readout</p>
+      <div class="scroll">
+        <table>
+          <caption>mge_fp64 adopted baseline &mdash; metadata</caption>
+          <thead><tr><th>Metric</th><th class="num">Value</th></tr></thead>
+          <tbody>
+            <tr><td>maxLL</td><td class="num">31,786.6288</td></tr>
+            <tr><td>logZ</td><td class="num">31,690.4965</td></tr>
+            <tr><td>evals</td><td class="num">62,208</td></tr>
+            <tr><td>sampler_wall</td><td class="num">706.50 s</td></tr>
+            <tr><td>version</td><td class="num mono">2026.8.17.1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>For scale: the positions-on row above (<code>340210_9</code>) reaches maxLL 31,786.7965 on the same cell &mdash; the two agree to ~0.17 nats despite the n_live and seed differences.</p>
+    </div>
+
+    <div class="block ruling">
+      <p class="label">Ruling</p>
+      <p class="decision">Keep as-is &mdash; accept the spec deviation and re-cite the baseline from <code>legacy/</code>, recording the deviation in the registry. Or refresh &mdash; queue a fresh mge positions-off <code>hpc_a100_fp64_ref</code> run, which requires <strong>adding a new array task</strong>: no vehicle for this row exists in the submit script today.</p>
+    </div>
+
+    <div class="block review-block">
+      <p class="label">Your review</p>
+      <div class="rchips" role="radiogroup" aria-label="Decision">
+        <label class="rchip"><input type="radio" name="rv-m-mgefp64" value="accept" data-decision="m-mgefp64"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-mgefp64" value="tweak" data-decision="m-mgefp64"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-mgefp64" value="reject" data-decision="m-mgefp64"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-mgefp64" value="defer" data-decision="m-mgefp64"><span>Defer</span></label>
+      </div>
+      <textarea class="notetext" data-note="m-mgefp64" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+    </div>
+
+    <div class="block">
+      <p class="label">Where to look yourself</p>
+      <dl class="look">
+        <dt>Baseline</dt>
+        <dd>autolens_profiling/results/baselines/InferenceRefs_v1/mge_fp64/ (reference.json + target.json + README.md)</dd>
+        <dt>Local mirror (source run)</dt>
+        <dd>/mnt/c/Users/Jammy/Science/inference_programme/output/legacy/searches/nautilus/imaging/mge/hst/hpc_a100_fp64/181b13114ba3c2298191185ff74f90d8/</dd>
+        <dt>Vehicle question</dt>
+        <dd>&hellip;/hpc/batch_gpu/submit_search_nautilus_inference_refs_v1_array.sh &mdash; the 11 tasks are 0&ndash;10; an mge positions-off ref row is not one of them</dd>
+        <dt>Dispatch record</dt>
+        <dd>autolens_profiling#201 &middot; PR #202</dd>
+      </dl>
+    </div>
+
+    <p class="chip chip-min">Est. 4 review-minutes &middot; judge</p>
+  </div>
+</section>
+
+<section class="member" id="m-delfp64">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">autolens_profiling &middot; InferenceRefs_v1 &middot; from jax-inference-phase1-refs</p>
+      <h2>delaunay_fp64 retro baseline &mdash; rests on rejected evidence</h2>
+      <p class="jobs">results/baselines/InferenceRefs_v1/delaunay_fp64/</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-suspect">Ruling required</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-delfp64"> Ruled</label>
+    </div>
+  </div>
+  <div class="blocks">
+
+    <div class="block">
+      <p class="label">Question</p>
+      <p>The <code>delaunay_fp64</code> baseline is off-spec <em>and</em> its source run was quarantined to <code>output/legacy_wrong/</code> by the rewind &mdash; the never-cite side. It therefore rests on evidence the rewind has already rejected. There is no array task for a delaunay positions-off reference run, so &ldquo;just re-run it&rdquo; is not available without changing the submit script.</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Witness &mdash; two independent problems</p>
+      <div class="scroll">
+        <table>
+          <caption>Refs standard vs the adopted delaunay_fp64 source run</caption>
+          <thead><tr><th>Spec item</th><th>Required</th><th>Adopted run</th><th class="num">Match</th></tr></thead>
+          <tbody>
+            <tr><td>n_live</td><td class="mono">300 (2&times; this cell's fiducial)</td><td class="mono">150</td><td class="num">no</td></tr>
+            <tr><td>seed</td><td class="mono">0</td><td class="mono">null</td><td class="num">no</td></tr>
+            <tr><td>priors_ref</td><td class="mono">current _targets.py</td><td class="mono">_targets.py@bf2c8742c334 (STALE)</td><td class="num">no</td></tr>
+            <tr><td>quarantine side</td><td class="mono">legacy/ (reusable)</td><td class="mono">legacy_wrong/ (NEVER CITE)</td><td class="num">no</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The last row is the one that cannot be waived by accepting a deviation: the rewind's whole point is that <code>legacy_wrong/</code> evidence is not cited again.</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Readout</p>
+      <div class="scroll">
+        <table>
+          <caption>delaunay_fp64 adopted baseline &mdash; metadata</caption>
+          <thead><tr><th>Metric</th><th class="num">Value</th></tr></thead>
+          <tbody>
+            <tr><td>maxLL</td><td class="num">30,623.1668</td></tr>
+            <tr><td>logZ</td><td class="num">30,562.2402</td></tr>
+            <tr><td>sampler_wall</td><td class="num">1,891.32 s</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="label">Task-10 footnote &mdash; what the doctrine call costs</p>
+      <p>The sibling row <code>340210_10</code> (<code>delaunay_pos_fp64</code>) COMPLETED and <strong>is spec-conformant</strong> &mdash; n_live 300, seed 0, <code>priors_ref</code> current, maxLL 31,338.9667, logZ 31,264.8427, wall 3,206.5 s. It is nevertheless doctrine-blocked, because it too sits in <code>legacy_wrong/</code>. A fresh run was therefore dispatched as <strong>342091_10</strong>, spending ~53 minutes of A100 time to reproduce a row that already exists in a form that would pass every check. Recorded here so the cost of the never-cite rule is visible and can be revisited deliberately rather than by accident.</p>
+    </div>
+
+    <div class="block ruling">
+      <p class="label">Ruling</p>
+      <p class="decision">Queue a fresh run &mdash; add array task 11 (delaunay, positions off, <code>hpc_a100_fp64_ref</code>, n_live 300, seed 0) and submit it alongside the wave. Or defer &mdash; leave the baseline flagged and revisit once the 342091 wave lands, when the machine is free and the delaunay cells' true cost is measured.</p>
+    </div>
+
+    <div class="block review-block">
+      <p class="label">Your review</p>
+      <div class="rchips" role="radiogroup" aria-label="Decision">
+        <label class="rchip"><input type="radio" name="rv-m-delfp64" value="accept" data-decision="m-delfp64"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-delfp64" value="tweak" data-decision="m-delfp64"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-delfp64" value="reject" data-decision="m-delfp64"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-delfp64" value="defer" data-decision="m-delfp64"><span>Defer</span></label>
+      </div>
+      <textarea class="notetext" data-note="m-delfp64" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+    </div>
+
+    <div class="block">
+      <p class="label">Where to look yourself</p>
+      <dl class="look">
+        <dt>Baseline</dt>
+        <dd>autolens_profiling/results/baselines/InferenceRefs_v1/delaunay_fp64/</dd>
+        <dt>Local mirror (source run, never-cite side)</dt>
+        <dd>/mnt/c/Users/Jammy/Science/inference_programme/output/legacy_wrong/searches/nautilus/imaging/delaunay/hst/hpc_a100_fp64/</dd>
+        <dt>Task-10 row (also legacy_wrong)</dt>
+        <dd>&hellip;/output/legacy_wrong/searches/nautilus/imaging/delaunay/hst/ &mdash; 340210_10, superseded in flight by 342091_10</dd>
+        <dt>Vehicle question</dt>
+        <dd>&hellip;/hpc/batch_gpu/submit_search_nautilus_inference_refs_v1_array.sh &mdash; adding task 11 is the change a &ldquo;queue it&rdquo; ruling implies</dd>
+        <dt>Dispatch record</dt>
+        <dd>autolens_profiling#201 &middot; PR #202</dd>
+      </dl>
+    </div>
+
+    <p class="chip chip-min">Est. 4 review-minutes &middot; judge</p>
+  </div>
+</section>
+
 <section class="member pending" id="m-jaxrefs">
   <div class="m-head">
     <div class="m-head-main">
@@ -1070,11 +1360,12 @@ footer.pagefoot {
     </div>
     <div class="block">
       <p class="label">Witness</p>
-      <p>Per the registry: Δ(max logL) vs truth bar ≤ 2 nats, parameter recovery in per-target tolerances, ≥5-seed reliability, posterior agreement vs reference.</p>
+      <p>Per the registry: Δ(max logL) vs truth bar ≤ 2 nats, parameter recovery in per-target tolerances, ≥5-seed reliability, posterior agreement vs reference. For <em>this</em> wave the immediate witness is provenance, applied per landed row: a <strong>fresh version stamp</strong>, a <strong>wall consistent with the cell's recorded cost</strong>, and <strong>no resume marker</strong> — plus a finite, sane maxLL (the overflow flood that took tasks 5/6/7 down showed as finite garbage up to 3e+303, not as NaN, so &ldquo;finite&rdquo; alone is not the check).</p>
     </div>
     <div class="block">
       <p class="label">Status</p>
-      <p>PENDING — LOCAL-DEV: pasted at the laptop this evening. Legacy-reuse rulings surface in the next packet; fresh runs are overnight RAL work.</p>
+      <p>DISPATCHED — RAL job <strong>342091</strong>, <code>sbatch --array=0-8,10 --requeue submit_search_nautilus_inference_refs_v1_array.sh</code> from <code>hpc/batch_gpu/</code>. Ten rows resubmitted fresh (all pre-rewind mesh/pix evidence is quarantined in <code>legacy_wrong/</code> and cannot be reused); tasks 5/6/7 run the corrected <code>AdaptSplitPower</code> targets. At T+2 min: <strong>task 0 RUNNING on euclid-ral-gpu-2, tasks 1-8,10 PENDING (Resources)</strong>. Active <code>output/searches/nautilus/imaging/</code> was empty pre-submit — no resume collisions.</p>
+      <p>Array task <strong>9 was excluded</strong> under the MGE reuse rule, and the three legacy-reuse rulings it raised are on this page as their own members: <a href="#m-mgepos">mge-pos-ref-reuse</a>, <a href="#m-mgefp64">mge-fp64-retro-baseline</a>, <a href="#m-delfp64">delaunay-fp64-retro-baseline</a>. Dispatch recorded in <strong>autolens_profiling#201</strong>, docs-only PR <strong>#202</strong> (SUBMIT_LIST.md, submit-script header, PROGRAMME.md Phase 1 row). RAL housekeeping: profiling checkout fast-forwarded <code>f284f24</code>→<code>ab9b27d</code>; a stale uncommitted knn task-7 row preserved as <code>stash@{0}</code> rather than discarded. Rows land overnight; nothing to judge on this member yet beyond leaving it to finish.</p>
     </div>
     <div class="block review-block">
       <p class="label">Your review</p>
@@ -1095,11 +1386,12 @@ footer.pagefoot {
   <summary>Packet-building notes</summary>
   <div class="blocks">
     <p>Written at dispatch (18:40Z), all members PENDING per the evening-dispatch flow; the collect regenerates member sections in place and bumps the refreshed stamp. Deviation from TEMPLATE.md: pending members carry their review controls already, so early notes persist through the refresh. Composition was human-pasted (the planner proposal was not used); constraint report and expected-effects live in <code>batches/2026-08-31-pm.md</code>. Heart YELLOW acknowledged in-chat at dispatch (manifest drift + web-container CI blindness). Epic resolutions at plan time: numba-cpu &rarr; deduped into the numba-vs-jax-sparse member; jax-inference &rarr; Phase 1 only, Phase 2 queued (ordered phases); euclid &rarr; phase 3a with the start_here.py ruling already resolved by the human (Mind 32c639e5).</p>
+    <p><strong>Refresh 21:08Z</strong> &mdash; <code>jax-inference-phase1-refs</code> dispatched (RAL 342091). Its section was regenerated in place per the PENDING flow, and the three legacy-reuse rulings its MGE reuse check produced were added as <em>new</em> members (<code>m-mgepos</code>, <code>m-mgefp64</code>, <code>m-delfp64</code>), as this batch's <code>expected-effects</code> line anticipated (&ldquo;legacy-reuse rulings surface as packet members&rdquo;). That supersedes this member's dispatch-time status line, which had said they would surface in the next packet &mdash; they are actionable now, so they are here. Member count 11 &rarr; 14 and est. minutes 117 &rarr; 130 (+5 +4 +4) follow from that; no other member's markup was touched, and stored notes are unaffected.</p>
   </div>
 </details>
 
 <div class="submitbar">
-  <p class="progresscount" id="progress-count">Ruled 0 of 11 &middot; decisions 0 of 11</p>
+  <p class="progresscount" id="progress-count">Ruled 0 of 14 &middot; decisions 0 of 14</p>
   <button type="button" class="btn btn-primary" id="btn-submit">Submit review</button>
 </div>
 
@@ -1146,6 +1438,9 @@ footer.pagefoot {
     { id: "m-af-multi", slug: "autofit-multistart-iterations", health: "PENDING" },
     { id: "m-euclid3a", slug: "euclid-3a-prose", health: "PENDING" },
     { id: "m-subhalo", slug: "subhalo-follow-up-wave", health: "PENDING" },
+    { id: "m-mgepos", slug: "mge-pos-ref-reuse", health: "RULING REQUIRED" },
+    { id: "m-mgefp64", slug: "mge-fp64-retro-baseline", health: "RULING REQUIRED" },
+    { id: "m-delfp64", slug: "delaunay-fp64-retro-baseline", health: "RULING REQUIRED" },
     { id: "m-jaxrefs", slug: "jax-inference-phase1-refs", health: "PENDING" }
   ];
 
