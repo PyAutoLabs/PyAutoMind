@@ -1,6 +1,27 @@
 # Active Tasks
 
-## subhalo-followup-adapt-split-rectangular
+## multistart-quick-update-wiring
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1552
+- issued: 2026-08-31
+- status: library-dev
+- location: web-github (batch 2026-08-31-pm member autofit-multistart-iterations,
+  supervised --auto)
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+- repos:
+  - PyAutoFit: feature/multistart-quick-update-wiring
+- summary: |
+    Phase 1 (library) of the MultiStart* dead-kwarg bug: wire real quick updates
+    into AbstractMultiStartGradient's host-side step loop (unit = gradient
+    steps), forward iterations_per_quick_update / background_quick_update /
+    live_visual_update into the Fitness so LiveDisplay/BackgroundQuickUpdate
+    ride the standard path, make the startup message unit-honest, remove the
+    EXEMPT entry in test_quick_update_wiring.py, and cover with a step-loop
+    driving test. Phase 2 (autolens_workspace prose retune + AST guard) follows
+    once the semantics land — file it at close-out. Sibling batch member
+    autofit-prodigy-49 touches the same wiring and merges first; re-validate on
+    the moved main at review.
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
 - issued: 2026-08-31
