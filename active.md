@@ -4,7 +4,9 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/47
 - issued: 2026-08-31
 - session: web-github (batch 2026-08-31-pm, member euclid-3a-prose, --auto supervised)
-- status: workspace-dev
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/47#issuecomment-5483625596
+- branch-head: 4c4970ed9d2d36baad038982d14aa9c3f8664b9f (feature/restore-narrative-prose, pushed; no PR — parked at ship sign-off)
 - worktree: n/a — web-github session clone (/home/user/euclid_strong_lens_modeling_pipeline)
 - repos:
   - euclid_strong_lens_modeling_pipeline (branch feature/restore-narrative-prose)

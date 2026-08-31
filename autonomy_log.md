@@ -271,3 +271,4 @@ add phase 3's independent-model adversarial leg. Never pool the two.
 
 | date | task | tier | gate (tests/smoke/review/heart/witness[/adversary]) | human action | stage |
 |------|------|------|-----------------------------------------------------|--------------|-------|
+| 2026-08-31 | restore-pipeline-narrative-prose | supervised | tests 61 pass / smoke 9-9 pass / review CLEAN (author-run; adversary leg not run — this parks to the human instead) / heart not re-evaluated (web container; dispatch YELLOW ack, batches/2026-08-31-pm.md) / no witness (Consequence: judge) | pending — ship sign-off question on issue #47 | parked |
