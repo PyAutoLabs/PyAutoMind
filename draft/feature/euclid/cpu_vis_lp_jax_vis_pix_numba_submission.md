@@ -21,7 +21,10 @@ Phase: 3
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
 
-Phase 3 of 10 in the Euclid DR1 preparation epic. **Gate: phase 1.** Can overlap phase 2.
+Phase 3b of 11 in the Euclid DR1 preparation epic (renumbered 3 → 3b on 2026-08-31 when
+the prose-restoration phase 3a was inserted ahead of it). **Gate: phase 1.** Can overlap
+phase 2. Runs after 3a, so the documentation this phase writes lands in a repo whose
+narrative register has already been restored.
 **Gates phase 4** — the 10-lens science run uses this CPU route.
 
 User request (verbatim):

@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 154 |
+| [Backlog](#backlog) (`draft/`) | 168 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -157,7 +157,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 73
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
+
+<details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
+
+```
+/start_dev draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/pyautomemory/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures</a> — pyautomemory · medium · safe · normal</summary>
 
@@ -171,6 +179,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/organs/github_page_link_in_every_organ_board.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…</a> — autofit · large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
 ```
 
 </details>
@@ -235,22 +251,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/research/autolens/quick_update_plotting_cost.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — small · safe · normal</summary>
-
-```
-/start_dev draft/triage/convolver_blurring_image_warning.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and <code>latent_batch_size</code></a> — autofit · small · supervised · normal</summary>
-
-```
-/start_dev draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
 ```
 
 </details>
@@ -391,10 +391,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**154** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
+**168** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 27</summary>
+<summary><b>feature</b> — 28</summary>
 
 <details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · safe · medium</summary>
 
@@ -408,6 +408,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autofit/search_seed_reproducibility.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
+
+```
+/start_dev draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md
 ```
 
 </details>
@@ -748,7 +756,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 17</summary>
+<summary><b>bug</b> — 19</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -814,6 +822,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autonerves/pyautonerves_emits_a_false_workspace_is_stale.md">PyAutoNerves emits a false "workspace is stale, git pull" warning…</a> — autonerves · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autonerves/pyautonerves_emits_a_false_workspace_is_stale.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform Jacobian</a> — priors · medium · supervised · normal</summary>
 
 ```
@@ -834,6 +850,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…</a> — autofit · large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
 ```
 
 </details>
@@ -1123,6 +1147,59 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
+<summary><b>test</b> — 6</summary>
+
+<details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · too-large · supervised · high</summary>
+
+```
+/start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example review</a> — autolens_workspace · medium · human-required · normal</summary>
+
+```
+/start_dev draft/test/autolens_workspace/witt_wynne_tests_and_review.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> — pyautoheart · medium · safe · normal</summary>
+
+```
+/start_dev draft/test/pyautoheart/smoke_relevance_gate.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a> — workspaces · medium · supervised · normal</summary>
+
+```
+/start_dev draft/test/workspaces/slowest_smoke_gate_scripts.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/smoke_workspace_fixes.md">The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced</a> — workspaces · too-large · human-required · normal</summary>
+
+```
+/start_dev draft/test/workspaces/smoke_workspace_fixes.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>refactor</b> — 7</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
@@ -1177,59 +1254,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/refactor/autoarray/sparse_operator_int32_indexes.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>test</b> — 6</summary>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · too-large · supervised · high</summary>
-
-```
-/start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
-
-```
-/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example review</a> — autolens_workspace · medium · human-required · normal</summary>
-
-```
-/start_dev draft/test/autolens_workspace/witt_wynne_tests_and_review.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> — pyautoheart · medium · safe · normal</summary>
-
-```
-/start_dev draft/test/pyautoheart/smoke_relevance_gate.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a> — workspaces · medium · supervised · normal</summary>
-
-```
-/start_dev draft/test/workspaces/slowest_smoke_gate_scripts.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/workspaces/smoke_workspace_fixes.md">The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced</a> — workspaces · too-large · human-required · normal</summary>
-
-```
-/start_dev draft/test/workspaces/smoke_workspace_fixes.md
 ```
 
 </details>
@@ -1556,7 +1580,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 20 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 21 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1910,12 +1934,20 @@ Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. 
 </details>
 
 <details>
-<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 9 queued prompt(s), in order</summary>
+<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 10 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: `draft/feature/euclid/euclid_dr1_prep_epic.md`</summary>
 
 ```
-Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its canonical state lives in draft/feature/euclid/euclid_dr1_prep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 10 phased prompts under draft/ (0, 1, 2, 3, 4, 5, 6a, 6b, 6c, 7) — issue ONE at a
+Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its canonical state lives in draft/feature/euclid/euclid_dr1_prep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 11 phased prompts under draft/ (0, 1, 2, 3a, 3b, 4, 5, 6a, 6b, 6c, 7) — issue ONE at a
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/euclid/restore_pipeline_narrative_prose.md">Restore the narrative prose: <code>start_here.py</code> as the end-to-end guide, <code>scripts/</code>…</a> — euclid · medium · supervised · high</summary>
+
+```
+/start_dev draft/docs/euclid/restore_pipeline_narrative_prose.md
 ```
 
 </details>
@@ -2111,6 +2143,99 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
+<details>
+<summary><b>CI test timing — finish the board, fast physical tests</b> — 10 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>CI test timing — finish the board, fast physical tests</b> — ledger: `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`</summary>
+
+```
+Continue the 'CI test timing — finish the board, fast physical tests' epic. Its canonical state lives in draft/feature/pyautoheart/ci_timing_fast_tests_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 9 phased prompts (1-9) — finish the timing board (smoke-timings ingester, permanent history in PyAutoHeart, dead unit-test/import/testmode legs live), snapshot a LEGACY timing round, then the _test physical+fast rebuilds (autogalaxy rehearses, autolens follows; one pin-regeneration wave each), CI caches, user-workspace/HowTo pass, and a source hot-spot census. ALL other source/workspace development is paused while this epic runs (stable state of truth; pin changes validated by unit tests + developer/profiling workspaces). Issue ONE phase at a time — no bulk issue queues. Design doc: docs/pyautoheart/test_performance_board_assessment.md (Planes B/C are phases 1-2).
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/smoke_timings_ingester_per_script_board.md">Smoke-timings ingester: per-script CI timing rows on the Heart performance board</a> — pyautoheart · large · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/smoke_timings_ingester_per_script_board.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/permanent_ci_timing_history.md">Permanent CI timing history stored in PyAutoHeart</a> — pyautoheart · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/permanent_ci_timing_history.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/offtick_timing_legs_live.md">Bring the dead timing legs live: unit_test_timing, import_time, workspace_testmode_timing</a> — pyautoheart · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/offtick_timing_legs_live.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/pyautoheart/legacy_baseline_timing_round.md">Legacy baseline timing round: snapshot pre-rebuild timings of every CI test surface</a> — pyautoheart · medium · safe · high</summary>
+
+```
+/start_dev draft/test/pyautoheart/legacy_baseline_timing_round.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autogalaxy_workspace_test/physical_fast_rebuild.md">autogalaxy_workspace_test physical + fast rebuild (rehearsal repo)</a> — autogalaxy_workspace_test · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autogalaxy_workspace_test/physical_fast_rebuild.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autolens_workspace_test/physical_fast_rebuild.md">autolens_workspace_test physical + fast rebuild (flagship)</a> — autolens_workspace_test · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autolens_workspace_test/physical_fast_rebuild.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md">CI caches in the reusable smoke workflow: JAX compile cache + dataset…</a> — pyautoheart · large · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/user_workspace_howto_slow_script_pass.md">User workspace + HowTo slow-script pass, driven by the ingested timings</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/test/workspaces/user_workspace_howto_slow_script_pass.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/workspaces/unit_test_import_time_hotspot_census.md">Unit-test + import-time bottleneck census and shared-source hot-spot options</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/workspaces/unit_test_import_time_hotspot_census.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/ci_timing_fast_tests_epic.md">CI timing &amp; fast tests — epic</a> — pyautoheart · too-large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/ci_timing_fast_tests_epic.md
+```
+
+</details>
+
+</details>
+
 ## Hygiene
 
 3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -2124,7 +2249,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-151 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+162 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2166,14 +2291,14 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- `draft/feature/pyautomind/batch_budget_loop.md`
-- `draft/feature/pyautomind/batch_queue_and_records.md`
-- `draft/feature/pyautomind/bundle_nightly_claude_pass.md`
-- _… and 111 more_
+- `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
+- `draft/feature/pyautoheart/offtick_timing_legs_live.md`
+- `draft/feature/pyautoheart/permanent_ci_timing_history.md`
+- _… and 122 more_
 
 </details>
 
-11 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+12 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2185,6 +2310,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 - `draft/feature/euclid/resimulate_fitted_lens_simulator.md — unknown theme keyword(s): euclid, simulation`
 - `draft/bug/autoarray/delaunay_area_magnification_audit.md — unknown theme keyword(s): euclid`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
+- `draft/docs/euclid/restore_pipeline_narrative_prose.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/research/euclid/dr1_prelim_10_lens_science_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/research/euclid/magnification_robustness.md — unknown theme keyword(s): euclid`
