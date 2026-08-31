@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 166 |
+| [Backlog](#backlog) (`draft/`) | 165 |
 
 ## Start here
 
@@ -148,7 +148,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
 
 <details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
 
@@ -254,6 +254,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/follow_up_wave_adapt_split_and_rectangular.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> — issued 2026-08-31</summary>
+
+```
+/start_dev active/numba_solve_vs_jax_sparse_operator.md
 ```
 
 </details>
@@ -388,7 +396,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**166** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
+**165** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -620,7 +628,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 17</summary>
+<summary><b>research</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -666,14 +674,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/pyautoreduce/acceptance_noise_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> — autoarray · medium · safe · normal</summary>
-
-```
-/start_dev draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md
 ```
 
 </details>
@@ -1610,7 +1610,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-08-31 | issued | <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2]…</a> |
-| 2026-08-31 | filed | <a href="draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> |
+| 2026-08-31 | issued | <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/organs/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
@@ -2230,7 +2230,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-161 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+160 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2275,11 +2275,11 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
 - `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 121 more_
+- _… and 120 more_
 
 </details>
 
-13 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+12 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2293,7 +2293,6 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/docs/euclid/restore_pipeline_narrative_prose.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
-- `draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md — unknown theme keyword(s): jax`
 - `draft/research/euclid/dr1_prelim_10_lens_science_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/research/euclid/magnification_robustness.md — unknown theme keyword(s): euclid`
 - `draft/research/euclid/sersic_index_recovery.md — unknown theme keyword(s): euclid, priors`

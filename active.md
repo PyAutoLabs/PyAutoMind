@@ -1,5 +1,24 @@
 # Active Tasks
 
+## numba-vs-jax-sparse
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/513
+- issued: 2026-08-31
+- status: research (batch 2026-08-31-pm member, --auto, effective level supervised
+  = min(header safe, research work-type cap); verdict-only deliverable, no library
+  changes, no worktree)
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+- repos:
+  - PyAutoArray: main (read-only — research verdict, no branch)
+- summary: |
+    Is the numba CPU positive-only solve the same linear algebra as the JAX
+    sparse-operator mode? Characterise the shipped numba lineage (#498/#501
+    warm-start memo, #505/#507 curvature-F work, SparseLinAlgImagingNumba
+    preload) against the JAX ImagingSparseOperator + jaxnnls PDIP path; assess
+    GPU-portability of the numba levers; verdict unify/port/keep posted on the
+    issue. Judge-tier: verdict parks for human review, no decide-and-flag.
+
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
