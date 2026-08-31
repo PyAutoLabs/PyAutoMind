@@ -3,7 +3,8 @@
 ## silence-colab-cli-message
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/156
 - issued: 2026-08-31
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/157
 - session: web-github (batch 2026-08-31-pm member autonerves-colab-silence, --auto)
 - repos:
   - PyAutoNerves: feature/silence-colab-cli-message
