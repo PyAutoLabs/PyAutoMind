@@ -1,5 +1,21 @@
 # Active Tasks
 
+## organ-board-github-link
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/325
+- issued: 2026-08-31
+- session: claude-code-remote (batch 2026-08-31-pm member organ-board-github-link, web-github)
+- status: workspace-dev
+- branch: feature/organ-board-github-link
+- repos:
+  - PyAutoBrain
+  - PyAutoHeart
+  - PyAutoHands
+  - PyAutoMemory
+  - PyAutoScientist
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
