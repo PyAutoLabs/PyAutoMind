@@ -46,16 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 172 |
-
-> ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
-
-> - `draft/feature/pyautobrain/batch_conductor.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
-> - `draft/feature/pyautobrain/batch_gate_unattended.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
-> - `draft/feature/pyautobrain/batch_grade_faculty.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
-> - `draft/feature/pyautobrain/batch_grade_intake.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
-> - `draft/feature/pyautomind/batch_grade_backlog.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
-> - `draft/feature/pyautomind/batch_queue_and_records.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
+| [Backlog](#backlog) (`draft/`) | 167 |
 
 ## Start here
 
@@ -391,7 +382,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**172** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**167** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -2059,7 +2050,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 </details>
 
 <details>
-<summary><b>Two slots a day — the batch workflow</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Two slots a day — the batch workflow</b> — 8 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Two slots a day — the batch workflow</b> — ledger: `draft/feature/pyautomind/two_slot_batching_epic.md`</summary>
 
@@ -2069,50 +2060,10 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_grade_faculty.md">Batch phase 0a — the review-cost grader (sizing faculty)</a> — pyautobrain · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_grade_faculty.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_grade_intake.md">Batch phase 0b — intake writes the grades, and the autonomy experiment</a> — pyautobrain · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_grade_intake.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/batch_grade_backlog.md">Batch phase 0c — re-grade the backlog, and give the dashboard…</a> — pyautomind · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/batch_grade_backlog.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/batch_queue_and_records.md">Batch phase 1 — the queue and the batch record</a> — pyautomind · small · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/batch_queue_and_records.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/pyautobrain/batch_conductor.md">Batch phase 2 — the <code>batch</code> conductor: plan, slice, collect</a> — pyautobrain · large · supervised · high</summary>
 
 ```
 /start_dev draft/feature/pyautobrain/batch_conductor.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_gate_unattended.md">Batch phase 3 — the gate under unattended conditions</a> — pyautobrain · large · human-required · high</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_gate_unattended.md
 ```
 
 </details>
@@ -2281,7 +2232,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-164 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+162 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2317,7 +2268,6 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautobrain/batch_board.md`
 - `draft/feature/pyautobrain/batch_conductor.md`
 - `draft/feature/pyautobrain/batch_dispatch.md`
-- `draft/feature/pyautobrain/batch_gate_unattended.md`
 - `draft/feature/pyautobrain/batch_notify_tier_merge.md`
 - `draft/feature/pyautobrain/board_without_gh.md`
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
@@ -2326,7 +2276,8 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- _… and 124 more_
+- `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
+- _… and 122 more_
 
 </details>
 
