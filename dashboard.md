@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 163 |
+| [Backlog](#backlog) (`draft/`) | 162 |
 
 ## Start here
 
@@ -148,7 +148,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
 
 <details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
 
@@ -162,14 +162,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autofit/multistartprodigy_stops_at_49_steps_when_iterati.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/organs/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> — organs · small · safe · normal</summary>
-
-```
-/start_dev draft/feature/organs/github_page_link_in_every_organ_board.md
 ```
 
 </details>
@@ -246,6 +238,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — small · safe · normal</summary>
+
+```
+/start_dev draft/triage/convolver_blurring_image_warning.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
@@ -262,6 +262,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/follow_up_wave_adapt_split_and_rectangular.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/325">issue #325</a> — issued 2026-08-31 — pr-open (all five legs of the autonomous-ship gate passed 2026-08-31; merge is the human's)</summary>
+
+```
+/start_dev active/github_page_link_in_every_organ_board.md
 ```
 
 </details>
@@ -412,10 +420,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**163** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
+**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 28</summary>
+<summary><b>feature</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · safe · medium</summary>
 
@@ -437,14 +445,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/organs/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> — organs · small · safe · normal</summary>
-
-```
-/start_dev draft/feature/organs/github_page_link_in_every_organ_board.md
 ```
 
 </details>
@@ -1612,7 +1612,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-31 | issued | <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2]…</a> |
 | 2026-08-31 | issued | <a href="active/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry…</a> |
 | 2026-08-31 | issued | <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> |
-| 2026-08-31 | filed | <a href="draft/feature/organs/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> |
+| 2026-08-31 | issued | <a href="active/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> |
 | 2026-08-31 | issued | <a href="active/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
