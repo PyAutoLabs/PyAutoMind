@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 163 |
+| [Backlog](#backlog) (`draft/`) | 164 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -155,7 +155,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 73
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 74
 
 <details><summary>📋 <a href="draft/bug/pyautomemory/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures</a> — pyautomemory · medium · safe · normal</summary>
 
@@ -389,7 +389,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**163** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**164** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -746,7 +746,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 17</summary>
+<summary><b>bug</b> — 18</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -808,6 +808,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autonerves/pyautonerves_emits_a_false_workspace_is_stale.md">PyAutoNerves emits a false "workspace is stale, git pull" warning…</a> — autonerves · medium · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autonerves/pyautonerves_emits_a_false_workspace_is_stale.md
 ```
 
 </details>
