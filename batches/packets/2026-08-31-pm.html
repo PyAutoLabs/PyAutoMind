@@ -1450,7 +1450,7 @@ footer.pagefoot {
         </table>
       </div>
       <p><strong>No overflow signature anywhere.</strong> Both landed rows sit in the ~3e4 band the corrected cells should occupy; nothing resembles the pre-fix <code>log_l</code> up to 3e+303. Both run dirs carry <code>.completed</code> and a fresh <code>2026.8.17.1</code> stamp, and neither <code>.out</code> contains <code>Fit Already Completed</code> &mdash; both started cold, no resume collision. Both finished far inside the 6&nbsp;h budget, so the wall estimate is generous, not tight.</p>
-      <p><strong>One provenance anomaly, unrelated to the array:</strong> the <code>knn</code> result row on RAL was written <code>2026-08-31 20:08:27 BST</code> &mdash; about two hours <em>before</em> 342091 went up &mdash; and no SLURM job in that window accounts for it. Its provenance is not this array; task 7 is the run that will replace it.</p>
+      <p><strong>Stale row, explained &mdash; not a fresh run:</strong> the <code>knn</code> result row on RAL still reads the suspect <code>30,077.028</code> with a <code>2026-08-31 20:08:27 BST</code> mtime. That is the dispatch-time <code>git stash</code> of the uncommitted knn working-tree changes: stashing reverted the file to HEAD's committed version &mdash; which <em>is</em> the rejected 341879_7 row (hence bit-identical) &mdash; and re-stamped its mtime. No job produced it. Do not read it as 342091 output; task 7 (still queued) is the run that will replace it.</p>
     </div>
     <div class="block">
       <p class="label">No ruling needed</p>
