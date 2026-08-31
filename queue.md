@@ -45,4 +45,23 @@ endpoint, or the human at the machine. A cloud session detects its own lane and
 will not plan the other one — it reports the count instead, so nothing is
 silently dropped. One queue holds both lanes; the planner filters.
 
-<!-- No entries yet. Add them in the slot, in the order you want them. -->
+## 1. Batches strip on the dashboard
+- kind: prompt
+- ref: draft/feature/pyautobrain/batch_board.md
+- note: human 2026-08-31 — important, do soon; strip above "Start here", not a standalone surface
+
+## 2. Witness campaign
+- kind: prompt
+- ref: draft/feature/pyautomind/witness_campaign.md
+- note: highest-leverage backlog item (151/153 judge); human-declared witnesses only; fill work
+
+## 3. batch collect
+- kind: prompt
+- ref: draft/feature/pyautobrain/batch_conductor.md
+- note: next verb = collect; spec = batches/packets/TEMPLATE.md + the 2026-08-31 packet's collect-needs list
+
+## 4. Euclid Lane: recut
+- kind: prompt
+- ref: draft/research/euclid/batch_science_lane.md
+- note: leg A only — Lane: header on every remaining euclid phase, queue the `any` halves
+
