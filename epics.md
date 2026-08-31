@@ -22,6 +22,7 @@ epic, never picked standalone.
 - title: JAX profiling — inference programme
 - ledger: autolens_profiling/results/notes/inference/PROGRAMME.md
 - notes: DECISIONS.md (append-only gate log) and phase_<NN>_*/RESULTS.md sit beside the ledger; slices ship as autolens_profiling issues/PRs, not Mind prompts.
+  REWOUND 2026-08-31 to Phase 1 (InferenceRefs_v1); mesh-pix runs quarantined to output/legacy_wrong, MGE to output/legacy (reusable pending batch review); redo runs step-by-step under batch-and-review; gates A/B1/B2 provisional; queue anchor autolens_profiling#200.
 
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
