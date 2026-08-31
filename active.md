@@ -1,5 +1,28 @@
 # Active Tasks
 
+## organ-board-github-link
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/325
+- prompt: active/github_page_link_in_every_organ_board.md
+- issued: 2026-08-31
+- session: claude-code-remote (batch 2026-08-31-pm member organ-board-github-link, web-github)
+- status: pr-open (all five legs of the autonomous-ship gate passed 2026-08-31; merge is the human's)
+- branch: feature/organ-board-github-link
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoBrain/pull/326
+  - https://github.com/PyAutoLabs/PyAutoHeart/pull/194
+  - https://github.com/PyAutoLabs/PyAutoHands/pull/273
+  - https://github.com/PyAutoLabs/PyAutoMemory/pull/77
+  - https://github.com/PyAutoLabs/PyAutoScientist/pull/25
+- repos:
+  - PyAutoBrain
+  - PyAutoHeart
+  - PyAutoHands
+  - PyAutoMemory
+  - PyAutoScientist
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+
 ## resampling-info-summary-section
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1551
 - prompt: active/add_resampling_info_section_to_the_bottom.md
