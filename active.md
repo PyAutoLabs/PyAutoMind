@@ -3,7 +3,8 @@
 ## multistart-quick-update-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1552
 - issued: 2026-08-31
-- status: library-dev
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1552#issuecomment-5483342883
 - location: web-github (batch 2026-08-31-pm member autofit-multistart-iterations,
   supervised --auto)
 - heart-ack:
@@ -22,6 +23,12 @@
     once the semantics land — file it at close-out. Sibling batch member
     autofit-prodigy-49 touches the same wiring and merges first; re-validate on
     the moved main at review.
+    DONE (2026-08-31): implemented + full suite green (2334 pass serial),
+    branch feature/multistart-quick-update-wiring pushed (94a658b32), no PR —
+    parked at ship sign-off per the supervised contract; the question comment
+    carries the gate evidence, unit decision, sibling merge-order note, the
+    phase-2 filing ask, and the test-file JAX-policy deviation. On sign-off:
+    open the PR with pending-release, then file the phase-2 workspace prompt.
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
 - issued: 2026-08-31
