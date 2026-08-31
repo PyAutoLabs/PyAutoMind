@@ -16,6 +16,7 @@ Review-minutes: 15
 Unattended: ready
 Lane: local-dev
 Filed: 2026-08-31
+Issued: 2026-08-31
 
 From the 2026-08-31-am batch review (packet `batches/packets/2026-08-31-am.html`,
 members `subhalo-pl_sersic_0-342027_0` accept / `subhalo-pl_eff-342027_12`
