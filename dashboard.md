@@ -42,28 +42,20 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 0 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 167 |
+| [Backlog](#backlog) (`draft/`) | 166 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
+**Highest priority** (filed as `high`) — showing 12 of 14
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — subhalo_validation · small · supervised · high</summary>
-
-```
-/start_dev draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md
 ```
 
 </details>
@@ -148,7 +140,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
 
 <details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
 
@@ -198,14 +198,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — subhalo_validation · small · supervised · high</summary>
-
-```
-/start_dev draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
 ```
@@ -246,11 +238,25 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · safe · medium</summary>
+
+```
+/start_dev draft/feature/autofit/prior_exit_sampler_coverage.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-- _(nothing in flight)_
+<details><summary>📋 <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — issued 2026-08-31</summary>
+
+```
+/start_dev active/follow_up_wave_adapt_split_and_rectangular.md
+```
+
+</details>
 
 ## Human review
 
@@ -382,7 +388,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**167** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
+**166** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -614,15 +620,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 18</summary>
-
-<details><summary>📋 <a href="draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — subhalo_validation · small · supervised · high</summary>
-
-```
-/start_dev draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md
-```
-
-</details>
+<summary><b>research</b> — 17</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -1346,40 +1344,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'pixelization' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md
-- draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
-- draft/bug/autoarray/adapt_scatter_factor_two.md
-- draft/refactor/autoarray/matern_vendor_bessel_kve.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2]…</a> | subhalo_validation | small | high | formalised |
-| <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate…</a> | autoarray | medium | normal | formalised |
-| <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> | autoarray | small | low | documented — NOT an open bug (fixed in… |
-| <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the…</a> | autoarray | large | medium | formalised |
-
-</details>
-
-<details>
 <summary><b>ci-smoke</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1442,6 +1406,40 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> | autolens | large | high | in progress — core landed 2026-07-25… |
 | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> | howtolens | small | low | formalised |
 | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> | workspaces | small | low | - |
+
+</details>
+
+<details>
+<summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'pixelization' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/refactor/autoarray/matern_vendor_bessel_kve.md
+- draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
+- draft/bug/autoarray/adapt_scatter_factor_two.md
+- draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the…</a> | autoarray | large | medium | formalised |
+| <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate…</a> | autoarray | medium | normal | formalised |
+| <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> | autoarray | small | low | documented — NOT an open bug (fixed in… |
+| <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> | workspaces | small | normal | formalised |
 
 </details>
 
@@ -1603,7 +1601,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 23 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1611,7 +1609,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-31 | filed | <a href="draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2]…</a> |
+| 2026-08-31 | issued | <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2]…</a> |
 | 2026-08-31 | filed | <a href="draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/organs/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
@@ -2232,7 +2230,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-162 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+161 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2277,7 +2275,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
 - `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 122 more_
+- _… and 121 more_
 
 </details>
 
