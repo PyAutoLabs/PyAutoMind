@@ -28,9 +28,10 @@ the allowance without filling the review queue.
 
 Two independent limits, and they bind on different things:
 
-- **Human review capacity** caps *review-bearing* work. At the one-slot baseline
-  (see below) that is about **45 review-minutes a day**, roughly three
-  library-touching tasks. No amount of token budget moves it.
+- **Human review capacity** caps *review-bearing* work. That is about **45
+  review-minutes per slot** by default — roughly three library-touching tasks —
+  and the human sets the number per slot (see below). No amount of token budget
+  moves it.
 - **The weekly allowance** caps *everything*, and the human wants it fully spent.
 
 So the surplus — the allowance left after the review-bearing half — must go to
@@ -108,31 +109,35 @@ at least thirty batch records exist.
   repeatedly-extended temporary boost, most recently through **2026-08-31**. If it
   lapses, the target moves by a third.
 
-## Backpressure, at the one-slot baseline
+## Backpressure, against a horizon the human declares
 
-**Decided 2026-08-30: one slot a day is the baseline, plus a floor.** A second
-slot is opportunistic — the planner will compose for it when the human opens one,
-but nothing is sized on the assumption that they will. This is the honest
-promise: two hours a day indefinitely is 14 h/week, an academic will miss slots
-and vanish for conference weeks, and sizing on 14 h produces a queue that
+**Decided 2026-08-31 (superseding the 2026-08-30 "one slot a day plus a floor"
+sizing):** a slot is whenever the human comes in, and at dispatch they state
+`review-at:` — the shift is dispatch → `review-at:`, and the review budget is
+theirs to set for that slot. Nothing is sized on a rhythm. This is the honest
+promise: two hours a day indefinitely is 14 h/week, an academic will come back
+late and vanish for conference weeks, and sizing on 14 h produces a queue that
 saturates in two days and then square-waves.
 
 - Count **tasks awaiting review**, not PRs (94 of 332 August records name two or
   more PRs, so a PR count trips on one healthy batch).
 - Above half the cap, halve the next batch's review-bearing half. The fill is not
   halved — it does not touch the queue.
-- **The floor** is the batch that dispatches whether or not the human turns up,
-  and it may contain **only fill**. That is what makes it safe: a floor made of
-  review-bearing work just digs the hole deeper while they are away. Before the
-  `notify` tier is granted the floor is small — adversarial reviews, slicing,
-  witnesses, re-grading — and it still keeps the allowance spent and the backlog
-  getting cheaper.
-- Never plan zero. A conference week should end with a *better-prepared* backlog
-  and a spent allowance, not a stalled organism.
+- **The floor is closed** (2026-08-31, never built): with the human carrying the
+  timing, a missed `review-at:` dispatches nothing new and the outstanding grant
+  simply expires. Revisit only if the queue is found starving during a long
+  absence.
+- At the cap the batch a human dispatches is **fill only** — adversarial reviews,
+  slicing, witnesses, re-grading — which keeps the allowance spent and the
+  backlog getting cheaper without deepening the review queue.
+- Never plan zero *review-bearing* capacity out of backpressure alone: a batch
+  that reaches the cap still composes fill, so a long gap ends with a
+  *better-prepared* backlog rather than a stalled organism.
 
 ## Done when
 
 - Every batch record carries the weekly and 5-hour readings, the delivered count,
   the planned review-minutes and the **actual** minutes the human spent.
 - `batch plan` reports which of the four cases it is in and what it chose.
-- The floor is proven to contain no review-bearing member.
+- A fill-only batch (at the backpressure cap) is proven to contain no
+  review-bearing member.

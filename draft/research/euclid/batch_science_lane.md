@@ -94,7 +94,7 @@ Three rules, and the first is the one the human asked for:
    even ask?". `batch plan` in a cloud session reports, rather than silently
    dropping: *"4 local-dev tasks are ready — run this from the laptop."*
 2. **A `local-dev` batch is dispatched from the laptop, by the human, and only
-   there.** It is not a third daily hour: it is drained opportunistically in a
+   there.** It is not a third scheduled hour: it is drained opportunistically in a
    laptop slot, which is when they are doing science anyway. Because they are
    present, it can be more interactive than a cloud shift — the honest ceiling
    for the science phases was always *supervised*, not unattended.
