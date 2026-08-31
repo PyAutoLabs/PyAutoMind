@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 168 |
+| [Backlog](#backlog) (`draft/`) | 169 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -157,7 +157,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
 
 <details><summary>📋 <a href="draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — autonerves · small · safe · normal</summary>
 
@@ -171,6 +171,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/pyautomemory/repair_queue_automation_filing_gate.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/add_resampling_info_section_to_the_bottom.md
 ```
 
 </details>
@@ -243,14 +251,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autofit/search_seed_reproducibility.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · safe · medium</summary>
-
-```
-/start_dev draft/research/autolens/quick_update_plotting_cost.md
 ```
 
 </details>
@@ -391,7 +391,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**168** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**169** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -756,7 +756,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 19</summary>
+<summary><b>bug</b> — 20</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -802,6 +802,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/add_resampling_info_section_to_the_bottom.md
 ```
 
 </details>
@@ -1580,7 +1588,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 21 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
