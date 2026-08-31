@@ -591,21 +591,21 @@ footer.pagefoot {
 <header class="pagehead">
   <p class="eyebrow">31 Aug 2026 · pm · both lanes · first human-composed batch under the review workflow</p>
   <h1>Slot Review &mdash; PM</h1>
-  <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; plus three legacy-reuse rulings raised by the JAX-inference member after dispatch, added at the 21:08Z refresh &mdash; nine cloud dev members and two laptop/RAL science members. This page was opened at dispatch with every member PENDING; the collect refreshes each section in place while you read. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
+  <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. This review covers the nine ready members: six delivered (five PR sets green + one research verdict) and three parked at ship. The two laptop members are in flight and carry automatically into the next batch&rsquo;s packet &mdash; but the jax-refs leg routed <strong>three legacy-reuse rulings</strong> into this slot, included below. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
   <p class="mirror-note">Science member outputs mirror to the laptop via each project&rsquo;s <code>hpc/sync pull</code> at collect; dev members are reviewed on their PRs.</p>
-  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 21:08Z (jax-inference-phase1-refs dispatched; its three legacy-reuse rulings added as members)</p>
+  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 21:16Z (merged laptop legacy-reuse rulings; review scope = 12 members, 2 carried)</p>
   <p class="stampline">Permanent home: <a href="https://pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html"><code>pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html</code></a></p>
 </header>
 
 <section class="tiles" aria-label="Summary">
   <div class="tile"><span class="num">14</span><span class="cap">Members</span></div>
-  <div class="tile t-running"><span class="num">11</span><span class="cap">Pending</span></div>
-  <div class="tile t-suspect"><span class="num">3</span><span class="cap">Rulings required</span></div>
-  <div class="tile t-suspect"><span class="num">3</span><span class="cap">May park at ship</span></div>
+  <div class="tile t-healthy"><span class="num">6</span><span class="cap">Delivered</span></div>
+  <div class="tile t-suspect"><span class="num">6</span><span class="cap">Rulings required</span></div>
+  <div class="tile t-running"><span class="num">2</span><span class="cap">Carried to next batch</span></div>
   <div class="tile t-minutes">
     <span class="num">130</span>
     <span class="cap">Est. review-minutes</span>
-    <span class="sum">20 + 3 + 20 + 0 + 0 + 3 + 3 + 3 + 30 + 15 + 20 + 5 + 4 + 4</span>
+    <span class="sum">20 + 3 + 20 + 0 + 0 + 3 + 3 + 3 + 30 + 5 + 4 + 4 (+ carried: 15 + 20)</span>
     <span class="foot">budget uncapped this slot (human at dispatch)</span>
   </div>
 </section>
@@ -623,20 +623,22 @@ footer.pagefoot {
 </section>
 
 <section class="callout" aria-label="Most important finding">
-  <p class="eyebrow">Standing note at dispatch</p>
-  <p>Three PyAutoFit members share one library repo this shift (human overrule of the one-per-library constraint). They collide at <em>merge</em>, not dispatch: merge serially &mdash; resampling-info, then prodigy-49, then multistart-iterations &mdash; re-validating each later PR on the moved main. prodigy-49 and multistart-iterations both touch the quick-update wiring; expect textual overlap between their diffs.</p>
+  <p class="eyebrow">Most important finding</p>
+  <p>The prodigy-49 bug as reported does not exist: a MultiStart search cannot stop at a quick-update boundary (the cadence is inert for that family). The &ldquo;49&rdquo; was <code>Total Samples = 49</code> &mdash; a construction-time count &mdash; misread as a step count because the summary never reported the run&rsquo;s real length. <a href="#m-af-prodigy">PR #1555</a> makes the summary state steps and stop reason, and pins the non-interaction with a tripwire the sibling wiring branch must flip. Merge order for the PyAutoFit trio: #1554 &rarr; #1555 &rarr; the parked wiring branch.</p>
 </section>
 
 <section class="panel" id="rulings">
   <h2>Rulings needed</h2>
   <ol class="rulings">
+    <li><span class="who"><a href="#m-smoke">release-smoke-env</a></span> &mdash; parked: open the PR from <code>feature/release-smoke-env-declarations</code>, amend, or reject (PyAutoHands#272).</li>
+    <li><span class="who"><a href="#m-af-multi">autofit-multistart-iterations</a></span> &mdash; parked: approve its PR (merged last of the trio, rebased over #1554/#1555); the workspace phase-2 prompt queues either way.</li>
+    <li><span class="who"><a href="#m-euclid3a">euclid-3a-prose</a></span> &mdash; parked: ship / amend / reject on euclid#47 &mdash; noting the independent adversary leg was NOT run for this member, and judgment call 1 (AGENTS.md scope).</li>
+    <li><span class="who"><a href="#m-numba">numba-vs-jax-sparse</a></span> &mdash; rule on the verdict (&ldquo;keep both, port nothing&rdquo;); optionally /intake its two scholar-mode candidates.</li>
+    <li><span class="who"><a href="#m-af-prodigy">autofit-prodigy-49</a></span> &mdash; accept the reframed root cause (reported bug does not exist; summary misread) before merging.</li>
+    <li><span class="who"><a href="#m-memq">memory-queue-filing-gate</a></span> &mdash; after merging: re-drive #71/#72 (label off/on) and #69 &mdash; the witness completes post-merge.</li>
     <li><span class="who"><a href="#m-mgepos">mge-pos-ref-reuse</a></span> &mdash; adopt the quarantined-but-reusable <code>340210_9</code> run as the <code>mge_pos_fp64</code> InferenceRefs_v1 reference, or reject it and queue array task 9 fresh.</li>
     <li><span class="who"><a href="#m-mgefp64">mge-fp64-retro-baseline</a></span> &mdash; does the retro-adopted <code>mge_fp64</code> baseline stand under the redo standard, or does it need a fresh <code>_ref</code> run (for which no array task exists)?</li>
     <li><span class="who"><a href="#m-delfp64">delaunay-fp64-retro-baseline</a></span> &mdash; the <code>delaunay_fp64</code> baseline rests on <code>legacy_wrong</code> (never-cite) evidence and has no array vehicle: add array task 11 now, or defer until the 342091 wave lands?</li>
-    <li><span class="who"><a href="#m-af-resamp">PyAutoFit trio</a></span> &mdash; confirm the serial merge order (resampling-info &rarr; prodigy-49 &rarr; multistart-iterations) or reorder.</li>
-    <li><span class="who"><a href="#m-euclid3a">euclid-3a-prose</a></span> &mdash; if parked at ship (supervised + needs-slicing), judge the branch: ship as-is, tweak, or slice.</li>
-    <li><span class="who"><a href="#m-jaxrefs">jax-inference-phase1-refs</a></span> &mdash; Phase 2 (NSS re-tune redo) was <em>not</em> dispatched: it is gated on Phase 1&rsquo;s certified baselines. Approve queueing it for the next batch.</li>
-    <li><span class="who"><a href="#m-numba">numba-vs-jax-sparse</a></span> &mdash; this member also stands in for the numba-cpu-likelihood epic&rsquo;s &ldquo;next phase&rdquo; (epic COMPLETE; successor curvature-F shipped as PyAutoArray #505/#507). Confirm the dedupe or name a different next step.</li>
   </ol>
 </section>
 
@@ -645,20 +647,20 @@ footer.pagefoot {
 <nav class="sidenav" aria-label="Members">
   <p class="navhead">Members</p>
   <ul>
-    <li><a href="#m-numba" data-nav="m-numba">numba solve vs JAX sparse operator<span class="mini m-suspect">Pending · 20 min</span></a></li>
-    <li><a href="#m-board" data-nav="m-board">GitHub Page link in every organ board<span class="mini m-suspect">Pending · 3 min</span></a></li>
-    <li><a href="#m-smoke" data-nav="m-smoke">Release smoke ignores ENV declarations<span class="mini m-suspect">Pending · 20 min</span></a></li>
-    <li><a href="#m-nerves" data-nav="m-nerves">Silence the non-Colab setup_colab mess<span class="mini m-suspect">Pending · 0 min</span></a></li>
-    <li><a href="#m-memq" data-nav="m-memq">Repair the queue-automation filing gat<span class="mini m-suspect">Pending · 0 min</span></a></li>
-    <li><a href="#m-af-resamp" data-nav="m-af-resamp">search.summary: add the Resampling Inf<span class="mini m-suspect">Pending · 3 min</span></a></li>
-    <li><a href="#m-af-prodigy" data-nav="m-af-prodigy">MultiStartProdigy stops at 49 steps wh<span class="mini m-suspect">Pending · 3 min</span></a></li>
-    <li><a href="#m-af-multi" data-nav="m-af-multi">MultiStartGradient searches ignore ite<span class="mini m-suspect">Pending · 3 min</span></a></li>
-    <li><a href="#m-euclid3a" data-nav="m-euclid3a">Euclid phase 3a — restore the narrativ<span class="mini m-suspect">Pending · 30 min</span></a></li>
-    <li><a href="#m-subhalo" data-nav="m-subhalo">Subhalo validation follow-up wave — ad<span class="mini m-suspect">Pending · 15 min</span></a></li>
-    <li><a href="#m-mgepos" data-nav="m-mgepos">mge_pos reference — reuse the legacy r<span class="mini m-suspect">Ruling · 5 min</span></a></li>
-    <li><a href="#m-mgefp64" data-nav="m-mgefp64">mge_fp64 retro baseline — off-spec<span class="mini m-suspect">Ruling · 4 min</span></a></li>
-    <li><a href="#m-delfp64" data-nav="m-delfp64">delaunay_fp64 retro baseline — rejecte<span class="mini m-suspect">Ruling · 4 min</span></a></li>
-    <li><a href="#m-jaxrefs" data-nav="m-jaxrefs">JAX inference programme — Phase 1 redo<span class="mini m-suspect">Pending · 20 min</span></a></li>
+    <li><a href="#m-smoke" data-nav="m-smoke">release-smoke-env<span class="mini m-suspect">Parked · 20 min</span></a></li>
+    <li><a href="#m-af-multi" data-nav="m-af-multi">autofit multistart wiring<span class="mini m-suspect">Parked · 3 min</span></a></li>
+    <li><a href="#m-euclid3a" data-nav="m-euclid3a">euclid 3a prose<span class="mini m-suspect">Parked · 30 min</span></a></li>
+    <li><a href="#m-mgepos" data-nav="m-mgepos">mge_pos legacy reuse<span class="mini m-suspect">Ruling · 5 min</span></a></li>
+    <li><a href="#m-mgefp64" data-nav="m-mgefp64">mge_fp64 retro baseline<span class="mini m-suspect">Ruling · 4 min</span></a></li>
+    <li><a href="#m-delfp64" data-nav="m-delfp64">delaunay_fp64 retro baseline<span class="mini m-suspect">Ruling · 4 min</span></a></li>
+    <li><a href="#m-numba" data-nav="m-numba">numba vs JAX sparse<span class="mini m-healthy">Verdict · 20 min</span></a></li>
+    <li><a href="#m-nerves" data-nav="m-nerves">autonerves colab silence<span class="mini m-healthy">PR green · 0 min</span></a></li>
+    <li><a href="#m-memq" data-nav="m-memq">memory queue filing gate<span class="mini m-healthy">PR green · 0 min</span></a></li>
+    <li><a href="#m-af-resamp" data-nav="m-af-resamp">autofit resampling info<span class="mini m-healthy">PR green · 3 min</span></a></li>
+    <li><a href="#m-af-prodigy" data-nav="m-af-prodigy">autofit prodigy 49<span class="mini m-healthy">PR green · 3 min</span></a></li>
+    <li><a href="#m-board" data-nav="m-board">organ board link<span class="mini m-healthy">PRs green · 3 min</span></a></li>
+    <li><a href="#m-subhalo" data-nav="m-subhalo">subhalo follow-up<span class="mini m-running">Laptop · 15 min</span></a></li>
+    <li><a href="#m-jaxrefs" data-nav="m-jaxrefs">jax refs phase 1<span class="mini m-running">Laptop · 20 min</span></a></li>
   </ul>
   <p class="navhead">Also</p>
   <ul>
@@ -668,113 +670,55 @@ footer.pagefoot {
 
 <div class="content">
 
-<section class="member pending" id="m-numba">
-  <div class="m-head">
-    <div class="m-head-main">
-      <p class="eyebrow">PyAutoArray · research · cloud</p>
-      <h2>numba solve vs JAX sparse operator</h2>
-      <p class="jobs">draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md</p>
-    </div>
-    <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-numba"> Ruled</label>
-    </div>
-  </div>
-  <div class="blocks">
-    <div class="block">
-      <p class="label">Question this member was dispatched to answer</p>
-      <p>Is the linear algebra of the shipped numba CPU positive-only solve (NNLS warm-start/memo lineage, PyAutoArray #501/#505/#507) the same formulation as the JAX sparse-operator mode — and if not, is it GPU-JAX-portable or intrinsically CPU-sparsity-bound? Deliverable is a written verdict, no library changes. Also serves as the numba-cpu-likelihood epic's next step (epic COMPLETE 2026-08-28; successor curvature-F work already shipped).</p>
-    </div>
-    <div class="block">
-      <p class="label">Witness</p>
-      <p>No Witness: declared — the verdict document itself is the review surface.</p>
-    </div>
-    <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z; research verdict, expect a written report, not a PR.</p>
-    </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-numba" value="accept" data-decision="m-numba"><span>Accept</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-numba" value="tweak" data-decision="m-numba"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-numba" value="reject" data-decision="m-numba"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-numba" value="defer" data-decision="m-numba"><span>Defer</span></label>
-      </div>
-      <textarea class="notetext" data-note="m-numba" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
-    </div>
-    <p class="chip chip-min">Est. 20 review-minutes &middot; judge</p>
-  </div>
-</section>
 
-<section class="member pending" id="m-board">
-  <div class="m-head">
-    <div class="m-head-main">
-      <p class="eyebrow">six organ repos · feature · cloud</p>
-      <h2>GitHub Page link in every organ board</h2>
-      <p class="jobs">draft/feature/organs/github_page_link_in_every_organ_board.md</p>
-    </div>
-    <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-board"> Ruled</label>
-    </div>
-  </div>
-  <div class="blocks">
-    <div class="block">
-      <p class="label">Question this member was dispatched to answer</p>
-      <p>Add a GitHub Page link to each of the six generated organ board HTML pages.</p>
-    </div>
-    <div class="block">
-      <p class="label">Witness</p>
-      <p>Each of the six generated board HTML pages contains an &lt;a&gt; whose text is “GitHub Page” and whose href resolves to that repo’s README.md on github.com, asserted in that generator’s existing board test.</p>
-    </div>
-    <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z.</p>
-    </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-board" value="accept" data-decision="m-board"><span>Accept</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-board" value="tweak" data-decision="m-board"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-board" value="reject" data-decision="m-board"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-board" value="defer" data-decision="m-board"><span>Defer</span></label>
-      </div>
-      <textarea class="notetext" data-note="m-board" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
-    </div>
-    <p class="chip chip-min">Est. 3 review-minutes &middot; glance</p>
-  </div>
-</section>
 
-<section class="member pending" id="m-smoke">
+
+
+
+
+
+
+
+
+
+
+<section class="member sev-suspect" id="m-smoke">
   <div class="m-head">
     <div class="m-head-main">
-      <p class="eyebrow">PyAutoHands · bug · cloud · supervised</p>
+      <p class="eyebrow">PyAutoHands · bug · supervised · parked</p>
       <h2>Release smoke ignores ENV declarations</h2>
-      <p class="jobs">draft/bug/ci/release_smoke_ignores_env_declarations.md</p>
+      <p class="jobs">branch feature/release-smoke-env-declarations · PyAutoHands#272</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
+      <span class="chip chip-suspect">Parked at ship</span>
       <label class="ruled"><input type="checkbox" data-ruled="m-smoke"> Ruled</label>
     </div>
   </div>
   <div class="blocks">
     <div class="block">
       <p class="label">Question this member was dispatched to answer</p>
-      <p>The run_smoke_tests job in PyAutoHands/.github/workflows/release.yml ignores per-script ENV: declarations (e.g. witt_wynne.py’s ENV: full_datasets), so PointSolver cases run under SMALL_DATASETS and return the fixed 2-image pair. Fix the env handling.</p>
+      <p>The <code>run_smoke_tests</code> job in <code>release.yml</code> ignores per-script <code>ENV:</code> declarations (witt_wynne.py&rsquo;s <code>full_datasets</code>), so PointSolver cases run under SMALL_DATASETS and return the fixed 2-image pair.</p>
     </div>
     <div class="block">
       <p class="label">Witness</p>
-      <p>No Witness: declared — review is the diff plus a green release-smoke run honouring the declaration.</p>
+      <p>None declared &mdash; review is the diff plus a release-smoke run honouring the declaration.</p>
     </div>
     <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z. Autonomy: supervised — the session may park at the ship checkpoint; a parked branch appears here for judgement, not as a delivered PR.</p>
+      <p class="label">Health evidence</p>
+      <p>Branch <code>feature/release-smoke-env-declarations</code> (head <code>b7df526</code>) pushed to PyAutoHands; <strong>no PR opened</strong> &mdash; the run parked at the ship checkpoint per its <code>supervised</code> autonomy, with the batched question on <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/272">PyAutoHands#272</a>. Verified against GitHub at collect: branch present, open-PR list does not contain it.</p>
+    </div>
+    <div class="block">
+      <p class="label">Ruling</p>
+      <p class="decision">Open the PR from the parked branch / request changes on #272 / reject the branch.</p>
+    </div>
+    <div class="block">
+      <p class="label">Where to look</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoHands/issues/272">PyAutoHands#272</a> (plan + parked checkpoint) &middot; <a href="https://github.com/PyAutoLabs/PyAutoHands/tree/feature/release-smoke-env-declarations">the branch</a></p>
     </div>
     <div class="block review-block">
       <p class="label">Your review</p>
       <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-smoke" value="accept" data-decision="m-smoke"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-smoke" value="accept" data-decision="m-smoke"><span>Ship it</span></label>
         <label class="rchip"><input type="radio" name="rv-m-smoke" value="tweak" data-decision="m-smoke"><span>Tweak</span></label>
         <label class="rchip"><input type="radio" name="rv-m-smoke" value="reject" data-decision="m-smoke"><span>Reject</span></label>
         <label class="rchip"><input type="radio" name="rv-m-smoke" value="defer" data-decision="m-smoke"><span>Defer</span></label>
@@ -785,191 +729,47 @@ footer.pagefoot {
   </div>
 </section>
 
-<section class="member pending" id="m-nerves">
+<section class="member sev-suspect" id="m-af-multi">
   <div class="m-head">
     <div class="m-head-main">
-      <p class="eyebrow">PyAutoNerves · feature · cloud</p>
-      <h2>Silence the non-Colab setup_colab message on CLI runs</h2>
-      <p class="jobs">draft/feature/autonerves/silence_the_non_colab_setup_colab_message.md</p>
-    </div>
-    <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-nerves"> Ruled</label>
-    </div>
-  </div>
-  <div class="blocks">
-    <div class="block">
-      <p class="label">Question this member was dispatched to answer</p>
-      <p>A plain CLI run of a workspace start_here.py should not print the “You are not running in a Google Colab environment” block; the notebook-facing path keeps it.</p>
-    </div>
-    <div class="block">
-      <p class="label">Witness</p>
-      <p>A plain CLI run of a workspace start_here.py prints no “You are not running in a Google Colab environment” block on stdout, while the notebook-facing path still surfaces it; asserted by a test in PyAutoNerves/test_autonerves/test_setup_colab.py.</p>
-    </div>
-    <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z. notify tier: witness-covered, zero review-minutes.</p>
-    </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-nerves" value="accept" data-decision="m-nerves"><span>Accept</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-nerves" value="tweak" data-decision="m-nerves"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-nerves" value="reject" data-decision="m-nerves"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-nerves" value="defer" data-decision="m-nerves"><span>Defer</span></label>
-      </div>
-      <textarea class="notetext" data-note="m-nerves" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
-    </div>
-    <p class="chip chip-min">Est. 0 review-minutes &middot; notify</p>
-  </div>
-</section>
-
-<section class="member pending" id="m-memq">
-  <div class="m-head">
-    <div class="m-head-main">
-      <p class="eyebrow">PyAutoMemory · bug · cloud</p>
-      <h2>Repair the queue-automation filing gate</h2>
-      <p class="jobs">draft/bug/pyautomemory/repair_queue_automation_filing_gate.md</p>
-    </div>
-    <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-memq"> Ruled</label>
-    </div>
-  </div>
-  <div class="blocks">
-    <div class="block">
-      <p class="label">Question this member was dispatched to answer</p>
-      <p>queue_filing.yml has failed on every run since 2026-08-24; repair the filing gate so queue-intake labels open filing PRs again.</p>
-    </div>
-    <div class="block">
-      <p class="label">Witness</p>
-      <p>After the fix, re-applying queue-intake to #71 produces a green queue_filing.yml run that opens a filing PR — the run list shows success where every run since 2026-08-24 shows failure.</p>
-    </div>
-    <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z. notify tier: witness-covered, zero review-minutes.</p>
-    </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-memq" value="accept" data-decision="m-memq"><span>Accept</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-memq" value="tweak" data-decision="m-memq"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-memq" value="reject" data-decision="m-memq"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-memq" value="defer" data-decision="m-memq"><span>Defer</span></label>
-      </div>
-      <textarea class="notetext" data-note="m-memq" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
-    </div>
-    <p class="chip chip-min">Est. 0 review-minutes &middot; notify</p>
-  </div>
-</section>
-
-<section class="member pending" id="m-af-resamp">
-  <div class="m-head">
-    <div class="m-head-main">
-      <p class="eyebrow">PyAutoFit · bug · cloud</p>
-      <h2>search.summary: add the Resampling Info section</h2>
-      <p class="jobs">draft/bug/autofit/add_resampling_info_section_to_the_bottom.md</p>
-    </div>
-    <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-af-resamp"> Ruled</label>
-    </div>
-  </div>
-  <div class="blocks">
-    <div class="block">
-      <p class="label">Question this member was dispatched to answer</p>
-      <p>Append a Resampling Info section (six resampling lines) to the bottom of a completed search’s search.summary.</p>
-    </div>
-    <div class="block">
-      <p class="label">Witness</p>
-      <p>A completed search’s search.summary ends with a blank line after the ‘Visualization time’ line, then a ‘Resampling Info’ subheader followed by the six resampling lines.</p>
-    </div>
-    <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z. One of three PyAutoFit members this shift — merge first of the three.</p>
-    </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-af-resamp" value="accept" data-decision="m-af-resamp"><span>Accept</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-af-resamp" value="tweak" data-decision="m-af-resamp"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-af-resamp" value="reject" data-decision="m-af-resamp"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-af-resamp" value="defer" data-decision="m-af-resamp"><span>Defer</span></label>
-      </div>
-      <textarea class="notetext" data-note="m-af-resamp" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
-    </div>
-    <p class="chip chip-min">Est. 3 review-minutes &middot; glance</p>
-  </div>
-</section>
-
-<section class="member pending" id="m-af-prodigy">
-  <div class="m-head">
-    <div class="m-head-main">
-      <p class="eyebrow">PyAutoFit · bug · cloud</p>
-      <h2>MultiStartProdigy stops at 49 steps when iterations_per_quick_update=50</h2>
-      <p class="jobs">draft/bug/autofit/multistartprodigy_stops_at_49_steps_when_iterati.md</p>
-    </div>
-    <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-af-prodigy"> Ruled</label>
-    </div>
-  </div>
-  <div class="blocks">
-    <div class="block">
-      <p class="label">Question this member was dispatched to answer</p>
-      <p>A quick update mid-search must not end the search: MultiStartProdigy with iterations_per_quick_update=50 terminates at 49 steps.</p>
-    </div>
-    <div class="block">
-      <p class="label">Witness</p>
-      <p>An imaging/start_here.py run using MultiStartProdigy with iterations_per_quick_update=50 runs well past the first quick update, and a PyAutoFit unit test covers that a quick update mid-search does not end the search.</p>
-    </div>
-    <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z. Overlaps autofit-multistart-iterations in the quick-update wiring — merge second, expect textual overlap.</p>
-    </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-af-prodigy" value="accept" data-decision="m-af-prodigy"><span>Accept</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-af-prodigy" value="tweak" data-decision="m-af-prodigy"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-af-prodigy" value="reject" data-decision="m-af-prodigy"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-af-prodigy" value="defer" data-decision="m-af-prodigy"><span>Defer</span></label>
-      </div>
-      <textarea class="notetext" data-note="m-af-prodigy" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
-    </div>
-    <p class="chip chip-min">Est. 3 review-minutes &middot; glance</p>
-  </div>
-</section>
-
-<section class="member pending" id="m-af-multi">
-  <div class="m-head">
-    <div class="m-head-main">
-      <p class="eyebrow">PyAutoFit + autolens_workspace · bug · cloud · supervised · difficulty large</p>
+      <p class="eyebrow">PyAutoFit · bug · supervised · parked · phase split</p>
       <h2>MultiStartGradient searches ignore iterations_per_quick_update</h2>
-      <p class="jobs">draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md</p>
+      <p class="jobs">branch feature/multistart-quick-update-wiring · PyAutoFit#1552</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
+      <span class="chip chip-suspect">Parked at ship</span>
       <label class="ruled"><input type="checkbox" data-ruled="m-af-multi"> Ruled</label>
     </div>
   </div>
   <div class="blocks">
     <div class="block">
       <p class="label">Question this member was dispatched to answer</p>
-      <p>Wire iterations_per_quick_update through the MultiStart gradient searches (one fit.png per cadence boundary), remove multi_start_gradient/search.py from the EXEMPT map, and add the workspace AST guard against unhonoured kwargs.</p>
+      <p>Wire real quick updates into the multi-start step loop (the cadence is currently inert &mdash; announced in the log, never fired), honest startup message, EXEMPT-map removal, workspace AST guard.</p>
     </div>
     <div class="block">
       <p class="label">Witness</p>
-      <p>One fit.png per cadence boundary (perform_quick_update call-count test); EXEMPT map entry removed rather than kept; workspace AST guard asserts no MultiStart* call site passes an unhonoured kwarg.</p>
+      <p>One fit.png per cadence boundary (perform_quick_update call-count test); EXEMPT entry removed; workspace AST guard. The workspace half was declared <strong>phase 2</strong> by the member &mdash; library first.</p>
     </div>
     <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z. Autonomy: supervised, Difficulty: large — may park at ship. Merge third of the PyAutoFit trio.</p>
+      <p class="label">Health evidence</p>
+      <p>Branch <code>feature/multistart-quick-update-wiring</code> (head <code>94a658b</code>) pushed; <strong>no PR</strong> &mdash; parked at ship (supervised) on <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1552">PyAutoFit#1552</a> with the plan and unit decision (count per gradient step, not per batched evaluation). Session reports 2334 tests passing. Verified at collect: branch present, no PR from it.</p>
+    </div>
+    <div class="block">
+      <p class="label">Readout</p>
+      <p>Interacts with <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1555">#1555</a>: that PR adds a <code>quick_update_count == 0</code> inertness tripwire this wiring change must flip to a &ldquo;fired&rdquo; assertion. Merge order: #1554 &rarr; #1555 &rarr; this branch&rsquo;s PR (rebased over both).</p>
+    </div>
+    <div class="block">
+      <p class="label">Ruling</p>
+      <p class="decision">Approve opening the PR (merged last of the PyAutoFit trio, rebased) / request changes on #1552 / reject. The workspace phase-2 prompt goes to the queue either way.</p>
+    </div>
+    <div class="block">
+      <p class="label">Where to look</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1552">PyAutoFit#1552</a> (plan + park) &middot; <a href="https://github.com/PyAutoLabs/PyAutoFit/tree/feature/multistart-quick-update-wiring">the branch</a></p>
     </div>
     <div class="block review-block">
       <p class="label">Your review</p>
       <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-af-multi" value="accept" data-decision="m-af-multi"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-af-multi" value="accept" data-decision="m-af-multi"><span>Ship it</span></label>
         <label class="rchip"><input type="radio" name="rv-m-af-multi" value="tweak" data-decision="m-af-multi"><span>Tweak</span></label>
         <label class="rchip"><input type="radio" name="rv-m-af-multi" value="reject" data-decision="m-af-multi"><span>Reject</span></label>
         <label class="rchip"><input type="radio" name="rv-m-af-multi" value="defer" data-decision="m-af-multi"><span>Defer</span></label>
@@ -980,35 +780,43 @@ footer.pagefoot {
   </div>
 </section>
 
-<section class="member pending" id="m-euclid3a">
+<section class="member sev-suspect" id="m-euclid3a">
   <div class="m-head">
     <div class="m-head-main">
-      <p class="eyebrow">euclid_strong_lens_modeling_pipeline · docs · cloud · supervised · epic euclid-dr1-prep</p>
-      <h2>Euclid phase 3a — restore the narrative prose, start_here.py as the end-to-end guide</h2>
-      <p class="jobs">draft/docs/euclid/restore_pipeline_narrative_prose.md</p>
+      <p class="eyebrow">euclid_strong_lens_modeling_pipeline · docs · supervised · parked</p>
+      <h2>Euclid phase 3a — narrative prose restored, start_here.py end-to-end guide</h2>
+      <p class="jobs">branch feature/restore-narrative-prose · euclid#47</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
+      <span class="chip chip-suspect">Parked at ship</span>
       <label class="ruled"><input type="checkbox" data-ruled="m-euclid3a"> Ruled</label>
     </div>
   </div>
   <div class="blocks">
     <div class="block">
       <p class="label">Question this member was dispatched to answer</p>
-      <p>Restore the in-script narrative lost at 355b309: start_here.py back to a full end-to-end new-user guide (keeping the phase-1 delegation to initial_lens_model.fit — human ruling 2026-08-31, Mind 32c639e5), scripts/ as its chapters (point back for what start_here covers, explain in full what it does not, Source Pix the named gap), every recovered claim verified against the current code and autolens_workspace.</p>
+      <p>Restore the narrative lost at 355b309: start_here.py 63-line shim &rarr; documented end-to-end guide (keeping the delegation to <code>initial_lens_model.fit</code>), scripts/ as chapters, drift-verified prose, plus the batch-review addendum (README structural edits, scripts/tools/ move, AGENTS.md shortening).</p>
     </div>
     <div class="block">
-      <p class="label">Witness</p>
-      <p>No Witness: declared — prose register and correctness are the review; the prompt carries per-file targets and known-drift lists.</p>
+      <p class="label">Health evidence</p>
+      <p>Branch <code>feature/restore-narrative-prose</code> pushed, <strong>no PR</strong> &mdash; parked on <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/47">euclid#47</a>. Member-reported: pytest <strong>61 passed</strong> (fast+slow), smoke <strong>9/9 PASS</strong> incl. the moved tools path, prose-only AST proof (string-stripped ASTs identical to main except the forced move/path fixes), all drift greps zero, no empty section headers. <strong>Caveat: the independent adversary leg was NOT run</strong> (self-review only) &mdash; by doctrine a self-run leg is an absent leg; this park IS the review, so judge accordingly.</p>
     </div>
     <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — cloud session dispatched 18:40Z. Autonomy: supervised + Unattended: needs-slicing — the likeliest member to park at ship; a parked branch appears here for judgement.</p>
+      <p class="label">Readout</p>
+      <p>start_here.py 0 &rarr; 24 sections (~630 prose lines); initial_lens_model __Source Pix__ filled (9 sections); full_model 10 &rarr; 26, lens_model_waveband 0 &rarr; 22, mge_lens_only 0 &rarr; 27, sersic 2 &rarr; 9, simulator +3 filled headers; 6 catalogue producers 5&ndash;9 sections each; README addendum edits done; AGENTS.md 471 &rarr; 251 lines. Three judgment calls flagged in the park comment: (1) AGENTS.md shortening treated as in scope; (2) a <code>batch_size=50</code> kwarg silently swallowed by af.Nautilus &mdash; prose corrected, bug filed as <code>draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md</code>; (3) two small doc follow-ups surfaced, not acted on.</p>
+    </div>
+    <div class="block">
+      <p class="label">Ruling</p>
+      <p class="decision">Ship it (PR opened from the branch) / request changes on #47 / reject. Rule also on judgment call 1 (AGENTS.md scope).</p>
+    </div>
+    <div class="block">
+      <p class="label">Where to look</p>
+      <p><a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/47">euclid#47</a> (plan + park with full evidence) &middot; <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/tree/feature/restore-narrative-prose">the branch</a></p>
     </div>
     <div class="block review-block">
       <p class="label">Your review</p>
       <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-euclid3a" value="accept" data-decision="m-euclid3a"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-euclid3a" value="accept" data-decision="m-euclid3a"><span>Ship it</span></label>
         <label class="rchip"><input type="radio" name="rv-m-euclid3a" value="tweak" data-decision="m-euclid3a"><span>Tweak</span></label>
         <label class="rchip"><input type="radio" name="rv-m-euclid3a" value="reject" data-decision="m-euclid3a"><span>Reject</span></label>
         <label class="rchip"><input type="radio" name="rv-m-euclid3a" value="defer" data-decision="m-euclid3a"><span>Defer</span></label>
@@ -1019,46 +827,7 @@ footer.pagefoot {
   </div>
 </section>
 
-<section class="member pending" id="m-subhalo">
-  <div class="m-head">
-    <div class="m-head-main">
-      <p class="eyebrow">subhalo_validation · research · LOCAL-DEV (laptop/RAL)</p>
-      <h2>Subhalo validation follow-up wave — adapt_split fix + RectangularBilinear</h2>
-      <p class="jobs">draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md</p>
-    </div>
-    <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-subhalo"> Ruled</label>
-    </div>
-  </div>
-  <div class="blocks">
-    <div class="block">
-      <p class="label">Question this member was dispatched to answer</p>
-      <p>The 2026-08-31 AM review’s accepted follow-up: rerun with the _adapt_split_fix result inspected, no subhalo[2], and the RectangularBilinear runs.</p>
-    </div>
-    <div class="block">
-      <p class="label">Witness</p>
-      <p>No Witness: declared — science member; the ruling writes into the project’s results_summary.md.</p>
-    </div>
-    <div class="block">
-      <p class="label">Status</p>
-      <p>PENDING — LOCAL-DEV: pasted at the laptop this evening; RAL submissions queue while the laptop is on. Results likely still running at review-at; carried as PENDING to the next packet if so.</p>
-    </div>
-    <div class="block review-block">
-      <p class="label">Your review</p>
-      <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-subhalo" value="accept" data-decision="m-subhalo"><span>Accept</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-subhalo" value="tweak" data-decision="m-subhalo"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-subhalo" value="reject" data-decision="m-subhalo"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-subhalo" value="defer" data-decision="m-subhalo"><span>Defer</span></label>
-      </div>
-      <textarea class="notetext" data-note="m-subhalo" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
-    </div>
-    <p class="chip chip-min">Est. 15 review-minutes &middot; judge</p>
-  </div>
-</section>
-
-<section class="member" id="m-mgepos">
+<section class="member sev-suspect" id="m-mgepos">
   <div class="m-head">
     <div class="m-head-main">
       <p class="eyebrow">autolens_profiling &middot; InferenceRefs_v1 &middot; from jax-inference-phase1-refs</p>
@@ -1156,7 +925,7 @@ footer.pagefoot {
   </div>
 </section>
 
-<section class="member" id="m-mgefp64">
+<section class="member sev-suspect" id="m-mgefp64">
   <div class="m-head">
     <div class="m-head-main">
       <p class="eyebrow">autolens_profiling &middot; InferenceRefs_v1 &middot; from jax-inference-phase1-refs</p>
@@ -1249,7 +1018,7 @@ footer.pagefoot {
   </div>
 </section>
 
-<section class="member" id="m-delfp64">
+<section class="member sev-suspect" id="m-delfp64">
   <div class="m-head">
     <div class="m-head-main">
       <p class="eyebrow">autolens_profiling &middot; InferenceRefs_v1 &middot; from jax-inference-phase1-refs</p>
@@ -1341,57 +1110,342 @@ footer.pagefoot {
   </div>
 </section>
 
-<section class="member pending" id="m-jaxrefs">
+<section class="member sev-healthy" id="m-numba">
   <div class="m-head">
     <div class="m-head-main">
-      <p class="eyebrow">autolens_profiling · epic-slice · LOCAL-DEV (laptop/RAL)</p>
-      <h2>JAX inference programme — Phase 1 redo: InferenceRefs_v1 baselines</h2>
-      <p class="jobs">autolens_profiling/results/notes/inference/PROGRAMME.md (no Mind prompt — slices ship as autolens_profiling issues/PRs; queue anchor autolens_profiling#200)</p>
+      <p class="eyebrow">PyAutoArray · research · verdict awaiting ruling</p>
+      <h2>numba solve vs JAX sparse operator</h2>
+      <p class="jobs">PyAutoArray#513 · Mind ledger 7385b138</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-pending">PENDING &mdash; refreshed during your read</span>
-      <label class="ruled"><input type="checkbox" data-ruled="m-jaxrefs"> Ruled</label>
+      <span class="chip chip-healthy">Verdict delivered</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-numba"> Ruled</label>
     </div>
   </div>
   <div class="blocks">
     <div class="block">
       <p class="label">Question this member was dispatched to answer</p>
-      <p>Rewind restart point: certify the InferenceRefs_v1 reference rows. First apply the MGE reuse rule — check output/legacy/searches (RAL + mirror) per target and surface reusable results as packet ruling members instead of resubmitting — then submit the prepared refs array (incl. the re-queued refs 5/6/7 on the overflow-flood fix) for missing or rejected rows. Phase 2’s redo is gated on these baselines and is QUEUED for the next batch, not dispatched.</p>
+      <p>Is the numba CPU positive-only solve the same linear algebra as the JAX sparse-operator mode &mdash; and if not, is it GPU-portable or intrinsically CPU-suited? (Also stands in for the numba-cpu-likelihood epic&rsquo;s next step.)</p>
     </div>
     <div class="block">
-      <p class="label">Witness</p>
-      <p>Per the registry: Δ(max logL) vs truth bar ≤ 2 nats, parameter recovery in per-target tolerances, ≥5-seed reliability, posterior agreement vs reference. For <em>this</em> wave the immediate witness is provenance, applied per landed row: a <strong>fresh version stamp</strong>, a <strong>wall consistent with the cell's recorded cost</strong>, and <strong>no resume marker</strong> — plus a finite, sane maxLL (the overflow flood that took tasks 5/6/7 down showed as finite garbage up to 3e+303, not as NaN, so &ldquo;finite&rdquo; alone is not the check).</p>
+      <p class="label">Readout — the verdict</p>
+      <p><strong>Same linear algebra, deliberately different machines &mdash; keep both, port nothing.</strong> Identical formulation (regularised normal equations, W = H&#7488;N&#8315;&sup1;H); every difference is hardware-deliberate: explicit 177&nbsp;MB sparse preload + branchy active-set fnnls + cross-eval warm-start memo (CPU cache/state levers) vs matrix-free FFT operator + fixed-shape PDIP with differentiable relaxed-KKT VJP (GPU/vmap/grad levers). Each transplant was already measured and failed (warm-start hurts PDIP 17&rarr;38 iters; BPP/ADMM slower/fail). Two scholar-mode intake candidates offered (a design note recording the two-modes decision; landing/retiring the ledger&rsquo;s pending A100 rows).</p>
     </div>
     <div class="block">
-      <p class="label">Status</p>
-      <p>DISPATCHED — RAL job <strong>342091</strong>, <code>sbatch --array=0-8,10 --requeue submit_search_nautilus_inference_refs_v1_array.sh</code> from <code>hpc/batch_gpu/</code>. Ten rows resubmitted fresh (all pre-rewind mesh/pix evidence is quarantined in <code>legacy_wrong/</code> and cannot be reused); tasks 5/6/7 run the corrected <code>AdaptSplitPower</code> targets. At T+2 min: <strong>task 0 RUNNING on euclid-ral-gpu-2, tasks 1-8,10 PENDING (Resources)</strong>. Active <code>output/searches/nautilus/imaging/</code> was empty pre-submit — no resume collisions.</p>
-      <p>Array task <strong>9 was excluded</strong> under the MGE reuse rule, and the three legacy-reuse rulings it raised are on this page as their own members: <a href="#m-mgepos">mge-pos-ref-reuse</a>, <a href="#m-mgefp64">mge-fp64-retro-baseline</a>, <a href="#m-delfp64">delaunay-fp64-retro-baseline</a>. Dispatch recorded in <strong>autolens_profiling#201</strong>, docs-only PR <strong>#202</strong> (SUBMIT_LIST.md, submit-script header, PROGRAMME.md Phase 1 row). RAL housekeeping: profiling checkout fast-forwarded <code>f284f24</code>→<code>ab9b27d</code>; a stale uncommitted knn task-7 row preserved as <code>stash@{0}</code> rather than discarded. Rows land overnight; nothing to judge on this member yet beyond leaving it to finish.</p>
+      <p class="label">Health evidence</p>
+      <p>Full verdict posted as a comment on <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/513">PyAutoArray#513</a> (verified at collect); no PR by design (no library changes); Mind ledger merged. Judge tier &mdash; parks for this ruling, no decide-and-flag.</p>
+    </div>
+    <div class="block">
+      <p class="label">Ruling</p>
+      <p class="decision">Accept the verdict (issue closes, prompt retires) / reject with reasoning; separately: /intake either scholar-mode candidate?</p>
+    </div>
+    <div class="block">
+      <p class="label">Where to look</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoArray/issues/513">PyAutoArray#513</a> &mdash; the verdict comment is the deliverable.</p>
     </div>
     <div class="block review-block">
       <p class="label">Your review</p>
       <div class="rchips" role="radiogroup" aria-label="Decision">
-        <label class="rchip"><input type="radio" name="rv-m-jaxrefs" value="accept" data-decision="m-jaxrefs"><span>Accept</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-jaxrefs" value="tweak" data-decision="m-jaxrefs"><span>Tweak</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-jaxrefs" value="reject" data-decision="m-jaxrefs"><span>Reject</span></label>
-        <label class="rchip"><input type="radio" name="rv-m-jaxrefs" value="defer" data-decision="m-jaxrefs"><span>Defer</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-numba" value="accept" data-decision="m-numba"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-numba" value="tweak" data-decision="m-numba"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-numba" value="reject" data-decision="m-numba"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-numba" value="defer" data-decision="m-numba"><span>Defer</span></label>
       </div>
-      <textarea class="notetext" data-note="m-jaxrefs" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+      <textarea class="notetext" data-note="m-numba" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
     </div>
     <p class="chip chip-min">Est. 20 review-minutes &middot; judge</p>
   </div>
 </section>
 
+<section class="member sev-healthy" id="m-nerves">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">PyAutoNerves · feature · delivered</p>
+      <h2>Silence the non-Colab setup_colab message on CLI runs</h2>
+      <p class="jobs">PyAutoNerves#157 · 3/3 checks green · mergeable clean</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-healthy">PR green</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-nerves"> Ruled</label>
+    </div>
+  </div>
+  <div class="blocks">
+    <div class="block">
+      <p class="label">Question this member was dispatched to answer</p>
+      <p>Plain CLI runs should not print the &ldquo;You are not running in a Google Colab environment&rdquo; block; notebooks keep it.</p>
+    </div>
+    <div class="block">
+      <p class="label">Witness</p>
+      <p>CLI run prints nothing; notebook path still surfaces it; asserted in <code>test_setup_colab.py</code>. <strong>Witness test present and green in CI</strong> (context-detection via live IPython shell; silent path demoted to logger.debug).</p>
+    </div>
+    <div class="block">
+      <p class="label">Health evidence</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/157">PyAutoNerves#157</a>: 3/3 checks success (unittest 3.12/3.13/nojax), mergeable clean, 169/169 tests, adversary leg reported CLEAN (independent model, report in PR conversation). Verified against GitHub at collect.</p>
+    </div>
+    <div class="block">
+      <p class="label">Ruling</p>
+      <p class="decision">Merge (/prm 157) / tweak / reject. notify tier &mdash; witness-covered.</p>
+    </div>
+    <div class="block">
+      <p class="label">Where to look</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/157">PyAutoNerves#157</a></p>
+    </div>
+    <div class="block review-block">
+      <p class="label">Your review</p>
+      <div class="rchips" role="radiogroup" aria-label="Decision">
+        <label class="rchip"><input type="radio" name="rv-m-nerves" value="accept" data-decision="m-nerves"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-nerves" value="tweak" data-decision="m-nerves"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-nerves" value="reject" data-decision="m-nerves"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-nerves" value="defer" data-decision="m-nerves"><span>Defer</span></label>
+      </div>
+      <textarea class="notetext" data-note="m-nerves" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+    </div>
+    <p class="chip chip-min">Est. 0 review-minutes &middot; notify</p>
+  </div>
+</section>
+
+<section class="member sev-healthy" id="m-memq">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">PyAutoMemory · bug · delivered</p>
+      <h2>Repair the queue-automation filing gate</h2>
+      <p class="jobs">PyAutoMemory#76 · validate green · mergeable clean</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-healthy">PR green · decision-taken</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-memq"> Ruled</label>
+    </div>
+  </div>
+  <div class="blocks">
+    <div class="block">
+      <p class="label">Question this member was dispatched to answer</p>
+      <p>queue_filing.yml red on every run since 2026-08-24; queue_actions.yml lost commits on push conflict and failed silently.</p>
+    </div>
+    <div class="block">
+      <p class="label">Witness</p>
+      <p>Post-merge only: re-apply <code>queue-intake</code> to #71 &rarr; green run + filing PR. <strong>Cannot execute pre-merge</strong> (label-triggered workflows run from main) &mdash; basis-cited instead (local red/green repro of the 30 theme-import failures; live-log confirmation of the diagnosed death step).</p>
+    </div>
+    <div class="block">
+      <p class="label">Health evidence</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/76">PyAutoMemory#76</a>: validate green, mergeable clean. Three fixes (missing PyAutoBrain checkout in the gate; conflict-proof rebuild-retry replacing the discarding rebase; failure reporting). Adversary found 2 real issues, both fixed in b5bc248; finding 3 (same retry shape in two sibling workflows) recorded as follow-up. <strong>decide-and-flag</strong>: opened the PR rather than park (supervised cap) &mdash; the one flagged decision.</p>
+    </div>
+    <div class="block">
+      <p class="label">Ruling</p>
+      <p class="decision">Merge, then re-drive #71 and #72 (label off/on) and #69 &mdash; the witness completes post-merge (checklist in the PR). Queue the finding-3 follow-up?</p>
+    </div>
+    <div class="block">
+      <p class="label">Where to look</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/76">PyAutoMemory#76</a> (post-merge checklist at the bottom)</p>
+    </div>
+    <div class="block review-block">
+      <p class="label">Your review</p>
+      <div class="rchips" role="radiogroup" aria-label="Decision">
+        <label class="rchip"><input type="radio" name="rv-m-memq" value="accept" data-decision="m-memq"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-memq" value="tweak" data-decision="m-memq"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-memq" value="reject" data-decision="m-memq"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-memq" value="defer" data-decision="m-memq"><span>Defer</span></label>
+      </div>
+      <textarea class="notetext" data-note="m-memq" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+    </div>
+    <p class="chip chip-min">Est. 0 review-minutes &middot; notify</p>
+  </div>
+</section>
+
+<section class="member sev-healthy" id="m-af-resamp">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">PyAutoFit · bug · delivered · merge 1st of trio</p>
+      <h2>search.summary: Resampling Info section at the bottom</h2>
+      <p class="jobs">PyAutoFit#1554 · 4/4 checks green · mergeable clean</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-healthy">PR green · decision-taken</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-af-resamp"> Ruled</label>
+    </div>
+  </div>
+  <div class="blocks">
+    <div class="block">
+      <p class="label">Question this member was dispatched to answer</p>
+      <p>Move the resampling diagnostics from mid-file to a closing &ldquo;Resampling Info&rdquo; section of search.summary.</p>
+    </div>
+    <div class="block">
+      <p class="label">Witness</p>
+      <p>File ends: blank line after Visualization time &rarr; subheader &rarr; six lines. <strong>Observed on a real smoke run</strong> and asserted by a new ordering test; searches without counters write byte-identical files (differential check vs main).</p>
+    </div>
+    <div class="block">
+      <p class="label">Health evidence</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1554">PyAutoFit#1554</a>: 4/4 checks success, mergeable clean; 2328 passed/44 skipped; adversary CLEAN. <strong>decide-and-flag</strong>: opened the PR rather than park (bug-cap supervised).</p>
+    </div>
+    <div class="block">
+      <p class="label">Ruling</p>
+      <p class="decision">Merge first of the three PyAutoFit PRs (/prm 1554).</p>
+    </div>
+    <div class="block">
+      <p class="label">Where to look</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1554">PyAutoFit#1554</a></p>
+    </div>
+    <div class="block review-block">
+      <p class="label">Your review</p>
+      <div class="rchips" role="radiogroup" aria-label="Decision">
+        <label class="rchip"><input type="radio" name="rv-m-af-resamp" value="accept" data-decision="m-af-resamp"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-af-resamp" value="tweak" data-decision="m-af-resamp"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-af-resamp" value="reject" data-decision="m-af-resamp"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-af-resamp" value="defer" data-decision="m-af-resamp"><span>Defer</span></label>
+      </div>
+      <textarea class="notetext" data-note="m-af-resamp" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+    </div>
+    <p class="chip chip-min">Est. 3 review-minutes &middot; glance</p>
+  </div>
+</section>
+
+<section class="member sev-healthy" id="m-af-prodigy">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">PyAutoFit · bug · delivered · merge 2nd of trio</p>
+      <h2>MultiStartProdigy “stops at 49 steps” — root cause reframed</h2>
+      <p class="jobs">PyAutoFit#1555 · 4/4 checks green · mergeable clean</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-healthy">PR green · reframed</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-af-prodigy"> Ruled</label>
+    </div>
+  </div>
+  <div class="blocks">
+    <div class="block">
+      <p class="label">Question this member was dispatched to answer</p>
+      <p>MultiStartProdigy with iterations_per_quick_update=50 reportedly terminates at 49 steps.</p>
+    </div>
+    <div class="block">
+      <p class="label">Readout — the bug as reported does not exist</p>
+      <p>The search <strong>cannot</strong> stop at a quick-update boundary &mdash; the cadence is inert for this family (the sibling member&rsquo;s EXEMPT entry). The &ldquo;49&rdquo; was <code>Total Samples = 49</code> (1 best + 48 per-start final points, fixed at construction) misread as a step count, while the run&rsquo;s real length appeared nowhere in the summary. Fix: the summary now labels the composition and reports <code>Total Steps</code> and <code>Stop Reason</code>; a new e2e regression runs a cadence mid-budget to completion and carries a <code>quick_update_count == 0</code> tripwire the sibling wiring change must flip.</p>
+    </div>
+    <div class="block">
+      <p class="label">Health evidence</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1555">PyAutoFit#1555</a>: 4/4 checks success, mergeable clean; witness reproduced at the reported configuration; adversary first pass found 2 issues (vacuously-green e2e; composition label false on reload paths), both fixed, re-review CLEAN.</p>
+    </div>
+    <div class="block">
+      <p class="label">Ruling</p>
+      <p class="decision">Accept the reframed root cause and merge second (/prm 1555).</p>
+    </div>
+    <div class="block">
+      <p class="label">Where to look</p>
+      <p><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1555">PyAutoFit#1555</a> &mdash; the investigation is on <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1553">#1553</a>.</p>
+    </div>
+    <div class="block review-block">
+      <p class="label">Your review</p>
+      <div class="rchips" role="radiogroup" aria-label="Decision">
+        <label class="rchip"><input type="radio" name="rv-m-af-prodigy" value="accept" data-decision="m-af-prodigy"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-af-prodigy" value="tweak" data-decision="m-af-prodigy"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-af-prodigy" value="reject" data-decision="m-af-prodigy"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-af-prodigy" value="defer" data-decision="m-af-prodigy"><span>Defer</span></label>
+      </div>
+      <textarea class="notetext" data-note="m-af-prodigy" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+    </div>
+    <p class="chip chip-min">Est. 3 review-minutes &middot; glance</p>
+  </div>
+</section>
+
+<section class="member sev-healthy" id="m-board">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">six organ repos · feature · in flight at collect</p>
+      <h2>GitHub Page link in every organ board</h2>
+      <p class="jobs">first PR: PyAutoHands#273 · session working across brain/heart/memory/mind/scientist</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-healthy">All PRs green</span>
+      <label class="ruled"><input type="checkbox" data-ruled="m-board"> Ruled</label>
+    </div>
+  </div>
+  <div class="blocks">
+    <div class="block">
+      <p class="label">Question this member was dispatched to answer</p>
+      <p>Add a GitHub Page link to each of the six generated organ board HTML pages (witness: link asserted in each generator&rsquo;s board test).</p>
+    </div>
+    <div class="block">
+      <p class="label">Status</p>
+      <p>All PRs green at collect (20:51Z) &mdash; the six-repo fan-out is the batch&rsquo;s widest member. <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/273">PyAutoHands#273</a> open so far; remaining organ PRs land as the session finishes. Re-check when you review, or leave to finish.</p>
+    </div>
+    <div class="block review-block">
+      <p class="label">Your review</p>
+      <div class="rchips" role="radiogroup" aria-label="Decision">
+        <label class="rchip"><input type="radio" name="rv-m-board" value="accept" data-decision="m-board"><span>Accept</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-board" value="tweak" data-decision="m-board"><span>Tweak</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-board" value="reject" data-decision="m-board"><span>Reject</span></label>
+        <label class="rchip"><input type="radio" name="rv-m-board" value="defer" data-decision="m-board"><span>Defer</span></label>
+      </div>
+      <textarea class="notetext" data-note="m-board" rows="2" placeholder="One line is enough &mdash; a tweak note becomes a queued follow-up prompt."></textarea>
+    </div>
+    <p class="chip chip-min">Est. 3 review-minutes &middot; glance</p>
+  </div>
+</section>
+
+<section class="member sev-running" id="m-subhalo">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">subhalo_validation · research · LOCAL-DEV</p>
+      <h2>Subhalo follow-up wave — adapt_split fix + RectangularBilinear</h2>
+      <p class="jobs">draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-running">Carried to next batch</span>
+    </div>
+  </div>
+  <div class="blocks">
+    <div class="block">
+      <p class="label">Question this member was dispatched to answer</p>
+      <p>The AM review&rsquo;s accepted follow-up: _adapt_split_fix inspection, no subhalo[2], RectangularBilinear runs.</p>
+    </div>
+    <div class="block">
+      <p class="label">Status</p>
+      <p>Dispatched from the laptop: RAL submissions <strong>342093 / 342094 / 342095</strong> in (per the Mind ledger); pl_eff rectangular parked. Results land in the next slot&rsquo;s packet with local mirror paths.</p>
+    </div>
+    <div class="block">
+      <p class="label">No ruling needed</p>
+      <p>Carried automatically: this member is in flight and enters the next batch's packet without re-specification. Review it there when its results are pulled.</p>
+    </div>
+    <p class="chip chip-min">Est. 15 review-minutes &middot; judge</p>
+  </div>
+</section>
+
+<section class="member sev-running" id="m-jaxrefs">
+  <div class="m-head">
+    <div class="m-head-main">
+      <p class="eyebrow">autolens_profiling · epic-slice · LOCAL-DEV</p>
+      <h2>JAX inference Phase 1 redo — InferenceRefs_v1 baselines</h2>
+      <p class="jobs">PROGRAMME.md rewind restart · queue anchor autolens_profiling#200</p>
+    </div>
+    <div class="m-head-side">
+      <span class="chip chip-running">Carried to next batch</span>
+    </div>
+  </div>
+  <div class="blocks">
+    <div class="block">
+      <p class="label">Question this member was dispatched to answer</p>
+      <p>Certify the InferenceRefs_v1 rows: legacy-MGE reuse rulings first (surfaced as packet members), fresh RAL submissions for missing/rejected rows (incl. re-queued refs 5/6/7). Phase 2 stays queued behind these baselines.</p>
+    </div>
+    <div class="block">
+      <p class="label">Status</p>
+      <p>Dispatched from the laptop 21:08Z: RAL job <strong>342091</strong> (<code>sbatch --array=0-8,10 --requeue</code>) running; task 9 (mge_pos) held back under the MGE reuse rule — its ruling and the two retro-baseline rulings are the three members above. Recorded on <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/201">autolens_profiling#201</a> with docs-only PR <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/202">#202</a>. Results carry to the next batch.</p>
+    </div>
+    <div class="block">
+      <p class="label">No ruling needed</p>
+      <p>Carried automatically: this member is in flight and enters the next batch's packet without re-specification. Review it there when its results are pulled.</p>
+    </div>
+    <p class="chip chip-min">Est. 20 review-minutes &middot; judge</p>
+  </div>
+</section>
 
 <details class="panel" id="m-notes">
   <summary>Packet-building notes</summary>
   <div class="blocks">
+    <p>Carry-forward adopted mid-slot at the human's direction: unfinished long-running members are reviewed in the batch where their results land, entering the next packet automatically; this packet's review therefore counts 9 members, not 11. </p>
     <p>Written at dispatch (18:40Z), all members PENDING per the evening-dispatch flow; the collect regenerates member sections in place and bumps the refreshed stamp. Deviation from TEMPLATE.md: pending members carry their review controls already, so early notes persist through the refresh. Composition was human-pasted (the planner proposal was not used); constraint report and expected-effects live in <code>batches/2026-08-31-pm.md</code>. Heart YELLOW acknowledged in-chat at dispatch (manifest drift + web-container CI blindness). Epic resolutions at plan time: numba-cpu &rarr; deduped into the numba-vs-jax-sparse member; jax-inference &rarr; Phase 1 only, Phase 2 queued (ordered phases); euclid &rarr; phase 3a with the start_here.py ruling already resolved by the human (Mind 32c639e5).</p>
-    <p><strong>Refresh 21:08Z</strong> &mdash; <code>jax-inference-phase1-refs</code> dispatched (RAL 342091). Its section was regenerated in place per the PENDING flow, and the three legacy-reuse rulings its MGE reuse check produced were added as <em>new</em> members (<code>m-mgepos</code>, <code>m-mgefp64</code>, <code>m-delfp64</code>), as this batch's <code>expected-effects</code> line anticipated (&ldquo;legacy-reuse rulings surface as packet members&rdquo;). That supersedes this member's dispatch-time status line, which had said they would surface in the next packet &mdash; they are actionable now, so they are here. Member count 11 &rarr; 14 and est. minutes 117 &rarr; 130 (+5 +4 +4) follow from that; no other member's markup was touched, and stored notes are unaffected.</p>
   </div>
 </details>
 
 <div class="submitbar">
-  <p class="progresscount" id="progress-count">Ruled 0 of 14 &middot; decisions 0 of 14</p>
+  <p class="progresscount" id="progress-count">Ruled 0 of 12 &middot; decisions 0 of 12</p>
   <button type="button" class="btn btn-primary" id="btn-submit">Submit review</button>
 </div>
 
@@ -1428,20 +1482,18 @@ footer.pagefoot {
   var PACKET_PATH = "PyAutoMind/batches/packets/2026-08-31-pm.html";
   var REVIEW_PATH = "batches/reviews/2026-08-31-pm.md";
   var MEMBERS = [
-    { id: "m-numba", slug: "numba-vs-jax-sparse", health: "PENDING" },
-    { id: "m-board", slug: "organ-board-github-link", health: "PENDING" },
-    { id: "m-smoke", slug: "release-smoke-env", health: "PENDING" },
-    { id: "m-nerves", slug: "autonerves-colab-silence", health: "PENDING" },
-    { id: "m-memq", slug: "memory-queue-filing-gate", health: "PENDING" },
-    { id: "m-af-resamp", slug: "autofit-resampling-info", health: "PENDING" },
-    { id: "m-af-prodigy", slug: "autofit-prodigy-49", health: "PENDING" },
-    { id: "m-af-multi", slug: "autofit-multistart-iterations", health: "PENDING" },
-    { id: "m-euclid3a", slug: "euclid-3a-prose", health: "PENDING" },
-    { id: "m-subhalo", slug: "subhalo-follow-up-wave", health: "PENDING" },
+    { id: "m-numba", slug: "numba-vs-jax-sparse", health: "HEALTHY" },
+    { id: "m-board", slug: "organ-board-github-link", health: "HEALTHY" },
+    { id: "m-smoke", slug: "release-smoke-env", health: "PARKED" },
+    { id: "m-nerves", slug: "autonerves-colab-silence", health: "HEALTHY" },
+    { id: "m-memq", slug: "memory-queue-filing-gate", health: "HEALTHY" },
+    { id: "m-af-resamp", slug: "autofit-resampling-info", health: "HEALTHY" },
+    { id: "m-af-prodigy", slug: "autofit-prodigy-49", health: "HEALTHY" },
+    { id: "m-af-multi", slug: "autofit-multistart-iterations", health: "PARKED" },
+    { id: "m-euclid3a", slug: "euclid-3a-prose", health: "PARKED" },
     { id: "m-mgepos", slug: "mge-pos-ref-reuse", health: "RULING REQUIRED" },
     { id: "m-mgefp64", slug: "mge-fp64-retro-baseline", health: "RULING REQUIRED" },
-    { id: "m-delfp64", slug: "delaunay-fp64-retro-baseline", health: "RULING REQUIRED" },
-    { id: "m-jaxrefs", slug: "jax-inference-phase1-refs", health: "PENDING" }
+    { id: "m-delfp64", slug: "delaunay-fp64-retro-baseline", health: "RULING REQUIRED" }
   ];
 
   function readState() {
