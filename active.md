@@ -22,6 +22,21 @@
   - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
   - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
 
+## resampling-info-summary-section
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1551
+- prompt: active/add_resampling_info_section_to_the_bottom.md
+- issued: 2026-08-31
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1554
+- batch: 2026-08-31-pm — member autofit-resampling-info, --auto; effective level
+  supervised (= min(header safe, bug work-type cap)); shipped via decide-and-flag
+  (one flagged decision: PR-open instead of park at ship sign-off — see PR body)
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+- repos:
+  - PyAutoFit: feature/resampling-info-summary-section
+
 ## numba-vs-jax-sparse
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/513
 - prompt: active/numba_solve_vs_jax_sparse_operator.md
@@ -44,6 +59,7 @@
     issue. Judge-tier: verdict parks for human review, no decide-and-flag.
 
 ## subhalo-followup-adapt-split-rectangular
+- prompt: active/follow_up_wave_adapt_split_and_rectangular.md
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
 - prompt: active/follow_up_wave_adapt_split_and_rectangular.md
@@ -72,3 +88,24 @@
     from hpc/batch_cpu; size --time from measured stage costs (grid ≈29h of ≈34h);
     commit edits locally on main; journal run rows + rewrite wiki/project/state.md.
     Pulled outputs land at the next batch collect (runs outlast this session).
+
+## memory-queue-filing-gate
+- prompt: active/repair_queue_automation_filing_gate.md
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/75
+- issued: 2026-08-31
+- status: ship — PR open (PyAutoMemory#76, decision-taken; --auto, effective supervised, batch 2026-08-31-pm; merge + close-out re-drive human)
+- location: web-github
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+- repos:
+  - pyautomemory (branch feature/memory-queue-filing-gate — web-github session clone, no worktree)
+- summary: |
+    Repair the PyAutoMemory queue automation (#69/#71/#72 stuck since
+    2026-08-28): add the PyAutoBrain sibling checkout to queue_filing.yml
+    (gate hard-broken since dcd1e2c, 2026-08-24), make queue_actions.yml's
+    push retry conflict-proof (fetch + reset --hard + re-run the idempotent
+    action script instead of rebase-and-discard), and add an if: failure()
+    report step so a failed run comments on its issue instead of silence.
+    Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
+    green queue_filing.yml run on #71 that opens a filing PR.

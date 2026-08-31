@@ -10,6 +10,7 @@ Consequence: glance
 Witness: a completed search's search.summary file ends with a blank line after the 'Visualization time' line, then a 'Resampling Info' subheader followed by the six resampling lines (Resurrections, Value-NaN Lane-Steps, Gradient-NaN Lane-Steps, Constrained Lane-Steps, Value-NaN Lane-Step Rate, Gradient-NaN Lane-Step Rate).
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-08-31
 
 Add Resampling Info section to the bottom of search.summary
 
