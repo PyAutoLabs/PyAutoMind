@@ -14,7 +14,8 @@ record it.
 ```markdown
 # Batch 2026-09-03 pm
 - dispatched: 2026-09-03T17:40Z
-- shift: night
+- review-at: 2026-09-04T08:00Z     # stated by the human AT DISPATCH
+- shift: night                     # free-text label the human gives it
 - lane: any
 - review-minutes-planned: 42
 - usage-window-at-dispatch: <5h %, weekly %, opus %>
@@ -23,6 +24,7 @@ record it.
 - members:
   - <slug>: <prompt path> — <tier> — <review-minutes> — <outcome>
 - collected: 2026-09-04T08:30Z
+- reviewed-at: 2026-09-04T08:30Z   # when they actually sat down
 - usage-window-at-collect: <5h %, weekly %, opus %>
 - delivered: <n>/<n>
 - review-minutes-actual: <n>
@@ -30,7 +32,7 @@ record it.
     What actually happened. Anything that stalled, and why.
 ```
 
-## The three fields that are easy to get wrong
+## The four fields that are easy to get wrong
 
 **`delivered:` is not "green".** A cloud session's green status means the session
 started and exited without an infrastructure error; it does **not** mean the task
@@ -46,3 +48,13 @@ standing one, which doctrine voids.
 **`review-minutes-actual:` is the only calibration there is.** The planned figure
 is a seed from the sizing faculty; this is what the slot really cost. Without it
 the estimate never improves, and the whole batch size rests on it.
+
+**`review-at:` is the shift, and it is the human's to declare.** There is no
+schedule: a slot is whenever they come in, so at dispatch they state when they
+expect to be back and **the shift is dispatch → `review-at:`**. The batch's
+grant expires there (`AUTONOMY.md`, "What a batch launch is"), and a member not
+dispatched inside it returns to the queue. `reviewed-at:` is the same number
+measured rather than promised — the pair is what the human's own estimates are
+calibrated against, exactly as `review-minutes-actual:` calibrates the cost. A
+`review-at:` that passes with nobody there dispatches nothing; the grant just
+expires.

@@ -23,10 +23,11 @@ human slot and everything else unattended**. Never routed to `/start_dev`
 directly — each phase is its own prompt, issued ONE AT A TIME.
 
 The slug says "two slots" because that was the opening goal. The sizing decision
-taken 2026-08-30 is **one slot a day as the baseline, plus a fill-only floor** —
-a second slot is welcome and the planner will compose for it, but nothing is
-sized on the assumption it happens. The slug stays; nine prompt headers and
-`epics.md` point at it.
+taken 2026-08-30 — one slot a day as the baseline, plus a fill-only floor — was
+**superseded 2026-08-31** (see "Slot timing" below): there is no daily baseline
+and no floor. A slot is whenever the human comes in, and at dispatch they
+declare `review-at:`, the horizon the shift is sized against. The slug stays;
+nine prompt headers and `epics.md` point at it.
 
 ## The goal, in the human's words
 
@@ -67,9 +68,10 @@ So the epic's real subject is **reducing human judgement per merged unit**, not
 scheduling more of it. Three levers do that, and everything else is tuning:
 
 1. **Price review honestly and compose against it.** A batch's review-bearing
-   half is planned against ~45 review-minutes — **one slot a day is the
-   baseline**, a second is opportunistic — and everything above that is *fill*:
-   work that costs zero review-minutes.
+   half is planned against the review-minutes the human declares for that slot
+   (default 45), and everything above that is *fill*: work that costs zero
+   review-minutes. The budget follows the nature of the work and the human's
+   schedule, never a fixed rhythm.
 2. **Make work reviewable by construction.** The records that *are* reviewable
    in minutes are the ones carrying machine-checkable witnesses — "ids
    bit-identical, 62→9.7 ms", "31-rule byte-equality", control-tested spy
@@ -193,17 +195,19 @@ inception. No machine-readable epic phase state. No dispatcher. No review surfac
 
 ## Vocabulary
 
-- **SLOT** — a human hour, **once a day as the baseline**, budgeted in
-  review-minutes. A second slot is a bonus, never an assumption.
-- **SHIFT** — the unattended interval between slots.
+- **SLOT** — a human sitting down to review, **whenever they come in**. Not
+  scheduled and not daily. Budgeted in review-minutes, which the human may set
+  per slot (default 45).
+- **SHIFT** — the unattended interval from dispatch to the `review-at:` the
+  human declared at dispatch.
 - **BATCH** — what is dispatched into one shift: a *review-bearing half* sized by
   the slot, plus a *fill* sized by the remaining allowance.
 - **FILL** — work that costs zero review-minutes: tier-`notify` work, the
   adversarial review leg, slicing, witness authoring, re-grading, deeper
   verification. Never research — a verdict is the most expensive review there is.
-- **FLOOR** — the fill-only batch that dispatches whether or not the human turns
-  up. Fill-only is what makes it safe: a floor of review-bearing work just digs
-  the hole deeper while they are away.
+- **FLOOR** — *closed 2026-08-31, never built.* It was the fill-only batch that
+  would dispatch whether or not the human turned up; timing now lives with the
+  human, so a missed `review-at:` dispatches nothing and the grant expires.
 - **QUEUE** (`queue.md`) — the human's ordered wishlist; they never compose a
   batch by hand.
 - **WITNESS** — the machine-checkable claim that makes a task reviewable.
@@ -342,9 +346,11 @@ the planner filters.
   members don't collide at dispatch (separate worktrees) — they collide at
   *merge*, because the first `/prm` moves `main` and invalidates the others'
   test and smoke evidence.
-- **A missed slot is the common case, not the exception.** An academic with
-  papers and meetings will miss slots and disappear for conference weeks.
-  Backpressure must ramp down, never deadlock to zero.
+- **The human's return is declared, and estimates slip.** An academic with
+  papers and meetings will come back late and disappear for conference weeks. A
+  missed `review-at:` dispatches nothing new — the grant simply expires — so
+  backpressure is about review-queue *depth*, not timing: it must ramp down,
+  never deadlock to zero.
 - **Green is not done** — officially: a cloud session's green status "means the
   session started and exited without an infrastructure error. It does not mean
   the task in your prompt succeeded." Delivery must be asserted, never inferred.
@@ -421,6 +427,30 @@ safe 24 on 63% keyword firing; 31 of 101 ready resolve safe). What did not:
    library-touching members per slot until `review-minutes-actual:` says
    otherwise.
 
+## Slot timing — 2026-08-31
+
+**Decided: the human declares the review horizon at dispatch; the floor is
+closed.** A slot is whenever the human comes in — not a scheduled hour, not once
+a day, no second-slot assumption. At dispatch they state `review-at:`, an ISO
+timestamp for when they expect to be back, and **the shift is the interval
+dispatch → `review-at:`**. It is written into the batch record, and the batch's
+grant expires there (`AUTONOMY.md`, "What a batch launch is"). The budget is
+still review-minutes and still defaults to 45, but the human sets it per slot —
+they know whether the next one is a quick morning check or a long afternoon.
+This is what makes the pattern bend to a work schedule and to the nature of the
+work rather than to a rhythm nobody can keep.
+
+**The FLOOR is closed, not deferred, and was never built.** It was the fill-only
+batch that would dispatch whether or not the human turned up. With the human
+carrying the timing there is nothing for it to do: if they do not show, nothing
+new dispatches and the outstanding grant expires at `review-at:`. Recorded as
+closed so nobody re-derives it — revisit **only** if the queue is found starving
+during a long absence. Backpressure is untouched: it ramps on review-queue
+depth, which is not a timing question.
+
+Phase 7's "spend the whole allowance" decision is untouched; only the "one slot
+a day" sizing assumption that rode along with it goes.
+
 ## Notes
 
 - Issue phases ONE at a time. No bulk issue queues.
@@ -428,3 +458,6 @@ safe 24 on 63% keyword firing; 31 of 101 ready resolve safe). What did not:
 - 2026-08-31: independent review re-ran every claim; corrections and plan
   amendments in the dated section above. Amendment 1 (the leg-4 doctrine
   edit) precedes the first real batch.
+- 2026-08-31: slot timing moved to the human — `review-at:` declared at
+  dispatch, the shift is dispatch → `review-at:`, the per-slot budget is the
+  human's, and the floor is closed. See "Slot timing — 2026-08-31".

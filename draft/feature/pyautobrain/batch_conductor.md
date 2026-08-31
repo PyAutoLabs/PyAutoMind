@@ -39,9 +39,9 @@ The composition rule, and the one that matters:
 
 > **Σ `Review-minutes:` over tier-`glance` and tier-`judge` members ≤ 45.**
 
-Not a task count. That is one slot's worth, and **one slot a day is the
-baseline** (decided 2026-08-30) — a second slot is opportunistic, and nothing is
-sized on the assumption the human opens one. In practice the review-bearing half
+Not a task count. That is one slot's worth by default, and **the human sets the
+budget per slot** (decided 2026-08-31) — a slot is whenever they come in, and
+nothing is sized on a rhythm. In practice the review-bearing half
 holds two or three `judge` tasks, or one `judge` plus several `glance`. Say the
 number in the decision, plainly, every time — it is the whole point.
 
