@@ -1,3 +1,24 @@
+- shipped: 2026-08-30 — PyAutoMind main `1a70a6fb`, merged via
+  https://github.com/PyAutoLabs/PyAutoMind/pull/374.
+- classification: feature (PyAutoMind, PyAutoBrain) — epic `two-slot-batching`, phase 0c.
+- summary: the settled grader was run over every prompt under `draft/`, writing
+  `Consequence:`, `Review-minutes:` and `Unattended:` (and `Witness:` only where one could be
+  honestly derived — an invented witness would defeat the mechanism, since the value of the
+  field is that its *absence* grades the prompt `judge`). Human-declared values were never
+  overwritten; disagreements between declared and derived were reported rather than resolved.
+  The dashboard's Quick-wins surface (`difficulty == small and autonomy == safe`, nearly
+  empty against ten `safe` prompts) was replaced by **"Fits a slot"** — `Unattended: ready`
+  ordered by `Review-minutes:` ascending with the tier on each row — and tier plus
+  review-minutes became facets alongside target/autonomy/priority. The PR body carried the
+  before/after distribution and, from it, how much of the backlog is reachable without
+  slicing. Kept to prompt headers, the renderer change and the regenerated dashboard so
+  `ledger_merge.py classify` put the prompt half on the ledger side.
+- lifecycle: Shipped 2026-08-30 from draft/ without a lifecycle advance (cloud branch
+  claude/autonomous-task-batching-k8lw9t); record backfilled 2026-08-31 by the ghost-draft
+  reconciliation sweep.
+
+## Original prompt
+
 # Batch phase 0c — re-grade the backlog, and give the dashboard a slot-shaped pick list
 
 Type: feature

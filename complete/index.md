@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1229 records across 7 buckets.
+1234 records across 7 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -147,6 +147,11 @@ markers; everything below GENERATED is rebuilt.
 - [autolens-multiplane-redshift-warning](2026/08/autolens-multiplane-redshift-warning.md)
 - [autolens-tracer-validation-guards](2026/08/autolens-tracer-validation-guards.md)
 - [autoreduce-pypi-name-collision](2026/08/autoreduce-pypi-name-collision.md)
+- [batch-gate-unattended](2026/08/batch-gate-unattended.md) — the four-leg ship gate was rewritten in doctrine for runs with no human in the
+- [batch-grade-backlog](2026/08/batch-grade-backlog.md) — the settled grader was run over every prompt under `draft/`, writing
+- [batch-grade-faculty](2026/08/batch-grade-faculty.md) — the review-cost grader landed as four read-only outputs on
+- [batch-grade-intake](2026/08/batch-grade-intake.md) — the conductor side of the review-cost model. `agents/conductors/intake/_intake.py`
+- [batch-queue-and-records](2026/08/batch-queue-and-records.md) — the ledger side of the batch workflow — two new files and one new header, no
 - [blackjax-16-upgrade-smoke](2026/08/blackjax-16-upgrade-smoke.md)
 - [blackjax-smc-search](2026/08/blackjax-smc-search.md)
 - [board-github-data-seam](2026/08/board-github-data-seam.md)

@@ -1,3 +1,26 @@
+- shipped: 2026-08-30 — branch `claude/autonomous-task-batching-k8lw9t`.
+- classification: feature (PyAutoMind) — epic `two-slot-batching`, phase 1.
+- summary: the ledger side of the batch workflow — two new files and one new header, no
+  reasoning and no dispatch. `queue.md` is the human's ordered wishlist, the one thing they
+  maintain by hand between slots, where file order *is* priority and an entry is a `prompt`,
+  an `epic-slice` or a `theme-sweep` (with an optional `lane:`), leaving the queue only when
+  its work reaches `complete/`, not when it is dispatched. `batches/<YYYY-MM-DD>-<am|pm>.md`
+  is the batch record, written at dispatch and appended at collection, carrying the members,
+  the planned and actual review-minutes, the usage window at each end, the shift's Heart
+  acknowledgement and a `delivered:` count deliberately not defined as "green" — a member
+  counts only with a PR carrying a non-empty diff and checks that actually ran. The `Lane:`
+  header (`any | local-dev`) reuses `WORKFLOW.md`'s existing environment vocabulary rather
+  than inventing a parallel one, and stays distinct from `active.md`'s live `location:`.
+  Both new paths were added to `ledger_merge.py` (`LEDGER_DIRS` gains `batches/`,
+  `LEDGER_FILES` gains `queue.md`) so batch history auto-merges instead of waiting on a
+  human, and `lifecycle.py check` was taught not to read a batch record as an unclaimed
+  active prompt.
+- lifecycle: Shipped 2026-08-30 from draft/ without a lifecycle advance (cloud branch
+  claude/autonomous-task-batching-k8lw9t); record backfilled 2026-08-31 by the ghost-draft
+  reconciliation sweep.
+
+## Original prompt
+
 # Batch phase 1 — the queue and the batch record
 
 Type: feature

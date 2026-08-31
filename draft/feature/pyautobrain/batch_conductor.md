@@ -11,7 +11,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: shipped 2026-08-30 — branch claude/autonomous-task-batching-k8lw9t
+Status: in progress — plan verb shipped 2026-08-30 (branch claude/autonomous-task-batching-k8lw9t); collect/review/close doctrine shipped 2026-08-31 into PyAutoBrain skills/batch/batch.md; remaining: the collect verb (queued — queue.md "batch collect") and slice
 Consequence: judge
 Review-minutes: 25
 Unattended: ready

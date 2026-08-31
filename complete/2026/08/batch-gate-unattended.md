@@ -1,3 +1,20 @@
+- shipped: 2026-08-30 — PyAutoBrain branch `claude/autonomous-task-batching-k8lw9t`.
+- classification: feature (PyAutoBrain, PyAutoMind) — epic `two-slot-batching`, phase 3.
+- summary: the four-leg ship gate was rewritten in doctrine for runs with no human in the
+  session. All four changes landed in `AUTONOMY.md`, dated, each with an explicit revert
+  condition: what a batch launch *is* (membership fixed at approval, the grant expires with
+  the shift, the human dispatches); leg 4's shift-scoped Heart acknowledgement (a named
+  reason set written verbatim into the batch record, parking only on a new RED or a new
+  YELLOW intersecting the run's own repos); leg 5, the independent-model adversary
+  (`review --witness … --adversary`), never the implementer; and decide-and-flag capped at
+  one flagged decision per PR, never for tier `judge` or a public API/default/error
+  contract. The `rejected-at-review` outcome named here landed in phase 0b.
+- lifecycle: Shipped 2026-08-30 from draft/ without a lifecycle advance (cloud branch
+  claude/autonomous-task-batching-k8lw9t); record backfilled 2026-08-31 by the ghost-draft
+  reconciliation sweep.
+
+## Original prompt
+
 # Batch phase 3 — the gate under unattended conditions
 
 Type: feature

@@ -1,3 +1,26 @@
+- shipped: 2026-08-30 — PyAutoBrain branch `claude/autonomous-task-batching-k8lw9t`.
+- classification: feature (PyAutoBrain, PyAutoMind) — epic `two-slot-batching`, phase 0b.
+- summary: the conductor side of the review-cost model. `agents/conductors/intake/_intake.py`
+  learned to write `Consequence:`, `Witness:`, `Review-minutes:` and `Unattended:` — parsed
+  in `parse_header`, emitted by `_render_header`, sourced from the phase 0a faculty, with the
+  first three added to the `HEADER_FIELDS` hygiene set and all four documented in
+  `PyAutoMind/REFERENCE.md` beside `Difficulty:`/`Autonomy:` (including the explicit default:
+  no witness declared means tier `judge`). `infer_autonomy` was fixed — repo count is blast
+  radius, not judgement required, so the `repo_count > 1 ⇒ supervised` trigger that made 120
+  of 137 prompts `supervised` was replaced by `architectural_risk`, `human_judgement` and
+  difficulty at `large`+. The autonomy change shipped as a **dated experiment** in
+  `AUTONOMY.md` (20 unattended launches, adversarial review leg mandatory, per-work-type
+  calibration rows, a human-stamped `rejected-at-review` outcome so the demotion trigger can
+  fire, and an explicit revert condition) rather than as a graduation on the unusable
+  "238 rows, zero rejected" figure. No prompt files were written in this phase: the
+  before/after distribution over all 137 drafts was computed as a dry run and pinned in the
+  PR body, so the rule was reviewable on its numbers before phase 0c touched the files.
+- lifecycle: Shipped 2026-08-30 from draft/ without a lifecycle advance (cloud branch
+  claude/autonomous-task-batching-k8lw9t); record backfilled 2026-08-31 by the ghost-draft
+  reconciliation sweep.
+
+## Original prompt
+
 # Batch phase 0b — intake writes the grades, and the autonomy experiment
 
 Type: feature

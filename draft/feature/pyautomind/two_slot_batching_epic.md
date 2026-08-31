@@ -255,17 +255,17 @@ chips the dashboard already renders.
    recommended phasing, which is this epic's own slicing rule firing on its own
    prompt. Each child is one unattended run with its own witness:
    - **0a** the grader — four read-only outputs on the sizing faculty.
-     `draft/feature/pyautobrain/batch_grade_faculty.md`
+     `complete/2026/08/batch-grade-faculty.md`
    - **0b** intake writes them, `infer_autonomy` is fixed, and the autonomy
      change ships as a dated experiment. The distribution is a **dry run** here,
      so the rule is reviewable on its numbers before it touches 137 files.
-     `draft/feature/pyautobrain/batch_grade_intake.md`
+     `complete/2026/08/batch-grade-intake.md`
    - **0c** re-grade the backlog and give the dashboard a slot-shaped pick list.
-     `draft/feature/pyautomind/batch_grade_backlog.md`
+     `complete/2026/08/batch-grade-backlog.md`
 1. **The queue and the batch record** — **SHIPPED 2026-08-30.** `queue.md`,
    `batches/` (both on the ledger side of `ledger_merge.py`, so batch history
    lands without a human), and the `Lane:` header.
-   `draft/feature/pyautomind/`
+   `complete/2026/08/batch-queue-and-records.md`
 2. **The `batch` conductor** — **`plan` SHIPPED 2026-08-30**; `slice` and
    `collect` remain. `plan` is useful alone: run it in a slot and dispatch by
    tapping the dashboard's existing chips. `draft/feature/pyautobrain/`
@@ -275,7 +275,7 @@ chips the dashboard already renders.
    shift, the human dispatches); leg 4's shift-scoped Heart acknowledgement;
    leg 5, the independent adversary (`review --witness … --adversary`); and
    decide-and-flag capped at one per PR. `rejected-at-review` landed in 0b.
-   `draft/feature/pyautobrain/`
+   `complete/2026/08/batch-gate-unattended.md`
 4. **The tier-A merge tier** — **decided 2026-08-30: shadow for four weeks**
    (window closes 2026-09-27), then grant, narrow or refuse against a
    pre-registered rule. Stage 1 rows are already being appended to

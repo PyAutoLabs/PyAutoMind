@@ -1,3 +1,22 @@
+- shipped: 2026-08-30 — PyAutoBrain main `e755ddd` (review-cost model in the sizing faculty).
+- classification: feature (PyAutoBrain) — epic `two-slot-batching`, phase 0a.
+- summary: the review-cost grader landed as four read-only outputs on
+  `agents/faculties/sizing/`, surfaced on the `SizingSurface`: `consequence`
+  (`notify | glance | judge`, by rules over repo class from `PyAutoMind/repos.yaml` and
+  surface, never by an agent reading its own work), `witness` (presence plus declared text
+  parsed from a `Witness:` header — no witness declared ⇒ tier `judge`, the default that
+  makes the requirement bite), `review_minutes` (an integer seeded from the tier, documented
+  as a seed awaiting phase 7 calibration, not a measurement), and `unattended`
+  (`ready | needs-slicing | never`, distinct from static blast-radius `difficulty`).
+  Stdlib-only and offline; `effective_difficulty`'s precedence rule extends to every new
+  field, so a declared header wins and the derived value is reported alongside. The faculty
+  opines and stops — no writes, no dispatch (phase 0b writes the headers, 0c re-grades).
+- lifecycle: Shipped 2026-08-30 from draft/ without a lifecycle advance (cloud branch
+  claude/autonomous-task-batching-k8lw9t); record backfilled 2026-08-31 by the ghost-draft
+  reconciliation sweep.
+
+## Original prompt
+
 # Batch phase 0a — the review-cost grader (sizing faculty)
 
 Type: feature
