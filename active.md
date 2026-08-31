@@ -3,9 +3,11 @@
 ## resampling-info-summary-section
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1551
 - issued: 2026-08-31
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1554
 - batch: 2026-08-31-pm — member autofit-resampling-info, --auto; effective level
-  supervised (= min(header safe, bug work-type cap))
+  supervised (= min(header safe, bug work-type cap)); shipped via decide-and-flag
+  (one flagged decision: PR-open instead of park at ship sign-off — see PR body)
 - heart-ack:
   - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
   - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
