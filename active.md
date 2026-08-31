@@ -16,9 +16,32 @@
   - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
   - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
 
+## numba-vs-jax-sparse
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/513
+- prompt: active/numba_solve_vs_jax_sparse_operator.md
+- issued: 2026-08-31
+- status: awaiting-input (verdict posted 2026-08-31; judge-tier research — parks
+  for human review per the supervised contract; sign-off retires via close-out,
+  a failed review files an ordinary /intake follow-up)
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/513#issuecomment-5483142802
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+- repos:
+  - PyAutoArray: main (read-only — research verdict, no branch)
+- summary: |
+    Is the numba CPU positive-only solve the same linear algebra as the JAX
+    sparse-operator mode? Characterise the shipped numba lineage (#498/#501
+    warm-start memo, #505/#507 curvature-F work, SparseLinAlgImagingNumba
+    preload) against the JAX ImagingSparseOperator + jaxnnls PDIP path; assess
+    GPU-portability of the numba levers; verdict unify/port/keep posted on the
+    issue. Judge-tier: verdict parks for human review, no decide-and-flag.
+>>>>>>> origin/main
+
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
+- prompt: active/follow_up_wave_adapt_split_and_rectangular.md
 - issued: 2026-08-31
 - status: science-run (supervised --auto; human-dispatched from the 2026-08-31-am
   batch review's queued tweaks)
