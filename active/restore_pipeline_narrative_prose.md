@@ -20,6 +20,7 @@ Epic: euclid-dr1-prep
 Phase: 3
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-31
+Issued: 2026-08-31
 
 Phase 3a of the Euclid DR1 preparation epic — inserted 2026-08-31 and **the next phase to
 run**. **Gate: phases 1 and 2** (both shipped). Runs before phase 3b

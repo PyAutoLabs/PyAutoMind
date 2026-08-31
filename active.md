@@ -1,5 +1,17 @@
 # Active Tasks
 
+## restore-pipeline-narrative-prose
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/47
+- issued: 2026-08-31
+- session: web-github (batch 2026-08-31-pm, member euclid-3a-prose, --auto supervised)
+- status: workspace-dev
+- worktree: n/a — web-github session clone (/home/user/euclid_strong_lens_modeling_pipeline)
+- repos:
+  - euclid_strong_lens_modeling_pipeline (branch feature/restore-narrative-prose)
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+
 ## subhalo-followup-adapt-split-rectangular
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
