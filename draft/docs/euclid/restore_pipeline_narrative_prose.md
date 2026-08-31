@@ -271,10 +271,8 @@ Two scope amendments this implies:
   (update `smoke_tests.txt` / `config/build/no_run.yaml` registrations and the
   bundle `.sh` accordingly — `tests/test_repo_invariants.py` enforces the lists).
 
-**UNRESOLVED — human must rule at plan time:** this phase's own doctrine (the
-human's earlier 2026-08-31 request, quoted at the top) makes `start_here.py` "the
-fully documented new user end to end guide"; the same day's batch review says "I
-don't think we should have a start_here.py, seems pointless." These cannot both
-hold. Present the choice at the plan step — (a) full narrative guide, (b) delete it
-and let README.md carry the entry-point role — and do not start the prose work
-until it is answered.
+**RESOLVED — human ruled 2026-08-31 (batch close-out):** **keep `start_here.py`**
+and update it with the docs — it becomes the fully documented new-user end-to-end
+guide this phase describes. The batch review's "seems pointless" remark applied to
+the current 63-line shim, not to the documented guide this phase turns it into;
+the delete option is closed. Do not re-present this choice at plan time.
