@@ -18,6 +18,7 @@ Witness: each of the six generated board HTML pages contains an `<a>` whose text
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-31
+Issued: 2026-08-31
 
 Original request, verbatim:
 

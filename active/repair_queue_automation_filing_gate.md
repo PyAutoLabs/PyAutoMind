@@ -12,6 +12,7 @@ Consequence: notify
 Witness: after the fix, re-applying `queue-intake` to #71 produces a green `queue_filing.yml` run that opens a filing PR — `gh run list --workflow queue_filing.yml` shows `success`, where every run since 2026-08-24 shows `failure`.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-08-31
 
 The dashboard's per-paper buttons file issues that are never acted on. Three
 (#69, #71, #72) have sat open since 2026-08-28. All three were picked up — all
