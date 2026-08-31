@@ -102,9 +102,9 @@
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
 - prompt: active/follow_up_wave_adapt_split_and_rectangular.md
 - issued: 2026-08-31
-- status: science-run (supervised --auto; human-dispatched from the 2026-08-31-am
-  batch review's queued tweaks)
-- location: cli-in-progress
+- status: runs-in-flight (supervised --auto; human-dispatched from the 2026-08-31-am
+  batch review's queued tweaks; edits shipped, collect at the next batch slot)
+- location: cli-done-awaiting-collect
 - repos:
   - subhalo_validation (local, /mnt/c/Users/Jammy/Science/subhalo_validation, branch main — no worktree; project has no remote)
 - summary: |
@@ -126,6 +126,21 @@
     from hpc/batch_cpu; size --time from measured stage costs (grid ≈29h of ≈34h);
     commit edits locally on main; journal run rows + rewrite wiki/project/state.md.
     Pulled outputs land at the next batch collect (runs outlast this session).
+    OUTCOME 2026-08-31 (executed; commits 23e8b59 + 35488c3 on project main):
+    1. DONE — RAL 342093_0 (ral, 8c, 96gb, 8h) RUNNING: pl_eff_1_outer source_pix[1]
+       AdaptSplit via new recipe variant delaunay_adapt_split_fix + --output_suffix/
+       --stop_after knobs; source_lp[1] reloads (suffix applies from source_pix on,
+       verified live: fix tree holds only source_pix[1], model.info = AdaptSplit).
+    2. DONE — subhalo[2] gated behind --subhalo_refine (default off, ruling recorded);
+       results JSON gains subhalo_stage key. In effect for action 3.
+    3. pl_sersic_0 submitted (342094_0 job A 12h → 342095_0 job B afterok 48h,
+       rectangular_adapt); pl_eff member PARKED — 342027_1/_2 still in subhalo[2]
+       (ETA ~22:00 BST), no witness JSONs yet; exact resubmit command in state.md.
+    For the human (next packet): inspect 342093's reconstruction (does AdaptSplit
+    keep the outer source? decides the default recipe's pix[1] reg); results_summary
+    stage-split corrected (grid 21.2h / refine 8.25h — disabling subhalo[2] saves
+    ~8h/lens, not ~1.5h); 342027_1/_2 witnesses are refine-derived (pre-subhalo_stage
+    key) — compare accordingly.
 
 ## memory-queue-filing-gate
 - prompt: active/repair_queue_automation_filing_gate.md
