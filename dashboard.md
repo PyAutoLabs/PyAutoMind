@@ -46,13 +46,15 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 153 |
+| [Backlog](#backlog) (`draft/`) | 154 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
 > - `draft/feature/pyautobrain/batch_conductor.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
 > - `draft/feature/pyautobrain/batch_gate_unattended.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
+> - `draft/feature/pyautobrain/batch_grade_faculty.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
 > - `draft/feature/pyautobrain/batch_grade_intake.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
+> - `draft/feature/pyautomind/batch_grade_backlog.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
 > - `draft/feature/pyautomind/batch_queue_and_records.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
 
 ## Start here
@@ -389,7 +391,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**153** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**154** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -1993,7 +1995,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 </details>
 
 <details>
-<summary><b>Two slots a day — the batch workflow</b> — 12 queued prompt(s), in order</summary>
+<summary><b>Two slots a day — the batch workflow</b> — 13 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Two slots a day — the batch workflow</b> — ledger: `draft/feature/pyautomind/two_slot_batching_epic.md`</summary>
 
@@ -2067,7 +2069,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_board.md">Batch phase 6 — the batch board</a> — pyautobrain · medium · safe · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_board.md">Batch phase 6 — the Batches strip on the Mind dashboard</a> — pyautobrain · small · safe</summary>
 
 ```
 /start_dev draft/feature/pyautobrain/batch_board.md
@@ -2099,6 +2101,14 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/witness_campaign.md
+```
+
+</details>
+
 </details>
 
 ## Hygiene
@@ -2114,7 +2124,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-150 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+151 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2159,7 +2169,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 - `draft/feature/pyautomind/batch_budget_loop.md`
 - `draft/feature/pyautomind/batch_queue_and_records.md`
 - `draft/feature/pyautomind/bundle_nightly_claude_pass.md`
-- _… and 110 more_
+- _… and 111 more_
 
 </details>
 
