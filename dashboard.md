@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 153 |
+| [Backlog](#backlog) (`draft/`) | 163 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -389,7 +389,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**153** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**163** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -1121,6 +1121,59 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
+<summary><b>test</b> — 6</summary>
+
+<details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · too-large · supervised · high</summary>
+
+```
+/start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example review</a> — autolens_workspace · medium · human-required · normal</summary>
+
+```
+/start_dev draft/test/autolens_workspace/witt_wynne_tests_and_review.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> — pyautoheart · medium · safe · normal</summary>
+
+```
+/start_dev draft/test/pyautoheart/smoke_relevance_gate.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a> — workspaces · medium · supervised · normal</summary>
+
+```
+/start_dev draft/test/workspaces/slowest_smoke_gate_scripts.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/smoke_workspace_fixes.md">The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced</a> — workspaces · too-large · human-required · normal</summary>
+
+```
+/start_dev draft/test/workspaces/smoke_workspace_fixes.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>refactor</b> — 7</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
@@ -1175,59 +1228,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/refactor/autoarray/sparse_operator_int32_indexes.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>test</b> — 6</summary>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · too-large · supervised · high</summary>
-
-```
-/start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
-
-```
-/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example review</a> — autolens_workspace · medium · human-required · normal</summary>
-
-```
-/start_dev draft/test/autolens_workspace/witt_wynne_tests_and_review.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> — pyautoheart · medium · safe · normal</summary>
-
-```
-/start_dev draft/test/pyautoheart/smoke_relevance_gate.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a> — workspaces · medium · supervised · normal</summary>
-
-```
-/start_dev draft/test/workspaces/slowest_smoke_gate_scripts.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/workspaces/smoke_workspace_fixes.md">The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced</a> — workspaces · too-large · human-required · normal</summary>
-
-```
-/start_dev draft/test/workspaces/smoke_workspace_fixes.md
 ```
 
 </details>
@@ -2101,6 +2101,99 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
+<details>
+<summary><b>CI test timing — finish the board, fast physical tests</b> — 10 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>CI test timing — finish the board, fast physical tests</b> — ledger: `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`</summary>
+
+```
+Continue the 'CI test timing — finish the board, fast physical tests' epic. Its canonical state lives in draft/feature/pyautoheart/ci_timing_fast_tests_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 9 phased prompts (1-9) — finish the timing board (smoke-timings ingester, permanent history in PyAutoHeart, dead unit-test/import/testmode legs live), snapshot a LEGACY timing round, then the _test physical+fast rebuilds (autogalaxy rehearses, autolens follows; one pin-regeneration wave each), CI caches, user-workspace/HowTo pass, and a source hot-spot census. ALL other source/workspace development is paused while this epic runs (stable state of truth; pin changes validated by unit tests + developer/profiling workspaces). Issue ONE phase at a time — no bulk issue queues. Design doc: docs/pyautoheart/test_performance_board_assessment.md (Planes B/C are phases 1-2).
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/smoke_timings_ingester_per_script_board.md">Smoke-timings ingester: per-script CI timing rows on the Heart performance board</a> — pyautoheart · large · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/smoke_timings_ingester_per_script_board.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/permanent_ci_timing_history.md">Permanent CI timing history stored in PyAutoHeart</a> — pyautoheart · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/permanent_ci_timing_history.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/offtick_timing_legs_live.md">Bring the dead timing legs live: unit_test_timing, import_time, workspace_testmode_timing</a> — pyautoheart · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/offtick_timing_legs_live.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/pyautoheart/legacy_baseline_timing_round.md">Legacy baseline timing round: snapshot pre-rebuild timings of every CI test surface</a> — pyautoheart · medium · safe · high</summary>
+
+```
+/start_dev draft/test/pyautoheart/legacy_baseline_timing_round.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autogalaxy_workspace_test/physical_fast_rebuild.md">autogalaxy_workspace_test physical + fast rebuild (rehearsal repo)</a> — autogalaxy_workspace_test · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autogalaxy_workspace_test/physical_fast_rebuild.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autolens_workspace_test/physical_fast_rebuild.md">autolens_workspace_test physical + fast rebuild (flagship)</a> — autolens_workspace_test · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autolens_workspace_test/physical_fast_rebuild.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md">CI caches in the reusable smoke workflow: JAX compile cache + dataset…</a> — pyautoheart · large · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/user_workspace_howto_slow_script_pass.md">User workspace + HowTo slow-script pass, driven by the ingested timings</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/test/workspaces/user_workspace_howto_slow_script_pass.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/workspaces/unit_test_import_time_hotspot_census.md">Unit-test + import-time bottleneck census and shared-source hot-spot options</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/workspaces/unit_test_import_time_hotspot_census.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/ci_timing_fast_tests_epic.md">CI timing &amp; fast tests — epic</a> — pyautoheart · too-large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/ci_timing_fast_tests_epic.md
+```
+
+</details>
+
+</details>
+
 ## Hygiene
 
 3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -2114,7 +2207,7 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 </details>
 
-150 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+160 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2156,10 +2249,10 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- `draft/feature/pyautomind/batch_budget_loop.md`
-- `draft/feature/pyautomind/batch_queue_and_records.md`
-- `draft/feature/pyautomind/bundle_nightly_claude_pass.md`
-- _… and 110 more_
+- `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
+- `draft/feature/pyautoheart/offtick_timing_legs_live.md`
+- `draft/feature/pyautoheart/permanent_ci_timing_history.md`
+- _… and 120 more_
 
 </details>
 
