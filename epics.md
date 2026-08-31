@@ -77,7 +77,7 @@ epic, never picked standalone.
 ## euclid-dr1-prep
 - title: Euclid DR1 preparation — 15k-lens modelling prep
 - ledger: draft/feature/euclid/euclid_dr1_prep_epic.md
-- notes: 10 phased prompts under draft/ (0, 1, 2, 3, 4, 5, 6a, 6b, 6c, 7) — issue ONE at a
+- notes: 11 phased prompts under draft/ (0, 1, 2, 3a, 3b, 4, 5, 6a, 6b, 6c, 7) — issue ONE at a
   time as predecessors near shipping, no bulk issue queues. Phases 4-6b are science runs
   on RAL (HPC, human-driven, supervised) whose deliverable is a result and a written
   verdict, not a merged PR; never route them to an autonomous ship gate. Phase 6c is a
@@ -86,8 +86,10 @@ epic, never picked standalone.
   — don't build it". Source of truth for all drift is /mnt/c/Users/Jammy/Science/euclid.
   Phase 0 shipped 2026-08-28; phase 1 shipped 2026-08-29 (euclid#43 closed, PR #44
   merged); phase 2 shipped 2026-08-29 (euclid#45 closed, PR #46 merged) — which also
-  satisfies phase 4's "2 strongly preferred" gate. Next is phase 3
-  (draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md).
+  satisfies phase 4's "2 strongly preferred" gate. Phase 3a was INSERTED 2026-08-31
+  (docs: restore the in-script narrative prose lost at 355b309; start_here.py back to a
+  full end-to-end guide) and the old phase 3 renumbered to 3b. Next is phase 3a
+  (draft/docs/euclid/restore_pipeline_narrative_prose.md).
 
 ## two-slot-batching
 - title: Two slots a day — the batch workflow

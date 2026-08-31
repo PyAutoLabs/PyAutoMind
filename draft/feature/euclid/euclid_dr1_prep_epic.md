@@ -24,13 +24,13 @@ Unattended: needs-slicing
 Epic: euclid-dr1-prep
 Filed: 2026-08-28
 
-Parent tracker for a 10-phase preparation programme ahead of modelling **over 15,000
+Parent tracker for an 11-phase preparation programme ahead of modelling **over 15,000
 strong lenses in Euclid DR1**. This file is never routed to `start_dev` directly — each
 phase below is its own prompt, issued **ONE AT A TIME** as its predecessor nears
 shipping (no bulk issue queues).
 
 The programme's shape: make `euclid_strong_lens_modeling_pipeline` a first-class,
-CI-covered repo that is genuinely representative of the DR1 analysis (phases 0-3), then
+CI-covered repo that is genuinely representative of the DR1 analysis (phases 0-3b), then
 prove it by fitting **10 real DR1 lenses** and **10 resimulations of those same lenses**
 (phases 4-6), then extend the catalogue products (phase 7). The success criterion for
 the whole epic is that everything delivered for the DR1 runs out of
@@ -193,13 +193,22 @@ Read-only survey done while filing, so each phase prompt cites real paths:
 2. `complete/2026/08/euclid-ci-test-mode.md` — committed simulated
    datasets + TEST-mode CI over every example script + latent unit tests. Gate: 1.
    **SHIPPED 2026-08-29** — issue euclid#45 closed, PR #46 merged.
-3. `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` — preserve and
-   document the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing) CPU route
-   and the full-JAX-GPU route. Gate: 1 (can overlap 2).
+3a. `draft/docs/euclid/restore_pipeline_narrative_prose.md` — **restore the in-script
+    narrative prose**: `start_here.py` back to a fully documented end-to-end new-user
+    guide (kept as a shim over `initial_lens_model.fit`), `scripts/*.py` written to assume
+    it has been read (point back for repeats, explain in full what it does not cover —
+    e.g. the empty `__Source Pix__` block), `catalogue/scripts/*.py` lifted toward the
+    `workflow/example/` register. Recovered prose is 4+ months stale: verify against the
+    code and `autolens_workspace` before restoring. Gates: 1, 2. **Inserted 2026-08-31 —
+    the next phase to run.**
+3b. `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` — preserve and
+    document the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing) CPU route
+    and the full-JAX-GPU route. Gate: 1 (can overlap 2). Runs after 3a so its new
+    documentation lands in a repo whose narrative register is already restored.
 4. `draft/research/euclid/dr1_prelim_10_lens_science_run.md` — **science run on RAL**;
    new `/mnt/c/Users/Jammy/Science/euclid_dr1_prelim` project, first 10 lenses
    alphanumerically, CPU approach, driven through the assistant's euclid skills.
-   Gates: 1, 3 (2 strongly preferred). Human-driven, supervised.
+   Gates: 1, 3b (2 strongly preferred). Human-driven, supervised.
 5. `draft/feature/euclid/resimulate_fitted_lens_simulator.md` — `simulator.py` in the
    pipeline repo + the 10 resimulations in `euclid_dr1_prelim`, with true
    magnifications recorded and `sersic_index` pulled off the prior edge. Gate: 4.
@@ -226,4 +235,11 @@ Read-only survey done while filing, so each phase prompt cites real paths:
   can plausibly land as a fast standalone fix. It may spawn a follow-up bug prompt.
 - **Phase 7 is explicitly allowed to conclude "no elegant solution → don't build it"**
   for the retroactive-update leg. That is a valid, shippable outcome.
+- **Phase 3a was inserted on 2026-08-31**, after an audit found the repo's in-script
+  narrative prose had been largely lost — not by the phase-1 port (which was net prose
+  *positive*) but by `355b309` (2026-04-02, −812 prose lines) which deleted the
+  `pipelines/` tree, and by `fc43be0` which deleted `groups.py` / `point_source.py`
+  outright. The old prose is recoverable from `git show 355b309~1:pipelines/<f>.py` but
+  is 4+ months stale — every workspace cross-reference in it has drifted. The phase
+  prompt carries the verified drift list.
 - Issue **one** phase at a time. Do not queue GitHub issues for later phases.
