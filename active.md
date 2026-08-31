@@ -1,5 +1,18 @@
 # Active Tasks
 
+## silence-colab-cli-message
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/156
+- prompt: active/silence_the_non_colab_setup_colab_message.md
+- issued: 2026-08-31
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/157
+- session: web-github (batch 2026-08-31-pm member autonerves-colab-silence, --auto)
+- repos:
+  - PyAutoNerves: feature/silence-colab-cli-message
+- heart-ack:
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
+
 ## autofit-prodigy-49
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1553
 - prompt: active/multistartprodigy_stops_at_49_steps_when_iterati.md
@@ -85,7 +98,6 @@
     issue. Judge-tier: verdict parks for human review, no decide-and-flag.
 
 ## subhalo-followup-adapt-split-rectangular
-- prompt: active/follow_up_wave_adapt_split_and_rectangular.md
 - issue: none — science project (no GitHub home; not in repos.yaml); review via the
   next batch packet per the science-run review workflow (batches/reviews/2026-08-31-am.md)
 - prompt: active/follow_up_wave_adapt_split_and_rectangular.md

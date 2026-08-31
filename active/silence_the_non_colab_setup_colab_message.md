@@ -12,6 +12,7 @@ Consequence: notify
 Witness: a plain CLI run of a workspace `start_here.py` prints no "You are not running in a Google Colab environment" block on stdout, while the notebook-facing path still surfaces it; asserted by a test in `PyAutoNerves/test_autonerves/test_setup_colab.py`.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-08-31
 
 # Silence the non-Colab setup_colab() message on CLI runs
 
