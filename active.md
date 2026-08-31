@@ -2,6 +2,7 @@
 
 ## organ-board-github-link
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/325
+- prompt: active/github_page_link_in_every_organ_board.md
 - issued: 2026-08-31
 - session: claude-code-remote (batch 2026-08-31-pm member organ-board-github-link, web-github)
 - status: pr-open (all five legs of the autonomous-ship gate passed 2026-08-31; merge is the human's)
