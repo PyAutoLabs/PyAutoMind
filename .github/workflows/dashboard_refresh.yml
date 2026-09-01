@@ -75,6 +75,13 @@ jobs:
         with:
           repository: PyAutoLabs/PyAutoBrain
           path: PyAutoBrain
+      # The renderer badges an in-flight prompt whose issue gates a Cortex
+      # phase; without the Cortex checked out beside it the badge is silently
+      # absent on Pages — the render succeeds, it just says less than it knows.
+      - uses: actions/checkout@v4
+        with:
+          repository: PyAutoLabs/PyAutoCortex
+          path: PyAutoCortex
       # The contents blocks in planned.md / parked.md / condemned.md are
       # generated too (scripts/registry_toc.py) and take the same contract as
       # the dashboard pages: PR runs fail on drift, pushes to main self-heal.
