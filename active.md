@@ -183,3 +183,15 @@
     report step so a failed run comments on its issue instead of silence.
     Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
     green queue_filing.yml run on #71 that opens a filing PR.
+
+## cortex-schema-skeleton
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/379
+- prompt: active/cortex_schema_and_skeleton.md
+- issued: 2026-09-01
+- epic: cortex-birth (phase 1 of 7; ledger draft/feature/pyautocortex/cortex_birth_epic.md; gate phase 0 SHIPPED #377)
+- session: claude-code-cli (Fable architect; two delegated Fable slices — A schemas/docs/fixtures, B cortex.py/ledger_merge/tests)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-schema-skeleton
+- parallel-claim: worktree_check_conflict fired for PyAutoBrain (organ-board-github-link) — PR #326 MERGED 2026-09-01T19:35Z, no worktree, entry awaiting its own /prm; stale claim, own worktree taken.
+- bootstrap: PyAutoCortex is EMPTY on GitHub (no branches) — slice A clones it to the canonical root and makes the birth commit on main before branching.
+- repos:

@@ -20,6 +20,7 @@ Epic: cortex-birth
 Phase: 1
 Parent: draft/feature/pyautocortex/cortex_birth_epic.md
 Filed: 2026-09-01
+Issued: 2026-09-01
 
 Phase 1 of 7 in the PyAutoCortex birth epic. **Gate: phase 0** (the repo must
 exist). Gates phases 2 and 3.

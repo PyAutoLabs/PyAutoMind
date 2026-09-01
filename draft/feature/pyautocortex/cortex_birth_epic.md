@@ -147,7 +147,7 @@ manage them; they just cannot share one batch.
    --write`; `ORGANISM.md` row and boundary prose; `docs/organs/cortex.md`;
    theme palette + mark; `policy.yaml` board family; `install.sh` arrays; hub
    blurb. Gates nothing; gated by nothing. **Human-gated (repo creation).**
-1. `draft/feature/pyautocortex/cortex_schema_and_skeleton.md` — the Cortex
+1. `active/cortex_schema_and_skeleton.md` (issued 2026-09-01, PyAutoMind#379) — the Cortex
    repo skeleton: `projects.yaml`, phase file format + state model, `rulings/`
    ledger with ruling ids, `batches/` with rolling-board semantics and ONE
    review vocabulary, gates grammar, `cortex.py` lifecycle script, ledger-merge
