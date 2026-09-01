@@ -73,42 +73,42 @@ repos:
   # from the org-wide dev sweeps by category, and never had a `.claude/`. Every
   # in-scope repo keeps the hook — a library or workspace opened alone in a web
   # session needs Python 3.12 exactly like an organ (PyAutoMind#369).
-  PyAutoMind:
-    github: PyAutoLabs/PyAutoMind
-    category: organ
-    organ: Mind
-    role: "Intent, goals, priorities, workflow state; every task starts as a markdown prompt here."
-    public_role: "Captures intent: every piece of work begins as a plain-English description of *what* should change and is tracked from the initial idea to its completed implementation."
   PyAutoBrain:
     github: PyAutoLabs/PyAutoBrain
     category: organ
     organ: Brain
     role: "Reasoning/orchestration layer; how work is decomposed and routed; the specialist agents."
     public_role: "Works out *how*: classifies, plans and routes work through specialist reasoning and coding agents."
-  PyAutoHands:
-    github: PyAutoLabs/PyAutoHands
+  PyAutoMind:
+    github: PyAutoLabs/PyAutoMind
     category: organ
-    organ: Hands
-    role: "Packaging, tagging, notebook generation, PyPI release execution."
-    public_role: "Executes builds and releases: packages libraries, generates notebooks, creates tags and publishes releases to PyPI."
-  PyAutoHeart:
-    github: PyAutoLabs/PyAutoHeart
+    organ: Mind
+    role: "Intent, goals, priorities, workflow state; every task starts as a markdown prompt here."
+    public_role: "Captures intent: every piece of work begins as a plain-English description of *what* should change and is tracked from the initial idea to its completed implementation."
+  PyAutoCortex:
+    github: PyAutoLabs/PyAutoCortex
     category: organ
-    organ: Heart
-    role: "Health/readiness — the authoritative \"is it safe to release?\" verdict."
-    public_role: "Monitors repository health and supplies the authoritative GREEN/YELLOW/RED release-readiness verdict."
+    organ: Cortex
+    role: "The Cortex — where the organism learns what is true: the science body map (`projects.yaml`) and the rulings of record for every science run; the science mirror of the Mind (runs and rulings, not prompts and PRs)."
+    public_role: "Holds the science body map and the rulings of record for every science run, so experiments, their gates and their verdicts live apart from software development."
   PyAutoMemory:
     github: PyAutoLabs/PyAutoMemory
     category: organ
     organ: Memory
     role: "Long-term scientific/software/project knowledge (see science pointer below)."
     public_role: "Provides long-term scientific knowledge through cross-linked literature wikis, concepts and verifiable citations."
-  PyAutoGut:
-    github: PyAutoLabs/PyAutoGut
+  PyAutoHeart:
+    github: PyAutoLabs/PyAutoHeart
     category: organ
-    organ: Gut
-    role: "Owns the lifecycle of condemned self-material (stale branches, stashes, dead code/tests): holds it as durable, recoverable git refs through a transit window and voids it on a sweep. The storage mirror of Memory (retention vs release)."
-    public_role: "Holds stale branches, dead code and other condemned material as recoverable Git references before it is permanently removed."
+    organ: Heart
+    role: "Health/readiness — the authoritative \"is it safe to release?\" verdict."
+    public_role: "Monitors repository health and supplies the authoritative GREEN/YELLOW/RED release-readiness verdict."
+  PyAutoHands:
+    github: PyAutoLabs/PyAutoHands
+    category: organ
+    organ: Hands
+    role: "Packaging, tagging, notebook generation, PyPI release execution."
+    public_role: "Executes builds and releases: packages libraries, generates notebooks, creates tags and publishes releases to PyPI."
   PyAutoNerves:
     github: PyAutoLabs/PyAutoNerves
     package: autonerves
@@ -116,7 +116,12 @@ repos:
     organ: Nerves
     role: "The Nerves — the configuration/serialization layer connecting workspace conventions to libraries (layered config, version handshake, test_mode), delivered as the `autonerves` package."
     public_role: "Provides the configuration and serialization layer connecting shared conventions across the scientific libraries and workspaces."
-
+  PyAutoGut:
+    github: PyAutoLabs/PyAutoGut
+    category: organ
+    organ: Gut
+    role: "Owns the lifecycle of condemned self-material (stale branches, stashes, dead code/tests): holds it as durable, recoverable git refs through a transit window and voids it on a sweep. The storage mirror of Memory (retention vs release)."
+    public_role: "Holds stale branches, dead code and other condemned material as recoverable Git references before it is permanently removed."
   # --- scientific libraries ----------------------------------------------
   PyAutoFit:
     github: PyAutoLabs/PyAutoFit
