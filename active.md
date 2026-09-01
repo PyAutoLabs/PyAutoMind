@@ -183,26 +183,3 @@
     report step so a failed run comments on its issue instead of silence.
     Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
     green queue_filing.yml run on #71 that opens a filing PR.
-
-## cortex-birth-organ-row
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/377
-- prompt: active/cortex_birth_repo_and_organ_row.md
-- issued: 2026-09-01
-- epic: cortex-birth (phase 0 of 7; ledger draft/feature/pyautocortex/cortex_birth_epic.md)
-- session: claude-code-cli (Fable architect; execution delegated to a Fable subagent at the human's direction)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/cortex-birth-organ-row
-- parallel-claim: worktree_check_conflict fired for PyAutoBrain + PyAutoScientist (organ-board-github-link) and PyAutoNerves (silence-colab-cli-message); all three PRs MERGED 2026-09-01T19:35Z, no live worktrees, entries awaiting /prm close-out — stale claims, own worktree taken (memory: repo-claim conflict allows parallel worktrees).
-- human-step: PyAutoLabs/PyAutoCortex created by hand on github.com (public, empty); NOT cloned locally in phase 0.
-- ordering-rule (human, 2026-09-01): wherever organs are listed, the order is Brain, Mind, Cortex, Memory, Heart, Hands, Nerves, Gut.
-- heart-ack:
-  - PyAutoArray: open PR 9d old
-  - release validation incomplete: no rehearsal for current source
-- repos:
-  - PyAutoMind (feature/cortex-birth-organ-row)
-  - PyAutoBrain (feature/cortex-birth-organ-row)
-  - PyAutoGut (feature/cortex-birth-organ-row)
-  - PyAutoNerves (feature/cortex-birth-organ-row)
-  - .github (feature/cortex-birth-organ-row)
-  - PyAutoScientist (feature/cortex-birth-organ-row)
-  - pyautolabs.github.io (feature/cortex-birth-organ-row)
