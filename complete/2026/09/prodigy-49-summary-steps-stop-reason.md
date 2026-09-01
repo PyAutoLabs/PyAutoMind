@@ -1,3 +1,22 @@
+- shipped: 2026-09-01 — PyAutoFit main `a601c3b3`, merged via
+  https://github.com/PyAutoLabs/PyAutoFit/pull/1555 (closes PyAutoFit#1553).
+- classification: bug (PyAutoFit) — batch 2026-08-31-pm member autofit-prodigy-49.
+- summary: ROOT CAUSE REFRAMED — the reported bug does not exist: a MultiStart search
+  cannot stop at a quick-update boundary (the cadence was inert for the family), and the
+  "49" was `Total Samples = 49` (1 best + 48 per-start final points, fixed at
+  construction) misread as a step count because the summary never reported the run's real
+  length. Fix: the summary labels the sample count with its composition (only where the
+  arithmetic holds — reload paths stay plain) and reports `Total Steps` and `Stop Reason`;
+  a new e2e regression runs a cadence mid-budget to completion and carried a
+  `quick_update_count == 0` inertness tripwire, flipped to `> 0` by the sibling wiring
+  merge (#1556). Adversary found two real issues (vacuously-green e2e; composition label
+  false on reload paths), both fixed pre-merge. Merged second of the shift's PyAutoFit
+  trio after resolving a text_util.py conflict with #1554 on the branch.
+- lifecycle: dispatched 18:53Z as an unattended batch member; accepted in the 2026-09-01
+  15:13 batch review; recorded 2026-09-01.
+
+## Original prompt
+
 # MultiStartProdigy stops at 49 steps when iterations_per_quick_update=50 in @PyAutoFit
 
 Type: bug

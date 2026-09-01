@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1241 records across 8 buckets.
+1242 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -126,6 +126,7 @@ markers; everything below GENERATED is rebuilt.
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md) — three workflow-only fixes to the queue automation broken since 2026-08-24 —
 - [numba-vs-jax-sparse-verdict](2026/09/numba-vs-jax-sparse-verdict.md) — the numba CPU positive-only solve and the JAX sparse-operator mode solve the
 - [organ-board-github-page-link](2026/09/organ-board-github-page-link.md) — every generated organ board HTML page now carries a "GitHub Page" link resolving
+- [prodigy-49-summary-steps-stop-reason](2026/09/prodigy-49-summary-steps-stop-reason.md) — ROOT CAUSE REFRAMED — the reported bug does not exist: a MultiStart search
 - [release-smoke-env-declarations](2026/09/release-smoke-env-declarations.md) — the release.yml run_smoke_tests job now honours per-script `ENV:` declarations
 - [resampling-info-search-summary](2026/09/resampling-info-search-summary.md) — the gradient searches' resampling diagnostics moved from mid-file to a closing
 
