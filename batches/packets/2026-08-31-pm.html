@@ -591,9 +591,9 @@ footer.pagefoot {
 <header class="pagehead">
   <p class="eyebrow">31 Aug 2026 · pm · both lanes · first human-composed batch under the review workflow</p>
   <h1>Slot Review &mdash; PM</h1>
-  <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. This review covers the nine ready members: six delivered (five PR sets green + one research verdict) and three parked at ship. The two laptop members are in flight and carry automatically into the next batch&rsquo;s packet &mdash; but the jax-refs leg routed <strong>three legacy-reuse rulings</strong> into this slot, included below. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
+  <p class="lede">Eleven members, human-pasted from the dashboard and dispatched 18:40Z &mdash; nine cloud dev members and two laptop/RAL science members. This review covers the nine ready members: six delivered (five PR sets green + one research verdict) and three parked at ship. The two laptop members&rsquo; overnight results are now <strong>in</strong> &mdash; the jax-refs 342091 array is complete (10/10) and both subhalo <code>pl_eff</code> witnesses landed clean; they still carry into the next batch&rsquo;s packet for their formal ruling (they have no review chip here), but the readouts below are final except for the one rectangular chain still running. The jax-refs leg also routed <strong>three legacy-reuse rulings</strong> into this slot, included below. Choose a decision and leave a note on each member, then <strong>Submit review</strong> at the bottom &mdash; the review lands in <code>PyAutoMind/batches/reviews/</code> for the orchestrator chat to enact.</p>
   <p class="mirror-note">Science member outputs mirror to the laptop via each project&rsquo;s <code>hpc/sync pull</code> at collect; dev members are reviewed on their PRs.</p>
-  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-08-31 22:57Z (subhalo member refilled from RAL: 342093 AdaptSplit rerun COMPLETED and inspected &mdash; before/after figures embedded; 342094 done, 342095 running; both pl_eff chains still in subhalo[2], no witness yet, ~3 h to wall &mdash; earlier 22:53Z refresh: jax-refs member refilled from job 342091; 22:00Z: CI green on all three opened PRs)</p>
+  <p class="stampline">Generated 2026-08-31 18:40Z &middot; refreshed 2026-09-01 13:01Z (overnight harvest: the whole 342091 array landed &mdash; 10 of 10 tasks ended clean on the A100, per-task table refilled with maxLL/logZ and the knn row finally replaced by a real run; subhalo &mdash; both <code>pl_eff</code> delaunay chains finished inside their wall and wrote <strong>clean</strong> witnesses, 342095 rectangular chain now in <code>subhalo[1]</code> &mdash; earlier refreshes: 22:57Z subhalo AdaptSplit figures, 22:53Z jax-refs table, 22:00Z CI green on all three opened PRs)</p>
   <p class="stampline">Permanent home: <a href="https://pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html"><code>pyautolabs.github.io/PyAutoMind/packets/2026-08-31-pm.html</code></a></p>
 </header>
 
@@ -659,8 +659,8 @@ footer.pagefoot {
     <li><a href="#m-af-resamp" data-nav="m-af-resamp">autofit resampling info<span class="mini m-healthy">PR green · 3 min</span></a></li>
     <li><a href="#m-af-prodigy" data-nav="m-af-prodigy">autofit prodigy 49<span class="mini m-healthy">PR green · 3 min</span></a></li>
     <li><a href="#m-board" data-nav="m-board">organ board link<span class="mini m-healthy">PRs green · 3 min</span></a></li>
-    <li><a href="#m-subhalo" data-nav="m-subhalo">subhalo follow-up<span class="mini m-running">Refreshed · 15 min</span></a></li>
-    <li><a href="#m-jaxrefs" data-nav="m-jaxrefs">jax refs phase 1<span class="mini m-running">Laptop · 20 min</span></a></li>
+    <li><a href="#m-subhalo" data-nav="m-subhalo">subhalo follow-up<span class="mini m-running">Witnesses in · 15 min</span></a></li>
+    <li><a href="#m-jaxrefs" data-nav="m-jaxrefs">jax refs phase 1<span class="mini m-healthy">Wave complete · 20 min</span></a></li>
   </ul>
   <p class="navhead">Also</p>
   <ul>
@@ -1388,7 +1388,7 @@ footer.pagefoot {
       <p class="jobs">draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-running">REFRESHED 23:57 BST &mdash; AdaptSplit rerun LANDED &middot; 2 chains still running &middot; carried</span>
+      <span class="chip chip-running">REFRESHED 14:00 BST &mdash; both pl_eff witnesses landed CLEAN &middot; rectangular chain still running &middot; carried</span>
     </div>
   </div>
   <div class="blocks">
@@ -1410,48 +1410,70 @@ footer.pagefoot {
     </div>
 
     <div class="block">
-      <p class="label">Health evidence</p>
-      <p>Batch <code>.out</code> logs on this project are block-buffered and flush on exit, so none of the states below come from a log tail: they come from <code>sacct</code>, from <code>.completed</code> markers, and from <code>checkpoint.hdf5</code> mtimes read at 23:52&ndash;23:56 BST.</p>
+      <p class="label">Health evidence &mdash; read 2026-09-01 13:55&ndash;13:58 BST</p>
+      <p>Batch <code>.out</code> logs on this project are block-buffered and flush on exit, so none of the states below come from a log tail: they come from <code>sacct</code>, from each job&rsquo;s own closing lines after exit, from the witness JSONs, and from a live <code>checkpoint.hdf5</code> mtime.</p>
       <ul>
-        <li><code>342093_0</code> &mdash; <code>.completed</code> present, exit <code>0:0</code>, <code>search.summary</code> reports 33,180 samples at acceptance ratio 1.0 and <code>Time To Run 1:14:42</code>. The run wrote its full <code>image/</code> set and zipped itself. No resume collision (<code>source_lp[1]</code> was deliberately reloaded from <code>342002_2</code>; <code>--output_suffix</code> keeps the rerun off the live tree).</li>
-        <li><code>342094_0</code> &mdash; exit <code>0:0</code>; the log&rsquo;s own last lines read <code>Stage `source_lp` complete -- exiting before the pixelized stages.</code> / <code>Finished sample: pl_sersic_0</code>. Its <code>afterok</code> dependent <code>342095_0</code> released and is running: the chain did not stall.</li>
-        <li><code>342027_1</code> / <code>342027_2</code> &mdash; both alive on <code>euclid-ral-compute-21</code>; their <code>subhalo[2]</code> <code>checkpoint.hdf5</code> files (41.7&nbsp;MB / 42.6&nbsp;MB) were written at <strong>23:52:10</strong> and <strong>23:52:09</strong>, i.e. seconds before the read. Sampling, not hung.</li>
+        <li class="hl"><code>342027_1</code> (<code>pl_eff_0</code>) &mdash; <strong>COMPLETED 0:0</strong> in <code>1-21:10:24</code>, ended <strong>2026-09-01 00:04:55 BST</strong>, about 2&nbsp;h&nbsp;50&nbsp;m inside the 2-day wall. Its log closes <code>Search complete, returning result</code> &rarr; <code>Evidence Increase: -0.24247446289882646</code> &rarr; <code>Results written to: &hellip;/pl_eff_0_no_subhalo.json</code> &rarr; <code>Finished sample: pl_eff_0</code>. <code>error.342027_1.err</code> is 0 bytes.</li>
+        <li class="hl"><code>342027_2</code> (<code>pl_eff_1_outer</code>) &mdash; <strong>COMPLETED 0:0</strong> in <code>1-23:05:05</code>, ended <strong>01:59:36 BST</strong> &mdash; <strong>55 minutes short of the 2-day wall</strong>. Same closing sequence, <code>Evidence Increase: 2.7360672678223636</code>, witness written, <code>error.342027_2.err</code> 0 bytes.</li>
+        <li><strong>The wall-clock flag raised at 22:57Z did not materialise.</strong> Both chains wrote their witness JSONs; no chain was cut off, nothing needs a resume-from-checkpoint resubmit.</li>
+        <li><code>342095_0</code> &mdash; still <strong>RUNNING</strong> (<code>14:03:13</code> elapsed of <code>2-00:00:00</code> at the read) on <code>euclid-ral-compute-10-2</code>. It is past all five pixelized stages and now inside <code>subhalo[1]_[search_lens_plane]</code>: two of the grid cells are finished and zipped, a third started at 10:52 BST, and its <code>checkpoint.hdf5</code> (22.5&nbsp;MB) carries a 13:57 BST mtime &mdash; current at the moment of reading. Sampling, not hung. <code>error.342095_0.err</code> is 0 bytes.</li>
+        <li><code>342093_0</code> / <code>342094_0</code> &mdash; unchanged since the 22:57Z refresh; both <code>COMPLETED 0:0</code> with their evidence as recorded below.</li>
       </ul>
-      <p class="hl neg">One health flag, on the clock rather than the code: both <code>subhalo[2]</code> refines started late (13:49:37 and 14:31:09 BST) and their wall ends <strong>2026-09-01 02:54</strong>. The completed twin <code>342027_0</code> took <strong>8&nbsp;h&nbsp;14&nbsp;m</strong> in <code>subhalo[2]</code>; <code>342027_1</code> is already 10&nbsp;h&nbsp;07&nbsp;m in and <code>342027_2</code> 9&nbsp;h&nbsp;25&nbsp;m in, with about <strong>3 hours of wall left</strong>. They are past the twin&rsquo;s duration and may be cut off before writing their witness JSONs. Nautilus checkpoints exist, so a resubmit resumes rather than restarts.</p>
+      <p class="hl neg">One log-level flag, benign but repeated: <code>342095</code>&rsquo;s log emits <code>latent.yaml lists &#39;total_galaxy_0_flux&#39; but no such latent is registered; dropping</code> on every update. It costs nothing in this run &mdash; the other eight latents register &mdash; but the recipe&rsquo;s <code>latent.yaml</code> is asking for a latent that does not exist.</p>
     </div>
 
     <div class="block">
-      <p class="label">Readout &mdash; the three actions, RAL states read 2026-08-31 23:56 BST</p>
+      <p class="label">Readout &mdash; the three actions, RAL states read 2026-09-01 13:55 BST</p>
       <div class="scroll">
         <table>
           <caption>Jobs dispatched by this member (sacct state is not health evidence; the right-hand column is)</caption>
           <thead><tr><th>Job</th><th>What it runs</th><th>sacct state</th><th class="num">Elapsed / wall</th><th>Evidence</th></tr></thead>
           <tbody>
             <tr><td class="mono">342093_0</td><td><code>pl_eff_1_outer</code> <code>source_pix[1]</code> under <code>AdaptSplit</code> &mdash; recipe <code>delaunay_adapt_split_fix</code>, <code>--stop_after source_pix_1</code></td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">01:16:49 / 08:00:00</td><td><code>.completed</code> &middot; 33,180 samples &middot; acceptance 1.0 &middot; <code>model.info</code> reads <code>AdaptSplit (N=3)</code> &middot; all figures written</td></tr>
-            <tr><td class="mono">342094_0</td><td><code>pl_sersic_0</code> / <code>rectangular_adapt</code> job A &mdash; <code>source_lp[1]</code>, JAX, 4 cores</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">01:44:40 / 12:00:00</td><td>ended 23:52:17 BST; log closes <code>Finished sample: pl_sersic_0</code></td></tr>
-            <tr><td class="mono">342095_0</td><td><code>pl_sersic_0</code> / <code>rectangular_adapt</code> job B &mdash; the rest of the chain, 8 cores 96&nbsp;gb, <code>afterok:342094</code></td><td class="mono">RUNNING</td><td class="num mono">00:04:22 / 48:00:00</td><td>dependency released on schedule; on <code>euclid-ral-compute-10-2</code>; ~26&nbsp;h expected with <code>subhalo[2]</code> off</td></tr>
-            <tr><td class="mono">342027_1</td><td><code>pl_eff_0</code> &mdash; original delaunay chain, inside <code>subhalo[2]_[single_plane_refine]</code></td><td class="mono">RUNNING</td><td class="num mono">1-21:02:09 / 2-00:00:00</td><td>checkpoint 41.7&nbsp;MB written 23:52:10; <strong>~3&nbsp;h to wall</strong></td></tr>
-            <tr><td class="mono">342027_2</td><td><code>pl_eff_1_outer</code> &mdash; original delaunay chain, inside <code>subhalo[2]</code></td><td class="mono">RUNNING</td><td class="num mono">1-21:02:09 / 2-00:00:00</td><td>checkpoint 42.6&nbsp;MB written 23:52:09; <strong>~3&nbsp;h to wall</strong></td></tr>
+            <tr><td class="mono">342094_0</td><td><code>pl_sersic_0</code> / <code>rectangular_adapt</code> job A &mdash; <code>source_lp[1]</code>, JAX, 4 cores</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">01:44:40 / 12:00:00</td><td>ended 2026-08-31 23:52:17 BST; log closes <code>Finished sample: pl_sersic_0</code></td></tr>
+            <tr><td class="mono">342095_0</td><td><code>pl_sersic_0</code> / <code>rectangular_adapt</code> job B &mdash; the rest of the chain, 8 cores 96&nbsp;gb, <code>afterok:342094</code></td><td class="mono">RUNNING</td><td class="num mono">14:03:13 / 2-00:00:00</td><td>five stages done and zipped; inside <code>subhalo[1]</code> grid (2 of 4 cells zipped, 3rd started 10:52 BST); checkpoint 22.5&nbsp;MB mtime 13:57 BST</td></tr>
+            <tr><td class="mono">342027_1</td><td><code>pl_eff_0</code> &mdash; original delaunay chain, through <code>subhalo[2]_[single_plane_refine]</code></td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">1-21:10:24 / 2-00:00:00</td><td>ended 00:04:55 BST; witness <code>pl_eff_0_no_subhalo.json</code> written; <code>.err</code> empty</td></tr>
+            <tr><td class="mono">342027_2</td><td><code>pl_eff_1_outer</code> &mdash; original delaunay chain, through <code>subhalo[2]</code></td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">1-23:05:05 / 2-00:00:00</td><td>ended 01:59:36 BST, 55&nbsp;min short of wall; witness <code>pl_eff_1_outer_no_subhalo.json</code> written; <code>.err</code> empty</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
     <div class="block">
-      <p class="label">Readout &mdash; witness JSONs present on the mirror after <code>hpc/sync pull</code></p>
+      <p class="label">Readout &mdash; witness JSONs on the mirror after this <code>hpc/sync pull</code></p>
       <div class="scroll">
         <table>
-          <caption><code>results/</code> after the pull &mdash; one witness, unchanged; no new witness landed this refresh</caption>
-          <thead><tr><th>Witness file</th><th class="num">evidence_increase</th><th class="num">log_likelihood_increase</th><th>subhalo_stage</th><th>Verdict</th></tr></thead>
+          <caption><code>results/</code> after the pull &mdash; three witnesses now, two of them new overnight; a clean null is <code>evidence_increase &lt; 5</code></caption>
+          <thead><tr><th>Witness file</th><th class="num">evidence_increase</th><th class="num">log_likelihood_increase</th><th class="num">subhalo M<sub>200</sub> / centre</th><th>Verdict</th></tr></thead>
           <tbody>
-            <tr><td class="mono">delaunay_adapt_split/pl_sersic_0_no_subhalo.json</td><td class="num mono pos">&minus;0.3009</td><td class="num mono">+0.9668</td><td class="mono">key absent &mdash; predates it; number is <code>subhalo[2]</code>-derived</td><td class="pos">CLEAN (&lt; 5) &mdash; already accepted 2026-08-31, not re-litigated here</td></tr>
-            <tr><td class="mono">delaunay_adapt_split/pl_eff_0_no_subhalo.json</td><td class="num mono">&mdash;</td><td class="num mono">&mdash;</td><td class="mono">&mdash;</td><td>not written yet &mdash; <code>342027_1</code> still in <code>subhalo[2]</code></td></tr>
-            <tr><td class="mono">delaunay_adapt_split/pl_eff_1_outer_no_subhalo.json</td><td class="num mono">&mdash;</td><td class="num mono">&mdash;</td><td class="mono">&mdash;</td><td>not written yet &mdash; <code>342027_2</code> still in <code>subhalo[2]</code></td></tr>
-            <tr><td class="mono">rectangular_adapt/pl_sersic_0_no_subhalo.json</td><td class="num mono">&mdash;</td><td class="num mono">&mdash;</td><td class="mono">&mdash;</td><td>not written yet &mdash; <code>342095_0</code> started four minutes ago</td></tr>
+            <tr><td class="mono">delaunay_adapt_split/pl_sersic_0_no_subhalo.json</td><td class="num mono pos">&minus;0.3009</td><td class="num mono">+0.9668</td><td class="num mono">1.49e9 &middot; (2.146, &minus;0.241)</td><td class="pos">CLEAN &mdash; already accepted 2026-08-31, not re-litigated here</td></tr>
+            <tr><td class="mono">delaunay_adapt_split/pl_eff_0_no_subhalo.json</td><td class="num mono pos">&minus;0.2425</td><td class="num mono">+0.6093</td><td class="num mono">1.21e8 &middot; (&minus;1.302, &minus;2.513)</td><td class="pos">CLEAN &mdash; <strong>new</strong>, written 00:04:55 BST by 342027_1</td></tr>
+            <tr><td class="mono">delaunay_adapt_split/pl_eff_1_outer_no_subhalo.json</td><td class="num mono pos">+2.7361</td><td class="num mono">+15.3716</td><td class="num mono">8.20e8 &middot; (1.412, 1.419)</td><td class="pos">CLEAN (&lt; 5) &mdash; <strong>new</strong>, written 01:59:36 BST by 342027_2; the largest of the three and the one to read carefully</td></tr>
+            <tr><td class="mono">rectangular_adapt/pl_sersic_0_no_subhalo.json</td><td class="num mono">&mdash;</td><td class="num mono">&mdash;</td><td class="num mono">&mdash;</td><td>not written yet &mdash; <code>342095_0</code> is inside <code>subhalo[1]</code></td></tr>
           </tbody>
         </table>
       </div>
-      <p>The <code>342093_0</code> rerun writes <strong>no</strong> witness JSON by design (<code>--stop_after source_pix_1</code>) &mdash; it is judged on the reconstruction below, not on an <code>evidence_increase</code>.</p>
+      <p><strong>All three witnesses are nulls, as the data demands</strong> &mdash; no false positive anywhere in the delaunay column. Read <code>pl_eff_1_outer</code> with its two numbers together: the subhalo model buys <strong>+15.37</strong> in maximum log likelihood but only <strong>+2.74</strong> in evidence, i.e. the extra parameters very nearly pay for themselves at an 8.2e8&nbsp;M<sub>&#8857;</sub> perturber sitting 2.0&Prime; from centre. It is comfortably under the conventional 5, but it is the one row where the null is not emphatic.</p>
+      <p>Note, as before, that none of the three JSONs carries the <code>subhalo_stage</code> key &mdash; all three chains predate it, so every number above is <code>subhalo[2]</code>/refine-derived and is not directly comparable with a post-key run. The <code>342093_0</code> rerun writes <strong>no</strong> witness by design (<code>--stop_after source_pix_1</code>).</p>
+    </div>
+
+    <div class="block">
+      <p class="label">Readout &mdash; does <code>rectangular_adapt</code> run end-to-end? (question 2)</p>
+      <p>On the evidence so far, <strong>yes through the pixelized stages</strong>: <code>342094</code>+<code>342095</code> have carried <code>pl_sersic_0</code> through <code>light[1]</code>, <code>mass_total[1]</code>, <code>source_lp[1]</code>, <code>source_pix[1]</code> and <code>source_pix[2]</code> &mdash; all five present and zipped on the mirror &mdash; and the run is now inside the <code>subhalo[1]</code> lens-plane grid. <code>source_pix[2]/model.info</code> reads <code>RectangularBilinearAdaptImage (N=2)</code> with <code>Adapt (N=3)</code> regularization, which is the recipe under test.</p>
+      <div class="scroll">
+        <table>
+          <caption><code>source_pix[2]</code> on <code>pl_sersic_0</code>, the mesh comparison column &mdash; <strong>indicative only, not like-for-like</strong> (different mesh size and free-parameter count)</caption>
+          <thead><tr><th>Quantity</th><th class="num">delaunay_adapt_split</th><th class="num">rectangular_adapt</th><th class="num">Difference</th></tr></thead>
+          <tbody>
+            <tr><td>Mesh / regularization</td><td class="mono">Delaunay, 1,310 px &middot; AdaptSplit (N=3)</td><td class="mono">RectangularBilinearAdaptImage 32&times;32 = 1,024 px &middot; Adapt (N=3)</td><td class="mono">different mesh <em>and</em> pixel count</td></tr>
+            <tr><td>Free parameters</td><td class="num mono">3</td><td class="num mono">5</td><td class="num mono">+2</td></tr>
+            <tr><td>Bayesian evidence</td><td class="num mono">21,386.823</td><td class="num mono">21,418.501</td><td class="num mono pos">+31.678</td></tr>
+            <tr><td>Maximum log likelihood</td><td class="num mono">21,399.311</td><td class="num mono">21,435.853</td><td class="num mono pos">+36.542</td></tr>
+            <tr><td>Samples / runtime</td><td class="num mono">2,060 &middot; 0:07:47</td><td class="num mono">3,140 &middot; 0:10:07</td><td class="num mono">+52% samples, +30% wall</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The rectangular column is <em>ahead</em> at this stage, but the two stages differ in more than the mesh, so this is a progress readout rather than a mesh verdict &mdash; the comparable number is the witness, which lands when <code>342095</code> finishes its grid and refine (about a day of wall left).</p>
     </div>
 
     <div class="block">
@@ -1495,15 +1517,18 @@ footer.pagefoot {
 
     <div class="block">
       <p class="label">Decision waiting on you &mdash; &ldquo;submit rectangular for which pl_eff?&rdquo;</p>
-      <p><strong>Today the answer is: neither, not yet.</strong> The parked second <code>rectangular_adapt</code> submission is gated on a clean <code>evidence_increase &lt; 5</code> witness from <code>342027_1</code> (<code>pl_eff_0</code>) or <code>342027_2</code> (<code>pl_eff_1_outer</code>), and <strong>neither witness JSON exists</strong> &mdash; both chains are still inside <code>subhalo[2]</code> with roughly three hours of wall left. The only landed witness remains <code>pl_sersic_0</code> at &minus;0.3009, whose rectangular counterpart is already in flight as <code>342095_0</code>.</p>
-      <p>When a witness does land clean, the command recorded in the project&rsquo;s <code>wiki/project/state.md</code> is <code class="hl">PIPELINE=rectangular_adapt ARRAY=&lt;1|2&gt; bash hpc/run_chain.sh</code> (<code>ARRAY</code>: 0 <code>pl_sersic_0</code>, 1 <code>pl_eff_0</code>, 2 <code>pl_eff_1_outer</code>). <strong>It has not been run</strong> &mdash; this refresh is read-and-record only; no job was submitted, cancelled or modified, and no pipeline code was touched.</p>
-      <p>Carried automatically, as before: this member stays in flight and enters the next batch&rsquo;s packet without re-specification. The <code>342093</code> AdaptSplit readout above, however, is <em>complete</em> and can be judged now if you want the downstream question (rerun <code>pl_eff_1_outer</code>? change the default recipe&rsquo;s <code>source_pix[1]</code> regularization?) unblocked before the chains land.</p>
+      <p><strong>The gate has opened overnight, and nothing was done about it.</strong> The parked second <code>rectangular_adapt</code> submission was gated on a clean <code>evidence_increase &lt; 5</code> witness from <code>342027_1</code> (<code>pl_eff_0</code>) or <code>342027_2</code> (<code>pl_eff_1_outer</code>). <strong>Both</strong> witnesses now exist and <strong>both</strong> are clean (&minus;0.24 and +2.74). The choice of which <code>pl_eff</code> to submit is therefore live &mdash; and it is yours.</p>
+      <p>The command recorded in the project&rsquo;s <code>wiki/project/state.md</code> is <code class="hl">PIPELINE=rectangular_adapt ARRAY=&lt;1|2&gt; bash hpc/run_chain.sh</code> (<code>ARRAY</code>: 0 <code>pl_sersic_0</code>, 1 <code>pl_eff_0</code>, 2 <code>pl_eff_1_outer</code>). <strong>It has not been run.</strong> This refresh is read-and-record only: no RAL job was submitted, cancelled or modified, and the parked submission stays <strong>PARKED</strong> until you rule. Worth weighing when you do: the one CPU chain already running (<code>342095</code>) still has about a day of wall to go on the same node.</p>
+      <p>Carried automatically, as before: this member stays in flight (one job running) and enters the next batch&rsquo;s packet without re-specification. The <code>342093</code> AdaptSplit readout and both <code>pl_eff</code> witnesses are, however, <em>complete</em> and can be judged now.</p>
     </div>
 
     <div class="block">
       <p class="label">Follow-ups this refresh proposes</p>
       <ul>
-        <li>[subhalo_validation] <strong>Wall-clock risk on <code>342027_1</code>/<code>_2</code>.</strong> If <code>subhalo[2]</code> is cut off at 2026-09-01 02:54 with no witness JSON, resubmit to resume from the Nautilus checkpoint rather than restarting. Note that both chains predate the <code>subhalo_stage</code> JSON key, so their numbers will be refine-derived and not directly comparable with every run from here on (<code>subhalo[2]</code> is now off by default).</li>
+        <li>[subhalo_validation] <strong>The wall-clock risk closed itself</strong> &mdash; both <code>342027</code> chains finished inside the 2-day wall (the tighter one by 55 minutes) and wrote their witnesses, so no resume-from-checkpoint resubmit is needed. The margin was thin enough to be worth remembering when sizing the next delaunay chain.</li>
+        <li>[subhalo_validation] Both <code>pl_eff</code> witnesses predate the <code>subhalo_stage</code> JSON key, so their numbers are refine-derived and not directly comparable with post-key runs. Decide whether the three delaunay witnesses get re-stamped or are simply annotated in the ledger.</li>
+        <li>[subhalo_validation] <code>pl_eff_1_outer</code>&rsquo;s +15.37 log-likelihood increase against a +2.74 evidence increase is the least emphatic null in the set &mdash; worth a look at where its 8.2e8&nbsp;M<sub>&#8857;</sub> candidate sits relative to the arc before the recipe is called settled.</li>
+        <li>[subhalo_validation] <code>latent.yaml</code> lists <code>total_galaxy_0_flux</code>, which is not a registered latent; every update logs a drop warning. Harmless, but it should either be registered or removed.</li>
         <li>[subhalo_validation] If the AdaptSplit reconstruction is accepted, the open question is whether <code>source_pix[1]</code>&rsquo;s regularization changes in the <em>default</em> <code>delaunay_adapt_split</code> recipe, or stays a <code>_fix</code> variant &mdash; and whether <code>pl_eff_1_outer</code> earns a full rerun on it.</li>
         <li>[subhalo_validation] The persisting coherent ring residuals in both fits are unexplained by the regularization change and may deserve their own look (mass model? PSF? over-sampling at <code>pix[1]</code>?).</li>
       </ul>
@@ -1514,18 +1539,22 @@ footer.pagefoot {
       <dl>
         <dt>Project root (laptop mirror)</dt>
         <dd><code>/mnt/c/Users/Jammy/Science/subhalo_validation/</code> &mdash; <code>source activate.sh</code> first; <code>hpc/sync jobs</code> / <code>hpc/sync pull</code> drive RAL.</dd>
+        <dt>The two new witnesses</dt>
+        <dd><code>results/delaunay_adapt_split/pl_eff_0_no_subhalo.json</code> and <code>results/delaunay_adapt_split/pl_eff_1_outer_no_subhalo.json</code> &mdash; both pulled to the mirror by this refresh, alongside the <code>pl_sersic_0</code> witness accepted yesterday.</dd>
+        <dt>Their chains, end to end</dt>
+        <dd><code>hpc/batch_cpu/output/output.342027_1.out</code> (5.2&nbsp;MB) and <code>output.342027_2.out</code> (5.7&nbsp;MB) on the mirror &mdash; the last dozen lines carry the evidence-increase block and <code>Finished sample:</code>. Run directories under <code>output/subhalo/detect/delaunay_adapt_split/pl_eff_0_no_subhalo/</code> and <code>&hellip;/pl_eff_1_outer_no_subhalo/</code>.</dd>
         <dt>The AdaptSplit rerun, in full</dt>
-        <dd><code>output/subhalo/detect/delaunay_adapt_split/pl_eff_1_outer_no_subhalo_adapt_split_fix/source_pix[1]/085f85ba6970436a1b8b115b6c9b3fbf/</code> &mdash; <code>model.info</code> (reads <code>AdaptSplit</code>), <code>model.results</code> (evidence 19,390.673), <code>search.summary</code>, and <code>image/fit.png</code> + <code>image/inversion_0_0.png</code> at full resolution. Pulled to the mirror; nothing here is RAL-only.</dd>
+        <dd><code>output/subhalo/detect/delaunay_adapt_split/pl_eff_1_outer_no_subhalo_adapt_split_fix/source_pix[1]/085f85ba6970436a1b8b115b6c9b3fbf/</code> &mdash; <code>model.info</code> (reads <code>AdaptSplit</code>), <code>model.results</code> (evidence 19,390.673), <code>search.summary</code>, and <code>image/fit.png</code> + <code>image/inversion_0_0.png</code> at full resolution.</dd>
         <dt>The ConstantSplit baseline it is compared against</dt>
         <dd><code>output/subhalo/detect/delaunay_adapt_split/pl_eff_1_outer_no_subhalo/source_pix[1]/27660ebc6b9f9ef5e4c48d393a628efd.zip</code> &mdash; on RAL the stage is zipped; the mirror holds only its <code>files/galaxy_images_snr.fits</code>, so unzip the archive (or re-pull) to open the baseline&rsquo;s own <code>fit.png</code>.</dd>
+        <dt>The rectangular chain in flight</dt>
+        <dd><code>output/subhalo/detect/rectangular_adapt/pl_sersic_0_no_subhalo/</code> &mdash; five zipped stages plus <code>subhalo[1]_[search_lens_plane]/&hellip;/results.csv</code>, which fills in one row per finished grid cell. <code>source_pix[2]/&hellip;/model.info</code> is where the <code>RectangularBilinearAdaptImage</code> mesh is confirmed.</dd>
         <dt>The four figures above, at higher resolution</dt>
         <dd><code>results/figures/adapt_split_fix_regularization_before_after.jpg</code>, <code>..._source_plane_before_after.jpg</code>, <code>..._source_plane_midzoom_before_after.jpg</code>, <code>..._residuals_before_after.jpg</code> (1000&nbsp;px wide, committed to the project).</dd>
-        <dt>Witnesses</dt>
-        <dd><code>results/delaunay_adapt_split/pl_sersic_0_no_subhalo.json</code> &mdash; the only one on the mirror. <code>pl_eff_0</code>, <code>pl_eff_1_outer</code> and the rectangular <code>pl_sersic_0</code> land here as their chains finish.</dd>
         <dt>Live job state</dt>
         <dd><code>hpc/sync jobs</code>, or <code>ssh euclid_jump</code> then <code>sacct -j 342027,342093,342094,342095</code>. Do <em>not</em> read the batch <code>.out</code> logs for progress &mdash; they are block-buffered and flush only on exit.</dd>
         <dt>Project ledgers</dt>
-        <dd><code>wiki/project/state.md</code> (head pointer, refreshed by this harvest) and <code>wiki/project/2026-08-31-adapt-split-fix-and-rectangular.md</code> (today&rsquo;s journal entry, addendum appended).</dd>
+        <dd><code>wiki/project/state.md</code> (head pointer) and <code>wiki/project/2026-08-31-adapt-split-fix-and-rectangular.md</code> (yesterday&rsquo;s journal entry).</dd>
       </dl>
     </div>
 
@@ -1533,15 +1562,15 @@ footer.pagefoot {
   </div>
 </section>
 
-<section class="member sev-running" id="m-jaxrefs">
+<section class="member sev-healthy" id="m-jaxrefs">
   <div class="m-head">
     <div class="m-head-main">
-      <p class="eyebrow">autolens_profiling · epic-slice · LOCAL-DEV</p>
-      <h2>JAX inference Phase 1 redo — InferenceRefs_v1 baselines</h2>
-      <p class="jobs">PROGRAMME.md rewind restart · queue anchor autolens_profiling#200</p>
+      <p class="eyebrow">autolens_profiling &middot; epic-slice &middot; LOCAL-DEV</p>
+      <h2>JAX inference Phase 1 redo &mdash; InferenceRefs_v1 baselines</h2>
+      <p class="jobs">PROGRAMME.md rewind restart &middot; queue anchor autolens_profiling#200</p>
     </div>
     <div class="m-head-side">
-      <span class="chip chip-running">RUNNING &mdash; 2/10 landed &middot; carried</span>
+      <span class="chip chip-healthy">WAVE COMPLETE &mdash; 10/10 tasks delivered clean &middot; carried for ruling</span>
     </div>
   </div>
   <div class="blocks">
@@ -1550,36 +1579,71 @@ footer.pagefoot {
       <p>Certify the InferenceRefs_v1 rows: legacy-MGE reuse rulings first (surfaced as packet members), fresh RAL submissions for missing/rejected rows (incl. re-queued refs 5/6/7). Phase 2 stays queued behind these baselines.</p>
     </div>
     <div class="block">
-      <p class="label">Status &mdash; RAL job 342091, read 2026-08-31 22:53Z</p>
-      <p>Dispatched from the laptop 21:08Z: RAL job <strong>342091</strong> (<code>sbatch --array=0-8,10 --requeue</code>), config <code>hpc_a100_fp64_ref</code>, A100 80&nbsp;GB, n_live 300 (2&times; fiducial), 6:00:00 wall per task. The array runs <strong>one task at a time</strong> (the remaining seven sit <code>PENDING (Resources)</code> behind the single GPU), so this is early: <strong>2 of 10 ended, 1 running, 7 queued</strong>. Task 9 (mge_pos) was held back under the MGE reuse rule &mdash; its ruling and the two retro-baseline rulings are the three members above. Recorded on <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/201">autolens_profiling#201</a> with docs-only PR <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/202">#202</a>. Refreshed here by <code>hpc/sync pull</code> to <code>/mnt/c/Users/Jammy/Science/inference_programme/</code>. Results carry to the next batch.</p>
+      <p class="label">Status &mdash; RAL job 342091, read 2026-09-01 12:55Z</p>
+      <p>Dispatched from the laptop 21:08Z: RAL job <strong>342091</strong> (<code>sbatch --array=0-8,10 --requeue</code>), config <code>hpc_a100_fp64_ref</code>, A100 80&nbsp;GB, n_live 300 (2&times; fiducial), 6:00:00 wall per task. The array ran <strong>one task at a time</strong> on the single GPU and <strong>all ten finished overnight</strong>: first task started 2026-08-31 22:00:39 BST, last ended 2026-09-01 08:08:54 BST &mdash; 10 h 08 m of continuous GPU, every task <code>COMPLETED 0:0</code> on <code>euclid-ral-gpu-2</code>, no requeue, no preemption, the queue now empty for this project. Task 9 (mge_pos) was held back under the MGE reuse rule &mdash; its ruling and the two retro-baseline rulings are the three members above. Recorded on <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/201">autolens_profiling#201</a> with docs-only PR <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/202">#202</a>. Refreshed here by <code>hpc/sync pull</code> to <code>/mnt/c/Users/Jammy/Science/inference_programme/</code>.</p>
     </div>
     <div class="block">
-      <p class="label">Witness &mdash; per-task readout</p>
+      <p class="label">Health evidence &mdash; classified from artefacts, not from sacct</p>
+      <p>Every one of the ten tasks clears all five checks, so the classification below is evidence-based rather than an <code>ExitCode 0:0</code> reading:</p>
+      <ul>
+        <li><strong>Wall plausible</strong> &mdash; 00:36:21 to 01:24:16, i.e. 10&ndash;23% of the 6&nbsp;h budget. Nothing near the wall, nothing suspiciously instant.</li>
+        <li><strong>Result row written</strong> &mdash; ten result JSONs under <code>results/searches/nautilus/imaging/&hellip;/hst/</code>, each stamping version <code>2026.8.17.1</code>, each with a <code>target_id</code> matching its intended cell.</li>
+        <li><strong><code>.err</code> clean</strong> &mdash; all ten error files are 222 bytes and contain only the <code>mask_2d_util.py:564 UserWarning: Mask padded from (141, 141) to (159, 159)</code>. No <code>Traceback</code> in any error or output log.</li>
+        <li><strong>Ended properly</strong> &mdash; every <code>.out</code> closes with the timing block, the results-JSON path, <code>Finished.</code> and a timestamp; ten <code>.completed</code> markers, one per run directory.</li>
+        <li><strong>No resume, no overflow</strong> &mdash; <code>Fit Already Completed</code> appears zero times across all ten logs (every search started cold), and no <code>log_l</code> anywhere resembles the pre-fix <code>3e+303</code> signature. The only hit from an <code>inf|nan|e+30</code> sweep is the literal string <code>model.info</code>.</li>
+      </ul>
+    </div>
+    <div class="block">
+      <p class="label">Witness &mdash; per-task readout, all ten rows final</p>
       <div class="scroll">
         <table>
-          <caption>342091 array tasks &mdash; sacct state and delivered checks (sacct state is not health evidence; the checks column is)</caption>
-          <thead><tr><th class="num">Task</th><th>Target</th><th>sacct state</th><th class="num">Elapsed</th><th>Delivered checks</th><th class="num">maxLL / logZ</th><th>Flags</th></tr></thead>
+          <caption>342091 array tasks &mdash; truth log likelihood for this dataset is <strong>31,521.744</strong>; &Delta; is maxLL minus truth</caption>
+          <thead><tr><th class="num">Task</th><th>Target</th><th>sacct state</th><th class="num">Elapsed</th><th>Delivered checks</th><th class="num">maxLL / logZ</th><th class="num">&Delta; vs truth</th><th>Flags</th></tr></thead>
           <tbody>
-            <tr><td class="num">0</td><td>pixelization, pos off</td><td class="mono">COMPLETED 0:0</td><td class="num mono">00:36:21</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler_wall 2093.03&nbsp;s (10% of 6&nbsp;h)</td><td class="num mono">29,835.4509<br>29,778.0569</td><td>none &mdash; finite, ~3e4</td></tr>
-            <tr><td class="num">1</td><td>delaunay_nn, pos off</td><td class="mono">COMPLETED 0:0</td><td class="num mono">00:52:55</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler_wall 3110.97&nbsp;s (15% of 6&nbsp;h)</td><td class="num mono">30,650.8283<br>30,591.1280</td><td>none &mdash; finite, ~3e4</td></tr>
-            <tr><td class="num">2</td><td>delaunay_nn, pos on (fixed 0.3, f 1e8)</td><td class="mono">RUNNING</td><td class="num mono">00:18:41</td><td>in flight on <code>euclid-ral-gpu-2</code>; <code>.err</code> clean so far; positions banner confirms 4 truth-derived points, threshold mode fixed 0.300000, factor 1e+08; config <code>hpc_a100_fp64_ref_pos_t0.3_f1e8</code>; at last log line 29 bounds / ~19,500 calls</td><td class="num mono">live logZ<br>+30,162</td><td>&mdash;</td></tr>
-            <tr><td class="num">3</td><td>slam_source_pix, pos off</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>, no node assigned</td></tr>
-            <tr><td class="num">4</td><td>slam_source_pix, pos on (auto)</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>, no node assigned</td></tr>
-            <tr><td class="num">5</td><td>slam_source_pix_nn, pos off</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>; corrected <code>AdaptSplitPower</code> target <code>sha256:ad291b57fc62</code></td></tr>
-            <tr><td class="num">6</td><td>slam_source_pix_nn, pos on (auto)</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>; corrected target <code>sha256:8021b4b697ff</code>, never previously submitted</td></tr>
-            <tr><td class="num">7</td><td>knn, pos off</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>. <strong>The suspect row has not been replaced yet:</strong> the mirror&rsquo;s <code>knn/hst/hpc_hpc_a100_fp64_ref.json</code> still reads maxLL <strong>30,077.028</strong> &mdash; the pre-fix value, 480 nats below the Prodigy arm bar 30,557.03. Do not read it as a 342091 result.</td></tr>
-            <tr><td class="num">8</td><td>delaunay_matern, pos off</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>, no node assigned</td></tr>
-            <tr><td class="num">9</td><td>mge, pos on (auto)</td><td class="mono">not submitted</td><td class="num mono">&mdash;</td><td colspan="3">deliberately excluded from the array under the MGE legacy-reuse ruling &mdash; see <a href="#m-mgepos">mge-pos-ref-reuse</a> above</td></tr>
-            <tr><td class="num">10</td><td>delaunay, pos on (auto)</td><td class="mono">PENDING</td><td class="num mono">00:00:00</td><td colspan="3">queued &mdash; reason <code>(Resources)</code>, no node assigned</td></tr>
+            <tr><td class="num">0</td><td>pixelization, pos off</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">00:36:21</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 2,093.03&nbsp;s (10% of 6&nbsp;h)</td><td class="num mono">29,835.4509<br>29,778.0569</td><td class="num mono">&minus;1,686.29</td><td>none &mdash; finite, ~3e4</td></tr>
+            <tr><td class="num">1</td><td>delaunay_nn, pos off</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">00:52:55</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 3,110.97&nbsp;s (14%)</td><td class="num mono">30,650.8283<br>30,591.1280</td><td class="num mono">&minus;870.92</td><td>none</td></tr>
+            <tr><td class="num">2</td><td>delaunay_nn, pos on (fixed 0.3, f 1e8)</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">00:53:03</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 3,113.59&nbsp;s (14%)</td><td class="num mono">31,351.3909<br>31,275.2300</td><td class="num mono">&minus;170.35</td><td>positions arm confirmed: 4 truth-derived points, threshold fixed 0.300000, factor 1e+08</td></tr>
+            <tr><td class="num">3</td><td>slam_source_pix, pos off</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">01:13:34</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 4,336.11&nbsp;s (20%)</td><td class="num mono">31,026.6354<br>30,951.7885</td><td class="num mono">&minus;495.11</td><td>none</td></tr>
+            <tr><td class="num">4</td><td>slam_source_pix, pos on (auto)</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">01:07:56</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 3,982.84&nbsp;s (18%)</td><td class="num mono">31,547.2396<br>31,452.0997</td><td class="num mono"><span class="pos">+25.50</span></td><td>the only row <em>above</em> the truth likelihood</td></tr>
+            <tr><td class="num">5</td><td>slam_source_pix_nn, pos off</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">01:24:16</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 4,986.87&nbsp;s (23%) &mdash; longest task</td><td class="num mono">30,750.9893<br>30,684.1146</td><td class="num mono">&minus;770.75</td><td>target <code>sha256:ad291b57fc62</code> &mdash; the corrected <code>AdaptSplitPower</code> target, as intended</td></tr>
+            <tr><td class="num">6</td><td>slam_source_pix_nn, pos on (auto)</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">01:13:18</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 4,330.27&nbsp;s (20%)</td><td class="num mono">31,405.6282<br>31,324.8382</td><td class="num mono">&minus;116.12</td><td>target <code>sha256:8021b4b697ff</code> &mdash; the cell that had never previously been submitted</td></tr>
+            <tr><td class="num">7</td><td>knn, pos off</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">00:58:02</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 3,415.75&nbsp;s (16%)</td><td class="num mono">30,062.6117<br>29,995.6676</td><td class="num mono">&minus;1,459.13</td><td><strong>the stale row is gone</strong> &mdash; see below</td></tr>
+            <tr><td class="num">8</td><td>delaunay_matern, pos off</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">00:55:13</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 3,246.46&nbsp;s (15%)</td><td class="num mono">30,675.9711<br>30,615.1603</td><td class="num mono">&minus;845.77</td><td>none</td></tr>
+            <tr><td class="num">10</td><td>delaunay, pos on (auto)</td><td class="mono pos">COMPLETED 0:0</td><td class="num mono">00:53:29</td><td><code>.err</code> clean (mask-padding UserWarning only) &middot; <code>Finished.</code> printed &middot; <code>.completed</code> present &middot; version <code>2026.8.17.1</code> &middot; no <code>Fit Already Completed</code> &middot; sampler wall 3,141.26&nbsp;s (15%)</td><td class="num mono">31,338.4344<br>31,264.8345</td><td class="num mono">&minus;183.31</td><td>none</td></tr>
+            <tr><td class="num">9</td><td>mge, pos on (auto)</td><td class="mono">not submitted</td><td class="num mono">&mdash;</td><td colspan="4">deliberately excluded from the array under the MGE legacy-reuse ruling &mdash; see <a href="#m-mgepos">mge-pos-ref-reuse</a> above</td></tr>
           </tbody>
         </table>
       </div>
-      <p><strong>No overflow signature anywhere.</strong> Both landed rows sit in the ~3e4 band the corrected cells should occupy; nothing resembles the pre-fix <code>log_l</code> up to 3e+303. Both run dirs carry <code>.completed</code> and a fresh <code>2026.8.17.1</code> stamp, and neither <code>.out</code> contains <code>Fit Already Completed</code> &mdash; both started cold, no resume collision. Both finished far inside the 6&nbsp;h budget, so the wall estimate is generous, not tight.</p>
-      <p><strong>Stale row, explained &mdash; not a fresh run:</strong> the <code>knn</code> result row on RAL still reads the suspect <code>30,077.028</code> with a <code>2026-08-31 20:08:27 BST</code> mtime. That is the dispatch-time <code>git stash</code> of the uncommitted knn working-tree changes: stashing reverted the file to HEAD's committed version &mdash; which <em>is</em> the rejected 341879_7 row (hence bit-identical) &mdash; and re-stamped its mtime. No job produced it. Do not read it as 342091 output; task 7 (still queued) is the run that will replace it.</p>
+      <p><strong>The knn row is now a real run.</strong> At the 22:53Z refresh the mirror&rsquo;s <code>knn/hst/hpc_hpc_a100_fp64_ref.json</code> still read the pre-fix <strong>30,077.028</strong> &mdash; a <code>git stash</code> artefact, not a result. Task 7 has now replaced it with a genuine 342091 row at <strong>30,062.612</strong> (logZ 29,995.668), which is <strong>14.4 nats lower still</strong> and sits <strong>~494 nats below the Prodigy arm bar 30,557.03</strong>. The stale-row explanation is therefore closed, and the knn cell&rsquo;s underperformance is real rather than an artefact &mdash; a result for the programme to absorb, not a defect in this wave.</p>
+      <p><strong>Shape of the wave, offered as observation only.</strong> The four positions-on arms (tasks 2, 4, 6, 10) all land within 25&ndash;183 nats of truth, with task 4 (<code>slam_source_pix</code>, auto threshold) the only row above it at +25.50. The positions-off pixelized rows sit 495&ndash;1,686 nats below truth, <code>pixelization</code> lowest. Each pos-on log carries the arm banner &mdash; <code>POSITIONS ARM (target_class 3)</code>, <code>Idealised: truth-derived positions, not re-solved from a completed search</code>, <code>PositionsLH ACTIVE</code> &mdash; so the arms are idealised by construction and the gap to the pos-off rows should be read with that in mind.</p>
+      <p><strong>Relevant to a ruling already on this page, stated as fact and nothing more:</strong> the <a href="#m-delfp64">delaunay-fp64 retro-baseline</a> question was framed as &ldquo;add array task 11 now, or defer until the 342091 wave lands?&rdquo;. The wave has landed and the GPU queue for this project is empty.</p>
     </div>
     <div class="block">
-      <p class="label">No ruling needed</p>
-      <p>Carried automatically: this member is in flight and enters the next batch's packet without re-specification. Review it there when its results are pulled &mdash; the eight outstanding tasks run serially on one GPU, so the wave will not be complete for some hours.</p>
+      <p class="label">Where to look yourself</p>
+      <dl>
+        <dt>Local checkout</dt>
+        <dd><code>/home/jammy/Code/PyAutoLabs/autolens_profiling</code> &mdash; <code>hpc/sync jobs</code> / <code>hpc/sync pull</code> drive RAL; <code>hpc/sync.conf</code> points pulls at the mirror below rather than at the checkout.</dd>
+        <dt>Laptop mirror (everything pulled by this refresh)</dt>
+        <dd><code>/mnt/c/Users/Jammy/Science/inference_programme/</code> &mdash; <code>results/searches/nautilus/imaging/&lt;cell&gt;/hst/hpc_hpc_a100_fp64_ref*.json</code> for the ten rows, <code>logs/output/output.342091_&lt;task&gt;.out</code> and <code>logs/error/error.342091_&lt;task&gt;.err</code> for the logs, <code>output/searches/&hellip;</code> for the run directories and their <code>.completed</code> markers.</dd>
+        <dt>The two rows worth opening first</dt>
+        <dd><code>knn/hst/hpc_hpc_a100_fp64_ref.json</code> (the replaced row) and <code>slam_source_pix/hst/hpc_hpc_a100_fp64_ref_pos_tauto0.2_f1e8.json</code> (the one above truth).</dd>
+        <dt>Live job state</dt>
+        <dd><code>ssh euclid_jump</code> then <code>sacct -j 342091 --format=JobID,State,ExitCode,Elapsed,Start,End</code>; <code>squeue -u jnightin</code> now shows nothing for this project.</dd>
+        <dt>Programme record</dt>
+        <dd><a href="https://github.com/PyAutoLabs/autolens_profiling/issues/201">autolens_profiling#201</a> (queue anchor <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/200">#200</a>) and docs-only PR <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/202">#202</a>.</dd>
+      </dl>
+    </div>
+    <div class="block">
+      <p class="label">No ruling chip on this page</p>
+      <p>This member carried into the slot without a review control and keeps it that way &mdash; under carry-forward it is formally ruled in the next batch. What has changed is that there is nothing left to wait for: the wave is complete, all ten rows are certified-clean by the checks above, and the readout can be judged whenever you want to. The three legacy-reuse rulings it routed into this slot (<a href="#m-mgepos">mge-pos-ref-reuse</a>, <a href="#m-mgefp64">mge-fp64-retro-baseline</a>, <a href="#m-delfp64">delaunay-fp64-retro-baseline</a>) do carry their own chips and are yours to rule now.</p>
+    </div>
+    <div class="block">
+      <p class="label">Follow-ups this refresh proposes</p>
+      <ul>
+        <li>[autolens_profiling] Fold the ten certified rows into the InferenceRefs_v1 table and close out <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/201">#201</a>; the <code>knn</code> row now needs a note that its low value is a measured result, not the old stash artefact.</li>
+        <li>[autolens_profiling] Phase 2 was queued behind these baselines (ordered phases). With Phase 1 complete, it is dispatchable at the next slot.</li>
+        <li>[autolens_profiling] The wave used 10&nbsp;h of a single A100 for 10 tasks at 10&ndash;23% of a 6&nbsp;h wall each &mdash; the per-task wall can be cut substantially, which matters if Phase 2 queues a wider array.</li>
+      </ul>
     </div>
     <p class="chip chip-min">Est. 20 review-minutes &middot; judge</p>
   </div>
