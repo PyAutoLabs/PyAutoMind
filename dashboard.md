@@ -42,20 +42,20 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 7 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 162 |
+| [Backlog](#backlog) (`draft/`) | 161 |
 
 ## Start here
 
 **Highest priority** (filed as `high`) — showing 12 of 14
 
-<details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output tree: mesh + point-source results move…</a> — autolens_profiling · small · supervised · high</summary>
 
 ```
-/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
+/start_dev draft/maintenance/autolens_profiling/legacy_point_output_sweep.md
 ```
 
 </details>
@@ -158,10 +158,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output tree: mesh + point-source results move…</a> — autolens_profiling · small · supervised · high</summary>
 
 ```
-/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
+/start_dev draft/maintenance/autolens_profiling/legacy_point_output_sweep.md
 ```
 
 </details>
@@ -250,14 +250,6 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1551">issue #1551</a> — issued 2026-08-31 — library-shipped, awaiting-merge</summary>
-
-```
-/start_dev active/add_resampling_info_section_to_the_bottom.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a> — issued 2026-08-31 — runs-in-flight (supervised --auto; human-dispatched from the 2026-08-31-am</summary>
 
 ```
@@ -266,42 +258,10 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/325">issue #325</a> — issued 2026-08-31 — pr-open (all five legs of the autonomous-ship gate passed 2026-08-31; merge is the human's)</summary>
-
-```
-/start_dev active/github_page_link_in_every_organ_board.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/multistartprodigy_stops_at_49_steps_when_iterati.md">MultiStartProdigy stops at 49 steps when iterations_per_quick_update=50 in @PyAutoFit</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1553">issue #1553</a> — issued 2026-08-31 — library-shipped, awaiting-merge (--auto safe; batch 2026-08-31-pm member autofit-prodigy-49)</summary>
 
 ```
 /start_dev active/multistartprodigy_stops_at_49_steps_when_iterati.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/513">issue #513</a> — issued 2026-08-31 — awaiting-input (verdict posted 2026-08-31; judge-tier research — parks</summary>
-
-```
-/start_dev active/numba_solve_vs_jax_sparse_operator.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/75">issue #75</a> — issued 2026-08-31 — ship — PR open (PyAutoMemory#76, decision-taken; --auto, effective supervised, batch 2026-08-31-pm; merge + close-out re-drive…</summary>
-
-```
-/start_dev active/repair_queue_automation_filing_gate.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/156">issue #156</a> — issued 2026-08-31 — library-shipped, awaiting-merge</summary>
-
-```
-/start_dev active/silence_the_non_colab_setup_colab_message.md
 ```
 
 </details>
@@ -436,7 +396,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 26</summary>
@@ -785,15 +745,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 18</summary>
-
-<details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
-```
-
-</details>
+<summary><b>bug</b> — 17</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · safe · high</summary>
 
@@ -934,116 +886,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 13</summary>
+<summary><b>maintenance</b> — 16</summary>
 
-<details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
-
-```
-/start_dev draft/docs/autolens/multi_galaxy_package.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output tree: mesh + point-source results move…</a> — autolens_profiling · small · supervised · high</summary>
 
 ```
-/start_dev draft/docs/autolens/split_lensing_regimes.md
+/start_dev draft/maintenance/autolens_profiling/legacy_point_output_sweep.md
 ```
 
 </details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
-
-```
-/start_dev draft/docs/autocti/api_rst_rewrite.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> — howtolens · small · supervised · low</summary>
-
-```
-/start_dev draft/docs/howtolens/ch4_mask_overlay_never_drawn.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-/start_dev draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> — workspaces</summary>
-
-```
-/start_dev draft/docs/workspaces/plot_coverage_followups.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>maintenance</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
@@ -1161,6 +1012,115 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>docs</b> — 13</summary>
+
+<details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/multi_galaxy_package.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
+
+```
+/start_dev draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> — howtolens · small · supervised · low</summary>
+
+```
+/start_dev draft/docs/howtolens/ch4_mask_overlay_never_drawn.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+
+```
+/start_dev draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> — workspaces</summary>
+
+```
+/start_dev draft/docs/workspaces/plot_coverage_followups.md
 ```
 
 </details>
@@ -1344,7 +1304,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>ci-smoke</b> — 4 task(s) · 7 pts · auto — proposed</summary>
+<summary><b>ci-smoke</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
@@ -1352,10 +1312,10 @@ Sets of INDEPENDENT tasks that make sense in one orchestrated session: an archit
 You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/ci/release_smoke_ignores_env_declarations.md
 - draft/bug/ci/scheduled_runs_delivered_hours_late.md
 - draft/test/pyautoheart/smoke_relevance_gate.md
 - draft/test/workspaces/slowest_smoke_gate_scripts.md
+- draft/maintenance/ci/heart_smoke_table_autocti.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1370,10 +1330,10 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> | ci | small | high | - |
 | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> | ci | medium | high | - |
 | <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> | pyautoheart | medium | normal | formalised |
 | <a href="draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a> | workspaces | medium | normal | formalised |
+| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | ci | medium | normal | formalised |
 
 </details>
 
@@ -1570,17 +1530,17 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>ci-smoke — bundle 2</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>point-source</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'point-source' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/maintenance/ci/copilot_auto_review.md
-- draft/maintenance/ci/heart_smoke_table_autocti.md
-- draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md
+- draft/feature/autolens/multi_plane_time_delays.md
+- draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
+- draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1595,9 +1555,9 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> | ci | large | normal | planned |
-| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | ci | medium | normal | formalised |
-| <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> | workspaces | low | normal | draft |
+| <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> | autolens | large | normal | formalised |
+| <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> | autolens | medium | normal | formalised |
+| <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> | pyautolens | medium | low | formalised |
 
 </details>
 
@@ -1609,76 +1569,76 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-01 | filed | <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output tree: mesh + point-source results move…</a> |
 | 2026-08-31 | issued | <a href="active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2]…</a> |
-| 2026-08-31 | issued | <a href="active/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> |
-| 2026-08-31 | issued | <a href="active/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry…</a> |
 | 2026-08-31 | issued | <a href="active/multistartprodigy_stops_at_49_steps_when_iterati.md">MultiStartProdigy stops at 49 steps when…</a> |
-| 2026-08-31 | issued | <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> |
-| 2026-08-31 | issued | <a href="active/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> |
-| 2026-08-31 | issued | <a href="active/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> |
-| 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
-
-<details><summary>… 10 more (40 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 | 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
+
+<details><summary>… 10 more (40 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
-
-<details><summary>… 10 more (30 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts +…</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
+
+<details><summary>… 10 more (30 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 | 2026-08-24 | filed | <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods…</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
-
-<details><summary>… 10 more (20 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
 | 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 | 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
+
+<details><summary>… 10 more (20 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
 | 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 | 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
-
-<details><summary>… 10 more (10 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
 | 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
 | 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 | 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
 | 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
+
+<details><summary>… 10 more (10 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
 | 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 | 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
 | 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
 | 2026-08-06 | filed | <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a> |
+| 2026-08-05 | filed | <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> |
+| 2026-08-04 | filed | <a href="draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never…</a> |
+| 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of…</a> |
+| 2026-08-04 | filed | <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> |
+| 2026-08-04 | filed | <a href="draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage the streak</a> |
 
 </details>
 
@@ -1955,20 +1915,12 @@ Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. 
 </details>
 
 <details>
-<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 10 queued prompt(s), in order</summary>
+<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: `draft/feature/euclid/euclid_dr1_prep_epic.md`</summary>
 
 ```
 Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its canonical state lives in draft/feature/euclid/euclid_dr1_prep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 11 phased prompts under draft/ (0, 1, 2, 3a, 3b, 4, 5, 6a, 6b, 6c, 7) — issue ONE at a
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/euclid/restore_pipeline_narrative_prose.md">Restore the narrative prose: <code>start_here.py</code> as the end-to-end guide, <code>scripts/</code>…</a> — euclid · medium · supervised · high</summary>
-
-```
-/start_dev draft/docs/euclid/restore_pipeline_narrative_prose.md
 ```
 
 </details>
@@ -2246,7 +2198,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-162 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+161 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2291,7 +2243,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- _… and 122 more_
+- _… and 121 more_
 
 </details>
 
@@ -2309,8 +2261,8 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautomind/batch_carry_forward.md — unknown theme keyword(s): batch`
 - `draft/bug/autoarray/delaunay_area_magnification_audit.md — unknown theme keyword(s): euclid`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
-- `draft/docs/euclid/restore_pipeline_narrative_prose.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
+- `draft/maintenance/autolens_profiling/legacy_point_output_sweep.md — unknown theme keyword(s): hpc`
 - `draft/research/euclid/dr1_prelim_10_lens_science_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/research/euclid/magnification_robustness.md — unknown theme keyword(s): euclid`
 - `draft/research/euclid/sersic_index_recovery.md — unknown theme keyword(s): euclid, priors`

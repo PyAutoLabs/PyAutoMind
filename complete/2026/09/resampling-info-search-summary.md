@@ -1,3 +1,19 @@
+- shipped: 2026-09-01 — PyAutoFit main `7c1bf4ce`, merged via
+  https://github.com/PyAutoLabs/PyAutoFit/pull/1554 (closes PyAutoFit#1551).
+- classification: bug (PyAutoFit) — batch 2026-08-31-pm member autofit-resampling-info.
+- summary: the gradient searches' resampling diagnostics moved from mid-file to a closing
+  "Resampling Info" section of search.summary (blank line after the timing lines, subheader,
+  six lines), extracted into `_resampling_summary_from` and appended by
+  `search_summary_to_file`; emit-nothing guards unchanged so no-counter searches write
+  byte-identical files. Witness observed on a real smoke run and asserted by a new
+  end-of-file ordering test. Adversary CLEAN. First of the shift's three PyAutoFit merges;
+  #1555's later merge conflicted with this diff in text_util.py and was resolved on that
+  branch (keep composition/steps/stop-reason inline, resampling lines stay end-of-file).
+- lifecycle: dispatched 18:53Z as an unattended batch member (decide-and-flag PR under the
+  supervised bug-cap); accepted in the 2026-09-01 15:13 batch review; recorded 2026-09-01.
+
+## Original prompt
+
 # Add Resampling Info section to the bottom of search.summary
 
 Type: bug

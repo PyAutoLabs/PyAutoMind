@@ -222,7 +222,7 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>7</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>162</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>2</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>161</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-09-01.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -250,10 +250,10 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 Report what you retired, what you deliberately left in the backlog and why, and
 anything you could not verify." aria-label="Copy the Claude command">📋</button><p><b>Refresh this page</b> — reconcile finished prompts, then regenerate</p></div>
 </div>
-<p class="muted mdsrc"><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md">markdown version</a></p>
+<p class="muted mdsrc"><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md">markdown version</a> · <a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/README.md">GitHub Page</a></p>
 <h2>Start here</h2>
 <h3>Highest priority <span class="facets">(filed as high) — showing 12 of 14</span></h3>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_profiling/legacy_point_output_sweep.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output tree: mesh + point-source results move…</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autolens_profiling</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/triage/jax_zero_contour.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a><span class="tags"><span class="pill w y">❓ triage</span><span class="pill">medium</span><span class="pill g">safe</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/multi_galaxy_package.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -267,7 +267,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/samples_parameter_paths.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">health_fixes</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <h3>Fits a slot <span class="facets">(ready to run unattended, cheapest to review first) — showing 12 of 73</span></h3>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autofit</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_profiling/legacy_point_output_sweep.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output tree: mesh + point-source results move…</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autolens_profiling</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/triage/jax_zero_contour.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/triage/jax_zero_contour.md">TRIAGE: needs manual review before routing</a><span class="tags"><span class="pill w y">❓ triage</span><span class="pill">medium</span><span class="pill g">safe</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by PyAutoGalaxy…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autogalaxy</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
@@ -280,13 +280,8 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
-<div class="task"><button class="copy" data-cmd="/start_dev active/add_resampling_info_section_to_the_bottom.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1551">issue #1551</a><span class="facets"> — issued 2026-08-31</span> — <span class="facets">library-shipped, awaiting-merge</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/follow_up_wave_adapt_split_and_rectangular.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/follow_up_wave_adapt_split_and_rectangular.md">Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs</a><span class="facets"> — issued 2026-08-31</span> — <span class="facets">runs-in-flight (supervised --auto; human-dispatched from the 2026-08-31-am</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/github_page_link_in_every_organ_board.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/325">issue #325</a><span class="facets"> — issued 2026-08-31</span> — <span class="facets">pr-open (all five legs of the autonomous-ship gate passed 2026-08-31; merge is the human's)</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/multistartprodigy_stops_at_49_steps_when_iterati.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/multistartprodigy_stops_at_49_steps_when_iterati.md">MultiStartProdigy stops at 49 steps when iterations_per_quick_update=50 in @PyAutoFit</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1553">issue #1553</a><span class="facets"> — issued 2026-08-31</span> — <span class="facets">library-shipped, awaiting-merge (--auto safe; batch 2026-08-31-pm member autofit-prodigy-49)</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/numba_solve_vs_jax_sparse_operator.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/513">issue #513</a><span class="facets"> — issued 2026-08-31</span> — <span class="facets">awaiting-input (verdict posted 2026-08-31; judge-tier research — parks</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/repair_queue_automation_filing_gate.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/75">issue #75</a><span class="facets"> — issued 2026-08-31</span> — <span class="facets">ship — PR open (PyAutoMemory#76, decision-taken; --auto, effective supervised, batch 2026-08-31-pm; merge + close-out re-drive…</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/silence_the_non_colab_setup_colab_message.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/156">issue #156</a><span class="facets"> — issued 2026-08-31</span> — <span class="facets">library-shipped, awaiting-merge</span></p></div>
 <a id="human-review"></a><h2>Human review <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft/human_review">markdown version</a></h2>
 <p class="muted">Shipped work waiting on <b>you</b> — tasks a human asked to check before calling them done. Nothing lands here on its own: a task only gets a review row when someone files one (<code>/intake</code> with <code>Type: human review</code>), so an empty section means nothing has been flagged, not that nothing shipped.</p>
 <div class="task"><button class="copy" data-cmd="Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.
@@ -334,7 +329,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
 </details>
 <h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
-<p class="muted">162 filed prompts, not started — sorted most-pickable first (priority, then size). 55 of them belong to an epic and are listed only under Epics below.</p>
+<p class="muted">161 filed prompts, not started — sorted most-pickable first (priority, then size). 54 of them belong to an epic and are listed only under Epics below.</p>
 <details>
 <summary>feature — 26</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autofit/prior_exit_sampler_coverage.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">autofit</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
@@ -384,8 +379,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/autolens_profiling/cluster_gradient_search_benchmark.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus, point-source)</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autolens_profiling</span></span></p></div>
 </details>
 <details>
-<summary>bug — 18</summary>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<summary>bug — 17</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">health_fixes</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/jit_visualization_outputs.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">health_fixes</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -405,23 +399,8 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">pyautolens</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 </details>
 <details>
-<summary>docs — 13</summary>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/multi_galaxy_package.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/split_lensing_regimes.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/pyautobrain/rtd_organism_currency.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autocti/api_rst_rewrite.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autocti</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/howtolens/ch4_mask_overlay_never_drawn.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">howtolens</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/assistants_regime_extension.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">low</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/plot_coverage_followups.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span></span></p></div>
-</details>
-<details>
-<summary>maintenance — 15</summary>
+<summary>maintenance — 16</summary>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_profiling/legacy_point_output_sweep.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output tree: mesh + point-source results move…</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autolens_profiling</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/config_key_mirror_drift.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autolens_workspace_developer</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/ci/heart_smoke_table_autocti.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">ci</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
@@ -437,6 +416,22 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never extended for it</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autolens_profiling</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">low</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's…</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">low</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in autogalaxy/autofit/HowToFit workspaces</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">low</span></span></p></div>
+</details>
+<details>
+<summary>docs — 13</summary>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/multi_galaxy_package.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/split_lensing_regimes.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/pyautobrain/rtd_organism_currency.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autocti/api_rst_rewrite.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autocti</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/howtolens/ch4_mask_overlay_never_drawn.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">howtolens</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/assistants_regime_extension.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">low</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/plot_coverage_followups.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span></span></p></div>
 </details>
 <details>
 <summary>test — 6</summary>
@@ -479,14 +474,14 @@ table.bundle td.facet{white-space:nowrap;color:var(--muted);font-size:.85em}
 </style>
 <p class="muted">Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so <code>/prm</code> closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in <code>bundles.md</code>; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records.</p>
 <details>
-<summary><b>ci-smoke</b> — 4 task(s) · 7 pts · auto — proposed</summary>
+<summary><b>ci-smoke</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 <div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/ci/release_smoke_ignores_env_declarations.md
 - draft/bug/ci/scheduled_runs_delivered_hours_late.md
 - draft/test/pyautoheart/smoke_relevance_gate.md
 - draft/test/workspaces/slowest_smoke_gate_scripts.md
+- draft/maintenance/ci/heart_smoke_table_autocti.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -497,13 +492,6 @@ Contract (the `start_bundle` skill is the full body):
 6. Report per member: issue, branch, PR, and pass/fail counts." aria-label="Copy the Claude command">📋</button><p><b>Run this bundle</b> — one session, one issue and one PR per member</p></div>
 <table class="bundle">
 <tr><th>Prompt</th><th>Repo</th><th>Difficulty</th><th>Priority</th><th>Status</th></tr>
-<tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a></td>
-<td class="facet">ci</td>
-<td class="facet">small</td>
-<td class="facet">high</td>
-<td class="facet">-</td>
-</tr>
 <tr>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a></td>
 <td class="facet">ci</td>
@@ -521,6 +509,13 @@ Contract (the `start_bundle` skill is the full body):
 <tr>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a></td>
 <td class="facet">workspaces</td>
+<td class="facet">medium</td>
+<td class="facet">normal</td>
+<td class="facet">formalised</td>
+</tr>
+<tr>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a></td>
+<td class="facet">ci</td>
 <td class="facet">medium</td>
 <td class="facet">normal</td>
 <td class="facet">formalised</td>
@@ -774,13 +769,13 @@ Contract (the `start_bundle` skill is the full body):
 </table>
 </details>
 <details>
-<summary><b>ci-smoke — bundle 2</b> — 3 task(s) · 8 pts · auto — proposed</summary>
-<div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
+<summary><b>point-source</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+<div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'point-source' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/maintenance/ci/copilot_auto_review.md
-- draft/maintenance/ci/heart_smoke_table_autocti.md
-- draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md
+- draft/feature/autolens/multi_plane_time_delays.md
+- draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
+- draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -792,25 +787,25 @@ Contract (the `start_bundle` skill is the full body):
 <table class="bundle">
 <tr><th>Prompt</th><th>Repo</th><th>Difficulty</th><th>Priority</th><th>Status</th></tr>
 <tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a></td>
-<td class="facet">ci</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a></td>
+<td class="facet">autolens</td>
 <td class="facet">large</td>
 <td class="facet">normal</td>
-<td class="facet">planned</td>
+<td class="facet">formalised</td>
 </tr>
 <tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a></td>
-<td class="facet">ci</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a></td>
+<td class="facet">autolens</td>
 <td class="facet">medium</td>
 <td class="facet">normal</td>
 <td class="facet">formalised</td>
 </tr>
 <tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a></td>
-<td class="facet">workspaces</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a></td>
+<td class="facet">pyautolens</td>
+<td class="facet">medium</td>
 <td class="facet">low</td>
-<td class="facet">normal</td>
-<td class="facet">draft</td>
+<td class="facet">formalised</td>
 </tr>
 </table>
 </details>
@@ -818,6 +813,12 @@ Contract (the `start_bundle` skill is the full body):
 <a id="recent"></a><h2>Recent <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md#recent">markdown version</a></h2>
 <p class="muted">The 50 newest things to happen to the work in hand, newest first — issued, parked, filed. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Shipped work is not here: it is read from <code>complete/index.md</code>, and a thousand records deep it would crowd out everything anyone can still act on. Showing the newest 10; … opens the next 10.</p>
 <table class="recent">
+<tr>
+<td class="when">2026-09-01</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output tree: mesh + point-source results move…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_profiling/legacy_point_output_sweep.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
 <tr>
 <td class="when">2026-08-31</td>
 <td class="what">issued</td>
@@ -827,44 +828,8 @@ Contract (the `start_bundle` skill is the full body):
 <tr>
 <td class="when">2026-08-31</td>
 <td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/silence_the_non_colab_setup_colab_message.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-08-31</td>
-<td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/repair_queue_automation_filing_gate.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-08-31</td>
-<td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/multistartprodigy_stops_at_49_steps_when_iterati.md">MultiStartProdigy stops at 49 steps when…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/multistartprodigy_stops_at_49_steps_when_iterati.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-08-31</td>
-<td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/numba_solve_vs_jax_sparse_operator.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-08-31</td>
-<td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/github_page_link_in_every_organ_board.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-08-31</td>
-<td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/add_resampling_info_section_to_the_bottom.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-08-29</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr>
 <td class="when">2026-08-29</td>
@@ -878,7 +843,7 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/adapt_scatter_factor_two.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-08-29</td>
 <td class="what">flagged for review</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a></td>
@@ -897,7 +862,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 `/intake` instead.
 " aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-08-29</td>
 <td class="what">flagged for review</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a></td>
@@ -916,19 +881,19 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 `/intake` instead.
 " aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-08-29</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/feature/autoarray/adapt_linear_default_flip.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-08-29</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-08-28</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a></td>
@@ -1144,6 +1109,36 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/libraries/dep_cap_refresh_2026_08.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
+<tr hidden>
+<td class="when">2026-08-05</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/feature/autofit/search_seed_reproducibility.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-08-04</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md">dataset/imaging/jwst_lw is untracked because the gitignore was never…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-08-04</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-08-04</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-08-04</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage the streak</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/triage/nightly_release_blocked_eight_nights.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
 <h2>Epics <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/epics.md">markdown version</a></h2>
@@ -1191,9 +1186,8 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">autolens_profiling</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
 </details>
 <details>
-<summary>Euclid DR1 preparation — 15k-lens modelling prep — 10 queued prompt(s), in order</summary>
+<summary>Euclid DR1 preparation — 15k-lens modelling prep — 9 queued prompt(s), in order</summary>
 <div class="task"><button class="copy" data-cmd="Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its canonical state lives in draft/feature/euclid/euclid_dr1_prep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 11 phased prompts under draft/ (0, 1, 2, 3a, 3b, 4, 5, 6a, 6b, 6c, 7) — issue ONE at a" aria-label="Copy the Claude command">📋</button><p><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — <span class="facets">ledger: <code>draft/feature/euclid/euclid_dr1_prep_epic.md</code></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/euclid/restore_pipeline_narrative_prose.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/euclid/restore_pipeline_narrative_prose.md">Restore the narrative prose: <code>start_here.py</code> as the end-to-end guide, <code>scripts/</code>…</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">euclid</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">euclid</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/euclid/dr1_prelim_10_lens_science_run.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/dr1_prelim_10_lens_science_run.md">DR1 prelim science run: fit 10 real Euclid lenses in a new…</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">euclid</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/euclid/resimulate_fitted_lens_simulator.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/euclid/resimulate_fitted_lens_simulator.md">simulator.py: resimulate a fitted Euclid lens, and resimulate the 10 prelim lenses…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">euclid</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill r">high</span></span></p></div>

@@ -1,3 +1,19 @@
+- shipped: 2026-09-01 — PyAutoHands main `7bcb514c`, merged via
+  https://github.com/PyAutoLabs/PyAutoHands/pull/274 (closes PyAutoHands#272).
+- classification: bug (PyAutoHands, release CI) — batch 2026-08-31-pm member release-smoke-env.
+- summary: the release.yml run_smoke_tests job now honours per-script `ENV:` declarations
+  (witt_wynne.py's `ENV: full_datasets` included), so PointSolver smoke cases stop running
+  under SMALL_DATASETS with the fixed 2-image pair. The member parked at the ship
+  checkpoint per its supervised autonomy (branch + checkpoint on #272); the PR was opened
+  from the parked branch at the human's request during the review, went green 3/3, and was
+  merged on acceptance. This park-then-open cycle is the motivating case for the queued
+  batch_no_park_at_ship doctrine change.
+- lifecycle: dispatched 18:53Z as an unattended batch member; prompt retired directly from
+  draft/ (the park never advanced it); accepted in the 2026-09-01 15:13 batch review;
+  recorded 2026-09-01.
+
+## Original prompt
+
 # release.yml's smoke loop ignores `__Env__` declarations — witt_wynne.py fails every LIVE run
 
 Type: bug

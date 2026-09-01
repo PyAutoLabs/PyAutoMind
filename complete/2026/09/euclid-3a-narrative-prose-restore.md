@@ -1,3 +1,24 @@
+- shipped: 2026-09-01 — euclid_strong_lens_modeling_pipeline main `dddec896`, merged via
+  https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/48
+  (closes euclid#47). Epic euclid-dr1-prep phase 3a.
+- classification: docs (euclid_strong_lens_modeling_pipeline) — batch 2026-08-31-pm member
+  euclid-3a-prose.
+- summary: the narrative lost at 355b309 restored across the repo — start_here.py 63-line
+  shim → documented end-to-end new-user guide (24 sections, ~630 prose lines, execution
+  still delegating to scripts.initial_lens_model.fit per the human's start_here ruling);
+  the empty __Source Pix__ stage documented; full_model 10→26, lens_model_waveband 0→22,
+  mge_lens_only 0→27, sersic 2→9 sections; six catalogue producers lifted from zero; the
+  batch-review addendum applied (README structural edits, scripts/tools/ move with all
+  registrations, AGENTS.md 471→251 lines). Every recovered claim drift-verified; tests 61
+  pass, smoke 9/9, drift greps zero. Caveat on record: the independent adversary leg was
+  not run (self-review); the human reviewed and accepted knowing this. Judgment call 2
+  spawned draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md. Unblocks phase 3b.
+- lifecycle: dispatched 18:53Z as an unattended batch member (supervised park on #47; PR
+  opened at review); prompt retired from draft/; accepted 2026-09-01 15:13; recorded
+  2026-09-01.
+
+## Original prompt
+
 # Restore the narrative prose: `start_here.py` as the end-to-end guide, `scripts/` as its chapters
 
 Type: docs

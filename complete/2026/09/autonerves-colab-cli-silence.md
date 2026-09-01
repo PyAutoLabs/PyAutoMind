@@ -1,3 +1,17 @@
+- shipped: 2026-09-01 — PyAutoNerves main `6fd0c977`, merged via
+  https://github.com/PyAutoLabs/PyAutoNerves/pull/157 (closes PyAutoNerves#156).
+- classification: feature (PyAutoNerves) — batch 2026-08-31-pm member autonerves-colab-silence.
+- summary: setup_colab's non-Colab branch is now context-aware — the "You are not running
+  in a Google Colab environment" block prints only when a live IPython interactive shell is
+  driving the process (new private `_running_in_ipython()` helper), and demotes to
+  logger.debug on the plain-interpreter path. Witness green in CI: silent CLI run, notebook
+  path still surfaces the message, covered in test_setup_colab.py; 169/169 tests;
+  adversary CLEAN.
+- lifecycle: dispatched 18:53Z as an unattended batch member; accepted in the 2026-09-01
+  15:13 batch review; recorded 2026-09-01.
+
+## Original prompt
+
 # Silence the non-Colab setup_colab() message on CLI runs
 
 Type: feature

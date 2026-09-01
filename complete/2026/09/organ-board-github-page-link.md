@@ -1,3 +1,19 @@
+- shipped: 2026-09-01 — five organ mains, merged via
+  https://github.com/PyAutoLabs/PyAutoBrain/pull/326,
+  https://github.com/PyAutoLabs/PyAutoHeart/pull/194,
+  https://github.com/PyAutoLabs/PyAutoHands/pull/273,
+  https://github.com/PyAutoLabs/PyAutoMemory/pull/77,
+  https://github.com/PyAutoLabs/PyAutoScientist/pull/25.
+- classification: feature (six organ repos) — batch 2026-08-31-pm member organ-board-github-link.
+- summary: every generated organ board HTML page now carries a "GitHub Page" link resolving
+  to that repo's README on github.com, asserted in each generator's existing board test
+  (the declared witness). The six-repo fan-out was the batch's widest member; all five PRs
+  green at collect, merged as one review ruling.
+- lifecycle: dispatched 18:53Z as an unattended batch member; accepted in the 2026-09-01
+  15:13 batch review; recorded 2026-09-01.
+
+## Original prompt
+
 # GitHub Page link in every organ board header
 
 Type: feature

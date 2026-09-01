@@ -1,3 +1,19 @@
+- shipped: 2026-09-01 — PyAutoMemory main `23017555`, merged via
+  https://github.com/PyAutoLabs/PyAutoMemory/pull/76 (closes PyAutoMemory#75).
+- classification: bug (PyAutoMemory) — batch 2026-08-31-pm member memory-queue-filing-gate.
+- summary: three workflow-only fixes to the queue automation broken since 2026-08-24 —
+  the missing PyAutoBrain sibling checkout in queue_filing.yml's gate; a conflict-proof
+  rebuild-retry replacing the commit-discarding `git pull --rebase` in queue_actions.yml;
+  and an if:failure() report step so died pushes are no longer silent. Adversary found two
+  real issues, both fixed in b5bc248; finding 3 (the same discarding retry in
+  knowledge_board.yml/arxiv_refs.yml) recorded as a follow-up candidate. Witness is
+  post-merge by design: queue-intake re-applied to #71 and #72 at close-out (2026-09-01)
+  to re-drive the filing runs — green runs opening filing PRs complete it.
+- lifecycle: dispatched 18:53Z as an unattended batch member (decide-and-flag PR);
+  accepted in the 2026-09-01 15:13 batch review; recorded 2026-09-01.
+
+## Original prompt
+
 # Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures
 
 Type: bug

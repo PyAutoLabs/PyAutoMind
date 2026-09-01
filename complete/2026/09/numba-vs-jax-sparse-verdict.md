@@ -1,3 +1,23 @@
+- shipped: 2026-09-01 — verdict of record on
+  https://github.com/PyAutoLabs/PyAutoArray/issues/513 (closed on acceptance); no PR by
+  design (research, no library changes).
+- classification: research (PyAutoArray) — batch 2026-08-31-pm member numba-vs-jax-sparse;
+  also the numba-cpu-likelihood epic's post-completion next step (successor curvature-F
+  work already shipped as PyAutoArray#505/#507).
+- summary: the numba CPU positive-only solve and the JAX sparse-operator mode solve the
+  identical regularised normal equations but realise them differently at every layer, each
+  difference deliberate for its hardware: explicit 177 MB sparse preload + branchy
+  active-set fnnls + cross-evaluation warm-start memo (CPU cache/state levers) vs
+  matrix-free FFT operator + fixed-shape PDIP with a differentiable relaxed-KKT VJP
+  (GPU/vmap/grad levers). Every transplant was already measured and failed (warm-start
+  hurts PDIP 17→38 iterations; BPP/ADMM slower/fail). VERDICT: keep two deliberately
+  different paths — no port, no unification. Two scholar-mode candidates left unfiled
+  (a two-modes design note; landing/retiring the solver ledger's pending A100 rows).
+- lifecycle: dispatched 18:53Z as an unattended batch member (parked for judgement per the
+  judge tier); verdict accepted in the 2026-09-01 15:13 batch review; recorded 2026-09-01.
+
+## Original prompt
+
 # Is the numba positive-only solve the same linear algebra as the JAX sparse-operator mode?
 
 Type: research

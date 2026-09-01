@@ -162,24 +162,3 @@
       CLEAN, already accepted). NEITHER pl_eff witness exists, so the parked second
       rectangular submission stays PARKED — nothing unblocked this refresh. Command,
       NOT run: PIPELINE=rectangular_adapt ARRAY=<1|2> bash hpc/run_chain.sh.
-
-## memory-queue-filing-gate
-- prompt: active/repair_queue_automation_filing_gate.md
-- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/75
-- issued: 2026-08-31
-- status: ship — PR open (PyAutoMemory#76, decision-taken; --auto, effective supervised, batch 2026-08-31-pm; merge + close-out re-drive human)
-- location: web-github
-- heart-ack:
-  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
-  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
-- repos:
-  - pyautomemory (branch feature/memory-queue-filing-gate — web-github session clone, no worktree)
-- summary: |
-    Repair the PyAutoMemory queue automation (#69/#71/#72 stuck since
-    2026-08-28): add the PyAutoBrain sibling checkout to queue_filing.yml
-    (gate hard-broken since dcd1e2c, 2026-08-24), make queue_actions.yml's
-    push retry conflict-proof (fetch + reset --hard + re-run the idempotent
-    action script instead of rebase-and-discard), and add an if: failure()
-    report step so a failed run comments on its issue instead of silence.
-    Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
-    green queue_filing.yml run on #71 that opens a filing PR.
