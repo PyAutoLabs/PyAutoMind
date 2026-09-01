@@ -112,6 +112,23 @@ worked around:
    resumed-run member; a cloud-lane session plans nothing and reports the
    count). `tests.yml` checks out PyAutoCortex beside PyAutoMind.
 
+8. **Ledger carve-out (phase-1 follow-up, ruled in 2026-09-01).** In the
+   Cortex's `scripts/ledger_merge.py`, prose that merely *lives under* a ledger
+   dir is code: `rulings/AGENTS.md`, `batches/AGENTS.md`,
+   `batches/packets/AGENTS.md`, `batches/packets/TEMPLATE.md`,
+   `batches/reviews/AGENTS.md` (pattern: any `AGENTS.md` or `TEMPLATE.md`
+   under `LEDGER_DIRS`) must classify as `code` so a `claude/**` branch cannot
+   auto-merge doctrine edits. Test it; record it in `docs/schema_decisions.md`.
+   The Mind has the same trait and keeps it — its call, not this phase's.
+9. **Repo settings (phase-1 follow-up, ruled in 2026-09-01).** PyAutoCortex was
+   born after the last `PyAutoBrain/.github/workflows/repo_settings.yml` sweep
+   (org enumeration covers it; `delete_branch_on_merge=false` today, and the
+   merged `feature/cortex-schema-skeleton` survived on the remote). Dispatch
+   the sweep once (`gh workflow run repo_settings.yml`), confirm the setting
+   flips and the stale remote branch is collected (or delete it by hand and
+   say so), and add PyAutoCortex to whatever per-repo config the sweep reads
+   if it is not purely org-enumerated.
+
 ## Acceptance
 
 - The witness above; Brain tests green; `pyauto-brain board` shows the Cortex
