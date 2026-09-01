@@ -1,3 +1,70 @@
+## cortex-schema-skeleton
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/379 (closed completed 2026-09-01)
+- completed: 2026-09-01
+- library-pr: PyAutoCortex https://github.com/PyAutoLabs/PyAutoCortex/pull/1 (`c24bf52b`, the repo's first PR, on top of birth commit `d38e88b`) → PyAutoBrain https://github.com/PyAutoLabs/PyAutoBrain/pull/329 (`4f02d4f0`), merged in that order
+- classification: feature (pyautocortex) — epic `cortex-birth`, phase 1 of 7. Gate: phase 0
+  (SHIPPED #377). Gates phases 2 and 3.
+- summary: the phase that decides what the Cortex *is* as files — a run-and-ruling registry
+  (project → phase → runs → rulings), not a second Mind. Shipped in PyAutoCortex:
+  `AGENTS.md` / `README.md` / `REFERENCE.md` (phase header keys, the ten-state model and its
+  transition table, run lines in SLURM notation `342091_[0-8,10]` with `pulled_to:` /
+  `after:` / `resumes:` / `where:` continuation lines, ruling ids `R-YYYYMMDD-nn`, the one
+  review vocabulary `accept | rerun | drop | leave-to-finish`, the laptop-lane closures
+  quoted verbatim); `projects.yaml` (schema + worked example in a documented restricted
+  YAML subset, stdlib-parsed with PyYAML parity tested; live map empty, rows are phase 3);
+  `epics.md`; `rulings/AGENTS.md` ("a verdict recorded only outside the Cortex does not
+  exist"; append-only, supersede never edit); `batches/AGENTS.md` + `packets/AGENTS.md` +
+  `reviews/AGENTS.md` + `packets/TEMPLATE.md` (rolling board: members join when `pulled`,
+  `refreshed:` lines record each pull); `docs/schema_decisions.md` (37 dated entries);
+  `policy/never_rewrite_history.md` + `policy/remote_sessions.md` copies; two workflows
+  (`cortex_check.yml` — check + pytest on push/PR; `ledger_merge.yml` — auto-merge of
+  ledger-only `claude/**` branches with `cortex.py check` on the trial-merge tree);
+  `scripts/cortex.py` (1613 lines: `check`, `gates [--grade [--write]]`, `rule`, `move`,
+  `new`; injectable date and fetch) and `scripts/ledger_merge.py` (221 lines: the Mind's
+  classifier with `phases/ rulings/ batches/` + `epics.md` as ledger, plus append-only
+  enforcement under `rulings/**`); 123 tests over `tests/fixtures/skeleton` (ten phases, one
+  per state; five rulings incl. a chain and a leave-to-finish; a batch record and review)
+  and `tests/fixtures/empty`; the generated `CLAUDE.md`, `.claude/hooks/session-start.sh`
+  and `.claude/settings.json` from `repos_sync.py --write`. Shipped in PyAutoBrain:
+  `config/policy.yaml` gains the `test_witness` row `pyautocortex: PyAutoCortex/tests`;
+  `tests/test_policy_seams.py` drops the phase-0 `WITNESS_EXEMPT` entry.
+- witness: `python3 scripts/cortex.py check` → OK on `tests/fixtures/skeleton`,
+  `tests/fixtures/empty` and the live tree; `python3 -m pytest tests -q` → 123 passed
+  (`Cortex Check` green on the PR — one `pull_request` run; the `push` trigger is
+  `main`-only, and `ledger_merge.yml` correctly did not fire on a `feature/**` branch);
+  PyAutoBrain `tests/test_policy_seams.py` → 18 passed (`Brain Tests` py3.12 + py3.13
+  green; `Docs` path-filtered out, nothing under `docs/` changed);
+  `python3 PyAutoMind/scripts/repos_sync.py --check` → 15 legs OK.
+- heart: readiness YELLOW (score 80) acknowledged by the human's `/prm` — PyAutoArray open
+  PR 9d old; release validation incomplete (no rehearsal for current source). Neither
+  touches PyAutoCortex or the Brain policy config.
+- decisions of note (all dated in `docs/schema_decisions.md`): ten phase states with
+  `legacy` / `legacy_wrong` as run-state quarantine, never a phase state; one ruling file
+  per phase plus a `Batch:` header; rulings chain (`Supersedes:` one id), never tree;
+  `accepted` superseded is not terminal; PR gates clear on merge only (closed-unmerged stays
+  open; closed-not-planned issues are dead gates); the trial-merge `check` in
+  `ledger_merge.yml` closes the ruling-id race between two branches; `projects.yaml` is
+  code-not-ledger (like `repos.yaml`); the restricted YAML subset is stdlib-parsed with a
+  PyYAML-parity test.
+- spec extensions made in slice B (recorded, not silent): a `Reset:` header; `move pulled
+  --pulled-to`; stricter `check` guards; extra optional flags; `rule --also` auto-supersedes
+  on accepted phases; `gates --grade` exits 1 on an unreadable ref (fails closed).
+- deviations from the prompt: `projects.yaml` is code not ledger; no PyAutoMind PR (the
+  session-hook propagation already fans out to every body-map row, so the Cortex needed no
+  fan-out edit); no `skills/`, so no `bin/install.sh` change.
+- follow-ups found, NOT filed (for the human): `rulings/AGENTS.md` and `batches/**/AGENTS.md`
+  are ledger-by-path, so a `claude/**` branch could auto-merge prose edits to them — decide
+  in phase 2 whether to carve them out of the ledger classifier; `ledger_merge.py` reads
+  stdin when not a TTY, so non-TTY callers need `</dev/null`; the transition table has no
+  explicit `awaiting-ruling` re-pull row.
+- epic: `cortex-birth` phase 1 SHIPPED; phase 2
+  (`draft/feature/pyautocortex/cortex_conductor_and_dashboard.md`) is unblocked, and so is
+  phase 3 (it gates on 1).
+- session: claude-code-cli, Fable architect; two delegated Fable slices (A schemas / docs /
+  fixtures, B `cortex.py` / `ledger_merge` / tests); close-out via `/prm` 2026-09-01.
+
+## Original prompt
+
 # Cortex phase 1 — the schema and the repo skeleton
 
 Type: feature
