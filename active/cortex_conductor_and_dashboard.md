@@ -22,6 +22,7 @@ Epic: cortex-birth
 Phase: 2
 Parent: draft/feature/pyautocortex/cortex_birth_epic.md
 Filed: 2026-09-01
+Issued: 2026-09-01
 
 Phase 2 of 7 in the PyAutoCortex birth epic. **Gate: phase 1.** Gates phases 4
 and 5. **Renderer contract: the Brain PR merges BEFORE the Cortex and Mind PRs**

@@ -152,7 +152,7 @@ manage them; they just cannot share one batch.
    ledger with ruling ids, `batches/` with rolling-board semantics and ONE
    review vocabulary, gates grammar, `cortex.py` lifecycle script, ledger-merge
    and never-rewrite-history policy, session-hook propagation. Gate: 0.
-2. `draft/feature/pyautocortex/cortex_conductor_and_dashboard.md` — Brain
+2. `active/cortex_conductor_and_dashboard.md` (issued 2026-09-01, PyAutoMind#380) — Brain
    `agents/conductors/cortex/`: census, stdlib dashboard render + Pages
    workflows, daily gate grading, the Cortex admission rule, collect scoring
    against the witness, the packet member format, the outside-workspace body-map
