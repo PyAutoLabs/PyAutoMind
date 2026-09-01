@@ -195,4 +195,14 @@
 - parallel-claim: worktree_check_conflict fired for PyAutoBrain + PyAutoScientist (organ-board-github-link) and PyAutoNerves (silence-colab-cli-message); all three PRs MERGED 2026-09-01T19:35Z, no live worktrees, entries awaiting /prm close-out — stale claims, own worktree taken (memory: repo-claim conflict allows parallel worktrees).
 - human-step: PyAutoLabs/PyAutoCortex created by hand on github.com (public, empty); NOT cloned locally in phase 0.
 - ordering-rule (human, 2026-09-01): wherever organs are listed, the order is Brain, Mind, Cortex, Memory, Heart, Hands, Nerves, Gut.
+- heart-ack:
+  - PyAutoArray: open PR 9d old
+  - release validation incomplete: no rehearsal for current source
 - repos:
+  - PyAutoMind (feature/cortex-birth-organ-row)
+  - PyAutoBrain (feature/cortex-birth-organ-row)
+  - PyAutoGut (feature/cortex-birth-organ-row)
+  - PyAutoNerves (feature/cortex-birth-organ-row)
+  - .github (feature/cortex-birth-organ-row)
+  - PyAutoScientist (feature/cortex-birth-organ-row)
+  - pyautolabs.github.io (feature/cortex-birth-organ-row)
