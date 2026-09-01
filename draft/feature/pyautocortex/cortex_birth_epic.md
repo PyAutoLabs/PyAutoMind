@@ -142,7 +142,7 @@ manage them; they just cannot share one batch.
 
 ## Phases (order is load-bearing)
 
-0. `draft/feature/pyautocortex/cortex_birth_repo_and_organ_row.md` — the human
+0. `active/cortex_birth_repo_and_organ_row.md` (issued 2026-09-01, PyAutoMind#377) — the human
    creates `PyAutoLabs/PyAutoCortex`; body-map organ row + `repos_sync.py
    --write`; `ORGANISM.md` row and boundary prose; `docs/organs/cortex.md`;
    theme palette + mark; `policy.yaml` board family; `install.sh` arrays; hub

@@ -22,6 +22,7 @@ Epic: cortex-birth
 Phase: 0
 Parent: draft/feature/pyautocortex/cortex_birth_epic.md
 Filed: 2026-09-01
+Issued: 2026-09-01
 
 Phase 0 of 7 in the PyAutoCortex birth epic. **Gates nothing external; gated by
 nothing.** Gates phase 1 (the skeleton needs a repo to land in).
