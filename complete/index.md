@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1242 records across 8 buckets.
+1243 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -124,6 +124,7 @@ markers; everything below GENERATED is rebuilt.
 - [autonerves-colab-cli-silence](2026/09/autonerves-colab-cli-silence.md) — setup_colab's non-Colab branch is now context-aware — the "You are not running
 - [euclid-3a-narrative-prose-restore](2026/09/euclid-3a-narrative-prose-restore.md) — the narrative lost at 355b309 restored across the repo — start_here.py 63-line
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md) — three workflow-only fixes to the queue automation broken since 2026-08-24 —
+- [multistart-quick-update-wiring](2026/09/multistart-quick-update-wiring.md) — `iterations_per_quick_update` / `live_visual_update` are now live for the
 - [numba-vs-jax-sparse-verdict](2026/09/numba-vs-jax-sparse-verdict.md) — the numba CPU positive-only solve and the JAX sparse-operator mode solve the
 - [organ-board-github-page-link](2026/09/organ-board-github-page-link.md) — every generated organ board HTML page now carries a "GitHub Page" link resolving
 - [prodigy-49-summary-steps-stop-reason](2026/09/prodigy-49-summary-steps-stop-reason.md) — ROOT CAUSE REFRAMED — the reported bug does not exist: a MultiStart search

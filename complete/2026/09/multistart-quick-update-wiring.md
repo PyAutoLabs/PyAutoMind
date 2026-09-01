@@ -1,3 +1,24 @@
+- shipped: 2026-09-01 — PyAutoFit main `c06f671a`, merged via
+  https://github.com/PyAutoLabs/PyAutoFit/pull/1556 (closes PyAutoFit#1552).
+- classification: bug (PyAutoFit) — batch 2026-08-31-pm member autofit-multistart-iterations;
+  phase 1 (library) of the two-phase prompt.
+- summary: `iterations_per_quick_update` / `live_visual_update` are now live for the
+  MultiStart gradient family — driven from the host-Python step loop (one count per
+  gradient step, deliberately, not per batched evaluation), with LiveDisplay /
+  BackgroundQuickUpdate set up through the same Fitness path as every other search; the
+  startup message states the unit honestly and the EXEMPT entry is removed from
+  test_quick_update_wiring.py. Merged last of the shift's PyAutoFit trio: rebased over
+  #1554/#1555 and flipped #1555's `quick_update_count == 0` inertness tripwire to `> 0`
+  exactly as that tripwire's comment demanded (162 tests green locally, CI 4/4). The
+  member parked at ship (supervised) on #1552; the PR was opened from the parked branch
+  at the human's request and accepted in the review.
+- lifecycle: dispatched 18:53Z as an unattended batch member; prompt retired from draft/
+  (the park never advanced it); phase 2 (autolens_workspace prose retune + AST guard)
+  split out to draft/docs/autolens_workspace/multistart_quick_update_workspace_leg.md;
+  accepted 2026-09-01 15:13; recorded 2026-09-01.
+
+## Original prompt
+
 # MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…
 
 Type: bug
