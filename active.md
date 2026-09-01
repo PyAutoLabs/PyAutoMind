@@ -193,5 +193,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/cortex-schema-skeleton
 - parallel-claim: worktree_check_conflict fired for PyAutoBrain (organ-board-github-link) — PR #326 MERGED 2026-09-01T19:35Z, no worktree, entry awaiting its own /prm; stale claim, own worktree taken.
-- bootstrap: PyAutoCortex is EMPTY on GitHub (no branches) — slice A clones it to the canonical root and makes the birth commit on main before branching.
+- bootstrap: PyAutoCortex birth commit d38e88b pushed to main 2026-09-01 (LICENSE, .gitignore, README stub); canonical clone at PyAutoCortex/.
 - repos:
+  - PyAutoCortex (feature/cortex-schema-skeleton)
+  - PyAutoBrain (feature/cortex-schema-skeleton)
