@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 162 |
+| [Backlog](#backlog) (`draft/`) | 170 |
 
 ## Start here
 
@@ -436,7 +436,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**170** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **63** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 26</summary>
@@ -2233,6 +2233,83 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
+<details>
+<summary><b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — 8 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — ledger: `draft/feature/pyautocortex/cortex_birth_epic.md` — DRAFT 2026-09-01 — awaiting human review of the ledger; nothing issued.</summary>
+
+```
+Continue the 'PyAutoCortex — the science organ: split science runs out of the Mind' epic. Its canonical state lives in draft/feature/pyautocortex/cortex_birth_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_birth_repo_and_organ_row.md">Cortex phase 0 — birth: the repo, the body-map row, the boundary…</a> — pyautocortex · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautocortex/cortex_birth_repo_and_organ_row.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_schema_and_skeleton.md">Cortex phase 1 — the schema and the repo skeleton</a> — pyautocortex · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautocortex/cortex_schema_and_skeleton.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_conductor_and_dashboard.md">Cortex phase 2 — the Brain conductor, the dashboard, gate grading…</a> — pyautocortex · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautocortex/cortex_conductor_and_dashboard.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_project_remotes_and_registration.md">Cortex phase 3 — private remotes for the Science-folder projects…</a> — pyautocortex · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautocortex/cortex_project_remotes_and_registration.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_migration_split_epics.md">Cortex phase 4 — migration: split the epics, backfill the rulings, move…</a> — pyautocortex · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautocortex/cortex_migration_split_epics.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_batch_member_kind.md">Cortex phase 5 — the second batch member kind: separate records, separate…</a> — pyautocortex · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautocortex/cortex_batch_member_kind.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_public_surfaces.md">Cortex phase 6 — public surfaces and the retrospective</a> — pyautocortex · medium · safe · normal</summary>
+
+```
+/start_dev draft/feature/pyautocortex/cortex_public_surfaces.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_birth_epic.md">PyAutoCortex — the science organ: split science runs out of the Mind</a> — pyautocortex · too-large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautocortex/cortex_birth_epic.md
+```
+
+</details>
+
+</details>
+
 ## Hygiene
 
 3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -2246,7 +2323,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-162 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+163 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2287,11 +2364,11 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautobrain/board_without_gh.md`
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
+- `draft/feature/pyautocortex/cortex_birth_epic.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
-- `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- _… and 122 more_
+- _… and 123 more_
 
 </details>
 

@@ -123,3 +123,19 @@ epic, never picked standalone.
 - title: CI test timing — finish the board, fast physical tests
 - ledger: draft/feature/pyautoheart/ci_timing_fast_tests_epic.md
 - notes: 9 phased prompts (1-9) — finish the timing board (smoke-timings ingester, permanent history in PyAutoHeart, dead unit-test/import/testmode legs live), snapshot a LEGACY timing round, then the _test physical+fast rebuilds (autogalaxy rehearses, autolens follows; one pin-regeneration wave each), CI caches, user-workspace/HowTo pass, and a source hot-spot census. ALL other source/workspace development is paused while this epic runs (stable state of truth; pin changes validated by unit tests + developer/profiling workspaces). Issue ONE phase at a time — no bulk issue queues. Design doc: docs/pyautoheart/test_performance_board_assessment.md (Planes B/C are phases 1-2).
+
+## cortex-birth
+- title: PyAutoCortex — the science organ: split science runs out of the Mind
+- ledger: draft/feature/pyautocortex/cortex_birth_epic.md
+- status: DRAFT 2026-09-01 — awaiting human review of the ledger; nothing issued.
+- notes: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
+  time, no bulk issue queues. Phase 0 is human-gated (the repo is created by hand;
+  no birth path exists). Decided 2026-09-01: new organ PyAutoCortex, a run/ruling
+  registry NOT a second Mind; rulings of record live in the Cortex (Option A);
+  gates are GitHub refs declared Cortex-side; Science-folder projects get private
+  PyAutoLabs remotes (code/config/wiki/witness only, no Euclid data). Migration
+  (phase 4) moves euclid-dr1-prep 4/5/6a/6b, jax-inference-profiling whole,
+  graphical-ep 3/4 science halves, cluster arc phase 11 and the subhalo active
+  entry across, with reciprocal links by slug. Supersedes two-slot-batching
+  phase 8 (batch_science_lane) and absorbs queue.md #2 on the science side;
+  phase 5 is gated on two-slot-batching's `collect` verb.
