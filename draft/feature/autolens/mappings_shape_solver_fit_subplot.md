@@ -20,7 +20,8 @@ ShapeSolver-based source-to-image region mappings, fit-level `subplot_mappings`,
 
 > Phase 2 of the `image-source-mappings` epic — ledger
 > `draft/feature/autoarray/image_source_mappings_epic.md`. **Depends on Phase 1
-> (`draft/feature/autoarray/mappings_regions_clumps_subplot.md`) being merged AND released**: this phase imports
+> (`complete/2026/09/image-source-mappings-p1.md` — merged 2026-09-02 as PyAutoArray#517, **not yet released**)
+> being merged AND released**: this phase imports
 > `Mapping` / `ImageRegion` and the `regions=` overlay from the released PyAutoArray. Phase 3 (workspace + tutorials)
 > opens only after this one releases.
 
@@ -73,8 +74,9 @@ LEGGOS prompt keeps its own scope (area magnification of an arc via the μ-map).
 - `PyAutoArray/autoarray/structures/triangles/shape.py` — add `Shape.contains(points_yx) -> bool array` (Circle radial,
   Triangle barycentric, Polygon even-odd, Square bounds, Point raises pointing at Circle/PointSolver) and
   `Shape.boundary(n=100) -> (N,2) yx`. Takes `(y, x)`; the docstring notes the legacy `(x, y)` order of
-  `mask(triangles)`. Small PyAutoArray change — it ships in the Phase 1 PR if timing allowed; if not, it is a tiny
-  **Phase 2a** PyAutoArray PR that must merge and release *before* the PyAutoLens PR opens.
+  `mask(triangles)`. Small PyAutoArray change — it did **not** ship in the Phase 1 PR (#517 leaves `shape.py`
+  untouched), so it **is** the tiny **Phase 2a** PyAutoArray PR, and it must merge and release *before* the
+  PyAutoLens PR opens.
 - `autolens/point/solver/shape_solver.py` — **ShapeSolver audit + reuse**: read `solve_triangles`, `steps`,
   `find_magnification`, the triangle containers (`autoarray/structures/triangles/{array,coordinate_array}*.py`:
   `containing_indices`, `neighborhood`, `up_sample`, `for_indexes`) and the `PYAUTO_SMALL_DATASETS` / JAX paths; fix

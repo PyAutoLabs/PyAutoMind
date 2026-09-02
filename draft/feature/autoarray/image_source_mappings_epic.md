@@ -123,8 +123,8 @@ Rendering: `plot_array` / `plot_inversion_reconstruction` gain `regions`, `regio
 
 | Phase | Prompt | State |
 |---|---|---|
-| 1 | active/mappings_regions_clumps_subplot.md | PR open https://github.com/PyAutoLabs/PyAutoArray/pull/517 |
-| 2 | draft/feature/autolens/mappings_shape_solver_fit_subplot.md | filed |
+| 1 | complete/2026/09/image-source-mappings-p1.md | **SHIPPED** 2026-09-02 — PyAutoArray#517 merged (`501c373f`), issue #515 closed. `pending-release`: the PyAutoArray **release** is still outstanding, and Phase 2 is gated on it. |
+| 2 | draft/feature/autolens/mappings_shape_solver_fit_subplot.md | filed — **blocked on the PyAutoArray release** (Phase 1 is merged but not released). Opening it is the human's call. Carries the **Phase 2a** `Shape.contains` / `Shape.boundary` work, which did *not* ship in #517 (`shape.py` untouched). |
 | 3 | draft/docs/autolens_workspace/mappings_guide_and_tutorial_rewrite.md | filed |
 
 ## Sequencing rule
