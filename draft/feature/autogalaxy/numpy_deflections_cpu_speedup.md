@@ -140,6 +140,24 @@ Baseline hst (Grid2D / Irregular / Tracer): Isothermal 2.0 / 2.2 / 6.1 ms; Power
 NFW 5.8 / 5.9 / 7.1 ms; Gaussian 11.0 / 12.4 / 23.7 ms; gNFW 358 / 446 / 721 ms; IsothermalSph 699 / 1.3 /
 3.6 ms; PowerLawSph 701 / 1.5 / 3.7 ms; NFWSph 591 / 9.9 / 14.2 ms; gNFWSph 1205 / 384 / 674 ms.
 
+**2026-09-02 — phase 1 SHIPPED to PR-open (PyAutoArray#514).** PRs, merge order: PyAutoArray#516
+(`to_grid` reads `_over_sampled`/`_over_sampler`; `Grid2D.over_sampled` + `over_sampler` short-circuit at
+sub-size 1) → PyAutoGalaxy#595 (`Galaxy.traced_grid_2d_from` no second deflection call at sub-size 1) →
+PyAutoLens#718 (`Tracer.traced_grid_2d_list_from` same) → autolens_profiling#210 (`scripts/lens/` axis,
+before/after, note). Suites: test_autoarray 1362, test_autogalaxy 1158, test_autolens 576, all green;
+every deflection pin held at rtol 1e-6 with no `--repin`; numba likelihood pins bit-identical on both
+A/B arms; workspace smoke `cpu_fast_modeling.py` exit 0. Heart YELLOW acknowledged (PyAutoArray PR 10d
+old; no release rehearsal) — recorded on `active.md`.
+After (hst, Grid2D direct → / Tracer →): IsothermalSph 699 ms → 0.99 ms (710×) / 3.6 → 1.4 ms;
+PowerLawSph 701 → 1.2 ms (570×); NFWSph 591 → 4.2 ms (142×); gNFWSph 1.21 s → 301 ms (4.0×, MGE remains);
+Tracer 1.7–3.9× on every profile (Isothermal 6.1 → 2.7 ms, PowerLaw 25.1 → 9.0 ms, gNFW 721 → 281 ms).
+Negative result, reported as such: the numba breakdown `Inversion build` row moves 1–2 ms on an
+Isothermal lens — inside host noise — because Isothermal deflections were already ~2 ms; the tracer
+saving scales with the profile (PowerLaw/gNFW models gain 16–440 ms per evaluation at tracer level).
+`jax_compile` warm compile 321 → 268 ms under unequal load: inconclusive, not re-pinned. Tracked breakdown
+artifacts left untouched (load-contaminated re-runs are not a valid after). Phases 2 and 3 unblocked
+once #516/#595/#718 merge (their cells and pins are on the #210 branch).
+
 ## Gates
 
 Every phase must clear all four before it ships:
