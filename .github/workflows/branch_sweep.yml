@@ -26,6 +26,11 @@ name: Branch Sweep
 # never an open PR's head, never a branch git cannot prove is contained) live
 # in the script, not here — see PyAutoBrain/bin/branch_sweep.sh and
 # PyAutoBrain/skills/repo_cleanup/SKILL.md.
+#
+# `integration/*` batch review refs are the one exception to containment: they
+# are merge previews, so nothing can ever prove them contained. They expire on
+# the `sweep-after:` date of the batch record that published them, which is why
+# PyAutoMind's `batches/` is passed as `--records`. Without it they are kept.
 
 on:
   workflow_dispatch:
@@ -88,6 +93,7 @@ jobs:
             --owner '${{ github.repository_owner }}' \
             --name '${{ github.event.repository.name }}' \
             --mode "$mode" \
+            --records "$GITHUB_WORKSPACE/batches" \
             --limit '${{ inputs.limit || 0 }}' 2>&1 | tee sweep.log
 
           # The run summary is the readable surface on a phone.
