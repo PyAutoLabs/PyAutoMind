@@ -1,3 +1,81 @@
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/47 (closed completed 2026-09-01T19:35Z)
+- completed: 2026-09-01
+- workspace-pr: euclid_strong_lens_modeling_pipeline
+  https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/48 (`4c4970e`, merge `dddec89`,
+  merged 2026-09-01T19:35Z), branch `feature/restore-narrative-prose` — a single commit, docs-only.
+- classification: docs (euclid) — epic `euclid-dr1-prep`, phase 3 of the Mind phases (0, 1, 2, 3, 4, 8, 9;
+  the old science phases 4–6 became Cortex euclid phases 4–7 in the 2026-09-01 Cortex split). Gates: phases 1
+  and 2 (both shipped). Gates Mind phase 4 (`cpu_vis_lp_jax_vis_pix_numba_submission.md`, issue euclid#49) and
+  thereby Cortex euclid phase 4, whose gate refs are `euclid#48` (this PR) and `euclid#49`.
+- summary: restores the in-script narrative prose that was substantially lost at `355b309` (2026-04-02,
+  −812 prose lines) and diluted by the phase-1 `Science/euclid` port. `start_here.py` goes from a 63-line
+  shim to the fully documented end-to-end new-user guide (24 sections, ~630 prose lines) while keeping the
+  phase-1 code-drift fix — execution still delegates to `scripts.initial_lens_model.fit`.
+  `scripts/initial_lens_model.py`'s empty `__Source Pix__` header becomes nine sections covering the whole
+  pixelized stage (Hilbert image mesh, adapt image, edge zeroing, Delaunay + `reg.AdaptSplit`, S/N
+  over-sampling, the vis_pix model), with intro material de-duplicated to pointers at `start_here.py`.
+  `scripts/full_model.py` 10 → 26 sections with the SLaM introduction (including `__Design Choices__`)
+  restored from the deleted `pipelines/` tree and rewritten against the current five-search flow;
+  `lens_model_waveband.py` 0 → 22; `mge_lens_only.py` 0 → 27; `sersic_lens_model.py` 2 → 9;
+  `simulator.py` 16 → 21 (three empty headers filled); six `catalogue/scripts/` producers 0 → 5–9 sections
+  each. Recovered prose was 4+ months stale, so every claim was drift-verified against the current code and
+  `autolens_workspace` before restoration — two false claims in existing `full_model.py` prose were corrected
+  (2×20 not 2×30 Gaussians; mass priors seeded from SOURCE PIX 1, not SOURCE LP), as were a false layout
+  claim in `multi_wavelength.py` and stale claims in `lens_model_waveband.py` / `mge_lens_only.py` (bands are
+  blurrier not coarser; 40 Gaussians not 60; the stale "called by" claim dropped).
+  Also lands the 2026-08-31 batch-review addendum: README structural edits (Simulating-a-lens trimmed to one
+  paragraph + CLI and moved below Command-Line Arguments; the `WORST_BAND`/`WORST_PSF_*` section removed with
+  its two missing facts moved into `util.py` at the read sites; `## Documentation` moved above The Scripts;
+  the group/point-source "future releases" line softened to the honest history); the `scripts/tools/` move
+  (`diagnose_latent.py`, `build_inspect.py`, `diagnose_latent_vis_pix.py`) with every registration, path-depth
+  and reference updated — including `config/build/profile_smoke.yaml`, which was not on the plan's list but
+  whose path-substring override would have silently stopped applying; `AGENTS.md` shortened 471 → 251 lines
+  mirroring `autolens_workspace/AGENTS.md`'s shape; and cross-links (`catalogue/README.md` ↔ `workflow/`,
+  `workflow/README.md` → its `example/` folder, and the `workflow/examples` → `workflow/example` typo fix).
+- witness / verification (member-reported at the ship checkpoint on #47, and restated in the PR body):
+  `python -m pytest -q` → **61 passed** (fast + slow); `.github/scripts/run_smoke.py` → **9/9 PASS**,
+  including the moved tools path. **Prose-only proof**: every modified `.py` has an AST identical to `main`
+  once string-expression statements are stripped, the only exceptions being the path fixes forced by the
+  `scripts/tools/` move (three moved files' `parent` depths, one import in `simulator.py`), each exercised by
+  the smoke run. No empty `__Section__` header anywhere in the repo; drift greps for `Jammy2211`,
+  `slam_pipeline`, `workflow/examples`, `Preloads`, `source_pixel_zeroed` and mask_radius-as-argument all
+  return zero. The prompt's `Consequence: judge` means there is no separate witness artifact.
+- review: verdict CLEAN, but **run by the branch's author — the independent adversary leg was NOT run**; the
+  parked checkpoint on #47 was the human review instead. Two lifted claims were basis-cited (the
+  strip-and-compare AST run; `mge_lens_only` 0 → 27 by header count with drift greps zero).
+- heart: not re-evaluated in the web container (no Heart checkout). The dispatch-time YELLOW acknowledgement
+  recorded in `batches/2026-08-31-pm.md` covers this docs-only, single-repo change; no new reasons observed.
+- autonomy / human path: run under `--auto` as batch `2026-08-31-pm` member `euclid-3a-prose`, effective tier
+  `supervised`, so the run **parked at ship sign-off** with the branch pushed and no PR
+  (`autonomy_log.md` stage was `parked`). The human then requested the PR at **2026-08-31 21:24Z**; PR #48 was
+  opened from the parked branch so the batch review would judge a real PR with CI, and merged via `/prm` on
+  **2026-09-01**. `batches/reviews/2026-08-31-pm.md` records "merged via /prm 2026-09-01; no packet ruling
+  recorded" — there is no review packet ruling for this member.
+- ledger reconstruction note: **this Mind close-out was written on 2026-09-02**, a day after the merge,
+  because the cloud session's ledger branch `claude/euclid-3a-prose-restore-8fk2qw` was never merged into
+  `main` — the prompt was still sitting in `draft/docs/euclid/` and being offered on the dashboard as pickable
+  backlog. That branch (issue filing, idea sync, ship-sign-off park) was landed first, then this record
+  written. The dates above are the real ship dates, not the reconstruction date.
+- follow-ups (from the ship checkpoint on #47; the first is filed, the other two are not):
+  - **filed**: `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md` — the `vis_lp` search passes
+    `batch_size=50`, but `af.Nautilus` has no such parameter (`n_batch` is the real one), so the kwarg is
+    silently swallowed. The prose no longer repeats the claim; the code question was deliberately left to a
+    bug prompt because a docs phase changes no behaviour. This prompt arrived on `main` with the ledger branch
+    landed above.
+  - **not filed**: `catalogue/README.md`'s "every stage skips already-done work" overstates — `multi_wavelength.py`
+    has no skip.
+  - **not filed**: `workflow/example/csv/lens_mass.py`'s docstring names a filename it does not write, and
+    duplicates a `name=` in its shear columns.
+- judgment call recorded at the checkpoint: the `AGENTS.md` shortening was treated as in scope (the addendum
+  quoted the ask verbatim but listed only two scope amendments — README edits and the tools move); it is one
+  commit-splittable file if that reading was wrong. The human merged without amending it.
+- epic: `euclid-dr1-prep` Mind phases 0–3 SHIPPED; next is phase 4
+  `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` — **issue euclid#49 is already open**,
+  pre-opened at filing as the gate ref the Cortex science phase names; reuse it in `start_dev`, never open a
+  second. Cortex euclid phase 4 gates on `euclid#48` (merged here) and `euclid#49`.
+
+## Original prompt
+
 # Restore the narrative prose: `start_here.py` as the end-to-end guide, `scripts/` as its chapters
 
 Type: docs

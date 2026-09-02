@@ -107,3 +107,9 @@ epic, never picked standalone.
 - ledger: draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
 - status: phase 1 starting 2026-09-02
 - notes: three phase prompts — `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md` (measure + `*Sph` decorator + tracer double trace), `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md` (MGE/Faddeeva), `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md` (PowerLaw series, NFW masks, shared geometry); the profiling home for every phase's before/after numbers is `autolens_profiling/scripts/lens/`.
+
+## image-source-mappings
+- title: Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide
+- ledger: draft/feature/autoarray/image_source_mappings_epic.md
+- status: phase 1 filed 2026-09-02
+- notes: three phase prompts — Phase 1 PyAutoArray (`Mapping`/`ImageRegion` objects, `Inversion.source_clumps_from`, `regions=` overlay on `plot_array`/`plot_inversion_reconstruction`, restored `subplot_mappings`), Phase 2 PyAutoLens (ShapeSolver as the parametric engine + validation suite, `autolens/lens/mappings.py`, fit-level `subplot_mappings`, brightest multiple-image positions for spectroscopic follow-up), Phase 3 workspace (`guides/mappings.py`, tutorial_2_mappers rewrite with polygons, dead index-section fixes). Library-first; issue ONE phase at a time. Proceeds alongside ci-timing-fast-tests by user decision (2026-09-02).
