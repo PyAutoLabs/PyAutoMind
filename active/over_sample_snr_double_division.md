@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-09-02
 Consequence: glance
 Witness: on the subhalo_validation pl_eff_1_outer dataset the over-sample map handed to `apply_over_sampling(over_sample_size_pixelization=...)` by every fixed call site has sub-size 4 on about 30 % of the mask (the pixels with source S/N > 3), not 90 %; a regression test in autolens_workspace_test asserts the fraction on a simulated lens.
 Review-minutes: 3

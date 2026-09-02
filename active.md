@@ -153,3 +153,12 @@
     (removes the q=0.9999 clamp bias), exact exp_term mask; cache lever dropped (0.3 %).
     Re-pin of dark/stellar lens cells with mpmath provenance. Targets re-scoped to measured
     ceilings (gNFW ~2.3x, gNFWSph ~59x, Gaussian sph ~16x). Fable session; execution → Opus.
+
+## over-sample-snr-double-division
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/523
+- prompt: active/over_sample_snr_double_division.md
+- issued: 2026-09-02
+- session: local CLI (Fable architect, Opus execution) — claude --resume session_01UpLMvgejg1kNXbG3P789wy
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/over-sample-snr-double-division
+- repos:
