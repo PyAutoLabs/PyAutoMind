@@ -61,7 +61,7 @@ The submit button assembles exactly:
 - review-minutes-actual: <integer or (not given)>
 
 ## <member-slug> — <HEALTH>
-- decision: accept|tweak|reject|defer|leave-to-finish|structure-ok|UNREVIEWED
+- decision: dev: merge|tweak|reject|defer|structure-ok|UNREVIEWED · science: accept|rerun|drop|leave-to-finish
 - ruled: yes|no
 
 <note verbatim, or (no note)>

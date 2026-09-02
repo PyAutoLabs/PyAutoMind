@@ -66,7 +66,8 @@ Two honest shapes, and this should be settled before drafting:
 - a **methods note / project write-up** in `paper/` for internal use and to
   ground the PyAutoFit issues; or
 - a **publishable short paper**, which realistically wants the N=25–50 scale-up
-  (`slope_hierarchy_n25_scale_up.md`) first, since N=5 is thin for a headline
+  (PyAutoCortex `phases/slope_hierarchy/n25_scale_up.md` — moved out of the Mind
+  2026-09-01) first, since N=5 is thin for a headline
   parity claim.
 
 Prefer the note unless the scale-up has already run — the note costs a session

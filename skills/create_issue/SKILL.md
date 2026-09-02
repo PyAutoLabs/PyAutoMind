@@ -75,6 +75,10 @@ triage — that's `$start-dev`).
 
 ### 3. Assemble + create the issue
 
+**If the prompt body carries an `Issue:` line, reuse that issue — skip creation** (a
+Cortex-spawned gate ref, filed with its issue already open; see REFERENCE.md "A
+Cortex-spawned dev follow-up gets its issue at filing"). Never open a second.
+
 Build the body in this structure, then create it (present for review first):
 
 ```markdown

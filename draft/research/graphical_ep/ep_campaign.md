@@ -7,12 +7,11 @@ Themes:
 Difficulty: too-large
 Autonomy: human-required
 Priority: high
-Status: campaign map — phases route through /start_dev one at a time; this
+Status: campaign map — phases route through /start_dev one at a time; this file is never issued itself and nothing here is bulk-issued
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
 Epic: graphical-ep
-        file is never issued itself and nothing here is bulk-issued
 Filed: 2026-08-19 (backfilled from git)
 
 Filed 2026-08-19 from James's multi-phase EP brief (raw text preserved in the
@@ -35,8 +34,8 @@ its own prompt file. Update the table as phases ship.
 |---|-------|--------|--------------------|
 | 1 | Analytic Gaussian benchmark (the keystone — start here) | `research/graphical_ep/analytic_gaussian_benchmark.md` | filed |
 | 2 | Scatter-collapse cure or caveat | `bug/autofit/ep_scale_collapse_basin_cure_or_caveat.md` | filed earlier; 2026-08-19 levers added (thorough hierarchical-factor sampler, TruncatedGaussian zero-boundary test); leg 1 guard shipped (#1465) |
-| 3 | Graphical (non-EP) JAX scaling | `research/graphical_ep/slope_hierarchy_n25_scale_up.md` (+ measurement addendum) and `graphical_scoping.md` sub-tasks | filed earlier |
-| 4 | IC50 EP end-to-end + scale ladder | `research/graphical_ep/ic50_ep_scale_up.md` (companion: `feature/autofit/ep_lbfgs_jax.md`) | filed |
+| 3 | Graphical (non-EP) JAX scaling | → PyAutoCortex `phases/slope_hierarchy/n25_scale_up.md` (phase 1 of project `slope_hierarchy`; carries the measurement addendum) and `graphical_scoping.md` sub-tasks | **moved to the Cortex 2026-09-01** (was `research/graphical_ep/slope_hierarchy_n25_scale_up.md`); Cortex state `planned` |
+| 4 | IC50 EP end-to-end + scale ladder | → PyAutoCortex `phases/ic50_workspace/ep_scale_up.md` (phase 1 of project `ic50_workspace`; dev companion stays in the Mind as `feature/autofit/ep_lbfgs_jax.md`) | **moved to the Cortex 2026-09-01** (was `research/graphical_ep/ic50_ep_scale_up.md`); Cortex state `planned` |
 | 5 | Diagnostics sufficiency checkpoint | no prompt yet — deliberate | judge after phases 2 & 4 produce real runs; the 2026-07 diagnostics wave (#1330/#1335) shipped and caught #1383; graphical_scoping sub-tasks 5–6 (summary JSON, dashboard) are the likely follow-ups |
 | 6 | Profiling: autofit_profiling repo + two epics | `research/autofit/autofit_profiling_bootstrap.md` | filed; repo creation human-gated |
 

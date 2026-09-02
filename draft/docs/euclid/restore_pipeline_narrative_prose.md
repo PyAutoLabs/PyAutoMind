@@ -21,9 +21,10 @@ Phase: 3
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-31
 
-Phase 3a of the Euclid DR1 preparation epic — inserted 2026-08-31 and **the next phase to
-run**. **Gate: phases 1 and 2** (both shipped). Runs before phase 3b
-(`cpu_vis_lp_jax_vis_pix_numba_submission.md`), because 3b adds documentation about
+Phase 3 of the Euclid DR1 preparation epic (was 3a — inserted 2026-08-31, renumbered to a
+plain 3 on 2026-09-01 in the Cortex split) and **the next phase to
+run**. **Gate: phases 1 and 2** (both shipped). Runs before phase 4
+(`cpu_vis_lp_jax_vis_pix_numba_submission.md`, was 3b), because phase 4 adds documentation about
 submission routes and should be written into a repo whose narrative register has already
 been restored.
 
