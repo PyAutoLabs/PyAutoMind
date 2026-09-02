@@ -177,10 +177,14 @@
 
 ## image-source-mappings-p1
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/515
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/517
+- heart-ack:
+  - "PyAutoArray: open PR 10d old"
+  - "release validation incomplete: no rehearsal for current source"
 - prompt: active/mappings_regions_clumps_subplot.md
 - issued: 2026-09-02
 - session: claude --resume e962a3a7-cee9-4168-93a5-e7067699f2d7
-- status: library-dev
+- status: library-shipped, workspace-pending
 - epic: image-source-mappings (phase 1 — ledger draft/feature/autoarray/image_source_mappings_epic.md)
 - worktree: ~/Code/PyAutoLabs-wt/image-source-mappings-p1
 - parallel-claim: PyAutoArray — numpy-deflections-p1 (#514) holds it in its own worktree; file sets disjoint (this task: autoarray/inversion/, autoarray/plot/, config/visualize/; theirs: grid over-sampling decorator + tracer path); own worktree approved by the human 2026-09-02
