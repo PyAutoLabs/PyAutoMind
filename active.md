@@ -183,20 +183,3 @@
     report step so a failed run comments on its issue instead of silence.
     Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
     green queue_filing.yml run on #71 that opens a filing PR.
-
-## cortex-registration
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/382
-- prompt: active/cortex_project_remotes_and_registration.md
-- issued: 2026-09-01
-- epic: cortex-birth (phase 3 of 7; ledger draft/feature/pyautocortex/cortex_birth_epic.md; gate phase 1 SHIPPED; phase 2 SHIPPED #380)
-- session: claude-code-cli (Fable architect; Opus execution; laptop lane — Science-folder repos edited in place on their own main)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/cortex-registration
-- parallel-claim: worktree_check_conflict fired for PyAutoBrain (organ-board-github-link, merged 2026-09-01, awaiting its own /prm) — stale; own worktree taken. autolens_profiling has two live science worktrees (inference-programme-ledger, refs-v1-phase1-redo-dispatch) on disjoint files (this task edits CORTEX.md, hpc/sync, hpc/README).
-- human-steps: create PyAutoLabs/subhalo_validation (private) then the push; euclid ruling = remote none (approved with the plan 2026-09-01).
-- heart-ack: YELLOW score 80 (2026-09-01T21:02 snapshot), acknowledged by the human for this ship. Reasons verbatim: "! PyAutoArray: open PR 10d old"; "? release validation incomplete: no rehearsal for current source". Both pre-existing and structurally unrelated to this task — no PyAuto library source is touched (PyAutoCortex registry/docs, PyAutoBrain cortex conductor, autolens_profiling hpc/sync + CORTEX.md).
-- repos:
-  - PyAutoCortex (feature/cortex-registration)
-  - PyAutoBrain (feature/cortex-registration)
-  - autolens_profiling (feature/cortex-registration)
-  - /mnt/c/Users/Jammy/Science/subhalo_validation (main, direct commits; not a workspace repo)
