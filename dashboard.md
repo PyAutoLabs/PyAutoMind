@@ -258,18 +258,10 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev — ⚠️ gates a Cortex phase → phases/euclid/dr1_prelim_10_lens_science_run.md</summary>
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/mappings_shape_solver_fit_subplot.md">ShapeSolver-based source-to-image region mappings, fit-level <code>subplot_mappings</code>, brightest multiple-image positions, and the ShapeSolver…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/719">issue #719</a> — issued 2026-09-02 — library-shipped (PR-A #518 → PR-B, awaiting /prm)</summary>
-
-```
-/start_dev active/mappings_shape_solver_fit_subplot.md
 ```
 
 </details>
@@ -1695,7 +1687,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-02 | issued | <a href="active/mappings_shape_solver_fit_subplot.md">ShapeSolver-based source-to-image region mappings, fit-level…</a> |
 | 2026-09-02 | filed | <a href="draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md">Precompute fixed-geometry Gaussian deflection angles and rescale by…</a> |
 | 2026-09-02 | issued | <a href="active/numpy_deflections_p2_mge_wofz.md">Numpy deflections phase 2: MGE / Faddeeva — scipy wofz on numpy…</a> |
 | 2026-09-02 | issued | <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba +…</a> |

@@ -124,7 +124,7 @@ Rendering: `plot_array` / `plot_inversion_reconstruction` gain `regions`, `regio
 | Phase | Prompt | State |
 |---|---|---|
 | 1 | complete/2026/09/image-source-mappings-p1.md | **SHIPPED** 2026-09-02 — PyAutoArray#517 merged (`501c373f`), issue #515 closed. `pending-release`: the PyAutoArray **release** is still outstanding, and Phase 2 is gated on it. |
-| 2 | active/mappings_shape_solver_fit_subplot.md | **ACTIVE** 2026-09-02 — issue https://github.com/PyAutoLabs/PyAutoLens/issues/719, prompt active/mappings_shape_solver_fit_subplot.md, branch feature/image-source-mappings-p2 — PRs open: PyAutoArray#518 (phase 2a + three solver/overlay fixes, CI green) → PyAutoLens#720 (awaiting /prm in that order). Opened by user decision ahead of the PyAutoArray release that gated it; PR-B still merges only after PR-A. |
+| 2 | complete/2026/09/image-source-mappings-p2.md | **SHIPPED** 2026-09-02 — PyAutoArray#518 merged (`c9f67e78`, phase 2a + three solver/overlay fixes) → PyAutoLens#720 merged (`091fbdff`, ShapeSolver validation suite + `al.mappings` + `subplot_mappings`), issue #719 closed. Both repos `pending-release`: **both releases are still outstanding**, and Phase 3 is gated on them. |
 | 3 | draft/docs/autolens_workspace/mappings_guide_and_tutorial_rewrite.md | filed |
 
 ## Sequencing rule

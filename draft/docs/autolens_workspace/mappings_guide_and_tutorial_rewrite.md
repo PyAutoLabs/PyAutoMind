@@ -21,9 +21,10 @@ Filed: 2026-09-02
 Mappings guide (`guides/mappings.py`), tutorial_2_mappers rewrite with polygons, and dead index-section fixes across the workspaces.
 
 > Phase 3 of the `image-source-mappings` epic — ledger
-> `draft/feature/autoarray/image_source_mappings_epic.md`. **Depends on Phase 2
-> (`draft/feature/autolens/mappings_shape_solver_fit_subplot.md`) being merged AND released**, which itself depends on
-> Phase 1 — the guide and the rewritten tutorial call both libraries' new APIs, so both must be on PyPI first.
+> `draft/feature/autoarray/image_source_mappings_epic.md`. Phase 2 is **merged** (record
+> `complete/2026/09/image-source-mappings-p2.md` — PyAutoArray#518, PyAutoLens#720) but **not yet released**; this phase
+> stays blocked until **both** the PyAutoArray and PyAutoLens releases land, because the guide and the rewritten tutorial
+> call both libraries' new APIs, so both must be on PyPI first.
 
 ## The guide
 
