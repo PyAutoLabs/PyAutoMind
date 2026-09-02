@@ -105,7 +105,7 @@ print(m.from_mode(np.asarray(10.0), DiagonalMatrix(np.asarray(m.variance))).base
   not covered by #1332 F1-F10, #1338, #1498, #1500, #1527
 - Campaign ledger: `draft/research/graphical_ep/ep_campaign.md` (phase 1)
 - Related research: `draft/research/graphical_ep/transformed_message_declares_support.md`
-- Siblings: `draft/bug/autofit/ep_prior_id_zero_collides_with_factor_value.md`,
+- Siblings: `complete/2026/09/ep-prior-id-zero.md` (D1 shipped 2026-09-02, PyAutoFit#1558),
   `draft/bug/autofit/ep_laplace_covariance_and_failed_update_projection.md`,
   `draft/bug/autofit/samples_errors_at_sigma_instance_prior_valued_model.md`,
   `draft/bug/autofit/ep_scale_collapse_basin_cure_or_caveat.md` (phase 2)

@@ -123,25 +123,6 @@
   - "PyAutoArray: open PR 10d old"
   - "release validation incomplete: no rehearsal for current source"
 
-## ep-prior-id-zero
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1557
-- prompt: active/ep_prior_id_zero_collides_with_factor_value.md
-- issued: 2026-09-02
-- status: library-dev
-- epic: graphical-ep (fix wave 1/3: D1 → D4/D5 → D2/D3; ledger draft/research/graphical_ep/ep_campaign.md)
-- worktree: ~/Code/PyAutoLabs-wt/ep-prior-id-zero
-- parallel-claim: PyAutoFit also claimed by resampling-info-summary-section (web session, no worktree, disjoint files — non_linear/samples summary vs mapper/variable + graphical); autofit-prodigy-49's PR #1555 is merged. Own worktree from origin/main c06f671ad.
-- heart-ack:
-  - PyAutoArray: open PR 10d old
-  - release validation incomplete: no rehearsal for current source
-- repos:
-  - PyAutoFit: feature/ep-prior-id-zero
-- summary: |
-    FactorValue sentinel id 0 == first prior's id → corrupted multi-variable factor
-    gradients; fix sentinel identity + type-aware Prior.__eq__ + add the cavity
-    gradient after the VJP. Acceptance: analytic_gaussian.py leg A mu mean PASS.
-    Fable session; implementation delegated to a Fable subagent.
-
 ## batch-review-integration-p3
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/339
 - issued: 2026-09-02

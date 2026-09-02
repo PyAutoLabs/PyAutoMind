@@ -131,7 +131,7 @@ evidence.
   adjacent: #1332 F8/F10
 - Campaign ledger: `draft/research/graphical_ep/ep_campaign.md` (phases 1-2)
 - Phase 2 prompt: `draft/bug/autofit/ep_scale_collapse_basin_cure_or_caveat.md`
-- Siblings (same dir): `ep_prior_id_zero_collides_with_factor_value.md` (do first),
+- Siblings (same dir): `ep_prior_id_zero_collides_with_factor_value.md` (done — `complete/2026/09/ep-prior-id-zero.md`, PyAutoFit#1558 merged 2026-09-02),
   `ep_message_support_and_transform_lost_in_projection.md`, `samples_errors_at_sigma_instance_prior_valued_model.md`
 - Scripts: `autofit_workspace_test/scripts/graphical/analytic_{reference,ep_minimal,autofit,gaussian,gaussian_priors,gaussian_collapse}.py`
   on branch `feature/analytic-gaussian-benchmark`

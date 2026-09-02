@@ -88,7 +88,7 @@ cleaner contract; pick it unless it breaks an existing caller.
   - evidence comments: https://github.com/PyAutoLabs/autofit_workspace_test/issues/91#issuecomment-5512686880 and https://github.com/PyAutoLabs/autofit_workspace_test/issues/91#issuecomment-5513518379
 - PyAutoFit#1405 (umbrella for the EP findings; this one is adjacent, not a cause) — https://github.com/PyAutoLabs/PyAutoFit/issues/1405
 - Campaign ledger: `draft/research/graphical_ep/ep_campaign.md` (phase 1)
-- Siblings: `draft/bug/autofit/ep_prior_id_zero_collides_with_factor_value.md`,
+- Siblings: `complete/2026/09/ep-prior-id-zero.md` (D1 shipped 2026-09-02, PyAutoFit#1558),
   `draft/bug/autofit/ep_laplace_covariance_and_failed_update_projection.md`,
   `draft/bug/autofit/ep_message_support_and_transform_lost_in_projection.md`
 - Scripts: `autofit_workspace_test/scripts/graphical/analytic_{reference,ep_minimal,autofit,gaussian,gaussian_priors,gaussian_collapse}.py`

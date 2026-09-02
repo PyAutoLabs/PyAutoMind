@@ -52,7 +52,7 @@ PyAutoFit#1405. Each mechanism is a Mind prompt under `draft/bug/autofit/`:
 
 | # | Mechanism | Prompt | Size |
 |---|-----------|--------|------|
-| D1 | The first prior of a process (id 0) compares equal to the `FactorValue` sentinel, so every multi-variable factor gradient is corrupted; leg A `mu` stays at its start (50.00 ± 20.6 vs 50.86 ± 4.11) | `ep_prior_id_zero_collides_with_factor_value.md` | small, safe — **do first** |
+| D1 | The first prior of a process (id 0) compares equal to the `FactorValue` sentinel, so every multi-variable factor gradient is corrupted; leg A `mu` stays at its start (50.00 ± 20.6 vs 50.86 ± 4.11) | `complete/2026/09/ep-prior-id-zero.md` | **SHIPPED 2026-09-02** — PyAutoFit#1558 merge `809b4fd85ce308cb7bcd18b58e1202ad73d82fba` (PyAutoFit#1557). Leg A `mu` mean now exact (a = 0.000), SUCCESS = 20; remaining std bias (3.76 vs 4.11) is D2 |
 | D2+D3 | Laplace "covariance" = mean-field precision + one non-accumulating random diagonal secant (no factor curvature; result depends on prior ids through sampling order); a failed line search still projects the start point and overwrites the message | `ep_laplace_covariance_and_failed_update_projection.md` | medium — the phase-2 mechanism |
 | D4+D5 | Truncation limits dropped by `from_natural_parameters`/`__pow__` (leg B σ message returns limits (−inf, inf)); `TransformedMessage.from_mode` skips the Jacobian for scalar variables (log-σ leg never moves) | `ep_message_support_and_transform_lost_in_projection.md` | medium |
 | D6 | `errors_at_sigma(as_instance=True)` crashes on a prior-valued global model | `samples_errors_at_sigma_instance_prior_valued_model.md` | small, safe |

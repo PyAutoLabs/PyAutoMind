@@ -1,3 +1,40 @@
+## ep-prior-id-zero
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1557
+- completed: 2026-09-02
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1558 (merge `809b4fd85ce308cb7bcd18b58e1202ad73d82fba`)
+- epic: graphical-ep (fix wave 1/3: D1 → D4/D5 → D2/D3; ledger `draft/research/graphical_ep/ep_campaign.md`)
+- summary: |
+    The first prior created in a process gets id 0, and the `FactorValue` sentinel (a class-as-`Variable`)
+    also carried id 0 / hash 0. `Prior.__eq__` compared ids without a type check, so `GaussianPrior(id=0) ==
+    FactorValue` was `True` and `AbstractJacobian.grad` had its VJP seed (`{FactorValue: 1.0}`) overwritten by
+    that prior's cavity gradient — every multi-variable factor gradient was wrong whenever a graph contained
+    the process's first prior. One-variable factors were unaffected, which is why analysis factors converged
+    and only the hierarchical factor in the exactly Gaussian EP graph stalled (leg A `mu` stuck at
+    50.0000 ± 20.6 vs closed form 50.86 ± 4.11, 0 SUCCESS updates).
+    Two independent fixes: `VariableMetaClass.SENTINEL_ID = -1` gives the sentinel an id no `Variable`
+    instance can take and `Variable.__eq__` / `Prior.__eq__` are type-aware in both directions (hashes
+    unchanged); and the free-variable cavity gradient is no longer merged into the VJP seed — `grad(values)`
+    seeds only from `cotangent_variables` and adds input-keyed terms after the pull-back, so the gradient
+    stays right even if a future sentinel collides. New `test_gradient_id_zero.py` (4 tests, all fail on
+    old main); `pytest test_autofit`: 2391 passed, 2 skipped.
+- referee after: |
+    `autofit_workspace_test/scripts/graphical/analytic_gaussian.py` leg A: `mu` mean 50.8596 (a = 0.000; was
+    stuck at 50.0000), every `x_i` mean a = 0.000, hierarchical SUCCESS = 20 (was 0). Remaining leg A miss is
+    the std (3.76 vs 4.11, −8.5 %) — the Laplace-covariance defect D2
+    (`ep_laplace_covariance_and_failed_update_projection.md`, next in the wave). Leg B / the prior-family
+    sweep now collapse *harder* (~2.9e-5) because the projection actually runs instead of stalling — expected,
+    owned by D2/D4 (`ep_message_support_and_transform_lost_in_projection.md`). Tolerances untouched.
+- traps: |
+    - JVP/VJP property names are mirrored: on `JacobianVectorProduct`, `out_variables` means the *inputs*
+      (`left_variables` is the cotangent side); `VectorJacobianProduct` is the other way round. Read
+      `cotangent_variables` rather than the raw names.
+    - `Laplace.refine_state` samples the global RNG, so per-update status flags (SUCCESS / BAD_PROJECTION /
+      FAILURE) vary run to run; assert on means and on "at least one SUCCESS", not on exact counts.
+    - No workspace follow-up: the autofit parity scripts in `autofit_workspace_test` are re-run per fix and
+      un-parked at the end of the wave, not per PR.
+
+## Original prompt
+
 # EP: the first prior of a process (id 0) collides with the `FactorValue` sentinel, corrupting every multi-variable factor gradient
 
 Type: bug

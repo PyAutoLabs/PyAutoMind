@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1249 records across 8 buckets.
+1250 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -131,6 +131,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-public-surfaces](2026/09/cortex-public-surfaces.md) — closed completed 2026-09-02
 - [cortex-registration](2026/09/cortex-registration.md) — closed completed 2026-09-01
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
+- [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
 - [numpy-deflections-p1](2026/09/numpy-deflections-p1.md)
 - [organ-board-github-link](2026/09/organ-board-github-link.md) — Every organ board header now carries a `GitHub Page` link beside its existing
