@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/batch_review_integration_branches_p3_push.md">Batch review integration branches phase 3: --push, never-force refresh, sweep expiry</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/339">issue #339</a> — issued 2026-09-02 — library-dev</summary>
+<details><summary>📋 <a href="active/batch_review_integration_branches_p3_push.md">Batch review integration branches phase 3: --push, never-force refresh, sweep expiry</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/339">issue #339</a> — issued 2026-09-02 — pr-open (awaiting human merge — library-first: Brain PR before Mind PR)</summary>
 
 ```
 /start_dev active/batch_review_integration_branches_p3_push.md
