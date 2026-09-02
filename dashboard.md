@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 164 |
 
 ## Start here
 
@@ -476,7 +476,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **48** of them belong to an epic and are listed only under [Epics](#epics) below.
+**164** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **52** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 28</summary>
@@ -1900,7 +1900,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 6 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 10 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -1930,6 +1930,38 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/feature/autofit/ep_lbfgs_jax.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_laplace_covariance_and_failed_update_projection.md">EP Laplace: the projected "covariance" is not a Hessian, and a failed…</a> — autofit · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autofit/ep_laplace_covariance_and_failed_update_projection.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_message_support_and_transform_lost_in_projection.md">EP messages lose their truncation limits on every natural-parameter operation, and <code>TransformedMessage.from_mode</code>…</a> — autofit · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autofit/ep_message_support_and_transform_lost_in_projection.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_prior_id_zero_collides_with_factor_value.md">EP: the first prior of a process (id 0) collides…</a> — autofit · small · safe · high</summary>
+
+```
+/start_dev draft/bug/autofit/ep_prior_id_zero_collides_with_factor_value.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/samples_errors_at_sigma_instance_prior_valued_model.md"><code>Samples.errors_at_sigma(as_instance=True)</code> crashes on a model whose component class is a Prior</a> — autofit · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/autofit/samples_errors_at_sigma_instance_prior_valued_model.md
 ```
 
 </details>
@@ -2270,7 +2302,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-158 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+160 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2315,7 +2347,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- _… and 118 more_
+- _… and 120 more_
 
 </details>
 
