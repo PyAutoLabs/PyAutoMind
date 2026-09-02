@@ -8,6 +8,9 @@
 - location: web-github (session clones, no task worktree; branch claude/cortex-birth-phases-1-3-u9pq77)
 - session: claude-code-remote (cortex-birth epic session, mobile)
 - epic: cortex-birth phase 5 (gates: phase 2 SHIPPED #380; the collect verb SHIPPED PyAutoBrain#332)
+- heart-ack:                  # YELLOW score 65 at ship, under the human's standing /prm authorisation for the cortex-birth epic (2026-09-02)
+  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
 - repos:
   - PyAutoBrain
   - PyAutoCortex

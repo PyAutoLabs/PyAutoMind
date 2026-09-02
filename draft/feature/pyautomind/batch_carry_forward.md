@@ -17,6 +17,12 @@ Unattended: ready
 Epic: two-slot-batching
 Filed: 2026-08-31
 
+2026-09-02: the science side is formalised by cortex-birth phase 5 (`carried:`
+lines on the Cortex batch record; the next `batch plan --kind cortex --apply`
+includes still-live members automatically, with `carried-from:` naming the
+record they came from). This prompt keeps the **dev** side — Mind records and
+dev members.
+
 Human direction (2026-08-31-pm slot, verbatim):
 
 """
