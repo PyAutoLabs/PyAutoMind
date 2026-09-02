@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1253 records across 8 buckets.
+1254 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -133,6 +133,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-public-surfaces](2026/09/cortex-public-surfaces.md) — closed completed 2026-09-02
 - [cortex-registration](2026/09/cortex-registration.md) — closed completed 2026-09-01
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
+- [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
 - [ep-message-support](2026/09/ep-message-support.md)
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,

@@ -89,7 +89,7 @@ cleaner contract; pick it unless it breaks an existing caller.
 - PyAutoFit#1405 (umbrella for the EP findings; this one is adjacent, not a cause) — https://github.com/PyAutoLabs/PyAutoFit/issues/1405
 - Campaign ledger: `draft/research/graphical_ep/ep_campaign.md` (phase 1)
 - Siblings: `complete/2026/09/ep-prior-id-zero.md` (D1 shipped 2026-09-02, PyAutoFit#1558),
-  `draft/bug/autofit/ep_laplace_covariance_and_failed_update_projection.md`,
+  `complete/2026/09/ep-laplace-hessian.md` (D2/D3 shipped 2026-09-02, PyAutoFit#1562),
   `complete/2026/09/ep-message-support.md` (D4/D5 shipped 2026-09-02, PyAutoFit#1560)
 - Scripts: `autofit_workspace_test/scripts/graphical/analytic_{reference,ep_minimal,autofit,gaussian,gaussian_priors,gaussian_collapse}.py`
   on branch `feature/analytic-gaussian-benchmark`

@@ -1,3 +1,47 @@
+## ep-laplace-hessian
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1561
+- completed: 2026-09-02
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1562 (merge `5375f4d631547bc946687cf3645d3689654e510d`)
+- epic: graphical-ep (fix wave 3/3: D1 #1558 → D4/D5 #1560 → D2/D3; the phase-2 mechanism; ledger `draft/research/graphical_ep/ep_campaign.md`)
+- summary: |
+    D2 — the Laplace "covariance" was never the Hessian of the tilted distribution: `make_posdef_hessian`
+    seeded the quasi-Newton matrix with the mean-field diagonal precision and no factor curvature, and the
+    `refine_state` secant at random draws made the result depend on the RNG and, through sampling order, on
+    prior ids. `LaplaceOptimiser(hessian="fd")` (default) now projects the inverse of a central
+    finite-difference Hessian of the tilted gradient at the converged mode (`newton.finite_difference_hessian`,
+    `Variable.id` order, Cholesky-factorised as a full matrix; marginal blocks via `MeanField.from_opt_state`
+    → `inv_hessian_blocks()`); a non-finite or non-concave Hessian is a `BAD_PROJECTION` that keeps the
+    previous message. Factors above `hessian_max_size` (64) fall back to `hessian="quasi"`, whose
+    `refine_state` chains its secants and honours `n_refine=0`. The default path draws no random numbers.
+    D3 — a failed line search projected the *start* point and `update_factor_mean_field` never consulted
+    `status.success`: `optimise_approx` now returns the mean field unchanged on `success=False` and
+    `update_factor_mean_field` returns `last_dist` with `updated=False` (flag preserved). The per-variable
+    `check_valid`/`update_invalid` backstop is kept and names each reverted variable with precision(q*) and
+    precision(cavity). `EPOptimiser` only counts `status.updated` updates, so an always-skipped factor is
+    reported by the STALE FACTORS warning. README §3.2/§3.4 updated; new §3.5 documents the
+    hierarchical-scatter caveat (a mode-based projection of σ has no valid Gaussian to write).
+    Tests: new `test_laplace_hessian.py` (10); `pytest test_autofit`: 2440 passed, 2 skipped.
+- referee after: |
+    Leg A 18/18 PASS — `mu` 50.8596 ± 4.1102 vs closed form 50.8595 ± 4.1104, 0 BAD_PROJECTION, EP column
+    byte-identical across K = 1, 3, 6 throwaway priors (was four distinct fixed points). Collapse
+    configuration (phase 2): RECOVER 5/5 seeds, no silent verdicts — seed 0 scatter 9.24 ± 3.61 inside the
+    closed-form [2.98, 12.15] where it collapsed to ~2e-4 before. Leg B `sigma` 9.37 ± 3.57 (closed form
+    6.57 ± 2.88, inside the exact interval, hard caps pass), `mu` 50.60 ± 3.48 PASS; the residual scatter
+    bias is the Laplace-on-scatter caveat (README §3.5). Leg-A EP loop 2.8 s → 1.5 s. Tolerances untouched.
+- traps: |
+    - The design's "refine_state does not accumulate" claim was wrong — `diag_sr1_update` returns the same
+      object, so the secants already chained. The real D2 defect was the missing factor curvature.
+    - A whole-factor precision pre-guard (refuse the update if q* is wider than the cavity anywhere) starves
+      hierarchical factors and broke 5 regression tests — the per-variable backstop is the right granularity.
+    - `MeanField.std` does not exist for `TransformedMessage`; use `.variance`.
+    - `optimise_quasi_newton(max_iter=0)` raises `UnboundLocalError` (pre-existing, untouched).
+    - The STALE FACTORS warning repeats `HierarchicalFactor0` because the per-drawn-variable sub-factors of
+      one `HierarchicalFactor` share a name (pre-existing).
+    - Two concurrent full-suite `pytest test_autofit` runs contaminate each other through the shared
+      on-disk output directory — run one at a time.
+
+## Original prompt
+
 # EP Laplace: the projected "covariance" is not a Hessian, and a failed line search still projects and overwrites the message
 
 Type: bug
