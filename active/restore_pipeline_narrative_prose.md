@@ -20,6 +20,7 @@ Epic: euclid-dr1-prep
 Phase: 3
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-31
+Issued: 2026-08-31
 
 Phase 3 of the Euclid DR1 preparation epic (was 3a — inserted 2026-08-31, renumbered to a
 plain 3 on 2026-09-01 in the Cortex split) and **the next phase to
