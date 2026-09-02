@@ -1,3 +1,80 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/332 (closed completed 2026-09-02)
+- completed: 2026-09-02
+- library-pr: PyAutoBrain https://github.com/PyAutoLabs/PyAutoBrain/pull/333 (`590e203`, merge `16e2a77`)
+- classification: feature (pyautobrain) — epic `two-slot-batching`, phase 2 (the `collect` verb;
+  `queue.md` #8 retired). `plan` shipped 2026-08-30; `slice` re-filed as
+  `draft/feature/pyautobrain/batch_slice.md`. Unblocks `cortex-birth` phase 5.
+- heart: YELLOW 65 at ship, acknowledged under the human's standing authorisation for the cortex-birth
+  epic and recorded on the `active.md` entry — `manifest drift: local checkout origins — 1 mismatch(es)`
+  and `CI status unavailable for all 6 libraries and 11 workspaces` (web container: no `gh`, measurement
+  blindness). Neither touches an organ-repo Python change.
+- gate: tests 776 ✓ (744 → 776, 32 new) · smoke n/a (organ repo) · review CLEAN — leg 5 independent
+  adversary run by Sonnet (implementer Opus, architect Fable), witness falsified by running it, one
+  disposition per claim (PR #333 comment) · Heart YELLOW acked.
+
+- summary: **`pyauto-brain batch collect`** — the review-side half of the batch conductor
+  (`agents/conductors/batch/_batch.py`, +1655 lines; `packet.css`/`packet.js` assets). It reads a batch
+  record losslessly (member lines split on ` — `, `maxsplit=3`; unparsable lines are notes), resolves
+  each member's prompt by basename across `draft/`/`active/`/`complete/` and its `active.md` entry in
+  three passes (slug · prompt basename · "member <slug>" in the entry text — two of nine live pm slugs
+  differ from their task name), and scores six legs — `pr` · `diff` · `checks` · `green` · `witness` ·
+  `adversary`, each PASS / FAIL / UNOBSERVABLE — into one health word (FAILED · NOT-DELIVERED ·
+  SUSPECT · HEALTHY · PENDING · MERGED, failures first, not-delivered named at the top). Evidence is
+  the session's: `--evidence <json>` (gathered with the GitHub MCP tools on the web) or the laptop's
+  opt-in `--fetch` (`gh pr view` per PR). **No evidence is UNOBSERVABLE, never delivered.** A self-run
+  adversary leg is FAIL (AUTONOMY leg 5).
+
+  `--apply` renders the standalone HTML packet per `batches/packets/TEMPLATE.md` — `pyauto:*`
+  sentinel regions, one `<section id="m-<slug>">` per member, PENDING stubs, a depth-aware in-place
+  refresh that leaves every other member's markup byte-identical, and a sentinel-less archived
+  packet degrades to member splices plus a note — and stamps the record line-surgically
+  (`collected:` once, `refreshed:` per apply, `delivered: n/m`, `packet:`), rehearsed on a copy. A
+  submitted `batches/reviews/<slot>.md` freezes the packet and closes the record (`reviewed-at:`,
+  `review-minutes-actual:`, `review:`) — fill, never overwrite; once closed no member line changes.
+  `KINDS = {"dev": …}` is the extension point Cortex phase 5 registers the science member kind on.
+  Exit 0 all delivered · 1 a member needs the human · 2 usage · 4 no Mind.
+
+  Doctrine: `agents/conductors/batch/AGENTS.md` ("The collect recipe"; "Not built yet" is down to
+  `slice`), `skills/batch/batch.md` ("When they come back" is now the command), `batch.sh`, the
+  registry description and the regenerated verb row.
+
+- decisions: **57** no evidence scores UNOBSERVABLE, never PASS or FAIL — the offline default invents
+  nothing (the same third verdict the cortex collect uses for the legs the laptop cannot see).
+  **58** a closed batch's record is history: once `batches/reviews/<slot>.md` exists no member outcome
+  line changes and the close leg only fills blank / `(not given)` fields — found on the live pm record,
+  where a ruling-word guard alone would have overwritten `PR OPENED AT REVIEW (…)`, the prose
+  `delivered:` and the annotated `reviewed-at:`. **59** the packet is refreshed in place, never
+  rewritten: localStorage notes are keyed by page and anchored to member ids, so a refresh replaces
+  only the member's own section and the sentinelled regions. **60** the `active.md` match is three-pass
+  because member slugs and task names diverge in practice (`autofit-resampling-info` ↔
+  `resampling-info-summary-section`).
+
+- deviations from the plan (each in the code with its reason): `KINDS` values are 3-tuples
+  `(score, blocks, claims)` so `kind_of` has something to dispatch on; review controls also render on
+  PENDING members (a human starts noting on a running member; withholding the chips would drop those
+  notes on refresh); `MEMBERS_JSON` uses `<`-style escapes rather than HTML entities so it stays
+  parseable JSON; the record's outcome column is not quoted in "Where to look" because `--apply`
+  rewrites it.
+
+- witness: `pytest -n auto tests` → 776 passed on the branch. Read-only on the real record: nine
+  SUSPECT dev members, the two science lines as notes, exit 1, Mind tree untouched. Fresh packet 67 KB,
+  complete document, parses; second apply differs by the refreshed stamp only. Closed pm record: one
+  `refreshed:` line added, packet byte-identical. CI green on #333.
+
+- lane notes: shipped from a web-github session (no task worktree, no `gh`; issue, PR and merge driven
+  through the GitHub MCP tools; PyAutoHeart cloned read-only so vitals could run). `/prm` local-only
+  legs (worktree removal, local branches) skipped — nothing to remove.
+
+- follow-ups NOT filed: none blocking. `batch_carry_forward.md` (queue #2) and the Cortex kind are
+  phase 5's; the pm record's two science member lines stay unparsable to the dev reader by design
+  until then.
+
+- next: **cortex-birth phase 5** (`draft/feature/pyautocortex/cortex_batch_member_kind.md`) is now
+  unblocked — register the `cortex` kind in `KINDS` over the cortex conductor's
+  `score_phase`/`member_block`; separate records; rolling board; carry-forward; AUTONOMY leg 4.
+
+## Original prompt
+
 # Batch phase 2 — the `batch` conductor: plan, slice, collect
 
 Type: feature

@@ -266,8 +266,9 @@ chips the dashboard already renders.
    `batches/` (both on the ledger side of `ledger_merge.py`, so batch history
    lands without a human), and the `Lane:` header.
    `complete/2026/08/batch-queue-and-records.md`
-2. **The `batch` conductor** — **`plan` SHIPPED 2026-08-30**; `slice` and
-   `collect` remain. `plan` is useful alone: run it in a slot and dispatch by
+2. **The `batch` conductor** — **`plan` SHIPPED 2026-08-30**, **`collect`
+   SHIPPED 2026-09-02** (`complete/2026/09/batch-collect.md`); `slice` remains,
+   re-filed as `draft/feature/pyautobrain/batch_slice.md`. `plan` is useful alone: run it in a slot and dispatch by
    tapping the dashboard's existing chips. `draft/feature/pyautobrain/`
 3. **The gate under unattended conditions** — **SHIPPED 2026-08-30.** All four
    doctrine changes are in `AUTONOMY.md`, dated, each with a revert condition:

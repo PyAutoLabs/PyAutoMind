@@ -108,6 +108,7 @@ epic, never picked standalone.
 ## two-slot-batching
 - title: Two slots a day — the batch workflow
 - ledger: draft/feature/pyautomind/two_slot_batching_epic.md
+- status: phase 2 `collect` SHIPPED 2026-09-02 (PyAutoBrain#332, complete/2026/09/batch-collect.md); `plan` shipped 2026-08-30; `slice` re-filed as draft/feature/pyautobrain/batch_slice.md
 - notes: 11 phased prompts (0a/0b/0c, then 1-8) across draft/feature/pyautomind/,
   draft/feature/pyautobrain/ and draft/research/euclid/ — issue ONE at a time, no
   bulk issue queues. Ordered by value, not build dependency: the DISPATCHER
@@ -140,7 +141,7 @@ epic, never picked standalone.
 ## cortex-birth
 - title: PyAutoCortex — the science organ: split science runs out of the Mind
 - ledger: draft/feature/pyautocortex/cortex_birth_epic.md
-- status: phases 0–4 SHIPPED 2026-09-01 (#377, #379, #380, #382, #383; records complete/2026/09/cortex-birth-organ-row.md, complete/2026/09/cortex-schema-skeleton.md, complete/2026/09/cortex-conductor.md, complete/2026/09/cortex-registration.md, complete/2026/09/cortex-migration.md); next: phase 5 cortex_batch_member_kind.md (gated on the two-slot-batching collect verb, draft/feature/pyautobrain/batch_conductor.md) / phase 6 cortex_public_surfaces.md (gated on 5 plus one reviewed Cortex batch)
+- status: phases 0–4 SHIPPED 2026-09-01 (#377, #379, #380, #382, #383; records complete/2026/09/cortex-birth-organ-row.md, complete/2026/09/cortex-schema-skeleton.md, complete/2026/09/cortex-conductor.md, complete/2026/09/cortex-registration.md, complete/2026/09/cortex-migration.md); next: phase 5 cortex_batch_member_kind.md (its gate, the two-slot-batching `collect` verb, SHIPPED 2026-09-02 — PyAutoBrain#332, complete/2026/09/batch-collect.md) / phase 6 cortex_public_surfaces.md (gated on 5 plus one reviewed Cortex batch)
 - notes: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
   time, no bulk issue queues. Phase 0 is human-gated (the repo is created by hand;
   no birth path exists). Decided 2026-09-01: new organ PyAutoCortex, a run/ruling
