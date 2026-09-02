@@ -146,6 +146,10 @@
 - worktree: ~/Code/PyAutoLabs-wt/numpy-deflections-p1
 - parallel-claim: PyAutoArray — numba-vs-jax-sparse holds a read-only research claim on main (no branch, no worktree); file sets disjoint, own worktree approved by the human 2026-09-02
 - repos:
+  - PyAutoArray: feature/numpy-deflections-p1
+  - PyAutoGalaxy: feature/numpy-deflections-p1
+  - PyAutoLens: feature/numpy-deflections-p1
+  - autolens_profiling: feature/numpy-deflections-p1
 - summary: |
     Phase 1 of numpy-deflections-cpu: land autolens_profiling/scripts/lens/deflections/
     (nine numpy mass-profile deflection cells, hst + euclid, pins), commit the baseline,
