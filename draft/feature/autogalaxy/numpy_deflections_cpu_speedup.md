@@ -80,7 +80,7 @@ library-first ship inside each phase.
 | phase | prompt path | repos | levers | status |
 |---|---|---|---|---|
 | 1 | `complete/2026/09/numpy-deflections-p1.md` (was `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md`) | @PyAutoArray, @PyAutoGalaxy, @PyAutoLens, @autolens_profiling | measure (`scripts/lens/deflections/`), `*Sph` over-sampled re-materialisation, sub-size-1 short-circuit, tracer double trace | **SHIPPED 2026-09-02** — PyAutoArray#516, PyAutoGalaxy#595, PyAutoLens#718, autolens_profiling#210 merged; record `complete/2026/09/numpy-deflections-p1.md` |
-| 2 | `active/numpy_deflections_p2_mge_wofz.md` (PyAutoGalaxy#596) | @PyAutoGalaxy, @autolens_profiling | `scipy.special.wofz` on numpy, spherical MGE branch, exact exp_term mask (cache lever dropped: 0.34 ms/call); targets re-scoped to measured ceilings gNFW ~2.3×, gNFWSph ~59×, Gaussian sph ~16×, Gaussian ell ~1.07× | **active 2026-09-02** — PyAutoGalaxy#596 |
+| 2 | `active/numpy_deflections_p2_mge_wofz.md` (PyAutoGalaxy#596) | @PyAutoGalaxy, @autolens_profiling | `scipy.special.wofz` on numpy, spherical MGE branch, exact exp_term mask (cache lever dropped: 0.34 ms/call); targets re-scoped to measured ceilings gNFW ~2.3×, gNFWSph ~59×, Gaussian sph ~16×, Gaussian ell ~1.07× | **SHIPPED to PR-open 2026-09-02** — PyAutoGalaxy#597, autolens_profiling#212 awaiting merge |
 | 3 | `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md` | @PyAutoGalaxy, @PyAutoArray, @autolens_profiling | PowerLaw series with factor-driven term count, NFW/NFWSph masks, Isothermal hoists, rotation-matrix grid transform | draft |
 
 Phase 1 carries the measurement package: every later phase's before/after numbers come from the
@@ -157,6 +157,21 @@ saving scales with the profile (PowerLaw/gNFW models gain 16–440 ms per evalua
 `jax_compile` warm compile 321 → 268 ms under unequal load: inconclusive, not re-pinned. Tracked breakdown
 artifacts left untouched (load-contaminated re-runs are not a valid after). Phases 2 and 3 unblocked
 once #516/#595/#718 merge (their cells and pins are on the #210 branch).
+
+**2026-09-02 — phase 2 SHIPPED to PR-open (PyAutoGalaxy#596).** PyAutoGalaxy#597 (09785e32: `MGEDecomposer.wofz`
+→ `scipy.special.wofz` on numpy, `_wofz_rational` kept for JAX with hoisted coefficients — bit-identical under
+jit; `Gaussian.wofz` deduped; exact `exp_term` mask; numpy-only spherical MGE branch `_spherical_mge_deflections_from`)
+→ autolens_profiling#212 (949cd43: dark/stellar re-pinned with mpmath + clamp provenance, total untouched,
+note + README). test_autogalaxy 1161 (2 new), test_autolens 576, scripts/misc/test 293. Heart YELLOW (same
+two reasons) acknowledged. Measured hst (Grid2D / Tracer): gNFW 293 → 96 ms (3.1×) / 281 → 100 ms; gNFWSph
+301 → 4.5 ms (67×) / 275 → 4.8 ms; Gaussian 11.1 → 6.6 ms (1.7×); Gaussian(q=1) 12.9 → 2.1 ms (6×). Honest
+ranges over three passes: gNFW 2.4–3.1×, gNFWSph 58–67×, Gaussian 1.7–1.8×, Gaussian(q=1) 6–9×. Against the
+prompt's targets: gNFW fell short of 5× (irreducible Faddeeva work), gNFWSph beat 20×, Gaussian met 1.5×.
+Findings: hand-rolled Faddeeva 3.0e-6 max rel vs mpmath (scipy 1.3e-14); the q=0.9999 clamp carried a ~6e-5
+relative bias and spurious cross-axis deflections on every spherical MGE-routed profile (gNFWSph, the gNFW
+virial-mass Sph variants, SersicCoreSph, Gaussian at q=1; cNFWSph and dPIEPotentialSph are analytic, not MGE).
+JAX path keeps both — audit filed `draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md`.
+Decomposition cache dropped (0.34 ms/call). Phase 3 unblocked once #597/#212 merge.
 
 ## Gates
 

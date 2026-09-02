@@ -135,7 +135,8 @@
 - prompt: active/numpy_deflections_p2_mge_wofz.md
 - issued: 2026-09-02
 - session: claude --resume d3971bba-0e8d-4c4f-bc59-7808e6bfa6cd
-- status: library-shipped, workspace-pending
+- status: shipped, awaiting-merge (merge order PyAutoGalaxy#597 → autolens_profiling#212)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/212
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/597
 - epic: numpy-deflections-cpu (phase 2 — ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
 - worktree: ~/Code/PyAutoLabs-wt/numpy-deflections-p2
