@@ -111,11 +111,17 @@
 - prompt: active/adapt_image_snr_cap.md
 - issued: 2026-09-02
 - session: claude-code-cli (Fable architect, Opus execution)
-- status: workspace-dev
+- status: pr-open, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/adapt-image-snr-cap
 - repos:
   - autolens_workspace: feature/adapt-image-snr-cap
   - autolens_assistant: feature/adapt-image-snr-cap
+- prs:
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/522
+  - https://github.com/PyAutoLabs/autolens_assistant/pull/118
+- heart-ack: YELLOW, both reasons unrelated to this workspace-only change and recorded verbatim in the PR body:
+  - "PyAutoArray: open PR 10d old"
+  - "release validation incomplete: no rehearsal for current source"
 
 ## ep-prior-id-zero
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1557
