@@ -147,11 +147,14 @@
 - issued: 2026-09-02
 - prompt: active/batch_review_integration_branches_p3_push.md
 - session: claude-code local (Fable architect, Opus subagents)
-- status: library-dev
+- status: pr-open (awaiting human merge — library-first: Brain PR before Mind PR)
 - worktree: ~/Code/PyAutoLabs-wt/batch-review-integration-p3
 - repos:
   - PyAutoBrain: feature/batch-review-integration-p3
   - PyAutoMind: feature/batch-review-integration-p3
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoBrain/pull/340
+  - https://github.com/PyAutoLabs/PyAutoMind/pull/387
 - heart-ack:
   - PyAutoArray: open PR 10d old
   - release validation incomplete: no rehearsal for current source
