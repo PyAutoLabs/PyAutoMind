@@ -171,3 +171,22 @@
   - PyAutoBrain: feature/batch-review-integration
   - PyAutoMind: feature/batch-review-integration
 - note: PyAutoBrain also claimed by organ-board-github-link (PR #326, disjoint files) — parallel worktree approved 2026-09-02
+
+## image-source-mappings-p1
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/515
+- prompt: active/mappings_regions_clumps_subplot.md
+- issued: 2026-09-02
+- session: claude --resume e962a3a7-cee9-4168-93a5-e7067699f2d7
+- status: library-dev
+- epic: image-source-mappings (phase 1 — ledger draft/feature/autoarray/image_source_mappings_epic.md)
+- worktree: ~/Code/PyAutoLabs-wt/image-source-mappings-p1
+- parallel-claim: PyAutoArray — numpy-deflections-p1 (#514) holds it in its own worktree; file sets disjoint (this task: autoarray/inversion/, autoarray/plot/, config/visualize/; theirs: grid over-sampling decorator + tracer path); own worktree approved by the human 2026-09-02
+- repos:
+  - PyAutoArray: feature/image-source-mappings-p1
+- summary: |
+    Phase 1 of image-source-mappings: new autoarray/inversion/mappings/ package
+    (Mapping / ImageRegion result objects, mesh-graph connected components, image-plane
+    regions from the mapping matrix, arcsec boundary polygons), Inversion.source_clumps_from
+    + mappings_from, Mapper.mappings_from, a regions= overlay on plot_array /
+    plot_inversion_reconstruction, and subplot_mappings rewritten as the one-look 2x2
+    mapping figure. Fable session; execution delegated to Opus.
