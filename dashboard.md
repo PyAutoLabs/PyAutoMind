@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 164 |
+| [Backlog](#backlog) (`draft/`) | 165 |
 
 ## Start here
 
@@ -148,7 +148,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_review_integration_branches_p3_push.md">Batch review integration branches phase 3: --push, never-force refresh, sweep expiry</a> — pyautobrain · medium · safe · medium</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_review_integration_branches_p3_push.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such parameter</a> — euclid · small · supervised · medium</summary>
 
@@ -238,14 +246,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — small · safe · normal</summary>
-
-```
-/start_dev draft/triage/convolver_blurring_image_warning.md
-```
-
-</details>
-
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev — ⚠️ gates a Cortex phase → phases/euclid/dr1_prelim_10_lens_science_run.md</summary>
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
@@ -476,10 +476,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**164** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **52** of them belong to an epic and are listed only under [Epics](#epics) below.
+**165** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **52** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 28</summary>
+<summary><b>feature</b> — 29</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
 
@@ -501,6 +501,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autofit/search_seed_reproducibility.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_review_integration_branches_p3_push.md">Batch review integration branches phase 3: --push, never-force refresh, sweep expiry</a> — pyautobrain · medium · safe · medium</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_review_integration_branches_p3_push.md
 ```
 
 </details>
