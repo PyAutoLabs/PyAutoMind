@@ -194,6 +194,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/cortex-registration
 - parallel-claim: worktree_check_conflict fired for PyAutoBrain (organ-board-github-link, merged 2026-09-01, awaiting its own /prm) — stale; own worktree taken. autolens_profiling has two live science worktrees (inference-programme-ledger, refs-v1-phase1-redo-dispatch) on disjoint files (this task edits CORTEX.md, hpc/sync, hpc/README).
 - human-steps: create PyAutoLabs/subhalo_validation (private) then the push; euclid ruling = remote none (approved with the plan 2026-09-01).
+- heart-ack: YELLOW score 80 (2026-09-01T21:02 snapshot), acknowledged by the human for this ship. Reasons verbatim: "! PyAutoArray: open PR 10d old"; "? release validation incomplete: no rehearsal for current source". Both pre-existing and structurally unrelated to this task — no PyAuto library source is touched (PyAutoCortex registry/docs, PyAutoBrain cortex conductor, autolens_profiling hpc/sync + CORTEX.md).
 - repos:
   - PyAutoCortex (feature/cortex-registration)
   - PyAutoBrain (feature/cortex-registration)
