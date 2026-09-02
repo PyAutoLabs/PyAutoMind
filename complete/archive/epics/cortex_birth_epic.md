@@ -213,7 +213,7 @@ collisions; the two review vocabularies (`batches/reviews/AGENTS.md:24` vs
   graduation trigger to `PyAutoRhythm` is untouched. The Cortex is not the
   batch layer; it is the registry the batch layer reads for science members, as
   the Mind is for dev members.
-- Its **phase 8** (`draft/research/euclid/batch_science_lane.md`, "the laptop
+- Its **phase 8** (`complete/archive/shelved/batch_science_lane.md`, "the laptop
   lane" — `Lane:` on every remaining euclid phase, `queue.md` #9) is
   **superseded by this epic**: the euclid science phases move to the Cortex,
   where the laptop lane is the only lane. Its recorded closures (RAL as

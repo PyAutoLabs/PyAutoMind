@@ -46,12 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 158 |
-
-> ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
-
-> - `draft/feature/pyautocortex/cortex_birth_epic.md — its own `Status:` says shipped, but the prompt never left draft/ (reconcile its lifecycle)`
-> - `draft/research/euclid/batch_science_lane.md — its own `Status:` says superseded, but the prompt never left draft/ (reconcile its lifecycle)`
+| [Backlog](#backlog) (`draft/`) | 156 |
 
 ## Start here
 
@@ -433,7 +428,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **49** of them belong to an epic and are listed only under [Epics](#epics) below.
+**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -2005,7 +2000,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 </details>
 
 <details>
-<summary><b>Two slots a day — the batch workflow</b> — 10 queued prompt(s), in order</summary>
+<summary><b>Two slots a day — the batch workflow</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Two slots a day — the batch workflow</b> — ledger: `draft/feature/pyautomind/two_slot_batching_epic.md` — phase 2 <code>collect</code> SHIPPED 2026-09-02 (PyAutoBrain#332, complete/2026/09/batch-collect.md); <code>plan</code> shipped 2026-08-30; <code>slice</code>…</summary>
 
@@ -2051,14 +2046,6 @@ Continue the 'Two slots a day — the batch workflow' epic. Its canonical state 
 
 ```
 /start_dev draft/feature/pyautomind/batch_budget_loop.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/batch_science_lane.md">Batch phase 8 — the laptop lane</a> — euclid · medium · safe · normal</summary>
-
-```
-/start_dev draft/research/euclid/batch_science_lane.md
 ```
 
 </details>
@@ -2190,24 +2177,11 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-<details>
-<summary><b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — 1 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — ledger: `draft/feature/pyautocortex/cortex_birth_epic.md` — SHIPPED 2026-09-02 — all seven phases (0–6) complete. Records: complete/2026/09/cortex-birth-organ-row.md…</summary>
+<details><summary>📋 <b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — ledger: `complete/archive/epics/cortex_birth_epic.md` — SHIPPED 2026-09-02 — all seven phases (0–6) complete. Records: complete/2026/09/cortex-birth-organ-row.md…</summary>
 
 ```
-Continue the 'PyAutoCortex — the science organ: split science runs out of the Mind' epic. Its canonical state lives in draft/feature/pyautocortex/cortex_birth_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
+Continue the 'PyAutoCortex — the science organ: split science runs out of the Mind' epic. Its canonical state lives in complete/archive/epics/cortex_birth_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
 ```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautocortex/cortex_birth_epic.md">PyAutoCortex — the science organ: split science runs out of the Mind</a> — pyautocortex · too-large · supervised · high</summary>
-
-```
-/start_dev draft/feature/pyautocortex/cortex_birth_epic.md
-```
-
-</details>
 
 </details>
 
@@ -2224,7 +2198,7 @@ Continue the 'PyAutoCortex — the science organ: split science runs out of the 
 
 </details>
 
-157 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+155 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2264,12 +2238,12 @@ Continue the 'PyAutoCortex — the science organ: split science runs out of the 
 - `draft/feature/pyautobrain/board_without_gh.md`
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
-- `draft/feature/pyautocortex/cortex_birth_epic.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- _… and 117 more_
+- `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
+- _… and 115 more_
 
 </details>
 

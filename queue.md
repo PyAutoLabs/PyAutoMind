@@ -89,5 +89,5 @@ silently dropped. One queue holds both lanes; the planner filters.
 ## 9. Euclid Lane: recut
 - kind: retired
 - shipped-as: superseded by cortex-birth phase 5 (2026-09-02)
-- note: draft/research/euclid/batch_science_lane.md is marked superseded; leg A (the `Lane:` recut) has no surface left — every Cortex phase is `Lane: local-dev` by construction
+- note: complete/archive/shelved/batch_science_lane.md is marked superseded; leg A (the `Lane:` recut) has no surface left — every Cortex phase is `Lane: local-dev` by construction
 
