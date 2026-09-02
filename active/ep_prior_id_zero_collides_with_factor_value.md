@@ -9,13 +9,15 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: high
-Status: formalised
+Status: issued — PyAutoFit#1557, worktree ep-prior-id-zero
 Consequence: glance
 Witness: on a graph whose first prior has id 0, `FactorApproximation.func_gradient` matches central finite differences of `FactorApproximation.__call__` to 1e-6 on every variable; `analytic_gaussian.py` leg A `mu` cell moves from 50.0000 +/- 20.6457 (FAIL) to 50.8596 +/- 3.76 (ref 50.8595 +/- 4.11)
 Review-minutes: 5
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-02
+Issued: 2026-09-02
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1557
 
 Found by the analytic Gaussian benchmark (autofit_workspace_test#91, phase (b)).
 Sibling of `ep_laplace_covariance_and_failed_update_projection.md` (D2/D3) — D1 is
