@@ -1929,14 +1929,6 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autofit/ep_scale_collapse_basin_cure_or_caveat.md">EP hierarchical parent-scale collapse: cure the basin, or document the caveat</a> — autofit · too-large · human-required · high</summary>
-
-```
-/start_dev draft/bug/autofit/ep_scale_collapse_basin_cure_or_caveat.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/graphical_ep/graphical_scoping.md">Graphical Model Scale-Up — Scoping</a> — graphical_ep · too-large · human-required · high</summary>
 
 ```
@@ -1957,6 +1949,14 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/bug/autofit/samples_errors_at_sigma_instance_prior_valued_model.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md">EP: moment-matching projection for the hierarchical scatter…</a> — autofit · medium · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md
 ```
 
 </details>
@@ -2300,6 +2300,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/autoarray/multiwavelength_inversion.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/ep_analytic_updates.md`
+- `draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md`
 - `draft/feature/autofit/ep_lbfgs_jax.md`
 - `draft/feature/autofit/prior_exit_sampler_coverage.md`
 - `draft/feature/autofit/search_seed_reproducibility.md`
@@ -2333,7 +2334,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautobrain/the_batch_conductor_s_plan_kind_cortex.md`
-- `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - _… and 119 more_
 
 </details>

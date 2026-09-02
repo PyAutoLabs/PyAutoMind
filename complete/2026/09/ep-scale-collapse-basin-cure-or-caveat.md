@@ -1,3 +1,49 @@
+## ep-scale-collapse-basin-cure-or-caveat
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1405 (umbrella; left open for the human's cure decision)
+- completed: 2026-09-02
+- library-prs: PyAutoFit#1558 (merge 809b4fd85), #1560 (9eb808522), #1562 (5375f4d63); workspace autofit_workspace_test#92 (54af208), #93 (7d175dd)
+- epic: graphical-ep (campaign phase 2; ledger `draft/research/graphical_ep/ep_campaign.md`; never issued on its own — worked as the three mechanism fixes #1557/#1559/#1561 under the umbrella #1405)
+- verdict: |
+    BOTH halves delivered. CURE of the mechanism: the collapse was not "inherent to EP" — it was (D1) an id-0
+    prior colliding with the FactorValue sentinel corrupting every multi-variable gradient, (D2) a Laplace
+    "covariance" that never contained the factor curvature plus a non-accumulating random secant, (D3) failed
+    line searches writing the start point back, (D4) truncation limits dropped by natural-parameter ops. Fixed
+    in #1558/#1560/#1562; the phase-2 collapse configuration on the closed-form referee
+    (autofit_workspace_test#91, `scripts/graphical/analytic_gaussian_collapse.py`) now reads RECOVER 5/5
+    seeds, no SILENT/STALE verdicts (seed 0: 9.24 ± 3.61 vs exact 6.57, inside [2.98, 12.15]; previously
+    ~2e-4 ± 0 or stale at the prior). CAVEAT shipped: `PyAutoFit/autofit/graphical/README.md` §3.5 — a
+    hierarchical scatter cannot be projected by its mode (tilted density ∝ 1/σ at x_i = mu), so Laplace EP
+    now leaves it near its prior with an honest width instead of collapsing it; the parent mean and
+    per-dataset variables are recovered; prefer LogGaussianPrior on the scatter; read the scatter from a
+    joint sampler; STALE FACTORS warning now covers skipped updates (the leg-1 guard #1465 stays).
+- evidence: |
+    Referee leg A 18/18 and byte-identical across prior ids after #1562; leg B sigma 9.37 ± 3.57 (exact
+    6.57 ± 2.88, inside the interval, hard caps pass), mu 50.60 ± 3.48 PASS; minimal EP
+    (`analytic_ep_minimal.py`) reproduces the collapse deterministically under a mode projection and
+    recovers the closed form under moment matching (scatter row a ≤ 0.08, b ≤ 0.15, seeds 0–4) — the
+    achievable ceiling.
+- levers: |
+    Resolved by the referee rather than by sweeps: DynamicUpdater / thorough sampler /
+    boundary-vs-prior-family were never the cause (the Gaussian-graph leg A failed the same way); the
+    TruncatedGaussian zero-boundary hypothesis was partly right (D4 dropped the limits) but the mechanism was
+    D2/D3. The three unfinished sweeps are superseded and not needed.
+- remaining: |
+    The scatter is still not *estimated* by EP (mode projection refuses the boundary mode). Cure follow-on
+    filed: `draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md` (moment-matching projection
+    for the hierarchical factor; gated by the campaign's EP-internals check-in; the human decides).
+    `analytic_gaussian.py` (38/41) and `analytic_gaussian_priors.py` (41/48) stay parked NEEDS_FIX pointing
+    at it; `analytic_gaussian_collapse.py` (5/5) is ready to un-park. BIASED-TIGHT band calibration of the
+    leg-1 guard remains a human decision (unchanged).
+- assets: the leg-2 repro rebuild the prompt banked (`toy.py`, `run_once.py`, `sweep.sh`, `classify.py`,
+    `trace_message_dict.py`, `results_baseline.txt`) moved with it to
+    `complete/2026/09/ep-scale-collapse-leg2-assets/` (was `draft/bug/autofit/ep_scale_collapse_leg2_assets/`).
+- traps: |
+    See the three mechanism records (`complete/2026/09/ep-prior-id-zero.md`, `ep-message-support.md`,
+    `ep-laplace-hessian.md`); a never-issued prompt is closed by moving it through active/ for
+    `lifecycle.py record`.
+
+## Original prompt
+
 # EP hierarchical parent-scale collapse: cure the basin, or document the caveat
 
 Type: bug
@@ -9,16 +55,15 @@ Themes:
 Difficulty: too-large
 Autonomy: human-required
 Priority: high
-Status: formalised — NOT started. Research-grade: the answer may be "inherent to
+Status: formalised — NOT started. Research-grade: the answer may be "inherent to EP", so do not pick this up as ordinary work. The evidence below is the expensive part and it is already paid for.
 Consequence: judge
 Review-minutes: 25
 Unattended: never
 Epic: graphical-ep
 Phase: 2
-        EP", so do not pick this up as ordinary work. The evidence below is the
-        expensive part and it is already paid for.
 Issue: (none — never issued. Parent report https://github.com/PyAutoLabs/PyAutoFit/issues/1405 stays open.)
 Filed: 2026-08-11 (backfilled from git)
+Issued: 2026-09-02 (closed out without its own issue — worked as the three mechanism fixes #1557/#1559/#1561 under the umbrella #1405)
 
 ## Why this is `too-large` / `human-required` — read before starting
 
@@ -53,7 +98,7 @@ leg-1 guard. That caveat is now **nearly writable from the evidence below** — 
 HowToFit chapter-3 dataset, which is **gitignored and ships with no tracked
 files** — so it cannot be run from a fresh checkout. Its generative model is fully
 specified in its own docstring, so the data is regenerated instead. The rebuild is
-in `ep_scale_collapse_leg2_assets/` beside this file:
+in `ep-scale-collapse-leg2-assets/` beside this record (moved at close-out from `draft/bug/autofit/ep_scale_collapse_leg2_assets/`):
 
 - `toy.py` — data generation + graph construction
 - `run_once.py` — one EP fit, one machine-readable `RESULT` line

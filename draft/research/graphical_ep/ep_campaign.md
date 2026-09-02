@@ -33,10 +33,10 @@ its own prompt file. Update the table as phases ship.
 | # | Phase | Prompt | State (2026-08-19) |
 |---|-------|--------|--------------------|
 | 1 | Analytic Gaussian benchmark (the keystone — start here) | `complete/2026/09/analytic-gaussian-benchmark.md` | **SHIPPED 2026-09-02** — autofit_workspace_test#91, PR #92 merged `54af208398ae7fd336d3d9bca363776ad50da037` (`scripts/graphical/analytic_*.py`); record `complete/2026/09/analytic-gaussian-benchmark.md`. Verdict: closed form, minimal EP and the graphical joint fit agree everywhere; **every failing cell is autofit's EP column, including the exactly Gaussian leg A**. Six PyAutoFit mechanisms root-caused and filed (see Findings below); the autofit-parity scripts are parked NEEDS_FIX until they land, the closed-form reference + minimal EP are curated into the smoke gate |
-| 2 | Scatter-collapse cure or caveat | `bug/autofit/ep_scale_collapse_basin_cure_or_caveat.md` | filed earlier; leg 1 guard shipped (#1465); **mechanism fixed 2026-09-02 (#1558/#1560/#1562)**: collapse config RECOVER 5/5 on the referee; caveat shipped in `autofit/graphical/README.md` §3.5; cure (moment-matching projection) decision pending with the human. Mechanism as found by phase 1: the Laplace projection never contained the factor curvature and a failed line search still projected (`complete/2026/09/ep-laplace-hessian.md`), truncation limits were dropped by natural-parameter ops (D4/D5, `complete/2026/09/ep-message-support.md`); the minimal EP shows a mode-based projection of σ is intrinsically collapse-prone (tilted density ∝ 1/σ at x_i = mu) — the *cure* is moment matching or a log-σ parameterisation. Analytic upper limit banked: seed-0 `sigma_q95 = 12.18` (truncated(10,5,0,100), N=5) |
+| 2 | Scatter-collapse cure or caveat | `complete/2026/09/ep-scale-collapse-basin-cure-or-caveat.md` | **SHIPPED 2026-09-02** — cure of the mechanism (#1558/#1560/#1562) + caveat (README §3.5); record `complete/2026/09/ep-scale-collapse-basin-cure-or-caveat.md`; cure follow-on filed `draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md` (human decision) |
 | 3 | Graphical (non-EP) JAX scaling | → PyAutoCortex `phases/slope_hierarchy/n25_scale_up.md` (phase 1 of project `slope_hierarchy`; carries the measurement addendum) and `graphical_scoping.md` sub-tasks | **moved to the Cortex 2026-09-01** (was `research/graphical_ep/slope_hierarchy_n25_scale_up.md`); Cortex state `planned` |
 | 4 | IC50 EP end-to-end + scale ladder | → PyAutoCortex `phases/ic50_workspace/ep_scale_up.md` (phase 1 of project `ic50_workspace`; dev companion stays in the Mind as `feature/autofit/ep_lbfgs_jax.md`) | **moved to the Cortex 2026-09-01** (was `research/graphical_ep/ic50_ep_scale_up.md`); Cortex state `planned` |
-| 5 | Diagnostics sufficiency checkpoint | no prompt yet — deliberate | judge after phases 2 & 4 produce real runs; the 2026-07 diagnostics wave (#1330/#1335) shipped and caught #1383; graphical_scoping sub-tasks 5–6 (summary JSON, dashboard) are the likely follow-ups |
+| 5 | Diagnostics sufficiency checkpoint | no prompt yet — deliberate | judge after phases 2 & 4 produce real runs; the 2026-07 diagnostics wave (#1330/#1335) shipped and caught #1383; graphical_scoping sub-tasks 5–6 (summary JSON, dashboard) are the likely follow-ups; concrete item from phase 1–2: STALE = zero SUCCESS updates is now warned by the library (#1562); the BIASED-TIGHT guard calibration stays a human call |
 | 6 | Profiling: autofit_profiling repo + two epics | `research/autofit/autofit_profiling_bootstrap.md` | filed; repo creation human-gated |
 
 Adjacent live work this campaign leans on but does not own: priors/messages
@@ -57,6 +57,8 @@ PyAutoFit#1405. Each mechanism is a Mind prompt under `draft/bug/autofit/`:
 | D4+D5 | Truncation limits dropped by `from_natural_parameters`/`__pow__` (leg B σ message returns limits (−inf, inf)); `TransformedMessage.from_mode` skips the Jacobian for scalar variables (log-σ leg never moves) | `complete/2026/09/ep-message-support.md` | **SHIPPED 2026-09-02** — PyAutoFit#1560 merge `9eb80852233590205bc53366cb4ddf26b0be1ba5` (PyAutoFit#1559) + workspace autofit_workspace_test#93 merge `7d175ddbf3d2774e09fde4131cf35d2d95146351`. Leg B scatter message keeps limits `(0, 100)`; loggaussian `log_sigma` moves 2.30 → 1.55; truncated `mu` row still collapses ~2e-4 = D2/D3 |
 | D6 | `errors_at_sigma(as_instance=True)` crashes on a prior-valued global model | `samples_errors_at_sigma_instance_prior_valued_model.md` | small, safe |
 
+Cure follow-on: `draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md` — un-parks `analytic_gaussian.py` / `analytic_gaussian_priors.py` when it lands.
+
 Calibration facts to reuse: EP with a Gaussian site on σ is biased on this
 model by construction (seeds 0–4 scatter row a ≤ 0.077, b ≤ 0.145 for the
 minimal EP) — that is the analytic ceiling any autofit fix should be judged
@@ -66,8 +68,9 @@ currently reports.
 
 ## Sequencing
 
-Phase 1 first (cheap, unblocks 2, referees everything). Phase 2 resumes from
-its banked evidence once 1 gives the analytic upper limit. Phase 3 runs in
+Phase 1 first (cheap, unblocks 2, referees everything). Phase 2 shipped
+2026-09-02 from its banked evidence once 1 gave the analytic upper limit
+(`complete/2026/09/ep-scale-collapse-basin-cure-or-caveat.md`). Phase 3 runs in
 parallel (different machine profile — RAL). Phase 4 after 1–2 establish
 trust. Phase 6 epic 1 (general profiling) can start any time; epic 2 (EP
 profiling) last, once end-to-end runs exist to profile.
@@ -78,7 +81,7 @@ profiling) last, once end-to-end runs exist to profile.
   end-to-end models are the goal; adopt only if a genuinely simple change
   dramatically simplifies/speeds things. (`feature/autofit/ep_lbfgs_jax.md`
   covers the *factor-fit sampler*, which is allowed; this gate is about the
-  EP update maths itself.)
+  EP update maths itself.) — 2026-09-02: the moment-matching cure prompt is the first candidate for this gate.
 - **Sampler-result reuse across EP passes** — complicated for efficiency-only
   gains; revisit via profiling epic 2 evidence (ep_scoping sub-task 6).
 - **Parallel factor updates on HPC** — revisit when scaled runs approach
