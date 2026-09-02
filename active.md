@@ -4,7 +4,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/385
 - prompt: active/cortex_public_surfaces.md
 - issued: 2026-09-02
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoBrain/pull/336
+  - https://github.com/PyAutoLabs/pyautolabs.github.io/pull/7
+  - https://github.com/PyAutoLabs/PyAutoScientist/pull/27
+  - https://github.com/PyAutoLabs/PyAutoCortex/pull/6
+- heart-ack: n/a — prose-only phase, no organ code or library change; Heart YELLOW 65 at the time (manifest drift; CI status unavailable in the web container) recorded on the two earlier entries tonight
 - location: web-github (session clones, no task worktree; branch claude/cortex-birth-phases-1-3-u9pq77)
 - session: claude-code-remote (cortex-birth epic session, autonomous overnight per the human's instruction)
 - epic: cortex-birth phase 6 — the last (gates: phases 4 and 5 SHIPPED; the reviewed-batch gate is not met, so the retrospective lands as a stub)
