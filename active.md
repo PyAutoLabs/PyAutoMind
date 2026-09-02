@@ -201,3 +201,12 @@
     + mappings_from, Mapper.mappings_from, a regions= overlay on plot_array /
     plot_inversion_reconstruction, and subplot_mappings rewritten as the one-look 2x2
     mapping figure. Fable session; execution delegated to Opus.
+
+## adapt-image-snr-cap
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/521
+- prompt: active/adapt_image_snr_cap.md
+- issued: 2026-09-02
+- session: claude-code-cli (Fable architect, Opus execution)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/adapt-image-snr-cap
+- repos:

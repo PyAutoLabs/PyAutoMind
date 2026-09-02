@@ -12,6 +12,8 @@ Status: formalised
 Consequence: judge
 Witness: every Hilbert / rectangular-adapt / Adapt-regularization call site in autolens_workspace scripts builds its AdaptImages from a source S/N image whose maximum is exactly 3.0 (grep finds no uncapped `galaxy_name_image_dict["('galaxies', 'source')"]` handed to an image mesh or AdaptImages), and the group source_pix_2 over-sample map contains 4s again.
 Review-minutes: 25
+Issued: 2026-09-02
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/521
 
 Cap the adapt image at S/N 3.0 everywhere an adaptive pixelization consumes it: the Hilbert
 image-mesh, the rectangular adapt meshes and the Adapt / AdaptSplit regularization.
