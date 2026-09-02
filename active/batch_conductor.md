@@ -19,6 +19,7 @@ Epic: two-slot-batching
 Phase: 2
 Parent: draft/feature/pyautomind/two_slot_batching_epic.md
 Filed: 2026-08-30
+Issued: 2026-09-02
 
 The reasoning half. **No dispatch in this phase.** With phases 0-2 shipped the
 human runs `pyauto-brain batch plan` in their slot, reads the proposal, and taps

@@ -1,5 +1,16 @@
 # Active Tasks
 
+## batch-collect
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/332
+- prompt: active/batch_conductor.md
+- issued: 2026-09-02
+- status: library-dev
+- location: web-github (session clones, no task worktree; branch claude/cortex-birth-phases-1-3-u9pq77)
+- session: claude-code-remote (cortex-birth epic session, mobile)
+- scope: the `collect` verb only (queue.md #8, two-slot-batching phase 2); `slice` is re-filed as its own prompt at close-out
+- repos:
+  - PyAutoBrain
+
 ## silence-colab-cli-message
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/156
 - prompt: active/silence_the_non_colab_setup_colab_message.md
