@@ -133,7 +133,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/91
 - prompt: active/analytic_gaussian_benchmark.md
 - issued: 2026-09-02
-- status: workspace-dev
+- status: ready-to-ship (3 commits on the branch, not pushed; Heart YELLOW ack pending)
 - epic: graphical-ep (phase 1 — the keystone; ledger draft/research/graphical_ep/ep_campaign.md)
 - worktree: ~/Code/PyAutoLabs-wt/analytic-gaussian-benchmark
 - repos:
