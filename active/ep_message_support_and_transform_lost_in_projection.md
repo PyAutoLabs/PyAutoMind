@@ -9,12 +9,14 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued — PyAutoFit#1559, worktree ep-message-support
 Consequence: judge
 Review-minutes: 15
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-02
+Issued: 2026-09-02
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1559
 
 Two message-layer defects (D4 + D5) found by the analytic Gaussian benchmark
 (autofit_workspace_test#91, `analytic_gaussian_priors.py`). Both make the
