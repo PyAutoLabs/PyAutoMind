@@ -1,5 +1,20 @@
 # Active Tasks
 
+## cortex-public-surfaces
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/385
+- prompt: active/cortex_public_surfaces.md
+- issued: 2026-09-02
+- status: workspace-dev
+- location: web-github (session clones, no task worktree; branch claude/cortex-birth-phases-1-3-u9pq77)
+- session: claude-code-remote (cortex-birth epic session, autonomous overnight per the human's instruction)
+- epic: cortex-birth phase 6 — the last (gates: phases 4 and 5 SHIPPED; the reviewed-batch gate is not met, so the retrospective lands as a stub)
+- repos:
+  - PyAutoBrain
+  - pyautolabs.github.io
+  - PyAutoScientist
+  - PyAutoCortex
+  - PyAutoMind
+
 ## silence-colab-cli-message
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/156
 - prompt: active/silence_the_non_colab_setup_colab_message.md
