@@ -21,6 +21,7 @@ Epic: cortex-birth
 Phase: 5
 Parent: draft/feature/pyautocortex/cortex_birth_epic.md
 Filed: 2026-09-01
+Issued: 2026-09-02
 
 Phase 5 of 7 in the PyAutoCortex birth epic. **Gates: phase 2, AND the
 two-slot-batching `collect` verb** (`draft/feature/pyautobrain/batch_conductor.md`,
