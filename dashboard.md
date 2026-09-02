@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 165 |
+| [Backlog](#backlog) (`draft/`) | 166 |
 
 ## Start here
 
@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev — ⚠️ gates a Cortex phase → phases/euclid/dr1_prelim_10_lens_science_run.md</summary>
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
@@ -468,10 +468,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**165** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **52** of them belong to an epic and are listed only under [Epics](#epics) below.
+**166** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **52** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 29</summary>
+<summary><b>feature</b> — 30</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
 
@@ -501,6 +501,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautobrain/batch_review_integration_branches_p3_push.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md">Precompute fixed-geometry Gaussian deflection angles and rescale by the free mass-to-light ratio…</a> — autogalaxy · large · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
 ```
 
 </details>
@@ -1620,6 +1628,36 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>numba-cpu · profiling</b> — 2 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax, mass-profiles</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'numba-cpu · profiling' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
+- draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md">Precompute fixed-geometry Gaussian deflection angles and rescale by…</a> | autogalaxy | large | medium | formalised |
+| <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a> | autolens_profiling | small | medium | formalised |
+
+</details>
+
+<details>
 <summary><b>samplers — bundle 2</b> — 2 task(s) · 4 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1649,39 +1687,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-<details>
-<summary><b>ci-smoke — bundle 2</b> — 3 task(s) · 8 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'ci-smoke — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/maintenance/ci/copilot_auto_review.md
-- draft/maintenance/ci/heart_smoke_table_autocti.md
-- draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> | ci | large | normal | planned |
-| <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | ci | medium | normal | formalised |
-| <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> | workspaces | low | normal | draft |
-
-</details>
-
-_Showing 8 of 21 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2351,7 +2357,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-12 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+13 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2360,6 +2366,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md — unknown theme keyword(s): mass-profiles`
 - `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md — unknown theme keyword(s): mass-profiles`
 - `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md — unknown theme keyword(s): mass-profiles`
+- `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md — unknown theme keyword(s): mass-profiles, jax`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/pyautobrain/batch_no_park_at_ship.md — unknown theme keyword(s): batch`
