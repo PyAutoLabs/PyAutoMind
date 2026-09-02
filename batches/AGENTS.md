@@ -17,6 +17,7 @@ record it.
 - review-at: 2026-09-04T08:00Z     # stated by the human AT DISPATCH
 - shift: night                     # free-text label the human gives it
 - lane: any
+- integration: yes            # optional, at dispatch: build the review's integration worktree at collect
 - review-minutes-planned: 42
 - usage-window-at-dispatch: <5h %, weekly %, opus %>
 - heart-ack:                  # the reason set acknowledged FOR THIS SHIFT
@@ -30,6 +31,7 @@ record it.
 - usage-window-at-collect: <5h %, weekly %, opus %>
 - delivered: <n>/<n>
 - packet: batches/packets/<YYYY-MM-DD>-<slot>.html
+- integration-root: ~/Code/PyAutoLabs-wt/integration-<YYYY-MM-DD>-<slot> — integration/<slot>; 3 clean, 1 conflicted
 - review: batches/reviews/<YYYY-MM-DD>-<slot>.md
 - review-minutes-actual: <n>
 - notes: |
@@ -58,6 +60,16 @@ self-contained HTML file per slot under `batches/packets/` (see that folder's
 `AGENTS.md`), written at dispatch with PENDING members and refreshed at
 collect. It is the historical record of what the human was shown; a batch
 whose packet was never archived cannot be audited against what they ruled on.
+
+**`integration:` is opt-in, and it is local.** `yes` asks the collect to build
+one throwaway worktree root for the slot merging every member's head branch per
+repo, so the reviewer can run the whole batch together. It costs git time, not
+tokens, and it is off by default because most slots do not need it. Nothing is
+pushed, nothing is resolved: a member whose merge conflicts is left out of that
+repo's branch and named with the conflicting paths — that report is the point,
+not a failure. `collect --integration` turns it on for one run without editing
+the record, and what happened comes back as `integration-root:`, a key of its
+own so the `yes` you wrote here survives.
 
 **`review:` is what the human said, verbatim.** The markdown their packet-page
 submission produced (or the orchestrator transcribed), one file per slot under
