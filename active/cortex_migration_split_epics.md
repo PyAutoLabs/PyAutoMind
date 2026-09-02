@@ -21,6 +21,7 @@ Epic: cortex-birth
 Phase: 4
 Parent: draft/feature/pyautocortex/cortex_birth_epic.md
 Filed: 2026-09-01
+Issued: 2026-09-01
 
 Phase 4 of 7 in the PyAutoCortex birth epic. **Gates: phases 2 and 3.** Gates
 phase 6. Slices if needed: (a) epics + prompts, (b) rulings backfill, (c) batch

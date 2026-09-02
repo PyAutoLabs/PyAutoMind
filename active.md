@@ -183,3 +183,18 @@
     report step so a failed run comments on its issue instead of silence.
     Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
     green queue_filing.yml run on #71 that opens a filing PR.
+
+## cortex-migration
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/383
+- prompt: active/cortex_migration_split_epics.md
+- issued: 2026-09-01
+- epic: cortex-birth (phase 4 of 7; ledger draft/feature/pyautocortex/cortex_birth_epic.md; gates phases 2 + 3 SHIPPED #380 #382)
+- session: claude-code-cli (Fable architect; Opus execution — slice B Mind first, then A Cortex + C science ledgers; laptop lane for the subhalo wiki)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-migration
+- decisions: Migrated-from: becomes a schema key (53); intra-Cortex sequencing = planned + "Ready when:" (54); Cortex-spawned dev follow-ups get their issue at filing without leaving draft/ (55); legacy-born encodings, one subhalo phase per lens, transcribed batch records with the Mind originals kept intact (56)
+- repos:
+  - PyAutoCortex (feature/cortex-migration)
+  - PyAutoMind (feature/cortex-migration)
+  - autolens_profiling (feature/cortex-migration)
+  - /mnt/c/Users/Jammy/Science/subhalo_validation (main, direct commits)
