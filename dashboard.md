@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/adapt_image_snr_cap.md">Cap the adapt image at S/N 3.0 in every adaptive pixelization pipeline</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/521">issue #521</a> — issued 2026-09-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/adapt_image_snr_cap.md">Cap the adapt image at S/N 3.0 in every adaptive pixelization pipeline</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/521">issue #521</a> — issued 2026-09-02 — pr-open, awaiting-merge</summary>
 
 ```
 /start_dev active/adapt_image_snr_cap.md
