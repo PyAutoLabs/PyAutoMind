@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1242 records across 8 buckets.
+1243 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -126,6 +126,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-birth-organ-row](2026/09/cortex-birth-organ-row.md) — closed completed 2026-09-01
 - [cortex-conductor](2026/09/cortex-conductor.md) — closed completed 2026-09-01
 - [cortex-migration](2026/09/cortex-migration.md) — closed completed 2026-09-01
+- [cortex-public-surfaces](2026/09/cortex-public-surfaces.md) — closed completed 2026-09-02
 - [cortex-registration](2026/09/cortex-registration.md) — closed completed 2026-09-01
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
