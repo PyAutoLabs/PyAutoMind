@@ -149,3 +149,26 @@
 - heart-ack:
   - PyAutoArray: open PR 10d old
   - release validation incomplete: no rehearsal for current source
+
+## image-source-mappings-p2
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/719
+- prompt: active/mappings_shape_solver_fit_subplot.md
+- issued: 2026-09-02
+- session: claude --resume 7ac5cc85-dfd9-41e2-a4bd-725f33f0f24f
+- status: library-dev
+- epic: image-source-mappings (phase 2 + 2a — ledger draft/feature/autoarray/image_source_mappings_epic.md; opened 2026-09-02 by user decision ahead of the PyAutoArray release that gated it)
+- heart-ack:
+  - "PyAutoArray: open PR 10d old"
+  - "release validation incomplete: no rehearsal for current source"
+- worktree: ~/Code/PyAutoLabs-wt/image-source-mappings-p2
+- parallel-claim: PyAutoArray — numba-vs-jax-sparse holds a read-only research claim on main (no branch, no worktree); file sets disjoint
+- repos:
+  - PyAutoArray: feature/image-source-mappings-p2
+  - PyAutoLens: feature/image-source-mappings-p2
+- summary: |
+    Phase 2 of image-source-mappings. PR-A (PyAutoArray, phase 2a): Shape.contains / Shape.boundary on
+    autoarray/structures/triangles/shape.py. PR-B (PyAutoLens): ShapeSolver validation suite + audit fixes,
+    ShapeSolver.image_regions_from / mapping_from, autolens/lens/mappings.py (fit-level mappings, brightest
+    multiple-image positions in arcsec + pixels, per-image magnification), subplot_mappings(fit), plots.yaml wiring.
+    Fable session; execution delegated to Opus. Library-first: PR-A merges before PR-B (PyAutoLens PR CI is source-installed
+    against PyAutoArray main).

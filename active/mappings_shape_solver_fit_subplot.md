@@ -15,6 +15,7 @@ Unattended: needs-slicing
 Epic: image-source-mappings
 Phase: 2
 Filed: 2026-09-02
+Issued: 2026-09-02
 
 ShapeSolver-based source-to-image region mappings, fit-level `subplot_mappings`, brightest multiple-image positions, and the ShapeSolver validation suite in PyAutoLens.
 
