@@ -90,6 +90,6 @@ cleaner contract; pick it unless it breaks an existing caller.
 - Campaign ledger: `draft/research/graphical_ep/ep_campaign.md` (phase 1)
 - Siblings: `complete/2026/09/ep-prior-id-zero.md` (D1 shipped 2026-09-02, PyAutoFit#1558),
   `draft/bug/autofit/ep_laplace_covariance_and_failed_update_projection.md`,
-  `draft/bug/autofit/ep_message_support_and_transform_lost_in_projection.md`
+  `complete/2026/09/ep-message-support.md` (D4/D5 shipped 2026-09-02, PyAutoFit#1560)
 - Scripts: `autofit_workspace_test/scripts/graphical/analytic_{reference,ep_minimal,autofit,gaussian,gaussian_priors,gaussian_collapse}.py`
   on branch `feature/analytic-gaussian-benchmark`

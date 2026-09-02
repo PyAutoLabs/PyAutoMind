@@ -1,3 +1,47 @@
+## ep-message-support
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1559
+- completed: 2026-09-02
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1560 (merge `9eb80852233590205bc53366cb4ddf26b0be1ba5`)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/93 (merge `7d175ddbf3d2774e09fde4131cf35d2d95146351`)
+- epic: graphical-ep (fix wave 2/3: D1 #1558 → D4/D5 → D2/D3; ledger `draft/research/graphical_ep/ep_campaign.md`)
+- summary: |
+    D4 — `TruncatedNormalMessage` passed its limits as positional *parameters*, so every natural-parameter
+    rebuild (`__pow__`, products, quotients, `from_natural_parameters`) came back with the limits reset to
+    `(−inf, inf)`, starting with the first `prior.message ** (1/(count−1))` in `message_dict`. The limits are
+    now message state: `MessageInterface._support_kwargs` (empty for untruncated messages, delegated to the
+    base on `TransformedMessage`) is forwarded through `copy` / `__getitem__` / `merge` / scalar ops /
+    `__pow__` / `update_invalid` / `_init_kwargs` / pickle; products take the intersection of supports
+    (`_combined_support`, `MessageException` only when empty), quotients keep the numerator's;
+    `TruncatedNaturalNormal` inherits it. `TruncatedNormalMessage.parameters` is now `(mean, sigma)`.
+    D5 — `TransformedMessage.from_mode` hid a `jac.quad(DiagonalMatrix)` crash behind a `.shape != ()` guard
+    and kept only the innermost Jacobian, so a `LogGaussianPrior` scatter wrote its physical variance as its
+    log-space variance and never moved. It now takes a `LinearOperator`'s diagonal, applies every Jacobian in
+    `reversed(self.transforms)`, and never passes physical-space limits to the base message.
+    Tests: +19 truncated-normal (11-way support-survival sweep incl. pickle / old 3-tuple payloads), new
+    `test_transformed_from_mode.py` (7), new hierarchical `test_truncated_support.py`, P7 prior sweep;
+    `pytest test_autofit`: 2430 passed, 2 skipped. Workspace: `analytic_autofit.py` reads the limits from
+    `lower_limit` / `upper_limit` (smoke gate 13/13 PASS).
+- referee after: |
+    Truncated family scatter message reports limits `(0, 100)` (was `(−inf, inf)`); loggaussian `log_sigma`
+    row moves off its start, 2.3026 → 1.5459 ± 0.167 (closed form 1.8338 ± 0.361), hierarchical updates
+    150 BAD_PROJECTION → 91 BAD_PROJECTION / 59 SUCCESS. The truncated `mu` row still collapses to ~2e-4 —
+    D2/D3 territory: the base control (809b4fd85, `autofit/` stashed) showed both the gaussian and truncated
+    families collapse fully post-D1, so the residual is owned by
+    `ep_laplace_covariance_and_failed_update_projection.md`, last in the wave. Tolerances untouched; the
+    autofit parity scripts stay parked NEEDS_FIX.
+- traps: |
+    - `message.parameters` had a workspace consumer the design missed: `autofit_workspace_test/scripts/
+      graphical/analytic_autofit.py` unpacked the 4-tuple. A `parameters` shape change is an API change —
+      grep the workspaces before calling it internal.
+    - Transform order in `from_mode` must be `reversed(self.transforms)` — the stack is applied outermost
+      first on the way out, so the covariance pull-back walks it innermost first; `UniformPrior(0,10)` only
+      round-trips at modes 2/5/8 with the reversed walk.
+    - `TransformedMessage` operands contribute *base-space* support to a product: `_support_kwargs` delegates
+      to the base message, so intersecting a transformed message with a physical-space truncated one must not
+      mix the two spaces — `from_mode` drops physical `lower_limit`/`upper_limit` kwargs for that reason.
+
+## Original prompt
+
 # EP messages lose their truncation limits on every natural-parameter operation, and `TransformedMessage.from_mode` skips the Jacobian for scalars
 
 Type: bug
