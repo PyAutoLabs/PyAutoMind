@@ -1,3 +1,86 @@
+## batch-review-integration
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/337
+- completed: 2026-09-02
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/338 (merged, `7a7c689`)
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/386 (merged, `e869ce6`)
+- session: claude-code local (Fable architect, Opus subagents)
+
+### What shipped
+
+Phases 1-2 of the batch-review integration branches: the reviewer can now run a whole batch
+together instead of one PR at a time.
+
+- **Phase 1 — a reliable member → (repo, branch) map.** The batch record stores no repo/branch per
+  member and `active.md`'s `repos:` field has four dialects, so the evidence JSON now records each
+  PR's `head_ref` / `head_sha` / `head_repo` straight from `gh` (`GH_FIELDS` gains
+  `headRefName,headRefOid,headRepository,headRepositoryOwner`). Later phases drive off that map,
+  never off `active.md` parsing.
+- **Phase 2 — `batch collect --integration`.** Opt-in, laptop lane only (same precedent as
+  `--fetch`), also triggered by a `- integration: yes` line in the batch record at dispatch. It
+  builds **one throwaway worktree root per slot** (`~/Code/PyAutoLabs-wt/integration-<slot>/`, via
+  the existing `worktree_create`, so `activate.sh` + PYTHONPATH + per-task cache dirs come for
+  free) and, per affected repo, cuts `integration/<slot>` from `origin/main` and merges every
+  member's head branch in dispatch order.
+- **Conflicts are reported, not resolved.** A member whose merge conflicts is left OUT of that
+  repo's branch (merge aborted) and named in the packet and report with the conflicting paths.
+  That report is the answer to the original request's "how would this resolve at the end" — it is
+  the honest output, not a failure (exit code unchanged).
+- **Nothing is pushed.** No remote ref is touched, no PR is opened; the integration root is
+  disposable and the canonical checkouts are never used. New Brain network leg is a read-only
+  `git fetch origin`, opt-in and documented beside `--fetch`.
+- **Fetch fix.** `GH_FIELDS` asked `gh pr view --json` for `merged`, which is not a field — `gh`
+  failed the whole request, so every `--fetch` had been scoring UNOBSERVABLE. Now `mergedAt`, with
+  `merged` derived. Pre-existing break, found by the end-to-end smoke.
+- Packet gains a sentinel-bounded `integration` region (sentinels always emitted, so a refresh
+  never blanks it); report gains `## Integration branches` with the copy-paste
+  `source <root>/activate.sh` line first; record gains an `- integration-root:` stamp.
+  `bin/worktree.sh` gains `PYAUTO_WT_BRANCH` for non-`feature/` roots.
+- PyAutoMind#386 is the companion doc change: `batches/AGENTS.md` documents the
+  `- integration: yes` / `- integration-root:` record keys.
+
+### Commits
+
+PyAutoBrain: `dcd33e2` (head fields in the evidence JSON), `99e98c9` (`PYAUTO_WT_BRANCH`),
+`f39230f` (`_integration.py`), `68054fa` (collect wiring, report, packet region, record stamp),
+`7cdf59c` (docs), `bf3e57b` (`mergedAt` fetch fix). PyAutoMind: `3715b97a`.
+
+### Verification
+
+- `tests/test_batch_integration.py` (19 new tests) — temp bare origin + clone, two members on the
+  same file: alpha merged, beta left out with `paths == ["a.py"]`, canonical checkout untouched
+  (the prompt's Witness); clean multi-member; idempotent re-run; dirty worktree skipped;
+  fork / merged / missing-head reported not merged; packet region sentinelled, escaped and
+  preserved across refresh; cloud lane refused with a pointer; `plan --integration` → rc 2.
+- `tests/test_batch_collect.py` — head fields in the `--json` argv and the row; `mergedAt` → `merged`.
+- Full Brain suite: **815 passed**; 1 pre-existing failure
+  (`test_cortex_conductor.py::test_a_fixture_tree_finds_the_schema_its_checkout_ships`) that only
+  fails inside a task worktree where PyAutoCortex is a symlink — passes on the canonical checkout.
+- Laptop smoke on real repos: `collect --slot 2026-08-31-pm --fetch --integration` (all PRs merged
+  → `nothing to integrate`, no root built); then with an evidence file naming four unmerged
+  branches → PyAutoFit clean, PyAutoArray one merged + two conflicted with paths listed; second run
+  reproduced identical trees; root and `integration/*` branches removed afterwards, canonical repos
+  back on `main` and clean.
+- CI: Brain run 33661956257 (pytest 3.12 + 3.13) success; Mind run 33661975077 privacy success.
+- Heart: **YELLOW acknowledged by the human at plan approval**; both reasons unrelated to this
+  change — PyAutoArray open PR 10 days old, and release validation incomplete (no rehearsal for
+  current source).
+
+### Traps
+
+- `git merge-tree --write-tree` is unavailable on git 2.34.1 here, so there is no dry-run preview —
+  the throwaway worktree *is* the preview.
+- The packet page cannot be the opt-in button: it is static and credential-free. Opt-in lives in the
+  batch record or the `collect` flag.
+- Never integrate in the canonical checkouts: they feed every other shell/agent and
+  `bin/morning.sh` → `pull_all_main.sh` flips them back to `main`.
+
+### Next
+
+Phase 3 (`--push`, never-force refresh, `integration/*` sweep expiry) is filed as
+`draft/feature/pyautobrain/batch_review_integration_branches_p3_push.md`.
+
+## Original prompt
+
 # Batch review: opt-in integration branches so a reviewer can run the whole batch together
 
 Type: feature

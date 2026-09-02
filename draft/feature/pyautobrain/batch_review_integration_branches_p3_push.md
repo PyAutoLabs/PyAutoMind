@@ -8,7 +8,7 @@ Repos:
 Difficulty: medium
 Autonomy: safe
 Priority: medium
-Blocked-by: PyAutoBrain#338, PyAutoMind#386   # phases 1-2 (_integration.py and the record keys)
+Depends-on: shipped in complete/2026/09/batch-review-integration.md (PyAutoBrain#338, PyAutoMind#386 — phases 1-2, merged 2026-09-02)
 Status: formalised
 Consequence: notify
 Witness: a test with a temp bare origin runs `collect --integration --push` and asserts origin carries `integration/<slot>` equal to the local branch; a second run after main moves lands as a new commit or an `integration/<slot>-2` branch and never force-updates the first; `branch_sweep.sh` classifies an `integration/*` branch whose record `sweep-after:` is past as sweepable and one that is not as kept
@@ -46,7 +46,8 @@ the merged state out on another machine or hand it to CI.
 
 ## Constraints
 
-- Blocked by #338 and PyAutoMind#386 merging (builds on `_integration.py` and the record keys).
+- Builds on `_integration.py` and the record keys from phases 1-2 — PyAutoBrain#338 and
+  PyAutoMind#386 merged 2026-09-02 (`complete/2026/09/batch-review-integration.md`), so this is unblocked.
 - Remote sessions have no usable push credential (GITHUB_ACCESS.md); this is a laptop leg like `--fetch`.
 - `git merge-tree --write-tree` is unavailable (git 2.34.1 on the laptop); nothing here needs it.
 
