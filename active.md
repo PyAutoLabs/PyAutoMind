@@ -156,3 +156,15 @@
     then the two zero-numerics levers — GridMaker.via_grid_2d no longer fires
     Grid2D.over_sampled on *Sph calls (+ sub-size-1 short-circuit) and the tracer /
     galaxy double trace at sub-size 1. Fable session; execution delegated to Opus.
+
+## batch-review-integration
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/337
+- issued: 2026-09-02
+- prompt: active/batch_review_integration_branches.md
+- session: claude-code local (Fable architect, Opus subagents)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/batch-review-integration
+- repos:
+  - PyAutoBrain: feature/batch-review-integration
+  - PyAutoMind: feature/batch-review-integration
+- note: PyAutoBrain also claimed by organ-board-github-link (PR #326, disjoint files) — parallel worktree approved 2026-09-02

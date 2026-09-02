@@ -13,6 +13,7 @@ Consequence: notify
 Witness: a batch-conductor test builds a temp repo with two member branches, runs `collect --integration`, and asserts `integration/<slot>` tree == merge of both heads plus a packet line `clean` / `conflicted: <path>` per repo; evidence JSON carries `headRefName` for every member PR
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-09-02
 
 
 ## Original request (verbatim, 2026-09-02)
