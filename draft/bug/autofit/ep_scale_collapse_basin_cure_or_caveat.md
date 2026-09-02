@@ -148,9 +148,9 @@ try these *after* the DynamicUpdater lever above, in this order:
    Test by (a) rerunning with the truth pulled well off the boundary vs
    pinned near it, and (b) swapping the prior family while holding all else
    fixed.
-3. **Analytic referee.** Once
-   `research/graphical_ep/analytic_gaussian_benchmark.md` ships, run its
-   conjugate model — where the scatter's posterior and upper limit are known
+3. **Analytic referee.** The analytic benchmark shipped 2026-09-02
+   (`complete/2026/09/analytic-gaussian-benchmark.md`, autofit_workspace_test#92):
+   run its conjugate model — where the scatter's posterior and upper limit are known
    in closed form — through the same seed sweep. A basin that appears even
    there is strong evidence for "inherent to EP as implemented"; one that
    does not localises the pathology to non-conjugate likelihoods or the

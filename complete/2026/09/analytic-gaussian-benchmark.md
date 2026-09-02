@@ -1,3 +1,55 @@
+## analytic-gaussian-benchmark
+- issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/91 (closed completed 2026-09-02)
+- completed: 2026-09-02
+- workspace-pr: autofit_workspace_test https://github.com/PyAutoLabs/autofit_workspace_test/pull/92 (head `764af83e`, merge `54af208398ae7fd336d3d9bca363776ad50da037`)
+- classification: research (graphical_ep) — epic `graphical-ep`, phase 1 (the keystone; ledger
+  `draft/research/graphical_ep/ep_campaign.md`). No library PR: PyAutoFit was read-only for this
+  task (claimed by two other tasks), so every defect filed as a Mind bug prompt.
+- ci: `Smoke Tests [pull_request]` run 33662780163 — `changes`, `smoke (3.12)`, `smoke (3.13)` all
+  green; mergeStateStatus CLEAN. (Repo workflow fires `push` on `main` only, so the PR run is the
+  whole signal.)
+- heart-ack (carried from the `active.md` entry): PyAutoArray open PR 10d old; release validation
+  incomplete (no rehearsal for current source). Neither touches this workspace-only change.
+
+- summary: Closed-form conjugate hierarchical Gaussian benchmark under
+  `autofit_workspace_test/scripts/graphical/analytic_*.py` (six scripts, plus `no_run.yaml` and
+  `smoke_tests.txt`): the known-scatter leg is analytic, the unknown-scatter leg exact by
+  quadrature; compared against a minimal hand-rolled EP, autofit EP (Laplace) and the graphical
+  joint fit, over a prior-family sweep and the phase-2 collapse configuration.
+- verdict: closed form, minimal EP and the graphical joint fit agree everywhere; **every failing
+  cell is autofit's EP column, including the exactly Gaussian leg A** (`mu` stays at its start:
+  50.00 ± 20.6 vs 50.86 ± 4.11).
+- mechanisms (root-caused read-only, recorded on PyAutoFit#1405, filed as four bug prompts under
+  `draft/bug/autofit/`):
+  - D1 — first prior of a process (id 0) compares equal to the `FactorValue` sentinel, corrupting
+    every multi-variable factor gradient → `ep_prior_id_zero_collides_with_factor_value.md`
+    (small, safe — do first).
+  - D2+D3 — Laplace "covariance" is mean-field precision plus one non-accumulating random diagonal
+    secant (no factor curvature; depends on prior ids through sampling order); a failed line search
+    still projects the start point and overwrites the message →
+    `ep_laplace_covariance_and_failed_update_projection.md` (the phase-2 mechanism).
+  - D4+D5 — truncation limits dropped by `from_natural_parameters`/`__pow__` (leg B σ message
+    returns (−inf, inf)); `TransformedMessage.from_mode` skips the Jacobian for scalar variables
+    (log-σ leg never moves) → `ep_message_support_and_transform_lost_in_projection.md`.
+  - D6 — `errors_at_sigma(as_instance=True)` crashes on a prior-valued global model →
+    `samples_errors_at_sigma_instance_prior_valued_model.md` (small, safe).
+- smoke gate: the closed-form reference (`analytic_gaussian.py`) and the minimal EP are curated into
+  the smoke gate; the three autofit-parity scripts are parked `NEEDS_FIX` in `no_run.yaml`.
+  **Un-park them** once D1–D6 land — re-run the parity sweep as the first check on each fix.
+- banked: analytic upper limit `sigma_q95 = 12.18` (seed 0, truncated(10,5,0,100), N=5) — the
+  phase-2 scatter-collapse referee. Calibration ceiling: EP with a Gaussian site on σ is biased on
+  this model by construction (seeds 0–4 minimal-EP scatter row a ≤ 0.077, b ≤ 0.145) — judge any
+  autofit fix against that, not zero.
+- follow-ups: phase 2 (`ep_scale_collapse_basin_cure_or_caveat.md`) now has its mechanism and the
+  analytic referee to run; phase 5 diagnostics gains "zero SUCCESS updates on a factor is a STALE
+  result that no library warning reports"; `autofit_profiling_bootstrap.md` can port the benchmark
+  into the profiling repo once that repo exists.
+- worktree: `~/Code/PyAutoLabs-wt/analytic-gaussian-benchmark` removed at close-out; its 53 MB of
+  gitignored `output/` (EP run products, test_mode/database scratch) deleted — re-derivable in
+  minutes on CPU, evidence tables banked on #91.
+
+## Original prompt
+
 # Analytic Gaussian benchmark: closed-form validation of graphical + EP
 
 Type: research

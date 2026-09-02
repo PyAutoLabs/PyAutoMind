@@ -37,8 +37,8 @@ A new GitHub repo mirroring `autolens_profiling`'s responsibility, but for
 all things PyAutoFit. **Repo creation is human-gated: confirm interactively
 with James before creating anything on GitHub.** Seed it by porting the
 existing baseline packages from `autofit_workspace_developer/` (`ep/`,
-`graphical/`, and the analytic benchmark once
-`research/graphical_ep/analytic_gaussian_benchmark.md` ships) so results,
+`graphical/`, and the analytic benchmark, shipped 2026-09-02 as
+`complete/2026/09/analytic-gaussian-benchmark.md`) so results,
 harnesses and hotspot files live in one place with committed history, the way
 autolens_profiling does for likelihoods.
 
