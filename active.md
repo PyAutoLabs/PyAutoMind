@@ -156,7 +156,10 @@
 - prompt: active/numpy_deflections_p1_sph_decorator_tracer.md
 - issued: 2026-09-02
 - session: claude --resume d3971bba-0e8d-4c4f-bc59-7808e6bfa6cd
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/516
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/595
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/718
 - epic: numpy-deflections-cpu (phase 1 — ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
 - worktree: ~/Code/PyAutoLabs-wt/numpy-deflections-p1
 - heart-ack:
