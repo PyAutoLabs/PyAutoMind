@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/batch_conductor.md">Batch phase 2 — the <code>batch</code> conductor: plan, slice, collect</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/332">issue #332</a> — issued 2026-09-02 — library-dev</summary>
+<details><summary>📋 <a href="active/batch_conductor.md">Batch phase 2 — the <code>batch</code> conductor: plan, slice, collect</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/332">issue #332</a> — issued 2026-09-02 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/batch_conductor.md
