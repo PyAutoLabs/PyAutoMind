@@ -15,7 +15,7 @@ Themes:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: SHIPPED — all seven phases (0–6) complete 2026-09-02; the ledger stays as the epic's record and carries the retrospective stub
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
@@ -172,7 +172,8 @@ manage them; they just cannot share one batch.
    the member's own organ record. Gates: 2, **and** the two-slot-batching
    `collect` verb (`draft/feature/pyautobrain/batch_conductor.md` — SHIPPED
    2026-09-02, PyAutoBrain#332, `complete/2026/09/batch-collect.md`; gate open).
-6. `draft/feature/pyautocortex/cortex_public_surfaces.md` — RTD organ page,
+6. `draft/feature/pyautocortex/cortex_public_surfaces.md` — **SHIPPED 2026-09-02**
+   (PyAutoMind#385; `complete/2026/09/cortex-public-surfaces.md`) — RTD organ page,
    PyAutoScientist row, hub, and the retrospective: what the first Cortex batch
    taught; the explicit deferred list. Gates: 4, 5.
 
