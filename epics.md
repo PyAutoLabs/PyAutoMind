@@ -127,7 +127,7 @@ epic, never picked standalone.
 ## cortex-birth
 - title: PyAutoCortex — the science organ: split science runs out of the Mind
 - ledger: draft/feature/pyautocortex/cortex_birth_epic.md
-- status: phases 0–1 SHIPPED 2026-09-01 (#377, #379; records complete/2026/09/cortex-birth-organ-row.md, complete/2026/09/cortex-schema-skeleton.md); next: phase 2 cortex_conductor_and_dashboard.md (phase 3 also unblocked)
+- status: phases 0–2 SHIPPED 2026-09-01 (#377, #379, #380; records complete/2026/09/cortex-birth-organ-row.md, complete/2026/09/cortex-schema-skeleton.md, complete/2026/09/cortex-conductor.md); next: phase 3 cortex_project_remotes_and_registration.md
 - notes: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
   time, no bulk issue queues. Phase 0 is human-gated (the repo is created by hand;
   no birth path exists). Decided 2026-09-01: new organ PyAutoCortex, a run/ruling
