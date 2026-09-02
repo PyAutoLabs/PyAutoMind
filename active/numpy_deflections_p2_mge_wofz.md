@@ -14,7 +14,7 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Filed: 2026-09-02
 Issued: 2026-09-02
 
