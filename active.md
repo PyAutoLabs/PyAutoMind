@@ -135,3 +135,20 @@
     graphical/ (analytic_*.py); analytic_gaussian.py curated into the smoke
     gate. PyAutoFit read-only (claimed by two other tasks); defects file as
     bug prompts. Fable session; execution delegated to Fable subagents.
+
+## numpy-deflections-p1
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/514
+- prompt: active/numpy_deflections_p1_sph_decorator_tracer.md
+- issued: 2026-09-02
+- session: claude --resume d3971bba-0e8d-4c4f-bc59-7808e6bfa6cd
+- status: library-dev
+- epic: numpy-deflections-cpu (phase 1 — ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
+- worktree: ~/Code/PyAutoLabs-wt/numpy-deflections-p1
+- parallel-claim: PyAutoArray — numba-vs-jax-sparse holds a read-only research claim on main (no branch, no worktree); file sets disjoint, own worktree approved by the human 2026-09-02
+- repos:
+- summary: |
+    Phase 1 of numpy-deflections-cpu: land autolens_profiling/scripts/lens/deflections/
+    (nine numpy mass-profile deflection cells, hst + euclid, pins), commit the baseline,
+    then the two zero-numerics levers — GridMaker.via_grid_2d no longer fires
+    Grid2D.over_sampled on *Sph calls (+ sub-size-1 short-circuit) and the tracer /
+    galaxy double trace at sub-size 1. Fable session; execution delegated to Opus.
