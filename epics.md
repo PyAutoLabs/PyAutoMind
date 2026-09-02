@@ -66,8 +66,11 @@ epic, never picked standalone.
   satisfies phase 4's "2 strongly preferred" gate. Phase 3a was INSERTED 2026-08-31
   (docs: restore the in-script narrative prose lost at 355b309; start_here.py back to a
   full end-to-end guide) and the old phase 3 renumbered to 3b; on 2026-09-01 the letters
-  died in the Cortex split and 3a/3b became plain 3/4. Next is phase 3
-  (draft/docs/euclid/restore_pipeline_narrative_prose.md).
+  died in the Cortex split and 3a/3b became plain 3/4. Phase 3 shipped 2026-09-01
+  (euclid#47 closed, PR #48 merged; record
+  complete/2026/09/restore-pipeline-narrative-prose.md). Next is phase 4
+  (draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md, issue euclid#49
+  pre-opened as the Cortex gate ref — reuse it).
 
 ## two-slot-batching
 - title: Two slots a day — the batch workflow

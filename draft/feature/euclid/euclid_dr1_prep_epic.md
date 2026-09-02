@@ -194,20 +194,22 @@ Read-only survey done while filing, so each phase prompt cites real paths:
 2. `complete/2026/08/euclid-ci-test-mode.md` — committed simulated
    datasets + TEST-mode CI over every example script + latent unit tests. Gate: 1.
    **SHIPPED 2026-08-29** — issue euclid#45 closed, PR #46 merged.
-3. `draft/docs/euclid/restore_pipeline_narrative_prose.md` (was 3a) — **restore the in-script
+3. `complete/2026/09/restore-pipeline-narrative-prose.md` (was 3a) — **restore the in-script
     narrative prose**: `start_here.py` back to a fully documented end-to-end new-user
     guide (kept as a shim over `initial_lens_model.fit`), `scripts/*.py` written to assume
     it has been read (point back for repeats, explain in full what it does not cover —
     e.g. the empty `__Source Pix__` block), `catalogue/scripts/*.py` lifted toward the
     `workflow/example/` register. Recovered prose is 4+ months stale: verify against the
-    code and `autolens_workspace` before restoring. Gates: 1, 2. **Inserted 2026-08-31 —
-    the next phase to run.**
+    code and `autolens_workspace` before restoring. Gates: 1, 2. Inserted 2026-08-31.
+    **SHIPPED 2026-09-01** — issue euclid#47 closed, PR #48 merged. Follow-up bug prompt
+    filed: `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md` (the `vis_lp`
+    search passes a `batch_size` kwarg `af.Nautilus` silently swallows).
 4. `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` (was 3b) — preserve and
    document the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing) CPU route
    and the full-JAX-GPU route. Gate: 1 (can overlap 2). Runs after phase 3 so its new
    documentation lands in a repo whose narrative register is already restored.
    **Issue euclid#49** — opened 2026-09-01 at filing, as the gate ref the Cortex science
-   phase names; reuse it in `start_dev`, never open a second.
+   phase names; reuse it in `start_dev`, never open a second. **The next phase to run.**
 
 **→ Cortex** — the four science phases below are no longer Mind phases. They live under
 `PyAutoCortex/phases/euclid/` with their own phase numbers, and the entries here are
@@ -253,7 +255,7 @@ integers again, and no two Mind phases share a number.
 | 0 | Mind (shipped) | 0 | — |
 | 1 | Mind (shipped) | 1 | — |
 | 2 | Mind (shipped) | 2 | 1 |
-| 3a | Mind `draft/docs/euclid/restore_pipeline_narrative_prose.md` | **3** | Gates: 1, 2 |
+| 3a | Mind (shipped) | **3** | Gates: 1, 2 |
 | 3b | Mind `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` | **4** | Gate: 1 (can overlap 2); runs after 3 |
 | 4 | → Cortex `phases/euclid/` `dr1_prelim_10_lens_science_run` | **4 (Cortex)** | `euclid#48`, `euclid#49` |
 | 5 | → Cortex `phases/euclid/` `resimulate_fitted_lens_simulator` | **5 (Cortex)** | Ready when Cortex euclid 4 accepted |
@@ -284,11 +286,13 @@ prompt stays in `draft/`, and the prompt carries the `Issue:` line so `create_is
   phase that can plausibly land as a fast standalone fix. It may spawn a follow-up bug prompt.
 - **Mind phase 9 (was 7) is explicitly allowed to conclude "no elegant solution → don't
   build it"** for the retroactive-update leg. That is a valid, shippable outcome.
-- **Phase 3 (then numbered 3a) was inserted on 2026-08-31**, after an audit found the repo's in-script
+- **Phase 3 (then numbered 3a) was inserted on 2026-08-31 and shipped on 2026-09-01**, after an audit found the repo's in-script
   narrative prose had been largely lost — not by the phase-1 port (which was net prose
   *positive*) but by `355b309` (2026-04-02, −812 prose lines) which deleted the
   `pipelines/` tree, and by `fc43be0` which deleted `groups.py` / `point_source.py`
-  outright. The old prose is recoverable from `git show 355b309~1:pipelines/<f>.py` but
-  is 4+ months stale — every workspace cross-reference in it has drifted. The phase
-  prompt carries the verified drift list.
+  outright. The old prose was recoverable from `git show 355b309~1:pipelines/<f>.py` but
+  4+ months stale — every workspace cross-reference in it had drifted, so every restored
+  claim was drift-verified against the code and `autolens_workspace`. The record
+  `complete/2026/09/restore-pipeline-narrative-prose.md` carries the folded prompt with
+  the verified drift list.
 - Issue **one** phase at a time. Do not queue GitHub issues for later phases.

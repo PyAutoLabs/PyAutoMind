@@ -62,9 +62,10 @@ silently dropped. One queue holds both lanes; the planner filters.
 - note: review tweak 2026-08-31 — human wants to inspect the _adapt_split_fix result; no subhalo[2]; RectangularBilinear runs. The wave is now four Cortex phases (one per lens); record complete/2026/09/subhalo-followup-moved-to-cortex.md
 
 ## 4. Euclid docs + structure tidy (phase 3a addendum)
-- kind: epic-slice
+- kind: retired
 - ref: euclid-dr1-prep
-- note: review tweak 2026-08-31 folded into draft/docs/euclid/restore_pipeline_narrative_prose.md; start_here.py contradiction must be ruled at plan time
+- shipped-as: euclid#47 → PR#48, complete/2026/09/restore-pipeline-narrative-prose.md (2026-09-01)
+- note: review tweak 2026-08-31 was folded into the phase-3 prompt and shipped with it — README structural edits, the scripts/tools/ move and the AGENTS.md shortening all landed in PR #48; the start_here.py contradiction was ruled at plan time (kept as a documented shim over initial_lens_model.fit)
 
 ## 5. numba solve vs JAX sparse operator
 - kind: prompt
