@@ -4,7 +4,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/334
 - prompt: active/cortex_batch_member_kind.md
 - issued: 2026-09-02
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoBrain/pull/335
+  - https://github.com/PyAutoLabs/PyAutoCortex/pull/5
 - location: web-github (session clones, no task worktree; branch claude/cortex-birth-phases-1-3-u9pq77)
 - session: claude-code-remote (cortex-birth epic session, mobile)
 - epic: cortex-birth phase 5 (gates: phase 2 SHIPPED #380; the collect verb SHIPPED PyAutoBrain#332)
