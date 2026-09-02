@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1250 records across 8 buckets.
+1251 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,6 +121,7 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/09
 
+- [adapt-image-snr-cap](2026/09/adapt-image-snr-cap.md)
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under
 - [batch-collect](2026/09/batch-collect.md) — closed completed 2026-09-02
 - [batch-review-integration](2026/09/batch-review-integration.md)

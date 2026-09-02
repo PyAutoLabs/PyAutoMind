@@ -47,8 +47,11 @@ What was verified (2026-09-02, workspace main, PyAutoArray main):
 - `scripts/group/slam.py` `source_pix_2` (and its no_lens_light / linear_light_profiles
   copies) uses the other idiom, `np.where(snr > 3.0, 4, 2)`, which is the correct
   arithmetic, but evaluates it on the S/N map after the in-place S/N 3.0 cap on the same
-  array, so the `> 3.0` test never fires there either (covered by the sibling prompt
-  draft/feature/autolens_workspace/adapt_image_snr_cap.md, item 4).
+  array, so the `> 3.0` test never fires there either. That aliasing was fixed by
+  `adapt-image-snr-cap` (autolens_workspace#522, merged 2026-09-02, record
+  complete/2026/09/adapt-image-snr-cap.md), which also made the group over-sample map read
+  the raw S/N image again; the double-division / flipped-{2,4} bug in
+  `over_sample_size_via_adapt_from` below is untouched and is what this prompt is for.
 - The subhalo_validation project fixed its own copy on 2026-09-02 (commit 9893b12,
   scripts/imaging.py): threshold the S/N map directly,
   `al.Array2D(values=np.where(source_snr > 3.0, 4, 2), mask=dataset.mask)`, applied from

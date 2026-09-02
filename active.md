@@ -106,23 +106,6 @@
     Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
     green queue_filing.yml run on #71 that opens a filing PR.
 
-## adapt-image-snr-cap
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/521
-- prompt: active/adapt_image_snr_cap.md
-- issued: 2026-09-02
-- session: claude-code-cli (Fable architect, Opus execution)
-- status: pr-open, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/adapt-image-snr-cap
-- repos:
-  - autolens_workspace: feature/adapt-image-snr-cap
-  - autolens_assistant: feature/adapt-image-snr-cap
-- prs:
-  - https://github.com/PyAutoLabs/autolens_workspace/pull/522
-  - https://github.com/PyAutoLabs/autolens_assistant/pull/118
-- heart-ack: YELLOW, both reasons unrelated to this workspace-only change and recorded verbatim in the PR body:
-  - "PyAutoArray: open PR 10d old"
-  - "release validation incomplete: no rehearsal for current source"
-
 ## batch-review-integration-p3
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/339
 - issued: 2026-09-02

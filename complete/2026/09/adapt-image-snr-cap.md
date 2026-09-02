@@ -1,3 +1,63 @@
+Capped the source adapt image at S/N 3.0 in every adaptive pixelization pipeline of
+autolens_workspace and taught the autolens_assistant skills the rule.
+
+## What shipped
+
+- autolens_workspace PR #522 (feature/adapt-image-snr-cap): 43 scripts + 43 regenerated notebook
+  twins, 136 `AdaptImages` construction sites. Every stage that builds a source adapt image copies
+  the source entry of `galaxy_name_image_dict_via_result_from`, caps it at 3.0 and writes it back
+  into the dict before `AdaptImages`, so the Hilbert image mesh, the rectangular adapt meshes and
+  Adapt / AdaptSplit regularization all consume the capped image. One `__Adapt Image S/N Cap__`
+  prose cell per script, always in a module-level cell (the notebook generator only promotes
+  column-0 strings).
+- Group pipelines (`group/slam.py` and its two copies, `group/features/pixelization/slam.py`): the
+  aliased in-place cap is replaced by the copy form, `source_pix_1` is now capped, the misleading
+  no-op "capped" block really caps, and the adaptive over-sample map is evaluated on the raw S/N
+  image again (on the capped image the `> 3.0` test never fired, so 4x over-sampling never
+  activated). Three imaging scripts that feed `over_sample_size_via_adapt_from` also bind the raw
+  image first.
+- Interferometer pipelines (7 scripts, 24 sites) keep `use_model_images=True` and clip a copy of
+  the model image at the flux where the beam-smoothed S/N crosses 3.0, with the image-plane noise
+  `sqrt(0.5 * sum|noise_map|^2)` (real part of the adjoint transform; verified 13.7e3 measured vs
+  13.8e3 formula). `scaling_relation/slam.py` switched to model images like its siblings; the dead
+  overwritten dict build in `pixelization/delaunay.py` was removed. On the `simple` dataset the clip
+  lands at 5.6% of peak (35% of masked pixels flattened); under the 15x15 smoke mask no pixel reaches
+  S/N 3 and the block says so.
+- autolens_assistant PR #118: `al_adaptive_pixelization.md` gains an "Adapt image S/N cap (always)"
+  section (block, why, raw-image rule, interferometer form), `al_run_slam_pipeline.md` and
+  `init-slam.md` point at it, `chat_pack/08_skills_fitting.md` regenerated.
+
+## Decisions (user, 2026-09-02)
+
+- One task, one PR per repo, staged execution (five parallel Opus sweeps + a reconcile pass).
+- Interferometer: runtime S/N-derived clip. The S/N-image route was tested and rejected: the
+  interferometer "S/N" image divides by `dirty_noise_map`, which is sigma x the dirty beam (55% of
+  pixels <= 0). Pure peak-scaling is a no-op because every consumer is max-normalised.
+
+## Evidence
+
+- All 43 touched scripts run under the smoke profile after a 24-simulator pre-pass: 41 PASS;
+  `interferometer/features/pixelization/delaunay.py` passes serially (parallel dataset race);
+  `subhalo/sensitivity/slam_source_parametric.py` (`'Model' object has no attribute 'centre'`) and
+  `slam_source_pixelized.py` (`al.MapperValued` missing) fail identically on unmodified main.
+  The intermittent hang in the latter is a pre-existing PyAutoFit `Process.run` race (worker exits
+  on a transiently empty job queue; control hung 2/6, edited 1/6).
+- CI: #522 7/7 checks green (smoke 3.12 + 3.13); #118 2/2 green. Heart YELLOW at ship
+  ("PyAutoArray: open PR 10d old"; stale "release validation incomplete: no rehearsal for current
+  source") — unrelated.
+
+## Follow-ups (filed or to file)
+
+- Filed: `draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md` — say the adapt image is the S/N
+  map in every `__Adapt Images__` cell, library docstrings, and assess the AdaptImages API naming.
+- To file: library-side cap (`galaxy_name_image_dict_via_result_from(..., snr_cap=)`); the two
+  pre-existing sensitivity-script failures (MapperValued drift, `centre` AttributeError); the
+  PyAutoFit `Process.run` job-queue race; gentler interferometer clip variant if 5.6% of peak is too
+  aggressive.
+- The subhalo_validation recipes themselves are handled by the PyAutoCortex rerun ruling.
+
+## Original prompt
+
 # Cap the adapt image at S/N 3.0 in every adaptive pixelization pipeline
 
 Type: feature
