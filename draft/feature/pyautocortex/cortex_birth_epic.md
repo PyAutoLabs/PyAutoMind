@@ -158,7 +158,7 @@ manage them; they just cannot share one batch.
    against the witness, the packet member format, the outside-workspace body-map
    resolver, and the Mind badge. **Brain PR merges before any Cortex/Mind PR**
    (renderer contract). Gate: 1.
-3. `draft/feature/pyautocortex/cortex_project_remotes_and_registration.md` —
+3. `active/cortex_project_remotes_and_registration.md` (issued 2026-09-01, PyAutoMind#382) —
    `Lane: local-dev`. Private remotes + `.gitignore` for the Science-folder
    projects, `projects.yaml` rows, witness files tracked. Gate: 1. May overlap 2.
 4. `draft/feature/pyautocortex/cortex_migration_split_epics.md` — the

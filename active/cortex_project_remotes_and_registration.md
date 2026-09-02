@@ -21,6 +21,7 @@ Epic: cortex-birth
 Phase: 3
 Parent: draft/feature/pyautocortex/cortex_birth_epic.md
 Filed: 2026-09-01
+Issued: 2026-09-01
 
 Phase 3 of 7 in the PyAutoCortex birth epic. **Gate: phase 1** (the
 `projects.yaml` schema). May overlap phase 2. Gates phase 4. **Laptop lane
