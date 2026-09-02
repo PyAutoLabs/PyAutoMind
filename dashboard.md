@@ -262,7 +262,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/cortex_batch_member_kind.md">Cortex phase 5 — the second batch member kind: separate records, separate…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/334">issue #334</a> — issued 2026-09-02 — library-dev</summary>
+<details><summary>📋 <a href="active/cortex_batch_member_kind.md">Cortex phase 5 — the second batch member kind: separate records, separate…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/334">issue #334</a> — issued 2026-09-02 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/cortex_batch_member_kind.md
