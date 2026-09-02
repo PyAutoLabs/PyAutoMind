@@ -121,6 +121,25 @@ Decisions 1–5 below were put to the human and **approved 2026-09-02**:
    relative and are re-pinned against an `mpmath` reference recorded in the note, via an explicit
    `--repin --repin-reason` flow. Everything else holds rtol 1e-6 against pinned before-values.
 
+**2026-09-02 — phase 1 step 0 landed (autolens_profiling 6b652dc + 4fd5a09 on
+`feature/numpy-deflections-p1`, PyAutoArray#514).** `scripts/lens/deflections/{total,dark,stellar}.py`
++ `_driver.py`/`_profiles.py`, six baseline artifacts (hst + euclid) under `results/lens/deflections/`,
+note `results/notes/numpy_deflections_cpu.md`, README auto-table `deflections`, lint smoke row.
+Three findings that correct the premise:
+- **The `*Sph` ~500 ms penalty is on the direct `Grid2D` entry only.** `tracer_util.traced_grid_2d_list_from`
+  wraps each plane in `Grid2DIrregular` before calling the profiles, so production ray-tracing never pays it
+  (hst IsothermalSph: 699 ms direct vs 3.6 ms through the tracer). The fix stays (zero-numerics, removes a
+  real trap for direct calls, `Galaxy.traced_grid_2d_from`, plotting), but the likelihood-side phase-1 win
+  is the double-trace removal, not this.
+- **`PowerLawSph` returns 2 non-finite deflections on both grids** (closed form divides by the radius at
+  the exact centre). Pins are nan-aware and pin `n_non_finite` separately; a centre guard is a library
+  follow-up, out of scope here.
+- **Laptop timing variance is ~30 % between passes** (gNFWSph hst 0.88 / 1.04 / 1.20 s). An "after" must
+  clear that band; ratios are the reproducible result.
+Baseline hst (Grid2D / Irregular / Tracer): Isothermal 2.0 / 2.2 / 6.1 ms; PowerLaw 11.2 / 12.7 / 25.1 ms;
+NFW 5.8 / 5.9 / 7.1 ms; Gaussian 11.0 / 12.4 / 23.7 ms; gNFW 358 / 446 / 721 ms; IsothermalSph 699 / 1.3 /
+3.6 ms; PowerLawSph 701 / 1.5 / 3.7 ms; NFWSph 591 / 9.9 / 14.2 ms; gNFWSph 1205 / 384 / 674 ms.
+
 ## Gates
 
 Every phase must clear all four before it ships:
