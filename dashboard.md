@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/ep_message_support_and_transform_lost_in_projection.md">EP messages lose their truncation limits on every natural-parameter operation, and <code>TransformedMessage.from_mode</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1559">issue #1559</a> — issued 2026-09-02 — library-dev</summary>
+<details><summary>📋 <a href="active/ep_message_support_and_transform_lost_in_projection.md">EP messages lose their truncation limits on every natural-parameter operation, and <code>TransformedMessage.from_mode</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1559">issue #1559</a> — issued 2026-09-02 — pr-open, awaiting-merge</summary>
 
 ```
 /start_dev active/ep_message_support_and_transform_lost_in_projection.md
