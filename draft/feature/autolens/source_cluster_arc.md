@@ -60,8 +60,18 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
 10. `draft/feature/workspaces/cluster_pixelized_analysisfactor.md` — per-source-mask
     pixelized refinement via AnalysisFactor; implements the extended_source plan in
     `draft/docs/workspaces/cluster_regime_narrative.md`. Gates: 4, 9.
-11. `draft/research/autolens/cluster_extended_source_inference.md` — JAX-gradient
-    joint-inference feasibility verdict (go/no-go only). Gate: 10.
+11. → **Cortex** `PyAutoCortex/phases/inference_programme/cluster_extended_source_inference.md`
+    — JAX-gradient joint-inference feasibility verdict (go/no-go only). Moved out of the
+    Mind on 2026-09-01 in the Cortex phase-4 migration (was
+    `draft/research/autolens/cluster_extended_source_inference.md`); Cortex state `planned`,
+    ready when phase 10 (still a Mind draft) is issued and its ref is added to the Cortex
+    phase's `Gates:`. Gate: 10.
+
+    **Known drift, not fixed here:** two different prompts both declare `Phase: 10` under
+    two different parents — `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
+    (this arc's phase 10) and `draft/docs/workspaces/cluster_regime_narrative.md` (a
+    different parent). Different parents, so nothing is ambiguous inside this ledger, but a
+    reader searching on `Phase: 10` will hit both. Recorded, deliberately left alone.
 12. `draft/docs/howtolens/cluster_pixelized_source.md` — HowToLens cluster tutorial
     pixelized source + fix the already-stale cross-reference (the stale-claim fix may
     land early if a HowToLens release precedes phase 10). Gate: 10.

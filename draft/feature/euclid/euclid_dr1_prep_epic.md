@@ -30,7 +30,7 @@ phase below is its own prompt, issued **ONE AT A TIME** as its predecessor nears
 shipping (no bulk issue queues).
 
 The programme's shape: make `euclid_strong_lens_modeling_pipeline` a first-class,
-CI-covered repo that is genuinely representative of the DR1 analysis (phases 0-3b), then
+CI-covered repo that is genuinely representative of the DR1 analysis (Mind phases 0-4), then
 prove it by fitting **10 real DR1 lenses** and **10 resimulations of those same lenses**
 (phases 4-6), then extend the catalogue products (phase 7). The success criterion for
 the whole epic is that everything delivered for the DR1 runs out of
@@ -165,7 +165,8 @@ Read-only survey done while filing, so each phase prompt cites real paths:
    referent; phase 1 must put this question to the user before changing meshes.
 4. **`autolens_assistant` has no literal `euclid_mode`** — what exists is the euclid
    skill family `autolens_assistant/skills/euclid_prepare_data.md`,
-   `euclid_setup_pipeline.md`, `euclid_model_lens.md`, `euclid_hpc_runs.md`. Phase 4
+   `euclid_setup_pipeline.md`, `euclid_model_lens.md`, `euclid_hpc_runs.md`. The 10-lens
+   science run (now Cortex euclid 4)
    drives the science run through those.
 5. **The cmap lever already exists.** `visualize/general.yaml` carries
    `colormap: autoarray` in all three configs (PyAutoArray, autolens_workspace,
@@ -193,7 +194,7 @@ Read-only survey done while filing, so each phase prompt cites real paths:
 2. `complete/2026/08/euclid-ci-test-mode.md` — committed simulated
    datasets + TEST-mode CI over every example script + latent unit tests. Gate: 1.
    **SHIPPED 2026-08-29** — issue euclid#45 closed, PR #46 merged.
-3a. `draft/docs/euclid/restore_pipeline_narrative_prose.md` — **restore the in-script
+3. `draft/docs/euclid/restore_pipeline_narrative_prose.md` (was 3a) — **restore the in-script
     narrative prose**: `start_here.py` back to a fully documented end-to-end new-user
     guide (kept as a shim over `initial_lens_model.fit`), `scripts/*.py` written to assume
     it has been read (point back for repeats, explain in full what it does not cover —
@@ -201,41 +202,89 @@ Read-only survey done while filing, so each phase prompt cites real paths:
     `workflow/example/` register. Recovered prose is 4+ months stale: verify against the
     code and `autolens_workspace` before restoring. Gates: 1, 2. **Inserted 2026-08-31 —
     the next phase to run.**
-3b. `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` — preserve and
-    document the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing) CPU route
-    and the full-JAX-GPU route. Gate: 1 (can overlap 2). Runs after 3a so its new
-    documentation lands in a repo whose narrative register is already restored.
-4. `draft/research/euclid/dr1_prelim_10_lens_science_run.md` — **science run on RAL**;
-   new `/mnt/c/Users/Jammy/Science/euclid_dr1_prelim` project, first 10 lenses
-   alphanumerically, CPU approach, driven through the assistant's euclid skills.
-   Gates: 1, 3b (2 strongly preferred). Human-driven, supervised.
-5. `draft/feature/euclid/resimulate_fitted_lens_simulator.md` — `simulator.py` in the
-   pipeline repo + the 10 resimulations in `euclid_dr1_prelim`, with true
-   magnifications recorded and `sersic_index` pulled off the prior edge. Gate: 4.
-6a. `draft/research/euclid/sersic_index_recovery.md` — do we recover Sersic indices on
-    the simulated lenses, and were the real ones at the prior edge? Gate: 5.
-6b. `draft/research/euclid/magnification_robustness.md` — magnification systematics
-    under model match/mismatch (Sersic-vs-Sersic, MGE source, MGE lens light, Delaunay
-    source) across the 10 lenses. Gate: 5.
-6c. `draft/bug/autoarray/delaunay_area_magnification_audit.md` — source-code audit of
-    Delaunay pixel-area and magnification calculations. **May run alongside 6b**; does
-    not gate on it. May spawn a separate bug prompt if a real defect is found.
-7. `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` — COOLEST CSV, mass-
-   model FITS products with a file-size assessment, and a feasibility verdict on
-   retroactive catalogue updates. Gates: 4 (needs a catalogue to extend); 6b informs
-   the magnification layer.
+4. `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` (was 3b) — preserve and
+   document the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing) CPU route
+   and the full-JAX-GPU route. Gate: 1 (can overlap 2). Runs after phase 3 so its new
+   documentation lands in a repo whose narrative register is already restored.
+   **Issue euclid#49** — opened 2026-09-01 at filing, as the gate ref the Cortex science
+   phase names; reuse it in `start_dev`, never open a second.
+
+**→ Cortex** — the four science phases below are no longer Mind phases. They live under
+`PyAutoCortex/phases/euclid/` with their own phase numbers, and the entries here are
+pointers so the ordering of the programme still reads end to end. The Mind phase list
+resumes at 8.
+
+- **old 4 → Cortex phase 4** `PyAutoCortex/phases/euclid/dr1_prelim_10_lens_science_run.md`
+  — **science run on RAL**; new `/mnt/c/Users/Jammy/Science/euclid_dr1_prelim` project, first
+  10 lenses alphanumerically, CPU approach, driven through the assistant's euclid skills.
+  Gates: `euclid#48` (the merged Mind-phase-3 PR) and `euclid#49` (Mind phase 4).
+  Human-driven, supervised.
+- **old 5 → Cortex phase 5** `PyAutoCortex/phases/euclid/resimulate_fitted_lens_simulator.md`
+  — `simulator.py` in the pipeline repo + the 10 resimulations in `euclid_dr1_prelim`, with
+  true magnifications recorded and `sersic_index` pulled off the prior edge. Ready when
+  Cortex euclid 4 is accepted. It also carries a real `simulator.py` PR, filed as a Mind dev
+  prompt when the phase opens.
+- **old 6a → Cortex phase 6** `PyAutoCortex/phases/euclid/sersic_index_recovery.md` — do we
+  recover Sersic indices on the simulated lenses, and were the real ones at the prior edge?
+  Ready when Cortex euclid 5 is accepted.
+- **old 6b → Cortex phase 7** `PyAutoCortex/phases/euclid/magnification_robustness.md` —
+  magnification systematics under model match/mismatch (Sersic-vs-Sersic, MGE source, MGE
+  lens light, Delaunay source) across the 10 lenses. Ready when Cortex euclid 5 is accepted.
+
+8. `draft/bug/autoarray/delaunay_area_magnification_audit.md` (was 6c) — source-code audit of
+   Delaunay pixel-area and magnification calculations. **May run alongside the Cortex
+   magnification-robustness phase**; does not gate on it. May spawn a separate bug prompt
+   if a real defect is found.
+9. `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` (was 7) — COOLEST CSV,
+   mass-model FITS products with a file-size assessment, and a feasibility verdict on
+   retroactive catalogue updates. Gates: the Cortex 10-lens science run
+   `PyAutoCortex/phases/euclid/dr1_prelim_10_lens_science_run.md` (needs a catalogue to
+   extend); the Cortex magnification-robustness phase informs the magnification layer.
+
+## Renumbering and the Cortex split (2026-09-01)
+
+Phase 4 of the `cortex-birth` epic (PyAutoMind#383) moved the **science half** of this
+epic into `PyAutoCortex`. The Mind keeps the software phases; the Cortex holds the runs
+and the rulings. The 3a/3b letters died with the split — the Mind's phases are plain
+integers again, and no two Mind phases share a number.
+
+| Old | Where it lives now | New phase | Gate |
+|---|---|---|---|
+| 0 | Mind (shipped) | 0 | — |
+| 1 | Mind (shipped) | 1 | — |
+| 2 | Mind (shipped) | 2 | 1 |
+| 3a | Mind `draft/docs/euclid/restore_pipeline_narrative_prose.md` | **3** | Gates: 1, 2 |
+| 3b | Mind `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md` | **4** | Gate: 1 (can overlap 2); runs after 3 |
+| 4 | → Cortex `phases/euclid/` `dr1_prelim_10_lens_science_run` | **4 (Cortex)** | `euclid#48`, `euclid#49` |
+| 5 | → Cortex `phases/euclid/` `resimulate_fitted_lens_simulator` | **5 (Cortex)** | Ready when Cortex euclid 4 accepted |
+| 6a | → Cortex `phases/euclid/` `sersic_index_recovery` | **6 (Cortex)** | Ready when Cortex euclid 5 accepted |
+| 6b | → Cortex `phases/euclid/` `magnification_robustness` | **7 (Cortex)** | Ready when Cortex euclid 5 accepted |
+| 6c | Mind `draft/bug/autoarray/delaunay_area_magnification_audit.md` | **8** | none; may run alongside Cortex 7 |
+| 7 | Mind `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` | **9** | Cortex euclid 4 |
+
+Mind phase numbers and Cortex phase numbers are separate sequences that happen to
+collide at 4 — the Mind's 4 is the CPU-route software phase, the Cortex's 4 is the
+10-lens science run, and the first **gates** the second (`euclid#49`). Always say which
+organ you mean.
+
+`euclid#49` exists because a Cortex phase's `Gates:` line can only name a GitHub ref:
+per decision 55, a Cortex-spawned dev follow-up gets its issue **at filing** while its
+prompt stays in `draft/`, and the prompt carries the `Issue:` line so `create_issue` /
+`start_dev` reuse it rather than opening a second.
 
 ## Notes for whoever resumes this
 
-- **Phases 4, 5, 6a, 6b are science, not software.** They run on RAL (HPC) with the
-  human in the loop, on wall-clock timescales of days. They are `supervised` and must
-  never be handed to an autonomous ship gate. The deliverable of each is a result and a
-  written verdict, not a merged PR — though 5 does carry a real `simulator.py` PR.
-- **Phase 6c is a library audit** in PyAutoArray/PyAutoLens and is the only phase that
-  can plausibly land as a fast standalone fix. It may spawn a follow-up bug prompt.
-- **Phase 7 is explicitly allowed to conclude "no elegant solution → don't build it"**
-  for the retroactive-update leg. That is a valid, shippable outcome.
-- **Phase 3a was inserted on 2026-08-31**, after an audit found the repo's in-script
+- **The old phases 4, 5, 6a, 6b are science, not software — and since 2026-09-01 they are
+  Cortex phases 4, 5, 6, 7.** They run on RAL (HPC) with the human in the loop, on
+  wall-clock timescales of days. They are `supervised` and must never be handed to an
+  autonomous ship gate. The deliverable of each is a result and a written verdict, not a
+  merged PR — though Cortex 5 does carry a real `simulator.py` PR, filed as a Mind dev
+  prompt when the phase opens.
+- **Mind phase 8 (was 6c) is a library audit** in PyAutoArray/PyAutoLens and is the only
+  phase that can plausibly land as a fast standalone fix. It may spawn a follow-up bug prompt.
+- **Mind phase 9 (was 7) is explicitly allowed to conclude "no elegant solution → don't
+  build it"** for the retroactive-update leg. That is a valid, shippable outcome.
+- **Phase 3 (then numbered 3a) was inserted on 2026-08-31**, after an audit found the repo's in-script
   narrative prose had been largely lost — not by the phase-1 port (which was net prose
   *positive*) but by `355b309` (2026-04-02, −812 prose lines) which deleted the
   `pipelines/` tree, and by `fc43be0` which deleted `groups.py` / `point_source.py`

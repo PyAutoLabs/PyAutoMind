@@ -17,12 +17,14 @@ Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Epic: euclid-dr1-prep
-Phase: 7
+Phase: 9
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
 
-Phase 7 of 10 in the Euclid DR1 preparation epic. **Gate: phase 4** (needs a catalogue to
-extend). Phase 6b informs the magnification layer.
+Phase 9 of the Euclid DR1 preparation epic (was 7; renumbered 2026-09-01 in the Cortex split).
+**Gate: the 10-lens science run** — `PyAutoCortex` `phases/euclid/dr1_prelim_10_lens_science_run`
+(needs a catalogue to extend). The magnification-robustness phase (`PyAutoCortex`
+`phases/euclid/magnification_robustness`, was 6b) informs the magnification layer.
 
 User request (verbatim):
 

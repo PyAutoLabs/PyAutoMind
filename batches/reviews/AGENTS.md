@@ -21,7 +21,7 @@ review never executes its own follow-ups.
 - review-minutes-actual: 55
 
 ## <member slug>
-- decision: merge | tweak | reject | defer   # science members: accept | rerun | drop
+- decision: merge | tweak | reject | defer   # science members (Cortex vocabulary): accept | rerun | drop | leave-to-finish
 - note: |
     The human's words, verbatim. For tweak/rerun this line becomes the
     follow-up prompt's seed.

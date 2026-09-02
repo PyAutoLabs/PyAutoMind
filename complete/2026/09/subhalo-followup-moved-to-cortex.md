@@ -1,3 +1,26 @@
+- issue: none — the science project has no GitHub home (not in repos.yaml); no issue was ever opened
+- completed: 2026-09-01
+- classification: research (subhalo_validation) — a science follow-up wave, closed by MIGRATION not by delivery
+- summary: |
+    The subhalo-validation follow-up wave — the three actions the human ruled in the
+    2026-08-31-am batch review (`batches/reviews/2026-08-31-am.md`) and dispatched the same
+    day as RAL jobs 342093_0 (the `_adapt_split_fix` source_pix[1] rerun of pl_eff_1_outer
+    with AdaptSplit replacing ConstantSplit), 342094_0 and 342095_0 (the RectangularBilinear
+    `rectangular_adapt` chain on pl_sersic_0) — has **moved to the Cortex** as
+    `PyAutoCortex/phases/subhalo_validation/delaunay_adapt_split_pl_eff_1_outer.md` and
+    `PyAutoCortex/phases/subhalo_validation/rectangular_adapt_pl_sersic_0.md`, alongside the
+    two lens phases carrying the accepted and awaiting-ruling results
+    (`delaunay_adapt_split_pl_sersic_0`, `delaunay_adapt_split_pl_eff_0`). No GitHub issue
+    ever existed for this work, so nothing is closed on a tracker; the record simply changes
+    organ. All four witnesses have landed. The rulings of record are **R-20260831-06**
+    (pl_sersic_0 accepted) and **R-20260831-07** (pl_eff leave-to-finish), both held in the
+    Cortex; the two runs dispatched by this wave (342093_0 and 342095_0) are awaiting the
+    human's ruling and no ruling has been invented for them here. This record exists so the
+    Mind's history of the wave stays readable after the prompt was removed in the Cortex
+    phase-4 migration (PyAutoMind#383).
+
+## Original prompt
+
 # Subhalo validation follow-up wave: AdaptSplit fix, no subhalo[2], RectangularBilinear runs
 
 Type: research

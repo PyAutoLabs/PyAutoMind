@@ -17,15 +17,17 @@ Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Epic: euclid-dr1-prep
-Phase: 3
+Phase: 4
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
+Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49 (opened 2026-09-01 as a Cortex gate ref; reuse in start_dev — never open a second)
 
-Phase 3b of 11 in the Euclid DR1 preparation epic (renumbered 3 → 3b on 2026-08-31 when
-the prose-restoration phase 3a was inserted ahead of it). **Gate: phase 1.** Can overlap
-phase 2. Runs after 3a, so the documentation this phase writes lands in a repo whose
-narrative register has already been restored.
-**Gates phase 4** — the 10-lens science run uses this CPU route.
+Phase 4 of the Euclid DR1 preparation epic (3 → 3b on 2026-08-31 when the prose-restoration
+phase 3a was inserted ahead of it; 3b → 4 on 2026-09-01 in the Cortex split). **Gate: phase 1.**
+Can overlap phase 2. Runs after phase 3, so the documentation this phase writes lands in a repo
+whose narrative register has already been restored.
+**Gates the 10-lens science run**, which is now `PyAutoCortex` `phases/euclid/dr1_prelim_10_lens_science_run` —
+that Cortex phase names this prompt's issue in its `Gates:` line.
 
 User request (verbatim):
 
@@ -94,4 +96,4 @@ recover the exact two-stage invocation before changing anything.
   submission scripts.
 - The reset investigation has a measured verdict recorded in the PR/issue.
 - A reader can tell, from the docs alone, which route to pick for their sample size.
-- Gates phase 4.
+- Gates the 10-lens science run (PyAutoCortex `phases/euclid/dr1_prelim_10_lens_science_run`).

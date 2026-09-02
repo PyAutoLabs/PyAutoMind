@@ -16,12 +16,14 @@ Consequence: judge
 Review-minutes: 25
 Unattended: ready
 Epic: euclid-dr1-prep
-Phase: 6
+Phase: 8
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
 
-Phase 6c of 10 in the Euclid DR1 preparation epic. **Can run alongside phase 6b and does
-not gate on it** — 6b is the empirical half (does μ come out right on data?), 6c is the
+Phase 8 of the Euclid DR1 preparation epic (was 6c; renumbered 2026-09-01 in the Cortex split,
+where the old 6b became `PyAutoCortex` `phases/euclid/magnification_robustness`). **Can run
+alongside the magnification-robustness phase and does not gate on it** — that phase is the
+empirical half (does μ come out right on data?), this one is the
 source-code half (does the code look right?). Either can find the defect first.
 
 User request (verbatim, the follow-up clause of 6b):

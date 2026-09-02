@@ -56,10 +56,10 @@ silently dropped. One queue holds both lanes; the planner filters.
 - note: human 2026-08-31 pm review — long-running members roll to the next batch automatically; adopted mid-slot, formalise
 
 ## 3. Subhalo validation follow-up wave
-- kind: prompt
-- ref: draft/research/subhalo_validation/follow_up_wave_adapt_split_and_rectangular.md
+- kind: retired
+- moved-to: PyAutoCortex phases/subhalo_validation/ (2026-09-01)
 - lane: local-dev
-- note: review tweak 2026-08-31 — human wants to inspect the _adapt_split_fix result; no subhalo[2]; RectangularBilinear runs
+- note: review tweak 2026-08-31 — human wants to inspect the _adapt_split_fix result; no subhalo[2]; RectangularBilinear runs. The wave is now four Cortex phases (one per lens); record complete/2026/09/subhalo-followup-moved-to-cortex.md
 
 ## 4. Euclid docs + structure tidy (phase 3a addendum)
 - kind: epic-slice
@@ -90,4 +90,5 @@ silently dropped. One queue holds both lanes; the planner filters.
 - kind: prompt
 - ref: draft/research/euclid/batch_science_lane.md
 - note: leg A only — Lane: header on every remaining euclid phase, queue the `any` halves
+- note: superseded by cortex-birth (phase 5 retires it)
 

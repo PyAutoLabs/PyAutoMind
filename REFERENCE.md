@@ -364,6 +364,29 @@ Free-form markdown. Strong conventions:
   had closed without anyone noticing — including one whose exit condition was met
   the same day it was written.
 
+  **A Cortex-spawned dev follow-up gets its issue at filing — `Issue:`.** Normally a
+  prompt has no GitHub issue until `/start_dev` opens one and moves it `draft/ →
+  active/`. There is one exception, adopted 2026-09-01 (Cortex schema decision 55).
+  A **PyAutoCortex** phase declares what it waits on in a `Gates:` line that may
+  hold **GitHub refs only** — it cannot cite a Mind prompt path. So when a Cortex
+  science phase is gated on Mind dev work that has not started, that dev prompt is
+  filed as a draft **with its issue opened at the same moment**, so the Cortex phase
+  has a ref to name. The prompt stays in `draft/` — an open issue here means
+  "there is a ref", not "the work is in flight" — and carries the URL in its body:
+
+  ```markdown
+  Issue: https://github.com/PyAutoLabs/<repo>/issues/<n> (opened <YYYY-MM-DD> as a Cortex gate ref; reuse in start_dev — never open a second)
+  ```
+
+  `create_issue` and `/start_dev` **reuse that issue** when the prompt is finally
+  picked up — they must never open a second one. Two issues for one prompt is the
+  failure this rule exists to prevent: the Cortex phase's gate would then be watching
+  the wrong one, and would never clear.
+
+  This applies *only* to Cortex-spawned gate refs. An ordinary draft still gets its
+  issue at `/start_dev` time and nowhere earlier — filing issues ahead of the work in
+  general is the bulk-issue-queue anti-pattern, which stays forbidden.
+
   **Declaring group membership — `Epic:` / `Bundle:`.** Both optional, both
   naming a slug in the matching registry file, and the two mean opposite things
   about ORDER. `Epic: <slug>` (`epics.md`, plus an optional `Phase: <n>`) says
