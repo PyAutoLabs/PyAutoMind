@@ -364,3 +364,30 @@ not parked. Re-marking is phase 3's call with a root cause in hand.
 Surfaced incidentally by `complete/2026/08/weekly-smoke-timings-naming.md`
 (PyAutoHeart#182), whose verification sweep produced this run — the first
 practical dividend of the weekly timing dataset that task shipped.
+
+## Retired from epics.md (2026-09-02)
+
+## jax-compile-stall
+- title: JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)
+- ledger: draft/bug/ci/jax_vmap_jit_compile_stall.md
+- status: SHIPPED 2026-08-27 — all 3 phases done; record
+  complete/2026/08/jax-vmap-materialisation-hang.md. Root cause is XLA CPU's multithreaded Eigen
+  thread pool; workaround XLA_FLAGS=--xla_cpu_multi_thread_eigen=false in both test workspaces'
+  smoke AND release profiles (ABAB: 12 pass/0 hang with vs 2 pass/14 hang without, Fisher p~3e-6).
+  All 7 quarantined entries restored, 42/42 completions. PyAutoFit#1528, PRs PyAutoFit#1529,
+  PyAutoHands#269, autolens_workspace_test#281, autogalaxy_workspace_test#114.
+  NOT a root-cause fix: why the pool wedges is still unknown — follow-up never filed (the resume
+  door was never written).
+- NEW EVIDENCE 2026-08-25: multi_dataset/jax_likelihood/shared_preloads.py stalled at TIMEOUT (300s) in
+  PyAutoHeart Workspace Smoke run 32902243623 — one day after the 2026-08-24 retime refuted its SLOW
+  marker and returned it to mega-run coverage. N=5 per leg measures the fast mode of a bimodal failure
+  and says nothing about the tail, so every entry that sweep readmitted carries the same uncertainty.
+  Also the epic's first occurrence via the weekly workspace-validation channel (cross-harness
+  corroboration), and smoke_tests.txt vs no_run.yaml now disagree about this script. Nothing parked.
+  See the ledger's "New occurrence — 2026-08-25" section; surfaced by
+  complete/2026/08/weekly-smoke-timings-naming.md.
+- CORRECTION (post-close-out): the captured stack shows the hang is in jax.block_until_ready, NOT in
+  compilation. The epic's name and every marker calling this an "XLA compile stall" are wrong. Resume
+  from "why does block_until_ready never return", not from compiler behaviour.
+- notes: phase 1 (watchdog) shipped in full; phases 2/3 stopped deliberately at a measured-but-not-root-caused state. The stall is instrumented and characterised (>100x bimodality inside one compile step; vmap-of-jit contributory at p=0.070 but NOT causal; the compile-cache hypothesis never tested) and NOTHING was un-quarantined. Resumed 2026-08-27 as phase 3 (PyAutoFit#1528) — NOT via draft/research/ci/smoke_timing_and_profiling.md,
+  which the 2026-08-23 close-out named as the resume door but which was never written. Superseded complete/2026/08/multi-dataset-jax-likelihood-xla-stall.md (was draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_xla_stall.md).

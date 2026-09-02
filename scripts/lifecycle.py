@@ -1145,6 +1145,169 @@ def cmd_orphans(args) -> int:
     return 1
 
 
+
+# --------------------------------------------------------------------------- #
+# epics — retire shipped entries out of epics.md
+#
+# epics.md is a live board: the dashboard renders every entry under "Epics"
+# with a resume prompt. Nothing ever took an entry off it, so a programme that
+# had shipped months ago still invited a session to continue it. An entry whose
+# `status:` OPENS with SHIPPED or COMPLETE is done (a status that merely
+# MENTIONS a shipped phase — "phase 2 SHIPPED; phase 3 open" — is not), and its
+# text is preserved under complete/archive/epics/ rather than deleted.
+# --------------------------------------------------------------------------- #
+# Anchored, deliberately: the whole point is that a status naming one shipped
+# phase mid-sentence does not retire a still-running epic.
+DONE_STATUS_RE = re.compile(r"^(shipped|complete)", re.IGNORECASE)
+
+
+def epic_blocks(path: Path) -> "tuple[list[str], list[tuple[str, list[str]]]]":
+    """(header lines, [(slug, block lines)]) for epics.md, verbatim.
+
+    A block runs from its `## <slug>` heading to the line before the next `##`
+    (or EOF); everything before the first heading is the file's header."""
+    if not path.exists():
+        return [], []
+    header: "list[str]" = []
+    blocks: "list[tuple[str, list[str]]]" = []
+    slug: "str | None" = None
+    cur: "list[str]" = []
+    for line in path.read_text(errors="replace").splitlines():
+        m = H2_RE.match(line)
+        if m:
+            if slug is not None:
+                blocks.append((slug, cur))
+            slug, cur = _slugify_h2(m.group(1)), [line]
+            continue
+        (cur if slug is not None else header).append(line)
+    if slug is not None:
+        blocks.append((slug, cur))
+    return header, blocks
+
+
+def epic_fields(block: "list[str]") -> "dict[str, str]":
+    """`- key: value` fields of one epic block; first occurrence of a key wins."""
+    fields: "dict[str, str]" = {}
+    for line in block[1:]:
+        f = FIELD_RE.match(line)
+        if f:
+            fields.setdefault(f.group(1).strip(), f.group(2).strip())
+    return fields
+
+
+def epic_is_done(fields: "dict[str, str]") -> bool:
+    """True when `status:` OPENS with SHIPPED or COMPLETE (prefix, not search)."""
+    return bool(DONE_STATUS_RE.match(fields.get("status", "").strip()))
+
+
+def _git_ok(root: Path, args: "list[str]") -> bool:
+    """True when `git <args>` succeeds. `_git` cannot say: it returns [] both
+    for a failure and for a command with no output (`git mv`)."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "-C", str(root), *args],
+                             capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    return out.returncode == 0
+
+
+def _epic_archive_dest(root: Path, slug: str, fields: "dict[str, str]") -> "tuple[Path, Path | None]":
+    """(archive file the entry text is appended to, ledger file to move | None).
+
+    A ledger still under `draft/` or `active/` follows its epic into
+    `complete/archive/epics/`; one already archived there is left alone and
+    receives the text; anything else (a dated `complete/YYYY/MM/` record, a file
+    in another repo) is not ours to move, so the text lands in `<slug>.md`."""
+    archive_dir = root / "complete" / "archive" / "epics"
+    raw = fields.get("ledger", "").strip()
+    if raw and not raw.startswith(("http://", "https://")):
+        rel = raw.split("#", 1)[0].strip()
+        cand = (root / rel)
+        try:
+            inside = cand.resolve().relative_to(root.resolve())
+        except ValueError:
+            inside = None
+        if inside is not None:
+            if inside.parts[:1] in (("draft",), ("active",)) and cand.is_file():
+                return archive_dir / cand.name, cand
+            if str(inside.parent).replace("\\", "/") == "complete/archive/epics":
+                return archive_dir / cand.name, None
+    return archive_dir / f"{safe_name(slug)}.md", None
+
+
+def _append_retired(dest: Path, title: str, block: "list[str]", day: str) -> None:
+    """Append one epics.md entry verbatim under a dated retirement heading."""
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    body = "\n".join(block).rstrip("\n")
+    if dest.exists():
+        existing = dest.read_text(errors="replace")
+        if existing and not existing.endswith("\n"):
+            existing += "\n"
+    else:
+        existing = f"# {title}\n"
+    dest.write_text(f"{existing}\n## Retired from epics.md ({day})\n\n{body}\n")
+
+
+def retire_epics(root: Path, apply: bool = False,
+                 day: "str | None" = None) -> "list[dict]":
+    """Report (or, with apply, perform) the retirement of every done entry."""
+    import datetime
+    if day is None:
+        day = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+    path = root / "epics.md"
+    header, blocks = epic_blocks(path)
+    done: "list[dict]" = []
+    keep: "list[tuple[str, list[str]]]" = []
+    for slug, block in blocks:
+        fields = epic_fields(block)
+        if not epic_is_done(fields):
+            keep.append((slug, block))
+            continue
+        dest, move = _epic_archive_dest(root, slug, fields)
+        done.append({
+            "slug": slug,
+            "ledger": fields.get("ledger", "").strip() or "(no ledger)",
+            "archive": str(dest.relative_to(root)),
+            "title": fields.get("title", "").strip() or slug,
+            "move": move,
+            "block": block,
+        })
+    if not apply or not done:
+        return done
+
+    for item in done:
+        dest = root / item["archive"]
+        move = item["move"]
+        if move is not None:
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            src_rel = str(move.relative_to(root))
+            dst_rel = str(dest.relative_to(root))
+            if not (_git_ok(root, ["ls-files", "--error-unmatch", "--", src_rel])
+                    and _git_ok(root, ["mv", src_rel, dst_rel])):
+                move.replace(dest)
+        _append_retired(dest, item["title"], item["block"], day)
+
+    out = list(header)
+    for _, block in keep:
+        out.extend(block)
+    path.write_text("\n".join(out).rstrip("\n") + "\n")
+    return done
+
+
+def cmd_epics(args) -> int:
+    done = retire_epics(ROOT, apply=args.retire)
+    if not done:
+        print("epics: nothing to retire")
+        return 0
+    for item in done:
+        if args.retire:
+            print(f"retired {item['slug']}: ledger -> {item['archive']}")
+        else:
+            print(f"{item['slug']} \u2014 {item['ledger']}")
+    return 0
+
+
 def _prune_ledger_section(path: Path, slug: str) -> bool:
     """Drop the `## <slug>` H2 section (heading through the line before the
     next H2, or EOF) from a ledger file. Returns True if a section was removed."""
@@ -1556,6 +1719,15 @@ def main() -> int:
 
     o = sub.add_parser("orphans", help="report active/ prompts no registry claims")
     o.set_defaults(func=cmd_orphans)
+
+    e = sub.add_parser(
+        "epics",
+        help="report (or --retire) epics.md entries whose status is SHIPPED/COMPLETE",
+    )
+    e.add_argument("--retire", action="store_true",
+                   help="archive the entry text (and a draft/active ledger) and "
+                        "delete the entry from epics.md")
+    e.set_defaults(func=cmd_epics)
 
     args = p.parse_args()
     return args.func(args)

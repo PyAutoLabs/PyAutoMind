@@ -347,3 +347,21 @@ later session decides on the reason rather than re-opening the argument.
   declares**, against this epic's "one grammar, one direction" ruling.
   Revisit only if something needs to answer "is this repo science?" *before*
   reading the phases.
+
+## Retired from epics.md (2026-09-02)
+
+## cortex-birth
+- title: PyAutoCortex — the science organ: split science runs out of the Mind
+- ledger: complete/archive/epics/cortex_birth_epic.md
+- status: SHIPPED 2026-09-02 — all seven phases (0–6) complete. Records: complete/2026/09/cortex-birth-organ-row.md, cortex-schema-skeleton.md, cortex-conductor.md, cortex-registration.md, cortex-migration.md (phases 0–4, 2026-09-01: #377, #379, #380, #382, #383), cortex-batch-member-kind.md (phase 5, PyAutoBrain#334), cortex-public-surfaces.md (phase 6, PyAutoMind#385). The retrospective is a stub in the ledger until the first Cortex batch closes with a review through the phase-5 door; the deferred list is recorded there.
+- notes: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
+  time, no bulk issue queues. Phase 0 is human-gated (the repo is created by hand;
+  no birth path exists). Decided 2026-09-01: new organ PyAutoCortex, a run/ruling
+  registry NOT a second Mind; rulings of record live in the Cortex (Option A);
+  gates are GitHub refs declared Cortex-side; Science-folder projects get private
+  PyAutoLabs remotes (code/config/wiki/witness only, no Euclid data). Migration
+  (phase 4) moves euclid-dr1-prep 4/5/6a/6b, jax-inference-profiling whole,
+  graphical-ep 3/4 science halves, cluster arc phase 11 and the subhalo active
+  entry across, with reciprocal links by slug. Supersedes two-slot-batching
+  phase 8 (batch_science_lane) and absorbs queue.md #2 on the science side;
+  phase 5 is gated on two-slot-batching's `collect` verb.

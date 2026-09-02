@@ -37,6 +37,8 @@ on:
       - "condemned.md"
       - "bundles.md"
       - "themes.md"
+      - "epics.md"
+      - "complete/archive/epics/**"
       - "dashboard.md"
       - "dashboard.html"
   pull_request:
@@ -49,6 +51,8 @@ on:
       - "condemned.md"
       - "bundles.md"
       - "themes.md"
+      - "epics.md"
+      - "complete/archive/epics/**"
       - "dashboard.md"
       - "dashboard.html"
   workflow_dispatch:
@@ -121,6 +125,58 @@ jobs:
             echo "push rejected (attempt ${attempt}) — retrying on the new tip of main"
           done
           echo "::error::could not push the healed contents blocks after 3 attempts"
+          exit 1
+      # An epic whose `status:` opens with SHIPPED/COMPLETE is finished, but
+      # nothing ever took it off epics.md — so the dashboard kept rendering it
+      # under Epics with a "continue the epic" prompt. Retire it here, BEFORE
+      # the dashboard step below, so the re-render in this same job already
+      # reflects the retirement (the dashboard step re-checks against the
+      # pushed tip).
+      - name: retire shipped epics (self-healing on push to main)
+        working-directory: PyAutoMind
+        run: |
+          # Report mode always exits 0 — the signal is the output, not the code.
+          pending() {
+            local out
+            if ! out=$(python3 scripts/lifecycle.py epics); then
+              echo "::error::'lifecycle.py epics' failed to run"
+              exit 1
+            fi
+            echo "$out"
+            [ "$out" != "epics: nothing to retire" ]
+          }
+          if ! pending; then
+            exit 0
+          fi
+          # Only PR runs error-without-healing (see the registry step above).
+          if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+            echo "::error::epics.md lists a shipped epic — run 'python3 scripts/lifecycle.py epics --retire' on this branch and commit the result"
+            exit 1
+          fi
+          echo "epics.md lists a shipped epic on main — self-healing"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard FETCH_HEAD
+            if ! pending; then
+              echo "tip of main is already clean (retired by a concurrent push)"
+              exit 0
+            fi
+            python3 scripts/lifecycle.py epics --retire
+            if pending; then
+              echo "::error::'lifecycle.py epics --retire' did not converge — script bug, repair by hand"
+              exit 1
+            fi
+            git add -A epics.md complete/archive/epics draft active
+            git commit -m "mind: retire shipped epics"
+            if git push origin HEAD:main; then
+              echo "retired on attempt ${attempt}"
+              exit 0
+            fi
+            echo "push rejected (attempt ${attempt}) — retrying on the new tip of main"
+          done
+          echo "::error::could not push the retired epics after 3 attempts"
           exit 1
       - name: dashboard freshness (self-healing on push to main)
         working-directory: PyAutoMind

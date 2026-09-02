@@ -6,7 +6,9 @@ This holds material that isn't a **dated task record** (those live in
 
 - **`epics/`** — retired multi-task **epic trackers** (formerly `z_features/`).
   Each tracked a series of related tasks; the per-task completion records live
-  in `complete/<YYYY>/<MM>/`. Kept for the epic-level narrative.
+  in `complete/<YYYY>/<MM>/`. Kept for the epic-level narrative. Entries arrive
+  here automatically from `lifecycle.py epics --retire` and carry their
+  `epics.md` text at the bottom of the tracker.
 - **`shelved/`** — **deferred / shelved** prompts and dev notes (formerly
   `z_vault/`). Not shipped; parked here rather than lost. Pull one back into
   `draft/<work-type>/<target>/` if you decide to action it.

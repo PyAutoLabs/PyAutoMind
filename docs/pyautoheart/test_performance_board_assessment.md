@@ -17,7 +17,7 @@ scripts listed with their reasons, and one-tap Claude prompts on every row so
   slow-vs-stall audit hand-scraped `[PASS] <name> — <n>s` lines per run.
 - The cost of not watching is measured: four `autogalaxy_workspace_test` runs
   burned ~24h of runner time at the 6-hour Actions ceiling before the kill
-  timer existed (`draft/bug/ci/jax_vmap_jit_compile_stall.md`); the
+  timer existed (`complete/archive/epics/jax_vmap_jit_compile_stall.md`); the
   autolens_workspace_test PR gate is ~11m20s wall-clock of which 553s is
   scripts, at ~17 runs/week (`draft/test/workspaces/slowest_smoke_gate_scripts.md`,
   `draft/test/pyautoheart/smoke_relevance_gate.md`).

@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 156 |
+| [Backlog](#backlog) (`draft/`) | 155 |
 
 ## Start here
 
@@ -428,7 +428,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
+**155** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 27</summary>
@@ -1828,27 +1828,6 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)</b> — 1 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)</b> — ledger: `draft/bug/ci/jax_vmap_jit_compile_stall.md` — SHIPPED 2026-08-27 — all 3 phases done; record</summary>
-
-```
-Continue the 'JAX vmap result never materialises (was: "intermittent XLA compile stall" — the name was wrong)' epic. Its canonical state lives in draft/bug/ci/jax_vmap_jit_compile_stall.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 (watchdog) shipped in full; phases 2/3 stopped deliberately at a measured-but-not-root-caused state. The stall is instrumented and characterised (>100x bimodality inside one compile step; vmap-of-jit contributory at p=0.070 but NOT causal; the compile-cache hypothesis never tested) and NOTHING was un-quarantined. Resumed 2026-08-27 as phase 3 (PyAutoFit#1528) — NOT via draft/research/ci/smoke_timing_and_profiling.md,
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/ci/jax_vmap_jit_compile_stall.md">JAX vmap result never materialises — campaign map…</a> — ci · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/ci/jax_vmap_jit_compile_stall.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>Expectation propagation (EP) campaign</b> — 7 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
@@ -1911,27 +1890,6 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/research/graphical_ep/slope_hierarchy_methods_writeup.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>Numba CPU sparse-operator likelihood — speed restoration</b> — 1 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>Numba CPU sparse-operator likelihood — speed restoration</b> — ledger: `complete/2026/08/numba-cpu-mge-batch-convolve-cache.md` — COMPLETE 2026-08-28. phase 1 SHIPPED 2026-08-27; phase 2a CLOSED as superseded (Bilinear rank-CDF is every default since…</summary>
-
-```
-Continue the 'Numba CPU sparse-operator likelihood — speed restoration' epic. Its canonical state lives in complete/2026/08/numba-cpu-mge-batch-convolve-cache.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Profiling shipped (autolens_profiling#151, complete/2026/08/numba-cpu-likelihood-profiling.md);
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
-
-```
-/start_dev draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md
 ```
 
 </details>
@@ -2177,11 +2135,16 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-<details><summary>📋 <b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — ledger: `complete/archive/epics/cortex_birth_epic.md` — SHIPPED 2026-09-02 — all seven phases (0–6) complete. Records: complete/2026/09/cortex-birth-organ-row.md…</summary>
+<details>
+<summary><b>numba-cpu-likelihood</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
 
 ```
-Continue the 'PyAutoCortex — the science organ: split science runs out of the Mind' epic. Its canonical state lives in complete/archive/epics/cortex_birth_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
+/start_dev draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md
 ```
+
+</details>
 
 </details>
 
@@ -2198,7 +2161,7 @@ Continue the 'PyAutoCortex — the science organ: split science runs out of the 
 
 </details>
 
-155 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+154 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2243,7 +2206,7 @@ Continue the 'PyAutoCortex — the science organ: split science runs out of the 
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
 - `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 115 more_
+- _… and 114 more_
 
 </details>
 
