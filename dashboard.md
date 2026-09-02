@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mappings_regions_clumps_subplot.md">Image-plane region mappings, source clump finding and a restored <code>subplot_mappings</code> in PyAutoArray</a> — issued 2026-09-02</summary>
+<details><summary>📋 <a href="active/mappings_regions_clumps_subplot.md">Image-plane region mappings, source clump finding and a restored <code>subplot_mappings</code> in PyAutoArray</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/515">issue #515</a> — issued 2026-09-02 — library-dev</summary>
 
 ```
 /start_dev active/mappings_regions_clumps_subplot.md
