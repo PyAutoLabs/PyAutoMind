@@ -176,11 +176,17 @@
 - issued: 2026-09-02
 - prompt: active/batch_review_integration_branches.md
 - session: claude-code local (Fable architect, Opus subagents)
-- status: library-dev
+- status: pr-open (awaiting human merge — library-first: Brain PR before Mind PR)
 - worktree: ~/Code/PyAutoLabs-wt/batch-review-integration
 - repos:
   - PyAutoBrain: feature/batch-review-integration
   - PyAutoMind: feature/batch-review-integration
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoBrain/pull/338
+  - https://github.com/PyAutoLabs/PyAutoMind/pull/386
+- heart-ack: YELLOW acknowledged by the human at plan approval; both reasons unrelated to this change
+  - PyAutoArray: open PR 10d old
+  - release validation incomplete: no rehearsal for current source
 - note: PyAutoBrain also claimed by organ-board-github-link (PR #326, disjoint files) — parallel worktree approved 2026-09-02
 
 ## image-source-mappings-p1
@@ -210,3 +216,5 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/adapt-image-snr-cap
 - repos:
+  - autolens_workspace: feature/adapt-image-snr-cap
+  - autolens_assistant: feature/adapt-image-snr-cap
