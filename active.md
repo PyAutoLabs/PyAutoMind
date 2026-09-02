@@ -163,3 +163,17 @@
     gradients; fix sentinel identity + type-aware Prior.__eq__ + add the cavity
     gradient after the VJP. Acceptance: analytic_gaussian.py leg A mu mean PASS.
     Fable session; implementation delegated to a Fable subagent.
+
+## batch-review-integration-p3
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/339
+- issued: 2026-09-02
+- prompt: active/batch_review_integration_branches_p3_push.md
+- session: claude-code local (Fable architect, Opus subagents)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/batch-review-integration-p3
+- repos:
+  - PyAutoBrain: feature/batch-review-integration-p3
+  - PyAutoMind: feature/batch-review-integration-p3
+- heart-ack:
+  - PyAutoArray: open PR 10d old
+  - release validation incomplete: no rehearsal for current source

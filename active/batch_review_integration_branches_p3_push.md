@@ -14,6 +14,7 @@ Consequence: notify
 Witness: a test with a temp bare origin runs `collect --integration --push` and asserts origin carries `integration/<slot>` equal to the local branch; a second run after main moves lands as a new commit or an `integration/<slot>-2` branch and never force-updates the first; `branch_sweep.sh` classifies an `integration/*` branch whose record `sweep-after:` is past as sweepable and one that is not as kept
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-09-02
 
 ## Context
 
