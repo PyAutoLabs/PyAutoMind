@@ -48,6 +48,10 @@ anything you could not verify.
 | [Planned](#planned) (`planned.md`) | 5 |
 | [Backlog](#backlog) (`draft/`) | 159 |
 
+> ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
+
+> - `draft/research/euclid/batch_science_lane.md — its own `Status:` says superseded, but the prompt never left draft/ (reconcile its lifecycle)`
+
 ## Start here
 
 **Highest priority** (filed as `high`) — showing 12 of 14
