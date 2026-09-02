@@ -290,7 +290,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/numpy_deflections_p2_mge_wofz.md">Numpy deflections phase 2: MGE / Faddeeva — scipy wofz on numpy…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/596">issue #596</a> — issued 2026-09-02 — library-dev</summary>
+<details><summary>📋 <a href="active/numpy_deflections_p2_mge_wofz.md">Numpy deflections phase 2: MGE / Faddeeva — scipy wofz on numpy…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/596">issue #596</a> — issued 2026-09-02 — library-shipped, workspace-pending</summary>
 
 ```
 /start_dev active/numpy_deflections_p2_mge_wofz.md
