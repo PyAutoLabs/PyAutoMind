@@ -198,3 +198,6 @@
   - PyAutoMind (feature/cortex-migration)
   - autolens_profiling (feature/cortex-migration)
   - /mnt/c/Users/Jammy/Science/subhalo_validation (main, direct commits)
+- heart-ack:
+  - PyAutoArray: open PR 10d old
+  - release validation incomplete: no rehearsal for current source
