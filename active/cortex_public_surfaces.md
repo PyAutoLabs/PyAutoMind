@@ -22,6 +22,7 @@ Epic: cortex-birth
 Phase: 6
 Parent: draft/feature/pyautocortex/cortex_birth_epic.md
 Filed: 2026-09-01
+Issued: 2026-09-02
 
 Phase 6 of 7 in the PyAutoCortex birth epic — the last. **Gates: phases 4 and
 5**, and **one real Cortex batch reviewed** (so the retrospective has evidence,
