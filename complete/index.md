@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1251 records across 8 buckets.
+1252 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -125,6 +125,7 @@ markers; everything below GENERATED is rebuilt.
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under
 - [batch-collect](2026/09/batch-collect.md) — closed completed 2026-09-02
 - [batch-review-integration](2026/09/batch-review-integration.md)
+- [batch-review-integration-p3](2026/09/batch-review-integration-p3.md)
 - [cortex-batch-member-kind](2026/09/cortex-batch-member-kind.md) — closed completed 2026-09-02
 - [cortex-birth-organ-row](2026/09/cortex-birth-organ-row.md) — closed completed 2026-09-01
 - [cortex-conductor](2026/09/cortex-conductor.md) — closed completed 2026-09-01
