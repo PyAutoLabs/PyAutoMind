@@ -133,7 +133,11 @@
 - issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/91
 - prompt: active/analytic_gaussian_benchmark.md
 - issued: 2026-09-02
-- status: ready-to-ship (3 commits on the branch, not pushed; Heart YELLOW ack pending)
+- status: pr-open, awaiting-merge (CI running; merge via /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/92
+- heart-ack:
+  - PyAutoArray: open PR 10d old
+  - release validation incomplete: no rehearsal for current source
 - epic: graphical-ep (phase 1 — the keystone; ledger draft/research/graphical_ep/ep_campaign.md)
 - worktree: ~/Code/PyAutoLabs-wt/analytic-gaussian-benchmark
 - repos:
