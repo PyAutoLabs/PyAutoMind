@@ -1,3 +1,53 @@
+## image-source-mappings-p1
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/515 (closed completed 2026-09-02)
+- completed: 2026-09-02
+- library-pr: PyAutoArray https://github.com/PyAutoLabs/PyAutoArray/pull/517 (head `36b75e07`, merge `501c373fdb0f1cd0545ccdc593b2f74d35fbac0d`) — label `pending-release`
+- classification: feature (library) — epic `image-source-mappings`, phase 1 of 3 (ledger
+  `draft/feature/autoarray/image_source_mappings_epic.md`). Fable session; execution delegated to Opus.
+- ci: `Tests` — one workflow run, all 3 legs green (`3.12`, `3.13`, `nojax`). Local
+  `pytest test_autoarray` — 1382 passed.
+- heart-ack (carried from the `active.md` entry): "PyAutoArray: open PR 10d old"; "release validation
+  incomplete: no rehearsal for current source".
+- parallel-claim: PyAutoArray was simultaneously held by `numpy-deflections-p1` (#514) in its own
+  worktree; file sets disjoint, own worktree approved by the human 2026-09-02. That claim and its
+  worktree were left untouched by this close-out.
+
+- summary: New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
+  `connected_components_from` (BFS over the mesh graph), `image_regions_from` (image-plane regions
+  derived from `Mapper.mapping_matrix`, not the sub-slim `slim_indexes_for_pix_indexes`),
+  `source_contours_from` and arcsec boundary polygons. `Inversion.source_clumps_from` (threshold /
+  `min_pixels` / `total_clumps` / `pix_indexes` bypass) plus `Inversion.mappings_from` and
+  `Mapper.mappings_from`. A generic `regions=` / `region_colors` / `region_alpha` / `region_labels`
+  polygon overlay on `plot_array` and `plot_inversion_reconstruction`. `subplot_mappings` rewritten
+  as the one-look 2x2 colour-matched figure (image regions in both image panels, clumps in both
+  source panels, labels matched across the planes).
+- files: 17 changed — `autoarray/inversion/mappings/{__init__,mapping}.py` (new, 761 lines),
+  `inversion/inversion/abstract.py`, `inversion/mappers/abstract.py`,
+  `inversion/plot/{inversion_plots,mapper_plots}.py`, `plot/{array,inversion,utils}.py`,
+  `config/visualize/general.yaml`, `__init__.py`, plus five test modules including the new
+  `test_autoarray/inversion/mappings/test_mapping.py`.
+
+- not shipped (deliberate, already re-filed): the prompt's **optional** `Shape.contains(points_yx)` /
+  `Shape.boundary(n)` on `autoarray/structures/triangles/shape.py` did not make this PR
+  (`shape.py` is untouched by #517). The prompt names the fallback and the Phase 2 draft already
+  carries it as **Phase 2a** — a tiny PyAutoArray PR that must merge and release *before* the
+  PyAutoLens PR opens (`draft/feature/autolens/mappings_shape_solver_fit_subplot.md`, "Files"
+  section). Nothing new was filed; the remainder was already in the backlog.
+- leftovers / traps:
+  - Pre-existing silent `except: pass` guards remain in `subplot_mappings` — not introduced here,
+    not removed here.
+  - `black` reformatted ~40 unrelated lines in the touched `autoarray/plot/` files; the PR diff is
+    correspondingly wider than the change.
+  - Workspace configs still carry the old `total_mappings_pixels` key. The library reads it as a
+    fallback for one release (`config/visualize/general.yaml` now also carries the new
+    `inversion:` keys); **Phase 3 sweeps the workspace configs** — do not remove the fallback before
+    then.
+- next: a PyAutoArray **release** is the gate. Phase 2 (PyAutoLens, ShapeSolver engine + validation
+  suite) stays blocked on that release landing and is the human's call to open — it was deliberately
+  not unblocked at close-out. Phase 3 (workspace + tutorials) opens only after Phase 2 releases.
+
+## Original prompt
+
 # Image-plane region mappings, source clump finding and a restored `subplot_mappings` in PyAutoArray
 
 Type: feature

@@ -49,29 +49,6 @@
     PR #1555 CI green on head 2629933cc; merge serially before
     autofit-multistart-iterations per the batch record.
 
-## organ-board-github-link
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/325
-- prompt: active/github_page_link_in_every_organ_board.md
-- issued: 2026-08-31
-- session: claude-code-remote (batch 2026-08-31-pm member organ-board-github-link, web-github)
-- status: pr-open (all five legs of the autonomous-ship gate passed 2026-08-31; merge is the human's)
-- branch: feature/organ-board-github-link
-- prs:
-  - https://github.com/PyAutoLabs/PyAutoBrain/pull/326
-  - https://github.com/PyAutoLabs/PyAutoHeart/pull/194
-  - https://github.com/PyAutoLabs/PyAutoHands/pull/273
-  - https://github.com/PyAutoLabs/PyAutoMemory/pull/77
-  - https://github.com/PyAutoLabs/PyAutoScientist/pull/25
-- repos:
-  - PyAutoBrain
-  - PyAutoHeart
-  - PyAutoHands
-  - PyAutoMemory
-  - PyAutoScientist
-- heart-ack:
-  - manifest drift: local checkout origins — 1 mismatch(es) vs PyAutoMind/repos.yaml
-  - CI status unavailable for all 6 libraries and 11 workspaces (web container: Heart's ci_status.sh shells to gh, which does not exist here — measurement blindness, not a measured red)
-
 ## resampling-info-summary-section
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1551
 - prompt: active/add_resampling_info_section_to_the_bottom.md
@@ -156,29 +133,6 @@
     then the two zero-numerics levers — GridMaker.via_grid_2d no longer fires
     Grid2D.over_sampled on *Sph calls (+ sub-size-1 short-circuit) and the tracer /
     galaxy double trace at sub-size 1. Fable session; execution delegated to Opus.
-
-## image-source-mappings-p1
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/515
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/517
-- heart-ack:
-  - "PyAutoArray: open PR 10d old"
-  - "release validation incomplete: no rehearsal for current source"
-- prompt: active/mappings_regions_clumps_subplot.md
-- issued: 2026-09-02
-- session: claude --resume e962a3a7-cee9-4168-93a5-e7067699f2d7
-- status: library-shipped, workspace-pending
-- epic: image-source-mappings (phase 1 — ledger draft/feature/autoarray/image_source_mappings_epic.md)
-- worktree: ~/Code/PyAutoLabs-wt/image-source-mappings-p1
-- parallel-claim: PyAutoArray — numpy-deflections-p1 (#514) holds it in its own worktree; file sets disjoint (this task: autoarray/inversion/, autoarray/plot/, config/visualize/; theirs: grid over-sampling decorator + tracer path); own worktree approved by the human 2026-09-02
-- repos:
-  - PyAutoArray: feature/image-source-mappings-p1
-- summary: |
-    Phase 1 of image-source-mappings: new autoarray/inversion/mappings/ package
-    (Mapping / ImageRegion result objects, mesh-graph connected components, image-plane
-    regions from the mapping matrix, arcsec boundary polygons), Inversion.source_clumps_from
-    + mappings_from, Mapper.mappings_from, a regions= overlay on plot_array /
-    plot_inversion_reconstruction, and subplot_mappings rewritten as the one-look 2x2
-    mapping figure. Fable session; execution delegated to Opus.
 
 ## adapt-image-snr-cap
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/521
