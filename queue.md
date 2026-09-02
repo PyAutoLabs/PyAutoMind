@@ -87,8 +87,7 @@ silently dropped. One queue holds both lanes; the planner filters.
 - note: `pyauto-brain batch collect` shipped; the phase's remaining verb is re-filed as draft/feature/pyautobrain/batch_slice.md
 
 ## 9. Euclid Lane: recut
-- kind: prompt
-- ref: draft/research/euclid/batch_science_lane.md
-- note: leg A only — Lane: header on every remaining euclid phase, queue the `any` halves
-- note: superseded by cortex-birth (phase 5 retires it)
+- kind: retired
+- shipped-as: superseded by cortex-birth phase 5 (2026-09-02)
+- note: draft/research/euclid/batch_science_lane.md is marked superseded; leg A (the `Lane:` recut) has no surface left — every Cortex phase is `Lane: local-dev` by construction
 

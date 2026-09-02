@@ -12,7 +12,7 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: normal
-Status: draft
+Status: superseded by cortex-birth (phase 5, 2026-09-02) — its closures live in PyAutoCortex/AGENTS.md "The laptop lane"
 Consequence: judge
 Review-minutes: 20
 Unattended: ready

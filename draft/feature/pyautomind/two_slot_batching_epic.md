@@ -291,7 +291,9 @@ chips the dashboard already renders.
    burn-up read once per slot. `draft/feature/pyautomind/`
 8. **The laptop lane** — **decided 2026-08-30: science stays on the laptop**, and
    the lane is made first-class rather than engineered away.
-   `draft/research/euclid/`
+   `draft/research/euclid/` — **SUPERSEDED 2026-09-02** by cortex-birth phase 5
+   (the Cortex is the science lane's home; `Lane: local-dev` is every Cortex
+   phase's).
 
 ## The laptop lane, separately
 
@@ -469,6 +471,11 @@ so every pointer is a local path; the public packet archive on Pages; and
   mechanism than the planned manifest-first transport (full outputs on the
   laptop, not manifests). Still owed: leg A, the `Lane:` recut of the remaining
   euclid phases. Leg B survives only for the laptop-off cloud-reasoning case.
+  **Superseded 2026-09-02** by cortex-birth phase 5: the science lane's home is
+  the Cortex, where every phase is `Lane: local-dev` by construction and the
+  batch conductor's `--kind cortex` reads it, so the owed `Lane:` recut has no
+  surface left to recut. `batch_science_lane.md` is marked superseded and
+  `queue.md` #9 retired.
 
 **Dead — do not resurrect:** the floor (closed, "Slot timing"); the dispatcher,
 for now; the standalone board surface; manifest-first-as-transport.
