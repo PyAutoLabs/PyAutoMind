@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/analytic_gaussian_benchmark.md">Analytic Gaussian benchmark: closed-form validation of graphical + EP</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace_test/issues/91">issue #91</a> — issued 2026-09-02 — ready-to-ship (3 commits on the branch, not pushed; Heart YELLOW ack pending)</summary>
+<details><summary>📋 <a href="active/analytic_gaussian_benchmark.md">Analytic Gaussian benchmark: closed-form validation of graphical + EP</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace_test/issues/91">issue #91</a> — issued 2026-09-02 — pr-open, awaiting-merge (CI running; merge via /prm)</summary>
 
 ```
 /start_dev active/analytic_gaussian_benchmark.md
