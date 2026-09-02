@@ -123,7 +123,7 @@ Rendering: `plot_array` / `plot_inversion_reconstruction` gain `regions`, `regio
 
 | Phase | Prompt | State |
 |---|---|---|
-| 1 | draft/feature/autoarray/mappings_regions_clumps_subplot.md | filed |
+| 1 | active/mappings_regions_clumps_subplot.md | issued #515 |
 | 2 | draft/feature/autolens/mappings_shape_solver_fit_subplot.md | filed |
 | 3 | draft/docs/autolens_workspace/mappings_guide_and_tutorial_rewrite.md | filed |
 

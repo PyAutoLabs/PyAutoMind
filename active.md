@@ -144,6 +144,9 @@
 - status: library-dev
 - epic: numpy-deflections-cpu (phase 1 — ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
 - worktree: ~/Code/PyAutoLabs-wt/numpy-deflections-p1
+- heart-ack:
+  - PyAutoArray: open PR 10d old
+  - release validation incomplete: no rehearsal for current source
 - parallel-claim: PyAutoArray — numba-vs-jax-sparse holds a read-only research claim on main (no branch, no worktree); file sets disjoint, own worktree approved by the human 2026-09-02
 - repos:
   - PyAutoArray: feature/numpy-deflections-p1
