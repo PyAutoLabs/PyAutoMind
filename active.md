@@ -138,6 +138,9 @@
 - status: library-dev
 - epic: numpy-deflections-cpu (phase 2 — ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
 - worktree: ~/Code/PyAutoLabs-wt/numpy-deflections-p2
+- heart-ack:
+  - PyAutoArray: open PR 10d old
+  - release validation incomplete: no rehearsal for current source
 - repos:
   - PyAutoGalaxy: feature/numpy-deflections-p2
   - autolens_profiling: feature/numpy-deflections-p2
