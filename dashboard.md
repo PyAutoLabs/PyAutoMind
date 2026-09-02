@@ -46,11 +46,11 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 154 |
+| [Backlog](#backlog) (`draft/`) | 156 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 14
+**Highest priority** (filed as `high`) — showing 12 of 15
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -80,6 +80,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/docs/autolens/multi_galaxy_package.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/adapt_image_snr_cap.md">Cap the adapt image at S/N 3.0 in every adaptive pixelization pipeline</a> — autolens_workspace · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autolens_workspace/adapt_image_snr_cap.md
 ```
 
 </details>
@@ -136,14 +144,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/samples_parameter_paths.md
 ```
 
 </details>
@@ -436,10 +436,18 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**154** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **44** of them belong to an epic and are listed only under [Epics](#epics) below.
+**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **45** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 28</summary>
+<summary><b>feature</b> — 29</summary>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/adapt_image_snr_cap.md">Cap the adapt image at S/N 3.0 in every adaptive pixelization pipeline</a> — autolens_workspace · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autolens_workspace/adapt_image_snr_cap.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
 
@@ -2143,6 +2151,19 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
+<details>
+<summary><b>none (successor to numba-cpu-likelihood, COMPLETE 2026-08-28, and the two curvature-F phases)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md">Numpy (CPU) deflection angles: speed up the nine mass profiles the numba…</a> — autogalaxy · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
+```
+
+</details>
+
+</details>
+
 ## Hygiene
 
 3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -2156,7 +2177,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-153 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+154 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2172,6 +2193,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/dpie_sigma0_parameterization.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
+- `draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/magnification_errors_posterior_draws.md`
@@ -2200,17 +2222,17 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 113 more_
+- _… and 114 more_
 
 </details>
 
-10 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+11 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
+- `draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md — unknown theme keyword(s): mass-profiles`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
