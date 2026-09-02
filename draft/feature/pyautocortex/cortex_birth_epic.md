@@ -257,3 +257,92 @@ collisions; the two review vocabularies (`batches/reviews/AGENTS.md:24` vs
   3a/3b, 6a/6b/6c collisions are the reason.
 - The human wants to be able to look at one epic and see both halves. The slug
   is the join key; every card links across.
+
+## What the first Cortex batch taught (phase 6 — 2026-09-02)
+
+**Nothing yet, and saying so is the finding.** No Cortex batch has been planned
+and reviewed through the phase-5 door. The two records in
+`PyAutoCortex/batches/` are both `2026-08-31`, transcribed at phase 4 from the
+Mind's records of a slot that was hand-driven before the second member kind
+existed, and **neither carries a numeric `review-minutes-actual:`** — the am
+record reads *"excluded — workshop session (the framework was built and
+polished mid-review)"*, the pm record *"(not given)"*. There is therefore no
+calibration point, and the phase-5 record says the same in its own words: the
+first one is `review-minutes-actual:` on a conductor-opened record, at the
+laptop.
+
+The prompt asked for facts. The honest fact is that the evidence does not
+exist yet, so this section is a **stub**, not a retrospective, and it is
+written down rather than left blank so nobody re-runs the search. When the
+evidence lands, answer these four:
+
+1. **Planned vs actual minutes on the first conductor-opened record.** The
+   only two numbers on file are estimates from before the door existed
+   (`review-minutes-planned: 121` and `74`), and both slots' actuals were
+   never taken. The question the budget rests on — does a science slot cost
+   what the phase seeds say it costs — is still unmeasured.
+2. **Did the rolling board remove the CARRIED pattern?** The pattern this epic
+   was filed against is `2026-08-31-pm`: eight science members, three ruled,
+   five carried, "Ruled 0 of 12" on the mixed Mind slot. The rolling board plus
+   `- carried:` / `- carried-from:` is meant to make that ordinary rather than
+   a stall. Compare the first two conductor-opened slots against those numbers.
+3. **Did any gate flip automatically?** `gates_grade.yml` has run daily since
+   it shipped with **phase 2** (2026-09-01) — one day earlier than the first
+   real phases, so it has graded a non-empty registry for barely a day. As of
+   2026-09-02 **no phase carries a `Gates-cleared:`** and exactly one phase is
+   `gated`: `phases/euclid/dr1_prelim_10_lens_science_run.md`, waiting on
+   `euclid_strong_lens_modeling_pipeline#48, #49`. The first automatic flip is
+   still ahead; when it happens, check that the phase arrived in `ready`
+   without a human touching the file.
+4. **What did the human do by hand that the design said would be automatic?**
+   That list is the real product of a retrospective. Phase 2 already logged
+   three of its own (Pages enablement, `delete_branch_on_merge`, the
+   `PAT_PYAUTOLABS` admin gap on PyAutoCortex); a slot run end-to-end is what
+   surfaces the rest.
+
+**What unblocks this section:** the first `batch plan --kind cortex --apply`
+record closed with a review at the laptop. Until then there is nothing to
+calibrate against and nothing to compare.
+
+**No follow-up prompts filed — facts first.** The prompt allowed up to three;
+filing them on intentions rather than evidence is exactly the re-derivation
+this ledger exists to prevent.
+
+## Deferred (recorded so nobody re-derives it)
+
+Five things this epic deliberately did not do. Each carries the reason, so a
+later session decides on the reason rather than re-opening the argument.
+
+- **Eyes conductor fold-in (figure review as part of a science review).**
+  Inspecting result PNGs is half of a science review, so the Eyes conductor is
+  a plausible later home for that half — but which half, and whether the
+  packet or the conductor owns it, is not answerable from zero slots. **Open
+  question; decide only after two Cortex batches have been reviewed.**
+- **`hpc/sync` unification across the three projects.** They diverge today
+  (profiling pull-only; subhalo push/pull/submit/wait-and-pull; euclid
+  push/pull/sync/status) and `projects.yaml` records which one each project
+  has, which is enough for `collect --pull` to work. **File it only if the
+  retrospective shows the divergence cost review minutes** — unifying three
+  working CLIs on aesthetics is not a task.
+- **A Cortex template / `spawn.py` entry.** The Cortex is an instance organ;
+  its shape is documented in `REFERENCE.md` and on the RTD organ page.
+  **Not until a fork asks for one** — a template maintained against no
+  consumer rots.
+- **The batch board strip showing both kinds.**
+  `draft/feature/pyautobrain/batch_board.md` (two-slot-batching phase 6,
+  `small`/`safe`) is still unshipped and renders the *Mind's* batch state on
+  the Mind dashboard. Teaching it a second kind is that prompt's business, not
+  this epic's, and there is nothing to render side by side until a Cortex slot
+  is live. Meanwhile the Brain board already carries the Cortex counts row
+  phase 2 shipped. **Deferred to `batch_board.md`.**
+- **A `cortex: true` flag on `repos.yaml` `category: project` rows
+  (`autolens_profiling`) for the badge resolver — decided: not needed.**
+  Phase 2 built the resolver the other way round
+  (`complete/2026/09/cortex-conductor.md`): it probes `PYAUTO_CORTEX` or a
+  sibling `PyAutoCortex`, reads every Cortex phase's `Gates:`, and badges any
+  Mind prompt whose issue or PR ref appears there — render-only, no new
+  imports, silent when no Cortex resolves. It never consults `repos.yaml`, so
+  a Mind-side flag would be a **second source for a fact the Cortex already
+  declares**, against this epic's "one grammar, one direction" ruling.
+  Revisit only if something needs to answer "is this repo science?" *before*
+  reading the phases.
