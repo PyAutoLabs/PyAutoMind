@@ -169,7 +169,8 @@ manage them; they just cannot share one batch.
    kind in the batch conductor, separate records + `review-at:` per surface, the
    rolling board, carry-forward formalised Cortex-side, `AUTONOMY.md` leg 4 reads
    the member's own organ record. Gates: 2, **and** the two-slot-batching
-   `collect` verb (`draft/feature/pyautobrain/batch_conductor.md`).
+   `collect` verb (`draft/feature/pyautobrain/batch_conductor.md` — SHIPPED
+   2026-09-02, PyAutoBrain#332, `complete/2026/09/batch-collect.md`; gate open).
 6. `draft/feature/pyautocortex/cortex_public_surfaces.md` — RTD organ page,
    PyAutoScientist row, hub, and the retrospective: what the first Cortex batch
    taught; the explicit deferred list. Gates: 4, 5.
@@ -220,7 +221,9 @@ collisions; the two review vocabularies (`batches/reviews/AGENTS.md:24` vs
   it superseded in the two-slot ledger and retires `queue.md` #9.
 - Its `collect` verb (phase 2, `batch_conductor.md`, `queue.md` #8) is a hard
   gate on phase 5 here. Build `collect` once, with two member kinds, rather than
-  a dev-only `collect` that phase 5 then reopens.
+  a dev-only `collect` that phase 5 then reopens. **Shipped 2026-09-02**
+  (PyAutoBrain#332, `complete/2026/09/batch-collect.md`) kind-neutral: the
+  `dev` kind plus the `KINDS` registry phase 5 registers `cortex` on.
 - `queue.md` #2 (carry-forward formalisation, `batch_carry_forward.md`) is
   absorbed by phase 5 here on the science side; the dev side keeps whatever the
   two-slot prompt decides.

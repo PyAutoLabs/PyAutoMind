@@ -82,9 +82,9 @@ silently dropped. One queue holds both lanes; the planner filters.
 - note: highest-leverage backlog item (151/153 judge); human-declared witnesses only; fill work
 
 ## 8. batch collect
-- kind: prompt
-- ref: draft/feature/pyautobrain/batch_conductor.md
-- note: next verb = collect; spec = batches/packets/TEMPLATE.md + the 2026-08-31 packet's collect-needs list
+- kind: retired
+- shipped-as: PyAutoBrain#332 → PR#333, complete/2026/09/batch-collect.md (2026-09-02)
+- note: `pyauto-brain batch collect` shipped; the phase's remaining verb is re-filed as draft/feature/pyautobrain/batch_slice.md
 
 ## 9. Euclid Lane: recut
 - kind: prompt
