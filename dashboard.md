@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mappings_shape_solver_fit_subplot.md">ShapeSolver-based source-to-image region mappings, fit-level <code>subplot_mappings</code>, brightest multiple-image positions, and the ShapeSolver…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/719">issue #719</a> — issued 2026-09-02 — library-shipped-2a, library-dev-p2</summary>
+<details><summary>📋 <a href="active/mappings_shape_solver_fit_subplot.md">ShapeSolver-based source-to-image region mappings, fit-level <code>subplot_mappings</code>, brightest multiple-image positions, and the ShapeSolver…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/719">issue #719</a> — issued 2026-09-02 — library-shipped (PR-A #518 → PR-B, awaiting /prm)</summary>
 
 ```
 /start_dev active/mappings_shape_solver_fit_subplot.md
