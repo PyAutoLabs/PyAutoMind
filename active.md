@@ -111,8 +111,9 @@
 - prompt: active/mappings_shape_solver_fit_subplot.md
 - issued: 2026-09-02
 - session: claude --resume 7ac5cc85-dfd9-41e2-a4bd-725f33f0f24f
-- status: library-shipped-2a, library-dev-p2
+- status: library-shipped (PR-A #518 → PR-B, awaiting /prm)
 - library-pr: PyAutoArray https://github.com/PyAutoLabs/PyAutoArray/pull/518
+- library-pr: PyAutoLens https://github.com/PyAutoLabs/PyAutoLens/pull/720
 - epic: image-source-mappings (phase 2 + 2a — ledger draft/feature/autoarray/image_source_mappings_epic.md; opened 2026-09-02 by user decision ahead of the PyAutoArray release that gated it)
 - heart-ack:
   - "PyAutoArray: open PR 10d old"
