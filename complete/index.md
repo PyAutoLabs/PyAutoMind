@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1256 records across 8 buckets.
+1257 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -139,6 +139,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
+- [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
 - [numpy-deflections-p1](2026/09/numpy-deflections-p1.md)
 - [organ-board-github-link](2026/09/organ-board-github-link.md) — Every organ board header now carries a `GitHub Page` link beside its existing
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z

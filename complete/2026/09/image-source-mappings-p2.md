@@ -1,3 +1,80 @@
+## image-source-mappings-p2
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/719 (closed completed 2026-09-02 by `Closes #719`)
+- completed: 2026-09-02
+- library-pr: PyAutoArray https://github.com/PyAutoLabs/PyAutoArray/pull/518 (head `a9a9120a`, merge `c9f67e78`) — label `pending-release`
+- library-pr: PyAutoLens https://github.com/PyAutoLabs/PyAutoLens/pull/720 (head `c376f103`, merge `091fbdff`) — label `pending-release`
+- classification: feature (library) — epic `image-source-mappings`, phase 2 + 2a of 3 (ledger
+  `draft/feature/autoarray/image_source_mappings_epic.md`). Fable session; execution delegated to Opus.
+- ci: PyAutoLens `Tests` all 3 legs green plus `Docs` green on head `c376f103`; PyAutoArray `Tests` green on `a9a9120a`.
+  Local: PyAutoArray 1410 passed; PyAutoLens 610 passed + 1 xfailed.
+- heart-ack (carried from the `active.md` entry): "PyAutoArray: open PR 10d old"; "release validation
+  incomplete: no rehearsal for current source".
+- merge order: library-first — PyAutoArray#518 merged before PyAutoLens#720 (the PyAutoLens PR CI is
+  source-installed against PyAutoArray `main`).
+
+## What shipped
+
+**PyAutoArray#518 (phase 2a).** `Shape.contains` and `Shape.boundary` on
+`autoarray/structures/triangles/shape.py`, plus three defects the work surfaced:
+reflected `Triangle` containment returned the wrong answer; `for_limits_and_scale`
+tiled triangles transposed, so `PointSolver` missed images on non-square grids; a stray
+`NameError`; and `plot_regions` label placement.
+
+**PyAutoLens#720 (phase 2).** The `ShapeSolver` validation suite plus the audit fixes it
+forced, and the phase-2 API:
+
+- `ShapeSolver.image_regions_from`, `ShapeSolver.mapping_from`, and
+  `ShapeSolver.find_magnification(per_image=True)`.
+- New `autolens/lens/mappings.py`, exported as `al.mappings` — fit-level mappings, brightest
+  multiple-image positions, per-image magnification.
+- `subplot_mappings(fit)`, exported as `aplt.subplot_fit_imaging_mappings`, with
+  `subplot_mappings` wired into `PlotterImaging` via `plots.yaml`.
+
+## What the validation suite found
+
+`ShapeSolver` had never been validated. Building the suite surfaced and fixed:
+
+- reflected `Triangle` containment returning the wrong answer (fixed upstream in #518);
+- `for_limits_and_scale` tiling transposed — `PointSolver` missed images on non-square grids (#518);
+- `magnification_threshold` never actually used by `ShapeSolver`;
+- exact-float vertex equality fragmenting images — vertices are now quantised;
+- kept-triangle area assumed monotone; the true invariant is now pinned by test;
+- `plot_regions` labelling multiple-image regions on empty sky;
+- silent guards removed;
+- `use_jax=True` on a JAX-free install raising `ModuleNotFoundError`.
+
+## Verification
+
+- Per-image magnifications within 0.2% of the analytic SIS.
+- Oracle agreement exact.
+- Quad positions within 0.034" of `PointSolver` on 0.1" pixels.
+- Both engines return identical positions on the same data.
+
+## Deferred / not shipped
+
+- **`ShapeSolver` under JAX is silently wrong.** The JAX containers cap each step at
+  `MAX_CONTAINING_SIZE = 15` triangles, giving magnification 0.13 against a true 6.86. The JAX path
+  now raises `NotImplementedError`. The strict xfail
+  `test_shape_solver.py::test_jax_and_numpy_kept_triangles_agree` is the un-xfail trigger when the
+  cap is lifted. JAX `area` additionally cannot survive `jit`.
+- Engine A's `magnifications_from` returns relative flux fractions; documented as not on engine B's
+  absolute scale.
+
+## Leftovers
+
+- `_plot_source_plane`'s pre-existing inversion-path `except Exception` guard remains.
+- `black` not applied to pre-existing PyAutoLens files — they are not black-clean on `main`.
+- `al.plot` attribute access recurses on `main` (pre-existing; `import autolens.plot as aplt` works).
+- Workspace configs still carry `total_mappings_pixels` — phase 3 sweeps it.
+
+## Next
+
+Both PyAutoArray and PyAutoLens carry `pending-release` and **need a release**. Epic phase 3
+(`draft/docs/autolens_workspace/mappings_guide_and_tutorial_rewrite.md`) is gated on both releases
+landing and stays blocked until then.
+
+## Original prompt
+
 # ShapeSolver-based source-to-image region mappings, fit-level `subplot_mappings`, brightest multiple-image positions, and the ShapeSolver validation suite in PyAutoLens
 
 Type: feature
