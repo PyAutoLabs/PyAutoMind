@@ -117,3 +117,21 @@
     report step so a failed run comments on its issue instead of silence.
     Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
     green queue_filing.yml run on #71 that opens a filing PR.
+
+## analytic-gaussian-benchmark
+- issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/91
+- prompt: active/analytic_gaussian_benchmark.md
+- issued: 2026-09-02
+- status: workspace-dev
+- epic: graphical-ep (phase 1 — the keystone; ledger draft/research/graphical_ep/ep_campaign.md)
+- worktree: ~/Code/PyAutoLabs-wt/analytic-gaussian-benchmark
+- repos:
+  - autofit_workspace_test: feature/analytic-gaussian-benchmark
+- summary: |
+    Closed-form conjugate hierarchical Gaussian benchmark (known-scatter leg
+    analytic, unknown-scatter leg exact by quadrature) vs a minimal hand-rolled
+    EP vs autofit EP (Laplace) and graphical joint fit; prior-family sweep and
+    the phase-2 collapse configuration. Home autofit_workspace_test/scripts/
+    graphical/ (analytic_*.py); analytic_gaussian.py curated into the smoke
+    gate. PyAutoFit read-only (claimed by two other tasks); defects file as
+    bug prompts. Fable session; execution delegated to Fable subagents.

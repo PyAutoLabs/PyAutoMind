@@ -32,7 +32,7 @@ its own prompt file. Update the table as phases ship.
 
 | # | Phase | Prompt | State (2026-08-19) |
 |---|-------|--------|--------------------|
-| 1 | Analytic Gaussian benchmark (the keystone — start here) | `research/graphical_ep/analytic_gaussian_benchmark.md` | filed |
+| 1 | Analytic Gaussian benchmark (the keystone — start here) | `active/analytic_gaussian_benchmark.md` (was `research/graphical_ep/analytic_gaussian_benchmark.md`) | **issued 2026-09-02** — autofit_workspace_test#91; re-homed to `autofit_workspace_test/scripts/graphical/` (EP CI infrastructure, core parity script curated into the smoke gate); workspace-only, PyAutoFit defects file as their own bug prompts |
 | 2 | Scatter-collapse cure or caveat | `bug/autofit/ep_scale_collapse_basin_cure_or_caveat.md` | filed earlier; 2026-08-19 levers added (thorough hierarchical-factor sampler, TruncatedGaussian zero-boundary test); leg 1 guard shipped (#1465) |
 | 3 | Graphical (non-EP) JAX scaling | → PyAutoCortex `phases/slope_hierarchy/n25_scale_up.md` (phase 1 of project `slope_hierarchy`; carries the measurement addendum) and `graphical_scoping.md` sub-tasks | **moved to the Cortex 2026-09-01** (was `research/graphical_ep/slope_hierarchy_n25_scale_up.md`); Cortex state `planned` |
 | 4 | IC50 EP end-to-end + scale ladder | → PyAutoCortex `phases/ic50_workspace/ep_scale_up.md` (phase 1 of project `ic50_workspace`; dev companion stays in the Mind as `feature/autofit/ep_lbfgs_jax.md`) | **moved to the Cortex 2026-09-01** (was `research/graphical_ep/ic50_ep_scale_up.md`); Cortex state `planned` |

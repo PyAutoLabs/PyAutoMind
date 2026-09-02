@@ -3,14 +3,13 @@
 Type: research
 Target: graphical_ep
 Repos:
-- PyAutoFit
-- autofit_workspace_developer
+- autofit_workspace_test
 Themes:
 - graphical-ep
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued — autofit_workspace_test#91, worktree analytic-gaussian-benchmark
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
@@ -18,6 +17,8 @@ Epic: graphical-ep
 Phase: 1
 Campaign: research/graphical_ep/ep_campaign.md (Phase 1 — the keystone; start here)
 Filed: 2026-08-19 (backfilled from git)
+Issued: 2026-09-02
+Issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/91
 
 ## Why
 
@@ -84,8 +85,10 @@ sweep PR#1499) validated each density in isolation; this validates them
 
 ## Home + acceptance
 
-Code lives beside the existing baselines in `autofit_workspace_developer/`
-(sibling to `ep/` and `graphical/`, e.g. `analytic/`). Acceptance: a single
+Code lives in `autofit_workspace_test/scripts/graphical/` beside `ep_parity.py`,
+`ep_exact.py` and `ep_deterministic.py` (re-homed 2026-09-02 from the
+`autofit_workspace_developer/analytic/` proposal: this is EP CI infrastructure,
+so the core parity script is curated into the smoke gate). Acceptance: a single
 script (or small package) that runs in minutes on CPU, prints a
 closed-form-vs-EP-vs-graphical parity table, and exits non-zero on tolerance
 breach so it can serve as a regression check.
