@@ -165,7 +165,8 @@ manage them; they just cannot share one batch.
    migration map below; rulings backfilled with ids; the 2026-08-31 science batch
    records move; the missing pm review is written; the stale pointers are fixed;
    reciprocal epic links; both dashboards regenerated. Gates: 2, 3.
-5. `draft/feature/pyautocortex/cortex_batch_member_kind.md` — the second member
+5. `draft/feature/pyautocortex/cortex_batch_member_kind.md` — **SHIPPED 2026-09-02**
+   (PyAutoBrain#334 → PR#335, PyAutoCortex#5; `complete/2026/09/cortex-batch-member-kind.md`) — the second member
    kind in the batch conductor, separate records + `review-at:` per surface, the
    rolling board, carry-forward formalised Cortex-side, `AUTONOMY.md` leg 4 reads
    the member's own organ record. Gates: 2, **and** the two-slot-batching
