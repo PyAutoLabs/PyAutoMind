@@ -1,4 +1,4 @@
-# Precompute fixed-geometry Gaussian deflection angles and rescale by the free mass-to-light ratio…
+# Precompute fixed-geometry Gaussian deflection angles and rescale by the free mass-to-light ratio (numpy + JAX)
 
 Type: feature
 Target: autogalaxy
@@ -19,25 +19,8 @@ Consequence: judge
 Witness: with every Gaussian's centre/ell_comps/sigma fixed and only mass_to_light_ratio free, the second and later likelihood evaluations call no Faddeeva/`wofz` kernel (asserted by a call-count probe) and the deflections equal the per-evaluation path to rtol 1e-12 on the `scripts/lens/deflections/` pins.
 Review-minutes: 25
 Unattended: needs-slicing
-
-# Precompute fixed-geometry Gaussian deflection angles and rescale by the free mass-to-light ratio (numpy + JAX)
-
-Type: feature
-Target: autogalaxy
-Repos:
-- @PyAutoGalaxy
-- @PyAutoLens
-- @autolens_profiling
-Themes:
-- numba-cpu
-- mass-profiles
-- jax
-- profiling
-Difficulty: large
-Autonomy: supervised
-Priority: medium
-Witness: with every Gaussian's centre/ell_comps/sigma fixed and only mass_to_light_ratio free, the second and later likelihood evaluations call no Faddeeva/`wofz` kernel (asserted by a call-count probe) and the deflections equal the per-evaluation path to rtol 1e-12 on the `scripts/lens/deflections/` pins.
 Parent: draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
+Filed: 2026-09-02
 
 > Successor to the `numpy-deflections-cpu` epic (ledger at the Parent path; phase 1 = autoarray issue #514,
 > PRs autoarray #516 / autogalaxy #595 / autolens #718 / autolens_profiling #210). **Start only after
