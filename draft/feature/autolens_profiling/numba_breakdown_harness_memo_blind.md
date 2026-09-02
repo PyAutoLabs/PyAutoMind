@@ -1,7 +1,6 @@
 # Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide a step
 
 Type: feature
-Epic: numba-cpu-likelihood
 Target: autolens_profiling
 Repos:
 - @autolens_profiling
@@ -18,6 +17,9 @@ Unattended: ready
 Filed: 2026-08-27
 
 ## Context (found while measuring PyAutoArray#496, 2026-08-27)
+
+Was a member of the `numba-cpu-likelihood` epic, retired 2026-09-02 to
+`complete/archive/epics/numba-cpu-likelihood.md`; it stands alone now.
 
 `scripts/imaging/likelihood_breakdown/pixelization_numba.py` and the
 `likelihood_runtime` sibling time `n_repeats=10` evaluations of one fixed
