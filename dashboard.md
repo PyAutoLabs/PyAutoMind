@@ -290,7 +290,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mappings_regions_clumps_subplot.md">Image-plane region mappings, source clump finding and a restored <code>subplot_mappings</code> in PyAutoArray</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/515">issue #515</a> — issued 2026-09-02 — library-dev</summary>
+<details><summary>📋 <a href="active/mappings_regions_clumps_subplot.md">Image-plane region mappings, source clump finding and a restored <code>subplot_mappings</code> in PyAutoArray</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/515">issue #515</a> — issued 2026-09-02 — library-shipped, workspace-pending</summary>
 
 ```
 /start_dev active/mappings_regions_clumps_subplot.md
@@ -2255,7 +2255,7 @@ Continue the 'Numpy (CPU) deflection angles — nine mass profiles on the numba 
 <details>
 <summary><b>Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide</b> — 3 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide</b> — ledger: `draft/feature/autoarray/image_source_mappings_epic.md` — phase 1 issued 2026-09-02 (PyAutoArray#515)</summary>
+<details><summary>📋 <b>Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide</b> — ledger: `draft/feature/autoarray/image_source_mappings_epic.md` — phase 1 PR open 2026-09-02 (PyAutoArray#517, awaiting merge + release)</summary>
 
 ```
 Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide' epic. Its canonical state lives in draft/feature/autoarray/image_source_mappings_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phase prompts — Phase 1 PyAutoArray (`Mapping`/`ImageRegion` objects, `Inversion.source_clumps_from`, `regions=` overlay on `plot_array`/`plot_inversion_reconstruction`, restored `subplot_mappings`), Phase 2 PyAutoLens (ShapeSolver as the parametric engine + validation suite, `autolens/lens/mappings.py`, fit-level `subplot_mappings`, brightest multiple-image positions for spectroscopic follow-up), Phase 3 workspace (`guides/mappings.py`, tutorial_2_mappers rewrite with polygons, dead index-section fixes). Library-first; issue ONE phase at a time. Proceeds alongside ci-timing-fast-tests by user decision (2026-09-02).
