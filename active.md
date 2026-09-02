@@ -155,7 +155,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1559
 - prompt: active/ep_message_support_and_transform_lost_in_projection.md
 - issued: 2026-09-02
-- status: library-dev
+- status: pr-open, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1560
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/93
 - epic: graphical-ep (fix wave 2/3: D1 #1558 merged → D4/D5 → D2/D3; ledger draft/research/graphical_ep/ep_campaign.md)
 - worktree: ~/Code/PyAutoLabs-wt/ep-message-support
 - parallel-claim: PyAutoFit also claimed by resampling-info-summary-section (web session, no worktree, disjoint files). Own worktree from origin/main 809b4fd85.
@@ -164,6 +166,7 @@
   - release validation incomplete: no rehearsal for current source
 - repos:
   - PyAutoFit: feature/ep-message-support
+  - autofit_workspace_test: feature/ep-message-support
 - summary: |
     D4: truncation limits become message state carried through every rebuild
     (_support_kwargs); products intersect supports. D5: TransformedMessage.from_mode
