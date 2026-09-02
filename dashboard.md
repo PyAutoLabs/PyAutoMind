@@ -314,7 +314,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/numpy_deflections_p1_sph_decorator_tracer.md">Numpy deflections phase 1: measure (scripts/lens), fix the *Sph over-sampled re-materialisation, drop…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/514">issue #514</a> — issued 2026-09-02 — library-dev</summary>
+<details><summary>📋 <a href="active/numpy_deflections_p1_sph_decorator_tracer.md">Numpy deflections phase 1: measure (scripts/lens), fix the *Sph over-sampled re-materialisation, drop…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/514">issue #514</a> — issued 2026-09-02 — library-shipped, workspace-pending</summary>
 
 ```
 /start_dev active/numpy_deflections_p1_sph_decorator_tracer.md
