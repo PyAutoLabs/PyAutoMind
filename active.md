@@ -1,5 +1,16 @@
 # Active Tasks
 
+## euclid-cpu-two-stage-route
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
+- prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md
+- issued: 2026-09-02
+- session: local CLI (Fable architect, Opus execution) — claude --resume session_01BhD2t684rJZi1tT34u2KgR
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/euclid-cpu-two-stage-route
+- repos:
+  - euclid_strong_lens_modeling_pipeline (feature/euclid-cpu-two-stage-route)
+- epic: euclid-dr1-prep (Mind phase 4; gates PyAutoCortex phases/euclid/dr1_prelim_10_lens_science_run)
+
 ## silence-colab-cli-message
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/156
 - prompt: active/silence_the_non_colab_setup_colab_message.md

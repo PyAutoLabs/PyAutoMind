@@ -68,9 +68,10 @@ epic, never picked standalone.
   full end-to-end guide) and the old phase 3 renumbered to 3b; on 2026-09-01 the letters
   died in the Cortex split and 3a/3b became plain 3/4. Phase 3 shipped 2026-09-01
   (euclid#47 closed, PR #48 merged; record
-  complete/2026/09/restore-pipeline-narrative-prose.md). Next is phase 4
-  (draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md, issue euclid#49
-  pre-opened as the Cortex gate ref — reuse it).
+  complete/2026/09/restore-pipeline-narrative-prose.md). Phase 4 is IN FLIGHT since
+  2026-09-02 on euclid#49 (the pre-opened Cortex gate ref, reused — never open a second);
+  prompt active/cpu_vis_lp_jax_vis_pix_numba_submission.md, branch
+  feature/euclid-cpu-two-stage-route.
 
 ## two-slot-batching
 - title: Two slots a day — the batch workflow

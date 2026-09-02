@@ -20,6 +20,7 @@ Epic: euclid-dr1-prep
 Phase: 4
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
+Issued: 2026-09-02
 Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49 (opened 2026-09-01 as a Cortex gate ref; reuse in start_dev — never open a second)
 
 Phase 4 of the Euclid DR1 preparation epic (3 → 3b on 2026-08-31 when the prose-restoration
