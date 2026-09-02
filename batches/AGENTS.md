@@ -32,6 +32,8 @@ record it.
 - delivered: <n>/<n>
 - packet: batches/packets/<YYYY-MM-DD>-<slot>.html
 - integration-root: ~/Code/PyAutoLabs-wt/integration-<YYYY-MM-DD>-<slot> — integration/<slot>; 3 clean, 1 conflicted
+- integration-remote: PyAutoFit:integration/<slot>, PyAutoArray:integration/<slot>-2   # only after --push
+- sweep-after: 2026-09-11        # when the branch sweep may delete those refs
 - review: batches/reviews/<YYYY-MM-DD>-<slot>.md
 - review-minutes-actual: <n>
 - notes: |
@@ -70,6 +72,22 @@ repo's branch and named with the conflicting paths — that report is the point,
 not a failure. `collect --integration` turns it on for one run without editing
 the record, and what happened comes back as `integration-root:`, a key of its
 own so the `yes` you wrote here survives.
+
+**`integration-remote:` is what was published; `sweep-after:` is when it
+dies.** Neither appears unless someone typed `collect --integration --push` —
+the record cannot ask for a push, only for the local preview. `integration-remote:`
+lists one `<Repo>:<branch>` per repo that got a ref, under the repo name the
+branch sweep matches on, and it is **rewritten on every push**: the current
+publication is the truth, and a stale entry would send the sweep after a ref
+that no longer exists. A `-N` suffix (`integration/<slot>-2`) means that
+refresh was not a fast-forward of what was already on origin — nothing was
+forced, the earlier ref is untouched, and the new state went out under a new
+name. `sweep-after:` is `review-at:` plus a week, **written once and yours to
+change**: `bin/branch_sweep.sh` protects an `integration/*` ref until that date
+and may delete it on or after the following day, and with no date — or no
+record naming the branch — it is protected outright. Edit the date, do not
+delete the key: without it the ref lives forever, because a merge preview can
+never be proven contained in `main`.
 
 **`review:` is what the human said, verbatim.** The markdown their packet-page
 submission produced (or the orchestrator transcribed), one file per slot under
