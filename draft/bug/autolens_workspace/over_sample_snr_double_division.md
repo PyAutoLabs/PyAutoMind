@@ -56,22 +56,36 @@ What was verified (2026-09-02, workspace main, PyAutoArray main):
   pl_eff_1_outer: 30.5 % at 4, `apply_over_sampling` accepts it, the pixelization grid
   carries {2, 4}.
 
-Scope:
+Scope (user, 2026-09-02: "make sure the intake does it all on slam.py files not just fixing
+the group stuff (Same as image_snr cap). Obv both should include docs"):
 
-1. Fix the five call sites (and regenerate their notebooks) so the bright lensed source
-   (S/N > 3 on the source's S/N map) gets sub-size 4 and everything else 2. Either threshold
-   the S/N map directly as the project did, or pass a *model image* (`use_model_images=True`)
-   with the noise map so the library's data / noise arithmetic is honoured; pick one idiom
-   and use it everywhere, with a sentence of prose saying which quantity is being divided by
-   what.
-2. Confirm at every site that the map is applied to the dataset handed to `source_pix[2]`
-   and every stage chained after it, and that `source_pix[1]` keeps the default sub-size.
-3. Library follow-up to decide at start_dev, not to block this: `over_sample_size_via_adapt_from`
+1. Every SLaM pipeline in autolens_workspace applies adaptive pixelization over-sampling
+   correctly, not only the five sites that call the function today. That is
+   `guides/modeling/slam_start_here.py`, `group/slam.py` and its three copies,
+   `multi_galaxy/slam.py`, and every `features/**/slam*.py` under imaging, group,
+   multi_galaxy, multi_dataset and (where over-sampling applies to the pixelization grid)
+   interferometer, plus `subhalo/detect/start_here.py` for imaging and group. Today most of
+   these apply no adaptive over-sampling at all (grep: `over_sample_size_pixelization=` is
+   absent from slam_start_here.py and from every imaging/interferometer/multi_* features
+   slam.py); the five that do divide twice; the three group copies use the right arithmetic
+   on the wrong (capped, aliased) array.
+2. The rule at every site: from `source_pix[2]` onwards the bright lensed source (S/N > 3 on
+   the source's S/N map) gets sub-size 4 and everything else 2; `source_pix[1]` keeps the
+   default uniform sub-size because its adapt image is not yet good enough. Either
+   threshold the S/N map directly as the project did, or pass a *model image*
+   (`use_model_images=True`) with the noise map so the library's data / noise arithmetic is
+   honoured; pick one idiom and use it everywhere.
+3. Docs at every site: the prose cell above the call says which quantity is thresholded
+   (an S/N map, not divided by the noise map again), why 4 / 2, and why `source_pix[1]` is
+   exempt; regenerate every touched notebook. Update the workspace docs page(s) that
+   describe SLaM over-sampling and the autolens_assistant skill(s) that teach it
+   (`al_adaptive_pixelization.md` and whichever SLaM skill covers `source_pix`).
+4. Library follow-up to decide at start_dev, not to block this: `over_sample_size_via_adapt_from`
    is named as if it took an adapt image but its docstring and arithmetic take data; either
    add an `over_sample_size_via_snr_from(signal_to_noise_map, cut, lower, upper)` helper in
    PyAutoArray and point the workspace at it, or rename the parameter so the misuse cannot
    recur. Decision and any PyAutoArray change ride in a separate library task.
-4. Regression test in autolens_workspace_test on a simulated lens: fraction of sub-size 4
+5. Regression test in autolens_workspace_test on a simulated lens: fraction of sub-size 4
    equals the fraction of source S/N > 3 pixels.
 
 Out of scope: the S/N 3.0 cap on the adapt image itself (sibling prompt above); the

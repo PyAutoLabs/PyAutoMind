@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 157 |
+| [Backlog](#backlog) (`draft/`) | 161 |
 
 ## Start here
 
@@ -436,7 +436,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **44** of them belong to an epic and are listed only under [Epics](#epics) below.
+**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **48** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 30</summary>
@@ -2165,6 +2165,43 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
+<details>
+<summary><b>numpy-deflections-cpu</b> — 4 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md">Numpy deflections phase 1: measure (scripts/lens), fix the *Sph over-sampled re-materialisation, drop…</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md">Numpy deflections phase 2: MGE / Faddeeva — scipy wofz on numpy…</a> — autogalaxy · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md">Numpy deflections phase 3: PowerLaw series with factor-driven term count, NFW/NFWSph masks…</a> — autogalaxy · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md">Numpy (CPU) deflection angles: speed up the nine mass profiles the numba…</a> — autogalaxy · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
+```
+
+</details>
+
+</details>
+
 ## Hygiene
 
 3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -2178,7 +2215,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
-153 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+157 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2186,6 +2223,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/arcsecond_to_decimal.md`
 - `draft/feature/autoarray/multiwavelength_inversion.md`
+- `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/ep_analytic_updates.md`
 - `draft/feature/autofit/ep_lbfgs_jax.md`
@@ -2194,6 +2232,9 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/dpie_sigma0_parameterization.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
+- `draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md`
+- `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md`
+- `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/magnification_errors_posterior_draws.md`
@@ -2219,20 +2260,20 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
-- `draft/feature/pyautoheart/offtick_timing_legs_live.md`
-- `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 113 more_
+- _… and 117 more_
 
 </details>
 
-10 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+14 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
+- `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md — unknown theme keyword(s): mass-profiles`
+- `draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md — unknown theme keyword(s): mass-profiles`
+- `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md — unknown theme keyword(s): mass-profiles`
+- `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md — unknown theme keyword(s): mass-profiles`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/cpu_vis_lp_jax_vis_pix_numba_submission.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`

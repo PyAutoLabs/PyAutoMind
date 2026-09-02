@@ -95,9 +95,16 @@ Scope (all of these):
    today only gets this by aliasing). Keep the raw S/N image for anything that needs it.
 4. Fix the group source_pix_2 over-sampling bug: evaluate the `> signal_to_noise_threshold`
    over-sample map on the raw (uncapped) S/N image before capping, or on a copy.
-5. Document the cap in `autolens_assistant/skills/al_adaptive_pixelization.md` so generated
-   pipelines carry it.
-6. Regenerate notebooks for every touched script; smoke the touched pipelines.
+5. Docs at every site (user, 2026-09-02: "Obv both should include docs"): the prose cell
+   above each cap says what is capped, at what, and why (fainter multiply-imaged features
+   keep mesh resolution and regularization weight); update the workspace docs page(s) on
+   adaptive pixelizations / SLaM and the autolens_assistant skill(s)
+   (`al_adaptive_pixelization.md` and the SLaM `source_pix` skill) so generated pipelines
+   carry it.
+6. Regenerate notebooks for every touched script; smoke the touched pipelines. Scope is
+   every SLaM pipeline file (slam_start_here.py, group/slam.py and copies, multi_galaxy/slam.py,
+   every features/**/slam*.py across imaging, group, interferometer, multi_galaxy,
+   multi_dataset) plus the Delaunay feature examples, not only the group scripts.
 
 Out of scope: the subhalo_validation recipes themselves (project-side, handled with the
 rerun ruling in PyAutoCortex); any library change to bake the cap into autoarray (a
