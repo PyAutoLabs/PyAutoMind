@@ -106,34 +106,6 @@
     Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
     green queue_filing.yml run on #71 that opens a filing PR.
 
-## numpy-deflections-p1
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/514
-- prompt: active/numpy_deflections_p1_sph_decorator_tracer.md
-- issued: 2026-09-02
-- session: claude --resume d3971bba-0e8d-4c4f-bc59-7808e6bfa6cd
-- status: shipped, awaiting-merge (4 PRs open; merge order PyAutoArray#516 → PyAutoGalaxy#595 → PyAutoLens#718 → autolens_profiling#210)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/210
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/516
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/595
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/718
-- epic: numpy-deflections-cpu (phase 1 — ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
-- worktree: ~/Code/PyAutoLabs-wt/numpy-deflections-p1
-- heart-ack:
-  - PyAutoArray: open PR 10d old
-  - release validation incomplete: no rehearsal for current source
-- parallel-claim: PyAutoArray — numba-vs-jax-sparse holds a read-only research claim on main (no branch, no worktree); file sets disjoint, own worktree approved by the human 2026-09-02
-- repos:
-  - PyAutoArray: feature/numpy-deflections-p1
-  - PyAutoGalaxy: feature/numpy-deflections-p1
-  - PyAutoLens: feature/numpy-deflections-p1
-  - autolens_profiling: feature/numpy-deflections-p1
-- summary: |
-    Phase 1 of numpy-deflections-cpu: land autolens_profiling/scripts/lens/deflections/
-    (nine numpy mass-profile deflection cells, hst + euclid, pins), commit the baseline,
-    then the two zero-numerics levers — GridMaker.via_grid_2d no longer fires
-    Grid2D.over_sampled on *Sph calls (+ sub-size-1 short-circuit) and the tracer /
-    galaxy double trace at sub-size 1. Fable session; execution delegated to Opus.
-
 ## adapt-image-snr-cap
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/521
 - prompt: active/adapt_image_snr_cap.md

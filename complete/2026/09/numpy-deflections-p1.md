@@ -1,3 +1,57 @@
+## numpy-deflections-p1
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/514 (closed, completed)
+- completed: 2026-09-02
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/516 (MERGED 52b84f5ed)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/595 (MERGED e76c062ec)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/718 (MERGED 0fd9fd334)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/210 (MERGED 311d06e06)
+- epic: numpy-deflections-cpu — phase 1 (ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
+- shipped: PyAutoArray — `GridMaker.via_grid_2d` reads the private `_over_sampled` / `_over_sampler` instead of
+  the properties (touching them on a wrapped `Grid2D` ran the per-pixel over-sampling loop on every spherical
+  deflection call, and the value built was mask-derived, ignoring the profile centre — nothing read it);
+  `Grid2D.over_sampled` (and `over_sampler`, same hazard) short-circuit at uniform sub-size 1 to a copy of the
+  slim grid (≤ 1 ULP from the loop with a non-zero origin). PyAutoGalaxy `Galaxy.traced_grid_2d_from` and
+  PyAutoLens `Tracer.traced_grid_2d_list_from` skip the second deflection call / ray-trace of the over-sampled
+  grid at sub-size 1 (host-side static bool, safe under `jax.jit`). autolens_profiling — new dataset-free
+  `scripts/lens/` axis: `deflections/{_driver,_profiles,total,dark,stellar}.py`, pins
+  `{abs_sum, abs_max, n_non_finite, 16-point sample}` at rtol 1e-6 via new `check_pinned_vector`, `--repin`
+  requiring `--repin-reason` and refusing shifts > 1e-3 without `--repin-force`, `build_readme.py` renderer
+  `deflections`, lint smoke row, before/after artifacts, `results/notes/numpy_deflections_cpu.md`.
+- measured: hst 15,361 pts, `OMP_NUM_THREADS=1`, direct `Grid2D` → IsothermalSph 699 ms → 0.99 ms (710×),
+  PowerLawSph 701 → 1.2 ms (570×), NFWSph 591 → 4.2 ms (142×), gNFWSph 1.21 s → 301 ms (4×; MGE remains);
+  tracer 1.7–3.9× on every profile (Isothermal 6.1 → 2.7 ms, PowerLaw 25.1 → 9.0 ms, gNFW 721 → 281 ms).
+  Every deflection pin held, no `--repin`; numba likelihood pins bit-identical on a same-host A/B
+  (hst rect 27661.910133664103, delaunay hst 29090.527192092646, delaunay euclid 7215.3687893658935);
+  smoke `cpu_fast_modeling.py` exit 0 (47.6 s). test_autoarray 1362 / test_autogalaxy 1158 / test_autolens 576.
+- finding: the `*Sph` ~500 ms penalty was on the direct `Grid2D` entry only — `tracer_util` wraps each plane
+  in `Grid2DIrregular` first, so production ray-tracing never paid it; the likelihood-side win is the
+  double-trace removal, which on the Isothermal breakdown fiducial is 1–2 ms inside host noise (negative
+  result, recorded as such) and scales with the profile (PowerLaw/gNFW models gain 16–440 ms per evaluation
+  at tracer level).
+- finding: `GaussianSph` is not a mass profile; `Gaussian(ell_comps=(0,0))` takes the elliptical path.
+- trap: `PowerLawSph` returns 2 non-finite deflections at the exact centre on both grids (closed form
+  divides by the radius); lens-cell pins are nan-aware and pin `n_non_finite` — library follow-up.
+- trap: laptop timing variance ~30 % between passes (gNFWSph 0.88 / 1.04 / 1.20 s); only ratios reproduce.
+  The tracked `v2026.8.17.1` breakdown artifacts predate the current harness and a quieter host — not a
+  valid before; the after-pass used a same-host A/B against the parent SHAs and left them untouched.
+- trap: `jax_compile` warm compile 321 → 268 ms under unequal load (7.5 vs 4.7): inconclusive, not re-pinned.
+- trap: the canonical PyAutoMind index is shared between live sessions — a plain `git add <files> && git
+  commit` swept another session's staged close-out; close-outs from a busy checkout go through a throwaway
+  worktree (`git worktree add --detach`, `PYAUTO_MIND=<wt>` for the dashboard regen).
+- gate: Heart YELLOW at ship (PyAutoArray open PR 10d old; release validation no rehearsal), acknowledged on
+  the active.md entry; parallel claim on PyAutoArray over the read-only `numba-vs-jax-sparse` research
+  verdict, human-approved 2026-09-02.
+- epic next: phase 2 `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md`, phase 3
+  `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md`; successor
+  `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md` after the epic.
+- affected-repos:
+  - PyAutoArray
+  - PyAutoGalaxy
+  - PyAutoLens
+  - autolens_profiling
+
+## Original prompt
+
 # Numpy deflections phase 1: measure (scripts/lens), fix the *Sph over-sampled re-materialisation, drop the tracer double trace
 
 Type: feature

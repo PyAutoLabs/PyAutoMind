@@ -79,7 +79,7 @@ library-first ship inside each phase.
 
 | phase | prompt path | repos | levers | status |
 |---|---|---|---|---|
-| 1 | `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md` | @PyAutoArray, @PyAutoGalaxy, @PyAutoLens, @autolens_profiling | measure (`scripts/lens/deflections/`), `*Sph` over-sampled re-materialisation, sub-size-1 short-circuit, tracer double trace | draft — starting 2026-09-02 |
+| 1 | `complete/2026/09/numpy-deflections-p1.md` (was `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md`) | @PyAutoArray, @PyAutoGalaxy, @PyAutoLens, @autolens_profiling | measure (`scripts/lens/deflections/`), `*Sph` over-sampled re-materialisation, sub-size-1 short-circuit, tracer double trace | **SHIPPED 2026-09-02** — PyAutoArray#516, PyAutoGalaxy#595, PyAutoLens#718, autolens_profiling#210 merged; record `complete/2026/09/numpy-deflections-p1.md` |
 | 2 | `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md` | @PyAutoGalaxy, @autolens_profiling | `scipy.special.wofz` on numpy, spherical MGE branch, cached decomposition | draft |
 | 3 | `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md` | @PyAutoGalaxy, @PyAutoArray, @autolens_profiling | PowerLaw series with factor-driven term count, NFW/NFWSph masks, Isothermal hoists, rotation-matrix grid transform | draft |
 
