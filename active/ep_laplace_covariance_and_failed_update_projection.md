@@ -9,12 +9,14 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued — PyAutoFit#1561, worktree ep-laplace-hessian
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-02
+Issued: 2026-09-02
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1561
 
 Two coupled defects (D2 + D3) found by the analytic Gaussian benchmark
 (autofit_workspace_test#91). **This is the mechanism under the phase-2

@@ -151,3 +151,25 @@
     (removes the q=0.9999 clamp bias), exact exp_term mask; cache lever dropped (0.3 %).
     Re-pin of dark/stellar lens cells with mpmath provenance. Targets re-scoped to measured
     ceilings (gNFW ~2.3x, gNFWSph ~59x, Gaussian sph ~16x). Fable session; execution → Opus.
+
+## ep-laplace-hessian
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1561
+- prompt: active/ep_laplace_covariance_and_failed_update_projection.md
+- issued: 2026-09-02
+- status: library-dev
+- epic: graphical-ep (fix wave 3/3: D1 #1558, D4/D5 #1560 merged → D2/D3; the phase-2 mechanism; ledger draft/research/graphical_ep/ep_campaign.md)
+- worktree: ~/Code/PyAutoLabs-wt/ep-laplace-hessian
+- parallel-claim: PyAutoFit also claimed by resampling-info-summary-section (web session, no worktree, disjoint files). Own worktree from origin/main 9eb808522.
+- heart-ack:
+  - PyAutoArray: open PR 10d old
+  - release validation incomplete: no rehearsal for current source
+- repos:
+  - PyAutoFit: feature/ep-laplace-hessian
+- summary: |
+    D2: real Hessian at the Laplace mode (central FD of the tilted gradient,
+    full inverse, marginal blocks; BAD_PROJECTION skip on non-concave/boundary
+    modes; refine_state accumulates, n_refine=0 allowed). D3: failed line search
+    returns last_dist with updated=False; precision guard before the divide;
+    always-skipping factors reported stale. Acceptance: analytic_gaussian.py leg A
+    mu std -> 4.11, bit-identical across prior ids, 0 BAD_PROJECTION on leg A.
+    Fable session; implementation delegated to a Fable subagent.
