@@ -156,7 +156,8 @@
 - prompt: active/numpy_deflections_p1_sph_decorator_tracer.md
 - issued: 2026-09-02
 - session: claude --resume d3971bba-0e8d-4c4f-bc59-7808e6bfa6cd
-- status: library-shipped, workspace-pending
+- status: shipped, awaiting-merge (4 PRs open; merge order PyAutoArray#516 → PyAutoGalaxy#595 → PyAutoLens#718 → autolens_profiling#210)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/210
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/516
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/595
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/718
