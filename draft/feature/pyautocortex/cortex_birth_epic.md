@@ -161,7 +161,7 @@ manage them; they just cannot share one batch.
 3. **SHIPPED 2026-09-01** — `complete/2026/09/cortex-registration.md` (PyAutoMind#382; PyAutoCortex#3, PyAutoBrain#331, autolens_profiling#204, plus subhalo_validation direct to its new private remote) —
    `Lane: local-dev`. Private remotes + `.gitignore` for the Science-folder
    projects, `projects.yaml` rows, witness files tracked. Gate: 1. May overlap 2.
-4. `active/cortex_migration_split_epics.md` (issued 2026-09-01, PyAutoMind#383) — the
+4. **SHIPPED 2026-09-01** — `complete/2026/09/cortex-migration.md` (PyAutoMind#383; PyAutoCortex#4, PyAutoMind#384, autolens_profiling#206, plus subhalo_validation direct to its private remote) — the
    migration map below; rulings backfilled with ids; the 2026-08-31 science batch
    records move; the missing pm review is written; the stale pointers are fixed;
    reciprocal epic links; both dashboards regenerated. Gates: 2, 3.

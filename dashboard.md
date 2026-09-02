@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 7 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -254,14 +254,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/add_resampling_info_section_to_the_bottom.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/cortex_migration_split_epics.md">Cortex phase 4 — migration: split the epics, backfill the rulings, move…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/383">issue #383</a> — issued 2026-09-01 — workspace-dev</summary>
-
-```
-/start_dev active/cortex_migration_split_epics.md
 ```
 
 </details>
@@ -1626,7 +1618,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-01 | filed | <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output/ tree: move mesh, point-source and…</a> |
-| 2026-09-01 | issued | <a href="active/cortex_migration_split_epics.md">Cortex phase 4 — migration: split the epics, backfill the rulings…</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | issued | <a href="active/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> |
 | 2026-08-31 | issued | <a href="active/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry…</a> |
@@ -1635,12 +1626,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-31 | issued | <a href="active/github_page_link_in_every_organ_board.md">GitHub Page link in every organ board header</a> |
 | 2026-08-31 | issued | <a href="active/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
+| 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
@@ -1650,12 +1641,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
+| 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts +…</a> |
@@ -1665,12 +1656,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 | 2026-08-24 | filed | <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods…</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
+| 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
 | 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
@@ -1680,12 +1671,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
 | 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
+| 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
 | 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
@@ -1695,6 +1686,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
 | 2026-08-07 | filed | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> |
 | 2026-08-06 | filed | <a href="draft/triage/convolver_blurring_image_warning.md">Triage: Convolver "No blurring_image provided" warning in canonical…</a> |
+| 2026-08-06 | filed | <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> |
 
 </details>
 
@@ -2196,7 +2188,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 <details>
 <summary><b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — 3 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — ledger: `draft/feature/pyautocortex/cortex_birth_epic.md` — phases 0–3 SHIPPED 2026-09-01 (#377, #379, #380, #382; records complete/2026/09/cortex-birth-organ-row.md…</summary>
+<details><summary>📋 <b>PyAutoCortex — the science organ: split science runs out of the Mind</b> — ledger: `draft/feature/pyautocortex/cortex_birth_epic.md` — phases 0–4 SHIPPED 2026-09-01 (#377, #379, #380, #382, #383; records complete/2026/09/cortex-birth-organ-row.md…</summary>
 
 ```
 Continue the 'PyAutoCortex — the science organ: split science runs out of the Mind' epic. Its canonical state lives in draft/feature/pyautocortex/cortex_birth_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 7 phased prompts (0-6) under draft/feature/pyautocortex/ — issue ONE at a
