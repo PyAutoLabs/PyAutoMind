@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/batch_review_integration_branches.md">Batch review: opt-in integration branches so a reviewer can run the whole…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/337">issue #337</a> — issued 2026-09-02 — library-dev</summary>
+<details><summary>📋 <a href="active/batch_review_integration_branches.md">Batch review: opt-in integration branches so a reviewer can run the whole…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/337">issue #337</a> — issued 2026-09-02 — pr-open (awaiting human merge — library-first: Brain PR before Mind PR)</summary>
 
 ```
 /start_dev active/batch_review_integration_branches.md
