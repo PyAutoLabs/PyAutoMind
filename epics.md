@@ -106,12 +106,6 @@ epic, never picked standalone.
 - ledger: draft/feature/pyautoheart/ci_timing_fast_tests_epic.md
 - notes: 9 phased prompts (1-9) — finish the timing board (smoke-timings ingester, permanent history in PyAutoHeart, dead unit-test/import/testmode legs live), snapshot a LEGACY timing round, then the _test physical+fast rebuilds (autogalaxy rehearses, autolens follows; one pin-regeneration wave each), CI caches, user-workspace/HowTo pass, and a source hot-spot census. ALL other source/workspace development is paused while this epic runs (stable state of truth; pin changes validated by unit tests + developer/profiling workspaces). Issue ONE phase at a time — no bulk issue queues. Design doc: docs/pyautoheart/test_performance_board_assessment.md (Planes B/C are phases 1-2).
 
-## numpy-deflections-cpu
-- title: Numpy (CPU) deflection angles — nine mass profiles on the numba route
-- ledger: draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
-- status: phases 1–2 SHIPPED 2026-09-02 (records complete/2026/09/numpy-deflections-p{1,2}.md); phase 3 at PR-OPEN 2026-09-03 — PyAutoGalaxy#598; PyAutoArray#519 → PyAutoGalaxy#599 → autolens_profiling#213 awaiting CI + merge (/prm), prompt active/numpy_deflections_p3_closed_form_geometry.md
-- notes: three phase prompts — `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md` (measure + `*Sph` decorator + tracer double trace), `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md` (MGE/Faddeeva), `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md` (PowerLaw series, NFW masks, shared geometry); the profiling home for every phase's before/after numbers is `autolens_profiling/scripts/lens/`.
-
 ## image-source-mappings
 - title: Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide
 - ledger: draft/feature/autoarray/image_source_mappings_epic.md

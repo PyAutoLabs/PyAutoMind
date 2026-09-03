@@ -252,3 +252,19 @@ test_autoarray 1349, test_autogalaxy 1151 green; `total`/`dark` pins held; `stel
 for one on-axis sample the exact rotation makes 0.0 (was 4.8e-17); likelihood pins held. Findings: the
 rotate-back re-wrap did not exist (the second `Grid2D` was in `VectorYX2D`, now cut); NFW lands at 1.6×, under
 the 2× line, the remainder being the HK24 polynomial arithmetic. JAX path untouched. Close-out is `/prm`.
+
+**2026-09-03 — phase 3 MERGED; epic COMPLETE.** PyAutoArray#519 (`62feb7eb`) → PyAutoGalaxy#599 (`e5fb32f7`) →
+autolens_profiling#213 (`d735d950`) merged via `/prm`; #598 closed; record `complete/2026/09/numpy-deflections-p3.md`.
+Final same-box hst table across the epic: *Sph direct-Grid2D 570–710× (phase 1), gNFW 2.4–3.1× and gNFWSph 58–67×
+(phase 2), PowerLaw 5.7×, Isothermal 2.1×, NFWSph 1.9×, NFW 1.6×, Gaussian(q=1) 2.0× (phase 3). Only NFW missed its
+2× line (HK24 polynomial arithmetic is the floor). Both libraries pending-release. Follow-ups outside the epic:
+JAX-path audit `draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md`; successor
+`draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md`.
+
+## Retired from epics.md (2026-09-03)
+
+## numpy-deflections-cpu
+- title: Numpy (CPU) deflection angles — nine mass profiles on the numba route
+- ledger: draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
+- status: COMPLETE 2026-09-03 — all three phases SHIPPED (records complete/2026/09/numpy-deflections-p{1,2,3}.md; phase 3 = PyAutoGalaxy#598, PyAutoArray#519 → PyAutoGalaxy#599 → autolens_profiling#213 merged 2026-09-03). Follow-ups queued outside the epic: draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md, draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
+- notes: three phase prompts — `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md` (measure + `*Sph` decorator + tracer double trace), `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md` (MGE/Faddeeva), `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md` (PowerLaw series, NFW masks, shared geometry); the profiling home for every phase's before/after numbers is `autolens_profiling/scripts/lens/`.

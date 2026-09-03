@@ -19,7 +19,7 @@ Consequence: judge
 Witness: with every Gaussian's centre/ell_comps/sigma fixed and only mass_to_light_ratio free, the second and later likelihood evaluations call no Faddeeva/`wofz` kernel (asserted by a call-count probe) and the deflections equal the per-evaluation path to rtol 1e-12 on the `scripts/lens/deflections/` pins.
 Review-minutes: 25
 Unattended: needs-slicing
-Parent: draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
+Parent: complete/archive/epics/numpy_deflections_cpu_speedup.md
 Filed: 2026-09-02
 
 > Successor to the `numpy-deflections-cpu` epic (ledger at the Parent path; phase 1 = autoarray issue #514,
