@@ -7,10 +7,26 @@ about between slots: **what I want done next, roughly in order**.
 *is* the act of prioritising it. Nothing else about an entry needs to be true for
 it to sit in this file; the planner decides what is actually startable.
 
-A batch is never composed here. `pyauto-brain batch plan` reads this file, the
-backlog and the open-PR state, and proposes the next batch against a review-minute
-budget (`PyAutoBrain/agents/conductors/batch/AGENTS.md`). The human approves or
-edits that proposal in their slot — they do not hand-pick members.
+A batch is never composed here. `pyauto-brain batch plan` proposes the next one
+against a review-minute budget (`PyAutoBrain/agents/conductors/batch/AGENTS.md`),
+and the human approves or edits that proposal in their slot — they do not
+hand-pick members.
+
+**What the planner actually reads**, and nothing else:
+
+1. **this file** — the `kind: prompt` entries, in file order;
+2. **the `draft/` backlog**, graded through the sizing faculty;
+3. **the review-queue depth**, derived from `active.md`: a row naming an open PR
+   (`library-pr:` / `workspace-pr:`) or whose `status:` says `awaiting-merge` /
+   `PR open`. That is what "the open-PR state" means here — the ledger's own
+   count, not a live one. Nothing in `plan` calls GitHub, and a shift stays
+   plannable offline.
+
+The order in this file is what the planner does with it: a queued prompt
+outranks an unqueued one, and among queued prompts the file's order wins.
+Below the queue it sorts cheapest-first, because that part of the list is read
+when there is a slot to fill and the question is what fits in it. An entry
+written against `draft/…` keeps its place after the prompt moves to `active/`.
 
 An entry leaves the queue when its work reaches `complete/`, **not** when it is
 dispatched. A task in flight is still the thing the human wants.

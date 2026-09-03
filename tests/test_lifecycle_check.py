@@ -880,3 +880,162 @@ def test_check_reports_a_stale_pending_release_and_still_exits_zero(tmp_path,
     assert lifecycle.cmd_check(None) == 0
     out = capsys.readouterr().out
     assert "warning" in out and "pending-release" in out
+
+
+# --------------------------------------------------------------------------- #
+# the batch ledger
+#
+# `batches/<date>-<slot>.md` is the record of one unattended shift and the
+# evidence base the review-minute budget is calibrated from. Nothing checked
+# it: a member could cite a prompt path nobody ever wrote, and a closed record
+# could carry no measured review cost at all.
+# --------------------------------------------------------------------------- #
+def _batch_record(root: Path, name: str, *members, keys=""):
+    d = root / "batches"
+    d.mkdir(parents=True, exist_ok=True)
+    body = ["# Batch " + name, "",
+            "- dispatched: 2026-01-01T17:40Z",
+            "- review-at: 2026-01-02T08:00Z",
+            "- members:"]
+    body += list(members)
+    if keys:
+        body.append(keys)
+    body += ["- notes: |", "    - members: this line is prose, not a key"]
+    (d / f"{name}.md").write_text("\n".join(body) + "\n")
+    return d / f"{name}.md"
+
+
+MEMBER = ("  - widget-polish: draft/feature/widgets/polish.md — glance — 3 — "
+          "DELIVERED (Gadgets#12, 4/4 checks green)")
+
+
+def test_a_member_citing_a_prompt_that_was_never_here_is_drift(tmp_path):
+    """The member's question and its pre-registered witness are read from that
+    file at collect. A path nobody ever wrote makes the member unreadable, and
+    the record wrong about what it dispatched."""
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    problems = lifecycle.batch_member_problems(tmp_path)
+    assert len(problems) == 1
+    assert "widget-polish" in problems[0]
+    assert "draft/feature/widgets/polish.md" in problems[0]
+
+
+def test_a_member_prompt_still_in_draft_is_not_drift(tmp_path):
+    _tree(tmp_path, draft=("feature/widgets/polish.md",))
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    assert lifecycle.batch_member_problems(tmp_path) == []
+
+
+def test_a_member_prompt_issued_into_active_is_not_drift(tmp_path):
+    """The record names where the prompt was AT DISPATCH; the lifecycle moves
+    it the moment the issue opens."""
+    _tree(tmp_path, active=("polish.md",))
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    assert lifecycle.batch_member_problems(tmp_path) == []
+
+
+def test_a_member_prompt_retired_into_complete_is_not_drift(tmp_path):
+    _tree(tmp_path, complete=("2026/01/polish.md",))
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    assert lifecycle.batch_member_problems(tmp_path) == []
+
+
+def test_a_prompt_absorbed_into_its_record_is_not_drift(tmp_path):
+    """A completion record is filed under the TASK's name and the prompt file
+    is gone, so the member's path resolves nowhere on disk. Git is the only
+    thing that tells that apart from a path nobody ever wrote."""
+    import shutil
+    import subprocess
+    if not shutil.which("git"):
+        import pytest
+        pytest.skip("no git")
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    subprocess.run(["git", "-C", str(tmp_path), "config", "user.email",
+                    "t@example.com"], check=True)
+    subprocess.run(["git", "-C", str(tmp_path), "config", "user.name", "t"],
+                   check=True)
+    _tree(tmp_path, draft=("feature/widgets/polish.md",))
+    subprocess.run(["git", "-C", str(tmp_path), "add", "-A"], check=True)
+    subprocess.run(["git", "-C", str(tmp_path), "commit", "-qm", "filed"],
+                   check=True)
+    (tmp_path / "draft" / "feature" / "widgets" / "polish.md").unlink()
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    assert lifecycle.batch_member_problems(tmp_path) == []
+
+
+def test_a_member_line_that_is_not_the_grammar_is_left_alone(tmp_path):
+    """A hand submission has a sentence where the path goes. Reporting it as a
+    missing prompt would be reporting the wrong thing."""
+    _batch_record(tmp_path, "2026-01-01-pm",
+                  "  - hand-run-42: (no prompt — hand submission) — notify — "
+                  "1 — UNREVIEWED, carried to the next packet")
+    assert lifecycle.batch_member_problems(tmp_path) == []
+
+
+def test_prose_below_the_members_block_is_not_a_member(tmp_path):
+    """The member list ends at the first key that is not `members:` — the
+    `notes: |` body of every real record quotes member-shaped lines."""
+    _tree(tmp_path, draft=("feature/widgets/polish.md",))
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER,
+                  keys="- collected: 2026-01-02T08:30Z")
+    assert lifecycle.batch_member_problems(tmp_path) == []
+
+
+def test_the_agents_page_is_not_a_batch_record(tmp_path):
+    (tmp_path / "batches").mkdir()
+    (tmp_path / "batches" / "AGENTS.md").write_text(
+        "# Batch records\n\n- members:\n" + MEMBER + "\n")
+    assert lifecycle.batch_records(tmp_path) == []
+
+
+def test_a_closed_record_with_no_measured_review_cost_warns(tmp_path):
+    """`review-minutes-actual:` is "the only calibration there is" — without it
+    the budget every batch is planned against never improves."""
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER,
+                  keys="- review: batches/reviews/2026-01-01-pm.md")
+    warnings = lifecycle.batch_record_warnings(tmp_path)
+    assert len(warnings) == 1
+    assert "review-minutes-actual" in warnings[0]
+
+
+def test_the_placeholder_counts_as_no_measurement(tmp_path):
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER,
+                  keys=("- reviewed-at: 2026-01-02T08:30Z\n"
+                        "- review-minutes-actual: (not given)"))
+    assert len(lifecycle.batch_record_warnings(tmp_path)) == 1
+
+
+def test_a_measured_review_cost_silences_the_warning(tmp_path):
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER,
+                  keys=("- review: batches/reviews/2026-01-01-pm.md\n"
+                        "- review-minutes-actual: 38"))
+    assert lifecycle.batch_record_warnings(tmp_path) == []
+
+
+def test_an_open_slot_is_not_warned_about(tmp_path):
+    """The number is written after the review. A record whose review has not
+    landed is not missing anything."""
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    assert lifecycle.batch_record_warnings(tmp_path) == []
+
+
+def test_check_fails_on_a_bad_member_path_and_warns_on_the_minutes(
+        tmp_path, monkeypatch, capsys):
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER,
+                  keys="- review: batches/reviews/2026-01-01-pm.md")
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(None) == 1
+    out = capsys.readouterr().out
+    assert "widget-polish" in out
+    assert "warning" in out and "review-minutes-actual" in out
+
+
+def test_check_stays_quiet_on_a_clean_batch_ledger(tmp_path, monkeypatch,
+                                                   capsys):
+    _tree(tmp_path, draft=("feature/widgets/polish.md",))
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER,
+                  keys=("- review: batches/reviews/2026-01-01-pm.md\n"
+                        "- review-minutes-actual: 38"))
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(None) == 0
+    assert capsys.readouterr().out.strip() == "lifecycle check: OK"

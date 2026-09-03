@@ -965,6 +965,120 @@ def pending_release_problems(root: Path,
     return problems
 
 
+# --------------------------------------------------------------------------- #
+# the batch records
+#
+# `batches/<date>-<slot>.md` is the ledger of one unattended shift — the same
+# genre as `complete/`, and the evidence base the review-minute budget is
+# calibrated from (`batches/AGENTS.md`). Nothing checked it. The 2026-08-31-pm
+# record cites a member prompt at a path that had already been deleted, and its
+# `review-minutes-actual:` reads `(not given)` — "the only calibration there
+# is", missing, in the only real dev slot ever run.
+#
+# Only the member GRAMMAR is checked here: `  - <slug>: <path> — <tier> —
+# <minutes> — <outcome>`, and only where the path field looks like a prompt
+# path at all. A member with a sentence where the path goes (a hand submission,
+# a science wave) is not this grammar and is not drift — the batch conductor
+# reports those as notes and so does this.
+# --------------------------------------------------------------------------- #
+BATCH_MEMBER_RE = re.compile(r"^  - (?P<slug>[^:]+): (?P<rest>.+)$")
+
+#: A member path worth resolving: a real prompt path, not a sentence.
+BATCH_PATH_RE = re.compile(r"^[\w./-]+\.md$")
+
+#: A record is CLOSED once its review has landed — `review:` names the file,
+#: `reviewed-at:` says when they sat down. Either is enough.
+BATCH_CLOSED_KEYS = ("review", "reviewed-at")
+
+
+def batch_records(root: Path) -> "list[Path]":
+    """The dispatch records themselves — not the packets or the reviews, which
+    live in their own folders and have their own shapes."""
+    batches = root / "batches"
+    if not batches.is_dir():
+        return []
+    return sorted(f for f in batches.glob("*.md") if f.name != "AGENTS.md")
+
+
+def batch_members(path: Path) -> "list[tuple[str, str]]":
+    """[(slug, prompt path)] for the member lines that carry a prompt path."""
+    out: "list[tuple[str, str]]" = []
+    inside = False
+    for line in path.read_text(errors="replace").splitlines():
+        if FIELD_RE.match(line):
+            inside = line.strip().startswith("- members:")
+            continue
+        if not inside:
+            continue
+        m = BATCH_MEMBER_RE.match(line)
+        if not m:
+            continue
+        fields = [f.strip() for f in m.group("rest").split(" — ", 3)]
+        if len(fields) != 4 or not BATCH_PATH_RE.match(fields[0]):
+            continue
+        out.append((m.group("slug").strip(), fields[0]))
+    return out
+
+
+def _prompt_ever_existed(root: Path, rel: str) -> bool:
+    """Has this path ever been in the repo?
+
+    A member prompt is written under `draft/`, issued into `active/` and then
+    ABSORBED into its completion record, which is filed under the task's name —
+    so eight of the nine 2026-08-31-pm members name a path that resolves
+    nowhere on disk and is not drift. Git is the only thing that can tell that
+    apart from a path nobody ever wrote. Where there is no git (a bare template
+    checkout, a tarball) this answers False and the disk is the whole test."""
+    return bool(_git(root, ["log", "--oneline", "-1", "--", rel]))
+
+
+def batch_member_problems(root: Path) -> "list[str]":
+    """Batch members whose prompt path resolves nowhere and never did."""
+    problems: "list[str]" = []
+    for record in batch_records(root):
+        for slug, rel in batch_members(record):
+            if (root / rel).exists():
+                continue
+            name = Path(rel).name
+            if (root / "active" / name).exists():
+                continue
+            if next(iter(sorted((root / "complete").glob(f"**/{name}"))), None):
+                continue
+            if _prompt_ever_existed(root, rel):
+                continue
+            problems.append(
+                f"{record.relative_to(root)}: member `{slug}` cites "
+                f"`{rel}`, which is in no state folder and has never been in "
+                f"this repo — the member's question and witness cannot be read"
+            )
+    return problems
+
+
+def batch_record_warnings(root: Path) -> "list[str]":
+    """Closed batch records with no measured review cost.
+
+    A warning, not drift: the number is the human's to write after the fact,
+    and a record is not wrong for being written before they did. But
+    `batches/AGENTS.md` calls `review-minutes-actual:` "the only calibration
+    there is" — without it the review-minute budget every batch is planned
+    against never improves."""
+    warnings: "list[str]" = []
+    for record in batch_records(root):
+        fields = _record_fields(record)
+        if not any(fields.get(k) for k in BATCH_CLOSED_KEYS):
+            continue
+        actual = [v for v in fields.get("review-minutes-actual", [])
+                  if v and v != "(not given)"]
+        if actual:
+            continue
+        warnings.append(
+            f"{record.relative_to(root)}: the review has landed but "
+            f"`review-minutes-actual:` is empty — the only calibration the "
+            f"review-minute budget has (batches/AGENTS.md)"
+        )
+    return warnings
+
+
 def draft_issue_refs(root: Path) -> "list[tuple[str, str]]":
     """(draft_path, issue_url) for draft prompts citing a GitHub issue.
 
@@ -1814,6 +1928,13 @@ def cmd_check(args) -> int:
     # unreleased for weeks — reported, exit code untouched.
     problems.extend(pr_key_problems(ROOT))
     warnings: "list[str]" = list(pending_release_problems(ROOT))
+
+    # The batch ledger, on the same footing: a member citing a prompt that
+    # never existed is drift (the record is wrong about what it dispatched); a
+    # closed record with no measured review cost is a warning (the number is
+    # the human's to write, and its absence costs the budget, not the ledger).
+    problems.extend(batch_member_problems(ROOT))
+    warnings.extend(batch_record_warnings(ROOT))
 
     if problems:
         print("lifecycle check: DRIFT")
