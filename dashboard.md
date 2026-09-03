@@ -316,7 +316,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/over_sample_snr_double_division.md">Adaptive pixelization over-sampling divides the source S/N map by the noise map…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/523">issue #523</a> — issued 2026-09-02 — workspace-dev — implementation + validation complete, committed locally 2026-09-03; push + PR-open HELD at the ship gate on Heart…</summary>
+<details><summary>📋 <a href="active/over_sample_snr_double_division.md">Adaptive pixelization over-sampling divides the source S/N map by the noise map…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/523">issue #523</a> — issued 2026-09-02 — workspace-shipped, awaiting-merge (3 PRs open 2026-09-03, all pending-release, no library PR; close-out via /prm)</summary>
 
 ```
 /start_dev active/over_sample_snr_double_division.md
