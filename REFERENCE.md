@@ -156,7 +156,7 @@ PyAutoMind/
 │   ├── bug/                 ← incorrect behaviour, crashes, regressions
 │   ├── refactor/            ← internal restructuring, no intended behaviour change
 │   ├── docs/                ← documentation, tutorials, notebooks, examples
-│   ├── test/  release/  maintenance/  research/  experiment/
+│   ├── test/  release/  maintenance/  research/
 │   └── triage/              ← classification still unclear; needs manual review
 │
 ├── active/                  ← ISSUED, in flight (moved here by /start_dev)
@@ -227,7 +227,6 @@ Prompts start at `draft/<work-type>/<target>/<name>.md` (and advance
 | `release/` | packaging, versions, deployment, release readiness | release engineer |
 | `maintenance/` | dependency updates, hygiene, cleanup, small tech debt | hygiene agent |
 | `research/` | exploratory scientific / algorithmic investigation | research analyst |
-| `experiment/` | prototypes, spikes, proof-of-concept work | prototype agent |
 | `human_review/` | work that already shipped and a human wants to sign off | (none — a person reviews) |
 
 `human_review/` is the one work-type nothing infers. Every other folder answers
@@ -256,7 +255,6 @@ bug/autoarray/mask_edge_case.md
 refactor/autofit/result_object_cleanup.md
 docs/workspaces/pixelization_tutorial.md
 research/autofit/sbi_design.md
-experiment/autoarray/jax_sparse_mapping.md
 human_review/autolens/scaling_relation_fit_quality.md
 ```
 
@@ -323,7 +321,6 @@ Free-form markdown. Strong conventions:
   Witness: ids bit-identical, 62 -> 9.7 ms   # what makes it checkable in minutes
   Review-minutes: 3         # a seed, not a measurement
   Unattended: ready         # ready | needs-slicing | never
-  Lane: any                 # any | local-dev — where the work can run
   Filed: 2026-07-09         # optional; the day the prompt was written
   Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
@@ -444,35 +441,13 @@ history unattended will not record it.
 - **[`queue.md`](queue.md)** — the human's ordered wishlist, and the only file
   they maintain by hand between slots. **Order is priority**; there is no
   `priority:` field, because moving an entry up *is* the act of prioritising it.
-  Entries are a `prompt` (one named file), an `epic-slice` (the named epic's
-  *next* phase, whatever that turns out to be), or a `theme-sweep` (anything
-  `Unattended: ready` on that primary theme). A batch is never composed here —
+  An entry is a `prompt` (one named file) or `retired` (kept for the history of
+  what was wanted and why it left). A batch is never composed here —
   `pyauto-brain batch plan` proposes one against a review-minute budget, and the
   human approves or edits it in the slot.
 - **`batches/<YYYY-MM-DD>-<am|pm>.md`** — one record per dispatched batch,
   written at dispatch and appended at collection. Schema and the three fields
   that are easy to get wrong are in [`batches/AGENTS.md`](batches/AGENTS.md).
-
-### `Lane:` — where the work can run
-
-```
-Lane: any | local-dev
-```
-
-Spelled in the environment vocabulary `PyAutoBrain/skills/WORKFLOW.md` already
-defines (`local-dev` / `web-github` / `ci-only` / `analysis-only`) rather than a
-parallel cloud/laptop one. `local-dev` means the work needs the local dataset and
-output trees, an SSH endpoint, or the human at the machine — science runs, most
-of the Euclid programme's execution half. Default `any`.
-
-**A session detects its own lane and refuses to plan the other**, reporting the
-count rather than silently dropping it: *"4 local-dev tasks are ready — run this
-from the laptop."* Detection is probed from the environment, never declared: a
-session that could be *told* where it is could plan `local-dev` work it cannot
-run. One queue holds both lanes; the planner filters.
-
-Not to be confused with `active.md`'s `location:`, which is live per-task
-handoff state. `Lane:` is a static fact about the work.
 
 ### The review-cost model
 

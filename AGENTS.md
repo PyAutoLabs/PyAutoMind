@@ -25,7 +25,7 @@ For the full workflow narrative, conventions, and registry schemas, read
   - `draft/<work-type>/<target>/<name>.md` — intaken, **not started**. The
     first folder under `draft/` is the *kind of work*; the second is the
     *target repo or domain*. Work-types: `feature/`, `bug/`, `refactor/`,
-    `docs/`, `test/`, `release/`, `maintenance/`, `research/`, `experiment/`
+    `docs/`, `test/`, `release/`, `maintenance/`, `research/`
     (plus `triage/` for prompts whose classification is still unclear, and
     `human_review/` for work that already shipped and a human wants to sign
     off — declaration-only, see below).
