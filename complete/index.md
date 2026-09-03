@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1268 records across 8 buckets.
+1269 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -145,6 +145,7 @@ markers; everything below GENERATED is rebuilt.
 - [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
 - [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
+- [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
 - [numba-vs-jax-sparse](2026/09/numba-vs-jax-sparse.md)
 - [numpy-deflections-p1](2026/09/numpy-deflections-p1.md)
 - [numpy-deflections-p2](2026/09/numpy-deflections-p2.md)

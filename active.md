@@ -17,16 +17,6 @@
 - heart-note: acknowledgement covers only these two reasons; a new reason at ship time re-blocks
 - epic: gaussian-deflections-precompute (phase 2; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
 
-## mind-post-cortex-p1
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/389
-- prompt: active/mind_post_cortex_p1_retire_batch_epic.md
-- issued: 2026-09-03
-- session: local CLI (Fable architect, Opus execution)
-- status: ledger-dev — PyAutoMind ledger only; branch `claude/mind-post-cortex-p1` lands via `mind_ledger_merge.yml` (no worktree, no PR)
-- repos:
-  - PyAutoMind: claude/mind-post-cortex-p1
-- epic: mind-post-cortex (phase 1; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
-
 ## mind-post-cortex-p2
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/390
 - prompt: active/mind_post_cortex_p2_science_residue.md

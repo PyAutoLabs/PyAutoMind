@@ -51,11 +51,12 @@ pending-release gate lives only in a live `gh` search on the Brain board.
 
 ## Phases (issue ONE at a time; each is one PR per repo it touches)
 
-1. **Retire the `two-slot-batching` epic** —
-   `draft/maintenance/pyautomind/mind_post_cortex_p1_retire_batch_epic.md`.
-   Ledger-only (auto-merges). Keeps witness campaign, tier-A shadow and slice
-   as standalone prompts; retires dispatcher, budget loop, nightly pass, dev
-   carry-forward; reconciles the five stale 2026-08-31-pm `active.md` rows.
+1. **Retire the `two-slot-batching` epic** — **SHIPPED 2026-09-03**, record
+   `complete/2026/09/mind-post-cortex-p1.md` (issue PyAutoMind#389 closed;
+   ledger-only, auto-merged as `49d0b530` from `claude/mind-post-cortex-p1`,
+   no PR). Kept witness campaign, tier-A shadow and slice as standalone
+   prompts; retired dispatcher, budget loop, nightly pass, dev carry-forward;
+   reconciled the five stale 2026-08-31-pm `active.md` rows.
 2. **Delete the science residue** —
    `draft/maintenance/pyautomind/mind_post_cortex_p2_science_residue.md`.
    `cortex-half:` keys, the `jax-inference-profiling` Mind entry, `Lane:` and
