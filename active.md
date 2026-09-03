@@ -21,6 +21,9 @@
   - PyAutoGalaxy: feature/gaussian-precompute-p1
   - autolens_profiling: feature/gaussian-precompute-p1
 - parallel-claim: PyAutoGalaxy + autolens_profiling also claimed by jax-faddeeva-clamp-audit (#600); file sets disjoint (audit: mge.py _wofz_rational / spherical branch, scripts/misc/hazards/; this: deflections_memo.py, MassProfile entry hook, scripts/lens/deflections/basis.py) — human-approved 2026-09-03 under the #176/#177 precedent; second to merge rebases
+- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge) — exact reasons from `pyauto-heart readiness --json`:
+  - release validation FAILED (stage integrate)
+  - PyAutoArray: open PR 11d old
 - heart-note: RED at start (pre-existing release-validation integrate:fail + unrelated worktree drift); ship gate to re-read
 - epic: gaussian-deflections-precompute (phase 1; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
 
@@ -34,6 +37,9 @@
 - repos:
   - PyAutoGalaxy: feature/jax-faddeeva-clamp-audit
   - autolens_profiling: feature/jax-faddeeva-clamp-audit
+- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge) — exact reasons from `pyauto-heart readiness --json`:
+  - release validation FAILED (stage integrate)
+  - PyAutoArray: open PR 11d old
 - heart-note: RED at start (pre-existing release-validation integrate:fail + worktree drift on unrelated worktrees); ship gate to re-read
 - parent: complete/archive/epics/numpy_deflections_cpu_speedup.md (follow-up of the numpy-deflections-cpu epic)
 
