@@ -212,6 +212,11 @@ table.recent button.copy{width:2.2rem;height:2.2rem;font-size:.95rem}
 .boards a{display:inline-block;padding:.3rem .7rem;border-radius:999px;
  font-size:.82em;font-weight:600;border:1px solid currentColor;opacity:.85}
 .boards a:hover{opacity:1;text-decoration:none}
+/* --- the review button: the batch-status box's `_status.render_html` ---- */
+a.go{display:inline-block;margin-top:.15rem;padding:.35rem .8rem;
+ border-radius:999px;font-size:.85em;font-weight:600;color:#fff;
+ background:var(--warn)}
+a.go:hover{opacity:.9;text-decoration:none}
 .mdsrc{font-size:.85em}
 .boards a[data-organ="brain"]{color:#2159c9}@media(prefers-color-scheme:dark){.boards a[data-organ="brain"]{color:#6f9dff}}.boards a[data-organ="mind"]{color:#0a7d72}@media(prefers-color-scheme:dark){.boards a[data-organ="mind"]{color:#2ee6cf}}.boards a[data-organ="cortex"]{color:#a5177d}@media(prefers-color-scheme:dark){.boards a[data-organ="cortex"]{color:#ff7ad9}}.boards a[data-organ="memory"]{color:#6b34d6}@media(prefers-color-scheme:dark){.boards a[data-organ="memory"]{color:#b37eff}}.boards a[data-organ="heart"]{color:#b50f1a}@media(prefers-color-scheme:dark){.boards a[data-organ="heart"]{color:#ff6b73}}.boards a[data-organ="hands"]{color:#9a5400}@media(prefers-color-scheme:dark){.boards a[data-organ="hands"]{color:#ffa733}}.boards a[data-organ="organism"]{color:#0b6fa4}@media(prefers-color-scheme:dark){.boards a[data-organ="organism"]{color:#5ec7f5}}
 .fresh{margin:0 0 1.2rem;padding:.7rem .9rem .4rem;border:1px solid var(--edge);
@@ -251,6 +256,7 @@ Report what you retired, what you deliberately left in the backlog and why, and
 anything you could not verify." aria-label="Copy the Claude command">📋</button><p><b>Refresh this page</b> — reconcile finished prompts, then regenerate</p></div>
 </div>
 <p class="muted mdsrc"><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md">markdown version</a> · <a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/README.md">GitHub Page</a></p>
+<div class="verdict ok"><b>No batch in flight.</b></div>
 <h2>Start here</h2>
 <h3>Highest priority <span class="facets">(filed as high) — showing 12 of 14</span></h3>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>

@@ -48,6 +48,8 @@ anything you could not verify.
 | [Planned](#planned) (`planned.md`) | 5 |
 | [Backlog](#backlog) (`draft/`) | 160 |
 
+> **No batch in flight.**
+
 ## Start here
 
 **Highest priority** (filed as `high`) — showing 12 of 14
