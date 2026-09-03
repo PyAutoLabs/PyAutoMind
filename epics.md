@@ -109,7 +109,7 @@ epic, never picked standalone.
 ## numpy-deflections-cpu
 - title: Numpy (CPU) deflection angles — nine mass profiles on the numba route
 - ledger: draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
-- status: phase 1 SHIPPED 2026-09-02 (record complete/2026/09/numpy-deflections-p1.md); phase 2 next
+- status: phases 1–2 SHIPPED 2026-09-02 (records complete/2026/09/numpy-deflections-p{1,2}.md); phase 3 next
 - notes: three phase prompts — `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md` (measure + `*Sph` decorator + tracer double trace), `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md` (MGE/Faddeeva), `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md` (PowerLaw series, NFW masks, shared geometry); the profiling home for every phase's before/after numbers is `autolens_profiling/scripts/lens/`.
 
 ## image-source-mappings

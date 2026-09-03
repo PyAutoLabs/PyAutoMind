@@ -106,29 +106,6 @@
     Close-out post-merge (human): re-apply labels on #69/#71/#72; Witness =
     green queue_filing.yml run on #71 that opens a filing PR.
 
-## numpy-deflections-p2
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/596
-- prompt: active/numpy_deflections_p2_mge_wofz.md
-- issued: 2026-09-02
-- session: claude --resume d3971bba-0e8d-4c4f-bc59-7808e6bfa6cd
-- status: shipped, awaiting-merge (merge order PyAutoGalaxy#597 → autolens_profiling#212)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/212
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/597
-- epic: numpy-deflections-cpu (phase 2 — ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
-- worktree: ~/Code/PyAutoLabs-wt/numpy-deflections-p2
-- heart-ack:
-  - PyAutoArray: open PR 10d old
-  - release validation incomplete: no rehearsal for current source
-- repos:
-  - PyAutoGalaxy: feature/numpy-deflections-p2
-  - autolens_profiling: feature/numpy-deflections-p2
-- summary: |
-    Phase 2 of numpy-deflections-cpu: scipy.special.wofz on the numpy branch of the MGE
-    Faddeeva, Gaussian.wofz deduped onto MGEDecomposer.wofz, numpy-only spherical MGE branch
-    (removes the q=0.9999 clamp bias), exact exp_term mask; cache lever dropped (0.3 %).
-    Re-pin of dark/stellar lens cells with mpmath provenance. Targets re-scoped to measured
-    ceilings (gNFW ~2.3x, gNFWSph ~59x, Gaussian sph ~16x). Fable session; execution → Opus.
-
 ## over-sample-snr-double-division
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/523
 - prompt: active/over_sample_snr_double_division.md
