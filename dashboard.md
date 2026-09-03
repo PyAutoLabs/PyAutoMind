@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 9 |
+| [In flight](#in-flight) (`active/`) | 10 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 ## Start here
 
@@ -148,7 +148,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -238,10 +238,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical axis-ratio clamp in MGE…</a> — autogalaxy · medium · supervised · medium</summary>
+<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · safe · medium</summary>
 
 ```
-/start_dev draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md
+/start_dev draft/research/autolens/quick_update_plotting_cost.md
 ```
 
 </details>
@@ -270,6 +270,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical axis-ratio clamp in MGE…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/600">issue #600</a> — issued 2026-09-03 — library-dev</summary>
+
+```
+/start_dev active/jax_faddeeva_seams_and_spherical_clamp_audit.md
 ```
 
 </details>
@@ -452,7 +460,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **45** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **45** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 30</summary>
@@ -865,7 +873,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 17</summary>
+<summary><b>research</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -887,14 +895,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical axis-ratio clamp in MGE…</a> — autogalaxy · medium · supervised · medium</summary>
-
-```
-/start_dev draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md
 ```
 
 </details>
@@ -1696,10 +1696,10 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-03 | issued | <a href="active/mappings_guide_and_tutorial_rewrite.md">Mappings guide (<code>guides/mappings.py</code>), tutorial_2_mappers rewrite…</a> |
+| 2026-09-03 | issued | <a href="active/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical…</a> |
 | 2026-09-02 | filed | <a href="draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md">Precompute fixed-geometry Gaussian deflection angles and rescale by…</a> |
 | 2026-09-02 | issued | <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba +…</a> |
 | 2026-09-02 | issued | <a href="active/batch_board.md">Batch phase 6 — the batch status box on the Mind…</a> |
-| 2026-09-02 | filed | <a href="draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical…</a> |
 | 2026-09-02 | issued | <a href="active/over_sample_snr_double_division.md">Adaptive pixelization over-sampling divides the source S/N map by the…</a> |
 | 2026-09-01 | filed | <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output/ tree: move mesh, point-source and…</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
@@ -2293,7 +2293,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-12 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+11 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2309,7 +2309,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
-- `draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md — unknown theme keyword(s): jax, mass-profiles`
 
 </details>
 
