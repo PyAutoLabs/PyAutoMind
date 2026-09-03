@@ -9,6 +9,7 @@ Repos:
 Difficulty: medium
 Autonomy: safe
 Priority: medium
+Epic: image-source-mappings
 Status: formalised
 Consequence: judge
 Witness: `aplt.plot_array(array=fit.data, regions=[mapping.image_contours])` draws the overlay with no TypeError, and `Mapper.mappings_from(pix_indexes=[[0]])` on a `RectangularBilinearAdaptDensity` mapper returns a mapping with at least one image region or raises.
