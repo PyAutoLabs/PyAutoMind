@@ -9,6 +9,15 @@ It auto-merges (`scripts/ledger_merge.py` — `batches/` is a ledger dir), becau
 an unattended system that cannot record its own history unattended will not
 record it.
 
+**Collected once, reviewed once.** A dev batch is dispatched as one shift and
+reviewed as one sitting: one `- review:` line, one review file. The dashboard's
+batch status box is the live view of the open slot — every member with what it
+is doing — and it offers the button to the review packet once `collected:` is
+stamped, because there is nothing to review before that. A science batch is a
+rolling board instead, ruled on more than once and closing only when nothing is
+left on the board (`PyAutoCortex/batches/AGENTS.md`, "A rolling board, not a
+dispatch"); that difference is the Cortex's, not a change here.
+
 ## Schema
 
 ```markdown
