@@ -87,9 +87,19 @@ pending-release gate lives only in a live `gh` search on the Brain board.
    member `prompt:` path is drift, a closed record with no
    `review-minutes-actual:` is a warning. The check degrades in a shallow
    clone, so `lifecycle_drift.yml` now checks out at `fetch-depth: 0`.
-5. **Heart freeze flag** —
-   `draft/feature/pyautoheart/mind_post_cortex_p5_heart_freeze_flag.md`
-   (gap 6).
+5. **Heart freeze flag** — **SHIPPED 2026-09-03**, record
+   `complete/2026/09/mind-post-cortex-p5-heart-freeze.md` (issue PyAutoHeart#196
+   closed; PyAutoHeart#197 `4b873047`, PyAutoBrain#347 `67971f21`,
+   PyAutoHands#275 `128d9a1d`). Gap 6: Heart owns a `freeze.json` flag with a
+   `pyauto-heart freeze` verb (`--set/--until/--clear/--show`) that expires by
+   `until` rather than by discipline; `validate --ingest`, `review_release` and
+   the Hands `pre_build` are the real call sites; Brain reads it on three
+   surfaces — `vitals` prints it, `batch collect` and the status box carry it,
+   and `/prm` stops on a library-repo PR while it is active (`--thaw "<why>"`
+   overrides, logged to `autonomy_log.md`). Heart's `readiness` verdict is
+   deliberately unchanged: the freeze is advice-with-teeth for `/prm` only.
+
+**The epic is COMPLETE** — all five phases shipped 2026-09-03.
 
 ## Explicitly OUT of scope (assessment findings not adopted, or later)
 
@@ -102,3 +112,17 @@ pending-release gate lives only in a live `gh` search on the Brain board.
   construction.
 - The `research` autonomy cap stays: verdict-shaped research still parks for
   a human (`numba-vs-jax-sparse` is the live example).
+
+## Retired from epics.md (2026-09-03)
+
+## mind-post-cortex
+- title: Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger
+- ledger: draft/maintenance/pyautomind/mind_post_cortex_epic.md
+- status: COMPLETE — all five phases shipped 2026-09-03 (records complete/2026/09/mind-post-cortex-p1.md, -p2.md, -p3-pr-ledger.md, -p4-batch-fidelity.md, -p5-heart-freeze.md). Phase 1 issue PyAutoMind#389 closed (ledger-only, auto-merged as `49d0b530` from `claude/mind-post-cortex-p1`, no PR); phase 2 issue PyAutoMind#390 closed (PyAutoCortex#8 `d23a51a8` + PyAutoBrain#343 `338addad` + PyAutoMind#391 `e705eee7`); phase 3 issue PyAutoMind#392 closed (PyAutoMind#393 `7d3ed60f` + PyAutoBrain#344 `fcb43755` + PyAutoHeart#195 `b91c026a`); phase 4 issue PyAutoBrain#345 closed (PyAutoBrain#346 `d442df5d` + PyAutoMind#394 `c00098e1`); phase 5 issue PyAutoHeart#196 closed (PyAutoHeart#197 `4b873047` + PyAutoBrain#347 `67971f21` + PyAutoHands#275 `128d9a1d`).
+- notes: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching
+  epic keeping witness campaign / tier-A shadow / slice as standalone prompts and reconcile the
+  five stale 2026-08-31-pm active.md rows; (2) delete the science residue (the Cortex-half epic
+  keys, the JAX profiling entry, the lane header and the two non-prompt queue kinds, the phantom
+  prototype work-type, the RAL prompts that became Cortex phases, the am batch record); (3) schematise library-pr/workspace-pr +
+  PR column + pending-release view; (4) batch plan fidelity (derived backpressure, queue order,
+  merge order, batch-record drift checks); (5) Heart freeze flag. Issue ONE at a time, in order.

@@ -83,15 +83,3 @@ epic, never picked standalone.
   trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
   complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home
   autolens_profiling/scripts/lens/deflections/.
-
-## mind-post-cortex
-- title: Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger
-- ledger: draft/maintenance/pyautomind/mind_post_cortex_epic.md
-- status: phases 1, 2, 3 and 4 shipped 2026-09-03 — phase 1 record `complete/2026/09/mind-post-cortex-p1.md` (issue PyAutoMind#389 closed; ledger-only, auto-merged as `49d0b530` from `claude/mind-post-cortex-p1`, no PR); phase 2 record `complete/2026/09/mind-post-cortex-p2.md` (issue PyAutoMind#390 closed; PyAutoCortex#8 `d23a51a8` + PyAutoBrain#343 `338addad` + PyAutoMind#391 `e705eee7` merged); phase 3 record `complete/2026/09/mind-post-cortex-p3-pr-ledger.md` (issue PyAutoMind#392 closed; PyAutoMind#393 `7d3ed60f` + PyAutoBrain#344 `fcb43755` + PyAutoHeart#195 `b91c026a` merged); phase 4 record `complete/2026/09/mind-post-cortex-p4-batch-fidelity.md` (issue PyAutoBrain#345 closed; PyAutoBrain#346 `d442df5d` + PyAutoMind#394 `c00098e1` merged). Next is phase 5 (active/mind_post_cortex_p5_heart_freeze_flag.md, issue PyAutoHeart#196; PyAutoHeart#197 + PyAutoBrain#347 + PyAutoHands#275 open — Brain#347 sits adjacent to phase 4's `_batch.py` collect changes now on `main`, so expect a merge from `main` before it lands).
-- notes: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching
-  epic keeping witness campaign / tier-A shadow / slice as standalone prompts and reconcile the
-  five stale 2026-08-31-pm active.md rows; (2) delete the science residue (the Cortex-half epic
-  keys, the JAX profiling entry, the lane header and the two non-prompt queue kinds, the phantom
-  prototype work-type, the RAL prompts that became Cortex phases, the am batch record); (3) schematise library-pr/workspace-pr +
-  PR column + pending-release view; (4) batch plan fidelity (derived backpressure, queue order,
-  merge order, batch-record drift checks); (5) Heart freeze flag. Issue ONE at a time, in order.
