@@ -1,5 +1,18 @@
 # Active Tasks
 
+## numpy-deflections-p3
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/598
+- prompt: active/numpy_deflections_p3_closed_form_geometry.md
+- issued: 2026-09-03
+- session: web-github — claude --resume session_01Re4JLhTCFnGYeez8oEyM6M
+- status: library-dev
+- repos:
+  - PyAutoArray: feature/numpy-deflections-p3
+  - PyAutoGalaxy: feature/numpy-deflections-p3
+  - autolens_profiling: feature/numpy-deflections-p3
+- parallel-claim: PyAutoArray is also claimed by numba-vs-jax-sparse (read-only research verdict on `main`, no branch; file sets disjoint — epic decision 2, the 2026-08-26 #176/#177 precedent)
+- epic: numpy-deflections-cpu (phase 3; ledger draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md)
+
 ## batch-status-box
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/341
 - prompt: active/batch_board.md

@@ -81,7 +81,7 @@ library-first ship inside each phase.
 |---|---|---|---|---|
 | 1 | `complete/2026/09/numpy-deflections-p1.md` (was `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md`) | @PyAutoArray, @PyAutoGalaxy, @PyAutoLens, @autolens_profiling | measure (`scripts/lens/deflections/`), `*Sph` over-sampled re-materialisation, sub-size-1 short-circuit, tracer double trace | **SHIPPED 2026-09-02** — PyAutoArray#516, PyAutoGalaxy#595, PyAutoLens#718, autolens_profiling#210 merged; record `complete/2026/09/numpy-deflections-p1.md` |
 | 2 | `complete/2026/09/numpy-deflections-p2.md` (was `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md`, PyAutoGalaxy#596) | @PyAutoGalaxy, @autolens_profiling | `scipy.special.wofz` on numpy, spherical MGE branch, exact exp_term mask (cache lever dropped: 0.34 ms/call); targets re-scoped to measured ceilings gNFW ~2.3×, gNFWSph ~59×, Gaussian sph ~16×, Gaussian ell ~1.07× | **SHIPPED 2026-09-02** — PyAutoGalaxy#597 + autolens_profiling#212 merged; record `complete/2026/09/numpy-deflections-p2.md` |
-| 3 | `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md` | @PyAutoGalaxy, @PyAutoArray, @autolens_profiling | PowerLaw series with factor-driven term count, NFW/NFWSph masks, Isothermal hoists, rotation-matrix grid transform | draft |
+| 3 | `active/numpy_deflections_p3_closed_form_geometry.md` (was `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md`, PyAutoGalaxy#598) | @PyAutoGalaxy, @PyAutoArray, @autolens_profiling | PowerLaw series with factor-driven term count, NFW/NFWSph masks, Isothermal hoists, rotation-matrix grid transform | **ISSUED 2026-09-03** — branch `feature/numpy-deflections-p3` |
 
 Phase 1 carries the measurement package: every later phase's before/after numbers come from the
 cells it lands, so it is a hard predecessor of phases 2 and 3. Phases 2 and 3 touch disjoint files
@@ -228,3 +228,15 @@ calculations.
 I think autolens_profilng suits having deflection angle profilng and othr such computations being coded out, tracked
 and whatnot in the same style as everything there. So in scripts make a "lens" package which contains all this information
 and the work done for this task.
+
+**2026-09-03 — phase 3 issued (PyAutoGalaxy#598).** A web session picked the phase up after the 2026-09-02
+session that had started it hit its usage limit with nothing pushed (no issue, branch or PR existed on any
+repo). Same-container "before" of the phase-1 cells, this box, `OMP_NUM_THREADS=1`, hst 15,361 pts: Isothermal
+1.95 ms, PowerLaw 9.59 ms, NFW 2.97 ms, NFWSph 3.65 ms (every pin held at rtol 1e-6). Micro-benchmarks that
+fixed the design before any edit: the omega series in Horner form is 35× faster than complex `hyp2f1` at
+q = 0.8 (0.21 vs 7.4 ms) and still 23× at q = 0.1 with 124 terms, so no `hyp2f1` fallback is kept; the
+rotation-matrix transform is 7× cheaper than the polar form (0.21 vs 1.42 ms); the subset-evaluated
+`capital_F_from` halves the NFW special-function cost. The "rotate-back re-wrap" the prompt asked to cut does
+not exist: `GridMaker.result` returns a bare array unchanged when the input is one, so the rotate-back never
+builds a `Grid2D` — the per-call wraps are one `Grid2D` (the transformed grid, ~30 µs) and one `VectorYX2D`
+(the result, ~95 µs), both API-bearing.
