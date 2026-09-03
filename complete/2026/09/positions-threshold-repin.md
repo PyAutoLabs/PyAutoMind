@@ -1,3 +1,38 @@
+## positions-threshold-repin
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/721 (closed, completed)
+- completed: 2026-09-03
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/722 (MERGED c6c2a06a9)
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/722
+- shipped: a **test-only** corrective re-pin of the two knife-edge `positions_threshold` pins in
+  `test_autolens/analysis/test_result.py`. No source changed; the numbers moved because the library
+  under them became more exact, not less correct.
+- cause: PyAutoArray#519 (`f45b30b0`) made the grid transform an **exact identity at angle 0** — the
+  rotation that previously left an 8.9e-16 residual now returns the input bit-for-bit. On the symmetry
+  axis the deflection is therefore exactly `0.0` rather than a denormal, and the position solver's
+  tie-break picks the other branch.
+- measured: `positions_threshold_from()` **0.0019501455607 → 0.0019534291031** (+1.7e-3 relative), and
+  `positions[1].x` **flips sign with a bit-identical magnitude** — the signature of a branch flip, not a
+  numerical drift.
+- evidence: a **6-cell bisect matrix** across the candidate commits isolates PyAutoArray#519 `f45b30b0`;
+  PyAutoGalaxy #599 / #602 / #603 are **bit-neutral**. `test_autolens` **610 passed, 1 xfailed**.
+- finding: the pin sits on a genuine **knife edge** — a **1e-15** x-nudge of the fixture flips the branch
+  back, and a **1e-6** nudge moves the threshold by **×86**. A pin that a 1e-15 perturbation can flip is
+  pinning the tie-break, not the physics.
+- finding: `Isothermal.axis_ratio()` clips at **0.99999**, giving a **1.7e-6** bias against
+  `IsothermalSph`. Pre-existing and **unrelated** to this move — noted, not touched.
+- trap: `test_result.py` carries pre-existing ruff **E711** and format drift. Deliberately left untouched
+  — a corrective re-pin is not the place to smuggle in unrelated lint churn.
+- follow-up: move the fixture **off the symmetry axis** so the pin stops sitting on a tie-break —
+  `draft/bug/autolens/positions_threshold_fixture_off_axis.md`.
+- heart: RED at PR-open, human-authorized for this corrective PR. The RED reason
+  **"PyAutoLens: CI failure"** is the break this PR repairs, and clears once `main` is green; the other
+  acknowledged reasons were "release validation FAILED (stage integrate)" and "PyAutoArray: open PR 11d old".
+- session: local CLI; merged and closed out via /prm 2026-09-03. PyAutoLens is pending-release.
+- affected-repos:
+  - PyAutoLens
+
+## Original prompt
+
 # Re-pin the knife-edge positions_threshold tests after PyAutoArray#519's exact grid transform
 
 Type: bug

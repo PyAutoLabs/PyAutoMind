@@ -12,18 +12,6 @@
   - PyAutoBrain: feature/cortex-checkin-p1-shed-review-slot
 - epic: cortex-checkin (phase 1; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md)
 
-## positions-threshold-repin
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/721
-- prompt: active/positions_threshold_knife_edge_repin.md
-- issued: 2026-09-03
-- session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: library-shipped, awaiting-merge (corrective PR open 2026-09-03; /prm)
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/722
-- worktree: ~/Code/PyAutoLabs-wt/positions-threshold-repin
-- repos:
-  - PyAutoLens: feature/positions-threshold-repin
-- heart-ack: 2026-09-03 human-authorized corrective PR for RED reason "PyAutoLens: CI failure" (cause PyAutoArray#519, test-only re-pin) and acknowledged "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old" for PR-open — never merge
-
 ## gaussian-precompute-p2
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/604
 - prompt: active/gaussian_precompute_p2_jax_trace_time_constant.md
