@@ -29,6 +29,19 @@
 - ci: PyAutoBrain#348 green; PyAutoCortex#10 `check` green, `refresh` red until #348 merges (that workflow renders through PyAutoBrain **main**, which still calls the deleted `MEMBER_RE`) — a Brain/Cortex skew the workflow's own comment names
 - epic: cortex-checkin (phase 1; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md). Phases 2 and 3 stack on branch `feature/cortex-checkin-p1-shed-review-slot` in both repos until it merges.
 
+## cortex-checkin-p2-the-door
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/349
+- prompt: active/cortex_checkin_p2_the_door.md
+- issued: 2026-09-03
+- session: local CLI (Fable architect, Opus execution) — claude --resume session_013HsZA1ufn3msgPiDFxEXa6
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-checkin-p2-the-door
+- repos:
+  - PyAutoBrain: feature/cortex-checkin-p2-the-door
+  - PyAutoCortex: feature/cortex-checkin-p2-the-door
+- parallel-claim: both repos are also claimed by cortex-checkin-p1-shed-review-slot (PyAutoCortex#9, PRs PyAutoBrain#348 / PyAutoCortex#10 open, unmerged). This is the epic's own stacking, not a collision: p2 branches FROM `feature/cortex-checkin-p1-shed-review-slot` in both repos and its PRs target that branch, so p1's deletions are already in p2's base. File sets are disjoint from p1's remaining work — p2 adds the `checkin` door to `agents/conductors/cortex/_cortex.py`, rewrites `skills/cortex/*` + `skills/COMMANDS.md`, adds check-in tests, and touches PyAutoCortex docs only (README/AGENTS/REFERENCE) — while p1 is finished and awaiting merge. Human-approved 2026-09-03 ("ok go" on the epic and its phases). worktree_check_conflict exits 1 by design here; phase 3 will stack on p2's branches in turn.
+- epic: cortex-checkin (phase 2; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md). Retarget both PRs to main when phase 1 merges.
+
 ## euclid-cpu-two-stage-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
 - prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md

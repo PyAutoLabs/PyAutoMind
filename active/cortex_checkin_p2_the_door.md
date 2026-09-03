@@ -18,6 +18,7 @@ Unattended: ready
 Epic: cortex-checkin
 Phase: 2
 Filed: 2026-09-03
+Issued: 2026-09-03
 
 Phase 2 of `cortex-checkin`. Branch from phase 1's branches (stacked) if they
 are unmerged. Two PRs (Brain, Cortex — the Cortex side is docs + a
