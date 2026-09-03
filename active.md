@@ -146,7 +146,19 @@
 - prompt: active/mind_post_cortex_p5_heart_freeze_flag.md
 - issued: 2026-09-03
 - session: local CLI (Fable architect, Opus execution)
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/197
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/347
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/275
+- status: library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoHeart#197
+  first — it ships the `freeze` verb the other two document — then PyAutoBrain#347 and
+  PyAutoHands#275 in either order, the two are independent; close-out via /prm)
+- decision-taken: the prompt's one human-required question (may `/prm --thaw` override an active
+  freeze?) was answered by the architect on the prompt's own recommendation — yes, with the override
+  logged to `autonomy_log.md` under a `## Freeze overrides` heading created on first use. Flagged at
+  the head of PyAutoBrain#347 and in the issue; reverse before merge if the human disagrees (it is
+  confined to the `--thaw` bullets in `skills/prm/prm.md` + the `reference.md` mirror). The section
+  is deliberately NOT pre-created in `autonomy_log.md`: a ledger push auto-merges to main, which
+  would land the decision ahead of its review.
 - worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p5-heart-freeze
 - repos:
   - PyAutoHeart: feature/mind-post-cortex-p5-heart-freeze
@@ -162,6 +174,21 @@
   collect legs of `_batch.py` (p2 edits `_sizing.py`/`_intake.py`/`_feature.py`; p3 edits `_intake.py`
   and the ship/prm skills — `prm.md` overlaps, merge-tree checked; p4 edits `_batch.py`'s outcomes and
   merge-order blocks, not `_status.py`); and PyAutoHands, which no sibling claims.
+- heart-note: `pyauto-heart readiness --json` was RED when the PRs were opened (checked 2026-09-03,
+  before PR-open). Verbatim reasons:
+  - PyAutoLens: CI failure
+  - release validation FAILED (stage integrate)
+  - PyAutoArray: open PR 11d old
+  None touches this diff — one new Heart module and CLI verb, one ingest-side clear, three skill/doc
+  files and their tests; no library source and no release surface. The acknowledgement the human gave
+  earlier today was scoped to gaussian-precompute-p1 and jax-faddeeva-clamp-audit and is NOT carried
+  here: the RED is unacked for this task and merge needs the human's own call. Opened for review only.
+- merge-tree: scratch-merged origin/feature/mind-post-cortex-p3-pr-ledger and
+  origin/feature/mind-post-cortex-p4-batch-fidelity into this branch before ship. PyAutoBrain: CLEAN
+  against both (p3 edits `prm.md` §5, this task §4/§6/Usage; p4 edits `_batch.py`'s outcome and
+  merge-order blocks, not `_status.py` or the head of `collect_report`). PyAutoHeart: CLEAN against p3
+  — both append to `skills/review_release/review_release.md`, p3 at the end (step 6) and this task
+  inside step 3, so the two hunks do not touch. PyAutoHands is claimed by nobody else.
 - epic: mind-post-cortex (phase 5; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
 ## euclid-cpu-two-stage-route

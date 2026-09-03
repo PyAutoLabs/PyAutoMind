@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — pr-open — https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50 (opened 2026-09-03; workspace-only, no…</summary>
+<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — pr-open — https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50 (opened 2026-09-03; workspace-only, no… — ⚠️ gates a Cortex phase → phases/euclid/dr1_prelim_10_lens_science_run.md</summary>
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
@@ -308,7 +308,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mind_post_cortex_p5_heart_freeze_flag.md">Heart freeze flag: make the library-main validation window visible to <code>/prm</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/196">issue #196</a> — issued 2026-09-03 — library-dev</summary>
+<details><summary>📋 <a href="active/mind_post_cortex_p5_heart_freeze_flag.md">Heart freeze flag: make the library-main validation window visible to <code>/prm</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/196">issue #196</a> — issued 2026-09-03 — library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoHeart#197</summary>
 
 ```
 /start_dev active/mind_post_cortex_p5_heart_freeze_flag.md
