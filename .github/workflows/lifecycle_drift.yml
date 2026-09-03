@@ -38,7 +38,14 @@ jobs:
   drift:
     runs-on: ubuntu-latest
     steps:
+      # Full history: the batch-ledger leg of `lifecycle check` asks whether a
+      # member's prompt path ever existed, and a depth-1 clone answers "no" for
+      # every prompt absorbed into a completion record. The check degrades to a
+      # single warning rather than failing when the clone is shallow, so this
+      # is what gives it teeth in CI. Mind is markdown; a full clone is cheap.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: lifecycle check
         run: python3 scripts/lifecycle.py check
       - name: index freshness (self-healing on push to main)

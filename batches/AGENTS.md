@@ -35,6 +35,10 @@ dispatch"); that difference is the Cortex's, not a change here.
   - <member>: <what it may legitimately change, e.g. "merges into PyAutoArray and may stale release validation">
 - members:
   - <slug>: <prompt path> — <tier> — <review-minutes> — <outcome>
+- outcomes:                   # filled at collect, from the ledger only
+  - <slug>: merged | rejected-at-review | carried | unreviewed
+- merge-order:                # filled at collect — advice for /prm, not an action
+  - 1. <slug> — library (PyAutoFit) — before its workspace dependants
 - collected: 2026-09-04T08:30Z
 - reviewed-at: 2026-09-04T08:30Z   # when they actually sat down
 - usage-window-at-collect: <5h %, weekly %, opus %>
@@ -62,9 +66,39 @@ under a batch launch") scopes a YELLOW acknowledgement to one shift and to the
 reason set named here. Recording it loosely is how a scoped grant becomes a
 standing one, which doctrine voids.
 
+**`outcomes:` is the accounting; the member line is the evidence.** The member
+line's last column says what was *observed* ("PyAutoFit#1554, 4/4 checks
+green"); `outcomes:` says what *became of it*, in one of four words. `batch
+collect` fills it from the ledger and from nothing else — a `complete/` record
+naming the member (its `- batch:` line cites the slot and the member slug, or
+the record is filed under the member's own name) is `merged`; a review `decision:` that rejected it is
+`rejected-at-review`; a row still in `active.md` is `carried`; anything else is
+`unreviewed`. In that order, because a rejected member is still in `active.md`.
+No `gh` call is made to fill it, and none should be: the organism's own files
+are what a record is allowed to claim. This exists because all nine members of
+the 2026-08-31-pm slot merged and every one of them is recorded
+`decision: UNREVIEWED` — the completion records knew, and nothing read them.
+The next `batch plan` reads the `carried` members first: they are already
+costing the human review-minutes in the slot being planned.
+
+**`merge-order:` is advice, and it is the only order the record can give.**
+`members:` is the dispatch order and the packet sorts by health, so neither is a
+merge sequence. This block is one: dispatch order, with library repos first (the
+library-first gate) and same-repo members serialised, because the first `/prm`
+moves `main` and stales its siblings' evidence. Nothing is filtered out of it —
+a member with no PR is listed in its place with what it is waiting on. It is
+never enacted: `/prm` is the human's, one PR at a time.
+
 **`review-minutes-actual:` is the only calibration there is.** The planned figure
 is a seed from the sizing faculty; this is what the slot really cost. Without it
 the estimate never improves, and the whole batch size rests on it.
+
+`lifecycle.py check` reads these records: a member whose prompt path resolves in
+no state folder and has never been in the repo is **drift** (the record is wrong
+about what it dispatched, and the member's question and witness cannot be read),
+and a closed record with no `review-minutes-actual:` is a **warning**. Member
+lines that are not the grammar — a hand submission, a science wave with a
+sentence where the path goes — are left alone.
 
 **`packet:` is the page the human actually reviewed, archived.** One
 self-contained HTML file per slot under `batches/packets/` (see that folder's
