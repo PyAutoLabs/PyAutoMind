@@ -88,6 +88,12 @@
 - status: library-shipped, awaiting-merge (two PRs open 2026-09-03; PyAutoMind#394 is STACKED on
   PyAutoMind#393 and targets `feature/mind-post-cortex-p3-pr-ledger` — retarget it to main once #393
   merges, then merge PyAutoBrain#346 in either order, the two diffs are independent; close-out via /prm)
+- ci: both PRs green 2026-09-03 — PyAutoBrain#346 pytest 3.12 + 3.13 pass (after a tenant-firewall fix:
+  the new comments and fixtures named real repos); PyAutoMind#394 drift + refresh + privacy pass (after
+  a shallow-clone fix: `lifecycle check` runs at depth 1 in CI, where "has this path ever existed" is
+  unanswerable, so the leg degrades to one warning and lifecycle_drift.yml now checks out fetch-depth 0).
+  PyAutoMind#394 carries a regenerated dashboard.md/.html — expect the usual dashboard conflict against
+  a moved main, and take upstream then re-run `intake --mind . --apply dashboard` on the branch.
 - worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p4-batch-fidelity
 - repos:
   - PyAutoBrain: feature/mind-post-cortex-p4-batch-fidelity
@@ -136,24 +142,6 @@
   - PyAutoArray: open PR 11d old
 - heart-note: RED at start (pre-existing release-validation integrate:fail + unrelated worktree drift); ship gate to re-read
 - epic: gaussian-deflections-precompute (phase 1; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
-
-## jax-faddeeva-clamp-audit
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/600
-- prompt: active/jax_faddeeva_seams_and_spherical_clamp_audit.md
-- issued: 2026-09-03
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/603
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/215
-- session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoGalaxy → autolens_profiling; close-out via /prm)
-- worktree: ~/Code/PyAutoLabs-wt/jax-faddeeva-clamp-audit
-- repos:
-  - PyAutoGalaxy: feature/jax-faddeeva-clamp-audit
-  - autolens_profiling: feature/jax-faddeeva-clamp-audit
-- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge) — exact reasons from `pyauto-heart readiness --json`:
-  - release validation FAILED (stage integrate)
-  - PyAutoArray: open PR 11d old
-- heart-note: RED at start (pre-existing release-validation integrate:fail + worktree drift on unrelated worktrees); ship gate to re-read
-- parent: complete/archive/epics/numpy_deflections_cpu_speedup.md (follow-up of the numpy-deflections-cpu epic)
 
 ## euclid-cpu-two-stage-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
