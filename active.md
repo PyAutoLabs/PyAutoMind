@@ -150,7 +150,9 @@
 - prompt: active/over_sample_snr_double_division.md
 - issued: 2026-09-02
 - session: local CLI (Fable architect, Opus execution) — claude --resume session_01UpLMvgejg1kNXbG3P789wy
-- status: workspace-dev
+- status: workspace-dev — implementation + validation complete, committed locally 2026-09-03; push + PR-open HELD at the ship gate on Heart RED (see heart-note)
+- checkpoint: 2026-09-03 local commits, not pushed — autolens_workspace 116b3c73 (65 files), autolens_workspace_test 62d2418 (2 files), autolens_assistant 0dfc9dc (4 files); drafted PR bodies (smoke line filled) in the session scratchpad; smoke 31/32 PASS, the FAIL (imaging/features/advanced/subhalo/sensitivity/slam_source_pixelized.py, AttributeError al.MapperValued) reproduces on main
+- heart-note: RED at ship gate 2026-09-03 — exact reasons from `pyauto-heart readiness --json`: "PyAutoLens: CI failure" (NEW: Tests failed on main 6fbab3b, 2026-09-03 18:43Z, unittest 3.12/3.13/nojax — not covered by any human ack), "release validation FAILED (stage integrate)", "PyAutoArray: open PR 11d old" (both acked today on gaussian-precompute-p1 / jax-faddeeva-clamp-audit / image-source-mappings-p3). Resume = human acks the full set → ship_workspace step 4 (push, PR-open ×3 with pending-release) → /prm
 - worktree: ~/Code/PyAutoLabs-wt/over-sample-snr-double-division
 - repos:
   - autolens_workspace (feature/over-sample-snr-double-division)
