@@ -41,8 +41,9 @@ its own prompt file. Update the table as phases ship.
 
 Adjacent live work this campaign leans on but does not own: priors/messages
 phase 4 (`bug/priors/` tracker — design #1500, findings #1498/#1501) and the
-slope_hierarchy methods write-up
-(`research/graphical_ep/slope_hierarchy_methods_writeup.md`).
+slope_hierarchy methods write-up (moved to the Cortex 2026-09-03 as
+PyAutoCortex `phases/slope_hierarchy/methods_writeup.md`, phase 2, state
+`planned`).
 
 ## Findings (phase 1, 2026-09-02)
 

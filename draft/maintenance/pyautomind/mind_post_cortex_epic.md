@@ -59,10 +59,10 @@ pending-release gate lives only in a live `gh` search on the Brain board.
    reconciled the five stale 2026-08-31-pm `active.md` rows.
 2. **Delete the science residue** —
    `draft/maintenance/pyautomind/mind_post_cortex_p2_science_residue.md`.
-   `cortex-half:` keys, the `jax-inference-profiling` Mind entry, `Lane:` and
-   the `epic-slice`/`theme-sweep` queue kinds, the phantom `experiment/`
-   work-type, five RAL-run prompts → Cortex phases, the all-science am batch
-   record. Touches REFERENCE.md/ROUTING.md/scripts → human PR.
+   the Cortex-half epic keys, the JAX profiling Mind entry, the lane header and
+   the two non-prompt queue kinds, the phantom prototype work-type, the RAL-run
+   prompts that became Cortex phases, the all-science am batch record. Touches
+   REFERENCE.md/ROUTING.md/scripts → human PR.
 3. **PR ledger + pending-release view** —
    `draft/feature/pyautomind/mind_post_cortex_p3_pr_ledger_pending_release.md`
    (assessment gaps 1 and 2).
