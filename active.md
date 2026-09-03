@@ -17,53 +17,6 @@
 - heart-note: acknowledgement covers only these two reasons; a new reason at ship time re-blocks
 - epic: gaussian-deflections-precompute (phase 2; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
 
-## mind-post-cortex-p3-pr-ledger
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/392
-- prompt: active/mind_post_cortex_p3_pr_ledger_pending_release.md
-- issued: 2026-09-03
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/393
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/344
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/195
-- session: local CLI (Fable architect, Opus execution)
-- status: library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoMind#393 first
-  — it carries the REFERENCE.md schema the other two point at — then PyAutoBrain#344, then
-  PyAutoHeart#195; close-out via /prm)
-- worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p3-pr-ledger
-- repos:
-  - PyAutoMind: feature/mind-post-cortex-p3-pr-ledger
-  - PyAutoBrain: feature/mind-post-cortex-p3-pr-ledger
-  - PyAutoHeart: feature/mind-post-cortex-p3-pr-ledger
-- parallel-claim: PyAutoMind + PyAutoBrain are also claimed by two sibling phases of the same epic,
-  and `worktree_check_conflict` exits 1 on both. Known and accepted: mind-post-cortex-p1 (#389) is
-  ledger-only, already landed on main, carries `worktree: -` and holds no checkout — it is awaiting a
-  /prm close-out, not editing anything. mind-post-cortex-p2 (#390) has its own worktree and its diff is
-  disjoint from this one: p2 removes REFERENCE.md's `Lane:` / queue-kind sections and edits the
-  ROUTING/AGENTS/README work-type lists, scripts/status.sh and spawn; this task edits REFERENCE.md's
-  `active.md` schema block, scripts/lifecycle.py and tests, and (in Brain) _intake.py's registry parse
-  and dashboard renderers against p2's _sizing.py work-types and board/_theme.py. Verified by
-  `git merge-tree` against origin/feature/mind-post-cortex-p2-science-residue before ship; second to
-  merge rebases. **Resolved 2026-09-03: p1 and p2 both shipped** (records
-  `complete/2026/09/mind-post-cortex-p1.md`, `complete/2026/09/mind-post-cortex-p2.md`), so this task
-  is the one that rebases — over p2's REFERENCE.md `Lane:`/queue-kind removals, its ROUTING/AGENTS/
-  README work-type edits and, in Brain, its `_sizing.py` and `board/_theme.py` changes. Expect the
-  generated dashboard.md/.html to conflict; re-render rather than resolve by hand, from a cwd inside
-  the Mind checkout and against a `git pull`ed PyAutoBrain main.
-- heart-note: `pyauto-heart readiness --json` was RED when the PRs were opened (checked 2026-09-03,
-  before PR-open). Verbatim reasons:
-  - PyAutoLens: CI failure
-  - release validation FAILED (stage integrate)
-  - PyAutoArray: open PR 11d old
-  None touches this diff — no library source and no release surface; organ docs, one lifecycle script,
-  one skill markdown and their tests. The acknowledgement the human gave earlier today was scoped to
-  gaussian-precompute-p1 and jax-faddeeva-clamp-audit and is NOT carried here: the RED is unacked for
-  this task and merge needs the human's own call. Opened for review only.
-- merge-tree: scratch-merged origin/feature/mind-post-cortex-p2-science-residue into both branches
-  before ship. PyAutoBrain: CLEAN. PyAutoMind: conflicts only in the generated dashboard.md/.html,
-  and a control merge of that same p2 branch into plain origin/main produces the identical conflict —
-  phase 2's own rebase debt against a moved main, not an interaction with this task. This task's three
-  Mind files (REFERENCE.md, scripts/lifecycle.py, tests/test_lifecycle_check.py) are conflict-free.
-- epic: mind-post-cortex (phase 3; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
-
 ## mind-post-cortex-p4-batch-fidelity
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/345
 - prompt: active/mind_post_cortex_p4_batch_plan_fidelity.md
@@ -71,9 +24,12 @@
 - session: local CLI (Fable architect, Opus execution)
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/346
 - library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/394
-- status: library-shipped, awaiting-merge (two PRs open 2026-09-03; PyAutoMind#394 is STACKED on
-  PyAutoMind#393 and targets `feature/mind-post-cortex-p3-pr-ledger` — retarget it to main once #393
-  merges, then merge PyAutoBrain#346 in either order, the two diffs are independent; close-out via /prm)
+- status: library-shipped, awaiting-merge (two PRs open 2026-09-03; PyAutoMind#394 was STACKED on
+  PyAutoMind#393 — **#393 merged 2026-09-03 (`7d3ed60f`) and GitHub retargeted #394 onto `main`
+  itself**, where it now reads CONFLICTING on the generated `dashboard.md`/`.html` only: take
+  upstream, then re-render with `intake --mind . --apply dashboard` from a cwd inside the Mind
+  checkout against a pulled PyAutoBrain main. Then merge PyAutoBrain#346 in either order, the two
+  diffs are independent; close-out via /prm)
 - ci: both PRs green 2026-09-03 — PyAutoBrain#346 pytest 3.12 + 3.13 pass (after a tenant-firewall fix:
   the new comments and fixtures named real repos); PyAutoMind#394 drift + refresh + privacy pass (after
   a shallow-clone fix: `lifecycle check` runs at depth 1 in CI, where "has this path ever existed" is
@@ -91,8 +47,9 @@
   ship/prm skills — neither touches `_batch.py`); and in Mind, `scripts/lifecycle.py`'s batch-record
   legs, `tests/test_lifecycle_check.py`, `queue.md`, `batches/AGENTS.md` and `batches/2026-08-31-pm.md`.
   The Mind branch is BRANCHED FROM and stacked on `feature/mind-post-cortex-p3-pr-ledger`, because
-  phase 3 adds the `cmd_check` tail and the `registry_multi`/`_as_root` helpers this phase extends;
-  its PR targets that branch and is retargeted to main once #393 merges.
+  phase 3 adds the `cmd_check` tail and the `registry_multi`/`_as_root` helpers this phase extends.
+  Resolved 2026-09-03: phase 3 shipped (`complete/2026/09/mind-post-cortex-p3-pr-ledger.md`) and
+  #394 now targets `main`.
 - heart-note: `pyauto-heart readiness --json` was RED when the PRs were opened (checked 2026-09-03,
   before PR-open). Verbatim reasons:
   - PyAutoLens: CI failure

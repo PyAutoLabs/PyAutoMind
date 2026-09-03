@@ -64,9 +64,16 @@ pending-release gate lives only in a live `gh` search on the Brain board.
    entry, the lane header and the two non-prompt queue kinds, the phantom
    prototype work-type; the RAL-run prompts became Cortex phases and the
    all-science am batch record moved to the Cortex.
-3. **PR ledger + pending-release view** —
-   `draft/feature/pyautomind/mind_post_cortex_p3_pr_ledger_pending_release.md`
-   (assessment gaps 1 and 2).
+3. **PR ledger + pending-release view** — **SHIPPED 2026-09-03**, record
+   `complete/2026/09/mind-post-cortex-p3-pr-ledger.md` (issue PyAutoMind#392
+   closed; PyAutoMind#393 `7d3ed60f`, PyAutoBrain#344 `fcb43755`,
+   PyAutoHeart#195 `b91c026a`). Schematised `library-pr:`/`workspace-pr:` as
+   repeatable keys plus `pending-release:`/`release-gate:`, made a row that
+   declares open PRs and names none a `lifecycle.py check` error, gave the
+   dashboard an In-flight PR link per key and a Pending release section, and
+   named `/review_release` step 6 as the one step that clears the chain. Fixed
+   in passing the `--mind <relative>` bug that had every CI render silently
+   dropping the Cortex-gate badges.
 4. **Batch plan fidelity** —
    `draft/feature/pyautobrain/mind_post_cortex_p4_batch_plan_fidelity.md`
    (gaps 3, 4, 5, 7: derive `--awaiting-review`, wire `queue.md` order, merge
