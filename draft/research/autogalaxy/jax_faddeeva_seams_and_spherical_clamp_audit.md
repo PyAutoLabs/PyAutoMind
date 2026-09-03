@@ -17,7 +17,7 @@ Consequence: judge
 Witness: a gradient-continuity probe across the three wofz region seams and a spherical-vs-elliptical(q→1) deflection comparison under jax.jit, with the measured seam jump in d(alpha)/d(theta) and the clamp bias recorded in autolens_profiling/results/notes/numpy_deflections_cpu.md.
 Review-minutes: 20
 Unattended: ready
-Parent: draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md
+Parent: complete/archive/epics/numpy_deflections_cpu_speedup.md
 Filed: 2026-09-02
 
 > Follow-up flagged by the human 2026-09-02 during phase 2 planning of the `numpy-deflections-cpu` epic.
