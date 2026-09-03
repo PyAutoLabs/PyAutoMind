@@ -1039,3 +1039,38 @@ def test_check_stays_quiet_on_a_clean_batch_ledger(tmp_path, monkeypatch,
     _as_root(monkeypatch, tmp_path)
     assert lifecycle.cmd_check(None) == 0
     assert capsys.readouterr().out.strip() == "lifecycle check: OK"
+
+
+def _shallow(monkeypatch, boundary="2026-01-01"):
+    """Make the check believe it is reading a depth-1 clone."""
+    monkeypatch.setattr(lifecycle, "_shallow_boundary", lambda root: boundary)
+
+
+def test_a_shallow_clone_cannot_call_a_member_path_fabricated(tmp_path,
+                                                              monkeypatch):
+    """CI checks out at depth 1, where `git log -- <path>` reports nothing for
+    every prompt written before the boundary — seven absorbed 2026-08-31-pm
+    members would read as fabricated."""
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    _shallow(monkeypatch)
+    assert lifecycle.batch_member_problems(tmp_path) == []
+
+
+def test_a_shallow_clone_says_so_once(tmp_path, monkeypatch):
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    _shallow(monkeypatch)
+    notes = lifecycle.batch_member_notes(tmp_path)
+    assert len(notes) == 1 and "shallow" in notes[0]
+
+
+def test_a_full_clone_has_nothing_to_say_about_shallowness(tmp_path):
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    assert lifecycle.batch_member_notes(tmp_path) == []
+
+
+def test_a_shallow_clone_with_a_resolvable_ledger_is_quiet(tmp_path,
+                                                           monkeypatch):
+    _tree(tmp_path, draft=("feature/widgets/polish.md",))
+    _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
+    _shallow(monkeypatch)
+    assert lifecycle.batch_member_notes(tmp_path) == []

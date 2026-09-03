@@ -1032,9 +1032,12 @@ def _prompt_ever_existed(root: Path, rel: str) -> bool:
     return bool(_git(root, ["log", "--oneline", "-1", "--", rel]))
 
 
-def batch_member_problems(root: Path) -> "list[str]":
-    """Batch members whose prompt path resolves nowhere and never did."""
-    problems: "list[str]" = []
+def unresolved_batch_members(root: Path) -> "list[tuple[Path, str, str]]":
+    """(record, slug, path) for members whose prompt is in no state folder.
+
+    Not yet drift: a prompt absorbed into its completion record is gone from
+    every folder and is nobody's mistake. `batch_member_problems` decides."""
+    out: "list[tuple[Path, str, str]]" = []
     for record in batch_records(root):
         for slug, rel in batch_members(record):
             if (root / rel).exists():
@@ -1044,14 +1047,39 @@ def batch_member_problems(root: Path) -> "list[str]":
                 continue
             if next(iter(sorted((root / "complete").glob(f"**/{name}"))), None):
                 continue
-            if _prompt_ever_existed(root, rel):
-                continue
-            problems.append(
-                f"{record.relative_to(root)}: member `{slug}` cites "
-                f"`{rel}`, which is in no state folder and has never been in "
-                f"this repo — the member's question and witness cannot be read"
-            )
-    return problems
+            out.append((record, slug, rel))
+    return out
+
+
+def batch_member_problems(root: Path) -> "list[str]":
+    """Batch members whose prompt path resolves nowhere and never did.
+
+    Silent in a SHALLOW clone, which cannot answer the question: CI checks out
+    at depth 1 and `git log -- <path>` there reports nothing for every prompt
+    written before the boundary — all seven absorbed 2026-08-31-pm members read
+    as fabricated. `batch_member_notes` says so once instead of failing seven
+    times on a measurement the checkout cannot make."""
+    if _shallow_boundary(root) is not None:
+        return []
+    return [
+        f"{record.relative_to(root)}: member `{slug}` cites `{rel}`, which is "
+        f"in no state folder and has never been in this repo — the member's "
+        f"question and witness cannot be read"
+        for record, slug, rel in unresolved_batch_members(root)
+        if not _prompt_ever_existed(root, rel)
+    ]
+
+
+def batch_member_notes(root: Path) -> "list[str]":
+    """The one line a shallow checkout can honestly say about the above."""
+    if _shallow_boundary(root) is None:
+        return []
+    rows = unresolved_batch_members(root)
+    if not rows:
+        return []
+    return [f"{len(rows)} batch member prompt(s) resolve in no state folder and "
+            f"could not be checked against history — this is a shallow clone "
+            f"(checkout with fetch-depth: 0 to verify them)"]
 
 
 def batch_record_warnings(root: Path) -> "list[str]":
@@ -1934,6 +1962,7 @@ def cmd_check(args) -> int:
     # closed record with no measured review cost is a warning (the number is
     # the human's to write, and its absence costs the budget, not the ledger).
     problems.extend(batch_member_problems(ROOT))
+    warnings.extend(batch_member_notes(ROOT))
     warnings.extend(batch_record_warnings(ROOT))
 
     if problems:
