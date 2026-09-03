@@ -78,6 +78,27 @@
   Mind files (REFERENCE.md, scripts/lifecycle.py, tests/test_lifecycle_check.py) are conflict-free.
 - epic: mind-post-cortex (phase 3; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
+## mind-post-cortex-p4-batch-fidelity
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/345
+- prompt: active/mind_post_cortex_p4_batch_plan_fidelity.md
+- issued: 2026-09-03
+- session: local CLI (Fable architect, Opus execution)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p4-batch-fidelity
+- repos:
+  - PyAutoBrain: feature/mind-post-cortex-p4-batch-fidelity
+  - PyAutoMind: feature/mind-post-cortex-p4-batch-fidelity
+- parallel-claim: PyAutoBrain and PyAutoMind are claimed by three sibling phases of the same epic, so
+  `worktree_check_conflict` exits 1 on both. Known and accepted — the file sets are disjoint. This
+  task owns, in Brain, `agents/conductors/batch/_batch.py` + `agents/conductors/batch/AGENTS.md` +
+  the batch tests (p2 edits `_sizing.py`/`_intake.py`/`_feature.py`, p3 edits `_intake.py` and the
+  ship/prm skills — neither touches `_batch.py`); and in Mind, `scripts/lifecycle.py`'s batch-record
+  legs, `tests/test_lifecycle_check.py`, `queue.md`, `batches/AGENTS.md` and `batches/2026-08-31-pm.md`.
+  The Mind branch is BRANCHED FROM and stacked on `feature/mind-post-cortex-p3-pr-ledger`, because
+  phase 3 adds the `cmd_check` tail and the `registry_multi`/`_as_root` helpers this phase extends;
+  its PR targets that branch and is retargeted to main once #393 merges.
+- epic: mind-post-cortex (phase 4; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
+
 ## gaussian-precompute-p1
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601
 - prompt: active/gaussian_precompute_p1_numpy_memo.md
