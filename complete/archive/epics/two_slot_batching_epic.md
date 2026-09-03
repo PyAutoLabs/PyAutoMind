@@ -528,3 +528,34 @@ a day" sizing assumption that rode along with it goes.
   spec-complete and top of the queue, dispatcher deferred, board re-scoped to a
   dashboard strip, phase 8 half-shipped via the laptop mirror. See "Development
   through use — 2026-08-31".
+
+## Retired from epics.md (2026-09-03)
+
+## two-slot-batching
+- title: Two slots a day — the batch workflow
+- ledger: draft/feature/pyautomind/two_slot_batching_epic.md
+- status: COMPLETE — retired 2026-09-03 (assessment: only two dev slots ever ran;
+  shipped pieces live as standalone infra). Phase 6 status box SHIPPED 2026-09-03 (PyAutoBrain#341, complete/2026/09/batch-status-box.md); phase 2 `collect` SHIPPED 2026-09-02 (PyAutoBrain#332, complete/2026/09/batch-collect.md); `plan` shipped 2026-08-30; `slice` re-filed as draft/feature/pyautobrain/batch_slice.md
+- notes: 11 phased prompts (0a/0b/0c, then 1-8) across draft/feature/pyautomind/,
+  draft/feature/pyautobrain/ and draft/research/euclid/ — issue ONE at a time, no
+  bulk issue queues. Ordered by value, not build dependency: the DISPATCHER
+  (phase 5) is the least important part and is deliberately late, because phases
+  0-4 can all be driven by hand in the slot using the chips the dashboard already
+  renders. Phase 0 (the review-cost model: consequence tier, witness,
+  review-minutes) is the foundation everything else is sized against, and was
+  split into 0a/0b/0c on 2026-08-30 after the Feature Agent derived too-large
+  (score 11) and recommended phasing — the epic's own slicing rule firing on its
+  own prompt. 0b's distribution is a dry run so the infer_autonomy change is
+  reviewable on its numbers before 0c touches 137 files. Phases 3
+  and 4 are doctrine edits marked human-required — phase 3 fixes the ship gate
+  for unattended conditions (Heart at 3am, what a batch launch is, an
+  independent-model adversarial leg, capped decide-and-flag, a
+  `rejected-at-review` outcome); phase 4 is the tier-A auto-merge decision — the
+  human chose 2026-08-30 to SHADOW it for four weeks (window closes 2026-09-27)
+  against a pre-registered rule, and stage-1 rows are already being appended to
+  autonomy_log.md, so the window runs in parallel and is not on the critical
+  path. It is the ONLY phase that reduces total attention rather than re-timing
+  it, and its ceiling is ~17% of throughput (56 of 332 August records touch organ
+  repos only; 125 name no PR at all and are judgement-shaped by nature). Supersedes/absorbs
+  draft/feature/pyautomind/bundle_nightly_claude_pass.md (parked 2026-08-27 for
+  want of a driver — this epic is the driver).
