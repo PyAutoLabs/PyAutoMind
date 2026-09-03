@@ -1,6 +1,7 @@
 # Precompute fixed-geometry Gaussian deflection angles and rescale by the free mass-to-light ratio (numpy + JAX)
 
 Type: feature
+Epic: gaussian-deflections-precompute
 Target: autogalaxy
 Repos:
 - @PyAutoGalaxy
@@ -70,3 +71,23 @@ likelihood pins on the numba cells unchanged; measure numpy and JAX before/after
 `test_autolens` green; no new public API beyond what the cache needs.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-02 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/d3971bba-0e8d-4c4f-bc59-7808e6bfa6cd/scratchpad/intake_gaussian_precompute.md -->
+
+## Epic log
+
+**2026-09-03 — epic born; phases filed.** Design settled after a code survey: two exact levers behind one
+memo, both keyed on **values**, never on model metadata. **L1** — whole-field memo for a fully-fixed mass
+profile of any class, keyed on (class name, constructor-argument values, grid fingerprint). **L2** —
+Gaussian geometry/amplitude split: store the unit-ratio field, return `m2l x field`; `GaussianGradient` is
+not linear in one scalar and takes L1 only. **Grid fingerprint** = `sha256` of `grid.array` bytes + shape +
+`pixel_scales`, because `FitDataset.grids` rebuilds the grid every call, so `id(grid)` would never hit.
+Lives in one private module `autogalaxy/profiles/mass/abstract/deflections_memo.py` (byte cap 256 MB FIFO,
+kill switch `AUTOGALAXY_DEFLECTIONS_MEMO=0`, `memo_stats()` counters), hooked in
+`MassProfile.deflections_yx_2d_from` *above* `@transform` so the stored field is the rotated-back field for
+the untransformed grid. Numpy path first; under JAX the fixed geometry is concrete and only `m2l` is a
+tracer, so the unit field is computed at trace time with scipy and embedded as a constant, removing the
+Faddeeva subgraph from the jaxpr. Memo precedent: `PyAutoArray .../imaging_numba/sparse.py:20-51`.
+
+Three phase prompts:
+- `draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md` — numpy memo + `_wofz` call-count witness.
+- `draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md` — JAX trace-time constant.
+- `draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md` — SLaM / test_autolens / workspace sweep.
