@@ -122,8 +122,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/600
 - prompt: active/jax_faddeeva_seams_and_spherical_clamp_audit.md
 - issued: 2026-09-03
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/603
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/215
 - session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: library-dev
+- status: library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoGalaxy → autolens_profiling; close-out via /prm)
 - worktree: ~/Code/PyAutoLabs-wt/jax-faddeeva-clamp-audit
 - repos:
   - PyAutoGalaxy: feature/jax-faddeeva-clamp-audit
