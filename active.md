@@ -5,7 +5,8 @@
 - prompt: active/positions_threshold_knife_edge_repin.md
 - issued: 2026-09-03
 - session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: library-dev
+- status: library-shipped, awaiting-merge (corrective PR open 2026-09-03; /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/722
 - worktree: ~/Code/PyAutoLabs-wt/positions-threshold-repin
 - repos:
   - PyAutoLens: feature/positions-threshold-repin

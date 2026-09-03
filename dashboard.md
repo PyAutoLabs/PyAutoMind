@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/positions_threshold_knife_edge_repin.md">Re-pin the knife-edge positions_threshold tests after PyAutoArray#519's exact grid transform</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/721">issue #721</a> — issued 2026-09-03 — library-dev</summary>
+<details><summary>📋 <a href="active/positions_threshold_knife_edge_repin.md">Re-pin the knife-edge positions_threshold tests after PyAutoArray#519's exact grid transform</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/721">issue #721</a> — issued 2026-09-03 — library-shipped, awaiting-merge (corrective PR open 2026-09-03; /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/722">PyAutoLens#722</a></summary>
 
 ```
 /start_dev active/positions_threshold_knife_edge_repin.md
