@@ -254,16 +254,21 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 ## Shadow window — the tier-`notify` merge decision
 
-Opened **2026-08-30**, closes **2026-09-27** (extend rather than lower the bar if
-fewer than 40 candidates land). Protocol, power calculation and the
-**pre-registered decision rule** live in
-`draft/feature/pyautobrain/batch_notify_tier_merge.md` — read it before
+Opened **2026-08-30**. **RE-OPENED 2026-09-03**: the nominal 2026-09-27 close is
+void. The table below holds **2 rows** against the **40** the pre-registered rule
+requires, and nothing has fed it since 2026-08-31 — the append was anchored to a
+batch review slot, and the batch workflow was retired on 2026-09-03
+(`complete/archive/epics/two_slot_batching_epic.md`). The rule's own instruction
+governs: *extend the window; do not lower the bar*. The window now runs to **40
+candidates**, not to a date, and re-opens from the first row appended by `/prm`
+close-out. Protocol, power calculation and the **pre-registered decision rule**
+live in `draft/feature/pyautobrain/batch_notify_tier_merge.md` — read it before
 appending, and before interpreting anything here.
 
-In one line: for four weeks, tier-`notify` work still waits for the human as it
-always has, but the gate's verdict and the human's action are both recorded, so
-the question "how often would auto-merge have been wrong on this organism's own
-work?" is answered with data rather than intuition.
+In one line: while the window runs, tier-`notify` work still waits for the human
+as it always has, but the gate's verdict and the human's action are both
+recorded, so the question "how often would auto-merge have been wrong on this
+organism's own work?" is answered with data rather than intuition.
 
 One row per tier-`notify` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged`.
@@ -273,7 +278,7 @@ removed or weakened test, a renamed public thing, a docs claim that was wrong.
 Typos, wording, formatting and comment polish are not.
 
 `stage: 1` rows are graded on the four-leg gate plus the witness; `stage: 2` rows
-add phase 3's independent-model adversarial leg. Never pool the two.
+add the independent-model adversarial leg. Never pool the two.
 
 | date | task | tier | gate (tests/smoke/review/heart/witness[/adversary]) | human action | stage |
 |------|------|------|-----------------------------------------------------|--------------|-------|

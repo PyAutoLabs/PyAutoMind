@@ -17,6 +17,7 @@ Unattended: ready
 Epic: mind-post-cortex
 Phase: 1
 Filed: 2026-09-03
+Issued: 2026-09-03
 
 Phase 1 of `mind-post-cortex` (ledger `draft/maintenance/pyautomind/mind_post_cortex_epic.md`).
 Everything here is ledger material (`draft/`, `active/`, `complete/`, root

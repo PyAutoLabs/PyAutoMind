@@ -1,3 +1,28 @@
+## silence-colab-cli-message
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/156 (closed, completed)
+- completed: 2026-09-01
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/157 (MERGED 2026-09-01T19:34:58Z, 6fd0c977)
+- batch: 2026-08-31-pm — member `autonerves-colab-silence`, tier `notify`, 0 review-minutes; `--auto`, effective level safe (header safe, feature @ small cap safe); `batches/reviews/2026-08-31-pm.md` records `decision: UNREVIEWED`
+- shipped: `setup_colab()` no longer prints its "not running in Colab" notice on a plain
+  CLI run — the message only ever helped a Colab user, and on every workspace script run
+  outside Colab it was noise at the top of the log. Behaviour-only stdout change; no
+  public API touched.
+- verified: PyAutoNerves full suite 169 passed; 3/3 CI checks green on the merged head;
+  witness test green both halves (silent off-Colab, message intact under a live IPython
+  9.17 kernel). Adversary leg (independent model) CLEAN with four non-blocking
+  observations. Downstream n/a — no removed, renamed or re-signatured symbols.
+- traps: shipped from a web-github container where Heart could not measure CI at all
+  (`ci_status.sh` shells to `gh`, absent there) — the YELLOW was acknowledged at batch
+  dispatch as measurement blindness, not a measured red. Same acknowledgement rode all
+  five members of this slot.
+- notes: **Ledger reconciliation 2026-09-03.** The PR merged 2026-09-01 but the
+  `active.md` row was never retired — the 2026-08-31-pm slot's members were merged one
+  at a time through `/prm` and the batch had no close-out of its own. This record was
+  written by `mind-post-cortex` phase 1 (PyAutoMind#389) from the merged PR, the batch
+  record and the row it replaces; it is a reconciliation record, not a fresh ship report.
+
+## Original prompt
+
 # Silence the non-Colab setup_colab() message on CLI runs
 
 Type: feature

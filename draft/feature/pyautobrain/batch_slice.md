@@ -1,4 +1,4 @@
-# Batch phase 2b — `batch slice`: the decomposition pass
+# `batch slice` — the decomposition pass for `needs-slicing` prompts
 
 Type: feature
 Target: pyautobrain
@@ -15,26 +15,28 @@ Consequence: judge
 Witness: `pyauto-brain batch slice <needs-slicing prompt>` on a fixture parent proposes two to four children each carrying its own `Witness:`, refuses a child with none ("a smaller judge task, not a slice"), and under `--apply` writes the child prompts plus an `epics.md` entry without renaming or retiring the parent
 Review-minutes: 15
 Unattended: ready
-Epic: two-slot-batching
-Phase: 2
-Parent: draft/feature/pyautomind/two_slot_batching_epic.md
 Filed: 2026-09-02
 
-Re-filed from `batch_conductor.md` (Batch phase 2 — plan, slice, collect) when
-`collect` shipped on its own: PyAutoBrain#332, record
-`complete/2026/09/batch-collect.md`. `plan` shipped 2026-08-30 and `collect`
-2026-09-02; `slice` is the phase's remaining verb and is the only thing this
-prompt covers. The conductor is `agents/conductors/batch/_batch.py`; the
-judgement belongs to the sizing faculty (`agents/faculties/sizing/`), and the
-conductor writes files only under `--apply`.
+**A prompt too large to run unattended is not a scheduling problem, it is a
+decomposition problem.** `AUTONOMY.md` and the sizing faculty have named
+`Unattended: needs-slicing` since inception, and nothing has ever acted on it:
+the human either splits the prompt by hand or the task runs too long and
+compacts. This is the missing pass, and it is wanted whenever a prompt is
+graded — from `/intake` the moment a new prompt sizes as `needs-slicing`, or
+standalone against any prompt already carrying the grade.
+
+It lives beside `plan` and `collect` on the conductor
+(`agents/conductors/batch/_batch.py`, PyAutoBrain#332 shipped `collect`
+2026-09-02; `plan` shipped 2026-08-30), which is where the prompt-writing
+machinery already is; the *judgement* belongs to the sizing faculty
+(`agents/faculties/sizing/`), and the conductor writes files only under
+`--apply`.
 
 ## `batch slice <prompt>` — the decomposition pass
 
-The pass `AUTONOMY.md` and the sizing faculty have named since inception and
-which has never been built. Input: a `needs-slicing` prompt. Output: two to four
-children with explicit seams, plus an `epics.md` entry if the parent is not
-already an epic. The judgement belongs to the faculty; the conductor writes the
-files under `--apply`.
+Input: a `needs-slicing` prompt. Output: two to four children with explicit
+seams, plus an `epics.md` entry if the parent is not already an epic — phases
+are ordered, so a sliced parent is an epic by construction.
 
 Seam rules, in priority order:
 
@@ -51,7 +53,8 @@ Never rename or retire the parent without the human saying so.
 ## Done when
 
 - `slice` runs offline and stdlib-only, like every Brain entrypoint, beside
-  `plan` and `collect`.
+  `plan` and `collect`, and `/intake` offers it when a freshly-filed prompt
+  sizes as `needs-slicing`.
 - Tests: a slice proposal rejected for having no witness; two-to-four children
   with seams; the parent untouched; `--apply` writes the files and the
   `epics.md` entry.
