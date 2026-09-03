@@ -8,6 +8,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p2
 - repos:
+  - PyAutoArray: feature/gaussian-precompute-p2
   - PyAutoGalaxy: feature/gaussian-precompute-p2
   - autolens_profiling: feature/gaussian-precompute-p2
 - heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge) — exact reasons from `pyauto-heart readiness --json`:
