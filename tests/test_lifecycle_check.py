@@ -759,3 +759,124 @@ def test_an_undeclared_draft_still_gets_the_ambiguous_advisory(tmp_path):
     notes = lifecycle.draft_issue_notes(tmp_path, fetch=_states({GATE_ISSUE: "closed"}))
     assert len(notes) == 1
     assert "shipped, or newly unblocked?" in notes[0]
+
+
+# --------------------------------------------------------------------------- #
+# the PR ledger: `library-pr:` / `workspace-pr:` / `pending-release:`
+#
+# The keys were written by ship_library and read by /prm long before anything
+# validated them, so a row could declare `status: awaiting-merge` and name no
+# PR at all. Fictional repos throughout (see the module docstring).
+# --------------------------------------------------------------------------- #
+def _as_root(monkeypatch, root: Path):
+    """Point `cmd_check`'s module-level paths at a fixture tree.
+
+    `check` reads ROOT/ACTIVE_MD/COMPLETE_DIR/ACTIVE_DIR as globals (it is a
+    CLI, not a library), so a hermetic run has to rebind them."""
+    monkeypatch.setattr(lifecycle, "ROOT", root)
+    monkeypatch.setattr(lifecycle, "ACTIVE_MD", root / "active.md")
+    monkeypatch.setattr(lifecycle, "ACTIVE_DIR", root / "active")
+    monkeypatch.setattr(lifecycle, "COMPLETE_DIR", root / "complete")
+    monkeypatch.setattr(lifecycle, "ARCHIVE_DIR", root / "complete" / "archive")
+
+
+GADGET_PR = "https://github.com/ExampleOrg/Gadgets/pull/12"
+WIDGET_PR = "https://github.com/ExampleOrg/Widgets/pull/34"
+SPROCKET_PR = "https://github.com/ExampleOrg/Sprockets/pull/56"
+
+
+def test_a_row_claiming_open_prs_and_naming_none_is_drift(tmp_path):
+    _tree(tmp_path, registries={
+        "active.md": ("# Active\n\n## flywheel-rebuild\n"
+                      "- status: library-shipped, awaiting-merge\n")})
+    problems = lifecycle.pr_key_problems(tmp_path)
+    assert len(problems) == 1
+    assert "flywheel-rebuild" in problems[0]
+    assert "library-pr" in problems[0]
+
+
+def test_the_pr_keys_are_repeatable_one_line_each(tmp_path):
+    """A task may ship several PRs of one kind; `registry_entries` keeps only
+    the first occurrence of a key, so the check needs its own repeat-tolerant
+    parse or it would read a three-PR row as a one-PR row."""
+    _tree(tmp_path, registries={
+        "active.md": ("# Active\n\n## flywheel-rebuild\n"
+                      "- status: library-shipped, awaiting-merge\n"
+                      f"- library-pr: {GADGET_PR}\n"
+                      f"- library-pr: {WIDGET_PR}\n"
+                      f"- workspace-pr: {SPROCKET_PR}\n")})
+    assert lifecycle.pr_key_problems(tmp_path) == []
+    _, multi = lifecycle.registry_multi(tmp_path / "active.md")[0]
+    assert lifecycle.pr_urls(multi["library-pr"]) == [GADGET_PR, WIDGET_PR]
+
+
+def test_the_older_single_line_comma_form_still_counts(tmp_path):
+    """Rows written before the key was schematised must not start failing."""
+    _tree(tmp_path, registries={
+        "active.md": ("# Active\n\n## flywheel-rebuild\n"
+                      "- status: shipped\n"
+                      f"- library-pr: {GADGET_PR}, {WIDGET_PR}\n")})
+    assert lifecycle.pr_key_problems(tmp_path) == []
+
+
+def test_a_row_still_in_development_needs_no_pr_key(tmp_path):
+    """The rule keys off the status DECLARING the PRs exist — an in-flight row
+    that has not shipped anything yet is not withholding a thing."""
+    _tree(tmp_path, registries={
+        "active.md": ("# Active\n\n## flywheel-rebuild\n"
+                      "- status: library-dev\n")})
+    assert lifecycle.pr_key_problems(tmp_path) == []
+
+
+def test_the_pr_key_rule_is_wired_into_check(tmp_path, monkeypatch, capsys):
+    """`check` must exit 1 on it — a rule nothing runs is decoration."""
+    _tree(tmp_path, registries={
+        "active.md": ("# Active\n\n## flywheel-rebuild\n"
+                      "- status: awaiting-merge\n")})
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(None) == 1
+    assert "flywheel-rebuild" in capsys.readouterr().out
+
+
+def _record(root: Path, rel: str, body: str):
+    p = root / "complete" / rel
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(body)
+    return p
+
+
+def test_a_long_uncleared_pending_release_is_a_warning_not_drift(tmp_path):
+    _record(tmp_path, "2026/01/flywheel_rebuild.md",
+            "## flywheel-rebuild\n"
+            "- completed: 2026-01-01\n"
+            f"- pending-release: Gadgets@{GADGET_PR}\n")
+    notes = lifecycle.pending_release_problems(tmp_path, today="2026-03-01")
+    assert len(notes) == 1 and "uncleared" in notes[0]
+    # Fresh enough is silent: the key's whole meaning is "not released yet".
+    assert lifecycle.pending_release_problems(tmp_path, today="2026-01-10") == []
+
+
+def test_the_appended_original_prompt_is_not_read_as_the_records_own_fields(tmp_path):
+    """`lifecycle.py record` appends the starting prompt verbatim, and that
+    prompt may quote another task's keys. Reading past the boundary would
+    invent a pending release the record never had."""
+    _record(tmp_path, "2026/01/flywheel_rebuild.md",
+            "## flywheel-rebuild\n"
+            "- completed: 2026-01-01\n"
+            "- summary: shipped clean\n"
+            "\n## Original prompt\n\n"
+            f"- pending-release: Gadgets@{GADGET_PR}\n")
+    assert lifecycle.pending_release_problems(tmp_path, today="2026-06-01") == []
+
+
+def test_check_reports_a_stale_pending_release_and_still_exits_zero(tmp_path,
+                                                                    monkeypatch,
+                                                                    capsys):
+    _record(tmp_path, "2026/01/flywheel_rebuild.md",
+            "## flywheel-rebuild\n"
+            "- completed: 2026-01-01\n"
+            f"- pending-release: Gadgets@{GADGET_PR}\n")
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(None) == 0
+    out = capsys.readouterr().out
+    assert "warning" in out and "pending-release" in out

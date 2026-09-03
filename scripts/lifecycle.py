@@ -67,6 +67,7 @@ environment, including a bare template checkout.
 from __future__ import annotations
 
 import argparse
+import datetime as _dt
 import re
 import sys
 from pathlib import Path
@@ -815,6 +816,152 @@ def pr_problems(root: Path, fetch=None) -> "list[str]":
             )
         elif state != "open":
             problems.append(f"{reg}: {slug}: could not read PR state ({state}): {url}")
+    return problems
+
+
+# --------------------------------------------------------------------------- #
+# the PR ledger
+#
+# `library-pr:` / `workspace-pr:` were written by ship_library and read by /prm
+# for months before anything validated them: they were absent from the
+# `active.md` schema, so a row could declare `status: awaiting-merge` and name
+# no PR at all, and /prm would have nothing to merge. The keys are REPEATABLE —
+# one task may open several PRs of a kind — which is why they need their own
+# parse: `registry_entries` keeps the first occurrence of a key, matching how a
+# reader scans a block, and would silently drop the rest.
+#
+# The chain these keys carry is documented once in REFERENCE.md ("The PR keys"
+# and "The pending-release chain"); this module only enforces it.
+# --------------------------------------------------------------------------- #
+PR_KEYS = ("library-pr", "workspace-pr")
+
+# A `status:` containing any of these declares the PRs exist, so the row must
+# say where they are. Matched case-insensitively against the status line only.
+SHIP_STATUS_TOKENS = ("awaiting-merge", "pr open", "pr-open", "shipped")
+
+# How long a `complete/` record may keep an uncleared `pending-release:` before
+# the check mentions it. A warning, never an error: the library may simply not
+# have been released yet, which is the normal state of the key.
+PENDING_RELEASE_STALE_DAYS = 30
+
+PENDING_RELEASE_RE = re.compile(r"^([\w.-]+)@(\S+)$")
+
+
+def registry_multi(path: Path) -> "list[tuple[str, dict[str, list[str]]]]":
+    """[(slug, {key: [value, ...]})] — every occurrence of every key.
+
+    The repeat-tolerant twin of `registry_entries`. Used only where a key is
+    legitimately repeatable (the PR keys, `pending-release:`, `release-gate:`);
+    everything else should keep reading `registry_entries`, whose first-wins
+    rule matches how a human scans the block."""
+    entries: "list[tuple[str, dict[str, list[str]]]]" = []
+    if not path.exists():
+        return entries
+    fields: "dict[str, list[str]]" = {}
+    slug = None
+    for line in path.read_text(errors="replace").splitlines():
+        m = H2_RE.match(line)
+        if m:
+            if slug is not None:
+                entries.append((slug, fields))
+            slug, fields = _slugify_h2(m.group(1)), {}
+            continue
+        if slug is None:
+            continue
+        f = FIELD_RE.match(line)
+        if f:
+            fields.setdefault(f.group(1).strip(), []).append(f.group(2).strip())
+    if slug is not None:
+        entries.append((slug, fields))
+    return entries
+
+
+def pr_urls(values: "list[str]") -> "list[str]":
+    """Every PR URL across a repeated key's values.
+
+    Both written forms collapse here: one line per URL (the schema's preferred
+    shape) and the older single line of `<url>, <url>`. Trailing prose is
+    ignored — the URLs are matched, not the field."""
+    out: "list[str]" = []
+    for value in values:
+        for m in PR_URL_RE.finditer(value):
+            if m.group(0) not in out:
+                out.append(m.group(0))
+    return out
+
+
+def pr_key_problems(root: Path) -> "list[str]":
+    """`active.md` rows that declare open/shipped PRs and name none.
+
+    The row says `/prm` has work to do and then withholds the only thing it
+    needs — a contradiction inside one entry, which is exactly what this check
+    is for, so it is drift and not a warning."""
+    problems: "list[str]" = []
+    for slug, multi in registry_multi(root / "active.md"):
+        status = " ".join(multi.get("status", [])).lower()
+        if not any(tok in status for tok in SHIP_STATUS_TOKENS):
+            continue
+        if any(pr_urls(multi.get(key, [])) for key in PR_KEYS):
+            continue
+        problems.append(
+            f"active.md: {slug}: status declares open/shipped PRs but the row "
+            f"carries no `library-pr:`/`workspace-pr:` — /prm has nothing to "
+            f"merge (REFERENCE.md \"The PR keys\")"
+        )
+    return problems
+
+
+def _record_fields(path: Path) -> "dict[str, list[str]]":
+    """The record's own fields — everything above `## Original prompt`.
+
+    `lifecycle.py record` appends the task's starting prompt verbatim, and that
+    prompt may itself quote `library-pr:` lines from some other task. Reading
+    past the boundary would attribute them to this record."""
+    text = path.read_text(errors="replace")
+    head = re.split(r"^##\s+Original prompt\s*$", text, maxsplit=1,
+                    flags=re.M | re.I)[0]
+    fields: "dict[str, list[str]]" = {}
+    for line in head.splitlines():
+        f = FIELD_RE.match(line)
+        if f:
+            fields.setdefault(f.group(1).strip(), []).append(f.group(2).strip())
+    return fields
+
+
+def pending_release_problems(root: Path,
+                             today: "str | None" = None) -> "list[str]":
+    """`complete/` records whose `pending-release:` is long uncleared.
+
+    A warning by construction: the key means "merged, not yet on PyPI", which
+    is a legitimate state for as long as the release takes. What it stops being
+    legitimate at is a month — by then either the release happened and
+    `/review_release` never swept the ledger, or the release is itself the
+    problem."""
+    complete = root / "complete"
+    archive = complete / "archive"
+    if not complete.is_dir():
+        return []
+    now = _dt.date.fromisoformat(today) if today else _dt.date.today()
+    problems: "list[str]" = []
+    for f in sorted(complete.rglob("*.md")):
+        if archive in f.parents or f.name == "index.md":
+            continue
+        fields = _record_fields(f)
+        links = fields.get("pending-release") or []
+        if not links:
+            continue
+        dates = fields.get("completed") or []
+        m = ISO_DATE_RE.search(dates[0]) if dates else None
+        if not m:
+            continue
+        age = (now - _dt.date.fromisoformat(m.group(1))).days
+        if age < PENDING_RELEASE_STALE_DAYS:
+            continue
+        problems.append(
+            f"{f.relative_to(root)}: `pending-release:` still uncleared "
+            f"{age}d after completion ({', '.join(links)}) — if the release "
+            f"happened, /review_release never swept the ledger"
+        )
     return problems
 
 
@@ -1661,11 +1808,25 @@ def cmd_check(args) -> int:
         for f in active_strays(ROOT)
     )
 
+    # A row that declares its PRs are open and names none contradicts itself,
+    # so it is drift like the rest. An uncleared `pending-release:` does not:
+    # the key MEANS "not released yet", and a library can legitimately sit
+    # unreleased for weeks — reported, exit code untouched.
+    problems.extend(pr_key_problems(ROOT))
+    warnings: "list[str]" = list(pending_release_problems(ROOT))
+
     if problems:
         print("lifecycle check: DRIFT")
         for p in problems:
             print(f"  - {p}")
+        for w in warnings:
+            print(f"  ! warning: {w}")
         return 1
+    if warnings:
+        print(f"lifecycle check: OK ({len(warnings)} warning(s))")
+        for w in warnings:
+            print(f"  ! warning: {w}")
+        return 0
     print("lifecycle check: OK")
     return 0
 
