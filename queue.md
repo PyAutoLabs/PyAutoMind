@@ -45,15 +45,15 @@ endpoint, or the human at the machine. A cloud session detects its own lane and
 will not plan the other one — it reports the count instead, so nothing is
 silently dropped. One queue holds both lanes; the planner filters.
 
-## 1. Retire parked-at-ship for batch members
+## 1. Retire parked-at-ship under `--auto`
 - kind: prompt
 - ref: draft/feature/pyautobrain/batch_no_park_at_ship.md
-- note: human 2026-08-31 pm review — "send off a batch and don't think about it again"; doctrine edit, do together
+- note: human 2026-08-31 — "the parked thing is an annoying middle ground which requires human time"; an effective-supervised `--auto` run decides-and-flags at ship sign-off instead of parking, since the run already ends at PR-open. AUTONOMY.md doctrine edit, human-required
 
 ## 2. Carried members formalisation
-- kind: prompt
-- ref: draft/feature/pyautomind/batch_carry_forward.md
-- note: human 2026-08-31 pm review — long-running members roll to the next batch automatically; adopted mid-slot, formalise
+- kind: retired
+- shelved-as: complete/archive/shelved/batch_carry_forward.md (2026-09-03)
+- note: the Cortex half shipped (`_batch.py carried_members`, `carried:`/`carried-from:` on the Cortex batch record); the dev half retired with the two-slot-batching epic
 
 ## 3. Subhalo validation follow-up wave
 - kind: retired
@@ -73,9 +73,9 @@ silently dropped. One queue holds both lanes; the planner filters.
 - note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound?
 
 ## 6. Batches strip on the dashboard
-- kind: prompt
-- ref: draft/feature/pyautobrain/batch_board.md
-- note: human 2026-08-31 — important, do soon; strip above "Start here", not a standalone surface
+- kind: retired
+- shipped-as: PyAutoBrain#341 → complete/2026/09/batch-status-box.md (2026-09-03)
+- note: shipped as the batch status box on both dashboards; the prompt was folded into that record (2b5af675) and `ref:` no longer resolves — reconciled 2026-09-03
 
 ## 7. Witness campaign
 - kind: prompt

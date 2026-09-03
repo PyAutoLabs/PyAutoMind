@@ -10,13 +10,10 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: SHELVED 2026-09-03 — the retired batch epic's own ledger calls the dispatcher "dead — do not resurrect"; the human dispatches by tapping the dashboard's chips and never needed it (ledger complete/archive/epics/two_slot_batching_epic.md)
 Consequence: judge
 Review-minutes: 25
 Unattended: ready
-Epic: two-slot-batching
-Phase: 5
-Parent: draft/feature/pyautomind/two_slot_batching_epic.md
 Filed: 2026-08-30
 
 The least important phase in the epic, deliberately scheduled late. Until it

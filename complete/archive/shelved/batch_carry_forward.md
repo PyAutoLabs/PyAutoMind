@@ -10,11 +10,10 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: high
-Status: formalised
+Status: SHELVED 2026-09-03 — the Cortex half shipped (`_batch.py carried_members`, `carried:`/`carried-from:` on the Cortex batch record); the dev half retired with the batch workflow (ledger complete/archive/epics/two_slot_batching_epic.md)
 Consequence: judge
 Review-minutes: 10
 Unattended: ready
-Epic: two-slot-batching
 Filed: 2026-08-31
 
 2026-09-02: the science side is formalised by cortex-birth phase 5 (`carried:`

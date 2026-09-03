@@ -10,13 +10,10 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: SHELVED 2026-09-03 — premise falsified by the human ("I'm very in the loop"); the usage-window fields it would spend against were n/a in both batch runs that ever happened (ledger complete/archive/epics/two_slot_batching_epic.md)
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
-Epic: two-slot-batching
-Phase: 7
-Parent: draft/feature/pyautomind/two_slot_batching_epic.md
 Filed: 2026-08-30
 
 **Decided 2026-08-30: the target is 100% of the weekly Claude allowance.** That

@@ -11,7 +11,7 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: normal
-Status: parked
+Status: SHELVED 2026-09-03 — parked since 2026-08-27 for want of a driver; its named driver, the batch epic, was retired 2026-09-03 without ever driving it (ledger complete/archive/epics/two_slot_batching_epic.md)
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
