@@ -18,6 +18,7 @@ Unattended: ready
 Epic: cortex-checkin
 Phase: 1
 Filed: 2026-09-03
+Issued: 2026-09-03
 
 Phase 1 of `cortex-checkin` (ledger `draft/maintenance/pyautocortex/cortex_checkin_epic.md`).
 Two PRs: PyAutoCortex (schema, scripts, workflows, tests, docs) and PyAutoBrain

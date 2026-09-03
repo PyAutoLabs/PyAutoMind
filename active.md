@@ -1,5 +1,17 @@
 # Active Tasks
 
+## cortex-checkin-p1-shed-review-slot
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/9
+- prompt: active/cortex_checkin_p1_shed_review_slot.md
+- issued: 2026-09-03
+- session: claude --resume session_013HsZA1ufn3msgPiDFxEXa6
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-checkin-p1-shed-review-slot
+- repos:
+  - PyAutoCortex: feature/cortex-checkin-p1-shed-review-slot
+  - PyAutoBrain: feature/cortex-checkin-p1-shed-review-slot
+- epic: cortex-checkin (phase 1; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md)
+
 ## positions-threshold-repin
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/721
 - prompt: active/positions_threshold_knife_edge_repin.md
