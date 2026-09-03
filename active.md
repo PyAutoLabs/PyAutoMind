@@ -145,7 +145,12 @@
 - prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md
 - issued: 2026-09-02
 - session: local CLI (Fable architect, Opus execution) — claude --resume session_01BhD2t684rJZi1tT34u2KgR
-- status: workspace-dev
+- status: pr-open — https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50 (opened 2026-09-03; workspace-only, no pending-release, merge is human via /prm). Ship gate: pytest 72 passed, smoke 9/9. Both RAL routes COMPLETED (GPU 1 h 14 min on an A100, two-stage CPU 3 h 17 min on 8 cores).
+- heart-ack:
+  - "PyAutoLens: CI failure"
+  - "release validation FAILED (stage integrate)"
+  - "PyAutoArray: open PR 11d old"
+- follow-ups filed: draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md (measured 74 min/lens vs the documented ~10 min; carries the apply_sparse_operator else-branch verdict), draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md (control test found no hang; boundary kept as the conservative default)
 - worktree: ~/Code/PyAutoLabs-wt/euclid-cpu-two-stage-route
 - repos:
   - euclid_strong_lens_modeling_pipeline (feature/euclid-cpu-two-stage-route)
