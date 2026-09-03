@@ -1,5 +1,18 @@
 # Active Tasks
 
+## gaussian-precompute-p3
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/528
+- prompt: active/gaussian_precompute_p3_downstream_sweep.md
+- issued: 2026-09-03
+- session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p3
+- repos:
+  - autolens_workspace: feature/gaussian-precompute-p3
+- parallel-claim: autolens_workspace also claimed by image-source-mappings-p3 (#525); file sets disjoint (that branch touches features/pixelization/*, smoke_tests.txt, workspace_index.json, tutorials; this task touches only scripts/**/mass_stellar_dark/slam.py + its notebook) — human-approved 2026-09-03; second to merge rebases
+- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge), exact reasons from pyauto-heart readiness --json: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old"; "PyAutoLens: CI failure" (cleared on main by PyAutoLens#722, snapshot may lag) — a further new reason at ship time re-blocks
+- epic: gaussian-deflections-precompute (phase 3; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
+
 ## cortex-checkin-p1-shed-review-slot
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/9
 - prompt: active/cortex_checkin_p1_shed_review_slot.md

@@ -15,8 +15,9 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: formalised
+Status: active
 Filed: 2026-09-03
+Issued: 2026-09-03
 Parent: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
 
 > Phase 3 of the `gaussian-deflections-precompute` epic — ledger
