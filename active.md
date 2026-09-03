@@ -1,5 +1,21 @@
 # Active Tasks
 
+## gaussian-precompute-p2
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/604
+- prompt: active/gaussian_precompute_p2_jax_trace_time_constant.md
+- issued: 2026-09-03
+- session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p2
+- repos:
+  - PyAutoGalaxy: feature/gaussian-precompute-p2
+  - autolens_profiling: feature/gaussian-precompute-p2
+- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge) — exact reasons from `pyauto-heart readiness --json`:
+  - release validation FAILED (stage integrate)
+  - PyAutoArray: open PR 11d old
+- heart-note: acknowledgement covers only these two reasons; a new reason at ship time re-blocks
+- epic: gaussian-deflections-precompute (phase 2; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
+
 ## mind-post-cortex-p1
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/389
 - prompt: active/mind_post_cortex_p1_retire_batch_epic.md
