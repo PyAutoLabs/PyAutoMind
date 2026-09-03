@@ -122,3 +122,14 @@ epic, never picked standalone.
   trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
   complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home
   autolens_profiling/scripts/lens/deflections/.
+
+## mind-post-cortex
+- title: Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger
+- ledger: draft/maintenance/pyautomind/mind_post_cortex_epic.md
+- notes: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching
+  epic keeping witness campaign / tier-A shadow / slice as standalone prompts and reconcile the
+  five stale 2026-08-31-pm active.md rows; (2) delete the science residue (cortex-half keys,
+  jax-inference-profiling entry, Lane:/epic-slice/theme-sweep, phantom experiment/ work-type,
+  five RAL prompts → Cortex phases, am batch record); (3) schematise library-pr/workspace-pr +
+  PR column + pending-release view; (4) batch plan fidelity (derived backpressure, queue order,
+  merge order, batch-record drift checks); (5) Heart freeze flag. Issue ONE at a time, in order.
