@@ -15,9 +15,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Filed: 2026-09-02
-Issued: 2026-09-02
+Issued: 2026-09-03
 
 > Phase 3 of the `numpy-deflections-cpu` epic — ledger
 > `draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md`, which holds the measured before-table,
