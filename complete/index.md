@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1266 records across 8 buckets.
+1267 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -142,6 +142,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
 - [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
+- [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
 - [numba-vs-jax-sparse](2026/09/numba-vs-jax-sparse.md)
 - [numpy-deflections-p1](2026/09/numpy-deflections-p1.md)
