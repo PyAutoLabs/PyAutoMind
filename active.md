@@ -36,6 +36,29 @@
   this task and merge needs the human's own call.
 - epic: mind-post-cortex (phase 2; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
+## mind-post-cortex-p3-pr-ledger
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/392
+- prompt: active/mind_post_cortex_p3_pr_ledger_pending_release.md
+- issued: 2026-09-03
+- session: local CLI (Fable architect, Opus execution)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p3-pr-ledger
+- repos:
+  - PyAutoMind: feature/mind-post-cortex-p3-pr-ledger
+  - PyAutoBrain: feature/mind-post-cortex-p3-pr-ledger
+  - PyAutoHeart: feature/mind-post-cortex-p3-pr-ledger
+- parallel-claim: PyAutoMind + PyAutoBrain are also claimed by two sibling phases of the same epic,
+  and `worktree_check_conflict` exits 1 on both. Known and accepted: mind-post-cortex-p1 (#389) is
+  ledger-only, already landed on main, carries `worktree: -` and holds no checkout — it is awaiting a
+  /prm close-out, not editing anything. mind-post-cortex-p2 (#390) has its own worktree and its diff is
+  disjoint from this one: p2 removes REFERENCE.md's `Lane:` / queue-kind sections and edits the
+  ROUTING/AGENTS/README work-type lists, scripts/status.sh and spawn; this task edits REFERENCE.md's
+  `active.md` schema block, scripts/lifecycle.py and tests, and (in Brain) _intake.py's registry parse
+  and dashboard renderers against p2's _sizing.py work-types and board/_theme.py. Verified by
+  `git merge-tree` against origin/feature/mind-post-cortex-p2-science-residue before ship; second to
+  merge rebases.
+- epic: mind-post-cortex (phase 3; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
+
 ## gaussian-precompute-p1
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601
 - prompt: active/gaussian_precompute_p1_numpy_memo.md

@@ -18,6 +18,7 @@ Unattended: ready
 Epic: mind-post-cortex
 Phase: 3
 Filed: 2026-09-03
+Issued: 2026-09-03
 
 Phase 3 of `mind-post-cortex` — assessment gaps 1 and 2. Two PRs: Mind
 (schema + drift check) and Brain (dashboard renderer).
