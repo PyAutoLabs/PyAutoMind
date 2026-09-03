@@ -10,6 +10,19 @@
   - PyAutoMind: claude/mind-post-cortex-p1
 - epic: mind-post-cortex (phase 1; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
+## mind-post-cortex-p2
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/390
+- prompt: active/mind_post_cortex_p2_science_residue.md
+- issued: 2026-09-03
+- session: local CLI (Fable architect, Opus execution)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p2-science-residue
+- repos:
+  - PyAutoMind: feature/mind-post-cortex-p2-science-residue
+  - PyAutoBrain: feature/mind-post-cortex-p2-science-residue
+  - PyAutoCortex: feature/mind-post-cortex-p2-science-residue
+- epic: mind-post-cortex (phase 2; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
+
 ## gaussian-precompute-p1
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601
 - prompt: active/gaussian_precompute_p1_numpy_memo.md

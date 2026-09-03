@@ -18,6 +18,7 @@ Unattended: ready
 Epic: mind-post-cortex
 Phase: 2
 Filed: 2026-09-03
+Issued: 2026-09-03
 
 Phase 2 of `mind-post-cortex`. Touches `REFERENCE.md`, `ROUTING.md`,
 `scripts/status.sh` and possibly `tests/` → this is a code-side Mind PR (the
