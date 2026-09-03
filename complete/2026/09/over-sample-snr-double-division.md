@@ -1,3 +1,75 @@
+Every SLaM pipeline in autolens_workspace with a pixelized source stage now over-samples the
+pixelization grid adaptively from `source_pix_2` onwards (sub-size 4 where the source S/N map
+exceeds 3.0, 2 elsewhere; `source_pix_1` uniform), thresholding the S/N map once instead of
+dividing it by the noise map a second time.
+
+## What shipped
+
+- autolens_workspace PR #527 (feature/over-sample-snr-double-division): 32 scripts + 32
+  regenerated notebook twins + `workspace_index.json`. Root cause: `galaxy_name_image_dict_via_result_from`
+  returns `subtracted_image / noise_map` (an S/N map); five scripts fed it as `data=` to
+  `al.util.over_sample.over_sample_size_via_adapt_from(data, noise_map)`, whose first line divides
+  by the noise map again (~18x inflation on HST-depth noise, ~90 % of the mask at sub-size 4
+  instead of ~30 %). One idiom everywhere now:
+  `al.Array2D(values=np.where(source_image_raw > 3.0, 4, 2), mask=dataset.mask)` then
+  `dataset.apply_over_sampling(over_sample_size_pixelization=...)`, applied between the
+  `source_pix_1` and `source_pix_2` calls (module level for imaging / guides / multi_galaxy /
+  multi_dataset; inside `source_pix_2` for the group family, which returns the dataset).
+  Five double-division sites fixed; three group `source_pix_1` sites stripped of the map; 24
+  pipelines that had no adaptive map gained it (`guides/modeling/slam_start_here.py`, all
+  `imaging/features/**/slam*.py` incl. `pixelization/{delaunay,cpu_fast_modeling}.py`, every
+  `multi_galaxy/**/slam.py` + subhalo detect, `multi_dataset/features/slam/{independent,simultaneous}.py`).
+  `cpu_fast_modeling.py` re-applies `apply_sparse_operator_cpu()` after re-sampling. Interferometer
+  scripts untouched (no pixelization over-sampling on visibilities). `over_sample_size_via_adapt_from`
+  is called nowhere in the workspace now.
+- Docs: one module-level `__Adaptive Pixelization Over-Sampling__` prose cell per script (what is
+  thresholded, why 4 / 2, why `source_pix_1` is exempt); `guides/advanced/over_sampling.py`
+  `__Pixelization__` section gains the adaptive example. User decision 2026-09-03: the
+  "never pass it through `over_sample_size_via_adapt_from`" sentence was dropped from every
+  user-facing script as a changelog note that had leaked into tutorial prose; the never-do-this
+  lives in the assistant skill and the regression test only.
+- autolens_workspace_test PR #290: `scripts/imaging/over_sample_adapt_snr.py` pins the idiom on
+  `build/imaging/with_lens_light` (direct 0.163 vs legacy 0.788 at sub-size 4; exact-threshold,
+  strictly-larger, and `apply_over_sampling` acceptance asserts), registered in `smoke_tests.txt`;
+  guard proven to fail on the legacy call.
+- autolens_assistant PR #119: `al_adaptive_pixelization.md` new section "Adaptive pixelization
+  over-sampling (from `source_pix_2`)" with the idiom, the S/N-map fact, the never-do-this and the
+  interferometer exclusion; `al_run_slam_pipeline.md` and `init-slam.md` match; `chat_pack/08_skills_fitting.md`
+  regenerated. Skill audits clean (idioms / symbols / citations).
+
+## Evidence
+
+- `slam_start_here.py` under `PYAUTO_TEST_MODE=2`: 22.4 % of 2828 mask pixels at sub-size 4.
+- Serial smoke over all 32 touched scripts (1500 s cap): 31 PASS / 1 FAIL —
+  `imaging/features/advanced/subhalo/sensitivity/slam_source_pixelized.py`, `AttributeError:
+  module 'autolens' has no attribute 'MapperValued'`, reproduced on an unmodified `main` control
+  run (pre-existing; script not in `smoke_tests.txt`).
+- CI: #527 7/7 legs green (smoke 3.12 + 3.13, navigator x3, size-guard, changes); #290 3/3;
+  #119 2/2. All three merged 2026-09-03.
+- Heart RED at ship, acknowledged by the human for PR-open ("PyAutoLens: CI failure" — Tests
+  failed on PyAutoLens main 6fbab3b 2026-09-03, unrelated to these scripts; "release validation
+  FAILED (stage integrate)"; "PyAutoArray: open PR 11d old"); merge was the human's `/prm`.
+
+## Session notes
+
+- Fable architect session, Opus execution (five implementation subagents 2026-09-02; commit,
+  prose-trim + regen + push + PR subagents 2026-09-03). The 2026-09-02 run paused after
+  validation with everything uncommitted; resumed from the scratchpad progress logs and drafted
+  commit/PR texts.
+- The PR body first listed `*/multi_gaussian_expansion/slam.py` as untouched; the multi_galaxy MGE
+  pipeline has `source_pix_2` and was edited — corrected before PR-open.
+- `generate.py autolens` regenerated exactly the 32 twins; 0 unrelated notebooks drifted.
+
+## Follow-ups (filed at close-out)
+
+- `draft/feature/autoarray/over_sample_size_via_snr_from.md` — scope item 4: add an S/N helper
+  without auto-lowering (or rename `data`) and fix the `galaxy_name_image_dict_via_result_from`
+  docstring.
+- `draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md` — the
+  pre-existing `al.MapperValued` failure (also noted on adapt-image-snr-cap).
+
+## Original prompt
+
 # Adaptive pixelization over-sampling divides the source S/N map by the noise map…
 
 Type: bug

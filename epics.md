@@ -24,32 +24,19 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
-## jax-inference-profiling
-- title: JAX profiling — inference programme
-- ledger: autolens_profiling/results/notes/inference/PROGRAMME.md
-- cortex-half: PyAutoCortex/epics.md#jax-inference-profiling
-- status: science half → Cortex 2026-09-01 (the whole programme's runs and rulings now live in
-  PyAutoCortex `phases/inference_programme/`; the ledger stays at PROGRAMME.md and this entry
-  stays the Mind's half — REWOUND to Phase 1, the InferenceRefs_v1 refs redo awaiting ruling)
-- notes: DECISIONS.md (append-only gate log) and phase_<NN>_*/RESULTS.md sit beside the ledger; slices ship as autolens_profiling issues/PRs, not Mind prompts.
-  REWOUND 2026-08-31 to Phase 1 (InferenceRefs_v1); mesh-pix runs quarantined to output/legacy_wrong, MGE to output/legacy (reusable pending batch review); redo runs step-by-step under batch-and-review; gates A/B1/B2 provisional; queue anchor autolens_profiling#200.
-
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
 - ledger: draft/feature/autolens/source_cluster_arc.md
-- cortex-half: PyAutoCortex/epics.md#cluster-strong-lensing
-- notes: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues.
+- notes: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: PyAutoCortex epics.md#cluster-strong-lensing (arc phase 11).
 
 ## graphical-ep
 - title: Expectation propagation (EP) campaign
 - ledger: draft/research/graphical_ep/ep_campaign.md
-- cortex-half: PyAutoCortex/epics.md#graphical-ep
-- notes: umbrella phase map — each phase's real content lives in its own prompt under draft/research/graphical_ep/; the campaign file itself is never issued.
+- notes: umbrella phase map — each phase's real content lives in its own prompt under draft/research/graphical_ep/; the campaign file itself is never issued. Science half: PyAutoCortex epics.md#graphical-ep (campaign phases 3 and 4).
 
 ## euclid-dr1-prep
 - title: Euclid DR1 preparation — 15k-lens modelling prep
 - ledger: draft/feature/euclid/euclid_dr1_prep_epic.md
-- cortex-half: PyAutoCortex/epics.md#euclid-dr1-prep
 - status: science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex
   `phases/euclid/` 4, 5, 6, 7); the Mind keeps the software phases, renumbered 3a→3, 3b→4,
   6c→8, 7→9 — the renumbering table is in the ledger
@@ -60,7 +47,9 @@ epic, never picked standalone.
   never route them to an autonomous ship gate. Mind phase 8 (was 6c) is a PyAutoArray source
   audit that may spawn a separate bug prompt and can run alongside Cortex phase 7. Mind
   phase 9's (was 7) retroactive-update leg is explicitly allowed to conclude "no elegant
-  solution — don't build it". The full renumbering table is in the ledger. Source of truth for all drift is /mnt/c/Users/Jammy/Science/euclid.
+  solution — don't build it". The full renumbering table is in the ledger. Source of truth for
+  all drift is /mnt/c/Users/Jammy/Science/euclid. Science half: PyAutoCortex
+  epics.md#euclid-dr1-prep (Cortex phases 4-7).
   Phase 0 shipped 2026-08-28; phase 1 shipped 2026-08-29 (euclid#43 closed, PR #44
   merged); phase 2 shipped 2026-08-29 (euclid#45 closed, PR #46 merged) — which also
   satisfies phase 4's "2 strongly preferred" gate. Phase 3a was INSERTED 2026-08-31
@@ -87,9 +76,9 @@ epic, never picked standalone.
 ## gaussian-deflections-precompute
 - title: Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)
 - ledger: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
-- status: phase 1 at PR-open 2026-09-03 — PyAutoGalaxy#601, PRs PyAutoGalaxy#602 + autolens_profiling#214 open awaiting merge (active/gaussian_precompute_p1_numpy_memo.md)
-- notes: three phase prompts — draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md,
-  draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
+- status: phase 1 SHIPPED 2026-09-03 (record complete/2026/09/gaussian-precompute-p1.md) — issue PyAutoGalaxy#601 closed, PyAutoGalaxy#602 (`a647aa32f`) + autolens_profiling#214 (`5f7a3ab1d`) merged; Basis-30 hst 135.6 → 6.3 ms (21.5x), SLaM-shaped likelihood 3.0x bit-identical; PyAutoGalaxy pending-release; phase 2 next (draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md); phase 2 in flight 2026-09-03 — PyAutoGalaxy#604 (active/gaussian_precompute_p2_jax_trace_time_constant.md)
+- notes: three phase prompts — gaussian_precompute_p1_numpy_memo.md (SHIPPED, folded into
+  complete/2026/09/gaussian-precompute-p1.md), draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
   draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md (numpy memo + witness; JAX
   trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
   complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home
@@ -98,10 +87,11 @@ epic, never picked standalone.
 ## mind-post-cortex
 - title: Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger
 - ledger: draft/maintenance/pyautomind/mind_post_cortex_epic.md
+- status: phases 1, 2 and 3 shipped 2026-09-03 — phase 1 record `complete/2026/09/mind-post-cortex-p1.md` (issue PyAutoMind#389 closed; ledger-only, auto-merged as `49d0b530` from `claude/mind-post-cortex-p1`, no PR); phase 2 record `complete/2026/09/mind-post-cortex-p2.md` (issue PyAutoMind#390 closed; PyAutoCortex#8 `d23a51a8` + PyAutoBrain#343 `338addad` + PyAutoMind#391 `e705eee7` merged); phase 3 record `complete/2026/09/mind-post-cortex-p3-pr-ledger.md` (issue PyAutoMind#392 closed; PyAutoMind#393 `7d3ed60f` + PyAutoBrain#344 `fcb43755` + PyAutoHeart#195 `b91c026a` merged). Next is phase 4 (active/mind_post_cortex_p4_batch_plan_fidelity.md, issue PyAutoBrain#345; PyAutoBrain#346 open, PyAutoMind#394 open and retargeted by GitHub onto `main` when #393 merged — it now reads CONFLICTING on the generated dashboard pages only, take upstream and re-render); phase 5 also issued and in flight (issue PyAutoHeart#196; PyAutoHeart#197 + PyAutoBrain#347 + PyAutoHands#275 open).
 - notes: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching
   epic keeping witness campaign / tier-A shadow / slice as standalone prompts and reconcile the
-  five stale 2026-08-31-pm active.md rows; (2) delete the science residue (cortex-half keys,
-  jax-inference-profiling entry, Lane:/epic-slice/theme-sweep, phantom experiment/ work-type,
-  five RAL prompts → Cortex phases, am batch record); (3) schematise library-pr/workspace-pr +
+  five stale 2026-08-31-pm active.md rows; (2) delete the science residue (the Cortex-half epic
+  keys, the JAX profiling entry, the lane header and the two non-prompt queue kinds, the phantom
+  prototype work-type, the RAL prompts that became Cortex phases, the am batch record); (3) schematise library-pr/workspace-pr +
   PR column + pending-release view; (4) batch plan fidelity (derived backpressure, queue order,
   merge order, batch-record drift checks); (5) Heart freeze flag. Issue ONE at a time, in order.

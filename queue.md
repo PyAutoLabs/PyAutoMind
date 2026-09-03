@@ -35,76 +35,67 @@ dispatched. A task in flight is still the thing the human wants.
 
 ```markdown
 ## <n>. <label>
-- kind: prompt | epic-slice | theme-sweep
+- kind: prompt | retired
 - ref: draft/<work-type>/<target>/<name>.md    # kind: prompt
-- ref: euclid-dr1-prep                          # kind: epic-slice — the next phase
-- ref: numba-cpu                                # kind: theme-sweep — any ready prompt on this theme
-- lane: any | local-dev                         # optional; default any
 - note: <one line, optional>
 ```
 
-Three kinds, because "line up a big epic and take slices of it" and "do whatever
-is ready on this theme" are both things a human wants to say without naming
-files:
+Two kinds. **`prompt`** is a named prompt file — the live case, and the only one
+`pyauto-brain batch plan` reads. **`retired`** is an entry that has left the
+queue (shipped, shelved, or moved to the Cortex) but whose note is worth keeping,
+because *what the human wanted and why it stopped being wanted* is the queue's
+only history. Retired entries carry the pointer that replaced them
+(`shipped-as:` / `shelved-as:` / `moved-to:`) and live in the footer, not the
+ordered list.
 
-- **`prompt`** — one named prompt. The literal case.
-- **`epic-slice`** — the named epic's *next* phase, whatever that turns out to
-  be. At most one slice per epic enters any one batch: phases are ordered, so two
-  members of the same epic could not run in parallel anyway, and this is what
-  interleaves small pieces of long programmes with standalone work.
-- **`theme-sweep`** — any `Unattended: ready` prompt carrying that primary
-  `Themes:` keyword (vocabulary: `themes.md`). Useful for "keep chipping at the
-  numba path" without deciding which chip.
-
-`lane: local-dev` marks work needing the local dataset and output trees, an SSH
-endpoint, or the human at the machine. A cloud session detects its own lane and
-will not plan the other one — it reports the count instead, so nothing is
-silently dropped. One queue holds both lanes; the planner filters.
+The two non-prompt kinds — "the named epic's next phase" and "anything ready on
+this theme" — were removed on 2026-09-03. Both were written for science epics,
+which now live in the Cortex, and no code ever read them (`_batch.py` globs
+`draft/**/*.md`). The optional lane field went with them: where the work can run
+is a Cortex phase-header key now (`PyAutoCortex/REFERENCE.md`), and every Cortex
+phase is `local-dev` by construction.
 
 ## 1. Retire parked-at-ship under `--auto`
 - kind: prompt
 - ref: draft/feature/pyautobrain/batch_no_park_at_ship.md
 - note: human 2026-08-31 — "the parked thing is an annoying middle ground which requires human time"; an effective-supervised `--auto` run decides-and-flags at ship sign-off instead of parking, since the run already ends at PR-open. AUTONOMY.md doctrine edit, human-required
 
-## 2. Carried members formalisation
-- kind: retired
-- shelved-as: complete/archive/shelved/batch_carry_forward.md (2026-09-03)
-- note: the Cortex half shipped (`_batch.py carried_members`, `carried:`/`carried-from:` on the Cortex batch record); the dev half retired with the two-slot-batching epic
-
-## 3. Subhalo validation follow-up wave
-- kind: retired
-- moved-to: PyAutoCortex phases/subhalo_validation/ (2026-09-01)
-- lane: local-dev
-- note: review tweak 2026-08-31 — human wants to inspect the _adapt_split_fix result; no subhalo[2]; RectangularBilinear runs. The wave is now four Cortex phases (one per lens); record complete/2026/09/subhalo-followup-moved-to-cortex.md
-
-## 4. Euclid docs + structure tidy (phase 3a addendum)
-- kind: retired
-- ref: euclid-dr1-prep
-- shipped-as: euclid#47 → PR#48, complete/2026/09/restore-pipeline-narrative-prose.md (2026-09-01)
-- note: review tweak 2026-08-31 was folded into the phase-3 prompt and shipped with it — README structural edits, the scripts/tools/ move and the AGENTS.md shortening all landed in PR #48; the start_here.py contradiction was ruled at plan time (kept as a documented shim over initial_lens_model.fit)
-
-## 5. numba solve vs JAX sparse operator
+## 2. numba solve vs JAX sparse operator
 - kind: prompt
 - ref: draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md
 - note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound?
 
-## 6. Batches strip on the dashboard
-- kind: retired
-- shipped-as: PyAutoBrain#341 → complete/2026/09/batch-status-box.md (2026-09-03)
-- note: shipped as the batch status box on both dashboards; the prompt was folded into that record (2b5af675) and `ref:` no longer resolves — reconciled 2026-09-03
-
-## 7. Witness campaign
+## 3. Witness campaign
 - kind: prompt
 - ref: draft/feature/pyautomind/witness_campaign.md
 - note: highest-leverage backlog item (151/153 judge); human-declared witnesses only; fill work
 
-## 8. batch collect
-- kind: retired
+## Retired
+
+Entries that have left the queue. Kept for the record of what was wanted and
+what replaced it; `batch plan` ignores them.
+
+### Carried members formalisation
+- shelved-as: complete/archive/shelved/batch_carry_forward.md (2026-09-03)
+- note: the Cortex half shipped (`_batch.py carried_members`, `carried:`/`carried-from:` on the Cortex batch record); the dev half retired with the two-slot-batching epic
+
+### Subhalo validation follow-up wave
+- moved-to: PyAutoCortex phases/subhalo_validation/ (2026-09-01)
+- note: review tweak 2026-08-31 — human wants to inspect the _adapt_split_fix result; no subhalo[2]; RectangularBilinear runs. The wave is now four Cortex phases (one per lens); record complete/2026/09/subhalo-followup-moved-to-cortex.md
+
+### Euclid docs + structure tidy (phase 3a addendum)
+- ref: euclid-dr1-prep
+- shipped-as: euclid#47 → PR#48, complete/2026/09/restore-pipeline-narrative-prose.md (2026-09-01)
+- note: review tweak 2026-08-31 was folded into the phase-3 prompt and shipped with it — README structural edits, the scripts/tools/ move and the AGENTS.md shortening all landed in PR #48; the start_here.py contradiction was ruled at plan time (kept as a documented shim over initial_lens_model.fit)
+
+### Batches strip on the dashboard
+- shipped-as: PyAutoBrain#341 → complete/2026/09/batch-status-box.md (2026-09-03)
+- note: shipped as the batch status box on both dashboards; the prompt was folded into that record (2b5af675) and `ref:` no longer resolves — reconciled 2026-09-03
+
+### batch collect
 - shipped-as: PyAutoBrain#332 → PR#333, complete/2026/09/batch-collect.md (2026-09-02)
 - note: `pyauto-brain batch collect` shipped; the phase's remaining verb is re-filed as draft/feature/pyautobrain/batch_slice.md
 
-## 9. Euclid Lane: recut
-- kind: retired
+### Euclid Lane: recut
 - shipped-as: superseded by cortex-birth phase 5 (2026-09-02)
 - note: complete/archive/shelved/batch_science_lane.md is marked superseded; leg A (the `Lane:` recut) has no surface left — every Cortex phase is `Lane: local-dev` by construction
-

@@ -1,3 +1,51 @@
+## mind-post-cortex-p1
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/389 (closed, completed 2026-09-03)
+- completed: 2026-09-03
+- library-pr: none by design — a PyAutoMind ledger-only diff, auto-merged as `49d0b530`
+  ("mind: auto-merge ledger branch claude/mind-post-cortex-p1") by `mind_ledger_merge.yml`.
+  `scripts/ledger_merge.py classify` said ledger, so pushing the branch was the merge.
+- epic: mind-post-cortex (phase 1 of 5; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
+- shipped: the `two-slot-batching` epic is retired and its residue re-homed.
+  - **Epic retired** — `epics.md` carries no `two-slot-batching` entry; the ledger sits at
+    `complete/archive/epics/two_slot_batching_epic.md` with the entry text appended under a
+    dated retirement heading, exactly as `lifecycle.py epics --retire` produces it.
+  - **Four drafts recast as standalone prompts**, `Epic:`/`Phase:`/`Parent:` headers stripped
+    and the opening paragraph rewritten so none reads as "phase N of the batch epic", each
+    `Witness:` kept: `draft/feature/pyautomind/witness_campaign.md`,
+    `draft/feature/pyautobrain/batch_notify_tier_merge.md` (the tier-A auto-merge shadow —
+    re-anchored to the `/prm` close-out, the human act that actually happens, and its window
+    extended per the rule's own "extend, do not lower the bar"),
+    `draft/feature/pyautobrain/batch_slice.md` (an ordinary decomposition tool for
+    `Unattended: needs-slicing`), `draft/feature/pyautobrain/batch_no_park_at_ship.md`
+    (an `--auto` rule, not a batch rule).
+  - **Four shelved** to `complete/archive/shelved/` with a one-line reason each:
+    `batch_dispatch.md` (the ledger's own "dead — do not resurrect"), `batch_budget_loop.md`,
+    `bundle_nightly_claude_pass.md`, `batch_carry_forward.md`; `queue.md` reconciled.
+  - **Five stale `active.md` rows reconciled** — merged or closed on GitHub 2026-09-01 but
+    still in flight in the ledger — each with a `complete/2026/09/` record carrying its
+    2026-08-31-pm `batch:` member name so the batch record's `members` still resolve:
+    `silence-colab-cli-message.md`, `autofit-prodigy-49.md`,
+    `resampling-info-summary-section.md`, `numba-vs-jax-sparse.md`,
+    `memory-queue-filing-gate.md`.
+- verified: the prompt's own `Witness:` line, re-run at close-out —
+  `python3 scripts/lifecycle.py check` → `lifecycle check: OK`; `epics.md` has no
+  `two-slot-batching` entry and its ledger is under `complete/archive/epics/`;
+  `grep -rl "Epic: two-slot-batching" draft/ active/` returns only this prompt's own
+  `Witness:` string, folded away by this record; `active.md` lists none of the five
+  reconciled rows and each has its `complete/2026/09/` record; the dashboard regenerated
+  without those rows.
+- traps: the phase shipped with **no PR and no worktree**, which is the shape a `/prm`
+  close-out has to be told about rather than infer — there is no `MERGED` state to read and
+  no `feature/` branch to prove. The proof is git: `claude/mind-post-cortex-p1` (`da01585d`)
+  is an ancestor of `origin/main`, `git rev-list --count origin/main..<branch>` is 0. The
+  remote branch was not deleted here (never `/prm`'s to delete); `mind_ledger_merge.yml` and
+  the branch sweepers own that.
+- notes: written by the `/prm` close-out on 2026-09-03, after the auto-merge had already
+  landed. Epic `mind-post-cortex` is **not** finished — phase 2 (#390) shipped alongside this
+  close-out; phases 3-5 (#391 onward in Mind/Brain/Heart/Hands) remain open.
+
+## Original prompt
+
 # Retire the `two-slot-batching` epic — keep three pieces as standalone prompts
 
 Type: maintenance

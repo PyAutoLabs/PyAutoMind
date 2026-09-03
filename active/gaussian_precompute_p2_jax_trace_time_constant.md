@@ -16,16 +16,18 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: medium
-Status: formalised
+Status: active
 Filed: 2026-09-03
+Issued: 2026-09-03
 Parent: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
 
 > Phase 2 of the `gaussian-deflections-precompute` epic — ledger
 > `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md`. Successor work to the
 > completed `numpy-deflections-cpu` epic (`complete/archive/epics/numpy_deflections_cpu_speedup.md`).
-> **Phase 1 (`gaussian_precompute_p1_numpy_memo.md`) is a hard predecessor**: it lands
-> `deflections_memo.py`, the grid fingerprint and the `MassProfile.deflections_yx_2d_from` entry hook
-> that this phase extends. This is the "JAX doesn't use this so would help there" half of the user's idea.
+> **Phase 1 is a hard predecessor and is SHIPPED** (2026-09-03, record
+> `complete/2026/09/gaussian-precompute-p1.md`; PyAutoGalaxy#602 + autolens_profiling#214): it landed
+> `deflections_memo.py`, the content-keyed grid fingerprint with its weakref cache, the L1/L2 levels
+> and the `Galaxy` / `Basis` summation-site hooks that this phase extends. This is the "JAX doesn't use this so would help there" half of the user's idea.
 
 ## Goal
 

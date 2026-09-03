@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 157 |
 
 > **No batch in flight.**
 
@@ -150,12 +150,28 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
 ```
 /start_dev draft/bug/pyautobrain/cortex_test_worktree_symlink.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main: <code>al.MapperValued</code> no longer exists</a> — autolens_workspace · small · supervised · medium</summary>
+
+```
+/start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — autoarray · small · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/over_sample_size_via_snr_from.md
 ```
 
 </details>
@@ -232,27 +248,11 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
-
-```
-/start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · safe · medium</summary>
-
-```
-/start_dev draft/feature/autofit/prior_exit_sampler_coverage.md
-```
-
-</details>
-
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — pr-open — https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50 (opened 2026-09-03; workspace-only, no… — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50">euclid_strong_lens_modeling_pipeline#50</a> — ⚠️ gates a Cortex phase → phases/euclid/dr1_prelim_10_lens_science_run.md</summary>
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
@@ -260,18 +260,10 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/gaussian_precompute_p1_numpy_memo.md">Gaussian precompute phase 1: numpy deflection memo — fixed-geometry whole field, <code>mass_to_light_ratio</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601">issue #601</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoGalaxy → autolens_profiling; close-out via /prm)</summary>
+<details><summary>📋 <a href="active/gaussian_precompute_p2_jax_trace_time_constant.md">Gaussian precompute phase 2: JAX trace-time constant — fold the fixed-geometry deflection…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/604">issue #604</a> — issued 2026-09-03 — library-dev</summary>
 
 ```
-/start_dev active/gaussian_precompute_p1_numpy_memo.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical axis-ratio clamp in MGE…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/600">issue #600</a> — issued 2026-09-03 — library-dev</summary>
-
-```
-/start_dev active/jax_faddeeva_seams_and_spherical_clamp_audit.md
+/start_dev active/gaussian_precompute_p2_jax_trace_time_constant.md
 ```
 
 </details>
@@ -284,34 +276,18 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mind_post_cortex_p1_retire_batch_epic.md">Retire the <code>two-slot-batching</code> epic — keep three pieces as standalone prompts</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/389">issue #389</a> — issued 2026-09-03 — ledger-dev — PyAutoMind ledger only; branch <code>claude/mind-post-cortex-p1</code> lands via <code>mind_ledger_merge.yml</code> (no worktree, no PR)</summary>
+<details><summary>📋 <a href="active/mind_post_cortex_p4_batch_plan_fidelity.md">Batch plan fidelity: derive backpressure, honour <code>queue.md</code>, emit merge order, check batch…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/345">issue #345</a> — issued 2026-09-03 — library-shipped, awaiting-merge (two PRs open 2026-09-03; PyAutoMind#394 was STACKED on — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/346">PyAutoBrain#346</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/394">PyAutoMind#394</a></summary>
 
 ```
-/start_dev active/mind_post_cortex_p1_retire_batch_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/mind_post_cortex_p2_science_residue.md">Delete the science-epic residue the Cortex split left in Mind</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/390">issue #390</a> — issued 2026-09-03 — library-shipped, awaiting-merge (three PRs open 2026-09-03; no merge order forced — the</summary>
-
-```
-/start_dev active/mind_post_cortex_p2_science_residue.md
+/start_dev active/mind_post_cortex_p4_batch_plan_fidelity.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="active/mind_post_cortex_p3_pr_ledger_pending_release.md">Mind's PR ledger: schematise <code>library-pr:</code>/<code>workspace-pr:</code>, render PRs and the pending-release chain</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/392">issue #392</a> — issued 2026-09-03 — library-dev</summary>
+<details><summary>📋 <a href="active/mind_post_cortex_p5_heart_freeze_flag.md">Heart freeze flag: make the library-main validation window visible to <code>/prm</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/196">issue #196</a> — issued 2026-09-03 — library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoHeart#197 — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/197">PyAutoHeart#197</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/347">PyAutoBrain#347</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/275">PyAutoHands#275</a></summary>
 
 ```
-/start_dev active/mind_post_cortex_p3_pr_ledger_pending_release.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/over_sample_snr_double_division.md">Adaptive pixelization over-sampling divides the source S/N map by the noise map…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/523">issue #523</a> — issued 2026-09-02 — workspace-dev</summary>
-
-```
-/start_dev active/over_sample_snr_double_division.md
+/start_dev active/mind_post_cortex_p5_heart_freeze_flag.md
 ```
 
 </details>
@@ -446,10 +422,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **42** of them belong to an epic and are listed only under [Epics](#epics) below.
+**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 32</summary>
+<summary><b>feature</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
 
@@ -471,6 +447,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautomind/witness_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — autoarray · small · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/over_sample_size_via_snr_from.md
 ```
 
 </details>
@@ -567,6 +551,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/workspaces/group_subhalo_sensitivity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/phase_5_dev_leg_prepare_the_mesh.md">Phase 5 dev leg: prepare the mesh gradient-search array for PositionsLH…</a> — workspaces · medium · safe · normal</summary>
+
+```
+/start_dev draft/feature/workspaces/phase_5_dev_leg_prepare_the_mesh.md
 ```
 
 </details>
@@ -710,7 +702,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 21</summary>
+<summary><b>bug</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -764,6 +756,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main: <code>al.MapperValued</code> no longer exists</a> — autolens_workspace · small · supervised · medium</summary>
+
+```
+/start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
 ```
 
 </details>
@@ -883,7 +883,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 16</summary>
+<summary><b>research</b> — 14</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -973,14 +973,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/multiband_compile_census_completion.md">Multi-band compile census completion — A100/multi-core + hetero GPU rows</a> — autolens_profiling · small · safe · low</summary>
-
-```
-/start_dev draft/research/autolens_profiling/multiband_compile_census_completion.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the prior?</a> — graphical_ep · medium · human-required · low</summary>
 
 ```
@@ -1005,10 +997,119 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus, point-source)</a> — autolens_profiling</summary>
+</details>
+
+<details>
+<summary><b>docs</b> — 14</summary>
+
+<details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
 ```
-/start_dev draft/research/autolens_profiling/cluster_gradient_search_benchmark.md
+/start_dev draft/docs/autolens/multi_galaxy_package.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
+
+```
+/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
+
+```
+/start_dev draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> — howtolens · small · supervised · low</summary>
+
+```
+/start_dev draft/docs/howtolens/ch4_mask_overlay_never_drawn.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+
+```
+/start_dev draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> — workspaces</summary>
+
+```
+/start_dev draft/docs/workspaces/plot_coverage_followups.md
 ```
 
 </details>
@@ -1016,20 +1117,12 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 17</summary>
+<summary><b>maintenance</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/maintenance/pyautomind/mind_post_cortex_epic.md">Mind after the Cortex — shed the science-epic scaffolding, add the PR…</a> — pyautomind · large · supervised · high</summary>
 
 ```
 /start_dev draft/maintenance/pyautomind/mind_post_cortex_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output/ tree: move mesh, point-source and Cluster results…</a> — autolens_profiling · small · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/autolens_profiling/legacy_point_output_sweep.md
 ```
 
 </details>
@@ -1150,123 +1243,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>docs</b> — 14</summary>
-
-<details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
-
-```
-/start_dev draft/docs/autolens/multi_galaxy_package.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/autolens/split_lensing_regimes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
-
-```
-/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
-
-```
-/start_dev draft/docs/autocti/api_rst_rewrite.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> — howtolens · small · supervised · low</summary>
-
-```
-/start_dev draft/docs/howtolens/ch4_mask_overlay_never_drawn.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-/start_dev draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> — workspaces</summary>
-
-```
-/start_dev draft/docs/workspaces/plot_coverage_followups.md
 ```
 
 </details>
@@ -1678,16 +1654,16 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>samplers — bundle 2</b> — 2 task(s) · 4 pts · auto — proposed</summary>
+<summary><b>autoarray — bundle 1</b> — 2 task(s) · 3 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'samplers — bundle 2' — 2 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/feature/autofit/search_seed_reproducibility.md
-- draft/research/autolens_profiling/cluster_gradient_search_benchmark.md
+- draft/feature/autoarray/over_sample_size_via_snr_from.md
+- draft/refactor/autoarray/sparse_operator_int32_indexes.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1700,14 +1676,14 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> | autofit | medium | medium | formalised |
-| <a href="draft/research/autolens_profiling/cluster_gradient_search_benchmark.md">Cluster-scale gradient-search benchmark (Prodigy vs Nautilus…</a> | autolens_profiling | - | - | - |
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> | small | medium | draft |
+| <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> | - | - | - |
 
 </details>
 
-_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 21 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1715,14 +1691,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
-| 2026-09-03 | issued | <a href="active/mind_post_cortex_p1_retire_batch_epic.md">Retire the <code>two-slot-batching</code> epic — keep three pieces as standalone…</a> |
-| 2026-09-03 | issued | <a href="active/mind_post_cortex_p3_pr_ledger_pending_release.md">Mind's PR ledger: schematise <code>library-pr:</code>/<code>workspace-pr:</code>, render…</a> |
 | 2026-09-03 | filed | <a href="draft/maintenance/pyautomind/mind_post_cortex_epic.md">Mind after the Cortex — shed the science-epic scaffolding, add the PR…</a> |
 | 2026-09-03 | issued | <a href="active/mappings_guide_and_tutorial_rewrite.md">Mappings guide (<code>guides/mappings.py</code>), tutorial_2_mappers rewrite…</a> |
-| 2026-09-03 | issued | <a href="active/gaussian_precompute_p1_numpy_memo.md">Gaussian precompute phase 1: numpy deflection memo — fixed-geometry…</a> |
-| 2026-09-03 | issued | <a href="active/mind_post_cortex_p2_science_residue.md">Delete the science-epic residue the Cortex split left in Mind</a> |
-| 2026-09-03 | issued | <a href="active/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical…</a> |
+| 2026-09-03 | issued | <a href="active/mind_post_cortex_p5_heart_freeze_flag.md">Heart freeze flag: make the library-main validation window visible to…</a> |
+| 2026-09-03 | issued | <a href="active/gaussian_precompute_p2_jax_trace_time_constant.md">Gaussian precompute phase 2: JAX trace-time constant — fold the…</a> |
+| 2026-09-03 | issued | <a href="active/mind_post_cortex_p4_batch_plan_fidelity.md">Batch plan fidelity: derive backpressure, honour <code>queue.md</code>, emit…</a> |
+| 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-02 | issued | <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba +…</a> |
 
@@ -1730,8 +1706,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-02 | issued | <a href="active/over_sample_snr_double_division.md">Adaptive pixelization over-sampling divides the source S/N map by the…</a> |
-| 2026-09-01 | filed | <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output/ tree: move mesh, point-source and…</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
@@ -1740,13 +1714,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
+| 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
+| 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
-| 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 | 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
@@ -1755,13 +1729,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
+| 2026-08-27 | filed | <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a> |
+| 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-27 | filed | <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a> |
-| 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
@@ -1770,13 +1744,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
+| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
+| 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
-| 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 | 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
@@ -1785,6 +1759,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 | 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
+| 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
+| 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
 
 </details>
 
@@ -1801,33 +1777,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>JAX profiling — inference programme</b> — 1 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>JAX profiling — inference programme</b> — ledger: `autolens_profiling/results/notes/inference/PROGRAMME.md` — science half → Cortex 2026-09-01 (the whole programme's runs and rulings now live in</summary>
-
-```
-Continue the 'JAX profiling — inference programme' epic. Its canonical state lives in autolens_profiling/results/notes/inference/PROGRAMME.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: DECISIONS.md (append-only gate log) and phase_<NN>_*/RESULTS.md sit beside the ledger; slices ship as autolens_profiling issues/PRs, not Mind prompts.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/phase_5_dev_leg_prepare_the_mesh.md">Phase 5 dev leg: prepare the mesh gradient-search array for PositionsLH…</a> — workspaces · medium · safe · normal</summary>
-
-```
-/start_dev draft/feature/workspaces/phase_5_dev_leg_prepare_the_mesh.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md`</summary>
 
 ```
-Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues.
+Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: PyAutoCortex epics.md#cluster-strong-lensing (arc phase 11).
 ```
 
 </details>
@@ -1939,12 +1894,12 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 7 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
 ```
-Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state lives in draft/research/graphical_ep/ep_campaign.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: umbrella phase map — each phase's real content lives in its own prompt under draft/research/graphical_ep/; the campaign file itself is never issued.
+Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state lives in draft/research/graphical_ep/ep_campaign.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: umbrella phase map — each phase's real content lives in its own prompt under draft/research/graphical_ep/; the campaign file itself is never issued. Science half: PyAutoCortex epics.md#graphical-ep (campaign phases 3 and 4).
 ```
 
 </details>
@@ -1997,18 +1952,10 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
-<details><summary>📋 <a href="draft/research/graphical_ep/slope_hierarchy_methods_writeup.md">slope_hierarchy: methods write-up (NUTS headline, EP cautionary)</a> — graphical_ep · medium · safe · normal</summary>
-
-```
-/start_dev draft/research/graphical_ep/slope_hierarchy_methods_writeup.md
-```
-
-</details>
-
 </details>
 
 <details>
-<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 5 queued prompt(s), in order</summary>
+<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: `draft/feature/euclid/euclid_dr1_prep_epic.md` — science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex</summary>
 
@@ -2030,6 +1977,14 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 ```
 /start_dev draft/feature/euclid/catalogue_extension_coolest_mass_fits.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md">GPU route takes 74 min per lens with the committed config, not…</a> — euclid · medium · safe · medium</summary>
+
+```
+/start_dev draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md
 ```
 
 </details>
@@ -2175,20 +2130,12 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 </details>
 
 <details>
-<summary><b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — 2 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — ledger: `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md` — phase 1 at PR-open 2026-09-03 — PyAutoGalaxy#601, PRs PyAutoGalaxy#602 + autolens_profiling#214 open awaiting merge…</summary>
-
-```
-Continue the 'Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)' epic. Its canonical state lives in draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phase prompts — draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md,
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md">Gaussian precompute phase 2: JAX trace-time constant — fold the fixed-geometry deflection…</a> — autogalaxy · medium · supervised · medium</summary>
+<details><summary>📋 <b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — ledger: `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md` — phase 1 SHIPPED 2026-09-03 (record complete/2026/09/gaussian-precompute-p1.md) — issue PyAutoGalaxy#601 closed, PyAutoGalaxy#602…</summary>
 
 ```
-/start_dev draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md
+Continue the 'Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)' epic. Its canonical state lives in draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phase prompts — gaussian_precompute_p1_numpy_memo.md (SHIPPED, folded into
 ```
 
 </details>
@@ -2211,10 +2158,7 @@ Continue the 'Fixed-geometry deflection memo — rescale Gaussians by the free m
 
 </details>
 
-<details>
-<summary><b>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger</b> — 2 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger</b> — ledger: `draft/maintenance/pyautomind/mind_post_cortex_epic.md`</summary>
+<details><summary>📋 <b>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger</b> — ledger: `draft/maintenance/pyautomind/mind_post_cortex_epic.md` — phases 1, 2 and 3 shipped 2026-09-03 — phase 1 record <code>complete/2026/09/mind-post-cortex-p1.md</code> (issue PyAutoMind#389 closed…</summary>
 
 ```
 Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger' epic. Its canonical state lives in draft/maintenance/pyautomind/mind_post_cortex_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching
@@ -2222,38 +2166,19 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/mind_post_cortex_p4_batch_plan_fidelity.md">Batch plan fidelity: derive backpressure, honour <code>queue.md</code>, emit merge order, check batch…</a> — pyautobrain · medium · safe · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/mind_post_cortex_p4_batch_plan_fidelity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/mind_post_cortex_p5_heart_freeze_flag.md">Heart freeze flag: make the library-main validation window visible to <code>/prm</code>…</a> — pyautoheart · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautoheart/mind_post_cortex_p5_heart_freeze_flag.md
-```
-
-</details>
-
-</details>
-
 ## Hygiene
 
-3 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+2 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
 - `draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md`
 - `draft/docs/workspaces/plot_coverage_followups.md`
-- `draft/research/autolens_profiling/cluster_gradient_search_benchmark.md`
 
 </details>
 
-153 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+149 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2271,7 +2196,6 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/dpie_sigma0_parameterization.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
-- `draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md`
 - `draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
@@ -2298,7 +2222,8 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 - `draft/feature/pyautobrain/the_batch_conductor_s_plan_kind_cortex.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
-- _… and 113 more_
+- `draft/feature/pyautoheart/offtick_timing_legs_live.md`
+- _… and 109 more_
 
 </details>
 
@@ -2308,7 +2233,6 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
-- `draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md — unknown theme keyword(s): mass-profiles, jax`
 - `draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md — unknown theme keyword(s): mass-profiles`
 - `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md — unknown theme keyword(s): mass-profiles, jax`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
@@ -2317,6 +2241,7 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 - `draft/bug/autoarray/delaunay_area_magnification_audit.md — unknown theme keyword(s): euclid`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
+- `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 

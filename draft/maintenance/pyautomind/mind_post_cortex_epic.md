@@ -51,20 +51,29 @@ pending-release gate lives only in a live `gh` search on the Brain board.
 
 ## Phases (issue ONE at a time; each is one PR per repo it touches)
 
-1. **Retire the `two-slot-batching` epic** —
-   `draft/maintenance/pyautomind/mind_post_cortex_p1_retire_batch_epic.md`.
-   Ledger-only (auto-merges). Keeps witness campaign, tier-A shadow and slice
-   as standalone prompts; retires dispatcher, budget loop, nightly pass, dev
-   carry-forward; reconciles the five stale 2026-08-31-pm `active.md` rows.
-2. **Delete the science residue** —
-   `draft/maintenance/pyautomind/mind_post_cortex_p2_science_residue.md`.
-   `cortex-half:` keys, the `jax-inference-profiling` Mind entry, `Lane:` and
-   the `epic-slice`/`theme-sweep` queue kinds, the phantom `experiment/`
-   work-type, five RAL-run prompts → Cortex phases, the all-science am batch
-   record. Touches REFERENCE.md/ROUTING.md/scripts → human PR.
-3. **PR ledger + pending-release view** —
-   `draft/feature/pyautomind/mind_post_cortex_p3_pr_ledger_pending_release.md`
-   (assessment gaps 1 and 2).
+1. **Retire the `two-slot-batching` epic** — **SHIPPED 2026-09-03**, record
+   `complete/2026/09/mind-post-cortex-p1.md` (issue PyAutoMind#389 closed;
+   ledger-only, auto-merged as `49d0b530` from `claude/mind-post-cortex-p1`,
+   no PR). Kept witness campaign, tier-A shadow and slice as standalone
+   prompts; retired dispatcher, budget loop, nightly pass, dev carry-forward;
+   reconciled the five stale 2026-08-31-pm `active.md` rows.
+2. **Delete the science residue** — **SHIPPED 2026-09-03**, record
+   `complete/2026/09/mind-post-cortex-p2.md` (issue PyAutoMind#390 closed;
+   PyAutoCortex#8 `d23a51a8`, PyAutoBrain#343 `338addad`, PyAutoMind#391
+   `e705eee7`). Removed the Cortex-half epic keys, the JAX profiling Mind
+   entry, the lane header and the two non-prompt queue kinds, the phantom
+   prototype work-type; the RAL-run prompts became Cortex phases and the
+   all-science am batch record moved to the Cortex.
+3. **PR ledger + pending-release view** — **SHIPPED 2026-09-03**, record
+   `complete/2026/09/mind-post-cortex-p3-pr-ledger.md` (issue PyAutoMind#392
+   closed; PyAutoMind#393 `7d3ed60f`, PyAutoBrain#344 `fcb43755`,
+   PyAutoHeart#195 `b91c026a`). Schematised `library-pr:`/`workspace-pr:` as
+   repeatable keys plus `pending-release:`/`release-gate:`, made a row that
+   declares open PRs and names none a `lifecycle.py check` error, gave the
+   dashboard an In-flight PR link per key and a Pending release section, and
+   named `/review_release` step 6 as the one step that clears the chain. Fixed
+   in passing the `--mind <relative>` bug that had every CI render silently
+   dropping the Cortex-gate badges.
 4. **Batch plan fidelity** —
    `draft/feature/pyautobrain/mind_post_cortex_p4_batch_plan_fidelity.md`
    (gaps 3, 4, 5, 7: derive `--awaiting-review`, wire `queue.md` order, merge
