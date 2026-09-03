@@ -1989,7 +1989,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md">GPU route takes 74 min per lens with the committed config, not…</a> — euclid · medium · safe · medium</summary>
+<details><summary>📋 <a href="draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md">GPU route takes 1 h 14 min to 1 h 44 min…</a> — euclid · medium · safe · medium</summary>
 
 ```
 /start_dev draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md
