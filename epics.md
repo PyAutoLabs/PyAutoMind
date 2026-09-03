@@ -76,9 +76,9 @@ epic, never picked standalone.
 ## gaussian-deflections-precompute
 - title: Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)
 - ledger: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
-- status: phase 1 at PR-open 2026-09-03 — PyAutoGalaxy#601, PRs PyAutoGalaxy#602 + autolens_profiling#214 open awaiting merge (active/gaussian_precompute_p1_numpy_memo.md)
-- notes: three phase prompts — draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md,
-  draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
+- status: phase 1 SHIPPED 2026-09-03 (record complete/2026/09/gaussian-precompute-p1.md) — issue PyAutoGalaxy#601 closed, PyAutoGalaxy#602 (`a647aa32f`) + autolens_profiling#214 (`5f7a3ab1d`) merged; Basis-30 hst 135.6 → 6.3 ms (21.5x), SLaM-shaped likelihood 3.0x bit-identical; PyAutoGalaxy pending-release; phase 2 next (draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md); phase 2 in flight 2026-09-03 — PyAutoGalaxy#604 (active/gaussian_precompute_p2_jax_trace_time_constant.md)
+- notes: three phase prompts — gaussian_precompute_p1_numpy_memo.md (SHIPPED, folded into
+  complete/2026/09/gaussian-precompute-p1.md), draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
   draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md (numpy memo + witness; JAX
   trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
   complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home
@@ -87,6 +87,7 @@ epic, never picked standalone.
 ## mind-post-cortex
 - title: Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger
 - ledger: draft/maintenance/pyautomind/mind_post_cortex_epic.md
+- status: phase 1 shipped 2026-09-03 (record `complete/2026/09/mind-post-cortex-p1.md`) — issue PyAutoMind#389 closed; ledger-only, auto-merged as `49d0b530` from `claude/mind-post-cortex-p1`, no PR. Phase 2 next (active/mind_post_cortex_p2_science_residue.md, issue PyAutoMind#390; PRs PyAutoMind#391 + PyAutoBrain#343 + PyAutoCortex#8 open); phases 3-5 issued and in flight.
 - notes: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching
   epic keeping witness campaign / tier-A shadow / slice as standalone prompts and reconcile the
   five stale 2026-08-31-pm active.md rows; (2) delete the science residue (the Cortex-half epic

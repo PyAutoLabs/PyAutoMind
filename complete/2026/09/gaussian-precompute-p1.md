@@ -1,3 +1,53 @@
+## gaussian-precompute-p1
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601 (closed, completed)
+- completed: 2026-09-03
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/602 (MERGED a647aa32f)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/214 (MERGED 5f7a3ab1d)
+- epic: gaussian-deflections-precompute — phase 1 of 3, **epic stays open** (ledger
+  draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
+- shipped: a fixed-geometry deflection memo on the numpy path. **L1** caches the whole deflection
+  field for a geometry that has not moved; **L2** caches the *unit-ratio* field, so `Gaussian`, `lmp`
+  and `lmp_linear` rescale by their free mass-to-light ratio instead of recomputing the field —
+  the whole point of the epic, since in an MGE fit the geometry is fixed and only the amplitudes are
+  free. `GaussianGradient` takes L1 only (its ratio is not a plain scale factor). Keyed on a
+  **content-keyed grid fingerprint** (sha256) — 936 µs cold, **0.55 µs cached** — with a byte cap of
+  **256 MB**, the kill switch `AUTOGALAXY_DEFLECTIONS_MEMO=0`, and a `memo_disabled()` context
+  manager. The hooks live at the `Galaxy` and `Basis` summation sites, not inside the profiles, so no
+  profile learned about caching. New module `autogalaxy/profiles/mass/abstract/deflections_memo.py`.
+- measured: Basis-30 deflections hst **135.6 → 6.3 ms (21.5x)**, euclid **33.6 → 2.5 ms (13.5x)**.
+  A SLaM-shaped likelihood **0.583 → 0.195 s (3.0x)** and **bit-identical** — the memo returns the
+  same field, not an approximation of it. The `_wofz` call-count witness reads **[60, 0, 0]** against
+  the **[60, 60, 60]** controls, which is the proof that the speedup is the cache and not a faster
+  kernel. L2 rescaling max relative error **2.4e-13**. test_autogalaxy **1176 passed**, 15 new tests.
+- finding: the deflections driver's `tracer_s` column **silently became a hit-path timing** the moment
+  the memo existed — it was reporting the cost of a cache lookup as the cost of the computation, and
+  nothing failed. Caught and fixed by making `_driver.measure_profile` hold `memo_disabled()` for the
+  duration of the measurement. Any future memo needs the same treatment in any harness that times the
+  thing being memoised.
+- trap: the grid fingerprint cost **9x the plan's estimate** (936 µs, not ~100 µs). At one fingerprint
+  per call that would have eaten the win outright, which is why the design gained a weakref cache
+  keyed on the grid object — the plan did not have one.
+- close-out: autolens_profiling#214 could not merge as opened — it and #215
+  (`jax-faddeeva-clamp-audit`, the parallel claim on the same two repos) **both append a section to
+  `results/notes/numpy_deflections_cpu.md`**, and #215 merged first, leaving #214 `CONFLICTING`. This
+  is the "second to merge rebases" case the parallel claim was granted under. Resolved by merging
+  `origin/main` into the branch (`af7445e`) and keeping both sections — main's "JAX-path audit" and
+  its updated numpy-deflections-cpu epic ledger first, then this branch's "Fixed-geometry deflection
+  memo — phase 1" — verified verbatim against both sides; every other path in that merge was
+  one-sided. #214's earlier `lint` failure (`ModuleNotFoundError: deflections_memo`) was never a real
+  break: the profiling CI checks out the library `main`s, so it could only pass once #602 had merged.
+- heart: RED at PR-open, human-acknowledged for PR-open only — release validation FAILED (stage
+  integrate), PyAutoArray open PR 11d old. Neither touches this diff.
+- session: local CLI; merged and closed out via /prm 2026-09-03. PyAutoGalaxy is pending-release.
+- epic next: phase 2 — draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md
+  (the JAX branch: make the memo a trace-time constant). Phase 3 is the downstream sweep,
+  draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md.
+- affected-repos:
+  - PyAutoGalaxy
+  - autolens_profiling
+
+## Original prompt
+
 # Gaussian precompute phase 1: numpy deflection memo — fixed-geometry whole field, `mass_to_light_ratio` rescale
 
 Type: feature
