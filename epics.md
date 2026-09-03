@@ -87,9 +87,9 @@ epic, never picked standalone.
 ## gaussian-deflections-precompute
 - title: Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)
 - ledger: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
-- status: phase 1 at PR-open 2026-09-03 — PyAutoGalaxy#601, PRs PyAutoGalaxy#602 + autolens_profiling#214 open awaiting merge (active/gaussian_precompute_p1_numpy_memo.md)
-- notes: three phase prompts — draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md,
-  draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
+- status: phase 1 SHIPPED 2026-09-03 (record complete/2026/09/gaussian-precompute-p1.md) — issue PyAutoGalaxy#601 closed, PyAutoGalaxy#602 (`a647aa32f`) + autolens_profiling#214 (`5f7a3ab1d`) merged; Basis-30 hst 135.6 → 6.3 ms (21.5x), SLaM-shaped likelihood 3.0x bit-identical; PyAutoGalaxy pending-release; phase 2 next (draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md)
+- notes: three phase prompts — gaussian_precompute_p1_numpy_memo.md (SHIPPED, folded into
+  complete/2026/09/gaussian-precompute-p1.md), draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
   draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md (numpy memo + witness; JAX
   trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
   complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home

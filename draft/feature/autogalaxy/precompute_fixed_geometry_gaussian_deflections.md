@@ -88,6 +88,9 @@ tracer, so the unit field is computed at trace time with scipy and embedded as a
 Faddeeva subgraph from the jaxpr. Memo precedent: `PyAutoArray .../imaging_numba/sparse.py:20-51`.
 
 Three phase prompts:
-- `draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md` — numpy memo + `_wofz` call-count witness.
+- ~~`draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md`~~ — numpy memo + `_wofz` call-count
+  witness. **SHIPPED 2026-09-03** — record `complete/2026/09/gaussian-precompute-p1.md`
+  (PyAutoGalaxy#602 + autolens_profiling#214; Basis-30 hst 21.5x, SLaM-shaped likelihood 3.0x
+  bit-identical, witness `[60, 0, 0]` vs the `[60, 60, 60]` controls).
 - `draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md` — JAX trace-time constant.
 - `draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md` — SLaM / test_autolens / workspace sweep.

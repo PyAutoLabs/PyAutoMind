@@ -124,25 +124,6 @@
   with this task. queue.md, scripts/lifecycle.py, tests/ and batches/ are conflict-free.
 - epic: mind-post-cortex (phase 4; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
-## gaussian-precompute-p1
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601
-- prompt: active/gaussian_precompute_p1_numpy_memo.md
-- issued: 2026-09-03
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/602
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/214
-- session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoGalaxy → autolens_profiling; close-out via /prm)
-- worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p1
-- repos:
-  - PyAutoGalaxy: feature/gaussian-precompute-p1
-  - autolens_profiling: feature/gaussian-precompute-p1
-- parallel-claim: PyAutoGalaxy + autolens_profiling also claimed by jax-faddeeva-clamp-audit (#600); file sets disjoint (audit: mge.py _wofz_rational / spherical branch, scripts/misc/hazards/; this: deflections_memo.py, MassProfile entry hook, scripts/lens/deflections/basis.py) — human-approved 2026-09-03 under the #176/#177 precedent; second to merge rebases
-- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge) — exact reasons from `pyauto-heart readiness --json`:
-  - release validation FAILED (stage integrate)
-  - PyAutoArray: open PR 11d old
-- heart-note: RED at start (pre-existing release-validation integrate:fail + unrelated worktree drift); ship gate to re-read
-- epic: gaussian-deflections-precompute (phase 1; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
-
 ## euclid-cpu-two-stage-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
 - prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md
