@@ -47,7 +47,7 @@ import sys
 READ_ONLY_REMOTE_TRIGGER = {"list", "get", "list_runs", "get_run_log"}
 
 REASON = (
-    "PyAutoLabs policy end_at_deliverable: sessions end at their deliverable "
+    "policy end_at_deliverable: sessions end at their deliverable "
     "— {tool} would outlive the turn.\n"
     "Report and stop; the human re-runs /prm. Set PYAUTO_ALLOW_TIMERS=1 only "
     "for a routine the human asked for.\n"

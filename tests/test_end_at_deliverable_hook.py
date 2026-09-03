@@ -28,7 +28,7 @@ MIND = Path(__file__).resolve().parents[1]
 HOOK = MIND / repos_sync.DELIVERABLE_HOOK_FILE
 
 # The first words of the two-line reason the harness shows the session.
-REASON = "PyAutoLabs policy end_at_deliverable: sessions end at their deliverable"
+REASON = "policy end_at_deliverable: sessions end at their deliverable"
 
 
 def run(payload, env=None):
