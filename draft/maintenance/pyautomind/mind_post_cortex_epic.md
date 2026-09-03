@@ -74,10 +74,19 @@ pending-release gate lives only in a live `gh` search on the Brain board.
    named `/review_release` step 6 as the one step that clears the chain. Fixed
    in passing the `--mind <relative>` bug that had every CI render silently
    dropping the Cortex-gate badges.
-4. **Batch plan fidelity** —
-   `draft/feature/pyautobrain/mind_post_cortex_p4_batch_plan_fidelity.md`
-   (gaps 3, 4, 5, 7: derive `--awaiting-review`, wire `queue.md` order, merge
-   order in the packet, batch-record drift checks).
+4. **Batch plan fidelity** — **SHIPPED 2026-09-03**, record
+   `complete/2026/09/mind-post-cortex-p4-batch-fidelity.md` (issue
+   PyAutoBrain#345 closed; PyAutoBrain#346 `d442df5d`, PyAutoMind#394
+   `c00098e1`). Gaps 3, 4, 5 and 7: `--awaiting-review` is derived from
+   `active.md`'s PR keys instead of assuming an empty review queue; `queue.md`
+   order now ranks the pool and the file says what `plan` really reads (that
+   file, the `draft/` backlog, the derived queue depth — no `gh` call);
+   `collect` fills a per-member `outcome:` from the ledger and emits a
+   `merge-order:` block as advice for the human's `/prm` sequence; and
+   `lifecycle.py check` opens the batch records at last — an unresolvable
+   member `prompt:` path is drift, a closed record with no
+   `review-minutes-actual:` is a warning. The check degrades in a shallow
+   clone, so `lifecycle_drift.yml` now checks out at `fetch-depth: 0`.
 5. **Heart freeze flag** —
    `draft/feature/pyautoheart/mind_post_cortex_p5_heart_freeze_flag.md`
    (gap 6).

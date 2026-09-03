@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1271 records across 8 buckets.
+1272 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -148,6 +148,7 @@ markers; everything below GENERATED is rebuilt.
 - [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
 - [mind-post-cortex-p2](2026/09/mind-post-cortex-p2.md)
 - [mind-post-cortex-p3-pr-ledger](2026/09/mind-post-cortex-p3-pr-ledger.md)
+- [mind-post-cortex-p4-batch-fidelity](2026/09/mind-post-cortex-p4-batch-fidelity.md) — closed, completed 2026-09-03
 - [numba-vs-jax-sparse](2026/09/numba-vs-jax-sparse.md)
 - [numpy-deflections-p1](2026/09/numpy-deflections-p1.md)
 - [numpy-deflections-p2](2026/09/numpy-deflections-p2.md)
