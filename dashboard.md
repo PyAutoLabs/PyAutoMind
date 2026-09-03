@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/gaussian_precompute_p2_jax_trace_time_constant.md">Gaussian precompute phase 2: JAX trace-time constant — fold the fixed-geometry deflection…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/604">issue #604</a> — issued 2026-09-03 — library-dev</summary>
+<details><summary>📋 <a href="active/gaussian_precompute_p2_jax_trace_time_constant.md">Gaussian precompute phase 2: JAX trace-time constant — fold the fixed-geometry deflection…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/604">issue #604</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoArray → PyAutoGalaxy → autolens_profiling; close-out via… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/520">PyAutoArray#520</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605">PyAutoGalaxy#605</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/216">autolens_profiling#216</a></summary>
 
 ```
 /start_dev active/gaussian_precompute_p2_jax_trace_time_constant.md

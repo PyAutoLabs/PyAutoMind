@@ -76,7 +76,7 @@ epic, never picked standalone.
 ## gaussian-deflections-precompute
 - title: Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)
 - ledger: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
-- status: phase 1 SHIPPED 2026-09-03 (record complete/2026/09/gaussian-precompute-p1.md) — issue PyAutoGalaxy#601 closed, PyAutoGalaxy#602 (`a647aa32f`) + autolens_profiling#214 (`5f7a3ab1d`) merged; Basis-30 hst 135.6 → 6.3 ms (21.5x), SLaM-shaped likelihood 3.0x bit-identical; PyAutoGalaxy pending-release; phase 2 next (draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md); phase 2 in flight 2026-09-03 — PyAutoGalaxy#604 (active/gaussian_precompute_p2_jax_trace_time_constant.md)
+- status: phase 1 SHIPPED 2026-09-03 (record complete/2026/09/gaussian-precompute-p1.md) — issue PyAutoGalaxy#601 closed, PyAutoGalaxy#602 (`a647aa32f`) + autolens_profiling#214 (`5f7a3ab1d`) merged; Basis-30 hst 135.6 → 6.3 ms (21.5x), SLaM-shaped likelihood 3.0x bit-identical; PyAutoGalaxy pending-release; phase 2 next (draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md); phase 2 at PR-open 2026-09-03 — PyAutoGalaxy#604 (active/gaussian_precompute_p2_jax_trace_time_constant.md), PRs PyAutoArray#520 → PyAutoGalaxy#605 → autolens_profiling#216 (that merge order), all pending-release, close-out via /prm
 - notes: three phase prompts — gaussian_precompute_p1_numpy_memo.md (SHIPPED, folded into
   complete/2026/09/gaussian-precompute-p1.md), draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
   draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md (numpy memo + witness; JAX

@@ -17,7 +17,10 @@
 - prompt: active/gaussian_precompute_p2_jax_trace_time_constant.md
 - issued: 2026-09-03
 - session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: library-dev
+- status: library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoArray → PyAutoGalaxy → autolens_profiling; close-out via /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/520
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/216
 - worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p2
 - repos:
   - PyAutoArray: feature/gaussian-precompute-p2
