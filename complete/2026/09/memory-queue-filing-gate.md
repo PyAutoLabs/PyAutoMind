@@ -1,3 +1,31 @@
+## memory-queue-filing-gate
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/75 (closed, completed)
+- completed: 2026-09-01
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/76 (MERGED 2026-09-01T19:35:02Z, 23017555)
+- batch: 2026-08-31-pm — member `memory-queue-filing-gate`, tier `notify`, 0 review-minutes; `--auto`, effective level supervised, shipped via **decide-and-flag** (`decision-taken` label). `batches/reviews/2026-08-31-pm.md` records `decision: UNREVIEWED`
+- shipped: repaired the PyAutoMemory queue automation, hard-broken since dcd1e2c
+  (2026-08-24) and stalling #69/#71/#72 since 2026-08-28 — added the PyAutoBrain sibling
+  checkout to `queue_filing.yml`, made `queue_actions.yml`'s push retry conflict-proof
+  (fetch + `reset --hard` + re-run the idempotent action script, instead of
+  rebase-and-discard), and added an `if: failure()` report step so a failed run comments
+  on its issue instead of failing silently.
+- verified: `make validate` + full pytest 169 passed; no downstream (organ repo, no
+  script surface). Review CLEAN over the ReviewSurface, retry semantics verified by a
+  scratch-repo simulation of the #69 conflict. Adversary leg: witness HOLDS, FINDINGS with
+  no blockers — findings 1 and 2 fixed in b5bc248.
+- post-merge (checked 2026-09-03): labels were re-applied on #69 (`interests-add`) and
+  #71/#72 (`queue-intake`), and `queue_filing.yml` has run **green** since the merge
+  (2026-09-01T19:39:39Z and 2026-09-03T15:00Z) where it failed on 2026-08-31 and at
+  19:39:38Z. **The witness's last leg is still unmet:** no filing PR has been opened, and
+  #69/#71/#72 are all still open. The gate no longer fails; whether it now *files* is a
+  separate, still-unanswered question and is the follow-up this record leaves behind.
+- traps: adversary finding 3 — the same discarding retry lives in `knowledge_board.yml`
+  and `arxiv_refs.yml` and was recorded as a follow-up, not fixed here.
+- notes: **Ledger reconciliation 2026-09-03** — merged 2026-09-01, `active.md` row never
+  retired. Written by `mind-post-cortex` phase 1 (PyAutoMind#389).
+
+## Original prompt
+
 # Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures
 
 Type: bug
