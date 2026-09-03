@@ -1,5 +1,18 @@
 # Active Tasks
 
+## jax-faddeeva-clamp-audit
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/600
+- prompt: active/jax_faddeeva_seams_and_spherical_clamp_audit.md
+- issued: 2026-09-03
+- session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-faddeeva-clamp-audit
+- repos:
+  - PyAutoGalaxy: feature/jax-faddeeva-clamp-audit
+  - autolens_profiling: feature/jax-faddeeva-clamp-audit
+- heart-note: RED at start (pre-existing release-validation integrate:fail + worktree drift on unrelated worktrees); ship gate to re-read
+- parent: complete/archive/epics/numpy_deflections_cpu_speedup.md (follow-up of the numpy-deflections-cpu epic)
+
 ## batch-status-box
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/341
 - prompt: active/batch_board.md
