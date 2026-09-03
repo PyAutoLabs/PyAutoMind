@@ -83,7 +83,11 @@
 - prompt: active/mind_post_cortex_p4_batch_plan_fidelity.md
 - issued: 2026-09-03
 - session: local CLI (Fable architect, Opus execution)
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/346
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/394
+- status: library-shipped, awaiting-merge (two PRs open 2026-09-03; PyAutoMind#394 is STACKED on
+  PyAutoMind#393 and targets `feature/mind-post-cortex-p3-pr-ledger` — retarget it to main once #393
+  merges, then merge PyAutoBrain#346 in either order, the two diffs are independent; close-out via /prm)
 - worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p4-batch-fidelity
 - repos:
   - PyAutoBrain: feature/mind-post-cortex-p4-batch-fidelity
@@ -97,6 +101,21 @@
   The Mind branch is BRANCHED FROM and stacked on `feature/mind-post-cortex-p3-pr-ledger`, because
   phase 3 adds the `cmd_check` tail and the `registry_multi`/`_as_root` helpers this phase extends;
   its PR targets that branch and is retargeted to main once #393 merges.
+- heart-note: `pyauto-heart readiness --json` was RED when the PRs were opened (checked 2026-09-03,
+  before PR-open). Verbatim reasons:
+  - PyAutoLens: CI failure
+  - release validation FAILED (stage integrate)
+  - PyAutoArray: open PR 11d old
+  None touches this diff — one Brain conductor, one lifecycle script, three ledger/doc pages and their
+  tests; no library source and no release surface. The acknowledgement the human gave earlier today was
+  scoped to gaussian-precompute-p1 and jax-faddeeva-clamp-audit and is NOT carried here: the RED is
+  unacked for this task and merge needs the human's own call. Opened for review only.
+- merge-tree: scratch-merged origin/feature/mind-post-cortex-p2-science-residue and
+  origin/feature/mind-post-cortex-p3-pr-ledger into both branches before ship. PyAutoBrain: CLEAN
+  against both (neither sibling touches `_batch.py`). PyAutoMind: clean against p3 (it is the base),
+  and against p2 the only conflicts are the generated dashboard.md/.html — a control merge of p2 into
+  p3 alone produces the identical 13 hunks, so it is phase 2's own rebase debt, not an interaction
+  with this task. queue.md, scripts/lifecycle.py, tests/ and batches/ are conflict-free.
 - epic: mind-post-cortex (phase 4; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
 ## gaussian-precompute-p1
