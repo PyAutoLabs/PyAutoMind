@@ -166,26 +166,6 @@
   - euclid_strong_lens_modeling_pipeline (feature/euclid-cpu-two-stage-route)
 - epic: euclid-dr1-prep (Mind phase 4; gates PyAutoCortex phases/euclid/dr1_prelim_10_lens_science_run)
 
-## over-sample-snr-double-division
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/523
-- prompt: active/over_sample_snr_double_division.md
-- issued: 2026-09-02
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/527
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/290
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/119
-- session: local CLI (Fable architect, Opus execution) — claude --resume session_01UpLMvgejg1kNXbG3P789wy, resumed session_01TPaqrFZCUtvsknEx66Yneq
-- status: workspace-shipped, awaiting-merge (3 PRs open 2026-09-03, all pending-release, no library PR; close-out via /prm)
-- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge) — exact reasons from `pyauto-heart readiness --json`, quoted to the human who replied "ok drop it then prm":
-  - PyAutoLens: CI failure
-  - release validation FAILED (stage integrate)
-  - PyAutoArray: open PR 11d old
-- heart-note: "PyAutoLens: CI failure" = Tests failed on main 6fbab3b 2026-09-03 18:43Z (unittest 3.12/3.13/nojax), unrelated to these workspace scripts; smoke 31/32 PASS, the FAIL (imaging/features/advanced/subhalo/sensitivity/slam_source_pixelized.py, AttributeError al.MapperValued) reproduces on main
-- worktree: ~/Code/PyAutoLabs-wt/over-sample-snr-double-division
-- repos:
-  - autolens_workspace (feature/over-sample-snr-double-division)
-  - autolens_workspace_test (feature/over-sample-snr-double-division)
-  - autolens_assistant (feature/over-sample-snr-double-division)
-
 ## image-source-mappings-p3
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/525
 - prompt: active/mappings_guide_and_tutorial_rewrite.md
@@ -197,7 +177,7 @@
   - "release validation FAILED (stage integrate)"
   - "PyAutoArray: open PR 11d old"
 - worktree: ~/Code/PyAutoLabs-wt/image-source-mappings-p3
-- parallel-claim: autolens_workspace — over-sample-snr-double-division (#523) in its own worktree; touches SLaM scripts, guides/advanced/over_sampling.py and guides/modeling/slam_start_here.py only; file sets disjoint
+- parallel-claim: autolens_workspace — over-sample-snr-double-division (#523) ran in its own worktree with disjoint files; MERGED 2026-09-03 (autolens_workspace#527), claim released — rebase onto main before shipping
 - repos:
   - autolens_workspace: feature/image-source-mappings-p3
   - HowToLens: feature/image-source-mappings-p3
