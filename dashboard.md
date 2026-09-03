@@ -290,7 +290,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/numpy_deflections_p3_closed_form_geometry.md">Numpy deflections phase 3: PowerLaw series with factor-driven term count, NFW/NFWSph masks…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/598">issue #598</a> — issued 2026-09-03 — library-dev</summary>
+<details><summary>📋 <a href="active/numpy_deflections_p3_closed_form_geometry.md">Numpy deflections phase 3: PowerLaw series with factor-driven term count, NFW/NFWSph masks…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/598">issue #598</a> — issued 2026-09-03 — library-shipped, awaiting-merge (all three PRs open 2026-09-03; merge order PyAutoArray#519 → PyAutoGalaxy#599 →…</summary>
 
 ```
 /start_dev active/numpy_deflections_p3_closed_form_geometry.md
@@ -2213,7 +2213,7 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 <details>
 <summary><b>Numpy (CPU) deflection angles — nine mass profiles on the numba route</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Numpy (CPU) deflection angles — nine mass profiles on the numba route</b> — ledger: `draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md` — phases 1–2 SHIPPED 2026-09-02 (records complete/2026/09/numpy-deflections-p{1,2}.md); phase 3 IN FLIGHT 2026-09-03…</summary>
+<details><summary>📋 <b>Numpy (CPU) deflection angles — nine mass profiles on the numba route</b> — ledger: `draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md` — phases 1–2 SHIPPED 2026-09-02 (records complete/2026/09/numpy-deflections-p{1,2}.md); phase 3 at PR-OPEN 2026-09-03…</summary>
 
 ```
 Continue the 'Numpy (CPU) deflection angles — nine mass profiles on the numba route' epic. Its canonical state lives in draft/feature/autogalaxy/numpy_deflections_cpu_speedup.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phase prompts — `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md` (measure + `*Sph` decorator + tracer double trace), `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md` (MGE/Faddeeva), `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md` (PowerLaw series, NFW masks, shared geometry); the profiling home for every phase's before/after numbers is `autolens_profiling/scripts/lens/`.
