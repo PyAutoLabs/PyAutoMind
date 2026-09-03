@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — pr-open — https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50 (opened 2026-09-03; workspace-only, no…</summary>
+<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — pr-open — https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50 (opened 2026-09-03; workspace-only, no… — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50">euclid_strong_lens_modeling_pipeline#50</a> — ⚠️ gates a Cortex phase → phases/euclid/dr1_prelim_10_lens_science_run.md</summary>
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mind_post_cortex_p3_pr_ledger_pending_release.md">Mind's PR ledger: schematise <code>library-pr:</code>/<code>workspace-pr:</code>, render PRs and the pending-release chain</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/392">issue #392</a> — issued 2026-09-03 — library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoMind#393 first</summary>
+<details><summary>📋 <a href="active/mind_post_cortex_p3_pr_ledger_pending_release.md">Mind's PR ledger: schematise <code>library-pr:</code>/<code>workspace-pr:</code>, render PRs and the pending-release chain</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/392">issue #392</a> — issued 2026-09-03 — library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoMind#393 first — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/393">PyAutoMind#393</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/344">PyAutoBrain#344</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/195">PyAutoHeart#195</a></summary>
 
 ```
 /start_dev active/mind_post_cortex_p3_pr_ledger_pending_release.md
@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mind_post_cortex_p4_batch_plan_fidelity.md">Batch plan fidelity: derive backpressure, honour <code>queue.md</code>, emit merge order, check batch…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/345">issue #345</a> — issued 2026-09-03 — library-shipped, awaiting-merge (two PRs open 2026-09-03; PyAutoMind#394 is STACKED on</summary>
+<details><summary>📋 <a href="active/mind_post_cortex_p4_batch_plan_fidelity.md">Batch plan fidelity: derive backpressure, honour <code>queue.md</code>, emit merge order, check batch…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/345">issue #345</a> — issued 2026-09-03 — library-shipped, awaiting-merge (two PRs open 2026-09-03; PyAutoMind#394 is STACKED on — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/346">PyAutoBrain#346</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/394">PyAutoMind#394</a></summary>
 
 ```
 /start_dev active/mind_post_cortex_p4_batch_plan_fidelity.md
@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mind_post_cortex_p5_heart_freeze_flag.md">Heart freeze flag: make the library-main validation window visible to <code>/prm</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/196">issue #196</a> — issued 2026-09-03 — library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoHeart#197</summary>
+<details><summary>📋 <a href="active/mind_post_cortex_p5_heart_freeze_flag.md">Heart freeze flag: make the library-main validation window visible to <code>/prm</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/196">issue #196</a> — issued 2026-09-03 — library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoHeart#197 — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/197">PyAutoHeart#197</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/347">PyAutoBrain#347</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/275">PyAutoHands#275</a></summary>
 
 ```
 /start_dev active/mind_post_cortex_p5_heart_freeze_flag.md

@@ -507,6 +507,11 @@ Each task is an H2 section:
 - issued: YYYY-MM-DD                              # the day the task was issued
 - session: claude --resume <session-id>           # optional
 - status: <library-dev | workspace-dev | ready-to-ship | awaiting-input | …>
+- library-pr: <url>               # optional until the PR exists; repeatable —
+- library-pr: <url>               # one line per PR, or one line of `<url>, <url>`
+- workspace-pr: <url>             # same shape, for the workspace half
+- pending-release: <lib>@<pr-url> # optional; a merged library PR not yet on PyPI
+- release-gate: <lib>             # optional; this task waits on <lib>'s release
 - location: <cli-in-progress | ready-for-mobile | …>   # optional, used by /handoff
 - question: <issue-comment-url>   # optional; set when status is awaiting-input
                                   # (checkpoint-and-continue — PyAutoBrain/AUTONOMY.md)
@@ -525,6 +530,79 @@ Each task is an H2 section:
 - summary: |
     Free-form summary of progress and next steps.
 ```
+
+#### The PR keys (`library-pr:` / `workspace-pr:`)
+
+`ship_library` and `ship_workspace` write them; `/prm` reads them to find the
+PRs it must merge; the dashboard links them. They were doing all three before
+they were written down here, which is why nothing validated them and the
+dashboard could only render the free-text `status:`.
+
+- **Repeatable.** A task may ship several PRs of one kind (phase 2 of the
+  `mind-post-cortex` epic opened three library PRs). Repeat the key on its own
+  line, one URL each. The older single-line form — `- library-pr: <url>, <url>`
+  — stays valid and is read the same way; nothing needs rewriting.
+- **`library-pr:` means "a PR against a library or organ repo"** and
+  `workspace-pr:` "a PR against a workspace, HowTo or assistant repo". The
+  distinction is the merge order `/prm` enforces (library first), not the
+  diff's contents.
+- **The rule `lifecycle.py check` enforces:** a row whose `status:` says
+  `awaiting-merge`, `PR open` or `shipped` must carry at least one `*-pr:`.
+  A row that declares its PRs are open, and then does not say where they are,
+  is a task `/prm` cannot close and a human cannot find.
+
+**This one is drift, not a warning** — `check` exits 1 on it. A row that says
+its PRs are open and then does not say where they are contradicts itself, which
+is the class of thing this check exists to catch; there is nothing for a human
+to weigh. The live ledger passed the day it shipped, so the first failure can
+only be a new row.
+
+The escalation ladder for the *other* new check is the opposite way round: an
+uncleared `pending-release:` is reported and `check` still exits 0 (below), and
+it stays that way. It is not a contradiction — the key's whole meaning is "not
+released yet" — so it must never become a gate on the Mind's CI. If it ever
+looks like it should escalate, the thing to fix is the release, not the check.
+
+#### The pending-release chain (`pending-release:` / `release-gate:`)
+
+A merged library PR is not a released library. Between the merge and the PyPI
+publish, workspace work that depends on the new API is blocked, and until this
+shipped the only machine view of that state was the Brain board's live `gh`
+search over the `pending-release` label.
+
+The division of labour is deliberate and this is the whole of it:
+
+| Who | Holds |
+|-----|-------|
+| **GitHub** | the `pending-release` label on the merged library PR — the source of truth for "merged, not yet published" |
+| **PyAutoHands** | the release that publishes it |
+| **Mind** | the *link* (`pending-release: <lib>@<pr-url>`) and the *gate* (`release-gate: <lib>`) — nothing else |
+
+- `ship_library` writes `pending-release: <lib>@<pr-url>` on the task's
+  `active.md` row when it opens a PR carrying the `pending-release` label.
+  `<lib>` is the library repo's name (`PyAutoArray`), the URL its PR.
+- `ship_workspace` writes `release-gate: <lib>` on a workspace task that is
+  blocked behind that library's release. One line per library.
+- `/prm` close-out carries any uncleared `pending-release:` from the
+  `active.md` row into the completion record, so the obligation outlives the
+  row.
+- **`/review_release` step 5, the "Live run" branch, clears it** — that is the
+  one step in the organism that establishes a release actually published. It
+  drops the `pending-release` label from the named PRs and deletes the
+  `pending-release:` lines from the `active.md` rows and `complete/` records
+  that name them. Nothing else may clear the key: a release that was dispatched
+  is not a release that published.
+- `lifecycle.py check` warns (never errors) on a `complete/` record whose
+  `pending-release:` is still uncleared after 30 days. A stale link is a
+  bookkeeping miss, not drift — the library may legitimately not have been
+  released yet.
+
+The dashboard's **Pending release** section renders this **from the ledger
+only** — it never calls `gh` at render time, and it says so in its own blurb.
+The Brain board's live query stays the fresh view; the dashboard section is the
+view that works offline, in CI, and on a phone, and that says what the Mind
+*believes* rather than what GitHub *currently reports*. When the two disagree,
+GitHub is right and the ledger needs a `/review_release` pass.
 
 ### Task dates
 
@@ -605,6 +683,9 @@ and, appended by `lifecycle.py record`, the original prompt:
 - completed: YYYY-MM-DD
 - library-pr: <url> [, <url>]
 - workspace-pr: <url> [, <url>]
+- pending-release: <lib>@<pr-url>   # optional; carried from the active.md row by
+                                    # /prm, cleared by /review_release on a live
+                                    # run (see "The pending-release chain")
 - summary: <what landed, gotchas, follow-ups — free-form bullets>
 
 ## Original prompt
