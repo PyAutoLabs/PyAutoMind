@@ -1,5 +1,15 @@
 # Active Tasks
 
+## batch-status-box
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/341
+- prompt: active/batch_board.md
+- issued: 2026-09-02
+- session: claude --resume session_01VsKeuX83FNGjLqs2axLHeR
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/batch-status-box
+- repos:
+- epic: two-slot-batching (phase 6; parent draft/feature/pyautomind/two_slot_batching_epic.md)
+
 ## euclid-cpu-two-stage-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
 - prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md
