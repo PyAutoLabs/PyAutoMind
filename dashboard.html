@@ -227,7 +227,7 @@ a.go:hover{opacity:.9;text-decoration:none}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>8</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>161</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>9</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>160</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-09-03.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -293,6 +293,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev active/mind_post_cortex_p1_retire_batch_epic.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/mind_post_cortex_p1_retire_batch_epic.md">Retire the <code>two-slot-batching</code> epic — keep three pieces as standalone prompts</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/389">issue #389</a><span class="facets"> — issued 2026-09-03</span> — <span class="facets">ledger-dev — PyAutoMind ledger only; branch <code>claude/mind-post-cortex-p1</code> lands via <code>mind_ledger_merge.yml</code> (no worktree, no PR)</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/mind_post_cortex_p2_science_residue.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/mind_post_cortex_p2_science_residue.md">Delete the science-epic residue the Cortex split left in Mind</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/390">issue #390</a><span class="facets"> — issued 2026-09-03</span> — <span class="facets">library-shipped, awaiting-merge (three PRs open 2026-09-03; no merge order forced — the</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/mind_post_cortex_p3_pr_ledger_pending_release.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/mind_post_cortex_p3_pr_ledger_pending_release.md">Mind's PR ledger: schematise <code>library-pr:</code>/<code>workspace-pr:</code>, render PRs and the pending-release chain</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/392">issue #392</a><span class="facets"> — issued 2026-09-03</span> — <span class="facets">library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoMind#393 first</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/mind_post_cortex_p4_batch_plan_fidelity.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/mind_post_cortex_p4_batch_plan_fidelity.md">Batch plan fidelity: derive backpressure, honour <code>queue.md</code>, emit merge order, check batch…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/345">issue #345</a><span class="facets"> — issued 2026-09-03</span> — <span class="facets">library-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/over_sample_snr_double_division.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/over_sample_snr_double_division.md">Adaptive pixelization over-sampling divides the source S/N map by the noise map…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/523">issue #523</a><span class="facets"> — issued 2026-09-02</span> — <span class="facets">workspace-dev</span></p></div>
 <a id="human-review"></a><h2>Human review <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft/human_review">markdown version</a></h2>
 <p class="muted">Shipped work waiting on <b>you</b> — tasks a human asked to check before calling them done. Nothing lands here on its own: a task only gets a review row when someone files one (<code>/intake</code> with <code>Type: human review</code>), so an empty section means nothing has been flagged, not that nothing shipped.</p>
@@ -341,7 +342,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
 </details>
 <h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
-<p class="muted">161 filed prompts, not started — sorted most-pickable first (priority, then size). 42 of them belong to an epic and are listed only under Epics below.</p>
+<p class="muted">160 filed prompts, not started — sorted most-pickable first (priority, then size). 41 of them belong to an epic and are listed only under Epics below.</p>
 <details>
 <summary>feature — 32</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
@@ -882,6 +883,12 @@ Contract (the `start_bundle` skill is the full body):
 <tr>
 <td class="when">2026-09-03</td>
 <td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/mind_post_cortex_p4_batch_plan_fidelity.md">Batch plan fidelity: derive backpressure, honour <code>queue.md</code>, emit…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/mind_post_cortex_p4_batch_plan_fidelity.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-09-03</td>
+<td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/jax_faddeeva_seams_and_spherical_clamp_audit.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
@@ -891,7 +898,7 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/feature/pyautobrain/batch_slice.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-09-02</td>
 <td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba +…</a></td>
@@ -1157,12 +1164,6 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/triage/bug_in_autocti_workspace_the_dataset_1d.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
-<td class="when">2026-08-18</td>
-<td class="what">parked</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md#single-source-density-design">single-source-density-design</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/12_single_source_density_refactor.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
 <h2>Epics <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/epics.md">markdown version</a></h2>
@@ -1236,9 +1237,8 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md">Precompute fixed-geometry Gaussian deflection angles and rescale by the free mass-to-light ratio…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">autogalaxy</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill n">medium</span></span></p></div>
 </details>
 <details>
-<summary>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger — 2 queued prompt(s), in order</summary>
+<summary>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger — 1 queued prompt(s), in order</summary>
 <div class="task"><button class="copy" data-cmd="Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger' epic. Its canonical state lives in draft/maintenance/pyautomind/mind_post_cortex_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching" aria-label="Copy the Claude command">📋</button><p><b>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger</b> — <span class="facets">ledger: <code>draft/maintenance/pyautomind/mind_post_cortex_epic.md</code></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/feature/pyautobrain/mind_post_cortex_p4_batch_plan_fidelity.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/mind_post_cortex_p4_batch_plan_fidelity.md">Batch plan fidelity: derive backpressure, honour <code>queue.md</code>, emit merge order, check batch…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">pyautobrain</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/pyautoheart/mind_post_cortex_p5_heart_freeze_flag.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautoheart/mind_post_cortex_p5_heart_freeze_flag.md">Heart freeze flag: make the library-main validation window visible to <code>/prm</code>…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">pyautoheart</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 </details>
 <ul class="boards"><li class="muted" style="padding:.3rem 0">Boards:</li><li><a data-organ="brain" href="https://pyautolabs.github.io/PyAutoBrain/">Brain</a></li><li><a data-organ="cortex" href="https://pyautolabs.github.io/PyAutoCortex/">Cortex</a></li><li><a data-organ="memory" href="https://pyautolabs.github.io/PyAutoMemory/">Memory</a></li><li><a data-organ="heart" href="https://pyautolabs.github.io/PyAutoHeart/">Heart</a></li><li><a data-organ="hands" href="https://pyautolabs.github.io/PyAutoHands/">Hands</a></li><li><a data-organ="organism" href="https://pyautolabs.github.io/PyAutoScientist/">Scientist</a></li></ul>
