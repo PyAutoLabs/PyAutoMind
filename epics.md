@@ -115,7 +115,7 @@ epic, never picked standalone.
 ## gaussian-deflections-precompute
 - title: Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)
 - ledger: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
-- status: phase 1 in flight 2026-09-03
+- status: phase 1 in flight 2026-09-03 — PyAutoGalaxy#601 (active/gaussian_precompute_p1_numpy_memo.md)
 - notes: three phase prompts — draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md,
   draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
   draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md (numpy memo + witness; JAX
