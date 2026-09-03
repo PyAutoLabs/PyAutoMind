@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1276 records across 8 buckets.
+1277 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -140,6 +140,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-message-support](2026/09/ep-message-support.md)
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
+- [euclid-cpu-two-stage-route](2026/09/euclid-cpu-two-stage-route.md)
 - [gaussian-precompute-p1](2026/09/gaussian-precompute-p1.md)
 - [gaussian-precompute-p2](2026/09/gaussian-precompute-p2.md)
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,

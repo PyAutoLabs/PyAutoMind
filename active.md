@@ -1,5 +1,22 @@
 # Active Tasks
 
+## human-readable-first-docs
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/120
+- prompt: active/swap_docs_back_to_human_readable_first.md
+- issued: 2026-09-03
+- session: claude --resume session_01TRKarVxARKJ6VJN5Qc3521
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/human-readable-first-docs
+- repos:
+  - autolens_assistant: feature/human-readable-first-docs
+  - autogalaxy_assistant: feature/human-readable-first-docs
+  - PyAutoLens: feature/human-readable-first-docs
+  - PyAutoGalaxy: feature/human-readable-first-docs
+  - autolens_workspace: feature/human-readable-first-docs
+  - autogalaxy_workspace: feature/human-readable-first-docs
+- parallel-claim: autolens_workspace also claimed by gaussian-precompute-p3 (#528); file sets disjoint (that task touches only scripts/**/mass_stellar_dark/slam.py + its notebook; this task touches README.md, start_here.py + its notebook/markdown twins) — separate worktree per the disjoint-files rule, launched 2026-09-03 under the user's "do intake and then do work" instruction; second to merge rebases.
+- heart-ack: 2026-09-03 PR-open only (never merge) under Heart RED; exact reasons from pyauto-heart readiness --json: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old" — the same reason set the human acknowledged for gaussian-precompute-p3 earlier today; docs-only change unrelated to either reason; a further new reason at ship time re-blocks
+
 ## gaussian-precompute-p3
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/528
 - prompt: active/gaussian_precompute_p3_downstream_sweep.md
@@ -41,17 +58,3 @@
   - PyAutoCortex: feature/cortex-checkin-p2-the-door
 - parallel-claim: both repos are also claimed by cortex-checkin-p1-shed-review-slot (PyAutoCortex#9, PRs PyAutoBrain#348 / PyAutoCortex#10 open, unmerged). This is the epic's own stacking, not a collision: p2 branches FROM `feature/cortex-checkin-p1-shed-review-slot` in both repos and its PRs target that branch, so p1's deletions are already in p2's base. File sets are disjoint from p1's remaining work — p2 adds the `checkin` door to `agents/conductors/cortex/_cortex.py`, rewrites `skills/cortex/*` + `skills/COMMANDS.md`, adds check-in tests, and touches PyAutoCortex docs only (README/AGENTS/REFERENCE) — while p1 is finished and awaiting merge. Human-approved 2026-09-03 ("ok go" on the epic and its phases). worktree_check_conflict exits 1 by design here; phase 3 will stack on p2's branches in turn.
 - epic: cortex-checkin (phase 2; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md). Retarget both PRs to main when phase 1 merges.
-
-## euclid-cpu-two-stage-route
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
-- prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md
-- issued: 2026-09-02
-- session: local CLI (Fable architect, Opus execution) — claude --resume session_01BhD2t684rJZi1tT34u2KgR
-- status: pr-open — https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50 (opened 2026-09-03; workspace-only, no pending-release, merge is human via /prm). Ship gate: pytest 72 passed, smoke 9/9. Both RAL routes COMPLETED (GPU 1 h 14 min on an A100, two-stage CPU 3 h 17 min on 8 cores). Two commits added post-open: d32d58e fixes the apply_sparse_operator drift on the JAX path (initial_lens_model.py and full_model.py), f092efe records the GPU re-measurement (job 342264, 1 h 44 min on a 25% slower node — the fix is a correctness fix, not a speed-up).
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/50
-- heart-ack: human-acknowledged Heart RED for PR-open (never merge), exact reasons from pyauto-heart readiness --json: "PyAutoLens: CI failure"; "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old"
-- follow-ups filed: draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md (re-scoped 2026-09-03 — the apply_sparse_operator drift is fixed in PR #50 and measured not to be the cause; the ~7x gap to the documented ~10 min stays open against the science config/, per-lens JIT and visualisation, or the claim's provenance), draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md (control test found no hang; boundary kept as the conservative default)
-- worktree: ~/Code/PyAutoLabs-wt/euclid-cpu-two-stage-route
-- repos:
-  - euclid_strong_lens_modeling_pipeline (feature/euclid-cpu-two-stage-route)
-- epic: euclid-dr1-prep (Mind phase 4; gates PyAutoCortex phases/euclid/dr1_prelim_10_lens_science_run)

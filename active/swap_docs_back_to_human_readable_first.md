@@ -12,7 +12,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: active
+Issued: 2026-09-03
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/120
 Consequence: glance
 Witness: `grep -ril antigravity autolens_assistant/README.md autogalaxy_assistant/README.md` returns nothing, and in every touched README the human-readable docs section precedes the AI Assistant section.
 Review-minutes: 3
