@@ -125,7 +125,7 @@ Rendering: `plot_array` / `plot_inversion_reconstruction` gain `regions`, `regio
 |---|---|---|
 | 1 | complete/2026/09/image-source-mappings-p1.md | **SHIPPED** 2026-09-02 — PyAutoArray#517 merged (`501c373f`), issue #515 closed. `pending-release`: the PyAutoArray **release** is still outstanding, and Phase 2 is gated on it. |
 | 2 | complete/2026/09/image-source-mappings-p2.md | **SHIPPED** 2026-09-02 — PyAutoArray#518 merged (`c9f67e78`, phase 2a + three solver/overlay fixes) → PyAutoLens#720 merged (`091fbdff`, ShapeSolver validation suite + `al.mappings` + `subplot_mappings`), issue #719 closed. Both repos `pending-release`: **both releases are still outstanding**, and Phase 3 is gated on them. |
-| 3 | active/mappings_guide_and_tutorial_rewrite.md | **ACTIVE** 2026-09-03 — autolens_workspace#525, worktree `image-source-mappings-p3` (autolens_workspace, HowToLens, HowToGalaxy, autogalaxy_workspace). Opened by user decision ahead of both library releases; every PR `pending-release`. |
+| 3 | complete/2026/09/image-source-mappings-p3.md | **SHIPPED** 2026-09-03 — autolens_workspace#526 (`31a7b6e4`, `guides/mappings.py` + regions prose + four dead sections), HowToLens#76 (`723f26ce`), HowToGalaxy#72 (`85c08b44`), autogalaxy_workspace#232 (`c14de5b7`) merged, issue #525 closed. All four `pending-release` on the outstanding PyAutoArray + PyAutoLens releases. Library follow-ups → `draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md`. |
 
 ## Sequencing rule
 
