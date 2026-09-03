@@ -125,14 +125,15 @@ Rendering: `plot_array` / `plot_inversion_reconstruction` gain `regions`, `regio
 |---|---|---|
 | 1 | complete/2026/09/image-source-mappings-p1.md | **SHIPPED** 2026-09-02 — PyAutoArray#517 merged (`501c373f`), issue #515 closed. `pending-release`: the PyAutoArray **release** is still outstanding, and Phase 2 is gated on it. |
 | 2 | complete/2026/09/image-source-mappings-p2.md | **SHIPPED** 2026-09-02 — PyAutoArray#518 merged (`c9f67e78`, phase 2a + three solver/overlay fixes) → PyAutoLens#720 merged (`091fbdff`, ShapeSolver validation suite + `al.mappings` + `subplot_mappings`), issue #719 closed. Both repos `pending-release`: **both releases are still outstanding**, and Phase 3 is gated on them. |
-| 3 | draft/docs/autolens_workspace/mappings_guide_and_tutorial_rewrite.md | filed |
+| 3 | active/mappings_guide_and_tutorial_rewrite.md | **ACTIVE** 2026-09-03 — autolens_workspace#525, worktree `image-source-mappings-p3` (autolens_workspace, HowToLens, HowToGalaxy, autogalaxy_workspace). Opened by user decision ahead of both library releases; every PR `pending-release`. |
 
 ## Sequencing rule
 
 **Library-first, strictly.** Phase 1 (PyAutoArray) must be merged AND released before Phase 2 opens, because Phase 2's
 `autolens/lens/mappings.py` imports `Mapping`/`ImageRegion` and the `regions=` overlay from the released PyAutoArray.
-Phase 3 (workspace + tutorials) opens only after BOTH Phase 1 and Phase 2 have released, since the guide and the
-rewritten `tutorial_2_mappers.py` call both libraries' APIs.
+Phase 3 (workspace + tutorials) was gated on BOTH Phase 1 and Phase 2 releasing, since the guide and the
+rewritten `tutorial_2_mappers.py` call both libraries' APIs. **Waived by the user 2026-09-03** (as for Phase 2): workspace CI
+installs the libraries from source, so Phase 3 develops and ships now with `pending-release` on every PR.
 
 Issue **ONE phase at a time** — no bulk issue queues. One issue + one PR per phase. Fable stays architect: plans,
 reviews the returned diff against the verified facts above, writes PR bodies; implementation is delegated one rung down.

@@ -130,3 +130,29 @@
   - autolens_workspace (feature/over-sample-snr-double-division)
   - autolens_workspace_test (feature/over-sample-snr-double-division)
   - autolens_assistant (feature/over-sample-snr-double-division)
+
+## image-source-mappings-p3
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/525
+- prompt: active/mappings_guide_and_tutorial_rewrite.md
+- issued: 2026-09-03
+- session: claude --resume 7edd9743-c486-48ec-be0a-9f184a4898d4
+- status: workspace-dev
+- epic: image-source-mappings (phase 3 — ledger draft/feature/autoarray/image_source_mappings_epic.md; opened 2026-09-03 by user decision ahead of the PyAutoArray/PyAutoLens releases that gated it; every PR carries pending-release)
+- heart-ack:
+  - "release validation FAILED (stage integrate)"
+  - "PyAutoArray: open PR 11d old"
+- worktree: ~/Code/PyAutoLabs-wt/image-source-mappings-p3
+- parallel-claim: autolens_workspace — over-sample-snr-double-division (#523) in its own worktree; touches SLaM scripts, guides/advanced/over_sampling.py and guides/modeling/slam_start_here.py only; file sets disjoint
+- repos:
+  - autolens_workspace: feature/image-source-mappings-p3
+  - HowToLens: feature/image-source-mappings-p3
+  - HowToGalaxy: feature/image-source-mappings-p3
+  - autogalaxy_workspace: feature/image-source-mappings-p3
+- summary: |
+    Phase 3 of image-source-mappings (workspace). New guide autolens_workspace/scripts/guides/mappings.py
+    (point → parametric region → pixelized region mappings with the 0.2/0.5/0.8 clump threshold demo,
+    subplot_mappings, 4MOST brightest-position recipe with guide-level astropy WCS, magnification per image);
+    HowToLens/HowToGalaxy tutorial_2_mappers rewritten to draw polygons via mapper.mappings_from + regions=,
+    BUGGY line dropped; dead slim_indexes_for_pix_indexes sections in the pixelization delaunay.py /
+    likelihood_function.py scripts fixed; prose + total_mappings_pixels config sweep. One issue, four PRs,
+    one worktree. Fable session; execution delegated to Opus (subagent A guide, subagent B tutorials/dead sections).

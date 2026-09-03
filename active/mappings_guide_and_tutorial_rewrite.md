@@ -17,6 +17,8 @@ Unattended: ready
 Epic: image-source-mappings
 Phase: 3
 Filed: 2026-09-02
+Issued: 2026-09-03
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/525
 
 Mappings guide (`guides/mappings.py`), tutorial_2_mappers rewrite with polygons, and dead index-section fixes across the workspaces.
 
