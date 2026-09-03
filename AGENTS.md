@@ -72,6 +72,11 @@ For the full workflow narrative, conventions, and registry schemas, read
   `PyAutoBrain/skills/WORKFLOW.md` are generated from it, and the repo lists in
   Heart/Build/admin scripts are drift-checked against it:
   `python3 scripts/repos_sync.py --write`.
+- **Policy** — `policy/` holds the universal rules single-sourced here and
+  generated verbatim into every repo's AGENTS.md by `repos_sync.py --write`:
+  `never_rewrite_history.md`, `remote_sessions.md`, `end_at_deliverable.md`
+  (plus the hooks that enforce them, `session_start_hook.sh` and
+  `end_at_deliverable_hook.sh`). Edit the canonical file, never a generated copy.
 - **Skills** — `skills/<name>/` are agent skills and command bodies tightly
   coupled to the registry. Claude and Codex discovery is installed by
   PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.
@@ -205,3 +210,15 @@ tracked repo, no force-push to `main`, no fresh-start "Initial commit", no
 `filter-repo` / `filter-branch` / `rebase -i` on pushed branches. To get a
 clean tree: `git fetch origin && git reset --hard origin/main && git clean -fd`.
 <!-- repos_sync:history:end -->
+
+<!-- repos_sync:deliverable:begin -->
+## Sessions end at their deliverable
+
+A session ends when it reports its deliverable — never arm anything that
+outlives the turn to wait for CI, a review or a merge: no `send_later`, no
+`subscribe_pr_activity`, no `CronCreate`, no `ScheduleWakeup`, no `/loop`, no
+`RemoteTrigger` create/update/run. Judge once, report, stop; the human re-runs
+`/prm` (or the batch review) when it is green. Measured: five batch members
+armed hourly check-ins on 2026-08-31, and a mobile `/prm` re-armed a 60-minute
+`send_later` hourly all night on 2026-09-03 with no task active, draining usage.
+<!-- repos_sync:deliverable:end -->

@@ -8,8 +8,9 @@ name: Tenant Firewall Gate
 # mains and runs the full drift check, so an allowlist over-grant or a check
 # that stopped finding real drift fails the PR that authors it.
 #
-# Path-filtered to scripts/repos_sync.py and the canonical SessionStart hook
-# it generates (plus this file): registry/prompt pushes — the overwhelming
+# Path-filtered to scripts/repos_sync.py and the canonical hooks it generates
+# — the SessionStart hook and the PreToolUse end-at-deliverable guard — plus
+# this file: registry/prompt pushes — the overwhelming
 # bulk of Mind traffic — never trigger it. The hook joined the filter in
 # PyAutoMind#369: editing `policy/session_start_hook.sh` re-stales every
 # installed copy, and until then no gate ran on that edit at all.
@@ -25,11 +26,13 @@ on:
     paths:
       - "scripts/repos_sync.py"
       - "policy/session_start_hook.sh"
+      - "policy/end_at_deliverable_hook.sh"
       - ".github/workflows/firewall_gate.yml"
   pull_request:
     paths:
       - "scripts/repos_sync.py"
       - "policy/session_start_hook.sh"
+      - "policy/end_at_deliverable_hook.sh"
       - ".github/workflows/firewall_gate.yml"
   workflow_dispatch:
 

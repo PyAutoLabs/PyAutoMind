@@ -27,12 +27,20 @@ organism. A repo opts in by adding the map markers to its AGENTS.md; organ
 repos (or roots) that are absent, or lack the markers, are skipped rather than
 failing the run.
 
---write also installs the SessionStart hook (`policy/session_start_hook.sh` ->
-`<repo>/.claude/hooks/session-start.sh`, registered in `<repo>/.claude/
-settings.json`) into every checked-out repo. It is what makes a Claude Code
-web/mobile session run Python 3.12 instead of the container's 3.11 default; the
-copies must be byte-identical to the canonical file, so `--check` fails on any
-edit made to a copy.
+--write also installs the two generated hooks into every checked-out repo,
+both registered in `<repo>/.claude/settings.json`:
+
+  * `policy/session_start_hook.sh` -> `.claude/hooks/session-start.sh`
+    (SessionStart) — what makes a Claude Code web/mobile session run Python
+    3.12 instead of the container's 3.11 default;
+  * `policy/end_at_deliverable_hook.sh` -> `.claude/hooks/end-at-deliverable.sh`
+    (PreToolUse, matching the timer-shaped tools) — the guard that enforces
+    `policy/end_at_deliverable.md`: a session ends at its deliverable and never
+    arms `send_later` / `subscribe_pr_activity` / `CronCreate` / `ScheduleWakeup`
+    / `RemoteTrigger` create-update-run to wait for CI, a review or a merge.
+
+The copies must be byte-identical to the canonical files, so `--check` fails on
+any edit made to a copy.
 
 `.claude/` and `CLAUDE.md` are the only top-level entries --write creates in a
 target repo, and a repo may lint its own layout. Before writing either one,
@@ -54,8 +62,13 @@ repo's CI with a path it rejects.
   * the tenant firewall — no instance fact (satellite repo name, GitHub
     owner, workspace path) in Brain/Heart/Build *.py / *.sh outside the
     declared config surfaces (FIREWALL_ALLOWLIST below)
-  * the SessionStart hook — present, executable, byte-identical to
-    policy/session_start_hook.sh and registered in .claude/settings.json
+  * both generated hooks — present, executable, byte-identical to
+    policy/session_start_hook.sh and policy/end_at_deliverable_hook.sh, and
+    registered in .claude/settings.json (SessionStart / PreToolUse)
+  * the end-at-deliverable policy block — unlike the other generated blocks
+    this one is NOT opt-in-silent: an AGENTS.md without the markers is
+    reported, because a repo missing this safety rule is the failure mode.
+    --write inserts the markers itself under an existing history block
   * target-repo layout lints — every checked-out repo that lints its own
     top-level entries allowlists the `.claude/` and `CLAUDE.md` that --write
     installs (a repo that does not is skipped by --write and named here)
@@ -82,6 +95,8 @@ HISTORY_BEGIN = "<!-- repos_sync:history:begin -->"
 HISTORY_END = "<!-- repos_sync:history:end -->"
 REMOTE_BEGIN = "<!-- repos_sync:remote:begin -->"
 REMOTE_END = "<!-- repos_sync:remote:end -->"
+DELIVERABLE_BEGIN = "<!-- repos_sync:deliverable:begin -->"
+DELIVERABLE_END = "<!-- repos_sync:deliverable:end -->"
 ORGANS_BEGIN = "<!-- repos_sync:organs:begin -->"
 ORGANS_END = "<!-- repos_sync:organs:end -->"
 
@@ -110,7 +125,7 @@ SESSION_HOOK_FILE = "policy/session_start_hook.sh"
 SESSION_HOOK_REL = ".claude/hooks/session-start.sh"
 SESSION_SETTINGS_REL = ".claude/settings.json"
 SESSION_HOOK_COMMAND = "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
-SESSION_HOOKS = "session-start hooks (generated)"
+SESSION_HOOKS = "generated hooks (session-start + end-at-deliverable)"
 
 
 # What a Claude Code web/mobile session must know before its first command:
@@ -130,6 +145,36 @@ SESSION_HOOKS = "session-start hooks (generated)"
 # `.claude/session-python.txt`, which the hook reads at run time.
 REMOTE_SESSIONS_FILE = "policy/remote_sessions.md"
 
+# The universal "sessions end at their deliverable" rule: never arm anything
+# that outlives the turn (send_later, subscribe_pr_activity, CronCreate,
+# ScheduleWakeup, /loop, RemoteTrigger create/update/run) to wait for CI, a
+# review or a merge. Same shape as the history policy — one source file, N
+# generated copies, a drift check — and inline in every repo for the same
+# reason: it binds any session in any repo, including a cold one reading a
+# single repo on GitHub, and the sessions that broke it were remote ones where
+# only repo content is guaranteed to be loaded.
+#
+# It is single-sourced rather than restated per skill because it was already
+# written in one place (the batch skill) and still broken elsewhere twice: five
+# batch members on 2026-08-31, then a mobile `/prm` on 2026-09-02/03. The prose
+# rides beside the PreToolUse hook below, which enforces it — prose for the
+# reasoning, the hook for the moment of temptation.
+DELIVERABLE_POLICY_FILE = "policy/end_at_deliverable.md"
+
+# The PreToolUse guard that makes the rule above unbypassable by reasoning.
+# Installed and drift-checked exactly like the SessionStart hook (same
+# one-source/N-copies contract), but registered under `hooks.PreToolUse` with a
+# matcher naming the timer-shaped tools. It reads the PreToolUse JSON on stdin,
+# lets read-only `RemoteTrigger` actions and PYAUTO_ALLOW_TIMERS=1 through, and
+# exits 2 with the policy reason on everything else.
+DELIVERABLE_HOOK_FILE = "policy/end_at_deliverable_hook.sh"
+DELIVERABLE_HOOK_REL = ".claude/hooks/end-at-deliverable.sh"
+DELIVERABLE_HOOK_COMMAND = "$CLAUDE_PROJECT_DIR/.claude/hooks/end-at-deliverable.sh"
+DELIVERABLE_HOOK_MATCHER = (
+    "^(send_later|subscribe_pr_activity|ScheduleWakeup|CronCreate|"
+    "RemoteTrigger|mcp__.*(send_later|subscribe_pr_activity).*)$"
+)
+
 
 def load_history_policy(mind_root):
     return (mind_root / HISTORY_POLICY_FILE).read_text().rstrip("\n")
@@ -139,8 +184,16 @@ def load_remote_sessions(mind_root):
     return (mind_root / REMOTE_SESSIONS_FILE).read_text().rstrip("\n")
 
 
+def load_deliverable_policy(mind_root):
+    return (mind_root / DELIVERABLE_POLICY_FILE).read_text().rstrip("\n")
+
+
 def load_session_hook(mind_root):
     return (mind_root / SESSION_HOOK_FILE).read_text()
+
+
+def load_deliverable_hook(mind_root):
+    return (mind_root / DELIVERABLE_HOOK_FILE).read_text()
 
 # The canonical content-free CLAUDE.md pointer. Guidance is agent-agnostic and
 # lives in AGENTS.md (read natively by Codex, Cursor, etc.); Claude Code loads
@@ -659,6 +712,73 @@ def check_remote_blocks(root, repos, remote):
                 f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
             )
     return problems
+
+
+def check_deliverable_blocks(root, repos, policy):
+    """Same one-source contract as the history block, but NOT opt-in silence.
+
+    The other blocks skip a repo that has not added their markers, because a
+    repo can reasonably not carry them yet. This one is a safety rule that was
+    already written down somewhere and still broken twice, so a repo missing it
+    is the failure mode, not a pending nicety — a missing block is reported
+    rather than skipped, and the report says which of the two states it is in:
+
+    * the history markers are there and the deliverable markers are not —
+      `--write` inserts the block itself, so the fix is to run it;
+    * neither marker pair is present — the repo carries no generated policy at
+      all, and a human has to place the markers before --write can fill them.
+    """
+    problems = []
+    for name in repos:
+        agents = root / name / "AGENTS.md"
+        if not agents.exists():
+            continue  # not checked out here
+        text = agents.read_text()
+        if DELIVERABLE_BEGIN in text and DELIVERABLE_END in text:
+            if extract_block(text, DELIVERABLE_BEGIN, DELIVERABLE_END) != policy:
+                problems.append(
+                    f"'{name}': end-at-deliverable block is stale — run "
+                    f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
+                )
+        elif HISTORY_BEGIN in text and HISTORY_END in text:
+            problems.append(
+                f"'{name}': no deliverable block — run "
+                f"`python3 PyAutoMind/scripts/repos_sync.py --write` "
+                f"(it inserts one after the history block)"
+            )
+        else:
+            problems.append(
+                f"'{name}': no deliverable block — add the markers "
+                f"({DELIVERABLE_BEGIN} / {DELIVERABLE_END}) to its AGENTS.md, "
+                f"then run `python3 PyAutoMind/scripts/repos_sync.py --write`"
+            )
+    return problems
+
+
+def insert_deliverable_markers(root, repos):
+    """Place the deliverable markers under the history block where they are
+    missing, so `--write` can fill them on the same run.
+
+    Only a repo that already carries the history markers is touched: that pair
+    proves the file has a generated-policy section and pins where the new block
+    belongs. A repo with neither pair is left alone (there is no non-arbitrary
+    place to put it) and named by `check_deliverable_blocks` instead."""
+    for name in repos:
+        agents = root / name / "AGENTS.md"
+        if not agents.exists():
+            continue
+        text = agents.read_text()
+        if DELIVERABLE_BEGIN in text or DELIVERABLE_END in text:
+            continue
+        if HISTORY_END not in text:
+            continue  # no anchor — reported by the check, not guessed at here
+        text = text.replace(
+            HISTORY_END,
+            f"{HISTORY_END}\n\n{DELIVERABLE_BEGIN}\n{DELIVERABLE_END}",
+            1,
+        )
+        agents.write_text(text)
+        print(f"inserted deliverable markers: {agents}")
 
 
 # --------------------------------------------------------------------------
@@ -1203,6 +1323,40 @@ def settings_registers_hook(text):
     return SESSION_HOOK_COMMAND in session_start_entries(settings)
 
 
+def pre_tool_use_entries(settings):
+    """Every hook command registered under PreToolUse, whatever the nesting."""
+    commands = []
+    for group in settings.get("hooks", {}).get("PreToolUse", []) or []:
+        if not isinstance(group, dict):
+            continue
+        for hook in group.get("hooks", []) or []:
+            if isinstance(hook, dict) and "command" in hook:
+                commands.append(hook["command"])
+    return commands
+
+
+def settings_registers_deliverable_hook(text):
+    try:
+        settings = json.loads(text)
+    except (ValueError, TypeError):
+        return False
+    if not isinstance(settings, dict):
+        return False
+    return DELIVERABLE_HOOK_COMMAND in pre_tool_use_entries(settings)
+
+
+def register_deliverable_hook(settings):
+    """Add the PreToolUse registration, preserving every other hook the repo
+    already runs on PreToolUse (the workspace root, for one, guards Bash)."""
+    hooks = settings.setdefault("hooks", {})
+    groups = hooks.setdefault("PreToolUse", [])
+    groups.append({
+        "matcher": DELIVERABLE_HOOK_MATCHER,
+        "hooks": [{"type": "command", "command": DELIVERABLE_HOOK_COMMAND}],
+    })
+    return settings
+
+
 def register_session_hook(settings):
     """Add the SessionStart registration, preserving everything else the repo
     keeps in its settings.json (permissions, env, other hook events)."""
@@ -1243,7 +1397,23 @@ def session_hook_counts(root, repos):
     return checked_out, len(in_scope), excluded
 
 
-def check_session_hooks(root, repos, hook_text):
+def _check_installed_hook(problems, name, repo_dir, rel, canonical, text):
+    """One installed copy: present, byte-identical to its canonical file, +x."""
+    hook = repo_dir / rel
+    if not hook.exists():
+        problems.append(f"'{name}': no {rel}")
+    elif hook.read_text() != text:
+        problems.append(f"'{name}': {rel} differs from {canonical}")
+    elif not os.access(hook, os.X_OK):
+        problems.append(f"'{name}': {rel} is not executable")
+
+
+def check_session_hooks(root, repos, hook_text, deliverable_text):
+    """Both generated hooks, in every checked-out in-scope repo.
+
+    One leg, not two: they share a rollout surface, a manifest exclusion and a
+    settings.json, and a repo that has one but not the other is exactly the
+    half-installed state the propagation workflow exists to prevent."""
     problems = []
     for name, spec in repos.items():
         if session_hook_excluded(spec):
@@ -1253,31 +1423,47 @@ def check_session_hooks(root, repos, hook_text):
             continue  # not checked out in this environment
         if structure_lint_forbids(repo_dir, ".claude"):
             continue  # --write skips it; check_structure_lints reports it
-        hook = repo_dir / SESSION_HOOK_REL
-        if not hook.exists():
-            problems.append(f"'{name}': no {SESSION_HOOK_REL}")
-        elif hook.read_text() != hook_text:
-            problems.append(
-                f"'{name}': {SESSION_HOOK_REL} differs from {SESSION_HOOK_FILE}"
-            )
-        elif not os.access(hook, os.X_OK):
-            problems.append(f"'{name}': {SESSION_HOOK_REL} is not executable")
+        _check_installed_hook(problems, name, repo_dir, SESSION_HOOK_REL,
+                              SESSION_HOOK_FILE, hook_text)
+        _check_installed_hook(problems, name, repo_dir, DELIVERABLE_HOOK_REL,
+                              DELIVERABLE_HOOK_FILE, deliverable_text)
         settings = repo_dir / SESSION_SETTINGS_REL
         if not settings.exists():
             problems.append(f"'{name}': no {SESSION_SETTINGS_REL}")
-        elif not settings_registers_hook(settings.read_text()):
+            continue
+        settings_text = settings.read_text()
+        if not settings_registers_hook(settings_text):
             problems.append(
                 f"'{name}': {SESSION_SETTINGS_REL} does not register the "
                 "SessionStart hook"
             )
+        if not settings_registers_deliverable_hook(settings_text):
+            problems.append(
+                f"'{name}': {SESSION_SETTINGS_REL} does not register the "
+                "PreToolUse end-at-deliverable hook"
+            )
     return problems
 
 
-def write_session_hooks(root, repos, hook_text):
-    """Install the hook + its registration in every checked-out repo. Idempotent:
-    an up-to-date copy is left alone, and a settings.json that already registers
-    the hook keeps its own formatting. Repos flagged `session_hook: false` in
-    the manifest are skipped entirely."""
+def _install_hook(repo_dir, rel, text):
+    """Write one hook copy verbatim and make it executable. Idempotent."""
+    hook = repo_dir / rel
+    hook.parent.mkdir(parents=True, exist_ok=True)
+    if hook.exists() and hook.read_text() == text:
+        print(f"unchanged: {hook}")
+    else:
+        hook.write_text(text)
+        print(f"wrote: {hook}")
+    hook.chmod(0o755)
+
+
+def write_session_hooks(root, repos, hook_text, deliverable_text):
+    """Install both generated hooks + their registrations in every checked-out
+    repo: the SessionStart hook (Python 3.12) and the PreToolUse
+    end-at-deliverable guard. Idempotent: an up-to-date copy is left alone, and
+    a settings.json that already registers a hook keeps its own formatting and
+    every other key. Repos flagged `session_hook: false` in the manifest are
+    skipped entirely."""
     for name, spec in repos.items():
         if session_hook_excluded(spec):
             continue  # recorded manifest exclusion — see session_hook_excluded
@@ -1290,22 +1476,24 @@ def write_session_hooks(root, repos, hook_text):
                 f"{repo_dir / SESSION_HOOK_REL}"
             )
             continue
-        hook = repo_dir / SESSION_HOOK_REL
-        hook.parent.mkdir(parents=True, exist_ok=True)
-        if hook.exists() and hook.read_text() == hook_text:
-            print(f"unchanged: {hook}")
-        else:
-            hook.write_text(hook_text)
-            print(f"wrote: {hook}")
-        hook.chmod(0o755)
+        _install_hook(repo_dir, SESSION_HOOK_REL, hook_text)
+        _install_hook(repo_dir, DELIVERABLE_HOOK_REL, deliverable_text)
 
         settings = repo_dir / SESSION_SETTINGS_REL
         if settings.exists():
-            if settings_registers_hook(settings.read_text()):
+            text = settings.read_text()
+            missing = [
+                register for register, registered in (
+                    (register_session_hook, settings_registers_hook(text)),
+                    (register_deliverable_hook,
+                     settings_registers_deliverable_hook(text)),
+                ) if not registered
+            ]
+            if not missing:
                 print(f"unchanged: {settings}")
                 continue
             try:
-                current = json.loads(settings.read_text())
+                current = json.loads(text)
             except ValueError:
                 print(f"SKIPPED (unparseable JSON, fix by hand): {settings}")
                 continue
@@ -1314,9 +1502,10 @@ def write_session_hooks(root, repos, hook_text):
                 continue
         else:
             current = {}
-        settings.write_text(
-            json.dumps(register_session_hook(current), indent=2) + "\n"
-        )
+            missing = [register_session_hook, register_deliverable_hook]
+        for register in missing:
+            current = register(current)
+        settings.write_text(json.dumps(current, indent=2) + "\n")
         print(f"wrote: {settings}")
 
 
@@ -1345,7 +1534,9 @@ def main():
     smap = system_map(categories, repos)
     hpol = load_history_policy(mind_root)
     remote = load_remote_sessions(mind_root)
+    deliverable = load_deliverable_policy(mind_root)
     hook_text = load_session_hook(mind_root)
+    deliverable_hook_text = load_deliverable_hook(mind_root)
 
     if args.write:
         write_block(root / "AGENTS.md", routing_table(categories, repos),
@@ -1359,16 +1550,25 @@ def main():
                         required=False)
         # The history policy is universal — written into every repo (not just
         # organs) that has added the markers.
+        #
+        # The deliverable policy is universal AND self-installing: a repo that
+        # already carries the history block gets the markers placed under it
+        # here, so the block lands without thirty hand-edits. (The rule it
+        # carries was broken twice by sessions reasoning past prose; waiting for
+        # each repo to opt in is how the long tail stays unprotected.)
+        insert_deliverable_markers(root, repos)
         for name in repos:
             write_block(root / name / "AGENTS.md", hpol,
                         HISTORY_BEGIN, HISTORY_END, required=False)
             write_block(root / name / "AGENTS.md", remote,
                         REMOTE_BEGIN, REMOTE_END, required=False)
+            write_block(root / name / "AGENTS.md", deliverable,
+                        DELIVERABLE_BEGIN, DELIVERABLE_END, required=False)
         for rel, bold in PUBLIC_TABLE_TARGETS:
             write_block(root / rel, organ_public_table(repos, bold=bold),
                         ORGANS_BEGIN, ORGANS_END, required=False)
         write_claude_md_pointers(root, repos)
-        write_session_hooks(root, repos, hook_text)
+        write_session_hooks(root, repos, hook_text, deliverable_hook_text)
 
     # Lazy (label -> thunk) so --only pays for exactly the selected legs.
     checks = {
@@ -1387,12 +1587,15 @@ def main():
             lambda: check_history_blocks(root, repos, hpol),
         "remote-session blocks (generated)":
             lambda: check_remote_blocks(root, repos, remote),
+        "end-at-deliverable blocks (generated)":
+            lambda: check_deliverable_blocks(root, repos, deliverable),
         "public front-door organ tables (generated)":
             lambda: check_public_tables(root, repos),
         "hub organism blurb (organs present)": lambda: check_hub_blurb(root, repos),
         "CLAUDE.md → AGENTS.md pointers":
             lambda: check_claude_md_pointers(root, repos),
-        SESSION_HOOKS: lambda: check_session_hooks(root, repos, hook_text),
+        SESSION_HOOKS: lambda: check_session_hooks(
+            root, repos, hook_text, deliverable_hook_text),
         "target-repo layout lints": lambda: check_structure_lints(root, repos),
     }
     if args.only:

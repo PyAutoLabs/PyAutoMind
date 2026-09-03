@@ -24,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import repos_sync  # noqa: E402
 
 HOOK_TEXT = "#!/usr/bin/env bash\necho canonical\n"
+DELIVERABLE_TEXT = "#!/usr/bin/env bash\necho canonical guard\n"
 REPOS = {"OrganOne": {"category": "organ"}}
 
 PERMISSIVE = """\
@@ -110,16 +111,19 @@ def test_unparseable_lint_is_unreadable_not_permissive(tmp_path):
 
 def test_write_installs_into_a_repo_whose_lint_allows_it(tmp_path):
     repo = make_repo(tmp_path, lint=PERMISSIVE)
-    repos_sync.write_session_hooks(tmp_path, REPOS, HOOK_TEXT)
+    repos_sync.write_session_hooks(tmp_path, REPOS, HOOK_TEXT,
+                                  DELIVERABLE_TEXT)
     repos_sync.write_claude_md_pointers(tmp_path, REPOS)
     assert (repo / repos_sync.SESSION_HOOK_REL).exists()
+    assert (repo / repos_sync.DELIVERABLE_HOOK_REL).exists()
     assert (repo / repos_sync.SESSION_SETTINGS_REL).exists()
     assert (repo / "CLAUDE.md").exists()
 
 
 def test_write_refuses_a_repo_whose_lint_disallows_the_entries(tmp_path):
     repo = make_repo(tmp_path, lint=FORBIDS_BOTH)
-    repos_sync.write_session_hooks(tmp_path, REPOS, HOOK_TEXT)
+    repos_sync.write_session_hooks(tmp_path, REPOS, HOOK_TEXT,
+                                  DELIVERABLE_TEXT)
     repos_sync.write_claude_md_pointers(tmp_path, REPOS)
     assert not (repo / ".claude").exists()
     assert not (repo / "CLAUDE.md").exists()
@@ -132,7 +136,9 @@ def test_skipped_repo_is_not_also_reported_as_generated_drift(tmp_path):
     """The write side and the drift side must agree, or a deliberately
     unwritten repo reads as permanent drift on every run."""
     make_repo(tmp_path, lint=FORBIDS_BOTH)
-    assert repos_sync.check_session_hooks(tmp_path, REPOS, HOOK_TEXT) == []
+    assert repos_sync.check_session_hooks(
+        tmp_path, REPOS, HOOK_TEXT, DELIVERABLE_TEXT
+    ) == []
     assert repos_sync.check_claude_md_pointers(tmp_path, REPOS) == []
 
 
