@@ -46,13 +46,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 162 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -74,6 +74,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/triage/jax_zero_contour.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/swap_docs_back_to_human_readable_first.md">Swap docs back to human-readable-first; assistant README rework (paid coding agents only)</a> — autogalaxy · medium · supervised · high</summary>
+
+```
+/start_dev draft/docs/autogalaxy/swap_docs_back_to_human_readable_first.md
 ```
 
 </details>
@@ -142,15 +150,7 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · too-large · supervised · high</summary>
-
-```
-/start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 81
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -164,6 +164,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/swap_docs_back_to_human_readable_first.md">Swap docs back to human-readable-first; assistant README rework (paid coding agents only)</a> — autogalaxy · medium · supervised · high</summary>
+
+```
+/start_dev draft/docs/autogalaxy/swap_docs_back_to_human_readable_first.md
 ```
 
 </details>
@@ -236,14 +244,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
-
-```
-/start_dev draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md
 ```
 
 </details>
@@ -422,7 +422,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
+**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -1016,7 +1016,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 14</summary>
+<summary><b>docs</b> — 15</summary>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/swap_docs_back_to_human_readable_first.md">Swap docs back to human-readable-first; assistant README rework (paid coding agents only)</a> — autogalaxy · medium · supervised · high</summary>
+
+```
+/start_dev draft/docs/autogalaxy/swap_docs_back_to_human_readable_first.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
@@ -1508,6 +1516,36 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>autogalaxy — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autogalaxy — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/docs/autogalaxy/swap_docs_back_to_human_readable_first.md
+- draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/docs/autogalaxy/swap_docs_back_to_human_readable_first.md">Swap docs back to human-readable-first; assistant README rework (paid…</a> | medium | high | formalised |
+| <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> | large | medium | formalised |
+
+</details>
+
+<details>
 <summary><b>notebooks</b> — 3 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1669,37 +1707,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-<details>
-<summary><b>autoarray — bundle 1</b> — 2 task(s) · 3 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autoarray/over_sample_size_via_snr_from.md
-- draft/refactor/autoarray/sparse_operator_int32_indexes.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> | small | medium | draft |
-| <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> | - | - | - |
-
-</details>
-
-_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 23 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
