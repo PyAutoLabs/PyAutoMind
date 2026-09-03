@@ -18,12 +18,16 @@
 - prompt: active/cortex_checkin_p1_shed_review_slot.md
 - issued: 2026-09-03
 - session: claude --resume session_013HsZA1ufn3msgPiDFxEXa6
-- status: library-dev
+- status: library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoBrain -> PyAutoCortex; close-out via /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/10
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/348
 - worktree: ~/Code/PyAutoLabs-wt/cortex-checkin-p1-shed-review-slot
 - repos:
   - PyAutoCortex: feature/cortex-checkin-p1-shed-review-slot
   - PyAutoBrain: feature/cortex-checkin-p1-shed-review-slot
-- epic: cortex-checkin (phase 1; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md)
+- heart: RED at ship time 2026-09-03, NOT acknowledged by a human. Exact reasons from `pyauto-heart readiness --json`: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old". Both are release-chain facts about other repos; neither PyAutoCortex nor PyAutoBrain is in the release chain. PRs were opened, nothing merged; the merge decision needs the human, and an ack (or a green Heart) before it.
+- ci: PyAutoBrain#348 green; PyAutoCortex#10 `check` green, `refresh` red until #348 merges (that workflow renders through PyAutoBrain **main**, which still calls the deleted `MEMBER_RE`) — a Brain/Cortex skew the workflow's own comment names
+- epic: cortex-checkin (phase 1; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md). Phases 2 and 3 stack on branch `feature/cortex-checkin-p1-shed-review-slot` in both repos until it merges.
 
 ## euclid-cpu-two-stage-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
