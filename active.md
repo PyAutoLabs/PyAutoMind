@@ -151,10 +151,16 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/523
 - prompt: active/over_sample_snr_double_division.md
 - issued: 2026-09-02
-- session: local CLI (Fable architect, Opus execution) — claude --resume session_01UpLMvgejg1kNXbG3P789wy
-- status: workspace-dev — implementation + validation complete, committed locally 2026-09-03; push + PR-open HELD at the ship gate on Heart RED (see heart-note)
-- checkpoint: 2026-09-03 local commits, not pushed — autolens_workspace 116b3c73 (65 files), autolens_workspace_test 62d2418 (2 files), autolens_assistant 0dfc9dc (4 files); drafted PR bodies (smoke line filled) in the session scratchpad; smoke 31/32 PASS, the FAIL (imaging/features/advanced/subhalo/sensitivity/slam_source_pixelized.py, AttributeError al.MapperValued) reproduces on main
-- heart-note: RED at ship gate 2026-09-03 — exact reasons from `pyauto-heart readiness --json`: "PyAutoLens: CI failure" (NEW: Tests failed on main 6fbab3b, 2026-09-03 18:43Z, unittest 3.12/3.13/nojax — not covered by any human ack), "release validation FAILED (stage integrate)", "PyAutoArray: open PR 11d old" (both acked today on gaussian-precompute-p1 / jax-faddeeva-clamp-audit / image-source-mappings-p3). Resume = human acks the full set → ship_workspace step 4 (push, PR-open ×3 with pending-release) → /prm
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/527
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/290
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/119
+- session: local CLI (Fable architect, Opus execution) — claude --resume session_01UpLMvgejg1kNXbG3P789wy, resumed session_01TPaqrFZCUtvsknEx66Yneq
+- status: workspace-shipped, awaiting-merge (3 PRs open 2026-09-03, all pending-release, no library PR; close-out via /prm)
+- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge) — exact reasons from `pyauto-heart readiness --json`, quoted to the human who replied "ok drop it then prm":
+  - PyAutoLens: CI failure
+  - release validation FAILED (stage integrate)
+  - PyAutoArray: open PR 11d old
+- heart-note: "PyAutoLens: CI failure" = Tests failed on main 6fbab3b 2026-09-03 18:43Z (unittest 3.12/3.13/nojax), unrelated to these workspace scripts; smoke 31/32 PASS, the FAIL (imaging/features/advanced/subhalo/sensitivity/slam_source_pixelized.py, AttributeError al.MapperValued) reproduces on main
 - worktree: ~/Code/PyAutoLabs-wt/over-sample-snr-double-division
 - repos:
   - autolens_workspace (feature/over-sample-snr-double-division)
