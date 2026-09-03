@@ -4,8 +4,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/341
 - prompt: active/batch_board.md
 - issued: 2026-09-02
-- session: claude --resume session_01VsKeuX83FNGjLqs2axLHeR
-- status: library-dev
+- session: claude --resume session_01VsKeuX83FNGjLqs2axLHeR → resumed 2026-09-03 as claude --resume session_01SgtS7NhqeziqgxKfSiMzRL (Fable architect; Opus overloaded, execution on Sonnet)
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/7
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/342
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/388
+- merge-order: PyAutoCortex#7 → PyAutoBrain#342 → PyAutoMind#388 (Cortex `check` must accept `-r<N>` before the Brain's collect offers it; the Mind dashboard check renders against Brain main)
+- heart-ack:
+  - release validation FAILED (stage integrate) — library release gate, not the organ PRs shipped here
+  - PyAutoArray: open PR 11d old — unrelated library PR staleness
 - worktree: ~/Code/PyAutoLabs-wt/batch-status-box
 - repos:
   - PyAutoBrain: feature/batch-status-box
