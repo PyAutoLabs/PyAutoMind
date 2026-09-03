@@ -17,32 +17,6 @@
 - heart-note: acknowledgement covers only these two reasons; a new reason at ship time re-blocks
 - epic: gaussian-deflections-precompute (phase 2; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
 
-## mind-post-cortex-p2
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/390
-- prompt: active/mind_post_cortex_p2_science_residue.md
-- issued: 2026-09-03
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/391
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/343
-- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/8
-- session: local CLI (Fable architect, Opus execution)
-- status: library-shipped, awaiting-merge (three PRs open 2026-09-03; no merge order forced — the
-  three diffs are disjoint, though PyAutoMind#391 and PyAutoCortex#8 are two halves of one move and
-  should land together; close-out via /prm)
-- worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p2-science-residue
-- repos:
-  - PyAutoMind: feature/mind-post-cortex-p2-science-residue
-  - PyAutoBrain: feature/mind-post-cortex-p2-science-residue
-  - PyAutoCortex: feature/mind-post-cortex-p2-science-residue
-- heart-note: `pyauto-heart readiness` was RED at ship (checked 2026-09-03 after PR-open, which is
-  the process slip to know about). The two reasons are byte-identical to the pair the human
-  acknowledged earlier today for gaussian-precompute-p1 and jax-faddeeva-clamp-audit, and neither
-  touches this diff (no library source, no release surface — organ docs and registries only):
-  - release validation FAILED (stage integrate)
-  - PyAutoArray: open PR 11d old
-  That acknowledgement was scoped to those tasks, so it is NOT carried here: the RED is unacked for
-  this task and merge needs the human's own call.
-- epic: mind-post-cortex (phase 2; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
-
 ## mind-post-cortex-p3-pr-ledger
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/392
 - prompt: active/mind_post_cortex_p3_pr_ledger_pending_release.md
@@ -68,7 +42,12 @@
   `active.md` schema block, scripts/lifecycle.py and tests, and (in Brain) _intake.py's registry parse
   and dashboard renderers against p2's _sizing.py work-types and board/_theme.py. Verified by
   `git merge-tree` against origin/feature/mind-post-cortex-p2-science-residue before ship; second to
-  merge rebases.
+  merge rebases. **Resolved 2026-09-03: p1 and p2 both shipped** (records
+  `complete/2026/09/mind-post-cortex-p1.md`, `complete/2026/09/mind-post-cortex-p2.md`), so this task
+  is the one that rebases — over p2's REFERENCE.md `Lane:`/queue-kind removals, its ROUTING/AGENTS/
+  README work-type edits and, in Brain, its `_sizing.py` and `board/_theme.py` changes. Expect the
+  generated dashboard.md/.html to conflict; re-render rather than resolve by hand, from a cwd inside
+  the Mind checkout and against a `git pull`ed PyAutoBrain main.
 - heart-note: `pyauto-heart readiness --json` was RED when the PRs were opened (checked 2026-09-03,
   before PR-open). Verbatim reasons:
   - PyAutoLens: CI failure

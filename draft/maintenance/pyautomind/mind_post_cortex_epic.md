@@ -57,12 +57,13 @@ pending-release gate lives only in a live `gh` search on the Brain board.
    no PR). Kept witness campaign, tier-A shadow and slice as standalone
    prompts; retired dispatcher, budget loop, nightly pass, dev carry-forward;
    reconciled the five stale 2026-08-31-pm `active.md` rows.
-2. **Delete the science residue** —
-   `draft/maintenance/pyautomind/mind_post_cortex_p2_science_residue.md`.
-   the Cortex-half epic keys, the JAX profiling Mind entry, the lane header and
-   the two non-prompt queue kinds, the phantom prototype work-type, the RAL-run
-   prompts that became Cortex phases, the all-science am batch record. Touches
-   REFERENCE.md/ROUTING.md/scripts → human PR.
+2. **Delete the science residue** — **SHIPPED 2026-09-03**, record
+   `complete/2026/09/mind-post-cortex-p2.md` (issue PyAutoMind#390 closed;
+   PyAutoCortex#8 `d23a51a8`, PyAutoBrain#343 `338addad`, PyAutoMind#391
+   `e705eee7`). Removed the Cortex-half epic keys, the JAX profiling Mind
+   entry, the lane header and the two non-prompt queue kinds, the phantom
+   prototype work-type; the RAL-run prompts became Cortex phases and the
+   all-science am batch record moved to the Cortex.
 3. **PR ledger + pending-release view** —
    `draft/feature/pyautomind/mind_post_cortex_p3_pr_ledger_pending_release.md`
    (assessment gaps 1 and 2).

@@ -87,7 +87,7 @@ epic, never picked standalone.
 ## mind-post-cortex
 - title: Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger
 - ledger: draft/maintenance/pyautomind/mind_post_cortex_epic.md
-- status: phase 1 shipped 2026-09-03 (record `complete/2026/09/mind-post-cortex-p1.md`) — issue PyAutoMind#389 closed; ledger-only, auto-merged as `49d0b530` from `claude/mind-post-cortex-p1`, no PR. Phase 2 next (active/mind_post_cortex_p2_science_residue.md, issue PyAutoMind#390; PRs PyAutoMind#391 + PyAutoBrain#343 + PyAutoCortex#8 open); phases 3-5 issued and in flight.
+- status: phases 1 and 2 shipped 2026-09-03 — phase 1 record `complete/2026/09/mind-post-cortex-p1.md` (issue PyAutoMind#389 closed; ledger-only, auto-merged as `49d0b530` from `claude/mind-post-cortex-p1`, no PR); phase 2 record `complete/2026/09/mind-post-cortex-p2.md` (issue PyAutoMind#390 closed; PyAutoCortex#8 `d23a51a8` + PyAutoBrain#343 `338addad` + PyAutoMind#391 `e705eee7` merged). Next is phase 3 (active/mind_post_cortex_p3_pr_ledger_pending_release.md, issue PyAutoMind#392; PRs PyAutoMind#393 + PyAutoBrain#344 + PyAutoHeart#195 open and now needing a rebase over p2's REFERENCE.md/ROUTING.md/queue.md moves); phases 4 and 5 also issued and in flight.
 - notes: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching
   epic keeping witness campaign / tier-A shadow / slice as standalone prompts and reconcile the
   five stale 2026-08-31-pm active.md rows; (2) delete the science residue (the Cortex-half epic
