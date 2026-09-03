@@ -83,3 +83,14 @@ epic, never picked standalone.
   trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
   complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home
   autolens_profiling/scripts/lens/deflections/.
+
+## cortex-checkin
+- title: Cortex check-in — one door, shed the review-slot and gate apparatus
+- ledger: draft/maintenance/pyautocortex/cortex_checkin_epic.md
+- notes: three phased prompts from the 2026-09-03 Cortex assessment — (1) delete the
+  review-slot apparatus for the cortex kind (plan --kind cortex, packets, partial reviews,
+  carried members, status box, --push integration, slot/shift vocabulary), gate grading,
+  rule --also, Lane:, the restricted-YAML parser; decouple collect from the batch record;
+  (2) the `/cortex` check-in door — pull every active project, score, render, push, summary;
+  (3) by-project dashboard section with folders + the accept→next-phase and rerun prompts.
+  Issue ONE at a time, in order; later phases stack on earlier branches until merged.
