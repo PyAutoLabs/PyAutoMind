@@ -76,7 +76,7 @@ epic, never picked standalone.
 ## two-slot-batching
 - title: Two slots a day — the batch workflow
 - ledger: draft/feature/pyautomind/two_slot_batching_epic.md
-- status: phase 2 `collect` SHIPPED 2026-09-02 (PyAutoBrain#332, complete/2026/09/batch-collect.md); `plan` shipped 2026-08-30; `slice` re-filed as draft/feature/pyautobrain/batch_slice.md
+- status: phase 6 status box SHIPPED 2026-09-03 (PyAutoBrain#341, complete/2026/09/batch-status-box.md); phase 2 `collect` SHIPPED 2026-09-02 (PyAutoBrain#332, complete/2026/09/batch-collect.md); `plan` shipped 2026-08-30; `slice` re-filed as draft/feature/pyautobrain/batch_slice.md
 - notes: 11 phased prompts (0a/0b/0c, then 1-8) across draft/feature/pyautomind/,
   draft/feature/pyautobrain/ and draft/research/euclid/ — issue ONE at a time, no
   bulk issue queues. Ordered by value, not build dependency: the DISPATCHER
@@ -111,3 +111,14 @@ epic, never picked standalone.
 - ledger: draft/feature/autoarray/image_source_mappings_epic.md
 - status: phase 1 SHIPPED 2026-09-02 — PyAutoArray#517 merged, issue #515 closed, record `complete/2026/09/image-source-mappings-p1.md`; phase 2 (+2a) **SHIPPED** 2026-09-02 — PyAutoArray#518 (`c9f67e78`) → PyAutoLens#720 (`091fbdff`) merged, issue #719 closed, record `complete/2026/09/image-source-mappings-p2.md`; **both PyAutoArray and PyAutoLens releases are outstanding** (`pending-release`); phase 3 **ACTIVE** 2026-09-03 — autolens_workspace#525 opened by user decision ahead of the releases, worktree `image-source-mappings-p3`, four `pending-release` PRs to come
 - notes: three phase prompts — Phase 1 PyAutoArray (`Mapping`/`ImageRegion` objects, `Inversion.source_clumps_from`, `regions=` overlay on `plot_array`/`plot_inversion_reconstruction`, restored `subplot_mappings`), Phase 2 PyAutoLens (ShapeSolver as the parametric engine + validation suite, `autolens/lens/mappings.py`, fit-level `subplot_mappings`, brightest multiple-image positions for spectroscopic follow-up), Phase 3 workspace (`guides/mappings.py`, tutorial_2_mappers rewrite with polygons, dead index-section fixes). Library-first; issue ONE phase at a time. Proceeds alongside ci-timing-fast-tests by user decision (2026-09-02).
+
+## gaussian-deflections-precompute
+- title: Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)
+- ledger: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
+- status: phase 1 in flight 2026-09-03
+- notes: three phase prompts — draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md,
+  draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md,
+  draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md (numpy memo + witness; JAX
+  trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
+  complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home
+  autolens_profiling/scripts/lens/deflections/.

@@ -13,26 +13,6 @@
 - heart-note: RED at start (pre-existing release-validation integrate:fail + worktree drift on unrelated worktrees); ship gate to re-read
 - parent: complete/archive/epics/numpy_deflections_cpu_speedup.md (follow-up of the numpy-deflections-cpu epic)
 
-## batch-status-box
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/341
-- prompt: active/batch_board.md
-- issued: 2026-09-02
-- session: claude --resume session_01VsKeuX83FNGjLqs2axLHeR → resumed 2026-09-03 as claude --resume session_01SgtS7NhqeziqgxKfSiMzRL (Fable architect; Opus overloaded, execution on Sonnet)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/7
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/342
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/388
-- merge-order: PyAutoCortex#7 → PyAutoBrain#342 → PyAutoMind#388 (Cortex `check` must accept `-r<N>` before the Brain's collect offers it; the Mind dashboard check renders against Brain main)
-- heart-ack:
-  - release validation FAILED (stage integrate) — library release gate, not the organ PRs shipped here
-  - PyAutoArray: open PR 11d old — unrelated library PR staleness
-- worktree: ~/Code/PyAutoLabs-wt/batch-status-box
-- repos:
-  - PyAutoBrain: feature/batch-status-box
-  - PyAutoCortex: feature/batch-status-box
-  - PyAutoMind: feature/batch-status-box
-- epic: two-slot-batching (phase 6; parent draft/feature/pyautomind/two_slot_batching_epic.md)
-
 ## euclid-cpu-two-stage-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
 - prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md

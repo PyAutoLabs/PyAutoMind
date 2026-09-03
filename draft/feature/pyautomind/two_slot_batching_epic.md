@@ -461,10 +461,14 @@ so every pointer is a local path; the public packet archive on Pages; and
   paste-lines, dispatched first in the evening while the laptop is on)
   supersedes it in spirit. Revisit only if dispatch tapping becomes the
   measured bottleneck.
-- **6 — board re-scoped by the human 2026-08-31, and wanted soon:** not a
-  second published surface — a "Batches" strip near the top of the Mind
-  dashboard, ABOVE "Start here". Prompt re-cut accordingly
-  (`draft/feature/pyautobrain/batch_board.md`, now `small`).
+- **6 — SHIPPED 2026-09-03** (PyAutoBrain#341; `complete/2026/09/batch-status-box.md`;
+  PRs PyAutoCortex#7 / PyAutoBrain#342 / PyAutoMind#388). Re-scoped by the human
+  2026-08-31 from a second published surface to a strip ABOVE "Start here", then
+  widened 2026-09-02 to BOTH dashboards with the science board going live: one
+  stdlib-only `_status.py` reading, the dev batch collected-once/reviewed-once
+  (button on `collected:`), the Cortex board rolling (button as soon as one member
+  is awaiting-ruling, `-r<N>` partial reviews, slot closes when nothing is left on
+  the board).
 - **7 — slimmed**: the 100%-allowance decision stands; the burn-up read is
   unbuilt; the one-slot-a-day sizing went with the floor.
 - **8 — half-shipped through use**: the mirror + routine pull is a stronger
