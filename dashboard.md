@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical axis-ratio clamp in MGE…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/600">issue #600</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoGalaxy → autolens_profiling; close-out via /prm)</summary>
+<details><summary>📋 <a href="active/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical axis-ratio clamp in MGE…</a> — issued 2026-09-03</summary>
 
 ```
 /start_dev active/jax_faddeeva_seams_and_spherical_clamp_audit.md
