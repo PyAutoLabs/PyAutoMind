@@ -81,7 +81,7 @@ library-first ship inside each phase.
 |---|---|---|---|---|
 | 1 | `complete/2026/09/numpy-deflections-p1.md` (was `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md`) | @PyAutoArray, @PyAutoGalaxy, @PyAutoLens, @autolens_profiling | measure (`scripts/lens/deflections/`), `*Sph` over-sampled re-materialisation, sub-size-1 short-circuit, tracer double trace | **SHIPPED 2026-09-02** — PyAutoArray#516, PyAutoGalaxy#595, PyAutoLens#718, autolens_profiling#210 merged; record `complete/2026/09/numpy-deflections-p1.md` |
 | 2 | `complete/2026/09/numpy-deflections-p2.md` (was `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md`, PyAutoGalaxy#596) | @PyAutoGalaxy, @autolens_profiling | `scipy.special.wofz` on numpy, spherical MGE branch, exact exp_term mask (cache lever dropped: 0.34 ms/call); targets re-scoped to measured ceilings gNFW ~2.3×, gNFWSph ~59×, Gaussian sph ~16×, Gaussian ell ~1.07× | **SHIPPED 2026-09-02** — PyAutoGalaxy#597 + autolens_profiling#212 merged; record `complete/2026/09/numpy-deflections-p2.md` |
-| 3 | `active/numpy_deflections_p3_closed_form_geometry.md` (was `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md`, PyAutoGalaxy#598) | @PyAutoGalaxy, @PyAutoArray, @autolens_profiling | PowerLaw series with factor-driven term count, NFW/NFWSph masks, Isothermal hoists, rotation-matrix grid transform | **ISSUED 2026-09-03** — branch `feature/numpy-deflections-p3` |
+| 3 | `active/numpy_deflections_p3_closed_form_geometry.md` (was `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md`, PyAutoGalaxy#598) | @PyAutoGalaxy, @PyAutoArray, @autolens_profiling | PowerLaw series with factor-driven term count, NFW/NFWSph masks, Isothermal hoists, rotation-matrix grid transform | **PR-OPEN 2026-09-03** — PyAutoArray#519 → PyAutoGalaxy#599 → autolens_profiling#213 |
 
 Phase 1 carries the measurement package: every later phase's before/after numbers come from the
 cells it lands, so it is a hard predecessor of phases 2 and 3. Phases 2 and 3 touch disjoint files
@@ -240,3 +240,15 @@ rotation-matrix transform is 7× cheaper than the polar form (0.21 vs 1.42 ms); 
 not exist: `GridMaker.result` returns a bare array unchanged when the input is one, so the rotate-back never
 builds a `Grid2D` — the per-call wraps are one `Grid2D` (the transformed grid, ~30 µs) and one `VectorYX2D`
 (the result, ~95 µs), both API-bearing.
+
+**2026-09-03 — phase 3 SHIPPED to PR-open.** PyAutoArray#519 (rotation-matrix
+`transform_grid_2d_to_reference_frame`; `VectorYX2D` reuses the `Grid2D` it is handed) → PyAutoGalaxy#599
+(PowerLaw omega series, `n_terms` from `factor` by the tail bound `f^N/(1−f) ≤ 1e-10`, verified vs `mpmath` to
+5.7e-11 over slope 1.5–2.99 × q 0.05–0.99; NFW subset `capital_F_from` + input-masked centre; real-valued
+`coord_func_f_from`; Isothermal hoists; no `RuntimeWarning`s) → autolens_profiling#213 (after-numbers, note
+"After phase 3"). Same-box hst `Grid2D` call: PowerLaw 9.59 → 1.68 ms (5.7×), Isothermal 1.95 → 0.94 ms
+(2.1×), NFWSph 1.9×, NFW 1.6×, Gaussian(q=1) 2.0×; euclid 4.3× / 1.7× / 1.6× / 1.6× / 2.0×. Suites
+test_autoarray 1349, test_autogalaxy 1151 green; `total`/`dark` pins held; `stellar` re-pinned with provenance
+for one on-axis sample the exact rotation makes 0.0 (was 4.8e-17); likelihood pins held. Findings: the
+rotate-back re-wrap did not exist (the second `Grid2D` was in `VectorYX2D`, now cut); NFW lands at 1.6×, under
+the 2× line, the remainder being the HK24 polynomial arithmetic. JAX path untouched. Close-out is `/prm`.

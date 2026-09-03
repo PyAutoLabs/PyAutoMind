@@ -5,7 +5,10 @@
 - prompt: active/numpy_deflections_p3_closed_form_geometry.md
 - issued: 2026-09-03
 - session: web-github — claude --resume session_01Re4JLhTCFnGYeez8oEyM6M
-- status: library-dev
+- status: library-shipped, awaiting-merge (all three PRs open 2026-09-03; merge order PyAutoArray#519 → PyAutoGalaxy#599 → autolens_profiling#213; close-out via /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/519
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/599
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/213
 - repos:
   - PyAutoArray: feature/numpy-deflections-p3
   - PyAutoGalaxy: feature/numpy-deflections-p3
