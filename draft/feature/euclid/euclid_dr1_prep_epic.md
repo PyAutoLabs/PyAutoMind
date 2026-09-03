@@ -204,14 +204,21 @@ Read-only survey done while filing, so each phase prompt cites real paths:
     **SHIPPED 2026-09-01** — issue euclid#47 closed, PR #48 merged. Follow-up bug prompt
     filed: `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md` (the `vis_lp`
     search passes a `batch_size` kwarg `af.Nautilus` silently swallows).
-4. `active/cpu_vis_lp_jax_vis_pix_numba_submission.md` (was 3b) — preserve and
+4. `complete/2026/09/euclid-cpu-two-stage-route.md` (was 3b) — preserve and
    document the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing) CPU route
-   and the full-JAX-GPU route. Gate: 1 (can overlap 2). Runs after phase 3 so its new
-   documentation lands in a repo whose narrative register is already restored.
+   and the full-JAX-GPU route. Gate: 1 (can overlap 2). Ran after phase 3 so its new
+   documentation landed in a repo whose narrative register is already restored.
    **Issue euclid#49** — opened 2026-09-01 at filing, as the gate ref the Cortex science
-   phase names; reuse it in `start_dev`, never open a second. **The next phase to run.**
-   **IN FLIGHT 2026-09-02** — `start_dev` run, branch `feature/euclid-cpu-two-stage-route`,
-   plan on euclid#49; prompt now `active/cpu_vis_lp_jax_vis_pix_numba_submission.md`.
+   phase names.
+   **SHIPPED 2026-09-03** — issue euclid#49 closed, PR #50 merged (`2412552`, 9 commits):
+   `--stage {all,vis_lp,vis_pix}`, the `batch_cpu` two-stage submission chain, `hpc/README.md`
+   as the route guide with measured RAL times (GPU 1 h 14 min, two-stage CPU 3 h 17 min), the
+   `jax_fork_control` control test (no hang; process boundary kept as the conservative
+   default), a `jax.default_backend()` guard on every GPU script, and the
+   `apply_sparse_operator` drift removed from the JAX path. Follow-ups filed:
+   `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md`,
+   `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md`.
+   **Both gates of the Cortex 10-lens science run (`euclid#48`, `euclid#49`) are now closed.**
 
 **→ Cortex** — the four science phases below are no longer Mind phases. They live under
 `PyAutoCortex/phases/euclid/` with their own phase numbers, and the entries here are
@@ -258,7 +265,7 @@ integers again, and no two Mind phases share a number.
 | 1 | Mind (shipped) | 1 | — |
 | 2 | Mind (shipped) | 2 | 1 |
 | 3a | Mind (shipped) | **3** | Gates: 1, 2 |
-| 3b | Mind `active/cpu_vis_lp_jax_vis_pix_numba_submission.md` | **4** | Gate: 1 (can overlap 2); runs after 3 |
+| 3b | Mind (shipped) `complete/2026/09/euclid-cpu-two-stage-route.md` | **4** | Gate: 1 (can overlap 2); ran after 3 |
 | 4 | → Cortex `phases/euclid/` `dr1_prelim_10_lens_science_run` | **4 (Cortex)** | `euclid#48`, `euclid#49` |
 | 5 | → Cortex `phases/euclid/` `resimulate_fitted_lens_simulator` | **5 (Cortex)** | Ready when Cortex euclid 4 accepted |
 | 6a | → Cortex `phases/euclid/` `sersic_index_recovery` | **6 (Cortex)** | Ready when Cortex euclid 5 accepted |

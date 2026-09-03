@@ -57,10 +57,10 @@ epic, never picked standalone.
   full end-to-end guide) and the old phase 3 renumbered to 3b; on 2026-09-01 the letters
   died in the Cortex split and 3a/3b became plain 3/4. Phase 3 shipped 2026-09-01
   (euclid#47 closed, PR #48 merged; record
-  complete/2026/09/restore-pipeline-narrative-prose.md). Phase 4 is IN FLIGHT since
-  2026-09-02 on euclid#49 (the pre-opened Cortex gate ref, reused — never open a second);
-  prompt active/cpu_vis_lp_jax_vis_pix_numba_submission.md, branch
-  feature/euclid-cpu-two-stage-route.
+  complete/2026/09/restore-pipeline-narrative-prose.md). Phase 4 shipped 2026-09-03
+  (euclid#49 closed, PR #50 merged; record complete/2026/09/euclid-cpu-two-stage-route.md) —
+  all Mind software phases 0-4 are now shipped, and both gates of the Cortex 10-lens science
+  run (euclid#48, euclid#49) are closed. Mind phases 8 and 9 remain.
 
 ## ci-timing-fast-tests
 - title: CI test timing — finish the board, fast physical tests

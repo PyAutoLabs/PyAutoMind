@@ -61,7 +61,7 @@ configuration; this prompt is about closing the gap rather than describing it.
 JAX path in an `else:` branch the science tree's copy does not have
 (`/mnt/c/Users/Jammy/Science/euclid/scripts/initial_lens_model.py:210-211`), and
 `scripts/full_model.py:611` applied it unconditionally. Both were fixed in
-`d32d58e` on `feature/euclid-cpu-two-stage-route`: the operator is the CPU route's
+`d32d58e`, merged in PR #50 on 2026-09-03: the operator is the CPU route's
 Numba tool, applied only under `--use_cpu`, and under JAX the pixelized inversion
 runs on the plain dataset. `full_model.py` has no `use_cpu` at all and every one of
 its searches sets `use_jax=True`, so the call was removed outright there.
