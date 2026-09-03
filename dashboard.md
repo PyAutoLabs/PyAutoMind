@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 161 |
 
 > **No batch in flight.**
 
@@ -414,7 +414,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
+**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **42** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -2101,12 +2101,20 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 </details>
 
 <details>
-<summary><b>Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide</b> — ledger: `draft/feature/autoarray/image_source_mappings_epic.md` — phase 1 SHIPPED 2026-09-02 — PyAutoArray#517 merged, issue #515 closed, record <code>complete/2026/09/image-source-mappings-p1.md</code>…</summary>
 
 ```
 Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide' epic. Its canonical state lives in draft/feature/autoarray/image_source_mappings_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phase prompts — Phase 1 PyAutoArray (`Mapping`/`ImageRegion` objects, `Inversion.source_clumps_from`, `regions=` overlay on `plot_array`/`plot_inversion_reconstruction`, restored `subplot_mappings`), Phase 2 PyAutoLens (ShapeSolver as the parametric engine + validation suite, `autolens/lens/mappings.py`, fit-level `subplot_mappings`, brightest multiple-image positions for spectroscopic follow-up), Phase 3 workspace (`guides/mappings.py`, tutorial_2_mappers rewrite with polygons, dead index-section fixes). Library-first; issue ONE phase at a time. Proceeds alongside ci-timing-fast-tests by user decision (2026-09-02).
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
+
+```
+/start_dev draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md
 ```
 
 </details>
