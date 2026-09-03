@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cortex_checkin_p1_shed_review_slot.md">Cortex: shed the review-slot and gate apparatus the check-in loop never uses</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/9">issue #9</a> — issued 2026-09-03 — library-dev</summary>
+<details><summary>📋 <a href="active/cortex_checkin_p1_shed_review_slot.md">Cortex: shed the review-slot and gate apparatus the check-in loop never uses</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/9">issue #9</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoBrain -&gt; PyAutoCortex; close-out via /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/10">PyAutoCortex#10</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/348">PyAutoBrain#348</a></summary>
 
 ```
 /start_dev active/cortex_checkin_p1_shed_review_slot.md
