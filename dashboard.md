@@ -42,22 +42,30 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 10 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 168 |
+| [Backlog](#backlog) (`draft/`) | 162 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md
 ```
 
 </details>
@@ -74,6 +82,22 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">The tier-<code>notify</code> auto-merge decision — re-open the shadow window, then decide</a> — pyautobrain · medium · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_notify_tier_merge.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/witness_campaign.md
 ```
 
 </details>
@@ -126,31 +150,7 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
-
-```
-/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -172,6 +172,22 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/witness_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_slice.md
 ```
 
 </details>
@@ -232,35 +248,11 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> — autofit · medium · safe · medium</summary>
-
-```
-/start_dev draft/feature/autofit/search_seed_reproducibility.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · safe · medium</summary>
-
-```
-/start_dev draft/research/autolens/quick_update_plotting_cost.md
-```
-
-</details>
-
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1551">issue #1551</a> — issued 2026-08-31 — library-shipped, awaiting-merge</summary>
-
-```
-/start_dev active/add_resampling_info_section_to_the_bottom.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev — ⚠️ gates a Cortex phase → phases/euclid/dr1_prelim_10_lens_science_run.md</summary>
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
@@ -292,18 +284,10 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/multistartprodigy_stops_at_49_steps_when_iterati.md">MultiStartProdigy stops at 49 steps when iterations_per_quick_update=50 in @PyAutoFit</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1553">issue #1553</a> — issued 2026-08-31 — library-shipped, awaiting-merge (--auto safe; batch 2026-08-31-pm member autofit-prodigy-49)</summary>
+<details><summary>📋 <a href="active/mind_post_cortex_p1_retire_batch_epic.md">Retire the <code>two-slot-batching</code> epic — keep three pieces as standalone prompts</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/389">issue #389</a> — issued 2026-09-03 — ledger-dev — PyAutoMind ledger only; branch <code>claude/mind-post-cortex-p1</code> lands via <code>mind_ledger_merge.yml</code> (no worktree, no PR)</summary>
 
 ```
-/start_dev active/multistartprodigy_stops_at_49_steps_when_iterati.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/513">issue #513</a> — issued 2026-08-31 — awaiting-input (verdict posted 2026-08-31; judge-tier research — parks</summary>
-
-```
-/start_dev active/numba_solve_vs_jax_sparse_operator.md
+/start_dev active/mind_post_cortex_p1_retire_batch_epic.md
 ```
 
 </details>
@@ -312,22 +296,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/over_sample_snr_double_division.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry, silent failures</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/75">issue #75</a> — issued 2026-08-31 — ship — PR open (PyAutoMemory#76, decision-taken; --auto, effective supervised, batch 2026-08-31-pm; merge + close-out re-drive…</summary>
-
-```
-/start_dev active/repair_queue_automation_filing_gate.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/156">issue #156</a> — issued 2026-08-31 — library-shipped, awaiting-merge</summary>
-
-```
-/start_dev active/silence_the_non_colab_setup_colab_message.md
 ```
 
 </details>
@@ -462,10 +430,34 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**168** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
+**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **44** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 29</summary>
+<summary><b>feature</b> — 32</summary>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">The tier-<code>notify</code> auto-merge decision — re-open the shadow window, then decide</a> — pyautobrain · medium · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_notify_tier_merge.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/witness_campaign.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
 
@@ -539,10 +531,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts + proposed…</a> — pyautomind · medium · safe · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
 
 ```
-/start_dev draft/feature/pyautomind/bundle_nightly_claude_pass.md
+/start_dev draft/feature/pyautobrain/batch_slice.md
 ```
 
 </details>
@@ -1442,9 +1434,9 @@ Sets of INDEPENDENT tasks that make sense in one orchestrated session: an archit
 You are the architect (Fable) for the PyAutoMind bundle 'mind-workflow' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
+- draft/feature/pyautomind/witness_campaign.md
 - draft/maintenance/pyautomind/mind_post_cortex_epic.md
-- draft/feature/pyautomind/bundle_nightly_claude_pass.md
-- draft/refactor/pyautomind/repos_sync_check_dedup.md
+- draft/feature/pyautobrain/batch_slice.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1459,9 +1451,9 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
+| <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> | pyautomind | medium | high | draft |
 | <a href="draft/maintenance/pyautomind/mind_post_cortex_epic.md">Mind after the Cortex — shed the science-epic scaffolding, add the PR…</a> | pyautomind | large | high | draft |
-| <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts +…</a> | pyautomind | medium | normal | parked |
-| <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> | pyautomind | medium | low | formalised |
+| <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> | pyautobrain | medium | normal | draft |
 
 </details>
 
@@ -1699,25 +1691,25 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-03 | issued | <a href="active/mind_post_cortex_p1_retire_batch_epic.md">Retire the <code>two-slot-batching</code> epic — keep three pieces as standalone…</a> |
 | 2026-09-03 | filed | <a href="draft/maintenance/pyautomind/mind_post_cortex_epic.md">Mind after the Cortex — shed the science-epic scaffolding, add the PR…</a> |
 | 2026-09-03 | issued | <a href="active/mappings_guide_and_tutorial_rewrite.md">Mappings guide (<code>guides/mappings.py</code>), tutorial_2_mappers rewrite…</a> |
 | 2026-09-03 | issued | <a href="active/gaussian_precompute_p1_numpy_memo.md">Gaussian precompute phase 1: numpy deflection memo — fixed-geometry…</a> |
 | 2026-09-03 | issued | <a href="active/jax_faddeeva_seams_and_spherical_clamp_audit.md">Audit the JAX-path Faddeeva approximation and the spherical…</a> |
+| 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-02 | issued | <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba +…</a> |
 | 2026-09-02 | issued | <a href="active/over_sample_snr_double_division.md">Adaptive pixelization over-sampling divides the source S/N map by the…</a> |
 | 2026-09-01 | filed | <a href="draft/maintenance/autolens_profiling/legacy_point_output_sweep.md">Sweep the RAL active output/ tree: move mesh, point-source and…</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
-| 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
-| 2026-08-31 | issued | <a href="active/silence_the_non_colab_setup_colab_message.md">Silence the non-Colab setup_colab() message on CLI runs</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-31 | issued | <a href="active/repair_queue_automation_filing_gate.md">Repair the PyAutoMemory queue automation: filing gate, push retry…</a> |
-| 2026-08-31 | issued | <a href="active/multistartprodigy_stops_at_49_steps_when_iterati.md">MultiStartProdigy stops at 49 steps when…</a> |
-| 2026-08-31 | issued | <a href="active/numba_solve_vs_jax_sparse_operator.md">Is the numba positive-only solve the same linear algebra as the JAX…</a> |
-| 2026-08-31 | issued | <a href="active/add_resampling_info_section_to_the_bottom.md">Add Resampling Info section to the bottom of search.summary</a> |
+| 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
+| 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
+| 2026-08-31 | filed | <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to…</a> |
+| 2026-08-30 | filed | <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">The tier-<code>notify</code> auto-merge decision — re-open the shadow window…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
@@ -1738,13 +1730,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
-| 2026-08-27 | filed | <a href="draft/feature/pyautomind/bundle_nightly_claude_pass.md">Bundles phase 2 — nightly Claude pass: theme-fill new drafts +…</a> |
+| 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
@@ -1754,12 +1745,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
 | 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
+| 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
@@ -1769,6 +1760,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
 | 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
+| 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 
 </details>
 
@@ -2045,83 +2037,6 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 </details>
 
 <details>
-<summary><b>Two slots a day — the batch workflow</b> — 8 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>Two slots a day — the batch workflow</b> — ledger: `draft/feature/pyautomind/two_slot_batching_epic.md` — phase 6 status box SHIPPED 2026-09-03 (PyAutoBrain#341, complete/2026/09/batch-status-box.md); phase 2 <code>collect</code> SHIPPED…</summary>
-
-```
-Continue the 'Two slots a day — the batch workflow' epic. Its canonical state lives in draft/feature/pyautomind/two_slot_batching_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 11 phased prompts (0a/0b/0c, then 1-8) across draft/feature/pyautomind/,
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md">Batch phase 2b — <code>batch slice</code>: the decomposition pass</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_slice.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">Batch phase 4 — the tier-A merge tier: shadow window…</a> — pyautobrain · medium · human-required · high</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_notify_tier_merge.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_dispatch.md">Batch phase 5 — dispatch</a> — pyautobrain · large · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_dispatch.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/batch_budget_loop.md">Batch phase 7 — spend the whole allowance</a> — pyautomind · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautomind/batch_budget_loop.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship for batch members: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/batch_carry_forward.md">Carried members: long-running batch work rolls into the next batch automatically</a> — pyautomind · small · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/batch_carry_forward.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/two_slot_batching_epic.md">Two slots a day — the batch workflow</a> — pyautomind · too-large · supervised · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/two_slot_batching_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/witness_campaign.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>CI test timing — finish the board, fast physical tests</b> — 10 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>CI test timing — finish the board, fast physical tests</b> — ledger: `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`</summary>
@@ -2273,20 +2188,12 @@ Continue the 'Fixed-geometry deflection memo — rescale Gaussians by the free m
 </details>
 
 <details>
-<summary><b>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger</b> — 5 queued prompt(s), in order</summary>
+<summary><b>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger</b> — ledger: `draft/maintenance/pyautomind/mind_post_cortex_epic.md`</summary>
 
 ```
 Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add the PR ledger' epic. Its canonical state lives in draft/maintenance/pyautomind/mind_post_cortex_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: five phased prompts from the 2026-09-03 assessment — (1) retire the two-slot-batching
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautomind/mind_post_cortex_p1_retire_batch_epic.md">Retire the <code>two-slot-batching</code> epic — keep three pieces as standalone prompts</a> — pyautomind · small · safe · high</summary>
-
-```
-/start_dev draft/maintenance/pyautomind/mind_post_cortex_p1_retire_batch_epic.md
 ```
 
 </details>
@@ -2338,7 +2245,7 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 
 </details>
 
-158 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+153 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2375,7 +2282,6 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
-- `draft/feature/pyautobrain/batch_dispatch.md`
 - `draft/feature/pyautobrain/batch_no_park_at_ship.md`
 - `draft/feature/pyautobrain/batch_notify_tier_merge.md`
 - `draft/feature/pyautobrain/board_without_gh.md`
@@ -2383,11 +2289,12 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautobrain/the_batch_conductor_s_plan_kind_cortex.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- _… and 118 more_
+- `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
+- _… and 113 more_
 
 </details>
 
-13 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+11 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2399,8 +2306,6 @@ Continue the 'Mind after the Cortex — shed the science-epic scaffolding, add t
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
-- `draft/feature/pyautobrain/batch_no_park_at_ship.md — unknown theme keyword(s): batch`
-- `draft/feature/pyautomind/batch_carry_forward.md — unknown theme keyword(s): batch`
 - `draft/bug/autoarray/delaunay_area_magnification_audit.md — unknown theme keyword(s): euclid`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
