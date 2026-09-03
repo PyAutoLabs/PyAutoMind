@@ -14,8 +14,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601
 - prompt: active/gaussian_precompute_p1_numpy_memo.md
 - issued: 2026-09-03
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/602
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/214
 - session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: library-dev
+- status: library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoGalaxy → autolens_profiling; close-out via /prm)
 - worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p1
 - repos:
   - PyAutoGalaxy: feature/gaussian-precompute-p1

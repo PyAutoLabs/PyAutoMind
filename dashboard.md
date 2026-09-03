@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cpu_vis_lp_jax_vis_pix_numba_submission.md">CPU route: keep the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing)…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49">issue #49</a> — issued 2026-09-02 — workspace-dev — ⚠️ gates a Cortex phase → phases/euclid/dr1_prelim_10_lens_science_run.md</summary>
 
 ```
 /start_dev active/cpu_vis_lp_jax_vis_pix_numba_submission.md
@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/gaussian_precompute_p1_numpy_memo.md">Gaussian precompute phase 1: numpy deflection memo — fixed-geometry whole field, <code>mass_to_light_ratio</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601">issue #601</a> — issued 2026-09-03 — library-dev</summary>
+<details><summary>📋 <a href="active/gaussian_precompute_p1_numpy_memo.md">Gaussian precompute phase 1: numpy deflection memo — fixed-geometry whole field, <code>mass_to_light_ratio</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/601">issue #601</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoGalaxy → autolens_profiling; close-out via /prm)</summary>
 
 ```
 /start_dev active/gaussian_precompute_p1_numpy_memo.md
@@ -2153,7 +2153,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 <details>
 <summary><b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — 3 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — ledger: `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md` — phase 1 in flight 2026-09-03 — PyAutoGalaxy#601 (active/gaussian_precompute_p1_numpy_memo.md)</summary>
+<details><summary>📋 <b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — ledger: `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md` — phase 1 at PR-open 2026-09-03 — PyAutoGalaxy#601, PRs PyAutoGalaxy#602 + autolens_profiling#214 open awaiting merge…</summary>
 
 ```
 Continue the 'Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)' epic. Its canonical state lives in draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phase prompts — draft/feature/autogalaxy/gaussian_precompute_p1_numpy_memo.md,
