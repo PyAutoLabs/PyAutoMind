@@ -40,8 +40,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/392
 - prompt: active/mind_post_cortex_p3_pr_ledger_pending_release.md
 - issued: 2026-09-03
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/393
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/344
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/195
 - session: local CLI (Fable architect, Opus execution)
-- status: library-dev
+- status: library-shipped, awaiting-merge (three PRs open 2026-09-03; merge order PyAutoMind#393 first
+  — it carries the REFERENCE.md schema the other two point at — then PyAutoBrain#344, then
+  PyAutoHeart#195; close-out via /prm)
 - worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p3-pr-ledger
 - repos:
   - PyAutoMind: feature/mind-post-cortex-p3-pr-ledger
@@ -57,6 +62,20 @@
   and dashboard renderers against p2's _sizing.py work-types and board/_theme.py. Verified by
   `git merge-tree` against origin/feature/mind-post-cortex-p2-science-residue before ship; second to
   merge rebases.
+- heart-note: `pyauto-heart readiness --json` was RED when the PRs were opened (checked 2026-09-03,
+  before PR-open). Verbatim reasons:
+  - PyAutoLens: CI failure
+  - release validation FAILED (stage integrate)
+  - PyAutoArray: open PR 11d old
+  None touches this diff — no library source and no release surface; organ docs, one lifecycle script,
+  one skill markdown and their tests. The acknowledgement the human gave earlier today was scoped to
+  gaussian-precompute-p1 and jax-faddeeva-clamp-audit and is NOT carried here: the RED is unacked for
+  this task and merge needs the human's own call. Opened for review only.
+- merge-tree: scratch-merged origin/feature/mind-post-cortex-p2-science-residue into both branches
+  before ship. PyAutoBrain: CLEAN. PyAutoMind: conflicts only in the generated dashboard.md/.html,
+  and a control merge of that same p2 branch into plain origin/main produces the identical conflict —
+  phase 2's own rebase debt against a moved main, not an interaction with this task. This task's three
+  Mind files (REFERENCE.md, scripts/lifecycle.py, tests/test_lifecycle_check.py) are conflict-free.
 - epic: mind-post-cortex (phase 3; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
 ## gaussian-precompute-p1
