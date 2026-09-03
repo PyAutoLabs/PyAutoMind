@@ -18,6 +18,7 @@ Unattended: ready
 Epic: mind-post-cortex
 Phase: 5
 Filed: 2026-09-03
+Issued: 2026-09-03
 
 Phase 5 of `mind-post-cortex` — assessment gap 6. Two PRs: Heart (the flag
 and its CLI) and Brain (`vitals` faculty, `/prm` gate leg, batch status line).

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1265 records across 8 buckets.
+1270 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -140,14 +140,19 @@ markers; everything below GENERATED is rebuilt.
 - [ep-message-support](2026/09/ep-message-support.md)
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
+- [gaussian-precompute-p1](2026/09/gaussian-precompute-p1.md)
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
 - [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
+- [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
+- [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
+- [mind-post-cortex-p2](2026/09/mind-post-cortex-p2.md)
 - [numba-vs-jax-sparse](2026/09/numba-vs-jax-sparse.md)
 - [numpy-deflections-p1](2026/09/numpy-deflections-p1.md)
 - [numpy-deflections-p2](2026/09/numpy-deflections-p2.md)
 - [numpy-deflections-p3](2026/09/numpy-deflections-p3.md)
 - [organ-board-github-link](2026/09/organ-board-github-link.md) — Every organ board header now carries a `GitHub Page` link beside its existing
+- [over-sample-snr-double-division](2026/09/over-sample-snr-double-division.md)
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z
 - [silence-colab-cli-message](2026/09/silence-colab-cli-message.md)

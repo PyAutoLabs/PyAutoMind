@@ -25,7 +25,6 @@ advances to `active/`, and on merge to `complete/<YYYY>/<MM>/` (issue #71).
 | `release/`       | packaging, versions, deployment, release readiness | release engineer |
 | `maintenance/`   | dependency updates, hygiene, cleanup, small technical debt | hygiene agent |
 | `research/`      | exploratory scientific / algorithmic investigation before implementation | research analyst |
-| `experiment/`    | prototypes, spikes, proof-of-concept work | prototype agent |
 | `human_review/`  | work that already **shipped** and a human wants to read and sign off | (none — a human reviews; never auto-filed) |
 | `triage/`        | classification still unclear | (human triages, then re-homes) |
 

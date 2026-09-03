@@ -18,6 +18,7 @@ Unattended: ready
 Epic: mind-post-cortex
 Phase: 4
 Filed: 2026-09-03
+Issued: 2026-09-03
 
 Phase 4 of `mind-post-cortex` — assessment gaps 3, 4, 5 and 7. Two PRs: Brain
 (`agents/conductors/batch/_batch.py` + tests) and Mind (`lifecycle.py` + docs).
