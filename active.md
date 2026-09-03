@@ -140,6 +140,29 @@
   with this task. queue.md, scripts/lifecycle.py, tests/ and batches/ are conflict-free.
 - epic: mind-post-cortex (phase 4; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
+## mind-post-cortex-p5-heart-freeze
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/196
+- prompt: active/mind_post_cortex_p5_heart_freeze_flag.md
+- issued: 2026-09-03
+- session: local CLI (Fable architect, Opus execution)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p5-heart-freeze
+- repos:
+  - PyAutoHeart: feature/mind-post-cortex-p5-heart-freeze
+  - PyAutoBrain: feature/mind-post-cortex-p5-heart-freeze
+  - PyAutoHands: feature/mind-post-cortex-p5-heart-freeze
+- parallel-claim: PyAutoHeart and PyAutoBrain are also claimed by sibling phases of the same epic, so
+  `worktree_check_conflict` exits 1 on both. Known and accepted — the file sets are disjoint. This task
+  owns, in Heart, `heart/freeze.py` (new), the `freeze` verb in `bin/pyauto-heart`, the ingest-side
+  clear in `heart/validate.py`, `tests/test_freeze.py` and one `REFERENCE.md` section (p3's Heart diff
+  is `skills/review_release/review_release.md` only — this task appends a further step to that same
+  file, so a `git merge-tree` against p3 is run before ship and the second to merge rebases); in Brain,
+  `agents/faculties/vitals/*`, `skills/prm/prm.md`, `agents/conductors/batch/_status.py` and the
+  collect legs of `_batch.py` (p2 edits `_sizing.py`/`_intake.py`/`_feature.py`; p3 edits `_intake.py`
+  and the ship/prm skills — `prm.md` overlaps, merge-tree checked; p4 edits `_batch.py`'s outcomes and
+  merge-order blocks, not `_status.py`); and PyAutoHands, which no sibling claims.
+- epic: mind-post-cortex (phase 5; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
+
 ## euclid-cpu-two-stage-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
 - prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md
