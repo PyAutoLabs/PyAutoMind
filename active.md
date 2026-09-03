@@ -12,24 +12,6 @@
   - PyAutoBrain: feature/cortex-checkin-p1-shed-review-slot
 - epic: cortex-checkin (phase 1; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md)
 
-## gaussian-precompute-p2
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/604
-- prompt: active/gaussian_precompute_p2_jax_trace_time_constant.md
-- issued: 2026-09-03
-- session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoArray → PyAutoGalaxy → autolens_profiling; close-out via /prm)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/520
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/216
-- worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p2
-- repos:
-  - PyAutoArray: feature/gaussian-precompute-p2
-  - PyAutoGalaxy: feature/gaussian-precompute-p2
-  - autolens_profiling: feature/gaussian-precompute-p2
-- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge), exact reasons from pyauto-heart readiness --json: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old"; "PyAutoLens: CI failure" (third reason added 2026-09-03 evening, cause PyAutoArray#519, corrective PR PyAutoLens#722)
-- heart-note: acknowledgement covers these three reasons; a further new reason at ship time re-blocks
-- epic: gaussian-deflections-precompute (phase 2; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
-
 ## euclid-cpu-two-stage-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/49
 - prompt: active/cpu_vis_lp_jax_vis_pix_numba_submission.md

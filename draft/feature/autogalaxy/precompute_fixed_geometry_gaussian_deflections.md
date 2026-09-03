@@ -92,5 +92,8 @@ Three phase prompts:
   witness. **SHIPPED 2026-09-03** — record `complete/2026/09/gaussian-precompute-p1.md`
   (PyAutoGalaxy#602 + autolens_profiling#214; Basis-30 hst 21.5x, SLaM-shaped likelihood 3.0x
   bit-identical, witness `[60, 0, 0]` vs the `[60, 60, 60]` controls).
-- `draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md` — JAX trace-time constant.
+- ~~`draft/feature/autogalaxy/gaussian_precompute_p2_jax_trace_time_constant.md`~~ — JAX trace-time
+  constant. **SHIPPED 2026-09-03** — record `complete/2026/09/gaussian-precompute-p2.md`
+  (PyAutoArray#520 + PyAutoGalaxy#605 + autolens_profiling#216; jaxpr 53,369 → 13,289 equations
+  (-75%), `vmap_first_call` 10.8 → 5.4 s, steady-state `vmap` unchanged — inversion-dominated).
 - `draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md` — SLaM / test_autolens / workspace sweep.

@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 162 |
 
 > **No batch in flight.**
 
@@ -268,14 +268,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/gaussian_precompute_p2_jax_trace_time_constant.md">Gaussian precompute phase 2: JAX trace-time constant — fold the fixed-geometry deflection…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/604">issue #604</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoArray → PyAutoGalaxy → autolens_profiling; close-out via… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/520">PyAutoArray#520</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605">PyAutoGalaxy#605</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/216">autolens_profiling#216</a></summary>
-
-```
-/start_dev active/gaussian_precompute_p2_jax_trace_time_constant.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/mappings_guide_and_tutorial_rewrite.md">Mappings guide (<code>guides/mappings.py</code>), tutorial_2_mappers rewrite with polygons, and dead index-section fixes across…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/525">issue #525</a> — issued 2026-09-03 — workspace-dev</summary>
 
 ```
@@ -287,6 +279,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 ## Pending release
 
 Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
+
+**PyAutoArray**
+
+- [PyAutoArray#520](https://github.com/PyAutoLabs/PyAutoArray/pull/520) — `complete/2026/09/gaussian-precompute-p2.md`
+
+**PyAutoGalaxy**
+
+- [PyAutoGalaxy#605](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605) — `complete/2026/09/gaussian-precompute-p2.md`
 
 **PyAutoLens**
 
@@ -422,7 +422,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
+**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -702,7 +702,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 23</summary>
+<summary><b>bug</b> — 24</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -772,6 +772,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
 ```
 
 </details>
@@ -1691,7 +1699,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 21 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1703,7 +1711,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 | 2026-09-03 | issued | <a href="active/mappings_guide_and_tutorial_rewrite.md">Mappings guide (<code>guides/mappings.py</code>), tutorial_2_mappers rewrite…</a> |
-| 2026-09-03 | issued | <a href="active/gaussian_precompute_p2_jax_trace_time_constant.md">Gaussian precompute phase 2: JAX trace-time constant — fold the…</a> |
+| 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-09-03 | issued | <a href="active/cortex_checkin_p1_shed_review_slot.md">Cortex: shed the review-slot and gate apparatus the check-in loop…</a> |
 | 2026-09-03 | filed | <a href="draft/maintenance/pyautocortex/cortex_checkin_epic.md">Cortex check-in — one door, shed the review-slot and gate apparatus</a> |
 | 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
@@ -2148,7 +2156,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 <details>
 <summary><b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — 2 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — ledger: `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md` — phase 1 SHIPPED 2026-09-03 (record complete/2026/09/gaussian-precompute-p1.md) — issue PyAutoGalaxy#601 closed, PyAutoGalaxy#602…</summary>
+<details><summary>📋 <b>Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)</b> — ledger: `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md` — phases 1–2 SHIPPED 2026-09-03 (records complete/2026/09/gaussian-precompute-p1.md, complete/2026/09/gaussian-precompute-p2.md)…</summary>
 
 ```
 Continue the 'Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)' epic. Its canonical state lives in draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phase prompts — gaussian_precompute_p1_numpy_memo.md (SHIPPED, folded into
@@ -2215,7 +2223,7 @@ Continue the 'Cortex check-in — one door, shed the review-slot and gate appara
 
 </details>
 
-150 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+151 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2260,11 +2268,11 @@ Continue the 'Cortex check-in — one door, shed the review-slot and gate appara
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
-- _… and 110 more_
+- _… and 111 more_
 
 </details>
 
-13 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+14 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2276,6 +2284,7 @@ Continue the 'Cortex check-in — one door, shed the review-slot and gate appara
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/autoarray/delaunay_area_magnification_audit.md — unknown theme keyword(s): euclid`
+- `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
