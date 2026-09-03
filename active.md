@@ -8,6 +8,9 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/batch-status-box
 - repos:
+  - PyAutoBrain: feature/batch-status-box
+  - PyAutoCortex: feature/batch-status-box
+  - PyAutoMind: feature/batch-status-box
 - epic: two-slot-batching (phase 6; parent draft/feature/pyautomind/two_slot_batching_epic.md)
 
 ## euclid-cpu-two-stage-route
