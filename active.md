@@ -14,13 +14,26 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/390
 - prompt: active/mind_post_cortex_p2_science_residue.md
 - issued: 2026-09-03
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/391
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/343
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/8
 - session: local CLI (Fable architect, Opus execution)
-- status: library-dev
+- status: library-shipped, awaiting-merge (three PRs open 2026-09-03; no merge order forced — the
+  three diffs are disjoint, though PyAutoMind#391 and PyAutoCortex#8 are two halves of one move and
+  should land together; close-out via /prm)
 - worktree: ~/Code/PyAutoLabs-wt/mind-post-cortex-p2-science-residue
 - repos:
   - PyAutoMind: feature/mind-post-cortex-p2-science-residue
   - PyAutoBrain: feature/mind-post-cortex-p2-science-residue
   - PyAutoCortex: feature/mind-post-cortex-p2-science-residue
+- heart-note: `pyauto-heart readiness` was RED at ship (checked 2026-09-03 after PR-open, which is
+  the process slip to know about). The two reasons are byte-identical to the pair the human
+  acknowledged earlier today for gaussian-precompute-p1 and jax-faddeeva-clamp-audit, and neither
+  touches this diff (no library source, no release surface — organ docs and registries only):
+  - release validation FAILED (stage integrate)
+  - PyAutoArray: open PR 11d old
+  That acknowledgement was scoped to those tasks, so it is NOT carried here: the RED is unacked for
+  this task and merge needs the human's own call.
 - epic: mind-post-cortex (phase 2; ledger draft/maintenance/pyautomind/mind_post_cortex_epic.md)
 
 ## gaussian-precompute-p1
