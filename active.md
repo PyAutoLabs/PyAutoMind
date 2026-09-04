@@ -3,6 +3,7 @@
 ## board-family-helper
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/352
 - issued: 2026-09-04
+- prompt: active/board_family_footer_shared_helper.md
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/board-family-helper
 - repos:
