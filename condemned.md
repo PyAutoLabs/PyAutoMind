@@ -50,6 +50,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autolens_profiling/multiband-compile-ab](#autolens_profilingmultiband-compile-ab)
 - [autolens_profiling/stash-strip-non-jit-noise](#autolens_profilingstash-strip-non-jit-noise)
 - [autolens_workspace_developer/rectangular-spline-rotated-experiments](#autolens_workspace_developerrectangular-spline-rotated-experiments)
+- [autolens_profiling/inference-programme-ledger](#autolens_profilinginference-programme-ledger)
 
 <!-- toc:end -->
 
@@ -434,3 +435,14 @@ One `##` block per item. Fields:
 - sweep-after: n/a — nothing to void. These are committed deletions on a pushed repo, so the bytes stay reachable in remote history permanently; per the entry schema's "Committed code / test deletions" rule this record exists only to pin the pre-delete SHA. There is no ref to expire and no `pyauto-gut void` step.
 - breaks-if-wrong: loses the rotated-vs-spline mesh demo (`rect_adapt_duo/compare_meshes.py` + its self-contained simulated dataset), the spline adapt-image FD gradient probe, and the spline-vs-linear pixelization profiling comparison with its measured HST results (JSON + sweep plot). The *findings* those runs produced survive in `jax_profiling/gradient/README.md` and the PyAutoArray#402 completion record; what is lost is the ability to re-run them, which already requires resurrecting three deleted library classes.
 - archive-ref: `n/a` — committed deletion; pre-delete SHA `9ae0502` on PyAutoLabs/autolens_workspace_developer `main` (the base of `feature/rectangular-experiments-gut-stash`). Recover with `git checkout 9ae0502 -- <path>`.
+
+## autolens_profiling/inference-programme-ledger
+- type: branch
+- locator: `feature/inference-programme-ledger` in autolens_profiling (laptop worktree `~/Code/PyAutoLabs-wt/inference-programme-ledger`, PR #135 closed unmerged)
+- confidence: 0.99
+- reason: the task was started twice; the mobile session's #136 and the reconciling #137 (merged `5ce0243`) folded this branch's richer CP-1 evidence, literature set and follow-ups into `results/notes/inference/` on `main`. The completion record `complete/2026/08/inference-programme-ledger.md` already marks the worktree and branch as stale leftovers for the next cleanup pass. 1 commit ahead of `main`, 203 behind; the programme it documents was retired 2026-09-04 (autolens_profiling#217).
+- merged: no
+- condemned: 2026-09-04
+- sweep-after: 2026-12-04
+- breaks-if-wrong: loses the laptop session's original 558-line PROGRAMME.md draft as a standalone commit; its content survives on `main` via #137. Recoverable via `pyauto-gut recover autolens-profiling-inference-programme-ledger`.
+- archive-ref: `refs/heads/archive/condemned/autolens-profiling-inference-programme-ledger` @ `3e634abaf1f3ad8f6f25a3b77e6732768b421343` on PyAutoGut — verified by `git ls-remote` against the Gut before the source branch was deleted.
