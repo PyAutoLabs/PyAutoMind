@@ -31,3 +31,55 @@
     exact unit-vector transform), JAX returns 1.2e-16, and the check is
     rtol-only. Add atol=1e-12 on the mp.PowerLaw checks, mirroring
     mp.ExternalPotential.
+
+## board-family-helper
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/352
+- issued: 2026-09-04
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/board-family-helper
+- repos:
+  - PyAutoBrain: feature/board-family-helper
+- summary: |
+    board/_theme.py gains board_links(base_url, current) reading the canonical
+    board: boards: block of config/policy.yaml (stdlib regex, no yaml import),
+    so the sibling renderers stop carrying stale hard-coded BOARD_FAMILY
+    tuples. bin/morning.sh also ticks and publishes the Heart dev-box board
+    beside the Brain one, so the Heart Pages board stops rendering grey.
+
+## heart-board-family-footer
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/199
+- issued: 2026-09-04
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/heart-board-family-footer
+- repos:
+  - PyAutoHeart: feature/heart-board-family-footer
+- summary: |
+    heart/dashboard.py replaces its hard-coded BOARD_FAMILY tuple (no Cortex
+    chip, wrong order) with the theme's board_links helper, keeping the legacy
+    tuple only as a fallback for an older PyAutoBrain checkout. Touches
+    heart/dashboard.py and tests/test_dashboard.py only — the concurrent
+    heart-worktree-drift-hidden-dirs task owns heart/checks/worktree_drift.py.
+
+## hands-board-family-footer
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/276
+- issued: 2026-09-04
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hands-board-family-footer
+- repos:
+  - PyAutoHands: feature/hands-board-family-footer
+- summary: |
+    autohands/board.py replaces its hard-coded BOARD_FAMILY tuple with the
+    theme's board_links helper, so the release board's footer carries Cortex
+    and the canonical chip order.
+
+## memory-board-family-footer
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/87
+- issued: 2026-09-04
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/memory-board-family-footer
+- repos:
+  - PyAutoMemory: feature/memory-board-family-footer
+- summary: |
+    scripts/board.py replaces its hard-coded BOARD_FAMILY tuple with the
+    theme's board_links helper, so the knowledge board's footer carries Cortex
+    and the canonical chip order.
