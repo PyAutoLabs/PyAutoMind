@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 5 |
+| [In flight](#in-flight) (`active/`) | 4 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -251,14 +251,6 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
-
-<details><summary>📋 <a href="active/board_family_footer_shared_helper.md">Shared <code>board_links</code> helper in the board theme + Heart publish in morning.sh</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/352">issue #352</a> — issued 2026-09-04 — library-dev</summary>
-
-```
-/start_dev active/board_family_footer_shared_helper.md
-```
-
-</details>
 
 <details><summary>📋 <a href="active/hands_board_family_footer.md">Hands board footer reads the canonical board family instead of a stale…</a> — issued 2026-09-04</summary>
 
@@ -1722,7 +1714,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
-| 2026-09-04 | issued | <a href="active/board_family_footer_shared_helper.md">Shared <code>board_links</code> helper in the board theme + Heart publish in…</a> |
 | 2026-09-04 | issued | <a href="active/slam_simultaneous_adaptive_over_sampling_timeout.md">SLaM multi-dataset <code>simultaneous.py</code> times out (1805 s) after the…</a> |
 | 2026-09-04 | issued | <a href="active/memory_board_family_footer.md">Memory board footer reads the canonical board family instead of a…</a> |
 | 2026-09-04 | issued | <a href="active/heart_board_family_footer.md">Heart board footer reads the canonical board family instead of a…</a> |
@@ -1731,12 +1722,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a> |
+| 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
@@ -1746,12 +1737,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to…</a> |
+| 2026-08-30 | filed | <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">The tier-<code>notify</code> auto-merge decision — re-open the shadow window…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-30 | filed | <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">The tier-<code>notify</code> auto-merge decision — re-open the shadow window…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
@@ -1761,12 +1752,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 | 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
+| 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
@@ -1776,12 +1767,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
+| 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
@@ -1791,6 +1782,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
+| 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 
 </details>
 

@@ -1,20 +1,5 @@
 # Active Tasks
 
-## board-family-helper
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/352
-- issued: 2026-09-04
-- prompt: active/board_family_footer_shared_helper.md
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/board-family-helper
-- repos:
-  - PyAutoBrain: feature/board-family-helper
-- summary: |
-    board/_theme.py gains board_links(base_url, current) reading the canonical
-    board: boards: block of config/policy.yaml (stdlib regex, no yaml import),
-    so the sibling renderers stop carrying stale hard-coded BOARD_FAMILY
-    tuples. bin/morning.sh also ticks and publishes the Heart dev-box board
-    beside the Brain one, so the Heart Pages board stops rendering grey.
-
 ## heart-board-family-footer
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/199
 - issued: 2026-09-04
