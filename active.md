@@ -57,10 +57,14 @@
 - prompt: active/cortex_checkin_p2_the_door.md
 - issued: 2026-09-03
 - session: local CLI (Fable architect, Opus execution) — claude --resume session_013HsZA1ufn3msgPiDFxEXa6
-- status: library-dev
+- status: library-shipped, awaiting-merge (PRs open 2026-09-03; stacked on phase 1 — merge order PyAutoBrain#348 -> PyAutoCortex#10 -> PyAutoBrain#350 -> PyAutoCortex#11, retarget p2's PRs to main once p1 merges; close-out via /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/350
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/11
 - worktree: ~/Code/PyAutoLabs-wt/cortex-checkin-p2-the-door
 - repos:
   - PyAutoBrain: feature/cortex-checkin-p2-the-door
   - PyAutoCortex: feature/cortex-checkin-p2-the-door
 - parallel-claim: both repos are also claimed by cortex-checkin-p1-shed-review-slot (PyAutoCortex#9, PRs PyAutoBrain#348 / PyAutoCortex#10 open, unmerged). This is the epic's own stacking, not a collision: p2 branches FROM `feature/cortex-checkin-p1-shed-review-slot` in both repos and its PRs target that branch, so p1's deletions are already in p2's base. File sets are disjoint from p1's remaining work — p2 adds the `checkin` door to `agents/conductors/cortex/_cortex.py`, rewrites `skills/cortex/*` + `skills/COMMANDS.md`, adds check-in tests, and touches PyAutoCortex docs only (README/AGENTS/REFERENCE) — while p1 is finished and awaiting merge. Human-approved 2026-09-03 ("ok go" on the epic and its phases). worktree_check_conflict exits 1 by design here; phase 3 will stack on p2's branches in turn.
-- epic: cortex-checkin (phase 2; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md). Retarget both PRs to main when phase 1 merges.
+- heart: RED at ship time 2026-09-03, NOT acknowledged by a human. Exact reasons from `pyauto-heart readiness --json`: red "release validation FAILED (stage integrate)"; yellow "PyAutoArray: open PR 11d old". Both are release-chain facts about other repos; neither PyAutoBrain nor PyAutoCortex is in the release chain, and this branch is a conductor verb plus docs. PRs were opened, nothing merged; the merge decision needs the human, and an ack (or a green Heart) before it.
+- tests: Brain 874 passed / 3 failed — one (`test_gh_surface::test_every_gh_driving_skill_points_at_the_mapping`) was this branch's and is fixed; the two `test_branch_sweep` failures reproduce unchanged on the phase-1 base. Targeted re-run of test_cortex_conductor + test_skill_install + test_gh_surface: 68 passed. PyAutoCortex: `cortex.py check` OK, 115 passed, dashboard current.
+- epic: cortex-checkin (phase 2; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md). Retarget both PRs to main when phase 1 merges. Phase 3 stacks on `feature/cortex-checkin-p2-the-door` in both repos — the remotes are left in place.

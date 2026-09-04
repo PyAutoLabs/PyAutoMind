@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/cortex_checkin_p2_the_door.md"><code>/cortex</code> — the one check-in door: pull every active project, score, render…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/349">issue #349</a> — issued 2026-09-03 — library-dev</summary>
+<details><summary>📋 <a href="active/cortex_checkin_p2_the_door.md"><code>/cortex</code> — the one check-in door: pull every active project, score, render…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/349">issue #349</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; stacked on phase 1 — merge order PyAutoBrain#348 -&gt; PyAutoCortex#10 -&gt;… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/350">PyAutoBrain#350</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/11">PyAutoCortex#11</a></summary>
 
 ```
 /start_dev active/cortex_checkin_p2_the_door.md
