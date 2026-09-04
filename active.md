@@ -5,7 +5,13 @@
 - prompt: active/swap_docs_back_to_human_readable_first.md
 - issued: 2026-09-03
 - session: claude --resume session_01TRKarVxARKJ6VJN5Qc3521
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (six PRs open 2026-09-03, PR-open only under Heart RED ack below; close-out via /prm; merge order free — repos independent)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/723
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/606
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/529
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/233
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/121
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/22
 - worktree: ~/Code/PyAutoLabs-wt/human-readable-first-docs
 - repos:
   - autolens_assistant: feature/human-readable-first-docs
