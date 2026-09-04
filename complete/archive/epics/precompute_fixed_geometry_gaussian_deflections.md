@@ -96,7 +96,10 @@ Three phase prompts:
   constant. **SHIPPED 2026-09-03** — record `complete/2026/09/gaussian-precompute-p2.md`
   (PyAutoArray#520 + PyAutoGalaxy#605 + autolens_profiling#216; jaxpr 53,369 → 13,289 equations
   (-75%), `vmap_first_call` 10.8 → 5.4 s, steady-state `vmap` unchanged — inversion-dominated).
-- `draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md` — SLaM / test_autolens / workspace sweep.
+- ~~`draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md`~~ — SLaM / test_autolens /
+  workspace sweep. **SHIPPED 2026-09-04** — record `complete/2026/09/gaussian-precompute-p3.md`
+  (autolens_workspace#530; no mechanism — verification plus the docstring paragraph naming
+  `AUTOGALAXY_DEFLECTIONS_MEMO=0`).
 
 **2026-09-03 — phase 3 SHIPPED to PR-open (autolens_workspace#530).** Downstream sweep on the merged
 library mains (PyAutoGalaxy `65af1122`, PyAutoArray `e36a5af4`); the phase adds no mechanism, it verifies
@@ -115,3 +118,29 @@ pins held: `pixelization_numba` hst **27661.9102** (rel **2.65e-9**, within 1e-6
 production-scale number for this shape, since test mode calls the likelihood once per stage. Doc: one
 paragraph in the `mass_light_dark` pipeline docstring plus the regenerated notebook. The epic closes at
 `/prm` on autolens_workspace#530.
+
+**2026-09-04 — phase 3 MERGED; epic COMPLETE.** autolens_workspace#530 (`7bbffe80`) merged via `/prm`;
+#528 closed; record `complete/2026/09/gaussian-precompute-p3.md`. All three phases shipped: the numpy
+memo (phase 1, PyAutoGalaxy#602 — Basis-30 hst 21.5x, SLaM-shaped likelihood 3.0x bit-identical), the
+JAX trace-time constant (phase 2, PyAutoArray#520 + PyAutoGalaxy#605 — jaxpr -75%, `vmap_first_call`
+2.0x, steady-state `vmap` unchanged), and the downstream sweep + kill-switch doc (phase 3). The memo is
+correct where it matters and free where it does not: every SLaM stage bit-identical memo on vs off,
+`mass_light_dark[1]` at 0.72x despite an L1 key that changes every call, 2.61x per call on the
+production-resolution MGE-mass profiling cell, and no pin moved in any workspace or profiling suite.
+**PyAutoArray and PyAutoGalaxy remain pending-release** (obligation carried by the phase 1 and 2
+records). Trap left standing outside the epic: `no_run.yaml` lists `mass_stellar_dark/slam` as needing
+JAX/CSE though it runs clean on the numpy test-mode path.
+
+## Retired from epics.md (2026-09-04)
+
+## gaussian-deflections-precompute
+- title: Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)
+- ledger: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
+- status: COMPLETE 2026-09-04 — all three phases SHIPPED (records complete/2026/09/gaussian-precompute-p{1,2,3}.md; phase 1 PyAutoGalaxy#602 + autolens_profiling#214, Basis-30 hst 21.5x and SLaM-shaped likelihood 3.0x bit-identical; phase 2 PyAutoArray#520 + PyAutoGalaxy#605 + autolens_profiling#216, jaxpr 53,369 → 13,289 equations (−75%), vmap_first_call 2.0x, steady-state vmap unchanged; phase 3 autolens_workspace#530 (`7bbffe80`) merged 2026-09-04, issue #528 closed — downstream sweep, every SLaM stage bit-identical memo on vs off, 2.61x per call on the production-resolution MGE-mass cell, no pin moved, plus the `AUTOGALAXY_DEFLECTIONS_MEMO=0` kill-switch paragraph). PyAutoArray + PyAutoGalaxy remain pending-release.
+- notes: three phase prompts — gaussian_precompute_p1_numpy_memo.md (SHIPPED, folded into
+  complete/2026/09/gaussian-precompute-p1.md), gaussian_precompute_p2_jax_trace_time_constant.md
+  (SHIPPED, folded into complete/2026/09/gaussian-precompute-p2.md),
+  draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md (numpy memo + witness; JAX
+  trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
+  complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home
+  autolens_profiling/scripts/lens/deflections/.

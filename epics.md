@@ -73,18 +73,6 @@ epic, never picked standalone.
 - status: phase 1 SHIPPED 2026-09-02 — PyAutoArray#517 merged, issue #515 closed, record `complete/2026/09/image-source-mappings-p1.md`; phase 2 (+2a) **SHIPPED** 2026-09-02 — PyAutoArray#518 (`c9f67e78`) → PyAutoLens#720 (`091fbdff`) merged, issue #719 closed, record `complete/2026/09/image-source-mappings-p2.md`; **both PyAutoArray and PyAutoLens releases are outstanding** (`pending-release`); phase 3 **SHIPPED** 2026-09-03 — autolens_workspace#526, HowToLens#76, HowToGalaxy#72, autogalaxy_workspace#232 merged, issue #525 closed, record `complete/2026/09/image-source-mappings-p3.md`; all three phases shipped, epic complete pending the PyAutoArray + PyAutoLens releases; library follow-ups in `draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md`
 - notes: three phase prompts — Phase 1 PyAutoArray (`Mapping`/`ImageRegion` objects, `Inversion.source_clumps_from`, `regions=` overlay on `plot_array`/`plot_inversion_reconstruction`, restored `subplot_mappings`), Phase 2 PyAutoLens (ShapeSolver as the parametric engine + validation suite, `autolens/lens/mappings.py`, fit-level `subplot_mappings`, brightest multiple-image positions for spectroscopic follow-up), Phase 3 workspace (`guides/mappings.py`, tutorial_2_mappers rewrite with polygons, dead index-section fixes). Library-first; issue ONE phase at a time. Proceeds alongside ci-timing-fast-tests by user decision (2026-09-02).
 
-## gaussian-deflections-precompute
-- title: Fixed-geometry deflection memo — rescale Gaussians by the free mass-to-light ratio (numpy + JAX)
-- ledger: draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md
-- status: phases 1–2 SHIPPED 2026-09-03 (records complete/2026/09/gaussian-precompute-p1.md, complete/2026/09/gaussian-precompute-p2.md) — issues PyAutoGalaxy#601 and PyAutoGalaxy#604 closed; phase 1 PyAutoGalaxy#602 (`a647aa32f`) + autolens_profiling#214 (`5f7a3ab1d`), Basis-30 hst 135.6 → 6.3 ms (21.5x), SLaM-shaped likelihood 3.0x bit-identical; phase 2 PyAutoArray#520 (`e36a5af4c`) + PyAutoGalaxy#605 (`65af11227`) + autolens_profiling#216 (`991b4da26`), jaxpr 53,369 → 13,289 equations (−75%), vmap_first_call 10.8 → 5.4 s (2.0x), steady-state vmap unchanged (inversion-dominated, honest negative); PyAutoArray + PyAutoGalaxy pending-release; phase 3 next (draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md); phase 3 at PR-open 2026-09-03 — autolens_workspace#528, PR autolens_workspace#530 (pending-release; close-out via /prm, which closes the epic)
-- notes: three phase prompts — gaussian_precompute_p1_numpy_memo.md (SHIPPED, folded into
-  complete/2026/09/gaussian-precompute-p1.md), gaussian_precompute_p2_jax_trace_time_constant.md
-  (SHIPPED, folded into complete/2026/09/gaussian-precompute-p2.md),
-  draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md (numpy memo + witness; JAX
-  trace-time constant; downstream sweep). Successor to numpy-deflections-cpu (archived ledger
-  complete/archive/epics/numpy_deflections_cpu_speedup.md). Profiling home
-  autolens_profiling/scripts/lens/deflections/.
-
 ## cortex-checkin
 - title: Cortex check-in — one door, shed the review-slot and gate apparatus
 - ledger: draft/maintenance/pyautocortex/cortex_checkin_epic.md

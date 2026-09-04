@@ -38,22 +38,8 @@
   - PyAutoGalaxy: feature/human-readable-first-docs
   - autolens_workspace: feature/human-readable-first-docs
   - autogalaxy_workspace: feature/human-readable-first-docs
-- parallel-claim: autolens_workspace also claimed by gaussian-precompute-p3 (#528); file sets disjoint (that task touches only scripts/**/mass_stellar_dark/slam.py + its notebook; this task touches README.md, start_here.py + its notebook/markdown twins) — separate worktree per the disjoint-files rule, launched 2026-09-03 under the user's "do intake and then do work" instruction; second to merge rebases.
+- parallel-claim: autolens_workspace also claimed by gaussian-precompute-p3 (#528); file sets disjoint (that task touches only scripts/**/mass_stellar_dark/slam.py + its notebook; this task touches README.md, start_here.py + its notebook/markdown twins) — separate worktree per the disjoint-files rule, launched 2026-09-03 under the user's "do intake and then do work" instruction. RESOLVED 2026-09-04: gaussian-precompute-p3 merged first (autolens_workspace#530, 7bbffe80) and has closed out, so this branch must rebase onto autolens_workspace origin/main before its own ship; it is now the sole live claim on the repo.
 - heart-ack: 2026-09-03 PR-open only (never merge) under Heart RED; exact reasons from pyauto-heart readiness --json: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old" — the same reason set the human acknowledged for gaussian-precompute-p3 earlier today; docs-only change unrelated to either reason; a further new reason at ship time re-blocks
-
-## gaussian-precompute-p3
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/528
-- prompt: active/gaussian_precompute_p3_downstream_sweep.md
-- issued: 2026-09-03
-- session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: workspace-shipped, awaiting-merge (PR open 2026-09-03; close-out via /prm — closes the epic)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/530
-- worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p3
-- repos:
-  - autolens_workspace: feature/gaussian-precompute-p3
-- parallel-claim: autolens_workspace also claimed by image-source-mappings-p3 (#525); file sets disjoint (that branch touches features/pixelization/*, smoke_tests.txt, workspace_index.json, tutorials; this task touches only scripts/**/mass_stellar_dark/slam.py + its notebook) — human-approved 2026-09-03; second to merge rebases. RESOLVED at worktree time: image-source-mappings-p3 had already closed out — its active.md entry is retired, its worktree removed, and feature/image-source-mappings-p3 is merged into origin/main (#526, 31a7b6e4). worktree_check_conflict fired no conflict; this task is the sole live claim on autolens_workspace.
-- heart-ack: 2026-09-03 human-acknowledged Heart RED for PR-open (never merge), exact reasons from pyauto-heart readiness --json: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old"; "PyAutoLens: CI failure" (cleared on main by PyAutoLens#722, snapshot may lag) — a further new reason at ship time re-blocks
-- epic: gaussian-deflections-precompute (phase 3; ledger draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
 
 ## cortex-checkin-p1-shed-review-slot
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/9
