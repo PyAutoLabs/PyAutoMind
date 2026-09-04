@@ -7,3 +7,4 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-area-magnification-audit
 - repos:
+  - PyAutoArray: feature/delaunay-area-magnification-audit
