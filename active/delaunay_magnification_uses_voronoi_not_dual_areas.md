@@ -18,6 +18,8 @@ Unattended: ready
 Epic: euclid-dr1-prep
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-09-04
+Issued: 2026-09-04
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/524
 
 ## The finding
 
