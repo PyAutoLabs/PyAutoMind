@@ -7,3 +7,5 @@
 - worktree: ~/Code/PyAutoLabs-wt/multi-dataset-offsets-fit
 - user-facing: true
 - repos:
+  - autolens_workspace: feature/multi-dataset-offsets-fit
+  - autogalaxy_workspace: feature/multi-dataset-offsets-fit
