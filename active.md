@@ -1,5 +1,18 @@
 # Active Tasks
 
+## cortex-checkin-p3-project-summary
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/12
+- prompt: active/cortex_checkin_p3_project_summary_prompts.md
+- issued: 2026-09-03
+- session: local CLI (Fable architect, Opus execution) — claude --resume session_013HsZA1ufn3msgPiDFxEXa6
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-checkin-p3-project-summary
+- repos:
+  - PyAutoBrain: feature/cortex-checkin-p3-project-summary
+  - PyAutoCortex: feature/cortex-checkin-p3-project-summary
+- parallel-claim: p3 stacks on p2. Both repos are also claimed by cortex-checkin-p1-shed-review-slot (PRs PyAutoBrain#348 / PyAutoCortex#10) and cortex-checkin-p2-the-door (PyAutoBrain#350 / PyAutoCortex#11), both open and unmerged. This is the epic's own stacking, not a collision: p3 branches FROM `feature/cortex-checkin-p2-the-door` in both repos and its PRs target that branch, so p1's deletions and p2's door are already in p3's base. p1 and p2 are finished and awaiting merge; p3 is the only branch of the three still being written. Human-approved 2026-09-03 ("ok go" on the epic and its phases). `worktree_check_conflict` exits 1 by design here.
+- epic: cortex-checkin (phase 3, last; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md). Merge order Brain before Cortex within each phase, p1 → p2 → p3; retarget each phase's PRs to main as the phase below it merges.
+
 ## human-readable-first-docs
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/120
 - prompt: active/swap_docs_back_to_human_readable_first.md

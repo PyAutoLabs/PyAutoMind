@@ -18,6 +18,7 @@ Unattended: ready
 Epic: cortex-checkin
 Phase: 3
 Filed: 2026-09-03
+Issued: 2026-09-03
 
 Phase 3 of `cortex-checkin`. Branch from phase 2's branches if unmerged. Two
 PRs (Brain renderer + census + checkin summary; Cortex docs/REFERENCE for the
