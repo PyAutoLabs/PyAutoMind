@@ -10,11 +10,12 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: normal
-Status: draft
+Status: formalised
 Consequence: judge
 Review-minutes: 5
 Unattended: ready
 Filed: 2026-09-04
+Issued: 2026-09-04
 
 ## The failure
 
