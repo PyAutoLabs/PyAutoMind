@@ -184,10 +184,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autofit/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — autofit · small · safe · normal</summary>
+<details><summary>📋 <a href="draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — autolens_workspace · small · safe · normal</summary>
 
 ```
-/start_dev draft/bug/autofit/slam_simultaneous_subhalo_grid_search_fits_last.md
+/start_dev draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md
 ```
 
 </details>
@@ -758,18 +758,18 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autofit/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — autofit · small · safe · normal</summary>
-
-```
-/start_dev draft/bug/autofit/slam_simultaneous_subhalo_grid_search_fits_last.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> — autolens · small · safe · normal</summary>
 
 ```
 /start_dev draft/bug/autolens/positions_threshold_fixture_off_axis.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md
 ```
 
 </details>

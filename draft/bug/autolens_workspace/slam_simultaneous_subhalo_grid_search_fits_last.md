@@ -1,9 +1,8 @@
 # SLaM simultaneous subhalo grid search fits last band only
 
 Type: bug
-Target: PyAutoFit
+Target: autolens_workspace
 Repos:
-- PyAutoFit
 - autolens_workspace
 Difficulty: small
 Autonomy: safe
