@@ -1,4 +1,4 @@
-- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/61 + https://github.com/PyAutoLabs/PyAutoReduce/issues/62 (both deliberately OPEN — closure is the default-flip decision, not this ship)
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/61 + https://github.com/PyAutoLabs/PyAutoReduce/issues/62 (both CLOSED 2026-09-04 via /community — the reporter's own grid showed no erosion on well-dithered, correctly-aligned data, so the default stays STScI driz_cr and no default-flip decision remains pending; a degenerate-dither validation would be a new issue)
 - library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/66 (merged 2026-08-06, head 2168738e)
 - shipped: 2026-08-06
 - repos: PyAutoReduce
