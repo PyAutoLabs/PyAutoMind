@@ -7,8 +7,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/234
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/123
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/23
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/725
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/607
 - follow-up-to: human-readable-first-docs (complete/2026/09/human-readable-first-docs.md, #120)
 - summary: Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new starters:" in the README and docs index of PyAutoLens, PyAutoGalaxy, autolens_workspace and autogalaxy_workspace (six occurrences; it never appeared in the start_here scripts).
 - summary: Reworded the bold AI Assistant note in all 16 files that carried it (library README + docs/index + two overview pages; workspace README + start_here.py/.ipynb/markdown) to "…currently requires a paid subscription: Claude Code or Codex as a coding agent, or ChatGPT or Claude on a paid plan as a conversation assistant. Free options are being tested." The paragraph above it, which lists ChatGPT and the coding agents, is unchanged and now consistent.

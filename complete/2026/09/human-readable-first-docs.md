@@ -7,8 +7,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/233
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/121
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/22
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/723
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/606
 - summary: Swapped every user-facing doc (PyAutoLens / PyAutoGalaxy README + docs/, autolens_workspace / autogalaxy_workspace README + `start_here.py` with regenerated notebook and markdown twins) back to human-readable docs first and the AI Assistant second, text unchanged, plus a bold note under each assistant section that only paid AI coding agents (Claude Code, Codex) are supported and free/conversation agents are in progress.
 - summary: Reworked both assistant READMEs: "Choosing Your AI Tool" trimmed to the coding-vs-conversation distinction with only paid coding agents supported (OpenCode and the free-tools section mentioned); "AI Chat Assistant" section removed; `CHOOSING_YOUR_AI_TOOL.md` moved to `docs/archive/` with relative links repaired; all Antigravity references removed (its CLI setup page deleted, inbound links repointed to OpenCode); new `## Conversation Assistants` (links the experimental custom GPT with a performance warning) and `## Free AI tools` (OpenCode named, encouraging preliminary results, no first-class support) sections after "How does … actually work?".
 - summary: Backups for later reinstatement live in each assistant repo under `docs/archive/` (Choosing Your AI Tool section, AI Chat Assistant section, the moved guide).

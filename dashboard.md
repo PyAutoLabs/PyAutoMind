@@ -260,26 +260,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-## Pending release
-
-Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
-
-**PyAutoArray**
-
-- [PyAutoArray#520](https://github.com/PyAutoLabs/PyAutoArray/pull/520) — `complete/2026/09/gaussian-precompute-p2.md`
-
-**PyAutoGalaxy**
-
-- [PyAutoGalaxy#607](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/607) — `complete/2026/09/docs-followup-paid-plan-assistants.md`
-- [PyAutoGalaxy#605](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605) — `complete/2026/09/gaussian-precompute-p2.md`
-- [PyAutoGalaxy#606](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/606) — `complete/2026/09/human-readable-first-docs.md`
-
-**PyAutoLens**
-
-- [PyAutoLens#725](https://github.com/PyAutoLabs/PyAutoLens/pull/725) — `complete/2026/09/docs-followup-paid-plan-assistants.md`
-- [PyAutoLens#723](https://github.com/PyAutoLabs/PyAutoLens/pull/723) — `complete/2026/09/human-readable-first-docs.md`
-- [PyAutoLens#722](https://github.com/PyAutoLabs/PyAutoLens/pull/722) — `complete/2026/09/positions-threshold-repin.md`
-
 ## Human review
 
 Shipped work waiting on **you** — tasks a human asked to check before calling them done. Nothing lands here on its own: a task only gets a review row when someone files one (`/intake` with `Type: human review`), so an empty section means nothing has been flagged, not that nothing shipped.

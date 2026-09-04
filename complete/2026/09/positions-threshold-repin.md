@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/721 (closed, completed)
 - completed: 2026-09-03
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/722 (MERGED c6c2a06a9)
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/722
 - shipped: a **test-only** corrective re-pin of the two knife-edge `positions_threshold` pins in
   `test_autolens/analysis/test_result.py`. No source changed; the numbers moved because the library
   under them became more exact, not less correct.

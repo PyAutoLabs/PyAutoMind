@@ -4,8 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/520 (MERGED e36a5af4c)
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605 (MERGED 65af11227)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/216 (MERGED 991b4da26)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/520
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605
 - epic: gaussian-deflections-precompute — phase 2 of 3, **epic stays open** (ledger
   draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md)
 - shipped: the **JAX branch** of the fixed-geometry deflection memo — the memoised field becomes a
