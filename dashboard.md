@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/board_family_footer_shared_helper.md">Shared <code>board_links</code> helper in the board theme + Heart publish in morning.sh</a> — issued 2026-09-04</summary>
+<details><summary>📋 <a href="active/board_family_footer_shared_helper.md">Shared <code>board_links</code> helper in the board theme + Heart publish in morning.sh</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/352">issue #352</a> — issued 2026-09-04 — library-dev</summary>
 
 ```
 /start_dev active/board_family_footer_shared_helper.md
