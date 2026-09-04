@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1296 records across 8 buckets.
+1297 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -143,6 +143,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-registration](2026/09/cortex-registration.md) — closed completed 2026-09-01
 - [cortex-retire-project-chip](2026/09/cortex-retire-project-chip.md)
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
+- [delaunay-area-magnification-audit](2026/09/delaunay-area-magnification-audit.md)
 - [docs-followup-paid-plan-assistants](2026/09/docs-followup-paid-plan-assistants.md) — Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new …
 - [ep-collapse-unpark](2026/09/ep-collapse-unpark.md)
 - [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
