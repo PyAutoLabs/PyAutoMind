@@ -1,3 +1,27 @@
+## hands-board-family-footer
+
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/276
+- completed: 2026-09-04
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/277
+
+`autohands/board.py` no longer carries its own hard-coded `BOARD_FAMILY` tuple.
+The release board's footer now reads the canonical board family from the
+PyAutoBrain theme's `board_links(base, current)` helper (added upstream in
+PyAutoBrain#353), so it carries the Cortex chip and the ruled organ chip order
+that the rest of the family renders. The snapshot owner's base URL derivation is
+unchanged, and the legacy tuple survives only as a fallback for an older
+PyAutoBrain checkout that has no `board_links` yet.
+
+- Files: `autohands/board.py`, `tests/test_board.py`
+- Tests assert the footer carries Cortex and the canonical chip order.
+- CI green on every run and every leg for head `31ae85bc` (pytest 3.12 + 3.13 +
+  3.14, push + pull_request); `mergeStateStatus` CLEAN; merged as `a4f6828d`.
+- One of three sibling close-outs behind PyAutoBrain#353 (Heart, Hands, Memory).
+- Organ repo, not a library: no pending-release chain and the Heart freeze
+  window does not gate it.
+
+## Original prompt
+
 # Hands board footer reads the canonical board family instead of a stale tuple
 
 Type: feature

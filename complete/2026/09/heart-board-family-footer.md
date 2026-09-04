@@ -1,3 +1,27 @@
+## heart-board-family-footer
+
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/199
+- completed: 2026-09-04
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/201
+
+`heart/dashboard.py` no longer carries its own hard-coded `BOARD_FAMILY` tuple.
+The readiness board's footer now reads the canonical board family from the
+PyAutoBrain theme's `board_links(base, current)` helper (added upstream in
+PyAutoBrain#353), so it carries the Cortex chip and the ruled organ chip order
+that the rest of the family renders. The base URL derivation this file already
+did from `PAGES_URL` is unchanged, and the legacy tuple survives only as a
+fallback for an older PyAutoBrain checkout that has no `board_links` yet.
+
+- Files: `heart/dashboard.py`, `tests/test_dashboard.py`
+- Tests assert the footer carries Cortex and the canonical chip order.
+- CI green on every run and every leg for head `ad4a8da2` (pytest 3.12 + 3.13,
+  push + pull_request); `mergeStateStatus` CLEAN; merged as `607b6835`.
+- One of three sibling close-outs behind PyAutoBrain#353 (Heart, Hands, Memory).
+- Organ repo, not a library: no pending-release chain and the Heart freeze
+  window does not gate it.
+
+## Original prompt
+
 # Heart board footer reads the canonical board family instead of a stale tuple
 
 Type: feature
