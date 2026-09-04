@@ -1,3 +1,44 @@
+## phase-5-dev-leg-prepare-the-mesh
+- issue: none (never issued — the prompt stayed a draft)
+- completed: 2026-09-04
+- library-pr: none
+- workspace-pr: none
+- superseded-by: draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md
+- superseded: this prompt is the development half of PyAutoCortex phase 16
+  (`phases/inference_programme/phase5_mesh_gradient_positions_on.md`), which was **dropped**
+  on 2026-09-04 by ruling
+  [R-20260904-02](https://github.com/PyAutoLabs/PyAutoCortex/blob/main/rulings/2026/09/R-20260904-02.md):
+
+  > Superseded 2026-09-04 by `gradient-slam-baseline`: the mesh gradient question restarts on
+  > a `mass[1]`-shaped target (fixed lens light, fixed source), not on the all-free SLaM
+  > targets.
+
+  With its science half dropped, the dev leg has nothing to prepare an array for. The whole
+  `jax-inference-profiling` programme was retired the same day (R-20260904-01,
+  autolens_profiling#217, #200 closed); its ledger
+  `autolens_profiling/results/notes/inference/PROGRAMME.md` carries a `RETIRED 2026-09-04`
+  banner and its phase & gate table is frozen.
+- why it is not simply "not done yet": the prompt's shape was wrong, not its timing. It
+  builds a **seven-cell × seeds mesh gradient array** over the `slam_source_pix*` and mesh
+  cells — targets that free the lens light, the mesh weights and every regularization
+  parameter at once, which no SLaM stage does. The 2026-09-04 survey withdrew that reading
+  (the certified `slam_source_pix_pos` 31,547 vs `pixelization_pos` 30,941 gap is 4 extra
+  free parameters, not a pipeline result), so an array over those cells would have measured
+  the wrong thing at seven times the cost.
+- what carries over into the successor: the `multi_start_prodigy_autoconv` leaf pattern and
+  the finding that `_runner.py` / `_setup.build_for_cell` are sampler-agnostic; the
+  `SEARCHES_POSITIONS` / `_THRESHOLD` / `_FACTOR` plumbing check; the engine-split positions
+  factor (Nautilus 1e8, gradient 1e5 — Gate B pt 2, R-20260902-10); and the rule that a
+  submit's `WALL-BASIS` is measured on the cell itself. All of it is carried in
+  `autolens_profiling/results/notes/gradient_slam/LEDGER.md` and in the successor prompt.
+- successor: `draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md` — one cell
+  (`mass_pix`: lens light fixed to the `tracer.json` Sersic truth, mesh and `reg.Adapt` fixed
+  at the certified `slam_source_pix_pos` values, free = Isothermal 5 + shear 2), two drivers,
+  one gradient probe. Its issue is autolens_profiling#218, opened at filing as the gate ref
+  for PyAutoCortex phase 20 (`mass_pix_gradient_cost_probe`).
+
+## Original prompt
+
 # Phase 5 dev leg: prepare the mesh gradient-search array for PositionsLH…
 
 Type: feature

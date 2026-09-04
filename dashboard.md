@@ -497,6 +497,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers and a gradient-cost probe</a> — autolens_profiling · medium · safe · normal</summary>
+
+```
+/start_dev draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md">Tune cluster-scale JOSS benchmarks toward their 5-minute targets</a> — autolens_workspace · medium · safe · normal</summary>
 
 ```
@@ -525,14 +533,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/workspaces/group_subhalo_sensitivity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/phase_5_dev_leg_prepare_the_mesh.md">Phase 5 dev leg: prepare the mesh gradient-search array for PositionsLH…</a> — workspaces · medium · safe · normal</summary>
-
-```
-/start_dev draft/feature/workspaces/phase_5_dev_leg_prepare_the_mesh.md
 ```
 
 </details>
@@ -1673,7 +1673,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 23 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1681,6 +1681,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
@@ -1690,12 +1691,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
-| 2026-08-31 | filed | <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-31 | filed | <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to…</a> |
 | 2026-08-30 | filed | <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">The tier-<code>notify</code> auto-merge decision — re-open the shadow window…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
@@ -1705,12 +1706,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 | 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
-| 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
@@ -1720,12 +1721,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
-| 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 | 2026-08-24 | filed | <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods…</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
@@ -1735,12 +1736,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
-| 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
 | 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 | 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
@@ -1750,7 +1751,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
 | 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
 | 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
-| 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
 
 </details>
 
@@ -2139,7 +2139,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-148 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+147 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2184,7 +2184,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
 - `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 108 more_
+- _… and 107 more_
 
 </details>
 
