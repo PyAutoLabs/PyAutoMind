@@ -12,7 +12,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: active
+Issued: 2026-09-04
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/122
 Consequence: glance
 Witness: `grep -rn "also useful for new starters"` over the six repos returns nothing; `grep -n "not currently supported\|Only CLI coding agents" autolens_assistant/README.md autogalaxy_assistant/README.md` returns nothing; the new bold note text appears in every file that carried the old one.
 Review-minutes: 3

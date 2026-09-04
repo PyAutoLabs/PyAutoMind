@@ -1,5 +1,16 @@
 # Active Tasks
 
+## docs-followup-paid-plan-assistants
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/122
+- prompt: active/docs_follow_up_to_human_readable_first.md
+- issued: 2026-09-04
+- session: local CLI (Fable architect, Opus execution) — claude --resume session_01Vwajqh36GQMzDcpTRoF5Qj
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/docs-followup-paid-plan-assistants
+- repos:
+- heart-ack: 2026-09-04 PR-open only (never merge) under Heart RED; exact reasons from pyauto-heart readiness --json: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 12d old" — same reason set the human acknowledged for human-readable-first-docs (#120, merged 2026-09-04); docs-only follow-up unrelated to either reason; a further new reason at ship time re-blocks
+- follow-up-to: human-readable-first-docs (complete/2026/09/human-readable-first-docs.md)
+
 ## cortex-checkin-p3-project-summary
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/12
 - prompt: active/cortex_checkin_p3_project_summary_prompts.md
