@@ -4,7 +4,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/358
 - issued: 2026-09-04
 - session: claude --resume session_01JYs4cX2wT5vsZScjLNLZif
-- status: library-dev
+- status: awaiting-merge — PR open, Brain first then Cortex
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/359
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/16
 - worktree: ~/Code/PyAutoLabs-wt/cortex-retire-project-chip
 - repos:
   - PyAutoBrain: feature/cortex-retire-project-chip
