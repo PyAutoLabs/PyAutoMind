@@ -63,4 +63,26 @@ Work:
 Blocks: source-plane magnification plots (needs per-mesh-pixel machinery), cluster
 source science, per-source pixelized cluster refinement.
 
+## Lead from the euclid-dr1-prep phase 8 audit (2026-09-04)
+
+The **rectangular** `areas_for_magnification` (`mesh_geometry/rectangular.py:472-481`,
+delegating to `areas_transformed`) — the configuration all four `source_science.py`
+scripts actually ship with (`al.mesh.RectangularBilinearAdaptDensity`) — gave an
+identity-lens magnification of **+6.2 %** (`RectangularUniform`) and **+28.5 %**
+(`RectangularBilinearAdaptDensity`) at σ=0.15″. The per-source-pixel ratio
+`effective_mapper_area / areas_for_magnification` is a *tight* scale factor (median
+1.061 and 1.279, spread ~0.3 % away from the boundary), not the wild per-cell scatter
+the Delaunay path shows — a signature consistent with a **guard-ring node-count
+mismatch**: the rectangular docstring at `:490-497` notes a guard ring occupies the
+border, and an `n` vs `n−3` denominator would give `(24/21)² ≈ 1.31`.
+
+This is **NOT established as a bug** — no matched-domain identity was built for the
+rectangular meshes, so the phase 8 audit neither confirms nor rules it out. It is
+flagged here for this prompt's step 2 (direct unit tests for
+`areas_for_magnification` on every supported geometry against analytic areas).
+
+The Delaunay defect the same audit *did* establish is filed separately as
+`draft/bug/autoarray/delaunay_magnification_uses_voronoi_not_dual_areas.md`
+(PyAutoArray#522 audit).
+
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase04_mesh_magnification_correctness.md -->
