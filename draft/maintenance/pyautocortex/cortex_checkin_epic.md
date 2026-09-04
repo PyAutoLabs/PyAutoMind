@@ -73,6 +73,40 @@ prompts (accept → next phase, rerun).
    `draft/feature/pyautocortex/cortex_checkin_p3_project_summary_prompts.md`
    (PyAutoBrain + PyAutoCortex).
 
+## Where the three phases landed (2026-09-03)
+
+All three are at **PR-open and unmerged**, stacked in both repos. Nothing of
+this epic is on `main`.
+
+| Phase | Issue | Branch (both repos) | Base | PyAutoBrain PR | PyAutoCortex PR |
+|---|---|---|---|---|---|
+| 1 — shed the review-slot and gate apparatus | PyAutoCortex#9 | `feature/cortex-checkin-p1-shed-review-slot` | `main` | #348 | #10 |
+| 2 — the `/cortex` check-in door | PyAutoBrain#349 | `feature/cortex-checkin-p2-the-door` | p1's branch | #350 | #11 |
+| 3 — by-project summary + the two missing prompts | PyAutoCortex#12 | `feature/cortex-checkin-p3-project-summary` | p2's branch | #351 | #13 |
+
+**Recommended merge order — six PRs, strictly in this sequence:**
+
+1. `PyAutoBrain#348`
+2. `PyAutoCortex#10`
+3. `PyAutoBrain#350`  ← retarget to `main` once #348 has merged
+4. `PyAutoCortex#11`  ← retarget to `main` once #10 has merged
+5. `PyAutoBrain#351`  ← retarget to `main` once #350 has merged
+6. `PyAutoCortex#13`  ← retarget to `main` once #11 has merged
+
+Two rules produce that order. **Brain before Cortex within a phase:** the
+Cortex `dashboard_refresh.yml` workflow renders the board through PyAutoBrain
+**main**, so a Cortex PR whose pages were rendered by a newer conductor stays
+red until the matching Brain PR has landed (phase 1 saw exactly this, and the
+workflow's own comment names the skew). **p1 → p2 → p3:** each phase's branch
+is cut from the one below it, so a merge out of order replays that phase's
+diff against a base it was never written on.
+
+Heart was **RED and unacknowledged** at all three ship times — red `release
+validation FAILED (stage integrate)`, yellow `PyAutoArray: open PR 11d old`,
+both release-chain facts about other repos, neither of which is in the release
+chain. Every phase stopped at PR-open. A human ack (or a green Heart) is owed
+before any of the six merge.
+
 ## Explicitly OUT of scope
 
 - Collapsing the 10-state phase machine (`pulled`+`awaiting-ruling`,

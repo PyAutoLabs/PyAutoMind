@@ -88,6 +88,11 @@ epic, never picked standalone.
 ## cortex-checkin
 - title: Cortex check-in — one door, shed the review-slot and gate apparatus
 - ledger: draft/maintenance/pyautocortex/cortex_checkin_epic.md
+- status: NOT SHIPPED — all three phases are at PR-open and stacked, six PRs unmerged as of
+  2026-09-03. Merge order PyAutoBrain#348 -> PyAutoCortex#10 -> PyAutoBrain#350 ->
+  PyAutoCortex#11 -> PyAutoBrain#351 -> PyAutoCortex#13 (Brain before Cortex in each phase;
+  retarget each phase's PRs to main as the phase below it merges). Heart was RED and
+  unacknowledged at every ship; nothing may merge without a human ack or a green Heart.
 - notes: three phased prompts from the 2026-09-03 Cortex assessment — (1) delete the
   review-slot apparatus for the cortex kind (plan --kind cortex, packets, partial reviews,
   carried members, status box, --push integration, slot/shift vocabulary), gate grading,
