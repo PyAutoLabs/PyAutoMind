@@ -1,3 +1,50 @@
+# cortex-checkin-p3-project-summary
+
+Phase 3 of the `cortex-checkin` epic, and the last: the by-project summary that
+names the folders to look in, plus the two starting prompts the check-in was
+missing (accept → next phase, and rerun).
+
+## What shipped
+
+- **PyAutoBrain#351** — merged `5427234f56597b24f819622f1be4f3af2c0e01cc`
+- **PyAutoCortex#13** — merged `7ea86aa8bd64983b3820b148188400e29e1913a7`
+
+Issue: PyAutoCortex#12 (closed completed 2026-09-04).
+
+The `## Where to look` section is rendered per project with the folders to open,
+and the check-in hands back the two prompts that previously had no template.
+With this on `main` the `cortex-checkin` epic is complete: the sole interface to
+the Cortex is the chat check-in.
+
+## Merge notes
+
+Merged Brain before Cortex, after phases 1 and 2. GitHub retargeted both PRs to
+`main` as the phase below them merged.
+
+PyAutoBrain#351: `Brain Tests` green on 3.12 and 3.13; `Docs` is path-filtered
+and did not fire — the diff touches no docs path.
+
+PyAutoCortex#13's `refresh` check was red on the documented Brain-main skew:
+that workflow renders the board through PyAutoBrain **main**, which did not yet
+carry this phase's renderer. Re-run once PyAutoBrain#351 was on `main` (run
+`33822978065`, attempt 2) and green; `check` was green throughout.
+
+## Heart
+
+RED at merge time, acknowledged by the human on 2026-09-04: "release validation
+FAILED (stage integrate)"; "PyAutoArray: open PR 12d old". Both are
+release-chain facts about other repos; neither PyAutoBrain nor PyAutoCortex is
+in the release chain. No `pending-release:` obligation — both are organ repos.
+
+## Tests
+
+Brain `test_cortex_conductor` 67 passed (13 new); full Brain suite 889 passed /
+2 failed, both `test_branch_sweep` failures pre-existing and reproducing
+unchanged on the phase-2 base. PyAutoCortex `test_cortex` 95 passed (2 new);
+`cortex.py check` OK; `dashboard --check` current.
+
+## Original prompt
+
 # Cortex by project: the "where is everything, which folders" summary and the two missing starting prompts
 
 Type: feature

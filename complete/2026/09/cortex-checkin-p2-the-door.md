@@ -1,3 +1,53 @@
+# cortex-checkin-p2-the-door
+
+Phase 2 of the `cortex-checkin` epic: the `/cortex` check-in door — the single
+surface the human uses to check in on the science.
+
+## What shipped
+
+- **PyAutoBrain#350** — merged `9a039d92a5ac2c9c1ebce52636bc3b42acedd4e8`
+- **PyAutoCortex#11** — merged `284097de3787aac22156dd1337e2c6749a9d5088`
+
+Issue: PyAutoBrain#349 (closed completed 2026-09-04).
+
+The `checkin` door lands in `agents/conductors/cortex/_cortex.py`: pull every
+active project through its own sync CLI, score every live run against its
+pre-registered witness, move what came back to `awaiting-ruling`, re-render the
+board and push the ledger. `skills/cortex/*` and `skills/COMMANDS.md` are
+rewritten around it, the slash command is installed (`.claude/skills/cortex`,
+`.codex/skills/cortex`), and PyAutoCortex's `README.md` / `AGENTS.md` /
+`REFERENCE.md` describe the door as the interface.
+
+## Merge notes
+
+Merged Brain before Cortex, after phase 1. GitHub retargeted both PRs from the
+phase-1 branch to `main` automatically once phase 1 merged — no manual
+`gh pr edit -B main` was needed.
+
+PyAutoBrain#350: `Brain Tests` green on 3.12 and 3.13, `docs / docs-build`
+green. PyAutoCortex#11's effective diff against `main` is three documentation
+files (`AGENTS.md`, `README.md`, `REFERENCE.md`), which match no path filter in
+either Cortex workflow, so **no run fired** — path-filtered by design, not a
+missing or skipped check.
+
+## Heart
+
+RED at merge time, acknowledged by the human on 2026-09-04: "release validation
+FAILED (stage integrate)"; "PyAutoArray: open PR 12d old". Both are
+release-chain facts about other repos; neither PyAutoBrain nor PyAutoCortex is
+in the release chain. No `pending-release:` obligation — both are organ repos.
+
+## Tests
+
+Brain 874 passed / 3 failed at ship time — one (`test_gh_surface::
+test_every_gh_driving_skill_points_at_the_mapping`) was this branch's and was
+fixed; the two `test_branch_sweep` failures reproduce unchanged on the phase-1
+base and are pre-existing. Targeted re-run of `test_cortex_conductor` +
+`test_skill_install` + `test_gh_surface`: 68 passed. PyAutoCortex: `cortex.py
+check` OK, 115 passed, dashboard current.
+
+## Original prompt
+
 # `/cortex` — the one check-in door: pull every active project, score, render, push, hand back prompts
 
 Type: feature

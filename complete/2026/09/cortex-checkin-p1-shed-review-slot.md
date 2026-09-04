@@ -1,3 +1,64 @@
+# cortex-checkin-p1-shed-review-slot
+
+Phase 1 of the `cortex-checkin` epic: the review-slot and gate apparatus is
+retired from the Cortex and from the Brain's cortex conductor.
+
+## What shipped
+
+- **PyAutoBrain#348** — merged `fc1cb32f6e226ddd2da24448769f1f77ebed6421`
+- **PyAutoCortex#10** — merged `6cd6220e8e86711919c8261d3230564f22b09036`
+
+Issue: PyAutoCortex#9 (closed completed 2026-09-04).
+
+Gate grading is gone — the daily grading cron, the `--grade` / `--write` legs of
+`gates`, and the `Gates-cleared:` / `Gate-override:` header keys with the three
+`check` invariants over them. The plain `Gates:` header, the `gated` state and
+the read-only `gates` listing stay; a gated phase is moved on by a human reading
+the listing and typing `move <phase> ready`. Also retired: the batch record and
+packet schema for the cortex kind (`batches/` becomes closed, append-only
+history and `Batch:` becomes optional-historical), `rule --also`, the `Lane:`
+header, and the hand-rolled restricted-YAML parser, which `yaml.safe_load`
+replaces with the field validation kept. `collect` is decoupled from the batch
+record. Recorded as schema decision 58 in `docs/schema_decisions.md`.
+
+The measurement behind it: gate grading saw 2 gated refs and flipped 0 in its
+lifetime; 0 review slots were opened by the conductor, 0 rulings came from a
+packet, 0 partial reviews were filed and `review-minutes-actual` was never
+filled — all 22 rulings were reached in a live session. `rule --also` was never
+used, `Lane:` read `local-dev` on 32 of 32 phases, and the restricted parser's
+own PyYAML-parity test proved it redundant.
+
+## Merge notes
+
+Merged Brain before Cortex: PyAutoCortex's `dashboard_refresh.yml` renders the
+board through PyAutoBrain **main**, so the Cortex PR's `refresh` check stays red
+until the matching Brain PR has landed. It went green on the re-run after #348.
+
+PyAutoCortex#10 arrived at merge time `CONFLICTING`/`DIRTY`: `main` had moved
+under the branch (`1a39784` self-healed the generated pages, `1815c69` graded
+the gates and flipped `phases/euclid/dr1_prelim_10_lens_science_run.md` to
+`ready`). The only conflicted paths were the two generated pages. Resolved with
+a merge commit (`2ddb47b`) that keeps `main`'s gate flip, drops the
+`Gates-cleared:` key this phase retires, and regenerates `dashboard.md` +
+`dashboard.html` with the phase-1 renderer rather than hand-resolving them.
+`cortex.py check` OK, `dashboard --check` current.
+
+## Heart
+
+RED at merge time, acknowledged by the human on 2026-09-04: "release validation
+FAILED (stage integrate)"; "PyAutoArray: open PR 12d old". Both are
+release-chain facts about other repos; neither PyAutoBrain nor PyAutoCortex is
+in the release chain. No `pending-release:` obligation — both are organ repos,
+not published libraries.
+
+## Tests
+
+Brain `test_cortex_conductor` 67 passed (13 new); full Brain suite 889 passed /
+2 failed, both `test_branch_sweep` failures pre-existing and control-tested
+unchanged on the base. PyAutoCortex `test_cortex` 95 passed (2 new).
+
+## Original prompt
+
 # Cortex: shed the review-slot and gate apparatus the check-in loop never uses
 
 Type: maintenance

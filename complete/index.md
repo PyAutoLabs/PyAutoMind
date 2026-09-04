@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1279 records across 8 buckets.
+1284 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -125,16 +125,21 @@ markers; everything below GENERATED is rebuilt.
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under
 - [autofit-prodigy-49](2026/09/autofit-prodigy-49.md)
 - [batch-collect](2026/09/batch-collect.md) — closed completed 2026-09-02
+- [batch-plan-kind-cortex-admits-only-ready](2026/09/batch-plan-kind-cortex-admits-only-ready.md)
 - [batch-review-integration](2026/09/batch-review-integration.md)
 - [batch-review-integration-p3](2026/09/batch-review-integration-p3.md)
 - [batch-status-box](2026/09/batch-status-box.md)
 - [cortex-batch-member-kind](2026/09/cortex-batch-member-kind.md) — closed completed 2026-09-02
 - [cortex-birth-organ-row](2026/09/cortex-birth-organ-row.md) — closed completed 2026-09-01
+- [cortex-checkin-p1-shed-review-slot](2026/09/cortex-checkin-p1-shed-review-slot.md)
+- [cortex-checkin-p2-the-door](2026/09/cortex-checkin-p2-the-door.md)
+- [cortex-checkin-p3-project-summary](2026/09/cortex-checkin-p3-project-summary.md)
 - [cortex-conductor](2026/09/cortex-conductor.md) — closed completed 2026-09-01
 - [cortex-migration](2026/09/cortex-migration.md) — closed completed 2026-09-01
 - [cortex-public-surfaces](2026/09/cortex-public-surfaces.md) — closed completed 2026-09-02
 - [cortex-registration](2026/09/cortex-registration.md) — closed completed 2026-09-01
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
+- [docs-followup-paid-plan-assistants](2026/09/docs-followup-paid-plan-assistants.md) — Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new …
 - [ep-collapse-unpark](2026/09/ep-collapse-unpark.md)
 - [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
 - [ep-message-support](2026/09/ep-message-support.md)

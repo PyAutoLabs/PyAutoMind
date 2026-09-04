@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 0 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 158 |
+| [Backlog](#backlog) (`draft/`) | 156 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -110,14 +110,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/pyautocortex/cortex_checkin_epic.md">Cortex check-in — one door, shed the review-slot and gate apparatus</a> — pyautocortex · large · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/pyautocortex/cortex_checkin_epic.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
 ```
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
+<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -252,37 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cortex_checkin_p1_shed_review_slot.md">Cortex: shed the review-slot and gate apparatus the check-in loop never uses</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/9">issue #9</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; merge order PyAutoBrain -&gt; PyAutoCortex; close-out via /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/10">PyAutoCortex#10</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/348">PyAutoBrain#348</a></summary>
-
-```
-/start_dev active/cortex_checkin_p1_shed_review_slot.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/cortex_checkin_p2_the_door.md"><code>/cortex</code> — the one check-in door: pull every active project, score, render…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/349">issue #349</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; stacked on phase 1 — merge order PyAutoBrain#348 -&gt; PyAutoCortex#10 -&gt;… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/350">PyAutoBrain#350</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/11">PyAutoCortex#11</a></summary>
-
-```
-/start_dev active/cortex_checkin_p2_the_door.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/cortex_checkin_p3_project_summary_prompts.md">Cortex by project: the "where is everything, which folders" summary…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/12">issue #12</a> — issued 2026-09-03 — library-shipped, awaiting-merge (PRs open 2026-09-03; stacked on phases 1 and 2 — merge order PyAutoBrain#348 -&gt; PyAutoCortex#10… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/351">PyAutoBrain#351</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/13">PyAutoCortex#13</a></summary>
-
-```
-/start_dev active/cortex_checkin_p3_project_summary_prompts.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/docs_follow_up_to_human_readable_first.md">Docs follow-up to human-readable-first-docs (#120): drop "also", reinstate paid-plan conversation-assistant framing</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/122">issue #122</a> — issued 2026-09-04 — workspace-shipped, awaiting-merge (six PRs open 2026-09-04, PR-open only under the Heart RED ack below; close-out via /prm; merge… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/725">PyAutoLens#725</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/607">PyAutoGalaxy#607</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/531">autolens_workspace#531</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/234">autogalaxy_workspace#234</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/123">autolens_assistant#123</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/23">autogalaxy_assistant#23</a></summary>
-
-```
-/start_dev active/docs_follow_up_to_human_readable_first.md
-```
-
-</details>
+- _(nothing in flight)_
 
 ## Pending release
 
@@ -294,11 +264,13 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#607](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/607) — `complete/2026/09/docs-followup-paid-plan-assistants.md`
 - [PyAutoGalaxy#605](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/605) — `complete/2026/09/gaussian-precompute-p2.md`
 - [PyAutoGalaxy#606](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/606) — `complete/2026/09/human-readable-first-docs.md`
 
 **PyAutoLens**
 
+- [PyAutoLens#725](https://github.com/PyAutoLabs/PyAutoLens/pull/725) — `complete/2026/09/docs-followup-paid-plan-assistants.md`
 - [PyAutoLens#723](https://github.com/PyAutoLabs/PyAutoLens/pull/723) — `complete/2026/09/human-readable-first-docs.md`
 - [PyAutoLens#722](https://github.com/PyAutoLabs/PyAutoLens/pull/722) — `complete/2026/09/positions-threshold-repin.md`
 
@@ -432,10 +404,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 34</summary>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
 
@@ -505,14 +477,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautobrain/brain_board_follow_ups.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/the_batch_conductor_s_plan_kind_cortex.md">The batch conductor's <code>plan --kind cortex</code> admits only <code>ready</code> phases…</a> — pyautobrain · small · safe · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/the_batch_conductor_s_plan_kind_cortex.md
 ```
 
 </details>
@@ -1143,15 +1107,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 16</summary>
-
-<details><summary>📋 <a href="draft/maintenance/pyautocortex/cortex_checkin_epic.md">Cortex check-in — one door, shed the review-slot and gate apparatus</a> — pyautocortex · large · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/pyautocortex/cortex_checkin_epic.md
-```
-
-</details>
+<summary><b>maintenance</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
@@ -1452,38 +1408,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>mind-workflow</b> — 3 task(s) · 8 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'mind-workflow' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/pyautomind/witness_campaign.md
-- draft/maintenance/pyautocortex/cortex_checkin_epic.md
-- draft/feature/pyautobrain/batch_slice.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> | pyautomind | medium | high | draft |
-| <a href="draft/maintenance/pyautocortex/cortex_checkin_epic.md">Cortex check-in — one door, shed the review-slot and gate apparatus</a> | pyautocortex | large | high | draft |
-| <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> | pyautobrain | medium | normal | draft |
-
-</details>
-
-<details>
 <summary><b>ci-smoke</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1514,6 +1438,38 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> | ci | medium | high | - |
 | <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> | pyautoheart | medium | normal | formalised |
 | <a href="draft/test/workspaces/slowest_smoke_gate_scripts.md">Speed up the three slowest autolens_workspace_test smoke-gate scripts</a> | workspaces | medium | normal | formalised |
+
+</details>
+
+<details>
+<summary><b>mind-workflow</b> — 3 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'mind-workflow' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/feature/pyautomind/witness_campaign.md
+- draft/feature/pyautobrain/batch_slice.md
+- draft/refactor/pyautomind/repos_sync_check_dedup.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> | pyautomind | medium | high | draft |
+| <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> | pyautobrain | medium | normal | draft |
+| <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> | pyautomind | medium | low | formalised |
 
 </details>
 
@@ -1709,7 +1665,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 22 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 21 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1717,76 +1673,76 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-04 | issued | <a href="active/docs_follow_up_to_human_readable_first.md">Docs follow-up to human-readable-first-docs (#120): drop "also"…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
-| 2026-09-03 | issued | <a href="active/cortex_checkin_p2_the_door.md"><code>/cortex</code> — the one check-in door: pull every active project, score…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
-| 2026-09-03 | issued | <a href="active/cortex_checkin_p1_shed_review_slot.md">Cortex: shed the review-slot and gate apparatus the check-in loop…</a> |
-| 2026-09-03 | filed | <a href="draft/maintenance/pyautocortex/cortex_checkin_epic.md">Cortex check-in — one door, shed the review-slot and gate apparatus</a> |
-| 2026-09-03 | issued | <a href="active/cortex_checkin_p3_project_summary_prompts.md">Cortex by project: the "where is everything, which folders" summary…</a> |
 | 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
-
-<details><summary>… 10 more (40 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to…</a> |
+
+<details><summary>… 10 more (40 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-08-30 | filed | <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">The tier-<code>notify</code> auto-merge decision — re-open the shadow window…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
-
-<details><summary>… 10 more (30 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 | 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
+
+<details><summary>… 10 more (30 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a> |
-
-<details><summary>… 10 more (20 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
+
+<details><summary>… 10 more (20 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-08-24 | filed | <a href="draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md">interferometer/jax_grad/gradient.py: eager and jitted likelihoods…</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
 | 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
-
-<details><summary>… 10 more (10 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-08-23 | filed | <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> |
 | 2026-08-22 | filed | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> |
 | 2026-08-22 | filed | <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only…</a> |
 | 2026-08-19 | filed | <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> |
 | 2026-08-19 | filed | <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> |
+
+<details><summary>… 10 more (10 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-08-19 | filed | <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
 | 2026-08-19 | filed | <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 | 2026-08-19 | filed | <a href="draft/triage/bug_in_autocti_workspace_the_dataset_1d.md">Bug in autocti_workspace: the dataset_1d results/database example…</a> |
 | 2026-08-18 | parked | <a href="parked.md#single-source-density-design">single-source-density-design</a> |
 | 2026-08-18 | parked | <a href="parked.md#prior-message-collapse-design">prior-message-collapse-design</a> |
+| 2026-08-18 | filed | <a href="draft/bug/priors/15_transformed_message_logpdf_jacobian.md"><code>@PyAutoFit</code> <code>TransformedMessage.logpdf</code>/<code>pdf</code> omit the transform…</a> |
+| 2026-08-17 | filed | <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> |
+| 2026-08-09 | found | <a href="planned.md#isothermal-ell-sph-oversampling-at-the-cusp">isothermal-ell-sph-oversampling-at-the-cusp</a> |
+| 2026-08-08 | parked | <a href="parked.md#pyautoreduce-slacs1430-acs-comparison">pyautoreduce-slacs1430-acs-comparison</a> |
+| 2026-08-08 | filed | <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show…</a> |
 
 </details>
 
@@ -2163,14 +2119,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-<details><summary>📋 <b>Cortex check-in — one door, shed the review-slot and gate apparatus</b> — ledger: `draft/maintenance/pyautocortex/cortex_checkin_epic.md` — NOT SHIPPED — all three phases are at PR-open and stacked, six PRs unmerged as of</summary>
-
-```
-Continue the 'Cortex check-in — one door, shed the review-slot and gate apparatus' epic. Its canonical state lives in draft/maintenance/pyautocortex/cortex_checkin_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phased prompts from the 2026-09-03 Cortex assessment — (1) delete the
-```
-
-</details>
-
 ## Hygiene
 
 2 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -2183,7 +2131,7 @@ Continue the 'Cortex check-in — one door, shed the review-slot and gate appara
 
 </details>
 
-150 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+148 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2223,12 +2171,12 @@ Continue the 'Cortex check-in — one door, shed the review-slot and gate appara
 - `draft/feature/pyautobrain/board_without_gh.md`
 - `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
-- `draft/feature/pyautobrain/the_batch_conductor_s_plan_kind_cortex.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- _… and 110 more_
+- `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
+- _… and 108 more_
 
 </details>
 
