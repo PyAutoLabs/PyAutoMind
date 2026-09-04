@@ -1,4 +1,4 @@
-# gradient-slam-baseline dev leg: the `mass_pix` target, its drivers and a gradient-cost probe
+# gradient-slam-baseline dev leg: the `mass_pix` target, its drivers and its HPC submits
 
 Type: feature
 Target: autolens_profiling
@@ -13,7 +13,7 @@ Autonomy: safe
 Priority: normal
 Status: draft
 Consequence: judge
-Witness: `mass_pix` builds on CPU with exactly 7 free parameters and one forward eval returns a finite log-likelihood; the probe script runs and prints a forward/grad ratio and an FD table
+Witness: `mass_pix` builds on CPU with exactly 7 free parameters and one forward eval returns a finite log-likelihood; and one `value_and_grad` on CPU returns finite gradients for all 7 parameters
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-09-04
@@ -21,15 +21,15 @@ Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/218 (opened 2026-
 
 Build the **`mass_pix`** profiling target — a SLaM `mass[1]`-shaped cell: lens light fixed
 to the simulator truth, source mesh and regularization fixed at certified values, **only
-mass + shear free (7 parameters)** — plus its two search drivers, a gradient-cost probe
-script and the HPC submit scripts the science phases will use. **No submission**: dispatch
-is a PyAutoCortex act, and phase 20 is gated on this prompt's issue.
+mass + shear free (7 parameters)** — plus its two search drivers and the HPC submit scripts
+the science phases will use. **No submission**: dispatch is a PyAutoCortex act, and Cortex
+phase 21 is gated on this prompt's issue.
 
 This is the development half of the Cortex epic **`gradient-slam-baseline`**, born
 2026-09-04 from the retired `jax-inference-profiling` programme. Read its ledger first —
 `@autolens_profiling/results/notes/gradient_slam/LEDGER.md` — which carries the question,
-the inherited citable evidence, the exact fixed values with their provenance, and the four
-Cortex phases (20–23) this leg unblocks.
+the inherited citable evidence, the exact fixed values with their provenance, and the three
+Cortex phases (21–23) this leg unblocks.
 
 ## Why
 
@@ -86,34 +86,30 @@ Mirroring `@autolens_profiling/scripts/imaging/searches/nautilus/pixelization.py
 - `scripts/imaging/searches/nautilus/mass_pix.py`
 - `scripts/imaging/searches/multi_start_prodigy_autoconv/mass_pix.py`
 
-### 5. The gradient probe — `scripts/misc/searches/probe_mass_pix_gradient.py`
-
-Forward vs `value_and_grad` timing (ms/eval each, plus their ratio), jit compile time for
-each, and a **strict finite-difference check on all 7 free parameters**. Follow the
-FD-certification pattern of
-`@autolens_workspace_test/scripts/imaging/jax_grad/pixelization.py`. This script is what
-Cortex phase 20 runs.
-
-### 6. HPC submits — `@autolens_profiling/hpc/batch_gpu/`
+### 5. HPC submits — `@autolens_profiling/hpc/batch_gpu/`
 
 One per science phase, each with a **`WALL-BASIS`** block naming the measurement its wall
 budget comes from (measured on this cell, never transferred from another):
 
-- **P1** (Cortex phase 20) — the probe, one task.
 - **P2** (Cortex phase 21) — Nautilus, two arms: `pos_tauto0.2_f1e8` and
   `pos_tauto0.2_f1e5`, n_live 300, seed 0, fp64.
 - **P3** (Cortex phase 22) — `multi_start_prodigy_autoconv`, `pos_tauto0.2_f1e5`, seeds 0–4
   as an array 0–4.
 
-**Write the P1 submit now; write P2's and P3's `WALL-BASIS` blocks after phase 20 rules** —
-their wall basis is P1's measurement, which does not exist yet.
+**Write the P2 submit now with a conservative first-run budget**, its `WALL-BASIS` basis
+stated as "first run on this cell, no prior measurement" — nothing has ever been measured
+here. **Write P3's `WALL-BASIS` block after Cortex phase 21 rules**: its wall basis is
+phase 21's own measured Nautilus wall on this cell, which does not exist yet. The basis is
+always measured on the cell itself, never transferred.
 
-### 7. Bookkeeping
+### 6. Bookkeeping
 
 - Regenerate `@autolens_profiling/results/notes/inference/targets/TOLERANCES.md` so the new
   target's tolerances are listed.
 - A CPU smoke of the model build: `JAX_PLATFORMS=cpu`, build the cell, assert **7** free
-  parameters, run **one** forward eval and assert it is finite. No fit, no sampler.
+  parameters, run **one** forward eval and assert it is finite, and run **one**
+  `value_and_grad` and assert the gradient is finite for all 7 parameters. No fit, no
+  sampler.
 
 ## Out of scope
 
