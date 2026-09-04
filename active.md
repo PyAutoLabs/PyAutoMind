@@ -3,7 +3,8 @@
 ## heart-worktree-drift-hidden-dirs
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/198
 - issued: 2026-09-04
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/200
 - worktree: ~/Code/PyAutoLabs-wt/heart-worktree-drift-hidden-dirs
 - repos:
   - PyAutoHeart: feature/heart-worktree-drift-hidden-dirs
