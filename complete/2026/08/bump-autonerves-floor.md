@@ -2,6 +2,7 @@
 - completed: 2026-08-23
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/483 (merged 0f75c3d)
 - workspace-pr: none — no workspace change needed
+- superseded-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/481 (closed unmerged 2026-09-04 — the same floor bump, opened a few hours earlier from the release session recorded in `pyautonerves-release-for-regime-stamp.md`; #483 shipped it)
 
 The floor `autonerves>=2026.8.22.1` predated the SMALLDAT regime stamp
 (PyAutoNerves#153/#154), so a PyPI-installed autoarray resolved an autonerves

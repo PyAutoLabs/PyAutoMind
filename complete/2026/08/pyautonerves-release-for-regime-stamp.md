@@ -55,9 +55,22 @@ confirming #155 removed the `[']` literal.
 The workspace smoke suite was deliberately NOT run in full here (deferred to an
 overnight run); Stage 3 covers the same surface at release fidelity, 672p/0f.
 
-**Follow-up shipped in the same session:** PyAutoArray#481 bumps the floor from
+**Follow-up opened in the same session:** PyAutoArray#481 bumped the floor from
 `autonerves>=2026.8.22.1` to `>=2026.8.23.1`, verified against the published
 wheel in a clean venv rather than the source tree. The shape fallback,
 `_is_capped_at_the_current_cap`, and the duplicated `"SMALLDAT"` literal were all
 deliberately left alone, and the PyAutoLens#687/#702 comment was added to rather
 than replaced.
+
+**Reconciled 2026-09-04 — #481 was superseded, not merged.** The same floor bump
+landed on `main` through the task recorded in
+[`bump-autonerves-floor.md`](bump-autonerves-floor.md)
+([PyAutoArray#482](https://github.com/PyAutoLabs/PyAutoArray/issues/482) ->
+[PyAutoArray#483](https://github.com/PyAutoLabs/PyAutoArray/pull/483), merged
+`0f75c3d278066c4337c9186c16a7770769fe8c5f` 2026-08-23), which reached the same
+conclusion on the `"SMALLDAT"` literal and rewrote the comment that named the
+old floor. `pyproject.toml` on `main` carries `autonerves>=2026.8.23.1` today, so
+the shipped state is exactly what #481 proposed.
+[PyAutoArray#481](https://github.com/PyAutoLabs/PyAutoArray/pull/481) was
+therefore **closed unmerged as superseded**; its branch
+`claude/autonerves-floor-regime-stamp` carries nothing `main` does not.
