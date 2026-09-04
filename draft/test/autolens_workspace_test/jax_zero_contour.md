@@ -1,23 +1,22 @@
-# <!-- TRIAGE: needs manual review before routing
+# Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations
 
-Type: triage
-Target: ?
+Type: test
+Target: autolens_workspace_test
 Themes:
 - jax-gradient
 - jax-compile
 Difficulty: medium
 Autonomy: safe
-Priority: high
+Priority: normal
 Status: formalised
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-06-26 (backfilled from git)
 
-<!-- TRIAGE: needs manual review before routing. Session-resume fragment with
-     little standalone context. Likely work-type `test` (verify jax.jit/jax.grad
-     parity for critical-curve/caustic calcs), target `autolens_workspace_test`.
-     Re-file to test/autolens_workspace_test/ once confirmed. -->
+<!-- TRIAGE RESOLVED 2026-09-04: re-filed from draft/triage/ to
+     draft/test/autolens_workspace_test/ as the note asked; Type/Target/Priority
+     set accordingly. -->
 
 [resume]
 

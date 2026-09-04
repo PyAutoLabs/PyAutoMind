@@ -12,11 +12,32 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: normal
-Status: draft
+Status: SHELVED 2026-09-04 — resolved 2026-08-26 (autolens_workspace_test#279). Originally `draft/bug/autolens_workspace_test/gradient_eager_jit_divergence_py313.md`.
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-08-24
+
+## Shelved 2026-09-04 — resolved, do NOT start dev on this prompt
+
+The bug was fixed on **2026-08-26** (autolens_workspace_test **#279**). The cause
+was neither `pure_callback` constant-folding nor anything Python-3.13-specific —
+3.12 reproduced the divergence identically on the same host — but a discrete
+**cell-assignment flip in PyAutoArray's adaptive rectangular mapper**, fixed in
+**PyAutoArray#490**. `interferometer/jax_grad/gradient.py` is back in mega-run
+coverage: its `NEEDS_FIX` entry is gone from
+`@autolens_workspace_test/config/build/no_run.yaml`, whose surviving comment block
+records the fix and points at autolens_workspace_test#274. Every item of the
+prompt's Acceptance section is therefore met. Archived rather than left as pickable
+backlog.
+
+**The appended `UPDATE 2026-08-24 — investigation` below is preserved verbatim**,
+including its NNLS solver-branch-quantum analysis (the ΔLL ≈ 1.577e-3 PDIP
+`lax.while_loop` trip and the FD step-sweep table backing it out to 4–5 significant
+figures). That analysis is not what the fix turned out to be, but it is the standing
+record of how the positive-only solve behaves at a knife-edge evaluation point, and
+of why `assert_eager_jit_consistent`'s `rtol=1e-10` must not be widened.
+
 
 ## The failure
 

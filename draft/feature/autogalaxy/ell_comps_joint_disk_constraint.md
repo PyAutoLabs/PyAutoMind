@@ -18,6 +18,8 @@ Unattended: needs-slicing
 Filed: 2026-09-01
 Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/594 (opened 2026-09-01 as a Cortex gate ref; reuse in start_dev — never open a second)
 
+Note 2026-09-04: `autolens_profiling/results/notes/inference/PROGRAMME.md` was frozen/retired on 2026-09-04, so the W10 measurement quoted below is cited as **history**, not as a live programme item; and PyAutoGalaxy#594 was opened as a Cortex gate ref for an epic that no longer exists — it is now simply this prompt's own issue, so reuse it in `start_dev` and never open a second.
+
 ## The question
 
 `ell_comps` is a two-component elliptical parameterisation whose physical domain

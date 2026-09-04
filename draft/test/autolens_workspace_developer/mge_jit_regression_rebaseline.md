@@ -6,13 +6,13 @@ Themes:
 - mge
 - jax-compile
 - profiling
-Difficulty: too-large
+Difficulty: small
 Autonomy: supervised
 Priority: high
 Status: formalised
 Consequence: judge
 Review-minutes: 25
-Unattended: needs-slicing
+Unattended: ready
 Filed: 2026-05-08 (backfilled from git)
 
 `@autolens_workspace_developer/jax_profiling/jit/imaging/mge.py` hardcodes a

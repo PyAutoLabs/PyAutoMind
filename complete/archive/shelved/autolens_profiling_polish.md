@@ -7,11 +7,26 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised (phased 2026-07-08 → polish_phase_1_design.md … polish_phase_4_breakdown_dashboard.md; work proceeds through the phase prompts)
+Status: SHELVED 2026-09-04 — spent umbrella; all four phases merged (see below). Originally `draft/maintenance/autolens_profiling/polish.md`.
 Consequence: judge
 Review-minutes: 25
 Unattended: ready
 Filed: 2026-05-18 (backfilled from git)
+
+## Shelved 2026-09-04 — spent umbrella, do NOT start dev on this prompt
+
+This prompt was the umbrella that was phased on 2026-07-08 into
+`polish_phase_1_design.md` … `polish_phase_4_breakdown_dashboard.md`, and every
+one of those four phases has since merged: autolens_profiling **#53**, **#55**,
+**#62** and **#63**, recorded as `complete/unknown/profiling-polish-design.md`,
+`complete/unknown/profiling-vram-validation.md`,
+`complete/2026/07/profiling-preopt-campaign.md` and
+`complete/2026/07/preopt-breakdown-dashboard.md`; the umbrella's closing ask —
+a PyAutoBrain agent that owns profiling across JAX/CPU/GPU rather than lensing
+specifically — shipped as the Profiling Agent (PyAutoBrain **#61**). Nothing in
+the umbrella remains unshipped, so it is archived rather than left as pickable
+backlog. The prompt text is kept verbatim below for the record.
+
 
 autolens_profiling is now a mature project, with a good separation of different tasks into packages (instruments, latent, likelihood_breakdown, etc)
 

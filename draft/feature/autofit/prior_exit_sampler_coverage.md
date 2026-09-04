@@ -16,6 +16,8 @@ Review-minutes: 20
 Unattended: ready
 Filed: 2026-08-17 (backfilled from git)
 
+Note 2026-09-04: the inference programme (`autolens_profiling/results/notes/inference/PROGRAMME.md`) was frozen/retired on 2026-09-04, so every programme-era campaign number quoted below (autolens_profiling#131, the 171,000-nat seed swing, the 114-nats-at-105-steps clipping figure, the "clipping is cosmetic" verdict) is cited as **history**, not as a live target.
+
 ## What this is
 
 The **coverage** follow-up to the prior-support work. Everything measured so far
@@ -23,9 +25,12 @@ came from **one search** (`MultiStartProdigy`) on **one cell** (`imaging/mge` hs
 This asks which of the other searches share the failure mode, which are already
 immune, and which need the fix in a different shape.
 
-Run it **after** the Prodigy step-scaling task
-(`draft/feature/autofit/per_parameter_step_scaling.md`), so the audit can measure
-both levers rather than only the clipper.
+This was to run **after** the Prodigy step-scaling task — **that blocker is
+cleared**: the step-scaling work shipped and is recorded at
+`complete/2026/08/per-parameter-step-scaling.md` (PyAutoFit#1485 +
+autolens_profiling#133, `ScalerPriorWidth` shipped default-off with a NEGATIVE
+measurement). The audit can therefore measure both levers rather than only the
+clipper, and can start now.
 
 ## The mechanism being audited
 

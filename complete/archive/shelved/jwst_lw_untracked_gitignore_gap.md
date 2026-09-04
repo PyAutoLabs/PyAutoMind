@@ -10,11 +10,24 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: low
-Status: formalised
+Status: SHELVED 2026-09-04 — already done in `autolens_profiling/.gitignore`. Originally `draft/maintenance/autolens_profiling/jwst_lw_untracked_gitignore_gap.md`.
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-08-04 (backfilled from git)
+
+## Shelved 2026-09-04 — already done, do NOT start dev on this prompt
+
+The work this prompt asks for is already in the tree: `autolens_profiling/.gitignore`
+line **52** ignores `dataset/imaging/jwst_lw/` alongside its `euclid`/`jwst`/`ao`
+siblings, and the governing comment at line **33** now reads "verified per
+instrument: imaging euclid/jwst/**jwst_lw**/ao, interferometer sma" — so the
+control test this prompt insisted on (step 1: do not inherit the sibling claim)
+was actually run and `jwst_lw` was confirmed to regenerate to identical pixel
+data. Both the premise check and the fix landed; the dirty-checkout symptom is
+gone. Archived rather than left as pickable backlog. The prompt text is kept
+verbatim below for the record.
+
 
 Found during a `/repo_cleanup` sweep on 2026-08-04.
 `autolens_profiling/dataset/imaging/jwst_lw/` (376K, 6 files) sits untracked in

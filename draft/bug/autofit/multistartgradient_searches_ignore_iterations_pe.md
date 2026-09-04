@@ -16,13 +16,6 @@ Unattended: ready
 
 MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence in the startup log
 
-Type: bug
-Target: autofit
-Difficulty: large
-Autonomy: supervised
-Priority: normal
-Witness: a MultiStartProdigy fit run with a finite iterations_per_quick_update writes one fit.png per cadence boundary under the search output directory (counted by a test that drives the step loop and asserts the number of perform_quick_update calls), and multi_start_gradient/search.py is removed from the EXEMPT map in test_autofit/non_linear/search/test_quick_update_wiring.py rather than left in it; on the workspace side, an AST guard asserts no MultiStart* call site in scripts/ passes a kwarg the search does not honour.
-
 ## What was observed
 
 Running autolens_workspace scripts/imaging/start_here.py logs:
