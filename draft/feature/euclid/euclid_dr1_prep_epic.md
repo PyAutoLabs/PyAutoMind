@@ -242,11 +242,11 @@ resumes at 8.
   magnification systematics under model match/mismatch (Sersic-vs-Sersic, MGE source, MGE
   lens light, Delaunay source) across the 10 lenses. Ready when Cortex euclid 5 is accepted.
 
-8. `active/delaunay_area_magnification_audit.md` (was 6c) — source-code audit of
+8. `complete/2026/09/delaunay-area-magnification-audit.md` (was 6c) — source-code audit of
    Delaunay pixel-area and magnification calculations. **May run alongside the Cortex
    magnification-robustness phase**; does not gate on it. May spawn a separate bug prompt
    if a real defect is found.
-   **PR OPEN 2026-09-04** — issue PyAutoArray#522, PR PyAutoArray#523 (`8c2e0d18`, tests +
+   **SHIPPED 2026-09-04** — issue PyAutoArray#522 closed, PR PyAutoArray#523 merged (`8c2e0d18`, merge `548ff1e`; tests +
    docstring only, no behaviour change; audit posted in full on #522). Verdict: **two real
    defects, neither fixed here by design**, filed as follow-ups:
    `draft/bug/autoarray/delaunay_magnification_uses_voronoi_not_dual_areas.md` (the Delaunay
@@ -266,7 +266,9 @@ resumes at 8.
    **Statement to Cortex phase 4 / Mind phase 9:** the `vis_pix` catalogue `magnification`
    column is a `0.0` sentinel today, so phase 4's numerics witness must exclude it (or
    the autolens follow-up must ship first) and phase 9's magnification layer depends on it.
-   Human runs `/prm` on #523 when green.
+   Record: `complete/2026/09/delaunay-area-magnification-audit.md`. The two follow-up bug
+   prompts are the epic's next steps (autoarray fix first, then the autolens fix with its
+   euclid workspace leg behind the library-first gate).
 9. `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` (was 7) — COOLEST CSV,
    mass-model FITS products with a file-size assessment, and a feasibility verdict on
    retroactive catalogue updates. Gates: the Cortex 10-lens science run
@@ -291,7 +293,7 @@ integers again, and no two Mind phases share a number.
 | 5 | → Cortex `phases/euclid/` `resimulate_fitted_lens_simulator` | **5 (Cortex)** | Ready when Cortex euclid 4 accepted |
 | 6a | → Cortex `phases/euclid/` `sersic_index_recovery` | **6 (Cortex)** | Ready when Cortex euclid 5 accepted |
 | 6b | → Cortex `phases/euclid/` `magnification_robustness` | **7 (Cortex)** | Ready when Cortex euclid 5 accepted |
-| 6c | Mind `draft/bug/autoarray/delaunay_area_magnification_audit.md` | **8** | none; may run alongside Cortex 7 |
+| 6c | Mind (shipped) `complete/2026/09/delaunay-area-magnification-audit.md` | **8** | none; ran alongside Cortex 7 |
 | 7 | Mind `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` | **9** | Cortex euclid 4 |
 
 Mind phase numbers and Cortex phase numbers are separate sequences that happen to

@@ -60,8 +60,9 @@ epic, never picked standalone.
   complete/2026/09/restore-pipeline-narrative-prose.md). Phase 4 shipped 2026-09-03
   (euclid#49 closed, PR #50 merged; record complete/2026/09/euclid-cpu-two-stage-route.md) —
   all Mind software phases 0-4 are now shipped, and both gates of the Cortex 10-lens science
-  run (euclid#48, euclid#49) are closed. Phase 8 (Delaunay area audit) PR-open 2026-09-04
-  (PyAutoArray#522 / PR #523, audit on the issue): two defects proven and filed as follow-up
+  run (euclid#48, euclid#49) are closed. Phase 8 (Delaunay area audit) shipped 2026-09-04
+  (PyAutoArray#522 closed, PR #523 merged, audit on the issue; record
+  complete/2026/09/delaunay-area-magnification-audit.md): two defects proven and filed as follow-up
   bug prompts (autoarray Voronoi-vs-dual-area denominator; autolens magnification latent 0/0
   for pixelized sources — which also taints the vis_pix catalogue column Cortex phase 4
   witnesses). Mind phase 9 remains, gated on Cortex phase 4.
