@@ -4,7 +4,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/356
 - issued: 2026-09-04
 - session: claude --resume session_01JYs4cX2wT5vsZScjLNLZif
-- status: library-dev
+- status: awaiting-merge — PR open, Brain first then Cortex
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/357
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/15
 - worktree: ~/Code/PyAutoLabs-wt/cortex-checkin-stamp-prominent
 - repos:
   - PyAutoBrain: feature/cortex-checkin-stamp-prominent
