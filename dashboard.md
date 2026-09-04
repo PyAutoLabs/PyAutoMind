@@ -2119,6 +2119,14 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
+<details><summary>📋 <b>Cortex check-in — one door, shed the review-slot and gate apparatus</b> — ledger: `draft/maintenance/pyautocortex/cortex_checkin_epic.md` — NOT SHIPPED — all three phases are at PR-open and stacked, six PRs unmerged as of</summary>
+
+```
+Continue the 'Cortex check-in — one door, shed the review-slot and gate apparatus' epic. Its canonical state lives in draft/maintenance/pyautocortex/cortex_checkin_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phased prompts from the 2026-09-03 Cortex assessment — (1) delete the
+```
+
+</details>
+
 ## Hygiene
 
 2 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
