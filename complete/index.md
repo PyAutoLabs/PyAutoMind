@@ -310,7 +310,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-vmap-materialisation-hang](2026/08/jax-vmap-materialisation-hang.md) — jax-compile-stall phase 3
 - [joint-clipper-compose-with-bijector](2026/08/joint-clipper-compose-with-bijector.md) — a ball survives a COMMON linear rescale — R becomes R/s, so the blanket refusal was stronger than the geometry
 - [knowledge-board](2026/08/knowledge-board.md) — auto-closed on merge
-- [lacosmic-cr-option-and-star-pass-decoupling](2026/08/lacosmic-cr-option-and-star-pass-decoupling.md) — both deliberately OPEN — closure is the default-flip decision, not this ship
+- [lacosmic-cr-option-and-star-pass-decoupling](2026/08/lacosmic-cr-option-and-star-pass-decoupling.md) — both CLOSED 2026-09-04 via /community — the reporter's own grid showed no erosion on well-dithered, correctly-…
 - [latex-docstrings-invalid-escape-warnings](2026/08/latex-docstrings-invalid-escape-warnings.md)
 - [latex-raw-string-docstrings](2026/08/latex-raw-string-docstrings.md) — one issue, six PRs
 - [lazy-heavy-imports](2026/08/lazy-heavy-imports.md) — Deferred all heavy non-essential imports to first use. `import autolens` 4.07s → 1.2–1.3s
