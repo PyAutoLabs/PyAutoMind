@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/delaunay_magnification_uses_voronoi_not_dual_areas.md">Delaunay magnification denominator uses Voronoi cell areas; the barycentric-linear mapper's exact quadrature…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/524">issue #524</a> — issued 2026-09-04 — library-dev</summary>
+<details><summary>📋 <a href="active/delaunay_magnification_uses_voronoi_not_dual_areas.md">Delaunay magnification denominator uses Voronoi cell areas; the barycentric-linear mapper's exact quadrature…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/524">issue #524</a> — issued 2026-09-04 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/525">PyAutoArray#525</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/delaunay_magnification_uses_voronoi_not_dual_areas.md
@@ -266,6 +266,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `active/delaunay_magnification_uses_voronoi_not_dual_areas.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 
 ## Human review
