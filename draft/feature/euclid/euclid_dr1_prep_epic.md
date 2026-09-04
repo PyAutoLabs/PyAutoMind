@@ -242,10 +242,31 @@ resumes at 8.
   magnification systematics under model match/mismatch (Sersic-vs-Sersic, MGE source, MGE
   lens light, Delaunay source) across the 10 lenses. Ready when Cortex euclid 5 is accepted.
 
-8. `draft/bug/autoarray/delaunay_area_magnification_audit.md` (was 6c) — source-code audit of
+8. `active/delaunay_area_magnification_audit.md` (was 6c) — source-code audit of
    Delaunay pixel-area and magnification calculations. **May run alongside the Cortex
    magnification-robustness phase**; does not gate on it. May spawn a separate bug prompt
    if a real defect is found.
+   **PR OPEN 2026-09-04** — issue PyAutoArray#522, PR PyAutoArray#523 (`8c2e0d18`, tests +
+   docstring only, no behaviour change; audit posted in full on #522). Verdict: **two real
+   defects, neither fixed here by design**, filed as follow-ups:
+   `draft/bug/autoarray/delaunay_magnification_uses_voronoi_not_dual_areas.md` (the Delaunay
+   `areas_for_magnification` returns Voronoi cell areas, but the mapper is barycentric-linear
+   so the exact quadrature weight is the barycentric dual area; identity-lens μ is 1.0 to
+   2e-5 with dual areas, −13..−53 % on adaptive-style meshes and −95..−99 % when the source
+   fills the hull with Voronoi areas; `zeroed_pixels` cannot rescue it — the pathology is one
+   ring inside the convex hull) and
+   `draft/bug/autolens/magnification_latent_zero_for_pixelized_source.md` (the pipeline's
+   `magnification` latent is a hard 0/0 for any pixelization-only source because
+   `Galaxy.image_2d_from` returns zeros; 9/9 archived `vis_pix` results record `0.0`; the
+   Sersic control reproduces `truth.json` bit-for-bit). The rectangular-mesh lead (+6 %/+28 %
+   guard-ring signature, not established) went to the cluster epic's
+   `draft/test/workspaces/mesh_magnification_correctness.md`.
+   **Statement to Cortex phase 7:** Delaunay magnification numbers from `source_science.py`
+   are NOT trustworthy until the autoarray follow-up ships; the Sersic rungs 1-4 are sound.
+   **Statement to Cortex phase 4 / Mind phase 9:** the `vis_pix` catalogue `magnification`
+   column is a `0.0` sentinel today, so phase 4's numerics witness must exclude it (or
+   the autolens follow-up must ship first) and phase 9's magnification layer depends on it.
+   Human runs `/prm` on #523 when green.
 9. `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` (was 7) — COOLEST CSV,
    mass-model FITS products with a file-size assessment, and a feasibility verdict on
    retroactive catalogue updates. Gates: the Cortex 10-lens science run
