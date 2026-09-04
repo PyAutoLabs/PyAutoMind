@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 6 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace/slam_simultaneous_adaptive_over_sampling_timeout.md">SLaM multi-dataset <code>simultaneous.py</code> times out (1805 s) after the #523 adaptive over-sampling…</a> — autolens_workspace · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/autolens_workspace/slam_simultaneous_adaptive_over_sampling_timeout.md
-```
-
-</details>
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 82
+<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 81
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -200,14 +200,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens_workspace/slam_simultaneous_adaptive_over_sampling_timeout.md">SLaM multi-dataset <code>simultaneous.py</code> times out (1805 s) after the #523 adaptive over-sampling…</a> — autolens_workspace · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/autolens_workspace/slam_simultaneous_adaptive_over_sampling_timeout.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a strict FD check…</a> — autolens_profiling · small · safe · low</summary>
 
 ```
@@ -244,6 +236,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/triage/jax_zero_contour.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · safe · high</summary>
+
+```
+/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
 ```
 
 </details>
@@ -288,6 +288,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/profiles_jit_powerlaw_exact_zero_atol.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/slam_simultaneous_adaptive_over_sampling_timeout.md">SLaM multi-dataset <code>simultaneous.py</code> times out (1805 s) after the #523 adaptive over-sampling…</a> — issued 2026-09-04</summary>
+
+```
+/start_dev active/slam_simultaneous_adaptive_over_sampling_timeout.md
 ```
 
 </details>
@@ -450,7 +458,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 35</summary>
@@ -738,15 +746,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 27</summary>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace/slam_simultaneous_adaptive_over_sampling_timeout.md">SLaM multi-dataset <code>simultaneous.py</code> times out (1805 s) after the #523 adaptive over-sampling…</a> — autolens_workspace · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/autolens_workspace/slam_simultaneous_adaptive_over_sampling_timeout.md
-```
-
-</details>
+<summary><b>bug</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -1763,7 +1763,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-04 | issued | <a href="active/profiles_jit_powerlaw_exact_zero_atol.md"><code>misc/profiles_jit.py</code>: <code>mp.PowerLaw</code> deflections fail on an…</a> |
 | 2026-09-04 | issued | <a href="active/worktree_drift_reports_hidden_dirs_as_orphans.md">Worktree drift reports hidden dirs (.idea) under the wt root as…</a> |
 | 2026-09-04 | issued | <a href="active/board_family_footer_shared_helper.md">Shared <code>board_links</code> helper in the board theme + Heart publish in…</a> |
-| 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/slam_simultaneous_adaptive_over_sampling_timeout.md">SLaM multi-dataset <code>simultaneous.py</code> times out (1805 s) after the…</a> |
+| 2026-09-04 | issued | <a href="active/slam_simultaneous_adaptive_over_sampling_timeout.md">SLaM multi-dataset <code>simultaneous.py</code> times out (1805 s) after the…</a> |
 | 2026-09-04 | issued | <a href="active/memory_board_family_footer.md">Memory board footer reads the canonical board family instead of a…</a> |
 | 2026-09-04 | issued | <a href="active/heart_board_family_footer.md">Heart board footer reads the canonical board family instead of a…</a> |
 | 2026-09-04 | issued | <a href="active/hands_board_family_footer.md">Hands board footer reads the canonical board family instead of a…</a> |
@@ -2217,7 +2217,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-150 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+149 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2262,11 +2262,11 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- _… and 110 more_
+- _… and 109 more_
 
 </details>
 
-14 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+13 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2281,7 +2281,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
-- `draft/bug/autolens_workspace/slam_simultaneous_adaptive_over_sampling_timeout.md — unknown theme keyword(s): ci`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
