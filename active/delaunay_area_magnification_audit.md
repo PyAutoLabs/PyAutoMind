@@ -19,6 +19,8 @@ Epic: euclid-dr1-prep
 Phase: 8
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
+Issued: 2026-09-04
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/522
 
 Phase 8 of the Euclid DR1 preparation epic (was 6c; renumbered 2026-09-01 in the Cortex split,
 where the old 6b became `PyAutoCortex` `phases/euclid/magnification_robustness`). **Can run
