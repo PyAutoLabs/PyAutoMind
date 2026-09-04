@@ -5,9 +5,21 @@
 - prompt: active/docs_follow_up_to_human_readable_first.md
 - issued: 2026-09-04
 - session: local CLI (Fable architect, Opus execution) — claude --resume session_01Vwajqh36GQMzDcpTRoF5Qj
-- status: library-dev
+- status: workspace-shipped, awaiting-merge (six PRs open 2026-09-04, PR-open only under the Heart RED ack below; close-out via /prm; merge order library-first — PyAutoLens#725 and PyAutoGalaxy#607 before the workspace/assistant PRs; repos otherwise independent)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/725
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/607
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/531
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/234
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/123
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/23
 - worktree: ~/Code/PyAutoLabs-wt/docs-followup-paid-plan-assistants
 - repos:
+  - PyAutoLens: feature/docs-followup-paid-plan-assistants
+  - PyAutoGalaxy: feature/docs-followup-paid-plan-assistants
+  - autolens_workspace: feature/docs-followup-paid-plan-assistants
+  - autogalaxy_workspace: feature/docs-followup-paid-plan-assistants
+  - autolens_assistant: feature/docs-followup-paid-plan-assistants
+  - autogalaxy_assistant: feature/docs-followup-paid-plan-assistants
 - heart-ack: 2026-09-04 PR-open only (never merge) under Heart RED; exact reasons from pyauto-heart readiness --json: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 12d old" — same reason set the human acknowledged for human-readable-first-docs (#120, merged 2026-09-04); docs-only follow-up unrelated to either reason; a further new reason at ship time re-blocks
 - follow-up-to: human-readable-first-docs (complete/2026/09/human-readable-first-docs.md)
 

@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/docs_follow_up_to_human_readable_first.md">Docs follow-up to human-readable-first-docs (#120): drop "also", reinstate paid-plan conversation-assistant framing</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/122">issue #122</a> — issued 2026-09-04 — library-dev</summary>
+<details><summary>📋 <a href="active/docs_follow_up_to_human_readable_first.md">Docs follow-up to human-readable-first-docs (#120): drop "also", reinstate paid-plan conversation-assistant framing</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/122">issue #122</a> — issued 2026-09-04 — workspace-shipped, awaiting-merge (six PRs open 2026-09-04, PR-open only under the Heart RED ack below; close-out via /prm; merge… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/725">PyAutoLens#725</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/607">PyAutoGalaxy#607</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/531">autolens_workspace#531</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/234">autogalaxy_workspace#234</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/123">autolens_assistant#123</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/23">autogalaxy_assistant#23</a></summary>
 
 ```
 /start_dev active/docs_follow_up_to_human_readable_first.md
