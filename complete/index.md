@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1292 records across 8 buckets.
+1293 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -178,6 +178,7 @@ markers; everything below GENERATED is rebuilt.
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z
 - [silence-colab-cli-message](2026/09/silence-colab-cli-message.md)
+- [slam-simultaneous-oversample-timeout](2026/09/slam-simultaneous-oversample-timeout.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
 
 ## 2026/08
