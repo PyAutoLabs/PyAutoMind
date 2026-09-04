@@ -98,4 +98,61 @@ This directly affects Cortex phase 4's witness ("catalogue numerics match the 20
 reference") for the `vis_pix` magnification column, and Mind phase 9's magnification
 layer. Neither can be scored on the `vis_pix` magnification until this is fixed.
 
+## Implementation design (architect, 2026-09-04 — approved plan; execute from this)
+
+**Sequence:** after the PyAutoArray dual-area fix
+(`draft/bug/autoarray/delaunay_magnification_uses_voronoi_not_dual_areas.md`) is at least PR-open —
+merged if the Delaunay accuracy test is wanted in-worktree. `/start_dev` this prompt → task
+`pixelized-source-magnification-latent`; classification **both**: library PyAutoLens first
+(PyAutoGalaxy read-only), workspace follow-up in `euclid_strong_lens_modeling_pipeline` behind the
+library-first gate.
+
+**Facts (do not re-derive):** latents run inside a per-sample JAX jit (`LatentLens.BATCH_MODE =
+"jit"`, `autolens/analysis/latent.py:304-336`, `xp = analysis._xp`) — new code must be trace-safe.
+`total_lensed_source_flux` (`:106-115`) reads `fit.galaxy_image_dict[fit.tracer.galaxies[-1]]`, which
+already includes the inversion's mapped image — the numerator is sound. `total_source_flux`
+(`:121-139`) / `total_source_flux_mujy` (`:189-215`) call
+`fit.tracer_linear_light_profiles_to_light_profiles.galaxies[-1].image_2d_from(...)`, zeros for a
+pixelization-only galaxy (`autogalaxy/galaxy/galaxy.py:278`). Per-mapper reconstructions:
+`fit.inversion.reconstruction_dict` (`autoarray/inversion/inversion/abstract.py:667`); mapper →
+galaxy: `fit.tracer_to_inversion.mapper_galaxy_dict` (`autolens/lens/to_inversion.py:394`;
+`fit.tracer_to_inversion` at `fit_imaging.py:184`). **Caveat:** the converted tracer's galaxies are
+new objects — key lookups must use whichever galaxy object actually keys `mapper_galaxy_dict`
+(verify against `galaxy_image_dict`'s keys).
+
+**Library changes (PyAutoLens):**
+1. `autolens/analysis/latent.py` — add `_pixelized_source_flux(fit, xp)`: `inv = fit.inversion`;
+   None or no `Pixelization` on the source galaxy → `0.0`; else for each `(mapper, gal)` in
+   `fit.tracer_to_inversion.mapper_galaxy_dict.items()` belonging to the source galaxy,
+   `xp.sum(inv.reconstruction_dict[mapper] * mapper.mesh_geometry.areas_for_magnification)`. A mesh
+   geometry with no `areas_for_magnification` (DelaunayNN, KNN, KNNBarycentric) → `xp.nan` with a
+   one-time-per-process warning (no silent zero). `total_source_flux` and `total_source_flux_mujy` =
+   light-profile flux (existing path) + pixelized flux; `magnification` unchanged in form.
+   Trace-safe: `reconstruction_dict` values are `xp` arrays; Delaunay dual areas are `xp` after the
+   autoarray fix; rectangular `areas_transformed` already is.
+2. Tests in `test_autolens/analysis/` (existing latent test file, else `test_latent.py`): FitImaging
+   with a Delaunay pixelized source → `magnification` finite and equal to
+   `Σ galaxy_image[-1] / Σ reconstruction·areas`; same with `RectangularBilinearAdaptDensity`; linear
+   light profile + pixelization sums both; light-profile-only fit numerically unchanged; a KNN mesh →
+   NaN. Numpy path (JAX only if the file already has a JAX pattern).
+3. `ship_library` → PR-open. API Changes: Changed behaviour — `total_source_flux`,
+   `total_source_flux_mujy`, `magnification` now include pixelized sources (were 0 / inf). The PR body
+   states that end-to-end Delaunay accuracy needs the autoarray fix merged; these tests assert
+   internal consistency and hold on either PyAutoArray.
+
+**Workspace follow-up (euclid_strong_lens_modeling_pipeline, `/start_workspace` → `ship_workspace`):**
+4. `scripts/tools/diagnose_latent_vis_pix.py:42` docstring — `magnification` is NOT stage-invariant;
+   state the new definition.
+5. `tests/test_compute_latent_variable.py` (or `test_latent_run_level.py`) — assert the `vis_pix`
+   Delaunay stage's `magnification` is present and finite when `LatentEuclid.variables` is evaluated
+   directly on a test-mode Delaunay fit of the committed `dataset/simulated/euclid_dr1_like` (a direct
+   call — test-mode CI skips latents at every level, so run-level summaries can only be structural).
+6. Ledger note for Mind phase 9 / Cortex phase 4: archived `vis_pix` rows carry a `0.0` sentinel and
+   must be re-derived; `catalogue/scripts/magnitudes.py:305` ingests the latent unchanged.
+
+**Acceptance (human, after both merges):** the audit's `part3b_fit_latent.py` construction (Delaunay
+fit on `euclid_dr1_like`, magzero 24.6) reports a finite `magnification` close to the Sersic
+control's 15.146; record it on the issue.
+
+
 <!-- formalised by the Intake (Conception) Agent on 2026-09-04 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/4974a870-2ecf-47c9-9592-6a344294c707/scratchpad/raw_prompt2.md -->

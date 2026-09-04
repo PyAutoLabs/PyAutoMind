@@ -122,4 +122,54 @@ implementer re-derives from the construction described here.
 Cortex phase 7 (`PyAutoCortex/phases/euclid/magnification_robustness.md`) must not score
 its Delaunay rung with the current denominator until this ships.
 
+## Implementation design (architect, 2026-09-04 — approved plan; execute from this)
+
+**Sequence:** `/prm PyAutoArray#523` first (phase 8 audit PR, CI green) — it frees the PyAutoArray
+claim and this fix edits the same files, so branch from `main` after the merge, no parallel worktree.
+Then `/start_dev` this prompt → task `delaunay-dual-area-magnification`, worktree **PyAutoArray only**.
+
+**Facts (do not re-derive):** the dual areas are already computed by both interpolator paths —
+numpy `scipy_delaunay` (`autoarray/inversion/mesh/interpolator/delaunay.py:39`, via
+`barycentric_dual_area_from` `:342-398`) and in-graph JAX `jax_delaunay` (`:309-318`, scatter-add on
+`simplices_padded`) — then discarded after the `areas_factor * sqrt(areas)` split-point offsets.
+`DelaunayInterface` (`:589-608`) carries the results; `InterpolatorDelaunay.mesh_geometry`
+(`:657-668`) builds `MeshGeometryDelaunay(mesh, mesh_grid, data_grid, xp)` with no area information.
+The matern variants (`:440-495`) return no areas. PyAutoLens latents run inside a per-sample JAX jit
+(`LatentLens.BATCH_MODE = "jit"`), so `areas_for_magnification` must be trace-safe under `xp=jnp`:
+expose the interpolator's in-graph areas, never call scipy at latent time.
+
+**Changes:**
+1. `interpolator/delaunay.py` — `scipy_delaunay` and `jax_delaunay` add the dual `areas` to their
+   return tuple; the matern variants compute them too via
+   `barycentric_dual_area_from(points, simplices[simplices[:, 0] >= 0])` (one definition);
+   `DelaunayInterface` gains `dual_areas`; `InterpolatorDelaunay.mesh_geometry` passes
+   `dual_areas=self.delaunay.dual_areas`.
+2. `mesh_geometry/delaunay.py` — `MeshGeometryDelaunay.__init__(..., dual_areas=None)`;
+   `areas_for_magnification` returns the supplied `dual_areas`, else a numpy fallback
+   `barycentric_dual_area_from(mesh_grid_xy, scipy.spatial.Delaunay(mesh_grid_xy).simplices)` for
+   standalone construction (tests). `voronoi_areas` / `voronoi_areas_numpy` untouched. Docstring:
+   dual areas = exact integral of the piecewise-linear reconstruction.
+3. `plot/inversion.py::_plot_delaunay` — fix the Gouraud claim (tripcolor default is flat) and pass
+   `triangles=` from the mapper's simplices with the `-1` padded rows dropped.
+4. Tests — flip the phase-8 pins deliberately: in
+   `test_autoarray/inversion/pixelization/mesh_geometry/test_delaunay.py`,
+   `bounded_boundary_cells_are_kept` → `areas_for_magnification__equals_barycentric_dual_area`
+   (indices 3 and 4 equal their dual areas, none zeroed); `uniform_lattice` → interior 1.0, sum ==
+   `(n-1)**2` (hull area); `repeat_calls_agree` stays. In
+   `test_autoarray/inversion/pixelization/interpolator/test_delaunay.py` the
+   `sums_to_convex_hull_area` divergence assertion becomes equality for `areas_for_magnification`.
+   **New** mapper-level identity test (mapper test file for Delaunay): a `MapperDelaunay` whose mesh
+   outer ring is pinned to the data footprint, random positive `s`:
+   `Σ (mapping_matrix @ s) × pixel_area == Σ s × mesh_geometry.areas_for_magnification` to rel 1e-4;
+   JAX parity of `areas_for_magnification` under the directory's `requires_jax` pattern.
+5. `pytest test_autoarray -x`; `ship_library` → PR-open, `pending-release`. `## API Changes`:
+   Changed behaviour — `MeshGeometryDelaunay.areas_for_magnification` returns barycentric dual areas
+   (was Voronoi cell areas with unbounded cells zeroed); Added `MeshGeometryDelaunay(dual_areas=)`,
+   `DelaunayInterface.dual_areas`. Workspace impact: the four `source_science.py` scripts call the same
+   attribute — no code change, option (iii). Post the identity-test numbers on the issue.
+
+Out of scope: rectangular areas (cluster epic lead), DelaunayNN/KNN area definitions, a library-level
+magnification API.
+
+
 <!-- formalised by the Intake (Conception) Agent on 2026-09-04 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/4974a870-2ecf-47c9-9592-6a344294c707/scratchpad/raw_prompt1.md -->
