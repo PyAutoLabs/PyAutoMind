@@ -1,3 +1,49 @@
+First-look feedback on the projects-first Cortex board shipped earlier the same
+day (`complete/2026/09/cortex-dashboard-projects-first.md`): two explanatory
+blurbs were noise on a phone, the check-in stamp was a small bold line where it
+should be the thing the eye lands on, project names inherited the shared theme's
+small `h3`, and the eight projects with nothing open trailed the Projects
+section as one `·`-joined line.
+
+## What shipped
+
+**PyAutoBrain #357** (merged a800366) — `agents/conductors/cortex/_cortex.py`:
+
+- `REFRESH_BLURB` and the Projects section blurb ("The science body map…")
+  removed from both twins. The one-line `Last updated <date>` stays, with its
+  `> **Last updated` / `<div class="fresh">` prefixes, so `dashboard_body`
+  keeps stripping it and `--check` does not drift daily. Both `h2()` helpers
+  tolerate an empty blurb.
+- The HTML check-in stamp is a large boxed date (`#checkin-box`, 1.6 rem
+  tabular digits) coloured **on the viewer's clock** by the inline script:
+  green ✓ "fresh · N min ago" (hours past 60 min) within
+  `CHECKIN_FRESH_MINUTES = 180`, red ✗ "stale, paste the check-in" beyond,
+  "never checked in" when the stamp is absent or unparseable. One threshold,
+  3 h, replacing the morning's 60-minute rule. Age is never computed at
+  render. Markdown twin renders `### Last check-in: <stamp>`.
+- Each project card is wrapped in `<section class="project">` with a
+  cortex-local `.project h3` rule — 1.35 rem, bold, accent underline — leaving
+  the shared `board/_theme.py` `h3` alone so the other boards keep their size.
+- Projects with nothing open leave the foot of Projects and become a
+  **Project | Status | Phases** table under Summary ("Nothing open"), ordered
+  active → planned → dormant via `project_order`, phases from
+  `project_counts`.
+- Tests: 81 in `test_cortex_conductor.py`, 910 full suite, run with
+  `PYAUTO_CORTEX=<worktree>/PyAutoCortex`.
+
+**PyAutoCortex #15** (merged 790fa3e) — `dashboard.md` / `dashboard.html`
+regenerated. Its `refresh` check renders against Brain `main` and was red until
+#357 landed; re-run green, then merged.
+
+## Deviations from the plan
+
+No new `dashboard_body` test: the existing
+`test_the_check_compare_ignores_the_date_but_not_the_content` already pins it.
+The Brain PR carried no `pending-release` label — PyAutoBrain is not a released
+package.
+
+## Original prompt
+
 # Cortex board: blurbs gone, big green/red check-in stamp, readable project names, nothing-open table
 
 Type: feature
