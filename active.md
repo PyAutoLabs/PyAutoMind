@@ -55,8 +55,9 @@
 ## slam-simultaneous-oversample-timeout
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/533
 - issued: 2026-09-04
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/slam-simultaneous-oversample-timeout
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/534
 - repos:
   - autolens_workspace: feature/slam-simultaneous-oversample-timeout
 - summary: |
