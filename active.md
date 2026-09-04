@@ -18,29 +18,6 @@
 - ci: PyAutoBrain#351 green (pytest 3.12 + 3.13 pass; `docs / docs-build` is path-filtered and did not trigger — the diff touches no docs path). PyAutoCortex#13 `check` green, `refresh` red — the same Brain/Cortex skew phase 1 recorded on PyAutoCortex#10 and phase 2 on #11: that workflow renders through PyAutoBrain **main**, whose `_cortex.py` still calls the `MEMBER_RE` phase 1 deleted (traceback names `_refresh_index` on main, a function this branch does not have). It clears when PyAutoBrain#348 merges.
 - epic: cortex-checkin (phase 3, last; ledger draft/maintenance/pyautocortex/cortex_checkin_epic.md). Merge order Brain before Cortex within each phase, p1 → p2 → p3; retarget each phase's PRs to main as the phase below it merges. The ledger now carries the full PR/issue map for all three phases.
 
-## human-readable-first-docs
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/120
-- prompt: active/swap_docs_back_to_human_readable_first.md
-- issued: 2026-09-03
-- session: claude --resume session_01TRKarVxARKJ6VJN5Qc3521
-- status: workspace-shipped, awaiting-merge (six PRs open 2026-09-03, PR-open only under Heart RED ack below; close-out via /prm; merge order free — repos independent)
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/723
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/606
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/529
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/233
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/121
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/22
-- worktree: ~/Code/PyAutoLabs-wt/human-readable-first-docs
-- repos:
-  - autolens_assistant: feature/human-readable-first-docs
-  - autogalaxy_assistant: feature/human-readable-first-docs
-  - PyAutoLens: feature/human-readable-first-docs
-  - PyAutoGalaxy: feature/human-readable-first-docs
-  - autolens_workspace: feature/human-readable-first-docs
-  - autogalaxy_workspace: feature/human-readable-first-docs
-- parallel-claim: autolens_workspace also claimed by gaussian-precompute-p3 (#528); file sets disjoint (that task touches only scripts/**/mass_stellar_dark/slam.py + its notebook; this task touches README.md, start_here.py + its notebook/markdown twins) — separate worktree per the disjoint-files rule, launched 2026-09-03 under the user's "do intake and then do work" instruction. RESOLVED 2026-09-04: gaussian-precompute-p3 merged first (autolens_workspace#530, 7bbffe80) and has closed out, so this branch must rebase onto autolens_workspace origin/main before its own ship; it is now the sole live claim on the repo.
-- heart-ack: 2026-09-03 PR-open only (never merge) under Heart RED; exact reasons from pyauto-heart readiness --json: "release validation FAILED (stage integrate)"; "PyAutoArray: open PR 11d old" — the same reason set the human acknowledged for gaussian-precompute-p3 earlier today; docs-only change unrelated to either reason; a further new reason at ship time re-blocks
-
 ## cortex-checkin-p1-shed-review-slot
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/9
 - prompt: active/cortex_checkin_p1_shed_review_slot.md
