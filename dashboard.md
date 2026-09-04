@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/gaussian_precompute_p3_downstream_sweep.md">Gaussian precompute phase 3: downstream sweep — SLaM, test_autolens, workspace regressions, doc…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/528">issue #528</a> — issued 2026-09-03 — workspace-dev</summary>
+<details><summary>📋 <a href="active/gaussian_precompute_p3_downstream_sweep.md">Gaussian precompute phase 3: downstream sweep — SLaM, test_autolens, workspace regressions, doc…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/528">issue #528</a> — issued 2026-09-03 — workspace-shipped, awaiting-merge (PR open 2026-09-03; close-out via /prm — closes the epic) — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/530">autolens_workspace#530</a></summary>
 
 ```
 /start_dev active/gaussian_precompute_p3_downstream_sweep.md

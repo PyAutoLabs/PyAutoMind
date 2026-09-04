@@ -41,7 +41,8 @@
 - prompt: active/gaussian_precompute_p3_downstream_sweep.md
 - issued: 2026-09-03
 - session: claude --resume session_01XhnA4pFN2NycuKc8Ni6s2R
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (PR open 2026-09-03; close-out via /prm — closes the epic)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/530
 - worktree: ~/Code/PyAutoLabs-wt/gaussian-precompute-p3
 - repos:
   - autolens_workspace: feature/gaussian-precompute-p3

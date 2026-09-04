@@ -97,3 +97,21 @@ Three phase prompts:
   (PyAutoArray#520 + PyAutoGalaxy#605 + autolens_profiling#216; jaxpr 53,369 → 13,289 equations
   (-75%), `vmap_first_call` 10.8 → 5.4 s, steady-state `vmap` unchanged — inversion-dominated).
 - `draft/feature/autogalaxy/gaussian_precompute_p3_downstream_sweep.md` — SLaM / test_autolens / workspace sweep.
+
+**2026-09-03 — phase 3 SHIPPED to PR-open (autolens_workspace#530).** Downstream sweep on the merged
+library mains (PyAutoGalaxy `65af1122`, PyAutoArray `e36a5af4`); the phase adds no mechanism, it verifies
+the memo on the driver it was built for and documents the kill switch. `test_autolens` **610 passed**
+(1 xfailed). SLaM `imaging/features/advanced/mass_stellar_dark/slam.py` in test mode, 3 repeats per leg:
+every stage's max-log-likelihood **bit-identical** memo on vs off; `mass_light_dark[1]` **0.370 s on vs
+0.515 s off** (0.72x), every stage at or below memo-off; `memo_stats` **119 hits / 20 misses / 0 evictions
+/ 119 kB / 20 entries**; the kill-switch leg reads all zeros. **Store-churn finding NEGATIVE** — the
+linear-Sersic light with a free ratio (an L1 profile whose key changes every call) showed no churn
+penalty at this scale, so no library change is proposed. autolens_workspace_test: **4 scripts** run
+(`imaging/jax_likelihood/mge.py`, `imaging/jax_grad/mge.py`, `imaging/visualization/modeling_visualization_jit.py`
+pass; `interferometer/visualization/modeling_visualization_jit.py` OOM-killed in its live-Nautilus Part 2,
+which is exactly its **pre-existing `no_run.yaml` SLOW/OOM entry**), **pins unchanged**. Numba likelihood
+pins held: `pixelization_numba` hst **27661.9102** (rel **2.65e-9**, within 1e-6) and
+`pixelization_numba_mge_mass` **exact** (bit-identical), memo **2.61x** per call at hst resolution — the
+production-scale number for this shape, since test mode calls the likelihood once per stage. Doc: one
+paragraph in the `mass_light_dark` pipeline docstring plus the regenerated notebook. The epic closes at
+`/prm` on autolens_workspace#530.
