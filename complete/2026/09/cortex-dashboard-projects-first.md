@@ -1,3 +1,62 @@
+The Cortex board (PyAutoCortex `dashboard.md` / `dashboard.html`) opened with
+every phase of every science project — 517 lines before the first actionable
+row — and gave no sign of whether the laptop science chat had run the check-in
+that day. It now leads with the check-in paste chip, a freshness stamp, a
+per-project summary table and the Projects cards; the Epics section is gone.
+
+## What shipped
+
+**PyAutoBrain #355** (merged 912b19f) — the renderer, `agents/conductors/cortex/_cortex.py`:
+
+- 📋 check-in chip is the first task row of both twins; its payload is the
+  `/cortex` paste for the laptop chat.
+- "Last check-in" stamp read from `PyAutoCortex/checkin.yaml`
+  (`refreshed: <UTC ISO>`), written by `cortex checkin` / `collect --apply`
+  before rendering and carried by `push_ledger`. Age is computed **on view**
+  by inline JS in the HTML twin (red + "stale, paste the check-in" after
+  60 min), never at render, so CI re-renders and doc-only pushes cannot fake
+  freshness and `--check` needs no new normaliser rule. Missing file renders
+  "never checked in" in red.
+- Summary table: one row per active project — next phase, awaiting / running
+  / ready counts, last ruling date.
+- Projects first, ordered active → planned → dormant. Each card puts
+  **Local** / **RAL** / **Mirror** on their own lines, one line of phase
+  counts, the *next* phase as a single row with its own chip, and a
+  `<details>` fold holding the remaining open phases as links to their phase
+  files, the `phases/<project>/` dir and the project's issues page. No
+  where-to-look bullets on the page.
+- Awaiting ruling is the first state section; Running / submitted loses the
+  "run it again" chip; Ready shows one row per project with further ready
+  phases folded.
+- Epics removed: `parse_epics`, the section, the `REFRESH_BLURB` mention and
+  the `epics.md` references in `PyAutoCortex/AGENTS.md`, `README.md`,
+  `REFERENCE.md`, the cortex skill and `ledger_merge.py`. The `Epic:` phase
+  header survives as an optional join key to a Mind epic (`cortex.py new
+  --epic` untouched). Science projects are long exploratory programmes;
+  epics remain a Mind concept for chaining development tasks.
+- Section-order test pins rewritten in `tests/test_cortex_conductor.py`.
+
+**PyAutoCortex #14** (merged 5e6d8b0) — `epics.md` removed, `checkin.yaml`
+added, `dashboard.md` / `dashboard.html` regenerated projects-first with
+`PYAUTO_CORTEX` pointed at the task worktree.
+
+## Merge order and the stacked-PR trap
+
+The Cortex PR's `Dashboard Refresh` check renders against PyAutoBrain `main`,
+so it was red ("dashboard.md/.html are stale") until #355 landed; re-run
+after the Brain merge, green, then merged. Brain CI clones PyAutoCortex
+**main** beside the Brain, so a Brain test that shelled out to the cloned
+Cortex's `ledger_merge.py classify` saw the unmerged Cortex half — first push
+of #355 failed on exactly that, fixed in 5e18c20 by keeping that claim in the
+Cortex's own tests.
+
+## Follow-up (not filed)
+
+An `Issue:` header on phases so the per-project fold can link a phase's own
+issue rather than the repo's issue list.
+
+## Original prompt
+
 # Cortex dashboard: projects first, check-in prompt on top, epics discarded
 
 Type: feature

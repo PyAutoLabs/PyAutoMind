@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1293 records across 8 buckets.
+1294 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -136,6 +136,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-checkin-p2-the-door](2026/09/cortex-checkin-p2-the-door.md)
 - [cortex-checkin-p3-project-summary](2026/09/cortex-checkin-p3-project-summary.md)
 - [cortex-conductor](2026/09/cortex-conductor.md) — closed completed 2026-09-01
+- [cortex-dashboard-projects-first](2026/09/cortex-dashboard-projects-first.md)
 - [cortex-migration](2026/09/cortex-migration.md) — closed completed 2026-09-01
 - [cortex-public-surfaces](2026/09/cortex-public-surfaces.md) — closed completed 2026-09-02
 - [cortex-registration](2026/09/cortex-registration.md) — closed completed 2026-09-01
