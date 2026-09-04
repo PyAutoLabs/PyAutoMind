@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 0 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 159 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 82
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 81
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -200,14 +200,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/profiles_jit_powerlaw_exact_zero_atol.md"><code>misc/profiles_jit.py</code>: <code>mp.PowerLaw</code> deflections fail on an exact-zero on-axis point (rtol-only check)</a> — autolens_workspace_test · small · safe · normal</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/profiles_jit_powerlaw_exact_zero_atol.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a strict FD check…</a> — autolens_profiling · small · safe · low</summary>
 
 ```
@@ -248,11 +240,25 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — ci · medium · safe · high</summary>
+
+```
+/start_dev draft/bug/ci/scheduled_runs_delivered_hours_late.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-- _(nothing in flight)_
+<details><summary>📋 <a href="active/profiles_jit_powerlaw_exact_zero_atol.md"><code>misc/profiles_jit.py</code>: <code>mp.PowerLaw</code> deflections fail on an exact-zero on-axis point (rtol-only check)</a> — issued 2026-09-04</summary>
+
+```
+/start_dev active/profiles_jit_powerlaw_exact_zero_atol.md
+```
+
+</details>
 
 ## Pending release
 
@@ -404,7 +410,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -684,7 +690,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 27</summary>
+<summary><b>bug</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -778,14 +784,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/profiles_jit_powerlaw_exact_zero_atol.md"><code>misc/profiles_jit.py</code>: <code>mp.PowerLaw</code> deflections fail on an exact-zero on-axis point (rtol-only check)</a> — autolens_workspace_test · small · safe · normal</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/profiles_jit_powerlaw_exact_zero_atol.md
 ```
 
 </details>
@@ -1668,18 +1666,16 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>jax</b> — 4 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax, mass-profiles</summary>
+<summary><b>autoarray — bundle 1</b> — 2 task(s) · 3 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'jax' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
-- draft/bug/autolens_workspace_test/profiles_jit_powerlaw_exact_zero_atol.md
-- draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md
-- draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
+- draft/feature/autoarray/over_sample_size_via_snr_from.md
+- draft/refactor/autoarray/sparse_operator_int32_indexes.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1692,12 +1688,10 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> | autogalaxy | small | medium | draft |
-| <a href="draft/bug/autolens_workspace_test/profiles_jit_powerlaw_exact_zero_atol.md"><code>misc/profiles_jit.py</code>: <code>mp.PowerLaw</code> deflections fail on an…</a> | autolens_workspace_test | small | normal | draft |
-| <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> | autogalaxy | small | low | draft |
-| <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> | autofit | small | normal | draft |
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> | small | medium | draft |
+| <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> | - | - | - |
 
 </details>
 
@@ -1710,7 +1704,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
-| 2026-09-04 | filed | <a href="draft/bug/autolens_workspace_test/profiles_jit_powerlaw_exact_zero_atol.md"><code>misc/profiles_jit.py</code>: <code>mp.PowerLaw</code> deflections fail on an…</a> |
+| 2026-09-04 | issued | <a href="active/profiles_jit_powerlaw_exact_zero_atol.md"><code>misc/profiles_jit.py</code>: <code>mp.PowerLaw</code> deflections fail on an…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
@@ -2167,7 +2161,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-149 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+148 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2212,11 +2206,11 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
 - `draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md`
-- _… and 109 more_
+- _… and 108 more_
 
 </details>
 
-14 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+13 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2231,7 +2225,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
-- `draft/bug/autolens_workspace_test/profiles_jit_powerlaw_exact_zero_atol.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
