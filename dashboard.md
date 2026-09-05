@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/delaunay_edge_ring_never_zeroed.md">vis_pix Delaunay edge ring is never zeroed: <code>Delaunay(pixels=&lt;appended grid length&gt;)</code> double-counts <code>zeroed_pixels</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/526">issue #526</a> — issued 2026-09-05 — library-dev</summary>
+<details><summary>📋 <a href="active/delaunay_edge_ring_never_zeroed.md">vis_pix Delaunay edge ring is never zeroed: <code>Delaunay(pixels=&lt;appended grid length&gt;)</code> double-counts <code>zeroed_pixels</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/526">issue #526</a> — issued 2026-09-05 — workspace-shipped, awaiting-merge (library PR #527 open; workspace PRs euclid #52 + autolens_workspace #535 open behind the… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/527">PyAutoArray#527</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/52">euclid_strong_lens_modeling_pipeline#52</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/535">autolens_workspace#535</a> — ⏳ pending release: PyAutoArray — ⏸ waiting on PyAutoArray's release</summary>
 
 ```
 /start_dev active/delaunay_edge_ring_never_zeroed.md
@@ -282,8 +282,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#527](https://github.com/PyAutoLabs/PyAutoArray/pull/527) — `active/delaunay_edge_ring_never_zeroed.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
+- ⏸ waiting: [vis_pix Delaunay edge ring is never zeroed: <code>Delaunay(pixels=<appended grid length>)</code> double-counts <code>zeroed_pixels</code>](active/delaunay_edge_ring_never_zeroed.md)
 
 **PyAutoLens**
 
