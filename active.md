@@ -1,14 +1,5 @@
 # Active Tasks
 
-## delaunay-nn-breakdown
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/219
-- issued: 2026-09-05
-- session: claude --resume session_01XQ1gs3WVa2k4721x65wrmr
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-breakdown
-- repos:
-  - autolens_profiling: feature/delaunay-nn-breakdown
-
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222
