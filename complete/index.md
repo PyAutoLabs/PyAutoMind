@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1302 records across 8 buckets.
+1303 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -179,6 +179,7 @@ markers; everything below GENERATED is rebuilt.
 - [numpy-deflections-p3](2026/09/numpy-deflections-p3.md)
 - [organ-board-github-link](2026/09/organ-board-github-link.md) — Every organ board header now carries a `GitHub Page` link beside its existing
 - [over-sample-snr-double-division](2026/09/over-sample-snr-double-division.md)
+- [permanent-ci-timing-history](2026/09/permanent-ci-timing-history.md)
 - [phase-5-dev-leg-prepare-the-mesh](2026/09/phase-5-dev-leg-prepare-the-mesh.md)
 - [pixelized-source-magnification-latent](2026/09/pixelized-source-magnification-latent.md)
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
