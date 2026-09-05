@@ -1967,7 +1967,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/euclid/delaunay_edge_ring_never_zeroed.md">vis_pix Delaunay edge ring is never zeroed: <code>Delaunay(pixels=&lt;appended grid length&gt;)</code> double-counts <code>zeroed_pixels</code></a> — euclid · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/bug/euclid/delaunay_edge_ring_never_zeroed.md">vis_pix Delaunay edge ring is never zeroed: <code>Delaunay(pixels=&lt;appended grid length&gt;)</code> double-counts <code>zeroed_pixels</code></a> — euclid · small · supervised · low</summary>
 
 ```
 /start_dev draft/bug/euclid/delaunay_edge_ring_never_zeroed.md

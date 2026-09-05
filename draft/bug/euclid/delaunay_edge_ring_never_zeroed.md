@@ -10,7 +10,7 @@ Themes:
 - pixelization
 Difficulty: small
 Autonomy: supervised
-Priority: normal
+Priority: low
 Status: draft
 Consequence: judge
 Review-minutes: 10
@@ -37,11 +37,15 @@ vertex. The docstring in the script ("`zeroed_pixels=edge_pixels_total` on the `
 mesh below tells the inversion to hold their reconstructed values at zero") describes an
 intent the code does not implement.
 
-Measured 2026-09-05 (PyAutoLens#726 workspace leg, euclid PR #51): on the
-`dataset/simulated/euclid_dr1_like` scene with a 150 + 30 point mesh, every latent is
-bit-identical with `pixels=grid.shape[0]` and with `pixels=grid.shape[0] - edge_pixels_total`,
-so the effect on the flux latents is nil there; whether it is nil on real tiles, where the
-ring sits at the mask edge, is not established.
+Measured 2026-09-05 (PyAutoLens#726 acceptance, 500 + 30 points on
+`dataset/simulated/euclid_dr1_like`): as written, `mesh.pixels = 560` for a 530-parameter
+mapper and `mesh.zeroed_pixels` is `530..559` — out of range, so the explicit zeroing is a
+no-op. The ring values are nonetheless exactly zero (no data maps to the ring; 294 of 530
+pixels are zero under the positivity solver), and `pixels=500` gives a bit-identical
+reconstruction and latents. So the defect is real but currently harmless: the ring is zero
+by the solver, not by the intent the docstring states. Whether that holds on real tiles with
+a ring inside the mask edge, and whether any code path reads `mesh.pixels` (560) rather
+than the mapper's 530 parameters, is what to establish.
 
 ## What to do
 

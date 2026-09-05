@@ -45,6 +45,19 @@ same fit reproduced `truth.json` bit-for-bit, so only the pixelized route was br
 | Delaunay 150+30, PyPI autoarray 2026.9.4.1 (Voronoi areas), after #728 | 10.95 | 1.257 |
 | same, before #728 | 1095.4 | 0.01257 |
 
+## Acceptance (2026-09-05, PyAutoArray main de92d09 dual areas + PyAutoLens main)
+
+| fit on `euclid_dr1_like`, magzero 24.6 | magnification | source flux | lensed flux |
+|---|---|---|---|
+| Sersic control (= truth) | 15.146 | 0.868 | 13.147 |
+| Delaunay 150+30 | 12.37 | 1.113 | 13.770 |
+| Delaunay 500+30 (production mesh) | 10.97 | 1.289 | 14.139 |
+
+Finite and the right order; 28 % below the Sersic truth at the production mesh because the
+regularized free-form source carries a positive floor across the 10.2 arcsec² hull (+48 %
+source flux) and fits the noisy data more fully (+7.5 % lensed flux) — the source-model
+systematic Cortex phase 7 measures, not a latent defect. Posted on #726.
+
 ## Traps
 
 - **Unit convention hid a 100× error.** Every flux latent is a *sum over data pixels*
