@@ -17,6 +17,8 @@ Review-minutes: 10
 Unattended: ready
 Epic: euclid-dr1-prep
 Filed: 2026-09-05
+Issued: 2026-09-05
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/526
 
 ## The finding
 

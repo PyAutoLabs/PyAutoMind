@@ -227,7 +227,7 @@ a.go:hover{opacity:.9;text-decoration:none}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>2</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>159</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>3</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>158</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-09-05.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -286,6 +286,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
+<div class="task"><button class="copy" data-cmd="/start_dev active/delaunay_edge_ring_never_zeroed.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/delaunay_edge_ring_never_zeroed.md">vis_pix Delaunay edge ring is never zeroed: <code>Delaunay(pixels=&lt;appended grid length&gt;)</code> double-counts <code>zeroed_pixels</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/526">issue #526</a><span class="facets"> — issued 2026-09-05</span> — <span class="facets">library-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/delaunay_nn_breakdown.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/delaunay_nn_breakdown.md">DelaunayNN likelihood breakdown on the A100, like-for-like with <code>delaunay.py</code>, plus the H-row…</a><span class="facets"> — issued 2026-09-05</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/retire_gpu1_mig_exclusion.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a><span class="facets"> — issued 2026-09-05</span></p></div>
 <a id="pending-release"></a><h2>Pending release <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
@@ -341,7 +342,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
 </details>
 <h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
-<p class="muted">159 filed prompts, not started — sorted most-pickable first (priority, then size). 37 of them belong to an epic and are listed only under Epics below.</p>
+<p class="muted">158 filed prompts, not started — sorted most-pickable first (priority, then size). 36 of them belong to an epic and are listed only under Epics below.</p>
 <details>
 <summary>feature — 36</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
@@ -851,6 +852,12 @@ Contract (the `start_bundle` skill is the full body):
 <tr>
 <td class="when">2026-09-05</td>
 <td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/delaunay_edge_ring_never_zeroed.md">vis_pix Delaunay edge ring is never zeroed…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/delaunay_edge_ring_never_zeroed.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-09-05</td>
+<td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/retire_gpu1_mig_exclusion.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
@@ -902,7 +909,7 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/feature/autolens_profiling/gradient_cost_probe.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-09-03</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a></td>
@@ -1168,12 +1175,6 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/docs/pyautobrain/rtd_organism_currency.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
-<td class="when">2026-08-19</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/refactor/pyautomind/repos_sync_check_dedup.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
 <h2>Epics <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/epics.md">markdown version</a></h2>
@@ -1206,10 +1207,9 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/graphical_ep/ep_scoping.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/graphical_ep/ep_scoping.md">Expectation Propagation Scale-Up — Scoping</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">graphical_ep</span><span class="pill r">too-large</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
 </details>
 <details>
-<summary>Euclid DR1 preparation — 15k-lens modelling prep — 6 queued prompt(s), in order</summary>
+<summary>Euclid DR1 preparation — 15k-lens modelling prep — 5 queued prompt(s), in order</summary>
 <div class="task"><button class="copy" data-cmd="Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its canonical state lives in draft/feature/euclid/euclid_dr1_prep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 7 Mind phases (0, 1, 2, 3, 4, 8, 9) — issue ONE at a time as predecessors near" aria-label="Copy the Claude command">📋</button><p><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — <span class="facets">ledger: <code>draft/feature/euclid/euclid_dr1_prep_epic.md</code></span> — <span class="facets">science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/euclid/catalogue_extension_coolest_mass_fits.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/euclid/catalogue_extension_coolest_mass_fits.md">Extend the catalogue: COOLEST CSV, mass-model FITS products, and a retroactive-update feasibility…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">euclid</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/bug/euclid/delaunay_edge_ring_never_zeroed.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/delaunay_edge_ring_never_zeroed.md">vis_pix Delaunay edge ring is never zeroed: <code>Delaunay(pixels=&lt;appended grid length&gt;)</code> double-counts <code>zeroed_pixels</code></a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">euclid</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md">GPU route takes 1 h 14 min to 1 h 44 min…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">euclid</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/euclid/euclid_dr1_prep_epic.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/euclid/euclid_dr1_prep_epic.md">Euclid DR1 preparation — 15k-lens modelling prep…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">euclid</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md">Single-process CPU route: JAX vis_lp then Numba + pool vis_pix…</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">euclid</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
