@@ -1,5 +1,19 @@
 # Active Tasks
 
+## delaunay-edge-ring-zeroed
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/526
+- issued: 2026-09-05
+- prompt: active/delaunay_edge_ring_never_zeroed.md
+- session: claude --resume session_01XCQK1pjQx7YH5e9dtWrX76
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/delaunay-edge-ring-zeroed
+- location: web-session (clones at /home/user/pyautoarray, /home/user/euclid_strong_lens_modeling_pipeline, /home/user/autolens_workspace; no worktree)
+- classification: both — library PyAutoArray first, then euclid_strong_lens_modeling_pipeline + autolens_workspace behind the library-first gate
+- suggested-branch: claude/delaunay-edge-ring-zeroed-8l4u1z
+- epic: euclid-dr1-prep
+- repos:
+  - PyAutoArray: claude/delaunay-edge-ring-zeroed-8l4u1z
+
 ## delaunay-nn-breakdown
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/219
 - issued: 2026-09-05
