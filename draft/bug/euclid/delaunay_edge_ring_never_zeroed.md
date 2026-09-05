@@ -110,3 +110,19 @@ reloaded from `tracer.json` crashes because the stored `zeroed_pixels` array is 
 moot for `initial_lens_model.py` (one mapper). Consider a fifth step: have
 `Delaunay.__init__`/the mapper assert `mesh.pixels == source_plane_mesh_grid.shape[0]` so the
 mismatch cannot be silent again.
+
+**The test workspaces are where the fix actually lives.** `autolens_workspace_test` and
+`autogalaxy_workspace_test` use the correct form almost everywhere — `pixels = 750` (or 300 /
+400 / 500) feeds both `Hilbert(pixels=pixels)` and `Delaunay(pixels=pixels,
+zeroed_pixels=edge_pixels_total)`, and the scripts keep a separate
+`total_mapper_pixels = image_plane_mesh_grid.shape[0]` for the grid length, so the distinction
+was understood there: every `jax_likelihood/`, `jax_grad/`, `datacube/` and
+`modeling_visualization_delaunay_jit.py` site, from the 2026-04-03 fresh start through the
+2026-07-26 `jax_grad` certifications. The one wrong-form site is
+`multi_dataset/dataset_model_parity_delaunay.py` (ef250b7a, 2026-05-15, #97):
+`pixels=OVERLAY_SHAPE[0] * OVERLAY_SHAPE[1] + EDGE_PIXELS`. Those parity and certification runs
+all went through green because they are single-mapper: the two forms give bit-identical
+inversions there, so no parity, JIT-equality or FD-gradient test *could* have caught the
+feature-script form — and none asserts on `mesh.pixels` or the `zeroed_pixels` indices, which
+is the assertion the fifth step above would add. `autogalaxy_workspace` proper has no Delaunay
+site at all.
