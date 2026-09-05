@@ -13,6 +13,7 @@ Review-minutes: 20
 Unattended: ready
 Epic: ci-timing-fast-tests
 Phase: 3
+Issued: 2026-09-05
 
 Bring the dead timing legs live: unit_test_timing, import_time, workspace_testmode_timing on a real schedule.
 
