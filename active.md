@@ -17,7 +17,8 @@
 - issued: 2026-09-05
 - prompt: active/smoke_timings_ingester_per_script_board.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/203
 - epic: ci-timing-fast-tests (phase 1 of 9)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the PyAutoHeart clone
 - repos:
@@ -26,4 +27,6 @@
     Phase 1 of the ci-timing-fast-tests epic: the smoke-timings ingester (per-script
     CI timing rows on the Heart ⏱ board). Fable-reviewed plan on the issue;
     implementation delegated to an Opus subagent per the Brain's delegation
-    ladder. Next: PR on PyAutoHeart, then /prm; phase 2 (durable history) follows.
+    ladder; PyAutoHeart#203 open (735 tests green). Next: /prm once CI is green;
+    then issue phase 2 (durable history). Known risk on the first live run: the
+    cross-repo artifact /zip 403 — remedy is the HEART_TIMINGS_TOKEN secret.

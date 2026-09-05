@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_timings_ingester_per_script_board.md">Smoke-timings ingester: per-script CI timing rows on the Heart performance board</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/202">issue #202</a> — issued 2026-09-05 — library-dev</summary>
+<details><summary>📋 <a href="active/smoke_timings_ingester_per_script_board.md">Smoke-timings ingester: per-script CI timing rows on the Heart performance board</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/202">issue #202</a> — issued 2026-09-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/203">PyAutoHeart#203</a></summary>
 
 ```
 /start_dev active/smoke_timings_ingester_per_script_board.md
@@ -2031,7 +2031,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 <details>
 <summary><b>CI test timing — finish the board, fast physical tests</b> — 9 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>CI test timing — finish the board, fast physical tests</b> — ledger: `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md` — phase 1 **ISSUED** 2026-09-05 — PyAutoHeart#202 (<code>active/smoke_timings_ingester_per_script_board.md</code>, branch…</summary>
+<details><summary>📋 <b>CI test timing — finish the board, fast physical tests</b> — ledger: `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md` — phase 1 **PR OPEN** 2026-09-05 — PyAutoHeart#202 → PyAutoHeart#203 awaiting merge…</summary>
 
 ```
 Continue the 'CI test timing — finish the board, fast physical tests' epic. Its canonical state lives in draft/feature/pyautoheart/ci_timing_fast_tests_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 9 phased prompts (1-9) — finish the timing board (smoke-timings ingester, permanent history in PyAutoHeart, dead unit-test/import/testmode legs live), snapshot a LEGACY timing round, then the _test physical+fast rebuilds (autogalaxy rehearses, autolens follows; one pin-regeneration wave each), CI caches, user-workspace/HowTo pass, and a source hot-spot census. ALL other source/workspace development is paused while this epic runs (stable state of truth; pin changes validated by unit tests + developer/profiling workspaces). Issue ONE phase at a time — no bulk issue queues. Design doc: docs/pyautoheart/test_performance_board_assessment.md (Planes B/C are phases 1-2).

@@ -72,7 +72,7 @@ epic, never picked standalone.
 ## ci-timing-fast-tests
 - title: CI test timing — finish the board, fast physical tests
 - ledger: draft/feature/pyautoheart/ci_timing_fast_tests_epic.md
-- status: phase 1 **ISSUED** 2026-09-05 — PyAutoHeart#202 (`active/smoke_timings_ingester_per_script_board.md`, branch `claude/ci-test-timing-epic-ke2lul`); Fable review of the plan recorded in the ledger (recommends 1→2→3→4→7→5→6→8→9 — CI caches before the rebuild waves)
+- status: phase 1 **PR OPEN** 2026-09-05 — PyAutoHeart#202 → PyAutoHeart#203 awaiting merge (`active/smoke_timings_ingester_per_script_board.md`, branch `claude/ci-test-timing-epic-ke2lul`); Fable review of the plan recorded in the ledger (recommends 1→2→3→4→7→5→6→8→9 — CI caches before the rebuild waves)
 - notes: 9 phased prompts (1-9) — finish the timing board (smoke-timings ingester, permanent history in PyAutoHeart, dead unit-test/import/testmode legs live), snapshot a LEGACY timing round, then the _test physical+fast rebuilds (autogalaxy rehearses, autolens follows; one pin-regeneration wave each), CI caches, user-workspace/HowTo pass, and a source hot-spot census. ALL other source/workspace development is paused while this epic runs (stable state of truth; pin changes validated by unit tests + developer/profiling workspaces). Issue ONE phase at a time — no bulk issue queues. Design doc: docs/pyautoheart/test_performance_board_assessment.md (Planes B/C are phases 1-2).
 
 ## image-source-mappings

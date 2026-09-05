@@ -51,7 +51,7 @@ epic finishes).
 
 | Phase | Prompt | State |
 |---|---|---|
-| 1 | active/smoke_timings_ingester_per_script_board.md | **issued 2026-09-05** — PyAutoHeart#202, branch `claude/ci-test-timing-epic-ke2lul` |
+| 1 | active/smoke_timings_ingester_per_script_board.md | **in flight** — issued 2026-09-05, PyAutoHeart#202 → PR PyAutoHeart#203 (awaiting merge) |
 | 2 | draft/feature/pyautoheart/permanent_ci_timing_history.md | filed |
 | 3 | draft/feature/pyautoheart/offtick_timing_legs_live.md | filed |
 | 4 | draft/test/pyautoheart/legacy_baseline_timing_round.md | filed |
