@@ -5,7 +5,9 @@
 - issued: 2026-09-05
 - prompt: active/magnification_latent_zero_for_pixelized_source.md
 - session: claude --resume session_011kyfKgDB1rMkcQsn19ow4T
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/727
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/727
 - worktree: ~/Code/PyAutoLabs-wt/pixelized-source-magnification-latent
 - location: web-session (PyAutoLens shallow clone at /home/user/pyautolens; no worktree yet)
 - classification: both — library PyAutoLens first, workspace follow-up euclid_strong_lens_modeling_pipeline behind the library-first gate
