@@ -14,6 +14,7 @@ Review-minutes: 20
 Unattended: ready
 Epic: ci-timing-fast-tests
 Phase: 4
+Issued: 2026-09-05
 
 Legacy baseline timing round: snapshot the pre-rebuild timings of every CI test surface.
 
