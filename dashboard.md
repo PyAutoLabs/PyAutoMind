@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/permanent_ci_timing_history.md">Permanent CI timing history stored in PyAutoHeart</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/204">issue #204</a> — issued 2026-09-05 — library-dev</summary>
+<details><summary>📋 <a href="active/permanent_ci_timing_history.md">Permanent CI timing history stored in PyAutoHeart</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/204">issue #204</a> — issued 2026-09-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/205">PyAutoHeart#205</a></summary>
 
 ```
 /start_dev active/permanent_ci_timing_history.md
