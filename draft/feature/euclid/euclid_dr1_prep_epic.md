@@ -282,7 +282,10 @@ resumes at 8.
    layer starts from the re-derived values, not the archive. Human acceptance (finite
    `vis_pix` magnification near the Sersic control's 15.15 on `part3b_fit_latent.py`)
    stays open on #726. A pipeline lead found on the way — the Delaunay edge ring is never
-   zeroed — is `draft/bug/euclid/delaunay_edge_ring_never_zeroed.md`.
+   zeroed — **SHIPPED 2026-09-05** as `complete/2026/09/delaunay-edge-ring-zeroed.md`
+   (PyAutoArray#526: #527 merged, pending-release; euclid #52 + autolens_workspace #535
+   merged). The over-count cancelled for one mapper, so no archived `vis_pix` result and
+   no phase 4 witness changes.
 9. `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` (was 7) — COOLEST CSV,
    mass-model FITS products with a file-size assessment, and a feasibility verdict on
    retroactive catalogue updates. Gates: the Cortex 10-lens science run
