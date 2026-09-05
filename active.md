@@ -17,7 +17,8 @@
 - issued: 2026-09-05
 - prompt: active/offtick_timing_legs_live.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/207
 - epic: ci-timing-fast-tests (phase 3 of 9)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the PyAutoHeart clone
 - repos:
@@ -29,4 +30,6 @@
     a new Heart check ingests it into the timings/ record and the existing board
     sections; workspace_testmode_timing retired as superseded by the Smoke scripts
     row. Fable plan on the issue; implementation delegated to Opus.
-    Next: PR on PyAutoHeart, then /prm; phase 4 (LEGACY snapshot) follows.
+    PyAutoHeart#207 open (841 tests green). Next: /prm once CI is green; then
+    phase 4 (LEGACY snapshot) — no earlier than the day after a live heart-health
+    run has seeded the record.

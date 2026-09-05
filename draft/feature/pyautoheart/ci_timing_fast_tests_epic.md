@@ -53,7 +53,7 @@ epic finishes).
 |---|---|---|
 | 1 | complete/2026/09/smoke-timings-ingester.md | **SHIPPED 2026-09-05** — PyAutoHeart#203 (`7a286ea`), issue #202 closed |
 | 2 | complete/2026/09/permanent-ci-timing-history.md | **SHIPPED 2026-09-05** — PyAutoHeart#205 (`7b4e109`), issue #204 closed |
-| 3 | active/offtick_timing_legs_live.md | **issued 2026-09-05** — PyAutoHeart#206 (ingestion via lib-tests.yml; workspace_testmode_timing retired as superseded), branch `claude/ci-test-timing-epic-ke2lul` |
+| 3 | active/offtick_timing_legs_live.md | **in flight** — issued 2026-09-05, PyAutoHeart#206 → PR PyAutoHeart#207 (awaiting merge; ingestion via lib-tests.yml, workspace_testmode_timing retired as superseded) |
 | 4 | draft/test/pyautoheart/legacy_baseline_timing_round.md | filed |
 | 5 | draft/test/autogalaxy_workspace_test/physical_fast_rebuild.md | filed |
 | 6 | draft/test/autolens_workspace_test/physical_fast_rebuild.md | filed |
