@@ -256,7 +256,7 @@ resumes at 8.
    2e-5 with dual areas, −13..−53 % on adaptive-style meshes and −95..−99 % when the source
    fills the hull with Voronoi areas; `zeroed_pixels` cannot rescue it — the pathology is one
    ring inside the convex hull) and
-   `draft/bug/autolens/magnification_latent_zero_for_pixelized_source.md` (the pipeline's
+   `complete/2026/09/pixelized-source-magnification-latent.md` — **SHIPPED 2026-09-05** (the pipeline's
    `magnification` latent is a hard 0/0 for any pixelization-only source because
    `Galaxy.image_2d_from` returns zeros; 9/9 archived `vis_pix` results record `0.0`; the
    Sersic control reproduces `truth.json` bit-for-bit). The rectangular-mesh lead (+6 %/+28 %
@@ -270,6 +270,19 @@ resumes at 8.
    Record: `complete/2026/09/delaunay-area-magnification-audit.md`. The two follow-up bug
    prompts are the epic's next steps (autoarray fix first, then the autolens fix with its
    euclid workspace leg behind the library-first gate).
+   **Autolens follow-up SHIPPED 2026-09-05** — `complete/2026/09/pixelized-source-magnification-latent.md`,
+   PyAutoLens#726 closed: PR #727 merged (pixelized source flux = reconstruction integrated
+   with `areas_for_magnification`), correction PR #728 merged (divide by the data pixel
+   area — the undivided value was 100x too large at 0.1"/pixel), euclid PR #51 merged
+   (docstring + `vis_pix` latent test); both library PRs pending-release. **Ledger note for Cortex phase 4 / Mind phase 9:** every archived
+   `initial_lens_model/vis_pix` result carries `magnification = 0.0` as a sentinel and must
+   be re-derived under the fixed library; `catalogue/scripts/magnitudes.py` ingests
+   `latent.magnification` unchanged, so phase 4's numerics witness must still exclude the
+   `vis_pix` magnification column until the re-derivation, and phase 9's magnification
+   layer starts from the re-derived values, not the archive. Human acceptance (finite
+   `vis_pix` magnification near the Sersic control's 15.15 on `part3b_fit_latent.py`)
+   stays open on #726. A pipeline lead found on the way — the Delaunay edge ring is never
+   zeroed — is `draft/bug/euclid/delaunay_edge_ring_never_zeroed.md`.
 9. `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` (was 7) — COOLEST CSV,
    mass-model FITS products with a file-size assessment, and a feasibility verdict on
    retroactive catalogue updates. Gates: the Cortex 10-lens science run

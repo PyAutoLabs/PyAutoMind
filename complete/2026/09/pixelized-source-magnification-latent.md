@@ -1,3 +1,93 @@
+## pixelized-source-magnification-latent
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/726
+- completed: 2026-09-05
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/727
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/728
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/51
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/727
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/728
+- epic: euclid-dr1-prep (follow-up to phase 8; second of the audit's two defects)
+
+Fixed the `magnification` latent for pixelized sources. `total_source_flux` /
+`total_source_flux_mujy` read the source galaxy's `image_2d_from`, which is zeros for a
+galaxy whose only light model is a `Pixelization`, so every pixelized fit had
+`total_source_flux = 0.0` and `magnification = inf` (dropped by PyAutoFit's NaN guard, or
+archived as a `0.0` sentinel in 9/9 Euclid `vis_pix` results). The Sersic control on the
+same fit reproduced `truth.json` bit-for-bit, so only the pixelized route was broken.
+
+## What shipped
+
+- **PyAutoLens #727** (`609338f`, merge `633c8e0`) — `autolens/analysis/latent.py` gains
+  `_pixelized_source_flux(fit, xp)`: for every mapper `inversion.linear_obj_galaxy_dict`
+  assigns to the source galaxy, `Σ_i s_i A_i` with `A_i = mesh_geometry.areas_for_magnification`.
+  `total_source_flux` and `total_source_flux_mujy` = light-profile flux + that term;
+  `magnification` unchanged in form. A mesh geometry without areas gives NaN + one warning,
+  never a silent zero. Branching on Python structure only, so the per-sample `jax.jit` path
+  is unaffected. 7 tests. 617 passed.
+- **PyAutoLens #728** (`5d6eda3`, merge `1f5b1e9`) — correction: divide by the data pixel
+  area (`fit.dataset.grids.lp.pixel_area`, a Python float) so the term sits in the module's
+  per-data-pixel flux convention. 3 tests, one at 0.5"/pixel pinning the division
+  (4.561 → 1.140), one fixed-field-of-view scene stable across pixel scales. 620 passed.
+- **euclid_strong_lens_modeling_pipeline #51** (`48d6b45`+`d2457e1`, merge `7067e59`) —
+  `scripts/tools/diagnose_latent_vis_pix.py` docstring: `magnification` and the source
+  fluxes are NOT stage-invariant (the source model is what `vis_pix` replaces); a new
+  `__Which latents are stage-invariant__` section states the definition now in force.
+  `tests/test_compute_latent_variable.py`: Delaunay `vis_pix`-style fixture (Hilbert 150 +
+  30 circle-edge points, `AdaptImages`, truth lens) and two tests — `magnification` present,
+  finite, positive, equal to lensed/source µJy; lens-side latents equal the Sersic control to
+  1e-6 while source-side ones differ. 71 passed, CI 9/9 legs.
+
+## Measured
+
+| fit on `euclid_dr1_like` (0.1"/px) | magnification | total_source_flux |
+|---|---|---|
+| Sersic control (= truth.json) | 15.146 | 0.868 |
+| Delaunay 150+30, PyPI autoarray 2026.9.4.1 (Voronoi areas), after #728 | 10.95 | 1.257 |
+| same, before #728 | 1095.4 | 0.01257 |
+
+## Traps
+
+- **Unit convention hid a 100× error.** Every flux latent is a *sum over data pixels*
+  (`∫ I d²θ / A_pix`), and the reconstruction `s_i` is in those units, so `Σ s_i A_i`
+  (arcsec²) must be divided by `A_pix`. PyAutoLens' fixtures use 1" pixels, so #727's
+  internal-consistency tests (`Σ image / Σ s·A`) passed while the number was wrong; the
+  Euclid workspace test at 0.1"/pixel exposed it. Any new flux-like latent needs a test at
+  a non-unit pixel scale.
+- **`fit.tracer_to_inversion` is an uncached property** that rebuilds mappers, so its keys
+  never match `inversion.reconstruction_dict`. Use `inversion.linear_obj_galaxy_dict`
+  (set in `to_inversion.py`); its galaxy values are the tracer's own objects.
+- **kNN / DelaunayNN meshes do not hit the NaN branch**: they inherit
+  `InterpolatorDelaunay.mesh_geometry`, so they expose `areas_for_magnification` and get a
+  number. Whether kNN areas are the right quadrature for those interpolants is the open
+  lead in `draft/test/workspaces/mesh_magnification_correctness.md`.
+- **`magnification` is NaN whenever the regularized reconstruction has net-negative flux**
+  — `total_source_flux_mujy` takes `log10` of a negative flux. Pre-existing µJy behaviour,
+  unchanged here; the #728 scale-stability test had to pick a mesh/regularization where the
+  reconstruction stays positive.
+- **Feature/Bug agents scored the prompt "too-large" (17) on length and repo count** and
+  proposed a 4-phase split; the declared small-medium with the architect design was right.
+- **Merging a `Fixes #N` library PR auto-closes the issue** while a workspace half is still
+  pending — edit the body to `Part of #N` before merging.
+
+## Follow-ups filed
+
+- `draft/bug/euclid/delaunay_edge_ring_never_zeroed.md` — `scripts/initial_lens_model.py`
+  passes the appended grid length as `Delaunay(pixels=…)` with `zeroed_pixels=30`;
+  `Delaunay.__init__` adds `zeroed_pixels` itself, so the zeroed indices land past the mesh
+  and the edge ring is never zeroed (latents bit-identical either way on the test scene).
+- Human acceptance still open on #726: `part3b_fit_latent.py` (500-point mesh, PyAutoArray
+  `main` dual areas) should report a finite `vis_pix` magnification near 15.15. Archived
+  `vis_pix` rows carry the `0.0` sentinel and must be re-derived (epic item 8, Cortex
+  phase 4 note). `catalogue/scripts/magnitudes.py:305` ingests the latent unchanged.
+
+## Session notes
+
+Shipped from a web session (no worktree, no `gh`): shallow clones of PyAutoLens and the
+Euclid pipeline, GitHub via the MCP surface; a Fable session planning with three Opus
+subagents executing (library fix, workspace leg, pixel-area correction).
+
+## Original prompt
+
 # magnification latent is inf/0.0 for any pixelized source: Galaxy.image_2d_from returns zeros for a Pixelization-only galaxy
 
 Type: bug
