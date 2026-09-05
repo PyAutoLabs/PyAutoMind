@@ -51,7 +51,7 @@ epic finishes).
 
 | Phase | Prompt | State |
 |---|---|---|
-| 1 | draft/feature/pyautoheart/smoke_timings_ingester_per_script_board.md | filed |
+| 1 | active/smoke_timings_ingester_per_script_board.md | **issued 2026-09-05** — PyAutoHeart#202, branch `claude/ci-test-timing-epic-ke2lul` |
 | 2 | draft/feature/pyautoheart/permanent_ci_timing_history.md | filed |
 | 3 | draft/feature/pyautoheart/offtick_timing_legs_live.md | filed |
 | 4 | draft/test/pyautoheart/legacy_baseline_timing_round.md | filed |
@@ -65,6 +65,60 @@ Order: 1→2→3 build the instrument (3 may run alongside 2); 4 snapshots the l
 5 rehearses the rebuild on the smaller repo before 6 does the flagship; 7 is independent
 infrastructure and may run any time after 1; 8 and 9 are data-driven and follow once
 ingested timings exist. Issue ONE phase at a time — no bulk issue queues.
+
+## Fable review of the Opus plan (2026-09-05, before phase 1 was issued)
+
+The nine-phase decomposition stands; these are the corrections and design calls
+it needed, recorded here so later phases do not re-derive them.
+
+- **Phase 0 of the board arc is already done.** The design doc's "issue
+  `script_timing_baselines_orphaned_and_window_filled.md` first" shipped as
+  PyAutoHeart#166 on 2026-08-24 (`complete/2026/08/script-timing-baselines-fix.md`);
+  the ground-truth survey above omits it. Nothing is pending before phase 1.
+- **Recommended order: 1→2→3→4→7→5→6→8→9.** Phase 7 (CI caches) is
+  content-independent and already certified (51x local / 5.9x A100), so it
+  belongs immediately after the legacy snapshot and *before* the rebuild waves:
+  the rebuilds then target what remains once compile is cached, and every
+  phase-5/6 before/after is measured on one cache state. Keeping 7 after 4
+  preserves the snapshot as the pre-everything record. The original "7 may run
+  any time after 1" is superseded by this unless the human objects.
+- **Phase 1 design calls (in PyAutoHeart#202):** per-script rows get their own
+  declared thresholds (`thresholds.smoke_timings`: 2.0x AND >=5 s — the
+  profiling ratio with a floor above import-floor jitter) rather than
+  ci_timing's 1.5x/120 s, which is sized for multi-minute gates; the prompt's
+  "consistent with ci_timing" is read as same doctrine, own numbers. Only the
+  PR-gate `smoke-timings-<py>` artifacts are ingested; the weekly
+  `smoke-timings-{scripts,notebooks}-*` channel is a follow-up. Every row
+  carries its source `run_id`/`run_url`. Known risk: the artifact `/zip`
+  endpoint may refuse the repo-scoped `GITHUB_TOKEN` for other repos'
+  artifacts; the check records that per repo and the workflow already reads a
+  `HEART_TIMINGS_TOKEN` secret (fine-grained PAT, Actions: read) as the remedy —
+  a secret, not a code change.
+- **Phase 2 must dedupe on run id, not date.** A repo with no new gate run
+  between two daily ticks yields the same artifact twice; appending by date
+  would write a quiet week as seven copies of one run — the exact "one value
+  repeated seven times" defect phase 0 fixed in `script_timing`. Phase 1
+  records `run_id` on every row for this reason; the durable record appends one
+  observation per (repo, python leg, run id).
+- **Phase 3 execution home: prefer ingestion over a new cloud leg.** The five
+  libraries' own `Tests` gates can emit a `pytest --durations` JSON artifact
+  (one PyAutoHands/library change, ingested exactly like phase 1) instead of a
+  daily job that source-installs the stack. `workspace_testmode_timing` is the
+  exception (it needs the installed stack) and may stay dev-box-observed and
+  published via `pyauto-heart publish`, which the board already renders
+  (`state/devbox_board.json`). Phase 3 decides; this is the default.
+- **Phase 4 timing.** It needs one live `heart-health.yml` run after phases 2
+  and 3 have merged (the first run seeds the durable record), so it is issued
+  no earlier than the day after; its deliverable is the labeled snapshot plus
+  the written digest, and both are human-judged.
+- **Phases 5/6.** Before/after per-script seconds must come from the phase-1
+  artifact rows (same runner class), never from local timings; pins regenerate
+  once, from the final simulations, with `--xla_cpu_multi_thread_eigen=false`
+  in force. Already in the prompts; restated because it is the one place the
+  wave can silently invalidate itself.
+- **Pause exception on record.** `epics.md` notes image-source-mappings
+  proceeds alongside this epic by user decision (2026-09-02); that is the only
+  sanctioned exception to "all other development paused".
 
 ## Original request (verbatim, 2026-08-31)
 
