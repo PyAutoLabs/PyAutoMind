@@ -54,12 +54,20 @@ epic finishes).
 | 1 | complete/2026/09/smoke-timings-ingester.md | **SHIPPED 2026-09-05** — PyAutoHeart#203 (`7a286ea`), issue #202 closed |
 | 2 | complete/2026/09/permanent-ci-timing-history.md | **SHIPPED 2026-09-05** — PyAutoHeart#205 (`7b4e109`), issue #204 closed |
 | 3 | complete/2026/09/offtick-timing-legs-live.md | **SHIPPED 2026-09-05** — PyAutoHeart#207 (`cb1d500`), issue #206 closed; ingestion via lib-tests.yml, workspace_testmode_timing retired as superseded |
-| 4 | active/legacy_baseline_timing_round.md | **issued 2026-09-05** — PyAutoHeart#208; record seeded 2026-09-05 (494 scripts / 11 repos, 0 unavailable), branch `claude/ci-test-timing-epic-ke2lul` |
+| 4 | active/legacy_baseline_timing_round.md | **in flight** — issued 2026-09-05, PyAutoHeart#208 → PR PyAutoHeart#209 (awaiting merge); record seeded 2026-09-05 (494 scripts / 11 repos, 0 unavailable); digest: PyAutoHeart `timings/legacy_round_2026-09.md` |
 | 5 | draft/test/autogalaxy_workspace_test/physical_fast_rebuild.md | filed |
 | 6 | draft/test/autolens_workspace_test/physical_fast_rebuild.md | filed |
 | 7 | draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md | filed |
 | 8 | draft/test/workspaces/user_workspace_howto_slow_script_pass.md | filed |
 | 9 | draft/research/workspaces/unit_test_import_time_hotspot_census.md | filed |
+
+**Legacy digest (phase 4 evidence for phases 5–9):** PyAutoHeart
+`timings/legacy_round_2026-09.md` (PR #209) — in both `_test` flagships the time sits in
+~15 compile-dominated `jax_likelihood` scripts (autogalaxy_test 537 s / 39 scripts,
+autolens_test 435 s / 27); the user workspaces and HowTos are import-floor dominated
+(HowToLens 47 of 50 scripts under 10 s); the slowest single script anywhere is
+autocti_workspace `imaging_ci/modeling/start_here.py` at 61 s; unit/import rows pending the
+first library CI run after PyAutoHeart#207.
 
 Order: 1→2→3 build the instrument (3 may run alongside 2); 4 snapshots the legacy record;
 5 rehearses the rebuild on the smaller repo before 6 does the flagship; 7 is independent

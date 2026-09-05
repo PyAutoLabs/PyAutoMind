@@ -17,7 +17,8 @@
 - issued: 2026-09-05
 - prompt: active/legacy_baseline_timing_round.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/209
 - epic: ci-timing-fast-tests (phase 4 of 9)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the PyAutoHeart clone
 - repos:
@@ -29,4 +30,7 @@
     was seeded by a hand-dispatched heart-health run on 2026-09-05: 494 scripts
     across all 11 smoke-gated repos, 0 unavailable — the cross-repo artifact 403
     risk did not materialise. Unit/import rows fill on the next library CI run.
-    Epoch code delegated to Opus; digest written in-session.
+    PyAutoHeart#209 open (864 tests green): epochs.jsonl live (`legacy @ 2026-09-05`),
+    readers compare within the current epoch, digest at PyAutoHeart
+    `timings/legacy_round_2026-09.md`. Next: /prm; then phase 7 (CI caches) per the
+    review's order, before the rebuild waves.

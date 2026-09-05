@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/legacy_baseline_timing_round.md">Legacy baseline timing round: snapshot pre-rebuild timings of every CI test surface</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/208">issue #208</a> — issued 2026-09-05 — library-dev</summary>
+<details><summary>📋 <a href="active/legacy_baseline_timing_round.md">Legacy baseline timing round: snapshot pre-rebuild timings of every CI test surface</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/208">issue #208</a> — issued 2026-09-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/209">PyAutoHeart#209</a></summary>
 
 ```
 /start_dev active/legacy_baseline_timing_round.md
