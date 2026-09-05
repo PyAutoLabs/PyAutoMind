@@ -5,7 +5,7 @@
 - issued: 2026-09-05
 - prompt: active/magnification_latent_zero_for_pixelized_source.md
 - session: claude --resume session_011kyfKgDB1rMkcQsn19ow4T
-- status: workspace-shipped, awaiting-merge (library PR #727 MERGED 633c8e0; correction PR #728 open; workspace PR #51 open behind the library-first gate)
+- status: workspace-shipped, awaiting-merge (library PRs #727 MERGED 633c8e0 and #728 MERGED 1f5b1e9; workspace PR #51 open, gate cleared)
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/727
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/728
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/51
