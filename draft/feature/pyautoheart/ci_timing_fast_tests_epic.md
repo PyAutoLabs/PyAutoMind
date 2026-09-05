@@ -51,7 +51,7 @@ epic finishes).
 
 | Phase | Prompt | State |
 |---|---|---|
-| 1 | active/smoke_timings_ingester_per_script_board.md | **in flight** — issued 2026-09-05, PyAutoHeart#202 → PR PyAutoHeart#203 (awaiting merge) |
+| 1 | complete/2026/09/smoke-timings-ingester.md | **SHIPPED 2026-09-05** — PyAutoHeart#203 (`7a286ea`), issue #202 closed |
 | 2 | draft/feature/pyautoheart/permanent_ci_timing_history.md | filed |
 | 3 | draft/feature/pyautoheart/offtick_timing_legs_live.md | filed |
 | 4 | draft/test/pyautoheart/legacy_baseline_timing_round.md | filed |
