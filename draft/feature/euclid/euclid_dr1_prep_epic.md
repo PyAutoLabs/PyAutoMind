@@ -270,6 +270,19 @@ resumes at 8.
    Record: `complete/2026/09/delaunay-area-magnification-audit.md`. The two follow-up bug
    prompts are the epic's next steps (autoarray fix first, then the autolens fix with its
    euclid workspace leg behind the library-first gate).
+   **Autolens follow-up IN FLIGHT 2026-09-05** (`active/magnification_latent_zero_for_pixelized_source.md`,
+   PyAutoLens#726): PR #727 merged (pixelized source flux = reconstruction integrated with
+   `areas_for_magnification`), correction PR #728 open (divide by the data pixel area — the
+   undivided value was 100x too large at 0.1"/pixel), euclid PR #51 open behind the
+   library-first gate. **Ledger note for Cortex phase 4 / Mind phase 9:** every archived
+   `initial_lens_model/vis_pix` result carries `magnification = 0.0` as a sentinel and must
+   be re-derived under the fixed library; `catalogue/scripts/magnitudes.py` ingests
+   `latent.magnification` unchanged, so phase 4's numerics witness must still exclude the
+   `vis_pix` magnification column until the re-derivation, and phase 9's magnification
+   layer starts from the re-derived values, not the archive. Human acceptance (finite
+   `vis_pix` magnification near the Sersic control's 15.15 on `part3b_fit_latent.py`)
+   stays open on #726. A pipeline lead found on the way — the Delaunay edge ring is never
+   zeroed — is `draft/bug/euclid/delaunay_edge_ring_never_zeroed.md`.
 9. `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md` (was 7) — COOLEST CSV,
    mass-model FITS products with a file-size assessment, and a feasibility verdict on
    retroactive catalogue updates. Gates: the Cortex 10-lens science run

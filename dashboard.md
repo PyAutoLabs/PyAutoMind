@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 157 |
+| [Backlog](#backlog) (`draft/`) | 158 |
 
 > **No batch in flight.**
 
@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/magnification_latent_zero_for_pixelized_source.md">magnification latent is inf/0.0 for any pixelized source: Galaxy.image_2d_from returns zeros…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/726">issue #726</a> — issued 2026-09-05 — workspace-dev (library PR #727 MERGED 2026-09-05, merge 633c8e0) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/727">PyAutoLens#727</a> — ⏳ pending release: PyAutoLens</summary>
+<details><summary>📋 <a href="active/magnification_latent_zero_for_pixelized_source.md">magnification latent is inf/0.0 for any pixelized source: Galaxy.image_2d_from returns zeros…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/726">issue #726</a> — issued 2026-09-05 — workspace-shipped, awaiting-merge (library PR #727 MERGED 633c8e0; correction PR #728 open; workspace PR #51 open behind the… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/727">PyAutoLens#727</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/728">PyAutoLens#728</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/51">euclid_strong_lens_modeling_pipeline#51</a> — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoLens — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/magnification_latent_zero_for_pixelized_source.md
@@ -272,6 +272,8 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoLens**
 
 - [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `active/magnification_latent_zero_for_pixelized_source.md`
+- [PyAutoLens#728](https://github.com/PyAutoLabs/PyAutoLens/pull/728) — `active/magnification_latent_zero_for_pixelized_source.md`
+- ⏸ waiting: [magnification latent is inf/0.0 for any pixelized source: Galaxy.image_2d_from returns zeros…](active/magnification_latent_zero_for_pixelized_source.md)
 
 ## Human review
 
@@ -403,7 +405,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 35</summary>
@@ -1954,7 +1956,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 </details>
 
 <details>
-<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 5 queued prompt(s), in order</summary>
+<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: `draft/feature/euclid/euclid_dr1_prep_epic.md` — science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex</summary>
 
@@ -1968,6 +1970,14 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 ```
 /start_dev draft/feature/euclid/catalogue_extension_coolest_mass_fits.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/euclid/delaunay_edge_ring_never_zeroed.md">vis_pix Delaunay edge ring is never zeroed: <code>Delaunay(pixels=&lt;appended grid length&gt;)</code> double-counts <code>zeroed_pixels</code></a> — euclid · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/euclid/delaunay_edge_ring_never_zeroed.md
 ```
 
 </details>
@@ -2140,7 +2150,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-145 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+146 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2185,11 +2195,11 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautoheart/offtick_timing_legs_live.md`
 - `draft/feature/pyautoheart/permanent_ci_timing_history.md`
-- _… and 105 more_
+- _… and 106 more_
 
 </details>
 
-13 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+14 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2204,6 +2214,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
+- `draft/bug/euclid/delaunay_edge_ring_never_zeroed.md — unknown theme keyword(s): euclid`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
