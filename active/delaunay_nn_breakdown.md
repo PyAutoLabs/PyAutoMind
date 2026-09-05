@@ -17,6 +17,7 @@ Witness: results/breakdown/imaging/delaunay_nn_hpc_a100_fp64.json and a refreshe
 Review-minutes: 15
 Unattended: ready
 Filed: 2026-09-05
+Issued: 2026-09-05
 
 The Delaunay imaging likelihood breakdown (`scripts/imaging/likelihood_breakdown/delaunay.py`)
 has no DelaunayNN (Sibson natural-neighbour) sibling. The only DelaunayNN timings are the

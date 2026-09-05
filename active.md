@@ -13,3 +13,12 @@
 - epic: euclid-dr1-prep (follow-up to phase 8; second of the audit's two defects)
 - repos:
   - PyAutoLens: feature/pixelized-source-magnification-latent
+
+## delaunay-nn-breakdown
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/219
+- issued: 2026-09-05
+- session: claude --resume session_01XQ1gs3WVa2k4721x65wrmr
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-breakdown
+- repos:
+  - autolens_profiling: feature/delaunay-nn-breakdown
