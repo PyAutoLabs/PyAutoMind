@@ -270,11 +270,11 @@ resumes at 8.
    Record: `complete/2026/09/delaunay-area-magnification-audit.md`. The two follow-up bug
    prompts are the epic's next steps (autoarray fix first, then the autolens fix with its
    euclid workspace leg behind the library-first gate).
-   **Autolens follow-up IN FLIGHT 2026-09-05** (`active/magnification_latent_zero_for_pixelized_source.md`,
-   PyAutoLens#726): PR #727 merged (pixelized source flux = reconstruction integrated with
-   `areas_for_magnification`), correction PR #728 open (divide by the data pixel area — the
-   undivided value was 100x too large at 0.1"/pixel), euclid PR #51 open behind the
-   library-first gate. **Ledger note for Cortex phase 4 / Mind phase 9:** every archived
+   **Autolens follow-up SHIPPED 2026-09-05** — `complete/2026/09/pixelized-source-magnification-latent.md`,
+   PyAutoLens#726 closed: PR #727 merged (pixelized source flux = reconstruction integrated
+   with `areas_for_magnification`), correction PR #728 merged (divide by the data pixel
+   area — the undivided value was 100x too large at 0.1"/pixel), euclid PR #51 merged
+   (docstring + `vis_pix` latent test); both library PRs pending-release. **Ledger note for Cortex phase 4 / Mind phase 9:** every archived
    `initial_lens_model/vis_pix` result carries `magnification = 0.0` as a sentinel and must
    be re-derived under the fixed library; `catalogue/scripts/magnitudes.py` ingests
    `latent.magnification` unchanged, so phase 4's numerics witness must still exclude the
