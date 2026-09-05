@@ -14,6 +14,7 @@ Review-minutes: 25
 Unattended: needs-slicing
 Epic: ci-timing-fast-tests
 Phase: 1
+Issued: 2026-09-05
 
 Build the smoke-timings ingester: per-script CI timing rows on the Heart performance board.
 
