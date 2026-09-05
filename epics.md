@@ -65,7 +65,9 @@ epic, never picked standalone.
   complete/2026/09/delaunay-area-magnification-audit.md): two defects proven and filed as follow-up
   bug prompts (autoarray Voronoi-vs-dual-area denominator; autolens magnification latent 0/0
   for pixelized sources — which also taints the vis_pix catalogue column Cortex phase 4
-  witnesses). Mind phase 9 remains, gated on Cortex phase 4.
+  witnesses). The autoarray fix shipped 2026-09-05 (PyAutoArray#524 closed, PR #525 merged,
+  pending-release; record complete/2026/09/delaunay-dual-area-magnification.md); the autolens
+  fix is next. Mind phase 9 remains, gated on Cortex phase 4.
 
 ## ci-timing-fast-tests
 - title: CI test timing — finish the board, fast physical tests

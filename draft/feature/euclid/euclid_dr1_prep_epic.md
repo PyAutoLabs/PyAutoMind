@@ -249,7 +249,8 @@ resumes at 8.
    **SHIPPED 2026-09-04** — issue PyAutoArray#522 closed, PR PyAutoArray#523 merged (`8c2e0d18`, merge `548ff1e`; tests +
    docstring only, no behaviour change; audit posted in full on #522). Verdict: **two real
    defects, neither fixed here by design**, filed as follow-ups:
-   `draft/bug/autoarray/delaunay_magnification_uses_voronoi_not_dual_areas.md` (the Delaunay
+   `complete/2026/09/delaunay-dual-area-magnification.md` — **SHIPPED 2026-09-05**, PyAutoArray#524
+   closed, PR #525 merged (`46aaac67`, merge `de92d09c`), pending-release — (the Delaunay
    `areas_for_magnification` returns Voronoi cell areas, but the mapper is barycentric-linear
    so the exact quadrature weight is the barycentric dual area; identity-lens μ is 1.0 to
    2e-5 with dual areas, −13..−53 % on adaptive-style meshes and −95..−99 % when the source
