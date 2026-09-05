@@ -13,6 +13,7 @@ Review-minutes: 20
 Unattended: ready
 Epic: ci-timing-fast-tests
 Phase: 2
+Issued: 2026-09-05
 
 Permanent CI timing history stored in PyAutoHeart (replace the 30-day self-carried window).
 
