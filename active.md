@@ -11,9 +11,10 @@
 
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
+- question: https://github.com/PyAutoLabs/autolens_profiling/issues/220#issuecomment-5553329997
 - issued: 2026-09-05
 - session: claude --resume session_0117cr7VQNhHL2HzkGwQCDun
-- status: workspace-dev
+- status: awaiting-input
 - worktree: ~/Code/PyAutoLabs-wt/retire-gpu1-mig-exclusion
 - repos:
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
