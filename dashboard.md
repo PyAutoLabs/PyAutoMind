@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/offtick_timing_legs_live.md">Bring the dead timing legs live: unit_test_timing, import_time, workspace_testmode_timing</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/206">issue #206</a> — issued 2026-09-05 — library-dev</summary>
+<details><summary>📋 <a href="active/offtick_timing_legs_live.md">Bring the dead timing legs live: unit_test_timing, import_time, workspace_testmode_timing</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/206">issue #206</a> — issued 2026-09-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/207">PyAutoHeart#207</a></summary>
 
 ```
 /start_dev active/offtick_timing_legs_live.md
