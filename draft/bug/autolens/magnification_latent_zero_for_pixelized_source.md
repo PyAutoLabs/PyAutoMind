@@ -55,8 +55,8 @@ signature does not fire on those particular files; absence of the key is the sig
 under current code and `0.0` under whatever version produced the archive. Either way the
 Euclid pixelized stages have no magnification.
 
-Note this defect is **independent** of the Delaunay area defect filed as
-`draft/bug/autoarray/delaunay_magnification_uses_voronoi_not_dual_areas.md`: the latent
+Note this defect is **independent** of the Delaunay area defect, now shipped as
+`complete/2026/09/delaunay-dual-area-magnification.md` (PyAutoArray#524, PR #525): the latent
 never touches `areas_for_magnification` at all, and neither bug masks the other.
 
 ## Impact
@@ -100,9 +100,9 @@ layer. Neither can be scored on the `vis_pix` magnification until this is fixed.
 
 ## Implementation design (architect, 2026-09-04 — approved plan; execute from this)
 
-**Sequence:** after the PyAutoArray dual-area fix
-(`draft/bug/autoarray/delaunay_magnification_uses_voronoi_not_dual_areas.md`) is at least PR-open —
-merged if the Delaunay accuracy test is wanted in-worktree. `/start_dev` this prompt → task
+**Sequence:** the PyAutoArray dual-area fix is **merged** (2026-09-05, PyAutoArray#524 / PR #525,
+record `complete/2026/09/delaunay-dual-area-magnification.md`), so the Delaunay accuracy test may
+be written against `main` in-worktree. `/start_dev` this prompt → task
 `pixelized-source-magnification-latent`; classification **both**: library PyAutoLens first
 (PyAutoGalaxy read-only), workspace follow-up in `euclid_strong_lens_modeling_pipeline` behind the
 library-first gate.

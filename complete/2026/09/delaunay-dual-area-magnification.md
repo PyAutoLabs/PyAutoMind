@@ -1,3 +1,94 @@
+## delaunay-dual-area-magnification
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/524
+- completed: 2026-09-05
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/525
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/525
+- epic: euclid-dr1-prep (follow-up to phase 8; first of the audit's two defects)
+
+Fixed the Delaunay magnification denominator: `MeshGeometryDelaunay.areas_for_magnification`
+returned scipy Voronoi cell areas (unbounded cells zeroed), but the Delaunay mapper is a
+barycentric-linear interpolant whose exact quadrature weight is the barycentric dual area
+(Σ triangle_area/3 per vertex). The phase 8 audit (PyAutoArray#522) measured the Voronoi
+denominator biasing μ by −13 % to −99 % on realistic meshes; the dual areas recover the
+identity-lens μ = 1.0 to 3e-5.
+
+## What shipped
+
+PyAutoArray PR #525 (`feature/delaunay-dual-area-magnification`, head `46aaac67`, merge commit
+`de92d09c`), issue #524 closed. 8 files, +461/−93, one commit:
+
+- `interpolator/delaunay.py` — `scipy_delaunay` / `jax_delaunay` return the dual areas they
+  already computed (sixth tuple element); the Matérn variants compute and return them too
+  (fourth element) through one shared in-graph helper `_dual_areas_padded_jnp`.
+  `DelaunayInterface(..., xp=np, dual_areas=None)` carries them (trailing keyword, so the
+  positional `DelaunayNNInterface(*outputs, xp=)` caller in `sibson.py` is untouched);
+  `InterpolatorDelaunay.dual_areas` (property) exposes them and `mesh_geometry` passes
+  `dual_areas=` to the geometry. `InterpolatorKNearestNeighbor.dual_areas` returns `None`
+  so kNN mappers do not incur a qhull call just by building their geometry.
+- `mesh_geometry/delaunay.py` — `MeshGeometryDelaunay(..., dual_areas=None, xp=np, **kwargs)`;
+  `areas_for_magnification` returns the supplied dual areas (a traced value on the JAX path,
+  so it is safe inside PyAutoLens' per-sample `jax.jit` latent evaluation), else a host-side
+  `barycentric_dual_area_from(mesh_grid_xy, scipy Delaunay simplices)` fallback for standalone
+  construction. `voronoi_areas` / `voronoi_areas_numpy` unchanged. Docstring rewritten.
+- `plot/inversion.py::_plot_delaunay` — docstring corrected (tripcolor defaults to flat
+  shading, integral-equivalent to the dual-area sum by linearity); the mapper's own simplices
+  (padding rows dropped) are passed as `triangles=`, with a fallback for mappers without
+  Delaunay tables.
+- Tests — the two phase-8 pins were flipped deliberately (`bounded_boundary_cells_are_kept` →
+  `equals_barycentric_dual_area`; `uniform_lattice` sums to `(n-1)²`, the hull area, not
+  `(n-2)²`); the interpolator test's JAX-parity test now also asserts the returned areas
+  agree; new `test__areas_for_magnification__integrates_reconstruction_like_mapping_matrix`
+  and `test__areas_for_magnification__jax_matches_numpy` (skipif no jax) in
+  `mappers/test_delaunay.py`. Full suite 1420 passed, 1 skipped; CI green 3/3 legs.
+
+## Evidence
+
+Identity test: 8×8 mesh with the outer ring pinned to the data footprint (±1.0), interior
+jittered ≤0.3×spacing (rng 42), 20×20 data grid at 0.1 with centres ±0.95, random positive
+reconstruction. Hull area = footprint area = 4.000000; no out-of-hull fallback.
+
+| quantity | value | rel. error vs `F_map` |
+|---|---|---|
+| `F_map = Σ (mapping_matrix @ s) × pixel_area` | 4.730578587726577 | — |
+| `F_dual = Σ s × areas_for_magnification` (new) | 4.730741058881734 | 3.4e-5 |
+| `F_voronoi = Σ s × voronoi_areas` (old, unbounded zeroed) | 3.453335121760202 | 27 % |
+
+Unit lattice (n=5): `areas_for_magnification.sum() == 16 == (n-1)²` (was 9 = `(n-2)²`).
+
+## API changes
+
+- **Changed behaviour:** `MeshGeometryDelaunay.areas_for_magnification` returns barycentric
+  dual areas (was Voronoi areas with unbounded cells zeroed). The only known consumers are the
+  four `source_science.py` workspace scripts, which call the same attribute and need no code
+  change — workspace impact option (iii), no `/start_workspace` leg.
+- **Added:** `MeshGeometryDelaunay(dual_areas=)`, `DelaunayInterface.dual_areas`,
+  `InterpolatorDelaunay.dual_areas`; `scipy_delaunay` / `jax_delaunay` return six elements and
+  the Matérn variants four.
+
+## Traps / notes
+
+- **Dual areas on a regular lattice are not 1.0 per interior vertex.** qhull's diagonal choice
+  makes them alternate 2/3 and 4/3 (corners 1/6 or 1/3), so the lattice test pins only
+  diagonal-independent facts (sum, positivity, bounds) and the elementwise identity is pinned
+  on the irregular 6-point mesh. The design's "interior 1.0" premise was false and was
+  corrected at implementation time.
+- `test_autoarray/inversion/pixelization/interpolator/test_delaunay.py` was not black-clean on
+  main after #523; black touched about a dozen pre-existing lines alongside this PR's edits.
+- The out-of-hull nearest-vertex fallback in `pixel_weights_delaunay_from` remains a separate
+  flux hazard (piecewise constant, not linear); the identity test avoids it by pinning the mesh
+  hull to the data footprint. Not this task's scope.
+- Ran as a cloud session (Fable architect, Opus implementer): PyAutoArray was cloned into the
+  working directory, no worktree; the remote branch is GitHub's to delete.
+
+## Statements to the science phases
+
+- Cortex phase 7 (`magnification_robustness`): the Delaunay rung may be scored with
+  `Σ reconstruction × areas_for_magnification` once a PyAutoArray release carries #525.
+- The pipeline `magnification` latent (0/0 for pixelized sources) is the independent second
+  defect — next task, `draft/bug/autolens/magnification_latent_zero_for_pixelized_source.md`.
+
+## Original prompt
+
 # Delaunay magnification denominator uses Voronoi cell areas; the barycentric-linear mapper's exact quadrature weight is the dual area
 
 Type: bug

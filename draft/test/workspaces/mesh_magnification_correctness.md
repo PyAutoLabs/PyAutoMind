@@ -81,8 +81,8 @@ rectangular meshes, so the phase 8 audit neither confirms nor rules it out. It i
 flagged here for this prompt's step 2 (direct unit tests for
 `areas_for_magnification` on every supported geometry against analytic areas).
 
-The Delaunay defect the same audit *did* establish is filed separately as
-`draft/bug/autoarray/delaunay_magnification_uses_voronoi_not_dual_areas.md`
-(PyAutoArray#522 audit).
+The Delaunay defect the same audit *did* establish was fixed separately —
+`complete/2026/09/delaunay-dual-area-magnification.md` (PyAutoArray#522 audit, #524 fix,
+PR #525 merged 2026-09-05): `areas_for_magnification` now returns barycentric dual areas.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase04_mesh_magnification_correctness.md -->
