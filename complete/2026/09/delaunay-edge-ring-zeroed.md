@@ -1,3 +1,84 @@
+## delaunay-edge-ring-zeroed
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/526
+- completed: 2026-09-05
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/527
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/52
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/535
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/527
+- epic: euclid-dr1-prep
+
+`Delaunay(pixels, zeroed_pixels)` inflated `self.pixels` by `zeroed_pixels` and
+`zeroed_ids_to_keep` offset each mapper's block by that `mesh.pixels`. Every
+`autolens_workspace` feature script and the Euclid pipeline passed the *appended* grid
+length as `pixels`, so `mesh.pixels` overstated the mapper's real parameter count by the
+ring size. The ring is now a property of the grid the mapper is built from — always its
+last `zeroed_pixels` vertices, resolved through `mapper.params` — so both call forms zero
+the same vertices and every mapper's ring lands in the right place.
+
+## What shipped
+
+- **PyAutoArray #527** (`7d41850`, merge `a0e5c61`) — `Delaunay.__init__` stores
+  `pixels` and `zeroed_pixels` as the ints passed (the mesh round-trips through
+  `to_dict`; the `tracer.json` reload crash recorded in
+  `complete/archive/shelved/jax_visualization_inversion_blowup.md` is gone);
+  `total_pixels` adds the ring back on; `zeroed_pixels_from(pixels)` gives the last
+  `zeroed_pixels` indices of a grid of that length. New `AbstractMesh.zeroed_pixels_from`
+  (a mesh's own index array, or nothing) and `Mapper.zeroed_pixels` (the ring resolved
+  against `params`). `zeroed_ids_to_keep` sizes blocks by `mapper.params` and reads
+  `mapper.zeroed_pixels`. Tests: mesh semantics, the dict round-trip and both call forms;
+  `zeroed_ids_to_keep` with one and two Delaunay mappers. 1369 passed; CI 3/3.
+- **euclid_strong_lens_modeling_pipeline #52** (`c82e284`, merge `dbdbe1d`) —
+  `initial_lens_model.py`, both `full_model.py` stages and `jax_fork_control.py` pass the
+  interior count (`hilbert_pixels`, or the appended length minus `edge_pixels_total` for
+  the uniform SOURCE PIX 1 grid). `tests/test_delaunay_edge_ring.py` mirrors the scripts'
+  mesh construction and asserts the zeroed indices are exactly the appended ring under both
+  forms. 74 passed; CI 9/9.
+- **autolens_workspace #535** (`4d74095`, merge `715144c`) — 18 sites pass
+  `image_plane_mesh_grid.shape[0] - edge_pixels_total`; the Edge Zeroing prose says what
+  the two inputs mean. The imaging and interferometer likelihood-function walkthroughs
+  built their `Overlay(30, 30)` grid *without* a ring yet passed
+  `zeroed_pixels=edge_pixels_total`, zeroing 30 interior points: they now append the ring
+  and create the pixelization after the grid. Notebooks regenerated (8 changed). All three
+  Delaunay smoke scripts run end-to-end; CI 7/7.
+
+## Key findings and traps
+
+- **The over-count is self-cancelling for one mapper.** `Mapper.params` is the grid
+  length, not `mesh.pixels`; the only consumer of `mesh.pixels` offset local ids by
+  `n_total - sum(mesh.pixels)`, so for a single mapper the extra ring in `pixels` and the
+  extra ring in the ids cancelled and the last `r` parameters were zeroed either way. That
+  is why the bit-identical latents on euclid #51 were the expected result, why the test
+  workspaces' parity and gradient certifications all went green, and why nothing could
+  have caught the feature-script form. It misfired only with two or more pixelized
+  mappers (the first mapper's ids landed `r` too low: interior vertices zeroed, ring live)
+  and on the `to_dict` reload. No archived single-source result changes; Cortex phase 4's
+  numerics witness is untouched.
+- **The fix had landed before, in the wrong places.** The semantics were set once in
+  PyAutoArray (2119d6b, 2026-02-24; 446e5bc the next day). `autolens_workspace`'s SLaM
+  scripts and both `*_workspace_test` repos used the correct `pixels=<interior count>`
+  form from their 2026-04-03 fresh starts, while the imaging and interferometer feature
+  scripts used the appended length from the same commit — and every later script (group
+  features 2026-05-01, datacube 2026-05-05, multi_galaxy 2026-07-31, the Euclid port
+  2026-08-29) was copied from the feature scripts, not from SLaM. No commit anywhere ever
+  wrote `shape[0] - edge_pixels_total` before this task.
+- **`pixels` is a description, not a control.** The linear parameter count is the mesh
+  grid the mapper receives; the library now documents `pixels` as the interior count and
+  tolerates a mismatch rather than asserting on it, because the PyAutoLens test suite
+  itself builds `Delaunay(pixels=25, zeroed_pixels=5)` over an unrelated overlay grid.
+- **Editable-install trap in the remote session.** `pip install -e pyautolens` pulled the
+  read-only autoarray clone under `pyautolabs/` as the editable, not the attached one under
+  `/home/user/`, so the Euclid test ran against the unfixed library until re-pointed with
+  `pip install --no-deps -e /home/user/pyautoarray`. Check `autoarray.__file__` before
+  trusting a downstream test in a session holding both clones.
+
+## Not done, where it went
+
+- `autolens_workspace_test/scripts/multi_dataset/dataset_model_parity_delaunay.py` and
+  `autolens_workspace_developer/jax_profiling/*/delaunay.py` still pass the appended
+  length — harmless after #527 (noted on the issue, not filed).
+
+## Original prompt
+
 # vis_pix Delaunay edge ring is never zeroed: `Delaunay(pixels=<appended grid length>)` double-counts `zeroed_pixels`
 
 Type: bug

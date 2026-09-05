@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1299 records across 8 buckets.
+1300 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -145,6 +145,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
 - [delaunay-area-magnification-audit](2026/09/delaunay-area-magnification-audit.md)
 - [delaunay-dual-area-magnification](2026/09/delaunay-dual-area-magnification.md)
+- [delaunay-edge-ring-zeroed](2026/09/delaunay-edge-ring-zeroed.md)
 - [docs-followup-paid-plan-assistants](2026/09/docs-followup-paid-plan-assistants.md) — Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new …
 - [ep-collapse-unpark](2026/09/ep-collapse-unpark.md)
 - [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
