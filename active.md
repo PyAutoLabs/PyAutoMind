@@ -17,7 +17,8 @@
 - issued: 2026-09-05
 - prompt: active/permanent_ci_timing_history.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/205
 - epic: ci-timing-fast-tests (phase 2 of 9)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the PyAutoHeart clone
 - repos:
@@ -27,4 +28,5 @@
     (`timings/gates.jsonl` + `timings/scripts/<repo>.jsonl`, append-only, deduped on
     date / run id) committed daily by heart-health.yml; the checks read their
     baselines from it. Fable plan on the issue; implementation delegated to Opus.
-    Next: PR on PyAutoHeart, then /prm; phase 3 (dead timing legs) follows.
+    PyAutoHeart#205 open (767 tests green). Next: /prm once CI is green; then
+    issue phase 3 (dead timing legs — ingestion-first per the Fable review).
