@@ -11,12 +11,13 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Status: draft
+Status: active
 Consequence: judge
 Witness: `grep -rn "euclid-ral-gpu-1\|_gpu_preflight\|MIG" hpc/ activate.sh` returns nothing except a dated historical note in hpc/README.md, and one A100 submit dispatched without the exclusion completes on euclid-ral-gpu-1
 Review-minutes: 10
 Unattended: ready
 Filed: 2026-09-05
+Issued: 2026-09-05
 
 Original request (verbatim):
 
