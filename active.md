@@ -5,7 +5,7 @@
 - issued: 2026-09-05
 - prompt: active/magnification_latent_zero_for_pixelized_source.md
 - session: claude --resume session_011kyfKgDB1rMkcQsn19ow4T
-- status: library-shipped, workspace-pending
+- status: workspace-dev (library PR #727 MERGED 2026-09-05, merge 633c8e0)
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/727
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/727
 - worktree: ~/Code/PyAutoLabs-wt/pixelized-source-magnification-latent
@@ -14,4 +14,5 @@
 - suggested-branch: feature/pixelized-source-magnification-latent
 - epic: euclid-dr1-prep (follow-up to phase 8; second of the audit's two defects)
 - repos:
-  - PyAutoLens: feature/pixelized-source-magnification-latent
+  - PyAutoLens: feature/pixelized-source-magnification-latent (merged)
+  - euclid_strong_lens_modeling_pipeline: feature/pixelized-source-magnification-latent
