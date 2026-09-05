@@ -12,3 +12,4 @@
 - suggested-branch: feature/pixelized-source-magnification-latent
 - epic: euclid-dr1-prep (follow-up to phase 8; second of the audit's two defects)
 - repos:
+  - PyAutoLens: feature/pixelized-source-magnification-latent
