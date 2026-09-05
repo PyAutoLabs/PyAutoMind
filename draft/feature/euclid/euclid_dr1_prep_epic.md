@@ -256,7 +256,7 @@ resumes at 8.
    2e-5 with dual areas, −13..−53 % on adaptive-style meshes and −95..−99 % when the source
    fills the hull with Voronoi areas; `zeroed_pixels` cannot rescue it — the pathology is one
    ring inside the convex hull) and
-   `draft/bug/autolens/magnification_latent_zero_for_pixelized_source.md` (the pipeline's
+   `complete/2026/09/pixelized-source-magnification-latent.md` — **SHIPPED 2026-09-05** (the pipeline's
    `magnification` latent is a hard 0/0 for any pixelization-only source because
    `Galaxy.image_2d_from` returns zeros; 9/9 archived `vis_pix` results record `0.0`; the
    Sersic control reproduces `truth.json` bit-for-bit). The rectangular-mesh lead (+6 %/+28 %
