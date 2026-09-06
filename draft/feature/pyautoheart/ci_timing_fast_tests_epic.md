@@ -56,8 +56,8 @@ epic finishes).
 | 3 | complete/2026/09/offtick-timing-legs-live.md | **SHIPPED 2026-09-05** — PyAutoHeart#207 (`cb1d500`), issue #206 closed; ingestion via lib-tests.yml, workspace_testmode_timing retired as superseded |
 | 4 | complete/2026/09/legacy-baseline-timing-round.md | **SHIPPED 2026-09-06** — PyAutoHeart#209 (`ad56720`), issue #208 closed; epoch `legacy @ 2026-09-05` live, digest at PyAutoHeart `timings/legacy_round_2026-09.md` |
 | 5 | complete/2026/09/physical-fast-rebuild-autogalaxy.md | **SHIPPED** 2026-09-06 — autogalaxy_workspace_test#117 (`0f69588`) merged, issue #116 closed; 39/39 green, 515 s → 438 s cold locally (−15%); CI legs green on cold caches (seeded the epoch-1 keys); one mesh fix (`imaging/jax_likelihood/rectangular.py` 28×28 → 17×17, mesh ≤ masked pixels); follow-up `draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md` |
-| 6 | active/physical_fast_rebuild_autolens.md | **in flight** — issued 2026-09-06, autolens_workspace_test#293 (27 entries; legacy 434.7 s CI / 396 s local cold; the pin wave; phase-5 template) |
-| 7 | complete/2026/09/smoke-ci-caches-jax-datasets.md | **SHIPPED 2026-09-06** — PyAutoHeart#211 (`bfcd302`), issue #210 closed; hot-vs-cold measurement pending two live runs per repo |
+| 6 | complete/2026/09/physical-fast-rebuild-autolens.md | **SHIPPED** 2026-09-06 — autolens_workspace_test#294 (`fd4e17f`) merged, issue #293 closed; `fast-tests` epoch PyAutoHeart#212 (`6d5c1c4`); 27/27 green, 396 s → 322 s cold locally (−19%), CI runner 8.5 min cold → 5.5 min warm per leg; 9 gate + 25 off-gate pins regenerated once; four follow-ups filed (mge_group source zeroed, jax_grad delaunay guard, jax_delaunay signature, mapper NaN) |
+| 7 | complete/2026/09/smoke-ci-caches-jax-datasets.md | **SHIPPED 2026-09-06** — PyAutoHeart#211 (`bfcd302`), issue #210 closed; first hot-vs-cold data point: autolens_workspace_test#294 runner 8.5 min cold → 5.5 min warm per leg (record rows land with the daily run) |
 | 8 | draft/test/workspaces/user_workspace_howto_slow_script_pass.md | filed |
 | 9 | draft/research/workspaces/unit_test_import_time_hotspot_census.md | filed |
 

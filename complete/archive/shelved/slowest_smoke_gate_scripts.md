@@ -147,3 +147,9 @@ script and say which.
   still runs it.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-23 from user-intake -->
+
+<!-- retired 2026-09-06: superseded by the ci-timing-fast-tests epic. Its three targets are gone —
+`imaging/subhalo_recovery.py` runs at ~15 s after the split (#267), `misc/database/scrape/general.py`
+was demoted to the weekly channel (#267), and `point_source/jax_likelihood/point.py` /
+`imaging/jax_likelihood/{rectangular,mge}.py` were rebuilt in phase 6 (autolens_workspace_test#294).
+The per-script timing surface it asked for is PyAutoHeart's `timings/` record (phases 1-4). -->

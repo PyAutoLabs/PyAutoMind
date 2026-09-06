@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1307 records across 8 buckets.
+1308 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -184,6 +184,7 @@ markers; everything below GENERATED is rebuilt.
 - [permanent-ci-timing-history](2026/09/permanent-ci-timing-history.md)
 - [phase-5-dev-leg-prepare-the-mesh](2026/09/phase-5-dev-leg-prepare-the-mesh.md)
 - [physical-fast-rebuild-autogalaxy](2026/09/physical-fast-rebuild-autogalaxy.md)
+- [physical-fast-rebuild-autolens](2026/09/physical-fast-rebuild-autolens.md)
 - [pixelized-source-magnification-latent](2026/09/pixelized-source-magnification-latent.md)
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
 - [profiles-jit-powerlaw-exact-zero-atol](2026/09/profiles-jit-powerlaw-exact-zero-atol.md)
