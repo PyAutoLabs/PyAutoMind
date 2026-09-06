@@ -9,7 +9,6 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-09-06
-Epic: ci-timing-fast-tests
 
 Left over from phase 6 (autolens_workspace_test#293 / #294). The script runs on
 the weekly `workspace-smoke.yml` / `release-integrate` channels under the 900 s
@@ -38,3 +37,5 @@ a deliberately constant-folded evaluation, or assert on the gradient rather than
 the scalar — instead of a scalar agreement at 1e-10; alternatively size the mesh
 from the data and re-derive the FD tolerance from the flip-crossing scatter the
 script already documents. Widening 1e-10 by itself is not an answer.
+
+<!-- was a member of the ci-timing-fast-tests epic (retired COMPLETE 2026-09-06, ledger complete/archive/epics/ci_timing_fast_tests_epic.md); now ordinary backlog -->

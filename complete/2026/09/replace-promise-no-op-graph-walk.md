@@ -1,3 +1,36 @@
+# replace_promise runs only when a recursion promise actually escaped — model.info halved
+
+PyAutoFit#1564 → `cab17a3ee`, closing PyAutoFit#1563, merged 2026-09-06 on branch
+`claude/ci-test-timing-epic-ke2lul`. Phase 8c (library leg) of the `ci-timing-fast-tests`
+epic, from the phase-8 user-workspace diagnosis. Fable-planned on the issue from the
+phase-8 executor's measured diff; implemented by an Opus subagent from a web session.
+
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1563
+- completed: 2026-09-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1564
+
+## What shipped
+- `autofit/mapper/prior_model/recursion.py`: `RecursionPromise` gains a `used` flag
+  (`__slots__`), set when `DynamicRecursionCache` hands the placeholder back to a caller;
+  `replace_promise` (the recursive `setattr` walk over every object reachable from the
+  result) runs only when the promise escaped. For a non-recursive model it never does.
+- Tests compare the two implementations via a `force_traversal` fixture and a traversal
+  counter: a self-referential `Collection` (traversal still runs, graph and `model.info`
+  intact) and a flat model (count 0). 2421 passed / 25 skipped.
+- Measured: `autolens_workspace multi_galaxy/features/advanced/shapelets/modeling.py`
+  under the smoke profile, warm, 10.58 → 6.73 s, stdout byte-identical.
+
+## Key traps / findings
+- `print(model.info)` appears in nearly every modeling script in every workspace at
+  0.5–1.3 s each; this is the single largest systemic win on the user-facing surface.
+- Phase 9's CI census confirms from the third side: `replace_promise` no longer appears in
+  PyAutoFit's CI top 25 on this head.
+
+## Follow-ups
+- Release: PyAutoFit release outstanding (`pending-release`).
+
+## Original prompt
+
 # replace_promise walks the whole model graph even when no promise escaped (model.info cost on every modeling script)
 
 Type: bug

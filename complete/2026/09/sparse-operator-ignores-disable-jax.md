@@ -1,3 +1,32 @@
+# apply_sparse_operator honours PYAUTO_DISABLE_JAX=1 through a disable_jax() predicate
+
+PyAutoNerves#160 → `efe7c04` (closing #159) and PyAutoArray#529 → `bcd15cd9` (closing #528),
+merged 2026-09-06 on branch `claude/ci-test-timing-epic-ke2lul`. Phase 8c (library leg)
+of the `ci-timing-fast-tests` epic.
+
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/528
+- issue-2: https://github.com/PyAutoLabs/PyAutoNerves/issues/159
+- completed: 2026-09-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/160
+- library-pr-2: https://github.com/PyAutoLabs/PyAutoArray/pull/529
+
+## What shipped
+- `autonerves.test_mode.disable_jax()` — the predicate for `PYAUTO_DISABLE_JAX=1`, beside
+  `small_datasets()`; until now the variable was read by a bare `os.environ.get` in exactly
+  one place in the stack while two workspace guides document it as the global switch.
+- The interferometer `apply_sparse_operator` honours it (imported defensively). Backed off
+  on imaging with evidence: that method has no `use_jax` argument — it *is* the JAX
+  implementation, its NumPy sibling returns a different operator class and needs numba, and
+  every measured JIT cost (2.3–3.2 s per interferometer script) was interferometer.
+
+## Key traps / findings
+- A `PYAUTO_*` variable honoured in one place is a bug waiting to happen; each wants a
+  single predicate in `autonerves.test_mode` and no bare `os.environ` reads elsewhere.
+- Phase 9 found the deeper form: the interferometer "numpy" NUFFT path is JAX
+  (`transformer.py:345`), so `PYAUTO_DISABLE_JAX` cannot reach it — option O7 in the census.
+
+## Original prompt
+
 # apply_sparse_operator ignores PYAUTO_DISABLE_JAX=1 (a disable_jax() helper beside small_datasets())
 
 Type: bug

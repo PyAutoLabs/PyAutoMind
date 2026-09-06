@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1309 records across 8 buckets.
+1314 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -168,6 +168,7 @@ markers; everything below GENERATED is rebuilt.
 - [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
+- [mesh-shape-honours-small-datasets-cap](2026/09/mesh-shape-honours-small-datasets-cap.md)
 - [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
 - [mind-post-cortex-p2](2026/09/mind-post-cortex-p2.md)
 - [mind-post-cortex-p3-pr-ledger](2026/09/mind-post-cortex-p3-pr-ledger.md)
@@ -188,13 +189,17 @@ markers; everything below GENERATED is rebuilt.
 - [pixelized-source-magnification-latent](2026/09/pixelized-source-magnification-latent.md)
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
 - [profiles-jit-powerlaw-exact-zero-atol](2026/09/profiles-jit-powerlaw-exact-zero-atol.md)
+- [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z
 - [silence-colab-cli-message](2026/09/silence-colab-cli-message.md)
 - [slam-simultaneous-oversample-timeout](2026/09/slam-simultaneous-oversample-timeout.md)
+- [small-datasets-cap-stamp-stops-resimulation](2026/09/small-datasets-cap-stamp-stops-resimulation.md)
 - [smoke-ci-caches-jax-datasets](2026/09/smoke-ci-caches-jax-datasets.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
+- [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
+- [unit-test-import-time-hotspot-census](2026/09/unit-test-import-time-hotspot-census.md)
 - [user-workspace-howto-slow-script-pass](2026/09/user-workspace-howto-slow-script-pass.md)
 
 ## 2026/08

@@ -1,3 +1,48 @@
+# Capped interferometer / multi_dataset datasets stop re-simulating on every run — the SMALLSHP cap card
+
+PyAutoNerves#160 → `efe7c04` (closing PyAutoNerves#159) and PyAutoArray#529 → `bcd15cd9`
+(closing PyAutoArray#528), merged 2026-09-06 in that order on branch
+`claude/ci-test-timing-epic-ke2lul`. Phase 8c (library leg) of the `ci-timing-fast-tests`
+epic. Fable-planned on the issues; implemented by Opus subagents (the second resumed after
+a container restart interrupted the first mid-PyAutoArray).
+
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/528
+- issue-2: https://github.com/PyAutoLabs/PyAutoNerves/issues/159
+- completed: 2026-09-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/160
+- library-pr-2: https://github.com/PyAutoLabs/PyAutoArray/pull/529
+
+## What shipped
+- PyAutoNerves: `stamp_small_datasets_regime` writes a `SMALLSHP` card (`"<rows>x<cols>"`)
+  under the cap beside `SMALLDAT`; `SMALL_DATASETS_SHAPE_NATIVE` gets its canonical home in
+  `autonerves.test_mode` (autoarray keeps a literal that a test pins to agree, so a
+  pre-stamp autonerves degrades safely rather than ImportError-ing).
+- PyAutoArray: `SMALLSHP` readers, `_capped_data_paths` resolving `data.fits` →
+  `{waveband}_data.fits` → `channel_*/data.fits`, and `_is_capped_at_the_current_cap`
+  rewritten around them — read *with* the both-axes contradiction guard (the card records
+  the writing process, not the array: the issue's literal diff would have kept a 180×180
+  image written in a capped shell and two existing tests caught it). Path resolution is
+  widened for the capped (delete → keep) branch only.
+- Measured: `should_simulate` True → False on the second run of
+  `autolens_workspace interferometer/modeling.py` (12.40 → 6.69 s), `multi_dataset/modeling.py`
+  (10.48 → 6.32 s), `autogalaxy_workspace interferometer/start_here.py` (10.93 → 6.52 s);
+  ~26 s per autolens_workspace CI run and ~28 s per autogalaxy_workspace run once the
+  dataset cache carries a stamped set. Both `_test` gates green with the branches installed.
+
+## Key traps / findings
+- A card that records "the env var was set at write time" is not "capped at today's cap";
+  the reader has to compare the recorded cap, and still guard against a shape that
+  contradicts it.
+- The re-simulation subprocess costs ~5 s of which ~4.5 s is a fresh interpreter importing
+  the stack.
+
+## Follow-ups
+- `draft/maintenance/autoarray/small_datasets_followups_after_8c.md`: bump the autonerves
+  floor and delete the defensive `try/except` once the PyAutoNerves release exists.
+- Releases: PyAutoNerves and PyAutoArray outstanding (`pending-release`).
+
+## Original prompt
+
 # Capped interferometer / multi_dataset datasets are re-simulated on every run (stamp the cap, not just the flag)
 
 Type: bug
