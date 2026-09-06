@@ -13,6 +13,7 @@ Review-minutes: 25
 Unattended: needs-slicing
 Epic: ci-timing-fast-tests
 Phase: 8
+Issued: 2026-09-06
 
 User workspace + HowTo slow-script pass, driven by the ingested timings.
 
