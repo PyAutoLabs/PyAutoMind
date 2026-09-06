@@ -55,7 +55,7 @@ epic finishes).
 | 2 | complete/2026/09/permanent-ci-timing-history.md | **SHIPPED 2026-09-05** — PyAutoHeart#205 (`7b4e109`), issue #204 closed |
 | 3 | complete/2026/09/offtick-timing-legs-live.md | **SHIPPED 2026-09-05** — PyAutoHeart#207 (`cb1d500`), issue #206 closed; ingestion via lib-tests.yml, workspace_testmode_timing retired as superseded |
 | 4 | complete/2026/09/legacy-baseline-timing-round.md | **SHIPPED 2026-09-06** — PyAutoHeart#209 (`ad56720`), issue #208 closed; epoch `legacy @ 2026-09-05` live, digest at PyAutoHeart `timings/legacy_round_2026-09.md` |
-| 5 | active/physical_fast_rebuild_autogalaxy.md | **issued 2026-09-06** — autogalaxy_workspace_test#116 (no absolute pins in this repo — the pin wave is phase 6's), branch `claude/ci-test-timing-epic-ke2lul` |
+| 5 | active/physical_fast_rebuild_autogalaxy.md | **in flight** — issued 2026-09-06, autogalaxy_workspace_test#116 → PR #117 (awaiting merge): 39/39 green, 515 s → 438 s cold locally (−15%); follow-up `draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md` |
 | 6 | draft/test/autolens_workspace_test/physical_fast_rebuild.md | filed |
 | 7 | complete/2026/09/smoke-ci-caches-jax-datasets.md | **SHIPPED 2026-09-06** — PyAutoHeart#211 (`bfcd302`), issue #210 closed; hot-vs-cold measurement pending two live runs per repo |
 | 8 | draft/test/workspaces/user_workspace_howto_slow_script_pass.md | filed |

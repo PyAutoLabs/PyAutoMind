@@ -17,7 +17,8 @@
 - issued: 2026-09-06
 - prompt: active/physical_fast_rebuild_autogalaxy.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/117
 - epic: ci-timing-fast-tests (phase 5 of 9)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the autogalaxy_workspace_test clone
 - repos:
@@ -30,4 +31,7 @@
     galaxies, over-sampling/MGE/batch levers; no absolute pins in this repo (the
     prompt's pin wave is phase 6's). Fable plan on the issue; implementation +
     local before/after timing delegated to Opus with the source stack installed
-    in the container. Next: PR, then /prm; then phase 6 (autolens_workspace_test).
+    in the container. autogalaxy_workspace_test#117 open: 39/39 green locally,
+    515 s -> 438 s cold (-15%; the ~230 s import floor is untouched, compile is the
+    CI cache's). Follow-up filed: draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md.
+    Next: /prm; then phase 6 (autolens_workspace_test).
