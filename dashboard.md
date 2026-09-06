@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 4 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 156 |
+| [Backlog](#backlog) (`draft/`) | 155 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
@@ -110,14 +110,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow: measure…</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
 
 ```
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 82
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 81
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -164,14 +164,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow: measure…</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md
 ```
 
 </details>
@@ -248,6 +240,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_slice.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
@@ -272,6 +272,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/retire_gpu1_mig_exclusion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow: measure…</a> — issued 2026-09-06</summary>
+
+```
+/start_dev active/smoke_workflow_fixed_overhead.md
 ```
 
 </details>
@@ -421,10 +429,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**155** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 37</summary>
+<summary><b>feature</b> — 36</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
 
@@ -446,14 +454,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautobrain/batch_notify_tier_merge.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow: measure…</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md
 ```
 
 </details>
@@ -1780,7 +1780,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/bug/autolens_workspace_test/mge_group_source_basis_zeroed_on_coarse_data.md">imaging/jax_likelihood/mge_group.py: positive-only solver zeroes the…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autolens_workspace_test/jax_grad_delaunay_eager_jit_guard_float64_scatter.md">imaging/jax_grad/delaunay.py: the rtol=1e-10 eager-vs-jit guard sits…</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
-| 2026-09-06 | filed | <a href="draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow…</a> |
+| 2026-09-06 | issued | <a href="active/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-06 | issued | <a href="active/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> |
 | 2026-09-06 | issued | <a href="active/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> |

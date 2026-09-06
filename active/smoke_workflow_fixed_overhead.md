@@ -13,6 +13,7 @@ Witness: a wiring test pins `--depth 1` on every chain clone and a pip cache ste
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-06
+Issued: 2026-09-06
 
 The legacy digest (PyAutoHeart `timings/legacy_round_2026-09.md` §1) measures
 the two `_test` flagships spending **~2–3 minutes per leg on checkout + install

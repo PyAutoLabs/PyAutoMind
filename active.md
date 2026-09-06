@@ -37,3 +37,17 @@
     function-local matplotlib imports in potential_correction/visualize.py so pyplot leaves
     `import autolens`. Two independent library PRs. Web session, no task worktree.
 
+## smoke-fixed-overhead
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/216
+- issued: 2026-09-06
+- session: claude --resume session_01WYcmRnZf3cbC5Wth9bCkEg
+- status: library-dev
+- repos:
+  - PyAutoHeart: feature/smoke-fixed-overhead
+- parallel-claim: PyAutoHeart also claimed by lib-tests-compile-caches (#215); both edit smoke-tests.yml, so this branch is stacked on feature/lib-tests-compile-caches and its PR opens against main once #215 merges (or rebases then). Same session, sequenced.
+- summary: |
+    Fixed per-leg overhead of the reusable smoke workflow: per-step measurement from the
+    Actions API (clone 18-21 s + install 78-86 s per leg on autolens_workspace_test run
+    34012149870), then depth-1 clones with the matching-branch fallback, a pip cache, and
+    setup_s recorded as data. Web session, no task worktree.
+
