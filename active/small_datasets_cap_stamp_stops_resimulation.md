@@ -14,6 +14,7 @@ Status: formalised
 Filed: 2026-09-06
 Epic: ci-timing-fast-tests
 Phase: 8c
+Issued: 2026-09-06
 
 Library leg of phase 8 (autolens_workspace#536): a shared-machinery finding from the
 user-workspace slow-script diagnosis, traced to the unguarded call in the library and written
