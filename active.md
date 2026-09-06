@@ -5,7 +5,9 @@
 - issued: 2026-09-06
 - prompt: active/user_workspace_howto_slow_script_pass.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/77
+- workspace-pr-2: https://github.com/PyAutoLabs/HowToGalaxy/pull/73
 - epic: ci-timing-fast-tests (phase 8 of 9)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in each workspace clone touched
 - repos:
@@ -21,8 +23,12 @@
     compile / execution / plot-output) and a category fix, shared machinery first,
     never tutorial prose. First task: explain why the pixelization tutorials run
     4-6x slower locally than in CI. autocti_workspace's 61 s start_here is phase 8b
-    (own prompt). Fable plan on the issue; execution delegated to Opus. Next: /prm
-    per workspace PR.
+    (own prompt). Diagnosed: the local gap was a cold numba cache + should_simulate
+    re-simulation, not the scripts; 5 of 14 are pure import floor, 4 are the
+    re-simulation (library a2), 3 uncapped meshes (fixed: HowToLens#77, HowToGalaxy#73),
+    1 replace_promise (library a1), 1 genuine full-res guide (left). autolens_workspace and
+    autogalaxy_workspace: no change (all library findings, filed as phase 8c prompts under
+    draft/bug/{autofit,autoarray}/ and draft/feature/autoarray/). Next: /prm on the two PRs.
 
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
