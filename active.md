@@ -11,3 +11,23 @@
 - repos:
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
+
+## physical-fast-rebuild-autogalaxy
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/116
+- issued: 2026-09-06
+- prompt: active/physical_fast_rebuild_autogalaxy.md
+- session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
+- status: workspace-dev
+- epic: ci-timing-fast-tests (phase 5 of 9)
+- worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the autogalaxy_workspace_test clone
+- repos:
+  - autogalaxy_workspace_test: claude/ci-test-timing-epic-ke2lul
+- summary: |
+    Phase 5 of the ci-timing-fast-tests epic: the physical + fast rebuild of the
+    autogalaxy_workspace_test smoke gate (39 entries, 537 s legacy). Coarser shared
+    datasets (imaging 100x100@0.3", interferometer 128x128@0.2", multi 80x80@0.2"),
+    a `_group` dataset per family so the mge_group models fit simulated extra
+    galaxies, over-sampling/MGE/batch levers; no absolute pins in this repo (the
+    prompt's pin wave is phase 6's). Fable plan on the issue; implementation +
+    local before/after timing delegated to Opus with the source stack installed
+    in the container. Next: PR, then /prm; then phase 6 (autolens_workspace_test).

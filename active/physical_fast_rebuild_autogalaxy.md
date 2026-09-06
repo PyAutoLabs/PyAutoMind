@@ -13,6 +13,7 @@ Review-minutes: 25
 Unattended: needs-slicing
 Epic: ci-timing-fast-tests
 Phase: 5
+Issued: 2026-09-06
 
 autogalaxy_workspace_test physical + fast rebuild (the rehearsal repo before autolens).
 
