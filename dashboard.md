@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 156 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 > **No batch in flight.**
 
@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/user_workspace_howto_slow_script_pass.md">User workspace + HowTo slow-script pass, driven by the ingested timings</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/536">issue #536</a> — issued 2026-09-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/user_workspace_howto_slow_script_pass.md">User workspace + HowTo slow-script pass, driven by the ingested timings</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/536">issue #536</a> — issued 2026-09-06 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/77">HowToLens#77</a></summary>
 
 ```
 /start_dev active/user_workspace_howto_slow_script_pass.md
@@ -413,7 +413,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 36</summary>
@@ -2045,7 +2045,7 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 </details>
 
 <details>
-<summary><b>CI test timing — finish the board, fast physical tests</b> — 5 queued prompt(s), in order</summary>
+<summary><b>CI test timing — finish the board, fast physical tests</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>CI test timing — finish the board, fast physical tests</b> — ledger: `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md` — phase 1 **SHIPPED** 2026-09-05 — PyAutoHeart#203 (<code>7a286ea</code>) merged, issue #202 closed, record…</summary>
 
@@ -2063,6 +2063,30 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autoarray/small_datasets_cap_stamp_stops_resimulation.md">Capped interferometer / multi_dataset datasets are re-simulated on every run…</a> — autoarray · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/small_datasets_cap_stamp_stops_resimulation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sparse_operator_ignores_disable_jax.md">apply_sparse_operator ignores PYAUTO_DISABLE_JAX=1 (a disable_jax() helper beside small_datasets())</a> — autoarray · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/sparse_operator_ignores_disable_jax.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/replace_promise_no_op_graph_walk.md">replace_promise walks the whole model graph even when no promise escaped…</a> — autofit · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autofit/replace_promise_no_op_graph_walk.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_workspace_test/jax_grad_delaunay_eager_jit_guard_float64_scatter.md">imaging/jax_grad/delaunay.py: the rtol=1e-10 eager-vs-jit guard sits inside float64 scatter on the rebuilt…</a> — autolens_workspace_test · medium · supervised · medium</summary>
 
 ```
@@ -2075,6 +2099,14 @@ Continue the 'CI test timing — finish the board, fast physical tests' epic. It
 
 ```
 /start_dev draft/bug/autolens_workspace_test/mge_group_source_basis_zeroed_on_coarse_data.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/mesh_shape_honours_small_datasets_cap.md">Pixelization mesh shape honours PYAUTO_SMALL_DATASETS like Grid2D.uniform and Mask2D.circular do</a> — autoarray · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/autoarray/mesh_shape_honours_small_datasets_cap.md
 ```
 
 </details>
@@ -2138,7 +2170,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-142 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+146 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2146,6 +2178,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/arcsecond_to_decimal.md`
 - `draft/feature/autoarray/image_source_mappings_epic.md`
+- `draft/feature/autoarray/mesh_shape_honours_small_datasets_cap.md`
 - `draft/feature/autoarray/multiwavelength_inversion.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/ep_analytic_updates.md`
@@ -2182,8 +2215,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautoheart/ci_timing_fast_tests_epic.md`
 - `draft/feature/pyautomind/witness_campaign.md`
-- `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
-- _… and 102 more_
+- _… and 106 more_
 
 </details>
 
