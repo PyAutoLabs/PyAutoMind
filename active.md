@@ -1,5 +1,26 @@
 # Active Tasks
 
+## unit-test-import-time-hotspot-census
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/213
+- issued: 2026-09-06
+- prompt: active/unit_test_import_time_hotspot_census.md
+- session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
+- status: research
+- epic: ci-timing-fast-tests (phase 9 of 9)
+- worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the PyAutoHeart clone (the census document is the only artefact)
+- repos:
+  - PyAutoHeart: claude/ci-test-timing-epic-ke2lul
+- summary: |
+    Phase 9 of the ci-timing-fast-tests epic: the unit-test + import-time census and
+    ranked shared-source hot-spot options — a research verdict, no source change.
+    Inputs: the timings/scripts record across both epochs, the first unit-timings
+    artifacts (from the phase-8c library PRs, ingested by a dispatched heart-health
+    run), local --durations for PyAutoGalaxy/PyAutoLens, -X importtime trees, and the
+    phase 5/6/8 diagnoses. Deliverable: PyAutoHeart timings/unit_import_census_2026-09.md
+    (a PR) + a summary on the issue; accepted options become their own prompts. Guards:
+    the compile-time verdict, no JAX in unit tests. Fable plan on the issue; execution
+    delegated to Opus. Next: /prm on the census PR, then the epic closes.
+
 ## replace-promise-no-op-graph-walk
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1563
 - issued: 2026-09-06
