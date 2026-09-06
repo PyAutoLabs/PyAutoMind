@@ -17,7 +17,8 @@
 - issued: 2026-09-06
 - prompt: active/smoke_ci_caches_jax_datasets.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/211
 - epic: ci-timing-fast-tests (phase 7 of 9 — pulled before phases 5/6 per the ledger's review)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the PyAutoHeart clone
 - repos:
@@ -28,4 +29,5 @@
     simulator hash × chain SHAs), cache state written into the timing artifact so
     every ingested row says hot or cold, drift never compared across cache states.
     Fable plan on the issue; implementation delegated to Opus. Measurement from the
-    record after merge. Next: PR, then /prm; then phase 5 (autogalaxy_test rebuild).
+    record after merge. PyAutoHeart#211 open (893 tests green). Next: /prm; then the
+    hot-vs-cold measurement from the record; then phase 5 (autogalaxy_test rebuild).

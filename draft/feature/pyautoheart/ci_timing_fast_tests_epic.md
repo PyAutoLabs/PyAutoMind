@@ -57,7 +57,7 @@ epic finishes).
 | 4 | complete/2026/09/legacy-baseline-timing-round.md | **SHIPPED 2026-09-06** — PyAutoHeart#209 (`ad56720`), issue #208 closed; epoch `legacy @ 2026-09-05` live, digest at PyAutoHeart `timings/legacy_round_2026-09.md` |
 | 5 | draft/test/autogalaxy_workspace_test/physical_fast_rebuild.md | filed |
 | 6 | draft/test/autolens_workspace_test/physical_fast_rebuild.md | filed |
-| 7 | active/smoke_ci_caches_jax_datasets.md | **issued 2026-09-06** — PyAutoHeart#210 (pulled before 5/6 per the review), branch `claude/ci-test-timing-epic-ke2lul` |
+| 7 | active/smoke_ci_caches_jax_datasets.md | **in flight** — issued 2026-09-06, PyAutoHeart#210 → PR PyAutoHeart#211 (awaiting merge; pulled before 5/6 per the review) |
 | 8 | draft/test/workspaces/user_workspace_howto_slow_script_pass.md | filed |
 | 9 | draft/research/workspaces/unit_test_import_time_hotspot_census.md | filed |
 
