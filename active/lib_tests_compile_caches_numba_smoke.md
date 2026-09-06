@@ -13,6 +13,7 @@ Witness: the PyAutoHeart wiring test for the lib-tests/smoke-tests cache steps p
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-06
+Issued: 2026-09-06
 
 Census option O1 of the ci-timing-fast-tests epic (PyAutoHeart
 `timings/unit_import_census_2026-09.md` §6), widened by one finding made while

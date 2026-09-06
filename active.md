@@ -11,3 +11,16 @@
 - repos:
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
+
+## lib-tests-compile-caches
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/215
+- issued: 2026-09-06
+- session: claude --resume session_01WYcmRnZf3cbC5Wth9bCkEg
+- status: library-dev
+- repos:
+  - PyAutoHeart: feature/lib-tests-compile-caches
+- summary: |
+    Census O1 widened: JAX + numba caches in lib-tests.yml, numba cache + content-stamped
+    mtimes in smoke-tests.yml, cache state on every unit and script timing row. Web session,
+    no task worktree (clone at /home/user/pyautoheart).
+

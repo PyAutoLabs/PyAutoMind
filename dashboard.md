@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 158 |
+| [Backlog](#backlog) (`draft/`) | 157 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
@@ -118,14 +118,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow: measure…</a> — pyautoheart · medium · safe · high</summary>
 
 ```
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 83
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -172,14 +172,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md
 ```
 
 </details>
@@ -248,9 +240,25 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a strict FD check…</a> — autolens_profiling · small · safe · low</summary>
+
+```
+/start_dev draft/feature/autolens_profiling/gradient_cost_probe.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> — issued 2026-09-06</summary>
+
+```
+/start_dev active/lib_tests_compile_caches_numba_smoke.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
 
@@ -405,10 +413,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 37</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
 
@@ -430,14 +438,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautobrain/batch_notify_tier_merge.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md
 ```
 
 </details>
@@ -1641,36 +1641,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pyautoheart — bundle 1</b> — 2 task(s) · 4 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'pyautoheart — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md
-- draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> | medium | high | formalised |
-| <a href="draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow…</a> | medium | high | formalised |
-
-</details>
-
-<details>
 <summary><b>jax-gpu · performance</b> — 2 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: delaunay, hpc, jax-gpu, performance</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1764,7 +1734,39 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 29 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>visualization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'visualization' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autolens/quick_update_plotting_cost.md
+- draft/feature/autoarray/arcsecond_to_decimal.md
+- draft/docs/workspaces/plot_coverage_followups.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | autolens | medium | medium | draft |
+| <a href="draft/feature/autoarray/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> | autoarray | large | normal | formalised |
+| <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> | workspaces | - | - | - |
+
+</details>
+
+_Showing 8 of 28 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1779,7 +1781,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-06 | filed | <a href="draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> |
-| 2026-09-06 | filed | <a href="draft/feature/pyautoheart/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> |
+| 2026-09-06 | issued | <a href="active/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md">Adapt-density mapper: a zero-signal adapt image is NaN on the JAX…</a> |
 
