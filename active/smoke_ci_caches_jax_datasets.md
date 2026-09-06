@@ -14,6 +14,7 @@ Review-minutes: 25
 Unattended: needs-slicing
 Epic: ci-timing-fast-tests
 Phase: 7
+Issued: 2026-09-06
 
 CI caches in the reusable smoke workflow: persist the JAX compile cache and dataset builds across runs.
 
