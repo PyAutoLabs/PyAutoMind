@@ -391,3 +391,14 @@ practical dividend of the weekly timing dataset that task shipped.
   from "why does block_until_ready never return", not from compiler behaviour.
 - notes: phase 1 (watchdog) shipped in full; phases 2/3 stopped deliberately at a measured-but-not-root-caused state. The stall is instrumented and characterised (>100x bimodality inside one compile step; vmap-of-jit contributory at p=0.070 but NOT causal; the compile-cache hypothesis never tested) and NOTHING was un-quarantined. Resumed 2026-08-27 as phase 3 (PyAutoFit#1528) — NOT via draft/research/ci/smoke_timing_and_profiling.md,
   which the 2026-08-23 close-out named as the resume door but which was never written. Superseded complete/2026/08/multi-dataset-jax-likelihood-xla-stall.md (was draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_xla_stall.md).
+
+## Note — 2026-09-06, reproduction conditions changed by the ci-timing-fast-tests rebuilds
+
+Phases 5 and 6 of `ci-timing-fast-tests` (autogalaxy_workspace_test#117, autolens_workspace_test#294)
+coarsened the shared `multi_dataset` datasets: autogalaxy 150x150 @ 0.1" -> 80x80 @ 0.2",
+autolens `lens_sersic` 150x150 @ 0.1" -> 80x80 @ 0.2" (2827 -> 716 masked pixels per band at the
+3.0" mask). The composite two-band `FactorGraphModel` vmap structure, the graph-build counts,
+every `batch_size` and the profile's `XLA_FLAGS=--xla_cpu_multi_thread_eigen=false` are
+unchanged, so the bug class is still exercised — on a smaller graph. If the stall signature is
+graph-size dependent, the post-rebuild runs are the first data point at the new size; compare
+against the `legacy` epoch in PyAutoHeart `timings/`, not across it.
