@@ -14,6 +14,7 @@ Witness: `python -X importtime -c 'import autofit'` has no `scipy.special` node 
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-06
+Issued: 2026-09-06
 
 Census options O2 and O3 of the ci-timing-fast-tests epic (PyAutoHeart
 `timings/unit_import_census_2026-09.md` §4 and §6). Two library PRs, one per

@@ -24,3 +24,16 @@
     mtimes in smoke-tests.yml, cache state on every unit and script timing row. Web session,
     no task worktree (clone at /home/user/pyautoheart).
 
+## defer-import-scipy-special-pyplot
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1565
+- issued: 2026-09-06
+- session: claude --resume session_01WYcmRnZf3cbC5Wth9bCkEg
+- status: library-dev
+- repos:
+  - PyAutoFit: feature/defer-import-scipy-special
+  - PyAutoLens: feature/defer-import-pyplot
+- summary: |
+    Census O2 + O3: lazy TransformedMessage support so scipy.special leaves `import autofit`;
+    function-local matplotlib imports in potential_correction/visualize.py so pyplot leaves
+    `import autolens`. Two independent library PRs. Web session, no task worktree.
+

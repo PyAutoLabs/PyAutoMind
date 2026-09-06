@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 157 |
+| [Backlog](#backlog) (`draft/`) | 156 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
@@ -90,14 +90,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autoarray/delaunay_walk_early_exit_unchunked.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> — autofit · medium · supervised · high</summary>
-
-```
-/start_dev draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md
 ```
 
 </details>
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 83
+<details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
+
+```
+/start_dev draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 82
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -164,14 +164,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> — autofit · medium · supervised · high</summary>
-
-```
-/start_dev draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md
 ```
 
 </details>
@@ -248,9 +240,25 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/witness_campaign.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> — issued 2026-09-06</summary>
+
+```
+/start_dev active/defer_scipy_special_and_pyplot_imports.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> — issued 2026-09-06</summary>
 
@@ -413,7 +421,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 37</summary>
@@ -1329,75 +1337,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 8</summary>
-
-<details><summary>📋 <a href="draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> — autofit · medium · supervised · high</summary>
-
-```
-/start_dev draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
-
-```
-/start_dev draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the tensorflow-probability dependency</a> — autoarray · large · supervised · medium</summary>
-
-```
-/start_dev draft/refactor/autoarray/matern_vendor_bessel_kve.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and <code>latent_batch_size</code></a> — autofit · small · supervised · normal</summary>
-
-```
-/start_dev draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> — autolens · medium · supervised · normal</summary>
-
-```
-/start_dev draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
-
-```
-/start_dev draft/refactor/pyautofit/remove_eden_packaging_tooling.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> — pyautomind · medium · supervised · low</summary>
-
-```
-/start_dev draft/refactor/pyautomind/repos_sync_check_dedup.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
-
-```
-/start_dev draft/refactor/autoarray/sparse_operator_int32_indexes.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>test</b> — 7</summary>
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
@@ -1452,6 +1391,67 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/test/workspaces/smoke_workspace_fixes.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>refactor</b> — 7</summary>
+
+<details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
+
+```
+/start_dev draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the tensorflow-probability dependency</a> — autoarray · large · supervised · medium</summary>
+
+```
+/start_dev draft/refactor/autoarray/matern_vendor_bessel_kve.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and <code>latent_batch_size</code></a> — autofit · small · supervised · normal</summary>
+
+```
+/start_dev draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> — autolens · medium · supervised · normal</summary>
+
+```
+/start_dev draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
+
+```
+/start_dev draft/refactor/pyautofit/remove_eden_packaging_tooling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> — pyautomind · medium · supervised · low</summary>
+
+```
+/start_dev draft/refactor/pyautomind/repos_sync_check_dedup.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
+
+```
+/start_dev draft/refactor/autoarray/sparse_operator_int32_indexes.md
 ```
 
 </details>
@@ -1543,36 +1543,6 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> | ci | medium | high | - |
 | <a href="draft/test/pyautoheart/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> | pyautoheart | medium | normal | formalised |
 | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> | ci | medium | normal | formalised |
-
-</details>
-
-<details>
-<summary><b>autofit — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md
-- draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> | medium | high | formalised |
-| <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and…</a> | large | normal | formalised |
 
 </details>
 
@@ -1766,7 +1736,39 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 28 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>samplers · jax-gradient</b> — 3 task(s) · 7 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'samplers · jax-gradient' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/feature/autofit/prior_exit_sampler_coverage.md
+- draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
+- draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> | autofit | medium | medium | formalised |
+| <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and…</a> | autofit | small | normal | formalised |
+| <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts /…</a> | autolens_profiling | large | normal | formalised |
+
+</details>
+
+_Showing 8 of 27 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1780,7 +1782,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
 | 2026-09-06 | filed | <a href="draft/feature/pyautoheart/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
-| 2026-09-06 | filed | <a href="draft/refactor/autofit/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> |
+| 2026-09-06 | issued | <a href="active/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> |
 | 2026-09-06 | issued | <a href="active/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md">Adapt-density mapper: a zero-signal adapt image is NaN on the JAX…</a> |
