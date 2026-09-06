@@ -10,8 +10,6 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-09-06
-Epic: ci-timing-fast-tests
-Phase: 8b
 
 Split out of phase 8 (autolens_workspace#536) because it is the one script on a
 different stack (PyAutoCTI + arcticpy). The ingested record (PyAutoHeart
@@ -29,3 +27,5 @@ not reach? plot/output work the skip variables miss?), then fix it the phase-8
 way — shared machinery (autonerves cap helper, profile override) first, script
 content last and conservative, never the tutorial prose. CI is the acceptance;
 record the before/after rows in the epic ledger.
+
+<!-- was a member of the ci-timing-fast-tests epic (retired COMPLETE 2026-09-06, ledger complete/archive/epics/ci_timing_fast_tests_epic.md); now ordinary backlog -->

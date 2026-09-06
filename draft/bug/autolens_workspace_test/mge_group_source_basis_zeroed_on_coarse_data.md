@@ -10,7 +10,6 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-09-06
-Epic: ci-timing-fast-tests
 
 Left over from phase 6 (autolens_workspace_test#293 / #294). After the shared
 imaging dataset moved to 100x100 @ 0.3" with fainter lens light,
@@ -38,3 +37,5 @@ MGE sigma ladder starting well below the lens ladder, or a lens ladder that stop
 below the Einstein radius), or establish whether the positive-only solver's
 behaviour on a ~560-pixel mask is the real cause (a PyAutoArray question). The
 assertion and its 0.02 floor stay as they are; the fix is in the model.
+
+<!-- was a member of the ci-timing-fast-tests epic (retired COMPLETE 2026-09-06, ledger complete/archive/epics/ci_timing_fast_tests_epic.md); now ordinary backlog -->
