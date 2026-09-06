@@ -5,7 +5,8 @@
 - issued: 2026-09-06
 - prompt: active/unit_test_import_time_hotspot_census.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: research
+- status: research-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/214
 - epic: ci-timing-fast-tests (phase 9 of 9)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the PyAutoHeart clone (the census document is the only artefact)
 - repos:
