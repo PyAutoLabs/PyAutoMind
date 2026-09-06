@@ -13,6 +13,7 @@ Review-minutes: 25
 Unattended: needs-slicing
 Epic: ci-timing-fast-tests
 Phase: 6
+Issued: 2026-09-06
 
 autolens_workspace_test physical + fast rebuild (flagship repo; applies the phase-5 template).
 
