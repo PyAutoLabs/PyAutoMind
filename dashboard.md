@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/unit_test_import_time_hotspot_census.md">Unit-test + import-time bottleneck census and shared-source hot-spot options</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/213">issue #213</a> — issued 2026-09-06 — research</summary>
+<details><summary>📋 <a href="active/unit_test_import_time_hotspot_census.md">Unit-test + import-time bottleneck census and shared-source hot-spot options</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/213">issue #213</a> — issued 2026-09-06 — research-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/214">PyAutoHeart#214</a></summary>
 
 ```
 /start_dev active/unit_test_import_time_hotspot_census.md
