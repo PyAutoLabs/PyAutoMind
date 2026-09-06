@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_ci_caches_jax_datasets.md">CI caches in the reusable smoke workflow: JAX compile cache + dataset…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/210">issue #210</a> — issued 2026-09-06 — library-dev</summary>
+<details><summary>📋 <a href="active/smoke_ci_caches_jax_datasets.md">CI caches in the reusable smoke workflow: JAX compile cache + dataset…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/210">issue #210</a> — issued 2026-09-06 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/211">PyAutoHeart#211</a></summary>
 
 ```
 /start_dev active/smoke_ci_caches_jax_datasets.md
