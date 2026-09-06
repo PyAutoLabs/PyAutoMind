@@ -5,7 +5,8 @@
 - issued: 2026-09-06
 - prompt: active/replace_promise_no_op_graph_walk.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1564
 - epic: ci-timing-fast-tests (phase 8c, library leg)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the library clones
 - repos:
@@ -22,7 +23,9 @@
 - issued: 2026-09-06
 - prompt: active/small_datasets_cap_stamp_stops_resimulation.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/160
+- library-pr-2: https://github.com/PyAutoLabs/PyAutoArray/pull/529
 - epic: ci-timing-fast-tests (phase 8c, library leg)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the library clones
 - repos:
@@ -40,7 +43,9 @@
 - issued: 2026-09-06
 - prompt: active/sparse_operator_ignores_disable_jax.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/160
+- library-pr-2: https://github.com/PyAutoLabs/PyAutoArray/pull/529
 - epic: ci-timing-fast-tests (phase 8c, library leg)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the library clones
 - repos:
@@ -58,7 +63,8 @@
 - issued: 2026-09-06
 - prompt: active/mesh_shape_honours_small_datasets_cap.md
 - session: claude --resume session_0151gQm9fk3XGLi5f18Urdba
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/529
 - epic: ci-timing-fast-tests (phase 8c, library leg)
 - worktree: none — cloud session; branch `claude/ci-test-timing-epic-ke2lul` in the library clones
 - repos:

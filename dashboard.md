@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/mesh_shape_honours_small_datasets_cap.md">Pixelization mesh shape honours PYAUTO_SMALL_DATASETS like Grid2D.uniform and Mask2D.circular do</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/528">issue #528</a> — issued 2026-09-06 — library-dev</summary>
+<details><summary>📋 <a href="active/mesh_shape_honours_small_datasets_cap.md">Pixelization mesh shape honours PYAUTO_SMALL_DATASETS like Grid2D.uniform and Mask2D.circular do</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/528">issue #528</a> — issued 2026-09-06 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/529">PyAutoArray#529</a></summary>
 
 ```
 /start_dev active/mesh_shape_honours_small_datasets_cap.md
@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/replace_promise_no_op_graph_walk.md">replace_promise walks the whole model graph even when no promise escaped…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1563">issue #1563</a> — issued 2026-09-06 — library-dev</summary>
+<details><summary>📋 <a href="active/replace_promise_no_op_graph_walk.md">replace_promise walks the whole model graph even when no promise escaped…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1563">issue #1563</a> — issued 2026-09-06 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1564">PyAutoFit#1564</a></summary>
 
 ```
 /start_dev active/replace_promise_no_op_graph_walk.md
@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/small_datasets_cap_stamp_stops_resimulation.md">Capped interferometer / multi_dataset datasets are re-simulated on every run…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/528">issue #528</a> — issued 2026-09-06 — library-dev</summary>
+<details><summary>📋 <a href="active/small_datasets_cap_stamp_stops_resimulation.md">Capped interferometer / multi_dataset datasets are re-simulated on every run…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/528">issue #528</a> — issued 2026-09-06 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/160">PyAutoNerves#160</a></summary>
 
 ```
 /start_dev active/small_datasets_cap_stamp_stops_resimulation.md
@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_operator_ignores_disable_jax.md">apply_sparse_operator ignores PYAUTO_DISABLE_JAX=1 (a disable_jax() helper beside small_datasets())</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/528">issue #528</a> — issued 2026-09-06 — library-dev</summary>
+<details><summary>📋 <a href="active/sparse_operator_ignores_disable_jax.md">apply_sparse_operator ignores PYAUTO_DISABLE_JAX=1 (a disable_jax() helper beside small_datasets())</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/528">issue #528</a> — issued 2026-09-06 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/160">PyAutoNerves#160</a></summary>
 
 ```
 /start_dev active/sparse_operator_ignores_disable_jax.md
