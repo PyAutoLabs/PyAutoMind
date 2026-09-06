@@ -54,7 +54,7 @@ epic finishes).
 | 1 | complete/2026/09/smoke-timings-ingester.md | **SHIPPED 2026-09-05** — PyAutoHeart#203 (`7a286ea`), issue #202 closed |
 | 2 | complete/2026/09/permanent-ci-timing-history.md | **SHIPPED 2026-09-05** — PyAutoHeart#205 (`7b4e109`), issue #204 closed |
 | 3 | complete/2026/09/offtick-timing-legs-live.md | **SHIPPED 2026-09-05** — PyAutoHeart#207 (`cb1d500`), issue #206 closed; ingestion via lib-tests.yml, workspace_testmode_timing retired as superseded |
-| 4 | active/legacy_baseline_timing_round.md | **in flight** — issued 2026-09-05, PyAutoHeart#208 → PR PyAutoHeart#209 (awaiting merge); record seeded 2026-09-05 (494 scripts / 11 repos, 0 unavailable); digest: PyAutoHeart `timings/legacy_round_2026-09.md` |
+| 4 | complete/2026/09/legacy-baseline-timing-round.md | **SHIPPED 2026-09-06** — PyAutoHeart#209 (`ad56720`), issue #208 closed; epoch `legacy @ 2026-09-05` live, digest at PyAutoHeart `timings/legacy_round_2026-09.md` |
 | 5 | draft/test/autogalaxy_workspace_test/physical_fast_rebuild.md | filed |
 | 6 | draft/test/autolens_workspace_test/physical_fast_rebuild.md | filed |
 | 7 | draft/feature/pyautoheart/smoke_ci_caches_jax_datasets.md | filed |

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1304 records across 8 buckets.
+1305 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -165,6 +165,7 @@ markers; everything below GENERATED is rebuilt.
 - [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
 - [image-source-mappings-p3](2026/09/image-source-mappings-p3.md)
 - [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
+- [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
 - [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
