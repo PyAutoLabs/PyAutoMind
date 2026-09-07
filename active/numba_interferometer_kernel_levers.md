@@ -14,6 +14,7 @@ Priority: high
 Epic: numba-interferometer-revisit
 Phase: 2
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Phase 2 of `draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md`.
 Requires phase 1's pack (`scripts/misc/numba_interferometer/`). PyAutoArray stays

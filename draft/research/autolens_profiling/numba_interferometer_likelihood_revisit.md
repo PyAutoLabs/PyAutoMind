@@ -59,7 +59,7 @@ Filed: 2026-09-07
 | # | Phase | Prompt | State (2026-09-07) |
 |---|-------|--------|--------------------|
 | 1 | Standalone pack + breakdown scripts mirroring the imaging numba ones | `complete/2026/09/numba-interferometer-pack.md` | **SHIPPED 2026-09-07** — autolens_profiling#223, PR #225 merged `99f4b533b52cda974f62c59e8b2995ccb941474b` |
-| 2 | Synthetic bake-off, kernel levers, in-situ numba vs JAX-CPU, verdict note | `draft/research/autolens_profiling/numba_interferometer_kernel_levers.md` | filed; after phase 1 |
+| 2 | Synthetic bake-off, kernel levers, in-situ numba vs JAX-CPU, verdict note | `active/numba_interferometer_kernel_levers.md` | issued https://github.com/PyAutoLabs/autolens_profiling/issues/226 |
 | 3 | Preload as its own line item: builder timings + adjoint-NUFFT construction | `draft/research/autolens_profiling/interferometer_preload_cpu.md` | filed; after phase 1 |
 
 PyAutoArray is read-only throughout; library changes the verdict justifies (reinstatement,
