@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 158 |
+| [Backlog](#backlog) (`draft/`) | 157 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -56,7 +56,7 @@ anything you could not verify.
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
@@ -86,14 +86,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in the cavity…</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autoarray/delaunay_nn_launch_latency.md
 ```
 
 </details>
@@ -154,7 +146,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
+<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -260,6 +260,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/cortex_projects_route_through_assistant.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in the cavity…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/532">issue #532</a> — issued 2026-09-07 — library-dev</summary>
+
+```
+/start_dev active/delaunay_nn_launch_latency.md
 ```
 
 </details>
@@ -448,23 +456,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 37</summary>
+<summary><b>feature</b> — 36</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a> — pyautobrain · small · human-required · high</summary>
 
 ```
 /start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in the cavity…</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autoarray/delaunay_nn_launch_latency.md
 ```
 
 </details>
@@ -1646,16 +1646,15 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>jax-gpu · performance</b> — 3 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: delaunay, hpc, jax-gpu, performance</summary>
+<summary><b>jax-gpu · performance</b> — 2 task(s) · 2 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: delaunay, hpc, jax-gpu, performance</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'jax-gpu · performance' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'jax-gpu · performance' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
-- draft/feature/autoarray/delaunay_nn_launch_latency.md
 - draft/feature/autoarray/sibson_single_concatenated_walk.md
 
 Contract (the `start_bundle` skill is the full body):
@@ -1672,7 +1671,6 @@ Contract (the `start_bundle` skill is the full body):
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
 | <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix…</a> | autonerves | small | high | draft |
-| <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in…</a> | autoarray | medium | high | draft |
 | <a href="draft/feature/autoarray/sibson_single_concatenated_walk.md">Sibson natural-neighbour: one concatenated Delaunay locate instead of…</a> | autoarray | small | medium | superseded |
 
 </details>
@@ -1820,7 +1818,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
-| 2026-09-07 | filed | <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in…</a> |
+| 2026-09-07 | issued | <a href="active/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in…</a> |
 | 2026-09-07 | issued | <a href="active/cortex_projects_route_through_assistant.md">Cortex projects route through the domain assistant at execution time</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
 
@@ -2240,13 +2238,12 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-19 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+18 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
-- `draft/feature/autoarray/delaunay_nn_launch_latency.md — unknown theme keyword(s): jax-gpu, delaunay, performance`
 - `draft/feature/autoarray/sibson_single_concatenated_walk.md — unknown theme keyword(s): jax-gpu, delaunay, performance`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
