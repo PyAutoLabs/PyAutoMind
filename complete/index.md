@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1317 records across 8 buckets.
+1323 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,6 +122,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/09
 
 - [adapt-image-snr-cap](2026/09/adapt-image-snr-cap.md)
+- [agwt-multi-delaunay-release-timeout](2026/09/agwt-multi-delaunay-release-timeout.md)
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under
 - [autofit-prodigy-49](2026/09/autofit-prodigy-49.md)
 - [batch-collect](2026/09/batch-collect.md) — closed completed 2026-09-02
@@ -165,18 +166,22 @@ markers; everything below GENERATED is rebuilt.
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
 - [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
 - [image-source-mappings-p3](2026/09/image-source-mappings-p3.md)
+- [jax-delaunay-six-tuple-unpack](2026/09/jax-delaunay-six-tuple-unpack.md)
 - [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
+- [jax-grad-delaunay-constant-folding-guard](2026/09/jax-grad-delaunay-constant-folding-guard.md) — rtol 1e-10 guard retired
 - [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
 - [lib-tests-compile-caches](2026/09/lib-tests-compile-caches.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
 - [mesh-shape-honours-small-datasets-cap](2026/09/mesh-shape-honours-small-datasets-cap.md)
+- [mge-group-source-basis-scale](2026/09/mge-group-source-basis-scale.md)
 - [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
 - [mind-post-cortex-p2](2026/09/mind-post-cortex-p2.md)
 - [mind-post-cortex-p3-pr-ledger](2026/09/mind-post-cortex-p3-pr-ledger.md)
 - [mind-post-cortex-p4-batch-fidelity](2026/09/mind-post-cortex-p4-batch-fidelity.md) — closed, completed 2026-09-03
 - [mind-post-cortex-p5-heart-freeze](2026/09/mind-post-cortex-p5-heart-freeze.md) — closed, completed 2026-09-03
 - [multi-dataset-offsets-fit](2026/09/multi-dataset-offsets-fit.md) — Community bug report verified true on all three counts and fixed. Every multi-dataset example that freed `Data…
+- [nufft-threshold-subhalo-pin-rebuild](2026/09/nufft-threshold-subhalo-pin-rebuild.md)
 - [numba-vs-jax-sparse](2026/09/numba-vs-jax-sparse.md)
 - [numpy-deflections-p1](2026/09/numpy-deflections-p1.md)
 - [numpy-deflections-p2](2026/09/numpy-deflections-p2.md)
@@ -189,6 +194,7 @@ markers; everything below GENERATED is rebuilt.
 - [physical-fast-rebuild-autogalaxy](2026/09/physical-fast-rebuild-autogalaxy.md)
 - [physical-fast-rebuild-autolens](2026/09/physical-fast-rebuild-autolens.md)
 - [pixelized-source-magnification-latent](2026/09/pixelized-source-magnification-latent.md)
+- [point-source-smoke-runtime-regression](2026/09/point-source-smoke-runtime-regression.md) — not a library regression
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
 - [profiles-jit-powerlaw-exact-zero-atol](2026/09/profiles-jit-powerlaw-exact-zero-atol.md)
 - [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)

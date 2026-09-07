@@ -1,3 +1,23 @@
+# nufft's degenerate peak assert replaced, subhalo pins regenerated for the coarsened smoke data
+
+autolens_workspace_test#301 → `db2570fc`, closing autolens_workspace_test#297, merged 2026-09-07. One of six corrective PRs shipped 2026-09-07 under the human-authorised Heart RED corrective-PR exception (reasons: `release validation FAILED (stage integrate)` and `workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)`). Fable session planned; Opus subagents implemented per task; merged via /prm the same day. Validation of the RED clearing is the next scheduled Workspace Smoke and Release Integrate runs on fresh wheels.
+
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/297
+- completed: 2026-09-07
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/301
+- corrective-red: authorization https://github.com/PyAutoLabs/autolens_workspace_test/issues/297#issuecomment-5573411589
+
+## What shipped
+- `scripts/interferometer/nufft.py`: the `distance < 6.0` argmax-vs-argmax assert is retired; (d.2a) nufftax adjoint vs exact `TransformerDFT` adjoint `rel < 1e-9` (measured 9.9e-15) and (d.2b) flux-centroid shift `< 0.06"` (measured 0.0366") replace it. Peak coordinates still printed, not asserted.
+- `scripts/imaging/substructure/subhalo.py`: four `expected_vmap` literals regenerated from two cold runs agreeing to all printed digits (C/D had drifted too; CI stops at the first break).
+
+## Key traps / findings
+- Not a NUFFT regression (adjoint exact to 1e-14 in six geometries, on current and 2026-08-31 library mains) and not a resolution artefact: `distance * pixel_scale` was 0.36" old vs 3.16" new, so the prescribed "angular threshold" would have been a 10x loosening. The dirty image is 96% of its peak at the *other* lensed image; coarsening flipped the argmax between the two.
+- The retired assert passed 4/4 injected hazards on the old geometry (vacuous); (d.2a) fires on 4/4. Positive-control every replacement assert.
+- The 2026-09-06 dataset rebuild (`fb6e709`) re-matched only PR-gate scripts; the weekly/integrate channels run all 159 and only these seven failed, which answers the "sweep other off-gate scripts" ask without a static audit.
+
+## Original prompt
+
 # nufft.py round-trip threshold and subhalo.py expected_vmap pin not regenerated for the 2026-09-06 smoke-dataset rebuild
 
 Type: bug
