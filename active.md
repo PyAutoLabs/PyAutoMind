@@ -14,9 +14,11 @@
 
 ## cortex-tasks-not-phases
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/20
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/21
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/361
 - issued: 2026-09-07
 - session: claude --resume session_01EpM4gQikgEtCqpBJ3hzgct
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/cortex-tasks-not-phases
 - repos:
   - PyAutoCortex: feature/cortex-tasks-not-phases
