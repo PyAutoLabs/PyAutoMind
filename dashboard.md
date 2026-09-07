@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 155 |
+| [Backlog](#backlog) (`draft/`) | 156 |
 
 > **No batch in flight.**
 
@@ -458,7 +458,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**155** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 36</summary>
@@ -2069,7 +2069,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 </details>
 
 <details>
-<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 5 queued prompt(s), in order</summary>
+<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: `draft/feature/euclid/euclid_dr1_prep_epic.md` — science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex</summary>
 
@@ -2083,6 +2083,14 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 ```
 /start_dev draft/feature/euclid/catalogue_extension_coolest_mass_fits.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/quick_update_out_of_disk_ell_comps_kills_run.md">A quick update must not kill a 36 h run because…</a> — autofit · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autofit/quick_update_out_of_disk_ell_comps_kills_run.md
 ```
 
 </details>
