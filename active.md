@@ -7,6 +7,8 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/quick-update-tolerates-invalid-instance
 - repos:
+  - PyAutoFit: feature/quick-update-tolerates-invalid-instance
+  - euclid_strong_lens_modeling_pipeline: feature/quick-update-tolerates-invalid-instance
 - summary: |
     Both legs taken: PyAutoFit guards manage_quick_update instance construction (log + skip); pipeline bounds vis_lp source MGE ell_comps to [-0.7, 0.7]. Library PR first, pipeline PR gated. Cortex relaunch of RAL 342301 task 3 is a follow-up, not this task.
 
