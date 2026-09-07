@@ -16,6 +16,7 @@ Consequence: judge
 Review-minutes: 30
 Unattended: no
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Make the PyAutoCortex board read like a science project: a project holds
 unordered **tasks** (ideas the human runs in whatever order results dictate),

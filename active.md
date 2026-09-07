@@ -11,3 +11,11 @@
 - repos:
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
+
+## cortex-tasks-not-phases
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/20
+- issued: 2026-09-07
+- session: claude --resume session_01EpM4gQikgEtCqpBJ3hzgct
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-tasks-not-phases
+- repos:
