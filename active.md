@@ -4,7 +4,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1567
 - issued: 2026-09-07
 - session: claude --resume session_01P5K4AXFBYMCPhbNFYA24YX
-- status: library-dev, ship-blocked-heart-red
+- status: library-dev, shipping
+- heart-ack: 2026-09-07 in-session, human said "I acknowledge you can continue and get this work done" over Heart RED reasons "release validation FAILED (stage integrate)" and "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 ...)" — organism-scope, nothing in this branch is in the release chain; PR-open only, merge stays human
 - worktree: ~/Code/PyAutoLabs-wt/quick-update-tolerates-invalid-instance
 - repos:
   - PyAutoFit: feature/quick-update-tolerates-invalid-instance
