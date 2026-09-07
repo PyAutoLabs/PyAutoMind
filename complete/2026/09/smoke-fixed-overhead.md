@@ -1,3 +1,51 @@
+# The smoke gate's fixed per-leg overhead, measured and trimmed: depth-1 clones, a pip wheel cache, `setup_s` as data
+
+PyAutoHeart#218 → `551f165`, closing PyAutoHeart#216, merged 2026-09-07, stacked on #217.
+Fable-planned from a web session (no task worktree); implemented by an Opus subagent under the
+delegation ladder; workflow and Heart-side Python only, no library source changed.
+
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/216
+- completed: 2026-09-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/218
+
+## What shipped
+- **Measured first** (12 legs, six autolens_workspace_test runs, Actions job-step timestamps,
+  table on the issue): `setup_s` (job start → first script) 104 s mean = 22.6% of the job;
+  install 83.6 s (80%), chain clone 16.5 s (16%), everything else ~4 s. The legacy digest's
+  "~2–3 minutes per leg" was an over-estimate; the measured range is 86–119 s.
+- `smoke-tests.yml`: `--depth 1` on the chain + PyAutoHands clones and on the matching-branch
+  fetch, with the fallback as `fetch --depth 1 origin "$BRANCH"` + `checkout -B "$BRANCH"
+  FETCH_HEAD` (a shallow clone is single-branch, so plain `checkout "$BRANCH"` fails); an
+  `actions/cache@v4` on `~/.cache/pip` keyed on the dependency declarations' content + python
+  leg + epoch salt, prefix fallback, `continue-on-error`; two non-fatal `Mark …` steps the
+  recorder differences into `setup_s` in the sidecar (`null` when a mark is missing).
+- Ingest/record/board: `setup_s` through `parse_cache_state`/`cache_view`, recorded on
+  `timings/scripts/<repo>.jsonl` lines beside `cache`, appended as `· setup Ns` to the board's
+  per-repo line only when known. Runner command byte-identical. Tests 924 → 939.
+- Reported, not done (on the issue): `--no-deps` for the chain (15–30 s, moves the intra-family
+  floor guarantee into eleven workspace epilogues), prebuilt wheels (10–20 s, a second artefact
+  per library), dropping `--upgrade pip setuptools wheel` (3–6 s, the line that absorbs
+  runner-image drift).
+
+## Key traps / findings
+- A shallow source install still stamps `9999.0.0.dev0`: `setup.py`'s `VERSION` default wins over
+  the `[tool.setuptools_scm]` block, checked by installing the family from shallow clones in the
+  session venv — so depth-1 clones do not break the intra-family `>=` floors.
+- setup-python's `cache: pip` was the wrong tool here: it cannot be non-fatal, cannot carry the
+  epoch salt, and hard-errors on a `cache-dependency-path` that matches no file while the chain is
+  caller-supplied text. The libraries declare dependencies in `pyproject.toml`, not
+  `requirements*.txt`.
+- `setup_s` is measured from the `smoke` job's first step, so it excludes the `changes` job and
+  runner-provisioning slack: "what this workflow spends", not "what the PR waits".
+
+## Follow-ups
+- Read `setup_s` back from `timings/scripts/<repo>.jsonl` after the callers' next `main` runs and
+  put the before/after beside the 104 s baseline; the ceiling if both levers land fully is
+  ~15–25 s per leg.
+- Each report-only lever becomes its own prompt if wanted; `--no-deps` is the one worth the most.
+
+## Original prompt
+
 # Trim the fixed per-leg overhead of the reusable smoke workflow: measure the steps, then depth-1 clones and a pip cache
 
 Type: feature
@@ -13,6 +61,7 @@ Witness: a wiring test pins `--depth 1` on every chain clone and a pip cache ste
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-06
+Issued: 2026-09-06
 
 The legacy digest (PyAutoHeart `timings/legacy_round_2026-09.md` §1) measures
 the two `_test` flagships spending **~2–3 minutes per leg on checkout + install
