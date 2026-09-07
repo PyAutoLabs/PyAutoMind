@@ -13,18 +13,17 @@
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
 
 ## point-source-smoke-runtime-regression
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/730
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/537
 - issued: 2026-09-07
 - session: claude --resume session_01UUjCh13UJ62sgM3wN6XNuZ
-- status: library-dev
+- status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/point-source-smoke-runtime-regression
 - repos:
-  - PyAutoLens: feature/point-source-smoke-runtime-regression
   - autolens_workspace: feature/point-source-smoke-runtime-regression
 - corrective-red: PyAutoHeart is RED; this task is a corrective fix for the reason(s) below and may not commit, push or open a PR until a human authorisation comment lands on the issue (PyAutoBrain/AUTONOMY.md corrective-PR exception).
     reason: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)"
     authorization: PENDING — awaiting human comment on the issue
-- note: PyAutoArray, PyAutoFit, PyAutoGalaxy and PyAutoNerves are bisect candidates for this task and are deliberately NOT claimed; the bisect uses scratch worktrees. Library-first merge gate applies if a library and a workspace PR both land.
+- finding: "untimed urlretrieve stall in CI (run 34099198772 artifact traceback), not a library regression; fix = timeout+retry in autolens_workspace"
 
 ## jax-delaunay-six-tuple-unpack
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/296

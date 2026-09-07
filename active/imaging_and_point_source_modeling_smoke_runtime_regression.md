@@ -1,7 +1,7 @@
 # multi_dataset/features/imaging_and_point_source/modeling.py runtime regressed 5.7 s -> 300 s timeout between 2026-08-31 and 2026-09-07
 
 Type: bug
-Target: PyAutoLens
+Target: autolens_workspace
 Repos:
 - PyAutoLens
 - autolens_workspace
@@ -13,6 +13,7 @@ Filed: 2026-09-07
 Witness: `autolens_workspace/scripts/multi_dataset/features/imaging_and_point_source/modeling.py` completes under `profile_smoke.yaml` in under 60 s on the fixed library main (it was 5.73 s on 2026-08-31 and 301.9 s TIMEOUT on 2026-09-07), with the offending commit named in the PR.
 Unattended: ready
 Issued: 2026-09-07
+Finding: not a library regression — an untimed `urlretrieve` hips2fits fetch stalled at modeling.py:80 and burnt the 300 s cap (run 34099198772 artifact traceback); fix is timeout+retry in autolens_workspace, PyAutoLens untouched.
 
 On the weekly Workspace Smoke (PyAutoHeart run 34099198772) the `autolens_workspace`
 script `scripts/multi_dataset/features/imaging_and_point_source/modeling.py` (script and
