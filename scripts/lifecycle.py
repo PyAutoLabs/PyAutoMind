@@ -80,6 +80,29 @@ COMPLETE_DIR = ROOT / "complete"
 ARCHIVE_DIR = COMPLETE_DIR / "archive"
 DRAFT_DIR = ROOT / "draft"
 ACTIVE_MD = ROOT / "active.md"
+AUTONOMY_LOG = ROOT / "autonomy_log.md"
+
+# --- the tier-`notify` shadow window ---------------------------------------
+# The pre-registered decision rule (protocol prompt: batch_notify_tier_merge)
+# grades tier-`notify` candidates over a window of at least 40 rows. The window
+# is COUNTED, not dated: it re-opened on 2026-09-03 and runs from the first row
+# `/prm` close-out appended, because the old append was anchored to a batch
+# review slot that only runs when a batch is launched.
+SHADOW_HEADING = "## Shadow window"
+SHADOW_TABLE_HEADER = "| date | task | tier | gate"
+SHADOW_ACTIONS = (
+    "merged-unchanged",
+    "merged-after-substantive-change",
+    "not-merged",
+)
+SHADOW_STAGES = ("1", "2")
+SHADOW_TARGET = 40
+SHADOW_REOPENED = "2026-09-03"
+# Rows dated before this are the pre-`/prm` history: listed, never counted as
+# "the first row `/prm` appended".
+SHADOW_PRM_EPOCH = "2026-09-07"
+SHADOW_COUNT_PREFIX = "Count toward 40:"
+SHADOW_COUNT_ANCHOR = "One row per tier-`notify` candidate"
 
 H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 
@@ -1981,6 +2004,156 @@ def cmd_check(args) -> int:
     return 0
 
 
+# --------------------------------------------------------------------------- #
+# the tier-`notify` shadow window (autonomy_log.md)
+# --------------------------------------------------------------------------- #
+def _md_cells(line: str) -> "list[str]":
+    """The cells of one markdown table row, honouring escaped pipes.
+
+    Rows in this ledger quote shell and Python (`\\|delta\\|`), so a plain
+    `split("|")` invents columns. Splitting on an unescaped pipe is the whole
+    difference between "six cells" and "eight cells" on those rows.
+    """
+    body = line.strip()
+    if body.startswith("|"):
+        body = body[1:]
+    if body.endswith("|") and not body.endswith("\\|"):
+        body = body[:-1]
+    return [c.strip() for c in re.split(r"(?<!\\)\|", body)]
+
+
+def shadow_section(text: str) -> "tuple[int, int]":
+    """[start, end) line indices of the shadow-window section, or ValueError."""
+    lines = text.splitlines()
+    start = None
+    for i, ln in enumerate(lines):
+        if ln.startswith(SHADOW_HEADING):
+            start = i
+            break
+    if start is None:
+        raise ValueError(f"no {SHADOW_HEADING!r} heading in the ledger")
+    end = len(lines)
+    for j in range(start + 1, len(lines)):
+        if lines[j].startswith("## "):
+            end = j
+            break
+    return start, end
+
+
+def shadow_table(text: str) -> "tuple[int, int]":
+    """(header line index, index one past the last data row) of the shadow table."""
+    lines = text.splitlines()
+    start, end = shadow_section(text)
+    header = None
+    for i in range(start, end):
+        if lines[i].startswith(SHADOW_TABLE_HEADER):
+            header = i
+            break
+    if header is None:
+        raise ValueError(
+            f"no row starting {SHADOW_TABLE_HEADER!r} under {SHADOW_HEADING!r}")
+    last = header + 2  # header + separator
+    while last < end and lines[last].startswith("|"):
+        last += 1
+    return header, last
+
+
+def shadow_rows(text: str) -> "list[list[str]]":
+    """Every data row of the shadow table, as cell lists."""
+    header, last = shadow_table(text)
+    lines = text.splitlines()
+    return [_md_cells(ln) for ln in lines[header + 2:last]]
+
+
+def shadow_count_line(rows: "list[list[str]]") -> str:
+    """The section's one-line state of the window, derived from the rows.
+
+    Only stage-1 and stage-2 rows count: the window's own rule forbids pooling
+    the two, and legacy rows carry neither (they predate the stage column's
+    meaning). They stay listed — deleting history to make a counter tidy is how
+    a pre-registered rule stops being pre-registered — and are named as
+    uncounted so the number cannot be read as "the table has N rows".
+    """
+    staged = [r for r in rows if len(r) > 5 and r[5] in SHADOW_STAGES]
+    legacy = len(rows) - len(staged)
+    one = sum(1 for r in staged if r[5] == "1")
+    two = sum(1 for r in staged if r[5] == "2")
+    firsts = sorted(r[0] for r in staged if r[0] >= SHADOW_PRM_EPOCH)
+    first = firsts[0] if firsts else "none yet"
+    line = (f"{SHADOW_COUNT_PREFIX} {len(staged)} (stage 1: {one}, stage 2: "
+            f"{two}) — window re-opened {SHADOW_REOPENED}; "
+            f"first /prm-appended row: {first}")
+    if legacy:
+        line += f"; legacy rows not counted: {legacy}"
+    return line
+
+
+def _shadow_cell(value: str) -> str:
+    """A pipe inside a cell silently splits the row — trade it for a slash."""
+    return " ".join(str(value).replace("|", "/").split())
+
+
+def shadow_apply(text: str, row: str) -> str:
+    """Append `row` under the shadow table and rewrite the count line."""
+    lines = text.splitlines()
+    header, last = shadow_table(text)
+    lines.insert(last, row)
+
+    rows = shadow_rows("\n".join(lines))
+    count = shadow_count_line(rows)
+
+    start, end = shadow_section("\n".join(lines))
+    for i in range(start, end):
+        if lines[i].startswith(SHADOW_COUNT_PREFIX):
+            lines[i] = count
+            break
+    else:
+        for i in range(start, end):
+            if lines[i].startswith(SHADOW_COUNT_ANCHOR):
+                lines.insert(i, "")
+                lines.insert(i, count)
+                break
+        else:
+            raise ValueError(
+                f"no {SHADOW_COUNT_PREFIX!r} line and no "
+                f"{SHADOW_COUNT_ANCHOR!r} paragraph to anchor it to")
+    return "\n".join(lines) + "\n"
+
+
+def cmd_shadow_row(args) -> int:
+    """Append one tier-`notify` row to the shadow window (the /prm close-out hook).
+
+    Dry-run by default: the row and the count line it would produce are printed
+    and nothing is written, because the caller is a skill reading a number back
+    to a human before committing to it.
+    """
+    log = Path(args.log) if args.log else AUTONOMY_LOG
+    if not log.is_file():
+        print(f"shadow-row: no ledger at {log}", file=sys.stderr)
+        return 2
+    text = log.read_text(encoding="utf-8")
+
+    date = args.date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
+    row = "| " + " | ".join(_shadow_cell(c) for c in (
+        date, args.task, args.tier, args.gate, args.action, args.stage)) + " |"
+
+    try:
+        updated = shadow_apply(text, row)
+    except ValueError as exc:
+        print(f"shadow-row: {exc}", file=sys.stderr)
+        return 2
+
+    count = shadow_count_line(shadow_rows(updated))
+    print(row)
+    print(count)
+    if not args.apply:
+        print("shadow-row: dry run — nothing written (use --apply)")
+        return 0
+    log.write_text(updated, encoding="utf-8")
+    print(f"shadow-row: appended to {log}")
+    return 0
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description="PyAutoMind prompt-file lifecycle engine")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -1999,6 +2172,31 @@ def main() -> int:
     r.add_argument("--prompt", help="active/ prompt filename to fold + remove")
     r.add_argument("--apply", action="store_true")
     r.set_defaults(func=cmd_record)
+
+    sr = sub.add_parser(
+        "shadow-row",
+        help="append one tier-`notify` row to the shadow window in "
+             "autonomy_log.md (the /prm close-out hook)",
+    )
+    sr.add_argument("--date", help="merge date YYYY-MM-DD (default: today, UTC)")
+    sr.add_argument("--task", required=True,
+                    help="task slug plus the PR refs, e.g. "
+                         "'my-task (PyAutoBrain#1 / PR#2)'")
+    sr.add_argument("--tier", default="notify",
+                    help="the sizing tier (default: notify)")
+    sr.add_argument("--gate", required=True,
+                    help="the gate cell, copied from the task's ship "
+                         "calibration row (tests/smoke/review/heart/witness"
+                         "[/adversary])")
+    sr.add_argument("--action", required=True, choices=list(SHADOW_ACTIONS),
+                    help="what the human did with the PR")
+    sr.add_argument("--stage", default="1", choices=list(SHADOW_STAGES),
+                    help="1 = four-leg gate + witness; 2 = plus the "
+                         "independent-model adversary leg")
+    sr.add_argument("--apply", action="store_true",
+                    help="write the row (default: dry run)")
+    sr.add_argument("--log", help="path to autonomy_log.md (default: this repo's)")
+    sr.set_defaults(func=cmd_shadow_row)
 
     ix = sub.add_parser("index", help="generate complete/index.md (token-light archive navigation)")
     ix.add_argument("--apply", action="store_true", help="write complete/index.md")
