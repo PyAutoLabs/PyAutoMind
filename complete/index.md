@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1327 records across 8 buckets.
+1330 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -152,6 +152,8 @@ markers; everything below GENERATED is rebuilt.
 - [delaunay-nn-breakdown](2026/09/delaunay-nn-breakdown.md)
 - [docs-followup-paid-plan-assistants](2026/09/docs-followup-paid-plan-assistants.md) — Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new …
 - [ep-collapse-unpark](2026/09/ep-collapse-unpark.md)
+- [ep-full-revert-not-updated](2026/09/ep-full-revert-not-updated.md) — closed completed 2026-09-07
+- [ep-laplace-deterministic-hessian](2026/09/ep-laplace-deterministic-hessian.md) — closed completed 2026-09-07
 - [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
 - [ep-message-support](2026/09/ep-message-support.md)
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
@@ -212,6 +214,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
+- [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07
 - [unit-test-import-time-hotspot-census](2026/09/unit-test-import-time-hotspot-census.md)
 - [user-workspace-howto-slow-script-pass](2026/09/user-workspace-howto-slow-script-pass.md)
 

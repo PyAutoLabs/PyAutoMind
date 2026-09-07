@@ -17,7 +17,7 @@ Unattended: needs-slicing
 Epic: graphical-ep
 Filed: 2026-09-07
 
-Follow-up to `draft/bug/autofit/ep_full_revert_not_updated.md` (finding 2 of the Codex review of
+Follow-up to `complete/2026/09/ep-full-revert-not-updated.md` (PyAutoFit#1574, finding 2 of the Codex review of
 the phase-2 fixes). That fix makes a *fully* reverted projection count as skipped. It cannot name a
 *partial* revert: on the campaign graph every hierarchical projection is `BAD_PROJECTION` with the
 sigma variable reverted in each one (its message stays `[10.0, 0.7071]` bit-identical, the reported

@@ -231,7 +231,7 @@ a.go:hover{opacity:.9;text-decoration:none}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>5</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>155</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>2</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>156</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-09-07.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -262,7 +262,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <p class="muted mdsrc"><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md">markdown version</a> · <a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/README.md">GitHub Page</a></p>
 <div class="verdict ok"><b>No batch in flight.</b></div>
 <h2>Start here</h2>
-<h3>Highest priority <span class="facets">(filed as high) — showing 12 of 17</span></h3>
+<h3>Highest priority <span class="facets">(filed as high) — showing 12 of 18</span></h3>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autolens_workspace_developer</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix GEMM 5x slower on the A100</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autonerves</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">ci</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -291,16 +291,13 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
 <div class="task"><button class="copy" data-cmd="/start_dev active/delaunay_walk_early_exit_unchunked.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/delaunay_walk_early_exit_unchunked.md">JAX Delaunay point location: early-exit walk, unchunked loop, static image-plane seed</a><span class="facets"> — issued 2026-09-07</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/ep_full_revert_not_updated.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/ep_full_revert_not_updated.md">A fully reverted projection still reports <code>updated=True</code>, suppressing the STALE FACTORS warning</a><span class="facets"> — issued 2026-09-07</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/ep_laplace_deterministic_hessian.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/ep_laplace_deterministic_hessian.md">Laplace fd-Hessian path leaves deterministic variables at their cavity covariance</a><span class="facets"> — issued 2026-09-07</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/retire_gpu1_mig_exclusion.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a><span class="facets"> — issued 2026-09-05</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/transformed_from_mode_coupled_covariance.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/transformed_from_mode_coupled_covariance.md"><code>TransformedMessage.from_mode</code> diagonalises an operator covariance before a coupled Jacobian</a><span class="facets"> — issued 2026-09-07</span></p></div>
 <a id="pending-release"></a><h2>Pending release <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — <code>active.md</code> and the <code>complete/</code> records — never a live GitHub query; the Brain board's <code>pending-release</code> search is the fresh view, this is what the Mind believes.</p>
 <h3>PyAutoArray</h3>
 <ul><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/523">PyAutoArray#523</a> <span class="facets">complete/2026/09/delaunay-area-magnification-audit.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/525">PyAutoArray#525</a> <span class="facets">complete/2026/09/delaunay-dual-area-magnification.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/527">PyAutoArray#527</a> <span class="facets">complete/2026/09/delaunay-edge-ring-zeroed.md</span></li></ul>
 <h3>PyAutoFit</h3>
-<ul><li><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1566">PyAutoFit#1566</a> <span class="facets">complete/2026/09/defer-import-scipy-special-pyplot.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1568">PyAutoFit#1568</a> <span class="facets">complete/2026/09/quick-update-tolerates-invalid-instance.md</span></li></ul>
+<ul><li><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1566">PyAutoFit#1566</a> <span class="facets">complete/2026/09/defer-import-scipy-special-pyplot.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1574">PyAutoFit#1574</a> <span class="facets">complete/2026/09/ep-full-revert-not-updated.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1573">PyAutoFit#1573</a> <span class="facets">complete/2026/09/ep-laplace-deterministic-hessian.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1568">PyAutoFit#1568</a> <span class="facets">complete/2026/09/quick-update-tolerates-invalid-instance.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1572">PyAutoFit#1572</a> <span class="facets">complete/2026/09/transformed-from-mode-coupled-covariance.md</span></li></ul>
 <h3>PyAutoLens</h3>
 <ul><li><a href="https://github.com/PyAutoLabs/PyAutoLens/pull/729">PyAutoLens#729</a> <span class="facets">complete/2026/09/defer-import-scipy-special-pyplot.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoLens/pull/727">PyAutoLens#727</a> <span class="facets">complete/2026/09/pixelized-source-magnification-latent.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoLens/pull/728">PyAutoLens#728</a> <span class="facets">complete/2026/09/pixelized-source-magnification-latent.md</span></li></ul>
 <a id="human-review"></a><h2>Human review <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft/human_review">markdown version</a></h2>
@@ -350,7 +347,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
 </details>
 <h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
-<p class="muted">155 filed prompts, not started — sorted most-pickable first (priority, then size). 27 of them belong to an epic and are listed only under Epics below.</p>
+<p class="muted">156 filed prompts, not started — sorted most-pickable first (priority, then size). 27 of them belong to an epic and are listed only under Epics below.</p>
 <details>
 <summary>feature — 35</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/pyautobrain/batch_no_park_at_ship.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to decide-and-flag</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
@@ -423,9 +420,10 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">pyautolens</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 </details>
 <details>
-<summary>research — 13</summary>
+<summary>research — 14</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/autoarray/delaunay_research.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autoarray</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autonerves</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md">Revisit the numba CPU interferometer likelihood: recover the w-tilde pack, break…</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autolens_profiling</span><span class="pill n">hard</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/autolens/quick_update_plotting_cost.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autolens</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/pyautohands/git_docs.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">pyautohands</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
@@ -647,6 +645,39 @@ Contract (the `start_bundle` skill is the full body):
 </table>
 </details>
 <details>
+<summary><b>numba-cpu</b> — 2 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in themes.md: likelihood-profiling</summary>
+<div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'numba-cpu' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md
+- draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev &lt;member prompt&gt;` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/&lt;member-task&gt;` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model=&quot;opus&quot;, …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts." aria-label="Copy the Claude command">📋</button><p><b>Run this bundle</b> — one session, one issue and one PR per member</p></div>
+<table class="bundle">
+<tr><th>Prompt</th><th>Repo</th><th>Difficulty</th><th>Priority</th><th>Status</th></tr>
+<tr>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md">Revisit the numba CPU interferometer likelihood: recover the w-tilde…</a></td>
+<td class="facet">autolens_profiling</td>
+<td class="facet">hard</td>
+<td class="facet">high</td>
+<td class="facet">-</td>
+</tr>
+<tr>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a></td>
+<td class="facet">autolens_profiling</td>
+<td class="facet">small</td>
+<td class="facet">medium</td>
+<td class="facet">formalised</td>
+</tr>
+</table>
+</details>
+<details>
 <summary><b>mge</b> — 2 task(s) · 2 pts · auto — proposed</summary>
 <div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'mge' — 2 INDEPENDENT tasks run in one orchestrated session.
 
@@ -810,52 +841,15 @@ Contract (the `start_bundle` skill is the full body):
 </tr>
 </table>
 </details>
-<details>
-<summary><b>autofit — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
-<div class="task"><button class="copy" data-cmd="You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
-- draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev &lt;member prompt&gt;` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/&lt;member-task&gt;` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model=&quot;opus&quot;, …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts." aria-label="Copy the Claude command">📋</button><p><b>Run this bundle</b> — one session, one issue and one PR per member</p></div>
-<table class="bundle">
-<tr><th>Prompt</th><th>Difficulty</th><th>Priority</th><th>Status</th></tr>
-<tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a></td>
-<td class="facet">medium</td>
-<td class="facet">medium</td>
-<td class="facet">formalised</td>
-</tr>
-<tr>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and…</a></td>
-<td class="facet">large</td>
-<td class="facet">normal</td>
-<td class="facet">formalised</td>
-</tr>
-</table>
-</details>
-<p class="muted">Showing 8 of 25 auto bundles — pin one in <code>bundles.md</code> to keep it on the page.</p>
+<p class="muted">Showing 8 of 26 auto bundles — pin one in <code>bundles.md</code> to keep it on the page.</p>
 <a id="recent"></a><h2>Recent <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md#recent">markdown version</a></h2>
 <p class="muted">The 50 newest things to happen to the work in hand, newest first — issued, parked, filed. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Shipped work is not here: it is read from <code>complete/index.md</code>, and a thousand records deep it would crowd out everything anyone can still act on. Showing the newest 10; … opens the next 10.</p>
 <table class="recent">
 <tr>
 <td class="when">2026-09-07</td>
-<td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/transformed_from_mode_coupled_covariance.md"><code>TransformedMessage.from_mode</code> diagonalises an operator covariance…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/transformed_from_mode_coupled_covariance.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-09-07</td>
-<td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/ep_laplace_deterministic_hessian.md">Laplace fd-Hessian path leaves deterministic variables at their…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/ep_laplace_deterministic_hessian.md" aria-label="Copy the Claude command">📋</button></td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md">Revisit the numba CPU interferometer likelihood: recover the w-tilde…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr>
 <td class="when">2026-09-07</td>
@@ -882,12 +876,6 @@ Contract (the `start_bundle` skill is the full body):
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr>
-<td class="when">2026-09-07</td>
-<td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/ep_full_revert_not_updated.md">A fully reverted projection still reports <code>updated=True</code>, suppressing…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/ep_full_revert_not_updated.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
 <td class="when">2026-09-06</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a></td>
@@ -905,13 +893,13 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autoarray/small_datasets_followups_after_8c.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-09-06</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md">Adapt-density mapper: a zero-signal adapt image is NaN on the JAX…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-09-05</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix…</a></td>
@@ -1170,6 +1158,18 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/release/pyautoreduce/pyautoreduce_release_induction.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-08-24</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/ci/heart_smoke_table_autocti.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-08-23</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>

@@ -1,3 +1,17 @@
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1569 (closed completed 2026-09-07)
+- completed: 2026-09-07
+- library-pr: PyAutoFit https://github.com/PyAutoLabs/PyAutoFit/pull/1572 (head `470473f7`, merge `31f13c1f`)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1572
+- classification: bug (PyAutoFit) — epic `graphical-ep`; bundle `ep-phase2-review` (Codex review of the phase-2 fixes, finding 3). No workspace PR.
+- ci: `Tests [pull_request]` unittest 3.12 / 3.13 / nojax green, `Docs [pull_request]` green; CLEAN.
+- heart-ack: opened under RED "release validation FAILED (stage integrate)" (organism-scope, cleared to YELLOW 21:05Z the same day); `autofit/messages/composed_transform.py` is not in the release chain.
+
+- summary: `TransformedMessage.from_mode` reduced a `LinearOperator` covariance to its diagonal before the transform Jacobians; `jac.quad` contracts a vector as J(Jᵀv), not diag(v), so a coupled Jacobian (`MultinomialLogitTransform` / `MultiLogitNormalMessage`) gave [2.3611, 2.1875] where the ndarray form gave [1.2222, 1.2431] (delta method). Now keeps the dense matrix (`to_dense()`) through the Jacobian loop when transforms are present. Pre-#1560 this path raised; #1560 had made it silently wrong.
+- verdict: defensive-path only — the sole in-library caller passes dense ndarrays and no workspace uses `MultiLogitNormalMessage`. New parametrised test pins operator-vs-array equivalence and the delta-method reference (fails without the fix). messages 95 / graphical 265 pass.
+- worktree: shared bundle worktree `~/Code/PyAutoLabs-wt/ep-phase2-review` removed at the bundle's close-out.
+
+## Original prompt
+
 # `TransformedMessage.from_mode` diagonalises an operator covariance before a coupled Jacobian
 
 Type: bug

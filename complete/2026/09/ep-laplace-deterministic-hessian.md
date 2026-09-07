@@ -1,3 +1,17 @@
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1570 (closed completed 2026-09-07)
+- completed: 2026-09-07
+- library-pr: PyAutoFit https://github.com/PyAutoLabs/PyAutoFit/pull/1573 (head `d5acab35`, merge `470a89cf`)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1573
+- classification: bug, P1 (PyAutoFit) — epic `graphical-ep`; bundle `ep-phase2-review` (Codex review of the phase-2 fixes, finding 1). No workspace PR.
+- ci: `Tests [pull_request]` unittest 3.12 / 3.13 / nojax green, `Docs [pull_request]` green; CLEAN.
+- heart-ack: YELLOW "workspace validation not passing" (organism-scope, cloud#34099198772); nothing in this diff is in the release chain.
+
+- summary: the fd branch of `LaplaceOptimiser.optimise_approx` (default since #1562) wrote only the free-variable Hessian; `det_hessian` kept the cavity precision, so deterministic variables were projected unchanged with `success=True` — z = 2x with initial q(z) = N(0, 10) returned Var(z) = 100 (quasi path and truth 0.8). New `make_deterministic_hessian`: central-difference Jacobian of `deterministic_values` on the shared `fd_steps`, precision = diag(J Σ Jᵀ)⁻¹ (diagonal only — rank-deficient when n_det > n_free; `from_mode` reads marginals); zero-row outputs keep cavity curvature.
+- verdict: test `test__deterministic_variance_follows_the_free_variable[fd|quasi]` fails on fd without the fix; graphical 267 pass; workspace `ep_deterministic.py` PASS, `analytic_gaussian_collapse.py` RECOVER 5/5 with σ/μ unchanged from the phase-2 record. The campaign referee has no `factor_out`, which is why every gate missed this (memory `feedback_ep_referee_blind_to_deterministic_variables`).
+- worktree: shared bundle worktree `~/Code/PyAutoLabs-wt/ep-phase2-review` removed at the bundle's close-out.
+
+## Original prompt
+
 # Laplace fd-Hessian path leaves deterministic variables at their cavity covariance
 
 Type: bug
