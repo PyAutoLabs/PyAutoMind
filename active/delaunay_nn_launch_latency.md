@@ -14,12 +14,14 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Witness: the A100 DelaunayNN breakdown's params→H prefix (`regularization_matrix_prefix_s`, `results/breakdown/imaging/delaunay_nn_hpc_a100_fp64_walk_early_exit.json` is the 2026-09-07 baseline: 144.789 ms unbatched / 24.424 ms per call at vmap 16) drops to at most 60 ms unbatched and 11 ms per call at vmap 16 after Phase A, with `EXPECTED_LOG_EVIDENCE_HST = 29144.581944` unchanged and the `delaunay_nn.py` / `delaunay_nn_caps.py` jax_assertions passing
 Review-minutes: 40
 Unattended: ready
 Filed: 2026-09-07
+Issued: 2026-09-07
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/532
 Supersedes: draft/feature/autoarray/sibson_single_concatenated_walk.md
 
 Original request (verbatim):
