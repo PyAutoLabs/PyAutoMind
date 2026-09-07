@@ -42,9 +42,10 @@
 
 ## smoke-fixed-overhead
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/216
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/218
 - issued: 2026-09-06
 - session: claude --resume session_01WYcmRnZf3cbC5Wth9bCkEg
-- status: library-dev
+- status: library-shipped, awaiting-merge (stacked on #217 — merge #217 first)
 - repos:
   - PyAutoHeart: feature/smoke-fixed-overhead
 - parallel-claim: PyAutoHeart also claimed by lib-tests-compile-caches (#215); both edit smoke-tests.yml, so this branch is stacked on feature/lib-tests-compile-caches and its PR opens against main once #215 merges (or rebases then). Same session, sequenced.
