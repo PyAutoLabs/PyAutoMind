@@ -14,6 +14,7 @@ Priority: high
 Epic: numba-interferometer-revisit
 Phase: 1
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Phase 1 of `draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md`
 (the epic ledger; the user's request is verbatim there). PyAutoArray is **read-only** for

@@ -31,3 +31,12 @@
 - repos:
   - PyAutoFit: feature/ep-stale-tracking-per-variable
   - autofit_workspace_test: feature/ep-stale-tracking-per-variable
+
+## numba-interferometer-pack
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/223
+- issued: 2026-09-07
+- session: claude --resume session_01JCn8wPWpdiVof6uK6zn56w
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/numba-interferometer-pack
+- repos:
+- parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, awaiting-merge); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs scripts/misc/numba_interferometer/ + scripts/interferometer/likelihood_breakdown/*_numba.py + results/breakdown/interferometer/); merge order does not matter; PyAutoArray read-only and not claimed; phase 1 of 3 of the numba-interferometer-revisit epic"
