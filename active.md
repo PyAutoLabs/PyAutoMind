@@ -21,3 +21,13 @@
 - repos:
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
+
+## ep-stale-tracking-per-variable
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1575
+- issued: 2026-09-07
+- session: claude --resume session_01Gu4YysuvpQ4k6zkQjiwabd
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ep-stale-tracking-per-variable
+- repos:
+  - PyAutoFit: feature/ep-stale-tracking-per-variable
+  - autofit_workspace_test: feature/ep-stale-tracking-per-variable

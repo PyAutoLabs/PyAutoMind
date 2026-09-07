@@ -17,6 +17,7 @@ Review-minutes: 10
 Unattended: needs-slicing
 Epic: graphical-ep
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Follow-up to `complete/2026/09/ep-full-revert-not-updated.md` (PyAutoFit#1574, finding 2 of the Codex review of
 the phase-2 fixes). That fix makes a *fully* reverted projection count as skipped. It cannot name a
