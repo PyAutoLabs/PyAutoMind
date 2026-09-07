@@ -1,3 +1,26 @@
+# jax_grad/delaunay's FD step sweep re-pinned out of the round-off floor (Heart RED corrective)
+
+autolens_workspace_test#305 → `4103234e`, closing autolens_workspace_test#304, merged 2026-09-07. The seventh and last corrective PR of 2026-09-07 under the human-authorised Heart RED corrective-PR exception (reason: `release validation FAILED (stage integrate)`; Release Integrate run 34148543011 — the integrate-only re-dispatch on TestPyPI 2026.9.7.1.dev75601 after #300–#303 + agwt#119 — failed only this script). Fable session diagnosed via an Opus subagent, planned, and delegated implementation + ship to Opus; merged via /prm the same day. Validation of the RED clearing is a further integrate-only re-dispatch on the same TestPyPI version.
+
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/304
+- completed: 2026-09-07
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/305
+- corrective-red: authorization https://github.com/PyAutoLabs/autolens_workspace_test/issues/304#issuecomment-5575042508
+
+## What shipped
+- `scripts/imaging/jax_grad/delaunay.py`: `rel_steps=(1e-8, 1e-7, 1e-6)` → `(1e-6, 2e-6, 3e-6, 1e-5, 3e-5)`; the tolerance comment rewritten with the measured noise floor, per-parameter clean windows and flip distances. `rtol=1e-2`, the mass/shear liveness assert and both #302 checks unchanged.
+
+## Key traps / findings
+- **The library was innocent.** The CI miss (index 10 `mass.ell_comps_0`, ad=-2849.63 vs fd=-2944.08, 3.3%) looked like a PyAutoArray#526 regression (Delaunay zeroed-ring rework in the window). Discriminator: AD matched CI to 1.7e-9 and was bit-identical under pre-#526 PyAutoArray (base LL, all 14 AD entries, every FD sample) — a library gradient bug cannot leave AD unchanged.
+- **The measuring stick was the defect.** The Delaunay LL carries a ~1.0e-5 rms / 4.4e-5 ptp summation-order noise floor along the seven mesh-moving mass+shear parameters (present eagerly, so not XLA; curvature matrix cond 77). The old sweep put h in 1.1e-9..1.1e-7 on ell_comps_0 — inside round-off (the 1e-8 step returned the wrong sign). CI's FD is a fixed per-environment draw from that band (numpy 2.4 vs 2.2 summation order); local FD was deterministic and passed.
+- **The dataset rebuild exposed it.** awt#294 (2026-09-06) shrank AD[10] ~4x at the same absolute noise: noise/signal 1.8% → 6.8%. The check had never run on the new data before #302 unblocked it.
+- **Clean windows differ per parameter** because `h = rel_step · max(|x|, 0.1)`: ell_comps_0 (x=0.11) is clean for h in [1e-7, 3.4e-6], first flip at h=+1.13e-5 (101/617 simplices, LL jumps 3.24); einstein_radius (x=1.6) is clean only for h ≤ 4.8e-6 and flips at h=-8e-6 (LL jumps 3.21), so rel_steps 1e-5/3e-5 are flip-contaminated for it. A first tuple `(1e-7, 1e-6, 1e-5, 3e-5)` left einstein_radius at 8.7e-3 against rtol 1e-2; the hold-and-probe before commit produced the final five-step tuple (worst rel err 1.13e-3, einstein_radius 7.05e-4). A benign simplex re-labelling (459 rows, dLL on the linear trend) at h=+4.8e-6 is not a flip — judge by the LL jump, not the row count.
+- **Positive control**: AD scaled by 1.05 fails `assert_gradients_match` at all 14 indices under the new sweep — the check stays falsifiable.
+- **Stale dataset trap**: `should_simulate` keeps a full-resolution stale copy, so the main checkout still held the pre-#294 180x180 `dataset/imaging/jax_test`; verify `data.fits` shape before trusting a local run. The task worktree regenerated its own copy.
+- Memory: `feedback_fd_sweep_noise_floor_on_mesh_moving_params`.
+
+## Original prompt
+
 # imaging/jax_grad/delaunay.py: FD step sweep sits in the round-off floor on mass.ell_comps_0 after the dataset rebuild
 
 Type: bug
