@@ -5,10 +5,11 @@
 - prompt: active/delaunay_walk_early_exit_unchunked.md
 - issued: 2026-09-07
 - session: claude --resume session_01B5HT8dp7sWc9qDhZp6moGr
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-walk-early-exit
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/531
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/306
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/224
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/531
 - heart-ack: 2026-09-07 in-session, YELLOW "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" plus stale "release validation incomplete: no rehearsal for current source" — organism-scope; the failing autolens_test delaunay legs do not exercise the walk and were already fixed on autolens_workspace_test main today (078e445, 4103234); this branch touches only autoarray/inversion/mesh/interpolator/ and its tests
 - repos:
@@ -47,6 +48,7 @@
 
 ## numba-interferometer-pack
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/223
+- heart-ack: 2026-09-07 in-session, single reason "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" — organism-scope (autolens_workspace JAX scripts); nothing in this branch is in the release chain
 - issued: 2026-09-07
 - session: claude --resume session_01JCn8wPWpdiVof6uK6zn56w
 - status: workspace-dev
