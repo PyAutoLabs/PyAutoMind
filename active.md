@@ -8,6 +8,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-walk-early-exit
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/531
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/306
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/531
 - heart-ack: 2026-09-07 in-session, YELLOW "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" plus stale "release validation incomplete: no rehearsal for current source" — organism-scope; the failing autolens_test delaunay legs do not exercise the walk and were already fixed on autolens_workspace_test main today (078e445, 4103234); this branch touches only autoarray/inversion/mesh/interpolator/ and its tests
 - repos:
