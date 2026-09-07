@@ -16,6 +16,7 @@ Review-minutes: 5
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Follow-up to phase 1 of the graphical-ep epic (autofit_workspace_test#91, PR #92 merged
 2026-09-02). A Codex review of the merged PR raised two P2 findings; both were re-verified on
