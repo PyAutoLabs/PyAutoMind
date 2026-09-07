@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 155 |
+| [Backlog](#backlog) (`draft/`) | 159 |
 
 > **No batch in flight.**
 
@@ -411,7 +411,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**155** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **30** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 36</summary>
@@ -1961,7 +1961,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 6 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 10 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -1987,6 +1987,22 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autofit/ep_full_revert_not_updated.md">A fully reverted projection still reports <code>updated=True</code>, suppressing the STALE FACTORS warning</a> — autofit · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/autofit/ep_full_revert_not_updated.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_laplace_deterministic_hessian.md">Laplace fd-Hessian path leaves deterministic variables at their cavity covariance</a> — autofit · small · safe · high</summary>
+
+```
+/start_dev draft/bug/autofit/ep_laplace_deterministic_hessian.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autofit/samples_errors_at_sigma_instance_prior_valued_model.md"><code>Samples.errors_at_sigma(as_instance=True)</code> crashes on a model whose component class is a Prior</a> — autofit · small · safe · medium</summary>
 
 ```
@@ -1995,10 +2011,26 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autofit/transformed_from_mode_coupled_covariance.md"><code>TransformedMessage.from_mode</code> diagonalises an operator covariance before a coupled Jacobian</a> — autofit · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/autofit/transformed_from_mode_coupled_covariance.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md">EP: moment-matching projection for the hierarchical scatter…</a> — autofit · medium · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/ep_stale_tracking_per_variable.md">Track EP staleness per (factor, variable), not per factor</a> — autofit · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autofit/ep_stale_tracking_per_variable.md
 ```
 
 </details>
