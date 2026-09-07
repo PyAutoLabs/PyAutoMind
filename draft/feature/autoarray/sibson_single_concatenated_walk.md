@@ -13,7 +13,8 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Status: draft
+Status: superseded
+Superseded-by: draft/feature/autoarray/delaunay_nn_launch_latency.md
 Consequence: judge
 Witness: on the A100 DelaunayNN breakdown cell (`results/breakdown/imaging/delaunay_nn_hpc_a100_fp64_walk_early_exit.json`) the params→H prefix (`regularization_matrix_prefix_s`) falls materially below its post-#531 value of 144.789 ms unbatched / 24.424 ms per call at `vmap` 16, with `EXPECTED_LOG_EVIDENCE_HST = 29144.581944` unchanged and the `delaunay_nn.py` jax_assertions passing
 Review-minutes: 20
