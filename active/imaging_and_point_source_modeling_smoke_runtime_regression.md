@@ -12,6 +12,7 @@ Status: formalised
 Filed: 2026-09-07
 Witness: `autolens_workspace/scripts/multi_dataset/features/imaging_and_point_source/modeling.py` completes under `profile_smoke.yaml` in under 60 s on the fixed library main (it was 5.73 s on 2026-08-31 and 301.9 s TIMEOUT on 2026-09-07), with the offending commit named in the PR.
 Unattended: ready
+Issued: 2026-09-07
 
 On the weekly Workspace Smoke (PyAutoHeart run 34099198772) the `autolens_workspace`
 script `scripts/multi_dataset/features/imaging_and_point_source/modeling.py` (script and

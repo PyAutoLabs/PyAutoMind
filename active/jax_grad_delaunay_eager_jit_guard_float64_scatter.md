@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-09-06
+Issued: 2026-09-07
 
 Left over from phase 6 (autolens_workspace_test#293 / #294). The script runs on
 the weekly `workspace-smoke.yml` / `release-integrate` channels under the 900 s

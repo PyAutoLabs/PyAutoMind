@@ -11,6 +11,7 @@ Status: formalised
 Filed: 2026-09-07
 Witness: `scripts/multi_dataset/jax_likelihood/delaunay.py` completes under `profile_release.yaml` in under 300 s (it was 1805 s TIMEOUT on 2026-09-07 and 14.99 s under `profile_smoke.yaml`), with the triggering release-profile setting named in the PR.
 Unattended: ready
+Issued: 2026-09-07
 
 On the Release Integrate rehearsal (PyAutoHeart run 34094964905, and the preceding
 34018429178 on 2026-09-06) the `autogalaxy_workspace_test` leg fails on:

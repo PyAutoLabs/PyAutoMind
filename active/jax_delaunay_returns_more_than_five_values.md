@@ -10,6 +10,7 @@ Autonomy: safe
 Priority: medium
 Status: formalised
 Filed: 2026-09-06
+Issued: 2026-09-07
 
 Pre-existing on `autolens_workspace_test` `main` (reproduced on a detached
 `origin/main` worktree during phase 6 of the ci-timing-fast-tests epic, so it

@@ -42,30 +42,22 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 158 |
+| [Backlog](#backlog) (`draft/`) | 152 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
 ```
 /start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md">nufft.py round-trip threshold and subhalo.py expected_vmap pin not regenerated for the 2026-09-06…</a> — autolens_workspace_test · small · safe · high</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md
 ```
 
 </details>
@@ -98,14 +90,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autoarray/delaunay_walk_early_exit_unchunked.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/imaging_and_point_source_modeling_smoke_runtime_regression.md">multi_dataset/features/imaging_and_point_source/modeling.py runtime regressed 5.7 s -&gt; 300 s timeout between 2026-08-31…</a> — autolens · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autolens/imaging_and_point_source_modeling_smoke_runtime_regression.md
 ```
 
 </details>
@@ -150,7 +134,23 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
+<details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
+
+```
+/start_dev draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 81
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -251,6 +251,54 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/imaging_and_point_source_modeling_smoke_runtime_regression.md">multi_dataset/features/imaging_and_point_source/modeling.py runtime regressed 5.7 s -&gt; 300 s timeout between 2026-08-31…</a> — issued 2026-09-07</summary>
+
+```
+/start_dev active/imaging_and_point_source_modeling_smoke_runtime_regression.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/jax_delaunay_returns_more_than_five_values.md">jax_delaunay returns more than the five values imaging/jax_likelihood/delaunay.py unpacks</a> — issued 2026-09-07</summary>
+
+```
+/start_dev active/jax_delaunay_returns_more_than_five_values.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/jax_grad_delaunay_eager_jit_guard_float64_scatter.md">imaging/jax_grad/delaunay.py: the rtol=1e-10 eager-vs-jit guard sits inside float64 scatter on the rebuilt…</a> — issued 2026-09-07</summary>
+
+```
+/start_dev active/jax_grad_delaunay_eager_jit_guard_float64_scatter.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/mge_group_source_basis_zeroed_on_coarse_data.md">imaging/jax_likelihood/mge_group.py: positive-only solver zeroes the source MGE on the rebuilt data</a> — issued 2026-09-07</summary>
+
+```
+/start_dev active/mge_group_source_basis_zeroed_on_coarse_data.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/multi_dataset_jax_likelihood_delaunay_release_profile_timeout.md">autogalaxy_workspace_test multi_dataset/jax_likelihood/delaunay.py passes in 15 s under the smoke profile but times…</a> — issued 2026-09-07</summary>
+
+```
+/start_dev active/multi_dataset_jax_likelihood_delaunay_release_profile_timeout.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md">nufft.py round-trip threshold and subhalo.py expected_vmap pin not regenerated for the 2026-09-06…</a> — issued 2026-09-07</summary>
+
+```
+/start_dev active/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
 
@@ -410,7 +458,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**152** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 36</summary>
@@ -706,15 +754,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 36</summary>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md">nufft.py round-trip threshold and subhalo.py expected_vmap pin not regenerated for the 2026-09-06…</a> — autolens_workspace_test · small · safe · high</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md
-```
-
-</details>
+<summary><b>bug</b> — 30</summary>
 
 <details><summary>📋 <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix GEMM 5x slower on the A100</a> — autonerves · small · supervised · high</summary>
 
@@ -728,14 +768,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/imaging_and_point_source_modeling_smoke_runtime_regression.md">multi_dataset/features/imaging_and_point_source/modeling.py runtime regressed 5.7 s -&gt; 300 s timeout between 2026-08-31…</a> — autolens · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autolens/imaging_and_point_source_modeling_smoke_runtime_regression.md
 ```
 
 </details>
@@ -768,14 +800,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/jax_delaunay_returns_more_than_five_values.md">jax_delaunay returns more than the five values imaging/jax_likelihood/delaunay.py unpacks</a> — autoarray · small · safe · medium</summary>
-
-```
-/start_dev draft/bug/autoarray/jax_delaunay_returns_more_than_five_values.md
 ```
 
 </details>
@@ -832,30 +856,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autogalaxy_workspace_test/multi_dataset_jax_likelihood_delaunay_release_profile_timeout.md">autogalaxy_workspace_test multi_dataset/jax_likelihood/delaunay.py passes in 15 s under the smoke profile but times…</a> — autogalaxy_workspace_test · medium · supervised · medium</summary>
-
-```
-/start_dev draft/bug/autogalaxy_workspace_test/multi_dataset_jax_likelihood_delaunay_release_profile_timeout.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/jax_grad_delaunay_eager_jit_guard_float64_scatter.md">imaging/jax_grad/delaunay.py: the rtol=1e-10 eager-vs-jit guard sits inside float64 scatter on the rebuilt…</a> — autolens_workspace_test · medium · supervised · medium</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/jax_grad_delaunay_eager_jit_guard_float64_scatter.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace_test/mge_group_source_basis_zeroed_on_coarse_data.md">imaging/jax_likelihood/mge_group.py: positive-only solver zeroes the source MGE on the rebuilt data</a> — autolens_workspace_test · medium · supervised · medium</summary>
-
-```
-/start_dev draft/bug/autolens_workspace_test/mge_group_source_basis_zeroed_on_coarse_data.md
 ```
 
 </details>
@@ -1616,38 +1616,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>autolens_workspace_test — bundle 1</b> — 3 task(s) · 5 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autolens_workspace_test — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autolens_workspace_test/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md
-- draft/bug/autolens_workspace_test/jax_grad_delaunay_eager_jit_guard_float64_scatter.md
-- draft/bug/autolens_workspace_test/mge_group_source_basis_zeroed_on_coarse_data.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autolens_workspace_test/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md">nufft.py round-trip threshold and subhalo.py expected_vmap pin not…</a> | small | high | formalised |
-| <a href="draft/bug/autolens_workspace_test/jax_grad_delaunay_eager_jit_guard_float64_scatter.md">imaging/jax_grad/delaunay.py: the rtol=1e-10 eager-vs-jit guard sits…</a> | medium | medium | formalised |
-| <a href="draft/bug/autolens_workspace_test/mge_group_source_basis_zeroed_on_coarse_data.md">imaging/jax_likelihood/mge_group.py: positive-only solver zeroes the…</a> | medium | medium | formalised |
-
-</details>
-
-<details>
 <summary><b>jax-gpu · performance</b> — 2 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: delaunay, hpc, jax-gpu, performance</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1773,7 +1741,39 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 27 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>samplers · jax-gradient</b> — 3 task(s) · 7 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'samplers · jax-gradient' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/feature/autofit/prior_exit_sampler_coverage.md
+- draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
+- draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> | autofit | medium | medium | formalised |
+| <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and…</a> | autofit | small | normal | formalised |
+| <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts /…</a> | autolens_profiling | large | normal | formalised |
+
+</details>
+
+_Showing 8 of 25 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1781,12 +1781,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-07 | filed | <a href="draft/bug/autolens_workspace_test/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md">nufft.py round-trip threshold and subhalo.py expected_vmap pin not…</a> |
-| 2026-09-07 | filed | <a href="draft/bug/autolens/imaging_and_point_source_modeling_smoke_runtime_regression.md">multi_dataset/features/imaging_and_point_source/modeling.py runtime…</a> |
-| 2026-09-07 | filed | <a href="draft/bug/autogalaxy_workspace_test/multi_dataset_jax_likelihood_delaunay_release_profile_timeout.md">autogalaxy_workspace_test multi_dataset/jax_likelihood/delaunay.py…</a> |
-| 2026-09-06 | filed | <a href="draft/bug/autoarray/jax_delaunay_returns_more_than_five_values.md">jax_delaunay returns more than the five values…</a> |
-| 2026-09-06 | filed | <a href="draft/bug/autolens_workspace_test/mge_group_source_basis_zeroed_on_coarse_data.md">imaging/jax_likelihood/mge_group.py: positive-only solver zeroes the…</a> |
-| 2026-09-06 | filed | <a href="draft/bug/autolens_workspace_test/jax_grad_delaunay_eager_jit_guard_float64_scatter.md">imaging/jax_grad/delaunay.py: the rtol=1e-10 eager-vs-jit guard sits…</a> |
+| 2026-09-07 | issued | <a href="active/nufft_threshold_and_subhalo_pin_not_regenerated_for_smoke_rebuild.md">nufft.py round-trip threshold and subhalo.py expected_vmap pin not…</a> |
+| 2026-09-07 | issued | <a href="active/imaging_and_point_source_modeling_smoke_runtime_regression.md">multi_dataset/features/imaging_and_point_source/modeling.py runtime…</a> |
+| 2026-09-07 | issued | <a href="active/jax_delaunay_returns_more_than_five_values.md">jax_delaunay returns more than the five values…</a> |
+| 2026-09-07 | issued | <a href="active/mge_group_source_basis_zeroed_on_coarse_data.md">imaging/jax_likelihood/mge_group.py: positive-only solver zeroes the…</a> |
+| 2026-09-07 | issued | <a href="active/jax_grad_delaunay_eager_jit_guard_float64_scatter.md">imaging/jax_grad/delaunay.py: the rtol=1e-10 eager-vs-jit guard sits…</a> |
+| 2026-09-07 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_release_profile_timeout.md">autogalaxy_workspace_test multi_dataset/jax_likelihood/delaunay.py…</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
@@ -2138,7 +2138,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-141 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+138 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2183,7 +2183,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautomind/witness_campaign.md`
 - `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
 - `draft/feature/workspaces/cluster_source_science.md`
-- _… and 101 more_
+- _… and 98 more_
 
 </details>
 

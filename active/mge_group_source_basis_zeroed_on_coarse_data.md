@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-09-06
+Issued: 2026-09-07
 
 Left over from phase 6 (autolens_workspace_test#293 / #294). After the shared
 imaging dataset moved to 100x100 @ 0.3" with fainter lens light,

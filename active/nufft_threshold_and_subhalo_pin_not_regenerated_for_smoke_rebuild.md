@@ -11,6 +11,7 @@ Status: formalised
 Filed: 2026-09-07
 Witness: `scripts/interferometer/nufft.py` and `scripts/imaging/substructure/subhalo.py` both exit 0 on the current `main` stack under the weekly Workspace Smoke profile, and the next scheduled PyAutoHeart Workspace Smoke run carries neither in its FAIL list.
 Unattended: ready
+Issued: 2026-09-07
 
 Two off-gate scripts in `autolens_workspace_test` fail on the weekly Workspace Smoke
 (PyAutoHeart run 34099198772) and the Release Integrate rehearsal (run 34094964905),
