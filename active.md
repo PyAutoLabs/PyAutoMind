@@ -64,3 +64,16 @@
 - worktree: ~/Code/PyAutoLabs-wt/batch-no-park-at-ship
 - repos:
   - PyAutoBrain: feature/batch-no-park-at-ship
+
+## prm-shadow-row-notify-tier
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/364
+- prompt: active/batch_notify_tier_merge.md
+- issued: 2026-09-07
+- session: claude --resume a951615c-fae1-41f4-84d7-6c9a329bae7c
+- status: PR open
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/366
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/395
+- worktree: ~/Code/PyAutoLabs-wt/prm-shadow-row-notify-tier
+- repos:
+  - PyAutoBrain: feature/prm-shadow-row-notify-tier
+  - PyAutoMind: feature/prm-shadow-row-notify-tier

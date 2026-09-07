@@ -15,6 +15,7 @@ Consequence: judge
 Review-minutes: 20
 Unattended: never
 Filed: 2026-08-30
+Issued: 2026-09-07
 
 **Decided 2026-08-30: shadow the tier before granting or refusing it.** The
 question is whether an agent may ever *merge* its own low-consequence work —
