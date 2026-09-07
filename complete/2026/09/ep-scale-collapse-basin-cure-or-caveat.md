@@ -19,8 +19,9 @@
 - evidence: |
     Referee leg A 18/18 and byte-identical across prior ids after #1562; leg B sigma 9.37 ± 3.57 (exact
     6.57 ± 2.88, inside the interval, hard caps pass), mu 50.60 ± 3.48 PASS; minimal EP
-    (`analytic_ep_minimal.py`) reproduces the collapse deterministically under a mode projection and
-    recovers the closed form under moment matching (scatter row a ≤ 0.08, b ≤ 0.15, seeds 0–4) — the
+    (`analytic_ep_minimal.py`) reproduces the stale-factor state deterministically under a mode
+    projection (every site update rejected, sigma returned at its prior) and recovers the closed
+    form under moment matching (scatter row a ≤ 0.08, b ≤ 0.15, seeds 0–4) — the
     achievable ceiling.
 - levers: |
     Resolved by the referee rather than by sweeps: DynamicUpdater / thorough sampler /
