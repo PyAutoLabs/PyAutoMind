@@ -4,12 +4,13 @@ Type: feature
 Target: PyAutoFit
 Repos:
 - PyAutoFit
+- autofit_workspace_test
 Themes:
 - graphical-ep
 Difficulty: medium
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: formalised
 Consequence: judge
 Witness: the phase-2 campaign graph (N=2, `TruncatedGaussianPrior(10, 0.5, 0, 100)` on sigma, Laplace) names the sigma variable as stale in `ep_diagnostics.results` when its message never moves while the factor's other variables update
 Review-minutes: 10
@@ -24,6 +25,9 @@ sigma variable reverted in each one (its message stays `[10.0, 0.7071]` bit-iden
 E[sigma] never leaves the hyper-prior mean), while the factor's mean and per-dataset variables
 update — so the factor is "updated" and no STALE FACTORS line appears, which is exactly the #1405
 stale-scatter state the warning exists to catch.
+
+Human decided 2026-09-07: the diagnostics lever (per-variable tracking) goes ahead now; the
+moment-matching projection cure stays its own prompt.
 
 ## Scope
 
