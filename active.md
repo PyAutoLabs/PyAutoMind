@@ -16,8 +16,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1569
 - issued: 2026-09-07
 - session: claude --resume session_01Gu4YysuvpQ4k6zkQjiwabd
-- status: library-dev
+- status: awaiting-merge
 - bundle: ep-phase2-review
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1572
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1572
+- heart-ack: 2026-09-07 in-session, verdict red score 45; red reason "release validation FAILED (stage integrate)" and yellow reason "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" — both organism-scope; nothing in this diff is in the release chain or touched by those workspace scripts
 - worktree: ~/Code/PyAutoLabs-wt/ep-phase2-review
 - repos:
   - PyAutoFit: feature/transformed-from-mode-coupled-covariance
