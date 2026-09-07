@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1323 records across 8 buckets.
+1324 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -197,6 +197,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-source-smoke-runtime-regression](2026/09/point-source-smoke-runtime-regression.md) — not a library regression
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
 - [profiles-jit-powerlaw-exact-zero-atol](2026/09/profiles-jit-powerlaw-exact-zero-atol.md)
+- [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)
 - [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z

@@ -1,3 +1,33 @@
+## Summary
+
+A quick update — the convenience render PyAutoFit runs inside the likelihood call every `iterations_per_quick_update` evaluations — killed a 36 h Euclid DR1 Nautilus run 3m52s in (RAL array 342301 task 3). `Fitness.manage_quick_update` called `model.instance_from_vector` on the running max-likelihood vector unguarded; the source MGE's `ell_comps` sat at magnitude 1.009 and `ModelParameterException` unwound through `nautilus.sampler.evaluate_likelihood` before any partial result existed.
+
+Both legs of the layer decision shipped:
+
+- **PyAutoFit** (https://github.com/PyAutoLabs/PyAutoFit/pull/1568, commit b12f3162): instance construction in the quick-update hook is wrapped; on failure the skip is logged with the traceback, the visual is bypassed on both the background-submit and synchronous branches, the `model.results` text is still written from the parameter vector, and the cadence counter still resets. The synchronous `perform_quick_update` call gains the `except Exception` protection `BackgroundQuickUpdate._process_pending` already had. New `test_autofit/non_linear/test_quick_update_invalid_instance.py` (regression fails on unfixed code; positive control; synchronous-visual-raises case). Full `test_autofit`: 2457 passed, 2 skipped.
+- **euclid_strong_lens_modeling_pipeline** (https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/53, commit edce160): the `vis_lp` source MGE `ell_comps` priors are bounded to `[-0.7, 0.7]` per component (one shared `TruncatedGaussianPrior(mean=0, sigma=0.3)` pair across all 20 source Gaussians). `0.7² + 0.7² = 0.98 < 1` is the largest axis-aligned box inside the unit disk, so `|e| ≥ 1` is unreachable by construction; on-axis q down to ≈0.18. The lens block's `[-0.5, 0.5]` is a lens-light systematic, not geometry, so the two caps deliberately differ.
+
+## Layer decision
+
+1. PyAutoFit owns the class of failure: a render never terminates a search. Fixes every search, profile and user.
+2. The pipeline owns the sampled space. Nautilus has **no** clipper/bijector hook — `ClipperPriorBoxJoint` / `ball_constraint` (PyAutoFit#1538, PyAutoGalaxy#589) reach only `bijector.py`, `multi_start_gradient`, `bfgs` — so the opt-in joint disk projection was unavailable for `vis_lp`; the prior box is the pipeline's lever.
+
+Channel map: PyAutoFit#1487 closed the results-write channel; #1538 / PyAutoGalaxy#589 shipped the opt-in gradient-lane projection; this task closed the quick-update channel.
+
+## Ship gate
+
+Heart was RED on two organism-scope reasons — "release validation FAILED (stage integrate)" and "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)". Neither is repaired by this branch, so the corrective-PR exception did not apply; the human acknowledged in-session ("I acknowledge you can continue and get this work done") and the ack was recorded as `heart-ack:` on the `active.md` row. Ship ended at PR-open; merge was the human-typed `/prm` after every CI leg on both heads (PyAutoFit: unittest 3.12/3.13/nojax + docs; pipeline: unit/smoke/slow × 3.12/3.13) reported success and `mergeStateStatus` was `CLEAN`.
+
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1568
+
+## Follow-ups (not this task)
+
+- Cortex: relaunch RAL 342301 task 3 (`Tile102007903RA0668831429074DECNEG0648901814905`) once `HPCPullPyAuto` syncs the PyAutoFit main — phase `phases/euclid_dr1_prelim/dr1_prelim_10_lens_science_run.md`.
+- The pipeline's lens block hardcodes `range(20)` / `range(2)` and would `IndexError` under `PYAUTO_SMALL_DATASETS=1`; the new source loop iterates `profile_list` and is immune. Flagged on the issue, not fixed.
+- The library default `gaussian.yaml` `[-1, 1]` `ell_comps` box (21.5 % unphysical) is untouched — `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md` territory.
+
+## Original prompt
+
 # A quick update must not kill a 36 h run because the current best sample is unphysical
 
 Type: bug
