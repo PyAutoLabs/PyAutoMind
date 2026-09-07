@@ -14,9 +14,10 @@
 
 ## lib-tests-compile-caches
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/215
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/217
 - issued: 2026-09-06
 - session: claude --resume session_01WYcmRnZf3cbC5Wth9bCkEg
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - repos:
   - PyAutoHeart: feature/lib-tests-compile-caches
 - summary: |
