@@ -1,3 +1,17 @@
+- issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/96 (closed completed 2026-09-07)
+- completed: 2026-09-07
+- workspace-pr: autofit_workspace_test https://github.com/PyAutoLabs/autofit_workspace_test/pull/97 (head `c1b96ca5`, merge `a48344f3`)
+- classification: bug (autofit_workspace_test) — epic `graphical-ep`, follow-up to phase 1 (#91 / #92) from a Codex review of the merged PR. Workspace-only; no library PR.
+- ci: `Smoke Tests [pull_request]` run 34159174521 — `changes`, `smoke (3.12)`, `smoke (3.13)` all green; mergeStateStatus CLEAN.
+- heart-ack: 2026-09-07 in-session, single reason "release validation FAILED (stage integrate)" — organism-scope; three graphical self-test scripts, nothing in the release chain.
+
+- summary: Codex review of #92 assessed and re-verified on `main`. Finding 1 (correct): the theta = sigma Laplace projection in `analytic_ep_minimal.py` rejects every site update (500 sweeps, skipped 3000, max |delta eta| 0) and returns the scatter at its starting hyper-prior — the STALE state of the phase-2 taxonomy, not a collapse to near-zero scatter; docstrings in `analytic_ep_minimal.py` / `analytic_gaussian.py` and the `ep-scale-collapse-basin-cure-or-caveat` record now say so, and the Laplace summary line prints a stale label when no site updated. Finding 2 (does not reproduce): log-sigma moments agree with scipy quad to 8 figures for all four prior families (the reviewer's 0.54114 / 0.52147 appear nowhere; the `np.where(pdf > 0, …)` line is load-bearing; the defect class needs posterior mass at sigma = 0, which no shipped case has). Shipped the procedural half: `analytic_reference.py` self-test now asserts `log_sigma_mean` / `log_sigma_std` against `quad_log_sigma_moments` at 1e-6 (worst observed 7.3e-9), docstring states the first-cell patch is exact for the first moment only.
+- verdict: no banked number changed; both self-tests PASS (0.6 s / 1.05 s).
+- lesson: a review's numeric claim must be reproduced with an independent integration before touching a reference; ship the missing assertion, not a numerics change (memory `feedback_review_numeric_claim_must_reproduce_before_edit`).
+- worktree: `~/Code/PyAutoLabs-wt/ep-review-92-followups` removed at close-out; only a `__pycache__` was untracked.
+
+## Original prompt
+
 # Codex review of autofit_workspace_test#92: correct the "reproduces the collapse" prose and cross-check the log-sigma moments
 
 Type: bug
