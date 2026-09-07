@@ -26,8 +26,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1575
 - issued: 2026-09-07
 - session: claude --resume session_01Gu4YysuvpQ4k6zkQjiwabd
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/ep-stale-tracking-per-variable
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1576
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1576
+- heart-ack: 2026-09-07 in-session, YELLOW "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" plus stale "release validation incomplete: no rehearsal for current source" — organism-scope; this branch touches only autofit/graphical/ and its tests
 - repos:
   - PyAutoFit: feature/ep-stale-tracking-per-variable
   - autofit_workspace_test: feature/ep-stale-tracking-per-variable
