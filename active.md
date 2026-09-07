@@ -19,3 +19,5 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/cortex-tasks-not-phases
 - repos:
+  - PyAutoCortex: feature/cortex-tasks-not-phases
+  - PyAutoBrain: feature/cortex-tasks-not-phases
