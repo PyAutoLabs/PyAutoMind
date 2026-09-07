@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/delaunay_walk_early_exit_unchunked.md">JAX Delaunay point location: early-exit walk, unchunked loop, static image-plane seed</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/530">issue #530</a> — issued 2026-09-07 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/531">PyAutoArray#531</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/delaunay_walk_early_exit_unchunked.md">JAX Delaunay point location: early-exit walk, unchunked loop, static image-plane seed</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/530">issue #530</a> — issued 2026-09-07 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/531">PyAutoArray#531</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/306">autolens_workspace_test#306</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/delaunay_walk_early_exit_unchunked.md
