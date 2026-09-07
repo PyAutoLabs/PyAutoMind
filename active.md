@@ -14,8 +14,10 @@
 
 ## ep-review-92-followups
 - issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/96
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/97
+- heart-ack: 2026-09-07 in-session, single reason "release validation FAILED (stage integrate)" — organism-scope, same reason already acked on retire-gpu1-mig-exclusion; this branch touches three graphical self-test scripts, nothing in the release chain
 - issued: 2026-09-07
 - session: claude --resume session_01Gu4YysuvpQ4k6zkQjiwabd
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/ep-review-92-followups
 - repos:
