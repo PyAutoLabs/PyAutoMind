@@ -42,8 +42,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1571
 - issued: 2026-09-07
 - session: claude --resume session_01Gu4YysuvpQ4k6zkQjiwabd
-- status: library-dev
+- status: awaiting-merge
 - bundle: ep-phase2-review
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1574
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1574
+- heart-ack: 2026-09-07 in-session, verdict yellow score 70, no red reasons; single reason "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" — organism-scope, none of those scripts exercise the EP projection path
 - worktree: ~/Code/PyAutoLabs-wt/ep-phase2-review
 - repos:
   - PyAutoFit: feature/ep-full-revert-not-updated
