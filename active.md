@@ -57,9 +57,10 @@
 
 ## batch-no-park-at-ship
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/363
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/365
 - issued: 2026-09-07
 - session: claude --resume a951615c-fae1-41f4-84d7-6c9a329bae7c
-- status: library-dev
+- status: PR open
 - worktree: ~/Code/PyAutoLabs-wt/batch-no-park-at-ship
 - repos:
   - PyAutoBrain: feature/batch-no-park-at-ship
