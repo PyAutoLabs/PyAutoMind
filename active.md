@@ -39,4 +39,5 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/samples-errors-at-sigma-instance
 - repos:
+  - PyAutoFit: feature/samples-errors-at-sigma-instance
 - epic: graphical-ep
