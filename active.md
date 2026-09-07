@@ -37,7 +37,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/362
 - issued: 2026-09-07
 - session: claude --resume cb789199-9f67-400f-9f46-f68555932dc9
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/367
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/23
 - worktree: ~/Code/PyAutoLabs-wt/cortex-assistant-entry
 - repos:
   - PyAutoBrain: feature/cortex-assistant-entry
