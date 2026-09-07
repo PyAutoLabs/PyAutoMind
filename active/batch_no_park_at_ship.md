@@ -14,6 +14,7 @@ Consequence: judge
 Review-minutes: 15
 Unattended: never
 Filed: 2026-08-31
+Issued: 2026-09-07
 
 Human direction (2026-08-31, verbatim):
 
