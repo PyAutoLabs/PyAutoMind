@@ -16,6 +16,7 @@ Review-minutes: 6
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Finding 1 (P1) of the Codex review of the graphical-ep phase-2 fixes (PyAutoFit#1558, #1560,
 #1562; record `complete/2026/09/ep-scale-collapse-basin-cure-or-caveat.md`). Reproduced exactly on

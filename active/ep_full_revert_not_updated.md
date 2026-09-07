@@ -16,6 +16,7 @@ Review-minutes: 5
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Finding 2 (P2) plus the README prose carry-over of the Codex review of the graphical-ep phase-2
 fixes (review text verbatim in the sibling `ep_laplace_deterministic_hessian.md`). Reproduced on
