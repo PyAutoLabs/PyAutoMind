@@ -47,17 +47,33 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1577
 - issued: 2026-09-07
 - session: claude --resume session_01E2HKd5ZocDmTyZ544eVEh4
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: ~/Code/PyAutoLabs-wt/samples-errors-at-sigma-instance
 - repos:
   - PyAutoFit: feature/samples-errors-at-sigma-instance
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1578
+- heart-ack: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" / "release validation incomplete: no rehearsal for current source" — organism-scope; nothing in this diff is in the release chain
 - epic: graphical-ep
 
 ## batch-no-park-at-ship
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/363
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/365
 - issued: 2026-09-07
 - session: claude --resume a951615c-fae1-41f4-84d7-6c9a329bae7c
-- status: library-dev
+- status: PR open
 - worktree: ~/Code/PyAutoLabs-wt/batch-no-park-at-ship
 - repos:
   - PyAutoBrain: feature/batch-no-park-at-ship
+
+## prm-shadow-row-notify-tier
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/364
+- prompt: active/batch_notify_tier_merge.md
+- issued: 2026-09-07
+- session: claude --resume a951615c-fae1-41f4-84d7-6c9a329bae7c
+- status: PR open
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/366
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/395
+- worktree: ~/Code/PyAutoLabs-wt/prm-shadow-row-notify-tier
+- repos:
+  - PyAutoBrain: feature/prm-shadow-row-notify-tier
+  - PyAutoMind: feature/prm-shadow-row-notify-tier
