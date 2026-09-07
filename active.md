@@ -1,5 +1,15 @@
 # Active Tasks
 
+## quick-update-tolerates-invalid-instance
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1567
+- issued: 2026-09-07
+- session: claude --resume session_01P5K4AXFBYMCPhbNFYA24YX
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/quick-update-tolerates-invalid-instance
+- repos:
+- summary: |
+    Both legs taken: PyAutoFit guards manage_quick_update instance construction (log + skip); pipeline bounds vis_lp source MGE ell_comps to [-0.7, 0.7]. Library PR first, pipeline PR gated. Cortex relaunch of RAL 342301 task 3 is a follow-up, not this task.
+
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222

@@ -19,6 +19,7 @@ Unattended: ready
 Epic: euclid-dr1-prep
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Witness: a `vis_lp`-shaped Nautilus fit whose running max-likelihood parameter vector
 maps to an `ell_comps` pair of magnitude > 1 completes its search instead of raising,
