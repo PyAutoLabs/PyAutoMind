@@ -27,9 +27,11 @@
 
 ## defer-import-scipy-special-pyplot
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1565
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1566
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/729
 - issued: 2026-09-06
 - session: claude --resume session_01WYcmRnZf3cbC5Wth9bCkEg
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - repos:
   - PyAutoFit: feature/defer-import-scipy-special
   - PyAutoLens: feature/defer-import-pyplot
