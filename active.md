@@ -2,9 +2,10 @@
 
 ## jax-grad-delaunay-fd-sweep-repin
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/304
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/305
 - issued: 2026-09-07
 - session: claude --resume session_012jnkrN39jLrJgWWNf8tMcz
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/jax-grad-delaunay-fd-sweep-repin
 - corrective-red: "release validation FAILED (stage integrate)" — authorisation https://github.com/PyAutoLabs/autolens_workspace_test/issues/304#issuecomment-5575042508 (live, 2026-09-07); Release Integrate run 34148543011 sole failure scripts/imaging/jax_grad/delaunay.py; permitted = commit, push, one pending-release PR; merge/close/release stay human
 - repos:
