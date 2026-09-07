@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/delaunay_walk_early_exit_unchunked.md">JAX Delaunay point location: early-exit walk, unchunked loop, static image-plane seed</a> — issued 2026-09-07</summary>
+<details><summary>📋 <a href="active/delaunay_walk_early_exit_unchunked.md">JAX Delaunay point location: early-exit walk, unchunked loop, static image-plane seed</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/530">issue #530</a> — issued 2026-09-07 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/531">PyAutoArray#531</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/delaunay_walk_early_exit_unchunked.md
@@ -290,6 +290,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#531](https://github.com/PyAutoLabs/PyAutoArray/pull/531) — `active/delaunay_walk_early_exit_unchunked.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
 - [PyAutoArray#527](https://github.com/PyAutoLabs/PyAutoArray/pull/527) — `complete/2026/09/delaunay-edge-ring-zeroed.md`
