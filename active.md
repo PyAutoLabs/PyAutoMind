@@ -1,5 +1,14 @@
 # Active Tasks
 
+## delaunay-walk-early-exit
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/530
+- issued: 2026-09-07
+- session: claude --resume session_01B5HT8dp7sWc9qDhZp6moGr
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/delaunay-walk-early-exit
+- repos:
+- parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, awaiting-merge); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs results/breakdown/imaging/ + results/notes/); merge order does not matter; Phase 1 of the prompt only, Phase 2 filed separately after the A100 re-measure"
+
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222

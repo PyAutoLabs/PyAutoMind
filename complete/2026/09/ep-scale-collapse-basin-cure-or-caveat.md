@@ -38,6 +38,7 @@
 - assets: the leg-2 repro rebuild the prompt banked (`toy.py`, `run_once.py`, `sweep.sh`, `classify.py`,
     `trace_message_dict.py`, `results_baseline.txt`) moved with it to
     `complete/2026/09/ep-scale-collapse-leg2-assets/` (was `draft/bug/autofit/ep_scale_collapse_leg2_assets/`).
+- review-followups: Codex review 2026-09-07 → PyAutoFit#1572 (coupled-transform covariance), #1573 (P1 deterministic-variable covariance, fd path), #1574 (full revert counted as updated; README §3.5 wording); per-variable stale tracking filed as draft/feature/autofit/ep_stale_tracking_per_variable.md
 - traps: |
     See the three mechanism records (`complete/2026/09/ep-prior-id-zero.md`, `ep-message-support.md`,
     `ep-laplace-hessian.md`); a never-issued prompt is closed by moving it through active/ for

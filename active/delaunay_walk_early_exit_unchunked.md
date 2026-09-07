@@ -13,12 +13,14 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Witness: the A100 Delaunay breakdown's "Triangulation + interpolation" row (26.6 ms, `results/breakdown/imaging/delaunay_hpc_a100_fp64.json`, `--split-setup`) drops to under 8 ms unbatched with `EXPECTED_LOG_EVIDENCE_HST` unchanged, the walk parity tests pass, and the FD certification still passes
 Review-minutes: 30
 Unattended: ready
 Filed: 2026-09-05
+Issued: 2026-09-07
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/530
 
 Original request (verbatim):
 
