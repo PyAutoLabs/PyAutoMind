@@ -1,3 +1,17 @@
+## cortex-tasks-not-phases
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/20
+- completed: 2026-09-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/21
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/361
+- Summary: PyAutoCortex speaks tasks, not phases. `phases/` → `tasks/`, the `Phase: N` header is deleted and `check` rejects it as a retired key, the slug is the identity, and every task carries a required ten-word `Summary:` (the question it answers) that `check` enforces; rulings point at `Task:`; `new` takes `--summary`. The Brain's Cortex conductor renders every open task under its project one tap-to-copy line each, headed by the Summary with a state pill (planned/ready/accepted green, gated grey, live yellow, any failed run red); the "N more open phase(s)" fold and the Running / Ready / Gated sections and tiles are gone (Awaiting ruling and Recent rulings stay); Local/Mirror/RAL paths render as solid accent chips with white text in both themes. Folds in and supersedes the docs PRs PyAutoCortex#17 and PyAutoBrain#360 (closed unmerged).
+- Decisions: human ruled 2026-09-07 — full rename including the on-disk move and the number's deletion; remove Running / submitted alongside Ready and Gated; `rerun` is an open state (yellow, with a relaunch chip); Mind epic phases keep the word.
+- Traps: each repo's CI pins the other's `main` (Brain tests check out PyAutoCortex main; Cortex `dashboard_refresh.yml` borrows the Brain renderer from main), so a lockstep schema change cannot be green on both PRs before either merges — #21 merged with its own check green and the Brain-dependent leg red, #361 re-ran green against the new Cortex main and merged, then `dashboard_refresh.yml` was dispatched on Cortex main. `_intake.py`'s `_cortex_root` probed for a `phases/` dir and would have silently dropped every Cortex-gate badge from the Mind board — fixed in #361. `ensure_workspace_labels.sh` lists no organ repos (PyAutoCortex had no `pending-release` label; created by hand). `_task_row` already named the markdown row helper, so the census row builder is `_task_census_row`. Dark-mode `--accent-ink` is not white; the path chip darkens its fill there instead.
+- Kept as history: closed `batches/*.md` member lines and ruling bodies still say `phases/…`; `inference_programme` slugs `phase2_…`–`phase5_…` name the programme's own phases.
+- Not filed: same-named-branch fallback for both cross-repo CI checkouts; organ repos in `ensure_workspace_labels.sh`; voiding the failed 2026-09-02 rerun legs that paint every open subhalo_validation task red.
+- No pending-release: organ repos, nothing publishes.
+
+## Original prompt
+
 # Cortex: tasks not phases — one-line summaries, state colours, fewer sections
 
 Type: feature

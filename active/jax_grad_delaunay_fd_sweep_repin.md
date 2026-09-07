@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: high
 Status: draft
 Filed: 2026-09-07
+Issued: 2026-09-07
 
 Original request (verbatim): "ok lets begin to work towards making heart get off red" — after
 the integrate-only re-dispatch (PyAutoHeart run 34148543011) cleared five of the six 2026-09-07
