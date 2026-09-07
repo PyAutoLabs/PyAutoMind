@@ -31,3 +31,12 @@
 - repos:
   - PyAutoBrain: feature/cortex-assistant-entry
   - PyAutoCortex: feature/cortex-assistant-entry
+
+## samples-errors-at-sigma-instance
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1577
+- issued: 2026-09-07
+- session: claude --resume session_01E2HKd5ZocDmTyZ544eVEh4
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/samples-errors-at-sigma-instance
+- repos:
+- epic: graphical-ep

@@ -16,6 +16,7 @@ Review-minutes: 3
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-02
+Issued: 2026-09-07
 
 D6 of the analytic Gaussian benchmark findings (autofit_workspace_test#91).
 Minor, but it forced `analytic_autofit.py` to read errors with
