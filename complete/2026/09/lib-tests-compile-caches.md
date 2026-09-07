@@ -1,3 +1,53 @@
+# JAX + numba caches in library CI, a numba cache in the smoke gate, and the content-stamped mtimes that make numba hit
+
+PyAutoHeart#217 → `af03c75`, closing PyAutoHeart#215, merged 2026-09-07. Census option O1
+of the `ci-timing-fast-tests` epic, widened by one finding: `smoke-tests.yml` cached JAX
+and datasets only — numba sat at `/tmp/numba_cache` with no restore and no save. Fable-planned
+from a web session (no task worktree); implemented by an Opus subagent under the delegation
+ladder; no library source changed.
+
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/215
+- completed: 2026-09-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/217
+
+## What shipped
+- `lib-tests.yml` (`unittest` job only): job-level `PYAUTO_CACHE_EPOCH`, JAX compile cache
+  per (OS, py leg, jaxlib), numba cache per (OS, full python version), the `cache_state.json`
+  sidecar riding the existing `unit-timings-<py>` artifact, saves gated on a measured change
+  and saving on red too; every new step `continue-on-error`, the pytest command byte-identical
+  apart from env. `unittest-nojax` untouched (its wiring test asserts that).
+- `smoke-tests.yml`: the numba cache beside the JAX one, the runner's `NUMBA_CACHE_DIR` moved
+  under the workspace, a `numba` section and `numba_changed` in the recorder.
+- Both workflows stamp every source `.py`'s mtime from a hash of its content before anything
+  compiles.
+- Ingest/record/board: `numba` in the sidecar parse (absent section → `unknown`), unit legs and
+  `timings/unit/<repo>.jsonl` lines carry `cache: {jax, numba}`, scripts lines gain `numba`, the
+  unit drift rule refuses two known but different combined states (`heart.timings.unit_cache_state`,
+  carried as `cache_state`), the board brackets the state on both line kinds. README schemas
+  updated; a dated correction appended to the census §5.3. Tests 893 → 924.
+
+## Key traps / findings
+- **numba stamps each cache entry with its source file's `(st_mtime, st_size)`** and stores it
+  under `<parentdir>_<sha1(abs dirname)>`. A fresh clone or `pip install` gives every `.py` a new
+  mtime, so a plain `actions/cache` on the numba dir would restore and miss every entry. Setting
+  the mtime to a function of the content hash turns the stamp into a content fingerprint, makes
+  the prefix `restore-keys` fallback safe and lets the numba key carry no library commit.
+- GitHub cache scoping: a PR-branch save is invisible to `main`, so every 2026-09-06 record row
+  read `miss`; the first `main` run after merge seeds and the second hits. The first same-branch
+  hot-vs-cold data point from the Actions API: autolens_workspace_test runner 397 → 334 s
+  (py3.12) and 383 → 320 s (py3.13), ~16%, dataset save skipped on the warm run.
+- A unit leg's `cache_view` reads `datasets: "miss"` for a cache that workflow does not have;
+  contained (the unit record and line carry jax + numba only), flagged on the PR.
+
+## Follow-ups
+- Read the hot-vs-cold numbers back from `timings/unit/<repo>.jsonl` and
+  `timings/scripts/<repo>.jsonl` after two daily runs, and confirm the numba stamp is hitting
+  (`entries_before` > 0 on the second `main` run). If numba still misses, the site-packages path
+  (which carries the patch version, hence `pyfull` in the key) or the stamp roots are the first
+  things to check.
+
+## Original prompt
+
 # Cache the compile work in library CI: JAX + numba caches for lib-tests.yml, and a numba cache for smoke-tests.yml
 
 Type: feature

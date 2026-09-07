@@ -1,3 +1,46 @@
+# Two imports paid by every process and needed by almost none: scipy.special out of `import autofit`, pyplot out of `import autolens`
+
+PyAutoFit#1566 → `088013c` and PyAutoLens#729 → `9468e3e`, closing PyAutoFit#1565, merged
+2026-09-07. Census options O2 and O3 of the `ci-timing-fast-tests` epic. Fable-planned from a
+web session (no task worktree); implemented by an Opus subagent under the delegation ladder.
+
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1565
+- completed: 2026-09-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1566
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/729
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1566
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/729
+
+## What shipped
+- PyAutoFit: `TransformedMessage._support` is a `functools.cached_property` of the same name
+  instead of an eager computation in `__init__`; the five module-level literals in
+  `autofit/messages/normal.py` no longer evaluate `phi_transform`'s inverse (`scipy.special.ndtri`)
+  at import. `-X importtime` scipy.special 177–180 ms → absent; `import autofit` 0.436 → 0.227 s;
+  identifiers of `UniformPrior`, `LogUniformPrior`, `Model(Gaussian)` and a `Collection`
+  byte-identical; pickles round-trip; 2454 passed; ten new tests.
+- PyAutoLens: the matplotlib family imports in `potential_correction/visualize.py` are
+  function-local (the pattern `mesh.py` and `iterative.py` already used). pyplot 325 ms → absent;
+  `import autolens` 1.54 → 1.17 s alone, 1.09 s with the PyAutoFit change; 623 passed; three new
+  tests, one of which fails if any matplotlib name is bound on the module again.
+
+## Key traps / findings
+- The import cost was not in the import statement but in a *module-level object construction*
+  whose `__init__` did numerical work; `-X importtime` attributes it to the module that built the
+  object, not to the transform module whose function-local import fired.
+- `cached_property` caches under the same `__dict__` key the eager code wrote, so default pickling
+  and old pickles are unchanged — the reason it beat a `None` sentinel + property pair.
+- Still imported at top level of `import autolens`, deliberately left: `matplotlib` core via
+  `autoarray.plot.*` (a real plotting layer) and `scipy.special` via
+  `autogalaxy.profiles.mass.abstract.mge` (a real numerical dependency).
+
+## Follow-ups
+- Both libraries are `pending-release`; the `import_s` column of PyAutoHeart
+  `timings/unit/{PyAutoFit,PyAutoLens}.jsonl` reads the change back after their next `main` run.
+- Census O4 (`kaplinghat.py` quadrature, which also carries the third deferrable import,
+  `scipy.integrate`) remains its own decision.
+
+## Original prompt
+
 # Defer two imports paid by every process and needed by almost none: scipy.special out of `import autofit`, matplotlib.pyplot out of `import autolens`
 
 Type: refactor

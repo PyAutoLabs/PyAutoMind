@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1314 records across 8 buckets.
+1317 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -143,6 +143,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-registration](2026/09/cortex-registration.md) — closed completed 2026-09-01
 - [cortex-retire-project-chip](2026/09/cortex-retire-project-chip.md)
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
+- [defer-import-scipy-special-pyplot](2026/09/defer-import-scipy-special-pyplot.md)
 - [delaunay-area-magnification-audit](2026/09/delaunay-area-magnification-audit.md)
 - [delaunay-dual-area-magnification](2026/09/delaunay-dual-area-magnification.md)
 - [delaunay-edge-ring-zeroed](2026/09/delaunay-edge-ring-zeroed.md)
@@ -166,6 +167,7 @@ markers; everything below GENERATED is rebuilt.
 - [image-source-mappings-p3](2026/09/image-source-mappings-p3.md)
 - [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
 - [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
+- [lib-tests-compile-caches](2026/09/lib-tests-compile-caches.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
 - [mesh-shape-honours-small-datasets-cap](2026/09/mesh-shape-honours-small-datasets-cap.md)
@@ -196,6 +198,7 @@ markers; everything below GENERATED is rebuilt.
 - [slam-simultaneous-oversample-timeout](2026/09/slam-simultaneous-oversample-timeout.md)
 - [small-datasets-cap-stamp-stops-resimulation](2026/09/small-datasets-cap-stamp-stops-resimulation.md)
 - [smoke-ci-caches-jax-datasets](2026/09/smoke-ci-caches-jax-datasets.md)
+- [smoke-fixed-overhead](2026/09/smoke-fixed-overhead.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)

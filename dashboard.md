@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -252,34 +252,10 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> — issued 2026-09-06</summary>
-
-```
-/start_dev active/defer_scipy_special_and_pyplot_imports.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> — issued 2026-09-06</summary>
-
-```
-/start_dev active/lib_tests_compile_caches_numba_smoke.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
 
 ```
 /start_dev active/retire_gpu1_mig_exclusion.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow: measure…</a> — issued 2026-09-06</summary>
-
-```
-/start_dev active/smoke_workflow_fixed_overhead.md
 ```
 
 </details>
@@ -294,8 +270,13 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
 - [PyAutoArray#527](https://github.com/PyAutoLabs/PyAutoArray/pull/527) — `complete/2026/09/delaunay-edge-ring-zeroed.md`
 
+**PyAutoFit**
+
+- [PyAutoFit#1566](https://github.com/PyAutoLabs/PyAutoFit/pull/1566) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
+
 **PyAutoLens**
 
+- [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `complete/2026/09/pixelized-source-magnification-latent.md`
 - [PyAutoLens#728](https://github.com/PyAutoLabs/PyAutoLens/pull/728) — `complete/2026/09/pixelized-source-magnification-latent.md`
 
@@ -1780,20 +1761,17 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/bug/autolens_workspace_test/mge_group_source_basis_zeroed_on_coarse_data.md">imaging/jax_likelihood/mge_group.py: positive-only solver zeroes the…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autolens_workspace_test/jax_grad_delaunay_eager_jit_guard_float64_scatter.md">imaging/jax_grad/delaunay.py: the rtol=1e-10 eager-vs-jit guard sits…</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
-| 2026-09-06 | issued | <a href="active/smoke_workflow_fixed_overhead.md">Trim the fixed per-leg overhead of the reusable smoke workflow…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
-| 2026-09-06 | issued | <a href="active/defer_scipy_special_and_pyplot_imports.md">Defer two imports paid by every process and needed by almost none…</a> |
-| 2026-09-06 | issued | <a href="active/lib_tests_compile_caches_numba_smoke.md">Cache the compile work in library CI: JAX + numba caches…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md">Adapt-density mapper: a zero-signal adapt image is NaN on the JAX…</a> |
+| 2026-09-05 | filed | <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix…</a> |
+| 2026-09-05 | issued | <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a> |
+| 2026-09-05 | filed | <a href="draft/feature/autoarray/delaunay_walk_early_exit_unchunked.md">JAX Delaunay point location: early-exit walk, unchunked loop, static…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-05 | filed | <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix…</a> |
-| 2026-09-05 | issued | <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a> |
-| 2026-09-05 | filed | <a href="draft/feature/autoarray/delaunay_walk_early_exit_unchunked.md">JAX Delaunay point location: early-exit walk, unchunked loop, static…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
@@ -1801,14 +1779,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
+| 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
+| 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
+| 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
-| 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
-| 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
@@ -1816,14 +1794,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautobrain/batch_no_park_at_ship.md">Retire parked-at-ship under <code>--auto</code>: supervised resolves to…</a> |
 | 2026-08-30 | filed | <a href="draft/feature/pyautobrain/batch_notify_tier_merge.md">The tier-<code>notify</code> auto-merge decision — re-open the shadow window…</a> |
+| 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
+| 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
+| 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
-| 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
-| 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
@@ -1831,14 +1809,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
+| 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
+| 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
+| 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
-| 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
-| 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
@@ -1846,6 +1824,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
 | 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 | 2026-08-24 | filed | <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date…</a> |
+| 2026-08-24 | filed | <a href="draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a> |
+| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a> |
+| 2026-08-23 | filed | <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI…</a> |
 
 </details>
 
