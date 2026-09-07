@@ -3,7 +3,6 @@
 Type: bug
 Target: autolens_workspace
 Repos:
-- PyAutoLens
 - autolens_workspace
 Difficulty: medium
 Autonomy: supervised
