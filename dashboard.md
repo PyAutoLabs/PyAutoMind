@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 155 |
+| [Backlog](#backlog) (`draft/`) | 156 |
 
 > **No batch in flight.**
 
@@ -411,7 +411,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**155** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 36</summary>
@@ -1961,7 +1961,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 6 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 7 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -1991,6 +1991,14 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/bug/autofit/samples_errors_at_sigma_instance_prior_valued_model.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit_workspace_test/ep_review_92_followups.md">Codex review of autofit_workspace_test#92: correct the "reproduces the collapse" prose and cross-check…</a> — autofit_workspace_test · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/autofit_workspace_test/ep_review_92_followups.md
 ```
 
 </details>
