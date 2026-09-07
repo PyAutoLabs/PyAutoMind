@@ -100,4 +100,4 @@ around that.
 - Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/530
 - Library PR (the Delaunay-side change to mirror): https://github.com/PyAutoLabs/PyAutoArray/pull/531
 - Results PR: https://github.com/PyAutoLabs/autolens_profiling/pull/224
-- Predecessor prompt: `active/delaunay_walk_early_exit_unchunked.md`
+- Predecessor record: `complete/2026/09/delaunay-walk-early-exit.md` (Phase 1 shipped 2026-09-07; PyAutoArray#531 merged)
