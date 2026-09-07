@@ -8,7 +8,7 @@
 
 - summary: `MeanField.update_factor_mean_field` re-evaluated `check_valid()` after `update_invalid(last_dist)`, true by construction, so a projection that reverted every parameter still returned `updated=True` and never reached `_stale_factor_warnings`. Now compares the reverted message to `last_dist` per variable on natural parameters (`MeanField.check_changed`, exact); nothing changed = skipped, with an explicit status message; partial reverts still count as updates. README §3.5 now says the minimal Laplace EP reaches the stale-factor state, not a collapse; STALE FACTORS paragraph notes full reverts count as skipped.
 - verdict: two new tests fail without the fix, one pins the partial-revert half; graphical 268 (270 with #1573); `analytic_gaussian_collapse.py` RECOVER 5/5, STALE 0/5, σ/μ identical; per-factor flag tallies shift because the flag now means "moved".
-- remaining: partial reverts (the campaign graph's scatter reverting every sweep while other variables update) are still reported as updated — filed as `draft/feature/autofit/ep_stale_tracking_per_variable.md`.
+- remaining: partial reverts (the campaign graph's scatter reverting every sweep while other variables update) are still reported as updated — shipped 2026-09-07 (PyAutoFit#1576, record `complete/2026/09/ep-stale-tracking-per-variable.md`).
 - worktree: shared bundle worktree `~/Code/PyAutoLabs-wt/ep-phase2-review` removed at the bundle's close-out.
 
 ## Original prompt

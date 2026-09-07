@@ -30,22 +30,6 @@
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
 
-## ep-stale-tracking-per-variable
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1575
-- issued: 2026-09-07
-- session: claude --resume session_01Gu4YysuvpQ4k6zkQjiwabd
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/ep-stale-tracking-per-variable
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1576
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/98
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1576
-- pending-release: autofit_workspace_test@https://github.com/PyAutoLabs/autofit_workspace_test/pull/98
-- release-gate: PyAutoFit
-- heart-ack: 2026-09-07 in-session, YELLOW "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" plus stale "release validation incomplete: no rehearsal for current source" — organism-scope; this branch touches only autofit/graphical/ and its tests
-- repos:
-  - PyAutoFit: feature/ep-stale-tracking-per-variable
-  - autofit_workspace_test: feature/ep-stale-tracking-per-variable
-
 ## numba-interferometer-pack
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/223
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/225
