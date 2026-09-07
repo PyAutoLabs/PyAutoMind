@@ -4,7 +4,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1567
 - issued: 2026-09-07
 - session: claude --resume session_01P5K4AXFBYMCPhbNFYA24YX
-- status: library-dev, shipping
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1568
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/53
+- status: library-shipped, workspace-shipped, awaiting-merge
 - heart-ack: 2026-09-07 in-session, human said "I acknowledge you can continue and get this work done" over Heart RED reasons "release validation FAILED (stage integrate)" and "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 ...)" — organism-scope, nothing in this branch is in the release chain; PR-open only, merge stays human
 - worktree: ~/Code/PyAutoLabs-wt/quick-update-tolerates-invalid-instance
 - repos:
