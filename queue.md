@@ -55,17 +55,12 @@ which now live in the Cortex, and no code ever read them (`_batch.py` globs
 is a Cortex phase-header key now (`PyAutoCortex/REFERENCE.md`), and every Cortex
 phase is `local-dev` by construction.
 
-## 1. Retire parked-at-ship under `--auto`
-- kind: prompt
-- ref: draft/feature/pyautobrain/batch_no_park_at_ship.md
-- note: human 2026-08-31 — "the parked thing is an annoying middle ground which requires human time"; an effective-supervised `--auto` run decides-and-flags at ship sign-off instead of parking, since the run already ends at PR-open. AUTONOMY.md doctrine edit, human-required
-
-## 2. numba solve vs JAX sparse operator
+## 1. numba solve vs JAX sparse operator
 - kind: prompt
 - ref: draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md
 - note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound?
 
-## 3. Witness campaign
+## 2. Witness campaign
 - kind: prompt
 - ref: draft/feature/pyautomind/witness_campaign.md
 - note: highest-leverage backlog item (151/153 judge); human-declared witnesses only; fill work
@@ -74,6 +69,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### Retire parked-at-ship under `--auto`
+- shipped-as: PyAutoBrain#365 → complete/2026/09/batch-no-park-at-ship.md (2026-09-07)
+- note: human 2026-08-31 — "the parked thing is an annoying middle ground which requires human time"; the AUTONOMY.md doctrine edit shipped: an effective-supervised `--auto` run now decides-and-flags at the ship checkpoint instead of parking, and the batch planner rejects only `human-required`
 
 ### Carried members formalisation
 - shelved-as: complete/archive/shelved/batch_carry_forward.md (2026-09-03)
