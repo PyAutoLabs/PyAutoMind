@@ -41,4 +41,6 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/xla-triton-gemm-off
 - repos:
+  - PyAutoNerves: feature/xla-triton-gemm-off
+  - autolens_profiling: feature/xla-triton-gemm-off
 - parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#222); "file sets disjoint (this task: scripts/misc/jax_compile/gemm_probe.py, new hpc/batch_gpu/submit_xla_autotune_gemm_probe, results/notes/xla_autotune_triton_gemm.md, README.md, scripts/misc/jax_compile/README.md, results/notes/delaunay_nn_breakdown.md vs #222's existing hpc/batch_gpu submits, hpc/README.md, activate.sh); approved by the user 2026-09-08; autolens_profiling is also claimed by interferometer-preload-cpu (#229, interferometer preload scope) and delaunay-nn-constant-split-assembly (#536, new assembly_bench/notes files), both disjoint from this file set under the same precedent"
