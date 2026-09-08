@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/interferometer_apply_operator_rfft2.md"><code>InterferometerSparseOperator.apply_operator</code> pads real input to complex — use <code>rfft2</code>/<code>irfft2</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/538">issue #538</a> — issued 2026-09-08 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_apply_operator_rfft2.md"><code>InterferometerSparseOperator.apply_operator</code> pads real input to complex — use <code>rfft2</code>/<code>irfft2</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/538">issue #538</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/540">PyAutoArray#540</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/interferometer_apply_operator_rfft2.md
@@ -306,6 +306,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#540](https://github.com/PyAutoLabs/PyAutoArray/pull/540) — `active/interferometer_apply_operator_rfft2.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
