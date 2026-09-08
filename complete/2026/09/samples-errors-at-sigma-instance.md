@@ -1,3 +1,22 @@
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1577 (closed completed 2026-09-07)
+- completed: 2026-09-07
+- library-pr: PyAutoFit https://github.com/PyAutoLabs/PyAutoFit/pull/1578 (head `154c87dd`, merge `6331b80031b1dedae3ce277a8c2b116b52ddd261`)
+- workspace-pr: autofit_workspace_test https://github.com/PyAutoLabs/autofit_workspace_test/pull/99 (head `94b72b20`, merge `9321910765f77d4f7f092e455bce33127d154610`)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1578
+- pending-release: autofit_workspace_test@https://github.com/PyAutoLabs/autofit_workspace_test/pull/99
+- classification: bug (PyAutoFit + autofit_workspace_test) — epic `graphical-ep`; finding D6 of the phase-1 analytic Gaussian benchmark (autofit_workspace_test#91), the last open phase-1 finding.
+- ci: PyAutoFit `Tests [pull_request]` 3.12 / 3.13 / nojax + `Docs` green; autofit_workspace_test `Smoke Tests [pull_request]` changes / 3.12 / 3.13 green; both CLEAN; library merged first.
+- heart-ack: YELLOW "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)" + stale "release validation incomplete: no rehearsal for current source" (organism-scope); nothing in either diff is in the release chain.
+
+- summary: `Model.instance_for_arguments` constructed a Prior from the `(lower, upper)` bounds pairs that `Samples.errors_at_sigma` / `values_at_sigma` (`as_instance=True`) hand it whenever the global model holds a `Model(af.GaussianPrior)` component (every `HierarchicalFactor` graph), so `NormalMessage`'s `broadcast_arrays` raised `TypeError`. Now an explicit typed branch: a Prior-class model whose constructor arguments contain a tuple returns `ModelInstance(constructor_arguments)` (`.mean == (lo, hi)`, `.sigma == (lo, hi)`); scalar vectors (`median_pdf`, `max_log_likelihood`) still build the real prior. Workspace: the `analytic_autofit.py` docstring no longer claims the instance path is unusable; the raw `as_instance=False` read stays because the weighted-moment comparison indexes columns positionally through `prior_tuples_ordered_by_id`.
+- decision: the prompt's option 1 (return a pair of instances) was rejected — it would break the public tuple-attribute instance contract used by `ep_parity.py`, `simultaneous.py` and the workspace result tutorials.
+- verdict: 3 new tests in `test_autofit/graphical/global/test_errors_at_sigma_instance.py`, the two tuple-valued ones fail without the fix; full suite 2472 passed 2 skipped (baseline 2469 + 3); graphical 278 / messages 95; referee `analytic_gaussian_collapse.py` RECOVER 5/5, STALE 0/5; smoke gate 14/14; every deterministic `analytic_gaussian.py` cell byte-identical before/after (PARITY FAIL 38/41 both sides, the same three autofit-EP cells = the Laplace-on-scatter caveat).
+- finding: `analytic_gaussian.py`'s graphical column is an unseeded DynestyStatic run — its PARITY count and `[info]` lines drift run to run (37 vs 38 of 41 on an identical tree); filed `draft/bug/graphical_ep/analytic_gaussian_unseeded_graphical_column.md`.
+- remaining: the phase-1 findings table is complete (D1–D6 shipped). `analytic_gaussian.py` / `analytic_gaussian_priors.py` stay parked NEEDS_FIX for the moment-matching cure (`draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md`, a human decision).
+- worktree: `~/Code/PyAutoLabs-wt/samples-errors-at-sigma-instance` removed at close-out.
+
+## Original prompt
+
 # `Samples.errors_at_sigma(as_instance=True)` crashes on a model whose component class is a Prior
 
 Type: bug
