@@ -2,12 +2,16 @@
 
 ## order-lens-mge-bases-and-seed
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/57
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/58
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611
+- heart-ack: 2026-09-08 in-session (same two reasons the human acknowledged for mge-label-degeneracy this session) "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names mge_model_from or this pipeline
 - library-issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/610
 - library-prompt: draft/feature/autogalaxy/mge_model_from_order_bases.md
 - prompt: active/order_lens_mge_bases_and_seed_vis_lp.md
 - issued: 2026-09-08
 - session: claude --resume session_015RALRY9yekWDTtbVfok64a
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/order-lens-mge-bases-and-seed
 - repos:
   - PyAutoGalaxy: feature/order-lens-mge-bases-and-seed
@@ -42,19 +46,6 @@
 - merge-after: https://github.com/PyAutoLabs/autolens_profiling/issues/232 — satisfied: merged 2026-09-08 via PR #233
 - heart-ack: 2026-09-08 in-session, reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — neither touches autolens_profiling or the Euclid pipeline
 
-## interferometer-sparse-operator-numpy-cpu-path
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/542
-- prompt: active/interferometer_sparse_operator_numpy_cpu_path.md
-- issued: 2026-09-08
-- session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-operator-numpy-cpu-path
-- repos:
-  - PyAutoArray: feature/interferometer-sparse-operator-numpy-cpu-path
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/544
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/544
-- heart-ack: 2026-09-08 in-session, reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — neither touches the PyAutoArray interferometer sparse operator
-
 ## interferometer-numba-cpu-direct-conv
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/543
 - prompt: active/interferometer_numba_cpu_direct_conv.md
@@ -64,5 +55,4 @@
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-numba-cpu-direct-conv
 - repos:
   - PyAutoArray: feature/interferometer-numba-cpu-direct-conv
-- stacked-on: interferometer-sparse-operator-numpy-cpu-path (#542)
-- parallel-claim: PyAutoArray also claimed by interferometer-sparse-operator-numpy-cpu-path (task 4 is stacked on task 3's branch; approved 2026-09-08)
+- stacked-on: interferometer-sparse-operator-numpy-cpu-path (#542) — MERGED 2026-09-08 via PR #544; the parallel PyAutoArray claim is released, and this branch's PR opens against `main` (no GitHub retarget, its PR was not open at merge time)
