@@ -168,7 +168,7 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">likelihood_breakdown/pixelization.py imports a module PyAutoArray split</a> — autolens_profiling · easy · safe · normal</summary>
+<details><summary>📋 <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid preset lp bins [4,4,2]</a> — autolens_profiling · easy · safe · normal</summary>
 
 ```
 /start_dev draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md
@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_sparse_operator_numpy_cpu_path.md"><code>InterferometerSparseOperator</code> has no NumPy path — a CPU user is forced through…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/542">issue #542</a> — issued 2026-09-08 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_sparse_operator_numpy_cpu_path.md"><code>InterferometerSparseOperator</code> has no NumPy path — a CPU user is forced through…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/542">issue #542</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/544">PyAutoArray#544</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/interferometer_sparse_operator_numpy_cpu_path.md
@@ -298,6 +298,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#544](https://github.com/PyAutoLabs/PyAutoArray/pull/544) — `active/interferometer_sparse_operator_numpy_cpu_path.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
@@ -971,7 +972,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">likelihood_breakdown/pixelization.py imports a module PyAutoArray split</a> — autolens_profiling · easy · safe · normal</summary>
+<details><summary>📋 <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid preset lp bins [4,4,2]</a> — autolens_profiling · easy · safe · normal</summary>
 
 ```
 /start_dev draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md
@@ -1861,7 +1862,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
-| 2026-09-08 | filed | <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">likelihood_breakdown/pixelization.py imports a module PyAutoArray…</a> |
 | 2026-09-08 | filed | <a href="planned.md#aggregator-temp-unzip">aggregator-temp-unzip</a> |
 | 2026-09-08 | filed | <a href="draft/feature/autogalaxy/mge_model_from_order_bases.md"><code>mge_model_from</code>: optional ordering of multiple bases and a…</a> |
 | 2026-09-08 | issued | <a href="active/interferometer_sparse_operator_numpy_cpu_path.md"><code>InterferometerSparseOperator</code> has no NumPy path — a CPU user is…</a> |
@@ -1870,6 +1870,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-08 | filed | <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
 | 2026-09-08 | issued | <a href="active/interferometer_numba_cpu_direct_conv.md">Reinstate a numba CPU interferometer curvature path — the extent-grid…</a> |
 | 2026-09-08 | issued | <a href="active/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to…</a> |
+| 2026-09-08 | filed | <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 

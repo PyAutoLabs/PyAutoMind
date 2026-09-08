@@ -47,10 +47,13 @@
 - prompt: active/interferometer_sparse_operator_numpy_cpu_path.md
 - issued: 2026-09-08
 - session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-operator-numpy-cpu-path
 - repos:
   - PyAutoArray: feature/interferometer-sparse-operator-numpy-cpu-path
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/544
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/544
+- heart-ack: 2026-09-08 in-session, reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — neither touches the PyAutoArray interferometer sparse operator
 
 ## interferometer-numba-cpu-direct-conv
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/543
