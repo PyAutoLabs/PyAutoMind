@@ -14,10 +14,14 @@
 
 ## traced-assertions-on-jax-path
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1581
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1583
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/100
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1583
+- heart-ack: 2026-09-08 in-session (same two reasons the human acknowledged for mge-label-degeneracy this session) "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names PyAutoFit assertions or autofit_workspace_test
 - prompt: active/traced_assertions_on_jax_path.md
 - issued: 2026-09-08
 - session: claude --resume session_015RALRY9yekWDTtbVfok64a
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/traced-assertions-on-jax-path
 - repos:
   - PyAutoFit: feature/traced-assertions-on-jax-path
