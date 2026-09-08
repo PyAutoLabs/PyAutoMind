@@ -88,7 +88,7 @@
 - filed: 2026-09-08
 - classification: library
 - suggested-branch: feature/aggregator-temp-unzip
-- blocked-by: aggregator-search-json-sentinel (using PyAutoFit — same `scan()` loop in `autofit/aggregator/aggregator.py`; start once #1582 merges)
+- blocked-by: none — aggregator-search-json-sentinel merged 2026-09-08 (PyAutoFit#1585); `scan()` now calls `_is_search_output` in `autofit/aggregator/aggregator.py`, so branch from PyAutoFit main and build the temp-unzip path around that helper
 - summary: opt-in `unzip_temporary=True` on `Aggregator.from_directory` extracts zips into a `tempfile` tree (cleaned up on GC / `close()`) instead of a permanent sibling folder; default unchanged. Plan approved 2026-09-08; full plan on the issue.
 - affected-repos:
   - PyAutoFit
