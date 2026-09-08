@@ -29,4 +29,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-constant-split-assembly
 - repos:
+  - PyAutoArray: feature/delaunay-nn-constant-split-assembly
+  - autolens_profiling: feature/delaunay-nn-constant-split-assembly
+  - autolens_workspace_test: feature/delaunay-nn-constant-split-assembly
 - parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (awaiting-merge, 88 MIG-exclusion files) and interferometer-preload-cpu (no commits yet, interferometer preload scope); "file sets disjoint (this task adds new hpc/batch_gpu/submit_*assembly* files, results/notes/delaunay_nn_constant_split_assembly.md, new results/breakdown JSON and scripts/misc/delaunay_nn/assembly_bench.py; retire touches 88 existing MIG files of which the only delaunay_nn one is submit_delaunay_nn_benchmark_a100, and interferometer-preload-cpu has no commits); own worktree taken under the same precedent recorded for the two existing claims"
