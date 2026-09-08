@@ -2,9 +2,10 @@
 
 ## slope-hierarchy-scale-birth
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/24
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/25
 - issued: 2026-09-08
 - session: claude --resume session_01JcyWRpcbRiAAYFqgFJarEr
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/slope-hierarchy-scale-birth
 - repos:
   - PyAutoCortex: feature/slope-hierarchy-scale-birth
