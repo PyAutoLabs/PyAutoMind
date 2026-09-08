@@ -1,5 +1,16 @@
 # Active Tasks
 
+## interferometer-xp-jnp-call-sites
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/239
+- prompt: active/interferometer_sparse_operator_calls_need_xp_jnp.md
+- issued: 2026-09-08
+- session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-xp-jnp-call-sites
+- repos:
+  - autolens_profiling: feature/interferometer-xp-jnp-call-sites
+- parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, hpc/batch_gpu + activate.sh only) and profiling-post-235-followups (#237, scripts/imaging/* + _production_config.py only); "file sets disjoint — this task touches scripts/interferometer/* and scripts/misc/numba_interferometer/ only; own worktree approved 2026-09-08"
+
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222
