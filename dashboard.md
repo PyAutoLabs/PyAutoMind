@@ -272,7 +272,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in the cavity…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/532">issue #532</a> — issued 2026-09-07 — library-dev</summary>
+<details><summary>📋 <a href="active/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in the cavity…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/532">issue #532</a> — issued 2026-09-07 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/533">PyAutoArray#533</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/delaunay_nn_launch_latency.md
@@ -302,6 +302,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `active/delaunay_nn_launch_latency.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
 - [PyAutoArray#527](https://github.com/PyAutoLabs/PyAutoArray/pull/527) — `complete/2026/09/delaunay-edge-ring-zeroed.md`
