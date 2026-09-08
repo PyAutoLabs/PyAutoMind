@@ -2,12 +2,15 @@
 
 ## order-lens-mge-bases-and-seed
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/57
+- library-issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/610
+- library-prompt: draft/feature/autogalaxy/mge_model_from_order_bases.md
 - prompt: active/order_lens_mge_bases_and_seed_vis_lp.md
 - issued: 2026-09-08
 - session: claude --resume session_015RALRY9yekWDTtbVfok64a
-- status: workspace-dev
+- status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/order-lens-mge-bases-and-seed
 - repos:
+  - PyAutoGalaxy: feature/order-lens-mge-bases-and-seed
   - euclid_strong_lens_modeling_pipeline: feature/order-lens-mge-bases-and-seed
 - parallel-claim: euclid_strong_lens_modeling_pipeline also claimed by profiling-production-representative (#235, workspace-dev); "file sets disjoint except util.py: #235 changes a 2-line over-sampling hunk in scripts/lens_model_waveband.py, scripts/mge_lens_only.py, scripts/sersic_lens_model.py and util.py; this task edits scripts/initial_lens_model.py, util.py parse_fit_args (different hunk), docs/mge_label_degeneracy.md and tests/; merge order does not matter, whichever lands second rebases; own worktree under the approved plan"
 
