@@ -39,7 +39,9 @@
 - prompt: active/profiling_run_times_representative_of_production.md
 - issued: 2026-09-08
 - session: claude --resume session_01QUtSqZHfdCceS4Sxproayn
-- status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/236
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/56
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/profiling-production-representative
 - repos:
   - autolens_profiling: feature/profiling-production-representative
