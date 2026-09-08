@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 159 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 > **No batch in flight.**
 
@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/dataset_fits_written_twice_files_and_image.md">dataset.fits written twice per search (files/ and image/): write once, always…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/608">issue #608</a> — issued 2026-09-08 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609">PyAutoGalaxy#609</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/731">PyAutoLens#731</a></summary>
+<details><summary>📋 <a href="active/dataset_fits_written_twice_files_and_image.md">dataset.fits written twice per search (files/ and image/): write once, always…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/608">issue #608</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609">PyAutoGalaxy#609</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/731">PyAutoLens#731</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/539">autolens_workspace#539</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/236">autogalaxy_workspace#236</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/310">autolens_workspace_test#310</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/120">autogalaxy_workspace_test#120</a></summary>
 
 ```
 /start_dev active/dataset_fits_written_twice_files_and_image.md
@@ -482,7 +482,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **28** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -2193,7 +2193,15 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 </details>
 
 <details>
-<summary><b>numba-interferometer-revisit</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>numba-interferometer-revisit</b> — 3 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy_workspace/interferometer_preload_prose_nufft.md">Interferometer preload prose says "minutes to hours" — it is now seconds</a> — autogalaxy_workspace · small · supervised · medium</summary>
+
+```
+/start_dev draft/docs/autogalaxy_workspace/interferometer_preload_prose_nufft.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autoarray/interferometer_numba_cpu_direct_conv.md">Reinstate a numba CPU interferometer curvature path — the extent-grid convolution, geometry-gated</a> — autoarray · large · supervised · high</summary>
 
@@ -2225,7 +2233,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-140 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+141 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2270,11 +2278,11 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautomind/witness_campaign.md`
 - `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
 - `draft/feature/workspaces/cluster_source_science.md`
-- _… and 100 more_
+- _… and 101 more_
 
 </details>
 
-18 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+19 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2294,6 +2302,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
+- `draft/docs/autogalaxy_workspace/interferometer_preload_prose_nufft.md — unknown theme keyword(s): docs`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md — unknown theme keyword(s): config`
 - `draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md — unknown theme keyword(s): jax-gpu, performance, hpc`
