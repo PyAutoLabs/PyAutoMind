@@ -1,3 +1,55 @@
+## cortex-assistant-entry
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/362
+- completed: 2026-09-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/367
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/23
+
+Cortex projects now route through their domain assistant at execution time, in
+one direction only: the project names the assistant, the assistant never learns
+about the Cortex.
+
+- **Cortex schema** (PyAutoCortex#23, merge `02318d7d`, head `133620ed`): every
+  `projects.yaml` row carries a new **required** `assistant:` field — `none` or
+  a bare workspace-relative repo name. `cortex.py check` validates it and stats
+  nothing, so the CI render needs no assistant checkout. `subhalo_validation`
+  and `euclid_dr1_prelim` declare `autolens_assistant`; every dormant and
+  retired row (including the retired `inference_programme`) declares `none`.
+  126 tests pass.
+- **Brain briefs** (PyAutoBrain#367, merge `29dc4796`, head `33136c3`): every
+  work-shaped `/cortex` payload (next task, rerun, planned) now carries a
+  **work brief** — the entry protocol for the execution-tier subagent: read the
+  assistant's `AGENTS.md`, then the project's `wiki/project/` state and journal,
+  then the named skills; finish by writing the journal entry and rewriting
+  `state.md`; return the outcome against the witness plus any assistant drift.
+  New `_work_brief(r, projects)` / `_with_brief(payload, r, projects)`;
+  `_planned_payload` gains the `projects` map. Check-in, ruling, gate and retire
+  payloads are unchanged and name no assistant. A row without the field renders
+  as `none`, so the Brain half merges cleanly against a pre-field Cortex `main`.
+  91 conductor tests, 920 tests overall.
+- **Contract docs**: `/cortex` gains step 4 "Work on a project" and the rule
+  "the door names the assistant, never reads it"; `WORKFLOW.md` gains the
+  "Cortex project work" subsection under the subagent prompt contract.
+- **Backfill (local science commits, outside the workspace, unpushed here)**:
+  `Science/subhalo_validation` `8df4bf0` (profile.md filled from what the
+  workspace records about the human) and `Science/euclid_dr1_prelim` `f486cee`
+  (assistant refer-back block in `AGENTS.md`; its origin is the Euclid pipeline
+  repo, so it is committed locally and never pushed there).
+
+Traps and notes:
+
+- **Merge order is load-bearing.** The Cortex `refresh` check renders through
+  Brain `main`, so it stays red until the Brain PR merges; merge Brain first,
+  then re-run the Cortex check.
+- **The conductor names the assistant and never reads it** — no stat, no
+  resolve, still stdlib-only. That is what keeps `grep -ril cortex
+  autolens_assistant` empty and lets users run an assistant without ever
+  touching the Cortex.
+- **Migration for any external `projects.yaml`**: add `assistant: none` (or the
+  assistant's repo name) to every row, placed after `ledger:` — `check` reports
+  it missing otherwise.
+
+## Original prompt
+
 # Cortex projects route through the domain assistant at execution time
 
 Type: feature
