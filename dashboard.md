@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_preload_prose_nufft.md">Interferometer preload prose says "minutes to hours" — it is now seconds</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/237">issue #237</a> — issued 2026-09-08 — workspace-dev — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/interferometer_preload_prose_nufft.md">Interferometer preload prose says "minutes to hours" — it is now seconds</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/237">issue #237</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/238">autogalaxy_workspace#238</a> — ⏳ pending release: PyAutoArray — ⏸ waiting on PyAutoArray's release</summary>
 
 ```
 /start_dev active/interferometer_preload_prose_nufft.md
@@ -325,6 +325,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#540](https://github.com/PyAutoLabs/PyAutoArray/pull/540) — `complete/2026/09/interferometer-apply-operator-rfft2.md`
 - [PyAutoArray#541](https://github.com/PyAutoLabs/PyAutoArray/pull/541) — `complete/2026/09/interferometer-preload-nufft-type1.md`
 - [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `complete/2026/09/sibson-single-concatenated-walk.md`
+- ⏸ waiting: [Interferometer preload prose says "minutes to hours" — it is now seconds](active/interferometer_preload_prose_nufft.md)
 
 **PyAutoFit**
 
