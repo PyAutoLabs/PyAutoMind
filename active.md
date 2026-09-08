@@ -1,5 +1,16 @@
 # Active Tasks
 
+## dataset-fits-image-only
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/608
+- prompt: active/dataset_fits_written_twice_files_and_image.md
+- issued: 2026-09-08
+- session: claude --resume session_01Giskz46AjniG7E9dKxwpTG
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/dataset-fits-image-only
+- repos:
+  - PyAutoGalaxy: feature/dataset-fits-image-only
+  - PyAutoLens: feature/dataset-fits-image-only
+
 ## traced-assertions-on-jax-path
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1581
 - prompt: active/traced_assertions_on_jax_path.md
