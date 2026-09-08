@@ -13,6 +13,7 @@ Status: formalised
 Witness: no search output folder written by `DirectoryPaths.save_all` contains a `metadata` file; `Aggregator.from_directory` on a fresh run (and on a legacy folder that still carries `metadata`) returns the same search outputs as before; `agg.filter(agg.non_linear_search == ...)` still works, sourced from `search.json`; resume of a run whose `metadata` file has been deleted is unaffected; full PyAutoFit test suite green.
 Unattended: ready
 Filed: 2026-09-08
+Issued: 2026-09-08
 
 Original request (verbatim):
 

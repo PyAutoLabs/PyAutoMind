@@ -73,3 +73,13 @@
   - PyAutoArray: feature/interferometer-preload-nufft-type1
 - stacked-on: interferometer-apply-operator-rfft2 (#538)
 - parallel-claim: PyAutoArray also claimed by interferometer-apply-operator-rfft2 (task 2 is stacked on task 1's branch; same file, disjoint functions; approved 2026-09-08)
+
+## aggregator-search-json-sentinel
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1582
+- prompt: active/replace_metadata_sentinel_with_search_json.md
+- issued: 2026-09-08
+- session: claude --resume session_01GkELVxsdpNKyegTu4bFJTR
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/aggregator-search-json-sentinel
+- parallel-claim: "PyAutoFit and autofit_workspace_test also claimed by traced-assertions-on-jax-path (#1581); file sets disjoint (aggregator/, paths/directory.py, profiling/aggregator vs mapper/prior, fitness.py); own worktree approved 2026-09-08"
+- repos:
