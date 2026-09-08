@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 159 |
+| [Backlog](#backlog) (`draft/`) | 158 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 83
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -251,6 +251,14 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/delaunay_adapt_split_regularization.md">Re-base the Delaunay profiling cells on AdaptSplit regularization</a> — issued 2026-09-08</summary>
+
+```
+/start_dev active/delaunay_adapt_split_regularization.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/interferometer_preload_cpu.md">The interferometer preload on CPU: builder timings and the adjoint-NUFFT construction</a> — issued 2026-09-08</summary>
 
@@ -439,10 +447,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 34</summary>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
 
@@ -480,14 +488,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autofit/search_seed_reproducibility.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_profiling/delaunay_adapt_split_regularization.md">Re-base the Delaunay profiling cells on AdaptSplit regularization</a> — autolens_profiling · medium · supervised · medium</summary>
-
-```
-/start_dev draft/feature/autolens_profiling/delaunay_adapt_split_regularization.md
 ```
 
 </details>
@@ -1677,38 +1677,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>profiling</b> — 3 task(s) · 8 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: regularization</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'profiling' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autolens_profiling/delaunay_adapt_split_regularization.md
-- draft/research/autofit/autofit_profiling_bootstrap.md
-- draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autolens_profiling/delaunay_adapt_split_regularization.md">Re-base the Delaunay profiling cells on AdaptSplit regularization</a> | autolens_profiling | medium | medium | formalised |
-| <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> | autofit | large | normal | formalised |
-| <a href="draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md">Tune cluster-scale JOSS benchmarks toward their 5-minute targets</a> | autolens_workspace | medium | normal | formalised |
-
-</details>
-
-<details>
 <summary><b>visualization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1772,6 +1740,36 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
+<details>
+<summary><b>autofit — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
+- draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
+| <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and…</a> | large | normal | formalised |
+
+</details>
+
 _Showing 8 of 25 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -1782,7 +1780,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-08 | issued | <a href="active/interferometer_preload_cpu.md">The interferometer preload on CPU: builder timings and the…</a> |
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
-| 2026-09-08 | filed | <a href="draft/feature/autolens_profiling/delaunay_adapt_split_regularization.md">Re-base the Delaunay profiling cells on AdaptSplit regularization</a> |
+| 2026-09-08 | issued | <a href="active/delaunay_adapt_split_regularization.md">Re-base the Delaunay profiling cells on AdaptSplit regularization</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
@@ -2239,7 +2237,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-21 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+20 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2248,7 +2246,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/autoarray/interferometer_apply_operator_rfft2.md — unknown theme keyword(s): jax-performance, likelihood-profiling`
 - `draft/feature/autoarray/interferometer_numba_cpu_direct_conv.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/feature/autoarray/interferometer_sparse_operator_numpy_cpu_path.md — unknown theme keyword(s): numpy-cpu, likelihood-profiling`
-- `draft/feature/autolens_profiling/delaunay_adapt_split_regularization.md — unknown theme keyword(s): regularization`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
