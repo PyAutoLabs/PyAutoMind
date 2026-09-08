@@ -1,27 +1,5 @@
 # Active Tasks
 
-## dataset-fits-image-only
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/608
-- heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; this branch touches analysis save_attributes, two plotters, plots.yaml and tests, none in the failing scripts
-- prompt: active/dataset_fits_written_twice_files_and_image.md
-- issued: 2026-09-08
-- session: claude --resume session_01Giskz46AjniG7E9dKxwpTG
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/dataset-fits-image-only
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/731
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/539
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/236
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/310
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/120
-- repos:
-  - PyAutoGalaxy: feature/dataset-fits-image-only
-  - PyAutoLens: feature/dataset-fits-image-only
-  - autolens_workspace: feature/dataset-fits-image-only
-  - autogalaxy_workspace: feature/dataset-fits-image-only
-  - autolens_workspace_test: feature/dataset-fits-image-only
-  - autogalaxy_workspace_test: feature/dataset-fits-image-only
-
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222

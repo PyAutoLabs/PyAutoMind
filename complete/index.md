@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1353 records across 8 buckets.
+1354 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -149,6 +149,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-retire-project-chip](2026/09/cortex-retire-project-chip.md)
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
 - [cortex-tasks-not-phases](2026/09/cortex-tasks-not-phases.md)
+- [dataset-fits-image-only](2026/09/dataset-fits-image-only.md) — `dataset.fits` was written twice per search since PyAutoGalaxy#479 / PyAutoLens#574 (`files/` from `save_attri…
 - [defer-import-scipy-special-pyplot](2026/09/defer-import-scipy-special-pyplot.md)
 - [delaunay-adapt-split-regularization](2026/09/delaunay-adapt-split-regularization.md)
 - [delaunay-area-magnification-audit](2026/09/delaunay-area-magnification-audit.md)
