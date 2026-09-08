@@ -38,8 +38,11 @@
 - prompt: active/interferometer_numba_cpu_direct_conv.md
 - issued: 2026-09-08
 - session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/545
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/545
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-numba-cpu-direct-conv
 - repos:
   - PyAutoArray: feature/interferometer-numba-cpu-direct-conv
 - stacked-on: interferometer-sparse-operator-numpy-cpu-path (#542) — MERGED 2026-09-08 via PR #544; the parallel PyAutoArray claim is released, and this branch's PR opens against `main` (no GitHub retarget, its PR was not open at merge time)
+- heart-ack: 2026-09-08 in-session, reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names the interferometer inversion path or PyAutoArray

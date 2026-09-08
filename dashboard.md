@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 159 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 > **No batch in flight.**
 
@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/interferometer_numba_cpu_direct_conv.md">Reinstate a numba CPU interferometer curvature path — the extent-grid convolution, geometry-gated</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/543">issue #543</a> — issued 2026-09-08 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_numba_cpu_direct_conv.md">Reinstate a numba CPU interferometer curvature path — the extent-grid convolution, geometry-gated</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/543">issue #543</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/545">PyAutoArray#545</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/interferometer_numba_cpu_direct_conv.md
@@ -282,6 +282,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#545](https://github.com/PyAutoLabs/PyAutoArray/pull/545) — `active/interferometer_numba_cpu_direct_conv.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
@@ -468,7 +469,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **26** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 35</summary>
@@ -2192,6 +2193,19 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
+<details>
+<summary><b>numba-interferometer-revisit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_numba_library_dispatch_insitu.md">Re-measure the numba interferometer crossover in situ, through the library dispatch</a> — autolens_profiling · medium · supervised · medium</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_numba_library_dispatch_insitu.md
+```
+
+</details>
+
+</details>
+
 ## Hygiene
 
 2 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -2204,7 +2218,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-138 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+139 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2249,7 +2263,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/workspaces/cluster_source_science.md`
 - `draft/feature/workspaces/gallery_runner_missing_tiers.md`
 - `draft/feature/workspaces/group_los_halos.md`
-- _… and 98 more_
+- _… and 99 more_
 
 </details>
 
