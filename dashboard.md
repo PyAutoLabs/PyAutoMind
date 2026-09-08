@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -200,14 +200,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_profiling/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to misc</a> — autolens_profiling · medium · safe · normal</summary>
-
-```
-/start_dev draft/feature/autolens_profiling/profiling_run_times_representative_of_production.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/workspaces/remove_the_two_fold_label_degeneracy_in.md">Remove the two-fold label degeneracy in the Euclid lens-light MGE model</a> — workspaces · medium · safe · normal</summary>
 
 ```
@@ -248,6 +240,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomind/witness_campaign.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
@@ -268,18 +268,18 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
+<details><summary>📋 <a href="active/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to misc</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/235">issue #235</a> — issued 2026-09-08 — workspace-dev</summary>
 
 ```
-/start_dev active/retire_gpu1_mig_exclusion.md
+/start_dev active/profiling_run_times_representative_of_production.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="active/slope_hierarchy_scale_birth.md">Birth <code>slope_hierarchy_scale</code> — the EP campaign's first Cortex science project (phase 3)</a> — issued 2026-09-08</summary>
+<details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
 
 ```
-/start_dev active/slope_hierarchy_scale_birth.md
+/start_dev active/retire_gpu1_mig_exclusion.md
 ```
 
 </details>
@@ -455,10 +455,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **32** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **32** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 34</summary>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
 
@@ -536,14 +536,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_profiling/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to misc</a> — autolens_profiling · medium · safe · normal</summary>
-
-```
-/start_dev draft/feature/autolens_profiling/profiling_run_times_representative_of_production.md
 ```
 
 </details>
@@ -1805,7 +1797,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-08 | issued | <a href="active/interferometer_preload_cpu.md">The interferometer preload on CPU: builder timings and the…</a> |
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
 | 2026-09-08 | issued | <a href="active/delaunay_adapt_split_regularization.md">Re-base the Delaunay profiling cells on AdaptSplit regularization</a> |
-| 2026-09-08 | issued | <a href="active/slope_hierarchy_scale_birth.md">Birth <code>slope_hierarchy_scale</code> — the EP campaign's first Cortex…</a> |
+| 2026-09-08 | issued | <a href="active/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
