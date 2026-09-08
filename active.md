@@ -2,8 +2,10 @@
 
 ## order-lens-mge-bases-and-seed
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/57
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1586
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/58
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1586
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611
 - heart-ack: 2026-09-08 in-session (same two reasons the human acknowledged for mge-label-degeneracy this session) "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names mge_model_from or this pipeline
 - library-issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/610
@@ -14,6 +16,7 @@
 - status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/order-lens-mge-bases-and-seed
 - repos:
+  - PyAutoFit: feature/order-lens-mge-bases-and-seed
   - PyAutoGalaxy: feature/order-lens-mge-bases-and-seed
   - euclid_strong_lens_modeling_pipeline: feature/order-lens-mge-bases-and-seed
 - parallel-claim: euclid_strong_lens_modeling_pipeline also claimed by profiling-production-representative (#235, workspace-dev); "file sets disjoint except util.py: #235 changes a 2-line over-sampling hunk in scripts/lens_model_waveband.py, scripts/mge_lens_only.py, scripts/sersic_lens_model.py and util.py; this task edits scripts/initial_lens_model.py, util.py parse_fit_args (different hunk), docs/mge_label_degeneracy.md and tests/; merge order does not matter, whichever lands second rebases; own worktree under the approved plan"
@@ -29,22 +32,6 @@
 - repos:
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
-
-## profiling-production-representative
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/235
-- prompt: active/profiling_run_times_representative_of_production.md
-- issued: 2026-09-08
-- session: claude --resume session_01QUtSqZHfdCceS4Sxproayn
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/236
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/56
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/profiling-production-representative
-- repos:
-  - autolens_profiling: feature/profiling-production-representative
-  - euclid_strong_lens_modeling_pipeline: feature/profiling-production-representative
-- parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, awaiting-merge, hpc/MIG files only), interferometer-preload-cpu (#229, MERGED 2026-09-08 via PR #234; was misc/interferometer files only) and delaunay-adapt-split-regularization (#232, MERGED 2026-09-08); "first two disjoint; #232 shares scripts/imaging/likelihood_runtime/delaunay_numba.py and _profile_cli.py — #232 merged 2026-09-08 (PR #233), so the merge-order constraint is satisfied: rebase onto autolens_profiling main before editing those two files; own worktree approved by the human 2026-09-08"
-- merge-after: https://github.com/PyAutoLabs/autolens_profiling/issues/232 — satisfied: merged 2026-09-08 via PR #233
-- heart-ack: 2026-09-08 in-session, reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — neither touches autolens_profiling or the Euclid pipeline
 
 ## interferometer-numba-cpu-direct-conv
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/543
