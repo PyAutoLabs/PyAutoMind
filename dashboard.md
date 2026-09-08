@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 157 |
+| [Backlog](#backlog) (`draft/`) | 158 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -224,6 +224,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining <code>config/visualize/plots.yaml</code> copies</a> — config · trivial · safe · low</summary>
+
+```
+/start_dev draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autofit/aggregator_temporary_unzip.md">Aggregator: temporary-directory unzip mode so scraping <code>.zip</code> results does not permanently double…</a> — autofit · small · supervised · medium</summary>
 
 ```
@@ -240,19 +248,11 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a strict FD check…</a> — autolens_profiling · small · safe · low</summary>
-
-```
-/start_dev draft/feature/autolens_profiling/gradient_cost_probe.md
-```
-
-</details>
-
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/dataset_fits_written_twice_files_and_image.md">dataset.fits written twice per search (files/ and image/): write once, always…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/608">issue #608</a> — issued 2026-09-08 — library-dev</summary>
+<details><summary>📋 <a href="active/dataset_fits_written_twice_files_and_image.md">dataset.fits written twice per search (files/ and image/): write once, always…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/608">issue #608</a> — issued 2026-09-08 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609">PyAutoGalaxy#609</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/731">PyAutoLens#731</a></summary>
 
 ```
 /start_dev active/dataset_fits_written_twice_files_and_image.md
@@ -490,7 +490,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **28** of them belong to an epic and are listed only under [Epics](#epics) below.
+**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **28** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -1249,7 +1249,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 14</summary>
+<summary><b>maintenance</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
@@ -1359,6 +1359,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining <code>config/visualize/plots.yaml</code> copies</a> — config · trivial · safe · low</summary>
+
+```
+/start_dev draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md
 ```
 
 </details>
@@ -1831,7 +1839,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 25 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 26 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1845,15 +1853,16 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
 | 2026-09-08 | issued | <a href="active/remove_the_two_fold_label_degeneracy_in.md">Remove the two-fold label degeneracy in the Euclid lens-light MGE…</a> |
 | 2026-09-08 | issued | <a href="active/replace_metadata_sentinel_with_search_json.md">Remove the output-folder <code>metadata</code> file; aggregator discovers…</a> |
+| 2026-09-08 | filed | <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
 | 2026-09-08 | issued | <a href="active/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to…</a> |
 | 2026-09-08 | issued | <a href="active/traced_assertions_on_jax_path.md">Make <code>add_assertion</code> enforceable on the JAX likelihood path</a> |
 | 2026-09-08 | issued | <a href="active/interferometer_preload_nufft_type1.md">Build <code>nufft_precision_operator_from</code> as a type-1 NUFFT — 35 minutes…</a> |
-| 2026-09-08 | filed | <a href="draft/feature/autofit/aggregator_temporary_unzip.md">Aggregator: temporary-directory unzip mode so scraping <code>.zip</code> results…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-08 | filed | <a href="draft/feature/autofit/aggregator_temporary_unzip.md">Aggregator: temporary-directory unzip mode so scraping <code>.zip</code> results…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
@@ -1863,12 +1872,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md">Adapt-density mapper: a zero-signal adapt image is NaN on the JAX…</a> |
 | 2026-09-05 | issued | <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a> |
-| 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
@@ -1878,12 +1887,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
-| 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
@@ -1893,12 +1902,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
-| 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 | 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
@@ -1908,7 +1917,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
-| 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 
 </details>
 
@@ -2217,7 +2225,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-139 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+140 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2262,11 +2270,11 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautomind/witness_campaign.md`
 - `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
 - `draft/feature/workspaces/cluster_source_science.md`
-- _… and 99 more_
+- _… and 100 more_
 
 </details>
 
-17 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+18 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2287,6 +2295,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
+- `draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md — unknown theme keyword(s): config`
 - `draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md — unknown theme keyword(s): jax-gpu, performance, hpc`
 
 </details>
