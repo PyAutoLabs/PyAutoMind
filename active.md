@@ -51,10 +51,13 @@
 
 ## interferometer-apply-operator-rfft2
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/538
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/540
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/540
+- heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names PyAutoArray or a library test, and this branch changes no API and no numerical result
 - prompt: active/interferometer_apply_operator_rfft2.md
 - issued: 2026-09-08
 - session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-apply-operator-rfft2
 - repos:
   - PyAutoArray: feature/interferometer-apply-operator-rfft2
