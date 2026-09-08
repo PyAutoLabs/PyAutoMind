@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 158 |
+| [Backlog](#backlog) (`draft/`) | 159 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 83
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -200,6 +200,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/research/workspaces/remove_the_two_fold_label_degeneracy_in.md">Remove the two-fold label degeneracy in the Euclid lens-light MGE model</a> — workspaces · medium · safe · normal</summary>
+
+```
+/start_dev draft/research/workspaces/remove_the_two_fold_label_degeneracy_in.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…</a> — autofit · large · supervised · normal</summary>
 
 ```
@@ -236,14 +244,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/pyautomind/witness_campaign.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_slice.md
 ```
 
 </details>
@@ -447,7 +447,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 33</summary>
@@ -964,7 +964,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 14</summary>
+<summary><b>research</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -1042,6 +1042,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/workspaces/remove_the_two_fold_label_degeneracy_in.md">Remove the two-fold label degeneracy in the Euclid lens-light MGE model</a> — workspaces · medium · safe · normal</summary>
+
+```
+/start_dev draft/research/workspaces/remove_the_two_fold_label_degeneracy_in.md
 ```
 
 </details>
