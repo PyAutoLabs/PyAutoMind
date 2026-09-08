@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1337 records across 8 buckets.
+1339 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -152,6 +152,7 @@ markers; everything below GENERATED is rebuilt.
 - [delaunay-dual-area-magnification](2026/09/delaunay-dual-area-magnification.md)
 - [delaunay-edge-ring-zeroed](2026/09/delaunay-edge-ring-zeroed.md)
 - [delaunay-nn-breakdown](2026/09/delaunay-nn-breakdown.md)
+- [delaunay-nn-launch-latency](2026/09/delaunay-nn-launch-latency.md)
 - [delaunay-walk-early-exit](2026/09/delaunay-walk-early-exit.md)
 - [docs-followup-paid-plan-assistants](2026/09/docs-followup-paid-plan-assistants.md) — Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new …
 - [ep-collapse-unpark](2026/09/ep-collapse-unpark.md)
@@ -213,6 +214,7 @@ markers; everything below GENERATED is rebuilt.
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z
 - [samples-errors-at-sigma-instance](2026/09/samples-errors-at-sigma-instance.md) — closed completed 2026-09-07
+- [sibson-single-concatenated-walk](2026/09/sibson-single-concatenated-walk.md)
 - [silence-colab-cli-message](2026/09/silence-colab-cli-message.md)
 - [slam-simultaneous-oversample-timeout](2026/09/slam-simultaneous-oversample-timeout.md)
 - [small-datasets-cap-stamp-stops-resimulation](2026/09/small-datasets-cap-stamp-stops-resimulation.md)

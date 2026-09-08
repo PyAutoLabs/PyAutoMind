@@ -1,3 +1,38 @@
+## sibson-single-concatenated-walk
+
+- issue: none — folded into https://github.com/PyAutoLabs/PyAutoArray/issues/532
+- completed: 2026-09-08
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/533
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/533
+- retired-at: close-out of `delaunay-nn-launch-latency` (`/prm`, 2026-09-08)
+
+### Why this is a record and not a backlog prompt
+
+This prompt asked for one thing: `jax_sibson` / `sibson.py` called
+`pix_indexes_delaunay_walk_from` twice — once for the data grid, once for the 6,000
+`ConstantSplit` cross points — so DelaunayNN inherited PyAutoArray#531's early exit but not
+its single-walk saving. The ask was to concatenate the two query sets into one locate call,
+slice the result, and keep `return_simplex_indexes` for the cavity-walk seed.
+
+**That is cut A.2 of PyAutoArray#533**, which went further than the prompt asked: it locates
+*and interpolates* both query sets in one concatenated Sibson pass, computing the
+circumcircles once, so the split-point half never pays a second walk, a second nearest-vertex
+argmin seed, or a second set of kernel launches. The `stop_gradient` boundary on the walk's
+float inputs is preserved, and the split-point half gets its own simplex indexes — the one
+place the prompt warned the change could go subtly wrong.
+
+Verification the prompt asked for, delivered by the same merge: the `delaunay_nn.py`
+jax_assertions gate was extended (autolens_workspace_test#307) to assert single-pass parity
+and chunk invariance, `EXPECTED_LOG_EVIDENCE_HST = 29144.581944` held exactly on all ten A100
+legs, and the A100 breakdown re-run (autolens_profiling#227) took the params→H prefix from
+143.90 to 28.21 ms unbatched (5.10×) and 24.32 to 16.44 ms per call at `vmap` 16 (1.48×) —
+comfortably the "materially below 144.789 / 24.424" the witness asked for.
+
+Full write-up, including the two cuts this prompt did *not* ask for (the gated candidate
+unroll and the chunk-4096 ruling): `complete/2026/09/delaunay-nn-launch-latency.md`.
+
+## Original prompt
+
 # Sibson natural-neighbour: one concatenated Delaunay locate instead of two
 
 Type: feature
@@ -14,7 +49,7 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: superseded
-Superseded-by: draft/feature/autoarray/delaunay_nn_launch_latency.md
+Superseded-by: complete/2026/09/delaunay-nn-launch-latency.md
 Consequence: judge
 Witness: on the A100 DelaunayNN breakdown cell (`results/breakdown/imaging/delaunay_nn_hpc_a100_fp64_walk_early_exit.json`) the params→H prefix (`regularization_matrix_prefix_s`) falls materially below its post-#531 value of 144.789 ms unbatched / 24.424 ms per call at `vmap` 16, with `EXPECTED_LOG_EVIDENCE_HST = 29144.581944` unchanged and the `delaunay_nn.py` jax_assertions passing
 Review-minutes: 20
