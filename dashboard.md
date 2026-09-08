@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid preset lp bins [4,4,2]</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/237">issue #237</a> — issued 2026-09-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid preset lp bins [4,4,2]</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/237">issue #237</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/238">autolens_profiling#238</a></summary>
 
 ```
 /start_dev active/breakdown_pixelization_stale_module_import.md
@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer workspaces</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/311">issue #311</a> — issued 2026-09-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer workspaces</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/311">issue #311</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/312">autolens_workspace_test#312</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/pull/134">autolens_workspace_developer#134</a></summary>
 
 ```
 /start_dev active/retire_lp_sub_size_1_radial_bins.md
