@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 159 |
+| [Backlog](#backlog) (`draft/`) | 161 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -200,6 +200,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autolens_profiling/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to misc</a> — autolens_profiling · medium · safe · normal</summary>
+
+```
+/start_dev draft/feature/autolens_profiling/profiling_run_times_representative_of_production.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/workspaces/remove_the_two_fold_label_degeneracy_in.md">Remove the two-fold label degeneracy in the Euclid lens-light MGE model</a> — workspaces · medium · safe · normal</summary>
 
 ```
@@ -236,14 +244,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autolens_profiling/gradient_cost_probe.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/witness_campaign.md
 ```
 
 </details>
@@ -447,10 +447,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **32** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 33</summary>
+<summary><b>feature</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
 
@@ -528,6 +528,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_profiling/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to misc</a> — autolens_profiling · medium · safe · normal</summary>
+
+```
+/start_dev draft/feature/autolens_profiling/profiling_run_times_representative_of_production.md
 ```
 
 </details>
@@ -2042,7 +2050,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 6 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 7 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -2096,6 +2104,14 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/research/graphical_ep/ep_scoping.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/graphical_ep/slope_hierarchy_cortex_activation.md">Activate <code>slope_hierarchy</code> as the EP campaign's first Cortex science project…</a> — graphical_ep · small · supervised · high</summary>
+
+```
+/start_dev draft/research/graphical_ep/slope_hierarchy_cortex_activation.md
 ```
 
 </details>
@@ -2196,7 +2212,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-142 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+143 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2241,7 +2257,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautomind/witness_campaign.md`
 - `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
-- _… and 102 more_
+- _… and 103 more_
 
 </details>
 
