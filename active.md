@@ -1,15 +1,5 @@
 # Active Tasks
 
-## slope-hierarchy-scale-birth
-- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/24
-- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/25
-- issued: 2026-09-08
-- session: claude --resume session_01JcyWRpcbRiAAYFqgFJarEr
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/slope-hierarchy-scale-birth
-- repos:
-  - PyAutoCortex: feature/slope-hierarchy-scale-birth
-
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222
@@ -54,3 +44,16 @@
     not in H. No library change (dependency PyAutoArray #537 already merged), so the
     library-first gate is trivially satisfied. PR open; merge stays human.
 - parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, awaiting-merge) and interferometer-preload-cpu (#229, workspace-dev); "file sets verified disjoint 2026-09-08: retire touches existing hpc/batch_gpu submits + activate.sh + hpc/README.md (MIG exclusion block only), interferometer-preload-cpu touches scripts/misc/numba_interferometer, scripts/interferometer, results/breakdown/interferometer, results/notes/numba_interferometer_verdict.md and .gitignore and does NOT touch _profile_cli.py; ours is _profile_cli.py + five Delaunay cells + new adapt_split/constant_split submits + a new results note, so merge order does not matter provided the new submits omit the retired --exclude=euclid-ral-gpu-1 block; own worktree taken under supervised autonomy with an approved plan"
+
+## profiling-production-representative
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/235
+- prompt: active/profiling_run_times_representative_of_production.md
+- issued: 2026-09-08
+- session: claude --resume session_01QUtSqZHfdCceS4Sxproayn
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/profiling-production-representative
+- repos:
+  - autolens_profiling: feature/profiling-production-representative
+  - euclid_strong_lens_modeling_pipeline: feature/profiling-production-representative
+- parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, awaiting-merge, hpc/MIG files only), interferometer-preload-cpu (#229, misc/interferometer files only) and delaunay-adapt-split-regularization (#232, workspace-dev); "first two disjoint; #232 shares scripts/imaging/likelihood_runtime/delaunay_numba.py and _profile_cli.py — those two files are edited last after #232 merges and this branch rebases onto it; merge order: #232 first; own worktree approved by the human 2026-09-08"
+- merge-after: https://github.com/PyAutoLabs/autolens_profiling/issues/232

@@ -1,3 +1,62 @@
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/24 (closed completed 2026-09-08)
+- completed: 2026-09-08
+- library-pr: PyAutoCortex https://github.com/PyAutoLabs/PyAutoCortex/pull/25 (`5f65fa0` birth/retire/gate,
+  `3e3e520` remote → `PyAutoLabs/slope_hierarchy_scale`, `bff7124` board re-render; merge `866d8f0`).
+  Plus **no PR at all** for the science tree itself: `acce42a` (birth, 135 files) + `9ebdf0e`
+  (`visibility_stage: github_private`) pushed direct to `main` on the brand-new **PRIVATE** remote
+  `PyAutoLabs/slope_hierarchy_scale` — the human created the repo by hand, as the no-org-repo-creation
+  rule requires.
+- classification: research (graphical_ep) — epic `graphical-ep`, campaign phase 3. Consequence `judge`,
+  supervised, difficulty small. PyAutoCortex is an **organ** repo (`category: organ` in `repos.yaml`),
+  so the Heart release-freeze gate does not apply to this merge and was not consulted.
+- summary: the phase that gives the EP campaign a Cortex science project to run in. Three trees changed.
+  **Science vault** — `Science/slope_hierarchy` (17 commits, its `Jammy2211/slope_hierarchy` remote left
+  intact) moved whole to `Science/z_projects_complete/slope_hierarchy`; it is the vault the new project
+  mines and cites, not a deleted tree.
+  **`Science/slope_hierarchy_scale`** — born fresh per `autolens_assistant/skills/start-new-project.md`
+  Phase 1 (thin refer-back scaffold: `README.md`, `AGENTS.md`, `CLAUDE.md`, `.claude/settings.json` API
+  gate, `project.yaml` with `assistant_ref`, `CITATION.cff`, `wiki/project/`, `results/`, `paper/`,
+  `.gitignore`), borrowing `scripts/{ep,graphical,one_by_one,util}.py`, `simulators/sample.py`, `config/`,
+  `activate.sh`, `environment.yml` and `hpc/` from the vault, with `hpc/sync.conf` written for
+  `PROJECT_NAME=slope_hierarchy_scale`, `HPC_HOST=euclid_jump`, `HPC_BASE=/mnt/ral/jnightin`. No `output/`,
+  no `dataset/` (N=25 is re-simulated), no old `results/`; `wiki/project/state.md` cites the vault's
+  `results/ep_history_n5_maxsteps12/` as the N=5 baseline.
+  **PyAutoCortex** — new active row `slope_hierarchy_scale` (`assistant: autolens_assistant`,
+  `remote: PyAutoLabs/slope_hierarchy_scale`, `sync_cli: hpc/sync` with verbs verified,
+  `ledger: wiki/project/state.md`, `witness_file: results/**/*.json`, `partition: both`, dated `note:`);
+  row `slope_hierarchy` retired via `cortex.py retire … --why` with `local_path` repointed at the vault;
+  task `tasks/slope_hierarchy/n25_scale_up.md` `git mv`-ed to `tasks/slope_hierarchy_scale/`, re-pointed
+  at the new project, `Gates: PyAutoFit#1405, #1558, #1560, #1562` written from the shipped gate evidence,
+  and moved `planned` → `gated`; board re-rendered.
+- checks: PyAutoCortex **126 tests pass**, `cortex.py check` OK. CI on the merged head `bff7124`:
+  `Cortex Check` (`check`) and `Dashboard Refresh` (`refresh`) both `success`, `mergeStateStatus: CLEAN`,
+  `mergeable: MERGEABLE`. Merge proven from the canonical checkout
+  (`git merge-base --is-ancestor bff7124 origin/main`, `rev-list --count origin/main..bff7124` = 0).
+- the remote ruling — `remote: PyAutoLabs/slope_hierarchy_scale`, **private**. The prompt's scope said
+  `remote: none` and "hand the human the `gh repo create` line"; the human created the private org repo
+  during the run instead, so the row ships with a real remote and `visibility_stage: github_private`.
+  That is the first EP-campaign science tree hosted under the org rather than a personal account.
+- the activation route — `projects.yaml` is code (Cortex#22 ruling), so moving these rows could not be done
+  by a `/cortex` check-in: a check-in sweeps only `status: active` rows (and projects owning a
+  `submitted|running` task), and both EP rows were `status: dormant`, which is why the campaign ledger's
+  "move to `gated` at the next check-in" instruction had sat unexecutable since 2026-09-02. It ships as a
+  PR with a human merge instead.
+- decisions / residue:
+  - `tasks/slope_hierarchy/methods_writeup.md` stays **planned under the retired row** — deliberate
+    (the prompt's scope says so); it is a write-up of the completed N=5 work, not of the scale-up.
+  - `simulators/sample.py`'s `info.json` keeps `domain: slope_hierarchy` — deliberate, so the N=25 run
+    stays directly comparable with the vault's N=3/N=5 baseline.
+  - `config/general.yaml` `workspace_version` bumped to `2026.8.17.1`.
+  - Out of scope and still the human's: **submitting** the N=25 run (a `/cortex` ask, ruled 2026-09-05 —
+    the task is `gated`, and `ready` is the human's edge), activating `ic50_workspace` (phase 4; its
+    checkout is dirty with 170 files of line-ending churn and has no `results/` witness path), and the
+    moment-matching cure decision.
+  - Mind ledger for this phase landed ahead of the merge in `2b348f41`:
+    `draft/research/graphical_ep/ep_campaign.md` phase-3 and phase-4 rows, and `epics.md`'s three stale
+    `PyAutoCortex epics.md#<slug>` pointers replaced (Cortex#14 replaced `epics.md` with `checkin.yaml`).
+
+## Original prompt
+
 # Birth `slope_hierarchy_scale` — the EP campaign's first Cortex science project (phase 3)
 
 Type: research

@@ -12,6 +12,8 @@ Consequence: glance
 Witness: the profiling harness's default Euclid and HST imaging cells reproduce the production vis_pix / source_pix configuration (AdaptSplit regularization, over_sample_size_pixelization 4/2 by the S/N 3.0 rule, an iid model sequence, warm-start memo per the production default) and their reported per-evaluation medians land within 1.5x of the wall-time-per-sample measured in the euclid_dr1_prelim job 342301 and subhalo_validation job 342311 logs; the NNLS warm-start scripts, results and notes live under a misc/ directory and no default profiling cell depends on them.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-09-08
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/235
 
 
 Original request (verbatim): update the autolens_profiling which the run time comes from to be representative of production runs, for Euclid but also just in general. I want autolens_profiling to match production, I think we already changed something to AdaptSplit. Also move the warm-start NNLS stuff to misc, it is not currently used in production and profiling run times should not be based on it (but maybe it will come back once we change sampler)
