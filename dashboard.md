@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/interferometer_numba_cpu_direct_conv.md">Reinstate a numba CPU interferometer curvature path — the extent-grid convolution, geometry-gated</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/543">issue #543</a> — issued 2026-09-08 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_numba_cpu_direct_conv.md">Reinstate a numba CPU interferometer curvature path — the extent-grid convolution, geometry-gated</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/543">issue #543</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/545">PyAutoArray#545</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/interferometer_numba_cpu_direct_conv.md
@@ -290,6 +290,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#545](https://github.com/PyAutoLabs/PyAutoArray/pull/545) — `active/interferometer_numba_cpu_direct_conv.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
