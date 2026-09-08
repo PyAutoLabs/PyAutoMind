@@ -38,7 +38,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/161
 - issued: 2026-09-08
 - session: claude --resume session_01Jbzb2yHwJn5ScwqxngKPqi
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/162
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/230
+- heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" - organism-scope; neither touches PyAutoNerves or autolens_profiling
 - worktree: ~/Code/PyAutoLabs-wt/xla-triton-gemm-off
 - repos:
   - PyAutoNerves: feature/xla-triton-gemm-off
