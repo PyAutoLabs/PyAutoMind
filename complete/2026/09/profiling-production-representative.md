@@ -1,3 +1,27 @@
+## profiling-production-representative
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/235
+- completed: 2026-09-08
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/236
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/56
+- merged: autolens_profiling 68008df (PR #236), euclid_strong_lens_modeling_pipeline 5f2b472 (PR #56)
+- also: subhalo_validation main 122079f (lp radial bins, committed directly)
+- heart-ack: 2026-09-08 YELLOW — "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)" and "release validation incomplete: no rehearsal for current source"; neither in the shipped repos
+
+**Summary.** The CPU numba imaging cells of `autolens_profiling` now default to the production configuration per instrument — Euclid ↔ the Euclid pipeline `vis_pix` stage (530-vertex Delaunay with 30 zeroed edge, Hilbert 3.5/0.01, free `AdaptSplit` on the production priors, positions penalty 3.0/0.2, MGE 20×2), HST ↔ subhalo_validation `source_pix[2]` (1280 vertices, S/N-capped adapt image, MGE 30×2) — with pixelization over-sampling 4/2 by the source S/N>3 rule, thread env pinned to 1, an iid prior stream in place of one repeated instance, the NNLS warm-start memo explicitly off and recorded, and a post-compile cold eval plus warm iid median reported beside the production `search.summary` reference (jobs 342301 / 342311: pooled wall/sample 0.15–0.33 s, cold eval 0.45–1.13 s, speed-up 3.0–4.3). Presets and provenance live in `_production_config.py`; `--variant legacy` reproduces `main` to 0.15 %. The NNLS warm-start memo experiment moved to `scripts/misc/nnls_warm_start/` + `results/nnls_warm_start/`. The lp over-sampling outer radial bin retired sub-size 1 (`[4,2,1]` → `[4,2,2]`, `[16,4,1]` → `[16,4,2]`) across autolens_profiling (including the deflection-accuracy axis), the Euclid pipeline and subhalo_validation, every shifted pin re-measured and dated.
+
+**Witness.** 4 of 8 production runs within 1.5× of the logged production cold eval (all four rectangular cells). Delaunay misses in opposite directions — Euclid 2.9× faster than the real-tile log, HST 1.8× slower on a laptop core — with every preset field matched: the residual is dataset realism (simulated 3.5" mask vs real VIS cut-out) and host, not configuration. Numbers and retired pins: `autolens_profiling/results/notes/production_representative_cells.md`.
+
+**Traps / notes.**
+- Production is two configurations, not one; the two presets differ in S/N cap, positions, MGE and mesh size. A single-process cell compares to the cold eval (= wall/sample × speed-up), never to pooled wall/sample.
+- The Euclid pipeline's latent replay test (`tests/test_compute_latent_variable.py`) pins `truth.json` latents computed through the same over-sampling helper, and its magnification cross-check exposed a real bias: with sub-size 1 retired, the lensed arcs integrate correctly (0.03 % of converged) but the unlensed compact source at 0.18" sits in the 0.1–0.3" sub-size 2 annulus and under-integrates by ~0.6 %; the old [4,2,1] agreement was two under-integrations cancelling. Production lp bins are therefore `[4,4,2]` and the unlensed source-flux latent integrates on its own uniform over-sample-4 grid (only [4,4,4] passed by binning alone; [4,4,2] left +0.21 % from the source wings in the outer bin) — human decisions 2026-09-08; truth.json re-recorded (`simulator.py --from-params --seed 1`, FITS byte-identical). The autolens_profiling Euclid preset still says [4,2,2] — follow-up filed.
+- `scripts/misc/searches/_targets.py` mirrors `_setup.py`'s over-sample recipe into `target_id` hashing — search target ids changed.
+- Subagent sandboxes cannot commit under `/mnt/c/Users/Jammy/Science`; the architect session commits science-project edits.
+- Deflection pins are insensitive to the lp bin (largest move 3e-11): they sit on grids the recipe does not touch.
+
+**Follow-ups filed.** `draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md` (autolens_workspace_test + developer sites, markdown regen); `draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md` (JAX rectangular breakdown cell broken on main by a PyAutoArray module split). Not filed: a real cut-out profiling dataset to close the Delaunay witness gap; GPU production-representativeness for the JAX cells.
+
+## Original prompt
+
 # Profiling run times representative of production; NNLS warm-start to misc
 
 Type: feature

@@ -19,7 +19,7 @@
   - PyAutoFit: feature/order-lens-mge-bases-and-seed
   - PyAutoGalaxy: feature/order-lens-mge-bases-and-seed
   - euclid_strong_lens_modeling_pipeline: feature/order-lens-mge-bases-and-seed
-- parallel-claim: euclid_strong_lens_modeling_pipeline also claimed by profiling-production-representative (#235, workspace-dev); "file sets disjoint except util.py: #235 changes a 2-line over-sampling hunk in scripts/lens_model_waveband.py, scripts/mge_lens_only.py, scripts/sersic_lens_model.py and util.py; this task edits scripts/initial_lens_model.py, util.py parse_fit_args (different hunk), docs/mge_label_degeneracy.md and tests/; merge order does not matter, whichever lands second rebases; own worktree under the approved plan"
+- parallel-claim: euclid_strong_lens_modeling_pipeline was also claimed by profiling-production-representative (#235, workspace-dev) — merged and closed 2026-09-08, claim released; "file sets disjoint except util.py: #235 changes a 2-line over-sampling hunk in scripts/lens_model_waveband.py, scripts/mge_lens_only.py, scripts/sersic_lens_model.py and util.py; this task edits scripts/initial_lens_model.py, util.py parse_fit_args (different hunk), docs/mge_label_degeneracy.md and tests/; merge order does not matter, whichever lands second rebases; own worktree under the approved plan"
 
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
