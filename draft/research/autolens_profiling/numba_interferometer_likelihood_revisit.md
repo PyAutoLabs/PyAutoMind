@@ -62,5 +62,7 @@ Filed: 2026-09-07
 | 2 | Synthetic bake-off, kernel levers, in-situ numba vs JAX-CPU, verdict note | `active/numba_interferometer_kernel_levers.md` | issued https://github.com/PyAutoLabs/autolens_profiling/issues/226 |
 | 3 | Preload as its own line item: builder timings + adjoint-NUFFT construction | `draft/research/autolens_profiling/interferometer_preload_cpu.md` | filed; after phase 1 |
 
+Follow-ups filed from the phase-2 verdict (2026-09-07): draft/feature/autoarray/interferometer_apply_operator_rfft2.md, interferometer_numba_cpu_direct_conv.md, interferometer_sparse_operator_numpy_cpu_path.md.
+
 PyAutoArray is read-only throughout; library changes the verdict justifies (reinstatement,
 the `rfft2` change, the NUFFT preload) are filed as follow-up prompts via `/intake`.

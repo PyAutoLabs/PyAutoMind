@@ -14,6 +14,7 @@
 
 ## numba-interferometer-kernel-levers
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/226
+- heart-ack: 2026-09-07 in-session, single reason "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" — organism-scope (autolens_workspace JAX scripts); nothing in this branch is in the release chain
 - issued: 2026-09-07
 - session: claude --resume session_01JCn8wPWpdiVof6uK6zn56w
 - status: workspace-dev
