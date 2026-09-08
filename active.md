@@ -63,5 +63,6 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-numba-cpu-direct-conv
 - repos:
+  - PyAutoArray: feature/interferometer-numba-cpu-direct-conv
 - stacked-on: interferometer-sparse-operator-numpy-cpu-path (#542)
 - parallel-claim: PyAutoArray also claimed by interferometer-sparse-operator-numpy-cpu-path (task 4 is stacked on task 3's branch; approved 2026-09-08)
