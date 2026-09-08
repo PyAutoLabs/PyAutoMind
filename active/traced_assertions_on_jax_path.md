@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-09-08
 Consequence: review
 Witness: an `autofit_workspace_test/scripts/jax_assertions/` script composes a model with an ordering assertion between compound priors (`(a0**2 + a1**2) > (b0**2 + b1**2)`), builds a JAX analysis and the `Fitness` Nautilus builds (`use_jax_vmap=True`) plus the non-vmapped one; for a violating vector both return the resample sentinel with no exception, for a satisfying vector both return the same log likelihood as the NumPy path to 1e-8, and `jax.jit` of the fitness compiles; numpy-only unit tests pin the new traced assertion evaluation and the unchanged NumPy resample path.
 Review-minutes: 10

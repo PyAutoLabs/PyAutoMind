@@ -1,5 +1,16 @@
 # Active Tasks
 
+## traced-assertions-on-jax-path
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1581
+- prompt: active/traced_assertions_on_jax_path.md
+- issued: 2026-09-08
+- session: claude --resume session_015RALRY9yekWDTtbVfok64a
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/traced-assertions-on-jax-path
+- repos:
+  - PyAutoFit: feature/traced-assertions-on-jax-path
+  - autofit_workspace_test: feature/traced-assertions-on-jax-path
+
 ## mge-label-degeneracy
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/54
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/55
