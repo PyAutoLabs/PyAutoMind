@@ -70,5 +70,6 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-preload-nufft-type1
 - repos:
+  - PyAutoArray: feature/interferometer-preload-nufft-type1
 - stacked-on: interferometer-apply-operator-rfft2 (#538)
 - parallel-claim: PyAutoArray also claimed by interferometer-apply-operator-rfft2 (task 2 is stacked on task 1's branch; same file, disjoint functions; approved 2026-09-08)
