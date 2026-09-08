@@ -14,6 +14,7 @@ Priority: high
 Epic: numba-interferometer-revisit
 Phase: 3
 Filed: 2026-09-07
+Issued: 2026-09-08
 
 Phase 3 of `draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md`.
 The user asked for the preload curvature build to be treated as its own line of work: it has
