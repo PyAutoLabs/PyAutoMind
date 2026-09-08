@@ -16,6 +16,7 @@ Witness: every re-based cell has a new EXPECTED_LOG_EVIDENCE_HST pin that passes
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-09-08
+Issued: 2026-09-08
 
 ## Original request (verbatim)
 
