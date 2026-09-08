@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1339 records across 8 buckets.
+1340 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -192,6 +192,7 @@ markers; everything below GENERATED is rebuilt.
 - [mind-post-cortex-p5-heart-freeze](2026/09/mind-post-cortex-p5-heart-freeze.md) — closed, completed 2026-09-03
 - [multi-dataset-offsets-fit](2026/09/multi-dataset-offsets-fit.md) — Community bug report verified true on all three counts and fixed. Every multi-dataset example that freed `Data…
 - [nufft-threshold-subhalo-pin-rebuild](2026/09/nufft-threshold-subhalo-pin-rebuild.md)
+- [numba-interferometer-kernel-levers](2026/09/numba-interferometer-kernel-levers.md)
 - [numba-interferometer-pack](2026/09/numba-interferometer-pack.md)
 - [numba-vs-jax-sparse](2026/09/numba-vs-jax-sparse.md)
 - [numpy-deflections-p1](2026/09/numpy-deflections-p1.md)
