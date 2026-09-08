@@ -49,11 +49,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1577
 - issued: 2026-09-07
 - session: claude --resume session_01E2HKd5ZocDmTyZ544eVEh4
-- status: library-shipped, workspace-pending
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/samples-errors-at-sigma-instance
 - repos:
   - PyAutoFit: feature/samples-errors-at-sigma-instance
+  - autofit_workspace_test: feature/samples-errors-at-sigma-instance
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1578
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/99
 - heart-ack: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" / "release validation incomplete: no rehearsal for current source" — organism-scope; nothing in this diff is in the release chain
 - epic: graphical-ep
 
