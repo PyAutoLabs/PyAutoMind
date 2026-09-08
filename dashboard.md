@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_sparse_operator_numpy_cpu_path.md"><code>InterferometerSparseOperator</code> has no NumPy path — a CPU user is forced through…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/542">issue #542</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/544">PyAutoArray#544</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/interferometer_sparse_operator_numpy_cpu_path.md"><code>InterferometerSparseOperator</code> has no NumPy path — a CPU user is forced through…</a> — issued 2026-09-08</summary>
 
 ```
 /start_dev active/interferometer_sparse_operator_numpy_cpu_path.md
@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/order_lens_mge_bases_and_seed_vis_lp.md">Order the two lens-light MGE bases in vis_lp and expose a Nautilus…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/57">issue #57</a> — issued 2026-09-08 — library-dev</summary>
+<details><summary>📋 <a href="active/order_lens_mge_bases_and_seed_vis_lp.md">Order the two lens-light MGE bases in vis_lp and expose a Nautilus…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/57">issue #57</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611">PyAutoGalaxy#611</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/58">euclid_strong_lens_modeling_pipeline#58</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 /start_dev active/order_lens_mge_bases_and_seed_vis_lp.md
@@ -298,7 +298,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
-- [PyAutoArray#544](https://github.com/PyAutoLabs/PyAutoArray/pull/544) — `active/interferometer_sparse_operator_numpy_cpu_path.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
@@ -326,6 +325,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `active/order_lens_mge_bases_and_seed_vis_lp.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
 
 **PyAutoLens**
