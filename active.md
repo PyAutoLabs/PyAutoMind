@@ -83,3 +83,6 @@
 - worktree: ~/Code/PyAutoLabs-wt/aggregator-search-json-sentinel
 - parallel-claim: "PyAutoFit and autofit_workspace_test also claimed by traced-assertions-on-jax-path (#1581); file sets disjoint (aggregator/, paths/directory.py, profiling/aggregator vs mapper/prior, fitness.py); own worktree approved 2026-09-08"
 - repos:
+  - PyAutoFit: feature/aggregator-search-json-sentinel
+  - autofit_workspace_test: feature/aggregator-search-json-sentinel
+  - autolens_workspace_developer: feature/aggregator-search-json-sentinel
