@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 159 |
+| [Backlog](#backlog) (`draft/`) | 157 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 88
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -164,22 +164,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid preset lp bins [4,4,2]</a> — autolens_profiling · easy · safe · normal</summary>
-
-```
-/start_dev draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer workspaces</a> — workspaces · easy · safe · normal</summary>
-
-```
-/start_dev draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md
 ```
 
 </details>
@@ -248,14 +232,46 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows under the fixed XLA…</a> — autolens_profiling · small · supervised · medium</summary>
+
+```
+/start_dev draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a strict FD check…</a> — autolens_profiling · small · safe · low</summary>
+
+```
+/start_dev draft/feature/autolens_profiling/gradient_cost_probe.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid preset lp bins [4,4,2]</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/237">issue #237</a> — issued 2026-09-08 — workspace-dev</summary>
+
+```
+/start_dev active/breakdown_pixelization_stale_module_import.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
 
 ```
 /start_dev active/retire_gpu1_mig_exclusion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer workspaces</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/311">issue #311</a> — issued 2026-09-08 — workspace-dev</summary>
+
+```
+/start_dev active/retire_lp_sub_size_1_radial_bins.md
 ```
 
 </details>
@@ -453,7 +469,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -733,7 +749,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 32</summary>
+<summary><b>bug</b> — 31</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -931,14 +947,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid preset lp bins [4,4,2]</a> — autolens_profiling · easy · safe · normal</summary>
-
-```
-/start_dev draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md
 ```
 
 </details>
@@ -1430,7 +1438,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 9</summary>
+<summary><b>refactor</b> — 8</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
 
@@ -1476,14 +1484,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/refactor/pyautofit/remove_eden_packaging_tooling.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer workspaces</a> — workspaces · easy · safe · normal</summary>
-
-```
-/start_dev draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md
 ```
 
 </details>
@@ -1818,7 +1818,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 27 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 26 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1828,10 +1828,10 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
 | 2026-09-08 | filed | <a href="planned.md#aggregator-temp-unzip">aggregator-temp-unzip</a> |
-| 2026-09-08 | filed | <a href="draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer…</a> |
+| 2026-09-08 | issued | <a href="active/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer…</a> |
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
 | 2026-09-08 | filed | <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
-| 2026-09-08 | filed | <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid…</a> |
+| 2026-09-08 | issued | <a href="active/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid…</a> |
 | 2026-09-08 | filed | <a href="draft/feature/autofit/aggregator_temporary_unzip.md">Aggregator: temporary-directory unzip mode so scraping <code>.zip</code> results…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
