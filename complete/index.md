@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1340 records across 8 buckets.
+1341 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -132,6 +132,7 @@ markers; everything below GENERATED is rebuilt.
 - [batch-review-integration-p3](2026/09/batch-review-integration-p3.md)
 - [batch-status-box](2026/09/batch-status-box.md)
 - [board-family-helper](2026/09/board-family-helper.md)
+- [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
 - [cortex-assistant-entry](2026/09/cortex-assistant-entry.md)
 - [cortex-batch-member-kind](2026/09/cortex-batch-member-kind.md) — closed completed 2026-09-02
 - [cortex-birth-organ-row](2026/09/cortex-birth-organ-row.md) — closed completed 2026-09-01
