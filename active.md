@@ -37,33 +37,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/362
 - issued: 2026-09-07
 - session: claude --resume cb789199-9f67-400f-9f46-f68555932dc9
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/367
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/23
 - worktree: ~/Code/PyAutoLabs-wt/cortex-assistant-entry
 - repos:
   - PyAutoBrain: feature/cortex-assistant-entry
   - PyAutoCortex: feature/cortex-assistant-entry
-
-## samples-errors-at-sigma-instance
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1577
-- issued: 2026-09-07
-- session: claude --resume session_01E2HKd5ZocDmTyZ544eVEh4
-- status: library-shipped, workspace-pending
-- worktree: ~/Code/PyAutoLabs-wt/samples-errors-at-sigma-instance
-- repos:
-  - PyAutoFit: feature/samples-errors-at-sigma-instance
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1578
-- heart-ack: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" / "release validation incomplete: no rehearsal for current source" — organism-scope; nothing in this diff is in the release chain
-- epic: graphical-ep
-
-## batch-no-park-at-ship
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/363
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/365
-- issued: 2026-09-07
-- session: claude --resume a951615c-fae1-41f4-84d7-6c9a329bae7c
-- status: PR open
-- worktree: ~/Code/PyAutoLabs-wt/batch-no-park-at-ship
-- repos:
-  - PyAutoBrain: feature/batch-no-park-at-ship
 
 ## prm-shadow-row-notify-tier
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/364
