@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 156 |
+| [Backlog](#backlog) (`draft/`) | 159 |
 
 > **No batch in flight.**
 
@@ -432,7 +432,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **28** of them belong to an epic and are listed only under [Epics](#epics) below.
+**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -1857,7 +1857,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Numba CPU interferometer likelihood revisit — recover, break down, judge reinstatement</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Numba CPU interferometer likelihood revisit — recover, break down, judge reinstatement</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Numba CPU interferometer likelihood revisit — recover, break down, judge reinstatement</b> — ledger: `draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md`</summary>
 
@@ -1871,6 +1871,30 @@ Continue the 'Numba CPU interferometer likelihood revisit — recover, break dow
 
 ```
 /start_dev draft/research/autolens_profiling/interferometer_preload_cpu.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_apply_operator_rfft2.md"><code>InterferometerSparseOperator.apply_operator</code> pads real input to complex — use <code>rfft2</code>/<code>irfft2</code></a> — autoarray · small · supervised · high</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_apply_operator_rfft2.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_numba_cpu_direct_conv.md">Reinstate a numba CPU interferometer curvature path — the extent-grid convolution, geometry-gated</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_numba_cpu_direct_conv.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_sparse_operator_numpy_cpu_path.md"><code>InterferometerSparseOperator</code> has no NumPy path — a CPU user is forced through…</a> — autoarray · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_sparse_operator_numpy_cpu_path.md
 ```
 
 </details>
@@ -2157,7 +2181,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-139 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+142 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2165,6 +2189,9 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/arcsecond_to_decimal.md`
 - `draft/feature/autoarray/image_source_mappings_epic.md`
+- `draft/feature/autoarray/interferometer_apply_operator_rfft2.md`
+- `draft/feature/autoarray/interferometer_numba_cpu_direct_conv.md`
+- `draft/feature/autoarray/interferometer_sparse_operator_numpy_cpu_path.md`
 - `draft/feature/autoarray/multiwavelength_inversion.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/ep_analytic_updates.md`
@@ -2199,20 +2226,20 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautomind/witness_campaign.md`
 - `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
-- `draft/feature/workspaces/cluster_source_science.md`
-- `draft/feature/workspaces/gallery_runner_missing_tiers.md`
-- `draft/feature/workspaces/group_los_halos.md`
-- _… and 99 more_
+- _… and 102 more_
 
 </details>
 
-18 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+21 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
 - `draft/feature/autoarray/delaunay_nn_constant_split_assembly.md — unknown theme keyword(s): jax-gpu, delaunay, performance`
+- `draft/feature/autoarray/interferometer_apply_operator_rfft2.md — unknown theme keyword(s): jax-performance, likelihood-profiling`
+- `draft/feature/autoarray/interferometer_numba_cpu_direct_conv.md — unknown theme keyword(s): likelihood-profiling`
+- `draft/feature/autoarray/interferometer_sparse_operator_numpy_cpu_path.md — unknown theme keyword(s): numpy-cpu, likelihood-profiling`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
