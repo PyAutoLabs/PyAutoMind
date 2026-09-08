@@ -91,3 +91,15 @@
   - PyAutoFit: feature/aggregator-search-json-sentinel
   - autofit_workspace_test: feature/aggregator-search-json-sentinel
   - autolens_workspace_developer: feature/aggregator-search-json-sentinel
+
+## interferometer-preload-prose
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/237
+- prompt: active/interferometer_preload_prose_nufft.md
+- issued: 2026-09-08
+- session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-preload-prose
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/541
+- parallel-claim: "autogalaxy_workspace also claimed by dataset-fits-image-only (PyAutoGalaxy#608); file sets disjoint (scripts/interferometer/features/pixelization prose vs the dataset FITS/plotter work); own worktree approved by the human 2026-09-08"
+- repos:
+  - autogalaxy_workspace: feature/interferometer-preload-prose

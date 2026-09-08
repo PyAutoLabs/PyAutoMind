@@ -12,6 +12,8 @@ Autonomy: supervised
 Priority: medium
 Epic: numba-interferometer-revisit
 Filed: 2026-09-08
+Issued: 2026-09-08
+Issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/237
 
 ## The request
 
