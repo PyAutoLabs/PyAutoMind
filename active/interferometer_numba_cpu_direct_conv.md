@@ -14,6 +14,8 @@ Autonomy: supervised
 Priority: high
 Epic: numba-interferometer-revisit
 Filed: 2026-09-07
+Issued: 2026-09-08
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/543
 
 Follow-up from `autolens_profiling#226` (phase 2 of `numba-interferometer-revisit`). The
 verdict, the bake-off and the in-situ arms are in

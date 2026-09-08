@@ -49,3 +49,24 @@
 - parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, awaiting-merge, hpc/MIG files only), interferometer-preload-cpu (#229, MERGED 2026-09-08 via PR #234; was misc/interferometer files only) and delaunay-adapt-split-regularization (#232, MERGED 2026-09-08); "first two disjoint; #232 shares scripts/imaging/likelihood_runtime/delaunay_numba.py and _profile_cli.py — #232 merged 2026-09-08 (PR #233), so the merge-order constraint is satisfied: rebase onto autolens_profiling main before editing those two files; own worktree approved by the human 2026-09-08"
 - merge-after: https://github.com/PyAutoLabs/autolens_profiling/issues/232 — satisfied: merged 2026-09-08 via PR #233
 - heart-ack: 2026-09-08 in-session, reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — neither touches autolens_profiling or the Euclid pipeline
+
+## interferometer-sparse-operator-numpy-cpu-path
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/542
+- prompt: active/interferometer_sparse_operator_numpy_cpu_path.md
+- issued: 2026-09-08
+- session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-operator-numpy-cpu-path
+- repos:
+  - PyAutoArray: feature/interferometer-sparse-operator-numpy-cpu-path
+
+## interferometer-numba-cpu-direct-conv
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/543
+- prompt: active/interferometer_numba_cpu_direct_conv.md
+- issued: 2026-09-08
+- session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-numba-cpu-direct-conv
+- repos:
+- stacked-on: interferometer-sparse-operator-numpy-cpu-path (#542)
+- parallel-claim: PyAutoArray also claimed by interferometer-sparse-operator-numpy-cpu-path (task 4 is stacked on task 3's branch; approved 2026-09-08)
