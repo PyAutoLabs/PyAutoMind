@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_preload_nufft_type1.md">Build <code>nufft_precision_operator_from</code> as a type-1 NUFFT — 35 minutes to 7 seconds</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/539">issue #539</a> — issued 2026-09-08 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_preload_nufft_type1.md">Build <code>nufft_precision_operator_from</code> as a type-1 NUFFT — 35 minutes to 7 seconds</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/539">issue #539</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/541">PyAutoArray#541</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/interferometer_preload_nufft_type1.md
@@ -323,6 +323,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoArray**
 
 - [PyAutoArray#540](https://github.com/PyAutoLabs/PyAutoArray/pull/540) — `active/interferometer_apply_operator_rfft2.md`
+- [PyAutoArray#541](https://github.com/PyAutoLabs/PyAutoArray/pull/541) — `active/interferometer_preload_nufft_type1.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
