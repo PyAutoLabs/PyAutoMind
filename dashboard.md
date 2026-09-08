@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 162 |
 
 > **No batch in flight.**
 
@@ -447,7 +447,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **32** of them belong to an epic and are listed only under [Epics](#epics) below.
+**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **33** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -2050,7 +2050,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 7 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 8 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -2112,6 +2112,14 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/research/graphical_ep/slope_hierarchy_cortex_activation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/graphical_ep/slope_hierarchy_scale_birth.md">Birth <code>slope_hierarchy_scale</code> — the EP campaign's first Cortex science project (phase 3)</a> — graphical_ep · small · supervised · high</summary>
+
+```
+/start_dev draft/research/graphical_ep/slope_hierarchy_scale_birth.md
 ```
 
 </details>
@@ -2212,7 +2220,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-143 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+144 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2257,7 +2265,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautomind/witness_campaign.md`
 - `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
-- _… and 103 more_
+- _… and 104 more_
 
 </details>
 
