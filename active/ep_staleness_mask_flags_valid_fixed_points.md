@@ -12,6 +12,7 @@ Consequence: glance
 Witness: EP restarted from its own converged EPMeanField on an exact two-factor Gaussian graph emits `_stale_factor_warnings() == []` and an empty `reverted_variables` column on every ep_history.csv row, while test_autofit/graphical stays green (278 passed).
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-09-08
 
 EP staleness mask flags valid fixed points as stale
 

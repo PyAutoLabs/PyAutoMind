@@ -37,3 +37,12 @@
   - autolens_profiling: feature/delaunay-nn-constant-split-assembly
   - autolens_workspace_test: feature/delaunay-nn-constant-split-assembly
 - parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (awaiting-merge, 88 MIG-exclusion files) and interferometer-preload-cpu (no commits yet, interferometer preload scope); "file sets disjoint (this task adds new hpc/batch_gpu/submit_*assembly* files, results/notes/delaunay_nn_constant_split_assembly.md, new results/breakdown JSON and scripts/misc/delaunay_nn/assembly_bench.py; retire touches 88 existing MIG files of which the only delaunay_nn one is submit_delaunay_nn_benchmark_a100, and interferometer-preload-cpu has no commits); own worktree taken under the same precedent recorded for the two existing claims"
+
+## ep-stale-mask-fixed-point
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1579
+- issued: 2026-09-08
+- session: claude --resume session_019AymyDrfMhYj4vNgVMjNbq
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ep-stale-mask-fixed-point
+- repos:
+  - PyAutoFit: feature/ep-stale-mask-fixed-point
