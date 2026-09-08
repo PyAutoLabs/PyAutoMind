@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1351 records across 8 buckets.
+1353 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -194,6 +194,7 @@ markers; everything below GENERATED is rebuilt.
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
 - [mesh-shape-honours-small-datasets-cap](2026/09/mesh-shape-honours-small-datasets-cap.md)
 - [mge-group-source-basis-scale](2026/09/mge-group-source-basis-scale.md)
+- [mge-label-degeneracy](2026/09/mge-label-degeneracy.md)
 - [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
 - [mind-post-cortex-p2](2026/09/mind-post-cortex-p2.md)
 - [mind-post-cortex-p3-pr-ledger](2026/09/mind-post-cortex-p3-pr-ledger.md)
@@ -234,6 +235,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
+- [traced-assertions-on-jax-path](2026/09/traced-assertions-on-jax-path.md)
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07
 - [unit-test-import-time-hotspot-census](2026/09/unit-test-import-time-hotspot-census.md)
 - [user-workspace-howto-slow-script-pass](2026/09/user-workspace-howto-slow-script-pass.md)

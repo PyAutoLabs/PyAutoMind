@@ -1,3 +1,16 @@
+## mge-label-degeneracy
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/54
+- completed: 2026-09-08
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/55
+- heart-ack: 2026-09-08 in-session, two organism-scope reasons (autolens workspace validation failures; no release rehearsal) — docs-only branch
+- Summary: research note `docs/mge_label_degeneracy.md` on the exact two-fold label symmetry of the vis_lp lens-light MGE (2x20 linear Gaussians, identical sigma ladders, iid ell_comps priors, shared centre). Swap invariance pinned on shipped tile 102018665 (0.0 on JAX, 1.8e-12 NumPy). Recommendation: ordering assertion `|e_A|^2 > |e_B|^2` plus explicit `af.Nautilus(seed=...)`, applied between phases (both change the run identifier); distinct sigma ladders rejected; post-hoc relabelling dropped by decision (tiles rerun from scratch instead).
+- Blocker found: `add_assertion` was unusable on the pipeline's JAX path (vmapped Nautilus Fitness raised TracerBoolConversionError at trace time; non-vmapped let FitException escape). Fixed the same day in PyAutoFit#1583 (task traced-assertions-on-jax-path).
+- Traps: there is no `nest.yaml` anywhere (seed is a Nautilus kwarg); log Z within 1.0 cannot distinguish one-mode from two-mode runs (ln 2 = 0.69), so the witness must also check per-set marginal widths; any model or seed change forces fresh runs.
+- Next (ideas.md): pipeline edit + witness rerun on tile 102005065 once the PyAutoFit fix is released; `mge_model_from` ordering option in PyAutoGalaxy.
+- Session: parallel-claim on euclid_strong_lens_modeling_pipeline with profiling-production-representative (#235), disjoint files.
+
+## Original prompt
+
 # Remove the two-fold label degeneracy in the Euclid lens-light MGE model
 
 Type: research
