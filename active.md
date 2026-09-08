@@ -5,10 +5,14 @@
 - prompt: active/delaunay_nn_launch_latency.md
 - issued: 2026-09-07
 - session: claude --resume session_01B5HT8dp7sWc9qDhZp6moGr
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/533
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/533
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-launch-latency
 - repos:
   - PyAutoArray: feature/delaunay-nn-launch-latency
+  - autolens_workspace_test: feature/delaunay-nn-launch-latency
+  - autolens_profiling: feature/delaunay-nn-launch-latency
 - parallel-claim: autolens_profiling will also be claimed alongside retire-gpu1-mig-exclusion (#220, awaiting-merge); "file sets disjoint (hpc/batch_gpu submits it deletes, hpc/README.md, activate.sh vs scripts/imaging/likelihood_breakdown/delaunay_nn.py + new submit scripts + results/); merge order does not matter; Phase A + B of the prompt in this task, Phase C filed separately"
 
 ## retire-gpu1-mig-exclusion
