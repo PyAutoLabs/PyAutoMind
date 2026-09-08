@@ -7,7 +7,6 @@
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
-
 - [aggregator-temp-unzip](#aggregator-temp-unzip)
 
 <!-- toc:end -->
