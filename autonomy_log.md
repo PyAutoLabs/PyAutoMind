@@ -277,8 +277,8 @@ most days is never. So the append moved to `/prm` close-out — the one act that
 happens on every shipped task (PyAutoBrain#364).
 
 Protocol, power calculation and the **pre-registered decision rule** live in the
-tier-`notify` protocol prompt (`batch_notify_tier_merge` — in `active/` while
-this ships, `complete/` once it closes out) — read it before appending, and
+tier-`notify` protocol prompt, folded under `## Original prompt` in
+`complete/2026/09/prm-shadow-row-notify-tier.md` — read it before appending, and
 before interpreting anything here.
 
 In one line: while the window runs, tier-`notify` work still waits for the human

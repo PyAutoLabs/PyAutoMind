@@ -1,3 +1,44 @@
+## prm-shadow-row-notify-tier
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/364
+- completed: 2026-09-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/395 (merge eec96d41)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/366 (merge af8f2ef5)
+- summary: |
+    The tier-`notify` auto-merge decision's shadow window is fed again, by the act that happens on every
+    shipped task: `/prm` close-out. `PyAutoMind/scripts/lifecycle.py shadow-row` appends one six-cell row
+    under `## Shadow window` in `autonomy_log.md` and rewrites the section's `Count toward 40:` line
+    (dry-run by default, `--apply` writes, exit 2 on a missing heading/table, `|` in a cell traded for `/`).
+    `/prm` sub-step 5.3b (PyAutoBrain `skills/prm/prm.md`) runs for tier-`notify` candidates only: the gate
+    cell is copied from the task's ship calibration row, `stage` is 2 if an independent-model adversary leg
+    ran else 1, the human answers one question (merged unchanged, or after a substantive change), and the
+    row rides the same Mind commit and push the close-out already makes. `reference.md` documents the cell
+    sources. The doctrine edit in `AUTONOMY.md` ("an explicit future flag may extend autonomy to merge") is
+    NOT written here — it is written when the window reaches 40 and the human rules.
+- ledger: |
+    `autonomy_log.md` shadow-window header restated as a counted window (to 40, re-opened 2026-09-03 from
+    the first `/prm`-appended row), with the history sentence corrected (the two-slot batching epic was
+    retired; the batch slot door lives on and runs only when a batch is launched). The mis-filed
+    2026-09-07 `corrective` row (jax-grad-delaunay-fd-sweep-repin) moved to the main calibration table.
+    Count line at ship: `Count toward 40: 1 (stage 1: 0, stage 2: 1) — window re-opened 2026-09-03; first
+    /prm-appended row: none yet; legacy rows not counted: 1`.
+- tests: |
+    `PyAutoMind/tests/test_autonomy_log_shadow.py` (14 tests: heading, six-column schema, allowed
+    `human action` values on rows at/after the /prm epoch, count line agrees with rows, dry-run vs
+    `--apply` on a fixture, invalid action exits non-zero). `PyAutoBrain/tests/test_board.py`: a six-column
+    shadow row renders through `collect_autonomy` (regex unchanged; tier lands in the level chip, action in
+    the outcome chip). Mind 412 passed; Brain 917 passed plus the known worktree-only Cortex fixture failure.
+- traps: |
+    The PR's `drift` check is tree-wide: it failed on other live sessions' unclaimed active/ prompts
+    (rows whose slug differs from the filename and carry no `- prompt:` line) and on this task's own prompt
+    because the branch predated its registration commit (git-add-after-git-mv dropped active.md; recovered
+    in 1e73d82b). Fixed by merging origin/main into the branch and claiming the last orphan on its row
+    (`- prompt: active/cortex_projects_route_through_assistant.md`, human-authorised).
+- follow-ups: |
+    First real shadow row lands at the next `/prm` of a tier-`notify` task. Sibling task
+    batch-no-park-at-ship (PyAutoBrain#365) shipped in the same session.
+
+## Original prompt
+
 # The tier-`notify` auto-merge decision — re-open the shadow window, then decide
 
 Type: feature
