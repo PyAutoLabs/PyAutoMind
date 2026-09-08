@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-09-08
 Consequence: review
 Witness: two independent unseeded vis_lp runs of the ordered model on tile 102005065 (euclid_dr1_prelim, RAL) give set-A and set-B ell_comps that agree run-to-run to within 0.05 per component with no A<->B swap, log evidence within 1.0 of the unordered baseline 9492.7, and per-set ell_comps marginal widths narrower than the unordered run's (the bimodal mixture collapses); the pipeline's test_mode run and `pytest tests/` pass locally under both `--use_cpu` and the JAX path with the assertion attached.
 Review-minutes: 8
