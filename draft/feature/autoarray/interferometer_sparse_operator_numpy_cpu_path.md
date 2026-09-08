@@ -40,7 +40,10 @@ route's `segment_sum`) beats the library's JAX-CPU route at every geometry measu
 | alma_high | rect S=784 | 6.2817 s | 4.8414 s | 1.30× |
 
 (Some of that gap is the `rfft2` change filed separately as
-`interferometer_apply_operator_rfft2.md`; the two should be sequenced, real-FFT first.)
+`interferometer_apply_operator_rfft2.md`, which shipped on 2026-09-08 — PyAutoArray#540,
+record `complete/2026/09/interferometer-apply-operator-rfft2.md`. The real-FFT-first
+sequencing constraint is therefore already satisfied; measure this one against the
+post-`rfft2` baseline, not the numbers in the table above.)
 
 ## Scope
 

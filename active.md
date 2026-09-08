@@ -71,19 +71,6 @@
 - parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, awaiting-merge, hpc/MIG files only), interferometer-preload-cpu (#229, MERGED 2026-09-08 via PR #234; was misc/interferometer files only) and delaunay-adapt-split-regularization (#232, MERGED 2026-09-08); "first two disjoint; #232 shares scripts/imaging/likelihood_runtime/delaunay_numba.py and _profile_cli.py — #232 merged 2026-09-08 (PR #233), so the merge-order constraint is satisfied: rebase onto autolens_profiling main before editing those two files; own worktree approved by the human 2026-09-08"
 - merge-after: https://github.com/PyAutoLabs/autolens_profiling/issues/232 — satisfied: merged 2026-09-08 via PR #233
 
-## interferometer-apply-operator-rfft2
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/538
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/540
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/540
-- heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names PyAutoArray or a library test, and this branch changes no API and no numerical result
-- prompt: active/interferometer_apply_operator_rfft2.md
-- issued: 2026-09-08
-- session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/interferometer-apply-operator-rfft2
-- repos:
-  - PyAutoArray: feature/interferometer-apply-operator-rfft2
-
 ## interferometer-preload-nufft-type1
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/539
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/541
@@ -96,8 +83,8 @@
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-preload-nufft-type1
 - repos:
   - PyAutoArray: feature/interferometer-preload-nufft-type1
-- stacked-on: interferometer-apply-operator-rfft2 (#538)
-- parallel-claim: PyAutoArray also claimed by interferometer-apply-operator-rfft2 (task 2 is stacked on task 1's branch; same file, disjoint functions; approved 2026-09-08)
+- stacked-on: interferometer-apply-operator-rfft2 (#538) — merged 2026-09-08, PyAutoArray#540; GitHub retargeted PR#541 to main, record at complete/2026/09/interferometer-apply-operator-rfft2.md
+- parallel-claim: released — task 1 shipped and its claim on PyAutoArray is gone; this task is now the sole claim
 
 ## aggregator-search-json-sentinel
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1582

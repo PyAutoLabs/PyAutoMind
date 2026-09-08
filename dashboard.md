@@ -42,10 +42,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
-| [Planned](#planned) (`planned.md`) | 5 |
+| [Planned](#planned) (`planned.md`) | 6 |
 | [Backlog](#backlog) (`draft/`) | 158 |
 
 > **No batch in flight.**
@@ -260,14 +260,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_apply_operator_rfft2.md"><code>InterferometerSparseOperator.apply_operator</code> pads real input to complex — use <code>rfft2</code>/<code>irfft2</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/538">issue #538</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/540">PyAutoArray#540</a> — ⏳ pending release: PyAutoArray</summary>
-
-```
-/start_dev active/interferometer_apply_operator_rfft2.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/interferometer_preload_nufft_type1.md">Build <code>nufft_precision_operator_from</code> as a type-1 NUFFT — 35 minutes to 7 seconds</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/539">issue #539</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/541">PyAutoArray#541</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
@@ -322,7 +314,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
-- [PyAutoArray#540](https://github.com/PyAutoLabs/PyAutoArray/pull/540) — `active/interferometer_apply_operator_rfft2.md`
 - [PyAutoArray#541](https://github.com/PyAutoLabs/PyAutoArray/pull/541) — `active/interferometer_preload_nufft_type1.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
@@ -331,6 +322,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#537](https://github.com/PyAutoLabs/PyAutoArray/pull/537) — `complete/2026/09/delaunay-nn-constant-split-assembly.md`
 - [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `complete/2026/09/delaunay-nn-launch-latency.md`
 - [PyAutoArray#531](https://github.com/PyAutoLabs/PyAutoArray/pull/531) — `complete/2026/09/delaunay-walk-early-exit.md`
+- [PyAutoArray#540](https://github.com/PyAutoLabs/PyAutoArray/pull/540) — `complete/2026/09/interferometer-apply-operator-rfft2.md`
 - [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `complete/2026/09/sibson-single-concatenated-walk.md`
 
 **PyAutoFit**
@@ -444,7 +436,7 @@ Started or scoped, not currently in flight — resume by moving the row back to 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>5</b> task(s)</summary>
+<summary><b>6</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -482,6 +474,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md
+```
+
+</details>
+
+<details><summary>📋 <b>aggregator-temp-unzip</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1584">issue #1584</a> — filed 2026-09-08</summary>
+
+```
+/start_dev draft/feature/autofit/aggregator_temporary_unzip.md
 ```
 
 </details>
@@ -1848,7 +1848,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-08 | issued | <a href="active/dataset_fits_written_twice_files_and_image.md">dataset.fits written twice per search (files/ and image/): write…</a> |
-| 2026-09-08 | issued | <a href="active/interferometer_apply_operator_rfft2.md"><code>InterferometerSparseOperator.apply_operator</code> pads real input to…</a> |
+| 2026-09-08 | filed | <a href="planned.md#aggregator-temp-unzip">aggregator-temp-unzip</a> |
 | 2026-09-08 | filed | <a href="draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer…</a> |
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
 | 2026-09-08 | issued | <a href="active/remove_the_two_fold_label_degeneracy_in.md">Remove the two-fold label degeneracy in the Euclid lens-light MGE…</a> |

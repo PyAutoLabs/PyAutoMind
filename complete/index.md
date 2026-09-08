@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1347 records across 8 buckets.
+1348 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -179,6 +179,7 @@ markers; everything below GENERATED is rebuilt.
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
 - [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
 - [image-source-mappings-p3](2026/09/image-source-mappings-p3.md)
+- [interferometer-apply-operator-rfft2](2026/09/interferometer-apply-operator-rfft2.md)
 - [interferometer-preload-cpu](2026/09/interferometer-preload-cpu.md)
 - [jax-delaunay-six-tuple-unpack](2026/09/jax-delaunay-six-tuple-unpack.md)
 - [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
