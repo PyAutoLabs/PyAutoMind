@@ -256,7 +256,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in the cavity…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/532">issue #532</a> — issued 2026-09-07 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/533">PyAutoArray#533</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/307">autolens_workspace_test#307</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in the cavity…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/532">issue #532</a> — issued 2026-09-07 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/533">PyAutoArray#533</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/307">autolens_workspace_test#307</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/227">autolens_profiling#227</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/delaunay_nn_launch_latency.md
