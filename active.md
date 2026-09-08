@@ -5,9 +5,11 @@
 - prompt: active/delaunay_nn_launch_latency.md
 - issued: 2026-09-07
 - session: claude --resume session_01B5HT8dp7sWc9qDhZp6moGr
-- status: library-shipped, workspace-pending
+- status: awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/533
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/307
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/227
+- heart-ack: 2026-09-07 in-session, YELLOW score 70 "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" plus stale "release validation incomplete: no rehearsal for current source" — organism-scope, same reason set acknowledged for #530; the failing autolens_test delaunay legs were already fixed on autolens_workspace_test main (078e445, 4103234)
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/533
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-launch-latency
 - repos:
