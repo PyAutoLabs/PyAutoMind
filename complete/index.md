@@ -182,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
 - [image-source-mappings-p3](2026/09/image-source-mappings-p3.md)
 - [interferometer-apply-operator-rfft2](2026/09/interferometer-apply-operator-rfft2.md)
+- [interferometer-numba-cpu-direct-conv](2026/09/interferometer-numba-cpu-direct-conv.md)
 - [interferometer-preload-cpu](2026/09/interferometer-preload-cpu.md)
 - [interferometer-preload-nufft-type1](2026/09/interferometer-preload-nufft-type1.md)
 - [interferometer-preload-prose](2026/09/interferometer-preload-prose.md)
