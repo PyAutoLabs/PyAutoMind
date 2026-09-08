@@ -17,7 +17,9 @@
 - prompt: active/retire_lp_sub_size_1_radial_bins.md
 - issued: 2026-09-08
 - session: claude --resume session_01QUtSqZHfdCceS4Sxproayn
-- status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/312
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/134
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/workspace-lp-sub-size-1-retire
 - repos:
   - autolens_workspace_test: feature/workspace-lp-sub-size-1-retire
@@ -29,7 +31,8 @@
 - prompt: active/breakdown_pixelization_stale_module_import.md
 - issued: 2026-09-08
 - session: claude --resume session_01QUtSqZHfdCceS4Sxproayn
-- status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/238
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/profiling-post-235-followups
 - repos:
   - autolens_profiling: feature/profiling-post-235-followups
