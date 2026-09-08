@@ -14,12 +14,13 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Witness: on the A100 DelaunayNN breakdown (`results/breakdown/imaging/delaunay_nn_hpc_a100_fp64_launch_latency.json` is the post-#533 baseline) the "Regularization matrix (H, ConstantSplit assembly)" row drops from 10.0 ms per call at vmap 16 to under 3 ms and the params→H prefix (`regularization_matrix_prefix_s`) from 16.4 ms per call to under 11 ms, with `EXPECTED_LOG_EVIDENCE_HST = 29144.581944` unchanged (or, if the assembly is reformulated so the fp summation order changes, matching to a stated relative tolerance with the change justified) and the `delaunay_nn.py` jax_assertions passing
 Review-minutes: 40
 Unattended: ready
 Filed: 2026-09-08
+Issued: 2026-09-08
 
 Original request (verbatim):
 
