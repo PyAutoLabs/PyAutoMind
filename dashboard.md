@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 4 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 159 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -56,20 +56,12 @@ anything you could not verify.
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 16
+**Highest priority** (filed as `high`) — showing 12 of 15
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
 ```
 /start_dev draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix GEMM 5x slower on the A100</a> — autonerves · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
 ```
 
 </details>
@@ -154,7 +146,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
+<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -220,14 +220,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix GEMM 5x slower on the A100</a> — autonerves · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a strict FD check…</a> — autolens_profiling · small · safe · low</summary>
 
 ```
@@ -248,6 +240,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/pyautobrain/batch_slice.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
 ```
 
 </details>
@@ -276,6 +276,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/retire_gpu1_mig_exclusion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default lowers the fp64 curvature GEMM to a slow Triton kernel…</a> — issued 2026-09-08</summary>
+
+```
+/start_dev active/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
 ```
 
 </details>
@@ -445,7 +453,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 35</summary>
@@ -733,15 +741,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 31</summary>
-
-<details><summary>📋 <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix GEMM 5x slower on the A100</a> — autonerves · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
-```
-
-</details>
+<summary><b>bug</b> — 30</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
@@ -1627,15 +1627,14 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>jax-gpu · performance</b> — 3 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: delaunay, hpc, jax-gpu, performance</summary>
+<summary><b>jax-gpu · delaunay · profiling · performance</b> — 2 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: delaunay, jax-gpu, performance</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'jax-gpu · performance' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'jax-gpu · delaunay · profiling · performance' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
 - draft/feature/autoarray/delaunay_nn_launch_latency.md
 - draft/feature/autoarray/sibson_single_concatenated_walk.md
 
@@ -1652,7 +1651,6 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix…</a> | autonerves | small | high | draft |
 | <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in…</a> | autoarray | medium | high | draft |
 | <a href="draft/feature/autoarray/sibson_single_concatenated_walk.md">Sibson natural-neighbour: one concatenated Delaunay locate instead of…</a> | autoarray | small | medium | superseded |
 
@@ -1794,6 +1792,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-08 | issued | <a href="active/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default lowers the fp64 curvature GEMM…</a> |
 | 2026-09-08 | issued | <a href="active/interferometer_preload_cpu.md">The interferometer preload on CPU: builder timings and the…</a> |
 | 2026-09-08 | issued | <a href="active/delaunay_nn_constant_split_assembly.md">DelaunayNN ConstantSplit regularization assembly: the 10 ms per call…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
@@ -1803,15 +1802,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
 | 2026-09-07 | filed | <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in…</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
-| 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md">Adapt-density mapper: a zero-signal adapt image is NaN on the JAX…</a> |
-| 2026-09-05 | filed | <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix…</a> |
 | 2026-09-05 | issued | <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
@@ -2253,7 +2251,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-22 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+21 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2274,7 +2272,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
 - `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md — unknown theme keyword(s): likelihood-profiling`
-- `draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md — unknown theme keyword(s): jax-gpu, performance, hpc`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
