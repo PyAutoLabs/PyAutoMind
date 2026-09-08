@@ -45,6 +45,18 @@ The first breakdown run doubles as the witness for #161: "Curvature matrix (F)" 
 6 ms, `curvature_matrix_jit_compile` under 0.2 s, and `device.xla_flags` containing
 `--xla_gpu_enable_triton_gemm=false`.
 
+Witness already run and PASSED on 2026-09-08 (RAL job 342339, euclid-ral-gpu-2,
+PyAutoNerves 0e7163b, autolens_profiling c7c07ae, fresh cache
+`scratch_xla_autotune/cache_witness_20260908_1509`): Curvature matrix (F) 4.764 ms,
+`curvature_matrix_jit_compile` 0.0566 s, `device.xla_flags` carries
+`--xla_gpu_enable_triton_gemm=false`, 0 per-fusion autotune entries. That run's JSON is
+the witness-quality `hpc_a100_fp64` Delaunay breakdown row; it lives in the RAL worktree
+`/mnt/ral/jnightin/autolens_profiling_wt/xla-triton-gemm-witness`
+(results/breakdown/imaging/delaunay_hpc_a100_fp64.json) and has not been committed.
+Remaining scope: pull that row in, rerun the DelaunayNN breakdown and the two runtime
+cells on a fresh cache, regenerate the dashboard, and update
+`results/notes/delaunay_nn_breakdown.md`.
+
 Reference rows: the `_autotune4` rows from PR #221 and the post-09-05 gpu-2 rows. Update
 `results/notes/delaunay_nn_breakdown.md` and the dashboard; do not touch the `_autotune4`
 rows.
