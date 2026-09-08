@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
+Issued: 2026-09-08
 Consequence: glance
 Witness: after the recommended change, two independent unseeded vis_lp runs on tile 102005065 give set-A and set-B ell_comps that agree run-to-run to within 0.05 per component (no A<->B swap), with log evidence within 1.0 of the current baseline (9492.7).
 Review-minutes: 3

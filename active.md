@@ -1,5 +1,16 @@
 # Active Tasks
 
+## mge-label-degeneracy
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/54
+- prompt: active/remove_the_two_fold_label_degeneracy_in.md
+- issued: 2026-09-08
+- session: claude --resume session_015RALRY9yekWDTtbVfok64a
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/mge-label-degeneracy
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/mge-label-degeneracy
+- parallel-claim: euclid_strong_lens_modeling_pipeline also claimed by profiling-production-representative (#235, workspace-dev); "file sets disjoint: this task adds only docs/mge_label_degeneracy.md (research note, no script edits); #235 reads scripts/initial_lens_model.py vis_pix stage for its audit; merge order does not matter; own worktree taken under the approved plan"
+
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222
