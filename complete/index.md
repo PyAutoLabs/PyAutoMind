@@ -212,6 +212,7 @@ markers; everything below GENERATED is rebuilt.
 - [numpy-deflections-p2](2026/09/numpy-deflections-p2.md)
 - [numpy-deflections-p3](2026/09/numpy-deflections-p3.md)
 - [offtick-timing-legs-live](2026/09/offtick-timing-legs-live.md)
+- [order-lens-mge-bases-and-seed](2026/09/order-lens-mge-bases-and-seed.md)
 - [organ-board-github-link](2026/09/organ-board-github-link.md) — Every organ board header now carries a `GitHub Page` link beside its existing
 - [over-sample-snr-double-division](2026/09/over-sample-snr-double-division.md)
 - [permanent-ci-timing-history](2026/09/permanent-ci-timing-history.md)

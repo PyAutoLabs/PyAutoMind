@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 159 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/mge_model_from_order_bases.md"><code>mge_model_from</code>: optional ordering of multiple bases and a configurable ell_comps limit</a> — autogalaxy · small · supervised · high</summary>
-
-```
-/start_dev draft/feature/autogalaxy/mge_model_from_order_bases.md
-```
-
-</details>
+**Highest priority** (filed as `high`) — showing 12 of 14
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 89
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 88
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -224,14 +224,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autogalaxy/mge_model_from_order_bases.md"><code>mge_model_from</code>: optional ordering of multiple bases and a configurable ell_comps limit</a> — autogalaxy · small · supervised · high</summary>
-
-```
-/start_dev draft/feature/autogalaxy/mge_model_from_order_bases.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile than a uniform…</a> — autoarray · medium · supervised · normal</summary>
 
 ```
@@ -248,17 +240,17 @@ anything you could not verify.
 
 </details>
 
-## In flight
-
-Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
-
-<details><summary>📋 <a href="active/order_lens_mge_bases_and_seed_vis_lp.md">Order the two lens-light MGE bases in vis_lp and expose a Nautilus…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/57">issue #57</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1586">PyAutoFit#1586</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611">PyAutoGalaxy#611</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/58">euclid_strong_lens_modeling_pipeline#58</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="draft/feature/autofit/aggregator_temporary_unzip.md">Aggregator: temporary-directory unzip mode so scraping <code>.zip</code> results does not permanently double…</a> — autofit · small · supervised · medium</summary>
 
 ```
-/start_dev active/order_lens_mge_bases_and_seed_vis_lp.md
+/start_dev draft/feature/autofit/aggregator_temporary_unzip.md
 ```
 
 </details>
+
+## In flight
+
+Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
 <details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
 
@@ -290,13 +282,13 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
-- [PyAutoFit#1586](https://github.com/PyAutoLabs/PyAutoFit/pull/1586) — `active/order_lens_mge_bases_and_seed_vis_lp.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1566](https://github.com/PyAutoLabs/PyAutoFit/pull/1566) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoFit#1574](https://github.com/PyAutoLabs/PyAutoFit/pull/1574) — `complete/2026/09/ep-full-revert-not-updated.md`
 - [PyAutoFit#1573](https://github.com/PyAutoLabs/PyAutoFit/pull/1573) — `complete/2026/09/ep-laplace-deterministic-hessian.md`
 - [PyAutoFit#1580](https://github.com/PyAutoLabs/PyAutoFit/pull/1580) — `complete/2026/09/ep-stale-mask-fixed-point.md`
 - [PyAutoFit#1576](https://github.com/PyAutoLabs/PyAutoFit/pull/1576) — `complete/2026/09/ep-stale-tracking-per-variable.md`
+- [PyAutoFit#1586](https://github.com/PyAutoLabs/PyAutoFit/pull/1586) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
 - [PyAutoFit#1568](https://github.com/PyAutoLabs/PyAutoFit/pull/1568) — `complete/2026/09/quick-update-tolerates-invalid-instance.md`
 - [PyAutoFit#1578](https://github.com/PyAutoLabs/PyAutoFit/pull/1578) — `complete/2026/09/samples-errors-at-sigma-instance.md`
 - [PyAutoFit#1583](https://github.com/PyAutoLabs/PyAutoFit/pull/1583) — `complete/2026/09/traced-assertions-on-jax-path.md`
@@ -304,8 +296,8 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `active/order_lens_mge_bases_and_seed_vis_lp.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
+- [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
 
 **PyAutoLens**
 
@@ -461,18 +453,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 35</summary>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/mge_model_from_order_bases.md"><code>mge_model_from</code>: optional ordering of multiple bases and a configurable ell_comps limit</a> — autogalaxy · small · supervised · high</summary>
-
-```
-/start_dev draft/feature/autogalaxy/mge_model_from_order_bases.md
-```
-
-</details>
+<summary><b>feature</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
 
@@ -1675,36 +1659,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>autogalaxy — bundle 1</b> — 2 task(s) · 5 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autogalaxy — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autogalaxy/mge_model_from_order_bases.md
-- draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/feature/autogalaxy/mge_model_from_order_bases.md"><code>mge_model_from</code>: optional ordering of multiple bases and a…</a> | small | high | formalised |
-| <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> | large | medium | formalised |
-
-</details>
-
-<details>
 <summary><b>mge</b> — 2 task(s) · 2 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1832,7 +1786,39 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 28 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>samplers · jax-gradient</b> — 3 task(s) · 7 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'samplers · jax-gradient' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/feature/autofit/prior_exit_sampler_coverage.md
+- draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
+- draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> | autofit | medium | medium | formalised |
+| <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and…</a> | autofit | small | normal | formalised |
+| <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts /…</a> | autolens_profiling | large | normal | formalised |
+
+</details>
+
+_Showing 8 of 27 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1842,21 +1828,19 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
 | 2026-09-08 | filed | <a href="planned.md#aggregator-temp-unzip">aggregator-temp-unzip</a> |
-| 2026-09-08 | filed | <a href="draft/feature/autogalaxy/mge_model_from_order_bases.md"><code>mge_model_from</code>: optional ordering of multiple bases and a…</a> |
 | 2026-09-08 | filed | <a href="draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer…</a> |
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
 | 2026-09-08 | filed | <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
 | 2026-09-08 | filed | <a href="draft/bug/autolens_profiling/breakdown_pixelization_stale_module_import.md">Post-#235 profiling follow-ups: stale pixelization import; Euclid…</a> |
-| 2026-09-08 | issued | <a href="active/order_lens_mge_bases_and_seed_vis_lp.md">Order the two lens-light MGE bases in vis_lp and expose a Nautilus…</a> |
 | 2026-09-08 | filed | <a href="draft/feature/autofit/aggregator_temporary_unzip.md">Aggregator: temporary-directory unzip mode so scraping <code>.zip</code> results…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
+| 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
+| 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
-| 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
@@ -1865,13 +1849,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-05 | issued | <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
+| 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
+| 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
-| 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
@@ -1880,13 +1864,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
+| 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
+| 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
-| 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-08-29 | filed | <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations…</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
@@ -1895,13 +1879,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
+| 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
+| 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
-| 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/ci/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
@@ -1910,6 +1894,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
+| 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
+| 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 
 </details>
 
