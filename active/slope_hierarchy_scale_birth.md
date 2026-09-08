@@ -16,6 +16,7 @@ Review-minutes: 10
 Unattended: fits
 Epic: graphical-ep
 Filed: 2026-09-08
+Issued: 2026-09-08
 
 ## Original request (verbatim)
 

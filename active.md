@@ -1,5 +1,14 @@
 # Active Tasks
 
+## slope-hierarchy-scale-birth
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/24
+- issued: 2026-09-08
+- session: claude --resume session_01JcyWRpcbRiAAYFqgFJarEr
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/slope-hierarchy-scale-birth
+- repos:
+  - PyAutoCortex: feature/slope-hierarchy-scale-birth
+
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222
