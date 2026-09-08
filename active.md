@@ -107,6 +107,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/aggregator-search-json-sentinel
 - parallel-claim: "PyAutoFit and autofit_workspace_test also claimed by traced-assertions-on-jax-path (#1581); file sets disjoint (aggregator/, paths/directory.py, profiling/aggregator vs mapper/prior, fitness.py); own worktree approved 2026-09-08"
+- heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; this diff touches aggregator discovery and two profiling mocks, none of the failing scripts
 - repos:
   - PyAutoFit: feature/aggregator-search-json-sentinel
   - autofit_workspace_test: feature/aggregator-search-json-sentinel
