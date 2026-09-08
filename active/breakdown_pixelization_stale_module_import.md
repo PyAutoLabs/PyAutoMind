@@ -12,6 +12,8 @@ Consequence: glance
 Witness: `python scripts/imaging/likelihood_breakdown/pixelization.py --instrument hst` runs to completion on main and its EXPECTED_LOG_EVIDENCE pin is re-measured (dated comment) after the lp [4,2,2] change from #235; and `_production_config.py`'s Euclid vis_pix preset carries lp radial bins [4,4,2] (matching euclid_strong_lens_modeling_pipeline `util.py` after PR #56) with the four Euclid numba cell rows re-run and re-pinned.
 Review-minutes: 2
 Unattended: ready
+Issued: 2026-09-08
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/237
 Filed: 2026-09-08
 
 Original request (verbatim, surfaced by the #235 implementation): "`likelihood_breakdown/pixelization.py` pin could not be re-measured. The cell raises at step 5 on `main` too — `from autoarray.inversion.mesh.mesh.rectangular_adapt_density import overlay_grid_from`, a module PyAutoArray split into `rectangular_bilinear_adapt_density` / `rectangular_rtu_adapt_density`. Pre-existing, unrelated to #235."

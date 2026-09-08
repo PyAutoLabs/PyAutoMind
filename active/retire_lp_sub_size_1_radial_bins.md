@@ -13,6 +13,8 @@ Consequence: glance
 Witness: no `sub_size_list` containing 1 and no `over_sample_size_lp=1` remains under autolens_workspace_test/scripts or autolens_workspace_developer; the regenerated autolens_workspace markdown/ pages no longer show `[4, 2, 1]`.
 Review-minutes: 2
 Unattended: ready
+Issued: 2026-09-08
+Issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/311
 Filed: 2026-09-08
 
 Original request (verbatim, from the profiling-production-representative session): "This should now be lp radial bins [4,2,2], as sub size of 1 causes gradient issues, so update this and make sure there is no where else through the porjects still using 1."
