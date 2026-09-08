@@ -40,6 +40,7 @@
 ## cortex-assistant-entry
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/362
 - issued: 2026-09-07
+- prompt: active/cortex_projects_route_through_assistant.md
 - session: claude --resume cb789199-9f67-400f-9f46-f68555932dc9
 - status: library-shipped, awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/367
