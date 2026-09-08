@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 155 |
+| [Backlog](#backlog) (`draft/`) | 156 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -472,7 +472,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**155** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **28** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -2043,7 +2043,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 5 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -2065,6 +2065,14 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/feature/autofit/ep_lbfgs_jax.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/graphical_ep/analytic_gaussian_unseeded_graphical_column.md"><code>analytic_gaussian.py</code>'s graphical column is an unseeded run, so its PARITY count…</a> — graphical_ep · small · safe · low</summary>
+
+```
+/start_dev draft/bug/graphical_ep/analytic_gaussian_unseeded_graphical_column.md
 ```
 
 </details>
