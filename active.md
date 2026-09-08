@@ -26,10 +26,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/229
 - issued: 2026-09-08
 - session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-preload-cpu
 - repos:
   - autolens_profiling: feature/interferometer-preload-cpu
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/234
+- heart-ack: 2026-09-08 in-session, YELLOW score 70, no red reasons, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" - organism-scope; neither names autolens_profiling and nothing in this branch is in the release chain
 - parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (awaiting-merge, hpc/MIG files only — disjoint file sets; own worktree approved 2026-09-08)
 
 ## delaunay-adapt-split-regularization

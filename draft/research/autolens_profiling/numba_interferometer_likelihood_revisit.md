@@ -47,6 +47,10 @@ Filed: 2026-09-07
   dense real-space kernel). The imaging numba win came from PSF-sized support; the
   interferometer kernel's only sparsity is the mapper's (P entries per image pixel), so the
   quadratic-in-N scaling is intrinsic to the scatter approach.
+- Phase 3 result (2026-09-08): the preload **is** exactly `Re` of a type-1 NUFFT of `1/σ²` —
+  pinned against the brute force at `8.7e-14` of the peak, bit-identical log evidence at alma —
+  and building it that way turns a 35-minute build into 7 seconds (`289×` wall, `111×` CPU-s);
+  the NUFFT preload is exact, not an approximation.
 - Design review (2026-09-07, synthetic single-thread bake-off, to be reproduced in phase 2):
   the winning numba form is a direct extent-grid convolution (0.11 s sma / 1.65 s alma vs
   0.36 / 7.6 s for the recovered scatter and 0.48 / 1.99 s for a NumPy `rfft2` path); FFT
@@ -60,7 +64,7 @@ Filed: 2026-09-07
 |---|-------|--------|--------------------|
 | 1 | Standalone pack + breakdown scripts mirroring the imaging numba ones | `complete/2026/09/numba-interferometer-pack.md` | **SHIPPED 2026-09-07** — autolens_profiling#223, PR #225 merged `99f4b533b52cda974f62c59e8b2995ccb941474b` |
 | 2 | Synthetic bake-off, kernel levers, in-situ numba vs JAX-CPU, verdict note | `complete/2026/09/numba-interferometer-kernel-levers.md` | **SHIPPED 2026-09-07** — autolens_profiling#226, PR #228 merged `2ad7b8faee0813b159f4a1ed504fc1b072692cd1` |
-| 3 | Preload as its own line item: builder timings + adjoint-NUFFT construction | `active/interferometer_preload_cpu.md` | **active 2026-09-08** — autolens_profiling#229 |
+| 3 | Preload as its own line item: builder timings + adjoint-NUFFT construction | `active/interferometer_preload_cpu.md` | **PR-OPEN 2026-09-08** — #229, PR #234 |
 
 Follow-ups filed from the phase-2 verdict (2026-09-07): draft/feature/autoarray/interferometer_apply_operator_rfft2.md, interferometer_numba_cpu_direct_conv.md, interferometer_sparse_operator_numpy_cpu_path.md.
 
