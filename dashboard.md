@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 5 |
+| [In flight](#in-flight) (`active/`) | 4 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 159 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 83
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -164,6 +164,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer workspaces</a> — workspaces · easy · safe · normal</summary>
+
+```
+/start_dev draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md
 ```
 
 </details>
@@ -240,25 +248,9 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_slice.md
-```
-
-</details>
-
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
-
-<details><summary>📋 <a href="active/delaunay_adapt_split_regularization.md">Re-base the Delaunay profiling cells on AdaptSplit regularization</a> — issued 2026-09-08</summary>
-
-```
-/start_dev active/delaunay_adapt_split_regularization.md
-```
-
-</details>
 
 <details><summary>📋 <a href="active/interferometer_preload_cpu.md">The interferometer preload on CPU: builder timings and the adjoint-NUFFT construction</a> — issued 2026-09-08</summary>
 
@@ -463,7 +455,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **32** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **32** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 33</summary>
@@ -1408,7 +1400,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 8</summary>
+<summary><b>refactor</b> — 9</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
 
@@ -1454,6 +1446,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/refactor/pyautofit/remove_eden_packaging_tooling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer workspaces</a> — workspaces · easy · safe · normal</summary>
+
+```
+/start_dev draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md
 ```
 
 </details>
@@ -1795,9 +1795,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-08 | issued | <a href="active/interferometer_preload_cpu.md">The interferometer preload on CPU: builder timings and the…</a> |
+| 2026-09-08 | filed | <a href="draft/refactor/workspaces/retire_lp_sub_size_1_radial_bins.md">Retire lp over-sampling sub-size 1 in the test and developer…</a> |
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
 | 2026-09-08 | issued | <a href="active/remove_the_two_fold_label_degeneracy_in.md">Remove the two-fold label degeneracy in the Euclid lens-light MGE…</a> |
-| 2026-09-08 | issued | <a href="active/delaunay_adapt_split_regularization.md">Re-base the Delaunay profiling cells on AdaptSplit regularization</a> |
 | 2026-09-08 | issued | <a href="active/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
