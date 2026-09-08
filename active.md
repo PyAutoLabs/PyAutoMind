@@ -26,7 +26,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/536
 - issued: 2026-09-08
 - session: claude --resume session_011xsh8KqgiHWTfPGgWEYMQw
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/537
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/309
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/231
+- heart-ack: 2026-09-08 in-session, YELLOW score 70, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" - organism-scope; the cloud smoke run predates this branch and the two delaunay legs it names (jax_grad/delaunay.py, jax_likelihood/delaunay.py, both reg.AdaptSplit through the changed function) were re-run on this branch and both pass
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-constant-split-assembly
 - repos:
   - PyAutoArray: feature/delaunay-nn-constant-split-assembly
