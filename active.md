@@ -24,9 +24,10 @@
 
 ## ep-stale-mask-fixed-point
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1579
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1580
 - issued: 2026-09-08
 - session: claude --resume session_019AymyDrfMhYj4vNgVMjNbq
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/ep-stale-mask-fixed-point
 - repos:
   - PyAutoFit: feature/ep-stale-mask-fixed-point
