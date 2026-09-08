@@ -2,10 +2,12 @@
 
 ## mge-label-degeneracy
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/54
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/55
+- heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; this branch adds one docs file and touches no script in the release chain
 - prompt: active/remove_the_two_fold_label_degeneracy_in.md
 - issued: 2026-09-08
 - session: claude --resume session_015RALRY9yekWDTtbVfok64a
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/mge-label-degeneracy
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/mge-label-degeneracy
