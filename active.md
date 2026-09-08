@@ -7,6 +7,7 @@
 - session: claude --resume session_01B5HT8dp7sWc9qDhZp6moGr
 - status: library-shipped, workspace-pending
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/533
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/307
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/533
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-launch-latency
 - repos:
