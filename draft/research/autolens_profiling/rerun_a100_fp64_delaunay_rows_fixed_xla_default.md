@@ -16,7 +16,7 @@ Consequence: judge
 Witness: a fresh-cache A100 Delaunay breakdown JSON with "Curvature matrix (F)" under 6 ms and `--xla_gpu_enable_triton_gemm=false` in `device.xla_flags`, plus regenerated dashboard rows for the four cells dated after the Nerves merge
 Review-minutes: 10
 Unattended: ready
-Parent: active/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
+Parent: complete/2026/09/xla-triton-gemm-off.md
 Filed: 2026-09-08
 
 Depends on: PyAutoNerves PR #162 (https://github.com/PyAutoLabs/PyAutoNerves/pull/162)

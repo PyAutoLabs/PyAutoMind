@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1341 records across 8 buckets.
+1342 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -228,6 +228,7 @@ markers; everything below GENERATED is rebuilt.
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07
 - [unit-test-import-time-hotspot-census](2026/09/unit-test-import-time-hotspot-census.md)
 - [user-workspace-howto-slow-script-pass](2026/09/user-workspace-howto-slow-script-pass.md)
+- [xla-triton-gemm-off](2026/09/xla-triton-gemm-off.md)
 
 ## 2026/08
 
