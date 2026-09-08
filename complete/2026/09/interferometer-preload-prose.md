@@ -1,3 +1,42 @@
+Reworded the interferometer preload prose across three pixelization example
+scripts and their generated notebooks in `autogalaxy_workspace`. The old text
+told users the transformer preload took "minutes to hours" and pushed them
+toward a disk cache to survive it; as of the next PyAutoArray release the
+preload is built as a **type-1 NUFFT in seconds**, so the prose now says that.
+
+What the new prose says:
+
+- the preload is a type-1 NUFFT, built in **seconds** as of the next
+  PyAutoArray release;
+- the **disk cache is optional** — keep it if you want, it is no longer the
+  thing standing between you and a fit;
+- **existing `.npy` cache files remain valid** — nothing needs regenerating;
+- a short **memory / chunking** note for large visibility counts.
+
+`use_jax=True` kwargs were left untouched. The diff is prose only — no
+executable line changed, which is what let it ship past an organism-scope Heart
+amber (see `heart-ack:` below).
+
+Files: `scripts/interferometer/features/pixelization.py`,
+`scripts/interferometer/modeling/features/pixelization.py`, the `pix_adapt`
+chaining pixelization prose, and the three matching notebooks.
+
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/238 (merged 6c9b19b1ea6d4c13a1c03a2e1fa7519f7c6ddb7c)
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/237 (closed)
+- upstream: PyAutoArray#541 (merged 9bd76799d4d836efd99a9885978a93a6674cc176)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/541
+- heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names autogalaxy_workspace, and this diff is prose only, changing no executable line
+
+**Release gate — PyAutoArray.** The library half of this change (PyAutoArray#541)
+is merged but **not yet released**. Until PyAutoArray publishes, the reworded
+prose describes behaviour a user on the current release does not have: on the
+released library the preload is still the slow path. The `pending-release:` key
+above is what keeps that obligation on the dashboard's **Pending release**
+section after this row is pruned; only `/review_release` clears it, on a release
+that actually published.
+
+## Original prompt
+
 # Interferometer preload prose says "minutes to hours" — it is now seconds
 
 Type: docs

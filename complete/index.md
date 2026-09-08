@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1349 records across 8 buckets.
+1350 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -182,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-apply-operator-rfft2](2026/09/interferometer-apply-operator-rfft2.md)
 - [interferometer-preload-cpu](2026/09/interferometer-preload-cpu.md)
 - [interferometer-preload-nufft-type1](2026/09/interferometer-preload-nufft-type1.md)
+- [interferometer-preload-prose](2026/09/interferometer-preload-prose.md)
 - [jax-delaunay-six-tuple-unpack](2026/09/jax-delaunay-six-tuple-unpack.md)
 - [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
 - [jax-grad-delaunay-constant-folding-guard](2026/09/jax-grad-delaunay-constant-folding-guard.md) — rtol 1e-10 guard retired
