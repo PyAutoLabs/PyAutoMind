@@ -24,11 +24,6 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
-## numba-interferometer-revisit
-- title: Numba CPU interferometer likelihood revisit — recover, break down, judge reinstatement
-- ledger: draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md
-- notes: 3 phased prompts (feature pack → research levers/verdict → research preload); issued one at a time, phase 1 first; PyAutoArray read-only throughout, library follow-ups filed via /intake from the verdict.
-
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
 - ledger: draft/feature/autolens/source_cluster_arc.md

@@ -12,7 +12,7 @@ Themes:
 Difficulty: too-large
 Autonomy: human-required
 Priority: high
-Status: epic ledger — phases route through /start_dev one at a time; this file is never issued itself
+Status: COMPLETE 2026-09-08 — all three phases shipped; library follow-ups filed under draft/feature/autoarray/interferometer_*. (Was: epic ledger — phases routed through /start_dev one at a time; never issued itself.)
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
@@ -64,9 +64,20 @@ Filed: 2026-09-07
 |---|-------|--------|--------------------|
 | 1 | Standalone pack + breakdown scripts mirroring the imaging numba ones | `complete/2026/09/numba-interferometer-pack.md` | **SHIPPED 2026-09-07** — autolens_profiling#223, PR #225 merged `99f4b533b52cda974f62c59e8b2995ccb941474b` |
 | 2 | Synthetic bake-off, kernel levers, in-situ numba vs JAX-CPU, verdict note | `complete/2026/09/numba-interferometer-kernel-levers.md` | **SHIPPED 2026-09-07** — autolens_profiling#226, PR #228 merged `2ad7b8faee0813b159f4a1ed504fc1b072692cd1` |
-| 3 | Preload as its own line item: builder timings + adjoint-NUFFT construction | `active/interferometer_preload_cpu.md` | **PR-OPEN 2026-09-08** — #229, PR #234 |
+| 3 | Preload as its own line item: builder timings + adjoint-NUFFT construction | `complete/2026/09/interferometer-preload-cpu.md` | **SHIPPED 2026-09-08** — autolens_profiling#229, PR #234 merged `7ce9c02ac0dbda08d11cc1c8ba8d738d8fb1f24c` |
 
 Follow-ups filed from the phase-2 verdict (2026-09-07): draft/feature/autoarray/interferometer_apply_operator_rfft2.md, interferometer_numba_cpu_direct_conv.md, interferometer_sparse_operator_numpy_cpu_path.md.
+Follow-up filed from the phase-3 verdict (2026-09-08): draft/feature/autoarray/interferometer_preload_nufft_type1.md.
+
+**Epic complete 2026-09-08** — all three phases shipped; nothing further routes through this ledger. The four library follow-ups above are the epic's outstanding output.
 
 PyAutoArray is read-only throughout; library changes the verdict justifies (reinstatement,
 the `rfft2` change, the NUFFT preload) are filed as follow-up prompts via `/intake`.
+
+## Retired from epics.md (2026-09-08)
+
+## numba-interferometer-revisit
+- title: Numba CPU interferometer likelihood revisit — recover, break down, judge reinstatement
+- ledger: draft/research/autolens_profiling/numba_interferometer_likelihood_revisit.md
+- notes: 3 phased prompts (feature pack → research levers/verdict → research preload); issued one at a time, phase 1 first; PyAutoArray read-only throughout, library follow-ups filed via /intake from the verdict.
+- status: COMPLETE 2026-09-08 — all three phases shipped: phase 1 autolens_profiling#223/PR #225 (`complete/2026/09/numba-interferometer-pack.md`), phase 2 #226/PR #228 (`complete/2026/09/numba-interferometer-kernel-levers.md`), phase 3 #229/PR #234 (`complete/2026/09/interferometer-preload-cpu.md`). PyAutoArray stayed read-only; the epic's outstanding output is four library follow-ups under `draft/feature/autoarray/interferometer_*`.
