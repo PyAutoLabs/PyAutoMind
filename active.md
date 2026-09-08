@@ -37,3 +37,24 @@
   - euclid_strong_lens_modeling_pipeline: feature/profiling-production-representative
 - parallel-claim: autolens_profiling also claimed by retire-gpu1-mig-exclusion (#220, awaiting-merge, hpc/MIG files only), interferometer-preload-cpu (#229, MERGED 2026-09-08 via PR #234; was misc/interferometer files only) and delaunay-adapt-split-regularization (#232, MERGED 2026-09-08); "first two disjoint; #232 shares scripts/imaging/likelihood_runtime/delaunay_numba.py and _profile_cli.py — #232 merged 2026-09-08 (PR #233), so the merge-order constraint is satisfied: rebase onto autolens_profiling main before editing those two files; own worktree approved by the human 2026-09-08"
 - merge-after: https://github.com/PyAutoLabs/autolens_profiling/issues/232 — satisfied: merged 2026-09-08 via PR #233
+
+## interferometer-apply-operator-rfft2
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/538
+- prompt: active/interferometer_apply_operator_rfft2.md
+- issued: 2026-09-08
+- session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-apply-operator-rfft2
+- repos:
+  - PyAutoArray: feature/interferometer-apply-operator-rfft2
+
+## interferometer-preload-nufft-type1
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/539
+- prompt: active/interferometer_preload_nufft_type1.md
+- issued: 2026-09-08
+- session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-preload-nufft-type1
+- repos:
+- stacked-on: interferometer-apply-operator-rfft2 (#538)
+- parallel-claim: PyAutoArray also claimed by interferometer-apply-operator-rfft2 (task 2 is stacked on task 1's branch; same file, disjoint functions; approved 2026-09-08)

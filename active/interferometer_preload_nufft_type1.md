@@ -13,6 +13,8 @@ Autonomy: supervised
 Priority: high
 Epic: numba-interferometer-revisit
 Filed: 2026-09-08
+Issued: 2026-09-08
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/539
 
 Follow-up derived from `autolens_profiling#229` (phase 3 of `numba-interferometer-revisit`)
 — not a user request. Every number below is measured, and the working is in
