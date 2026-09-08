@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -56,7 +56,7 @@ anything you could not verify.
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 17
+**Highest priority** (filed as `high`) — showing 12 of 16
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
@@ -78,14 +78,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/delaunay_nn_constant_split_assembly.md">DelaunayNN ConstantSplit regularization assembly: the 10 ms per call that Phase…</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autoarray/delaunay_nn_constant_split_assembly.md
 ```
 
 </details>
@@ -154,7 +146,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
+<details><summary>📋 <a href="draft/bug/health_fixes/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/jax_runtime_and_parity.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -255,6 +255,14 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/delaunay_nn_constant_split_assembly.md">DelaunayNN ConstantSplit regularization assembly: the 10 ms per call that Phase…</a> — issued 2026-09-08</summary>
+
+```
+/start_dev active/delaunay_nn_constant_split_assembly.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/interferometer_preload_cpu.md">The interferometer preload on CPU: builder timings and the adjoint-NUFFT construction</a> — issued 2026-09-08</summary>
 
@@ -437,18 +445,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 36</summary>
-
-<details><summary>📋 <a href="draft/feature/autoarray/delaunay_nn_constant_split_assembly.md">DelaunayNN ConstantSplit regularization assembly: the 10 ms per call that Phase…</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autoarray/delaunay_nn_constant_split_assembly.md
-```
-
-</details>
+<summary><b>feature</b> — 35</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in the cavity…</a> — autoarray · medium · supervised · high</summary>
 
@@ -1563,40 +1563,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>jax-gpu · performance</b> — 4 task(s) · 6 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: delaunay, hpc, jax-gpu, performance</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'jax-gpu · performance' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
-- draft/feature/autoarray/delaunay_nn_constant_split_assembly.md
-- draft/feature/autoarray/delaunay_nn_launch_latency.md
-- draft/feature/autoarray/sibson_single_concatenated_walk.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix…</a> | autonerves | small | high | draft |
-| <a href="draft/feature/autoarray/delaunay_nn_constant_split_assembly.md">DelaunayNN ConstantSplit regularization assembly: the 10 ms per call…</a> | autoarray | medium | high | draft |
-| <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in…</a> | autoarray | medium | high | draft |
-| <a href="draft/feature/autoarray/sibson_single_concatenated_walk.md">Sibson natural-neighbour: one concatenated Delaunay locate instead of…</a> | autoarray | small | medium | superseded |
-
-</details>
-
-<details>
 <summary><b>mind-workflow</b> — 3 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1657,6 +1623,38 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> | autolens | large | high | in progress — core landed 2026-07-25… |
 | <a href="draft/docs/howtolens/ch4_mask_overlay_never_drawn.md">HowToLens ch4 tutorial 3: mask overlay is never actually drawn</a> | howtolens | small | low | formalised |
 | <a href="draft/maintenance/workspaces/notebook_setup_notebook_drift_siblings.md">Regenerate setup_notebook-drifted notebooks in…</a> | workspaces | small | low | - |
+
+</details>
+
+<details>
+<summary><b>jax-gpu · performance</b> — 3 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: delaunay, hpc, jax-gpu, performance</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'jax-gpu · performance' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md
+- draft/feature/autoarray/delaunay_nn_launch_latency.md
+- draft/feature/autoarray/sibson_single_concatenated_walk.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/bug/autonerves/xla_gpu_autotune_level_0_default_slows_fp64_gemm.md"><code>--xla_gpu_autotune_level=0</code> default makes the fp64 curvature-matrix…</a> | autonerves | small | high | draft |
+| <a href="draft/feature/autoarray/delaunay_nn_launch_latency.md">DelaunayNN (Sibson) on the A100: kill the kernel-launch latency in…</a> | autoarray | medium | high | draft |
+| <a href="draft/feature/autoarray/sibson_single_concatenated_walk.md">Sibson natural-neighbour: one concatenated Delaunay locate instead of…</a> | autoarray | small | medium | superseded |
 
 </details>
 
@@ -1797,7 +1795,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-08 | issued | <a href="active/interferometer_preload_cpu.md">The interferometer preload on CPU: builder timings and the…</a> |
-| 2026-09-08 | filed | <a href="draft/feature/autoarray/delaunay_nn_constant_split_assembly.md">DelaunayNN ConstantSplit regularization assembly: the 10 ms per call…</a> |
+| 2026-09-08 | issued | <a href="active/delaunay_nn_constant_split_assembly.md">DelaunayNN ConstantSplit regularization assembly: the 10 ms per call…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/feature/autoarray/sibson_single_concatenated_walk.md">Sibson natural-neighbour: one concatenated Delaunay locate instead of…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
@@ -2255,13 +2253,12 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-23 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+22 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
-- `draft/feature/autoarray/delaunay_nn_constant_split_assembly.md — unknown theme keyword(s): jax-gpu, delaunay, performance`
 - `draft/feature/autoarray/delaunay_nn_launch_latency.md — unknown theme keyword(s): jax-gpu, delaunay, performance`
 - `draft/feature/autoarray/interferometer_apply_operator_rfft2.md — unknown theme keyword(s): jax-performance, likelihood-profiling`
 - `draft/feature/autoarray/interferometer_numba_cpu_direct_conv.md — unknown theme keyword(s): likelihood-profiling`
