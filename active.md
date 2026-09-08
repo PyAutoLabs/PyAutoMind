@@ -97,9 +97,12 @@
 - prompt: active/interferometer_preload_prose_nufft.md
 - issued: 2026-09-08
 - session: claude --resume session_018hLF3ZAcz5MmaSJBEcLkvF
-- status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/238
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-preload-prose
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/541
+- release-gate: PyAutoArray
+- heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names autogalaxy_workspace, and this diff is prose only, changing no executable line
 - parallel-claim: "autogalaxy_workspace also claimed by dataset-fits-image-only (PyAutoGalaxy#608); file sets disjoint (scripts/interferometer/features/pixelization prose vs the dataset FITS/plotter work); own worktree approved by the human 2026-09-08"
 - repos:
   - autogalaxy_workspace: feature/interferometer-preload-prose
