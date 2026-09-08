@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 161 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -56,7 +56,7 @@ anything you could not verify.
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
+**Highest priority** (filed as `high`) — showing 12 of 16
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
@@ -78,6 +78,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autoarray/delaunay_nn_launch_latency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_staleness_mask_flags_valid_fixed_points.md">EP staleness mask flags valid fixed points as stale</a> — autofit · medium · safe · high</summary>
+
+```
+/start_dev draft/bug/autofit/ep_staleness_mask_flags_valid_fixed_points.md
 ```
 
 </details>
@@ -146,15 +154,7 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/health_fixes/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — health_fixes · too-large · supervised · high</summary>
-
-```
-/start_dev draft/bug/health_fixes/jit_visualization_outputs.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -168,6 +168,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_staleness_mask_flags_valid_fixed_points.md">EP staleness mask flags valid fixed points as stale</a> — autofit · medium · safe · high</summary>
+
+```
+/start_dev draft/bug/autofit/ep_staleness_mask_flags_valid_fixed_points.md
 ```
 
 </details>
@@ -240,14 +248,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/pyautomind/witness_campaign.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-/start_dev draft/feature/pyautobrain/batch_slice.md
 ```
 
 </details>
@@ -449,7 +449,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 35</summary>
@@ -737,12 +737,20 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 30</summary>
+<summary><b>bug</b> — 31</summary>
 
 <details><summary>📋 <a href="draft/bug/ci/release_smoke_ignores_env_declarations.md">release.yml's smoke loop ignores <code>__Env__</code> declarations — witt_wynne.py fails every LIVE run</a> — ci · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/ci/release_smoke_ignores_env_declarations.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_staleness_mask_flags_valid_fixed_points.md">EP staleness mask flags valid fixed points as stale</a> — autofit · medium · safe · high</summary>
+
+```
+/start_dev draft/bug/autofit/ep_staleness_mask_flags_valid_fixed_points.md
 ```
 
 </details>
@@ -1533,6 +1541,38 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
+<summary><b>autofit — bundle 1</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autofit/ep_staleness_mask_flags_valid_fixed_points.md
+- draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
+- draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autofit/ep_staleness_mask_flags_valid_fixed_points.md">EP staleness mask flags valid fixed points as stale</a> | medium | high | formalised |
+| <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
+| <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and…</a> | large | normal | formalised |
+
+</details>
+
+<details>
 <summary><b>ci-smoke</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1755,38 +1795,6 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | autolens | medium | medium | draft |
 | <a href="draft/feature/autoarray/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> | autoarray | large | normal | formalised |
 | <a href="draft/docs/workspaces/plot_coverage_followups.md">plot coverage — follow-ups deferred from plot-coverage-gaps</a> | workspaces | - | - | - |
-
-</details>
-
-<details>
-<summary><b>samplers · jax-gradient</b> — 3 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'samplers · jax-gradient' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autofit/prior_exit_sampler_coverage.md
-- draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
-- draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> | autofit | medium | medium | formalised |
-| <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and…</a> | autofit | small | normal | formalised |
-| <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts /…</a> | autolens_profiling | large | normal | formalised |
 
 </details>
 
