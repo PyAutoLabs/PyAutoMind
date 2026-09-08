@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to misc</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/235">issue #235</a> — issued 2026-09-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_run_times_representative_of_production.md">Profiling run times representative of production; NNLS warm-start to misc</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/235">issue #235</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/236">autolens_profiling#236</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/56">euclid_strong_lens_modeling_pipeline#56</a></summary>
 
 ```
 /start_dev active/profiling_run_times_representative_of_production.md
