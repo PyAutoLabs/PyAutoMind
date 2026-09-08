@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_sparse_operator_calls_need_xp_jnp.md">Interferometer profiling cells break under <code>jit</code> after PyAutoArray#544 — pass <code>xp=jnp</code></a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/239">issue #239</a> — issued 2026-09-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/interferometer_sparse_operator_calls_need_xp_jnp.md">Interferometer profiling cells break under <code>jit</code> after PyAutoArray#544 — pass <code>xp=jnp</code></a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/239">issue #239</a> — issued 2026-09-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/240">autolens_profiling#240</a></summary>
 
 ```
 /start_dev active/interferometer_sparse_operator_calls_need_xp_jnp.md
