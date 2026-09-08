@@ -24,7 +24,13 @@ Workspace half of `interferometer-numba-cpu-direct-conv` (PyAutoArray#543, libra
 `xp is np`, the preconditions hold, and the mapper's mean non-zeros per source column is
 at or below `Settings.interferometer_numba_nnz_per_source_max` (default `60.0`).
 
-## Step 0 — required fix before any measurement
+## Step 0 — required fix before any measurement — **LANDED 2026-09-08**
+
+> Done: autolens_profiling#239 / PR #240, merged `e5db6c8c`. All four `jit`-reached
+> sites below now pass `xp=jnp`; a repo-wide sweep confirmed they were the only
+> `sparse_operator.*` calls in `scripts/`. The pack's JAX arm matches
+> `curvature_fft_numpy` at 7.11e-15. The rest of this prompt is now unblocked; the
+> detail below is kept as the record of what was wrong.
 
 `autolens_profiling/scripts/interferometer/likelihood_breakdown/datacube/delaunay.py:1011`
 calls
@@ -46,7 +52,7 @@ a `jit`:
 - the rest of `likelihood_breakdown/datacube/*.py` and every script under
   `likelihood_runtime/` (`delaunay.py`, `mge.py`, `pixelization.py`, `datacube/`)
 
-Nothing downstream of this prompt runs until step 0 is green.
+Step 0 is green as of 2026-09-08; the measurement work below can start.
 
 ## What
 
