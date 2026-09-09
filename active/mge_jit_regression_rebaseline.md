@@ -14,6 +14,7 @@ Consequence: judge
 Review-minutes: 25
 Unattended: ready
 Filed: 2026-05-08 (backfilled from git)
+Issued: 2026-09-09
 
 `@autolens_workspace_developer/jax_profiling/jit/imaging/mge.py` hardcodes a
 regression assertion at the bottom:
