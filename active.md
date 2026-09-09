@@ -71,7 +71,8 @@
 - prompt: active/mge_jit_regression_rebaseline.md
 - issued: 2026-09-09
 - session: claude --resume session_01JFqrvTzZMs4sEJauxfcpRz
-- status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/138
+- status: awaiting-merge
 - worktree: /home/user/autolens_workspace_developer (remote web session; flat clone, no worktree root)
 - bundle: mge (2 members; sibling markdown_regeneration_sigma_min dropped before issue — needs real fits and a warm output/, left in draft/)
 - repos:
