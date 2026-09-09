@@ -1,5 +1,23 @@
 # Active Tasks
 
+## cortex-scorer-where-paths
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/370
+- issued: 2026-09-09
+- session: claude --resume session_01FKSwTBuNwcJc2FPNpSCrkp
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-scorer-where-paths
+- repos:
+  - PyAutoBrain: feature/cortex-scorer-where-paths
+- summary: |
+    Cortex check-in scorer: `where_paths` keeps only absolute `## Where to look`
+    bullets and reads only each bullet's first token, so every real (relative,
+    label-prefixed) bullet is dropped and `run_artifacts` falls back to the
+    newest run under `output/` — scoring a task against an unrelated run and
+    reporting a confident FAIL. Fix resolves relative bullets against the
+    project roots, scans the whole bullet for path-like tokens, and refuses to
+    fall back when a task declares roots that yield no run (UNOBSERVABLE, not
+    FAIL); any fallback that does happen is marked as one in the readout.
+
 ## natural-language-first-docs
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1587
 - issued: 2026-09-09

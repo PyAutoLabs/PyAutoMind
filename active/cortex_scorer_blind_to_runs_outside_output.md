@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: safe
 Priority: high
 Status: formalised
+Issued: 2026-09-09
 Consequence: notify
 Witness: a task whose "## Where to look" bullets name a relative path outside output/ is scored against that path, and a task with no discoverable run scores UNOBSERVABLE rather than FAIL; both covered by regression tests.
 Review-minutes: 0
