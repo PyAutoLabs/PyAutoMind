@@ -1,6 +1,8 @@
 # Scientific workflow through natural language
 
 Type: docs
+Issued: 2026-09-09
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1595
 Repos: @PyAutoFit @autofit_workspace @HowToFit
 
 ## Approved plan

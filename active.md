@@ -1,5 +1,16 @@
 # Active Tasks
 
+## scientific-workflow-language
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1595
+- issued: 2026-09-09
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientific-workflow-language
+- repos:
+  - PyAutoFit: feature/scientific-workflow-language
+  - autofit_workspace: feature/scientific-workflow-language
+  - HowToFit: feature/scientific-workflow-language
+- plan: Approved by user. Tutorial/docs changes only; no library API changes. Brain's keyword-derived API phases do not apply to this scope.
+
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222
