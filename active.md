@@ -19,4 +19,5 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/euclid-catalogue-rebuild-prep
 - repos:
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
 - delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
