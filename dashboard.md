@@ -46,13 +46,21 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 151 |
+| [Backlog](#backlog) (`draft/`) | 152 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`)
+**Highest priority** (filed as `high`) — showing 12 of 13
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace_developer/jax_import_order_defeats_x64.md">jax_profiling scripts import jax before autolens, silently running in float32</a> — autolens_workspace_developer · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens_workspace_developer/jax_import_order_defeats_x64.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
 
@@ -142,15 +150,7 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
-
-```
-/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 81
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -164,6 +164,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace_developer/jax_import_order_defeats_x64.md">jax_profiling scripts import jax before autolens, silently running in float32</a> — autolens_workspace_developer · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens_workspace_developer/jax_import_order_defeats_x64.md
 ```
 
 </details>
@@ -236,14 +244,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/feature/autolens_profiling/gradient_cost_probe.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/witness_campaign.md
 ```
 
 </details>
@@ -498,7 +498,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**151** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**152** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -778,7 +778,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 30</summary>
+<summary><b>bug</b> — 31</summary>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace_developer/jax_import_order_defeats_x64.md">jax_profiling scripts import jax before autolens, silently running in float32</a> — autolens_workspace_developer · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens_workspace_developer/jax_import_order_defeats_x64.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — autofit · large · supervised · high</summary>
 
