@@ -1,3 +1,22 @@
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/237
+- completed: 2026-09-08
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/238
+- merged: autolens_profiling 242fe12 (PR #238)
+- heart-ack: 2026-09-08 in-session, same reason set as #235 — "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)" and "release validation incomplete: no rehearsal for current source"; neither reason touches autolens_profiling
+
+**Summary.** Both post-#235 profiling follow-ups shipped in one PR. The JAX rectangular breakdown cell's `overlay_grid_from` import was repointed to `rectangular_rtu_adapt_density` — the helper lives in the **RTU** module, which the bilinear mesh subclasses, not in the bilinear module the prompt guessed at — so `likelihood_breakdown/pixelization.py` runs to completion for `--instrument hst` and its `EXPECTED_LOG_EVIDENCE` pin is re-measured with a dated comment. Both Euclid presets in `_production_config.py` now carry lp radial bins `[4, 4, 2]`, matching `euclid_strong_lens_modeling_pipeline` `util.py` after pipeline#56, closing the stale "matches production" claim #235 left behind; the four Euclid numba cell rows (Delaunay + rectangular, breakdown + runtime) were re-run and re-pinned, and `results/notes/production_representative_cells.md` plus the README dashboards were regenerated.
+
+**Witness.** Met: the pixelization cell runs and is re-pinned; the Euclid preset reads `[4, 4, 2]`. Smoke 12 of 12; `build_readme.py --check` clean; lint green.
+
+**Traps / notes.**
+- The PyAutoArray split put `overlay_grid_from` in the RTU module and left the bilinear mesh subclassing it. Picking the "default rectangular mesh" module, as the prompt suggested, would have failed the same way — read the split before repointing an import.
+- The HST preset stays at `[4, 2, 2]`: `subhalo_validation` has not adopted `[4, 4, 2]`, so raising it here would have broken the provenance claim in the other direction.
+- autolens_profiling README tables are generated — `build_readme.py --check` runs in lint, so re-pinned rows need the regenerated dashboards in the same PR.
+
+**Follow-ups.** None filed. `subhalo_validation` needs the same middle-bin decision the Euclid pipeline took, but only if it computes flux latents; recorded on the `workspace-lp-sub-size-1-retire` record.
+
+## Original prompt
+
 # Post-#235 profiling follow-ups: stale pixelization import; Euclid preset lp bins [4,4,2]
 
 Type: bug

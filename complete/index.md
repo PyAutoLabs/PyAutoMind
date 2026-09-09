@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1359 records across 8 buckets.
+1361 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -225,6 +225,7 @@ markers; everything below GENERATED is rebuilt.
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
 - [prm-shadow-row-notify-tier](2026/09/prm-shadow-row-notify-tier.md)
 - [profiles-jit-powerlaw-exact-zero-atol](2026/09/profiles-jit-powerlaw-exact-zero-atol.md)
+- [profiling-post-235-followups](2026/09/profiling-post-235-followups.md)
 - [profiling-production-representative](2026/09/profiling-production-representative.md)
 - [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)
 - [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)
@@ -245,6 +246,7 @@ markers; everything below GENERATED is rebuilt.
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07
 - [unit-test-import-time-hotspot-census](2026/09/unit-test-import-time-hotspot-census.md)
 - [user-workspace-howto-slow-script-pass](2026/09/user-workspace-howto-slow-script-pass.md)
+- [workspace-lp-sub-size-1-retire](2026/09/workspace-lp-sub-size-1-retire.md)
 - [xla-triton-gemm-off](2026/09/xla-triton-gemm-off.md)
 
 ## 2026/08
