@@ -7,6 +7,7 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
+Issued: 2026-09-09
 Status: formalised
 Consequence: judge
 Witness: A vis_lp run under the new config leaves no unzipped sibling directory beside its zip and writes no samples.csv, cutting its zip payload below 40% of the 2026-09-07 baseline of 130 MB across 17 zips; the new row-level comparator reports zero mismatches against the original euclid reference for the ten dr1_prelim tiles outside the declared tolerances (identity and astrometry exact, Einstein radius and per-band magnitudes within combined 3 sigma, MGE ell_comps matched up to a set swap); and scripts/build_inspection_bundle.sh runs to completion against a vis_lp-only tree instead of aborting on an empty aggregator.

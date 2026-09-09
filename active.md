@@ -11,3 +11,12 @@
 - repos:
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
+
+## euclid-catalogue-rebuild-prep
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
+- issued: 2026-09-09
+- session: claude --resume session_01JsGeXEmGmSJzvxzC7GUpZo
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/euclid-catalogue-rebuild-prep
+- repos:
+- delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
