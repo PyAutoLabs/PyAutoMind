@@ -35,27 +35,6 @@
   - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
 - delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
 
-## mge-jit-regression-rebaseline
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/137
-- prompt: active/mge_jit_regression_rebaseline.md
-- issued: 2026-09-09
-- session: claude --resume session_01JFqrvTzZMs4sEJauxfcpRz
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/138
-- status: awaiting-merge
-- worktree: /home/user/autolens_workspace_developer (remote web session; flat clone, no worktree root)
-- bundle: mge (2 members; sibling markdown_regeneration_sigma_min dropped before issue — needs real fits and a warm output/, left in draft/)
-- repos:
-  - autolens_workspace_developer: feature/mge-jit-regression-rebaseline
-- plan: |
-    Re-measure, do not copy. The prompt's premise is obsolete: its 27542.08
-    "drift" was refuted on 2026-05-16 by jit-regression-constant-drift
-    (_developer#67) as an artefact of locally-modified HST FITS; clean main
-    passed at 27379.388907. The live reason to re-measure is commit 9e0e351
-    (2026-09-08) changing the lp over-sampling bins [4,2,1] -> [4,2,2] and
-    leaving the constant un-re-measured by its own admission. Either outcome
-    ships: re-pin if outside rtol=1e-4, or record "re-measured and confirmed"
-    if within it. Both delete the misleading comment.
-
 ## howtolens-ch3-mask-overlay
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/78
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/79
