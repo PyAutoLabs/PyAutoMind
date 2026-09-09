@@ -1,3 +1,99 @@
+## smoke-relevance-gate
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/219 (closed 2026-09-09)
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/220 (merged 1593a765 -> main; branch head df908f9d)
+- completed: 2026-09-09
+- bundle: ci-smoke (member 3 of 4)
+
+### What shipped — tier 1 only
+
+`PyAutoHeart/.github/workflows/smoke-tests.yml`, the reusable workflow every
+workspace's `smoke_tests.yml` is a thin caller of, had exactly one reason to skip
+its matrix: a docs-only gate. It now publishes a second,
+`no_smoke_relevant_changes`: a diff touching none of `scripts/`, `config/`,
+`smoke_tests.txt`, `smoke_notebooks.txt` or `.github/` cannot change what any
+smoke script does, so the matrix skips the same way.
+
+Both flags are classified from the **same** `$files` list — `git diff
+--name-only` still appears exactly once, so the two verdicts cannot disagree
+about what changed, and a test pins that. The two-dot diff against the base
+*tip* is preserved; `merge-base` appears nowhere, so upstream drift still shows
+up as extra files and conservatively runs everything.
+
+### The `pull_request` gate is load-bearing for a narrower reason than the prompt gave
+
+This is the thing to carry forward. The prompt said a skipped or cancelled `main`
+run "breaks the readiness gate". Reading Heart's own code, the two halves differ:
+
+- **`skipped` does NOT RED.** It is not in `ci_status.FAILURE_CONCLUSIONS`.
+- **But it can never go GREEN either.** `ci_status.rollup`'s docstring: all
+  required workflows must be "present, completed, success **and on HEAD**" to
+  return `success`; "otherwise (in-progress, queued, missing, or success on a
+  stale sha) -> conclusion `""` with status `in_progress` (an *unknown*, never a
+  green)". So a skipped `main` run leaves readiness permanently unable to reach
+  GREEN — a quieter failure than a RED and harder to notice.
+- **`cancelled` is the one that REDs**, which is why the callers' concurrency
+  block only cancels non-`main` refs.
+
+The gate therefore lives **inside the classify step**, not on the `smoke` job's
+`if:`, so the published output *means* "a skip is warranted" rather than being
+true-but-inapplicable on a push. Push-to-`main` behaviour is byte-for-byte
+unchanged, and the docs-only gate was deliberately **not** narrowed to
+`pull_request` alongside it.
+
+### Fail-closed was executed, not reasoned about
+
+The step's real `run:` body was run with only `git` stubbed — its `fetch` exit
+status and `--name-only` output being the two facts the guard reads. Both flags
+come back `false`, with an empty step summary, for: an empty `$BASE`; the
+all-zero SHA; a failing `git fetch`; an empty diff. A single relevant path in an
+otherwise irrelevant diff also yields `false`, tested at **every insertion
+position**, since the loop breaks on first match. Both flags are initialised
+`false` *before* the `$BASE` guard, so every early exit out of it runs
+everything.
+
+Not implemented with `on.pull_request.paths` — a path-filtered job reports no
+conclusion at all and a required check sits pending forever, where a skipped job
+reports `skipped`, which satisfies required-check semantics. The job header
+comment now says so explicitly.
+
+### Tests
+
+965 passed / 0 failed / 0 skipped, run independently by the implementing agent
+and again by the architect session. The new coverage **executes the predicate**
+rather than pattern-matching the YAML: a `_classify()` helper runs the step's own
+`run:` body under `bash -e` (GitHub's shell) against a synthetic diff, following
+the repo's existing `subprocess.run(["bash", ...])` convention from
+`test_verify_install_script.py`. 11 test functions / 25 node ids in
+`tests/test_smoke_tests_wiring.py`; the docs-only assertion in
+`tests/test_workflow_wiring.py` generalised to both gates.
+
+### Callers
+
+`autolens_workspace` and `autolens_workspace_test` ship **byte-identical**
+`smoke_tests.yml` callers (same blob SHA `65789266`), declaring only `chain:` and
+`secrets: inherit`. Neither passes an input this change invalidates, neither
+reads any output of the reusable workflow, and neither runs a job downstream of
+the matrix — so a skipped matrix has no dependant. A called workflow inherits the
+caller's `github` context, which this very step already proves:
+`github.event.pull_request.base.sha` resolves off the caller's event today.
+
+### Tier 2 remains open and unstarted
+
+Narrowing the entry list to the packages the diff touches needs the selected set
+passed down to each workspace's vendored `run_smoke.py`, so it is a multi-repo
+change and belongs to its own prompt. The sibling prompt
+`draft/test/workspaces/slowest_smoke_gate_scripts.md` (making the slow entries
+cheaper) is a separate lever, unaffected by this, and still stands.
+
+### Trap
+
+Heart was **UNAVAILABLE, not RED**, throughout: `pyauto-brain vitals` reports
+`CI unavailable (query failed)` for all 17 repos because the remote session's
+egress proxy serves no REST repo paths. The documented fallback applies — the
+worktree suite is the gate. Do not read that as a Heart verdict.
+
+## Original prompt
+
 # Relevance-gate the reusable smoke workflow so a PR only runs what its diff can affect
 
 Type: test
