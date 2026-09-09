@@ -40,7 +40,10 @@
 - prompt: active/arcsecond_to_decimal.md
 - issued: 2026-09-09
 - session: claude --resume session_019mofs7R3chP12wzoCPjnaw
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/547
+- downstream-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612 (library-first: merge PyAutoArray#547 before this)
+- gate: pyauto-heart unreachable from this remote session; documented fallback used — PyAutoArray test_autoarray/plot 35 passed (33 in test_utils = 30 baseline + 3 new), wider test_autoarray 1408 passed / 8 failed all pre-existing (no numba in container, reproduced at pristine 35aa681f); PyAutoGalaxy related plot tests 22 passed
 - worktree: n/a — remote web session; shallow clones at /home/user/pyautoarray and /home/user/pyautogalaxy (no ~/Code/PyAutoLabs-wt layout in this container)
 - repos:
   - PyAutoArray: feature/arcsec-after-decimal

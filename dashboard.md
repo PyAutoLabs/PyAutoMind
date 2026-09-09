@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/546">issue #546</a> — issued 2026-09-09 — library-dev</summary>
+<details><summary>📋 <a href="active/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/546">issue #546</a> — issued 2026-09-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/547">PyAutoArray#547</a></summary>
 
 ```
 /start_dev active/arcsecond_to_decimal.md
