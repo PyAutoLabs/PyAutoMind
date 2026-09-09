@@ -9,6 +9,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-09-09
 Consequence: notify
 Witness: a science run written to a custom PYAUTO_OUTPUT_DIR is pulled to the laptop by the project's own sync CLI without that path being hand-added to a per-project array.
 Review-minutes: 0

@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [cortex-pull-declared-output-roots](#cortex-pull-declared-output-roots)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
@@ -9,6 +10,27 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 
 <!-- toc:end -->
+
+## cortex-pull-declared-output-roots
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/372
+- status: BLOCKED on PyAutoBrain#371 (task `cortex-scorer-where-paths`) — this task reuses the `_path_tokens()` helper that PR adds, and `worktree_check_conflict` reports PyAutoBrain claimed by it. Merge #371, then re-run the guard and move this entry to `active.md` with `status: library-dev`.
+- filed: 2026-09-09
+- prompt: active/custom_output_roots_are_never_pulled_from.md
+- classification: bug (infrastructure) — PyAutoBrain Cortex pull leg + three science-project `hpc/sync` CLIs; difficulty large, autonomy supervised
+- summary: |
+    Each science project's `hpc/sync` hard-codes `PULL_DIRS`, so a run written to
+    a custom `PYAUTO_OUTPUT_DIR` is never pulled (166 MB of euclid_dr1_prelim
+    ordered-MGE results sat on RAL on 2026-09-09). Plan approved: Cortex derives
+    the `output*` roots its tasks declare and passes them via `PYAUTO_PULL_DIRS`,
+    which the three active projects' scripts append to their own `PULL_DIRS` —
+    extending the env-override convention `hpc/sync.conf` already documents.
+    Only `output*` roots are ever passed: a pull rsyncs remote -> local, so
+    handing it `scripts/` or `wiki/` would overwrite local source.
+- affected-repos:
+  - PyAutoBrain
+  - euclid_strong_lens_modeling_pipeline
+  - subhalo_validation
+  - slope_hierarchy_scale
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
