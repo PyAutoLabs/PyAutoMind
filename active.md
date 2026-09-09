@@ -54,3 +54,15 @@
     leaving the constant un-re-measured by its own admission. Either outcome
     ships: re-pin if outside rtol=1e-4, or record "re-measured and confirmed"
     if within it. Both delete the misleading comment.
+
+## howtolens-ch3-mask-overlay
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/78
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/79
+- prompt: active/ch4_mask_overlay_never_drawn.md
+- issued: 2026-09-09
+- session: claude --resume session_0119sx8hEa8cDa8c2q55FtmM
+- status: awaiting-merge
+- worktree: /home/user/howtolens (remote web session — attached clone, not ~/Code/PyAutoLabs-wt)
+- repos:
+  - HowToLens: feature/howtolens-ch3-mask-overlay
+- bundle: notebooks (auto bundle, 2026-09-09) — sole implementation member; multi_galaxy_package dropped (MAST unreachable from cloud), notebook_setup_notebook_drift_siblings retired as already-shipped
