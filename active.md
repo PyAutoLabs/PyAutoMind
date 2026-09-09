@@ -5,25 +5,31 @@
 - prompt: active/scheduled_runs_delivered_hours_late.md
 - issued: 2026-09-09
 - session: claude --resume session_01Qr64vy2ZcjjxaS7jSpH5eM
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/397
+- status: library-shipped, awaiting-merge
 - worktree: /home/user-wt/cron-delivery-headroom
 - repos:
   - PyAutoMind: feature/cron-delivery-headroom
-  - PyAutoMemory: feature/cron-delivery-headroom
+  - PyAutoMemory: (not claimed - measurement showed no change needed; repo untouched)
 - bundle: ci-smoke (member 2 of 4; members 1 and 4 dropped as already shipped and retired to complete/)
 - plan: Items 1-2 of the prompt's suggested shape only - measure, then offset the crons. Item 3 (a catch-up leg for the morning post) is a separate design and is out of scope. Under --auto safe; no plan-mode hold.
+- heart-ack: none needed - Heart was UNAVAILABLE, not RED, in this container (`pyauto-brain vitals` = `CI unavailable (query failed)` for all 17 repos, egress proxy serves no REST repo paths). Documented fallback used: the worktree suite is the gate.
+- finding: the churn hypothesis is NOT supported. r(Mind churn, Mind lag) = -0.155; r(Mind lag, Memory lag) = +0.992 at 1/45th the volume. Lag is GitHub's global scheduler backlog, ~+5h across September, and no offset reduces it. `registry_reconcile`'s `:23` is not privileged either. Item 3 is now the change the evidence argues for - worth an /intake.
 
 ## smoke-relevance-gate
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/219
 - prompt: active/smoke_relevance_gate.md
 - issued: 2026-09-09
 - session: claude --resume session_01Qr64vy2ZcjjxaS7jSpH5eM
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/220
+- status: library-shipped, awaiting-merge
 - worktree: /home/user-wt/smoke-relevance-gate
 - repos:
   - PyAutoHeart: feature/smoke-relevance-gate
 - bundle: ci-smoke (member 3 of 4)
 - plan: Tier 1 only - one more reason to skip in the existing `changes` job, fail-closed, pull_request-gated. Tier 2 (package-level narrowing) needs each workspace's vendored run_smoke.py and is deferred to its own prompt. Under --auto safe; no plan-mode hold.
+- heart-ack: none needed - Heart UNAVAILABLE, not RED (as above). Worktree suite is the gate: 965 passed.
+- finding: the `pull_request` gate is load-bearing for a reason narrower than the prompt stated. `skipped` is not in Heart's FAILURE_CONCLUSIONS so a skipped `main` run does not RED - but `ci_status.rollup` returns green only on an explicit `success` on HEAD, so it would leave readiness permanently unable to reach GREEN. `cancelled` does RED.
 
 ## scientific-workflow-language
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1595
