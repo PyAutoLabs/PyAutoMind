@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 1 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 158 |
+| [Backlog](#backlog) (`draft/`) | 157 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
-
-<details><summary>📋 <a href="draft/docs/autofit/natural_language_first_overview.md">PyAutoFit docs go natural-language first: <code>natural_language</code> becomes the main overview page, "The…</a> — autofit · small · supervised · high</summary>
-
-```
-/start_dev draft/docs/autofit/natural_language_first_overview.md
-```
-
-</details>
+**Highest priority** (filed as `high`) — showing 12 of 14
 
 <details><summary>📋 <a href="draft/test/autolens_workspace_developer/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — autolens_workspace_developer · small · supervised · high</summary>
 
@@ -146,6 +138,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/health_fixes/jit_visualization_outputs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
 ```
 
 </details>
@@ -251,6 +251,14 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/natural_language_first_overview.md">PyAutoFit docs go natural-language first: <code>natural_language</code> becomes the main overview page, "The…</a> — issued 2026-09-09</summary>
+
+```
+/start_dev active/natural_language_first_overview.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
 
@@ -453,7 +461,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 34</summary>
@@ -1103,15 +1111,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 15</summary>
-
-<details><summary>📋 <a href="draft/docs/autofit/natural_language_first_overview.md">PyAutoFit docs go natural-language first: <code>natural_language</code> becomes the main overview page, "The…</a> — autofit · small · supervised · high</summary>
-
-```
-/start_dev draft/docs/autofit/natural_language_first_overview.md
-```
-
-</details>
+<summary><b>docs</b> — 14</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
@@ -1818,7 +1818,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-09 | filed | <a href="draft/docs/autofit/natural_language_first_overview.md">PyAutoFit docs go natural-language first: <code>natural_language</code> becomes…</a> |
+| 2026-09-09 | issued | <a href="active/natural_language_first_overview.md">PyAutoFit docs go natural-language first: <code>natural_language</code> becomes…</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
 | 2026-09-08 | filed | <a href="planned.md#aggregator-temp-unzip">aggregator-temp-unzip</a> |
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
@@ -2237,7 +2237,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-17 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+16 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2255,7 +2255,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
-- `draft/docs/autofit/natural_language_first_overview.md — unknown theme keyword(s): documentation`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md — unknown theme keyword(s): config`
 - `draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md — unknown theme keyword(s): jax-gpu, performance, hpc`
