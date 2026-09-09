@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/aggregator_temporary_unzip.md">Aggregator: temporary-directory unzip mode so scraping <code>.zip</code> results does not permanently double…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1584">issue #1584</a> — issued 2026-09-09 — parked-heart-red</summary>
+<details><summary>📋 <a href="active/aggregator_temporary_unzip.md">Aggregator: temporary-directory unzip mode so scraping <code>.zip</code> results does not permanently double…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1584">issue #1584</a> — issued 2026-09-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1592">PyAutoFit#1592</a></summary>
 
 ```
 /start_dev active/aggregator_temporary_unzip.md
