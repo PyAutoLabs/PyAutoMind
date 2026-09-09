@@ -34,3 +34,14 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
 - delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
+
+## howtolens-ch3-mask-overlay
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/78
+- prompt: active/ch4_mask_overlay_never_drawn.md
+- issued: 2026-09-09
+- session: claude --resume session_0119sx8hEa8cDa8c2q55FtmM
+- status: workspace-dev
+- worktree: /home/user/howtolens (remote web session — attached clone, not ~/Code/PyAutoLabs-wt)
+- repos:
+  - HowToLens: feature/howtolens-ch3-mask-overlay
+- bundle: notebooks (auto bundle, 2026-09-09) — sole implementation member; multi_galaxy_package dropped (MAST unreachable from cloud), notebook_setup_notebook_drift_siblings retired as already-shipped
