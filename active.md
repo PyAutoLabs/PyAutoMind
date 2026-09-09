@@ -37,8 +37,9 @@
 - prompt: active/aggregator_temporary_unzip.md
 - issued: 2026-09-09
 - session: claude --resume session_01EwQS9x9Ls1NBUpbASL7n1s
-- status: parked-heart-red
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1592
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/aggregator-temp-unzip
 - repos:
   - PyAutoFit: feature/aggregator-temp-unzip
-- parked: "2026-09-09 at the ship gate. Implementation COMPLETE and committed locally (5b5545ba0 feature, 57d838c38 grid test); nothing pushed, no PR. Full PyAutoFit suite green 2553 passed / 2 skipped. Heart is RED for one organism-scope reason, 'release validation FAILED (stage integrate)' (PyAutoHeart Release Integrate run 2026-09-09T07:23Z) — nothing in this branch is in the release chain, but the ack is the human's to give. On ack: push the branch, open the PR against PyAutoFit main, then /prm."
+- heart-ack: 2026-09-09 in-session, single reason "release validation FAILED (stage integrate)" — organism-scope (PyAutoHeart Release Integrate run of 2026-09-09T07:23Z); nothing in this branch is in the release chain; human typed /prm after the reason was quoted back
