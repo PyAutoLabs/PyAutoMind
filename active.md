@@ -5,7 +5,11 @@
 - issued: 2026-09-09
 - heart-ack: 2026-09-09 in-session, five reasons "release validation FAILED (stage integrate)", "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772)", "profiling drift: runtime/imaging/mge/mge_likelihood_summary_hst_v2026.8.17.1.json [eager, full, vmap]", "profiling drift: runtime/imaging/mge_mass_jax/mge_mass_jax_likelihood_summary_hst_v2026.8.17.1.json [jax_mge_mass]", "profiling drift: runtime/imaging/pixelization_numba_mge_mass/pixelization_numba_mge_mass_likelihood_summary_hst_v2026.8.17.1.json [numba_cpu_mge_mass]" — all organism-scope in the libraries; this task ships the Cortex pull leg and three hpc/sync CLIs, none of which is in the release chain
 - session: claude --resume session_01FKSwTBuNwcJc2FPNpSCrkp
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/373
+- library-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/59
+- library-pr: https://github.com/PyAutoLabs/subhalo_validation/pull/1
+- library-pr: https://github.com/PyAutoLabs/slope_hierarchy_scale/pull/1
 - worktree: ~/Code/PyAutoLabs-wt/cortex-pull-declared-output-roots
 - repos:
   - PyAutoBrain: feature/cortex-pull-declared-output-roots
