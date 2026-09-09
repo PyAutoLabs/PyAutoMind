@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/137">issue #137</a> — issued 2026-09-09 — workspace-dev</summary>
+<details><summary>📋 <a href="active/mge_jit_regression_rebaseline.md">Re-baseline the MGE imaging JIT profiling regression value</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/137">issue #137</a> — issued 2026-09-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/pull/138">autolens_workspace_developer#138</a></summary>
 
 ```
 /start_dev active/mge_jit_regression_rebaseline.md
