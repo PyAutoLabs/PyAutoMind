@@ -1,5 +1,21 @@
 # Active Tasks
 
+## natural-language-first-docs
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1587
+- issued: 2026-09-09
+- session: claude --resume session_015LXave3uvSeLEq7S68NjXk
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/natural-language-first-docs
+- repos:
+  - PyAutoFit: feature/natural-language-first-docs
+- summary: |
+    PyAutoFit docs-only reorder: natural_language.md becomes the main overview
+    page, the_basics.md is renamed python_api.md ("The Python API") and moves
+    fourth, and docs/index.md is reframed natural-language first. The human's
+    uncommitted natural_language.md + backup.md deletion are carried onto the
+    branch as the first commit. Brain classified `combined` off an
+    @autofit_workspace out-of-scope mention; overridden to library-only.
+
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222

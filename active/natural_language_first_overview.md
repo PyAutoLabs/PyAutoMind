@@ -9,12 +9,14 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Witness: `docs/index.md`'s Overview toctree reads `overview/natural_language`, `overview/scientific_workflow`, `overview/statistical_methods`, `overview/python_api` in that order; `docs/overview/the_basics.md` no longer exists and `docs/overview/python_api.md` is titled "The Python API" with anchor `(python-api)=`; no in-repo link still points at `overview/the_basics`; the landing page leads with the natural-language/assistant framing; Sphinx build produces no new warnings against `docs/sphinx_warning_baseline.txt`.
 Consequence: judge
 Review-minutes: 15
 Unattended: needs-slicing
 Filed: 2026-09-09
+Issued: 2026-09-09
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1587
 
 Original request (verbatim):
 
