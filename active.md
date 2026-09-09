@@ -34,3 +34,16 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
 - delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
+
+## arcsec-after-decimal
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/546
+- prompt: active/arcsecond_to_decimal.md
+- issued: 2026-09-09
+- session: claude --resume session_019mofs7R3chP12wzoCPjnaw
+- status: library-dev
+- worktree: n/a — remote web session; shallow clones at /home/user/pyautoarray and /home/user/pyautogalaxy (no ~/Code/PyAutoLabs-wt layout in this container)
+- repos:
+  - PyAutoArray: feature/arcsec-after-decimal
+  - PyAutoGalaxy: feature/arcsec-after-decimal
+- scope: re-scoped at issue time. The config-flag half (`ticks.symbol_over_decimal` + `_arcsec_labels`) already shipped and the prompt was never retired; #546 covers only the remaining per-call `arcsec_after_decimal` override. Difficulty lowered large → medium.
+- bundle: filed from the `visualization` bundle (3 members named). The other two were dropped — see draft/research/autolens/quick_update_plotting_cost.md ("Triage 2026-09-09") and complete/archive/shelved/plot_coverage_followups.md ("SPLIT 2026-09-09").
