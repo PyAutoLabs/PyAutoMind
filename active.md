@@ -1,5 +1,30 @@
 # Active Tasks
 
+## cron-delivery-headroom
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/396
+- prompt: active/scheduled_runs_delivered_hours_late.md
+- issued: 2026-09-09
+- session: claude --resume session_01Qr64vy2ZcjjxaS7jSpH5eM
+- status: library-dev
+- worktree: /home/user-wt/cron-delivery-headroom
+- repos:
+  - PyAutoMind: feature/cron-delivery-headroom
+  - PyAutoMemory: feature/cron-delivery-headroom
+- bundle: ci-smoke (member 2 of 4; members 1 and 4 dropped as already shipped and retired to complete/)
+- plan: Items 1-2 of the prompt's suggested shape only - measure, then offset the crons. Item 3 (a catch-up leg for the morning post) is a separate design and is out of scope. Under --auto safe; no plan-mode hold.
+
+## smoke-relevance-gate
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/219
+- prompt: active/smoke_relevance_gate.md
+- issued: 2026-09-09
+- session: claude --resume session_01Qr64vy2ZcjjxaS7jSpH5eM
+- status: library-dev
+- worktree: /home/user-wt/smoke-relevance-gate
+- repos:
+  - PyAutoHeart: feature/smoke-relevance-gate
+- bundle: ci-smoke (member 3 of 4)
+- plan: Tier 1 only - one more reason to skip in the existing `changes` job, fail-closed, pull_request-gated. Tier 2 (package-level narrowing) needs each workspace's vendored run_smoke.py and is deferred to its own prompt. Under --auto safe; no plan-mode hold.
+
 ## scientific-workflow-language
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1595
 - issued: 2026-09-09
@@ -54,3 +79,15 @@
     leaving the constant un-re-measured by its own admission. Either outcome
     ships: re-pin if outside rtol=1e-4, or record "re-measured and confirmed"
     if within it. Both delete the misleading comment.
+
+## howtolens-ch3-mask-overlay
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/78
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/79
+- prompt: active/ch4_mask_overlay_never_drawn.md
+- issued: 2026-09-09
+- session: claude --resume session_0119sx8hEa8cDa8c2q55FtmM
+- status: awaiting-merge
+- worktree: /home/user/howtolens (remote web session — attached clone, not ~/Code/PyAutoLabs-wt)
+- repos:
+  - HowToLens: feature/howtolens-ch3-mask-overlay
+- bundle: notebooks (auto bundle, 2026-09-09) — sole implementation member; multi_galaxy_package dropped (MAST unreachable from cloud), notebook_setup_notebook_drift_siblings retired as already-shipped

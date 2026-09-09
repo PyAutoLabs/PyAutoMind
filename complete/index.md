@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1366 records across 8 buckets.
+1369 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -233,6 +233,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-post-235-followups](2026/09/profiling-post-235-followups.md)
 - [profiling-production-representative](2026/09/profiling-production-representative.md)
 - [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)
+- [release-smoke-env-declarations](2026/09/release-smoke-env-declarations.md)
 - [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z
@@ -358,6 +359,7 @@ markers; everything below GENERATED is rebuilt.
 - [health-conductor-stale-verdict](2026/08/health-conductor-stale-verdict.md)
 - [heart-green-validation-ingest](2026/08/heart-green-validation-ingest.md)
 - [heart-red-guarded-sample-escape](2026/08/heart-red-guarded-sample-escape.md) — Closed the escape path that kept release validation RED after
+- [heart-smoke-table-autocti](2026/08/heart-smoke-table-autocti.md)
 - [history-policy-generated-block](2026/08/history-policy-generated-block.md)
 - [howto-setup-notebook-audit](2026/08/howto-setup-notebook-audit.md) — none — run end-to-end from a cloud session; the six PRs are the record
 - [howto-smoke-all-tutorials](2026/08/howto-smoke-all-tutorials.md)
@@ -436,6 +438,7 @@ markers; everything below GENERATED is rebuilt.
 - [nfw-truncated-potential-accuracy](2026/08/nfw-truncated-potential-accuracy.md)
 - [normalise-auto-simulate-guard-idiom](2026/08/normalise-auto-simulate-guard-idiom.md)
 - [notebook-quotes-string-literal](2026/08/notebook-quotes-string-literal.md)
+- [notebook-setup-notebook-drift-siblings](2026/08/notebook-setup-notebook-drift-siblings.md)
 - [notebook-setup-notebook-regen-drift](2026/08/notebook-setup-notebook-regen-drift.md)
 - [nss-remainline-mainline-blackjax](2026/08/nss-remainline-mainline-blackjax.md)
 - [nufft-parity-full-datasets](2026/08/nufft-parity-full-datasets.md)
