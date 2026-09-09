@@ -31,3 +31,14 @@
 - repos:
   - autolens_profiling: feature/retire-gpu1-mig-exclusion
 - parallel-claim: autolens_profiling also claimed by delaunay-nn-breakdown (#219); "file sets disjoint (hpc/batch_gpu submits, hpc/README.md, activate.sh vs _profile_cli.py + scripts/imaging/likelihood_breakdown/delaunay.py); prompt out-of-scope note says merge order does not matter; own worktree taken under --auto safe"
+
+## aggregator-temp-unzip
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1584
+- prompt: active/aggregator_temporary_unzip.md
+- issued: 2026-09-09
+- session: claude --resume session_01EwQS9x9Ls1NBUpbASL7n1s
+- status: parked-heart-red
+- worktree: ~/Code/PyAutoLabs-wt/aggregator-temp-unzip
+- repos:
+  - PyAutoFit: feature/aggregator-temp-unzip
+- parked: "2026-09-09 at the ship gate. Implementation COMPLETE and committed locally (5b5545ba0 feature, 57d838c38 grid test); nothing pushed, no PR. Full PyAutoFit suite green 2553 passed / 2 skipped. Heart is RED for one organism-scope reason, 'release validation FAILED (stage integrate)' (PyAutoHeart Release Integrate run 2026-09-09T07:23Z) — nothing in this branch is in the release chain, but the ack is the human's to give. On ack: push the branch, open the PR against PyAutoFit main, then /prm."

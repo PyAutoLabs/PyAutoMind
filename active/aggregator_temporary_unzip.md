@@ -14,6 +14,7 @@ Review-minutes: 10
 Unattended: ready
 Filed: 2026-09-08
 Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1584
+Issued: 2026-09-09
 
 Original request (verbatim):
 

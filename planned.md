@@ -7,7 +7,6 @@
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
-- [aggregator-temp-unzip](#aggregator-temp-unzip)
 
 <!-- toc:end -->
 
@@ -81,14 +80,3 @@
 - affected-repos:
   - autolens_workspace_test
 - note: latent/latent_nan_robustness.py PASSES but VACUOUSLY under the smoke profile — TEST_MODE=2 yields only 4 bypass samples, and DISABLE_JAX=1 silently flips its deliberate AnalysisImaging(use_jax=True) to False (PyAutoLens analysis/analysis/dataset.py:89), so the JAX column-masking branch the guard exists to catch is never taken. MultiStartAdam/BlackJAXNUTS precedent. Work = (1) config/build/env_vars.yaml override for `latent/latent_nan_robustness` with unset: [PYAUTO_TEST_MODE, PYAUTO_DISABLE_JAX]; (2) trim the script under the 300s cap. MEASURED: honest run = 412s; PYAUTO_TEST_MODE=1 does NOT help (455s) — Nautilus is NOT the bottleneck (~136s post-fit results update + ~56s latent compute on 100 samples), so the lever is sample count. Script is in the curated smoke_tests.txt, which DOES read env_vars.yaml, so this lands in the per-PR gate. Adjacent to the blocker's own follow-up ("re-time the SLOW siblings"). NOT bugs, verified passing from clean output, no change needed: imaging/model_fit.py and latent/latent_variables_smoke.py.
-
-## aggregator-temp-unzip
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1584
-- prompt: draft/feature/autofit/aggregator_temporary_unzip.md
-- filed: 2026-09-08
-- classification: library
-- suggested-branch: feature/aggregator-temp-unzip
-- blocked-by: none — aggregator-search-json-sentinel merged 2026-09-08 (PyAutoFit#1585); `scan()` now calls `_is_search_output` in `autofit/aggregator/aggregator.py`, so branch from PyAutoFit main and build the temp-unzip path around that helper
-- summary: opt-in `unzip_temporary=True` on `Aggregator.from_directory` extracts zips into a `tempfile` tree (cleaned up on GC / `close()`) instead of a permanent sibling folder; default unchanged. Plan approved 2026-09-08; full plan on the issue.
-- affected-repos:
-  - PyAutoFit
