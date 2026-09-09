@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/396">issue #396</a> — issued 2026-09-09 — library-dev</summary>
+<details><summary>📋 <a href="active/scheduled_runs_delivered_hours_late.md">Every scheduled workflow is delivered hours late, or not at all</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/396">issue #396</a> — issued 2026-09-09 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/397">PyAutoMind#397</a></summary>
 
 ```
 /start_dev active/scheduled_runs_delivered_hours_late.md
@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/219">issue #219</a> — issued 2026-09-09 — library-dev</summary>
+<details><summary>📋 <a href="active/smoke_relevance_gate.md">Relevance-gate the reusable smoke workflow so a PR only runs…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/219">issue #219</a> — issued 2026-09-09 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/220">PyAutoHeart#220</a></summary>
 
 ```
 /start_dev active/smoke_relevance_gate.md
