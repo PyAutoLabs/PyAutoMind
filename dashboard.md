@@ -313,6 +313,9 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1580](https://github.com/PyAutoLabs/PyAutoFit/pull/1580) — `complete/2026/09/ep-stale-mask-fixed-point.md`
 - [PyAutoFit#1576](https://github.com/PyAutoLabs/PyAutoFit/pull/1576) — `complete/2026/09/ep-stale-tracking-per-variable.md`
 - [PyAutoFit#1588](https://github.com/PyAutoLabs/PyAutoFit/pull/1588) — `complete/2026/09/natural-language-first-docs.md`
+- [PyAutoFit#1589](https://github.com/PyAutoLabs/PyAutoFit/pull/1589) — `complete/2026/09/natural-language-first-docs.md`
+- [PyAutoFit#1590](https://github.com/PyAutoLabs/PyAutoFit/pull/1590) — `complete/2026/09/natural-language-first-docs.md`
+- [PyAutoFit#1591](https://github.com/PyAutoLabs/PyAutoFit/pull/1591) — `complete/2026/09/natural-language-first-docs.md`
 - [PyAutoFit#1586](https://github.com/PyAutoLabs/PyAutoFit/pull/1586) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
 - [PyAutoFit#1568](https://github.com/PyAutoLabs/PyAutoFit/pull/1568) — `complete/2026/09/quick-update-tolerates-invalid-instance.md`
 - [PyAutoFit#1578](https://github.com/PyAutoLabs/PyAutoFit/pull/1578) — `complete/2026/09/samples-errors-at-sigma-instance.md`

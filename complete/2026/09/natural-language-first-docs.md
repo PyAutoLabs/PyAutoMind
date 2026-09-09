@@ -2,11 +2,20 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1587
 - completed: 2026-09-09
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1588
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1589
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1590
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1591
 - workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/32
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/33
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/34
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/35
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1588
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1589
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1590
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1591
 
 PyAutoFit's docs now lead natural-language first. The Overview toctree reads
-Inference with Natural Language → Scientific Workflow → Statistical Methods →
+Natural Language Inference → Scientific Workflow → Statistical Methods →
 The Python API, and `docs/index.md` leads with the assistant route instead of
 the Python API.
 
@@ -132,3 +141,62 @@ onto the task branch — nothing is committed on `main`.
   Sphinx warnings versus `docs/sphinx_warning_baseline.txt`.
 - `grep -rn "the_basics" docs/` returns only the @autofit_workspace notebook
   links.
+
+## Follow-ups shipped the same day (2026-09-09)
+
+Six further PRs landed after this record was first written, all merged, none
+carrying their own prompt or issue — they were direct follow-ups requested in
+the same session. Recorded here so the ledger names every merged PR.
+
+- **autofit_assistant#33** — ported the four `docs/setup/*.md` pages the README
+  linked to but which did not exist in this repo (it had no `docs/` directory).
+  Rewritten for PyAutoFit from `autolens_assistant/docs/setup/`: the upstream
+  chat bootstrap prompts name `AGENTS_CHAT.md`, which does not exist here, so a
+  verbatim copy would have sent every chat user to a 404. Also removed the
+  README's two dead anchors. Broken relative links 6 → 0.
+- **PyAutoFit#1589 + autofit_assistant#34** — "Inference with Natural Language"
+  → **"Natural Language Inference"**; dropped the "An LLM can help write a
+  fitting script" paragraph; new "Bring Your Own Likelihood" section (point the
+  assistant at an existing likelihood, with the prompt); "HowToFit" → "HowToFit
+  / Teacher Mode"; the five "AI First Design" asides now render in the project
+  accent.
+- **PyAutoFit#1590** — The Python API page now links the workspace script that
+  carries its code (`scripts/overview/overview_1_the_basics.py`, the notebook,
+  and Colab). Its only workspace pointer had been a generic repo link at the
+  bottom.
+- **PyAutoFit#1591 + autofit_assistant#35** — the "Choose a search" prompt asks
+  about gradient-based inference using JAX and says why this example uses
+  Dynesty; the list below gained the Gradient-based (JAX) bullet that answers
+  it.
+
+### Further traps
+
+- **The "AI First Design" asides were malformed markdown, not merely
+  unstyled.** `**AI First Design: ... **PyAutoFit** ...**` opens bold inside
+  bold, which terminates the emphasis rather than nesting it — they had never
+  rendered as intended in either the docs or the README.
+- **There was no orange callout class to reuse.** PyAutoFit's orange is Furo's
+  `--color-brand-content` set in `conf.py`; `pyauto.css` has none. The new rule
+  went in a new `docs/_static/pyautofit.css`, because `pyauto.css` states in its
+  own header that it is byte-identical across PyAutoFit / PyAutoGalaxy /
+  PyAutoLens and a repo-specific rule there would silently diverge the three.
+- **Prompt boxes are load-bearing.** The teacher-mode prompt was in a fenced
+  code block, so a natural-language prompt rendered as source. Every other
+  prompt on the page is a `>` blockquote. In the README the design notes were
+  deliberately NOT blockquoted for the same reason — `>` there means "prompt".
+- **Colab links are pinned, GitHub source links are not.** `docs/index.md` and
+  `README.md` pin Colab to a release tag (`2026.9.8.1`) because Colab installs
+  the *released* library, so an unpinned notebook can call API only on `main`.
+- **Search names were verified against `dir(autofit)`** before being written
+  into a prompt-driven page: `BlackJAXNUTS`, `MultiStartAdam`,
+  `MultiStartProdigy`. A hallucinated search name on that page fails on the
+  reader's first attempt.
+
+### Still open
+
+- `autolens_assistant/docs/setup/*.md` all trail with a link to a
+  `troubleshooting.md` that does not exist in that repo — a pre-existing dead
+  link noticed while porting, not fixed.
+- The `autofit_workspace` files keep the `the_basics` name while the docs page
+  is now `python_api`; renaming them is separate work in that repo.
+- The orange asides have not been checked visually in light and dark mode.
