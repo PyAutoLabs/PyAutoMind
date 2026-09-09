@@ -1,3 +1,51 @@
+The Cortex check-in scorer could not see a science run that wrote anywhere but
+`output/`, and instead of saying so it scored the task against whatever was
+newest there — manufacturing a confident FAIL from an unrelated run, in
+violation of the door's own "UNOBSERVABLE is not FAIL" contract.
+
+Three defects in `agents/conductors/cortex/_cortex.py`, all fixed:
+
+- `where_paths` kept a bullet only if `p.is_absolute()`, so every real
+  `## Where to look` bullet — tasks write them relative to the project root —
+  was silently discarded. It now resolves relative bullets against the
+  project's registered roots.
+- `where_paths` read only `bullet.split()[0]`. Real bullets lead with a
+  project-row label, so the path was never the first token and never examined.
+  It now scans the whole bullet for path-like tokens.
+- `run_artifacts` fell back to `bases = list(where) or [r / "output" ...]` and
+  picked the newest `.completed`/zip under `output/`. It now refuses that
+  substitution when a task declares roots that yield no run — the state is
+  UNOBSERVABLE — and any fallback that does still happen is labelled as one in
+  both readouts.
+
+__Field evidence__
+
+Found on the 2026-09-09 check-in: eight of nine live tasks came back FAILED and
+none was an actually failed run. Three `subhalo_validation` tasks and both
+`euclid_dr1_prelim` ordered-MGE tasks were scored against the same stale
+phase-4 `vis_pix` directory belonging to a different tile, while their real
+completed results sat in `output_ordered_witness/`. The live cluster held
+exactly one running job at the time.
+
+__Evidence__
+
+PyAutoLabs/PyAutoBrain#371, merged as `ec354a7`. `Brain Tests` green on head
+sha `9f46175`: `pytest (3.12)` and `pytest (3.13)` both success. Issue #370
+closed as completed.
+
+__Follow-up left open__
+
+The sibling half is not fixed: a custom `PYAUTO_OUTPUT_DIR` is never *pulled*
+to the laptop at all. Each science project's `hpc/sync` carries its own
+hard-coded `PULL_DIRS` — three divergent forks
+(`(output output_sed inspect)`, `(output results)`, `(output)`) — and both the
+`pull` and `pull-full` verbs iterate it, so no verb can fetch a custom root.
+Filed as `draft/bug/pyautobrain/custom_output_roots_are_never_pulled_from.md`
+(difficulty large, supervised). Until it lands, a run written to a custom
+output root still has to be pulled by hand.
+
+## Original prompt
+
 # Cortex scorer blind to runs outside output/ and fails them against…
 
 Type: bug

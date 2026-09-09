@@ -13,7 +13,7 @@
 
 ## cortex-pull-declared-output-roots
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/372
-- status: BLOCKED on PyAutoBrain#371 (task `cortex-scorer-where-paths`) — this task reuses the `_path_tokens()` helper that PR adds, and `worktree_check_conflict` reports PyAutoBrain claimed by it. Merge #371, then re-run the guard and move this entry to `active.md` with `status: library-dev`.
+- status: READY — PyAutoBrain#371 merged 2026-09-09 (`ec354a7`), so the `_path_tokens()` helper is on `main`; the PyAutoBrain claim is released (worktree removed, branch deleted, `worktree_check_conflict PyAutoBrain` clean). Next: move this entry to `active.md` with `status: library-dev` and run `/start_dev active/custom_output_roots_are_never_pulled_from.md`.
 - filed: 2026-09-09
 - prompt: active/custom_output_roots_are_never_pulled_from.md
 - classification: bug (infrastructure) — PyAutoBrain Cortex pull leg + three science-project `hpc/sync` CLIs; difficulty large, autonomy supervised

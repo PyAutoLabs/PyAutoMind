@@ -149,6 +149,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-registration](2026/09/cortex-registration.md) — closed completed 2026-09-01
 - [cortex-retire-project-chip](2026/09/cortex-retire-project-chip.md)
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
+- [cortex-scorer-where-paths](2026/09/cortex-scorer-where-paths.md)
 - [cortex-tasks-not-phases](2026/09/cortex-tasks-not-phases.md)
 - [dataset-fits-image-only](2026/09/dataset-fits-image-only.md) — `dataset.fits` was written twice per search since PyAutoGalaxy#479 / PyAutoLens#574 (`files/` from `save_attri…
 - [defer-import-scipy-special-pyplot](2026/09/defer-import-scipy-special-pyplot.md)
