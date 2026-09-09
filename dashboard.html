@@ -231,7 +231,7 @@ a.go:hover{opacity:.9;text-decoration:none}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>2</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>6</b><span>Planned</span></li><li><b>156</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>2</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>156</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-09-09.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -290,7 +290,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/pyautomind/witness_campaign.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">pyautomind</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill r">high</span></span></p></div>
 <h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
-<div class="task"><button class="copy" data-cmd="/start_dev active/custom_output_roots_are_never_pulled_from.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/custom_output_roots_are_never_pulled_from.md">Custom output roots are never pulled from the HPC — each project's…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/372">issue #372</a><span class="facets"> — filed 2026-09-09</span> — <span class="facets">READY — PyAutoBrain#371 merged 2026-09-09 (<code>ec354a7</code>), so the <code>_path_tokens()</code> helper is on <code>main</code>; the PyAutoBrain claim is…</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/custom_output_roots_are_never_pulled_from.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/custom_output_roots_are_never_pulled_from.md">Custom output roots are never pulled from the HPC — each project's…</a><span class="facets"> — issued 2026-09-09</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/retire_gpu1_mig_exclusion.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a><span class="facets"> — issued 2026-09-05</span></p></div>
 <a id="pending-release"></a><h2>Pending release <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — <code>active.md</code> and the <code>complete/</code> records — never a live GitHub query; the Brain board's <code>pending-release</code> search is the fresh view, this is what the Mind believes.</p>
@@ -345,8 +345,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 <h2>Planned <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md">markdown version</a></h2>
 <details>
-<summary>6 task(s)</summary>
-<div class="task"><button class="copy" data-cmd="/start_dev active/custom_output_roots_are_never_pulled_from.md" aria-label="Copy the Claude command">📋</button><p><b>cortex-pull-declared-output-roots</b> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/372">issue #372</a><span class="facets"> — filed 2026-09-09</span> — <span class="facets">READY — PyAutoBrain#371 merged 2026-09-09 (<code>ec354a7</code>), so the <code>_path_tokens()</code> helper is on <code>main</code>; the PyAutoBrain claim is…</span></p></div>
+<summary>5 task(s)</summary>
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task isothermal-ell-sph-oversampling-at-the-cusp — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>isothermal-ell-sph-oversampling-at-the-cusp</b><span class="facets"> — found 2026-08-09</span> — <span class="facets">planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md" aria-label="Copy the Claude command">📋</button><p><b>remote-mcp-deployment-tiers</b> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/20">issue #20</a><span class="facets"> — filed 2026-07-21</span> — <span class="facets">DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP…</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/samples_parameter_paths.md" aria-label="Copy the Claude command">📋</button><p><b>samples-parameter-paths</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1327">issue #1327</a><span class="facets"> — filed 2026-07-08</span> — <span class="facets">parked</span></p></div>
@@ -852,13 +851,7 @@ Contract (the `start_bundle` skill is the full body):
 <table class="recent">
 <tr>
 <td class="when">2026-09-09</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#cortex-pull-declared-output-roots">cortex-pull-declared-output-roots</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/custom_output_roots_are_never_pulled_from.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-09-09</td>
-<td class="what">filed</td>
+<td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/custom_output_roots_are_never_pulled_from.md">Custom output roots are never pulled from the HPC — each project's…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/custom_output_roots_are_never_pulled_from.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
@@ -910,7 +903,7 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/test/autocti_workspace/imaging_ci_start_here_61s.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-09-06</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a></td>
@@ -1175,6 +1168,12 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/heart_smoke_table_autocti.md">Heart's local smoke runner cannot run any CTI workspace — no autocti…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/ci/heart_smoke_table_autocti.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-08-23</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
