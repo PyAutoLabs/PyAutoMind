@@ -16,7 +16,8 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
 - issued: 2026-09-09
 - session: claude --resume session_01JsGeXEmGmSJzvxzC7GUpZo
-- status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/61
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/euclid-catalogue-rebuild-prep
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
