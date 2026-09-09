@@ -25,6 +25,7 @@
 
 ## euclid-catalogue-rebuild-prep
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
+- prompt: active/prepare_the_euclid_pipeline_for_an_ordered.md
 - issued: 2026-09-09
 - session: claude --resume session_01JsGeXEmGmSJzvxzC7GUpZo
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/61
