@@ -18,26 +18,6 @@
     fall back when a task declares roots that yield no run (UNOBSERVABLE, not
     FAIL); any fallback that does happen is marked as one in the readout.
 
-## natural-language-first-docs
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1587
-- issued: 2026-09-09
-- session: claude --resume session_015LXave3uvSeLEq7S68NjXk
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1588
-- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/32
-- heart-ack: 2026-09-09 in-session, single reason "release validation FAILED (stage integrate)" — organism-scope (release chain); both branches are docs-only and nothing in them is in the release chain
-- worktree: ~/Code/PyAutoLabs-wt/natural-language-first-docs
-- repos:
-  - PyAutoFit: feature/natural-language-first-docs
-  - autofit_assistant: feature/natural-language-first-docs (branch in the canonical checkout, no worktree — not parallel-safe)
-- summary: |
-    PyAutoFit docs reordered natural-language first: natural_language.md is
-    the main overview page, the_basics.md renamed python_api.md ("The Python
-    API") and moved fourth, docs/index.md reframed, Sphinx baseline 31->30.
-    autofit_assistant README carries the same walkthrough under "Using
-    PyAutoFit Assistant", plus a rewritten Science Project section.
-    Both PRs open, merge is the human's.
-
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222
