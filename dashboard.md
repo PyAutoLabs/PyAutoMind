@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 162 |
 
 > **No batch in flight.**
 
@@ -477,7 +477,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**162** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -2063,7 +2063,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 6 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 8 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -2085,6 +2085,22 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/feature/autofit/ep_lbfgs_jax.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_factors_end_the_run_with_zero.md">EP factors end the run with zero SUCCESS updates on the exactly-Gaussian…</a> — autofit · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autofit/ep_factors_end_the_run_with_zero.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/nan_in_ep_evidence_accumulation_invalid_value.md">NaN in EP evidence accumulation: <code>invalid value encountered in add</code> in ep_mean_field.py…</a> — autofit · medium · supervised · medium</summary>
+
+```
+/start_dev draft/bug/autofit/nan_in_ep_evidence_accumulation_invalid_value.md
 ```
 
 </details>

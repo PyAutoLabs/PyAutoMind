@@ -20,6 +20,8 @@ Unattended: ready
 Supersedes: draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md
 Parent: complete/2026/09/xla-triton-gemm-off.md
 Filed: 2026-09-10
+Issued: 2026-09-10
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
 
 ## Original request (verbatim)
 
