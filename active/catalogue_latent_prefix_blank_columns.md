@@ -55,6 +55,6 @@ results and re-score the Cortex task `euclid_dr1_prelim/ordered_rerun_catalogue_
 SED chain is submitted. The 3-sigma latent columns stay wrong until the separate PyAutoFit
 `aggregate_csv` fix lands.
 
-Related: `draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md` (the 3-sigma /
+Related: `complete/2026/09/aggregate-csv-latent-sigma3.md` (shipped 2026-09-10, PyAutoFit#1598) (the 3-sigma /
 silent-None half) and `draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md` (the vis_lp stage
 that writes no latents at all).
