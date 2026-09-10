@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/a100_pixelized_likelihood_baseline_for_matrix_free.md">Final A100 fp64 baseline of the pixelized imaging likelihood…</a> — issued 2026-09-10</summary>
+<details><summary>📋 <a href="active/a100_pixelized_likelihood_baseline_for_matrix_free.md">Final A100 fp64 baseline of the pixelized imaging likelihood…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/241">issue #241</a> — issued 2026-09-10 — workspace-dev</summary>
 
 ```
 /start_dev active/a100_pixelized_likelihood_baseline_for_matrix_free.md
