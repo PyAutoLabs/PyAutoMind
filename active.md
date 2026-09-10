@@ -1,5 +1,17 @@
 # Active Tasks
 
+## latent-integration-smoke
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/315
+- prompt: active/latent_integration_smoke.md
+- issued: 2026-09-10
+- session: claude --resume session_01CybZmqjyQRDpfK3Cs1JaW2
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/latent-integration-smoke
+- repos:
+  - autolens_workspace_test: feature/latent-integration-smoke
+- plan: Approved by the user in Plan Mode (task A3 of a multi-task plan). Two new smoke scripts under scripts/misc/latent/ (NumPy + JAX legs), two smoke_tests.txt entries, and a stale-comment fix in config/latent.yaml.
+- note: "Library-first gate: the sibling-dir aggregator assertion depends on PyAutoFit#1601 (task A1, feature/aggregator-sibling-dir-zip) merging before this PR."
+
 ## howtofit-ch1-gradients-details
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/49
 - prompt: active/chapter_1_gradients_details_bayesian.md

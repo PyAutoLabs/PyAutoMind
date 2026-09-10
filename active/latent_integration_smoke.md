@@ -13,6 +13,7 @@ Witness: `misc/latent/latent_integration_smoke.py` and `misc/latent/latent_integ
 Review-minutes: 25
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-10
 
 ## Why
 
