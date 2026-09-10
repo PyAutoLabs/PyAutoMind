@@ -26,7 +26,7 @@ name: Dashboard Refresh
 
 on:
   schedule:
-    - cron: "20 3 * * *"
+    - cron: "26 3 * * *"   # daily 03:26 UTC — after both digests, before the morning posts; do not round (#396)
   push:
     branches: [main]
     paths:

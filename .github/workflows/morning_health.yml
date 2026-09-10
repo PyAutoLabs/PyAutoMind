@@ -22,10 +22,10 @@ name: pyauto-morning-health
 
 on:
   schedule:
-    # 06:00 UTC daily, one hour after heart-health's 05:00. GitHub cron
+    # 06:13 UTC daily, about an hour after heart-health's 05:00. GitHub cron
     # jitters 0–3 h under load, so the ordering is best-effort — hence the
     # staleness stamp above instead of an assumed fresh verdict.
-    - cron: "0 6 * * *"
+    - cron: "13 6 * * *"   # daily 06:13 UTC — odd minute, still ahead of spawn_drift 06:17 / registry_reconcile 06:23; do not round (#396)
   workflow_dispatch: {}
 
 permissions:

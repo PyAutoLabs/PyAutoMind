@@ -47,7 +47,7 @@ on:
   schedule:
     # Weekly, audit-only: keeps the backlog visible without ever acting
     # unattended. Deletion always requires someone to dispatch it.
-    - cron: "10 4 * * 0"
+    - cron: "52 4 * * 0"   # Sundays 04:52 UTC — was 04:10, the same minute as PyAutoMemory arxiv_refs; do not round (#396)
 
 permissions:
   contents: write

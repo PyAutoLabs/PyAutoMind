@@ -46,7 +46,7 @@ name: pyauto-arxiv-interests
 
 on:
   schedule:
-    - cron: "30 2 * * 1-5"
+    - cron: "37 2 * * 1-5"   # weekdays 02:37 UTC — 30 min after the papers digest, so it still runs second; do not round (#396)
   workflow_dispatch:
     inputs:
       lookback_hours:
