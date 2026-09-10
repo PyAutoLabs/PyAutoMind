@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 161 |
 
 > **No batch in flight.**
 
@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/38">issue #38</a> — issued 2026-09-10 — library-dev</summary>
+<details><summary>📋 <a href="active/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/38">issue #38</a> — issued 2026-09-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1603">PyAutoFit#1603</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/39">autofit_assistant#39</a></summary>
 
 ```
 /start_dev active/start_here_mode.md
@@ -497,7 +497,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
+**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **30** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 33</summary>
@@ -2230,6 +2230,19 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 </details>
 
 <details>
+<summary><b>autolens-inference</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autolens_inference/birth_and_registration.md">autolens_inference birth: checkout, skeleton and registration (phase 1 of 4)</a> — autolens_inference · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/autolens_inference/birth_and_registration.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>numba-interferometer-revisit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_numba_library_dispatch_insitu.md">Re-measure the numba interferometer crossover in situ, through the library dispatch</a> — autolens_profiling · medium · supervised · medium</summary>
@@ -2302,12 +2315,13 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-19 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+20 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
+- `draft/feature/autolens_inference/birth_and_registration.md — unknown theme keyword(s): inference, repo-birth, cortex`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
