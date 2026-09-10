@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/autolens_inference_birth.md">autolens_inference birth: checkout, skeleton and registration (phase 1 of 4)</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/399">issue #399</a> — issued 2026-09-10 — library-dev</summary>
+<details><summary>📋 <a href="active/autolens_inference_birth.md">autolens_inference birth: checkout, skeleton and registration (phase 1 of 4)</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/399">issue #399</a> — issued 2026-09-10 — awaiting-merge — 6 PRs open; merge order Mind → Cortex → Heart → Brain → .github → autolens_inference; RAL clone verified — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/400">PyAutoMind#400</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/28">PyAutoCortex#28</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/224">PyAutoHeart#224</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/375">PyAutoBrain#375</a>, <a href="https://github.com/PyAutoLabs/.github/pull/9">.github#9</a>, <a href="https://github.com/PyAutoLabs/autolens_inference/pull/1">autolens_inference#1</a></summary>
 
 ```
 /start_dev active/autolens_inference_birth.md
