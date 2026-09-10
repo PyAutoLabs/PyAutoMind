@@ -9,7 +9,9 @@
   - PyAutoFit: feature/scientific-workflow-language
   - autofit_workspace: feature/scientific-workflow-language
   - HowToFit: feature/scientific-workflow-language
-- plan: Approved by user. Tutorial/docs changes only; no library API changes. Brain's keyword-derived API phases do not apply to this scope.
+  - PyAutoHands: feature/scientific-workflow-language
+- plan: Approved by user. Tutorial rewrite plus required fixes for live notebook display retention (PyAutoFit) and prose-only notebook generation (PyAutoHands); no API signature changes.
+- progress: Implemented and locally validated; generated docs/notebooks updated. See active/scientific_workflow_language.md for validation and dependency details.
 
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
