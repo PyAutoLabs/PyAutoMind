@@ -22,6 +22,19 @@
 - repos:
   - autolens_profiling: feature/a100-pixelized-baseline
 
+## catalogue-latent-prefix-blank
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/64
+- prompt: active/catalogue_latent_prefix_blank_columns.md
+- issued: 2026-09-10
+- session: claude --resume session_01DpSbN9hUU3H8EEtMPK15B7
+- status: workspace-dev
+- location: web-github (session clone, no task worktree; euclid branch feature/catalogue-latent-prefix-blank)
+- worktree: n/a — web-github session clone (/home/user/euclid_strong_lens_modeling_pipeline)
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/catalogue-latent-prefix-blank
+- plan: on the issue. Drop the retired `latent.` prefix in lens_mass.py + magnitudes.py, rewrite the two docstrings, fix the tutorial twin's dead shear path, add a fixture-based no-blank-column test.
+- note: worktree_check_conflict would name euclid-catalogue-rebuild-prep (PR #61) as claiming euclid_strong_lens_modeling_pipeline; #61 merged 2026-09-09 and its phase-2 branch does not exist yet, so nothing holds the repo.
+
 ## euclid-catalogue-rebuild-prep
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
 - prompt: active/prepare_the_euclid_pipeline_for_an_ordered.md
