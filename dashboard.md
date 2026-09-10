@@ -252,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a <code>.completed</code> zip, and <code>preserve_in_zip</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1601">issue #1601</a> — issued 2026-09-10 — library-dev</summary>
+<details><summary>📋 <a href="active/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a <code>.completed</code> zip, and <code>preserve_in_zip</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1601">issue #1601</a> — issued 2026-09-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1602">PyAutoFit#1602</a></summary>
 
 ```
 /start_dev active/aggregator_sibling_dir_shadows_completed_zip.md
