@@ -118,6 +118,12 @@
 - worktree: ~/Code/PyAutoLabs-wt/autolens-inference-birth
 - parallel-claim: witness-campaign (PyAutoMind) — approved 2026-09-10 on plan approval; file sets disjoint (this task touches repos.yaml, ROUTING.md, epics.md; witness-campaign rewrites draft/ prompt headers). COMMIT DISCIPLINE: never git add -A in either worktree.
 - repos:
+  - PyAutoMind: feature/autolens-inference-birth
+  - PyAutoCortex: feature/autolens-inference-birth
+  - PyAutoHeart: feature/autolens-inference-birth
+  - PyAutoBrain: feature/autolens-inference-birth
+  - .github: feature/autolens-inference-birth
+  - autolens_inference: feature/autolens-inference-birth (workspace-root clone, no worktree)
 - summary: |
     Phase 1 of the autolens-inference epic: birth PyAutoLabs/autolens_inference (created
     on github.com 2026-09-10, public, empty) — workspace-root checkout, autolens_profiling
