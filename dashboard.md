@@ -42,30 +42,22 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 159 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 13
+**Highest priority** (filed as `high`)
 
 <details><summary>📋 <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — euclid · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit_assistant/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> — autofit_assistant · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/autofit_assistant/start_here_mode.md
 ```
 
 </details>
@@ -146,6 +138,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
 ```
 
 </details>
@@ -272,6 +272,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/remove_fits_dataset_from_remaining_plots_yaml_copies.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/38">issue #38</a> — issued 2026-09-10 — library-dev</summary>
+
+```
+/start_dev active/start_here_mode.md
 ```
 
 </details>
@@ -480,18 +488,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
+**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 33</summary>
-
-<details><summary>📋 <a href="draft/feature/autofit_assistant/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> — autofit_assistant · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/autofit_assistant/start_here_mode.md
-```
-
-</details>
+<summary><b>feature</b> — 32</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1580,40 +1580,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>assistants</b> — 4 task(s) · 8 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: docs</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'assistants' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autofit_assistant/start_here_mode.md
-- draft/maintenance/ci/wiki_currency_check_version_gate.md
-- draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
-- draft/docs/workspaces/assistants_regime_extension.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autofit_assistant/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> | autofit_assistant | medium | high | - |
-| <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> | ci | medium | normal | formalised |
-| <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document +…</a> | pyautomemory | medium | normal | formalised |
-| <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster…</a> | workspaces | medium | low | in progress — autolens_assistant leg… |
-
-</details>
-
-<details>
 <summary><b>autofit — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1843,6 +1809,36 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
+<details>
+<summary><b>jax-compile · pixelization</b> — 2 task(s) · 4 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'jax-compile · pixelization' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+- draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> | autoarray | medium | medium | formalised |
+| <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular…</a> | autolens | medium | normal | draft |
+
+</details>
+
 _Showing 8 of 25 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -1854,7 +1850,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md">release-integrate must not ingest result files that pre-exist in a…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-09-10 | filed | <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the…</a> |
-| 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> |
+| 2026-09-10 | issued | <a href="active/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | issued | <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
@@ -2285,13 +2281,12 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-19 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+18 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
-- `draft/feature/autofit_assistant/start_here_mode.md — unknown theme keyword(s): docs`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
