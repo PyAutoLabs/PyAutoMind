@@ -1,31 +1,5 @@
 # Active Tasks
 
-## vis-lp-latent-jit-assertions
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/732
-- prompt: active/vis_lp_mge_stage_writes_no_latents.md
-- issued: 2026-09-10
-- session: claude --resume session_01FFSFgEBiZc7kTRutfK1RsN
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/734
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1600
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/734
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1600
-- status: library-shipped, awaiting-merge
-- location: web-github (session clones, no task worktree)
-- worktree: n/a — web-github session clones (/home/user/PyAutoLens, /home/user/PyAutoFit)
-- repos:
-  - PyAutoLens: feature/vis-lp-latent-jit-assertions
-  - PyAutoFit: feature/vis-lp-latent-jit-assertions
-- summary: |
-    Root cause is not the global NaN mask (it already drops all-NaN columns and
-    salvages greedily): `LatentLens.variables` builds its instance with the
-    default assertion check, which cannot be traced under the engine's per-sample
-    `jax.jit`, so the ordered-MGE `vis_lp` model raised on every sample and the
-    engine swallowed the raise into NaN rows. Fix: PyAutoLens builds the latent
-    instance the way `Fitness` does under JAX; PyAutoFit logs the swallowed
-    exception (count + first traceback) and names the every-sample case. The
-    pipeline's own two trace failures are filed as
-    draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md (gated on #732).
-
 ## a100-pixelized-baseline
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/242
