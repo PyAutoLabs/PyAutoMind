@@ -49,6 +49,6 @@ tests are vacuous.
 This changes published numbers: the June DR1 prelim catalogue's latent 3-sigma columns need
 regenerating.
 
-Related: `draft/bug/euclid/catalogue_latent_prefix_blank_columns.md` (the stale `latent.` prefix
+Related: `complete/2026/09/catalogue-latent-prefix-blank.md` (the stale `latent.` prefix
 this silence hid) and `draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md` (the vis_lp stage
 that writes no latents at all).
