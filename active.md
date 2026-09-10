@@ -3,7 +3,11 @@
 ## scientific-workflow-language
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1595
 - issued: 2026-09-09
-- status: awaiting-input
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1596
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/278
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/151
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/48
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientific-workflow-language
 - repos:
   - PyAutoFit: feature/scientific-workflow-language
@@ -12,7 +16,7 @@
   - PyAutoHands: feature/scientific-workflow-language
 - plan: Approved by user. Tutorial rewrite plus required fixes for live notebook display retention (PyAutoFit) and prose-only notebook generation (PyAutoHands); no API signature changes.
 - progress: Implemented and locally validated; generated docs/notebooks updated. See active/scientific_workflow_language.md for validation and dependency details.
-- blocker: Shipping gate RED (release integration failed; unrelated PyAutoArray/PyAutoGalaxy checkouts behind origin). Implementation remains uncommitted in task worktrees.
+- heart-ack: User explicitly overrode RED shipping gate for these changes, then authorized merges once checks pass. Reasons: release integration failure and unrelated PyAutoArray/PyAutoGalaxy checkouts behind origin. No release authorized.
 
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
