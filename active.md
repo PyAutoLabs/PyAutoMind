@@ -102,7 +102,13 @@
 - issued: 2026-09-10
 - prompt: active/autolens_inference_birth.md
 - session: claude --resume session_01S3mSjckpJgKufHFTYVmjmC
-- status: library-dev
+- status: awaiting-merge — 6 PRs open; merge order Mind → Cortex → Heart → Brain → .github → autolens_inference; RAL clone verified
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/400
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/28
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/224
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/375
+- library-pr: https://github.com/PyAutoLabs/.github/pull/9
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/1
 - worktree: ~/Code/PyAutoLabs-wt/autolens-inference-birth
 - parallel-claim: witness-campaign (PyAutoMind) — approved 2026-09-10 on plan approval; file sets disjoint (this task touches repos.yaml, ROUTING.md, epics.md; witness-campaign rewrites draft/ prompt headers). COMMIT DISCIPLINE: never git add -A in either worktree.
 - repos:
