@@ -69,8 +69,9 @@ Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
    cuBLAS choice (the F value is the only tell).
 6. The pixelization and every `_sparse` submit are the old template: hard-coded
    `AP_ROOT=/mnt/ral/jnightin/autolens_profiling`, `--exclude=euclid-ral-gpu-1`, buffered
-   python, no revision echo. PR autolens_profiling#222 (awaiting merge) rewrites these same
-   files to drop the gpu-1 exclusion.
+   python, no revision echo. PR autolens_profiling#222 (merged 2026-09-10, d3933536) rewrote these same
+   files to drop the gpu-1 exclusion and the `_gpu_preflight.sh` backstop, so a branch from
+   current `main` already has them clean.
 
 ## Scope
 
@@ -78,7 +79,7 @@ Grid: {rectangular bilinear 39x39, Delaunay Hilbert-1500 AdaptSplit, DelaunayNN}
 sparse} x {likelihood_runtime, likelihood_breakdown} on `hpc_a100_fp64`, HST fiducial preset
 (15361 masked pixels, MGE-60 lens light, lp [4,2,2], pixelization over-sampling 1) — 12 legs,
 one node, fresh compilation cache per leg (decided 2026-09-10: DelaunayNN in, w-tilde-native
-breakdown in, branch from main after autolens_profiling#222 merges).
+breakdown in; autolens_profiling#222 merged 2026-09-10, so branch from current `main`).
 
 This is the **fiducial-tier** baseline (1500/1521 source pixels), not the production
 Euclid/subhalo preset (profiling #235 decision 3 remains open); label it as such so the
@@ -99,7 +100,7 @@ matrix-free comparison is like-for-like with every existing A100 pin.
 4. Submits regenerated on the worktree-safe template (derived `AP_ROOT`, `python3 -u`,
    revision echo, no gpu-1 exclude), each exporting a fresh per-job
    `JAX_COMPILATION_CACHE_DIR`; new `submit_{breakdown,runtime}_imaging_delaunay_nn_a100_hst_fp64_sparse`.
-   Branch from main after #222 merges.
+   Branch from current `main` (#222 merged 2026-09-10).
 5. One same-node A100 window running all legs (breakdown with `--split-setup --vmap-batch 16`,
    runtime plain so the vmap phase is measured — `--vmap-probe` exits before it); results
    JSONs committed from the RAL worktree.

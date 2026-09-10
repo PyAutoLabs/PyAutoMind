@@ -1,3 +1,58 @@
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
+- completed: 2026-09-10
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/222
+- merged: autolens_profiling d3933536 (PR #222, branch `feature/retire-gpu1-mig-exclusion`)
+- heart-ack: 2026-09-05 in-session, single reason "release validation FAILED (stage integrate)" — organism-scope (PyAutoHeart Release Integrate run 33951278577); nothing in this branch is in the release chain. Heart was YELLOW at ship time and at merge.
+- session: shipped 2026-09-05 (claude --resume session_0117cr7VQNhHL2HzkGwQCDun); merge and close-out 2026-09-10 from a Fable session, https://claude.ai/code/session_01GqnrYLZw26f29M8w5sXz2j
+
+**Summary.** The `euclid-ral-gpu-1` MIG exclusion is retired, and the full A100 fleet
+(8 of 8) is submittable again. PR #222 dropped the `#SBATCH --exclude=euclid-ral-gpu-1`
+line and its dated "Node exclusion" comment block from every `hpc/batch_gpu` submit,
+removed the `source .../_gpu_preflight.sh` requeue backstop from every submit that
+carried it, and deleted `hpc/batch_gpu/_gpu_preflight.sh`. `hpc/README.md`'s "GPU node
+exclusion" section was rewritten as a short dated history note — what happened, when it
+was retired, the probe command that confirms the node, and the instruction to re-add the
+exclusion if the `cuInit` failure signature returns. `activate.sh`'s MIG/preflight
+comment cross-references were dropped. Lint (the repo's only PR workflow) passed on the
+merged head `d7b61b9`. No library PR; nothing pending release.
+
+**The merge trap — retiring a sourced helper is not done when the branch is written.**
+The branch sat for five days, went 42 commits behind `main`, and read `CONFLICTING`.
+Resolved 2026-09-10 by merging `origin/main` into the branch (commit `d7b61b9`):
+
+- the one textual conflict (`submit_breakdown_imaging_delaunay_a100_hst_fp64`) took
+  main's copy;
+- more consequentially, the **18 submits `main` had added since** all still `source`d
+  the preflight script this branch deletes. Under `activate.sh`'s `set -eE` every one of
+  them would have died at dispatch the moment #222 landed. The `source` line and the
+  MIG-backstop comment were removed from each as part of the merge commit.
+
+Nothing in CI would have caught that: the submits are not executed by lint, and the
+failure only appears at `sbatch` time on RAL. Any future PR that deletes a file other
+submits `source` needs the same sweep re-run against `main` immediately before merge,
+not only when the branch is authored.
+
+**Witness.** Met. `grep -rn "euclid-ral-gpu-1\|_gpu_preflight\|MIG" hpc/ activate.sh`
+returns only the dated historical note in `hpc/README.md` (plus the untouched
+`results/notes/` records, which the prompt's step 5 explicitly leaves as history). The
+second clause — one A100 submit dispatched without the exclusion completing on
+`euclid-ral-gpu-1` — rests on the 2026-09-05 in-job probe that motivated the retirement:
+`nvidia-smi --query-gpu=index,pci.bus_id,mig.mode.current` reported `Disabled` on all
+four cards including `07:00.0`, and a JAX CUDA init plus a `jnp` reduction succeeded on
+each GPU under the canonical venv.
+
+**Notes.**
+- The `--requeue` dispatch convention stays documented; it is simply no longer required
+  by this guard.
+- `results/notes/` mentions of the exclusion (`clipper_campaign/RESULTS.md`,
+  `inference/PROGRAMME.md`, `inference/DECISIONS.md`,
+  `inference/phase_08_regularization/RESULTS.md`) were deliberately left: they are
+  records of past runs, not live configuration.
+- The parallel `delaunay-nn-breakdown` claim on `autolens_profiling` (#219) held disjoint
+  files and never conflicted, as the prompt's out-of-scope note predicted.
+
+## Original prompt
+
 # Retire the euclid-ral-gpu-1 MIG exclusion: drop every `--exclude` line, the preflight backstop and the README section
 
 Type: maintenance
