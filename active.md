@@ -1,5 +1,16 @@
 # Active Tasks
 
+## smoke-jax-cache-threshold
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/221
+- prompt: active/smoke_jax_cache_threshold.md
+- issued: 2026-09-10
+- session: claude --resume session_01NWYEAsAsN5cfuqqBoYTHho
+- status: library-dev
+- location: web-github (session clone, no task worktree; branch claude/jax-cache-threshold-smoke-nfobes)
+- worktree: n/a — web-github session clone (/home/user/PyAutoHeart)
+- repos:
+  - PyAutoHeart: claude/jax-cache-threshold-smoke-nfobes
+
 ## a100-pixelized-baseline
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
 - prompt: active/a100_pixelized_likelihood_baseline_for_matrix_free.md

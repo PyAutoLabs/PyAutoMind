@@ -42,30 +42,22 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 160 |
+| [Backlog](#backlog) (`draft/`) | 159 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 15
+**Highest priority** (filed as `high`) — showing 12 of 14
 
 <details><summary>📋 <a href="draft/bug/euclid/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix, columns silently blank</a> — euclid · small · safe · high</summary>
 
 ```
 /start_dev draft/bug/euclid/catalogue_latent_prefix_blank_columns.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/pyautoheart/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole smoke leg</a> — pyautoheart · small · supervised · high</summary>
-
-```
-/start_dev draft/refactor/pyautoheart/smoke_jax_cache_threshold.md
 ```
 
 </details>
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 87
+<details><summary>📋 <a href="draft/bug/health_fixes/samples_parameter_paths.md">Fix release result/sample parameter-path regressions</a> — health_fixes · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -272,6 +272,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/remove_fits_dataset_from_remaining_plots_yaml_copies.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole smoke leg</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/221">issue #221</a> — issued 2026-09-10 — library-dev</summary>
+
+```
+/start_dev active/smoke_jax_cache_threshold.md
 ```
 
 </details>
@@ -477,7 +485,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
+**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -1361,15 +1369,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 11</summary>
-
-<details><summary>📋 <a href="draft/refactor/pyautoheart/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole smoke leg</a> — pyautoheart · small · supervised · high</summary>
-
-```
-/start_dev draft/refactor/pyautoheart/smoke_jax_cache_threshold.md
-```
-
-</details>
+<summary><b>refactor</b> — 10</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
 
@@ -1609,38 +1609,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>performance</b> — 3 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: ci, performance</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'performance' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/refactor/pyautoheart/smoke_jax_cache_threshold.md
-- draft/refactor/autonerves/config_yaml_parse_cache.md
-- draft/refactor/autofit/parameterization_prior_count_blowup.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/refactor/pyautoheart/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole…</a> | pyautoheart | small | high | formalised |
-| <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> | autonerves | medium | medium | formalised |
-| <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> | autofit | medium | medium | formalised |
-
-</details>
-
-<details>
 <summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1840,6 +1808,36 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
+<details>
+<summary><b>jax-compile · pixelization</b> — 2 task(s) · 4 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'jax-compile · pixelization' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+- draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> | autoarray | medium | medium | formalised |
+| <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular…</a> | autolens | medium | normal | draft |
+
+</details>
+
 _Showing 8 of 24 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -1853,7 +1851,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh…</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
-| 2026-09-10 | filed | <a href="draft/refactor/pyautoheart/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole…</a> |
+| 2026-09-10 | issued | <a href="active/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole…</a> |
 | 2026-09-10 | issued | <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent…</a> |
@@ -2233,7 +2231,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-122 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+121 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2278,11 +2276,11 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md`
-- _… and 82 more_
+- _… and 81 more_
 
 </details>
 
-18 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+17 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2302,7 +2300,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/refactor/autofit/parameterization_prior_count_blowup.md — unknown theme keyword(s): performance`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
-- `draft/refactor/pyautoheart/smoke_jax_cache_threshold.md — unknown theme keyword(s): performance, ci`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
