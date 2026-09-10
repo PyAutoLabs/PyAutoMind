@@ -9,8 +9,9 @@ Themes:
 - notebooks
 Difficulty: small
 Autonomy: safe
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: A grep for `shear=af.Model(al.mp.ExternalShear) if i == 0 else None` under `scripts/group/` returns nothing — all four named sites hold the shear in a `shear_galaxy` at (0.0", 0.0") — the traced grid stays `np.allclose` to the pre-change one (this is presentational, per #378), and the smoke suite is green with notebooks and `workspace_index.json` regenerated.
+Review-minutes: 0
 Unattended: ready
 Priority: normal
 Parent: complete/2026/07/multi-galaxy-imaging-parity.md

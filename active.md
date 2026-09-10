@@ -62,8 +62,13 @@
     lets that stale value beat the witness, so a witness written alone moves
     nothing. Baseline 2026-09-10, derived over the 110 ready prompts:
     5 notify / 12 glance / 93 judge; fully witnessed the same set grades
-    28 notify / 74 glance / 8 judge. Pass 1 = the `workspaces` group (15).
-    Pass-by-pass counts are recorded in the prompt itself.
+    28 notify / 74 glance / 8 judge.
+    Pass 1 (`workspaces`, 15) SHIPPED 2026-09-10: 15 judge -> 7 notify /
+    8 glance / 0 judge, 300 seed review-minutes -> 24. Backlog now 109 ready,
+    36 witnessed, derived 12 notify / 19 glance / 78 judge.
+    Next: `autoarray` (10), then autolens (9), autofit (8),
+    autolens_workspace (6), autolens_profiling (5), tail pass (~26 singletons).
+    Pass-by-pass counts are in the prompt's `## Campaign log`.
 
 ## remove-fits-dataset-plots-yaml
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/62
@@ -85,31 +90,3 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
-
-## jax-import-order-x64
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/139
-- issued: 2026-09-10
-- prompt: active/jax_import_order_defeats_x64.md
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/140
-- session: claude --resume session_01XMA4HZYcVEzayYaRmS2uHi
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/jax-import-order-x64
-- repos:
-  - autolens_workspace_developer: feature/jax-import-order-x64
-- summary: |
-    Launched with an explicit --auto; effective autonomy `supervised`
-    (min of the prompt header and the `bug` work-type cap), so the ship
-    checkpoint resolves to decide-and-flag and the run ends at PR-open.
-    Scope corrected at the plan gate and human-approved: 48 offenders, not
-    the 33 the prompt's line-number grep reported — 6 `jax_profiling/
-    simulators/*` are already guarded, and 25 `searches_minimal/` scripts
-    the grep could not see are. Fix is the repo's own guard idiom
-    (`from autolens import jax_wrapper`) rather than an import reorder.
-    Shipped to PR-open 2026-09-10. Ship-gate leg 4 (Heart) COULD NOT RUN —
-    PyAutoHeart is not in this session's repo scope and `pyauto-heart` is not
-    on PATH; it is recorded as not-consulted, never as passed, so the gate is
-    incomplete and the human should know that before merging. Legs 1 and 2 are
-    n/a by the gate's own applicability rule (no test dir, no smoke list) with
-    substitute evidence named on the PR. One `decision-taken` flag: the six
-    redundant `jax.config.update` calls were kept, not deleted as the plan
-    said, because three carry comments that make deletion a judgement.
