@@ -18,6 +18,7 @@ Witness: three new chapter-1 scripts run green under `python .github/scripts/run
 Review-minutes: 45
 Unattended: needs-slicing
 Filed: 2026-09-10
+Issued: 2026-09-10
 
 Original request (verbatim):
 

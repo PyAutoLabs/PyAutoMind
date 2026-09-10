@@ -1,5 +1,14 @@
 # Active Tasks
 
+## howtofit-ch1-gradients-details
+- issue: https://github.com/PyAutoLabs/HowToFit/issues/49
+- prompt: active/chapter_1_gradients_details_bayesian.md
+- issued: 2026-09-10
+- session: claude --resume session_014y2CwNSY8yBHwRpt8Mnqpv
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/howtofit-ch1-gradients-details
+- repos:
+
 ## start-here-mode
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/38
 - prompt: active/start_here_mode.md
