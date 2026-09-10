@@ -1,5 +1,29 @@
 # Active Tasks
 
+## autoarray-mapper-zero-signal-nan
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/548
+- issued: 2026-09-10
+- prompt: active/mapper_adapt_zero_signal_jax_nan.md
+- session: claude --resume session_01J1ZtfVTWRCc5za6SmU2apo
+- status: library-dev
+- location: web-github (session clone at /home/user/pyautoarray, no task worktree, no gh)
+- worktree: n/a — web-github session clone
+- repos:
+  - PyAutoArray: claude/autoarray-mapper-zero-signal-nan-jcck8q
+- summary: |
+    Library-only, despite the prompt's second repo: the autolens_workspace_test
+    script was already corrected (its own body says so), so nothing is owed
+    there. Safe-denominator fix at mapper_util.py:84 plus the same guard on the
+    step-8 exponentiation (`0.0 ** signal_scale` has an infinite derivative for
+    signal_scale < 1), with eight tests incl. NumPy/JAX parity and a finite
+    jax.grad. Sharpened diagnosis vs the prompt: the two backends already agreed
+    in the FORWARD pass; the divergence is NumPy's discarded RuntimeWarning and
+    the NaN under grad. Ask (3)'s sweep (AST pass, not grep) found three live
+    hits of the same class in autoarray/fit/fit_util.py — chi_squared_map_with_mask_from
+    is on the likelihood-gradient path and reproduces as grad = [2., 1., nan].
+    Filed separately as draft/bug/autoarray/fit_util_masked_division_grad_nan.md
+    on the human's call, rather than widening this PR into another module.
+
 ## scientific-workflow-language
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1595
 - issued: 2026-09-09

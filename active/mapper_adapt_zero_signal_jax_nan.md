@@ -10,6 +10,7 @@ Autonomy: safe
 Priority: medium
 Status: formalised
 Filed: 2026-09-06
+Issued: 2026-09-10
 
 Found during the phase-6 rebuild of the ci-timing-fast-tests epic
 (autolens_workspace_test#293 / #294). In
