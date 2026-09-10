@@ -16,10 +16,11 @@
 - issued: 2026-09-09
 - session: claude --resume session_01JsGeXEmGmSJzvxzC7GUpZo
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/61
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/68
 - status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/euclid-catalogue-rebuild-prep
 - repos:
-  - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-catalogue-build-and-parity
 - delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
 
 ## witness-campaign
