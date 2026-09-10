@@ -66,7 +66,7 @@ one line, or bumping `PYAUTO_CACHE_EPOCH` to drop the fat caches.
   Both closed unmerged as superseded (#314's other half, the `test-results/`
   gitignore, had already landed as #313).
 - `lib-tests.yml`: PyAutoHeart#223 exports the same `"0"` in the unit gate's
-  `Run tests` step, with a wiring test; open, awaiting CI + `/prm`. Unmeasured —
+  `Run tests` step, with a wiring test; merged 6afdbd4c -> main (2026-09-10). Unmeasured —
   same mechanism, priced by the same board sidecar.
 
 ### Follow-ups as first written (superseded by the block above)
