@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1366 records across 8 buckets.
+1374 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -126,6 +126,7 @@ markers; everything below GENERATED is rebuilt.
 - [aggregator-temp-unzip](2026/09/aggregator-temp-unzip.md)
 - [agwt-multi-delaunay-release-timeout](2026/09/agwt-multi-delaunay-release-timeout.md)
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under
+- [arcsec-after-decimal](2026/09/arcsec-after-decimal.md) — - `arcsec_after_decimal` is now a per-call keyword on `plot_array`, `plot_grid`
 - [autofit-prodigy-49](2026/09/autofit-prodigy-49.md)
 - [batch-collect](2026/09/batch-collect.md) — closed completed 2026-09-02
 - [batch-no-park-at-ship](2026/09/batch-no-park-at-ship.md)
@@ -152,6 +153,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
 - [cortex-scorer-where-paths](2026/09/cortex-scorer-where-paths.md)
 - [cortex-tasks-not-phases](2026/09/cortex-tasks-not-phases.md)
+- [cron-delivery-headroom](2026/09/cron-delivery-headroom.md)
 - [dataset-fits-image-only](2026/09/dataset-fits-image-only.md) — `dataset.fits` was written twice per search since PyAutoGalaxy#479 / PyAutoLens#574 (`files/` from `save_attri…
 - [defer-import-scipy-special-pyplot](2026/09/defer-import-scipy-special-pyplot.md)
 - [delaunay-adapt-split-regularization](2026/09/delaunay-adapt-split-regularization.md)
@@ -180,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [hands-board-family-footer](2026/09/hands-board-family-footer.md)
 - [heart-board-family-footer](2026/09/heart-board-family-footer.md)
 - [heart-worktree-drift-hidden-dirs](2026/09/heart-worktree-drift-hidden-dirs.md) — closed, completed
+- [howtolens-ch3-mask-overlay](2026/09/howtolens-ch3-mask-overlay.md)
 - [human-readable-first-docs](2026/09/human-readable-first-docs.md) — Swapped every user-facing doc (PyAutoLens / PyAutoGalaxy README + docs/, autolens_workspace / autogalaxy_works…
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
 - [image-source-mappings-p2](2026/09/image-source-mappings-p2.md)
@@ -201,6 +204,7 @@ markers; everything below GENERATED is rebuilt.
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
 - [mesh-shape-honours-small-datasets-cap](2026/09/mesh-shape-honours-small-datasets-cap.md)
 - [mge-group-source-basis-scale](2026/09/mge-group-source-basis-scale.md)
+- [mge-jit-regression-rebaseline](2026/09/mge-jit-regression-rebaseline.md)
 - [mge-label-degeneracy](2026/09/mge-label-degeneracy.md)
 - [mgl-slam-batch-home](2026/09/mgl-slam-batch-home.md)
 - [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
@@ -233,6 +237,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-post-235-followups](2026/09/profiling-post-235-followups.md)
 - [profiling-production-representative](2026/09/profiling-production-representative.md)
 - [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)
+- [release-smoke-env-declarations](2026/09/release-smoke-env-declarations.md)
 - [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z
@@ -244,6 +249,7 @@ markers; everything below GENERATED is rebuilt.
 - [small-datasets-cap-stamp-stops-resimulation](2026/09/small-datasets-cap-stamp-stops-resimulation.md)
 - [smoke-ci-caches-jax-datasets](2026/09/smoke-ci-caches-jax-datasets.md)
 - [smoke-fixed-overhead](2026/09/smoke-fixed-overhead.md)
+- [smoke-relevance-gate](2026/09/smoke-relevance-gate.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
@@ -358,6 +364,7 @@ markers; everything below GENERATED is rebuilt.
 - [health-conductor-stale-verdict](2026/08/health-conductor-stale-verdict.md)
 - [heart-green-validation-ingest](2026/08/heart-green-validation-ingest.md)
 - [heart-red-guarded-sample-escape](2026/08/heart-red-guarded-sample-escape.md) — Closed the escape path that kept release validation RED after
+- [heart-smoke-table-autocti](2026/08/heart-smoke-table-autocti.md)
 - [history-policy-generated-block](2026/08/history-policy-generated-block.md)
 - [howto-setup-notebook-audit](2026/08/howto-setup-notebook-audit.md) — none — run end-to-end from a cloud session; the six PRs are the record
 - [howto-smoke-all-tutorials](2026/08/howto-smoke-all-tutorials.md)
@@ -436,6 +443,7 @@ markers; everything below GENERATED is rebuilt.
 - [nfw-truncated-potential-accuracy](2026/08/nfw-truncated-potential-accuracy.md)
 - [normalise-auto-simulate-guard-idiom](2026/08/normalise-auto-simulate-guard-idiom.md)
 - [notebook-quotes-string-literal](2026/08/notebook-quotes-string-literal.md)
+- [notebook-setup-notebook-drift-siblings](2026/08/notebook-setup-notebook-drift-siblings.md)
 - [notebook-setup-notebook-regen-drift](2026/08/notebook-setup-notebook-regen-drift.md)
 - [nss-remainline-mainline-blackjax](2026/08/nss-remainline-mainline-blackjax.md)
 - [nufft-parity-full-datasets](2026/08/nufft-parity-full-datasets.md)

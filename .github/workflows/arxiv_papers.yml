@@ -41,7 +41,7 @@ name: pyauto-arxiv-papers
 
 on:
   schedule:
-    - cron: "0 2 * * 1-5"
+    - cron: "7 2 * * 1-5"   # weekdays 02:07 UTC — deliberate odd minute; do not round (#396)
   workflow_dispatch:
     inputs:
       lookback_hours:

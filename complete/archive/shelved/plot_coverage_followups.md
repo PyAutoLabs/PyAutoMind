@@ -1,5 +1,20 @@
 # plot coverage — follow-ups deferred from plot-coverage-gaps
 
+> **SPLIT 2026-09-09 — archived, not shelved.** This file was a container of
+> four independent follow-ups and said so in its own text ("Each is independent;
+> do **not** bulk-issue them as a series"). It carried no `Type:`/`Difficulty:`/
+> `Autonomy:` header, which `PyAutoBrain/AUTONOMY.md` reads as `human-required`,
+> so it could never be issued as one task. It has been split into one prompt per
+> item and archived here so it leaves the pickable backlog:
+>
+> - item 1 → `draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md`
+> - item 2 → `draft/docs/workspaces/demo_subplot_ellipse_errors.md`
+> - item 3 → `draft/docs/autolens/plot_rst_missing_exports.md`
+> - item 4 → already shipped (PyAutoLens#670); its deferred workspace sweep is
+>   `draft/docs/workspaces/interferometer_dirty_images_call_sites.md`
+>
+> Kept verbatim below as the record of where those four came from.
+
 Filed: 2026-07-30 (backfilled from git)
 Themes:
 - visualization
@@ -124,3 +139,4 @@ name, or leave it — then sweep the workspace calls accordingly.
   `scripts/multi/features/imaging_and_interferometer/modeling.py`)
 
 </details>
+

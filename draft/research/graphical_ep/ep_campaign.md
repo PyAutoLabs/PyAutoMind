@@ -22,6 +22,10 @@ its own prompt file. Update the table as phases ship.
 
 1. An analytic Gaussian model that statistically demonstrates the graphical
    and EP source code is correct (means *and* errors against closed form).
+   The model shipped in phase 1 as a single-seed CI gate; the *statistical*
+   half moved to the Cortex on 2026-09-09 as science project
+   `analytic_gaussian` (task `tasks/analytic_gaussian/ensemble_parity.md`),
+   which runs it as a seed ensemble on RAL.
 2. slope_hierarchy cosmology: accurate graphical + EP results, EP scaling to
    100+ datasets, fast, interpretable/inspectable output for a scientist,
    running on RAL A100s.
@@ -30,12 +34,12 @@ its own prompt file. Update the table as phases ship.
 
 ## Phases
 
-| # | Phase | Prompt | State (updated 2026-09-08) |
+| # | Phase | Prompt | State (updated 2026-09-09) |
 |---|-------|--------|--------------------|
-| 1 | Analytic Gaussian benchmark (the keystone — start here) | `complete/2026/09/analytic-gaussian-benchmark.md` | **SHIPPED 2026-09-02** — autofit_workspace_test#91, PR #92 merged `54af208398ae7fd336d3d9bca363776ad50da037` (`scripts/graphical/analytic_*.py`); record `complete/2026/09/analytic-gaussian-benchmark.md`. Verdict: closed form, minimal EP and the graphical joint fit agree everywhere; **every failing cell is autofit's EP column, including the exactly Gaussian leg A**. Six PyAutoFit mechanisms root-caused and filed (see Findings below); the autofit-parity scripts are parked NEEDS_FIX until they land, the closed-form reference + minimal EP are curated into the smoke gate. **Review follow-ups shipped 2026-09-07**: Codex review of PR #92 (autofit_workspace_test#96 / PR #97, record `complete/2026/09/ep-review-92-followups.md`) — the θ = σ Laplace leg is the STALE state, not a collapse; `log_sigma` moments pinned against quadrature. D6 shipped 2026-09-07 — findings table complete |
+| 1 | Analytic Gaussian benchmark (the keystone — start here) | `complete/2026/09/analytic-gaussian-benchmark.md` | **SHIPPED 2026-09-02** — autofit_workspace_test#91, PR #92 merged `54af208398ae7fd336d3d9bca363776ad50da037` (`scripts/graphical/analytic_*.py`); record `complete/2026/09/analytic-gaussian-benchmark.md`. Verdict: closed form, minimal EP and the graphical joint fit agree everywhere; **every failing cell is autofit's EP column, including the exactly Gaussian leg A**. Six PyAutoFit mechanisms root-caused and filed (see Findings below); the autofit-parity scripts are parked NEEDS_FIX until they land, the closed-form reference + minimal EP are curated into the smoke gate. **Review follow-ups shipped 2026-09-07**: Codex review of PR #92 (autofit_workspace_test#96 / PR #97, record `complete/2026/09/ep-review-92-followups.md`) — the θ = σ Laplace leg is the STALE state, not a collapse; `log_sigma` moments pinned against quadrature. D6 shipped 2026-09-07 — findings table complete. **Ensemble scale-up 2026-09-09**: the keystone became Cortex science project `analytic_gaussian` (PyAutoCortex PR #27, human merge pending), the third alongside `slope_hierarchy_scale` and `ic50_workspace`. Wave 1 = job `342413_[0-199]`, 200 independent draws at N=5 on the `ral` partition, submitted against RAL PyAutoFit mirror `66f9f8d5d` (verified to contain #1580 first). Its witness was pre-registered before submission. **First post-D1–D6 measurement: leg A autofit EP is now EXACT** (mu 50.8595 ± 4.1104 against the same reference, a = b = 0.000) — the leg that parked `analytic_gaussian.py` NEEDS_FIX; leg B returns σ 9.37 ± 3.57 against 6.57 ± 2.88, outside the cell tolerance, inside the closed-form [q05, q95], not collapsed. The ensemble turns that caveat into a rate and gives the moment-matching cure a number to beat |
 | 2 | Scatter-collapse cure or caveat | `complete/2026/09/ep-scale-collapse-basin-cure-or-caveat.md` | **SHIPPED 2026-09-02** — cure of the mechanism (#1558/#1560/#1562) + caveat (README §3.5); record `complete/2026/09/ep-scale-collapse-basin-cure-or-caveat.md`; cure follow-on filed `draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md` (human decision). Close-out 2026-09-02: `complete/2026/09/ep-collapse-unpark.md` (autofit_workspace_test#94 / PR #95) curated `analytic_gaussian_collapse.py` into the smoke gate (RECOVER 5/5). **Codex review of the fixes shipped 2026-09-07** as bundle `ep-phase2-review`: PyAutoFit#1572 coupled-transform covariance in `from_mode` (`transformed-from-mode-coupled-covariance.md`), #1573 P1 deterministic variables kept cavity covariance on the fd-Hessian path (`ep-laplace-deterministic-hessian.md`), #1574 fully reverted projection counted as updated (`ep-full-revert-not-updated.md`), #1576 + autofit_workspace_test#98 per-(factor, variable) stale tracking with `reverted_variables` in `ep_history.csv` (`ep-stale-tracking-per-variable.md`) |
 | 3 | Graphical (non-EP) JAX scaling | → PyAutoCortex `tasks/slope_hierarchy_scale/n25_scale_up.md` (the task of record for project `slope_hierarchy_scale`; carries the measurement addendum) and `graphical_scoping.md` sub-tasks | **gated 2026-09-08** — a fresh Cortex science project `slope_hierarchy_scale` was born for it (Cortex PR #25, issue Cortex#24): the wrapped-up N=5 tree was vaulted to `Science/z_projects_complete/slope_hierarchy` and its row retired, the code borrowed into `Science/slope_hierarchy_scale`, and the task moved `planned → gated` on `Gates: PyAutoFit#1405, #1558, #1560, #1562`. PR #25 **merged 2026-09-08** (merge `866d8f0`; issue Cortex#24 closed, record `complete/2026/09/slope-hierarchy-scale-birth.md`). Next: `/cortex` → `move tasks/slope_hierarchy_scale/n25_scale_up.md ready` → submits the N=25 runs |
-| 4 | IC50 EP end-to-end + scale ladder | → PyAutoCortex `tasks/ic50_workspace/ep_scale_up.md` (phase 1 of project `ic50_workspace`; dev companion stays in the Mind as `feature/autofit/ep_lbfgs_jax.md`) | **moved to the Cortex 2026-09-01** (was `research/graphical_ep/ic50_ep_scale_up.md`); Cortex state `planned`, project row `dormant`. Not gated alongside phase 3 on 2026-09-08: the `ic50_workspace` checkout is dirty and has no `results/` witness path, so it stays dormant until the checkout is cleaned and a witness path exists. The companion dev prompt is `draft/feature/autofit/ep_lbfgs_jax.md` — unblocked by phases 1–2, but its target is a personal checkout outside the workspace, so it waits for a human-launched session |
+| 4 | IC50 EP end-to-end + scale ladder | → PyAutoCortex `tasks/ic50_workspace/ep_scale_up.md` (phase 1 of project `ic50_workspace`; dev companion stays in the Mind as `feature/autofit/ep_lbfgs_jax.md`) | **RUNNING ON RAL 2026-09-09 — parity at N=5 achieved.** The 2026-09-08 blockers (dirty checkout, no `results/` witness path, row `dormant`) are all cleared; Cortex row `active` and task `submitted` via PyAutoCortex PR #26 (human merge pending). Runs `342408` (EP, sim, nlive 150, max_steps 12, 56.7 s) and `342409` (graphical joint Dynesty, sim, nlive 150, 21.4 s), partition `ral`, against a mirror **verified to contain #1580** — so unlike phase 3's EP arm these carry the full D1–D6 wave. **Result: 33/33 within 3σ for both methods, 0/33 cross-method disagreements** (`results/graphical_ep_comparison_sim.txt`). Caveats: N=5 only, the scale ladder is not started; EP's median σ is still 2.3× the graphical fit's on `hill_coef` (0.980 vs 0.423); and the gain over the archived `_v1` run confounds the D1–D6 fixes, nlive 50→150 and laptop→RAL. Setup shipped as 5 commits on `feature/ep-phase4-ral-setup` (unpushed, public repo — see Phase 4 notes below). The companion dev prompt `draft/feature/autofit/ep_lbfgs_jax.md` is still open and is now the scale lever, not a blocker |
 | 5 | Diagnostics sufficiency checkpoint | no prompt yet — deliberate | judge after phases 2 & 4 produce real runs; the 2026-07 diagnostics wave (#1330/#1335) shipped and caught #1383; graphical_scoping sub-tasks 5–6 (summary JSON, dashboard) are the likely follow-ups; concrete item from phase 1–2: STALE = zero SUCCESS updates is now warned by the library (#1562); 2026-09-07: #1574/#1576 extended STALE to full reverts and to per-(factor, variable) tracking, and `ep_history.csv` gained `reverted_variables`; the BIASED-TIGHT guard calibration stays a human call |
 | 6 | Profiling: autofit_profiling repo + two epics | `research/autofit/autofit_profiling_bootstrap.md` | filed; repo creation human-gated |
 
@@ -66,6 +70,60 @@ minimal EP) — that is the analytic ceiling any autofit fix should be judged
 against, not zero. Phase 5's diagnostics checkpoint gains a concrete item:
 zero SUCCESS updates on a factor is a STALE result that no library warning
 currently reports.
+
+## Phase 4 notes (2026-09-09) — IC50 setup
+
+The setup was almost entirely defect-clearing, not new science: both fit arms,
+all 8 SLURM submit scripts and a 560-line `hpc/sync` already existed and had
+never once been run end to end. Five defects would each have blocked or
+corrupted a RAL run, all now fixed in `ic50_workspace`:
+
+1. `--partition=cpu` in all four CPU submit scripts — **RAL has no `cpu`
+   partition** (`ral`, `gpu`, `cam`, `imp`). Every CPU submission would have
+   been rejected. `slope_hierarchy_scale`'s generic template carries the same
+   bug; its working script uses `ral`.
+2. `PROJECT_PATH` was never exported to `sbatch`, though every submit script
+   begins `source $PROJECT_PATH/activate.sh`.
+3. `activate.sh` put a **two-month-stale `PyAutoConf` checkout on PYTHONPATH**,
+   shadowing the pip-installed package, and omitted `PyAutoNerves`. `autoconf`
+   is not even an importable module on RAL any more — the line was pure legacy.
+4. A plain `push` shipped **5.6 GB** (the rnaseq CSV plus a symlink into a
+   sibling `concr` checkout that does not exist on RAL). Excluding them takes
+   it to 1.7 MB.
+5. `PULL_DIRS=(output)` would never have retrieved `results/` — the very path
+   the Cortex witness glob watches.
+
+Two findings worth carrying forward:
+
+- **The existing witness under-reports.** `ep_sim.py`/`graphical_sim.py` assert
+  only on `coef_mean`; `coef_matrix` and `hill_coef` are printed but never gate.
+  Run against the archived `_v1` sidecars, the new comparator found the
+  graphical arm had 3/33 parameters beyond 3σ that no run ever reported as a
+  failure. Widening the assertion is an open follow-up.
+- **IC50's EP cannot hit the dead-pool-worker hang.** It passes
+  `force_x1_cpu=True`, so Dynesty runs with no process pool — the failure mode
+  that has had phase 3's `342351` stuck for 27+ hours is structurally absent
+  here.
+
+`concr` consolidation (assessed 2026-09-09): `ic50_workspace` is canonical;
+concr's cancer code has been frozen since 2026-05-07. Ported
+`compare_graphical_ep.py` (the parity table). Still open: `one_by_one.py` (no
+per-dataset baseline exists here), `graphical_nuts.py` (a second sampler, only
+ever tested at n=3). **Do not copy concr's ~3,500 preprocessed drug-1073
+datasets** — their `x` is `ln(dose index)`, not `ln(µM)`, and their latent is
+20-dim against this workspace's 5; the corpus predates concr's own
+`n_latent 20→5` reduction. Scaling real data means re-running
+`preprocess_real.py` with `N_DATASETS` raised. **Sign convention:** the
+inverted form `n*(log_ic50 - x)` is in `concr/model_api.py`, all of
+`scripts/cancer`, all of `scripts/cancer_sim` **and `simulators/cancer_sim.py`**
+— concr's own simulator. Only `cancer_legacy/real/{ep,viz_hill}.py` match the
+canonical decreasing form. `concr/model_api.py`'s log-likelihood is separately
+broken (`+0.5·z·z`, no `/noise_sigma`) and must never be copied.
+
+Scale-ladder blocker now removed: `--n_datasets` / `--nlive` / `--max_steps`
+are CLI flags on the sim scripts (they were module constants). `simulator.py`,
+`preprocess_real.py`, `ep_real.py` and `graphical_real.py` still hard-code
+their counts.
 
 ## Sequencing
 
