@@ -10,8 +10,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: draft
-Consequence: judge
-Review-minutes: 25
+Consequence: notify
+Witness: A committed autogalaxy_workspace script calls `ag.plot.subplot_ellipse_errors` with a `fit_pdf_list` built from a real ellipse fit's posterior samples taken off a `Result` — a grep shows no parameter perturbation constructing them — and the rendered figure's error region differs between ellipses.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-09
 

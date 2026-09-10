@@ -13,8 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: draft
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: `start_here.py`, `simulator.py` and `modeling.py` carry the corrected Bergamini+19 conventions (tied exponents at gamma=0.2, vanishing unscaled member cores, r_cut_ref ~5"), the regenerated `cluster/simple` dataset is committed in the same change as the simulator truths that produced it, and `modeling.py` and `start_here.py` both run end-to-end against that regenerated dataset.
+Review-minutes: 0
 Unattended: ready
 Epic: cluster-strong-lensing
 Phase: 10

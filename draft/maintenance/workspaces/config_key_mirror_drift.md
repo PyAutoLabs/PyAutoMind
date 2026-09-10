@@ -13,8 +13,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: A re-run of the `/hygiene config` recursive key-path diff reports only the omissions this prompt names as deliberate (`logging.total_files_open`, and the two REFUTED keys that are library-side dead entries); all three workspaces load under `PYAUTO_SKIP_WORKSPACE_VERSION_CHECK=1` with no config-key error, and a plot using one of the mirrored notation labels renders it.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-13 (backfilled from git)
 
