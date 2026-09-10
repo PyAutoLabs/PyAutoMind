@@ -15,18 +15,6 @@
 - heart-ack: "2026-09-10 YELLOW, no RED: workspace validation not passing (cloud#34099198772), three profiling-drift rows, release validation incomplete - all organism-scope; the one autolens_test entry named (scripts/imaging/delaunay.py) is pre-existing on main and passes in the local 31/31 suite."
 - validation: "local run_smoke.py 31/31 PASS (smoke_tests.txt 29 -> 31 entries); latent_integration_smoke.py 44.3s and latent_integration_smoke_jax.py 28.3s, both well under the 300s CI cap; all four guarded regressions reintroduced by monkeypatch and each failed its script."
 
-## howtofit-ch1-gradients-details
-- issue: https://github.com/PyAutoLabs/HowToFit/issues/49
-- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/50
-- heart-ack: 2026-09-10 in-session, YELLOW, four reasons: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)" and three "profiling drift: runtime/imaging/{mge,mge_mass_jax,pixelization_numba_mge_mass}/…" rows plus "release validation incomplete: no rehearsal for current source" — organism-scope, none touched by this branch
-- prompt: active/chapter_1_gradients_details_bayesian.md
-- issued: 2026-09-10
-- session: claude --resume session_014y2CwNSY8yBHwRpt8Mnqpv
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/howtofit-ch1-gradients-details
-- repos:
-  - HowToFit: feature/howtofit-ch1-gradients-details
-
 ## euclid-catalogue-rebuild-prep
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
 - prompt: active/prepare_the_euclid_pipeline_for_an_ordered.md

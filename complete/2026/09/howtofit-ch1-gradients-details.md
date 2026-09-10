@@ -1,3 +1,50 @@
+## Shipped — 2026-09-10
+
+### PRs
+- HowToFit#50 — https://github.com/PyAutoLabs/HowToFit/pull/50 (MERGED)
+
+### Summary
+Three new chapter 1 tutorials for HowToFit and a renumbering of the prose-only
+scientific-workflow closer to tutorial 8.
+
+- `tutorial_6_gradients.py` — gradients as "which way is up" in tutorial 3's parameter space,
+  finite differencing with a step-size table, JAX autodiff via `Analysis(use_jax=True)` and
+  `jax.grad`, then the MLE / MCMC / nested trio with gradient counterparts (`LBFGS` vs
+  `MultiStartAdam`, `Emcee` vs `BlackJAXNUTS`, `Nautilus` with vmap), closing with errors from
+  curvature (`jax.hessian`, Laplace approximation) against tutorial 5's sampled errors and a
+  posterior-predictive overplot.
+- `tutorial_7_the_details.py` — label-switching degeneracy on `gaussian_x2` and its removal with
+  `add_assertion` (numpy `FitException` vs traced `xp.where` penalty), plateaus at zero
+  normalization with three fixes, the same problems run with nested sampling, MCMC and gradient
+  descent with the interpretation split into what the runs showed and what the mechanisms imply,
+  unphysical parameter combinations and the per-search resample figure of merit, the `clipper`
+  argument, `Value-NaN` vs `Gradient-NaN Lane-Steps` in `search.summary` with the double-`where`
+  trap, and unit cube vs physical space.
+- `tutorial_optional_bayesian_formalism.py` — Bayes' theorem mapped term by term onto tutorials 1–7,
+  with numeric checks, stating up front that HowToFit deliberately teaches without the maths.
+- Chapter README, `start_here.py`, `llms.txt`, `markdown_examples.yaml`, `scripts/README.md`,
+  `notebooks/README.md`, `AGENTS.md` updated; `profile_smoke.yaml` keeps JAX on for tutorials 6
+  and 7; notebooks and navigator catalogue regenerated.
+
+### Session Notes
+- Fable session; three Opus authors in parallel, two Opus integration passes, one Opus ship step.
+- Tutorial 7's first draft described search outcomes its own run log contradicted (Emcee at a poor
+  local solution, MultiStartAdam at a local maximum, nested sampling committed to one mirror with
+  the other at ~zero weight); rewritten to separate observed from expected behaviour and to run
+  nested sampling and MCMC on the plateau problem too. Nautilus replaced by DynestyStatic there
+  (203 s → 68 s).
+- First CI run was red on the navigator workflow's unbatched multi-start check; fixed by passing
+  `batch_size=None` explicitly at the three `MultiStartAdam` call sites (commit 6820558).
+- Heart YELLOW at ship time (organism-scope reasons unrelated to HowToFit), acknowledged in-session.
+- Four installed-PyAutoFit findings from the API survey filed as `draft/bug/autofit/
+  {assertion_repr_recurses_forever, stale_enable_pytrees_register_model_advice_in,
+  emcee_crashes_in_autocorrelation_when_the_chain}.md` and
+  `draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md`.
+- Open drift, not a gate: the executed `markdown/` tree still lacks pages for the three new
+  tutorials until the release-time `generate_markdown.py` run.
+
+## Original prompt
+
 # HowToFit chapter 1: gradients, the details, and Bayesian formalism tutorials
 
 Type: docs
