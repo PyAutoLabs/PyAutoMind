@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 163 |
 
 > **No batch in flight.**
 
@@ -506,7 +506,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
+**163** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 33</summary>
@@ -2249,6 +2249,27 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 </details>
 
 <details>
+<summary><b>autolens-inference</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/scrap_inference_programme.md">Scrap the retired inference programme from autolens_profiling (autolens-inference phase 2)</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/autolens_profiling/scrap_inference_programme.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_inference/slam_base_driver.md">Backend-parameterised SLaM base-run driver, per-stage results and submits (autolens-inference phase 3)</a> — autolens_inference · hard · supervised · high</summary>
+
+```
+/start_dev draft/feature/autolens_inference/slam_base_driver.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>numba-interferometer-revisit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_numba_library_dispatch_insitu.md">Re-measure the numba interferometer crossover in situ, through the library dispatch</a> — autolens_profiling · medium · supervised · medium</summary>
@@ -2321,12 +2342,13 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-19 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+21 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
+- `draft/feature/autolens_inference/slam_base_driver.md — unknown theme keyword(s): inference, slam, jax, numba, hpc`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
@@ -2343,6 +2365,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
+- `draft/maintenance/autolens_profiling/scrap_inference_programme.md — unknown theme keyword(s): inference, gut`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
