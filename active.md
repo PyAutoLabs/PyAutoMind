@@ -1,5 +1,14 @@
 # Active Tasks
 
+## start-here-mode
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/38
+- prompt: active/start_here_mode.md
+- issued: 2026-09-10
+- session: claude --resume session_01BrGfrSxV9xoqCa4v1p9hix
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/start-here-mode
+- repos:
+
 ## a100-pixelized-baseline
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/242

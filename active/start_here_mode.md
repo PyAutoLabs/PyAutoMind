@@ -14,6 +14,7 @@ Priority: high
 Consequence: notify
 Witness: `modes/start_here.md` exists and `AGENTS.md` mode selection routes the README / RTD "start here" prompt (`Begin the "start here" guide for a new user.`) to it; the mode walks all six Contents sections of the RTD Natural Language Inference page in order (Compose the Model, Define the Likelihood, Searches, Model Fit and Results, Saving and Loading, Scientific Workflows), each step hands the user the page's own prompt to type, shows the result (e.g. `model.info`) and invites a variation before moving on; README.md and `PyAutoFit/docs/overview/natural_language.md` say the start-here prompt launches this guided mode.
 Filed: 2026-09-10
+Issued: 2026-09-10
 
 ## Original request (verbatim)
 
@@ -82,3 +83,22 @@ assistant has only `modes/teacher.md` and `modes/assistant.md`, selected in
 - Do not duplicate the RTD prose into the mode file; the mode carries the tour
   logic and points at the page's prompts. Prompts quoted in the mode must match
   the RTD page word for word so the three surfaces stay in lockstep.
+
+## Follow-up requests (verbatim, same session)
+
+> Follow up details: The assistant should then, if it does not already, do a step-by-step guide for a new user to set up inference on
+> their own project. IT shiould begin with paper ingestion or just a description of the science they are doing,
+> then model composition, definining a likelihood function, picking a search and so on. The point is users should
+> ultimately be able to use just natural language to describe everything and then get it going. The autofit_assistant
+> GitHub README.md page is prob gonna need a lot of updating to be more in line with the goal here, which is
+> reallly to have users run these tasks and then "get it".
+
+> The notion of teacher mode and users asking questions to clarify things should be evident throughout.
+
+Scope additions: Part 2 of the mode replays the six steps on the user's own science
+(paper or plain description → model → likelihood → search → fit → results → organise),
+composing `af_adapt_to_domain`, `af_ingest_paper`, `af_wrap_likelihood`,
+`af_compose_model`, `af_configure_search`, `af_run_search`, `start-new-project`; every
+step carries a fixed "ask anything / say teacher mode" footer; README restructured around
+the tour (Getting Started → Setup → The tour step by step → Your own project → Teacher
+mode & HowToFit → License), prompt text unchanged.
