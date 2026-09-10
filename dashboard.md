@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_1_graph_spec.md">Model figures phase 1 — semantic extraction</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1605">issue #1605</a> — issued 2026-09-10 — library-dev</summary>
+<details><summary>📋 <a href="active/model_figures_1_graph_spec.md">Model figures phase 1 — semantic extraction</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1605">issue #1605</a> — issued 2026-09-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1606">PyAutoFit#1606</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/model_figures_1_graph_spec.md
@@ -307,6 +307,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1606](https://github.com/PyAutoLabs/PyAutoFit/pull/1606) — `active/model_figures_1_graph_spec.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
