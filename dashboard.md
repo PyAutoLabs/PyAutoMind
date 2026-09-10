@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 155 |
+| [Backlog](#backlog) (`draft/`) | 156 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -477,7 +477,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**155** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**156** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -741,7 +741,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 30</summary>
+<summary><b>bug</b> — 31</summary>
 
 <details><summary>📋 <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — autofit · large · supervised · high</summary>
 
@@ -907,6 +907,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md">release-integrate must not ingest result files that pre-exist in a workspace repo's…</a> — pyautoheart · large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md
 ```
 
 </details>
@@ -1822,6 +1830,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | filed | <a href="draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md">release-integrate must not ingest result files that pre-exist in a…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
@@ -1831,12 +1840,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
-| 2026-09-09 | issued | <a href="active/prepare_the_euclid_pipeline_for_an_ordered.md">Prepare the Euclid pipeline for an ordered, low-disk DR1-prelim…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-09 | issued | <a href="active/prepare_the_euclid_pipeline_for_an_ordered.md">Prepare the Euclid pipeline for an ordered, low-disk DR1-prelim…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
@@ -1846,12 +1855,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
-| 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-05 | issued | <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
@@ -1861,12 +1870,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
-| 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
@@ -1876,12 +1885,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
-| 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 | 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
@@ -1891,7 +1900,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix…</a> |
 | 2026-08-27 | filed | <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> |
-| 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 
 </details>
 
@@ -2191,7 +2199,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-121 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+122 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2236,7 +2244,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md`
-- _… and 81 more_
+- _… and 82 more_
 
 </details>
 
