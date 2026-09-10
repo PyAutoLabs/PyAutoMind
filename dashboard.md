@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -252,14 +252,6 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/546">issue #546</a> — issued 2026-09-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/547">PyAutoArray#547</a></summary>
-
-```
-/start_dev active/arcsecond_to_decimal.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/prepare_the_euclid_pipeline_for_an_ordered.md">Prepare the Euclid pipeline for an ordered, low-disk DR1-prelim catalogue rebuild</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60">issue #60</a> — issued 2026-09-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/61">euclid_strong_lens_modeling_pipeline#61</a> — ⚠️ gates a Cortex task → tasks/euclid_dr1_prelim/ordered_rerun_catalogue_parity.md</summary>
 
 ```
@@ -290,6 +282,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
@@ -325,6 +318,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
 
@@ -1817,16 +1811,15 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-09 | issued | <a href="active/prepare_the_euclid_pipeline_for_an_ordered.md">Prepare the Euclid pipeline for an ordered, low-disk DR1-prelim…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
-| 2026-09-09 | issued | <a href="active/arcsecond_to_decimal.md">Claude Development Prompt: Arcsecond Tick Label Decimal Placement</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
 | 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
 | 2026-09-08 | filed | <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
+| 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
@@ -1836,12 +1829,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md">Adapt-density mapper: a zero-signal adapt image is NaN on the JAX…</a> |
 | 2026-09-05 | issued | <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
+| 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
@@ -1851,12 +1844,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
+| 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
 | 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
@@ -1866,12 +1859,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
+| 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-08-28 | filed | <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example…</a> |
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
@@ -1881,6 +1874,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-27 | filed | <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-08-26 | filed | <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> |
 | 2026-08-26 | filed | <a href="draft/feature/pyautobrain/board_without_gh.md">The Brain board should work in a session that has no <code>gh</code></a> |
+| 2026-08-24 | filed | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> |
 
 </details>
 

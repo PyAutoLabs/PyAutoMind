@@ -1,3 +1,60 @@
+## arcsec-after-decimal
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/546
+- completed: 2026-09-10
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/547
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/547
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612
+- summary:
+  - `arcsec_after_decimal` is now a per-call keyword on `plot_array`, `plot_grid`
+    and `plot_inversion_reconstruction`, forwarded through `apply_extent` to
+    `_arcsec_labels`. `True` forces the symbol-over-decimal form (`3.″8`),
+    `False` forces the suffix form (`3.8"`), `None` (the default) reads the
+    `ticks.symbol_over_decimal` config flag. PyAutoGalaxy's `plot_array` wrapper
+    forwards it too, which is what makes `aplt.plot_array(...,
+    arcsec_after_decimal=True)` work for lens users; PyAutoLens needed no change
+    because it re-exports autogalaxy's function.
+  - **Most of the filed prompt had already shipped.** The formatter and the
+    `ticks.symbol_over_decimal` config flag were already in `main`, with four
+    tests covering all four cases the prompt asked for, and the prompt had never
+    been retired to `complete/` — so it kept rendering as pickable backlog
+    claiming the whole feature, and the `visualization` bundle picked it on that
+    basis. Only the per-call override actually remained. `Difficulty:` was
+    corrected `large` → `medium` at issue time and the prompt body carries a
+    dated scope correction.
+  - **Follow-up worth running: `pyauto-brain intake reconcile` across the wider
+    backlog.** Nothing suggests this prompt was the only one shipped-but-not-
+    retired, and the failure is invisible by construction — the dashboard renders
+    such a prompt faithfully and no workflow can tell the difference.
+  - Trade-off recorded: the public API name (`arcsec_after_decimal`) deliberately
+    differs from the config key and internal helpers (`symbol_over_decimal`). The
+    config key already shipped and is documented in `general.yaml`, so renaming it
+    would break anyone who had set it. The two are bridged at each public
+    function's `apply_extent` call rather than unified.
+  - Gate: `pyauto-heart` is unreachable from a remote web session, so
+    `ship_library`'s documented fallback (per-repo pytest) was used —
+    `test_autoarray/plot` 35 passed (33 in `test_utils`, = 30 baseline + 3 new);
+    PyAutoGalaxy related plot tests 22 passed. The wider `test_autoarray` run
+    showed 1408 passed / 8 failed, and all 8 were proven pre-existing by
+    re-running them in a detached worktree at the pristine branch point
+    `35aa681f`, where they fail identically — `No module named 'numba'` in the
+    container, all under `test_autoarray/inversion/`, which the diff does not
+    touch. CI (which has numba) was green on every leg: PyAutoArray 3/3,
+    PyAutoGalaxy 4/4.
+  - Both PRs were opened directly rather than through `/ship_library`, so they did
+    not carry the `pending-release` label at PR-open; it was applied during this
+    close-out so the release chain is intact.
+  - Bundle context: this was one of three members of the `visualization` bundle,
+    and the only one that shipped. `research/autolens/quick_update_plotting_cost.md`
+    was dropped (its deliverable is a measured breakdown needing a quiet box, which
+    a shared container cannot be) and annotated with what a static pass found.
+    `docs/workspaces/plot_coverage_followups.md` was dropped and split into four
+    prompts — it was a container of four independent items that said "do not
+    bulk-issue them as a series" and carried no `Type:`/`Autonomy:` header, which
+    AUTONOMY.md reads as `human-required`.
+
+## Original prompt
+
 # Claude Development Prompt: Arcsecond Tick Label Decimal Placement
 
 Type: feature
