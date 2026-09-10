@@ -22,20 +22,6 @@
 - repos:
   - HowToFit: feature/howtofit-ch1-gradients-details
 
-## start-here-mode
-- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/38
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1603
-- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/39
-- prompt: active/start_here_mode.md
-- heart-ack: 2026-09-10 in-session, YELLOW, five reasons: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)", three "profiling drift: runtime/imaging/{mge,mge_mass_jax,pixelization_numba_mge_mass}/…" rows, "release validation incomplete: no rehearsal for current source" — organism-scope, none touched by this branch (docs + assistant markdown only)
-- issued: 2026-09-10
-- session: claude --resume session_01BrGfrSxV9xoqCa4v1p9hix
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/start-here-mode
-- repos:
-  - autofit_assistant: feature/start-here-mode
-  - PyAutoFit: feature/start-here-mode
-
 ## a100-pixelized-baseline
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/242

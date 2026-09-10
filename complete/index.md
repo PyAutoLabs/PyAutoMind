@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1384 records across 8 buckets.
+1385 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -260,6 +260,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-relevance-gate](2026/09/smoke-relevance-gate.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
+- [start-here-mode](2026/09/start-here-mode.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
 - [traced-assertions-on-jax-path](2026/09/traced-assertions-on-jax-path.md)
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07

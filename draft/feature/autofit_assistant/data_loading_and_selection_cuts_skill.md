@@ -12,7 +12,7 @@ Priority: medium
 Consequence: notify
 Witness: a new `skills/af_load_data.md` (name open) is registered in `skills/README.md` and cited from `af_adapt_to_domain` (interview step 2) and `af_wrap_likelihood`; running the start-here Part 2 on `dataset/sne_cosmology/` records the column meanings, units and every selection cut (e.g. `is_calibrator == 0`, `z_hd > 0.023`) in `wiki/project/` with a one-line justification each, before the data-inspection gate fires.
 Filed: 2026-09-10
-Parent: active/start_here_mode.md
+Parent: complete/2026/09/start-here-mode.md
 
 Found during the start-here-mode dry run (autofit_assistant#38): no skill owns
 **loading the user's data and the selection cuts applied to it**.
