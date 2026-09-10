@@ -22,18 +22,6 @@
 - repos:
   - HowToFit: feature/howtofit-ch1-gradients-details
 
-## a100-pixelized-baseline
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/242
-- heart-ack: 2026-09-10 in-session, YELLOW, four reasons: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)" and three "profiling drift: runtime/imaging/{mge,mge_mass_jax,pixelization_numba_mge_mass}/…" rows — organism-scope, none touched by this branch
-- prompt: active/a100_pixelized_likelihood_baseline_for_matrix_free.md
-- issued: 2026-09-10
-- session: claude --resume session_01GqnrYLZw26f29M8w5sXz2j
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/a100-pixelized-baseline
-- repos:
-  - autolens_profiling: feature/a100-pixelized-baseline
-
 ## euclid-catalogue-rebuild-prep
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
 - prompt: active/prepare_the_euclid_pipeline_for_an_ordered.md

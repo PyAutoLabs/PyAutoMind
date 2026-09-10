@@ -1,3 +1,70 @@
+## a100-pixelized-baseline
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
+- completed: 2026-09-10
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/242 (merge c8b6058)
+- pending-release: none — workspace-category task, no library PR, so the `active.md` row carried no uncleared `pending-release:` line.
+- summary: |
+    The final fp64 A100 baseline of the pixelized imaging likelihood, taken after PyAutoNerves#162
+    (`--xla_gpu_enable_triton_gemm=false`) and PyAutoArray #531/#533/#537, as the reference set the
+    matrix-free CG + SLQ work will be judged against. Four commits on `feature/a100-pixelized-baseline`:
+    2689329 (12 fresh-cache A100 submits + launcher on the worktree-safe template), 59c0f84
+    (w-tilde-native sparse breakdown, rectangular `--split-setup`/`--vmap-batch` parity, compile and
+    cache provenance in every JSON), 58aa7a1 (the 12-leg results), be94ccc (the note, the superseded
+    recommendation #4, the `delaunay_nn_breakdown.md` pointer, regenerated READMEs). All 12 legs
+    (jobs 342617-342628) ran on `euclid-ral-gpu-2` inside one 17-minute window, fp64, fresh per-job
+    `JAX_COMPILATION_CACHE_DIR` with `AUTOTUNE_ENTRIES count=0` at exit, every pin PASSED.
+- witness: |
+    The prompt's Witness clause named {rectangular bilinear, Delaunay} x {dense, sparse} x
+    {runtime, breakdown}; the task delivered that grid **plus DelaunayNN**, 12 legs rather than 8.
+    Clause by clause:
+    - *one results note carrying fresh-cache same-node A100 fp64 rows dated after PyAutoNerves#162
+      with `--xla_gpu_enable_triton_gemm=false` in `device.xla_flags`* — MET.
+      `results/notes/a100_pixelized_baseline_2026_09.md`; all 12 jobs on one node
+      (euclid-ral-gpu-2), each with `cache_fresh: true`, `autotune_cache_entries_at_start: 0`, and
+      the Triton-off flag in `device.xla_flags`.
+    - *"Curvature matrix (F)" under 6 ms on every dense row* — MET: 4.826 / 4.824 / 4.830 ms on
+      rectangular / Delaunay / DelaunayNN.
+    - *the sparse breakdown rows built from the w-tilde operator (no mapping matrix step)* — MET:
+      `likelihood_breakdown/{pixelization,delaunay,delaunay_nn}.py` now time the w-tilde preload and
+      mapper under `--sparse`, with F from the sparse operator and D from the w-tilde data term;
+      sparse F/D checked against `fit.inversion` to 1e-8 on all three meshes (jobs 342626-342628).
+    - *per-call-at-vmap-16 numbers for both meshes* — MET, for all three: dense/sparse ms per call
+      rectangular 32.1/36.7, Delaunay 42.5/48.0, DelaunayNN 46.4/49.3.
+    - *the dashboard regenerated* — MET: `build_readme.py` regenerated `README.md` and
+      `scripts/misc/likelihood_breakdown/README.md` in be94ccc.
+    - *`sparse_vs_dense_inversion_path.md` status and recommendation #4 updated* — MET: status line
+      refreshed and recommendation #4 marked superseded, pointing at the new note.
+- findings: |
+    - **Dense F holds at ~4.83 ms on every mesh**, confirming the PyAutoNerves#162 cuBLASLt lowering
+      carries to the pixelized cells, not just the Delaunay witness that motivated it.
+    - **The w-tilde F is 17.9-20.4 ms**, replacing the dense blurred-mapping-matrix + F chain
+      (9.3-13.2 ms). Sparse therefore costs **+6-14 % per call at vmap 16** while using ~7x less
+      device memory, with ~12x cheaper batched inversion setup on the rectangular cell (0.75 ms vs
+      9.11 ms per call). Sparse remains the memory lever, never the speed lever.
+    - **The solve is the target, not the matrix.** Regularized reconstruction (NNLS + Cholesky) is
+      ~37 ms — **61-71 % of the per-call cost on every row**, and identical dense vs sparse. A
+      matrix-free formulation that only replaces F is attacking the wrong 10 ms.
+    - DelaunayNN's `sparse_nnz` is 491,552 against 46-61k for the other two meshes.
+    - This is the **fiducial tier** (1500 Delaunay vertices / 1521 rectangular pixels), not the #235
+      production preset; decision 3 there stays open and the two must not be mixed.
+- follow-ups: |
+    Not filed as prompts here — a later `/intake` owns them:
+    1. No cell emits the Cholesky log-det terms, which an SLQ-vs-exact comparison needs.
+    2. The rectangular **runtime** cell still pins pre-#235 `28622.397322591198` while measuring
+       `28621.128714…` (passes at 4.4e-5) — re-measure the pin. Bookkeeping, not a gate failure.
+    3. Split the ~37 ms reconstruction row into NNLS iterations vs Cholesky before sizing
+       matrix-free CG.
+    4. File the matrix-free CG + SLQ PyAutoArray prompt itself, against this note.
+- trap: |
+    The RAL bridge is pull-only: commit inside the RAL worktree, fetch it over ssh from the laptop,
+    push from local. There is no push path from RAL to origin.
+- heart: |
+    Shipped under an acknowledged YELLOW (2026-09-10, in-session): "workspace validation not passing
+    (5 failed, 2 timeout, cloud#34099198772 …)" plus three "profiling drift: runtime/imaging/…" rows.
+    All organism-scope; none touched by this branch. Not frozen at merge.
+
+## Original prompt
+
 # Final A100 fp64 baseline of the pixelized imaging likelihood (rectangular bilinear + Delaunay, dense + sparse) under the fixed XLA default
 
 Type: research
