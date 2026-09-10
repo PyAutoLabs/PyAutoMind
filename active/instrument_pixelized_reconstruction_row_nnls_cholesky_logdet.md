@@ -14,11 +14,13 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Consequence: judge
-Witness: the three dense breakdown JSONs on A100 fp64 carry a `steps_reconstruction_sub_rows` block whose rows sum to the "Regularized reconstruction" row within 10 %, plus non-null `log_det_*` values and the NNLS iteration count; the note section states the NNLS-vs-Cholesky split in ms per row; the rectangular runtime pin equals the breakdown pin; lint + `build_readme.py --check` green.
+Witness: the three dense breakdown JSONs on A100 fp64 carry a `steps_reconstruction_sub_rows` block (Cholesky of F+λH, Cholesky solve, NNLS PDIP with its iteration count and ms/iteration, both log-det Choleskys — overlapping rows, not a partition of the reconstruction row), an `nnls` block whose cell-driven reconstruction matches the library's to 1e-8, non-null `log_evidence_terms`; the baseline note gains a "Reconstruction split" section stating per row how many PDIP iterations the 37 ms is and what one Cholesky / Cholesky-solve of the same system costs; the rectangular runtime pin equals the breakdown pin; lint + `build_readme.py --check` green.
 Review-minutes: 20
 Unattended: ready
 Parent: complete/2026/09/a100-pixelized-baseline.md
 Filed: 2026-09-10
+Issued: 2026-09-10
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/243
 
 ## Why
 
@@ -26,12 +28,11 @@ The 2026-09-10 A100 fp64 baseline (`autolens_profiling/results/notes/a100_pixeli
 
 ## What to build
 
-1. In `scripts/imaging/likelihood_breakdown/{pixelization,delaunay,delaunay_nn}.py` (shared helpers in `scripts/misc/likelihood_breakdown/`), split the "Regularized reconstruction" step into independently-jitted sub-rows: NNLS iterations (count + per-iteration solve), Cholesky of F + λH, Cholesky of reduced H, log-det terms, reconstruction + mapped model image. Use the prefix-difference discipline already in the cells where a sub-step cannot be isolated, and mark differenced rows as such in the JSON (`steps_reconstruction_sub_rows`).
+1. In `scripts/imaging/likelihood_breakdown/{pixelization,delaunay,delaunay_nn}.py` (shared helpers in `scripts/misc/likelihood_breakdown/`), add independently-jitted sub-rows that overlap the "Regularized reconstruction" step (`steps_reconstruction_sub_rows`, same overlap rule as `steps_sparse_sub_rows`): a cell-driven `solve_nnls` call exposing the PDIP iteration count and ms/iteration, a one-iteration row, a single Cholesky of F + λH and a Cholesky solve on the same system, and the two log-det Choleskys of step 13. The step-12 row itself stays the library call, unchanged.
 2. Emit the exact log-det values per row into the JSON (`log_det_curvature_reg`, `log_det_regularization`, plus the NNLS iteration count and the final log_evidence terms) so they can be checked against an SLQ estimate later.
 3. Re-measure the rectangular `likelihood_runtime/pixelization.py` pin: it still carries the pre-#235 `28622.397322591198` while every 2026-09 leg measures `28621.128714095972`; update the constant and its comment so the pin describes what the cell computes today.
-4. Re-run the three dense breakdown legs on RAL (same node, fresh cache, per the baseline launcher pattern — `hpc/batch_gpu/submit_baseline_grid.sh` is the template) and, since dense and sparse share the reconstruction code byte-for-byte, only one sparse leg as a control. Append a "Reconstruction split" section to the baseline note with the sub-row table and log-det values; regenerate the READMEs.
+4. Re-run the three dense breakdown legs on RAL (same node, fresh cache, per the baseline launcher pattern — `hpc/batch_gpu/submit_baseline_grid.sh` is the template) plus the rectangular runtime leg to validate the re-measured pin; dense and sparse share the reconstruction code byte-for-byte, so no sparse leg is re-run. Append a "Reconstruction split" section to the baseline note with the sub-row table and log-det values; regenerate the READMEs.
 
-Witness: the three dense breakdown JSONs on A100 fp64 carry a `steps_reconstruction_sub_rows` block whose rows sum to the "Regularized reconstruction" row within 10 %, plus non-null `log_det_*` values and the NNLS iteration count; the note section states the NNLS-vs-Cholesky split in ms per row; the rectangular runtime pin equals the breakdown pin; lint + `build_readme.py --check` green.
 
 Follow-on: the matrix-free CG + SLQ prompt is filed blocked on this task.
 

@@ -42,30 +42,22 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 5 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 169 |
+| [Backlog](#backlog) (`draft/`) | 168 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 13
+**Highest priority** (filed as `high`)
 
 <details><summary>📋 <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — autofit · small · safe · high</summary>
 
 ```
 /start_dev draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md">Instrument the pixelized reconstruction row: NNLS-vs-Cholesky split, log-det emission, rectangular runtime pin…</a> — autolens_profiling · medium · supervised · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md
 ```
 
 </details>
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 92
+<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 91
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -256,6 +256,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/autolens_inference_birth.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md">Instrument the pixelized reconstruction row: NNLS-vs-Cholesky split, log-det emission, rectangular runtime pin…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/243">issue #243</a> — issued 2026-09-10 — workspace-dev</summary>
+
+```
+/start_dev active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md
 ```
 
 </details>
@@ -491,7 +499,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**169** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**168** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 33</summary>
@@ -1056,15 +1064,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 16</summary>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md">Instrument the pixelized reconstruction row: NNLS-vs-Cholesky split, log-det emission, rectangular runtime pin…</a> — autolens_profiling · medium · supervised · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md
-```
-
-</details>
+<summary><b>research</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -1941,7 +1941,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
 | 2026-09-10 | filed | <a href="draft/research/autoarray/matrix_free_pixelized_imaging_likelihood_cg_solv.md">Matrix-free pixelized imaging likelihood: CG solve + stochastic…</a> |
-| 2026-09-10 | filed | <a href="draft/research/autolens_profiling/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md">Instrument the pixelized reconstruction row: NNLS-vs-Cholesky split…</a> |
+| 2026-09-10 | issued | <a href="active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md">Instrument the pixelized reconstruction row: NNLS-vs-Cholesky split…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
@@ -2377,7 +2377,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-23 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+22 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2403,7 +2403,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/maintenance/autolens_profiling/scrap_inference_programme.md — unknown theme keyword(s): inference, gut`
 - `draft/research/autoarray/matrix_free_pixelized_imaging_likelihood_cg_solv.md — unknown theme keyword(s): jax-gpu, performance, inversion`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
-- `draft/research/autolens_profiling/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md — unknown theme keyword(s): jax-gpu, performance, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
 </details>
