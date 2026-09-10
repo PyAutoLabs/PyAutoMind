@@ -42,30 +42,22 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 5 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 163 |
+| [Backlog](#backlog) (`draft/`) | 161 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 13
+**Highest priority** (filed as `high`)
 
 <details><summary>📋 <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — euclid · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a <code>.completed</code> zip, and <code>preserve_in_zip</code>…</a> — autofit · medium · safe · high</summary>
-
-```
-/start_dev draft/bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md
 ```
 
 </details>
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 87
+<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -256,6 +256,22 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/a100_pixelized_likelihood_baseline_for_matrix_free.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a <code>.completed</code> zip, and <code>preserve_in_zip</code>…</a> — issued 2026-09-10</summary>
+
+```
+/start_dev active/aggregator_sibling_dir_shadows_completed_zip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/chapter_1_gradients_details_bayesian.md">HowToFit chapter 1: gradients, the details, and Bayesian formalism tutorials</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/49">issue #49</a> — issued 2026-09-10 — workspace-dev</summary>
+
+```
+/start_dev active/chapter_1_gradients_details_bayesian.md
 ```
 
 </details>
@@ -488,7 +504,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**163** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
+**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -752,20 +768,12 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 35</summary>
+<summary><b>bug</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — euclid · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a <code>.completed</code> zip, and <code>preserve_in_zip</code>…</a> — autofit · medium · safe · high</summary>
-
-```
-/start_dev draft/bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md
 ```
 
 </details>
@@ -1037,147 +1045,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 17</summary>
-
-<details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
-
-```
-/start_dev draft/docs/autolens/multi_galaxy_package.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/autolens/split_lensing_regimes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
-
-```
-/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
-
-```
-/start_dev draft/docs/autocti/api_rst_rewrite.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens/plot_rst_missing_exports.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> — workspaces · medium · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to <code>subplot_fit_interferometer_dirty_images</code></a> — workspaces · medium · supervised · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/interferometer_dirty_images_call_sites.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtofit/chapter_1_gradients_details_bayesian.md">HowToFit chapter 1: gradients, the details, and Bayesian formalism tutorials</a> — howtofit · large · supervised · normal</summary>
-
-```
-/start_dev draft/docs/howtofit/chapter_1_gradients_details_bayesian.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/demo_subplot_ellipse_errors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-/start_dev draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>research</b> — 14</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
@@ -1288,6 +1155,139 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>docs</b> — 16</summary>
+
+<details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/multi_galaxy_package.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
+
+```
+/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
+
+```
+/start_dev draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens/plot_rst_missing_exports.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> — workspaces · medium · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to <code>subplot_fit_interferometer_dirty_images</code></a> — workspaces · medium · supervised · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/interferometer_dirty_images_call_sites.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/demo_subplot_ellipse_errors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+
+```
+/start_dev draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
 ```
 
 </details>
@@ -1642,38 +1642,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>aggregator</b> — 3 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: aggregator, paths, tests</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'aggregator' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md
-- draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md
-- draft/bug/autofit/aggregate_csv_tests_fail_locally_pass_in_ci.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a…</a> | autofit | medium | high | formalised |
-| <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> | autolens | small | low | formalised |
-| <a href="draft/bug/autofit/aggregate_csv_tests_fail_locally_pass_in_ci.md">test_aggregate_csv: five tests fail locally on main while CI is green</a> | autofit | small | low | - |
-
-</details>
-
-<details>
 <summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1873,6 +1841,36 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
+<details>
+<summary><b>jax-compile · pixelization</b> — 2 task(s) · 4 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'jax-compile · pixelization' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+- draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> | autoarray | medium | medium | formalised |
+| <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular…</a> | autolens | medium | normal | draft |
+
+</details>
+
 _Showing 8 of 26 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -1898,10 +1896,10 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
-| 2026-09-10 | filed | <a href="draft/docs/howtofit/chapter_1_gradients_details_bayesian.md">HowToFit chapter 1: gradients, the details, and Bayesian formalism…</a> |
+| 2026-09-10 | issued | <a href="active/chapter_1_gradients_details_bayesian.md">HowToFit chapter 1: gradients, the details, and Bayesian formalism…</a> |
 | 2026-09-10 | issued | <a href="active/a100_pixelized_likelihood_baseline_for_matrix_free.md">Final A100 fp64 baseline of the pixelized imaging likelihood…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a…</a> |
+| 2026-09-10 | issued | <a href="active/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
 | 2026-09-09 | issued | <a href="active/prepare_the_euclid_pipeline_for_an_ordered.md">Prepare the Euclid pipeline for an ordered, low-disk DR1-prelim…</a> |
@@ -2315,7 +2313,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-22 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+20 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2326,7 +2324,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
 - `draft/bug/autofit/aggregate_csv_tests_fail_locally_pass_in_ci.md — unknown theme keyword(s): aggregator, tests`
-- `draft/bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md — unknown theme keyword(s): aggregator, paths`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md — unknown theme keyword(s): jax, mass-profiles`
@@ -2338,7 +2335,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/refactor/autofit/parameterization_prior_count_blowup.md — unknown theme keyword(s): performance`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
-- `draft/docs/howtofit/chapter_1_gradients_details_bayesian.md — unknown theme keyword(s): howtofit, jax, tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
