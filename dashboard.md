@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/66">issue #66</a> — issued 2026-09-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/66">issue #66</a> — issued 2026-09-10 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/67">euclid_strong_lens_modeling_pipeline#67</a></summary>
 
 ```
 /start_dev active/vis_lp_latent_euclid_jit_trace.md
