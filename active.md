@@ -10,20 +10,6 @@
 - repos:
   - autolens_profiling: feature/a100-pixelized-baseline
 
-## catalogue-latent-prefix-blank
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/64
-- prompt: active/catalogue_latent_prefix_blank_columns.md
-- issued: 2026-09-10
-- session: claude --resume session_01DpSbN9hUU3H8EEtMPK15B7
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/65
-- status: awaiting-merge
-- location: web-github (session clone, no task worktree; euclid branch feature/catalogue-latent-prefix-blank)
-- worktree: n/a — web-github session clone (/home/user/euclid_strong_lens_modeling_pipeline)
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/catalogue-latent-prefix-blank
-- plan: on the issue. Drop the retired `latent.` prefix in lens_mass.py + magnitudes.py, rewrite the two docstrings, fix the tutorial twin's dead shear path, add a fixture-based no-blank-column test.
-- note: worktree_check_conflict would name euclid-catalogue-rebuild-prep (PR #61) as claiming euclid_strong_lens_modeling_pipeline; #61 merged 2026-09-09 and its phase-2 branch does not exist yet, so nothing holds the repo.
-
 ## euclid-catalogue-rebuild-prep
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
 - prompt: active/prepare_the_euclid_pipeline_for_an_ordered.md
@@ -84,15 +70,3 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
-
-## aggregate-csv-latent-sigma3
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1597
-- prompt: active/aggregate_csv_latent_sigma3_and_silent_none.md
-- issued: 2026-09-10
-- session: claude --resume session_01BWFb5cFmjTN6YP8t9AURev
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1598
-- status: awaiting-merge
-- location: web-github (session clone, no task worktree; branch claude/autofit-aggregate-csv-sigma3-x8twln)
-- worktree: n/a — web-github session clone (/home/user/PyAutoFit)
-- repos:
-  - PyAutoFit: claude/autofit-aggregate-csv-sigma3-x8twln

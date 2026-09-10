@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1379 records across 8 buckets.
+1381 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,6 +122,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/09
 
 - [adapt-image-snr-cap](2026/09/adapt-image-snr-cap.md)
+- [aggregate-csv-latent-sigma3](2026/09/aggregate-csv-latent-sigma3.md)
 - [aggregator-search-json-sentinel](2026/09/aggregator-search-json-sentinel.md)
 - [aggregator-temp-unzip](2026/09/aggregator-temp-unzip.md)
 - [agwt-multi-delaunay-release-timeout](2026/09/agwt-multi-delaunay-release-timeout.md)
@@ -136,6 +137,7 @@ markers; everything below GENERATED is rebuilt.
 - [batch-review-integration-p3](2026/09/batch-review-integration-p3.md)
 - [batch-status-box](2026/09/batch-status-box.md)
 - [board-family-helper](2026/09/board-family-helper.md)
+- [catalogue-latent-prefix-blank](2026/09/catalogue-latent-prefix-blank.md) — `catalogue/scripts/lens_mass.py` and `catalogue/scripts/magnitudes.py`
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
 - [cortex-assistant-entry](2026/09/cortex-assistant-entry.md)
 - [cortex-batch-member-kind](2026/09/cortex-batch-member-kind.md) — closed completed 2026-09-02
