@@ -1,64 +1,15 @@
 # Active Tasks
 
-## latent-integration-smoke
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/315
-- prompt: active/latent_integration_smoke.md
+## reconstruction-row-split
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/243
+- prompt: active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md
 - issued: 2026-09-10
-- session: claude --resume session_01CybZmqjyQRDpfK3Cs1JaW2
+- session: claude --resume session_014MpFvj3ZeAHLBTYo2mkGRQ
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/244
 - status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/latent-integration-smoke
+- worktree: ~/Code/PyAutoLabs-wt/reconstruction-row-split
 - repos:
-  - autolens_workspace_test: feature/latent-integration-smoke
-- plan: Approved by the user in Plan Mode (task A3 of a multi-task plan). Two new smoke scripts under scripts/misc/latent/ (NumPy + JAX legs), two smoke_tests.txt entries, and a stale-comment fix in config/latent.yaml.
-- note: "Library-first gate CLEARED 2026-09-10: PyAutoFit#1602 (task A1, aggregator-sibling-dir-zip) is merged (e354dbb6) - see complete/2026/09/aggregator-sibling-dir-zip.md. This PR may merge once its own checks are green."
-
-## howtofit-ch1-gradients-details
-- issue: https://github.com/PyAutoLabs/HowToFit/issues/49
-- prompt: active/chapter_1_gradients_details_bayesian.md
-- issued: 2026-09-10
-- session: claude --resume session_014y2CwNSY8yBHwRpt8Mnqpv
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/howtofit-ch1-gradients-details
-- repos:
-  - HowToFit: feature/howtofit-ch1-gradients-details
-
-## start-here-mode
-- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/38
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1603
-- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/39
-- prompt: active/start_here_mode.md
-- heart-ack: 2026-09-10 in-session, YELLOW, five reasons: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)", three "profiling drift: runtime/imaging/{mge,mge_mass_jax,pixelization_numba_mge_mass}/…" rows, "release validation incomplete: no rehearsal for current source" — organism-scope, none touched by this branch (docs + assistant markdown only)
-- issued: 2026-09-10
-- session: claude --resume session_01BrGfrSxV9xoqCa4v1p9hix
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/start-here-mode
-- repos:
-  - autofit_assistant: feature/start-here-mode
-  - PyAutoFit: feature/start-here-mode
-
-## a100-pixelized-baseline
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/242
-- heart-ack: 2026-09-10 in-session, YELLOW, four reasons: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)" and three "profiling drift: runtime/imaging/{mge,mge_mass_jax,pixelization_numba_mge_mass}/…" rows — organism-scope, none touched by this branch
-- prompt: active/a100_pixelized_likelihood_baseline_for_matrix_free.md
-- issued: 2026-09-10
-- session: claude --resume session_01GqnrYLZw26f29M8w5sXz2j
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/a100-pixelized-baseline
-- repos:
-  - autolens_profiling: feature/a100-pixelized-baseline
-
-## euclid-catalogue-rebuild-prep
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
-- prompt: active/prepare_the_euclid_pipeline_for_an_ordered.md
-- issued: 2026-09-09
-- session: claude --resume session_01JsGeXEmGmSJzvxzC7GUpZo
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/61
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/euclid-catalogue-rebuild-prep
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
-- delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
+  - autolens_profiling: feature/reconstruction-row-split
 
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
@@ -107,20 +58,45 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/80
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
-- note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
+- note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml. The conflicting claim was released on 2026-09-10 when euclid-catalogue-rebuild-prep closed out (PRs #61 + #68 merged), so the guard no longer fires.
 
 ## autolens-inference-birth
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/399
 - issued: 2026-09-10
 - prompt: active/autolens_inference_birth.md
 - session: claude --resume session_01S3mSjckpJgKufHFTYVmjmC
-- status: library-dev
+- status: awaiting-merge — 6 PRs open; merge order Mind → Cortex → Heart → Brain → .github → autolens_inference; RAL clone verified
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/400
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/28
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/224
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/375
+- library-pr: https://github.com/PyAutoLabs/.github/pull/9
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/1
 - worktree: ~/Code/PyAutoLabs-wt/autolens-inference-birth
 - parallel-claim: witness-campaign (PyAutoMind) — approved 2026-09-10 on plan approval; file sets disjoint (this task touches repos.yaml, ROUTING.md, epics.md; witness-campaign rewrites draft/ prompt headers). COMMIT DISCIPLINE: never git add -A in either worktree.
 - repos:
+  - PyAutoMind: feature/autolens-inference-birth
+  - PyAutoCortex: feature/autolens-inference-birth
+  - PyAutoHeart: feature/autolens-inference-birth
+  - PyAutoBrain: feature/autolens-inference-birth
+  - .github: feature/autolens-inference-birth
+  - autolens_inference: feature/autolens-inference-birth (workspace-root clone, no worktree)
 - summary: |
     Phase 1 of the autolens-inference epic: birth PyAutoLabs/autolens_inference (created
     on github.com 2026-09-10, public, empty) — workspace-root checkout, autolens_profiling
     skeleton with no searches tier and nothing inherited from the retired
     inference_programme, rows in repos.yaml / projects.yaml / Heart excluded /
     Brain clean_slate / org profile README, RAL clone + hpc/sync check. Plan on #399.
+
+## model-figures-graph-spec
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1605
+- issued: 2026-09-10
+- prompt: active/model_figures_1_graph_spec.md
+- session: claude --resume session_01UJ9stuFNR4e9BF5GXsqvfv
+- status: library-dev
+- location: web-github (session clone at /home/user/pyautofit, no task worktree)
+- worktree: n/a — web-github session clone
+- epic: model-figures (phase 1 of 6; ledger draft/feature/autofit/model_figures_epic.md)
+- plan: approved by user 2026-09-10 (plan + issue body + branch + structural-double acceptance)
+- repos:
+  - PyAutoFit: feature/model-figures-graph-spec

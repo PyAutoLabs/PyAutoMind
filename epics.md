@@ -75,6 +75,11 @@ epic, never picked standalone.
 - status: phase 1 SHIPPED 2026-09-02 — PyAutoArray#517 merged, issue #515 closed, record `complete/2026/09/image-source-mappings-p1.md`; phase 2 (+2a) **SHIPPED** 2026-09-02 — PyAutoArray#518 (`c9f67e78`) → PyAutoLens#720 (`091fbdff`) merged, issue #719 closed, record `complete/2026/09/image-source-mappings-p2.md`; **both PyAutoArray and PyAutoLens releases are outstanding** (`pending-release`); phase 3 **SHIPPED** 2026-09-03 — autolens_workspace#526, HowToLens#76, HowToGalaxy#72, autogalaxy_workspace#232 merged, issue #525 closed, record `complete/2026/09/image-source-mappings-p3.md`; all three phases shipped, epic complete pending the PyAutoArray + PyAutoLens releases; library follow-ups in `draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md`
 - notes: three phase prompts — Phase 1 PyAutoArray (`Mapping`/`ImageRegion` objects, `Inversion.source_clumps_from`, `regions=` overlay on `plot_array`/`plot_inversion_reconstruction`, restored `subplot_mappings`), Phase 2 PyAutoLens (ShapeSolver as the parametric engine + validation suite, `autolens/lens/mappings.py`, fit-level `subplot_mappings`, brightest multiple-image positions for spectroscopic follow-up), Phase 3 workspace (`guides/mappings.py`, tutorial_2_mappers rewrite with polygons, dead index-section fixes). Library-first; issue ONE phase at a time. Proceeds alongside ci-timing-fast-tests by user decision (2026-09-02).
 
+## model-figures
+- title: PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)
+- ledger: draft/feature/autofit/model_figures_epic.md
+- notes: 6 phased prompts; 1 → 2 → 3 in order, 4 after 2, 5 after 4, 6 (rollout across every workspace, HowTo chapter and sibling project) after 3 and 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
+
 ## autolens-inference
 - title: autolens_inference — inference benchmarking repo, birth to first base run
 - ledger: active/autolens_inference_birth.md

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1384 records across 8 buckets.
+1390 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,6 +121,7 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/09
 
+- [a100-pixelized-baseline](2026/09/a100-pixelized-baseline.md)
 - [adapt-image-snr-cap](2026/09/adapt-image-snr-cap.md)
 - [aggregate-csv-latent-sigma3](2026/09/aggregate-csv-latent-sigma3.md)
 - [aggregator-search-json-sentinel](2026/09/aggregator-search-json-sentinel.md)
@@ -138,6 +139,7 @@ markers; everything below GENERATED is rebuilt.
 - [batch-review-integration-p3](2026/09/batch-review-integration-p3.md)
 - [batch-status-box](2026/09/batch-status-box.md)
 - [board-family-helper](2026/09/board-family-helper.md)
+- [byol-mode](2026/09/byol-mode.md)
 - [catalogue-latent-prefix-blank](2026/09/catalogue-latent-prefix-blank.md) — `catalogue/scripts/lens_mass.py` and `catalogue/scripts/magnitudes.py`
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
 - [cortex-assistant-entry](2026/09/cortex-assistant-entry.md)
@@ -179,6 +181,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
 - [ep-stale-mask-fixed-point](2026/09/ep-stale-mask-fixed-point.md)
 - [ep-stale-tracking-per-variable](2026/09/ep-stale-tracking-per-variable.md) — closed completed 2026-09-07
+- [euclid-catalogue-rebuild-prep](2026/09/euclid-catalogue-rebuild-prep.md) — One issue, two phased PRs, preparing
 - [euclid-cpu-two-stage-route](2026/09/euclid-cpu-two-stage-route.md)
 - [gaussian-precompute-p1](2026/09/gaussian-precompute-p1.md)
 - [gaussian-precompute-p2](2026/09/gaussian-precompute-p2.md)
@@ -186,6 +189,7 @@ markers; everything below GENERATED is rebuilt.
 - [hands-board-family-footer](2026/09/hands-board-family-footer.md)
 - [heart-board-family-footer](2026/09/heart-board-family-footer.md)
 - [heart-worktree-drift-hidden-dirs](2026/09/heart-worktree-drift-hidden-dirs.md) — closed, completed
+- [howtofit-ch1-gradients-details](2026/09/howtofit-ch1-gradients-details.md)
 - [howtolens-ch3-mask-overlay](2026/09/howtolens-ch3-mask-overlay.md)
 - [human-readable-first-docs](2026/09/human-readable-first-docs.md) — Swapped every user-facing doc (PyAutoLens / PyAutoGalaxy README + docs/, autolens_workspace / autogalaxy_works…
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
@@ -203,6 +207,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-grad-delaunay-constant-folding-guard](2026/09/jax-grad-delaunay-constant-folding-guard.md) — rtol 1e-10 guard retired
 - [jax-grad-delaunay-fd-sweep-repin](2026/09/jax-grad-delaunay-fd-sweep-repin.md) — Heart RED corrective
 - [jax-import-order-x64](2026/09/jax-import-order-x64.md)
+- [latent-integration-smoke](2026/09/latent-integration-smoke.md)
 - [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
 - [lib-tests-compile-caches](2026/09/lib-tests-compile-caches.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
@@ -260,6 +265,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-relevance-gate](2026/09/smoke-relevance-gate.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
+- [start-here-mode](2026/09/start-here-mode.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
 - [traced-assertions-on-jax-path](2026/09/traced-assertions-on-jax-path.md)
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07

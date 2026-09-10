@@ -1,3 +1,74 @@
+## latent-integration-smoke
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/315
+- completed: 2026-09-10
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/316 (merge 30799944)
+- summary: |
+    Two first-class latent smokes under `scripts/misc/latent/`, both listed in
+    `smoke_tests.txt` (29 -> 31 entries), plus a stale-pointer fix in the
+    `config/latent.yaml` header comment.
+
+    **`misc/latent/latent_integration_smoke.py` (NumPy).** `ENV: real_search full_datasets`.
+    A real `af.Nautilus` search on `al.AnalysisImaging(use_jax=False)` writes a real latent
+    block to disk, then a `af.Drawer` pixelized stage (`RectangularUniform` + `reg.Constant`)
+    exercises `_pixelized_source_flux`. It asserts on disk and through the catalogue path:
+    `Aggregator.from_directory(..., completed_only=True, unzip_temporary=True)` round-trips both
+    stages; `af.AggregateCSV(agg, strict=True)` saves and reloads with the exact enabled key set
+    from `config/latent.yaml` (a NaN latent is a missing key, not a null); 3-sigma strictly
+    brackets 1-sigma; MaxLogLikelihood differs from the Median (the PyAutoFit#1598 defect);
+    pixelized `magnification` is finite and positive (PyAutoLens#727/#728); the retired
+    `latent.` prefix raises `KeyError` under `strict=True` (pipeline#65); and a sibling
+    `<hash>/files/` directory beside the zip does not hide the completed zip (PyAutoFit#1602).
+
+    **`misc/latent/latent_integration_smoke_jax.py` (JAX).** `ENV: real_search full_datasets jax`.
+    The model carries a real `model.add_assertion(...)`; the latent block is written and
+    `search.log` carries no "raised on N of M samples" engine warning (PyAutoLens#734 /
+    PyAutoFit#1600).
+
+    Runtimes 14.3 s and 19.6 s measured through the CI resolver after a speed pass
+    (30.0 -> 14.3 s NumPy, 20.0 -> 19.6 s JAX), well under the 300 s CI cap. `n_networks=1`
+    was the decisive lever. Two alternatives were tried and rejected: **Emcee** as the cheap
+    real search — its auto-correlation check slices a fixed 100-step window, so it cannot be
+    shortened below that; and **PDF latent draws** as a cheaper 3-sigma source — equal-weight
+    draws collapse the 3-sigma tails onto the 1-sigma ones and the bracketing assertion
+    stops discriminating.
+
+    Witness met: all four guarded regressions were reintroduced by monkeypatch and each failed
+    its script as designed; the local `run_smoke.py` summary count rose by exactly 2 with a
+    `[PASS]` line each (31/31); CI green on every leg (`smoke / changes`, `smoke (3.12)` 6m33s,
+    `smoke (3.13)` 5m57s).
+- trap: |
+    **Any `PYAUTO_TEST_MODE` level skips latent writes.** `autonerves.test_mode.skip_latents()`
+    suppresses all latent writing at `PyAutoFit/autofit/non_linear/search/updater.py:249`, so
+    `PYAUTO_TEST_MODE=1` is as useless as `2` here. The `ENV: real_search full_datasets`
+    declaration is mandatory, and both scripts assert `not skip_latents()` and
+    `PYAUTO_SMALL_DATASETS != "1"` up front so a misconfigured profile cannot pass vacuously.
+
+    **`SearchOutput.id` is not the on-disk identifier directory.** The obvious way to join the
+    `AggregateCSV` rows back to the two stages does not work; the rows are keyed by an explicit
+    label column added to the CSV instead.
+
+    **`af.Drawer` returns plain `Samples`** — no median, no sigma bounds — so only the
+    MaxLogLikelihood columns can be asserted non-blank on the pixelized stage's row, and that
+    is asserted explicitly rather than assumed.
+
+    **Under `remove_files: true` the aggregator must run with `unzip_temporary=True`**, or the
+    in-place extraction litters the output tree for the next run.
+- notes: |
+    Bug found and filed rather than fixed here: `af.Model.from_instance` writes non-constructor
+    attributes into `model.json`, which then fail to round-trip —
+    `draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md`.
+
+    The old bypass-mode `scripts/misc/latent/latent_variables_smoke.py` is kept as-is; it runs
+    under the smoke profile's `PYAUTO_TEST_MODE=2` and catches a different (much weaker) class
+    of failure.
+
+    Sibling tasks of the same plan, both merged: A1, the PyAutoFit aggregator sibling-dir /
+    `preserve_in_zip` fix (PyAutoFit#1602, `complete/2026/09/aggregator-sibling-dir-zip.md`);
+    A2, the euclid pipeline's sibling-dir aggregator assertion
+    (euclid_strong_lens_modeling_pipeline#67). This task was the library-first gated third.
+
+## Original prompt
+
 # autolens_workspace_test: a first-class latent-variable integration smoke that writes, aggregates and catalogues real latents
 
 Type: test
