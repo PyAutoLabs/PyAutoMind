@@ -65,7 +65,11 @@
 - issued: 2026-09-10
 - prompt: active/model_figures_1_graph_spec.md
 - session: claude --resume session_01UJ9stuFNR4e9BF5GXsqvfv
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1606
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1606
+- workspace-impact: none — purely additive API (af.GraphSpec, af.graph_spec_from); no workspace script uses it yet; phase 2 renders over it
+- acceptance-note: lens acceptance cases are structural doubles of today's workspace scripts; MGE (b) meets every epic invariant, group-scale (e) is today's smaller script composition with counts pinned as measured — phase 3 re-runs on the real classes
 - location: web-github (session clone at /home/user/pyautofit, no task worktree)
 - worktree: n/a — web-github session clone
 - epic: model-figures (phase 1 of 6; ledger draft/feature/autofit/model_figures_epic.md)
