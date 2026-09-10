@@ -17,10 +17,12 @@
 
 ## howtofit-ch1-gradients-details
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/49
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/50
+- heart-ack: 2026-09-10 in-session, YELLOW, four reasons: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)" and three "profiling drift: runtime/imaging/{mge,mge_mass_jax,pixelization_numba_mge_mass}/…" rows plus "release validation incomplete: no rehearsal for current source" — organism-scope, none touched by this branch
 - prompt: active/chapter_1_gradients_details_bayesian.md
 - issued: 2026-09-10
 - session: claude --resume session_014y2CwNSY8yBHwRpt8Mnqpv
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/howtofit-ch1-gradients-details
 - repos:
   - HowToFit: feature/howtofit-ch1-gradients-details
