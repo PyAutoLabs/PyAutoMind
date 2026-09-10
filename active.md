@@ -108,3 +108,19 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
+
+## autolens-inference-birth
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/399
+- issued: 2026-09-10
+- prompt: active/autolens_inference_birth.md
+- session: claude --resume session_01S3mSjckpJgKufHFTYVmjmC
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/autolens-inference-birth
+- parallel-claim: witness-campaign (PyAutoMind) — approved 2026-09-10 on plan approval; file sets disjoint (this task touches repos.yaml, ROUTING.md, epics.md; witness-campaign rewrites draft/ prompt headers). COMMIT DISCIPLINE: never git add -A in either worktree.
+- repos:
+- summary: |
+    Phase 1 of the autolens-inference epic: birth PyAutoLabs/autolens_inference (created
+    on github.com 2026-09-10, public, empty) — workspace-root checkout, autolens_profiling
+    skeleton with no searches tier and nothing inherited from the retired
+    inference_programme, rows in repos.yaml / projects.yaml / Heart excluded /
+    Brain clean_slate / org profile README, RAL clone + hpc/sync check. Plan on #399.
