@@ -76,7 +76,8 @@
 - prompt: active/aggregate_csv_latent_sigma3_and_silent_none.md
 - issued: 2026-09-10
 - session: claude --resume session_01BWFb5cFmjTN6YP8t9AURev
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1598
+- status: awaiting-merge
 - location: web-github (session clone, no task worktree; branch claude/autofit-aggregate-csv-sigma3-x8twln)
 - worktree: n/a — web-github session clone (/home/user/PyAutoFit)
 - repos:
