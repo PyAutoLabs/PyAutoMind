@@ -42,30 +42,22 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 5 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 159 |
+| [Backlog](#backlog) (`draft/`) | 158 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 14
+**Highest priority** (filed as `high`) — showing 12 of 13
 
 <details><summary>📋 <a href="draft/bug/euclid/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix, columns silently blank</a> — euclid · small · safe · high</summary>
 
 ```
 /start_dev draft/bug/euclid/catalogue_latent_prefix_blank_columns.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh is the median…</a> — autofit · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md
 ```
 
 </details>
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -256,6 +256,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/a100_pixelized_likelihood_baseline_for_matrix_free.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh is the median…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1597">issue #1597</a> — issued 2026-09-10 — library-dev</summary>
+
+```
+/start_dev active/aggregate_csv_latent_sigma3_and_silent_none.md
 ```
 
 </details>
@@ -485,7 +493,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**159** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
+**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -749,20 +757,12 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 34</summary>
+<summary><b>bug</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix, columns silently blank</a> — euclid · small · safe · high</summary>
 
 ```
 /start_dev draft/bug/euclid/catalogue_latent_prefix_blank_columns.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh is the median…</a> — autofit · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md
 ```
 
 </details>
@@ -1577,15 +1577,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>autofit — bundle 1</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>autofit — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md
 - draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md
 - draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
 
@@ -1602,7 +1601,6 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Difficulty | Priority | Status |
 |--------|------------|----------|--------|
-| <a href="draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh…</a> | medium | high | formalised |
 | <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> | large | high | formalised |
 | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
 
@@ -1849,7 +1847,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md">release-integrate must not ingest result files that pre-exist in a…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh…</a> |
+| 2026-09-10 | issued | <a href="active/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh…</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | issued | <a href="active/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole…</a> |
 | 2026-09-10 | issued | <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
