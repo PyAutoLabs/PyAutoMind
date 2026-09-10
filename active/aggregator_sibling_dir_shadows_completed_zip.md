@@ -16,6 +16,7 @@ Witness: an aggregator over `<hash>.zip` (containing `.completed`) plus a siblin
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-10
 
 ## Symptom
 

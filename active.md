@@ -92,3 +92,26 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
+
+## aggregator-sibling-dir-zip
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1601
+- prompt: active/aggregator_sibling_dir_shadows_completed_zip.md
+- issued: 2026-09-10
+- session: claude --resume session_01CybZmqjyQRDpfK3Cs1JaW2
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/aggregator-sibling-dir-zip
+- repos:
+  - PyAutoFit: feature/aggregator-sibling-dir-zip
+- plan: Approved by the human in Plan Mode (task A1 of a multi-task plan); aggregator zip/sibling precedence + preserve_in_zip loose-copy removal under remove_files.
+- note: worktree_check_conflict flags PyAutoFit as claimed by start-here-mode (worktree ~/Code/PyAutoLabs-wt/start-here-mode). Deliberate parallel worktree - that task's PyAutoFit diff is docs/overview/ only, this one edits autofit/aggregator/aggregator.py, autofit/non_linear/paths/abstract.py and two test modules; the file sets are disjoint so each task keeps its own worktree, index and branch.
+
+## vis-lp-latent-jit-trace
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/66
+- prompt: active/vis_lp_latent_euclid_jit_trace.md
+- issued: 2026-09-10
+- session: claude --resume session_01CybZmqjyQRDpfK3Cs1JaW2
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/vis-lp-latent-jit-trace
+- repos:
+- plan: Approved by the user in Plan Mode (task A2 of a multi-task plan). Two `util.py` hunks (latent_instance_from; NumPy uniform grid) plus one JAX unit test; the RAL witness rerun is a later science phase.
+- note: worktree_check_conflict exits 1 — euclid_strong_lens_modeling_pipeline is claimed by euclid-catalogue-rebuild-prep (feature/euclid-pipeline-disk-and-mge-ordering, PR #61 merged, row still awaiting-merge) and by remove-fits-dataset-plots-yaml (PR #63, merged, worktree n/a). Both claims are stale and neither touches the latent block of util.py; waived by the user, who approved this plan with the pipeline repo as the target, mirroring the remove-fits-dataset-plots-yaml waiver above.
