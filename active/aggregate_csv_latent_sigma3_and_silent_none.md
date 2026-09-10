@@ -13,6 +13,7 @@ Witness: on the `aggregate_csv` test fixture a latent's `*_lower_3_sigma` differ
 Review-minutes: 25
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-10
 
 ## Symptom
 

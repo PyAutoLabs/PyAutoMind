@@ -82,3 +82,14 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
+
+## aggregate-csv-latent-sigma3
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1597
+- prompt: active/aggregate_csv_latent_sigma3_and_silent_none.md
+- issued: 2026-09-10
+- session: claude --resume session_01BWFb5cFmjTN6YP8t9AURev
+- status: library-dev
+- location: web-github (session clone, no task worktree; branch claude/autofit-aggregate-csv-sigma3-x8twln)
+- worktree: n/a — web-github session clone (/home/user/PyAutoFit)
+- repos:
+  - PyAutoFit: claude/autofit-aggregate-csv-sigma3-x8twln
