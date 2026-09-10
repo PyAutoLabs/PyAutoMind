@@ -34,3 +34,22 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
 - delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
+
+## jax-import-order-x64
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/139
+- issued: 2026-09-10
+- prompt: active/jax_import_order_defeats_x64.md
+- session: claude --resume session_01XMA4HZYcVEzayYaRmS2uHi
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-import-order-x64
+- repos:
+  - autolens_workspace_developer: feature/jax-import-order-x64
+- summary: |
+    Launched with an explicit --auto; effective autonomy `supervised`
+    (min of the prompt header and the `bug` work-type cap), so the ship
+    checkpoint resolves to decide-and-flag and the run ends at PR-open.
+    Scope corrected at the plan gate and human-approved: 48 offenders, not
+    the 33 the prompt's line-number grep reported — 6 `jax_profiling/
+    simulators/*` are already guarded, and 25 `searches_minimal/` scripts
+    the grep could not see are. Fix is the repo's own guard idiom
+    (`from autolens import jax_wrapper`) rather than an import reorder.

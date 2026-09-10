@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-09-10
 Consequence: glance
 Witness: for each swept script, importing it with no env var preset leaves jax.config.jax_enable_x64 True, where it is False on main.
 Review-minutes: 3
