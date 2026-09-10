@@ -11,7 +11,8 @@ Status: formalised
 Filed: 2026-09-10
 
 Found by the ask-(3) pattern sweep of
-`draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md` (PyAutoArray#548), and
+`complete/2026/09/autoarray-mapper-zero-signal-nan.md` (PyAutoArray#548, shipped in
+#549), and
 split out of it on the human's call rather than widening that PR into a second
 module. Same bug class, different module, and on the face of it the more serious
 of the two: this one sits on the likelihood-gradient path.
