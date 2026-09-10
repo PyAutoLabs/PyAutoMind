@@ -1,3 +1,58 @@
+# byol-mode — "Bring Your Own Likelihood (BYOL)" mode + PyAutoFit docs headings
+
+- Issue: https://github.com/PyAutoLabs/autofit_assistant/issues/40 (closed)
+- PRs: PyAutoLabs/PyAutoFit#1604 (merged 1b7c1c992, docs only) → PyAutoLabs/autofit_assistant#41 (merged a29fdd289)
+- Branch: feature/byol-mode on both repos, worktree ~/Code/PyAutoLabs-wt/byol-mode
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1604
+- Heart at ship: YELLOW, acknowledged in-session (same five organism-scope reasons as start-here-mode); freeze clear at merge.
+- Parent: complete/2026/09/start-here-mode.md (the sibling mode; same shape)
+
+## What shipped
+
+**autofit_assistant#41.** `modes/byol.md` (303 lines): the published "Set up PyAutoFit with my
+existing science project" prompt run as six stages, one per turn, taken from the prompt's own
+sentences — overview of the code and what it scores (calling convention, log-likelihood vs
+chi-squared, free vs fixed, data and cuts) → model with priors chosen with the user → the
+`Analysis` wrapper importing their code unchanged, `af_wrap_likelihood`'s three validation
+checks and the data-inspection gate → search recommendation with the reason and the JAX triage
+question → a go-ahead table where nothing runs until they say go → the fit with the
+output-folder tour, plots, aggregator reload and residuals as the check. Ask-anything /
+teacher-mode footer on every stage; "you bring the likelihood, the assistant brings the
+inference". `AGENTS.md`: fourth mode bullet and the trigger beside start here (BYOL wins when
+both fire and code is pointed at). `README.md`: "### Bring Your Own Likelihood (BYOL)" at the
+end of "Your own project" (P2, Setup step 3 and Getting Started point at it); prompt text
+unchanged and byte-identical to the mode.
+
+**PyAutoFit#1604.** `README.md` and `docs/overview/quick_start.md` sections retitled "Bring Your
+Own Likelihood (BYOL)" with one paragraph linking the prompt to the mode;
+`docs/overview/natural_language.md` "use my existing likelihood code" pointer names the mode.
+Sphinx warnings 30 == baseline; no in-repo anchor referenced the old heading.
+
+## Witness
+
+Met: `modes/byol.md` exists; `AGENTS.md` routes the published BYOL prompt to it; the mode runs
+the prompt's contract (overview → model → search → stop until go-ahead → run → results on disk)
+one stage per turn with the footer; all three surfaces carrying the prompt are titled "Bring
+Your Own Likelihood (BYOL)" and say the prompt launches BYOL mode. Dry run (gitignored
+`scripts/scratch/byol_demo/`): stand-in user module over `dataset/sne_cosmology/` (1371 SNe,
+`-0.5·χ²` without the noise constant); wrapper equals the user's function at a hand-built
+instance (−295.1774), bad instance −1726.64, 0.19 ms/call; `DynestyStatic(nlive=75)` 11.4 s /
+3686 evaluations: Ωm 0.344 +0.021/−0.019, H0 73.11 +0.27/−0.30 (README validation 0.344 /
+73.14), log Z −302.40; aggregator reload returns the same medians.
+
+## Decisions and findings
+
+- A `### BYOL` sub-heading placed inside P2 swallowed P3–P6 in the rendered README; moved to the
+  end of "Your own project" with a P2 pointer.
+- No skill gap: `af_wrap_likelihood`'s Ask / Branch / validate / JAX triage / Combine mapped onto
+  the prompt's stages without extension.
+- The local `test_aggregate_csv.py` failures seen during start-here-mode were the
+  .completed-zip sibling-dir shadow bug, fixed on main by PyAutoFit d6fa9cdc8 (#1602) the same
+  afternoon; the bug prompt filed for them was retired by that task's close-out. This ship's
+  full suite: 2567 passed.
+
+## Original prompt
+
 # autofit_assistant: a "Bring Your Own Likelihood (BYOL)" mode analogous to start here
 
 Type: feature
