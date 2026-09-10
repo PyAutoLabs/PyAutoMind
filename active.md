@@ -34,3 +34,26 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-pipeline-disk-and-mge-ordering
 - delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
+
+## witness-campaign
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
+- issued: 2026-09-10
+- prompt: active/witness_campaign.md
+- session: claude --resume session_018ip88yepHJjM1VjjFMMmuP
+- status: library-dev
+- location: web-github (session clones, no task worktree; branch claude/witness-campaign-feature-h21cq4)
+- worktree: n/a — web-github session clone (/home/user/PyAutoMind)
+- repos:
+  - PyAutoMind: claude/witness-campaign-feature-h21cq4
+- summary: |
+    Campaign, not a one-shot: ~6 passes of ~15 prompts over the 89 unwitnessed
+    `Unattended: ready` drafts. Each pass proposes candidate witnesses for the
+    human to accept/edit/strike, then writes three header fields per accepted
+    prompt — `Witness:`, `Consequence:`, `Review-minutes:`. The three-field
+    rewrite is load-bearing: 74 of the 89 already declare `Consequence: judge`
+    (a cached derivation from intake's hygiene set), and the precedence rule
+    lets that stale value beat the witness, so a witness written alone moves
+    nothing. Baseline 2026-09-10, derived over the 110 ready prompts:
+    5 notify / 12 glance / 93 judge; fully witnessed the same set grades
+    28 notify / 74 glance / 8 judge. Pass 1 = the `workspaces` group (15).
+    Pass-by-pass counts are recorded in the prompt itself.
