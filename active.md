@@ -99,3 +99,16 @@
     skeleton with no searches tier and nothing inherited from the retired
     inference_programme, rows in repos.yaml / projects.yaml / Heart excluded /
     Brain clean_slate / org profile README, RAL clone + hpc/sync check. Plan on #399.
+
+## model-figures-graph-spec
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1605
+- issued: 2026-09-10
+- prompt: active/model_figures_1_graph_spec.md
+- session: claude --resume session_01UJ9stuFNR4e9BF5GXsqvfv
+- status: library-dev
+- location: web-github (session clone at /home/user/pyautofit, no task worktree)
+- worktree: n/a — web-github session clone
+- epic: model-figures (phase 1 of 6; ledger draft/feature/autofit/model_figures_epic.md)
+- plan: approved by user 2026-09-10 (plan + issue body + branch + structural-double acceptance)
+- repos:
+  - PyAutoFit: feature/model-figures-graph-spec
