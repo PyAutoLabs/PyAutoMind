@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole smoke leg</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/221">issue #221</a> — issued 2026-09-10 — library-dev</summary>
+<details><summary>📋 <a href="active/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole smoke leg</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/221">issue #221</a> — issued 2026-09-10 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/222">PyAutoHeart#222</a></summary>
 
 ```
 /start_dev active/smoke_jax_cache_threshold.md
