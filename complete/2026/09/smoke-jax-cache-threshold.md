@@ -59,7 +59,17 @@ one line, or bumping `PYAUTO_CACHE_EPOCH` to drop the fat caches.
   until the branch is added to `remote.origin.fetch` — the stop hook's
   "unpushed commit, no remote branch" was that, not a missing push.
 
-### Follow-ups (not filed)
+### Follow-ups — done the same day, on the human's ask
+
+- The per-script overrides were never on `main`: they sat in two open
+  `/ci_speedup` PRs, autolens_workspace_test#314 and autogalaxy_workspace_test#121.
+  Both closed unmerged as superseded (#314's other half, the `test-results/`
+  gitignore, had already landed as #313).
+- `lib-tests.yml`: PyAutoHeart#223 exports the same `"0"` in the unit gate's
+  `Run tests` step, with a wiring test; open, awaiting CI + `/prm`. Unmeasured —
+  same mechanism, priced by the same board sidecar.
+
+### Follow-ups as first written (superseded by the block above)
 
 - autolens_workspace_test / autogalaxy_workspace_test `profile_smoke.yaml`: the
   three per-script `JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS` overrides from
