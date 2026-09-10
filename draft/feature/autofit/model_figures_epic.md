@@ -53,7 +53,10 @@ place it is allowed back in is the phase-5 EP factor graph, where edges
 dominate). A matplotlib prototype has already reproduced every predicted count:
 the MGE 2×30 + pixelized model collapses from 73 nodes / 178 info lines to 11
 component boxes; group scale (8 extra galaxies) from 166 nodes / 418 lines to
-15.
+15. Once the cookbooks carry figures, **phase 6 rolls the figure out
+across every example, tutorial and sibling project** — cookbooks first, then
+every workspace, HowTo chapter and downstream pipeline that prints
+`model.info`.
 
 ## End goals (acceptance for the epic as a whole)
 
@@ -84,7 +87,8 @@ component boxes; group scale (8 extra galaxies) from 166 nodes / 418 lines to
 
 ## Phases
 
-Issue ONE at a time through `/start_dev`. Order: 1 → 2 → 3; 4 after 2; 5 after 4.
+Issue ONE at a time through `/start_dev`. Order: 1 → 2 → 3; 4 after 2; 5 after 4;
+6 after 3 and 4.
 
 | # | Phase | Prompt | State |
 |---|-------|--------|-------|
@@ -93,6 +97,7 @@ Issue ONE at a time through `/start_dev`. Order: 1 → 2 → 3; 4 after 2; 5 aft
 | 3 | Lens domain semantics + PyAutoLens/PyAutoGalaxy cookbook figures | `draft/feature/autolens/model_figures_3_lens_cookbook.md` | filed 2026-09-10 |
 | 4 | Plate-notation graphical-model figure; fill the two placeholders | `draft/feature/autofit/model_figures_4_graphical_plates.md` | filed 2026-09-10 |
 | 5 | EP factor-graph view with convergence/reversion overlay | `draft/feature/autofit/model_figures_5_ep_view.md` | filed 2026-09-10 |
+| 6 | Rollout — the figure beside every `model.info` in every example, tutorial and sibling project | `draft/feature/workspaces/model_figures_6_rollout.md` | filed 2026-09-10 |
 
 ## Trap — do NOT reuse the `model_graph` config key
 

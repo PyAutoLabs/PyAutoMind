@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 177 |
+| [Backlog](#backlog) (`draft/`) | 178 |
 
 > **No batch in flight.**
 
@@ -491,7 +491,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**177** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**178** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 33</summary>
@@ -2302,12 +2302,12 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 </details>
 
 <details>
-<summary><b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — 6 queued prompt(s), in order</summary>
+<summary><b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — 7 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — ledger: `draft/feature/autofit/model_figures_epic.md`</summary>
 
 ```
-Continue the 'PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)' epic. Its canonical state lives in draft/feature/autofit/model_figures_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 5 phased prompts; phase 1 → 2 → 3 in order, 4 after 2, 5 after 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
+Continue the 'PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)' epic. Its canonical state lives in draft/feature/autofit/model_figures_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 6 phased prompts; 1 → 2 → 3 in order, 4 after 2, 5 after 4, 6 (rollout across every workspace, HowTo chapter and sibling project) after 3 and 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
 ```
 
 </details>
@@ -2348,6 +2348,14 @@ Continue the 'PyAutoFit model figures — structure-first model visualisation (c
 
 ```
 /start_dev draft/feature/autofit/model_figures_5_ep_view.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/model_figures_6_rollout.md">Model figures phase 6 — roll the figure out across every example…</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/workspaces/model_figures_6_rollout.md
 ```
 
 </details>
@@ -2407,7 +2415,7 @@ Continue the 'PyAutoFit model figures — structure-first model visualisation (c
 
 </details>
 
-128 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+129 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2452,7 +2460,7 @@ Continue the 'PyAutoFit model figures — structure-first model visualisation (c
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautogut/gut_board.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- _… and 88 more_
+- _… and 89 more_
 
 </details>
 
