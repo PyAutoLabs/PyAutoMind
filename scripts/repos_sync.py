@@ -1110,7 +1110,7 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBrain/agents/faculties/sizing/_sizing.py": {"PyAutoFit"},
     "PyAutoBrain/docs/conf.py": {"PyAutoScientist"},
     "PyAutoBrain/bin/check_skill_line_counts.sh": {"admin_jammy", "autolens_profiling"},
-    "PyAutoBrain/bin/clean_slate.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autocti_workspace", "autofit_workspace", "autogalaxy_workspace", "autolens_profiling", "autolens_workspace"},
+    "PyAutoBrain/bin/clean_slate.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autocti_workspace", "autofit_workspace", "autogalaxy_workspace", "autolens_inference", "autolens_profiling", "autolens_workspace"},
     "PyAutoBrain/bin/ensure_workspace_labels.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "Jammy2211", "PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "PyAutoCTI", "autocti_workspace", "autocti_workspace_test", "autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_workspace", "autolens_workspace_test", "euclid_strong_lens_modeling_pipeline"},
     "PyAutoBrain/bin/install.sh": {"PyAutoFit", "PyAutoLabs", "admin_jammy", "autolens_profiling"},
     "PyAutoBrain/bin/overnight_status.sh": {"PyAutoLabs", "autolens_assistant"},

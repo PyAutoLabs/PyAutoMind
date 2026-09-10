@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1389 records across 8 buckets.
+1391 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -132,6 +132,7 @@ markers; everything below GENERATED is rebuilt.
 - [arcsec-after-decimal](2026/09/arcsec-after-decimal.md) — - `arcsec_after_decimal` is now a per-call keyword on `plot_array`, `plot_grid`
 - [autoarray-mapper-zero-signal-nan](2026/09/autoarray-mapper-zero-signal-nan.md)
 - [autofit-prodigy-49](2026/09/autofit-prodigy-49.md)
+- [autolens-inference-birth](2026/09/autolens-inference-birth.md) — `autolens_inference` is born as the from-scratch restart of the retired Cortex
 - [batch-collect](2026/09/batch-collect.md) — closed completed 2026-09-02
 - [batch-no-park-at-ship](2026/09/batch-no-park-at-ship.md)
 - [batch-plan-kind-cortex-admits-only-ready](2026/09/batch-plan-kind-cortex-admits-only-ready.md)
@@ -181,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
 - [ep-stale-mask-fixed-point](2026/09/ep-stale-mask-fixed-point.md)
 - [ep-stale-tracking-per-variable](2026/09/ep-stale-tracking-per-variable.md) — closed completed 2026-09-07
+- [euclid-catalogue-rebuild-prep](2026/09/euclid-catalogue-rebuild-prep.md) — One issue, two phased PRs, preparing
 - [euclid-cpu-two-stage-route](2026/09/euclid-cpu-two-stage-route.md)
 - [gaussian-precompute-p1](2026/09/gaussian-precompute-p1.md)
 - [gaussian-precompute-p2](2026/09/gaussian-precompute-p2.md)
