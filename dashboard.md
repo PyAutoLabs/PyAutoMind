@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 7 |
+| [In flight](#in-flight) (`active/`) | 8 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 161 |
+| [Backlog](#backlog) (`draft/`) | 160 |
 
 > **No batch in flight.**
 
 ## Start here
 
 **Highest priority** (filed as `high`)
-
-<details><summary>📋 <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — euclid · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md
-```
-
-</details>
 
 <details><summary>📋 <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — autofit · large · supervised · high</summary>
 
@@ -150,7 +142,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -260,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a <code>.completed</code> zip, and <code>preserve_in_zip</code>…</a> — issued 2026-09-10</summary>
+<details><summary>📋 <a href="active/aggregator_sibling_dir_shadows_completed_zip.md">Aggregator prefers an incomplete sibling directory over a <code>.completed</code> zip, and <code>preserve_in_zip</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1601">issue #1601</a> — issued 2026-09-10 — library-dev</summary>
 
 ```
 /start_dev active/aggregator_sibling_dir_shadows_completed_zip.md
@@ -296,6 +288,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/start_here_mode.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/66">issue #66</a> — issued 2026-09-10 — workspace-dev</summary>
+
+```
+/start_dev active/vis_lp_latent_euclid_jit_trace.md
 ```
 
 </details>
@@ -504,7 +504,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**161** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
+**160** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -768,15 +768,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 34</summary>
-
-<details><summary>📋 <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — euclid · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md
-```
-
-</details>
+<summary><b>bug</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — autofit · large · supervised · high</summary>
 
@@ -1882,7 +1874,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/bug/autofit/aggregate_csv_tests_fail_locally_pass_in_ci.md">test_aggregate_csv: five tests fail locally on main while CI is green</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md">release-integrate must not ingest result files that pre-exist in a…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
-| 2026-09-10 | filed | <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the…</a> |
+| 2026-09-10 | issued | <a href="active/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the…</a> |
 | 2026-09-10 | issued | <a href="active/start_here_mode.md">autofit_assistant: a "start here" mode that walks a new user through…</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
