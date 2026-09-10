@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent drops all…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/732">issue #732</a> — issued 2026-09-10 — library-dev</summary>
+<details><summary>📋 <a href="active/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent drops all…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/732">issue #732</a> — issued 2026-09-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/734">PyAutoLens#734</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1600">PyAutoFit#1600</a> — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/vis_lp_mge_stage_writes_no_latents.md
@@ -315,6 +315,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1600](https://github.com/PyAutoLabs/PyAutoFit/pull/1600) — `active/vis_lp_mge_stage_writes_no_latents.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1592](https://github.com/PyAutoLabs/PyAutoFit/pull/1592) — `complete/2026/09/aggregator-temp-unzip.md`
@@ -342,6 +343,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#734](https://github.com/PyAutoLabs/PyAutoLens/pull/734) — `active/vis_lp_mge_stage_writes_no_latents.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `complete/2026/09/pixelized-source-magnification-latent.md`
