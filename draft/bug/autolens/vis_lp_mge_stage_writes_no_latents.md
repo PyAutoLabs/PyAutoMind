@@ -42,5 +42,5 @@ the SED chain seeds `sersic_lens_model` from `vis_lp`, so this needs a verdict b
 `euclid_dr1_prelim` SED fits are trusted.
 
 Related: `complete/2026/09/catalogue-latent-prefix-blank.md` (the retired `latent.` prefix
-this is distinct from) and `draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md` (the
+this is distinct from) and `complete/2026/09/aggregate-csv-latent-sigma3.md` (shipped 2026-09-10, PyAutoFit#1598) (the
 silent-None path that hides both).

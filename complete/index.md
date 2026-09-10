@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1379 records across 8 buckets.
+1381 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,6 +122,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/09
 
 - [adapt-image-snr-cap](2026/09/adapt-image-snr-cap.md)
+- [aggregate-csv-latent-sigma3](2026/09/aggregate-csv-latent-sigma3.md)
 - [aggregator-search-json-sentinel](2026/09/aggregator-search-json-sentinel.md)
 - [aggregator-temp-unzip](2026/09/aggregator-temp-unzip.md)
 - [agwt-multi-delaunay-release-timeout](2026/09/agwt-multi-delaunay-release-timeout.md)
@@ -254,6 +255,7 @@ markers; everything below GENERATED is rebuilt.
 - [small-datasets-cap-stamp-stops-resimulation](2026/09/small-datasets-cap-stamp-stops-resimulation.md)
 - [smoke-ci-caches-jax-datasets](2026/09/smoke-ci-caches-jax-datasets.md)
 - [smoke-fixed-overhead](2026/09/smoke-fixed-overhead.md)
+- [smoke-jax-cache-threshold](2026/09/smoke-jax-cache-threshold.md)
 - [smoke-relevance-gate](2026/09/smoke-relevance-gate.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
