@@ -10,19 +10,6 @@
 - repos:
   - autolens_profiling: feature/reconstruction-row-split
 
-## euclid-catalogue-rebuild-prep
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
-- prompt: active/prepare_the_euclid_pipeline_for_an_ordered.md
-- issued: 2026-09-09
-- session: claude --resume session_01JsGeXEmGmSJzvxzC7GUpZo
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/61
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/68
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/euclid-catalogue-rebuild-prep
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/euclid-catalogue-build-and-parity
-- delivery: one issue, two phased PRs — phase 1 (feature/euclid-pipeline-disk-and-mge-ordering) gates the euclid_dr1_prelim reruns; phase 2 (feature/euclid-catalogue-build-and-parity) gates the catalogue build
-
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
@@ -70,7 +57,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/80
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
-- note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
+- note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml. The conflicting claim was released on 2026-09-10 when euclid-catalogue-rebuild-prep closed out (PRs #61 + #68 merged), so the guard no longer fires.
 
 ## autolens-inference-birth
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/399
