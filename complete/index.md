@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1383 records across 8 buckets.
+1384 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -124,6 +124,7 @@ markers; everything below GENERATED is rebuilt.
 - [adapt-image-snr-cap](2026/09/adapt-image-snr-cap.md)
 - [aggregate-csv-latent-sigma3](2026/09/aggregate-csv-latent-sigma3.md)
 - [aggregator-search-json-sentinel](2026/09/aggregator-search-json-sentinel.md)
+- [aggregator-sibling-dir-zip](2026/09/aggregator-sibling-dir-zip.md)
 - [aggregator-temp-unzip](2026/09/aggregator-temp-unzip.md)
 - [agwt-multi-delaunay-release-timeout](2026/09/agwt-multi-delaunay-release-timeout.md)
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under

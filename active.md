@@ -10,7 +10,7 @@
 - repos:
   - autolens_workspace_test: feature/latent-integration-smoke
 - plan: Approved by the user in Plan Mode (task A3 of a multi-task plan). Two new smoke scripts under scripts/misc/latent/ (NumPy + JAX legs), two smoke_tests.txt entries, and a stale-comment fix in config/latent.yaml.
-- note: "Library-first gate: the sibling-dir aggregator assertion depends on PyAutoFit#1601 (task A1, feature/aggregator-sibling-dir-zip) merging before this PR."
+- note: "Library-first gate CLEARED 2026-09-10: PyAutoFit#1602 (task A1, aggregator-sibling-dir-zip) is merged (e354dbb6) - see complete/2026/09/aggregator-sibling-dir-zip.md. This PR may merge once its own checks are green."
 
 ## howtofit-ch1-gradients-details
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/49
@@ -106,27 +106,3 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
-
-## aggregator-sibling-dir-zip
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1601
-- prompt: active/aggregator_sibling_dir_shadows_completed_zip.md
-- issued: 2026-09-10
-- session: claude --resume session_01CybZmqjyQRDpfK3Cs1JaW2
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1602
-- heart-ack:
-  - "2026-09-10 in-session, YELLOW, four reasons: workspace validation not passing (5 failed, 2 timeout, cloud#34099198772) and three profiling drift rows (runtime/imaging/{mge,mge_mass_jax,pixelization_numba_mge_mass}) - organism-scope, none touched by this branch"
-- worktree: ~/Code/PyAutoLabs-wt/aggregator-sibling-dir-zip
-- repos:
-  - PyAutoFit: feature/aggregator-sibling-dir-zip
-- plan: Approved by the human in Plan Mode (task A1 of a multi-task plan); aggregator zip/sibling precedence + preserve_in_zip loose-copy removal under remove_files.
-- summary: |
-    Library PR #1602 open, pending-release. Witness met: the euclid_dr1_prelim 342398
-    tree aggregates 20 outputs (5 on main). Full suite 2567 passed / 2 skipped / 0 failed.
-    Carries a third fix beyond the plan: search outputs are now sorted by path, which is
-    the real cause of the five test_aggregate_csv failures that reproduced locally while
-    CI stayed green (draft/bug/autofit/aggregate_csv_tests_fail_locally_pass_in_ci.md can
-    be closed against this PR). No workspace impact - every euclid consumer already calls
-    the unchanged from_directory signature. Follow-up filed at
-    draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md.
-- note: worktree_check_conflict flags PyAutoFit as claimed by start-here-mode (worktree ~/Code/PyAutoLabs-wt/start-here-mode). Deliberate parallel worktree - that task's PyAutoFit diff is docs/overview/ only, this one edits autofit/aggregator/aggregator.py, autofit/non_linear/paths/abstract.py and two test modules; the file sets are disjoint so each task keeps its own worktree, index and branch.

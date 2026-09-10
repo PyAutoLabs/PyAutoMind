@@ -20,7 +20,8 @@ Unattended: ready
 Filed: 2026-09-10
 
 Follow-up to the aggregator/`preserve_in_zip` fix
-(`bug/autofit/aggregator_sibling_dir_shadows_completed_zip.md`). Once
+(`complete/2026/09/aggregator-sibling-dir-zip.md`, PyAutoFit#1602, merged
+2026-09-10). Once
 `preserve_in_zip` deletes the loose copy under `remove_files=True`, the two
 post-completion cache readers no longer find a file on disk and fall through to
 recomputing the cached artifact:
