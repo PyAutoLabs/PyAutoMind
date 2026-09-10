@@ -16,6 +16,7 @@ Unattended: ready
 Epic: model-figures
 Phase: 1
 Filed: 2026-09-10
+Issued: 2026-09-10
 
 Phase 1 of the `model-figures` epic. Ledger (read it for the brief, the visual
 vocabulary, the full design record and the independent review):
