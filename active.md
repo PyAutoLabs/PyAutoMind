@@ -5,7 +5,8 @@
 - prompt: active/smoke_jax_cache_threshold.md
 - issued: 2026-09-10
 - session: claude --resume session_01NWYEAsAsN5cfuqqBoYTHho
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/222
+- status: awaiting-merge
 - location: web-github (session clone, no task worktree; branch claude/jax-cache-threshold-smoke-nfobes)
 - worktree: n/a — web-github session clone (/home/user/PyAutoHeart)
 - repos:
