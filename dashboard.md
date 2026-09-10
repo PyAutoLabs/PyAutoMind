@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md">Instrument the pixelized reconstruction row: NNLS-vs-Cholesky split, log-det emission, rectangular runtime pin…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/243">issue #243</a> — issued 2026-09-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md">Instrument the pixelized reconstruction row: NNLS-vs-Cholesky split, log-det emission, rectangular runtime pin…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/243">issue #243</a> — issued 2026-09-10 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/244">autolens_profiling#244</a></summary>
 
 ```
 /start_dev active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md
