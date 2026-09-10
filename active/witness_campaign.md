@@ -9,11 +9,12 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Review-minutes: 15
 Unattended: ready
 Filed: 2026-08-31
+Issued: 2026-09-10
 
 **Make every backlog prompt reviewable: a `Witness:` line on each draft.** A
 witness is the machine-checkable claim whose truth settles the task — the thing

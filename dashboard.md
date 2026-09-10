@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 153 |
+| [Backlog](#backlog) (`draft/`) | 151 |
 
 > **No batch in flight.**
 
 ## Start here
 
 **Highest priority** (filed as `high`)
-
-<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/witness_campaign.md
-```
-
-</details>
 
 <details><summary>📋 <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — autofit · large · supervised · high</summary>
 
@@ -150,7 +142,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 83
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 81
 
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
@@ -216,14 +208,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining <code>config/visualize/plots.yaml</code> copies</a> — config · trivial · safe · low</summary>
-
-```
-/start_dev draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows under the fixed XLA…</a> — autolens_profiling · small · supervised · medium</summary>
 
 ```
@@ -240,10 +224,18 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
+<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
 
 ```
-/start_dev draft/feature/pyautomind/witness_campaign.md
+/start_dev draft/docs/autolens/plot_rst_missing_exports.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+/start_dev draft/feature/pyautobrain/batch_slice.md
 ```
 
 </details>
@@ -268,6 +260,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining <code>config/visualize/plots.yaml</code> copies</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/62">issue #62</a> — issued 2026-09-10 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/63">euclid_strong_lens_modeling_pipeline#63</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/124">autolens_assistant#124</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/24">autogalaxy_assistant#24</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/80">HowToLens#80</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/74">HowToGalaxy#74</a></summary>
+
+```
+/start_dev active/remove_fits_dataset_from_remaining_plots_yaml_copies.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code> line, the preflight backstop…</a> — issued 2026-09-05</summary>
 
 ```
@@ -280,6 +280,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/scientific_workflow_language.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/398">issue #398</a> — issued 2026-09-10 — library-dev</summary>
+
+```
+/start_dev active/witness_campaign.md
 ```
 
 </details>
@@ -476,18 +484,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**153** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
+**151** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **27** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>feature</b> — 33</summary>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — pyautomind · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautomind/witness_campaign.md
-```
-
-</details>
+<summary><b>feature</b> — 32</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1243,7 +1243,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 13</summary>
+<summary><b>maintenance</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
@@ -1337,14 +1337,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining <code>config/visualize/plots.yaml</code> copies</a> — config · trivial · safe · low</summary>
-
-```
-/start_dev draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md
 ```
 
 </details>
@@ -1566,38 +1558,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>mind-workflow</b> — 3 task(s) · 6 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'mind-workflow' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/pyautomind/witness_campaign.md
-- draft/feature/pyautobrain/batch_slice.md
-- draft/refactor/pyautomind/repos_sync_check_dedup.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> | pyautomind | medium | high | draft |
-| <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> | pyautobrain | medium | normal | draft |
-| <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> | pyautomind | medium | low | formalised |
-
-</details>
-
-<details>
 <summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1797,7 +1757,37 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 24 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>jax-compile · pixelization</b> — 2 task(s) · 4 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'jax-compile · pixelization' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+- draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> | autoarray | medium | medium | formalised |
+| <a href="draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md">JIT cache not hit in modeling_visualization delaunay/rectangular…</a> | autolens | medium | normal | draft |
+
+</details>
+
+_Showing 8 of 23 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1806,6 +1796,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-10 | issued | <a href="active/jax_import_order_defeats_x64.md">jax_profiling scripts import jax before autolens, silently running in…</a> |
+| 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
+| 2026-09-10 | issued | <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
 | 2026-09-09 | issued | <a href="active/scientific_workflow_language.md">Scientific workflow through natural language</a> |
@@ -1813,13 +1805,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
-| 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
-| 2026-09-08 | filed | <a href="draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-08 | filed | <a href="draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md">Rerun the hpc_a100_fp64 Delaunay/DelaunayNN breakdown + runtime rows…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
@@ -1829,12 +1820,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mapper_adapt_zero_signal_jax_nan.md">Adapt-density mapper: a zero-signal adapt image is NaN on the JAX…</a> |
 | 2026-09-05 | issued | <a href="active/retire_gpu1_mig_exclusion.md">Retire the euclid-ral-gpu-1 MIG exclusion: drop every <code>--exclude</code>…</a> |
-| 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_slam_mass_pix_target.md">gradient-slam-baseline dev leg: the <code>mass_pix</code> target, its drivers…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
@@ -1844,16 +1835,15 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
-| 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
-| 2026-08-31 | filed | <a href="draft/feature/pyautomind/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
@@ -2174,7 +2164,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 
 </details>
 
-134 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+132 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2213,17 +2203,17 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautogut/gut_board.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- `draft/feature/pyautomind/witness_campaign.md`
 - `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
 - `draft/feature/workspaces/cluster_source_science.md`
 - `draft/feature/workspaces/gallery_runner_missing_tiers.md`
 - `draft/feature/workspaces/group_los_halos.md`
 - `draft/feature/workspaces/group_subhalo_sensitivity.md`
-- _… and 94 more_
+- `draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md`
+- _… and 92 more_
 
 </details>
 
-16 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+15 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2242,7 +2232,6 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
-- `draft/maintenance/config/remove_fits_dataset_from_remaining_plots_yaml_copies.md — unknown theme keyword(s): config`
 - `draft/research/autolens_profiling/rerun_a100_fp64_delaunay_rows_fixed_xla_default.md — unknown theme keyword(s): jax-gpu, performance, hpc`
 
 </details>
