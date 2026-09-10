@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -62,6 +62,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — euclid · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/refactor/pyautoheart/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole smoke leg</a> — pyautoheart · small · supervised · high</summary>
 
 ```
@@ -74,14 +82,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent drops all…</a> — autolens · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md
 ```
 
 </details>
@@ -272,6 +272,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/remove_fits_dataset_from_remaining_plots_yaml_copies.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent drops all…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/732">issue #732</a> — issued 2026-09-10 — library-dev</summary>
+
+```
+/start_dev active/vis_lp_mge_stage_writes_no_latents.md
 ```
 
 </details>
@@ -751,18 +759,18 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh is the median…</a> — autofit · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the latent engine's <code>jax.jit</code>…</a> — euclid · small · supervised · high</summary>
 
 ```
-/start_dev draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md
+/start_dev draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent drops all…</a> — autolens · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh is the median…</a> — autofit · medium · supervised · high</summary>
 
 ```
-/start_dev draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md
+/start_dev draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md
 ```
 
 </details>
@@ -1641,6 +1649,36 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>euclid — bundle 1</b> — 2 task(s) · 2 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'euclid — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/euclid/catalogue_latent_prefix_blank_columns.md
+- draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/euclid/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix…</a> | small | high | formalised |
+| <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the…</a> | small | high | formalised |
+
+</details>
+
+<details>
 <summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1806,41 +1844,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-<details>
-<summary><b>autolens_workspace — bundle 1</b> — 4 task(s) · 4 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autolens_workspace — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md
-- draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
-- draft/test/autolens_workspace/no_untimed_network_downloads_check.md
-- draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> | small | medium | draft |
-| <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> | small | medium | draft |
-| <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> | small | medium | formalised |
-| <a href="draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> | small | normal | formalised |
-
-</details>
-
-_Showing 8 of 24 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 25 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1850,19 +1854,20 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md">release-integrate must not ingest result files that pre-exist in a…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
+| 2026-09-10 | filed | <a href="draft/bug/euclid/vis_lp_latent_euclid_jit_trace.md">euclid pipeline: <code>LatentEuclid.variables</code> cannot be traced under the…</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh…</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/pyautoheart/smoke_jax_cache_threshold.md">Set <code>JAX_PERSISTENT_CACHE_MIN_COMPILE_TIME_SECS=0</code> for the whole…</a> |
 | 2026-09-10 | issued | <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent…</a> |
-| 2026-09-10 | issued | <a href="active/a100_pixelized_likelihood_baseline_for_matrix_free.md">Final A100 fp64 baseline of the pixelized imaging likelihood…</a> |
+| 2026-09-10 | issued | <a href="active/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | issued | <a href="active/a100_pixelized_likelihood_baseline_for_matrix_free.md">Final A100 fp64 baseline of the pixelized imaging likelihood…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/euclid/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
@@ -1872,12 +1877,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
-| 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
@@ -1887,12 +1892,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
-| 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
@@ -1902,12 +1907,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
-| 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 | 2026-08-29 | filed | <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
@@ -1917,7 +1922,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-28 | filed | <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS…</a> |
 | 2026-08-27 | filed | <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the…</a> |
 | 2026-08-27 | filed | <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> |
-| 2026-08-27 | filed | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> |
 
 </details>
 
