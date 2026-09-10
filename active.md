@@ -2,6 +2,8 @@
 
 ## a100-pixelized-baseline
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/242
+- heart-ack: 2026-09-10 in-session, YELLOW, four reasons: "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)" and three "profiling drift: runtime/imaging/{mge,mge_mass_jax,pixelization_numba_mge_mass}/…" rows — organism-scope, none touched by this branch
 - prompt: active/a100_pixelized_likelihood_baseline_for_matrix_free.md
 - issued: 2026-09-10
 - session: claude --resume session_01GqnrYLZw26f29M8w5sXz2j
