@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 6 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 158 |
+| [Backlog](#backlog) (`draft/`) | 157 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 13
-
-<details><summary>📋 <a href="draft/bug/euclid/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix, columns silently blank</a> — euclid · small · safe · high</summary>
-
-```
-/start_dev draft/bug/euclid/catalogue_latent_prefix_blank_columns.md
-```
-
-</details>
+**Highest priority** (filed as `high`)
 
 <details><summary>📋 <a href="draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent drops all…</a> — autolens · medium · supervised · high</summary>
 
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
+<details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -264,6 +264,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/aggregate_csv_latent_sigma3_and_silent_none.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix, columns silently blank</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/64">issue #64</a> — issued 2026-09-10 — workspace-dev</summary>
+
+```
+/start_dev active/catalogue_latent_prefix_blank_columns.md
 ```
 
 </details>
@@ -493,7 +501,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**158** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
+**157** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **29** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -757,15 +765,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 33</summary>
-
-<details><summary>📋 <a href="draft/bug/euclid/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix, columns silently blank</a> — euclid · small · safe · high</summary>
-
-```
-/start_dev draft/bug/euclid/catalogue_latent_prefix_blank_columns.md
-```
-
-</details>
+<summary><b>bug</b> — 32</summary>
 
 <details><summary>📋 <a href="draft/bug/autolens/vis_lp_mge_stage_writes_no_latents.md">MGE lens-light stage writes no latent output: one non-finite latent drops all…</a> — autolens · medium · supervised · high</summary>
 
@@ -1859,7 +1859,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-10 | filed | <a href="draft/bug/euclid/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix…</a> |
+| 2026-09-10 | issued | <a href="active/catalogue_latent_prefix_blank_columns.md">Catalogue producers request latents with a retired <code>latent.</code> prefix…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
