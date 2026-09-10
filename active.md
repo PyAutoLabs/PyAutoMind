@@ -1,5 +1,16 @@
 # Active Tasks
 
+## byol-mode
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/40
+- prompt: active/byol_mode.md
+- issued: 2026-09-10
+- session: claude --resume session_01BrGfrSxV9xoqCa4v1p9hix
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/byol-mode
+- repos:
+  - autofit_assistant: feature/byol-mode
+  - PyAutoFit: feature/byol-mode
+
 ## latent-integration-smoke
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/315
 - prompt: active/latent_integration_smoke.md

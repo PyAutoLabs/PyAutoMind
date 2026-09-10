@@ -14,6 +14,7 @@ Priority: high
 Consequence: notify
 Witness: `modes/byol.md` exists and `AGENTS.md` mode selection routes the published Bring Your Own Likelihood prompt ("Set up PyAutoFit with my existing science project …") to it; the mode runs the prompt's own contract — overview of the project and likelihood function → compose and explain a model → recommend a search → stop until the go-ahead → run → explain how results are written to disk and how to inspect them — one stage per turn with the ask-anything / teacher-mode footer; every surface that carries the prompt (PyAutoFit README, RTD Quick Start, assistant README) titles the section "Bring Your Own Likelihood (BYOL)" and says the prompt launches BYOL mode.
 Filed: 2026-09-10
+Issued: 2026-09-10
 Parent: complete/2026/09/start-here-mode.md
 
 ## Original request (verbatim)
