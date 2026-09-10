@@ -8,6 +8,8 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/start-here-mode
 - repos:
+  - autofit_assistant: feature/start-here-mode
+  - PyAutoFit: feature/start-here-mode
 
 ## a100-pixelized-baseline
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
