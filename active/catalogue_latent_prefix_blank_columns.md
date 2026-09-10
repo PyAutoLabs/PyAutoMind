@@ -13,6 +13,7 @@ Witness: `lens_mass.csv` rebuilt from the ten `euclid_dr1_prelim` 342398 `vis_pi
 Review-minutes: 15
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-10
 
 ## Symptom
 
