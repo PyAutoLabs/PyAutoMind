@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1374 records across 8 buckets.
+1375 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -238,6 +238,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-production-representative](2026/09/profiling-production-representative.md)
 - [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)
 - [release-smoke-env-declarations](2026/09/release-smoke-env-declarations.md)
+- [remove-fits-dataset-plots-yaml](2026/09/remove-fits-dataset-plots-yaml.md) — Removed the dead `dataset.fits_dataset` key from the five remaining `config/visualize/plots.yaml` copies and m…
 - [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)
 - [restore-pipeline-narrative-prose](2026/09/restore-pipeline-narrative-prose.md) — closed completed 2026-09-01T19:35Z
