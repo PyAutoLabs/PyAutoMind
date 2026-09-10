@@ -13,6 +13,7 @@ Witness: the `vis_lp` search of `euclid_dr1_prelim` tile 102005065 (342398 datas
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-10
 
 ## Symptom
 
