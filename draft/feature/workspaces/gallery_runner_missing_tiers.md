@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: safe
 Priority: low
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: `scripts/gallery/gallery_run.sh` DEFAULT_SCRIPTS contains both `imaging/visualization_upper.py` and `interferometer/visualization_upper.py`, a run of the tier they were slotted into renders their 12 and 17 figures, and `eyes survey autolens_workspace_test` reports no never-rendered `visualization_upper` producer.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-16 (backfilled from git)
 

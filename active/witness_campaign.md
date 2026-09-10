@@ -53,3 +53,75 @@ lowers the review cost of the prompts it touches.
 - The regrade (`sizing` faculty) is re-run and the glance/notify counts are
   recorded in this prompt, pass by pass, so the campaign's effect on the
   backlog's review cost is visible without re-deriving it.
+
+## Campaign log
+
+Counts are over `draft/` only, so the campaign's own prompt drops out of the
+denominator once it moves to `active/` (110 → 109). Two readings are recorded
+because they can disagree: **derived** is `estimate_consequence` re-run over the
+prompt, **declared** is the `Consequence:` header, which is what `dashboard.md`
+and the batch planner actually read.
+
+### Method correction (2026-09-10, before pass 1)
+
+The prompt above says "adding a `Witness:` line". That alone moves nothing on
+most of the target set. 89 of the 110 `Unattended: ready` prompts declare
+`Consequence: judge` in their header — 74 of them among the 89 unwitnessed —
+and `effective_consequence` lets a declared value beat the derived one.
+
+That declaration is not a human judgement the heuristic lacks; it is a cached
+derivation. `PyAutoBrain/agents/conductors/intake/_intake.py` puts `consequence`
+and `review-minutes` in the "DERIVED … hygiene set" that `intake formalise`
+fills in, while deliberately excluding `witness` because nothing can derive one.
+The stamp was correct when written (no witness → `judge`) and goes stale the
+moment a witness lands. Striking it instead is not an option either: the
+dashboard reads `header.get("consequence", "-")` (`_intake.py:1568`), never a
+live derivation, so a struck field renders `-` and the planner keeps budgeting
+20 review-minutes for a task that now costs 0 or 3.
+
+**So each pass writes three fields together — `Witness:`, `Consequence:`,
+`Review-minutes:` — and leaves `Unattended:` alone.**
+
+### Baseline (2026-09-10, before pass 1)
+
+| Reading | ready | witnessed | notify | glance | judge |
+|---|---|---|---|---|---|
+| derived | 110 | 21 | 5 | 12 | 93 |
+| declared (dashboard) | 110 | 21 | 1 | 7 | 89 + 13 unset |
+
+Fully witnessed, the same 110 would derive **28 notify / 74 glance / 8 judge**.
+That is the campaign's ceiling, and it reproduces the 33/104/16 in the prompt
+above (measured there over the whole 153-prompt backlog, not the ready subset).
+
+### Pass 1 — `workspaces`, 15 prompts (2026-09-10, issue #398)
+
+Chosen as the largest single-target group and the biggest `notify` yield. All 15
+were pinned at `Consequence: judge` with no witness. Human accepted all 15 as
+proposed.
+
+| | notify | glance | judge | review-minutes |
+|---|---|---|---|---|
+| before | 0 | 0 | 15 | 300 |
+| after | 7 | 8 | 0 | 24 |
+
+Backlog after pass 1: 109 ready, 36 witnessed, 73 not — derived **12 notify /
+19 glance / 78 judge**; declared **8 / 15 / 73** + 13 unset.
+
+Two witnesses are weaker than the other thirteen and are flagged here rather
+than in the prompts, so a later pass can revisit them without re-deriving the
+doubt: `group_los_halos` and `group_subhalo_sensitivity` both gate on "the
+imaging version needs improving and padding out first", a leg with no stated
+done-condition anywhere. Their witnesses cover only the group leg. The honest
+alternative was `Witness: none —` on both; the human chose to accept them.
+
+Also worth a later look: seven of the fifteen grade `notify` (0 review-minutes)
+via rule 5 — `docs` work-type, no library repo touched. Two of those seven
+(`interferometer_dirty_images_call_sites`, `propagate_shear_galaxy_idiom_to_group_cluster`)
+change figures across 11 and 4 lens examples and say in their own text that a
+human should look at the figures. The heuristic cannot see that. Declaring
+`Consequence: glance` on such a prompt is the documented way to hold it.
+
+### Remaining passes
+
+`autoarray` (10) · `autolens` (9) · `autofit` (8) · `autolens_workspace` (6) ·
+`autolens_profiling` (5) · then a tail pass over the ~26 singleton targets.

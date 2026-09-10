@@ -10,8 +10,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
-Consequence: judge
-Review-minutes: 25
+Consequence: notify
+Witness: After the sweep a grep for `subplot_fit_dirty_images` under `autolens_workspace/scripts/` returns nothing, all 11 named sites call `subplot_fit_interferometer_dirty_images`, and each regenerated figure carries the auto-derived critical-curve overlay the autogalaxy-bound version did not draw. The call-site count and the `fit=fit`-only claim are re-verified against current main first.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-09
 
