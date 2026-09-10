@@ -15,6 +15,8 @@ Consequence: judge
 Review-minutes: 15
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-10
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/221
 
 `/ci_speedup` (2026-09-10) fixed this per-script for the three slowest JAX smoke
 entries. **The general fix is one line, and it is a human's call because of what
