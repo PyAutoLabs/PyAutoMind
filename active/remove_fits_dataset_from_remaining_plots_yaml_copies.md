@@ -14,11 +14,13 @@ Themes:
 Difficulty: trivial
 Autonomy: safe
 Priority: low
-Status: draft
+Status: active
 Consequence: judge
 Review-minutes: 5
 Unattended: ready
 Filed: 2026-09-08
+Issued: 2026-09-10
+Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/62
 
 Follow-up to PyAutoGalaxy#608 (`dataset-fits-image-only`): the library no longer reads
 `visualize/plots.yaml` `dataset.fits_dataset` — `dataset.fits` is always written once, to the

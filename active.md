@@ -27,13 +27,16 @@
 ## scientific-workflow-language
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1595
 - issued: 2026-09-09
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientific-workflow-language
 - repos:
   - PyAutoFit: feature/scientific-workflow-language
   - autofit_workspace: feature/scientific-workflow-language
   - HowToFit: feature/scientific-workflow-language
-- plan: Approved by user. Tutorial/docs changes only; no library API changes. Brain's keyword-derived API phases do not apply to this scope.
+  - PyAutoHands: feature/scientific-workflow-language
+- plan: Approved by user. Tutorial rewrite plus required fixes for live notebook display retention (PyAutoFit) and prose-only notebook generation (PyAutoHands); no API signature changes.
+- progress: Implemented and locally validated; generated docs/notebooks updated. See active/scientific_workflow_language.md for validation and dependency details.
+- blocker: Shipping gate RED (release integration failed; unrelated PyAutoArray/PyAutoGalaxy checkouts behind origin). Implementation remains uncommitted in task worktrees.
 
 ## retire-gpu1-mig-exclusion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/220
@@ -81,3 +84,52 @@
     5 notify / 12 glance / 93 judge; fully witnessed the same set grades
     28 notify / 74 glance / 8 judge. Pass 1 = the `workspaces` group (15).
     Pass-by-pass counts are recorded in the prompt itself.
+
+## remove-fits-dataset-plots-yaml
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/62
+- prompt: active/remove_fits_dataset_from_remaining_plots_yaml_copies.md
+- issued: 2026-09-10
+- session: claude --resume session_01PLBfxi4vtBX9zogYAPHmLj
+- status: awaiting-merge
+- worktree: n/a (remote web session — branches pushed via the GitHub API, no local worktree claimed)
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/remove-fits-dataset-plots-yaml
+  - autolens_assistant: feature/remove-fits-dataset-plots-yaml
+  - autogalaxy_assistant: feature/remove-fits-dataset-plots-yaml
+  - HowToLens: feature/remove-fits-dataset-plots-yaml
+  - HowToGalaxy: feature/remove-fits-dataset-plots-yaml
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/63
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/124
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/24
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/80
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
+- plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
+- note: worktree_check_conflict flags euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml.
+
+## jax-import-order-x64
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/139
+- issued: 2026-09-10
+- prompt: active/jax_import_order_defeats_x64.md
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/140
+- session: claude --resume session_01XMA4HZYcVEzayYaRmS2uHi
+- status: awaiting-merge
+- worktree: ~/Code/PyAutoLabs-wt/jax-import-order-x64
+- repos:
+  - autolens_workspace_developer: feature/jax-import-order-x64
+- summary: |
+    Launched with an explicit --auto; effective autonomy `supervised`
+    (min of the prompt header and the `bug` work-type cap), so the ship
+    checkpoint resolves to decide-and-flag and the run ends at PR-open.
+    Scope corrected at the plan gate and human-approved: 48 offenders, not
+    the 33 the prompt's line-number grep reported — 6 `jax_profiling/
+    simulators/*` are already guarded, and 25 `searches_minimal/` scripts
+    the grep could not see are. Fix is the repo's own guard idiom
+    (`from autolens import jax_wrapper`) rather than an import reorder.
+    Shipped to PR-open 2026-09-10. Ship-gate leg 4 (Heart) COULD NOT RUN —
+    PyAutoHeart is not in this session's repo scope and `pyauto-heart` is not
+    on PATH; it is recorded as not-consulted, never as passed, so the gate is
+    incomplete and the human should know that before merging. Legs 1 and 2 are
+    n/a by the gate's own applicability rule (no test dir, no smoke list) with
+    substitute evidence named on the PR. One `decision-taken` flag: the six
+    redundant `jax.config.update` calls were kept, not deleted as the plan
+    said, because three carry comments that make deletion a judgement.
