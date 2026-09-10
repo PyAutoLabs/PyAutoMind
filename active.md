@@ -39,8 +39,9 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/139
 - issued: 2026-09-10
 - prompt: active/jax_import_order_defeats_x64.md
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/140
 - session: claude --resume session_01XMA4HZYcVEzayYaRmS2uHi
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/jax-import-order-x64
 - repos:
   - autolens_workspace_developer: feature/jax-import-order-x64
@@ -53,3 +54,11 @@
     simulators/*` are already guarded, and 25 `searches_minimal/` scripts
     the grep could not see are. Fix is the repo's own guard idiom
     (`from autolens import jax_wrapper`) rather than an import reorder.
+    Shipped to PR-open 2026-09-10. Ship-gate leg 4 (Heart) COULD NOT RUN —
+    PyAutoHeart is not in this session's repo scope and `pyauto-heart` is not
+    on PATH; it is recorded as not-consulted, never as passed, so the gate is
+    incomplete and the human should know that before merging. Legs 1 and 2 are
+    n/a by the gate's own applicability rule (no test dir, no smoke list) with
+    substitute evidence named on the PR. One `decision-taken` flag: the six
+    redundant `jax.config.update` calls were kept, not deleted as the plan
+    said, because three carry comments that make deletion a judgement.
