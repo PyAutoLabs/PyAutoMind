@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/prepare_the_euclid_pipeline_for_an_ordered.md">Prepare the Euclid pipeline for an ordered, low-disk DR1-prelim catalogue rebuild</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60">issue #60</a> — issued 2026-09-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/61">euclid_strong_lens_modeling_pipeline#61</a> — ⚠️ gates a Cortex task → tasks/euclid_dr1_prelim/ordered_rerun_catalogue_parity.md</summary>
+<details><summary>📋 <a href="active/prepare_the_euclid_pipeline_for_an_ordered.md">Prepare the Euclid pipeline for an ordered, low-disk DR1-prelim catalogue rebuild</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60">issue #60</a> — issued 2026-09-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/61">euclid_strong_lens_modeling_pipeline#61</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/68">euclid_strong_lens_modeling_pipeline#68</a> — ⚠️ gates a Cortex task → tasks/euclid_dr1_prelim/ordered_rerun_catalogue_parity.md</summary>
 
 ```
 /start_dev active/prepare_the_euclid_pipeline_for_an_ordered.md
