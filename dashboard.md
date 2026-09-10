@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh is the median…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1597">issue #1597</a> — issued 2026-09-10 — library-dev</summary>
+<details><summary>📋 <a href="active/aggregate_csv_latent_sigma3_and_silent_none.md"><code>aggregate_csv</code>: latent 3-sigma bounds are the 1-sigma values, max_lh is the median…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1597">issue #1597</a> — issued 2026-09-10 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1598">PyAutoFit#1598</a></summary>
 
 ```
 /start_dev active/aggregate_csv_latent_sigma3_and_silent_none.md
