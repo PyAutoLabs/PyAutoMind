@@ -1,3 +1,79 @@
+## autolens-inference-birth
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/399 (closed completed 2026-09-10)
+- completed: 2026-09-10
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/400
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/28
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/224
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/375
+- library-pr: https://github.com/PyAutoLabs/.github/pull/9
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/1
+- shipped: 2026-09-10 — six PRs on `feature/autolens-inference-birth`: PyAutoHeart #224
+  (`94b64cb1`), PyAutoBrain #375 (`095812d4`), .github #9 (`e82a0757`),
+  autolens_inference #1 (`bd4fe48d`), then PyAutoMind #400 (`5b88d0f9`) and PyAutoCortex
+  #28 (`1a151fd5`) after merging `main` back in (both had gone `dirty` on generated
+  dashboards; Mind also on `epics.md`).
+- classification: feature (autolens_inference) — epic `autolens-inference`, phase 1 of 4.
+  Human-gated: `PyAutoLabs/autolens_inference` was created 2026-09-10 by `gh repo create
+  --public` after a dedicated confirmation question (the gh token carries `repo` scope and
+  the human is org admin — the first agent-run org-repo creation; earlier births were by
+  hand on github.com).
+- summary: `autolens_inference` is born as the from-scratch restart of the retired Cortex
+  project `inference_programme` (PyAutoCortex#22), with **nothing inherited** — the human
+  distrusts that programme's runs, so its baselines, notes, target code, searches
+  framework and result JSONs stay out (phase 2 archives and deletes them from
+  autolens_profiling). Delivered: a workspace-root checkout with the autolens_profiling
+  skeleton minus the searches tier (48 files: `ruff.toml` sentinel, `_inference_cli.py`
+  with `--backend/--inversion/--seed` reserved for phase 3, `instruments/`, three
+  simulators, an empty-state README renderer with `--check`, `hpc/sync` as profiling's
+  no-push fork plus the `PYAUTO_PULL_DIRS` seam extended to `PULL_DESTS` in lockstep,
+  A100 `gpu` and `ral` SLURM templates, lint + profile workflows; `wall/rates.py` ships
+  EMPTY on purpose); `repos.yaml` row (`category: project`) with `repos_sync --write`
+  regenerating the root routing table; `ROUTING.md` target; `epics.md` entry;
+  `PyAutoCortex/projects.yaml` row (`mirror: none`, `assistant: autolens_assistant`,
+  `partition: both`, `status: active`) with dashboards re-rendered; Heart `excluded:`;
+  Brain `clean_slate.sh` exclusion; org-profile README row. RAL: clone at
+  `/mnt/ral/jnightin/autolens_inference` on `main`, `activate.sh` resolves autolens /
+  autofit / autoarray 2026.8.17.1, `hpc/sync check|status|jobs|du|pull` all pass and a
+  pull writes `.cortex/pull.json`.
+- witness: `repos_sync.py --check` 16/16 legs OK; `cortex.py check` OK; autolens_inference
+  `lint` green on PR #1 (ruff, README idempotence, wall gate, 4 pytest, 3 smoke
+  simulators); PyAutoMind 412 / PyAutoCortex 126 / PyAutoHeart 967 / PyAutoBrain 944
+  passed; CI green on every leg of every run for the four merged-first PRs; `.github` has
+  no checks configured (merged MERGEABLE/CLEAN under the human's `/prm`, as for the
+  Cortex birth).
+- heart: not GREEN at ship (test run NOT ready — autolens multi_dataset notebook + script
+  timeouts, workspace_test `delaunay.py` failed; release validation incomplete). None of
+  it touches the six doc/manifest repos; merged under the human's `/prm`.
+- deviations: `scripts/repos_sync.py` gained a `FIREWALL_ALLOWLIST` entry — naming the
+  new repo in Brain's clean-slate comment trips the tenant-firewall leg otherwise (a data
+  declaration, not a check bypass). The workspace root `/home/jammy/Code/PyAutoLabs` is
+  **not a git repo**, so the regenerated root `AGENTS.md` lives on disk only.
+  `_inference_cli.py` dropped `--vmap-probe`, `--variant`, `--n-instances`,
+  `--cold-evals` (they only served excluded tiers). `check_submits.py` now also gates
+  `hpc/batch_*/template`.
+- traps: another session's `prompt_sync_push` (`git add -A`) swept this task's untracked
+  draft prompt into its own commit while the draft was being moved to `active/` — removed
+  from `origin/main` by a follow-up commit; the canonical PyAutoMind checkout held that
+  session's staged close-out throughout, so every Mind write here went through a detached
+  temp worktree of `origin/main`. `ledger_merge.py classify --base origin/main` with no
+  paths HANGS (killed; a second session's identical hung process was left alone). The new
+  `.gitignore` lacked `logs/` until `hpc/sync pull` exposed it. Mind #400 and Cortex #28
+  went `dirty` within the hour because both mains regenerate dashboards on every push.
+- follow-ups: phase 2 `draft/maintenance/autolens_profiling/scrap_inference_programme.md`
+  (Gut-archive + delete the searches tier, baselines and inference notes; close
+  autolens_profiling#218/#205, reframe #166); phase 3
+  `draft/feature/autolens_inference/slam_base_driver.md` (backend-parameterised SLaM
+  driver, per-stage rows, six submits with measured WALL-BASIS); phase 4 = `cortex.py new
+  autolens_inference slam_hst_base` once phase 3 lands. Not filed: hoisting `instruments/`
+  + `simulators/` into PyAutoLens (third copy now exists); `hpc/sync status` creates local
+  `logs/**` dirs before its dry run; the human is confident the `PAT_PYAUTOLABS` token
+  already covers the new repo — the next `session_hook_propagate` run is the witness.
+- session: claude-code-cli, Fable architect; research by 7 Opus explore agents, execution
+  by 4 Opus subagents (skeleton, registries, RAL, conflict resolution); close-out via
+  `/prm` 2026-09-10.
+
+## Original prompt
+
 # autolens_inference birth: checkout, skeleton and registration (phase 1 of 4)
 
 Type: feature

@@ -26,7 +26,7 @@ Builds the thing the repo exists for: one script that runs the standard imaging 
 end to end under any of the three backends and either inversion path, records every stage
 as a comparable row, and can be submitted to RAL. Phase 4 then files the Cortex task
 `slam_hst_base` that runs the six legs and rules on parity. Design record: the phase-1
-prompt `active/autolens_inference_birth.md` and PyAutoMind#399; nothing from the retired
+prompt `complete/2026/09/autolens-inference-birth.md` and PyAutoMind#399; nothing from the retired
 `inference_programme` is reused.
 
 ## The chain (mirror `autolens_workspace/scripts/guides/modeling/slam_start_here.py`)
