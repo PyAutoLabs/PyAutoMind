@@ -8,6 +8,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/howtofit-ch1-gradients-details
 - repos:
+  - HowToFit: feature/howtofit-ch1-gradients-details
 
 ## start-here-mode
 - issue: https://github.com/PyAutoLabs/autofit_assistant/issues/38
