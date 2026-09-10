@@ -13,15 +13,18 @@
 
 ## latent-integration-smoke
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/315
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/316
 - prompt: active/latent_integration_smoke.md
 - issued: 2026-09-10
 - session: claude --resume session_01CybZmqjyQRDpfK3Cs1JaW2
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/latent-integration-smoke
 - repos:
   - autolens_workspace_test: feature/latent-integration-smoke
 - plan: Approved by the user in Plan Mode (task A3 of a multi-task plan). Two new smoke scripts under scripts/misc/latent/ (NumPy + JAX legs), two smoke_tests.txt entries, and a stale-comment fix in config/latent.yaml.
 - note: "Library-first gate CLEARED 2026-09-10: PyAutoFit#1602 (task A1, aggregator-sibling-dir-zip) is merged (e354dbb6) - see complete/2026/09/aggregator-sibling-dir-zip.md. This PR may merge once its own checks are green."
+- heart-ack: "2026-09-10 YELLOW, no RED: workspace validation not passing (cloud#34099198772), three profiling-drift rows, release validation incomplete - all organism-scope; the one autolens_test entry named (scripts/imaging/delaunay.py) is pre-existing on main and passes in the local 31/31 suite."
+- validation: "local run_smoke.py 31/31 PASS (smoke_tests.txt 29 -> 31 entries); latent_integration_smoke.py 44.3s and latent_integration_smoke_jax.py 28.3s, both well under the 300s CI cap; all four guarded regressions reintroduced by monkeypatch and each failed its script."
 
 ## howtofit-ch1-gradients-details
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/49
