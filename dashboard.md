@@ -2363,7 +2363,15 @@ Continue the 'PyAutoFit model figures — structure-first model visualisation (c
 </details>
 
 <details>
-<summary><b>autolens-inference</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>autolens_inference — inference benchmarking repo, birth to first base run</b> — 2 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>autolens_inference — inference benchmarking repo, birth to first base run</b> — ledger: `active/autolens_inference_birth.md`</summary>
+
+```
+Continue the 'autolens_inference — inference benchmarking repo, birth to first base run' epic. Its canonical state lives in active/autolens_inference_birth.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 4 phases — 1 birth + registration (PyAutoMind#399), 2 Gut-archive and delete autolens_profiling's searches tier / baselines / inference notes (nothing inherited), 3 backend-parameterised SLaM driver + per-stage results + submit scripts, 4 PyAutoCortex task `slam_hst_base` (5-stage HST SLaM × {numba_cpu, jax_cpu, jax_gpu} × {dense, sparse}). Science half: PyAutoCortex tasks carrying `Epic: autolens-inference`. Ledger moves to autolens_inference/wiki/project/state.md once phase 3 lands.
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/maintenance/autolens_profiling/scrap_inference_programme.md">Scrap the retired inference programme from autolens_profiling (autolens-inference phase 2)</a> — autolens_profiling · medium · supervised · high</summary>
 

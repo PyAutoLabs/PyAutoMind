@@ -79,3 +79,8 @@ epic, never picked standalone.
 - title: PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)
 - ledger: draft/feature/autofit/model_figures_epic.md
 - notes: 6 phased prompts; 1 → 2 → 3 in order, 4 after 2, 5 after 4, 6 (rollout across every workspace, HowTo chapter and sibling project) after 3 and 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
+
+## autolens-inference
+- title: autolens_inference — inference benchmarking repo, birth to first base run
+- ledger: active/autolens_inference_birth.md
+- notes: 4 phases — 1 birth + registration (PyAutoMind#399), 2 Gut-archive and delete autolens_profiling's searches tier / baselines / inference notes (nothing inherited), 3 backend-parameterised SLaM driver + per-stage results + submit scripts, 4 PyAutoCortex task `slam_hst_base` (5-stage HST SLaM × {numba_cpu, jax_cpu, jax_gpu} × {dense, sparse}). Science half: PyAutoCortex tasks carrying `Epic: autolens-inference`. Ledger moves to autolens_inference/wiki/project/state.md once phase 3 lands.
