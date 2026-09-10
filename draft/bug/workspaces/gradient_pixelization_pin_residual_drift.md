@@ -13,8 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: The bisect names one commit whose parent and self, both built and measured (never attributed from commit messages), differ by the residual 3.2% in the eager `figure_of_merit` of `jax_profiling/gradient/imaging/pixelization.py`; that attribution is written into the file's provenance comment beside the #490 rows — or, if the move is a regression, the fix restores the fiducial to a value reproducing its pin to the tolerance the sibling jit cell already meets.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-26
 

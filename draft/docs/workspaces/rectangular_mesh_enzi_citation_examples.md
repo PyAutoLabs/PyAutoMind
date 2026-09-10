@@ -13,8 +13,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: In both workspaces the set of files introducing `RectangularAdaptDensity`/`RectangularAdaptImage` and the set carrying the Enzi et al. (2026) arXiv:2606.30620 paragraph are the same set, and the diff touches scripts and guides only — no library or model code.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-07-24 (backfilled from git)
 
