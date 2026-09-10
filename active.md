@@ -111,8 +111,12 @@
 - prompt: active/vis_lp_latent_euclid_jit_trace.md
 - issued: 2026-09-10
 - session: claude --resume session_01CybZmqjyQRDpfK3Cs1JaW2
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/vis-lp-latent-jit-trace
 - repos:
+  - euclid_strong_lens_modeling_pipeline: feature/vis-lp-latent-jit-trace
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/67
+- heart-ack: "2026-09-10 YELLOW, no RED: workspace validation not passing (cloud#34099198772), three profiling-drift rows, release validation incomplete — all organism-scope, none touching this repo or the latent path."
+- ci: "reusable smoke-tests.yml path filter skipped every matrix job (unit/slow/smoke all `skipping`) — nothing under scripts/, config/ or .github/ changed; evidence is the local serial run, as pipeline PR #65 was merged on. Gap filed as draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md."
 - plan: Approved by the user in Plan Mode (task A2 of a multi-task plan). Two `util.py` hunks (latent_instance_from; NumPy uniform grid) plus one JAX unit test; the RAL witness rerun is a later science phase.
 - note: worktree_check_conflict exits 1 — euclid_strong_lens_modeling_pipeline is claimed by euclid-catalogue-rebuild-prep (feature/euclid-pipeline-disk-and-mge-ordering, PR #61 merged, row still awaiting-merge) and by remove-fits-dataset-plots-yaml (PR #63, merged, worktree n/a). Both claims are stale and neither touches the latent block of util.py; waived by the user, who approved this plan with the pipeline repo as the target, mirroring the remove-fits-dataset-plots-yaml waiver above.
