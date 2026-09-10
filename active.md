@@ -5,7 +5,11 @@
 - prompt: active/vis_lp_mge_stage_writes_no_latents.md
 - issued: 2026-09-10
 - session: claude --resume session_01FFSFgEBiZc7kTRutfK1RsN
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/734
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1600
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/734
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1600
+- status: library-shipped, awaiting-merge
 - location: web-github (session clones, no task worktree)
 - worktree: n/a — web-github session clones (/home/user/PyAutoLens, /home/user/PyAutoFit)
 - repos:
