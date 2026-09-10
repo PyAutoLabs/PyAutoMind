@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/chapter_1_gradients_details_bayesian.md">HowToFit chapter 1: gradients, the details, and Bayesian formalism tutorials</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/49">issue #49</a> — issued 2026-09-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/chapter_1_gradients_details_bayesian.md">HowToFit chapter 1: gradients, the details, and Bayesian formalism tutorials</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/49">issue #49</a> — issued 2026-09-10 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/50">HowToFit#50</a></summary>
 
 ```
 /start_dev active/chapter_1_gradients_details_bayesian.md
