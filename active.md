@@ -15,7 +15,8 @@
 - prompt: active/catalogue_latent_prefix_blank_columns.md
 - issued: 2026-09-10
 - session: claude --resume session_01DpSbN9hUU3H8EEtMPK15B7
-- status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/65
+- status: awaiting-merge
 - location: web-github (session clone, no task worktree; euclid branch feature/catalogue-latent-prefix-blank)
 - worktree: n/a — web-github session clone (/home/user/euclid_strong_lens_modeling_pipeline)
 - repos:
