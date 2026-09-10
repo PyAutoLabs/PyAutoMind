@@ -1,3 +1,28 @@
+## scientific-workflow-language
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1595
+- completed: 2026-09-10
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1596
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/278
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/151
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/48
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1596
+- merge-proof: All four PRs confirmed MERGED and all four feature branches are ancestors of origin/main.
+- merge-commits: PyAutoFit 6ea1dda08748ce5f239008d17a2c3f14f750a18a; PyAutoHands 791aaf548d22d5430ad4d70ae633ee98b1552e18; autofit_workspace d66c485434a690a8756af2a23c1898b15417f0a8; HowToFit 91de7ff3edb8f6ef498367969269232d7db2c5a9.
+
+CI initially caught a missing terminal Wrap Up section in HowToFit. Added that prose-only heading, regenerated artifacts, and checked the new commit; all required checks passed before merging in dependency order.
+
+Reworked the scientific workflow guide into natural-language prompts with explanatory output examples, explicit saved-file inventory, real model.json excerpt, separated pre-fit and during-fit visualization, live progress, reloading, scientific summaries, model/search comparison and an illustrative five-dataset study. The workspace Python overview now demonstrates those operations with one real Nautilus fit, distinct images, JSON units, posterior credible intervals and SQLite loading.
+
+Moved HowToFit's scientific workflow stub to a prose-only chapter 1 closing tutorial, updated navigation and generated notebooks/markdown/catalogues, and preserved chapter 3 numbering. PyAutoHands now omits Colab setup for notebooks with no code so regeneration preserves this design.
+
+Real notebook validation exposed a PyAutoFit bug: clear_output removed the persistent display target before later image updates. Quick updates now retain notebook output when live visualization is enabled. A real kernel confirmed one visible image remains after initial display and two refreshes with the same display ID.
+
+Local validation: PyAutoFit 2555 passed / 2 skipped; focused quick updates 34 passed / 1 skipped; Hands injection 11 passed; workspace smoke 8 scripts + 2 notebooks passed; HowToFit 15 scripts passed / 1 skipped. Sphinx build, generated markdown, navigator references, notebook schema and prose-only checks passed.
+
+The user explicitly overrode unrelated RED shipping findings (release integration failure and behind-origin PyAutoArray/PyAutoGalaxy checkouts), then authorized merges and requested execution on another model. GPT-5.6 Luna performed the CI/merge phase. No release was authorized or performed. The task worktree is retained to preserve generated datasets, fit outputs and local documentation previews; these data were not deleted.
+
+## Original prompt
+
 # Scientific workflow through natural language
 
 Type: docs
