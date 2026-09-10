@@ -5,6 +5,7 @@
 - prompt: active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md
 - issued: 2026-09-10
 - session: claude --resume session_014MpFvj3ZeAHLBTYo2mkGRQ
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/244
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/reconstruction-row-split
 - repos:
