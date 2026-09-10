@@ -225,6 +225,10 @@ repos:
     github: PyAutoLabs/autolens_profiling
     category: project
     role: "JAX likelihood-profiling runs and results."
+  autolens_inference:
+    github: PyAutoLabs/autolens_inference
+    category: project
+    role: "Non-linear search and inference benchmarking runs and results — which searches, with or without gradients, on CPU and A100, find the right answer fastest."
 
   PyAutoScientist:
     github: PyAutoLabs/PyAutoScientist
