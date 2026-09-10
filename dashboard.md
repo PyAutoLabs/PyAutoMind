@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/latent_integration_smoke.md">autolens_workspace_test: a first-class latent-variable integration smoke that writes, aggregates and catalogues real…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/315">issue #315</a> — issued 2026-09-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/latent_integration_smoke.md">autolens_workspace_test: a first-class latent-variable integration smoke that writes, aggregates and catalogues real…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/315">issue #315</a> — issued 2026-09-10 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/316">autolens_workspace_test#316</a></summary>
 
 ```
 /start_dev active/latent_integration_smoke.md
