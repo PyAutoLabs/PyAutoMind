@@ -1,5 +1,15 @@
 # Active Tasks
 
+## a100-pixelized-baseline
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
+- prompt: active/a100_pixelized_likelihood_baseline_for_matrix_free.md
+- issued: 2026-09-10
+- session: claude --resume session_01GqnrYLZw26f29M8w5sXz2j
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/a100-pixelized-baseline
+- repos:
+  - autolens_profiling: feature/a100-pixelized-baseline
+
 ## euclid-catalogue-rebuild-prep
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/60
 - prompt: active/prepare_the_euclid_pipeline_for_an_ordered.md
