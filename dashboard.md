@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 163 |
+| [Backlog](#backlog) (`draft/`) | 167 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 86
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 90
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -240,10 +240,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — autolens_workspace · small · safe · normal</summary>
+<details><summary>📋 <a href="draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md">Example Analysis should reduce with xp.sum not builtin sum</a> — autofit · small · safe · normal</summary>
 
 ```
-/start_dev draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md
+/start_dev draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md
 ```
 
 </details>
@@ -499,7 +499,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**163** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
+**167** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **31** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 33</summary>
@@ -771,7 +771,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 33</summary>
+<summary><b>bug</b> — 36</summary>
 
 <details><summary>📋 <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — autofit · small · safe · high</summary>
 
@@ -877,10 +877,34 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/assertion_repr_recurses_forever.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — autofit · small · safe · normal</summary>
 
 ```
 /start_dev draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md">Emcee crashes in autocorrelation when the chain is too short</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/stale_enable_pytrees_register_model_advice_in.md">Stale enable_pytrees register_model advice in NUTS and SMC errors and searches docs</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/stale_enable_pytrees_register_model_advice_in.md
 ```
 
 </details>
@@ -1391,7 +1415,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 11</summary>
+<summary><b>refactor</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
 
@@ -1429,6 +1453,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/refactor/autoarray/matern_vendor_bessel_kve.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md">Example Analysis should reduce with xp.sum not builtin sum</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md
 ```
 
 </details>
@@ -1607,17 +1639,18 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>autofit — bundle 1</b> — 3 task(s) · 7 pts · auto — proposed</summary>
+<summary><b>autofit — bundle 1</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md
 - draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md
 - draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
+- draft/bug/autofit/assertion_repr_recurses_forever.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1635,6 +1668,7 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> | large | high | formalised |
 | <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class…</a> | small | high | formalised |
 | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
+| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
 
 </details>
 
@@ -1872,7 +1906,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 25 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 26 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
