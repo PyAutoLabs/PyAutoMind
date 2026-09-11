@@ -109,7 +109,17 @@
 - issued: 2026-09-11
 - prompt: active/model_figures_4_graphical_plates.md
 - session: claude --resume session_0178yLU9v19GtACcRPFggjGa
-- status: library-dev
+- status: library-dev (PAUSED 2026-09-11 ~12:45 — laptop shutdown mid-implementation; WIP committed on feature/model-figures-graphical in all three repos, NOT shipped)
+- resume: |
+    PyAutoFit worktree: Leg A finished graph_spec graphical pass + presentation/render (427 tests
+    green, non-graphical byte-identical); REMAINING: new tests test_autofit/graph_spec/test_graphical.py
+    + test_autofit/model_figure/test_graphical_presentation.py (check whether written), the three
+    make_figures.py builders/PNGs (graphical_shared/variable/hierarchical), docs/features/graphical.md
+    holes (:144 + Hierarchical section), full suite, black. Workspace worktrees: scripts edited
+    (autofit_workspace features/graphical_models.py figure :249 + hierarchical :343; HowToFit
+    tutorial_2 :233, tutorial_4 :232) but NOT yet run headless and notebooks/navigator NOT regenerated.
+    Then: ship_library (PyAutoFit PR), ship_workspace (2 PRs), /prm in order PyAutoFit → autofit_workspace → HowToFit.
+    Plan on the issue (#1616); WIP commit messages say "WIP".
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-graphical
 - repos:
   - PyAutoFit: feature/model-figures-graphical
