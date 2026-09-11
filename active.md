@@ -113,6 +113,8 @@
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-graphical
 - repos:
   - PyAutoFit: feature/model-figures-graphical
+  - autofit_workspace: feature/model-figures-graphical
+  - HowToFit: feature/model-figures-graphical
 - parallel-claim: "PyAutoFit is also claimed by remove-parallel-ep-optimiser (PR #1612, web session, no local worktree, EP-optimiser files only). Disjoint from this task's graph_spec/model_figure/docs edits; the human approved a parallel worktree in the 2026-09-11 phase-4 plan (same waiver as phases 2-3)."
 - summary: |
     Epic model-figures phase 4 of 6. Plate notation for FactorGraphModel: graphical pass in
