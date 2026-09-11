@@ -130,7 +130,13 @@
 - issued: 2026-09-11
 - prompt: active/model_figures_3_lens_cookbook.md
 - session: claude --resume session_0178yLU9v19GtACcRPFggjGa
-- status: library-shipped, workspace-pending
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/541
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/240
+- release-gate: PyAutoFit
+- release-gate: PyAutoArray
+- release-gate: PyAutoGalaxy
+- release-gate: PyAutoLens
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1615
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/550
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616
