@@ -10,11 +10,12 @@ Themes:
 Difficulty: easy
 Autonomy: safe
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Review-minutes: 10
 Unattended: ready
 Filed: 2026-09-11
+Issued: 2026-09-11
 
 User request (verbatim, 2026-09-11, after the SED chain for the eight finished
 dr1_prelim tiles was submitted as GPU job 342648 from `hpc/batch_gpu/submit_sersic_waveband`):

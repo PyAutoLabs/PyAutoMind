@@ -104,3 +104,22 @@
     build_readme, six RAL submits with measured WALL-BASIS rates, CI smoke + dispatch witness,
     and docs. Phase 4 then files the Cortex task `slam_hst_base`.
     Plan on the issue and in ~/.claude/plans/idempotent-strolling-seahorse.md.
+
+## sed-chain-cpu-route
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
+- issued: 2026-09-11
+- prompt: active/sed_chain_cpu_route_jax_cpu_backend.md
+- session: claude --resume session_01AELxUSfSPRz2SDnnVJHohi
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/sed-chain-cpu-route
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/sed-chain-cpu-route
+- note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by remove-fits-dataset-plots-yaml, whose PR #63 merged and issue #62 closed on 2026-09-10 without a close-out. Stale claim, waived on the human's plan approval; the file sets are disjoint (hpc/ submit scripts and README here, config/visualize/plots.yaml there) and this task runs in a fresh parallel worktree.
+- summary: |
+    The SED chain (Sersic VIS + per-band waveband fits) gets a CPU submit script,
+    hpc/batch_cpu/submit_sersic_waveband, which pins JAX to the CPU backend exactly as
+    stage 1 of submit_initial_lens_model_two_stage does for vis_lp (no --use_cpu: both SED
+    analyses are use_jax=True and --use_cpu would flip them to Numba). It becomes the
+    documented default; the GPU script stays as the optional route. README route table,
+    hpc/sync comments and usage text, the sersic_lens_model.py batch_size docstring and the
+    PyAutoCortex "Where to look" line are repointed. GPU job 342648 is untouched.
