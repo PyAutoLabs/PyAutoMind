@@ -1,5 +1,17 @@
 # Active Tasks
 
+## autofit-from-instance-roundtrip
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1607
+- issued: 2026-09-11
+- prompt: active/model_from_instance_roundtrip_unexpected_kwargs.md
+- session: claude --resume session_01CWGZiKQo2PhvsymabkUJJm
+- status: ready-to-ship — fix + tests pushed (1c152be41), full suite 2575 passed / 43 skipped; PR body awaiting sign-off
+- location: web-github (session clone /home/user/pyautofit, no task worktree; branch claude/autofit-model-instance-roundtrip-erf439)
+- worktree: n/a — web-github session clone (/home/user/pyautofit)
+- repos:
+  - PyAutoFit: claude/autofit-model-instance-roundtrip-erf439
+- plan: Approved by user 2026-09-11. Filter `from_instance` to constructor parameters (getfullargspec args+kwonlyargs; keep all when varkw / uninspectable); regression tests for dict()/from_dict round-trip and Aggregator.from_directory over a from_instance model.json.
+
 ## einstein-radius-jit-seed-finder
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/614
 - issued: 2026-09-11

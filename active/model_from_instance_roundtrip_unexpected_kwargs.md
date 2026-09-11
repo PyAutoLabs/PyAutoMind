@@ -13,6 +13,7 @@ Witness: `af.Model.from_dict(af.Model.from_instance(al.mp.ExternalShear(gamma_1=
 Review-minutes: 15
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-11
 
 ## Symptom
 
