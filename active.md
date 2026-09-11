@@ -89,10 +89,13 @@
 - issued: 2026-09-11
 - prompt: active/model_figures_2_renderer.md
 - session: claude --resume session_0178yLU9v19GtACcRPFggjGa
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1614
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1614
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-renderer
 - repos:
   - PyAutoFit: feature/model-figures-renderer
+  - autofit_workspace: feature/model-figures-renderer
 - parallel-claim: "PyAutoFit is also claimed by remove-parallel-ep-optimiser (PR #1612, web session, no local worktree). File sets are disjoint (EP optimiser + its tests vs a new autofit/model_figure/ package, paths/directory.py, config/output.yaml, __init__.py, docs); the human approved a parallel worktree in the 2026-09-11 plan."
 - summary: |
     Epic model-figures phase 2 of 6. Pure-matplotlib containment renderer over the
