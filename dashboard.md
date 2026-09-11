@@ -244,7 +244,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_2_renderer.md">Model figures phase 2 — matplotlib renderer</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1613">issue #1613</a> — issued 2026-09-11 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1614">PyAutoFit#1614</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/model_figures_2_renderer.md">Model figures phase 2 — matplotlib renderer</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1613">issue #1613</a> — issued 2026-09-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1614">PyAutoFit#1614</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/152">autofit_workspace#152</a> — ⏳ pending release: PyAutoFit — ⏸ waiting on PyAutoFit's release</summary>
 
 ```
 /start_dev active/model_figures_2_renderer.md
@@ -334,6 +334,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1583](https://github.com/PyAutoLabs/PyAutoFit/pull/1583) — `complete/2026/09/traced-assertions-on-jax-path.md`
 - [PyAutoFit#1572](https://github.com/PyAutoLabs/PyAutoFit/pull/1572) — `complete/2026/09/transformed-from-mode-coupled-covariance.md`
 - [PyAutoFit#1600](https://github.com/PyAutoLabs/PyAutoFit/pull/1600) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
+- ⏸ waiting: [Model figures phase 2 — matplotlib renderer](active/model_figures_2_renderer.md)
 
 **PyAutoGalaxy**
 
