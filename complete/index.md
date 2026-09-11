@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1394 records across 8 buckets.
+1395 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -178,6 +178,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-laplace-deterministic-hessian](2026/09/ep-laplace-deterministic-hessian.md) — closed completed 2026-09-07
 - [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
 - [ep-message-support](2026/09/ep-message-support.md)
+- [ep-no-multiprocessing-pool](2026/09/ep-no-multiprocessing-pool.md)
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
 - [ep-review-92-followups](2026/09/ep-review-92-followups.md) — closed completed 2026-09-07
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
