@@ -1,3 +1,27 @@
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/614
+- completed: 2026-09-11
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/735
+- merged: PyAutoGalaxy 6459e1d (PR #615), PyAutoLens ae64a65 (PR #735) — library-first order honoured (#615 then #735, both 2026-09-11)
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/735
+- closed-out: 2026-09-11 from a web session (`/prm` on the MCP surface; no task worktree — session clones only)
+
+**Summary.** `LensCalc.einstein_radius_jit_from` no longer needs a caller-supplied `init_guess`. A private helper (`_seed_via_coarse_grid_argmin`) evaluates the tangential eigen value on a coarse uniform grid (25×25, ±3 arcsec by default) straight from the raw Hessian tuple inside the JIT trace, masks non-finite cells and takes the cell of minimum `|eigen value|` as the single Newton seed. `seed_grid_shape` / `seed_grid_extent` are exposed so cluster fits can widen the search without leaving the traceable path; an explicit `init_guess` still works unchanged. PyAutoLens then dropped the hardcoded 4-seed fan at ±1 arcsec from `autolens/analysis/latent.py::effective_einstein_radius` (and its `jax.numpy` import) and calls the seedless form.
+
+**Scope shipped vs filed.** The prompt's third leg — dropping the same fan from `euclid_strong_lens_modeling_pipeline/util.py` — is obsolete, not deferred: that fan had already migrated into PyAutoLens's latent, which is where #735 removed it. Nothing remains to re-file. The Feature Agent's 4-phase split was overridden: the whole change is ~40 lines plus tests, so the header difficulty is re-sized `medium` here.
+
+**Verification (from the PR bodies).** PyAutoGalaxy: `test_autogalaxy/.../deflections` 41 passed (was 37); full suite 1,195 passed; JAX and numpy paths agree on centred and off-centre lenses; soft-fail case exercised. PyAutoLens: `test_autolens/analysis/test_latent.py` 37 passed (the latent stubs `LensCalc`, so the real JIT path is exercised only downstream). Remaining witness: once both libraries release, the Euclid pipeline's `tests/test_compute_latent_variable.py::test_effective_einstein_radius` re-validates the latent against the Phase B baseline (~2.10 arcsec under `PYAUTO_TEST_MODE=1`).
+
+**Traps / notes.**
+- **Release ordering is real, not label theatre.** #735 against a PyAutoGalaxy without #615 raises `TypeError` from the seedless call, and the latent's `except (ValueError, AttributeError)` does not catch it. Unit tests cannot see this (they stub `LensCalc`). The two `pending-release` lines above carry that obligation until `/review_release` clears them on a release that shipped both.
+- `argmin` yields one seed, so a model with several critical curves finds only the global minimum. Accepted by design; multi-curve callers pass `init_guess` explicitly.
+- Not released as of close-out: the nightly of 2026-09-11 is the first that can carry both merges; the two prior nights stopped at Stage 3 on a stale `test-results/` committed by autolens_workspace_test#311 (fixed by awt#313, see `draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md`).
+
+**Follow-ups.** None filed. `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md` cites this task as the JAX-native seed-finder precedent; its reference is repointed to this record in the same close-out commit.
+
+## Original prompt
+
 # `einstein_radius_jit_from`: replace static init_guess with a JAX-native seed finder
 
 Type: refactor
