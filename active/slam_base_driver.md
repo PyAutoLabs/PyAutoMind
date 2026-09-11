@@ -15,12 +15,14 @@ Autonomy: supervised
 Priority: high
 Epic: autolens-inference
 Phase: 3
-Status: draft
+Status: formalised
 Consequence: judge
 Witness: `PYAUTO_TEST_MODE=1 python scripts/imaging/slam/hst.py --backend <b> --inversion <i> --config-name local_<b>_<i>_fp64` exits 0 for all six (b, i) in {jax_cpu, numba_cpu} × {dense, sparse} plus jax_gpu×{dense,sparse} on a CUDA host, each writing `results/slam/imaging/hst/<config_name>/stages.json` with five stage rows; `build_readme.py --check` renders the six rows; `wall/check_submits.py --check` passes on six real submit scripts whose WALL-BASIS cites a rate measured on this cell
 Review-minutes: 45
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-11
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/2
 
 Builds the thing the repo exists for: one script that runs the standard imaging SLaM chain
 end to end under any of the three backends and either inversion path, records every stage
