@@ -12,6 +12,8 @@ Consequence: judge
 Witness: an EP fit requesting number_of_cores>1 either runs serially or refuses loudly (never silently forks a pool), demonstrated by the slope_hierarchy_scale EP arm getting past its first factor_step; plus a regression test that kills a pool worker mid-map and asserts the search raises a diagnosable error within seconds instead of blocking forever.
 Review-minutes: 25
 Unattended: ready
+Issued: 2026-09-11
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1608
 
 EP must never drive Nautilus through a Python multiprocessing pool
 
