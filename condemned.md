@@ -52,6 +52,8 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autolens_workspace_developer/rectangular-spline-rotated-experiments](#autolens_workspace_developerrectangular-spline-rotated-experiments)
 - [autolens_profiling/inference-programme-ledger](#autolens_profilinginference-programme-ledger)
 
+- [autolens-profiling/inference-programme](#autolens-profilinginference-programme)
+
 <!-- toc:end -->
 
 ## Lifecycle
@@ -446,3 +448,14 @@ One `##` block per item. Fields:
 - sweep-after: 2026-12-04
 - breaks-if-wrong: loses the laptop session's original 558-line PROGRAMME.md draft as a standalone commit; its content survives on `main` via #137. Recoverable via `pyauto-gut recover autolens-profiling-inference-programme-ledger`.
 - archive-ref: `refs/heads/archive/condemned/autolens-profiling-inference-programme-ledger` @ `3e634abaf1f3ad8f6f25a3b77e6732768b421343` on PyAutoGut — verified by `git ls-remote` against the Gut before the source branch was deleted.
+
+## autolens-profiling/inference-programme
+- type: file
+- locator: autolens_profiling/{scripts/misc/searches/, scripts/*/searches/, results/searches/, results/baselines/InferenceRefs_v1/, results/notes/inference/, results/notes/gradient_slam/, CORTEX.md, scripts/misc/test/test_searches_*.py, 58 hpc/batch_{gpu,cpu}/submit_* search submits}
+- confidence: 0.99
+- reason: the retired Cortex project `inference_programme` (PyAutoCortex#22, retired 2026-09-07). Human ruling 2026-09-10: "I dont trust a lot of this, some runs were dodgy, so just scrap it and move it somewhere not in autolens_inference" — its InferenceRefs_v1 baselines, MGE Prodigy result, positions rule, target_id code, schema-v2 JSON, tolerance table and the 13.8k-line searches framework are not inherited by the successor repo. Removed by autolens_profiling#245.
+- merged: yes
+- condemned: 2026-09-10
+- sweep-after: 2026-12-10
+- breaks-if-wrong: the nine certified InferenceRefs_v1 reference posteriors and the frozen PROGRAMME/DECISIONS ledgers (the only record of what the programme established); the run outputs themselves are separately stashed on RAL at /mnt/ral/jnightin/inference_programme_retired_2026-09-07
+- archive-ref: refs/heads/archive/condemned/autolens-profiling/inference-programme @ c8b605801068ec3de04314b47da8f7272a038ba1 (PyAutoGut; pre-deletion autolens_profiling main)
