@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 175 |
+| [Backlog](#backlog) (`draft/`) | 174 |
 
 > **No batch in flight.**
 
 ## Start here
 
 **Highest priority** (filed as `high`)
-
-<details><summary>📋 <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — autofit · small · safe · high</summary>
-
-```
-/start_dev draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md
-```
-
-</details>
 
 <details><summary>📋 <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — autofit · large · supervised · high</summary>
 
@@ -142,7 +134,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 94
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 93
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -248,6 +240,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/einstein_radius_jit_native_seed_finder.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1607">issue #1607</a> — issued 2026-09-11 — ready-to-ship — fix + tests pushed (1c152be41), full suite 2575 passed / 43 skipped; PR body awaiting sign-off</summary>
+
+```
+/start_dev active/model_from_instance_roundtrip_unexpected_kwargs.md
 ```
 
 </details>
@@ -476,7 +476,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**175** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**174** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -740,15 +740,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 39</summary>
-
-<details><summary>📋 <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — autofit · small · safe · high</summary>
-
-```
-/start_dev draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md
-```
-
-</details>
+<summary><b>bug</b> — 38</summary>
 
 <details><summary>📋 <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — autofit · large · supervised · high</summary>
 
@@ -1649,9 +1641,9 @@ You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' �
 
 Members:
 - draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md
-- draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md
 - draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
 - draft/bug/autofit/assertion_repr_recurses_forever.md
+- draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1667,9 +1659,9 @@ Contract (the `start_bundle` skill is the full body):
 | Prompt | Difficulty | Priority | Status |
 |--------|------------|----------|--------|
 | <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> | large | high | formalised |
-| <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class…</a> | small | high | formalised |
 | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
 | <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
+| <a href="draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md">Emcee crashes in autocorrelation when the chain is too short</a> | small | normal | formalised |
 
 </details>
 
@@ -1909,7 +1901,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 26 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 25 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -1918,6 +1910,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-11 | issued | <a href="active/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a…</a> |
+| 2026-09-11 | issued | <a href="active/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md">release-integrate must not ingest result files that pre-exist in a…</a> |
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
@@ -1926,7 +1919,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
