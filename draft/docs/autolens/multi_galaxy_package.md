@@ -61,6 +61,13 @@ Filed: 2026-07-25 (backfilled from git)
   BLOCKED from cloud sessions (2026-07-26): MAST is unreachable through the
   session proxy (`Tunnel connection failed: 403`) — needs a
   local/unrestricted-network session to download + prepare the frames.
+  Re-measured 2026-09-11 (`/start_dev` from a cloud session): `mast.stsci.edu`
+  and `archive.stsci.edu` both still `CONNECT tunnel failed, response 403`,
+  so `/start_dev` was not run to an issue here — run it from a local CLI
+  session, where the only work left is: download the F555W/F814W frames,
+  prepare them with the `data_preparation` scripts, swap them into
+  `multi_galaxy/start_here.py` in place of the simulated look-alike,
+  regenerate the notebook and re-run the smoke entry.
 - ~~Extra-galaxies / pixelization feature variants remain README cross-links
   (the group/imaging feature scripts apply verbatim with the lens loop).~~
   **CLOSED 2026-07-31.** The feature tier is complete. `extra_galaxies` (PR#391)

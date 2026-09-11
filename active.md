@@ -1,5 +1,32 @@
 # Active Tasks
 
+## einstein-radius-jit-seed-finder
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/614
+- issued: 2026-09-11
+- prompt: active/einstein_radius_jit_native_seed_finder.md
+- session: claude --resume session_014JqpPWfk6nUAqnyv4P5oNM
+- status: library-shipped, awaiting-merge — merge order PyAutoGalaxy#615 → PyAutoLens#735 (library-first; the Lens leg needs #615 at release). Human /prm.
+- location: web-github (session clones, no task worktree)
+- worktree: n/a — web-github session clone (/home/user/pyautogalaxy)
+- repos:
+  - PyAutoGalaxy: feature/einstein-radius-jit-seed-finder
+  - PyAutoLens: feature/einstein-radius-jit-seed-finder
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/735
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/735
+- summary: |
+    Make `init_guess` optional on `LensCalc.einstein_radius_jit_from`: a
+    JAX-native argmin-on-coarse-grid seed finder runs inside the trace when
+    no seed is passed (`seed_grid_shape` / `seed_grid_extent` exposed for
+    clusters). Two sequenced library PRs: PyAutoGalaxy (helper + signature +
+    tests), then PyAutoLens (`autolens/analysis/latent.py::
+    effective_einstein_radius` drops its hardcoded 4-seed fan). The prompt's
+    euclid `util.py` workspace leg is obsolete — that fan already moved into
+    PyAutoLens. Feature Agent's 4-phase split overridden: change is ~40 lines
+    + tests; re-size the header to `medium` at retirement.
+- plan: On issue #614; approved by the user 2026-09-11 ("go"). Both legs shipped as PRs the same day; JAX verification numbers in #615's body.
+
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10

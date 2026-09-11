@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 176 |
+| [Backlog](#backlog) (`draft/`) | 175 |
 
 > **No batch in flight.**
 
 ## Start here
 
 **Highest priority** (filed as `high`)
-
-<details><summary>📋 <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — autofit · small · safe · high</summary>
-
-```
-/start_dev draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md
-```
-
-</details>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -82,14 +74,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/research/autoarray/delaunay_research.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
-
-```
-/start_dev draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md
 ```
 
 </details>
@@ -240,10 +224,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md">Example Analysis should reduce with xp.sum not builtin sum</a> — autofit · small · safe · normal</summary>
+<details><summary>📋 <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — autofit · small · safe · normal</summary>
 
 ```
-/start_dev draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md
+/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md
 ```
 
 </details>
@@ -251,6 +235,14 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/614">issue #614</a> — issued 2026-09-11 — library-shipped, awaiting-merge — merge order PyAutoGalaxy#615 → PyAutoLens#735 (library-first; the Lens leg needs #615 at… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615">PyAutoGalaxy#615</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/735">PyAutoLens#735</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
+
+```
+/start_dev active/einstein_radius_jit_native_seed_finder.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1608">issue #1608</a> — issued 2026-09-11 — library-dev</summary>
 
@@ -311,6 +303,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
 - [PyAutoFit#1592](https://github.com/PyAutoLabs/PyAutoFit/pull/1592) — `complete/2026/09/aggregator-temp-unzip.md`
+- [PyAutoFit#1609](https://github.com/PyAutoLabs/PyAutoFit/pull/1609) — `complete/2026/09/autofit-from-instance-roundtrip.md`
 - [PyAutoFit#1604](https://github.com/PyAutoLabs/PyAutoFit/pull/1604) — `complete/2026/09/byol-mode.md`
 - [PyAutoFit#1566](https://github.com/PyAutoLabs/PyAutoFit/pull/1566) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoFit#1574](https://github.com/PyAutoLabs/PyAutoFit/pull/1574) — `complete/2026/09/ep-full-revert-not-updated.md`
@@ -333,12 +326,14 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#615](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615) — `active/einstein_radius_jit_native_seed_finder.md`
 - [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
 
 **PyAutoLens**
 
+- [PyAutoLens#735](https://github.com/PyAutoLabs/PyAutoLens/pull/735) — `active/einstein_radius_jit_native_seed_finder.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `complete/2026/09/pixelized-source-magnification-latent.md`
@@ -484,7 +479,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**176** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**175** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -750,14 +745,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>bug</b> — 39</summary>
 
-<details><summary>📋 <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — autofit · small · safe · high</summary>
-
-```
-/start_dev draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
 ```
@@ -906,6 +893,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autofit/stale_enable_pytrees_register_model_advice_in.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md
 ```
 
 </details>
@@ -1432,15 +1427,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 12</summary>
-
-<details><summary>📋 <a href="draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — autogalaxy · too-large · supervised · high</summary>
-
-```
-/start_dev draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md
-```
-
-</details>
+<summary><b>refactor</b> — 11</summary>
 
 <details><summary>📋 <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on every call…</a> — autofit · medium · supervised · medium</summary>
 
@@ -1656,40 +1643,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>autofit — bundle 1</b> — 4 task(s) · 5 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md
-- draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
-- draft/bug/autofit/assertion_repr_recurses_forever.md
-- draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class…</a> | small | high | formalised |
-| <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
-| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
-| <a href="draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md">Emcee crashes in autocorrelation when the chain is too short</a> | small | normal | formalised |
-
-</details>
-
-<details>
 <summary><b>graphical-ep</b> — 2 task(s) · 3 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1888,6 +1841,40 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>autofit — bundle 1</b> — 4 task(s) · 5 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
+- draft/bug/autofit/assertion_repr_recurses_forever.md
+- draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md
+- draft/bug/autofit/model_function_cannot_resolve_config_priors.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
+| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
+| <a href="draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md">Emcee crashes in autocorrelation when the chain is too short</a> | small | normal | formalised |
+| <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> | small | normal | formalised |
+
+</details>
+
+<details>
 <summary><b>jax</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax, mass-profiles</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1929,6 +1916,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
+| 2026-09-11 | issued | <a href="active/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a…</a> |
 | 2026-09-11 | issued | <a href="active/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md">release-integrate must not ingest result files that pre-exist in a…</a> |
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
@@ -1937,13 +1926,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
-| 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autofit/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | issued | <a href="active/scrap_inference_programme.md">Scrap the retired inference programme from autolens_profiling…</a> |
 | 2026-09-10 | issued | <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
@@ -1953,12 +1941,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
 | 2026-09-10 | filed | <a href="draft/research/autoarray/matrix_free_pixelized_imaging_likelihood_cg_solv.md">Matrix-free pixelized imaging likelihood: CG solve + stochastic…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
-| 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
@@ -1968,12 +1956,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
-| 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
@@ -1983,12 +1971,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
-| 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
@@ -1998,7 +1986,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a> |
 | 2026-08-29 | flagged for review | <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace…</a> |
 | 2026-08-29 | filed | <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> |
-| 2026-08-29 | filed | <a href="draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 
 </details>
 
@@ -2396,7 +2383,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 
 </details>
 
-128 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2441,7 +2428,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 - `draft/feature/pyautogut/gut_board.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
-- _… and 88 more_
+- _… and 87 more_
 
 </details>
 

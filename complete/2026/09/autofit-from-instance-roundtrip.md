@@ -1,3 +1,38 @@
+## autofit-from-instance-roundtrip
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1607 (closed)
+- completed: 2026-09-11
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1609
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1609
+- session: claude --resume session_01CWGZiKQo2PhvsymabkUJJm (web-github; PyAutoFit attached mid-session, no task worktree)
+- summary: |
+    `AbstractPriorModel.from_instance` copied every entry of `instance.__dict__`
+    onto the model, so attributes an `__init__` derives from its arguments
+    (ExternalShear's `centre`, Isothermal's `slope`) became model arguments.
+    `dict()` types a prior-free model as `instance`, `from_dict` calls
+    `cls(**arguments)`, and the constructor rejected the derived key — so a
+    `model.json` written from a `from_instance` model could not be loaded by
+    `Aggregator.from_directory`. The generic-object branch now filters
+    `__dict__` to the constructor's parameters (`inspect.getfullargspec` args +
+    kwonlyargs), keeping every key when the constructor takes `**kwargs` or is
+    uninspectable. Derived attributes are recomputed by `__init__` on rebuild.
+    Tests: 5 round-trips in `test_autofit/mapper/model/test_from_instance_roundtrip.py`
+    (derived attr, tuple arg, `**kwargs`, nested) and an
+    `Aggregator.from_directory` regression in `test_from_directory.py`; 5 of the
+    6 fail without the fix. Full suite 2575 passed / 43 skipped; CI green on
+    3.12, 3.13, nojax and docs. No public API change, no workspace impact.
+- traps: |
+    - `pytest -n auto` cannot run the PyAutoFit suite at all: the parametrize
+      ids in `test_autofit/mapper/prior/test_prior_properties.py` embed object
+      addresses, so xdist workers collect different ids. Reproduced on clean
+      main; filed as its own bug prompt. Run the suite serially until it lands.
+    - `from_dict` round-trip classes must be module-level in the test file, or
+      the `class_path` written into the dict does not resolve on read.
+    - Two Mind sessions filing rows at the top of `active.md` in the same hour
+      conflict in the ledger auto-merge; the fix is an ordinary merge of
+      `origin/main` into the session branch (keep both rows), never a rebase.
+
+## Original prompt
+
 # `af.Model.from_instance` serialises derived attributes the class `__init__` rejects, so the aggregator cannot deserialise `model.json`
 
 Type: bug
@@ -13,6 +48,7 @@ Witness: `af.Model.from_dict(af.Model.from_instance(al.mp.ExternalShear(gamma_1=
 Review-minutes: 15
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-11
 
 ## Symptom
 
