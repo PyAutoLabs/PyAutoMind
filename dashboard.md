@@ -236,7 +236,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/614">issue #614</a> — issued 2026-09-11 — library-dev</summary>
+<details><summary>📋 <a href="active/einstein_radius_jit_native_seed_finder.md"><code>einstein_radius_jit_from</code>: replace static init_guess with a JAX-native seed finder</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/614">issue #614</a> — issued 2026-09-11 — library-shipped, awaiting-merge — merge order PyAutoGalaxy#615 → PyAutoLens#735 (library-first; the Lens leg needs #615 at… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615">PyAutoGalaxy#615</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/735">PyAutoLens#735</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/einstein_radius_jit_native_seed_finder.md
@@ -326,12 +326,14 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#615](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615) — `active/einstein_radius_jit_native_seed_finder.md`
 - [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
 
 **PyAutoLens**
 
+- [PyAutoLens#735](https://github.com/PyAutoLabs/PyAutoLens/pull/735) — `active/einstein_radius_jit_native_seed_finder.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `complete/2026/09/pixelized-source-magnification-latent.md`
