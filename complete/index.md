@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1400 records across 8 buckets.
+1401 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -266,6 +266,7 @@ markers; everything below GENERATED is rebuilt.
 - [scrap-inference-programme](2026/09/scrap-inference-programme.md)
 - [sibson-single-concatenated-walk](2026/09/sibson-single-concatenated-walk.md)
 - [silence-colab-cli-message](2026/09/silence-colab-cli-message.md)
+- [slam-base-driver](2026/09/slam-base-driver.md) — the backend-parameterised SLaM base-run driver, the one script the repo exists
 - [slam-simultaneous-oversample-timeout](2026/09/slam-simultaneous-oversample-timeout.md)
 - [slope-hierarchy-scale-birth](2026/09/slope-hierarchy-scale-birth.md) — closed completed 2026-09-08
 - [small-datasets-cap-stamp-stops-resimulation](2026/09/small-datasets-cap-stamp-stops-resimulation.md)

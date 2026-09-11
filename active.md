@@ -84,35 +84,6 @@
     (dense/sparse/matrix-free) whose crossover is the deliverable. PyAutoArray phase on go.
     Plan on the issue and in ~/.claude/plans/polished-roaming-squirrel.md.
 
-## slam-base-driver
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/2
-- issued: 2026-09-11
-- prompt: active/slam_base_driver.md
-- session: claude --resume session_01JJeCU1iLmJqQegZjB2oeA1
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/3
-- heart-ack:
-  - "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)"
-  - "profiling drift: runtime/imaging/mge/mge_likelihood_summary_hst_v2026.8.17.1.json [eager, full, vmap]"
-  - "profiling drift: runtime/imaging/mge_mass_jax/mge_mass_jax_likelihood_summary_hst_v2026.8.17.1.json [jax_mge_mass]"
-  - "profiling drift: runtime/imaging/pixelization_numba_mge_mass/pixelization_numba_mge_mass_likelihood_summary_hst_v2026.8.17.1.json [numba_cpu_mge_mass]"
-  - "release validation incomplete: no rehearsal for current source"
-  - "Acknowledged by the human in-session 2026-09-11 (YELLOW, score 40, no RED reasons). All five are organism-scope; none names autolens_inference, which is not in the release chain. No library PR — library-first merge gate n/a."
-- worktree: ~/Code/PyAutoLabs-wt/slam-base-driver
-- repos:
-  - autolens_inference: feature/slam-base-driver
-- summary: |
-    Epic autolens-inference phase 3 of 4: the backend-parameterised SLaM base-run driver,
-    the one script the repo exists for. A thin leaf `scripts/imaging/slam/hst.py` over a new
-    `scripts/misc/slam/_runner.py` runs the standard 5-stage HST SLaM chain under any of
-    {numba_cpu, jax_cpu, jax_gpu} x {dense, sparse}, writing a schema-v1
-    `results/slam/imaging/hst/<config>/stages_seed<n>.json` with one comparable row per stage
-    (wall, compile split, reject-inclusive evals, log Z, posterior, truth delta/sigma,
-    positions.info presence). Plus `--cores`/`--stages` on the CLI, a parity view in
-    build_readme, six RAL submits with measured WALL-BASIS rates, CI smoke + dispatch witness,
-    and docs. Phase 4 then files the Cortex task `slam_hst_base`.
-    Plan on the issue and in ~/.claude/plans/idempotent-strolling-seahorse.md.
-
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
 - issued: 2026-09-11

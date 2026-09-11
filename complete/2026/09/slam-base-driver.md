@@ -1,3 +1,90 @@
+## slam-base-driver
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/2 (closed completed 2026-09-11)
+- completed: 2026-09-11
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/3
+- shipped: 2026-09-11 — one PR on `feature/slam-base-driver` (commits `6a9e3cc` +
+  `2a8dfe2`, merge `874bff5`); CI `lint [pull_request]` run 34618322248 green on every
+  step (ruff check, ruff format --check, `build_readme.py --check`,
+  `wall/check_submits.py --check`, `pytest scripts/misc/test/` 38 passed, lychee, the
+  simulators + SLaM driver smoke leg). No library PR — the library-first merge gate is
+  n/a, and `autolens_inference` is `category: project`, so the Heart freeze gate does not
+  apply (`pyauto-heart freeze --show` read `not frozen` at merge time anyway).
+- classification: feature (autolens_inference) — epic `autolens-inference`, phase 3 of 4.
+  Consequence tier `judge`, so no shadow row.
+- summary: the backend-parameterised SLaM base-run driver, the one script the repo exists
+  for. A thin leaf `scripts/imaging/slam/hst.py` sits over a new
+  `scripts/misc/slam/_runner.py` (1411 lines) which runs the standard 5-stage HST SLaM
+  chain under any of `{numba_cpu, jax_cpu, jax_gpu} × {dense, sparse}` and writes a
+  schema-v1 `results/slam/imaging/hst/<config>/stages_seed<n>.json` (plus a PNG) with one
+  comparable row per stage: wall, compile split, reject-inclusive evals, log Z, posterior,
+  truth delta/sigma, `positions.info` presence. Also: `--cores` / `--stages` /
+  `--output-dir` on `_inference_cli.py`; a stage-flattening parity view in
+  `build_readme.py`; a **repo-wide** cell-id change in `wall/check_submits.py`
+  (`<dataset>/<task>/<leaf>`, re-keying every existing submit's wall-basis contract); six
+  production SLURM submits (`hpc/batch_cpu/submit_slam_hst_{numba_cpu,jax_cpu}_{dense,sparse}`,
+  `hpc/batch_gpu/submit_slam_hst_jax_gpu_{dense,sparse}`) plus the A100 rate probe
+  `hpc/batch_gpu/submit_slam_hst_rate_jax_gpu`; three new test modules (38 tests total);
+  the `lint.yml` smoke leg and a `profile.yml` euclid dispatch witness; and docs
+  (`README.md`, `AGENTS.md`, `hpc/README.md`, `scripts/imaging/slam/README.md`,
+  `scripts/misc/wall/README.md`) with the `wiki/project/state.md` journal entry.
+- rates: the first numbers ever measured in this repo — `laptop_numba_cpu` **0.06831
+  s/eval** (17,950 evals / 1,226 s) and `laptop_jax_cpu` **0.04925 s/eval** (25,500 evals
+  / 1,256 s). Both are PARTIAL `source_lp[1]`-only probes at production settings on the
+  8-core laptop, run sequentially in matched windows and stopped by hand; their
+  `PROVENANCE` entries say what they may not be used for. `jax_cpu` was 1.39× faster per
+  evaluation than `numba_cpu` on that stage — an observation about `source_lp[1]`, not
+  about the chain.
+- witness: numba HST legs green (5 stages, `positions.info` present on all pixelized
+  stages); `jax_cpu` HST legs **OOM** on the 15 GB laptop (13 GB dense / 21.6 GB sparse at
+  `source_pix[1]` with `n_batch=20`) and were proven instead on `--instrument euclid`;
+  `jax_gpu` refuses cleanly with exit 2 on a host with no GPU. That OOM is a measurement,
+  not an inconvenience: the two JAX-CPU legs of the parity row exist only as RAL jobs.
+- decisions and departures: a **positions likelihood on all four pixelized stages** (the
+  workspace chain attaches one to `source_pix[1]` and `mass_total[1]` only; a mesh stage
+  with no `positions.info` beside it is not citable here, and the phase-4 witness reads
+  `positions_info_present` on every one); `log_evidence_err: null` with a sibling note
+  (nautilus 1.0.5 exposes no `log_z_err`, and a derived one would be an invention); the
+  over-sample map is kept and sparse is re-applied on top of it; test-mode positions are
+  read from the simulator's `positions.json`; `--output-dir` overrides the PyAutoFit
+  output root; a failure-writing `try/except` records partial chains rather than losing
+  them; and every production submit ships `source: unmeasured  probe-first: yes` with a
+  containment `--time` (12 h on the A100 legs, 5 days on the RAL CPU legs) rather than a
+  `2 × rate × steps` budget — after ~21 minutes neither probe had left nautilus's
+  exploration phase (128 evals per live point × 725 live points ≈ 92,800 evaluations is a
+  *floor* on the chain), and a floor multiplied by a laptop rate for a different kind of
+  stage is an invention.
+- bugs the witness caught (four, all fixed in the PR):
+  1. `jax.default_backend` **raises** rather than returning a value on a host with no CUDA.
+  2. `samples_info` `time` and `log_evidence` come back as **strings**.
+  3. `model.all_names` yields alias **tuples**, not plain names.
+  4. Zero-sigma keys blew up the truth-delta computation.
+
+## Follow-ups
+
+- **A100 rate unmeasured.** RAL job **342695** (`submit_slam_hst_rate_jax_gpu`) is
+  PENDING(Priority) behind seven of our own 12-hour `gpu` jobs and three foreign jobs on
+  `euclid-ral-gpu-2`. When it lands: `hpc/sync pull`, fill the `a100` row in
+  `scripts/misc/wall/rates.py`, and flip the two GPU submits from `source: unmeasured` to
+  measured.
+- **`results/` is empty** — no production stage completed, so no parity row exists. It
+  fills when phase 4's Cortex task `slam_hst_base` runs (six legs × two seeds).
+- **Hygiene:** `PyAutoBrain/bin/ensure_workspace_labels.sh`'s `REPOS` list lacks both
+  `autolens_inference` and `autolens_profiling`.
+
+## Heart at ship
+
+Shipped under a human-acknowledged **YELLOW** (2026-09-11, score 40, no RED reasons). The
+`heart-ack` reasons carried on the `active.md` row, preserved here as that row is pruned:
+
+- "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)"
+- "profiling drift: runtime/imaging/mge/mge_likelihood_summary_hst_v2026.8.17.1.json [eager, full, vmap]"
+- "profiling drift: runtime/imaging/mge_mass_jax/mge_mass_jax_likelihood_summary_hst_v2026.8.17.1.json [jax_mge_mass]"
+- "profiling drift: runtime/imaging/pixelization_numba_mge_mass/pixelization_numba_mge_mass_likelihood_summary_hst_v2026.8.17.1.json [numba_cpu_mge_mass]"
+- "release validation incomplete: no rehearsal for current source"
+- "Acknowledged by the human in-session 2026-09-11 (YELLOW, score 40, no RED reasons). All five are organism-scope; none names autolens_inference, which is not in the release chain. No library PR — library-first merge gate n/a."
+
+## Original prompt
+
 # Backend-parameterised SLaM base-run driver, per-stage results and submits (autolens-inference phase 3)
 
 Type: feature
