@@ -82,7 +82,10 @@
 - issued: 2026-09-10
 - prompt: active/scrap_inference_programme.md
 - session: claude --resume session_01S3mSjckpJgKufHFTYVmjmC
-- status: workspace-dev
+- status: awaiting-merge — merge order Mind#401 (firewall allowlist, code) → re-run Brain#376 Brain Tests → Brain#376 → autolens_profiling#246 (lint green, clean; 555 files deleted). Human /prm.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/246
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/376
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/401
 - worktree: ~/Code/PyAutoLabs-wt/scrap-inference-programme
 - parallel-claim: reconstruction-row-split (autolens_profiling) — approved 2026-09-10 on plan approval; file sets disjoint (this task deletes the searches tier, results/searches, baselines, notes, search submits and edits build_readme/workflows/wall/docs; #243 edits likelihood_breakdown scripts and recon_split submits). COMMIT DISCIPLINE: never git add -A in either worktree.
 - repos:
