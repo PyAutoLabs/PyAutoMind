@@ -78,7 +78,7 @@ epic, never picked standalone.
 ## model-figures
 - title: PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)
 - ledger: draft/feature/autofit/model_figures_epic.md
-- notes: 6 phased prompts; 1 → 2 → 3 in order, 4 after 2, 5 after 4, 6 (rollout across every workspace, HowTo chapter and sibling project) after 3 and 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
+- notes: phase 1 SHIPPED 2026-09-11 (complete/2026/09/model-figures-graph-spec.md, PyAutoFit#1606); phase 2 SHIPPED 2026-09-11 (complete/2026/09/model-figures-renderer.md — PyAutoFit#1614 + autofit_workspace#152 merged, pending-release PyAutoFit); phases 3 and 4 unblocked. 6 phased prompts; 1 → 2 → 3 in order, 4 after 2, 5 after 4, 6 (rollout across every workspace, HowTo chapter and sibling project) after 3 and 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
 
 ## autolens-inference
 - title: autolens_inference — inference benchmarking repo, birth to first base run

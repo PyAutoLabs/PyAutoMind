@@ -22,7 +22,7 @@ Epic: model-figures
 Phase: 3
 Filed: 2026-09-10
 
-**Blocked by phase 2** — `draft/feature/autofit/model_figures_2_renderer.md`.
+**Phase 2 shipped 2026-09-11** — `complete/2026/09/model-figures-renderer.md` (PyAutoFit#1614 merged, autofit_workspace#152 merged); this phase is unblocked.
 (Deliberately not in a `Blocked-by:` header: that key is graded against GitHub
 refs and cannot name a Mind prompt path.)
 

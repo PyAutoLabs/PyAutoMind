@@ -1,3 +1,93 @@
+## model-figures-renderer
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1613 (closed completed 2026-09-11)
+- completed: 2026-09-11
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1614 (merged)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/152 (merged)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1614
+- epic: model-figures — phase 2 of 6 shipped; phase 3 (`draft/feature/autolens/model_figures_3_lens_cookbook.md`) and phase 4 (`draft/feature/autofit/model_figures_4_graphical_plates.md`) are now unblocked
+- session: local-dev, Fable architect session; implementation, tests, docs, ship and workspace legs delegated to five Opus subagents (worktree `~/Code/PyAutoLabs-wt/model-figures-renderer`, parallel-claim waiver vs `remove-parallel-ep-optimiser` #1612, disjoint files)
+- summary: |
+    New package `autofit/model_figure/` draws the phase-1 `GraphSpec` as a
+    pure-matplotlib containment figure, exposed as
+    `af.ModelPlotter(model, analysis=None, solved_paths=()).figure(path=None,
+    filename="model", format="show|png|svg|pdf", detail="names|priors",
+    collapse=True, max_depth=None, show_fixed=True, width=14.0)`. Three
+    layers: `presentation.py` (no matplotlib: cards, name-first pills with
+    states free/fixed/fixed-varies/relation/solved/missing/folded, sharing as
+    a blue badge — `shared across group` on the owner, `↗ owner` on
+    references — plates badged `N components` with the `0 - 29`
+    representative key and the `repeats` line, `2D` tags, mixed tuples
+    expanded, `redshift = 0.5` subtitle, `assert …` constraints, one-line
+    legend, defined-count footer), `layout.py` (Agg text measurement, fixed
+    font sizes, padding shrinking per level, pill flow-wrap, top-level cards
+    wrapped at the width budget in declaration order, a right-hand gutter for
+    orthogonal links anchored on the top-level card edge, `LayoutTree.to_dict`
+    as the determinism artefact) and `render.py` (FancyBboxPatch cards/pills,
+    dashed plates and solved pills, dashed-orange unfilled constraint boxes,
+    `save` mirroring `output_figure`). Per-search: `DirectoryPaths._save_model_info`
+    writes `model.png` beside `model.info` when the NEW `output.yaml` key
+    `model_figure` is true — read strictly via `_model_figure_enabled()`
+    (absent → off; `should_output` would fall back to `default: true`), skipped
+    under `PYAUTO_SKIP_VISUALIZATION`, any exception logged and swallowed.
+    Key added as `false` to the library default, `test_autofit/config` and
+    `autofit_workspace/config`. Evidence: 11 PNGs + `make_figures.py` under
+    `docs/images/model_figures/`, embedded in `docs/cookbooks/{model,
+    multi_level_model,multiple_datasets}.md`. Workspace: nine
+    `af.ModelPlotter(...).figure()` calls with map/legend prose in the three
+    cookbooks, notebooks regenerated, config key.
+- tests: 85 new — `test_autofit/model_figure/` 76 (vocabulary rules, width budget, fixed text size across cases, declaration order, determinism of the layout dict across builds and a subprocess plus PNG bytes in-process, file output, matplotlib import purity) + `test_autofit/non_linear/paths/test_model_figure_output.py` 9 (config gate true/false/absent, test-mode skip, renderer failure swallowed). Full `test_autofit` 2714 passed serially; black + pyflakes clean; Sphinx warnings 30 = baseline. CI green on docs, 3.12, 3.13, no-jax; workspace smoke 3.12/3.13 + navigator green on the same-named library branch.
+- acceptance: |
+    (a) simple lens 839×584 px, 6 model cards in `model.info` order; (b) MGE
+    2×30 + pixelized 1121×976, 11 components, two `30 components` plates split
+    on `ell_comps`, `centre` owner `shared across group`, `areas_factor ·
+    missing`, footer `16 unique sampled scalars · 63 fixed leaf slots · 6
+    shared priors · 1 missing · 2 plates standing for 60 components`; (e)
+    group scale 1042×886, one `8 components` plate with `centre · fixed,
+    varies by member` and `independent` priors. Max width 1121 px ≤ 1400 cap;
+    identical font sizes across the toy Gaussian and group-scale layouts.
+    Composite (shared + relation `sigma = a.sigma * 2.0` + `assert a.sigma >
+    5.0`) renders all three encodings. These are the phase-1 structural
+    doubles; phase 3 re-renders the real PyAutoLens models.
+- traps: |
+    - `should_output(name)` falls back to `output.yaml` `default:` on a
+      missing key, and every workspace sets `default: true` — a new
+      opt-in key must be read strictly or it silently switches on in the
+      ~15 configs that lack it.
+    - The PyAuto API-gate hook blocks one-liners naming `af.ModelPlotter` /
+      `autofit.model_figure` as "not in installed stack" until the canonical
+      checkout carries it; `PYAUTO_SKIP_API_GATE=1` for branch-only symbols.
+    - `pyauto-heart smoke` grades against the canonical checkout, so a
+      workspace script using an unreleased library symbol must be run headless
+      from the task worktree (activate.sh) instead; workspace CI checks out the
+      same-named library branch and is fine.
+    - `graph_spec` names relation/assertion operands by the compound prior's
+      own slot path (`b.sigma.self`); the presentation layer rewrites them via
+      the `ParamRow.occurrences` map so pills read `a.sigma`. `PlateInfo.repeats`
+      never says "independent" — derived from free unshared rows in an N-plate.
+    - `ParamRow` carries no prior parameters (only `prior_cls_name`), so
+      `detail="priors"` reads `Prior.parameter_string` from the model via
+      `prior_summaries(model)`.
+    - The group-scale double has no `missing` row; `Hilbert.areas_factor` lives
+      in the MGE double. The epic brief's case (e) wording was off.
+    - `ledger_merge.py classify --base origin/main` hangs; pass explicit paths.
+    - The test-mode env var is `PYAUTO_SKIP_VISUALIZATION`, not
+      `PYAUTOFIT_TEST_MODE`.
+- notes: |
+    Deviations from the prompt, all recorded on the issue: plate cards are
+    titled by class name only (the member index is meaningless); reference
+    badges are relative (`↗ 0.centre`) with the full path kept on the link
+    key; links are dropped above `Style.max_links=12` in favour of labelled
+    references (expanded MGE has 118); a `folded` pill state carries
+    `max_depth`; `Card` has no constraints field (`Constraint.key` names the
+    owning card); empty cards read `no parameters`. `figure()` follows
+    autofit's `output_figure` convention (`path` = directory, `format`), not
+    the prompt's sketch. No `model.figure()` alias. Four pre-existing
+    `` `Gaussian`'s `` possessives in `multi_level_model.py` left untouched.
+    Follow-ups worth filing: sweep those possessives; add a `GraphSpec` /
+    `ModelPlotter` entry to `docs/api/` (none lists plot helpers today).
+
+## Original prompt
+
 # Model figures phase 2 — matplotlib renderer
 
 Type: feature
