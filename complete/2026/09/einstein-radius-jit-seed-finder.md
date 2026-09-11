@@ -16,7 +16,7 @@
 **Traps / notes.**
 - **Release ordering is real, not label theatre.** #735 against a PyAutoGalaxy without #615 raises `TypeError` from the seedless call, and the latent's `except (ValueError, AttributeError)` does not catch it. Unit tests cannot see this (they stub `LensCalc`). The two `pending-release` lines above carry that obligation until `/review_release` clears them on a release that shipped both.
 - `argmin` yields one seed, so a model with several critical curves finds only the global minimum. Accepted by design; multi-curve callers pass `init_guess` explicitly.
-- Not released as of close-out: the nightly of 2026-09-11 is the first that can carry both merges; the two prior nights stopped at Stage 3 on a stale `test-results/` committed by autolens_workspace_test#311 (fixed by awt#313, see `draft/bug/pyautoheart/release_integrate_must_not_ingest_result_files.md`).
+- Not released as of close-out: the nightly of 2026-09-11 is the first that can carry both merges; the two prior nights stopped at Stage 3 on a stale `test-results/` committed by autolens_workspace_test#311 (fixed by awt#313 on the workspace side and guarded durably by PyAutoHeart#225, see `complete/2026/09/release-integrate-discard-stale-result-files.md`).
 
 **Follow-ups.** None filed. `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md` cites this task as the JAX-native seed-finder precedent; its reference is repointed to this record in the same close-out commit.
 
