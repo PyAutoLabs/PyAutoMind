@@ -1,3 +1,69 @@
+## einstein-radius-jit-seed-finder
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/614
+- completed: 2026-09-11
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/735
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/735
+- summary: |
+    `LensCalc.einstein_radius_jit_from` no longer needs a caller-supplied
+    `init_guess`. A new private helper `_seed_via_coarse_grid_argmin` evaluates
+    the tangential eigen value from the raw Hessian tuple on a coarse uniform
+    grid (25x25, ±3" by default), masks non-finite cells (the odd-shaped grid
+    puts a cell on the singular isothermal centre) and returns the argmin cell
+    as the single Newton seed for `jax_zero_contour.ZeroSolver`. It is
+    xp-generic — numpy in the unit tests, `jax.numpy` inside the trace — with
+    no skimage and no Python control flow on traced values. `seed_grid_shape`
+    / `seed_grid_extent` are exposed so off-centre or cluster-scale callers
+    widen the search without leaving the JIT path. The explicit-seed path, the
+    `(f, ZeroSolver)` closure cache (#434) and the jax_zero_contour-missing
+    soft-fail are unchanged. PyAutoLens' `effective_einstein_radius` latent
+    drops its hardcoded ±1" 4-seed fan (PyAutoLens#735, merged after #615).
+- verification: |
+    PyAutoGalaxy `test_deflections.py` 41 passed (was 37; signature lock
+    flipped to `init_guess=None`, new numpy-only tests for centred / off-centre
+    / radial seeds and the seedless soft-fail), full suite 1195 passed.
+    PyAutoLens `test_latent.py` 37 passed. Ad-hoc JAX script (jax 0.11.1,
+    jax_zero_contour 2.0.0): the helper traces under `jax.jit` and returns the
+    same cell as numpy; seedless vs fan-seeded Einstein radius on an SIE agree
+    to 4.1e-4 relative (1.18849 vs 1.18898; grid method 1.19706); off-centre
+    SIE at (2.0, -1.5) with `seed_grid_extent=5.0` gives 0.971 for a 1.0"
+    truth; a traced `einstein_radius` scalar round-trips (0.8 -> 0.793, 1.5 ->
+    1.494); warm call 0.05 s, cold 4.0 s. CI: 4/4 checks green on each PR.
+- traps: |
+    (1) The prompt's workspace leg was obsolete before the task started: the
+    hardcoded fan had already moved from `euclid_strong_lens_modeling_pipeline/
+    util.py` into PyAutoLens `autolens/analysis/latent.py`, so the second PR is
+    a PyAutoLens one, not a workspace one; `util.py` has no `init_guess`. (2)
+    The declared `Difficulty: too-large` / `Unattended: needs-slicing` did not
+    survive the code survey — the Feature Agent proposed a 4-phase split on
+    that header; the actual change is one ~40-line helper, an optional
+    argument and tests, shipped as two sequenced PRs the same day. Headers
+    written at intake can be stale by the time the code is read; size from the
+    code. (3) The off-centre model was meant to show the old fan failing. It
+    did not: Newton walked onto the off-centre curve from the ±1" fan points
+    (1.004 vs the seed finder's 0.971). The seed finder's case is that it
+    needs no caller knowledge of where the lens is, not that the fan always
+    fails; do not overclaim that in docs. (4) Both target-library files were
+    already black-unclean at HEAD under black 26.3.1; a full reformat would
+    have folded unrelated churn into the diff, so only added lines were
+    black-clean — a hygiene item for `/hygiene`, not this PR. (5) A shallow
+    session clone with a single-branch refspec has no `origin/feature/*` ref
+    after a successful push, which trips the stop hook's "no remote branch"
+    check; widen `remote.origin.fetch` to `+refs/heads/*:refs/remotes/origin/*`.
+- notes: |
+    Single-seed limitation is documented on both the helper and the method: a
+    model with several distinct tangential critical curves is seeded on only
+    one; those callers keep passing `init_guess`. Related but separate:
+    `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md` (cluster
+    phase 3) still routes the non-jit 25x25 seed scan through skimage — this
+    task deliberately left `_init_guess_from_coarse_grid` and the plotter path
+    alone. Shipped from a web-github session (session clones, no task
+    worktree; Fable architect session, PyAutoGalaxy implementation delegated
+    to an Opus subagent, PyAutoLens edit in-session).
+
+## Original prompt
+
 # `einstein_radius_jit_from`: replace static init_guess with a JAX-native seed finder
 
 Type: refactor

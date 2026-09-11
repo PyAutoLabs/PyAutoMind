@@ -62,9 +62,10 @@ Concrete defects to fix in the same pass:
 
 Absorbs `draft/triage/jax_zero_contour.md` (jit/grad parity testing on
 autolens_workspace_test — fold in as the verification leg). Related but separate:
-`draft/refactor/autogalaxy/einstein_radius_jit_native_seed_finder.md` (JAX-native seed
-finder; zero_contour's 25×25 seed scan still routes through skimage) — link, don't
-absorb (it is sized too-large on its own).
+the JAX-native seed finder for the *jit* path shipped 2026-09-11 as
+`complete/2026/09/einstein-radius-jit-seed-finder.md` (PyAutoGalaxy#615, PyAutoLens#735);
+the non-jit zero_contour path's 25×25 seed scan (`_init_guess_from_coarse_grid`) still
+routes through skimage and was deliberately left alone there — it is in scope here.
 
 Sequencing: before the magnification-map phases — critical curves are the contour
 overlay on every magnification map and the LEGGOS-style arc-segmentation boundary.
