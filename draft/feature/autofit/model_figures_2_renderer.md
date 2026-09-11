@@ -18,7 +18,7 @@ Epic: model-figures
 Phase: 2
 Filed: 2026-09-10
 
-**Blocked by phase 1** — `draft/feature/autofit/model_figures_1_graph_spec.md`.
+**Phase 1 shipped 2026-09-11** — `complete/2026/09/model-figures-graph-spec.md` (PyAutoFit#1606 merged); this phase is unblocked.
 (Kept out of the `Blocked-by:` header deliberately: that key is graded against
 GitHub refs and cannot name a Mind prompt path.)
 

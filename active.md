@@ -60,23 +60,6 @@
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml. The conflicting claim was released on 2026-09-10 when euclid-catalogue-rebuild-prep closed out (PRs #61 + #68 merged), so the guard no longer fires.
 
-## model-figures-graph-spec
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1605
-- issued: 2026-09-10
-- prompt: active/model_figures_1_graph_spec.md
-- session: claude --resume session_01UJ9stuFNR4e9BF5GXsqvfv
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1606
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1606
-- workspace-impact: none — purely additive API (af.GraphSpec, af.graph_spec_from); no workspace script uses it yet; phase 2 renders over it
-- acceptance-note: lens acceptance cases are structural doubles of today's workspace scripts; MGE (b) meets every epic invariant, group-scale (e) is today's smaller script composition with counts pinned as measured — phase 3 re-runs on the real classes
-- location: web-github (session clone at /home/user/pyautofit, no task worktree)
-- worktree: n/a — web-github session clone
-- epic: model-figures (phase 1 of 6; ledger draft/feature/autofit/model_figures_epic.md)
-- plan: approved by user 2026-09-10 (plan + issue body + branch + structural-double acceptance)
-- repos:
-  - PyAutoFit: feature/model-figures-graph-spec
-
 ## scrap-inference-programme
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/245
 - issued: 2026-09-10
