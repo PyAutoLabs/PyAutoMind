@@ -12,6 +12,7 @@ Consequence: glance
 Witness: `python -m pytest -n 4 test_autofit/` collects identically on every worker (no 'Different tests were collected' error) and passes; the parametrize ids in `test_autofit/mapper/prior/test_prior_properties.py` contain no memory addresses.
 Review-minutes: 3
 Unattended: ready
+Filed: 2026-09-11
 
 xdist collection ids unstable in test_prior_properties
 
