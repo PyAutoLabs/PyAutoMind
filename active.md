@@ -97,3 +97,20 @@
     notes/inference + gradient_slam, CORTEX.md, 58 search submits, 8 search tests), repair
     build_readme/lint/profile/wall/docs, repoint Brain samplers mature tier at
     autolens_inference, condemned.md entry, close #218/#205, reframe #166. Plan on #245.
+
+## remove-parallel-ep-optimiser
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1611
+- issued: 2026-09-11
+- prompt: active/remove_parallelepoptimiser_and_its_tests.md
+- session: claude --resume session_01FU8EkdahFWmrL6pewkHZR3
+- status: library-dev
+- location: web-github (session clone /home/user/pyautofit, no task worktree)
+- worktree: n/a — web-github session clone (/home/user/pyautofit)
+- repos:
+  - PyAutoFit: feature/remove-parallel-ep-optimiser
+- summary: |
+    Human decision 2026-09-11 after #1608/#1610: delete the never-used, never-exported
+    ParallelEPOptimiser (EP's own fork pool across factors, subject to the same
+    dead-worker hang and contradicting the 2026-09-09 ruling), its never-collected
+    test helper, README §7, and the §8→§7 cross-references. PyAutoMemory F3 line
+    updated in a separate ledger commit.

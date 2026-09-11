@@ -13,6 +13,8 @@ Consequence: glance
 Witness: 'grep -rn ParallelEPOptimiser autofit test_autofit docs' returns nothing; test_autofit/graphical passes serially with the same count minus any removed tests; no public export changes (the class was never exported from autofit, autofit.graphical or the EP package).
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-09-11
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1611
 
 Remove ParallelEPOptimiser and its tests
 Type: refactor
