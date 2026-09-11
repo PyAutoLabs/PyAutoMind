@@ -19,8 +19,8 @@ Witness: a results note under `autolens_profiling/results/notes/` with (i) the f
 Review-minutes: 25
 Unattended: ready
 Parent: complete/2026/09/a100-pixelized-baseline.md
-Blocked-by: autolens_profiling#243   # CLOSED 2026-09-11 — reconstruction split shipped in PR #244; see complete/2026/09/reconstruction-row-split.md
 Filed: 2026-09-10
+Issued: 2026-09-11
 
 ## Why
 

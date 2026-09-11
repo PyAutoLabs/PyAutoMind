@@ -67,3 +67,18 @@
     dead-worker hang and contradicting the 2026-09-09 ruling), its never-collected
     test helper, README §7, and the §8→§7 cross-references. PyAutoMemory F3 line
     updated in a separate ledger commit.
+
+## matrix-free-pixelized-likelihood
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/247
+- prompt: active/matrix_free_pixelized_imaging_likelihood_cg_solv.md
+- issued: 2026-09-11
+- session: claude --resume session_01U2JK8GSjn1WNFvFtk9LJBE
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/matrix-free-pixelized-likelihood
+- repos:
+- summary: |
+    Matrix-free pixelized imaging likelihood in autolens_profiling: PCG on (F+λH)x=D via the
+    sparse operator's FFT apply, SLQ log-dets with fixed probes, matrix-free PDIP comparator;
+    fiducial A100 legs vs the #243 reconstruction split, then the N_src 1500→12000 sweep
+    (dense/sparse/matrix-free) whose crossover is the deliverable. PyAutoArray phase on go.
+    Plan on the issue and in ~/.claude/plans/polished-roaming-squirrel.md.
