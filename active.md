@@ -100,3 +100,24 @@
     model.info behind a new strict output.yaml key model_figure (default false),
     acceptance renders committed under docs/images/model_figures/, cookbook docs
     pages; autofit_workspace follow-up adds cookbook figure calls + notebooks + config key.
+
+## slam-base-driver
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/2
+- issued: 2026-09-11
+- prompt: active/slam_base_driver.md
+- session: claude --resume session_01JJeCU1iLmJqQegZjB2oeA1
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/slam-base-driver
+- repos:
+  - autolens_inference: feature/slam-base-driver
+- summary: |
+    Epic autolens-inference phase 3 of 4: the backend-parameterised SLaM base-run driver,
+    the one script the repo exists for. A thin leaf `scripts/imaging/slam/hst.py` over a new
+    `scripts/misc/slam/_runner.py` runs the standard 5-stage HST SLaM chain under any of
+    {numba_cpu, jax_cpu, jax_gpu} x {dense, sparse}, writing a schema-v1
+    `results/slam/imaging/hst/<config>/stages_seed<n>.json` with one comparable row per stage
+    (wall, compile split, reject-inclusive evals, log Z, posterior, truth delta/sigma,
+    positions.info presence). Plus `--cores`/`--stages` on the CLI, a parity view in
+    build_readme, six RAL submits with measured WALL-BASIS rates, CI smoke + dispatch witness,
+    and docs. Phase 4 then files the Cortex task `slam_hst_base`.
+    Plan on the issue and in ~/.claude/plans/idempotent-strolling-seahorse.md.
