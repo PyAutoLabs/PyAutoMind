@@ -103,7 +103,9 @@
 - issued: 2026-09-11
 - prompt: active/ep_must_never_drive_nautilus_through_a.md
 - session: claude --resume session_01FU8EkdahFWmrL6pewkHZR3
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1610
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1610
 - location: web-github (session clone /home/user/pyautofit, no task worktree; Mind branch claude/autofit-ep-nautilus-bug-ftngha)
 - worktree: n/a — web-github session clone (/home/user/pyautofit)
 - repos:
