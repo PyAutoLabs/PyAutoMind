@@ -103,7 +103,9 @@
 - issued: 2026-09-11
 - prompt: active/remove_parallelepoptimiser_and_its_tests.md
 - session: claude --resume session_01FU8EkdahFWmrL6pewkHZR3
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1612
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1612
 - location: web-github (session clone /home/user/pyautofit, no task worktree)
 - worktree: n/a — web-github session clone (/home/user/pyautofit)
 - repos:
