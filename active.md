@@ -83,3 +83,19 @@
     fiducial A100 legs vs the #243 reconstruction split, then the N_src 1500→12000 sweep
     (dense/sparse/matrix-free) whose crossover is the deliverable. PyAutoArray phase on go.
     Plan on the issue and in ~/.claude/plans/polished-roaming-squirrel.md.
+
+## model-figures-renderer
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1613
+- issued: 2026-09-11
+- prompt: active/model_figures_2_renderer.md
+- session: claude --resume session_0178yLU9v19GtACcRPFggjGa
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/model-figures-renderer
+- repos:
+- parallel-claim: "PyAutoFit is also claimed by remove-parallel-ep-optimiser (PR #1612, web session, no local worktree). File sets are disjoint (EP optimiser + its tests vs a new autofit/model_figure/ package, paths/directory.py, config/output.yaml, __init__.py, docs); the human approved a parallel worktree in the 2026-09-11 plan."
+- summary: |
+    Epic model-figures phase 2 of 6. Pure-matplotlib containment renderer over the
+    phase-1 GraphSpec: af.ModelPlotter(model).figure(), opt-in model.png beside
+    model.info behind a new strict output.yaml key model_figure (default false),
+    acceptance renders committed under docs/images/model_figures/, cookbook docs
+    pages; autofit_workspace follow-up adds cookbook figure calls + notebooks + config key.

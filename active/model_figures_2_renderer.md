@@ -17,6 +17,7 @@ Unattended: ready
 Epic: model-figures
 Phase: 2
 Filed: 2026-09-10
+Issued: 2026-09-11
 
 **Phase 1 shipped 2026-09-11** — `complete/2026/09/model-figures-graph-spec.md` (PyAutoFit#1606 merged); this phase is unblocked.
 (Kept out of the `Blocked-by:` header deliberately: that key is graded against
