@@ -5,7 +5,9 @@
 - issued: 2026-09-11
 - prompt: active/model_from_instance_roundtrip_unexpected_kwargs.md
 - session: claude --resume session_01CWGZiKQo2PhvsymabkUJJm
-- status: ready-to-ship — fix + tests pushed (1c152be41), full suite 2575 passed / 43 skipped; PR body awaiting sign-off
+- status: awaiting-merge — PR open, full suite 2575 passed / 43 skipped; no workspace impact (option iii). Human /prm when CI is green.
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1609
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1609
 - location: web-github (session clone /home/user/pyautofit, no task worktree; branch claude/autofit-model-instance-roundtrip-erf439)
 - worktree: n/a — web-github session clone (/home/user/pyautofit)
 - repos:
