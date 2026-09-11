@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1397 records across 8 buckets.
+1398 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -261,6 +261,7 @@ markers; everything below GENERATED is rebuilt.
 - [retire-gpu1-mig-exclusion](2026/09/retire-gpu1-mig-exclusion.md)
 - [samples-errors-at-sigma-instance](2026/09/samples-errors-at-sigma-instance.md) — closed completed 2026-09-07
 - [scientific-workflow-language](2026/09/scientific-workflow-language.md)
+- [scrap-inference-programme](2026/09/scrap-inference-programme.md)
 - [sibson-single-concatenated-walk](2026/09/sibson-single-concatenated-walk.md)
 - [silence-colab-cli-message](2026/09/silence-colab-cli-message.md)
 - [slam-simultaneous-oversample-timeout](2026/09/slam-simultaneous-oversample-timeout.md)

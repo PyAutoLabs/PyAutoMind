@@ -1,3 +1,74 @@
+## scrap-inference-programme
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/245
+- completed: 2026-09-11
+- epic: autolens-inference (phase 2 of 4)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/246
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/376
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/401
+- gut-archive: `refs/heads/archive/condemned/autolens-profiling/inference-programme` @ `c8b60580` (PyAutoGut)
+- summary: |
+    Phase 2 of the autolens-inference epic. The retired inference programme is gone from
+    autolens_profiling, archived whole rather than deleted, and the Brain samplers faculty's
+    mature tier now points at the new autolens_inference repo.
+
+### What shipped
+
+- **autolens_profiling#246** — 555 files removed, 24 modified. Out went the `searches`
+  framework and its leaves, `results/searches`, the `InferenceRefs_v1` baselines,
+  `results/notes/inference` and `results/notes/gradient_slam`, `CORTEX.md`, 58 search
+  submit scripts and 8 search tests. `build_readme.py`, lint, the profile/wall paths and
+  docs were repaired around the hole; `lint` green on the merged head.
+- **PyAutoBrain#376** — the samplers faculty's mature tier repointed from
+  autolens_profiling's scrapped searches tier to `autolens_inference`.
+- **PyAutoMind#401** — firewall allowlist rows so the samplers faculty may name
+  `autolens_inference`. This was the merge-order key: until it was on Mind `main`, the
+  Tenant firewall step in Brain Tests failed on both py3.12 and py3.13 legs of #376.
+
+### Nothing was destroyed
+
+`origin/main` of autolens_profiling as it stood before the deletion is held by PyAutoGut
+as a durable, recoverable ref:
+
+```
+refs/heads/archive/condemned/autolens-profiling/inference-programme  @  c8b60580
+```
+
+Every scrapped file is `git fetch`-able from there. `build_objective` now raises
+`NotImplementedError` naming that ref rather than failing silently.
+
+### Issues
+
+- autolens_profiling#218 and #205 closed as `not_planned` — both were work inside the
+  scrapped tier.
+- autolens_profiling#166 retitled: it survives as the PyAutoArray `log_det_method` default
+  question (slogdet vs cholesky, cost-aware), with the inference-programme framing removed.
+- A `condemned.md` entry records the scrapping.
+
+### Deliberately left
+
+`scripts/misc/jax_compile/probe.py` built its cells through `searches._setup.build_for_cell`,
+which went with the tier; its pinned warm-compile records and the compile dashboard are
+intact but the probe cannot run. Filed as
+`draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md` — give the
+probe a builder autolens_profiling owns; restore nothing from the archive ref.
+
+### Traps
+
+- **Merge order is load-bearing.** The Tenant firewall gate in Brain Tests reads the
+  allowlist from PyAutoMind `main`, not from the PR under test, so Mind#401 had to merge
+  and the Brain run be re-run before #376 could go green. A re-run of the failed jobs
+  cleared it with no code change.
+- **Parallel claim on autolens_profiling** with `reconstruction-row-split` (#243) held
+  throughout: file sets were disjoint and neither worktree ever ran `git add -A`.
+
+### Next
+
+Phase 3: `draft/feature/autolens_inference/slam_base_driver.md` — backend-parameterised
+SLaM base-run driver, per-stage results and submits. Unblocked; nothing from the retired
+programme is reused.
+
+## Original prompt
+
 # Scrap the retired inference programme from autolens_profiling (autolens-inference phase 2)
 
 Type: maintenance

@@ -49,28 +49,6 @@
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml. The conflicting claim was released on 2026-09-10 when euclid-catalogue-rebuild-prep closed out (PRs #61 + #68 merged), so the guard no longer fires.
 
-## scrap-inference-programme
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/245
-- issued: 2026-09-10
-- prompt: active/scrap_inference_programme.md
-- session: claude --resume session_01S3mSjckpJgKufHFTYVmjmC
-- status: awaiting-merge — merge order Mind#401 (firewall allowlist, code) → re-run Brain#376 Brain Tests → Brain#376 → autolens_profiling#246 (lint green, clean; 555 files deleted). Human /prm.
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/246
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/376
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/401
-- worktree: ~/Code/PyAutoLabs-wt/scrap-inference-programme
-- parallel-claim: reconstruction-row-split (autolens_profiling) — approved 2026-09-10 on plan approval; file sets disjoint (this task deletes the searches tier, results/searches, baselines, notes, search submits and edits build_readme/workflows/wall/docs; #243 edits likelihood_breakdown scripts and recon_split submits). COMMIT DISCIPLINE: never git add -A in either worktree.
-- repos:
-  - autolens_profiling: feature/scrap-inference-programme
-  - PyAutoBrain: feature/scrap-inference-programme
-- summary: |
-    Phase 2 of the autolens-inference epic: Gut-archive origin/main of autolens_profiling
-    as archive/condemned/autolens-profiling/inference-programme, then delete the retired
-    inference programme (searches framework + leaves, results/searches, InferenceRefs_v1,
-    notes/inference + gradient_slam, CORTEX.md, 58 search submits, 8 search tests), repair
-    build_readme/lint/profile/wall/docs, repoint Brain samplers mature tier at
-    autolens_inference, condemned.md entry, close #218/#205, reframe #166. Plan on #245.
-
 ## remove-parallel-ep-optimiser
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1611
 - issued: 2026-09-11
