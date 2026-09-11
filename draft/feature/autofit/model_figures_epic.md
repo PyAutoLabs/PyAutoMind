@@ -94,7 +94,7 @@ Issue ONE at a time through `/start_dev`. Order: 1 → 2 → 3; 4 after 2; 5 aft
 |---|-------|--------|-------|
 | 1 | Semantic extraction — `autofit/graph_spec.py` + the 18-construct catalogue | `complete/2026/09/model-figures-graph-spec.md` | shipped 2026-09-11 (PyAutoFit#1606) |
 | 2 | matplotlib containment renderer, `af.ModelPlotter` API, per-search `model.png`, PyAutoFit cookbook figures | `complete/2026/09/model-figures-renderer.md` | shipped 2026-09-11 (PyAutoFit#1614, autofit_workspace#152) |
-| 3 | Lens domain semantics + PyAutoLens/PyAutoGalaxy cookbook figures | `draft/feature/autolens/model_figures_3_lens_cookbook.md` | filed 2026-09-10 |
+| 3 | Lens domain semantics + PyAutoLens/PyAutoGalaxy cookbook figures | `complete/2026/09/model-figures-lens.md` | shipped 2026-09-11 (PyAutoFit#1615, PyAutoArray#550, PyAutoGalaxy#616, PyAutoLens#737, autolens_workspace#541, autogalaxy_workspace#240) |
 | 4 | Plate-notation graphical-model figure; fill the two placeholders | `draft/feature/autofit/model_figures_4_graphical_plates.md` | filed 2026-09-10 |
 | 5 | EP factor-graph view with convergence/reversion overlay | `draft/feature/autofit/model_figures_5_ep_view.md` | filed 2026-09-10 |
 | 6 | Rollout — the figure beside every `model.info` in every example, tutorial and sibling project | `draft/feature/workspaces/model_figures_6_rollout.md` | filed 2026-09-10 |

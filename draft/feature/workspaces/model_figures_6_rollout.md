@@ -29,7 +29,7 @@ Epic: model-figures
 Phase: 6
 Filed: 2026-09-10
 
-**Blocked by phase 3** — `draft/feature/autolens/model_figures_3_lens_cookbook.md`
+**Phase 3 shipped 2026-09-11** — `complete/2026/09/model-figures-lens.md`; still blocked by phase 4 (`draft/feature/autofit/model_figures_4_graphical_plates.md`)
 — and, for the graphical-model tutorials only, **by phase 4**
 (`draft/feature/autofit/model_figures_4_graphical_plates.md`).
 (Deliberately not in a `Blocked-by:` header: that key is graded against GitHub
