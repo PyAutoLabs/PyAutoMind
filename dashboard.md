@@ -244,7 +244,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_3_lens_cookbook.md">Model figures phase 3 — lens semantics and cookbooks</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/736">issue #736</a> — issued 2026-09-11 — library-dev</summary>
+<details><summary>📋 <a href="active/model_figures_3_lens_cookbook.md">Model figures phase 3 — lens semantics and cookbooks</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/736">issue #736</a> — issued 2026-09-11 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1615">PyAutoFit#1615</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/550">PyAutoArray#550</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616">PyAutoGalaxy#616</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/737">PyAutoLens#737</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/model_figures_3_lens_cookbook.md
@@ -298,6 +298,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#550](https://github.com/PyAutoLabs/PyAutoArray/pull/550) — `active/model_figures_3_lens_cookbook.md`
 - [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
@@ -315,6 +316,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1615](https://github.com/PyAutoLabs/PyAutoFit/pull/1615) — `active/model_figures_3_lens_cookbook.md`
 - [PyAutoFit#1612](https://github.com/PyAutoLabs/PyAutoFit/pull/1612) — `active/remove_parallelepoptimiser_and_its_tests.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
@@ -345,6 +347,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#616](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616) — `active/model_figures_3_lens_cookbook.md`
 - [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoGalaxy#615](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615) — `complete/2026/09/einstein-radius-jit-seed-finder.md`
@@ -352,6 +355,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#737](https://github.com/PyAutoLabs/PyAutoLens/pull/737) — `active/model_figures_3_lens_cookbook.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoLens#735](https://github.com/PyAutoLabs/PyAutoLens/pull/735) — `complete/2026/09/einstein-radius-jit-seed-finder.md`
