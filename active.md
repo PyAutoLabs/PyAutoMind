@@ -130,13 +130,23 @@
 - issued: 2026-09-11
 - prompt: active/model_figures_3_lens_cookbook.md
 - session: claude --resume session_0178yLU9v19GtACcRPFggjGa
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1615
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/550
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/737
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1615
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/550
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/737
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-lens
 - repos:
   - PyAutoFit: feature/model-figures-lens
   - PyAutoArray: feature/model-figures-lens
   - PyAutoGalaxy: feature/model-figures-lens
   - PyAutoLens: feature/model-figures-lens
+  - autolens_workspace: feature/model-figures-lens
+  - autogalaxy_workspace: feature/model-figures-lens
 - parallel-claim: "PyAutoFit is also claimed by remove-parallel-ep-optimiser (PR #1612, web session, no local worktree, EP-optimiser files only). Disjoint from this task's graph_spec/model_figure edits; the human approved a parallel worktree in the 2026-09-11 phase-3 plan (same waiver as phase 2)."
 - summary: |
     Epic model-figures phase 3 of 6. Class-declared `__solved_parameters__` protocol
