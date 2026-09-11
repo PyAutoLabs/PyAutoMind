@@ -76,3 +76,22 @@
 - plan: approved by user 2026-09-10 (plan + issue body + branch + structural-double acceptance)
 - repos:
   - PyAutoFit: feature/model-figures-graph-spec
+
+## scrap-inference-programme
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/245
+- issued: 2026-09-10
+- prompt: active/scrap_inference_programme.md
+- session: claude --resume session_01S3mSjckpJgKufHFTYVmjmC
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/scrap-inference-programme
+- parallel-claim: reconstruction-row-split (autolens_profiling) — approved 2026-09-10 on plan approval; file sets disjoint (this task deletes the searches tier, results/searches, baselines, notes, search submits and edits build_readme/workflows/wall/docs; #243 edits likelihood_breakdown scripts and recon_split submits). COMMIT DISCIPLINE: never git add -A in either worktree.
+- repos:
+  - autolens_profiling: feature/scrap-inference-programme
+  - PyAutoBrain: feature/scrap-inference-programme
+- summary: |
+    Phase 2 of the autolens-inference epic: Gut-archive origin/main of autolens_profiling
+    as archive/condemned/autolens-profiling/inference-programme, then delete the retired
+    inference programme (searches framework + leaves, results/searches, InferenceRefs_v1,
+    notes/inference + gradient_slam, CORTEX.md, 58 search submits, 8 search tests), repair
+    build_readme/lint/profile/wall/docs, repoint Brain samplers mature tier at
+    autolens_inference, condemned.md entry, close #218/#205, reframe #166. Plan on #245.
