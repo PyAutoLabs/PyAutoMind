@@ -19,7 +19,7 @@ Witness: a results note under `autolens_profiling/results/notes/` with (i) the f
 Review-minutes: 25
 Unattended: ready
 Parent: complete/2026/09/a100-pixelized-baseline.md
-Blocked-by: draft/research/autolens_profiling/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md   # shipped at autolens_profiling PR #244 (issue #243); the split numbers below come from it — the gate clears when #244 merges
+Blocked-by: autolens_profiling#243   # CLOSED 2026-09-11 — reconstruction split shipped in PR #244; see complete/2026/09/reconstruction-row-split.md
 Filed: 2026-09-10
 
 ## Why

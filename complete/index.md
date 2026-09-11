@@ -249,6 +249,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-post-235-followups](2026/09/profiling-post-235-followups.md)
 - [profiling-production-representative](2026/09/profiling-production-representative.md)
 - [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)
+- [reconstruction-row-split](2026/09/reconstruction-row-split.md)
 - [release-smoke-env-declarations](2026/09/release-smoke-env-declarations.md)
 - [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)
 - [resampling-info-summary-section](2026/09/resampling-info-summary-section.md)

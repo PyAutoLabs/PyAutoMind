@@ -1,16 +1,5 @@
 # Active Tasks
 
-## reconstruction-row-split
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/243
-- prompt: active/instrument_pixelized_reconstruction_row_nnls_cholesky_logdet.md
-- issued: 2026-09-10
-- session: claude --resume session_014MpFvj3ZeAHLBTYo2mkGRQ
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/244
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/reconstruction-row-split
-- repos:
-  - autolens_profiling: feature/reconstruction-row-split
-
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
