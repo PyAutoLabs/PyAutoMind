@@ -51,7 +51,6 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autolens_profiling/stash-strip-non-jit-noise](#autolens_profilingstash-strip-non-jit-noise)
 - [autolens_workspace_developer/rectangular-spline-rotated-experiments](#autolens_workspace_developerrectangular-spline-rotated-experiments)
 - [autolens_profiling/inference-programme-ledger](#autolens_profilinginference-programme-ledger)
-
 - [autolens-profiling/inference-programme](#autolens-profilinginference-programme)
 
 <!-- toc:end -->
