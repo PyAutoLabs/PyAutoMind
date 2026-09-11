@@ -1,3 +1,80 @@
+## model-figures-graph-spec
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1605 (closed completed 2026-09-11)
+- completed: 2026-09-11
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1606 (merged)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1606
+- epic: model-figures — phase 1 of 6 shipped; phase 2 (`draft/feature/autofit/model_figures_2_renderer.md`) is now unblocked
+- session: web-github (session clone of PyAutoFit, no task worktree; issue, PR and merge driven through the GitHub MCP surface; implementation delegated to two Opus subagents from a Fable session)
+- summary: |
+    New `autofit/graph_spec.py` — the pure semantic layer of the model-figures
+    epic. `GraphSpec.from_model(model, analysis=None, collapse=True,
+    solved_paths=())` turns any `AbstractPriorModel` into frozen, JSON-stable
+    dataclasses: `ComponentNode`s in declaration order (the walk order of
+    `path_instance_tuples_for_class(..., ignore_children=True)`, i.e.
+    `model.info`'s parameter-detail section — the structural summary was
+    rejected because `find_groups(limit=0)` reorders it), one `ParamRow` per
+    parameter slot carrying independent properties (sampling
+    `free|fixed|solved|missing`, sharing as prior id + path occurrences,
+    dimensionality with per-slot tuple components so partial fixes/shares are a
+    mixed state, provenance with relation expressions built from a symbol
+    table), `SharedEdge` / `RelationEdge` / `AssertionEdge`, a `model.info`
+    path index and reconciling counts. Sibling `Model`s collapse into plates by
+    R1 (class tree + prior configuration, ignoring prior id / `_label` /
+    constant values) and R2 (split by cross-member shared priors) under the
+    review's safety condition; plates group over the existing `find_groups`
+    and the path index records where the figure's partition is finer than
+    `model.info`'s. Exported as `af.GraphSpec` / `af.graph_spec_from`. No
+    matplotlib import (asserted), `af.VisualiseGraph` untouched, no new deps
+    or config keys.
+- tests: 52 new in `test_autofit/graph_spec/` — the 18-construct catalogue, collapse rules, determinism (byte-identical `to_dict()` across runs and id resets, in-process and across processes), a matplotlib-purity subprocess check, and the three lens acceptance models as structural doubles. CI green on 3.12 / 3.13 / no-jax / docs.
+- acceptance: |
+    The lens acceptance cases are structural doubles of today's
+    autolens_workspace scripts (autofit may not import autolens). (b) MGE 2×30
+    + pixelized source meets every epic invariant: 11 boxes, two ×30 plates
+    split on `ell_comps` (never one ×60), shared multiplicities
+    60/60/30/30/30/30, 16 unique sampled scalars, `areas_factor` in the
+    `missing` state, per-Gaussian `sigma` recorded as `varies_by_member`.
+    (a) simple lens: 8 raw nodes → 6 boxes in declaration order (17 rows vs the
+    epic's 13 — redshift and intensity rows counted). (e) group scale: today's
+    `group/modeling.py` composition with 8 extra galaxies is far smaller than
+    the prototype's model (33 raw nodes vs 166, 0 shared priors vs 22), so its
+    numeric counts are pinned as measured with `# epic target` comments; the
+    structural invariant holds (8 galaxies → one plate `0 - 7`, per-galaxy
+    fixed `centre` tuples present and `varies_by_member`). Phase 3 re-runs the
+    assertions on the real classes in PyAutoLens.
+- traps: |
+    - Rows are read from each component's `__dict__` directly, not from the
+      `direct_*` properties: those cannot see raw instance leaves, lose
+      declaration order once merged, and carry the known `Constant`
+      double-count.
+    - `all_paths_prior_tuples` reports a relation operand at a second path
+      inside the `CompoundPrior` (`('centre','self')`); `occurrences` keeps it
+      literally but `direct_occurrences` drives `shared`, `SharedEdge`, the
+      shared count and R2 — a relation operand is related, not shared.
+    - `obj_id` is the `ModelObject` id counter, not `id(obj)`; `model.copy()`
+      preserves `.id`, so two independently freed copies share an `obj_id`.
+    - A `None` attribute (`Basis(regularization=None)`) is not a slot —
+      `model.info` prints nothing for it — so it emits no row.
+    - `Model(int)` with no leaf is an explicit added annotation
+      (`in_model_info=False`); with a prior/constant/ConfigException it is a
+      free/fixed/missing row on its owner (R7).
+    - `Hilbert.areas_factor` no longer exists in autoarray; the double keeps it
+      because it is the epic's `missing` case. Today's `Delaunay` takes no
+      `pixels`, so the "12 before R7" `Model(int)` node is absent.
+    - `ComponentNode` keeps rows and children as separate ordered fields, so a
+      row declared after a child model renders before it — a phase-2 renderer
+      concern.
+    - xdist collection is nondeterministic in `test_autofit` (pre-existing);
+      run the suite serially. `TestEmceeContainment` failed once on a full run
+      and passed on re-run (stochastic).
+- notes: |
+    Plan approved 2026-09-10; issue #1605 carries the two-level plan. Phase 1
+    left `user-prior`, `assertion`, `hierarchical-draw` and `observed`
+    provenance kinds reserved and documented; `solved` is carried via
+    `solved_paths=` for phase 3's domain rules.
+
+## Original prompt
+
 # Model figures phase 1 — semantic extraction
 
 Type: feature
