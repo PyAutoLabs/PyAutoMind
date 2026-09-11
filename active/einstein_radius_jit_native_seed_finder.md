@@ -12,6 +12,7 @@ Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
 Filed: 2026-05-21 (backfilled from git)
+Issued: 2026-09-11
 
 Small follow-up to the Phase B work (PyAutoGalaxy #435, PyAutoFit #1288,
 pipeline #15). Drops the requirement that callers pass a static
