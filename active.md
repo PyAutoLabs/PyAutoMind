@@ -110,10 +110,11 @@
 - issued: 2026-09-11
 - prompt: active/sed_chain_cpu_route_jax_cpu_backend.md
 - session: claude --resume session_01AELxUSfSPRz2SDnnVJHohi
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/sed-chain-cpu-route
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/sed-chain-cpu-route
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/70
 - note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by remove-fits-dataset-plots-yaml, whose PR #63 merged and issue #62 closed on 2026-09-10 without a close-out. Stale claim, waived on the human's plan approval; the file sets are disjoint (hpc/ submit scripts and README here, config/visualize/plots.yaml there) and this task runs in a fresh parallel worktree.
 - summary: |
     The SED chain (Sersic VIS + per-band waveband fits) gets a CPU submit script,
