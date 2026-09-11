@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 174 |
+| [Backlog](#backlog) (`draft/`) | 175 |
 
 > **No batch in flight.**
 
@@ -134,7 +134,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 93
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 94
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -224,10 +224,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md">Example Analysis should reduce with xp.sum not builtin sum</a> — autofit · small · safe · normal</summary>
+<details><summary>📋 <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — autofit · small · safe · normal</summary>
 
 ```
-/start_dev draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md
+/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md
 ```
 
 </details>
@@ -471,7 +471,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**174** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**175** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -735,7 +735,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 38</summary>
+<summary><b>bug</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/bug/autofit/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — autofit · large · supervised · high</summary>
 
@@ -885,6 +885,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autofit/stale_enable_pytrees_register_model_advice_in.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md
 ```
 
 </details>
@@ -1896,7 +1904,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 25 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 26 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
