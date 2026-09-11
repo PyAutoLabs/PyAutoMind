@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/slam_base_driver.md">Backend-parameterised SLaM base-run driver, per-stage results and submits (autolens-inference phase 3)</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/2">issue #2</a> — issued 2026-09-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/slam_base_driver.md">Backend-parameterised SLaM base-run driver, per-stage results and submits (autolens-inference phase 3)</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/2">issue #2</a> — issued 2026-09-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/3">autolens_inference#3</a></summary>
 
 ```
 /start_dev active/slam_base_driver.md
