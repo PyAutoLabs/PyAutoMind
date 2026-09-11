@@ -76,6 +76,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/matrix-free-pixelized-likelihood
 - repos:
+  - autolens_profiling: feature/matrix-free-pixelized-likelihood
 - summary: |
     Matrix-free pixelized imaging likelihood in autolens_profiling: PCG on (F+λH)x=D via the
     sparse operator's FFT apply, SLQ log-dets with fixed probes, matrix-free PDIP comparator;
