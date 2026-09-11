@@ -15,7 +15,7 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Consequence: judge
-Witness: a results note under `autolens_profiling/results/notes/` with the prototype's per-call / VRAM / log-evidence-error table per mesh against the baseline rows, a stated go/no-go, and (on go) a PyAutoArray PR behind the same pins.
+Witness: a results note under `autolens_profiling/results/notes/` with (i) the fiducial-tier table per mesh against the reconstruction split rows, (ii) the N_src sweep table (dense / sparse / matrix-free × time / VRAM / fits) with the crossover stated, (iii) the SLQ-noise-vs-probe-count curve against the exact log-dets, a stated go/no-go, and (on go) a PyAutoArray PR behind the same pins; the reference implementation committed under `scripts/misc/` with its own README row.
 Review-minutes: 25
 Unattended: ready
 Parent: complete/2026/09/a100-pixelized-baseline.md
@@ -39,6 +39,5 @@ The 2026-09-11 reconstruction split (same note, "Reconstruction split" section; 
 
 Start from the plan-B memory and the baseline note (both "Reconstruction split" and "What this baseline says to the matrix-free work"), not from scratch; the log-det obstacle and the positivity treatment are the open questions, not memory.
 
-Witness: a results note under `autolens_profiling/results/notes/` with (i) the fiducial-tier table per mesh against the reconstruction split rows, (ii) the N_src sweep table (dense / sparse / matrix-free × time / VRAM / fits) with the crossover stated, (iii) the SLQ-noise-vs-probe-count curve against the exact log-dets, a stated go/no-go, and (on go) a PyAutoArray PR behind the same pins; the reference implementation committed under `scripts/misc/` with its own README row.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-10 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/5d8bb12c-d0c2-46fc-b5a1-544c43387c68/scratchpad/intake_b.md -->
