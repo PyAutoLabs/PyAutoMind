@@ -70,3 +70,24 @@
     notes/inference + gradient_slam, CORTEX.md, 58 search submits, 8 search tests), repair
     build_readme/lint/profile/wall/docs, repoint Brain samplers mature tier at
     autolens_inference, condemned.md entry, close #218/#205, reframe #166. Plan on #245.
+
+## ep-no-multiprocessing-pool
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1608
+- issued: 2026-09-11
+- prompt: active/ep_must_never_drive_nautilus_through_a.md
+- session: claude --resume session_01FU8EkdahFWmrL6pewkHZR3
+- status: library-dev
+- location: web-github (session clone /home/user/pyautofit, no task worktree; Mind branch claude/autofit-ep-nautilus-bug-ftngha)
+- worktree: n/a — web-github session clone (/home/user/pyautofit)
+- repos:
+  - PyAutoFit: feature/ep-no-multiprocessing-pool
+- summary: |
+    Human ruling 2026-09-09: EP never runs a factor search through a Python
+    multiprocessing pool (RAL 342351_0 hung 27 h after two forked workers
+    segfaulted and Pool.map never returned). One PyAutoFit PR: (1)
+    `AbstractSearch.optimise` refuses `number_of_cores>1` with a clear
+    SearchException naming `number_of_cores=1` / `use_jax=True` as the fixes;
+    (2) `_LikelihoodWorkerPool.map` gains a dead-worker watchdog (map_async +
+    poll, construction-time PID set) so any multi-core Nautilus fit fails
+    within seconds instead of hanging. Phase 2 (the science script's
+    `--use_cpu` => `use_jax=False` conflation) filed separately.
