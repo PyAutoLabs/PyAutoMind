@@ -244,7 +244,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_3_lens_cookbook.md">Model figures phase 3 — lens semantics and cookbooks</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/736">issue #736</a> — issued 2026-09-11 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1615">PyAutoFit#1615</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/550">PyAutoArray#550</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616">PyAutoGalaxy#616</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/737">PyAutoLens#737</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
+<details><summary>📋 <a href="active/model_figures_3_lens_cookbook.md">Model figures phase 3 — lens semantics and cookbooks</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/736">issue #736</a> — issued 2026-09-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1615">PyAutoFit#1615</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/550">PyAutoArray#550</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616">PyAutoGalaxy#616</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/737">PyAutoLens#737</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/541">autolens_workspace#541</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/240">autogalaxy_workspace#240</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens — ⏸ waiting on PyAutoFit's release — ⏸ waiting on PyAutoArray's release — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/model_figures_3_lens_cookbook.md
@@ -313,6 +313,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#541](https://github.com/PyAutoLabs/PyAutoArray/pull/541) — `complete/2026/09/interferometer-preload-prose.md`
 - [PyAutoArray#544](https://github.com/PyAutoLabs/PyAutoArray/pull/544) — `complete/2026/09/interferometer-sparse-operator-numpy-cpu-path.md`
 - [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `complete/2026/09/sibson-single-concatenated-walk.md`
+- ⏸ waiting: [Model figures phase 3 — lens semantics and cookbooks](active/model_figures_3_lens_cookbook.md)
 
 **PyAutoFit**
 
@@ -344,6 +345,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1583](https://github.com/PyAutoLabs/PyAutoFit/pull/1583) — `complete/2026/09/traced-assertions-on-jax-path.md`
 - [PyAutoFit#1572](https://github.com/PyAutoLabs/PyAutoFit/pull/1572) — `complete/2026/09/transformed-from-mode-coupled-covariance.md`
 - [PyAutoFit#1600](https://github.com/PyAutoLabs/PyAutoFit/pull/1600) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
+- ⏸ waiting: [Model figures phase 3 — lens semantics and cookbooks](active/model_figures_3_lens_cookbook.md)
 
 **PyAutoGalaxy**
 
@@ -352,6 +354,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoGalaxy#615](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615) — `complete/2026/09/einstein-radius-jit-seed-finder.md`
 - [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
+- ⏸ waiting: [Model figures phase 3 — lens semantics and cookbooks](active/model_figures_3_lens_cookbook.md)
 
 **PyAutoLens**
 
@@ -362,6 +365,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `complete/2026/09/pixelized-source-magnification-latent.md`
 - [PyAutoLens#728](https://github.com/PyAutoLabs/PyAutoLens/pull/728) — `complete/2026/09/pixelized-source-magnification-latent.md`
 - [PyAutoLens#734](https://github.com/PyAutoLabs/PyAutoLens/pull/734) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
+- ⏸ waiting: [Model figures phase 3 — lens semantics and cookbooks](active/model_figures_3_lens_cookbook.md)
 
 **PyAutoNerves**
 
