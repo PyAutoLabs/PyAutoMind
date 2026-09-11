@@ -124,3 +124,25 @@
     documented default; the GPU script stays as the optional route. README route table,
     hpc/sync comments and usage text, the sersic_lens_model.py batch_size docstring and the
     PyAutoCortex "Where to look" line are repointed. GPU job 342648 is untouched.
+
+## model-figures-lens
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/736
+- issued: 2026-09-11
+- prompt: active/model_figures_3_lens_cookbook.md
+- session: claude --resume session_0178yLU9v19GtACcRPFggjGa
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/model-figures-lens
+- repos:
+  - PyAutoFit: feature/model-figures-lens
+  - PyAutoArray: feature/model-figures-lens
+  - PyAutoGalaxy: feature/model-figures-lens
+  - PyAutoLens: feature/model-figures-lens
+- parallel-claim: "PyAutoFit is also claimed by remove-parallel-ep-optimiser (PR #1612, web session, no local worktree, EP-optimiser files only). Disjoint from this task's graph_spec/model_figure edits; the human approved a parallel worktree in the 2026-09-11 phase-3 plan (same waiver as phase 2)."
+- summary: |
+    Epic model-figures phase 3 of 6. Class-declared `__solved_parameters__` protocol
+    consumed by PyAutoFit graph_spec (additive solved rows, R7 for float subclasses),
+    declared on LightProfileLinear / PointSolved (PyAutoGalaxy) and Pixelization
+    (PyAutoArray); real-class lens acceptance tests + committed renders in PyAutoLens;
+    model figures in both model cookbooks (docs pages now, workspace scripts + notebooks
+    + config key in the workspace follow-up). Scope widened from the prompt's 4 repos to
+    6 (PyAutoFit + PyAutoArray needed for the protocol), recorded on the issue.
