@@ -15,12 +15,14 @@ Autonomy: supervised
 Priority: high
 Epic: autolens-inference
 Phase: 2
-Status: draft
+Status: active
 Consequence: judge
 Witness: `git -C autolens_profiling ls-files | grep -c "scripts/misc/searches\|scripts/[a-z_]*/searches\|results/searches\|results/baselines/InferenceRefs_v1\|results/notes/inference\|results/notes/gradient_slam"` prints 0 on the branch; `git ls-remote PyAutoGut refs/heads/archive/condemned/autolens-profiling/inference-programme` resolves; autolens_profiling `lint` is green; autolens_profiling#218 and #205 are closed
 Review-minutes: 25
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-10
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/245
 
 The human retired the Cortex project `inference_programme` on 2026-09-07 (PyAutoCortex#22)
 and on 2026-09-10 ruled that **none** of its material is trusted or inherited by the
