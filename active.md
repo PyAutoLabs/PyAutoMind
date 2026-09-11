@@ -111,15 +111,21 @@
 - session: claude --resume session_0178yLU9v19GtACcRPFggjGa
 - status: library-dev (PAUSED 2026-09-11 ~12:45 — laptop shutdown mid-implementation; WIP committed on feature/model-figures-graphical in all three repos, NOT shipped)
 - resume: |
-    PyAutoFit worktree: Leg A finished graph_spec graphical pass + presentation/render (427 tests
-    green, non-graphical byte-identical); REMAINING: new tests test_autofit/graph_spec/test_graphical.py
-    + test_autofit/model_figure/test_graphical_presentation.py (check whether written), the three
-    make_figures.py builders/PNGs (graphical_shared/variable/hierarchical), docs/features/graphical.md
-    holes (:144 + Hierarchical section), full suite, black. Workspace worktrees: scripts edited
-    (autofit_workspace features/graphical_models.py figure :249 + hierarchical :343; HowToFit
-    tutorial_2 :233, tutorial_4 :232) but NOT yet run headless and notebooks/navigator NOT regenerated.
-    Then: ship_library (PyAutoFit PR), ship_workspace (2 PRs), /prm in order PyAutoFit → autofit_workspace → HowToFit.
-    Plan on the issue (#1616); WIP commit messages say "WIP".
+    WIP commits pushed 2026-09-11 12:50: PyAutoFit b333f364e (17 files), autofit_workspace c1ae480,
+    HowToFit 48d1876 — all on feature/model-figures-graphical, untested as a whole, NOT shipped.
+    PyAutoFit DONE: graph_spec graphical pass (hyper nodes, DrawEdge, observed rows, FactorInfo,
+    counts), presentation hoist/dataset plates/drawn+observed pills/split footer, render violet
+    arrows; tests test_graphical.py (15) + test_graphical_presentation.py (12), 454 green in
+    graph_spec/model_figure/graphical; 3 PNGs docs/images/model_figures/graphical_{shared,variable,
+    hierarchical}.png rendered + reviewed by the subagent (NOT yet by the architect); conftests now
+    also namer.reset(). PyAutoFit REMAINS: full pytest test_autofit; docs/features/graphical.md
+    (delete the "not yet built visualization" sentence ~L144, add shared + hierarchical figures,
+    tutorial-4 composition, shared-vs-hierarchical paragraph); black/pyflakes; sphinx count vs baseline.
+    Workspaces REMAIN: run autofit_workspace scripts/features/graphical_models.py and HowToFit
+    chapter_3 tutorials 2 + 4 headless (smoke env); regenerate notebooks (generate.py autofit /
+    howtofit from inside each repo; commit HowToFit navigator catalogue); verify prose vs PNGs.
+    Then ship_library (PyAutoFit PR, pending-release) → ship_workspace (2 PRs) → /prm in order
+    PyAutoFit → autofit_workspace → HowToFit. Plan + brief on PyAutoFit#1616.
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-graphical
 - repos:
   - PyAutoFit: feature/model-figures-graphical
