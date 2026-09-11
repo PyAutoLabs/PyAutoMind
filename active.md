@@ -89,8 +89,10 @@
 - issued: 2026-09-11
 - prompt: active/model_figures_2_renderer.md
 - session: claude --resume session_0178yLU9v19GtACcRPFggjGa
-- status: library-shipped, workspace-pending
+- status: awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1614
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/152
+- release-gate: PyAutoFit
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1614
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-renderer
 - repos:
