@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/scrap_inference_programme.md">Scrap the retired inference programme from autolens_profiling (autolens-inference phase 2)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/245">issue #245</a> — issued 2026-09-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scrap_inference_programme.md">Scrap the retired inference programme from autolens_profiling (autolens-inference phase 2)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/245">issue #245</a> — issued 2026-09-10 — awaiting-merge — merge order Mind#401 (firewall allowlist, code) → re-run Brain#376 Brain Tests → Brain#376 →… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/376">PyAutoBrain#376</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/401">PyAutoMind#401</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/246">autolens_profiling#246</a></summary>
 
 ```
 /start_dev active/scrap_inference_programme.md
