@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 175 |
+| [Backlog](#backlog) (`draft/`) | 177 |
 
 > **No batch in flight.**
 
@@ -134,7 +134,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 94
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 96
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -208,6 +208,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output directory</a> — autofit · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke cap…</a> — autolens_workspace · small · safe · medium</summary>
 
 ```
@@ -224,14 +232,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — autofit · small · safe · normal</summary>
-
-```
-/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md
-```
-
-</details>
-
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
@@ -244,7 +244,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1608">issue #1608</a> — issued 2026-09-11 — library-dev</summary>
+<details><summary>📋 <a href="active/ep_must_never_drive_nautilus_through_a.md">EP must never drive Nautilus through a Python multiprocessing pool</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1608">issue #1608</a> — issued 2026-09-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1610">PyAutoFit#1610</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/ep_must_never_drive_nautilus_through_a.md
@@ -299,6 +299,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1610](https://github.com/PyAutoLabs/PyAutoFit/pull/1610) — `active/ep_must_never_drive_nautilus_through_a.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
@@ -479,7 +480,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**175** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**177** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>feature</b> — 32</summary>
@@ -743,7 +744,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>bug</b> — 39</summary>
+<summary><b>bug</b> — 41</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -781,6 +782,22 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autoarray/fit_util_masked_division_grad_nan.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/dynesty_single_core_path_still_builds_a.md">Dynesty single-core path still builds a Pool(1) instead of running serially</a> — autofit · small · supervised · medium</summary>
+
+```
+/start_dev draft/bug/autofit/dynesty_single_core_path_still_builds_a.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output directory</a> — autofit · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
 ```
 
 </details>
@@ -1849,10 +1866,10 @@ Contract (the `start_bundle` skill is the full body):
 You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
+- draft/bug/autofit/dynesty_single_core_path_still_builds_a.md
+- draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
 - draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
 - draft/bug/autofit/assertion_repr_recurses_forever.md
-- draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md
-- draft/bug/autofit/model_function_cannot_resolve_config_priors.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1867,10 +1884,10 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Difficulty | Priority | Status |
 |--------|------------|----------|--------|
+| <a href="draft/bug/autofit/dynesty_single_core_path_still_builds_a.md">Dynesty single-core path still builds a Pool(1) instead of running…</a> | small | medium | formalised |
+| <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output…</a> | small | medium | formalised |
 | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
 | <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
-| <a href="draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md">Emcee crashes in autocorrelation when the chain is too short</a> | small | normal | formalised |
-| <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> | small | normal | formalised |
 
 </details>
 
@@ -1908,7 +1925,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 26 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 27 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
