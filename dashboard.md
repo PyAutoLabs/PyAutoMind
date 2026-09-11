@@ -244,7 +244,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1607">issue #1607</a> — issued 2026-09-11 — ready-to-ship — fix + tests pushed (1c152be41), full suite 2575 passed / 43 skipped; PR body awaiting sign-off</summary>
+<details><summary>📋 <a href="active/model_from_instance_roundtrip_unexpected_kwargs.md"><code>af.Model.from_instance</code> serialises derived attributes the class <code>__init__</code> rejects, so the aggregator cannot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1607">issue #1607</a> — issued 2026-09-11 — awaiting-merge — PR open, full suite 2575 passed / 43 skipped; no workspace impact (option iii). Human /prm when CI is green. — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1609">PyAutoFit#1609</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/model_from_instance_roundtrip_unexpected_kwargs.md
@@ -299,6 +299,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1609](https://github.com/PyAutoLabs/PyAutoFit/pull/1609) — `active/model_from_instance_roundtrip_unexpected_kwargs.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
