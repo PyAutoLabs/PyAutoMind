@@ -126,10 +126,11 @@
 - issued: 2026-09-12
 - prompt: active/sersic_variants_prior_edge.md
 - session: claude --resume session_01KTGhZacWuxrxYkXXWXJbBx
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/sersic-variants
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/sersic-variants
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/75
 - note: "worktree_check_conflict sersic-variants euclid_strong_lens_modeling_pipeline exits 1 on two claims. remove-fits-dataset-plots-yaml is stale (PR #63 merged, issue #62 closed 2026-09-10, no close-out). sed-chain-cpu-route is LIVE (PR #70 open) and its file set genuinely overlaps: hpc/README.md route table (both add rows to the same table — a one-line resolution expected on whichever merges second) and scripts/sersic_lens_model.py (its only hunk there is a two-line batch_size docstring edit at ~250, clear of the model block extracted here). Waived on the human's plan approval, in a fresh parallel worktree — the same call sed-chain-cpu-route itself recorded against remove-fits-dataset-plots-yaml."
 - summary: |
     --variant for the Sersic stage: four variants (baseline, wide_n,
