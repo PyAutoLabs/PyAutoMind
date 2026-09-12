@@ -231,7 +231,7 @@ a.go:hover{opacity:.9;text-decoration:none}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>6</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>174</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>7</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>174</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-09-12.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -293,6 +293,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev active/model_figures_5_ep_view.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/model_figures_5_ep_view.md">Model figures phase 5 — EP factor-graph view</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1618">issue #1618</a><span class="facets"> — issued 2026-09-12</span> — <span class="facets">implementation-complete, ship BLOCKED at Heart RED</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/remove_fits_dataset_from_remaining_plots_yaml_copies.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining <code>config/visualize/plots.yaml</code> copies</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/62">issue #62</a><span class="facets"> — issued 2026-09-10</span> — <span class="facets">awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/63">euclid_strong_lens_modeling_pipeline#63</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/124">autolens_assistant#124</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/24">autogalaxy_assistant#24</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/80">HowToLens#80</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/74">HowToGalaxy#74</a></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/sed_chain_cpu_route_jax_cpu_backend.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69">issue #69</a><span class="facets"> — issued 2026-09-11</span> — <span class="facets">awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/70">euclid_strong_lens_modeling_pipeline#70</a></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/sersic_variants_analysis.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes (<code>scripts/analysis/sersic_variants.py</code>)</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/76">issue #76</a><span class="facets"> — issued 2026-09-12</span> — <span class="facets">workspace-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/sersic_variants_prior_edge.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses (<code>--variant</code>)</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74">issue #74</a><span class="facets"> — issued 2026-09-12</span> — <span class="facets">awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/75">euclid_strong_lens_modeling_pipeline#75</a></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/witness_campaign.md" aria-label="Copy the Claude command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/398">issue #398</a><span class="facets"> — issued 2026-09-10</span> — <span class="facets">library-dev</span></p></div>
 <a id="pending-release"></a><h2>Pending release <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
@@ -908,6 +909,12 @@ Contract (the `start_bundle` skill is the full body):
 <tr>
 <td class="when">2026-09-12</td>
 <td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/sersic_variants_analysis.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-09-12</td>
+<td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/model_figures_5_ep_view.md">Model figures phase 5 — EP factor-graph view</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/model_figures_5_ep_view.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
@@ -953,7 +960,7 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-09-10</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a></td>
@@ -1192,25 +1199,6 @@ Contract (the `start_bundle` skill is the full body):
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/adapt_scatter_factor_two.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-08-29</td>
-<td class="what">flagged for review</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked…</a></td>
-<td class="pick"><button class="copy" data-cmd="Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.
-
-1. Read the prompt: what was asked, and what it claims shipped.
-2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
-   and read the actual diff, not the description of it.
-3. Report what changed, what it does NOT cover, and anything you would have
-   done differently. Call out behaviour changes and test gaps explicitly.
-
-Change nothing while reviewing. When I sign it off, retire the prompt from the
-PyAutoMind checkout (`python3 scripts/lifecycle.py record &lt;slug&gt; --date
-&lt;YYYY-MM-DD&gt; --from-file &lt;body&gt; --apply`, then `git rm` the prompt) and
-regenerate the dashboard. If I do not sign it off, file the follow-up with
-`/intake` instead.
-" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
