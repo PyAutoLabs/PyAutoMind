@@ -1,3 +1,38 @@
+## remove-parallel-ep-optimiser
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1611
+- completed: 2026-09-12
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1612 (merge 54f464d9)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1612
+- summary: |
+    Human decision 2026-09-11 after #1608/#1610: `ParallelEPOptimiser` deleted from
+    `autofit/graphical/expectation_propagation/optimiser.py` together with its never-collected
+    `_test_parallel_laplace` helper and import. It was never used and never exported (deep import
+    only), and as EP's own fork pool across factors it shared the dead-worker hang #1610 fixed for
+    Nautilus and the JAX-in-a-forked-child deadlock of #1442, contradicting the 2026-09-09 ruling
+    that EP never combines with Python multiprocessing. README §7 (Parallel EP) removed, the
+    lowering contract renumbered §8 → §7 with every cross-reference updated (README, `AGENTS.md`
+    seam rule, `test_declarative_deterministic.py`); the diagnostics end-of-run-guards test loses
+    its "parallel" name and F3 wording; an unused `multiprocessing` import dropped. Net −211 lines,
+    no public API change (recorded as Removed in the PR's API Changes). Restorable from git history.
+- memory: |
+    PyAutoMemory `wiki/methods/concepts/expectation-propagation.md` F3 line rewritten to say the
+    class was removed in PyAutoFit#1611 and EP parallelism is a JAX-vectorised likelihood —
+    a separate ledger commit (0cdede9) on PyAutoMemory main, not a PR of this issue.
+- witness: |
+    `grep -rn ParallelEPOptimiser autofit test_autofit docs` returns nothing; `§8` no longer
+    appears in the README, `AGENTS.md` or `test_autofit/graphical`. `test_autofit/graphical`
+    serial 281 passed (unchanged from the post-#1610 baseline, the deleted helper was never
+    collected); rest of `test_autofit` 2348 passed, 2 skipped. CI green on every leg of the
+    `pull_request` runs for c877237 (unittest 3.12, 3.13, nojax; docs-build); no `push` run
+    fires for feature branches in this repo.
+- close-out: |
+    Merged from a web session (`/prm`, MCP surface, no `gh`, no task worktree). Heart not
+    installed in the container, so no freeze flag to read. GitHub deleted the merged head branch
+    itself, so the ancestry proof fell back to the PR's `MERGED` state and the merge commit on
+    `origin/main`. Consequence tier `glance` — no shadow row.
+
+## Original prompt
+
 # Remove ParallelEPOptimiser and its tests
 
 Type: refactor
