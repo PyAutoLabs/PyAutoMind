@@ -1,3 +1,71 @@
+## model-figures-graphical
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1616 (closed completed 2026-09-12)
+- completed: 2026-09-12
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1617 (merged `650cb88339f6b93c0ab4c52356b866f26669e82b`)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/153 (merged `4f121f2a64a8a7b71f87bbe715fe0c9a7a80c526`)
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/51 (merged `3cadd7d6303fd507ddf91c0fa03d7aaf02e3d8a6`)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1617
+- epic: model-figures — phase 4 of 6 shipped; phase 5 (`draft/feature/autofit/model_figures_5_ep_view.md`, the EP diagnostic view) is now unblocked, and phase 6 (`draft/feature/workspaces/model_figures_6_rollout.md`) has its last blocker cleared
+- session: local-dev, Fable architect session; implementation, tests, docs, ship and close-out legs delegated to Opus subagents (worktree `~/Code/PyAutoLabs-wt/model-figures-graphical`, parallel-claim waiver vs `remove-parallel-ep-optimiser` #1612 — disjoint files)
+- summary: |
+    `af.ModelPlotter` now draws standard plate notation for graphical models.
+    Passing a `FactorGraphModel`'s `global_prior_model` to the plotter triggers a
+    graphical pass in `graph_spec` keyed off `GlobalPriorModel.factor`: repeated
+    per-dataset structure collapses into a dashed **dataset plate** badged with
+    the dataset count; **shared priors are hoisted** into a card above the plate
+    and linked back to its rows; **hierarchical draws are not sharing** — a
+    hierarchically drawn parameter renders as a `drawn` pill fed by a violet
+    arrow from its `HierarchicalFactor` card (the review's highest-priority
+    correction: `⇄ centre` and the draw arrow make opposite claims); **observed
+    data gets its own green `observed` encoding**, never the grey fixed pill; and
+    the footer splits the parameter count into hyper-parameters, per-dataset
+    parameters and unique sampled scalars.
+
+    New internals (none exported from `autofit`): `graph_spec.FactorInfo`,
+    `graph_spec.DrawEdge` (a draw edge instead of a sharing link),
+    `GraphSpec.graphical_counts(raw_root)`, plus `model_figure` dataset-plate
+    detection, shared-prior hoisting, draw-route rendering and the
+    `observed`/`drawn`/`shared` pill states. Two internal signatures gained
+    optional arguments: `graph_spec._path_index(spec, model, hyper_paths=None)`
+    and `model_figure.presentation._badge_colours(badge, state="free")`.
+
+    **Behavioural, not API:** `autofit/__init__.py` is unchanged and no public
+    symbol was added, removed, renamed or re-signatured.
+    `af.ModelPlotter(factor_graph.global_prior_model).figure()` previously drew
+    the global model as ordinary repeated cards and now renders plate notation.
+    Non-graphical models render exactly as before; no migration.
+
+    Downstream, this filled the three "visualization not implemented" holes —
+    `docs/features/graphical.md`, `autofit_workspace/scripts/features/graphical_models.py`
+    and HowToFit chapter 3 — and shipped the shared-vs-hierarchical teaching
+    pair as HowToFit tutorials 2 and 4.
+- verification: |
+    `pytest test_autofit/` 2759 passed / 2 skipped / 0 failed, including new
+    suites `test_autofit/graph_spec/test_graphical.py` and
+    `test_autofit/model_figure/test_graphical_presentation.py`; `black --check`
+    and `pyflakes` clean on touched files; Sphinx 30 warnings == `main`
+    baseline (30); figures regenerated via
+    `docs/images/model_figures/make_figures.py` and reviewed.
+
+    CI at merge — every run and every matrix leg green on each head sha:
+    PyAutoFit `447c00e92` Tests (3.12 / 3.13 / nojax) + Docs = 4/4;
+    autofit_workspace `b85bbac` Smoke (3.12 / 3.13 / changes) + Navigator
+    (catalogue staleness / paths + banner lint / unbatched multi-start) = 6/6;
+    HowToFit `e62ac27` Smoke 3 legs + Navigator 3 legs + Tutorials Complete = 7/7.
+    All three PRs read `CLEAN` / `MERGEABLE`; merged in library-first gate order.
+- notes: |
+    Opened under Heart RED (`red_reason` "release validation FAILED (stage
+    integrate)" — unrelated autolens / autolens_test scripts) with explicit
+    human authorisation recorded on PyAutoFit#1616. That readiness judgement was
+    made at PR-open and was **not** re-run at merge; the Heart *freeze* flag,
+    which is the only gate `/prm` reads, was clear (`not frozen`, exit 0).
+
+    `pending-release: PyAutoFit@#1617` is carried into this record deliberately:
+    a merged library PR is not a released library, and only `/review_release`
+    clears the key once a release has actually published.
+
+## Original prompt
+
 # Model figures phase 4 — plate notation for graphical models
 
 Type: feature

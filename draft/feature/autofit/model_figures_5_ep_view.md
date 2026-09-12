@@ -18,7 +18,8 @@ Epic: model-figures
 Phase: 5
 Filed: 2026-09-10
 
-**Blocked by phase 4** — `draft/feature/autofit/model_figures_4_graphical_plates.md`.
+**Phase 4 shipped 2026-09-12** — `complete/2026/09/model-figures-graphical.md`
+(PyAutoFit#1617, autofit_workspace#153, HowToFit#51 merged); this phase is unblocked.
 (Deliberately not in a `Blocked-by:` header: that key is graded against GitHub
 refs and cannot name a Mind prompt path.)
 

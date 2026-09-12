@@ -29,9 +29,10 @@ Epic: model-figures
 Phase: 6
 Filed: 2026-09-10
 
-**Phase 3 shipped 2026-09-11** — `complete/2026/09/model-figures-lens.md`; still blocked by phase 4 (`draft/feature/autofit/model_figures_4_graphical_plates.md`)
-— and, for the graphical-model tutorials only, **by phase 4**
-(`draft/feature/autofit/model_figures_4_graphical_plates.md`).
+**Phase 3 shipped 2026-09-11** — `complete/2026/09/model-figures-lens.md`.
+**Phase 4 shipped 2026-09-12** — `complete/2026/09/model-figures-graphical.md`
+(PyAutoFit#1617, autofit_workspace#153, HowToFit#51 merged), which cleared the
+last blocker on this phase, including the graphical-model tutorials.
 (Deliberately not in a `Blocked-by:` header: that key is graded against GitHub
 refs and cannot name a Mind prompt path.)
 
