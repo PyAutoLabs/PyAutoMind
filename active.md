@@ -109,22 +109,23 @@
 - issued: 2026-09-11
 - prompt: active/model_figures_4_graphical_plates.md
 - session: claude --resume session_0178yLU9v19GtACcRPFggjGa
-- status: implementation-complete, ship BLOCKED at the Heart gate (2026-09-12) — no PRs open
+- status: PRs open (pending-release, library-first gate; opened under Heart RED with human authorisation 2026-09-12)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1617
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/153
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/51
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1617
+- release-gate: PyAutoFit
 - resume: |
-    Resumed 2026-09-12: implementation is DONE, tested and pushed on
-    feature/model-figures-graphical in all three repos — PyAutoFit 447c00e92 (test_autofit 2759
-    passed / 2 skipped / 0 failed; black + pyflakes clean; sphinx 30 warnings == baseline),
-    autofit_workspace b85bbac (graphical_models.py runs headless, notebook regenerated),
-    HowToFit e62ac27 (chapter 3 tutorials 2 + 4 run headless, notebooks regenerated).
-    ship_library step 3 STOPPED the ship: `pyauto-heart readiness` is RED, red_reason
-    "release validation FAILED (stage integrate)" (verdict 2026-09-12T17:47Z, score 15) — unrelated
-    to this task (the failing scripts are autolens / autolens_test multi_dataset + delaunay).
-    Heart RED forbids PR-open at every autonomy level (AUTONOMY.md), so NO PRs were opened.
-    REMAINS: clear the RED (re-dispatch PyAutoHeart release-integrate.yml with the morning's
-    testpypi_version + commit_shas, ~75 min) or get contemporaneous human authorization, then
-    re-run /ship_library (PyAutoFit) → /ship_workspace (autofit_workspace, HowToFit) → /prm in
-    order PyAutoFit → autofit_workspace → HowToFit. The three PR bodies are drafted verbatim and
-    the gate block is recorded on PyAutoFit#1616.
+    Shipped 2026-09-12 to PR-open, nothing merged. Three PRs:
+    PyAutoFit https://github.com/PyAutoLabs/PyAutoFit/pull/1617 (447c00e92; test_autofit 2759
+    passed / 2 skipped / 0 failed, black + pyflakes clean, sphinx 30 warnings == baseline),
+    autofit_workspace https://github.com/PyAutoLabs/autofit_workspace/pull/153 (b85bbac),
+    HowToFit https://github.com/PyAutoLabs/HowToFit/pull/51 (e62ac27). All three carry
+    pending-release; both workspace PRs are cross-referenced on the library PR and blocked behind
+    it by the library-first merge gate. Opened under Heart RED (red_reason "release validation
+    FAILED (stage integrate)", unrelated autolens / autolens_test scripts) with explicit human
+    authorisation recorded on PyAutoFit#1616.
+    next: /prm PyAutoFit → autofit_workspace → HowToFit once CI green.
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-graphical
 - repos:
   - PyAutoFit: feature/model-figures-graphical
