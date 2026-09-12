@@ -18,6 +18,7 @@ Review-minutes: 25
 Unattended: needs-slicing
 Witness: results/notes/fixed_lens_light_source_only_2026_09.md reports, per mesh, the A100 per-call ms of the S3 fixed-MGE system with positivity (A1) and without (A2) against the S0 fiducial (50.6 ms single / 32.1 ms @vmap16), each with its log-evidence agreement to the CPU probe, and a measured pass count for the certified active-set scheme
 Filed: 2026-09-12
+Issued: 2026-09-12
 
 Original request (verbatim): "begin the analysis and report and investigation in
 autolens_profiling of what happens if we fix the mge light profiles".
