@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses (<code>--variant</code>)</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74">issue #74</a> — issued 2026-09-12 — workspace-dev</summary>
+<details><summary>📋 <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses (<code>--variant</code>)</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74">issue #74</a> — issued 2026-09-12 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/75">euclid_strong_lens_modeling_pipeline#75</a></summary>
 
 ```
 /start_dev active/sersic_variants_prior_edge.md
