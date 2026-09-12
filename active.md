@@ -91,7 +91,7 @@
 - issued: 2026-09-12
 - prompt: active/model_figures_5_ep_view.md
 - session: claude --resume session_01AmyBwcVQBrWE4jSTqdATY6
-- status: library-dev
+- status: implementation-complete, ship BLOCKED at Heart RED
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-ep-view
 - epic: model-figures phase 5
 - repos:
@@ -109,6 +109,17 @@
     no dot binary locally, on the GH runner or Colab, not pip-installable);
     optional overlays (mean +/- std, precision, KL sparklines) deferred to a
     follow-up prompt. Plan on the issue.
+- resume: |
+    Branch feature/model-figures-ep-view is implemented, verified and pushed
+    (ba756b82d, 6 commits on 54f464d97; test_autofit 2843 passed / 2 skipped,
+    sphinx 30 == baseline, black + pyflakes clean). /ship_library stopped at the
+    Heart gate: RED "release validation FAILED (stage integrate)" and no human
+    authorisation for a PR-open under RED. No PR opened; gate-block comment on
+    PyAutoFit#1618. next: clear the integrate RED (or authorise PR-open under it),
+    re-run /ship_library, then /prm once CI green; then file follow-up prompts:
+    optional EP overlays (mean+/-std / precision / KL sparklines) and phase-6
+    rollout of graph_state.png to autofit_workspace expectation_propagation.py +
+    HowToFit optional hierarchical EP tutorial (need visualise_interval=1).
 
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
