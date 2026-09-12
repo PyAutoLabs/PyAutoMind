@@ -145,3 +145,24 @@
     inside one array task per lens, because all four restore the same vis_lp zip
     and PyAutoFit's restore() deletes it. Science-clone submit and the analysis
     script (PR 2) are follow-ups.
+
+## sersic-variants-analysis
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/76
+- issued: 2026-09-12
+- prompt: active/sersic_variants_analysis.md
+- session: claude --resume session_01KTGhZacWuxrxYkXXWXJbBx
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/sersic-variants-analysis
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/sersic-variants-analysis
+- note: "worktree_check_conflict sersic-variants-analysis euclid_strong_lens_modeling_pipeline exits 1 on three claims. remove-fits-dataset-plots-yaml is stale (PR #63 merged, issue #62 closed 2026-09-10, no close-out). sed-chain-cpu-route (PR #70) and sersic-variants (PR #75) are live, but neither file set intersects this one: this task adds only scripts/analysis/** (new tree), tests/test_sersic_variants_analysis.py (new) and one line in config/build/no_run.yaml, which neither touches. Its documentation deliberately goes in a new scripts/analysis/README.md rather than scripts/README.md or catalogue/README.md, which belong to PR #75's diff. Waived on the human's plan approval, in a fresh parallel worktree based on origin/main - the same call sed-chain-cpu-route itself recorded against remove-fits-dataset-plots-yaml."
+- summary: |
+    PR 2 of the euclid_sersics variants work: scripts/analysis/sersic_variants.py
+    reads the four lens_sersic_<variant>.csv scrapes that PR #75's --variant
+    produces and emits the per-variant comparison production needs - N, median n,
+    fractions above 4.5/4.9/9.5 (and 5.0 for wide_n), paired dn and dR_eff against
+    baseline with 16-84 % bands, June-vs-baseline dn from sample/lens_map.csv, and
+    the four witness readings W1-W4 printed as numbers beside their pre-registered
+    thresholds, never as a verdict word. Four-panel shared-bin histogram PNG plus a
+    markdown report. Pure functions split from the CLI; a synthetic four-CSV
+    fixture with a variant missing two tiles pins the inner join and its reporting.
