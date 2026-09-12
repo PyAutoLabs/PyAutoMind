@@ -27,12 +27,12 @@ epic, never picked standalone.
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
 - ledger: draft/feature/autolens/source_cluster_arc.md
-- notes: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: PyAutoCortex tasks carrying `Epic: cluster-strong-lensing` (arc phase 11).
+- notes: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: the PyAutoCortex project ledger of the science project it births (arc phase 11).
 
 ## graphical-ep
 - title: Expectation propagation (EP) campaign
 - ledger: draft/research/graphical_ep/ep_campaign.md
-- notes: umbrella phase map — each phase's real content lives in its own prompt under draft/research/graphical_ep/; the campaign file itself is never issued. Science half: PyAutoCortex tasks carrying `Epic: graphical-ep` (campaign phases 3 and 4).
+- notes: umbrella phase map — each phase's real content lives in its own prompt under draft/research/graphical_ep/; the campaign file itself is never issued. Science half: PyAutoCortex `projects/{analytic_gaussian,ep_toy_gaussian,slope_hierarchy_scale,ic50_workspace}.md` (campaign phases 1b, 3 and 4).
 
 ## euclid-dr1-prep
 - title: Euclid DR1 preparation — 15k-lens modelling prep
@@ -48,8 +48,8 @@ epic, never picked standalone.
   audit that may spawn a separate bug prompt and can run alongside Cortex phase 7. Mind
   phase 9's (was 7) retroactive-update leg is explicitly allowed to conclude "no elegant
   solution — don't build it". The full renumbering table is in the ledger. Source of truth for
-  all drift is /mnt/c/Users/Jammy/Science/euclid. Science half: PyAutoCortex tasks
-  carrying `Epic: euclid-dr1-prep` (Cortex phases 4-7).
+  all drift is /mnt/c/Users/Jammy/Science/euclid. Science half: PyAutoCortex
+  `projects/euclid_dr1_prelim.md` (the former Cortex phases 4-7).
   Phase 0 shipped 2026-08-28; phase 1 shipped 2026-08-29 (euclid#43 closed, PR #44
   merged); phase 2 shipped 2026-08-29 (euclid#45 closed, PR #46 merged) — which also
   satisfies phase 4's "2 strongly preferred" gate. Phase 3a was INSERTED 2026-08-31
@@ -83,4 +83,4 @@ epic, never picked standalone.
 ## autolens-inference
 - title: autolens_inference — inference benchmarking repo, birth to first base run
 - ledger: autolens_inference/wiki/project/state.md
-- notes: phase 1 SHIPPED 2026-09-10 (complete/2026/09/autolens-inference-birth.md); phase 2 SHIPPED 2026-09-11 (complete/2026/09/scrap-inference-programme.md — autolens_profiling#246 / PyAutoBrain#376 / PyAutoMind#401; archive ref `archive/condemned/autolens-profiling/inference-programme` @ `c8b60580`); 4 phases — 1 birth + registration (PyAutoMind#399), 2 Gut-archive and delete autolens_profiling's searches tier / baselines / inference notes (nothing inherited), 3 backend-parameterised SLaM driver + per-stage results + submit scripts (SHIPPED 2026-09-11, autolens_inference#3, complete/2026/09/slam-base-driver.md), 4 PyAutoCortex task `slam_hst_base` (5-stage HST SLaM × {numba_cpu, jax_cpu, jax_gpu} × {dense, sparse}). Science half: PyAutoCortex tasks carrying `Epic: autolens-inference`. Ledger moved to autolens_inference/wiki/project/state.md when phase 3 landed 2026-09-11.
+- notes: phase 1 SHIPPED 2026-09-10 (complete/2026/09/autolens-inference-birth.md); phase 2 SHIPPED 2026-09-11 (complete/2026/09/scrap-inference-programme.md — autolens_profiling#246 / PyAutoBrain#376 / PyAutoMind#401; archive ref `archive/condemned/autolens-profiling/inference-programme` @ `c8b60580`); 4 phases — 1 birth + registration (PyAutoMind#399), 2 Gut-archive and delete autolens_profiling's searches tier / baselines / inference notes (nothing inherited), 3 backend-parameterised SLaM driver + per-stage results + submit scripts (SHIPPED 2026-09-11, autolens_inference#3, complete/2026/09/slam-base-driver.md), 4 the first run on PyAutoCortex `projects/autolens_inference.md` (5-stage HST SLaM × {numba_cpu, jax_cpu, jax_gpu} × {dense, sparse}). Science half: that ledger. Ledger moved to autolens_inference/wiki/project/state.md when phase 3 landed 2026-09-11.
