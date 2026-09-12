@@ -252,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_5_ep_view.md">Model figures phase 5 — EP factor-graph view</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1618">issue #1618</a> — issued 2026-09-12 — library-dev</summary>
+<details><summary>📋 <a href="active/model_figures_5_ep_view.md">Model figures phase 5 — EP factor-graph view</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1618">issue #1618</a> — issued 2026-09-12 — implementation-complete, ship BLOCKED at Heart RED</summary>
 
 ```
 /start_dev active/model_figures_5_ep_view.md
