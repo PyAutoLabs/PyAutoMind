@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_4_graphical_plates.md">Model figures phase 4 — plate notation for graphical models</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1616">issue #1616</a> — issued 2026-09-11 — implementation-complete, ship BLOCKED at the Heart gate (2026-09-12) — no PRs open</summary>
+<details><summary>📋 <a href="active/model_figures_4_graphical_plates.md">Model figures phase 4 — plate notation for graphical models</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1616">issue #1616</a> — issued 2026-09-11 — PRs open (pending-release, library-first gate; opened under Heart RED with human authorisation 2026-09-12) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1617">PyAutoFit#1617</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/153">autofit_workspace#153</a>, <a href="https://github.com/PyAutoLabs/HowToFit/pull/51">HowToFit#51</a> — ⏳ pending release: PyAutoFit — ⏸ waiting on PyAutoFit's release</summary>
 
 ```
 /start_dev active/model_figures_4_graphical_plates.md
@@ -324,6 +324,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1617](https://github.com/PyAutoLabs/PyAutoFit/pull/1617) — `active/model_figures_4_graphical_plates.md`
 - [PyAutoFit#1612](https://github.com/PyAutoLabs/PyAutoFit/pull/1612) — `active/remove_parallelepoptimiser_and_its_tests.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
@@ -352,6 +353,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1583](https://github.com/PyAutoLabs/PyAutoFit/pull/1583) — `complete/2026/09/traced-assertions-on-jax-path.md`
 - [PyAutoFit#1572](https://github.com/PyAutoLabs/PyAutoFit/pull/1572) — `complete/2026/09/transformed-from-mode-coupled-covariance.md`
 - [PyAutoFit#1600](https://github.com/PyAutoLabs/PyAutoFit/pull/1600) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
+- ⏸ waiting: [Model figures phase 4 — plate notation for graphical models](active/model_figures_4_graphical_plates.md)
 
 **PyAutoGalaxy**
 
