@@ -244,7 +244,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/fixed_lens_light_source_only_inversion.md">Fixed lens light after SLaM light[1]: cost of the source-only pixelized inversion…</a> — issued 2026-09-12</summary>
+<details><summary>📋 <a href="active/fixed_lens_light_source_only_inversion.md">Fixed lens light after SLaM light[1]: cost of the source-only pixelized inversion…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/248">issue #248</a> — issued 2026-09-12 — workspace-dev</summary>
 
 ```
 /start_dev active/fixed_lens_light_source_only_inversion.md

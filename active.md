@@ -103,3 +103,20 @@
     documented default; the GPU script stays as the optional route. README route table,
     hpc/sync comments and usage text, the sersic_lens_model.py batch_size docstring and the
     PyAutoCortex "Where to look" line are repointed. GPU job 342648 is untouched.
+
+## fixed-lens-light-source-only
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/248
+- prompt: active/fixed_lens_light_source_only_inversion.md
+- issued: 2026-09-12
+- session: claude --resume session_01N2HbUU5ZzLS5nA2JSuQp1r
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-lens-light-source-only
+- repos:
+  - autolens_profiling: feature/fixed-lens-light-source-only
+- parallel-claim: "autolens_profiling also claimed by matrix-free-pixelized-likelihood (awaiting Heart-RED clear for its PR); file sets disjoint except the README prose row — human-approved own worktree 2026-09-12; rebase on #247 merge"
+- summary: |
+    Fixed lens light after SLaM light[1] (MGE → regular profiles at solved intensities,
+    source-only inversion): A100 cost of positivity kept (PDIP), certified active-set solve,
+    and positivity dropped, vs the 50.6 ms fiducial. Phases: kernels+CPU probe+tests →
+    A100 cell + 3 legs → note + README + ship. Plan on the issue and in
+    ~/.claude/plans/precious-brewing-trinket.md.
