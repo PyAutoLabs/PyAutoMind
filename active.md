@@ -109,23 +109,22 @@
 - issued: 2026-09-11
 - prompt: active/model_figures_4_graphical_plates.md
 - session: claude --resume session_0178yLU9v19GtACcRPFggjGa
-- status: library-dev (PAUSED 2026-09-11 ~12:45 — laptop shutdown mid-implementation; WIP committed on feature/model-figures-graphical in all three repos, NOT shipped)
+- status: implementation-complete, ship BLOCKED at the Heart gate (2026-09-12) — no PRs open
 - resume: |
-    WIP commits pushed 2026-09-11 12:50: PyAutoFit b333f364e (17 files), autofit_workspace c1ae480,
-    HowToFit 48d1876 — all on feature/model-figures-graphical, untested as a whole, NOT shipped.
-    PyAutoFit DONE: graph_spec graphical pass (hyper nodes, DrawEdge, observed rows, FactorInfo,
-    counts), presentation hoist/dataset plates/drawn+observed pills/split footer, render violet
-    arrows; tests test_graphical.py (15) + test_graphical_presentation.py (12), 454 green in
-    graph_spec/model_figure/graphical; 3 PNGs docs/images/model_figures/graphical_{shared,variable,
-    hierarchical}.png rendered + reviewed by the subagent (NOT yet by the architect); conftests now
-    also namer.reset(). PyAutoFit REMAINS: full pytest test_autofit; docs/features/graphical.md
-    (delete the "not yet built visualization" sentence ~L144, add shared + hierarchical figures,
-    tutorial-4 composition, shared-vs-hierarchical paragraph); black/pyflakes; sphinx count vs baseline.
-    Workspaces REMAIN: run autofit_workspace scripts/features/graphical_models.py and HowToFit
-    chapter_3 tutorials 2 + 4 headless (smoke env); regenerate notebooks (generate.py autofit /
-    howtofit from inside each repo; commit HowToFit navigator catalogue); verify prose vs PNGs.
-    Then ship_library (PyAutoFit PR, pending-release) → ship_workspace (2 PRs) → /prm in order
-    PyAutoFit → autofit_workspace → HowToFit. Plan + brief on PyAutoFit#1616.
+    Resumed 2026-09-12: implementation is DONE, tested and pushed on
+    feature/model-figures-graphical in all three repos — PyAutoFit 447c00e92 (test_autofit 2759
+    passed / 2 skipped / 0 failed; black + pyflakes clean; sphinx 30 warnings == baseline),
+    autofit_workspace b85bbac (graphical_models.py runs headless, notebook regenerated),
+    HowToFit e62ac27 (chapter 3 tutorials 2 + 4 run headless, notebooks regenerated).
+    ship_library step 3 STOPPED the ship: `pyauto-heart readiness` is RED, red_reason
+    "release validation FAILED (stage integrate)" (verdict 2026-09-12T17:47Z, score 15) — unrelated
+    to this task (the failing scripts are autolens / autolens_test multi_dataset + delaunay).
+    Heart RED forbids PR-open at every autonomy level (AUTONOMY.md), so NO PRs were opened.
+    REMAINS: clear the RED (re-dispatch PyAutoHeart release-integrate.yml with the morning's
+    testpypi_version + commit_shas, ~75 min) or get contemporaneous human authorization, then
+    re-run /ship_library (PyAutoFit) → /ship_workspace (autofit_workspace, HowToFit) → /prm in
+    order PyAutoFit → autofit_workspace → HowToFit. The three PR bodies are drafted verbatim and
+    the gate block is recorded on PyAutoFit#1616.
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-graphical
 - repos:
   - PyAutoFit: feature/model-figures-graphical
