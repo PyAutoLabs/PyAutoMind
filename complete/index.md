@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1402 records across 8 buckets.
+1403 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -285,6 +285,7 @@ markers; everything below GENERATED is rebuilt.
 - [vis-lp-latent-jit-assertions](2026/09/vis-lp-latent-jit-assertions.md)
 - [vis-lp-latent-jit-trace](2026/09/vis-lp-latent-jit-trace.md) — The JAX (GPU) `vis_lp` stage wrote **no** latents at all — RAL job
 - [wcs-json-lensed-source-images](2026/09/wcs-json-lensed-source-images.md) — `util.AnalysisImaging.save_results` wrote `files/wcs.json` with only the
+- [wcs-json-pixelized-source-clumps](2026/09/wcs-json-pixelized-source-clumps.md) — `files/wcs.json` now covers a pixelized source (`vis_pix`, the Delaunay
 - [workspace-lp-sub-size-1-retire](2026/09/workspace-lp-sub-size-1-retire.md)
 - [xla-triton-gemm-off](2026/09/xla-triton-gemm-off.md)
 
