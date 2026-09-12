@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_4_graphical_plates.md">Model figures phase 4 — plate notation for graphical models</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1616">issue #1616</a> — issued 2026-09-11 — library-dev (PAUSED 2026-09-11 ~12:45 — laptop shutdown mid-implementation; WIP committed on feature/model-figures-graphical in…</summary>
+<details><summary>📋 <a href="active/model_figures_4_graphical_plates.md">Model figures phase 4 — plate notation for graphical models</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1616">issue #1616</a> — issued 2026-09-11 — implementation-complete, ship BLOCKED at the Heart gate (2026-09-12) — no PRs open</summary>
 
 ```
 /start_dev active/model_figures_4_graphical_plates.md
