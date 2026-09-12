@@ -89,8 +89,8 @@ repos:
     github: PyAutoLabs/PyAutoCortex
     category: organ
     organ: Cortex
-    role: "The Cortex — where the organism learns what is true: the science body map (`projects.yaml`) and the rulings of record for every science run; the science mirror of the Mind (runs and rulings, not prompts and PRs)."
-    public_role: "Holds the science body map and the rulings of record for every science run, so experiments, their gates and their verdicts live apart from software development."
+    role: "The Cortex — where the organism keeps track of what is true: the science body map (`projects.yaml`) and one ledger per science project (what was run, what came back, what was learned, where to pick up); the science mirror of the Mind (runs and a dated log, not prompts and PRs)."
+    public_role: "Holds the science body map and one ledger per science project — the runs on the cluster and a dated log of what was set off, seen and learned — so a project is picked up where it was left, apart from software development."
   PyAutoMemory:
     github: PyAutoLabs/PyAutoMemory
     category: organ
