@@ -111,6 +111,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-ep-view
 - epic: model-figures phase 5
 - repos:
+  - PyAutoFit: feature/model-figures-ep-view
 - note: "worktree_check_conflict model-figures-ep-view PyAutoFit exits 0 — no conflict. A parallel-worktree waiver was granted against PR #1612 (remove ParallelEPOptimiser) but is moot: #1612 merged 2026-09-12 19:29 and this branch starts from a main that contains it (54f464d97)."
 - summary: |
     Phase 5 of the model-figures epic: the diagnostic EP view. New package
