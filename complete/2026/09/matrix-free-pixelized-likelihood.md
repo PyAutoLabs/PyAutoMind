@@ -1,3 +1,38 @@
+## matrix-free-pixelized-likelihood
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/247
+- completed: 2026-09-12
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/249
+- heart-ack: "RED: release validation FAILED (stage integrate) — organism-scope; PR opened + merged on the human's /prm 2026-09-12"
+
+### Scope merged
+
+All four phases, in one workspace PR (`autolens_profiling#249`, merge commit `bab7b9c`):
+
+- **Phase 1 — kernels.** `scripts/misc/likelihood_breakdown/matrix_free_steps.py`: sparse-operator matvec, Jacobi / exact-diagonal PCG on `(F+λH)x=D`, SLQ log-dets with fixed probes, matrix-free PDIP comparator; unit tests in `scripts/misc/test/test_matrix_free_steps.py`.
+- **Phase 2 — cell + knob.** `scripts/imaging/likelihood_breakdown/matrix_free.py` (rect / Delaunay / Delaunay-NN systems, exact comparators, `matrix_free.evidence` go-bar check), and `--source-pixels N` through `_profile_cli.py` and the three imaging breakdown cells with the pins gated on the fiducial N.
+- **Phase 3 — sweep tooling.** `size_sweep_table.py` aggregator (fits / per-call / crossover) plus its tests; the `hpc/batch_gpu/` A100 submit scripts.
+- **Phase 4 — harvest + note.** 29 harvested A100 legs (3 fiducial matrix-free + 26 reduced N_src sweep at 3000/5000/8000/12000), `results/sweep/size_sweep_manifest.jsonl` + rendered `size_sweep_tables.md`, `results/notes/matrix_free_pixelized_2026_09.md`, a README prose row, and a back-link from the a100-pixelized-baseline note.
+
+### Verdict — no-go
+
+Matrix-free is **~350×** the exact path at the fiducial n≈1500 and still **~16×** at n=12000; **no crossover at any measured N ≤ 12000**. SLQ never reaches the 0.5-nat go bar at the fiducial N on any mesh, even at 32 probes × 640 Lanczos steps (~720 ms). The cause is `cond(F+λH) ≈ 4e10` on every leg, set by the 60 unregularised linear-MGE columns rather than the mapper block — so a preconditioner acting on the mapper block alone cannot reach it.
+
+What the campaign is worth is the fits/cost tables it leaves behind: every dense and sparse single-call leg fits an 80 GB A100 to n=12000 (only the vmap-16 batched-NNLS row OOMs on dense legs at n ≥ 5000), and the NNLS/PDIP reconstruction row is **60–85 %** of per-call cost at every N (n=12000: 1.4–1.55 s = 28–30 iterations × 51 ms against a 47 ms exact solve). The lever is positivity and the MGE conditioning, at every mesh size.
+
+### Follow-on
+
+- **PyAutoArray phase not filed** — the prompt's implementation phase was conditional on a go, and the verdict is no-go.
+- Successor task: **fixed-lens-light-source-only** (autolens_profiling#248), which takes the MGE-conditioning / positivity lever this verdict points at.
+
+### Session notes
+
+- The PR was opened and merged under a Heart **RED** (`release validation FAILED (stage integrate)`) that is organism-scope (release-integrate stage) and unrelated to this repo; the human's typed `/prm` on 2026-09-12 is the authorisation, recorded in the `heart-ack` line above and as a comment on the issue.
+- Workspace-only task: no library PR, so no library-first gate and no `pending-release` obligation carried forward.
+- CI: `lint [pull_request]` green (the repo's only PR workflow; `profile.yml` is manual / on-release).
+
+## Original prompt
+
 # Matrix-free pixelized imaging likelihood: CG solve + stochastic Lanczos quadrature log-det, sized against the 2026-09 A100 baseline
 
 Type: research

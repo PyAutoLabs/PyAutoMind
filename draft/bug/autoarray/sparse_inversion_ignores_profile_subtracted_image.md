@@ -28,7 +28,7 @@ which is `data / noise**2` baked at `apply_sparse_operator` time from the ORIGIN
 
 Measured 2026-09-11 (400-px rectangular mesh, true-Sersic regular lens light + pixelized
 source; reproducer
-`~/Code/PyAutoLabs-wt/matrix-free-pixelized-likelihood/_session_2026-09-11_artefacts/lens_light_probe/check_dv.py`):
+`~/Code/PyAutoLabs/tmp/matrix_free_247_session_artefacts/_session_2026-09-11_artefacts/lens_light_probe/check_dv.py`):
 
 | leg | inversion class | chi2 | log_evidence |
 |---|---|---|---|

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1403 records across 8 buckets.
+1404 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -214,6 +214,7 @@ markers; everything below GENERATED is rebuilt.
 - [latent-integration-smoke](2026/09/latent-integration-smoke.md)
 - [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
 - [lib-tests-compile-caches](2026/09/lib-tests-compile-caches.md)
+- [matrix-free-pixelized-likelihood](2026/09/matrix-free-pixelized-likelihood.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
 - [mesh-shape-honours-small-datasets-cap](2026/09/mesh-shape-honours-small-datasets-cap.md)

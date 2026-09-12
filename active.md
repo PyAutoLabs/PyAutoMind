@@ -49,22 +49,6 @@
 - plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
 - note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml. The conflicting claim was released on 2026-09-10 when euclid-catalogue-rebuild-prep closed out (PRs #61 + #68 merged), so the guard no longer fires.
 
-## matrix-free-pixelized-likelihood
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/247
-- prompt: active/matrix_free_pixelized_imaging_likelihood_cg_solv.md
-- issued: 2026-09-11
-- session: claude --resume session_01U2JK8GSjn1WNFvFtk9LJBE
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/matrix-free-pixelized-likelihood
-- repos:
-  - autolens_profiling: feature/matrix-free-pixelized-likelihood
-- summary: |
-    Matrix-free pixelized imaging likelihood in autolens_profiling: PCG on (F+λH)x=D via the
-    sparse operator's FFT apply, SLQ log-dets with fixed probes, matrix-free PDIP comparator;
-    fiducial A100 legs vs the #243 reconstruction split, then the N_src 1500→12000 sweep
-    (dense/sparse/matrix-free) whose crossover is the deliverable. PyAutoArray phase on go.
-    Plan on the issue and in ~/.claude/plans/polished-roaming-squirrel.md.
-
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
 - issued: 2026-09-11
@@ -94,7 +78,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/fixed-lens-light-source-only
 - repos:
   - autolens_profiling: feature/fixed-lens-light-source-only
-- parallel-claim: "autolens_profiling also claimed by matrix-free-pixelized-likelihood (awaiting Heart-RED clear for its PR); file sets disjoint except the README prose row — human-approved own worktree 2026-09-12; rebase on #247 merge"
+- parallel-claim: "autolens_profiling claim released: matrix-free-pixelized-likelihood merged 2026-09-12 (#247); branch merged main in"
 - summary: |
     Fixed lens light after SLaM light[1] (MGE → regular profiles at solved intensities,
     source-only inversion): A100 cost of positivity kept (PDIP), certified active-set solve,

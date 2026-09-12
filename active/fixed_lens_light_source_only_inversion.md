@@ -26,7 +26,7 @@ autolens_profiling of what happens if we fix the mge light profiles".
 ## Why
 
 The 2026-09-11 CPU probe + independent review (durable copy
-`~/Code/PyAutoLabs-wt/matrix-free-pixelized-likelihood/_session_2026-09-11_artefacts/`)
+`~/Code/PyAutoLabs/tmp/matrix_free_247_session_artefacts/_session_2026-09-11_artefacts/`)
 showed that removing the 60 linear MGE columns from `F + λH` is the whole conditioning
 story: cond 4.1e10 → 1.2e7 (rectangular 1521) / 2.1e6 (Delaunay 1500); NNLS PDIP
 21–22 → 15–17 iterations; Jacobi PCG 5589 → 147–187 iterations. Converting the MGE to
