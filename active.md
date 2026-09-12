@@ -109,3 +109,27 @@
     no dot binary locally, on the GH runner or Colab, not pip-installable);
     optional overlays (mean +/- std, precision, KL sparklines) deferred to a
     follow-up prompt. Plan on the issue.
+
+## sersic-variants
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
+- issued: 2026-09-12
+- prompt: active/sersic_variants_prior_edge.md
+- session: claude --resume session_01KTGhZacWuxrxYkXXWXJbBx
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/sersic-variants
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/sersic-variants
+- note: "worktree_check_conflict sersic-variants euclid_strong_lens_modeling_pipeline exits 1 on two claims. remove-fits-dataset-plots-yaml is stale (PR #63 merged, issue #62 closed 2026-09-10, no close-out). sed-chain-cpu-route is LIVE (PR #70 open) and its file set genuinely overlaps: hpc/README.md route table (both add rows to the same table — a one-line resolution expected on whichever merges second) and scripts/sersic_lens_model.py (its only hunk there is a two-line batch_size docstring edit at ~250, clear of the model block extracted here). Waived on the human's plan approval, in a fresh parallel worktree — the same call sed-chain-cpu-route itself recorded against remove-fits-dataset-plots-yaml."
+- summary: |
+    --variant for the Sersic stage: four variants (baseline, wide_n,
+    central_noise, sersic_point) on the same 100 euclid_sersics core lenses, to
+    explain the lens-light Sersic index pile-up at the n = 5 prior edge. The
+    inline model block in fit_sersic is extracted into a pure sersic_model_from
+    helper; variant=None stays byte-for-byte today's behaviour and any other
+    variant writes to unique_tag sersic_lens_model_<variant>. util gains a pure
+    Gaussian noise-inflation helper (A = 9, sigma = 0.17") plus a keyword-only
+    noise_inflation on load_vis_dataset, and parse_fit_args(with_variant=True).
+    New hpc/batch_cpu/submit_sersic_variants runs the four variants sequentially
+    inside one array task per lens, because all four restore the same vis_lp zip
+    and PyAutoFit's restore() deletes it. Science-clone submit and the analysis
+    script (PR 2) are follow-ups.
