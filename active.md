@@ -150,3 +150,25 @@
   - autolens_workspace: feature/model-figures-rollout-lens
   - HowToLens: feature/model-figures-rollout-lens
 - note: "worktree_check_conflict model-figures-rollout-lens autolens_workspace HowToLens exits 0 (2026-09-13, after the stale remove-fits-dataset-plots-yaml claim was closed out). Plan approved in Plan Mode 2026-09-13; SLaM deferred to 6b2; autolens_workspace ships as two PRs (A: guides/imaging/point_source/multi_dataset; B: interferometer/group/multi_galaxy/cluster/weak on feature/model-figures-rollout-lens-b after A merges); release-gate PyAutoFit because guides/modeling/advanced/expectation_propagation.py uses EPResult.factor_graph (merged 6a, unreleased)."
+
+## simulator-from-result-linear
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/77
+- issued: 2026-09-13
+- prompt: active/simulator_from_result_linear_intensities.md
+- session: claude --resume session_01EehLEWoRRsmnLys4aHj5W4
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/simulator-from-result-linear
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/simulator-from-result-linear
+- note: "worktree_check_conflict simulator-from-result-linear euclid_strong_lens_modeling_pipeline exits 1 on three claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis #76). No file set intersects this one: this task touches scripts/simulator.py (none of the three edits it), tests/test_simulator_from_result.py (new) and the --from-result bullet of scripts/README.md at ~line 63 — PR #75's only scripts/README.md hunk is four lines at ~line 22 in the fitting-scripts list, a different hunk that merges cleanly. Waived in a fresh parallel worktree based on origin/main, the same call sed-chain-cpu-route recorded against remove-fits-dataset-plots-yaml and sersic-variants-analysis recorded against both live tasks."
+- autonomy: "--auto launch; effective level = min(prompt safe, bug cap supervised) = supervised, so the ship checkpoint resolves to decide-and-flag (AUTONOMY.md, extended 2026-09-07). Plan approval of record is the human's launch instruction 'im going out so autonomously get these sersic things simulated and their vis_lp runs going'; both plan levels written to issue #77. Ends at PR-open."
+- summary: |
+    simulator.py --from-result rebuilt the tracer from files/model.json plus the
+    max-log-likelihood vector, but every profile this pipeline fits is linear
+    (al.lp_linear.*), so the rebuilt profiles carry no intensity and the mock is
+    noise (tile 0 of dr1_sep1_sersics: mock VIS peak SNR 3.9 vs 81 real). The
+    solved-intensity tracer is already on disk as files/tracer.json, written by
+    AnalysisDataset.save_results from fit.model_obj_linear_light_profiles_to_light_profiles.
+    Read that instead, under the same resolve_files_path hash, guard that no
+    lp_linear profile survives, and add tests/test_simulator_from_result.py —
+    --from-result had no test at all.
