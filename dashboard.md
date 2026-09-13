@@ -252,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_certified_low_likelihood_draws.md">Fixed lens light — is the certified active-set fast only because…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/255">issue #255</a> — issued 2026-09-13 — workspace-dev</summary>
+<details><summary>📋 <a href="active/fixed_light_certified_low_likelihood_draws.md">Fixed lens light — is the certified active-set fast only because…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/255">issue #255</a> — issued 2026-09-13 — awaiting-merge (PR open under Heart RED with human authorisation 2026-09-13; merge is human, and stacked PRs #250, #252 then #254… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/256">autolens_profiling#256</a></summary>
 
 ```
 /start_dev active/fixed_light_certified_low_likelihood_draws.md
