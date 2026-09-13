@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 174 |
+| [Backlog](#backlog) (`draft/`) | 175 |
 
 > **No batch in flight.**
 
@@ -504,7 +504,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**174** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **32** of them belong to an epic and are listed only under [Epics](#epics) below.
+**175** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **33** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 43</summary>
@@ -2327,7 +2327,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 </details>
 
 <details>
-<summary><b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — 3 queued prompt(s), in order</summary>
+<summary><b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — ledger: `draft/feature/autofit/model_figures_epic.md`</summary>
 
@@ -2349,6 +2349,14 @@ Continue the 'PyAutoFit model figures — structure-first model visualisation (c
 
 ```
 /start_dev draft/feature/autofit/model_figure_tuple_component_relations.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/model_figures_ep_overlays.md">Model figures — optional EP state overlays…</a> — autofit · medium · supervised · low</summary>
+
+```
+/start_dev draft/feature/autofit/model_figures_ep_overlays.md
 ```
 
 </details>
@@ -2395,7 +2403,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 
 </details>
 
-125 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+126 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2408,6 +2416,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 - `draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md`
 - `draft/feature/autofit/ep_lbfgs_jax.md`
 - `draft/feature/autofit/model_figure_tuple_component_relations.md`
+- `draft/feature/autofit/model_figures_ep_overlays.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/prior_exit_sampler_coverage.md`
 - `draft/feature/autofit/search_seed_reproducibility.md`
@@ -2439,8 +2448,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/adapt_scatter_factor_two.md`
 - `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
-- `draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md`
-- _… and 85 more_
+- _… and 86 more_
 
 </details>
 
