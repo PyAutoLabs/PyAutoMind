@@ -19,6 +19,7 @@ Unattended: needs-slicing
 Epic: fixed-lens-light-profiling
 Phase: 3
 Filed: 2026-09-13
+Issued: 2026-09-13
 
 Phase 3 of the `fixed-lens-light-profiling` epic. Gated on phase 2 — "one step at a time".
 

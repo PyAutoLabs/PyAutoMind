@@ -166,6 +166,34 @@
 
 - note: shipped 2026-09-13 — cell gains --pins {fp64,none} + a machine block + tau_rel re-derived per precision, new fixed_light_cpu_kernels module and cell, 22 tests (suite 246). 19 local legs on the laptop (i9-10885H/WSL2/16 GB; RTX 2060 6 GB), one at a time, fresh JAX cache each. Certified active set wins everywhere and the prize shrinks with the hardware: a -> d is 2.03x/2.56x/2.01x on the A100, 1.28x/1.48x/1.46x on the RTX 2060, 1.83x/1.74x/1.35x on 8 CPU threads, 1.16-1.22x on one. The GeForce fp64 penalty never bit - mixed precision buys 5-8 % for <= 2.5e-3 nats and 16 % more VRAM, so fp64 stays the consumer path. MEMORY is the consumer wall and it invalidates the batched design: @vmap 16 needs 11.88 GiB, batch 4 OOMs, batch 2 is slower than a single call, and the same shape OOM-killed the 16 GB host. On the CPU the A100 kernel result does not transfer - the numpy certified active set does not beat the library's own fnnls NNLS, and both are 1.9-3.6x slower at 8 BLAS threads than at 1. Note results/notes/fixed_lens_light_hardware_2026_09.md. PR #254 is STACKED (base feature/fixed-light-library-path) - merge #250, then #252, then /prm this one. Next is epic phase 3 (low-likelihood draws).
 
+## fixed-light-draws
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/255
+- issued: 2026-09-13
+- prompt: active/fixed_light_certified_low_likelihood_draws.md
+- session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-draws
+- epic: fixed-lens-light-profiling phase 3
+- repos:
+  - autolens_profiling: feature/fixed-light-draws
+- parallel-claim: "worktree_check_conflict fixed-light-draws autolens_profiling exits 1 on three claims, all of them earlier phases of this same epic and all frozen at PR-open: fixed-lens-light-source-only (#248, PR #250 against main, at 319f078), fixed-light-library-path (#251, PR #252 against #250s branch, at b8fac8a) and fixed-light-hardware (#253, PR #254 against #252s branch, at 86af7d7). None expects further edits. This task is deliberately STACKED on the third of them (base feature/fixed-light-hardware, not main) because the draw-set cell reuses the S3 builder, the certified kernels and the cell conventions that exist only there - a stack of four, each branch the parent commit of the next, so they cannot conflict. Registered as a parallel claim in a fresh worktree, the same call #251 recorded against #248 and #253 recorded against both."
+- summary: |
+    Phase 3 of the fixed-lens-light-profiling epic. Every certified active-set timing so
+    far (4.2 ms Delaunay at pass 2, 11 ms rect at pass 7) was measured at the fiducial
+    model, essentially the truth after SLaM light[1]. The certified scheme's cost IS its
+    pass count, so a good model may simply have an easy active set. This phase builds a
+    graded draw set of deliberately poor models - one-parameter walks in einstein_radius,
+    ell_comps_0, centre_x and the mass slope (PowerLaw promotion at slope 2.0, since the
+    fiducial mass is Isothermal), each bisected to land at delta log L about -10, -100,
+    -1000 and -1e4, plus 24 seeded random draws from SLaM-like priors at 5x the prior
+    sigma - and measures, per draw per mesh, certified pass count and ms, PDIP iterations
+    and ms, seed-set size, and the unconstrained solve's delta log-evidence. The
+    deliverable is the FALLBACK RATE at fixed pass budgets 2 / 4 / 6 (and 7 for rect):
+    the number that decides whether a fixed budget is safe in production. New cell
+    scripts/imaging/likelihood_breakdown/fixed_light_draws.py plus an importable
+    fixed_light_draws_steps module and its tests; a CPU leg locally and two A100 legs
+    (rect, Delaunay) on gpu-2. No PyAutoArray change.
+
 ## model-figures-rollout-lens
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/542
 - issued: 2026-09-13
