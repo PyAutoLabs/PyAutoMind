@@ -171,11 +171,12 @@
 - issued: 2026-09-13
 - prompt: active/fixed_light_certified_low_likelihood_draws.md
 - session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
-- status: workspace-dev
+- status: awaiting-merge (PR open under Heart RED with human authorisation 2026-09-13; merge is human, and stacked PRs #250, #252 then #254 merge first)
 - worktree: ~/Code/PyAutoLabs-wt/fixed-light-draws
 - epic: fixed-lens-light-profiling phase 3
 - repos:
   - autolens_profiling: feature/fixed-light-draws
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/256
 - parallel-claim: "worktree_check_conflict fixed-light-draws autolens_profiling exits 1 on three claims, all of them earlier phases of this same epic and all frozen at PR-open: fixed-lens-light-source-only (#248, PR #250 against main, at 319f078), fixed-light-library-path (#251, PR #252 against #250s branch, at b8fac8a) and fixed-light-hardware (#253, PR #254 against #252s branch, at 86af7d7). None expects further edits. This task is deliberately STACKED on the third of them (base feature/fixed-light-hardware, not main) because the draw-set cell reuses the S3 builder, the certified kernels and the cell conventions that exist only there - a stack of four, each branch the parent commit of the next, so they cannot conflict. Registered as a parallel claim in a fresh worktree, the same call #251 recorded against #248 and #253 recorded against both."
 - summary: |
     Phase 3 of the fixed-lens-light-profiling epic. Every certified active-set timing so
@@ -193,6 +194,8 @@
     scripts/imaging/likelihood_breakdown/fixed_light_draws.py plus an importable
     fixed_light_draws_steps module and its tests; a CPU leg locally and two A100 legs
     (rect, Delaunay) on gpu-2. No PyAutoArray change.
+
+- note: shipped 2026-09-13 — new cell scripts/imaging/likelihood_breakdown/fixed_light_draws.py plus an importable fixed_light_draws_steps module and 30 numpy tests (suite 286). Four legs on the same seeded 41-model draw set: A100 343011 (rect, 00:07:49) and 343012 (Delaunay, 00:08:51) on gpu-2 with every fiducial pin PASS, plus two local JAX-CPU legs at 8 threads. THE PHASE-0 PASS BUDGETS DO NOT HOLD: Delaunay's pass 2 falls back on 67.5 % of the draw set (95.8 % of the random draws) and rectangular's pass 7 on 27.5 %; the smallest zero-fallback budgets are 7 (Delaunay) and 11 (rectangular), so phase 4 must sweep those, not 2 and 7. The two meshes fail oppositely - the pass count GROWS with model error on Delaunay (Spearman +0.698) and FALLS on rectangular (-0.535), because a worse model has a bigger active set that pass 0's 152-pixel edge-zero seed already mostly finds. The lever survives at about half its fiducial headline (median 2.6x / 5.4x over PDIP on the A100; the worst certified draw still beats the best PDIP call) and PDIP's own cost barely moves with the model (15->17, 17->21 iterations), so budget-plus-fallback stays a bounded worst case. Pass counts, PDIP iterations and seed-set sizes are IDENTICAL on the A100 and the CPU for all 41 draws, so the fallback rate is a property of the problem. Dropping positivity is now unambiguously out: the A2 error grows to +4.07e4 nats (rect) / +6339 (Delaunay). Note results/notes/fixed_lens_light_low_likelihood_draws_2026_09.md. PR #256 is STACKED (base feature/fixed-light-hardware) - merge #250, then #252, then #254, then /prm this one. Next is epic phase 4 (source-pixel scaling).
 
 ## model-figures-rollout-lens
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/542
