@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_likelihood_assessment_hst_euclid.md">Fixed lens light — whole-likelihood assessment on HST and Euclid at 500…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/259">issue #259</a> — issued 2026-09-13 — workspace-dev</summary>
+<details><summary>📋 <a href="active/fixed_light_likelihood_assessment_hst_euclid.md">Fixed lens light — whole-likelihood assessment on HST and Euclid at 500…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/259">issue #259</a> — issued 2026-09-13 — awaiting-merge (PR open under Heart RED with human authorisation 2026-09-13; merge is human, and stacked PRs #250, #252, #254… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/260">autolens_profiling#260</a></summary>
 
 ```
 /start_dev active/fixed_light_likelihood_assessment_hst_euclid.md
