@@ -202,11 +202,12 @@
 - issued: 2026-09-13
 - prompt: active/fixed_light_source_pixel_scaling.md
 - session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
-- status: workspace-dev
+- status: awaiting-merge (PR open under Heart RED with human authorisation 2026-09-13; merge is human, and stacked PRs #250, #252, #254 then #256 merge first)
 - worktree: ~/Code/PyAutoLabs-wt/fixed-light-scaling
 - epic: fixed-lens-light-profiling phase 4
 - repos:
   - autolens_profiling: feature/fixed-light-scaling
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/258
 - parallel-claim: "worktree_check_conflict fixed-light-scaling autolens_profiling exits 1 on four claims, all of them earlier phases of this same epic and all frozen at PR-open: fixed-lens-light-source-only (#248, PR #250 against main), fixed-light-library-path (#251, PR #252 against #250s branch), fixed-light-hardware (#253, PR #254 against #252s branch) and fixed-light-draws (#255, PR #256 against #254s branch, at cf9f95e). None expects further edits. This task is deliberately STACKED on the fourth of them (base feature/fixed-light-draws, not main) because the kernel cell, the S3 builder, the certified kernels and the phase-2 precision switches it ports exist only there - a stack of five, each branch the parent commit of the next, so they cannot conflict. Registered as a parallel claim in a fresh worktree, the same call #251 recorded against #248, #253 against both and #255 against all three."
 - summary: |
     Phase 4 of the fixed-lens-light-profiling epic. Every fixed-lens-light number so far
@@ -222,6 +223,8 @@
     times out is a result, not a gap. Deliverable: ms-vs-N tables and a log-log figure per
     hardware, fitted scaling exponents, the memory ceiling per hardware, and the
     affordable N per hardware that feeds phase 5.
+
+- note: shipped 2026-09-13 — cell fixed_light.py gains --pins {fp64,none}, --safe-budget, a machine block and tau_rel re-derived per precision (defaults byte-identical to phase 0, asserted by a test); new scripts/misc/likelihood_breakdown/fixed_light_scaling_table.py and 62 tests (suite 348); two five-arm A100 arrays and their launcher. 40 legs at --source-pixels 500/1000/1500/2500/4000 on rect and Delaunay: A100 arrays 343023/343024 on gpu-2 (10/10 COMPLETED 0:0, autotune 0, both fiducial arms' pins PASS) plus 30 local legs (RTX 2060 fp64, RTX 2060 mp, JAX-CPU at NPROC 8 / BLAS 1). None OOMed, none timed out. THE CERTIFYING PASS BUDGET DOES NOT SCALE WITH N: rect certifies at 5/8/7/10/6 and Delaunay at 1/1/2/1/2 with no trend over a factor eight in pixels, worst case 10, inside phase 3's safe budget of 11 — so phase 5 can fix 11/7 and sweep N freely (phase 0's '6 at 3025 vs 7 at 1521' was noise). The certified active set leads at every N on every hardware: 1.44-1.62x over S3 PDIP on rect and 2.21-3.00x on Delaunay (A100), and on Delaunay the lever GROWS with N because PDIP climbs 14->20 iterations while the budget stays at 7. PHASE 1'S BATCHED ROW HAS AN N CEILING: @vmap 16 amortises 3.64x at N~500, 1.14x at 2500 and 0.68x — a penalty — at 4000, on an 80 GB A100 at 7.8 GB, so batch size must be chosen from N rather than inherited from n_batch. Memory is not the wall: the 6 GB card fits the single call at ~4000 pixels (3.13 GB fp64 / 3.63 GB mp, ~2.9 GB spare) and the A100 uses 7.8 of 80 GB with 16 lanes — phase 2's consumer wall is specific to the batched shape. Time ends every curve: affordable N is 4000 (A100) / 1500 (RTX 2060) / 1000 (JAX-CPU); the S3 call crosses 1 s at N~1846 (RTX rect) and ~912 (CPU rect) and 100 ms on the A100 at N~3261/2645. New for the next epic: on the A100 every solver row fits alpha~1 (launch/bandwidth-bound) while the dense F+lambdaH build fits alpha~1.69 and OVERTAKES the certified solve between 2500 and 4000 pixels — the next GPU lever is the assembly, not the solver. Positivity gets more necessary with resolution (+318->+368 nats, 62->252 negatives on rect). Note results/notes/fixed_lens_light_source_pixel_scaling_2026_09.md. PR #258 is STACKED (base feature/fixed-light-draws) - merge #250, then #252, then #254, then #256, then /prm this one. Next is epic phase 5 (HST + Euclid verdict).
 
 ## model-figures-rollout-lens
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/542
