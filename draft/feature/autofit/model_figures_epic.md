@@ -96,7 +96,7 @@ Issue ONE at a time through `/start_dev`. Order: 1 → 2 → 3; 4 after 2; 5 aft
 | 2 | matplotlib containment renderer, `af.ModelPlotter` API, per-search `model.png`, PyAutoFit cookbook figures | `complete/2026/09/model-figures-renderer.md` | shipped 2026-09-11 (PyAutoFit#1614, autofit_workspace#152) |
 | 3 | Lens domain semantics + PyAutoLens/PyAutoGalaxy cookbook figures | `complete/2026/09/model-figures-lens.md` | shipped 2026-09-11 (PyAutoFit#1615, PyAutoArray#550, PyAutoGalaxy#616, PyAutoLens#737, autolens_workspace#541, autogalaxy_workspace#240) |
 | 4 | Plate-notation graphical-model figure; fill the two placeholders | `complete/2026/09/model-figures-graphical.md` | shipped 2026-09-12 (PyAutoFit#1617, autofit_workspace#153, HowToFit#51) |
-| 5 | EP factor-graph view with convergence/reversion overlay | `draft/feature/autofit/model_figures_5_ep_view.md` | filed 2026-09-10 |
+| 5 | EP factor-graph view with convergence/reversion overlay | `complete/2026/09/model-figures-ep-view.md` | shipped 2026-09-13 (PyAutoFit#1619) |
 | 6 | Rollout — the figure beside every `model.info` in every example, tutorial and sibling project | `draft/feature/workspaces/model_figures_6_rollout.md` | filed 2026-09-10 |
 
 ## Trap — do NOT reuse the `model_graph` config key

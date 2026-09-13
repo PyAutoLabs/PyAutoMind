@@ -86,41 +86,6 @@
     A100 cell + 3 legs → note + README + ship. Plan on the issue and in
     ~/.claude/plans/precious-brewing-trinket.md.
 
-## model-figures-ep-view
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1618
-- issued: 2026-09-12
-- prompt: active/model_figures_5_ep_view.md
-- session: claude --resume session_01AmyBwcVQBrWE4jSTqdATY6
-- status: implementation-complete, ship BLOCKED at Heart RED
-- worktree: ~/Code/PyAutoLabs-wt/model-figures-ep-view
-- epic: model-figures phase 5
-- repos:
-  - PyAutoFit: feature/model-figures-ep-view
-- note: "worktree_check_conflict model-figures-ep-view PyAutoFit exits 0 — no conflict. A parallel-worktree waiver was granted against PR #1612 (remove ParallelEPOptimiser) but is moot: #1612 merged 2026-09-12 19:29 and this branch starts from a main that contains it (54f464d97)."
-- summary: |
-    Phase 5 of the model-figures epic: the diagnostic EP view. New package
-    autofit/model_figure/ep/ (spec -> state -> presentation -> layout -> render)
-    plus af.EPPlotter, drawing an explicit factor graph with plate grouping and
-    the EP run's state on it — factor status, update age and confirmed reverted
-    updates — and never hiding a failing plate member behind an aggregate.
-    Visualise writes graph_model.png once and graph_state.png per
-    visualise_interval tick behind the existing output.yaml model_figure key.
-    Human decisions: layout is networkx + matplotlib only (graphviz rejected —
-    no dot binary locally, on the GH runner or Colab, not pip-installable);
-    optional overlays (mean +/- std, precision, KL sparklines) deferred to a
-    follow-up prompt. Plan on the issue.
-- resume: |
-    Branch feature/model-figures-ep-view is implemented, verified and pushed
-    (ba756b82d, 6 commits on 54f464d97; test_autofit 2843 passed / 2 skipped,
-    sphinx 30 == baseline, black + pyflakes clean). /ship_library stopped at the
-    Heart gate: RED "release validation FAILED (stage integrate)" and no human
-    authorisation for a PR-open under RED. No PR opened; gate-block comment on
-    PyAutoFit#1618. next: clear the integrate RED (or authorise PR-open under it),
-    re-run /ship_library, then /prm once CI green; then file follow-up prompts:
-    optional EP overlays (mean+/-std / precision / KL sparklines) and phase-6
-    rollout of graph_state.png to autofit_workspace expectation_propagation.py +
-    HowToFit optional hierarchical EP tutorial (need visualise_interval=1).
-
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12

@@ -33,6 +33,11 @@ Filed: 2026-09-10
 **Phase 4 shipped 2026-09-12** — `complete/2026/09/model-figures-graphical.md`
 (PyAutoFit#1617, autofit_workspace#153, HowToFit#51 merged), which cleared the
 last blocker on this phase, including the graphical-model tutorials.
+**Phase 5 shipped 2026-09-13** — `complete/2026/09/model-figures-ep-view.md`
+(PyAutoFit#1619 merged), which adds `graph_model.png` / `graph_state.png` and
+`af.EPPlotter`; rolling the EP state figure into
+`autofit_workspace` `expectation_propagation.py` and the HowToFit hierarchical
+EP tutorial (both need `visualise_interval=1`) belongs to this phase.
 (Deliberately not in a `Blocked-by:` header: that key is graded against GitHub
 refs and cannot name a Mind prompt path.)
 
