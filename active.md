@@ -73,11 +73,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/248
 - prompt: active/fixed_lens_light_source_only_inversion.md
 - issued: 2026-09-12
-- session: claude --resume session_01N2HbUU5ZzLS5nA2JSuQp1r
-- status: workspace-dev
+- session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
+- status: awaiting-merge (PR open under Heart RED with human authorisation 2026-09-13; merge is human)
 - worktree: ~/Code/PyAutoLabs-wt/fixed-lens-light-source-only
 - repos:
   - autolens_profiling: feature/fixed-lens-light-source-only
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/250
 - parallel-claim: "autolens_profiling claim released: matrix-free-pixelized-likelihood merged 2026-09-12 (#247); branch merged main in"
 - summary: |
     Fixed lens light after SLaM light[1] (MGE → regular profiles at solved intensities,
@@ -85,6 +86,7 @@
     and positivity dropped, vs the 50.6 ms fiducial. Phases: kernels+CPU probe+tests →
     A100 cell + 3 legs → note + README + ship. Plan on the issue and in
     ~/.claude/plans/precious-brewing-trinket.md.
+- note: all three phases shipped 2026-09-13; five A100 legs 342802-342806 harvested (gpu-2, fp64, all gates PASS) and the verdict written to autolens_profiling `results/notes/fixed_lens_light_source_only_2026_09.md` — S3 certified active-set 4.21 ms at pass 2 (Delaunay) / 11.05 ms at pass 7 (rect) vs 25.8-28.3 ms S3 PDIP, library call 26-30 % faster with no solver change. Follow-ups are the `fixed-lens-light-profiling` epic (5 phases). PR #250 awaits /prm.
 
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
