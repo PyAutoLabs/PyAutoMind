@@ -144,11 +144,12 @@
 - issued: 2026-09-13
 - prompt: active/fixed_light_cpu_and_consumer_gpu.md
 - session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
-- status: workspace-dev
+- status: awaiting-merge (PR open under Heart RED with human authorisation 2026-09-13; merge is human, and stacked PRs #250 then #252 merge first)
 - worktree: ~/Code/PyAutoLabs-wt/fixed-light-hardware
 - epic: fixed-lens-light-profiling phase 2
 - repos:
   - autolens_profiling: feature/fixed-light-hardware
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/254
 - parallel-claim: "worktree_check_conflict fixed-light-hardware autolens_profiling exits 1 on two claims, both of them earlier phases of this same epic and both frozen at PR-open: fixed-lens-light-source-only (#248, PR #250 against main, branch at 319f078) and fixed-light-library-path (#251, PR #252 against #250s branch, at b8fac8a). Neither expects further edits. This task is deliberately STACKED on the second of them (base feature/fixed-light-library-path, not main) because the cell, the injection module and the S3 builder it runs exist only there - a stack of three, each branch the parent commit of the next, so they cannot conflict. Registered as a parallel claim in a fresh worktree, the same call #251 itself recorded against #248."
 - summary: |
     Phase 2 of the fixed-lens-light-profiling epic. Phase 1s cell
@@ -162,6 +163,8 @@
     asserts nothing calibrated in fp64 and records the fp32 evidence delta, the pass
     counts and the negative-pixel counts instead. Thread counts (both the XLA NPROC pool
     and the BLAS knobs) recorded on every CPU timing. No PyAutoArray change.
+
+- note: shipped 2026-09-13 — cell gains --pins {fp64,none} + a machine block + tau_rel re-derived per precision, new fixed_light_cpu_kernels module and cell, 22 tests (suite 246). 19 local legs on the laptop (i9-10885H/WSL2/16 GB; RTX 2060 6 GB), one at a time, fresh JAX cache each. Certified active set wins everywhere and the prize shrinks with the hardware: a -> d is 2.03x/2.56x/2.01x on the A100, 1.28x/1.48x/1.46x on the RTX 2060, 1.83x/1.74x/1.35x on 8 CPU threads, 1.16-1.22x on one. The GeForce fp64 penalty never bit - mixed precision buys 5-8 % for <= 2.5e-3 nats and 16 % more VRAM, so fp64 stays the consumer path. MEMORY is the consumer wall and it invalidates the batched design: @vmap 16 needs 11.88 GiB, batch 4 OOMs, batch 2 is slower than a single call, and the same shape OOM-killed the 16 GB host. On the CPU the A100 kernel result does not transfer - the numpy certified active set does not beat the library's own fnnls NNLS, and both are 1.9-3.6x slower at 8 BLAS threads than at 1. Note results/notes/fixed_lens_light_hardware_2026_09.md. PR #254 is STACKED (base feature/fixed-light-library-path) - merge #250, then #252, then /prm this one. Next is epic phase 3 (low-likelihood draws).
 
 ## model-figures-rollout-lens
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/542
