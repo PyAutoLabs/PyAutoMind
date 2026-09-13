@@ -197,6 +197,32 @@
 
 - note: shipped 2026-09-13 — new cell scripts/imaging/likelihood_breakdown/fixed_light_draws.py plus an importable fixed_light_draws_steps module and 30 numpy tests (suite 286). Four legs on the same seeded 41-model draw set: A100 343011 (rect, 00:07:49) and 343012 (Delaunay, 00:08:51) on gpu-2 with every fiducial pin PASS, plus two local JAX-CPU legs at 8 threads. THE PHASE-0 PASS BUDGETS DO NOT HOLD: Delaunay's pass 2 falls back on 67.5 % of the draw set (95.8 % of the random draws) and rectangular's pass 7 on 27.5 %; the smallest zero-fallback budgets are 7 (Delaunay) and 11 (rectangular), so phase 4 must sweep those, not 2 and 7. The two meshes fail oppositely - the pass count GROWS with model error on Delaunay (Spearman +0.698) and FALLS on rectangular (-0.535), because a worse model has a bigger active set that pass 0's 152-pixel edge-zero seed already mostly finds. The lever survives at about half its fiducial headline (median 2.6x / 5.4x over PDIP on the A100; the worst certified draw still beats the best PDIP call) and PDIP's own cost barely moves with the model (15->17, 17->21 iterations), so budget-plus-fallback stays a bounded worst case. Pass counts, PDIP iterations and seed-set sizes are IDENTICAL on the A100 and the CPU for all 41 draws, so the fallback rate is a property of the problem. Dropping positivity is now unambiguously out: the A2 error grows to +4.07e4 nats (rect) / +6339 (Delaunay). Note results/notes/fixed_lens_light_low_likelihood_draws_2026_09.md. PR #256 is STACKED (base feature/fixed-light-hardware) - merge #250, then #252, then #254, then /prm this one. Next is epic phase 4 (source-pixel scaling).
 
+## fixed-light-scaling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/257
+- issued: 2026-09-13
+- prompt: active/fixed_light_source_pixel_scaling.md
+- session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-scaling
+- epic: fixed-lens-light-profiling phase 4
+- repos:
+  - autolens_profiling: feature/fixed-light-scaling
+- parallel-claim: "worktree_check_conflict fixed-light-scaling autolens_profiling exits 1 on four claims, all of them earlier phases of this same epic and all frozen at PR-open: fixed-lens-light-source-only (#248, PR #250 against main), fixed-light-library-path (#251, PR #252 against #250s branch), fixed-light-hardware (#253, PR #254 against #252s branch) and fixed-light-draws (#255, PR #256 against #254s branch, at cf9f95e). None expects further edits. This task is deliberately STACKED on the fourth of them (base feature/fixed-light-draws, not main) because the kernel cell, the S3 builder, the certified kernels and the phase-2 precision switches it ports exist only there - a stack of five, each branch the parent commit of the next, so they cannot conflict. Registered as a parallel claim in a fresh worktree, the same call #251 recorded against #248, #253 against both and #255 against all three."
+- summary: |
+    Phase 4 of the fixed-lens-light-profiling epic. Every fixed-lens-light number so far
+    is at ONE source-pixel count (1521 rect / 1500 Delaunay), and the three solvers scale
+    differently - the unconstrained Cholesky is one factorisation, the certified active
+    set is a masked full-size Cholesky PER PASS, and PDIP is an iteration count times a
+    solve. This phase sweeps N in {500, 1000, 1500, 2500, 4000} on rect and Delaunay, HST,
+    over four hardware legs (A100 fp64 with vmap 16, RTX 2060 fp64, RTX 2060 mixed
+    precision, JAX-CPU at NPROC 8 with BLAS pinned to 1), with the phase-0 kernel cell
+    fixed_light.py gaining the phase-2 switches (--pins, the machine block, the re-derived
+    tau_rel). Per phase 3 the certified row is timed at the SAFE budgets 11 (rect) and
+    7 (Delaunay) as well as at whatever budget certifies at that N. A leg that OOMs or
+    times out is a result, not a gap. Deliverable: ms-vs-N tables and a log-log figure per
+    hardware, fitted scaling exponents, the memory ceiling per hardware, and the
+    affordable N per hardware that feeds phase 5.
+
 ## model-figures-rollout-lens
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/542
 - issued: 2026-09-13
