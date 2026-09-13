@@ -19,6 +19,7 @@ Unattended: ready
 Epic: fixed-lens-light-profiling
 Phase: 2
 Filed: 2026-09-13
+Issued: 2026-09-13
 
 Phase 2 of the `fixed-lens-light-profiling` epic. Gated on phase 1 landing its
 library-path rows — "one step at a time".

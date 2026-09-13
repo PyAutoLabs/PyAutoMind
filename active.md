@@ -139,6 +139,30 @@
     Phase 0's projection ("~24 ms/call certified") is arithmetic; this measures it.
 - note: shipped 2026-09-13 — cell + injection module + 35 tests (suite 224), three A100 legs 342908-342910 harvested (gpu-2, fp64, COMPLETED 0:0, all gates PASS, five equivalence pins 1e-15..1e-11), note `results/notes/fixed_lens_light_library_path_2026_09.md` and the README prose row. Certified active set halves the library call (50.97 -> 25.10 ms rect 2.03x, 65.10 -> 25.39 ms Delaunay 2.56x, 72.95 -> 36.26 ms DelaunayNN 2.01x); phase 0's projection held. Positive-negative stays prohibited (+334.93 nats rect). Two findings for any implementation: the library subsets to solve_ids_to_keep before calling its solver, and lax.cond runs both branches under vmap. PR #252 is STACKED on #250 (base feature/fixed-lens-light-source-only) - merge #250 first, then /prm this one. Next is epic phase 2 (CPU + RTX 2060).
 
+## fixed-light-hardware
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/253
+- issued: 2026-09-13
+- prompt: active/fixed_light_cpu_and_consumer_gpu.md
+- session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-hardware
+- epic: fixed-lens-light-profiling phase 2
+- repos:
+  - autolens_profiling: feature/fixed-light-hardware
+- parallel-claim: "worktree_check_conflict fixed-light-hardware autolens_profiling exits 1 on two claims, both of them earlier phases of this same epic and both frozen at PR-open: fixed-lens-light-source-only (#248, PR #250 against main, branch at 319f078) and fixed-light-library-path (#251, PR #252 against #250s branch, at b8fac8a). Neither expects further edits. This task is deliberately STACKED on the second of them (base feature/fixed-light-library-path, not main) because the cell, the injection module and the S3 builder it runs exist only there - a stack of three, each branch the parent commit of the next, so they cannot conflict. Registered as a parallel claim in a fresh worktree, the same call #251 itself recorded against #248."
+- summary: |
+    Phase 2 of the fixed-lens-light-profiling epic. Phase 1s cell
+    scripts/imaging/likelihood_breakdown/fixed_light_library.py is run on three more
+    hardware legs - JAX-CPU at two thread settings (1 and 8), RTX 2060 fp64, RTX 2060
+    mixed precision - on the same six routes, three meshes and HST dataset as the A100
+    legs, so the tables stack into one per-hardware comparison. Adds a CPU-appropriate
+    kernel row set (the librarys own numpy fnnls NNLS, scipy cho_factor/cho_solve
+    unconstrained, and the numpy certified active set) as the CPU production candidate.
+    Pins are re-derived per precision: the fp64 legs assert, the mixed-precision leg
+    asserts nothing calibrated in fp64 and records the fp32 evidence delta, the pass
+    counts and the negative-pixel counts instead. Thread counts (both the XLA NPROC pool
+    and the BLAS knobs) recorded on every CPU timing. No PyAutoArray change.
+
 ## model-figures-rollout-lens
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/542
 - issued: 2026-09-13
