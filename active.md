@@ -131,3 +131,17 @@
     thresholds, never as a verdict word. Four-panel shared-bin histogram PNG plus a
     markdown report. Pure functions split from the CLI; a synthetic four-CSV
     fixture with a variant missing two tiles pins the inner join and its reporting.
+
+## model-figures-rollout-autofit
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1620
+- issued: 2026-09-13
+- prompt: active/model_figures_6a_autofit_surfaces.md
+- session: claude --resume session_01DLx38vS6F1M7K5LnpVbeZ7
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/model-figures-rollout-autofit
+- epic: model-figures phase 6a
+- repos:
+  - PyAutoFit: feature/model-figures-rollout-autofit
+  - autofit_workspace: feature/model-figures-rollout-autofit
+  - HowToFit: feature/model-figures-rollout-autofit
+- note: "worktree_check_conflict model-figures-rollout-autofit PyAutoFit autofit_workspace HowToFit exits 0 (checked 2026-09-13). Plan approved in Plan Mode 2026-09-13; copy at the session scratchpad plan-model-figures-rollout-autofit.md."
