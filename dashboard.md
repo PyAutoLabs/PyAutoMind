@@ -252,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_6a_autofit_surfaces.md">Model figures phase 6a — PyAutoFit surfaces (autofit_workspace + HowToFit, incl</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1620">issue #1620</a> — issued 2026-09-13 — library-dev</summary>
+<details><summary>📋 <a href="active/model_figures_6a_autofit_surfaces.md">Model figures phase 6a — PyAutoFit surfaces (autofit_workspace + HowToFit, incl</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1620">issue #1620</a> — issued 2026-09-13 — library-shipped, workspace-pending (PR open under Heart RED with human authorisation 2026-09-13) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1621">PyAutoFit#1621</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/model_figures_6a_autofit_surfaces.md
@@ -324,6 +324,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1621](https://github.com/PyAutoLabs/PyAutoFit/pull/1621) — `active/model_figures_6a_autofit_surfaces.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
