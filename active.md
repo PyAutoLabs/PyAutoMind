@@ -118,11 +118,12 @@
 - issued: 2026-09-13
 - prompt: active/fixed_light_unconstrained_library_path.md
 - session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
-- status: workspace-dev
+- status: awaiting-merge (PR open under Heart RED with human authorisation 2026-09-13; merge is human, and stacked PR #250 merges first)
 - worktree: ~/Code/PyAutoLabs-wt/fixed-light-library-path
 - epic: fixed-lens-light-profiling phase 1
 - repos:
   - autolens_profiling: feature/fixed-light-library-path
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/252
 - parallel-claim: "worktree_check_conflict fixed-light-library-path autolens_profiling exits 1: autolens_profiling is claimed by fixed-lens-light-source-only (#248). That task is phase 0 of the same epic and is frozen at PR-open — PR #250 is open and awaiting a human merge, its branch is at 319f078, and no further edits to it are expected. This task is deliberately STACKED on that branch (base feature/fixed-lens-light-source-only, not main) because the cell and kernels it extends exist only there, so the two cannot conflict: one is the parent commit of the other. Registered as a parallel claim in a fresh worktree, the same call #248 itself recorded against #247."
 - summary: |
     Phase 1 of the fixed-lens-light-profiling epic. A new cell
@@ -136,6 +137,7 @@
     delaunay_nn, RAL gpu-2 fp64. The certified scheme is injected by a scoped harness
     monkeypatch of inversion_util.reconstruction_positive_only_from — no PyAutoArray change.
     Phase 0's projection ("~24 ms/call certified") is arithmetic; this measures it.
+- note: shipped 2026-09-13 — cell + injection module + 35 tests (suite 224), three A100 legs 342908-342910 harvested (gpu-2, fp64, COMPLETED 0:0, all gates PASS, five equivalence pins 1e-15..1e-11), note `results/notes/fixed_lens_light_library_path_2026_09.md` and the README prose row. Certified active set halves the library call (50.97 -> 25.10 ms rect 2.03x, 65.10 -> 25.39 ms Delaunay 2.56x, 72.95 -> 36.26 ms DelaunayNN 2.01x); phase 0's projection held. Positive-negative stays prohibited (+334.93 nats rect). Two findings for any implementation: the library subsets to solve_ids_to_keep before calling its solver, and lax.cond runs both branches under vmap. PR #252 is STACKED on #250 (base feature/fixed-lens-light-source-only) - merge #250 first, then /prm this one. Next is epic phase 2 (CPU + RTX 2060).
 
 ## model-figures-rollout-lens
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/542
