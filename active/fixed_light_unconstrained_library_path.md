@@ -19,6 +19,7 @@ Unattended: needs-slicing
 Epic: fixed-lens-light-profiling
 Phase: 1
 Filed: 2026-09-13
+Issued: 2026-09-13
 
 Phase 1 of the `fixed-lens-light-profiling` epic. Run strictly after phase 0 (#248) and
 strictly before phase 2 — "one step at a time".

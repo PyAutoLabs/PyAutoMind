@@ -152,3 +152,27 @@
 - release-gate: PyAutoFit
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1621
 - note: "worktree_check_conflict model-figures-rollout-autofit PyAutoFit autofit_workspace HowToFit exits 0 (checked 2026-09-13). Plan approved in Plan Mode 2026-09-13; copy at the session scratchpad plan-model-figures-rollout-autofit.md."
+
+## fixed-light-library-path
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/251
+- issued: 2026-09-13
+- prompt: active/fixed_light_unconstrained_library_path.md
+- session: claude --resume session_018oyeoiMrc8vhhahAyA1VNP
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-library-path
+- epic: fixed-lens-light-profiling phase 1
+- repos:
+  - autolens_profiling: feature/fixed-light-library-path
+- parallel-claim: "worktree_check_conflict fixed-light-library-path autolens_profiling exits 1: autolens_profiling is claimed by fixed-lens-light-source-only (#248). That task is phase 0 of the same epic and is frozen at PR-open — PR #250 is open and awaiting a human merge, its branch is at 319f078, and no further edits to it are expected. This task is deliberately STACKED on that branch (base feature/fixed-lens-light-source-only, not main) because the cell and kernels it extends exist only there, so the two cannot conflict: one is the parent commit of the other. Registered as a parallel claim in a fresh worktree, the same call #248 itself recorded against #247."
+- summary: |
+    Phase 1 of the fixed-lens-light-profiling epic. A new cell
+    scripts/imaging/likelihood_breakdown/fixed_light_library.py times the WHOLE library
+    likelihood call (FitImaging/AnalysisImaging.log_likelihood_function under jit) on the
+    A100 for five solver routes: S0 PDIP (library today), S3 PDIP, S3 positive-negative
+    (use_positive_only_solver=False -> xp.linalg.solve, MGE subtracted beforehand so it is
+    not in the matrices), S3 certified active-set at phase 0's per-mesh certifying pass
+    budget with PDIP fallback, and that same route at budget 1 so the fallback always fires
+    (the worst-case per-call cost). Single call and @vmap 16, HST, meshes rect / delaunay /
+    delaunay_nn, RAL gpu-2 fp64. The certified scheme is injected by a scoped harness
+    monkeypatch of inversion_util.reconstruction_positive_only_from — no PyAutoArray change.
+    Phase 0's projection ("~24 ms/call certified") is arithmetic; this measures it.
