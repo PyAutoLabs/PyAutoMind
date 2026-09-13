@@ -260,11 +260,12 @@
 - issued: 2026-09-13
 - prompt: active/model_figures_6b_lens_surfaces.md
 - session: claude --resume session_01DLx38vS6F1M7K5LnpVbeZ7
-- status: HowToLens PR open; autolens_workspace wave 1 in flight (PRs opened under Heart RED with human authorisation 2026-09-13)
+- status: wave 1 PRs open, awaiting-merge (HowToLens + autolens_workspace A; opened under Heart RED with human authorisation 2026-09-13); wave 2 (PR B) pending
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-rollout-lens
 - epic: model-figures phase 6b
 - release-gate: PyAutoFit
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/81
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/543
 - repos:
   - autolens_workspace: feature/model-figures-rollout-lens
   - HowToLens: feature/model-figures-rollout-lens
