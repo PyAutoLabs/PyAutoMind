@@ -43,6 +43,8 @@ refs and cannot name a Mind prompt path.)
 
 **Sub-task (a) shipped 2026-09-13** — `complete/2026/09/model-figures-rollout-autofit.md` (PyAutoFit#1621, autofit_workspace#154, HowToFit#52); next cut is (b). The map stays here until (b)-(e) are cut.
 
+**Sub-task (b) issued 2026-09-13** — `draft/feature/workspaces/model_figures_6b_lens_surfaces.md` (task `model-figures-rollout-lens`; SLaM deferred to `model_figures_6b2_slam_stages.md`).
+
 Phase 6 of the `model-figures` epic. Ledger (brief, design record, independent
 review): `draft/feature/autofit/model_figures_epic.md`. Phases 2 and 3 put the
 figure into the two cookbooks; phase 6 is the **rollout**.

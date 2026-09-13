@@ -136,3 +136,17 @@
     delaunay_nn, RAL gpu-2 fp64. The certified scheme is injected by a scoped harness
     monkeypatch of inversion_util.reconstruction_positive_only_from — no PyAutoArray change.
     Phase 0's projection ("~24 ms/call certified") is arithmetic; this measures it.
+
+## model-figures-rollout-lens
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/542
+- issued: 2026-09-13
+- prompt: active/model_figures_6b_lens_surfaces.md
+- session: claude --resume session_01DLx38vS6F1M7K5LnpVbeZ7
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/model-figures-rollout-lens
+- epic: model-figures phase 6b
+- release-gate: PyAutoFit
+- repos:
+  - autolens_workspace: feature/model-figures-rollout-lens
+  - HowToLens: feature/model-figures-rollout-lens
+- note: "worktree_check_conflict model-figures-rollout-lens autolens_workspace HowToLens exits 0 (2026-09-13, after the stale remove-fits-dataset-plots-yaml claim was closed out). Plan approved in Plan Mode 2026-09-13; SLaM deferred to 6b2; autolens_workspace ships as two PRs (A: guides/imaging/point_source/multi_dataset; B: interferometer/group/multi_galaxy/cluster/weak on feature/model-figures-rollout-lens-b after A merges); release-gate PyAutoFit because guides/modeling/advanced/expectation_propagation.py uses EPResult.factor_graph (merged 6a, unreleased)."
