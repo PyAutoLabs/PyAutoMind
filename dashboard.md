@@ -252,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_6a_autofit_surfaces.md">Model figures phase 6a — PyAutoFit surfaces (autofit_workspace + HowToFit, incl</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1620">issue #1620</a> — issued 2026-09-13 — library-shipped, workspace-pending (PR open under Heart RED with human authorisation 2026-09-13) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1621">PyAutoFit#1621</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/model_figures_6a_autofit_surfaces.md">Model figures phase 6a — PyAutoFit surfaces (autofit_workspace + HowToFit, incl</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1620">issue #1620</a> — issued 2026-09-13 — PRs open, awaiting-merge (library + 2 workspace; opened under Heart RED with human authorisation 2026-09-13) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1621">PyAutoFit#1621</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/154">autofit_workspace#154</a>, <a href="https://github.com/PyAutoLabs/HowToFit/pull/52">HowToFit#52</a> — ⏳ pending release: PyAutoFit — ⏸ waiting on PyAutoFit's release</summary>
 
 ```
 /start_dev active/model_figures_6a_autofit_surfaces.md
@@ -355,6 +355,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1583](https://github.com/PyAutoLabs/PyAutoFit/pull/1583) — `complete/2026/09/traced-assertions-on-jax-path.md`
 - [PyAutoFit#1572](https://github.com/PyAutoLabs/PyAutoFit/pull/1572) — `complete/2026/09/transformed-from-mode-coupled-covariance.md`
 - [PyAutoFit#1600](https://github.com/PyAutoLabs/PyAutoFit/pull/1600) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
+- ⏸ waiting: [Model figures phase 6a — PyAutoFit surfaces (autofit_workspace + HowToFit, incl](active/model_figures_6a_autofit_surfaces.md)
 
 **PyAutoGalaxy**
 

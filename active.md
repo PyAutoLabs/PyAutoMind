@@ -139,7 +139,7 @@
 - issued: 2026-09-13
 - prompt: active/model_figures_6a_autofit_surfaces.md
 - session: claude --resume session_01DLx38vS6F1M7K5LnpVbeZ7
-- status: library-shipped, workspace-pending (PR open under Heart RED with human authorisation 2026-09-13)
+- status: PRs open, awaiting-merge (library + 2 workspace; opened under Heart RED with human authorisation 2026-09-13)
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-rollout-autofit
 - epic: model-figures phase 6a
 - repos:
@@ -147,5 +147,8 @@
   - autofit_workspace: feature/model-figures-rollout-autofit
   - HowToFit: feature/model-figures-rollout-autofit
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1621
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/154
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/52
+- release-gate: PyAutoFit
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1621
 - note: "worktree_check_conflict model-figures-rollout-autofit PyAutoFit autofit_workspace HowToFit exits 0 (checked 2026-09-13). Plan approved in Plan Mode 2026-09-13; copy at the session scratchpad plan-model-figures-rollout-autofit.md."
