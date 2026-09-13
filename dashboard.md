@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 9 |
+| [In flight](#in-flight) (`active/`) | 10 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 182 |
+| [Backlog](#backlog) (`draft/`) | 181 |
 
 > **No batch in flight.**
 
@@ -248,6 +248,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/fixed_lens_light_source_only_inversion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/fixed_light_certified_low_likelihood_draws.md">Fixed lens light — is the certified active-set fast only because…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/255">issue #255</a> — issued 2026-09-13 — workspace-dev</summary>
+
+```
+/start_dev active/fixed_light_certified_low_likelihood_draws.md
 ```
 
 </details>
@@ -530,7 +538,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**182** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
+**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 45</summary>
@@ -2015,15 +2023,16 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_cpu_and_consumer_gpu.md">Fixed lens light — the same profiling on CPU…</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_unconstrained_library_path.md">Fixed lens light — library-path timing of the S3 positive-negative…</a> |
+| 2026-09-13 | issued | <a href="active/fixed_light_certified_low_likelihood_draws.md">Fixed lens light — is the certified active-set fast only because…</a> |
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
-| 2026-09-12 | issued | <a href="active/fixed_lens_light_source_only_inversion.md">Fixed lens light after SLaM light[1]: cost of the source-only…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-12 | issued | <a href="active/fixed_lens_light_source_only_inversion.md">Fixed lens light after SLaM light[1]: cost of the source-only…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 | 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
@@ -2033,12 +2042,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
 | 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
@@ -2048,12 +2057,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
-| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
@@ -2063,12 +2072,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
-| 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
@@ -2078,7 +2087,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-09-03 | filed | <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
-| 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 
 </details>
 
@@ -2432,20 +2440,12 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
-<summary><b>Fixed lens light — source-only likelihood profiling programme</b> — 4 queued prompt(s), in order</summary>
+<summary><b>Fixed lens light — source-only likelihood profiling programme</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Fixed lens light — source-only likelihood profiling programme</b> — ledger: `draft/research/autolens_profiling/fixed_lens_light_profiling_epic.md`</summary>
 
 ```
 Continue the 'Fixed lens light — source-only likelihood profiling programme' epic. Its canonical state lives in draft/research/autolens_profiling/fixed_lens_light_profiling_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 5 phase prompts under `draft/research/autolens_profiling/fixed_light_*.md`, worked strictly 1 → 2 → 3 → 4 → 5 — "one step at a time" is the human's instruction, since each phase's grid is chosen from the previous phase's answer; issue ONE at a time, never bulk-issued. Phase 0 is autolens_profiling#248, still under `active/fixed_lens_light_source_only_inversion.md` (DONE 2026-09-13, note `results/notes/fixed_lens_light_source_only_2026_09.md`) — it is the kernel measurement the whole programme builds on. Phase 1 is autolens_profiling#251 (PR #252 open 2026-09-13, stacked on #250 — merge that first; note `results/notes/fixed_lens_light_library_path_2026_09.md`: the certified active set halves the library likelihood call, 2.0-2.6x, and phase 0's projection held). Hardware ladder A100 (RAL gpu-2, fp64) / CPU / laptop RTX 2060 via the `PyAutoGPU` venv (fp64 + fp32/mp); every A100 phase has a submit → wait → harvest step, which is a human resume point, not a park. Out of scope throughout: the sparse operator (blocked on `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`) and JWST — dense inversion, HST and Euclid only.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_certified_low_likelihood_draws.md">Fixed lens light — is the certified active-set fast only because…</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/fixed_light_certified_low_likelihood_draws.md
 ```
 
 </details>
