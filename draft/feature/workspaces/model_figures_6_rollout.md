@@ -41,7 +41,7 @@ EP tutorial (both need `visualise_interval=1`) belongs to this phase.
 (Deliberately not in a `Blocked-by:` header: that key is graded against GitHub
 refs and cannot name a Mind prompt path.)
 
-**Sub-task (a) issued 2026-09-13** — `draft/feature/workspaces/model_figures_6a_autofit_surfaces.md` (task `model-figures-rollout-autofit`); the map stays here until (b)-(e) are cut.
+**Sub-task (a) shipped 2026-09-13** — `complete/2026/09/model-figures-rollout-autofit.md` (PyAutoFit#1621, autofit_workspace#154, HowToFit#52); next cut is (b). The map stays here until (b)-(e) are cut.
 
 Phase 6 of the `model-figures` epic. Ledger (brief, design record, independent
 review): `draft/feature/autofit/model_figures_epic.md`. Phases 2 and 3 put the

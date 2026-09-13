@@ -1,3 +1,84 @@
+## model-figures-rollout-autofit
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1620 (closed completed 2026-09-13)
+- completed: 2026-09-13
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1621 (merged `c089d0fb3`, head `1ff4572c1`, 1 commit)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/154 (merged `8ef02275f`, head `ff8160f`, 2 commits)
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/52 (merged `70bfcfa18`, head `9e1b165`, 1 commit)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1621
+- epic: model-figures phase 6a (sub-task (a) of `draft/feature/workspaces/model_figures_6_rollout.md`; (b)-(e) remain on the map)
+- summary: |
+    Sub-task (a) of the model-figures rollout: every script and tutorial in
+    autofit_workspace and HowToFit that prints a model's `info` now draws
+    `af.ModelPlotter(model).figure()` beside it, so the map (structure) is read
+    before the legend (priors and values). autofit_workspace: 31 ModelPlotter
+    figures across 9 scripts (cookbooks/model.py 12, multi_level_model.py 2,
+    result.py 1 after the aggregator loop, features/model_comparison.py 3,
+    search_chaining.py 5, search_grid_search.py 1, searches/start_point.py 2,
+    overview_1_the_basics.py 4) plus the EP rollout in
+    features/expectation_propagation.py (global-model figure at composition,
+    `visualise_interval=1`, `__Seeing The Sweep__` block with
+    `af.EPPlotter(result.factor_graph, ep_history=result.ep_history).figure(kind="state")`,
+    graph_model.png / graph_state.png output-folder bullets). HowToFit: 13
+    ModelPlotter figures across 7 tutorials (1.1 x4 with the map/legend teaching,
+    1.3, 1.4 x4 with the `5 components` plate, 1.7, 1.optional_bayesian, 3.3,
+    3.5) plus the EP state figure in tutorial 5 and `model_figure: false` added to
+    config/output.yaml. Library: `EPResult.factor_graph` (additive, default None)
+    populated by `optimise()`, because the high-level `optimise` built the swept
+    graph internally and `af.EPPlotter(kind="state")` needs that graph, never
+    `FactorGraphModel.graph` (rebuilds and renames prior factors per access).
+    Notebooks regenerated in both repos (9 + 7 twins; catalogues byte-identical).
+- decisions: |
+    - Coverage rule: a figure at EVERY bare model print (the prompt's grep
+      acceptance), including re-prints of an unchanged structure, where the
+      prose makes the "map unchanged, legend moved" point (rendered fact:
+      tutorial 4's tuned-priors variant renders byte-identically to the free
+      one). Explicit exceptions: the aggregator loop in cookbooks/result.py gets
+      one figure after the loop; `result*.info` / `samples.info` are not model
+      prints. The map/legend definition is stated once per script (the older
+      phase-2/4 blocks in model.py and multi_level_model.py were trimmed).
+    - All three PRs opened under Heart RED `release validation FAILED (stage
+      integrate)` (unrelated autolens integrate scripts) with explicit human
+      authorisation 2026-09-13; merged via /prm in library-first order.
+- verification: |
+    PyAutoFit: full test_autofit 2847 passed / 2 skipped (+4 new in
+    test_autofit/graphical/test_ep_result_factor_graph.py); sphinx 30 == baseline;
+    black/pyflakes clean on touched files. Every touched workspace script and
+    tutorial ran headless under the smoke env profile against the worktree
+    PyAutoFit, exit 0, no traceback; autofit_workspace run_smoke 8 scripts + 2
+    notebooks PASS, HowToFit run_smoke 18/18 PASS (tutorial 5 is in
+    config/build/no_run.yaml NEEDS_FIX PyAutoFit#1454, so its manual headless run
+    is the only coverage). EP prose was checked against real renders (HowToFit)
+    and the renderer's encodings in autofit/model_figure/ep/render.py. CI at
+    merge: every run and every matrix leg green on each head sha, 0 runs
+    not-completed anywhere. PyAutoFit#1621 (`1ff4572c1`) — Docs (docs-build) +
+    Tests (unittest-nojax, 3.12, 3.13). autofit_workspace#154 (`ff8160f`) —
+    Navigator Check (3 jobs) + Smoke Tests (changes, 3.12, 3.13). HowToFit#52
+    (`9e1b165`) — Navigator Check (3 jobs) + Tutorials Complete + Smoke Tests
+    (3 legs). All three PRs read CLEAN / MERGEABLE at merge; merges proven in
+    the canonical checkouts by `merge-base --is-ancestor` against `origin/main`.
+- traps: |
+    - `factor_graph.optimise(...)` returned no handle on the swept graph; fixed
+      in the library, not with private `_make_ep_optimiser` calls in scripts.
+    - `Factor.__eq__`/`__hash__` ignore the name, so history keys still compare
+      equal to `FactorGraphModel.graph`'s renamed PriorFactors on a tiny model;
+      the plotter only visibly breaks on larger graphs, the docs caveat stands.
+    - `HowToFit/scripts/chapter_1_introduction/tutorial_1_models.py` is CRLF; a
+      python read/write silently converted it to LF (1144-line phantom diff)
+      and had to be restored before committing.
+    - `pyauto-brain intake dashboard --check` does not exist in this Brain;
+      the dry-run `intake dashboard` + `git status` is the currency check.
+    - `run_smoke.py` writes an untracked `test-results/` in autofit_workspace
+      (gitignored in HowToFit only) — remove it before staging.
+- follow-ups: |
+    1. `draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md` — tutorial 5
+       creates `centre_shared_prior` but never assigns it, so no centre is shared
+       and dataset_0 never updates (filed 2026-09-13).
+    2. Rollout map next cut: **(b) PyAutoLens surfaces**
+       (`draft/feature/workspaces/model_figures_6_rollout.md`).
+    3. Optional EP overlays: `draft/feature/autofit/model_figures_ep_overlays.md`.
+
+## Original prompt
+
 # Model figures phase 6a — PyAutoFit surfaces (autofit_workspace + HowToFit, incl. the EP state figure)
 
 Type: feature

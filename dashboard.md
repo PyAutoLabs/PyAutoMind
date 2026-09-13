@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -260,14 +260,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_6a_autofit_surfaces.md">Model figures phase 6a — PyAutoFit surfaces (autofit_workspace + HowToFit, incl</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1620">issue #1620</a> — issued 2026-09-13 — PRs open, awaiting-merge (library + 2 workspace; opened under Heart RED with human authorisation 2026-09-13) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1621">PyAutoFit#1621</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/154">autofit_workspace#154</a>, <a href="https://github.com/PyAutoLabs/HowToFit/pull/52">HowToFit#52</a> — ⏳ pending release: PyAutoFit — ⏸ waiting on PyAutoFit's release</summary>
-
-```
-/start_dev active/model_figures_6a_autofit_surfaces.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining <code>config/visualize/plots.yaml</code> copies</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/62">issue #62</a> — issued 2026-09-10 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/63">euclid_strong_lens_modeling_pipeline#63</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/124">autolens_assistant#124</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/24">autogalaxy_assistant#24</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/80">HowToLens#80</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/74">HowToGalaxy#74</a></summary>
 
 ```
@@ -332,7 +324,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
-- [PyAutoFit#1621](https://github.com/PyAutoLabs/PyAutoFit/pull/1621) — `active/model_figures_6a_autofit_surfaces.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
@@ -350,6 +341,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1617](https://github.com/PyAutoLabs/PyAutoFit/pull/1617) — `complete/2026/09/model-figures-graphical.md`
 - [PyAutoFit#1615](https://github.com/PyAutoLabs/PyAutoFit/pull/1615) — `complete/2026/09/model-figures-lens.md`
 - [PyAutoFit#1614](https://github.com/PyAutoLabs/PyAutoFit/pull/1614) — `complete/2026/09/model-figures-renderer.md`
+- [PyAutoFit#1621](https://github.com/PyAutoLabs/PyAutoFit/pull/1621) — `complete/2026/09/model-figures-rollout-autofit.md`
 - [PyAutoFit#1588](https://github.com/PyAutoLabs/PyAutoFit/pull/1588) — `complete/2026/09/natural-language-first-docs.md`
 - [PyAutoFit#1589](https://github.com/PyAutoLabs/PyAutoFit/pull/1589) — `complete/2026/09/natural-language-first-docs.md`
 - [PyAutoFit#1590](https://github.com/PyAutoLabs/PyAutoFit/pull/1590) — `complete/2026/09/natural-language-first-docs.md`
@@ -363,7 +355,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1583](https://github.com/PyAutoLabs/PyAutoFit/pull/1583) — `complete/2026/09/traced-assertions-on-jax-path.md`
 - [PyAutoFit#1572](https://github.com/PyAutoLabs/PyAutoFit/pull/1572) — `complete/2026/09/transformed-from-mode-coupled-covariance.md`
 - [PyAutoFit#1600](https://github.com/PyAutoLabs/PyAutoFit/pull/1600) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
-- ⏸ waiting: [Model figures phase 6a — PyAutoFit surfaces (autofit_workspace + HowToFit, incl](active/model_figures_6a_autofit_surfaces.md)
 
 **PyAutoGalaxy**
 
@@ -1993,7 +1984,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-13 | issued | <a href="active/model_figures_6a_autofit_surfaces.md">Model figures phase 6a — PyAutoFit surfaces (autofit_workspace +…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_unconstrained_library_path.md">Fixed lens light — library-path timing of the S3 positive-negative…</a> |
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
@@ -2003,12 +1993,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 | 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
+| 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
@@ -2018,12 +2008,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | issued | <a href="active/remove_fits_dataset_from_remaining_plots_yaml_copies.md">Remove the dead <code>fits_dataset</code> key from the remaining…</a> |
+| 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md">PyAutoHeart smoke-tests.yml relevance gate skips the pytest matrix on…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
@@ -2033,12 +2023,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
+| 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
@@ -2048,12 +2038,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
+| 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-04 | filed | <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> |
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
@@ -2063,6 +2053,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-02 | filed | <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> |
 | 2026-09-01 | filed | <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> |
 | 2026-08-31 | filed | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> |
+| 2026-08-29 | filed | <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the…</a> |
 
 </details>
 
@@ -2360,7 +2351,7 @@ Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappi
 <details><summary>📋 <b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — ledger: `draft/feature/autofit/model_figures_epic.md`</summary>
 
 ```
-Continue the 'PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)' epic. Its canonical state lives in draft/feature/autofit/model_figures_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 SHIPPED 2026-09-11 (complete/2026/09/model-figures-graph-spec.md, PyAutoFit#1606); phase 2 SHIPPED 2026-09-11 (complete/2026/09/model-figures-renderer.md — PyAutoFit#1614 + autofit_workspace#152 merged, pending-release PyAutoFit); phase 3 SHIPPED 2026-09-11 (complete/2026/09/model-figures-lens.md — PyAutoFit#1615 + PyAutoArray#550 + PyAutoGalaxy#616 + PyAutoLens#737 + autolens_workspace#541 + autogalaxy_workspace#240 merged, pending-release ×4; `__solved_parameters__` protocol); phase 4 SHIPPED 2026-09-12 (complete/2026/09/model-figures-graphical.md — PyAutoFit#1617 + autofit_workspace#153 + HowToFit#51 merged, pending-release PyAutoFit; plate notation, hoisted shared priors, hierarchical draws are not sharing); phase 5 SHIPPED 2026-09-13 (complete/2026/09/model-figures-ep-view.md — PyAutoFit#1619 merged, pending-release PyAutoFit; EP factor-graph view, af.EPPlotter, graph_model.png/graph_state.png); phase 6 (rollout) is the only phase left. 6 phased prompts; 1 → 2 → 3 in order, 4 after 2, 5 after 4, 6 (rollout across every workspace, HowTo chapter and sibling project) after 3 and 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
+Continue the 'PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)' epic. Its canonical state lives in draft/feature/autofit/model_figures_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 SHIPPED 2026-09-11 (complete/2026/09/model-figures-graph-spec.md, PyAutoFit#1606); phase 2 SHIPPED 2026-09-11 (complete/2026/09/model-figures-renderer.md — PyAutoFit#1614 + autofit_workspace#152 merged, pending-release PyAutoFit); phase 3 SHIPPED 2026-09-11 (complete/2026/09/model-figures-lens.md — PyAutoFit#1615 + PyAutoArray#550 + PyAutoGalaxy#616 + PyAutoLens#737 + autolens_workspace#541 + autogalaxy_workspace#240 merged, pending-release ×4; `__solved_parameters__` protocol); phase 4 SHIPPED 2026-09-12 (complete/2026/09/model-figures-graphical.md — PyAutoFit#1617 + autofit_workspace#153 + HowToFit#51 merged, pending-release PyAutoFit; plate notation, hoisted shared priors, hierarchical draws are not sharing); phase 5 SHIPPED 2026-09-13 (complete/2026/09/model-figures-ep-view.md — PyAutoFit#1619 merged, pending-release PyAutoFit; EP factor-graph view, af.EPPlotter, graph_model.png/graph_state.png); phase 6a SHIPPED 2026-09-13 (complete/2026/09/model-figures-rollout-autofit.md — PyAutoFit#1621 + autofit_workspace#154 + HowToFit#52 merged, pending-release PyAutoFit; figures beside every model.info in autofit_workspace + HowToFit, EP state figure); next cut (b) PyAutoLens surfaces; phase 6 (rollout) is the only phase left. 6 phased prompts; 1 → 2 → 3 in order, 4 after 2, 5 after 4, 6 (rollout across every workspace, HowTo chapter and sibling project) after 3 and 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
 ```
 
 </details>
