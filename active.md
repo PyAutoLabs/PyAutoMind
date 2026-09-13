@@ -260,14 +260,14 @@
 - issued: 2026-09-13
 - prompt: active/model_figures_6b_lens_surfaces.md
 - session: claude --resume session_01DLx38vS6F1M7K5LnpVbeZ7
-- status: wave 1 PRs open, awaiting-merge (HowToLens + autolens_workspace A; opened under Heart RED with human authorisation 2026-09-13); wave 2 (PR B) pending
+- status: wave 1 MERGED (HowToLens#81, autolens_workspace#543); wave 2 (autolens_workspace PR B) in flight on feature/model-figures-rollout-lens-b
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-rollout-lens
 - epic: model-figures phase 6b
 - release-gate: PyAutoFit
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/81
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/543
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/81 (merged 635ee49ab155537dcc91dea09237c955408d9431)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/543 (merged c8b7254830da5f4a0908b561296a30654b884ae4)
 - repos:
-  - autolens_workspace: feature/model-figures-rollout-lens
+  - autolens_workspace: feature/model-figures-rollout-lens-b
   - HowToLens: feature/model-figures-rollout-lens
 - note: "worktree_check_conflict model-figures-rollout-lens autolens_workspace HowToLens exits 0 (2026-09-13, after the stale remove-fits-dataset-plots-yaml claim was closed out). Plan approved in Plan Mode 2026-09-13; SLaM deferred to 6b2; autolens_workspace ships as two PRs (A: guides/imaging/point_source/multi_dataset; B: interferometer/group/multi_galaxy/cluster/weak on feature/model-figures-rollout-lens-b after A merges); release-gate PyAutoFit because guides/modeling/advanced/expectation_propagation.py uses EPResult.factor_graph (merged 6a, unreleased)."
 
