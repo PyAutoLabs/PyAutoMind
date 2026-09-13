@@ -28,27 +28,6 @@
     autolens_workspace (6), autolens_profiling (5), tail pass (~26 singletons).
     Pass-by-pass counts are in the prompt's `## Campaign log`.
 
-## remove-fits-dataset-plots-yaml
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/62
-- prompt: active/remove_fits_dataset_from_remaining_plots_yaml_copies.md
-- issued: 2026-09-10
-- session: claude --resume session_01PLBfxi4vtBX9zogYAPHmLj
-- status: awaiting-merge
-- worktree: n/a (remote web session — branches pushed via the GitHub API, no local worktree claimed)
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/remove-fits-dataset-plots-yaml
-  - autolens_assistant: feature/remove-fits-dataset-plots-yaml
-  - autogalaxy_assistant: feature/remove-fits-dataset-plots-yaml
-  - HowToLens: feature/remove-fits-dataset-plots-yaml
-  - HowToGalaxy: feature/remove-fits-dataset-plots-yaml
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/63
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/124
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/24
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/80
-- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/74
-- plan: Approved by user. Config-only parity hygiene; identical two-hunk patch in all five repos, one PR each.
-- note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by euclid-catalogue-rebuild-prep (PR #61). Waived by the user — that guard protects a local worktree this session does not use, and #61 does not touch config/visualize/plots.yaml. The conflicting claim was released on 2026-09-10 when euclid-catalogue-rebuild-prep closed out (PRs #61 + #68 merged), so the guard no longer fires.
-
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
 - issued: 2026-09-11
