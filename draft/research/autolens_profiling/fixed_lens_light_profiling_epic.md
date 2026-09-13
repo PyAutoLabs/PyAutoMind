@@ -1,0 +1,94 @@
+# Fixed lens light — source-only likelihood profiling programme (phase map)
+
+Type: research
+Target: autolens_profiling
+Repos:
+- autolens_profiling
+Themes:
+- profiling
+- pixelization
+- hpc-gpu
+Difficulty: too-large
+Autonomy: human-required
+Priority: high
+Status: campaign map — the five phases route through /start_dev ONE at a time, in order; this file is never issued itself and nothing here is bulk-issued
+Consequence: judge
+Review-minutes: 25
+Unattended: needs-slicing
+Epic: fixed-lens-light-profiling
+Filed: 2026-09-13
+
+Filed 2026-09-13 from James's five-task brief at the close of phase 0. This is the
+umbrella view; each phase's real content lives in its own prompt file beside this one.
+Update the table as phases ship.
+
+## Original request (2026-09-13, verbatim)
+
+"Ok these are the takss to now queue up: 1) Perform profiling of positive-negative solver for completeness albeit S3 certified
+active-set seems like the lead forward; 2) Perform the same profiling on CPU (using CPU appropriate methods) and on m laptop GPU as
+its important now we are converging on a solutiopn we also optimizze for consumer GPUs; 3) Confirm that S3 certified active-set is
+ver fast on solutions which give low likelihoods, as maybe the fast run times here are a result of the model being good and giving
+high likelihoods or an easier to solve solution; 4) Provide profiling information over number of source pixels with the new approach
+on difernet hardware 5) For all hardware types and likelihood variants (e.g. sparse operator) give an assessment of the overall
+likelihood function on JWST (0.03" pixel scale), HST and Euclid data for 500, 1250 and 2500 source pixels. For each take one step
+at a time, and try do it all in --auto."
+
+Clarification (same day): "For positive-negative I want you to use a positive negative solve (e..g. np.linalg.solve) but DO NOT include the
+MGE in the matrices or solution, so it sould use normal light porfiles which subtract the MGE beforehand. PyAutoGPU is avirtual
+enviroment which already exists on this laptop for running GPU JAX so use that. Rest of plan sonds good. Only use HST and Euclid
+for now, drop JWST. Skip the sparse operator for now."
+
+## What the programme is
+
+With the lens light FIXED after SLaM light[1] — the MGE (60 linear Gaussians) converted to
+regular light profiles at their solved intensities and subtracted beforehand ("S3") — only
+source pixels remain in the linear system. Phase 0 showed that this makes a *certified
+active-set* positivity solve viable. The programme's job is to turn that one A100 kernel
+measurement into a production verdict: which solver, at which precision, on which
+hardware, for how many source pixels, on real HST and Euclid data.
+
+## Phases — strictly 1 → 2 → 3 → 4 → 5, "one step at a time"
+
+| # | Phase | Prompt | Gate | State |
+|---|-------|--------|------|-------|
+| 0 | Fixed lens light, source-only inversion — kernel measurement on the A100 | `active/fixed_lens_light_source_only_inversion.md` (autolens_profiling #248) | — | **DONE 2026-09-13** — note `results/notes/fixed_lens_light_source_only_2026_09.md`. S0 PDIP 37 ms → S3 PDIP 26-28 ms → S3 certified active-set 4.2 ms Delaunay (pass 2) / 11 ms rect (pass 7), same positive solution to 1e-10 nats; S3 unconstrained Cholesky 1.5 ms but +6 nats (Delaunay) / +335 nats (rect). Library calls S0→S3: rect 51.7→38.4 ms, Delaunay 70.4→49.2 ms |
+| 1 | Library-path timing of the S3 positive-negative and certified active-set solvers (A100, HST) | `draft/research/autolens_profiling/fixed_light_unconstrained_library_path.md` | phase 0 note landed | filed |
+| 2 | The same profiling on CPU (CPU-appropriate methods) and on the laptop RTX 2060 | `draft/research/autolens_profiling/fixed_light_cpu_and_consumer_gpu.md` | phase 1 library-path rows measured | filed |
+| 3 | Is the certified active-set fast only because the model is good? (graded Δlog L draw set) | `draft/research/autolens_profiling/fixed_light_certified_low_likelihood_draws.md` | phase 2 hardware table exists | filed |
+| 4 | Source-pixel scaling of the new approach across hardware | `draft/research/autolens_profiling/fixed_light_source_pixel_scaling.md` | phase 3 pass-count-vs-Δlog L answered | filed |
+| 5 | Whole-likelihood assessment on HST + Euclid at 500 / 1250 / 2500 source pixels — the verdict | `draft/research/autolens_profiling/fixed_light_likelihood_assessment_hst_euclid.md` | phase 4 ms-vs-N curves exist | filed |
+
+The order is the human's instruction, not a convenience: each phase's grid is chosen from
+the previous phase's answer (phase 4 sweeps the solvers phase 3 certified as safe; phase 5
+assesses only the configurations phase 4 shows can afford the pixel counts).
+
+## Hardware legend
+
+- **A100** — RAL `gpu-2` partition, fp64. Legs go out through
+  `autolens_profiling/hpc/batch_gpu/submit_breakdown_imaging_fixed_light_*` +
+  `submit_fixed_light.sh`. Every A100 phase has a submit → wait → harvest step: that is a
+  **human resume point**, not a park, and not a reason to arm a timer.
+- **CPU** — local, CPU-appropriate methods: numpy/scipy `cho_factor`/`cho_solve`, scipy
+  NNLS or the library's CPU NNLS path, JAX-CPU for the jit/library rows. Record thread count.
+- **RTX 2060 (6 GB, consumer)** — the laptop GPU through the existing `PyAutoGPU` venv at
+  `/home/jammy/venv/PyAutoGPU` (JAX 0.10.2 + jax-cuda12-plugin). Traps: the session shell
+  exports `JAX_PLATFORMS=cpu` and `JAX_PLATFORM_NAME=cpu` which MUST be unset;
+  `XLA_PYTHON_CLIENT_PREALLOCATE=false` is required at 6 GB. GeForce fp64 runs at 1/32
+  rate, so fp64 **and** fp32/mixed-precision legs are both required, with pins re-derived
+  per precision.
+
+## Code and data
+
+- Cell: `@autolens_profiling/scripts/imaging/likelihood_breakdown/fixed_light.py`
+  (`--mesh`, `--source-pixels`, `--pass-budget-max`, `--vmap-batch`, `--library-row`).
+- Kernels: `@autolens_profiling/scripts/misc/likelihood_breakdown/active_set_steps.py`.
+- Datasets: `autolens_profiling/dataset/imaging/hst` (0.05") and `.../euclid` (0.1").
+
+## Out of scope for the whole epic
+
+- **The sparse operator.** The human's phase-5 text named it as a likelihood variant, then
+  dropped it: "Skip the sparse operator for now." It is blocked on the PyAutoArray weight-map
+  bug, filed as `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`.
+- **JWST (0.03").** Named in the original text, dropped in the clarification: HST and Euclid
+  only.
+- Dense inversion only, throughout.

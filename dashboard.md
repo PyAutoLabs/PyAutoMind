@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 175 |
+| [Backlog](#backlog) (`draft/`) | 181 |
 
 > **No batch in flight.**
 
@@ -513,7 +513,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**175** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **33** of them belong to an epic and are listed only under [Epics](#epics) below.
+**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 43</summary>
@@ -2389,6 +2389,67 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
+<summary><b>Fixed lens light — source-only likelihood profiling programme</b> — 6 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Fixed lens light — source-only likelihood profiling programme</b> — ledger: `draft/research/autolens_profiling/fixed_lens_light_profiling_epic.md`</summary>
+
+```
+Continue the 'Fixed lens light — source-only likelihood profiling programme' epic. Its canonical state lives in draft/research/autolens_profiling/fixed_lens_light_profiling_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 5 phase prompts under `draft/research/autolens_profiling/fixed_light_*.md`, worked strictly 1 → 2 → 3 → 4 → 5 — "one step at a time" is the human's instruction, since each phase's grid is chosen from the previous phase's answer; issue ONE at a time, never bulk-issued. Phase 0 is autolens_profiling#248, still under `active/fixed_lens_light_source_only_inversion.md` (DONE 2026-09-13, note `results/notes/fixed_lens_light_source_only_2026_09.md`) — it is the kernel measurement the whole programme builds on. Hardware ladder A100 (RAL gpu-2, fp64) / CPU / laptop RTX 2060 via the `PyAutoGPU` venv (fp64 + fp32/mp); every A100 phase has a submit → wait → harvest step, which is a human resume point, not a park. Out of scope throughout: the sparse operator (blocked on `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`) and JWST — dense inversion, HST and Euclid only.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_unconstrained_library_path.md">Fixed lens light — library-path timing of the S3 positive-negative and certified…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_light_unconstrained_library_path.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_cpu_and_consumer_gpu.md">Fixed lens light — the same profiling on CPU…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_light_cpu_and_consumer_gpu.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_certified_low_likelihood_draws.md">Fixed lens light — is the certified active-set fast only because…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_light_certified_low_likelihood_draws.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_source_pixel_scaling.md">Fixed lens light — source-pixel scaling of the new approach across hardware</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_light_source_pixel_scaling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_likelihood_assessment_hst_euclid.md">Fixed lens light — whole-likelihood assessment on HST and Euclid at 500…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_light_likelihood_assessment_hst_euclid.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_lens_light_profiling_epic.md">Fixed lens light — source-only likelihood profiling programme (phase map)</a> — autolens_profiling · too-large · human-required · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_lens_light_profiling_epic.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>numba-interferometer-revisit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_numba_library_dispatch_insitu.md">Re-measure the numba interferometer crossover in situ, through the library dispatch</a> — autolens_profiling · medium · supervised · medium</summary>
@@ -2412,7 +2473,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 
 </details>
 
-126 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2457,7 +2518,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/adapt_scatter_factor_two.md`
 - `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
-- _… and 86 more_
+- _… and 87 more_
 
 </details>
 
