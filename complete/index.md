@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1428 records across 8 buckets.
+1429 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -205,6 +205,7 @@ markers; everything below GENERATED is rebuilt.
 - [howto-stale-self-location](2026/09/howto-stale-self-location.md)
 - [howtofit-ch1-gradients-details](2026/09/howtofit-ch1-gradients-details.md)
 - [howtofit-colab-and-chapter-advanced](2026/09/howtofit-colab-and-chapter-advanced.md)
+- [howtofit-markdown-mirror-url](2026/09/howtofit-markdown-mirror-url.md)
 - [howtolens-ch3-mask-overlay](2026/09/howtolens-ch3-mask-overlay.md)
 - [human-readable-first-docs](2026/09/human-readable-first-docs.md) — Swapped every user-facing doc (PyAutoLens / PyAutoGalaxy README + docs/, autolens_workspace / autogalaxy_works…
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
