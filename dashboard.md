@@ -316,7 +316,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/slam_hst_variant_folders_delaunay_1250.md">Run-variant folders on the HST SLaM cell, and the Delaunay-1250 A100 legs</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/5">issue #5</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/slam_hst_variant_folders_delaunay_1250.md">Run-variant folders on the HST SLaM cell, and the Delaunay-1250 A100 legs</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/5">issue #5</a> — issued 2026-09-14 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/6">autolens_inference#6</a></summary>
 
 ```
 /start_dev active/slam_hst_variant_folders_delaunay_1250.md
