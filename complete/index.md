@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1426 records across 8 buckets.
+1427 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -200,6 +200,7 @@ markers; everything below GENERATED is rebuilt.
 - [hands-board-family-footer](2026/09/hands-board-family-footer.md)
 - [heart-board-family-footer](2026/09/heart-board-family-footer.md)
 - [heart-worktree-drift-hidden-dirs](2026/09/heart-worktree-drift-hidden-dirs.md) — closed, completed
+- [howto-md-rerender](2026/09/howto-md-rerender.md)
 - [howto-paths-orientation-block-parity](2026/09/howto-paths-orientation-block-parity.md)
 - [howto-stale-self-location](2026/09/howto-stale-self-location.md)
 - [howtofit-ch1-gradients-details](2026/09/howtofit-ch1-gradients-details.md)

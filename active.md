@@ -315,34 +315,3 @@
     (ValueError: slice step cannot be zero) and check_size=100 raises IndexError on
     chains shorter than 100, which is always true under PYAUTO_TEST_MODE=1; Zeus
     guards it, Emcee does not.
-
-## howto-md-rerender
-- issue: n/a — three loose ends from howto-stale-self-location (HowToGalaxy#75, complete/2026/09/howto-stale-self-location.md)
-- issued: 2026-09-14
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/howto-md-rerender
-- repos:
-  - HowToLens: feature/howto-md-rerender
-  - PyAutoHands: feature/howto-md-rerender
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/84 (a74a568) — replaces the hand-patched tutorial_0_visualization.md with a generated one
-- repo-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/282 (753218c) — guard false positive: an authored path in a tutorial is not a leak
-- parallel-claim: |
-    HowToLens is claimed by model-figures-rollout-lens, whose HowToLens leg has
-    already merged and whose worktree is on feature/model-figure-prose-lens.
-    Taken as a parallel worktree on the same evidence as the parent task: this
-    branch touches one generated chapter-1 markdown page; that branch touched
-    chapter 2 and 4 scripts and notebooks.
-- also-landed: |
-    HowToFit: pushed ac0fd0d to feature/howtofit-tutorials-1-3 (PR HowToFit#58,
-    another session's open PR) rather than a branch of its own. That branch had
-    fixed the __Paths__ clone URL in scripts/ and notebooks/ but not markdown/,
-    and on HowToFit main BOTH are still stale — so a branch off main would have
-    duplicated #58's fix and conflicted with it. Retires
-    draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md once #58 merges.
-- note: |
-    PyAutoHands#282 fixes a false positive in the guard #281 shipped: it failed
-    the markdown build for tutorial_0_visualization in HowToLens AND HowToGalaxy
-    by flagging the commented example `workspace_path` those tutorials show the
-    reader on purpose. Found by rendering a real page, not by a test — #281's 12
-    tests all fed the guard synthetic page text.
-- next: /prm both PRs when green. HowToFit#58 is the other session's to merge.
