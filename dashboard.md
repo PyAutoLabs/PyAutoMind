@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 10 |
+| [In flight](#in-flight) (`active/`) | 11 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 182 |
+| [Backlog](#backlog) (`draft/`) | 181 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 98
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 97
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -252,6 +252,14 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
+<details><summary>📋 <a href="active/colab_setup_missing_dynesty_and_emcee.md">Regression-test the Colab sampler install (code fix shipped in PyAutoNerves#164)</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/165">issue #165</a> — issued 2026-09-14 — library-dev</summary>
+
+```
+/start_dev active/colab_setup_missing_dynesty_and_emcee.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/fixed_light_numba_phase1_whole_call.md">Numba phase 1 — the whole numba likelihood call on HST, decomposed…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/263">issue #263</a> — started 2026-09-14 — workspace-dev</summary>
 
 ```
@@ -316,7 +324,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release profile</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/547">issue #547</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release profile</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/547">issue #547</a> — issued 2026-09-14 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/548">autolens_workspace#548</a></summary>
 
 ```
 /start_dev active/start_here_release_profile_script_cap.md
@@ -539,10 +547,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**182** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 50</summary>
+<summary><b>bug</b> — 49</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -884,14 +892,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autonerves/colab_setup_missing_dynesty_and_emcee.md">Regression-test the Colab sampler install (code fix shipped in PyAutoNerves#164)</a> — autonerves · trivial · safe · normal</summary>
-
-```
-/start_dev draft/bug/autonerves/colab_setup_missing_dynesty_and_emcee.md
 ```
 
 </details>
@@ -2028,7 +2028,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 30 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 29 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2041,7 +2041,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-14 | issued | <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
 | 2026-09-14 | issued | <a href="active/slam_hst_variant_folders_delaunay_1250.md">Run-variant folders on the HST SLaM cell, and the Delaunay-1250 A100…</a> |
-| 2026-09-14 | filed | <a href="draft/bug/autonerves/colab_setup_missing_dynesty_and_emcee.md">Regression-test the Colab sampler install (code fix shipped in…</a> |
+| 2026-09-14 | issued | <a href="active/colab_setup_missing_dynesty_and_emcee.md">Regression-test the Colab sampler install (code fix shipped in…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | issued | <a href="active/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release…</a> |
 | 2026-09-14 | started | <a href="active/fixed_light_numba_phase1_whole_call.md">Numba phase 1 — the whole numba likelihood call on HST, decomposed…</a> |
