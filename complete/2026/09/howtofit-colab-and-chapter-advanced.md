@@ -1,3 +1,65 @@
+HowToFit's GitHub front page mentioned Google Colab exactly once, buried
+mid-README with no badge and no link, and deferred to chapter indexes that both
+falsely claimed "Colab links to every tutorial are included". The chapter folders
+also ran 1 then 3, with no chapter 2.
+
+Shipped:
+
+- **Colab is visible.** A Colab badge sits under the `# HowToFit` title and
+  `Start Here on Colab` leads the header link row, both pointing at root
+  `start_here.ipynb`. A `Run in Google Colab (nothing to install)` subsection now
+  opens *Getting Started*, ahead of the local-install path.
+- **Both chapter indexes now tell the truth.** Chapter 1's tutorials 6, 7, 8 and
+  the optional Bayesian formalism used relative `../../notebooks/...` paths that
+  open a raw GitHub view rather than Colab — all four converted. The advanced
+  chapter's two optional tutorials (`hierarchical_ep`,
+  `hierarchical_individual`) were unlisted despite having notebooks — both added.
+- **`scripts/chapter_3_graphical_models/` → `scripts/chapter_advanced/`** via
+  `git mv` (renames tracked as `R`, history preserved), 16 "chapter 3" prose
+  phrasings reworded, and the 3 `main`-pinned URLs in autofit_workspace that the
+  rename would have broken fixed.
+
+PRs: HowToFit#54 (merge `3a755c5`), autofit_workspace#155 (merge `5226f2f`).
+Both proven merged by `git merge-base --is-ancestor`, not by PR state alone.
+
+Verified before merge: no `chapter_3_graphical_models` string in either repo; no
+stale "chapter 3" prose; `tutorial_8_scientific_workflow.ipynb` still exactly 1
+markdown cell and 0 code cells (prose-only by design, no Colab setup cell); all
+36 Colab URLs canonical on tag `2026.9.14.1`, the form `bump_colab_urls.sh`
+rewrites, so the pin stays current automatically. Regens: HowToFit 19 scripts,
+autofit_workspace 32 scripts. CI green on every run for each head sha —
+`Catalogue staleness` confirms the regenerated catalogue matches the renamed
+tree, and the smoke suites execute every tutorial script on 3.12 and 3.13.
+
+Notebook regeneration, the original question, turned out to be a no-op: a
+throwaway regen in a detached scratch worktree produced a byte-identical tree
+against `main`, so the committed notebooks were already exactly what the scripts
+produce.
+
+Three things a later reader should know:
+
+1. **Output directories changed.** Tutorial output moves from
+   `output/chapter_3_graphical_models/...` to `output/chapter_advanced/...`.
+   Existing results do not resume; they remain under the old name.
+2. **`markdown/` pages were hand-edited, not regenerated.**
+   `generate_markdown.py` executes every curated script for real and is an
+   at-release tool — disproportionate for a URL/prose substring. The edits are
+   byte-equivalent to what a regen emits for those lines, and
+   `bump_colab_urls.sh` already performs this same class of in-place `*.md`
+   rewrite.
+3. **Merged under an explicit human override of Heart RED**
+   (`release validation FAILED (stage integrate)`, unrelated to this work — it
+   is autolens/autolens_test workspace validation, manifest drift and profiling
+   drift). This was NOT the AUTONOMY.md corrective-PR exception, which covers
+   only a PR repairing the defect the RED names. Recorded so the precedent is
+   auditable and never read as policy-sanctioned.
+
+Follow-up filed: `draft/docs/autofit/howtofit_chapter_3_prose_references.md` —
+PyAutoFit's two prose-only "HowToFit chapter 3" mentions, split out to keep the
+library-first merge gate out of workspace-only work.
+
+## Original prompt
+
 # HowToFit — surface the Colab entry point on the README, rename chapter 3 to chapter_advanced
 
 Type: docs
