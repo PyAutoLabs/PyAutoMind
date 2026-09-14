@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/howtofit_tutorials_1_3_fixes.md">HowToFit tutorials 1-3: data figure, math rendering, MLE start point</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/57">issue #57</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/howtofit_tutorials_1_3_fixes.md">HowToFit tutorials 1-3: data figure, math rendering, MLE start point</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/57">issue #57</a> — issued 2026-09-14 — awaiting-merge (both PRs open 2026-09-14; merge is human) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/164">PyAutoNerves#164</a>, <a href="https://github.com/PyAutoLabs/HowToFit/pull/58">HowToFit#58</a></summary>
 
 ```
 /start_dev active/howtofit_tutorials_1_3_fixes.md
