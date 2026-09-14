@@ -362,7 +362,9 @@
 - issued: 2026-09-14
 - prompt: active/test_mode_bypass_skips_save_results.md
 - session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1626
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1626
 - worktree: ~/Code/PyAutoLabs-wt/test-mode-bypass-save-results
 - repos:
   - PyAutoFit: feature/test-mode-bypass-save-results
@@ -388,3 +390,14 @@
     `worktree: ~/Code/PyAutoLabs-wt/test-mode-bypass-save-results` and
     `repos:` / `  - PyAutoFit: feature/test-mode-bypass-save-results`, then
     resume at start_library step 4.
+    SHIPPED 2026-09-14 to PR open: commit 461ac836c on
+    feature/test-mode-bypass-save-results, PR #1626 (pending-release). The
+    bypass now calls save_results / save_results_combined between make_result
+    and paths.completed(), ungated by skip_fit_output(). Full suite 2850
+    passed / 2 skipped; targeted -k bypass 18 passed; the new parametrised
+    test fails in both modes with the source change stashed (real falsifier).
+    Witness overview_2_scientific_workflow from the canonical
+    autofit_workspace root: canonical PyAutoFit reproduces the
+    FileNotFoundError, the branch exits 0 and prints science_summary under
+    modes 2 and 3. Workspace impact is option (iii) — no workspace edit.
+    Merge stays human: run /prm when CI is green.
