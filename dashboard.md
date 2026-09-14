@@ -348,7 +348,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking scripts that read their own result…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1624">issue #1624</a> — issued 2026-09-14 — awaiting-input — conflict guard fired on PyAutoFit after the survey; no repo claimed, no worktree created</summary>
+<details><summary>📋 <a href="active/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking scripts that read their own result…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1624">issue #1624</a> — issued 2026-09-14 — library-dev</summary>
 
 ```
 /start_dev active/test_mode_bypass_skips_save_results.md
