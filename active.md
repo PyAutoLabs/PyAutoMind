@@ -5,8 +5,9 @@
 - issued: 2026-09-14
 - prompt: imaging_modeling_fits_guard_split.md
 - session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
-- status: workspace-dev
+- status: awaiting-merge (PR open 2026-09-14; merge is human)
 - worktree: ~/Code/PyAutoLabs-wt/imaging-modeling-fits-guard-split
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/243
 - repos:
   - autogalaxy_workspace: feature/imaging-modeling-fits-guard-split
 - heart-ack: "release validation FAILED (stage integrate); workspace validation not passing (3 failed, cloud#34824535982)"
@@ -20,6 +21,19 @@
     autolens_workspace/scripts/imaging/modeling.py:656-661, and regenerates the
     notebook. Workspace-only; #1626 is already merged.
 - note: "started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict imaging-modeling-fits-guard-split autogalaxy_workspace, exit 0; no active.md entry claims autogalaxy_workspace)."
+- validation: |
+    Control on unfixed main reproduced the CI FileNotFoundError on both legs (script
+    FAIL 16.0s; notebook FAIL 12.6s plus an identical regen-from-source retry FAIL
+    16.3s). Witness on the branch passes both (script PASS 14.7s; notebook PASS
+    10.9s), with files/galaxies.json present and image/ absent - the JSON block runs
+    and the FITS block skips, not a vacuous double-skip. Canonical PyAutoFit was at
+    f243e11 (past #1626) so the control exercised the new bypass behaviour.
+- follow-up: |
+    imaging/modeling.py is still commented out of autogalaxy_workspace smoke_tests.txt
+    ("result.max_log_likelihood_instance fails in PYAUTO_TEST_MODE=2,
+    rhayes777/PyAutoFit#1179"). The script leg passes on this branch, so that disable
+    looks stale; re-enabling it is a candidate prompt, left out of this reason-scoped
+    corrective PR.
 
 ## slam-hst-variant-folders-delaunay-1250
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/5
