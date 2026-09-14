@@ -340,7 +340,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result JSONs and keep SLQ…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/261">issue #261</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result JSONs and keep SLQ…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/261">issue #261</a> — issued 2026-09-14 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/262">autolens_profiling#262</a></summary>
 
 ```
 /start_dev active/profiling_drift_pinned_drift_contract.md

@@ -476,10 +476,11 @@
 - issued: 2026-09-14
 - prompt: active/profiling_drift_pinned_drift_contract.md
 - session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/profiling-drift-pinned-drift-contract
 - repos:
   - autolens_profiling: feature/profiling-drift-pinned-drift-contract
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/262
 - heart-ack: "workspace validation not passing (3 failed, cloud#34824535982); profiling drift x6; release validation incomplete"
 - note: "worktree_check_conflict exits 1 with six autolens_profiling claims (the fixed-light epic: fixed-lens-light-source-only, fixed-light-library-path, fixed-light-hardware, fixed-light-draws, fixed-light-scaling, fixed-light-verdict), all stacked PRs awaiting human merge. Their file sets are disjoint from this task's six files (they add fixed_light* cells, hpc/batch_gpu submit scripts and fixed_light* result artifacts; they do not touch matrix_free.py, the three matrix_free A100 JSONs or the three results/runtime/imaging MGE summaries). Waived on the human's plan approval; this task runs in a fresh parallel worktree cut from origin/main."
 - summary: |
