@@ -537,10 +537,11 @@
 - issued: 2026-09-14
 - prompt: active/scaling_relation_slam_smoke_frame_cap.md
 - session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
-- status: workspace-dev
+- status: awaiting-merge (PR open 2026-09-14; merge is human)
 - worktree: ~/Code/PyAutoLabs-wt/scaling-relation-slam-smoke-frame-cap
 - repos:
   - autolens_workspace: feature/scaling-relation-slam-smoke-frame-cap
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/545
 - heart-ack: "workspace validation not passing (3 failed, cloud#34824535982); profiling drift x6; release validation incomplete"
 - note: "worktree_check_conflict exits 1 on one claim: autolens_workspace is claimed by model-figures-rollout-lens (feature/model-figures-rollout-lens-b, autolens_workspace#542). Its worktree is clean and its 205-file diff contains no slam.py or slam.ipynb path anywhere; the nearest approach is scripts/imaging/features/scaling_relation/modeling.py and notebooks/imaging/features/scaling_relation/modeling.ipynb, the same directories as this task's two files but not the same files, so the file sets are disjoint at file level and no hunk can collide. Waived on the human's plan approval; this task runs in a fresh parallel worktree cut from origin/main - the same call recorded for sed-chain-cpu-route, sersic-variants-analysis and model-figure-prose-simplify."
 - summary: |
