@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 181 |
+| [Backlog](#backlog) (`draft/`) | 183 |
 
 > **No batch in flight.**
 
@@ -556,7 +556,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **33** of them belong to an epic and are listed only under [Epics](#epics) below.
+**183** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 49</summary>
@@ -2459,6 +2459,48 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
+<summary><b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — 1 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — ledger: `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md`</summary>
+
+```
+Continue the 'Fixed lens light on the numba CPU path — the whole programme again, off the GPU' epic. Its canonical state lives in draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: successor to `fixed-lens-light-profiling` (COMPLETE 2026-09-14), filed the same day. Six phases mirroring that epic, worked strictly 0 → 1 → 2 → 3 → 4 → 5 — each phase's grid is chosen from the previous phase's answer; issue ONE at a time, never bulk-issued, and file each phase's own prompt when the campaign reaches it. The open question is real, not a port: phase 2 of the GPU epic found the numpy certified active set does NOT beat the library's own `fnnls`, and both run 1.9-3.6x slower at 8 BLAS threads than at 1 — and the numba production path was never measured at all. Every leg must record its thread settings (`NPROC`, BLAS, numba) and no comparison may cross them silently. Out of scope throughout, as in the GPU epic: JWST and the sparse operator (blocked on `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`). A Fable / Astra campaign.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md">Fixed lens light on the numba CPU path — the whole programme…</a> — autolens_profiling · too-large · human-required · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve</b> — 1 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve</b> — ledger: `draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md`</summary>
+
+```
+Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve' epic. Its canonical state lives in draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: successor to `fixed-lens-light-profiling` (COMPLETE 2026-09-14), filed the same day and named by its verdict. ~21 of the 25.4 ms certified Delaunay A100 call at HST N=1500 is NOT the solver (~13.9 ms mesh/mapper/weights, 4.92 ms the `F + lambda*H` build, 2.38 ms both log-dets); on DelaunayNN it is ~32 of 36 ms. PHASE 1 IS A MEASUREMENT, NOT AN OPTIMISATION: the 13.9 ms is attribution arithmetic across two cells, not a measured decomposition, and the campaign must first build a cell that times the real call's internals in one process and sums to the measured call within a few per cent. Levers ranked: mesh/mapper/weights, then the dense assembly (α≈1.69, overtakes the solve above N≈2500 and so sets the affordable-N ceiling), then the log-dets (re-read the matrix-free CG+SLQ verdict #247 before re-opening those). Inherits the GPU verdict's settled configuration — fp64, budget 7 on Delaunay, PDIP fallback, positivity never dropped — and may not change the answer: every optimisation carries an equivalence pin at ≤ 1e-9. A Fable / Astra campaign.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md">The non-solver residue — optimise the HST GPU likelihood breakdown around…</a> — autolens_profiling · too-large · human-required · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>image-source-mappings</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
@@ -2544,7 +2586,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 
 </details>
 
-30 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+31 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2578,6 +2620,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
+- `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — unknown theme keyword(s): cpu, numba`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
 </details>
