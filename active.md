@@ -301,3 +301,10 @@
 - repos:
   - autofit_assistant: feature/howtofit-mode
 - prompt: active/howtofit_mode.md
+- summary: Local four-file implementation ready and reviewed; shipping held by Heart YELLOW pending human acknowledgement.
+- ship-hold: |
+    Workspace validation: 3 failures (cloud#34824535982).
+    Manifest drift: organism-map 2; public front-door 2.
+    Profiling drift: three matrix_free SLQ fp64 results — delaunay_hpc_a100,
+    delaunay_nn_hpc_a100, rectangular_hpc_a100.
+- next: Acknowledge these Heart YELLOW reasons before ship_workspace; source remains local and uncommitted.
