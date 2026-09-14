@@ -442,3 +442,31 @@
     PyAutoLabs/autofit_workspace — the markdown mirror was not regenerated.
 - next: Two PRs, one per repo. Run /prm ONCE after both are merged — a /prm per
   PR would close #75 and advance the prompt prematurely.
+
+## howtofit-tutorial-followups
+- issue: https://github.com/PyAutoLabs/HowToFit/issues/59
+- issued: 2026-09-14
+- prompt: active/howtofit_tutorials_followups.md
+- session: claude --resume session_0132v5TNVbbvBBESAefHwnwG
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/howtofit-tutorial-followups
+- repos:
+  - HowToFit: feature/howtofit-tutorial-followups
+- parent: howtofit-tutorials-1-3 (HowToFit#57 / #58)
+- note: "Both follow-ups touch files #56 and #58 already modify (#56: tutorial_7_the_details.py, tutorial_optional_bayesian_formalism.py; #58: tutorial_3_non_linear_search.py), so this cannot branch from main without conflicting. Cut from origin/feature/howtofit-tutorials-1-3 and based on it. Merge order: #56 -> #58 -> this. Same HowToFit claim waiver as the parent task (howtofit-mode README-only, disjoint)."
+- summary: |
+    The two follow-ups reported out of HowToFit#57. (A) Finish the math sweep:
+    tutorials 5, 6, 7 and the optional Bayesian formalism tutorial still carry 13
+    `\[ \]` display blocks and 55 `\( \)` inline spans, neither of which Jupyter or
+    Colab typeset. (B) Tutorial 3's __Priors__ block is dead AND wrong: it sets three
+    priors on a model every later fit discards by re-calling af.Model(Gaussian), and
+    normalization Uniform(0, 10) excludes the truth 25 while sigma Uniform(0, 10) puts
+    the truth 10 on the boundary. The fits silently run the config defaults
+    (centre Uniform(0,100), sigma Uniform(0,25), normalization LogUniform(1e-6,1e6)).
+    Design trap: making the block apply changes the parameter space every search
+    explores, and the FIRST, uninitialised MLE fit is supposed to fail — that failure
+    is the MLE section's whole teaching point, and it only fails reliably today because
+    normalization is LogUniform over 12 decades. Decision rule handed to execution:
+    prefer real, meaningful priors, but only if the uninitialised MLE still fails 10/10
+    runs; otherwise keep the explored space semantically equal to the config defaults
+    and make the block honest instead of flaky. Either way the dead code is fixed.

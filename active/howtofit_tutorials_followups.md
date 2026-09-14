@@ -17,6 +17,7 @@ Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-09-14
+Issued: 2026-09-14
 Parent: active/howtofit_tutorials_1_3_fixes.md
 
 ## User request (verbatim)
