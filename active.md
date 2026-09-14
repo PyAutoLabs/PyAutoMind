@@ -471,8 +471,9 @@
 - issued: 2026-09-14
 - prompt: active/howtofit_tutorials_followups.md
 - session: claude --resume session_0132v5TNVbbvBBESAefHwnwG
-- status: workspace-dev
+- status: awaiting-merge (PR open 2026-09-14; merge is human)
 - worktree: ~/Code/PyAutoLabs-wt/howtofit-tutorial-followups
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/60
 - repos:
   - HowToFit: feature/howtofit-tutorial-followups
 - parent: howtofit-tutorials-1-3 (HowToFit#57 / #58)
@@ -493,6 +494,19 @@
     prefer real, meaningful priors, but only if the uninitialised MLE still fails 10/10
     runs; otherwise keep the explored space semantically equal to the config defaults
     and make the block honest instead of flaky. Either way the dead code is fixed.
+    OUTCOME: branch 2, and the trap was worse than flakiness. af.LBFGS() initialises
+    with InitializerBall(0.49, 0.51) - a tight ball on each prior's CENTRE, not a
+    random draw - so normalization Uniform(0, 50) has centre 25.0 = the truth and the
+    "failing" fit succeeded 10/10 at logL 176.1. Measured: config priors fail 10/10,
+    candidate succeeds 10/10, restated defaults fail 10/10 reproducing the baseline
+    local max. Shipped the restated defaults, actually applied; 5 dead
+    af.Model(Gaussian) re-creations removed. Third fix found en route:
+    Analysis.log_likelihood_function in tutorials 3, 4 and 5 read a module-level
+    noise_map global instead of self.noise_map - the class readers are told to copy,
+    which raises NameError outside the tutorial. Smoke 18/18, CI green on all 7 checks.
+    Deferred to draft/bug/howtofit/tutorial_3_uninitialised_emcee_is_flaky.md: the
+    uninitialised Emcee fit does not reliably succeed (pre-existing on main, 10
+    walkers x 200 steps); fixing it trades tutorial runtime and needs a human call.
 
 ## profiling-drift-pinned-drift-contract
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/261
