@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/chapter_1_tutorial_4_and_6_review_feedback.md">HowToFit chapter 1: tutorial 4/6 review feedback (backticks, missing images, T6→T7 moves)</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/61">issue #61</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/chapter_1_tutorial_4_and_6_review_feedback.md">HowToFit chapter 1: tutorial 4/6 review feedback (backticks, missing images, T6→T7 moves)</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/61">issue #61</a> — issued 2026-09-14 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/62">HowToFit#62</a></summary>
 
 ```
 /start_dev active/chapter_1_tutorial_4_and_6_review_feedback.md
@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/colab_setup_missing_dynesty_and_emcee.md">Regression-test the Colab sampler install (code fix shipped in PyAutoNerves#164)</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/165">issue #165</a> — issued 2026-09-14 — library-dev</summary>
+<details><summary>📋 <a href="active/colab_setup_missing_dynesty_and_emcee.md">Regression-test the Colab sampler install (code fix shipped in PyAutoNerves#164)</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/165">issue #165</a> — issued 2026-09-14 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/166">PyAutoNerves#166</a></summary>
 
 ```
 /start_dev active/colab_setup_missing_dynesty_and_emcee.md
