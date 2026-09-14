@@ -244,7 +244,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned log-probabilities</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1628">issue #1628</a> — issued 2026-09-14 — library-dev</summary>
+<details><summary>📋 <a href="active/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned log-probabilities</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1628">issue #1628</a> — issued 2026-09-14 — awaiting-merge (PR open 2026-09-14; merge is human) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1629">PyAutoFit#1629</a></summary>
 
 ```
 /start_dev active/emcee_zeus_samples_log_prob_misalignment.md
