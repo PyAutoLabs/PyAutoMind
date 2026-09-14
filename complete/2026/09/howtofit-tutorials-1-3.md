@@ -1,3 +1,55 @@
+Reader-reported fixes to HowToFit chapter 1, tutorials 1-3, plus the Colab
+dependency bug behind the reader's traceback.
+
+**Tutorial 1.** The Model Parameterization section now opens with the 1D Gaussian
+dataset it describes — errorbar figure, then the equation, then the `Where:` list,
+the order the RTD `python_api` page uses — loaded with the same auto-simulation
+guard tutorials 2 and 3 already used. The model-figure "identical composition"
+paragraph takes the reader's wording verbatim. The Extensibility section, which
+argued that `Model` and `Collection` make models easy to extend and then stopped,
+now composes x2 `Gaussian` + x4 `Exponential` — 18 free parameters in six lines —
+displaying `model.info` and the figure and nothing else. Code references
+backticked; ~10 typos fixed (both equations wrote `I` where the text said `N`,
+`ratw`, the `Exponential.model_data_from` docstring claiming "Returns a 1D
+Gaussian", a `sigma (Exponential)` label printing `rate`, the HowToFit download
+link pointing at `autofit_workspace`).
+
+**Tutorials 1-3.** Display and inline math moved off `\[ \]` / `\( \)` onto
+`$$ $$` / `$ $`. Neither is a default MathJax delimiter in Jupyter, JupyterLab or
+Colab, so the reader was seeing raw LaTeX.
+
+**Tutorial 3 — the MLE fit was broken, not badly initialised.** The reader asked
+for a closer starting point; the starting point was not the cause.
+`af.InitializerParamStartPoints` was keyed on the priors of one
+`af.Model(Gaussian)` while a **freshly constructed** one was passed to
+`search.fit`, so no key matched the model being fitted. PyAutoFit logged
+`Range for centre/normalization/sigma not set ... Using defaults` and started from
+random draws — under that wiring the old 55/20/8 values returned
+`centre=97.14, normalization=521060, sigma=14.27, logL=-9.9e11`. The model is now
+built before the initializer and that same object is fitted; the identical bug in
+the MCMC `InitializerParamBounds` block is fixed too. Start points 52/23/9 against
+a truth of 50/25/10 recover 49.889 / 25.147 / 9.847 at logL 176.83, deterministic
+over six runs — and 45/20/7 and the original 55/20/8 also reach that optimum once
+the wiring is fixed, so the values have margin. The deliberately uninitialised
+first MLE fit still fails, as that section teaches.
+
+**The reader's `ModuleNotFoundError: No module named 'emcee'` was not a HowToFit
+bug.** `emcee>=3.1.6` and `dynesty==2.1.5` are declared `dependencies` of
+`autofit`, but the Colab bootstrap installs the stack with `--no-deps` on the
+premise that Colab ships the scientific stack, and `_SHARED_EXTRAS` named neither.
+Every Colab run of tutorial 3 died at the `af.Emcee` fit and would have died again
+at `af.DynestyStatic` — across all six Colab-enabled projects, since `autofit` is
+in every stack. Fixed in PyAutoNerves; it reaches users on the next `autonerves`
+release, not on merge.
+
+Smoke 18/18 PASS exit 0; CI green on all 7 HowToFit checks and 3 PyAutoNerves
+checks. Heart was YELLOW at ship time, acknowledged by the human for an exact
+reason set none of which touched these repos.
+
+Shipped as two PRs: HowToFit#58 and PyAutoNerves#164.
+
+## Original prompt
+
 # HowToFit tutorials 1-3: data figure, math rendering, MLE start point
 
 Type: docs
