@@ -1,3 +1,78 @@
+The per-figure reading commentary that phase 6 of the `model-figures` epic rolled out
+beside every `af.ModelPlotter` figure is gone. The human's verdict (2026-09-14): it is
+information overload, and the figure should be self-explanatory. Every opener block —
+opener sentence, map/legend paragraph, and all file-specific paragraphs after it —
+now reads exactly:
+
+> The same model can also be visualized as a figure, making its structure easier to
+> understand at a glance.
+>
+> The figure shows how the model is organized: which parameters belong to each
+> component, and whether they are free, fixed, shared, linked by an expression, solved
+> during the fit, or not configured. `model.info` provides the corresponding numerical
+> details, including the prior assigned to each free parameter and the value of each
+> fixed parameter.
+
+## Shipped
+
+29 source files and 21 regenerated notebooks across six repos: PyAutoFit#1627,
+PyAutoGalaxy#617, PyAutoLens#738 (docs only), autofit_workspace#158 (11 scripts),
+HowToFit#56 (9 tutorials), autogalaxy_workspace#241 (1 script). All six branches
+verified merged into `origin/main` with `git branch -r --merged`, not by PR state alone.
+
+A second pass, approved mid-run, stripped the same figure-rendering vocabulary (pills,
+plates, badges, greyed, footer counts) from the shorter notes at later figure sites —
+35 notes rewritten across 14 scripts, 1 deleted outright, plus 7 `.md` pages.
+
+## Kept deliberately
+
+- **15 teaching sentences** that had been mixed into figure commentary, each reworded to
+  stand alone: parameter-space dimensionality in three HowToFit tutorials, the
+  multi-level hierarchy rationale, the shared-`centre`-makes-it-graphical point, the
+  linear-profile `intensity` fact in autogalaxy_workspace.
+- **The EP factor-graph blocks.** Box / pill / edge is standard probabilistic-graphical-
+  model notation, and the state overlay reports per-factor update counts, update age and
+  status — information `graph.info` does not provide. Not the redundancy being removed.
+- **Image `:alt:` text** and `make_figures.py` generator docstrings: describing how a
+  figure looks is the purpose of alt text, and stripping it would degrade screen-reader
+  accessibility.
+- In `PyAutoGalaxy` and `PyAutoLens` `model_cookbook.md` the solved/unconfigured material
+  was **rewritten, not deleted** — a linear profile's `intensity` is solved by the
+  inversion, a `Basis` owns no amplitude of its own, `areas_factor` has no configured
+  prior so the model cannot be fitted until one is supplied. The `## Reading the Figure`
+  section went, along with the cross-reference that pointed at it.
+
+## Traps worth keeping
+
+- **A line-based grep undercounts the census.** The `**map**` token wraps across a line
+  break in two HowToFit tutorials, and `tutorial_4_hierachical_models.py` had a
+  first-figure block with no map/legend paragraph at all. Use a whitespace-flattened
+  per-file search, and match on the `**map**` paragraph rather than the opener — there
+  are ~16 opener variants.
+- **The recorded sphinx baselines are stale.** PyAutoGalaxy records 105 and PyAutoLens
+  134; `main` itself builds 102 and 131 in this environment. The change was verified
+  30/102/131 against same-env `main` builds, not against the recorded numbers.
+- **`worktree_check_conflict` returned a false clean** when passed all six repos in one
+  call, and fired on three of them when called one repo at a time. Loop and call it per
+  repo. The claim it fired on (`howtofit-mode`, one uncommitted `README.md` per repo)
+  was provably disjoint and waived; it merged during the run, so the waiver is now moot.
+- `HowToFit/scripts/chapter_1_introduction/tutorial_1_models.py` is **no longer CRLF** —
+  it is pure LF. A prior session's note said otherwise.
+
+## Gate
+
+Heart was YELLOW at ship time with nine pre-existing reasons — workspace validation
+3 failed (cloud#34824535982), two manifest drifts vs `repos.yaml`, five profiling
+drifts, and a stale "no rehearsal for current source". None touches a file this work
+changes; the human acknowledged them explicitly. 18/18 runnable scripts exit 0, with
+`searches/start_point.py`, `features/expectation_propagation.py` and HowToFit
+`tutorial_5_expectation_propagation.py` edited but not runnable per `no_run.yaml`.
+
+The same standard was applied to autolens_workspace and HowToLens under
+autolens_workspace#542 (phase 6b wave 2), which shipped separately.
+
+## Original prompt
+
 # Model figure prose: replace the map/legend block with two short paragraphs
 
 Type: docs

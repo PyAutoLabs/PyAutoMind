@@ -203,38 +203,6 @@
     Profiling drift: three matrix_free SLQ fp64 results — delaunay_hpc_a100,
     delaunay_nn_hpc_a100, rectangular_hpc_a100.
 - next: Acknowledge these Heart YELLOW reasons before ship_workspace; source remains local and uncommitted.
-## model-figure-prose-simplify
-- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/156
-- issued: 2026-09-14
-- prompt: active/model_figure_prose_simplify.md
-- session: claude --resume session_01LPCvGNHahZqynPyEfMijsb
-- status: PRs OPEN (6), awaiting CI + /prm; Heart YELLOW acknowledged by the human 2026-09-14
-- worktree: ~/Code/PyAutoLabs-wt/model-figure-prose-simplify
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1627
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/617
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/738
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/158
-- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/56
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/241
-- heart-ack: "workspace validation not passing (3 failed, cloud#34824535982); manifest drift: organism-map blocks (generated) - 2 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: public front-door organ tables (generated) - 2 mismatch(es) vs PyAutoMind/repos.yaml; profiling drift: matrix_free delaunay/delaunay_nn/rectangular hpc_a100 fp64 + mge + mge_mass_jax runtime summaries (+1 more); release validation incomplete: no rehearsal for current source"
-- epic: model-figures
-- repos:
-  - autofit_workspace: feature/model-figure-prose-simplify
-  - HowToFit: feature/model-figure-prose-simplify
-  - autogalaxy_workspace: feature/model-figure-prose-simplify
-  - PyAutoFit: feature/model-figure-prose-simplify
-  - PyAutoGalaxy: feature/model-figure-prose-simplify
-  - PyAutoLens: feature/model-figure-prose-simplify
-- note: "worktree_check_conflict fires on autofit_workspace, HowToFit and PyAutoFit, all claimed by task howtofit-mode (autofit_assistant#42, worktree .worktrees/howtofit-mode). That task's entire scope in those three repos is one uncommitted README.md each with no commits ahead of origin/main; this task touches only scripts/, notebooks/ and docs/cookbooks/, so the file sets are disjoint. Waived in a fresh parallel worktree based on origin/main, the same call recorded for sed-chain-cpu-route and sersic-variants-analysis. Trap: worktree_check_conflict returned a false clean when passed all six repos in one call and only fired when passed them one at a time."
-- summary: |
-    Human verdict 2026-09-14: the per-figure reading commentary rolled out by the
-    model-figures epic is information overload and the figure should be
-    self-explanatory. Every map/legend prose block collapses to two fixed
-    paragraphs, with all file-specific trailing prose deleted. This task covers
-    the six unclaimed repos (41 files); autolens_workspace and HowToLens (100
-    files) adopt the same standard by resuming model-figures-rollout-lens
-    (autolens_workspace#542), whose wave 2 is stalled with 13 uncommitted blocks
-    and ~53 sites unwritten.
 
 ## howtofit-tutorials-1-3
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/57
@@ -249,7 +217,7 @@
 - repos:
   - HowToFit: feature/howtofit-tutorials-1-3
   - PyAutoNerves: feature/howtofit-tutorials-1-3
-- note: "worktree_check_conflict exits 1 on HowToFit with two claims. howtofit-mode's scope there is one uncommitted README.md with no commits ahead of origin/main — disjoint, waived (the call already recorded for model-figure-prose-simplify, sed-chain-cpu-route and sersic-variants-analysis). model-figure-prose-simplify (HowToFit#56, open, all checks green) rewrites the same tutorial 1 model-figure paragraphs, so this task does NOT race it: the branch is cut from origin/feature/model-figure-prose-simplify and the PR is opened against that base, so GitHub shows only this task's diff and retargets to main once #56 merges. Merge #56 first. Where the two disagree on the 'identical composition' paragraph, the reader's wording in HowToFit#57 is the newer instruction and wins. PyAutoNerves is unclaimed (exit 0)."
+- note: "worktree_check_conflict exits 1 on HowToFit with two claims. howtofit-mode's scope there is one uncommitted README.md with no commits ahead of origin/main — disjoint, waived (the call already recorded for model-figure-prose-simplify, sed-chain-cpu-route and sersic-variants-analysis). model-figure-prose-simplify (HowToFit#56) rewrote the same tutorial 1 model-figure paragraphs; it MERGED 2026-09-14 and PR #58 has auto-retargeted to main (verified), so that dependency is discharged and the stacking no longer applies. Where the two disagree on the 'identical composition' paragraph, the reader's wording in HowToFit#57 is the newer instruction and wins. PyAutoNerves is unclaimed (exit 0)."
 - summary: |
     Reader-reported fixes to HowToFit chapter 1, tutorials 1-3, launched with
     --auto (docs cap, Difficulty medium -> effective level safe; ends at PR-open).
