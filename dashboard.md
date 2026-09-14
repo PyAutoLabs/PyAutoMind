@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 9 |
+| [In flight](#in-flight) (`active/`) | 10 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 183 |
+| [Backlog](#backlog) (`draft/`) | 182 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 13
+**Highest priority** (filed as `high`)
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/imaging_modeling_fits_guard_split.md">imaging/modeling smoke break: JSON guard fronts a visualizer-only FITS read</a> — issued 2026-09-14</summary>
+<details><summary>📋 <a href="active/imaging_modeling_fits_guard_split.md">imaging/modeling smoke break: JSON guard fronts a visualizer-only FITS read</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/242">issue #242</a> — issued 2026-09-14 — awaiting-merge (PR open 2026-09-14; merge is human) — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/243">autogalaxy_workspace#243</a></summary>
 
 ```
 /start_dev active/imaging_modeling_fits_guard_split.md
@@ -312,6 +312,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/slam_hst_variant_folders_delaunay_1250.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release profile</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/547">issue #547</a> — issued 2026-09-14 — workspace-dev</summary>
+
+```
+/start_dev active/start_here_release_profile_script_cap.md
 ```
 
 </details>
@@ -531,7 +539,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**183** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**182** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 50</summary>
@@ -1458,15 +1466,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 13</summary>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_workspace/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release profile</a> — autolens_workspace · easy · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/autolens_workspace/start_here_release_profile_script_cap.md
-```
-
-</details>
+<summary><b>maintenance</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
@@ -2043,7 +2043,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-14 | issued | <a href="active/slam_hst_variant_folders_delaunay_1250.md">Run-variant folders on the HST SLaM cell, and the Delaunay-1250 A100…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autonerves/colab_setup_missing_dynesty_and_emcee.md">Regression-test the Colab sampler install (code fix shipped in…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
-| 2026-09-14 | filed | <a href="draft/maintenance/autolens_workspace/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release…</a> |
+| 2026-09-14 | issued | <a href="active/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release…</a> |
 | 2026-09-14 | started | <a href="active/fixed_light_numba_phase1_whole_call.md">Numba phase 1 — the whole numba likelihood call on HST, decomposed…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
 
@@ -2557,7 +2557,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-30 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+29 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2588,7 +2588,6 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
-- `draft/maintenance/autolens_workspace/start_here_release_profile_script_cap.md — unknown theme keyword(s): release-validation, ci-timing`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — unknown theme keyword(s): cpu, numba`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
