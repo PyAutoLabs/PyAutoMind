@@ -15,6 +15,8 @@ Consequence: judge
 Witness: `PYAUTO_TEST_MODE=2 python autofit_workspace/scripts/overview/overview_2_scientific_workflow.py` completes and prints the science_summary it wrote; a PyAutoFit unit test asserts the bypass calls save_results / save_results_combined
 Review-minutes: 10
 Filed: 2026-09-14
+Issued: 2026-09-14
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1624
 
 User request (verbatim, 2026-09-14):
 
