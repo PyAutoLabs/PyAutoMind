@@ -225,6 +225,13 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/autonerves-colab-sampler-deps/
 - repos:
   - PyAutoNerves: feature/autonerves-colab-sampler-deps
+- heart-ack: |
+    Human acknowledgement 2026-09-14, live in the slot: PR-open only, merge
+    stays a human act. Covers this launch and task howtofit-tutorial-4-6-feedback
+    (HowToFit#61). Acknowledged reason set, verbatim from pyauto-heart readiness:
+    "autogalaxy_workspace: Smoke Tests failure on main; release validation FAILED (stage integrate); workspace validation not passing (3 failed, cloud#34824535982)"
+    Does not extend to any reason appearing after this point; a new red reason
+    stops the run.
 - summary: |
     The Colab bootstrap installed no `dynesty` and no `emcee`, so every Colab
     notebook running `af.DynestyStatic` or `af.Emcee` died with
@@ -263,6 +270,13 @@
     scripts/, notebooks/ and markdown/ under chapter_1_introduction only. This task
     runs in a fresh parallel worktree branched from freshly-fetched origin/main,
     never off the howtofit-mode worktree's HEAD.
+- heart-ack: |
+    Human acknowledgement 2026-09-14, live in the slot: PR-open only, merge
+    stays a human act. Same acknowledgement as task autonerves-colab-sampler-deps
+    (PyAutoNerves#165). Acknowledged reason set, verbatim from pyauto-heart readiness:
+    "autogalaxy_workspace: Smoke Tests failure on main; release validation FAILED (stage integrate); workspace validation not passing (3 failed, cloud#34824535982)"
+    Does not extend to any reason appearing after this point; a new red reason
+    stops the run.
 - summary: |
     Six pieces of review feedback on HowToFit chapter 1 tutorials 4 and 6.
     Tutorial 4: backtick `log_likelihood_function` and `model_data` (lines
