@@ -3,7 +3,7 @@
 ## start-here-release-profile-script-cap
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/547
 - issued: 2026-09-14
-- prompt: start_here_release_profile_script_cap.md
+- prompt: active/start_here_release_profile_script_cap.md
 - session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/start-here-release-profile-script-cap
@@ -25,7 +25,7 @@
 ## imaging-modeling-fits-guard-split
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/242
 - issued: 2026-09-14
-- prompt: imaging_modeling_fits_guard_split.md
+- prompt: active/imaging_modeling_fits_guard_split.md
 - session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
 - status: awaiting-merge (PR open 2026-09-14; merge is human)
 - worktree: ~/Code/PyAutoLabs-wt/imaging-modeling-fits-guard-split
