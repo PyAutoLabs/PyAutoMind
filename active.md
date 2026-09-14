@@ -118,7 +118,21 @@
 - issued: 2026-09-13
 - prompt: active/model_figures_6b_lens_surfaces.md
 - session: claude --resume session_01DLx38vS6F1M7K5LnpVbeZ7
-- status: wave 1 MERGED (HowToLens#81, autolens_workspace#543); wave 2 RESUMED 2026-09-14 under a changed prose standard — autolens_workspace PR B on feature/model-figures-rollout-lens-b (sweep + rollout, two commits), HowToLens prose sweep on feature/model-figure-prose-lens
+- status: wave 1 MERGED (HowToLens#81, autolens_workspace#543); wave 2 PRs OPEN 2026-09-14 under the changed prose standard — autolens_workspace#546 (4 commits: sweep, rollout, regen, later-site strip), HowToLens#83 (3 commits); awaiting CI + /prm, then the record (5 PRs across both waves)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/546
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/83
+- heart-ack: "workspace validation not passing (3 failed, cloud#34824535982); manifest drift: organism-map blocks (generated) - 2 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: public front-door organ tables (generated) - 2 mismatch(es) vs PyAutoMind/repos.yaml; profiling drift: matrix_free delaunay/delaunay_nn/rectangular hpc_a100 fp64 + mge + mge_mass_jax runtime summaries (+1 more); release validation incomplete: no rehearsal for current source"
+- verification: |
+    Headless 96/102 autolens_workspace scripts exit 0; all 12 HowToLens tutorials pass.
+    The 6 failures are pre-existing: JAX RESOURCE_EXHAUSTED of 26-81 GB inside Nautilus
+    likelihood evaluation on a 15 GB machine (multi_galaxy/group/imaging/multi_dataset
+    pixelization), plus cluster/lenstool missing dataset/cluster/smacs0723. None of the 6
+    files carries a non-prose code change; two carry no code change at all.
+    TRAP: multi_galaxy/features/pixelization/delaunay.py and multi_galaxy/start_here.py
+    are NOT failures - delaunay OOMed only under contention from two concurrent
+    verification runs (passes solo in 75s), and start_here needs TEST_MODE=2 (54s) where
+    a 900s TEST_MODE=1 cap times out.
+
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-rollout-lens
 - epic: model-figures phase 6b
 - release-gate: PyAutoFit
