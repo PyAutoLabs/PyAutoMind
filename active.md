@@ -440,6 +440,9 @@
     branch, belonging to it and not to this task:
     markdown/chapter_1_introduction/tutorial_1_models.md:104 still reads
     PyAutoLabs/autofit_workspace — the markdown mirror was not regenerated.
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/76 (2 commits: 1bd588a fix, a3469f9 markdown rebuild)
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/82 (a5d9430)
+- status: both PRs OPEN 2026-09-14, awaiting CI + human merge
 - heart-ack: |
     Acknowledged by the human 2026-09-14 for exactly these reasons, no others:
     "workspace validation not passing (3 failed, cloud#34824535982: autofit
