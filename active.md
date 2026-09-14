@@ -354,8 +354,9 @@
 - issued: 2026-09-14
 - prompt: active/emcee_zeus_samples_log_prob_misalignment.md
 - session: claude --resume session_0132v5TNVbbvBBESAefHwnwG
-- status: library-dev
+- status: awaiting-merge (PR open 2026-09-14; merge is human)
 - worktree: ~/Code/PyAutoLabs-wt/emcee-log-prob-alignment
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1629
 - repos:
   - PyAutoFit: feature/emcee-log-prob-alignment
 - note: "worktree_check_conflict exits 1 on PyAutoFit with two claims, both waived as disjoint: howtofit-mode holds one uncommitted README.md, and model-figure-prose-simplify (PyAutoFit#1627) touches only docs/cookbooks/*.md and docs/features/graphical.md. This task touches autofit/non_linear/search/mcmc/{emcee,zeus}/search.py and test_autofit/ only. Fresh worktree from origin/main."
@@ -380,4 +381,19 @@
     pinning a number - validated by reverting the fix and confirming the test fails.
     Blast radius: moves the reported max-likelihood of every existing Emcee/Zeus
     fit. They were wrong before, so this is a correction, but it will move pinned
-    values.
+    values - swept, and NONE exist in PyAutoFit or autofit_workspace, so nothing
+    else moved.
+    SHIPPED PyAutoFit#1629, CI green (4/4: unittest 3.12, 3.13, nojax, docs-build);
+    full suite 2852 passed / 2 skipped. Judgment tier verified independently, not
+    just from the subagent report: read the diff, re-ran the reproduction against
+    the patched library (3 trials, worst |delta| exactly 0.000e+00 vs 0.129 before)
+    and re-ran the revert-check by hand (test PASSES with fix, FAILS with the bug
+    restored). Zeus fixed in the same PR, including its empty-chain fallback which
+    now resets discard=0/thin=1. Both searches raise exc.SamplesException on a
+    length mismatch, replacing Zeus's silent zip() truncation.
+    Follow-ups filed, deliberately NOT bundled (both change values/behaviour rather
+    than correcting a misalignment):
+    draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md - thin can be 0
+    (ValueError: slice step cannot be zero) and check_size=100 raises IndexError on
+    chains shorter than 100, which is always true under PYAUTO_TEST_MODE=1; Zeus
+    guards it, Emcee does not.
