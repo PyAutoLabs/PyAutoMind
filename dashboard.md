@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 14 |
+| [In flight](#in-flight) (`active/`) | 15 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 179 |
+| [Backlog](#backlog) (`draft/`) | 178 |
 
 > **No batch in flight.**
 
@@ -138,14 +138,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking scripts that read their own result…</a> — autofit · easy · supervised · high</summary>
-
-```
-/start_dev draft/bug/autofit/test_mode_bypass_skips_save_results.md
 ```
 
 </details>
@@ -352,6 +344,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/simulator_from_result_linear_intensities.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking scripts that read their own result…</a> — issued 2026-09-14</summary>
+
+```
+/start_dev active/test_mode_bypass_skips_save_results.md
 ```
 
 </details>
@@ -571,10 +571,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**179** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
+**178** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 47</summary>
+<summary><b>bug</b> — 46</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -612,14 +612,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking scripts that read their own result…</a> — autofit · easy · supervised · high</summary>
-
-```
-/start_dev draft/bug/autofit/test_mode_bypass_skips_save_results.md
 ```
 
 </details>
@@ -2057,7 +2049,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-14 | issued | <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> |
-| 2026-09-14 | filed | <a href="draft/bug/autofit/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking…</a> |
+| 2026-09-14 | issued | <a href="active/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | issued | <a href="active/model_figure_prose_simplify.md">Model figure prose: replace the map/legend block with two short…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/workspaces/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the…</a> |
@@ -2556,7 +2548,7 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 
 </details>
 
-27 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+26 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2570,7 +2562,6 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
 - `draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md — unknown theme keyword(s): serialization`
-- `draft/bug/autofit/test_mode_bypass_skips_save_results.md — unknown theme keyword(s): test-mode, workspace-smoke`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
