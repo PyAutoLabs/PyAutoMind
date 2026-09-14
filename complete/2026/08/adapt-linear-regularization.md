@@ -5,7 +5,7 @@
 - what shipped: new regularization classes `AdaptPower`, `AdaptSplitPower`, `AdaptSplitZerothPower`, `MaternAdaptPowerKernel` (new modules — autonerves keys prior config by module.Class ↔ yaml filename, so same-module siblings would silently inherit the legacy config) with `power: float = 1.0` (effective coefficient exponent 2·power; `power=2.0` reproduces legacy bit-identically; declared `type: Constant, value: 1.0` in priors so never sampled) AND a single-scatter weighted graph Laplacian builder (edge weight 0.5·(w_i²+w_j²), symmetric, PD under non-uniform weights, numpy/JAX bit-identical, jit+grad finite) so `AdaptPower(inner=outer=c) == Constant(c)` (≤1.4e-14) and `AdaptSplitPower == ConstantSplit` (bit-identical). Legacy `Adapt*` classes, utils, numerics and identifiers untouched (human decision: identifiers/outputs/aggregator reloads must stay valid). Legacy characterised: λ⁴ (c=2 → 64 vs Constant 8) and factor-2 scatter (Adapt(1) diag = 2× Constant(1)).
 - why: the λ⁴ + LogUniform(1e-6,1e6) prior drives the regularization matrix non-PD from c≈1e4 → finite-garbage log_l floods (RAL 341908_5) and gradient NaNs. `*Power` is the gradient-safe convention for new work; migration c_new = c_old**2.
 - validation: Array 1358 / Galaxy 1152 / Lens 572 (+1 xfail); 21 new PyAutoArray tests (JAX parity behind importorskip) + 3 + 3 downstream; CI green on all three repos (Heart lib-tests clones deps at the matching branch name, so downstream went green pre-merge).
-- mind: PROBE `probe-adapt-double-square-coefficient` answered + retired; filed `draft/bug/autoarray/adapt_scatter_factor_two.md` (note: legacy carries it, *Power fixes it) and `draft/feature/autoarray/adapt_linear_default_flip.md` (deferred breaking default flip).
+- mind: PROBE `probe-adapt-double-square-coefficient` answered + retired; filed `draft/bug/autoarray/adapt_scatter_factor_two.md` (note: legacy carries it, *Power fixes it; retired 2026-09-14 into this record, see below) and `draft/feature/autoarray/adapt_linear_default_flip.md` (deferred breaking default flip).
 - heart-ack: shipped + merged under human-authorised YELLOW ("merge", 2026-08-29) — same two reasons, unrelated.
 - follow-up: autolens_profiling Wave B switches the free-AdaptSplit targets to `AdaptSplitPower` with coefficient priors capped at 1e4 (target_ids change).
 
@@ -111,3 +111,83 @@ contradicting its own docstring's "numerically identical to
 `c_new = c_old ** 2` — an `AdaptPower` coefficient of `c` reproduces a legacy
 `Adapt` coefficient of `sqrt(c)` (up to the factor-2 scatter, which the new
 class also removes; `AdaptPower(power=2.0)` is the byte-exact legacy path).
+
+## Original prompt — adapt_scatter_factor_two (note)
+
+Retired 2026-09-14: a documented legacy property, not open work — the `Adapt`
+double-scatter was fixed in the new `*Power` family by PyAutoArray#512 (merged
+2026-08-29) and the legacy docstrings corrected the same day.
+
+# NOTE: legacy `Adapt` scatters every edge twice — it is 2× `Constant`, not equal to it
+
+Type: bug
+Target: autoarray
+Repos:
+- @PyAutoArray
+Themes:
+- pixelization
+Difficulty: small
+Autonomy: supervised
+Priority: low
+Status: documented — NOT an open bug (fixed in the `*Power` classes, 2026-08-29)
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
+Filed: 2026-08-29
+
+## What this is
+
+A **note**, not an open task. The asymmetry described below is real, is now
+documented in the legacy docstrings, and is **fixed in the new `AdaptPower`
+family** shipped by `feature/autoarray/adapt_linear_regularization.md`. The
+legacy classes deliberately keep it so that stored identifiers, outputs and
+aggregator reloads stay valid.
+
+## The asymmetry
+
+`autoarray/inversion/regularization/adapt.py::weighted_regularization_matrix_from`
+scatters **both** ordered directions of every mesh edge:
+
+```python
+mat[I, I] += w_ij;  mat[J, J] += w_ij
+mat[I, J] -= w_ij;  mat[J, I] -= w_ij
+```
+
+Because the neighbor list already contains each unordered edge `{i, j}` twice
+(once in row `i`, once in row `j`), each edge lands **four** times. `Constant`
+scatters each ordered pair once (`constant.py`: `diag = 1e-8 + c²·n_i`,
+`mat[i, neighbors[i]] -= c²`).
+
+**twice** the `Constant` matrix of the same coefficient (up to the shared
+`1e-8` diagonal floor). Verified on PyAutoArray `main`, 4-connected 3×3 mesh,
+`inner = outer = 1`:
+
+```
+Adapt diag  [4.00000001 6.00000001 4.00000001 ...]
+Const diag  [2.00000001 3.00000001 2.00000001 ...]
+ratio       [2. 2. 2. ...]         # off-diagonals too: -2.0 vs -1.0
+```
+
+This contradicts the `Adapt` / `AdaptSplit` / `MaternAdaptKernel` docstrings,
+which claimed the defaults `inner_coefficient == outer_coefficient == 1.0`
+make the scheme "numerically identical to `Constant(coefficient=1.0)`". Those
+docstrings were corrected on 2026-08-29.
+
+The **split** family does not carry the asymmetry: `AdaptSplit` and
+`ConstantSplit` share `regularization_util.pixel_splitted_regularization_matrix_from`,
+so their only difference is the coefficient exponent.
+
+## Why it is not being fixed in place
+
+Changing `weighted_regularization_matrix_from` would halve the effective
+regularization of every `Adapt` fit ever run, invalidating stored results and
+the coefficient scale of every published/ledgered adaptive run. The corrected
+construction lives in
+`weighted_regularization_matrix_single_scatter_from` and is used only by the
+new `AdaptPower` class, where `AdaptPower(inner=outer=c) == Constant(c)`
+exactly (a test asserts it).
+
+## If this ever becomes actionable
+
+It folds into `draft/feature/autoarray/adapt_linear_default_flip.md` — the
+deferred breaking decision to make the `*Power` classes the defaults.

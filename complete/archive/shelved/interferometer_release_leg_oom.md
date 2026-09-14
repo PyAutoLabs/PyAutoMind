@@ -50,7 +50,7 @@ jobs passed (imaging 49m green, cluster, multi_galaxy, weak, autogalaxy, autofit
 ## It also hit the night before, in BOTH workspaces (added 2026-08-04)
 
 Reviewing the eight-night blocked streak
-(`draft/triage/nightly_release_blocked_eight_nights.md`) surfaced an earlier
+(`complete/2026/08/nightly-release-blocked-streak.md`) surfaced an earlier
 occurrence that the 07-31 filing above missed, because its error message was
 truncated. PyAutoHeart run 30516167217 (2026-07-30) failed **two** interferometer
 shards:

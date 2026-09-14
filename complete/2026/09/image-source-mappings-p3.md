@@ -6,7 +6,7 @@
 - workspace-pr: HowToGalaxy https://github.com/PyAutoLabs/HowToGalaxy/pull/72 (head `2200753d`, merge `85c08b44`) — label `pending-release`
 - workspace-pr: autogalaxy_workspace https://github.com/PyAutoLabs/autogalaxy_workspace/pull/232 (head `efb21d9e`, merge `c14de5b7`) — label `pending-release`
 - classification: docs (workspace) — epic `image-source-mappings`, phase 3 of 3 (ledger
-  `draft/feature/autoarray/image_source_mappings_epic.md`). Fable session; execution delegated to Opus
+  `complete/archive/epics/image_source_mappings_epic.md`, retired 2026-09-14). Fable session; execution delegated to Opus
   (subagent A autolens_workspace, subagent B the other three repos, split by repo so no git index was shared).
 - ci: every workflow run for each head sha completed/success — autolens_workspace `Smoke Tests` (3.12 + 3.13),
   `Navigator Check`, `Script Size Guard`; HowToLens / HowToGalaxy `Smoke Tests`, `Tutorials Complete`,

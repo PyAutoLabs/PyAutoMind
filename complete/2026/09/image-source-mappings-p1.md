@@ -3,7 +3,7 @@
 - completed: 2026-09-02
 - library-pr: PyAutoArray https://github.com/PyAutoLabs/PyAutoArray/pull/517 (head `36b75e07`, merge `501c373fdb0f1cd0545ccdc593b2f74d35fbac0d`) — label `pending-release`
 - classification: feature (library) — epic `image-source-mappings`, phase 1 of 3 (ledger
-  `draft/feature/autoarray/image_source_mappings_epic.md`). Fable session; execution delegated to Opus.
+  `complete/archive/epics/image_source_mappings_epic.md`, retired 2026-09-14). Fable session; execution delegated to Opus.
 - ci: `Tests` — one workflow run, all 3 legs green (`3.12`, `3.13`, `nojax`). Local
   `pytest test_autoarray` — 1382 passed.
 - heart-ack (carried from the `active.md` entry): "PyAutoArray: open PR 10d old"; "release validation

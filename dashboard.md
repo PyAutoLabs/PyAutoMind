@@ -44,9 +44,9 @@ anything you could not verify.
 |-------|------:|
 | [In flight](#in-flight) (`active/`) | 12 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
-| [Parked](#parked) (`parked.md`) | 3 |
+| [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 180 |
+| [Backlog](#backlog) (`draft/`) | 176 |
 
 > **No batch in flight.**
 
@@ -142,20 +142,12 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 98
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 95
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
 ```
 /start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
 ```
 
 </details>
@@ -236,6 +228,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md
 ```
 
 </details>
@@ -475,12 +475,12 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 Started or scoped, not currently in flight — resume by moving the row back to `active.md`. Full detail in [`parked.md`](parked.md).
 
 <details>
-<summary><b>3</b> task(s)</summary>
+<summary><b>2</b> task(s)</summary>
 
 <details><summary>📋 <b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a> — parked 2026-08-18</summary>
 
 ```
-/start_dev active/12_single_source_density_refactor.md
+/start_dev draft/bug/priors/12_single_source_density_refactor.md
 ```
 
 </details>
@@ -488,15 +488,7 @@ Started or scoped, not currently in flight — resume by moving the row back to 
 <details><summary>📋 <b>prior-message-collapse-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a> — parked 2026-08-18</summary>
 
 ```
-/start_dev active/13_collapse_prior_and_message.md
-```
-
-</details>
-
-<details><summary>📋 <b>pyautoreduce-slacs1430-acs-comparison</b> — parked 2026-08-08</summary>
-
-```
-/start_dev active/pyautoreduce_slacs1430_acs_comparison.md
+/start_dev draft/bug/priors/13_collapse_prior_and_message.md
 ```
 
 </details>
@@ -554,10 +546,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**180** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**176** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 45</summary>
+<summary><b>bug</b> — 46</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -847,6 +839,22 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/priors/12_single_source_density_refactor.md"><code>@PyAutoFit</code> Refactor: each density should live in one place, not three</a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/12_single_source_density_refactor.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/priors/13_collapse_prior_and_message.md"><code>@PyAutoFit</code> Refactor: collapse the <code>Prior</code> / <code>Message</code> two-layer hierarchy</a> — priors · too-large · supervised · normal</summary>
+
+```
+/start_dev draft/bug/priors/13_collapse_prior_and_message.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/priors/14_replace_transform_stack_with_bijectors.md"><code>@PyAutoFit</code> Refactor: replace hand-rolled <code>AbstractDensityTransform</code> with <code>tfp.bijectors</code> / <code>numpyro.distributions.transforms</code></a> — priors · too-large · supervised · normal</summary>
 
 ```
@@ -859,14 +867,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> — autoarray · small · supervised · low</summary>
-
-```
-/start_dev draft/bug/autoarray/adapt_scatter_factor_two.md
 ```
 
 </details>
@@ -1300,7 +1300,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 17</summary>
+<summary><b>docs</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
@@ -1362,14 +1362,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
 ```
 
 </details>
@@ -1441,7 +1433,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 13</summary>
+<summary><b>maintenance</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
@@ -1511,14 +1503,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md">Phase 3: stop installing pynufft in Hands/Heart CI and PyAutoCTI install docs</a> — workspaces · low · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md
 ```
 
 </details>
@@ -1643,7 +1627,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>test</b> — 7</summary>
+<summary><b>test</b> — 6</summary>
 
 <details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
 
@@ -1657,14 +1641,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/test/autolens_workspace/no_untimed_network_downloads_check.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest smoke script in the organism (61 s)</a> — autocti_workspace · medium · supervised · normal</summary>
-
-```
-/start_dev draft/test/autocti_workspace/imaging_ci_start_here_61s.md
 ```
 
 </details>
@@ -1704,7 +1680,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>triage</b> — 4</summary>
+<summary><b>triage</b> — 3</summary>
 
 <details><summary>📋 <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> — autolens · medium · human-required · medium</summary>
 
@@ -1718,14 +1694,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/triage/convolver_blurring_image_warning.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/triage/nightly_release_blocked_eight_nights.md">Nightly release has been blocked 8 nights running — triage the streak</a> — medium · supervised · normal</summary>
-
-```
-/start_dev draft/triage/nightly_release_blocked_eight_nights.md
 ```
 
 </details>
@@ -1798,18 +1766,17 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pixelization</b> — 4 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>pixelization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'pixelization' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'pixelization' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/refactor/autoarray/matern_vendor_bessel_kve.md
 - draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
-- draft/bug/autoarray/adapt_scatter_factor_two.md
-- draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md
+- draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1826,8 +1793,7 @@ Contract (the `start_bundle` skill is the full body):
 |--------|------|------------|----------|--------|
 | <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the…</a> | autoarray | large | medium | formalised |
 | <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate…</a> | autoarray | medium | normal | formalised |
-| <a href="draft/bug/autoarray/adapt_scatter_factor_two.md">NOTE: legacy <code>Adapt</code> scatters every edge twice — it is 2× <code>Constant</code>…</a> | autoarray | small | low | documented — NOT an open bug (fixed in… |
-| <a href="draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md">Rectangular mesh Enzi citation — user-workspace pixelization examples</a> | workspaces | small | normal | formalised |
+| <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> | workspaces | medium | normal | draft |
 
 </details>
 
@@ -2033,7 +1999,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 28 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 27 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2101,7 +2067,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-06 | filed | <a href="draft/test/autocti_workspace/imaging_ci_start_here_61s.md">autocti_workspace imaging_ci/modeling/start_here.py: the slowest…</a> |
 | 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
@@ -2111,6 +2076,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-04 | filed | <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-09-03 | filed | <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> |
+| 2026-09-03 | filed | <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> |
 
 </details>
 
@@ -2374,35 +2340,6 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 </details>
 
 <details>
-<summary><b>Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide</b> — 2 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide</b> — ledger: `draft/feature/autoarray/image_source_mappings_epic.md` — phase 1 SHIPPED 2026-09-02 — PyAutoArray#517 merged, issue #515 closed, record <code>complete/2026/09/image-source-mappings-p1.md</code>…</summary>
-
-```
-Continue the 'Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide' epic. Its canonical state lives in draft/feature/autoarray/image_source_mappings_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: three phase prompts — Phase 1 PyAutoArray (`Mapping`/`ImageRegion` objects, `Inversion.source_clumps_from`, `regions=` overlay on `plot_array`/`plot_inversion_reconstruction`, restored `subplot_mappings`), Phase 2 PyAutoLens (ShapeSolver as the parametric engine + validation suite, `autolens/lens/mappings.py`, fit-level `subplot_mappings`, brightest multiple-image positions for spectroscopic follow-up), Phase 3 workspace (`guides/mappings.py`, tutorial_2_mappers rewrite with polygons, dead index-section fixes). Library-first; issue ONE phase at a time. Proceeds alongside ci-timing-fast-tests by user decision (2026-09-02).
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
-
-```
-/start_dev draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/image_source_mappings_epic.md">Image ↔ source plane mappings — regions, clumps, <code>subplot_mappings</code>, ShapeSolver validation, guide…</a> — autoarray · too-large · supervised · high</summary>
-
-```
-/start_dev draft/feature/autoarray/image_source_mappings_epic.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — ledger: `draft/feature/autofit/model_figures_epic.md`</summary>
@@ -2485,6 +2422,19 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 </details>
 
 <details>
+<summary><b>image-source-mappings</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
+
+```
+/start_dev draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>numba-interferometer-revisit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_numba_library_dispatch_insitu.md">Re-measure the numba interferometer crossover in situ, through the library dispatch</a> — autolens_profiling · medium · supervised · medium</summary>
@@ -2508,13 +2458,12 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 
 </details>
 
-130 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
-- `draft/feature/autoarray/image_source_mappings_epic.md`
 - `draft/feature/autoarray/multiwavelength_inversion.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/ep_analytic_updates.md`
@@ -2552,8 +2501,9 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/feature/workspaces/model_figures_6b2_slam_stages.md`
-- `draft/bug/autoarray/adapt_scatter_factor_two.md`
-- _… and 90 more_
+- `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
+- `draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md`
+- _… and 87 more_
 
 </details>
 

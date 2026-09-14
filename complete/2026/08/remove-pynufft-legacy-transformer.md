@@ -8,8 +8,8 @@
   public class is not behaviour-preserving.
 - follow-ups (own records): `complete/2026/08/pynufft-removal-residue-phase-1.md`,
   `complete/2026/08/pynufft-removal-residue-phase-2.md`,
-  `complete/2026/08/pynufft-scipy-pinv2-dev-extra.md`; phase 3 is still open as
-  `draft/maintenance/workspaces/pynufft_removal_downstream_residue_phase_3_ci_install_docs.md`.
+  `complete/2026/08/pynufft-scipy-pinv2-dev-extra.md`,
+  `complete/2026/08/pynufft-removal-residue-phase-3.md`.
 - corrections the implementation put on the record (the 2026-08-19 filing had both
   facts wrong): pynufft was never a base dependency — it sat in the `optional` and
   `dev` extras, so a plain `pip install autoarray` already raised

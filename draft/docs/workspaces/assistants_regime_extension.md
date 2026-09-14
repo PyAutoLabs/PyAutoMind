@@ -10,7 +10,7 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: low
-Status: in progress — autolens_assistant leg shipped 2026-07-25 (autolens_assistant#91); autogalaxy leg deferred until the autogalaxy packages exist
+Status: in progress — autolens_assistant leg shipped 2026-07-25 (autolens_assistant#91); autogalaxy leg UNBLOCKED and still undone (2026-09-14: `autogalaxy_assistant/` now exists, but carries no regime routing)
 Consequence: notify
 Witness: `wiki/core/external/skill_citation_map.md` carries a multi_galaxy row, so a two-deflector request routes to the multi_galaxy workflow instead of `group/start_here.py`; and each flagship system named in the parent plan's literature section has a `wiki/literature/` page following that schema. The autogalaxy-assistant leg stays out of scope until those packages exist.
 Review-minutes: 0

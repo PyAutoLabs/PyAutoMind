@@ -4,7 +4,7 @@
 - library-pr: PyAutoArray https://github.com/PyAutoLabs/PyAutoArray/pull/518 (head `a9a9120a`, merge `c9f67e78`) — label `pending-release`
 - library-pr: PyAutoLens https://github.com/PyAutoLabs/PyAutoLens/pull/720 (head `c376f103`, merge `091fbdff`) — label `pending-release`
 - classification: feature (library) — epic `image-source-mappings`, phase 2 + 2a of 3 (ledger
-  `draft/feature/autoarray/image_source_mappings_epic.md`). Fable session; execution delegated to Opus.
+  `complete/archive/epics/image_source_mappings_epic.md`, retired 2026-09-14). Fable session; execution delegated to Opus.
 - ci: PyAutoLens `Tests` all 3 legs green plus `Docs` green on head `c376f103`; PyAutoArray `Tests` green on `a9a9120a`.
   Local: PyAutoArray 1410 passed; PyAutoLens 610 passed + 1 xfailed.
 - heart-ack (carried from the `active.md` entry): "PyAutoArray: open PR 10d old"; "release validation

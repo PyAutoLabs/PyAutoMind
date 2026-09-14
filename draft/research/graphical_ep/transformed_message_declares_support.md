@@ -64,7 +64,7 @@ Worth answering, in this order:
 
 ## Related
 
-- `active/13_collapse_prior_and_message.md` — the standing task on the
+- `draft/bug/priors/13_collapse_prior_and_message.md` — the standing task on the
   Prior/Message split this sits inside. Read it first; this may be a sub-question
   of it rather than its own task.
 - `complete/2026/08/transformed-message-semantics-doc.md`.

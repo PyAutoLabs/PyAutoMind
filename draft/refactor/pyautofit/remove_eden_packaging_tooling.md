@@ -11,7 +11,7 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: PARTIALLY SHIPPED — the module is gone, `eden.yaml` is not (2026-08-09)
+Status: PARTIALLY SHIPPED — the module is gone, `eden.yaml` is not (2026-08-09); 2026-09-14: the remainder is the single file `PyAutoFit/eden.yaml` — the PyAutoNerves leg has no target (`scripts/edenise.py` does not exist, no `edenise` reference survives there)
 Consequence: judge
 Review-minutes: 20
 Unattended: ready

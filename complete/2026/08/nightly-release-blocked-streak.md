@@ -1,3 +1,58 @@
+Triage of the 2026-07-28 → 2026-08-04 blocked-nightly streak. Not a single shipped
+PR — a triage ledger that split into four named remainders, all four since
+discharged. Recorded retroactively; date is the last remainder to clear
+(2026-08-27).
+
+- prs: none of its own. Its findings shipped as PyAutoBrain#196 MERGED 2026-08-04
+  ("fix(nightly): separate 'blocked at a gate' from 'driver broke', fix the page
+  detail") and through the four remainders below.
+
+## The two findings that mattered
+
+1. **The red was a signal, not a broken workflow.** `agents/conductors/release/nightly.sh`
+   exits 2 when it stops, so a night where the gate *correctly* refused to release
+   rendered as a red workflow run — and a channel that is red whenever it works
+   properly trains its audience to ignore it. That is why eight nights went
+   unnoticed. **Answered by PyAutoBrain#196** (merged the same day the streak was
+   filed): blocked-at-a-gate is now rendered separately from driver-broke.
+2. **Two distinct failure classes, not one streak.** Class A (6 nights) stopped at
+   step 4b, Stage 3 release-fidelity integration, on a *rotating* script — the four
+   nights with no script in the Brain summary line did name it in the dispatched
+   PyAutoHeart run. Class B (2 nights) is the serious one: the readiness gate said
+   GREEN, a live release was dispatched, and the release run failed.
+
+## Every remainder discharged
+
+The prompt's own "What is actually left" list, checked 2026-09-14:
+
+| Remainder | Disposition |
+|---|---|
+| `draft/bug/autofit/covariance_interpolator_test_unseeded_rng.md` (Class B root cause) | SHIPPED — `complete/2026/08/covariance-interpolator-rng-seed.md`, PyAutoFit#1451 merged 2026-08-05. The 2026.8.2.1 live-release death was one flaky test at 1.65%/2000 runs. |
+| `draft/bug/autolens/interferometer_release_leg_oom.md` | Already struck through in the prompt — retired 2026-08-27 to `complete/archive/shelved/`; its live half shipped as PyAutoHeart#187. |
+| `draft/bug/autofit/graphical_ep_nan_likelihood_release_leg.md` | ABSORBED 2026-08-05 into `complete/2026/08/ep-initializer-exception-should-not-abort.md` (that record names the absorption at its line 243). |
+| autolens_workspace_test#245 (delaunay hang) | Tracked elsewhere; the prompt itself says "no action here". |
+| "Confirm on 08-05 that Check D self-healed and PyAutoBrain#196 renders the night correctly" | #196 merged 2026-08-04. Check D self-healed as predicted: the 2026.8.4.1 wheels carry the floors (`autofit>=2026.7.29.2`, `autoarray>=2026.7.29.2`, `autogalaxy>=2026.7.29.2`). |
+
+## Verification that the streak is over
+
+`gh run list -R PyAutoLabs/PyAutoBrain --workflow="Nightly Release" -L 12` on
+2026-09-14: **12 consecutive `success` nights**, 2026-09-03 → 2026-09-14. No
+blocked night in the window.
+
+## The finding worth keeping
+
+The Class B result **weakened**, rather than justified, the gate-vs-release
+redesign it looked like evidence for (PyAutoHands#161's validation-gate half):
+the gate was not wrong. The release run simply drew a different random sample from
+a flaky test. Before redesigning a gate because "GREEN then the release failed",
+measure the failure rate of the thing that actually failed.
+
+Also standing, from the prompt: **do NOT convert this into a manual release
+drive** — `AUTONOMY.md` forbids converting a manual release into the
+scheduled-nightly exception.
+
+## Original prompt
+
 # Nightly release has been blocked 8 nights running — triage the streak
 
 Type: triage

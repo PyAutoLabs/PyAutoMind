@@ -16,7 +16,7 @@ Themes:
 Difficulty: low-medium
 Autonomy: supervised
 Priority: normal
-Status: split (phases 1-2 SHIPPED 2026-08-23; phase 3 open)
+Status: phases 1-3 SHIPPED; autogalaxy_workspace markdown/ residue open
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
@@ -153,6 +153,9 @@ library source changes are involved:
    Record: complete/2026/08/pynufft-removal-residue-phase-2.md
 3. `pynufft_removal_downstream_residue_phase_3_ci_install_docs.md`
    — @PyAutoHands, @PyAutoHeart, @PyAutoCTI; CI recipes + install doc.
+   **SHIPPED 2026-08-23** — @PyAutoHands `736abfe`, @PyAutoHeart `fedcd91`,
+   @PyAutoCTI `28c84710`; issue @PyAutoHands#258 closed.
+   Record: complete/2026/08/pynufft-removal-residue-phase-3.md
 
 The Brain Feature Agent graded the unsplit prompt `too-large` (score 33) and
 proposed a 4-phase `design / core_api / workspace_examples / docs` template with

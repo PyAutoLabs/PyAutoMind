@@ -18,7 +18,10 @@ Successors that built on this default: `numba-cpu-*` epic records and `numba-hst
 ## Left open (not blocking retirement)
 
 - `autolens_workspace_test/config/priors/mesh/rectangular.yaml` still keys `RectangularAdaptDensity:` / `RectangularAdaptImage:` — a stale orphan prior file for classes that no longer exist (the _test scripts run on the renamed yamls). Hygiene sweep candidate (`project_hygiene_orphan_config_files`).
-- The Enzi-citation docs draft `draft/docs/workspaces/rectangular_mesh_enzi_citation_examples.md` was to be folded in; it remains a separate draft and stands on its own.
+- The Enzi-citation docs draft was never folded in as a prompt, but its work shipped with this
+  split (autolens_workspace `44998cf7` + `f8df9268`). Retired 2026-09-14 with its own record:
+  `complete/2026/08/rectangular-mesh-enzi-citation-examples.md`. (The same path named in the
+  verbatim `## Original prompt` text below is left as filed.)
 
 ## Original prompt
 

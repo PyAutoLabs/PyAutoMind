@@ -65,7 +65,8 @@ with push access; the library clones read-only).
   `draft/bug/autoarray/sparse_operator_ignores_disable_jax.md`,
   `draft/feature/autoarray/mesh_shape_honours_small_datasets_cap.md` (when it lands, the
   four script-level guards become redundant-but-harmless and can be reverted in one pass).
-- Phase 8b: `draft/test/autocti_workspace/imaging_ci_start_here_61s.md`.
+- Phase 8b: `draft/test/autocti_workspace/imaging_ci_start_here_61s.md` — retired
+  2026-09-14 into `complete/2026/09/ci-smoke-speedup.md`, which holds its text.
 - `draft/test/pyautoheart/smoke_relevance_gate.md` stays its own Heart prompt.
 
 ## Original prompt

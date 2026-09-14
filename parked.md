@@ -12,13 +12,12 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 
 - [single-source-density-design](#single-source-density-design)
 - [prior-message-collapse-design](#prior-message-collapse-design)
-- [pyautoreduce-slacs1430-acs-comparison](#pyautoreduce-slacs1430-acs-comparison)
 
 <!-- toc:end -->
 
 ## single-source-density-design
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1500 (open — the parked design hub)
-- prompt: active/12_single_source_density_refactor.md
+- prompt: draft/bug/priors/12_single_source_density_refactor.md
 - parked: 2026-08-18 — **human-confirmed deferral** of the design decision (census wrap-up chat).
   The bundled 12+13 design issue is filed with full evidence and four decision asks
   (one-hierarchy-vs-two, #1498 logpdf contract, EP-mixin scope, prompt-14 sequencing); nothing is
@@ -33,15 +32,8 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 
 ## prior-message-collapse-design
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1500 (shared — bundled with single-source-density-design)
-- prompt: active/13_collapse_prior_and_message.md
+- prompt: draft/bug/priors/13_collapse_prior_and_message.md
 - parked: 2026-08-18 — same human-confirmed deferral; prompt 13 is the hierarchy-collapse half of
   the #1500 bundle. Resume and retire together with single-source-density-design.
 - repos-none-claimed: claims no repos while parked.
 
-## pyautoreduce-slacs1430-acs-comparison
-- prompt: active/pyautoreduce_slacs1430_acs_comparison.md
-- parked: 2026-08-08 — surfaced by the orphaned-prompt triage; STATE UNVERIFIED
-- classification: test (PyAutoReduce + autolens_assistant)
-- why unverified: the comparison targets a collaborator dataset at
-  `/mnt/c/Users/Jammy/Science/subhalo/dataset/slacs/slacs1430+4105`, which this session cannot
-  see. Confirm from the laptop whether the reduction and parity fits were ever run.

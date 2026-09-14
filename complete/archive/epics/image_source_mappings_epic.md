@@ -183,3 +183,11 @@ like brightest image regions for 4MOST.
 ```
 
 Mid-plan revision (user, 2026-09-02): for non-pixelized sources reuse as much ShapeSolver code as possible so the same code serves the shape-tracing visuals and the precise numerical calculations, and this becomes the validation ShapeSolver never had.
+
+## Retired from epics.md (2026-09-14)
+
+## image-source-mappings
+- title: Image ↔ source plane mappings — regions, clumps, subplot_mappings, ShapeSolver validation, guide
+- ledger: draft/feature/autoarray/image_source_mappings_epic.md
+- status: COMPLETE 2026-09-14 — all three phases shipped and the PyAutoArray + PyAutoLens releases that were the sole remaining blocker landed (v2026.9.11.1 / v2026.9.14.1). phase 1 SHIPPED 2026-09-02 — PyAutoArray#517 merged, issue #515 closed, record `complete/2026/09/image-source-mappings-p1.md`; phase 2 (+2a) **SHIPPED** 2026-09-02 — PyAutoArray#518 (`c9f67e78`) → PyAutoLens#720 (`091fbdff`) merged, issue #719 closed, record `complete/2026/09/image-source-mappings-p2.md`; **both PyAutoArray and PyAutoLens releases are outstanding** (`pending-release`); phase 3 **SHIPPED** 2026-09-03 — autolens_workspace#526, HowToLens#76, HowToGalaxy#72, autogalaxy_workspace#232 merged, issue #525 closed, record `complete/2026/09/image-source-mappings-p3.md`; all three phases shipped, epic complete pending the PyAutoArray + PyAutoLens releases; library follow-ups in `draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md`
+- notes: three phase prompts — Phase 1 PyAutoArray (`Mapping`/`ImageRegion` objects, `Inversion.source_clumps_from`, `regions=` overlay on `plot_array`/`plot_inversion_reconstruction`, restored `subplot_mappings`), Phase 2 PyAutoLens (ShapeSolver as the parametric engine + validation suite, `autolens/lens/mappings.py`, fit-level `subplot_mappings`, brightest multiple-image positions for spectroscopic follow-up), Phase 3 workspace (`guides/mappings.py`, tutorial_2_mappers rewrite with polygons, dead index-section fixes). Library-first; issue ONE phase at a time. Proceeds alongside ci-timing-fast-tests by user decision (2026-09-02).

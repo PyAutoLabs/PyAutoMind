@@ -73,6 +73,7 @@ silently, invalidating stored results and every ledgered coefficient. Instead:
 
 - `draft/bug/autoarray/adapt_scatter_factor_two.md` — the factor-2 scatter,
   recorded as a documented property of the legacy classes, **not** an open bug.
+  Retired 2026-09-14 into `complete/2026/08/adapt-linear-regularization.md`.
 - `draft/feature/autoarray/adapt_linear_default_flip.md` — the deferred,
   breaking decision to make the `*Power` classes the defaults.
 

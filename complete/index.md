@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1407 records across 8 buckets.
+1410 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -474,6 +474,7 @@ markers; everything below GENERATED is rebuilt.
 - [nautilus-serial-bound-training](2026/08/nautilus-serial-bound-training.md)
 - [nautilus-test-mode-degenerate-corner](2026/08/nautilus-test-mode-degenerate-corner.md)
 - [nfw-truncated-potential-accuracy](2026/08/nfw-truncated-potential-accuracy.md)
+- [nightly-release-blocked-streak](2026/08/nightly-release-blocked-streak.md)
 - [normalise-auto-simulate-guard-idiom](2026/08/normalise-auto-simulate-guard-idiom.md)
 - [notebook-quotes-string-literal](2026/08/notebook-quotes-string-literal.md)
 - [notebook-setup-notebook-drift-siblings](2026/08/notebook-setup-notebook-drift-siblings.md)
@@ -541,6 +542,7 @@ markers; everything below GENERATED is rebuilt.
 - [pyautoscientist-readme-two-paragraph-opening](2026/08/pyautoscientist-readme-two-paragraph-opening.md) — PyAutoScientist README opening now matches the organ house pattern — one bold
 - [pynufft-removal-residue-phase-1](2026/08/pynufft-removal-residue-phase-1.md)
 - [pynufft-removal-residue-phase-2](2026/08/pynufft-removal-residue-phase-2.md)
+- [pynufft-removal-residue-phase-3](2026/08/pynufft-removal-residue-phase-3.md)
 - [pynufft-scipy-pinv2-dev-extra](2026/08/pynufft-scipy-pinv2-dev-extra.md)
 - [queue-intake-claude](2026/08/queue-intake-claude.md) — auto-closed on merge
 - [readme-scientist-buttons](2026/08/readme-scientist-buttons.md)
@@ -550,6 +552,7 @@ markers; everything below GENERATED is rebuilt.
 - [reconstruction-noise-map-solver-mismatch](2026/08/reconstruction-noise-map-solver-mismatch.md)
 - [rectangular-bilinear-rtu-mesh-split](2026/08/rectangular-bilinear-rtu-mesh-split.md)
 - [rectangular-experiments-gut-stash](2026/08/rectangular-experiments-gut-stash.md)
+- [rectangular-mesh-enzi-citation-examples](2026/08/rectangular-mesh-enzi-citation-examples.md)
 - [rectangular-spline-adapt-image-jit-fix](2026/08/rectangular-spline-adapt-image-jit-fix.md)
 - [redundant-prior-limits-overrides](2026/08/redundant-prior-limits-overrides.md) — shared with its sibling; closed by the PR
 - [refactor-witness-map-audit](2026/08/refactor-witness-map-audit.md) — PyAutoBrain#269 → PR #271, merge cf969f3; stacked on #268
