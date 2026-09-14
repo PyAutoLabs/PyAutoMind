@@ -363,3 +363,33 @@
     files) adopt the same standard by resuming model-figures-rollout-lens
     (autolens_workspace#542), whose wave 2 is stalled with 13 uncommitted blocks
     and ~53 sites unwritten.
+
+## howtofit-tutorials-1-3
+- issue: https://github.com/PyAutoLabs/HowToFit/issues/57
+- issued: 2026-09-14
+- prompt: active/howtofit_tutorials_1_3_fixes.md
+- session: claude --resume session_0132v5TNVbbvBBESAefHwnwG
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/howtofit-tutorials-1-3
+- repos:
+  - HowToFit: feature/howtofit-tutorials-1-3
+  - PyAutoNerves: feature/howtofit-tutorials-1-3
+- note: "worktree_check_conflict exits 1 on HowToFit with two claims. howtofit-mode's scope there is one uncommitted README.md with no commits ahead of origin/main — disjoint, waived (the call already recorded for model-figure-prose-simplify, sed-chain-cpu-route and sersic-variants-analysis). model-figure-prose-simplify (HowToFit#56, open, all checks green) rewrites the same tutorial 1 model-figure paragraphs, so this task does NOT race it: the branch is cut from origin/feature/model-figure-prose-simplify and the PR is opened against that base, so GitHub shows only this task's diff and retargets to main once #56 merges. Merge #56 first. Where the two disagree on the 'identical composition' paragraph, the reader's wording in HowToFit#57 is the newer instruction and wins. PyAutoNerves is unclaimed (exit 0)."
+- summary: |
+    Reader-reported fixes to HowToFit chapter 1, tutorials 1-3, launched with
+    --auto (docs cap, Difficulty medium -> effective level safe; ends at PR-open).
+    Tutorial 1 gains the 1D Gaussian dataset figure ahead of the model equation
+    (as the RTD python_api page has it), the reader's replacement wording for the
+    model-figure "identical composition" paragraph, and a worked 18-parameter
+    extensibility example (x2 Gaussian + x4 Exponential, model.info + figure
+    only); plus backticked code references and a typo pass. Tutorials 1-3 convert
+    `\[ \]` / `\( \)` math to `$$ $$` / `$ $`, which Jupyter and Colab actually
+    typeset. Tutorial 3's MLE InitializerParamStartPoints moves closer to the
+    truth (50 / 25 / 10) so LBFGS converges reliably.
+    The reader's `ModuleNotFoundError: No module named 'emcee'` on Colab is NOT a
+    HowToFit bug: emcee and dynesty are real autofit dependencies that the
+    PyAutoNerves Colab bootstrap drops because it installs with --no-deps and
+    does not name them in _SHARED_EXTRAS. Fixed there as a second PR; it reaches
+    users on the next autonerves release.
+    Out of scope (follow-up): tutorials 6, 7 and the optional Bayesian formalism
+    tutorial carry the same unrendered math blocks.
