@@ -1,3 +1,40 @@
+`autolens_workspace/config/build/profile_release.yaml`'s existing `imaging/start_here` override
+(which already set `PYAUTO_SMALL_DATASETS: "0"`) now also carries
+`BUILD_SCRIPT_TIMEOUT: "3600"`, giving that one script a per-script cap in the release profile.
+The run-wide 1800 s cap is untouched — it remains the only guard on the other 84 entries.
+Config-only: no scripts, notebooks or library source in the diff.
+
+## Why
+
+`scripts/imaging/start_here.py` was killed at the run-wide 1800 s cap in **3 of the last 8**
+Release Integrate runs (2026-09-09, 2026-09-12, 2026-09-14 run 34898325503, each logging 1805 s),
+while passing runs of the same script span 586-1695 s and every sibling in the leg is stable.
+Each kill lands inside one ~26 min XLA CPU compile of `MultiStartProdigy` (`n_starts=48`,
+`batch_size=None`) under this script's non-uniform over-sample map, *before the first gradient
+step* — compiling, not iterating, when the cap fires. No library commit in the window touches
+that path, and the 09-09 kill predates the commits in it, so it is a compile-time flake rather
+than a regression.
+
+Cost: worst case +30 min on the single slowest leg of a ~72 min job, and only when the flake
+fires; a healthy run is unchanged.
+
+## Shipped
+
+- autolens_workspace PR #548 — merged 2026-09-15 as `b581bfcbf518b44f3234250aef8d66ceab5bf228`
+  (https://github.com/PyAutoLabs/autolens_workspace/pull/548)
+- Issue #547 closed as completed.
+- CI at merge: all 7 checks green on head `52301be7` — Navigator Check (paths+banner lint,
+  catalogue staleness, unbatched multi-start search), Script Size Guard, Smoke Tests
+  (changes, 3.12, 3.13).
+
+## Follow-up
+
+The real fix — the `MultiStartProdigy` compile time itself — stays filed as
+`draft/bug/autolens_workspace/start_here_multistart_compile_time.md`. This record raises the cap;
+it does not close that.
+
+## Original prompt
+
 # Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release profile
 
 Type: maintenance
