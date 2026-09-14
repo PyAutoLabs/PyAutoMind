@@ -10,11 +10,12 @@ Themes:
 Difficulty: easy
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: active
 Consequence: judge
 Witness: `python3 PyAutoHeart/heart/checks/profiling_drift.py` reports 0 drifted results; the three runtime MGE cells print "Pinned-value check PASSED" and write `"pinned_drift": []`; matrix_free JSONs carry SLQ records under a new key with `pinned_drift: []`; `build_readme.py --check` passes
 Review-minutes: 10
 Filed: 2026-09-14
+Issued: 2026-09-14
 
 User request (verbatim, 2026-09-14):
 

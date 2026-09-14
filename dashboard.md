@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 17 |
+| [In flight](#in-flight) (`active/`) | 18 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 181 |
+| [Backlog](#backlog) (`draft/`) | 180 |
 
 > **No batch in flight.**
 
@@ -348,6 +348,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result JSONs and keep SLQ…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/261">issue #261</a> — issued 2026-09-14 — workspace-dev</summary>
+
+```
+/start_dev active/profiling_drift_pinned_drift_contract.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69">issue #69</a> — issued 2026-09-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/70">euclid_strong_lens_modeling_pipeline#70</a></summary>
 
 ```
@@ -596,7 +604,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
+**180** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 47</summary>
@@ -1515,15 +1523,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 13</summary>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result JSONs and keep SLQ…</a> — autolens_profiling · easy · supervised · medium</summary>
-
-```
-/start_dev draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md
-```
-
-</details>
+<summary><b>maintenance</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
@@ -1888,38 +1888,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>profiling</b> — 3 task(s) · 8 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: heart</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'profiling' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md
-- draft/research/autofit/autofit_profiling_bootstrap.md
-- draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result…</a> | autolens_profiling | easy | medium | draft |
-| <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> | autofit | large | normal | formalised |
-| <a href="draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md">Tune cluster-scale JOSS benchmarks toward their 5-minute targets</a> | autolens_workspace | medium | normal | formalised |
-
-</details>
-
-<details>
 <summary><b>assistants</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2087,6 +2055,40 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
+<details>
+<summary><b>jax</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax, mass-profiles</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'jax' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
+- draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md
+- draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
+- draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> | autogalaxy | small | medium | draft |
+| <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> | autogalaxy | small | low | draft |
+| <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> | autofit | small | normal | draft |
+| <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> | autoarray | medium | normal | formalised |
+
+</details>
+
 _Showing 8 of 28 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -2104,7 +2106,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-14 | issued | <a href="active/howtofit_tutorials_1_3_fixes.md">HowToFit tutorials 1-3: data figure, math rendering, MLE start point</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_tutorials_followups.md">HowToFit follow-ups: finish the math sweep and fix tutorial 3's dead…</a> |
 | 2026-09-14 | issued | <a href="active/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the…</a> |
-| 2026-09-14 | filed | <a href="draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result…</a> |
+| 2026-09-14 | issued | <a href="active/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
@@ -2595,7 +2597,7 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 
 </details>
 
-29 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+28 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2626,7 +2628,6 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 - `draft/docs/workspaces/howto_paths_orientation_block_parity.md — unknown theme keyword(s): howto, tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
-- `draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md — unknown theme keyword(s): heart`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
