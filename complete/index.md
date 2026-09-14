@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1411 records across 8 buckets.
+1412 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -234,6 +234,7 @@ markers; everything below GENERATED is rebuilt.
 - [model-figures-lens](2026/09/model-figures-lens.md)
 - [model-figures-renderer](2026/09/model-figures-renderer.md)
 - [model-figures-rollout-autofit](2026/09/model-figures-rollout-autofit.md)
+- [modelplotter-figure-draws-twice](2026/09/modelplotter-figure-draws-twice.md)
 - [multi-dataset-offsets-fit](2026/09/multi-dataset-offsets-fit.md) — Community bug report verified true on all three counts and fixed. Every multi-dataset example that freed `Data…
 - [natural-language-first-docs](2026/09/natural-language-first-docs.md)
 - [nufft-threshold-subhalo-pin-rebuild](2026/09/nufft-threshold-subhalo-pin-rebuild.md)
