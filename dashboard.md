@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 181 |
+| [Backlog](#backlog) (`draft/`) | 182 |
 
 > **No batch in flight.**
 
@@ -539,7 +539,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**182** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 48</summary>
@@ -2426,12 +2426,20 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
-<summary><b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — ledger: `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md`</summary>
 
 ```
 Continue the 'Fixed lens light on the numba CPU path — the whole programme again, off the GPU' epic. Its canonical state lives in draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: successor to `fixed-lens-light-profiling` (COMPLETE 2026-09-14), filed the same day. Six phases mirroring that epic, worked strictly 0 → 1 → 2 → 3 → 4 → 5 — each phase's grid is chosen from the previous phase's answer; issue ONE at a time, never bulk-issued, and file each phase's own prompt when the campaign reaches it. The open question is real, not a port: phase 2 of the GPU epic found the numpy certified active set does NOT beat the library's own `fnnls`, and both run 1.9-3.6x slower at 8 BLAS threads than at 1 — and the numba production path was never measured at all. Every leg must record its thread settings (`NPROC`, BLAS, numba) and no comparison may cross them silently. Out of scope throughout, as in the GPU epic: JWST and the sparse operator (blocked on `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`). A Fable / Astra campaign.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_numba_phase1_whole_call.md">Numba phase 1 — the whole numba likelihood call on HST, decomposed…</a> — autolens_profiling · large · human-required · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_light_numba_phase1_whole_call.md
 ```
 
 </details>
@@ -2553,7 +2561,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-29 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+30 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2586,6 +2594,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — unknown theme keyword(s): cpu, numba`
+- `draft/research/autolens_profiling/fixed_light_numba_phase1_whole_call.md — unknown theme keyword(s): cpu, numba`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
 </details>

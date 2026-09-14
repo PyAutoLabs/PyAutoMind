@@ -58,14 +58,27 @@ fixing the lens light plus a certified active set worth anything at all?**
 Each phase's grid is chosen from the previous phase's answer. Issue ONE at a time; never
 bulk-issue. File each phase's own prompt when the campaign reaches it.
 
-| # | Phase | Mirrors |
-|---|---|---|
-| 0 | Numba kernel measurement: S0 vs S3 systems; `fnnls` vs a numba certified active set vs the unconstrained solve, timed as kernels | GPU phase 0 (#248) |
-| 1 | The whole `AnalysisImaging.log_likelihood_function` on the numba path, all routes, with a measured decomposition of where the call goes | GPU phase 1 (#251) |
-| 2 | Thread scaling: 1 / 2 / 4 / 8 threads, and the numba-vs-BLAS thread interaction phase 2 flagged | GPU phase 2 (#253) |
-| 3 | Pass budgets over the seeded 41-model graded draw set — do the GPU's 7 (Delaunay) / 11 (rectangular) hold on numba? | GPU phase 3 (#255) |
-| 4 | Source-pixel scaling, and which term overtakes which as N grows | GPU phase 4 (#257) |
-| 5 | HST + Euclid verdict: the production CPU configuration per core count | GPU phase 5 (#259) |
+**Amended 2026-09-14, before phase 1 was issued.** Two changes, both consequences of the
+GPU epic's own findings rather than of anything measured here yet:
+
+1. **The original phase 0 (numba kernel measurement) is folded into phase 1.** GPU phase 2
+   already measured the CPU kernel rows and concluded, in its own words, that a CPU
+   assessment "should score the library's `fnnls` path, not the certified active set". A
+   numba kernel phase would re-answer a settled question and delay the decomposition this
+   campaign's `Witness:` demands. The campaign is five phases, numbered 1-5.
+2. **Phase 3 is repurposed.** It was premised on the certified active set's pass budgets —
+   but the certified scheme is not what CPU scores, so "do the GPU's budgets 7 / 11 hold on
+   numba?" is not a question this campaign can ask. The numba equivalent is better: the
+   library's `fnnls` is seeded from a passive-set **memo**, so does that warm start survive
+   low-likelihood draws, or does it fall back and cost what a cold solve costs?
+
+| # | Phase | Mirrors | Prompt |
+|---|---|---|---|
+| 1 | The whole `AnalysisImaging.log_likelihood_function` on the numba path, routes a/b/c x {dense, numba-sparse}, with a decomposition measured in ONE process and a sparse-operator parity pin | GPU phases 0+1 (#248, #251) | `fixed_light_numba_phase1_whole_call.md` — ISSUED 2026-09-14 |
+| 2 | Thread scaling: 1 / 2 / 4 / 8 threads, and the numba-vs-BLAS thread interaction GPU phase 2 flagged (both CPU solvers ran 1.9-3.6x SLOWER at 8 BLAS threads than at 1) | GPU phase 2 (#253) | — |
+| 3 | The `fnnls` memo warm start over the seeded 41-model graded draw set: `seed_source`, `warm_start_fallback`, outer/inner iteration counts — does the warm start hold when the model is bad? | GPU phase 3 (#255), repurposed | — |
+| 4 | Source-pixel scaling, and which term overtakes which as N grows | GPU phase 4 (#257) | — |
+| 5 | HST + Euclid verdict: the production CPU configuration per core count | GPU phase 5 (#259) | — |
 
 ## What must be carried across, and what must not
 
