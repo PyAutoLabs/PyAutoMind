@@ -13,6 +13,7 @@ Witness: a regression test in PyAutoNerves asserting that every entry of `_PROJE
 Review-minutes: 10
 Unattended: ready
 Filed: 2026-09-14
+Issued: 2026-09-14
 
 ## The code fix already shipped — this is the missing test
 

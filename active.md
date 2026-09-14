@@ -262,3 +262,27 @@
     today is over-attributing to the solver. That is why this phase counts accesses instead,
     and why a test asserts n_calls >= 2 so a future PyAutoArray fix fails loudly.
 - note: started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict fixed-light-numba-phase1 autolens_profiling, exit 0).
+
+## autonerves-colab-sampler-deps
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/165
+- issued: 2026-09-14
+- prompt: active/colab_setup_missing_dynesty_and_emcee.md
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/autonerves-colab-sampler-deps/
+- repos:
+  - PyAutoNerves: feature/autonerves-colab-sampler-deps
+- summary: |
+    The Colab bootstrap installed no `dynesty` and no `emcee`, so every Colab
+    notebook running `af.DynestyStatic` or `af.Emcee` died with
+    ModuleNotFoundError across all six `_PROJECTS` — the install is
+    `pip install *packages --no-deps`, so neither could arrive via `autofit`.
+    The code half shipped the same day in PyAutoNerves#164 (merged, 8336939);
+    what did not ship is the regression test. `test_setup_colab.py` asserts only
+    `packages[0] == "autonerves"`, so nothing stops a future edit dropping a
+    sampler again. Adds a test that every `_PROJECTS` entry resolves to a
+    `packages` list containing dynesty, emcee AND nautilus-sampler (matched on
+    name, not pin), confirms the two samplers' own runtime deps exist in a stock
+    Colab image under `--no-deps`, and weighs lifting the three samplers into
+    their own `_SAMPLERS` list. Reaches users only after an autonerves PyPI
+    release.
+- note: started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict autonerves-colab-sampler-deps PyAutoNerves, exit 0).
