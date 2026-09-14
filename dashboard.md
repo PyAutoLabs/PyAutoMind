@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the *_workspace repos</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/75">issue #75</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the *_workspace repos</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/75">issue #75</a> — issued 2026-09-14 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/76">HowToGalaxy#76</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/82">HowToLens#82</a></summary>
 
 ```
 /start_dev active/howto_stale_workspace_self_location.md
