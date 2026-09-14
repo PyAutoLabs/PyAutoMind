@@ -316,7 +316,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/howtofit_tutorials_followups.md">HowToFit follow-ups: finish the math sweep and fix tutorial 3's dead Priors…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/59">issue #59</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/howtofit_tutorials_followups.md">HowToFit follow-ups: finish the math sweep and fix tutorial 3's dead Priors…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/59">issue #59</a> — issued 2026-09-14 — awaiting-merge (PR open 2026-09-14; merge is human) — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/60">HowToFit#60</a></summary>
 
 ```
 /start_dev active/howtofit_tutorials_followups.md
