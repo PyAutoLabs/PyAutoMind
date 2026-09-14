@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 19 |
+| [In flight](#in-flight) (`active/`) | 20 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -384,6 +384,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/simulator_from_result_linear_intensities.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/slam_hst_variant_folders_delaunay_1250.md">Run-variant folders on the HST SLaM cell, and the Delaunay-1250 A100 legs</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/5">issue #5</a> — issued 2026-09-14 — workspace-dev</summary>
+
+```
+/start_dev active/slam_hst_variant_folders_delaunay_1250.md
 ```
 
 </details>
@@ -2116,18 +2124,19 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-14 | issued | <a href="active/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autohands/generate_markdown_leaks_worktree_paths.md">generate_markdown.py leaks local paths when run from a task worktree</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> |
+| 2026-09-14 | issued | <a href="active/slam_hst_variant_folders_delaunay_1250.md">Run-variant folders on the HST SLaM cell, and the Delaunay-1250 A100…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | issued | <a href="active/model_figure_prose_simplify.md">Model figure prose: replace the map/legend block with two short…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/howtolens/tutorial_searches_writes_into_chapter_2.md">HowToLens chapter_optional/tutorial_searches.py scatters 3 of its 4…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/workspaces/howto_paths_orientation_block_parity.md">HowToGalaxy and HowToLens have no <code>__Paths__</code> orientation block</a> |
 | 2026-09-14 | filed | <a href="draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md">HowToFit: the tutorial_1 markdown mirror was missed by the…</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_tutorials_1_3_fixes.md">HowToFit tutorials 1-3: data figure, math rendering, MLE start point</a> |
-| 2026-09-14 | filed | <a href="draft/bug/howtofit/tutorial_3_uninitialised_emcee_is_flaky.md">HowToFit tutorial 3: the uninitialised Emcee fit does not reliably…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-14 | filed | <a href="draft/bug/howtofit/tutorial_3_uninitialised_emcee_is_flaky.md">HowToFit tutorial 3: the uninitialised Emcee fit does not reliably…</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_tutorials_followups.md">HowToFit follow-ups: finish the math sweep and fix tutorial 3's dead…</a> |
 | 2026-09-14 | issued | <a href="active/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the…</a> |
 | 2026-09-14 | issued | <a href="active/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result…</a> |
@@ -2137,12 +2146,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-13 | issued | <a href="active/model_figures_6b_lens_surfaces.md">Model figures phase 6b — PyAutoLens surfaces (autolens_workspace +…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_likelihood_assessment_hst_euclid.md">Fixed lens light — whole-likelihood assessment on HST and Euclid at…</a> |
-| 2026-09-13 | issued | <a href="active/fixed_light_cpu_and_consumer_gpu.md">Fixed lens light — the same profiling on CPU…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-13 | issued | <a href="active/fixed_light_cpu_and_consumer_gpu.md">Fixed lens light — the same profiling on CPU…</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_source_pixel_scaling.md">Fixed lens light — source-pixel scaling of the new approach across…</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_unconstrained_library_path.md">Fixed lens light — library-path timing of the S3 positive-negative…</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_certified_low_likelihood_draws.md">Fixed lens light — is the certified active-set fast only because…</a> |
@@ -2152,12 +2161,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-12 | issued | <a href="active/fixed_lens_light_source_only_inversion.md">Fixed lens light after SLaM light[1]: cost of the source-only…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 | 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
-| 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
 | 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
@@ -2167,12 +2176,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
-| 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md">PyAutoHeart smoke-tests.yml relevance gate skips the pytest matrix on…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
@@ -2182,7 +2191,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
-| 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 
 </details>
 
