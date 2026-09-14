@@ -493,3 +493,31 @@
     The records move to a new top-level key slq_pin_comparison in the writer and
     in the three committed A100 JSONs; the A100 legs are not re-run. No library
     edits (design_lock_in.md: record-and-flag, never adjudicate).
+
+## scaling-relation-slam-smoke-frame-cap
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/544
+- issued: 2026-09-14
+- prompt: active/scaling_relation_slam_smoke_frame_cap.md
+- session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/scaling-relation-slam-smoke-frame-cap
+- repos:
+  - autolens_workspace: feature/scaling-relation-slam-smoke-frame-cap
+- heart-ack: "workspace validation not passing (3 failed, cloud#34824535982); profiling drift x6; release validation incomplete"
+- note: "worktree_check_conflict exits 1 on one claim: autolens_workspace is claimed by model-figures-rollout-lens (feature/model-figures-rollout-lens-b, autolens_workspace#542). Its worktree is clean and its 205-file diff contains no slam.py or slam.ipynb path anywhere; the nearest approach is scripts/imaging/features/scaling_relation/modeling.py and notebooks/imaging/features/scaling_relation/modeling.ipynb, the same directories as this task's two files but not the same files, so the file sets are disjoint at file level and no hunk can collide. Waived on the human's plan approval; this task runs in a fresh parallel worktree cut from origin/main - the same call recorded for sed-chain-cpu-route, sersic-variants-analysis and model-figure-prose-simplify."
+- summary: |
+    Clears the Heart workspace-smoke failure on
+    notebooks/imaging/features/scaling_relation/slam.ipynb (cloud run
+    34824535982): under the smoke profile's PYAUTO_SMALL_DATASETS frame cap the
+    130x130 @ 0.1" image becomes 16x16 @ 0.6", cropping two scaling-tier
+    companions at (5.0, -1.0) and (-1.0, 5.0) out of frame; their MGE
+    intensities are solved from noise and use_positive_only_solver clamps a
+    non-positive draw to exactly 0.0, tripping the script's own luminosity
+    guard. simulator.py passes no noise_seed and dataset/ is gitignored, so the
+    clamp is a per-run lottery, not a regression (the same notebook passed in
+    runs 33378525604 and 34099198772). Fix is one ENV: full_datasets
+    declaration on the script (_declaration_source_path covers the notebook leg
+    from the same line) plus a rewrite of the stale guard message, which still
+    blames PYAUTO_TEST_MODE and a config/build/no_run.yaml park removed on
+    2026-08-29 (883d1e2f). No library edits; galaxy centres and simulator.py
+    deliberately untouched.

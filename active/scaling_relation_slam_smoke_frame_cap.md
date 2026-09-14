@@ -15,6 +15,7 @@ Consequence: judge
 Witness: scripts/imaging/features/scaling_relation/slam.py runs green under the smoke profile (both legs, full_datasets declared) in < 300 s, every scaling-tier luminosity positive; guard message no longer mentions PYAUTO_TEST_MODE or no_run.yaml
 Review-minutes: 10
 Filed: 2026-09-14
+Issued: 2026-09-14
 
 User request (verbatim, 2026-09-14):
 
