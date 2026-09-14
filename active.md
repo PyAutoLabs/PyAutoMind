@@ -369,8 +369,11 @@
 - issued: 2026-09-14
 - prompt: active/howtofit_tutorials_1_3_fixes.md
 - session: claude --resume session_0132v5TNVbbvBBESAefHwnwG
-- status: workspace-dev
+- status: awaiting-merge (both PRs open 2026-09-14; merge is human)
 - worktree: ~/Code/PyAutoLabs-wt/howtofit-tutorials-1-3
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/58
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/164
+- heart-ack: "workspace validation not passing (3 failed, cloud#34824535982); profiling drift: breakdown/imaging/matrix_free_delaunay_hpc_a100_fp64_matrix_free.json; profiling drift: breakdown/imaging/matrix_free_delaunay_nn_hpc_a100_fp64_matrix_free.json; profiling drift: breakdown/imaging/matrix_free_rectangular_hpc_a100_fp64_matrix_free.json; profiling drift: runtime/imaging/mge/mge_likelihood_summary_hst_v2026.8.17.1.json; profiling drift: runtime/imaging/mge_mass_jax/mge_mass_jax_likelihood_summary_hst_v2026.8.17.1.json; profiling drift: +1 more drifted result(s); release validation incomplete: no rehearsal for current source"
 - repos:
   - HowToFit: feature/howtofit-tutorials-1-3
   - PyAutoNerves: feature/howtofit-tutorials-1-3
@@ -391,5 +394,14 @@
     PyAutoNerves Colab bootstrap drops because it installs with --no-deps and
     does not name them in _SHARED_EXTRAS. Fixed there as a second PR; it reaches
     users on the next autonerves release.
-    Out of scope (follow-up): tutorials 6, 7 and the optional Bayesian formalism
-    tutorial carry the same unrendered math blocks.
+    Shipped 2026-09-14. The MLE failure turned out NOT to be the start point:
+    af.InitializerParamStartPoints was keyed on one af.Model(Gaussian) while a
+    freshly built one was passed to search.fit, so no key matched and PyAutoFit
+    fell back to random draws (logged, not raised). Fixed in both the LBFGS and
+    Emcee blocks; start points 52/23/9 now recover 49.889/25.147/9.847.
+    Smoke 18/18 PASS, exit 0. Heart YELLOW acknowledged by the human for the
+    exact reason set recorded above.
+    Out of scope (follow-ups): tutorials 6, 7 and the optional Bayesian formalism
+    tutorial carry the same unrendered math blocks; tutorial 3's __Priors__
+    section is dead code whose normalization override (0, 10) excludes the truth
+    25 (the fits only work via the config LogUniformPrior fallback).
