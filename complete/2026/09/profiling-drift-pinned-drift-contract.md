@@ -1,3 +1,12 @@
+- summary: |
+    Heart's profiling-drift block for autolens_profiling cleared: the re-pinned MGE runtime summaries
+    regenerated and the SLQ records moved out of `pinned_drift`, where they were being read as drifted
+    results rather than as records carrying no tolerance.
+- note: |
+    Clears the `profiling drift:` entries that had been riding every heart-ack in active.md.
+
+## Original prompt
+
 # Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result JSONs and keep SLQ records out of pinned_drift
 
 Type: maintenance

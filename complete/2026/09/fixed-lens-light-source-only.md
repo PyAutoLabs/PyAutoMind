@@ -1,3 +1,23 @@
+- summary: |
+    Phase 0 of the `fixed-lens-light-profiling` epic, and its foundation: with the MGE lens light
+    converted to regular light profiles at their solved intensities and subtracted ("S3"), the inversion
+    solves a source-only system. Five A100 legs 342802-342806 (gpu-2, fp64), every gate PASS. The S3
+    certified active-set solve costs 4.21 ms at pass budget 2 (Delaunay) and 11.05 ms at pass 7
+    (rectangular) against 25.8-28.3 ms for S3 PDIP, making the whole library call 26-30 % faster with no
+    solver change at all. New: the certified active-set kernels, the S3 system builder and the committed
+    CPU probe.
+- finding: |
+    Dropping positivity entirely (route A2, an unconstrained Cholesky) is the fastest row measured and
+    was prohibited here on evidence rather than principle: it reaches a different, infeasible minimiser
+    that scores ABOVE the constrained optimum, and it silently disables edge zeroing with it. That
+    prohibition held through all five later phases and got two orders of magnitude stronger on Euclid.
+- note: |
+    results/notes/fixed_lens_light_source_only_2026_09.md. The certified scheme is a harness monkeypatch
+    of `inversion_util.reconstruction_positive_only_from` throughout the epic; no PyAutoArray change was
+    made in any phase.
+
+## Original prompt
+
 # Fixed lens light after SLaM light[1]: cost of the source-only pixelized inversion on the A100
 
 Type: research

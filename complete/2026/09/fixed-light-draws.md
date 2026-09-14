@@ -1,3 +1,29 @@
+- summary: |
+    Phase 3: what the certified scheme costs on models that are NOT the fiducial one - a seeded 41-model
+    graded draw set. Four legs: A100 343011 (rect, 00:07:49) and 343012 (Delaunay, 00:08:51) on gpu-2
+    with every fiducial pin PASS, plus two local JAX-CPU legs. New cell
+    `scripts/imaging/likelihood_breakdown/fixed_light_draws.py` plus an importable steps module and
+    30 numpy tests (suite 286).
+- finding: |
+    THE PHASE-0 PASS BUDGETS DO NOT HOLD. Delaunay's pass 2 falls back on 67.5 % of the draw set
+    (95.8 % of the random draws) and rectangular's pass 7 on 27.5 %; the smallest zero-fallback budgets
+    are 7 (Delaunay) and 11 (rectangular), so phase 4 had to sweep those, not 2 and 7. The two meshes
+    fail OPPOSITELY - pass count grows with model error on Delaunay (Spearman +0.698) and falls on
+    rectangular (-0.535), because a worse model has a bigger active set that pass 0's 152-pixel
+    edge-zero seed already mostly finds. The lever survives at about half its fiducial headline
+    (median 2.6x / 5.4x over PDIP on the A100; the worst certified draw still beats the best PDIP call),
+    and PDIP's own cost barely moves with the model (15->17, 17->21 iterations), so budget-plus-fallback
+    stays a bounded worst case.
+- trap: |
+    Pass counts, PDIP iterations and seed-set sizes are IDENTICAL on the A100 and the CPU for all 41
+    draws - the fallback rate is a property of the problem, not of the device, so it cannot be tuned
+    away per hardware. Dropping positivity became unambiguously out here: the A2 error grows to
+    +4.07e4 nats (rect) / +6339 (Delaunay) on bad models.
+- note: |
+    results/notes/fixed_lens_light_low_likelihood_draws_2026_09.md.
+
+## Original prompt
+
 # Fixed lens light — is the certified active-set fast only because the model is good?
 
 Type: research

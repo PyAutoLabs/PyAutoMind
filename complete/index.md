@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1413 records across 8 buckets.
+1420 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -187,6 +187,12 @@ markers; everything below GENERATED is rebuilt.
 - [ep-stale-tracking-per-variable](2026/09/ep-stale-tracking-per-variable.md) — closed completed 2026-09-07
 - [euclid-catalogue-rebuild-prep](2026/09/euclid-catalogue-rebuild-prep.md) — One issue, two phased PRs, preparing
 - [euclid-cpu-two-stage-route](2026/09/euclid-cpu-two-stage-route.md)
+- [fixed-lens-light-source-only](2026/09/fixed-lens-light-source-only.md)
+- [fixed-light-draws](2026/09/fixed-light-draws.md)
+- [fixed-light-hardware](2026/09/fixed-light-hardware.md)
+- [fixed-light-library-path](2026/09/fixed-light-library-path.md)
+- [fixed-light-scaling](2026/09/fixed-light-scaling.md)
+- [fixed-light-verdict](2026/09/fixed-light-verdict.md)
 - [gaussian-precompute-p1](2026/09/gaussian-precompute-p1.md)
 - [gaussian-precompute-p2](2026/09/gaussian-precompute-p2.md)
 - [gaussian-precompute-p3](2026/09/gaussian-precompute-p3.md) — closed, completed
@@ -257,6 +263,7 @@ markers; everything below GENERATED is rebuilt.
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
 - [prm-shadow-row-notify-tier](2026/09/prm-shadow-row-notify-tier.md)
 - [profiles-jit-powerlaw-exact-zero-atol](2026/09/profiles-jit-powerlaw-exact-zero-atol.md)
+- [profiling-drift-pinned-drift-contract](2026/09/profiling-drift-pinned-drift-contract.md)
 - [profiling-post-235-followups](2026/09/profiling-post-235-followups.md)
 - [profiling-production-representative](2026/09/profiling-production-representative.md)
 - [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)

@@ -1,3 +1,31 @@
+- summary: |
+    Phase 4: how the scheme scales with source pixels. 40 legs at --source-pixels 500/1000/1500/2500/4000
+    on rect and Delaunay - A100 arrays 343023/343024 on gpu-2 (10/10 COMPLETED 0:0, autotune 0, both
+    fiducial arms' pins PASS) plus 30 local legs. None OOMed, none timed out. The cell gains
+    --pins/--safe-budget/a machine block (defaults byte-identical to phase 0, asserted by a test); new
+    `fixed_light_scaling_table.py` and 62 tests (suite 348).
+- finding: |
+    THE CERTIFYING PASS BUDGET DOES NOT SCALE WITH N: rect certifies at 5/8/7/10/6 and Delaunay at
+    1/1/2/1/2 with no trend over a factor eight in pixels, worst case 10, inside phase 3's safe budget
+    of 11 - so phase 5 could fix 11/7 and sweep N freely, and phase 0's "6 at 3025 vs 7 at 1521" was
+    noise. The certified active set leads at every N on every hardware (1.44-1.62x over S3 PDIP on rect,
+    2.21-3.00x on Delaunay), and on Delaunay the lever GROWS with N because PDIP climbs 14->20
+    iterations while the budget stays at 7.
+- finding-next-programme: |
+    On the A100 every solver row fits alpha~1 (launch/bandwidth-bound) while the dense `F + lambda*H`
+    build fits alpha~1.69 and OVERTAKES the certified solve between 2500 and 4000 source pixels. Stated
+    at the time as "the next GPU lever is the assembly, not the solver" - and that is what the follow-on
+    optimisation programme was filed against.
+- trap: |
+    PHASE 1'S BATCHED ROW HAS AN N CEILING: `@vmap 16` amortises 3.64x at N~500, 1.14x at 2500 and
+    0.68x - a PENALTY - at 4000, on an 80 GB A100 at 7.8 GB. Batch size must be chosen from N, never
+    inherited from `n_batch`. Memory is not the wall at any N measured (6 GB card fits the single call
+    at ~4000 pixels with ~2.9 GB spare); time ends every curve.
+- note: |
+    results/notes/fixed_lens_light_source_pixel_scaling_2026_09.md.
+
+## Original prompt
+
 # Fixed lens light — source-pixel scaling of the new approach across hardware
 
 Type: research

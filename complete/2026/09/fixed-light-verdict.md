@@ -1,3 +1,46 @@
+- summary: |
+    Phase 5 and the LAST of the `fixed-lens-light-profiling` epic - the whole likelihood on real survey
+    data, per hardware, and the first time the programme touched Euclid. 24 local legs, all rc=0, no
+    timeouts, 45 minutes: Delaunay x {hst,euclid} x {500,1250,2500} on RTX 2060 fp64, RTX 2060 mp and
+    JAX-CPU, plus 6 rectangular RTX fp64 legs added when the A100 could not be reached. Cell gains
+    --dataset {hst,euclid} (default hst byte-identical), --pass-budget auto, --routes and a
+    `reference_recorded` block; 30 tests (suite 398).
+- finding: |
+    EUCLID IS WHERE POSITIVITY EARNS ITS KEEP, AND HST NEVER SHOWED IT. Dropping it costs
+    +3.5 -> +24.3 -> +109.1 nats as N goes 500 -> 2500 on Euclid against a FLAT +8.4 -> +6.4 on HST
+    (129 negative source pixels vs 6), because at N=2500 Euclid has 1.5 image pixels per source pixel
+    where HST has 6.1. The trend with N REVERSES between the datasets. Any pipeline that reached for the
+    unconstrained solve because "Delaunay only costs six nats" was reading an HST number.
+    The certified active set is the production solver on every hardware and both datasets - 1.20-1.59x
+    over the library today on HST, 1.43-2.28x on Euclid where the lead GROWS with N - and returns the
+    library's own answer (every equivalence pin PASS, max 5.6e-10), so its cost in nats is ZERO.
+- finding-budget: |
+    THE PASS BUDGET IS DATASET-DEPENDENT: rectangular certifies at 6/9/11 passes on Euclid against
+    5/7/10 on HST, exhausting phase 3's safe budget of 11 EXACTLY at N=2500, from a single model.
+    Delaunay keeps its margin (Euclid 2/4/4, HST 1/2/1, budget 7) and stays the production mesh. The
+    rectangular budget of 11 must not be fixed on Euclid without a draw-set sweep of its own.
+- production: |
+    Per hardware, with affordable N: 4000 HST (A100, carried from phase 4) / 1500 HST + 2500 Euclid
+    (RTX 2060) / 1000 HST + 1250 Euclid (8 CPU threads). fp64 everywhere - mixed precision buys 4-9 %
+    for <= 1.3e-4 nats with an identical certifying budget on Delaunay, too small to be worth a
+    withdrawn pin. Memory is never the wall (2.70 GB of 6 GB worst).
+- open: |
+    THE 12 A100 LEGS WERE NOT RUN - the RAL jump host refused publickey all session and the direct route
+    times out. The four arrays are written, validated and committed; resume is one command on the RAL
+    login node: `hpc/batch_gpu/submit_fixed_light_verdict.sh --node euclid-ral-gpu-2`. Every A100 number
+    in the note is carried from phases 1 and 4 and labelled as such; nothing was extrapolated.
+- epic: |
+    `fixed-lens-light-profiling` is COMPLETE - all six phases merged 2026-09-14 (PRs #250, #252, #254,
+    #256, #258, #260, a stack of six merged in base order). Follow-ups filed as ideas.md bullets: the
+    library implementation of the certified solver, the matched-injection witness, re-deriving the
+    rectangular budget on Euclid, and the unrun A100 legs. Two of the verdict's implications were filed
+    as fresh research programmes on the same day: the same programme on the numba CPU path, and an
+    optimisation campaign against the non-solver residue of the HST GPU breakdown.
+- note: |
+    results/notes/fixed_lens_light_verdict_2026_09.md.
+
+## Original prompt
+
 # Fixed lens light — whole-likelihood assessment on HST and Euclid at 500 / 1250 / 2500 source pixels
 
 Type: research

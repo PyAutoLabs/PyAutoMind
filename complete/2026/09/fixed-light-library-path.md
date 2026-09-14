@@ -1,3 +1,30 @@
+- summary: |
+    Phase 1: the row phase 0 could only project - the whole `AnalysisImaging.log_likelihood_function`
+    under `jax.jit`, five routes, all through the library. Three A100 legs 342908-342910 (gpu-2, fp64).
+    The call falls 50.97 -> 25.10 ms on rectangular (2.03x), 65.10 -> 25.39 ms on Delaunay (2.56x) and
+    72.95 -> 36.26 ms on DelaunayNN (2.01x) against what the library runs today, at a log likelihood
+    identical to the library's own PDIP answer to 1e-15...1e-11 relative. Fixing the light alone pays
+    1.31x with no solver change. Phase 0's projection (23.7/25.0/33.1 ms) held to within 6-9 %.
+- finding: |
+    THE FINDING THAT REDIRECTED THE PROGRAMME: once the solve is 4-11 ms it is no longer the call.
+    Of the 25.39 ms certified Delaunay call, only 4.21 ms is the solve; 4.92 ms is the curvature+reg
+    build, 2.38 ms both log-dets, and ~13.9 ms is unattributed mesh, mapper and weights - larger than
+    everything else put together, and 69 % of the call on DelaunayNN. Another factor of two on the
+    solver buys almost nothing on Delaunay. This is the row the follow-on optimisation programme
+    (non-solver residue, HST GPU) is built on.
+- trap: |
+    Two, both recorded in the JSONs. (1) The library subsets `F + lambda*H` and `D` to
+    `solve_ids_to_keep` BEFORE invoking its positive-only solver and scatters zeros back after
+    (`abstract.py:607-618`), so on rectangular the solver sees n=1369, not 1521 - which is why phase 0's
+    budgets transfer as a fact rather than an assumption. (2) `lax.cond` becomes `select` under `vmap`
+    and evaluates BOTH branches, so a batched route-d row is the certified solve PLUS the library PDIP
+    (33.85 vs 21.35 ms measured). A production implementation must not put a `cond` fallback inside a
+    batched path - pad-and-mask, or run a fixed budget with no fallback branch in the batched code.
+- note: |
+    results/notes/fixed_lens_light_library_path_2026_09.md.
+
+## Original prompt
+
 # Fixed lens light — library-path timing of the S3 positive-negative and certified active-set solvers
 
 Type: research

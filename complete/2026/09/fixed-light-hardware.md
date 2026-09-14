@@ -1,3 +1,25 @@
+- summary: |
+    Phase 2: the same cell on the CPU at two thread settings and on a laptop RTX 2060 in fp64 and mixed
+    precision, pins re-derived per precision. 19 local legs, one at a time, fresh JAX cache each. The
+    certified active set wins everywhere but THE PRIZE SHRINKS WITH THE HARDWARE: a -> d is
+    2.03x/2.56x/2.01x on the A100, 1.28x/1.48x/1.46x on the RTX 2060 and 1.16-1.22x on one CPU thread -
+    a direct consequence of phase 1's mapper/mesh residue, which dominates more on a slower device.
+    New: the `fixed_light_cpu_kernels` module and cell, 22 tests (suite 246).
+- finding: |
+    MEMORY IS THE CONSUMER WALL AND IT INVALIDATES THE BATCHED DESIGN: `@vmap 16` needs 11.88 GiB,
+    batch 4 OOMs, batch 2 is slower per call than a single call, and the same shape OOM-killed the
+    16 GB host on the CPU leg. The GeForce fp64 penalty never bit - mixed precision buys 5-8 % for
+    <= 2.5e-3 nats and 16 % more VRAM, so fp64 stays the consumer path.
+- open: |
+    THE A100 KERNEL RESULT DOES NOT TRANSFER TO THE CPU: the numpy certified active set does not beat
+    the library's own `fnnls` NNLS, and both are 1.9-3.6x slower at 8 BLAS threads than at 1. This was
+    measured on the JAX-CPU and numpy paths only - the numba production CPU route was never touched -
+    and it is the open question the follow-on numba CPU programme picks up.
+- note: |
+    results/notes/fixed_lens_light_hardware_2026_09.md.
+
+## Original prompt
+
 # Fixed lens light — the same profiling on CPU and on the laptop RTX 2060 consumer GPU
 
 Type: research
