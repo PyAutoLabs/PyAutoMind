@@ -336,8 +336,15 @@
 - issued: 2026-09-14
 - prompt: active/model_figure_prose_simplify.md
 - session: claude --resume session_01LPCvGNHahZqynPyEfMijsb
-- status: workspace-dev
+- status: PRs OPEN (6), awaiting CI + /prm; Heart YELLOW acknowledged by the human 2026-09-14
 - worktree: ~/Code/PyAutoLabs-wt/model-figure-prose-simplify
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1627
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/617
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/738
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/158
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/56
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/241
+- heart-ack: "workspace validation not passing (3 failed, cloud#34824535982); manifest drift: organism-map blocks (generated) - 2 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: public front-door organ tables (generated) - 2 mismatch(es) vs PyAutoMind/repos.yaml; profiling drift: matrix_free delaunay/delaunay_nn/rectangular hpc_a100 fp64 + mge + mge_mass_jax runtime summaries (+1 more); release validation incomplete: no rehearsal for current source"
 - epic: model-figures
 - repos:
   - autofit_workspace: feature/model-figure-prose-simplify
