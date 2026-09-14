@@ -244,7 +244,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/colab_visibility_and_chapter_advanced_rename.md">HowToFit — surface the Colab entry point on the README, rename chapter…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/53">issue #53</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/colab_visibility_and_chapter_advanced_rename.md">HowToFit — surface the Colab entry point on the README, rename chapter…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/53">issue #53</a> — issued 2026-09-14 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/54">HowToFit#54</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/155">autofit_workspace#155</a></summary>
 
 ```
 /start_dev active/colab_visibility_and_chapter_advanced_rename.md
