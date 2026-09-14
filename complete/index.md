@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1429 records across 8 buckets.
+1433 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -174,6 +174,7 @@ markers; everything below GENERATED is rebuilt.
 - [delaunay-walk-early-exit](2026/09/delaunay-walk-early-exit.md)
 - [docs-followup-paid-plan-assistants](2026/09/docs-followup-paid-plan-assistants.md) — Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new …
 - [einstein-radius-jit-seed-finder](2026/09/einstein-radius-jit-seed-finder.md)
+- [emcee-log-prob-alignment](2026/09/emcee-log-prob-alignment.md)
 - [ep-collapse-unpark](2026/09/ep-collapse-unpark.md)
 - [ep-full-revert-not-updated](2026/09/ep-full-revert-not-updated.md) — closed completed 2026-09-07
 - [ep-laplace-deterministic-hessian](2026/09/ep-laplace-deterministic-hessian.md) — closed completed 2026-09-07
@@ -206,6 +207,9 @@ markers; everything below GENERATED is rebuilt.
 - [howtofit-ch1-gradients-details](2026/09/howtofit-ch1-gradients-details.md)
 - [howtofit-colab-and-chapter-advanced](2026/09/howtofit-colab-and-chapter-advanced.md)
 - [howtofit-markdown-mirror-url](2026/09/howtofit-markdown-mirror-url.md)
+- [howtofit-tutorial-3-emcee-flaky](2026/09/howtofit-tutorial-3-emcee-flaky.md)
+- [howtofit-tutorial-followups](2026/09/howtofit-tutorial-followups.md)
+- [howtofit-tutorials-1-3](2026/09/howtofit-tutorials-1-3.md)
 - [howtolens-ch3-mask-overlay](2026/09/howtolens-ch3-mask-overlay.md)
 - [human-readable-first-docs](2026/09/human-readable-first-docs.md) — Swapped every user-facing doc (PyAutoLens / PyAutoGalaxy README + docs/, autolens_workspace / autogalaxy_works…
 - [image-source-mappings-p1](2026/09/image-source-mappings-p1.md) — New `autoarray/inversion/mappings/` package — `Mapping` / `ImageRegion` result objects,
