@@ -260,7 +260,7 @@
 - issued: 2026-09-13
 - prompt: active/model_figures_6b_lens_surfaces.md
 - session: claude --resume session_01DLx38vS6F1M7K5LnpVbeZ7
-- status: wave 1 MERGED (HowToLens#81, autolens_workspace#543); wave 2 (autolens_workspace PR B) in flight on feature/model-figures-rollout-lens-b
+- status: wave 1 MERGED (HowToLens#81, autolens_workspace#543); wave 2 RESUMED 2026-09-14 under a changed prose standard — autolens_workspace PR B on feature/model-figures-rollout-lens-b (sweep + rollout, two commits), HowToLens prose sweep on feature/model-figure-prose-lens
 - worktree: ~/Code/PyAutoLabs-wt/model-figures-rollout-lens
 - epic: model-figures phase 6b
 - release-gate: PyAutoFit
@@ -268,7 +268,27 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/543 (merged c8b7254830da5f4a0908b561296a30654b884ae4)
 - repos:
   - autolens_workspace: feature/model-figures-rollout-lens-b
-  - HowToLens: feature/model-figures-rollout-lens
+  - HowToLens: feature/model-figure-prose-lens
+- standard-change: |
+    2026-09-14. The human's verdict is that the per-figure reading commentary this
+    rollout writes is information overload and the figure should be self-explanatory.
+    Every first-figure prose block — opener, map/legend paragraph and all
+    file-specific paragraphs after it — collapses to two fixed paragraphs
+    (canonical text on the issue, comment 5669860023). This supersedes the prompt's
+    "Pattern" section for the opener block and retires its "lens vocabulary must be
+    verified by rendering" requirement, which had nothing left to govern. The short
+    one-to-three-line notes at second and third figure sites are unchanged.
+- resumed: |
+    2026-09-14. Wave 2 was stalled, not in flight: 13 modified scripts under
+    scripts/interferometer/ uncommitted in the worktree, last touched 2026-09-13
+    22:36, zero commits ahead of origin/main. Their .figure() calls and placement
+    are kept; only the prose is rewritten. Branch B was fast-forwarded onto
+    origin/main (release Colab-URL bump) with the WIP stashed and popped. HowToLens
+    wave 1 is merged, so its sweep runs on a new branch cut from origin/main.
+    autolens_workspace ships ONE PR carrying both commits rather than the prompt's
+    "two PRs by folder", so the sweep need not wait on a merge to open a third.
+    Sibling task model-figure-prose-simplify (autofit_workspace#156) applies the
+    same standard to the six unclaimed repos.
 - note: "worktree_check_conflict model-figures-rollout-lens autolens_workspace HowToLens exits 0 (2026-09-13, after the stale remove-fits-dataset-plots-yaml claim was closed out). Plan approved in Plan Mode 2026-09-13; SLaM deferred to 6b2; autolens_workspace ships as two PRs (A: guides/imaging/point_source/multi_dataset; B: interferometer/group/multi_galaxy/cluster/weak on feature/model-figures-rollout-lens-b after A merges); release-gate PyAutoFit because guides/modeling/advanced/expectation_propagation.py uses EPResult.factor_graph (merged 6a, unreleased)."
 
 ## simulator-from-result-linear
