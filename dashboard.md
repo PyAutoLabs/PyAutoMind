@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 183 |
+| [Backlog](#backlog) (`draft/`) | 182 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 99
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 98
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -555,7 +555,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**183** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**182** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 49</summary>
@@ -1333,7 +1333,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 18</summary>
+<summary><b>docs</b> — 17</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
@@ -1459,14 +1459,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/autofit/howtofit_chapter_3_prose_references.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md">HowToFit: the tutorial_1 markdown mirror was missed by the download-URL fix</a> — howtofit · trivial · safe · low</summary>
-
-```
-/start_dev draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md
 ```
 
 </details>
@@ -2071,15 +2063,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | filed | <a href="draft/maintenance/autolens_workspace/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release…</a> |
 | 2026-09-14 | started | <a href="active/fixed_light_numba_phase1_whole_call.md">Numba phase 1 — the whole numba likelihood call on HST, decomposed…</a> |
-| 2026-09-14 | filed | <a href="draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md">HowToFit: the tutorial_1 markdown mirror was missed by the…</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_tutorials_1_3_fixes.md">HowToFit tutorials 1-3: data figure, math rendering, MLE start point</a> |
 | 2026-09-14 | filed | <a href="draft/bug/howtofit/tutorial_3_uninitialised_emcee_is_flaky.md">HowToFit tutorial 3: the uninitialised Emcee fit does not reliably…</a> |
+| 2026-09-14 | issued | <a href="active/howtofit_tutorials_followups.md">HowToFit follow-ups: finish the math sweep and fix tutorial 3's dead…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-14 | issued | <a href="active/howtofit_tutorials_followups.md">HowToFit follow-ups: finish the math sweep and fix tutorial 3's dead…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
 | 2026-09-14 | issued | <a href="active/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned…</a> |
 | 2026-09-13 | issued | <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from…</a> |
@@ -2089,12 +2080,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
+| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 | 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
 | 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
@@ -2104,12 +2095,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
+| 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md">PyAutoHeart smoke-tests.yml relevance gate skips the pytest matrix on…</a> |
@@ -2119,12 +2110,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
+| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
@@ -2134,6 +2125,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
 | 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
+| 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
 
 </details>
 
@@ -2585,7 +2577,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-31 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+30 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2614,7 +2606,6 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
-- `draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md — unknown theme keyword(s): howto, tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
 - `draft/maintenance/autolens_workspace/start_here_release_profile_script_cap.md — unknown theme keyword(s): release-validation, ci-timing`
