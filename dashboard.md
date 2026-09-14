@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_numba_phase1_whole_call.md">Numba phase 1 — the whole numba likelihood call on HST, decomposed…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/263">issue #263</a> — started 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/fixed_light_numba_phase1_whole_call.md">Numba phase 1 — the whole numba likelihood call on HST, decomposed…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/263">issue #263</a> — started 2026-09-14 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/264">autolens_profiling#264</a></summary>
 
 ```
 /start_dev active/fixed_light_numba_phase1_whole_call.md
