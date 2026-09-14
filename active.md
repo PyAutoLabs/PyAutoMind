@@ -293,3 +293,26 @@
     Read that instead, under the same resolve_files_path hash, guard that no
     lp_linear profile survives, and add tests/test_simulator_from_result.py —
     --from-result had no test at all.
+
+## howtofit-colab-and-chapter-advanced
+- issue: https://github.com/PyAutoLabs/HowToFit/issues/53
+- issued: 2026-09-14
+- prompt: active/colab_visibility_and_chapter_advanced_rename.md
+- session: claude --resume session_01VTWwkw1QRHUauE7vs7ogCw
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/howtofit-colab-and-chapter-advanced
+- repos:
+  - HowToFit: feature/howtofit-colab-and-chapter-advanced
+  - autofit_workspace: feature/howtofit-colab-and-chapter-advanced
+- note: "worktree_check_conflict howtofit-colab-and-chapter-advanced HowToFit autofit_workspace exits 0 (2026-09-14). Survey found pre-existing debris, not a conflict: feature/scientific-workflow-language holds worktrees for BOTH target repos, unregistered in active.md, merged into origin/main in both with its remote branches already deleted — post-merge cleanup that never ran. Also unexplained: HowToFit/notebooks/chapter_1_introduction/tutorial_1_models.ipynb was re-dirtied twice by something outside this session (3 lines of nbformat re-serialization: \\u2014 unescaped, trailing newline restored); no .gitattributes, no clean/smudge filter, no jupyter process. Reverted; re-check before staging."
+- summary: |
+    HowToFit's README mentions Colab once, buried mid-file, with no badge or
+    direct link, and defers to chapter indexes that both falsely claim "Colab
+    links to every tutorial are included" (chapter 1 tutorials 6/7/8/optional
+    use relative paths; the advanced chapter omits its 2 optional tutorials).
+    Add a badge under the title plus a "Run in Google Colab" section, fix the 6
+    chapter-index links, and rename scripts/chapter_3_graphical_models to
+    scripts/chapter_advanced (30 HowToFit files, plus 3 main-pinned URLs in
+    autofit_workspace that the rename breaks). Regen both repos. Notebook regen
+    was verified a no-op against main first. PyAutoFit's 2 prose-only "chapter
+    3" mentions are filed separately to avoid the library-first merge gate.
