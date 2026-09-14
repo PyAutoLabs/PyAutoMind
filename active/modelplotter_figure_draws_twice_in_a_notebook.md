@@ -15,6 +15,7 @@ Consequence: glance
 Witness: a notebook cell whose only content is `af.ModelPlotter(model).figure()`, executed with nbclient, produces exactly one `image/png` output (today it produces two).
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-09-14
 
 Reported from a HowToFit tutorial run in a Google Colab notebook: the model figure
 drawn by `af.ModelPlotter` appears twice, one identical image directly below the
