@@ -440,6 +440,29 @@
     branch, belonging to it and not to this task:
     markdown/chapter_1_introduction/tutorial_1_models.md:104 still reads
     PyAutoLabs/autofit_workspace — the markdown mirror was not regenerated.
+- heart-ack: |
+    Acknowledged by the human 2026-09-14 for exactly these reasons, no others:
+    "workspace validation not passing (3 failed, cloud#34824535982: autofit
+    notebooks/overview/overview_2_scientific_workflow.ipynb, autofit
+    scripts/overview/overview_2_scientific_workflow.py, autolens
+    notebooks/imaging/slam.ipynb)"
+    "profiling drift: breakdown/imaging/matrix_free_delaunay_hpc_a100_fp64_matrix_free.json
+    [imaging/matrix_free[hst, delaunay] SLQ log_det_curvature_reg p=16 m=40,
+    imaging/matrix_free[hst, delaunay] SLQ log_det_regularization p=16 m=40]"
+    "profiling drift: breakdown/imaging/matrix_free_delaunay_nn_hpc_a100_fp64_matrix_free.json
+    [imaging/matrix_free[hst, delaunay_nn] SLQ log_det_curvature_reg p=16 m=40,
+    imaging/matrix_free[hst, delaunay_nn] SLQ log_det_regularization p=16 m=40]"
+    "profiling drift: breakdown/imaging/matrix_free_rectangular_hpc_a100_fp64_matrix_free.json
+    [imaging/matrix_free[hst, rectangular] SLQ log_det_curvature_reg p=16 m=40,
+    imaging/matrix_free[hst, rectangular] SLQ log_det_regularization p=16 m=40]"
+    "profiling drift: runtime/imaging/mge/mge_likelihood_summary_hst_v2026.8.17.1.json
+    [eager, full, vmap]"
+    "profiling drift: runtime/imaging/mge_mass_jax/mge_mass_jax_likelihood_summary_hst_v2026.8.17.1.json
+    [jax_mge_mass]"
+    "profiling drift: +1 more drifted result(s)"
+    "release validation incomplete: no rehearsal for current source"
+    None of these can be affected by this task (prose and paths in two HowTo
+    repos). The ack does not extend to any reason added after this date.
 - next: Two PRs, one per repo. Run /prm ONCE after both are merged — a /prm per
   PR would close #75 and advance the prompt prematurely.
 
