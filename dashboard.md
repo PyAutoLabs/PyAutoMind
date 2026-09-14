@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 15 |
+| [In flight](#in-flight) (`active/`) | 16 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 178 |
+| [Backlog](#backlog) (`draft/`) | 177 |
 
 > **No batch in flight.**
 
@@ -142,7 +142,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 97
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 96
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -288,6 +288,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/fixed_light_unconstrained_library_path.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the *_workspace repos</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/75">issue #75</a> — issued 2026-09-14 — workspace-dev</summary>
+
+```
+/start_dev active/howto_stale_workspace_self_location.md
 ```
 
 </details>
@@ -572,7 +580,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**178** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
+**177** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 46</summary>
@@ -1209,7 +1217,124 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 18</summary>
+<summary><b>research</b> — 14</summary>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
+
+```
+/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
+
+```
+/start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · safe · medium</summary>
+
+```
+/start_dev draft/research/autolens/quick_update_plotting_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
+
+```
+/start_dev draft/research/pyautohands/git_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · safe · normal</summary>
+
+```
+/start_dev draft/research/pyautoreduce/acceptance_noise_rebaseline.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · safe · normal</summary>
+
+```
+/start_dev draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · safe · normal</summary>
+
+```
+/start_dev draft/research/libraries/intel_macos_support_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · safe · normal</summary>
+
+```
+/start_dev draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling epic</a> — autofit · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/autofit/autofit_profiling_bootstrap.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode configuration and Gemini…</a> — autolens_assistant · low-medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_assistant/free_agent_harness_evaluation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the prior?</a> — graphical_ep · medium · human-required · low</summary>
+
+```
+/start_dev draft/research/graphical_ep/transformed_message_declares_support.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · safe · low</summary>
+
+```
+/start_dev draft/research/pyautoreduce/legacy_flux_scale_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a> — autoarray · too-large · supervised · low</summary>
+
+```
+/start_dev draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>docs</b> — 17</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
 
@@ -1231,14 +1356,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the *_workspace repos</a> — workspaces · medium · safe · medium</summary>
-
-```
-/start_dev draft/docs/workspaces/howto_stale_workspace_self_location.md
 ```
 
 </details>
@@ -1351,123 +1468,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>research</b> — 14</summary>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
-
-```
-/start_dev draft/research/autoarray/delaunay_research.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
-
-```
-/start_dev draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
-
-```
-/start_dev draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · safe · medium</summary>
-
-```
-/start_dev draft/research/autolens/quick_update_plotting_cost.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
-
-```
-/start_dev draft/research/pyautohands/git_docs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · safe · normal</summary>
-
-```
-/start_dev draft/research/pyautoreduce/acceptance_noise_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · safe · normal</summary>
-
-```
-/start_dev draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · safe · normal</summary>
-
-```
-/start_dev draft/research/libraries/intel_macos_support_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · safe · normal</summary>
-
-```
-/start_dev draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling epic</a> — autofit · large · supervised · normal</summary>
-
-```
-/start_dev draft/research/autofit/autofit_profiling_bootstrap.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode configuration and Gemini…</a> — autolens_assistant · low-medium · supervised · normal</summary>
-
-```
-/start_dev draft/research/autolens_assistant/free_agent_harness_evaluation.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the prior?</a> — graphical_ep · medium · human-required · low</summary>
-
-```
-/start_dev draft/research/graphical_ep/transformed_message_declares_support.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · safe · low</summary>
-
-```
-/start_dev draft/research/pyautoreduce/legacy_flux_scale_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a> — autoarray · too-large · supervised · low</summary>
-
-```
-/start_dev draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
 ```
 
 </details>
@@ -2053,7 +2053,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | issued | <a href="active/model_figure_prose_simplify.md">Model figure prose: replace the map/legend block with two short…</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_tutorials_1_3_fixes.md">HowToFit tutorials 1-3: data figure, math rendering, MLE start point</a> |
-| 2026-09-14 | filed | <a href="draft/docs/workspaces/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the…</a> |
+| 2026-09-14 | issued | <a href="active/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the…</a> |
 | 2026-09-13 | issued | <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from…</a> |
 | 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
@@ -2549,7 +2549,7 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 
 </details>
 
-26 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+25 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2575,7 +2575,6 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
-- `draft/docs/workspaces/howto_stale_workspace_self_location.md — unknown theme keyword(s): howto, tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
