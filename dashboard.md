@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/model_figures_6b_lens_surfaces.md">Model figures phase 6b — PyAutoLens surfaces (autolens_workspace + HowToLens, SLaM deferred)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/542">issue #542</a> — issued 2026-09-13 — wave 1 MERGED (HowToLens#81, autolens_workspace#543); wave 2 RESUMED 2026-09-14 under a changed prose standard… — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/81">HowToLens#81</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/543">autolens_workspace#543</a> — ⏸ waiting on PyAutoFit's release</summary>
+<details><summary>📋 <a href="active/model_figures_6b_lens_surfaces.md">Model figures phase 6b — PyAutoLens surfaces (autolens_workspace + HowToLens, SLaM deferred)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/542">issue #542</a> — issued 2026-09-13 — wave 1 MERGED (HowToLens#81, autolens_workspace#543); wave 2 PRs OPEN 2026-09-14 under the changed prose standard… — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/546">autolens_workspace#546</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/83">HowToLens#83</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/81">HowToLens#81</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/543">autolens_workspace#543</a> — ⏸ waiting on PyAutoFit's release</summary>
 
 ```
 /start_dev active/model_figures_6b_lens_surfaces.md
