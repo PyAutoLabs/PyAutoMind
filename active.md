@@ -418,3 +418,36 @@
     blames PYAUTO_TEST_MODE and a config/build/no_run.yaml park removed on
     2026-08-29 (883d1e2f). No library edits; galaxy centres and simulator.py
     deliberately untouched.
+
+## emcee-log-prob-alignment
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1628
+- issued: 2026-09-14
+- prompt: draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md
+- session: claude --resume session_0132v5TNVbbvBBESAefHwnwG
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/emcee-log-prob-alignment
+- repos:
+  - PyAutoFit: feature/emcee-log-prob-alignment
+- note: "worktree_check_conflict exits 1 on PyAutoFit with two claims, both waived as disjoint: howtofit-mode holds one uncommitted README.md, and model-figure-prose-simplify (PyAutoFit#1627) touches only docs/cookbooks/*.md and docs/features/graphical.md. This task touches autofit/non_linear/search/mcmc/{emcee,zeus}/search.py and test_autofit/ only. Fresh worktree from origin/main."
+- summary: |
+    Correctness bug found while calibrating HowToFit tutorial 3's MCMC budget
+    (HowToFit#59/#60). Emcee's samples_via_internal_from pairs a thinned,
+    burn-in-discarded parameter chain with a raw tail slice of the unthinned,
+    undiscarded log-probability array (plus a one-element offset), so every
+    sample's reported likelihood belongs to a different sample. Zeus has the same
+    defect via a silent zip() truncation. Consequence:
+    result.max_log_likelihood_instance is the argmax of a scrambled array - a
+    random post-burn-in draw, not the MLE - and the "Maximum Log Likelihood" line
+    of every Emcee and Zeus result.info is wrong. Nested sampling and the MLE
+    searches are unaffected.
+    Verified twice in-session: reported 188.9628 vs actual 188.8337 on one fit,
+    reported 188.34 vs actual 176.52 on another. The error scales with how much
+    post-burn-in samples differ, so a poorly converged chain is punished hardest.
+    Fix: request log-probs under the same discard/thin as the chain, bind those in
+    both the test-mode and normal branches, assert equal lengths before zip, and
+    add a regression test asserting the invariant (reported max-likelihood equals
+    the Analysis likelihood recomputed from the reported instance) rather than
+    pinning a number - validated by reverting the fix and confirming the test fails.
+    Blast radius: moves the reported max-likelihood of every existing Emcee/Zeus
+    fit. They were wrong before, so this is a correction, but it will move pinned
+    values.
