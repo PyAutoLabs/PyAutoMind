@@ -286,3 +286,54 @@
     (ValueError: slice step cannot be zero) and check_size=100 raises IndexError on
     chains shorter than 100, which is always true under PYAUTO_TEST_MODE=1; Zeus
     guards it, Emcee does not.
+
+## fixed-light-numba-phase1
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/263
+- status: workspace-dev
+- prompt: active/fixed_light_numba_phase1_whole_call.md
+- epic: fixed-lens-light-numba-cpu
+- phase: 1
+- started: 2026-09-14
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-phase1
+- repos:
+  - autolens_profiling: feature/fixed-light-numba-phase1
+- plan: |
+    Phase 1 of the numba CPU campaign, and the first phase of it to be issued. Measure the
+    whole AnalysisImaging.log_likelihood_function on PyAutoArray's numba path - the
+    production CPU route the completed GPU epic never touched - and produce a decomposition
+    of where that call goes, measured in ONE process rather than attributed across two.
+    Three new files, zero library edits: call_accounting.py (an access-counting harness that
+    wraps ~35 library descriptors for one instrumented pass and reports inclusive time,
+    exclusive time and n_calls per site), fixed_light_system.py (the jax-free half of
+    active_set_steps.py, extracted so a numba cell can build the S3 system without dragging
+    JAX into the process), and the cell fixed_light_numba.py (routes a/b/c x {dense,
+    numba-sparse} = six rows). Gates: a three-layer sparse-operator parity pin, a coverage
+    contract (unattributed/call <= 5 %), an instrumentation-overhead ceiling of 1.03.
+    Three legs on the 8-core laptop: smoke (N=484), t1, t8.
+- scope-decisions: |
+    Two, taken with the human before planning. (1) The campaign map's original phase 0
+    (numba kernel measurement) is FOLDED into this phase - GPU phase 2 already measured the
+    CPU kernel rows and concluded a CPU assessment "should score the library's fnnls path,
+    not the certified active set", so a kernel phase would re-answer a settled question.
+    (2) S3 is measured on dense numpy AND on a re-baked numba-sparse dataset with a parity
+    pin - the S3 subtraction rebuilds the dataset and drops the sparse operator, so without
+    the re-bake this leg would measure a path nobody runs. The campaign map was amended in
+    the same breath: five phases, not six, and phase 3 repurposed from certified pass
+    budgets to the fnnls memo warm start.
+- design-finding: |
+    The re-bake is PROVABLY identity-preserving, which turns the one genuinely risky part of
+    this phase into a cheap assert. The JAX sparse class reads a weight map baked at
+    apply_sparse_operator time (PyAutoArray .../imaging/sparse.py:64) - which is what made
+    re-baking look dangerous - but the NUMBA class does not: it recomputes psf_weighted_data
+    from the live data every evaluation (.../imaging_numba/sparse.py:94-101), and
+    SparseLinAlgImagingNumba is built purely from noise_map.native, psf.kernel.native and the
+    mask (dataset.py:652-716), none of which the subtraction touches.
+- trap: |
+    Inversion.curvature_reg_matrix is a PLAIN @property (abstract.py:358-370) that rebuilds
+    an (n,n) sum on every access, and it is accessed >= 3x per call (:613/:647, :397); under
+    edge zeroing two of those add a further full fancy-index copy. The existing numba
+    decomposition (delaunay_numba.py:596-672) is a sequential-touch walk and therefore
+    silently loads those rebuilds into its "solve" and "log det" rows - anyone reading them
+    today is over-attributing to the solver. That is why this phase counts accesses instead,
+    and why a test asserts n_calls >= 2 so a future PyAutoArray fix fails loudly.
+- note: started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict fixed-light-numba-phase1 autolens_profiling, exit 0).
