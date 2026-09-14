@@ -1,3 +1,63 @@
+Acts on a human read-through of chapter 1 tutorials 4, 5 and 6.
+
+**Tutorial 4** — backticked `log_likelihood_function` and `model_data` in the
+Analysis prose; committed the six figures the tutorial has always embedded but
+which never existed (`scripts/chapter_1_introduction/images/` was absent, so all
+six rendered broken); rounded all 9 plot titles to 2dp, because at full float
+precision the title overflows a square figure and clips for every reader; added a
+`.gitignore` exception for the blanket `**/images/` rule that was silently hiding
+the PNGs from `git add`.
+
+**Tutorial 6** — dropped the `search.summary` / Resampling Info block, since
+tutorial 7's `__NaN Diagnostics__` already covered that file and both NaN
+counters; replaced the extended ball-rolling analogy for Hamiltonian Monte Carlo
+with a plain statement that NUTS is MCMC in which the walker knows which way to
+step; moved the Hamiltonian diagnostics to tutorial 7; reworded the wrap-up's
+opening sentence. Also de-balled the wrap-up recap and the `n_divergent`
+description, which reused the analogy, and rewrote the `name`/`path_prefix`
+justification that the deletion orphaned.
+
+**Tutorial 7** — new `__Hamiltonian Diagnostics__` section carrying `n_divergent`,
+`ess_min` and `mean_acceptance` with its own short `BlackJAXNUTS` fit. Placed
+between `__NaN Diagnostics__` and `__Unit Cube Vs Physical__` rather than inside
+`__Comparing Searches__`, whose prose reasons about "none of the four" searches
+and contrasts exactly three mechanisms.
+
+Figures: the tutorial's own 15-parameter fit run 25 times against one fixed
+`gaussian_x5` realisation, logL recomputed from each reported
+`max_log_likelihood_instance`. Chosen — bad (−3189.38, 21.6σ, 68 px > 3σ), okay
+(132.98, 3.97σ, 4 px), good (183.63, 2.61σ, 0 px, above the generating profiles'
+own 180.91). The okay case matters because the prose asserts residuals above 3.0σ
+for it.
+
+A first campaign was discarded: its dataset was simulated inside a throwaway
+worktree that was then removed, and the simulator is unseeded. Re-plotting those
+parameters against a substitute realisation pushed the "good" fit to 3.30σ,
+contradicting the prose. The realisation the committed figures were fitted to is
+preserved at `HowToFit/dataset/example_1d/gaussian_x5_tutorial4_figures/`
+(gitignored, with a README) so the figures stay reproducible.
+
+Regenerated notebooks for tutorials 4, 6 and 7, and re-rendered tutorial 4's
+curated markdown mirror. That mirror was last built 2026-07-27, so this also
+caught it up on four intervening script commits (`c157131`, `9e1b165`, `cd9efd8`,
+`b599b4c`) — hence the larger markdown diff and 10 → 14 image files. Verified no
+other mirror changed and no absolute path leaked into the render.
+
+CI green: navigator ×3, smoke `changes`, smoke 3.12, smoke 3.13, tutorials-complete.
+Smoke exercises the new NUTS fit at `PYAUTO_TEST_MODE=2` (sampler skipped) with
+tutorial 7's existing `PYAUTO_DISABLE_JAX: "0"` override.
+
+Shipped under the same human heart-ack as `autonerves-colab-sampler-deps`
+(PR-open only); merge was a separate human act. Ran in a human-approved parallel
+worktree over the unused `howtofit-mode` claim.
+
+The Colab `ModuleNotFoundError` reported for tutorials 4, 5 and 6 in the same
+read-through was NOT a HowToFit bug and is tracked separately — see
+`complete/2026/09/autonerves-colab-sampler-deps.md`; it needs an autonerves
+release, not a code change.
+
+## Original prompt
+
 # HowToFit chapter 1: tutorial 4/6 review feedback (backticks, missing images, T6→T7 moves)
 
 Type: docs

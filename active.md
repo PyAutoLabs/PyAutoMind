@@ -135,15 +135,17 @@
     delaunay_nn_hpc_a100, rectangular_hpc_a100.
 - next: Acknowledge these Heart YELLOW reasons before ship_workspace; source remains local and uncommitted.
 - parallel-claim: |
-    HowToFit is shared with task `howtofit-tutorial-4-6-feedback` (HowToFit#61,
-    branch feature/howtofit-tutorial-4-6-feedback) from 2026-09-14. Deliberate,
+    RESOLVED 2026-09-14: the parallel task `howtofit-tutorial-4-6-feedback`
+    (HowToFit#61 / PR#62) merged and closed out, so HowToFit is no longer shared
+    and this claim stands alone again. Kept as a record of a deliberate,
     human-approved override of the conflict guard, not drift. Evidence at the
     time: this task's `feature/howtofit-mode` had 0 commits of its own and 0
     changed files against origin/main (9 behind, working tree clean) — the
-    HowToFit claim was registered but never used. File sets are disjoint:
+    HowToFit claim was registered but never used. File sets were disjoint:
     howtofit-mode is README/AGENTS assistant-prompt propagation; the other task
-    touches scripts/, notebooks/ and markdown/ under chapter_1_introduction only.
-    If HowToFit work starts here, re-check that separation before editing.
+    touched scripts/, notebooks/ and markdown/ under chapter_1_introduction only.
+    NOTE: `feature/howtofit-mode` is now 9+ commits behind origin/main and the
+    merged tutorial work landed there — rebase before editing HowToFit here.
 
 ## fixed-light-numba-phase1
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/263
@@ -258,82 +260,3 @@
     in the PR body: it eagerly imported `timing`, which imports jax at module level, so ANY
     likelihood_breakdown.* import pulled JAX into the process and the cell's no-jax guarantee
     was unreachable. Every consumer imports submodules; the 440-test suite covers it.
-
-## autonerves-colab-sampler-deps
-- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/165
-- issued: 2026-09-14
-- prompt: active/colab_setup_missing_dynesty_and_emcee.md
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/166
-- worktree: /home/jammy/Code/PyAutoLabs-wt/autonerves-colab-sampler-deps/
-- repos:
-  - PyAutoNerves: feature/autonerves-colab-sampler-deps
-- heart-ack: |
-    Human acknowledgement 2026-09-14, live in the slot: PR-open only, merge
-    stays a human act. Covers this launch and task howtofit-tutorial-4-6-feedback
-    (HowToFit#61). Acknowledged reason set, verbatim from pyauto-heart readiness:
-    "autogalaxy_workspace: Smoke Tests failure on main; release validation FAILED (stage integrate); workspace validation not passing (3 failed, cloud#34824535982)"
-    Does not extend to any reason appearing after this point; a new red reason
-    stops the run.
-- summary: |
-    The Colab bootstrap installed no `dynesty` and no `emcee`, so every Colab
-    notebook running `af.DynestyStatic` or `af.Emcee` died with
-    ModuleNotFoundError across all six `_PROJECTS` — the install is
-    `pip install *packages --no-deps`, so neither could arrive via `autofit`.
-    The code half shipped the same day in PyAutoNerves#164 (merged, 8336939);
-    what did not ship is the regression test. `test_setup_colab.py` asserts only
-    `packages[0] == "autonerves"`, so nothing stops a future edit dropping a
-    sampler again. Adds a test that every `_PROJECTS` entry resolves to a
-    `packages` list containing dynesty, emcee AND nautilus-sampler (matched on
-    name, not pin), confirms the two samplers' own runtime deps exist in a stock
-    Colab image under `--no-deps`, and weighs lifting the three samplers into
-    their own `_SAMPLERS` list. Reaches users only after an autonerves PyPI
-    release.
-- note: started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict autonerves-colab-sampler-deps PyAutoNerves, exit 0).
-
-## howtofit-tutorial-4-6-feedback
-- issue: https://github.com/PyAutoLabs/HowToFit/issues/61
-- issued: 2026-09-14
-- prompt: active/chapter_1_tutorial_4_and_6_review_feedback.md
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/62
-- worktree: /home/jammy/Code/PyAutoLabs-wt/howtofit-tutorial-4-6-feedback/
-- repos:
-  - HowToFit: feature/howtofit-tutorial-4-6-feedback
-- parallel-claim: |
-    Deliberate override of the HowToFit conflict guard, 2026-09-14, approved by
-    the human before any edit. `worktree_check_conflict howtofit-tutorial-4-6-feedback
-    HowToFit` exits 1: HowToFit is also claimed by task `howtofit-mode`.
-    Evidence, re-verified at registration in
-    /home/jammy/Code/PyAutoLabs/.worktrees/howtofit-mode/HowToFit — branch
-    `feature/howtofit-mode` has 0 commits of its own and 0 changed files against
-    origin/main (`git rev-list --left-right --count origin/main...HEAD` = "9 0";
-    `git diff origin/main...HEAD --name-only` is empty), working tree clean. The
-    claim was registered but never used, so the file sets are trivially disjoint:
-    howtofit-mode is README/AGENTS assistant-prompt propagation; this task touches
-    scripts/, notebooks/ and markdown/ under chapter_1_introduction only. This task
-    runs in a fresh parallel worktree branched from freshly-fetched origin/main,
-    never off the howtofit-mode worktree's HEAD.
-- heart-ack: |
-    Human acknowledgement 2026-09-14, live in the slot: PR-open only, merge
-    stays a human act. Same acknowledgement as task autonerves-colab-sampler-deps
-    (PyAutoNerves#165). Acknowledged reason set, verbatim from pyauto-heart readiness:
-    "autogalaxy_workspace: Smoke Tests failure on main; release validation FAILED (stage integrate); workspace validation not passing (3 failed, cloud#34824535982)"
-    Does not extend to any reason appearing after this point; a new red reason
-    stops the run.
-- summary: |
-    Six pieces of review feedback on HowToFit chapter 1 tutorials 4 and 6.
-    Tutorial 4: backtick `log_likelihood_function` and `model_data` (lines
-    169-170); generate and commit the six bad/okay/good fit and
-    normalized-residual PNGs the prose at 461-477 references but which are not in
-    the repo at all (the okay case must really show residuals above 3.0 sigma),
-    with the figures signed off before they are committed. Tutorial 6: delete the
-    premature `search.summary` / Resampling Info block (636-660, already covered
-    by tutorial 7's `__NaN Diagnostics__`), replace the extended ball analogy
-    (688-699, 902) with "MCMC where the walker knows which way to step", move the
-    Hamiltonian diagnostics (723-742) to tutorial 7 with a cheap live
-    `BlackJAXNUTS` fit added there, and rewrite the wrap-up opening at 887.
-    Regenerate notebooks for 4/6/7 (`generate.py`) and markdown for 4 only
-    (`generate_markdown.py`; 6 and 7 have no markdown mirror). The Colab
-    ModuleNotFoundErrors from the same read-through are out of scope — separate
-    PyAutoNerves task autonerves-colab-sampler-deps.
