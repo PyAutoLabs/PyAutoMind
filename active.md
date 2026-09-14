@@ -216,7 +216,19 @@
     today is over-attributing to the solver. That is why this phase counts accesses instead,
     and why a test asserts n_calls >= 2 so a future PyAutoArray fix fails loudly.
 - note: started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict fixed-light-numba-phase1 autolens_profiling, exit 0).
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/264
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/264 (MERGED 2026-09-15, main 9285683)
+- status-detail: |
+    IN FLIGHT, mechanism merged, MEASUREMENT OUTSTANDING. PR #264 merged with lint green on
+    every run and leg and the branch proved an ancestor of main. The issue was deliberately
+    NOT closed and the prompt deliberately NOT moved to complete/: phase 1's deliverable is a
+    measurement, and recording a research phase complete having produced no numbers would
+    corrupt the ledger. Outstanding: leg 1 (t1), leg 2 (t8), and the verdict note
+    results/notes/fixed_lens_light_numba_2026_09.md. Both land as a FOLLOW-UP PR; /prm then
+    closes the task out properly.
+    The worktree ~/Code/PyAutoLabs-wt/fixed-light-numba-phase1 and its branch are KEPT ON
+    PURPOSE - worktree_remove would refuse anyway while active.md claims the task, which is
+    the correct behaviour here. Resuming needs no start_dev, just the two run commands on an
+    idle machine.
 - note: |
     PR #264 opened 2026-09-15 with the MECHANISM AND ITS GATES; the timing legs are
     deliberately NOT in it. call_accounting.py (407), fixed_light_system.py (491), the cell
