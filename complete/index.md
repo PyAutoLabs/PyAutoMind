@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1420 records across 8 buckets.
+1424 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -196,9 +196,12 @@ markers; everything below GENERATED is rebuilt.
 - [gaussian-precompute-p1](2026/09/gaussian-precompute-p1.md)
 - [gaussian-precompute-p2](2026/09/gaussian-precompute-p2.md)
 - [gaussian-precompute-p3](2026/09/gaussian-precompute-p3.md) — closed, completed
+- [generate-markdown-leaks-worktree-paths](2026/09/generate-markdown-leaks-worktree-paths.md)
 - [hands-board-family-footer](2026/09/hands-board-family-footer.md)
 - [heart-board-family-footer](2026/09/heart-board-family-footer.md)
 - [heart-worktree-drift-hidden-dirs](2026/09/heart-worktree-drift-hidden-dirs.md) — closed, completed
+- [howto-paths-orientation-block-parity](2026/09/howto-paths-orientation-block-parity.md)
+- [howto-stale-self-location](2026/09/howto-stale-self-location.md)
 - [howtofit-ch1-gradients-details](2026/09/howtofit-ch1-gradients-details.md)
 - [howtofit-colab-and-chapter-advanced](2026/09/howtofit-colab-and-chapter-advanced.md)
 - [howtolens-ch3-mask-overlay](2026/09/howtolens-ch3-mask-overlay.md)
@@ -296,6 +299,7 @@ markers; everything below GENERATED is rebuilt.
 - [test-mode-bypass-save-results](2026/09/test-mode-bypass-save-results.md) — closed completed 2026-09-14
 - [traced-assertions-on-jax-path](2026/09/traced-assertions-on-jax-path.md)
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07
+- [tutorial-searches-writes-into-chapter-2](2026/09/tutorial-searches-writes-into-chapter-2.md)
 - [unit-test-import-time-hotspot-census](2026/09/unit-test-import-time-hotspot-census.md)
 - [user-workspace-howto-slow-script-pass](2026/09/user-workspace-howto-slow-script-pass.md)
 - [vis-lp-latent-jit-assertions](2026/09/vis-lp-latent-jit-assertions.md)

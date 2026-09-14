@@ -1,3 +1,96 @@
+Stale self-location paths left behind when the HowTo lecture series was split
+out of the `*_workspace` repos. Tutorials still told the reader that their own
+working directory, config, dataset and output folders lived inside
+`autogalaxy_workspace` / `autolens_workspace`.
+
+**Merged 2026-09-14:** HowToGalaxy#76 (3 commits), HowToLens#82 (4 commits).
+Issue HowToGalaxy#75.
+
+## What shipped
+
+55 prose lines across the two repos. The governing distinction, applied to every
+hit: *is this sentence telling the reader where THEIR files are (fix), or
+pointing them at the sibling workspace's examples (keep)?* ~45 cross-references
+in HowToGalaxy and 60 in HowToLens are correct post-split and were left
+untouched.
+
+- HowToGalaxy: 24 lines / 13 scripts, plus the tuning-fork image and the
+  `.url_check_allowlist.txt` entry grandfathering it.
+- HowToLens: 31 lines / 18 scripts.
+- Both: the clone URL neither repo had (see "Absorbed follow-ups").
+
+## What the filed scope missed
+
+The survey undercounted; verifying each path against the code rather than
+string-swapping is what found the rest.
+
+- **Four paths wrong beyond the repo name** (HowToLens): `output/t7_with_positions`,
+  a folder name left from when that tutorial was numbered 7 *and* missing its
+  chapter prefix; four `tutorial_searches.py` prints with no path at all past
+  `workspace/output`; a simulator naming `simple__no_lens_light` when it writes
+  `simple__no_lens_light__mass_sis`; and a search path naming the wrong run. A
+  prefix-strip would have preserved all four.
+- **A second spelling of the same defect**: 13 + 17 print strings saying
+  `checkout the workspace/output/...`, naming a directory that exists in neither
+  repo. Found only because the first agent flagged it rather than assuming scope.
+- **The image was never a 404.** The script already pointed at HowToGalaxy, but
+  as a `blob` URL — `200 text/html`, does not render. Now `?raw=true`. The
+  allowlist entry was deleted: that URL appeared in no source file, so it held a
+  green check over nothing.
+- **A correctly-declined false positive**: `tutorial_4_group_scale.py:608` looks
+  truncated but its path continues on the adjacent string literal; a line-scoped
+  regex would have corrupted it.
+
+## Root cause
+
+`markdown/` is built by `generate_markdown.py` over a curated subset, really
+executing each script — a **different tool** from the `generate.py` that builds
+`notebooks/`. Anyone following the documented regeneration step rebuilds
+`notebooks/` and silently misses `markdown/`. That is how the sibling HowToFit
+fix for this same bug shipped with a stale markdown mirror, and how HowToGalaxy
+came to publish a page documenting a mask section its script no longer had
+(~400 of ~413 changed `.md` lines in #76 were that catch-up, isolated in its own
+commit).
+
+## Absorbed follow-ups
+
+Filed as separate prompts, then folded in on the human's instruction rather than
+deferred (all three retired with their own records):
+
+- `howto_paths_orientation_block_parity` — far smaller than filed. Both repos
+  already had a `__Directories__` block; only the clone URL was missing (and
+  `config/` in HowToLens). Not new authorship.
+- `tutorial_searches_writes_into_chapter_2` — three of four searches wrote into
+  `output/howtolens/chapter_2/`; fixed with their four print strings in one commit.
+- `generate_markdown_leaks_worktree_paths` — shipped as PyAutoHands#281.
+
+## Process notes
+
+- `worktree_check_conflict` fired on HowToFit and HowToLens; **both claims were
+  residue** (HowToFit's leg already merged; HowToLens's entry named a branch no
+  worktree was on). It also reported one claim on HowToFit when `active.md` held
+  three. HowToLens was taken as a deliberate parallel worktree with the file sets
+  proved disjoint.
+- Heart was YELLOW; the human acknowledged the exact reason set, none of which
+  this change could affect.
+- `navigator / Catalogue staleness` on #76 merged with a stuck `in_progress`
+  status field whose `conclusion` was `success` with a completion timestamp —
+  a GitHub metadata glitch, not an unfinished check.
+
+## Still open
+
+- **HowToFit** `markdown/chapter_1_introduction/tutorial_1_models.md:104` still
+  reads `PyAutoLabs/autofit_workspace` — the original report's own repo. It
+  belongs to the unmerged HowToFit#58: on HowToFit's `main` both the `.py` and
+  the `.md` are stale, so branching off main would duplicate that PR. Prompt
+  `draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md` stays open.
+- **HowToLens** `markdown/chapter_1_introduction/tutorial_0_visualization.md` is
+  hand-patched: the worktree render leaked and was corrected by hand. Content is
+  right, but it is not byte-identical to generator output. Re-render now that
+  PyAutoHands#281 has landed.
+
+## Original prompt
+
 # HowTo tutorials still describe themselves as living inside the *_workspace repos
 
 Type: docs
