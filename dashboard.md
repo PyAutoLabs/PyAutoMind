@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/modelplotter_figure_draws_twice_in_a_notebook.md">ModelPlotter.figure() draws twice in a notebook</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1622">issue #1622</a> — issued 2026-09-14 — library-dev</summary>
+<details><summary>📋 <a href="active/modelplotter_figure_draws_twice_in_a_notebook.md">ModelPlotter.figure() draws twice in a notebook</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1622">issue #1622</a> — issued 2026-09-14 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1623">PyAutoFit#1623</a></summary>
 
 ```
 /start_dev active/modelplotter_figure_draws_twice_in_a_notebook.md
