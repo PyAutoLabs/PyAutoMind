@@ -300,8 +300,11 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtofit-mode
 - repos:
   - autofit_assistant: feature/howtofit-mode
+  - HowToFit: feature/howtofit-mode
+  - autofit_workspace: feature/howtofit-mode
+  - PyAutoFit: feature/howtofit-mode
 - prompt: active/howtofit_mode.md
-- summary: Local four-file implementation ready and reviewed; shipping held by Heart YELLOW pending human acknowledgement.
+- summary: Assistant implementation ready and reviewed; approved README prompt propagation to HowToFit, autofit_workspace and PyAutoFit in progress. Shipping held by Heart YELLOW pending human acknowledgement.
 - ship-hold: |
     Workspace validation: 3 failures (cloud#34824535982).
     Manifest drift: organism-map 2; public front-door 2.
