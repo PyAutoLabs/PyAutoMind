@@ -10,11 +10,12 @@ Themes:
 Difficulty: easy
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Witness: `config/build/profile_release.yaml` carries `BUILD_SCRIPT_TIMEOUT: "3600"` on the existing `imaging/start_here` override; `validate_env_profiles.py` passes; PyAutoHands `build_util.timeout_for` resolves 3600 for that script and 1800 (workflow global) for its siblings
 Review-minutes: 5
 Filed: 2026-09-14
+Issued: 2026-09-14
 
 User request (verbatim, 2026-09-14):
 

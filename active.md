@@ -1,5 +1,27 @@
 # Active Tasks
 
+## start-here-release-profile-script-cap
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/547
+- issued: 2026-09-14
+- prompt: start_here_release_profile_script_cap.md
+- session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/start-here-release-profile-script-cap
+- repos:
+  - autolens_workspace: feature/start-here-release-profile-script-cap
+- heart-ack: "release validation FAILED (stage integrate); workspace validation not passing (3 failed, cloud#34824535982)"
+- summary: |
+    autolens_workspace config/build/profile_release.yaml gives the existing
+    `imaging/start_here` override its own BUILD_SCRIPT_TIMEOUT of 3600 s. The
+    script has been killed at the release leg's run-wide 1800 s cap in 3 of the
+    last 8 Release Integrate runs (09-09, 09-12, 09-14 run 34898325503) inside a
+    ~26 min XLA CPU compile of MultiStartProdigy (n_starts=48, batch_size=None)
+    under its non-uniform over-sample map, before the first gradient step;
+    passing runs span 586-1695 s. The run-wide cap, which guards the other 84
+    entries, is untouched. Config-only. The real fix is filed separately as
+    draft/bug/autolens_workspace/start_here_multistart_compile_time.md.
+- note: "started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict start-here-release-profile-script-cap autolens_workspace, exit 0; no active.md entry claims autolens_workspace)."
+
 ## imaging-modeling-fits-guard-split
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/242
 - issued: 2026-09-14
