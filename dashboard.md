@@ -42,25 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 12 |
+| [In flight](#in-flight) (`active/`) | 13 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 182 |
+| [Backlog](#backlog) (`draft/`) | 181 |
 
 > **No batch in flight.**
 
 ## Start here
 
 **Highest priority** (filed as `high`)
-
-<details><summary>📋 <a href="draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned log-probabilities</a> — autofit · small · safe · high</summary>
-
-```
-/start_dev draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md
-```
-
-</details>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -150,7 +142,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 100
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 99
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -251,6 +243,14 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned log-probabilities</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1628">issue #1628</a> — issued 2026-09-14 — library-dev</summary>
+
+```
+/start_dev active/emcee_zeus_samples_log_prob_misalignment.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/42">issue #42</a> — issued 2026-09-14 — workspace-dev</summary>
 
@@ -556,18 +556,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**182** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 49</summary>
-
-<details><summary>📋 <a href="draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned log-probabilities</a> — autofit · small · safe · high</summary>
-
-```
-/start_dev draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md
-```
-
-</details>
+<summary><b>bug</b> — 48</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -1816,36 +1808,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>mcmc</b> — 2 task(s) · 2 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: correctness, mcmc, robustness, samples, test-mode</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'mcmc' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md
-- draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned…</a> | autofit | small | high | formalised |
-| <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> | autofit | small | normal | formalised |
-
-</details>
-
-<details>
 <summary><b>pixelization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2045,7 +2007,41 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 28 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>jax</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax, mass-profiles</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'jax' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
+- draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md
+- draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
+- draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> | autogalaxy | small | medium | draft |
+| <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> | autogalaxy | small | low | draft |
+| <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> | autofit | small | normal | draft |
+| <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> | autoarray | medium | normal | formalised |
+
+</details>
+
+_Showing 8 of 27 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2068,7 +2064,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-14 | filed | <a href="draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned…</a> |
+| 2026-09-14 | issued | <a href="active/emcee_zeus_samples_log_prob_misalignment.md">Emcee and Zeus pair thinned parameters with unthinned…</a> |
 | 2026-09-13 | issued | <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from…</a> |
 | 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
@@ -2525,7 +2521,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-130 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+129 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2570,11 +2566,11 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/workspaces/model_figures_6b2_slam_stages.md`
 - `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
 - `draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md`
-- _… and 90 more_
+- _… and 89 more_
 
 </details>
 
-30 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+29 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2587,7 +2583,6 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — unknown theme keyword(s): simulation, robustness`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
-- `draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md — unknown theme keyword(s): mcmc, samples, correctness`
 - `draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md — unknown theme keyword(s): mcmc, test-mode, robustness`
 - `draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md — unknown theme keyword(s): serialization`
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`

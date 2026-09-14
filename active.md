@@ -352,7 +352,7 @@
 ## emcee-log-prob-alignment
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1628
 - issued: 2026-09-14
-- prompt: draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md
+- prompt: active/emcee_zeus_samples_log_prob_misalignment.md
 - session: claude --resume session_0132v5TNVbbvBBESAefHwnwG
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/emcee-log-prob-alignment

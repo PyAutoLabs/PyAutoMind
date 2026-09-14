@@ -15,6 +15,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 15
 Unattended: ready
+Issued: 2026-09-14
 Filed: 2026-09-14
 
 ## The bug
