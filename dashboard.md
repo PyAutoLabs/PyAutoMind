@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 18 |
+| [In flight](#in-flight) (`active/`) | 19 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 181 |
+| [Backlog](#backlog) (`draft/`) | 180 |
 
 > **No batch in flight.**
 
@@ -138,14 +138,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/workspaces/restore_workspace_test_likelihood_baselines.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two scaling-tier galaxies out of frame</a> — autolens_workspace · easy · supervised · high</summary>
-
-```
-/start_dev draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md
 ```
 
 </details>
@@ -352,6 +344,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/profiling_drift_pinned_drift_contract.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two scaling-tier galaxies out of frame</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/544">issue #544</a> — issued 2026-09-14 — workspace-dev</summary>
+
+```
+/start_dev active/scaling_relation_slam_smoke_frame_cap.md
 ```
 
 </details>
@@ -604,10 +604,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
+**180** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 48</summary>
+<summary><b>bug</b> — 47</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -645,14 +645,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two scaling-tier galaxies out of frame</a> — autolens_workspace · easy · supervised · high</summary>
-
-```
-/start_dev draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md
 ```
 
 </details>
@@ -2105,7 +2097,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two…</a> |
+| 2026-09-14 | issued | <a href="active/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two…</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | issued | <a href="active/model_figure_prose_simplify.md">Model figure prose: replace the map/legend block with two short…</a> |
@@ -2605,7 +2597,7 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 
 </details>
 
-29 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+28 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2624,7 +2616,6 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
 - `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md — unknown theme keyword(s): likelihood-profiling`
-- `draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md — unknown theme keyword(s): workspace-smoke, scaling-relation`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md — unknown theme keyword(s): tutorials`
