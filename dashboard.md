@@ -348,7 +348,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking scripts that read their own result…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1624">issue #1624</a> — issued 2026-09-14 — library-dev</summary>
+<details><summary>📋 <a href="active/test_mode_bypass_skips_save_results.md">Test-mode bypass never calls <code>analysis.save_results</code>, breaking scripts that read their own result…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1624">issue #1624</a> — issued 2026-09-14 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1626">PyAutoFit#1626</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/test_mode_bypass_skips_save_results.md
@@ -388,6 +388,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1626](https://github.com/PyAutoLabs/PyAutoFit/pull/1626) — `active/test_mode_bypass_skips_save_results.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
