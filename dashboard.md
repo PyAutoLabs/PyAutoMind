@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 16 |
+| [In flight](#in-flight) (`active/`) | 17 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 177 |
+| [Backlog](#backlog) (`draft/`) | 181 |
 
 > **No batch in flight.**
 
@@ -142,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 96
+<details><summary>📋 <a href="draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two scaling-tier galaxies out of frame</a> — autolens_workspace · easy · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 98
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -312,6 +320,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/howtofit_tutorials_1_3_fixes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/howtofit_tutorials_followups.md">HowToFit follow-ups: finish the math sweep and fix tutorial 3's dead Priors…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/59">issue #59</a> — issued 2026-09-14 — workspace-dev</summary>
+
+```
+/start_dev active/howtofit_tutorials_followups.md
 ```
 
 </details>
@@ -580,10 +596,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**177** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
+**181** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 46</summary>
+<summary><b>bug</b> — 47</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -621,6 +637,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two scaling-tier galaxies out of frame</a> — autolens_workspace · easy · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md
 ```
 
 </details>
@@ -1217,6 +1241,163 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
+<summary><b>docs</b> — 19</summary>
+
+<details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/multi_galaxy_package.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
+
+```
+/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
+
+```
+/start_dev draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens/plot_rst_missing_exports.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> — workspaces · medium · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to <code>subplot_fit_interferometer_dirty_images</code></a> — workspaces · medium · supervised · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/interferometer_dirty_images_call_sites.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/demo_subplot_ellipse_errors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/howto_paths_orientation_block_parity.md">HowToGalaxy and HowToLens have no <code>__Paths__</code> orientation block</a> — workspaces · small · supervised · low</summary>
+
+```
+/start_dev draft/docs/workspaces/howto_paths_orientation_block_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+
+```
+/start_dev draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — autofit · trivial · safe · low</summary>
+
+```
+/start_dev draft/docs/autofit/howtofit_chapter_3_prose_references.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md">HowToFit: the tutorial_1 markdown mirror was missed by the download-URL fix</a> — howtofit · trivial · safe · low</summary>
+
+```
+/start_dev draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>research</b> — 14</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
@@ -1334,148 +1515,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 17</summary>
+<summary><b>maintenance</b> — 13</summary>
 
-<details><summary>📋 <a href="draft/docs/autolens/multi_galaxy_package.md">multi_galaxy package: new regime package in autolens_workspace</a> — autolens · large · supervised · high</summary>
-
-```
-/start_dev draft/docs/autolens/multi_galaxy_package.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result JSONs and keep SLQ…</a> — autolens_profiling · easy · supervised · medium</summary>
 
 ```
-/start_dev draft/docs/autolens/split_lensing_regimes.md
+/start_dev draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md
 ```
 
 </details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
-
-```
-/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
-
-```
-/start_dev draft/docs/autocti/api_rst_rewrite.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens/plot_rst_missing_exports.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> — workspaces · medium · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to <code>subplot_fit_interferometer_dirty_images</code></a> — workspaces · medium · supervised · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/interferometer_dirty_images_call_sites.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/demo_subplot_ellipse_errors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-/start_dev draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — autofit · trivial · safe · low</summary>
-
-```
-/start_dev draft/docs/autofit/howtofit_chapter_3_prose_references.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>maintenance</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
 
@@ -1840,6 +1888,38 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>profiling</b> — 3 task(s) · 8 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: heart</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'profiling' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md
+- draft/research/autofit/autofit_profiling_bootstrap.md
+- draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result…</a> | autolens_profiling | easy | medium | draft |
+| <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling…</a> | autofit | large | normal | formalised |
+| <a href="draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md">Tune cluster-scale JOSS benchmarks toward their 5-minute targets</a> | autolens_workspace | medium | normal | formalised |
+
+</details>
+
+<details>
 <summary><b>assistants</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2007,41 +2087,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-<details>
-<summary><b>jax</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax, mass-profiles</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'jax' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
-- draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md
-- draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
-- draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> | autogalaxy | small | medium | draft |
-| <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> | autogalaxy | small | low | draft |
-| <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> | autofit | small | normal | draft |
-| <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> | autoarray | medium | normal | formalised |
-
-</details>
-
-_Showing 8 of 27 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 28 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2049,76 +2095,76 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two…</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | issued | <a href="active/model_figure_prose_simplify.md">Model figure prose: replace the map/legend block with two short…</a> |
+| 2026-09-14 | filed | <a href="draft/docs/workspaces/howto_paths_orientation_block_parity.md">HowToGalaxy and HowToLens have no <code>__Paths__</code> orientation block</a> |
+| 2026-09-14 | filed | <a href="draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md">HowToFit: the tutorial_1 markdown mirror was missed by the…</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_tutorials_1_3_fixes.md">HowToFit tutorials 1-3: data figure, math rendering, MLE start point</a> |
+| 2026-09-14 | issued | <a href="active/howtofit_tutorials_followups.md">HowToFit follow-ups: finish the math sweep and fix tutorial 3's dead…</a> |
 | 2026-09-14 | issued | <a href="active/howto_stale_workspace_self_location.md">HowTo tutorials still describe themselves as living inside the…</a> |
-| 2026-09-13 | issued | <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from…</a> |
-| 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
-| 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
-| 2026-09-13 | issued | <a href="active/model_figures_6b_lens_surfaces.md">Model figures phase 6b — PyAutoLens surfaces (autolens_workspace +…</a> |
-| 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
+| 2026-09-14 | filed | <a href="draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md">Clear Heart profiling-drift YELLOW: regenerate re-pinned MGE result…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-13 | issued | <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from…</a> |
+| 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
+| 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
+| 2026-09-13 | issued | <a href="active/model_figures_6b_lens_surfaces.md">Model figures phase 6b — PyAutoLens surfaces (autolens_workspace +…</a> |
+| 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_likelihood_assessment_hst_euclid.md">Fixed lens light — whole-likelihood assessment on HST and Euclid at…</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_cpu_and_consumer_gpu.md">Fixed lens light — the same profiling on CPU…</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_source_pixel_scaling.md">Fixed lens light — source-pixel scaling of the new approach across…</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_unconstrained_library_path.md">Fixed lens light — library-path timing of the S3 positive-negative…</a> |
 | 2026-09-13 | issued | <a href="active/fixed_light_certified_low_likelihood_draws.md">Fixed lens light — is the certified active-set fast only because…</a> |
-| 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
-| 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
-| 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
-| 2026-09-12 | issued | <a href="active/fixed_lens_light_source_only_inversion.md">Fixed lens light after SLaM light[1]: cost of the source-only…</a> |
-| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
+| 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
+| 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
+| 2026-09-12 | issued | <a href="active/fixed_lens_light_source_only_inversion.md">Fixed lens light after SLaM light[1]: cost of the source-only…</a> |
+| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 | 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
 | 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
-| 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
-| 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
+| 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
+| 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
+| 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
+| 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
 | 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md">PyAutoHeart smoke-tests.yml relevance gate skips the pytest matrix on…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
-| 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
-| 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
-| 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
-| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
-| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
+| 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
+| 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
+| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> |
+| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 | 2026-09-08 | filed | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> |
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
 | 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
-| 2026-09-06 | filed | <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
-| 2026-09-06 | filed | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> |
-| 2026-09-04 | filed | <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> |
-| 2026-09-04 | filed | <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> |
-| 2026-09-04 | filed | <a href="draft/feature/pyautogut/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> |
 
 </details>
 
@@ -2549,7 +2595,7 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 
 </details>
 
-25 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+29 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2568,6 +2614,7 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
 - `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md — unknown theme keyword(s): likelihood-profiling`
+- `draft/bug/autolens_workspace/scaling_relation_slam_smoke_frame_cap.md — unknown theme keyword(s): workspace-smoke, scaling-relation`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md — unknown theme keyword(s): tutorials`
@@ -2575,8 +2622,11 @@ Continue the 'Fixed lens light — source-only likelihood profiling programme' e
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
+- `draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md — unknown theme keyword(s): howto, tutorials`
+- `draft/docs/workspaces/howto_paths_orientation_block_parity.md — unknown theme keyword(s): howto, tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
+- `draft/maintenance/autolens_profiling/profiling_drift_pinned_drift_contract.md — unknown theme keyword(s): heart`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
