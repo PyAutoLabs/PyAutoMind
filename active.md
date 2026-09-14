@@ -5,10 +5,12 @@
 - issued: 2026-09-14
 - prompt: active/slam_hst_variant_folders_delaunay_1250.md
 - session: claude --resume session_01BtFxjQbaZoXoNH4UTXWxNs
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/slam-hst-variant-folders-delaunay-1250
 - repos:
   - autolens_inference: feature/slam-hst-variant-folders-delaunay-1250
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/6
+- runs: A100 arrays 343143 (dense) + 343145 (sparse), seeds 0-1, submitted 2026-09-15 from the feature branch on the RAL clone; Cortex ledger autolens_inference carries them
 - summary: |
     Gives the HST SLaM cell a run-variant level (`results/slam/imaging/hst/slam_base/`
     for the mesh-28x28 base run, `delaunay_1250/` for the new one), commits the four
