@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 11 |
+| [In flight](#in-flight) (`active/`) | 12 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 184 |
+| [Backlog](#backlog) (`draft/`) | 183 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 13
+**Highest priority** (filed as `high`)
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -142,10 +142,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autogalaxy_workspace/imaging_modeling_fits_guard_split.md">imaging/modeling smoke break: JSON guard fronts a visualizer-only FITS read</a> — autogalaxy_workspace · easy · supervised · high</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace/start_here_release_profile_script_cap.md">Per-script BUILD_SCRIPT_TIMEOUT for imaging/start_here in the release profile</a> — autolens_workspace · easy · supervised · high</summary>
 
 ```
-/start_dev draft/bug/autogalaxy_workspace/imaging_modeling_fits_guard_split.md
+/start_dev draft/maintenance/autolens_workspace/start_here_release_profile_script_cap.md
 ```
 
 </details>
@@ -288,6 +288,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/howtofit_tutorials_followups.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/imaging_modeling_fits_guard_split.md">imaging/modeling smoke break: JSON guard fronts a visualizer-only FITS read</a> — issued 2026-09-14</summary>
+
+```
+/start_dev active/imaging_modeling_fits_guard_split.md
 ```
 
 </details>
@@ -547,10 +555,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**184** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**183** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 50</summary>
+<summary><b>bug</b> — 49</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -588,14 +596,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autogalaxy_workspace/imaging_modeling_fits_guard_split.md">imaging/modeling smoke break: JSON guard fronts a visualizer-only FITS read</a> — autogalaxy_workspace · easy · supervised · high</summary>
-
-```
-/start_dev draft/bug/autogalaxy_workspace/imaging_modeling_fits_guard_split.md
 ```
 
 </details>
@@ -2065,7 +2065,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
-| 2026-09-14 | filed | <a href="draft/bug/autogalaxy_workspace/imaging_modeling_fits_guard_split.md">imaging/modeling smoke break: JSON guard fronts a visualizer-only…</a> |
+| 2026-09-14 | issued | <a href="active/imaging_modeling_fits_guard_split.md">imaging/modeling smoke break: JSON guard fronts a visualizer-only…</a> |
 | 2026-09-14 | issued | <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> |
 | 2026-09-14 | issued | <a href="active/slam_hst_variant_folders_delaunay_1250.md">Run-variant folders on the HST SLaM cell, and the Delaunay-1250 A100…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
@@ -2585,7 +2585,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-32 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+31 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2603,7 +2603,6 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/autogalaxy/config_priors_drift_stale_classes_and_paths.md — unknown theme keyword(s): config`
 - `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
-- `draft/bug/autogalaxy_workspace/imaging_modeling_fits_guard_split.md — unknown theme keyword(s): workspace-smoke, test-mode`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
 - `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
