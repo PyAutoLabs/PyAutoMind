@@ -10,6 +10,8 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Filed: 2026-09-14
+Issued: 2026-09-14
+Issue: https://github.com/PyAutoLabs/autofit_assistant/issues/42
 
 ## Original request
 

@@ -293,3 +293,11 @@
     Read that instead, under the same resolve_files_path hash, guard that no
     lp_linear profile survives, and add tests/test_simulator_from_result.py —
     --from-result had no test at all.
+## howtofit-mode
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/42
+- issued: 2026-09-14
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtofit-mode
+- repos:
+  - autofit_assistant: feature/howtofit-mode
+- prompt: active/howtofit_mode.md
