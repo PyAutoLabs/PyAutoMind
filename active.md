@@ -362,7 +362,11 @@
 - issued: 2026-09-14
 - prompt: active/test_mode_bypass_skips_save_results.md
 - session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
-- status: awaiting-input — conflict guard fired on PyAutoFit after the survey; no repo claimed, no worktree created
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/test-mode-bypass-save-results
+- repos:
+  - PyAutoFit: feature/test-mode-bypass-save-results
+- note: "Conflict waived by the human 2026-09-14: worktree_check_conflict fired on PyAutoFit for howtofit-mode (one commit, README.md only) and model-figure-prose-simplify (no commits, three uncommitted docs/cookbooks/*.md), while this task edits only autofit/non_linear/search/abstract_search.py and test_autofit/non_linear/search/test_abstract_search.py, so the file sets are disjoint; taken in a fresh parallel worktree based on origin/main, the same call already recorded in model-figure-prose-simplify's own note for itself, sed-chain-cpu-route and sersic-variants-analysis."
 - heart-ack:
   - "workspace validation not passing (3 failed, cloud#34824535982); manifest drift x2; profiling drift x6; release validation incomplete"
 - summary: |
