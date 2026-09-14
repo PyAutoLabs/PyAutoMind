@@ -263,7 +263,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/165
 - issued: 2026-09-14
 - prompt: active/colab_setup_missing_dynesty_and_emcee.md
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/166
 - worktree: /home/jammy/Code/PyAutoLabs-wt/autonerves-colab-sampler-deps/
 - repos:
   - PyAutoNerves: feature/autonerves-colab-sampler-deps
@@ -294,7 +295,8 @@
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/61
 - issued: 2026-09-14
 - prompt: active/chapter_1_tutorial_4_and_6_review_feedback.md
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/62
 - worktree: /home/jammy/Code/PyAutoLabs-wt/howtofit-tutorial-4-6-feedback/
 - repos:
   - HowToFit: feature/howtofit-tutorial-4-6-feedback
