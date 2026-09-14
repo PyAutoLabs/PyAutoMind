@@ -348,7 +348,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two scaling-tier galaxies out of frame</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/544">issue #544</a> — issued 2026-09-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scaling_relation_slam_smoke_frame_cap.md">scaling_relation/slam smoke failure: small-dataset cap crops two scaling-tier galaxies out of frame</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/544">issue #544</a> — issued 2026-09-14 — awaiting-merge (PR open 2026-09-14; merge is human) — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/545">autolens_workspace#545</a></summary>
 
 ```
 /start_dev active/scaling_relation_slam_smoke_frame_cap.md
