@@ -211,6 +211,16 @@
     Profiling drift: three matrix_free SLQ fp64 results — delaunay_hpc_a100,
     delaunay_nn_hpc_a100, rectangular_hpc_a100.
 - next: Acknowledge these Heart YELLOW reasons before ship_workspace; source remains local and uncommitted.
+- parallel-claim: |
+    HowToFit is shared with task `howtofit-tutorial-4-6-feedback` (HowToFit#61,
+    branch feature/howtofit-tutorial-4-6-feedback) from 2026-09-14. Deliberate,
+    human-approved override of the conflict guard, not drift. Evidence at the
+    time: this task's `feature/howtofit-mode` had 0 commits of its own and 0
+    changed files against origin/main (9 behind, working tree clean) — the
+    HowToFit claim was registered but never used. File sets are disjoint:
+    howtofit-mode is README/AGENTS assistant-prompt propagation; the other task
+    touches scripts/, notebooks/ and markdown/ under chapter_1_introduction only.
+    If HowToFit work starts here, re-check that separation before editing.
 
 ## fixed-light-numba-phase1
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/263
@@ -286,3 +296,42 @@
     their own `_SAMPLERS` list. Reaches users only after an autonerves PyPI
     release.
 - note: started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict autonerves-colab-sampler-deps PyAutoNerves, exit 0).
+
+## howtofit-tutorial-4-6-feedback
+- issue: https://github.com/PyAutoLabs/HowToFit/issues/61
+- issued: 2026-09-14
+- prompt: active/chapter_1_tutorial_4_and_6_review_feedback.md
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/howtofit-tutorial-4-6-feedback/
+- repos:
+  - HowToFit: feature/howtofit-tutorial-4-6-feedback
+- parallel-claim: |
+    Deliberate override of the HowToFit conflict guard, 2026-09-14, approved by
+    the human before any edit. `worktree_check_conflict howtofit-tutorial-4-6-feedback
+    HowToFit` exits 1: HowToFit is also claimed by task `howtofit-mode`.
+    Evidence, re-verified at registration in
+    /home/jammy/Code/PyAutoLabs/.worktrees/howtofit-mode/HowToFit — branch
+    `feature/howtofit-mode` has 0 commits of its own and 0 changed files against
+    origin/main (`git rev-list --left-right --count origin/main...HEAD` = "9 0";
+    `git diff origin/main...HEAD --name-only` is empty), working tree clean. The
+    claim was registered but never used, so the file sets are trivially disjoint:
+    howtofit-mode is README/AGENTS assistant-prompt propagation; this task touches
+    scripts/, notebooks/ and markdown/ under chapter_1_introduction only. This task
+    runs in a fresh parallel worktree branched from freshly-fetched origin/main,
+    never off the howtofit-mode worktree's HEAD.
+- summary: |
+    Six pieces of review feedback on HowToFit chapter 1 tutorials 4 and 6.
+    Tutorial 4: backtick `log_likelihood_function` and `model_data` (lines
+    169-170); generate and commit the six bad/okay/good fit and
+    normalized-residual PNGs the prose at 461-477 references but which are not in
+    the repo at all (the okay case must really show residuals above 3.0 sigma),
+    with the figures signed off before they are committed. Tutorial 6: delete the
+    premature `search.summary` / Resampling Info block (636-660, already covered
+    by tutorial 7's `__NaN Diagnostics__`), replace the extended ball analogy
+    (688-699, 902) with "MCMC where the walker knows which way to step", move the
+    Hamiltonian diagnostics (723-742) to tutorial 7 with a cheap live
+    `BlackJAXNUTS` fit added there, and rewrite the wrap-up opening at 887.
+    Regenerate notebooks for 4/6/7 (`generate.py`) and markdown for 4 only
+    (`generate_markdown.py`; 6 and 7 have no markdown mirror). The Colab
+    ModuleNotFoundErrors from the same read-through are out of scope — separate
+    PyAutoNerves task autonerves-colab-sampler-deps.
