@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 177 |
+| [Backlog](#backlog) (`draft/`) | 178 |
 
 > **No batch in flight.**
 
@@ -142,7 +142,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 96
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 97
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -232,10 +232,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — autofit · small · safe · normal</summary>
+<details><summary>📋 <a href="draft/bug/autofit/modelplotter_figure_draws_twice_in_a_notebook.md">ModelPlotter.figure() draws twice in a notebook</a> — autofit · small · supervised · normal</summary>
 
 ```
-/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md
+/start_dev draft/bug/autofit/modelplotter_figure_draws_twice_in_a_notebook.md
 ```
 
 </details>
@@ -546,10 +546,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**177** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
+**178** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **34** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 46</summary>
+<summary><b>bug</b> — 47</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
@@ -731,6 +731,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autofit/model_function_cannot_resolve_config_priors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/modelplotter_figure_draws_twice_in_a_notebook.md">ModelPlotter.figure() draws twice in a notebook</a> — autofit · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/modelplotter_figure_draws_twice_in_a_notebook.md
 ```
 
 </details>
