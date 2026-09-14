@@ -1,5 +1,26 @@
 # Active Tasks
 
+## imaging-modeling-fits-guard-split
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/242
+- issued: 2026-09-14
+- prompt: imaging_modeling_fits_guard_split.md
+- session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/imaging-modeling-fits-guard-split
+- repos:
+  - autogalaxy_workspace: feature/imaging-modeling-fits-guard-split
+- heart-ack: "release validation FAILED (stage integrate); workspace validation not passing (3 failed, cloud#34824535982)"
+- summary: |
+    autogalaxy_workspace scripts/imaging/modeling.py guards the
+    image/galaxy_images.fits read inside the files/galaxies.json guard. PyAutoFit
+    #1626 made the test-mode bypass call analysis.save_results, so the JSON now
+    exists under the smoke profile and the folded block runs for the first time -
+    then FileNotFoundErrors on the FITS, which only the visualizer writes and
+    PYAUTO_SKIP_VISUALIZATION=1 disables. Splits the guard in two, mirroring
+    autolens_workspace/scripts/imaging/modeling.py:656-661, and regenerates the
+    notebook. Workspace-only; #1626 is already merged.
+- note: "started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict imaging-modeling-fits-guard-split autogalaxy_workspace, exit 0; no active.md entry claims autogalaxy_workspace)."
+
 ## slam-hst-variant-folders-delaunay-1250
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/5
 - issued: 2026-09-14

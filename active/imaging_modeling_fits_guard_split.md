@@ -10,11 +10,12 @@ Themes:
 Difficulty: easy
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Witness: `scripts/imaging/modeling.py` and its notebook pass the smoke profile (PYAUTO_TEST_MODE=2, PYAUTO_SKIP_VISUALIZATION=1) with the galaxies.json block executing and the FITS block skipped; autogalaxy_workspace Smoke Tests green on main
 Review-minutes: 5
 Filed: 2026-09-14
+Issued: 2026-09-14
 
 User request (verbatim, 2026-09-14):
 
