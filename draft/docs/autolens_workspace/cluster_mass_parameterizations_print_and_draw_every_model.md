@@ -35,10 +35,14 @@ promise and no output.
 
 - Add `print(model.info)` at the end of every section that composes a model in
   both scripts, and beside each print the model figure
-  `af.ModelPlotter(model).figure()` with one line on what the map shows (the
-  cluster-scale plates, `sigma` tied by expression to the shared scaling
-  parameter, fixed vs free pills) — the rollout's map/legend reading, matching
-  `scripts/cluster/modeling.py` on main.
+  `af.ModelPlotter(model).figure()`. At the FIRST figure site in each script use the
+  canonical two paragraphs the rollout settled on 2026-09-14 (copy them verbatim from
+  `scripts/cluster/modeling.py` on main); at later sites use a one-to-three-line note
+  stating a fact about the model. Do NOT describe the figure itself — no pills, plates,
+  badges, greyed values or footer counts. The old map/legend reading this prompt
+  originally called for was RETIRED with
+  `complete/2026/09/model-figures-rollout-lens.md`; the figure is meant to be
+  self-explanatory.
 - Keep the scripts un-fitted; regenerate the two notebook twins from the repo
   root (`PYTHONPATH=../PyAutoHands/autohands python3 ../PyAutoHands/autohands/generate.py autolens`).
 

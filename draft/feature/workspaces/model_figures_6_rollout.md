@@ -71,10 +71,26 @@ the set, and never bundle two repos' rollouts into one PR.
   pixelization, point source, multi-dataset), `slam_start_here.py` and the SLaM
   pipelines, and the HowToLens chapters that compose models.
 - **(c) PyAutoGalaxy surfaces** — `autogalaxy_workspace` plus HowToGalaxy.
+  PARTLY DONE: `autogalaxy_workspace/scripts/guides/modeling/cookbook.py` was swept
+  2026-09-14 (complete/2026/09/model-figure-prose-simplify.md). HowToGalaxy is untouched.
 - **(d) Sibling projects** — `autocti_workspace` / PyAutoCTI docs, and the
   model-composition points in `euclid_strong_lens_modeling_pipeline`.
 - **(e) RTD docs** — the PyAutoFit / PyAutoGalaxy / PyAutoLens documentation
   pages that print `model.info` output.
+  PARTLY DONE 2026-09-14 (complete/2026/09/model-figure-prose-simplify.md):
+  `PyAutoFit/docs/cookbooks/{model,multi_level_model,multiple_datasets}.md`,
+  `PyAutoFit/docs/features/graphical.md`, `PyAutoGalaxy/docs/general/model_cookbook.md`,
+  `PyAutoGalaxy/docs/overview/overview_3_features.md`,
+  `PyAutoLens/docs/general/model_cookbook.md` and
+  `PyAutoLens/docs/overview/overview_3_features.md` already carry the shipped standard.
+  Audit the rest rather than re-sweeping these.
+
+**Prose standard (2026-09-14, supersedes anything below):** a script's FIRST figure site
+carries the canonical two paragraphs; later sites carry a short note stating a fact about
+the model. No figure-rendering vocabulary anywhere — no pills, plates, badges, greyed
+values or footer counts. Exempt: EP factor-graph blocks (box / pill / edge is standard
+PGM notation and the state overlay carries what `graph.info` does not) and image `:alt:`
+text. Canonical wording: `complete/2026/09/model-figures-rollout-lens.md`.
 
 ## Mechanics
 

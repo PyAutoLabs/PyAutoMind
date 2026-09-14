@@ -34,8 +34,13 @@ allowlist, so none has CI coverage today: any change here is verified by headles
 ## The decision to take before starting
 
 1. **Inline figures.** Put `af.ModelPlotter(model).figure()` inside every stage function,
-   between `model = af.Collection(...)` and `return search.fit(...)`, with the 6b prose
-   pattern. ~200 edit sites across 41 scripts, all verified by headless runs only (no CI
+   between `model = af.Collection(...)` and `return search.fit(...)`, with the prose
+   standard 6b actually SHIPPED — the canonical two paragraphs at a script's first figure
+   site and a short model-fact note at later ones, with no figure-rendering vocabulary
+   (pills, plates, badges, greyed, footer counts). Take it from
+   `complete/2026/09/model-figures-rollout-lens.md`, NOT from the "Pattern" section of
+   the 6b prompt folded into that record, which describes the map/legend reading retired
+   on 2026-09-14. ~200 edit sites across 41 scripts, all verified by headless runs only (no CI
    leg will catch a regression), and every SLaM run then renders up to a dozen figures
    inline.
 2. **Config flag.** Flip `model_figure: true` in `autolens_workspace/config/output.yaml`

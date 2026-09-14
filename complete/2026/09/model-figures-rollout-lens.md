@@ -1,3 +1,85 @@
+Phase 6b of the `model-figures` epic — the PyAutoLens surfaces — shipped in two waves,
+and wave 2 finished under a **changed prose standard** rather than the one the prompt
+specified.
+
+## The standard change
+
+Mid-task (2026-09-14) the human ruled that the per-figure reading commentary this
+rollout had been writing is information overload and the figure should be
+self-explanatory. Every opener block now reads exactly:
+
+> The same model can also be visualized as a figure, making its structure easier to
+> understand at a glance.
+>
+> The figure shows how the model is organized: which parameters belong to each
+> component, and whether they are free, fixed, shared, linked by an expression, solved
+> during the fit, or not configured. `model.info` provides the corresponding numerical
+> details, including the prior assigned to each free parameter and the value of each
+> fixed parameter.
+
+This **supersedes the prompt's "Pattern" section** for the opener block and retires its
+"lens vocabulary must be verified by rendering" requirement, which no longer had
+anything to govern. A later approved pass stripped the same vocabulary (pills, plates,
+badges, greyed, footer counts) from the shorter notes at second and third figure sites.
+
+## Shipped (both waves, all four branches verified merged)
+
+| Wave | Repo | PR | Branch |
+|---|---|---|---|
+| 1 | HowToLens | #81 | `feature/model-figures-rollout-lens` |
+| 1 | autolens_workspace | #543 | `feature/model-figures-rollout-lens` |
+| 2 | autolens_workspace | #546 | `feature/model-figures-rollout-lens-b` |
+| 2 | HowToLens | #83 | `feature/model-figure-prose-lens` |
+
+autolens_workspace #546: 102 scripts + 102 notebooks + `workspace_index.json`, four
+commits (collapse 58 files; 51 new wave-2 figure sites across 44 scripts; regenerate
+twins; strip later-site vocabulary, 32 notes / 21 scripts). Shipped as ONE PR, a
+departure from the prompt's "two PRs by folder", so the sweep did not wait on a merge
+to open a third. HowToLens #83: 12 tutorials + 12 twins, 10 teaching sentences preserved.
+
+## Traps worth keeping
+
+- **Wave 2 was stalled, not in flight.** 13 modified interferometer scripts sat
+  uncommitted in the worktree for ~22 hours with zero commits ahead of `origin/main`.
+  A dead or ended session leaves work that looks active on the dashboard. Check file
+  mtimes and `git log origin/main..HEAD`, not just the presence of a worktree.
+- **A dead subagent's detached run keeps going.** When the wave-2 agent died on a
+  network error mid-verification, its `nohup` script was still executing. Starting a
+  second sweep double-ran ~33 scripts concurrently on a 15 GB machine and produced one
+  false OOM (`multi_galaxy/features/pixelization/delaunay.py`, which passes solo in
+  75s). Genuine limits reproduce **byte-identical** allocation sizes when re-run alone;
+  contention does not.
+- **`pgrep -f "python3 scripts/"` is useless here** — it matches the harness's own
+  `/bin/bash -c '...'` wrappers whose command line contains that string, including the
+  one that just wrote the script. It inflated a workload count and deadlocked a
+  wait-loop on an idle machine. Match the interpreter: `ps -C python3` / `pgrep -x`.
+- **`multi_galaxy/start_here.py` needs `PYAUTO_TEST_MODE=2`** — 54s there against a
+  900s timeout at `TEST_MODE=1`.
+- **Half the HowToLens blocks carried no `**map**` token**, and in two the token wraps
+  across a line break. Use a whitespace-flattened per-file search.
+- The prompt's exclusion of `cluster/mass_parameterizations.py` holds, though not for
+  the stated reason: it does have one real `print(model_1.info)`, but `model_2`-`model_4`
+  have no prints at all, so a figure on `model_1` alone would make the file less
+  consistent. Adding the three missing prints is a separate docs task.
+
+## Verification
+
+End-to-end gate clean over `scripts/*.py` and `notebooks/*.ipynb` in both repos — zero
+non-exempt figure vocabulary, with science uses of "map" (convergence maps, `θ → θⱼ`
+mappings, dict mappings) untouched. Notebooks regenerated via
+`PyAutoHands/autohands/generate.py`, `check_navigator.py` passing. Headless 96/102
+exit 0; the 6 failures are pre-existing (JAX 26-81 GB allocations on a 15 GB machine,
+plus `cluster/lenstool` missing `dataset/cluster/smacs0723`) and **none of the 6 files
+carries a non-prose code change**, two carrying no code change at all. All 12 HowToLens
+tutorials pass, 3-205s.
+
+Heart YELLOW at ship time, nine pre-existing reasons, human-acknowledged.
+
+Next cuts: **(b2) SLaM stages**, **(c) PyAutoGalaxy surfaces**. The sibling sweep of the
+six unclaimed repos shipped as `model-figure-prose-simplify` (autofit_workspace#156).
+
+## Original prompt
+
 # Model figures phase 6b — PyAutoLens surfaces (autolens_workspace + HowToLens, SLaM deferred)
 
 Type: feature
