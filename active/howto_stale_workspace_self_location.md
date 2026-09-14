@@ -3,7 +3,6 @@
 Type: docs
 Target: workspaces
 Repos:
-- HowToFit
 - HowToGalaxy
 - HowToLens
 Themes:
@@ -12,16 +11,18 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: medium
-Status: draft
+Status: workspace-dev
 Consequence: notify
 Witness: No `<workspace>/{output,config,dataset}` path or clone/download URL in
-HowToFit, HowToGalaxy or HowToLens refers to the HowTo repo's own files; the
+HowToGalaxy or HowToLens refers to the HowTo repo's own files; the
 HubbleTuningFork image renders from its HowToGalaxy home and its
 `.url_check_allowlist.txt` grandfather entry is gone; genuine cross-references
 to sibling workspace *examples* are untouched.
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-09-14
+Issued: 2026-09-14
+Issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/75
 
 The HowTo lecture series were split out of the `*_workspace` repos into their
 own `HowToFit` / `HowToGalaxy` / `HowToLens` repos. The prose did not move with
@@ -50,10 +51,8 @@ stale, and the fix must not flatten them together:
 
 ## Scope
 
-- @HowToFit — 1 block. `scripts/chapter_1_introduction/tutorial_1_models.py:93`,
-  the `__Paths__` section: the download URL must be
-  `https://github.com/PyAutoLabs/HowToFit`. HowToFit is the only one of the
-  three with a `__Paths__` section at all.
+HowToFit is **out of scope** — see "HowToFit was fixed elsewhere" below.
+
 - @HowToGalaxy — 15 hits. `tutorial_2_practicalities.py` (`path_prefix`
   described as `autogalaxy_workspace/output/howtogalaxy/chapter_2`; "checkout
   the `autogalaxy_workspace/output` folder" x3; "`config`: the files in
@@ -94,9 +93,48 @@ and `llms-full.txt` carry some of the same links. Regenerate derived artefacts
 through each repo's own regeneration convention rather than hand-editing the
 notebook/markdown mirrors. ~90 edits total.
 
+## HowToFit was fixed elsewhere (2026-09-14)
+
+HowToFit's only stale block — the `__Paths__` download URL in
+`scripts/chapter_1_introduction/tutorial_1_models.py:93` — was fixed by a
+parallel session on `feature/howtofit-tutorials-1-3` (commit `6f335b2`,
+pushed) while this prompt was being surveyed. It now reads
+`https://github.com/PyAutoLabs/HowToFit`.
+
+**One gap remains on that branch:** the fix landed in `scripts/` and
+`notebooks/` but not in `markdown/chapter_1_introduction/tutorial_1_models.md:104`,
+which still reads `https://github.com/PyAutoLabs/autofit_workspace`. The
+markdown mirror was not regenerated. That single line is the only HowToFit work
+left; it belongs to `feature/howtofit-tutorials-1-3`, not to this task.
+
+## Registry state this task had to correct (2026-09-14)
+
+`worktree_check_conflict` fired on HowToFit and HowToLens. Both claims were
+residue, and the guard also under-reported:
+
+- `howtofit-mode`'s HowToFit leg had already **merged** (`409f562`, HowToFit#55);
+  its worktree is clean and 0 commits ahead.
+- `model-figures-rollout-lens` registers HowToLens on
+  `feature/model-figures-rollout-lens`; the worktree is actually on
+  **`feature/model-figure-prose-lens`**. active.md has the wrong branch.
+- The guard reported one claim on HowToFit when `active.md` carries three
+  (`howtofit-mode`, `model-figure-prose-simplify`, `howtofit-tutorials-1-3`),
+  and HowToFit has five live worktrees.
+
 ## Delivery
 
-One issue and one PR per repo; the three legs are independent.
+One issue (HowToGalaxy, primary), **two PRs** — one per repo, independent. Run
+`/prm` once, after both are green and merged; a single `/prm` per PR would close
+the issue and advance the prompt prematurely.
+
+HowToLens is taken as a **deliberate parallel worktree** off `origin/main`,
+recorded as a `parallel-claim:` block on the `active.md` entry. Of this task's
+seven HowToLens target files, exactly one overlaps
+`feature/model-figure-prose-lens` (`scripts/chapter_2_lens_modeling/tutorial_2_practicalities.py`);
+that branch's change there is model-figure prose, this task's is the four
+`autolens_workspace/output` strings — different lines, and its tree is clean
+with the work committed. A parallel worktree is preferred over a fold because a
+fold shares the branch, not just the directory.
 
 ## Out of scope
 

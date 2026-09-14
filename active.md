@@ -405,3 +405,40 @@
     tutorial carry the same unrendered math blocks; tutorial 3's __Priors__
     section is dead code whose normalization override (0, 10) excludes the truth
     25 (the fits only work via the config LogUniformPrior fallback).
+
+## howto-stale-self-location
+- issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/75
+- issued: 2026-09-14
+- prompt: active/howto_stale_workspace_self_location.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/howto-stale-self-location
+- repos:
+  - HowToGalaxy: feature/howto-stale-self-location
+  - HowToLens: feature/howto-stale-self-location
+- parallel-claim: |
+    HowToLens is claimed by model-figures-rollout-lens. Taken deliberately as a
+    PARALLEL WORKTREE off origin/main (not a fold) with the human's approval,
+    2026-09-14. Evidence the file sets are effectively disjoint: that task's
+    HowToLens worktree is on feature/model-figure-prose-lens (NOT the
+    feature/model-figures-rollout-lens its active.md entry records), 3 commits
+    ahead, clean tree. Of this task's 7 HowToLens target files exactly one
+    overlaps — scripts/chapter_2_lens_modeling/tutorial_2_practicalities.py —
+    and on different lines: theirs is model-figure prose, this task's is the
+    four `autolens_workspace/output` path strings.
+    A fold was rejected because a fold shares the BRANCH, not just the
+    directory, and would drag their 3 commits into this task's PR.
+- summary: |
+    HowTo tutorials still describe themselves as living inside the *_workspace
+    repos they were split out of: `<workspace>/{output,config,dataset}` named as
+    the reader's own folders. Fix self-location references only; genuine
+    cross-references to the sibling workspace's examples are correct post-split
+    and stay. HowToGalaxy also carries a broken tuning-fork image URL that was
+    grandfathered into .url_check_allowlist.txt instead of fixed — fix the URL
+    and delete the allowlist entry.
+    HowToFit is OUT of scope: its single stale block was fixed in parallel on
+    feature/howtofit-tutorials-1-3 (6f335b2, pushed). One gap left on that
+    branch, belonging to it and not to this task:
+    markdown/chapter_1_introduction/tutorial_1_models.md:104 still reads
+    PyAutoLabs/autofit_workspace — the markdown mirror was not regenerated.
+- next: Two PRs, one per repo. Run /prm ONCE after both are merged — a /prm per
+  PR would close #75 and advance the prompt prematurely.
