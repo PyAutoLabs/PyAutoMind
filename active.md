@@ -5,8 +5,9 @@
 - issued: 2026-09-14
 - prompt: active/start_here_release_profile_script_cap.md
 - session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/start-here-release-profile-script-cap
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/548
 - repos:
   - autolens_workspace: feature/start-here-release-profile-script-cap
 - heart-ack: "release validation FAILED (stage integrate); workspace validation not passing (3 failed, cloud#34824535982)"
