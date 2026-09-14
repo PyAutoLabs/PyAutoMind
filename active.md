@@ -311,3 +311,28 @@
     Profiling drift: three matrix_free SLQ fp64 results — delaunay_hpc_a100,
     delaunay_nn_hpc_a100, rectangular_hpc_a100.
 - next: Acknowledge these Heart YELLOW reasons before ship_workspace; source remains local and uncommitted.
+## model-figure-prose-simplify
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/156
+- issued: 2026-09-14
+- prompt: active/model_figure_prose_simplify.md
+- session: claude --resume session_01LPCvGNHahZqynPyEfMijsb
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/model-figure-prose-simplify
+- epic: model-figures
+- repos:
+  - autofit_workspace: feature/model-figure-prose-simplify
+  - HowToFit: feature/model-figure-prose-simplify
+  - autogalaxy_workspace: feature/model-figure-prose-simplify
+  - PyAutoFit: feature/model-figure-prose-simplify
+  - PyAutoGalaxy: feature/model-figure-prose-simplify
+  - PyAutoLens: feature/model-figure-prose-simplify
+- note: "worktree_check_conflict fires on autofit_workspace, HowToFit and PyAutoFit, all claimed by task howtofit-mode (autofit_assistant#42, worktree .worktrees/howtofit-mode). That task's entire scope in those three repos is one uncommitted README.md each with no commits ahead of origin/main; this task touches only scripts/, notebooks/ and docs/cookbooks/, so the file sets are disjoint. Waived in a fresh parallel worktree based on origin/main, the same call recorded for sed-chain-cpu-route and sersic-variants-analysis. Trap: worktree_check_conflict returned a false clean when passed all six repos in one call and only fired when passed them one at a time."
+- summary: |
+    Human verdict 2026-09-14: the per-figure reading commentary rolled out by the
+    model-figures epic is information overload and the figure should be
+    self-explanatory. Every map/legend prose block collapses to two fixed
+    paragraphs, with all file-specific trailing prose deleted. This task covers
+    the six unclaimed repos (41 files); autolens_workspace and HowToLens (100
+    files) adopt the same standard by resuming model-figures-rollout-lens
+    (autolens_workspace#542), whose wave 2 is stalled with 13 uncommitted blocks
+    and ~53 sites unwritten.

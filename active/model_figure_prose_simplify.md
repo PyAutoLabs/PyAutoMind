@@ -22,6 +22,7 @@ Unattended: ready
 Epic: model-figures
 Phase: 6-prose
 Filed: 2026-09-14
+Issued: 2026-09-14
 
 ## Request (verbatim)
 
