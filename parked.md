@@ -6,15 +6,6 @@ unindexed worktrees or stashes. Move an entry back to `active.md` (or to
 `planned.md` if re-scoping is needed) when work resumes; on shipping,
 write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 
-<!-- toc:start -->
-
-**Contents**
-
-- [single-source-density-design](#single-source-density-design)
-- [prior-message-collapse-design](#prior-message-collapse-design)
-
-<!-- toc:end -->
-
 ## single-source-density-design
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1500 (open — the parked design hub)
 - prompt: draft/bug/priors/12_single_source_density_refactor.md
