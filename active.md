@@ -442,7 +442,28 @@
     PyAutoLabs/autofit_workspace — the markdown mirror was not regenerated.
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/76 (2 commits: 1bd588a fix, a3469f9 markdown rebuild)
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/82 (a5d9430)
-- status: both PRs OPEN 2026-09-14, awaiting CI + human merge
+- repo-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/281 (435f276, issue PyAutoHands#280) — worktree path-leak fix, absorbed follow-up
+- status: three PRs OPEN 2026-09-14, awaiting CI + human merge
+- absorbed-followups: |
+    Folded into the open PRs on the human's instruction 2026-09-14 rather than
+    deferred. draft/docs/workspaces/howto_paths_orientation_block_parity.md and
+    draft/bug/howtolens/tutorial_searches_writes_into_chapter_2.md are SUPERSEDED
+    (delete on close-out); draft/bug/autohands/generate_markdown_leaks_worktree_paths.md
+    shipped as PyAutoHands#281.
+    The parity prompt turned out to be far smaller than filed: both repos already
+    had a __Directories__ block; only the clone URL was missing (and config/ in
+    HowToLens). Not new authorship.
+    STILL OPEN: draft/docs/howtofit/markdown_mirror_missed_by_url_fix.md. It
+    cannot be folded anywhere — HowToFit PR #58 is unmerged, and on origin/main
+    BOTH the .py and the .md are still stale, so branching off main would
+    duplicate #58 and conflict. Fold into #58 before it merges, or regenerate after.
+- known-debt: |
+    HowToLens PR #82's markdown/chapter_1_introduction/tutorial_0_visualization.md
+    is HAND-PATCHED: the worktree render leaked
+    ~/Code/PyAutoLabs/PyAutoArray/.../convolver.py:1478 and it was rewritten by
+    hand to the canonical form. Content is right; the file is not byte-identical
+    to generator output, so a re-render from a worktree reintroduces the leak
+    until PyAutoHands#281 lands. Re-render that page properly once #281 merges.
 - heart-ack: |
     Acknowledged by the human 2026-09-14 for exactly these reasons, no others:
     "workspace validation not passing (3 failed, cloud#34824535982: autofit
