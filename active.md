@@ -356,3 +356,31 @@
     files) adopt the same standard by resuming model-figures-rollout-lens
     (autolens_workspace#542), whose wave 2 is stalled with 13 uncommitted blocks
     and ~53 sites unwritten.
+
+## test-mode-bypass-save-results
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1624
+- issued: 2026-09-14
+- prompt: active/test_mode_bypass_skips_save_results.md
+- session: claude --resume session_01RbJGue5FwUPbxvCFKwXNam
+- status: awaiting-input — conflict guard fired on PyAutoFit after the survey; no repo claimed, no worktree created
+- heart-ack:
+  - "workspace validation not passing (3 failed, cloud#34824535982); manifest drift x2; profiling drift x6; release validation incomplete"
+- summary: |
+    Plan approved, issue #1624 filed. `worktree_check_conflict
+    test-mode-bypass-save-results PyAutoFit` exited 0 at survey time and exited 1
+    minutes later, when howtofit-mode and model-figure-prose-simplify both
+    landed PyAutoFit claims on Mind main. The task parked here rather than
+    claiming a contested repo, so this row deliberately carries no `repos:`
+    bullets and no `worktree:` — it claims nothing.
+    Waiver evidence for the human: neither claimant touches the two files this
+    task edits (`autofit/non_linear/search/abstract_search.py`,
+    `test_autofit/non_linear/search/test_abstract_search.py`). howtofit-mode has
+    one commit on PyAutoFit touching `README.md` only;
+    model-figure-prose-simplify has no commits and three uncommitted
+    `docs/cookbooks/*.md` edits. The identical disjoint-file-set waiver is
+    already on the record in model-figure-prose-simplify's own `note:` (taken
+    there, and for sed-chain-cpu-route and sersic-variants-analysis).
+    On a waiver: set `status: library-dev`, add
+    `worktree: ~/Code/PyAutoLabs-wt/test-mode-bypass-save-results` and
+    `repos:` / `  - PyAutoFit: feature/test-mode-bypass-save-results`, then
+    resume at start_library step 4.
