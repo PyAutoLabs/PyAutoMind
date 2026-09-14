@@ -1,5 +1,29 @@
 # Active Tasks
 
+## modelplotter-figure-draws-twice
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1622
+- issued: 2026-09-14
+- prompt: active/modelplotter_figure_draws_twice_in_a_notebook.md
+- session: claude --resume session_01C7UGEirvJnXhv52SVL4zjq
+- status: library-dev
+- location: web-github (session clone, no task worktree)
+- worktree: n/a — web-github session clone (/home/user/pyautofit)
+- repos:
+  - PyAutoFit: claude/howtofit-modelplotter-duplicate-eqr6gk
+- summary: |
+    `af.ModelPlotter(model).figure()` drew every model twice in a notebook:
+    `model_figure/render.py:save()` both called `plt.show()` (published as
+    `display_data` by the inline backend) and returned the `Figure`, which
+    IPython renders again as the cell's `execute_result`. The show path now
+    shows, closes and returns `None`, matching `plot_util.output_figure`;
+    closing also fixes the leak that branch had under non-inline backends.
+    `EPPlotter` shares the same `save` and is fixed and guarded too. Every
+    other format still returns the `Figure`. Library-only — the HowToFit and
+    workspace cells are correct as written and need no change.
+    Fix pushed to `claude/howtofit-modelplotter-duplicate-eqr6gk`; full suite
+    green (2796 passed, 45 skipped). Witness (nbclient): 2 `image/png`
+    outputs before, 1 after. Awaiting `/ship_library` to open the PR.
+
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
