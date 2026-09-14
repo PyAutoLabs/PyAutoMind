@@ -216,6 +216,57 @@
     today is over-attributing to the solver. That is why this phase counts accesses instead,
     and why a test asserts n_calls >= 2 so a future PyAutoArray fix fails loudly.
 - note: started 2026-09-14; plan approved by the human before any edit. Conflict guard clean (worktree_check_conflict fixed-light-numba-phase1 autolens_profiling, exit 0).
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/264
+- note: |
+    PR #264 opened 2026-09-15 with the MECHANISM AND ITS GATES; the timing legs are
+    deliberately NOT in it. call_accounting.py (407), fixed_light_system.py (491), the cell
+    fixed_light_numba.py (2081), 42 new tests; full scripts/misc/test/ suite 440 passed and
+    test_active_set_steps.py 22/22 UNCHANGED (the gate proving the extraction moved no pin
+    across the five shipped GPU phases); ruff clean.
+    Smoke leg gates all PASS on real HST data: P1 re-baked operator 3/3 arrays bitwise
+    identical, P2 D 1.31e-15 / F(mapper) 3.39e-15 at rtol 1e-9, P3 2.18e-11 nats with ZERO
+    passive-set differences, S3==S0 mapper-block log-dets rel 0.0. COVERAGE - the phase's
+    contract - is 0.08-0.36 % unattributed on every row against a <= 5 % requirement.
+    Indicative magnitudes only (smoke, N=484, wiring not measurement): sparse-numba is ~4.4x
+    dense on S0 (452 vs 1981 ms) and S0->S3 is ~1.66x on the sparse-numba path (452 -> 272 ms)
+    against 1.31x on the A100. Route c costs +12.889 nats with 2 negative entries, the same
+    order as the GPU epic's +8.4 at N=500 HST - an independent corroboration on a different
+    backend.
+- deferred: |
+    LEGS 1 (t1) AND 2 (t8) NOT RUN - they ARE the measurement and the laptop was
+    oversubscribed (load average 8.41 on 8 cores, another session running a 4-way parallel
+    suite, two other claude sessions live). Leg 2 is the thread-scaling comparison, which
+    oversubscription makes actively misleading rather than merely noisy. Human decision
+    2026-09-15: land the code, run the legs on an idle machine. They land as a follow-up
+    commit on the SAME branch plus the verdict note
+    results/notes/fixed_lens_light_numba_2026_09.md; the worktree and branch stay in place, so
+    no start_dev is needed to resume - just run the two commands when the machine is quiet.
+    The committed artifact is the smoke leg, stamped timing_status: wiring_only_not_measured
+    with peak load recorded, carrying no pins (pinned_drift empty) so it enters no drift
+    surface.
+- methodology: |
+    A sequential clean-vs-instrumented overhead ratio is DRIFT-DOMINATED on this hardware:
+    0.71/0.98/1.10/1.11/1.24/1.37 across rows, including instrumented apparently FASTER than
+    clean - physically impossible as an overhead, and the tell that the estimator was broken
+    rather than the instrumentation. Replaced with a steady-state warm-up plus an ABBA
+    COUNTERBALANCED estimator, which cancels linear drift: instrumentation costs ~0.8 % (mean
+    1.0085, median 1.0071). The 1.03 gate threshold was NOT loosened - the estimator was
+    replaced. A 2.9x decaying sequence in one early run did not reproduce (15 consecutive
+    clean calls flat, first/last 0.942, +-15 % scatter): queueing, not warm-up, now pinned by
+    a test so nobody re-derives it as a ramp.
+- spawned: |
+    PyAutoArray bug filed from this work - draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md:
+    curvature_reg_matrix is a plain @property rebuilding an (n,n) sum on EVERY access, reached
+    >= 3x per evaluation, and its docstring's stated reason for not caching describes an
+    in-place implementation the code no longer has. HANDSHAKE: this phase's test asserts
+    n_calls >= 2 on that property, so if the fix lands a cache that test is MEANT to fail,
+    forcing the decomposition to be updated deliberately rather than shifting underneath a
+    published number.
+- scope-addition: |
+    likelihood_breakdown/__init__.py made lazy (PEP 562), beyond the approved plan and flagged
+    in the PR body: it eagerly imported `timing`, which imports jax at module level, so ANY
+    likelihood_breakdown.* import pulled JAX into the process and the cell's no-jax guarantee
+    was unreachable. Every consumer imports submodules; the 440-test suite covers it.
 
 ## autonerves-colab-sampler-deps
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/165
