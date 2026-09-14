@@ -1,5 +1,24 @@
 # Active Tasks
 
+## slam-hst-variant-folders-delaunay-1250
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/5
+- issued: 2026-09-14
+- prompt: active/slam_hst_variant_folders_delaunay_1250.md
+- session: claude --resume session_01BtFxjQbaZoXoNH4UTXWxNs
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/slam-hst-variant-folders-delaunay-1250
+- repos:
+  - autolens_inference: feature/slam-hst-variant-folders-delaunay-1250
+- summary: |
+    Gives the HST SLaM cell a run-variant level (`results/slam/imaging/hst/slam_base/`
+    for the mesh-28x28 base run, `delaunay_1250/` for the new one), commits the four
+    completed A100 base rows, and adds the Delaunay-1250 experiment: a `--mesh
+    delaunay --mesh-pixels 1250` route with `al.reg.AdaptSplit` (reg.Adapt is not
+    jit-traceable on the Delaunay family), its own leaf/cell id
+    `imaging/slam/hst_delaunay`, and two A100 submits (dense + sparse, seeds 0-1).
+    Ends at submission: job ids recorded on a Cortex task `slam_hst_delaunay_1250`,
+    pull and judgment on a later /cortex check-in.
+
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
