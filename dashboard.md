@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 189 |
+| [Backlog](#backlog) (`draft/`) | 190 |
 
 > **No batch in flight.**
 
@@ -523,7 +523,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**189** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**190** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 52</summary>
@@ -1224,7 +1224,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 14</summary>
+<summary><b>research</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -1302,6 +1302,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autofit/autofit_profiling_bootstrap.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/post_certified_solver_likelihood_breakdown.md">Assess remaining likelihood bottlenecks after certified solver integration on CPU and GPUs</a> — autolens_profiling · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_profiling/post_certified_solver_likelihood_breakdown.md
 ```
 
 </details>
