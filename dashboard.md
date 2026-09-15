@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 186 |
+| [Backlog](#backlog) (`draft/`) | 187 |
 
 > **No batch in flight.**
 
@@ -547,7 +547,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**186** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**187** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 48</summary>
@@ -1224,7 +1224,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 15</summary>
+<summary><b>research</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
 
@@ -1286,6 +1286,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/libraries/intel_macos_support_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautobrain/community_surface_users_vs_dev_flow.md">Community surface: separate where users ask questions from the AI development flow</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/pyautobrain/community_surface_users_vs_dev_flow.md
 ```
 
 </details>
@@ -2068,7 +2076,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 32 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 33 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
