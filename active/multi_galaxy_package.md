@@ -17,6 +17,7 @@ Review-minutes: 25
 Unattended: needs-slicing
 Parent: draft/docs/autolens/split_lensing_regimes.md
 Filed: 2026-07-25 (backfilled from git)
+Issued: 2026-09-15
 
 ## Landed (2026-07-25, this task branch)
 

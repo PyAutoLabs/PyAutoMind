@@ -311,3 +311,11 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/ep-use-cpu-keeps-jax
 - repos:
+
+## multi-galaxy-j1011-real-data
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549
+- issued: 2026-09-15
+- prompt: active/multi_galaxy_package.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/multi-galaxy-j1011-real-data
+- repos:
