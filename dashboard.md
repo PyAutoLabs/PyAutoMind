@@ -1460,7 +1460,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>maintenance</b> — 14</summary>
 
-<details><summary>📋 <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">HowToFit's version floor is two months stale, so every reader gets…</a> — howtofit · small · safe · normal</summary>
+<details><summary>📋 <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to move</a> — howtofit · small · supervised · normal</summary>
 
 ```
 /start_dev draft/maintenance/howtofit/minimum_library_version_stale.md
@@ -1837,17 +1837,16 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>tutorials</b> — 3 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: colab, dependencies, tutorials, version-handshake</summary>
+<summary><b>tutorials</b> — 2 task(s) · 2 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: colab, dependencies, tutorials</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'tutorials' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'tutorials' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md
 - draft/docs/howtofit/tutorial_4_runtime_claim.md
-- draft/maintenance/howtofit/minimum_library_version_stale.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1864,7 +1863,6 @@ Contract (the `start_bundle` skill is the full body):
 |--------|------|------------|----------|--------|
 | <a href="draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> | howtofit | small | high | formalised |
 | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> | howtofit | small | low | formalised |
-| <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">HowToFit's version floor is two months stale, so every reader gets…</a> | howtofit | small | normal | formalised |
 
 </details>
 
@@ -2042,7 +2040,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">HowToFit's version floor is two months stale, so every reader gets…</a> |
+| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 | 2026-09-15 | filed | <a href="draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
@@ -2596,7 +2594,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/docs/howtofit/tutorial_4_runtime_claim.md — unknown theme keyword(s): tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
-- `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): tutorials, version-handshake`
+- `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — unknown theme keyword(s): cpu, numba`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
