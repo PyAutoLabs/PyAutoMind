@@ -206,19 +206,6 @@
   - autolens_workspace_test: feature/jax-runtime-and-parity
   - autogalaxy_workspace_test: feature/jax-runtime-and-parity
 
-## dynesty-single-core-no-pool
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1630
-- issued: 2026-09-15
-- session: claude --resume a8330a5f-2a62-4991-87ac-a039d2396a33
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1632
-- worktree: ~/Code/PyAutoLabs-wt/dynesty-single-core-no-pool
-- repos:
-  - PyAutoFit: feature/dynesty-single-core-no-pool
-- parallel-claim: "howtofit-mode also claims PyAutoFit (README/docs prose, zero diff vs main at 2026-09-15); file sets disjoint from autofit/non_linear/search/nest/dynesty/ + its tests, so this task runs in its own worktree by the human's plan approval on 2026-09-15."
-- prompt: active/dynesty_single_core_path_still_builds_a.md
-- summary: PR #1632 open (pending-release): number_of_cores=1 Dynesty builds no pool, runs serially like Nautilus #1443; regression test red→green; EP single-core test uses no_forking. Full suite 2854 passed; autofit smoke 10/10 (TEST_MODE 2, sampler bypassed). Next: /prm when CI green.
-
 ## config-priors-drift
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/618
 - issued: 2026-09-15

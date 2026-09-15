@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1445 records across 8 buckets.
+1446 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -178,6 +178,7 @@ markers; everything below GENERATED is rebuilt.
 - [delaunay-nn-launch-latency](2026/09/delaunay-nn-launch-latency.md)
 - [delaunay-walk-early-exit](2026/09/delaunay-walk-early-exit.md)
 - [docs-followup-paid-plan-assistants](2026/09/docs-followup-paid-plan-assistants.md) — Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new …
+- [dynesty-single-core-no-pool](2026/09/dynesty-single-core-no-pool.md) — closed completed 2026-09-15
 - [einstein-radius-jit-seed-finder](2026/09/einstein-radius-jit-seed-finder.md)
 - [emcee-log-prob-alignment](2026/09/emcee-log-prob-alignment.md)
 - [ep-collapse-unpark](2026/09/ep-collapse-unpark.md)
