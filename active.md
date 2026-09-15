@@ -122,10 +122,10 @@
 - status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtofit-mode
 - repos:
-  - autofit_assistant: feature/howtofit-mode
   - HowToFit: feature/howtofit-mode
   - autofit_workspace: feature/howtofit-mode
   - PyAutoFit: feature/howtofit-mode
+- released-repo: autofit_assistant — PR #43 merged; issue #42 closed; remaining repo claims retained.
 - prompt: active/howtofit_mode.md
 - summary: Assistant implementation ready and reviewed; approved README prompt propagation to HowToFit, autofit_workspace and PyAutoFit in progress. Shipping held by Heart YELLOW pending human acknowledgement.
 - ship-hold: |
@@ -260,3 +260,18 @@
     in the PR body: it eagerly imported `timing`, which imports jax at module level, so ANY
     likelihood_breakdown.* import pulled JAX into the process and the cell's no-jax guarantee
     was unreachable. Every consumer imports submodules; the 440-test suite covers it.
+
+## experimental-colab
+- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/44
+- issued: 2026-09-15
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/experimental-colab
+- repos:
+  - autofit_assistant: feature/experimental-colab
+- prompt: active/experimental-colab.md
+- summary: Experimental Colab notebook and README implementation prepared; isolated installation and full Gaussian validation in progress.
+- ship-hold: |
+    Heart RED: PyAutoFit: 1 commit(s) behind origin
+    PyAutoGalaxy: 1 commit(s) behind origin
+    PyAutoLens: 1 commit(s) behind origin
+    Stale: release validation incomplete: no rehearsal for current source
