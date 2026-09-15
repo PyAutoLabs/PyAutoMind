@@ -11,28 +11,15 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-09-15
 Consequence: judge
 Witness: an EP run over 25 AnalysisFactors with a JAX likelihood completes 12 factor_steps (300 factor searches) inside a fixed memory budget; RSS / XLA compile-cache size is flat across steps, not growing by one compiled executable per factor search.
 Review-minutes: 20
 Unattended: ready
 
-# EP re-jit-compiles the vmapped likelihood per factor search until LLVM section memory runs out
-
-Type: bug
-Target: autofit
-Repos:
-- PyAutoFit
-Themes:
-- graphical-ep
-- jax
-Difficulty: medium
-Autonomy: supervised
-Priority: high
-Consequence: judge
-Witness: an EP run over 25 AnalysisFactors with a JAX likelihood completes 12 factor_steps (300 factor searches) inside a fixed memory budget; RSS / XLA compile-cache size is flat across steps, not growing by one compiled executable per factor search.
-Review-minutes: 20
 Gates:
 - https://github.com/PyAutoLabs/slope_hierarchy_scale/issues/3
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1631
 
 ## Report (slope_hierarchy_scale job 342410, RAL `ral` partition, 2026-09-09/10)
 

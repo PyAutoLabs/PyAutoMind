@@ -289,3 +289,14 @@
 - parallel-claim: "multi-galaxy-j1011-real-data also claims autolens_workspace (scripts/multi_galaxy/**, .gitignore, dataset/); this task touches only config/, file sets disjoint, so it runs in its own worktree by the human's plan approval on 2026-09-15."
 - parallel-claim: "jax-runtime-and-parity also claims autolens_workspace_test (JAX runtime/parity scripts, zero diff vs main at 2026-09-15); this task touches only config/visualize/plots_search.yaml, file sets disjoint, so it runs in its own worktree by the human's plan approval on 2026-09-15."
 - summary: Packaged PyAutoGalaxy prior yaml drift (typo'd/mis-pathed/orphan keys, NFWTruncatedMCRScatterLudlowSph unresolvable) + walker test; then re-sync autolens_workspace, autogalaxy_workspace, HowToLens, autolens_workspace_test config copies. Library (PyAutoGalaxy) first.
+
+## ep-release-search-internals
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1631
+- issued: 2026-09-15
+- prompt: active/ep_re_jit_compiles_the_vmapped_likelihood.md
+- session: claude --resume 32df3fc7-e0cc-4fc7-98c7-0f160dca158c
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ep-release-search-internals
+- repos:
+- parallel-claim: PyAutoFit also claimed by howtofit-mode (README propagation only; its PyAutoFit worktree clean, 0 commits ahead of origin/main on 2026-09-15); disjoint files, own worktree when started
+- note: "Planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library ep-release-search-internals. Fix locus: AbstractSearch.optimise releases result._search_internal before status.result so each EP factor search's Fitness and its compiled JAX executables are collectable (slope_hierarchy_scale job 342410 retained 76 searches' executables and died in LLVM section memory at 64 GB). Follow-ups to /intake at ship: analysis-level compile cache across EP steps; vmap(jit) batch-shape churn."
