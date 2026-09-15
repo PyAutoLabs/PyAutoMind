@@ -228,7 +228,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/dynesty_single_core_path_still_builds_a.md">Dynesty single-core path still builds a Pool(1) instead of running serially</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1630">issue #1630</a> — issued 2026-09-15 — library-dev</summary>
+<details><summary>📋 <a href="active/dynesty_single_core_path_still_builds_a.md">Dynesty single-core path still builds a Pool(1) instead of running serially</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1630">issue #1630</a> — issued 2026-09-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1632">PyAutoFit#1632</a></summary>
 
 ```
 /start_dev active/dynesty_single_core_path_still_builds_a.md
