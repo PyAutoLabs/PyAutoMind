@@ -262,3 +262,5 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/jax-runtime-and-parity
 - repos:
+  - autolens_workspace_test: feature/jax-runtime-and-parity
+  - autogalaxy_workspace_test: feature/jax-runtime-and-parity
