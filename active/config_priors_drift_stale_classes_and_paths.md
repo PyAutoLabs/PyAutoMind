@@ -13,11 +13,12 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Status: draft
+Status: active
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-08-29
+Issued: 2026-09-15
 
 Found by the euclid_strong_lens_modeling_pipeline config drift sweep (euclid#43 / PR #44,
 2026-08-29). These findings reproduce **identically** in the packaged

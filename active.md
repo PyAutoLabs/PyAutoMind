@@ -276,3 +276,15 @@
 - parallel-claim: "howtofit-mode also claims PyAutoFit (README/docs prose, zero diff vs main at 2026-09-15); file sets disjoint from autofit/non_linear/search/nest/dynesty/ + its tests, so this task runs in its own worktree by the human's plan approval on 2026-09-15."
 - prompt: active/dynesty_single_core_path_still_builds_a.md
 - summary: Dynesty number_of_cores=1 builds a forked Pool(1); make it fully serial like Nautilus #1443, add regression test, let the EP single-core test use no_forking.
+
+## config-priors-drift
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/618
+- issued: 2026-09-15
+- session: claude --resume cc294fa7-7747-4405-974d-2bd0a38964e7
+- prompt: active/config_priors_drift_stale_classes_and_paths.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/config-priors-drift
+- repos:
+- parallel-claim: "multi-galaxy-j1011-real-data also claims autolens_workspace (scripts/multi_galaxy/**, .gitignore, dataset/); this task touches only config/, file sets disjoint, so it runs in its own worktree by the human's plan approval on 2026-09-15."
+- parallel-claim: "jax-runtime-and-parity also claims autolens_workspace_test (JAX runtime/parity scripts, zero diff vs main at 2026-09-15); this task touches only config/visualize/plots_search.yaml, file sets disjoint, so it runs in its own worktree by the human's plan approval on 2026-09-15."
+- summary: Packaged PyAutoGalaxy prior yaml drift (typo'd/mis-pathed/orphan keys, NFWTruncatedMCRScatterLudlowSph unresolvable) + walker test; then re-sync autolens_workspace, autogalaxy_workspace, HowToLens, autolens_workspace_test config copies. Library (PyAutoGalaxy) first.
