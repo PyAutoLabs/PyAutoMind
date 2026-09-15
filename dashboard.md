@@ -308,7 +308,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/65">issue #65</a> — issued 2026-09-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/65">issue #65</a> — issued 2026-09-15 — workspace-dev — ⏸ waiting on PyAutoNerves's release</summary>
 
 ```
 /start_dev active/tutorials_6_7_blackjax_never_installed.md
@@ -403,6 +403,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoNerves**
 
 - [PyAutoNerves#162](https://github.com/PyAutoLabs/PyAutoNerves/pull/162) — `complete/2026/09/xla-triton-gemm-off.md`
+- ⏸ waiting: [HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…](active/tutorials_6_7_blackjax_never_installed.md)
 
 **autofit_workspace_test**
 
