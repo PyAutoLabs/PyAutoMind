@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1442 records across 8 buckets.
+1443 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -189,6 +189,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
 - [ep-stale-mask-fixed-point](2026/09/ep-stale-mask-fixed-point.md)
 - [ep-stale-tracking-per-variable](2026/09/ep-stale-tracking-per-variable.md) — closed completed 2026-09-07
+- [ep-use-cpu-keeps-jax](2026/09/ep-use-cpu-keeps-jax.md)
 - [euclid-catalogue-rebuild-prep](2026/09/euclid-catalogue-rebuild-prep.md) — One issue, two phased PRs, preparing
 - [euclid-cpu-two-stage-route](2026/09/euclid-cpu-two-stage-route.md)
 - [experimental-colab](2026/09/experimental-colab.md)

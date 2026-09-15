@@ -246,18 +246,6 @@
     The prompt's `Witness:` line and its item 1 still say "one and eight threads" — superseded
     by the single-thread scope decision above, taken by the human 2026-09-15 after filing.
 
-## ep-use-cpu-keeps-jax
-- issue: https://github.com/PyAutoLabs/slope_hierarchy_scale/issues/3
-- issued: 2026-09-15
-- prompt: active/ep_use_cpu_flag_disables_jax.md
-- session: claude --resume 32df3fc7-e0cc-4fc7-98c7-0f160dca158c
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/ep-use-cpu-keeps-jax
-- repos:
-  - slope_hierarchy_scale: feature/ep-use-cpu-keeps-jax
-- workspace-pr: https://github.com/PyAutoLabs/slope_hierarchy_scale/pull/4
-- note: "Heart STALE at ship (release validation incomplete: no rehearsal for current source); nothing in slope_hierarchy_scale is in the release chain and the repo has no CI, so the PR is merged on the local witness evidence in its body, as PR #1 was. After merge: MAX_STEPS=2 hpc/sync push-submit cpu ep (human's choice on 2026-09-15), record 342410 done/failed and the witness run in the Cortex, /intake the compile-memory bug."
-
 ## multi-galaxy-j1011-real-data
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549
 - issued: 2026-09-15
