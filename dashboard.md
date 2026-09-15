@@ -252,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — <a href="https://github.com/PyAutoLabs/slope_hierarchy_scale/issues/3">issue #3</a> — issued 2026-09-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — <a href="https://github.com/PyAutoLabs/slope_hierarchy_scale/issues/3">issue #3</a> — issued 2026-09-15 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/slope_hierarchy_scale/pull/4">slope_hierarchy_scale#4</a></summary>
 
 ```
 /start_dev active/ep_use_cpu_flag_disables_jax.md
