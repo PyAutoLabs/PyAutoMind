@@ -324,18 +324,3 @@
     in the PR body: it eagerly imported `timing`, which imports jax at module level, so ANY
     likelihood_breakdown.* import pulled JAX into the process and the cell's no-jax guarantee
     was unreachable. Every consumer imports submodules; the 440-test suite covers it.
-
-## experimental-colab
-- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/44
-- issued: 2026-09-15
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/experimental-colab
-- repos:
-  - autofit_assistant: feature/experimental-colab
-- prompt: active/experimental-colab.md
-- summary: Experimental Colab notebook and README complete locally; pinned clean install, schema, generation parity, setup rerun, API gate, full Gaussian fit and archive checks passed. Publishing held by Heart RED; no source commit/push/PR.
-- ship-hold: |
-    Heart RED: PyAutoFit: 1 commit(s) behind origin
-    PyAutoGalaxy: 1 commit(s) behind origin
-    PyAutoLens: 1 commit(s) behind origin
-    Stale: release validation incomplete: no rehearsal for current source
