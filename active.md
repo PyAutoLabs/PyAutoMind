@@ -1,5 +1,27 @@
 # Active Tasks
 
+## colab-notebook-release-gate
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/227
+- issued: 2026-09-15
+- prompt: active/colab_notebook_release_gate.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/colab-notebook-release-gate
+- repos:
+- summary: |
+    Make Heart check F a faithful Colab gate. Today it emulates Colab with
+    `pip install autolens jax` WITH deps, so its venv already holds every
+    dependency the real --no-deps bootstrap would miss (corner, 2026-09-15).
+    New heart/checks/colab_gate.py seeds the sim venv from Google's published
+    Colab manifest (googlecolab/backend-info pip-freeze.txt), runs the injected
+    setup cell verbatim, walks declared requirements, AST-scans the installed
+    libraries for every third-party import (guarded or not) and imports each;
+    unguarded miss -> FAIL -> readiness RED. Rung 2 of the prompt's ladder
+    (~5 min, release-only verify_install_release lane); rungs 3/4 declined.
+    PyAutoHeart only: Nerves + HowTo repos need no edit and are claimed by
+    colab-bootstrap-lazy-deps / colab-workshop-dep-stopgap / howtofit-mode.
+    EXPECT: first release-integrate after merge is RED until the autonerves
+    carrying PyAutoNerves#167 is on PyPI - the gate working, not a regression.
+
 ## blackjax-reqs-stopgap-revert
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/65
 - issued: 2026-09-15
