@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 15 |
+| [In flight](#in-flight) (`active/`) | 16 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -288,6 +288,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/jit_visualization_outputs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows on low-pixel-count data</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/552">issue #552</a> — issued 2026-09-15 — library-dev</summary>
+
+```
+/start_dev active/mixed_precision_inversion_jax_numpy_gap_small_data.md
 ```
 
 </details>
@@ -632,18 +640,18 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows on low-pixel-count data</a> — autoarray · medium · supervised · medium</summary>
-
-```
-/start_dev draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy multi-start on CPU</a> — autolens_workspace · medium · supervised · medium</summary>
 
 ```
 /start_dev draft/bug/autolens_workspace/start_here_multistart_compile_time.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/visualization_warmup_swallowed_exception.md">Visualization warm-up swallowed for ellipse and point-source analyses</a> — autofit · large · supervised · medium</summary>
+
+```
+/start_dev draft/bug/autofit/visualization_warmup_swallowed_exception.md
 ```
 
 </details>
@@ -1829,18 +1837,18 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>autoarray — bundle 1</b> — 4 task(s) · 8 pts · auto — proposed</summary>
+<summary><b>autofit — bundle 1</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/autoarray/fit_util_masked_division_grad_nan.md
-- draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md
-- draft/feature/autoarray/over_sample_size_via_snr_from.md
-- draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md
+- draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
+- draft/bug/autofit/visualization_warmup_swallowed_exception.md
+- draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
+- draft/bug/autofit/assertion_repr_recurses_forever.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -1855,10 +1863,10 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Difficulty | Priority | Status |
 |--------|------------|----------|--------|
-| <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> | small | medium | formalised |
-| <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> | medium | medium | formalised |
-| <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> | small | medium | draft |
-| <a href="draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md">Implement and optimize certified positive solver with structure-aware…</a> | large | normal | formalised |
+| <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output…</a> | small | medium | formalised |
+| <a href="draft/bug/autofit/visualization_warmup_swallowed_exception.md">Visualization warm-up swallowed for ellipse and point-source analyses</a> | large | medium | formalised |
+| <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
+| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
 
 </details>
 
@@ -1929,6 +1937,40 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>autoarray — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autoarray/fit_util_masked_division_grad_nan.md
+- draft/feature/autoarray/over_sample_size_via_snr_from.md
+- draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md
+- draft/maintenance/autoarray/small_datasets_followups_after_8c.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> | small | medium | formalised |
+| <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> | small | medium | draft |
+| <a href="draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md">Implement and optimize certified positive solver with structure-aware…</a> | large | normal | formalised |
+| <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> | small | low | formalised |
+
+</details>
+
+<details>
 <summary><b>samplers · jax-gradient</b> — 3 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -1995,40 +2037,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>autofit — bundle 1</b> — 4 task(s) · 5 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
-- draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
-- draft/bug/autofit/assertion_repr_recurses_forever.md
-- draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output…</a> | small | medium | formalised |
-| <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> | medium | medium | formalised |
-| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
-| <a href="draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md">Emcee crashes in autocorrelation when the chain is too short</a> | small | normal | formalised |
-
-</details>
-
-<details>
 <summary><b>jax</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax, mass-profiles</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2062,7 +2070,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 33 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 32 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2075,16 +2083,17 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | issued | <a href="active/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> |
 | 2026-09-15 | issued | <a href="active/fixed_light_numba_phase2_source_only_solver.md">Numba phase 2 — source-only solve on the numba CPU path: measure…</a> |
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
+| 2026-09-15 | issued | <a href="active/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-15 | issued | <a href="active/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> |
 | 2026-09-15 | issued | <a href="active/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> |
 | 2026-09-15 | issued | <a href="active/ep_re_jit_compiles_the_vmapped_likelihood.md">EP re-jit-compiles the vmapped likelihood per factor search until…</a> |
-| 2026-09-15 | issued | <a href="active/dynesty_single_core_path_still_builds_a.md">Dynesty single-core path still builds a Pool(1) instead of running…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-15 | issued | <a href="active/dynesty_single_core_path_still_builds_a.md">Dynesty single-core path still builds a Pool(1) instead of running…</a> |
 | 2026-09-15 | issued | <a href="active/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by…</a> |
 | 2026-09-15 | issued | <a href="active/colab_bootstrap_missing_lazily_imported_deps.md">Colab bootstrap installs no lazily-imported dependency — <code>corner</code>…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
@@ -2094,12 +2103,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
 | 2026-09-13 | issued | <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from…</a> |
 | 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
-| 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
@@ -2109,12 +2118,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
 | 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
-| 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
 | 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
@@ -2124,12 +2133,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md">PyAutoHeart smoke-tests.yml relevance gate skips the pytest matrix on…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
-| 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 | 2026-09-09 | filed | <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to…</a> |
@@ -2139,7 +2148,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-07 | filed | <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is…</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> |
 | 2026-09-07 | filed | <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually…</a> |
-| 2026-09-07 | filed | <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on…</a> |
 
 </details>
 
@@ -2542,7 +2550,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-125 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+124 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2587,7 +2595,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/feature/workspaces/model_figures_6b2_slam_stages.md`
 - `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
-- _… and 85 more_
+- _… and 84 more_
 
 </details>
 
