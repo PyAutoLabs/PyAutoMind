@@ -299,7 +299,7 @@
 - repos:
   - autofit_assistant: feature/experimental-colab
 - prompt: active/experimental-colab.md
-- summary: Experimental Colab notebook and README implementation prepared; isolated installation and full Gaussian validation in progress.
+- summary: Experimental Colab notebook and README complete locally; pinned clean install, schema, generation parity, setup rerun, API gate, full Gaussian fit and archive checks passed. Publishing held by Heart RED; no source commit/push/PR.
 - ship-hold: |
     Heart RED: PyAutoFit: 1 commit(s) behind origin
     PyAutoGalaxy: 1 commit(s) behind origin
