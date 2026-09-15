@@ -27,12 +27,15 @@
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/65
 - issued: 2026-09-15
 - prompt: active/tutorials_6_7_blackjax_never_installed.md
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/blackjax-reqs-stopgap-revert
 - repos:
   - HowToFit: feature/blackjax-reqs-stopgap-revert
   - HowToGalaxy: feature/blackjax-reqs-stopgap-revert
   - HowToLens: feature/blackjax-reqs-stopgap-revert
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/66
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/78
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/86
 - release-gate: PyAutoNerves
 - parallel-claim: |
     HowToFit, HowToGalaxy and HowToLens are also claimed by `colab-workshop-dep-stopgap`
