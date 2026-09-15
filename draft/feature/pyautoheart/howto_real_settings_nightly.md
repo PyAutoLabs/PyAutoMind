@@ -33,7 +33,7 @@ CI while never completing a single EP update at real settings (PyAutoFit#1454).
 
 - One representative tutorial per chapter (HowToFit 18, HowToGalaxy 32, HowToLens 50
   notebooks in total) at `PYAUTO_TEST_MODE=0` or `1`, nightly, not per release —
-  rung 3 of the ladder scoped in `active/colab_notebook_release_gate.md`. Tens of
+  rung 3 of the ladder scoped in `complete/2026/09/colab-notebook-release-gate.md`. Tens of
   minutes per chapter; price it before choosing 0 vs 1.
 - Where: a Heart deep check (never the <30 s tick) or a workflow in each HowTo repo
   reusing `PyAutoHands/autohands/run_all.py --run-type release` — which would need a

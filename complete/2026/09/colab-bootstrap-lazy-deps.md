@@ -1,3 +1,21 @@
+Colab bootstrap now installs every lazily-imported dependency. Shipped 2026-09-15 as PyAutoNerves#169 (issue #167), three commits, merged 8eca4b3.
+
+**What was wrong.** `setup_colab.py` installs the stack `--no-deps`, so anything Colab does not preinstall must be named in `_SHARED_EXTRAS`. HowToFit tutorial 5 died on Colab on 2026-09-15 with `ModuleNotFoundError: No module named 'corner'` after the search completed — third report of the class (#166 closed it for emcee/dynesty).
+
+**What shipped.**
+- `_SHARED_EXTRAS` += `corner==2.2.2`, `optax>=0.2.5`, `xxhash<=3.4.1`, `blackjax>=1.6.2`; specifiers corrected (`nautilus-sampler` 1.0.4 → 1.0.5, `anesthetic` ==2.8.14 → >=2.9.0).
+- Second pass, driven by PyAutoHeart#228's Colab gate: += `jax_zero_contour>=2.0.0,<3.0.0` (autogalaxy base dep reached by `lens_calc.py` critical-curve code) and `zeus-mcmc==2.5.4` (`af.Zeus`, autofit_workspace notebooks). Every runtime requirement of both is shipped by Colab.
+- `TestSpecifiersTrackAutofit` derives expectations from PyAutoFit's and PyAutoGalaxy's `pyproject.toml` at run time; `test_every_project_installs_every_sampler` requires the full set. 185 tests.
+- `.github/workflows/colab-gate.yml`: PRs touching `setup_colab.py` check out PyAutoHeart main and run check F with this checkout overlaid — the PR-time complement of Heart's release-time `verify_install_release`. Proven on #169 (attempt 2, after #228 merged): `F|PASS`.
+
+**Absorbed.** The `_SHARED_EXTRAS` legs of the nautilus pin-drift prompt and the HowToFit tutorials 6/7 blackjax prompt. Out of scope by the human's decision: no PyAutoHands setup-cell change, no notebook regeneration (the cell pip-installs autonerves unpinned at run time, so the release fixes published notebooks retroactively). The workshop stopgap PRs (HowToFit#63, HowToGalaxy#77, HowToLens#85, task `colab-workshop-dep-stopgap`) become removable once this is released.
+
+**Shipping.** Merging fixes nothing on its own — the autonerves PyPI release is what reaches every published notebook. Confirm the overnight release run has settled before cutting one. Heart's release-integrate stays RED until then (check F installs autonerves from the index).
+
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/169
+
+## Original prompt
+
 # Colab bootstrap installs no lazily-imported dependency — `corner` kills every MCMC fit mid-run
 
 Type: bug
