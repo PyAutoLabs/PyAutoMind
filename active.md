@@ -1,5 +1,39 @@
 # Active Tasks
 
+## colab-workshop-dep-stopgap
+- issue: n/a — workshop stopgap filed directly as PRs; tracked by PyAutoNerves#167
+- issued: 2026-09-15
+- status: awaiting-merge
+- worktree: ~/Code/PyAutoLabs-wt/colab-workshop-dep-stopgap
+- repos:
+  - HowToFit: feature/colab-workshop-dep-stopgap
+  - HowToGalaxy: feature/colab-workshop-dep-stopgap
+  - HowToLens: feature/colab-workshop-dep-stopgap
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/63
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/77
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/85
+- parallel-claim: |
+    HowToFit is also claimed by `howtofit-mode` (feature/howtofit-mode). Deliberate,
+    human-approved override under workshop time pressure on 2026-09-15, following the
+    precedent recorded on `sed-chain-cpu-route`. File sets are disjoint: howtofit-mode
+    is propagating README assistant prompts and its source "remains local and
+    uncommitted", while this task touches only notebooks/*.ipynb Colab setup cells.
+    This task runs in a separate parallel worktree.
+- summary: |
+    Stopgap for a workshop running 2026-09-15. Adds a second pip install to the Colab
+    setup cell of all 100 notebooks carrying one (HowToFit 18, HowToGalaxy 32,
+    HowToLens 50), installing corner, optax, xxhash and blackjax with --no-deps
+    inside the `else:` (Colab-only) branch. These are autofit dependencies imported
+    lazily inside functions, absent from autonerves' _SHARED_EXTRAS and not shipped
+    by Colab, so `import autofit` succeeds and the notebook dies partway through a fit.
+    --no-deps is load-bearing: with deps, pip would downgrade Colab's GPU jax.
+    The anesthetic / nautilus-sampler / dill pins are deliberately untouched.
+    REMOVE once autonerves > 2026.9.15.1 is released — the real fix is PyAutoNerves#167,
+    which reaches every published notebook retroactively because the setup cell
+    pip-installs autonerves unpinned at run time. This exists because the Colab badge
+    links point at release tags, not main, so a notebook edit alone cannot reach an
+    attendee clicking a README badge.
+
 ## colab-bootstrap-lazy-deps
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/167
 - issued: 2026-09-15
