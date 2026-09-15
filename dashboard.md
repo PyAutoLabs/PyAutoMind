@@ -42,30 +42,22 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 9 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 190 |
+| [Backlog](#backlog) (`draft/`) | 189 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 14
+**Highest priority** (filed as `high`) — showing 12 of 13
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> — howtofit · small · safe · high</summary>
-
-```
-/start_dev draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md
 ```
 
 </details>
@@ -150,7 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 104
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 103
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -304,6 +304,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/simulator_from_result_linear_intensities.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/65">issue #65</a> — issued 2026-09-15 — workspace-dev</summary>
+
+```
+/start_dev active/tutorials_6_7_blackjax_never_installed.md
 ```
 
 </details>
@@ -523,23 +531,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**190** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**189** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 52</summary>
+<summary><b>bug</b> — 51</summary>
 
 <details><summary>📋 <a href="draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> — graphical_ep · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/graphical_ep/ep_use_cpu_flag_disables_jax.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> — howtofit · small · safe · high</summary>
-
-```
-/start_dev draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md
 ```
 
 </details>
@@ -1909,36 +1909,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>tutorials</b> — 2 task(s) · 2 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: colab, dependencies, tutorials</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'tutorials' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md
-- draft/docs/howtofit/tutorial_4_runtime_claim.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> | howtofit | small | high | formalised |
-| <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> | howtofit | small | low | formalised |
-
-</details>
-
-<details>
 <summary><b>autoarray — bundle 1</b> — 4 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2070,7 +2040,41 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 33 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>visualization</b> — 4 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'visualization' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autolens/quick_update_plotting_cost.md
+- draft/docs/autolens/plot_rst_missing_exports.md
+- draft/bug/autofit/add_assertion_name_silently_dropped.md
+- draft/bug/autofit/direct_instance_tuples_double_counts_constants.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | autolens | medium | medium | draft |
+| <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> | autolens | medium | normal | draft |
+| <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> | autofit | small | normal | formalised |
+| <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> | autofit | small | normal | formalised |
+
+</details>
+
+_Showing 8 of 32 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2081,7 +2085,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> |
 | 2026-09-15 | issued | <a href="active/fixed_light_numba_phase2_source_only_solver.md">Numba phase 2 — source-only solve on the numba CPU path: measure…</a> |
-| 2026-09-15 | filed | <a href="draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> |
+| 2026-09-15 | issued | <a href="active/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-15 | issued | <a href="active/colab_bootstrap_missing_lazily_imported_deps.md">Colab bootstrap installs no lazily-imported dependency — <code>corner</code>…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
@@ -2599,7 +2603,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-32 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+31 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2624,7 +2628,6 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md — unknown theme keyword(s): tutorials`
-- `draft/bug/howtofit/tutorials_6_7_blackjax_never_installed.md — unknown theme keyword(s): tutorials, colab, dependencies`
 - `draft/refactor/autofit/parameterization_prior_count_blowup.md — unknown theme keyword(s): performance`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
