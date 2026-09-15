@@ -383,3 +383,45 @@ jobs:
           done
           echo "::error::could not push the Memory inbox commit after 3 attempts — today's papers were NOT filed into the Memory inbox, so the board shows nothing waiting. The Slack digest above is unaffected; re-file with a workflow_dispatch carrying lookback_hours=168 once the cause is fixed."
           exit 1
+
+      # --- the alarm --------------------------------------------------------
+      # The empty-day heartbeat makes silence in #papers mean "the run broke" —
+      # but only to a reader who notices the absence of a post, which is exactly
+      # what nobody does. Twice now a broken digest was found days later by its
+      # silence (an expired token; then the 2026-09-14 arXiv 429). So a failed
+      # run says so in the channel itself.
+      #
+      # `if: failure()` covers every step above, the fetch and the Slack POST
+      # included, and cannot mask a good run. It is deliberately curl-only —
+      # no Claude, no cross-repo push — so the one thing left to fail is the
+      # webhook. `|| true` keeps the job's own red X as the real signal.
+      - name: "Say so in #papers when the digest failed"
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_PAPERS_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -uo pipefail
+          if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
+            echo "no webhook configured — cannot raise the alarm in #papers."
+            exit 0
+          fi
+          python3 - <<'PY' > alarm.json
+          import json, os
+          title = "arXiv digest failed — no papers today"
+          json.dump({
+              "text": title,
+              "blocks": [
+                  {"type": "header",
+                   "text": {"type": "plain_text", "text": f":warning: {title}"}},
+                  {"type": "section",
+                   "text": {"type": "mrkdwn",
+                            "text": "Today's strong-lensing digest did not run to "
+                                    "completion, so this is *not* a quiet day — "
+                                    "papers were announced and nothing was filed "
+                                    f"into the Memory inbox.\n<{os.environ['RUN_URL']}|Read the run log>"}},
+              ],
+          }, open(1, "w", closefd=False))
+          PY
+          curl -sS -X POST -H "Content-Type: application/json" \
+               --data @alarm.json "$SLACK_WEBHOOK_URL" || true

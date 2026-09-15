@@ -47,6 +47,8 @@ import datetime as dt
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -54,6 +56,91 @@ from zoneinfo import ZoneInfo
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV = "{http://arxiv.org/schemas/atom}"
+
+USER_AGENT = "PyAutoLabs-papers-digest/1.0"
+
+# --- talking to arXiv without getting throttled -------------------------------
+#
+# arXiv rate-limits the public API and answers HTTP 429 when it decides a client
+# is going too fast. That is a TRANSIENT condition and it must never cost a
+# morning: on 2026-09-14 both digests died on an unretried 429 (the lensing one
+# in --livecheck, the interests one on its first page), so #papers was silent
+# and neither Memory list moved — the failure this pacing and retry exist to
+# stop.
+#
+# Two halves, and both are needed:
+#   * PACING — arXiv asks for no more than one request every 3 s. The lensing
+#     digest makes two requests a day and was never the problem; the interests
+#     digest pages a whole day of astro-ph (up to MAX_PAGES back-to-back
+#     requests) and is exactly the burst arXiv throttles. _pace() holds the
+#     floor process-wide, so every caller of fetch() inherits it.
+#   * RETRY — a 429 (or a 5xx, or a dropped connection) is retried with
+#     exponential backoff, honouring `Retry-After` when arXiv sends one.
+#     Bounded: worst case ~2 min of sleeping before giving up, well inside the
+#     band's ~22 h of stability, so a retried run still takes the right papers.
+#
+# A 4xx that is NOT 429 is a bug in the query, not weather — it raises at once.
+MIN_REQUEST_INTERVAL = 3.0   # seconds between requests (arXiv's stated rate)
+MAX_ATTEMPTS = 5
+BACKOFF_BASE = 4.0           # 4, 8, 16, 32 s between attempts
+BACKOFF_CAP = 60.0
+RETRY_STATUSES = frozenset({429, 500, 502, 503, 504})
+
+_last_request_at = 0.0
+
+
+def _pace() -> None:
+    """Block until MIN_REQUEST_INTERVAL has passed since the last request."""
+    global _last_request_at
+    wait = MIN_REQUEST_INTERVAL - (time.monotonic() - _last_request_at)
+    if wait > 0:
+        time.sleep(wait)
+    _last_request_at = time.monotonic()
+
+
+def _retry_after(err: urllib.error.HTTPError, fallback: float) -> float:
+    """Seconds to wait, from the server's `Retry-After` header when it sends a
+    sane one (delta-seconds only; a HTTP-date is rare here and not worth
+    parsing), else `fallback`. Capped so a hostile header cannot hang the run.
+    """
+    raw = (err.headers.get("Retry-After") or "").strip() if err.headers else ""
+    try:
+        return min(max(float(raw), 0.0), BACKOFF_CAP)
+    except ValueError:
+        return fallback
+
+
+def get(url: str, *, timeout: int = 60) -> bytes:
+    """GET `url`, paced and retried. The one door to the arXiv API.
+
+    Raises the last error once MAX_ATTEMPTS are spent — a caller that can
+    tolerate the loss (the recall livecheck) catches it; one that cannot (the
+    fetch itself) lets it fail the run.
+    """
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        _pace()
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as err:
+            if err.code not in RETRY_STATUSES or attempt == MAX_ATTEMPTS:
+                raise
+            backoff = min(BACKOFF_BASE * 2 ** (attempt - 1), BACKOFF_CAP)
+            delay = _retry_after(err, backoff)
+            reason = f"HTTP {err.code}"
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as err:
+            if attempt == MAX_ATTEMPTS:
+                raise
+            delay = min(BACKOFF_BASE * 2 ** (attempt - 1), BACKOFF_CAP)
+            reason = str(err)
+        print(
+            f"  arXiv {reason} — attempt {attempt}/{MAX_ATTEMPTS}, "
+            f"retrying in {delay:.0f}s",
+            file=sys.stderr,
+        )
+        time.sleep(delay)
+    raise RuntimeError("unreachable: the loop either returns or raises")
 
 # arXiv's schedule is defined in US Eastern wall-clock, so the UTC offset it
 # implies moves with US DST (14:00 ET = 18:00 UTC in EDT, 19:00 UTC in EST).
@@ -140,12 +227,7 @@ def fetch(query: str, max_results: int, start: int = 0) -> bytes:
             "max_results": max_results,
         }
     )
-    url = f"https://export.arxiv.org/api/query?{params}"
-    req = urllib.request.Request(
-        url, headers={"User-Agent": "PyAutoLabs-papers-digest/1.0"}
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        return resp.read()
+    return get(f"https://export.arxiv.org/api/query?{params}")
 
 
 def parse(raw: bytes, band_start: dt.datetime, band_end: dt.datetime) -> list:
@@ -273,7 +355,13 @@ def _livecheck() -> int:
     "would today's query return this paper?" — independent of how long ago it
     was published, unlike a look-back over recent results. Runs in the workflow
     just before the fetch, which needs the same API anyway, so it adds no new
-    failure mode beyond a genuine recall regression.
+    failure mode beyond a genuine recall regression — and that claim is load
+    bearing, because this guard runs BEFORE the fetch and a non-zero exit here
+    costs the whole digest. So an API that will not answer (429 after every
+    retry, a 5xx, a dropped connection) is reported and PASSED: only a query
+    that answers and no longer returns a known paper is a recall regression.
+    The fetch below hits the same API moments later and fails loudly there if
+    arXiv is genuinely down.
     """
     params = urllib.parse.urlencode(
         {
@@ -282,12 +370,30 @@ def _livecheck() -> int:
             "max_results": len(KNOWN_MATCHES) * 2,
         }
     )
-    req = urllib.request.Request(
-        f"https://export.arxiv.org/api/query?{params}",
-        headers={"User-Agent": "PyAutoLabs-papers-digest/1.0"},
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        root = ET.fromstring(resp.read())
+    try:
+        raw = get(f"https://export.arxiv.org/api/query?{params}")
+    except urllib.error.HTTPError as err:
+        if err.code not in RETRY_STATUSES:
+            # A 400 here is the query itself being rejected — a real regression,
+            # and the fetch below would hit it too. Fail.
+            print(f"  [FAIL] arXiv rejected the query (HTTP {err.code})", file=sys.stderr)
+            print("livecheck: QUERY REJECTED", file=sys.stderr)
+            return 1
+        print(
+            f"  [skip] arXiv throttled or down (HTTP {err.code} after "
+            f"{MAX_ATTEMPTS} attempts) — recall not checked",
+            file=sys.stderr,
+        )
+        print("livecheck: SKIPPED (transport)", file=sys.stderr)
+        return 0
+    except (urllib.error.URLError, TimeoutError, ConnectionError) as err:
+        print(
+            f"  [skip] arXiv unreachable ({err}) — recall not checked",
+            file=sys.stderr,
+        )
+        print("livecheck: SKIPPED (transport)", file=sys.stderr)
+        return 0
+    root = ET.fromstring(raw)
     returned = {
         (entry.findtext(f"{ATOM}id") or "").rsplit("/", 1)[-1].split("v")[0]
         for entry in root.findall(f"{ATOM}entry")
