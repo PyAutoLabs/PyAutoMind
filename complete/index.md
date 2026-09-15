@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1440 records across 8 buckets.
+1441 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -145,6 +145,7 @@ markers; everything below GENERATED is rebuilt.
 - [byol-mode](2026/09/byol-mode.md)
 - [catalogue-latent-prefix-blank](2026/09/catalogue-latent-prefix-blank.md) — `catalogue/scripts/lens_mass.py` and `catalogue/scripts/magnitudes.py`
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
+- [colab-workshop-dep-stopgap](2026/09/colab-workshop-dep-stopgap.md)
 - [cortex-assistant-entry](2026/09/cortex-assistant-entry.md)
 - [cortex-batch-member-kind](2026/09/cortex-batch-member-kind.md) — closed completed 2026-09-02
 - [cortex-birth-organ-row](2026/09/cortex-birth-organ-row.md) — closed completed 2026-09-01
