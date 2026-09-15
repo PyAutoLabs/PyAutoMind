@@ -10,6 +10,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-09-15
 Consequence: judge
 Witness: `hpc/sync push-submit cpu scripts/ep.py` (the CPU partition) runs the EP arm with a vectorised JAX likelihood on the CPU backend and no multiprocessing pool, and the first factor_step completes; `use_jax` is no longer derived from the partition flag.
 Review-minutes: 10

@@ -280,3 +280,12 @@
     exit 0). Branch based on autolens_profiling origin/main 9285683 (the phase-1 merge).
     The prompt's `Witness:` line and its item 1 still say "one and eight threads" — superseded
     by the single-thread scope decision above, taken by the human 2026-09-15 after filing.
+
+## ep-use-cpu-keeps-jax
+- issue: https://github.com/PyAutoLabs/slope_hierarchy_scale/issues/3
+- issued: 2026-09-15
+- prompt: active/ep_use_cpu_flag_disables_jax.md
+- session: claude --resume 32df3fc7-e0cc-4fc7-98c7-0f160dca158c
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/ep-use-cpu-keeps-jax
+- repos:
