@@ -4,10 +4,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/227
 - issued: 2026-09-15
 - prompt: active/colab_notebook_release_gate.md
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/colab-notebook-release-gate
 - repos:
   - PyAutoHeart: feature/colab-notebook-release-gate
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/228
 - summary: |
     Make Heart check F a faithful Colab gate. Today it emulates Colab with
     `pip install autolens jax` WITH deps, so its venv already holds every
@@ -22,6 +23,11 @@
     colab-bootstrap-lazy-deps / colab-workshop-dep-stopgap / howtofit-mode.
     EXPECT: first release-integrate after merge is RED until the autonerves
     carrying PyAutoNerves#167 is on PyPI - the gate working, not a regression.
+    SHIPPED 2026-09-15 as PR #228. Witness: PyPI as-is F|FAIL naming corner
+    (74 s); Nerves#167 overlaid clears corner+blackjax (66 s) but FIVE
+    library-side unguarded imports remain (jax_zero_contour lens_calc.py:1452,
+    zeus, colossus, hmf, mcp) - human decides extras / guard / accepted_missing
+    before the gate can go green. Merge is /prm, human.
 
 ## colab-bootstrap-lazy-deps
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/167
