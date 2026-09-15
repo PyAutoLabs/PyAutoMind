@@ -1,5 +1,35 @@
 # Active Tasks
 
+## colab-bootstrap-lazy-deps
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/167
+- issued: 2026-09-15
+- prompt: active/colab_bootstrap_missing_lazily_imported_deps.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/colab-bootstrap-lazy-deps
+- repos:
+  - PyAutoNerves: feature/colab-bootstrap-lazy-deps
+- summary: |
+    HowToFit tutorial 5 dies on Colab with ModuleNotFoundError: No module named
+    'corner', after the search has already completed, in the results update that
+    follows it. setup_colab.py installs the stack with --no-deps, so anything
+    Colab does not preinstall must be named in _SHARED_EXTRAS; corner==2.2.2 is a
+    base autofit dependency and is not there. It hid because corner is imported
+    inside corner_cornerpy rather than at module scope, so `import autofit`
+    succeeds and smoke at PYAUTO_TEST_MODE=2 never constructs the sampler.
+    Third report of the same defect (#166 closed it for emcee/dynesty), so this
+    task audits the whole list rather than adding one package: adds corner,
+    optax, xxhash, blackjax; corrects two specifiers drifted from
+    PyAutoFit/pyproject.toml (anesthetic ==2.8.14 -> >=2.9.0, nautilus-sampler
+    ==1.0.4 -> ==1.0.5); adds a specifier-aware test deriving expectations from
+    autofit's pyproject rather than restating literals.
+    Absorbs the _SHARED_EXTRAS legs of two open prompts (nautilus pin drift;
+    tutorials 6/7 blackjax) so one autonerves release closes all of it.
+    Out of scope by the human's decision: no PyAutoHands setup-cell change, no
+    notebook regeneration (the cell pip-installs autonerves unpinned at run time,
+    so the release fixes published notebooks retroactively).
+    SHIPPING: merging fixes nothing — an autonerves PyPI release is what ships
+    this. Confirm the overnight release run has settled before cutting one.
+
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
