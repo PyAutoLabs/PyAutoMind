@@ -10,6 +10,8 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-09-06
+Issued: 2026-09-15
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/552
 
 Found during the phase-5 rebuild of the ci-timing-fast-tests epic
 (autogalaxy_workspace_test#117). `scripts/imaging/jax_likelihood/rectangular.py` —

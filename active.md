@@ -324,3 +324,14 @@
     PyAutoFit#1508 / PyAutoArray#467. Incidental: "Visualization warm-up failed
     (non-fatal)" swallowed in autofit fitness.py for ellipse + point_source -
     separate prompt draft/bug/autofit/visualization_warmup_swallowed_exception.md.
+
+## mixed-precision-inversion-gap
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/552
+- issued: 2026-09-15
+- prompt: active/mixed_precision_inversion_jax_numpy_gap_small_data.md
+- session: claude --resume 06b62eb4-de08-40c6-91e0-ecce790fce3d
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mixed-precision-inversion-gap
+- repos:
+- parallel-claim: "autogalaxy_workspace_test is claimed by jax-runtime-and-parity (autolens_workspace_test#317, smoke_tests.txt only, zero diff vs main on 2026-09-15); this task's workspace leg is one tolerance edit in scripts/imaging/jax_likelihood/rectangular.py and is added via worktree_add_repo only after that claim clears. PyAutoArray is unclaimed."
+- note: "Planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library mixed-precision-inversion-gap (PyAutoArray only, library first). Before any measurement move autogalaxy_workspace_test/dataset/imaging/jax_test aside: the on-disk copy is the stale pre-#117 180x180 dataset and should_simulate does not detect the resolution change. Key reframing: the asserted quantity is log_likelihood so the gap is pure delta-chi-squared; the NumPy reference is not fp64 (mapper_util honours use_mixed_precision on numpy); the fp32 curvature branch is inert but rounds 1/sigma inconsistently with the fp64 data vector; JAX (jaxnnls IPM) and NumPy (fnnls) run different NNLS algorithms."
