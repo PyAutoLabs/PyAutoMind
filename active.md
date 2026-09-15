@@ -7,6 +7,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/colab-notebook-release-gate
 - repos:
+  - PyAutoHeart: feature/colab-notebook-release-gate
 - summary: |
     Make Heart check F a faithful Colab gate. Today it emulates Colab with
     `pip install autolens jax` WITH deps, so its venv already holds every
