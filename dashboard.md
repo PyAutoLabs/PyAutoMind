@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 10 |
+| [In flight](#in-flight) (`active/`) | 11 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 188 |
+| [Backlog](#backlog) (`draft/`) | 187 |
 
 > **No batch in flight.**
 
@@ -66,14 +66,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/colab_notebook_release_gate.md
 ```
 
 </details>
@@ -150,7 +142,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 102
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 101
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -208,14 +200,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoheart/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/colab_notebook_release_gate.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — autoarray · small · supervised · medium</summary>
 
 ```
@@ -248,6 +232,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — autofit · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
@@ -256,6 +248,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/colab_bootstrap_missing_lazily_imported_deps.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/227">issue #227</a> — issued 2026-09-15 — workspace-dev</summary>
+
+```
+/start_dev active/colab_notebook_release_gate.md
 ```
 
 </details>
@@ -540,7 +540,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**188** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**187** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 50</summary>
@@ -948,15 +948,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 34</summary>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> — pyautoheart · medium · safe · high</summary>
-
-```
-/start_dev draft/feature/pyautoheart/colab_notebook_release_gate.md
-```
-
-</details>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1816,38 +1808,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>pyautoheart — bundle 1</b> — 3 task(s) · 6 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'pyautoheart — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/pyautoheart/colab_notebook_release_gate.md
-- draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md
-- draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/feature/pyautoheart/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> | medium | high | formalised |
-| <a href="draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md">PyAutoHeart smoke-tests.yml relevance gate skips the pytest matrix on…</a> | medium | normal | formalised |
-| <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> | medium | low | formalised |
-
-</details>
-
-<details>
 <summary><b>inversion</b> — 2 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: correctness, inversion, performance, sparse-operator</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2077,6 +2037,40 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
+<details>
+<summary><b>jax</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax, mass-profiles</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'jax' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
+- draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md
+- draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
+- draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md">Reverse-mode <code>jax.grad</code> of MGE deflections returns NaN when the…</a> | autogalaxy | small | medium | draft |
+| <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector…</a> | autogalaxy | small | low | draft |
+| <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> | autofit | small | normal | draft |
+| <a href="draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md">A non-uniform <code>over_sample_size</code> costs several times more JAX compile…</a> | autoarray | medium | normal | formalised |
+
+</details>
+
 _Showing 8 of 32 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -2087,7 +2081,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-15 | issued | <a href="active/ep_use_cpu_flag_disables_jax.md">slope_hierarchy_scale <code>--use_cpu</code> must not disable the JAX likelihood</a> |
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
-| 2026-09-15 | filed | <a href="draft/feature/pyautoheart/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> |
+| 2026-09-15 | issued | <a href="active/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> |
 | 2026-09-15 | issued | <a href="active/fixed_light_numba_phase2_source_only_solver.md">Numba phase 2 — source-only solve on the numba CPU path: measure…</a> |
 | 2026-09-15 | issued | <a href="active/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
