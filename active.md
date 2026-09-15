@@ -7,6 +7,10 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/blackjax-reqs-stopgap-revert
 - repos:
+  - HowToFit: feature/blackjax-reqs-stopgap-revert
+  - HowToGalaxy: feature/blackjax-reqs-stopgap-revert
+  - HowToLens: feature/blackjax-reqs-stopgap-revert
+- release-gate: PyAutoNerves
 - parallel-claim: |
     HowToFit, HowToGalaxy and HowToLens are also claimed by `colab-workshop-dep-stopgap`
     (all three PRs merged 2026-09-15; stale claim awaiting its close-out — this task
