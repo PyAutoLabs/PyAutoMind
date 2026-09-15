@@ -320,3 +320,4 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/multi-galaxy-j1011-real-data
 - repos:
+  - autolens_workspace: feature/multi-galaxy-j1011-real-data
