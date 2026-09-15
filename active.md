@@ -300,3 +300,27 @@
 - repos:
 - parallel-claim: PyAutoFit also claimed by howtofit-mode (README propagation only; its PyAutoFit worktree clean, 0 commits ahead of origin/main on 2026-09-15); disjoint files, own worktree when started
 - note: "Planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library ep-release-search-internals. Fix locus: AbstractSearch.optimise releases result._search_internal before status.result so each EP factor search's Fitness and its compiled JAX executables are collectable (slope_hierarchy_scale job 342410 retained 76 searches' executables and died in LLVM section memory at 64 GB). Follow-ups to /intake at ship: analysis-level compile cache across EP steps; vmap(jit) batch-shape churn."
+
+## jit-visualization-outputs
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/318
+- issued: 2026-09-15
+- prompt: active/jit_visualization_outputs.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jit-visualization-outputs
+- repos:
+- summary: |
+    Prompt's defect REFUTED twice (2026-08-21, 2026-09-15): all 4
+    modeling_visualization_jit scripts pass from cleared output under
+    profile_release on current main (8/8 passes, libraries moved 58-186 commits
+    between gates). Only residual is the stale point_source/visualization parking
+    (autolens_workspace_test config/build/no_run.yaml:30, "exceeds 300s" -
+    measured 168 s / 202 s locally, margin narrowing). PLAN ONLY, NOT STARTED:
+    the human deferred execution on 2026-09-15; no worktree, no branch, no code
+    change. Resume = /start_workspace, push the empty branch, dispatch retime.yml
+    (point_source/visualization/modeling_visualization_jit.py, 5x, 300 s cap),
+    then settle the marker FROM the measurement (all under cap -> unpark; any
+    over -> keep parked with the measured #274-style verdict). One-line
+    workspace PR; close-out record says "no defect exists to fix" like siblings
+    PyAutoFit#1508 / PyAutoArray#467. Incidental: "Visualization warm-up failed
+    (non-fatal)" swallowed in autofit fitness.py for ellipse + point_source -
+    separate prompt draft/bug/autofit/visualization_warmup_swallowed_exception.md.
