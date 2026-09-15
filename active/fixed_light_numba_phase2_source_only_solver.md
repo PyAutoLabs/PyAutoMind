@@ -21,7 +21,7 @@ Witness: On the numba CPU path at HST Delaunay N=1500, every S3 solver row retur
 `fnnls` log evidence to <= 1e-9 relative (or is RECORDED with its Δ in nats where it is a different
 minimiser); the decomposition's exclusive rows plus `unattributed` sum to the clean call within 5 %;
 and the note carries one table of whole-call ms for S0 -> S3 (library solver) -> S3 (fastest
-equivalent solver) at one and eight threads, with every thread knob recorded per leg.
+equivalent solver) in a single-threaded process (numba 1, BLAS 1), with every thread knob recorded per leg.
 Review-minutes: 30
 Unattended: never
 Filed: 2026-09-15
@@ -49,7 +49,7 @@ being the call; on numba the balance between mapper, `F` assembly and solve is u
 ## What this phase does
 
 1. **Measure the fixed-light speedup on numba.** Run the phase-1 cell on HST Delaunay N=1500,
-   routes a / b / c x {dense, sparse_numba}, at one and eight threads
+   routes a / b / c x {dense, sparse_numba}, single-threaded only
    (`NUMBA_NUM_THREADS`, BLAS, `NPROC` all recorded). Route a -> b is the fixed-lens-light
    speedup on the production CPU path; the access-counted decomposition says where the S3
    call now goes (mapper / `F` build / solve / log-dets / unattributed).
@@ -75,6 +75,11 @@ being the call; on numba the balance between mapper, `F` assembly and solve is u
    if so — this phase edits no library).
 
 ## Scope and guards
+
+**Single-threaded only (human, 2026-09-15).** Production parallelises the numba likelihood
+across cores with Python multiprocessing, one single-threaded evaluation per process, so no
+multi-core per-call speedup is a target: every leg runs at `NUMBA_NUM_THREADS=1` and BLAS 1,
+and the campaign map's thread-scaling phase is retired.
 
 HST, fp64, Delaunay N=1500 first; rectangular only if the Delaunay legs leave time. Euclid,
 the source-pixel sweep and the graded draw set stay in phases 3-5. The thread guard from the
