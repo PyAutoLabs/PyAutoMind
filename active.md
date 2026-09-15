@@ -264,3 +264,15 @@
 - repos:
   - autolens_workspace_test: feature/jax-runtime-and-parity
   - autogalaxy_workspace_test: feature/jax-runtime-and-parity
+
+## dynesty-single-core-no-pool
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1630
+- issued: 2026-09-15
+- session: claude --resume a8330a5f-2a62-4991-87ac-a039d2396a33
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/dynesty-single-core-no-pool
+- repos:
+  - PyAutoFit: feature/dynesty-single-core-no-pool
+- parallel-claim: "howtofit-mode also claims PyAutoFit (README/docs prose, zero diff vs main at 2026-09-15); file sets disjoint from autofit/non_linear/search/nest/dynesty/ + its tests, so this task runs in its own worktree by the human's plan approval on 2026-09-15."
+- prompt: active/dynesty_single_core_path_still_builds_a.md
+- summary: Dynesty number_of_cores=1 builds a forked Pool(1); make it fully serial like Nautilus #1443, add regression test, let the EP single-core test use no_forking.

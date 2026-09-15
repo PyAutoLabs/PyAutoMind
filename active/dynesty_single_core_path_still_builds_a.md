@@ -8,6 +8,8 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Issued: 2026-09-15
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1630
 Consequence: judge
 Witness: a number_of_cores=1 DynestyStatic fit over a use_jax=True analysis completes under PYAUTO_TEST_MODE=1 with fork_context monkeypatched to raise, i.e. without forking.
 Review-minutes: 20
