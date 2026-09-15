@@ -316,7 +316,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/65">issue #65</a> — issued 2026-09-15 — workspace-dev — ⏸ waiting on PyAutoNerves's release</summary>
+<details><summary>📋 <a href="active/tutorials_6_7_blackjax_never_installed.md">HowToFit tutorials 6 and 7 die at the NUTS fit — <code>blackjax</code>…</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/65">issue #65</a> — issued 2026-09-15 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/66">HowToFit#66</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/78">HowToGalaxy#78</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/86">HowToLens#86</a> — ⏸ waiting on PyAutoNerves's release</summary>
 
 ```
 /start_dev active/tutorials_6_7_blackjax_never_installed.md
