@@ -285,6 +285,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/config-priors-drift
 - repos:
+  - PyAutoGalaxy: feature/config-priors-drift
 - parallel-claim: "multi-galaxy-j1011-real-data also claims autolens_workspace (scripts/multi_galaxy/**, .gitignore, dataset/); this task touches only config/, file sets disjoint, so it runs in its own worktree by the human's plan approval on 2026-09-15."
 - parallel-claim: "jax-runtime-and-parity also claims autolens_workspace_test (JAX runtime/parity scripts, zero diff vs main at 2026-09-15); this task touches only config/visualize/plots_search.yaml, file sets disjoint, so it runs in its own worktree by the human's plan approval on 2026-09-15."
 - summary: Packaged PyAutoGalaxy prior yaml drift (typo'd/mis-pathed/orphan keys, NFWTruncatedMCRScatterLudlowSph unresolvable) + walker test; then re-sync autolens_workspace, autogalaxy_workspace, HowToLens, autolens_workspace_test config copies. Library (PyAutoGalaxy) first.
