@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 188 |
+| [Backlog](#backlog) (`draft/`) | 189 |
 
 > **No batch in flight.**
 
@@ -523,7 +523,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**188** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**189** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 52</summary>
@@ -947,7 +947,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 33</summary>
+<summary><b>feature</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautoheart/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> — pyautoheart · medium · safe · high</summary>
 
@@ -1057,6 +1057,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/workspaces/group_subhalo_sensitivity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md">Implement and optimize certified positive solver with structure-aware CPU and JAX dispatch</a> — autoarray · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md
 ```
 
 </details>
@@ -1923,6 +1931,40 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>autoarray — bundle 1</b> — 4 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autoarray/fit_util_masked_division_grad_nan.md
+- draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md
+- draft/feature/autoarray/over_sample_size_via_snr_from.md
+- draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> | small | medium | formalised |
+| <a href="draft/bug/autoarray/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows…</a> | medium | medium | formalised |
+| <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> | small | medium | draft |
+| <a href="draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md">Implement and optimize certified positive solver with structure-aware…</a> | large | normal | formalised |
+
+</details>
+
+<details>
 <summary><b>pixelization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2020,41 +2062,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-<details>
-<summary><b>visualization</b> — 4 task(s) · 6 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'visualization' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/research/autolens/quick_update_plotting_cost.md
-- draft/docs/autolens/plot_rst_missing_exports.md
-- draft/bug/autofit/add_assertion_name_silently_dropped.md
-- draft/bug/autofit/direct_instance_tuples_double_counts_constants.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | autolens | medium | medium | draft |
-| <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> | autolens | medium | normal | draft |
-| <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> | autofit | small | normal | formalised |
-| <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> | autofit | small | normal | formalised |
-
-</details>
-
-_Showing 8 of 32 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 33 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
