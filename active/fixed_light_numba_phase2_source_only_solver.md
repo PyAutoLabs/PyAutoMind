@@ -25,6 +25,8 @@ equivalent solver) at one and eight threads, with every thread knob recorded per
 Review-minutes: 30
 Unattended: never
 Filed: 2026-09-15
+Issued: 2026-09-15
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/265
 
 ## Original request (verbatim)
 
