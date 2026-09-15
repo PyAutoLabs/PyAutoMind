@@ -18,6 +18,7 @@ Review-minutes: 10
 Unattended: ready
 Witness: with only `pip install autofit numba` (or a Colab `setup_colab.setup("howtofit")`), `python3 scripts/chapter_1_introduction/tutorial_6_gradients.py` and `tutorial_7_the_details.py` both run to completion instead of raising `ModuleNotFoundError: No module named 'blackjax'`.
 Filed: 2026-09-15
+Issued: 2026-09-15
 
 ## Symptom
 

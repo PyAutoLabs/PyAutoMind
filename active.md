@@ -1,5 +1,31 @@
 # Active Tasks
 
+## blackjax-reqs-stopgap-revert
+- issue: https://github.com/PyAutoLabs/HowToFit/issues/65
+- issued: 2026-09-15
+- prompt: active/tutorials_6_7_blackjax_never_installed.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/blackjax-reqs-stopgap-revert
+- repos:
+- parallel-claim: |
+    HowToFit, HowToGalaxy and HowToLens are also claimed by `colab-workshop-dep-stopgap`
+    (all three PRs merged 2026-09-15; stale claim awaiting its close-out — this task
+    reverts what that task added) and HowToFit by `howtofit-mode` (README/AGENTS
+    assistant-prompt propagation, 0 own commits, source uncommitted). Deliberate,
+    human-approved override of the conflict guard on 2026-09-15, following the
+    `sed-chain-cpu-route` precedent. File sets are disjoint: this task touches
+    requirements.txt, the Colab badge lines of README.md and the stopgap cells of
+    notebooks/**/*.ipynb + start_here.ipynb (all pure `git revert -m 1` of merged PRs).
+- summary: |
+    Local-install leg of the tutorials 6/7 blackjax prompt (its Colab leg merged as
+    PyAutoNerves#168, unreleased: PyPI autonerves is still 2026.9.15.1) plus, at the
+    human's request now the workshop is over, revert of the Colab stopgap: HowToFit
+    #63 (1b85e12) and #64 (f4bca40), HowToGalaxy #77 (95eb176), HowToLens #85 (5c3c727).
+    Adds blackjax + nautilus-sampler to HowToFit/requirements.txt. One PR per repo.
+    MERGE CONDITION: reverting before autonerves > 2026.9.15.1 is on PyPI re-opens the
+    Colab gap on every notebook; merge once `pip index versions autonerves` shows a
+    newer version, or with the human explicitly accepting the interim gap.
+
 ## colab-workshop-dep-stopgap
 - issue: n/a — workshop stopgap filed directly as PRs; tracked by PyAutoNerves#167
 - issued: 2026-09-15
