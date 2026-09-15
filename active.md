@@ -266,3 +266,11 @@
 - worktree: ~/Code/PyAutoLabs-wt/multi-galaxy-j1011-real-data
 - repos:
   - autolens_workspace: feature/multi-galaxy-j1011-real-data
+
+## jax-runtime-and-parity
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/317
+- issued: 2026-09-15
+- session: claude --resume c74b6b89-11fe-42df-8b16-09bb12dcedb6
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-runtime-and-parity
+- repos:

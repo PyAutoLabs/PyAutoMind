@@ -12,6 +12,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Issued: 2026-09-15
 Filed: 2026-07-06 (backfilled from git)
 
 ## 2026-08-09 — EVERY SCRIPT PATH BELOW IS STALE (they moved, they were not deleted)
