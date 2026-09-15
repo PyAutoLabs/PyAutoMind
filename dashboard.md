@@ -252,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/227">issue #227</a> — issued 2026-09-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/colab_notebook_release_gate.md">Release-time gate that proves the Colab notebooks actually run</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/227">issue #227</a> — issued 2026-09-15 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/228">PyAutoHeart#228</a></summary>
 
 ```
 /start_dev active/colab_notebook_release_gate.md
