@@ -23,39 +23,6 @@
     EXPECT: first release-integrate after merge is RED until the autonerves
     carrying PyAutoNerves#167 is on PyPI - the gate working, not a regression.
 
-## blackjax-reqs-stopgap-revert
-- issue: https://github.com/PyAutoLabs/HowToFit/issues/65
-- issued: 2026-09-15
-- prompt: active/tutorials_6_7_blackjax_never_installed.md
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/blackjax-reqs-stopgap-revert
-- repos:
-  - HowToFit: feature/blackjax-reqs-stopgap-revert
-  - HowToGalaxy: feature/blackjax-reqs-stopgap-revert
-  - HowToLens: feature/blackjax-reqs-stopgap-revert
-- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/66
-- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/78
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/86
-- release-gate: PyAutoNerves
-- parallel-claim: |
-    HowToFit, HowToGalaxy and HowToLens are also claimed by `colab-workshop-dep-stopgap`
-    (all three PRs merged 2026-09-15; stale claim awaiting its close-out — this task
-    reverts what that task added) and HowToFit by `howtofit-mode` (README/AGENTS
-    assistant-prompt propagation, 0 own commits, source uncommitted). Deliberate,
-    human-approved override of the conflict guard on 2026-09-15, following the
-    `sed-chain-cpu-route` precedent. File sets are disjoint: this task touches
-    requirements.txt, the Colab badge lines of README.md and the stopgap cells of
-    notebooks/**/*.ipynb + start_here.ipynb (all pure `git revert -m 1` of merged PRs).
-- summary: |
-    Local-install leg of the tutorials 6/7 blackjax prompt (its Colab leg merged as
-    PyAutoNerves#168, unreleased: PyPI autonerves is still 2026.9.15.1) plus, at the
-    human's request now the workshop is over, revert of the Colab stopgap: HowToFit
-    #63 (1b85e12) and #64 (f4bca40), HowToGalaxy #77 (95eb176), HowToLens #85 (5c3c727).
-    Adds blackjax + nautilus-sampler to HowToFit/requirements.txt. One PR per repo.
-    MERGE CONDITION: reverting before autonerves > 2026.9.15.1 is on PyPI re-opens the
-    Colab gap on every notebook; merge once `pip index versions autonerves` shows a
-    newer version, or with the human explicitly accepting the interim gap.
-
 ## colab-bootstrap-lazy-deps
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/167
 - issued: 2026-09-15
@@ -278,9 +245,12 @@
 - issued: 2026-09-15
 - prompt: active/ep_use_cpu_flag_disables_jax.md
 - session: claude --resume 32df3fc7-e0cc-4fc7-98c7-0f160dca158c
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/ep-use-cpu-keeps-jax
 - repos:
+  - slope_hierarchy_scale: feature/ep-use-cpu-keeps-jax
+- workspace-pr: https://github.com/PyAutoLabs/slope_hierarchy_scale/pull/4
+- note: "Heart STALE at ship (release validation incomplete: no rehearsal for current source); nothing in slope_hierarchy_scale is in the release chain and the repo has no CI, so the PR is merged on the local witness evidence in its body, as PR #1 was. After merge: MAX_STEPS=2 hpc/sync push-submit cpu ep (human's choice on 2026-09-15), record 342410 done/failed and the witness run in the Cortex, /intake the compile-memory bug."
 
 ## multi-galaxy-j1011-real-data
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549

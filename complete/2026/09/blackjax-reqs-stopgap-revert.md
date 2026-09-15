@@ -1,3 +1,34 @@
+## blackjax-reqs-stopgap-revert
+- issue: https://github.com/PyAutoLabs/HowToFit/issues/65
+- completed: 2026-09-15
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/66
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/78
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/86
+- release-gate: PyAutoNerves
+- summary: |
+    Local-install leg of the "tutorials 6/7 blackjax never installed" prompt plus the
+    revert of the 2026-09-15 workshop Colab stopgap. HowToFit/requirements.txt now
+    carries blackjax>=1.6.2 and nautilus-sampler==1.0.5 (PyAutoFit's `optional`
+    specifiers; the first unpinned cut resolved nautilus 1.0.6). Stopgap reverted with
+    plain `git revert -m 1` commits: HowToFit #63 (1b85e12) and #64 (f4bca40),
+    HowToGalaxy #77 (95eb176), HowToLens #85 (5c3c727); notebooks byte-identical to
+    tag 2026.9.15.1, HowToFit README badges back on release-tag pinning (the Hands
+    bump_colab_urls.sh re-pins only version-shaped tags, so #64's blob/main links
+    would never have been updated). The prompt's Colab leg (blackjax + nautilus pin
+    in _SHARED_EXTRAS) had already merged as PyAutoNerves#168 under
+    colab-bootstrap-lazy-deps and was not redone.
+    MERGED BY HUMAN DECISION with PyPI autonerves still at 2026.9.15.1: Colab
+    readers hit the missing-dependency error until the next autonerves release
+    publishes PyAutoNerves#168 — that release is the outstanding obligation
+    (release-gate above). Heart read STALE (no rehearsal for current source) at ship.
+    Gotchas: the intake agent ignores a declared Target: and resolves bare repo
+    mentions as claims (re-homed the follow-up by hand); worktree guard conflict on
+    HowToFit resolved by a human-approved parallel-claim override (disjoint files).
+    Follow-up filed: draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
+    (smoke at PYAUTO_TEST_MODE=2 cannot see a missing sampler backend).
+
+## Original prompt
+
 # HowToFit tutorials 6 and 7 die at the NUTS fit — `blackjax` is on no install route
 
 Type: bug
