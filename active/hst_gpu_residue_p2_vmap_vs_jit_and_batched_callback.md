@@ -14,6 +14,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised — PLAN ONLY, filed 2026-09-16 on the human's ask; no issue, no worktree, no code until /start_dev
+Scoped: 2026-09-16 start_dev (Fable) issues STEP 1 ONLY (autolens_profiling harness + A100 legs + note + policy); step 2 (PyAutoArray batch-aware callback) is filed as phase 2b via /intake only if step 1's numbers say the callback matters
 Epic: hst-gpu-non-solver-residue
 Phase: 2
 Consequence: judge
@@ -28,6 +29,7 @@ dispatch-overhead prediction.
 Review-minutes: 25
 Unattended: needs-slicing
 Filed: 2026-09-16
+Issued: 2026-09-16
 
 ## Original request (verbatim)
 

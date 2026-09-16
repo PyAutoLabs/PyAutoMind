@@ -261,3 +261,15 @@
 - repos:
 - parallel-claim: "euclid_strong_lens_modeling_pipeline is also claimed by sed-chain-cpu-route (PR #70), sersic-variants (PR #75), sersic-variants-analysis and simulator-from-result-linear; overlaps are text-only (hpc/sync 6 comment/usage lines in #70; hpc/README.md route table in #70 and #75; one --variant paragraph in catalogue/README.md in #75). Waived on plan approval 2026-09-16; fresh parallel worktree off origin/main when started."
 - note: "Planned and parked by the human on 2026-09-16 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_workspace catalogue-mass-maps-fits. Key reframing: this is a collect, not a compute — every finished initial_lens_model search already writes image/tracer.fits (MASK, CONVERGENCE, POTENTIAL, DEFLECTIONS_Y, DEFLECTIONS_X on the zoomed mask grid +1 px, 102x102 for sep1) into its result zip, and al.agg.fits_tracer + af.AggregateFITS.extract_fits read it out read-only, exactly as catalogue/scripts/deblending.py does for model.fits. New producer catalogue/scripts/lens_mass_maps.py (vis_pix only, three files), new bundle stage, hpc/sync sbatch-arg forwarding + pull [dir...] filter, PROJECT_PATH from submit location. Witness: sha256 of all 18 sep1 zips identical before/after a local run through a scratch symlink; 9 lenses x 3 files, Tile102007299 skipped. Science checkout /mnt/c/Users/Jammy/Science/euclid_dr1 is not a Cortex projects.yaml row (flagged, not fixed here)."
+
+## hst-gpu-residue-p2
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/273
+- issued: 2026-09-16
+- prompt: active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md
+- session: claude --resume 51243072-d1a4-437b-b5a6-edf3bff12db4
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hst-gpu-residue-p2
+- repos:
+  - autolens_profiling: feature/hst-gpu-residue-p2
+- parallel-claim: "autolens_profiling is also claimed by fixed-light-numba-levers (#267, pr-open, awaiting /prm): its files are fixed_light_numba*, fixed_light_numpy_solvers.py, the lever submits/results and fixed_lens_light_levers_2026_09.md; this task touches fixed_light_trace.py, a new host_callback_probe.py, library_solver_injection.py, a new vmap submit + results + note — disjoint, own worktree beside it exactly as phase 1 (#268) did."
+- note: "Phase 2 of hst-gpu-non-solver-residue, STEP 1 ONLY (matched vmap-vs-jit A100 experiment + policy; PyAutoArray batch-aware callback deferred to phase 2b via /intake if the numbers warrant). Fable session plans, Opus executes. A100 submit -> wait -> harvest is a human resume point. Heart RED (install verify testpypi F; release integrate) at start; PR-open needs the human's ack. Phase-1 worktree ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1 still awaits the human's cleanup (3 untracked .err -> worktree_remove -> branch -d)."
