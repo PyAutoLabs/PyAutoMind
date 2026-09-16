@@ -244,7 +244,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/hst_gpu_residue_p1_trace_decomposition.md">HST GPU residue phase 1 — a trace-based, one-process decomposition…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/268">issue #268</a> — issued 2026-09-16 — workspace-dev</summary>
+<details><summary>📋 <a href="active/hst_gpu_residue_p1_trace_decomposition.md">HST GPU residue phase 1 — a trace-based, one-process decomposition…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/268">issue #268</a> — issued 2026-09-16 — awaiting-merge</summary>
 
 ```
 /start_dev active/hst_gpu_residue_p1_trace_decomposition.md
