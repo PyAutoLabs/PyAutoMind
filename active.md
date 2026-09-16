@@ -221,9 +221,9 @@
 - repos:
   - PyAutoArray: feature/fixed-light-numba-levers
   - autolens_profiling: feature/fixed-light-numba-levers
-- note: "STARTED 2026-09-16 via /start_dev (plan approved, worktree created by start_library). Phase 3 of the fixed-lens-light-numba-cpu epic; the NNLS round is CLOSED by phase 2 (#265, PR #266). Takes the 47 % non-solver residue of the 404.6 ms call: regularization_matrix 111.5 ms, log-det F+lambda*H 40.2 ms, log-det H 37.5 ms. One lever at a time, 1 -> 2 -> 3, EACH paired with an A100 row; lever 1 on feature/fixed-light-numba-levers, levers 2/3 stack as -l2/-l3 in the same worktree. CPU legs on RAL gpu partition CPUs-only vs a private merge-base PyAutoArray checkout; A100 submit->harvest is a human resume point. Sized too-large by intake, large kept per the prompt."
+- note: "LEVER 1 PR-OPEN 2026-09-16: PyAutoArray PR #553 (pending-release, bae9296e) + autolens_profiling PR #269 (7c7968c4, c899326e — note results/notes/fixed_lens_light_levers_2026_09.md). Measured RAL 343345: route b memo-ON 413.3 -> 299.7 ms (1.38x), H 110.6 -> 5.9 ms, 4/4 gates, witness bit-identical; 343346 A100 identity, #536 compaction constants inert at K=4. Heart RED (install verify testpypi F; release validation integrate) acknowledged by the human for PR-open only; merge via /prm. NEXT: lever 2 (log det H from sparsity) on feature/fixed-light-numba-levers-l2 stacked on lever 1, then lever 3 (shared Cholesky; folds draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md, numpy/numba only). Phase 3 of fixed-lens-light-numba-cpu; sized too-large by intake, large kept per the prompt."
 - summary: |
-    Lever 1: jit the split-regularization assembly on the
+    Lever 1 (DONE, PR-open): jit the split-regularization assembly on the
     numpy/numba path, bit-for-bit accumulation order, Python bodies retained as
     _reference (the JAX tests use them as ground truth), fixing three recorded
     defects (in-place mutation of the interpolators' cached_property tables, the
