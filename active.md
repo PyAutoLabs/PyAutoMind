@@ -216,7 +216,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/739
 - issued: 2026-09-16
 - session: claude --resume aca5ba12-9dd3-4173-93ae-b0577e4b1617
-- status: library-shipped, awaiting-merge
+- status: library-merged, workspace-awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/740
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/551
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/82
@@ -230,6 +230,7 @@
 - pushed: PyAutoLens feature/coolest-observation-grid @ 0ee1146749e001788c90cf042733db19d79afb4e; autolens_workspace @ 52093ce31cb123ef4e7b56f7a9cd941a72864897; euclid_strong_lens_modeling_pipeline @ 60133f8e5f736ab74b6b973c831d815976b36ec5
 - parked: "2026-09-16 at the ship gate, all three legs implemented, verified and pushed (PyAutoLens test_autolens 653 passed; interop 13; pipeline fast 131 / slow 10 / smoke 9/9; bundle collects coolest.json + coolest_sersic.json). NO PRs opened: pyauto-heart readiness RED with reasons verbatim 'install verification FAILED (testpypi; checks F)' and 'release validation FAILED (stage integrate)' (a third, 'PyAutoArray: 4 commit(s) behind origin', was local staleness and cleared). Neither reason is touched by this diff, so PR-open needs a plain human override or Heart green. Unblock = /ship_library (PyAutoLens first, PR body drafted on issue #739), then /ship_workspace for autolens_workspace and euclid_strong_lens_modeling_pipeline behind the library-first gate. Before the DR1 run: pip install coolest in the RAL venv. After the pipeline merge: euclid_dr1 clone leg (merge origin/main, submit_reload_coolest, ledger page)."
 - heart-override: "2026-09-16 human-authorised PR-open under Heart RED (plain override, not the corrective-PR exception); reasons verbatim: 'install verification FAILED (testpypi; checks F)', 'release validation FAILED (stage integrate)'. Does not extend to merge of any other task."
+- next: "2026-09-16 23:50 local: PyAutoLens#740 MERGED 223132c. euclid pipeline #82 (unit/slow/smoke 3.12+3.13 green, CLEAN) and autolens_workspace#551 (smoke/navigator/size-guard green, CLEAN) await the HUMAN merge — agent merge blocked by the permission classifier. Then /prm close-out. RAL: coolest install in progress this session; run HPCPullPyAuto so RAL PyAutoLens carries to_coolest(dataset=, on_unsupported=). euclid_dr1 clone at 9803a8f (pipeline branch merged, submit_reload_coolest + ledger wiki/project/2026-09-16-coolest-json-reload-pass.md, flag still false, not pushed); reload pass on run day per the ledger recipe."
 
 ## catalogue-mass-maps-fits
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/80
