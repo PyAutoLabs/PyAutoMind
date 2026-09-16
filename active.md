@@ -238,9 +238,11 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-levers
 - repos:
-- note: "PLAN ONLY, NOT STARTED. Filed on the human's ask on 2026-09-16 as a deferred start — no worktree, no branch, no repo claim, no code change. The full plan is on the issue; resume with /start_dev active/fixed_light_numba_s3_regularization_logdet_levers.md (PyAutoArray library first, witnessed from autolens_profiling). Phase 3 of the fixed-lens-light-numba-cpu epic: the NNLS round is CLOSED by phase 2 (#265, PR #266 — 2.03x, the memo's 1.134x already beats the factor-reuse kernel's 1.112x, so nnls_seed_factor_reuse was deliberately not filed). This phase takes the 47 % non-solver residue of the 404.6 ms call: regularization_matrix 111.5 ms (two pure-Python loops in autoarray regularization_util, zero numba in the file; PyAutoArray#536 optimised the JAX branch only), log-det F+lambda*H 40.2 ms, log-det H 37.5 ms. One lever at a time, 1 -> 2 -> 3, EACH paired with an A100 row — if it must be split, split along the levers, never between a lever and its A100 row. Intake sized it too-large (score 15); large kept per the prompt's own instruction, recorded as a Sizing-note: header."
+  - PyAutoArray: feature/fixed-light-numba-levers
+  - autolens_profiling: feature/fixed-light-numba-levers
+- note: "STARTED 2026-09-16 via /start_dev (plan approved, worktree created by start_library). Phase 3 of the fixed-lens-light-numba-cpu epic; the NNLS round is CLOSED by phase 2 (#265, PR #266). Takes the 47 % non-solver residue of the 404.6 ms call: regularization_matrix 111.5 ms, log-det F+lambda*H 40.2 ms, log-det H 37.5 ms. One lever at a time, 1 -> 2 -> 3, EACH paired with an A100 row; lever 1 on feature/fixed-light-numba-levers, levers 2/3 stack as -l2/-l3 in the same worktree. CPU legs on RAL gpu partition CPUs-only vs a private merge-base PyAutoArray checkout; A100 submit->harvest is a human resume point. Sized too-large by intake, large kept per the prompt."
 - summary: |
-    Deferred/plan-only. Lever 1: jit the split-regularization assembly on the
+    Lever 1: jit the split-regularization assembly on the
     numpy/numba path, bit-for-bit accumulation order, Python bodies retained as
     _reference (the JAX tests use them as ground truth), fixing three recorded
     defects (in-place mutation of the interpolators' cached_property tables, the
