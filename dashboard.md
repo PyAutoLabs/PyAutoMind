@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 194 |
+| [Backlog](#backlog) (`draft/`) | 195 |
 
 > **No batch in flight.**
 
@@ -534,7 +534,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**194** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**195** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 50</summary>
@@ -2399,7 +2399,7 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 </details>
 
 <details>
-<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 5 queued prompt(s), in order</summary>
+<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: `draft/feature/euclid/euclid_dr1_prep_epic.md` — science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex</summary>
 
@@ -2413,6 +2413,14 @@ Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its cano
 
 ```
 /start_dev draft/feature/euclid/catalogue_extension_coolest_mass_fits.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/euclid/drawer_pix_initializer_exception_flake.md"><code>test_latent_run_level.py</code> slow suite flakes 1-in-7: the <code>drawer_pix</code> Drawer raises <code>InitializerException</code> because all…</a> — euclid · small · supervised · medium</summary>
+
+```
+/start_dev draft/bug/euclid/drawer_pix_initializer_exception_flake.md
 ```
 
 </details>
@@ -2599,7 +2607,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-129 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+130 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2644,11 +2652,11 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/pyautoheart/howto_real_settings_nightly.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/feature/workspaces/model_figures_6b2_slam_stages.md`
-- _… and 89 more_
+- _… and 90 more_
 
 </details>
 
-33 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+34 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2671,6 +2679,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
 - `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
+- `draft/bug/euclid/drawer_pix_initializer_exception_flake.md — unknown theme keyword(s): euclid, ci, source-reconstruction`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md — unknown theme keyword(s): tutorials`
