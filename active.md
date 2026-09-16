@@ -171,10 +171,14 @@
 - issued: 2026-09-15
 - session: claude --resume b156f901-a79a-43e2-90c1-1993717d7e94
 - prompt: active/config_priors_drift_stale_classes_and_paths.md
-- status: workspace-dev
+- status: awaiting-merge (library PR #619 first, then 4 workspace PRs)
 - worktree: ~/Code/PyAutoLabs-wt/config-priors-drift
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/550
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/244
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/87
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/319
 - repos:
   - PyAutoGalaxy: feature/config-priors-drift
   - autolens_workspace: feature/config-priors-drift
