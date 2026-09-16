@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 190 |
+| [Backlog](#backlog) (`draft/`) | 192 |
 
 > **No batch in flight.**
 
@@ -118,7 +118,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 104
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 106
 
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
@@ -208,10 +208,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> — pyautohands · small · safe · medium</summary>
+<details><summary>📋 <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides declared Target…</a> — pyautobrain · small · safe · medium</summary>
 
 ```
-/start_dev draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
+/start_dev draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
 ```
 
 </details>
@@ -534,10 +534,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**190** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**192** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 47</summary>
+<summary><b>bug</b> — 49</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the docstring's…</a> — autoarray · medium · supervised · high</summary>
 
@@ -623,6 +623,22 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides declared Target…</a> — pyautobrain · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping output/</a> — pyautoheart · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
 ```
 
 </details>
