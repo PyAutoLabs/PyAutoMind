@@ -236,7 +236,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_numba_s3_regularization_logdet_levers.md">Fixed-light follow-up round 3 — the non-solver levers on numba CPU…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/267">issue #267</a> — issued 2026-09-16 — library-dev</summary>
+<details><summary>📋 <a href="active/fixed_light_numba_s3_regularization_logdet_levers.md">Fixed-light follow-up round 3 — the non-solver levers on numba CPU…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/267">issue #267</a> — issued 2026-09-16 — pr-open</summary>
 
 ```
 /start_dev active/fixed_light_numba_s3_regularization_logdet_levers.md
