@@ -47,6 +47,8 @@ import datetime as dt
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -126,12 +128,69 @@ def announcement_band(now: dt.datetime) -> tuple:
     )
 
 
+API_URL = "https://export.arxiv.org/api/query"
+USER_AGENT = "PyAutoLabs-papers-digest/1.0"
+
+# Back-off ladder for a throttled or flaky API answer: ~5.5 min in total, well
+# inside the job's budget and long enough to outlast arXiv's per-source
+# rate-limit window (it asks for 3 s between requests; a 429 from a shared
+# egress can take minutes to clear).
+RETRY_DELAYS = (5, 15, 45, 90, 180)
+# 429 is throttling; 5xx is arXiv's side. Any other 4xx is a bad request and
+# retrying it would only mask the bug.
+RETRY_STATUSES = {429, 500, 502, 503, 504}
+
+# Transient failures that a retry may cure. Everything else raises at once.
+TRANSIENT = (urllib.error.URLError, TimeoutError, ConnectionError)
+
+
+def _get(params: dict, *, delays: tuple = None) -> bytes:
+    """One GET against the arXiv API, retried on throttling and transient errors.
+
+    GitHub-hosted runners share egress address ranges, so arXiv can answer the
+    very first request of a run with HTTP 429 — both digests died that way on
+    2026-09-14 and 2026-09-15, before fetching anything. So: back off and try
+    again, honouring `Retry-After` when arXiv sends one (capped at the ladder's
+    longest step, so a hostile header cannot stall the job). The last error is
+    re-raised once the ladder is spent; callers decide whether that is fatal.
+    """
+    if delays is None:
+        delays = RETRY_DELAYS
+    url = f"{API_URL}?{urllib.parse.urlencode(params)}"
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    attempts = len(delays) + 1
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as e:
+            if e.code not in RETRY_STATUSES or attempt == attempts:
+                raise
+            wait = delays[attempt - 1]
+            retry_after = (e.headers or {}).get("Retry-After")
+            if retry_after and str(retry_after).strip().isdigit():
+                wait = max(wait, min(int(retry_after), max(delays)))
+            reason = f"HTTP {e.code}"
+        except TRANSIENT as e:
+            if attempt == attempts:
+                raise
+            wait = delays[attempt - 1]
+            reason = f"{type(e).__name__}: {e}"
+        print(
+            f"  arXiv API {reason} (attempt {attempt}/{attempts}) — "
+            f"retrying in {wait}s",
+            file=sys.stderr,
+        )
+        time.sleep(wait)
+    raise RuntimeError("unreachable")  # pragma: no cover
+
+
 def fetch(query: str, max_results: int, start: int = 0) -> bytes:
     """One page of the API. `start` pages a query too broad for one request —
     the strong-lensing digest never needs it (a band is ~1.5 papers), the
     interests digest beside it always does (a band is a whole day of astro-ph).
     """
-    params = urllib.parse.urlencode(
+    return _get(
         {
             "search_query": query,
             "sortBy": "submittedDate",
@@ -140,12 +199,6 @@ def fetch(query: str, max_results: int, start: int = 0) -> bytes:
             "max_results": max_results,
         }
     )
-    url = f"https://export.arxiv.org/api/query?{params}"
-    req = urllib.request.Request(
-        url, headers={"User-Agent": "PyAutoLabs-papers-digest/1.0"}
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        return resp.read()
 
 
 def parse(raw: bytes, band_start: dt.datetime, band_end: dt.datetime) -> list:
@@ -274,20 +327,30 @@ def _livecheck() -> int:
     was published, unlike a look-back over recent results. Runs in the workflow
     just before the fetch, which needs the same API anyway, so it adds no new
     failure mode beyond a genuine recall regression.
+
+    That contract is why a network failure here is a WARNING, not a failure:
+    only a paper the query no longer matches may fail the guard. A 429 that
+    outlasts the retry ladder says nothing about recall, and failing on it
+    took the whole digest down (Slack heartbeat, inbox stamp and all) on
+    2026-09-14/15. The fetch that follows asks the same API and is the step
+    that gets to fail loudly if arXiv is really unreachable.
     """
-    params = urllib.parse.urlencode(
-        {
-            "search_query": QUERY,
-            "id_list": ",".join(KNOWN_MATCHES),
-            "max_results": len(KNOWN_MATCHES) * 2,
-        }
-    )
-    req = urllib.request.Request(
-        f"https://export.arxiv.org/api/query?{params}",
-        headers={"User-Agent": "PyAutoLabs-papers-digest/1.0"},
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        root = ET.fromstring(resp.read())
+    params = {
+        "search_query": QUERY,
+        "id_list": ",".join(KNOWN_MATCHES),
+        "max_results": len(KNOWN_MATCHES) * 2,
+    }
+    try:
+        root = ET.fromstring(_get(params))
+    except (urllib.error.HTTPError,) + TRANSIENT as e:
+        print(
+            f"::warning::livecheck skipped — arXiv API unreachable after "
+            f"retries ({e}). This is not a recall regression; the fetch step "
+            f"decides whether the run fails.",
+            file=sys.stderr,
+        )
+        print("livecheck: SKIPPED (network)", file=sys.stderr)
+        return 0
     returned = {
         (entry.findtext(f"{ATOM}id") or "").rsplit("/", 1)[-1].split("v")[0]
         for entry in root.findall(f"{ATOM}entry")
