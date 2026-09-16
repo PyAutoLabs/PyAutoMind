@@ -11,12 +11,14 @@ Difficulty: easy
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-09-16
 Consequence: judge
 Review-minutes: 15
 Unattended: ready
 Related: draft/feature/euclid/catalogue_extension_coolest_mass_fits.md (epic euclid-dr1-prep phase 9 — this task delivers its mass-model FITS leg and its retroactive-update verdict; the COOLEST CSV and the magnification plane stay there)
 Project: euclid_dr1 (science checkout /mnt/c/Users/Jammy/Science/euclid_dr1, ledger wiki/project/state.md)
 Filed: 2026-09-16
+Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/80
 
 User request (verbatim):
 
@@ -67,3 +69,7 @@ of any lenses and not require us to worry about updating lens modeling results. 
 - `bash scripts/build_inspection_bundle.sh` on the local tree is a full pass with the new stage.
 - `hpc/sync pull inspect` (dry run via `status`) transfers only `inspect/`.
 - Size numbers written down: per-lens bytes for the three files and the 15 000-lens extrapolation.
+
+## Plan (2026-09-16) — APPROVED, DEFERRED, NOT STARTED
+
+The human approved the plan on 2026-09-16 ("I approve but dont start now"). Full two-level plan is on the issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/80. No worktree, no branch, no source edits, nothing on RAL. Resume with `/start_workspace catalogue-mass-maps-fits`.
