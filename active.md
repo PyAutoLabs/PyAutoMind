@@ -212,26 +212,6 @@
 - parallel-claim: "autogalaxy_workspace_test is claimed by jax-runtime-and-parity (autolens_workspace_test#317, smoke_tests.txt only, zero diff vs main on 2026-09-15); this task's workspace leg is one tolerance edit in scripts/imaging/jax_likelihood/rectangular.py and is added via worktree_add_repo only after that claim clears. PyAutoArray is unclaimed."
 - note: "Planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library mixed-precision-inversion-gap (PyAutoArray only, library first). Before any measurement move autogalaxy_workspace_test/dataset/imaging/jax_test aside: the on-disk copy is the stale pre-#117 180x180 dataset and should_simulate does not detect the resolution change. Key reframing: the asserted quantity is log_likelihood so the gap is pure delta-chi-squared; the NumPy reference is not fp64 (mapper_util honours use_mixed_precision on numpy); the fp32 curvature branch is inert but rounds 1/sigma inconsistently with the fp64 data vector; JAX (jaxnnls IPM) and NumPy (fnnls) run different NNLS algorithms."
 
-## coolest-observation-grid
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/739
-- issued: 2026-09-16
-- session: claude --resume aca5ba12-9dd3-4173-93ae-b0577e4b1617
-- status: library-merged, workspace-awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/740
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/551
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/82
-- worktree: ~/Code/PyAutoLabs-wt/coolest-observation-grid
-- repos:
-  - PyAutoLens: feature/coolest-observation-grid
-  - autolens_workspace: feature/coolest-observation-grid
-  - euclid_strong_lens_modeling_pipeline: feature/coolest-observation-grid
-- parallel-claim: "Deliberate parallel worktree, file sets checked disjoint on 2026-09-16: autolens_workspace is also claimed by multi-galaxy-j1011-real-data (scripts/multi_galaxy/* only; this task edits scripts/guides/coolest_interop.py). euclid_strong_lens_modeling_pipeline is also claimed by sersic-variants (#75: util.py hunks at EuclidDataset/load_vis_dataset/parse_fit_args lines 1084+, catalogue/README.md line 130; this task edits util.py save_results ~line 708 + a new helper, catalogue/README.md bundle table), sed-chain-cpu-route (#70: hpc/, scripts/sersic_lens_model.py), sersic-variants-analysis (clean worktree) and simulator-from-result-linear (scripts/simulator.py, its tests). Library-first: PyAutoLens#739 PR merges before the two workspace PRs."
-- note: "Fable architect session; user-confirmed decision: unsupported COOLEST components (MGE Basis, pixelized source) are skipped and recorded under meta.skipped_profiles, not converted; follow-up prompt draft/feature/autolens/coolest_pixel_grid_export.md. Step 4 (euclid_dr1 science clone at /mnt/c/Users/Jammy/Science/euclid_dr1, no Cortex row) runs only after the pipeline PR merges; RAL reload leg needs pip install coolest in /mnt/ral/jnightin/PyAuto first."
-- pushed: PyAutoLens feature/coolest-observation-grid @ 0ee1146749e001788c90cf042733db19d79afb4e; autolens_workspace @ 52093ce31cb123ef4e7b56f7a9cd941a72864897; euclid_strong_lens_modeling_pipeline @ 60133f8e5f736ab74b6b973c831d815976b36ec5
-- parked: "2026-09-16 at the ship gate, all three legs implemented, verified and pushed (PyAutoLens test_autolens 653 passed; interop 13; pipeline fast 131 / slow 10 / smoke 9/9; bundle collects coolest.json + coolest_sersic.json). NO PRs opened: pyauto-heart readiness RED with reasons verbatim 'install verification FAILED (testpypi; checks F)' and 'release validation FAILED (stage integrate)' (a third, 'PyAutoArray: 4 commit(s) behind origin', was local staleness and cleared). Neither reason is touched by this diff, so PR-open needs a plain human override or Heart green. Unblock = /ship_library (PyAutoLens first, PR body drafted on issue #739), then /ship_workspace for autolens_workspace and euclid_strong_lens_modeling_pipeline behind the library-first gate. Before the DR1 run: pip install coolest in the RAL venv. After the pipeline merge: euclid_dr1 clone leg (merge origin/main, submit_reload_coolest, ledger page)."
-- heart-override: "2026-09-16 human-authorised PR-open under Heart RED (plain override, not the corrective-PR exception); reasons verbatim: 'install verification FAILED (testpypi; checks F)', 'release validation FAILED (stage integrate)'. Does not extend to merge of any other task."
-- next: "2026-09-17 00:10 local: HUMAN merges euclid pipeline #82 and autolens_workspace#551 (both all-legs green + CLEAN; agent merge blocked by the permission classifier), then /prm close-out. Everything else DONE: PyAutoLens#740 MERGED 223132c; RAL venv has coolest 0.1.11 and PyAutoLens main 223132c (HPCPullPyAuto run); euclid_dr1 reload pass RAN (SLURM 343367, 9/9 COMPLETED, coolest.json in 18/18 zips and 9/9 bundle folders, flag back to false, ledger 0cc2004 local only, backup output.prezip.bak.2026-09-16b on RAL for the human to delete). After #82 merges: euclid_dr1 clone git merge origin/main (no-op for these commits) and hpc/sync push so the RAL project code is main."
-
 ## hst-gpu-residue-p2
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/273
 - issued: 2026-09-16
