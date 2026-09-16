@@ -17,6 +17,7 @@ numpy/numba path, every log-evidence is unchanged to 1e-12 relative, and peak me
 rise by more than one (n,n) array.
 Review-minutes: 20
 Filed: 2026-09-14
+Folded-into: autolens_profiling#267
 
 `AbstractInversion.curvature_reg_matrix`
 (`autoarray/inversion/inversion/abstract.py:358-370`) is a plain `@property`. Its body is
@@ -91,6 +92,28 @@ property, so if this prompt lands a cache, that test fails loudly and the decomp
 updated deliberately rather than shifting underneath a published number. **Coordinate with
 autolens_profiling#263 when this ships** — the failing assertion is the intended handshake, not
 a regression.
+
+## Fold-in scope (2026-09-16 — lever 3 of autolens_profiling#267)
+
+Folded into #267 lever 3 (one shared Cholesky of `F + lambda*H`) on the human's ask; not issued
+separately. Scope as set there:
+
+1. **Determine** whether the docstring hazard on `AbstractInversion.curvature_reg_matrix`
+   (`abstract.py:358-371`) still exists. `git` shows the in-place `curvature_matrix +=` form was
+   removed around `0766edd4` (2025-06-26); the body is now a plain out-of-place `_xp.add`.
+2. **Fix or cache on the numpy/numba path only**, measured with the phase-1 `call_accounting`
+   harness, and update the `n_calls >= 2` handshake test
+   (`autolens_profiling/scripts/misc/test/test_fixed_light_numba.py:546`) deliberately.
+3. **Fix the stale docstring regardless** of which option lands.
+
+**Do not touch the JAX branch.** The GPU session (epic `hst-gpu-non-solver-residue`, phase 1) is
+producing an optimized-HLO census that answers whether XLA already collapses the duplicate adds
+under the production jit, and will post that verdict on #267.
+
+Correction to the count above: this draft counted 3+ reaches per evaluation; on the default
+(edge-zeroed) path it is **2** — `:613` inside `reconstruction` and `:894 -> :388 / :397` via
+`curvature_reg_matrix_reduced`. `:647` / `:655` are the non-edge-zeroed branches and `:1026` is a
+diagnostic path.
 
 ## Out of scope
 
