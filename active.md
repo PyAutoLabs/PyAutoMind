@@ -260,3 +260,22 @@
     /mnt/ral/jnightin/PyAuto install. A100 leg is fp64, budget 7 on Delaunay, PDIP
     fallback, positivity never dropped. Pins: log evidence <= 1e-9 relative,
     regularization matrix bit-identical, log_likelihood NOT comparable across legs.
+
+## hst-gpu-residue-p1
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/268
+- issued: 2026-09-16
+- prompt: active/hst_gpu_residue_p1_trace_decomposition.md
+- session: claude --resume a3118771-e642-4ff4-aa16-f94268bbe1f6
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1
+- repos:
+  - autolens_profiling: feature/hst-gpu-residue-p1
+- parallel-claim: "autolens_profiling is also claimed by fixed-light-numba-levers (#267, worktree ~/Code/PyAutoLabs-wt/fixed-light-numba-levers, branch feature/fixed-light-numba-levers). Disjoint file sets: #267 edits fixed_light_numba.py / call_accounting.py / hpc/batch_cpu and PyAutoArray; this task adds new files only (scripts/misc/likelihood_breakdown/xla_attribution.py, scripts/imaging/likelihood_breakdown/fixed_light_trace.py, its test, one hpc/batch_gpu submit, results/notes/hst_gpu_residue_phase1_2026_09.md, fixed_light_trace_* JSON/PNG). Shared surface = regenerated READMEs; whoever ships second rebases and re-runs build_readme.py. Own worktree chosen per the 2026-08-26 precedent."
+- summary: |
+    Epic hst-gpu-non-solver-residue phase 1 — GPU only (numba CPU is #267). Trace the
+    production jax.jit of the certified Delaunay S3 call (HST N=1500, budget 7, fp64) with
+    jax.profiler and join kernels to library source via optimized-HLO metadata; ~20 stage rows
+    + mixed-fusion + device-idle sum to the wall time within 5 %. A100 + RTX 2060, border
+    relocator on (cell) and off (production). HLO census answers the curvature_reg_matrix
+    draft for JAX (verdict posted to #267) and the doubled operated_mapping_matrix_list PSF
+    convolution. Deliverable: note ranking the levers for phase 2. No PyAutoArray edit.
