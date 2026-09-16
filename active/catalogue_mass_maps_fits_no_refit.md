@@ -75,3 +75,5 @@ of any lenses and not require us to worry about updating lens modeling results. 
 The human approved the plan on 2026-09-16 ("I approve but dont start now"). Full two-level plan is on the issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/80. No worktree, no branch, no source edits, nothing on RAL. Resume with `/start_workspace catalogue-mass-maps-fits`.
 
 Started 2026-09-16 via `/start_workspace catalogue-mass-maps-fits`: worktree `~/Code/PyAutoLabs-wt/catalogue-mass-maps-fits`, branch `feature/catalogue-mass-maps-fits`.
+
+Shipped 2026-09-16: PR https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/81 (3a200ee), awaiting merge via /prm.
