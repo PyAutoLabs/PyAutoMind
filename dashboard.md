@@ -220,7 +220,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by PyAutoGalaxy…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/618">issue #618</a> — issued 2026-09-15 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619">PyAutoGalaxy#619</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by PyAutoGalaxy…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/618">issue #618</a> — issued 2026-09-15 — awaiting-merge (library PR #619 first, then 4 workspace PRs) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619">PyAutoGalaxy#619</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/550">autolens_workspace#550</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/244">autogalaxy_workspace#244</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/87">HowToLens#87</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/319">autolens_workspace_test#319</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 /start_dev active/config_priors_drift_stale_classes_and_paths.md
