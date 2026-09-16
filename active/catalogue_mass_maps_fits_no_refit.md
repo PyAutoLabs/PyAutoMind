@@ -77,3 +77,5 @@ The human approved the plan on 2026-09-16 ("I approve but dont start now"). Full
 Started 2026-09-16 via `/start_workspace catalogue-mass-maps-fits`: worktree `~/Code/PyAutoLabs-wt/catalogue-mass-maps-fits`, branch `feature/catalogue-mass-maps-fits`.
 
 Shipped 2026-09-16: PR https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/81 (3a200ee), awaiting merge via /prm.
+
+PyAutoFit fix shipped 2026-09-16: https://github.com/PyAutoLabs/PyAutoFit/pull/1633; pipeline follow-up 13876cb on PR #81; library-first merge.
