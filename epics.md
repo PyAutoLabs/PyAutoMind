@@ -82,7 +82,7 @@ epic, never picked standalone.
 ## fixed-lens-light-numba-cpu
 - title: Fixed lens light on the numba CPU path — the whole programme again, off the GPU
 - ledger: draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md
-- notes: successor to `fixed-lens-light-profiling` (COMPLETE 2026-09-14), filed the same day. Six phases mirroring that epic, worked strictly 0 → 1 → 2 → 3 → 4 → 5 — each phase's grid is chosen from the previous phase's answer; issue ONE at a time, never bulk-issued, and file each phase's own prompt when the campaign reaches it. The open question is real, not a port: phase 2 of the GPU epic found the numpy certified active set does NOT beat the library's own `fnnls`, and both run 1.9-3.6x slower at 8 BLAS threads than at 1 — and the numba production path was never measured at all. Every leg must record its thread settings (`NPROC`, BLAS, numba) and no comparison may cross them silently. Out of scope throughout, as in the GPU epic: JWST and the sparse operator (blocked on `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`). A Fable / Astra campaign.
+- notes: successor to `fixed-lens-light-profiling` (COMPLETE 2026-09-14), filed the same day. Six phases mirroring that epic, worked strictly 1 → 2 → 3 → 4 → 5 → 6 — each phase's grid is chosen from the previous phase's answer; issue ONE at a time, never bulk-issued, and file each phase's own prompt when the campaign reaches it. The open question is real, not a port: phase 2 of the GPU epic found the numpy certified active set does NOT beat the library's own `fnnls`, and both run 1.9-3.6x slower at 8 BLAS threads than at 1 — and the numba production path was never measured at all. Every leg must record its thread settings (`NPROC`, BLAS, numba) and no comparison may cross them silently. Out of scope throughout, as in the GPU epic: JWST and the sparse operator (blocked on `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`). A Fable / Astra campaign.
   Phase 1 COMPLETE 2026-09-14 (#263, PR #264 — harness shipped, timing legs carried by phase 2).
   Phase 2 COMPLETE 2026-09-16 (#265, PR #266): fixed lens light measures **2.03x** on the
   production numba CPU path (RAL job 343311, HST Delaunay N=1500, 1 thread, 932 -> 459 ms;
@@ -90,8 +90,15 @@ epic, never picked standalone.
   default, 1.134x) already delivers what the factor-reuse kernel would (1.112x), so the
   conditional PyAutoArray `nnls_seed_factor_reuse` prompt is deliberately NOT filed. The
   residue is `regularization_matrix` 112 ms + log-det `F + lambda H` 40 ms + log-det `H`
-  37.5 ms (47 % of the call). Phase 3 — those numba CPU levers paired with the A100
-  non-solver residue — is being filed as its own issue.
+  37.5 ms (47 % of the call).
+  Phase 3 FILED 2026-09-16 — the non-solver levers (split-regularization assembly, the
+  regularization log-det, the shared `F + lambda*H` Cholesky) on numba CPU, each paired with an
+  A100 row: https://github.com/PyAutoLabs/autolens_profiling/issues/267
+  (prompt `active/fixed_light_numba_s3_regularization_logdet_levers.md`, mirrors the
+  `hst-gpu-non-solver-residue` map's levers 2+3). Filed as a DEFERRED start on the human's ask:
+  plan on the issue, no worktree and no branch. It inserts ahead of the old phases 3-5, which
+  renumber to 4 (memo warm start over the graded draw set), 5 (source-pixel scaling) and
+  6 (HST + Euclid verdict).
 
 ## hst-gpu-non-solver-residue
 - title: The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve

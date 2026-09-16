@@ -230,3 +230,27 @@
 - repos:
 - parallel-claim: "autogalaxy_workspace_test is claimed by jax-runtime-and-parity (autolens_workspace_test#317, smoke_tests.txt only, zero diff vs main on 2026-09-15); this task's workspace leg is one tolerance edit in scripts/imaging/jax_likelihood/rectangular.py and is added via worktree_add_repo only after that claim clears. PyAutoArray is unclaimed."
 - note: "Planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library mixed-precision-inversion-gap (PyAutoArray only, library first). Before any measurement move autogalaxy_workspace_test/dataset/imaging/jax_test aside: the on-disk copy is the stale pre-#117 180x180 dataset and should_simulate does not detect the resolution change. Key reframing: the asserted quantity is log_likelihood so the gap is pure delta-chi-squared; the NumPy reference is not fp64 (mapper_util honours use_mixed_precision on numpy); the fp32 curvature branch is inert but rounds 1/sigma inconsistently with the fp64 data vector; JAX (jaxnnls IPM) and NumPy (fnnls) run different NNLS algorithms."
+
+## fixed-light-numba-levers
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/267
+- issued: 2026-09-16
+- prompt: active/fixed_light_numba_s3_regularization_logdet_levers.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-levers
+- repos:
+- note: "PLAN ONLY, NOT STARTED. Filed on the human's ask on 2026-09-16 as a deferred start — no worktree, no branch, no repo claim, no code change. The full plan is on the issue; resume with /start_dev active/fixed_light_numba_s3_regularization_logdet_levers.md (PyAutoArray library first, witnessed from autolens_profiling). Phase 3 of the fixed-lens-light-numba-cpu epic: the NNLS round is CLOSED by phase 2 (#265, PR #266 — 2.03x, the memo's 1.134x already beats the factor-reuse kernel's 1.112x, so nnls_seed_factor_reuse was deliberately not filed). This phase takes the 47 % non-solver residue of the 404.6 ms call: regularization_matrix 111.5 ms (two pure-Python loops in autoarray regularization_util, zero numba in the file; PyAutoArray#536 optimised the JAX branch only), log-det F+lambda*H 40.2 ms, log-det H 37.5 ms. One lever at a time, 1 -> 2 -> 3, EACH paired with an A100 row — if it must be split, split along the levers, never between a lever and its A100 row. Intake sized it too-large (score 15); large kept per the prompt's own instruction, recorded as a Sizing-note: header."
+- summary: |
+    Deferred/plan-only. Lever 1: jit the split-regularization assembly on the
+    numpy/numba path, bit-for-bit accumulation order, Python bodies retained as
+    _reference (the JAX tests use them as ground truth), fixing three recorded
+    defects (in-place mutation of the interpolators' cached_property tables, the
+    size == 0 j-leak, the unbounded insert). Lever 2: log_det_regularization_matrix_term
+    dense-factorises a ~20-nnz/row matrix; the :903 docstring claiming scipy sparse
+    is stale and is fixed regardless. Lever 3: one shared Cholesky of F + lambda*H
+    for the solve, the seed and the log-det (S3 only), folding in
+    draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md. CPU leg is the
+    RAL gpu partition CPUs-only (no --gres), 1 thread across numba and BLAS, A/B
+    against a private merge-base PyAutoArray on PYTHONPATH — never the shared
+    /mnt/ral/jnightin/PyAuto install. A100 leg is fp64, budget 7 on Delaunay, PDIP
+    fallback, positivity never dropped. Pins: log evidence <= 1e-9 relative,
+    regularization matrix bit-identical, log_likelihood NOT comparable across legs.

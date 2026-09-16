@@ -65,8 +65,10 @@ GPU epic's own findings rather than of anything measured here yet:
    already measured the CPU kernel rows and concluded, in its own words, that a CPU
    assessment "should score the library's `fnnls` path, not the certified active set". A
    numba kernel phase would re-answer a settled question and delay the decomposition this
-   campaign's `Witness:` demands. The campaign is five phases, numbered 1-5.
-2. **Phase 3 is repurposed.** It was premised on the certified active set's pass budgets —
+   campaign's `Witness:` demands. The campaign was five phases at that point; it is **six**,
+   numbered 1-6, since the 2026-09-16 amendment below inserted the non-solver levers as phase 3.
+2. **Phase 3 is repurposed** (that repurposed phase is **now phase 4**, per the 2026-09-16 amendment).
+   It was premised on the certified active set's pass budgets —
    but the certified scheme is not what CPU scores, so "do the GPU's budgets 7 / 11 hold on
    numba?" is not a question this campaign can ask. The numba equivalent is better: the
    library's `fnnls` is seeded from a passive-set **memo**, so does that warm start survive
@@ -75,10 +77,33 @@ GPU epic's own findings rather than of anything measured here yet:
 | # | Phase | Mirrors | Prompt |
 |---|---|---|---|
 | 1 | The whole `AnalysisImaging.log_likelihood_function` on the numba path, routes a/b/c x {dense, numba-sparse}, with a decomposition measured in ONE process and a sparse-operator parity pin | GPU phases 0+1 (#248, #251) | `fixed_light_numba_phase1_whole_call.md` — COMPLETE 2026-09-14 (#263, PR #264: harness shipped, timing legs NOT run; carried by phase 2) |
-| 2 | Source-only solver speed on the numba path: run phase 1's legs, then make the S3 `fnnls` solve as fast as possible (factorisation count, not the active-set scheme) and score the whole call with it. **Single-threaded only** — production runs one single-threaded likelihood per process under multiprocessing, so the original thread-scaling phase is RETIRED (human decision 2026-09-15) | GPU phases 1+2 (#251, #253) | `fixed_light_numba_phase2_source_only_solver.md` — COMPLETE 2026-09-16 (#265, PR #266) |
-| 3 | The `fnnls` memo warm start over the seeded 41-model graded draw set: `seed_source`, `warm_start_fallback`, outer/inner iteration counts — does the warm start hold when the model is bad? | GPU phase 3 (#255), repurposed | — |
-| 4 | Source-pixel scaling, and which term overtakes which as N grows | GPU phase 4 (#257) | — |
-| 5 | HST + Euclid verdict: the production single-threaded CPU configuration | GPU phase 5 (#259) | — |
+| 2 | Source-only solver speed on the numba path: run phase 1's legs, then make the S3 `fnnls` solve as fast as possible (factorisation count, not the active-set scheme) and score the whole call with it. **Single-threaded only** — production runs one single-threaded likelihood per process under multiprocessing, so the original thread-scaling phase is RETIRED (human decision 2026-09-15) | GPU phases 1+2 (#251, #253) | `fixed_light_numba_phase2_source_only_solver.md` — COMPLETE 2026-09-16 (#265, PR #266). Verdict `results/notes/fixed_lens_light_numba_2026_09.md`: headline **2.03x**, **no solver change proposed** |
+| 3 | The non-solver levers (split-regularization assembly, the regularization log-det, the shared `F + lambda*H` Cholesky) on numba CPU, each paired with an A100 row | `hst-gpu-non-solver-residue` levers 2+3 | `fixed_light_numba_s3_regularization_logdet_levers.md` |
+| 4 | The `fnnls` memo warm start over the seeded 41-model graded draw set: `seed_source`, `warm_start_fallback`, outer/inner iteration counts — does the warm start hold when the model is bad? | GPU phase 3 (#255), repurposed | — |
+| 5 | Source-pixel scaling, and which term overtakes which as N grows | GPU phase 4 (#257) | — |
+| 6 | HST + Euclid verdict: the production single-threaded CPU configuration | GPU phase 5 (#259) | — |
+
+**Amended 2026-09-16, when phase 2 completed.** Phase 2's verdict named the residue as bigger
+than the solver, and the human asked for the follow-up round to be paired with the A100. Three
+records:
+
+1. **Phase 3 is now the non-solver levers**, filed as
+   `fixed_light_numba_s3_regularization_logdet_levers.md`, and the old phases 3, 4 and 5 renumber
+   to 4, 5 and 6. The **NNLS round is CLOSED**: the library's cross-evaluation memo (ON by
+   default, 1.134x) already delivers what phase 2's factor-reuse kernel reached (1.112x), so the
+   conditional PyAutoArray `nnls_seed_factor_reuse` prompt was deliberately **not** filed.
+2. **The phase-2 note's "Next" item 1 was never realised as written.**
+   `results/notes/fixed_lens_light_numba_2026_09.md` says the work was "filed as
+   `PyAutoMind/draft/research/autolens_profiling/fixed_light_numba_s3_regularization_logdet_levers.md`";
+   no such file existed until 2026-09-16. **Phase 3's prompt is it** — under that exact name, and
+   widened, because item 1 named only the regularization matrix and the log-det factor reuse and
+   did not carry the A100 pairing.
+3. **Two loose ends phase 2 recorded and did not file**, kept here so they are not lost:
+   - the PyAutoArray bug that `abstract_ndarray.__getitem__` imports `jax.numpy`, so a numba-only
+     process cannot stay JAX-free after the first `FitImaging` (recorded as `jax_after_rows` in
+     every phase-2 JSON) — **unfiled**;
+   - the deliberate non-filing of `nnls_seed_factor_reuse` (phase-2 verdict 3) — **a decision,
+     not an omission**; reopening it needs a new measurement, not this campaign.
 
 ## What must be carried across, and what must not
 
