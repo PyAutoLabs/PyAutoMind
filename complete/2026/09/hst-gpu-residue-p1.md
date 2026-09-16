@@ -1,3 +1,71 @@
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/268
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/270
+- epic: hst-gpu-non-solver-residue (phase 1)
+- summary: |
+    Phase 1 of the `hst-gpu-non-solver-residue` epic - the first MEASURED decomposition of the fused
+    production likelihood on a GPU. New harness `scripts/misc/likelihood_breakdown/xla_attribution.py`
+    (compiled-HLO index incl. the stack-frame table, `jax.profiler.ProfileData` trace parser, stage map
+    with mixed-fusion / device-idle / host-callback rows, HLO census with innermost-frame predicates; 49
+    tests) and cell `scripts/imaging/likelihood_breakdown/fixed_light_trace.py` (S3 certified Delaunay
+    call at the PRODUCTION budget 7 with PDIP fallback, fp64; routes b + d; traces 10 steady calls of the
+    production `jax.jit`). Five legs: A100 array 343350 x3 (Delaunay relocator on / off, DelaunayNN) and
+    RTX 2060 x2. Every kernel joined to source, unjoined 0.000 ms on all legs, reconciliation within 2.6 %,
+    route d == b at <= 3.2e-11. Suite 527 tests, all four lint gates green. No library change.
+- finding: |
+    THE "~13.9 ms MESH / MAPPER / WEIGHTS" BUCKET IS REFUTED. On the A100 those stages total 0.37 ms
+    (1.2 %). What the attribution arithmetic had lumped there is the PSF FFT of the (1500,180,180)
+    mapping-matrix cube (7.12 ms, 22 %), the A.T A GEMM (4.18 ms, 13 %) and the device sitting IDLE for
+    5.44 ms (17 %) while scipy's qhull runs on the host inside `pure_callback`. And THE 25.39 ms HEADLINE
+    WAS A PASS-BUDGET-2 NUMBER: at the production budget 7 the Delaunay A100 call is 31.6 ms (route b,
+    budget-independent, ties the two runs at 1.8 %). Non-solver residue = 21.7 of 31.9 ms.
+- finding-census: |
+    NO (n,n) ADD OF F + lambda*H SURVIVES XLA. `abstract.py:371` lowers to one `transpose`; every
+    consumer walks back to a single producer, `cublas-lt-matmul.2` (the F GEMM). The JAX/GPU side of
+    `draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md` has NO cost to recover - posted on
+    #267, whose lever 3 owns the numpy/numba fix and the stale docstring. The two
+    `operated_mapping_matrix_list` accesses compile to ONE PSF convolution (CSE). 7 gathers at :613, 0 at
+    :397. The border relocator ON is production (autogalaxy packaged config default true; every lensing
+    workspace and the Euclid pipeline set it true) and costs 0.10 ms - the issue's premise was backwards.
+- traps: |
+    (1) CUDA command buffers make every kernel report `hlo_op=command_buffer_N`; the traced executable is
+    compiled from the SAME lowering with `xla_gpu_enable_command_buffer=""` and both walls recorded
+    (+0.4/+0.8 % A100 Delaunay, +17 % DelaunayNN - that leg's idle row is caveated). (2) jax 0.10.2 emits
+    `stack_frame_id`, not `source_file=`; the table is HloModuleProto field 17, read with a 70-line wire
+    parser (no xprof; do not import TF beside a live JAX GPU backend). (3) A census predicate that scans
+    the whole stack for `:371` reports 15 false adds - both arguments of the one-line `_xp.add` are
+    lazily evaluated AT that line; key on the innermost frame (regression test). (4) Harness-injected
+    solver kernels walk out to the library call site without their own stage rule; `inversion/mesh/` is a
+    prefix of `border_relocator.py` - order rules most-specific first. (5) `check_submits.py`'s
+    cell-coverage regex cannot see `python3 -u`, so the rule passes vacuously on all 94 submits, and prose
+    inside a `# WALL-BASIS:` block parses as row data - both to /intake. (6) RTX 2060 Max-Q absolute ms
+    are SESSION-SCOPED: 1063 vs 622 ms for the same leg two hours apart, ~1 % within a session, stage
+    shares shift; never rank from it. (7) A100 stage rows carry ~9 % profiler inflation (shares unaffected).
+- levers: |
+    Ranked for phase 2 (A100 Delaunay, production 31.6 ms): (1) qhull `pure_callback` host round-trip
+    5.44 ms / 17 % (PyAutoArray; `pure_callback` non-differentiability is load-bearing; one round-trip per
+    evaluation regardless of N; under production `vmap` with `vmap_method="sequential"` it is one host
+    call PER LANE and is the one term that does not amortise - measure the vmap program before ranking
+    finally); (2) PSF convolution cube 7.12 ms / 22 % (harness experiment first: fft_shape, real-space,
+    complex64); (3) second Cholesky of F+lambda*H for the log det 0.89 ms (harness). Not levers: mesh /
+    mapper / weights, border relocator, mixed fusion. Settled: matrix-free log-det (#247), reg_adapt cannot
+    jit on Delaunay, non-uniform over-sample map triples compile. Solver-side (out of this campaign's
+    scope but the largest item): the certified solve is 10.2 ms at fixed budget 7 while the fiducial
+    certifies in 1-2 passes; an early exit helps single-call only - under `vmap` a batched `while_loop`
+    runs to the max lane count.
+- open: |
+    Phase 1 traced the SINGLE-CALL jit. Production Nautilus runs `jax.vmap(jax.jit(call))`; the vmap
+    program was not traced (the cell has no `--vmap-batch`), so per-lane amortisation and the sequential
+    qhull callback's share under vmap are unmeasured - the first thing phase 2 should add. Rectangular,
+    Euclid, sparse operator, JWST not measured.
+- note: |
+    results/notes/hst_gpu_residue_phase1_2026_09.md.
+- worktree: |
+    ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1 (own worktree beside #267's on the same repo, disjoint
+    files; parallel-claim recorded). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p1
+    at 6b60d30 left in place for phase 2.
+
+## Original prompt
+
 # HST GPU residue phase 1 — a trace-based, one-process decomposition of the certified Delaunay call on the A100 and the RTX 2060
 
 Type: research
