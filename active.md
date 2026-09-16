@@ -166,29 +166,6 @@
   - autolens_workspace_test: feature/jax-runtime-and-parity
   - autogalaxy_workspace_test: feature/jax-runtime-and-parity
 
-## config-priors-drift
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/618
-- issued: 2026-09-15
-- session: claude --resume b156f901-a79a-43e2-90c1-1993717d7e94
-- prompt: active/config_priors_drift_stale_classes_and_paths.md
-- status: awaiting-merge (library PR #619 first, then 4 workspace PRs)
-- worktree: ~/Code/PyAutoLabs-wt/config-priors-drift
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/550
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/244
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/87
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/319
-- repos:
-  - PyAutoGalaxy: feature/config-priors-drift
-  - autolens_workspace: feature/config-priors-drift
-  - autogalaxy_workspace: feature/config-priors-drift
-  - HowToLens: feature/config-priors-drift
-  - autolens_workspace_test: feature/config-priors-drift
-- parallel-claim: "multi-galaxy-j1011-real-data also claims autolens_workspace (scripts/multi_galaxy/**, .gitignore, dataset/); this task touches only config/, file sets disjoint, so it runs in its own worktree by the human's plan approval on 2026-09-15."
-- parallel-claim: "jax-runtime-and-parity also claims autolens_workspace_test (JAX runtime/parity scripts, zero diff vs main at 2026-09-15); this task touches only config/visualize/plots_search.yaml, file sets disjoint, so it runs in its own worktree by the human's plan approval on 2026-09-15."
-- summary: Packaged PyAutoGalaxy prior yaml drift (typo'd/mis-pathed/orphan keys, NFWTruncatedMCRScatterLudlowSph unresolvable) + walker test; then re-sync autolens_workspace, autogalaxy_workspace, HowToLens, autolens_workspace_test config copies. Library (PyAutoGalaxy) first.
-
 ## ep-release-search-internals
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1631
 - issued: 2026-09-15

@@ -1,3 +1,19 @@
+## config-priors-drift
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/618
+- completed: 2026-09-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/550
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/244
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/87
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/319
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619
+- summary: Fixed eleven dead rows in the packaged PyAutoGalaxy `config/priors/` (JSONPriorConfig suffix-matcher drift: `ersic` typo, `NFWTruncatedMCRScatterLudlowSph` under the wrong file, orphan linear chameleon/eff, `PointSourceChi`, dead `SersicCoreSph.mass_to_light_ratio` and linear-operated `Gaussian.intensity`, `EllipseMultipoleRelative`/`gaussian_limits`, empty `DelaunayNN`, Voronoi README) and added `test_autogalaxy/test_priors_config.py` (walker: every key resolves to a class, every param is an `__init__` arg; model-construction regressions). Re-synced autolens_workspace, autogalaxy_workspace, HowToLens, autolens_workspace_test `config/` to byte parity, replaced stale per-search `plots_search.yaml`, removed readerless `general.yaml::fits.flip_for_ds9`, deleted `autolens_workspace_test/config/priors/mesh/voronoi.yaml`.
+- verification: red witness 4 failed on old config (9 dead keys, 2 dead params); green 5 passed; full `pytest test_autogalaxy` 1212 passed; `pyauto-heart smoke --root <wt>` 136/136; CI green on every leg of all five PRs.
+- traps: intake drops `Type: hygiene` (use `maintenance`) and header-first input becomes the title; `pyauto-heart smoke --root` on real worktrees deleted tracked `autolens_workspace_test/output/.gitignore`; the plan assumed HowToLens/autolens_workspace_test shipped no priors — they carry full copies.
+- follow-ups: `draft/bug/autogalaxy/sersiccoresph_has_no_mass_to_light_ratio.md`, `draft/maintenance/autogalaxy/linear_operated_sersic_has_no_prior_yaml.md`, `draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md` (HowToGalaxy, autogalaxy_workspace_test x2, autolens/autogalaxy/autocti assistants still carry the rows; euclid keeps its copy by design).
+
+## Original prompt
+
 # Config priors drift: stale class names, paths and params shared by PyAutoGalaxy and autolens_workspace
 
 Type: bug
