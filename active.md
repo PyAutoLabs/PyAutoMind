@@ -147,46 +147,6 @@
     NOTE: `feature/howtofit-mode` is now 9+ commits behind origin/main and the
     merged tutorial work landed there — rebase before editing HowToFit here.
 
-## fixed-light-numba-solver
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/265
-- issued: 2026-09-15
-- status: workspace-dev
-- prompt: active/fixed_light_numba_phase2_source_only_solver.md
-- epic: fixed-lens-light-numba-cpu
-- phase: 2
-- started: 2026-09-15
-- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-solver
-- repos:
-  - autolens_profiling: feature/fixed-light-numba-solver
-- plan: |
-    1. Finish phase 1's close-out so the worktree guard clears.
-    2. Issue + active.md registration + worktree fixed-light-numba-solver (workspace-dev, standalone).
-    3. Implement (tests + ruff): numpy-path solver-injection seam, factor-reuse NNLS kernel,
-       `d_np` route + `--nnls-warm-start` flag in fixed_light_numba.py, and a solver-kernel cell
-       fixed_light_numba_solvers.py.
-    4. Leg A — the fixed-light speedup on numba with the phase-1 cell (library solver),
-       sparse_numba first, then dense; ONE thread only (production runs one single-threaded
-       likelihood per process under multiprocessing).
-    5. Leg B — solver kernels on the S3 sparse_numba system: library cold / memo-warm /
-       certified / factor-reuse / unconstrained floor, --threads 1 only.
-    6. Leg C — whole call with the fastest equivalent solver injected, at one thread.
-    7. Note results/notes/fixed_lens_light_numba_2026_09.md + speedup breakdown → ship_workspace
-       PR (pending-release); PyAutoArray feature prompt filed only if the factor-reuse solver
-       earns it.
-- scope-decisions: |
-    Phase 1's t1/t8 legs were never run; this phase runs them as Leg A. Solver work is scoped from the
-    exploration finding that fnnls converges in 0 outer iterations on source-only Delaunay, so the
-    lever is factorisation count (LU seed + full Cholesky -> one Cholesky + downdates), not the
-    active-set scheme; a fully numba-jitted loop is deferred to the rectangular mesh. Single-threaded
-    only (numba 1, BLAS 1): production parallelises across likelihood evaluations with
-    multiprocessing, so per-call multi-core gains are not a target; the campaign map's
-    thread-scaling phase is retired by this decision. No library edits.
-- note: |
-    Conflict guard clean (worktree_check_conflict fixed-light-numba-solver autolens_profiling,
-    exit 0). Branch based on autolens_profiling origin/main 9285683 (the phase-1 merge).
-    The prompt's `Witness:` line and its item 1 still say "one and eight threads" — superseded
-    by the single-thread scope decision above, taken by the human 2026-09-15 after filing.
-
 ## multi-galaxy-j1011-real-data
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549
 - issued: 2026-09-15

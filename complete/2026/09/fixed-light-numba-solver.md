@@ -1,3 +1,81 @@
+# fixed-light-numba-solver — phase 2: fixed lens light on the numba CPU path, and the solver verdict
+
+- Repo: autolens_profiling
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/265 (closed 2026-09-16)
+- PR: https://github.com/PyAutoLabs/autolens_profiling/pull/266 — MERGED, merge commit `c73c86c`
+- Epic: `fixed-lens-light-numba-cpu`, phase 2
+- Note: `results/notes/fixed_lens_light_numba_2026_09.md` (autolens_profiling)
+
+## What shipped
+
+Phase 2 of the `fixed-lens-light-numba-cpu` campaign: the whole-call measurement of the
+fixed-lens-light speedup on the production numba CPU path, plus the solver round it was
+authorised to open. Four legs in one SLURM job on an idle RAL host, two corroborating
+laptop legs, and a written note; no library edits anywhere.
+
+Code shipped alongside the measurement: the numpy-path solver-injection seam and
+factor-reuse NNLS kernel (`scripts/misc/likelihood_breakdown/fixed_light_numpy_solvers.py`),
+the `d_np` route and `--nnls-warm-start` flag in
+`scripts/imaging/likelihood_breakdown/fixed_light_numba.py`, the solver-kernel cell
+`fixed_light_numba_solvers.py`, the four-leg RAL submit script, six result JSON + PNG, and
+a repo-wide `--help` fix (a literal `%` in `_profile_cli.py`'s `--memo` help had been
+raising `TypeError` on the shared parser for every cell).
+
+## The measurement
+
+**Fixing the lens light is worth 2.03x on the production numba CPU path.** RAL job
+**343311** (`euclid-ral-gpu-1`, `gpu` partition CPUs-only, no `--gres`), HST Delaunay
+N=1500, sparse numba operator, fp64, one thread (numba 1, BLAS family 1):
+`AnalysisImaging.log_likelihood_function` goes from **932 ms** (route a, the joint S0
+system the library solves today) to **459 ms** (route b, the source-only S3 system), with
+no library change at all; the laptop measures 2.036x independently. Both rows are
+memo-off. With the cross-evaluation memo **on**, route b is **405 ms**.
+
+## The solver verdict — the NNLS speed-up round is CLOSED
+
+The factor-reuse NNLS built for this phase is a correct kernel (one factorisation, 15
+downdates, equivalent to 1.455e-11 nats) and reaches **1.112x** at whole-call level. The
+library's own cross-evaluation memo — **on by default, therefore already in production** —
+is **1.134x** by a different mechanism. The two are within 2 % of each other: the memo
+already delivers what factor reuse would.
+
+**No PyAutoArray solver prompt is filed.** The conditional `nnls_seed_factor_reuse`
+feature prompt this phase was authorised to file is deliberately not filed, and the NNLS
+speed-up round is closed.
+
+## The residue, and what comes next
+
+Inside the remaining S3 call the untouched sites are larger than the solver:
+`inversion.regularization_matrix` **112 ms**, log-det `F + lambda H` **40 ms**, log-det
+`H` **37.5 ms** — about **47 % of the call** — and `log_det_curvature_reg_matrix_term`
+re-factorises the very matrix the solver has just factorised.
+
+The next round pairs those numba CPU levers with the A100 non-solver residue: epic
+`fixed-lens-light-numba-cpu` **phase 3**, prompt to follow (being intaken as its own
+issue). Two further items the note records but does not file here: the memo's behaviour
+under bad models over the seeded graded draw set, and the PyAutoArray bug that
+`abstract_ndarray.__getitem__` imports `jax.numpy`, so a numba-only process cannot stay
+JAX-free after the first `FitImaging`.
+
+## Scope decisions carried
+
+Single-threaded only: production runs one single-threaded numba likelihood per process
+under a multiprocessing pool, so per-call multi-core gains were never a target and the
+campaign map's thread-scaling phase was retired by that human decision (2026-09-15). The
+prompt's `Witness:` line still said "one and eight threads"; it was superseded by that
+decision after filing.
+
+## Gates
+
+All structural gates PASS on every leg: P1 sparse-operator re-bake parity (3/3 arrays),
+S3 = S0 on the mapper block (log-det terms bit-identical, rel diff exactly 0.0), P2 dense
+vs sparse-numba system (max rel diff 3.7e-15), P3 evidence parity (4.6e-15 rel, 0
+passive-set differences), P4 injected `d_np` == route b (1.1e-15 rel). Every leg stamps
+`timing_status: measured`, `contention_warning: false`, and holds the 1.03 ABBA overhead
+gate. CI: `lint` green on head `8388901`.
+
+## Original prompt
+
 # Numba phase 2 — source-only solve on the numba CPU path: measure the fixed-light speedup and make the solver as fast as possible
 
 Type: research
