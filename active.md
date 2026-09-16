@@ -256,3 +256,14 @@
     relocator on (cell) and off (production). HLO census answers the curvature_reg_matrix
     draft for JAX (verdict posted to #267) and the doubled operated_mapping_matrix_list PSF
     convolution. Deliverable: note ranking the levers for phase 2. No PyAutoArray edit.
+
+## pixelized-clumps-robust-scale
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/78
+- issued: 2026-09-16
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/pixelized-clumps-robust-scale
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/pixelized-clumps-robust-scale
+- prompt: active/pixelized_source_clumps_empty_on_real_dr1.md
+- summary: wcs.json `source_clumps` is empty on every real DR1 vis_pix fit (0.5×max rule); switch the pipeline finder to a 0.5×p99 scale via the `pix_indexes` seam, add a brightest-pixel failsafe recorded as `source_clump_rule`, witness on 4 real tiles, add spike/failsafe/force_pickle_overwrite tests. Gates the euclid_dr1 wcs.json reload pass.
+- parallel-claim: "euclid_strong_lens_modeling_pipeline is also claimed by sed-chain-cpu-route (PR #70), sersic-variants (PR #75), sersic-variants-analysis and simulator-from-result-linear. Human-approved own worktree on 2026-09-16 (plan approval): file sets disjoint except sersic-variants, which edits util.py at lines >= 1084 (EuclidDataset / load_vis_dataset / parse_fit_args) and catalogue/README.md line ~130; this task edits util.py 755-1055 (clump finder, wcs_dict_from), catalogue/README.md ~165, tests/test_wcs_dict.py, tests/test_latent_run_level.py. Whoever merges second rebases."

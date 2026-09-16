@@ -17,6 +17,7 @@ Unattended: ready
 Epic: euclid-dr1-prep
 Filed: 2026-09-16
 Updated: 2026-09-16
+Issued: 2026-09-16
 
 **Gates:** the `euclid_dr1` wcs.json reload pass (re-run of the 10 `dr1_sep1`
 lenses with `force_pickle_overwrite: true`, then the 15,032-tile DR1 pass). That
