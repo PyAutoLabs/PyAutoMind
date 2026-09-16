@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/pixelized_source_clumps_empty_on_real_dr1.md"><code>wcs.json</code> records no pixelized-source clumps on real DR1 lenses — the clump…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/78">issue #78</a> — issued 2026-09-16 — workspace-dev</summary>
+<details><summary>📋 <a href="active/pixelized_source_clumps_empty_on_real_dr1.md"><code>wcs.json</code> records no pixelized-source clumps on real DR1 lenses — the clump…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/78">issue #78</a> — issued 2026-09-16 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/79">euclid_strong_lens_modeling_pipeline#79</a></summary>
 
 ```
 /start_dev active/pixelized_source_clumps_empty_on_real_dr1.md
