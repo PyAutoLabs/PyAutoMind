@@ -79,9 +79,10 @@ GPU epic's own findings rather than of anything measured here yet:
 | 1 | The whole `AnalysisImaging.log_likelihood_function` on the numba path, routes a/b/c x {dense, numba-sparse}, with a decomposition measured in ONE process and a sparse-operator parity pin | GPU phases 0+1 (#248, #251) | `fixed_light_numba_phase1_whole_call.md` — COMPLETE 2026-09-14 (#263, PR #264: harness shipped, timing legs NOT run; carried by phase 2) |
 | 2 | Source-only solver speed on the numba path: run phase 1's legs, then make the S3 `fnnls` solve as fast as possible (factorisation count, not the active-set scheme) and score the whole call with it. **Single-threaded only** — production runs one single-threaded likelihood per process under multiprocessing, so the original thread-scaling phase is RETIRED (human decision 2026-09-15) | GPU phases 1+2 (#251, #253) | `fixed_light_numba_phase2_source_only_solver.md` — COMPLETE 2026-09-16 (#265, PR #266). Verdict `results/notes/fixed_lens_light_numba_2026_09.md`: headline **2.03x**, **no solver change proposed** |
 | 3 | The non-solver levers (split-regularization assembly, the regularization log-det, the shared `F + lambda*H` Cholesky) on numba CPU, each paired with an A100 row | `hst-gpu-non-solver-residue` levers 2+3 | `fixed_light_numba_s3_regularization_logdet_levers.md` — COMPLETE 2026-09-16 (#267; PyAutoArray #553/#554/#555 + autolens_profiling #272; record `complete/2026/09/fixed-light-numba-levers.md`). Verdict `results/notes/fixed_lens_light_levers_2026_09.md`: **1.80x** cumulative, levers 2+3 CPU-only |
-| 4 | The `fnnls` memo warm start over the seeded 41-model graded draw set: `seed_source`, `warm_start_fallback`, outer/inner iteration counts — does the warm start hold when the model is bad? | GPU phase 3 (#255), repurposed | — |
-| 5 | Source-pixel scaling, and which term overtakes which as N grows | GPU phase 4 (#257) | — |
-| 6 | HST + Euclid verdict: the production single-threaded CPU configuration | GPU phase 5 (#259) | — |
+| 4 | The curvature-matrix kernel A/B on Delaunay (two-stage vs direct, touched-index stage 2), then A-prime permute-active-last; cell overhead-cap fix first | phase 3's residue (note Next items 1, 6) | `fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md` — FILED 2026-09-16 |
+| 5 | The `fnnls` memo warm start over the seeded 41-model graded draw set: `seed_source`, `warm_start_fallback`, outer/inner iteration counts — does the warm start hold when the model is bad? | GPU phase 3 (#255), repurposed | — |
+| 6 | Source-pixel scaling, and which term overtakes which as N grows | GPU phase 4 (#257) | — |
+| 7 | HST + Euclid verdict: the production single-threaded CPU configuration | GPU phase 5 (#259) | — |
 
 **Amended 2026-09-16, when phase 2 completed.** Phase 2's verdict named the residue as bigger
 than the solver, and the human asked for the follow-up round to be paired with the A100. Three
@@ -104,6 +105,8 @@ records:
      every phase-2 JSON) — **unfiled**;
    - the deliberate non-filing of `nnls_seed_factor_reuse` (phase-2 verdict 3) — **a decision,
      not an omission**; reopening it needs a new measurement, not this campaign.
+
+**Amended again 2026-09-16, when phase 3 completed:** phase 4 is the kernel A/B + A-prime round; the memo, scaling and verdict phases renumber to 5, 6 and 7.
 
 ## What must be carried across, and what must not
 

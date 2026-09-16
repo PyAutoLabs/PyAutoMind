@@ -98,7 +98,15 @@ epic, never picked standalone.
   CPU-only / 1.19x log det(F+λH) off the NNLS factor + cached curvature_reg_matrix), A100
   identity on every lever. Residue curvature_matrix 88 ms + fnnls 61 ms ≈ 65 %; lever 4
   candidates (A′ permute-active-last, edge-zeroed, covariance third factorisation) in the
-  note's Next, not filed. Old phases 3-5 renumbered to 4-6 stand.
+  note's Next, not filed. Old phases 3-5 renumbered to 4-6 stood until phase 4 was filed;
+  see below.
+  Phase 4 FILED 2026-09-16 — the curvature-matrix kernel A/B on Delaunay (lever 4a,
+  measurement first: the two-stage vs direct kernels were never measured on the Delaunay
+  fixed-light cell; touched-index stage 2 if neither wins) then A-prime permute-active-last
+  (lever 4b, witness design first); cell prerequisite: the 1.03 overhead cap (prompt
+  `draft/research/autolens_profiling/fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md`).
+  Inserts ahead of the old phases 4-6, which renumber to 5 (memo warm start), 6 (source-pixel
+  scaling), 7 (HST + Euclid verdict).
 
 ## hst-gpu-non-solver-residue
 - title: The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve
