@@ -258,3 +258,14 @@
   - autolens_profiling: feature/hst-gpu-residue-p2
 - parallel-claim: "autolens_profiling was also claimed by fixed-light-numba-levers (#267, COMPLETE 2026-09-16, merged and closed out; worktree removed): its files are fixed_light_numba*, fixed_light_numpy_solvers.py, the lever submits/results and fixed_lens_light_levers_2026_09.md; this task touches fixed_light_trace.py, a new host_callback_probe.py, library_solver_injection.py, a new vmap submit + results + note — disjoint, own worktree beside it exactly as phase 1 (#268) did."
 - note: "Phase 2 of hst-gpu-non-solver-residue, STEP 1 ONLY (matched vmap-vs-jit A100 experiment + policy; PyAutoArray batch-aware callback deferred to phase 2b via /intake if the numbers warrant). Fable session plans, Opus executes. A100 submit -> wait -> harvest is a human resume point. Heart RED (install verify testpypi F; release integrate) at start; PR-open needs the human's ack. Phase-1 worktree ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1 still awaits the human's cleanup (3 untracked .err -> worktree_remove -> branch -d)."
+
+## fixed-light-numba-s4
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/274
+- issued: 2026-09-17
+- prompt: active/fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md
+- session: claude --resume 3f1053cc-606f-4477-bef4-abe3a68cd02b
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-s4
+- repos:
+- parallel-claim: "worktree_check_conflict fixed-light-numba-s4 autolens_profiling PyAutoArray exits 1 on hst-gpu-residue-p2 (#273, feature/hst-gpu-residue-p2, LIVE). Its branch touches fixed_light_trace.py, host_callback_probe.py, library_solver_injection.py, test_fixed_light_cell.py, test_fixed_light_vmap_submit.py and a vmap A100 submit; this task touches fixed_light_numba.py, a new fixed_light_numpy_kernels.py, a new s4 witness, a new batch_cpu s4 submit, new test_fixed_light_s4.py, test_fixed_light_numba.py (overhead gate) and a new note — disjoint. Shared generated surfaces only: README.md (regenerate after whichever merges second) and one hpc/README.md route row. Waived on the human's plan approval 2026-09-17, fresh parallel worktree off origin/main — the same call p2 recorded against #267."
+- note: "Phase 4 of fixed-lens-light-numba-cpu. Two waves, sequential PRs, never stacked (#267 lesson): wave A = overhead gate as ms budget + lever 4a curvature-kernel A/B (b vs b_direct vs b_touched in one process) + witness + RAL CPU leg + note, then a conditional PyAutoArray PR (docstring fix always; kernel/dispatch change only if a kernel beats b by >= 5 %); wave B = lever 4b A-prime after wave A merges, witness design first. Fable session plans, Opus executes. Heart RED (install verify testpypi F; release integrate) at start; PR-open needs the human's ack. Plan on the issue."

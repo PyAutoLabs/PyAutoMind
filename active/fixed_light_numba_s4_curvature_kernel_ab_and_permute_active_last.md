@@ -28,6 +28,8 @@ tolerance with the PDIP fallback count unchanged; the note chains the cumulative
 Review-minutes: 30
 Unattended: never
 Filed: 2026-09-16
+Issued: 2026-09-17
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/274
 
 ## Original request (verbatim)
 
