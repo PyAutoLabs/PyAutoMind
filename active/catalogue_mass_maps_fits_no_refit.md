@@ -70,6 +70,8 @@ of any lenses and not require us to worry about updating lens modeling results. 
 - `hpc/sync pull inspect` (dry run via `status`) transfers only `inspect/`.
 - Size numbers written down: per-lens bytes for the three files and the 15 000-lens extrapolation.
 
-## Plan (2026-09-16) — APPROVED, DEFERRED, NOT STARTED
+## Plan (2026-09-16) — APPROVED, STARTED 2026-09-16
 
 The human approved the plan on 2026-09-16 ("I approve but dont start now"). Full two-level plan is on the issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/80. No worktree, no branch, no source edits, nothing on RAL. Resume with `/start_workspace catalogue-mass-maps-fits`.
+
+Started 2026-09-16 via `/start_workspace catalogue-mass-maps-fits`: worktree `~/Code/PyAutoLabs-wt/catalogue-mass-maps-fits`, branch `feature/catalogue-mass-maps-fits`.
