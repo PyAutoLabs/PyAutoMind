@@ -13,6 +13,7 @@ Witness: All nine backend/mesh combinations have measured whole-call and exclusi
 Review-minutes: 20
 Unattended: needs-slicing
 Blocked-by: PyAutoMind/draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md
+Superseded-in-part: GPU (A100 / RTX) columns measured by autolens_profiling#268 (hst-gpu-non-solver-residue phase 1, 2026-09-16); numba CPU columns are the fixed-lens-light-numba-cpu campaign's (#263/#265/#267)
 
 ## Original request
 
