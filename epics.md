@@ -91,14 +91,14 @@ epic, never picked standalone.
   conditional PyAutoArray `nnls_seed_factor_reuse` prompt is deliberately NOT filed. The
   residue is `regularization_matrix` 112 ms + log-det `F + lambda H` 40 ms + log-det `H`
   37.5 ms (47 % of the call).
-  Phase 3 FILED 2026-09-16 — the non-solver levers (split-regularization assembly, the
-  regularization log-det, the shared `F + lambda*H` Cholesky) on numba CPU, each paired with an
-  A100 row: https://github.com/PyAutoLabs/autolens_profiling/issues/267
-  (prompt `active/fixed_light_numba_s3_regularization_logdet_levers.md`, mirrors the
-  `hst-gpu-non-solver-residue` map's levers 2+3). Filed as a DEFERRED start on the human's ask:
-  plan on the issue, no worktree and no branch. It inserts ahead of the old phases 3-5, which
-  renumber to 4 (memo warm start over the graded draw set), 5 (source-pixel scaling) and
-  6 (HST + Euclid verdict).
+  Phase 3 COMPLETE 2026-09-16 (#267; PyAutoArray #553/#554/#555 merged pending-release,
+  autolens_profiling #272 merged carrying #269/#271; record
+  complete/2026/09/fixed-light-numba-levers.md): three non-solver levers on numba CPU
+  **413.3 → 230.0 ms = 1.80x** (1.38x split-reg numba kernels / 1.13x sparse log det H,
+  CPU-only / 1.19x log det(F+λH) off the NNLS factor + cached curvature_reg_matrix), A100
+  identity on every lever. Residue curvature_matrix 88 ms + fnnls 61 ms ≈ 65 %; lever 4
+  candidates (A′ permute-active-last, edge-zeroed, covariance third factorisation) in the
+  note's Next, not filed. Old phases 3-5 renumbered to 4-6 stand.
 
 ## hst-gpu-non-solver-residue
 - title: The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve

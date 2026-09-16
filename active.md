@@ -212,32 +212,6 @@
 - parallel-claim: "autogalaxy_workspace_test is claimed by jax-runtime-and-parity (autolens_workspace_test#317, smoke_tests.txt only, zero diff vs main on 2026-09-15); this task's workspace leg is one tolerance edit in scripts/imaging/jax_likelihood/rectangular.py and is added via worktree_add_repo only after that claim clears. PyAutoArray is unclaimed."
 - note: "Planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library mixed-precision-inversion-gap (PyAutoArray only, library first). Before any measurement move autogalaxy_workspace_test/dataset/imaging/jax_test aside: the on-disk copy is the stale pre-#117 180x180 dataset and should_simulate does not detect the resolution change. Key reframing: the asserted quantity is log_likelihood so the gap is pure delta-chi-squared; the NumPy reference is not fp64 (mapper_util honours use_mixed_precision on numpy); the fp32 curvature branch is inert but rounds 1/sigma inconsistently with the fp64 data vector; JAX (jaxnnls IPM) and NumPy (fnnls) run different NNLS algorithms."
 
-## fixed-light-numba-levers
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/267
-- issued: 2026-09-16
-- prompt: active/fixed_light_numba_s3_regularization_logdet_levers.md
-- status: pr-open
-- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-levers
-- repos:
-  - PyAutoArray: feature/fixed-light-numba-levers (+ -l2, -l3 stacked)
-  - autolens_profiling: feature/fixed-light-numba-levers (+ -l2, -l3 stacked)
-- note: "ALL THREE LEVERS PR-OPEN 2026-09-16 18:25 BST — awaiting /prm (library-first, stacked): PyAutoArray #553 -> #554 -> #555 (all pending-release); autolens_profiling #269 -> #271 -> #272. Phase 3 result 413.3 -> 230.0 ms = 1.80x on the production numba CPU route (levers 1.38x / 1.13x / 1.19x); A100 identity on every lever, levers 2+3 CPU-only by measurement; log evidence bit-identical (L1, L3) or 2.3e-10 rel (L2). Note results/notes/fixed_lens_light_levers_2026_09.md on #272. #272 CI is RED on test_curvature_reg_matrix_is_cached until #555 merges (deliberate handshake flip; profiling lint checks out PyAutoArray default branch). Folded draft curvature_reg_matrix_rebuilt_every_access resolved by #555 (hazard does not exist). Heart RED (install verify testpypi F; release validation integrate) acked by the human for PR-open on all levers. Worktree ~/Code/PyAutoLabs-wt/fixed-light-numba-levers (both repos on -l3). RAL leftovers: PyAuto_wt/fixed-light-numba-levers/PyAutoArray_{control,feature,l2,l3}, autolens_profiling_wt/fixed-light-numba-levers with output/ral_lever{1,2}_originals + ral_job343355_16repeats. Lever 4 candidates in the note Next (A-prime permute-active-last; edge-zeroed; covariance third factorisation)."
-- summary: |
-    Lever 1 (DONE, PR-open): jit the split-regularization assembly on the
-    numpy/numba path, bit-for-bit accumulation order, Python bodies retained as
-    _reference (the JAX tests use them as ground truth), fixing three recorded
-    defects (in-place mutation of the interpolators' cached_property tables, the
-    size == 0 j-leak, the unbounded insert). Lever 2: log_det_regularization_matrix_term
-    dense-factorises a ~20-nnz/row matrix; the :903 docstring claiming scipy sparse
-    is stale and is fixed regardless. Lever 3: one shared Cholesky of F + lambda*H
-    for the solve, the seed and the log-det (S3 only), folding in
-    draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md. CPU leg is the
-    RAL gpu partition CPUs-only (no --gres), 1 thread across numba and BLAS, A/B
-    against a private merge-base PyAutoArray on PYTHONPATH — never the shared
-    /mnt/ral/jnightin/PyAuto install. A100 leg is fp64, budget 7 on Delaunay, PDIP
-    fallback, positivity never dropped. Pins: log evidence <= 1e-9 relative,
-    regularization matrix bit-identical, log_likelihood NOT comparable across legs.
-
 ## coolest-observation-grid
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/739
 - issued: 2026-09-16
@@ -272,5 +246,5 @@
 - worktree: ~/Code/PyAutoLabs-wt/hst-gpu-residue-p2
 - repos:
   - autolens_profiling: feature/hst-gpu-residue-p2
-- parallel-claim: "autolens_profiling is also claimed by fixed-light-numba-levers (#267, pr-open, awaiting /prm): its files are fixed_light_numba*, fixed_light_numpy_solvers.py, the lever submits/results and fixed_lens_light_levers_2026_09.md; this task touches fixed_light_trace.py, a new host_callback_probe.py, library_solver_injection.py, a new vmap submit + results + note — disjoint, own worktree beside it exactly as phase 1 (#268) did."
+- parallel-claim: "autolens_profiling was also claimed by fixed-light-numba-levers (#267, COMPLETE 2026-09-16, merged and closed out; worktree removed): its files are fixed_light_numba*, fixed_light_numpy_solvers.py, the lever submits/results and fixed_lens_light_levers_2026_09.md; this task touches fixed_light_trace.py, a new host_callback_probe.py, library_solver_injection.py, a new vmap submit + results + note — disjoint, own worktree beside it exactly as phase 1 (#268) did."
 - note: "Phase 2 of hst-gpu-non-solver-residue, STEP 1 ONLY (matched vmap-vs-jit A100 experiment + policy; PyAutoArray batch-aware callback deferred to phase 2b via /intake if the numbers warrant). Fable session plans, Opus executes. A100 submit -> wait -> harvest is a human resume point. Heart RED (install verify testpypi F; release integrate) at start; PR-open needs the human's ack. Phase-1 worktree ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1 still awaits the human's cleanup (3 untracked .err -> worktree_remove -> branch -d)."

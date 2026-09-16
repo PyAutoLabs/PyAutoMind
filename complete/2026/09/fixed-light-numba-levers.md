@@ -1,3 +1,78 @@
+# fixed-light-numba-levers — phase 3: the non-solver levers on numba CPU, each paired with an A100 row
+
+- Repo: autolens_profiling
+- Repo: PyAutoArray
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/267 (closed 2026-09-16)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/553 — MERGED, merge commit `2f6657a6` (lever 1)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/554 — MERGED, merge commit `7c230c4c` (lever 2)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/555 — MERGED, merge commit `91240e43` (lever 3)
+- PR: https://github.com/PyAutoLabs/autolens_profiling/pull/272 — MERGED, merge commit `cea41bbc`; carries the whole stack (#269 lever 1 and #271 lever 2 show MERGED through it, never merged on their own)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/553
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/554
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/555
+- Epic: `fixed-lens-light-numba-cpu`, phase 3
+- Note: `results/notes/fixed_lens_light_levers_2026_09.md` (autolens_profiling)
+- completed: 2026-09-16
+
+## What shipped
+
+Three PyAutoArray levers on the numpy/numba branch of the pixelized-imaging likelihood,
+each A/B-measured on the production numba CPU route (RAL `gpu` partition CPUs-only, one
+thread across numba and BLAS, control = private merge-base checkout on `PYTHONPATH`) and
+each paired with an A100 fp64 identity row. **Whole call 413.3 → 230.0 ms = 1.80x** on HST
+Delaunay N=1500 (route b, memo ON), cumulative over the phase-2 verdict.
+
+| lever | library change | site (ms) | whole call (ms) | increment | A100 |
+|---|---|---:|---:|---:|---|
+| 1 | numba kernels for the split-regularization assembly (`reg_split_np_from`, `pixel_splitted_regularization_matrix_np_from`); Python bodies retained as `_reference`; three recorded defects fixed (in-place mutation of cached interpolator tables, the `size == 0` j-leak, the unbounded insert) | 110.6 → 5.9 | 413.3 → 299.7 | 1.38x | identity (cell runs `xp=jnp`) |
+| 2 | sparse log det of the split-regularization `H` (SuperLU symmetric mode; gates `SPARSE_LOG_DET_MIN_PIXELS = 256`, `SPARSE_LOG_DET_MAX_NNZ_PER_ROW = 32`); stale `:903` scipy-sparse docstring fixed | 37.5 → 6.5 | 302.7 → 267.4 | 1.13x | identity; dense potrf 1.13 ms on the A100 → **CPU-only lever** |
+| 3 | log det(F + λH) read off the NNLS Cholesky factor (`log_det_from_passive_cholesky_from`, `factor` kwarg on `fnnls_cholesky`); `curvature_reg_matrix` becomes a `cached_property` (n_calls 2 → 1) | 40.8 → 6.3 | 273.2 → 230.0 | 1.19x | identity; structurally CPU-only (JAX path never runs fnnls) |
+
+Pins: log evidence bit-identical (levers 1 and 3) or 2.3e-10 relative (lever 2, cond
+6.5e12); regularization matrix bit-identical to the retained pure-Python reference (W1–W3,
+lever 1); lever 3 witness W1–W5 PASS with fast and dense-forced log dets bit-identical and
+both arms' production `log_likelihood` bit-identical. Lever 3 needed `--n-repeats 64`: the
+harness's 1.03 instrumentation-overhead ABBA cap is a fixed cost whose ratio climbs as the
+call shortens (1.015 @ 413 ms → 1.037 @ 224 ms); the gate is untouched, more blocks were
+applied to both arms. Bridge row for chaining the cumulative: job 343355's 16-repeat control
+268.681 ms vs lever 2's recorded 267.448 (+0.46 %), kept unversioned at RAL
+`output/ral_job343355_16repeats/`.
+
+RAL jobs: 343345/343346 (lever 1 CPU/A100), 343353/343354 (lever 2), 343355 (lever 3
+bridge), 343356 (lever 3 CPU, n64), 343357 (lever 3 A100).
+
+## Ship-side traps (recorded on the PRs)
+
+- **A stacked profiling PR cannot go green once the library stack is on main.** `lint.yml`
+  checks out PyAutoArray `main`; after #555 merged, the lever 1 / lever 2 copies of
+  `test_fixed_light_numba.py` pinned the pre-lever-3 library (`curvature_reg_matrix`
+  recomputed, `patched()` without `factor`) and failed by construction. Resolution: #272
+  retargeted to `main` and merged alone; GitHub then marked #269/#271 MERGED because their
+  commits reached `main` through `cea41bbc`. Merge library stacks and profiling stacks
+  together next time, or keep one profiling PR per stack.
+- **Single-arm static contracts caught the two-arm A/B submits.** `test_fixed_light_cell.py`
+  globs every `submit_breakdown_imaging_fixed_light_*`; the lever submits run two subshell
+  arms (indented `python3 -u`), lever 1 runs `delaunay.py` (no `--mesh`, own config names,
+  no cache by design — verbatim copy of the adapt_split submit), levers 2/3 wipe per-arm
+  `JAX_CACHE_{CONTROL,FEATURE}`. Fixed by excluding the family (as library/trace already
+  are) and giving it `test_fixed_light_numba_levers_submits.py`; no submit script edited,
+  because the recorded runs depend on their text. The same `_submits()` hunk then conflicted
+  with #270's trace exclusion — resolved keeping all three.
+- Folded draft `curvature_reg_matrix_rebuilt_every_access.md`: hazard does not exist (the
+  in-place add went in 0766edd4; the cache was lost in the e819fa12 sweep); #555 restores it.
+
+## Residue and next
+
+Remaining 230 ms is ~65 % `curvature_matrix` (88 ms) + `fnnls` (61 ms). Lever 4 candidates
+in the note's Next: **A′ permute-active-last, one potrf** (~15–20 ms more, perturbs the
+factor at 5e-13 — needs a knife-edge active-set audit), the edge-zeroed variant, and the
+covariance third factorisation. Not filed; the programme's phases 4–6 stand. RAL leftovers
+to sweep by hand: `PyAuto_wt/fixed-light-numba-levers/PyAutoArray_{control,feature,l2,l3}`,
+`autolens_profiling_wt/fixed-light-numba-levers` (+ `output/ral_lever{1,2}_originals`,
+`output/ral_job343355_16repeats`).
+
+## Original prompt
+
 # Fixed-light follow-up round 3 — the non-solver levers on numba CPU and the A100 together
 
 Type: research
