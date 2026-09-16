@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 193 |
+| [Backlog](#backlog) (`draft/`) | 194 |
 
 > **No batch in flight.**
 
@@ -534,7 +534,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**193** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **35** of them belong to an epic and are listed only under [Epics](#epics) below.
+**194** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 50</summary>
@@ -2534,12 +2534,20 @@ Continue the 'Fixed lens light on the numba CPU path — the whole programme aga
 </details>
 
 <details>
-<summary><b>The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve</b> — 1 queued prompt(s), in order</summary>
+<summary><b>The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve</b> — ledger: `draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md`</summary>
 
 ```
 Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve' epic. Its canonical state lives in draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: successor to `fixed-lens-light-profiling` (COMPLETE 2026-09-14), filed the same day and named by its verdict. ~21 of the 25.4 ms certified Delaunay A100 call at HST N=1500 is NOT the solver (~13.9 ms mesh/mapper/weights, 4.92 ms the `F + lambda*H` build, 2.38 ms both log-dets); on DelaunayNN it is ~32 of 36 ms. PHASE 1 IS A MEASUREMENT, NOT AN OPTIMISATION: the 13.9 ms is attribution arithmetic across two cells, not a measured decomposition, and the campaign must first build a cell that times the real call's internals in one process and sums to the measured call within a few per cent. Levers ranked: mesh/mapper/weights, then the dense assembly (α≈1.69, overtakes the solve above N≈2500 and so sets the affordable-N ceiling), then the log-dets (re-read the matrix-free CG+SLQ verdict #247 before re-opening those). Inherits the GPU verdict's settled configuration — fp64, budget 7 on Delaunay, PDIP fallback, positivity never dropped — and may not change the answer: every optimisation carries an equivalence pin at ≤ 1e-9. A Fable / Astra campaign.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md
 ```
 
 </details>
@@ -2640,7 +2648,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-32 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+33 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2676,6 +2684,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — unknown theme keyword(s): cpu, numba`
+- `draft/research/autolens_profiling/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md — unknown theme keyword(s): inversion`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
 </details>
