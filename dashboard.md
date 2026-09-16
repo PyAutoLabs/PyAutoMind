@@ -220,7 +220,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by PyAutoGalaxy…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/618">issue #618</a> — issued 2026-09-15 — library-dev</summary>
+<details><summary>📋 <a href="active/config_priors_drift_stale_classes_and_paths.md">Config priors drift: stale class names, paths and params shared by PyAutoGalaxy…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/618">issue #618</a> — issued 2026-09-15 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619">PyAutoGalaxy#619</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 /start_dev active/config_priors_drift_stale_classes_and_paths.md
@@ -385,6 +385,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#619](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619) — `active/config_priors_drift_stale_classes_and_paths.md`
 - [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoGalaxy#615](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615) — `complete/2026/09/einstein-radius-jit-seed-finder.md`
