@@ -237,3 +237,16 @@
     /mnt/ral/jnightin/PyAuto install. A100 leg is fp64, budget 7 on Delaunay, PDIP
     fallback, positivity never dropped. Pins: log evidence <= 1e-9 relative,
     regularization matrix bit-identical, log_likelihood NOT comparable across legs.
+
+## coolest-observation-grid
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/739
+- issued: 2026-09-16
+- session: claude --resume aca5ba12-9dd3-4173-93ae-b0577e4b1617
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/coolest-observation-grid
+- repos:
+  - PyAutoLens: feature/coolest-observation-grid
+  - autolens_workspace: feature/coolest-observation-grid
+  - euclid_strong_lens_modeling_pipeline: feature/coolest-observation-grid
+- parallel-claim: "Deliberate parallel worktree, file sets checked disjoint on 2026-09-16: autolens_workspace is also claimed by multi-galaxy-j1011-real-data (scripts/multi_galaxy/* only; this task edits scripts/guides/coolest_interop.py). euclid_strong_lens_modeling_pipeline is also claimed by sersic-variants (#75: util.py hunks at EuclidDataset/load_vis_dataset/parse_fit_args lines 1084+, catalogue/README.md line 130; this task edits util.py save_results ~line 708 + a new helper, catalogue/README.md bundle table), sed-chain-cpu-route (#70: hpc/, scripts/sersic_lens_model.py), sersic-variants-analysis (clean worktree) and simulator-from-result-linear (scripts/simulator.py, its tests). Library-first: PyAutoLens#739 PR merges before the two workspace PRs."
+- note: "Fable architect session; user-confirmed decision: unsupported COOLEST components (MGE Basis, pixelized source) are skipped and recorded under meta.skipped_profiles, not converted; follow-up prompt draft/feature/autolens/coolest_pixel_grid_export.md. Step 4 (euclid_dr1 science clone at /mnt/c/Users/Jammy/Science/euclid_dr1, no Cortex row) runs only after the pipeline PR merges; RAL reload leg needs pip install coolest in /mnt/ral/jnightin/PyAuto first."
