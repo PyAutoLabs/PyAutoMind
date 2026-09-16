@@ -97,3 +97,50 @@ A Fable / Astra campaign: a top-tier session plans each phase, judges the result
 delegates execution. Every phase ends in a `results/notes/` verdict note with a provenance
 and gate table, in the format the six fixed-lens-light notes set. A100 phases have a
 submit -> wait -> harvest step, which is a human resume point, not a park.
+
+## Revision after phase 1 (2026-09-16 — #268 merged, PR #270; Codex review on #268)
+
+Phase 1 traced the fused single-call production jit on the A100 (`results/notes/hst_gpu_residue_phase1_2026_09.md`).
+The table above is superseded:
+
+| Term, certified Delaunay, A100 fp64, HST N=1500, **production budget 7** | ms | % |
+|---|---:|---:|
+| whole `AnalysisImaging.log_likelihood_function` (command buffers on) | **31.6** | |
+| certified active-set solve (harness injection, budget 7) | 10.2 | 32 |
+| device idle — of which one 5.44 ms gap is the qhull `pure_callback` host round-trip | 8.05 | 25 |
+| PSF FFT of the (1500,180,180) mapping-matrix cube (compiled ONCE — CSE'd) | 7.12 | 22 |
+| `A.T A` GEMM (F) — F + lambda*H is fused into it, no separate add survives | 4.18 | 13 |
+| mixed fusions | 1.95 | 6 |
+| log det H / log det F+lambda*H | 0.89 / 0.89 | 6 |
+| **mesh + mapper + interpolation weights** | **0.37** | **1** |
+| border relocator (ON is production — autogalaxy config default) | 0.10 | 0.3 |
+
+- The 25.39 ms headline was a pass-budget-2 number; the "~13.9 ms mesh/mapper/weights" bucket is refuted.
+- **Phase 1 traced the single-call jit; production is `jax.vmap(jax.jit(call))`** (`autofit/non_linear/fitness.py:859`,
+  Nautilus `use_jax_vmap=True`). The Delaunay callback is `vmap_method="sequential"` — one serial host qhull per lane,
+  the one term that does not amortise over the batch. The vmap program has NOT been traced.
+- Evidence corrections (Codex, 2026-09-16): the fixed-light phase-4 "vmap16 3.6x → 0.7x" curve is a SOLVER-only
+  measurement; the only whole-likelihood vmap number is ~1.18x at N=1500 (25.3 → 21.4 ms/lane), and certified+fallback
+  under vmap is 37.5 vs 21.4 ms (`lax.cond` → select). The 4.73 ms host span is the whole table-building function, not
+  isolated qhull, so batching the callback recovers only ~0.7 ms/lane of dispatch overhead; parallel qhull lanes inside
+  one host call is what attacks the rest. `Nautilus(use_jax_vmap=False)` selects an UNJITTED call unless
+  `use_jax_jit=True` is passed. Lever "second Cholesky" is not pure duplication (active-set/PDIP factor modified matrices).
+
+### Levers, re-ranked (replace the list above)
+
+0. **Phase 2 — the matched vmap-vs-jit experiment, then the batch-aware callback.** ONE A100 measurement decides the
+   policy: exact `Fitness._vmap` over 16 DISTINCT production parameter vectors vs 16 scalar-jitted evaluations of the
+   same vectors, identical solver + fallback semantics; host/device timeline, callback count, qhull-vs-table-building
+   host time, PDIP iterations per lane, walk steps per lane. Then the local PyAutoArray candidate: `pure_callback`
+   `vmap_method="expand_dims"` with a batch-aware body (one host call per batch; optional bounded host workers), parity
+   pinned. Prompt: `draft/research/autolens_profiling/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md`.
+1. **Device batch size decoupled from the Nautilus proposal batch** (chunked vmap / `lax.map(batch_size)` / scalar jit
+   with `use_jax_jit=True`) — decided by phase 2's numbers. PyAutoFit `fitness.py` + Nautilus `search.py`; needs a
+   cond-free fallback design for the batched path.
+2. **PSF convolution of the mapping-matrix cube (7.12 ms)** — harness experiment first (fft_shape, real-space for a
+   compact PSF, complex64 on the mapping path); PyAutoArray only if it wins.
+3. **The log-det Cholesky reuse (0.89 ms)** — only an initial unrestricted factor is reusable, with scaling/index care.
+   Small; last.
+- Not levers: mesh/mapper/weights, border relocator, mixed fusions, the F GEMM alone (fp64 dense floor; a symmetric
+  rank-k custom call is the only idea). Overlap of qhull with the ray trace is blocked (border relocation consumes the
+  traced grid first). Device triangulation: defer. Settled: matrix-free log-det (#247).

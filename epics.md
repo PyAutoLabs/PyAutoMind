@@ -114,3 +114,9 @@ epic, never picked standalone.
   Border relocator ON is production (autogalaxy config default true), 0.10 ms. Levers ranked for phase 2:
   (1) qhull host round-trip 5.44 ms, (2) PSF convolution cube 7.12 ms (harness first), (3) second Cholesky
   for log det F+λH 0.89 ms. Note `results/notes/hst_gpu_residue_phase1_2026_09.md`.
+  Phase 2 FILED 2026-09-16 as PLAN ONLY (no issue, no worktree, human said no dev yet):
+  `draft/research/autolens_profiling/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md` — per the Codex
+  review on #268: ONE matched A100 experiment (exact `Fitness._vmap` over 16 distinct draws vs 16 scalar-jitted
+  evals; production is vmap, phase 1 traced single-call) decides the batching policy, then the batch-aware
+  Delaunay `pure_callback` (`expand_dims`, one host call per batch) if the callback matters. Map revised with the
+  phase-1 table and re-ranked levers (0 vmap/callback, 1 batch-size decoupling, 2 PSF cube, 3 log-det factor).
