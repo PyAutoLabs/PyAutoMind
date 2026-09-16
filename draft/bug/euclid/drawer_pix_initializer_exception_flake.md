@@ -55,3 +55,5 @@ The run-level suite must be deterministic before it gates CI.
 
 - `$SCRATCH/relaxed_run*.log` from the 2026-09-16 session (may be gone).
 - The PR for #78 carries the `einstein_radius` sweep table.
+
+- 2026-09-16 (/prm on #79): `main`'s own Tests run 34677820679 (a363f57, slow py3.13 leg, 2026-09-12) is red on exactly this `InitializerException` at `run_level` setup — 6 errors, 12 s in — so main has carried this flake since the #73 merge; the PR-side legs never ran (see the pyautoheart relevance-gate prompt).

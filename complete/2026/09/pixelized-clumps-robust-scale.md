@@ -1,3 +1,78 @@
+## pixelized-clumps-robust-scale
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/78 (closed completed 2026-09-16)
+- completed: 2026-09-16
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/79 (head `39faca8`, merge `650dc2d29`) — label `pending-release`
+- classification: bug (workspace) — `euclid_strong_lens_modeling_pipeline`, direct, no phasing; epic `euclid-dr1-prep`. Fable session (architect); probe, implementation, ship recipe and prompt filing delegated to Opus.
+- ci: PR `Tests` and `Smoke Tests` runs on `39faca8` completed but every `unit / smoke`, `slow / smoke`, `smoke / smoke` leg was SKIPPED by the reusable workflow's relevance gate (paths outside `scripts/`, `config/`, `.github/`, the smoke lists) — merged on the human's decision on local evidence at the same commit: fast 124 passed / 7 deselected; slow 7 passed (6 of 7 repeat runs; the 7th = pre-existing `InitializerException` fixture flake); `pyauto-heart smoke euclid --root <wt>` 9/9. `main`'s Tests run 34677820679 (a363f57) was already red on that flake (slow py3.13 leg).
+- heart-ack: "Heart RED at ship (2026-09-16), acknowledged by the human for PR-open: 'install verification FAILED (testpypi; checks F)'; 'release validation FAILED (stage integrate)' — both unrelated to this repo."
+- parallel-claim: own worktree beside sed-chain-cpu-route (PR #70), sersic-variants (PR #75), sersic-variants-analysis, simulator-from-result-linear — disjoint hunks (sersic-variants edits util.py ≥ 1084 / README ~130; this task util.py 755–1055 / README ~165); whoever merges second rebases.
+
+## What shipped
+
+`files/wcs.json` recorded `source_clumps: []` on every real DR1 `vis_pix` fit because
+`Inversion.source_clumps_from` thresholds against the reconstruction's **maximum**, and on a real
+adaptive Delaunay/Hilbert mesh the brightest mesh pixel is an isolated spike 5–33× its neighbours.
+
+- `util.py`: `SOURCE_CLUMP_SCALE_PERCENTILE = 99.0`; new pure helper `source_clump_pix_indexes_from`
+  (the library finder line for line except the scale, plus a **brightest-pixel failsafe** with a
+  logged warning); `pixelized_source_clumps_from` returns `(clumps, rule)` via
+  `Inversion.mappings_from(pix_indexes=...)`; `wcs_dict_from` writes `source_clump_rule`
+  (`percentile` / `brightest_pixel` / `none`) beside `source_clumps`. `[]` now only when nothing was
+  reconstructed. Pipeline-side on purpose: the library option is filed as a follow-up; the DR1 pass
+  was gated on this landing.
+- `tests/test_wcs_dict.py`: spike + broad-faint-source finder test **with the shipped rule inline as
+  the control (asserted `[]`)**; failsafe test (caplog); empty-reconstruction test; pixelized fixture
+  with an injected spike (thin wrappers over the fit/inversion, no fixture mutation);
+  `source_clump_rule == "percentile"` on the fixture record.
+- `tests/test_latent_run_level.py`: `force_pickle_overwrite` round trip (strip `files/wcs.json` from
+  the `drawer_pix` zip, re-run under the flag from a *second* config copy, assert same identifier and
+  the record rewritten) — the path the 10,000-lens reload depends on had no coverage. The
+  "exactly one clump / four images" assertions were **replaced by draw-independent invariants**,
+  explicitly: the Drawer's random `einstein_radius` draw against a truth-built mesh makes the clump
+  count chaotic (0–3 clumps, 3–13 px, 3–4 images across an 11-point sweep), and under the shipped
+  rule the old test failed whenever the best draw was > ~0.6 % from truth.
+- `catalogue/README.md`: the `files/wcs.json` bullet documents the rule, the failsafe and the key.
+
+## Method decision (measured, not argued)
+
+Read-only Opus probe on the four completed `dr1_sep1` tiles, judged against the independent
+`vis_lp` MGE source centre, threshold 0.5 / min_pixels 3:
+
+| candidate | 102005065 | 102007899 | 102008532 (spike 58.7) | 102008848 (spike 20.1) |
+|---|---|---|---|---|
+| shipped raw vs max | none | none | none | none |
+| **raw vs p99** | 3 px, 0.062" | 6 px, 0.095" | 6 px, 0.228" | 7 px, 0.030" |
+| neighbour-median smooth | **none** | 6 px | 5 px | 14 px |
+| neighbour-mean smooth | 5 px, **0.128" (2nd knot)** | 7 px | 5 px | 4 px |
+
+The spikes sit **on the source** (1–8 % of the mesh radius), so a percentile scale is right and
+smoothing is wrong. Tile102008532's spike is a degenerate mesh pair (two mesh pixels 0.0011" apart vs
+0.213" spacing). Witness with the shipped code: `percentile` on 4/4, failsafe never fired.
+
+## Traps hit
+
+- `autonerves` `Config.push` is a no-op for an already-pushed path: flip a flag in a *second*
+  config copy and push that (memory `config-push-same-path-is-a-noop`).
+- The Heart reusable smoke workflow's PR relevance gate is inherited by callers that pass
+  `runner:` for pytest, so PRs touching only `util.py` / `tests/` run **no tests on the PR**
+  (#71–#73, #79). Filed as `draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md`.
+- `worktree_check_conflict` fired on four existing pipeline claims; own worktree on disjoint hunks
+  (2026-08-26 precedent).
+
+## Follow-ups filed (Mind drafts)
+
+- `draft/feature/autoarray/source_clumps_robust_scale.md` — `scale="percentile"` on `Inversion.source_clumps_from`.
+- `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md` — the 0.0011" mesh pair.
+- `draft/bug/euclid/drawer_pix_initializer_exception_flake.md` — the slow-suite fixture flake (main red on it since 09-12).
+- `draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md` — the CI blind spot.
+
+## Next (human)
+
+Rerun the `dr1_sep1` reload on RAL with `force_pickle_overwrite: true` (recipe in memory
+`euclid-dr1-wcs-reload-fpo-assessment`), check the regenerated `wcs.json` files, then the 15,032-tile pass.
+
+## Original prompt
+
 # `wcs.json` records no pixelized-source clumps on real DR1 lenses — the clump thresholds only work on the smooth simulation
 
 Type: bug

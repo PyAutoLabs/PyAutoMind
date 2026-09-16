@@ -237,17 +237,3 @@
     /mnt/ral/jnightin/PyAuto install. A100 leg is fp64, budget 7 on Delaunay, PDIP
     fallback, positivity never dropped. Pins: log evidence <= 1e-9 relative,
     regularization matrix bit-identical, log_likelihood NOT comparable across legs.
-
-## pixelized-clumps-robust-scale
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/78
-- issued: 2026-09-16
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/pixelized-clumps-robust-scale
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/pixelized-clumps-robust-scale
-- prompt: active/pixelized_source_clumps_empty_on_real_dr1.md
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/79 (commit 39faca8, label pending-release; smoke euclid 9/9)
-- heart-ack: "Heart RED at ship (2026-09-16), acknowledged by the human for PR-open only: 'install verification FAILED (testpypi; checks F)'; 'release validation FAILED (stage integrate)' — both unrelated to this repo; merge stays with /prm"
-- next: /prm once the fast + slow CI jobs are green on PR #79; then the human reruns the dr1_sep1 wcs.json reload on RAL
-- summary: wcs.json `source_clumps` is empty on every real DR1 vis_pix fit (0.5×max rule); switch the pipeline finder to a 0.5×p99 scale via the `pix_indexes` seam, add a brightest-pixel failsafe recorded as `source_clump_rule`, witness on 4 real tiles, add spike/failsafe/force_pickle_overwrite tests. Gates the euclid_dr1 wcs.json reload pass.
-- parallel-claim: "euclid_strong_lens_modeling_pipeline is also claimed by sed-chain-cpu-route (PR #70), sersic-variants (PR #75), sersic-variants-analysis and simulator-from-result-linear. Human-approved own worktree on 2026-09-16 (plan approval): file sets disjoint except sersic-variants, which edits util.py at lines >= 1084 (EuclidDataset / load_vis_dataset / parse_fit_args) and catalogue/README.md line ~130; this task edits util.py 755-1055 (clump finder, wcs_dict_from), catalogue/README.md ~165, tests/test_wcs_dict.py, tests/test_latent_run_level.py. Whoever merges second rebases."
