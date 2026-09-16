@@ -219,9 +219,9 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-levers
 - repos:
-  - PyAutoArray: feature/fixed-light-numba-levers
-  - autolens_profiling: feature/fixed-light-numba-levers
-- note: "LEVER 1 PR-OPEN 2026-09-16: PyAutoArray PR #553 (pending-release, bae9296e) + autolens_profiling PR #269 (7c7968c4, c899326e — note results/notes/fixed_lens_light_levers_2026_09.md). Measured RAL 343345: route b memo-ON 413.3 -> 299.7 ms (1.38x), H 110.6 -> 5.9 ms, 4/4 gates, witness bit-identical; 343346 A100 identity, #536 compaction constants inert at K=4. Heart RED (install verify testpypi F; release validation integrate) acknowledged by the human for PR-open only; merge via /prm. NEXT: lever 2 (log det H from sparsity) on feature/fixed-light-numba-levers-l2 stacked on lever 1, then lever 3 (shared Cholesky; folds draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md, numpy/numba only). Phase 3 of fixed-lens-light-numba-cpu; sized too-large by intake, large kept per the prompt."
+  - PyAutoArray: feature/fixed-light-numba-levers (+ -l2, -l3 stacked)
+  - autolens_profiling: feature/fixed-light-numba-levers (+ -l2, -l3 stacked)
+- note: "PAUSED 2026-09-16 ~15:00 BST (usage limit). Lever 1 PR-open: PyAutoArray#553 + profiling#269 (1.38x). Lever 2 PR-open: PyAutoArray#554 (stacked on #553, 0b17c292) + profiling#271 (stacked on #269, fd80eb9a) — 1.13x, CPU-only lever; cumulative 413.3 -> 267.4 ms (1.55x). Lever 3 IMPLEMENTED + pushed, PR NOT YET OPEN: PyAutoArray feature/fixed-light-numba-levers-l3 @ b4322c3e (Schur log-det off the fnnls factor + cached curvature_reg_matrix; resolves draft curvature_reg_matrix_rebuilt_every_access — hazard does not exist), profiling -l3 @ 3059992 (submit scripts, witness, handshake test flipped to n_calls==1). IN FLIGHT: RAL CPU A/B job 343355 (+ A100 job after it) — results on RAL at autolens_profiling_wt/fixed-light-numba-levers/results/breakdown/imaging/*lever3*. RESUME: harvest lever 3 rows, append lever 3 note sections, commit on profiling -l3, open both lever 3 PRs (Heart RED acked by the human for PR-open on levers 2+3: install verify testpypi F; release validation integrate), then /prm library-first in stack order. Worktree ~/Code/PyAutoLabs-wt/fixed-light-numba-levers (PyAutoArray on -l3, autolens_profiling on -l3). Session 3f82e5a8."
 - summary: |
     Lever 1 (DONE, PR-open): jit the split-regularization assembly on the
     numpy/numba path, bit-for-bit accumulation order, Python bodies retained as
