@@ -1,3 +1,49 @@
+## catalogue-mass-maps-fits
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/80
+- completed: 2026-09-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1633 (merge db087231)
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/81 (merge 510ed1ce)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1633
+- summary: |
+    Per-lens `convergence.fits`, `potential.fits` and `deflections.fits` (DEFLECTIONS_Y, DEFLECTIONS_X)
+    join the Euclid inspection bundle as stage 3 of 8 (`catalogue/scripts/lens_mass_maps.py`). They are a
+    collect, not a compute: every finished `initial_lens_model/vis_pix` search already writes
+    `image/tracer.fits` on the zoomed mask grid (+1 px buffer, 102x102 for the 100x100 sep1 cut-outs), and
+    the producer copies those HDUs out through a read-only aggregator (`unzip_temporary=True`). Idempotent,
+    per-lens failure isolation. README tables 13 -> 16 files. RAL path made sample-agnostic: `hpc/sync
+    submit`/`push-submit` forward sbatch arguments, `hpc/sync pull [dir ...]`/`status` restrict the transfer
+    to named result roots (so `pull inspect` never walks `output/` for 15 000 lenses), and the bundle
+    submit script derives `PROJECT_PATH` from `SLURM_SUBMIT_DIR`. Nothing was run on RAL.
+- witness: |
+    Local read-only run on the 18 dr1_sep1 zips through a scratch `output/dr1_sep1` symlink into
+    `Science/euclid_dr1/output`: 9 lenses x 3 files, the incomplete Tile102007299 skipped; full 8-stage
+    bundle exit 0; sha256 and stat of all 18 zips identical before and after; `find -newer` empty; maps
+    byte-identical to the tracer.fits HDUs. 354,240 B per lens -> ~5.3 GB at 15 000 lenses (float64;
+    float32 would halve it, not changed). Repeated byte-identically after the PyAutoFit fix.
+- library-fix: |
+    The plan's mechanism `af.AggregateFITS.extract_fits(hdus=[al.agg.fits_tracer.…])` failed on every real
+    lens fit: `SearchOutput.value` searches jsons before fits, and `files/tracer.json` shadows
+    `image/tracer.fits` (`AttributeError: 'Tracer' object has no attribute 'index_of'`, masked as
+    `'close'` by `_hdus`'s finally). First shipped as a pipeline stand-in; the human asked for the library
+    fix instead ("we dont have many results yet"). PyAutoFit#1633 adds `fits_source(result, name)` in
+    `aggregate_fits.py`, used by `_hdus` and `extract_csv`; regression test red on main. The pipeline
+    follow-up commit 13876cb deleted the stand-in. Same branch name in both repos so the pipeline CI checked
+    the chain out at the fix; library-first merge honoured.
+- traps: |
+    Five parallel claims on the pipeline repo waived (text-only overlaps). Heart RED (TestPyPI install
+    verification; release-validation integrate) at ship time, unrelated to either repo; both PRs opened
+    on the human's acknowledgement. `build_inspection_bundle.sh` has no env knob for its `inspect/`
+    directory (witness used a temporary symlink). Brain sized the task "large (7)"; it was one phase.
+- follow-ups: |
+    Human: in `Science/euclid_dr1` run `git merge origin/main`; `hpc/sync push --no-data`;
+    `hpc/sync submit cpu submit_build_inspection_bundle --export=ALL,SAMPLE=dr1_sep1`;
+    `hpc/sync pull inspect` (RAL needs PyAutoFit main refreshed via HPCPullPyAuto first). euclid_dr1 has
+    no `PyAutoCortex/projects.yaml` row. COOLEST CSV and the magnification plane stay in
+    `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md`, whose mass-model FITS leg this
+    record delivers.
+
+## Original prompt
+
 # Catalogue: convergence, potential and deflections FITS per lens, collected from finished fits with no refit
 
 Type: feature
