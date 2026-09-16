@@ -243,11 +243,12 @@
 - issued: 2026-09-16
 - prompt: active/hst_gpu_residue_p1_trace_decomposition.md
 - session: claude --resume a3118771-e642-4ff4-aa16-f94268bbe1f6
-- status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1
 - repos:
   - autolens_profiling: feature/hst-gpu-residue-p1
-- progress: "2026-09-16 phases A+B DONE: 3 commits pushed (46fd7e8, 6b60d30, 52af252), 527 tests + all lint gates green, A100 array 343350 harvested, note written. PR NOT yet opened — Heart RED (install verification FAILED testpypi checks F; release validation FAILED stage integrate), reasons unrelated to autolens_profiling; awaiting the human's go for PR-open under the corrective/standing exception. Next: gh pr create --label pending-release, then /prm."
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/270
+- status: awaiting-merge
+- progress: "2026-09-16 phase 1 SHIPPED to PR #270 (pending-release; opened under Heart RED — install verification FAILED testpypi checks F / release validation FAILED stage integrate — on the human's explicit go; merge stays human). Commits 46fd7e8, 6b60d30, 52af252; A100 array 343350 harvested; note results/notes/hst_gpu_residue_phase1_2026_09.md. Next: /prm when CI is green (standalone workspace task, no library-first gate). Then file phase-2 prompt(s) from the note's ranked levers, one at a time."
 - parallel-claim: "autolens_profiling is also claimed by fixed-light-numba-levers (#267, worktree ~/Code/PyAutoLabs-wt/fixed-light-numba-levers, branch feature/fixed-light-numba-levers). Disjoint file sets: #267 edits fixed_light_numba.py / call_accounting.py / hpc/batch_cpu and PyAutoArray; this task adds new files only (scripts/misc/likelihood_breakdown/xla_attribution.py, scripts/imaging/likelihood_breakdown/fixed_light_trace.py, its test, one hpc/batch_gpu submit, results/notes/hst_gpu_residue_phase1_2026_09.md, fixed_light_trace_* JSON/PNG). Shared surface = regenerated READMEs; whoever ships second rebases and re-runs build_readme.py. Own worktree chosen per the 2026-08-26 precedent."
 - summary: |
     Epic hst-gpu-non-solver-residue phase 1 — GPU only (numba CPU is #267). Trace the
