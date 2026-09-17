@@ -244,7 +244,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/555">issue #555</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/555">issue #555</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/558">autolens_workspace#558</a></summary>
 
 ```
 /start_dev active/demo_subplot_fit_interferometer_combined.md
