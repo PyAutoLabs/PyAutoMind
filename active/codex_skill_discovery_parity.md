@@ -14,10 +14,11 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued — planned behind active repository claims
 Filed: 2026-09-17
+Issued: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
-Blocked-by: codex_hook_parity
+Blocked-by: codex_hook_parity; mass-field-workspace-sweep
 
 ## Request
 
@@ -38,4 +39,3 @@ bootstrap instructions so new skills acquire both Claude and Codex adapters.
   canonical body; helper/internal Markdown is not exposed as a public skill.
 - Name normalization is collision-checked across installed assistants.
 - Existing Claude skill names and links continue to work.
-

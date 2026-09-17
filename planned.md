@@ -11,6 +11,25 @@
 <!-- toc:end -->
 
 
+## codex-skill-discovery
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/386
+- prompt: active/codex_skill_discovery_parity.md
+- filed: 2026-09-17
+- classification: workspace
+- suggested-branch: feature/codex-skill-discovery
+- blocked-by: codex-hook-parity (using PyAutoBrain and all four assistants); mass-field-workspace-sweep (using autolens_workspace)
+- affected-repos:
+  - PyAutoBrain
+  - autofit_assistant
+  - autogalaxy_assistant
+  - autolens_assistant
+  - autocti_assistant
+  - autofit_workspace
+  - autogalaxy_workspace
+  - autolens_workspace
+- note: "Plan approved 2026-09-17. Preserve the user-owned untracked scripts in the autofit_assistant and autolens_assistant main checkouts. Do not create the task worktree until both claims clear."
+
+
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
 - found: 2026-08-09, while pinning B10 of the @rhayes777 audit (`complete/2026/08/autogalaxy-profile-validation-guards.md`)
