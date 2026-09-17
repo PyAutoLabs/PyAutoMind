@@ -204,3 +204,22 @@
   - euclid_strong_lens_modeling_pipeline: feature/grid-offset-prior
 - note: "worktree_check_conflict grid-offset-prior euclid_strong_lens_modeling_pipeline exits 1 on five claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis #76, simulator-from-result-linear #77 parked, witt-wynne-catalogue #84). Code file sets are disjoint; catalogue/README.md shares one hunk with witt-wynne-catalogue: one-hunk resolution on whichever merges second. Waived on the human's plan approval 2026-09-17; fresh parallel worktree off origin/main."
 - note: "PAUSED 2026-09-17 17:10 BST, resumable. DONE on feature/grid-offset-prior (3 local commits d50eb52 prior ±0.5\" / 3563a98 prior_edge_y-x columns + header pin + tests / e58a1be README + eight producers; 208 fast tests green; NOT pushed, no PR). Witness done: sep1 Tile102008165 nir_j x 0.1906 [.., 0.2000] flagged → 0.2727 [0.167, 0.387] unflagged under ±0.5"; nir_h of that tile spins in Nautilus exploration (second case of 343381_8). RESUME: cd ~/Code/PyAutoLabs-wt/grid-offset-prior/euclid_strong_lens_modeling_pipeline; source ../activate.sh; pytest tests -q; /ship_workspace (Heart RED release-side → human ack); /prm; README one-hunk overlap with witt-wynne-catalogue #84. Full state on issue #88 comment."
+
+## demo-subplot-fit-interferometer-combined
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/555
+- issued: 2026-09-17
+- prompt: active/demo_subplot_fit_interferometer_combined.md
+- session: https://claude.ai/code/session_0118fvTWLWaRT2b6eMtPdkqy
+- status: workspace-dev
+- location: web-github (session clone /home/user/autolens_workspace, no task worktree)
+- worktree: n/a — web-github session clone; local-dev equivalent ~/Code/PyAutoLabs-wt/demo-subplot-fit-interferometer-combined
+- repos:
+  - autolens_workspace: claude/demo-subplot-fit-interferometer-docs-79u6vc
+- note: "worktree_check_conflict demo-subplot-fit-interferometer-combined autolens_workspace exits 0 (PYAUTO_MAIN=/home/user). Docs / medium / Autonomy: safe; launched without --auto, so the plan on issue #555 awaits the human before implementation. Prompt premise corrected on the issue: the folder is scripts/multi_dataset/ (not multi/), and imaging_and_interferometer/ fits one interferometer + one imaging dataset, so the fit_list comes from the datacube reference cube (interferometer/features/datacube/), which is the case the library function was written for."
+- summary: |
+    Add an interferometer arc to scripts/multi_dataset/plot.py mirroring the imaging arc: load the
+    datacube channels (auto-simulated by interferometer/features/datacube/simulator.py), fit each
+    with its own tracer.json, and call aplt.subplot_fit_interferometer_combined(fit_list=...) on
+    genuinely distinct fits; extend __Contents__ and __Visualizer__, add multi_dataset/plot.py to
+    smoke_tests.txt, update the README line, regenerate the notebook. NEXT = /start_workspace →
+    implement → /ship_workspace → /prm.

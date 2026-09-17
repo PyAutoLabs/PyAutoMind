@@ -9,12 +9,13 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: normal
-Status: draft
+Status: active
 Consequence: notify
 Witness: `aplt.subplot_fit_interferometer_combined` is called from a multi-dataset interferometer example under `autolens_workspace/scripts/multi/` with a `fit_list` of genuinely distinct fits (not `[fit, fit]`), and that script runs to completion under the smoke profile.
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-09
+Issued: 2026-09-17
 
 Split from `plot_coverage_followups.md` on 2026-09-09 (item 1 of 4). That file
 was a container of four independent follow-ups and said so — "do **not**
