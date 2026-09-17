@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows on low-pixel-count data</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/552">issue #552</a> — issued 2026-09-15 — library-dev</summary>
+<details><summary>📋 <a href="active/mixed_precision_inversion_jax_numpy_gap_small_data.md">Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows on low-pixel-count data</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/552">issue #552</a> — issued 2026-09-15 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/556">PyAutoArray#556</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/mixed_precision_inversion_jax_numpy_gap_small_data.md
@@ -354,6 +354,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#556](https://github.com/PyAutoLabs/PyAutoArray/pull/556) — `active/mixed_precision_inversion_jax_numpy_gap_small_data.md`
 - [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
