@@ -29,6 +29,10 @@ Usage:
     python3 scripts/ledger_merge.py classify path/one path/two    # explicit paths
     ... < paths-on-stdin
 
+Sources take precedence in that order: explicit paths, then `--base`, then
+stdin. Stdin is read only when neither of the others is given, so a `--base`
+run never blocks on a stdin that stays open (a harness socket).
+
 Exit codes: 0 = ledger-only (safe to auto-merge) · 1 = holds code (a human's
 call) · 2 = the script could not run. The caller must distinguish 1 from 2:
 "a human should look" and "the gate is broken" are not the same answer.
@@ -138,19 +142,27 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = parser.add_subparsers(dest="command", required=True)
     cls = sub.add_parser("classify", help="ledger-only, or does it hold code?")
-    cls.add_argument("paths", nargs="*", help="repo-relative paths (else stdin, else --base)")
+    cls.add_argument("paths", nargs="*", help="repo-relative paths (else --base, else stdin)")
     cls.add_argument("--base", help="diff HEAD against the merge base with this ref")
     cls.add_argument("--head", default="HEAD", help="the branch tip to judge (default HEAD)")
     args = parser.parse_args(argv)
 
+    # Source precedence: explicit paths, then --base, then stdin. `--base` must
+    # never read stdin: a Claude Code web/mobile session runs commands with a
+    # stdin that is not a TTY and never closes (a harness socket, not a pipe),
+    # so an `isatty()` test that falls through to `sys.stdin.read()` blocks
+    # forever, and `classify --base origin/main` hung there twice before this
+    # order was fixed (2026-09-17). Stdin is read only when it is the sole
+    # source left — the documented `... < paths` usage — where a caller that
+    # pipes nothing has asked for exactly the wait it gets, as with `cat`.
     if args.paths:
         paths = args.paths
-    elif not sys.stdin.isatty():
-        paths = sys.stdin.read().splitlines()
     elif args.base:
         paths = []
+    elif not sys.stdin.isatty():
+        paths = sys.stdin.read().splitlines()
     else:
-        parser.error("give paths, pipe them in, or pass --base")
+        parser.error("give paths, pass --base, or pipe paths in")
         return 2
     # Strip blanks BEFORE the emptiness check, not inside classify(): a stdin
     # of "\n" is one empty string, which is a truthy list, and an unfiltered

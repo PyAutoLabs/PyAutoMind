@@ -740,6 +740,11 @@ Predict the verdict before you push:
 python3 scripts/ledger_merge.py classify --base origin/main   # exit 0 = will auto-merge
 ```
 
+`--base` reads the diff from git and nothing else — never stdin — so it is safe
+to run from a web/mobile session, whose stdin is a harness socket that never
+closes. Piped paths (`classify < paths`) are read only when neither explicit
+paths nor `--base` is given.
+
 What blocks, and what does not:
 
 - **`lifecycle.py check` blocks.** Structural drift — a prompt in `active/`
