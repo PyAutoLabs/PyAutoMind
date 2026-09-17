@@ -121,7 +121,30 @@ change figures across 11 and 4 lens examples and say in their own text that a
 human should look at the figures. The heuristic cannot see that. Declaring
 `Consequence: glance` on such a prompt is the documented way to hold it.
 
+### Re-baseline (2026-09-17, before pass 2)
+
+Whole `draft/`, today's faculty over today's tree. The backlog grew by 47
+prompts since the pass-1 reading (mostly `euclid`, `autofit`, `autolens`
+filings). Method note: pass 1's 109 / 36 re-derive today as 108 / 35 because
+`repos.yaml` gained `autolens_inference` and one prompt now resolves an extra
+repo; each reading stands as measured on its day.
+
+| Reading | ready | witnessed | notify | glance | judge |
+|---|---|---|---|---|---|
+| derived | 156 | 64 | 17 | 36 | 103 |
+| declared (dashboard) | 156 | 64 | 12 | 24 | 102 + 18 unset |
+
+### Pass 2 — `autoarray`, 11 prompts (proposed 2026-09-17, awaiting accept/strike)
+
+Proposed on the issue, nothing written yet. The group is 11, not 10 (two
+2026-09-16 DR1 filings). Three already carry a witness and need only the
+restamp. As proposed: 10 judge / 1 glance → 1 notify / 8 glance / 2 judge as
+derived (1 / 9 / 1 with the `mapping_overlay` override), 173 → 64 (47) seed
+review-minutes; one `Witness: none —` (`multiwavelength_inversion`, a
+placeholder prompt). Counts get their own row here when the pass is written.
+
 ### Remaining passes
 
-`autoarray` (10) · `autolens` (9) · `autofit` (8) · `autolens_workspace` (6) ·
-`autolens_profiling` (5) · then a tail pass over the ~26 singleton targets.
+`autofit` (14) · `autolens` (11) · `autolens_workspace` (7) · `euclid` (6) ·
+`autogalaxy` (5) · `autolens_profiling` (5) · then a tail pass over the ~30
+singleton targets.

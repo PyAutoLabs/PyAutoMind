@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1454 records across 8 buckets.
+1457 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -192,6 +192,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-message-support](2026/09/ep-message-support.md)
 - [ep-no-multiprocessing-pool](2026/09/ep-no-multiprocessing-pool.md)
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
+- [ep-release-search-internals](2026/09/ep-release-search-internals.md)
 - [ep-review-92-followups](2026/09/ep-review-92-followups.md) — closed completed 2026-09-07
 - [ep-scale-collapse-basin-cure-or-caveat](2026/09/ep-scale-collapse-basin-cure-or-caveat.md)
 - [ep-stale-mask-fixed-point](2026/09/ep-stale-mask-fixed-point.md)
@@ -222,6 +223,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtofit-ch1-gradients-details](2026/09/howtofit-ch1-gradients-details.md)
 - [howtofit-colab-and-chapter-advanced](2026/09/howtofit-colab-and-chapter-advanced.md)
 - [howtofit-markdown-mirror-url](2026/09/howtofit-markdown-mirror-url.md)
+- [howtofit-mode](2026/09/howtofit-mode.md)
 - [howtofit-tutorial-3-emcee-flaky](2026/09/howtofit-tutorial-3-emcee-flaky.md)
 - [howtofit-tutorial-4-6-feedback](2026/09/howtofit-tutorial-4-6-feedback.md)
 - [howtofit-tutorial-followups](2026/09/howtofit-tutorial-followups.md)
@@ -261,6 +263,7 @@ markers; everything below GENERATED is rebuilt.
 - [mind-post-cortex-p3-pr-ledger](2026/09/mind-post-cortex-p3-pr-ledger.md)
 - [mind-post-cortex-p4-batch-fidelity](2026/09/mind-post-cortex-p4-batch-fidelity.md) — closed, completed 2026-09-03
 - [mind-post-cortex-p5-heart-freeze](2026/09/mind-post-cortex-p5-heart-freeze.md) — closed, completed 2026-09-03
+- [mixed-precision-inversion-gap](2026/09/mixed-precision-inversion-gap.md)
 - [model-figure-prose-simplify](2026/09/model-figure-prose-simplify.md)
 - [model-figures-ep-view](2026/09/model-figures-ep-view.md)
 - [model-figures-graph-spec](2026/09/model-figures-graph-spec.md)

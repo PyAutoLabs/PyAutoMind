@@ -4,12 +4,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
 - prompt: active/witness_campaign.md
-- session: claude --resume session_018ip88yepHJjM1VjjFMMmuP
-- status: library-dev
-- location: web-github (session clones, no task worktree; branch claude/witness-campaign-feature-h21cq4)
+- session: claude --resume session_01LRRECsu9gfMvjb8F5aXMHu
+- status: awaiting-input
+- location: web-github (session clones, no task worktree; branch claude/active-witness-campaign-0g8phk)
 - worktree: n/a — web-github session clone (/home/user/PyAutoMind)
 - repos:
-  - PyAutoMind: claude/witness-campaign-feature-h21cq4
+  - PyAutoMind: claude/active-witness-campaign-0g8phk
+- awaiting: "2026-09-17. Pass 2 (`autoarray`, 11 prompts) proposed on issue #398 — accept / edit / strike per item, nothing written until then. Re-baseline the same day: 156 ready, 64 witnessed, derived 17 notify / 36 glance / 103 judge."
 - summary: |
     Campaign, not a one-shot: ~6 passes of ~15 prompts over the 89 unwitnessed
     `Unattended: ready` drafts. Each pass proposes candidate witnesses for the
@@ -24,8 +25,10 @@
     Pass 1 (`workspaces`, 15) SHIPPED 2026-09-10: 15 judge -> 7 notify /
     8 glance / 0 judge, 300 seed review-minutes -> 24. Backlog now 109 ready,
     36 witnessed, derived 12 notify / 19 glance / 78 judge.
-    Next: `autoarray` (10), then autolens (9), autofit (8),
-    autolens_workspace (6), autolens_profiling (5), tail pass (~26 singletons).
+    Pass 2 (`autoarray`, 11) PROPOSED 2026-09-17 on the issue, awaiting the
+    human's accept/strike: as proposed 173 -> 64 seed review-minutes.
+    Next after it: autofit (14), autolens (11), autolens_workspace (7),
+    euclid (6), autogalaxy (5), autolens_profiling (5), tail (~30).
     Pass-by-pass counts are in the prompt's `## Campaign log`.
 
 ## sed-chain-cpu-route
@@ -77,11 +80,11 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/76
 - issued: 2026-09-12
 - prompt: active/sersic_variants_analysis.md
-- session: claude --resume session_01KTGhZacWuxrxYkXXWXJbBx
+- session: https://claude.ai/code/session_01LfJojDFow4pxPzuwRHqMt2 (web-github resume 2026-09-17; planned 2026-09-12 in session_01KTGhZacWuxrxYkXXWXJbBx)
 - status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/sersic-variants-analysis
+- worktree: n/a — web-github session clone (/home/user/euclid_strong_lens_modeling_pipeline); the local ~/Code/PyAutoLabs-wt/sersic-variants-analysis worktree named on 2026-09-12 never pushed feature/sersic-variants-analysis, so the branch of record is the session's
 - repos:
-  - euclid_strong_lens_modeling_pipeline: feature/sersic-variants-analysis
+  - euclid_strong_lens_modeling_pipeline: claude/sersic-variants-analysis-3iqibr
 - note: "worktree_check_conflict sersic-variants-analysis euclid_strong_lens_modeling_pipeline exits 1 on three claims. remove-fits-dataset-plots-yaml is stale (PR #63 merged, issue #62 closed 2026-09-10, no close-out). sed-chain-cpu-route (PR #70) and sersic-variants (PR #75) are live, but neither file set intersects this one: this task adds only scripts/analysis/** (new tree), tests/test_sersic_variants_analysis.py (new) and one line in config/build/no_run.yaml, which neither touches. Its documentation deliberately goes in a new scripts/analysis/README.md rather than scripts/README.md or catalogue/README.md, which belong to PR #75's diff. Waived on the human's plan approval, in a fresh parallel worktree based on origin/main - the same call sed-chain-cpu-route itself recorded against remove-fits-dataset-plots-yaml."
 - summary: |
     PR 2 of the euclid_sersics variants work: scripts/analysis/sersic_variants.py
@@ -116,36 +119,6 @@
     Read that instead, under the same resolve_files_path hash, guard that no
     lp_linear profile survives, and add tests/test_simulator_from_result.py —
     --from-result had no test at all.
-## howtofit-mode
-- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/42
-- issued: 2026-09-14
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtofit-mode
-- repos:
-  - HowToFit: feature/howtofit-mode
-  - autofit_workspace: feature/howtofit-mode
-  - PyAutoFit: feature/howtofit-mode
-- released-repo: autofit_assistant — PR #43 merged; issue #42 closed; remaining repo claims retained.
-- prompt: active/howtofit_mode.md
-- summary: Assistant implementation ready and reviewed; approved README prompt propagation to HowToFit, autofit_workspace and PyAutoFit in progress. Shipping held by Heart YELLOW pending human acknowledgement.
-- ship-hold: |
-    Workspace validation: 3 failures (cloud#34824535982).
-    Manifest drift: organism-map 2; public front-door 2.
-    Profiling drift: three matrix_free SLQ fp64 results — delaunay_hpc_a100,
-    delaunay_nn_hpc_a100, rectangular_hpc_a100.
-- next: Acknowledge these Heart YELLOW reasons before ship_workspace; source remains local and uncommitted.
-- parallel-claim: |
-    RESOLVED 2026-09-14: the parallel task `howtofit-tutorial-4-6-feedback`
-    (HowToFit#61 / PR#62) merged and closed out, so HowToFit is no longer shared
-    and this claim stands alone again. Kept as a record of a deliberate,
-    human-approved override of the conflict guard, not drift. Evidence at the
-    time: this task's `feature/howtofit-mode` had 0 commits of its own and 0
-    changed files against origin/main (9 behind, working tree clean) — the
-    HowToFit claim was registered but never used. File sets were disjoint:
-    howtofit-mode is README/AGENTS assistant-prompt propagation; the other task
-    touched scripts/, notebooks/ and markdown/ under chapter_1_introduction only.
-    NOTE: `feature/howtofit-mode` is now 9+ commits behind origin/main and the
-    merged tutorial work landed there — rebase before editing HowToFit here.
 
 ## multi-galaxy-j1011-real-data
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549
@@ -155,6 +128,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/multi-galaxy-j1011-real-data
 - repos:
   - autolens_workspace: feature/multi-galaxy-j1011-real-data
+- note: "2026-09-17 /start_dev resume from a cloud session: blocked — every HST/SDSS archive host is 403 through the session proxy and the feature branch is not on the autolens_workspace remote (local-only or never created). Needs a local CLI session; nothing to do from the web."
 
 ## jax-runtime-and-parity
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/317
@@ -165,20 +139,6 @@
 - repos:
   - autolens_workspace_test: feature/jax-runtime-and-parity
   - autogalaxy_workspace_test: feature/jax-runtime-and-parity
-
-## ep-release-search-internals
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1631
-- issued: 2026-09-15
-- prompt: active/ep_re_jit_compiles_the_vmapped_likelihood.md
-- session: claude --resume 32df3fc7-e0cc-4fc7-98c7-0f160dca158c
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1634
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1634
-- repos:
-  - PyAutoFit: claude/vmapped-likelihood-jit-compiles-bhog4o
-- environment: web-github (Claude Code remote session 2026-09-17; no local worktree, the branch is the session's claude/vmapped-likelihood-jit-compiles-bhog4o on the session clone rather than feature/ep-release-search-internals)
-- parallel-claim: PyAutoFit also claimed by howtofit-mode (README propagation only; its PyAutoFit worktree clean, 0 commits ahead of origin/main on 2026-09-15); disjoint files, own worktree when started
-- note: "Implemented and pushed 2026-09-17 from a remote session (/start_dev -> /start_library; Fable planned, Opus executed): PyAutoFit claude/vmapped-likelihood-jit-compiles-bhog4o @ 9afdc2b, evidence on the issue (#1631 progress comment 2026-09-17: fail-before/pass-after test, 5-factor JAX witness live Fitness 5->12 on main vs 0 with the fix, 333 tests green serially). PR #1634 opened 2026-09-17 (pending-release; full suite 2858 passed serially as the gate, Heart not installed on this surface); /prm judged once on open and stops for the human to re-run when CI is green. Follow-ups filed: draft/refactor/autofit/ep_analysis_level_compile_cache.md, draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md, draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md. Previously: planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library ep-release-search-internals. Fix locus: AbstractSearch.optimise releases result._search_internal before status.result so each EP factor search's Fitness and its compiled JAX executables are collectable (slope_hierarchy_scale job 342410 retained 76 searches' executables and died in LLVM section memory at 64 GB). Follow-ups to /intake at ship: analysis-level compile cache across EP steps; vmap(jit) batch-shape churn."
 
 ## jit-visualization-outputs
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/318
@@ -203,17 +163,6 @@
     PyAutoFit#1508 / PyAutoArray#467. Incidental: "Visualization warm-up failed
     (non-fatal)" swallowed in autofit fitness.py for ellipse + point_source -
     separate prompt draft/bug/autofit/visualization_warmup_swallowed_exception.md.
-
-## mixed-precision-inversion-gap
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/552
-- issued: 2026-09-15
-- prompt: active/mixed_precision_inversion_jax_numpy_gap_small_data.md
-- session: claude --resume 06b62eb4-de08-40c6-91e0-ecce790fce3d
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/mixed-precision-inversion-gap
-- repos:
-- parallel-claim: "autogalaxy_workspace_test is claimed by jax-runtime-and-parity (autolens_workspace_test#317, smoke_tests.txt only, zero diff vs main on 2026-09-15); this task's workspace leg is one tolerance edit in scripts/imaging/jax_likelihood/rectangular.py and is added via worktree_add_repo only after that claim clears. PyAutoArray is unclaimed."
-- note: "Planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library mixed-precision-inversion-gap (PyAutoArray only, library first). Before any measurement move autogalaxy_workspace_test/dataset/imaging/jax_test aside: the on-disk copy is the stale pre-#117 180x180 dataset and should_simulate does not detect the resolution change. Key reframing: the asserted quantity is log_likelihood so the gap is pure delta-chi-squared; the NumPy reference is not fp64 (mapper_util honours use_mixed_precision on numpy); the fp32 curvature branch is inert but rounds 1/sigma inconsistently with the fp64 data vector; JAX (jaxnnls IPM) and NumPy (fnnls) run different NNLS algorithms."
 
 ## hst-gpu-residue-p2
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/273
