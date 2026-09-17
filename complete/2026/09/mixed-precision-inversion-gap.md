@@ -89,6 +89,19 @@ surface (no `pyauto-heart`); the fallback gate — the full PyAutoArray suite �
 was green. Phase A diagnostics and the after-fix re-measurement are on the
 issue: PyAutoArray#552, comments of 2026-09-17.
 
+**Independent sanity check after the merge (2026-09-17, issue comment on
+PyAutoArray#552).** Old vs new transform compared on criteria the change
+cannot touch: distance of the model image to the known noise-free truth falls
+24-32 % in all four cells (two geometries x two solver modes), Bayesian
+evidence rises 820-1855 nats while the regularization term falls, degenerate
+mesh cells drop 133 -> 65 (316 px) and 384 -> 111 (716 px) — the old edges
+had collapsed onto exact image-grid columns. Lensed data (PyAutoLens, 432 px,
+no ties) and the density-adaptive mesh are bit-identical old vs new on both
+backends; reordering identical input rows moved the old transform by 0.26 of
+a mesh cell, the new by 2e-16. Found on the way: `MeshGeometryRectangular.
+areas_transformed` raises IndexError for adapt-image meshes (pre-existing,
+identical old/new) — filed as `draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md`.
+
 ## Original prompt
 
 # Mixed-precision inversion: the JAX-vs-NumPy log-likelihood gap grows on low-pixel-count data
