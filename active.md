@@ -142,10 +142,11 @@
 - prompt: active/ep_re_jit_compiles_the_vmapped_likelihood.md
 - session: claude --resume 32df3fc7-e0cc-4fc7-98c7-0f160dca158c
 - status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/ep-release-search-internals
 - repos:
+  - PyAutoFit: claude/vmapped-likelihood-jit-compiles-bhog4o
+- environment: web-github (Claude Code remote session 2026-09-17; no local worktree, the branch is the session's claude/vmapped-likelihood-jit-compiles-bhog4o on the session clone rather than feature/ep-release-search-internals)
 - parallel-claim: RESOLVED 2026-09-17 — `howtofit-mode` (which also claimed PyAutoFit, README propagation only) shipped via PyAutoFit#1625 on 2026-09-14 and was closed out to `complete/2026/09/howtofit-mode.md`; PyAutoFit is no longer shared. Kept as a record of the earlier human-approved parallel claim.
-- note: "Planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library ep-release-search-internals. Fix locus: AbstractSearch.optimise releases result._search_internal before status.result so each EP factor search's Fitness and its compiled JAX executables are collectable (slope_hierarchy_scale job 342410 retained 76 searches' executables and died in LLVM section memory at 64 GB). Follow-ups to /intake at ship: analysis-level compile cache across EP steps; vmap(jit) batch-shape churn."
+- note: "Resumed 2026-09-17 in a remote session (/start_dev -> /start_library), implementation in progress on the claude/ branch above. Previously: planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library ep-release-search-internals. Fix locus: AbstractSearch.optimise releases result._search_internal before status.result so each EP factor search's Fitness and its compiled JAX executables are collectable (slope_hierarchy_scale job 342410 retained 76 searches' executables and died in LLVM section memory at 64 GB). Follow-ups to /intake at ship: analysis-level compile cache across EP steps; vmap(jit) batch-shape churn."
 
 ## jit-visualization-outputs
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/318
