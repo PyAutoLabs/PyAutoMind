@@ -249,6 +249,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-grad-delaunay-constant-folding-guard](2026/09/jax-grad-delaunay-constant-folding-guard.md) — rtol 1e-10 guard retired
 - [jax-grad-delaunay-fd-sweep-repin](2026/09/jax-grad-delaunay-fd-sweep-repin.md) — Heart RED corrective
 - [jax-import-order-x64](2026/09/jax-import-order-x64.md)
+- [jax-runtime-and-parity](2026/09/jax-runtime-and-parity.md)
 - [latent-integration-smoke](2026/09/latent-integration-smoke.md)
 - [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
 - [lib-tests-compile-caches](2026/09/lib-tests-compile-caches.md)

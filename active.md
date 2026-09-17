@@ -88,30 +88,6 @@
     markdown report. Pure functions split from the CLI; a synthetic four-CSV
     fixture with a variant missing two tiles pins the inner join and its reporting.
 
-## jax-runtime-and-parity
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/317
-- issued: 2026-09-15
-- prompt: active/jax_runtime_and_parity.md
-- session: claude --resume c74b6b89-11fe-42df-8b16-09bb12dcedb6
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/jax-runtime-and-parity
-- repos:
-  - autolens_workspace_test: feature/jax-runtime-and-parity
-  - autogalaxy_workspace_test: feature/jax-runtime-and-parity
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/320
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/122
-- summary: |
-    Defect refuted twice (2026-08-21, 2026-09-15): all six jax_likelihood scripts pass
-    the NumPy-vs-JIT parity assertions under profile_release on jax 0.10.2, no
-    pytype_aval_mappings traceback anywhere. The one real residue is fixed on both
-    branches: smoke_tests.txt re-enables imaging/jax_likelihood/delaunay_mge.py (3/3
-    cold smoke runs, 53-71 s vs the 300 s cap). PRs opened 2026-09-17 from a web
-    session (feature commits were already pushed from the CLI worktree); no library
-    change, so no library-first gate. Next: /prm per PR once workspace-smoke is green
-    on 3.12 and 3.13; the complete/ record should mirror
-    complete/2026/08/autofit-sampler-database.md and hand the intermittent 1805 s
-    hangs on other jax_likelihood scripts to the xla-cpu-eigen-pool-deadlock epic.
-
 ## jit-visualization-outputs
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/318
 - issued: 2026-09-15
@@ -165,6 +141,27 @@
   - euclid_strong_lens_modeling_pipeline: feature/grid-offset-prior
 - note: "worktree_check_conflict grid-offset-prior euclid_strong_lens_modeling_pipeline exits 1 on five claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis #76, simulator-from-result-linear #77 parked, witt-wynne-catalogue #84). Code file sets are disjoint; catalogue/README.md shares one hunk with witt-wynne-catalogue: one-hunk resolution on whichever merges second. Waived on the human's plan approval 2026-09-17; fresh parallel worktree off origin/main."
 - note: "PAUSED 2026-09-17 17:10 BST, resumable. DONE on feature/grid-offset-prior (3 local commits d50eb52 prior ±0.5\" / 3563a98 prior_edge_y-x columns + header pin + tests / e58a1be README + eight producers; 208 fast tests green; NOT pushed, no PR). Witness done: sep1 Tile102008165 nir_j x 0.1906 [.., 0.2000] flagged → 0.2727 [0.167, 0.387] unflagged under ±0.5"; nir_h of that tile spins in Nautilus exploration (second case of 343381_8). RESUME: cd ~/Code/PyAutoLabs-wt/grid-offset-prior/euclid_strong_lens_modeling_pipeline; source ../activate.sh; pytest tests -q; /ship_workspace (Heart RED release-side → human ack); /prm; README one-hunk overlap with witt-wynne-catalogue #84. Full state on issue #88 comment."
+
+## parameterization-prior-count
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1635
+- issued: 2026-09-17
+- prompt: active/parameterization_prior_count_blowup.md
+- session: https://claude.ai/code/session_01TSJ72sveM7GrTcddMXzUkb
+- status: library-shipped, awaiting-merge
+- location: web-github (session clone /home/user/pyautofit, no task worktree; branch claude/parameterization-prior-count-blowup-jzsrj0)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1637
+- shipped: 2026-09-17 (commit 97a92e6; full test_autofit 2813 passed / 48 skipped; pending-release label set; workspace impact none — option iii; autonomy_log row is /prm's at close-out)
+- worktree: n/a — web-github session clone (/home/user/pyautofit)
+- repos:
+  - PyAutoFit: claude/parameterization-prior-count-blowup-jzsrj0
+- note: "Autonomy: safe / Unattended: ready on the prompt; refactor cap is safe. Plan written to the issue and executed without a plan-approval hold (Fable plans, Opus executes); ends at PR-open, merge stays human via /prm. The timing witness (mge_group.py, 763,555 -> per-node calls, >= 5 s) needs autogalaxy_workspace_test and is the human's local re-run; in-session witnesses are the oracle byte-identity test and the path_instances_of_class call-count test."
+- summary: |
+    AbstractPriorModel.parameterization calls obj.prior_count on every prefix of
+    every leaf path, and prior_count is a full subtree walk, so model.info costs
+    O(leaves x subtree) (763,555 recursive calls on mge_group.py). Fix: a
+    bottom-up, identity-memoised unique-prior set per node inside the single
+    parameterization call; leaf listing and entry order untouched so the text
+    is byte-identical. Oracle test keeps the old algorithm verbatim.
 
 ## demo-subplot-fit-interferometer-combined
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/555

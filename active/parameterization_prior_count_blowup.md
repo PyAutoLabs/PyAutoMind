@@ -16,6 +16,7 @@ Witness: `model.info` and `factor_graph.global_prior_model.info` on `autogalaxy_
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-09-17
 
 `AbstractPriorModel.parameterization`
 (`autofit/mapper/prior_model/abstract.py:2069`) walks every prefix path of every
