@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/provider_neutral_bundle_prompts.md">Make generated bundle prompts provider-neutral</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/383">issue #383</a> — issued 2026-09-17 — library-dev</summary>
+<details><summary>📋 <a href="active/provider_neutral_bundle_prompts.md">Make generated bundle prompts provider-neutral</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/383">issue #383</a> — issued 2026-09-17 — blocked</summary>
 
 ```
 /start_dev active/provider_neutral_bundle_prompts.md
