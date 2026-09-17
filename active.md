@@ -29,13 +29,14 @@
 - issued: 2026-09-17
 - prompt: active/provider_neutral_bundle_prompts.md
 - session: Codex local-dev (Sol execution)
-- status: library-dev
+- status: blocked
 - autonomy: supervised (`--auto` launch; effective supervised)
 - worktree: ~/Code/PyAutoLabs-wt/provider-neutral-bundle-prompts
 - repos:
   - PyAutoBrain: feature/provider-neutral-bundle-prompts
   - PyAutoMind: feature/provider-neutral-bundle-prompts
 - note: "PyAutoBrain was initially claimed by oneshot-benchmark-harness, but its Brain PR #380 is merged. The human reviewed and waived that stale overlap on 2026-09-17; the stale Brain claim was released while the separate autolens_assistant PR remains active."
+- blocker: "Autonomous ship gate Heart RED on 2026-09-17: install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate). Tests PASS (PyAutoBrain 895, PyAutoMind 456), smoke n/a, review CLEAN. Progress: https://github.com/PyAutoLabs/PyAutoBrain/issues/383#issuecomment-5721491107"
 
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
