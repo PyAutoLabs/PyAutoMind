@@ -208,24 +208,26 @@ Human pre-accepted the pass before seeing the candidates ("Continue i
 accept"), so proposal and write landed in one turn, with every pinned decision
 listed on the issue for after-the-fact strikes. No restamps this time (the one
 witnessed `autolens` prompt already agreed with itself). `multi_plane_time_delays`
-keeps `judge` on its own merits: the prose trips "raises " but the task also
-decides whether a half-plane-bound `LensCalc` refuses or answers, a real error
+keeps `judge` on its own merits — declared over a derived `glance` (its
+"raises" sits inside inline code, which the faculty masks): the task decides
+whether a half-plane-bound `LensCalc` refuses or answers, a real error
 contract, and the science is a large multi-plane formalism. Two repeated title
 lines collapsed (`magnification_errors_posterior_draws`, `point_magnification_api`).
 
 | | notify | glance | judge | review-minutes |
 |---|---|---|---|---|
 | before | 0 | 0 | 11 | 230 |
-| after | 0 | 11 | 0 | 33 |
+| after | 0 | 10 | 1 | 55 |
 
 Backlog after pass 4: 157 ready, 94 witnessed + 3 `none`, 60 not —
-derived **20 notify / 64 glance / 73 judge**; declared **15 / 63 / 65** +
+derived **20 notify / 64 glance / 73 judge**; declared **15 / 62 / 66** +
 14 unset.
 
 Decisions the accept pinned, for a later strike if wanted: `one_construction_path`
-and `witt_wynne_solver_library_home` declared `glance` over a derived `notify`
-(each adds public API — an accessor, a module — the pass-3 `split_fitness`
-rule); `magnification_errors_posterior_draws` is gated on phases 5-6 and its
+declared `glance` over a derived `notify` (a new public accessor — the pass-3
+`split_fitness` rule) and `witt_wynne_solver_library_home` declared `glance`
+over a derived `judge` (the keyword hit is its deliverable naming a public API;
+the bit-identical witness makes `glance` the honest tier); `magnification_errors_posterior_draws` is gated on phases 5-6 and its
 witness assumes them (the pass-1 `group_los_halos` shape); `point_magnification_api`'s
 parity decision (signed or |mu|) stays open — the witness accepts either,
 documented; `quick_update_plotting_cost`'s witness covers only the
