@@ -1,4 +1,4 @@
-# Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/
+# Propagate the separate-shear idiom to group/ and cluster/ — as MassField
 
 Type: docs
 Target: autolens_workspace
@@ -7,15 +7,65 @@ Repos:
 Themes:
 - cluster
 - notebooks
-Difficulty: small
+Difficulty: medium
 Autonomy: safe
 Consequence: notify
-Witness: A grep for `shear=af.Model(al.mp.ExternalShear) if i == 0 else None` under `scripts/group/` returns nothing — all four named sites hold the shear in a `shear_galaxy` at (0.0", 0.0") — the traced grid stays `np.allclose` to the pre-change one (this is presentational, per #378), and the smoke suite is green with notebooks and `workspace_index.json` regenerated.
-Review-minutes: 0
+Witness: `grep -rn "if i == 0 else None" scripts/group/` and `grep -rn 'kwargs\["shear"\]' scripts/group/` both return nothing — every former site holds the field in an `al.MassField` named `mass_field` at the system centre (0.0", 0.0") — the traced grid of `group/modeling.py`'s model at fixed instance values stays `np.allclose` to the pre-change one (presentational, per #378), the positional `tracer.galaxies[k]` sites re-offset or named, the smoke suite green, notebooks and `workspace_index.json` regenerated.
+Review-minutes: 5
 Unattended: ready
 Priority: normal
+Epic: mass-field
+Phase: 4
+Blocked-by: phase 3 (`draft/docs/workspaces/mass_field_workspace_sweep.md`) merged — group/ goes straight to `MassField`, never through the `shear_galaxy` interim
 Parent: complete/2026/07/multi-galaxy-imaging-parity.md
 Filed: 2026-07-30 (backfilled from git)
+
+## Re-scoped 2026-09-17 (phase 4 of `draft/feature/autogalaxy/mass_field_epic.md`)
+
+The `/start_dev` plan checkpoint for this prompt found the scope is the whole
+`scripts/group/` subtree, not four sites, and the discussion it opened became
+the MassField epic. What changed:
+
+- **Target idiom is `al.MassField`, not a shear-only `Galaxy`.** Mirror
+  `multi_galaxy/` *after* phase 3 (`mass_field = af.Model(al.MassField, redshift=0.5,
+  shear=af.Model(al.mp.ExternalShear))` in `af.Collection(**lens_dict,
+  mass_field=mass_field, source=source)`; SLaM stages chain
+  `mass_field=<result>.model|instance.galaxies.mass_field`).
+- **Full survey (autolens_workspace `30104f6`):** 30 loop-idiom sites in 19
+  files — the four named plus `features/{linear_light_profiles, no_lens_light,
+  multi_gaussian_expansion, pixelization (modeling, slam, adaptive, delaunay,
+  cpu_fast_modeling), scaling_relation, advanced/{operated_light_profile,
+  subhalo/detect, sky_background, shapelets}}`, nine of them SLaM chaining lines
+  (`...lens_0.shear if i == 0 else None`); plus 12 sites in the
+  `kwargs["shear"]` spelling in `features/advanced/{mass_stellar_dark,
+  double_source_plane_lens}`, whose simulator (`mass_stellar_dark/simulator.py:133`)
+  and hand-summed `fit.py:256` walkthrough move to a `MassField` in the tracer
+  list the same way (dataset bit-identical); prose in ~25 files says "only
+  `lens_0` carries an `ExternalShear`".
+- **The one real trap:** `linear_light_profiles/{fit,modeling,slam}.py` and
+  `multi_gaussian_expansion/source_science.py` index `tracer.galaxies[k]`
+  positionally (`[0..3]`, `[n_main + i]`, `[n_lenses + 1 + n_extra + i]`);
+  inserting the field shifts those offsets. Pick one rule (named access where
+  the API allows, else re-offset) and run each of those scripts directly —
+  most are not on the smoke roster (`group/modeling.py` and
+  `group/features/group_halo/modeling.py` are; `group/start_here.py` is
+  disabled under `PYAUTO_SMALL_DATASETS=1`).
+- **Prose:** `group/modeling.py` gains the `__External Shear__` section phase 3
+  writes for `multi_galaxy/modeling.py` (reuse verbatim, "lens pair" → "group"),
+  its `__Contents__` line, the header bullet and the `__Main Galaxies and Extra
+  Galaxies__` sentence; every "only `lens_0`" line across the subtree.
+- **`cluster/` needs nothing** (no `ExternalShear` in any script; only a κ/γ
+  magnification formula in `likelihood_function.py`). `group/features/group_halo`
+  has no shear. `imaging/` stays galaxy-attached (epic Decisions). Record all
+  three in the PR.
+- Difficulty re-sized small → medium (declared small, Feature Agent derived
+  large; the per-site change is mechanical and the numerics provably
+  unchanged, which is what keeps it below large).
+
+The original prompt follows unchanged for its rationale; where it says
+`shear_galaxy`, read `mass_field`.
+
+## Original prompt (2026-07-30)
 
 `multi_galaxy/` now holds the system's external shear in its own
 `shear_galaxy` at the system centre (0.0", 0.0") instead of attaching it to

@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 206 |
+| [Backlog](#backlog) (`draft/`) | 211 |
 
 > **No batch in flight.**
 
@@ -134,7 +134,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 114
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 113
 
 <details><summary>📋 <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on every call…</a> — autofit · medium · supervised · medium</summary>
 
@@ -148,14 +148,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/refactor/autofit/parameterization_prior_count_blowup.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
 ```
 
 </details>
@@ -228,6 +220,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
 ```
 
 </details>
@@ -518,7 +518,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**206** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**211** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **43** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 58</summary>
@@ -1424,7 +1424,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 17</summary>
+<summary><b>docs</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -1470,14 +1470,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
 ```
 
 </details>
@@ -2643,6 +2635,67 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 </details>
 
 <details>
+<summary><b>MassField — external shear, mass sheets and external potentials as their own model object (Galaxy sibling; galaxy-attached form kept, result identifiers unchanged)</b> — 6 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>MassField — external shear, mass sheets and external potentials as their own model object (Galaxy sibling; galaxy-attached form kept, result identifiers unchanged)</b> — ledger: `draft/feature/autogalaxy/mass_field_epic.md`</summary>
+
+```
+Continue the 'MassField — external shear, mass sheets and external potentials as their own model object (Galaxy sibling; galaxy-attached form kept, result identifiers unchanged)' epic. Its canonical state lives in draft/feature/autogalaxy/mass_field_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 5 phases — 1 PyAutoGalaxy `MassField(Galaxy)` class, 2 PyAutoLens seams (pytree registration, COOLEST 1:1, LOS sheets, `model_util.mass_field_from` with the `ExternalPotential` centre tie), 3 autolens_workspace guides + `multi_galaxy/` (`shear_galaxy` → `mass_field`), 4 `group/` (the re-scoped 2026-07-30 prompt, straight to `MassField`), 5 sibling sweep by grep. Issue ONE at a time in order; 3–5 follow the *released* libraries. Hard invariant: `Galaxy` and the prior configs are never edited, no deprecation warning — a user's existing galaxy-attached shear model keeps its PyAutoFit result identifier. Filed 2026-09-17 from the `/start_dev` plan checkpoint of the group shear prompt.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/mass_field_class.md">MassField: a MassProfile-only sibling of Galaxy for external shear, mass sheets…</a> — autogalaxy · small · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autogalaxy/mass_field_class.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/mass_field_integration.md">MassField in PyAutoLens: pytree registration, COOLEST 1:1 mapping, LOS sheets, model_util helper</a> — autolens · medium · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autolens/mass_field_integration.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/mass_field_workspace_sweep.md">autolens_workspace: adopt MassField — guides, multi_galaxy (main + features + SLaM), LOS…</a> — workspaces · medium · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/mass_field_workspace_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the separate-shear idiom to group/ and cluster/ — as MassField</a> — workspaces · medium · safe · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/mass_field_sibling_sweep.md">MassField sibling sweep: autolens_workspace_test, HowToLens, autolens_assistant mentions</a> — workspaces · small · safe · low</summary>
+
+```
+/start_dev draft/docs/workspaces/mass_field_sibling_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/mass_field_epic.md">MassField — external shear, mass sheets and external potentials as their own…</a> — autogalaxy · too-large · human-required · normal</summary>
+
+```
+/start_dev draft/feature/autogalaxy/mass_field_epic.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>image-source-mappings</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
@@ -2679,7 +2732,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-103 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+104 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2690,6 +2743,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/dpie_sigma0_parameterization.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
+- `draft/feature/autogalaxy/mass_field_epic.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
@@ -2723,8 +2777,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/euclid/drawer_pix_initializer_exception_flake.md`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md`
-- `draft/bug/health_fixes/release_timeout_policy.md`
-- _… and 63 more_
+- _… and 64 more_
 
 </details>
 
