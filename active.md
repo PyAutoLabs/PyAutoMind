@@ -4,12 +4,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
 - prompt: active/witness_campaign.md
-- session: claude --resume session_018ip88yepHJjM1VjjFMMmuP
-- status: library-dev
-- location: web-github (session clones, no task worktree; branch claude/witness-campaign-feature-h21cq4)
+- session: claude --resume session_01LRRECsu9gfMvjb8F5aXMHu
+- status: awaiting-input
+- location: web-github (session clones, no task worktree; branch claude/active-witness-campaign-0g8phk)
 - worktree: n/a — web-github session clone (/home/user/PyAutoMind)
 - repos:
-  - PyAutoMind: claude/witness-campaign-feature-h21cq4
+  - PyAutoMind: claude/active-witness-campaign-0g8phk
+- awaiting: "2026-09-17. Pass 2 (`autoarray`, 11 prompts) proposed on issue #398 — accept / edit / strike per item, nothing written until then. Re-baseline the same day: 156 ready, 64 witnessed, derived 17 notify / 36 glance / 103 judge."
 - summary: |
     Campaign, not a one-shot: ~6 passes of ~15 prompts over the 89 unwitnessed
     `Unattended: ready` drafts. Each pass proposes candidate witnesses for the
@@ -24,8 +25,10 @@
     Pass 1 (`workspaces`, 15) SHIPPED 2026-09-10: 15 judge -> 7 notify /
     8 glance / 0 judge, 300 seed review-minutes -> 24. Backlog now 109 ready,
     36 witnessed, derived 12 notify / 19 glance / 78 judge.
-    Next: `autoarray` (10), then autolens (9), autofit (8),
-    autolens_workspace (6), autolens_profiling (5), tail pass (~26 singletons).
+    Pass 2 (`autoarray`, 11) PROPOSED 2026-09-17 on the issue, awaiting the
+    human's accept/strike: as proposed 173 -> 64 seed review-minutes.
+    Next after it: autofit (14), autolens (11), autolens_workspace (7),
+    euclid (6), autogalaxy (5), autolens_profiling (5), tail (~30).
     Pass-by-pass counts are in the prompt's `## Campaign log`.
 
 ## sed-chain-cpu-route
