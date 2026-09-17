@@ -12,8 +12,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: A note under `autolens_profiling/results/notes/` reports per-route wall time per likelihood evaluation through the library dispatch (`aa.Inversion` factory) at sma and alma, the measured crossover for Delaunay and rectangular meshes against the #226 verdict's ~60 / ~77, and whether `60.0` is the right default; the #226 verdict note carries a new section with those numbers.
+Review-minutes: 3
 Unattended: ready
 Epic: numba-interferometer-revisit
 Filed: 2026-09-08

@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: notify
+Witness: Every model composed in `scripts/cluster/mass_parameterizations.py` and `mass_parameterizations_pyautolens.py` is followed by `print(model.info)` and `af.ModelPlotter(model).figure()` (composed-model count equals print count), the headless run exits 0, the two notebook twins are regenerated and the navigator check passes.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-13
 

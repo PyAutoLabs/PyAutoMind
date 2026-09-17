@@ -11,7 +11,9 @@ Difficulty: low
 Autonomy: safe
 Priority: low
 Status: draft
-Consequence: judge
+Consequence: glance
+Witness: Either `AGENTS.md` and `catalogue/README.md` no longer claim `skip_fit_output` gates the whole of `save_results` (and say what it does gate), or a test proves the gate by asserting no `wcs.json`/`coolest.json` is written under `PYAUTO_SKIP_FIT_OUTPUT=1`.
+Review-minutes: 3
 Filed: 2026-09-16
 
 Found on 2026-09-16 while adding `files/coolest.json` (PyAutoLens#739 pipeline leg): a
