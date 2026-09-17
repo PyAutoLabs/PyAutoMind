@@ -46,18 +46,26 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 209 |
+| [Backlog](#backlog) (`draft/`) | 214 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 16
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
 ```
 /start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/provider_neutral_bundle_prompts.md">Make generated bundle prompts provider-neutral</a> — pyautobrain · small · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/pyautobrain/provider_neutral_bundle_prompts.md
 ```
 
 </details>
@@ -110,6 +118,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> — organs · medium · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -126,26 +142,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/maintenance/assistants/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> — assistants · large · supervised · high</summary>
 
 ```
-/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
-
-```
-/start_dev draft/research/autoarray/delaunay_research.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/autolens/split_lensing_regimes.md
+/start_dev draft/maintenance/assistants/codex_skill_discovery_parity.md
 ```
 
 </details>
@@ -530,7 +530,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**209** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
+**214** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 60</summary>
@@ -1327,6 +1327,203 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
+<summary><b>maintenance</b> — 24</summary>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/provider_neutral_bundle_prompts.md">Make generated bundle prompts provider-neutral</a> — pyautobrain · small · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/pyautobrain/provider_neutral_bundle_prompts.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> — organs · medium · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/organs/reduce_session_token_load.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/assistants/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> — assistants · large · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/assistants/codex_skill_discovery_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/organs/agent_harness_agnostic_setup.md">Make agent setup Claude/Codex agnostic</a> — organs · large · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/organs/agent_harness_agnostic_setup.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/organs/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> — organs · large · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/organs/codex_hook_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — workspaces · small · safe · medium</summary>
+
+```
+/start_dev draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to move</a> — howtofit · small · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/howtofit/minimum_library_version_stale.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/config_key_mirror_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier — give profiling…</a> — autolens_profiling · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> — autolens_workspace_developer · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> — ci · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/ci/wiki_currency_check_version_gate.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two dead deps</a> — libraries · medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/libraries/dep_cap_refresh_2026_08.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a> — pyautomemory · medium · safe · normal</summary>
+
+```
+/start_dev draft/maintenance/pyautomemory/canonical_key_todo_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> — ci · large · human-required · normal</summary>
+
+```
+/start_dev draft/maintenance/ci/copilot_auto_review.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/read_through_issues.md">autolens_workspace</a> — workspaces · too-large · human-required · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/read_through_issues.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale docs/CI)</a> — workspaces · low-medium · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the defensive fallback…</a> — autoarray · small · safe · low</summary>
+
+```
+/start_dev draft/maintenance/autoarray/small_datasets_followups_after_8c.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autogalaxy/linear_operated_sersic_has_no_prior_yaml.md">linear_operated Sersic has no prior yaml file</a> — autogalaxy · small · safe · low</summary>
+
+```
+/start_dev draft/maintenance/autogalaxy/linear_operated_sersic_has_no_prior_yaml.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> — autolens · small · safe · low</summary>
+
+```
+/start_dev draft/maintenance/autolens/data_temp_write_paths_not_ignored.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's…</a> — autolens_workspace · small · safe · low</summary>
+
+```
+/start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autofit/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — autofit · medium · safe · low</summary>
+
+```
+/start_dev draft/maintenance/autofit/config_yaml_keys_missing_their_one_line.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of <code>save_results</code>…</a> — euclid · low · safe · low</summary>
+
+```
+/start_dev draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>research</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
@@ -1577,163 +1774,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 19</summary>
-
-<details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/organs/reduce_session_token_load.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — workspaces · small · safe · medium</summary>
-
-```
-/start_dev draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to move</a> — howtofit · small · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/howtofit/minimum_library_version_stale.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — workspaces · small · safe · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/config_key_mirror_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier — give profiling…</a> — autolens_profiling · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a> — autolens_workspace_developer · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> — ci · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/ci/wiki_currency_check_version_gate.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two dead deps</a> — libraries · medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/libraries/dep_cap_refresh_2026_08.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a> — pyautomemory · medium · safe · normal</summary>
-
-```
-/start_dev draft/maintenance/pyautomemory/canonical_key_todo_sweep.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a> — ci · large · human-required · normal</summary>
-
-```
-/start_dev draft/maintenance/ci/copilot_auto_review.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/read_through_issues.md">autolens_workspace</a> — workspaces · too-large · human-required · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/read_through_issues.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/pynufft_removal_downstream_residue.md">pynufft removal: unswept downstream residue (1 hard break + stale docs/CI)</a> — workspaces · low-medium · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/workspaces/pynufft_removal_downstream_residue.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the defensive fallback…</a> — autoarray · small · safe · low</summary>
-
-```
-/start_dev draft/maintenance/autoarray/small_datasets_followups_after_8c.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autogalaxy/linear_operated_sersic_has_no_prior_yaml.md">linear_operated Sersic has no prior yaml file</a> — autogalaxy · small · safe · low</summary>
-
-```
-/start_dev draft/maintenance/autogalaxy/linear_operated_sersic_has_no_prior_yaml.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> — autolens · small · safe · low</summary>
-
-```
-/start_dev draft/maintenance/autolens/data_temp_write_paths_not_ignored.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's…</a> — autolens_workspace · small · safe · low</summary>
-
-```
-/start_dev draft/maintenance/autolens_workspace/cosmos_web_ring_mask_dtype.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autofit/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — autofit · medium · safe · low</summary>
-
-```
-/start_dev draft/maintenance/autofit/config_yaml_keys_missing_their_one_line.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of <code>save_results</code>…</a> — euclid · low · safe · low</summary>
-
-```
-/start_dev draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>refactor</b> — 11</summary>
 
 <details><summary>📋 <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — autonerves · medium · safe · medium</summary>
@@ -1960,6 +2000,36 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>organs — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'organs — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/maintenance/organs/agent_harness_agnostic_setup.md
+- draft/maintenance/organs/reduce_session_token_load.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/maintenance/organs/agent_harness_agnostic_setup.md">Make agent setup Claude/Codex agnostic</a> | large | high | draft |
+| <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> | medium | high | draft |
+
+</details>
+
+<details>
 <summary><b>workspaces — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2058,6 +2128,40 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>pyautobrain — bundle 1</b> — 4 task(s) · 4 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'pyautobrain — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/maintenance/pyautobrain/provider_neutral_bundle_prompts.md
+- draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
+- draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
+- draft/bug/pyautobrain/cortex_test_worktree_symlink.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/maintenance/pyautobrain/provider_neutral_bundle_prompts.md">Make generated bundle prompts provider-neutral</a> | small | high | draft |
+| <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
+| <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
+| <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails…</a> | small | low | formalised |
+
+</details>
+
+<details>
 <summary><b>pixelization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2123,73 +2227,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-<details>
-<summary><b>autofit — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
-- draft/bug/autofit/visualization_warmup_swallowed_exception.md
-- draft/bug/autofit/assertion_repr_recurses_forever.md
-- draft/bug/autofit/model_function_cannot_resolve_config_priors.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output…</a> | small | medium | formalised |
-| <a href="draft/bug/autofit/visualization_warmup_swallowed_exception.md">Visualization warm-up swallowed for ellipse and point-source analyses</a> | large | medium | formalised |
-| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
-| <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> | small | normal | formalised |
-
-</details>
-
-<details>
-<summary><b>samplers · jax-gradient</b> — 3 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'samplers · jax-gradient' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autofit/prior_exit_sampler_coverage.md
-- draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md
-- draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit…</a> | autofit | medium | medium | formalised |
-| <a href="draft/refactor/autofit/split_fitness_batch_size_lh_vs_latent.md">Split <code>Fitness.batch_size</code> into <code>lh_batch_size</code> and…</a> | autofit | small | normal | formalised |
-| <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts /…</a> | autolens_profiling | large | normal | formalised |
-
-</details>
-
-_Showing 8 of 36 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 37 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2201,72 +2239,72 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | issued | <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/pyautobrain/provider_neutral_bundle_prompts.md">Make generated bundle prompts provider-neutral</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/assistants/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/agent_harness_agnostic_setup.md">Make agent setup Claude/Codex agnostic</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | issued | <a href="active/fixed_light_numba_s4b_permute_active_last.md">Fixed-light numba CPU round 4, wave B — A-prime: permute the active…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | issued | <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
-| 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
-| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
-| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
-| 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
-| 2026-09-16 | issued | <a href="active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
+| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
+| 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
+| 2026-09-16 | issued | <a href="active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
-| 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
-| 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
-| 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
-| 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
-| 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
+| 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
+| 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
+| 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
+| 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
-| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
-| 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
-| 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
-| 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
-| 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
+| 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
+| 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
+| 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
+| 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
 | 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
-| 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
-| 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
-| 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
-| 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
-| 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
 
 </details>
 
@@ -2721,7 +2759,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-50 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+55 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2761,12 +2799,12 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/test/workspaces/smoke_workspace_fixes.md`
 - `draft/release/autocti/cti_release_train_wiring.md`
 - `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
+- `draft/maintenance/assistants/codex_skill_discovery_parity.md`
+- `draft/maintenance/organs/agent_harness_agnostic_setup.md`
+- `draft/maintenance/organs/codex_hook_parity.md`
+- `draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md`
 - `draft/maintenance/organs/reduce_session_token_load.md`
-- `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
-- `draft/maintenance/workspaces/read_through_issues.md`
-- `draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`
-- `draft/research/autoarray/delaunay_research.md`
-- _… and 10 more_
+- _… and 15 more_
 
 </details>
 
