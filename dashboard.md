@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/318">issue #318</a> — issued 2026-09-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/318">issue #318</a> — issued 2026-09-15 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/321">autolens_workspace_test#321</a></summary>
 
 ```
 /start_dev active/jit_visualization_outputs.md
