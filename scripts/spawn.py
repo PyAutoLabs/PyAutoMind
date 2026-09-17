@@ -69,6 +69,9 @@ MIND_RULES = [
     ("REFERENCE.md", "KEEP"), ("AGENTS.md", "KEEP"), ("CLAUDE.md", "KEEP"),
     ("LICENSE", "KEEP"), ("ROUTING.md", "KEEP"),
     (".gitignore", "KEEP"),
+    # merge driver for the append-only autonomy_log.md, which the template
+    # carries (5b) — the attribute travels with the file it governs.
+    (".gitattributes", "KEEP"),
     ("README.md", "KEEP"),
     # Org-wide pointer docs. Generic prose, but each names the owning org and
     # links the canonical copy in that org's PyAutoScientist — so they take the
