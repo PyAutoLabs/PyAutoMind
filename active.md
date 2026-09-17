@@ -115,7 +115,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/multi-galaxy-j1011-real-data
 - repos:
   - autolens_workspace: feature/multi-galaxy-j1011-real-data
-- note: "2026-09-17 /start_dev resume from a cloud session: blocked — every HST/SDSS archive host is 403 through the session proxy and the feature branch is not on the autolens_workspace remote (local-only or never created). Needs a local CLI session; nothing to do from the web."
+- note: "2026-09-17 local CLI resume: MAST reachable; dataset reproduced byte-for-byte from a cold download (legacy product j9qj02010_drc.fits resolves); start_here 17 s green under the smoke profile; PR #554 open with pending-release, opened on the human's call under Heart RED (Colab check F class, unrelated). Real-fit inspection deferred to a human round. Next: /prm once CI is green."
 
 ## jax-runtime-and-parity
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/317
