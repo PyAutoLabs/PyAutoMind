@@ -12,8 +12,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: medium
 Status: draft
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: A breakdown document and a runnable timing harness (`perform_quick_update` cold/warm on the wst MGE-linear setup) are committed, attributing per-update cost across critical-curve extraction on the unmasked grid, `cached_property` fit evaluation, device transfers and savefig, with no numbers claimed from a loaded box; before/after per-update seconds appear only once the measurement leg has run on a quiet local box.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-31 (backfilled from git)
 

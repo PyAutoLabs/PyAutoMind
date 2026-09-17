@@ -10,8 +10,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: One `Tracer` accessor (e.g. `lens_calc_at(plane_index= | redshift= | profile_name=)`) is the only way `point/fit/abstract.py`, `point/fit/solved.py` and `point/solver/shape_solver.py` obtain a plane-bound `LensCalc`; the #480 tests, the fit/solver agreement test and the ray-traced-Jacobian cross-check pass unchanged; magnifications on the multi-plane and single-plane fixtures are bit-identical before and after.
+Review-minutes: 3
 Unattended: ready
 
 Filed: 2026-08-27

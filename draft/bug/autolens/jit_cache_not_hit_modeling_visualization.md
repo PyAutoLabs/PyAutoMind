@@ -13,8 +13,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: draft
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: `modeling_visualization_delaunay_jit.py` and `modeling_visualization_rectangular_jit.py` pass their own JIT-cache assertion (cached call faster than compile), the PR names what re-traced between calls (closure identity, un-weakref'd solver or per-call construction) and the producer that fixed it, and both entries lose their NEEDS_FIX tag in `autolens_workspace_test/config/build/no_run.yaml`.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-30 (backfilled from git)
 

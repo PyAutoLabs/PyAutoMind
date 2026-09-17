@@ -13,7 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Status: draft
-Consequence: judge
+Consequence: glance
+Witness: For a DR1 fit with a `Basis` MGE lens light and a Delaunay source, `to_coolest` writes the lens light as a `PixelatedRegularGrid` light profile (FITS beside the JSON, `fits_path` set, `check_external_files` honoured) and the source reconstruction as an `IrregularGrid`, `meta.skipped_profiles` no longer lists either, and `from_coolest` round-trips both back to `al.Galaxy` objects or the guide's new grid-export section states which is one-way.
+Review-minutes: 3
 Filed: 2026-09-16
 
 Follow-up to `coolest_observation_grid_and_euclid_output.md`, which made `to_coolest` skip

@@ -13,6 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: low
 Status: draft
+Consequence: glance
+Witness: `al.witt_wynne.*` exists with the pipeline's `tests/test_witt_wynne_util.py` ported and passing; on the DR1 catalogue inputs the library gives bit-identical solver output to `catalogue/scripts/witt_wynne_util.py` at the commit it was ported from; the guide and the pipeline import the library (the pipeline keeping a thin producer), with the pipeline change held behind the PyAutoLens release that carries it.
+Review-minutes: 3
 Filed: 2026-09-17
 
 ## Original request (verbatim)
