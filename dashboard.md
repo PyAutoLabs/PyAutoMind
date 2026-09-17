@@ -144,6 +144,22 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides declared Target…</a> — pyautobrain · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> — pyautohands · small · safe · medium</summary>
+
+```
+/start_dev draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on every call…</a> — autofit · medium · supervised · medium</summary>
 
 ```
@@ -156,6 +172,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/refactor/autofit/parameterization_prior_count_blowup.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — autonerves · medium · safe · medium</summary>
+
+```
+/start_dev draft/refactor/autonerves/config_yaml_parse_cache.md
 ```
 
 </details>
@@ -176,58 +200,34 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
+<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
 
 ```
-/start_dev draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md">Demo <code>subplot_fit_interferometer_combined</code> in a multi-dataset example</a> — workspaces · medium · safe · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/demo_subplot_fit_interferometer_combined.md
+/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/workspaces/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to <code>subplot_fit_interferometer_dirty_images</code></a> — workspaces · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> — pyautobrain · small · safe · normal</summary>
 
 ```
-/start_dev draft/docs/workspaces/interferometer_dirty_images_call_sites.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/demo_subplot_ellipse_errors.md
+/start_dev draft/feature/pyautobrain/board_without_gh_phase2_legs.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> — pyautobrain · small · supervised · normal</summary>
 
 ```
-/start_dev draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
-
-```
-/start_dev draft/bug/pyautobrain/cortex_test_worktree_symlink.md
+/start_dev draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
 
 ```
-/start_dev draft/docs/workspaces/assistants_regime_extension.md
+/start_dev draft/research/pyautohands/git_docs.md
 ```
 
 </details>
@@ -2670,7 +2670,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 ## Hygiene
 
-80 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+44 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2688,34 +2688,34 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
-- `draft/feature/pyautobrain/board_without_gh.md`
-- `draft/feature/pyautobrain/board_without_gh_phase2_legs.md`
-- `draft/feature/pyautobrain/brain_board_follow_ups.md`
-- `draft/feature/pyautogut/gut_board.md`
-- `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- `draft/feature/pyautoheart/howto_real_settings_nightly.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
-- `draft/feature/workspaces/model_figures_6b2_slam_stages.md`
-- `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
-- `draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
-- `draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md`
 - `draft/bug/priors/12_single_source_density_refactor.md`
 - `draft/bug/priors/13_collapse_prior_and_message.md`
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
-- `draft/bug/priors/15_transformed_message_logpdf_jacobian.md`
 - `draft/bug/priors/z_features.md`
-- `draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md`
-- `draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md`
-- `draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md`
-- `draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
-- `draft/refactor/autonerves/config_yaml_parse_cache.md`
-- `draft/refactor/pyautofit/remove_eden_packaging_tooling.md`
-- _… and 40 more_
+- `draft/docs/autolens/split_lensing_regimes.md`
+- `draft/docs/howtolens/cluster_pixelized_source.md`
+- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
+- `draft/test/workspaces/mesh_magnification_correctness.md`
+- `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
+- `draft/test/workspaces/smoke_workspace_fixes.md`
+- `draft/release/autocti/cti_release_train_wiring.md`
+- `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
+- `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
+- `draft/maintenance/workspaces/read_through_issues.md`
+- `draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`
+- `draft/research/autoarray/delaunay_research.md`
+- `draft/research/autolens_assistant/free_agent_harness_evaluation.md`
+- `draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md`
+- `draft/research/graphical_ep/ep_campaign.md`
+- `draft/research/graphical_ep/ep_scoping.md`
+- `draft/research/graphical_ep/graphical_scoping.md`
+- _… and 4 more_
 
 </details>
 
