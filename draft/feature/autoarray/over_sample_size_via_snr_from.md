@@ -11,7 +11,7 @@ Autonomy: supervised
 Priority: medium
 Status: draft
 Issued: 2026-09-03
-Consequence: judge
+Consequence: glance
 Witness: `al.util.over_sample.over_sample_size_via_snr_from(signal_to_noise_map, signal_to_noise_cut=3.0, sub_size_lower=2, sub_size_upper=4)` exists, thresholds its input once with no auto-lowering of the cut, and a unit test pins that its {2, 4} map equals `np.where(snr > cut, 4, 2)` exactly; the docstring of `galaxy_name_image_dict_via_result_from` says it returns a signal-to-noise map.
 Review-minutes: 3
 Unattended: ready

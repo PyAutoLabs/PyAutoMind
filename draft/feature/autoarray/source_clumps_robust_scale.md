@@ -10,8 +10,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Witness: `source_clumps_from(scale="max")` returns the same clumps as today on the existing tests (the default is unchanged), a unit test on a hand-built `Neighbors` mesh with an isolated spike plus a broad faint source returns `[]` at `scale="max"` and one clump of 3 or more pixels at `scale="percentile", scale_percentile=99.0`, and `visualize/general.yaml` `inversion:` carries the two new keys.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-16
 Updated: 2026-09-16

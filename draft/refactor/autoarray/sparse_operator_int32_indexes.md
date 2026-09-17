@@ -3,8 +3,9 @@
 Target: PyAutoArray
 Type: refactor
 Autonomy: supervised
-Consequence: judge
-Review-minutes: 25
+Consequence: notify
+Witness: `indexes` (and every other index array on `SparseLinAlgImagingNumba`) is int32 behind an overflow guard, the payload of `Imaging.apply_sparse_operator_cpu()` at HST/3.5" is measured before and after and recorded in the PR (172 MB before), and the existing sparse-operator tests plus the `cpu_fast_modeling` parity check give bit-identical results.
+Review-minutes: 0
 Unattended: ready
 
 ## Context

@@ -134,14 +134,38 @@ repo; each reading stands as measured on its day.
 | derived | 156 | 64 | 17 | 36 | 103 |
 | declared (dashboard) | 156 | 64 | 12 | 24 | 102 + 18 unset |
 
-### Pass 2 — `autoarray`, 11 prompts (proposed 2026-09-17, awaiting accept/strike)
+### Pass 2 — `autoarray`, 11 prompts (2026-09-17, issue #398)
 
-Proposed on the issue, nothing written yet. The group is 11, not 10 (two
-2026-09-16 DR1 filings). Three already carry a witness and need only the
-restamp. As proposed: 10 judge / 1 glance → 1 notify / 8 glance / 2 judge as
-derived (1 / 9 / 1 with the `mapping_overlay` override), 173 → 64 (47) seed
-review-minutes; one `Witness: none —` (`multiwavelength_inversion`, a
-placeholder prompt). Counts get their own row here when the pass is written.
+The group was 11, not the 10 planned (two 2026-09-16 DR1 filings). Three
+already carried a witness and needed only the restamp. Human accepted all 11
+as proposed, including two flagged calls: the `mapping_overlay` override
+(declared `glance` over a derived `judge` — the keyword hit is prose describing
+the existing bug, the faculty's documented false-`judge` case; its duplicated
+header block was collapsed in the same write) and `multiwavelength_inversion`
+as the campaign's first `Witness: none —` (a placeholder prompt, stays `judge`).
+
+| | notify | glance | judge | review-minutes |
+|---|---|---|---|---|
+| before | 0 | 1 | 10 | 173 |
+| after | 1 | 9 | 1 | 47 |
+
+Backlog after pass 2: 157 ready (one more landed between the re-baseline and
+the write), 72 witnessed + 1 `none`, 84 not — derived **18 notify / 44 glance /
+95 judge**; declared **13 / 32 / 94** + 18 unset.
+
+Finding about the faculty, not the prompts: `_sizing.py` has no `none` rule.
+`Witness: none — <reason>` is read as a witness, so `multiwavelength_inversion`
+derives `glance` while its declared `judge` holds by precedence — the dashboard
+and planner are right, the derived reading is not. The regrade script counts it
+as witnessed for the same reason. A one-line rule (a witness whose value starts
+with `none` is no witness) belongs in the sizing faculty; filed as a follow-up
+for the Brain rather than widened into this pass.
+
+Weaker witnesses, flagged here as in pass 1: `non_uniform_over_sample`'s 1.5x
+compile bound is the sweep's number, not the prompt's; `sparse_operator_int32`'s
+`notify` holds only if the precision-operator compression is lossless;
+`over_sample_size_via_snr_from`'s pre-existing witness pins option 1 of the
+prompt's "decide one of".
 
 ### Remaining passes
 

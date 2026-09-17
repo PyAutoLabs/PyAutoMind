@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
+Witness: none — placeholder prompt ("expand fully the day I use it"); the combined-inversion design (how curvature_reg matrices combine, what CombineAnalysis's likelihood is) is undecided, so no claim settles it yet.
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-04-27 (backfilled from git)
