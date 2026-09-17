@@ -69,6 +69,17 @@ Issued: 2026-09-15
   prepare them with the `data_preparation` scripts, swap them into
   `multi_galaxy/start_here.py` in place of the simulated look-alike,
   regenerate the notebook and re-run the smoke entry.
+  Re-measured 2026-09-17 (`/start_dev` resume of #549 from a cloud session):
+  still blocked — `mast.stsci.edu`, `archive.stsci.edu`, `hla.stsci.edu`,
+  `hst.esac.esa.int`, CADC, `zenodo.org`, `data.sdss.org` and VizieR all
+  answer `CONNECT tunnel failed, response 403` through the session proxy, so
+  no route to the frames exists from the web. The `autolens_workspace` remote
+  carries no `feature/multi-galaxy-j1011-real-data` branch and `main` has no
+  `dataset/multi_galaxy/` (the `dataset/` tree is gitignored; `start_here.py`
+  still auto-simulates `dataset/multi_galaxy/simple`), so nothing has landed
+  since the 2026-09-15 issue. The next `/start_dev` must be a local CLI
+  session: `/start_workspace` creates the branch there, then the four steps
+  above.
 - ~~Extra-galaxies / pixelization feature variants remain README cross-links
   (the group/imaging feature scripts apply verbatim with the lens loop).~~
   **CLOSED 2026-07-31.** The feature tier is complete. `extra_galaxies` (PR#391)
