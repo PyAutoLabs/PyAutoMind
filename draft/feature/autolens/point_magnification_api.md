@@ -1,4 +1,4 @@
-# Magnification at a point: surface the existing API in source_science
+# Magnification at a point: surface the existing API in source_science + point package, extend to multi-plane
 
 Type: feature
 Target: PyAutoLens
@@ -11,15 +11,14 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
-Consequence: judge
-Review-minutes: 25
+Consequence: glance
+Witness: Every `source_science.py` (both tiers) carries a worked mu-at-a-point example (a chosen (y,x) and each multiple-image position) via `LensCalc.magnification_2d_via_hessian_from`; the point `Result`/dataset surface exposes per-image magnifications with the parity decision (signed or |mu|) documented; the multi-plane example's mu for a source at a given `plane_redshift` equals `LensCalc.from_tracer(..., plane_j=j)` directly; and the stale `Tracer.magnification_2d_from` claim in `cluster/likelihood_function.py` is gone.
+Review-minutes: 3
 Unattended: ready
 Epic: cluster-strong-lensing
 Phase: 5
 Parent: draft/feature/autolens/source_cluster_arc.md
 Filed: 2026-08-19 (backfilled from git)
-
-# Magnification at a point: surface the existing API in source_science + point package, extend to multi-plane
 
 Part of the Source & Cluster arc (phase 5 of 12). User request (verbatim): "Ability to
 get Magnification at a point in source science scripts, important for clusters and then

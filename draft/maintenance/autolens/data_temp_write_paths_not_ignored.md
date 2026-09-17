@@ -10,8 +10,9 @@ Difficulty: small
 Autonomy: safe
 Priority: low
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: `git check-ignore -v test_autolens/imaging/data_temp/simulate_and_fit/image.fits` reports it ignored (or the three `simulate_and_fit` writers use `tmp_path` and write nothing into the tree), the suite passes twice in a row with `git status` clean after each, and no `data_temp/` survives a deliberately failed run.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-27
 
