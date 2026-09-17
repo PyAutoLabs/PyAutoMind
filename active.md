@@ -107,30 +107,6 @@
     markdown report. Pure functions split from the CLI; a synthetic four-CSV
     fixture with a variant missing two tiles pins the inner join and its reporting.
 
-## simulator-from-result-linear
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/77
-- issued: 2026-09-13
-- prompt: active/simulator_from_result_linear_intensities.md
-- session: claude --resume session_01EehLEWoRRsmnLys4aHj5W4
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/87
-- worktree: ~/Code/PyAutoLabs-wt/simulator-from-result-linear
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/simulator-from-result-linear
-- note: "worktree_check_conflict simulator-from-result-linear euclid_strong_lens_modeling_pipeline exits 1 on three claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis #76). No file set intersects this one: this task touches scripts/simulator.py (none of the three edits it), tests/test_simulator_from_result.py (new) and the --from-result bullet of scripts/README.md at ~line 63 — PR #75's only scripts/README.md hunk is four lines at ~line 22 in the fitting-scripts list, a different hunk that merges cleanly. Waived in a fresh parallel worktree based on origin/main, the same call sed-chain-cpu-route recorded against remove-fits-dataset-plots-yaml and sersic-variants-analysis recorded against both live tasks."
-- parked: "2026-09-13. The fix is COMPLETE and pushed: feature/simulator-from-result-linear @ 85f6dfd6bf33b9f19418abbe42afb9f90fd96a21. Ship parked at the autonomous-ship gate leg 4 — pyauto-heart readiness is RED, reason verbatim 'release validation FAILED (stage integrate)'. AUTONOMY.md: Heart RED forbids PR-open at every autonomy level, and the corrective-PR exception never fires under --auto (and would not apply — that RED is organism-scope release validation, nothing in this branch is in the release chain). Legs 1-3 PASS: tests 128 fast + 6 slow, smoke 9/9, review CLEAN with the lifted claim basis-cited. Witness met: mock VIS peak/median-RMS 72.3 vs 81.1 real on tile Tile102008855RA0680593469007DECNEG0634007351862, truth.json lens intensity 0.008437 / source 8.180 (3.9 before the fix). Unblock = a human running /ship_workspace once Heart is green, or explicitly authorising the PR. The branch is usable as-is by the science clone meanwhile. Evidence on the issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/77#issuecomment-5653294402 Re-checked 2026-09-17: Heart still RED (install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate)); branch refreshed with origin/main @ f068d21 (clean merge commit absorbing #79, #81, #82, #85), tests 162 fast + 10 slow all pass; still no PR. Re-check evidence: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/77#issuecomment-5715707203"
-- autonomy: "--auto launch; effective level = min(prompt safe, bug cap supervised) = supervised, so the ship checkpoint resolves to decide-and-flag (AUTONOMY.md, extended 2026-09-07). Plan approval of record is the human's launch instruction 'im going out so autonomously get these sersic things simulated and their vis_lp runs going'; both plan levels written to issue #77. Ends at PR-open."
-- summary: |
-    simulator.py --from-result rebuilt the tracer from files/model.json plus the
-    max-log-likelihood vector, but every profile this pipeline fits is linear
-    (al.lp_linear.*), so the rebuilt profiles carry no intensity and the mock is
-    noise (tile 0 of dr1_sep1_sersics: mock VIS peak SNR 3.9 vs 81 real). The
-    solved-intensity tracer is already on disk as files/tracer.json, written by
-    AnalysisDataset.save_results from fit.model_obj_linear_light_profiles_to_light_profiles.
-    Read that instead, under the same resolve_files_path hash, guard that no
-    lp_linear profile survives, and add tests/test_simulator_from_result.py —
-    --from-result had no test at all.
-
 ## multi-galaxy-j1011-real-data
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549
 - issued: 2026-09-15

@@ -1,3 +1,42 @@
+## simulator-from-result-linear
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/77 (closed completed 2026-09-17)
+- completed: 2026-09-17
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/87 (head `f068d21`, merge `dc91d9a`, label `pending-release`)
+- summary: |
+    `scripts/simulator.py --from-result` rebuilt the tracer from `files/model.json` plus the
+    max-log-likelihood parameter vector, but every profile this pipeline fits is linear
+    (`al.lp_linear.*`), so the rebuilt profiles carried no intensity and the mock was noise —
+    tile 0 of `dr1_sep1_sersics` simulated at mock VIS peak SNR 3.9 against 81 for the real data.
+    The fix reads `files/tracer.json` instead: the solved-intensity tracer that
+    `AnalysisDataset.save_results` already writes from
+    `fit.model_obj_linear_light_profiles_to_light_profiles`, resolved under the same
+    `resolve_files_path` hash, with a guard that no `lp_linear` profile survives the rebuild.
+    A second commit clips PSF-convolution round-off negatives before PyAutoArray's Poisson draw.
+    New tests `tests/test_simulator_from_result.py` and `tests/test_simulator_round_off_clip.py`;
+    the `--from-result` bullet of `scripts/README.md` updated.
+
+    Shipped under a human override. The 2026-09-13 `--auto` run parked at the autonomous ship
+    gate on PyAutoHeart RED — verbatim "install verification FAILED (testpypi; checks F)" and
+    "release validation FAILED (stage integrate)", both organism-scope and unrelated to this
+    branch. On 2026-09-17 the human resumed the session and authorised the ship and the merge
+    in-session with the words, verbatim: "prm if needed and then wrap up remove from mind etc".
+    That quote is on the PR body, on issue #77 and in `autonomy_log.md`.
+- witness: |
+    Tile `Tile102008855RA0680593469007DECNEG0634007351862`: mock VIS peak/median-RMS 72.3 against
+    81.1 for the real data (3.9 before the fix); `truth.json` lens intensity 0.008437 /
+    source 8.180.
+- ci: |
+    162 fast + 10 slow tests pass after merging `origin/main` (`f068d21`), smoke 9/9,
+    PR CI 9/9 legs green. Merged as `dc91d9a`.
+- notes: |
+    (1) The prompt's own fix sketch — rebuild the `FitImaging` through the aggregator to recover
+    solved intensities — was not what shipped: `files/tracer.json` is already on disk beside
+    `model.json` under the same hash, so no aggregator round-trip is needed.
+    (2) The workspace's `--from-result` path had no test at all before this; both new test files
+    are the first coverage it has ever had.
+
+## Original prompt
+
 # simulator.py --from-result rebuilds a dark tracer from linear-light-profile fits
 
 Type: bug

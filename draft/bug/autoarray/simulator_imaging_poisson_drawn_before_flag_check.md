@@ -81,8 +81,8 @@ construction-time (Python-level, on `self.*` flags) conditional over a value-lev
 
 ## Workaround in place
 
-`euclid_strong_lens_modeling_pipeline` carries a pipeline-side guard on branch
-`feature/simulator-from-result-linear` (commit `0f4aed9`, issue #77): `simulated_image_from`
+`euclid_strong_lens_modeling_pipeline` carries a pipeline-side guard on `main`, merged
+2026-09-17 as PR #87 (issue #77, merge `dc91d9a`): `simulated_image_from`
 runs the convolution itself, clips the round-off, and passes the result back with
 `image_is_convolved=True`. That workaround should be removed once this lands.
 
