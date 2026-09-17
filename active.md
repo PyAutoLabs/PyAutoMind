@@ -121,9 +121,10 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/318
 - issued: 2026-09-15
 - prompt: active/jit_visualization_outputs.md
+- session: web-github (Claude Code remote, 2026-09-17; no local worktree)
 - status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/jit-visualization-outputs
 - repos:
+  - autolens_workspace_test: claude/active-jit-visualization-outputs-45weg6
 - summary: |
     Prompt's defect REFUTED twice (2026-08-21, 2026-09-15): all 4
     modeling_visualization_jit scripts pass from cleared output under
