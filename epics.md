@@ -103,8 +103,10 @@ epic, never picked standalone.
   Phase 4 FILED 2026-09-16 — the curvature-matrix kernel A/B on Delaunay (lever 4a,
   measurement first: the two-stage vs direct kernels were never measured on the Delaunay
   fixed-light cell; touched-index stage 2 if neither wins) then A-prime permute-active-last
-  (lever 4b, witness design first); cell prerequisite: the 1.03 overhead cap (prompt
-  `draft/research/autolens_profiling/fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md`).
+  (lever 4b, witness design first); cell prerequisite: the 1.03 overhead cap (wave A /
+  lever 4a done 2026-09-17 — no lever, record `complete/2026/09/fixed-light-numba-s4.md`;
+  wave B / lever 4b prompt
+  `draft/research/autolens_profiling/fixed_light_numba_s4b_permute_active_last.md`).
   Inserts ahead of the old phases 4-6, which renumber to 5 (memo warm start), 6 (source-pixel
   scaling), 7 (HST + Euclid verdict).
 

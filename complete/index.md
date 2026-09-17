@@ -208,6 +208,7 @@ markers; everything below GENERATED is rebuilt.
 - [fixed-light-library-path](2026/09/fixed-light-library-path.md)
 - [fixed-light-numba-levers](2026/09/fixed-light-numba-levers.md)
 - [fixed-light-numba-phase1](2026/09/fixed-light-numba-phase1.md)
+- [fixed-light-numba-s4](2026/09/fixed-light-numba-s4.md) — no lever
 - [fixed-light-numba-solver](2026/09/fixed-light-numba-solver.md)
 - [fixed-light-scaling](2026/09/fixed-light-scaling.md)
 - [fixed-light-verdict](2026/09/fixed-light-verdict.md)
