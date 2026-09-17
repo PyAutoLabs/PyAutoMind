@@ -228,7 +228,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/colab_gate_rehearsal_audits_released_bootstrap.md">Check F audits the released Colab bootstrap in a TestPyPI rehearsal, not…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/229">issue #229</a> — issued 2026-09-17 — library-dev</summary>
+<details><summary>📋 <a href="active/colab_gate_rehearsal_audits_released_bootstrap.md">Check F audits the released Colab bootstrap in a TestPyPI rehearsal, not…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/229">issue #229</a> — issued 2026-09-17 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/230">PyAutoHeart#230</a></summary>
 
 ```
 /start_dev active/colab_gate_rehearsal_audits_released_bootstrap.md

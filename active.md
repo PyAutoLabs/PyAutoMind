@@ -5,7 +5,8 @@
 - issued: 2026-09-17
 - prompt: active/colab_gate_rehearsal_audits_released_bootstrap.md
 - session: claude --resume session_01ATSR1eVsUBBK49nfLhb7JQ
-- status: library-dev
+- status: pr-open
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/230
 - location: web-github (session clone, no task worktree; PyAutoHeart branch feature/colab-gate-candidate-audit)
 - worktree: n/a — web-github session clone (/home/user/pyautoheart)
 - repos:
