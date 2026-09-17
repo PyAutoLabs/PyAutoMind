@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the assistant benchmarks</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/126">issue #126</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the assistant benchmarks</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/126">issue #126</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/380">PyAutoBrain#380</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/127">autolens_assistant#127</a></summary>
 
 ```
 /start_dev active/oneshot_benchmark_harness.md

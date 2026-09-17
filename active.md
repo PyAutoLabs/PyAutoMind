@@ -191,8 +191,10 @@
 - issued: 2026-09-17
 - prompt: active/oneshot_benchmark_harness.md
 - session: claude --resume session_01YTzjiXh2fLocc6dNqLQ66d
-- status: workspace-dev
-- autonomy: supervised (header; launched on the human's "Go / continue" in-session — plan is on the issue, ship ends at PR-open, merge is human)
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/380
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/127
+- autonomy: supervised (header; launched on the human's "Go / continue" in-session — plan on the issue, shipped to PR-open 2026-09-17, merge is human; Brain PR first, it is the assistant PR's `Brain-ref:`)
 - location: web-github (session clones /home/user/autolens_assistant + /home/user/PyAutoBrain, no task worktree)
 - worktree: n/a — web-github session clones
 - repos:
