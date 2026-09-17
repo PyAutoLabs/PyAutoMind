@@ -57,3 +57,4 @@ The run-level suite must be deterministic before it gates CI.
 - The PR for #78 carries the `einstein_radius` sweep table.
 
 - 2026-09-16 (/prm on #79): `main`'s own Tests run 34677820679 (a363f57, slow py3.13 leg, 2026-09-12) is red on exactly this `InitializerException` at `run_level` setup — 6 errors, 12 s in — so main has carried this flake since the #73 merge; the PR-side legs never ran (see the pyautoheart relevance-gate prompt).
+- 2026-09-17 (/prm on #83 / PR #85, `feature/astrometric-offsets-catalogue`, a producer-and-docs-only diff): PR-side Tests run 35209199550 red on the `slow` py3.12 leg only — all 10 `run_level` tests errored at setup, `drawer_pix` leg ("Performing DrawerSearch for a total of 3 points" then `InitializerException`), 13 s in; the py3.13 twin and the `drawer` light-profile leg passed. Log saved from `gh run view 35209199550 --log-failed`. Second sighting on CI, first on a PR leg.
