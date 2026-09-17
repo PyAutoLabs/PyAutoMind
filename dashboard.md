@@ -2332,7 +2332,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens/point_magnification_api.md">Magnification at a point: surface the existing API in source_science</a> — autolens · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/autolens/point_magnification_api.md">Magnification at a point: surface the existing API in source_science + point…</a> — autolens · large · supervised · high</summary>
 
 ```
 /start_dev draft/feature/autolens/point_magnification_api.md
@@ -2684,7 +2684,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-114 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+103 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2697,11 +2697,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
-- `draft/feature/autolens/coolest_pixel_grid_export.md`
-- `draft/feature/autolens/magnification_errors_posterior_draws.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
-- `draft/feature/autolens/multi_plane_time_delays.md`
-- `draft/feature/autolens/point_magnification_api.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md`
@@ -2727,9 +2723,13 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md`
 - `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md`
 - `draft/bug/autogalaxy/sersiccoresph_has_no_mass_to_light_ratio.md`
-- `draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- _… and 74 more_
+- `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md`
+- `draft/bug/euclid/drawer_pix_initializer_exception_flake.md`
+- `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md`
+- `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md`
+- `draft/bug/health_fixes/release_timeout_policy.md`
+- _… and 63 more_
 
 </details>
 
