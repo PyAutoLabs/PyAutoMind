@@ -1,5 +1,20 @@
 # Active Tasks
 
+## codex-hook-parity
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407
+- issued: 2026-09-17
+- prompt: active/codex_hook_parity.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/codex-hook-parity
+- repos:
+  - PyAutoMind: feature/codex-hook-parity
+  - PyAutoBrain: feature/codex-hook-parity
+  - autofit_assistant: feature/codex-hook-parity
+  - autogalaxy_assistant: feature/codex-hook-parity
+  - autolens_assistant: feature/codex-hook-parity
+  - autocti_assistant: feature/codex-hook-parity
+- note: "Preserve user-owned untracked scripts/compose_model_gaussians_exponentials.py in the autofit_assistant main checkout and scripts/cluster_model_composition.py in the autolens_assistant main checkout; implementation is isolated in this worktree."
+
 ## mass-field-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559
 - issued: 2026-09-17
