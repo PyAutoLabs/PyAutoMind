@@ -246,4 +246,5 @@
 - worktree: ~/Code/PyAutoLabs-wt/astrometric-offsets-catalogue
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/astrometric-offsets-catalogue
+- status-note: "2026-09-17: implemented, 3 local commits (3719f8b, 1578427, 3f75d79) UNPUSHED, fast suite 150 passed, real-data witness legs A+B pass (issue comment). ship_workspace stopped at step 3: Heart RED (install-verify testpypi F, release-validation integrate fail) — awaiting human ack to push + open PR. RESUME: source ~/Code/PyAutoLabs-wt/astrometric-offsets-catalogue/activate.sh; PR body drafted in the session scratchpad, else rebuild from the issue comment."
 - note: "worktree_check_conflict euclid_strong_lens_modeling_pipeline exits 1 on four claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis, simulator-from-result-linear). Code file sets are disjoint; the only touch point is catalogue/README.md, also edited by sersic-variants (one-hunk resolution on whichever merges second). Waived on the human's plan approval 2026-09-17; fresh parallel worktree."
