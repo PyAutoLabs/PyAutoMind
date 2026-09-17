@@ -12,10 +12,10 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-09-17
+Issued: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
-Blocked-by: complete/2026/09/provider-neutral-bundle-prompts.md (shipped)
 
 ## Request
 
