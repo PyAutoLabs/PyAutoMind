@@ -1,5 +1,25 @@
 # Active Tasks
 
+## interferometer-dirty-images-call-sites
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/556
+- issued: 2026-09-17
+- prompt: active/interferometer_dirty_images_call_sites.md
+- session: claude --resume session_01De8TQ8PQc6cyZgb5BZbfNv
+- status: workspace-dev
+- autonomy: supervised (--auto launch; docs/medium cap safe, header supervised) — ship resolves to decide-and-flag, ends at PR-open
+- location: web-github (session clones, no task worktree; branch claude/interferometer-dirty-images-call-sites-ctvywt)
+- worktree: n/a — web-github session clone (/home/user/autolens_workspace)
+- repos:
+  - autolens_workspace: claude/interferometer-dirty-images-call-sites-ctvywt
+- summary: |
+    Rename the 10 `aplt.subplot_fit_dirty_images(` calls (9 interferometer
+    scripts; re-verified on main 30104f6 — the prompt said 11) to the
+    autolens-bound `aplt.subplot_fit_interferometer_dirty_images(`, which
+    overlays auto-derived critical curves on the dirty model image. Update the
+    4 docstring mentions; the plots.yaml key reference in plot.py stays.
+    Regenerate the 9 notebooks. Supervised because the figures change: a human
+    eyeballs one regenerated figure before merge.
+
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
