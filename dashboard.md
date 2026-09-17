@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 200 |
+| [Backlog](#backlog) (`draft/`) | 201 |
 
 > **No batch in flight.**
 
@@ -520,7 +520,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**200** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**201** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 59</summary>
@@ -2231,7 +2231,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md`</summary>
 
@@ -2341,6 +2341,14 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 ```
 /start_dev draft/feature/autolens/source_cluster_arc.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/pointsolver_image_plane_chi_squared_cpu_speed.md">PointSolver image-plane chi-squared CPU speed-up: is the JAX CPU path sub-optimal enough…</a> — autolens_profiling · medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_profiling/pointsolver_image_plane_chi_squared_cpu_speed.md
 ```
 
 </details>
@@ -2624,7 +2632,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 ## Hygiene
 
-44 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+45 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2665,15 +2673,15 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`
 - `draft/research/autoarray/delaunay_research.md`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md`
+- `draft/research/autolens_profiling/pointsolver_image_plane_chi_squared_cpu_speed.md`
 - `draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md`
 - `draft/research/graphical_ep/ep_campaign.md`
 - `draft/research/graphical_ep/ep_scoping.md`
-- `draft/research/graphical_ep/graphical_scoping.md`
-- _… and 4 more_
+- _… and 5 more_
 
 </details>
 
-43 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+44 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2720,6 +2728,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — unknown theme keyword(s): cpu, numba`
 - `draft/research/autolens_profiling/fixed_light_numba_s4b_permute_active_last.md — unknown theme keyword(s): cpu, numba, inversion`
+- `draft/research/autolens_profiling/pointsolver_image_plane_chi_squared_cpu_speed.md — unknown theme keyword(s): jax`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
 </details>
