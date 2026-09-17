@@ -130,7 +130,11 @@ Move them with GitHub's native **Convert to discussion** (issue sidebar). It
 keeps the author, every comment and every timestamp, and locks the issue
 with a redirect; nothing else does — the REST Discussions API is read-only,
 `createDiscussion` is GraphQL, and a GraphQL copy would be posted under the
-maintainer's name and lose the thread. Manifest (all → **Ideas**; the two
+maintainer's name and lose the thread. Conversion lands in the issue's own
+repo, so a non-hub repo's thread is converted there (Discussions enabled
+for the minute it takes) and then **Transfer discussion** moves it to the
+hub; discussions never move when the org's source repository changes, which
+is why the host repo is decided *before* the migration, not after. Manifest (all → **Ideas**; the two
 closed-as-shipped ones keep the shipped status in their last comment):
 
 | Thread | Author | State | Why Ideas |

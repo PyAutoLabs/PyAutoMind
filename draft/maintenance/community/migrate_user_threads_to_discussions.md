@@ -28,8 +28,12 @@ human's ten minutes at github.com, in this order:
    exist and add **Scientific analysis** (answerable, "lens modelling,
    inference, is-this-result-right"). Pin one Q&A thread titled "How to get
    help" whose body is the two sentences from the policy page.
-2. **Convert**, from each issue's right-hand sidebar → *Convert to
-   discussion* → category **Ideas** (all six):
+2. **Convert, then transfer.** *Convert to discussion* creates the thread in
+   the issue's **own** repo, so for the PyAutoArray and PyAutoGalaxy issues:
+   enable Discussions on that repo (Settings → Features), convert, open the
+   new discussion → sidebar → *Transfer discussion* → `PyAutoLens`, then
+   turn that repo's Discussions off again. PyAutoLens issues convert in
+   place. Category **Ideas** for all six:
    - https://github.com/PyAutoLabs/PyAutoArray/issues/551 (@HRSAstro, open)
    - https://github.com/PyAutoLabs/PyAutoArray/issues/499 (@HRSAstro, shipped)
    - https://github.com/PyAutoLabs/PyAutoLens/issues/631 (@mwiet, shipped)
