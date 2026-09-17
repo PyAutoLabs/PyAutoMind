@@ -77,6 +77,10 @@ For the full workflow narrative, conventions, and registry schemas, read
   `never_rewrite_history.md`, `remote_sessions.md`, `end_at_deliverable.md`
   (plus the hooks that enforce them, `session_start_hook.sh` and
   `end_at_deliverable_hook.sh`). Edit the canonical file, never a generated copy.
+  `community_surface.md` is the one policy page that is *not* generated
+  anywhere: it decides where users go (one Discussions hub) and where the
+  development flow stays (per-repo issues); the Ears and the README Support
+  sections read it as doctrine.
 - **Skills** — `skills/<name>/` are agent skills and command bodies tightly
   coupled to the registry. Claude and Codex discovery is installed by
   PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.
