@@ -7,6 +7,11 @@ autonomy contract). One row per run, appended at PR-open or on parking.
 Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 `corrective`.
 
+The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
+**this** table, at the end of its last segment, in date order. The `## Shadow
+window` table at the foot of the file is not this table: it is `/prm`'s alone,
+tier-`notify` only, and its `human action` vocabulary is fixed and tested.
+
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
 | 2026-07-08 | psf-oversample-design (#353) | supervised | tests n/a (no source diff) / smoke n/a / review n/a (design note) / heart YELLOW-unack | parked |
