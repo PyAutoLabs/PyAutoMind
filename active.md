@@ -5,8 +5,10 @@
 - issued: 2026-09-17
 - prompt: active/mass_field_integration.md
 - session: claude --resume session_01PqfNuorRbom8ZjD9i9hvWo
-- status: library-dev
-- autonomy: supervised (header; default launch, no --auto — plan approval and ship sign-off are human checkpoints)
+- status: awaiting-merge
+- autonomy: supervised (header; default launch, no --auto — plan approved in chat 2026-09-17, shipped to PR-open; merge is human via /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/742
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/742
 - location: web-github (session clone /home/user/pyautolens, no task worktree; local-dev equivalent ~/Code/PyAutoLabs-wt/mass-field-integration)
 - worktree: n/a — web-github session clone (/home/user/pyautolens)
 - repos:
@@ -19,7 +21,11 @@
     the centre tie, tests, docs. Identifier pin on main:
     fef2697b5c32ba56bb18a7baecb7b0f6 (lens+shear / source model). Depends on
     PyAutoGalaxy main >= 33714b80 (ag.MassField, #621), no release needed.
-    Plan on the issue; next: /start_library → implementation → /ship_library.
+    Shipped 2026-09-17 as PR #742 (commit 5e434136a): 710 passed / 1
+    pre-existing xfail (+57 tests), identifier pin holds, JAX probe green,
+    legacy COOLEST export byte-identical; one import behaviour change
+    (MassField entity → tracer.fields). No workspace migration (Added-only
+    API). Next: /prm when CI is green; then phases 3–5 wait on a release.
 
 ## interferometer-dirty-images-call-sites
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/556
