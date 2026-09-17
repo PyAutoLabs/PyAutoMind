@@ -84,16 +84,17 @@ needed the day someone models line-of-sight shear on two planes.
 ## Phases
 
 Issue ONE at a time, in order, as the predecessor nears shipping — no bulk
-issue queues. Phases 1 and 2 are library work (library-first gate); 3–5 are
-workspace sweeps that follow the *released* libraries.
+issue queues. Phases 1 and 2 are library work (library-first gate); 3 and 5 are
+workspace sweeps whose *merge* follows the released libraries (phase 3 was
+started early, on the human's ruling, to validate the library before release).
 
 | Phase | Prompt | Repo | What it delivers | Gate |
 |---|---|---|---|---|
 | 1 | **shipped** — `complete/2026/09/mass-field-class.md` (PyAutoGalaxy#621, merged 2026-09-17) | PyAutoGalaxy | standalone `ag.MassField(redshift, **mass_profiles)`; the mass sums shared with `Galaxy` through a mixin extracted behaviour-preservingly; zero-light interface so a plane can hold it; dict round trip; JAX pytree registration; identifier pin test; API docs. | — |
 | 2 | **shipped** — `complete/2026/09/mass-field-integration.md` (PyAutoLens#742, merged 2026-09-17) | PyAutoLens | `Tracer(galaxies, fields=None)`, planes merge, `tracer.fields`, `sliced_tracer_from`, `to_dict`, pytree flatten; analysis folds `instance.fields`; LOS sampler emits fields; COOLEST 1:1 both ways (legacy peel kept); `model_util.mass_field_from` with the `ExternalPotential` centre tie; tests, docs. | phase 1 merged 2026-09-17 (PyAutoGalaxy#621) — **unblocked** |
-| 3 | `draft/docs/workspaces/mass_field_workspace_sweep.md` | autolens_workspace | `guides/profiles/mass.py` sheets section; `multi_galaxy/` main + features + SLaM: `shear_galaxy` → `fields=af.Collection(field=...)`; LOS-halo feature scripts; `imaging/` stays galaxy-attached (see Decisions). | phases 1–2 released to the installed stack |
-| 4 | `draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md` | autolens_workspace | `group/` (four named sites + `features/**`, ~44 code sites) moves straight to `fields=`, skipping the `shear_galaxy` interim; `cluster/` surveyed and unchanged. | phase 3 merged |
-| 5 | `draft/docs/workspaces/mass_field_sibling_sweep.md` | autolens_workspace_test, HowToLens, autolens_assistant | parity scripts and any tutorial/wiki mention of `shear_galaxy` or "shear on lens_0"; decided by grep after phase 3. | phase 3 merged |
+| 3 | **in flight** — `draft/docs/workspaces/mass_field_workspace_sweep.md` (re-scoped 2026-09-17) | autolens_workspace, autolens_workspace_test | **every** galaxy-attached `ExternalShear` / `MassSheet` / `ExternalPotential` in both repos (217 + 87 files: imaging, interferometer, point_source, multi_dataset, guides, multi_galaxy, group, LOS halos) → `al.MassField` in `fields=`; `imaging/modeling.py` carries the reference `__External Shear__` prose; one legacy regression script kept in autolens_workspace_test; local smoke subset against library `main` before the release. | started 2026-09-17 ahead of the release on the human's ruling; **merge** gated on the PyAutoGalaxy + PyAutoLens release; draft PRs labelled pending-release |
+| 4 | *absorbed into phase 3* — prompt `propagate_shear_galaxy_idiom_to_group_cluster.md` retired 2026-09-17 | autolens_workspace | `group/` migrates inside phase 3 (its re-scope survey — 30 loop-idiom + 12 `kwargs["shear"]` sites, `cluster/` clean — is recorded in that prompt's history). | — |
+| 5 | `draft/docs/workspaces/mass_field_sibling_sweep.md` | HowToLens, autolens_assistant | HowToLens (23 files) and assistant pages move to `fields=`; autolens_workspace_test moved to phase 3. | phase 3 merged |
 
 ## Decisions
 
@@ -117,11 +118,17 @@ workspace sweeps that follow the *released* libraries.
 - **`ExternalPotential` is a field, centre tied to the galaxy mass** via
   `model_util.mass_field_from(lens, potential=True)`; for a multi-deflector
   system the caller names the primary galaxy explicitly.
-- **`imaging/` keeps the galaxy-attached form.** Single-galaxy, nothing
-  misrepresented, the form most users' scripts carry; moving it would change
-  every reader's result identifier for no physical gain. Its `__External
-  Shear__` prose gains one paragraph pointing at `MassField` for
-  multi-deflector systems. Revisit only if the human asks.
+- **Reversed 2026-09-17 (human ruling) — the user-facing API is `fields=`
+  everywhere.** *"other than maybe an autolens_workspace_test integration test
+  we shouldn't be using a shear_galaxy or putting shears or any other field in
+  galaxies from now on. The user-facing API from here on is fields in the model
+  as a separate thing."* The earlier decision kept `imaging/` galaxy-attached to
+  spare readers an identifier change; the ruling accepts that change (a migrated
+  example is a new model; old `output/` folders are not resumed) in exchange
+  for one idiom across every workspace. Library BC is unchanged: `Galaxy`-attached
+  fields keep working unwarned for users' own scripts, and exactly one
+  workspace script (`autolens_workspace_test/scripts/misc/mass/galaxy_attached_legacy.py`)
+  keeps the legacy form as the regression.
 - **Naming.** `MassField` follows COOLEST so the interop is 1:1; `fields` is the
   model slot and tracer argument; `field` the conventional single entry.
 
@@ -145,3 +152,5 @@ workspace sweeps that follow the *released* libraries.
   complete. Phases 3–5 are gated on a **release** of PyAutoGalaxy (#621) and PyAutoLens
   (#742) to the installed stack — phase 3 is not issued until `/release` has published
   both; nothing here is bulk-issued.
+- 2026-09-17: phase 2 merged — PyAutoLens#742 (`/prm`, web session); record `complete/2026/09/mass-field-integration.md`.
+- 2026-09-17 (evening, Fable session): the human asked to validate the library with real workspace runs *before* the release, then ruled the user-facing API is `fields=` everywhere (quoted in Decisions). Phase 3 re-scoped to both workspaces and every folder (imaging decision reversed), phase 4 absorbed and its prompt retired, `autolens_workspace_test` moved from phase 5 into phase 3; phase 3 started with draft PRs held for the release.

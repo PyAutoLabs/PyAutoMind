@@ -1,5 +1,29 @@
 # Active Tasks
 
+## mass-field-workspace-sweep
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559
+- issued: 2026-09-17
+- prompt: active/mass_field_workspace_sweep.md
+- session: Fable CLI background job 281b9756 (local-dev)
+- status: workspace-dev
+- autonomy: supervised (header; default launch, no --auto — plan approved in chat 2026-09-17; PRs will open as DRAFTS labelled pending-release and merge only after the PyAutoGalaxy + PyAutoLens release is on PyPI)
+- worktree: ~/Code/PyAutoLabs-wt/mass-field-workspace-sweep
+- release-gate: PyAutoGalaxy
+- release-gate: PyAutoLens
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/742
+- repos:
+  - autolens_workspace: feature/mass-field-workspace-sweep
+  - autolens_workspace_test: feature/mass-field-workspace-sweep
+- summary: |
+    Phase 3 of the mass-field epic (draft/feature/autogalaxy/mass_field_epic.md),
+    re-scoped 2026-09-17 on the human's ruling that the user-facing API is
+    `fields=` everywhere: every galaxy-attached ExternalShear / MassSheet /
+    ExternalPotential in autolens_workspace (217 files) and autolens_workspace_test
+    (87 files) moves to al.MassField in its own fields= slot; one legacy regression
+    script kept in workspace_test. Absorbs former phase 4 (group/). Started ahead
+    of the release to validate the library with real workspace runs; local smoke
+    subset against library main, then draft PRs held for the release.
+
 ## provider-neutral-bundle-prompts
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/383
 - issued: 2026-09-17
