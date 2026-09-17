@@ -291,6 +291,7 @@ markers; everything below GENERATED is rebuilt.
 - [order-lens-mge-bases-and-seed](2026/09/order-lens-mge-bases-and-seed.md)
 - [organ-board-github-link](2026/09/organ-board-github-link.md) — Every organ board header now carries a `GitHub Page` link beside its existing
 - [over-sample-snr-double-division](2026/09/over-sample-snr-double-division.md)
+- [parameterization-prior-count](2026/09/parameterization-prior-count.md)
 - [permanent-ci-timing-history](2026/09/permanent-ci-timing-history.md)
 - [phase-5-dev-leg-prepare-the-mesh](2026/09/phase-5-dev-leg-prepare-the-mesh.md)
 - [physical-fast-rebuild-autogalaxy](2026/09/physical-fast-rebuild-autogalaxy.md)
