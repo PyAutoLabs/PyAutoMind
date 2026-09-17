@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 10 |
+| [In flight](#in-flight) (`active/`) | 9 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 210 |
+| [Backlog](#backlog) (`draft/`) | 211 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -134,18 +134,18 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/maintenance/assistants/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> — assistants · large · supervised · high</summary>
 
 ```
-/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
+/start_dev draft/maintenance/assistants/codex_skill_discovery_parity.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source image-plane chi-squared on the A100: likelihood breakdown, bottleneck map, speed-up levers</a> — autolens_profiling · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
 
 ```
-/start_dev draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md
+/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
 ```
 
 </details>
@@ -256,14 +256,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/codex_hook_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/386">issue #386</a> — filed 2026-09-17</summary>
-
-```
-/start_dev active/codex_skill_discovery_parity.md
 ```
 
 </details>
@@ -523,7 +515,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details><summary>📋 <b>codex-skill-discovery</b> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/386">issue #386</a> — filed 2026-09-17</summary>
 
 ```
-/start_dev active/codex_skill_discovery_parity.md
+/start_dev draft/maintenance/assistants/codex_skill_discovery_parity.md
 ```
 
 </details>
@@ -572,7 +564,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**210** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
+**211** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 60</summary>
@@ -1510,7 +1502,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 21</summary>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> — organs · medium · supervised · high</summary>
 
@@ -1524,6 +1516,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/organs/reduce_session_token_load.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/assistants/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> — assistants · large · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/assistants/codex_skill_discovery_parity.md
 ```
 
 </details>
@@ -2278,7 +2278,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
-| 2026-09-17 | filed | <a href="active/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/assistants/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/agent_harness_agnostic_setup.md">Make agent setup Claude/Codex agnostic</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | issued | <a href="active/fixed_light_numba_s4b_permute_active_last.md">Fixed-light numba CPU round 4, wave B — A-prime: permute the active…</a> |
@@ -2767,7 +2767,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-53 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+54 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2807,12 +2807,12 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/test/workspaces/smoke_workspace_fixes.md`
 - `draft/release/autocti/cti_release_train_wiring.md`
 - `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
+- `draft/maintenance/assistants/codex_skill_discovery_parity.md`
 - `draft/maintenance/organs/agent_harness_agnostic_setup.md`
 - `draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md`
 - `draft/maintenance/organs/reduce_session_token_load.md`
 - `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
-- `draft/maintenance/workspaces/read_through_issues.md`
-- _… and 13 more_
+- _… and 14 more_
 
 </details>
 

@@ -13,7 +13,7 @@
 
 ## codex-skill-discovery
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/386
-- prompt: active/codex_skill_discovery_parity.md
+- prompt: draft/maintenance/assistants/codex_skill_discovery_parity.md
 - filed: 2026-09-17
 - classification: workspace
 - suggested-branch: feature/codex-skill-discovery

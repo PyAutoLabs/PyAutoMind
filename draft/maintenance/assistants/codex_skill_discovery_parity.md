@@ -14,9 +14,8 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: issued — planned behind active repository claims
+Status: planned — blocked behind active repository claims
 Filed: 2026-09-17
-Issued: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
 Blocked-by: codex_hook_parity; mass-field-workspace-sweep
 
