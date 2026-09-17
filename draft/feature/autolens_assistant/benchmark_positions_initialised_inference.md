@@ -15,7 +15,7 @@ Consequence: judge
 Witness: `benchmarks/runs/positions_initialised_inference/` holds three scored runs from one model×harness, RESULTS.md shows the row with median and range, the card's tests pass, and `benchmarks/truth/` is absent from the working directory the harness hands the agent.
 Review-minutes: 15
 Unattended: needs-access
-Blocked-by: PyAutoMind/draft/feature/autolens_assistant/oneshot_benchmark_harness.md
+Blocked-by: PyAutoMind/active/oneshot_benchmark_harness.md (autolens_assistant#126)
 Filed: 2026-09-17
 
 ## Why
