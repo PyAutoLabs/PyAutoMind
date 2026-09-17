@@ -11,9 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
+Consequence: glance
 Witness: an EP run over N AnalysisFactors with a JAX likelihood logs "JAX jit compiling vectorized (vmap) likelihood function" N times in total across M factor steps (once per analysis), not N*M times; the per-factor compile is paid on step 1 only and the per-step wall-clock drops by the compile cost from step 2 on.
-Review-minutes: 20
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-17
 

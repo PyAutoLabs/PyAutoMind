@@ -13,14 +13,6 @@ Witness: A model with an `add_assertion` between two priors, fitted with `af.Nau
 Review-minutes: 25
 Unattended: ready
 
-# Skip the likelihood for assertion-violating samples on the JAX path
-
-Type: feature
-Difficulty: large
-Autonomy: supervised
-Priority: normal
-Witness: A model with an `add_assertion` between two priors, fitted with `af.Nautilus` on the JAX backend with a deliberately high violating fraction (an assertion satisfied by roughly half the prior volume, and a bound geometry prevented from learning it), performs measurably fewer `log_likelihood_function` evaluations than today - counted by an instrumented analysis that increments a counter per lane - while the returned figure of merit for every sample is bit-identical to the current implementation and to the numpy backend, and `test_fitness.py` still shows the two backends agreeing exactly on value.
-
 In PyAutoFit, a sample that violates an `add_assertion` costs a full likelihood evaluation on
 the JAX backend and costs nothing on the numpy backend. The two backends agree on the *value*
 they return, which is deliberate, but they differ by the entire cost of the analysis, which is

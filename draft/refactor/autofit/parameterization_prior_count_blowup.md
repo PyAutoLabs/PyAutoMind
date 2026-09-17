@@ -11,8 +11,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 15
+Consequence: notify
+Witness: `model.info` and `factor_graph.global_prior_model.info` on `autogalaxy_workspace_test` `mge_group.py` are byte-identical before and after; `path_instances_of_class` calls under `model.info` drop from 763,555 to at most one per node; the warm smoke run of that script drops by at least 5 s (19.3 -> <= 14 s).
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-10
 

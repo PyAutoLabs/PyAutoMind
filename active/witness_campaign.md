@@ -167,17 +167,40 @@ compile bound is the sweep's number, not the prompt's; `sparse_operator_int32`'s
 `over_sample_size_via_snr_from`'s pre-existing witness pins option 1 of the
 prompt's "decide one of".
 
-### Pass 3 — `autofit`, 26 prompts (proposed 2026-09-17, awaiting accept/strike)
+### Pass 3 — `autofit`, 26 prompts (2026-09-17, issue #398)
 
-Proposed on the issue, nothing written yet. Bigger than the ~15 of a pass
-because most of it is mechanical: 14 unwitnessed prompts need a witness, 6
-witnessed prompts need only the restamp (5 stale `judge`, 1 unset), and 7
-witnessed prompts derive `judge` solely on "raises " in prose describing the
-existing crash — the mapping_overlay false-judge pattern — and are proposed
-as declared-`glance` overrides. As proposed: 24 judge / 2 notify → 3 notify /
-20 glance / 3 judge, 465 → 130 seed review-minutes; two `Witness: none —`
-(`ep_analytic_updates`, an umbrella of four work packages;
-`ep_lbfgs_jax`, a placeholder). Counts get their own row when written.
+Bigger than the ~15 of a pass because most of it was mechanical: 14
+unwitnessed prompts got a witness, 6 witnessed prompts got only the restamp
+(5 stale `judge`, 1 unset), and 7 witnessed bug prompts that derived `judge`
+solely on "raises " in prose describing the crash being fixed got the
+declared-`glance` override. Human accepted all 26 as proposed. Two
+`Witness: none —` (`ep_analytic_updates`, an umbrella of four work packages;
+`ep_lbfgs_jax`, a placeholder); `skip_the_likelihood` left at `judge` on
+purpose (large, changes what the sampler evaluates). Four duplicated header
+blocks collapsed in the same write (`skip_the_likelihood`, `assertion_repr`,
+`emcee_crashes`, `stale_enable_pytrees` — the intake artefact, twice over).
+
+| | notify | glance | judge | review-minutes |
+|---|---|---|---|---|
+| before | 2 | 0 | 24 | 465 |
+| after | 3 | 20 | 3 | 130 |
+
+Backlog after pass 3: 157 ready, 83 witnessed + 3 `none`, 71 not —
+derived **19 notify / 55 glance / 83 judge**; declared **15 / 52 / 74** +
+16 unset.
+
+Findings for the Brain, added to the `none`-rule follow-up: (1) the "raises "
+keyword is endemic in bug prompts — 8 of the campaign's overrides so far are
+prose describing an existing crash, and the faculty's own "Known limit"
+predicts exactly this; (2) `emcee_crashes_in_autocorrelation_when_the_chain`
+and item 2 of `mcmc_thin_zero_and_check_size_short_chain` are the same
+defect — the two witnesses were written to agree (Emcee gains Zeus's guard),
+but one of the two prompts should fold into the other at pick-up.
+
+Decisions the accept pinned, flagged as in earlier passes: `mcmc_thin_zero`
+(thin clamps to 1; guard, not a named error); `split_fitness_batch_size`
+declared `glance` over a derived `notify` (two new public kwargs); `howtofit_chapter_3`
+keeps its declared `notify` over a derived `glance` (two docstring strings).
 
 ### Remaining passes
 

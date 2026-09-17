@@ -11,9 +11,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
+Consequence: glance
 Witness: an EP fit whose EPOptimiser is built with default_optimiser=af.Nautilus(number_of_cores=1) over a FactorGraphModel with PriorFactors runs its prior-factor steps instead of raising AttributeError on _use_jax; a test builds that optimiser over one AnalysisFactor plus its priors and runs one step.
-Review-minutes: 10
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-17
 

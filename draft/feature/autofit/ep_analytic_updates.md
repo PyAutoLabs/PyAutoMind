@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
+Witness: none — an umbrella of four sequenced work packages (plan in PyAutoFit#1338), each its own issue/PR at pick-up with its own witness; nothing settles the umbrella.
 Review-minutes: 25
 Unattended: ready
 Blocked-by: PyAutoFit#1334, PyAutoFit#1331, PyAutoFit#1332   # WP1 gate (MERGED); WP3/WP4 gates (open)
