@@ -245,4 +245,5 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/astrometric-offsets-catalogue
 - repos:
+  - euclid_strong_lens_modeling_pipeline: feature/astrometric-offsets-catalogue
 - note: "worktree_check_conflict euclid_strong_lens_modeling_pipeline exits 1 on four claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis, simulator-from-result-linear). Code file sets are disjoint; the only touch point is catalogue/README.md, also edited by sersic-variants (one-hunk resolution on whichever merges second). Waived on the human's plan approval 2026-09-17; fresh parallel worktree."
