@@ -11,11 +11,12 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Review-minutes: 25
 Unattended: never
 Filed: 2026-09-17
+Issued: 2026-09-17
 
 ## Original request (verbatim)
 

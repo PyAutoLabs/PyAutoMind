@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 14 |
+| [In flight](#in-flight) (`active/`) | 16 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 199 |
+| [Backlog](#backlog) (`draft/`) | 196 |
 
 > **No batch in flight.**
 
@@ -74,22 +74,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_workspace/witt_wynne_guide_fixes.md">Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and correct its claims</a> — autolens_workspace · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autolens_workspace/witt_wynne_guide_fixes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/euclid/witt_wynne_catalogue_output.md">Witt–Wynne SIEP projection as a catalogue output of the Euclid pipeline</a> — euclid · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/euclid/witt_wynne_catalogue_output.md
 ```
 
 </details>
@@ -356,6 +340,22 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/witt_wynne_catalogue_output.md">Witt–Wynne SIEP projection as a catalogue output of the Euclid pipeline</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/84">issue #84</a> — issued 2026-09-17 — workspace-dev</summary>
+
+```
+/start_dev active/witt_wynne_catalogue_output.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/witt_wynne_guide_fixes.md">Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and correct its claims</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/552">issue #552</a> — issued 2026-09-17 — workspace-dev</summary>
+
+```
+/start_dev active/witt_wynne_guide_fixes.md
+```
+
+</details>
+
 ## Pending release
 
 Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
@@ -571,7 +571,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**199** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**196** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 51</summary>
@@ -987,23 +987,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
-
-<details><summary>📋 <a href="draft/feature/autolens_workspace/witt_wynne_guide_fixes.md">Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and correct its claims</a> — autolens_workspace · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autolens_workspace/witt_wynne_guide_fixes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/euclid/witt_wynne_catalogue_output.md">Witt–Wynne SIEP projection as a catalogue output of the Euclid pipeline</a> — euclid · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/euclid/witt_wynne_catalogue_output.md
-```
-
-</details>
+<summary><b>feature</b> — 37</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1820,7 +1804,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>test</b> — 6</summary>
+<summary><b>test</b> — 5</summary>
 
 <details><summary>📋 <a href="draft/test/workspaces/restore_workspace_test_likelihood_baselines.md">Restore absolute NumPy likelihood regression baselines in the <code>_workspace_test</code></a> — workspaces · too-large · supervised · high</summary>
 
@@ -1834,14 +1818,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/test/autolens_workspace/no_untimed_network_downloads_check.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace/witt_wynne_tests_and_review.md">Witt–Wynne guide follow-up: broader tests + human design/example review</a> — autolens_workspace · medium · human-required · normal</summary>
-
-```
-/start_dev draft/test/autolens_workspace/witt_wynne_tests_and_review.md
 ```
 
 </details>
@@ -1925,70 +1901,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 ## Bundles
 
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so `/prm` closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
-
-<details>
-<summary><b>point-source</b> — 3 task(s) · 8 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: guides</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'point-source' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autolens_workspace/witt_wynne_guide_fixes.md
-- draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
-- draft/feature/autolens/multi_plane_time_delays.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autolens_workspace/witt_wynne_guide_fixes.md">Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and…</a> | autolens_workspace | medium | high | draft |
-| <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> | autolens | medium | normal | formalised |
-| <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> | autolens | large | normal | formalised |
-
-</details>
-
-<details>
-<summary><b>euclid</b> — 3 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, docs, euclid</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the architect (Fable) for the PyAutoMind bundle 'euclid' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/euclid/witt_wynne_catalogue_output.md
-- draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
-- draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/euclid/witt_wynne_catalogue_output.md">Witt–Wynne SIEP projection as a catalogue output of the Euclid…</a> | euclid | medium | high | draft |
-| <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> | euclid | small | medium | formalised |
-| <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> | euclid | low | low | draft |
-
-</details>
 
 <details>
 <summary><b>inversion</b> — 2 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: correctness, inversion, performance, sparse-operator</summary>
@@ -2186,7 +2098,73 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 37 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>autogalaxy — bundle 1</b> — 3 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'autogalaxy — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autogalaxy/sersiccoresph_has_no_mass_to_light_ratio.md
+- draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
+- draft/maintenance/autogalaxy/linear_operated_sersic_has_no_prior_yaml.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autogalaxy/sersiccoresph_has_no_mass_to_light_ratio.md">SersicCoreSph has no mass_to_light_ratio argument</a> | small | medium | formalised |
+| <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> | large | medium | formalised |
+| <a href="draft/maintenance/autogalaxy/linear_operated_sersic_has_no_prior_yaml.md">linear_operated Sersic has no prior yaml file</a> | small | low | formalised |
+
+</details>
+
+<details>
+<summary><b>visualization</b> — 4 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the architect (Fable) for the PyAutoMind bundle 'visualization' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/research/autolens/quick_update_plotting_cost.md
+- draft/docs/autolens/plot_rst_missing_exports.md
+- draft/bug/autofit/add_assertion_name_silently_dropped.md
+- draft/bug/autofit/direct_instance_tuples_double_counts_constants.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> | autolens | medium | medium | draft |
+| <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> | autolens | medium | normal | draft |
+| <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> | autofit | small | normal | formalised |
+| <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> | autofit | small | normal | formalised |
+
+</details>
+
+_Showing 8 of 36 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2194,8 +2172,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/feature/autolens_workspace/witt_wynne_guide_fixes.md">Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and…</a> |
-| 2026-09-17 | filed | <a href="draft/feature/euclid/witt_wynne_catalogue_output.md">Witt–Wynne SIEP projection as a catalogue output of the Euclid…</a> |
+| 2026-09-17 | issued | <a href="active/witt_wynne_guide_fixes.md">Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and…</a> |
+| 2026-09-17 | issued | <a href="active/witt_wynne_catalogue_output.md">Witt–Wynne SIEP projection as a catalogue output of the Euclid…</a> |
 | 2026-09-17 | issued | <a href="active/astrometric_offsets_catalogue.md">Output the multi-band astrometric offsets (DatasetModel grid_offset)…</a> |
 | 2026-09-17 | issued | <a href="active/fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md">Fixed-light numba CPU round 4 — the curvature-matrix kernel A/B on…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
@@ -2674,7 +2652,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-135 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+132 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2707,11 +2685,9 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md`
 - `draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md`
 - `draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md`
-- `draft/feature/autolens_workspace/witt_wynne_guide_fixes.md`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md`
-- `draft/feature/euclid/witt_wynne_catalogue_output.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/pyautobrain/board_without_gh.md`
@@ -2719,11 +2695,13 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/pyautobrain/brain_board_follow_ups.md`
 - `draft/feature/pyautogut/gut_board.md`
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
-- _… and 95 more_
+- `draft/feature/pyautoheart/howto_real_settings_nightly.md`
+- `draft/feature/workspaces/model_figures_6_rollout.md`
+- _… and 92 more_
 
 </details>
 
-38 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+36 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2731,11 +2709,9 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
-- `draft/feature/autolens_workspace/witt_wynne_guide_fixes.md — unknown theme keyword(s): guides`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
-- `draft/feature/euclid/witt_wynne_catalogue_output.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md — unknown theme keyword(s): inversion, performance`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`

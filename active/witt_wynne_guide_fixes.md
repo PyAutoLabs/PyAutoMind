@@ -10,11 +10,12 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Review-minutes: 15
 Unattended: never
 Filed: 2026-09-17
+Issued: 2026-09-17
 
 Supersedes draft/test/autolens_workspace/witt_wynne_tests_and_review.md (the review
 it asked for was carried out on 2026-09-17; this prompt ships its consequences).
