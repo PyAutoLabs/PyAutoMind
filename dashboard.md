@@ -176,10 +176,26 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
+
+```
+/start_dev draft/refactor/autoarray/sparse_operator_int32_indexes.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main: <code>al.MapperValued</code> no longer exists</a> — autolens_workspace · small · supervised · medium</summary>
 
 ```
 /start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
 ```
 
 </details>
@@ -192,34 +208,18 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/source_clumps_robust_scale.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output directory</a> — autofit · small · safe · medium</summary>
 
 ```
 /start_dev draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke cap…</a> — autolens_workspace · small · safe · medium</summary>
-
-```
-/start_dev draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such parameter</a> — euclid · small · supervised · medium</summary>
-
-```
-/start_dev draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides declared Target…</a> — pyautobrain · small · safe · medium</summary>
-
-```
-/start_dev draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
 ```
 
 </details>
@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/398">issue #398</a> — issued 2026-09-10 — awaiting-input</summary>
+<details><summary>📋 <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/398">issue #398</a> — issued 2026-09-10 — library-dev</summary>
 
 ```
 /start_dev active/witness_campaign.md
@@ -2676,15 +2676,13 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-135 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
-- `draft/feature/autoarray/multiwavelength_inversion.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
-- `draft/feature/autoarray/source_clumps_robust_scale.md`
 - `draft/feature/autofit/ep_analytic_updates.md`
 - `draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md`
 - `draft/feature/autofit/ep_lbfgs_jax.md`
@@ -2721,7 +2719,9 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/pyautohands/release_board_run_logs_enrichment.md`
 - `draft/feature/pyautoheart/howto_real_settings_nightly.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
-- _… and 95 more_
+- `draft/feature/workspaces/model_figures_6b2_slam_stages.md`
+- `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
+- _… and 87 more_
 
 </details>
 
