@@ -1989,7 +1989,7 @@ Sets of INDEPENDENT tasks that make sense in one orchestrated session: an archit
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'autoarray — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'autoarray — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
@@ -2001,7 +2001,7 @@ Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
 2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
 3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
 5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
 6. Report per member: issue, branch, PR, and pass/fail counts.
 ```
@@ -2023,7 +2023,7 @@ Contract (the `start_bundle` skill is the full body):
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'organs — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'organs — bundle 1' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/maintenance/organs/agent_harness_agnostic_setup.md
@@ -2033,7 +2033,7 @@ Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
 2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
 3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
 5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
 6. Report per member: issue, branch, PR, and pass/fail counts.
 ```
@@ -2053,7 +2053,7 @@ Contract (the `start_bundle` skill is the full body):
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'workspaces — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'workspaces — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
@@ -2065,7 +2065,7 @@ Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
 2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
 3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
 5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
 6. Report per member: issue, branch, PR, and pass/fail counts.
 ```
@@ -2087,7 +2087,7 @@ Contract (the `start_bundle` skill is the full body):
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'euclid' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'euclid' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
@@ -2099,7 +2099,7 @@ Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
 2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
 3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
 5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
 6. Report per member: issue, branch, PR, and pass/fail counts.
 ```
@@ -2121,7 +2121,7 @@ Contract (the `start_bundle` skill is the full body):
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'inversion' — 2 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'inversion' — 2 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md
@@ -2131,7 +2131,7 @@ Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
 2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
 3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
 5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
 6. Report per member: issue, branch, PR, and pass/fail counts.
 ```
@@ -2151,7 +2151,7 @@ Contract (the `start_bundle` skill is the full body):
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'pixelization' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'pixelization' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/refactor/autoarray/matern_vendor_bessel_kve.md
@@ -2162,7 +2162,7 @@ Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
 2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
 3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
 5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
 6. Report per member: issue, branch, PR, and pass/fail counts.
 ```
@@ -2183,7 +2183,7 @@ Contract (the `start_bundle` skill is the full body):
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'assistants' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'assistants' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
@@ -2195,7 +2195,7 @@ Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
 2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
 3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
 5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
 6. Report per member: issue, branch, PR, and pass/fail counts.
 ```
@@ -2217,7 +2217,7 @@ Contract (the `start_bundle` skill is the full body):
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the architect (Fable) for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
 - draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
@@ -2229,7 +2229,7 @@ Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
 2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
 3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. Delegate the implementation of each member to an Opus subagent via the Agent tool (`Agent(model="opus", …)`), one subagent per member, with the member's issue plan, the worktree path and the branch to use. You plan, judge and talk to the user; the subagents edit, test and report back.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
 5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
 6. Report per member: issue, branch, PR, and pass/fail counts.
 ```
