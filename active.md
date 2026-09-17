@@ -4,7 +4,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407
 - issued: 2026-09-17
 - prompt: active/codex_hook_parity.md
-- status: workspace-dev
+- status: shipping-under-heart-red-override
 - worktree: ~/Code/PyAutoLabs-wt/codex-hook-parity
 - repos:
   - PyAutoMind: feature/codex-hook-parity
@@ -14,6 +14,15 @@
   - autolens_assistant: feature/codex-hook-parity
   - autocti_assistant: feature/codex-hook-parity
 - note: "Preserve user-owned untracked scripts/compose_model_gaussians_exponentials.py in the autofit_assistant main checkout and scripts/cluster_model_composition.py in the autolens_assistant main checkout; implementation is isolated in this worktree."
+- heart-red-override:
+  - authorized: 2026-09-17, live and contemporaneous for PyAutoMind#407 / codex-hook-parity
+  - human-quote: "i do then go to phase 3"
+  - issue-record: https://github.com/PyAutoLabs/PyAutoMind/issues/407#issuecomment-5722225406
+  - exact-red: "install verification FAILED (testpypi; checks F)"
+  - exact-red: "release validation FAILED (stage integrate)"
+  - additional-yellow: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"
+  - gates: "tests PASS Mind 130, Brain 28, assistants 29/32/32/29; smoke n/a (organism/config/docs task); review CLEAN; generated-hook drift OK; lifecycle OK with known unrelated warning; diff-check clean; nested-cwd hook commands verified"
+  - scope: "commit, push and six pending-release PRs only; no release, release rehearsal or merge; no claim that this branch repairs Heart; merge requires a separate explicit human command and green required checks"
 
 ## mass-field-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559
