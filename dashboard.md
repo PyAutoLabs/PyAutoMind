@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from linear-light-profile fits</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/77">issue #77</a> — issued 2026-09-13 — blocked</summary>
+<details><summary>📋 <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from linear-light-profile fits</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/77">issue #77</a> — issued 2026-09-13 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/87">euclid_strong_lens_modeling_pipeline#87</a></summary>
 
 ```
 /start_dev active/simulator_from_result_linear_intensities.md
