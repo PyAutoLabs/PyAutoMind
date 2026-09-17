@@ -62,3 +62,11 @@ Worked around in the #1628 regression tests by passing
 
 Neither is a correctness bug in results: they are crashes and an inconsistency
 between the two searches. Do not bundle them with a results-changing fix.
+
+## Folded 2026-09-17
+
+`draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md` (filed
+2026-09-10) described item 2 above and was removed at the witness-campaign
+close-out (PyAutoMind#398). Its witness — `af.Emcee(nwalkers=10, nsteps=50).fit(...)`
+on the 1D Gaussian example completes with a warning instead of raising
+`IndexError` — is part of this prompt's witness now (Emcee gains Zeus's guard).

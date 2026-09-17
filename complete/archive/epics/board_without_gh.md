@@ -10,7 +10,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: phased
+Status: retired — phased umbrella archived 2026-09-17 at the witness-campaign close-out (PyAutoMind#398): phase 1 shipped (complete/2026/08/board-github-data-seam.md), phase 2 lives on as draft/feature/pyautobrain/board_without_gh_phase2_legs.md, which carries the headline criterion
 Consequence: judge
 Witness: none — phased umbrella: phase 1 shipped (complete/2026/08/board-github-data-seam.md) and phase 2 is its own prompt carrying the headline criterion; nothing settles the umbrella, retire or fold it at pick-up.
 Review-minutes: 25
