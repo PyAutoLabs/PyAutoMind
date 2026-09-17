@@ -128,8 +128,7 @@
 - location: web-github (session clones /home/user/autolens_assistant + /home/user/PyAutoBrain, no task worktree)
 - worktree: n/a — web-github session clones
 - repos:
-  - autolens_assistant: claude/oneshot-benchmark-harness-9scp59
-- note: "PyAutoBrain PR #380 merged; its repo claim was released on 2026-09-17 after explicit human overlap approval. The task remains active for autolens_assistant PR #127."
+- note: "PyAutoBrain PR #380 and autolens_assistant PR #127 merged; issue #126 is closed. Both repo claims are released. The entry remains active only for the first real headless runs noted below; do not fully close it as part of codex-hook-parity."
 - summary: |
     One-shot, machine-scored assistant benchmarks: headless `benchmark.py run`
     (harnesses.yaml adapters, private workdir without benchmarks/truth, compute
