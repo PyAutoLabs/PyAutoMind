@@ -116,36 +116,6 @@
     Read that instead, under the same resolve_files_path hash, guard that no
     lp_linear profile survives, and add tests/test_simulator_from_result.py —
     --from-result had no test at all.
-## howtofit-mode
-- issue: https://github.com/PyAutoLabs/autofit_assistant/issues/42
-- issued: 2026-09-14
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtofit-mode
-- repos:
-  - HowToFit: feature/howtofit-mode
-  - autofit_workspace: feature/howtofit-mode
-  - PyAutoFit: feature/howtofit-mode
-- released-repo: autofit_assistant — PR #43 merged; issue #42 closed; remaining repo claims retained.
-- prompt: active/howtofit_mode.md
-- summary: Assistant implementation ready and reviewed; approved README prompt propagation to HowToFit, autofit_workspace and PyAutoFit in progress. Shipping held by Heart YELLOW pending human acknowledgement.
-- ship-hold: |
-    Workspace validation: 3 failures (cloud#34824535982).
-    Manifest drift: organism-map 2; public front-door 2.
-    Profiling drift: three matrix_free SLQ fp64 results — delaunay_hpc_a100,
-    delaunay_nn_hpc_a100, rectangular_hpc_a100.
-- next: Acknowledge these Heart YELLOW reasons before ship_workspace; source remains local and uncommitted.
-- parallel-claim: |
-    RESOLVED 2026-09-14: the parallel task `howtofit-tutorial-4-6-feedback`
-    (HowToFit#61 / PR#62) merged and closed out, so HowToFit is no longer shared
-    and this claim stands alone again. Kept as a record of a deliberate,
-    human-approved override of the conflict guard, not drift. Evidence at the
-    time: this task's `feature/howtofit-mode` had 0 commits of its own and 0
-    changed files against origin/main (9 behind, working tree clean) — the
-    HowToFit claim was registered but never used. File sets were disjoint:
-    howtofit-mode is README/AGENTS assistant-prompt propagation; the other task
-    touched scripts/, notebooks/ and markdown/ under chapter_1_introduction only.
-    NOTE: `feature/howtofit-mode` is now 9+ commits behind origin/main and the
-    merged tutorial work landed there — rebase before editing HowToFit here.
 
 ## multi-galaxy-j1011-real-data
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549
@@ -175,7 +145,7 @@
 - repos:
   - PyAutoFit: claude/vmapped-likelihood-jit-compiles-bhog4o
 - environment: web-github (Claude Code remote session 2026-09-17; no local worktree, the branch is the session's claude/vmapped-likelihood-jit-compiles-bhog4o on the session clone rather than feature/ep-release-search-internals)
-- parallel-claim: PyAutoFit also claimed by howtofit-mode (README propagation only; its PyAutoFit worktree clean, 0 commits ahead of origin/main on 2026-09-15); disjoint files, own worktree when started
+- parallel-claim: RESOLVED 2026-09-17 — `howtofit-mode` (which also claimed PyAutoFit, README propagation only) shipped via PyAutoFit#1625 on 2026-09-14 and was closed out to `complete/2026/09/howtofit-mode.md`; PyAutoFit is no longer shared. Kept as a record of the earlier human-approved parallel claim.
 - note: "Resumed 2026-09-17 in a remote session (/start_dev -> /start_library), implementation in progress on the claude/ branch above. Previously: planned and parked by the human on 2026-09-15 — implementation not started, no worktree yet. The full two-level plan is on the issue; resume with /start_library ep-release-search-internals. Fix locus: AbstractSearch.optimise releases result._search_internal before status.result so each EP factor search's Fitness and its compiled JAX executables are collectable (slope_hierarchy_scale job 342410 retained 76 searches' executables and died in LLVM section memory at 64 GB). Follow-ups to /intake at ship: analysis-level compile cache across EP steps; vmap(jit) batch-shape churn."
 
 ## jit-visualization-outputs

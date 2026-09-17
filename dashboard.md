@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 15 |
+| [In flight](#in-flight) (`active/`) | 14 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -248,14 +248,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/42">issue #42</a> — issued 2026-09-14 — workspace-dev</summary>
-
-```
-/start_dev active/howtofit_mode.md
 ```
 
 </details>
@@ -2245,19 +2237,18 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | issued | <a href="active/jit_visualization_outputs.md">Fix JIT quick-update visualization output regressions</a> |
 | 2026-09-15 | issued | <a href="active/ep_re_jit_compiles_the_vmapped_likelihood.md">EP re-jit-compiles the vmapped likelihood per factor search until…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
-| 2026-09-14 | issued | <a href="active/howtofit_mode.md">autofit_assistant: HowToFit learning mode</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
 | 2026-09-13 | issued | <a href="active/simulator_from_result_linear_intensities.md">simulator.py --from-result rebuilds a dark tracer from…</a> |
 | 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
+| 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
@@ -2267,12 +2258,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-11 | issued | <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> |
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
+| 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
 | 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
@@ -2282,6 +2273,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md">PyAutoHeart smoke-tests.yml relevance gate skips the pytest matrix on…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code>…</a> |
+| 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
 
 </details>
 
