@@ -14,6 +14,7 @@ Witness: with `TARGET_VERSION` set, the check F driver's `colab_gate verify` lin
 Review-minutes: 30
 Unattended: ready
 Filed: 2026-09-17
+Issued: 2026-09-17
 
 ## Finding
 
