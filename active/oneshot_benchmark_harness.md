@@ -17,6 +17,7 @@ Witness: `benchmark.py run harness-smoke --harness claude --repeats 1` executes 
 Review-minutes: 15
 Unattended: needs-access
 Filed: 2026-09-17
+Issued: 2026-09-17
 
 ## Why
 
