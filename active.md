@@ -242,11 +242,12 @@
 - issued: 2026-09-17
 - prompt: active/astrometric_offsets_catalogue.md
 - session: claude --resume c8cde173-8bcd-482c-972a-d9869b458314
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/astrometric-offsets-catalogue
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/astrometric-offsets-catalogue
-- status-note: "2026-09-17: implemented, 3 local commits (3719f8b, 1578427, 3f75d79) UNPUSHED, fast suite 150 passed, real-data witness legs A+B pass (issue comment). ship_workspace stopped at step 3: Heart RED (install-verify testpypi F, release-validation integrate fail) — awaiting human ack to push + open PR. RESUME: source ~/Code/PyAutoLabs-wt/astrometric-offsets-catalogue/activate.sh; PR body drafted in the session scratchpad, else rebuild from the issue comment."
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/85
+- status-note: "2026-09-17: implemented, 3 local commits (3719f8b, 1578427, 3f75d79) UNPUSHED, fast suite 150 passed, real-data witness legs A+B pass (issue comment). Heart RED (install-verify testpypi F, release-validation integrate fail) acknowledged by the human typing /prm 2026-09-17; pushed, smoke euclid 9/9, PR #85 open with pending-release; /prm judging CI. RESUME: source ~/Code/PyAutoLabs-wt/astrometric-offsets-catalogue/activate.sh; PR body drafted in the session scratchpad, else rebuild from the issue comment."
 - note: "worktree_check_conflict euclid_strong_lens_modeling_pipeline exits 1 on four claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis, simulator-from-result-linear). Code file sets are disjoint; the only touch point is catalogue/README.md, also edited by sersic-variants (one-hunk resolution on whichever merges second). Waived on the human's plan approval 2026-09-17; fresh parallel worktree."
 
 ## witt-wynne-catalogue
