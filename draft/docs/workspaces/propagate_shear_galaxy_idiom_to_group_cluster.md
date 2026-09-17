@@ -10,7 +10,7 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Consequence: notify
-Witness: `grep -rn "if i == 0 else None" scripts/group/` and `grep -rn 'kwargs\["shear"\]' scripts/group/` both return nothing — every former site holds the field in an `al.MassField` named `mass_field` at the system centre (0.0", 0.0") — the traced grid of `group/modeling.py`'s model at fixed instance values stays `np.allclose` to the pre-change one (presentational, per #378), the positional `tracer.galaxies[k]` sites re-offset or named, the smoke suite green, notebooks and `workspace_index.json` regenerated.
+Witness: `grep -rn "if i == 0 else None" scripts/group/` and `grep -rn 'kwargs\["shear"\]' scripts/group/` both return nothing — every former site holds the field in `fields=af.Collection(field=af.Model(al.MassField, ...))` beside `galaxies=`, at the system centre (0.0", 0.0") — the traced grid of `group/modeling.py`'s model at fixed instance values stays `np.allclose` to the pre-change one (presentational, per #378), `tracer.galaxies` positional sites confirmed unmoved (fields are not in it), the smoke suite green, notebooks and `workspace_index.json` regenerated.
 Review-minutes: 5
 Unattended: ready
 Priority: normal
@@ -26,11 +26,13 @@ The `/start_dev` plan checkpoint for this prompt found the scope is the whole
 `scripts/group/` subtree, not four sites, and the discussion it opened became
 the MassField epic. What changed:
 
-- **Target idiom is `al.MassField`, not a shear-only `Galaxy`.** Mirror
-  `multi_galaxy/` *after* phase 3 (`mass_field = af.Model(al.MassField, redshift=0.5,
-  shear=af.Model(al.mp.ExternalShear))` in `af.Collection(**lens_dict,
-  mass_field=mass_field, source=source)`; SLaM stages chain
-  `mass_field=<result>.model|instance.galaxies.mass_field`).
+- **Target idiom is `al.MassField` in its own `fields=` slot, not a shear-only
+  `Galaxy`.** Mirror `multi_galaxy/` *after* phase 3:
+  `af.Collection(galaxies=af.Collection(**lens_dict, source=source),
+  fields=af.Collection(field=af.Model(al.MassField, redshift=0.5,
+  shear=af.Model(al.mp.ExternalShear))))`; SLaM stages chain
+  `fields=<result>.model|instance.fields`; the extra / scaling galaxy
+  collections are untouched.
 - **Full survey (autolens_workspace `30104f6`):** 30 loop-idiom sites in 19
   files — the four named plus `features/{linear_light_profiles, no_lens_light,
   multi_gaussian_expansion, pixelization (modeling, slam, adaptive, delaunay,
@@ -39,15 +41,16 @@ the MassField epic. What changed:
   (`...lens_0.shear if i == 0 else None`); plus 12 sites in the
   `kwargs["shear"]` spelling in `features/advanced/{mass_stellar_dark,
   double_source_plane_lens}`, whose simulator (`mass_stellar_dark/simulator.py:133`)
-  and hand-summed `fit.py:256` walkthrough move to a `MassField` in the tracer
-  list the same way (dataset bit-identical); prose in ~25 files says "only
+  and hand-summed `fit.py:256` walkthrough move to a `MassField` passed as
+  `al.Tracer(galaxies=[...], fields=[field])` (dataset bit-identical); prose in ~25 files says "only
   `lens_0` carries an `ExternalShear`".
-- **The one real trap:** `linear_light_profiles/{fit,modeling,slam}.py` and
-  `multi_gaussian_expansion/source_science.py` index `tracer.galaxies[k]`
-  positionally (`[0..3]`, `[n_main + i]`, `[n_lenses + 1 + n_extra + i]`);
-  inserting the field shifts those offsets. Pick one rule (named access where
-  the API allows, else re-offset) and run each of those scripts directly —
-  most are not on the smoke roster (`group/modeling.py` and
+- **The trap the redesign removed:** `linear_light_profiles/{fit,modeling,slam}.py`
+  and `multi_gaussian_expansion/source_science.py` index `tracer.galaxies[k]`
+  positionally (`[0..3]`, `[n_main + i]`, `[n_lenses + 1 + n_extra + i]`).
+  Because the field lives in `fields=` and never enters `tracer.galaxies`,
+  those offsets do not move; removing the `shear=` kwarg from `lens_0` removes
+  a profile, not a galaxy. Still run each of those scripts directly — most are
+  not on the smoke roster (`group/modeling.py` and
   `group/features/group_halo/modeling.py` are; `group/start_here.py` is
   disabled under `PYAUTO_SMALL_DATASETS=1`).
 - **Prose:** `group/modeling.py` gains the `__External Shear__` section phase 3
@@ -63,7 +66,7 @@ the MassField epic. What changed:
   unchanged, which is what keeps it below large).
 
 The original prompt follows unchanged for its rationale; where it says
-`shear_galaxy`, read `mass_field`.
+`shear_galaxy`, read `fields=af.Collection(field=...)`.
 
 ## Original prompt (2026-07-30)
 

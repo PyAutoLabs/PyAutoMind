@@ -2635,17 +2635,17 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 </details>
 
 <details>
-<summary><b>MassField — external shear, mass sheets and external potentials as their own model object (Galaxy sibling; galaxy-attached form kept, result identifiers unchanged)</b> — 6 queued prompt(s), in order</summary>
+<summary><b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — 6 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>MassField — external shear, mass sheets and external potentials as their own model object (Galaxy sibling; galaxy-attached form kept, result identifiers unchanged)</b> — ledger: `draft/feature/autogalaxy/mass_field_epic.md`</summary>
+<details><summary>📋 <b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — ledger: `draft/feature/autogalaxy/mass_field_epic.md`</summary>
 
 ```
-Continue the 'MassField — external shear, mass sheets and external potentials as their own model object (Galaxy sibling; galaxy-attached form kept, result identifiers unchanged)' epic. Its canonical state lives in draft/feature/autogalaxy/mass_field_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 5 phases — 1 PyAutoGalaxy `MassField(Galaxy)` class, 2 PyAutoLens seams (pytree registration, COOLEST 1:1, LOS sheets, `model_util.mass_field_from` with the `ExternalPotential` centre tie), 3 autolens_workspace guides + `multi_galaxy/` (`shear_galaxy` → `mass_field`), 4 `group/` (the re-scoped 2026-07-30 prompt, straight to `MassField`), 5 sibling sweep by grep. Issue ONE at a time in order; 3–5 follow the *released* libraries. Hard invariant: `Galaxy` and the prior configs are never edited, no deprecation warning — a user's existing galaxy-attached shear model keeps its PyAutoFit result identifier. Filed 2026-09-17 from the `/start_dev` plan checkpoint of the group shear prompt.
+Continue the 'MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own `fields=` slot; galaxy-attached form kept, result identifiers unchanged)' epic. Its canonical state lives in draft/feature/autogalaxy/mass_field_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 5 phases — 1 PyAutoGalaxy standalone `MassField` (mass sums shared with `Galaxy` via a mixin), 2 PyAutoLens `Tracer(fields=)` + analysis `fields` slot + pytree/COOLEST/LOS + `model_util.mass_field_from` with the `ExternalPotential` centre tie, 3 autolens_workspace guides + `multi_galaxy/` (`shear_galaxy` → `fields=`), 4 `group/` (the re-scoped 2026-07-30 prompt, straight to `fields=`), 5 sibling sweep by grep. `fields` is a collection: shear + sheet at one redshift is one field; several fields means several planes. Issue ONE at a time in order; 3–5 follow the *released* libraries. Hard invariant: `Galaxy` and the prior configs are never edited, no deprecation warning — a user's existing galaxy-attached shear model keeps its PyAutoFit result identifier. Filed 2026-09-17 from the `/start_dev` plan checkpoint of the group shear prompt; redesigned the same day from a `Galaxy` subclass to a standalone class on the human's ruling.
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autogalaxy/mass_field_class.md">MassField: a MassProfile-only sibling of Galaxy for external shear, mass sheets…</a> — autogalaxy · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/autogalaxy/mass_field_class.md">MassField: a standalone, MassProfile-only container for external shear, mass sheets and external…</a> — autogalaxy · small · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/autogalaxy/mass_field_class.md
@@ -2653,7 +2653,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens/mass_field_integration.md">MassField in PyAutoLens: pytree registration, COOLEST 1:1 mapping, LOS sheets, model_util helper</a> — autolens · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/autolens/mass_field_integration.md">MassField in PyAutoLens: Tracer(fields=), the analysis <code>fields</code> slot, COOLEST 1:1, LOS sheets…</a> — autolens · large · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/autolens/mass_field_integration.md

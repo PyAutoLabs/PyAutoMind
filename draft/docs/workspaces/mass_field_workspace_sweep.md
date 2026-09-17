@@ -11,7 +11,7 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Consequence: notify
-Witness: `grep -rn "shear_galaxy" scripts/` returns nothing; `grep -rn "al.MassField" scripts/multi_galaxy | wc -l` covers every former `shear_galaxy` site; the traced grid of `multi_galaxy/modeling.py`'s model at fixed instance values is `np.allclose` to the pre-change one; smoke suite green; notebooks and `workspace_index.json` regenerated; `check_navigator.py --root <checkout> --banners=fail` run from the parent directory.
+Witness: `grep -rn "shear_galaxy" scripts/` returns nothing; every former `shear_galaxy` site is a `fields=af.Collection(field=af.Model(al.MassField, ...))` slot beside `galaxies=`, and no `MassField` appears inside a `galaxies` collection; the traced grid of `multi_galaxy/modeling.py`'s model at fixed instance values is `np.allclose` to the pre-change one; smoke suite green; notebooks and `workspace_index.json` regenerated; `check_navigator.py --root <checkout> --banners=fail` run from the parent directory.
 Review-minutes: 5
 Unattended: ready
 Epic: mass-field
@@ -32,24 +32,35 @@ document the class where the sheet profiles are taught.
    and the centre tie, and state plainly that a sheet on a `Galaxy` remains
    supported and is the right form for a single-galaxy lens.
 2. **`scripts/multi_galaxy/`** — every `shear_galaxy` site: `start_here.py`,
-   `modeling.py`, `slam.py`, `simulator*.py` (`shear_galaxy_simulated` →
-   `al.MassField(redshift=..., shear=al.mp.ExternalShear(...))`), and
-   `features/**` including every SLaM stage that chains
-   `shear_galaxy=<result>.model|instance.galaxies.shear_galaxy`. The model key
-   becomes `mass_field`; the `__External Shear__` prose in `modeling.py` is
-   rewritten around the class (it is the reference text the group phase reuses,
-   so get it right here). `n_main_from` counts the `lens_` prefix and is
-   unaffected; say so in the prose where it explains what is not counted.
-3. **`scripts/imaging/features/advanced/los_halos/*`** — the
-   `hasattr(g, "mass_sheet")` sheet detection becomes `isinstance(g, al.MassField)`
-   once the sampler emits fields (phase 2); prose "each plane includes a MassSheet"
-   → "each plane carries a `MassField` with a negative-κ sheet".
+   `modeling.py`, `slam.py`, `simulator*.py` (`shear_galaxy_simulated` becomes
+   `al.MassField(redshift=..., shear=al.mp.ExternalShear(...))` passed as
+   `al.Tracer(galaxies=[...], fields=[field])`), and `features/**` including
+   every SLaM stage that chains `shear_galaxy=<result>.model|instance.galaxies.shear_galaxy`.
+   The model idiom is the field in its own slot —
+   `af.Collection(galaxies=af.Collection(**lens_dict, source=source),
+   fields=af.Collection(field=af.Model(al.MassField, redshift=0.5,
+   shear=af.Model(al.mp.ExternalShear))))` — and SLaM stages chain
+   `fields=<result>.model|instance.fields`. The `__External Shear__` prose in
+   `modeling.py` is rewritten around the class and the slot (it is the reference
+   text the group phase reuses, so get it right here): a field is a container
+   like a galaxy (shear + sheet + potential in one), several fields means
+   several planes, and `tracer.galaxies` never holds one. `n_main_from` counts
+   the `lens_` prefix over `galaxies` and is unaffected; its docstring's "not
+   counted" list drops `shear_galaxy`.
+3. **`scripts/imaging/features/advanced/los_halos/*`** — the sampler now
+   returns the sheets as fields (phase 2): the tracer is built as
+   `al.Tracer(galaxies=[lens, source] + halos, fields=sheets)`, the
+   `hasattr(g, "mass_sheet")` detection becomes a loop over `tracer.fields`,
+   and the prose "each plane includes a MassSheet" becomes "each plane carries
+   a `MassField` with a negative-κ sheet".
 4. **`scripts/imaging/`** — *not* migrated (epic Decisions). Add one paragraph
    to its `__External Shear__` prose pointing at `MassField` for multi-deflector
    systems.
-5. **Positional-index audit** — grep `tracer.galaxies[` under `multi_galaxy/`;
-   renaming the key does not move the entry, but confirm nothing indexes by the
-   old name.
+5. **Positional-index check** — grep `tracer.galaxies[` under `multi_galaxy/`;
+   removing `shear_galaxy` from `galaxies` *shifts* every index that came after
+   it (typically `source`), so each hit is re-checked and preferably made
+   named access. Fields never appear in `tracer.galaxies`, so this is the last
+   time these offsets move.
 
 ## Acceptance
 

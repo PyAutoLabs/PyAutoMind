@@ -12,7 +12,7 @@ Difficulty: small
 Autonomy: safe
 Priority: low
 Consequence: notify
-Witness: `grep -rn "shear_galaxy" <each repo>` returns nothing; any parity/round-trip script that builds a separate-shear model uses `al.MassField`; smoke/parity suites green where they exist.
+Witness: `grep -rn "shear_galaxy" <each repo>` returns nothing; any parity/round-trip script that builds a separate-shear model uses `fields=af.Collection(field=af.Model(al.MassField, ...))`; smoke/parity suites green where they exist.
 Review-minutes: 2
 Unattended: ready
 Epic: mass-field
