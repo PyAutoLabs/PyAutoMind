@@ -162,26 +162,3 @@
     bottom-up, identity-memoised unique-prior set per node inside the single
     parameterization call; leaf listing and entry order untouched so the text
     is byte-identical. Oracle test keeps the old algorithm verbatim.
-
-## demo-subplot-fit-interferometer-combined
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/555
-- issued: 2026-09-17
-- prompt: active/demo_subplot_fit_interferometer_combined.md
-- session: https://claude.ai/code/session_0118fvTWLWaRT2b6eMtPdkqy
-- status: awaiting-merge
-- location: web-github (session clone /home/user/autolens_workspace, no task worktree)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/558
-- worktree: n/a — web-github session clone; local-dev equivalent ~/Code/PyAutoLabs-wt/demo-subplot-fit-interferometer-combined
-- repos:
-  - autolens_workspace: claude/demo-subplot-fit-interferometer-docs-79u6vc
-- note: "worktree_check_conflict demo-subplot-fit-interferometer-combined autolens_workspace exits 0 (PYAUTO_MAIN=/home/user). Docs / medium / Autonomy: safe; launched without --auto, so the plan on issue #555 awaits the human before implementation. Prompt premise corrected on the issue: the folder is scripts/multi_dataset/ (not multi/), and imaging_and_interferometer/ fits one interferometer + one imaging dataset, so the fit_list comes from the datacube reference cube (interferometer/features/datacube/), which is the case the library function was written for."
-- summary: |
-    Add an interferometer arc to scripts/multi_dataset/plot.py mirroring the imaging arc: load the
-    datacube channels (auto-simulated by interferometer/features/datacube/simulator.py), fit each
-    with its own tracer.json, and call aplt.subplot_fit_interferometer_combined(fit_list=...) on
-    genuinely distinct fits; extend __Contents__ and __Visualizer__, add multi_dataset/plot.py to
-    smoke_tests.txt, update the README line, regenerate the notebook.
-    SHIPPED 2026-09-17 (web-github; Fable planned, Opus authored): PR #558 at b9894c7c, label
-    pending-release; script exit 0 under the smoke profile (~12 s) against library mains, four
-    distinct fits confirmed by a render probe; Heart CLI absent in the container so the smoke run
-    stood as the gate. NEXT = /prm once CI is green.
