@@ -8,11 +8,10 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: A decision note in PyAutoHands' docs states whether the org stays on readthedocs or moves to GitHub Pages, with the maintenance cost of each route and the migration steps if moving.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-04-28 (backfilled from git)
-
-Use readthedocs or migrate to GitHub docs? Whats the state  of the art these days? easier to maintain fully in GitHub?
 
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->

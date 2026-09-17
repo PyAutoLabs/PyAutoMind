@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: `docs/organs/` has a page for every organ ORGANISM.md names (Nerves included, or its config-layer placement is stated on `concepts/organism.md`), every page quotes the same organ count as ORGANISM.md (a grep for the stale "five"/"six" phrasings returns nothing), the `build.md`->`hands.md` rename decision is recorded, and the docs.yml warning count stays at baseline.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
 

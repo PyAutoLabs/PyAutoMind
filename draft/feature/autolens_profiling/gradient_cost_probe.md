@@ -11,9 +11,9 @@ Difficulty: small
 Autonomy: safe
 Priority: low
 Status: draft
-Consequence: judge
+Consequence: glance
 Witness: the probe runs on CPU and prints a forward/grad ms-per-eval table and an FD table for a named cell
-Review-minutes: 10
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-04
 

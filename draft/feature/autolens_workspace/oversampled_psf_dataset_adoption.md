@@ -10,8 +10,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 25
+Consequence: glance
+Witness: The executed `scripts/imaging/simulator.py` writes the start-here dataset at `convolve_over_sample_size=2` with a fine-resolution `psf.fits`; every loader of that dataset (the ~76 enumerated in the PR) passes `convolve_over_sample_size_lp=2` and `convolve_over_sample_size_pixelization=2`, a grep for start-here loaders without the kwargs returns nothing, the smoke subset passes, and every number pinned against the dataset is re-baselined in the same PR.
+Review-minutes: 3
 Unattended: ready
 Blocked-by: PyAutoArray#363, PyAutoGalaxy#486, autolens_workspace#236   # the k x s machinery — all MERGED
 Filed: 2026-07-08 (backfilled from git)

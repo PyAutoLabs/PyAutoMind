@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: A remote render with `--github-data` reports zero unread legs across versions, community, resume and upkeep, or names each remaining one with a reason other than "no gh", pinned by a fixture-driven test; the dev-box `gh` path is unchanged.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-27
 Parent: draft/feature/pyautobrain/board_without_gh.md

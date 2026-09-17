@@ -12,8 +12,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Witness: Either the ~10 min per-lens GPU figure is reproduced on the committed example lens with the exact `config/` changes listed under `hpc/README.md` "Config for large runs", or `README.md` and `start_here.py` quote a measured number; `hpc/README.md`'s route table carries the final figures and, if sampler settings are the answer, what they cost in posterior quality.
+Review-minutes: 3
 Unattended: ready
 Epic: euclid-dr1-prep
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md

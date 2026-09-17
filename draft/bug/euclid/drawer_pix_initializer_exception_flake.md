@@ -12,8 +12,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Witness: `pytest tests/test_latent_run_level.py -m slow` passes 10 consecutive runs with no `InitializerException` at the `run_level` fixture, the fixed-seed `einstein_radius` sweep table naming which draws produced an identical penalty is in the PR, and the module docstring records the chosen fix.
+Review-minutes: 3
 Unattended: ready
 Epic: euclid-dr1-prep
 Filed: 2026-09-16

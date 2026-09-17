@@ -10,7 +10,7 @@ Priority: normal
 Status: formalised
 Consequence: notify
 Witness: a worktree that exists on disk but appears in no Mind registry is either reported by `worktree_check_conflict` (or an adjacent audit command) or is gone; demonstrated against the `scientific-workflow-language` HowToFit worktree named below.
-Review-minutes: 20
+Review-minutes: 0
 Unattended: ready
 
 `worktree_check_conflict <task> <repo>` decides whether a repo is claimed by

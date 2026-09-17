@@ -11,7 +11,9 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: formalised
+Consequence: notify
 Witness: a repo-level check (pytest or a PyAutoHeart/PyAutoHands lint) fails on any `urllib.request.urlretrieve(` or `urlopen(` call without `timeout=` under `scripts/`, and passes on current main after autolens_workspace#537 merges.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-07
 

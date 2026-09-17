@@ -1,4 +1,4 @@
-# PointSolver profiling cells: lensed quasar → cluster runtime tier →
+# PointSolver profiling cells: lensed quasar → cluster runtime tier → single/multi-source → multiplane
 
 Type: research
 Target: autolens_profiling
@@ -12,15 +12,14 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 25
+Consequence: glance
+Witness: Four cells exist in the repo taxonomy — a lensed-quasar runtime cell with fluxes, a cluster single-source runtime cell, a cluster multi-source multi-redshift runtime cell including a factor-graph fit, and the multiplane check promoted to the runtime tier — each with smoke early-exit, eager/JIT/vmap tiers and a pinned-likelihood drift record, and all four appear in the results/runtime dashboard.
+Review-minutes: 3
 Unattended: ready
 Epic: cluster-strong-lensing
 Phase: 2
 Parent: draft/feature/autolens/source_cluster_arc.md
 Filed: 2026-08-19 (backfilled from git)
-
-# PointSolver profiling cells: lensed quasar → cluster runtime tier → single/multi-source → multiplane
 
 Part of the Source & Cluster arc (phase 2 of 12), gated on phase 1 (PointSolver health
 verdict). User request (verbatim): "Once satisfied extend to profiling examples in

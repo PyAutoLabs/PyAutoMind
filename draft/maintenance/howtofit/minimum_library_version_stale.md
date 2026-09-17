@@ -12,8 +12,8 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Review-minutes: 3
 Unattended: ready
 Witness: a fresh clone of a release-tagged workspace with the matching released library emits no workspace-version UserWarning.
 Filed: 2026-09-15

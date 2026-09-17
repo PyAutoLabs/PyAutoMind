@@ -11,6 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Status: draft
+Consequence: glance
+Witness: A nightly workflow runs one tutorial per chapter of HowToFit, HowToGalaxy and HowToLens at `PYAUTO_TEST_MODE` 0 or 1 (the choice and per-chapter minutes recorded), reports a `no_run.yaml`-style census on the Heart board without feeding readiness, and excludes HowToFit chapter-1 tutorial 5 until PyAutoFit#1454 is fixed.
+Review-minutes: 3
 Blocked-by: PyAutoFit#1454 (HowToFit tutorial_5_expectation_propagation cannot complete at real sampling)
 
 Filed: 2026-09-15

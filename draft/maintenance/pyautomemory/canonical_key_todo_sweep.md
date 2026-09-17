@@ -11,12 +11,11 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: The `Canonical BibTeX key: TODO` count across `wiki/` is below 345 by the batch's verified matches, every filled key was verified against the public record (each new bib entry carries a DOI or arXiv id; zero fabricated keys), `make validate` passes, and the residual unidentifiable sections are listed in the PR.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-07-16 (backfilled from git)
-
-PyAutoMemory canonical-key TODO sweep.
 
 345 source-page sections across the wikis still carry "Canonical BibTeX key: TODO — no
 unique match found in bibliography/pyautomemory.bib" markers (count from the 2026-07-16

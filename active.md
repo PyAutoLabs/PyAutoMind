@@ -1,5 +1,26 @@
 # Active Tasks
 
+## interferometer-dirty-images-call-sites
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/556
+- issued: 2026-09-17
+- prompt: active/interferometer_dirty_images_call_sites.md
+- session: claude --resume session_01De8TQ8PQc6cyZgb5BZbfNv
+- status: awaiting-merge
+- autonomy: supervised (--auto launch; docs/medium cap safe, header supervised) — ship resolved to decide-and-flag, ended at PR-open 2026-09-17; merge is human
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/557
+- location: web-github (session clones, no task worktree; branch claude/interferometer-dirty-images-call-sites-ctvywt)
+- worktree: n/a — web-github session clone (/home/user/autolens_workspace)
+- repos:
+  - autolens_workspace: claude/interferometer-dirty-images-call-sites-ctvywt
+- summary: |
+    Rename the 10 `aplt.subplot_fit_dirty_images(` calls (9 interferometer
+    scripts; re-verified on main 30104f6 — the prompt said 11) to the
+    autolens-bound `aplt.subplot_fit_interferometer_dirty_images(`, which
+    overlays auto-derived critical curves on the dirty model image. Update the
+    4 docstring mentions; the plots.yaml key reference in plot.py stays.
+    Regenerate the 9 notebooks. Supervised because the figures change: a human
+    eyeballs one regenerated figure before merge.
+
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
@@ -36,8 +57,12 @@
     Pass 4 (`autolens`, 11) SHIPPED 2026-09-17 (pre-accepted): 11 judge ->
     10 glance / 1 judge, 230 -> 55 seed review-minutes. Backlog now
     157 ready, 94 witnessed + 3 none, derived 20 notify /
-    64 glance / 73 judge. Next: autolens_workspace (7), euclid (6),
-    autogalaxy (5), autolens_profiling (5), tail (~30 singletons).
+    64 glance / 73 judge. Pass 5 (workspace/euclid/galaxy/profiling, 29) and
+    pass 6 (the tail, 39) and pass 7 (6 filed mid-sweep) SHIPPED 2026-09-17
+    (pre-accepted): 465 -> 72, 676 -> 119, 120 -> 35 seed review-minutes. Every
+    ready draft now witnessed or `none`. Backlog 158 ready, 151 witnessed + 6 none, derived
+    37 notify / 101 glance / 20 judge. Remaining: the Brain follow-up
+    (none rule, keyword false-judges, triage rule) via /intake; then /prm.
     Pass-by-pass counts are in the prompt's `## Campaign log`.
 
 ## sed-chain-cpu-route
@@ -110,20 +135,36 @@
 ## jax-runtime-and-parity
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/317
 - issued: 2026-09-15
+- prompt: active/jax_runtime_and_parity.md
 - session: claude --resume c74b6b89-11fe-42df-8b16-09bb12dcedb6
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/jax-runtime-and-parity
 - repos:
   - autolens_workspace_test: feature/jax-runtime-and-parity
   - autogalaxy_workspace_test: feature/jax-runtime-and-parity
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/320
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/122
+- summary: |
+    Defect refuted twice (2026-08-21, 2026-09-15): all six jax_likelihood scripts pass
+    the NumPy-vs-JIT parity assertions under profile_release on jax 0.10.2, no
+    pytype_aval_mappings traceback anywhere. The one real residue is fixed on both
+    branches: smoke_tests.txt re-enables imaging/jax_likelihood/delaunay_mge.py (3/3
+    cold smoke runs, 53-71 s vs the 300 s cap). PRs opened 2026-09-17 from a web
+    session (feature commits were already pushed from the CLI worktree); no library
+    change, so no library-first gate. Next: /prm per PR once workspace-smoke is green
+    on 3.12 and 3.13; the complete/ record should mirror
+    complete/2026/08/autofit-sampler-database.md and hand the intermittent 1805 s
+    hangs on other jax_likelihood scripts to the xla-cpu-eigen-pool-deadlock epic.
 
 ## jit-visualization-outputs
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/318
 - issued: 2026-09-15
 - prompt: active/jit_visualization_outputs.md
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/jit-visualization-outputs
+- session: web-github (Claude Code remote, 2026-09-17; no local worktree)
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/321
 - repos:
+  - autolens_workspace_test: claude/active-jit-visualization-outputs-45weg6
 - summary: |
     Prompt's defect REFUTED twice (2026-08-21, 2026-09-15): all 4
     modeling_visualization_jit scripts pass from cleared output under
@@ -137,7 +178,10 @@
     then settle the marker FROM the measurement (all under cap -> unpark; any
     over -> keep parked with the measured #274-style verdict). One-line
     workspace PR; close-out record says "no defect exists to fix" like siblings
-    PyAutoFit#1508 / PyAutoArray#467. Incidental: "Visualization warm-up failed
+    PyAutoFit#1508 / PyAutoArray#467. SHIPPED 2026-09-17 (web session): CI
+    retime run 35245806121 completed 10/10 (3.12: 73.6-98.6 s, 3.13:
+    71.0-85.7 s, NEITHER both legs), parking entry deleted, PR #321 open with
+    pending-release; /prm when Smoke Tests are green. Incidental: "Visualization warm-up failed
     (non-fatal)" swallowed in autofit fitness.py for ellipse + point_source -
     separate prompt draft/bug/autofit/visualization_warmup_swallowed_exception.md.
 
@@ -166,13 +210,16 @@
 - note: "worktree_check_conflict grid-offset-prior euclid_strong_lens_modeling_pipeline exits 1 on five claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis #76, simulator-from-result-linear #77 parked, witt-wynne-catalogue #84). Code file sets are disjoint; catalogue/README.md shares one hunk with witt-wynne-catalogue: one-hunk resolution on whichever merges second. Waived on the human's plan approval 2026-09-17; fresh parallel worktree off origin/main."
 - note: "PAUSED 2026-09-17 17:10 BST, resumable. DONE on feature/grid-offset-prior (3 local commits d50eb52 prior ±0.5\" / 3563a98 prior_edge_y-x columns + header pin + tests / e58a1be README + eight producers; 208 fast tests green; NOT pushed, no PR). Witness done: sep1 Tile102008165 nir_j x 0.1906 [.., 0.2000] flagged → 0.2727 [0.167, 0.387] unflagged under ±0.5"; nir_h of that tile spins in Nautilus exploration (second case of 343381_8). RESUME: cd ~/Code/PyAutoLabs-wt/grid-offset-prior/euclid_strong_lens_modeling_pipeline; source ../activate.sh; pytest tests -q; /ship_workspace (Heart RED release-side → human ack); /prm; README one-hunk overlap with witt-wynne-catalogue #84. Full state on issue #88 comment."
 
+<<<<<<< HEAD
 ## parameterization-prior-count
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1635
 - issued: 2026-09-17
 - prompt: active/parameterization_prior_count_blowup.md
 - session: https://claude.ai/code/session_01TSJ72sveM7GrTcddMXzUkb
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - location: web-github (session clone /home/user/pyautofit, no task worktree; branch claude/parameterization-prior-count-blowup-jzsrj0)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1637
+- shipped: 2026-09-17 (commit 97a92e6; full test_autofit 2813 passed / 48 skipped; pending-release label set; workspace impact none — option iii; autonomy_log row is /prm's at close-out)
 - worktree: n/a — web-github session clone (/home/user/pyautofit)
 - repos:
   - PyAutoFit: claude/parameterization-prior-count-blowup-jzsrj0
@@ -184,3 +231,23 @@
     bottom-up, identity-memoised unique-prior set per node inside the single
     parameterization call; leaf listing and entry order untouched so the text
     is byte-identical. Oracle test keeps the old algorithm verbatim.
+=======
+## demo-subplot-fit-interferometer-combined
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/555
+- issued: 2026-09-17
+- prompt: active/demo_subplot_fit_interferometer_combined.md
+- session: https://claude.ai/code/session_0118fvTWLWaRT2b6eMtPdkqy
+- status: workspace-dev
+- location: web-github (session clone /home/user/autolens_workspace, no task worktree)
+- worktree: n/a — web-github session clone; local-dev equivalent ~/Code/PyAutoLabs-wt/demo-subplot-fit-interferometer-combined
+- repos:
+  - autolens_workspace: claude/demo-subplot-fit-interferometer-docs-79u6vc
+- note: "worktree_check_conflict demo-subplot-fit-interferometer-combined autolens_workspace exits 0 (PYAUTO_MAIN=/home/user). Docs / medium / Autonomy: safe; launched without --auto, so the plan on issue #555 awaits the human before implementation. Prompt premise corrected on the issue: the folder is scripts/multi_dataset/ (not multi/), and imaging_and_interferometer/ fits one interferometer + one imaging dataset, so the fit_list comes from the datacube reference cube (interferometer/features/datacube/), which is the case the library function was written for."
+- summary: |
+    Add an interferometer arc to scripts/multi_dataset/plot.py mirroring the imaging arc: load the
+    datacube channels (auto-simulated by interferometer/features/datacube/simulator.py), fit each
+    with its own tracer.json, and call aplt.subplot_fit_interferometer_combined(fit_list=...) on
+    genuinely distinct fits; extend __Contents__ and __Visualizer__, add multi_dataset/plot.py to
+    smoke_tests.txt, update the README line, regenerate the notebook. NEXT = /start_workspace →
+    implement → /ship_workspace → /prm.
+>>>>>>> origin/main

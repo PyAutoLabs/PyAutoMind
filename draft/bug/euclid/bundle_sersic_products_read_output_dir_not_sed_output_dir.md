@@ -11,9 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Status: draft
-Consequence: judge
+Consequence: glance
 Witness: `build_inspection_bundle.sh dr1_sep1` on a tree whose sersic_lens_model results live in output_sed/ yields lens_sersic.csv (9 rows), source_sersic.csv, fit_sersic.png and coolest_sersic.json; today it yields none of them
-Review-minutes: 10
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-17
 
