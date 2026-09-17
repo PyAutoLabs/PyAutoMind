@@ -77,11 +77,11 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/76
 - issued: 2026-09-12
 - prompt: active/sersic_variants_analysis.md
-- session: claude --resume session_01KTGhZacWuxrxYkXXWXJbBx
+- session: https://claude.ai/code/session_01LfJojDFow4pxPzuwRHqMt2 (web-github resume 2026-09-17; planned 2026-09-12 in session_01KTGhZacWuxrxYkXXWXJbBx)
 - status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/sersic-variants-analysis
+- worktree: n/a — web-github session clone (/home/user/euclid_strong_lens_modeling_pipeline); the local ~/Code/PyAutoLabs-wt/sersic-variants-analysis worktree named on 2026-09-12 never pushed feature/sersic-variants-analysis, so the branch of record is the session's
 - repos:
-  - euclid_strong_lens_modeling_pipeline: feature/sersic-variants-analysis
+  - euclid_strong_lens_modeling_pipeline: claude/sersic-variants-analysis-3iqibr
 - note: "worktree_check_conflict sersic-variants-analysis euclid_strong_lens_modeling_pipeline exits 1 on three claims. remove-fits-dataset-plots-yaml is stale (PR #63 merged, issue #62 closed 2026-09-10, no close-out). sed-chain-cpu-route (PR #70) and sersic-variants (PR #75) are live, but neither file set intersects this one: this task adds only scripts/analysis/** (new tree), tests/test_sersic_variants_analysis.py (new) and one line in config/build/no_run.yaml, which neither touches. Its documentation deliberately goes in a new scripts/analysis/README.md rather than scripts/README.md or catalogue/README.md, which belong to PR #75's diff. Waived on the human's plan approval, in a fresh parallel worktree based on origin/main - the same call sed-chain-cpu-route itself recorded against remove-fits-dataset-plots-yaml."
 - summary: |
     PR 2 of the euclid_sersics variants work: scripts/analysis/sersic_variants.py
