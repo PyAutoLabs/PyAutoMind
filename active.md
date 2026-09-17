@@ -112,7 +112,8 @@
 - issued: 2026-09-13
 - prompt: active/simulator_from_result_linear_intensities.md
 - session: claude --resume session_01EehLEWoRRsmnLys4aHj5W4
-- status: blocked
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/87
 - worktree: ~/Code/PyAutoLabs-wt/simulator-from-result-linear
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/simulator-from-result-linear
