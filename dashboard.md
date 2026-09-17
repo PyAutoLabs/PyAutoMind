@@ -236,7 +236,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md">Fixed-light numba CPU round 4 — the curvature-matrix kernel A/B on Delaunay…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/274">issue #274</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md">Fixed-light numba CPU round 4 — the curvature-matrix kernel A/B on Delaunay…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/274">issue #274</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/557">PyAutoArray#557</a></summary>
 
 ```
 /start_dev active/fixed_light_numba_s4_curvature_kernel_ab_and_permute_active_last.md
