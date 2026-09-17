@@ -90,7 +90,7 @@ workspace sweeps that follow the *released* libraries.
 | Phase | Prompt | Repo | What it delivers | Gate |
 |---|---|---|---|---|
 | 1 | **shipped** — `complete/2026/09/mass-field-class.md` (PyAutoGalaxy#621, merged 2026-09-17) | PyAutoGalaxy | standalone `ag.MassField(redshift, **mass_profiles)`; the mass sums shared with `Galaxy` through a mixin extracted behaviour-preservingly; zero-light interface so a plane can hold it; dict round trip; JAX pytree registration; identifier pin test; API docs. | — |
-| 2 | **issued** — `active/mass_field_integration.md` (PyAutoLens#741) | PyAutoLens | `Tracer(galaxies, fields=None)`, planes merge, `tracer.fields`, `sliced_tracer_from`, `to_dict`, pytree flatten; analysis folds `instance.fields`; LOS sampler emits fields; COOLEST 1:1 both ways (legacy peel kept); `model_util.mass_field_from` with the `ExternalPotential` centre tie; tests, docs. | phase 1 merged 2026-09-17 (PyAutoGalaxy#621) — **unblocked** |
+| 2 | **shipped** — `complete/2026/09/mass-field-integration.md` (PyAutoLens#742, merged 2026-09-17) | PyAutoLens | `Tracer(galaxies, fields=None)`, planes merge, `tracer.fields`, `sliced_tracer_from`, `to_dict`, pytree flatten; analysis folds `instance.fields`; LOS sampler emits fields; COOLEST 1:1 both ways (legacy peel kept); `model_util.mass_field_from` with the `ExternalPotential` centre tie; tests, docs. | phase 1 merged 2026-09-17 (PyAutoGalaxy#621) — **unblocked** |
 | 3 | `draft/docs/workspaces/mass_field_workspace_sweep.md` | autolens_workspace | `guides/profiles/mass.py` sheets section; `multi_galaxy/` main + features + SLaM: `shear_galaxy` → `fields=af.Collection(field=...)`; LOS-halo feature scripts; `imaging/` stays galaxy-attached (see Decisions). | phases 1–2 released to the installed stack |
 | 4 | `draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md` | autolens_workspace | `group/` (four named sites + `features/**`, ~44 code sites) moves straight to `fields=`, skipping the `shear_galaxy` interim; `cluster/` surveyed and unchanged. | phase 3 merged |
 | 5 | `draft/docs/workspaces/mass_field_sibling_sweep.md` | autolens_workspace_test, HowToLens, autolens_assistant | parity scripts and any tutorial/wiki mention of `shear_galaxy` or "shear on lens_0"; decided by grep after phase 3. | phase 3 merged |
@@ -138,3 +138,10 @@ workspace sweeps that follow the *released* libraries.
 - 2026-09-17: phase 1 issued — PyAutoGalaxy#620 (`/start_dev`, web session; prompt now `active/mass_field_class.md`, task `mass-field-class` in `active.md`).
 - 2026-09-17: phase 1 merged — PyAutoGalaxy#621 (`/prm`, web session); record `complete/2026/09/mass-field-class.md`; identifier pin held; phase 2 unblocked, `pending-release` on PyAutoGalaxy.
 - 2026-09-17: phase 2 issued — PyAutoLens#741 (`/start_dev`, web session; prompt now `active/mass_field_integration.md`, task `mass-field-integration` in `active.md`). Plan notes a gap the prompt assumed away: `Tracer.galaxy_image_2d_dict_from` walks planes, not `tracer.galaxies`, so per-galaxy surfaces need an explicit `MassField` filter.
+- 2026-09-17: phase 2 merged — PyAutoLens#742 (merge 7197380; `/prm` from the epic's
+  dashboard resume prompt, web session); issue #741 closed; record
+  `complete/2026/09/mass-field-integration.md`; identifier pin held, legacy COOLEST
+  export byte-identical; `pending-release` on PyAutoLens. Library work (phases 1–2) is
+  complete. Phases 3–5 are gated on a **release** of PyAutoGalaxy (#621) and PyAutoLens
+  (#742) to the installed stack — phase 3 is not issued until `/release` has published
+  both; nothing here is bulk-issued.
