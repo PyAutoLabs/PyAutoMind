@@ -316,7 +316,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/witt_wynne_catalogue_output.md">Witt–Wynne SIEP projection as a catalogue output of the Euclid pipeline</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/84">issue #84</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/witt_wynne_catalogue_output.md">Witt–Wynne SIEP projection as a catalogue output of the Euclid pipeline</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/84">issue #84</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/86">euclid_strong_lens_modeling_pipeline#86</a></summary>
 
 ```
 /start_dev active/witt_wynne_catalogue_output.md
@@ -324,7 +324,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/witt_wynne_guide_fixes.md">Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and correct its claims</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/552">issue #552</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/witt_wynne_guide_fixes.md">Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and correct its claims</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/552">issue #552</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/553">autolens_workspace#553</a></summary>
 
 ```
 /start_dev active/witt_wynne_guide_fixes.md
