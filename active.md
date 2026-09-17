@@ -236,3 +236,13 @@
   - autolens_profiling: feature/fixed-light-numba-s4
 - parallel-claim: "worktree_check_conflict fixed-light-numba-s4 autolens_profiling PyAutoArray exits 1 on hst-gpu-residue-p2 (#273, feature/hst-gpu-residue-p2, LIVE). Its branch touches fixed_light_trace.py, host_callback_probe.py, library_solver_injection.py, test_fixed_light_cell.py, test_fixed_light_vmap_submit.py and a vmap A100 submit; this task touches fixed_light_numba.py, a new fixed_light_numpy_kernels.py, a new s4 witness, a new batch_cpu s4 submit, new test_fixed_light_s4.py, test_fixed_light_numba.py (overhead gate) and a new note — disjoint. Shared generated surfaces only: README.md (regenerate after whichever merges second) and one hpc/README.md route row. Waived on the human's plan approval 2026-09-17, fresh parallel worktree off origin/main — the same call p2 recorded against #267."
 - note: "Phase 4 of fixed-lens-light-numba-cpu. Two waves, sequential PRs, never stacked (#267 lesson). WAVE A IN FLIGHT 2026-09-17 00:25 (human asleep; Opus finishing locally, NOTHING pushed, NO RAL job): DONE on feature/fixed-light-numba-s4 — e0ca612 ms-budget overhead gate (MAX_INSTRUMENTATION_OVERHEAD_MS=12), f88b9e0 fixed_light_numpy_kernels.py seam (two_stage/direct/two_stage_touched, touched bit-identical), 8998ec9 routes b_direct/b_touched; in progress — s4 witness, batch_cpu s4 submit (+WALL-BASIS), test_fixed_light_s4.py, local end-to-end run. RESUME: cd ~/Code/PyAutoLabs-wt/fixed-light-numba-s4/autolens_profiling; git log --oneline origin/main..HEAD; run the issue's Verification block; then plan step 6 (push branch, RAL worktree, hpc/sync submit --cpu, harvest), note results/notes/fixed_lens_light_s4_2026_09.md, /ship_workspace (Heart RED install-verify/integrate -> human ack), conditional PyAutoArray PR (docstring fix always), /prm; wave B (A-prime) only after wave A merges. Plan on the issue."
+
+## astrometric-offsets-catalogue
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/83
+- issued: 2026-09-17
+- prompt: active/astrometric_offsets_catalogue.md
+- session: claude --resume c8cde173-8bcd-482c-972a-d9869b458314
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/astrometric-offsets-catalogue
+- repos:
+- note: "worktree_check_conflict euclid_strong_lens_modeling_pipeline exits 1 on four claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis, simulator-from-result-linear). Code file sets are disjoint; the only touch point is catalogue/README.md, also edited by sersic-variants (one-hunk resolution on whichever merges second). Waived on the human's plan approval 2026-09-17; fresh parallel worktree."

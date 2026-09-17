@@ -10,12 +10,13 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: active
 Consequence: judge
 Witness: astrometric_offsets.csv row for Tile102005065.../nir_h reproduces model.results grid_offset_0 = 0.0160 (0.0132, 0.0195) 1σ, (0.0069, 0.0261) 3σ
 Review-minutes: 15
 Unattended: needs-slicing
 Filed: 2026-09-17
+Issued: 2026-09-17
 
 ## Original request (verbatim)
 
