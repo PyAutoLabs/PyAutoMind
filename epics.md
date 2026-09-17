@@ -130,3 +130,8 @@ epic, never picked standalone.
   evals; production is vmap, phase 1 traced single-call) decides the batching policy, then the batch-aware
   Delaunay `pure_callback` (`expand_dims`, one host call per batch) if the callback matters. Map revised with the
   phase-1 table and re-ranked levers (0 vmap/callback, 1 batch-size decoupling, 2 PSF cube, 3 log-det factor).
+
+## mass-field
+- title: MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own `fields=` slot; galaxy-attached form kept, result identifiers unchanged)
+- ledger: draft/feature/autogalaxy/mass_field_epic.md
+- notes: 5 phases — 1 PyAutoGalaxy standalone `MassField` (mass sums shared with `Galaxy` via a mixin), 2 PyAutoLens `Tracer(fields=)` + analysis `fields` slot + pytree/COOLEST/LOS + `model_util.mass_field_from` with the `ExternalPotential` centre tie, 3 autolens_workspace guides + `multi_galaxy/` (`shear_galaxy` → `fields=`), 4 `group/` (the re-scoped 2026-07-30 prompt, straight to `fields=`), 5 sibling sweep by grep. `fields` is a collection: shear + sheet at one redshift is one field; several fields means several planes. Issue ONE at a time in order; 3–5 follow the *released* libraries. Hard invariant: `Galaxy` and the prior configs are never edited, no deprecation warning — a user's existing galaxy-attached shear model keeps its PyAutoFit result identifier. Filed 2026-09-17 from the `/start_dev` plan checkpoint of the group shear prompt; redesigned the same day from a `Galaxy` subclass to a standalone class on the human's ruling.
