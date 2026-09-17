@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 10 |
+| [In flight](#in-flight) (`active/`) | 9 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -304,14 +304,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/sersic_variants_prior_edge.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/398">issue #398</a> — issued 2026-09-10 — library-dev</summary>
-
-```
-/start_dev active/witness_campaign.md
 ```
 
 </details>
@@ -2247,12 +2239,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
 | 2026-09-10 | filed | <a href="draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a> |
-| 2026-09-10 | issued | <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> |
 | 2026-09-10 | filed | <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md">PyAutoHeart smoke-tests.yml relevance gate skips the pytest matrix on…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md">Post-completion cache readers should read the preserved zip member…</a> |
 | 2026-09-10 | filed | <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script…</a> |
 | 2026-09-09 | filed | <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> |
+| 2026-09-09 | filed | <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> |
 
 </details>
 
