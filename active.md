@@ -13,7 +13,7 @@
   - PyAutoBrain: claude/github-issues-community-migration-512ndl
 - summary: |
     Decision task shipped as `policy/community_surface.md`: users go to one
-    Discussions hub (PyAutoLens's, promoted to the org's), the development
+    Discussions hub (hosted on `PyAutoLabs/.github`, the org's), the development
     flow stays on per-repo issues, bug reports with a reproducer stay
     issues. The Ears (`pyauto-brain community`) now scan the hub's
     discussions and triage a discussion URL; the Brain board shows

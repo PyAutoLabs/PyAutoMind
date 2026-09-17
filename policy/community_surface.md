@@ -11,11 +11,13 @@ same two sentences.
 ## The two sentences
 
 1. **Users go to one Discussions hub** —
-   <https://github.com/PyAutoLabs/PyAutoLens/discussions>, promoted to the
-   organisation's Discussions so it is also
-   <https://github.com/orgs/PyAutoLabs/discussions>. Questions, help with
-   code, help with a scientific analysis, feature ideas, results to show:
-   all of it, for every library and workspace, in one place.
+   <https://github.com/orgs/PyAutoLabs/discussions>, hosted on the org's
+   profile repository `PyAutoLabs/.github` (GitHub backs org Discussions
+   with one source repo; a neutral one keeps every thread URL free of a
+   library's name). Questions, help with code, help with a scientific
+   analysis, feature ideas, results to show: all of it, for every library
+   and workspace — PyAutoFit and PyAutoCTI as much as PyAutoLens — in one
+   place.
 2. **The development flow stays exactly where it is** — one GitHub issue per
    task on the target repo, opened by the Mind's prompt lifecycle, closed by
    its PR. Nothing about `/start_dev`, the ship skills, `/prm`, the Heart's
@@ -38,7 +40,8 @@ two, both on PyAutoArray.
 
 ### 1. Which surface for users — per-repo Discussions, one hub, or external?
 
-**One hub, on GitHub, on PyAutoLens.** Rejected alternatives:
+**One hub, on GitHub, at the org level, for every repo.** Rejected
+alternatives:
 
 - *Per-repo Discussions.* Fragments a community of a few dozen active users
   across six repos and reproduces the "which repo do I post in?" question
@@ -48,14 +51,19 @@ two, both on PyAutoArray.
   service to run and moderate, invisible to a search engine or to someone
   arriving from the README, and a second login. The Slack stays what it is —
   invitation-only, for collaborators — and is not the public surface.
-- *A dedicated `community` repo.* Adds a repo whose only content is
-  Discussions; PyAutoLens already has Discussions enabled (since 2026-07-10,
-  one Announcements thread), is the flagship, and is where the users are.
+- *Hosting the hub on PyAutoLens.* It already has Discussions on (since
+  2026-07-10, one Announcements thread) and is where most users are, but
+  every thread's URL would read `PyAutoLabs/PyAutoLens/discussions/N`, which
+  tells a PyAutoFit or PyAutoCTI user they are on the lens board. Threads
+  never move when the org's source repository is switched later, so the
+  host is chosen once, before the first migration: the org profile repo
+  `PyAutoLabs/.github`, whose only job is org-wide material.
 
-Promotion to the org's Discussions (Organization settings → Discussions →
-source repository = PyAutoLens) gives the hub the org-level URL and the
-"Discussions" tab on the org page without moving anything. The other repos
-keep Discussions **off**; their README and issue chooser point at the hub.
+Promotion (Organization settings → Discussions → source repository =
+`.github`) gives the hub the org-level URL and the "Discussions" tab on the
+org page. PyAutoLens's one announcement thread is transferred there and
+PyAutoLens's Discussions switched off; every other repo keeps Discussions
+**off**, with README and issue chooser pointing at the hub.
 
 **Categories** (GitHub's defaults plus one):
 
@@ -91,7 +99,7 @@ development flow files by API and the maintainer occasionally by hand.
 ### 3. How do the Ears scan the hub and route bugs back?
 
 `pyauto-brain community` (the scan) lists the hub's open discussions through
-the REST endpoint `repos/PyAutoLabs/PyAutoLens/discussions` (read-only, and
+the REST endpoint `repos/PyAutoLabs/.github/discussions` (read-only, and
 served to a remote session — see "Measured" below) alongside the external
 issues and PRs it already hears. A thread is **awaiting our response** when it
 has no accepted answer and its last word is not a self login; the board
@@ -101,7 +109,7 @@ context-sufficiency surface as for an issue, with the route: **answer in the
 thread** (drafted in the session, posted by the human), or, for a confirmed
 bug, **open the issue** with a link back and route it through
 `/start_dev_for_user`, then mark the thread answered with the issue link. The
-hub is `COMMUNITY_HUB` in the conductor (default `PyAutoLabs/PyAutoLens`).
+hub is `COMMUNITY_HUB` in the conductor (default `PyAutoLabs/.github`).
 
 ### 4. What the READMEs and the front door say
 
@@ -171,3 +179,5 @@ Recorded so nobody re-derives them:
 - `GET repos/<repo>` reports `has_discussions`: true on PyAutoLens only. The
   session token has admin on every attached repo, so `PATCH` could enable
   Discussions elsewhere — deliberately not done (decision 1).
+  `PyAutoLabs/.github` is public but cannot be attached to a session (its
+  name begins with a dot), so enabling Discussions there is a UI step.
