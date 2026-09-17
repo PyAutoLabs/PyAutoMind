@@ -252,7 +252,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — issued 2026-09-15</summary>
+<details><summary>📋 <a href="active/jax_runtime_and_parity.md">Fix release JAX runtime compatibility and likelihood parity</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/317">issue #317</a> — issued 2026-09-15 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/320">autolens_workspace_test#320</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/122">autogalaxy_workspace_test#122</a></summary>
 
 ```
 /start_dev active/jax_runtime_and_parity.md
