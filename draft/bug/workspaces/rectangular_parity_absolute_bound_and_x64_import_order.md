@@ -17,8 +17,9 @@ Split out of `mixed-precision-inversion-gap` at close-out — the library half
 shipped in `complete/2026/09/mixed-precision-inversion-gap.md`
 (PyAutoArray#556, closes PyAutoArray#552); this is the workspace leg, held back
 because `autogalaxy_workspace_test` was claimed by `jax-runtime-and-parity`
-(autolens_workspace_test#317) when the library merged. Start it once that
-claim clears.
+(autolens_workspace_test#317) when the library merged. That claim cleared on
+2026-09-17 (#317 closed, autogalaxy_workspace_test#122 merged, record
+`complete/2026/09/jax-runtime-and-parity.md`), so this is startable now.
 
 Two edits to `scripts/imaging/jax_likelihood/rectangular.py`:
 
