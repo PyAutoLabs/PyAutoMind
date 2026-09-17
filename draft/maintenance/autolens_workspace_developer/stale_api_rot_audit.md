@@ -10,8 +10,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: The alias-aware symbol scan and the `inspect.signature` bind pass over the post-fix tree report 0 stale references outside the `legacy/`/experiment folders the human chose to condemn (that list recorded in the PR), and the four files repaired under HowToGalaxy#56 run end-to-end where their data is reachable.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-04 (backfilled from git)
 

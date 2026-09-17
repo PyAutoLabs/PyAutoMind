@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: draft
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: `pyauto-heart readiness` goes red on a euclid smoke failure (`config/repos.yaml` `required_workflows` carries `pipelines: ["Smoke Tests"]`), the weekly cloud sweep's `PROJECTS` lists euclid, and no other repo's gating changes (readiness on a green day is unchanged).
+Review-minutes: 0
 Unattended: ready
 Epic: euclid-dr1-prep
 Filed: 2026-08-29

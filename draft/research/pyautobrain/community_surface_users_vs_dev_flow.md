@@ -13,9 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
-Consequence: judge
+Consequence: notify
 Witness: A decision document exists in the Mind's policy directory naming (a) the surface where users bring questions, help requests and scientific-analysis asks and (b) the surface where the AI development flow (issues, PRs, Mind close-outs) lives; and the community conductor's scan reads the chosen user surface, verified by a scan that lists a thread posted there.
-Review-minutes: 20
+Review-minutes: 0
 
 Decision task, not implementation: answer the questions below in a policy document and file the follow-up prompts it spawns (Discussions enablement, Ears scan change, README/front-door Support text, migration of the few external threads). Intake filed this at 2026-09-15; the heuristic classified it as a PyAutoLens bug and then re-targeted on bare repo mentions, so the header was set by hand.
 

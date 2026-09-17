@@ -9,8 +9,8 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Review-minutes: 3
 Unattended: ready
 Witness: a euclid_strong_lens_modeling_pipeline PR touching only `tests/` shows `unit / smoke (3.12)` and `unit / smoke (3.13)` run and pass rather than `skipped`.
 Filed: 2026-09-10

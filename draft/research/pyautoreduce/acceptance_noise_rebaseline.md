@@ -10,8 +10,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: The parity-appendix table in `hst_acs_pipeline.md` carries re-measured data/noise ratios for 2-3 SLACS systems reduced with the deduplicated acquire stage, the legacy-noise stance (R-free or not) is stated with its evidence, the list of pre-2026-07-09 datasets needing regeneration is written, and the direct-vs-HAP family choice is recorded with WCS diagnostics.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-09 (backfilled from git)
 

@@ -12,6 +12,7 @@ Autonomy: supervised
 Priority: normal
 Status: phased
 Consequence: judge
+Witness: none — phased umbrella: phase 1 shipped (complete/2026/08/board-github-data-seam.md) and phase 2 is its own prompt carrying the headline criterion; nothing settles the umbrella, retire or fold it at pick-up.
 Review-minutes: 25
 Unattended: ready
 Split-into: complete/2026/08/board-github-data-seam.md (phase 1, shipped 2026-08-27), draft/feature/pyautobrain/board_without_gh_phase2_legs.md

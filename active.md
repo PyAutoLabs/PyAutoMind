@@ -5,7 +5,7 @@
 - issued: 2026-09-10
 - prompt: active/witness_campaign.md
 - session: claude --resume session_01LRRECsu9gfMvjb8F5aXMHu
-- status: library-dev
+- status: awaiting-merge
 - location: web-github (session clones, no task worktree; branch claude/active-witness-campaign-0g8phk)
 - worktree: n/a — web-github session clone (/home/user/PyAutoMind)
 - repos:
@@ -36,8 +36,12 @@
     Pass 4 (`autolens`, 11) SHIPPED 2026-09-17 (pre-accepted): 11 judge ->
     10 glance / 1 judge, 230 -> 55 seed review-minutes. Backlog now
     157 ready, 94 witnessed + 3 none, derived 20 notify /
-    64 glance / 73 judge. Next: autolens_workspace (7), euclid (6),
-    autogalaxy (5), autolens_profiling (5), tail (~30 singletons).
+    64 glance / 73 judge. Pass 5 (workspace/euclid/galaxy/profiling, 29) and
+    pass 6 (the tail, 39) SHIPPED 2026-09-17 (pre-accepted): 465 -> 72 and
+    676 -> 119 seed review-minutes. Every ready draft now witnessed or
+    `none`. Backlog 158 ready, 146 witnessed + 5 none, derived
+    37 notify / 96 glance / 25 judge. Remaining: the Brain follow-up
+    (none rule, keyword false-judges, triage rule) via /intake; then /prm.
     Pass-by-pass counts are in the prompt's `## Campaign log`.
 
 ## sed-chain-cpu-route

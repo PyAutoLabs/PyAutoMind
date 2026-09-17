@@ -12,6 +12,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
+Witness: none — a living catch-all ("pick up only when a real morning shows the need"); each item gets its own witness when it is filed as a task.
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-08-23

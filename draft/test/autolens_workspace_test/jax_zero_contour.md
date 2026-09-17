@@ -9,8 +9,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: A workspace_test script evaluates the critical curves and caustics eagerly and under `jax.jit`, asserting equality to 1e-10, and `jax.grad` of a caustic-derived scalar w.r.t. a mass parameter matches a finite-difference estimate (the `jax_grad/` pattern); it runs green on the JAX channel.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-06-26 (backfilled from git)
 
