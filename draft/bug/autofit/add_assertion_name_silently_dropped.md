@@ -10,9 +10,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
+Consequence: glance
 Witness: model.add_assertion(model.sigma > 5.0, name="sigma_floor") then reading the assertion back reports name == "sigma_floor" instead of the default/None it reports today.
-Review-minutes: 15
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-10
 

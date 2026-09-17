@@ -10,9 +10,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
+Consequence: glance
 Witness: on a model with one fixed float (af.Model(Gaussian, centre=0.0)), direct_instance_tuples returns that centre once, not twice.
-Review-minutes: 15
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-10
 

@@ -11,7 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: draft
-Consequence: judge
+Consequence: glance
+Witness: Dumping and reloading (`output_to_json` / `af.Model.from_json`) a `Collection` holding an all-fixed `Model` and a parameter-less `Model` gives `GraphSpec.from_model(reloaded).to_dict()` equal to the original's (test in `test_autofit/graph_spec`), and the lens cookbook's "reloaded figure differs" sentence is removed once released.
+Review-minutes: 3
 Filed: 2026-09-11
 
 Found by the model figure while adding it to `autolens_workspace/scripts/guides/modeling/cookbook.py`

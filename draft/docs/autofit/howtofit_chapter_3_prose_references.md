@@ -12,7 +12,8 @@ Autonomy: safe
 Priority: low
 Status: formalised
 Consequence: notify
-Review-minutes: 5
+Witness: `grep -rn "HowToFit chapter 3" PyAutoFit/` returns nothing; the two sites now read "the HowToFit advanced chapter" with "tutorial 4" kept.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-14
 

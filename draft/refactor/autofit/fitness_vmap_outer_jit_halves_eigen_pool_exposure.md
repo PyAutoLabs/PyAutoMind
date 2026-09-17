@@ -8,7 +8,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Consequence: notify
 Witness: `Fitness._vmap` called twice on the same shapes traces once (assert via `jax.make_jaxpr` count or a trace-counter callback), all PyAutoFit JAX tests pass, and the multi_dataset jax_likelihood scripts in autolens_workspace_test / autogalaxy_workspace_test produce bit-identical likelihoods before and after.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-07
 

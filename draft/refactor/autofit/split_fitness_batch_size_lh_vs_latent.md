@@ -12,8 +12,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: `Fitness` takes `latent_batch_size` and `lh_batch_size`; `updater.py` passes `latent_batch_size` to `compute_latent_samples`; the old `batch_size` kwarg still works, routing to `latent_batch_size` with a `DeprecationWarning` (unit test); with `latent_batch_size` equal to the old `batch_size` the latent samples are bit-identical to before.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-15 (backfilled from git)
 

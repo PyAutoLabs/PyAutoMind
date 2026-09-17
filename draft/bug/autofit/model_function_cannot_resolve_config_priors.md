@@ -8,9 +8,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
+Consequence: glance
 Witness: af.Model(some_function) with no explicit priors builds a model instead of raising AttributeError: 'NoneType' object has no attribute '__module__'.
-Review-minutes: 20
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-10
 

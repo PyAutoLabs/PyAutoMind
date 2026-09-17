@@ -10,8 +10,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: A search constructed with a fixed `seed` produces bit-identical `samples` across two runs and across two processes (dynesty first); with `seed` unset no existing search's identifier or output changes (identifier pinned in a test); the `seed_search_randomness` fixture in `test_autofit/interpolator/test_covariance.py` no longer monkeypatches `dynesty.dynesty`.
+Review-minutes: 3
 Unattended: ready
 Issue: (none yet)
 Filed: 2026-08-05 (backfilled from git)
