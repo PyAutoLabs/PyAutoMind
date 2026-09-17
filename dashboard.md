@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> — issued 2026-09-17</summary>
+<details><summary>📋 <a href="active/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/407">issue #407</a> — issued 2026-09-17 — workspace-dev</summary>
 
 ```
 /start_dev active/codex_hook_parity.md
