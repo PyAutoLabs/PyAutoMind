@@ -12,8 +12,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: All 7 named `markdown/` pages show `sigma_min=dataset.pixel_scales[0] / 10.0` in their MGE snippets, source-plane MGEs keep the `-4` default with no pixel-scale floor, and the diff of the other 23 curated pages is empty.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-08 (backfilled from git)
 

@@ -16,7 +16,7 @@ Each failing script is assigned to exactly one prompt:
 | [samples_parameter_paths.md](samples_parameter_paths.md) — ⚠️ parked, does not reproduce on current `main` ([PyAutoFit#1327](https://github.com/PyAutoLabs/PyAutoFit/issues/1327), blocked on clean-CI re-validation) | 9 | PyAutoFit result/sample path resolution |
 | ~~autofit_sampler_database.md~~ — ✅ **CLOSED 2026-08-21**, record `complete/2026/08/autofit-sampler-database.md` ([PyAutoFit#1508](https://github.com/PyAutoLabs/PyAutoFit/issues/1508); **0/9 reproduce** on current `main` — no defect, no code changed in any repo; re-validation is automatic, all nine run in every `mode=release` pass) | 9 | Emcee NaNs and database output discovery |
 | ~~aggregator_output_contracts.md~~ — ✅ **SHIPPED 2026-07-07**, record `complete/2026/07/aggregator-output-contracts.md` (PyAutoFit#1324; autogalaxy_workspace#122, autolens_workspace#229, autolens_workspace_test#146 all merged) | 7 | Result/aggregator prerequisites and generated paths |
-| [jax_runtime_and_parity.md](jax_runtime_and_parity.md) — ⚠️ **6/6 pass 2026-08-21**, defect refuted; parkings NOT cleared (intermittent) | 6 | JAX/TFP compatibility and likelihood parity |
+| ~~jax_runtime_and_parity.md~~ — ✅ **CLOSED 2026-09-17**, record `complete/2026/09/jax-runtime-and-parity.md` ([autolens_workspace_test#317](https://github.com/PyAutoLabs/autolens_workspace_test/issues/317); **6/6 pass 2026-08-21 and again 2026-09-15** on jax 0.10.2 — defect refuted, no library code changed; the four parkings had already been lifted by PyAutoFit#1528 on 2026-08-27, so re-validation is automatic in every `mode=release` pass. One residue fixed: `imaging/jax_likelihood/delaunay_mge.py` re-enabled on both smoke gates, autolens_workspace_test#320 + autogalaxy_workspace_test#122 merged) | 6 | JAX/TFP compatibility and likelihood parity |
 | jit_visualization_outputs.md — 🟡 **ISSUED 2026-09-15**, plan only, deferred ([autolens_workspace_test#318](https://github.com/PyAutoLabs/autolens_workspace_test/issues/318)); prompt now at `active/jit_visualization_outputs.md`; **4/4 pass 2026-08-21 and again 2026-09-15**, defect refuted; only residual is the point_source parking, to be settled by CI retime | 4 | Quick-update visualizations not producing images |
 | ~~numerical_inversion_failures.md~~ — ✅ **CLOSED 2026-08-22**, record `complete/2026/08/numerical-inversion-failures.md` ([PyAutoArray#467](https://github.com/PyAutoLabs/PyAutoArray/issues/467); **0/2 reproduce** on current `main` — no defect, no code changed in any repo; neither script is parked, so re-validation is automatic in every `mode=release` pass). Incidental PyAutoArray sqrt-NaN filed as `draft/bug/autoarray/reconstruction_noise_map_covariance_sqrt.md` | 2 | Non-positive-definite inversion matrices |
 | [release_timeout_policy.md](release_timeout_policy.md) — ⚠️ **4/4 measured pass far under cap 2026-08-21**; start_here not measured | 5 | 300-second release-surface decisions |
@@ -85,9 +85,12 @@ appears only as a *consumer*, where its simulator is marked `BOOTSTRAP-TARGET` f
 re-validation is automatic and there is no human reminder to lose.
 
 That is the distinction that decides this whole folder: caveat 1 of the 2026-08-21 sweep blocks the
-*parked* prompts from closing, and it simply does not apply here. The three that remain
-(`jax_runtime_and_parity`, `jit_visualization_outputs`, `release_timeout_policy`) each still carry
-SLOW/NEEDS_FIX parkings describing *intermittent* failures a single green run cannot clear.
+*parked* prompts from closing, and it simply does not apply here. The two that remain
+(`jit_visualization_outputs`, `release_timeout_policy`) each still carry SLOW/NEEDS_FIX parkings
+describing *intermittent* failures a single green run cannot clear. `jax_runtime_and_parity` left
+this group on 2026-09-17: PyAutoFit#1528 had lifted its four parkings on 2026-08-27, which put it
+on the same automatic-re-validation ground as the closed siblings (record
+`complete/2026/09/jax-runtime-and-parity.md`).
 
 It also makes **four** independent refutations of this cluster, not three — the fourth predates the
 release run: `complete/2026/07/pix-inversion-not-positive-definite.md` (2026-07-21) tested the same

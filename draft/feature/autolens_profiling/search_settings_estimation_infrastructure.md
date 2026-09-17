@@ -13,8 +13,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 25
+Consequence: glance
+Witness: An estimator, given dataset + model + device, proposes `n_starts`/`batch_size` for the MultiStart family or flags that no setting fits, populated by a profiling harness the way `vram/config.py` is for Nautilus `n_batch`; the `searches/_samplers.py` builders consult it instead of hardcoding; on the 54-parameter group cell it reproduces the measured facts (16 and 32 starts fit a 6 GB card, 64 unbatched flagged).
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-22 (backfilled from git)
 

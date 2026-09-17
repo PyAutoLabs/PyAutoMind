@@ -12,8 +12,9 @@ Difficulty: small
 Autonomy: safe
 Priority: low
 Status: draft
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Witness: Numpy and JAX `PowerLaw` deflections agree bit-for-bit at on-axis grid points (the JAX branch returns exactly 0.0 there), the existing deflection pins are unchanged, and `profiles_jit.py` passes on a green run with the `atol=1e-12` removed from its `mp.PowerLaw` checks.
+Review-minutes: 3
 Filed: 2026-09-04
 
 ## Symptom

@@ -1,3 +1,18 @@
+## witness-campaign
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398 (closed 2026-09-17)
+- completed: 2026-09-17
+- mind-only: no PR — seven ledger passes landed on `main` via `mind_ledger_merge.yml` (pass 1 on `claude/witness-campaign-feature-h21cq4`, 2026-09-10; passes 2–7 on `claude/active-witness-campaign-0g8phk`, 2026-09-17; both proven ancestors of `main` at close-out)
+- what shipped: 137 backlog prompts gained a human-declared `Witness:` (or `Witness: none —` with its reason, 6 of them), each written with a restamped `Consequence:` and `Review-minutes:` — the three-field write is load-bearing because intake persists consequence/review-minutes as a cached derivation and the precedence rule lets that stale `judge` beat a witness written alone. Passes: 1 workspaces (15), 2 autoarray (11), 3 autofit (26), 4 autolens (11), 5 autolens_workspace + euclid + autogalaxy + autolens_profiling (29), 6 the singleton tail incl. two `triage/` prompts (39), 7 six prompts filed mid-sweep (6). Every `draft/` prompt the regrade counts as ready is covered; the only file without a witness is `draft/triage/README.md`, not a prompt.
+- effect on the backlog (derived by the sizing faculty over the ready set): 17 notify / 36 glance / 103 judge at the 2026-09-17 re-baseline (156 ready) → 37 / 101 / 20 after pass 7 (158 ready). Declared (what dashboard.md and the batch planner read): 12 / 24 / 102 + 18 unset → 36 / 107 / 12 + 3 unset. Seed review-minutes written across passes 2–7: 1,892 → 459. Pass 1 ran on 2026-09-10 (300 → 24); the pass-1 baseline numbers re-derive one prompt off today because `repos.yaml` gained `autolens_inference` since — each reading stands as measured on its day.
+- how the human reviewed it: passes 1–3 accepted item by item from a proposal on the issue; passes 4–7 pre-accepted ("Continue i accept", "Continue all the way") and written in the same turn with every pinned decision listed on the issue for after-the-fact strikes (2026-09-17 comments 5715656902, 5717776954). None struck at close-out.
+- decisions the accepts pinned (all listed per pass in the campaign log under `## Original prompt`): 14 keyword false-`judge` overrides to declared `glance` — bug prompts whose prose describes the crash being fixed ("raises `IndexError`"), or names "public API"/"defaults to"/"reported by" while touching none of them; four declared-over-derived holds (`15_transformed_message_logpdf_jacobian` and `multi_plane_time_delays` kept `judge` for a real error-contract decision; `split_fitness_batch_size`, `one_construction_path`, `witt_wynne_solver_library_home` declared `glance` over a derived `notify` because each adds public API); five organ-internal prompts restamped to derived `notify`; gated witnesses that assume their gate (`group_los_halos`, `magnification_errors_posterior_draws`, `point_solver_profiling_cells`, `multi_plane_guide_richardson`, `howto_real_settings_nightly`, `point_source_json_datasets`, `rectangular_parity_absolute_bound`, `small_datasets_followups_after_8c`); either-outcome witnesses where the prompt is itself a fork.
+- findings for the Brain (one `/intake`): `_sizing.py` has no `none` rule (`Witness: none —` reads as a witness; the declared tier holds by precedence, so the dashboard is right and the derived reading is not — the regrade counts it separately); the `JUDGE_SURFACE_KEYWORDS` hits on prose that *describes* a surface are the module's own documented "Known limit" and cost 14 overrides — `raises ` alone accounts for 10; no `triage` work-type rule. Found during pass 2, recorded on the issue and in the log.
+- findings for the Mind: duplicate defects filed twice — `emcee_crashes_in_autocorrelation_when_the_chain` / item 2 of `mcmc_thin_zero_and_check_size_short_chain`, and `smoke_gate_skips_pytest_runners_on_pr` (09-10) / `reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests` (09-16) — the witnesses were written to agree, fold each pair at pick-up; both `triage/` prompts are really bugs to re-home; `board_without_gh` is a phased umbrella whose phase 2 is its own prompt — retire it; `copilot_auto_review` is a human-only UI toggle; eight duplicated header blocks (an intake artefact, bug #1 of `intake_agent_silently_drops_unknown_type_values`) collapsed in passes 2, 3 and 6.
+- traps: the faculty masks inline code, so a "raises" inside backticks does not trip the keyword while the same word in prose does — two prompts were written at `glance` on that and corrected (`multi_plane_time_delays` back to `judge`, pass 4 fix-up); a file's first title line can be truncated with "…" while the body's duplicate carries the full title, so a title-equality collapse misses it (pass 2); prompts carry the duplicate as a bare (unhashed) title block or as a lone trailing `Witness:` line, not only as a hashed second header (pass 3, pass 6); an `awaiting-merge` status on a task with no PR keys trips `lifecycle.py check` (pass 7); `git merge --ff-only origin/main` fails once the ledger workflow's merge commits diverge the branch — merge, never rebase (pass 7); a Python assertion inside a shell chain does not stop the following `&&` unless the chain tests the Python exit (pass 5 committed a table written before its overrides — corrected in the pass-6 commit).
+- tooling that outlived the task (scratchpad only, not committed): `regrade.py` (backlog counts, derived vs declared, `--list`/`--targets`), `passlib.py` (plan → write → verify → regrade with the duplicate-header collapse and Consequence-anchor fallbacks), `candidates{3..7}.py`. The regrade's counting method (effective-unattended ready over `draft/`, today's faculty over today's tree) is the one the campaign log records from pass 2 on.
+
+## Original prompt
+
 # Witness campaign — make the backlog reviewable by construction
 
 Type: feature
@@ -234,7 +249,73 @@ documented; `quick_update_plotting_cost`'s witness covers only the
 container-safe half its own triage split off — the measured numbers are local
 work.
 
+### Pass 5 — `autolens_workspace` · `euclid` · `autogalaxy` · `autolens_profiling` (29 prompts, 2026-09-17, issue #398)
+
+Pre-accepted ("Continue all the way"). Four target groups in one pass: `autolens_workspace` (10, two restamps and one unset-tier stamp among them), `euclid` (7, one restamp), `autogalaxy` (6, one restamp), `autolens_profiling` (6, one restamp). Decisions the accept pinned: `multi_plane_guide_richardson_warning_update` and `point_solver_profiling_cells` are gated (a library release; phase 1 of the cluster arc) and their witnesses assume the gate; `gpu_per_lens_time`, `sersiccoresph`, `linear_operated_sersic`, `lenscalc_masked_grid_caustic`, `skip_fit_output` and `single_process_cpu_route` carry either-outcome witnesses because each prompt is itself a fork; the docs prompts on the lens workspace grade `notify` by the docs-no-library rule. Two more keyword false-judges overridden to declared `glance`: `drawer_pix_initializer_exception_flake` ("raises" in its own title, describing the flake) and `point_solver_profiling_cells` ("defaults to" inside a trap note about `plane_redshift`, not a default being set).
+
+| | notify | glance | judge | review-minutes |
+|---|---|---|---|---|
+| before | 1 | 1 | 27 | 465 |
+| after | 5 | 24 | 0 | 72 |
+
+Backlog after pass 5: 158 ready, 118 witnessed + 3 `none`, 37 not —
+derived **24 notify / 82 glance / 52 judge**; declared **20 / 86 / 42** +
+10 unset.
+
+### Pass 6 — the singleton tail (39 prompts, 2026-09-17, issue #398)
+
+Pre-accepted ("Continue all the way"). The tail: every remaining target with fewer than six prompts, the two `triage/` prompts included (`draft/triage/README.md` is a README, not a prompt, and is out). 30 new witnesses, 7 restamps (`intake_agent`, `batch_slice`, `smoke_profile`, `community_surface`, `mge_group_dataset` to their derived `notify`; `smoke_gate_skips_pytest_runners` and `minimum_library_version_stale` to `glance`), 2 unset-tier stamps. Two `Witness: none —`: `board_without_gh` (a phased umbrella whose phase 2 is its own prompt) and `brain_board_follow_ups` (a living catch-all). Decisions the accept pinned: `15_transformed_message_logpdf_jacobian` keeps a declared `judge` over a derived `glance` because the contract choice is still awaiting human adjudication (its witness accepts either); `data_loading_and_selection_cuts_skill` keeps its declared `notify` over a derived `glance`; `unregistered_worktrees` keeps its declared `notify` and gets the matching 0 minutes. Findings: `smoke_gate_skips_pytest_runners_on_pr` (09-10) and `reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests` (09-16) are one defect filed twice; both `triage/` prompts are really bugs and should be re-homed; `copilot_auto_review` is a human-only UI toggle the cloud agent cannot perform. Two more keyword false-judges overridden to declared `glance`: `wiki_currency_check_version_gate` ("public API surface" is what the check hashes, not a surface this task changes) and `point_source_json_datasets_record_no_regime` ("raises `TypeError`" in a constraint note); `unregistered_worktrees` trips "reported by" in its own witness, which the declared `notify` already overrides.
+
+| | notify | glance | judge | review-minutes |
+|---|---|---|---|---|
+| before | 3 | 2 | 34 | 676 |
+| after | 18 | 18 | 3 | 119 |
+
+Backlog after pass 6: 158 ready, 146 witnessed + 5 `none`, 7 not —
+derived **37 notify / 96 glance / 25 judge**; declared **36 / 102 / 13** +
+7 unset.
+
+### Pass 7 — prompts filed during the sweep (6 prompts, 2026-09-17, issue #398)
+
+Pre-accepted. Six prompts arrived in `draft/` between the re-baseline and
+pass 6 (three `autoarray`, three `workspaces`). One `Witness: none —`:
+`model_figures_6b2_slam_stages` is decision-first by its own text. One
+keyword false-judge overridden to declared `glance`
+(`mesh_geometry_areas_transformed`, "raises `IndexError`" in its title).
+Gates the witnesses assume: `rectangular_parity_absolute_bound` waits on the
+autolens_workspace_test#317 claim; `small_datasets_followups_after_8c` waits
+on two releases.
+
+| | notify | glance | judge | review-minutes |
+|---|---|---|---|---|
+| before | 0 | 0 | 6 | 120 |
+| after | 0 | 5 | 1 | 35 |
+
+Backlog after pass 7: 158 ready, 151 witnessed + 6 `none`, 1 not —
+derived **37 notify / 101 glance / 20 judge**; declared **36 / 107 / 12** +
+3 unset.
+
+### Where the campaign stands after pass 7
+
+Every `draft/` prompt the regrade counts as ready now carries a witness or a
+`Witness: none —` except `draft/triage/README.md`, which is a README and not a prompt. The
+faculty's derived reading over the whole ready set went from **17 notify /
+36 glance / 103 judge** at the 2026-09-17 re-baseline to
+**37 / 101 / 20**; the declared reading the dashboard
+and planner use went from 12 / 24 / 102 (+18 unset) to
+36 / 107 / 12 (+3 unset). Seed review-minutes
+written across passes 2-7: 1,892 -> 459.
+
+Left for the Brain (one `/intake`): the sizing faculty needs (1) a `none`
+rule, (2) a look at the "raises " / "public api" / "defaults to" /
+"reported by" keyword hits in prose that *describes* a surface rather than
+touching it — 14 of the campaign's overrides are that pattern — and (3) a
+`triage` work-type rule. Left for the Mind: the duplicate-defect pairs
+(`emcee_crashes` / `mcmc_thin_zero` item 2; `smoke_gate_skips_pytest_runners_on_pr`
+/ `reusable_smoke_workflow_relevance_gate`), the two `triage/` prompts that
+are really bugs, and `board_without_gh`, a phased umbrella to retire.
+
 ### Remaining passes
 
-`autolens_workspace` (7) · `euclid` (6) · `autogalaxy` (5) ·
-`autolens_profiling` (5) · then a tail pass over the ~30 singleton targets.
+None. New prompts arrive witnessed or not as `/intake` writes them; a
+re-run of the regrade names any that slipped in without one.

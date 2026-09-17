@@ -11,11 +11,12 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: A remote render with `--github-data` reports zero unread legs across versions, community, resume and upkeep, or names each remaining one with a reason other than "no gh", pinned by a fixture-driven test; the dev-box `gh` path is unchanged.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-27
-Parent: draft/feature/pyautobrain/board_without_gh.md
+Parent: complete/archive/epics/board_without_gh.md (umbrella archived 2026-09-17; this prompt carries its headline criterion)
 After: complete/2026/08/board-github-data-seam.md (phase 1 shipped 2026-08-27, PyAutoBrain#303 — this is unblocked)
 
 Phase 2: port the four legs phase 1 did not cover onto the seam it built (`--github-data`; the contract is `PyAutoBrain/board/AGENTS.md` → "Reading the board in a remote session") —

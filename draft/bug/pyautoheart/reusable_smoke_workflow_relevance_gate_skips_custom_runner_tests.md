@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: high
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Witness: A euclid_strong_lens_modeling_pipeline PR touching only `util.py` or `tests/` shows `unit / smoke` and `slow / smoke` run (not skipped) on both Python legs; every other caller passing `runner:` is audited and listed in the PR; the CI-map doc says a skipped required job on a PR is not green.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-16
 Updated: 2026-09-16
@@ -63,3 +64,12 @@ and the PR looks green.
 - The `unit`/`slow` split rationale in the pipeline's `tests.yml` header.
 - Heart's own comment in the gate explains why pushes to main always run the full
   matrix (readiness reads main's conclusion).
+
+## Folded 2026-09-17
+
+`draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md` (filed 2026-09-10
+from pipeline PR #65) was the same defect with less evidence and was removed at
+the witness-campaign close-out (PyAutoMind#398). Its witness — a
+euclid_strong_lens_modeling_pipeline PR touching only `tests/` shows
+`unit / smoke (3.12)` and `unit / smoke (3.13)` run and pass rather than `skipped` —
+is this prompt's witness in other words.

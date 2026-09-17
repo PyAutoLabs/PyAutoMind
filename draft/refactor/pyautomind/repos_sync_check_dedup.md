@@ -11,8 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: low
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: `repos_sync.py` has one declaration per generated surface driving both `check` and `--write`; every CLI flag's output is byte-identical before and after (captured in a test); `tests/test_repos_sync_hygiene_coverage.py` and the firewall_gate.yml legs pass.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
 
