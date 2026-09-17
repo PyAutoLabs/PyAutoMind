@@ -1,3 +1,79 @@
+## colab-gate-candidate-audit
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/229 (closed completed 2026-09-17)
+- completed: 2026-09-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/230 (head `4f7e04e`, merge `08c74aa`)
+- classification: bug (organ) — PyAutoHeart only, no PyAutoNerves change. Fable session (architect) on web-github; implementation delegated to an Opus subagent, reviewed and shipped in-session; /prm run on the mcp surface.
+- ci: Heart Tests run 35226926677 on `4f7e04e`, pytest 3.12 + 3.13 both success (the only PR-triggered workflow; push fires on main only). Full suite locally 1026 passed. Merged by `/prm`, mergeable_state clean.
+- witness: NOT run — the red-first witness needs a desktop with python3.12 and TestPyPI reach (`bash heart/checks/verify_install.sh F --testpypi --version 2026.9.17.1.dev77201 --report-json /tmp/vi.json`); expected: released facet F WARN (6 missing), candidate facet `autonerves=2026.9.17.1.dev77201`, F PASS, `ready: true`; negative control without `--version` unchanged. The next nightly rehearsal is the live witness.
+
+## What shipped
+
+Heart was RED on `install verification FAILED (testpypi; checks F)` and `release
+validation FAILED (stage integrate)` with one cause: in a TestPyPI rehearsal
+(`TARGET_VERSION` set) check F's seed step pinned the venv to the candidate, but
+the verbatim injected setup cell ran `pip install autonerves --no-deps` UNPINNED
+and the released `setup_colab.setup()` reinstalled the whole stack unpinned, so
+the Colab gate audited the RELEASED bootstrap (autonerves 2026.9.15.1) and never
+the candidate. The bootstrap fix (PyAutoNerves #168/#169) was on main but
+untagged: Heart RED -> nightly never publishes -> PyPI stays broken -> Heart RED.
+
+Decision 2026-09-17 (human): do not release; fix the gate so no authorisation is
+needed. In a rehearsal check F gates on the CANDIDATE (FAIL -> RED as before) and
+reports the released bootstrap as a WARN row that is verdict-neutral — the
+nightly publishes only on GREEN, so YELLOW would still have blocked the release
+that is the remedy.
+
+- `heart/checks/verify_install.sh` check F, `--version` only: released facet
+  (`colab_gate.py verify` into `F_gate_verify_released_*.json`, advisory, never
+  FAILs), then `/tmp/F_driver_repin.py` re-pins `autonerves autofit autoarray
+  autogalaxy autolens ==VERSION` from `PIP_INDEX_ARGS` `--no-deps`, applies the
+  `COLAB_GATE_AUTONERVES_SRC` overlay if set, `importlib.reload`s
+  `autonerves.setup_colab` and reinstalls `_PROJECTS["autolens"]["packages"]`
+  `--no-deps` exactly as `_colab_setup` does (no second `setup()`), then the
+  candidate facet with today's FAIL semantics. Candidate pass + released fail ->
+  `F|WARN|released Colab bootstrap (autonerves=<ver>) broken for readers:
+  <detail>; candidate <version> passes` before the notebook cell and `F|PASS`.
+  Continuous run (no `--version`): one audit, unchanged. `n_warn` counted;
+  `n_fail` counts only FAIL so `ready` stays true on WARN. Sidecar folds the
+  released report in as `colab_gate.verify_released` beside `seed`/`verify`;
+  the `{check,status,detail}` shape untouched (validate.py folds only `ready`).
+- `heart/readiness.py`: comment only — WARN is verdict-neutral by the
+  2026-09-17 decision.
+- `heart/dashboard.py`: `ready` true + any WARN row -> section WARN, `passed
+  with warnings (<index>; <letters>)`, WARN details as detail lines.
+- Docs: script header + usage (`Check F in a rehearsal (--version)` block),
+  `skills/verify_install/verify_install.md`, `docs/release_validation.md`,
+  `health_agent/capabilities.yaml`. `colab_gate.py` untouched.
+- Tests: script text (re-pin driver, both facets, continuous single audit,
+  `n_warn`), the lifted sidecar writer (WARN+PASS rows -> `ready` true,
+  `verify_released` nested on every F row, readiness not red/yellow), readiness
+  (WARN verdict-neutral; FAIL beside WARN still red), dashboard (WARN renders
+  WARN with detail; FAIL still FAIL).
+
+## Traps / findings
+
+- An unpinned `pip install autonerves` can never pick a `.devN` pre-release,
+  so switching the index alone cannot make the verbatim cell install the
+  candidate; an explicit `==` pin (or `--pre`) after the cell is the only
+  Heart-side fix. The cell must stay verbatim — it is the thing readers run.
+- `colab_gate.py verify` "heals" by installing Colab's own pins for packages
+  Colab ships; running it twice in one venv is safe for the gate because a
+  Colab-shipped package is never a FAIL, so the advisory pass cannot mask a
+  candidate miss.
+- After the re-pin, the candidate's own `_colab_setup` package list is
+  installed unpinned `--no-deps`; the already-installed dev versions satisfy
+  the bare `autolens` etc. requirements, so pip leaves them alone and only the
+  `_SHARED_EXTRAS` land.
+- The only PR-triggered workflow in PyAutoHeart is `heart-tests.yml` (push on
+  main only), so one `pull_request` run with two legs is the whole CI picture
+  for a Heart feature PR.
+- `/prm` on the mcp surface: the shallow single-branch clone had no
+  `origin/feature/...` tracking ref after the push, which made a stop hook
+  report an unpushed commit that was already on origin; `git config --add
+  remote.origin.fetch` for the branch fixed the ref.
+
+## Original prompt
+
 # Check F audits the released Colab bootstrap in a TestPyPI rehearsal, not the candidate
 
 Type: bug

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1455 records across 8 buckets.
+1456 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -149,6 +149,7 @@ markers; everything below GENERATED is rebuilt.
 - [catalogue-mass-maps-fits](2026/09/catalogue-mass-maps-fits.md)
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
 - [colab-bootstrap-lazy-deps](2026/09/colab-bootstrap-lazy-deps.md)
+- [colab-gate-candidate-audit](2026/09/colab-gate-candidate-audit.md)
 - [colab-notebook-release-gate](2026/09/colab-notebook-release-gate.md)
 - [colab-workshop-dep-stopgap](2026/09/colab-workshop-dep-stopgap.md)
 - [config-priors-drift](2026/09/config-priors-drift.md) — Fixed eleven dead rows in the packaged PyAutoGalaxy `config/priors/` (JSONPriorConfig suffix-matcher drift: `e…

@@ -1,24 +1,5 @@
 # Active Tasks
 
-## colab-gate-candidate-audit
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/229
-- issued: 2026-09-17
-- prompt: active/colab_gate_rehearsal_audits_released_bootstrap.md
-- session: claude --resume session_01ATSR1eVsUBBK49nfLhb7JQ
-- status: pr-open
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/230
-- location: web-github (session clone, no task worktree; PyAutoHeart branch feature/colab-gate-candidate-audit)
-- worktree: n/a — web-github session clone (/home/user/pyautoheart)
-- repos:
-  - PyAutoHeart: feature/colab-gate-candidate-audit
-- summary: |
-    Heart RED on check F in every TestPyPI rehearsal because the verbatim
-    setup cell installs the RELEASED autonerves bootstrap (unpinned), so the
-    Colab gate never sees the candidate that carries the fix (PyAutoNerves
-    #168/#169). Decision 2026-09-17: no release; in a rehearsal check F
-    re-pins to the candidate and gates on it, reporting the released
-    bootstrap as a verdict-neutral WARN row. Heart-only change.
-
 ## witness-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/398
 - issued: 2026-09-10
