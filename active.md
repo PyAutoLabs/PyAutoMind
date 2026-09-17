@@ -9,6 +9,8 @@
 - autonomy: supervised (`--auto` launch; effective supervised)
 - worktree: ~/Code/PyAutoLabs-wt/provider-neutral-bundle-prompts
 - repos:
+  - PyAutoBrain: feature/provider-neutral-bundle-prompts
+  - PyAutoMind: feature/provider-neutral-bundle-prompts
 - note: "PyAutoBrain was initially claimed by oneshot-benchmark-harness, but its Brain PR #380 is merged. The human reviewed and waived that stale overlap on 2026-09-17; the stale Brain claim was released while the separate autolens_assistant PR remains active."
 
 ## sed-chain-cpu-route
