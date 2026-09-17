@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/provider_neutral_bundle_prompts.md">Make generated bundle prompts provider-neutral</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/383">issue #383</a> — issued 2026-09-17 — library-dev</summary>
+<details><summary>📋 <a href="active/provider_neutral_bundle_prompts.md">Make generated bundle prompts provider-neutral</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/383">issue #383</a> — issued 2026-09-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/384">PyAutoBrain#384</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/406">PyAutoMind#406</a> — ⏳ pending release: PyAutoBrain — ⏳ pending release: PyAutoMind</summary>
 
 ```
 /start_dev active/provider_neutral_bundle_prompts.md
@@ -350,6 +350,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#556](https://github.com/PyAutoLabs/PyAutoArray/pull/556) — `complete/2026/09/mixed-precision-inversion-gap.md`
 - [PyAutoArray#550](https://github.com/PyAutoLabs/PyAutoArray/pull/550) — `complete/2026/09/model-figures-lens.md`
 - [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `complete/2026/09/sibson-single-concatenated-walk.md`
+
+**PyAutoBrain**
+
+- [PyAutoBrain#384](https://github.com/PyAutoLabs/PyAutoBrain/pull/384) — `active/provider_neutral_bundle_prompts.md`
 
 **PyAutoFit**
 
@@ -415,6 +419,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#728](https://github.com/PyAutoLabs/PyAutoLens/pull/728) — `complete/2026/09/pixelized-source-magnification-latent.md`
 - [PyAutoLens#734](https://github.com/PyAutoLabs/PyAutoLens/pull/734) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
 - ⏸ waiting: [autolens_workspace + autolens_workspace_test: every external field moves to <code>fields=</code> (<code>al.MassField</code>)](active/mass_field_workspace_sweep.md)
+
+**PyAutoMind**
+
+- [PyAutoMind#406](https://github.com/PyAutoLabs/PyAutoMind/pull/406) — `active/provider_neutral_bundle_prompts.md`
 
 **PyAutoNerves**
 

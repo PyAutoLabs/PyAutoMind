@@ -29,7 +29,7 @@
 - issued: 2026-09-17
 - prompt: active/provider_neutral_bundle_prompts.md
 - session: Codex local-dev (Sol execution)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - autonomy: supervised (`--auto` launch; effective supervised)
 - worktree: ~/Code/PyAutoLabs-wt/provider-neutral-bundle-prompts
 - repos:
@@ -38,6 +38,10 @@
 - note: "PyAutoBrain was initially claimed by oneshot-benchmark-harness, but its Brain PR #380 is merged. The human reviewed and waived that stale overlap on 2026-09-17; the stale Brain claim was released while the separate autolens_assistant PR remains active."
 - blocker: "Autonomous ship gate Heart RED on 2026-09-17: install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate). Tests PASS (PyAutoBrain 895, PyAutoMind 456), smoke n/a, review CLEAN. Progress: https://github.com/PyAutoLabs/PyAutoBrain/issues/383#issuecomment-5721491107"
 - heart-red-override: "Live human authorization for PyAutoBrain#383 on 2026-09-17, faithfully quoted at https://github.com/PyAutoLabs/PyAutoBrain/issues/383#issuecomment-5721589954. Exact reasons: install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate). Gates after policy amendment: PyAutoBrain 901 PASS, PyAutoMind 456 PASS, smoke n/a, review CLEAN. Development ship and same-turn merge authorized only with required GitHub checks green; release remains blocked."
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/384
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/406
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/384
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/406
 
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
