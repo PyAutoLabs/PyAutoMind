@@ -128,6 +128,22 @@ anything you could not verify.
 
 **Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 113
 
+<details><summary>📋 <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on every call…</a> — autofit · medium · supervised · medium</summary>
+
+```
+/start_dev draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/parameterization_prior_count_blowup.md">Memoise <code>prior_count</code> inside <code>AbstractPriorModel.parameterization</code> (O(N·depth) walk)</a> — autofit · medium · safe · medium</summary>
+
+```
+/start_dev draft/refactor/autofit/parameterization_prior_count_blowup.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/docs/workspaces/propagate_shear_galaxy_idiom_to_group_cluster.md">Propagate the shear_galaxy-at-(0,0) idiom to group/ and cluster/</a> — workspaces · small · safe · normal</summary>
 
 ```
@@ -176,6 +192,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — autofit · trivial · safe · low</summary>
+
+```
+/start_dev draft/docs/autofit/howtofit_chapter_3_prose_references.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
 
 ```
@@ -196,30 +220,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — autoarray · small · supervised · medium</summary>
-
-```
-/start_dev draft/feature/autoarray/over_sample_size_via_snr_from.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
-
-```
-/start_dev draft/feature/autoarray/source_clumps_robust_scale.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output directory</a> — autofit · small · safe · medium</summary>
-
-```
-/start_dev draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
 ```
 
 </details>
@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/398">issue #398</a> — issued 2026-09-10 — awaiting-input</summary>
+<details><summary>📋 <a href="active/witness_campaign.md">Witness campaign — make the backlog reviewable by construction</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/398">issue #398</a> — issued 2026-09-10 — library-dev</summary>
 
 ```
 /start_dev active/witness_campaign.md
@@ -2684,21 +2684,14 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-128 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+114 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
-- `draft/feature/autofit/ep_analytic_updates.md`
-- `draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md`
-- `draft/feature/autofit/ep_lbfgs_jax.md`
-- `draft/feature/autofit/model_figure_tuple_component_relations.md`
-- `draft/feature/autofit/model_figures_ep_overlays.md`
 - `draft/feature/autofit/model_figures_epic.md`
-- `draft/feature/autofit/prior_exit_sampler_coverage.md`
-- `draft/feature/autofit/search_seed_reproducibility.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/dpie_sigma0_parameterization.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
@@ -2729,7 +2722,14 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/feature/workspaces/model_figures_6b2_slam_stages.md`
 - `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
-- _… and 88 more_
+- `draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md`
+- `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
+- `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md`
+- `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md`
+- `draft/bug/autogalaxy/sersiccoresph_has_no_mass_to_light_ratio.md`
+- `draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md`
+- `draft/bug/autolens/point_solver_error_bisect_health.md`
+- _… and 74 more_
 
 </details>
 
