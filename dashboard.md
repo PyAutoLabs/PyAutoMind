@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 9 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 212 |
+| [Backlog](#backlog) (`draft/`) | 211 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -251,6 +251,14 @@ anything you could not verify.
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> — issued 2026-09-17</summary>
+
+```
+/start_dev active/codex_hook_parity.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets — the same tile/band…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88">issue #88</a> — issued 2026-09-17 — workspace-dev</summary>
 
@@ -548,7 +556,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**212** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
+**211** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 60</summary>
@@ -1486,7 +1494,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 23</summary>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> — organs · medium · supervised · high</summary>
 
@@ -1516,14 +1524,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/organs/agent_harness_agnostic_setup.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/organs/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> — organs · large · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/organs/codex_hook_parity.md
 ```
 
 </details>
@@ -2257,7 +2257,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> |
-| 2026-09-17 | filed | <a href="draft/maintenance/organs/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> |
+| 2026-09-17 | issued | <a href="active/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source image-plane chi-squared on the A100: likelihood…</a> |
 | 2026-09-17 | issued | <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the…</a> |
@@ -2759,7 +2759,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-55 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+54 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2801,10 +2801,10 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
 - `draft/maintenance/assistants/codex_skill_discovery_parity.md`
 - `draft/maintenance/organs/agent_harness_agnostic_setup.md`
-- `draft/maintenance/organs/codex_hook_parity.md`
 - `draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md`
 - `draft/maintenance/organs/reduce_session_token_load.md`
-- _… and 15 more_
+- `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
+- _… and 14 more_
 
 </details>
 
