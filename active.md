@@ -1,5 +1,16 @@
 # Active Tasks
 
+## provider-neutral-bundle-prompts
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/383
+- issued: 2026-09-17
+- prompt: active/provider_neutral_bundle_prompts.md
+- session: Codex local-dev (Sol execution)
+- status: library-dev
+- autonomy: supervised (`--auto` launch; effective supervised)
+- worktree: ~/Code/PyAutoLabs-wt/provider-neutral-bundle-prompts
+- repos:
+- note: "PyAutoBrain was initially claimed by oneshot-benchmark-harness, but its Brain PR #380 is merged. The human reviewed and waived that stale overlap on 2026-09-17; the stale Brain claim was released while the separate autolens_assistant PR remains active."
+
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
 - issued: 2026-09-11
@@ -105,7 +116,7 @@
 - worktree: n/a — web-github session clones
 - repos:
   - autolens_assistant: claude/oneshot-benchmark-harness-9scp59
-  - PyAutoBrain: claude/assistant-benchmarking-design-9scp59
+- note: "PyAutoBrain PR #380 merged; its repo claim was released on 2026-09-17 after explicit human overlap approval. The task remains active for autolens_assistant PR #127."
 - summary: |
     One-shot, machine-scored assistant benchmarks: headless `benchmark.py run`
     (harnesses.yaml adapters, private workdir without benchmarks/truth, compute

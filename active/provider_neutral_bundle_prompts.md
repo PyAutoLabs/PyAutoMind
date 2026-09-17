@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: high
 Status: draft
 Filed: 2026-09-17
+Issued: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
 
 ## Request
@@ -31,4 +32,3 @@ subagent syntax, then regenerate the Mind Markdown and HTML dashboards.
 - Active generator code, tests and generated dashboards contain no hardcoded
   Fable/Opus/`Agent(model=...)` bundle contract.
 - Existing one-issue, one-branch and one-PR-per-member semantics are unchanged.
-
