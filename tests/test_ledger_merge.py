@@ -133,6 +133,39 @@ def test_an_empty_diff_is_not_permission_to_merge():
     assert "nothing to merge" in result.stdout
 
 
+def test_base_and_explicit_paths_never_wait_on_an_open_stdin():
+    """A Claude Code web/mobile session runs commands with a stdin that is not
+    a TTY and never closes (a harness socket). `classify --base origin/main`
+    hung there twice on 2026-09-17, because the old source order tried stdin
+    before `--base`. With paths or `--base` given, stdin must not be touched:
+    hold the pipe open and never write to it, and the run must still return.
+    """
+    for args in (["--base", "HEAD"], ["active.md" if "_run" == "_run" else "projects/a.md"]):
+        proc = subprocess.Popen(
+            [sys.executable, str(SCRIPT), "classify", *args],
+            stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        )
+        try:
+            rc = proc.wait(timeout=30)
+        except subprocess.TimeoutExpired:
+            proc.kill()
+            proc.wait()
+            raise AssertionError(f"classify {' '.join(args)} blocked on an open stdin")
+        finally:
+            proc.stdin.close()
+        out = proc.stdout.read()
+        # `--base HEAD` diffs HEAD against itself: an empty diff, which blocks
+        # (exit 1) — the point is that it answered, not what it answered.
+        assert rc == (1 if args[0] == "--base" else 0), out
+
+
+def test_base_takes_precedence_over_piped_paths():
+    """Piped paths are read only when nothing else names the source."""
+    result = _run("--base", "HEAD", stdin="README.md\n")
+    assert result.returncode == 1
+    assert "nothing to merge" in result.stdout
+
+
 def test_this_repos_own_workflow_cannot_auto_merge_itself():
     """Self-consistency: the gate is on the code side of its own line."""
     assert not ledger_merge.is_ledger_path(".github/workflows/mind_ledger_merge.yml")
