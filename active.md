@@ -165,3 +165,15 @@
   - euclid_strong_lens_modeling_pipeline: feature/grid-offset-prior
 - note: "worktree_check_conflict grid-offset-prior euclid_strong_lens_modeling_pipeline exits 1 on five claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis #76, simulator-from-result-linear #77 parked, witt-wynne-catalogue #84). Code file sets are disjoint; catalogue/README.md shares one hunk with witt-wynne-catalogue: one-hunk resolution on whichever merges second. Waived on the human's plan approval 2026-09-17; fresh parallel worktree off origin/main."
 - note: "PAUSED 2026-09-17 17:10 BST, resumable. DONE on feature/grid-offset-prior (3 local commits d50eb52 prior ±0.5\" / 3563a98 prior_edge_y-x columns + header pin + tests / e58a1be README + eight producers; 208 fast tests green; NOT pushed, no PR). Witness done: sep1 Tile102008165 nir_j x 0.1906 [.., 0.2000] flagged → 0.2727 [0.167, 0.387] unflagged under ±0.5"; nir_h of that tile spins in Nautilus exploration (second case of 343381_8). RESUME: cd ~/Code/PyAutoLabs-wt/grid-offset-prior/euclid_strong_lens_modeling_pipeline; source ../activate.sh; pytest tests -q; /ship_workspace (Heart RED release-side → human ack); /prm; README one-hunk overlap with witt-wynne-catalogue #84. Full state on issue #88 comment."
+
+## fitness-vmap-outer-jit
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1636
+- issued: 2026-09-17
+- prompt: active/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
+- session: claude --resume session_01GhSsEfQUSBRDUDfpcLZnaw
+- status: library-dev
+- location: web-github (plan + issue only; no task worktree yet, PyAutoFit session clone at /home/user/pyautofit on main @ fa2d540)
+- worktree: ~/Code/PyAutoLabs-wt/fitness-vmap-outer-jit
+- repos:
+- suggested-branch: feature/fitness-vmap-outer-jit
+- note: "Refactor cap safe; launched without --auto so present-and-wait. Plan on the issue: flip Fitness._vmap to jax.jit(jax.vmap(self.call)) (drop the inner jit, match latent.py), expose __wrapped__ on log_on_first_compile's wrapper, cache/trace/parity tests, retime.yml ABAB on autogalaxy_workspace_test multi_dataset/jax_likelihood/delaunay.py via a same-named branch. PREMISE CORRECTION on the issue: the executable is already cached on main and the eigen-pool deadlock fires at execution, so the outer jit does not halve exposure by construction; the measured lever is the Aug-23 ordering A/B (8/10 vs 3/10 stalls, p=0.070, complete/2026/08/jax-compile-stall-slow-vs-stall-audit.md). Adjacent, not folded in: draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md (same line of code). Next: /start_library fitness-vmap-outer-jit PyAutoFit."

@@ -13,6 +13,7 @@ Witness: `Fitness._vmap` called twice on the same shapes traces once (assert via
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-07
+Issued: 2026-09-17
 
 CI forensics on autogalaxy_workspace_test#118 (2026-09-07): the two Release Integrate
 hangs of `multi_dataset/jax_likelihood/delaunay.py` (runs 34018429178 and 34094964905)
