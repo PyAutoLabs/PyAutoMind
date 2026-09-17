@@ -301,7 +301,7 @@ as it always has, but the gate's verdict and the human's action are both
 recorded, so the question "how often would auto-merge have been wrong on this
 organism's own work?" is answered with data rather than intuition.
 
-Count toward 40: 9 (stage 1: 8, stage 2: 1) — window re-opened 2026-09-03; first /prm-appended row: 2026-09-09; legacy rows not counted: 1
+Count toward 40: 11 (stage 1: 10, stage 2: 1) — window re-opened 2026-09-03; first /prm-appended row: 2026-09-09; legacy rows not counted: 1
 
 One row per tier-`notify` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged`.

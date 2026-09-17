@@ -19,6 +19,7 @@ Two things these tests deliberately do, matching `test_repos_sync_hygiene_covera
 
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
@@ -1074,3 +1075,177 @@ def test_a_shallow_clone_with_a_resolvable_ledger_is_quiet(tmp_path,
     _batch_record(tmp_path, "2026-01-01-pm", MEMBER)
     _shallow(monkeypatch)
     assert lifecycle.batch_member_notes(tmp_path) == []
+
+
+# --------------------------------------------------------------------------- #
+# `check --paths` — the diff-scoped run
+#
+# `check` grades the whole repo, which is right on main and wrong on a branch:
+# `mind_ledger_merge.yml` runs it over the merged tree, so a ledger branch that
+# added three records was refused for an unrelated `active.md` row that carried
+# no PR key — drift the branch neither caused nor could fix. `--paths` grades
+# only the findings ABOUT the branch's own files; everything else prints as
+# `~ out of scope` and leaves the exit code alone.
+#
+# Fictional fixtures throughout (see the module docstring).
+# --------------------------------------------------------------------------- #
+def _scoped(paths=(), base=None):
+    """The argparse namespace `cmd_check` reads its flags off."""
+    return SimpleNamespace(paths=list(paths), base=base)
+
+
+def _two_rows(tmp_path: Path, extra: str = "") -> Path:
+    """Two in-flight tasks. The second declares open PRs and names none —
+    drift, and nothing to do with the first."""
+    return _tree(
+        tmp_path,
+        active=["widget_alignment.md", "flywheel_rebuild.md"],
+        registries={"active.md": (
+            "# Active\n\n"
+            "## widget-alignment\n"
+            "- status: library-dev\n"
+            "- prompt: active/widget_alignment.md\n"
+            "\n"
+            "## flywheel-rebuild\n"
+            "- status: awaiting-merge\n"
+            "- prompt: active/flywheel_rebuild.md\n" + extra)},
+    )
+
+
+def test_without_paths_the_whole_repo_is_still_graded(tmp_path, monkeypatch,
+                                                      capsys):
+    """The unscoped behaviour is the contract every caller already has."""
+    _two_rows(tmp_path)
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(_scoped()) == 1
+    out = capsys.readouterr().out
+    assert "flywheel-rebuild" in out
+    assert "out of scope" not in out
+
+
+def test_paths_on_the_healthy_tasks_files_passes_and_reports_the_rest(
+        tmp_path, monkeypatch, capsys):
+    """The branch that only touched the healthy task must merge."""
+    _two_rows(tmp_path)
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(_scoped(["active/widget_alignment.md"])) == 0
+    out = capsys.readouterr().out
+    # reported, so nothing is hidden — but not as this branch's problem
+    assert "~ out of scope: active.md: flywheel-rebuild" in out
+    assert "scoped to 1 path(s)" in out
+
+
+def test_paths_on_the_broken_tasks_files_still_fails(tmp_path, monkeypatch,
+                                                     capsys):
+    """Scoping must not be a way to launder your own drift."""
+    _two_rows(tmp_path)
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(_scoped(["active/flywheel_rebuild.md"])) == 1
+    assert "flywheel-rebuild" in capsys.readouterr().out
+
+
+def test_a_listed_directory_covers_what_is_under_it(tmp_path, monkeypatch):
+    _two_rows(tmp_path)
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(_scoped(["active"])) == 1
+
+
+def test_the_record_a_branch_wrote_scopes_in_its_own_stale_row(
+        tmp_path, monkeypatch, capsys):
+    """The close-out case, and the reason entries resolve by slug as well as by
+    `prompt:`: a branch that files a record and forgets to drop the row is
+    answerable for that row, though it never named `active.md` in --paths."""
+    root = _two_rows(tmp_path)
+    rec = root / "complete" / "2026" / "09" / "flywheel-rebuild.md"
+    rec.parent.mkdir(parents=True, exist_ok=True)
+    rec.write_text("## flywheel-rebuild\n- completed: 2026-09-01\n")
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(
+        _scoped(["complete/2026/09/flywheel-rebuild.md"])) == 1
+    assert "finished but still active" in capsys.readouterr().out
+
+
+def test_a_listed_registry_file_puts_all_its_entries_in_scope_without_base(
+        tmp_path, monkeypatch):
+    """Documented fallback: with no `--base` there is no way to tell which rows
+    the diff touched, so naming the file answers for all of them."""
+    _two_rows(tmp_path)
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(_scoped(["active.md"])) == 1
+
+
+def _stub_git(monkeypatch, diff: "list[str]"):
+    """`_git` answering a rev-parse probe and one `diff --unified=0`."""
+    def fake(root, args):
+        if args[:1] == ["rev-parse"]:
+            return ["c0ffee"]
+        if args[:1] == ["diff"]:
+            return diff
+        return []
+    monkeypatch.setattr(lifecycle, "_git", fake)
+
+
+def _hunk_for(path: Path, needle: str) -> str:
+    """A one-line `@@` hunk header covering the line holding `needle`."""
+    lines = path.read_text().splitlines()
+    n = next(i for i, ln in enumerate(lines, 1) if needle in ln)
+    return f"@@ -{n},1 +{n},1 @@"
+
+
+def test_base_limits_a_listed_registry_to_the_entries_the_diff_touched(
+        tmp_path, monkeypatch, capsys):
+    """The motivating run: the branch edited one row, and is graded on that row."""
+    root = _two_rows(tmp_path)
+    _stub_git(monkeypatch, [_hunk_for(root / "active.md", "library-dev")])
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(_scoped(["active.md"], base="origin/main")) == 0
+    assert "~ out of scope: active.md: flywheel-rebuild" in capsys.readouterr().out
+
+
+def test_base_still_fails_on_a_row_the_diff_did_touch(tmp_path, monkeypatch):
+    root = _two_rows(tmp_path)
+    _stub_git(monkeypatch, [_hunk_for(root / "active.md", "awaiting-merge")])
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(
+        _scoped(["active.md"], base="origin/main")) == 1
+
+
+def test_an_unreadable_base_falls_back_to_grading_every_entry(tmp_path,
+                                                              monkeypatch):
+    """A ref this checkout cannot resolve (a shallow clone, a typo) must not
+    quietly shrink the scope — unknown reads as "all of them"."""
+    _two_rows(tmp_path)
+    monkeypatch.setattr(lifecycle, "_git", lambda root, args: [])
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(_scoped(["active.md"], base="nope")) == 1
+
+
+def test_touched_entries_reads_a_deletion_hunk(tmp_path, monkeypatch):
+    """A dropped row is a zero-length hunk anchored at the line before it."""
+    root = _two_rows(tmp_path)
+    n = next(i for i, ln in enumerate(root.joinpath("active.md").read_text()
+                                      .splitlines(), 1) if "awaiting-merge" in ln)
+    _stub_git(monkeypatch, [f"@@ -{n},2 +{n},0 @@"])
+    assert lifecycle.touched_entries(root, "active.md", "origin/main") == {
+        "flywheel-rebuild"}
+
+
+def test_no_base_means_the_touched_set_is_unknown(tmp_path):
+    root = _two_rows(tmp_path)
+    assert lifecycle.touched_entries(root, "active.md", None) is None
+
+
+def test_a_finding_about_nothing_in_particular_is_always_in_scope(tmp_path):
+    """A shallow-clone note is a fact about the CHECKOUT — no branch owns it,
+    and no branch may scope it away either."""
+    f = lifecycle.Finding("this clone cannot answer the question")
+    assert lifecycle.in_scope(tmp_path, f, ["active.md"]) is True
+
+
+def test_scope_paths_normalises_what_a_workflow_pastes(tmp_path):
+    """`git diff --name-only` output arrives repeated, space-separated,
+    `./`-prefixed or absolute."""
+    assert lifecycle.scope_paths(tmp_path, ["./active.md draft/", "active.md"]) \
+        == ["active.md", "draft"]
+    assert lifecycle.scope_paths(
+        tmp_path, [str(tmp_path / "complete" / "2026")]) == ["complete/2026"]

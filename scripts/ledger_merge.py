@@ -28,6 +28,18 @@ Usage:
     python3 scripts/ledger_merge.py classify --base origin/main   # diff HEAD vs base
     python3 scripts/ledger_merge.py classify path/one path/two    # explicit paths
     ... < paths-on-stdin
+    python3 scripts/ledger_merge.py merge-entries BASE OURS THEIRS [--write PATH]
+    python3 scripts/ledger_merge.py resolve      # inside a conflicted `git merge`
+
+CONFLICTS ARE SETTLED BY THE FILE'S GRAMMAR, NOT BY A HUMAN. Every ledger
+branch rewrites the same few files — the `## slug` registries and the
+generated renders — so git's line merge stops on two branches that never
+touched the same entry (24 of 100 runs in the week to 2026-09-17, six
+completion records stranded, nobody told). `merge-entries` is a three-way
+merge at entry granularity; `resolve` applies it to the registries of an
+in-progress merge, takes main's copy of the renders (they are regenerated on
+the merged tree), and leaves only a genuine both-sides edit of one slug — or
+a path the grammar does not cover — for a human.
 
 Sources take precedence in that order: explicit paths, then `--base`, then
 stdin. Stdin is read only when neither of the others is given, so a `--base`
@@ -138,6 +150,167 @@ def changed_paths(base: str, head: str = "HEAD"):
     return [line for line in proc.stdout.splitlines() if line.strip()]
 
 
+# --- merge-entries: a three-way merge at ENTRY granularity ---------------------
+#
+# WHY. The registry files (`active.md`, `planned.md`, `parked.md`,
+# `condemned.md`, `epics.md`) are lists of `## <slug>` entries, and every
+# session edits them: a task issued adds one, a status change rewrites one, a
+# close-out deletes one. Two branches in flight touch the same FILE almost
+# every time and the same ENTRY almost never — yet git's line merge sees two
+# edits near the same lines and stops, and `mind_ledger_merge.yml` then leaves
+# the branch for a human who never comes (24 of 100 runs failed in the week to
+# 2026-09-17; six completion records were stranded). Merging by entry is the
+# merge git would do if it knew the file's grammar: an entry is one unit,
+# changed by at most one side, and only a genuine both-sides edit of the SAME
+# slug is a conflict.
+#
+# The preamble (everything before the first `## `, including the generated
+# `<!-- toc:start -->` block) is taken from OURS; the caller regenerates the
+# contents block (`registry_toc.py --write`) after the merge.
+
+ENTRY_MERGED_FILES = ("active.md", "planned.md", "parked.md", "condemned.md", "epics.md")
+
+
+def split_entries(text: str):
+    """(preamble, [(slug, entry_text), ...]) — an entry runs from its `## `
+    heading to the next heading; the trailing newline stays with the entry."""
+    lines = text.splitlines(keepends=True)
+    preamble, entries, current = [], [], None
+    for line in lines:
+        if line.startswith("## "):
+            current = [line.rstrip("\n").strip(), [line]]
+            entries.append(current)
+        elif current is None:
+            preamble.append(line)
+        else:
+            current[1].append(line)
+    # An entry's trailing blank lines are layout, not content: the last entry
+    # of a file has none and gains one the moment something is appended after
+    # it, which must not read as "both sides changed it". Normalise every entry
+    # to end in exactly one blank line; `join_entries` fixes the file's tail.
+    return "".join(preamble), [(slug, "".join(body).rstrip("\n") + "\n\n") for slug, body in entries]
+
+
+def join_entries(preamble: str, entries) -> str:
+    """The inverse of `split_entries` up to trailing-blank-line layout."""
+    text = preamble + "".join(body for _, body in entries)
+    return text.rstrip("\n") + "\n" if entries else preamble
+
+
+def merge_entries(base: str, ours: str, theirs: str):
+    """Three-way merge of entry lists. Returns (merged_text, conflicts) where
+    conflicts is the list of slugs both sides changed differently; when it is
+    non-empty merged_text is None."""
+    base_pre, base_entries = split_entries(base)
+    ours_pre, ours_entries = split_entries(ours)
+    theirs_pre, theirs_entries = split_entries(theirs)
+    b = dict(base_entries)
+    o = dict(ours_entries)
+    t = dict(theirs_entries)
+    ours_order = [slug for slug, _ in ours_entries]
+    theirs_order = [slug for slug, _ in theirs_entries]
+
+    conflicts: list[str] = []
+    result: dict[str, str | None] = {}  # slug -> text, or None when dropped
+    for slug in set(b) | set(o) | set(t):
+        in_b, in_o, in_t = slug in b, slug in o, slug in t
+        if in_b:
+            ours_changed = (not in_o) or o[slug] != b[slug]
+            theirs_changed = (not in_t) or t[slug] != b[slug]
+            if not theirs_changed:
+                result[slug] = o.get(slug)            # ours wins, deletion included
+            elif not ours_changed:
+                result[slug] = t.get(slug)            # theirs wins, deletion included
+            elif o.get(slug) == t.get(slug):
+                result[slug] = o.get(slug)            # both made the same change
+            else:
+                conflicts.append(slug)
+        else:
+            if in_o and in_t and o[slug] != t[slug]:
+                conflicts.append(slug)
+            else:
+                result[slug] = o.get(slug) if in_o else t[slug]
+    if conflicts:
+        return None, sorted(conflicts)
+
+    # Order: ours' order, with theirs' additions inserted after the entry that
+    # precedes them in theirs (or at the end when nothing precedes).
+    order = [slug for slug in ours_order if result.get(slug) is not None]
+    for i, slug in enumerate(theirs_order):
+        if slug in order or result.get(slug) is None:
+            continue
+        prev = next((p for p in reversed(theirs_order[:i]) if p in order), None)
+        order.insert(order.index(prev) + 1 if prev else len(order), slug)
+    return join_entries(ours_pre, [(slug, result[slug]) for slug in order]), []
+
+
+# Renders of the ledger, never sources: on a conflict they take main's side and
+# are regenerated on the merged tree by the caller.
+GENERATED_FILES = ("dashboard.md", "dashboard.html", "complete/index.md")
+
+
+def _git(*args, cwd):
+    return subprocess.run(["git", *args], capture_output=True, text=True, cwd=cwd)
+
+
+def resolve_conflicts(cwd=None) -> tuple[list[str], list[str]]:
+    """Resolve the unmerged paths of an in-progress `git merge` that the ledger
+    grammar can settle, and stage them. Returns (resolved, unresolved):
+    generated renders take OURS (main) and are re-rendered afterwards; the
+    `## slug` registries merge by entry; anything else — or an entry both
+    sides changed — is left unmerged for a human."""
+    root = Path(cwd) if cwd else Path(__file__).resolve().parents[1]
+    unmerged = [p for p in _git("diff", "--name-only", "--diff-filter=U", cwd=root).stdout.splitlines() if p]
+    resolved, unresolved = [], []
+    for path in unmerged:
+        if path in GENERATED_FILES:
+            _git("checkout", "--ours", "--", path, cwd=root)
+            _git("add", "--", path, cwd=root)
+            resolved.append(f"{path} (render: main's copy, regenerated after the merge)")
+        elif path in ENTRY_MERGED_FILES:
+            stages = [_git("show", f":{n}:{path}", cwd=root) for n in (1, 2, 3)]
+            if any(s.returncode != 0 for s in stages):
+                unresolved.append(f"{path} (added on both sides, or deleted on one)")
+                continue
+            merged, conflicts = merge_entries(*(s.stdout for s in stages))
+            if conflicts:
+                unresolved.append(f"{path} (both sides changed {', '.join(conflicts)})")
+                continue
+            (root / path).write_text(merged, encoding="utf-8")
+            _git("add", "--", path, cwd=root)
+            resolved.append(f"{path} (merged by entry)")
+        else:
+            unresolved.append(path)
+    return resolved, unresolved
+
+
+def _resolve_cli(args) -> int:
+    resolved, unresolved = resolve_conflicts(args.root)
+    for line in resolved:
+        print(f"resolved: {line}")
+    for line in unresolved:
+        print(f"unresolved: {line}")
+    if not resolved and not unresolved:
+        print("nothing to resolve")
+    return 1 if unresolved else 0
+
+
+def _merge_entries_cli(args) -> int:
+    base = Path(args.base_file).read_text(encoding="utf-8")
+    ours = Path(args.ours_file).read_text(encoding="utf-8")
+    theirs = Path(args.theirs_file).read_text(encoding="utf-8")
+    merged, conflicts = merge_entries(base, ours, theirs)
+    if conflicts:
+        print("conflict: both sides changed " + ", ".join(conflicts))
+        return 1
+    if args.write:
+        Path(args.write).write_text(merged, encoding="utf-8")
+        print(f"merged by entry -> {args.write}")
+    else:
+        sys.stdout.write(merged)
+    return 0
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = parser.add_subparsers(dest="command", required=True)
@@ -145,7 +318,20 @@ def main(argv=None) -> int:
     cls.add_argument("paths", nargs="*", help="repo-relative paths (else --base, else stdin)")
     cls.add_argument("--base", help="diff HEAD against the merge base with this ref")
     cls.add_argument("--head", default="HEAD", help="the branch tip to judge (default HEAD)")
+    mrg = sub.add_parser("merge-entries",
+                         help="three-way merge a `## slug` registry file by entry")
+    mrg.add_argument("base_file")
+    mrg.add_argument("ours_file")
+    mrg.add_argument("theirs_file")
+    mrg.add_argument("--write", metavar="PATH", help="write the merge here (else stdout)")
+    res = sub.add_parser("resolve", help="settle the ledger-grammar conflicts of an in-progress "
+                                         "git merge (renders take main, registries merge by entry)")
+    res.add_argument("--root", help="the repo with the merge in progress (default: this one)")
     args = parser.parse_args(argv)
+    if args.command == "merge-entries":
+        return _merge_entries_cli(args)
+    if args.command == "resolve":
+        return _resolve_cli(args)
 
     # Source precedence: explicit paths, then --base, then stdin. `--base` must
     # never read stdin: a Claude Code web/mobile session runs commands with a
