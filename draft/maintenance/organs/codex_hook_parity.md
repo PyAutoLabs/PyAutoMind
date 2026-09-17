@@ -15,7 +15,7 @@ Priority: high
 Status: draft
 Filed: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
-Blocked-by: provider_neutral_bundle_prompts
+Blocked-by: complete/2026/09/provider-neutral-bundle-prompts.md (shipped)
 
 ## Request
 
@@ -38,4 +38,3 @@ harness-aware entry point or document it as a separate follow-up.
 - Allow, deny and malformed-input fixtures cover Codex `PreToolUse` payloads.
 - Project trust and any remaining session-bootstrap asymmetry are stated
   accurately in setup documentation.
-
