@@ -1,3 +1,16 @@
+## witt-wynne-guide-fixes
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/552 (closed 2026-09-17)
+- completed: 2026-09-17
+- workspace-pr: autolens_workspace#553 (merged 59051af1 -> main; branch head b527db9d)
+- sibling: witt-wynne-catalogue (euclid_strong_lens_modeling_pipeline#84 / PR #86) — the pipeline module `catalogue/scripts/witt_wynne_util.py` is the canonical fixed copy; the guide's reusable span was ported from it and identity-checked (200 random SIEP cases + 15-case degeneracy table + 4 tracers incl. MGE + SIE + shear, zero mismatches).
+- heart-ack: 2026-09-17 — human "I authorize,"; reasons verbatim "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)" — unrelated to this branch; merged on the human's `/prm` with 7/7 CI legs green (Smoke Tests 3.12+3.13, Navigator Check ×3, Script Size Guard).
+- what shipped: `scripts/guides/misc/witt_wynne.py` + regenerated notebook. Review fixes: wrong-branch quartic roots filtered by lens-equation residual so the 1-image verdict fires; on-axis / centre / e∉(0,1) sources return a NaN row with verdict −1 (`n_images_from` / `WittWynne.n_images()`); mass profile picked by class so an MGE light `Basis` is never taken as the mass (was a silent 84° PA error on the pipeline's own model shape); guarded vector sum (e→0 cancellation) and sub-critical / shear-only tracers. `find_intersections(p, q, e)` gained a required `e` argument. `__Conventions__` documents `centre` (x,y) vs `source_centre` (y,x).
+- validation now printed, not claimed: 72-case grid (q × γ × misalignment, inside/outside caustic) vs `PointSolver` — caustic-matched verdict 36/36 inside, 32/36 outside; vector-sum 35/36 and 16/36; median position residual 0.14″, max lag residual 23 d. Wrap Up rewritten from those numbers; recommendation = caustic-matched projection, distrust outside-caustic verdicts. Runtime 46 s under load (was 8 s), inside the smoke timeout; `ENV: full_datasets` assertion kept.
+- not done, documented in the guide: the compiled Zenodo C++ round-trip could not be re-run here (the `.cpp` is not in the workspace); four-line recipe given.
+- follow-up: `draft/refactor/autolens/witt_wynne_solver_library_home.md` — move the solver/projection into PyAutoLens once both copies have settled (blocked on the C++ round-trip and any further real-data numerics changes).
+
+## Original prompt
+
 # Witt–Wynne guide: apply the 2026-09-17 numerical-review fixes and correct its claims
 
 Type: bug
