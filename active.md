@@ -5,8 +5,9 @@
 - issued: 2026-09-17
 - prompt: active/interferometer_dirty_images_call_sites.md
 - session: claude --resume session_01De8TQ8PQc6cyZgb5BZbfNv
-- status: workspace-dev
-- autonomy: supervised (--auto launch; docs/medium cap safe, header supervised) — ship resolves to decide-and-flag, ends at PR-open
+- status: awaiting-merge
+- autonomy: supervised (--auto launch; docs/medium cap safe, header supervised) — ship resolved to decide-and-flag, ended at PR-open 2026-09-17; merge is human
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/557
 - location: web-github (session clones, no task worktree; branch claude/interferometer-dirty-images-call-sites-ctvywt)
 - worktree: n/a — web-github session clone (/home/user/autolens_workspace)
 - repos:
