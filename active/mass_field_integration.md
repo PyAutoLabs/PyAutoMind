@@ -15,8 +15,13 @@ Review-minutes: 10
 Unattended: ready
 Epic: mass-field
 Phase: 2
-Blocked-by: none — phase 1 (`complete/2026/09/mass-field-class.md`, PyAutoGalaxy#621) merged on PyAutoGalaxy main 2026-09-17; CI runs the same-named library branch, so main is enough and a release is not required for this phase
 Filed: 2026-09-17
+Issued: 2026-09-17
+
+Gate cleared 2026-09-17: phase 1 (`complete/2026/09/mass-field-class.md`,
+PyAutoGalaxy#621) is merged on PyAutoGalaxy `main`; CI runs the same-named
+library branch, so `main` is enough and a release is not required for this
+phase.
 
 Teach PyAutoLens about `ag.MassField` (phase 1 of the epic
 `draft/feature/autogalaxy/mass_field_epic.md`; read it first). A field is its
