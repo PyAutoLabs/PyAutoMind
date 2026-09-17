@@ -1,3 +1,61 @@
+## multi-galaxy-j1011-real-data
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549 (closed completed 2026-09-17)
+- completed: 2026-09-17
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/554 (head `48c9298`, merge `30104f6`, label `pending-release`)
+- summary: |
+    The last open item of the `multi_galaxy` package prompt: `scripts/multi_galaxy/start_here.py`
+    now fits the real HST ACS/WFC F814W imaging of SDSS J1011+0143 (programme 10831,
+    `j9qj02010_drc.fits`, 2088 s, 0.05"/px — the frame Shu et al. 2016, ApJ 820, 43 modelled)
+    instead of the simulated look-alike it shipped with on 2026-07-25. The data are bundled as a
+    ~700 KB 201x201 cutout under `dataset/multi_galaxy/sdssj1011+0143/` (`data.fits`,
+    `noise_map.fits`, `psf.fits`, `main_lens_centres.json`, `info.json`, a2744-style provenance
+    `README.md`) with a committed, re-runnable `prep.py`: astroquery download of the archive's
+    AstroDrizzle DRC product to a cache outside the repo, cutout centred on the midpoint of the two
+    light centroids (0.860" apart), sky from the outer annulus, RMS noise-map from the WHT
+    exposure-time map plus measured background RMS, PSF from an isolated star in the same frame.
+    Nothing inside the 3" fit region needs an extra-galaxies mask, so the dataset ships without one
+    and the script's noise-scaling step is gone; the mask GUI is kept behind `run_extra_galaxies_gui
+    = False`. The simulated `simple` dataset and `simulator.py` are untouched (17 other
+    multi_galaxy scripts use them); prose in `multi_galaxy/{README.md,simulator.py,slam.py}` now
+    says `simple` is the look-alike and `start_here` fits the real frame. `.gitignore` +
+    `dataset/.gitignore` allowlist the folder (and ignore its `__pycache__`); notebook mirrors and
+    the navigator catalogue regenerated; `multi_galaxy/start_here.py` stays in `smoke_tests.txt`.
+
+    The package itself landed in waves before this: core 2026-07-25 (start_here, simulator,
+    modeling, README, smoke, notebooks), features/fit/jax legs 2026-07-26, and the feature tier via
+    extra_galaxies (#391), scaling_relation (#396) and the group-parity phases (#417-#433) closed
+    2026-07-31 — all recorded in the prompt's own `## Landed` sections below.
+
+    Shipped under a human override. Heart was RED at PR-open on, verbatim, "install verification
+    FAILED (testpypi; checks F)" and "release validation FAILED (stage integrate)" — the known Colab
+    check F class that only a human release clears, unrelated to this workspace change. The human
+    authorised the wrap-up in-session on 2026-09-17 ("So can we wrap up this all? e.g. push and
+    whatnot") and then typed `/prm`; the reasons are quoted on the PR body and issue #549.
+- witness: |
+    `prep.py` re-run from a cold cache (215 MB MAST download) reproduces `data.fits`,
+    `noise_map.fits`, `psf.fits` and `main_lens_centres.json` byte-for-byte; `info.json` differs
+    only in `prep_date`. `check_dataset_allowlist.py` exit 0 (56 tracked dataset files, no capped
+    should_simulate deletion path). `start_here.py` exit 0 under the CI smoke profile with
+    `full_datasets` released, 17.4 s before and 17.0 s after merging main (#550/#551).
+- ci: |
+    PR CI 7/7 legs green (Smoke 3.12 + 3.13 + changes, Navigator x3, Size Guard). Merged as
+    `30104f6`.
+- notes: |
+    (1) Two cloud-session resumes (09-11, 09-17) wrote "branch not on the remote (local-only or
+    never created)" — but the local worktree already held the whole implementation uncommitted
+    from a 2026-09-15 local session; a cloud note describes the remote only. Verify the worktree
+    before re-planning from the issue.
+    (2) The legacy MAST product name `j9qj02010_drc.fits` still resolves from the obs_id query even
+    though a programme-level query lists HAP names (`hst_10831_02_acs_wfc_f814w_j9qj02_drc.fits`);
+    prep.py needed no change.
+    (3) A real fit of the data (24-start capped run) was started and stopped on the human's call;
+    the human inspection round is deferred and nothing in the prose claims a fit result.
+    (4) The workspace `.gitignore`'s `dataset/**` plus `dataset/.gitignore`'s `*` need BOTH
+    negation sets; the folder-level `!**` then un-ignores `__pycache__` too, so an explicit ignore
+    line for it is required.
+
+## Original prompt
+
 # multi_galaxy package: new regime package in autolens_workspace
 
 Type: docs
