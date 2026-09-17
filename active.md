@@ -5,11 +5,12 @@
 - issued: 2026-09-10
 - prompt: active/witness_campaign.md
 - session: claude --resume session_01LRRECsu9gfMvjb8F5aXMHu
-- status: library-dev
+- status: awaiting-input
 - location: web-github (session clones, no task worktree; branch claude/active-witness-campaign-0g8phk)
 - worktree: n/a — web-github session clone (/home/user/PyAutoMind)
 - repos:
   - PyAutoMind: claude/active-witness-campaign-0g8phk
+- awaiting: "2026-09-17. Pass 3 (`autofit`, 26 prompts: 14 new witnesses, 6 restamps, 7 false-judge overrides) proposed on issue #398 — accept / edit / strike per item or per block; nothing written until then."
 - summary: |
     Campaign, not a one-shot: ~6 passes of ~15 prompts over the 89 unwitnessed
     `Unattended: ready` drafts. Each pass proposes candidate witnesses for the
@@ -29,9 +30,10 @@
     `Witness: none —` (multiwavelength_inversion). Backlog now 157 ready,
     72 witnessed + 1 none, derived 18 notify / 44 glance / 95 judge.
     Follow-up for the Brain: the sizing faculty has no `none` rule (reads
-    `Witness: none —` as a witness). Next: autofit (14), autolens (11),
-    autolens_workspace (7), euclid (6), autogalaxy (5), autolens_profiling
-    (5), tail (~30 singletons).
+    `Witness: none —` as a witness). Pass 3 (`autofit`, 26) PROPOSED
+    2026-09-17 on the issue: as proposed 465 -> 130 seed review-minutes.
+    Next after it: autolens (11), autolens_workspace (7), euclid (6),
+    autogalaxy (5), autolens_profiling (5), tail (~30 singletons).
     Pass-by-pass counts are in the prompt's `## Campaign log`.
 
 ## sed-chain-cpu-route

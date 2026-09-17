@@ -167,8 +167,19 @@ compile bound is the sweep's number, not the prompt's; `sparse_operator_int32`'s
 `over_sample_size_via_snr_from`'s pre-existing witness pins option 1 of the
 prompt's "decide one of".
 
+### Pass 3 — `autofit`, 26 prompts (proposed 2026-09-17, awaiting accept/strike)
+
+Proposed on the issue, nothing written yet. Bigger than the ~15 of a pass
+because most of it is mechanical: 14 unwitnessed prompts need a witness, 6
+witnessed prompts need only the restamp (5 stale `judge`, 1 unset), and 7
+witnessed prompts derive `judge` solely on "raises " in prose describing the
+existing crash — the mapping_overlay false-judge pattern — and are proposed
+as declared-`glance` overrides. As proposed: 24 judge / 2 notify → 3 notify /
+20 glance / 3 judge, 465 → 130 seed review-minutes; two `Witness: none —`
+(`ep_analytic_updates`, an umbrella of four work packages;
+`ep_lbfgs_jax`, a placeholder). Counts get their own row when written.
+
 ### Remaining passes
 
-`autofit` (14) · `autolens` (11) · `autolens_workspace` (7) · `euclid` (6) ·
-`autogalaxy` (5) · `autolens_profiling` (5) · then a tail pass over the ~30
-singleton targets.
+`autolens` (11) · `autolens_workspace` (7) · `euclid` (6) · `autogalaxy` (5) ·
+`autolens_profiling` (5) · then a tail pass over the ~30 singleton targets.
