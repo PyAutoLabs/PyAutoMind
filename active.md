@@ -36,8 +36,12 @@
     Pass 4 (`autolens`, 11) SHIPPED 2026-09-17 (pre-accepted): 11 judge ->
     10 glance / 1 judge, 230 -> 55 seed review-minutes. Backlog now
     157 ready, 94 witnessed + 3 none, derived 20 notify /
-    64 glance / 73 judge. Next: autolens_workspace (7), euclid (6),
-    autogalaxy (5), autolens_profiling (5), tail (~30 singletons).
+    64 glance / 73 judge. Pass 5 (workspace/euclid/galaxy/profiling, 29) and
+    pass 6 (the tail, 39) and pass 7 (6 filed mid-sweep) SHIPPED 2026-09-17
+    (pre-accepted): 465 -> 72, 676 -> 119, 120 -> 35 seed review-minutes. Every
+    ready draft now witnessed or `none`. Backlog 158 ready, 151 witnessed + 6 none, derived
+    37 notify / 101 glance / 20 judge. Remaining: the Brain follow-up
+    (none rule, keyword false-judges, triage rule) via /intake; then /prm.
     Pass-by-pass counts are in the prompt's `## Campaign log`.
 
 ## sed-chain-cpu-route

@@ -11,8 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: Every autosummary entry under `PyAutoCTI/docs/api/` imports and `hasattr`-resolves against the installed `autocti` (the `/audit_docs` sweep reports 0 dead, was 55 of 89), `plot.rst` documents the function-style `autocti.plot` exports, the `data.rst` re-export-or-remove call is recorded, and `PyAutoHeart/skills/audit_docs/SKILL.md` lists PyAutoCTI.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-06 (backfilled from git)
 

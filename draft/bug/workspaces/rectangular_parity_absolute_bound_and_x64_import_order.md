@@ -8,6 +8,9 @@ Difficulty: easy
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Consequence: glance
+Witness: `scripts/imaging/jax_likelihood/rectangular.py` asserts `atol=1e-2, rtol=0` in nats with the PyAutoArray#552 comment; run bare (no harness env) `jax.config.jax_enable_x64` is True and `log_evidence` is finite; under `profile_smoke.yaml` it passes the new bound.
+Review-minutes: 3
 Filed: 2026-09-17
 
 Split out of `mixed-precision-inversion-gap` at close-out — the library half

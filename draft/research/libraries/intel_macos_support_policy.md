@@ -13,8 +13,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: draft
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: A discoverable platform-support statement names Intel macOS as supported, best-effort or unsupported; a CI job or container run with JAX uninstalled produces the list of what imports and runs and what fails; and the unsupported case fails at install or import with a message rather than at first transformer construction.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-22 (backfilled from git)
 

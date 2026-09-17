@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: The release board renders a "local validation runs" section from a committed JSON distilled from `run_logs/index.md` (run type, pass/fail/skip/timeout counts per project), age-stamped and expiring, with local paths scrubbed; `run_logs/latest` consumers are unchanged.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
 

@@ -12,8 +12,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: PARTIALLY SHIPPED — the module is gone, `eden.yaml` is not (2026-08-09); 2026-09-14: the remainder is the single file `PyAutoFit/eden.yaml` — the PyAutoNerves leg has no target (`scripts/edenise.py` does not exist, no `edenise` reference survives there)
-Consequence: judge
-Review-minutes: 20
+Consequence: notify
+Witness: `PyAutoFit/eden.yaml` is gone, a grep for `eden`/`edenise` across PyAutoFit and PyAutoNerves returns nothing, and the PyAutoFit test suite gives unchanged output (identical pass set).
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-07-13 (backfilled from git)
 
