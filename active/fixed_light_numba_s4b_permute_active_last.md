@@ -22,6 +22,7 @@ Witness: On HST Delaunay N=1500 numba CPU (RAL gpu partition CPUs-only, 1 thread
 Review-minutes: 30
 Unattended: never
 Filed: 2026-09-17
+Issued: 2026-09-17
 
 ## Context
 

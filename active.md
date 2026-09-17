@@ -1,30 +1,25 @@
 # Active Tasks
 
-## mass-field-class
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/620
+## mass-field-integration
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/741
 - issued: 2026-09-17
-- prompt: active/mass_field_class.md
+- prompt: active/mass_field_integration.md
 - session: claude --resume session_01PqfNuorRbom8ZjD9i9hvWo
-- status: awaiting-merge
-- autonomy: supervised (header; default launch, no --auto — plan approved in chat 2026-09-17, shipped to PR-open; merge is human via /prm)
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621
-- location: web-github (session clone /home/user/pyautogalaxy, no task worktree; local-dev equivalent ~/Code/PyAutoLabs-wt/mass-field-class)
-- worktree: n/a — web-github session clone (/home/user/pyautogalaxy)
+- status: library-dev
+- autonomy: supervised (header; default launch, no --auto — plan approval and ship sign-off are human checkpoints)
+- location: web-github (session clone /home/user/pyautolens, no task worktree; local-dev equivalent ~/Code/PyAutoLabs-wt/mass-field-integration)
+- worktree: n/a — web-github session clone (/home/user/pyautolens)
 - repos:
-  - PyAutoGalaxy: feature/mass-field-class
+  - PyAutoLens: feature/mass-field-integration
 - summary: |
-    Phase 1 of the mass-field epic (draft/feature/autogalaxy/mass_field_epic.md):
-    standalone `ag.MassField(redshift, **mass_profiles)` — MassProfile-only,
-    not a Galaxy subclass — with the mass sums shared with `Galaxy` via a
-    behaviour-preserving mixin, a zero-light interface so `Galaxies` can hold
-    it, dict round trip, pytree registration check, tests and API docs.
-    Hard invariant: `Galaxy` unchanged (identifier pin captured on main), no
-    prior-config edits, no deprecation warning. Shipped 2026-09-17 as PR #621
-    (commit a4e1445a): 1236 tests green, identifier pin 7b251058cdae562470abab6203bacf72
-    holds, JAX probe green, no workspace migration (Added-only API). Next:
-    /prm when CI is green; then issue phase 2
-    draft/feature/autolens/mass_field_integration.md.
+    Phase 2 of the mass-field epic (draft/feature/autogalaxy/mass_field_epic.md):
+    `Tracer(galaxies, fields=None)` with fields merged into planes only,
+    analysis `fields` slot, COOLEST 1:1 both ways (legacy peel kept), LOS
+    sampler sheets as fields (shimmed), `model_util.mass_field_from` with
+    the centre tie, tests, docs. Identifier pin on main:
+    fef2697b5c32ba56bb18a7baecb7b0f6 (lens+shear / source model). Depends on
+    PyAutoGalaxy main >= 33714b80 (ag.MassField, #621), no release needed.
+    Plan on the issue; next: /start_library → implementation → /ship_library.
 
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
@@ -123,8 +118,10 @@
 - issued: 2026-09-17
 - prompt: active/oneshot_benchmark_harness.md
 - session: claude --resume session_01YTzjiXh2fLocc6dNqLQ66d
-- status: workspace-dev
-- autonomy: supervised (header; launched on the human's "Go / continue" in-session — plan is on the issue, ship ends at PR-open, merge is human)
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/380
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/127
+- autonomy: supervised (header; launched on the human's "Go / continue" in-session — plan on the issue, shipped to PR-open 2026-09-17, merge is human; Brain PR first, it is the assistant PR's `Brain-ref:`)
 - location: web-github (session clones /home/user/autolens_assistant + /home/user/PyAutoBrain, no task worktree)
 - worktree: n/a — web-github session clones
 - repos:
@@ -140,3 +137,15 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## fixed-light-numba-s4b
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/276
+- issued: 2026-09-17
+- prompt: active/fixed_light_numba_s4b_permute_active_last.md
+- session: claude --resume d256e5f3-5e3d-465f-8846-7dec3099661e
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-s4b
+- repos:
+  - autolens_profiling: feature/fixed-light-numba-s4b
+- parallel-claim: "worktree_check_conflict fixed-light-numba-s4b autolens_profiling PyAutoArray exits 1 on hst-gpu-residue-p2 (#273, feature/hst-gpu-residue-p2, LIVE). Its branch touches fixed_light_trace.py, host_callback_probe.py, library_solver_injection.py, test_fixed_light_cell.py, test_fixed_light_vmap_submit.py and a vmap A100 submit; this task touches fixed_light_numba.py, fixed_light_numpy_solvers.py, a new s4b witness, a new batch_cpu s4b submit, new test_fixed_light_s4b.py, the s4 note and one WALL-BASIS line of the s4 submit — disjoint. Shared generated surfaces only: README.md (regenerate after whichever merges second) and one hpc/README.md route row. Waived on the human's plan approval 2026-09-17, fresh parallel worktree off origin/main — the same call wave A (#274) recorded against #273."
+- note: "Phase 4 wave B of fixed-lens-light-numba-cpu (lever 4b, A-prime permute-active-last). Witness design FIRST with a human review gate after step 9, then fnnls_kernel_injected seam + fnnls_cholesky_permuted + route d_perm, then RAL CPU A/B (b vs d_perm, n-repeats 64) + witness in one job, verdict rule pre-written (>= 5 % AND witness PASS every draw), PyAutoArray fnnls PR only on a win, never stacked. Carries the s4 submit WALL-BASIS re-pin (7200 -> 250 s, ref 343394). Fable session plans, Opus executes. Plan on the issue."
