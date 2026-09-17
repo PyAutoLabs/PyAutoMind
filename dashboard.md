@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to <code>subplot_fit_interferometer_dirty_images</code></a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/556">issue #556</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/interferometer_dirty_images_call_sites.md">Switch 11 workspace call sites to <code>subplot_fit_interferometer_dirty_images</code></a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/556">issue #556</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/557">autolens_workspace#557</a></summary>
 
 ```
 /start_dev active/interferometer_dirty_images_call_sites.md
