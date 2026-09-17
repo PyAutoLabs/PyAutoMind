@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> — issued 2026-09-17</summary>
+<details><summary>📋 <a href="active/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/407">issue #407</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/408">PyAutoMind#408</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/385">PyAutoBrain#385</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/47">autofit_assistant#47</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/26">autogalaxy_assistant#26</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/128">autolens_assistant#128</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/29">autocti_assistant#29</a></summary>
 
 ```
 /start_dev active/codex_hook_parity.md
