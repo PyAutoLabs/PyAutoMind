@@ -11,8 +11,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 25
+Consequence: glance
+Witness: The vendored `kve`/`kv` match `scipy.special.kve` to rtol 1e-10 on a (v in [0.5, 5.5]) x z grid with `jax.grad` matching finite differences (workspace_test), the existing Matern-kernel tests pass unchanged, and `tensorflow-probability`/`tfp-nightly` appear in neither `pyproject.toml` nor any import.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-13 (backfilled from git)
 

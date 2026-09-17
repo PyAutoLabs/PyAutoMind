@@ -12,8 +12,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: A bandwidth x config sweep table (the 3 imaging + 4 interferometer workspace_test configs + one HST-realistic developer config, bandwidths including 0.1, 0.3 and 1.0) with log-likelihood per cell is written beside the #402 reference values, jax_grad FD certification is re-run and passes at every bandwidth a recommendation names, and the recommendation itself is filed as its own prompt (a default change is not made here).
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-07-23 (backfilled from git)
 
