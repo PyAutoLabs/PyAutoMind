@@ -1,32 +1,5 @@
 # Active Tasks
 
-## mass-field-integration
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/741
-- issued: 2026-09-17
-- prompt: active/mass_field_integration.md
-- session: claude --resume session_01PqfNuorRbom8ZjD9i9hvWo
-- status: awaiting-merge
-- autonomy: supervised (header; default launch, no --auto — plan approved in chat 2026-09-17, shipped to PR-open; merge is human via /prm)
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/742
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/742
-- location: web-github (session clone /home/user/pyautolens, no task worktree; local-dev equivalent ~/Code/PyAutoLabs-wt/mass-field-integration)
-- worktree: n/a — web-github session clone (/home/user/pyautolens)
-- repos:
-  - PyAutoLens: feature/mass-field-integration
-- summary: |
-    Phase 2 of the mass-field epic (draft/feature/autogalaxy/mass_field_epic.md):
-    `Tracer(galaxies, fields=None)` with fields merged into planes only,
-    analysis `fields` slot, COOLEST 1:1 both ways (legacy peel kept), LOS
-    sampler sheets as fields (shimmed), `model_util.mass_field_from` with
-    the centre tie, tests, docs. Identifier pin on main:
-    fef2697b5c32ba56bb18a7baecb7b0f6 (lens+shear / source model). Depends on
-    PyAutoGalaxy main >= 33714b80 (ag.MassField, #621), no release needed.
-    Shipped 2026-09-17 as PR #742 (commit 5e434136a): 710 passed / 1
-    pre-existing xfail (+57 tests), identifier pin holds, JAX probe green,
-    legacy COOLEST export byte-identical; one import behaviour change
-    (MassField entity → tracer.fields). No workspace migration (Added-only
-    API). Next: /prm when CI is green; then phases 3–5 wait on a release.
-
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
 - issued: 2026-09-11

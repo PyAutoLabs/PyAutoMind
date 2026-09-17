@@ -135,3 +135,8 @@ epic, never picked standalone.
 - title: MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own `fields=` slot; galaxy-attached form kept, result identifiers unchanged)
 - ledger: draft/feature/autogalaxy/mass_field_epic.md
 - notes: 5 phases — 1 PyAutoGalaxy standalone `MassField` (mass sums shared with `Galaxy` via a mixin), 2 PyAutoLens `Tracer(fields=)` + analysis `fields` slot + pytree/COOLEST/LOS + `model_util.mass_field_from` with the `ExternalPotential` centre tie, 3 autolens_workspace guides + `multi_galaxy/` (`shear_galaxy` → `fields=`), 4 `group/` (the re-scoped 2026-07-30 prompt, straight to `fields=`), 5 sibling sweep by grep. `fields` is a collection: shear + sheet at one redshift is one field; several fields means several planes. Issue ONE at a time in order; 3–5 follow the *released* libraries. Hard invariant: `Galaxy` and the prior configs are never edited, no deprecation warning — a user's existing galaxy-attached shear model keeps its PyAutoFit result identifier. Filed 2026-09-17 from the `/start_dev` plan checkpoint of the group shear prompt; redesigned the same day from a `Galaxy` subclass to a standalone class on the human's ruling.
+  Phase 1 SHIPPED 2026-09-17 (PyAutoGalaxy#620, PR #621; record
+  complete/2026/09/mass-field-class.md). Phase 2 SHIPPED 2026-09-17 (PyAutoLens#741, PR #742;
+  record complete/2026/09/mass-field-integration.md) — library work done, both pending-release.
+  Phases 3–5 (workspace sweeps) wait on a release of PyAutoGalaxy#621 + PyAutoLens#742 to the
+  installed stack; phase 3 is issued only once `/release` has published both.
