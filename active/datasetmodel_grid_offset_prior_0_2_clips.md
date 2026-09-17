@@ -10,12 +10,13 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: active
 Consequence: glance
 Witness: Tile102008165 nir_j re-fitted under the widened prior gives a grid_offset_x whose 3-sigma interval does not touch a prior limit and a CSV row carrying prior_edge=False; today's row under the ±0.2" prior has grid_offset_x_upper_3_sigma exactly 0.2000 and carries prior_edge=True
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-17
+Issued: 2026-09-17
 
 ## Observed
 

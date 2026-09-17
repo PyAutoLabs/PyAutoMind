@@ -233,3 +233,14 @@
 - sibling: witt-wynne-catalogue (pipeline producer copying the fixed span)
 - resume: "2026-09-17. Branch feature/witt-wynne-guide-fixes LOCAL ONLY at b527db9d (2 commits: review fixes + hardening port; guide runs 46 s, notebook regenerated, identity check vs the pipeline module 0 mismatches). Push/PR blocked by Heart RED, same authorisation as witt-wynne-catalogue; ship both together."
 - heart-ack: 2026-09-17 — human "I authorize,"; reasons verbatim "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
+
+## grid-offset-prior
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88
+- issued: 2026-09-17
+- prompt: active/datasetmodel_grid_offset_prior_0_2_clips.md
+- session: claude --resume 7bff8610-4b84-413a-a994-d72484c4c14c
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/grid-offset-prior
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/grid-offset-prior
+- note: "worktree_check_conflict grid-offset-prior euclid_strong_lens_modeling_pipeline exits 1 on five claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis #76, simulator-from-result-linear #77 parked, witt-wynne-catalogue #84). Code file sets are disjoint; catalogue/README.md shares one hunk with witt-wynne-catalogue: one-hunk resolution on whichever merges second. Waived on the human's plan approval 2026-09-17; fresh parallel worktree off origin/main."
