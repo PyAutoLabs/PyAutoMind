@@ -107,16 +107,6 @@
     markdown report. Pure functions split from the CLI; a synthetic four-CSV
     fixture with a variant missing two tiles pins the inner join and its reporting.
 
-## multi-galaxy-j1011-real-data
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/549
-- issued: 2026-09-15
-- prompt: active/multi_galaxy_package.md
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/multi-galaxy-j1011-real-data
-- repos:
-  - autolens_workspace: feature/multi-galaxy-j1011-real-data
-- note: "2026-09-17 local CLI resume: MAST reachable; dataset reproduced byte-for-byte from a cold download (legacy product j9qj02010_drc.fits resolves); start_here 17 s green under the smoke profile; PR #554 open with pending-release, opened on the human's call under Heart RED (Colab check F class, unrelated). Real-fit inspection deferred to a human round. Next: /prm once CI is green."
-
 ## jax-runtime-and-parity
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/317
 - issued: 2026-09-15

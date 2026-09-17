@@ -73,7 +73,8 @@ highest-value targets when this task starts:
 
 ## Ordering
 
-Blocked on: multi_galaxy_package, group_halo_explicit_choice,
+Blocked on: multi_galaxy_package (COMPLETE 2026-09-17,
+`complete/2026/09/multi-galaxy-j1011-real-data.md`), group_halo_explicit_choice,
 cluster_regime_narrative, autogalaxy packages. The workspace/docs core
 shipped 2026-07-25 (autolens_workspace#346 + companions), so the
 autolens_assistant leg is now unblocked; the autogalaxy-side leg still
