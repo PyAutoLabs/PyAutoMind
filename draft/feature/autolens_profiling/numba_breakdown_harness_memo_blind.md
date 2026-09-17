@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: The `pixelization_numba` and `delaunay_numba` breakdown/runtime harnesses perturb the instance per repeat (or run with `AUTOARRAY_NUMBA_OPERATED_MEMO=0`) and record which in the results JSON `configuration`, keep the pinned log-likelihood check on the unperturbed instance, and the re-baselined euclid + hst rows show the operated-matrix step at its un-memoised cost with the regime change noted in the results README.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-27
 

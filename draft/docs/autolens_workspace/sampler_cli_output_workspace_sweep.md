@@ -2,6 +2,9 @@
 
 Blocked-by: PyAutoFit#1436     # moved the cadence message into the library — MERGED 2026-07-30
 Filed: 2026-07-30 (backfilled from git)
+Consequence: notify
+Witness: `grep -rc "On-the-fly updates every iterations_per_quick_update" .` returns nothing across `.py`, `.ipynb` and `.md` in autolens_workspace, autogalaxy_workspace and HowToLens; the "cell with progress" typo is gone from every copy; one real fit from an edited script prints the intro block with the cadence line coming from the library log.
+Review-minutes: 0
 Themes:
 - samplers
 - notebooks

@@ -234,6 +234,19 @@ documented; `quick_update_plotting_cost`'s witness covers only the
 container-safe half its own triage split off — the measured numbers are local
 work.
 
+### Pass 5 — `autolens_workspace` · `euclid` · `autogalaxy` · `autolens_profiling` (29 prompts, 2026-09-17, issue #398)
+
+Pre-accepted ("Continue all the way"). Four target groups in one pass: `autolens_workspace` (10, two restamps and one unset-tier stamp among them), `euclid` (7, one restamp), `autogalaxy` (6, one restamp), `autolens_profiling` (6, one restamp). Decisions the accept pinned: `multi_plane_guide_richardson_warning_update` and `point_solver_profiling_cells` are gated (a library release; phase 1 of the cluster arc) and their witnesses assume the gate; `gpu_per_lens_time`, `sersiccoresph`, `linear_operated_sersic`, `lenscalc_masked_grid_caustic`, `skip_fit_output` and `single_process_cpu_route` carry either-outcome witnesses because each prompt is itself a fork; the docs prompts on the lens workspace grade `notify` by the docs-no-library rule.
+
+| | notify | glance | judge | review-minutes |
+|---|---|---|---|---|
+| before | 1 | 1 | 27 | 465 |
+| after | 5 | 22 | 2 | 111 |
+
+Backlog after pass 5: 158 ready, 118 witnessed + 3 `none`, 37 not —
+derived **24 notify / 82 glance / 52 judge**; declared **20 / 84 / 44** +
+10 unset.
+
 ### Remaining passes
 
 `autolens_workspace` (7) · `euclid` (6) · `autogalaxy` (5) ·

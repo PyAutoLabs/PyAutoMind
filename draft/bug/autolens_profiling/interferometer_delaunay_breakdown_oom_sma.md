@@ -20,7 +20,9 @@ Delaunay) completes PART A (`figure_of_merit_eager = -3169.6493766794806`) and i
 killed with exit 137 during PART B's per-step `jit_profile` blocks, at ~14.6 GB anonymous
 RSS on a 15 GB box. Unmodified upstream code; pre-existing, not caused by the numba pack.
 
-Consequence: there is no committed `results/breakdown/interferometer/delaunay_breakdown_sma_*`
+Consequence: glance
+Witness: `scripts/interferometer/likelihood_breakdown/delaunay.py` completes on `sma` under ~4 GB peak RSS (measured per section and reported), a `--skip-part-b` flag records PART A's figure of merit on its own, and the `results/breakdown/interferometer/delaunay_breakdown_sma_*` JSON+PNG are committed.
+Review-minutes: 3
 row, so the JAX-CPU per-step comparator the `numba-interferometer-revisit` epic (phase 2)
 needs has to be produced some other way. Phase 2 will use the numba pack's own JAX reference
 until this is fixed.
