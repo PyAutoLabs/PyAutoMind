@@ -32,7 +32,11 @@ Ask: make `areas_transformed` use the same `data_grid` as `edges_transformed`
 test that calls both properties on an adapt-image rectangular mapper and
 checks the areas equal the outer product of the edge spacings, and check
 whether `MeshGeometryRectangular` has other properties with the same
-over-sampled-vs-slim mismatch.
+over-sampled-vs-slim mismatch. Related, found in the same check:
+`edges_transformed` raises under the JAX backend because it returns a
+`Grid2DIrregular`, which is not a valid JAX type — decide whether it should
+return the raw array under `xp=jnp` (the `if xp is np:` guard pattern of
+`docs/agents/jax_and_decorators.md`) or be documented NumPy-only.
 
 Reproducer: build the mapper as in
 `autogalaxy_workspace_test/scripts/imaging/jax_likelihood/rectangular.py`
