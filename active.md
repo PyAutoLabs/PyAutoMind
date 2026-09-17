@@ -132,30 +132,6 @@
     markdown report. Pure functions split from the CLI; a synthetic four-CSV
     fixture with a variant missing two tiles pins the inner join and its reporting.
 
-## jax-runtime-and-parity
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/317
-- issued: 2026-09-15
-- prompt: active/jax_runtime_and_parity.md
-- session: claude --resume c74b6b89-11fe-42df-8b16-09bb12dcedb6
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/jax-runtime-and-parity
-- repos:
-  - autolens_workspace_test: feature/jax-runtime-and-parity
-  - autogalaxy_workspace_test: feature/jax-runtime-and-parity
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/320
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/122
-- summary: |
-    Defect refuted twice (2026-08-21, 2026-09-15): all six jax_likelihood scripts pass
-    the NumPy-vs-JIT parity assertions under profile_release on jax 0.10.2, no
-    pytype_aval_mappings traceback anywhere. The one real residue is fixed on both
-    branches: smoke_tests.txt re-enables imaging/jax_likelihood/delaunay_mge.py (3/3
-    cold smoke runs, 53-71 s vs the 300 s cap). PRs opened 2026-09-17 from a web
-    session (feature commits were already pushed from the CLI worktree); no library
-    change, so no library-first gate. Next: /prm per PR once workspace-smoke is green
-    on 3.12 and 3.13; the complete/ record should mirror
-    complete/2026/08/autofit-sampler-database.md and hand the intermittent 1805 s
-    hangs on other jax_likelihood scripts to the xla-cpu-eigen-pool-deadlock epic.
-
 ## jit-visualization-outputs
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/318
 - issued: 2026-09-15
