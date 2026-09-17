@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1464 records across 8 buckets.
+1466 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -238,6 +238,7 @@ markers; everything below GENERATED is rebuilt.
 - [image-source-mappings-p3](2026/09/image-source-mappings-p3.md)
 - [imaging-modeling-fits-guard-split](2026/09/imaging-modeling-fits-guard-split.md)
 - [interferometer-apply-operator-rfft2](2026/09/interferometer-apply-operator-rfft2.md)
+- [interferometer-dirty-images-call-sites](2026/09/interferometer-dirty-images-call-sites.md)
 - [interferometer-numba-cpu-direct-conv](2026/09/interferometer-numba-cpu-direct-conv.md)
 - [interferometer-preload-cpu](2026/09/interferometer-preload-cpu.md)
 - [interferometer-preload-nufft-type1](2026/09/interferometer-preload-nufft-type1.md)
