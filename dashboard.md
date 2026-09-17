@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_integration.md">MassField in PyAutoLens: Tracer(fields=), the analysis <code>fields</code> slot, COOLEST 1:1, LOS sheets…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/741">issue #741</a> — issued 2026-09-17 — library-dev</summary>
+<details><summary>📋 <a href="active/mass_field_integration.md">MassField in PyAutoLens: Tracer(fields=), the analysis <code>fields</code> slot, COOLEST 1:1, LOS sheets…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/741">issue #741</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/742">PyAutoLens#742</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/mass_field_integration.md
@@ -420,6 +420,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#742](https://github.com/PyAutoLabs/PyAutoLens/pull/742) — `active/mass_field_integration.md`
 - [PyAutoLens#740](https://github.com/PyAutoLabs/PyAutoLens/pull/740) — `complete/2026/09/coolest-observation-grid.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
