@@ -747,13 +747,30 @@ paths nor `--base` is given.
 
 What blocks, and what does not:
 
-- **`lifecycle.py check` blocks.** Structural drift — a prompt in `active/`
-  with no `active.md` entry — is a real contradiction and nothing heals it.
-- **Stale renders do not block.** `complete/index.md`, the registry contents
-  blocks and the dashboard pages all self-heal on `main`, so the workflow
-  merges and then dispatches `dashboard_refresh.yml` and `lifecycle_drift.yml`
-  (a `GITHUB_TOKEN` push triggers no workflows, so they must be asked).
-- **A conflict blocks**, and the branch is left untouched.
+- **`lifecycle.py check` blocks — for the branch's own paths.** Structural
+  drift — a prompt in `active/` with no `active.md` entry — is a real
+  contradiction and nothing heals it. The check runs `--paths <the branch's
+  diff> --base origin/main`, on the branch and again on the trial merge, so a
+  finding about a row the branch never touched is reported as out of scope
+  rather than stranding three records for it (run 34677840370, 2026-09-12).
+- **Renders are regenerated on the merged tree.** `complete/index.md`, the
+  registry contents blocks and the dashboard pages are rebuilt inside the
+  merge commit (and still self-heal on `main`, which the workflow dispatches
+  after the push because a `GITHUB_TOKEN` push triggers no workflows).
+- **A conflict is settled by the ledger's grammar first.** The merge is built
+  with `--no-commit`; `scripts/ledger_merge.py resolve` merges the `## slug`
+  registries (`active.md`, `planned.md`, `parked.md`, `condemned.md`,
+  `epics.md`) **by entry** — an entry changed on one side wins, an entry both
+  sides changed differently is the only conflict — takes `main`'s copy of the
+  renders, and leaves `autonomy_log.md` to git's `merge=union` driver
+  (`.gitattributes`; it is append-only). What that cannot settle blocks.
+- **A blocked branch is written on an issue** titled ``ledger merge: `<branch>`
+  needs a human`` (label `ledger-merge`), updated on every further attempt and
+  closed by the run that finally lands it. A red run nobody is subscribed to
+  is how six completion records went missing in August–September 2026.
+- **A branch already in `main` is deleted** the same way a freshly merged one
+  is, so a merge whose delete never fired does not stand forever (69 had by
+  2026-09-17).
 
 An open PR on the branch is merged **through** the PR, so it records as
 `MERGED`; a branch with no PR gets a direct merge commit and is then deleted on
@@ -771,6 +788,84 @@ bash scripts/status.sh
 
 Prints counts per category, lists the active and recently-completed tasks, and
 and lists the recently-completed tasks.
+
+### Scoping a drift check to one branch — `check --paths`
+
+`lifecycle.py check` grades the whole repo, which is right on `main` and wrong
+on a branch: `mind_ledger_merge.yml` runs it over the merged tree, so a ledger
+branch that added three completion records was refused because an unrelated
+`active.md` row carried no `library-pr:` (run 34677840370, 2026-09-12) — drift
+the branch neither caused nor could fix. A branch can only be held to its own
+diff:
+
+```bash
+python3 scripts/lifecycle.py check --paths $(git diff --name-only origin/main) \
+                                   --base origin/main
+```
+
+- `--paths` is repeatable and takes a space-separated list; a directory covers
+  everything under it. Findings about anything else are printed as
+  `~ out of scope: …` — reported, so nothing is hidden, but they leave the exit
+  code alone.
+- A finding about a *prompt* or a *record* is in scope when that file is
+  listed. A finding about a **registry entry** is in scope when the entry's
+  `prompt:` path — or a file its slug names, in `active/` or in `complete/` —
+  is listed. That last rule is what makes `--paths <the record you just wrote>`
+  answer for the `active.md` row you forgot to drop with it: the row and the
+  record are the same task under two names.
+- Naming a registry file itself (`active.md`, `planned.md`, `parked.md`) puts
+  **all** its entries in scope, because nothing in the file says which rows the
+  diff touched. `--base <ref>` supplies that: it diffs the registry against the
+  ref and counts only the entries the hunks land in. An unreadable ref (a typo,
+  a shallow clone) reads as "all of them" — unknown never shrinks the scope.
+- A finding about no path at all (the shallow-clone note) is a fact about the
+  checkout and stays in scope wherever it runs.
+
+Without `--paths`, behaviour is exactly what it was.
+
+### Closing a task out — `close`
+
+The Mind side of `/prm` as one verb. It **composes** the existing verbs rather
+than reimplementing them (`record` still writes the record, folds the prompt,
+refreshes `complete/index.md` and prunes `active.md`; `shadow-row` still
+appends to the window):
+
+```bash
+python3 scripts/lifecycle.py close <slug> --date YYYY-MM-DD --from-file <body.md> \
+    [--prompt <path|filename>] [--pr Repo#N …] \
+    [--tier notify --gate "<cell>" --action <merged-unchanged|…> [--stage 1|2]] \
+    [--no-shadow-row] [--apply]
+```
+
+Dry run by default: it prints the record path, the prompt it will remove, every
+registry entry it will drop, the shadow row it would append, and the references
+it found — and writes nothing. `--apply` does it.
+
+- **The prompt resolves anywhere it can be.** `record --prompt` resolves under
+  `active/` only and no-ops in silence when it misses; `close` looks in
+  `active/`, in the registries' own `prompt:` paths and in `draft/` (a task may
+  ship straight off a draft, which `record` cannot fold at all). `--prompt`
+  takes a repo-relative path or a bare filename.
+- **It drops the `parked.md` / `planned.md` pointer too**, which `record` does
+  not — only `active.md` was ever pruned.
+- **The shadow row is never inferred.** Only `--tier notify` feeds the window,
+  and only with `--gate` and `--action`: the row records the gate that *ran* and
+  what the human *did*, so a missing cell yields no row and a line saying so.
+  `--no-shadow-row` suppresses the leg outright.
+- **Two refusals**, both exit 1: a record for the slug already exists anywhere
+  under `complete/` (a completion record is the one file here that is not
+  regenerable), or the slug resolves to no prompt in `active/`, `draft/` or a
+  registry.
+- **It reports, it does not repoint.** Remaining mentions of the closed task in
+  `draft/`, `active/`, `epics.md`, `planned.md` and `parked.md` print under
+  "repoint these" — which ones the merge falsified is a judgement.
+- **It does not render the dashboard.** The state is the Mind's and the renderer
+  is the Brain's, and `main` heals the render (`dashboard_refresh.yml`); the
+  `pyauto-brain intake --apply dashboard` line is printed as the optional next
+  step.
+- **It stages nothing.** The record is written and the prompt removed with plain
+  filesystem ops; `git add -A` what it changed, then
+  `check --paths` before you push.
 
 ### From inside Claude Code
 

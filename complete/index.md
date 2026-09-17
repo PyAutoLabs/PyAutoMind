@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1468 records across 8 buckets.
+1474 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -182,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [delaunay-nn-constant-split-assembly](2026/09/delaunay-nn-constant-split-assembly.md)
 - [delaunay-nn-launch-latency](2026/09/delaunay-nn-launch-latency.md)
 - [delaunay-walk-early-exit](2026/09/delaunay-walk-early-exit.md)
+- [demo-subplot-fit-interferometer-combined](2026/09/demo-subplot-fit-interferometer-combined.md)
 - [docs-followup-paid-plan-assistants](2026/09/docs-followup-paid-plan-assistants.md) — Dropped the redundant "also" from "The following human-readable documentation and examples are useful for new …
 - [dynesty-single-core-no-pool](2026/09/dynesty-single-core-no-pool.md) — closed completed 2026-09-15
 - [einstein-radius-jit-seed-finder](2026/09/einstein-radius-jit-seed-finder.md)
@@ -239,6 +240,7 @@ markers; everything below GENERATED is rebuilt.
 - [image-source-mappings-p3](2026/09/image-source-mappings-p3.md)
 - [imaging-modeling-fits-guard-split](2026/09/imaging-modeling-fits-guard-split.md)
 - [interferometer-apply-operator-rfft2](2026/09/interferometer-apply-operator-rfft2.md)
+- [interferometer-dirty-images-call-sites](2026/09/interferometer-dirty-images-call-sites.md)
 - [interferometer-numba-cpu-direct-conv](2026/09/interferometer-numba-cpu-direct-conv.md)
 - [interferometer-preload-cpu](2026/09/interferometer-preload-cpu.md)
 - [interferometer-preload-nufft-type1](2026/09/interferometer-preload-nufft-type1.md)
@@ -251,6 +253,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-grad-delaunay-fd-sweep-repin](2026/09/jax-grad-delaunay-fd-sweep-repin.md) — Heart RED corrective
 - [jax-import-order-x64](2026/09/jax-import-order-x64.md)
 - [jax-runtime-and-parity](2026/09/jax-runtime-and-parity.md)
+- [jit-visualization-outputs](2026/09/jit-visualization-outputs.md) — health_fixes
 - [latent-integration-smoke](2026/09/latent-integration-smoke.md)
 - [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
 - [lib-tests-compile-caches](2026/09/lib-tests-compile-caches.md)
@@ -345,6 +348,7 @@ markers; everything below GENERATED is rebuilt.
 - [user-workspace-howto-slow-script-pass](2026/09/user-workspace-howto-slow-script-pass.md)
 - [vis-lp-latent-jit-assertions](2026/09/vis-lp-latent-jit-assertions.md)
 - [vis-lp-latent-jit-trace](2026/09/vis-lp-latent-jit-trace.md) — The JAX (GPU) `vis_lp` stage wrote **no** latents at all — RAL job
+- [wcs-json-slow-suite-pixelized-fit](2026/09/wcs-json-slow-suite-pixelized-fit.md) — the pipeline's one real-mode CI fit (`tests/test_latent_run_level.py`,
 - [witness-campaign](2026/09/witness-campaign.md)
 - [witt-wynne-catalogue](2026/09/witt-wynne-catalogue.md)
 - [witt-wynne-guide-fixes](2026/09/witt-wynne-guide-fixes.md)
@@ -446,6 +450,7 @@ markers; everything below GENERATED is rebuilt.
 - [fits-header-comment-literal-list](2026/08/fits-header-comment-literal-list.md) — small, single-repo, cosmetic
 - [folder-list-ref-drift-sweep](2026/08/folder-list-ref-drift-sweep.md) — Fixed the 12 real defects from the 2026-08-19 hygiene refs scan — 2 autoCTI_workspace/output casing refs, 2 ho…
 - [frozen-lane-counter](2026/08/frozen-lane-counter.md) — Added a third disjoint lane counter to the multi-start gradient search
+- [gradient-eager-jit-divergence-py313](2026/08/gradient-eager-jit-divergence-py313.md) — eager/jit divergence root-caused to an 11-month PyAutoArray mapper regression — SHIPPED
 - [group-data-preparation-readme](2026/08/group-data-preparation-readme.md)
 - [hands-hygiene-leftovers](2026/08/hands-hygiene-leftovers.md)
 - [hands-raw-string-docstring-prefix](2026/08/hands-raw-string-docstring-prefix.md) — closed on merge
@@ -608,6 +613,7 @@ markers; everything below GENERATED is rebuilt.
 - [reconcile-upstream-repo-mode](2026/08/reconcile-upstream-repo-mode.md)
 - [reconstruction-noise-map-covariance-sqrt](2026/08/reconstruction-noise-map-covariance-sqrt.md)
 - [reconstruction-noise-map-solver-mismatch](2026/08/reconstruction-noise-map-solver-mismatch.md)
+- [reconstruction-noise-map-zeroed-pixels](2026/08/reconstruction-noise-map-zeroed-pixels.md)
 - [rectangular-bilinear-rtu-mesh-split](2026/08/rectangular-bilinear-rtu-mesh-split.md)
 - [rectangular-experiments-gut-stash](2026/08/rectangular-experiments-gut-stash.md)
 - [rectangular-mesh-enzi-citation-examples](2026/08/rectangular-mesh-enzi-citation-examples.md)
