@@ -24,10 +24,16 @@
     97a92e6 (unittest 3.12 / 3.13 / nojax, docs-build). Run identifiers verified
     unchanged: `model.identifier` byte-identical on main vs branch for six model
     shapes, before and after touching `.info` (the identifier hashes `__dict__`
-    skipping underscore keys; the change adds no attribute). DEFERRED to the human:
-    the prompt's timing witness on `autogalaxy_workspace_test` `mge_group.py`
-    (763,555 -> per-node calls; warm run 19.3 s -> <= 14 s) — that workspace is not
-    in a web session.
+    skipping underscore keys; the change adds no attribute). MEASURED 2026-09-17 in the same session, after
+    autogalaxy_workspace_test + PyAutoGalaxy + PyAutoArray were cloned in: `mge_group.py`
+    under the smoke-profile env with JAX and full datasets enabled per its `ENV:` line
+    (4-core container, XLA_FLAGS=--xla_cpu_multi_thread_eigen=false, JAX_ENABLE_X64=True).
+    PyAutoFit 3abbc13 (main before the merge) vs 7c0e79a (after): warm wall 15.5 s ->
+    10.6 s; the two `.info` prints' `parameterization` time 4.51 s -> 0.01 s; `model.info`
+    and `factor_graph.global_prior_model.info` byte-identical (332 lines, same sha256).
+    The prompt's <= 14 s ceiling is met; the drop is 4.9 s here against the prompt's
+    >= 5 s, measured on a laptop where the prints cost 7.25 s rather than 4.5 s.
+    Numbers also on issue #1635 (comment 5718418314).
 - traps: |
     - The helper duplicates the traversal rules of `path_instances_of_class` for the
       `Prior` case rather than calling it (that function cannot share work across
