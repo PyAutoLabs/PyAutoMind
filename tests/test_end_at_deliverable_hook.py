@@ -162,3 +162,37 @@ def test_the_matcher_leaves_ordinary_tools_alone(tool):
     """An over-broad matcher would run this hook on every call in the session."""
     import re
     assert not re.match(repos_sync.DELIVERABLE_HOOK_MATCHER, tool), tool
+
+
+# --------------------------------------------------------------------------
+# Codex PreToolUse wire shape
+# --------------------------------------------------------------------------
+
+def codex_payload(tool, tool_input):
+    return {
+        "session_id": "codex-session",
+        "turn_id": "turn-1",
+        "cwd": str(MIND),
+        "hook_event_name": "PreToolUse",
+        "tool_name": tool,
+        "tool_use_id": "call-1",
+        "tool_input": tool_input,
+    }
+
+
+def test_codex_payload_denies_a_timer():
+    result = run(codex_payload("send_later", {"minutes": 60}))
+    assert result.returncode == 2
+    assert REASON in result.stderr
+
+
+def test_codex_payload_allows_a_read_only_remote_trigger():
+    result = run(codex_payload("RemoteTrigger", {"action": "list"}))
+    assert result.returncode == 0
+    assert result.stderr == ""
+
+
+def test_codex_malformed_payload_is_still_fail_closed():
+    result = run('{"turn_id":"turn-1","tool_input":{}}')
+    assert result.returncode == 2
+    assert REASON in result.stderr

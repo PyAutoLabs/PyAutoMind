@@ -67,7 +67,8 @@ For the full workflow narrative, conventions, and registry schemas, read
   in flight (e.g. work parked in a stash, orphan worktrees); move back to
   `active.md` (or `planned.md` if re-scoping) when resuming.
 - **Body map** — `repos.yaml` is the single source of repo *identity* (GitHub
-  home, category, one-line role) for every repo in the workspace. The routing
+  home, category, one-line role) and explicit generated-adapter rollout for
+  every repo in the workspace. The routing
   table in the workspace-root `AGENTS.md` and the owner map in
   `PyAutoBrain/skills/WORKFLOW.md` are generated from it, and the repo lists in
   Heart/Build/admin scripts are drift-checked against it:
@@ -77,6 +78,12 @@ For the full workflow narrative, conventions, and registry schemas, read
   `never_rewrite_history.md`, `remote_sessions.md`, `end_at_deliverable.md`
   (plus the hooks that enforce them, `session_start_hook.sh` and
   `end_at_deliverable_hook.sh`). Edit the canonical file, never a generated copy.
+  `repos_sync.py --write --only "generated Codex hooks"` renders opted-in
+  `.codex/hooks.json` adapters without touching the broader generated surface.
+  Codex users must review and trust the exact current hook hash with `/hooks`;
+  changed or untrusted project hooks are skipped. These adapters register the
+  reviewed PreToolUse safety guards only. The remote Python SessionStart
+  bootstrap remains Claude-specific and is not silently copied into Codex.
 - **Skills** — `skills/<name>/` are agent skills and command bodies tightly
   coupled to the registry. Claude and Codex discovery is installed by
   PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.

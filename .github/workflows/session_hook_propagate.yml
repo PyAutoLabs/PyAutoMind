@@ -23,6 +23,10 @@ name: Propagate the canonical hooks
 # that was already reviewed here, in this repo, on the PR that changed it —
 # the same act the manual regeneration waves performed by hand. Thirty PRs per
 # hook edit is a review queue nobody would read.
+#
+# Codex is deliberately narrower: `repos.yaml` opts in only implementations
+# already verified against Codex's PreToolUse payload. The same propagation
+# run writes `.codex/hooks.json` for those repos and nowhere else.
 
 on:
   push:
@@ -30,6 +34,7 @@ on:
     paths:
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
+      - "repos.yaml"
       - "scripts/repos_sync.py"
       - ".github/workflows/session_hook_propagate.yml"
   workflow_dispatch:
@@ -153,6 +158,7 @@ jobs:
               repos_sync.load_session_hook(mind_root),
               repos_sync.load_deliverable_hook(mind_root),
           )
+          repos_sync.write_codex_hooks(Path("tree"), repos)
           PY
           then
             echo "::error::the hook generator failed — nothing has been propagated"
@@ -173,7 +179,7 @@ jobs:
             git -C "$repo" config user.name "github-actions[bot]"
             git -C "$repo" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-            for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json; do
+            for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json; do
               [ -e "$repo/$rel" ] && git -C "$repo" add -- "$rel"
             done
 
@@ -181,7 +187,7 @@ jobs:
             # file in silence, and this job would then report it "current" while
             # its hook stayed a pass behind. Say so instead.
             unstaged=""
-            for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json; do
+            for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json; do
               if [ -e "$repo/$rel" ] && ! git -C "$repo" ls-files --error-unmatch -- "$rel" >/dev/null 2>&1; then
                 unstaged="$unstaged $rel"
               fi

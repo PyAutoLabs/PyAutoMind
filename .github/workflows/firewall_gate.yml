@@ -27,12 +27,14 @@ on:
       - "scripts/repos_sync.py"
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
+      - "repos.yaml"
       - ".github/workflows/firewall_gate.yml"
   pull_request:
     paths:
       - "scripts/repos_sync.py"
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
+      - "repos.yaml"
       - ".github/workflows/firewall_gate.yml"
   workflow_dispatch:
 

@@ -392,11 +392,14 @@ def test_propagation_workflow_parses_and_carries_its_two_load_bearing_names():
     assert "workflow_dispatch" in triggers
     assert repos_sync.SESSION_HOOK_FILE in triggers["push"]["paths"]
     assert repos_sync.DELIVERABLE_HOOK_FILE in triggers["push"]["paths"]
+    assert "repos.yaml" in triggers["push"]["paths"]
     assert "propagate" in spec["jobs"]
     # Both installed copies have to be staged and pushed: a workflow that
     # regenerates a file it never `git add`s reports every repo "already
     # current" and propagates nothing.
     assert text.count(repos_sync.DELIVERABLE_HOOK_REL) >= 2, text
+    assert "write_codex_hooks" in text
+    assert text.count(repos_sync.CODEX_HOOKS_REL) >= 2, text
 
 
 def test_firewall_gate_triggers_on_the_canonical_hook():
@@ -410,3 +413,4 @@ def test_firewall_gate_triggers_on_the_canonical_hook():
     for event in ("push", "pull_request"):
         assert repos_sync.SESSION_HOOK_FILE in triggers[event]["paths"], event
         assert repos_sync.DELIVERABLE_HOOK_FILE in triggers[event]["paths"], event
+        assert "repos.yaml" in triggers[event]["paths"], event

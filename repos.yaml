@@ -1,7 +1,8 @@
 # repos.yaml — the organism's body map: the single source of repo IDENTITY.
 #
-# Identity only: GitHub home, category, one-line role. Per-organ POLICY stays
-# with the organ that owns it — what Heart polls/gates lives in
+# Identity plus explicit generated-adapter rollout: GitHub home, category,
+# one-line role, and which reviewed Codex hook adapters a repo installs.
+# Per-organ POLICY stays with the organ that owns it — what Heart polls/gates lives in
 # PyAutoHeart/config/repos.yaml; what pre_build formats/generates lives in
 # PyAutoHands/pre_build.sh. Those files must agree with this one on identity;
 # `scripts/repos_sync.py --check` enforces it (including against the actual
@@ -73,18 +74,26 @@ repos:
   # from the org-wide dev sweeps by category, and never had a `.claude/`. Every
   # in-scope repo keeps the hook — a library or workspace opened alone in a web
   # session needs Python 3.12 exactly like an organ (PyAutoMind#369).
+  #
+  # `codex_hooks:` is the explicit, opt-in rollout manifest for generated
+  # `.codex/hooks.json`. Unlike the universal Claude SessionStart bootstrap,
+  # Codex registrations are added only after their existing hook implementation
+  # has been verified against Codex's PreToolUse wire format. An absent key is
+  # intentionally out of scope, not drift.
   PyAutoBrain:
     github: PyAutoLabs/PyAutoBrain
     category: organ
     organ: Brain
     role: "Reasoning/orchestration layer; how work is decomposed and routed; the specialist agents."
     public_role: "Works out *how*: classifies, plans and routes work through specialist reasoning and coding agents."
+    codex_hooks: [mind-commit-guard, end-at-deliverable]
   PyAutoMind:
     github: PyAutoLabs/PyAutoMind
     category: organ
     organ: Mind
     role: "Intent, goals, priorities, workflow state; every task starts as a markdown prompt here."
     public_role: "Captures intent: every piece of work begins as a plain-English description of *what* should change and is tracked from the initial idea to its completed implementation."
+    codex_hooks: [end-at-deliverable]
   PyAutoCortex:
     github: PyAutoLabs/PyAutoCortex
     category: organ
@@ -204,15 +213,19 @@ repos:
   autocti_assistant:
     github: PyAutoLabs/autocti_assistant
     category: assistant
+    codex_hooks: [pyauto-api-gate, end-at-deliverable]
   autofit_assistant:
     github: PyAutoLabs/autofit_assistant
     category: assistant
+    codex_hooks: [pyauto-api-gate, end-at-deliverable]
   autogalaxy_assistant:
     github: PyAutoLabs/autogalaxy_assistant
     category: assistant
+    codex_hooks: [pyauto-api-gate, end-at-deliverable]
   autolens_assistant:
     github: PyAutoLabs/autolens_assistant
     category: assistant
+    codex_hooks: [pyauto-api-gate, end-at-deliverable]
   euclid_assistant:
     github: Jammy2211/euclid_assistant
     category: assistant
