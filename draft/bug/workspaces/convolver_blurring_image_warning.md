@@ -1,9 +1,11 @@
-# Triage: Convolver "No blurring_image provided" warning in canonical workspace scripts
+# Convolver "No blurring_image provided" warning in canonical workspace scripts
 
-Type: triage
-Target: PyAutoArray / workspaces
+Type: bug
+Target: workspaces
 Repos:
 - PyAutoArray
+- autolens_workspace
+- autogalaxy_workspace
 Themes:
 - hygiene
 - ci-smoke
@@ -35,3 +37,5 @@ profile.
 - Warning persists → real defect in the canonical `start_here.py` narrative
   (missing blurring image in the flagship examples) — becomes a bug task
   against the workspace scripts, not a noise item.
+
+<!-- re-homed from draft/triage/ to draft/bug/workspaces/ at the witness-campaign close-out, 2026-09-17: the verify-first step lives in the workspace scripts either way -->

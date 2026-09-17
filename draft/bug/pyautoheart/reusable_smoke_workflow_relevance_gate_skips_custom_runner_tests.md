@@ -64,3 +64,12 @@ and the PR looks green.
 - The `unit`/`slow` split rationale in the pipeline's `tests.yml` header.
 - Heart's own comment in the gate explains why pushes to main always run the full
   matrix (readiness reads main's conclusion).
+
+## Folded 2026-09-17
+
+`draft/bug/pyautoheart/smoke_gate_skips_pytest_runners_on_pr.md` (filed 2026-09-10
+from pipeline PR #65) was the same defect with less evidence and was removed at
+the witness-campaign close-out (PyAutoMind#398). Its witness — a
+euclid_strong_lens_modeling_pipeline PR touching only `tests/` shows
+`unit / smoke (3.12)` and `unit / smoke (3.13)` run and pass rather than `skipped` —
+is this prompt's witness in other words.

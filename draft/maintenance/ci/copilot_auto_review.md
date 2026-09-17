@@ -13,7 +13,7 @@ Witness: A newly opened PR into any PyAutoLabs repo's default branch shows Copil
 Review-minutes: 3
 Unattended: ready
 Difficulty: large
-Autonomy: supervised
+Autonomy: human-required
 Priority: normal
 Filed: 2026-07-02 (backfilled from git)
 

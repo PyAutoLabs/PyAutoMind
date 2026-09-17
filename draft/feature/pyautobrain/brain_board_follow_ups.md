@@ -44,6 +44,6 @@ Remaining candidates — pick up only when a real morning shows the need:
    own copies (the keep-in-step comments then come out).
 3. **Whatever a week of mornings surfaces** — append here before starting.
 
-Filed separately, because it is not a nit: **`board_without_gh.md`** — the
+Filed separately, because it is not a nit: **`board_without_gh.md`** (umbrella archived 2026-09-17 under `complete/archive/epics/`; phase 2 is `board_without_gh_phase2_legs.md`) — the
 eleven legs that read GitHub through `gh api` are dark in a remote session,
 which has no `gh`. A mobile morning is mostly blind until that is closed.
