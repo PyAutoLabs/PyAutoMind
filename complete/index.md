@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1463 records across 8 buckets.
+1464 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -202,6 +202,7 @@ markers; everything below GENERATED is rebuilt.
 - [euclid-catalogue-rebuild-prep](2026/09/euclid-catalogue-rebuild-prep.md) — One issue, two phased PRs, preparing
 - [euclid-cpu-two-stage-route](2026/09/euclid-cpu-two-stage-route.md)
 - [experimental-colab](2026/09/experimental-colab.md)
+- [fitness-vmap-outer-jit](2026/09/fitness-vmap-outer-jit.md)
 - [fixed-lens-light-source-only](2026/09/fixed-lens-light-source-only.md)
 - [fixed-light-draws](2026/09/fixed-light-draws.md)
 - [fixed-light-hardware](2026/09/fixed-light-hardware.md)
