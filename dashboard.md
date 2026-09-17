@@ -136,6 +136,14 @@ anything you could not verify.
 
 **Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 114
 
+<details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
+
+```
+/start_dev draft/test/autolens_workspace/no_untimed_network_downloads_check.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/refactor/autofit/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md">Fitness._vmap re-traces and eagerly executes the batched pjit on every call…</a> — autofit · medium · supervised · medium</summary>
 
 ```
@@ -148,6 +156,22 @@ anything you could not verify.
 
 ```
 /start_dev draft/refactor/autofit/parameterization_prior_count_blowup.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
 ```
 
 </details>
@@ -184,6 +208,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
 
 ```
@@ -196,38 +228,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — autofit · trivial · safe · low</summary>
-
-```
-/start_dev draft/docs/autofit/howtofit_chapter_3_prose_references.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
-
-```
-/start_dev draft/refactor/autoarray/sparse_operator_int32_indexes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main: <code>al.MapperValued</code> no longer exists</a> — autolens_workspace · small · supervised · medium</summary>
-
-```
-/start_dev draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
 ```
 
 </details>
@@ -2295,7 +2295,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_solver_profiling_cells.md">PointSolver profiling cells: lensed quasar → cluster runtime tier →</a> — autolens_profiling · large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/autolens_profiling/point_solver_profiling_cells.md">PointSolver profiling cells: lensed quasar → cluster runtime tier → single/multi-source →…</a> — autolens_profiling · large · supervised · normal</summary>
 
 ```
 /start_dev draft/research/autolens_profiling/point_solver_profiling_cells.md
@@ -2670,16 +2670,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 ## Hygiene
 
-1 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
-
-<details>
-<summary>Headerless prompts</summary>
-
-- `draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md`
-
-</details>
-
-103 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+80 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2688,20 +2679,13 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
-- `draft/feature/autogalaxy/dpie_sigma0_parameterization.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
-- `draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md`
-- `draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md`
-- `draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md`
-- `draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md`
-- `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
-- `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/pyautobrain/board_without_gh.md`
@@ -2715,16 +2699,23 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`
 - `draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
-- `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md`
-- `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md`
-- `draft/bug/autogalaxy/sersiccoresph_has_no_mass_to_light_ratio.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md`
-- `draft/bug/euclid/drawer_pix_initializer_exception_flake.md`
-- `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md`
-- `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
-- _… and 63 more_
+- `draft/bug/health_fixes/samples_parameter_paths.md`
+- `draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md`
+- `draft/bug/priors/12_single_source_density_refactor.md`
+- `draft/bug/priors/13_collapse_prior_and_message.md`
+- `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
+- `draft/bug/priors/15_transformed_message_logpdf_jacobian.md`
+- `draft/bug/priors/z_features.md`
+- `draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md`
+- `draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md`
+- `draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md`
+- `draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md`
+- `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
+- `draft/refactor/autonerves/config_yaml_parse_cache.md`
+- `draft/refactor/pyautofit/remove_eden_packaging_tooling.md`
+- _… and 40 more_
 
 </details>
 
