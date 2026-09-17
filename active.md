@@ -178,7 +178,9 @@
 - issued: 2026-09-15
 - prompt: active/mixed_precision_inversion_jax_numpy_gap_small_data.md
 - session: https://claude.ai/code/session_018bJQFXsFc4iCqpUywydex2 (web-github; no local worktree)
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/556
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/556
 - repos:
   - PyAutoArray: feature/mixed-precision-inversion-gap
 - parallel-claim: "autogalaxy_workspace_test is claimed by jax-runtime-and-parity (autolens_workspace_test#317, smoke_tests.txt only, zero diff vs main on 2026-09-15); this task's workspace leg is one tolerance edit in scripts/imaging/jax_likelihood/rectangular.py and is added via worktree_add_repo only after that claim clears. PyAutoArray is unclaimed."
