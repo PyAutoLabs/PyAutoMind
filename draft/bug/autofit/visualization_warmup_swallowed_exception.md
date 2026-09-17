@@ -50,6 +50,6 @@ Same runs, point_source, twice: `PyAutoGalaxy/autogalaxy/operate/lens_calc.py:56
 
 ## Origin
 
-Incidental finding of `active/jit_visualization_outputs.md` (autolens_workspace_test#318); not that task's scope.
+Incidental finding of `complete/2026/09/jit-visualization-outputs.md` (autolens_workspace_test#318, closed 2026-09-17); not that task's scope.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-15 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/b3c838a6-7f5b-48c8-964d-ea2e0cd93818/scratchpad/intake-warmup.txt -->

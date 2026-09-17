@@ -88,35 +88,6 @@
     markdown report. Pure functions split from the CLI; a synthetic four-CSV
     fixture with a variant missing two tiles pins the inner join and its reporting.
 
-## jit-visualization-outputs
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/318
-- issued: 2026-09-15
-- prompt: active/jit_visualization_outputs.md
-- session: web-github (Claude Code remote, 2026-09-17; no local worktree)
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/321
-- repos:
-  - autolens_workspace_test: claude/active-jit-visualization-outputs-45weg6
-- summary: |
-    Prompt's defect REFUTED twice (2026-08-21, 2026-09-15): all 4
-    modeling_visualization_jit scripts pass from cleared output under
-    profile_release on current main (8/8 passes, libraries moved 58-186 commits
-    between gates). Only residual is the stale point_source/visualization parking
-    (autolens_workspace_test config/build/no_run.yaml:30, "exceeds 300s" -
-    measured 168 s / 202 s locally, margin narrowing). PLAN ONLY, NOT STARTED:
-    the human deferred execution on 2026-09-15; no worktree, no branch, no code
-    change. Resume = /start_workspace, push the empty branch, dispatch retime.yml
-    (point_source/visualization/modeling_visualization_jit.py, 5x, 300 s cap),
-    then settle the marker FROM the measurement (all under cap -> unpark; any
-    over -> keep parked with the measured #274-style verdict). One-line
-    workspace PR; close-out record says "no defect exists to fix" like siblings
-    PyAutoFit#1508 / PyAutoArray#467. SHIPPED 2026-09-17 (web session): CI
-    retime run 35245806121 completed 10/10 (3.12: 73.6-98.6 s, 3.13:
-    71.0-85.7 s, NEITHER both legs), parking entry deleted, PR #321 open with
-    pending-release; /prm when Smoke Tests are green. Incidental: "Visualization warm-up failed
-    (non-fatal)" swallowed in autofit fitness.py for ellipse + point_source -
-    separate prompt draft/bug/autofit/visualization_warmup_swallowed_exception.md.
-
 ## hst-gpu-residue-p2
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/273
 - issued: 2026-09-16

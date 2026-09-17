@@ -17,7 +17,7 @@ Each failing script is assigned to exactly one prompt:
 | ~~autofit_sampler_database.md~~ — ✅ **CLOSED 2026-08-21**, record `complete/2026/08/autofit-sampler-database.md` ([PyAutoFit#1508](https://github.com/PyAutoLabs/PyAutoFit/issues/1508); **0/9 reproduce** on current `main` — no defect, no code changed in any repo; re-validation is automatic, all nine run in every `mode=release` pass) | 9 | Emcee NaNs and database output discovery |
 | ~~aggregator_output_contracts.md~~ — ✅ **SHIPPED 2026-07-07**, record `complete/2026/07/aggregator-output-contracts.md` (PyAutoFit#1324; autogalaxy_workspace#122, autolens_workspace#229, autolens_workspace_test#146 all merged) | 7 | Result/aggregator prerequisites and generated paths |
 | ~~jax_runtime_and_parity.md~~ — ✅ **CLOSED 2026-09-17**, record `complete/2026/09/jax-runtime-and-parity.md` ([autolens_workspace_test#317](https://github.com/PyAutoLabs/autolens_workspace_test/issues/317); **6/6 pass 2026-08-21 and again 2026-09-15** on jax 0.10.2 — defect refuted, no library code changed; the four parkings had already been lifted by PyAutoFit#1528 on 2026-08-27, so re-validation is automatic in every `mode=release` pass. One residue fixed: `imaging/jax_likelihood/delaunay_mge.py` re-enabled on both smoke gates, autolens_workspace_test#320 + autogalaxy_workspace_test#122 merged) | 6 | JAX/TFP compatibility and likelihood parity |
-| jit_visualization_outputs.md — 🟡 **ISSUED 2026-09-15**, plan only, deferred ([autolens_workspace_test#318](https://github.com/PyAutoLabs/autolens_workspace_test/issues/318)); prompt now at `active/jit_visualization_outputs.md`; **4/4 pass 2026-08-21 and again 2026-09-15**, defect refuted; only residual is the point_source parking, to be settled by CI retime | 4 | Quick-update visualizations not producing images |
+| ~~jit_visualization_outputs.md~~ — ✅ **CLOSED 2026-09-17**, record `complete/2026/09/jit-visualization-outputs.md` ([autolens_workspace_test#318](https://github.com/PyAutoLabs/autolens_workspace_test/issues/318); **4/4 pass 2026-08-21 and again 2026-09-15** — no defect, no library code changed; the one residual, the `point_source/visualization/modeling_visualization_jit` SLOW parking, refuted by CI retime run 35245806121 (10/10 under the 300 s cap, slowest 98.6 s) and deleted in [autolens_workspace_test#321](https://github.com/PyAutoLabs/autolens_workspace_test/pull/321); all four scripts now re-execute in every `mode=release` pass, so re-validation is automatic) | 4 | Quick-update visualizations not producing images |
 | ~~numerical_inversion_failures.md~~ — ✅ **CLOSED 2026-08-22**, record `complete/2026/08/numerical-inversion-failures.md` ([PyAutoArray#467](https://github.com/PyAutoLabs/PyAutoArray/issues/467); **0/2 reproduce** on current `main` — no defect, no code changed in any repo; neither script is parked, so re-validation is automatic in every `mode=release` pass). Incidental PyAutoArray sqrt-NaN filed as `draft/bug/autoarray/reconstruction_noise_map_covariance_sqrt.md` | 2 | Non-positive-definite inversion matrices |
 | [release_timeout_policy.md](release_timeout_policy.md) — ⚠️ **4/4 measured pass far under cap 2026-08-21**; start_here not measured | 5 | 300-second release-surface decisions |
 
@@ -85,9 +85,12 @@ appears only as a *consumer*, where its simulator is marked `BOOTSTRAP-TARGET` f
 re-validation is automatic and there is no human reminder to lose.
 
 That is the distinction that decides this whole folder: caveat 1 of the 2026-08-21 sweep blocks the
-*parked* prompts from closing, and it simply does not apply here. The two that remain
-(`jit_visualization_outputs`, `release_timeout_policy`) each still carry SLOW/NEEDS_FIX parkings
-describing *intermittent* failures a single green run cannot clear. `jax_runtime_and_parity` left
+*parked* prompts from closing, and it simply does not apply here. The one that remains
+(`release_timeout_policy`) still carries SLOW/NEEDS_FIX parkings describing *intermittent*
+failures a single green run cannot clear. `jit_visualization_outputs` left this group on
+2026-09-17 too: its single parking claimed a *deterministic* >300 s timeout, which CI retime run
+35245806121 refuted 10/10 (slowest 98.6 s), so the entry was deleted and the prompt closed
+(record `complete/2026/09/jit-visualization-outputs.md`). `jax_runtime_and_parity` left
 this group on 2026-09-17: PyAutoFit#1528 had lifted its four parkings on 2026-08-27, which put it
 on the same automatic-re-validation ground as the closed siblings (record
 `complete/2026/09/jax-runtime-and-parity.md`).
