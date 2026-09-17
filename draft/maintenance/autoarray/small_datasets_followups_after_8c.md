@@ -10,6 +10,9 @@ Difficulty: small
 Autonomy: safe
 Priority: low
 Status: formalised
+Consequence: glance
+Witness: PyAutoArray's autonerves floor names the release carrying PyAutoNerves#160, the `try/except` fallbacks around `disable_jax()` and `SMALLSHP` from #529 are gone (a plain import, the duplicated-literal drift test removed), and the four `mesh_shape` guards in HowToLens and HowToGalaxy are reverted with notebooks regenerated and their smoke gates green.
+Review-minutes: 3
 Filed: 2026-09-06
 
 Two loose ends the phase-8c library leg of the ci-timing-fast-tests epic left on purpose,

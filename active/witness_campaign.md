@@ -260,16 +260,36 @@ Backlog after pass 6: 158 ready, 146 witnessed + 5 `none`, 7 not —
 derived **37 notify / 96 glance / 25 judge**; declared **36 / 102 / 13** +
 7 unset.
 
-### Where the campaign stands after pass 6
+### Pass 7 — prompts filed during the sweep (6 prompts, 2026-09-17, issue #398)
+
+Pre-accepted. Six prompts arrived in `draft/` between the re-baseline and
+pass 6 (three `autoarray`, three `workspaces`). One `Witness: none —`:
+`model_figures_6b2_slam_stages` is decision-first by its own text. One
+keyword false-judge overridden to declared `glance`
+(`mesh_geometry_areas_transformed`, "raises `IndexError`" in its title).
+Gates the witnesses assume: `rectangular_parity_absolute_bound` waits on the
+autolens_workspace_test#317 claim; `small_datasets_followups_after_8c` waits
+on two releases.
+
+| | notify | glance | judge | review-minutes |
+|---|---|---|---|---|
+| before | 0 | 0 | 6 | 120 |
+| after | 0 | 5 | 1 | 35 |
+
+Backlog after pass 7: 158 ready, 151 witnessed + 6 `none`, 1 not —
+derived **37 notify / 101 glance / 20 judge**; declared **36 / 107 / 12** +
+3 unset.
+
+### Where the campaign stands after pass 7
 
 Every `draft/` prompt the regrade counts as ready now carries a witness or a
-`Witness: none —` except: `draft/bug/autoarray/fit_util_masked_division_grad_nan.md`, `draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md`, `draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md`, `draft/feature/workspaces/model_figures_6b2_slam_stages.md`, `draft/maintenance/autoarray/small_datasets_followups_after_8c.md`, `draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md`, `draft/triage/README.md`. The
+`Witness: none —` except `draft/triage/README.md`, which is a README and not a prompt. The
 faculty's derived reading over the whole ready set went from **17 notify /
 36 glance / 103 judge** at the 2026-09-17 re-baseline to
-**37 / 96 / 25**; the declared reading the dashboard
+**37 / 101 / 20**; the declared reading the dashboard
 and planner use went from 12 / 24 / 102 (+18 unset) to
-36 / 102 / 13 (+7 unset). Seed review-minutes
-written across passes 2-6: 1,772 -> 424.
+36 / 107 / 12 (+3 unset). Seed review-minutes
+written across passes 2-7: 1,892 -> 459.
 
 Left for the Brain (one `/intake`): the sizing faculty needs (1) a `none`
 rule, (2) a look at the "raises " / "public api" / "defaults to" /
