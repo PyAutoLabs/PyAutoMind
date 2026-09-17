@@ -33,7 +33,10 @@
     24 judge / 2 notify -> 3 notify / 20 glance / 3 judge, 465 -> 130 seed
     review-minutes. Backlog now 157 ready, 83 witnessed + 3 none,
     derived 19 notify / 55 glance / 83 judge.
-    Next after it: autolens (11), autolens_workspace (7), euclid (6),
+    Pass 4 (`autolens`, 11) SHIPPED 2026-09-17 (pre-accepted): 11 judge ->
+    10 glance / 1 judge, 230 -> 55 seed review-minutes. Backlog now
+    157 ready, 94 witnessed + 3 none, derived 20 notify /
+    64 glance / 73 judge. Next: autolens_workspace (7), euclid (6),
     autogalaxy (5), autolens_profiling (5), tail (~30 singletons).
     Pass-by-pass counts are in the prompt's `## Campaign log`.
 
