@@ -228,7 +228,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/astrometric_offsets_catalogue.md">Output the multi-band astrometric offsets (DatasetModel grid_offset) with errors to the catalogue</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/83">issue #83</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/astrometric_offsets_catalogue.md">Output the multi-band astrometric offsets (DatasetModel grid_offset) with errors to the catalogue</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/83">issue #83</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/85">euclid_strong_lens_modeling_pipeline#85</a></summary>
 
 ```
 /start_dev active/astrometric_offsets_catalogue.md
