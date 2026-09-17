@@ -171,9 +171,12 @@
 - issued: 2026-09-17
 - prompt: active/fitness_vmap_outer_jit_halves_eigen_pool_exposure.md
 - session: claude --resume session_01GhSsEfQUSBRDUDfpcLZnaw
-- status: library-dev
-- location: web-github (no task worktree; PyAutoFit session clone at /home/user/pyautofit, branch feature/fitness-vmap-outer-jit off main @ fa2d540)
+- status: library-shipped, awaiting-merge
+- location: web-github (no task worktree; PyAutoFit session clone at /home/user/pyautofit, branch feature/fitness-vmap-outer-jit off main @ fa2d540, shipped @ f28e986)
 - worktree: n/a — web-github session clone (/home/user/pyautofit)
 - repos:
   - PyAutoFit: feature/fitness-vmap-outer-jit
-- note: "Refactor cap safe; launched without --auto so present-and-wait. Plan on the issue: flip Fitness._vmap to jax.jit(jax.vmap(self.call)) (drop the inner jit, match latent.py), expose __wrapped__ on log_on_first_compile's wrapper, cache/trace/parity tests, retime.yml ABAB on autogalaxy_workspace_test multi_dataset/jax_likelihood/delaunay.py via a same-named branch. PREMISE CORRECTION on the issue: the executable is already cached on main and the eigen-pool deadlock fires at execution, so the outer jit does not halve exposure by construction; the measured lever is the Aug-23 ordering A/B (8/10 vs 3/10 stalls, p=0.070, complete/2026/08/jax-compile-stall-slow-vs-stall-audit.md). Adjacent, not folded in: draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md (same line of code). Next: /start_library fitness-vmap-outer-jit PyAutoFit."
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1638
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1638
+- measurement: "autogalaxy_workspace_test retime.yml dispatched twice at PR-open (2026-09-17): multi_dataset/jax_likelihood/delaunay.py x5 at the 300 s cap on branch feature/fitness-vmap-outer-jit (empty branch off main e8b2f38, exists only so the chain checkout picks the PyAutoFit branch) and on main as control. Read compile seconds + the printed _vmap result from both; record on #1636. Delete the workspace_test branch after /prm (no MCP branch delete; branch_sweep.yml or a local session)."
+- note: "Refactor cap safe; launched without --auto so present-and-wait. Plan on the issue: flip Fitness._vmap to jax.jit(jax.vmap(self.call)) (drop the inner jit, match latent.py), expose __wrapped__ on log_on_first_compile's wrapper, cache/trace/parity tests, retime.yml ABAB on autogalaxy_workspace_test multi_dataset/jax_likelihood/delaunay.py via a same-named branch. PREMISE CORRECTION on the issue: the executable is already cached on main and the eigen-pool deadlock fires at execution, so the outer jit does not halve exposure by construction; the measured lever is the Aug-23 ordering A/B (8/10 vs 3/10 stalls, p=0.070, complete/2026/08/jax-compile-stall-slow-vs-stall-audit.md). Adjacent, not folded in: draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md (same line of code). SHIPPED 2026-09-17: PR #1638 open, full serial suite 2807 passed; option (iii) no workspace impact (API Changes none); /smoke_test not runnable here. Next: /prm PyAutoFit#1638 once CI is green."
