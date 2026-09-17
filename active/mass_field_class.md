@@ -16,6 +16,7 @@ Unattended: ready
 Epic: mass-field
 Phase: 1
 Filed: 2026-09-17
+Issued: 2026-09-17
 
 Add `MassField` to PyAutoGalaxy: the redshift-bearing container for the mass
 components that describe the tidal field of everything *outside* the modelled

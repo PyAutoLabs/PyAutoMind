@@ -135,3 +135,4 @@ workspace sweeps that follow the *released* libraries.
   its own thing"; `fields` is a collection because shear + sheet at one
   redshift is one field, while several fields means several planes. Phase 2
   re-sized medium → large; phase 4 loses its positional-index trap.
+- 2026-09-17: phase 1 issued — PyAutoGalaxy#620 (`/start_dev`, web session; prompt now `active/mass_field_class.md`, task `mass-field-class` in `active.md`).

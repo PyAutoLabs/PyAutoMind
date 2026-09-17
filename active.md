@@ -1,5 +1,27 @@
 # Active Tasks
 
+## mass-field-class
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/620
+- issued: 2026-09-17
+- prompt: active/mass_field_class.md
+- session: claude --resume session_01PqfNuorRbom8ZjD9i9hvWo
+- status: library-dev
+- autonomy: supervised (header; default launch, no --auto — plan approval and ship sign-off are human checkpoints)
+- location: web-github (session clone /home/user/pyautogalaxy, no task worktree; local-dev equivalent ~/Code/PyAutoLabs-wt/mass-field-class)
+- worktree: n/a — web-github session clone (/home/user/pyautogalaxy)
+- repos:
+  - PyAutoGalaxy: feature/mass-field-class
+- summary: |
+    Phase 1 of the mass-field epic (draft/feature/autogalaxy/mass_field_epic.md):
+    standalone `ag.MassField(redshift, **mass_profiles)` — MassProfile-only,
+    not a Galaxy subclass — with the mass sums shared with `Galaxy` via a
+    behaviour-preserving mixin, a zero-light interface so `Galaxies` can hold
+    it, dict round trip, pytree registration check, tests and API docs.
+    Hard invariant: `Galaxy` unchanged (identifier pin captured on main), no
+    prior-config edits, no deprecation warning. Plan is on the issue; next
+    step is /start_library → implementation → /ship_library (library-first;
+    phase 2 draft/feature/autolens/mass_field_integration.md waits on merge).
+
 ## interferometer-dirty-images-call-sites
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/556
 - issued: 2026-09-17
