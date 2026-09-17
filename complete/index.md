@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1453 records across 8 buckets.
+1454 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -130,6 +130,7 @@ markers; everything below GENERATED is rebuilt.
 - [agwt-multi-delaunay-release-timeout](2026/09/agwt-multi-delaunay-release-timeout.md)
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under
 - [arcsec-after-decimal](2026/09/arcsec-after-decimal.md) — - `arcsec_after_decimal` is now a per-call keyword on `plot_array`, `plot_grid`
+- [astrometric-offsets-catalogue](2026/09/astrometric-offsets-catalogue.md)
 - [autoarray-mapper-zero-signal-nan](2026/09/autoarray-mapper-zero-signal-nan.md)
 - [autofit-from-instance-roundtrip](2026/09/autofit-from-instance-roundtrip.md)
 - [autofit-prodigy-49](2026/09/autofit-prodigy-49.md)
