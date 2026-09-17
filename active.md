@@ -185,28 +185,3 @@
     pending-release; script exit 0 under the smoke profile (~12 s) against library mains, four
     distinct fits confirmed by a render probe; Heart CLI absent in the container so the smoke run
     stood as the gate. NEXT = /prm once CI is green.
-
-## oneshot-benchmark-harness
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126
-- issued: 2026-09-17
-- prompt: active/oneshot_benchmark_harness.md
-- session: claude --resume session_01YTzjiXh2fLocc6dNqLQ66d
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/380
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/127
-- autonomy: supervised (header; launched on the human's "Go / continue" in-session — plan on the issue, shipped to PR-open 2026-09-17, merge is human; Brain PR first, it is the assistant PR's `Brain-ref:`)
-- location: web-github (session clones /home/user/autolens_assistant + /home/user/PyAutoBrain, no task worktree)
-- worktree: n/a — web-github session clones
-- repos:
-  - autolens_assistant: claude/oneshot-benchmark-harness-9scp59
-  - PyAutoBrain: claude/assistant-benchmarking-design-9scp59
-- summary: |
-    One-shot, machine-scored assistant benchmarks: headless `benchmark.py run`
-    (harnesses.yaml adapters, private workdir without benchmarks/truth, compute
-    shims), computed-score contract (common gates × card metrics → score.json,
-    RESULTS.md medians), prompt freeze (prompt_sha256 + VERSIONS.lock), first
-    one-shot card `oneshot-smoke`, 2026-07 cards retired to prompts/conversational/,
-    Brain clone VALIDATION_PLAN/partition update. Cards
-    benchmark_positions_initialised_inference / benchmark_forward_model_consistency
-    stay in draft/, Blocked-by this task. Real headless runs need a laptop with
-    the agents installed — the human's first step after merge.

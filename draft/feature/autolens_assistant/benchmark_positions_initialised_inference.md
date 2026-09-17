@@ -15,14 +15,14 @@ Consequence: judge
 Witness: `benchmarks/runs/positions_initialised_inference/` holds three scored runs from one model×harness, RESULTS.md shows the row with median and range, the card's tests pass, and `benchmarks/truth/` is absent from the working directory the harness hands the agent.
 Review-minutes: 15
 Unattended: needs-access
-Blocked-by: PyAutoMind/active/oneshot_benchmark_harness.md (autolens_assistant#126)
+Depends-on: complete/2026/09/oneshot-benchmark-harness.md (autolens_assistant#126 / PR #127, MERGED 2026-09-17 — the harness and score contract this card runs on)
 Filed: 2026-09-17
 
 ## Why
 
 First of the two one-shot, machine-scored assistant benchmarks (design 2026-09-17; the
-harness and score contract are `oneshot_benchmark_harness.md`, which this card is
-**blocked on**). It is the inference card: real lens modelling that still finishes in
+harness and score contract are `oneshot_benchmark_harness.md`, which shipped 2026-09-17 —
+autolens_assistant#127). It is the inference card: real lens modelling that still finishes in
 under five minutes on a laptop CPU, and that draws on two workspace packages
 (`point_source` then `imaging`) so the correct method is also the fast one.
 
