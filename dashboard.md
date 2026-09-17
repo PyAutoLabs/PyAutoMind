@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_class.md">MassField: a standalone, MassProfile-only container for external shear, mass sheets and external…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/620">issue #620</a> — issued 2026-09-17 — library-dev</summary>
+<details><summary>📋 <a href="active/mass_field_class.md">MassField: a standalone, MassProfile-only container for external shear, mass sheets and external…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/620">issue #620</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621">PyAutoGalaxy#621</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 /start_dev active/mass_field_class.md
@@ -402,6 +402,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#621](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621) — `active/mass_field_class.md`
 - [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoGalaxy#619](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619) — `complete/2026/09/config-priors-drift.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`

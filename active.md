@@ -5,8 +5,10 @@
 - issued: 2026-09-17
 - prompt: active/mass_field_class.md
 - session: claude --resume session_01PqfNuorRbom8ZjD9i9hvWo
-- status: library-dev
-- autonomy: supervised (header; default launch, no --auto — plan approval and ship sign-off are human checkpoints)
+- status: awaiting-merge
+- autonomy: supervised (header; default launch, no --auto — plan approved in chat 2026-09-17, shipped to PR-open; merge is human via /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621
 - location: web-github (session clone /home/user/pyautogalaxy, no task worktree; local-dev equivalent ~/Code/PyAutoLabs-wt/mass-field-class)
 - worktree: n/a — web-github session clone (/home/user/pyautogalaxy)
 - repos:
@@ -18,9 +20,11 @@
     behaviour-preserving mixin, a zero-light interface so `Galaxies` can hold
     it, dict round trip, pytree registration check, tests and API docs.
     Hard invariant: `Galaxy` unchanged (identifier pin captured on main), no
-    prior-config edits, no deprecation warning. Plan is on the issue; next
-    step is /start_library → implementation → /ship_library (library-first;
-    phase 2 draft/feature/autolens/mass_field_integration.md waits on merge).
+    prior-config edits, no deprecation warning. Shipped 2026-09-17 as PR #621
+    (commit a4e1445a): 1236 tests green, identifier pin 7b251058cdae562470abab6203bacf72
+    holds, JAX probe green, no workspace migration (Added-only API). Next:
+    /prm when CI is green; then issue phase 2
+    draft/feature/autolens/mass_field_integration.md.
 
 ## interferometer-dirty-images-call-sites
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/556
