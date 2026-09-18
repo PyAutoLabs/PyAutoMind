@@ -16,6 +16,7 @@ Consequence: glance
 Witness: `ls -a` at the workspace root lists none of .agents, .codex, .git, scrap.py, root.log or .pr-body-*.md; `git -C <repo> worktree list` reports no .worktrees/ entry for any repo; autolens_jax_joss is absent from disk while `git ls-remote https://github.com/PyAutoLabs/autolens_jax_joss` still returns 6bce65e; and `python3 -c "import autolens, autofit, autoarray, autogalaxy"` still resolves from the flat checkouts.
 Review-minutes: 5
 Unattended: safe
+Issued: 2026-09-18
 
 Phase 1b of the PyAutoLabs workspace regroup. Changes NO directory layout and touches no organ
 logic - pure deletion of material already proven dead. Sibling task: workspace-location-contracts.

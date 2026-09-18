@@ -1,5 +1,32 @@
 # Active Tasks
 
+## workspace-dead-weight-cleanup
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/389
+- issued: 2026-09-18
+- prompt: active/workspace_dead_weight_cleanup.md
+- status: workspace-dev
+- autonomy: supervised (plan approved in chat 2026-09-18; destructive steps gated on the step-0 archive)
+- worktree: ~/Code/PyAutoLabs-wt/workspace-dead-weight-cleanup
+- epic: workspace-regroup (phase 1b; sibling draft/maintenance/pyautobrain/workspace_location_contracts.md)
+- repos:
+  - PyAutoBrain: feature/workspace-dead-weight-cleanup
+  - PyAutoMind: feature/workspace-dead-weight-cleanup
+- heart-ack: "RELEASE VALIDATION not release_ready (stage integrate)"; "INSTALL VERIFY passed with warnings (testpypi; check F, released Colab bootstrap)" - both pre-existing and unrelated to this task; not an --auto run, so neither gates it
+- summary: |
+    Phase 1b of the workspace regroup. Clears provably-dead workspace-root material
+    (.agents/ with 10 dangling symlinks, empty .codex/, the .git/ stub that makes git
+    and codex exec fail at the root, scrap.py, root.log, four spent .pr-body drafts,
+    regenerable caches), removes the two 74M .worktrees/ trees (8 real worktrees via
+    git worktree remove plus ~81 symlinks; no unpushed commits in any member), and
+    removes the autolens_jax_joss LOCAL checkout only - the GitHub remote stays, as it
+    backs the JOSS paper's benchmark claims. Changes no directory layout.
+    Key constraint: the workspace root is not a git repo, so nearly every target is
+    unversioned and git cannot roll it back; step 0 tars it to
+    ~/Code/PyAutoLabs-backups/root-unversioned-2026-09-18.tar.gz first.
+    Tracked changes (the PR) are small: a clean_slate.sh comment in PyAutoBrain, and in
+    PyAutoMind the euclid role text in repos.yaml (regenerating the root AGENTS.md
+    routing table) plus retirement of two now-moot autolens_jax_joss drafts.
+
 ## mass-field-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559
 - issued: 2026-09-17
