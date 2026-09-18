@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_numba_s5_memo_robustness.md">Phase 5: CPU NNLS memo robustness across graded draws</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/278">issue #278</a> — issued 2026-09-18 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/744">PyAutoLens#744</a> — ⏳ pending release: PyAutoLens</summary>
+<details><summary>📋 <a href="active/fixed_light_numba_s5_memo_robustness.md">Phase 5: CPU NNLS memo robustness across graded draws</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/278">issue #278</a> — issued 2026-09-18 — awaiting-input — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/744">PyAutoLens#744</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/fixed_light_numba_s5_memo_robustness.md
