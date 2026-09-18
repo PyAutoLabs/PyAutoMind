@@ -15,6 +15,7 @@ Consequence: judge
 Witness: a pytest fixture builds a nested workspace (lens/PyAutoLens beside a flat PyAutoBrain) and asserts the resolver returns the TRUE root, not the family directory, for both the Python and the shell entry point; and repos_sync.py --check exits non-zero when a manifest-declared repo's directory is absent (today it passes silently, checking nothing).
 Review-minutes: 25
 Unattended: needs-slicing
+Issued: 2026-09-18
 
 Phase 1a of the PyAutoLabs workspace regroup. Changes NO directory layout.
 
