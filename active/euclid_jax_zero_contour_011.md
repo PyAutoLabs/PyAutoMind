@@ -6,7 +6,7 @@ Autonomy: human-required
 Priority: high
 Filed: 2026-09-18
 Blocks: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90
-Status: implemented and validated; awaiting task-specific Heart shipping authorization
+Status: implemented and validated; task-specific Heart shipping authorized
 Issued: 2026-09-18
 Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
 
@@ -41,3 +41,14 @@ The user approved the upstream adapter source plan and merging repair PR(s) and 
 ## Repair validation — 2026-09-18
 
 Implemented and staged in euclid-jax-contour-compat. PyAutoGalaxy: 1236 passed; both-version integration and Euclid latent regression pass; full Euclid JAX 0.11.2 suite: 230 passed; workspace smoke 41/41 passed. Independent Sol review CLEAN. The curated smoke list remains unchanged after review; the new standalone `_jax.py` regression is retained. No source commit/push/PR yet: task-specific Heart RED development override remains required. Exact reason: `release validation FAILED (stage integrate)`; yellow: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. Full evidence and limitations: issue #622 comment 5729071263 and tmp/euclid-flat-fields/repair-validation.md.
+
+## Human-authorized development-only Heart RED override — 2026-09-18
+
+The live user replied **“I authorize”** to: “Authorize the development-only Heart override for #622’s repair PRs, acknowledging these reasons, and their green-CI merges?”
+
+Exact current RED: `release validation FAILED (stage integrate)`.
+Exact current YELLOW: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
+
+Passed branch gates: 1236 library tests; both-version JAX integration and Euclid regression; 230 full Euclid tests under JAX 0.11.2; 41/41 workspace smoke scripts; independent Sol review CLEAN.
+
+Scope: commit, push and pending-release PRs for euclid-jax-contour-compat / #622, then merge only with every required GitHub CI check green, library first. Heart remains RED for releases. No release, failed-check bypass, protection override or SLURM submission is authorized. Existing modelling-script hold remains.

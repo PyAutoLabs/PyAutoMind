@@ -4,15 +4,21 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
 - issued: 2026-09-18
 - prompt: active/euclid_jax_zero_contour_011.md
-- status: awaiting-input
+- status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/euclid-jax-contour-compat
 - repos:
   - PyAutoGalaxy: feature/euclid-jax-contour-compat
   - autogalaxy_workspace_test: feature/euclid-jax-contour-compat
 - note: Source plan and green-CI merges approved in live chat 2026-09-18. Library Heart gate remains applicable. No SLURM submissions.
 - validation: 1236 library tests; integration and Euclid regression on JAX 0.10.2/0.11.2; full Euclid 0.11.2 suite 230 passed; workspace smoke 41/41 passed; independent Sol review CLEAN.
-- blocker: Task-specific Heart RED development override required before source commit/push/PR. RED "release validation FAILED (stage integrate)"; YELLOW "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml". Source plan already approved; staged repair and PR bodies prepared.
-- resume: See PyAutoGalaxy#622 comment 5729071263 and tmp/euclid-flat-fields/repair-validation.md. Source changes staged, no repair PR yet.
+
+- heart-red-override:
+  - date: 2026-09-18
+  - authorization: Live user "I authorize" to #622 development shipping and green-CI merges after all validation and exact reasons were shown.
+  - red-reasons: "release validation FAILED (stage integrate)"
+  - yellow-reasons: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"
+  - gates: 1236 library tests; both-version integration/Euclid regression; 230 Euclid tests; 41 smoke PASS; independent Sol review CLEAN.
+  - scope: commit/push/pending-release PRs and green-CI merges; no release, bypass or SLURM submission.
 
 ## euclid-fields-api
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89
