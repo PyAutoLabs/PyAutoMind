@@ -100,7 +100,6 @@ epic, never picked standalone.
   a verdict before choosing callback/batching work. The batch-aware callback is a
   conditional phase 2b, not an implemented library change. Resume from `active.md`.
 
-
 ## mass-field
 - title: MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own `fields=` slot; galaxy-attached form kept, result identifiers unchanged)
 - ledger: draft/feature/autogalaxy/mass_field_epic.md

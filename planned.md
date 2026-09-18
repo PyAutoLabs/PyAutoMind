@@ -11,7 +11,6 @@
 
 <!-- toc:end -->
 
-
 ## codex-skill-discovery
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/386
 - prompt: draft/maintenance/assistants/codex_skill_discovery_parity.md
