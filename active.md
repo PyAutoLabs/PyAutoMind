@@ -220,7 +220,7 @@
 ## profiling-contracts
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/284
 - issued: 2026-09-18
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-contracts
 - repos:
   - autolens_profiling: feature/profiling-contracts
@@ -233,3 +233,5 @@
     YELLOW: manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
     63 affected tests, 12 import smokes, repo checks PASS; independent Sol review CLEAN.
     Commit/push/PR only; no merge or release.
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/285
+- commit: 45b3701

@@ -102,3 +102,8 @@ Live user authorized task-specific development shipping: "Yes, ship this develop
 Authorization: commit, push, PR-open only; no merge or release.
 Recorded on issue #284, PR draft, active.md and autonomy_log.md.
 PR body draft: PyAutoMind/tmp/profiling-contracts-pr.md.
+
+## PR opened
+
+https://github.com/PyAutoLabs/autolens_profiling/pull/285 at 45b3701, pending-release.
+Task-specific override recorded in all four sinks. No merge/release performed.
