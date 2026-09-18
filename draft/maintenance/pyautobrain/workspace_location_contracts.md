@@ -4,23 +4,9 @@ Type: maintenance
 Target: PyAutoBrain
 Repos:
 - PyAutoBrain
-- PyAutoMind
 - PyAutoHeart
 - PyAutoHands
-- PyAutoArray
-- PyAutoReduce
-- HowToFit
-- HowToGalaxy
-- HowToLens
-- autocti_workspace
-- autocti_workspace_test
-- autofit_workspace
-- autofit_workspace_test
-- autogalaxy_workspace
-- autogalaxy_workspace_test
-- autolens_workspace
-- autolens_workspace_test
-- euclid_strong_lens_modeling_pipeline
+- PyAutoMind
 Difficulty: large
 Autonomy: supervised
 Priority: high
@@ -64,32 +50,19 @@ sibling organ directory (agents/_pyauto_root.py:59) without checking it is a che
    wrong value exported by a hook is accepted silently).
 3. Make PyAutoHeart, PyAutoHands and PyAutoMind consume that single resolver instead of their six
    private answers.
-4. Give the session-start hook the same marker walk: PyAutoMind/policy/session_start_hook.sh is the one
-   source, generated into 37 byte-identical per-repo copies (verified: 37 files, single md5
-   dbcdbbde9ef3b44f54cbb1dca94fbf95, all 37 carrying `WORKSPACE_ROOT="$(dirname "$REPO_DIR")"` at :72).
-   Correct severity: the hook exits at :47 unless CLAUDE_CODE_REMOTE=true, so it affects remote/web
-   sessions only, never a local CLI session. Its one-level fan-out (:426 unshallow loop, :470
-   install_workspace_settings, :564 PYAUTO_ROOT export) must be fixed too — fixing root discovery while
-   leaving the fan-out at one level still omits every nested science repo. Covered by
-   PyAutoMind/tests/test_session_bootstrap.py and tests/test_session_hook_sync.py.
-5. Give the same marker walk to the 14 files joining `WORKSPACE.parent / "PyAutoHands"` (12
-   .github/scripts/run_smoke.py plus autolens_workspace_test and autogalaxy_workspace_test retime.py).
-   Breaks loudly but mis-diagnosed as "No module named build_util"; bypassed in CI because the reusable
-   workflow supplies Hands on PYTHONPATH.
-6. Fix the 7 tracked Python files that hardcode an absolute workspace path. One is a genuine cross-repo
-   reference and the only one the regroup would actually break:
-   PyAutoReduce/scripts/reduce_cosmos_web_ring.py:34 -> /home/jammy/Code/PyAutoLabs/autolens_assistant/
-   dataset/imaging/cosmos_web_ring/wavebands. Also PyAutoReduce/prototypes/starred_vs_epsf_m92.py:30,
-   starred_vs_epsf_omegacen.py:26, starred_vs_epsf_comparison.py:31, starred_epsf_spike.py:38 (all
-   Path.home()/"Code/PyAutoLabs/PyAutoReduce/scripts/output") and PyAutoArray/files/
-   ghost_peak_experiment.py:39, pca_rotation_experiment.py:28 (~/Code/PyAutoLabs-wt/ in docstrings).
-   This corrects an earlier sweep that reported zero such files.
-7. Make "declared in the manifest but missing on disk" an ERROR rather than a skip. repos_sync.py:882
-   (CLAUDE pointer checks), :1318 (origin checks) and :1607 (codex hook checks) all skip a repo whose
-   directory is absent, so after any move they would pass while silently checking nothing. A successful
-   check that means reduced coverage is the failure mode to remove.
-8. Record the inventory the later phases need, as committed data rather than a one-off sweep: existing
-   worktrees, dependency symlinks, and runtime import locations.
+4. Make the drift check work in BOTH directions, folding in the separately-filed
+   `draft/maintenance/pyautomind/autolens_jax_joss_manifest_gap.md` (retire it on merge):
+   - declared-but-missing is silently SKIPPED at repos_sync.py:882 (CLAUDE pointer checks),
+     :1318 (origin checks) and :1607 (codex hook checks) — after any move these would pass while
+     checking nothing. A successful check that means reduced coverage is the failure to remove.
+   - on-disk-but-undeclared is SILENCE: repos_sync walks the manifest and asks whether each entry is
+     present, so it structurally cannot see a checkout absent from repos.yaml. That is the
+     manifest_gap defect, and it survived the removal of its example (autolens_jax_joss).
+   Note the two are independent of presence on disk: admin_jammy is a genuine manifest entry that is
+   deliberately never cloned, so "missing" must be expressible as intentional rather than as drift.
+5. Record the inventory the later phases need, as committed data rather than a one-off sweep:
+   existing worktrees, dependency symlinks, and runtime import locations.
+
 
 ## Not in this phase
 
@@ -97,10 +70,15 @@ The physical move, the repos.yaml `path:` field, the ~12 root enumerators, workt
 smoke_install.sh flat pip chain, and the IDE/PYTHONPATH/symlink migration are phases 2 and 3. Do not
 introduce a universal `root / manifest.path` rule here: the review's named ordering hazard is that such
 a rule breaks CI immediately (whose trees are legitimately flat) and misroutes task worktrees later.
+The fan-out that CONSUMES this resolver is phase 2:
+`draft/maintenance/pyautobrain/workspace_resolver_fanout.md` — the 37-copy session-start hook,
+the 14 run_smoke/retime PyAutoHands joins, and the 7 hardcoded absolute paths. It cannot land
+first and is mechanical once this phase exists.
+
 The dead-weight cleanup was the sibling task workspace-dead-weight-cleanup, SHIPPED
 2026-09-18 (PyAutoBrain#390, PyAutoMind#413) — record
 `complete/2026/09/workspace-dead-weight-cleanup.md`. Two findings from it land here:
 the `.worktrees/` trees it removed are ~80 paths this phase no longer has to migrate, and
-its `autolens_jax_joss_manifest_gap` sibling is the MIRROR of scope item 7 — `repos_sync.py`
+its `autolens_jax_joss_manifest_gap` sibling is the MIRROR of scope item 4 — `repos_sync.py`
 is blind in both directions (declared-but-missing is skipped; on-disk-but-undeclared is
 silence). Fix both together.
