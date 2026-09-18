@@ -38,7 +38,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
   the #1500 bundle. Resume and retire together with single-source-density-design.
 - repos-none-claimed: claims no repos while parked.
 
-
 ## fixed-light-numba-s7
 - archived-proposal: complete/archive/shelved/fixed_light_numba_s7_cpu_verdict.md
 - parked: 2026-09-18 — user explicitly shelved phase7 before implementation.

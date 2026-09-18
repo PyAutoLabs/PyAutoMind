@@ -30,7 +30,6 @@
   - autolens_workspace
 - note: "Plan approved 2026-09-17. Preserve the user-owned untracked scripts in the autofit_assistant and autolens_assistant main checkouts. Do not create the task worktree until both claims clear."
 
-
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
 - found: 2026-08-09, while pinning B10 of the @rhayes777 audit (`complete/2026/08/autogalaxy-profile-validation-guards.md`)
