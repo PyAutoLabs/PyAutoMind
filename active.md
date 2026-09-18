@@ -1,5 +1,15 @@
 # Active Tasks
 
+## euclid-fields-api
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89
+- issued: 2026-09-18
+- prompt: active/fields_api_top1000.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/euclid-fields-api
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-fields-api
+- note: Human approved plan, concurrent-claim coordination, science deployment and top-1000 submission on 2026-09-18. Worktree isolated; preserve other branches and science-local changes. RAL uses source clones, no PyPI release gate.
+
 ## codex-hook-parity
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407
 - issued: 2026-09-17
@@ -20,12 +30,12 @@
 - issued: 2026-09-17
 - prompt: active/mass_field_workspace_sweep.md
 - session: Fable CLI background job 281b9756 (local-dev)
-- status: awaiting-release
+- status: awaiting-merge
 - autonomy: supervised (header; default launch, no --auto — plan approved in chat 2026-09-17; PRs will open as DRAFTS labelled pending-release and merge only after the PyAutoGalaxy + PyAutoLens release is on PyPI)
 - worktree: ~/Code/PyAutoLabs-wt/mass-field-workspace-sweep
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/560
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/560 (MERGED 2026-09-18, c79c8d3)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/322
-- note: DRAFT PRs — do not /prm until the PyAutoGalaxy (#621) + PyAutoLens (#742) release is on PyPI; the workspace follows the released stack. Release day: `gh pr ready` both, then /prm. Smoke subset 28/28 + 2/2 JAX + 13/13 green locally 2026-09-18 against library main.
+- note: Human lifted PyPI release hold on 2026-09-18. autolens_workspace#560 merged after all 7 checks passed; workspace_test#322 remains draft with both Python smoke legs failing latent_integration_smoke_jax.py (missing latent_summary.json). Task and worktree retained until sibling is green and merged.
 - release-gate: PyAutoGalaxy
 - release-gate: PyAutoLens
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/742
