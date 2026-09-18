@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1476 records across 8 buckets.
+1488 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -130,6 +130,7 @@ markers; everything below GENERATED is rebuilt.
 - [agwt-multi-delaunay-release-timeout](2026/09/agwt-multi-delaunay-release-timeout.md)
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under
 - [arcsec-after-decimal](2026/09/arcsec-after-decimal.md) — - `arcsec_after_decimal` is now a per-call keyword on `plot_array`, `plot_grid`
+- [arxiv-digest-api-retry](2026/09/arxiv-digest-api-retry.md)
 - [astrometric-offsets-catalogue](2026/09/astrometric-offsets-catalogue.md)
 - [autoarray-mapper-zero-signal-nan](2026/09/autoarray-mapper-zero-signal-nan.md)
 - [autofit-from-instance-roundtrip](2026/09/autofit-from-instance-roundtrip.md)
@@ -148,10 +149,12 @@ markers; everything below GENERATED is rebuilt.
 - [catalogue-latent-prefix-blank](2026/09/catalogue-latent-prefix-blank.md) — `catalogue/scripts/lens_mass.py` and `catalogue/scripts/magnitudes.py`
 - [catalogue-mass-maps-fits](2026/09/catalogue-mass-maps-fits.md)
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
+- [codex-token-efficiency](2026/09/codex-token-efficiency.md)
 - [colab-bootstrap-lazy-deps](2026/09/colab-bootstrap-lazy-deps.md)
 - [colab-gate-candidate-audit](2026/09/colab-gate-candidate-audit.md)
 - [colab-notebook-release-gate](2026/09/colab-notebook-release-gate.md)
 - [colab-workshop-dep-stopgap](2026/09/colab-workshop-dep-stopgap.md)
+- [community-surface-users-vs-dev-flow](2026/09/community-surface-users-vs-dev-flow.md)
 - [config-priors-drift](2026/09/config-priors-drift.md) — Fixed eleven dead rows in the packaged PyAutoGalaxy `config/priors/` (JSONPriorConfig suffix-matcher drift: `e…
 - [coolest-observation-grid](2026/09/coolest-observation-grid.md)
 - [cortex-assistant-entry](2026/09/cortex-assistant-entry.md)
@@ -202,8 +205,11 @@ markers; everything below GENERATED is rebuilt.
 - [ep-use-cpu-keeps-jax](2026/09/ep-use-cpu-keeps-jax.md)
 - [euclid-catalogue-rebuild-prep](2026/09/euclid-catalogue-rebuild-prep.md) — One issue, two phased PRs, preparing
 - [euclid-cpu-two-stage-route](2026/09/euclid-cpu-two-stage-route.md)
+- [euclid-fields-api](2026/09/euclid-fields-api.md)
+- [euclid-jax-contour-compat](2026/09/euclid-jax-contour-compat.md)
 - [experimental-colab](2026/09/experimental-colab.md)
 - [fitness-vmap-outer-jit](2026/09/fitness-vmap-outer-jit.md)
+- [fixed-lens-light-numba-cpu](2026/09/fixed-lens-light-numba-cpu.md) — CPU fixed-lens-light campaign closed at the user's request. Phases1–6, including4b and5b, completed; phase7 ex…
 - [fixed-lens-light-source-only](2026/09/fixed-lens-light-source-only.md)
 - [fixed-light-draws](2026/09/fixed-light-draws.md)
 - [fixed-light-hardware](2026/09/fixed-light-hardware.md)
@@ -211,6 +217,10 @@ markers; everything below GENERATED is rebuilt.
 - [fixed-light-numba-levers](2026/09/fixed-light-numba-levers.md)
 - [fixed-light-numba-phase1](2026/09/fixed-light-numba-phase1.md)
 - [fixed-light-numba-s4](2026/09/fixed-light-numba-s4.md) — no lever
+- [fixed-light-numba-s4b](2026/09/fixed-light-numba-s4b.md) — Phase4b permutation benchmark found NO_LEVER: production226.772ms versus permuted228.576ms on the declared HST…
+- [fixed-light-numba-s5](2026/09/fixed-light-numba-s5.md)
+- [fixed-light-numba-s5b](2026/09/fixed-light-numba-s5b.md)
+- [fixed-light-numba-s6](2026/09/fixed-light-numba-s6.md) — Measured single-thread numba CPU likelihood at N500/1000/1500/2500/4000 with frozen nearby/broad sequences and…
 - [fixed-light-numba-solver](2026/09/fixed-light-numba-solver.md)
 - [fixed-light-scaling](2026/09/fixed-light-scaling.md)
 - [fixed-light-verdict](2026/09/fixed-light-verdict.md)
@@ -257,6 +267,7 @@ markers; everything below GENERATED is rebuilt.
 - [latent-integration-smoke](2026/09/latent-integration-smoke.md)
 - [legacy-baseline-timing-round](2026/09/legacy-baseline-timing-round.md)
 - [lib-tests-compile-caches](2026/09/lib-tests-compile-caches.md)
+- [mass-field-bare-fields](2026/09/mass-field-bare-fields.md)
 - [mass-field-class](2026/09/mass-field-class.md) — Added `ag.MassField(redshift, **mass_profiles)` to PyAutoGalaxy — the standalone, MassProfile-only container f…
 - [mass-field-integration](2026/09/mass-field-integration.md) — Taught PyAutoLens about `ag.MassField` (PyAutoGalaxy#621). `Tracer(galaxies, cosmology=None, fields=None)` sto…
 - [matrix-free-pixelized-likelihood](2026/09/matrix-free-pixelized-likelihood.md)
@@ -307,6 +318,7 @@ markers; everything below GENERATED is rebuilt.
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
 - [prm-shadow-row-notify-tier](2026/09/prm-shadow-row-notify-tier.md)
 - [profiles-jit-powerlaw-exact-zero-atol](2026/09/profiles-jit-powerlaw-exact-zero-atol.md)
+- [profiling-contracts](2026/09/profiling-contracts.md) — Fixed-light cells reject unknown flags and invalid counts/budgets; CPU comparison rows reset and validate thei…
 - [profiling-drift-pinned-drift-contract](2026/09/profiling-drift-pinned-drift-contract.md)
 - [profiling-post-235-followups](2026/09/profiling-post-235-followups.md)
 - [profiling-production-representative](2026/09/profiling-production-representative.md)

@@ -1,3 +1,53 @@
+The decision is recorded and the organism reads it.
+
+**Shipped**
+
+- PyAutoMind#411 — `policy/community_surface.md`: users go to one org-level
+  Discussions hub hosted on `PyAutoLabs/.github`; the development flow stays
+  exactly where it is, one issue per task on the target repo; a bug report
+  with a reproducer is still an issue. The page carries the evidence at
+  filing (447 issues closed in 90 days, 427 of them the maintainer's own dev
+  flow), the five questions answered, the category list, the migration
+  manifest of six user-filed feature threads, and what a session measured
+  and can no longer re-derive: GET on discussions is served, `POST
+  .../discussions` is 404, GraphQL is refused — creating, converting and
+  answering a Discussion are the human's clicks.
+- PyAutoBrain#388 — the Ears read the hub: `_community.py` scans
+  `repos/<hub>/discussions` beside the user-filed issues and PRs, a thread is
+  *awaiting our response* when it has no accepted answer and its last word is
+  not a self login, `community triage <discussion url>` routes to answer-in-
+  thread or open-the-issue, and the board renders unanswered threads as
+  triage chips. `COMMUNITY_HUB` defaults to `PyAutoLabs/.github`.
+  +10 cases in `tests/test_community_conductor.py`; pytest 3.12 and 3.13 green.
+
+**Follow-ups filed (all still draft/)**
+
+- `draft/maintenance/community/migrate_user_threads_to_discussions.md` —
+  human-required, the UI clicks: promote the hub, add the Scientific
+  analysis category, transfer PyAutoLens#603, convert-then-transfer the six
+  threads into Ideas.
+- `draft/docs/workspaces/support_sections_point_to_discussions.md` — the
+  seven READMEs and issue choosers.
+- `draft/docs/pyautolabs_github_io/front_door_community_link.md` — the front
+  door, after the hub is promoted.
+
+**Picked up on the way**
+
+`tests/test_ledger_merge.py::test_the_real_registries_round_trip_through_split`
+had failed on main since 2026-08-31 — every Mind PR's `privacy` leg with it.
+Cause was one stray double blank line each in `planned.md` and `parked.md`,
+which `split_entries` collapses. Deleted both: 456 passed, was 1 failed /
+455 passed. Not part of this task; fixed because the leg was red.
+
+**Not done, and deliberately so**
+
+The migration itself. No session can create, convert or answer a Discussion
+— measured, recorded on the policy page. It is the human's ten minutes at
+github.com, and the `/community` verification in step 3 of that prompt is
+what closes it.
+
+## Original prompt
+
 # Community surface: separate where users ask questions from the AI development flow
 
 Type: research
@@ -12,8 +62,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
-Consequence: notify
+Status: active
+Issued: 2026-09-17
+Consequence: judge
 Witness: A decision document exists in the Mind's policy directory naming (a) the surface where users bring questions, help requests and scientific-analysis asks and (b) the surface where the AI development flow (issues, PRs, Mind close-outs) lives; and the community conductor's scan reads the chosen user surface, verified by a scan that lists a thread posted there.
 Review-minutes: 0
 

@@ -84,6 +84,10 @@ For the full workflow narrative, conventions, and registry schemas, read
   changed or untrusted project hooks are skipped. These adapters register the
   reviewed PreToolUse safety guards only. The remote Python SessionStart
   bootstrap remains Claude-specific and is not silently copied into Codex.
+  `community_surface.md` is the one policy page that is *not* generated
+  anywhere: it decides where users go (one Discussions hub) and where the
+  development flow stays (per-repo issues); the Ears and the README Support
+  sections read it as doctrine.
 - **Skills** — `skills/<name>/` are agent skills and command bodies tightly
   coupled to the registry. Claude and Codex discovery is installed by
   PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.

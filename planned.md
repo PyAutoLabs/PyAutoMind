@@ -11,7 +11,6 @@
 
 <!-- toc:end -->
 
-
 ## codex-skill-discovery
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/386
 - prompt: draft/maintenance/assistants/codex_skill_discovery_parity.md
@@ -29,7 +28,6 @@
   - autogalaxy_workspace
   - autolens_workspace
 - note: "Plan approved 2026-09-17. Preserve the user-owned untracked scripts in the autofit_assistant and autolens_assistant main checkouts. Do not create the task worktree until both claims clear."
-
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting

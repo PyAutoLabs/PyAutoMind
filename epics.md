@@ -79,37 +79,6 @@ epic, never picked standalone.
 - ledger: autolens_inference/wiki/project/state.md
 - notes: phase 1 SHIPPED 2026-09-10 (complete/2026/09/autolens-inference-birth.md); phase 2 SHIPPED 2026-09-11 (complete/2026/09/scrap-inference-programme.md — autolens_profiling#246 / PyAutoBrain#376 / PyAutoMind#401; archive ref `archive/condemned/autolens-profiling/inference-programme` @ `c8b60580`); 4 phases — 1 birth + registration (PyAutoMind#399), 2 Gut-archive and delete autolens_profiling's searches tier / baselines / inference notes (nothing inherited), 3 backend-parameterised SLaM driver + per-stage results + submit scripts (SHIPPED 2026-09-11, autolens_inference#3, complete/2026/09/slam-base-driver.md), 4 the first run on PyAutoCortex `projects/autolens_inference.md` (5-stage HST SLaM × {numba_cpu, jax_cpu, jax_gpu} × {dense, sparse}). Science half: that ledger. Ledger moved to autolens_inference/wiki/project/state.md when phase 3 landed 2026-09-11.
 
-## fixed-lens-light-numba-cpu
-- title: Fixed lens light on the numba CPU path — the whole programme again, off the GPU
-- ledger: draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md
-- notes: successor to `fixed-lens-light-profiling` (COMPLETE 2026-09-14), filed the same day. Six phases mirroring that epic, worked strictly 1 → 2 → 3 → 4 → 5 → 6 — each phase's grid is chosen from the previous phase's answer; issue ONE at a time, never bulk-issued, and file each phase's own prompt when the campaign reaches it. The open question is real, not a port: phase 2 of the GPU epic found the numpy certified active set does NOT beat the library's own `fnnls`, and both run 1.9-3.6x slower at 8 BLAS threads than at 1 — and the numba production path was never measured at all. Every leg must record its thread settings (`NPROC`, BLAS, numba) and no comparison may cross them silently. Out of scope throughout, as in the GPU epic: JWST and the sparse operator (blocked on `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`). A Fable / Astra campaign.
-  Phase 1 COMPLETE 2026-09-14 (#263, PR #264 — harness shipped, timing legs carried by phase 2).
-  Phase 2 COMPLETE 2026-09-16 (#265, PR #266): fixed lens light measures **2.03x** on the
-  production numba CPU path (RAL job 343311, HST Delaunay N=1500, 1 thread, 932 -> 459 ms;
-  405 ms with the memo on). The **NNLS speed-up round is CLOSED** — the library's memo (ON by
-  default, 1.134x) already delivers what the factor-reuse kernel would (1.112x), so the
-  conditional PyAutoArray `nnls_seed_factor_reuse` prompt is deliberately NOT filed. The
-  residue is `regularization_matrix` 112 ms + log-det `F + lambda H` 40 ms + log-det `H`
-  37.5 ms (47 % of the call).
-  Phase 3 COMPLETE 2026-09-16 (#267; PyAutoArray #553/#554/#555 merged pending-release,
-  autolens_profiling #272 merged carrying #269/#271; record
-  complete/2026/09/fixed-light-numba-levers.md): three non-solver levers on numba CPU
-  **413.3 → 230.0 ms = 1.80x** (1.38x split-reg numba kernels / 1.13x sparse log det H,
-  CPU-only / 1.19x log det(F+λH) off the NNLS factor + cached curvature_reg_matrix), A100
-  identity on every lever. Residue curvature_matrix 88 ms + fnnls 61 ms ≈ 65 %; lever 4
-  candidates (A′ permute-active-last, edge-zeroed, covariance third factorisation) in the
-  note's Next, not filed. Old phases 3-5 renumbered to 4-6 stood until phase 4 was filed;
-  see below.
-  Phase 4 FILED 2026-09-16 — the curvature-matrix kernel A/B on Delaunay (lever 4a,
-  measurement first: the two-stage vs direct kernels were never measured on the Delaunay
-  fixed-light cell; touched-index stage 2 if neither wins) then A-prime permute-active-last
-  (lever 4b, witness design first); cell prerequisite: the 1.03 overhead cap (wave A /
-  lever 4a done 2026-09-17 — no lever, record `complete/2026/09/fixed-light-numba-s4.md`;
-  wave B / lever 4b prompt
-  `draft/research/autolens_profiling/fixed_light_numba_s4b_permute_active_last.md`).
-  Inserts ahead of the old phases 4-6, which renumber to 5 (memo warm start), 6 (source-pixel
-  scaling), 7 (HST + Euclid verdict).
-
 ## hst-gpu-non-solver-residue
 - title: The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve
 - ledger: draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md
@@ -124,12 +93,12 @@ epic, never picked standalone.
   Border relocator ON is production (autogalaxy config default true), 0.10 ms. Levers ranked for phase 2:
   (1) qhull host round-trip 5.44 ms, (2) PSF convolution cube 7.12 ms (harness first), (3) second Cholesky
   for log det F+λH 0.89 ms. Note `results/notes/hst_gpu_residue_phase1_2026_09.md`.
-  Phase 2 FILED 2026-09-16 as PLAN ONLY (no issue, no worktree, human said no dev yet):
-  `draft/research/autolens_profiling/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md` — per the Codex
-  review on #268: ONE matched A100 experiment (exact `Fitness._vmap` over 16 distinct draws vs 16 scalar-jitted
-  evals; production is vmap, phase 1 traced single-call) decides the batching policy, then the batch-aware
-  Delaunay `pure_callback` (`expand_dims`, one host call per batch) if the callback matters. Map revised with the
-  phase-1 table and re-ranked levers (0 vmap/callback, 1 batch-size decoupling, 2 PSF cube, 3 log-det factor).
+  Phase 2 IN FLIGHT (#273): step 1 only, matched vmap-vs-jit measurement.
+  Active prompt: `active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md`.
+  The active registry records A100 array 343376 submitted 2026-09-17; its submission-time
+  RUNNING stamp is not a current job-status claim. Results still need harvesting and
+  a verdict before choosing callback/batching work. The batch-aware callback is a
+  conditional phase 2b, not an implemented library change. Resume from `active.md`.
 
 ## mass-field
 - title: MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own `fields=` slot; galaxy-attached form kept, result identifiers unchanged)
@@ -140,3 +109,10 @@ epic, never picked standalone.
   record complete/2026/09/mass-field-integration.md) — library work done, both pending-release.
   Phases 3–5 (workspace sweeps) wait on a release of PyAutoGalaxy#621 + PyAutoLens#742 to the
   installed stack; phase 3 is issued only once `/release` has published both.
+  Phase 3 IN FLIGHT (autolens_workspace#559; #560 merged 2026-09-18 at c79c8d3,
+  autolens_workspace_test#322 still a draft). Phase 6 added and ISSUED 2026-09-18
+  (autolens_workspace#561, active/mass_field_flat_sweep.md): the flat/bare `fields=field`
+  adoption sweep across both workspaces, unblocked by PyAutoLens#744 (merged 478213e78),
+  reusing phase 3's worktree and folding its workspace_test half into draft PR #322.
+  Amend phase 5's prompt before issuing it — it is written in the collection era and would
+  migrate HowToLens twice.
