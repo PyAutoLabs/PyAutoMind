@@ -197,3 +197,14 @@
 - repos:
   - PyAutoLens: feature/mass-field-bare-fields
 - note: Reviewed plan approved in chat; PyAutoLens-only additive API, collections remain primary. Baseline and red witness before source edits.
+
+## fixed-light-numba-s5
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/278
+- issued: 2026-09-18
+- prompt: active/fixed_light_numba_s5_memo_robustness.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-s5
+- repos:
+  - autolens_profiling: feature/fixed-light-numba-s5
+- parallel-claim: '2026-09-18: user explicitly replied "Approve separate, disjoint worktree" to proceeding alongside PR #277 and GPU study #273. New phase-5 CPU graded-draw script, helper, tests, submit and results only; existing tasks source files unchanged. Conflict guard reports fixed-light-numba-s4b and hst-gpu-residue-p2; human coordination waiver recorded here and in the issue plan.'
+- note: 'Phase 5 approved: production memo robustness on 41 graded models; no library change. Phase-4b Heart exception does not apply to this task.'

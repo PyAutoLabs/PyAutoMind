@@ -12,6 +12,8 @@ Priority: high
 Consequence: judge
 Review-minutes: 25
 Filed: 2026-09-18
+Issued: 2026-09-18
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/278
 Witness: Replay all 41 graded models through the production single-threaded CPU likelihood with memo enabled and disabled; report per-model evidence agreement at <= 1e-9 relative, active-set equality, reconstruction differences, whole-call times, seed sources, memo invalidations, cold retries and solver iteration counts. An incomplete or numerically failing run cannot certify robustness.
 
 ## Original user request (verbatim)
@@ -59,7 +61,7 @@ is open and lint passes. Mind main is current, with unrelated dirty prompts
 repository. Proposed branch: `feature/fixed-light-numba-s5`, based on origin/main,
 in `~/Code/PyAutoLabs-wt/fixed-light-numba-s5/`.
 
-Coordination approval is pending. All phase-5 implementation and result files
+Coordination approved 2026-09-18: user replied "Approve separate, disjoint worktree" to the explicit request to proceed alongside #277 and the GPU study. All phase-5 implementation and result files
 below are new; existing helpers are read-only. No edit to either active task's
 files, shared README surfaces, or shared solver helpers is planned. Record the
 human's explicit coordination decision before creating the worktree.
