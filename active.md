@@ -4,12 +4,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
 - issued: 2026-09-18
 - prompt: active/euclid_jax_zero_contour_011.md
-- status: library-dev
+- status: awaiting-input
 - worktree: ~/Code/PyAutoLabs-wt/euclid-jax-contour-compat
 - repos:
   - PyAutoGalaxy: feature/euclid-jax-contour-compat
   - autogalaxy_workspace_test: feature/euclid-jax-contour-compat
 - note: Source plan and green-CI merges approved in live chat 2026-09-18. Library Heart gate remains applicable. No SLURM submissions.
+- validation: 1236 library tests; integration and Euclid regression on JAX 0.10.2/0.11.2; full Euclid 0.11.2 suite 230 passed; workspace smoke 41/41 passed; independent Sol review CLEAN.
+- blocker: Task-specific Heart RED development override required before source commit/push/PR. RED "release validation FAILED (stage integrate)"; YELLOW "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml". Source plan already approved; staged repair and PR bodies prepared.
+- resume: See PyAutoGalaxy#622 comment 5729071263 and tmp/euclid-flat-fields/repair-validation.md. Source changes staged, no repair PR yet.
 
 ## euclid-fields-api
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89
@@ -30,8 +33,8 @@
   - scope: commit, push, pending-release PR; merge only on green CI. No release or SLURM submission; modelling-script hold remains.
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90
 - implementation: 7fbdbe5; 230 tests, 9/9 smoke, independent review CLEAN. Science/RAL deployment pending merge; submission hold remains.
-- ci-blocker: Both unit matrix legs fail the latent contour test with JAX 0.11.2; isolated third-party-only reproduction confirms the dependency incompatibility. Proposed repair: draft/bug/autogalaxy/euclid_jax_zero_contour_011.md (awaiting source-plan approval).
-- deployment: Not synced; local science d53b9ce, RAL PyAutoLens 7197380. No stack refresh or jobs.
+- ci-blocker: Both unit matrix legs fail the latent contour test with JAX 0.11.2; isolated third-party-only reproduction confirms the dependency incompatibility. Repair implemented and independently reviewed under PyAutoGalaxy#622 / active/euclid_jax_zero_contour_011.md; full Euclid suite now passes locally on JAX 0.11.2. Repair shipping awaits its own Heart override; rerun CI only after upstream merge.
+- deployment: Not synced; local science d53b9ce, RAL PyAutoLens 7197380. No stack refresh or new submissions. 2026-09-18 precheck: running unrelated job 343413 uses shared stack, so refresh held; remote editor backups preserved; Fit cleanliness still needs recheck. All 21 port preimages and top-1000 CSV/submit/FITS-info matches reverified.
 
 ## codex-hook-parity
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407

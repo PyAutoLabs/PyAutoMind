@@ -6,7 +6,7 @@ Autonomy: human-required
 Priority: high
 Filed: 2026-09-18
 Blocks: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90
-Status: approved; implementation in progress
+Status: implemented and validated; awaiting task-specific Heart shipping authorization
 Issued: 2026-09-18
 Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
 
@@ -37,3 +37,7 @@ PyAutoGalaxy and autogalaxy_workspace_test are clean on main; conflict guard rep
 ## Live approval — 2026-09-18
 
 The user approved the upstream adapter source plan and merging repair PR(s) and pipeline #90 only when every required CI check is green. No repeat source-plan approval is needed. Preserve release/readiness gates; the pipeline Heart override does not automatically cover this task. No SLURM submissions until modelling-script approval.
+
+## Repair validation — 2026-09-18
+
+Implemented and staged in euclid-jax-contour-compat. PyAutoGalaxy: 1236 passed; both-version integration and Euclid latent regression pass; full Euclid JAX 0.11.2 suite: 230 passed; workspace smoke 41/41 passed. Independent Sol review CLEAN. The curated smoke list remains unchanged after review; the new standalone `_jax.py` regression is retained. No source commit/push/PR yet: task-specific Heart RED development override remains required. Exact reason: `release validation FAILED (stage integrate)`; yellow: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. Full evidence and limitations: issue #622 comment 5729071263 and tmp/euclid-flat-fields/repair-validation.md.
