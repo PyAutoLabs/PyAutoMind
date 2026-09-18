@@ -182,12 +182,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/416
 - issued: 2026-09-18
 - prompt: active/workspace_smoke_shim_bootstrap.md
-- status: awaiting-merge
+- status: workspace-dev
 - autonomy: supervised (plan approved in chat 2026-09-18; staged Mind implementation then coordinated rollout)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-smoke-shim-bootstrap
 - repos:
   - PyAutoMind: feature/workspace-smoke-shim-bootstrap
 - note: First stage edits Mind only. Rollout to the twelve consumers is gated on resolving existing lens workspace and Euclid pipeline claims. No overlap waiver or phase-3 move authorized. Preserve canonical Mind's pre-existing staged draft deletion.
-- resume: PR https://github.com/PyAutoLabs/PyAutoMind/pull/417 OPEN, pending-release. Full Mind suite 565 passed; independent review CLEAN; remote dry run 12/12 bootstrap-only diffs. Next: human /prm when CI is green, retaining issue #416 and active prompt for coordinated delivery. Consumer rollout remains false; phase 2c is not complete.
+- resume: Mechanism PR #417 MERGED 2026-09-18 at 2e3c5482; receipt complete/2026/09/workspace-smoke-bootstrap-mechanism.md. Full suite 565 passed, review CLEAN. NEXT: coordinate consumer claims, enable rollout, propagate and verify all twelve installed copies. Rollout stays false; issue #416 and phase 2c remain open. Task worktree retained for continuation.
 - heart-ack: "euclid_strong_lens_modeling_pipeline: open PR 7d old"; "release validation incomplete: no rehearsal for current source" (human explicitly acknowledged in chat 2026-09-18 for push and PR-open only; no merge, rollout or phase-3 move).
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/417
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/417 (MERGED 2026-09-18, 2e3c5482)
