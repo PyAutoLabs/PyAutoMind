@@ -4,7 +4,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/393
 - issued: 2026-09-18
 - prompt: active/workspace_resolver_fanout.md
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/415
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/75
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/561
+- note: PyAutoMind#415 also fixes firewall_gate.yml, which was red-by-construction for
+  ANY canonical-hook PR (the leg's precondition - that propagation has run - cannot be met
+  on a pull request). Latent since 2026-08-29/09-03; this was the first hook PR to expose it.
+  Merging #415 triggers session_hook_propagate.yml, which bot-pushes the new hook to ~34 repos.
 - autonomy: supervised (plan approved in chat 2026-09-18, including the smoke-shim split)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-resolver-fanout
 - epic: workspace-regroup (phase 2; 1b and 1a shipped 2026-09-18)
