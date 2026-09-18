@@ -112,6 +112,7 @@ GITHUB_FILES = {
         "        run: echo x\n"
     ),
     ".github/workflows/firewall_gate.yml": _real("firewall_gate.yml"),
+    ".github/workflows/smoke_bootstrap_propagate.yml": _real("smoke_bootstrap_propagate.yml"),
     ".github/workflows/pages_dashboard.yml": _real("pages_dashboard.yml"),
     ".github/scripts/arxiv_fetch.py": "QUERY = 'strong lensing OR lensed quasar'\n",
     ".github/workflows/arxiv_interests.yml": (
@@ -138,6 +139,7 @@ DROPPED_GITHUB = [
     # failure mode three times over. Added 2026-08, first caught by the
     # 2026-08-24 spawn_drift run as UNMATCHED.
     ".github/workflows/firewall_gate.yml",
+    ".github/workflows/smoke_bootstrap_propagate.yml",
     # rule 9c: needs a GitHub Pages site the default token cannot create on a
     # fresh repo, and takes pages:write + id-token:write.
     ".github/workflows/pages_dashboard.yml",

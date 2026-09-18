@@ -160,6 +160,8 @@ MIND_RULES = [
     # thirty, plus rule 9's no-configured-secret condition. A fresh org has no
     # siblings to propagate into and no such secret to do it with.
     (".github/workflows/session_hook_propagate.yml", "DROP"),
+    # Same rule 9c: sibling pushes require an org token and an adopted manifest.
+    (".github/workflows/smoke_bootstrap_propagate.yml", "DROP"),
     # 9c also: the Pages publisher. It needs a GitHub Pages site the default
     # token cannot create on a fresh repo (the Hands lesson, already recorded
     # for Memory's knowledge_board.yml) and takes pages:write + id-token:write,
