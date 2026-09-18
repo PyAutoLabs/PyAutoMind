@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1493 records across 8 buckets.
+1494 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -338,6 +338,7 @@ markers; everything below GENERATED is rebuilt.
 - [scaling-relation-slam-smoke-frame-cap](2026/09/scaling-relation-slam-smoke-frame-cap.md)
 - [scientific-workflow-language](2026/09/scientific-workflow-language.md)
 - [scrap-inference-programme](2026/09/scrap-inference-programme.md)
+- [sed-chain-cpu-route](2026/09/sed-chain-cpu-route.md)
 - [sibson-single-concatenated-walk](2026/09/sibson-single-concatenated-walk.md)
 - [silence-colab-cli-message](2026/09/silence-colab-cli-message.md)
 - [simulator-from-result-linear](2026/09/simulator-from-result-linear.md)

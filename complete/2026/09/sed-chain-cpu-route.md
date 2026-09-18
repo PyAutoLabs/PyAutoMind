@@ -1,3 +1,37 @@
+# SED chain CPU route shipped
+
+- completed: 2026-09-18
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/70 (head `1221c602d`, merge `d227b712a`)
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
+- classification: feature (workspace) — `euclid_strong_lens_modeling_pipeline`
+
+## What shipped
+
+The multi-band SED chain now has `hpc/batch_cpu/submit_sersic_waveband` as its
+documented default route. It runs the existing JAX likelihood on the CPU backend,
+keeps the GPU submitter as an optional route, fails fast if the backend is wrong,
+and preserves the seeded `vis_lp` result hash by avoiding `--use_cpu`.
+
+The route table, cluster guidance, sync help and Sersic-stage documentation now
+describe the CPU default. The already-running GPU job remained untouched.
+
+## Merge and validation
+
+The feature branch was merged with current `main`; the only conflict was the HPC
+route table. Resolution preserved both SED route rows from the feature and the
+newer catalogue-submit example from `main`.
+
+- local after conflict resolution: `220 passed, 10 deselected`
+- shell syntax: both SED submitters and `hpc/sync` passed `bash -n`
+- GitHub head `1221c602d`: all nine unit, slow and smoke jobs passed on Python
+  3.12 and 3.13
+- merge commit: `d227b712ad81fe654b701aba8da1d705d157ae6f`
+
+PR #75 was separately closed unmerged at the maintainer's request; its branch and
+worktree were retained and are outside this completion record.
+
+## Original prompt
+
 # SED chain (Sersic + waveband fits) runs on CPU by default, JAX on the CPU backend like vis_lp
 
 Type: feature
