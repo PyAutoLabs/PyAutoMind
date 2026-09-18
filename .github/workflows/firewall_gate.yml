@@ -15,6 +15,17 @@ name: Tenant Firewall Gate
 # PyAutoMind#369: editing `policy/session_start_hook.sh` re-stales every
 # installed copy, and until then no gate ran on that edit at all.
 #
+# One leg is unmeetable on a PR and is skipped there, loudly and narrowly: a
+# PR that EDITS a canonical hook cannot make the sibling organs' installed
+# copies match it, because those copies come from the organs' mains and the
+# thing that updates them — session_hook_propagate.yml — only runs on a push
+# to main, i.e. after merge. The `generated hooks` leg was therefore red by
+# construction for every hook PR (first seen on PyAutoMind#415). On such a PR
+# the leg is dropped with `repos_sync.py --skip`, the run says so out loud, and
+# the part the PR really does control — PyAutoMind's own installed copies, the
+# one repo propagation never writes to — is asserted instead. On `push` to
+# main nothing is skipped.
+#
 # All three organs are checked out. PyAutoHands was omitted at first — its
 # firewall clear waited behind the version-stamp task that claimed the repo
 # (PyAutoHands#235) — and joined once that leg landed as PyAutoHands#237,
@@ -50,6 +61,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: PyAutoMind
+          # Full history: the canonical-hook decision below diffs this PR
+          # against its base branch, which a depth-1 checkout has no merge
+          # base for.
+          fetch-depth: 0
       # Paired changes may declare Brain-ref: <branch-or-sha> in the PR
       # body, using the assistant clone-boundary convention. Default: main.
       # The repository stays fixed; every drift-check leg still runs.
@@ -85,5 +100,65 @@ jobs:
           python-version: "3.13"
       - name: Install (PyYAML — the whole dependency set)
         run: pip install PyYAML
+      # Does THIS PR edit a canonical hook? Read from the changed files, not
+      # from the `paths:` filter above — the filter has already matched (that
+      # is why this run exists) and lists four other paths besides, so it
+      # cannot tell a hook edit from a repos.yaml edit.
+      - name: Canonical-hook PR?
+        id: hookpr
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git -C PyAutoMind fetch --no-tags --quiet origin \
+            "+refs/heads/${BASE_REF}:refs/remotes/origin/${BASE_REF}"
+          changed="$(git -C PyAutoMind diff --name-only \
+            "origin/${BASE_REF}...HEAD")"
+          echo "Changed in this PR:"
+          printf '%s\n' "$changed" | sed 's/^/  /'
+          if printf '%s\n' "$changed" | grep -qxF \
+              -e 'policy/session_start_hook.sh' \
+              -e 'policy/end_at_deliverable_hook.sh'; then
+            echo "hook_pr=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "hook_pr=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # The compensating control, and it runs FIRST so it is never shadowed by
+      # the leg below: PyAutoMind is the one repo the propagation workflow
+      # never writes to, so its own installed copies are exactly what this PR
+      # controls — and they are already pinned by the test suite.
+      - name: Assert PyAutoMind's own installed hook copies (propagation never writes here)
+        if: steps.hookpr.outputs.hook_pr == 'true'
+        run: |
+          pip install pytest
+          python3 -m pytest PyAutoMind/tests/test_session_hook_sync.py -q \
+            -k "hook_ships_and_is_the_installed_text"
+
+      - name: Drift check (canonical-hook PR — 'generated hooks' leg skipped)
+        if: steps.hookpr.outputs.hook_pr == 'true'
+        run: |
+          echo "=============================================================="
+          echo "SKIPPED LEG: 'generated hooks (session-start + end-at-deliverable)'"
+          echo "WHY: this PR edits a canonical hook (policy/session_start_hook.sh"
+          echo "  or policy/end_at_deliverable_hook.sh). The sibling organs are"
+          echo "  checked out at their mains, so their installed copies are stale"
+          echo "  BY CONSTRUCTION until .github/workflows/session_hook_propagate.yml"
+          echo "  runs on the push to main after this PR merges — propagation is"
+          echo "  what syncs them, and it cannot have run yet. The leg's"
+          echo "  precondition is unmeetable on a pull request."
+          echo "STILL ENFORCED: PyAutoMind's own installed copies must match the"
+          echo "  canonical files (asserted in the step above). A green run here"
+          echo "  means 'the hook copies this PR controls are in sync' — NOT"
+          echo "  'every repo is in sync'. The rest is propagation's job."
+          echo "ON push TO main this leg is never skipped."
+          echo "=============================================================="
+          python3 PyAutoMind/scripts/repos_sync.py --check \
+            --root "$GITHUB_WORKSPACE" \
+            --skip "generated hooks (session-start + end-at-deliverable)"
+
+      # The unchanged path: every push to main, and every PR that does not edit
+      # a canonical hook, still runs all legs exactly as before.
       - name: Drift check (all legs — absent repos are skipped)
+        if: steps.hookpr.outputs.hook_pr != 'true'
         run: python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE"

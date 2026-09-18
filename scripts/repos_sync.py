@@ -15,6 +15,16 @@ Usage:
                                          # resolver — see workspace_root)
     python3 repos_sync.py --only <label> # run one check leg (repeatable) —
                                          # what an organ's PR CI gate calls
+    python3 repos_sync.py --skip <label> # run every leg BUT this one
+                                         # (repeatable; subtracts from --only)
+
+`--only` narrows the run to the legs it names; `--skip` then subtracts from
+whatever is selected, so `--only A --only B --skip B` runs A. An unregistered
+label is an error for either flag — a typo can never silently disable a gate.
+A leg is skipped only when its precondition cannot be met by the caller: the
+`generated hooks` leg, for one, compares every checked-out repo's installed
+copy against the canonical hook, and a PR that EDITS the canonical hook cannot
+make the sibling copies match — only the post-merge propagation workflow can.
 
 --write writes `<root>/.pyauto-root`, the workspace-root marker every consumer
 resolves the root by (`PyAutoBrain/agents/_pyauto_root.py`): a generated
@@ -1861,6 +1871,17 @@ def main():
         help="run only this drift-check leg (repeatable; use the label the "
              "check prints)",
     )
+    # The complement, for the narrower case: every leg is the caller's to fail
+    # EXCEPT one whose precondition that caller cannot meet. Subtracts from
+    # whatever --only selected; an unknown label is an error either way, so a
+    # typo cannot quietly turn a gate off.
+    parser.add_argument(
+        "--skip",
+        action="append",
+        metavar="CHECK",
+        help="run every drift-check leg but this one (repeatable; use the "
+             "label the check prints; subtracts from --only)",
+    )
     args = parser.parse_args()
 
     mind_root = Path(__file__).resolve().parents[1]
@@ -1953,16 +1974,26 @@ def main():
         CODEX_HOOKS: lambda: check_codex_hooks(root, repos),
         "target-repo layout lints": lambda: check_structure_lints(root, repos),
     }
-    if args.only:
-        unknown = [label for label in args.only if label not in checks]
+    # Both flags match the printed label exactly, and both are validated
+    # against the FULL registry before anything is narrowed — naming a real leg
+    # that --only already excluded is a no-op, naming a leg that does not exist
+    # is a typo, and only the second one is allowed to be silent.
+    for flag, selected in (("--only", args.only), ("--skip", args.skip)):
+        unknown = [label for label in selected or [] if label not in checks]
         if unknown:
             raise SystemExit(
-                "repos_sync: unknown --only check(s): "
+                f"repos_sync: unknown {flag} check(s): "
                 + ", ".join(f"'{u}'" for u in unknown)
                 + "; choose from: "
                 + ", ".join(f"'{label}'" for label in checks)
             )
+    if args.only:
         checks = {label: checks[label] for label in args.only}
+    if args.skip:
+        # Subtraction, after selection: --only says what to run, --skip takes
+        # legs back off that list.
+        checks = {label: run_check for label, run_check in checks.items()
+                  if label not in args.skip}
     drift = False
     for label, run_check in checks.items():
         problems = run_check()
