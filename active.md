@@ -90,9 +90,11 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/561
 - issued: 2026-09-18
 - prompt: active/mass_field_flat_sweep.md
-- status: phase-0-gate
+- status: awaiting-merge
 - autonomy: supervised (header; no --auto — plan approved in chat 2026-09-18; Phase 0 step 3 is a human-confirmation gate on draft PR #322's red latent leg, and PR-open needs the human's explicit Heart ack)
 - worktree: ~/Code/PyAutoLabs-wt/mass-field-workspace-sweep
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/562 (DRAFT, pending-release; c8a1283f on feature/mass-field-flat-sweep, 262 files +630/-728, off main c79c8d36)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/322 (DRAFT, pending-release; UPDATED by 8c1a82a1, fast-forward from 63c3323, 64 files +110/-103 — this task's commit folds onto the phase-3 branch)
 - repos:
   - autolens_workspace: feature/mass-field-flat-sweep
   - autolens_workspace_test: feature/mass-field-workspace-sweep
@@ -102,7 +104,8 @@
 - reference-impl: euclid_strong_lens_modeling_pipeline#90 merged 9cdee7b (task euclid-fields-api, euclid issue #89) — already fully flat; mirrored, not edited from here
 - release-gate: PyAutoGalaxy
 - release-gate: PyAutoLens
-- note: Inherits mass-field-workspace-sweep's Heart RED ("release validation FAILED (stage integrate)") + YELLOW ("manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"). PR-open needs the human's explicit ack, recorded verbatim; merge stays human. GATE before any rewrite: diagnose #322's red latent_integration_smoke_jax.py leg (missing files/latent/latent_summary.json; green on main, red on the draft) and confirm the path with the human.
+- heart-ack: "release validation FAILED (stage integrate)"; yellow "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml" — RELEASE READINESS RED score 60, both pre-existing and unrelated to these two workspace repos; the human was asked "Do you authorize pushing the two commits and opening/updating the PRs despite the RED?" and answered "Yes — push and open/update PRs" (chat 2026-09-18). Scope is push + PR-open/update ONLY: nothing was merged, no PR marked ready, nothing released or tagged; merge and release stay human-only. Second ruling: autolens_workspace#562 opens DRAFT with pending-release because the flat form needs PyAutoLens#744 (478213e78), merged but not yet on PyPI.
+- note: Both PRs are OPEN and DRAFT, labelled pending-release, pending the PyAutoGalaxy + PyAutoLens PyPI release; merge stays human. Phase 0 gate CLEARED: #322's red latent_integration_smoke_jax.py leg was bisected to a JAX 0.11.2 x unfixed-PyAutoGalaxy regression (TypeError: functools.partial ... is not a valid JAX type in the zero-contour solver via the effective_einstein_radius latent), NOT the field sweep — the unmodified main script fails identically in a CI-matching venv, and PyAutoGalaxy 90e757d3 (merged ~10.5 h after that CI run) fixes it, so a CI re-run should clear it; the script PASSES under the flat form (56.4 s). Evidence: 8/8 equivalence, bit-identical log_likelihood -37796.54513586828, autolens_workspace smoke 38/38 + 2/2 notebooks, workspace_test smoke 32/32, notebook AST witness 0 mismatches. Identifiers change BY DESIGN (fields.field.* -> fields.*): old output/ trees are orphaned, nothing aliased or renamed; composition_mge.py pin b99831e66dd27eee314113e8e58235b6 -> 29f82bd3de24984b94657c328b64c3be, galaxy_attached_legacy.py pin 35ebe9353118bcc0c7b2d577ce2639ee UNCHANGED. Also carries two behaviour fixes: the subhalo sensitivity hasattr guards (the old guard silently skipped a deliberate shear prior re-centring under the flat form) and a SEPARATE pre-existing bug in multi_dataset/features/one_by_one/modeling.py whose Second Dataset Offset stage dropped fields= and fitted with no external shear. Next human step: gh pr ready both + re-run #322 CI once the release is on PyPI, then /prm.
 - summary: |
     Phase 6 of the mass-field epic. PyAutoLens#744 made the fields= model slot
     accept a bare MassField; this is the requested adoption sweep that moves
