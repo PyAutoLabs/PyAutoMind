@@ -54,7 +54,7 @@ algorithm change is proposed.
 
 On 2026-09-18, `autolens_profiling` main is clean at `92f1fad`; phase-4b PR #277
 is open and lint passes. Mind main is current, with unrelated dirty prompts
-`active/fields_api_top1000.md` and `active/mass_field_bare_fields_slot.md`.
+`active/fields_api_top1000.md` and `complete/2026/09/mass-field-bare-fields.md`.
 
 `worktree_check_conflict fixed-light-numba-s5 autolens_profiling` exits 1:
 `hst-gpu-residue-p2` (#273) and `fixed-light-numba-s4b` (#276) both claim the

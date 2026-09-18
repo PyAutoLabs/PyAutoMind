@@ -1,3 +1,40 @@
+# Bare MassField support in the fields model slot
+
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/743
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/744
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/744
+- merged: 2026-09-18
+- merge-commit: 478213e787781517113e96f80013270df482f665
+
+Accept a bare MassField alongside collections/lists in Tracer, sliced construction,
+analysis, aggregation and Result. Normalize before geometry warnings; preserve
+validation messages and fresh-list storage. Collections remain the primary library
+example. Flat fields shorten prior paths and intentionally change identifiers.
+
+Baseline reproduced before editing: collection c5cf98ea7733689dc8c0ede6939c1d83,
+flat 36a0be37c9667958bafca2f01e487f80, both 14 priors. Red witness captured at
+analysis/analysis/lens.py:139. Both identifiers pinned; pre-existing validation and
+identifier tests untouched. Added aggregator, serialization, warning, slicing,
+list-ownership, empty-slot and likelihood regression coverage.
+
+Validation: 739 passed, 1 xfailed; focused 84 passed; 157 downstream smoke checks
+passed across six disposable workspace snapshots; independent Sol review CLEAN.
+GitHub Docs and Tests runs 35327374623 / 35327374631 succeeded on e1e5fcfe9:
+docs, Python 3.12, Python 3.13 and no-JAX all green. Merge-state CLEAN; not frozen.
+
+Heart RED development override: live human authorized commit/push/PR and green-CI
+merge, then invoked prm in this turn. RED: release validation FAILED (stage integrate).
+YELLOW: manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml.
+No release authorization or claim to repair Heart. Release obligation remains above.
+
+No workspace source migration in this task. Follow-up prompts are at
+PyAutoMind/tmp/handoffs/euclid-flat-fields.md and autolens-flat-fields-sweep.md.
+Euclid issue #89 remains a separate active task with its no-submission hold.
+Local evidence preserved at PyAutoMind/tmp/mass-field-bare-fields-evidence/;
+public validation and traceback are on issue #743 and PR #744.
+
+## Original prompt
+
 # Accept a bare `MassField` in `fields=` so the flat model form works
 
 Type: feature

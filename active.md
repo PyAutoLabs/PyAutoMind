@@ -188,16 +188,6 @@
   - gates: "92 focused tests PASS; both changed-cell import smokes PASS; Ruff check/format, README idempotence, wall contracts, shell syntax and diff checks PASS; independent review CLEAN; RAL eight-draw witness PASS."
   - issue-record: https://github.com/PyAutoLabs/autolens_profiling/issues/276#issuecomment-5727230819
 
-## mass-field-bare-fields
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/743
-- issued: 2026-09-18
-- prompt: active/mass_field_bare_fields_slot.md
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/mass-field-bare-fields
-- repos:
-  - PyAutoLens: feature/mass-field-bare-fields
-- validation: "739 passed, 1 xfailed; focused 84 passed; 157 downstream smoke checks passed across six isolated workspace snapshots; independent Sol review CLEAN. Evidence: https://github.com/PyAutoLabs/PyAutoLens/issues/743#issuecomment-5727685712"
-
 ## fixed-light-numba-s5
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/278
 - issued: 2026-09-18
