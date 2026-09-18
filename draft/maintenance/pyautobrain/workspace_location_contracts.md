@@ -97,4 +97,10 @@ The physical move, the repos.yaml `path:` field, the ~12 root enumerators, workt
 smoke_install.sh flat pip chain, and the IDE/PYTHONPATH/symlink migration are phases 2 and 3. Do not
 introduce a universal `root / manifest.path` rule here: the review's named ordering hazard is that such
 a rule breaks CI immediately (whose trees are legitimately flat) and misroutes task worktrees later.
-The dead-weight cleanup is the sibling task workspace-dead-weight-cleanup.
+The dead-weight cleanup was the sibling task workspace-dead-weight-cleanup, SHIPPED
+2026-09-18 (PyAutoBrain#390, PyAutoMind#413) — record
+`complete/2026/09/workspace-dead-weight-cleanup.md`. Two findings from it land here:
+the `.worktrees/` trees it removed are ~80 paths this phase no longer has to migrate, and
+its `autolens_jax_joss_manifest_gap` sibling is the MIRROR of scope item 7 — `repos_sync.py`
+is blind in both directions (declared-but-missing is skipped; on-disk-but-undeclared is
+silence). Fix both together.
