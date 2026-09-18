@@ -188,3 +188,5 @@
 - repos:
   - PyAutoMind: feature/workspace-smoke-shim-bootstrap
 - note: First stage edits Mind only. Rollout to the twelve consumers is gated on resolving existing lens workspace and Euclid pipeline claims. No overlap waiver or phase-3 move authorized. Preserve canonical Mind's pre-existing staged draft deletion.
+- resume: Implementation committed locally through 8b2e729c on feature/workspace-smoke-shim-bootstrap; independent review CLEAN after root-symlink and template-classification fixes. Bootstrap/template targeted tests 53 passed; fresh remote-clone dry run 12/12 bootstrap-only changes, no pushes. PR draft in task worktree PyAutoMind/tmp/smoke-bootstrap-pr.md. Await human acknowledgement of Heart YELLOW before push/PR; rollout remains false and phase 2c is not complete.
+- heart-pending: "euclid_strong_lens_modeling_pipeline: open PR 7d old"; "release validation incomplete: no rehearsal for current source" (2026-09-18; acknowledgement not yet given).
