@@ -30,6 +30,41 @@ set -u
 
 MIND_DIR="$(cd "$(dirname "$(readlink -f "$0")")/.." && pwd)"
 HOOK="$MIND_DIR/policy/session_start_hook.sh"
+
+# The workspace root — the directory holding the checkouts side by side, which
+# is what the fan-out below walks. PyAutoBrain's shared resolver where the
+# Brain checkout is beside us (an explicit PYAUTO_ROOT, then the nearest
+# ancestor carrying a .pyauto-root marker, then the parent of a checkout), the
+# parent of this checkout where it is not — which is what this script assumed
+# before the resolver existed, and is still right for a side-by-side remote
+# session with no Brain. The marker rule is what keeps the fan-out right once
+# the checkouts are grouped into subdirectories.
+#
+# Guarded the same way `repos_sync.workspace_root` is: the resolver anchors on
+# the BRAIN checkout, so a worktree bundle whose PyAutoBrain is a symlink into
+# the canonical workspace resolves THERE, and this session would bootstrap
+# somebody else's tree. If the resolved root does not hold this very checkout,
+# take the parent. An explicit PYAUTO_ROOT is the operator's word and is never
+# second-guessed.
+WORKSPACE_ROOT="$(dirname "$MIND_DIR")"
+_root_helper="$WORKSPACE_ROOT/PyAutoBrain/bin/_pyauto_root.sh"
+if [ -r "$_root_helper" ]; then
+    _pyauto_root_declared="${PYAUTO_ROOT:-}"
+    _pyauto_wt_declared="${PYAUTO_WT_ROOT:-}"
+    # shellcheck source=/dev/null
+    . "$_root_helper"
+    if [ -n "$_pyauto_root_declared" ] \
+        || [ "$(readlink -f "$PYAUTO_ROOT/$(basename "$MIND_DIR")")" = "$MIND_DIR" ]; then
+        WORKSPACE_ROOT="$PYAUTO_ROOT"
+    else
+        # The resolver landed on another workspace. Put the environment back
+        # the way it was, so nothing the hooks below read carries an answer
+        # this script has just rejected.
+        PYAUTO_ROOT="$WORKSPACE_ROOT"
+        PYAUTO_WT_ROOT="${_pyauto_wt_declared:-${WORKSPACE_ROOT}-wt}"
+        export PYAUTO_ROOT PYAUTO_WT_ROOT
+    fi
+fi
 VENV="${PYAUTO_SESSION_VENV:-$HOME/.pyauto/session-py312}"
 
 say() { printf '[bootstrap] %s\n' "$*" >&2; }
@@ -83,7 +118,7 @@ resolve_interpreter() {
 # through this script runs one repo's hook unless it fans out (see below).
 extras_state() {
     local extras repo marker root rc=0
-    root="$(dirname "$MIND_DIR")"
+    root="$WORKSPACE_ROOT"
     for extras in "$root"/*/.claude/session-python.txt; do
         [ -r "$extras" ] || continue
         repo="$(basename "$(dirname "$(dirname "$extras")")")"
@@ -100,7 +135,7 @@ extras_state() {
 
 shallow_repos() {
     local root repo out=""
-    root="$(dirname "$MIND_DIR")"
+    root="$WORKSPACE_ROOT"
     for repo in "$root"/*/; do
         [ -e "${repo}.git/shallow" ] && out="$out $(basename "$repo")"
     done
@@ -225,7 +260,7 @@ if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
     exit 0
 fi
 
-CLAUDE_PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$(dirname "$MIND_DIR")}" "$HOOK" || {
+CLAUDE_PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$WORKSPACE_ROOT}" "$HOOK" || {
     say "WARNING: bootstrap incomplete; the session may be on the container's python"
     exit 0
 }
@@ -242,7 +277,7 @@ CLAUDE_PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$(dirname "$MIND_DIR")}" "$HOOK" || {
 # written INTO a container, and every first session in a fresh container is one
 # the fan-out has never run in. Each hook is idempotent (~0.2s warm), so doing it
 # here unconditionally costs about a second and removes the dependency.
-root="$(dirname "$MIND_DIR")"
+root="$WORKSPACE_ROOT"
 for repo in "$root"/*/; do
     [ "${repo%/}" = "$MIND_DIR" ] && continue
     hook="${repo}.claude/hooks/session-start.sh"

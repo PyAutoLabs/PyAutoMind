@@ -859,6 +859,26 @@ def report(results):
     return failed
 
 
+def workspace_root(mind_root):
+    """The workspace root to stamp the templates from.
+
+    Resolved in ONE place for the whole of scripts/ — by the body map's own
+    tool, which adopts PyAutoBrain's shared resolver (an explicit PYAUTO_ROOT,
+    then the nearest ancestor carrying a `.pyauto-root` marker, then the parent
+    of a checkout). Imported here rather than at module scope, and tolerantly:
+    this generator has to keep working as a lone copy of itself — the drift job
+    copies it out, and `test_spawn_template_contract` runs it from a temp
+    directory — and where `repos_sync` is not beside it, the parent of this
+    checkout is exactly the answer this script gave before the resolver
+    existed.
+    """
+    try:
+        from repos_sync import workspace_root as resolve
+    except ImportError:
+        return mind_root.parent
+    return resolve(mind_root)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", metavar="DIR")
@@ -868,7 +888,8 @@ def main():
     args = parser.parse_args()
 
     mind_root = Path(__file__).resolve().parents[1]
-    root = args.root or mind_root.parent
+    # `--root` still wins; only the default changed (see workspace_root).
+    root = args.root or workspace_root(mind_root)
 
     if args.stamp_family:
         stamped = stamp_family(root, Path(args.stamp_family))
