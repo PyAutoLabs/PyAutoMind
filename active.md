@@ -192,21 +192,18 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/278
 - issued: 2026-09-18
 - prompt: active/fixed_light_numba_s5_memo_robustness.md
-- status: awaiting-input
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-s5
 - repos:
   - autolens_profiling: feature/fixed-light-numba-s5
 - parallel-claim: '2026-09-18: user explicitly replied "Approve separate, disjoint worktree" to proceeding alongside PR #277 and GPU study #273. New phase-5 CPU graded-draw script, helper, tests, submit and results only; existing tasks source files unchanged. Conflict guard reports fixed-light-numba-s4b and hst-gpu-residue-p2; human coordination waiver recorded here and in the issue plan.'
 - hpc: "RAL job 343398 COMPLETED 0:0, 16:16, MaxRSS 8775700K. All 41 models, 820 timing samples, 82 warm/cold pairs PASS; source snapshot and artifact hashes verified."
-- heart-red-override: |
-    2026-09-18 live human: "I authorize, raise pr and merge when CI is green."
-    RED: release validation FAILED (stage integrate)
-    YELLOW: manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
-    Gates: 739 passed / 1 xfailed; 157 smoke passed; independent Sol review CLEAN.
-    Authorizes commit/push/pending-release PR and this-turn merge only with every CI leg green. No release or CI bypass.
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/744
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/744
-- note: "Committed e1e5fcfe9 and opened pending-release PR #744 under the recorded live Heart override. All four CI checks running at open. User authorized merge in this turn when every leg is green."
-- result: "Memo numerically correct but 56–60% slower on graded broad-proposal stress sequences: cold/warm 382.888/611.286 ms (graded) and 381.977/594.973 ms (permuted). Active sets 82/82 equal; max relative evidence difference 5.72e-14. Eight tests, import smoke, Ruff/format, shell/API/README/artifact checks pass; independent staged-file review CLEAN. Eight task-specific files staged, no source commit or PR yet."
-- ship-block: "Heart RED as of 2026-09-18T08:59:06Z: release validation FAILED (stage integrate). Yellow: manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. Await live #278 authorization to commit, push and open pending-release PR. Prior #276 exception does not transfer. No merge authorization."
-- next: "Resume with approved shipping if human grants #278 RED override; draft PR body PyAutoMind/tmp/fixed-light-numba-s5-pr.md. Results note in worktree results/notes/fixed_lens_light_numba_memo_2026_09.md. No running HPC job or CI waiter remains."
+- result: "Memo numerically correct but 56–60% slower on graded broad-proposal stress sequences: cold/warm 382.888/611.286 ms (graded) and 381.977/594.973 ms (permuted). Active sets 82/82 equal; max relative evidence difference 5.72e-14. Eight tests, import smoke, Ruff/format, shell/API/README/artifact checks pass; independent staged-file review CLEAN. Eight task-specific files committed and pushed as cd68548; PR #279 open under current human authorization."
+- heart-red-override:
+  - authorization: '2026-09-18: live user replied "May I commit, push, and open its PR despite Heart RED? yes" to the preceding #278 shipping request. Commit/push/pending-release PR only; no merge or release.'
+  - reason: "release validation FAILED (stage integrate)"
+  - yellow-reason: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"
+  - gates: "Eight focused tests PASS; changed-cell import and full-size two-model smokes PASS; Ruff/format, shell/API/README/artifact checks PASS; independent review CLEAN; RAL 343398 full numerical witness PASS."
+  - issue-record: https://github.com/PyAutoLabs/autolens_profiling/issues/278#issuecomment-5728018531
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/279
+- next: "Await required CI and separate human merge command. No merge approval or background CI waiter."
