@@ -6,7 +6,9 @@ Autonomy: human-required
 Priority: high
 Filed: 2026-09-18
 Blocks: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90
-Status: proposed; source plan approval required
+Status: approved; implementation in progress
+Issued: 2026-09-18
+Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
 
 ## Original user request
 
@@ -31,3 +33,7 @@ Evidence: PyAutoMind/tmp/euclid-flat-fields/{ci-failed.log,zero-contour-repro.py
 ## Branch survey
 
 PyAutoGalaxy and autogalaxy_workspace_test are clean on main; conflict guard reports no claims for either. Proposed branch: feature/euclid-jax-contour-compat. Proposed worktree: ~/Code/PyAutoLabs-wt/euclid-jax-contour-compat. No issue, source branch, or source edit has been created for this proposed repair.
+
+## Live approval — 2026-09-18
+
+The user approved the upstream adapter source plan and merging repair PR(s) and pipeline #90 only when every required CI check is green. No repeat source-plan approval is needed. Preserve release/readiness gates; the pipeline Heart override does not automatically cover this task. No SLURM submissions until modelling-script approval.

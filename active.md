@@ -1,5 +1,14 @@
 # Active Tasks
 
+## euclid-jax-contour-compat
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
+- issued: 2026-09-18
+- prompt: active/euclid_jax_zero_contour_011.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/euclid-jax-contour-compat
+- repos:
+- note: Source plan and green-CI merges approved in live chat 2026-09-18. Library Heart gate remains applicable. No SLURM submissions.
+
 ## euclid-fields-api
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89
 - issued: 2026-09-18
