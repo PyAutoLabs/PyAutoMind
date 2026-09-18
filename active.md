@@ -14,6 +14,9 @@
   - guard: worktree_check_conflict fired — PyAutoMind is claimed by codex-hook-parity (#407)
   - authorization: human approved an own worktree over a fold or a planned.md park
   - basis: file sets are disjoint (#407 touches .codex/hooks.json, scripts/repos_sync.py, repos.yaml, hook workflows; this touches .github/scripts/arxiv_fetch.py, tests/test_arxiv_fetch_retry.py) and #407's worktree is clean
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/412
+- implementation: commit 3691aaef on feature/arxiv-digest-api-retry. Red-then-green recorded (2 new 406 witnesses fail on pre-fix source, 8 existing pass; 10 pass after). Both --selftest PASS. arxiv_interests.py coverage proven by execution, not by reading.
+- contradiction: the plan expected a live --livecheck PASS from here; it returned SKIPPED (network) after exhausting the full ladder on 406. The 406 is NOT egress-specific and NOT transient — Fastly's edge refuses the request (via: 1.1 varnish, no 1.1 google), so arXiv never sees it, and ten header combinations across urllib.request and http.client all 406 on UNCACHED urls while curl and requests get 200. Leading hypothesis: bot mitigation on the stdlib client fingerprint. #412 is therefore strictly better but possibly insufficient; follow-up filed at draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md. Probing trap: repeated urls return cached 200s and hide the effect.
 - held: backfill of the four lost digest nights (09-14, 09-15, 09-17, 09-18) needs a manual workflow_dispatch with LOOKBACK_HOURS, which posts to the shared Slack channel — human approval pending, separate from the fix.
 
 ## euclid-fields-api
