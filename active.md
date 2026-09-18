@@ -1,5 +1,21 @@
 # Active Tasks
 
+## arxiv-digest-api-retry
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/410
+- issued: 2026-09-18
+- prompt: active/arxiv_digest_dies_on_api_transport_errors.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/arxiv-digest-api-retry
+- repos:
+  - PyAutoMind: feature/arxiv-digest-api-retry
+- note: "Recovers abandoned branch claude/papers-slack-pyautomemory-39wrt1 (commit 9f5fbab6, written 2026-09-16, never PR'd) and closes its gap: RETRY_STATUSES omitted 406, so _get() re-raised unretried and the fetch step died even though _livecheck() survived. Branch is cut from that branch, not main, to keep its history. Refuted and not to be re-derived: the User-Agent/Accept headers are NOT the cause (all four header combinations returned HTTP 200 when probed live 2026-09-18 from a home IP); cron placement is NOT the cause (complete/2026/09/cron-delivery-headroom.md)."
+- parallel-claim:
+  - date: 2026-09-18
+  - guard: worktree_check_conflict fired — PyAutoMind is claimed by codex-hook-parity (#407)
+  - authorization: human approved an own worktree over a fold or a planned.md park
+  - basis: file sets are disjoint (#407 touches .codex/hooks.json, scripts/repos_sync.py, repos.yaml, hook workflows; this touches .github/scripts/arxiv_fetch.py, tests/test_arxiv_fetch_retry.py) and #407's worktree is clean
+- held: backfill of the four lost digest nights (09-14, 09-15, 09-17, 09-18) needs a manual workflow_dispatch with LOOKBACK_HOURS, which posts to the shared Slack channel — human approval pending, separate from the fix.
+
 ## euclid-fields-api
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89
 - issued: 2026-09-18
