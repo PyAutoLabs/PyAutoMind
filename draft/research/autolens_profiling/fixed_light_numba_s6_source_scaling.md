@@ -1,0 +1,52 @@
+# Phase 6: source-pixel scaling of the numba CPU likelihood
+
+Type: research
+Target: autolens_profiling
+Repos:
+- autolens_profiling
+Epic: fixed-lens-light-numba-cpu
+Phase: 6
+Difficulty: large
+Autonomy: human-required
+Consequence: judge
+Priority: high
+Review-minutes: 25
+Status: plan ready; awaiting separate-worktree coordination approval
+
+## Original user request
+
+> yep do it
+
+Approves the preceding proposal: measure full likelihood runtime and memory versus source-pixel count, decompose costs, compare production memo on/off for nearby and broad sequences, preserve single-thread numerical checks. This follows merged #279 and #281; the phase-5b residual policy is not promoted.
+
+## High-level plan
+
+1. Profile HST Delaunay fp64 numba CPU with the current `_sparse` assembly API and production positive-only solve, using fixed lens-light subtraction as in phase 5.
+2. Sweep requested source pixels 500, 1000, 1500, 2500, 4000. Record actual mapper and solve dimensions separately.
+3. At every N compare production memo off/on on the same eight nearby and eight broad draws. Freeze seed 601 and the draw manifest before timings; use phase-5b 0.05/5 prior-sigma stepping conventions, no policy tuning.
+4. Run six fresh-cache traversals per lane/sequence, alternating lane order, with compilation and setup outside clean whole-Analysis timings. Keep identical model sequence across N; do not compare numerical solutions across different discretizations.
+5. Diagnose curvature, regularization, NNLS and determinants separately; explain residual overhead and avoid double-counting nested timers. Record peak process RSS in an isolated process per N, and distinguish it from matrix memory.
+6. Publish JSON/PNG and a qualified note: runtime/memory scaling, bottleneck fractions, memo sensitivity and measured crossover intervals. No extrapolated performance claims or production changes.
+
+## Detailed implementation and validation
+
+All additions live in autolens_profiling, based on merged origin/main:
+- scripts/imaging/likelihood_breakdown/fixed_light_numba_scaling.py: prepare/evaluate size cells, clean timing lanes, manifest and diagnostic passes. Reuse phase5.prepare(rows, source_pixels), memo_scope and compare_solutions read-only.
+- scripts/misc/likelihood_breakdown/fixed_light_numba_scaling_steps.py: exclusive timing collection, aggregation, dimensions/memory metadata, slope calculation with raw points and fit quality.
+- scripts/misc/test/test_fixed_light_numba_scaling.py: meaningful tests for lane/cache isolation, timer nesting, missing/failed cells and paired numerical gates.
+- hpc/batch_cpu/submit_breakdown_imaging_fixed_light_numba_scaling_delaunay_ral_hst_fp64: single CPU, pinned BLAS/Numba thread environments, separate process/job per N, finite walltime and memory bounds. Full sweep on private source snapshot; never refresh shared libraries during another run.
+- results/breakdown/imaging/: per-N evidence, raw repeated timings and plots; results/notes/fixed_lens_light_numba_scaling_2026_09.md plus source/job manifest.
+
+Numerical gates: reuse phase-5 comparator unchanged (including exact active-set equality and 1e-9 relative evidence gate) for memo on/off at each same N/model. Carry reconstruction checks and clean/diagnostic likelihood agreement. Report evidence absolute errors too. Any failure blocks interpretation as equivalent likelihood performance. Timers must reconcile with separately observed whole-call timing to 5%; otherwise label breakdown inconclusive, retain clean whole-call results, fix instrumentation before claims. No sum of overlapping timer categories.
+
+Report per-traversal totals, distributions and raw repeats; empirical log-log exponents are descriptive, not asymptotic complexity proofs. No crossover interpolation outside measured brackets. Cache hit/fallback/iteration metadata is diagnostic only. Per-N memory reports include preparation/compilation explicitly; no claim that process RSS equals solver memory. A timed-out/OOM leg stays a failed/censored observation and is not silently omitted. First run small-N smoke and N1500 parity sanity check before the full sweep. Capture library revisions, source hashes, hardware/load, environment thread pins and runtime thread evidence (unavailable when not observable). Ruff/format/import/API/shell/README gates and independent review before shipping.
+
+## Branch survey and coordination
+
+Canonical autolens_profiling: main, clean. PyAutoMind: main, clean before this prompt.
+Recent profiling branches: phase5b, phase5, phase4b, main, GPU phase2.
+Proposed branch: feature/fixed-light-numba-s6.
+Proposed task root: ~/Code/PyAutoLabs-wt/fixed-light-numba-s6/.
+Conflict guard finds hst-gpu-residue-p2 and fixed-light-numba-s4b still claiming autolens_profiling. Request explicit approval for this separate worktree, with new phase-6 files only and existing source files unchanged. Prior phase-5/5b waivers were task-specific. Old phase-5 worktrees remain preserved with local outputs pending cleanup permission; they are not reused.
+
+The issue body is this two-level plan. Do not create issue, worktree or source edits until the coordination guard is approved. Phase 7 (HST + Euclid verdict) remains separate.
