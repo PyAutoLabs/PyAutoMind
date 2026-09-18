@@ -19,6 +19,8 @@
   - scope: commit, push, pending-release PR; merge only on green CI. No release or SLURM submission; modelling-script hold remains.
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90
 - implementation: 7fbdbe5; 230 tests, 9/9 smoke, independent review CLEAN. Science/RAL deployment pending merge; submission hold remains.
+- ci-blocker: Both unit matrix legs fail the latent contour test with JAX 0.11.2; isolated third-party-only reproduction confirms the dependency incompatibility. Proposed repair: draft/bug/autogalaxy/euclid_jax_zero_contour_011.md (awaiting source-plan approval).
+- deployment: Not synced; local science d53b9ce, RAL PyAutoLens 7197380. No stack refresh or jobs.
 
 ## codex-hook-parity
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407

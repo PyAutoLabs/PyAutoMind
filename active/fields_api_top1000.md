@@ -76,3 +76,21 @@ Branch gates passed: 230 pipeline tests; 9/9 smoke scripts; independent Sol revi
 Authorization is scoped to euclid-fields-api / issue #89: commit, push, pending-release PR, and merge only with every required check green during this session. No release, failed-check bypass, or SLURM submission is authorized. The modelling-script submission hold remains.
 
 Latest API correction: no compatibility branches or tests for nested collection-form single fields. Models use fields=field and fields.shear.gamma_1/2. Legacy galaxy-attached result readers remain supported.
+
+## CI blocker — 2026-09-18
+
+PR #90, head `7fbdbe5123828570aa7af08cdf5d4097fb397454`, is not merged.
+
+Both Python 3.12 and 3.13 unit legs fail `test_latent_euclid_variables_traces_under_jax_jit`; each reports 219 passed, 1 failed. Both slow-test legs passed. The newly added bare-fields likelihood/gradient test passed. At the CI judgment, both smoke matrix legs were still running.
+
+CI installed JAX/jaxlib 0.11.2 and jax-zero-contour 2.0.0. The passing local suite uses JAX/jaxlib 0.10.2 with the same contour package. A standalone 15-line circle-contour reproducer with no PyAutoLens, Euclid or MassField code passes on 0.10.2 and fails on 0.11.2:
+
+`TypeError: Argument 'functools.partial(...)' of type '<class functools.partial>' is not a valid JAX type`
+
+The trace passes through `jax_zero_contour.ZeroSolver.newton` → `jax.lax.custom_root` → the solver loop carrying the callable. No test was skipped, weakened, or marked expected-failure; no dependency downgrade was applied to CI or the shared environment.
+
+Evidence retained locally under `PyAutoMind/tmp/euclid-flat-fields/`: `ci-failed.log`, `zero-contour-repro.py`, `repro-jax010.log`, `repro-jax011.log`. The new-JAX reproduction used an isolated temporary environment; the production environment was not changed.
+
+Science deployment remains pending: local euclid_dr1 at d53b9ce, RAL PyAutoLens at 7197380. RAL's interpreter `/mnt/ral/jnightin/PyAuto/PyAuto/bin/python3` successfully imported `/mnt/ral/jnightin/PyAuto/PyAutoLens/autolens/__init__.py` and confirmed bare-field normalization absent. Stack preconditions checked Nerves, Fit and Array as clean/main/up-to-date; the 180-second read-only check timed out during Galaxy. HPCPullPyAuto was not run. No code sync or SLURM submission occurred. The final modelling-script approval hold remains.
+
+Proposed upstream repair: draft/bug/autogalaxy/euclid_jax_zero_contour_011.md; no source repair approved or implemented yet.
