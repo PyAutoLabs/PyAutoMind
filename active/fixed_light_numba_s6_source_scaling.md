@@ -11,7 +11,7 @@ Autonomy: human-required
 Consequence: judge
 Priority: high
 Review-minutes: 25
-Status: workspace-dev
+Status: awaiting-input
 Issued: 2026-09-18
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/282
 
@@ -57,66 +57,37 @@ The issue body is this two-level plan. Do not create issue, worktree or source e
 
 2026-09-18: user replied **yes go** to the phase-6 plan and separate-worktree coordination request. Both existing claims were rechecked; new phase-6 files only. Base fb303cf.
 
-## Run checkpoint — 2026-09-18 14:53 BST
+## Completed evidence — 2026-09-18
 
-Implementation complete, 15 focused tests + Ruff/format/import/shell/README checks PASS.
-Independent implementation review CLEAN. Independent empirical review CLEAN for
-N500/1000/1500; root artifact verification also passes N2500. No old task source
-files changed. Worktree branch feature/fixed-light-numba-s6; source + four cells
-and explicitly interim note/aggregate are staged, no source commit or PR.
+All five RAL cells PASS. Jobs343430_0 and343445_1..4 completed0:0 in
+3:22,4:19,6:53,17:00,42:21 respectively. Source snapshot basefb303cf,
+archive SHA2560f2bdad3f8d03e202e0ca6b67e9a7e526ad7792f77d63ce96a5c2383c8f72c80.
+All48source inputs verified before/after; all RAL library revisions unchanged
+and tracked-clean. Final source/job/artifact sidecar is
+results/notes/fixed_light_numba_s6_source_jobs.json. Raw JSONs were compacted
+losslessly; raw/formattedSHA and equality assertions retained in sidecar.
 
-RAL first job343430_0 N500 completed0:0 in3:22. Array343445_1 N1000 completed4:19,
-_2 N1500 completed6:53, _3 N2500 completed17:00, all0:0 and every gatePASS.
-Final343445_4 N4000 started14:52BST, still running at checkpoint. The run limit
-is4hours/64GiB/oneCPU, noGPU. Do not resubmit completed sizes. No monitoring
-subscription or agent wake-up is armed.
+80paired comparisons PASS exact active sets and1e-9relative evidence gate.
+960clean+960instrumented evaluations agree with diagnostic evidence. Maximum
+evidence error5.23869e-10nats absolute/2.43191e-13relative; worst reconciliation
+0.265% against5%gate.15focused tests, Ruff/format/import/shell/README checksPASS.
+Independent implementation and full empirical/note/figure/provenance reviewCLEAN.
 
-Private remote snapshot: /mnt/ral/jnightin/autolens_profiling_wt/fixed-light-numba-s6-run
-(local output/s6/source.tar.gz and source_manifest.json). Archive SHA256
-0f2bdad3f8d03e202e0ca6b67e9a7e526ad7792f77d63ce96a5c2383c8f72c80;48inputs
-verified before execution and unchanged locally. Basefb303cf. RAL stackclean:
-Array192d4b7,Fit7c0e79a,Galaxy90e757d,Lens478213e,Nerves8eca4b3. Exactfull
-revisions in artifacts and output/s6/ral-provenance.txt. Compute lscpu captured
-separately in ral-compute-lscpu.txt (AMD EPYC7702,124onlineCPUs); lscpu inside
-ral-provenance.txt is the login node and MUST NOT be described as compute hardware.
+AtN4000 nearbycold/memo2137.865/1288.876ms; broad4312.031/10782.596ms.
+NNLS accounts for68–95% of whole-call time atN4000. Memo saves39.7% nearby,
+but broad costs2.50times cold. No production change/default recommendation.
+HarnessRSS9.085GiB includes8preparedAnalyses; matrix alone128MB. Suggested
+separate phase7: HST+Euclid with representative proposal histories.
 
-Next steps:
-1. Read sacct343445 and tail output/output.343445_4.out under remote hpc/batch_cpu.
-2. Pull *s6_n4000* from remote results/breakdown/imaging into the worktree same
-   folder only after final file written. Preserve any failure/censored cell;
-   do not silently drop it or rerun to obtain a desired result.
-3. Run output/s6/verify_results.py (current cells allPASS,64pairs); final allfive
-   should give80pairs,960clean+960instrumented evaluations.
-4. Source ../activate.sh; run driver --aggregate --output-dir results/breakdown/imaging.
-   output/s6/finish_note.py drafts tables only IF all gates pass; inspect and
-   write real final interpretation, not just its generated tables. Remove interim
-   status/table. If final cell fails, adapt note to report failure honestly.
-5. Add source/job sidecar with source_manifest, alljobstates/elapsed/MaxRSS,
-   remote post-run48hashes and library cleanliness; dataset/source/library
-   identity across sizes already checked through2500. Runtime BLAS count is
-   unavailable; only envpins1 and Numba runtime1 are observed. RSS is harness
-   high-water with8prepared Analyses, not a single production likelihood.
-6. Ask existing independent s6_review worker for complete empirical/note review;
-   code review alreadyCLEAN. N2500/N4000 not yet independently reviewed.
-7. Final validation and draft PR against main via ship-workspace. Heart remains
-   RED release validation FAILED (stage integrate), YELLOW manifest drift:
-   remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml.
-   No phase6 shipping override has been requested/granted; do allreviewable work
-   first, then obtain live task-specific grant if these reasons persist.
+24newfiles staged in worktree fixed-light-numba-s6/autolens_profiling,
+branch feature/fixed-light-numba-s6; no source commit/push/PR yet.
+Final note: results/notes/fixed_lens_light_numba_scaling_2026_09.md.
+PR draft: PyAutoMind/tmp/s6-pr-body.md (scratch). All oldtaskfiles unchanged.
 
-Local N100/N1500 smoke numerical results passed, but concurrent smoke timings
-were discarded; final RAL code additionally counterbalances clean/observed order.
-The failed first timer wiring (interferometer curvature target) and accidental
-oldtest edits were fixed before the source snapshot; currentproduction target
-is imaging_numba.sparse.InversionImagingSparseNumba and actual NNLS callable.
-Do not quote earlier55tests: that was a worker path mistake; finalnew7 plus
-parent8 =15focused tests. Existing source files are unchanged.
-
-Artifact packaging checkpoint: the four retrieved result JSONs had scalar arrays
-compacted losslessly by output/s6/format_results.py (parsed JSON equality
-asserted). Original and formatted SHA256/byte sizes are retained in
-output/s6/artifact-formatting.json. After pulling N4000, run that formatter
-again, then verifier and aggregator, and include the formatting manifest in
-the final provenance sidecar. Do not overwrite formatted local cells by pulling
-all remote files again unless re-running formatting deliberately. Declaration
-files are never reformatted; their frozen hashes remain unchanged.
+Remaining gate: live task-specific HeartRED shipping override for issue282.
+Current RED reason: "release validation FAILED (stage integrate)".
+YELLOW: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml".
+No phase6 override requested/granted before this checkpoint. Final provenance review is CLEAN. Ask once with results and exact reasons. On grant,
+record four sinks per PyAutoBrain/AUTONOMY.md, commit/push/open pending-release
+PR via ship-workspace. Merge requires separate current human command and CI.
+No run/CI subscription or scheduled wakeup exists. All cluster work complete.
