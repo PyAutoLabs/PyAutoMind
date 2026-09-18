@@ -1,38 +1,5 @@
 # Active Tasks
 
-## workspace-resolver-fanout
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/393
-- issued: 2026-09-18
-- prompt: active/workspace_resolver_fanout.md
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/415
-- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/75
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/561
-- note: PyAutoMind#415 also fixes firewall_gate.yml, which was red-by-construction for
-  ANY canonical-hook PR (the leg's precondition - that propagation has run - cannot be met
-  on a pull request). Latent since 2026-08-29/09-03; this was the first hook PR to expose it.
-  Merging #415 triggers session_hook_propagate.yml, which bot-pushes the new hook to ~34 repos.
-- autonomy: supervised (plan approved in chat 2026-09-18, including the smoke-shim split)
-- worktree: ~/Code/PyAutoLabs-wt/workspace-resolver-fanout
-- epic: workspace-regroup (phase 2; 1b and 1a shipped 2026-09-18)
-- next-phase: draft/maintenance/pyautobrain/workspace_smoke_shim_bootstrap.md (phase 2c, split out of this)
-- repos:
-  - PyAutoMind: feature/workspace-resolver-fanout
-  - PyAutoReduce: feature/workspace-resolver-fanout
-  - PyAutoArray: feature/workspace-resolver-fanout
-- summary: |
-    Gives the canonical session-start hook the phase-1a marker walk and fixes its
-    one-level fan-out (:426 unshallow loop, :470 install_workspace_settings which
-    would write a .claude/ tree into a family dir with every guard passing, :564 the
-    PYAUTO_ROOT export that poisons downstream). ONE PR: session_hook_propagate.yml
-    bot-pushes the regenerated hook to every manifest repo, by design. Severity note:
-    the hook exits at :47 unless CLAUDE_CODE_REMOTE=true, so it is a remote/web-session
-    defect, not a local one. Also fixes the 7 tracked Python files hardcoding an absolute
-    workspace path, one of which (PyAutoReduce/scripts/reduce_cosmos_web_ring.py:34) is a
-    live cross-repo reference into autolens_assistant/dataset/.
-    The 12 smoke shims were SPLIT OUT: they are not copies (12 checksums, 5 shapes) and
-    have no propagation mechanism, so they carry a prior design question of their own.
-
 ## mass-field-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559
 - issued: 2026-09-17

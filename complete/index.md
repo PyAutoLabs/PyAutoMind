@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1491 records across 8 buckets.
+1492 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -370,6 +370,7 @@ markers; everything below GENERATED is rebuilt.
 - [workspace-dead-weight-cleanup](2026/09/workspace-dead-weight-cleanup.md)
 - [workspace-location-contracts](2026/09/workspace-location-contracts.md)
 - [workspace-lp-sub-size-1-retire](2026/09/workspace-lp-sub-size-1-retire.md)
+- [workspace-resolver-fanout](2026/09/workspace-resolver-fanout.md)
 - [xla-triton-gemm-off](2026/09/xla-triton-gemm-off.md)
 
 ## 2026/08

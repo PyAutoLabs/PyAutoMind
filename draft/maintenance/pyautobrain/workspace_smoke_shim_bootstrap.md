@@ -25,7 +25,9 @@ Review-minutes: 25
 Unattended: needs-slicing
 
 Phase 2c of the workspace regroup. Changes NO directory layout. Split out of
-`workspace_resolver_fanout.md` (phase 2) on 2026-09-18 because it is a different KIND of
+`workspace_resolver_fanout.md` (phase 2, SHIPPED 2026-09-18 — PyAutoMind#415,
+PyAutoReduce#75, PyAutoArray#561; record complete/2026/09/workspace-resolver-fanout.md)
+because it is a different KIND of
 problem from the rest of that task.
 
 ## The defect
@@ -80,6 +82,11 @@ The witness deliberately requires that a single edit reach all 12 without a hand
 
 - CI must keep working unchanged: the reusable workflow supplies PyAutoHands on PYTHONPATH and
   the `try` branch must keep winning there. Verify against `PyAutoHeart/.github/workflows/smoke-tests.yml`.
+- Phase 2 shipped the pattern to copy: the hook resolves by marker, PREFERS the shared
+  resolver but never depends on it (read in a subshell that drops `set -euo pipefail`, so an
+  absent or broken resolver costs nothing), and REFUSES a resolver answer that does not
+  contain its own checkout — without that guard a bundle resolves to the canonical workspace.
+  Copy that shape rather than re-deriving it.
 - The marker walk introduced in phase 1a is the resolution rule to adopt
   (`.pyauto-root`, with the sibling-organ probe as the fallback) — do not invent a second one.
 - Do NOT touch `PyAutoHeart/heart/smoke.py`'s flat `pip install ./PyAutoFit ./PyAutoArray ...`
