@@ -6,24 +6,12 @@ Repos:
 - PyAutoMind
 - PyAutoReduce
 - PyAutoArray
-- HowToFit
-- HowToGalaxy
-- HowToLens
-- autocti_workspace
-- autocti_workspace_test
-- autofit_workspace
-- autofit_workspace_test
-- autogalaxy_workspace
-- autogalaxy_workspace_test
-- autolens_workspace
-- autolens_workspace_test
-- euclid_strong_lens_modeling_pipeline
 Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
 Consequence: judge
-Witness: with a nested workspace fixture, the regenerated session-start hook resolves the TRUE root rather than the family directory, and a local `run_smoke.py` still imports build_util from PyAutoHands; `git grep -c 'WORKSPACE_ROOT="$(dirname "$REPO_DIR")"'` returns 0 across all repos; and no tracked Python file matches `Code/PyAutoLabs` outside a docstring.
+Witness: with a nested workspace fixture the regenerated session-start hook resolves the TRUE root rather than the family directory and fans out over every manifest repo rather than one family; `git grep -c 'WORKSPACE_ROOT="$(dirname "$REPO_DIR")"'` returns 0 across all repos after propagation; and no tracked Python file in PyAutoReduce or PyAutoArray matches `Code/PyAutoLabs`.
 Review-minutes: 25
 Unattended: needs-slicing
 Unblocked: phase 1a SHIPPED 2026-09-18 (PyAutoBrain#392, PyAutoHeart#232, PyAutoHands#283, PyAutoMind#414) — record complete/2026/09/workspace-location-contracts.md. The resolver this consumes is on main: `_pyauto_root` resolves by `.pyauto-root` marker with the sibling-organ probe demoted to a fallback, and exports PYAUTO_ROOT_REASON / PYAUTO_ROOT_MARKER for shell callers. NOTE the limitation this phase inherits: step 3 is still wrong for a NESTED workspace with no marker (pinned by a test, deliberately, to protect the remote single-repo case), so the marker is the only thing protecting a regrouped tree.
@@ -47,12 +35,10 @@ CONSUMES the single resolver phase 1a introduces, so it cannot land before it.
    which poisons every downstream consumer). Coverage exists in PyAutoMind/tests/test_session_bootstrap.py
    and tests/test_session_hook_sync.py.
 
-2. **The smoke shims — 14 files across 12 repos.**
-   `.github/scripts/run_smoke.py` (12 copies) plus `autolens_workspace_test` and
-   `autogalaxy_workspace_test` `retime.py` join `WORKSPACE.parent / "PyAutoHands" / "autohands"` with
-   `WORKSPACE = Path(__file__).resolve().parents[2]`. Under nesting this breaks LOUDLY but is
-   mis-diagnosed as "No module named build_util". Dead in CI (the reusable workflow supplies Hands on
-   PYTHONPATH), so this is a local-run defect. Give it the same marker walk.
+2. Renumbered — the smoke shims moved OUT of this task. They are
+   `draft/maintenance/pyautobrain/workspace_smoke_shim_bootstrap.md`: 12 repos, no propagation
+   mechanism, and the 12 files are NOT copies (12 distinct checksums, 5 shape-classes). That task
+   carries the prior question of whether 12 divergent copies of one bootstrap should exist at all.
 
 3. **The 7 tracked Python files that hardcode an absolute workspace path.**
    Only one is a genuine cross-repo reference and the only one a regroup actually breaks:
