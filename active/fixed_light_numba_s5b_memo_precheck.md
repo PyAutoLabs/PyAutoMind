@@ -12,6 +12,8 @@ Priority: high
 Consequence: judge
 Review-minutes: 25
 Filed: 2026-09-18
+Issued: 2026-09-18
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/280
 Witness: A profiling-only pre-solve memo eligibility prototype is compared with unchanged production memo-on and memo-off likelihoods on broad and nearby model sequences, with independent holdouts, gate overhead included, exact active-set equality and <=1e-9 relative evidence agreement. Publish a qualified go/no-go verdict; no production default changes in this task.
 
 ## Original request (verbatim)
@@ -149,8 +151,10 @@ before merging the follow-up; do not merge #279 as an implicit side effect.
 If #279 has merged before setup, use updated origin/main instead. Record the
 base revision and scope the follow-up diff against it.
 
-Explicit coordination approval for this additional worktree is pending. The
-user's approval for the original phase-5 worktree and #278 Heart override is
-recorded separately; neither is silently expanded to phase 5b. Present this
-concrete file-disjoint plan and obtain the coordination decision before source
-edits. Run start-dev / create-issue / start-workspace after that decision.
+Explicit coordination approval received 2026-09-18:
+> contnue   May I create another disjoint worktree, based on PR #279, for this prototype? yes
+
+This approves the concrete file-disjoint plan and waives the three existing
+worktree claims above for this task. Base: cd685483b4f819801231bef0e1e9102be54f9fa5.
+The #278 Heart override remains task-specific; any phase-5b shipping override
+will be requested separately after implementation and validation.
