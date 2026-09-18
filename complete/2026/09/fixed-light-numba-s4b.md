@@ -13,7 +13,7 @@ The task claims only autolens_profiling; PyAutoArray was a conditional promotion
 
 ## Cleanup
 
-Worktree retained pending explicit deletion choice for ignored output/1.1MiB and generated HST lensed_source.fits164KiB, plus caches. It claims no repository after close-out. Existing phase5/5b retained worktrees are separate; phase6 already removed with permission.
+2026-09-18: user authorized cleanup with "delete worktree thanks". Removed the phase4b worktree via worktree_remove, including ignored output/1.1MiB, generated HST lensed_source.fits164KiB and caches. Deleted the local feature/fixed-light-numba-s4b branch after proving it merged into origin/main. Published results remain committed. Existing phase5/5b retained worktrees are separate; phase6 was already removed with permission.
 
 ## Original prompt
 
