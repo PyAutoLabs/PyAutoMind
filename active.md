@@ -4,7 +4,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
 - issued: 2026-09-18
 - prompt: active/euclid_jax_zero_contour_011.md
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/623
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/123
 - worktree: ~/Code/PyAutoLabs-wt/euclid-jax-contour-compat
 - repos:
   - PyAutoGalaxy: feature/euclid-jax-contour-compat
