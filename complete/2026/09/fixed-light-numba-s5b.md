@@ -1,3 +1,18 @@
+# fixed-light-numba-s5b
+
+Merged PR: https://github.com/PyAutoLabs/autolens_profiling/pull/281
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/280
+
+The locked pre-solve residual policy fails promotion: nearby holdout is 11.66% slower than memo, broad holdout 5.28% slower than cold. NO_LEVER; no production changes.
+
+Validation: 24 focused tests; full-size numerical and matched-state smokes; independent review CLEAN; 276 evaluation and 224 calibration comparisons pass. All GitHub workflow runs and jobs on the shipped head passed.
+
+The live user explicitly approved merging both #279 and #281 in dependency order on 2026-09-18. Both merged with merge commits, #279 first and #281 retargeted to main. Heart RED remains acknowledged: `release validation FAILED (stage integrate)`; YELLOW: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. This was development merge authority, not release authority.
+
+Local worktree retained pending permission to remove ignored output/data products. Committed research artifacts are on main; additional local scratch and smoke products remain in the worktree.
+
+## Original prompt
+
 # Phase 5b: reject unsuitable CPU memo seeds before the expensive solve
 
 Type: research

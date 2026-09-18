@@ -1,3 +1,18 @@
+# fixed-light-numba-s5
+
+Merged PR: https://github.com/PyAutoLabs/autolens_profiling/pull/279
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/278
+
+Existing CPU memo is numerically correct but 56–60% slower on the graded and permuted broad-proposal stress sequences. NO_LEVER; no production defaults changed.
+
+Validation: 8 focused tests; full-size smoke; independent review CLEAN; all 82 numerical pairs pass. All GitHub workflow runs and jobs on the shipped head passed.
+
+The live user explicitly approved merging both #279 and #281 in dependency order on 2026-09-18. Both merged with merge commits, #279 first and #281 retargeted to main. Heart RED remains acknowledged: `release validation FAILED (stage integrate)`; YELLOW: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. This was development merge authority, not release authority.
+
+Local worktree retained pending permission to remove ignored output/data products. Committed research artifacts are on main; additional local scratch and smoke products remain in the worktree.
+
+## Original prompt
+
 # Phase 5: CPU NNLS memo robustness across graded draws
 
 Type: research

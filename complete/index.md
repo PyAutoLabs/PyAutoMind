@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1479 records across 8 buckets.
+1481 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -213,6 +213,8 @@ markers; everything below GENERATED is rebuilt.
 - [fixed-light-numba-levers](2026/09/fixed-light-numba-levers.md)
 - [fixed-light-numba-phase1](2026/09/fixed-light-numba-phase1.md)
 - [fixed-light-numba-s4](2026/09/fixed-light-numba-s4.md) — no lever
+- [fixed-light-numba-s5](2026/09/fixed-light-numba-s5.md)
+- [fixed-light-numba-s5b](2026/09/fixed-light-numba-s5b.md)
 - [fixed-light-numba-solver](2026/09/fixed-light-numba-solver.md)
 - [fixed-light-scaling](2026/09/fixed-light-scaling.md)
 - [fixed-light-verdict](2026/09/fixed-light-verdict.md)
