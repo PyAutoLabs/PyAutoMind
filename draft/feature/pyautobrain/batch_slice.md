@@ -11,9 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
-Consequence: judge
+Consequence: notify
 Witness: `pyauto-brain batch slice <needs-slicing prompt>` on a fixture parent proposes two to four children each carrying its own `Witness:`, refuses a child with none ("a smaller judge task, not a slice"), and under `--apply` writes the child prompts plus an `epics.md` entry without renaming or retiring the parent
-Review-minutes: 15
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-02
 

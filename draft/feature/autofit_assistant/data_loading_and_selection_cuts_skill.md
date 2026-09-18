@@ -11,6 +11,7 @@ Autonomy: safe
 Priority: medium
 Consequence: notify
 Witness: a new `skills/af_load_data.md` (name open) is registered in `skills/README.md` and cited from `af_adapt_to_domain` (interview step 2) and `af_wrap_likelihood`; running the start-here Part 2 on `dataset/sne_cosmology/` records the column meanings, units and every selection cut (e.g. `is_calibrator == 0`, `z_hd > 0.023`) in `wiki/project/` with a one-line justification each, before the data-inspection gate fires.
+Review-minutes: 0
 Filed: 2026-09-10
 Parent: complete/2026/09/start-here-mode.md
 

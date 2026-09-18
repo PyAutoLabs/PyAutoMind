@@ -12,6 +12,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Consequence: glance
+Witness: On a simulated SIE with a circular mask, `tangential_caustic_list_from` semi-axes on the masked grid match the unmasked-grid answer to 1e-3 (unit test), or `LensCalc` refuses with a named warning when the critical curve is not enclosed by the mask; the Zoom2D-extent vs contour-clipping bisection result is recorded in the PR.
+Review-minutes: 3
 Filed: 2026-09-17
 
 ## Original request (verbatim)

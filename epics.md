@@ -109,6 +109,12 @@ epic, never picked standalone.
   `draft/research/autolens_profiling/fixed_light_numba_s4b_permute_active_last.md`).
   Inserts ahead of the old phases 4-6, which renumber to 5 (memo warm start), 6 (source-pixel
   scaling), 7 (HST + Euclid verdict).
+  Phase 5 and 5b COMPLETE 2026-09-18 (#278/#280, PRs #279/#281 merged): memo helps nearby
+  proposals but can be slower on broad draws; residual precheck NO_LEVER, no production policy
+  change. Phase 6 COMPLETE (#282, PR #283 merged; `complete/2026/09/fixed-light-numba-s6.md`):
+  N500–4000 scaling, all five cells PASS. NNLS dominates large N; at N4000 memo saves
+  39.7% nearby but costs 2.50x cold for broad draws. No production policy change.
+  Phase 7 (HST + Euclid with representative proposal histories) remains separate and unfiled.
 
 ## hst-gpu-non-solver-residue
 - title: The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve
@@ -130,3 +136,20 @@ epic, never picked standalone.
   evals; production is vmap, phase 1 traced single-call) decides the batching policy, then the batch-aware
   Delaunay `pure_callback` (`expand_dims`, one host call per batch) if the callback matters. Map revised with the
   phase-1 table and re-ranked levers (0 vmap/callback, 1 batch-size decoupling, 2 PSF cube, 3 log-det factor).
+
+## mass-field
+- title: MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own `fields=` slot; galaxy-attached form kept, result identifiers unchanged)
+- ledger: draft/feature/autogalaxy/mass_field_epic.md
+- notes: phases — 1 PyAutoGalaxy standalone `MassField` (merged #621), 2 PyAutoLens `Tracer(fields=)` + analysis `fields` slot + pytree/COOLEST/LOS + `model_util.mass_field_from` (merged #742), 3 **every** galaxy-attached field in autolens_workspace + autolens_workspace_test → `fields=` (re-scoped 2026-09-17 on the human's ruling that the user-facing API is `fields=` everywhere; started ahead of the release, merge gated on it; absorbed phase 4 `group/`), 5 HowToLens + autolens_assistant. `fields` is a collection: shear + sheet at one redshift is one field; several fields means several planes. Issue ONE at a time in order; 3–5 follow the *released* libraries. Hard invariant: `Galaxy` and the prior configs are never edited, no deprecation warning — a user's existing galaxy-attached shear model keeps its PyAutoFit result identifier. Filed 2026-09-17 from the `/start_dev` plan checkpoint of the group shear prompt; redesigned the same day from a `Galaxy` subclass to a standalone class on the human's ruling.
+  Phase 1 SHIPPED 2026-09-17 (PyAutoGalaxy#620, PR #621; record
+  complete/2026/09/mass-field-class.md). Phase 2 SHIPPED 2026-09-17 (PyAutoLens#741, PR #742;
+  record complete/2026/09/mass-field-integration.md) — library work done, both pending-release.
+  Phases 3–5 (workspace sweeps) wait on a release of PyAutoGalaxy#621 + PyAutoLens#742 to the
+  installed stack; phase 3 is issued only once `/release` has published both.
+  Phase 3 IN FLIGHT (autolens_workspace#559; #560 merged 2026-09-18 at c79c8d3,
+  autolens_workspace_test#322 still a draft). Phase 6 added and ISSUED 2026-09-18
+  (autolens_workspace#561, active/mass_field_flat_sweep.md): the flat/bare `fields=field`
+  adoption sweep across both workspaces, unblocked by PyAutoLens#744 (merged 478213e78),
+  reusing phase 3's worktree and folding its workspace_test half into draft PR #322.
+  Amend phase 5's prompt before issuing it — it is written in the collection era and would
+  migrate HowToLens twice.

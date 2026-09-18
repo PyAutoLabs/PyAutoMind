@@ -1,3 +1,114 @@
+# jit-visualization-outputs — JIT quick-update visualization outputs (health_fixes)
+
+**Date:** 2026-09-17
+**Issue:** [autolens_workspace_test#318](https://github.com/PyAutoLabs/autolens_workspace_test/issues/318) (closed)
+**PRs:** [autolens_workspace_test#321](https://github.com/PyAutoLabs/autolens_workspace_test/pull/321) — merged `9f837ea`, one file (`config/build/no_run.yaml`); **no library code changed in any repo**
+**Outcome:** investigated to a definitive verdict; no defect exists to fix. One stale parking settled by CI measurement.
+
+## What this task was
+
+Release run `28784914443` (PyAutoHeart#27) reported four test-workspace scripts —
+`autogalaxy_workspace_test` ellipse / imaging / interferometer and `autolens_workspace_test`
+point_source `modeling_visualization_jit.py` — failing to write the fit image their JIT-cached
+quick-update visualization path should produce. The prompt asked for a shared library fix across
+PyAutoFit / PyAutoGalaxy / PyAutoLens plus focused tests. Brain sized it `too-large` (21),
+fix-locus "library source", and kept doing so on every re-read because it takes the stale Context
+at face value.
+
+## What was actually done
+
+Reproduction-gated, like its siblings `autofit-sampler-database` (PyAutoFit#1508) and
+`numerical-inversion-failures` (PyAutoArray#467). Two local gates ran all four scripts from a
+**cleared** `output/` under each workspace's `config/build/profile_release.yaml`, env resolved by
+`autohands.env_config.build_env_for_script` at workspace CWD, 1800 s `mode=release` cap:
+
+| Gate | Libraries | Result |
+|---|---|---|
+| 2026-08-21 | PyAutoFit `248ca971f`, PyAutoArray `b808a9b1`, PyAutoGalaxy `7e3856dd`, PyAutoLens `d8f6bb3df` | **4/4 PASS** (67 / 45 / 71 / 168 s) |
+| 2026-09-15 | PyAutoFit `27d41e7c8` (+186), PyAutoArray `5e2bc0f4` (+120), PyAutoGalaxy `840ffde0` (+67), PyAutoLens `ccf9295f3` (+58) | **4/4 PASS** (68 / 46 / 53 / 202 s) |
+
+Every script wrote its image and printed its own `PASS:` line; `assert len(produced_pngs) > 0`
+and the JIT-cache assertion (`cached < 0.5 x compile`) held with 7.9x–54x margin. No `Fit
+Already Completed`, no traceback, no OOM, no timeout. The resolved env was verified rather than
+assumed: the in-file `ENV: real_output` declarations are honoured, so none of
+`PYAUTO_TEST_MODE` / `PYAUTO_DISABLE_JAX` / `PYAUTO_SMALL_DATASETS` / `PYAUTO_FAST_PLOTS` was set.
+
+The one residual was the `autolens_workspace_test` parking of
+`point_source/visualization/modeling_visualization_jit` (`SLOW 2026-07-08 — JIT + Part-2 live
+Nautilus fit exceeds 300s cap`) — a parked script cannot fail in release validation, so the
+2026-08-07 release drive's green was never evidence for this prompt. Per the 2026-08-24 retime
+convention (autolens_workspace_test#274) a SLOW marker is rewritten or deleted **only on a CI
+measurement**, so the close-out was a CI retime, not a local timing.
+
+## Result: the parking is refuted, entry deleted
+
+Retime run [35245806121](https://github.com/PyAutoLabs/autolens_workspace_test/actions/runs/35245806121)
+(`retime.yml`, 5 repeats per Python leg, 300 s cap):
+
+| Leg | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Verdict |
+|---|--:|--:|--:|--:|--:|---|
+| Python 3.12 | 98.6 s | 73.9 s | 73.6 s | 74.5 s | 74.0 s | NEITHER (slowest 33 % of cap) |
+| Python 3.13 | 85.7 s | 72.1 s | 72.1 s | 71.0 s | 71.4 s | NEITHER (slowest 29 % of cap) |
+
+10/10 completions, each printing `PASS: jit-cached fit_for_visualization fires during Nautilus
+quick updates for point source, fit.png written.` The CI runner is *faster* than the laptop
+(168 s / 202 s), so the "deterministic >300 s" claim reproduces nowhere. The entry was replaced
+by a comment block recording the measurement; Smoke Tests on the PR (run 35246854264) then
+passed on both legs with the script live.
+
+## What this does NOT establish
+
+1. The `imaging/visualization/modeling_visualization_jit` and
+   `interferometer/visualization/modeling_visualization_jit` parkings in the same file (SLOW
+   2026-07-30, "times out at the 300s cap" / "OOM-killed at 132s") are the same script family but
+   not this prompt's scripts. They were not retimed and stay parked — a retime-sweep follow-up.
+2. Source-tree runs, not the TestPyPI wheels the release run installed; a wheel-only packaging
+   defect would not appear. The three `autogalaxy_workspace_test` scripts were never parked and the
+   fourth is now live, so all four re-execute in every `mode=release` pass — re-validation is
+   automatic, which is why the issue is closed rather than parked open.
+
+## Incidental findings (filed separately, not fixed here)
+
+- Ellipse and point_source both log `Visualization warm-up failed (non-fatal); first quick update
+  may be slow.` on every run — `PyAutoFit/autofit/non_linear/fitness.py` `_warmup_visualization`
+  swallows the exception with a bare `except Exception` and logs no reason. Consistent with
+  point_source's weakest cache ratio (7.9x). →
+  `draft/bug/autofit/visualization_warmup_swallowed_exception.md`.
+- point_source also logs `lens_calc.py:565 LensCalc Hessian: 1 of 625 points did not converge
+  after 20 halvings (largest relative error estimate 2.58e+00); values kept` on every run.
+
+## Traps
+
+- **Path drift, twice.** Every script path in the original prompt 404s and every script still
+  exists: `scripts/<dataset>/modeling_visualization_jit.py` → `scripts/<dataset>/visualization/…`,
+  `scripts/jax_likelihood_functions/<dataset>/` → `scripts/<dataset>/jax_likelihood/`, `multi/` →
+  `multi_dataset/`. A 404 in the `health_fixes` cluster is drift until proven otherwise.
+- **The ellipse script asserts on `fit_ellipse.png`, not `fit.png`** — a bare
+  `find -name fit.png` returns 0 there and mis-reads as a failure.
+- **The 2026-08-09 sweep note conflated two repos**: it said ellipse + interferometer were parked
+  in `autogalaxy_workspace_test`; the real matcher (`autohands.build_util.should_skip`) shows all
+  three of that repo's visualization scripts live and only the `autolens_workspace_test`
+  point_source one parked.
+- **`worktree_check_conflict` fires in a web session for a laptop worktree.**
+  `jax-runtime-and-parity` (#317) holds `~/Code/PyAutoLabs-wt/jax-runtime-and-parity` on
+  `autolens_workspace_test`; a web session on its own clone and branch collides with nothing, so
+  the guard was read as advisory and noted rather than blocking.
+- **Branch name.** Shipped from `claude/active-jit-visualization-outputs-45weg6`, not the plan's
+  `feature/jit-visualization-outputs`, because the remote session's branch rule wins; the
+  workspace `retime.yml` and `smoke_tests.yml` are branch-agnostic, so nothing keyed on it.
+
+## Session notes
+
+Shipped from a `web-github` session (no task worktree, no `gh`): `autolens_workspace_test`
+attached mid-session via `add_repo`, the retime dispatched with `actions_run_trigger`
+(`workflow_dispatch` inputs `scripts` / `repeats` / `script-timeout`), the per-run timings read from
+`get_job_logs` (the runner prints `[PASS] <script> — <secs>s` per run and a
+`=== Re-timing summary ===` block), the PR labelled `pending-release` via `issue_write` because
+`create_pull_request` takes no labels. Under `Autonomy: supervised` the ship ended at PR-open;
+`/prm` merged once Smoke Tests were green. `Consequence: judge`, so no tier-`notify` shadow row.
+
+## Original prompt
+
 # Fix JIT quick-update visualization output regressions
 
 Type: bug

@@ -8,9 +8,9 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: formalised
-Consequence: glance
+Consequence: notify
 Witness: a pytest that feeds each of the four inputs above through the intake decision and asserts the written header equals the declared header, the path is under the declared target, and `Type: hygiene` raises/flags — red on main, green after the fix.
-Review-minutes: 3
+Review-minutes: 0
 Unattended: ready
 
 Observed across five /intake runs on 2026-09-16 (config-priors-drift follow-ups, config-yaml-comments prompt). The Intake (Conception) Agent, `PyAutoBrain/agents/conductors/intake/_intake.py`, mishandles declared headers in four ways, each requiring a hand fix of the written file:
@@ -20,7 +20,5 @@ Observed across five /intake runs on 2026-09-16 (config-priors-drift follow-ups,
 4. When the header block is the first line of the input, the header line itself becomes the title/slug (`draft/bug/autogalaxy/target_autogalaxy.md`), and the raw header block is duplicated into the body below the real header.
 
 Fix: honour declared Target and Repos exactly as Type/Difficulty/Autonomy/Priority are honoured; make an unknown declared Type an explicit error naming the valid set; derive the title from the first non-header line; do not echo the header block into the body. Add unit tests for each of the four inputs above. Related memory of traps: TargetIgn (declared Target ignored), hdr×5 (agent mangles declared headers).
-
-Witness: a pytest that feeds each of the four inputs above through the intake decision and asserts the written header equals the declared header, the path is under the declared target, and `Type: hygiene` raises/flags — red on main, green after the fix.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-16 from user-intake -->

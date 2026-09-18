@@ -33,6 +33,17 @@ name: Mind Ledger Merge
 # NOT A REVIEW BYPASS. Review adds nothing to a moved prompt file; it adds
 # everything to a changed script. The gate encodes precisely that distinction
 # and nothing else.
+#
+# CONFLICTS ARE SETTLED BY THE FILE'S GRAMMAR. Every ledger branch rewrites
+# the same few files — the `## slug` registries and the generated renders — so
+# git's line merge stops on two branches that never touched the same entry.
+# In the week to 2026-09-17 that was 24 of 100 runs, nobody was told, and six
+# completion records of shipped work existed only on their branch. Now the
+# merge is built with `--no-commit`, `scripts/ledger_merge.py resolve` settles
+# what the grammar can (registries merge by entry; renders take main's copy
+# and are regenerated on the merged tree), the drift check runs on the paths
+# the branch changed rather than the whole repo, and whatever still cannot
+# land is written on an issue a human will actually see.
 
 on:
   push:
@@ -64,6 +75,8 @@ permissions:
   contents: write
   pull-requests: write
   actions: write
+  # issues: write → a branch that cannot land is written on an issue.
+  issues: write
 
 # Every run of this workflow ends in a push to main, so runs must not overlap:
 # two branches merging concurrently would race, and the loser would spend its
@@ -163,33 +176,19 @@ jobs:
             echo "verdict=ledger" >> "$GITHUB_OUTPUT"
           fi
 
-      # Structural drift BLOCKS. `lifecycle.py check` catches a real
-      # inconsistency — a prompt in `active/` with no `active.md` entry, a
-      # record whose front matter contradicts the ledger — and nothing heals
-      # that automatically. Merging it would put the contradiction on main.
-      - name: Structural drift (blocking)
+      # Structural drift BLOCKS — about THIS branch's paths. `lifecycle.py
+      # check` catches a real inconsistency — a prompt in `active/` with no
+      # `active.md` entry, a record whose front matter contradicts the ledger —
+      # and nothing heals that automatically. It is scoped to the paths the
+      # branch changed: a finding about an unrelated row is main's drift, not
+      # this branch's, and refusing three records for it (run 34677840370)
+      # strands the ledger without fixing the row.
+      - name: Structural drift on the branch (blocking, scoped to its paths)
         if: steps.classify.outputs.verdict == 'ledger'
-        working-directory: PyAutoMind
-        run: python3 scripts/lifecycle.py check
-
-      # Generated-page staleness DOES NOT block. `complete/index.md`, the
-      # registry contents blocks and the dashboard pages are all renders with
-      # self-healing workflows on main, so a stale render is a reason to heal
-      # after the merge, never a reason to strand the ledger. Reported, not
-      # enforced.
-      - name: Generated-page freshness (reported, healed after the merge)
-        if: steps.classify.outputs.verdict == 'ledger'
-        continue-on-error: true
         working-directory: PyAutoMind
         run: |
-          STALE=""
-          python3 scripts/lifecycle.py index --check || STALE="$STALE complete/index.md"
-          python3 scripts/registry_toc.py --check   || STALE="$STALE registry-contents"
-          python3 ../PyAutoBrain/agents/conductors/intake/_intake.py --mind . dashboard --check \
-            || STALE="$STALE dashboard"
-          if [ -n "$STALE" ]; then
-            echo "stale renders (will be healed on main):$STALE" >> "$GITHUB_STEP_SUMMARY"
-          fi
+          git diff --name-only "origin/main...HEAD" > /tmp/changed_paths
+          python3 scripts/lifecycle.py check --paths $(cat /tmp/changed_paths) --base origin/main
 
       - name: Merge into main
         id: merge
@@ -207,18 +206,21 @@ jobs:
           # its review thread closes properly. A direct push would land the
           # same commits and leave the PR reading "closed", which is a lie
           # about what happened to the work.
+          # Either way the merge is BUILT locally first (below), so a PR branch
+          # that conflicts is settled the same way; the settled merge commit is
+          # pushed onto the PR branch (a merge of main into it — never a
+          # rewrite) and the PR then merges clean.
           PR=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
-          if [ -n "$PR" ]; then
-            echo "open PR #$PR on this branch — merging through it"
-            gh pr merge "$PR" --merge
-            echo "via=pr#$PR" >> "$GITHUB_OUTPUT"
-            echo "Merged **#$PR** (\`$BRANCH\` → main)." >> "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
 
           # No PR: merge the ref directly. Each attempt rebuilds on the current
           # tip of main, so a concurrent push never needs a rebase — the same
           # convergence the self-heal loops use.
+          fail() {  # <reason> — recorded for the issue step, then exit 1
+            echo "$1" > /tmp/ledger_merge_reason
+            echo "::error::$1"
+            echo "**Left for a human** — $1" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          }
           for attempt in 1 2 3; do
             git fetch --quiet origin main
             if git merge-base --is-ancestor "$HEAD_SHA" origin/main; then
@@ -227,13 +229,40 @@ jobs:
               exit 0
             fi
             git checkout -B _ledger_merge origin/main
-            if ! git merge --no-ff "$HEAD_SHA" \
-                -m "mind: auto-merge ledger branch $BRANCH" \
-                -m "Ledger-only diff (scripts/ledger_merge.py), structural checks clean." ; then
-              git merge --abort || true
-              echo "::error::'$BRANCH' conflicts with main — resolve it by hand"
-              echo "**Conflict** — \`$BRANCH\` does not merge cleanly; left for a human." >> "$GITHUB_STEP_SUMMARY"
-              exit 1
+            # Build the merge without committing: a conflict is settled by
+            # the ledger's grammar where it can be (registries by entry,
+            # renders take main's copy), and the renders are regenerated on
+            # the merged tree before the one merge commit is made.
+            if ! git merge --no-ff --no-commit "$HEAD_SHA" >/dev/null 2>&1; then
+              echo "line merge conflicted — settling by the ledger grammar"
+              if ! python3 scripts/ledger_merge.py resolve; then
+                git merge --abort || true
+                fail "'$BRANCH' conflicts with main beyond what the ledger grammar settles (see the run log: 'unresolved:' lines)"
+              fi
+            fi
+            python3 scripts/lifecycle.py index --apply >/dev/null
+            python3 scripts/registry_toc.py --write >/dev/null || true
+            python3 ../PyAutoBrain/agents/conductors/intake/_intake.py --mind . --apply dashboard >/dev/null \
+              || echo "::warning::dashboard not regenerated here — dashboard_refresh.yml heals it on main"
+            git add -A -- complete/index.md dashboard.md dashboard.html \
+              active.md planned.md parked.md condemned.md epics.md bundles.md queue.md
+            git commit --quiet --no-verify \
+              -m "mind: auto-merge ledger branch $BRANCH" \
+              -m "Ledger-only diff (scripts/ledger_merge.py); conflicts settled by entry where the grammar allows; renders regenerated on the merged tree."
+            # THE TRIAL-MERGE CHECK, scoped to the branch's paths: the branch
+            # passed alone; does it still pass merged with what main did
+            # meanwhile? Two branches closing the same task are caught here.
+            if ! python3 scripts/lifecycle.py check --paths $(cat /tmp/changed_paths) --base origin/main; then
+              git reset --hard origin/main
+              fail "'$BRANCH' merges but 'lifecycle.py check' fails on the merged tree for its own paths"
+            fi
+            if [ -n "$PR" ]; then
+              echo "open PR #$PR on this branch — merging through it"
+              git push origin "HEAD:refs/heads/$BRANCH" || fail "could not push the settled merge onto '$BRANCH' for PR #$PR"
+              gh pr merge "$PR" --merge || fail "PR #$PR on '$BRANCH' would not merge"
+              echo "via=pr#$PR" >> "$GITHUB_OUTPUT"
+              echo "Merged **#$PR** (\`$BRANCH\` → main)." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
             fi
             if git push origin HEAD:main; then
               echo "merged on attempt $attempt"
@@ -243,16 +272,19 @@ jobs:
             fi
             echo "push rejected (attempt $attempt) — retrying on the new tip of main"
           done
-          echo "::error::could not push the merge after 3 attempts"
-          exit 1
+          fail "could not push the merge of '$BRANCH' after 3 attempts"
 
       # A PR merge deletes its own head where the repo has "Automatically
       # delete head branches" on; a DIRECT merge has no such hook, which is how
       # 188 provably-spent branches piled up before branch_sweep.yml. Delete it
       # here, on the same proof branch_sweep uses — main must actually contain
-      # the head sha — so a failed or partial merge never loses a branch.
+      # the head sha — so a failed or partial merge never loses a branch. A
+      # branch found ALREADY in main gets the same treatment: 69 of them had
+      # accumulated by 2026-09-17, each merged by a run whose delete never
+      # fired, and every later push to the branch found "nothing to merge" and
+      # left it standing.
       - name: Delete the merged branch
-        if: steps.merge.outputs.via != '' && inputs.delete_branch != false
+        if: (steps.merge.outputs.via != '' || steps.ahead.outputs.merged == 'already') && inputs.delete_branch != false
         working-directory: PyAutoMind
         env:
           BRANCH: ${{ steps.target.outputs.branch }}
@@ -270,6 +302,43 @@ jobs:
             # and is not a failure — branch_sweep.yml collects anything else.
             echo "::warning::could not delete '$BRANCH' — it may already be gone"
           fi
+
+      # A branch that cannot land is written down where a human looks. A red
+      # run nobody is subscribed to is how six records went missing; one open
+      # issue per branch, updated on every further attempt, is the fix. The
+      # issue closes itself out of the way when the branch finally lands
+      # (below) — nothing else here needs a human to tidy.
+      - name: Leave a note a human will see
+        if: failure() && steps.ahead.outputs.merged == 'no'
+        working-directory: PyAutoMind
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.target.outputs.branch }}
+        run: |
+          REASON=$(cat /tmp/ledger_merge_reason 2>/dev/null || echo "a step failed — see the run log")
+          RUN="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          TITLE="ledger merge: \`$BRANCH\` needs a human"
+          BODY=$(printf '%s\n\nRun: %s\nBranch: https://github.com/%s/tree/%s\n\n%s' \
+            "$REASON" "$RUN" "${{ github.repository }}" "$BRANCH" \
+            "Merge it by hand (\`git merge --no-ff origin/$BRANCH\`, settle what \`scripts/ledger_merge.py resolve\` could not, regenerate the renders, push to main); this issue closes itself when the branch lands.")
+          gh label create ledger-merge --color d93f0b --description "a ledger branch the auto-merge could not land" --force >/dev/null 2>&1 || true
+          N=$(gh issue list --state open --label ledger-merge --search "in:title \"$BRANCH\"" --json number --jq '.[0].number // empty')
+          if [ -n "$N" ]; then
+            gh issue comment "$N" --body "$BODY"
+          else
+            gh issue create --title "$TITLE" --label ledger-merge --body "$BODY"
+          fi
+
+      - name: Close the note once the branch has landed
+        if: steps.merge.outputs.via != '' || steps.ahead.outputs.merged == 'already'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.target.outputs.branch }}
+        run: |
+          for N in $(gh issue list --repo "${{ github.repository }}" --state open --label ledger-merge --search "in:title \"$BRANCH\"" --json number --jq '.[].number'); do
+            gh issue close "$N" --repo "${{ github.repository }}" --comment "Landed: \`$BRANCH\` is in main." --reason completed
+          done
 
       # The merge push above was made with GITHUB_TOKEN, which triggers no
       # workflows, so main's self-healing legs must be asked explicitly or the

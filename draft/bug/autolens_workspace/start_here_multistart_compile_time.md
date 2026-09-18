@@ -13,9 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Status: draft
-Consequence: judge
+Consequence: glance
 Witness: under the release profile (full FITS, fp64, JAX on) `scripts/imaging/start_here.py` compiles the multi-start objective in well under 5 min on the CI CPU runner across 5 consecutive release-integrate runs (max wall < 900 s), with the same max-log-likelihood model recovered; the script's "under ten minutes on a CPU" promise (line ~344) is true
-Review-minutes: 20
+Review-minutes: 3
 Filed: 2026-09-14
 
 User request (verbatim, 2026-09-14):

@@ -134,3 +134,15 @@ This is a Fable / Astra campaign: a top-tier session plans and decomposes each p
 judges its results, delegating execution. Every phase is a measurement with a written
 verdict note under `results/notes/`, pins recorded where no pin exists, and a provenance
 and gate table — the GPU epic's six notes are the format to match.
+
+## Status update — 2026-09-18
+
+Phase 5 (#278, PR #279) and the phase-5b residual-policy follow-up (#280, PR #281)
+are merged; records `complete/2026/09/fixed-light-numba-s5.md` and
+`complete/2026/09/fixed-light-numba-s5b.md`. The precheck was NO_LEVER; production
+memo defaults remain unchanged. Phase 6 (#282, PR #283) is merged; record
+`complete/2026/09/fixed-light-numba-s6.md`. All N500/1000/1500/2500/4000 cells PASS.
+NNLS dominates larger systems: at N4000 nearby cold/memo2.138/1.289s, broad4.312/10.783s.
+The scaling verdict supports investigating the solver and proposal-dependent memo behavior;
+it does not establish a global memo default. Phase 7 remains unfiled: HST + Euclid
+with representative proposal histories, preserving the numerical and thread gates.
