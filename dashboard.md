@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 12 |
+| [In flight](#in-flight) (`active/`) | 13 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 216 |
+| [Backlog](#backlog) (`draft/`) | 215 |
 
 > **No batch in flight.**
 
@@ -320,6 +320,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/oneshot_benchmark_harness.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/profiling_contracts.md">Harden profiling experiment contracts and current result summaries</a> — issued 2026-09-18</summary>
+
+```
+/start_dev active/profiling_contracts.md
 ```
 
 </details>
@@ -601,7 +609,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**216** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
+**215** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 62</summary>
@@ -1414,7 +1422,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 24</summary>
+<summary><b>maintenance</b> — 23</summary>
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
 
@@ -1596,14 +1604,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/profiling_contracts.md">Harden profiling experiment contracts and current result summaries</a> — autolens_profiling · medium · human-required</summary>
-
-```
-/start_dev draft/maintenance/autolens_profiling/profiling_contracts.md
 ```
 
 </details>
@@ -2350,7 +2350,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | issued | <a href="active/arxiv_digest_dies_on_api_transport_errors.md">The arXiv digest fix was written, never merged — and it does…</a> |
-| 2026-09-18 | filed | <a href="draft/maintenance/autolens_profiling/profiling_contracts.md">Harden profiling experiment contracts and current result summaries</a> |
+| 2026-09-18 | issued | <a href="active/profiling_contracts.md">Harden profiling experiment contracts and current result summaries</a> |
 | 2026-09-18 | issued | <a href="active/fields_api_top1000.md">Adopt fields API in the Euclid pipeline and launch DR1 top 1000</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
@@ -2831,7 +2831,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-55 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+54 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2872,11 +2872,11 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/release/autocti/cti_release_train_wiring.md`
 - `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
 - `draft/maintenance/assistants/codex_skill_discovery_parity.md`
-- `draft/maintenance/autolens_profiling/profiling_contracts.md`
 - `draft/maintenance/organs/agent_harness_agnostic_setup.md`
 - `draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md`
 - `draft/maintenance/organs/reduce_session_token_load.md`
-- _… and 15 more_
+- `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
+- _… and 14 more_
 
 </details>
 
