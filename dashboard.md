@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 212 |
+| [Backlog](#backlog) (`draft/`) | 213 |
 
 > **No batch in flight.**
 
@@ -573,7 +573,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**212** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
+**213** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 60</summary>
@@ -2728,7 +2728,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 </details>
 
 <details>
-<summary><b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — 2 queued prompt(s), in order</summary>
+<summary><b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — ledger: `draft/feature/autogalaxy/mass_field_epic.md`</summary>
 
@@ -2750,6 +2750,14 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ```
 /start_dev draft/feature/autogalaxy/mass_field_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/mass_field_bare_fields_slot.md">Accept a bare <code>MassField</code> in <code>fields=</code> so the flat model form works</a> — autolens · small · human-required · normal</summary>
+
+```
+/start_dev draft/feature/autolens/mass_field_bare_fields_slot.md
 ```
 
 </details>
