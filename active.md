@@ -4,7 +4,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407
 - issued: 2026-09-17
 - prompt: active/codex_hook_parity.md
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/codex-hook-parity
 - repos:
   - PyAutoMind: feature/codex-hook-parity
@@ -13,7 +13,24 @@
   - autogalaxy_assistant: feature/codex-hook-parity
   - autolens_assistant: feature/codex-hook-parity
   - autocti_assistant: feature/codex-hook-parity
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/408
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/385
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/47
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/26
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/128
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/29
 - note: "Preserve user-owned untracked scripts/compose_model_gaussians_exponentials.py in the autofit_assistant main checkout and scripts/cluster_model_composition.py in the autolens_assistant main checkout; implementation is isolated in this worktree."
+- heart-red-override:
+  - authorized: 2026-09-17, live and contemporaneous for PyAutoMind#407 / codex-hook-parity
+  - human-quote: "i do then go to phase 3"
+  - issue-record: https://github.com/PyAutoLabs/PyAutoMind/issues/407#issuecomment-5722225406
+  - exact-red: "install verification FAILED (testpypi; checks F)"
+  - exact-red: "release validation FAILED (stage integrate)"
+  - additional-yellow: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"
+  - gates: "tests PASS Mind 130, Brain 28, assistants 29/32/32/29; smoke n/a (organism/config/docs task); review CLEAN; generated-hook drift OK; lifecycle OK with known unrelated warning; diff-check clean; nested-cwd hook commands verified"
+  - scope: "commit, push and six pending-release PRs only; no release, release rehearsal or merge; no claim that this branch repairs Heart; merge requires a separate explicit human command and green required checks"
+- ci-at-open: "one-shot only, no waiting: Mind Dashboard Refresh FAILURE with drift/privacy/firewall in progress; Brain 3.12/3.13 in progress; autofit wiki-currency in progress; autogalaxy boundary SUCCESS + wiki-currency in progress; autolens boundary FAILURE + wiki-currency in progress; autocti boundary SUCCESS + wiki-currency in progress. Failed checks are not bypassed; /prm requires a fresh human command after all required checks are green."
+- note: "Resumed 2026-09-18: merged current origin/main, preserving both AGENTS policy additions and regenerating dashboards. Fixed the spawn template red-override schema mismatch; current main plus registry regeneration clears the planned.md round-trip failure. Tenant Firewall now supports the established Brain-ref declaration so its full drift check can validate the paired Brain#385 branch before ordered merge. 145 focused tests pass; independent review found no code issues and resolved merge files are staged. AutoLens#128 receives a fresh synchronize event to consume its corrected Brain-ref body. Prior task-specific development push override remains applicable: current Heart RED is release validation FAILED (stage integrate), with the known remote-session drift. No merge authorized in this resume. Next: one-shot CI judgment, then human /prm; phase 3 Brain#386 stays planned until codex-hook-parity and mass-field-workspace-sweep claims clear."
 
 ## mass-field-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559

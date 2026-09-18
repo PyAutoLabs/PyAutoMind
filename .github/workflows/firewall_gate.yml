@@ -27,12 +27,14 @@ on:
       - "scripts/repos_sync.py"
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
+      - "repos.yaml"
       - ".github/workflows/firewall_gate.yml"
   pull_request:
     paths:
       - "scripts/repos_sync.py"
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
+      - "repos.yaml"
       - ".github/workflows/firewall_gate.yml"
   workflow_dispatch:
 
@@ -48,13 +50,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: PyAutoMind
-      # The organ repos, pinned to main: the checker is verified against the
-      # CURRENT organ code, the same pairing a local workspace has. All
-      # public, so the default GITHUB_TOKEN suffices.
+      # Paired changes may declare Brain-ref: <branch-or-sha> in the PR
+      # body, using the assistant clone-boundary convention. Default: main.
+      # The repository stays fixed; every drift-check leg still runs.
+      - name: Resolve the Brain ref
+        id: brainref
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          ref="$(printf '%s' "$PR_BODY" | tr -d '\r' \
+            | sed -n 's|^Brain-ref:[[:space:]]*\([A-Za-z0-9._/-]*\).*|\1|p' | head -1)"
+          echo "ref=${ref:-main}" >> "$GITHUB_OUTPUT"
+          if [ -n "$ref" ]; then echo "Using declared PyAutoBrain ref: $ref"; fi
+
       - name: Checkout PyAutoBrain
         uses: actions/checkout@v4
         with:
           repository: PyAutoLabs/PyAutoBrain
+          ref: ${{ steps.brainref.outputs.ref }}
           path: PyAutoBrain
       - name: Checkout PyAutoHeart
         uses: actions/checkout@v4

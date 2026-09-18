@@ -314,7 +314,7 @@ or lowering the per-work-type autonomy caps in `PyAutoBrain/AUTONOMY.md` (the
 autonomy contract). One row per run, appended at PR-open or on parking.
 
 Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
-`corrective`.
+`corrective` / `red-override`.
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
