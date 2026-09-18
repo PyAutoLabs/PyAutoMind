@@ -12,6 +12,8 @@ Priority: normal
 Consequence: judge
 Epic: mass-field
 Filed: 2026-09-18
+Issued: 2026-09-18
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/743
 Witness: with the branch installed, `af.Collection(galaxies=..., fields=af.Model(al.MassField, redshift=0.5, shear=af.Model(al.mp.ExternalShear)))` yields prior paths `fields.shear.gamma_1/gamma_2` (not `fields.field.shear.…`), `AnalysisImaging`'s tracer construction succeeds on its instance, and `tracer.fields == [MassField(redshift=0.5, shear)]`. On `main` the same model raises `TypeError: 'MassField' object is not iterable`. The collection form `fields=af.Collection(field=field)` is unchanged in paths, prior count and result identifier.
 
 ## Original request

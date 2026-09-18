@@ -180,3 +180,13 @@
   - autolens_profiling: feature/fixed-light-numba-s4b
 - parallel-claim: "worktree_check_conflict fixed-light-numba-s4b autolens_profiling PyAutoArray exits 1 on hst-gpu-residue-p2 (#273, feature/hst-gpu-residue-p2, LIVE). Its branch touches fixed_light_trace.py, host_callback_probe.py, library_solver_injection.py, test_fixed_light_cell.py, test_fixed_light_vmap_submit.py and a vmap A100 submit; this task touches fixed_light_numba.py, fixed_light_numpy_solvers.py, a new s4b witness, a new batch_cpu s4b submit, new test_fixed_light_s4b.py, the s4 note and one WALL-BASIS line of the s4 submit — disjoint. Shared generated surfaces only: README.md (regenerate after whichever merges second) and one hpc/README.md route row. Waived on the human's plan approval 2026-09-17, fresh parallel worktree off origin/main — the same call wave A (#274) recorded against #273."
 - note: "Phase 4 wave B of fixed-lens-light-numba-cpu (lever 4b, A-prime permute-active-last). Witness design FIRST with a human review gate after step 9, then fnnls_kernel_injected seam + fnnls_cholesky_permuted + route d_perm, then RAL CPU A/B (b vs d_perm, n-repeats 64) + witness in one job, verdict rule pre-written (>= 5 % AND witness PASS every draw), PyAutoArray fnnls PR only on a win, never stacked. Carries the s4 submit WALL-BASIS re-pin (7200 -> 250 s, ref 343394). Fable session plans, Opus executes. Plan on the issue."
+
+## mass-field-bare-fields
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/743
+- issued: 2026-09-18
+- prompt: active/mass_field_bare_fields_slot.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mass-field-bare-fields
+- repos:
+  - PyAutoLens: feature/mass-field-bare-fields
+- note: Reviewed plan approved in chat; PyAutoLens-only additive API, collections remain primary. Baseline and red witness before source edits.
