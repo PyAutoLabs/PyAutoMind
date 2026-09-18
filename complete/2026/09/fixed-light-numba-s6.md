@@ -17,7 +17,7 @@ Five completed RAL jobs343430_0,343445_1..4; source48hashes and library revision
 
 Live user "yes I authorize that" permitted task-specific HeartRED development shipping. RED: `release validation FAILED (stage integrate)`; YELLOW: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. Recorded in issue, PR,active.md and autonomy log. Current user `prm` authorized merge and close-out after all CI green; no release authorization.
 
-Task worktree retained pending the skill-required decision on deleting ignored outputs: output/2.0MiB (local smoke results, logs, source snapshot and verification scratch), dataset/imaging/hst/lensed_source.fits164KiB, plus disposable caches. Published five-cell evidence is committed. No subscriptions/auto-merge/timers armed.
+2026-09-18: user explicitly authorized cleanup with "delete it". Removed the phase-6 worktree via worktree_remove, including output/2.0MiB (local smoke results, logs, source snapshot and verification scratch), dataset/imaging/hst/lensed_source.fits164KiB, and disposable caches. Deleted the local feature/fixed-light-numba-s6 branch after proving it merged into origin/main. Published five-cell evidence remains committed. No subscriptions/auto-merge/timers armed.
 
 ## Original prompt
 
