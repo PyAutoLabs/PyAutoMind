@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_numba_s4b_permute_active_last.md">Fixed-light numba CPU round 4, wave B — A-prime: permute the active…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/276">issue #276</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/fixed_light_numba_s4b_permute_active_last.md">Fixed-light numba CPU round 4, wave B — A-prime: permute the active…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/276">issue #276</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/277">autolens_profiling#277</a></summary>
 
 ```
 /start_dev active/fixed_light_numba_s4b_permute_active_last.md
