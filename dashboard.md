@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 212 |
+| [Backlog](#backlog) (`draft/`) | 213 |
 
 > **No batch in flight.**
 
@@ -582,7 +582,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**212** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
+**213** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 60</summary>
@@ -2695,7 +2695,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
-<summary><b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — ledger: `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md`</summary>
 
@@ -2709,6 +2709,14 @@ Continue the 'Fixed lens light on the numba CPU path — the whole programme aga
 
 ```
 /start_dev draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_numba_s5b_memo_precheck.md">Phase 5b: reject unsuitable CPU memo seeds before the expensive solve</a> — autolens_profiling · large · human-required · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/fixed_light_numba_s5b_memo_precheck.md
 ```
 
 </details>
