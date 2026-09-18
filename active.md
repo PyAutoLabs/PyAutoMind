@@ -166,8 +166,9 @@
 - autonomy: supervised (plan approved in chat 2026-09-18; staged Mind implementation then coordinated rollout)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-smoke-shim-bootstrap
 - repos:
-  - PyAutoMind: feature/workspace-smoke-shim-bootstrap
-- note: First stage edits Mind only. Rollout to the twelve consumers is gated on resolving existing lens workspace and Euclid pipeline claims. No overlap waiver or phase-3 move authorized. Preserve canonical Mind's pre-existing staged draft deletion.
-- resume: Mechanism PR #417 MERGED 2026-09-18 at 2e3c5482; receipt complete/2026/09/workspace-smoke-bootstrap-mechanism.md. Full suite 565 passed, review CLEAN. NEXT: coordinate consumer claims, enable rollout, propagate and verify all twelve installed copies. Rollout stays false; issue #416 and phase 2c remain open. Task worktree retained for continuation.
+  - PyAutoMind: feature/workspace-smoke-bootstrap-rollout
+- note: Human approved bootstrap-only coordination on 2026-09-18. Existing lens workspace and Euclid pipeline task changes were checked: none changes .github/scripts/run_smoke.py. Rollout may update that generated block on consumer mains; no task branches, runner bodies, library APIs or phase-3 layout changes are in scope.
+- resume: Mechanism PR #417 MERGED; rollout enablement in progress on feature/workspace-smoke-bootstrap-rollout. After merge, verify the propagation run and all twelve installed copies before closing issue #416. Phase 3 remains deferred.
 - heart-ack: "euclid_strong_lens_modeling_pipeline: open PR 7d old"; "release validation incomplete: no rehearsal for current source" (human explicitly acknowledged in chat 2026-09-18 for push and PR-open only; no merge, rollout or phase-3 move).
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/417 (MERGED 2026-09-18, 2e3c5482)
+- parallel-claim: Human explicitly approved bootstrap-only overlap waiver 2026-09-18 for autolens_workspace, autolens_workspace_test and euclid_strong_lens_modeling_pipeline; all twelve canonical consumer checkouts surveyed clean on main.
