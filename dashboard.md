@@ -252,14 +252,6 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/arxiv_digest_dies_on_api_transport_errors.md">The arXiv digest fix was written, never merged — and it does…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/410">issue #410</a> — issued 2026-09-18 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/412">PyAutoMind#412</a></summary>
-
-```
-/start_dev active/arxiv_digest_dies_on_api_transport_errors.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/407">issue #407</a> — issued 2026-09-17 — workspace-dev</summary>
 
 ```
@@ -2341,17 +2333,16 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | issued | <a href="active/mass_field_flat_sweep.md">autolens_workspace + autolens_workspace_test: adopt the flat (bare)…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
-| 2026-09-18 | issued | <a href="active/arxiv_digest_dies_on_api_transport_errors.md">The arXiv digest fix was written, never merged — and it does…</a> |
 | 2026-09-18 | issued | <a href="active/profiling_contracts.md">Harden profiling experiment contracts and current result summaries</a> |
 | 2026-09-18 | issued | <a href="active/fields_api_top1000.md">Adopt fields API in the Euclid pipeline and launch DR1 top 1000</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
+| 2026-09-17 | filed | <a href="planned.md#codex-skill-discovery">codex-skill-discovery</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="planned.md#codex-skill-discovery">codex-skill-discovery</a> |
 | 2026-09-17 | issued | <a href="active/mass_field_workspace_sweep.md">autolens_workspace + autolens_workspace_test: every external field…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
@@ -2361,12 +2352,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source image-plane chi-squared on the A100: likelihood…</a> |
 | 2026-09-17 | filed | <a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue…</a> |
 | 2026-09-17 | issued | <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
@@ -2376,6 +2367,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | issued | <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets…</a> |
+| 2026-09-17 | issued | <a href="active/community_surface_users_vs_dev_flow.md">Community surface: separate where users ask questions from the AI…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 

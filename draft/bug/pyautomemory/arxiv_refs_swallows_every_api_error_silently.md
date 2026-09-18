@@ -17,7 +17,7 @@ Review-minutes: 4
 Filed: 2026-09-18
 
 Found while diagnosing the PyAutoMind digest outage
-(`active/arxiv_digest_dies_on_api_transport_errors.md`, PyAutoMind#410). This is
+(`complete/2026/09/arxiv-digest-api-retry.md`, PyAutoMind#410). This is
 the *opposite* failure, in the sibling script, and it is why the two jobs
 behaved so differently through the same arXiv outage.
 
