@@ -1,3 +1,26 @@
+## fixed-light-numba-s6
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/282
+- completed: 2026-09-18
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/283
+- merge: e2ce1798bbb190ea49fa571bcd6a7cbfbec34291 (head705129d proven ancestor of origin/main)
+- summary: Measured single-thread numba CPU likelihood at N500/1000/1500/2500/4000 with frozen nearby/broad sequences and production cold/memo lanes. All five cells PASS. NNLS dominates larger systems; N4000 nearby cold/memo2.138/1.289s, broad4.312/10.783s. Memo remains proposal-dependent; no production changes.
+
+## Validation
+
+15 focused tests, lint/format/import/shell/submit/README checks PASS; independent implementation, empirical, note, figure and provenance review CLEAN. All80 paired comparisons pass exact active sets and unchanged1e-9 relative evidence gate.960clean+960instrumented evaluations agree with diagnostics; worst reconciliation0.265%. GitHub lint workflow35357940517 and every job completed SUCCESS before the human-commanded merge.
+
+## Evidence and interpretation
+
+Five completed RAL jobs343430_0,343445_1..4; source48hashes and library revisions verified before/after. Results note and source/job sidecar are committed in results/notes/. Six repeats per lane, eight frozen draws per sequence. NNLS contributes68–95% atN4000. HarnessRSS9.085GiB includes eight prepared Analyses, not a production-worker memory recommendation; one4000x4000matrix128MB. Phase7 remains a separate HST+Euclid representative-proposal verdict, not a global memo default inferred here.
+
+## Authorization and cleanup
+
+Live user "yes I authorize that" permitted task-specific HeartRED development shipping. RED: `release validation FAILED (stage integrate)`; YELLOW: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. Recorded in issue, PR,active.md and autonomy log. Current user `prm` authorized merge and close-out after all CI green; no release authorization.
+
+Task worktree retained pending the skill-required decision on deleting ignored outputs: output/2.0MiB (local smoke results, logs, source snapshot and verification scratch), dataset/imaging/hst/lensed_source.fits164KiB, plus disposable caches. Published five-cell evidence is committed. No subscriptions/auto-merge/timers armed.
+
+## Original prompt
+
 # Phase 6: source-pixel scaling of the numba CPU likelihood
 
 Type: research
