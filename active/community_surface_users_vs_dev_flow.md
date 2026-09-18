@@ -12,8 +12,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
-Consequence: notify
+Status: active
+Issued: 2026-09-17
+Consequence: judge
 Witness: A decision document exists in the Mind's policy directory naming (a) the surface where users bring questions, help requests and scientific-analysis asks and (b) the surface where the AI development flow (issues, PRs, Mind close-outs) lives; and the community conductor's scan reads the chosen user surface, verified by a scan that lists a thread posted there.
 Review-minutes: 0
 

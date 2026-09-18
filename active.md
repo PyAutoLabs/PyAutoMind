@@ -232,3 +232,28 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## community-surface-users-vs-dev-flow
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/403
+- issued: 2026-09-17
+- prompt: active/community_surface_users_vs_dev_flow.md
+- session: claude --resume session_01NddWGmJwZfEkZK9WLoxBYg
+- status: library-dev
+- location: web-github (session clones, no task worktree; branch claude/github-issues-community-migration-512ndl)
+- worktree: n/a — web-github session clone (/home/user/PyAutoMind, /home/user/PyAutoBrain)
+- repos:
+  - PyAutoMind: claude/github-issues-community-migration-512ndl
+  - PyAutoBrain: claude/github-issues-community-migration-512ndl
+- summary: |
+    Decision task shipped as `policy/community_surface.md`: users go to one
+    Discussions hub (hosted on `PyAutoLabs/.github`, the org's), the development
+    flow stays on per-repo issues, bug reports with a reproducer stay
+    issues. The Ears (`pyauto-brain community`) now scan the hub's
+    discussions and triage a discussion URL; the Brain board shows
+    unanswered threads as triage chips. Migration is the human's native
+    "Convert to discussion" clicks (no API can do it — measured); manifest
+    of six user-filed feature threads in the policy page, filed as
+    `draft/maintenance/community/migrate_user_threads_to_discussions.md`
+    with the README/issue-chooser and front-door follow-ups beside it.
+    Brain branch needs a human merge (code + skills); Mind branch is mixed
+    (policy/ + draft/ + active/) so it waits for a human too.
