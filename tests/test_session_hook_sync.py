@@ -414,3 +414,35 @@ def test_firewall_gate_triggers_on_the_canonical_hook():
         assert repos_sync.SESSION_HOOK_FILE in triggers[event]["paths"], event
         assert repos_sync.DELIVERABLE_HOOK_FILE in triggers[event]["paths"], event
         assert "repos.yaml" in triggers[event]["paths"], event
+
+
+@pytest.mark.parametrize(
+    'body, expected',
+    [
+        ('', 'main'),
+        ('No dependency declaration', 'main'),
+        ('Brain-ref: feature/paired-hooks\r\n', 'feature/paired-hooks'),
+        ('Brain-ref: abc123\nBrain-ref: ignored\n', 'abc123'),
+        ('Brain-ref: $(touch injected)\n', 'main'),
+    ],
+)
+def test_firewall_brain_ref_resolution(tmp_path, body, expected):
+    """Execute the CI resolver: pairing selects a ref without executing PR text."""
+    import subprocess
+
+    gate = Path(__file__).resolve().parents[1] / '.github/workflows/firewall_gate.yml'
+    steps = yaml.safe_load(gate.read_text())['jobs']['firewall']['steps']
+    resolver = next(step for step in steps if step.get('id') == 'brainref')
+    checkout = next(step for step in steps if step.get('name') == 'Checkout PyAutoBrain')
+    assert checkout['with']['ref'] == '${{ steps.brainref.outputs.ref }}'
+    output = tmp_path / 'output'
+    subprocess.run(
+        ['bash', '-e', '-c', resolver['run']],
+        cwd=tmp_path,
+        env={**os.environ, 'PR_BODY': body, 'GITHUB_OUTPUT': str(output)},
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    assert output.read_text() == f'ref={expected}\n'
+    assert not (tmp_path / 'injected').exists()
