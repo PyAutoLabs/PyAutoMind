@@ -87,6 +87,13 @@ benchmarks, no open PRs. Note this repo is **absent from `repos.yaml`** — see
 independent of this migration but should land first so the repo is visible to the next
 manifest-driven sweep.
 
+**Update 2026-09-18 (PyAutoBrain#389):** this repo's **local checkout was removed** as
+dead weight. The 7 benchmark files still exist on GitHub at `6bce65e` and still need
+the flat-`fields=` migration, but they are **no longer locally sweepable** — this
+member now requires a fresh clone, so sequence it accordingly (or drop it from the
+local sweep and raise it as a PR against the remote). The remote is deliberately
+retained: it is the citable artefact behind the JOSS paper's benchmark claims.
+
 ### `PyAutoReduce/prototypes` — 2 files
 
 Smallest of the four; prototypes, no chaining.

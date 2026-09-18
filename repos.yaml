@@ -233,7 +233,7 @@ repos:
   euclid_strong_lens_modeling_pipeline:
     github: PyAutoLabs/euclid_strong_lens_modeling_pipeline
     category: pipeline
-    role: "Euclid pipeline glue (library/pipeline changes go here, not z_projects/euclid)."
+    role: "Euclid pipeline glue — library and pipeline changes for the Euclid strong-lensing work go here."
   autolens_profiling:
     github: PyAutoLabs/autolens_profiling
     category: project
