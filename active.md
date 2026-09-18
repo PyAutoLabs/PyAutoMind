@@ -228,4 +228,6 @@
   - autolens_profiling: feature/fixed-light-numba-s5b
 - base: cd685483b4f819801231bef0e1e9102be54f9fa5 (PR #279; must merge before this follow-up)
 - parallel-claim: '2026-09-18 live user: "contnue   May I create another disjoint worktree, based on PR #279, for this prototype? yes". Explicit approval of phase-5b plan and separate new-files-only worktree alongside #273, #276 and #278; conflict guard repeated and all three recorded. Existing task source files remain unchanged.'
-- next: Implement residual precheck, lock calibration independently, validate full-size numerical/runtime holdouts and independent review. Any Heart RED shipping override is task-specific and remains unrequested until concrete results.
+- hpc: "RAL job 343413 submitted from private 47-file SHA256-verified snapshot fixed-light-numba-s5b-run. Four CPUs, 32GB, no GPU; same clean library revisions as phase 5."
+- validation: "24 targeted tests, Ruff/import/shell/API/README checks pass; full-size two-model nearby numerical smoke passes all seven thresholds. Independent pre-run review CLEAN after balanced calibration ordering and matched counterfactual diagnostic fixes. Extra full-size matched diagnostic probe running locally."
+- next: "Complete RAL calibration/locked holdouts, inspect artifacts and independent empirical review. No phase-5b Heart RED shipping override granted yet."
