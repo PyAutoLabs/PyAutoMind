@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1482 records across 8 buckets.
+1484 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -206,6 +206,7 @@ markers; everything below GENERATED is rebuilt.
 - [euclid-jax-contour-compat](2026/09/euclid-jax-contour-compat.md)
 - [experimental-colab](2026/09/experimental-colab.md)
 - [fitness-vmap-outer-jit](2026/09/fitness-vmap-outer-jit.md)
+- [fixed-lens-light-numba-cpu](2026/09/fixed-lens-light-numba-cpu.md) — CPU fixed-lens-light campaign closed at the user's request. Phases1–6, including4b and5b, completed; phase7 ex…
 - [fixed-lens-light-source-only](2026/09/fixed-lens-light-source-only.md)
 - [fixed-light-draws](2026/09/fixed-light-draws.md)
 - [fixed-light-hardware](2026/09/fixed-light-hardware.md)
@@ -213,6 +214,7 @@ markers; everything below GENERATED is rebuilt.
 - [fixed-light-numba-levers](2026/09/fixed-light-numba-levers.md)
 - [fixed-light-numba-phase1](2026/09/fixed-light-numba-phase1.md)
 - [fixed-light-numba-s4](2026/09/fixed-light-numba-s4.md) — no lever
+- [fixed-light-numba-s4b](2026/09/fixed-light-numba-s4b.md) — Phase4b permutation benchmark found NO_LEVER: production226.772ms versus permuted228.576ms on the declared HST…
 - [fixed-light-numba-s5](2026/09/fixed-light-numba-s5.md)
 - [fixed-light-numba-s5b](2026/09/fixed-light-numba-s5b.md)
 - [fixed-light-numba-s6](2026/09/fixed-light-numba-s6.md) — Measured single-thread numba CPU likelihood at N500/1000/1500/2500/4000 with frozen nearby/broad sequences and…

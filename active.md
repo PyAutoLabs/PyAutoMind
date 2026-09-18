@@ -230,25 +230,6 @@
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
 
-## fixed-light-numba-s4b
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/276
-- issued: 2026-09-17
-- prompt: active/fixed_light_numba_s4b_permute_active_last.md
-- session: Codex continuation, 2026-09-18
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-s4b
-- repos:
-  - autolens_profiling: feature/fixed-light-numba-s4b
-- parallel-claim: "worktree_check_conflict fixed-light-numba-s4b autolens_profiling PyAutoArray exits 1 on hst-gpu-residue-p2 (#273, feature/hst-gpu-residue-p2, LIVE). Its branch touches fixed_light_trace.py, host_callback_probe.py, library_solver_injection.py, test_fixed_light_cell.py, test_fixed_light_vmap_submit.py and a vmap A100 submit; this task touches fixed_light_numba.py, fixed_light_numpy_solvers.py, a new s4b witness, a new batch_cpu s4b submit, new test_fixed_light_s4b.py, the s4 note and one WALL-BASIS line of the s4 submit — disjoint. Shared generated surfaces only: README.md (regenerate after whichever merges second) and one hpc/README.md route row. Waived on the human's plan approval 2026-09-17, fresh parallel worktree off origin/main — the same call wave A (#274) recorded against #273."
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/277
-- note: "RAL job 343397 COMPLETED 0:0: NO_LEVER, production 226.772 ms vs permuted 228.576 ms; both ABBA gates and all eight witnesses PASS (exact reconstruction/evidence). No PyAutoArray promotion. Commit 7483076; 92 tests and both import smokes pass; independent review CLEAN. User approved the roundoff-aware factor criterion (32 spacings plus 1e-12 factor residual). Awaiting CI and separate human merge command."
-- heart-red-override:
-  - authorization: '2026-09-18: live user replied "yes" to "May I commit, push, and open the #276 PR despite these Heart failures?" Development shipping only; no merge or release.'
-  - reason: "install verification FAILED (testpypi; checks F)"
-  - reason: "release validation FAILED (stage integrate)"
-  - gates: "92 focused tests PASS; both changed-cell import smokes PASS; Ruff check/format, README idempotence, wall contracts, shell syntax and diff checks PASS; independent review CLEAN; RAL eight-draw witness PASS."
-  - issue-record: https://github.com/PyAutoLabs/autolens_profiling/issues/276#issuecomment-5727230819
-
 ## community-surface-users-vs-dev-flow
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/403
 - issued: 2026-09-17

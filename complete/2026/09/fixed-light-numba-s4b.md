@@ -1,3 +1,22 @@
+## fixed-light-numba-s4b
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/276
+- completed: 2026-09-18
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/277
+- merge: 3f3336efc8f52297f26f96694d0dc92520cf90b2
+- summary: Phase4b permutation benchmark found NO_LEVER: production226.772ms versus permuted228.576ms on the declared HST numba CPU cell. No PyAutoArray promotion or library source change.
+
+## Evidence and authorization
+
+RAL343397 completed0:0. Both ABBA gates and all eight witnesses PASS, exact reconstruction/evidence.92 tests and two import smokes passed; independent review CLEAN. All runs and jobs on head7483076 succeeded before merge (lint35323606568). User authorized wrap-up/merge on2026-09-18; prior HeartRED development shipping grant remains recorded on issue/PR/autonomy log. Approved factor check max(2e-12nats,32floating-point spacings), plus1e-12relative reconstruction residual; active-set and evidence gates unchanged.
+
+The task claims only autolens_profiling; PyAutoArray was a conditional promotion in the original plan and was not needed. Head7483076 is an ancestor of origin/main. No timers or subscriptions remain.
+
+## Cleanup
+
+Worktree retained pending explicit deletion choice for ignored output/1.1MiB and generated HST lensed_source.fits164KiB, plus caches. It claims no repository after close-out. Existing phase5/5b retained worktrees are separate; phase6 already removed with permission.
+
+## Original prompt
+
 # Fixed-light numba CPU round 4, wave B — A-prime: permute the active columns last, one potrf (lever 4b)
 
 Type: research
