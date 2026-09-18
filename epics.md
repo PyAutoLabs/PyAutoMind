@@ -114,7 +114,9 @@ epic, never picked standalone.
   change. Phase 6 COMPLETE (#282, PR #283 merged; `complete/2026/09/fixed-light-numba-s6.md`):
   N500–4000 scaling, all five cells PASS. NNLS dominates large N; at N4000 memo saves
   39.7% nearby but costs 2.50x cold for broad draws. No production policy change.
-  Phase 7 (HST + Euclid with representative proposal histories) remains separate and unfiled.
+  Phase 7 SHELVED by user 2026-09-18: assume no usable memo benefit and changing
+  sampler order for current planning; further memo/order studies out of scope.
+  Production defaults unchanged. Proposal: `complete/archive/shelved/fixed_light_numba_s7_cpu_verdict.md`.
 
 ## hst-gpu-non-solver-residue
 - title: The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve

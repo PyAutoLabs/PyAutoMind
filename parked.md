@@ -28,3 +28,11 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
   the #1500 bundle. Resume and retire together with single-source-density-design.
 - repos-none-claimed: claims no repos while parked.
 
+
+## fixed-light-numba-s7
+- archived-proposal: complete/archive/shelved/fixed_light_numba_s7_cpu_verdict.md
+- parked: 2026-09-18 — user explicitly shelved phase7 before implementation.
+- decision: Assume no usable memo benefit and changing sampler order for current planning. Further memo-policy and sampler-order/history research out of scope; production defaults unchanged.
+- evidence: Phase5/5b/6 findings remain in completed records and merged profiling results.
+- resume: Only on explicit user request; rescope before issue/worktree/compute creation.
+- repos-none-claimed: No issue, worktree, source changes or jobs created for phase7.

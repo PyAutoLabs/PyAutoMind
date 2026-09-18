@@ -146,3 +146,13 @@ NNLS dominates larger systems: at N4000 nearby cold/memo2.138/1.289s, broad4.312
 The scaling verdict supports investigating the solver and proposal-dependent memo behavior;
 it does not establish a global memo default. Phase 7 remains unfiled: HST + Euclid
 with representative proposal histories, preserving the numerical and thread gates.
+
+## Phase 7 shelved — user decision, 2026-09-18
+
+The user deferred phase7: assume no usable memo benefit and changing sampler
+order for current planning; further memo policy/order/history work is out of
+scope. Preserve the completed research and leave production memo defaults
+unchanged. The unissued proposal is archived at
+`complete/archive/shelved/fixed_light_numba_s7_cpu_verdict.md`; it is not an
+active or pickable next task. Reopen only on explicit user request with a fresh
+scope. Earlier statements describing phase7 as next are superseded here.
