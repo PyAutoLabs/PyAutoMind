@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_flat_sweep.md">autolens_workspace + autolens_workspace_test: adopt the flat (bare) <code>fields=</code> form</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/561">issue #561</a> — issued 2026-09-18 — phase-0-gate — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
+<details><summary>📋 <a href="active/mass_field_flat_sweep.md">autolens_workspace + autolens_workspace_test: adopt the flat (bare) <code>fields=</code> form</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/561">issue #561</a> — issued 2026-09-18 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/562">autolens_workspace#562</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/322">autolens_workspace_test#322</a> — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/mass_field_flat_sweep.md
