@@ -4,11 +4,21 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89
 - issued: 2026-09-18
 - prompt: active/fields_api_top1000.md
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/euclid-fields-api
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-fields-api
 - note: Human approved plan, concurrent-claim coordination and science deployment on 2026-09-18. SUBMISSION HOLD: "dont submit jobs until Ive okayed modeling script"; no SLURM jobs including smoke until renewed script approval. Worktree isolated; preserve other branches and science-local changes. RAL uses source clones, no PyPI release gate.
+
+- heart-red-override:
+  - date: 2026-09-18
+  - authorization: User "I approve" to the task-specific development override for issue #89 and merge only with every required CI check green in this session.
+  - red-reasons: "release validation FAILED (stage integrate)"
+  - yellow-reasons: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"
+  - gates: 230 tests PASS; 9/9 smoke PASS; independent review CLEAN (27 focused checks); diff check PASS.
+  - scope: commit, push, pending-release PR; merge only on green CI. No release or SLURM submission; modelling-script hold remains.
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90
+- implementation: 7fbdbe5; 230 tests, 9/9 smoke, independent review CLEAN. Science/RAL deployment pending merge; submission hold remains.
 
 ## codex-hook-parity
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407

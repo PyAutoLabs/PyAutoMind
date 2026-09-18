@@ -51,3 +51,28 @@ The human approved all three delivery phases and coordinating the existing branc
 ## Submission hold — 2026-09-18
 
 User: "dont submit jobs until Ive okayed modeling script". This supersedes earlier submission authorization: complete implementation, local validation and reviewable script preparation, but submit no SLURM jobs (including cluster smoke tests) before fresh modelling-script approval. No jobs submitted before this hold.
+
+## Naming revision — 2026-09-18
+
+User: "I am fixing this throughout the autolens_workspace in anothrer chat, but apply it to these euclid pipelines: ❯ In autolens_workspace and other projects we updated the model composiiton to use MassField last night, however can we change field = af.Model(al.MassField, redshift=0.5, shear=af.Model(al.mp.ExternalShear)) to shear = af.Model(al.MassField, redshift=0.5, shear=af.Model(al.mp.ExternalShear))   and fields=af.Collection(field=field),    to fields=af.Collection(shear=field),   in probably all of the example scripts, which will span all the way to SLaM pipelines and other examples throughout workspaces and the test worskpace?"
+
+Apply to Euclid only: the MassField variable and collection key are `shear`, so composition is `fields=af.Collection(shear=shear)`, chained field objects are `result.model.fields.shear` / `result.instance.fields.shear`, and profile parameters are `fields.shear.shear.gamma_1` / `gamma_2`. The inner `shear` names the ExternalShear profile; the outer names the MassField. Workspace and workspace_test edits remain owned by the other chat. No jobs until modelling-script approval.
+
+## Naming correction — 2026-09-18
+
+User: "ok wait I made a mistake, it shuld not be shear.field.field I misread field = af.Model(al.MassField, redshift=0.5, shear=af.Model(al.mp.ExternalShear))."
+
+The prior naming revision is withdrawn. Restore the original composition: MassField variable `field`, `fields=af.Collection(field=field)`, and parameters at `fields.field.shear.gamma_1/2`. The fields migration itself continues; no jobs until modelling-script approval.
+
+## Human-authorized Heart RED development override — 2026-09-18
+
+The user replied "I approve" to: "Authorize the development-only Heart override for issue #89, and merge only when every required CI check is green?"
+
+Exact current Heart RED reason: `release validation FAILED (stage integrate)`.
+Also acknowledged: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
+
+Branch gates passed: 230 pipeline tests; 9/9 smoke scripts; independent Sol review CLEAN (27 focused checks); git diff --check clean. Representative legacy/flat models retain 15 parameters and log likelihood agrees within 2e-12; identifiers intentionally differ.
+
+Authorization is scoped to euclid-fields-api / issue #89: commit, push, pending-release PR, and merge only with every required check green during this session. No release, failed-check bypass, or SLURM submission is authorized. The modelling-script submission hold remains.
+
+Latest API correction: no compatibility branches or tests for nested collection-form single fields. Models use fields=field and fields.shear.gamma_1/2. Legacy galaxy-attached result readers remain supported.

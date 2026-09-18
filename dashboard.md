@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fields_api_top1000.md">Adopt fields API in the Euclid pipeline and launch DR1 top 1000</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89">issue #89</a> — issued 2026-09-18 — workspace-dev</summary>
+<details><summary>📋 <a href="active/fields_api_top1000.md">Adopt fields API in the Euclid pipeline and launch DR1 top 1000</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89">issue #89</a> — issued 2026-09-18 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90">euclid_strong_lens_modeling_pipeline#90</a></summary>
 
 ```
 /start_dev active/fields_api_top1000.md
