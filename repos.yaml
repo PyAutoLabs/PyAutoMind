@@ -54,6 +54,10 @@ categories:
 unmapped_checkouts:
   - .github              # PyAutoLabs/.github — the org profile repo, not an organism repo
 
+# Hold automated smoke-bootstrap writes until the active consumer claims clear.
+# Dry-run generation and fixture validation remain available during this hold.
+smoke_bootstrap_rollout: false
+
 repos:
   # --- organs -----------------------------------------------------------
   # `public_role` is the curated copy shown in the public front-door organ
@@ -173,30 +177,38 @@ repos:
 
   # --- workspaces ---------------------------------------------------------
   autofit_workspace:
+    smoke_bootstrap: true
     github: PyAutoLabs/autofit_workspace
     category: workspace
   autogalaxy_workspace:
+    smoke_bootstrap: true
     github: PyAutoLabs/autogalaxy_workspace
     category: workspace
   autolens_workspace:
+    smoke_bootstrap: true
     github: PyAutoLabs/autolens_workspace
     category: workspace
   autocti_workspace:
+    smoke_bootstrap: true
     github: PyAutoLabs/autocti_workspace
     category: workspace
   autoreduce_workspace:
     github: PyAutoLabs/autoreduce_workspace
     category: workspace
   autofit_workspace_test:
+    smoke_bootstrap: true
     github: PyAutoLabs/autofit_workspace_test
     category: workspace_test
   autogalaxy_workspace_test:
+    smoke_bootstrap: true
     github: PyAutoLabs/autogalaxy_workspace_test
     category: workspace_test
   autolens_workspace_test:
+    smoke_bootstrap: true
     github: PyAutoLabs/autolens_workspace_test
     category: workspace_test
   autocti_workspace_test:
+    smoke_bootstrap: true
     github: PyAutoLabs/autocti_workspace_test
     category: workspace_test
   autofit_workspace_developer:
@@ -208,12 +220,15 @@ repos:
 
   # --- tutorials ----------------------------------------------------------
   HowToFit:
+    smoke_bootstrap: true
     github: PyAutoLabs/HowToFit
     category: howto
   HowToGalaxy:
+    smoke_bootstrap: true
     github: PyAutoLabs/HowToGalaxy
     category: howto
   HowToLens:
+    smoke_bootstrap: true
     github: PyAutoLabs/HowToLens
     category: howto
 
@@ -239,6 +254,7 @@ repos:
     category: assistant
     session_hook: false
   euclid_strong_lens_modeling_pipeline:
+    smoke_bootstrap: true
     github: PyAutoLabs/euclid_strong_lens_modeling_pipeline
     category: pipeline
     role: "Euclid pipeline glue — library and pipeline changes for the Euclid strong-lensing work go here."

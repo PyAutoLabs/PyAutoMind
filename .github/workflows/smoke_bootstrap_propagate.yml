@@ -1,0 +1,63 @@
+name: Propagate the canonical smoke bootstrap
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - policy/smoke_bootstrap.py
+      - scripts/smoke_bootstrap_sync.py
+      - scripts/propagate_smoke_bootstrap.py
+      - repos.yaml
+      - .github/workflows/smoke_bootstrap_propagate.yml
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Generate in disposable clones and report without pushing
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: smoke-bootstrap-propagate
+  cancel-in-progress: false
+
+jobs:
+  propagate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pyyaml
+      - name: Read rollout state
+        id: rollout
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import yaml
+          enabled = yaml.safe_load(open('repos.yaml')).get('smoke_bootstrap_rollout', False)
+          if type(enabled) is not bool:
+              raise SystemExit('smoke_bootstrap_rollout must be boolean')
+          print(f"enabled={str(enabled).lower()}")
+          PY
+      - name: Explain held rollout
+        if: steps.rollout.outputs.enabled != 'true'
+        run: echo 'Rollout held in repos.yaml; no consumer pushes permitted.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Generate and propagate
+        if: steps.rollout.outputs.enabled == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.PAT_PYAUTOLABS }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          if [ "$DRY_RUN" != true ]; then
+            test -n "$GH_TOKEN" || { echo 'Missing PAT_PYAUTOLABS'; exit 1; }
+            gh auth setup-git
+          fi
+          args=()
+          [ "$DRY_RUN" != true ] || args+=(--dry-run)
+          python3 scripts/propagate_smoke_bootstrap.py "${args[@]}"

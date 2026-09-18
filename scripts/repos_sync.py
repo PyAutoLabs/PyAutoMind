@@ -112,6 +112,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import smoke_bootstrap_sync as smoke_sync
+
 import yaml
 
 MARK_BEGIN = "<!-- repos_sync:begin -->"
@@ -1903,7 +1905,8 @@ def main():
     # it must not fan out unrelated generated docs or Claude hooks while a task
     # intentionally holds only the Codex opt-in repos.
     codex_only_write = args.only and set(args.only) == {CODEX_HOOKS}
-    if args.write and not codex_only_write:
+    smoke_only_write = args.only and set(args.only) == {smoke_sync.LABEL}
+    if args.write and not codex_only_write and not smoke_only_write:
         # The marker goes with the routing table: both are workspace-root
         # artifacts of the body map, and the marker is what lets the resolver
         # (and the checkout leg below) find this root again from anywhere under
@@ -1941,11 +1944,18 @@ def main():
                         ORGANS_BEGIN, ORGANS_END, required=False)
         write_claude_md_pointers(root, repos)
         write_session_hooks(root, repos, hook_text, deliverable_hook_text)
-    if args.write:
+    if args.write and not smoke_only_write:
         write_codex_hooks(root, repos)
+    smoke_enabled = smoke_sync.rollout_enabled(mind_root)
+    if args.write and not codex_only_write and smoke_enabled:
+        smoke_sync.write(root, repos, (mind_root / smoke_sync.SOURCE).read_text())
+    if args.write and smoke_only_write and not smoke_enabled:
+        raise SystemExit("smoke bootstrap rollout is held; use smoke_bootstrap_sync.py --dry-run")
 
     # Lazy (label -> thunk) so --only pays for exactly the selected legs.
     checks = {
+        smoke_sync.LABEL: lambda: smoke_sync.check(
+            root, repos, (mind_root / smoke_sync.SOURCE).read_text()),
         "PyAutoHeart/config/repos.yaml": lambda: check_heart(root, repos),
         "PyAutoHands/pre_build.sh": lambda: check_pre_build(root, repos),
         "PyAutoHands/autohands/config/workspaces.yaml":
@@ -1996,6 +2006,9 @@ def main():
                   if label not in args.skip}
     drift = False
     for label, run_check in checks.items():
+        if label == smoke_sync.LABEL and not smoke_enabled:
+            print(f"deferred {label}: rollout held in repos.yaml; installations not graded")
+            continue
         problems = run_check()
         status = "OK" if not problems else f"{len(problems)} mismatch(es)"
         if label == SESSION_HOOKS:
@@ -2005,6 +2018,13 @@ def main():
             seen, in_scope, excluded = session_hook_counts(root, repos)
             status += f" ({seen} of {in_scope} checked out, {excluded} excluded)"
         print(f"check {label}: {status}")
+        if label == smoke_sync.LABEL:
+            try:
+                seen = len(list(smoke_sync.installations(root, repos)))
+                total = len(list(smoke_sync.targets(repos)))
+                print(f"  • {seen} of {total} smoke bootstrap targets checked out")
+            except (OSError, ValueError) as error:
+                print(f"  • coverage unavailable: {error}")
         if label == CHECKOUTS:
             # The same lesson from the other side: this is the leg that CAN say
             # "a repo is missing", so where it is not enforcing (an unmarked
