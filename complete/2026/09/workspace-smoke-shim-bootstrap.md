@@ -1,3 +1,76 @@
+# Workspace smoke bootstrap — phase 2c complete
+
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/416
+Mechanism: https://github.com/PyAutoLabs/PyAutoMind/pull/417 (merged 2e3c5482)
+Rollout: https://github.com/PyAutoLabs/PyAutoMind/pull/418 (merged f188ed8e)
+Propagation: https://github.com/PyAutoLabs/PyAutoMind/actions/runs/35402643923 (SUCCESS)
+
+## What shipped
+
+A single generated bootstrap block replaces the flat-layout assumption in all
+twelve smoke shims. Mind owns the canonical block, manifest-selected generation,
+drift checking and event-driven propagation. The five runner variants remain
+unchanged outside that block; CI's existing build_util import wins. Local runs
+use marker/shared-resolver discovery, reject an inferred foreign bundle root,
+and give a useful missing-Hands error. The mechanism's design and review findings
+are in `workspace-smoke-bootstrap-mechanism.md` beside this record.
+
+The human approved a bootstrap-only overlap waiver after inspection found no
+smoke-shim overlap with the active lens workspace and Euclid tasks. Their task
+branches were not changed. This rollout does not depend on tonight's library
+release and changes no library API or release-install logic.
+
+## Evidence
+
+- Mechanism full suite: 565 passed; rollout focused suite: 53 passed.
+- Independent Sol review CLEAN for both mechanism and enablement.
+- All applicable CI workflows/jobs passed on both PR heads before merging;
+  template publication was intentionally skipped on pull requests.
+- PR #418 had a task-ledger-only merge conflict after another session updated
+  main. Retained the current main ledger, reran CI, and merged exact head
+  dfafe9b7 after both applicable workflows passed. Final diff was only the flag
+  and its comments; no implementation changed during conflict resolution.
+- Propagation run logged twelve successful pushes, no failures.
+- Every deployed main bootstrap is byte-identical to canonical. Clean local main
+  checkouts were fast-forwarded; each deployed shim was then copied into a nested
+  fixture and imported build_util successfully: 12/12.
+- `repos_sync.py --check --only 'generated smoke bootstraps'`: OK, 12 of 12.
+- The legacy `parent / "PyAutoHands"` join is absent from all twelve installed
+  run_smoke.py files. The one-source-edit/twelve-updates witness was demonstrated
+  by the generator tests and fresh remote-clone dry runs, with exterior bytes
+  unchanged.
+
+Verified deployed heads (later unrelated commits may advance them):
+
+| Consumer | Verified main |
+|---|---|
+| autofit_workspace | `aa6d37383b89` |
+| autogalaxy_workspace | `3ca2b75681d7` |
+| autolens_workspace | `3b12fbb15cc7` |
+| autocti_workspace | `4a602184e1ee` |
+| autofit_workspace_test | `14ccf6fb1479` |
+| autogalaxy_workspace_test | `7ac0ce6c9230` |
+| autolens_workspace_test | `e2bd284d3c88` |
+| autocti_workspace_test | `c23d118c5092` |
+| HowToFit | `394639b79464` |
+| HowToGalaxy | `595fc7bd6df1` |
+| HowToLens | `143f4035855d` |
+| euclid_strong_lens_modeling_pipeline | `b3c6e75f3986` |
+
+## Boundaries and remaining work
+
+Phase 2c is complete. Phase 3 — physical directory regrouping — remains deferred
+until the release and pending workspace merges clear. No directories, Python
+paths, IDE settings, task branches, or Heart install-chain code were changed.
+The canonical Mind checkout's pre-existing staged draft deletion was preserved.
+
+Scoped reconciliation found one resemblance-only suspect,
+`draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md`;
+it is outside this bootstrap change and remains filed. Revisit through
+`/intake reconcile draft/maintenance/pyautobrain`.
+
+## Original prompt
+
 # The smoke shim's PyAutoHands bootstrap: 12 divergent copies of one flat-layout assumption
 
 Type: maintenance

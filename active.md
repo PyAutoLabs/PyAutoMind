@@ -157,20 +157,3 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
-
-## workspace-smoke-shim-bootstrap
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/416
-- issued: 2026-09-18
-- prompt: active/workspace_smoke_shim_bootstrap.md
-- status: awaiting-merge
-- autonomy: supervised (plan approved in chat 2026-09-18; staged Mind implementation then coordinated rollout)
-- worktree: ~/Code/PyAutoLabs-wt/workspace-smoke-shim-bootstrap
-- repos:
-  - PyAutoMind: feature/workspace-smoke-bootstrap-rollout
-- note: Human approved bootstrap-only coordination on 2026-09-18. Existing lens workspace and Euclid pipeline task changes were checked: none changes .github/scripts/run_smoke.py. Rollout may update that generated block on consumer mains; no task branches, runner bodies, library APIs or phase-3 layout changes are in scope.
-- resume: Mechanism PR #417 MERGED; rollout enablement in progress on feature/workspace-smoke-bootstrap-rollout. After merge, verify the propagation run and all twelve installed copies before closing issue #416. Phase 3 remains deferred.
-- heart-ack: "euclid_strong_lens_modeling_pipeline: open PR 7d old"; "release validation incomplete: no rehearsal for current source" (human explicitly acknowledged in chat 2026-09-18 for push and PR-open only; no merge, rollout or phase-3 move).
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/417 (MERGED 2026-09-18, 2e3c5482)
-- parallel-claim: Human explicitly approved bootstrap-only overlap waiver 2026-09-18 for autolens_workspace, autolens_workspace_test and euclid_strong_lens_modeling_pipeline; all twelve canonical consumer checkouts surveyed clean on main.
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/418 (OPEN; enables coordinated bootstrap-only rollout)
-- validation: Rollout enablement review CLEAN; 53 targeted tests pass; fresh remote-clone dry run 12/12 bootstrap-only would-push diffs. Heart STALE solely for the already-acknowledged missing rehearsal; no new reason.
