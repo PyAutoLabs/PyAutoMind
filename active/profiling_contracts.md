@@ -98,5 +98,7 @@ phase-2 parser compatibility and per-claim dispositions.
 
 Heart verdict: RED `release validation FAILED (stage integrate)`;
 YELLOW `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
-Task-specific development shipping approval requested; no override yet granted.
+Live user authorized task-specific development shipping: "Yes, ship this development PR".
+Authorization: commit, push, PR-open only; no merge or release.
+Recorded on issue #284, PR draft, active.md and autonomy_log.md.
 PR body draft: PyAutoMind/tmp/profiling-contracts-pr.md.
