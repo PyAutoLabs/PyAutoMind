@@ -201,3 +201,14 @@
   - reason: "release validation FAILED (stage integrate)"
   - gates: "92 focused tests PASS; both changed-cell import smokes PASS; Ruff check/format, README idempotence, wall contracts, shell syntax and diff checks PASS; independent review CLEAN; RAL eight-draw witness PASS."
   - issue-record: https://github.com/PyAutoLabs/autolens_profiling/issues/276#issuecomment-5727230819
+
+## fixed-light-numba-s6
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/282
+- issued: 2026-09-18
+- prompt: active/fixed_light_numba_s6_source_scaling.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-s6
+- repos:
+  - autolens_profiling: feature/fixed-light-numba-s6
+- parallel-claim: "Live user yes go on 2026-09-18 approves new-files-only phase-6 worktree alongside hst-gpu-residue-p2 and fixed-light-numba-s4b; conflict guard repeated."
+- next: "Implement scaling harness; smoke and independently review before RAL sweep."

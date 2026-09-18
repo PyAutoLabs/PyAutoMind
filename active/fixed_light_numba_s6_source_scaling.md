@@ -11,7 +11,9 @@ Autonomy: human-required
 Consequence: judge
 Priority: high
 Review-minutes: 25
-Status: plan ready; awaiting separate-worktree coordination approval
+Status: workspace-dev
+Issued: 2026-09-18
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/282
 
 ## Original user request
 
@@ -50,3 +52,7 @@ Proposed task root: ~/Code/PyAutoLabs-wt/fixed-light-numba-s6/.
 Conflict guard finds hst-gpu-residue-p2 and fixed-light-numba-s4b still claiming autolens_profiling. Request explicit approval for this separate worktree, with new phase-6 files only and existing source files unchanged. Prior phase-5/5b waivers were task-specific. Old phase-5 worktrees remain preserved with local outputs pending cleanup permission; they are not reused.
 
 The issue body is this two-level plan. Do not create issue, worktree or source edits until the coordination guard is approved. Phase 7 (HST + Euclid verdict) remains separate.
+
+## Live authorization
+
+2026-09-18: user replied **yes go** to the phase-6 plan and separate-worktree coordination request. Both existing claims were rechecked; new phase-6 files only. Base fb303cf.
