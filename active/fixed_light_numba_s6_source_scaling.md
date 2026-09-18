@@ -111,3 +111,12 @@ oldtest edits were fixed before the source snapshot; currentproduction target
 is imaging_numba.sparse.InversionImagingSparseNumba and actual NNLS callable.
 Do not quote earlier55tests: that was a worker path mistake; finalnew7 plus
 parent8 =15focused tests. Existing source files are unchanged.
+
+Artifact packaging checkpoint: the four retrieved result JSONs had scalar arrays
+compacted losslessly by output/s6/format_results.py (parsed JSON equality
+asserted). Original and formatted SHA256/byte sizes are retained in
+output/s6/artifact-formatting.json. After pulling N4000, run that formatter
+again, then verifier and aggregator, and include the formatting manifest in
+the final provenance sidecar. Do not overwrite formatted local cells by pulling
+all remote files again unless re-running formatting deliberately. Declaration
+files are never reformatted; their frozen hashes remain unchanged.
