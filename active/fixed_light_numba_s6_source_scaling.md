@@ -11,7 +11,7 @@ Autonomy: human-required
 Consequence: judge
 Priority: high
 Review-minutes: 25
-Status: awaiting-input
+Status: awaiting-merge
 Issued: 2026-09-18
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/282
 
@@ -91,3 +91,16 @@ No phase6 override requested/granted before this checkpoint. Final provenance re
 record four sinks per PyAutoBrain/AUTONOMY.md, commit/push/open pending-release
 PR via ship-workspace. Merge requires separate current human command and CI.
 No run/CI subscription or scheduled wakeup exists. All cluster work complete.
+
+## Shipping authorization — 2026-09-18
+
+User: "yes I authorize that", responding directly to the issue282 request for
+commit/push/PR despite the stated Heart RED/YELLOW reasons. Development-only
+scope; no merge or release. Override recorded on the issue, PR body draft,
+active.md and autonomy_log.md. Prior awaiting-input checkpoint is superseded.
+Commit705129d contains all24 reviewed new files. Shipping smoke and submit
+checks pass. PR creation follows successful push.
+
+PR opened: https://github.com/PyAutoLabs/autolens_profiling/pull/283
+Commit705129d pushed successfully; pending-release requested. Awaiting CI and
+separate human merge command. No polling subscription or auto-merge armed.

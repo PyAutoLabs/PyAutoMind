@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_numba_s6_source_scaling.md">Phase 6: source-pixel scaling of the numba CPU likelihood</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/282">issue #282</a> — issued 2026-09-18 — awaiting-input</summary>
+<details><summary>📋 <a href="active/fixed_light_numba_s6_source_scaling.md">Phase 6: source-pixel scaling of the numba CPU likelihood</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/282">issue #282</a> — issued 2026-09-18 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/283">autolens_profiling#283</a></summary>
 
 ```
 /start_dev active/fixed_light_numba_s6_source_scaling.md
