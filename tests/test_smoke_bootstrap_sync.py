@@ -312,3 +312,18 @@ def test_bounded_repos_sync_write_only_changes_smoke_block(tmp_path, monkeypatch
     assert result.value.code == 0
     assert sync.BEGIN in path.read_text()
     assert not (tmp_path / ".pyauto-root").exists()
+
+
+@pytest.mark.parametrize("ancestor", [False, True])
+def test_destination_root_and_its_ancestors_cannot_be_symlinks(tmp_path, ancestor):
+    real = tmp_path / "real"
+    real.mkdir()
+    root = real / "tree" if ancestor else real
+    path = install_repo(root)
+    original = path.read_bytes()
+    link = tmp_path / "link"
+    link.symlink_to(real, target_is_directory=True)
+    destination = link / "tree" if ancestor else link
+    with pytest.raises(ValueError, match="symlink"):
+        sync.write(destination, {"example": {"smoke_bootstrap": True}}, SOURCE)
+    assert path.read_bytes() == original

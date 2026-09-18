@@ -114,11 +114,9 @@ def write(root, repos, source, *, require_all=False, dry_run=False):
     pending = changes(root, repos, source, require_all)
     # Preflight the entire set before the first write.
     for path, _ in pending:
-        current = path
-        while current != root.absolute():
+        for current in (path, *path.parents):
             if current.is_symlink():
                 raise ValueError(f"refusing to write through symlink: {current}")
-            current = current.parent
     for path, expected in pending:
         if not dry_run:
             path.write_bytes(expected.encode("utf-8"))
