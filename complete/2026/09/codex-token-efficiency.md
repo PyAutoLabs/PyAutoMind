@@ -1,3 +1,60 @@
+# Codex token-efficiency workflow
+
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/409
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/387
+- merge: `0a2174996722e505c6958cd565080f08c4bbfe06`
+- shipped: 2026-09-18
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/387
+
+## What shipped
+
+- Split model delegation by provider while preserving Claude's Fable → Opus,
+  Opus → Opus, Sonnet mechanical-floor, heartbeat, tutorial, bundle, and
+  Cortex behavior. Codex now performs routine sequential work directly and
+  delegates only bounded parallel, context-isolation, or independent-review
+  work.
+- Reduced `skills/WORKFLOW.md` from 22,095 to 5,034 bytes and moved conditional
+  provider detail into the linked 4,159-byte `MODEL_DELEGATION.md`; shortened
+  four relevant skill discovery surfaces.
+- Added a safe, idempotent workspace-root policy installer that preserves
+  symlinks, migrates both known legacy policy blocks, and fails closed on
+  malformed or unordered markers.
+- Added the standard-library, explicit-file `bin/codex_usage.py` report and
+  comparison protocol. It reports the final cumulative snapshot, keeps cached
+  input and reasoning as subsets, records model/effort changes and coordination
+  counts, and leaves incomplete or ambiguous aggregation unknown.
+
+## Validation
+
+- Full PyAutoBrain suite: 915 passed.
+- Focused usage, installer, and policy suite: 41 passed.
+- Four changed skills passed `quick_validate`.
+- Live explicit-rollout smoke matched input 49,762,616; cached input 48,107,520;
+  uncached input 1,655,096; output 130,262; reasoning output 61,897; total
+  49,892,878; and 80 collaboration calls including one spawn.
+- Independent working-tree review: CLEAN; post-commit review surface contained
+  no load-bearing claims to falsify. All GitHub jobs passed on reviewed head
+  `a7d8fce53a2e497565cbacabea6900d6cd3473b3`.
+
+## Heart RED override
+
+The live human authorized `yes  commit, push and open the PR for` after the
+exact RED reasons were reported: `install verification FAILED (testpypi; checks
+F)` and `release validation FAILED (stage integrate)`. The contemporaneous
+YELLOW reason was `manifest drift: remote-session blocks (generated) — 2
+mismatch(es) vs PyAutoMind/repos.yaml`. This permitted development shipping
+only. It did not resolve Heart, authorize release, or bypass CI. The later
+explicit `merge` command and green checks separately authorized the merge.
+
+## Activation
+
+After the merge, the canonical workspace-root policy was updated with
+`PyAutoBrain/bin/install.sh --write-workspace-policy` and verified with
+`--check-workspace-policy`; unrelated root instructions and Claude policy were
+preserved.
+
+## Original prompt
+
 # Improve Codex token efficiency without weakening Claude delegation
 
 Type: maintenance
