@@ -308,7 +308,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_smoke_shim_bootstrap.md">The smoke shim's PyAutoHands bootstrap: 12 divergent copies of one flat-layout assumption</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/416">issue #416</a> — issued 2026-09-18 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/417">PyAutoMind#417</a></summary>
+<details><summary>📋 <a href="active/workspace_smoke_shim_bootstrap.md">The smoke shim's PyAutoHands bootstrap: 12 divergent copies of one flat-layout assumption</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/416">issue #416</a> — issued 2026-09-18 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/417">PyAutoMind#417</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/418">PyAutoMind#418</a></summary>
 
 ```
 /start_dev active/workspace_smoke_shim_bootstrap.md

@@ -162,7 +162,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/416
 - issued: 2026-09-18
 - prompt: active/workspace_smoke_shim_bootstrap.md
-- status: workspace-dev
+- status: awaiting-merge
 - autonomy: supervised (plan approved in chat 2026-09-18; staged Mind implementation then coordinated rollout)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-smoke-shim-bootstrap
 - repos:
@@ -172,3 +172,5 @@
 - heart-ack: "euclid_strong_lens_modeling_pipeline: open PR 7d old"; "release validation incomplete: no rehearsal for current source" (human explicitly acknowledged in chat 2026-09-18 for push and PR-open only; no merge, rollout or phase-3 move).
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/417 (MERGED 2026-09-18, 2e3c5482)
 - parallel-claim: Human explicitly approved bootstrap-only overlap waiver 2026-09-18 for autolens_workspace, autolens_workspace_test and euclid_strong_lens_modeling_pipeline; all twelve canonical consumer checkouts surveyed clean on main.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/418 (OPEN; enables coordinated bootstrap-only rollout)
+- validation: Rollout enablement review CLEAN; 53 targeted tests pass; fresh remote-clone dry run 12/12 bootstrap-only would-push diffs. Heart STALE solely for the already-acknowledged missing rehearsal; no new reason.
