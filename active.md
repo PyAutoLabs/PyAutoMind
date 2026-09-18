@@ -243,5 +243,6 @@
   - autolens_profiling: feature/fixed-light-numba-s6
 - parallel-claim: "Live user yes go on 2026-09-18 approves new-files-only phase-6 worktree alongside hst-gpu-residue-p2 and fixed-light-numba-s4b; conflict guard repeated."
 - validation: "15 focused tests PASS; import, Ruff/format, README, shell checks PASS; independent code review CLEAN. Local N100/N1500 numerical smoke PASS; overlapping local timing discarded. Instrumentation order subsequently counterbalanced."
-- hpc: "RAL343430_0 N500 COMPLETED0:0 all gates PASS; array343445_1 N1000 COMPLETED0:0 all gates PASS;343445_2..4 N1500/2500/4000 sequential in progress. Private snapshot fixed-light-numba-s6-run, all48 inputs verified."
-- next: "Finish RAL sizes1500/2500/4000; retrieve/verify all80 numerical pairs and timing gates; aggregate, write verdict, empirical review."
+- hpc: "343430_0 N500 completed3:22;343445_1 N1000 completed4:19;343445_2 N1500 completed6:53;343445_3 N2500 completed17:00; all0:0 andallgatesPASS.343445_4 N4000 RUNNING since14:52BST. Private snapshot fixed-light-numba-s6-run; all48 inputs verified."
+- result-so-far: "64 paired comparisons PASS; max clean/observed discrepancy0.265%. N2500 nearby cold/memo709.840/595.186ms; broad1428.872/3819.675ms. N4000 pending. Source and four result cells staged, not committed. No phase6 Heart RED ship override requested or granted."
+- next: "Check343445_4. Pull final JSON/declaration/PNG; run output/s6/verify_results.py; --aggregate; output/s6/finish_note.py; write final design interpretation and source/job sidecar; independent empirical review; full ship gates. Preserve source snapshot identity. Detailed resume in active prompt."
