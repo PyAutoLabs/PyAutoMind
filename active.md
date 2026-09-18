@@ -67,7 +67,7 @@
 - issued: 2026-09-12
 - prompt: active/sersic_variants_prior_edge.md
 - session: claude --resume session_01KTGhZacWuxrxYkXXWXJbBx
-- status: awaiting-merge
+- status: paused
 - worktree: ~/Code/PyAutoLabs-wt/sersic-variants
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/sersic-variants
