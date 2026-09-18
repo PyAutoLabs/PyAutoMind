@@ -1,3 +1,24 @@
+## euclid-jax-contour-compat
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
+- completed: 2026-09-18
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/623
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/123
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/623
+
+Restored jax-zero-contour 2.0.0 compatibility with JAX 0.11.2 through a lazy cached local ZeroSolver subclass, used by both LensCalc construction sites. It wraps the custom_root callable in jax.tree_util.Partial before the upstream while-loop; no monkey patch or module-level JAX imports. No public API or numerical algorithm changed.
+
+Merged library f3bab3b8 at 90e757d336e62b75790befacc77e2d6dde460879 after all four CI checks passed; integration 8bc2713 at ae45e490f75260533d0f18bb3bc2ce951377a0d5 after all three CI checks passed. Git ancestry verified for both branches. The standalone workspace regression covers circle values, jit, bounded vmap and gradients, both LensCalc paths and cache reuse; curated smoke list unchanged per independent review.
+
+Validation: 1236 library tests; integration and Euclid latent regression PASS on JAX 0.10.2/0.11.2; full Euclid 0.11.2 suite 230 passed; 41/41 local workspace smoke; independent Sol review CLEAN. Pipeline #90 then passed all 9 CI checks and merged at 9cdee7b1. Its science deployment remains tracked separately by pipeline issue #89.
+
+Human-authorized development-only Heart RED override: live user "I authorize" after branch validation and exact RED `release validation FAILED (stage integrate)` and YELLOW `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml` were shown. Scope included shipping and green-CI merges, not release or SLURM submission. Authorization recorded on issue, PR bodies, active registry and first autonomy log table. Heart remains RED for releases; pending-release obligation retained.
+
+Limitations: upstream does not promise vmap for arbitrary terminated contours. Einstein-radius reverse-gradient shape failure also occurs on unmodified PyAutoGalaxy/JAX 0.10.2 and is not claimed fixed. Evidence: tmp/euclid-flat-fields/repair-validation.md and repair-review.md.
+
+Task validation outputs retained under tmp/euclid-flat-fields before worktree cleanup. No science outputs removed; no SLURM jobs submitted.
+
+## Original prompt
+
 # Restore JAX 0.11 zero-contour compatibility for Euclid deployment
 
 Type: bug

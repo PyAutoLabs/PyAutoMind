@@ -1,32 +1,10 @@
 # Active Tasks
 
-## euclid-jax-contour-compat
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622
-- issued: 2026-09-18
-- prompt: active/euclid_jax_zero_contour_011.md
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/623
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/123
-- worktree: ~/Code/PyAutoLabs-wt/euclid-jax-contour-compat
-- repos:
-  - PyAutoGalaxy: feature/euclid-jax-contour-compat
-  - autogalaxy_workspace_test: feature/euclid-jax-contour-compat
-- note: Source plan and green-CI merges approved in live chat 2026-09-18. Library Heart gate remains applicable. No SLURM submissions.
-- validation: 1236 library tests; integration and Euclid regression on JAX 0.10.2/0.11.2; full Euclid 0.11.2 suite 230 passed; workspace smoke 41/41 passed; independent Sol review CLEAN.
-
-- heart-red-override:
-  - date: 2026-09-18
-  - authorization: Live user "I authorize" to #622 development shipping and green-CI merges after all validation and exact reasons were shown.
-  - red-reasons: "release validation FAILED (stage integrate)"
-  - yellow-reasons: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"
-  - gates: 1236 library tests; both-version integration/Euclid regression; 230 Euclid tests; 41 smoke PASS; independent Sol review CLEAN.
-  - scope: commit/push/pending-release PRs and green-CI merges; no release, bypass or SLURM submission.
-
 ## euclid-fields-api
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89
 - issued: 2026-09-18
 - prompt: active/fields_api_top1000.md
-- status: awaiting-merge
+- status: deployment-pending
 - worktree: ~/Code/PyAutoLabs-wt/euclid-fields-api
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-fields-api
@@ -40,9 +18,9 @@
   - gates: 230 tests PASS; 9/9 smoke PASS; independent review CLEAN (27 focused checks); diff check PASS.
   - scope: commit, push, pending-release PR; merge only on green CI. No release or SLURM submission; modelling-script hold remains.
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90
-- implementation: 7fbdbe5; 230 tests, 9/9 smoke, independent review CLEAN. Science/RAL deployment pending merge; submission hold remains.
-- ci-blocker: Both unit matrix legs fail the latent contour test with JAX 0.11.2; isolated third-party-only reproduction confirms the dependency incompatibility. Repair implemented and independently reviewed under PyAutoGalaxy#622 / active/euclid_jax_zero_contour_011.md; full Euclid suite now passes locally on JAX 0.11.2. Repair shipping awaits its own Heart override; rerun CI only after upstream merge.
-- deployment: Not synced; local science d53b9ce, RAL PyAutoLens 7197380. No stack refresh or new submissions. 2026-09-18 precheck: running unrelated job 343413 uses shared stack, so refresh held; remote editor backups preserved; Fit cleanliness still needs recheck. All 21 port preimages and top-1000 CSV/submit/FITS-info matches reverified.
+- implementation: Pipeline #90 merged 9cdee7b1 after all 9 CI checks passed; source head 7fbdbe5. Local science port complete, RAL deployment pending shared-stack job. Submission hold remains.
+- ci-blocker: Both unit matrix legs fail the latent contour test with JAX 0.11.2; isolated third-party-only reproduction confirms the dependency incompatibility. RESOLVED: repair merged as PyAutoGalaxy#623 (90e757d3) + autogalaxy_workspace_test#123 (ae45e490); record complete/2026/09/euclid-jax-contour-compat.md. Pipeline #90 rerun passed all 9 checks and merged at 9cdee7b1.
+- deployment: Local selective port committed 2430e4e from d53b9ce, preserving 18 science commits and all data/config/output; model/import validation PASS. RAL unchanged (Lens 7197380); running job 343413 uses shared stack, so refresh and sync held. No submissions. Recheck all jobs, cleanliness/divergence (Fit status incomplete) and preserve editor backups, then HPCPullPyAuto, imports/model verification, hpc/sync and Cortex update. Evidence: tmp/euclid-flat-fields/deployment-state.json; Cortex 3c32bcc.
 
 ## codex-hook-parity
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407

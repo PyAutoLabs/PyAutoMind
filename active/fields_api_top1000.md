@@ -93,4 +93,10 @@ Evidence retained locally under `PyAutoMind/tmp/euclid-flat-fields/`: `ci-failed
 
 Science deployment remains pending: local euclid_dr1 at d53b9ce, RAL PyAutoLens at 7197380. RAL's interpreter `/mnt/ral/jnightin/PyAuto/PyAuto/bin/python3` successfully imported `/mnt/ral/jnightin/PyAuto/PyAutoLens/autolens/__init__.py` and confirmed bare-field normalization absent. Stack preconditions checked Nerves, Fit and Array as clean/main/up-to-date; the 180-second read-only check timed out during Galaxy. HPCPullPyAuto was not run. No code sync or SLURM submission occurred. The final modelling-script approval hold remains.
 
-Proposed upstream repair: draft/bug/autogalaxy/euclid_jax_zero_contour_011.md; no source repair approved or implemented yet.
+Upstream repair completed: complete/2026/09/euclid-jax-contour-compat.md (PyAutoGalaxy#623 and autogalaxy_workspace_test#123).
+
+## Merged and locally ported — 2026-09-18
+
+PyAutoGalaxy#623 merged at 90e757d336e62b75790befacc77e2d6dde460879 (4/4 checks); workspace-test#123 at ae45e490f75260533d0f18bb3bc2ce951377a0d5 (3/3). Pipeline #90 rerun against the repaired source passed all 9 checks and merged at 9cdee7b10e916b4e2d172257f26c37881f094802. Local science selectively ported all 21 reviewed files and committed d53b9ce -> 2430e4ecd0815ee1cfb4809e3836e178dd5a90b6, preserving all 18 science commits and untracked preparation; never pushed to pipeline origin. Actual local interpreter/import/model check passes with 15 priors, fields.shear.gamma_1/2 and tracer.fields list.
+
+RAL remains unchanged. Job 343413 fixed_light_numba_s5b is RUNNING and its activate.sh imports shared canonical PyAuto checkouts. Do not refresh while it runs. Next: recheck queue and all library cleanliness/divergence (Fit status previously timed out), preserve three editor backups, run inspected HPCPullPyAuto, verify imported bare-field normalization and compatibility adapter, then sync project via hpc/sync and record pre/post facts with Cortex. No source sync, stack refresh or SLURM submission performed. Hold remains: dont submit jobs until Ive okayed modeling script. Cortex operational note pushed at 3c32bcc; exact state in tmp/euclid-flat-fields/deployment-state.json.
