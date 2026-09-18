@@ -239,9 +239,10 @@
 ## profiling-contracts
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/284
 - issued: 2026-09-18
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-contracts
 - repos:
   - autolens_profiling: feature/profiling-contracts
 - parallel-claim: "User explicitly approved separate-worktree coordination with hst-gpu-residue-p2 on 2026-09-18. Minimal parser overlap in fixed_light_trace.py; preserve that branch batching implementation."
 - note: "Approved review follow-up: strict final CLI parsing, matched CPU timing streams, corrected campaign summaries. No benchmarks or further memo/order research."
+- checkpoint: "Implementation complete, staged. 63 affected tests, 12 import smokes and repo checks pass; independent Sol review CLEAN. Heart RED release validation FAILED (stage integrate); YELLOW manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. Awaiting task-specific commit/push/PR override; no benchmarks run."

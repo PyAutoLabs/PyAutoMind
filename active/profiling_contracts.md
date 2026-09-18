@@ -76,3 +76,27 @@ Preserve GPU phase-2 implementation; coordinate only the parser boundary.
 No new benchmarks, issues for further research, library defaults, solver changes,
 memo/order research, phase-7 revival, broad audit, result-schema migration or
 general harness rewrite. No merge/release authorized by this task.
+
+## Implementation checkpoint — 2026-09-18
+
+Implemented in /home/jammy/Code/PyAutoLabs/.worktrees/profiling-contracts/autolens_profiling,
+branch feature/profiling-contracts, staged and not committed pending Heart override.
+Strict final shared/local parser in 12 fixed-light cells; invalid counts/budget
+lists rejected; numba rows reset/validate their timed streams. Current-summary
+page and nine superseding notices preserve CPU closure, phase-7 shelving,
+corrected GPU headlines and the unversioned bridge-control limitation. No new
+benchmarks, library changes or result artifacts. Mind epic pointer corrected.
+
+Validation: full suite initially 646 passed, 5 skipped and one stale AST helper-name
+reference; that test was updated. Final affected rerun: 63 passed (33 contract tests
+plus 30 CPU tests), five pre-existing fixture warnings. Twelve changed-cell import
+smokes pass. Ruff check/format, README idempotence, submit wall contracts, diff
+whitespace and 57 local Markdown links pass. Actual CLI rejections checked for
+unknown flags, zero threads, mixed precision, dataset mismatch and unsupported
+vmap-batch on the old trace cell. Independent Sol review: CLEAN, including actual
+phase-2 parser compatibility and per-claim dispositions.
+
+Heart verdict: RED `release validation FAILED (stage integrate)`;
+YELLOW `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
+Task-specific development shipping approval requested; no override yet granted.
+PR body draft: PyAutoMind/tmp/profiling-contracts-pr.md.
