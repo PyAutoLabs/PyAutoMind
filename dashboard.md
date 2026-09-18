@@ -316,7 +316,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_location_contracts.md">Workspace location contracts: one resolver for root, repo, main and task checkouts</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/391">issue #391</a> — issued 2026-09-18 — library-dev</summary>
+<details><summary>📋 <a href="active/workspace_location_contracts.md">Workspace location contracts: one resolver for root, repo, main and task checkouts</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/391">issue #391</a> — issued 2026-09-18 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/392">PyAutoBrain#392</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/232">PyAutoHeart#232</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/283">PyAutoHands#283</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/414">PyAutoMind#414</a></summary>
 
 ```
 /start_dev active/workspace_location_contracts.md

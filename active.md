@@ -4,7 +4,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/391
 - issued: 2026-09-18
 - prompt: active/workspace_location_contracts.md
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/392
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/232
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/283
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/414
 - autonomy: supervised (plan approved in chat 2026-09-18; phase split approved in the same turn)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-location-contracts
 - epic: workspace-regroup (phase 1a; phase 1b shipped as workspace-dead-weight-cleanup, PyAutoBrain#390/PyAutoMind#413)
