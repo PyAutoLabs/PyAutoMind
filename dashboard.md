@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 211 |
+| [Backlog](#backlog) (`draft/`) | 212 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 108
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 109
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_workspace_sweep.md">autolens_workspace + autolens_workspace_test: every external field moves to <code>fields=</code> (<code>al.MassField</code>)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/559">issue #559</a> — issued 2026-09-17 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/742">PyAutoLens#742</a> — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
+<details><summary>📋 <a href="active/mass_field_workspace_sweep.md">autolens_workspace + autolens_workspace_test: every external field moves to <code>fields=</code> (<code>al.MassField</code>)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/559">issue #559</a> — issued 2026-09-17 — awaiting-release — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/742">PyAutoLens#742</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/560">autolens_workspace#560</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/322">autolens_workspace_test#322</a> — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/mass_field_workspace_sweep.md
@@ -565,7 +565,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**211** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
+**212** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 60</summary>
@@ -1684,7 +1684,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 14</summary>
+<summary><b>docs</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -1770,6 +1770,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/howtofit/tutorial_4_runtime_claim.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter counts do not match…</a> — workspaces · small · safe · low</summary>
+
+```
+/start_dev draft/docs/workspaces/model_bullet_parameter_count_drift.md
 ```
 
 </details>
@@ -2260,6 +2268,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="planned.md#codex-skill-discovery">codex-skill-discovery</a> |
@@ -2269,12 +2278,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> |
 | 2026-09-17 | issued | <a href="active/codex_hook_parity.md">Register safety hooks for Claude and Codex</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
-| 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source image-plane chi-squared on the A100: likelihood…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source image-plane chi-squared on the A100: likelihood…</a> |
 | 2026-09-17 | issued | <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
@@ -2284,12 +2293,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | issued | <a href="active/fixed_light_numba_s4b_permute_active_last.md">Fixed-light numba CPU round 4, wave B — A-prime: permute the active…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
-| 2026-09-17 | issued | <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | issued | <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
@@ -2299,12 +2308,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | issued | <a href="active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
-| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
@@ -2314,12 +2323,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
-| 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
 | 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
@@ -2329,7 +2338,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
-| 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
 
 </details>
 

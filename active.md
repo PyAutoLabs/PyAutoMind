@@ -20,12 +20,16 @@
 - issued: 2026-09-17
 - prompt: active/mass_field_workspace_sweep.md
 - session: Fable CLI background job 281b9756 (local-dev)
-- status: workspace-dev
+- status: awaiting-release
 - autonomy: supervised (header; default launch, no --auto — plan approved in chat 2026-09-17; PRs will open as DRAFTS labelled pending-release and merge only after the PyAutoGalaxy + PyAutoLens release is on PyPI)
 - worktree: ~/Code/PyAutoLabs-wt/mass-field-workspace-sweep
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/560
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/322
+- note: DRAFT PRs — do not /prm until the PyAutoGalaxy (#621) + PyAutoLens (#742) release is on PyPI; the workspace follows the released stack. Release day: `gh pr ready` both, then /prm. Smoke subset 28/28 + 2/2 JAX + 13/13 green locally 2026-09-18 against library main.
 - release-gate: PyAutoGalaxy
 - release-gate: PyAutoLens
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/742
+- heart-ack: "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"; yellow "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml" — acknowledged by the human 2026-09-18 (chat) for commit/push/DRAFT PR-open only; none concern the workspace repos; merge stays human and release-gated
 - repos:
   - autolens_workspace: feature/mass-field-workspace-sweep
   - autolens_workspace_test: feature/mass-field-workspace-sweep
