@@ -67,6 +67,37 @@
     of the release to validate the library with real workspace runs; local smoke
     subset against library main, then draft PRs held for the release.
 
+## mass-field-flat-sweep
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/561
+- issued: 2026-09-18
+- prompt: active/mass_field_flat_sweep.md
+- status: phase-0-gate
+- autonomy: supervised (header; no --auto — plan approved in chat 2026-09-18; Phase 0 step 3 is a human-confirmation gate on draft PR #322's red latent leg, and PR-open needs the human's explicit Heart ack)
+- worktree: ~/Code/PyAutoLabs-wt/mass-field-workspace-sweep
+- repos:
+  - autolens_workspace: feature/mass-field-flat-sweep
+  - autolens_workspace_test: feature/mass-field-workspace-sweep
+- parallel-claim: "worktree_check_conflict mass-field-flat-sweep autolens_workspace autolens_workspace_test (PYAUTO_MAIN=/home/jammy/Code/PyAutoLabs) exits 1 on BOTH repos, claimed by mass-field-workspace-sweep (#559, feature/mass-field-workspace-sweep, LIVE, awaiting-merge). This is deliberate continuity, not a parallel claim: phase 6 is the flat-form follow-up to that task's collection form and REUSES its worktree ~/Code/PyAutoLabs-wt/mass-field-workspace-sweep rather than cutting a conflicting branch. autolens_workspace_test work is folded onto that task's existing branch and its open DRAFT PR #322 (the repo ships the collection form nowhere, so composition_mge.py's identifier pin moves once instead of twice); autolens_workspace branches feature/mass-field-flat-sweep off main, where #560 already merged at c79c8d3, so the two branches never touch the same ref. Waived on the human's plan approval 2026-09-18."
+- epic: mass-field (phase 6; draft/feature/autogalaxy/mass_field_epic.md)
+- depends-on: PyAutoLens#744 (issue #743) merged 2026-09-18 at 478213e78 — the bare-MassField capability; record complete/2026/09/mass-field-bare-fields.md
+- reference-impl: euclid_strong_lens_modeling_pipeline#90 merged 9cdee7b (task euclid-fields-api, euclid issue #89) — already fully flat; mirrored, not edited from here
+- release-gate: PyAutoGalaxy
+- release-gate: PyAutoLens
+- note: Inherits mass-field-workspace-sweep's Heart RED ("release validation FAILED (stage integrate)") + YELLOW ("manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"). PR-open needs the human's explicit ack, recorded verbatim; merge stays human. GATE before any rewrite: diagnose #322's red latent_integration_smoke_jax.py leg (missing files/latent/latent_summary.json; green on main, red on the draft) and confirm the path with the human.
+- summary: |
+    Phase 6 of the mass-field epic. PyAutoLens#744 made the fields= model slot
+    accept a bare MassField; this is the requested adoption sweep that moves
+    autolens_workspace (143 single-entry sites in 130 files) and
+    autolens_workspace_test (66 sites across 65 files) from
+    fields=af.Collection(field=field) to fields=field, so prior paths read
+    fields.shear.gamma_1 rather than fields.field.shear.gamma_1. Witness is an
+    AST re-walk, never a grep — chaining is shape-transparent. Identifiers change
+    by design: flat scripts write to new output/ directories and old trees are
+    not resumed; composition_mge.py's pin is recomputed once and
+    galaxy_attached_legacy.py's 35ebe935... must not move. HowToLens,
+    autolens_workspace_developer, profiling, inference, joss, assistant and
+    markdown/ are deliberately out of scope with follow-ups filed.
+
 ## sed-chain-cpu-route
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
 - issued: 2026-09-11

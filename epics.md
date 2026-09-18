@@ -144,3 +144,10 @@ epic, never picked standalone.
   record complete/2026/09/mass-field-integration.md) — library work done, both pending-release.
   Phases 3–5 (workspace sweeps) wait on a release of PyAutoGalaxy#621 + PyAutoLens#742 to the
   installed stack; phase 3 is issued only once `/release` has published both.
+  Phase 3 IN FLIGHT (autolens_workspace#559; #560 merged 2026-09-18 at c79c8d3,
+  autolens_workspace_test#322 still a draft). Phase 6 added and ISSUED 2026-09-18
+  (autolens_workspace#561, active/mass_field_flat_sweep.md): the flat/bare `fields=field`
+  adoption sweep across both workspaces, unblocked by PyAutoLens#744 (merged 478213e78),
+  reusing phase 3's worktree and folding its workspace_test half into draft PR #322.
+  Amend phase 5's prompt before issuing it — it is written in the collection era and would
+  migrate HowToLens twice.
