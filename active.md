@@ -224,7 +224,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/280
 - issued: 2026-09-18
 - prompt: active/fixed_light_numba_s5b_memo_precheck.md
-- status: awaiting-input
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/fixed-light-numba-s5b
 - repos:
   - autolens_profiling: feature/fixed-light-numba-s5b
@@ -232,10 +232,14 @@
 - parallel-claim: '2026-09-18 live user: "contnue   May I create another disjoint worktree, based on PR #279, for this prototype? yes". Explicit approval of phase-5b plan and separate new-files-only worktree alongside #273, #276 and #278; conflict guard repeated and all three recorded. Existing task source files remain unchanged.'
 - hpc: "RAL job 343413 COMPLETED 0:0, 01:01:18, MaxRSS8155204KiB. All47 source inputs verified before/after; library revisions unchanged and tracked-clean."
 - validation: "24 tests, full-size numerical/matched-state smoke, Ruff/format/import/API/shell/README/artifact checks PASS. Independent full code/design/empirical review CLEAN. All276 evaluation and224 calibration comparisons PASS, all128 matched active sets equal, maxrelativeevidence5.7173e-14. All numerical/lock/thread-configuration/completeness gates PASS."
-- next: "Await live task-specific Heart RED override for #280 commit/push/pending-release PR only. Ten new files staged on feature/fixed-light-numba-s5b; PR draft PyAutoMind/tmp/s5b-pr-body.md. PR should stack on feature/fixed-light-numba-s5 while #279 remains open. No merge authorization; no background waiters."
+- next: "Await required CI and separate human merge command. Parent PR #279 must merge first; no background CI waiter."
 - result: "NO_LEVER. Threshold0.5 locked from seed278 calibration before evaluations. Graded cold/memo/guarded385.053/613.080/379.684ms; shuffled384.774/600.198/387.327ms; nearby270.875/212.352/237.108ms; broad453.099/759.296/477.017ms. Originalstress targetsPASS; nearby11.66%overmemo andbroad5.28%overcold FAIL3%limits. Matched1falseaccept14falserejects. Productionlibrary unchanged."
-- heart-block:
+- heart-red-override:
+  - issue-record: https://github.com/PyAutoLabs/autolens_profiling/issues/280#issuecomment-5729494671
+  - passed-gates: "24 tests; full-size numerical/matched-state smoke; Ruff/format/import/API/shell/README; independent review CLEAN; all numerical and artifact verification gates PASS."
   - red-reason: "release validation FAILED (stage integrate)"
   - yellow-reason: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"
   - checked: 2026-09-18T11:19:40.542034+00:00
-  - authorization: "None for #280 shipping; prior #278 override not extended. Worktree/plan approval is already recorded above."
+  - authorization: "2026-09-18 live user replied yes go to the #280 commit/push/PR request despite the exact RED and YELLOW reasons above. Development shipping only; no merge or release."
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/281
+- commit: a18cb7481d9a33d26f1145144af150a86a3d3bf7

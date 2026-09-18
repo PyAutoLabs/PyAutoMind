@@ -170,15 +170,21 @@ stress orders improve35–38% over existingmemo and remainwithin3% ofcold.
 Matched diagnostics find1 harmful acceptance and14 missed useful seeds.
 
 The ten task-specific files, including complete JSON/PNG, declaration, lock,
-source/job sidecar and resultsnote, are staged in the approved worktree. No
+source/job sidecar and resultsnote, are committed in the approved worktree. No
 production library or existing task file changed. Independent full review is
 CLEAN;24tests plus full-size smoke, Ruff/format/import/API/shell/README and
 artifact/source checks pass. The study is complete and not a production policy
 promotion. See `results/notes/fixed_lens_light_numba_memo_policy_2026_09.md` in
 the worktree for exact tables and limitations.
 
-Shipping remains gated by Heart RED: `release validation FAILED (stage integrate)`;
+Heart remains RED: `release validation FAILED (stage integrate)`;
 YELLOW: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
-Await a live #280 commit/push/PR override after presenting the complete evidence.
-The PR draft is `PyAutoMind/tmp/s5b-pr-body.md`; intended base is
-`feature/fixed-light-numba-s5` while parent PR#279 remains open. No merge grant.
+The live user replied **“yes go”** to the task-specific #280 commit/push/PR
+request on 2026-09-18. Approval is recorded on issue #280 and the PR.
+
+Committed and pushed as `a18cb7481d9a33d26f1145144af150a86a3d3bf7`.
+[PR #281](https://github.com/PyAutoLabs/autolens_profiling/pull/281) is open,
+labelled pending-release, stacked on `feature/fixed-light-numba-s5` (#279).
+The diff contains only the ten new phase-5b files. Post-commit import smoke
+passed; lint CI was in progress when checked. Await CI and a separate human
+merge command, with parent #279 merged first. No merge or release grant.

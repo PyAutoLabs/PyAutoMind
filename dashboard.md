@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_numba_s5b_memo_precheck.md">Phase 5b: reject unsuitable CPU memo seeds before the expensive solve</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/280">issue #280</a> — issued 2026-09-18 — awaiting-input</summary>
+<details><summary>📋 <a href="active/fixed_light_numba_s5b_memo_precheck.md">Phase 5b: reject unsuitable CPU memo seeds before the expensive solve</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/280">issue #280</a> — issued 2026-09-18 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/281">autolens_profiling#281</a></summary>
 
 ```
 /start_dev active/fixed_light_numba_s5b_memo_precheck.md
