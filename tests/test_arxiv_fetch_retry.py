@@ -114,3 +114,33 @@ def test_fetch_goes_through_the_retrying_get(monkeypatch, no_sleep):
     monkeypatch.setattr(af, "RETRY_DELAYS", (1,))
     assert af.fetch("q", 5, start=10) == b"page"
     assert "start=10" in calls[0] and "max_results=5" in calls[0]
+
+
+def test_get_retries_406_like_a_429(monkeypatch, no_sleep):
+    """406 is edge mitigation against the shared runner egress, not a bad request.
+
+    2026-09-17 and 2026-09-18 both died on an HTTP 406 where 09-15 died on a
+    429 — same first request, same runner, same silence in #papers. The headers
+    were probed live on 2026-09-18 and all four {bare UA, contact UA} x {no
+    Accept, application/atom+xml} combinations answered 200 from a home IP, so
+    the 406 is not content negotiation: it is the same throttle wearing a
+    different status code, and it has to climb the same ladder.
+    """
+    calls = _stub_urlopen(monkeypatch, [_http_error(406)] * 3 + [b"<feed/>"])
+    assert af._get({"q": 1}, delays=(1, 2, 3)) == b"<feed/>"
+    assert len(calls) == 4
+    assert no_sleep == [1, 2, 3]
+
+
+def test_fetch_survives_a_406_sequence(monkeypatch, no_sleep):
+    """The *fetch* step, not just the guard — this is what killed 09-17/18.
+
+    `_livecheck()` warns and returns 0 on any HTTPError, so it survived the 406
+    on its own; the run then died one step later in `fetch()`, which is also the
+    entry point `arxiv_interests.py` calls. Both digests need this path.
+    """
+    calls = _stub_urlopen(monkeypatch, [_http_error(406)] * 3 + [b"page"])
+    monkeypatch.setattr(af, "RETRY_DELAYS", (1, 2, 3))
+    assert af.fetch("q", 5, start=10) == b"page"
+    assert len(calls) == 4 and no_sleep == [1, 2, 3]
+    assert "start=10" in calls[0] and "max_results=5" in calls[0]

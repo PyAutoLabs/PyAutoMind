@@ -129,16 +129,33 @@ def announcement_band(now: dt.datetime) -> tuple:
 
 
 API_URL = "https://export.arxiv.org/api/query"
-USER_AGENT = "PyAutoLabs-papers-digest/1.0"
+# arXiv's API terms ask for an identifying User-Agent with a contact route, so
+# this one carries the repo URL the way PyAutoMemory/scripts/arxiv_refs.py does.
+# Courtesy, not a fix: on 2026-09-18 all four combinations of {bare UA, contact
+# UA} x {no Accept, application/atom+xml} were probed live against the API and
+# every one answered HTTP 200 from a home IP, so the headers were never what the
+# 406s were about (the shared GitHub Actions egress is the discriminator — see
+# RETRY_STATUSES below). Do not mistake these two lines for the retry fix, and
+# do not "revert the fix" by tightening them further.
+USER_AGENT = (
+    "PyAutoLabs-papers-digest/1.0 (+https://github.com/PyAutoLabs/PyAutoMind)"
+)
+ACCEPT = "application/atom+xml"  # what the API returns anyway; declared explicitly
 
 # Back-off ladder for a throttled or flaky API answer: ~5.5 min in total, well
 # inside the job's budget and long enough to outlast arXiv's per-source
 # rate-limit window (it asks for 3 s between requests; a 429 from a shared
 # egress can take minutes to clear).
 RETRY_DELAYS = (5, 15, 45, 90, 180)
-# 429 is throttling; 5xx is arXiv's side. Any other 4xx is a bad request and
-# retrying it would only mask the bug.
-RETRY_STATUSES = {429, 500, 502, 503, 504}
+# 429 and 406 are both arXiv *edge mitigation* against a shared runner egress,
+# not verdicts about this request: 09-15 was refused with a 429 and 09-17/09-18
+# with a 406, from the same job, the same query and the same headers that answer
+# 200 from a home IP seconds later. A 406 from this endpoint is therefore not
+# the content-negotiation failure its name implies — treating it as one is what
+# let three of four nights die unretried — so it climbs the same ladder as the
+# 429. 5xx is arXiv's own side. Every *other* 4xx stays unretried: a genuine
+# 400 is a malformed query and retrying it would only mask the bug.
+RETRY_STATUSES = {406, 429, 500, 502, 503, 504}
 
 # Transient failures that a retry may cure. Everything else raises at once.
 TRANSIENT = (urllib.error.URLError, TimeoutError, ConnectionError)
@@ -149,15 +166,18 @@ def _get(params: dict, *, delays: tuple = None) -> bytes:
 
     GitHub-hosted runners share egress address ranges, so arXiv can answer the
     very first request of a run with HTTP 429 — both digests died that way on
-    2026-09-14 and 2026-09-15, before fetching anything. So: back off and try
-    again, honouring `Retry-After` when arXiv sends one (capped at the ladder's
-    longest step, so a hostile header cannot stall the job). The last error is
-    re-raised once the ladder is spent; callers decide whether that is fatal.
+    2026-09-14 and 2026-09-15, before fetching anything — or with HTTP 406, as
+    it did on 2026-09-17 and 2026-09-18. So: back off and try again, honouring
+    `Retry-After` when arXiv sends one (capped at the ladder's longest step, so
+    a hostile header cannot stall the job). The last error is re-raised once the
+    ladder is spent; callers decide whether that is fatal.
     """
     if delays is None:
         delays = RETRY_DELAYS
     url = f"{API_URL}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    req = urllib.request.Request(
+        url, headers={"User-Agent": USER_AGENT, "Accept": ACCEPT}
+    )
     attempts = len(delays) + 1
     for attempt in range(1, attempts + 1):
         try:
