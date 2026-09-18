@@ -1,3 +1,80 @@
+### The fix already existed — it had simply never been opened as a PR
+
+Slack `#papers` went silent for four of five nights (09-14, 09-15, 09-17,
+09-18). The digest died in its `--livecheck` step before fetching anything:
+HTTP 429 on 09-15, HTTP 406 on 09-17 and 09-18. `arxiv_interests.yml` failed
+on the same nights. `PyAutoMemory/arxiv-inbox.md` froze at
+`last digest: 2026-09-16`, which is how the loss was visible at all.
+
+Two corrections to the report, both load-bearing:
+
+- **The locus was PyAutoMind, not PyAutoMemory.** PyAutoMemory only receives
+  the filing; its own `arxiv_refs.yml` was green every night.
+- **It was not a new bug.** The repair was written on 2026-09-16 on
+  `claude/papers-slack-pyautomemory-39wrt1` (commit `9f5fbab6`), verified by a
+  `workflow_dispatch` on that branch — and never opened as a PR. That is the
+  whole reason `main` stayed dark. This branch was cut from that one so the
+  commit kept its history and its authorship.
+
+It would also not have been enough: its `RETRY_STATUSES` omitted `406`, so
+`_get()` re-raised unretried and the **fetch** step died even though
+`_livecheck()` survived. Proven, not assumed — the two new witnesses fail on
+that branch's source and pass after.
+
+### What shipped
+
+`406` joins the retry ladder; the comment calling every non-429 4xx "a bad
+request" is corrected. The User-Agent gains a contact URL and the request an
+explicit `Accept: application/atom+xml`, both commented in-source as courtesy
+and explicitly **not** the fix. `arxiv_interests.py` coverage was proven by
+execution — a harness patched only `arxiv_fetch`'s opener and watched the
+interests path climb the ladder through 3x406.
+
+### The finding that outlived the fix
+
+The 406 is **not transient and not egress-specific**. It never reaches arXiv:
+the response carries `via: 1.1 varnish` with no `1.1 google` — Fastly's edge
+refuses it. Ten header combinations across `urllib.request` and raw
+`http.client` all 406 on **uncached** URLs, while `curl` and `requests`/urllib3
+get 200. Leading hypothesis: bot mitigation on the stdlib client fingerprint.
+
+So this change converts an instant failure into a slow one and may not be
+sufficient on its own. Follow-up filed:
+`draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md`.
+
+**A measurement trap worth not repeating:** an early probe in this session
+concluded "headers are irrelevant, all four combinations return 200" and was
+reading its own Fastly **cache hits** — every probe reused one URL. Cache-bust
+every attempt and record `x-cache:`.
+
+### Collateral: the privacy check was red on main, twice
+
+`tests/test_ledger_merge.py::test_the_real_registries_round_trip_through_split`
+was failing on `main` before this task's stack existed (verified at `0b16fb9f`),
+failing the `privacy` check on **every** PyAutoMind PR. Cause: a doubled blank
+line where `ledger_merge.join_entries` emits one — in `planned.md` (`67387c0f`)
+and then, as another session's close-out landed mid-task, in `epics.md`
+(`9f0aef44`). All five `ENTRY_MERGED_FILES` now round-trip.
+
+`registry_toc.render` is idempotent on the repaired file and repairs the broken
+one, so the defect comes from hand edits, not the tooling — no generator change
+was warranted. Note also that a `pull_request` re-run reuses its original merge
+commit, so fixing `main` does nothing until the branch itself moves.
+
+### Open
+
+- **Backfill of the four lost nights is NOT done.** Held for human approval
+  because it posts to the shared Slack channel. Recovery is a
+  `workflow_dispatch` with `lookback_hours=168` — the value the workflow's own
+  error text prescribes, because the lookback is submission-anchored. The inbox
+  `append` dedupes; **Slack does not**, so a 168 h window re-posts the 09-16
+  batch.
+- `draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md` —
+  the sibling defect: a bare `except Exception: return None` is why that job ran
+  green through the same outage while resolving nothing.
+
+## Original prompt
+
 # The arXiv digest fix was written, never merged — and it does not cover the 406 that is failing now
 
 Type: bug
