@@ -316,7 +316,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_dead_weight_cleanup.md">Workspace dead-weight cleanup and autolens_jax_joss local removal</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/389">issue #389</a> — issued 2026-09-18 — workspace-dev</summary>
+<details><summary>📋 <a href="active/workspace_dead_weight_cleanup.md">Workspace dead-weight cleanup and autolens_jax_joss local removal</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/389">issue #389</a> — issued 2026-09-18 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/390">PyAutoBrain#390</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/413">PyAutoMind#413</a></summary>
 
 ```
 /start_dev active/workspace_dead_weight_cleanup.md

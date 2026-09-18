@@ -4,7 +4,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/389
 - issued: 2026-09-18
 - prompt: active/workspace_dead_weight_cleanup.md
-- status: workspace-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/390
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/413
 - autonomy: supervised (plan approved in chat 2026-09-18; destructive steps gated on the step-0 archive)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-dead-weight-cleanup
 - epic: workspace-regroup (phase 1b; sibling draft/maintenance/pyautobrain/workspace_location_contracts.md)
