@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 12 |
+| [In flight](#in-flight) (`active/`) | 11 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 213 |
+| [Backlog](#backlog) (`draft/`) | 212 |
 
 > **No batch in flight.**
 
@@ -280,14 +280,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/fields_api_top1000.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/fixed_light_numba_s4b_permute_active_last.md">Fixed-light numba CPU round 4, wave B — A-prime: permute the active…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/276">issue #276</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/277">autolens_profiling#277</a></summary>
-
-```
-/start_dev active/fixed_light_numba_s4b_permute_active_last.md
 ```
 
 </details>
@@ -601,7 +593,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**213** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
+**212** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 61</summary>
@@ -2341,19 +2333,18 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/maintenance/assistants/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/agent_harness_agnostic_setup.md">Make agent setup Claude/Codex agnostic</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
-| 2026-09-17 | issued | <a href="active/fixed_light_numba_s4b_permute_active_last.md">Fixed-light numba CPU round 4, wave B — A-prime: permute the active…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | issued | <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | issued | <a href="active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
@@ -2363,12 +2354,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
+| 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
 | 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
@@ -2378,6 +2369,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 | 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
+| 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
 
 </details>
 
@@ -2718,27 +2710,6 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
-<summary><b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — 1 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>Fixed lens light on the numba CPU path — the whole programme again, off the GPU</b> — ledger: `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md`</summary>
-
-```
-Continue the 'Fixed lens light on the numba CPU path — the whole programme again, off the GPU' epic. Its canonical state lives in draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: successor to `fixed-lens-light-profiling` (COMPLETE 2026-09-14), filed the same day. Six phases mirroring that epic, worked strictly 1 → 2 → 3 → 4 → 5 → 6 — each phase's grid is chosen from the previous phase's answer; issue ONE at a time, never bulk-issued, and file each phase's own prompt when the campaign reaches it. The open question is real, not a port: phase 2 of the GPU epic found the numpy certified active set does NOT beat the library's own `fnnls`, and both run 1.9-3.6x slower at 8 BLAS threads than at 1 — and the numba production path was never measured at all. Every leg must record its thread settings (`NPROC`, BLAS, numba) and no comparison may cross them silently. Out of scope throughout, as in the GPU epic: JWST and the sparse operator (blocked on `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md`). A Fable / Astra campaign.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md">Fixed lens light on the numba CPU path — the whole programme…</a> — autolens_profiling · too-large · human-required · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve</b> — 1 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve</b> — ledger: `draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md`</summary>
@@ -2865,7 +2836,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 </details>
 
-47 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+46 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2913,7 +2884,6 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
-- `draft/research/autolens_profiling/fixed_light_numba_cpu_programme.md — unknown theme keyword(s): cpu, numba`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
 - `draft/research/autolens_profiling/pointsolver_image_plane_chi_squared_cpu_speed.md — unknown theme keyword(s): jax`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
