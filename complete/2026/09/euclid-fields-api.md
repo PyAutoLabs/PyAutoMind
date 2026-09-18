@@ -1,3 +1,41 @@
+# Euclid flat fields deployed; top-1000 run submitted
+
+Completed 2026-09-18. Pipeline PR #90 merged at `9cdee7b10e916b4e2d172257f26c37881f094802`, from head `7fbdbe5123828570aa7af08cdf5d4097fb397454`, after all nine CI checks passed. Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89.
+
+## Shipped behavior and validation
+
+Models use `fields=field`, parameter paths `fields.shear.gamma_1/2`, and list-valued `tracer.fields`. Legacy galaxy-attached readers and multi-field collections remain supported; no `fields.field.shear` compatibility was added. Physical likelihoods agree with legacy models (15 parameters; representative likelihood difference within 2e-12); identifiers intentionally change, so historical outputs are preserved rather than treated as resumable new fits.
+
+Validation: 230 local pipeline tests, 9/9 smoke scripts and independent Sol review CLEAN. The JAX 0.11.2 CI blocker was repaired upstream by PyAutoGalaxy#623 (`90e757d336e62b75790befacc77e2d6dde460879`) and autogalaxy_workspace_test#123 (`ae45e490f75260533d0f18bb3bc2ce951377a0d5`). See [repair completion](euclid-jax-contour-compat.md) for the 1,236-test library suite, JAX 0.10.2/0.11.2 values/jit/vmap/gradients, independent review and pending-release obligation. No CI dependency downgrade or skipped test.
+
+## Science deployment
+
+Science main `/mnt/c/Users/Jammy/Science/euclid_dr1`: `d53b9ce2b7a34b518f659adef2629441241521b4` → reviewed 21-file port `2430e4ecd0815ee1cfb4809e3836e178dd5a90b6` → documentation-only `6430059667ac0a4cd60b0705d2791b9aba3997fe`. Preserved the 18 prior science commits, science configuration, historical outputs and untracked top-1000 preparation. Never pushed this clone to its public pipeline origin.
+
+After the previous job finished and the queue was empty, inspected and ran `HPCPullPyAuto`. All five RAL checkouts were clean on main without divergence; preserved three editor backups hash-exact. Revisions:
+
+| Library | Before | After |
+|---|---|---|
+| PyAutoNerves | `8eca4b3e8cdf72ed4c13850ed5b333ec7306524d` | `8eca4b3e8cdf72ed4c13850ed5b333ec7306524d` |
+| PyAutoFit | `7c0e79aab79bb7a238d0654c40a883eff0333ec3` | `7c0e79aab79bb7a238d0654c40a883eff0333ec3` |
+| PyAutoArray | `192d4b70215830ad3ad3c8c83550e477bd674b72` | `192d4b70215830ad3ad3c8c83550e477bd674b72` |
+| PyAutoGalaxy | `33714b800b9239ada5e0531822883cf302703e1d` | `90e757d336e62b75790befacc77e2d6dde460879` |
+| PyAutoLens | `7197380671c0a32be1a225d4de660b9e4097f6c7` | `478213e787781517113e96f80013270df482f665` |
+
+RAL project `/mnt/ral/jnightin/euclid_dr1` has no Git metadata. Code/config deployed through `hpc/sync`; the top-1000 archive was uploaded and extracted in disjoint batches after slow direct transfers. Archive SHA256 `c1bf8d6287aa0d3b6f4f2b7e05165d08b759a005d8a4b472b1b0bfd2f98e392a` verified remotely, all eight extraction batches exited 0. Final verification: 1,000 datasets, 11,000 data files, 115 code/config hashes, zero mismatches. Interrupted provisional files were corrected by successful extraction. The sync dispatcher ignored `push --dry-run` and began the already-authorized sync; its backup overlapped initial transfers and is not claimed as an atomic pre-deployment snapshot.
+
+Actual RAL interpreter/import/model checks passed: 15 priors, flat paths, list-valued tracer fields, compatibility solver, identifier matching local. Reviewed contour integration passed on installed JAX 0.10.2, including both production LensCalc sites. First real selected dataset passed the approved script locally with TEST_MODE=2 and isolated outputs. Shared heads and cleanliness rechecked before submission.
+
+## Authorized run and records
+
+User lifted the modelling-script submission hold: “ah you are right, then let us submit dont worry about the comment”. Kept `fields=field` unchanged. Executed `hpc/sync submit cpu submit_initial_lens_model_vis_lp_top1000` once: **SLURM array 343480**, indices 0–999, partition ral, 8 CPUs, 64 GB, 18 hours/task, vis_lp only. Initial queue: 154 running / 846 pending; next startup check: 196 running / 804 pending. Task 0 completed vectorized likelihood compilation. Non-fatal visualization warm-up warning appeared; no scientific outcome is inferred from startup.
+
+Cortex run/running/now/log records pushed in `978e244`; science journal `wiki/project/2026-09-18-flat-fields-top1000.md` committed locally in `6430059`. No subsequent stage or additional submission authorized. Release/readiness gates remain intact; source deployment is not a package release.
+
+Evidence: `tmp/euclid-flat-fields/deployment-state.json`, submission manifest, RAL validation JSON/logs and transfer logs. All 645 non-cache development validation products archived and hash-verified in `pipeline-validation-products.tar.gz` before worktree cleanup. Other workspace sweep work, including workspace-test#322, is owned by the separate mass-field-flat-sweep task and is not closed here.
+
+## Original prompt
+
 # Adopt fields API in the Euclid pipeline and launch DR1 top 1000
 
 Type: refactor

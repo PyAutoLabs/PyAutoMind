@@ -1,29 +1,5 @@
 # Active Tasks
 
-## euclid-fields-api
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/89
-- issued: 2026-09-18
-- prompt: active/fields_api_top1000.md
-- status: deployment-pending
-- worktree: ~/Code/PyAutoLabs-wt/euclid-fields-api
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/euclid-fields-api
-- note: Human approved plan, deployment and now submission of the prepared top-1000 vis_lp array (2026-09-18: "let us submit"). Keep fields=field unchanged. Preserve all science outputs and preparation. RAL uses source clones, no PyPI release gate.
-
-- heart-red-override:
-  - date: 2026-09-18
-  - authorization: User "I approve" to the task-specific development override for issue #89 and merge only with every required CI check green in this session.
-  - red-reasons: "release validation FAILED (stage integrate)"
-  - yellow-reasons: "manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml"
-  - gates: 230 tests PASS; 9/9 smoke PASS; independent review CLEAN (27 focused checks); diff check PASS.
-  - scope: commit, push, pending-release PR; merge only on green CI. No release or SLURM submission; modelling-script hold remains.
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/90
-- implementation: Pipeline #90 merged 9cdee7b1 after all 9 CI checks passed; source head 7fbdbe5. Local science port complete, RAL deployment pending shared-stack job. Submission hold remains.
-- ci-blocker: Both unit matrix legs fail the latent contour test with JAX 0.11.2; isolated third-party-only reproduction confirms the dependency incompatibility. RESOLVED: repair merged as PyAutoGalaxy#623 (90e757d3) + autogalaxy_workspace_test#123 (ae45e490); record complete/2026/09/euclid-jax-contour-compat.md. Pipeline #90 rerun passed all 9 checks and merged at 9cdee7b1.
-- deployment: Local selective port committed 2430e4e from d53b9ce, preserving 18 science commits and all data/config/output; model/import validation PASS. RAL unchanged (Lens 7197380); running job 343413 uses shared stack, so refresh and sync held. No submissions. Recheck all jobs, cleanliness/divergence (Fit status incomplete) and preserve editor backups, then HPCPullPyAuto, imports/model verification, hpc/sync and Cortex update. Evidence: tmp/euclid-flat-fields/deployment-state.json; Cortex 3c32bcc.
-
-- current-deployment: RAL stack refreshed (Galaxy 90e757d3, Lens 478213e78); code/config hashes and actual imported model PASS. Data upload in progress; no job submitted. Verify archive checksum and dataset completeness, including interrupted-transfer partial files, before hpc/sync submit. Cortex c37c8f4; tmp/euclid-flat-fields/deployment-state.json.
-
 ## codex-hook-parity
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407
 - issued: 2026-09-17
