@@ -1,0 +1,62 @@
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+WORKSPACE = Path(__file__).resolve().parents[2]
+PROJECT = "example"
+
+# CI puts PyAutoHands/autohands on PYTHONPATH (PyAutoHeart's reusable
+# smoke-tests.yml clones it alongside the dependency chain); for local runs,
+# fall back to the sibling checkout.
+try:
+    import build_util
+except ImportError:  # pragma: no cover - local-run fallback
+    sys.path.insert(0, str(WORKSPACE.parent / "PyAutoHands" / "autohands"))
+    import build_util
+
+AUTOHANDS = Path(build_util.__file__).resolve().parent
+
+SCRIPT_LIST = WORKSPACE / "smoke_tests.txt"
+REPORT_DIR = WORKSPACE / "test-results"
+
+
+def _env() -> dict:
+    env = os.environ.copy()
+    env["PYTHONPATH"] = os.pathsep.join(
+        p for p in (str(AUTOHANDS), env.get("PYTHONPATH", "")) if p
+    )
+    return env
+
+
+def _run(argv: list[str]) -> int:
+    # The shared runners resolve config/build/ relative to the cwd.
+    return subprocess.run(argv, cwd=str(WORKSPACE), env=_env()).returncode
+
+
+def main() -> int:
+    if not SCRIPT_LIST.exists():
+        # A missing list is a configuration error, not "nothing to do".
+        print(f"ERROR: no {SCRIPT_LIST.name} at {SCRIPT_LIST}", file=sys.stderr)
+        return 1
+
+    rc = _run(
+        [
+            sys.executable,
+            str(AUTOHANDS / "run_python.py"),
+            PROJECT,
+            ".",
+            "--list",
+            str(SCRIPT_LIST),
+            "--report-dir",
+            str(REPORT_DIR),
+        ]
+    )
+
+    return 1 if rc else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

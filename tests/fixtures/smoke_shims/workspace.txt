@@ -1,0 +1,73 @@
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+WORKSPACE = Path(__file__).resolve().parents[2]
+PROJECT = "example"
+
+# CI puts PyAutoHands/autohands on PYTHONPATH (PyAutoHeart's reusable
+# smoke-tests.yml clones it alongside the dependency chain); for local runs,
+# fall back to the sibling checkout.
+try:
+    import build_util
+except ImportError:  # pragma: no cover - local-run fallback
+    sys.path.insert(0, str(WORKSPACE.parent / "PyAutoHands" / "autohands"))
+    import build_util
+
+AUTOHANDS = Path(build_util.__file__).resolve().parent
+
+SCRIPT_LIST = WORKSPACE / "smoke_tests.txt"
+NOTEBOOK_LIST = WORKSPACE / "smoke_notebooks.txt"
+REPORT_DIR = WORKSPACE / "test-results"
+
+
+def _env() -> dict:
+    env = os.environ.copy()
+    env["PYTHONPATH"] = os.pathsep.join(
+        p for p in (str(AUTOHANDS), env.get("PYTHONPATH", "")) if p
+    )
+    return env
+
+
+def _run(argv: list[str]) -> int:
+    # The shared runners resolve config/build/ relative to the cwd.
+    return subprocess.run(argv, cwd=str(WORKSPACE), env=_env()).returncode
+
+
+def main() -> int:
+    rc = 0
+
+    if SCRIPT_LIST.exists():
+        rc |= _run([
+            sys.executable,
+            str(AUTOHANDS / "run_python.py"),
+            PROJECT,
+            "scripts",
+            "--list", str(SCRIPT_LIST),
+            "--report-dir", str(REPORT_DIR),
+        ])
+    else:
+        print(f"No {SCRIPT_LIST.name}; script leg skipped.")
+
+    if NOTEBOOK_LIST.exists():
+        rc |= _run([
+            sys.executable,
+            str(AUTOHANDS / "run.py"),
+            PROJECT,
+            "notebooks",
+            "--list", str(NOTEBOOK_LIST),
+            "--no-write-back",
+            "--retry-from", "scripts",
+            "--report-dir", str(REPORT_DIR),
+        ])
+    else:
+        print(f"No {NOTEBOOK_LIST.name}; notebook leg skipped.")
+
+    return 1 if rc else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

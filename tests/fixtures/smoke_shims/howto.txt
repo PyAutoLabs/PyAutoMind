@@ -1,0 +1,47 @@
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+WORKSPACE = Path(__file__).resolve().parents[2]
+PROJECT = "example"
+
+# CI puts PyAutoHands/autohands on PYTHONPATH (PyAutoHeart's reusable
+# smoke-tests.yml clones it alongside the dependency chain); for local runs,
+# fall back to the sibling checkout.
+try:
+    import build_util
+except ImportError:  # pragma: no cover - local-run fallback
+    sys.path.insert(0, str(WORKSPACE.parent / "PyAutoHands" / "autohands"))
+    import build_util
+
+AUTOHANDS = Path(build_util.__file__).resolve().parent
+
+
+def main() -> int:
+    env = os.environ.copy()
+    env["PYTHONPATH"] = os.pathsep.join(
+        p for p in (str(AUTOHANDS), env.get("PYTHONPATH", "")) if p
+    )
+
+    # --report-dir is REQUIRED, not cosmetic. run_python.py only propagates
+    # failures (`sys.exit(1)`) when a report was built; without it the suite
+    # runs to completion and always exits 0 — a vacuously green gate. It also
+    # switches execute_script from "abort on the first failure" to "record and
+    # continue", which is the behaviour the old runner had.
+    cmd = [
+        sys.executable,
+        str(AUTOHANDS / "run_python.py"),
+        PROJECT,
+        "scripts",
+        "--report-dir",
+        str(WORKSPACE / "test-results"),
+    ]
+    # run_python.py resolves config/build/ relative to the cwd.
+    return subprocess.run(cmd, cwd=str(WORKSPACE), env=env).returncode
+
+
+if __name__ == "__main__":
+    sys.exit(main())
