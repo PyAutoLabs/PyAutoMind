@@ -1,35 +1,5 @@
 # Active Tasks
 
-## workspace-location-contracts
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/391
-- issued: 2026-09-18
-- prompt: active/workspace_location_contracts.md
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/392
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/232
-- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/283
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/414
-- autonomy: supervised (plan approved in chat 2026-09-18; phase split approved in the same turn)
-- worktree: ~/Code/PyAutoLabs-wt/workspace-location-contracts
-- epic: workspace-regroup (phase 1a; phase 1b shipped as workspace-dead-weight-cleanup, PyAutoBrain#390/PyAutoMind#413)
-- next-phase: draft/maintenance/pyautobrain/workspace_resolver_fanout.md (phase 2, blocked-by this)
-- repos:
-  - PyAutoBrain: feature/workspace-location-contracts
-  - PyAutoHeart: feature/workspace-location-contracts
-  - PyAutoHands: feature/workspace-location-contracts
-  - PyAutoMind: feature/workspace-location-contracts
-- heart-ack: "RELEASE VALIDATION not release_ready"; "INSTALL VERIFY passed with warnings (Colab bootstrap)" - both pre-existing and unrelated; not an --auto run, so neither gates it
-- summary: |
-    One location contract for the organism, replacing six private answers that already
-    disagree today. Adds a .pyauto-root marker and makes both resolver entry points walk
-    up to it, inserted ABOVE the existing sibling-organ probe rather than replacing it, so
-    no currently-correct resolution can become wrong (a remote session with a single
-    checkout still resolves by the probe). Validates $PYAUTO_ROOT, which today bypasses
-    every check. Heart, Hands and Mind adopt the shared resolver. Makes repos_sync.py
-    drift-check in BOTH directions - declared-but-missing is skipped at :882/:1318/:1607,
-    on-disk-but-undeclared is silence - folding in and retiring the manifest_gap draft.
-    Prerequisite for phase 3 (the physical regroup); changes no directory layout itself.
-
 ## mass-field-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559
 - issued: 2026-09-17
