@@ -54,9 +54,9 @@ categories:
 unmapped_checkouts:
   - .github              # PyAutoLabs/.github — the org profile repo, not an organism repo
 
-# Hold automated smoke-bootstrap writes until the active consumer claims clear.
-# Dry-run generation and fixture validation remain available during this hold.
-smoke_bootstrap_rollout: false
+# Bootstrap-only rollout coordinated with active consumer tasks on 2026-09-18.
+# Their runner bodies and task branches remain untouched by propagation.
+smoke_bootstrap_rollout: true
 
 repos:
   # --- organs -----------------------------------------------------------
