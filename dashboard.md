@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/euclid_jax_zero_contour_011.md">Restore JAX 0.11 zero-contour compatibility for Euclid deployment</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622">issue #622</a> — issued 2026-09-18 — awaiting-input</summary>
+<details><summary>📋 <a href="active/euclid_jax_zero_contour_011.md">Restore JAX 0.11 zero-contour compatibility for Euclid deployment</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622">issue #622</a> — issued 2026-09-18 — library-dev</summary>
 
 ```
 /start_dev active/euclid_jax_zero_contour_011.md
