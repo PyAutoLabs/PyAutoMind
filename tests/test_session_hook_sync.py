@@ -20,6 +20,7 @@ Conventions this file follows (see `test_repos_sync_hygiene_coverage.py`):
 import json
 import os
 import stat
+import subprocess
 import sys
 from pathlib import Path
 
@@ -428,8 +429,6 @@ def test_firewall_gate_triggers_on_the_canonical_hook():
 )
 def test_firewall_brain_ref_resolution(tmp_path, body, expected):
     """Execute the CI resolver: pairing selects a ref without executing PR text."""
-    import subprocess
-
     gate = Path(__file__).resolve().parents[1] / '.github/workflows/firewall_gate.yml'
     steps = yaml.safe_load(gate.read_text())['jobs']['firewall']['steps']
     resolver = next(step for step in steps if step.get('id') == 'brainref')
@@ -446,3 +445,296 @@ def test_firewall_brain_ref_resolution(tmp_path, body, expected):
     )
     assert output.read_text() == f'ref={expected}\n'
     assert not (tmp_path / 'injected').exists()
+
+
+# --------------------------------------------------------------------------
+# `--skip`: dropping a leg whose precondition the caller cannot meet
+# --------------------------------------------------------------------------
+
+# The same fictional manifest, plus the `github:` identity the tenant-firewall
+# leg reads: the tests below run the WHOLE registry rather than one --only leg,
+# because the point of --skip is what happens to everything else.
+REPOS_FULL_RUN = {
+    name: dict(spec, github=f"FictionalOrg/{name}")
+    for name, spec in REPOS_WITH_EXCLUSION.items()
+}
+
+
+def run_check(tmp_path, monkeypatch, capsys, *argv):
+    """Drive main() over a fictional root; return (exit code, stdout)."""
+    monkeypatch.setattr(
+        repos_sync, "load_manifest", lambda _root: ({}, REPOS_FULL_RUN)
+    )
+    monkeypatch.setattr(repos_sync, "load_session_hook", lambda _root: HOOK_TEXT)
+    monkeypatch.setattr(
+        repos_sync, "load_deliverable_hook", lambda _root: DELIVERABLE_TEXT
+    )
+    monkeypatch.setattr(
+        sys, "argv",
+        ["repos_sync.py", "--check", "--root", str(tmp_path), *argv],
+    )
+    with pytest.raises(SystemExit) as exit_info:
+        repos_sync.main()
+    return exit_info.value.code, capsys.readouterr().out
+
+
+def dead_pointer(root, name):
+    """An unrelated red leg — a CLAUDE.md that imports nothing."""
+    (root / name / "AGENTS.md").write_text("# guidance\n")
+    (root / name / "CLAUDE.md").write_text("# nothing useful\n")
+
+
+def test_the_hook_leg_is_red_when_a_copy_is_stale(tmp_path, monkeypatch, capsys):
+    """The baseline the skip exists for — and proof the leg still bites.
+
+    A miniature of the PR gate's failure: the canonical hook has moved on and
+    the checked-out copy has not, which is exactly what a PR that edits the
+    canonical hook does to every sibling checked out at its main.
+    """
+    make_repo(tmp_path, "OrganOne", hook=HOOK_TEXT + "# stale wave\n")
+    (tmp_path / "ToolThree").mkdir()
+
+    code, out = run_check(tmp_path, monkeypatch, capsys)
+
+    assert code == 1
+    assert f"check {repos_sync.SESSION_HOOKS}: 1 mismatch(es)" in out, out
+
+
+def test_skip_subtracts_the_named_leg(tmp_path, monkeypatch, capsys):
+    """Same tree, one flag: the leg is gone and the run is green."""
+    make_repo(tmp_path, "OrganOne", hook=HOOK_TEXT + "# stale wave\n")
+    (tmp_path / "ToolThree").mkdir()
+
+    code, out = run_check(
+        tmp_path, monkeypatch, capsys, "--skip", repos_sync.SESSION_HOOKS
+    )
+
+    assert code == 0
+    assert f"check {repos_sync.SESSION_HOOKS}:" not in out, out
+
+
+def test_skip_leaves_every_other_leg_running(tmp_path, monkeypatch, capsys):
+    """Not a kill switch: the legs it did not name still run and still print."""
+    make_repo(tmp_path, "OrganOne", hook=HOOK_TEXT + "# stale wave\n")
+    (tmp_path / "ToolThree").mkdir()
+
+    _, out = run_check(
+        tmp_path, monkeypatch, capsys, "--skip", repos_sync.SESSION_HOOKS
+    )
+
+    for label in ("tenant firewall (organ code)", repos_sync.CHECKOUTS,
+                  repos_sync.CODEX_HOOKS, "CLAUDE.md → AGENTS.md pointers"):
+        assert f"check {label}: " in out, (label, out)
+
+
+def test_skip_does_not_change_the_exit_code_of_the_remaining_legs(
+    tmp_path, monkeypatch, capsys
+):
+    """The failure mode that would make this dangerous: a second, unrelated
+    problem must still fail the run once the hook leg is dropped."""
+    make_repo(tmp_path, "OrganOne", hook=HOOK_TEXT + "# stale wave\n")
+    make_repo(tmp_path, "LibTwo")
+    (tmp_path / "ToolThree").mkdir()
+    dead_pointer(tmp_path, "OrganOne")
+
+    code, out = run_check(
+        tmp_path, monkeypatch, capsys, "--skip", repos_sync.SESSION_HOOKS
+    )
+
+    assert code == 1
+    assert f"check {repos_sync.SESSION_HOOKS}:" not in out, out
+    assert "dead pointer" in out, out
+
+
+def test_skip_subtracts_from_what_only_selected(tmp_path, monkeypatch, capsys):
+    """The documented composition: --only picks, --skip then takes back."""
+    make_repo(tmp_path, "OrganOne", hook=HOOK_TEXT + "# stale wave\n")
+    (tmp_path / "ToolThree").mkdir()
+
+    code, out = run_check(
+        tmp_path, monkeypatch, capsys,
+        "--only", repos_sync.SESSION_HOOKS,
+        "--only", repos_sync.CODEX_HOOKS,
+        "--skip", repos_sync.SESSION_HOOKS,
+    )
+
+    assert code == 0
+    assert f"check {repos_sync.SESSION_HOOKS}:" not in out, out
+    assert f"check {repos_sync.CODEX_HOOKS}: OK" in out, out
+
+
+def test_skipping_a_leg_only_did_not_select_is_a_no_op(tmp_path, monkeypatch, capsys):
+    """A real label --only had already excluded subtracts nothing — it is not
+    an error, because nothing about it is ambiguous."""
+    make_repo(tmp_path, "OrganOne", hook=HOOK_TEXT + "# stale wave\n")
+    (tmp_path / "ToolThree").mkdir()
+
+    code, out = run_check(
+        tmp_path, monkeypatch, capsys,
+        "--only", repos_sync.CODEX_HOOKS,
+        "--skip", repos_sync.CHECKOUTS,
+    )
+
+    assert code == 0
+    assert out.splitlines()[0] == f"check {repos_sync.CODEX_HOOKS}: OK", out
+
+
+def test_skip_rejects_an_unknown_label(tmp_path):
+    """A typo must not quietly disable nothing-at-all — or, worse, read as a
+    gate that was turned off. Same refusal, and same "choose from" listing, as
+    `--only`."""
+    proc = subprocess.run(
+        [sys.executable, str(Path(repos_sync.__file__)), "--check",
+         "--root", str(tmp_path), "--skip", "no-such-check"],
+        capture_output=True, text=True,
+    )
+
+    assert proc.returncode != 0
+    assert "unknown --skip check(s): 'no-such-check'" in proc.stderr
+    assert f"'{repos_sync.SESSION_HOOKS}'" in proc.stderr
+
+
+def test_an_unknown_skip_is_refused_even_beside_a_valid_only(tmp_path):
+    """Validation is against the whole registry and happens before anything is
+    narrowed, so --only cannot hide a bad --skip."""
+    proc = subprocess.run(
+        [sys.executable, str(Path(repos_sync.__file__)), "--check",
+         "--root", str(tmp_path), "--only", repos_sync.CODEX_HOOKS,
+         "--skip", "no-such-check"],
+        capture_output=True, text=True,
+    )
+
+    assert proc.returncode != 0
+    assert "unknown --skip check(s)" in proc.stderr
+
+
+# --------------------------------------------------------------------------
+# The gate's canonical-hook PR path (the leg that is red by construction)
+# --------------------------------------------------------------------------
+
+def gate_steps():
+    gate = (
+        Path(__file__).resolve().parents[1]
+        / ".github/workflows/firewall_gate.yml"
+    )
+    return yaml.safe_load(gate.read_text())["jobs"]["firewall"]["steps"]
+
+
+def test_the_skip_is_reachable_only_from_a_pull_request():
+    """`push` to main must still run every leg: the decision step that enables
+    the skip is itself gated on the event, and every step carrying `--skip` is
+    gated on that step's output."""
+    steps = gate_steps()
+    decision = next(step for step in steps if step.get("id") == "hookpr")
+    assert decision["if"] == "github.event_name == 'pull_request'"
+
+    skipping = [step for step in steps if "--skip" in (step.get("run") or "")]
+    assert skipping, steps
+    for step in skipping:
+        assert step["if"] == "steps.hookpr.outputs.hook_pr == 'true'", step
+
+    full = next(step for step in steps
+                if "--skip" not in (step.get("run") or "")
+                and "repos_sync.py --check" in (step.get("run") or ""))
+    assert full["if"] == "steps.hookpr.outputs.hook_pr != 'true'"
+
+
+def test_the_gate_skips_that_one_leg_by_its_printed_label():
+    """`--skip` matches the label exactly, so a renamed leg must break here
+    rather than silently stop being skipped (or, worse, stop being run)."""
+    step = next(step for step in gate_steps()
+                if "--skip" in (step.get("run") or ""))
+    assert f'--skip "{repos_sync.SESSION_HOOKS}"' in step["run"], step["run"]
+    assert repos_sync.CHECKOUTS not in step["run"]
+
+
+def test_the_gate_says_out_loud_that_the_leg_was_skipped_and_why():
+    """A green run must never read as 'the hooks are in sync'. The skip names
+    itself, names propagation as what will sync the copies, and says what is
+    still enforced."""
+    run = next(step["run"] for step in gate_steps()
+               if "--skip" in (step.get("run") or ""))
+    assert "SKIPPED LEG" in run
+    assert repos_sync.SESSION_HOOKS in run
+    assert "session_hook_propagate.yml" in run
+    assert "STILL ENFORCED" in run
+    assert repos_sync.SESSION_HOOK_FILE in run
+
+
+def test_the_gate_still_asserts_this_repos_own_installed_copies():
+    """The compensating control, and the reason the gate did not just get
+    weaker: PyAutoMind is the one repo propagation never writes to, so its own
+    copies ARE the PR's to keep in step — pinned by the tests in this file."""
+    step = next(step for step in gate_steps()
+                if step.get("if") == "steps.hookpr.outputs.hook_pr == 'true'"
+                and "pytest" in (step.get("run") or ""))
+    assert Path(__file__).name in step["run"]
+    # The `-k` expression must select BOTH copies — the SessionStart hook and
+    # the end-at-deliverable guard — or half the compensating control is a
+    # silent "deselected".
+    selector = step["run"].split('-k "')[1].split('"')[0]
+    for name in (test_canonical_hook_ships_and_is_the_installed_text,
+                 test_canonical_deliverable_hook_ships_and_is_the_installed_text):
+        assert selector in name.__name__, (selector, name.__name__)
+
+
+def test_mind_checkout_is_deep_enough_to_diff_against_the_base():
+    """The decision below diffs against the base branch; a depth-1 checkout has
+    no merge base to diff from."""
+    checkout = next(step for step in gate_steps()
+                    if step.get("name") == "Checkout PyAutoMind")
+    assert checkout["with"]["fetch-depth"] == 0
+
+
+@pytest.mark.parametrize(
+    "changed, expected",
+    [
+        ([repos_sync.SESSION_HOOK_FILE], "true"),
+        ([repos_sync.DELIVERABLE_HOOK_FILE], "true"),
+        (["repos.yaml"], "false"),
+        (["scripts/repos_sync.py", ".github/workflows/firewall_gate.yml"],
+         "false"),
+        ([repos_sync.SESSION_HOOK_FILE, "repos.yaml"], "true"),
+        # A path the hook's name is only a SUBSTRING of is a different file.
+        (["docs/policy/session_start_hook.sh.md"], "false"),
+    ],
+)
+def test_the_gate_decides_from_the_changed_files(tmp_path, changed, expected):
+    """Execute the CI decision against a real two-branch repo.
+
+    The `paths:` filter cannot answer this — it has already matched, and it
+    lists four other paths besides — so the step reads the PR's own diff.
+    """
+    step = next(step for step in gate_steps() if step.get("id") == "hookpr")
+    git = ["git", "-c", "user.email=t@example.invalid", "-c", "user.name=t"]
+
+    base = tmp_path / "base"
+    base.mkdir()
+    subprocess.run(git + ["init", "-q", "-b", "main", str(base)], check=True)
+    for rel in ("repos.yaml", repos_sync.SESSION_HOOK_FILE,
+                repos_sync.DELIVERABLE_HOOK_FILE, "scripts/repos_sync.py",
+                ".github/workflows/firewall_gate.yml",
+                "docs/policy/session_start_hook.sh.md"):
+        path = base / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("base\n")
+    subprocess.run(git + ["-C", str(base), "add", "-A"], check=True)
+    subprocess.run(git + ["-C", str(base), "commit", "-qm", "base"], check=True)
+
+    head = tmp_path / "PyAutoMind"
+    subprocess.run(["git", "clone", "-q", str(base), str(head)], check=True)
+    subprocess.run(git + ["-C", str(head), "checkout", "-q", "-b", "feature"],
+                   check=True)
+    for rel in changed:
+        (head / rel).write_text("edited\n")
+    subprocess.run(git + ["-C", str(head), "commit", "-qam", "edit"], check=True)
+
+    output = tmp_path / "output"
+    proc = subprocess.run(
+        ["bash", "-e", "-c", step["run"]],
+        cwd=tmp_path,
+        env={**os.environ, "BASE_REF": "main", "GITHUB_OUTPUT": str(output)},
+        check=True, capture_output=True, text=True,
+    )
+
+    assert output.read_text().strip() == f"hook_pr={expected}", proc.stdout

@@ -59,6 +59,10 @@ def _run_hook(hook, *, project_dir, extra_env=None):
         "PYAUTO_SESSION_SKIP_PYTHON": "1",
     })
     env.pop("CLAUDE_ENV_FILE", None)
+    # Whatever ran pytest may carry one, and the hook reads it as the
+    # operator's chosen workspace root — which would silently decide the
+    # answer these tests are here to check.
+    env.pop("PYAUTO_ROOT", None)
     env.update(extra_env or {})
     return subprocess.run(["bash", str(hook)], capture_output=True, text=True,
                           env=env, timeout=180)
@@ -993,3 +997,328 @@ def test_a_single_repo_session_start_repairs_the_tool_env_it_just_broke(tmp_path
         "a single-repo session start left the tool env resolving into the venv "
         f"— the whole bug.\n{r.stderr[-2000:]}"
     )
+
+
+# --------------------------------------------------------------------------
+# 9. Where the WORKSPACE ROOT is
+#
+# The hook took the root to be `dirname` of the repo it is installed in. That
+# is the root only in a FLAT workspace. Group the checkouts into family
+# directories — `lens/LibOne` beside a flat organ — and the parent of a repo is
+# a family directory, which really exists, really is writable and really is not
+# a repo. So every guard the hook has passes, and all three consequences are
+# silent:
+#
+#   * `$PYAUTO_ROOT` is exported to the whole session as the family directory,
+#   * a second `.claude/` root is written INTO the family directory,
+#   * the unshallow sweep and the generated fan-out reach that one family
+#     instead of every checkout.
+#
+# The rule below is the one `PyAutoBrain/bin/_pyauto_root.sh` already ships
+# (explicit $PYAUTO_ROOT, then the nearest ancestor holding `.pyauto-root`,
+# then the parent of the checkout), so the session and the Brain's resolvers
+# cannot disagree. The hard part is that the hook must keep resolving where
+# there is no resolver and no marker: a remote container holding ONE repo, no
+# PyAutoBrain, nothing above it. Those cases are pinned here too, because they
+# are the regression this fix could cause.
+#
+# Fictional names throughout, per the conventions at the top of this file. The
+# fallback that asks "does the parent hold a sibling ORGAN?" only decides how
+# the reason reads — the root it returns is the parent either way — so it is
+# not driven here with real organ names.
+# --------------------------------------------------------------------------
+
+MARKER = ".pyauto-root"
+
+
+def _resolved_root(repo, *, extra_env=None):
+    """The root this hook copy resolves, and why, without running any leg.
+
+    Uses the hook's own `PYAUTO_SESSION_DEFINE_ONLY=1` seam: sourcing it
+    defines everything and performs nothing, so the two answers can be read
+    straight out of the shell that did the resolving.
+    """
+    env = dict(os.environ)
+    env.update({
+        "CLAUDE_CODE_REMOTE": "true",
+        "CLAUDE_PROJECT_DIR": str(repo),
+        "PYAUTO_SESSION_DEFINE_ONLY": "1",
+    })
+    # Inherited from whatever ran pytest, and step 1 of the rule would take it
+    # as the operator's word — which is exactly what these tests are not about.
+    env.pop("PYAUTO_ROOT", None)
+    env.update(extra_env or {})
+    r = subprocess.run(
+        ["bash", "-c",
+         f'source "{CANONICAL_HOOK}"\nprintf "%s|%s" "$WORKSPACE_ROOT" "$WORKSPACE_ROOT_REASON"'],
+        capture_output=True, text=True, env=env, timeout=120,
+    )
+    assert r.returncode == 0, r.stderr
+    root, _, reason = r.stdout.partition("|")
+    return root, reason
+
+
+def _nested_workspace(tmp_path):
+    """A regrouped workspace: one repo in a family directory, one flat, and a
+    marker naming the real root."""
+    root = tmp_path / "workspace"
+    (root / "lens").mkdir(parents=True)
+    (root / MARKER).write_text("")
+    nested = root / "lens" / "LibOne"
+    flat = root / "OrganOne"
+    _install_hook(nested)
+    _install_hook(flat)
+    return root, nested, flat
+
+
+def test_a_nested_checkout_resolves_the_marked_root_not_its_family_directory(tmp_path):
+    """The defect, stated as the two answers side by side.
+
+    `dirname` of `<root>/lens/LibOne` is `<root>/lens`. That directory exists,
+    so nothing downstream ever noticed.
+    """
+    root, nested, _flat = _nested_workspace(tmp_path)
+
+    resolved, reason = _resolved_root(nested)
+
+    assert resolved == str(root), f"resolved {resolved!r} ({reason})"
+    assert resolved != str(root / "lens"), "still the family directory"
+    assert MARKER in reason, reason
+
+
+def test_a_flat_checkout_with_no_marker_anywhere_still_resolves_its_parent(tmp_path):
+    """The regression guard, and the reason the marker can never be required.
+
+    A remote container may hold two repos side by side and nothing else — no
+    marker, no PyAutoBrain to ask. The rule has to keep answering there, with
+    the same answer it always gave.
+    """
+    workspace = tmp_path / "workspace"
+    repo = workspace / "OrganOne"
+    _install_hook(repo)
+    _install_hook(workspace / "OrganTwo")
+
+    resolved, reason = _resolved_root(repo)
+
+    assert resolved == str(workspace), f"resolved {resolved!r} ({reason})"
+    assert reason, "a root resolved for no stated reason is not reviewable"
+
+
+def test_a_lone_checkout_with_no_siblings_and_no_marker_still_resolves(tmp_path):
+    """The narrowest remote session there is: one repo, nothing beside it.
+
+    There is no root above it to mark and no organ beside it to recognise, so
+    the rule falls all the way through to the parent and says so. It must still
+    produce a usable path — this is the case a marker-only rule would break.
+    """
+    workspace = tmp_path / "container"
+    repo = workspace / "LibOne"
+    _install_hook(repo)
+
+    resolved, reason = _resolved_root(repo)
+
+    assert resolved == str(workspace), f"resolved {resolved!r} ({reason})"
+    assert "unverified" in reason, reason
+
+
+def test_an_explicit_pyauto_root_is_taken_verbatim(tmp_path):
+    """The operator's word outranks the marker walk — the resolver's step 1."""
+    root, nested, _flat = _nested_workspace(tmp_path)
+    override = tmp_path / "elsewhere"
+    override.mkdir()
+
+    resolved, reason = _resolved_root(nested, extra_env={"PYAUTO_ROOT": str(override)})
+
+    assert resolved == str(override), f"resolved {resolved!r} ({reason})"
+    assert "PYAUTO_ROOT" in reason, reason
+
+
+def test_workspace_settings_land_at_the_true_root_not_the_family_directory(tmp_path):
+    """The bogus second root, pinned from both sides.
+
+    `install_workspace_settings` guards on "is it a directory", "is it not a
+    repo" and "is it writable". A family directory passes all three, so the
+    hook wrote a whole second workspace root inside the real one and reported
+    success.
+    """
+    root, nested, _flat = _nested_workspace(tmp_path)
+
+    r = _run_hook(nested / ".claude" / "hooks" / "session-start.sh", project_dir=nested)
+    assert r.returncode == 0, r.stderr
+
+    assert (root / ".claude" / "settings.json").is_file(), r.stderr
+    assert (root / ".claude" / "hooks" / "session-start.sh").is_file()
+    assert not (root / "lens" / ".claude").exists(), (
+        "a second workspace root was written into the family directory"
+    )
+
+
+def test_the_fanout_reaches_every_checkout_under_the_true_root(tmp_path):
+    """Fixing discovery alone is half a fix.
+
+    The generated root hook walked one level. Under a regrouped workspace that
+    reaches the flat checkouts and no nested one — and each missed repo is a
+    session running the container's Python with its declared deps uninstalled.
+    """
+    root, nested, flat = _nested_workspace(tmp_path)
+    _run_hook(nested / ".claude" / "hooks" / "session-start.sh", project_dir=nested)
+
+    fanout = root / ".claude" / "hooks" / "session-start.sh"
+    assert fanout.is_file(), "no fan-out was installed"
+    assert subprocess.run(["bash", "-n", str(fanout)]).returncode == 0
+
+    ran = tmp_path / "ran"
+    ran.mkdir()
+    for repo, name in ((nested, "LibOne"), (flat, "OrganOne")):
+        h = repo / ".claude" / "hooks" / "session-start.sh"
+        h.write_text(f'#!/usr/bin/env bash\ntouch "{ran}/{name}"\n')
+        h.chmod(0o755)
+
+    r = subprocess.run(["bash", str(fanout)], capture_output=True, text=True, timeout=60)
+    assert r.returncode == 0, r.stderr
+    assert (ran / "OrganOne").exists(), r.stderr
+    assert (ran / "LibOne").exists(), (
+        "the fan-out never reached the checkout inside the family directory"
+    )
+
+
+def test_the_fanout_does_not_descend_into_a_checkouts_own_subdirectories(tmp_path):
+    """Two levels is the shape of the workspace, not an unbounded walk.
+
+    A repo that already carries a hook is run, never walked into — otherwise a
+    vendored or nested `.claude/hooks/session-start.sh` would be run as if it
+    were a sibling checkout.
+    """
+    root, nested, flat = _nested_workspace(tmp_path)
+    _run_hook(nested / ".claude" / "hooks" / "session-start.sh", project_dir=nested)
+    fanout = root / ".claude" / "hooks" / "session-start.sh"
+
+    ran = tmp_path / "ran"
+    ran.mkdir()
+    for repo, name in ((nested, "LibOne"), (flat, "OrganOne")):
+        h = repo / ".claude" / "hooks" / "session-start.sh"
+        h.write_text(f'#!/usr/bin/env bash\ntouch "{ran}/{name}"\n')
+        h.chmod(0o755)
+    buried = flat / "vendor"
+    _install_hook(buried)
+    (buried / ".claude" / "hooks" / "session-start.sh").write_text(
+        f'#!/usr/bin/env bash\ntouch "{ran}/vendored"\n'
+    )
+
+    r = subprocess.run(["bash", str(fanout)], capture_output=True, text=True, timeout=60)
+    assert r.returncode == 0, r.stderr
+    assert (ran / "OrganOne").exists()
+    assert not (ran / "vendored").exists(), "walked into a checkout that has its own hook"
+
+
+def test_a_shallow_clone_inside_a_family_directory_is_unshallowed(tmp_path):
+    """The third consumer of the root: the unshallow sweep.
+
+    `git merge-base --is-ancestor` lies across a graft boundary, and the ship
+    and close-out procedures act on that answer. A sweep that walks one level
+    leaves every nested repo lying.
+    """
+    origin = tmp_path / "origin"
+    origin.mkdir()
+    _git("init", "-q", "-b", "main", cwd=origin)
+    _git("config", "user.email", "t@example.invalid", cwd=origin)
+    _git("config", "user.name", "T", cwd=origin)
+    for i in range(3):
+        (origin / f"f{i}.txt").write_text(str(i))
+        _git("add", "-A", cwd=origin)
+        _git("commit", "-qm", f"c{i}", cwd=origin)
+
+    root = tmp_path / "workspace"
+    (root / "lens").mkdir(parents=True)
+    (root / MARKER).write_text("")
+    clone = root / "lens" / "LibOne"
+    assert _git("clone", "-q", "--depth=1", f"file://{origin}", str(clone),
+                cwd=tmp_path).returncode == 0
+    assert (clone / ".git" / "shallow").exists(), "fixture is not shallow"
+
+    _install_hook(clone)
+    # Driven from the FLAT checkout: any repo's hook sweeps the whole root, and
+    # a one-level walk from the root sees the family directory (which has no
+    # `.git`) and steps straight over the checkout inside it.
+    flat = root / "OrganOne"
+    r = _run_hook(_install_hook(flat), project_dir=flat)
+    assert r.returncode == 0, r.stderr
+
+    assert _git("rev-parse", "--is-shallow-repository", cwd=clone).stdout.strip() == "false", (
+        "a checkout inside a family directory was never swept"
+    )
+    assert int(_git("rev-list", "--count", "HEAD", cwd=clone).stdout.strip()) == 3
+
+
+def _stub_resolver(brain, answer, reason="stub"):
+    """A stand-in for `PyAutoBrain/bin/_pyauto_root.sh`: the contract the hook
+    reads it through is two exported names, so a stub can state any answer.
+
+    The organ's own name appears here because the hook looks the resolver up at
+    that literal path — it is framework identity, not an instance fact, and the
+    conventions at the top of this file are about the latter.
+    """
+    helper = brain / "bin" / "_pyauto_root.sh"
+    helper.parent.mkdir(parents=True, exist_ok=True)
+    helper.write_text(
+        "#!/usr/bin/env bash\n"
+        f'PYAUTO_ROOT="{answer}"\n'
+        f'PYAUTO_ROOT_REASON="{reason}"\n'
+        "export PYAUTO_ROOT PYAUTO_ROOT_REASON\n"
+    )
+    return helper
+
+
+def test_the_shared_resolver_is_used_when_it_is_reachable(tmp_path):
+    """One rule, one implementation — where there is an implementation to use."""
+    workspace = tmp_path / "workspace"
+    repo = workspace / "LibOne"
+    _install_hook(repo)
+    _stub_resolver(workspace / "PyAutoBrain", workspace, reason="a stated reason")
+
+    resolved, reason = _resolved_root(repo)
+
+    assert resolved == str(workspace), f"resolved {resolved!r} ({reason})"
+    assert reason == "a stated reason", reason
+
+
+def test_a_resolver_answering_with_a_workspace_that_is_not_ours_is_refused(tmp_path):
+    """The trap a task worktree walks into, and the reason this is a guard and
+    not a plain delegation.
+
+    The resolver anchors on the BRAIN checkout. In a worktree bundle that
+    checkout is a symlink into the canonical workspace, so the resolver follows
+    it and answers with the canonical root — and the hook would then export
+    somebody else's workspace to the whole session, write a `.claude/` root
+    into it and unshallow its repos. Measured on a live bundle before this
+    guard existed.
+    """
+    canonical = tmp_path / "canonical"
+    canonical.mkdir()
+    bundle = tmp_path / "bundle"
+    repo = bundle / "LibOne"
+    _install_hook(repo)
+    _stub_resolver(bundle / "PyAutoBrain", canonical, reason="somebody else's tree")
+
+    resolved, reason = _resolved_root(repo)
+
+    assert resolved != str(canonical), "the hook adopted another workspace"
+    assert resolved == str(bundle), f"resolved {resolved!r} ({reason})"
+
+
+def test_a_resolver_that_cannot_run_degrades_to_the_inline_rule(tmp_path):
+    """The hook must never depend on a resolver, only prefer one.
+
+    It is installed into repos that may be the only checkout in the container,
+    and it is read from a checkout that may be any version. A resolver that
+    fails, or that needs something this container does not have, must cost
+    nothing.
+    """
+    root, nested, _flat = _nested_workspace(tmp_path)
+    broken = _stub_resolver(root / "lens" / "PyAutoBrain", root)
+    broken.write_text("#!/usr/bin/env bash\nexit 7\n")
+
+    resolved, reason = _resolved_root(nested)
+
+    assert resolved == str(root), f"resolved {resolved!r} ({reason})"
+    assert MARKER in reason, reason
