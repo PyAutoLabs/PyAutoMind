@@ -86,3 +86,19 @@ export -> installs `dataset/interferometer/{sdp81,sdp81_mid,sdp81_full}` under
 **Also pending:** cluster-tuning prompt
 `draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md`; weak JAX-viz
 `PyAutoLens#614`.
+
+## Update 2026-09-18 — likely shipped; needs reconcile, not deletion
+
+`PyAutoLabs/autolens_jax_joss` **now exists on GitHub** at `6bce65e` with benchmark
+scripts under `benchmarks/`, committed `results/*.json` and a `RESULTS.md`; its last
+science commit reads "complete first A100 sweep — 8 benchmarks + imaging Nautilus
+comparison". So the core of this prompt appears **delivered**.
+
+Its **local checkout was removed** 2026-09-18 (PyAutoBrain#389) as dead weight — the
+remote is untouched and remains the citable artefact behind the JOSS paper.
+
+This prompt was NOT retired, because "shipped" was not verified: confirm which of the
+listed benchmarks (galaxy-scale, interferometry, point-source, group, cluster, weak)
+actually exist, and whether the paired `autolens_workspace` `start_here` examples
+landed, then retire to `complete/` per the intake reconcile procedure. Verification
+now needs a clone or the GitHub UI rather than a local checkout.

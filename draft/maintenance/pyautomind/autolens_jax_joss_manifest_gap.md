@@ -66,3 +66,19 @@ the new check is one more declaration.
 Filed 2026-09-18 from the flat-`fields=` adoption sweep's follow-up audit
 (issue autolens_workspace#561), which found the repo while sweeping for remaining
 `fields=` consumers.
+
+## Update 2026-09-18 — the example is gone, the defect is not
+
+The `autolens_jax_joss` **local checkout was removed** (PyAutoBrain#389); the repo
+lives on GitHub only. That removes this prompt's motivating example but **not its
+defect**: `repos_sync.py --check` still drift-checks **manifest → disk only**, so any
+future checkout that is absent from `repos.yaml` is still silence rather than a
+failure. Re-verify with any other unlisted checkout, or by cloning one.
+
+Note also that being absent from disk is *not* itself grounds for being absent from
+the manifest — `admin_jammy` is a genuine `repos.yaml` entry that is not cloned
+locally. Presence on disk and presence in the manifest are independent.
+
+This is the **mirror** of an item in `draft/maintenance/pyautobrain/workspace_location_contracts.md`,
+which makes *declared-but-missing* an error (`repos_sync.py:882,1318,1607` currently
+skip it). The check is blind in both directions; the two are worth fixing together.
