@@ -212,5 +212,5 @@
   - autolens_profiling: feature/fixed-light-numba-s6
 - parallel-claim: "Live user yes go on 2026-09-18 approves new-files-only phase-6 worktree alongside hst-gpu-residue-p2 and fixed-light-numba-s4b; conflict guard repeated."
 - validation: "15 focused tests PASS; import, Ruff/format, README, shell checks PASS; independent code review CLEAN. Local N100/N1500 numerical smoke PASS; overlapping local timing discarded. Instrumentation order subsequently counterbalanced."
-- hpc: "RAL 343430 (N500 first full cell); private snapshot fixed-light-numba-s6-run; all48 inputs verified. Remaining sizes wait on first cell gates."
-- next: "Inspect N500 numerical and 5% breakdown gates, then submit remaining N1000/1500/2500/4000; pull, aggregate, review empirical results."
+- hpc: "RAL343430_0 N500 COMPLETED0:0 all gates PASS; array343445_1 N1000 COMPLETED0:0 all gates PASS;343445_2..4 N1500/2500/4000 sequential in progress. Private snapshot fixed-light-numba-s6-run, all48 inputs verified."
+- next: "Finish RAL sizes1500/2500/4000; retrieve/verify all80 numerical pairs and timing gates; aggregate, write verdict, empirical review."

@@ -109,6 +109,10 @@ epic, never picked standalone.
   `draft/research/autolens_profiling/fixed_light_numba_s4b_permute_active_last.md`).
   Inserts ahead of the old phases 4-6, which renumber to 5 (memo warm start), 6 (source-pixel
   scaling), 7 (HST + Euclid verdict).
+  Phase 5 and 5b COMPLETE 2026-09-18 (#278/#280, PRs #279/#281 merged): memo helps nearby
+  proposals but can be slower on broad draws; residual precheck NO_LEVER, no production policy
+  change. Phase 6 ACTIVE (#282, `active/fixed_light_numba_s6_source_scaling.md`): N500–4000
+  source-pixel scaling, production memo on/off, nearby/broad sequences, exclusive timings and RSS.
 
 ## hst-gpu-non-solver-residue
 - title: The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve
