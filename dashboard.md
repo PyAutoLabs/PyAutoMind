@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 9 |
+| [In flight](#in-flight) (`active/`) | 8 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_workspace_sweep.md">autolens_workspace + autolens_workspace_test: every external field moves to <code>fields=</code> (<code>al.MassField</code>)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/559">issue #559</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/742">PyAutoLens#742</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/560">autolens_workspace#560</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/322">autolens_workspace_test#322</a> — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
+<details><summary>📋 <a href="active/mass_field_workspace_sweep.md">autolens_workspace + autolens_workspace_test: every external field moves to <code>fields=</code> (<code>al.MassField</code>)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/559">issue #559</a> — issued 2026-09-17 — paused — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/742">PyAutoLens#742</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/560">autolens_workspace#560</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/322">autolens_workspace_test#322</a> — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/mass_field_workspace_sweep.md
@@ -288,14 +288,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/oneshot_benchmark_harness.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/sed_chain_cpu_route_jax_cpu_backend.md">SED chain (Sersic + waveband fits) runs on CPU by default, JAX…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69">issue #69</a> — issued 2026-09-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/70">euclid_strong_lens_modeling_pipeline#70</a></summary>
-
-```
-/start_dev active/sed_chain_cpu_route_jax_cpu_backend.md
 ```
 
 </details>

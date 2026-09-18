@@ -5,7 +5,7 @@
 - issued: 2026-09-17
 - prompt: active/mass_field_workspace_sweep.md
 - session: Fable CLI background job 281b9756 (local-dev)
-- status: awaiting-merge
+- status: paused
 - autonomy: supervised (header; default launch, no --auto — plan approved in chat 2026-09-17; PRs will open as DRAFTS labelled pending-release and merge only after the PyAutoGalaxy + PyAutoLens release is on PyPI)
 - worktree: ~/Code/PyAutoLabs-wt/mass-field-workspace-sweep
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/560 (MERGED 2026-09-18, c79c8d3)
@@ -62,26 +62,6 @@
     autolens_workspace_developer, profiling, inference, joss, assistant and
     markdown/ are deliberately out of scope with follow-ups filed.
 
-## sed-chain-cpu-route
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/69
-- issued: 2026-09-11
-- prompt: active/sed_chain_cpu_route_jax_cpu_backend.md
-- session: claude --resume session_01AELxUSfSPRz2SDnnVJHohi
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/sed-chain-cpu-route
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/sed-chain-cpu-route
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/70
-- note: worktree_check_conflict flagged euclid_strong_lens_modeling_pipeline as claimed by remove-fits-dataset-plots-yaml, whose PR #63 merged and issue #62 closed on 2026-09-10 without a close-out. Stale claim, waived on the human's plan approval; the file sets are disjoint (hpc/ submit scripts and README here, config/visualize/plots.yaml there) and this task runs in a fresh parallel worktree.
-- summary: |
-    The SED chain (Sersic VIS + per-band waveband fits) gets a CPU submit script,
-    hpc/batch_cpu/submit_sersic_waveband, which pins JAX to the CPU backend exactly as
-    stage 1 of submit_initial_lens_model_two_stage does for vis_lp (no --use_cpu: both SED
-    analyses are use_jax=True and --use_cpu would flip them to Numba). It becomes the
-    documented default; the GPU script stays as the optional route. README route table,
-    hpc/sync comments and usage text, the sersic_lens_model.py batch_size docstring and the
-    PyAutoCortex "Where to look" line are repointed. GPU job 342648 is untouched.
-
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12
@@ -92,7 +72,7 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/sersic-variants
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/75
-- note: "worktree_check_conflict sersic-variants euclid_strong_lens_modeling_pipeline exits 1 on two claims. remove-fits-dataset-plots-yaml is stale (PR #63 merged, issue #62 closed 2026-09-10, no close-out). sed-chain-cpu-route is LIVE (PR #70 open) and its file set genuinely overlaps: hpc/README.md route table (both add rows to the same table — a one-line resolution expected on whichever merges second) and scripts/sersic_lens_model.py (its only hunk there is a two-line batch_size docstring edit at ~250, clear of the model block extracted here). Waived on the human's plan approval, in a fresh parallel worktree — the same call sed-chain-cpu-route itself recorded against remove-fits-dataset-plots-yaml."
+- note: "PR #75 was closed unmerged at the maintainer's request on 2026-09-18. The feature branch, issue #74, prompt and worktree are retained for possible later recovery or selective reuse. Its previous overlap with sed-chain-cpu-route is no longer live because PR #70 merged the CPU-route change."
 - summary: |
     --variant for the Sersic stage: four variants (baseline, wide_n,
     central_noise, sersic_point) on the same 100 euclid_sersics core lenses, to
@@ -117,7 +97,7 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: claude/sersic-variants-analysis-3iqibr
 - resume: "IMPLEMENTED 2026-09-17 (web-github; Fable planned, Opus executed): claude/sersic-variants-analysis-3iqibr pushed at 480c107 — scripts/analysis/{sersic_variants.py,README.md,__init__.py}, tests/test_sersic_variants_analysis.py (8 tests), one config/build/no_run.yaml entry. Verified locally: the new tests + test_repo_invariants + test_compare_catalogues, 26 passed; the rest of the fast suite needs astropy/autolens (absent in the container) — CI runs it. FLAGGED on issue #76 comment 5715176814: the W1-W4 thresholds are transcribed into the module's WITNESSES constant (plan page rev 3 unreachable from the session) and need the human's confirmation. NEXT = /ship_workspace (PR) then /prm; nothing here imports --variant, so PR #75's merge order is not a gate."
-- note: "worktree_check_conflict sersic-variants-analysis euclid_strong_lens_modeling_pipeline exits 1 on three claims. remove-fits-dataset-plots-yaml is stale (PR #63 merged, issue #62 closed 2026-09-10, no close-out). sed-chain-cpu-route (PR #70) and sersic-variants (PR #75) are live, but neither file set intersects this one: this task adds only scripts/analysis/** (new tree), tests/test_sersic_variants_analysis.py (new) and one line in config/build/no_run.yaml, which neither touches. Its documentation deliberately goes in a new scripts/analysis/README.md rather than scripts/README.md or catalogue/README.md, which belong to PR #75's diff. Waived on the human's plan approval, in a fresh parallel worktree based on origin/main - the same call sed-chain-cpu-route itself recorded against remove-fits-dataset-plots-yaml."
+- note: "The earlier conflict survey named sed-chain-cpu-route PR #70 and sersic-variants PR #75. PR #70 merged on 2026-09-18 and PR #75 was closed unmerged at the maintainer's request; neither branch's file set intersects this task, which adds only scripts/analysis/**, tests/test_sersic_variants_analysis.py and one config/build/no_run.yaml entry."
 - summary: |
     PR 2 of the euclid_sersics variants work: scripts/analysis/sersic_variants.py
     reads the four lens_sersic_<variant>.csv scrapes that PR #75's --variant
@@ -151,7 +131,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/grid-offset-prior
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/grid-offset-prior
-- note: "worktree_check_conflict grid-offset-prior euclid_strong_lens_modeling_pipeline exits 1 on five claims (sed-chain-cpu-route PR #70, sersic-variants PR #75, sersic-variants-analysis #76, simulator-from-result-linear #77 parked, witt-wynne-catalogue #84). Code file sets are disjoint; catalogue/README.md shares one hunk with witt-wynne-catalogue: one-hunk resolution on whichever merges second. Waived on the human's plan approval 2026-09-17; fresh parallel worktree off origin/main."
+- note: "The 2026-09-17 conflict survey named five claims. Since then sed-chain-cpu-route PR #70 merged and sersic-variants PR #75 closed unmerged; sersic-variants-analysis #76, simulator-from-result-linear #77 (parked) and witt-wynne-catalogue #84 remain relevant. Code file sets are disjoint except catalogue/README.md shares one hunk with witt-wynne-catalogue."
 - note: "PAUSED 2026-09-17 17:10 BST, resumable. DONE on feature/grid-offset-prior (3 local commits d50eb52 prior ±0.5\" / 3563a98 prior_edge_y-x columns + header pin + tests / e58a1be README + eight producers; 208 fast tests green; NOT pushed, no PR). Witness done: sep1 Tile102008165 nir_j x 0.1906 [.., 0.2000] flagged → 0.2727 [0.167, 0.387] unflagged under ±0.5"; nir_h of that tile spins in Nautilus exploration (second case of 343381_8). RESUME: cd ~/Code/PyAutoLabs-wt/grid-offset-prior/euclid_strong_lens_modeling_pipeline; source ../activate.sh; pytest tests -q; /ship_workspace (Heart RED release-side → human ack); /prm; README one-hunk overlap with witt-wynne-catalogue #84. Full state on issue #88 comment."
 
 ## oneshot-benchmark-harness
