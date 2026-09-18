@@ -177,3 +177,14 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## workspace-smoke-shim-bootstrap
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/416
+- issued: 2026-09-18
+- prompt: active/workspace_smoke_shim_bootstrap.md
+- status: workspace-dev
+- autonomy: supervised (plan approved in chat 2026-09-18; staged Mind implementation then coordinated rollout)
+- worktree: ~/Code/PyAutoLabs-wt/workspace-smoke-shim-bootstrap
+- repos:
+  - PyAutoMind: feature/workspace-smoke-shim-bootstrap
+- note: First stage edits Mind only. Rollout to the twelve consumers is gated on resolving existing lens workspace and Euclid pipeline claims. No overlap waiver or phase-3 move authorized. Preserve canonical Mind's pre-existing staged draft deletion.

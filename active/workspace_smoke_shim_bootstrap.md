@@ -18,7 +18,9 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: issued
+Issued: 2026-09-18
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/416
 Consequence: judge
 Witness: a local `run_smoke.py` run from a NESTED workspace fixture imports build_util successfully in every one of the 12 repos; `grep -rl 'parent / "PyAutoHands"'` returns 0 across the workspace; and whatever consolidation is chosen, a single edit to the bootstrap reaches all 12 without a hand sweep (demonstrated, not asserted).
 Review-minutes: 25
