@@ -216,22 +216,3 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
-
-## profiling-contracts
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/284
-- issued: 2026-09-18
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-contracts
-- repos:
-  - autolens_profiling: feature/profiling-contracts
-- parallel-claim: "User explicitly approved separate-worktree coordination with hst-gpu-residue-p2 on 2026-09-18. Minimal parser overlap in fixed_light_trace.py; preserve that branch batching implementation."
-- note: "Approved review follow-up: strict final CLI parsing, matched CPU timing streams, corrected campaign summaries. No benchmarks or further memo/order research."
-- checkpoint: "Implementation complete, staged. 63 affected tests, 12 import smokes and repo checks pass; independent Sol review CLEAN. Heart RED release validation FAILED (stage integrate); YELLOW manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. Live user authorized commit/push/PR: Yes, ship this development PR; no merge/release. No benchmarks run."
-- heart-red-override: |
-    Live user: "Yes, ship this development PR" for profiling-contracts #284.
-    RED: release validation FAILED (stage integrate)
-    YELLOW: manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
-    63 affected tests, 12 import smokes, repo checks PASS; independent Sol review CLEAN.
-    Commit/push/PR only; no merge or release.
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/285
-- commit: 45b3701

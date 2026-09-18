@@ -1,3 +1,38 @@
+## profiling-contracts
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/284
+- completed: 2026-09-18
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/285
+- merge: f0d73171d2aad13c79471fce454a9cb801d2060e
+- summary: Fixed-light cells reject unknown flags and invalid counts/budgets; CPU comparison rows reset and validate their timed streams. Current campaign summaries clarify CPU closure, phase-7 shelving, corrected GPU budgets/attribution and the unversioned bridge-control limitation.
+
+## Validation and authorization
+
+CI run35366185667 on head45b3701 passed its full lint/test/link/smoke workflow,
+every job and step green. Local63 affected tests and12 changed-cell smokes
+passed; independent Sol review CLEAN. All task branch commits proven ancestors
+of origin/main. No benchmarks, solver/default changes or result regeneration.
+
+User explicitly authorized separate-worktree coordination with GPU phase2,
+then task-specific development shipping under Heart RED:
+`release validation FAILED (stage integrate)`; YELLOW:
+`manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
+Live user `ok merge and wrap up` separately authorized merge/close-out.
+No release authorization or claim that Heart is healthy.
+
+GPU phase2 remains separate; preserve its extra CLI declarations when integrating
+the one-line final-parser change. Historical lever3 bridge control was not
+available locally and no replacement was fabricated. Pending library release
+obligations remain in the CPU phase3 completion record.
+
+## Cleanup
+
+Removed task worktree via worktree_remove after releasing its Mind claim.
+Only disposable Python/pytest/Ruff caches were present; no research data products.
+Local task branch removed after ancestry proof. Dashboard regenerated with the
+completion record; folder reconciliation found no suspects.
+
+## Original prompt
+
 # Harden profiling experiment contracts and current result summaries
 
 Type: maintenance
