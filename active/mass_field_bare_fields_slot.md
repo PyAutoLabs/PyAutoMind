@@ -104,3 +104,21 @@ tracer holding `ExternalShear` objects with no redshift.
 - Diagnostic script behind the table:
   `/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/65d55a6f-8729-4857-be92-b098eeb4031d/scratchpad/field_variants.py`
   (scratch, not committed).
+
+
+## Approved implementation plan (2026-09-18)
+
+The handoff's expanded five-site plan and Codex read-only review supersede the
+initial three-edit scope and open questions above. User approved with `proceed`.
+Canonical detailed plan: https://github.com/PyAutoLabs/PyAutoLens/issues/743.
+
+- Library capability only, collection and flat forms supported; collection examples remain primary.
+- Internal fields_list_from helper plus Tracer constructor/slicing, analysis, aggregator and Result folds.
+- Preserve validation messages; bare Galaxy gets the existing generic container error,
+  while [Galaxy] gets the targeted galaxies-argument message.
+- Normalize before the geometry warning. Update public annotations and the four specified docs surfaces.
+- Add aggregator coverage, list ownership, empty slots, generator non-consumption and MassSheet convergence
+  to the handoff test plan. Existing test_autolens/analysis/test_result.py is extended, not replaced.
+- Baseline reproduced on 719738067: collection c5cf98ea7733689dc8c0ede6939c1d83,
+  flat 36a0be37c9667958bafca2f01e487f80, both prior_count 14. Red witness captured
+  before source edits: TypeError at analysis/analysis/lens.py:139.

@@ -192,11 +192,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/743
 - issued: 2026-09-18
 - prompt: active/mass_field_bare_fields_slot.md
-- status: library-dev
+- status: awaiting-input
 - worktree: ~/Code/PyAutoLabs-wt/mass-field-bare-fields
 - repos:
   - PyAutoLens: feature/mass-field-bare-fields
-- note: Reviewed plan approved in chat; PyAutoLens-only additive API, collections remain primary. Baseline and red witness before source edits.
+- note: Reviewed plan approved in chat; PyAutoLens-only additive API, collections remain primary. Implementation complete in task worktree, UNCOMMITTED pending Heart RED development-shipping override. Baseline and red witness captured before source edits.
+- validation: "739 passed, 1 xfailed; focused 84 passed; 157 downstream smoke checks passed across six isolated workspace snapshots; independent Sol review CLEAN. Evidence: https://github.com/PyAutoLabs/PyAutoLens/issues/743#issuecomment-5727685712"
+- blocker: 'Heart RED: release validation FAILED (stage integrate). Yellow: manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. No override granted yet; commit/push/PR-open wait for human.'
+- resume: "Source and tests finished; pr-body.md, witness-red.txt, full-suite.txt, smoke-summary.json and review.txt at worktree root. After live human RED override, record all four sinks per AUTONOMY.md, commit/push and open pending-release PR. Merge remains separate."
 
 ## fixed-light-numba-s5
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/278

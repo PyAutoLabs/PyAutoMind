@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_bare_fields_slot.md">Accept a bare <code>MassField</code> in <code>fields=</code> so the flat model form works</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/743">issue #743</a> — issued 2026-09-18 — library-dev</summary>
+<details><summary>📋 <a href="active/mass_field_bare_fields_slot.md">Accept a bare <code>MassField</code> in <code>fields=</code> so the flat model form works</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/743">issue #743</a> — issued 2026-09-18 — awaiting-input</summary>
 
 ```
 /start_dev active/mass_field_bare_fields_slot.md
