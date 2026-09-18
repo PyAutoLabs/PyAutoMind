@@ -192,14 +192,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/743
 - issued: 2026-09-18
 - prompt: active/mass_field_bare_fields_slot.md
-- status: awaiting-input
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/mass-field-bare-fields
 - repos:
   - PyAutoLens: feature/mass-field-bare-fields
-- note: Reviewed plan approved in chat; PyAutoLens-only additive API, collections remain primary. Implementation complete in task worktree, UNCOMMITTED pending Heart RED development-shipping override. Baseline and red witness captured before source edits.
 - validation: "739 passed, 1 xfailed; focused 84 passed; 157 downstream smoke checks passed across six isolated workspace snapshots; independent Sol review CLEAN. Evidence: https://github.com/PyAutoLabs/PyAutoLens/issues/743#issuecomment-5727685712"
-- blocker: 'Heart RED: release validation FAILED (stage integrate). Yellow: manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. No override granted yet; commit/push/PR-open wait for human.'
-- resume: "Source and tests finished; pr-body.md, witness-red.txt, full-suite.txt, smoke-summary.json and review.txt at worktree root. After live human RED override, record all four sinks per AUTONOMY.md, commit/push and open pending-release PR. Merge remains separate."
 
 ## fixed-light-numba-s5
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/278
@@ -210,5 +207,13 @@
 - repos:
   - autolens_profiling: feature/fixed-light-numba-s5
 - parallel-claim: '2026-09-18: user explicitly replied "Approve separate, disjoint worktree" to proceeding alongside PR #277 and GPU study #273. New phase-5 CPU graded-draw script, helper, tests, submit and results only; existing tasks source files unchanged. Conflict guard reports fixed-light-numba-s4b and hst-gpu-residue-p2; human coordination waiver recorded here and in the issue plan.'
-- note: 'Phase 5 approved: production memo robustness on 41 graded models; no library change. Phase-4b Heart exception does not apply to this task.'
 - hpc: "RAL CPUs-only job 343398 running on euclid-ral-gpu-1; private source snapshot autolens_profiling_wt/fixed-light-numba-s5-run (SHA-verified; full archive 3d852ac1e06f255217b1d3ad2f001e6d60f4817d80f5a1b9365cad0bb3f20ce1). Local N1500 two-draw smoke numerical/thread/slope gates PASS; 8 focused tests pass; independent pre-dispatch review CLEAN. Worktree uncommitted pending full artifacts and phase-5 shipping gate."
+- heart-red-override: |
+    2026-09-18 live human: "I authorize, raise pr and merge when CI is green."
+    RED: release validation FAILED (stage integrate)
+    YELLOW: manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+    Gates: 739 passed / 1 xfailed; 157 smoke passed; independent Sol review CLEAN.
+    Authorizes commit/push/pending-release PR and this-turn merge only with every CI leg green. No release or CI bypass.
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/744
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/744
+- note: "Committed e1e5fcfe9 and opened pending-release PR #744 under the recorded live Heart override. All four CI checks running at open. User authorized merge in this turn when every leg is green."

@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_numba_s5_memo_robustness.md">Phase 5: CPU NNLS memo robustness across graded draws</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/278">issue #278</a> — issued 2026-09-18 — workspace-dev</summary>
+<details><summary>📋 <a href="active/fixed_light_numba_s5_memo_robustness.md">Phase 5: CPU NNLS memo robustness across graded draws</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/278">issue #278</a> — issued 2026-09-18 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/744">PyAutoLens#744</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/fixed_light_numba_s5_memo_robustness.md
@@ -300,7 +300,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_bare_fields_slot.md">Accept a bare <code>MassField</code> in <code>fields=</code> so the flat model form works</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/743">issue #743</a> — issued 2026-09-18 — awaiting-input</summary>
+<details><summary>📋 <a href="active/mass_field_bare_fields_slot.md">Accept a bare <code>MassField</code> in <code>fields=</code> so the flat model form works</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/743">issue #743</a> — issued 2026-09-18 — library-shipped, awaiting-merge</summary>
 
 ```
 /start_dev active/mass_field_bare_fields_slot.md
@@ -434,6 +434,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#744](https://github.com/PyAutoLabs/PyAutoLens/pull/744) — `active/fixed_light_numba_s5_memo_robustness.md`
 - [PyAutoLens#740](https://github.com/PyAutoLabs/PyAutoLens/pull/740) — `complete/2026/09/coolest-observation-grid.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
