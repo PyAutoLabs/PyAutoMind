@@ -158,3 +158,27 @@ This approves the concrete file-disjoint plan and waives the three existing
 worktree claims above for this task. Base: cd685483b4f819801231bef0e1e9102be54f9fa5.
 The #278 Heart override remains task-specific; any phase-5b shipping override
 will be requested separately after implementation and validation.
+
+## Result and shipping checkpoint — 2026-09-18
+
+RAL job 343413 completed successfully in 01:01:18, peak RSS8155204KiB.
+The declared calibration selected threshold0.5 before evaluation. The prototype
+passes all numerical gates (276 evaluation and224 calibration comparisons),
+but records NO_LEVER: nearby holdout is11.66% slower than existingmemo and broad
+holdout is5.28% slower than cold, exceeding the respective3% limits. Original
+stress orders improve35–38% over existingmemo and remainwithin3% ofcold.
+Matched diagnostics find1 harmful acceptance and14 missed useful seeds.
+
+The ten task-specific files, including complete JSON/PNG, declaration, lock,
+source/job sidecar and resultsnote, are staged in the approved worktree. No
+production library or existing task file changed. Independent full review is
+CLEAN;24tests plus full-size smoke, Ruff/format/import/API/shell/README and
+artifact/source checks pass. The study is complete and not a production policy
+promotion. See `results/notes/fixed_lens_light_numba_memo_policy_2026_09.md` in
+the worktree for exact tables and limitations.
+
+Shipping remains gated by Heart RED: `release validation FAILED (stage integrate)`;
+YELLOW: `manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
+Await a live #280 commit/push/PR override after presenting the complete evidence.
+The PR draft is `PyAutoMind/tmp/s5b-pr-body.md`; intended base is
+`feature/fixed-light-numba-s5` while parent PR#279 remains open. No merge grant.
