@@ -7,6 +7,8 @@ Repos:
 Difficulty: medium
 Autonomy: human-required
 Filed: 2026-09-18
+Issued: 2026-09-18
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/284
 
 ## Original user request (verbatim)
 
@@ -65,8 +67,9 @@ User approved the two changes in this session. autolens_profiling main is clean
 but eight commits behind origin/main; create the worktree from fetched origin/main.
 PyAutoMind main was clean and fast-forwarded to 93dcc34e.
 The conflict guard reports hst-gpu-residue-p2 still claims autolens_profiling.
-Explicit coordination question pending: separate feature/profiling-contracts
-worktree and minimal trace-parser overlap. No source edits before resolution.
+Coordination approved 2026-09-18: user replied "Yes, coordinate in a separate worktree".
+Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-contracts.
+Preserve GPU phase-2 implementation; coordinate only the parser boundary.
 
 ## Scope exclusions
 

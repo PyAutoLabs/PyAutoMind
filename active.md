@@ -260,3 +260,13 @@
     with the README/issue-chooser and front-door follow-ups beside it.
     Brain branch needs a human merge (code + skills); Mind branch is mixed
     (policy/ + draft/ + active/) so it waits for a human too.
+
+## profiling-contracts
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/284
+- issued: 2026-09-18
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-contracts
+- repos:
+  - autolens_profiling: feature/profiling-contracts
+- parallel-claim: "User explicitly approved separate-worktree coordination with hst-gpu-residue-p2 on 2026-09-18. Minimal parser overlap in fixed_light_trace.py; preserve that branch batching implementation."
+- note: "Approved review follow-up: strict final CLI parsing, matched CPU timing streams, corrected campaign summaries. No benchmarks or further memo/order research."
