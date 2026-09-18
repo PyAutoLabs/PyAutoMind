@@ -169,7 +169,15 @@
 ## codex-token-efficiency
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/409
 - issued: 2026-09-18
-- status: library-dev
+- prompt: active/codex_token_efficiency.md
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/387
+- heart-red-override:
+  - authorization: 'yes  commit, push and open the PR for' (live human, 2026-09-18, replying to the task-specific #409 override request)
+  - red-reasons: 'install verification FAILED (testpypi; checks F)'; 'release validation FAILED (stage integrate)'
+  - yellow-reason: 'manifest drift: remote-session blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml'
+  - passed-gates: Brain 915 passed full suite; 41 focused tests passed; four changed skills valid; live usage smoke matched audited counters and 80 coordination calls; independent working-tree review CLEAN
+  - scope: commit, push, and pending-release PR-open only; no merge, release, release rehearsal, check bypass, or claim that this branch repairs Heart
 - worktree: ~/Code/PyAutoLabs-wt/codex-token-efficiency
 - repos:
   - PyAutoMind: feature/codex-token-efficiency
