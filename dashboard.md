@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 12 |
+| [In flight](#in-flight) (`active/`) | 13 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 2 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 213 |
+| [Backlog](#backlog) (`draft/`) | 212 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -264,6 +264,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/datasetmodel_grid_offset_prior_0_2_clips.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/euclid_jax_zero_contour_011.md">Restore JAX 0.11 zero-contour compatibility for Euclid deployment</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/622">issue #622</a> — issued 2026-09-18 — library-dev</summary>
+
+```
+/start_dev active/euclid_jax_zero_contour_011.md
 ```
 
 </details>
@@ -590,10 +598,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**213** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
+**212** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 61</summary>
+<summary><b>bug</b> — 60</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -639,14 +647,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autogalaxy/euclid_jax_zero_contour_011.md">Restore JAX 0.11 zero-contour compatibility for Euclid deployment</a> — autogalaxy · human-required · high</summary>
-
-```
-/start_dev draft/bug/autogalaxy/euclid_jax_zero_contour_011.md
 ```
 
 </details>
@@ -2302,7 +2302,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/autogalaxy/euclid_jax_zero_contour_011.md">Restore JAX 0.11 zero-contour compatibility for Euclid deployment</a> |
+| 2026-09-18 | issued | <a href="active/euclid_jax_zero_contour_011.md">Restore JAX 0.11 zero-contour compatibility for Euclid deployment</a> |
 | 2026-09-18 | issued | <a href="active/fixed_light_numba_s5b_memo_precheck.md">Phase 5b: reject unsuitable CPU memo seeds before the expensive solve</a> |
 | 2026-09-18 | issued | <a href="active/fixed_light_numba_s5_memo_robustness.md">Phase 5: CPU NNLS memo robustness across graded draws</a> |
 | 2026-09-18 | issued | <a href="active/fields_api_top1000.md">Adopt fields API in the Euclid pipeline and launch DR1 top 1000</a> |
@@ -2809,7 +2809,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-55 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+54 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2831,7 +2831,6 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
-- `draft/bug/autogalaxy/euclid_jax_zero_contour_011.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
@@ -2854,7 +2853,8 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/maintenance/organs/agent_harness_agnostic_setup.md`
 - `draft/maintenance/organs/provider_agnostic_agent_metadata_docs.md`
 - `draft/maintenance/organs/reduce_session_token_load.md`
-- _… and 15 more_
+- `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
+- _… and 14 more_
 
 </details>
 

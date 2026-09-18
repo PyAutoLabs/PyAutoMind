@@ -7,6 +7,8 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/euclid-jax-contour-compat
 - repos:
+  - PyAutoGalaxy: feature/euclid-jax-contour-compat
+  - autogalaxy_workspace_test: feature/euclid-jax-contour-compat
 - note: Source plan and green-CI merges approved in live chat 2026-09-18. Library Heart gate remains applicable. No SLURM submissions.
 
 ## euclid-fields-api
