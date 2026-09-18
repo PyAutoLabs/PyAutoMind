@@ -44,7 +44,15 @@ categories:
     role: "Science-assistant workspaces (see lensing pointer below)."
   pipeline: {}
   project: {}
-  admin: {}
+
+# `unmapped_checkouts:` names directories at the workspace root that ARE git
+# checkouts but are deliberately NOT body-map repos. Identity, like everything
+# else here: it says "this one is not ours", which is the only way the
+# disk -> manifest half of `repos_sync.py --check` can tell a deliberate
+# neighbour from a checkout someone forgot to declare. Keep it short — a repo
+# that belongs to the organism belongs under `repos:`, not here.
+unmapped_checkouts:
+  - .github              # PyAutoLabs/.github — the org profile repo, not an organism repo
 
 repos:
   # --- organs -----------------------------------------------------------
@@ -69,8 +77,8 @@ repos:
   #
   # `session_hook: false` opts a repo OUT of the generated SessionStart hook
   # (`policy/session_start_hook.sh`, installed by `--write` into every other
-  # checked-out repo). It is a manifest exclusion, not drift: the two repos
-  # that carry it live in the personal `Jammy2211/` namespace, are excluded
+  # checked-out repo). It is a manifest exclusion, not drift: the repo that
+  # carries it lives in the personal `Jammy2211/` namespace, is excluded
   # from the org-wide dev sweeps by category, and never had a `.claude/`. Every
   # in-scope repo keeps the hook — a library or workspace opened alone in a web
   # session needs Python 3.12 exactly like an organ (PyAutoMind#369).
@@ -251,10 +259,3 @@ repos:
     github: PyAutoLabs/pyautolabs.github.io
     category: project
     role: "Public front door \u2014 static docs hub served at pyautolabs.github.io (GitHub Pages)."
-
-  # --- admin ---------------------------------------------------------------
-  admin_jammy:
-    github: Jammy2211/admin_jammy
-    category: admin
-    role: "Local tooling, worktree helpers, some skills."
-    session_hook: false

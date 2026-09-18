@@ -191,7 +191,8 @@ own them — **PyAutoBrain** (`start_dev`, `start_dev_for_user`, `plan_branches`
 **autolens_profiling** (`profile_likelihood`). The
 `handoff` skill was retired (PyAutoBrain runs uniformly across execution
 environments — see `OWNERSHIP.md`). General PyAuto tooling (release prep,
-dependency audits, smoke tests, lint sweeps) lives in `admin_jammy/skills/`.
+dependency audits, smoke tests, lint sweeps) lives in the organ that owns it —
+`PyAutoBrain/skills/`, `PyAutoHeart/skills/`, `PyAutoHands/`.
 
 `scripts/prompt_sync.sh` is sourced by skills that mutate registry files
 (`active.md`, `planned.md`, etc.) to commit and push back to origin. It
@@ -877,12 +878,11 @@ it found — and writes nothing. `--apply` does it.
 
 ## How this repo integrates with the rest
 
-The PyAuto workflow has three repos with distinct roles:
+The PyAuto workflow has these repos with distinct roles:
 
 | Repo | Purpose |
 |------|---------|
 | **PyAutoMind** (this repo) | The Mind: ideas, intent, goals, priorities, the prompt registry and prompt-coupled skills. The starting point. |
-| **admin_jammy** | Personal admin notes only (`euclid.md`, `grants.md`, `week.md`, `travel.md`, …). Formerly also held PyAuto tooling under `software/`; that has moved out (worktree/label scripts → `PyAutoBrain/bin/`, generic skills → Brain/Heart). |
 | **PyAutoMemory** | The Memory organ: topical LLM wikis (`wiki/lensing/`, `wiki/smbh/`, `wiki/cti/`, `wiki/methods/`, `wiki/galaxies/`) and a reading queue (`reading-queue.md`, moved from `admin_jammy/papers.md`). |
 | **`PyAuto*` libraries and `*_workspace*` repos** | Where the actual code work happens. Each task gets a feature branch + worktree under `~/Code/PyAutoLabs-wt/<task-name>/`. |
 
@@ -902,7 +902,6 @@ cd ~/Code/PyAutoLabs
 git clone git@github.com:PyAutoLabs/PyAutoMind.git    # the Mind (this repo)
 git clone git@github.com:PyAutoLabs/PyAutoBrain.git   # dev-workflow skills
 git clone git@github.com:PyAutoLabs/PyAutoHeart.git   # status / readiness skills
-git clone git@github.com:Jammy2211/admin_jammy.git    # general tooling (optional)
 bash PyAutoBrain/bin/install.sh                        # symlinks skills + commands
 ```
 
