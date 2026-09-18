@@ -98,9 +98,8 @@ Measured 2026-09-18:
 Six skills/wiki pages carry galaxy-attached **code**; five are prose/catalogue mentions.
 **Wiki body edits need re-provenance** (memory `reprov`).
 
-**Claim conflict:** the repo is currently claimed by `codex-hook-parity`. A
-parallel-claim waiver plus a fresh worktree is needed, recorded on `active.md` the way
-the euclid/sersic rows do it.
+**Prior claim cleared:** `codex-hook-parity` completed on 2026-09-18
+(`complete/2026/09/codex-hook-parity.md`). Survey current claims at start-dev.
 
 ## Not in scope
 

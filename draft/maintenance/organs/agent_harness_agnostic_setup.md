@@ -70,3 +70,9 @@ portable, but several live surfaces remain Claude-specific:
   than assuming Claude.
 - Documentation matches current, tested behavior and distinguishes intentional
   provider adapters from shared policy.
+
+## Progress — 2026-09-18
+
+Phases 1 and 2 are complete: see `complete/2026/09/provider-neutral-bundle-prompts.md`
+and `complete/2026/09/codex-hook-parity.md` (all six hook PRs merged).
+Phases 3 and 4 remain; phase 3 is planned as PyAutoBrain#386.

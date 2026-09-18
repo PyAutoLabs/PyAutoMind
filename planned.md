@@ -17,7 +17,7 @@
 - filed: 2026-09-17
 - classification: workspace
 - suggested-branch: feature/codex-skill-discovery
-- blocked-by: codex-hook-parity (using PyAutoBrain and all four assistants); mass-field-workspace-sweep (using autolens_workspace)
+- blocked-by: mass-field-workspace-sweep (using autolens_workspace)
 - affected-repos:
   - PyAutoBrain
   - autofit_assistant

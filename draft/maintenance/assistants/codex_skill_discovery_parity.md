@@ -17,7 +17,7 @@ Priority: high
 Status: planned — blocked behind active repository claims
 Filed: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
-Blocked-by: codex_hook_parity; mass-field-workspace-sweep
+Blocked-by: mass-field-workspace-sweep
 
 ## Request
 
