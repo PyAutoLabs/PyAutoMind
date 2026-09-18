@@ -8,7 +8,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/euclid-fields-api
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-fields-api
-- note: Human approved plan, concurrent-claim coordination, science deployment and top-1000 submission on 2026-09-18. Worktree isolated; preserve other branches and science-local changes. RAL uses source clones, no PyPI release gate.
+- note: Human approved plan, concurrent-claim coordination and science deployment on 2026-09-18. SUBMISSION HOLD: "dont submit jobs until Ive okayed modeling script"; no SLURM jobs including smoke until renewed script approval. Worktree isolated; preserve other branches and science-local changes. RAL uses source clones, no PyPI release gate.
 
 ## codex-hook-parity
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/407

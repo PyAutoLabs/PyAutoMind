@@ -47,3 +47,7 @@ Can you accept this https://github.com/PyAutoLabs/autolens_workspace/pull/560, a
 ## Approval — 2026-09-18
 
 The human approved all three delivery phases and coordinating the existing branches: "yes do 1, 2, 3 remember that RAL is a clone of github so we dont need a release for those changes rto take effecft, letts merge PRs if possible on stuffl ike autolens_Workspace". This lifts the PyPI release hold for the workspace merges in this session. CI must still pass. Work proceeds in an isolated feature/euclid-fields-api worktree; other claimed branches remain untouched. The pipeline migration is one coherent PR, followed by science deployment and the already-authorized submission; no new library API is needed.
+
+## Submission hold — 2026-09-18
+
+User: "dont submit jobs until Ive okayed modeling script". This supersedes earlier submission authorization: complete implementation, local validation and reviewable script preparation, but submit no SLURM jobs (including cluster smoke tests) before fresh modelling-script approval. No jobs submitted before this hold.
