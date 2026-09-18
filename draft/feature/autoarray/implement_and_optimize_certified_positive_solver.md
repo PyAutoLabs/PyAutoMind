@@ -49,7 +49,7 @@ Formalizes the production-solver seed in PyAutoMind/ideas.md from autolens_profi
 
 Joint 60-MGE+Delaunay1500 free_all failed certification after 40 passes (41 factorizations), while free_one certified at 32; PDIP converged in 22 iterations. Joint rectangular1521 variants failed after 40; PDIP took 21. Source-only free_all took 2 Delaunay / 7 rectangular passes. These demonstrate poorer convergence with MGE, not a matched joint-GPU timing comparison.
 
-Reuse the separate active CPU decomposition task PyAutoMind/complete/2026/09/fixed-light-numba-phase1.md (and its phase-2 successor active/fixed_light_numba_phase2_source_only_solver.md) and its draft fixed_light_numba_cpu_programme.md; do not duplicate that campaign or the hst_gpu_non_solver_residue_programme.md.
+Reuse the completed CPU decomposition records PyAutoMind/complete/2026/09/fixed-light-numba-phase1.md and complete/2026/09/fixed-light-numba-solver.md, with the final campaign verdict in complete/2026/09/fixed-lens-light-numba-cpu.md; do not duplicate that evidence or the separate hst_gpu_non_solver_residue_programme.md.
 
 Fixed-light measurements use pre-solved intensities and exclude preparation; they do not prove that freezing one estimate throughout a search preserves every likelihood. Out of scope: new sparse operators, changes to statistical modeling/positivity, and broad profiling campaigns.
 

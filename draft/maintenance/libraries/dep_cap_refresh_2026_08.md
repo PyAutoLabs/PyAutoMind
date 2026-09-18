@@ -13,8 +13,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: scipy, scikit-learn, xxhash and corner caps sit at the named versions in the three pyprojects; `astunparse` and `gprof2dot` are gone from PyAutoFit with a grep proving no reference; the `pynufft` dev pin is aligned with the optional extra; the astropy 8 decision is recorded (bumped with a passing FITS/units/coords test run, or held with the reason); the three test suites pass on the refreshed caps.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-06 (backfilled from git)
 

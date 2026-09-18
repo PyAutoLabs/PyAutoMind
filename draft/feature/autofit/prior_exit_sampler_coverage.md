@@ -11,8 +11,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: A coverage table with one row per search in the audit table (prior exit reachable / mitigated by what / enforced or assumed) plus, for each exposed gradient search (Adam, Lion, ADABelief, Prodigy), the clip rate and alive-versus-step curve on `imaging/mge` hst with `ClipperPriorBox` on, at 2+ seeds and a named step budget, no clipper arm reporting zero clips; no default is flipped.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-17 (backfilled from git)
 

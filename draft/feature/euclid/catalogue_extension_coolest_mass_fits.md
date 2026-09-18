@@ -13,13 +13,16 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: All 10 prelim lenses carry a per-lens COOLEST `.csv` in their catalogue tile directory; the magnification plane joins `model.fits` or its exclusion is justified by the size numbers; the size assessment has measured per-lens bytes and a 15,000-lens extrapolation; the retroactive-update verdict is written with an explicit recommendation.
+Review-minutes: 3
 Unattended: ready
 Epic: euclid-dr1-prep
 Phase: 9
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md
 Filed: 2026-08-28
+
+Note (2026-09-17): the mass-model FITS leg (convergence, potential, deflections) shipped under complete/2026/09/catalogue-mass-maps-fits.md (pipeline PR #81, PyAutoFit PR #1633) — maps are collected from the fit's own image/tracer.fits; what remains here is the COOLEST CSV and the magnification plane.
 
 Phase 9 of the Euclid DR1 preparation epic (was 7; renumbered 2026-09-01 in the Cortex split).
 **Gate: the 10-lens science run** — `PyAutoCortex` `phases/euclid/dr1_prelim_10_lens_science_run`

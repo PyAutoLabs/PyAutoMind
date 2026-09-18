@@ -10,6 +10,9 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: draft
+Consequence: glance
+Witness: A round-trip test through `jax.tree_util.tree_flatten` / `tree_unflatten` after `autofit.jax.register_model`, over a `Model` with zero direct priors and a `TuplePrior` child (the `DatasetModel` shape) with (a) nothing free, (b) the tuple free, (c) the tuple plus one scalar free, passes with `prior_count` equal before and after (0, 2, 3).
+Review-minutes: 3
 Filed: 2026-09-03
 
 ## Symptom

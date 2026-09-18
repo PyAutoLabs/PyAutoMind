@@ -16,13 +16,14 @@ name: pyauto-arxiv-interests
 # larger prompt and a second cross-repo push do not belong on that critical
 # path — a bad day here must cost the interests list and nothing else.
 #
-# THE BACKLOG, which is the design and not an implementation detail: nothing
-# here lapses. Each run appends one dated batch of ten; the board shows the
-# OLDEST un-cleared batch and one 🧹 button clears that day and reveals the
-# next. So a week away is a week of batches to walk through, not a week of
-# lapsed suggestions — the inbox's seven-day timer is deliberately NOT copied.
-# scripts/interests_actions.py in PyAutoMemory owns that; this workflow only
-# supplies papers.
+# THE BACKLOG, a day at a time: each run appends one dated batch of ten; the
+# board shows the OLDEST un-cleared batch and one 🧹 button clears that day and
+# reveals the next. A batch nobody clears lapses whole on the inbox's seven-day
+# window — which this list originally, deliberately, did NOT copy, until the
+# measurement: 123 papers appended, 2 promoted, 1 batch cleared (1.6 %), 114
+# entries in 11 unread day-batches. scripts/interests_actions.py in
+# PyAutoMemory owns the window and the sweep; this workflow only supplies
+# papers and calls them.
 #
 # Two stages, the house pattern: a deterministic ranker
 # (.github/scripts/arxiv_interests.py) narrows a whole day of astro-ph to ~60
@@ -257,11 +258,18 @@ jobs:
           # Unconditional, and the whole reason this step does not skip empty
           # days: it records that the digest ran at all.
           stamped=$(python3 scripts/interests_actions.py stamp)
-          # NO sweep. The inbox has one; this list is a backlog the human
-          # clears a day at a time, and ageing batches out would silently
-          # delete the recommendations they asked to cycle through.
+          # The sweep, beside the strong-lensing inbox's (arxiv_papers.yml):
+          # a batch nobody cleared lapses whole after INBOX_WINDOW_DAYS. This
+          # step once carried a "NO sweep" comment — the list was designed as a
+          # backlog to cycle through rather than a timer — and the measurement
+          # killed that: 123 papers appended, 2 promoted, 1 batch cleared
+          # (1.6 %), 114 entries piled up in 11 day-batches, which made the
+          # oldest batch (the one the board shows) the least relevant thing on
+          # it. The window and the batch granularity live in PyAutoMemory's
+          # interests_actions.py; nothing about them is expressed here.
+          swept=$(python3 scripts/interests_actions.py sweep)
           rm arxiv_interest_picks.json
-          echo "interests: ${added}, ${stamped}"
+          echo "interests: ${added}, ${swept}, ${stamped}"
 
           if [ -z "$(git status --porcelain -- arxiv-interests.md)" ]; then
             echo "interests list unchanged — nothing to commit."
@@ -270,7 +278,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add arxiv-interests.md
-          git commit -m "interests: ${added}, ${stamped} (arXiv digest ${uk_date})"
+          git commit -m "interests: ${added}, ${swept}, ${stamped} (arXiv digest ${uk_date})"
           # A rejected push is worth a rebase and another go — the board and the
           # queue-action workflows commit to this same repo, and the lensing
           # digest pushed half an hour ago. An auth failure is NOT that: the

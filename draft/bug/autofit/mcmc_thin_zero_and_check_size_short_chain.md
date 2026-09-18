@@ -12,8 +12,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Witness: `thin` is `max(1, int(max(times) / 2))` in both `emcee/search.py` and `zeus/search.py`, pinned by a unit test on a chain whose largest auto-correlation time is below 2 (`thin == 1`, no `ValueError`); Emcee guards `auto_correlations_from` on chains shorter than `check_size` the way Zeus does, so `af.Emcee(nsteps=10)` under `PYAUTO_TEST_MODE=1` completes; and the #1628 regression tests drop their `AutoCorrelationsSettings(check_size=5, ...)` workaround.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-14
 Parent: draft/bug/autofit/emcee_zeus_samples_log_prob_misalignment.md
@@ -61,3 +62,11 @@ Worked around in the #1628 regression tests by passing
 
 Neither is a correctness bug in results: they are crashes and an inconsistency
 between the two searches. Do not bundle them with a results-changing fix.
+
+## Folded 2026-09-17
+
+`draft/bug/autofit/emcee_crashes_in_autocorrelation_when_the_chain.md` (filed
+2026-09-10) described item 2 above and was removed at the witness-campaign
+close-out (PyAutoMind#398). Its witness — `af.Emcee(nwalkers=10, nsteps=50).fit(...)`
+on the 1D Gaussian example completes with a warning instead of raising
+`IndexError` — is part of this prompt's witness now (Emcee gains Zeus's guard).

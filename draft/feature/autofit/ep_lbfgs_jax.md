@@ -10,6 +10,7 @@ Autonomy: safe
 Priority: normal
 Status: formalised
 Consequence: judge
+Witness: none — placeholder prompt ("IC50 fits use DynestyStatic, which is slow"); no target search, tolerance or runtime is stated, so no claim settles it.
 Review-minutes: 20
 Unattended: ready
 Epic: graphical-ep

@@ -11,8 +11,9 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Witness: `af.ModelPlotter(factor_graph.global_prior_model).figure()` for tutorial 5 shows one shared `centre` (the blue `shared` badge), the EP state figure shows every dataset factor updating with no `STALE FACTORS` line, the headless run exits 0 and the notebook is regenerated.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-13
 

@@ -8,6 +8,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: low
 Status: formalised
+Consequence: notify
+Witness: Either a PyAutoGut board renders with the shared theme (a `gut` entry in `ORGANS` and `MARKS`, `gut: PyAutoGut` in `config/policy.yaml` `board: boards:`, a Pages publish workflow, rows for transit contents, next sweep, recoverable refs and last releases) or the decision not to build it is recorded; the Nerves-board decision is recorded either way.
+Review-minutes: 0
 Filed: 2026-09-04
 
 The one-tap board family (`PyAutoBrain/config/policy.yaml`, `board: boards:`)

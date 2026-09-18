@@ -11,8 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: low
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: With no overlays requested `graph_state.png` is pixel-identical to the phase-5 render (hash-pinned test); unit tests on `graphical_doubles.hierarchical_graph` and the `test_factor_failure_recovery` doubles assert each overlay's numbers (mean ± std, per-edge precision, per-factor KL) against the approximation directly; sphinx warning count stays at baseline.
+Review-minutes: 3
 Unattended: ready
 Epic: model-figures
 Filed: 2026-09-13

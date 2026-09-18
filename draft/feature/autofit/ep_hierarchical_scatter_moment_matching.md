@@ -10,8 +10,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised — filed as the "cure" follow-on of phase 2; gated by the campaign's "JAX/gradient/Hessian EP internals" check-in (`draft/research/graphical_ep/ep_campaign.md`, Deferred) — adopt only if the human judges the scatter worth it
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: `analytic_gaussian.py` leg B `sigma` row and both `x_i` rows PASS at the autofit-EP tolerance (a 0.15 / b 0.25) with leg A unchanged (18/18); `analytic_gaussian_priors.py` truncated and gaussian scatter rows PASS; `analytic_gaussian_collapse.py` seeds 0-4 put the scatter within 0.5 std of the closed form; a two-variable factor with known tilted moments matches to 1e-6; both scripts are un-parked from `no_run.yaml`.
+Review-minutes: 3
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-02

@@ -316,9 +316,9 @@ regenerate the dataset alongside the convention change.
    `autolens_workspace/scripts/multi_galaxy/` package (+ workspace_test
    mirror). Unblocks everything user-facing; do first.
    CORE SHIPPED 2026-07-25; features/scaling_galaxies, fit.py and the
-   workspace_test jax_likelihood variant 2026-07-26. Remaining: real
-   J1011+0143 data swap-in (MAST unreachable from cloud sessions — needs a
-   local/unrestricted-network session).
+   workspace_test jax_likelihood variant 2026-07-26. COMPLETE 2026-09-17:
+   real J1011+0143 F814W data swap-in (autolens_workspace#554); record
+   `complete/2026/09/multi-galaxy-j1011-real-data.md`.
 2. `draft/docs/workspaces/group_halo_explicit_choice.md` — group start_here
    gains all three tiers; new `features/group_halo/` halo-choice tutorial.
    SHIPPED: halo tutorial 2026-07-25; three-tier start_here (with an

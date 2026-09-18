@@ -12,8 +12,9 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 25
+Consequence: glance
+Witness: The `autofit_profiling` repo exists (created only after the human's interactive confirmation) with the ported `ep/`, `graphical/` and analytic-benchmark packages reproducing their committed baseline numbers, and epic 1's issue is open with a measured, ranked bottleneck table for a single `search.fit` on a fast likelihood; epic 2 is not opened.
+Review-minutes: 3
 Unattended: ready
 Campaign: research/graphical_ep/ep_campaign.md (Phase 6)
 Filed: 2026-08-19 (backfilled from git)

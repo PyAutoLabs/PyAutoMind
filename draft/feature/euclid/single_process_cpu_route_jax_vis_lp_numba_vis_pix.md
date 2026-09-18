@@ -13,8 +13,9 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 10
+Consequence: glance
+Witness: One lens run through the new single-process route at production sampler settings on RAL completes with a result matching the two-process route within sampler noise (or the hang/degradation is recorded and the two-process default stays); `hpc/README.md` gains the route-table row and its "conservative default" paragraph states the measured position.
+Review-minutes: 3
 Unattended: ready
 Epic: euclid-dr1-prep
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md

@@ -11,8 +11,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: medium
 Status: formalised
-Consequence: judge
-Review-minutes: 15
+Consequence: notify
+Witness: The parsed config objects compare equal before and after (deep-compare test over every packaged config directory), YAML parses per script run drop from 308 to at most one per distinct directory (counted by a parse hook), and `visualization.py`'s run is faster by at least 0.8 s.
+Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-10
 

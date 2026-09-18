@@ -9,8 +9,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: low
 Status: formalised
-Consequence: judge
-Review-minutes: 15
+Consequence: glance
+Witness: A planted `*__script.json` carrying a foreign path is excluded from the analyze/collector results with a warning naming the shard and the path (test), and a planted tracked `test-results/` file fails the workspace lint (test); both tests live in `PyAutoHeart/tests`.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-11
 

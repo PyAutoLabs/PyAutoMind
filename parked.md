@@ -6,6 +6,16 @@ unindexed worktrees or stashes. Move an entry back to `active.md` (or to
 `planned.md` if re-scoping is needed) when work resumes; on shipping,
 write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 
+<!-- toc:start -->
+
+**Contents**
+
+- [single-source-density-design](#single-source-density-design)
+- [prior-message-collapse-design](#prior-message-collapse-design)
+- [fixed-light-numba-s7](#fixed-light-numba-s7)
+
+<!-- toc:end -->
+
 ## single-source-density-design
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1500 (open — the parked design hub)
 - prompt: draft/bug/priors/12_single_source_density_refactor.md
@@ -28,3 +38,10 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
   the #1500 bundle. Resume and retire together with single-source-density-design.
 - repos-none-claimed: claims no repos while parked.
 
+## fixed-light-numba-s7
+- archived-proposal: complete/archive/shelved/fixed_light_numba_s7_cpu_verdict.md
+- parked: 2026-09-18 — user explicitly shelved phase7 before implementation.
+- decision: Assume no usable memo benefit and changing sampler order for current planning. Further memo-policy and sampler-order/history research out of scope; production defaults unchanged.
+- evidence: Phase5/5b/6 findings remain in completed records and merged profiling results.
+- resume: Only on explicit user request; rescope before issue/worktree/compute creation.
+- repos-none-claimed: No issue, worktree, source changes or jobs created for phase7.

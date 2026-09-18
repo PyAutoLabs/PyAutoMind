@@ -11,8 +11,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 20
+Consequence: glance
+Witness: `wiki-currency` on autocti_assistant stays green across a library `main` merge that adds uncited exports (a fixture run with an added symbol), fails only on removal of a cited symbol or is demoted to informational with `--scope all` the sole gate, and `skills/ac_audit_skill_apis.md` documents when regenerating the baseline is the right response.
+Review-minutes: 3
 Unattended: ready
 Filed: 2026-08-24
 

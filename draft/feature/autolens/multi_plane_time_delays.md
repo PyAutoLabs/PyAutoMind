@@ -12,6 +12,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
+Witness: `Tracer.time_delays_from` on a three-plane tracer returns per-image delays that (a) collapse to the two-plane answer to 1e-8 when the intermediate plane is massless and (b) agree with an independent oracle in the PyAutoLens#480 ray-traced-Jacobian style; and `LensCalc.fermat_potential_from` on a plane-bound `LensCalc` either uses a plane-bound potential or refuses, pinned by a test.
 Review-minutes: 25
 Unattended: ready
 

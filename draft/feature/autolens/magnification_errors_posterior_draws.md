@@ -11,15 +11,14 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
-Consequence: judge
-Review-minutes: 25
+Consequence: glance
+Witness: Every `source_science.py` (both tiers) reports median and percentile intervals for the phase-5/6 point, flux-ratio and area magnifications from N draws of `result.samples` with N and runtime stated in prose; on the simulated example the fractional uncertainty falls in the LEGGOS II range (sigma_mu/|mu| 0.03-0.09) or the deviation is explained; the draw loop accepts a per-source `plane_redshift`; the latent decision (extend to pixelized sources or why not) is written where `config/latent.yaml` documents `magnification`.
+Review-minutes: 3
 Unattended: ready
 Epic: cluster-strong-lensing
 Phase: 7
 Parent: draft/feature/autolens/source_cluster_arc.md
 Filed: 2026-08-19 (backfilled from git)
-
-# Magnification errors via posterior draws, standalone in source_science
 
 Part of the Source & Cluster arc (phase 7 of 12), gated on phases 5-6. User request
 (verbatim): "Errors via posterior draws to go with all of this. I think errors in
