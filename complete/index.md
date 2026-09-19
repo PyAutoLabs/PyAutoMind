@@ -244,6 +244,7 @@ markers; everything below GENERATED is rebuilt.
 - [gaussian-precompute-p2](2026/09/gaussian-precompute-p2.md)
 - [gaussian-precompute-p3](2026/09/gaussian-precompute-p3.md) — closed, completed
 - [generate-markdown-leaks-worktree-paths](2026/09/generate-markdown-leaks-worktree-paths.md)
+- [grid-offset-prior](2026/09/grid-offset-prior.md) — Widened both waveband DatasetModel grid-offset priors from ±0.2 to ±0.5 arcsec and added prior_edge_y/x to ast…
 - [hands-board-family-footer](2026/09/hands-board-family-footer.md)
 - [heart-board-family-footer](2026/09/heart-board-family-footer.md)
 - [heart-worktree-drift-hidden-dirs](2026/09/heart-worktree-drift-hidden-dirs.md) — closed, completed

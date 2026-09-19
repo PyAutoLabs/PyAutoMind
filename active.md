@@ -70,21 +70,6 @@
 - note: "Phase 2 of hst-gpu-non-solver-residue, STEP 1 ONLY (matched vmap-vs-jit A100 experiment + policy; PyAutoArray batch-aware callback deferred to phase 2b via /intake if the numbers warrant). Fable session plans, Opus executes. A100 submit -> wait -> harvest is a human resume point. Heart RED (install verify testpypi F; release integrate) at start; PR-open needs the human's ack. Phase-1 worktree ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1 still awaits the human's cleanup (3 untracked .err -> worktree_remove -> branch -d)."
 - hpc: "Array 343376 is preserved as HISTORICAL vmap(jit) evidence at profiling revision bf52147; it no longer represents production after PyAutoFit#1638. Replacement A100 array 344635 tasks 0-4 submitted 2026-09-19 from RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p2 @ e2a5187 against refreshed shared-library mains (B16 distinct fb-on / B16 fb-off / B8 / B4 / B16 identical control); all 5 RUNNING on euclid-ral-gpu-1/2 in the one post-submit check. HUMAN RESUME POINT: when done, pull logs/results, check CELL_EXIT=0, AUTOTUNE_ENTRIES count=0, unjoined 0, reconciliation within 5 %, and every per-lane jit(vmap)/scalar/library-PDIP pin PASS; then write the phase-2 note and batching verdict, regenerate README, and ship. Do not monitor or resubmit automatically."
 
-## grid-offset-prior
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88
-- issued: 2026-09-17
-- prompt: active/datasetmodel_grid_offset_prior_0_2_clips.md
-- session: claude --resume 7bff8610-4b84-413a-a994-d72484c4c14c
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/grid-offset-prior
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/grid-offset-prior
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/94
-- validation: 230 tests passed; 32 focused tests after merging current main; 9/9 Euclid smoke scripts passed; Black and diff checks clean. Heart STALE (release rehearsal absent), permitted for a development PR.
-- note: "Shipped to PR #94 on 2026-09-20 at 87c0e12. Branch includes current main, pending-release label confirmed; CI still running at handoff. Merge needs a fresh /prm review. After merge, refit sep1/prelim SED wavebands so science catalogues use the wider prior; the old results can already be flagged by the new producer."
-- note: "The 2026-09-17 conflict survey named five claims. Since then sed-chain-cpu-route PR #70 merged and sersic-variants PR #75 closed unmerged; sersic-variants-analysis #76, simulator-from-result-linear #77 (parked) and witt-wynne-catalogue #84 remain relevant. Code file sets are disjoint except catalogue/README.md shares one hunk with witt-wynne-catalogue."
-- note: "PAUSED 2026-09-17 17:10 BST, resumable. DONE on feature/grid-offset-prior (3 local commits d50eb52 prior ±0.5\" / 3563a98 prior_edge_y-x columns + header pin + tests / e58a1be README + eight producers; 208 fast tests green; NOT pushed, no PR). Witness done: sep1 Tile102008165 nir_j x 0.1906 [.., 0.2000] flagged → 0.2727 [0.167, 0.387] unflagged under ±0.5"; nir_h of that tile spins in Nautilus exploration (second case of 343381_8). RESUME: cd ~/Code/PyAutoLabs-wt/grid-offset-prior/euclid_strong_lens_modeling_pipeline; source ../activate.sh; pytest tests -q; /ship_workspace (Heart RED release-side → human ack); /prm; README one-hunk overlap with witt-wynne-catalogue #84. Full state on issue #88 comment."
-
 ## oneshot-benchmark-harness
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126
 - issued: 2026-09-17
