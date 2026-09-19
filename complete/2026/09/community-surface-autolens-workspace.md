@@ -1,15 +1,36 @@
+# Completed: autolens_workspace community surface
+
+Merged: 2026-09-19
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/569
+PR: https://github.com/PyAutoLabs/autolens_workspace/pull/570
+
+## Shipped
+
+Updated community support documentation and issue templates, preserving repository issues for confirmed reproducible bugs.
+
+## Validation
+
+All exact-head workflows and jobs passed, including Python 3.12 and 3.13 smoke tests, Navigator checks, and size guard.
+Git ancestry verified against origin/main before close-out.
+
+- pending-release: autolens_workspace@https://github.com/PyAutoLabs/autolens_workspace/pull/570
+
+The shared worktree remains until the final Mind policy PR is merged.
+
+## Original prompt
+
 # docs: direct community support to the Discussions hub
 
 Type: docs
-Target: pyautolens
+Target: autolens_workspace
 Repos:
-- PyAutoLens
+- autolens_workspace
 Difficulty: small
 Autonomy: supervised
 Priority: high
 Approved: 2026-09-19 (Codex conversation: "I approve")
 Issued: 2026-09-19
-Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/746
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/569
 
 ## Latest direction (2026-09-19)
 
@@ -29,4 +50,4 @@ Validation: focused community tests for Brain; Markdown/YAML/link checks for doc
 
 ## Original request
 
-Approved community-surface handoff; original request preserved verbatim in community-surface-policy.md. This member implements the PyAutoLens portion of that handoff and the approved plan above.
+Approved community-surface handoff; original request preserved verbatim in community-surface-policy.md. This member implements the autolens_workspace portion of that handoff and the approved plan above.

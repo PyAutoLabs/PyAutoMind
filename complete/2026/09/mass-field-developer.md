@@ -1,3 +1,12 @@
+## mass-field-developer
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142 (closed completed 2026-09-19)
+- completed: 2026-09-19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143 (merge b2267ce4)
+- epic: mass-field (developer workspace sweep)
+- summary: Migrated live JAX profiling, minimal-search, plotting-alignment, LOS, and standalone MGL builders from galaxy-attached shear to top-level `MassField` values through `fields=`. Preserved all `source_science/**` measurement archives, `legacy/quantity/**`, Euclid-owned debug scripts, the committed LOS tracer witness, and two examples tied to an unavailable legacy SLaM namespace. The helper is consumed from current PyAutoGalaxy/PyAutoLens source `main`; no packaged release is required. Validation included an AST re-walk, 32 passing LOS tests, re-measured imaging and point-source likelihood pins, representative JAX/search/plotting/SLaM runs, formatting and lint checks. The repository has no configured CI checks, so human-invoked `/prm` authorized the merge from this local evidence.
+
+## Original prompt
+
 # Is `autolens_workspace_developer` in the MassField epic? — 72 galaxy-attached sites, no CI, archived measurements
 
 Type: maintenance

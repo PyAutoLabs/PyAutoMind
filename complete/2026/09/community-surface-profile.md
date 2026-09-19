@@ -1,3 +1,24 @@
+# Completed: .github community surface
+
+Merged: 2026-09-19
+Issue: https://github.com/PyAutoLabs/.github/issues/15
+PR: https://github.com/PyAutoLabs/.github/pull/16
+
+## Shipped
+
+Updated the science-first organization profile and inherited support routing to the five-category Discussions hub.
+
+## Validation
+
+No CI is configured. The user explicitly approved merging without CI on 2026-09-19. Prior static validation and independent review were CLEAN.
+Git ancestry verified against origin/main before close-out.
+
+- pending-release: .github@https://github.com/PyAutoLabs/.github/pull/16
+
+The shared worktree remains until the final Mind policy PR is merged.
+
+## Original prompt
+
 # docs: put scientific software first on the org profile
 
 Type: docs

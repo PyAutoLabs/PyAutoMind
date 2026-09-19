@@ -40,17 +40,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 18 |
+| [In flight](#in-flight) (`active/`) | 8 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
-| [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 218 |
+| [Planned](#planned) (`planned.md`) | 7 |
+| [Backlog](#backlog) (`draft/`) | 215 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a> — community · small · human-required · high</summary>
 
@@ -80,14 +80,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue chooser…</a> — workspaces · small · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/support_sections_point_to_discussions.md
 ```
 
 </details>
@@ -144,6 +136,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
 ```
 
 </details>
@@ -258,90 +258,10 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/161">issue #161</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/162">autofit_workspace#162</a> — ⏳ pending release: autofit_workspace</summary>
-
-```
-/start_dev active/community-surface-autofit-workspace.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/247">issue #247</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248">autogalaxy_workspace#248</a> — ⏳ pending release: autogalaxy_workspace</summary>
-
-```
-/start_dev active/community-surface-autogalaxy-workspace.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/569">issue #569</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/570">autolens_workspace#570</a> — ⏳ pending release: autolens_workspace</summary>
-
-```
-/start_dev active/community-surface-autolens-workspace.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-brain.md">fix: keep broadcast discussions out of awaiting-response</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/405">issue #405</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/406">PyAutoBrain#406</a> — ⏳ pending release: PyAutoBrain</summary>
-
-```
-/start_dev active/community-surface-brain.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/community-surface-policy.md">docs: distinguish implementation proposals from ideas</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/426">issue #426</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/427">PyAutoMind#427</a> — ⏳ pending release: PyAutoMind</summary>
 
 ```
 /start_dev active/community-surface-policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-profile.md">docs: put scientific software first on the org profile</a> — <a href="https://github.com/PyAutoLabs/.github/issues/15">issue #15</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/.github/pull/16">.github#16</a> — ⏳ pending release: .github</summary>
-
-```
-/start_dev active/community-surface-profile.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/562">issue #562</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/563">PyAutoArray#563</a> — ⏳ pending release: PyAutoArray</summary>
-
-```
-/start_dev active/community-surface-pyautoarray.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1639">issue #1639</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1640">PyAutoFit#1640</a> — ⏳ pending release: PyAutoFit</summary>
-
-```
-/start_dev active/community-surface-pyautofit.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-pyautogalaxy.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/626">issue #626</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627">PyAutoGalaxy#627</a> — ⏳ pending release: PyAutoGalaxy</summary>
-
-```
-/start_dev active/community-surface-pyautogalaxy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-pyautolens.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/746">issue #746</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/747">PyAutoLens#747</a> — ⏳ pending release: PyAutoLens</summary>
-
-```
-/start_dev active/community-surface-pyautolens.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/community-surface-website.md">docs: add community links and clarify PyAutoScientist</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/8">issue #8</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9">pyautolabs.github.io#9</a> — ⏳ pending release: pyautolabs.github.io</summary>
-
-```
-/start_dev active/community-surface-website.md
 ```
 
 </details>
@@ -358,14 +278,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/mass_field_flat_adoption_developer.md">Is <code>autolens_workspace_developer</code> in the MassField epic</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142">issue #142</a> — issued 2026-09-19 — workspace-shipped, ready-for-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143">autolens_workspace_developer#143</a></summary>
-
-```
-/start_dev active/mass_field_flat_adoption_developer.md
 ```
 
 </details>
@@ -394,19 +306,27 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
+<details><summary>📋 <a href="active/trim_external_shear_narrative.md">Trim external-shear narrative from workspace examples</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/571">issue #571</a> — planned 2026-09-19</summary>
+
+```
+/start_dev active/trim_external_shear_narrative.md
+```
+
+</details>
+
 ## Pending release
 
 Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
 
 **.github**
 
-- [.github#16](https://github.com/PyAutoLabs/.github/pull/16) — `active/community-surface-profile.md`
+- [.github#16](https://github.com/PyAutoLabs/.github/pull/16) — `complete/2026/09/community-surface-profile.md`
 
 **PyAutoArray**
 
-- [PyAutoArray#563](https://github.com/PyAutoLabs/PyAutoArray/pull/563) — `active/community-surface-pyautoarray.md`
 - [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
+- [PyAutoArray#563](https://github.com/PyAutoLabs/PyAutoArray/pull/563) — `complete/2026/09/community-surface-pyautoarray.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
 - [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
 - [PyAutoArray#527](https://github.com/PyAutoLabs/PyAutoArray/pull/527) — `complete/2026/09/delaunay-edge-ring-zeroed.md`
@@ -428,14 +348,13 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
-- [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `active/community-surface-brain.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
+- [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `complete/2026/09/community-surface-brain.md`
 - [PyAutoBrain#384](https://github.com/PyAutoLabs/PyAutoBrain/pull/384) — `complete/2026/09/provider-neutral-bundle-prompts.md`
 
 **PyAutoFit**
 
-- [PyAutoFit#1640](https://github.com/PyAutoLabs/PyAutoFit/pull/1640) — `active/community-surface-pyautofit.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
@@ -443,6 +362,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1609](https://github.com/PyAutoLabs/PyAutoFit/pull/1609) — `complete/2026/09/autofit-from-instance-roundtrip.md`
 - [PyAutoFit#1604](https://github.com/PyAutoLabs/PyAutoFit/pull/1604) — `complete/2026/09/byol-mode.md`
 - [PyAutoFit#1633](https://github.com/PyAutoLabs/PyAutoFit/pull/1633) — `complete/2026/09/catalogue-mass-maps-fits.md`
+- [PyAutoFit#1640](https://github.com/PyAutoLabs/PyAutoFit/pull/1640) — `complete/2026/09/community-surface-pyautofit.md`
 - [PyAutoFit#1566](https://github.com/PyAutoLabs/PyAutoFit/pull/1566) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoFit#1632](https://github.com/PyAutoLabs/PyAutoFit/pull/1632) — `complete/2026/09/dynesty-single-core-no-pool.md`
 - [PyAutoFit#1574](https://github.com/PyAutoLabs/PyAutoFit/pull/1574) — `complete/2026/09/ep-full-revert-not-updated.md`
@@ -477,8 +397,8 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#627](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627) — `active/community-surface-pyautogalaxy.md`
 - [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
+- [PyAutoGalaxy#627](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627) — `complete/2026/09/community-surface-pyautogalaxy.md`
 - [PyAutoGalaxy#619](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619) — `complete/2026/09/config-priors-drift.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoGalaxy#615](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615) — `complete/2026/09/einstein-radius-jit-seed-finder.md`
@@ -490,7 +410,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
-- [PyAutoLens#747](https://github.com/PyAutoLabs/PyAutoLens/pull/747) — `active/community-surface-pyautolens.md`
+- [PyAutoLens#747](https://github.com/PyAutoLabs/PyAutoLens/pull/747) — `complete/2026/09/community-surface-pyautolens.md`
 - [PyAutoLens#740](https://github.com/PyAutoLabs/PyAutoLens/pull/740) — `complete/2026/09/coolest-observation-grid.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
@@ -520,7 +440,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **autofit_workspace**
 
-- [autofit_workspace#162](https://github.com/PyAutoLabs/autofit_workspace/pull/162) — `active/community-surface-autofit-workspace.md`
+- [autofit_workspace#162](https://github.com/PyAutoLabs/autofit_workspace/pull/162) — `complete/2026/09/community-surface-autofit-workspace.md`
 
 **autofit_workspace_test**
 
@@ -529,15 +449,15 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **autogalaxy_workspace**
 
-- [autogalaxy_workspace#248](https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248) — `active/community-surface-autogalaxy-workspace.md`
+- [autogalaxy_workspace#248](https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248) — `complete/2026/09/community-surface-autogalaxy-workspace.md`
 
 **autolens_workspace**
 
-- [autolens_workspace#570](https://github.com/PyAutoLabs/autolens_workspace/pull/570) — `active/community-surface-autolens-workspace.md`
+- [autolens_workspace#570](https://github.com/PyAutoLabs/autolens_workspace/pull/570) — `complete/2026/09/community-surface-autolens-workspace.md`
 
 **pyautolabs.github.io**
 
-- [pyautolabs.github.io#9](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9) — `active/community-surface-website.md`
+- [pyautolabs.github.io#9](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9) — `complete/2026/09/community-surface-website.md`
 
 ## Human review
 
@@ -623,7 +543,7 @@ Started or scoped, not currently in flight — resume by moving the row back to 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>6</b> task(s)</summary>
+<summary><b>7</b> task(s)</summary>
 
 <details><summary>📋 <b>catalogue-inspection-before-vis-pix</b> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/92">issue #92</a> — planned 2026-09-19</summary>
 
@@ -673,11 +593,19 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <b>trim-external-shear-narrative</b> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/571">issue #571</a> — planned 2026-09-19</summary>
+
+```
+/start_dev active/trim_external_shear_narrative.md
+```
+
+</details>
+
 </details>
 
 ## Backlog
 
-**218** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
+**215** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -1828,15 +1756,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 17</summary>
-
-<details><summary>📋 <a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue chooser…</a> — workspaces · small · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/support_sections_point_to_discussions.md
-```
-
-</details>
+<summary><b>docs</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -1882,14 +1802,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a> — pyautolabs_github_io · small · supervised · normal</summary>
-
-```
-/start_dev draft/docs/pyautolabs_github_io/front_door_community_link.md
 ```
 
 </details>
@@ -2438,54 +2350,38 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-19 | issued | <a href="active/community-surface-brain.md">fix: keep broadcast discussions out of awaiting-response</a> |
-| 2026-09-19 | issued | <a href="active/community-surface-profile.md">docs: put scientific software first on the org profile</a> |
+| 2026-09-19 | planned | <a href="planned.md#trim-external-shear-narrative">trim-external-shear-narrative</a> |
 | 2026-09-19 | issued | <a href="active/community-surface-policy.md">docs: distinguish implementation proposals from ideas</a> |
-| 2026-09-19 | issued | <a href="active/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> |
-| 2026-09-19 | issued | <a href="active/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> |
-| 2026-09-19 | issued | <a href="active/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> |
-| 2026-09-19 | issued | <a href="active/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> |
-| 2026-09-19 | issued | <a href="active/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> |
-| 2026-09-19 | issued | <a href="active/community-surface-pyautogalaxy.md">docs: direct community support to the Discussions hub</a> |
-| 2026-09-19 | issued | <a href="active/community-surface-pyautolens.md">docs: direct community support to the Discussions hub</a> |
-
-<details><summary>… 10 more (40 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
-| 2026-09-19 | issued | <a href="active/community-surface-website.md">docs: add community links and clarify PyAutoScientist</a> |
 | 2026-09-19 | planned | <a href="planned.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
-| 2026-09-19 | issued | <a href="active/mass_field_flat_adoption_developer.md">Is <code>autolens_workspace_developer</code> in the MassField epic</a> |
+| 2026-09-19 | planned | <a href="active/trim_external_shear_narrative.md">Trim external-shear narrative from workspace examples</a> |
 | 2026-09-19 | planned | <a href="active/catalogue_inspection_before_vis_pix.md">Collect Euclid inspection images before vis_pix</a> |
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 
-<details><summary>… 10 more (30 left)</summary>
+<details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source image-plane chi-squared on the A100: likelihood…</a> |
-| 2026-09-17 | filed | <a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue…</a> |
 | 2026-09-17 | issued | <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 
-<details><summary>… 10 more (20 left)</summary>
+<details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
-| 2026-09-17 | filed | <a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | issued | <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets…</a> |
@@ -2493,12 +2389,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 
-<details><summary>… 10 more (10 left)</summary>
+<details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | issued | <a href="active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
@@ -2508,6 +2404,22 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
+| 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
+
+<details><summary>… 10 more (10 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
+| 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
+| 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
+| 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
+| 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
+| 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
+| 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
+| 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
+| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
+| 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
+| 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
 
 </details>
 
@@ -2869,28 +2781,12 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 </details>
 
 <details>
-<summary><b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — 2 queued prompt(s), in order</summary>
+<summary><b>image-source-mappings</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
-<details><summary>📋 <b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — ledger: `draft/feature/autogalaxy/mass_field_epic.md`</summary>
-
-```
-Continue the 'MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own `fields=` slot; galaxy-attached form kept, result identifiers unchanged)' epic. Its canonical state lives in draft/feature/autogalaxy/mass_field_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phases — 1 PyAutoGalaxy standalone `MassField` (merged #621), 2 PyAutoLens `Tracer(fields=)` + analysis `fields` slot + pytree/COOLEST/LOS + `model_util.mass_field_from` (merged #742), 3 **every** galaxy-attached field in autolens_workspace + autolens_workspace_test → `fields=` (re-scoped 2026-09-17 on the human's ruling that the user-facing API is `fields=` everywhere; started ahead of the release, merge gated on it; absorbed phase 4 `group/`), 5 HowToLens + autolens_assistant. `fields` is a collection: shear + sheet at one redshift is one field; several fields means several planes. Issue ONE at a time in order; 3–5 follow the *released* libraries. Hard invariant: `Galaxy` and the prior configs are never edited, no deprecation warning — a user's existing galaxy-attached shear model keeps its PyAutoFit result identifier. Filed 2026-09-17 from the `/start_dev` plan checkpoint of the group shear prompt; redesigned the same day from a `Galaxy` subclass to a standalone class on the human's ruling.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/mass_field_epic.md">MassField — external shear, mass sheets and external potentials as their own…</a> — autogalaxy · too-large · human-required · normal</summary>
+<details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
 
 ```
-/start_dev draft/feature/autogalaxy/mass_field_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md">Remaining code consumers move to the flat <code>fields=</code> form: profiling, inference, JOSS…</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-/start_dev draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md
+/start_dev draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md
 ```
 
 </details>
@@ -2898,12 +2794,12 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 </details>
 
 <details>
-<summary><b>image-source-mappings</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>mass-field</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
-<details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md">Remaining code consumers move to the flat <code>fields=</code> form: profiling, inference, JOSS…</a> — autolens_profiling · large · supervised · normal</summary>
 
 ```
-/start_dev draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md
+/start_dev draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md
 ```
 
 </details>
@@ -2925,7 +2821,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-53 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+52 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2935,7 +2831,6 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
-- `draft/feature/autogalaxy/mass_field_epic.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
@@ -2970,11 +2865,12 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/maintenance/organs/reduce_session_token_load.md`
 - `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
 - `draft/maintenance/workspaces/read_through_issues.md`
-- _… and 13 more_
+- `draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`
+- _… and 12 more_
 
 </details>
 
-50 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+48 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3018,8 +2914,6 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
 - `draft/docs/howtofit/tutorial_4_runtime_claim.md — unknown theme keyword(s): tutorials`
-- `draft/docs/pyautolabs_github_io/front_door_community_link.md — unknown theme keyword(s): community`
-- `draft/docs/workspaces/support_sections_point_to_discussions.md — unknown theme keyword(s): community`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
 - `draft/maintenance/community/migrate_user_threads_to_discussions.md — unknown theme keyword(s): community`

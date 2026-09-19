@@ -1,3 +1,16 @@
+# Completed: community support doors across seven repositories
+
+Merged: 2026-09-19
+
+All seven approved support members merged: PyAutoLens#747, PyAutoGalaxy#627,
+PyAutoFit#1640, PyAutoArray#563, autolens_workspace#570,
+autogalaxy_workspace#248, and autofit_workspace#162. Their individual
+community-surface completion records hold validation and pending-release duties.
+The exact shared policy paragraph and the three live category links shipped.
+This retires the duplicate umbrella; it does not retire historical-thread migration.
+
+## Original prompt
+
 # Point every user-facing "Community & Support" section and issue chooser at the Discussions hub
 
 Type: docs
@@ -29,6 +42,16 @@ start a duplicate task from this umbrella prompt. Retire it once all seven
 PRs are merged. The live categories were verified on 2026-09-19:
 `help-questions`, `ideas-proposals`, and `bugs-errors` are all answerable.
 The former category-creation gate is cleared; links must use these slugs.
+## Merge progress (2026-09-19)
+
+The four library members and the Galaxy/Fit workspace members have shipped;
+their records are `complete/2026/09/community-surface-*.md`. Do not reimplement
+those six members. Only autolens_workspace#570 remains awaiting its smoke CI
+and merge; retire this umbrella once that seventh member has shipped.
+The approved contact links now target Help & Questions, Ideas & Proposals,
+and Bugs & Errors, superseding the category names below.
+
+## Original scope
 
 Spawned by `policy/community_surface.md` (PyAutoMind#403), decision 4. Today
 every README says "For installation issues, bug reports, or feature requests,

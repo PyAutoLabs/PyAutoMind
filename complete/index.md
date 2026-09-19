@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1512 records across 8 buckets.
+1525 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -158,7 +158,17 @@ markers; everything below GENERATED is rebuilt.
 - [colab-gate-candidate-audit](2026/09/colab-gate-candidate-audit.md)
 - [colab-notebook-release-gate](2026/09/colab-notebook-release-gate.md)
 - [colab-workshop-dep-stopgap](2026/09/colab-workshop-dep-stopgap.md)
+- [community-surface-autofit-workspace](2026/09/community-surface-autofit-workspace.md)
+- [community-surface-autogalaxy-workspace](2026/09/community-surface-autogalaxy-workspace.md)
+- [community-surface-autolens-workspace](2026/09/community-surface-autolens-workspace.md)
+- [community-surface-brain](2026/09/community-surface-brain.md)
+- [community-surface-profile](2026/09/community-surface-profile.md)
+- [community-surface-pyautoarray](2026/09/community-surface-pyautoarray.md)
+- [community-surface-pyautofit](2026/09/community-surface-pyautofit.md)
+- [community-surface-pyautogalaxy](2026/09/community-surface-pyautogalaxy.md)
+- [community-surface-pyautolens](2026/09/community-surface-pyautolens.md)
 - [community-surface-users-vs-dev-flow](2026/09/community-surface-users-vs-dev-flow.md)
+- [community-surface-website](2026/09/community-surface-website.md)
 - [config-priors-drift](2026/09/config-priors-drift.md) — Fixed eleven dead rows in the packaged PyAutoGalaxy `config/priors/` (JSONPriorConfig suffix-matcher drift: `e…
 - [coolest-observation-grid](2026/09/coolest-observation-grid.md)
 - [cortex-assistant-entry](2026/09/cortex-assistant-entry.md)
@@ -228,6 +238,7 @@ markers; everything below GENERATED is rebuilt.
 - [fixed-light-numba-solver](2026/09/fixed-light-numba-solver.md)
 - [fixed-light-scaling](2026/09/fixed-light-scaling.md)
 - [fixed-light-verdict](2026/09/fixed-light-verdict.md)
+- [front-door-community-link](2026/09/front-door-community-link.md)
 - [gaussian-precompute-p1](2026/09/gaussian-precompute-p1.md)
 - [gaussian-precompute-p2](2026/09/gaussian-precompute-p2.md)
 - [gaussian-precompute-p3](2026/09/gaussian-precompute-p3.md) — closed, completed
@@ -274,6 +285,7 @@ markers; everything below GENERATED is rebuilt.
 - [mass-field-bare-fields](2026/09/mass-field-bare-fields.md)
 - [mass-field-chaining-helper](2026/09/mass-field-chaining-helper.md) — Added `mass_and_fields_from(mass, mass_result, *, fields_result, unfix_mass_centre=False)` in PyAutoGalaxy. It…
 - [mass-field-class](2026/09/mass-field-class.md) — Added `ag.MassField(redshift, **mass_profiles)` to PyAutoGalaxy — the standalone, MassProfile-only container f…
+- [mass-field-developer](2026/09/mass-field-developer.md) — Migrated live JAX profiling, minimal-search, plotting-alignment, LOS, and standalone MGL builders from galaxy-…
 - [mass-field-flat-sweep](2026/09/mass-field-flat-sweep.md)
 - [mass-field-inference-sim](2026/09/mass-field-inference-sim.md) — Migrated the imaging and interferometer simulators to `MassField` and `Tracer(fields=[field])`. Compile, Ruff,…
 - [mass-field-inference-slam](2026/09/mass-field-inference-slam.md) — Migrated all five inference SLaM stages to a top-level `MassField`. Source LP creates the free field, source P…
@@ -370,6 +382,7 @@ markers; everything below GENERATED is rebuilt.
 - [start-here-mode](2026/09/start-here-mode.md)
 - [start-here-release-profile-script-cap](2026/09/start-here-release-profile-script-cap.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
+- [support-sections-point-to-discussions](2026/09/support-sections-point-to-discussions.md)
 - [test-mode-bypass-save-results](2026/09/test-mode-bypass-save-results.md) — closed completed 2026-09-14
 - [traced-assertions-on-jax-path](2026/09/traced-assertions-on-jax-path.md)
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07

@@ -1,3 +1,15 @@
+# Completed: public community entry point
+
+Merged: 2026-09-19
+PR: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9
+
+The Community navigation and landing-page block shipped with the policy
+paragraph and hub link. The individual community-surface-website completion
+record holds validation and the explicit no-CI merge approval. This retires
+the duplicate front-door prompt, not historical-thread migration.
+
+## Original prompt
+
 # Front door: a Community link to the Discussions hub
 
 Type: docs
