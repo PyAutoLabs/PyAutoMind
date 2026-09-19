@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_inference_simulators.md">Move inference simulators to flat fields</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/7">issue #7</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/mass_field_inference_simulators.md">Move inference simulators to flat fields</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/7">issue #7</a> — issued 2026-09-19 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/8">autolens_inference#8</a></summary>
 
 ```
 /start_dev active/mass_field_inference_simulators.md
