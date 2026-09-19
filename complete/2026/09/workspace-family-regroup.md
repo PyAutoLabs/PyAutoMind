@@ -1,3 +1,62 @@
+# Grouped science checkout migration
+
+Completed the human-approved local layout migration into `lens/`, `galaxy/`,
+`fit/`, `cti/`, and `reduce/`. Repository identities and GitHub homes are unchanged.
+The eight organs, PyAutoArray, PyAutoScientist and the public hub stay at root.
+
+## Shipped changes
+
+Shared Brain repository lookup supports flat CI, grouped canonical checkouts and
+flat task bundles. Mind placement metadata and bidirectional coverage, Brain
+consumers, Heart checks, Hands builds, science helper callers, local activation,
+IDE paths and harness hook/import paths use the new layout.
+
+Merged PRs: PyAutoBrain#395 and #396, PyAutoMind#419, PyAutoHeart#233,
+PyAutoHands#284, autolens_workspace_developer#141 and autolens_profiling#286.
+All configured PR checks passed. The developer workspace has no PR test CI; its
+focused path tests, compilation and independent review passed locally under the
+human's approval to remove the merge gates.
+
+## Validation and preservation
+
+Local infrastructure suites: Brain 952, Heart 1026, Hands 461 tests passed;
+Mind's standalone CI suite passed after making its new tests hermetic. Further
+focused tests cover grouped lookup, broken/ambiguous paths, shell error propagation,
+worktree creation, journal rollback, hook paths and science caller anchors.
+Independent review findings were repaired and the review concluded CLEAN.
+
+Physical cutover completed: 27 canonical directories renamed, 261 symlinks
+repaired, five workspace-local configuration files updated. Journal verification
+confirmed identical directory identity, HEAD and dirty/untracked inventories.
+All 62 canonical and linked worktrees remained usable. All 38/38 declared
+checkouts pass manifest coverage; every repos_sync check passes. All 12/12 actual
+smoke bootstraps import the canonical Hands helper with root/import environment
+overrides removed. Nerves, Fit, Array, Galaxy, Lens and Heart import from their
+expected locations. CTI/Reduce packages are now discoverable (neither was in the
+pre-cutover import path); their full optional dependency stacks were not exercised.
+Brain, Heart and Hands command entrypoints work. Installed skill links refreshed.
+The workspace-root import emits a missing workspace-version metadata
+warning; imports complete successfully.
+
+The pre-existing Mind deletion of
+`draft/maintenance/pyautobrain/workspace_resolver_fanout.md` is preserved and
+excluded from this commit. Existing science worktrees and ignored/untracked
+results are preserved, including the retained mass-field worktree. No HPC
+checkouts or running jobs were changed.
+
+For an already-open local shell, run `source /home/jammy/Code/PyAutoLabs/activate.sh`
+to refresh imports. New root harness sessions receive the grouped Python paths.
+
+Local journal, import origins, smoke receipts and review evidence live under
+`PyAutoMind/tmp/workspace-family-regroup/`. The journal records original local
+configuration and can reverse the physical cutover.
+
+Scoped reconciliation found no additional migration prompt to retire. The
+`unregistered_worktrees_invisible_to_conflict_guard.md` suggestion is unrelated
+and remains standing; inspect with `/intake reconcile draft/maintenance/pyautobrain`.
+
+## Original prompt
+
 # Group the local science checkouts by project family
 
 Type: maintenance

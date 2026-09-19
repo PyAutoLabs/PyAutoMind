@@ -95,26 +95,3 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
-
-## workspace-family-regroup
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/394
-- issued: 2026-09-19
-- prompt: active/workspace_family_regroup.md
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/workspace-family-regroup
-- approval: Human approved the complete migration in chat 2026-09-19, including caller updates, physical moves and retained-worktree repair. Existing untracked/ignored content must be preserved.
-- repos:
-  - PyAutoBrain: feature/workspace-family-regroup
-  - PyAutoMind: feature/workspace-family-regroup
-  - PyAutoHeart: feature/workspace-family-regroup
-  - PyAutoHands: feature/workspace-family-regroup
-  - autolens_workspace_developer: feature/workspace-family-regroup
-  - autolens_profiling: feature/workspace-family-regroup
-- parallel-claim: Approved complete migration includes the caller audit. Profiling scope is scripts/misc/hazards path lookup plus its tests, disjoint from hst-gpu-residue-p2 imaging vmap/probe/results work. Existing profiling worktrees and branches remain intact.
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/395
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/419
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/233
-- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/284
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/141
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/286
-- note: Code PRs open; canonical science folders have NOT moved. Brain must land first so dependent CI can load the new resolver. Preflight found 27 moves and 263 dependency/cache links; final inventory must be regenerated after merging caller PRs. Independent review CLEAN. Full local suites passed; nested smoke bootstrap witness 12/12. Migration journal is in task Mind tmp; preserve original canonical Mind draft deletion.
