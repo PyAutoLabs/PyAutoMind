@@ -95,3 +95,14 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## workspace-array-regroup
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/422
+- issued: 2026-09-19
+- prompt: active/workspace_array_regroup.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/workspace-array-regroup
+- approval: User explicitly requested the proposed array/PyAutoArray move with standard-library import validation.
+- classification: Manifest-only infrastructure change plus local relocation; Feature Agent's library/API warning is inapplicable because no library source or API is edited.
+- repos:
+  - PyAutoMind: feature/workspace-array-regroup

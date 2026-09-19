@@ -1,5 +1,7 @@
 # Group the PyAutoArray checkout under array/
 
+Issued: 2026-09-19
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/422
 Type: maintenance
 Target: @PyAutoMind (manifest), local @PyAutoArray checkout placement
 
