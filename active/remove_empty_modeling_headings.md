@@ -14,6 +14,7 @@ Status: draft
 Consequence: judge
 Witness: No script or generated notebook contains an `__External Shear__` section; all `__Source Galaxy__` sections and executable model composition remain unchanged.
 Filed: 2026-09-20
+Issued: 2026-09-20
 
 ## Original user request
 

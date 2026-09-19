@@ -1,5 +1,15 @@
 # Active Tasks
 
+## remove-empty-modeling-headings
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/574
+- issued: 2026-09-20
+- prompt: active/remove_empty_modeling_headings.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/remove-empty-modeling-headings
+- repos:
+  - autolens_workspace: feature/remove-empty-modeling-headings
+
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12
