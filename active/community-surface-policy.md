@@ -8,6 +8,8 @@ Difficulty: small
 Autonomy: supervised
 Priority: high
 Approved: 2026-09-19 (Codex conversation: "I approve")
+Issued: 2026-09-19
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/426
 
 Update policy/community_surface.md with answerable Proposals, accepted-verdict closure and issue routing. Update draft/maintenance/community/migrate_user_threads_to_discussions.md to route #551 to Proposals, leaving five shipped threads in Ideas. Keep the support paragraph verbatim and align category-aware scan doctrine.
 
@@ -166,4 +168,3 @@ whcih isnt always easy.
 On PyAutoLabs lets move PyAutoScientist down to the bottom, and put a clearer message that
 its currently my (Jammy2211's) vibe coded AI software development ecosystem. Users are welcome
 to check it out but its not currently expected contributors will use it.
-

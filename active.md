@@ -122,3 +122,124 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## community-surface-brain
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/405
+- issued: 2026-09-19
+- prompt: active/community-surface-brain.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - PyAutoBrain: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-policy
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/426
+- issued: 2026-09-19
+- prompt: active/community-surface-policy.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - PyAutoMind: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-pyautolens
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/746
+- issued: 2026-09-19
+- prompt: active/community-surface-pyautolens.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - PyAutoLens: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-pyautogalaxy
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/626
+- issued: 2026-09-19
+- prompt: active/community-surface-pyautogalaxy.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - PyAutoGalaxy: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-pyautofit
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1639
+- issued: 2026-09-19
+- prompt: active/community-surface-pyautofit.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - PyAutoFit: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-pyautoarray
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/562
+- issued: 2026-09-19
+- prompt: active/community-surface-pyautoarray.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - PyAutoArray: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-autolens-workspace
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/569
+- issued: 2026-09-19
+- prompt: active/community-surface-autolens-workspace.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - autolens_workspace: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-autogalaxy-workspace
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/247
+- issued: 2026-09-19
+- prompt: active/community-surface-autogalaxy-workspace.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - autogalaxy_workspace: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-autofit-workspace
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/161
+- issued: 2026-09-19
+- prompt: active/community-surface-autofit-workspace.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - autofit_workspace: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-website
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/8
+- issued: 2026-09-19
+- prompt: active/community-surface-website.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - pyautolabs.github.io: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.
+
+## community-surface-profile
+- issue: https://github.com/PyAutoLabs/.github/issues/15
+- issued: 2026-09-19
+- prompt: active/community-surface-profile.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
+- repos:
+  - .github: feature/community-surface
+- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.

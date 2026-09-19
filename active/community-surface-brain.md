@@ -8,6 +8,8 @@ Difficulty: small
 Autonomy: supervised
 Priority: high
 Approved: 2026-09-19 (Codex conversation: "I approve")
+Issued: 2026-09-19
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/405
 
 In agents/conductors/community/_community.py, suppress awaiting_response for Announcements and Show and tell in scan and triage, preserving the watch/context surface. Add scan and triage regression coverage in tests/test_community_conductor.py for broadcasts, Q&A, and answered/unanswered Proposals.
 
@@ -17,4 +19,3 @@ Validation: focused community tests for Brain; Markdown/YAML/link checks for doc
 ## Original request
 
 Approved community-surface handoff; original request preserved verbatim in community-surface-policy.md. This member implements the PyAutoBrain portion of that handoff and the approved plan above.
-
