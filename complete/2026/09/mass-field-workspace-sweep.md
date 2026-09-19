@@ -1,3 +1,17 @@
+# Mass-field workspace sweep completed
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559
+PRs: https://github.com/PyAutoLabs/autolens_workspace/pull/560 (merged 2026-09-18) and https://github.com/PyAutoLabs/autolens_workspace_test/pull/322 (merged 2026-09-19, 279a69d4).
+
+Workspace and regression examples now use a separate fields= model slot. The subsequent flat-form adoption is recorded in mass-field-flat-sweep.md; its workspace_test changes shipped in the same PR #322. The deliberate galaxy-attached legacy regression remains.
+
+Completed: 2026-09-19.
+The human removed the release hold and authorized these prerequisite merges to unblock workspace regrouping. All current-head workflow runs passed: seven checks on autolens_workspace#562 and three on autolens_workspace_test#322, including both Python 3.12 and 3.13 smoke jobs. Upstream PyAutoLens #742 and #744 are merged. Git ancestry proves the task branches are merged; canonical checkouts were fast-forwarded. No release was performed.
+
+The shared task worktree is retained because its ignored data includes 17 MB + 3.5 MB of output and 23 MB + 4.8 MB of datasets. No data was deleted; development claims are released. Retained worktrees must have their Git links repaired during the folder migration.
+
+## Original prompt
+
 # autolens_workspace + autolens_workspace_test: every external field moves to `fields=` (`al.MassField`)
 
 Type: docs

@@ -17,7 +17,7 @@ Priority: high
 Status: planned — blocked behind active repository claims
 Filed: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
-Blocked-by: mass-field-workspace-sweep
+Unblocked: 2026-09-19 — mass-field workspace PRs #560/#562 and workspace_test #322 merged; complete/2026/09/mass-field-flat-sweep.md
 
 ## Request
 

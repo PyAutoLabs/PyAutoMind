@@ -1,3 +1,21 @@
+# Flat MassField workspace adoption completed
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/561
+PRs: https://github.com/PyAutoLabs/autolens_workspace/pull/562 (89b910dd) and https://github.com/PyAutoLabs/autolens_workspace_test/pull/322 (279a69d4), both merged 2026-09-19.
+
+Examples now pass fields=field directly; results readers and sensitivity guards follow the flat prior paths. The second-dataset offset example retains its external field. Notebooks and navigation artifacts shipped with the implementation.
+
+Prior recorded validation (not rerun in this merge-only close-out): 8/8 numerical equivalence cases, bit-identical log_likelihood -37796.54513586828, workspace smoke 38/38 plus 2 notebooks, regression smoke 32/32, and zero notebook AST mismatches.
+
+Identifiers change by design: old output is not renamed or resumed; composition_mge now uses 29f82bd3de24984b94657c328b64c3be. The legacy galaxy-attached identifier remains unchanged. Sibling tutorial/developer/profiling/assistant adoption remains separate work.
+
+Completed: 2026-09-19.
+The human removed the release hold and authorized these prerequisite merges to unblock workspace regrouping. All current-head workflow runs passed: seven checks on autolens_workspace#562 and three on autolens_workspace_test#322, including both Python 3.12 and 3.13 smoke jobs. Upstream PyAutoLens #742 and #744 are merged. Git ancestry proves the task branches are merged; canonical checkouts were fast-forwarded. No release was performed.
+
+The shared task worktree is retained because its ignored data includes 17 MB + 3.5 MB of output and 23 MB + 4.8 MB of datasets. No data was deleted; development claims are released. Retained worktrees must have their Git links repaired during the folder migration.
+
+## Original prompt
+
 # autolens_workspace + autolens_workspace_test: adopt the flat (bare) `fields=` form
 
 Type: feature

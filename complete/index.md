@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1496 records across 8 buckets.
+1498 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -270,7 +270,9 @@ markers; everything below GENERATED is rebuilt.
 - [lib-tests-compile-caches](2026/09/lib-tests-compile-caches.md)
 - [mass-field-bare-fields](2026/09/mass-field-bare-fields.md)
 - [mass-field-class](2026/09/mass-field-class.md) — Added `ag.MassField(redshift, **mass_profiles)` to PyAutoGalaxy — the standalone, MassProfile-only container f…
+- [mass-field-flat-sweep](2026/09/mass-field-flat-sweep.md)
 - [mass-field-integration](2026/09/mass-field-integration.md) — Taught PyAutoLens about `ag.MassField` (PyAutoGalaxy#621). `Tracer(galaxies, cosmology=None, fields=None)` sto…
+- [mass-field-workspace-sweep](2026/09/mass-field-workspace-sweep.md)
 - [matrix-free-pixelized-likelihood](2026/09/matrix-free-pixelized-likelihood.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
