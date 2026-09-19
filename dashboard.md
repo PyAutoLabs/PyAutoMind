@@ -52,7 +52,7 @@ anything you could not verify.
 
 **Highest priority** (filed as `high`) — showing 12 of 21
 
-<details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub</a> — community · small · human-required · high</summary>
+<details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a> — community · small · human-required · high</summary>
 
 ```
 /start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md
@@ -1526,7 +1526,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>maintenance</b> — 22</summary>
 
-<details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub</a> — community · small · human-required · high</summary>
+<details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a> — community · small · human-required · high</summary>
 
 ```
 /start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md
@@ -2494,10 +2494,10 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
-| 2026-09-17 | filed | <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | issued | <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |

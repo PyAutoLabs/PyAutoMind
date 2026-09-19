@@ -26,9 +26,9 @@ Filed: 2026-09-17
 Execution: split into the seven `active/community-surface-*.md` support
 tasks on 2026-09-19, one issue and PR per repo (references above). Do not
 start a duplicate task from this umbrella prompt. Retire it once all seven
-PRs are merged. The Proposals category must be answerable and have slug
-`proposals` before the implementation contact links are merged; see the
-migration prompt for the live settings check.
+PRs are merged. The live categories were verified on 2026-09-19:
+`help-questions`, `ideas-proposals`, and `bugs-errors` are all answerable.
+The former category-creation gate is cleared; links must use these slugs.
 
 Spawned by `policy/community_surface.md` (PyAutoMind#403), decision 4. Today
 every README says "For installation issues, bug reports, or feature requests,
@@ -49,8 +49,9 @@ Per repo, one small PR:
 - `.github/ISSUE_TEMPLATE/config.yml`:
   `blank_issues_enabled: true` (the dev flow files by API; the maintainer
   occasionally by hand) and three `contact_links`: "Ask a question / get help"
-  and "Propose a feature" → the hub (`https://github.com/orgs/PyAutoLabs/discussions`,
-  categories Q&A and Ideas), plus "Propose an implementation" → Proposals.
+  → Help & Questions; "Suggest an idea / propose an implementation" → Ideas &
+  Proposals; "Report an error / investigate a bug" → Bugs & Errors. All are
+  categories on `https://github.com/orgs/PyAutoLabs/discussions`.
 - `.github/ISSUE_TEMPLATE/bug_report.md`: title prefix `bug:`, label `bug`,
   sections Reproducer / Traceback / Versions (`pip show autolens autogalaxy
   autofit autoarray autonerves`) / Expected vs actual — core context signals the
