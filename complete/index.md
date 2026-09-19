@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1513 records across 8 buckets.
+1520 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -158,6 +158,13 @@ markers; everything below GENERATED is rebuilt.
 - [colab-gate-candidate-audit](2026/09/colab-gate-candidate-audit.md)
 - [colab-notebook-release-gate](2026/09/colab-notebook-release-gate.md)
 - [colab-workshop-dep-stopgap](2026/09/colab-workshop-dep-stopgap.md)
+- [community-surface-autofit-workspace](2026/09/community-surface-autofit-workspace.md)
+- [community-surface-autogalaxy-workspace](2026/09/community-surface-autogalaxy-workspace.md)
+- [community-surface-brain](2026/09/community-surface-brain.md)
+- [community-surface-pyautoarray](2026/09/community-surface-pyautoarray.md)
+- [community-surface-pyautofit](2026/09/community-surface-pyautofit.md)
+- [community-surface-pyautogalaxy](2026/09/community-surface-pyautogalaxy.md)
+- [community-surface-pyautolens](2026/09/community-surface-pyautolens.md)
 - [community-surface-users-vs-dev-flow](2026/09/community-surface-users-vs-dev-flow.md)
 - [config-priors-drift](2026/09/config-priors-drift.md) — Fixed eleven dead rows in the packaged PyAutoGalaxy `config/priors/` (JSONPriorConfig suffix-matcher drift: `e…
 - [coolest-observation-grid](2026/09/coolest-observation-grid.md)
