@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 221 |
+| [Backlog](#backlog) (`draft/`) | 222 |
 
 > **No batch in flight.**
 
@@ -569,7 +569,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**221** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
+**222** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -1089,7 +1089,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 40</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1399,6 +1399,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/euclid/catalogue_inspection_before_vis_pix.md">Collect Euclid inspection images before vis_pix</a> — euclid</summary>
+
+```
+/start_dev draft/feature/euclid/catalogue_inspection_before_vis_pix.md
 ```
 
 </details>
@@ -2843,7 +2851,16 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-56 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+1 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+
+<details>
+<summary>Headerless prompts</summary>
+
+- `draft/feature/euclid/catalogue_inspection_before_vis_pix.md`
+
+</details>
+
+57 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2859,6 +2876,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
+- `draft/feature/euclid/catalogue_inspection_before_vis_pix.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
@@ -2887,8 +2905,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
 - `draft/maintenance/autolens_inference/mass_field_flat_adoption.md`
 - `draft/maintenance/autolens_profiling/mass_field_live_builders.md`
-- `draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md`
-- _… and 16 more_
+- _… and 17 more_
 
 </details>
 
