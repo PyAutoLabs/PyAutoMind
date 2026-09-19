@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/161">issue #161</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/162">autofit_workspace#162</a> — ⏳ pending release: autofit_workspace</summary>
+<details><summary>📋 <a href="active/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/161">issue #161</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/162">autofit_workspace#162</a> — ⏳ pending release: autofit_workspace</summary>
 
 ```
 /start_dev active/community-surface-autofit-workspace.md
@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/247">issue #247</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248">autogalaxy_workspace#248</a> — ⏳ pending release: autogalaxy_workspace</summary>
+<details><summary>📋 <a href="active/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/247">issue #247</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248">autogalaxy_workspace#248</a> — ⏳ pending release: autogalaxy_workspace</summary>
 
 ```
 /start_dev active/community-surface-autogalaxy-workspace.md
@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/569">issue #569</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/570">autolens_workspace#570</a> — ⏳ pending release: autolens_workspace</summary>
+<details><summary>📋 <a href="active/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/569">issue #569</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/570">autolens_workspace#570</a> — ⏳ pending release: autolens_workspace</summary>
 
 ```
 /start_dev active/community-surface-autolens-workspace.md
@@ -298,7 +298,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-profile.md">docs: put scientific software first on the org profile</a> — <a href="https://github.com/PyAutoLabs/.github/issues/15">issue #15</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/.github/pull/16">.github#16</a> — ⏳ pending release: .github</summary>
+<details><summary>📋 <a href="active/community-surface-profile.md">docs: put scientific software first on the org profile</a> — <a href="https://github.com/PyAutoLabs/.github/issues/15">issue #15</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/.github/pull/16">.github#16</a> — ⏳ pending release: .github</summary>
 
 ```
 /start_dev active/community-surface-profile.md
@@ -306,7 +306,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/562">issue #562</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/563">PyAutoArray#563</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/562">issue #562</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/563">PyAutoArray#563</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/community-surface-pyautoarray.md
@@ -314,7 +314,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1639">issue #1639</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1640">PyAutoFit#1640</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1639">issue #1639</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1640">PyAutoFit#1640</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/community-surface-pyautofit.md
@@ -322,7 +322,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-pyautogalaxy.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/626">issue #626</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627">PyAutoGalaxy#627</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/community-surface-pyautogalaxy.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/626">issue #626</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627">PyAutoGalaxy#627</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 /start_dev active/community-surface-pyautogalaxy.md
@@ -330,7 +330,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-pyautolens.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/746">issue #746</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/747">PyAutoLens#747</a> — ⏳ pending release: PyAutoLens</summary>
+<details><summary>📋 <a href="active/community-surface-pyautolens.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/746">issue #746</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/747">PyAutoLens#747</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/community-surface-pyautolens.md
