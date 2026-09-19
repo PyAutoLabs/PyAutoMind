@@ -1,3 +1,26 @@
+# provider-agnostic-metadata
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/400
+- completed: 2026-09-19
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/402
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/424
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/101
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/49
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/28
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/130
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/31
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/324
+
+## Summary
+
+Moved nested canonical instructions to AGENTS.md, retained thin Claude adapters, allowed codex/** ledger branches through unchanged guards, made resume and attribution metadata provider-aware, updated schema/template consumers and published a bounded Codex smoke record. Historical records preserved.
+
+## Validation and limits
+
+Focused tests and independent review CLEAN. Discovery installer: 22 tests; clone profiles: 37; Mind ledger: 26; template/privacy: 111; hook adapters: 8; shared guard fixtures: 68; Brain Memory faculty: 8; Memory board: 62. Tenant firewall, scoped discovery drift, Memory structure/wikilinks, and lensing clone boundary passed. Actual Codex smoke covers discovery, not end-to-end scientific execution or every harness. Eleven pre-existing inference-assistant clone-boundary gaps remain outside this task. No template publish or release was performed.
+
+## Original prompt
+
 # Remove remaining provider assumptions from agent metadata and docs
 
 Type: maintenance

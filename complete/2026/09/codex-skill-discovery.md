@@ -1,3 +1,26 @@
+# codex-skill-discovery
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/386
+- completed: 2026-09-19
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/401
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/48
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/129
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/30
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/160
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/246
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/568
+
+## Summary
+
+Added registry-driven Claude/Codex discovery for shared assistant and workspace skill bodies; all 105 Codex adapters were discovered by codex-cli 0.155.1. Existing Claude links and canonical bodies were preserved. Clone boundaries exclude parent-specific generated wrappers from newborn copy sets.
+
+## Validation and limits
+
+Focused tests and independent review CLEAN. Discovery installer: 22 tests; clone profiles: 37; Mind ledger: 26; template/privacy: 111; hook adapters: 8; shared guard fixtures: 68; Brain Memory faculty: 8; Memory board: 62. Tenant firewall, scoped discovery drift, Memory structure/wikilinks, and lensing clone boundary passed. Actual Codex smoke covers discovery, not end-to-end scientific execution or every harness. Eleven pre-existing inference-assistant clone-boundary gaps remain outside this task. No template publish or release was performed.
+
+## Original prompt
+
 # Make assistant and workspace skills discoverable in Codex
 
 Type: maintenance

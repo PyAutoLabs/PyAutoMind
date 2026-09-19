@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1501 records across 8 buckets.
+1504 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -123,6 +123,7 @@ markers; everything below GENERATED is rebuilt.
 
 - [a100-pixelized-baseline](2026/09/a100-pixelized-baseline.md)
 - [adapt-image-snr-cap](2026/09/adapt-image-snr-cap.md)
+- [agent-harness-agnostic-setup](2026/09/agent-harness-agnostic-setup.md) — All four planned phases merged; shared instructions and skill bodies now have provider-specific discovery and …
 - [aggregate-csv-latent-sigma3](2026/09/aggregate-csv-latent-sigma3.md)
 - [aggregator-search-json-sentinel](2026/09/aggregator-search-json-sentinel.md)
 - [aggregator-sibling-dir-zip](2026/09/aggregator-sibling-dir-zip.md)
@@ -150,6 +151,7 @@ markers; everything below GENERATED is rebuilt.
 - [catalogue-mass-maps-fits](2026/09/catalogue-mass-maps-fits.md)
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
 - [codex-hook-parity](2026/09/codex-hook-parity.md)
+- [codex-skill-discovery](2026/09/codex-skill-discovery.md)
 - [codex-token-efficiency](2026/09/codex-token-efficiency.md)
 - [colab-bootstrap-lazy-deps](2026/09/colab-bootstrap-lazy-deps.md)
 - [colab-gate-candidate-audit](2026/09/colab-gate-candidate-audit.md)
@@ -325,6 +327,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-drift-pinned-drift-contract](2026/09/profiling-drift-pinned-drift-contract.md)
 - [profiling-post-235-followups](2026/09/profiling-post-235-followups.md)
 - [profiling-production-representative](2026/09/profiling-production-representative.md)
+- [provider-agnostic-metadata](2026/09/provider-agnostic-metadata.md)
 - [provider-neutral-bundle-prompts](2026/09/provider-neutral-bundle-prompts.md)
 - [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)
 - [reconstruction-row-split](2026/09/reconstruction-row-split.md)

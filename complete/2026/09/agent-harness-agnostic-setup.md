@@ -1,3 +1,21 @@
+# Agent harness agnostic setup
+
+- completed: 2026-09-19
+- summary: All four planned phases merged; shared instructions and skill bodies now have provider-specific discovery and hook adapters, with provider-aware workflow metadata.
+
+## Phase records
+
+- Phase 1: complete/2026/09/provider-neutral-bundle-prompts.md
+- Phase 2: complete/2026/09/codex-hook-parity.md
+- Phase 3: complete/2026/09/codex-skill-discovery.md — https://github.com/PyAutoLabs/PyAutoBrain/pull/401 and seven companion PRs.
+- Phase 4: complete/2026/09/provider-agnostic-metadata.md — https://github.com/PyAutoLabs/PyAutoBrain/pull/402 and seven companion PRs.
+
+## Evidence and limits
+
+The 16 phase-3/4 PRs passed every applicable GitHub workflow and matrix leg before human-authorized merge. Independent implementation and CI-followup reviews were CLEAN. Installed Codex discovered all 105 generated skills. Brain docs/agent_harness_smoke.md records the exact runtime, checks and limits: discovery is demonstrated; complete scientific execution, trusted-hook runtime, and every-harness parity are not claimed. No release or template publication was performed.
+
+## Original prompt
+
 # Make agent setup Claude/Codex agnostic
 
 Type: maintenance
