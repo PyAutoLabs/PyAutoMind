@@ -1,5 +1,18 @@
 # Active Tasks
 
+## mass-field-developer
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142
+- issued: 2026-09-19
+- prompt: active/mass_field_flat_adoption_developer.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/mass-field-developer
+- repos:
+  - autolens_workspace_developer: feature/mass-field-developer
+- release-gate: PyAutoGalaxy
+- release-gate: PyAutoLens
+- summary: Migrate live developer scripts, preserve archives and re-measure the two pinned likelihoods.
+
 ## mass-field-inference-sim
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/7
 - issued: 2026-09-19

@@ -9,16 +9,27 @@ Themes:
 - hygiene
 - jax-compile
 Difficulty: large
-Autonomy: human-required
+Autonomy: supervised
 Priority: normal
-Status: draft — opens with a human scope decision, not with edits
+Status: draft — human approved the live-code migration on 2026-09-19
 Consequence: judge
 Witness: FIRST, the human's scope ruling recorded on the issue. IF in scope: an AST re-walk reports zero `af.Model(al.Galaxy, ..., shear=...)` / `al.Galaxy(..., shear=...)` outside the named exclusions; the two float regression pins are re-measured (not assumed) and either hold or are re-pinned with the measurement recorded; `source_science/results/{1..4}_*/` are byte-unchanged; `legacy/quantity/**` and the two `euclid_bug/` scripts are untouched; one script from each of `jax_profiling/`, `searches_minimal/`, `slam_pipeline/` runs end to end by hand.
 Review-minutes: 30
 Unattended: never
 Epic: mass-field
-Blocked-by: a human scope ruling (below), then `draft/feature/autogalaxy/mass_from_grows_a_fields_argument.md` for the three SLaM pipelines
+Release-gate: PyAutoGalaxy#625 and PyAutoLens#745 for the three SLaM pipelines
 Filed: 2026-09-18
+Issued: 2026-09-19
+
+## Human scope ruling, 2026-09-19
+
+The human approved the cross-repository flat-fields migration and confirmed the deleted `autolens_jax_joss` checkout is out of the sweep. Migrate the live modelling trees in this developer workspace, preserving the exclusions below for committed measurements, frozen archives and Euclid-owned debug scripts. The initial work plan was presented and approved in this session. The new chaining helper is in open library PRs, so the three SLaM scripts may be prepared in a branch but their workspace PR cannot merge before the library-first release gate clears.
+
+Original request (verbatim):
+
+> We have been doing work which updates workspaces and lots more to a fields API, can we review where the updating te API for everything got too (E.g. I dont think we have done HowToLens) and continue all of that until its done?
+>
+> yes do all that, note that autolens_jax_joss is deleted more recently. But lets go
 
 ## The question this prompt asks
 
