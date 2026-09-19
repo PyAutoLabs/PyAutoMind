@@ -143,14 +143,14 @@ thread with an accepted answer is NOT, and without one IS.
 
 ## 3. The user-facing doors (two prompts already filed — do them)
 
-- `draft/docs/workspaces/support_sections_point_to_discussions.md` — the
+- `complete/2026/09/support-sections-point-to-discussions.md` (shipped) — the
   seven READMEs' "Community & Support" sections and a
   `.github/ISSUE_TEMPLATE/config.yml` + `bug_report.md` per repo. One small
   PR per repo, PyAutoLens first. The prompt carries the verbatim paragraph.
   Add one contact link to the chooser beside the existing two: "Propose an
   implementation" → the hub's Proposals category, so a contributor arriving
   with a design meets it at the moment of filing.
-- `draft/docs/pyautolabs_github_io/front_door_community_link.md` — the front
+- `complete/2026/09/front-door-community-link.md` (shipped) — the front
   door's Community entry. Its own prompt says to do it after the hub is
   promoted, so check that https://github.com/orgs/PyAutoLabs/discussions
   resolves before opening that PR.

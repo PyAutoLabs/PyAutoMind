@@ -1,3 +1,15 @@
+# Completed: public community entry point
+
+Merged: 2026-09-19
+PR: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9
+
+The Community navigation and landing-page block shipped with the policy
+paragraph and hub link. The individual community-surface-website completion
+record holds validation and the explicit no-CI merge approval. This retires
+the duplicate front-door prompt, not historical-thread migration.
+
+## Original prompt
+
 # Front door: a Community link to the Discussions hub
 
 Type: docs
@@ -10,11 +22,17 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: blocked
+Blocked-by: pyautolabs.github.io#8
 Consequence: glance
 Witness: the pyautolabs.github.io front door carries a "Community" entry that opens https://github.com/orgs/PyAutoLabs/discussions, with the policy's two sentences beside it, and no front-door text sends a question to an issue tracker.
 Review-minutes: 5
 Filed: 2026-09-17
+
+Execution: included in `active/community-surface-website.md`
+(pyautolabs.github.io#8), approved 2026-09-19 alongside the PyAutoScientist
+placement update. The org-level hub was verified live. Do not start a
+duplicate task from this prompt; retire it when that PR is merged.
 
 Spawned by `policy/community_surface.md` (PyAutoMind#403), decision 4. The
 front door is the first thing a search engine hands a new user; today it has

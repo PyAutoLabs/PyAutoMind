@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1520 records across 8 buckets.
+1525 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -160,12 +160,15 @@ markers; everything below GENERATED is rebuilt.
 - [colab-workshop-dep-stopgap](2026/09/colab-workshop-dep-stopgap.md)
 - [community-surface-autofit-workspace](2026/09/community-surface-autofit-workspace.md)
 - [community-surface-autogalaxy-workspace](2026/09/community-surface-autogalaxy-workspace.md)
+- [community-surface-autolens-workspace](2026/09/community-surface-autolens-workspace.md)
 - [community-surface-brain](2026/09/community-surface-brain.md)
+- [community-surface-profile](2026/09/community-surface-profile.md)
 - [community-surface-pyautoarray](2026/09/community-surface-pyautoarray.md)
 - [community-surface-pyautofit](2026/09/community-surface-pyautofit.md)
 - [community-surface-pyautogalaxy](2026/09/community-surface-pyautogalaxy.md)
 - [community-surface-pyautolens](2026/09/community-surface-pyautolens.md)
 - [community-surface-users-vs-dev-flow](2026/09/community-surface-users-vs-dev-flow.md)
+- [community-surface-website](2026/09/community-surface-website.md)
 - [config-priors-drift](2026/09/config-priors-drift.md) — Fixed eleven dead rows in the packaged PyAutoGalaxy `config/priors/` (JSONPriorConfig suffix-matcher drift: `e…
 - [coolest-observation-grid](2026/09/coolest-observation-grid.md)
 - [cortex-assistant-entry](2026/09/cortex-assistant-entry.md)
@@ -235,6 +238,7 @@ markers; everything below GENERATED is rebuilt.
 - [fixed-light-numba-solver](2026/09/fixed-light-numba-solver.md)
 - [fixed-light-scaling](2026/09/fixed-light-scaling.md)
 - [fixed-light-verdict](2026/09/fixed-light-verdict.md)
+- [front-door-community-link](2026/09/front-door-community-link.md)
 - [gaussian-precompute-p1](2026/09/gaussian-precompute-p1.md)
 - [gaussian-precompute-p2](2026/09/gaussian-precompute-p2.md)
 - [gaussian-precompute-p3](2026/09/gaussian-precompute-p3.md) — closed, completed
@@ -378,6 +382,7 @@ markers; everything below GENERATED is rebuilt.
 - [start-here-mode](2026/09/start-here-mode.md)
 - [start-here-release-profile-script-cap](2026/09/start-here-release-profile-script-cap.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
+- [support-sections-point-to-discussions](2026/09/support-sections-point-to-discussions.md)
 - [test-mode-bypass-save-results](2026/09/test-mode-bypass-save-results.md) — closed completed 2026-09-14
 - [traced-assertions-on-jax-path](2026/09/traced-assertions-on-jax-path.md)
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07

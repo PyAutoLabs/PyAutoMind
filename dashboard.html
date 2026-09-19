@@ -231,7 +231,7 @@ a.go:hover{opacity:.9;text-decoration:none}
 </head>
 <body>
 <header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its <code>/start_dev</code> command is on your clipboard — paste it into a Claude Code chat to route Claude straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>11</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>3</b><span>Parked</span></li><li><b>7</b><span>Planned</span></li><li><b>217</b><span>Backlog</span></li></ul>
+<ul class="stats"><li><b>6</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>5</b><span>Parked</span></li><li><b>5</b><span>Planned</span></li><li><b>215</b><span>Backlog</span></li></ul>
 <div class="fresh"><p><b>Last updated 2026-09-19.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -261,12 +261,11 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 </div>
 <div class="verdict ok"><b>No batch in flight.</b></div>
 <h2>Start here</h2>
-<h3>Highest priority <span class="facets">(filed as high) — showing 12 of 21</span></h3>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">community</span><span class="pill n">small</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
+<h3>Highest priority <span class="facets">(filed as high) — showing 12 of 20</span></h3>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">community</span><span class="pill n">small</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">euclid</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> / <code>slow</code> pytest…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">pyautoheart</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a 406 only delays…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">pyautomind</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/support_sections_point_to_discussions.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue chooser…</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the docstring's…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"><code>@PyAutoArray</code> rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -274,6 +273,7 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a simulated lens</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">autolens_assistant</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/organs/reduce_session_token_load.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">organs</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">workspaces</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autoarray</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <h3>Fits a slot <span class="facets">(ready to run unattended, cheapest to review first) — showing 12 of 113</span></h3>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/test/autolens_workspace/no_untimed_network_downloads_check.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides declared Target…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
@@ -289,21 +289,16 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <div class="task"><button class="copy" data-cmd="/start_dev draft/test/autolens_workspace_test/jax_zero_contour.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/test/autolens_workspace_test/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autolens_workspace_test</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <h2>In flight</h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
-<div class="task"><button class="copy" data-cmd="/start_dev active/catalogue_inspection_before_vis_pix.md" aria-label="Copy the Claude command">📋</button><p><a href="active/catalogue_inspection_before_vis_pix.md">Collect Euclid inspection images before vis_pix</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/92">issue #92</a><span class="facets"> — planned 2026-09-19</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/community-surface-autolens-workspace.md" aria-label="Copy the Claude command">📋</button><p><a href="active/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/569">issue #569</a><span class="facets"> — issued 2026-09-19</span> — <span class="facets">awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/570">autolens_workspace#570</a> — ⏳ pending release: autolens_workspace</p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/community-surface-policy.md" aria-label="Copy the Claude command">📋</button><p><a href="active/community-surface-policy.md">docs: distinguish implementation proposals from ideas</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/426">issue #426</a><span class="facets"> — issued 2026-09-19</span> — <span class="facets">awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/427">PyAutoMind#427</a> — ⏳ pending release: PyAutoMind</p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/community-surface-profile.md" aria-label="Copy the Claude command">📋</button><p><a href="active/community-surface-profile.md">docs: put scientific software first on the org profile</a> — <a href="https://github.com/PyAutoLabs/.github/issues/15">issue #15</a><span class="facets"> — issued 2026-09-19</span> — <span class="facets">awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/.github/pull/16">.github#16</a> — ⏳ pending release: .github</p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/community-surface-website.md" aria-label="Copy the Claude command">📋</button><p><a href="active/community-surface-website.md">docs: add community links and clarify PyAutoScientist</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/8">issue #8</a><span class="facets"> — issued 2026-09-19</span> — <span class="facets">awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9">pyautolabs.github.io#9</a> — ⏳ pending release: pyautolabs.github.io</p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/datasetmodel_grid_offset_prior_0_2_clips.md" aria-label="Copy the Claude command">📋</button><p><a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets — the same tile/band…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88">issue #88</a><span class="facets"> — issued 2026-09-17</span> — <span class="facets">workspace-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md" aria-label="Copy the Claude command">📋</button><p><a href="active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/273">issue #273</a><span class="facets"> — issued 2026-09-16</span> — <span class="facets">library-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/oneshot_benchmark_harness.md" aria-label="Copy the Claude command">📋</button><p><a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the assistant benchmarks</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/126">issue #126</a><span class="facets"> — issued 2026-09-17</span> — <span class="facets">awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/380">PyAutoBrain#380</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/127">autolens_assistant#127</a></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/sersic_variants_analysis.md" aria-label="Copy the Claude command">📋</button><p><a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes (<code>scripts/analysis/sersic_variants.py</code>)</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/76">issue #76</a><span class="facets"> — issued 2026-09-12</span> — <span class="facets">workspace-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev active/sersic_variants_prior_edge.md" aria-label="Copy the Claude command">📋</button><p><a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses (<code>--variant</code>)</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74">issue #74</a><span class="facets"> — issued 2026-09-12</span> — <span class="facets">paused</span> — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/75">euclid_strong_lens_modeling_pipeline#75</a></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/trim_external_shear_narrative.md" aria-label="Copy the Claude command">📋</button><p><a href="active/trim_external_shear_narrative.md">Trim external-shear narrative from workspace examples</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/571">issue #571</a><span class="facets"> — planned 2026-09-19</span></p></div>
 <a id="pending-release"></a><h2>Pending release</h2>
 <p class="muted">Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — <code>active.md</code> and the <code>complete/</code> records — never a live GitHub query; the Brain board's <code>pending-release</code> search is the fresh view, this is what the Mind believes.</p>
 <h3>.github</h3>
-<ul><li><a href="https://github.com/PyAutoLabs/.github/pull/16">.github#16</a> <span class="facets">active/community-surface-profile.md</span></li></ul>
+<ul><li><a href="https://github.com/PyAutoLabs/.github/pull/16">.github#16</a> <span class="facets">complete/2026/09/community-surface-profile.md</span></li></ul>
 <h3>PyAutoArray</h3>
 <ul><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/547">PyAutoArray#547</a> <span class="facets">complete/2026/09/arcsec-after-decimal.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/534">PyAutoArray#534</a> <span class="facets">complete/2026/09/ci-smoke-speedup.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/563">PyAutoArray#563</a> <span class="facets">complete/2026/09/community-surface-pyautoarray.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/523">PyAutoArray#523</a> <span class="facets">complete/2026/09/delaunay-area-magnification-audit.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/525">PyAutoArray#525</a> <span class="facets">complete/2026/09/delaunay-dual-area-magnification.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/527">PyAutoArray#527</a> <span class="facets">complete/2026/09/delaunay-edge-ring-zeroed.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/537">PyAutoArray#537</a> <span class="facets">complete/2026/09/delaunay-nn-constant-split-assembly.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/533">PyAutoArray#533</a> <span class="facets">complete/2026/09/delaunay-nn-launch-latency.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/531">PyAutoArray#531</a> <span class="facets">complete/2026/09/delaunay-walk-early-exit.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/553">PyAutoArray#553</a> <span class="facets">complete/2026/09/fixed-light-numba-levers.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/554">PyAutoArray#554</a> <span class="facets">complete/2026/09/fixed-light-numba-levers.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/555">PyAutoArray#555</a> <span class="facets">complete/2026/09/fixed-light-numba-levers.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/557">PyAutoArray#557</a> <span class="facets">complete/2026/09/fixed-light-numba-s4.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/540">PyAutoArray#540</a> <span class="facets">complete/2026/09/interferometer-apply-operator-rfft2.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/545">PyAutoArray#545</a> <span class="facets">complete/2026/09/interferometer-numba-cpu-direct-conv.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/541">PyAutoArray#541</a> <span class="facets">complete/2026/09/interferometer-preload-nufft-type1.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/541">PyAutoArray#541</a> <span class="facets">complete/2026/09/interferometer-preload-prose.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/544">PyAutoArray#544</a> <span class="facets">complete/2026/09/interferometer-sparse-operator-numpy-cpu-path.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/556">PyAutoArray#556</a> <span class="facets">complete/2026/09/mixed-precision-inversion-gap.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/550">PyAutoArray#550</a> <span class="facets">complete/2026/09/model-figures-lens.md</span></li><li><a href="https://github.com/PyAutoLabs/PyAutoArray/pull/533">PyAutoArray#533</a> <span class="facets">complete/2026/09/sibson-single-concatenated-walk.md</span></li></ul>
 <h3>PyAutoBrain</h3>
@@ -327,9 +322,9 @@ anything you could not verify." aria-label="Copy the Claude command">📋</butto
 <h3>autogalaxy_workspace</h3>
 <ul><li><a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248">autogalaxy_workspace#248</a> <span class="facets">complete/2026/09/community-surface-autogalaxy-workspace.md</span></li></ul>
 <h3>autolens_workspace</h3>
-<ul><li><a href="https://github.com/PyAutoLabs/autolens_workspace/pull/570">autolens_workspace#570</a> <span class="facets">active/community-surface-autolens-workspace.md</span></li></ul>
+<ul><li><a href="https://github.com/PyAutoLabs/autolens_workspace/pull/570">autolens_workspace#570</a> <span class="facets">complete/2026/09/community-surface-autolens-workspace.md</span></li></ul>
 <h3>pyautolabs.github.io</h3>
-<ul><li><a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9">pyautolabs.github.io#9</a> <span class="facets">active/community-surface-website.md</span></li></ul>
+<ul><li><a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9">pyautolabs.github.io#9</a> <span class="facets">complete/2026/09/community-surface-website.md</span></li></ul>
 <a id="human-review"></a><h2>Human review</h2>
 <p class="muted">Shipped work waiting on <b>you</b> — tasks a human asked to check before calling them done. Nothing lands here on its own: a task only gets a review row when someone files one (<code>/intake</code> with <code>Type: human review</code>), so an empty section means nothing has been flagged, not that nothing shipped.</p>
 <div class="task"><button class="copy" data-cmd="Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.
@@ -362,24 +357,24 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 " aria-label="Copy the Claude command">📋</button><p><a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)</a><span class="tags"><span class="pill w y">👀 human_review</span><span class="pill">autolens_workspace</span><span class="pill n">normal</span></span><span class="facets"> — flagged for review 2026-08-29</span></p></div>
 <h2>Parked</h2>
 <details>
-<summary>3 task(s)</summary>
+<summary>5 task(s)</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/priors/12_single_source_density_refactor.md" aria-label="Copy the Claude command">📋</button><p><b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a><span class="facets"> — parked 2026-08-18</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/priors/13_collapse_prior_and_message.md" aria-label="Copy the Claude command">📋</button><p><b>prior-message-collapse-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a><span class="facets"> — parked 2026-08-18</span></p></div>
 <div class="task"><button class="copy" data-cmd="/route resume the parked PyAutoMind task fixed-light-numba-s7 — its record is in parked.md" aria-label="Copy the Claude command">📋</button><p><b>fixed-light-numba-s7</b><span class="facets"> — parked 2026-09-18</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/catalogue_inspection_before_vis_pix.md" aria-label="Copy the Claude command">📋</button><p><b>catalogue-inspection-before-vis-pix</b> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/92">issue #92</a><span class="facets"> — issued 2026-09-19</span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev active/trim_external_shear_narrative.md" aria-label="Copy the Claude command">📋</button><p><b>trim-external-shear-narrative</b> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/571">issue #571</a><span class="facets"> — issued 2026-09-19</span></p></div>
 </details>
 <h2>Planned</h2>
 <details>
-<summary>7 task(s)</summary>
-<div class="task"><button class="copy" data-cmd="/start_dev active/catalogue_inspection_before_vis_pix.md" aria-label="Copy the Claude command">📋</button><p><b>catalogue-inspection-before-vis-pix</b> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/92">issue #92</a><span class="facets"> — planned 2026-09-19</span></p></div>
+<summary>5 task(s)</summary>
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task isothermal-ell-sph-oversampling-at-the-cusp — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>isothermal-ell-sph-oversampling-at-the-cusp</b><span class="facets"> — found 2026-08-09</span> — <span class="facets">planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md" aria-label="Copy the Claude command">📋</button><p><b>remote-mcp-deployment-tiers</b> — <a href="https://github.com/PyAutoLabs/autofit_assistant/issues/20">issue #20</a><span class="facets"> — filed 2026-07-21</span> — <span class="facets">DESIGN-COMPLETE, build BLOCKED-ON-DEMAND — issue #20 holds the full auth/transport/hosting design + Richard/PyAutoMCP…</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/health_fixes/samples_parameter_paths.md" aria-label="Copy the Claude command">📋</button><p><b>samples-parameter-paths</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1327">issue #1327</a><span class="facets"> — filed 2026-07-08</span> — <span class="facets">parked</span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/feature/autogalaxy/piemass_potential.md" aria-label="Copy the Claude command">📋</button><p><b>piemass-potential</b><span class="facets"> — filed 2026-06-05</span> — <span class="facets">planned</span></p></div>
 <div class="task"><button class="copy" data-cmd="/route start the planned PyAutoMind task latent-nan-guard-honest-run — its record is in planned.md" aria-label="Copy the Claude command">📋</button><p><b>latent-nan-guard-honest-run</b><span class="facets"> — planned 2026-07-22</span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev active/trim_external_shear_narrative.md" aria-label="Copy the Claude command">📋</button><p><b>trim-external-shear-narrative</b> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/571">issue #571</a><span class="facets"> — planned 2026-09-19</span></p></div>
 </details>
 <h2>Backlog</h2>
-<p class="muted">217 filed prompts, not started — sorted most-pickable first (priority, then size). 37 of them belong to an epic and are listed only under Epics below.</p>
+<p class="muted">215 filed prompts, not started — sorted most-pickable first (priority, then size). 37 of them belong to an epic and are listed only under Epics below.</p>
 <details>
 <summary>bug — 64</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">euclid</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -491,7 +486,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 <details>
 <summary>maintenance — 22</summary>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">community</span><span class="pill n">small</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">community</span><span class="pill n">small</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/organs/reduce_session_token_load.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">organs</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/pyautobrain/workspace_resolver_fanout.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the hardcoded paths</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">pyautobrain</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
@@ -534,15 +529,13 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="/start_dev draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autoarray</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 </details>
 <details>
-<summary>docs — 17</summary>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/support_sections_point_to_discussions.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue chooser…</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
+<summary>docs — 15</summary>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/split_lensing_regimes.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autogalaxy</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill n">medium</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/pyautobrain/rtd_organism_currency.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="/start_dev draft/docs/pyautolabs_github_io/front_door_community_link.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">pyautolabs_github_io</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autocti/api_rst_rewrite.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autocti</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/autolens/plot_rst_missing_exports.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/demo_subplot_ellipse_errors.md" aria-label="Copy the Claude command">📋</button><p><a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
@@ -773,55 +766,6 @@ Contract (the `start_bundle` skill is the full body):
 </table>
 </details>
 <details>
-<summary><b>docs-hub</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in themes.md: community</summary>
-<div class="task"><button class="copy" data-cmd="You are the judgment tier for the PyAutoMind bundle 'docs-hub' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/docs/workspaces/support_sections_point_to_discussions.md
-- draft/docs/pyautolabs_github_io/front_door_community_link.md
-- draft/research/pyautohands/git_docs.md
-- draft/docs/autocti/api_rst_rewrite.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev &lt;member prompt&gt;` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/&lt;member-task&gt;` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts." aria-label="Copy the Claude command">📋</button><p><b>Run this bundle</b> — one session, one issue and one PR per member</p></div>
-<table class="bundle">
-<tr><th>Prompt</th><th>Repo</th><th>Difficulty</th><th>Priority</th><th>Status</th></tr>
-<tr>
-<td><a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue…</a></td>
-<td class="facet">workspaces</td>
-<td class="facet">small</td>
-<td class="facet">high</td>
-<td class="facet">formalised</td>
-</tr>
-<tr>
-<td><a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a></td>
-<td class="facet">pyautolabs_github_io</td>
-<td class="facet">small</td>
-<td class="facet">normal</td>
-<td class="facet">formalised</td>
-</tr>
-<tr>
-<td><a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a></td>
-<td class="facet">pyautohands</td>
-<td class="facet">small</td>
-<td class="facet">normal</td>
-<td class="facet">formalised</td>
-</tr>
-<tr>
-<td><a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a></td>
-<td class="facet">autocti</td>
-<td class="facet">medium</td>
-<td class="facet">normal</td>
-<td class="facet">formalised</td>
-</tr>
-</table>
-</details>
-<details>
 <summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in themes.md: catalogue, docs, euclid, hpc</summary>
 <div class="task"><button class="copy" data-cmd="You are the judgment tier for the PyAutoMind bundle 'euclid' — 4 INDEPENDENT tasks run in one orchestrated session.
 
@@ -944,21 +888,56 @@ Contract (the `start_bundle` skill is the full body):
 </tr>
 </table>
 </details>
-<p class="muted">Showing 8 of 37 auto bundles — pin one in <code>bundles.md</code> to keep it on the page.</p>
+<details>
+<summary><b>pixelization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+<div class="task"><button class="copy" data-cmd="You are the judgment tier for the PyAutoMind bundle 'pixelization' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/refactor/autoarray/matern_vendor_bessel_kve.md
+- draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
+- draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev &lt;member prompt&gt;` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/&lt;member-task&gt;` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts." aria-label="Copy the Claude command">📋</button><p><b>Run this bundle</b> — one session, one issue and one PR per member</p></div>
+<table class="bundle">
+<tr><th>Prompt</th><th>Repo</th><th>Difficulty</th><th>Priority</th><th>Status</th></tr>
+<tr>
+<td><a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the…</a></td>
+<td class="facet">autoarray</td>
+<td class="facet">large</td>
+<td class="facet">medium</td>
+<td class="facet">formalised</td>
+</tr>
+<tr>
+<td><a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate…</a></td>
+<td class="facet">autoarray</td>
+<td class="facet">medium</td>
+<td class="facet">normal</td>
+<td class="facet">formalised</td>
+</tr>
+<tr>
+<td><a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a></td>
+<td class="facet">workspaces</td>
+<td class="facet">medium</td>
+<td class="facet">normal</td>
+<td class="facet">draft</td>
+</tr>
+</table>
+</details>
+<p class="muted">Showing 8 of 36 auto bundles — pin one in <code>bundles.md</code> to keep it on the page.</p>
 <a id="recent"></a><h2>Recent</h2>
 <p class="muted">The 50 newest things to happen to the work in hand, newest first — issued, parked, filed. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Shipped work is not here: it is read from <code>complete/index.md</code>, and a thousand records deep it would crowd out everything anyone can still act on. Showing the newest 10; … opens the next 10.</p>
 <table class="recent">
 <tr>
 <td class="when">2026-09-19</td>
-<td class="what">planned</td>
-<td><a href="planned.md#trim-external-shear-narrative">trim-external-shear-narrative</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/trim_external_shear_narrative.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-09-19</td>
 <td class="what">issued</td>
-<td><a href="active/community-surface-profile.md">docs: put scientific software first on the org profile</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/community-surface-profile.md" aria-label="Copy the Claude command">📋</button></td>
+<td><a href="parked.md#trim-external-shear-narrative">trim-external-shear-narrative</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/trim_external_shear_narrative.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr>
 <td class="when">2026-09-19</td>
@@ -969,31 +948,7 @@ Contract (the `start_bundle` skill is the full body):
 <tr>
 <td class="when">2026-09-19</td>
 <td class="what">issued</td>
-<td><a href="active/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/community-surface-autolens-workspace.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-09-19</td>
-<td class="what">issued</td>
-<td><a href="active/community-surface-website.md">docs: add community links and clarify PyAutoScientist</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/community-surface-website.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-09-19</td>
-<td class="what">planned</td>
-<td><a href="planned.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/catalogue_inspection_before_vis_pix.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-09-19</td>
-<td class="what">planned</td>
-<td><a href="active/trim_external_shear_narrative.md">Trim external-shear narrative from workspace examples</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev active/trim_external_shear_narrative.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-09-19</td>
-<td class="what">planned</td>
-<td><a href="active/catalogue_inspection_before_vis_pix.md">Collect Euclid inspection images before vis_pix</a></td>
+<td><a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/catalogue_inspection_before_vis_pix.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr>
@@ -1008,31 +963,31 @@ Contract (the `start_bundle` skill is the full body):
 <td><a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/model_bullet_parameter_count_drift.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-09-18</td>
 <td class="what">filed</td>
 <td><a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-09-18</td>
 <td class="what">filed</td>
 <td><a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-09-18</td>
 <td class="what">filed</td>
 <td><a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-09-18</td>
 <td class="what">filed</td>
 <td><a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-09-17</td>
 <td class="what">filed</td>
 <td><a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a></td>
@@ -1070,12 +1025,6 @@ Contract (the `start_bundle` skill is the full body):
 </tr>
 <tr hidden>
 <td class="when">2026-09-17</td>
-<td class="what">filed</td>
-<td><a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/docs/workspaces/support_sections_point_to_discussions.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
 <td class="what">issued</td>
 <td><a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev active/oneshot_benchmark_harness.md" aria-label="Copy the Claude command">📋</button></td>
@@ -1095,12 +1044,6 @@ Contract (the `start_bundle` skill is the full body):
 <tr hidden>
 <td class="when">2026-09-17</td>
 <td class="what">filed</td>
-<td><a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub…</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md" aria-label="Copy the Claude command">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
-<td class="what">filed</td>
 <td><a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
@@ -1113,8 +1056,8 @@ Contract (the `start_bundle` skill is the full body):
 <tr hidden>
 <td class="when">2026-09-17</td>
 <td class="what">filed</td>
-<td><a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a></td>
-<td class="pick"><button class="copy" data-cmd="/start_dev draft/docs/pyautolabs_github_io/front_door_community_link.md" aria-label="Copy the Claude command">📋</button></td>
+<td><a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 <tr hidden>
 <td class="when">2026-09-17</td>
@@ -1247,6 +1190,48 @@ Contract (the `start_bundle` skill is the full body):
 <td class="what">filed</td>
 <td><a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a></td>
 <td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-09-12</td>
+<td class="what">issued</td>
+<td><a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/sersic_variants_analysis.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-09-12</td>
+<td class="what">issued</td>
+<td><a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev active/sersic_variants_prior_edge.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-09-11</td>
+<td class="what">filed</td>
+<td><a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-09-11</td>
+<td class="what">filed</td>
+<td><a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-09-11</td>
+<td class="what">filed</td>
+<td><a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-09-10</td>
+<td class="what">filed</td>
+<td><a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md" aria-label="Copy the Claude command">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-09-10</td>
+<td class="what">filed</td>
+<td><a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a></td>
+<td class="pick"><button class="copy" data-cmd="/start_dev draft/bug/autoarray/fit_util_masked_division_grad_nan.md" aria-label="Copy the Claude command">📋</button></td>
 </tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>

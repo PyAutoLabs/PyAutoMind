@@ -13,6 +13,8 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - [single-source-density-design](#single-source-density-design)
 - [prior-message-collapse-design](#prior-message-collapse-design)
 - [fixed-light-numba-s7](#fixed-light-numba-s7)
+- [catalogue-inspection-before-vis-pix](#catalogue-inspection-before-vis-pix)
+- [trim-external-shear-narrative](#trim-external-shear-narrative)
 
 <!-- toc:end -->
 
@@ -45,3 +47,28 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - evidence: Phase5/5b/6 findings remain in completed records and merged profiling results.
 - resume: Only on explicit user request; rescope before issue/worktree/compute creation.
 - repos-none-claimed: No issue, worktree, source changes or jobs created for phase7.
+
+## catalogue-inspection-before-vis-pix
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/92
+- issued: 2026-09-19
+- parked: 2026-09-19 — issued but not in flight; registry placement reconciled with human approval.
+- repos-none-claimed: No worktree claimed by this entry; resume through start-dev.
+- prompt: active/catalogue_inspection_before_vis_pix.md
+- classification: workspace
+- suggested-branch: feature/catalogue-before-vis-pix
+- blocked-by: sersic-variants, sersic-variants-analysis, grid-offset-prior (using euclid_strong_lens_modeling_pipeline)
+- affected-repos:
+  - euclid_strong_lens_modeling_pipeline
+
+## trim-external-shear-narrative
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571
+- issued: 2026-09-19
+- parked: 2026-09-19 — issued but not in flight; registry placement reconciled with human approval.
+- repos-none-claimed: No worktree claimed by this entry; resume through start-dev.
+- prompt: active/trim_external_shear_narrative.md
+- classification: workspace
+- suggested-branch: feature/trim-external-shear-narrative
+- unblocked: 2026-09-19 — autolens_workspace#570 merged; see complete/2026/09/community-surface-autolens-workspace.md. Resume through start-dev after the shared community-surface worktree is released.
+- affected-repos:
+  - autolens_workspace
+- note: latent/latent_nan_robustness.py PASSES but VACUOUSLY under the smoke profile — TEST_MODE=2 yields only 4 bypass samples, and DISABLE_JAX=1 silently flips its deliberate AnalysisImaging(use_jax=True) to False (PyAutoLens analysis/analysis/dataset.py:89), so the JAX column-masking branch the guard exists to catch is never taken. MultiStartAdam/BlackJAXNUTS precedent. Work = (1) config/build/env_vars.yaml override for `latent/latent_nan_robustness` with unset: [PYAUTO_TEST_MODE, PYAUTO_DISABLE_JAX]; (2) trim the script under the 300s cap. MEASURED: honest run = 412s; PYAUTO_TEST_MODE=1 does NOT help (455s) — Nautilus is NOT the bottleneck (~136s post-fit results update + ~56s latent compute on 100 samples), so the lever is sample count. Script is in the curated smoke_tests.txt, which DOES read env_vars.yaml, so this lands in the per-PR gate. Adjacent to the blocker's own follow-up ("re-time the SLOW siblings"). NOT bugs, verified passing from clean output, no change needed: imaging/model_fit.py and latent/latent_variables_smoke.py.
