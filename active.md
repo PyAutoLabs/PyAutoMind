@@ -5,10 +5,11 @@
 - issued: 2026-09-20
 - prompt: active/notify_slack_general_when_a_community_discussion.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: paused
 - worktree: ~/Code/PyAutoLabs-wt/notify-slack-community-discussions
 - repos:
   - PyAutoBrain: feature/community-slack-notifications
+- resume: "Paused for the night at the human's request on 2026-09-20. Issue #408 is filed and the worktree is ready. `agents/conductors/community/AGENTS.md` has an uncommitted 49-line runbook draft; `git diff --check` passes. Resume from the live Slack audit: connect Slack access or run `/github subscribe list` and `/github subscribe list features` in `#general`, then configure `PyAutoLabs/.github discussions`, test one approved Discussion, record evidence, and ship. Progress comment: https://github.com/PyAutoLabs/PyAutoBrain/issues/408#issuecomment-5746092241"
 
 ## remove-empty-modeling-headings
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/574
