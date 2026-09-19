@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1506 records across 8 buckets.
+1509 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -275,7 +275,10 @@ markers; everything below GENERATED is rebuilt.
 - [mass-field-chaining-helper](2026/09/mass-field-chaining-helper.md) — Added `mass_and_fields_from(mass, mass_result, *, fields_result, unfix_mass_centre=False)` in PyAutoGalaxy. It…
 - [mass-field-class](2026/09/mass-field-class.md) — Added `ag.MassField(redshift, **mass_profiles)` to PyAutoGalaxy — the standalone, MassProfile-only container f…
 - [mass-field-flat-sweep](2026/09/mass-field-flat-sweep.md)
+- [mass-field-inference-sim](2026/09/mass-field-inference-sim.md) — Migrated the imaging and interferometer simulators to `MassField` and `Tracer(fields=[field])`. Compile, Ruff,…
 - [mass-field-integration](2026/09/mass-field-integration.md) — Taught PyAutoLens about `ag.MassField` (PyAutoGalaxy#621). `Tracer(galaxies, cosmology=None, fields=None)` sto…
+- [mass-field-reduce](2026/09/mass-field-reduce.md) — Migrated the B1938 and SLACS1430 PyAutoReduce prototypes to a top-level MassField and `fields=` collection. Th…
+- [mass-field-sibling-sweep](2026/09/mass-field-sibling-sweep.md) — Migrated all 28 galaxy-attached shear sites in 22 HowToLens scripts to top-level flat fields and regenerated t…
 - [mass-field-workspace-sweep](2026/09/mass-field-workspace-sweep.md)
 - [matrix-free-pixelized-likelihood](2026/09/matrix-free-pixelized-likelihood.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
