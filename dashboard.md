@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_sibling_sweep.md">MassField sibling sweep: HowToLens and autolens_assistant move straight to the flat <code>fields=</code></a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/89">issue #89</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/mass_field_sibling_sweep.md">MassField sibling sweep: HowToLens and autolens_assistant move straight to the flat <code>fields=</code></a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/89">issue #89</a> — issued 2026-09-19 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/90">HowToLens#90</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/131">autolens_assistant#131</a></summary>
 
 ```
 /start_dev active/mass_field_sibling_sweep.md

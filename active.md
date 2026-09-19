@@ -11,6 +11,9 @@
   - HowToLens: feature/mass-field-sibling-sweep
   - autolens_assistant: feature/mass-field-sibling-sweep
 - note: "Phase 5 of mass-field; autolens_workspace#562 and autolens_workspace_test#322 merged, and PyAutoGalaxy/PyAutoLens v2026.9.19.1 released. Original assistant checkout has two unrelated untracked files; preserve them."
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/90
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/131
+- validation: "HowToLens smoke 50/50 pass, navigator PASS; assistant boundary/wiki-currency CI PASS, local API/idiom/citation/provenance checks PASS. Heart STALE only because current-source release rehearsal is absent."
 
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
