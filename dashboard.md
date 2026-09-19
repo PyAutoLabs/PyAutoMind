@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/release_smoke_respects_multi_galaxy_park.md">Keep the live release smoke gate aligned with the multi-galaxy SLOW park</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/565">issue #565</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/release_smoke_respects_multi_galaxy_park.md">Keep the live release smoke gate aligned with the multi-galaxy SLOW park</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/565">issue #565</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/566">autolens_workspace#566</a></summary>
 
 ```
 /start_dev active/release_smoke_respects_multi_galaxy_park.md
