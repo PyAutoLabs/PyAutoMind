@@ -106,12 +106,15 @@ epic, never picked standalone.
 - notes: phases — 1 PyAutoGalaxy standalone `MassField` (merged #621), 2 PyAutoLens `Tracer(fields=)` + analysis `fields` slot + pytree/COOLEST/LOS + `model_util.mass_field_from` (merged #742), 3 **every** galaxy-attached field in autolens_workspace + autolens_workspace_test → `fields=` (re-scoped 2026-09-17 on the human's ruling that the user-facing API is `fields=` everywhere; started ahead of the release, merge gated on it; absorbed phase 4 `group/`), 5 HowToLens + autolens_assistant. `fields` is a collection: shear + sheet at one redshift is one field; several fields means several planes. Issue ONE at a time in order; 3–5 follow the *released* libraries. Hard invariant: `Galaxy` and the prior configs are never edited, no deprecation warning — a user's existing galaxy-attached shear model keeps its PyAutoFit result identifier. Filed 2026-09-17 from the `/start_dev` plan checkpoint of the group shear prompt; redesigned the same day from a `Galaxy` subclass to a standalone class on the human's ruling.
   Phase 1 SHIPPED 2026-09-17 (PyAutoGalaxy#620, PR #621; record
   complete/2026/09/mass-field-class.md). Phase 2 SHIPPED 2026-09-17 (PyAutoLens#741, PR #742;
-  record complete/2026/09/mass-field-integration.md) — library work done, both pending-release.
-  Phases 3–5 (workspace sweeps) wait on a release of PyAutoGalaxy#621 + PyAutoLens#742 to the
-  installed stack; phase 3 is issued only once `/release` has published both.
+  record complete/2026/09/mass-field-integration.md) — both released in v2026.9.19.1.
   Phases 3 and 6 SHIPPED 2026-09-19: autolens_workspace#560/#562 and
   autolens_workspace_test#322 merged, all checks green, release holds lifted by the human.
   Records: complete/2026/09/mass-field-workspace-sweep.md and
   complete/2026/09/mass-field-flat-sweep.md. Bare fields=field is now the workspace form.
-  Amend phase 5's prompt before issuing it — it is written in the collection era and would
-  migrate HowToLens twice.
+  Phase 5 HowToLens#90 and autolens_assistant#131 PRs are open and green. The
+  follow-up chaining helper PyAutoGalaxy#625 / PyAutoLens#745 PRs are open and green;
+  their release gates the staged inference and developer pipelines. Reduce#77 and
+  autolens_inference#8 simulator PRs are open and green. The developer workspace
+  sweep is draft PR #143, gated by the helper release. autolens_profiling is held
+  by the hst-gpu-residue-p2 worktree claim. The user excluded the deleted local
+  autolens_jax_joss checkout. See the epic ledger's phase table for exact scope.
