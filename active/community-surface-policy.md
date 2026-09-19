@@ -11,6 +11,17 @@ Approved: 2026-09-19 (Codex conversation: "I approve")
 Issued: 2026-09-19
 Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/426
 
+## Latest direction (2026-09-19)
+
+User: "Ive done all the above, I made an extra onw hich is Errors & Bugs"
+
+The live categories are Help & Questions, Ideas & Proposals, Bugs & Errors
+(all answerable), Announcements, and Show and tell. This supersedes the
+separate Q&A / Scientific analysis / Ideas / Proposals categories in the
+original request below. Chooser links use help-questions, ideas-proposals,
+and bugs-errors. Confirmed reproducible bugs still have linked repository
+issues. GitHub category setup is verified; the former manual gate is cleared.
+
 Update policy/community_surface.md with answerable Proposals, accepted-verdict closure and issue routing. Update draft/maintenance/community/migrate_user_threads_to_discussions.md to route #551 to Proposals, leaving five shipped threads in Ideas. Keep the support paragraph verbatim and align category-aware scan doctrine.
 
 Branch: feature/community-surface
