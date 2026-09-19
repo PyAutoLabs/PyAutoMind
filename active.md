@@ -1,19 +1,5 @@
 # Active Tasks
 
-## point-source-shared-breakdown
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/291
-- issued: 2026-09-19
-- prompt: active/point_source_shared_likelihood_breakdown.md
-- session: Codex GPT-5 (session ID unavailable)
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/point-source-shared-breakdown
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/293
-- pending-release: autolens_profiling@https://github.com/PyAutoLabs/autolens_profiling/pull/293
-- repos:
-  - autolens_profiling: feature/point-source-shared-breakdown
-- parallel-claim: "Human authorized coordinated parallel work with hst-gpu-residue-p2 on 2026-09-19. Source files are disjoint; both tasks may regenerate README tables, so this task must rebase on current main and regenerate dashboards immediately before shipping."
-- summary: "Shared device-aware point-source likelihood breakdown and canonical CPU fp64 baseline complete. Fused solved likelihood 62.687 ms/call; eager/JIT/vmap parity and finite gradient passed. Commits 3052443 + 0007651; PR #293 merged as eab1b3d after lint passed. Heart STALE only for absent release rehearsal, with no RED/YELLOW reasons."
-
 ## remove-empty-modeling-headings
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/574
 - issued: 2026-09-20

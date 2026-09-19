@@ -89,9 +89,11 @@ GPU benefit must be measured rather than extrapolated from CPU ratios.
 
 ### Prerequisite — separate shared breakdown task
 
-Task 1 is `draft/feature/autolens_profiling/point_source_shared_likelihood_breakdown.md`.
-Its merged instrument, CPU reference results and reproducible baseline revisions
-are required before this campaign. Reuse that harness; do not rebuild it here.
+Task 1 shipped in [autolens_profiling#293](https://github.com/PyAutoLabs/autolens_profiling/pull/293)
+and is recorded in `complete/2026/09/point-source-shared-breakdown.md`.
+Use its merged instrument, CPU reference results under
+`results/breakdown/point_source/` and reproducible baseline revisions; do not
+rebuild the harness here.
 The harness shares stages/schema across devices, but A100 execution and timing
 must be validated here. A CPU run is not proof of GPU correctness or performance.
 

@@ -76,10 +76,12 @@ We did two reviews or assessments of the point source likelihood function recent
 
 ## CPU campaign: dependencies and phase order
 
-**Start condition:** task 1,
-`draft/feature/autolens_profiling/point_source_shared_likelihood_breakdown.md`,
-owns the shared `scripts/point_source/likelihood_breakdown/` instrument.
-CPU source optimization waits for its merged instrument and CPU baseline, not
+**Start condition:** task 1 shipped in
+[autolens_profiling#293](https://github.com/PyAutoLabs/autolens_profiling/pull/293)
+and is recorded in `complete/2026/09/point-source-shared-breakdown.md`; it owns
+the shared `scripts/point_source/likelihood_breakdown/` instrument and CPU
+reference results under `results/breakdown/point_source/`.
+CPU source optimization waits for that merged instrument and CPU baseline, not
 for the GPU campaign. Preserve the exact unoptimized library revisions and
 configuration so task 3 can reproduce an A100 baseline even if CPU fixes land
 first. Avoid two branches changing the same solver at once.

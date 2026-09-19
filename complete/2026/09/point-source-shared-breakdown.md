@@ -1,5 +1,33 @@
 # Point source shared likelihood breakdown
 
+Completed the shared instrumentation prerequisite for the point-source CPU and GPU performance campaigns.
+
+## Shipped
+
+- Merged [autolens_profiling#293](https://github.com/PyAutoLabs/autolens_profiling/pull/293) into `main` at `eab1b3d9fe6ea218b49742961a0842232cc5ac6f`.
+- Added `scripts/point_source/likelihood_breakdown/image_plane.py` with common solver-stage instrumentation, explicit device selection and synchronized timing.
+- Committed the canonical local CPU fp64 JSON and PNG baseline plus a reproducibility and interpretation note.
+- Opened the eight solver iterations into cumulative ray-trace, containment, selection, neighbourhood and up-sampling prefixes while retaining the fused production likelihood as the authoritative control.
+- Linked the shared harness from the remaining CPU and GPU campaign prompts so they build on one measurement surface.
+
+## Evidence
+
+- Solved fused likelihood: 62.68672 ms/call; plain control: 74.34638 ms/call.
+- Eager and JIT solved likelihoods agree (`7.743201200876817` and `7.743201200876812`).
+- Two-lane vmap parity passed, the smooth-gradient control was finite, and four finite image positions were retained.
+- Repository lint, formatting, maintained smoke commands, README idempotence and the full CPU profiling run passed.
+- Independent review returned CLEAN; PR-head CI lint completed successfully for `000765107d3afa62a752a1dcb5dd7749f0d348f2`.
+
+## Handoff
+
+The CPU speed-up campaign may now profile and iterate against this baseline. The GPU campaign must first run the preserved harness on A100 before drawing optimization conclusions.
+
+- pending-release: autolens_profiling@https://github.com/PyAutoLabs/autolens_profiling/pull/293
+
+## Original prompt
+
+# Point source shared likelihood breakdown
+
 Type: feature
 Target: autolens_profiling
 Repos:

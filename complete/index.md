@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1529 records across 8 buckets.
+1530 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -342,6 +342,7 @@ markers; everything below GENERATED is rebuilt.
 - [physical-fast-rebuild-autolens](2026/09/physical-fast-rebuild-autolens.md)
 - [pixelized-clumps-robust-scale](2026/09/pixelized-clumps-robust-scale.md)
 - [pixelized-source-magnification-latent](2026/09/pixelized-source-magnification-latent.md)
+- [point-source-shared-breakdown](2026/09/point-source-shared-breakdown.md)
 - [point-source-smoke-runtime-regression](2026/09/point-source-smoke-runtime-regression.md) — not a library regression
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)
 - [prm-shadow-row-notify-tier](2026/09/prm-shadow-row-notify-tier.md)
