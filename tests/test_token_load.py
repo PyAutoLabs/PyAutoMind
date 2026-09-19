@@ -78,3 +78,26 @@ def test_budgets_cover_agents_and_both_core_procedures(tmp_path):
     assert any("AGENTS total" in item for item in violations)
     assert any("start_dev_lines" in item for item in violations)
     assert any("prm_lines" in item for item in violations)
+
+
+def test_script_runs_without_a_brain_checkout_beside_it(tmp_path):
+    # Match Mind-only CI: no installed workspace or sibling Brain can help.
+    import shutil
+    isolated = tmp_path / "isolated_mind/scripts"
+    isolated.mkdir(parents=True)
+    for name in ("token_load.py", "repos_sync.py", "smoke_bootstrap_sync.py"):
+        shutil.copyfile(SCRIPT.parent / name, isolated / name)
+    root, _, _ = workspace(tmp_path / "measured", True)
+    proc = subprocess.run([sys.executable, str(isolated / "token_load.py"),
+                           "check", "--root", str(root), "--json"],
+                          text=True, capture_output=True)
+    assert proc.returncode == 0, proc.stderr
+    assert json.loads(proc.stdout)["totals"]["agents_tokens_approx"] == 6
+
+
+def test_ambiguous_grouped_and_flat_checkout_fails_closed(tmp_path):
+    root, _, _ = workspace(tmp_path, True)
+    (root / "PyAutoBrain").mkdir()
+    proc = run(root, "report")
+    assert proc.returncode == 2
+    assert "ambiguous flat and grouped" in proc.stderr

@@ -3,17 +3,18 @@
 
 Approximate tokens are UTF-8 bytes / 4, rounded up. Report is read-only;
 ``check`` exits nonzero when a required file is missing or a budget is exceeded.
-The root may be grouped or flat. Repository placement uses Brain's resolver.
+The root may be grouped or flat. Repository placement uses Mind's checkout helper (Brain's resolver when present).
 """
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import json
 import math
 import os
 from pathlib import Path
 import sys
+
+from repos_sync import repo_checkout
 
 CORE = {
     "workspace AGENTS": (None, "AGENTS.md"),
@@ -37,18 +38,6 @@ CONDITIONAL = {
 }
 
 
-def resolver():
-    # This script lives in the Mind checkout. Brain is its sibling in both the
-    # grouped main tree and flat bundles; use its canonical placement logic.
-    module_path = Path(__file__).resolve().parents[2] / "PyAutoBrain/agents/_repo_paths.py"
-    if not module_path.is_file():
-        raise FileNotFoundError(f"Brain repository resolver missing: {module_path}")
-    spec = importlib.util.spec_from_file_location("pyauto_repo_paths", module_path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module.repo_path
-
-
 def measure(path: Path) -> dict:
     if not path.is_file():
         return {"path": str(path), "missing": True}
@@ -58,10 +47,9 @@ def measure(path: Path) -> dict:
 
 
 def collect(root: Path) -> dict:
-    locate = resolver()
     paths = {}
     for name, (repo, relative) in (CORE | CONDITIONAL).items():
-        base = root if repo is None else locate(root, repo)
+        base = root if repo is None else repo_checkout(root, repo)
         paths[name] = measure(base / relative)
     agents = ("workspace AGENTS", "Brain AGENTS", "Mind AGENTS")
     totals = {}
@@ -104,7 +92,7 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     try:
         result = collect(args.root.resolve())
-    except (OSError, ValueError) as error:
+    except (OSError, ValueError, RuntimeError) as error:
         print(f"token load: {error}", file=sys.stderr)
         return 2
     issues = violations(result, args)
