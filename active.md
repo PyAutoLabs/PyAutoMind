@@ -124,3 +124,5 @@
   - HowToFit: feature/workspace-organs-regroup
   - HowToGalaxy: feature/workspace-organs-regroup
   - HowToLens: feature/workspace-organs-regroup
+  - euclid_strong_lens_modeling_pipeline: feature/workspace-organs-regroup
+- coordination: Human explicitly approved updating only the Euclid generated smoke-bootstrap block on a separate branch, preserving other claimed branches and results.
