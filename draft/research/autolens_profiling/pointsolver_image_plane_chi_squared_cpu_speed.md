@@ -1,4 +1,4 @@
-# PointSolver image-plane chi-squared CPU speed-up: is the JAX CPU path sub-optimal enough for a sparse/numba lever?
+# Point-source CPU speed-up campaign: shared breakdown, redundant-sort removal and measured iteration
 
 Type: research
 Target: autolens_profiling
@@ -11,7 +11,7 @@ Themes:
 - profiling
 - cluster
 - jax
-Difficulty: medium
+Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
@@ -20,6 +20,126 @@ Review-minutes: 20
 Unattended: ready
 Epic: cluster-strong-lensing
 Filed: 2026-09-17
+Updated: 2026-09-19
+
+## Campaign contract (2026-09-19)
+
+This execution plan supersedes the earlier deliverable/gate wording retained below.
+This is one of two existing prompts expanded in place, not another duplicate task.
+It is a phased campaign: at start-dev, issue only the next bounded phase (one task /
+one PR per member), retaining this prompt as the campaign intent until all phases
+are resolved. Do not attempt a cross-library, multi-PR campaign as a single task.
+Use start-dev and the applicable library/workspace worktree and ship procedures;
+obtain implementation-plan approval before source edits. No profiling or library
+implementation was performed during this consolidation.
+
+### Measurement and acceptance contract
+
+- Use @autolens_profiling for timing and versioned JSON + PNG evidence, with
+  README/dashboard regeneration. Correctness evidence belongs in library tests
+  and @autolens_workspace_test, not a timing-only assertion of scientific validity.
+- Record exact library/profiling commits, JAX/jaxlib versions, device, precision,
+  XLA flags, thread settings, model/data seed, source planes, solver grid/scale,
+  precision, neighborhood degree, capacity, warm-up, repetitions and cache state.
+  Historical numbers are leads, not comparable current baselines.
+- Separate tracing/lowering, compilation, first execution and warmed runtime.
+  Synchronize device outputs with block_until_ready; pass varying parameter
+  inputs through the production likelihood so constant folding cannot fake work.
+  Report repeated/interleaved A/B medians and dispersion on identical hardware,
+  both ms/likelihood and batch throughput, plus memory where relevant.
+- Retain a fused end-to-end production likelihood control. Prefix timing
+  differences can change fusion and contain noise: report residuals/negative
+  differences honestly and corroborate with a device trace rather than claiming
+  independently timed steps sum to the fused runtime.
+- Compare likelihood, image counts/positions, NaN padding/masks, magnification
+  filtering and source-redshift handling. Cover perturbed models, doubles/quads,
+  near-caustic/critical configurations and cluster multi-source/multiplane cases.
+  Preserve custom_jvp, eager/JIT/vmap parity and gradient correctness; distinguish
+  nondifferentiable image-topology transitions from failures in smooth regions.
+- Each iteration: baseline -> one hypothesis -> bounded prototype -> correctness
+  gate -> repeated full-likelihood A/B -> accept/reject -> reprofile and rank the
+  remaining bottleneck. State minimum detectable improvement from observed noise;
+  keep a change only for a repeatable material gain without correctness or
+  unacceptable compile/memory regressions. Record negative results too.
+- Stop when remaining cost is explained and no worthwhile measured lever remains,
+  or a concrete external blocker prevents the next experiment. Do not promise the
+  historical speedup, optimize indefinitely, or weaken correctness to hit a target.
+
+### Original consolidation request (verbatim)
+
+We did two reviews or assessments of the point source likelihood function recently one for CPU which was JAX and numba sparse (it concluded numba spaerse not worth it) and one for GPU. We may of made some prompts but I want you to assess all that the review put forward and ultimately end with two mind task or prompts, which could be epics, which will profile them with autolens_profiling and iteratively work on the speed up. One was focused in particular on writing an autolens_profiling likelihood_breakdown script, which it may of wrote or just planned, this would likely be the task before we go into specific CPU or GPU speed up
+
+## CPU campaign: dependencies and phase order
+
+**Start condition:** GPU prompt
+`draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md`
+phase 0 owns the shared `scripts/point_source/likelihood_breakdown/` instrument.
+CPU source optimization waits for that instrument and its CPU baseline; it does
+not wait for completion of the A100 campaign. Acquire untouched A100 baseline
+provenance before shared library changes, or retain the exact baseline commit so
+it can be measured later. Avoid two branches changing the same solver at once.
+
+1. **Reproduce and publish the CPU evidence.** Re-run the simple solved likelihood
+   and the 13-component, two-source cluster case with the shared harness. The
+   September 17 scratch note/JSONs are not committed in the inspected profiling
+   tree; recover them if available, otherwise reproduce and explicitly label the
+   old measurements as reported evidence. Measure unsolved and solved paths
+   separately; do not attribute a likelihood-variant difference to hardware.
+2. **Remove redundant vertex deduplication, if reproduced.** The recorded
+   `_vertices_and_indices` sort is still present in the inspected PyAutoArray
+   checkout. Test the JAX-only throwaway conversion at `_plane_triangles`, not
+   blanket removal of all `unique`/`remove_duplicates` operations. Reproduce the
+   red control on the original path, confirm masks/index semantics and full
+   likelihood/gradient parity, then ship the bounded library change before
+   refreshing workspace results. The recorded 40.0 -> 8.1 ms simple and
+   117 -> 48 ms/source cluster gains are hypotheses to reproduce on current code.
+3. **Precompute static initial geometry.** If deflections dominate after phase 2,
+   evaluate construction-time NumPy unique vertices plus an index map for the
+   initial lattice, reused as immutable JAX inputs. Count actual traced vertices,
+   report setup/memory/amortization, and verify cache invalidation when solver
+   geometry changes. Never cache model-dependent deflections or warm-start from
+   the preceding sampler call. This lever was proposed, not measured.
+4. **Profile the residue and iterate.** Rank the following by new evidence:
+   (a) safe grid-extent guidance; (b) initial scale versus refinement count;
+   (c) MAX_CONTAINING_SIZE/neighborhood fan-out; (d) cluster dPIE/NFW deflections.
+   Grid/capacity changes require image-completeness evidence and must be reported
+   as separate configurations, not silently substituted into the speed comparison.
+   Profile components through the existing `scripts/lens/deflections/` surface
+   when needed; any resulting PyAutoGalaxy work is a separately scoped phase.
+
+### Disposition of every CPU assessment recommendation
+
+- **Numba/sparse rewrite:** do not pursue by default. The assessment found no
+  reusable kernel and existing unpadded NumPy was 96 ms/solve, about 12x slower
+  than the patched JAX path. Reopen only if new post-fix measurements demonstrate
+  a substantial unsolved bottleneck and preserve JVP/vmap/GPU contracts.
+- **Step count:** seven refinement steps reportedly cost ~3 ms in total; fewer
+  than four degraded the likelihood. Low priority, never a blind accuracy trade.
+- **Extent:** reported 30x30 / 100x100 / 140x140 timings were 6.4 / 39.8 / 72 ms;
+  a fiducial bit-identical likelihood does not prove coverage across a prior.
+- **Fit/chi-squared, beta-star and magnification filter:** reported 0.34% of the
+  original call. Re-rank after the main fix; don't assume the old fraction holds.
+- **Duplicate model_data solve:** reportedly eliminated by XLA CSE; verify in
+  fused execution before proposing Python caching as a performance fix.
+- **Unmeasured controls:** vmap batches 1/4/16; post-fix grid/n_steps and capacity
+  sweeps; constant-folding-pass flag A/B; direct deflections on the actual
+  276,507-point cluster input (the old lower bound was extrapolated).
+  Recompile independent function objects / fresh processes for monkeypatch A/B;
+  JAX function-identity caching must not reuse the old executable.
+- **Warm starts:** reject cross-call mutable solver state; maintain a pure
+  likelihood for arbitrary sampler order and transformations.
+
+### Completion evidence
+
+Commit a CPU campaign note in `results/notes/` with baseline/final comparisons,
+all candidate dispositions, reproducible commands, linked artifacts and shipped
+phase PRs. Include a GPU regression check for shared library changes and state
+any unmeasured hardware limitation. A ranked list alone is not completion: run
+and decide the warranted bounded iterations, including justified no-go results.
+
+## Preserved September 17 assessment and provenance
+
+The following is historical context; the campaign contract above governs new work.
 
 # PointSolver image-plane chi-squared CPU speed-up: is the JAX CPU path sub-optimal enough for a sparse/numba lever?
 
