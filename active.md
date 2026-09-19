@@ -1,17 +1,5 @@
 # Active Tasks
 
-## trim-external-shear-narrative
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571
-- issued: 2026-09-19
-- prompt: active/trim_external_shear_narrative.md
-- session: Codex (session ID unavailable)
-- status: workspace-shipped, ready-for-merge
-- worktree: ~/Code/PyAutoLabs-wt/trim-external-shear-narrative
-- repos:
-  - autolens_workspace: feature/trim-external-shear-narrative
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/573
-- validation: 17 script and notebook External Shear sections contain zero explanatory prose; Python compilation and size guard passed; notebooks regenerated; 37/37 curated scripts and 2/2 curated notebooks passed locally; GitHub CI pending.
-
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12
