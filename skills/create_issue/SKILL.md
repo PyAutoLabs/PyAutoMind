@@ -12,19 +12,10 @@ Turn a `PyAutoMind/` prompt into a tracked GitHub issue and register it.
 > via `PyAutoBrain/skills/GITHUB_ACCESS.md`. Do not install `gh` to close the
 > gap — that page records why an installed one still fails.
 
-A **PyAutoMind** primitive — it owns the mechanical **issue + registry write**:
-assemble the issue body, create the issue, register the task in `active.md`, move
-the prompt to `active/`, and push Mind state. The *reasoning* (classify repos,
-explore code, generate the plan) belongs to **PyAutoBrain**:
-
-- **Called by Brain.** `$start-dev` (`/start_dev` in Claude) does the triage/planning via the
-  Feature Agent and then **delegates the issue write to this skill**, passing the
-  primary repo, title, plan and suggested branch. Brain does not re-implement
-  issue creation.
-- **Runnable standalone.** You can run `$create-issue` (`/create_issue` in Claude) by itself when you just
-  want an issue from a prompt without full triage or worktree routing — it does a
-  *light* pass to fill any inputs the caller didn't supply. For deep
-  classification + dev-environment setup, use `$start-dev` instead.
+Mind owns the issue/registry write, prompt lifecycle move and push. Brain owns
+classification and planning. When called by start-dev, use its supplied repo,
+title, plan and branch verbatim; standalone, fill missing inputs with a light
+pass. Deep triage and environment setup still go through start-dev.
 
 Organ boundary and the execution-environment model: PyAutoBrain `skills/WORKFLOW.md`.
 
