@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1495 records across 8 buckets.
+1496 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -328,6 +328,7 @@ markers; everything below GENERATED is rebuilt.
 - [reconstruction-row-split](2026/09/reconstruction-row-split.md)
 - [release-integrate-discard-stale-result-files](2026/09/release-integrate-discard-stale-result-files.md)
 - [release-smoke-env-declarations](2026/09/release-smoke-env-declarations.md)
+- [release-smoke-multi-galaxy-park](2026/09/release-smoke-multi-galaxy-park.md) — The curated `smoke_tests.txt` no longer runs `multi_galaxy/start_here.py` while its existing `config/build/no_…
 - [remove-fits-dataset-plots-yaml](2026/09/remove-fits-dataset-plots-yaml.md)
 - [remove-parallel-ep-optimiser](2026/09/remove-parallel-ep-optimiser.md)
 - [replace-promise-no-op-graph-walk](2026/09/replace-promise-no-op-graph-walk.md)
