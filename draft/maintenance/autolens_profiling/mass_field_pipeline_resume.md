@@ -8,7 +8,7 @@ Epic: mass-field
 Status: draft
 Autonomy: supervised
 Filed: 2026-09-19
-Blocked-by: PyAutoGalaxy#625 and PyAutoLens#745 merged and released; profiling repo claim cleared or waived
+Unblocked: 2026-09-19 — PyAutoGalaxy#625 and PyAutoLens#745 are merged; the human approved consuming the helper from current source `main`. The profiling parallel-worktree waiver remains in force.
 
 ## Original user request
 

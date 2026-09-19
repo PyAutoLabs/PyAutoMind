@@ -8,7 +8,7 @@ Epic: mass-field
 Status: draft
 Autonomy: supervised
 Filed: 2026-09-19
-Blocked-by: PyAutoGalaxy#625 and PyAutoLens#745 merged/released for the new `mass_and_fields_from` helper; autolens_inference#8 simulator task claim released
+Unblocked: 2026-09-19 — PyAutoGalaxy#625 and PyAutoLens#745 are merged, the human approved consuming the helper from current source `main`, and the autolens_inference#8 simulator task is complete.
 
 ## Original user request
 
