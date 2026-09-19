@@ -100,7 +100,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/397
 - issued: 2026-09-19
 - prompt: active/workspace_organs_regroup.md
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/workspace-organs-regroup
 - approval: Human approved the two-phase organ migration with “ok go”; complete infrastructure compatibility first, then physical cutover. Preserve user changes and existing results/worktrees.
 - repos:
@@ -126,3 +126,22 @@
   - HowToLens: feature/workspace-organs-regroup
   - euclid_strong_lens_modeling_pipeline: feature/workspace-organs-regroup
 - coordination: Human explicitly approved updating only the Euclid generated smoke-bootstrap block on a separate branch, preserving other claimed branches and results.
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/398
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/420
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/234
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/285
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/100
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/29
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/159
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/245
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/567
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/32
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/102
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/124
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/323
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace_test/pull/20
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/67
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/79
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/88
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/91
+- note: Six infrastructure PRs merged. Canonical organ directories have NOT moved. Brain959/Mind573/Heart1032/Hands461/Memory210/Scientist8 tests passed plus review fixes; independent source review CLEAN. All12 generated smoke bootstraps pass flat+grouped fixtures. Await normal smoke CI and canonical hook/bootstrap propagation, then fresh journal outside moved repos at .migration/organs/cutover.json. Preserve canonical Cortex checkin branch and original Mind draft deletion.
