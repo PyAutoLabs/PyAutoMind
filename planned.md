@@ -2,12 +2,12 @@
 
 **Contents**
 
+- [catalogue-inspection-before-vis-pix](#catalogue-inspection-before-vis-pix)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
-- [catalogue-inspection-before-vis-pix](#catalogue-inspection-before-vis-pix)
 
 <!-- toc:end -->
 
