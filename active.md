@@ -1,32 +1,5 @@
 # Active Tasks
 
-## mass-field-pipeline-resume
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/289
-- issued: 2026-09-19
-- prompt: active/mass_field_pipeline_resume.md
-- session: Codex (session ID unavailable)
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/mass-field-pipeline-resume
-- repos:
-  - autolens_profiling: feature/mass-field-pipeline-resume
-- parallel-claim-waiver: Human approved for the MassField profiling sweep. Preserve every file and result in `hst-gpu-residue-p2` and the retained `mass-field-profiling-live` worktree.
-- summary: Carry a top-level MassField through all five profiling pipeline-resume stages using the helper on current source main.
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/290
-- validation: zero staged Galaxy shear sites; 667 passed, 5 skipped; Ruff, formatting, README, wall, and smoke checks passed.
-
-## mass-field-inference-slam
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/9
-- issued: 2026-09-19
-- prompt: active/mass_field_inference_slam.md
-- session: Codex (session ID unavailable)
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/mass-field-inference-slam
-- repos:
-  - autolens_inference: feature/mass-field-inference-slam
-- summary: Carry a top-level MassField through all five inference SLaM stages using the helper on current source main.
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/10
-- validation: five-stage runtime field witness passed; 56 tests, Ruff, formatting, README, wall, and smoke checks passed.
-
 ## mass-field-developer
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142
 - issued: 2026-09-19

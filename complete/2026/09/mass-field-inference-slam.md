@@ -1,3 +1,12 @@
+## mass-field-inference-slam
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/9 (closed completed 2026-09-19)
+- completed: 2026-09-19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/10 (merge f9266f57)
+- epic: mass-field (staged inference consumer)
+- summary: Migrated all five inference SLaM stages to a top-level `MassField`. Source LP creates the free field, source PIX 1 and mass total carry model fields through `mass_and_fields_from`, and source PIX 2 plus light LP use fixed instance fields. The helper is consumed from current PyAutoGalaxy/PyAutoLens source `main`; no packaged release is required. Validation: the five-stage runtime field witness and 56 tests passed, with Ruff, formatting, README, wall, smoke, and required CI checks green.
+
+## Original prompt
+
 # Move inference SLaM stages to flat fields
 
 Type: maintenance

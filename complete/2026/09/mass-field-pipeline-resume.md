@@ -1,3 +1,12 @@
+## mass-field-pipeline-resume
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/289 (closed completed 2026-09-19)
+- completed: 2026-09-19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/290 (merge a8bee1d1)
+- epic: mass-field (staged profiling consumer)
+- summary: Migrated all five profiling pipeline-resume stages to a top-level `MassField`. Source LP creates the free field, source PIX 1 and mass total carry model fields through `mass_and_fields_from`, and source PIX 2 plus light LP use fixed instance fields. The helper is consumed from current PyAutoGalaxy/PyAutoLens source `main`; no packaged release is required. Validation: zero staged Galaxy shear sites, 667 passed and 5 skipped, Ruff, formatting, README, wall, smoke, and required CI checks passed.
+
+## Original prompt
+
 # Carry flat fields through profiling pipeline resume
 
 Type: maintenance
