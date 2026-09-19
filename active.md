@@ -16,10 +16,12 @@
 - issued: 2026-09-20
 - prompt: active/remove_empty_modeling_headings.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: workspace-shipped, ready-for-merge
 - worktree: ~/Code/PyAutoLabs-wt/remove-empty-modeling-headings
 - repos:
   - autolens_workspace: feature/remove-empty-modeling-headings
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/575
+- validation: zero External Shear headings remain in scripts or generated notebooks; all 17 Source Galaxy headings are preserved; compilation and size guard passed; 37/37 curated scripts and 2/2 curated notebooks passed locally; GitHub CI pending.
 
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
