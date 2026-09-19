@@ -44,13 +44,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 216 |
+| [Backlog](#backlog) (`draft/`) | 217 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Finish migrating user threads to the Discussions hub</a> — community · small · human-required · high</summary>
 
@@ -132,18 +132,18 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/docs/pyautoscientist/org_community_guidance_and_welcome.md">Make organization-wide community guidance visible and canonical</a> — pyautoscientist · medium · supervised · high</summary>
 
 ```
-/start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
+/start_dev draft/docs/pyautoscientist/org_community_guidance_and_welcome.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
 
 ```
-/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
+/start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
 ```
 
 </details>
@@ -581,7 +581,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**216** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**217** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -1740,7 +1740,15 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 15</summary>
+<summary><b>docs</b> — 16</summary>
+
+<details><summary>📋 <a href="draft/docs/pyautoscientist/org_community_guidance_and_welcome.md">Make organization-wide community guidance visible and canonical</a> — pyautoscientist · medium · supervised · high</summary>
+
+```
+/start_dev draft/docs/pyautoscientist/org_community_guidance_and_welcome.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -2805,7 +2813,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 ## Hygiene
 
-53 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+54 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2838,6 +2846,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
+- `draft/docs/pyautoscientist/org_community_guidance_and_welcome.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
@@ -2849,8 +2858,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/maintenance/organs/reduce_session_token_load.md`
 - `draft/maintenance/pyautobrain/notify_slack_general_when_a_community_discussion.md`
 - `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
-- `draft/maintenance/workspaces/read_through_issues.md`
-- _… and 13 more_
+- _… and 14 more_
 
 </details>
 
