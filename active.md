@@ -1,5 +1,15 @@
 # Active Tasks
 
+## release-smoke-multi-galaxy-park
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/565
+- issued: 2026-09-19
+- prompt: active/release_smoke_respects_multi_galaxy_park.md
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/release-smoke-multi-galaxy-park
+- coordination: Human approved a separate branch despite existing mass-field-workspace-sweep and mass-field-flat-sweep claims; only smoke_tests.txt is in scope, and neither mass-field branch edits it.
+- repos:
+  - autolens_workspace: feature/release-smoke-multi-galaxy-park
+
 ## mass-field-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/559
 - issued: 2026-09-17

@@ -7,6 +7,7 @@ Repos:
 Priority: high
 Status: formalised
 Consequence: block
+Issued: 2026-09-19
 Witness: a release-smoke selection check excludes `scripts/multi_galaxy/start_here.py` while its `config/build/no_run.yaml` SLOW park remains, and still selects the other `multi_galaxy/` smoke entries. The existing script-cost profiling task remains separate; no tutorial script or library source is weakened.
 
 ## Context
