@@ -22,7 +22,7 @@ Witness: an AST re-walk (never a grep — memory `ASTwitness`) over each repo's 
 Review-minutes: 10
 Unattended: needs-slicing
 Epic: mass-field
-Blocked-by: `draft/feature/autogalaxy/mass_from_grows_a_fields_argument.md` shipped (the chaining helper has a `fields` route), and the PyAutoGalaxy/PyAutoLens release that gates autolens_workspace#562 / autolens_workspace_test#322
+Superseded-by: `draft/maintenance/autolens_profiling/mass_field_live_builders.md` and `draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md`; helper merged in PyAutoGalaxy#625 / PyAutoLens#745, publication pending
 Filed: 2026-09-18
 
 ## The trap, stated first

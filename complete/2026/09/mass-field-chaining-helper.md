@@ -1,3 +1,15 @@
+## mass-field-chaining-helper
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/624 (closed completed 2026-09-19)
+- completed: 2026-09-19
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/625 (merge 1652a0e8)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/745 (merge 50c0046b)
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/625
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/745
+- epic: mass-field (follow-up to the released flat fields API)
+- summary: Added `mass_and_fields_from(mass, mass_result, *, fields_result, unfix_mass_centre=False)` in PyAutoGalaxy. It keeps `mass_from` mass-only and its return contract unchanged, while requiring callers to select a field explicitly and returning `(updated_mass, fields_result)`. PyAutoLens reexports the helper and tests both a carried field prior and a fixed instance field through a two-stage lens model; the model cookbook documents the route. The galaxy-attached identifier pin remains unchanged. Local suites: PyAutoGalaxy 1238 passed; PyAutoLens 740 passed, 1 expected failure. Every reported PR Docs and Tests leg passed for Python 3.12, 3.13 and no-JAX. Both PRs merged in library order on 2026-09-19. Publication remains pending before dependent workspace PRs may merge.
+
+## Original prompt
+
 # Carry a field with the mass through a chained stage
 
 Type: feature

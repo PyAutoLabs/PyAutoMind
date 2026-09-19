@@ -96,7 +96,7 @@ pipelines), `plotting_alignment/**`, `source_science/*`.
 - Three live SLaM pipelines (`slam_pipeline/{dspl,light_dark_mge,mgl_slam_batch}.py`)
   chain stages, so the **silent-drop** failure mode applies: a stage carrying galaxies
   forward without `fields=` loses the external field with no error. They wait on
-  `draft/feature/autogalaxy/mass_from_grows_a_fields_argument.md`.
+  `complete/2026/09/mass-field-chaining-helper.md` (merged, pending publication).
 - Target idiom is the flat form:
   `field = af.Model(al.MassField, redshift=..., shear=af.Model(al.mp.ExternalShear))`
   then `fields=field`; prior paths read `fields.shear.gamma_1`.
