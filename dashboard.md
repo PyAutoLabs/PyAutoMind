@@ -564,7 +564,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 **223** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 64</summary>
+<summary><b>bug</b> — 65</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -618,6 +618,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace/release_smoke_respects_multi_galaxy_park.md">Keep the live release smoke gate aligned with the multi-galaxy SLOW park</a> — autolens_workspace · high</summary>
+
+```
+/start_dev draft/bug/autolens_workspace/release_smoke_respects_multi_galaxy_park.md
 ```
 
 </details>
@@ -1390,7 +1398,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 25</summary>
+<summary><b>maintenance</b> — 24</summary>
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
 
@@ -1428,14 +1436,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/organs/agent_harness_agnostic_setup.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the hardcoded paths</a> — pyautobrain · large · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/pyautobrain/workspace_resolver_fanout.md
 ```
 
 </details>
@@ -2135,40 +2135,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pyautobrain — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'pyautobrain — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/maintenance/pyautobrain/workspace_resolver_fanout.md
-- draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
-- draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
-- draft/bug/pyautobrain/cortex_test_worktree_symlink.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the…</a> | large | high | formalised |
-| <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
-| <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
-| <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails…</a> | small | low | formalised |
-
-</details>
-
-<details>
 <summary><b>organs — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2229,6 +2195,40 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> | easy | medium | formalised |
 | <a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> | small | medium | formalised |
 | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> | small | low | formalised |
+
+</details>
+
+<details>
+<summary><b>autolens_workspace — bundle 1</b> — 4 task(s) · 5 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'autolens_workspace — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autolens_workspace/release_smoke_respects_multi_galaxy_park.md
+- draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md
+- draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
+- draft/test/autolens_workspace/no_untimed_network_downloads_check.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autolens_workspace/release_smoke_respects_multi_galaxy_park.md">Keep the live release smoke gate aligned with the multi-galaxy SLOW…</a> | - | high | formalised |
+| <a href="draft/bug/autolens_workspace/delaunay_smoke_300s_cap.md"><code>imaging/features/pixelization/delaunay.py</code> sits on the 300 s smoke…</a> | small | medium | draft |
+| <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> | small | medium | draft |
+| <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> | small | medium | formalised |
 
 </details>
 
