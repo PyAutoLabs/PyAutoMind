@@ -76,9 +76,15 @@ def installations(root, repos, require_all=False):
     """
     root = root.absolute()
     import importlib.util
-    resolver_file = root / "PyAutoBrain/agents/_repo_paths.py"
+    candidates = [p for p in (
+        root / "PyAutoBrain/agents/_repo_paths.py",
+        root / "organs/PyAutoBrain/agents/_repo_paths.py",
+    ) if p.is_file()]
+    if len({p.resolve() for p in candidates}) > 1:
+        raise ValueError("PyAutoBrain: ambiguous flat and grouped checkouts")
+    resolver_file = candidates[0] if candidates else None
     resolver = None
-    if resolver_file.is_file():
+    if resolver_file is not None:
         spec = importlib.util.spec_from_file_location("_pyauto_repo_paths", resolver_file)
         resolver = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(resolver)

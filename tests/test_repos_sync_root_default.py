@@ -78,6 +78,33 @@ def test_without_a_brain_checkout_the_root_is_the_parent(tmp_path):
     assert repos_sync.root_marker(mind) == repos_sync.ROOT_MARKER_FALLBACK
 
 
+def test_grouped_mind_without_brain_uses_workspace_root(tmp_path):
+    mind = make_mind(tmp_path / "workspace" / "organs")
+    assert repos_sync.workspace_root(mind) == tmp_path / "workspace"
+    assert repos_sync.repo_checkout(tmp_path / "workspace", "PyAutoMind") == mind
+
+
+def test_grouped_brain_bootstraps_root_resolver(tmp_path):
+    workspace = tmp_path / "workspace"
+    mind = make_mind(workspace / "organs")
+    agents = workspace / "organs" / "PyAutoBrain" / "agents"
+    agents.mkdir(parents=True)
+    (agents / "_pyauto_root.py").write_text(STUB.format(root=workspace, marker=".stub-root"))
+    assert repos_sync.workspace_root(mind) == workspace
+    assert repos_sync.root_marker(mind) == ".stub-root"
+
+
+def test_distinct_flat_and_grouped_brain_are_ambiguous(tmp_path):
+    workspace = tmp_path / "workspace"
+    install_stub(workspace, workspace)
+    agents = workspace / "organs" / "PyAutoBrain" / "agents"
+    agents.mkdir(parents=True)
+    (agents / "_repo_paths.py").write_text("# grouped\n")
+    (workspace / "PyAutoBrain" / "agents" / "_repo_paths.py").write_text("# flat\n")
+    with pytest.raises(ValueError, match="ambiguous"):
+        repos_sync._repo_resolver(workspace)
+
+
 def test_the_resolver_decides_when_it_can_see_this_checkout(tmp_path):
     workspace = tmp_path / "workspace"
     mind = make_mind(workspace)
