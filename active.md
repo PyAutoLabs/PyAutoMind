@@ -5,13 +5,15 @@
 - issued: 2026-09-19
 - prompt: active/mass_field_flat_adoption_developer.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-release-and-merge
 - worktree: ~/Code/PyAutoLabs-wt/mass-field-developer
 - repos:
   - autolens_workspace_developer: feature/mass-field-developer
 - release-gate: PyAutoGalaxy
 - release-gate: PyAutoLens
 - summary: Migrate live developer scripts, preserve archives and re-measure the two pinned likelihoods.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143
+- validation: 0 live legacy Galaxy shear AST sites; HST MGE, imaging simulator, search fit, plotting alignment and 32 LOS tests passed; point-source pin drift is preexisting and separate.
 
 ## mass-field-inference-sim
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/7

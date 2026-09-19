@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_flat_adoption_developer.md">Is <code>autolens_workspace_developer</code> in the MassField epic</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142">issue #142</a> — issued 2026-09-19 — workspace-dev — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
+<details><summary>📋 <a href="active/mass_field_flat_adoption_developer.md">Is <code>autolens_workspace_developer</code> in the MassField epic</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142">issue #142</a> — issued 2026-09-19 — workspace-shipped, awaiting-release-and-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143">autolens_workspace_developer#143</a> — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/mass_field_flat_adoption_developer.md

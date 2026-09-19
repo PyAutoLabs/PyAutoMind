@@ -25,6 +25,10 @@ Issued: 2026-09-19
 
 The human approved the cross-repository flat-fields migration and confirmed the deleted `autolens_jax_joss` checkout is out of the sweep. Migrate the live modelling trees in this developer workspace, preserving the exclusions below for committed measurements, frozen archives and Euclid-owned debug scripts. The initial work plan was presented and approved in this session. The new chaining helper is in open library PRs, so the three SLaM scripts may be prepared in a branch but their workspace PR cannot merge before the library-first release gate clears.
 
+Implementation scope correction: preserve all of `source_science/**`, including shared `fit_helpers.py`, `sim_helpers.py`, and `extract_mge_truth.py`. `run_all_tests.py` imports the shared helpers and is explicitly idempotent against cached fit identifiers behind committed measurement rows. Migrating those helpers would change the archived run contract even with `results/**` byte-unchanged. The live-code AST witness excludes this measurement tree.
+
+Implementation compatibility finding: `slam_pipeline/dspl.py` and `slam_pipeline/light_dark_mge.py` import the local `slam_pipeline` namespace, which has no `source_lp`, `source_pix`, or other pipeline modules in this checkout. Their `shear=` arguments target that absent legacy API, so they cannot be validated or converted to a `fields` argument without restoring or replacing the external pipeline. Preserve these two scripts as legacy examples. `slam_pipeline/mgl_slam_batch.py` is the runnable standalone stage builder to migrate.
+
 Original request (verbatim):
 
 > We have been doing work which updates workspaces and lots more to a fields API, can we review where the updating te API for everything got too (E.g. I dont think we have done HowToLens) and continue all of that until its done?
