@@ -75,4 +75,4 @@ portable, but several live surfaces remain Claude-specific:
 
 Phases 1 and 2 are complete: see `complete/2026/09/provider-neutral-bundle-prompts.md`
 and `complete/2026/09/codex-hook-parity.md` (all six hook PRs merged).
-Phases 3 and 4 remain; phase 3 is planned as PyAutoBrain#386.
+Phases 3 and 4 are implemented and independently reviewed CLEAN as of 2026-09-19, with eight open PRs per phase. Phase 3: https://github.com/PyAutoLabs/PyAutoBrain/pull/401. Phase 4: https://github.com/PyAutoLabs/PyAutoBrain/pull/402. Their descriptions list companion PRs. Focused tests passed and Codex discovered all 105 generated skills. Awaiting human merge in dependency order; this parent remains open until the PRs land. Bounded discovery smoke does not establish full scientific execution or every-harness parity.

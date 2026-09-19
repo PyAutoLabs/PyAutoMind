@@ -115,12 +115,21 @@
 - note: "Resumed 2026-09-19 under the plan approved 2026-09-17; conflicts cleared. Worktrees kept inside the workspace. Preserve the two personal assistant scripts and unrelated local Mind prompt deletion."
 - coordination: "Implementation and independent review complete. Source claims transferred to sequential phase 4 (#400); phase-3 worktrees retained for PR review."
 
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/401
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/48
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/129
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/30
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/160
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/246
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/568
+
 ## provider-agnostic-metadata
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/400
 - issued: 2026-09-19
 - prompt: active/provider_agnostic_agent_metadata_docs.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/provider-agnostic-metadata
 - repos:
   - PyAutoBrain: feature/provider-agnostic-metadata
@@ -132,3 +141,12 @@
   - autocti_assistant: feature/provider-agnostic-metadata
   - autolens_workspace_test: feature/provider-agnostic-metadata
 - note: "Phase 4 plan explicitly approved 2026-09-19. Sequential follow-up to phase 3; shared-repo PRs stack on feature/codex-skill-discovery until its human merge. Independent repos target main. No concurrent phase-3 implementation."
+
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/402
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/424
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/101
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/49
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/28
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/130
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/31
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/324

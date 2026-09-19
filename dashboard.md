@@ -44,13 +44,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 221 |
+| [Backlog](#backlog) (`draft/`) | 220 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 22
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
 
@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/386">issue #386</a> — issued 2026-09-17 — awaiting-merge</summary>
+<details><summary>📋 <a href="active/codex_skill_discovery_parity.md">Make assistant and workspace skills discoverable in Codex</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/386">issue #386</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/401">PyAutoBrain#401</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/48">autofit_assistant#48</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/27">autogalaxy_assistant#27</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/129">autolens_assistant#129</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/30">autocti_assistant#30</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/160">autofit_workspace#160</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/246">autogalaxy_workspace#246</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/568">autolens_workspace#568</a></summary>
 
 ```
 /start_dev active/codex_skill_discovery_parity.md
@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/400">issue #400</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/provider_agnostic_agent_metadata_docs.md">Remove remaining provider assumptions from agent metadata and docs</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/400">issue #400</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/402">PyAutoBrain#402</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/424">PyAutoMind#424</a>, <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/101">PyAutoMemory#101</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/49">autofit_assistant#49</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/28">autogalaxy_assistant#28</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/130">autolens_assistant#130</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/31">autocti_assistant#31</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/324">autolens_workspace_test#324</a></summary>
 
 ```
 /start_dev active/provider_agnostic_agent_metadata_docs.md
@@ -547,7 +547,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**221** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
+**220** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -1376,7 +1376,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 23</summary>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
 
@@ -1398,14 +1398,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/organs/agent_harness_agnostic_setup.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the hardcoded paths</a> — pyautobrain · large · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/pyautobrain/workspace_resolver_fanout.md
 ```
 
 </details>
@@ -2105,40 +2097,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pyautobrain — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'pyautobrain — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/maintenance/pyautobrain/workspace_resolver_fanout.md
-- draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
-- draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
-- draft/bug/pyautobrain/cortex_test_worktree_symlink.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the…</a> | large | high | formalised |
-| <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
-| <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
-| <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails…</a> | small | low | formalised |
-
-</details>
-
-<details>
 <summary><b>organs — bundle 1</b> — 2 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2297,6 +2255,38 @@ Contract (the `start_bundle` skill is the full body):
 |--------|------|------------|----------|--------|
 | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> | autoarray | medium | high | - |
 | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> | autoarray | medium | high | formalised |
+
+</details>
+
+<details>
+<summary><b>ci</b> — 3 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: ci, robustness</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'ci' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
+- draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
+- draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> | pyautoheart | small | high | formalised |
+| <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> | pyautomind | small | high | formalised |
+| <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> | pyautomemory | small | medium | formalised |
 
 </details>
 

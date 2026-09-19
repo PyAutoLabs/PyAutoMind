@@ -93,3 +93,18 @@ are now claimed by phase 3, so phase 4 must follow it. Memory and
 `autolens_workspace_test` are clean. Mind has an unrelated local deletion of
 `draft/maintenance/pyautobrain/workspace_resolver_fanout.md`; preserve it.
 The two assistant personal scripts noted in phase 3 also remain out of scope.
+
+## Implementation — 2026-09-19
+
+Canonical instruction migrations, both guarded ledger namespaces, provider-aware resume/attribution, template consumers and bounded smoke documentation are implemented. Ledger (26), template/privacy (111), hook adapters (8), guard fixtures (68), Memory faculty (8) and Memory board (62) tests passed; structure and wikilink checks passed. Independent review: CLEAN. All PRs are open and labeled pending-release; awaiting human merge. Heart STALE: `release validation incomplete: no rehearsal for current source`; no release approval.
+
+- https://github.com/PyAutoLabs/PyAutoBrain/pull/402
+- https://github.com/PyAutoLabs/PyAutoMind/pull/424
+- https://github.com/PyAutoLabs/PyAutoMemory/pull/101
+- https://github.com/PyAutoLabs/autofit_assistant/pull/49
+- https://github.com/PyAutoLabs/autogalaxy_assistant/pull/28
+- https://github.com/PyAutoLabs/autolens_assistant/pull/130
+- https://github.com/PyAutoLabs/autocti_assistant/pull/31
+- https://github.com/PyAutoLabs/autolens_workspace_test/pull/324
+
+Phase 4 shared-repository PRs stack on phase 3. Merge phase 3 first; Memory before running the updated Mind template generator, Brain smoke documentation before assistant documentation links. Worktrees retained until merge.
