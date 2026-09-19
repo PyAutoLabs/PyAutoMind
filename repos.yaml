@@ -159,6 +159,7 @@ repos:
     category: library
     role: "Model-fitting / non-linear search / aggregator library."
   PyAutoArray:
+    path: array/PyAutoArray
     github: PyAutoLabs/PyAutoArray
     package: autoarray
     category: library
