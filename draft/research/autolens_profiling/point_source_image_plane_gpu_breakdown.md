@@ -1,9 +1,11 @@
-# Point-source image-plane chi-squared on the A100: likelihood breakdown, bottleneck map, speed-up levers
+# Point-source A100 speed-up campaign: shared likelihood breakdown first, then measured iteration
 
 Type: research
 Target: autolens_profiling
 Repos:
 - autolens_profiling
+- PyAutoArray
+- PyAutoLens
 Themes:
 - point-source
 - profiling
@@ -16,6 +18,152 @@ Consequence: judge
 Review-minutes: 30
 Unattended: ready
 Filed: 2026-09-17
+Updated: 2026-09-19
+
+## Campaign contract (2026-09-19)
+
+This execution plan supersedes the earlier deliverable/gate wording retained below.
+This is one of two existing prompts expanded in place, not another duplicate task.
+It is a phased campaign: at start-dev, issue only the next bounded phase (one task /
+one PR per member), retaining this prompt as the campaign intent until all phases
+are resolved. Do not attempt a cross-library, multi-PR campaign as a single task.
+Use start-dev and the applicable library/workspace worktree and ship procedures;
+obtain implementation-plan approval before source edits. No profiling or library
+implementation was performed during this consolidation.
+
+### Measurement and acceptance contract
+
+- Use @autolens_profiling for timing and versioned JSON + PNG evidence, with
+  README/dashboard regeneration. Correctness evidence belongs in library tests
+  and @autolens_workspace_test, not a timing-only assertion of scientific validity.
+- Record exact library/profiling commits, JAX/jaxlib versions, device, precision,
+  XLA flags, thread settings, model/data seed, source planes, solver grid/scale,
+  precision, neighborhood degree, capacity, warm-up, repetitions and cache state.
+  Historical numbers are leads, not comparable current baselines.
+- Separate tracing/lowering, compilation, first execution and warmed runtime.
+  Synchronize device outputs with block_until_ready; pass varying parameter
+  inputs through the production likelihood so constant folding cannot fake work.
+  Report repeated/interleaved A/B medians and dispersion on identical hardware,
+  both ms/likelihood and batch throughput, plus memory where relevant.
+- Retain a fused end-to-end production likelihood control. Prefix timing
+  differences can change fusion and contain noise: report residuals/negative
+  differences honestly and corroborate with a device trace rather than claiming
+  independently timed steps sum to the fused runtime.
+- Compare likelihood, image counts/positions, NaN padding/masks, magnification
+  filtering and source-redshift handling. Cover perturbed models, doubles/quads,
+  near-caustic/critical configurations and cluster multi-source/multiplane cases.
+  Preserve custom_jvp, eager/JIT/vmap parity and gradient correctness; distinguish
+  nondifferentiable image-topology transitions from failures in smooth regions.
+- Each iteration: baseline -> one hypothesis -> bounded prototype -> correctness
+  gate -> repeated full-likelihood A/B -> accept/reject -> reprofile and rank the
+  remaining bottleneck. State minimum detectable improvement from observed noise;
+  keep a change only for a repeatable material gain without correctness or
+  unacceptable compile/memory regressions. Record negative results too.
+- Stop when remaining cost is explained and no worthwhile measured lever remains,
+  or a concrete external blocker prevents the next experiment. Do not promise the
+  historical speedup, optimize indefinitely, or weaken correctness to hit a target.
+
+### Original consolidation request (verbatim)
+
+We did two reviews or assessments of the point source likelihood function recently one for CPU which was JAX and numba sparse (it concluded numba spaerse not worth it) and one for GPU. We may of made some prompts but I want you to assess all that the review put forward and ultimately end with two mind task or prompts, which could be epics, which will profile them with autolens_profiling and iteratively work on the speed up. One was focused in particular on writing an autolens_profiling likelihood_breakdown script, which it may of wrote or just planned, this would likely be the task before we go into specific CPU or GPU speed up
+
+## GPU campaign: shared breakdown first, then measured A100 optimization
+
+### Evidence audit (2026-09-19)
+
+Fetched @autolens_profiling `origin/main` has the four point-source runtime
+scripts but no `scripts/point_source/likelihood_breakdown/` or corresponding
+point-source breakdown results. Its cluster breakdown times `solver.solve` as
+one block. The September 17 GPU prompt is a proposed investigation, not an A100
+bottleneck verdict. Existing historical A100 science/defaults evidence is not a
+substitute for this dedicated breakdown. No new A100 performance claim is made.
+
+The CPU sibling preserves reported scratch gains, not landed profiling artifacts.
+Its redundant vertex sort is distinct from necessary triangle deduplication;
+GPU benefit must be measured rather than extrapolated from CPU ratios.
+
+### Phase 0 — shared instrumentation and unmodified baselines (first task)
+
+Own and ship `scripts/point_source/likelihood_breakdown/image_plane.py`, or a
+clearly documented solved sibling, matching the existing profiling harness.
+Include the exact `image_plane_solved` fit class/configuration used by the CPU
+assessment and a separately identified plain image-plane control. Reuse existing
+simulators and cluster configurations; pass each source's plane_redshift explicitly.
+
+Open the solver loop: initial lattice/vertex-index construction, each refinement
+step's ray tracing, containment, selection, neighborhood, deduplication and
+up-sampling, followed by magnification filtering, analytic source-centre work
+where applicable and pairing/chi-squared. Report step shapes/capacity and actual
+vertex counts so padding, geometry and deflection work can be distinguished.
+Use prefix-walk timing where valid with fused controls and a trace; preserve
+production semantics rather than replacing the solver with a simplified benchmark.
+
+Deliver local CPU fp64 baseline JSON + PNG in `results/breakdown/point_source/`,
+end-to-end agreement, smoke integration and dashboard visibility. Establish an
+A100 fp64 baseline on the same unmodified commits before GPU optimization;
+record mixed precision separately with accuracy results. CPU campaign may begin
+as soon as the shared harness and CPU baseline land; hardware queue availability
+must not force it to wait for all GPU investigation. Retain baseline commits for
+paired A100 runs if shared fixes land before a GPU slot is available.
+
+This phase is the shared prerequisite, owned here exactly once. The sibling
+`point_solver_profiling_cells.md` owns broader quasar/flux and cluster runtime
+catalogue expansion; reuse any landed cells but do not absorb or duplicate that
+separate task. No dependency cycle with that catalogue expansion is required.
+
+### Phase 1 — A100 bottleneck map
+
+- Use the profiling repo's actual `hpc/README.md` and sync configuration. This
+  repo's `hpc/sync` has no push: update RAL code with git and library checkouts
+  through HPCPullPyAuto, verify revisions, submit through its supported driver,
+  and ingest pulled results from LOCAL_PULL_ROOT. Do not copy a generic
+  science-project push-submit recipe into this task.
+- Obtain a fused device timeline following the maintained trace precedent;
+  attribute kernels to source operations and distinguish launch/host overhead,
+  sorting/gathers, deflections, synchronization and device computation.
+- Test vmap batches 1/4/16 then larger only within measured memory headroom;
+  include the historical batch-3 control if useful. Use distinct parameter
+  inputs; report latency, throughput, peak memory and batch setup costs.
+- Separate fp64/mixed-precision, compilation/cold start/warm execution, simple
+  and representative cluster single-/multi-source/multiplane configurations.
+- Time primal likelihood and the custom_jvp gradient path separately, including
+  batched gradients. Confirm finite-difference agreement at smooth parameter
+  points before treating gradient throughput as usable.
+
+### Phase 2 — bounded optimization iterations
+
+1. Re-evaluate the CPU redundant-sort removal on A100, sharing the same library
+   fix if valid; coordinate ownership rather than implement a competing patch.
+2. If traces support launch-bound execution, prioritize vmap and benchmark the
+   batch break-even/memory limit. A faster per-item batch is not lower latency
+   for a serial caller; publish both and identify which caller can exploit it.
+3. If sorts/gathers dominate, target the measured operation and consider the
+   static-lattice precompute jointly with CPU; preserve containment and padding.
+4. If unrolled refinement drives compile cost, evaluate a JAX loop representation
+   only after checking step-shape changes and autodiff constraints. Compare
+   compile amortization and steady state; don't assume scan/loop is faster.
+5. If the implicit-gradient leg dominates, profile its Jacobian/linear algebra
+   before changing it; preserve the implicit derivative contract.
+6. If deflections dominate, route a bounded profile-specific library phase
+   informed by `scripts/lens/deflections/`; retain CPU regression measurements.
+
+For each lever publish accepted/rejected/deferred reasoning and re-profile after
+accepted changes. Initial launch-latency, sort dominance, unrolled-compile and
+Jacobian-cost claims remain hypotheses until phase 1 measures them.
+
+### Completion evidence
+
+Ship the shared harness, committed CPU/A100 baseline and final artifact pairs,
+trace-derived bottleneck map, batching/precision/compile/gradient tables, and
+`results/notes/point_source_gpu_breakdown_2026_09.md` with phase PRs and commands.
+Finish warranted optimization iterations, not just filing another list of
+follow-ups. Explicitly record rejected levers and residual bottlenecks. If A100
+access is unavailable, phase 0 CPU delivery can stand but GPU phases remain
+pending; never label CPU timing as A100 evidence.
+
+## Preserved September 17 assessment and provenance
+
+The following is historical context; the campaign contract above governs new work.
 
 # Point-source image-plane chi-squared on the A100: likelihood breakdown, bottleneck map, speed-up levers
 
