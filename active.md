@@ -11,6 +11,9 @@
   - PyAutoGalaxy: feature/mass-field-chaining-helper
   - PyAutoLens: feature/mass-field-chaining-helper
 - note: "Add a required-field companion helper; preserve `mass_from` return contract. HowToLens#90 and autolens_assistant#131 are open phase-5 PRs."
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/625
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/745
+- validation: "Red-first chaining witness confirmed; PyAutoGalaxy 1238 passed; PyAutoLens 740 passed, 1 xfailed; legacy identifier pin passed. Heart STALE only for absent current-source release rehearsal."
 
 ## mass-field-sibling-sweep
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/89
