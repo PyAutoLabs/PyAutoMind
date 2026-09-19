@@ -41,3 +41,23 @@ Acceptance:
 A new user can find the data and prerequisites, submit the documented prompt and follow an auditable workflow; the frozen benchmark measures the validity and reference agreement of the point-mass fit rather than merely successful execution. The public example asks for a point-mass fit, not reproduction of the entire discovery or model comparison. Missing data or unperformed full runs remain explicitly marked.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-19 from user-intake -->
+
+## Website image follow-up
+
+User request (verbatim):
+"put imrpoving the image as an intake in autolens assistants task, then get this draft webpage live so I can review it"
+
+As part of the same Abell 1201 demonstration, produce a more attractive,
+scientifically faithful image for the Natural Language & AI webpage from the
+original telescope data. The current placeholder is the Astrobites featured
+image credited to Nightingale et al. (2023):
+https://astrobites.org/wp-content/uploads/2023/04/Screen-Shot-2023-04-05-at-8.58.48-AM.png
+
+Use a considered colour map, intensity stretch, framing and minimal labels
+to make the lens and arc clear to public readers. Preserve real structures;
+do not invent or remove astronomical features or imply the black hole is
+directly visible. Keep the source data unchanged, save the plotting script
+and display settings, and provide a web-ready export with alt text, a plain
+language caption and source credit. Distinguish observed data from any model
+output. This presentation work does not expand the point-mass benchmark into
+model comparison.
