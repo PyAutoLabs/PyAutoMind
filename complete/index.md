@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1526 records across 8 buckets.
+1529 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -331,6 +331,8 @@ markers; everything below GENERATED is rebuilt.
 - [numpy-deflections-p3](2026/09/numpy-deflections-p3.md)
 - [offtick-timing-legs-live](2026/09/offtick-timing-legs-live.md)
 - [order-lens-mge-bases-and-seed](2026/09/order-lens-mge-bases-and-seed.md)
+- [org-community-guidance-hub](2026/09/org-community-guidance-hub.md) — Organization contribution/conduct/support guidance centralized in .github; Scientist compatibility pointers an…
+- [org-community-guidance-scientist](2026/09/org-community-guidance-scientist.md) — Organization contribution/conduct/support guidance centralized in .github; Scientist compatibility pointers an…
 - [organ-board-github-link](2026/09/organ-board-github-link.md) — Every organ board header now carries a `GitHub Page` link beside its existing
 - [over-sample-snr-double-division](2026/09/over-sample-snr-double-division.md)
 - [parameterization-prior-count](2026/09/parameterization-prior-count.md)
@@ -387,6 +389,7 @@ markers; everything below GENERATED is rebuilt.
 - [test-mode-bypass-save-results](2026/09/test-mode-bypass-save-results.md) — closed completed 2026-09-14
 - [traced-assertions-on-jax-path](2026/09/traced-assertions-on-jax-path.md)
 - [transformed-from-mode-coupled-covariance](2026/09/transformed-from-mode-coupled-covariance.md) — closed completed 2026-09-07
+- [trim-external-shear-narrative](2026/09/trim-external-shear-narrative.md) — Removed the expanded external-shear explanatory prose from all 17 script and generated-notebook sections, reta…
 - [tutorial-searches-writes-into-chapter-2](2026/09/tutorial-searches-writes-into-chapter-2.md)
 - [unit-test-import-time-hotspot-census](2026/09/unit-test-import-time-hotspot-census.md)
 - [user-workspace-howto-slow-script-pass](2026/09/user-workspace-howto-slow-script-pass.md)

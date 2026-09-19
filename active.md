@@ -8,20 +8,21 @@
 - status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/point-source-shared-breakdown
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/293
+- pending-release: autolens_profiling@https://github.com/PyAutoLabs/autolens_profiling/pull/293
 - repos:
   - autolens_profiling: feature/point-source-shared-breakdown
 - parallel-claim: "Human authorized coordinated parallel work with hst-gpu-residue-p2 on 2026-09-19. Source files are disjoint; both tasks may regenerate README tables, so this task must rebase on current main and regenerate dashboards immediately before shipping."
-- summary: "Shared device-aware point-source likelihood breakdown and canonical CPU fp64 baseline complete. Fused solved likelihood 62.687 ms/call; eager/JIT/vmap parity and finite gradient passed. Commits 3052443 + 0007651; PR #293 open with pending-release label and lint queued. Heart STALE only for absent release rehearsal, with no RED/YELLOW reasons."
+- summary: "Shared device-aware point-source likelihood breakdown and canonical CPU fp64 baseline complete. Fused solved likelihood 62.687 ms/call; eager/JIT/vmap parity and finite gradient passed. Commits 3052443 + 0007651; PR #293 merged as eab1b3d after lint passed. Heart STALE only for absent release rehearsal, with no RED/YELLOW reasons."
 
-## trim-external-shear-narrative
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571
-- issued: 2026-09-19
-- prompt: active/trim_external_shear_narrative.md
+## remove-empty-modeling-headings
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/574
+- issued: 2026-09-20
+- prompt: active/remove_empty_modeling_headings.md
 - session: Codex (session ID unavailable)
 - status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/trim-external-shear-narrative
+- worktree: ~/Code/PyAutoLabs-wt/remove-empty-modeling-headings
 - repos:
-  - autolens_workspace: feature/trim-external-shear-narrative
+  - autolens_workspace: feature/remove-empty-modeling-headings
 
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
@@ -81,17 +82,20 @@
   - autolens_profiling: feature/hst-gpu-residue-p2
 - parallel-claim: "autolens_profiling was also claimed by fixed-light-numba-levers (#267, COMPLETE 2026-09-16, merged and closed out; worktree removed): its files are fixed_light_numba*, fixed_light_numpy_solvers.py, the lever submits/results and fixed_lens_light_levers_2026_09.md; this task touches fixed_light_trace.py, a new host_callback_probe.py, library_solver_injection.py, a new vmap submit + results + note — disjoint, own worktree beside it exactly as phase 1 (#268) did."
 - note: "Phase 2 of hst-gpu-non-solver-residue, STEP 1 ONLY (matched vmap-vs-jit A100 experiment + policy; PyAutoArray batch-aware callback deferred to phase 2b via /intake if the numbers warrant). Fable session plans, Opus executes. A100 submit -> wait -> harvest is a human resume point. Heart RED (install verify testpypi F; release integrate) at start; PR-open needs the human's ack. Phase-1 worktree ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1 still awaits the human's cleanup (3 untracked .err -> worktree_remove -> branch -d)."
-- hpc: "A100 array 343376 tasks 0-4 SUBMITTED 2026-09-17 00:10 BST from RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p2 @ bf52147 (B16 distinct fb-on / B16 fb-off / B8 / B4 / B16 identical control); all 5 RUNNING on euclid-ral-gpu-1/2 at submit. HUMAN RESUME POINT: when done, harvest = commit the 5 results/breakdown/imaging/fixed_light_trace_delaunay_vmap*_hpc_a100_fp64_*.{json,png} in the RAL worktree, fetch locally (git fetch euclid_jump:/mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p2 feature/hst-gpu-residue-p2), check AUTOTUNE_ENTRIES count=0 + unjoined 0 + lane pins PASS in hpc/batch_gpu/output/output.343376_*.out, then Phase C (note + errata + README + ship). Phase A on the issue: #273 comment 2026-09-17."
+- hpc: "Array 343376 is preserved as HISTORICAL vmap(jit) evidence at profiling revision bf52147; it no longer represents production after PyAutoFit#1638. Replacement A100 array 344635 tasks 0-4 submitted 2026-09-19 from RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p2 @ e2a5187 against refreshed shared-library mains (B16 distinct fb-on / B16 fb-off / B8 / B4 / B16 identical control); all 5 RUNNING on euclid-ral-gpu-1/2 in the one post-submit check. HUMAN RESUME POINT: when done, pull logs/results, check CELL_EXIT=0, AUTOTUNE_ENTRIES count=0, unjoined 0, reconciliation within 5 %, and every per-lane jit(vmap)/scalar/library-PDIP pin PASS; then write the phase-2 note and batching verdict, regenerate README, and ship. Do not monitor or resubmit automatically."
 
 ## grid-offset-prior
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88
 - issued: 2026-09-17
 - prompt: active/datasetmodel_grid_offset_prior_0_2_clips.md
 - session: claude --resume 7bff8610-4b84-413a-a994-d72484c4c14c
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/grid-offset-prior
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/grid-offset-prior
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/94
+- validation: 230 tests passed; 32 focused tests after merging current main; 9/9 Euclid smoke scripts passed; Black and diff checks clean. Heart STALE (release rehearsal absent), permitted for a development PR.
+- note: "Shipped to PR #94 on 2026-09-20 at 87c0e12. Branch includes current main, pending-release label confirmed; CI still running at handoff. Merge needs a fresh /prm review. After merge, refit sep1/prelim SED wavebands so science catalogues use the wider prior; the old results can already be flagged by the new producer."
 - note: "The 2026-09-17 conflict survey named five claims. Since then sed-chain-cpu-route PR #70 merged and sersic-variants PR #75 closed unmerged; sersic-variants-analysis #76, simulator-from-result-linear #77 (parked) and witt-wynne-catalogue #84 remain relevant. Code file sets are disjoint except catalogue/README.md shares one hunk with witt-wynne-catalogue."
 - note: "PAUSED 2026-09-17 17:10 BST, resumable. DONE on feature/grid-offset-prior (3 local commits d50eb52 prior ±0.5\" / 3563a98 prior_edge_y-x columns + header pin + tests / e58a1be README + eight producers; 208 fast tests green; NOT pushed, no PR). Witness done: sep1 Tile102008165 nir_j x 0.1906 [.., 0.2000] flagged → 0.2727 [0.167, 0.387] unflagged under ±0.5"; nir_h of that tile spins in Nautilus exploration (second case of 343381_8). RESUME: cd ~/Code/PyAutoLabs-wt/grid-offset-prior/euclid_strong_lens_modeling_pipeline; source ../activate.sh; pytest tests -q; /ship_workspace (Heart RED release-side → human ack); /prm; README one-hunk overlap with witt-wynne-catalogue #84. Full state on issue #88 comment."
 
