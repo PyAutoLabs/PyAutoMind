@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 219 |
+| [Backlog](#backlog) (`draft/`) | 221 |
 
 > **No batch in flight.**
 
@@ -575,7 +575,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**219** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
+**221** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **41** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -2769,7 +2769,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 </details>
 
 <details>
-<summary><b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — 3 queued prompt(s), in order</summary>
+<summary><b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>MassField — external shear, mass sheets and external potentials as their own model object (standalone class, own <code>fields=</code> slot; galaxy-attached form kept, result identifiers unchanged)</b> — ledger: `draft/feature/autogalaxy/mass_field_epic.md`</summary>
 
@@ -2799,6 +2799,22 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ```
 /start_dev draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/mass_field_live_builders.md">Move live profiling builders to flat fields</a> — autolens_profiling · large · supervised</summary>
+
+```
+/start_dev draft/maintenance/autolens_profiling/mass_field_live_builders.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md">Carry flat fields through profiling pipeline resume</a> — autolens_profiling · supervised</summary>
+
+```
+/start_dev draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md
 ```
 
 </details>
@@ -2833,7 +2849,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-54 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+56 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2876,9 +2892,9 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/release/autocti/cti_release_train_wiring.md`
 - `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
 - `draft/maintenance/autolens_inference/mass_field_flat_adoption.md`
-- `draft/maintenance/organs/reduce_session_token_load.md`
-- `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
-- _… and 14 more_
+- `draft/maintenance/autolens_profiling/mass_field_live_builders.md`
+- `draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md`
+- _… and 16 more_
 
 </details>
 

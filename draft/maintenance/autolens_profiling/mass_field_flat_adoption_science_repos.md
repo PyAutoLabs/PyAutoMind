@@ -1,5 +1,7 @@
 # Remaining code consumers move to the flat `fields=` form: profiling, inference, JOSS benchmarks, Reduce prototypes
 
+**2026-09-19 update:** This four-repo survey is now historical context. PyAutoReduce#77 and the independent autolens_inference simulator PR #8 are open and green; the inference SLaM runner has its own draft. The user confirmed the deleted local `autolens_jax_joss` checkout is outside this sweep. Profiling is split into `mass_field_live_builders.md` (47 live non-chaining calls) and `mass_field_pipeline_resume.md` (5 staged calls); 5 inline witnesses remain historical. Do not issue this broad prompt as a single task.
+
 Type: maintenance
 Target: autolens_profiling
 Repos:
