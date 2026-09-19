@@ -306,7 +306,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/trim_external_shear_narrative.md">Trim external-shear narrative from workspace examples</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/571">issue #571</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/trim_external_shear_narrative.md">Trim external-shear narrative from workspace examples</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/571">issue #571</a> — issued 2026-09-19 — workspace-shipped, ready-for-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/573">autolens_workspace#573</a></summary>
 
 ```
 /start_dev active/trim_external_shear_narrative.md
