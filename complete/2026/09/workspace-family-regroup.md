@@ -49,7 +49,14 @@ to refresh imports. New root harness sessions receive the grouped Python paths.
 
 Local journal, import origins, smoke receipts and review evidence live under
 `PyAutoMind/tmp/workspace-family-regroup/`. The journal records original local
-configuration and can reverse the physical cutover.
+configuration. `cutover-after-closeout.json` is the current rollback/verification
+journal: it excludes this task's six deliberately removed worktrees and their
+bundle links, while `cutover.json` remains the original cutover receipt.
+
+Issue PyAutoBrain#394 is closed; the active claim is released and both dashboard
+files were regenerated in the completion commit. This task's six temporary
+worktrees were removed after their evidence was copied to the canonical Mind.
+Other tasks' worktrees remain intact.
 
 Scoped reconciliation found no additional migration prompt to retire. The
 `unregistered_worktrees_invisible_to_conflict_guard.md` suggestion is unrelated
