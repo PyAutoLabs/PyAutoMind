@@ -112,7 +112,7 @@ epic, never picked standalone.
   Records: complete/2026/09/mass-field-workspace-sweep.md and
   complete/2026/09/mass-field-flat-sweep.md. Bare fields=field is now the workspace form.
   Phase 5 HowToLens#90 and autolens_assistant#131 PRs are open and green. The
-  follow-up chaining helper PyAutoGalaxy#625 / PyAutoLens#745 PRs are open and green;
+  follow-up chaining helper PyAutoGalaxy#625 / PyAutoLens#745 PRs merged 2026-09-19;
   their release gates the staged inference and developer pipelines. Reduce#77 and
   autolens_inference#8 simulator PRs are open and green. The developer workspace
   sweep is draft PR #143, gated by the helper release. autolens_profiling is held
