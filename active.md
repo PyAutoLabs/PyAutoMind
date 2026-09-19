@@ -95,3 +95,21 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## workspace-organs-regroup
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/397
+- issued: 2026-09-19
+- prompt: active/workspace_organs_regroup.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/workspace-organs-regroup
+- approval: Human approved the two-phase organ migration with “ok go”; complete infrastructure compatibility first, then physical cutover. Preserve user changes and existing results/worktrees.
+- repos:
+  - PyAutoBrain: feature/workspace-organs-regroup
+  - PyAutoMind: feature/workspace-organs-regroup
+  - PyAutoHeart: feature/workspace-organs-regroup
+  - PyAutoHands: feature/workspace-organs-regroup
+  - PyAutoCortex: feature/workspace-organs-regroup
+  - PyAutoMemory: feature/workspace-organs-regroup
+  - PyAutoNerves: feature/workspace-organs-regroup
+  - PyAutoGut: feature/workspace-organs-regroup
+  - PyAutoScientist: feature/workspace-organs-regroup
