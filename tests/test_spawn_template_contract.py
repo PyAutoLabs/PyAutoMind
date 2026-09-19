@@ -270,7 +270,8 @@ MINIMAL_MEMORY = {
     "AI_POLICY.md": "p\n", "CONTRIBUTING.md": "c\n",
     "index.md": "# Index\n", "reading-queue.md": "# Reading queue\n",
     "bibliography/README.md": "# Bib\n",
-    "wiki/CLAUDE.md": "# schema\n",
+    "wiki/AGENTS.md": "# schema\n",
+    "wiki/CLAUDE.md": "@AGENTS.md\n",
     ".github/workflows/validate.yml": (
         "name: validate\non:\n  push:\n    branches: [main]\n"
         "jobs:\n  v:\n    runs-on: ubuntu-latest\n    steps:\n      - run: make validate\n"
@@ -515,3 +516,20 @@ def test_stamping_is_skipped_when_lifecycle_is_not_kept(tmp_path):
     spawn.generate_mind(mind, out)  # must not raise
 
     assert not (out / "complete" / "index.md").exists()
+
+
+def test_memory_template_keeps_canonical_wiki_schema_and_thin_adapters(tmp_path):
+    mem = tmp_path / 'PyAutoMemory'
+    files = dict(MINIMAL_MEMORY)
+    files['wiki/AGENTS.md'] = '# Shared wiki schema\n\nUse source citations.\n'
+    files['wiki/CLAUDE.md'] = '@AGENTS.md\n'
+    _fake_repo(mem, files)
+    out = tmp_path / 'out'
+    assert spawn.generate_memory(mem, out) == []
+    assert (out / 'wiki/AGENTS.md').read_text() == files['wiki/AGENTS.md']
+    assert (out / 'wiki/CLAUDE.md').read_text() == '@AGENTS.md\n'
+    example = (out / 'wiki/example/AGENTS.md').read_text()
+    assert 'scope' in example and '../AGENTS.md' in example
+    assert (out / 'wiki/example/CLAUDE.md').read_text() == '@AGENTS.md\n'
+    assert 'wiki/AGENTS.md' in (out / 'README.md').read_text()
+    assert 'wiki/AGENTS.md' in (out / 'index.md').read_text()

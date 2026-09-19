@@ -12,6 +12,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+import yaml
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import ledger_merge  # noqa: E402
@@ -343,3 +346,35 @@ def test_resolve_cli_exit_code_follows_unresolved(tmp_path):
                        capture_output=True, text=True)
     assert r.returncode == 0, r.stdout + r.stderr
     assert "resolved: active.md" in r.stdout
+
+
+@pytest.mark.parametrize("namespace", ["claude", "codex"])
+def test_workflow_namespaces_use_same_ledger_gate(tmp_path, namespace):
+    workflow = (SCRIPT.resolve().parents[1] / ".github/workflows/mind_ledger_merge.yml").read_text()
+    triggers = yaml.load(workflow, Loader=yaml.BaseLoader)['on']['push']['branches']
+    assert set(triggers) == {'claude/**', 'codex/**'}
+    assert "python3 scripts/ledger_merge.py classify --base origin/main" in workflow
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    _git(repo, "init", "-q", "-b", "main")
+    _git(repo, "config", "user.email", "t@example.com")
+    _git(repo, "config", "user.name", "t")
+    (repo / "scripts").mkdir()
+    local_script = repo / "scripts/ledger_merge.py"
+    local_script.write_text(SCRIPT.read_text())
+    (repo / "active.md").write_text("base\n")
+    _git(repo, "add", ".")
+    _git(repo, "commit", "-qm", "base")
+    _git(repo, "checkout", "-qb", f"{namespace}/ledger-test")
+    (repo / "active.md").write_text("ledger change\n")
+    _git(repo, "commit", "-qam", "ledger")
+    allowed = subprocess.run([sys.executable, str(local_script), "classify", "--base", "main"],
+                             cwd=repo, capture_output=True, text=True)
+    assert allowed.returncode == 0, allowed.stdout + allowed.stderr
+    (repo / "scripts/change.py").write_text("code change\n")
+    _git(repo, "add", ".")
+    _git(repo, "commit", "-qm", "code")
+    denied = subprocess.run([sys.executable, str(local_script), "classify", "--base", "main"],
+                            cwd=repo, capture_output=True, text=True)
+    assert denied.returncode == 1
+    assert "scripts/change.py" in denied.stdout

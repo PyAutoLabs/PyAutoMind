@@ -506,7 +506,7 @@ Each task is an H2 section:
 ## <task-name-kebab-case>
 - issue: https://github.com/<owner>/<repo>/issues/<n>
 - issued: YYYY-MM-DD                              # the day the task was issued
-- session: claude --resume <session-id>           # optional
+- session: <actual harness; known session ID or URL, otherwise unavailable>  # optional
 - status: <library-dev | workspace-dev | ready-to-ship | awaiting-input | …>
 - library-pr: <url>               # optional until the PR exists; repeatable —
 - library-pr: <url>               # one line per PR, or one line of `<url>, <url>`
@@ -531,6 +531,14 @@ Each task is an H2 section:
 - summary: |
     Free-form summary of progress and next steps.
 ```
+
+The optional `session:` value is free text describing the actual harness and
+session. Include a real resume command only when the harness and session ID are
+known, for example `codex resume <id>` or `claude --resume <id>`. Otherwise record
+the known harness and mark the session ID unavailable; omit the field when even
+the harness is unknown. Never infer a provider or invent an ID. Existing values
+and historical session records remain valid and are preserved verbatim.
+
 
 #### The PR keys (`library-pr:` / `workspace-pr:`)
 
@@ -706,18 +714,18 @@ its `z_`-prefixed home redundant. The per-task completion records live in
 
 ## How the ledger lands (`mind_ledger_merge.yml`)
 
-A branch-scoped session — the phone, claude.ai/code, any `claude/**` flow —
+A branch-scoped session — a phone, web, or CLI run on `claude/**` or `codex/**` —
 pushes its Mind changes to a feature branch, never to `main`
 (`prompt_sync.sh` pushes HEAD deliberately, so a cloud session cannot bypass
 review). Nothing downstream used to move that branch on: no workflow so much as
-*looks* at a `claude/**` push, because `lifecycle_drift`, `dashboard_refresh`,
+*looks* at those branch pushes, because `lifecycle_drift`, `dashboard_refresh`,
 `firewall_gate` and `spawn_drift` all trigger on `push: main` or
 `pull_request` only. A filed prompt, a task moved to `complete/`, a regenerated
 dashboard — all of it waited for a human to write an explicit "merge that
 branch" prompt, and the dashboard rendered a stale backlog until they did.
 
 `.github/workflows/mind_ledger_merge.yml` closes that seam. On every push to
-`claude/**` it classifies the branch's diff against `main` and, when the whole
+`claude/**` or `codex/**` it classifies the branch's diff against `main` and, when the whole
 diff is **ledger**, merges it and deletes the branch. No session step, no PR,
 no prompt.
 
