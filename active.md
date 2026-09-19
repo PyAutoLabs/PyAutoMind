@@ -128,7 +128,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-brain.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/406
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/406
+- validation: 72 community/board tests passed; independent review CLEAN.
+- next: Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoBrain: feature/community-surface
@@ -139,7 +143,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-policy.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/427
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/427
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoMind: feature/community-surface
@@ -150,7 +158,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-pyautolens.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: awaiting-input, PR-open
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/747
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/747
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoLens: feature/community-surface
@@ -161,7 +173,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-pyautogalaxy.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: awaiting-input, PR-open
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoGalaxy: feature/community-surface
@@ -172,7 +188,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-pyautofit.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: awaiting-input, PR-open
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1640
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1640
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoFit: feature/community-surface
@@ -183,7 +203,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-pyautoarray.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: awaiting-input, PR-open
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/563
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/563
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoArray: feature/community-surface
@@ -194,7 +218,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-autolens-workspace.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-input, PR-open
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/570
+- pending-release: autolens_workspace@https://github.com/PyAutoLabs/autolens_workspace/pull/570
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - autolens_workspace: feature/community-surface
@@ -205,7 +233,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-autogalaxy-workspace.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-input, PR-open
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248
+- pending-release: autogalaxy_workspace@https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - autogalaxy_workspace: feature/community-surface
@@ -216,7 +248,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-autofit-workspace.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-input, PR-open
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/162
+- pending-release: autofit_workspace@https://github.com/PyAutoLabs/autofit_workspace/pull/162
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - autofit_workspace: feature/community-surface
@@ -227,7 +263,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-website.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9
+- pending-release: pyautolabs.github.io@https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - pyautolabs.github.io: feature/community-surface
@@ -238,7 +278,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-profile.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-input, PR-open
+- workspace-pr: https://github.com/PyAutoLabs/.github/pull/16
+- pending-release: .github@https://github.com/PyAutoLabs/.github/pull/16
+- validation: Documentation/template checks passed; independent review CLEAN.
+- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - .github: feature/community-surface
