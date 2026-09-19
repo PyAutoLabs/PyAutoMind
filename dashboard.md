@@ -44,15 +44,15 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 219 |
+| [Backlog](#backlog) (`draft/`) | 220 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 21
 
-<details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
+<details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub</a> — community · small · human-required · high</summary>
 
 ```
 /start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md
@@ -661,7 +661,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**219** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
+**220** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -1498,9 +1498,9 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 21</summary>
+<summary><b>maintenance</b> — 22</summary>
 
-<details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
+<details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub</a> — community · small · human-required · high</summary>
 
 ```
 /start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md
@@ -1512,6 +1512,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/organs/reduce_session_token_load.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the hardcoded paths</a> — pyautobrain · large · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/pyautobrain/workspace_resolver_fanout.md
 ```
 
 </details>
@@ -2211,6 +2219,40 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>pyautobrain — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'pyautobrain — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/maintenance/pyautobrain/workspace_resolver_fanout.md
+- draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
+- draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
+- draft/bug/pyautobrain/cortex_test_worktree_symlink.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the…</a> | large | high | formalised |
+| <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
+| <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
+| <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails…</a> | small | low | formalised |
+
+</details>
+
+<details>
 <summary><b>workspaces — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2241,40 +2283,6 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> | easy | medium | formalised |
 | <a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> | small | medium | formalised |
 | <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> | small | low | formalised |
-
-</details>
-
-<details>
-<summary><b>docs-hub</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: community</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'docs-hub' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/docs/workspaces/support_sections_point_to_discussions.md
-- draft/docs/pyautolabs_github_io/front_door_community_link.md
-- draft/research/pyautohands/git_docs.md
-- draft/docs/autocti/api_rst_rewrite.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue…</a> | workspaces | small | high | formalised |
-| <a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a> | pyautolabs_github_io | small | normal | formalised |
-| <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> | pyautohands | small | normal | formalised |
-| <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> | autocti | medium | normal | formalised |
 
 </details>
 
@@ -2406,7 +2414,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 37 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 36 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2460,7 +2468,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
-| 2026-09-17 | filed | <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub…</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a> |
