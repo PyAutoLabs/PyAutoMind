@@ -95,3 +95,21 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## codex-skill-discovery
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/386
+- issued: 2026-09-17
+- prompt: active/codex_skill_discovery_parity.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-skill-discovery
+- repos:
+  - PyAutoBrain: feature/codex-skill-discovery
+  - autofit_assistant: feature/codex-skill-discovery
+  - autogalaxy_assistant: feature/codex-skill-discovery
+  - autolens_assistant: feature/codex-skill-discovery
+  - autocti_assistant: feature/codex-skill-discovery
+  - autofit_workspace: feature/codex-skill-discovery
+  - autogalaxy_workspace: feature/codex-skill-discovery
+  - autolens_workspace: feature/codex-skill-discovery
+- note: "Resumed 2026-09-19 under the plan approved 2026-09-17; conflicts cleared. Worktrees kept inside the workspace. Preserve the two personal assistant scripts and unrelated local Mind prompt deletion."

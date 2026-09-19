@@ -14,7 +14,9 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: planned — blocked behind active repository claims
+Status: active
+Issued: 2026-09-17
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/386
 Filed: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
 Unblocked: 2026-09-19 — mass-field workspace PRs #560/#562 and workspace_test #322 merged; complete/2026/09/mass-field-flat-sweep.md
@@ -38,3 +40,7 @@ bootstrap instructions so new skills acquire both Claude and Codex adapters.
   canonical body; helper/internal Markdown is not exposed as a public skill.
 - Name normalization is collision-checked across installed assistants.
 - Existing Claude skill names and links continue to work.
+
+## Resume request — 2026-09-19
+
+> Find and finish the work to make the agentic AI ecosystem agent agnostic, we should be on phase 4
