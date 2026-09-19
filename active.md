@@ -95,19 +95,3 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
-
-## codex-context-efficiency
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/403
-- issued: 2026-09-19
-- prompt: active/codex_context_efficiency.md
-- session: Codex; current thread
-- status: library-shipped, awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-context-efficiency
-- repos:
-  - PyAutoBrain: feature/codex-context-efficiency
-  - PyAutoMind: feature/codex-context-efficiency
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/404
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/425
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/404
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/425
-- note: Independent review CLEAN; Brain 982 and Mind 582 tests passed; applicable GitHub checks green on both PRs. Maintained AGENTS footprint 43,365 to 25,731 bytes after root activation. After both merges, follow Brain docs/context_efficiency.md to activate the prepared root instructions; live root is unchanged.

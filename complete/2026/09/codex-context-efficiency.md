@@ -1,3 +1,21 @@
+## codex-context-efficiency
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/403
+- completed: 2026-09-19
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/404
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/425
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/404
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/425
+
+Delivered all five approved efficiency changes: slimmer entry instructions, conditional reference reads, bounded tool output, grouped/flat path resolution, and compact completed-phase handoffs. Added deterministic instruction-budget reporting. Safety and approval gates remain intact.
+
+Both PRs merged after every applicable exact-head CI job passed. Merge receipts: Brain e0a0a10e5130eaa9efce7c82c19b79381319c2ac; Mind f6d43712a295a3c28e23445b253ff523b8e517e7. Git ancestry confirms both feature tips are merged.
+
+Validation: Brain 982 tests and Mind 582 tests passed; Sphinx warnings-as-errors passed; independent Sol review CLEAN including CI fixes. Root instructions activated locally after merge; section and token-budget checks pass. Maintained root/Brain/Mind AGENTS total fell from 43,365 to 25,731 bytes (40.7%). These are static measurements, not measured billing savings. Local HPC/custom instructions preserved.
+
+The broader draft maintenance/organs/reduce_session_token_load.md remains open: Cortex/Memory instruction work and completion-record redesign are outside this task. The pre-existing local deletion of workspace_resolver_fanout.md was preserved and excluded from this commit.
+
+## Original prompt
+
 # Reduce repeated Codex context after workspace regrouping
 
 Type: maintenance

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1504 records across 8 buckets.
+1505 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -150,6 +150,7 @@ markers; everything below GENERATED is rebuilt.
 - [catalogue-latent-prefix-blank](2026/09/catalogue-latent-prefix-blank.md) — `catalogue/scripts/lens_mass.py` and `catalogue/scripts/magnitudes.py`
 - [catalogue-mass-maps-fits](2026/09/catalogue-mass-maps-fits.md)
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
+- [codex-context-efficiency](2026/09/codex-context-efficiency.md)
 - [codex-hook-parity](2026/09/codex-hook-parity.md)
 - [codex-skill-discovery](2026/09/codex-skill-discovery.md)
 - [codex-token-efficiency](2026/09/codex-token-efficiency.md)
