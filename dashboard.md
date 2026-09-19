@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_from_grows_a_fields_argument.md">Carry a field with the mass through a chained stage</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/624">issue #624</a> — issued 2026-09-19 — library-dev</summary>
+<details><summary>📋 <a href="active/mass_from_grows_a_fields_argument.md">Carry a field with the mass through a chained stage</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/624">issue #624</a> — issued 2026-09-19 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/625">PyAutoGalaxy#625</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/745">PyAutoLens#745</a></summary>
 
 ```
 /start_dev active/mass_from_grows_a_fields_argument.md
