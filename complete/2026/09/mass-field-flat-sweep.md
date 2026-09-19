@@ -45,7 +45,7 @@ PyAutoLens **#744** (issue #743, merged 2026-09-18 at `478213e78`) made the mode
 deliberately shipped the capability only — its record
 (`complete/2026/09/mass-field-bare-fields.md`) names
 `tmp/handoffs/autolens-flat-fields-sweep.md` as the follow-up adoption sweep. This is
-that follow-up, and phase 6 of `draft/feature/autogalaxy/mass_field_epic.md`.
+that follow-up, and phase 6 of `complete/archive/epics/mass_field_epic.md`.
 
 Phase 3 (`active/mass_field_workspace_sweep.md`, autolens_workspace#559) moved every
 galaxy-attached field into `fields=af.Collection(field=field)`; `autolens_workspace#560`

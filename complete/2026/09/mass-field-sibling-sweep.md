@@ -31,7 +31,7 @@ Filed: 2026-09-17
 Amended: 2026-09-18
 Issued: 2026-09-19
 
-Fifth phase of `draft/feature/autogalaxy/mass_field_epic.md`. Re-scoped 2026-09-17 on
+Fifth phase of `complete/archive/epics/mass_field_epic.md`. Re-scoped 2026-09-17 on
 the human's ruling that the user-facing API is `fields=` everywhere (no shear or other
 field on a `Galaxy` in any workspace script), and **amended 2026-09-18 to teach the
 flat form directly** — see "Why this was amended".

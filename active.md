@@ -1,19 +1,5 @@
 # Active Tasks
 
-## mass-field-developer
-- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142
-- issued: 2026-09-19
-- prompt: active/mass_field_flat_adoption_developer.md
-- session: Codex (session ID unavailable)
-- status: workspace-shipped, ready-for-merge
-- worktree: ~/Code/PyAutoLabs-wt/mass-field-developer
-- repos:
-  - autolens_workspace_developer: feature/mass-field-developer
-- source-gate-cleared: 2026-09-19 — helper merged on PyAutoGalaxy/PyAutoLens `main`; human approved current-source consumption
-- summary: Migrate live developer scripts, preserve archives and re-measure the two pinned likelihoods.
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143
-- validation: 0 live legacy Galaxy shear AST sites; HST MGE, imaging simulator, search fit, plotting alignment and 32 LOS tests passed; point-source pin drift is preexisting and separate.
-
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12

@@ -35,7 +35,7 @@ Merge-gate: PyAutoGalaxy and PyAutoLens releases carrying phases 1–2 on PyPI (
 Filed: 2026-09-17
 Issued: 2026-09-17
 
-Third phase of `draft/feature/autogalaxy/mass_field_epic.md` (read it first),
+Third phase of `complete/archive/epics/mass_field_epic.md` (read it first),
 **re-scoped 2026-09-17 on the human's ruling**: *"other than maybe an
 autolens_workspace_test integration test we shouldn't be using a shear_galaxy or
 putting shears or any other field in galaxies from now on. The user-facing API

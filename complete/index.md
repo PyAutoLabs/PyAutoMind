@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1512 records across 8 buckets.
+1513 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -274,6 +274,7 @@ markers; everything below GENERATED is rebuilt.
 - [mass-field-bare-fields](2026/09/mass-field-bare-fields.md)
 - [mass-field-chaining-helper](2026/09/mass-field-chaining-helper.md) — Added `mass_and_fields_from(mass, mass_result, *, fields_result, unfix_mass_centre=False)` in PyAutoGalaxy. It…
 - [mass-field-class](2026/09/mass-field-class.md) — Added `ag.MassField(redshift, **mass_profiles)` to PyAutoGalaxy — the standalone, MassProfile-only container f…
+- [mass-field-developer](2026/09/mass-field-developer.md) — Migrated live JAX profiling, minimal-search, plotting-alignment, LOS, and standalone MGL builders from galaxy-…
 - [mass-field-flat-sweep](2026/09/mass-field-flat-sweep.md)
 - [mass-field-inference-sim](2026/09/mass-field-inference-sim.md) — Migrated the imaging and interferometer simulators to `MassField` and `Tracer(fields=[field])`. Compile, Ruff,…
 - [mass-field-inference-slam](2026/09/mass-field-inference-slam.md) — Migrated all five inference SLaM stages to a top-level `MassField`. Source LP creates the free field, source P…
