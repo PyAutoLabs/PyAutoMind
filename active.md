@@ -11,18 +11,6 @@
   - PyAutoBrain: feature/community-slack-notifications
 - resume: "Paused for the night at the human's request on 2026-09-20. Issue #408 is filed and the worktree is ready. `agents/conductors/community/AGENTS.md` has an uncommitted 49-line runbook draft; `git diff --check` passes. Resume from the live Slack audit: connect Slack access or run `/github subscribe list` and `/github subscribe list features` in `#general`, then configure `PyAutoLabs/.github discussions`, test one approved Discussion, record evidence, and ship. Progress comment: https://github.com/PyAutoLabs/PyAutoBrain/issues/408#issuecomment-5746092241"
 
-## remove-empty-modeling-headings
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/574
-- issued: 2026-09-20
-- prompt: active/remove_empty_modeling_headings.md
-- session: Codex (session ID unavailable)
-- status: workspace-shipped, ready-for-merge
-- worktree: ~/Code/PyAutoLabs-wt/remove-empty-modeling-headings
-- repos:
-  - autolens_workspace: feature/remove-empty-modeling-headings
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/575
-- validation: zero External Shear headings remain in scripts or generated notebooks; all 17 Source Galaxy headings are preserved; compilation and size guard passed; 37/37 curated scripts and 2/2 curated notebooks passed locally; GitHub CI pending.
-
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12
