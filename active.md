@@ -73,13 +73,14 @@
 - issued: 2026-09-16
 - prompt: active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md
 - session: claude --resume 51243072-d1a4-437b-b5a6-edf3bff12db4
-- status: library-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/294
 - worktree: ~/Code/PyAutoLabs-wt/hst-gpu-residue-p2
 - repos:
   - autolens_profiling: feature/hst-gpu-residue-p2
 - parallel-claim: "autolens_profiling was also claimed by fixed-light-numba-levers (#267, COMPLETE 2026-09-16, merged and closed out; worktree removed): its files are fixed_light_numba*, fixed_light_numpy_solvers.py, the lever submits/results and fixed_lens_light_levers_2026_09.md; this task touches fixed_light_trace.py, a new host_callback_probe.py, library_solver_injection.py, a new vmap submit + results + note — disjoint, own worktree beside it exactly as phase 1 (#268) did."
-- note: "Phase 2 of hst-gpu-non-solver-residue, STEP 1 ONLY (matched vmap-vs-jit A100 experiment + policy; PyAutoArray batch-aware callback deferred to phase 2b via /intake if the numbers warrant). Fable session plans, Opus executes. A100 submit -> wait -> harvest is a human resume point. Heart RED (install verify testpypi F; release integrate) at start; PR-open needs the human's ack. Phase-1 worktree ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1 still awaits the human's cleanup (3 untracked .err -> worktree_remove -> branch -d)."
-- hpc: "Array 343376 is preserved as HISTORICAL vmap(jit) evidence at profiling revision bf52147; it no longer represents production after PyAutoFit#1638. Replacement A100 array 344635 tasks 0-4 submitted 2026-09-19 from RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p2 @ e2a5187 against refreshed shared-library mains (B16 distinct fb-on / B16 fb-off / B8 / B4 / B16 identical control); all 5 RUNNING on euclid-ral-gpu-1/2 in the one post-submit check. HUMAN RESUME POINT: when done, pull logs/results, check CELL_EXIT=0, AUTOTUNE_ENTRIES count=0, unjoined 0, reconciliation within 5 %, and every per-lane jit(vmap)/scalar/library-PDIP pin PASS; then write the phase-2 note and batching verdict, regenerate README, and ship. Do not monitor or resubmit automatically."
+- note: "Phase 2 STEP 1 only is open as autolens_profiling PR #294 @ f42fadb. Array 344635 showed fallback-on jit(vmap) slower per lane at B4/8/16, but the required three-way 1e-9 pin failed on distinct lanes at B8/B16; verdict explicitly inconclusive. No PyAutoFit policy change or phase-2b callback is authorised. Validation 733 passed / 5 skipped, review CLEAN; Heart STALE only for absent release rehearsal. Await human merge; leave issue close and worktree cleanup to /prm."
+- hpc: "Array 343376 remains HISTORICAL vmap(jit) evidence. Array 344635 current jit(vmap) artifacts and job provenance are committed in PR #294: tasks 0-2 failed only the numerical gate after writing artifacts; tasks 3-4 completed; all lanes certified; all production batched values passed the vmapped library-PDIP pin; trace reconciliation/unjoined/cache gates passed or were recovered explicitly. No repeat array submitted."
 
 ## oneshot-benchmark-harness
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126

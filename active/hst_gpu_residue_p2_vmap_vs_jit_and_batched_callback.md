@@ -13,7 +13,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: in flight — corrected current-production A100 array 344635 submitted 2026-09-19; resume at harvest and verdict
+Status: awaiting human merge — STEP 1 shipped as autolens_profiling PR #294 with an inconclusive numerical-gate verdict
 Scoped: 2026-09-16 start_dev (Fable) issues STEP 1 ONLY (autolens_profiling harness + A100 legs + note + policy); step 2 (PyAutoArray batch-aware callback) is filed as phase 2b via /intake only if step 1's numbers say the callback matters
 Epic: hst-gpu-non-solver-residue
 Phase: 2
@@ -40,6 +40,23 @@ batching policy. The branch now measures the exact current nesting, with each
 lane pinned both against scalar `jax.jit(call)` and an independently compiled
 library-PDIP reference at 1e-9 relative. The replacement bounded grid is A100
 array 344635, submitted from profiling revision `e2a5187` on 2026-09-19.
+
+## Array 344635 verdict (2026-09-20)
+
+All five current-composition artifact pairs were recovered. Fallback-on
+`jax.jit(jax.vmap(fn))` was slower per lane than matched scalar jit at B=4, 8 and 16;
+the only faster row was the non-production fallback-off diagnostic. The pre-declared
+three-way `1e-9` pin failed for distinct lanes at B=8 and B=16, although every
+production batched value passed against the vmapped library-PDIP reference and every
+lane certified at budget 7. The result is therefore explicitly inconclusive for
+batching policy. No PyAutoFit policy change or phase-2b callback implementation is
+authorised by this grid.
+
+STEP 1 is shipped for human review as
+https://github.com/PyAutoLabs/autolens_profiling/pull/294 at `f42fadb`. Validation:
+733 passed, 5 skipped; ruff, format, README generation and artifact hashes passed;
+review verdict CLEAN. Heart was STALE only for absent release rehearsal, which permits
+the development PR but remains a release blocker. Merge and issue close remain human.
 
 ## Original request (verbatim)
 
