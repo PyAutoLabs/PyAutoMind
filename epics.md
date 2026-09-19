@@ -93,11 +93,11 @@ epic, never picked standalone.
   Border relocator ON is production (autogalaxy config default true), 0.10 ms. Levers ranked for phase 2:
   (1) qhull host round-trip 5.44 ms, (2) PSF convolution cube 7.12 ms (harness first), (3) second Cholesky
   for log det F+λH 0.89 ms. Note `results/notes/hst_gpu_residue_phase1_2026_09.md`.
-  Phase 2 IN FLIGHT (#273): step 1 only, matched vmap-vs-jit measurement.
-  Active prompt: `active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md`.
-  PyAutoFit#1638 changed production to `jax.jit(jax.vmap(call))`; array 343376 is retained
-  as historical evidence for the retired composition. Corrected A100 array 344635 was
-  submitted 2026-09-19 from profiling revision `e2a5187`; its submission-time RUNNING
-  stamp is not a current job-status claim. Results still need harvesting and a verdict
-  before choosing callback/batching work. The batch-aware callback is a
-  conditional phase 2b, not an implemented library change. Resume from `active.md`.
+  Phase 2 STEP 1 COMPLETED 2026-09-20 (#273, PR #294): current production
+  `jax.jit(jax.vmap(call))` was measured against matched scalar jit. Fallback-on
+  batching was slower per lane at B=4/8/16, but the required three-way `1e-9`
+  numerical pin failed on distinct lanes at B=8/B=16, so the policy verdict is
+  explicitly inconclusive. No batching change or batch-aware callback was authorised.
+  Array 343376 remains historical evidence for retired `vmap(jit)`; array 344635 and
+  provenance are in the merged profiling results. Record:
+  `complete/2026/09/hst-gpu-residue-p2.md`.

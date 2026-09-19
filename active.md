@@ -70,20 +70,6 @@
     markdown report. Pure functions split from the CLI; a synthetic four-CSV
     fixture with a variant missing two tiles pins the inner join and its reporting.
 
-## hst-gpu-residue-p2
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/273
-- issued: 2026-09-16
-- prompt: active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md
-- session: claude --resume 51243072-d1a4-437b-b5a6-edf3bff12db4
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/294
-- worktree: ~/Code/PyAutoLabs-wt/hst-gpu-residue-p2
-- repos:
-  - autolens_profiling: feature/hst-gpu-residue-p2
-- parallel-claim: "autolens_profiling was also claimed by fixed-light-numba-levers (#267, COMPLETE 2026-09-16, merged and closed out; worktree removed): its files are fixed_light_numba*, fixed_light_numpy_solvers.py, the lever submits/results and fixed_lens_light_levers_2026_09.md; this task touches fixed_light_trace.py, a new host_callback_probe.py, library_solver_injection.py, a new vmap submit + results + note — disjoint, own worktree beside it exactly as phase 1 (#268) did."
-- note: "Phase 2 STEP 1 only is open as autolens_profiling PR #294 @ f42fadb. Array 344635 showed fallback-on jit(vmap) slower per lane at B4/8/16, but the required three-way 1e-9 pin failed on distinct lanes at B8/B16; verdict explicitly inconclusive. No PyAutoFit policy change or phase-2b callback is authorised. Validation 733 passed / 5 skipped, review CLEAN; Heart STALE only for absent release rehearsal. Await human merge; leave issue close and worktree cleanup to /prm."
-- hpc: "Array 343376 remains HISTORICAL vmap(jit) evidence. Array 344635 current jit(vmap) artifacts and job provenance are committed in PR #294: tasks 0-2 failed only the numerical gate after writing artifacts; tasks 3-4 completed; all lanes certified; all production batched values passed the vmapped library-PDIP pin; trace reconciliation/unjoined/cache gates passed or were recovered explicitly. No repeat array submitted."
-
 ## oneshot-benchmark-harness
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126
 - issued: 2026-09-17

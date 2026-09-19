@@ -128,12 +128,11 @@ The table above is superseded:
 
 ### Levers, re-ranked (replace the list above)
 
-0. **Phase 2 — the matched vmap-vs-jit experiment, then the batch-aware callback.** ONE A100 measurement decides the
-   policy: exact `Fitness._vmap` over 16 DISTINCT production parameter vectors vs 16 scalar-jitted evaluations of the
-   same vectors, identical solver + fallback semantics; host/device timeline, callback count, qhull-vs-table-building
-   host time, PDIP iterations per lane, walk steps per lane. Then the local PyAutoArray candidate: `pure_callback`
-   `vmap_method="expand_dims"` with a batch-aware body (one host call per batch; optional bounded host workers), parity
-   pinned. Prompt: `draft/research/autolens_profiling/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md`.
+0. **Phase 2 — completed inconclusive.** The exact current `Fitness._vmap` composition was measured against matched
+   scalar jit at B=4/8/16. Fallback-on batching was slower per lane, but distinct lanes at B=8/B=16 failed the required
+   three-way `1e-9` numerical pin, so no batching policy or batch-aware callback was authorised. Record:
+   `complete/2026/09/hst-gpu-residue-p2.md`. Any numerical-reproducibility study or callback implementation is a new
+   intake task, not residual phase-2 scope.
 1. **Device batch size decoupled from the Nautilus proposal batch** (chunked vmap / `lax.map(batch_size)` / scalar jit
    with `use_jax_jit=True`) — decided by phase 2's numbers. PyAutoFit `fitness.py` + Nautilus `search.py`; needs a
    cond-free fallback design for the batched path.

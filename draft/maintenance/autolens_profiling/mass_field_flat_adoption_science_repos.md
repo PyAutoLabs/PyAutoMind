@@ -65,9 +65,10 @@ produce a wrong model that still runs.
 - **READMEs are generated.** Lint runs `build_readme.py --check` (memory `READMEgen`),
   so anything that touches `results/` rows needs the regenerated dashboards in the same
   PR.
-- **Claim conflict:** the repo is currently claimed by `hst-gpu-residue-p2` and
-  `fixed-light-numba-s4b`. A parallel-claim waiver plus a fresh worktree is needed, and
-  the waiver recorded on `active.md` the way the euclid/sersic rows do it.
+- **Claim conflict:** the repo is currently claimed by `fixed-light-numba-s4b`.
+  `hst-gpu-residue-p2` completed in
+  `complete/2026/09/hst-gpu-residue-p2.md`; re-survey the remaining live claim before
+  starting and use a fresh worktree.
 
 ### `autolens_inference` — 3 live files, one of them the risk
 

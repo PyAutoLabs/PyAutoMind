@@ -1,3 +1,52 @@
+# HST GPU residue phase 2 — current JAX batching measurement
+
+Completed: 2026-09-20
+
+## Shipped scope
+
+STEP 1 of the phase-2 plan shipped in
+https://github.com/PyAutoLabs/autolens_profiling/pull/294 (merge commit
+`8789511864fd66397b8bd2bc35242a4213b72704`). It measures the exact current
+PyAutoFit `jax.jit(jax.vmap(fn))` likelihood composition against matched scalar
+`jax.jit(fn)` evaluations on A100, preserves array 343376 as historical
+`jax.vmap(jax.jit(fn))` evidence, and records array 344635 with source, dataset,
+draw and artifact provenance.
+
+## Verdict
+
+The required three-way `1e-9` numerical gate was inconclusive. Production-like
+fallback-on batching was slower per lane at B=4, 8 and 16. The faster B16
+fallback-off result is diagnostic only. Every production batched value passed
+against the vmapped library-PDIP reference and every lane certified at budget 7,
+but distinct scalar-versus-batched pins failed at B=8 and B=16. No PyAutoFit
+batching-policy change and no phase-2b batch-aware callback implementation is
+authorised by this fixed-N grid.
+
+Primary evidence:
+
+- `results/notes/hst_gpu_residue_phase2_vmap_2026_09.md`
+- `results/notes/hst_gpu_residue_phase2_job344635.json`
+- five current-composition JSON/PNG artifact pairs under
+  `results/breakdown/imaging/`
+
+## Validation
+
+- 733 tests passed, 5 skipped.
+- Ruff, formatting and README-generation gates passed.
+- All ten current artifact hashes and five JSON provenance records verified.
+- Review faculty verdict: CLEAN.
+- GitHub `lint` completed successfully before merge.
+- Issue https://github.com/PyAutoLabs/autolens_profiling/issues/273 closed after
+  merge.
+
+## Deferred scope
+
+Phase 2b remains unstarted and unauthorized. A future numerical-reproducibility
+study or callback implementation requires a new intake task; it is not residual
+work from this completed STEP 1 record.
+
+## Original prompt
+
 # HST GPU residue phase 2 — vmap vs jit for the production likelihood, then the batch-aware Delaunay callback
 
 Type: research
