@@ -14,6 +14,7 @@ Status: draft
 Consequence: judge
 Witness: Workspace scripts no longer contain the expanded `__External Shear__` explanatory prose or the verbose `MassField` parenthetical, while the examples retain their field composition and generated notebooks match the scripts.
 Filed: 2026-09-19
+Issued: 2026-09-19
 
 ## Original user request
 

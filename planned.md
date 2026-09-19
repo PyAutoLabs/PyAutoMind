@@ -8,6 +8,7 @@
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
+- [trim-external-shear-narrative](#trim-external-shear-narrative)
 
 <!-- toc:end -->
 
@@ -90,4 +91,14 @@
 - blocked-by: slow-skip-timeout-cap-doc (using autolens_workspace_test; PR #194 OPEN/MERGEABLE)
 - affected-repos:
   - autolens_workspace_test
+
+## trim-external-shear-narrative
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571
+- planned: 2026-09-19
+- prompt: active/trim_external_shear_narrative.md
+- classification: workspace
+- suggested-branch: feature/trim-external-shear-narrative
+- blocked-by: community-surface-autolens-workspace (using autolens_workspace)
+- affected-repos:
+  - autolens_workspace
 - note: latent/latent_nan_robustness.py PASSES but VACUOUSLY under the smoke profile — TEST_MODE=2 yields only 4 bypass samples, and DISABLE_JAX=1 silently flips its deliberate AnalysisImaging(use_jax=True) to False (PyAutoLens analysis/analysis/dataset.py:89), so the JAX column-masking branch the guard exists to catch is never taken. MultiStartAdam/BlackJAXNUTS precedent. Work = (1) config/build/env_vars.yaml override for `latent/latent_nan_robustness` with unset: [PYAUTO_TEST_MODE, PYAUTO_DISABLE_JAX]; (2) trim the script under the 300s cap. MEASURED: honest run = 412s; PYAUTO_TEST_MODE=1 does NOT help (455s) — Nautilus is NOT the bottleneck (~136s post-fit results update + ~56s latent compute on 100 samples), so the lever is sample count. Script is in the curated smoke_tests.txt, which DOES read env_vars.yaml, so this lands in the per-PR gate. Adjacent to the blocker's own follow-up ("re-time the SLOW siblings"). NOT bugs, verified passing from clean output, no change needed: imaging/model_fit.py and latent/latent_variables_smoke.py.
