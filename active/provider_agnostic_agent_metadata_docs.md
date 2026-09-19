@@ -14,10 +14,12 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-09-19
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/400
 Filed: 2026-09-17
 Parent: draft/maintenance/organs/agent_harness_agnostic_setup.md
-Blocked-by: codex_skill_discovery_parity
+Depends-on: PyAutoBrain#386 (stacked follow-up)
 
 ## Request
 
@@ -45,8 +47,8 @@ claims. Preserve historical records verbatim.
 > Find and finish the work to make the agentic AI ecosystem agent agnostic, we should be on phase 4
 
 Phase 3 is still PyAutoBrain#386 (approved 2026-09-17, resumed 2026-09-19).
-This phase remains gated on that work; plan approval was requested in the Codex
-session on 2026-09-19 and has not yet been received.
+This phase remains gated on that work; the human approved this phase in the Codex session on 2026-09-19.
+Work follows phase 3, with shared-repo PRs stacked on its branch until merged.
 
 ## Proposed implementation plan
 

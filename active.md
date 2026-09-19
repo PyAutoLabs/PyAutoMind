@@ -101,9 +101,9 @@
 - issued: 2026-09-17
 - prompt: active/codex_skill_discovery_parity.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-skill-discovery
-- repos:
+- affected-repos:
   - PyAutoBrain: feature/codex-skill-discovery
   - autofit_assistant: feature/codex-skill-discovery
   - autogalaxy_assistant: feature/codex-skill-discovery
@@ -113,3 +113,22 @@
   - autogalaxy_workspace: feature/codex-skill-discovery
   - autolens_workspace: feature/codex-skill-discovery
 - note: "Resumed 2026-09-19 under the plan approved 2026-09-17; conflicts cleared. Worktrees kept inside the workspace. Preserve the two personal assistant scripts and unrelated local Mind prompt deletion."
+- coordination: "Implementation and independent review complete. Source claims transferred to sequential phase 4 (#400); phase-3 worktrees retained for PR review."
+
+## provider-agnostic-metadata
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/400
+- issued: 2026-09-19
+- prompt: active/provider_agnostic_agent_metadata_docs.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/provider-agnostic-metadata
+- repos:
+  - PyAutoBrain: feature/provider-agnostic-metadata
+  - PyAutoMind: feature/provider-agnostic-metadata
+  - PyAutoMemory: feature/provider-agnostic-metadata
+  - autofit_assistant: feature/provider-agnostic-metadata
+  - autogalaxy_assistant: feature/provider-agnostic-metadata
+  - autolens_assistant: feature/provider-agnostic-metadata
+  - autocti_assistant: feature/provider-agnostic-metadata
+  - autolens_workspace_test: feature/provider-agnostic-metadata
+- note: "Phase 4 plan explicitly approved 2026-09-19. Sequential follow-up to phase 3; shared-repo PRs stack on feature/codex-skill-discovery until its human merge. Independent repos target main. No concurrent phase-3 implementation."
