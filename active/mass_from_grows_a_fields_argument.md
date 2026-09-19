@@ -1,4 +1,4 @@
-# `mass_from` grows a `fields` argument so a chained stage cannot silently drop the external field
+# Carry a field with the mass through a chained stage
 
 Type: feature
 Target: PyAutoGalaxy
@@ -11,12 +11,14 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: draft
+Decision: 2026-09-19 — keep `mass_from` mass-only; add a companion `mass_and_fields_from(mass, mass_result, *, fields_result, unfix_mass_centre=False)` that returns both components and requires the field explicitly
 Consequence: judge
 Witness: a chained two-stage test (stage 1 `Isothermal` + a `MassField` shear, stage 2 `PowerLaw` built through the chaining helper) asserts stage 2's model carries the field — `fields.shear.gamma_1` in `unique_prior_paths` and `tracer.fields` length 1 on the composed instance — and FAILS on unfixed `main` (the field is absent, prior_count short by 2) before the change; the galaxy-attached identifier pin is unchanged.
 Review-minutes: 20
 Unattended: needs-slicing
 Epic: mass-field
 Filed: 2026-09-18
+Issued: 2026-09-19
 
 ## The gap
 
@@ -53,6 +55,19 @@ to `main`. If the chosen design turns out to be "`mass_from` should always have
 threaded the field", re-classify on the issue rather than re-filing.
 
 ## The design question (do not presume the answer)
+
+**Resolved after source inspection (2026-09-19).** `mass_from` receives only a
+mass profile/model and returns that mass model. Adding `fields=` to it cannot
+put a field in the next stage's top-level collection without changing its
+return type or mutating the mass model into an invalid shape. Keep its public
+contract and identifiers unchanged. Add a companion `mass_and_fields_from`
+which delegates mass prior passing to `mass_from` and returns
+`(updated_mass, fields_result)`; make `fields_result` a required keyword-only
+argument so a caller using this route cannot silently omit the field. The
+caller chooses `result.model.fields` (free with posterior priors) or
+`result.instance.fields` (fixed). A warning in `mass_from` is impossible from
+its current inputs: `mass_result` contains no reference to the result's
+top-level field. The chained-stage witness will exercise the companion helper.
 
 Chaining is **shape-transparent** — free versus fixed rides on `.model` versus
 `.instance` of the previous result, not on the helper. Measured on the flat form
