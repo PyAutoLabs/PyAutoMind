@@ -1,5 +1,16 @@
 # Active Tasks
 
+## mass-field-inference-sim
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/7
+- issued: 2026-09-19
+- prompt: active/mass_field_inference_simulators.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/mass-field-inference-sim
+- repos:
+  - autolens_inference: feature/mass-field-inference-sim
+- summary: Move the two independent dataset simulators to MassField and Tracer fields.
+
 ## mass-field-reduce
 - issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/76
 - issued: 2026-09-19
