@@ -2,6 +2,8 @@
 
 @euclid_strong_lens_modeling_pipeline
 
+Issued: 2026-09-19
+
 ## Original request
 
 hmmm is it feasible to make it so we can do this before vis_pix exists? Feels like useful flexiblity

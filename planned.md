@@ -7,8 +7,19 @@
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
+- [catalogue-inspection-before-vis-pix](#catalogue-inspection-before-vis-pix)
 
 <!-- toc:end -->
+
+## catalogue-inspection-before-vis-pix
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/92
+- planned: 2026-09-19
+- prompt: active/catalogue_inspection_before_vis_pix.md
+- classification: workspace
+- suggested-branch: feature/catalogue-before-vis-pix
+- blocked-by: sersic-variants, sersic-variants-analysis, grid-offset-prior (using euclid_strong_lens_modeling_pipeline)
+- affected-repos:
+  - euclid_strong_lens_modeling_pipeline
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
