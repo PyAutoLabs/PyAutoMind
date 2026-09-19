@@ -495,8 +495,8 @@ def routing_table(categories, repos):
                 lines.append(f"| **{name}** | `{location}` | {repo['role']} |")
     provenance = (
         "Generated from `PyAutoMind/repos.yaml` (the body map — the single "
-        "source of repo identity). Edit that file, then run "
-        "`python3 PyAutoMind/scripts/repos_sync.py --write`."
+        "source of repo identity). From the resolved Mind checkout, edit "
+        "`repos.yaml`, then run `python3 scripts/repos_sync.py --write`."
     )
     return "\n".join(lines) + "\n\n" + provenance
 
@@ -522,8 +522,9 @@ def owner_map(categories, repos):
         "**Library repos:** " + ", ".join(libraries) + ".",
         "**Workspace repos:** " + ", ".join(workspaces) + ".",
         "",
-        "Generated from `PyAutoMind/repos.yaml`; edit there, then run "
-        "`python3 PyAutoMind/scripts/repos_sync.py --write`.",
+        "Generated from `PyAutoMind/repos.yaml`; from the resolved Mind "
+        "checkout, edit `repos.yaml`, then run "
+        "`python3 scripts/repos_sync.py --write`.",
     ]
     return "\n".join(lines)
 
