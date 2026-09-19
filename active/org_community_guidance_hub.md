@@ -24,3 +24,11 @@ the linked issue. Keep AI_POLICY, licenses and repository-specific rules intact.
 - Canonical documents and bug-form clarification committed locally at b7c3376 (includes b2dd69b); independent review CLEAN. YAML validation and diff checks passed; Scientist tests: 8 passed.
 - Awaiting live development-only Heart RED override before source push/PR: PyAutoFit: 4 commit(s) behind origin; PyAutoArray: 3 commit(s) behind origin; PyAutoGalaxy: 3 commit(s) behind origin; PyAutoLens: 3 commit(s) behind origin.
 - Merge organization canonical guidance before Scientist compatibility pointers. No merge or release authorized.
+
+## PR-open checkpoint — 2026-09-19
+
+Live user authorized the issue-specific development-only override: "Yes, open both documentation PRs". Authorization, exact RED reasons and passed gates are recorded on both issues, in both PR bodies, active.md and autonomy_log.md.
+
+- Canonical guidance: https://github.com/PyAutoLabs/.github/pull/20
+- Dependent Scientist pointers (draft): https://github.com/PyAutoLabs/PyAutoScientist/pull/32
+- Both labeled pending-release; no checks reported at PR-open. Neither merged. Manual welcome pin remains.
