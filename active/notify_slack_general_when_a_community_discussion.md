@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-09-20
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
