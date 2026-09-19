@@ -1,5 +1,16 @@
 # Active Tasks
 
+## mass-field-reduce
+- issue: https://github.com/PyAutoLabs/PyAutoReduce/issues/76
+- issued: 2026-09-19
+- prompt: active/mass_field_prototypes.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mass-field-reduce
+- repos:
+  - PyAutoReduce: feature/mass-field-reduce
+- summary: Migrate two prototype model builders and the SLACS shear posterior path to top-level fields.
+
 ## mass-field-chaining-helper
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/624
 - issued: 2026-09-19
