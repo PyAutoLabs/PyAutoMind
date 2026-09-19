@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/notify_slack_general_when_a_community_discussion.md">Notify Slack general when a community discussion is posted</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/408">issue #408</a> — issued 2026-09-20 — library-dev</summary>
+<details><summary>📋 <a href="active/notify_slack_general_when_a_community_discussion.md">Notify Slack general when a community discussion is posted</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/408">issue #408</a> — issued 2026-09-20 — paused</summary>
 
 ```
 /start_dev active/notify_slack_general_when_a_community_discussion.md
