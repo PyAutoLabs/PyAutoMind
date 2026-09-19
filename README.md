@@ -35,7 +35,10 @@ can follow every stage in this repository:
    tracked GitHub issue, moves the prompt to
    [`active/`](https://github.com/PyAutoLabs/PyAutoMind/tree/main/active), and
    registers it in [`active.md`](active.md) — the shared ledger, so any
-   machine or session can pick the task up.
+   machine or session can pick the task up. Optional resume metadata records
+   the actual harness and a known command only; leave it out when unknown.
+   Ledger-only pushes on `claude/**` and `codex/**` use the same guarded
+   auto-merge path.
 3. **Develop and ship.** The agent implements the task on a feature branch in
    the target repository and opens a pull request; a human reviews and merges.
 4. **Complete.** On merge, the prompt becomes a dated completion record in

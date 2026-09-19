@@ -2,10 +2,10 @@
 """Classify a PyAutoMind branch diff as *ledger* or *code*.
 
 WHY THIS EXISTS. PyAutoMind's own work strands. A branch-scoped session (the
-phone, claude.ai/code, any `claude/**` flow) pushes its Mind changes to a
+phone, claude.ai/code, any `claude/**` or `codex/**` flow) pushes its Mind changes to a
 feature branch — `prompt_sync.sh` pushes HEAD deliberately, so a cloud session
 cannot bypass review — and then nothing moves them. No workflow even *looks* at
-a `claude/**` push: `lifecycle_drift`, `dashboard_refresh`, `firewall_gate` and
+a `claude/**` or `codex/**` push: `lifecycle_drift`, `dashboard_refresh`, `firewall_gate` and
 `spawn_drift` all trigger on `push: main` or `pull_request` only. The branch
 sits there until a human writes an explicit "merge this" prompt.
 
