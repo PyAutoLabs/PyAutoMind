@@ -1,5 +1,16 @@
 # Active Tasks
 
+## point-source-shared-breakdown
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/291
+- issued: 2026-09-19
+- prompt: active/point_source_shared_likelihood_breakdown.md
+- session: Codex GPT-5 (session ID unavailable)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-source-shared-breakdown
+- repos:
+  - autolens_profiling: feature/point-source-shared-breakdown
+- parallel-claim: "Human authorized coordinated parallel work with hst-gpu-residue-p2 on 2026-09-19. Source files are disjoint; both tasks may regenerate README tables, so this task must rebase on current main and regenerate dashboards immediately before shipping."
+
 ## trim-external-shear-narrative
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571
 - issued: 2026-09-19

@@ -15,6 +15,7 @@ Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-09-19
+Issued: 2026-09-19
 
 ## Objective and ownership
 
