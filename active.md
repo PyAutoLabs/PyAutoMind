@@ -1,15 +1,5 @@
 # Active Tasks
 
-## trim-external-shear-narrative
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571
-- issued: 2026-09-19
-- prompt: active/trim_external_shear_narrative.md
-- session: Codex (session ID unavailable)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/trim-external-shear-narrative
-- repos:
-  - autolens_workspace: feature/trim-external-shear-narrative
-
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12
@@ -68,7 +58,7 @@
   - autolens_profiling: feature/hst-gpu-residue-p2
 - parallel-claim: "autolens_profiling was also claimed by fixed-light-numba-levers (#267, COMPLETE 2026-09-16, merged and closed out; worktree removed): its files are fixed_light_numba*, fixed_light_numpy_solvers.py, the lever submits/results and fixed_lens_light_levers_2026_09.md; this task touches fixed_light_trace.py, a new host_callback_probe.py, library_solver_injection.py, a new vmap submit + results + note — disjoint, own worktree beside it exactly as phase 1 (#268) did."
 - note: "Phase 2 of hst-gpu-non-solver-residue, STEP 1 ONLY (matched vmap-vs-jit A100 experiment + policy; PyAutoArray batch-aware callback deferred to phase 2b via /intake if the numbers warrant). Fable session plans, Opus executes. A100 submit -> wait -> harvest is a human resume point. Heart RED (install verify testpypi F; release integrate) at start; PR-open needs the human's ack. Phase-1 worktree ~/Code/PyAutoLabs-wt/hst-gpu-residue-p1 still awaits the human's cleanup (3 untracked .err -> worktree_remove -> branch -d)."
-- hpc: "A100 array 343376 tasks 0-4 SUBMITTED 2026-09-17 00:10 BST from RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p2 @ bf52147 (B16 distinct fb-on / B16 fb-off / B8 / B4 / B16 identical control); all 5 RUNNING on euclid-ral-gpu-1/2 at submit. HUMAN RESUME POINT: when done, harvest = commit the 5 results/breakdown/imaging/fixed_light_trace_delaunay_vmap*_hpc_a100_fp64_*.{json,png} in the RAL worktree, fetch locally (git fetch euclid_jump:/mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p2 feature/hst-gpu-residue-p2), check AUTOTUNE_ENTRIES count=0 + unjoined 0 + lane pins PASS in hpc/batch_gpu/output/output.343376_*.out, then Phase C (note + errata + README + ship). Phase A on the issue: #273 comment 2026-09-17."
+- hpc: "Array 343376 is preserved as HISTORICAL vmap(jit) evidence at profiling revision bf52147; it no longer represents production after PyAutoFit#1638. Replacement A100 array 344635 tasks 0-4 submitted 2026-09-19 from RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/hst-gpu-residue-p2 @ e2a5187 against refreshed shared-library mains (B16 distinct fb-on / B16 fb-off / B8 / B4 / B16 identical control); all 5 RUNNING on euclid-ral-gpu-1/2 in the one post-submit check. HUMAN RESUME POINT: when done, pull logs/results, check CELL_EXIT=0, AUTOTUNE_ENTRIES count=0, unjoined 0, reconciliation within 5 %, and every per-lane jit(vmap)/scalar/library-PDIP pin PASS; then write the phase-2 note and batching verdict, regenerate README, and ship. Do not monitor or resubmit automatically."
 
 ## grid-offset-prior
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88

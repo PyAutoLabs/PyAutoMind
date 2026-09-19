@@ -13,7 +13,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: formalised — PLAN ONLY, filed 2026-09-16 on the human's ask; no issue, no worktree, no code until /start_dev
+Status: in flight — corrected current-production A100 array 344635 submitted 2026-09-19; resume at harvest and verdict
 Scoped: 2026-09-16 start_dev (Fable) issues STEP 1 ONLY (autolens_profiling harness + A100 legs + note + policy); step 2 (PyAutoArray batch-aware callback) is filed as phase 2b via /intake only if step 1's numbers say the callback matters
 Epic: hst-gpu-non-solver-residue
 Phase: 2
@@ -31,6 +31,16 @@ Unattended: needs-slicing
 Filed: 2026-09-16
 Issued: 2026-09-16
 
+## Current-production correction (2026-09-19)
+
+PyAutoFit#1638 changed `Fitness._vmap` from `jax.vmap(jax.jit(call))` to
+`jax.jit(jax.vmap(call))` on 2026-09-17. Array 343376 therefore remains
+historical evidence for the retired composition; it cannot set the current
+batching policy. The branch now measures the exact current nesting, with each
+lane pinned both against scalar `jax.jit(call)` and an independently compiled
+library-PDIP reference at 1e-9 relative. The replacement bounded grid is A100
+array 344635, submitted from profiling revision `e2a5187` on 2026-09-19.
+
 ## Original request (verbatim)
 
 > can you have codex astro review this issue on vmap versus jit, whether we should keep vmap and just
@@ -44,7 +54,7 @@ Issued: 2026-09-16
 
 Phase 1 (#268, `results/notes/hst_gpu_residue_phase1_2026_09.md`) traced the fused SINGLE-CALL jit:
 31.6 ms at the production budget, with 5.44 ms of device idle sitting in the qhull `pure_callback`.
-Production is `jax.vmap(jax.jit(call))` (`autofit/non_linear/fitness.py:859`), and
+Production is now `jax.jit(jax.vmap(call))` (`autofit/non_linear/fitness.py:878`), and
 `_jax_delaunay_tables` (`autoarray/inversion/mesh/interpolator/delaunay.py:139-171`) is declared
 `vmap_method="sequential"`: one serial host round-trip per lane. Nobody has traced the vmap program.
 
@@ -58,7 +68,7 @@ corrected two pieces of our evidence — see the campaign map's "Revision after 
 
 Extend `scripts/imaging/likelihood_breakdown/fixed_light_trace.py` (or a sibling `fixed_light_vmap.py`
 reusing `xla_attribution.py`) with a `--vmap-batch B` mode that wraps the route-d likelihood exactly as
-`Fitness._vmap` does — `jax.vmap(jax.jit(fn))`, not `jax.jit(jax.vmap(fn))` — over B DISTINCT parameter
+`Fitness._vmap` does — `jax.jit(jax.vmap(fn))` — over B DISTINCT parameter
 vectors drawn as the phase-3 graded draws were (`fixed_light_draws.py`), never B copies of the fiducial
 (identical lanes hide straggler costs). Time, on the A100, fp64, HST Delaunay N=1500, budget 7:
 
@@ -69,7 +79,8 @@ vectors drawn as the phase-3 graded draws were (`fixed_light_draws.py`), never B
 - trace both programs: per-lane callback count and host span split into qhull vs table building
   (instrument `scipy_delaunay_tri_only` on the host), PDIP iterations and walk `while_loop` steps per
   lane (max-over-lanes cost), device idle per lane;
-- pins: every lane's log likelihood equal between arms to <= 1e-9 relative.
+- pins: every lane's log likelihood equal between arms and against the independent library-PDIP
+  reference to <= 1e-9 relative.
 
 Deliverable: a note `results/notes/hst_gpu_residue_phase2_vmap_2026_09.md` with the matched table, the
 crossover (if any) in B and N, and a written batching policy. If the policy is "chunk"/"scalar", file a

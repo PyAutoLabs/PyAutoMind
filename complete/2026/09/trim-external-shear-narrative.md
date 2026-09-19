@@ -1,3 +1,11 @@
+## trim-external-shear-narrative
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571 (closed completed 2026-09-19)
+- completed: 2026-09-19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/573 (merge 781bb708)
+- summary: Removed the expanded external-shear explanatory prose from all 17 script and generated-notebook sections, retained the compact headings and executable `MassField` composition, and replaced three verbose base-modeling labels with a short extensibility note. Regenerated notebooks and `workspace_index.json`. Validation: zero remaining prose sections, Python compilation, script-size guard, 37/37 curated scripts, 2/2 curated notebooks, and all seven required CI checks passed. Ruff formatting findings in four touched scripts reproduce unchanged on `main`.
+
+## Original prompt
+
 # Trim external-shear narrative from workspace examples
 
 Type: docs
