@@ -120,13 +120,33 @@ import yaml
 
 def _repo_resolver(root):
     root = Path(root)
-    module_path = root / "PyAutoBrain/agents/_repo_paths.py"
-    if module_path.is_file():
+    candidates = [p for p in (
+        root / "PyAutoBrain/agents/_repo_paths.py",
+        root / "organs/PyAutoBrain/agents/_repo_paths.py",
+    ) if p.is_file()]
+    if len({p.resolve() for p in candidates}) > 1:
+        raise ValueError("PyAutoBrain: ambiguous flat and grouped checkouts")
+    module_path = candidates[0] if candidates else None
+    if module_path is not None:
         spec = importlib.util.spec_from_file_location("_pyauto_repo_paths", module_path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         return module
     return None
+
+
+ORGANS = frozenset({"PyAutoBrain", "PyAutoMind", "PyAutoCortex",
+                    "PyAutoMemory", "PyAutoHeart", "PyAutoHands",
+                    "PyAutoNerves", "PyAutoGut", "PyAutoScientist"})
+
+
+def bootstrap_checkout(root, name):
+    """Find an organ before its manifest or the shared resolver is available."""
+    root = Path(root)
+    flat, grouped = root / name, root / "organs" / name
+    if flat.exists() and grouped.exists() and flat.resolve() != grouped.resolve():
+        raise RuntimeError(f"{name}: ambiguous flat and grouped checkouts")
+    return grouped if grouped.exists() else flat
 
 
 def repo_checkout(root, name):
@@ -135,7 +155,7 @@ def repo_checkout(root, name):
     resolver = _repo_resolver(root)
     if resolver is not None:
         return resolver.repo_path(root, name)
-    flat = root / name
+    flat = bootstrap_checkout(root, name) if name in ORGANS else root / name
     if flat.exists():
         return flat
     # A family directory containing checkouts needs the shared resolver. It
@@ -391,7 +411,8 @@ def load_root_resolver(mind_root):
     still resolves correctly from the marker.
     """
     if "module" not in _RESOLVER:
-        agents = mind_root.parent / "PyAutoBrain" / "agents"
+        root = mind_root.parent.parent if mind_root.parent.name == "organs" else mind_root.parent
+        agents = bootstrap_checkout(root, "PyAutoBrain") / "agents"
         module = None
         if (agents / "_pyauto_root.py").is_file():
             if str(agents) not in sys.path:
@@ -427,12 +448,12 @@ def workspace_root(mind_root):
     """
     resolver = load_root_resolver(mind_root)
     if resolver is None:
-        return mind_root.parent
+        return mind_root.parent.parent if mind_root.parent.name == "organs" else mind_root.parent
     root, _reason = resolver.workspace_root_reason()
     if os.environ.get("PYAUTO_ROOT"):
         return root
-    if (root / mind_root.name).resolve() != mind_root:
-        return mind_root.parent
+    if bootstrap_checkout(root, mind_root.name).resolve() != mind_root:
+        return mind_root.parent.parent if mind_root.parent.name == "organs" else mind_root.parent
     return root
 
 
@@ -584,6 +605,12 @@ PUBLIC_TABLE_TARGETS = [
 HUB_BLURB = "pyautolabs.github.io/index.html"
 
 
+def public_target(root, rel):
+    if rel.startswith("PyAutoScientist/"):
+        return bootstrap_checkout(root, "PyAutoScientist") / rel.split("/", 1)[1]
+    return root / rel
+
+
 def replace_block(path, content, begin=MARK_BEGIN, end=MARK_END):
     text = path.read_text()
     if begin not in text or end not in text:
@@ -633,7 +660,7 @@ def write_block(path, content, begin=MARK_BEGIN, end=MARK_END, *, required):
 
 def check_heart(root, repos):
     problems = []
-    heart_yaml = root / "PyAutoHeart/config/repos.yaml"
+    heart_yaml = bootstrap_checkout(root, "PyAutoHeart") / "config/repos.yaml"
     if not heart_yaml.exists():
         return [f"missing {heart_yaml} (skipped)"] if False else []
     data = yaml.safe_load(heart_yaml.read_text())
@@ -715,7 +742,7 @@ def check_hands_workspaces(root, repos):
     said so from the day it was extracted and no leg read it, so the claim was
     aspirational. Policy stays Hands' — the short keys, the report directories,
     the release matrix order are all its own; only the names are checked."""
-    path = root / "PyAutoHands/autohands/config/workspaces.yaml"
+    path = bootstrap_checkout(root, "PyAutoHands") / "autohands/config/workspaces.yaml"
     if not path.exists():
         return []
     data = yaml.safe_load(path.read_text()) or {}
@@ -754,7 +781,7 @@ def check_hands_workspaces(root, repos):
 
 
 def check_pre_build(root, repos):
-    script = root / "PyAutoHands/pre_build.sh"
+    script = bootstrap_checkout(root, "PyAutoHands") / "pre_build.sh"
     if not script.exists():
         return []
     names = re.findall(r'^run_workspace "([^"]+)"', script.read_text(), re.M)
@@ -793,7 +820,7 @@ HYGIENE_CATEGORIES = ("library", "organ", "workspace")
 
 
 def check_hygiene_coverage(root, repos, mind_root):
-    helper, script = root / HYGIENE_HELPER, root / HYGIENE_SCRIPT
+    helper, script = bootstrap_checkout(root, "PyAutoBrain") / HYGIENE_HELPER.removeprefix("PyAutoBrain/"), bootstrap_checkout(root, "PyAutoBrain") / HYGIENE_SCRIPT.removeprefix("PyAutoBrain/")
     if not helper.exists() or not script.exists():
         return []  # Brain not checked out in this environment
 
@@ -846,7 +873,7 @@ def check_hygiene_coverage(root, repos, mind_root):
 
 
 def check_labels(root, repos):
-    script = root / "PyAutoBrain/bin/ensure_workspace_labels.sh"
+    script = bootstrap_checkout(root, "PyAutoBrain") / "bin/ensure_workspace_labels.sh"
     if not script.exists():
         return []
     block = re.search(r"REPOS=\((.*?)\)", script.read_text(), re.DOTALL)
@@ -1031,7 +1058,7 @@ def check_public_tables(root, repos):
     Soft-skips a target that is not checked out."""
     problems = []
     for rel, bold in PUBLIC_TABLE_TARGETS:
-        path = root / rel
+        path = public_target(root, rel)
         if not path.exists():
             continue
         text = path.read_text()
@@ -1462,13 +1489,13 @@ def check_tenant_firewall(root, repos):
     )
     problems = []
     for organ in FIREWALL_ORGANS:
-        base = root / organ
+        base = bootstrap_checkout(root, organ)
         if not base.is_dir():
             continue  # not checked out in this environment
         for path in sorted(base.rglob("*")):
             if path.suffix not in (".py", ".sh") or not path.is_file():
                 continue
-            rel = path.relative_to(root).as_posix()
+            rel = f"{organ}/{path.relative_to(base).as_posix()}"
             if "__pycache__" in rel:
                 continue
             hits = {}
@@ -1966,7 +1993,7 @@ def main():
         write_root_marker(root, marker)
         write_block(root / "AGENTS.md", routing_table(categories, repos),
                     required=True)
-        write_block(root / "PyAutoBrain/skills/WORKFLOW.md",
+        write_block(bootstrap_checkout(root, "PyAutoBrain") / "skills/WORKFLOW.md",
                     owner_map(categories, repos), required=True)
         for name, repo in repos.items():
             if repo["category"] != "organ":
@@ -1990,7 +2017,7 @@ def main():
             write_block(repo_checkout(root, name) / "AGENTS.md", deliverable,
                         DELIVERABLE_BEGIN, DELIVERABLE_END, required=False)
         for rel, bold in PUBLIC_TABLE_TARGETS:
-            write_block(root / rel, organ_public_table(repos, bold=bold),
+            write_block(public_target(root, rel), organ_public_table(repos, bold=bold),
                         ORGANS_BEGIN, ORGANS_END, required=False)
         write_claude_md_pointers(root, repos)
         write_session_hooks(root, repos, hook_text, deliverable_hook_text)

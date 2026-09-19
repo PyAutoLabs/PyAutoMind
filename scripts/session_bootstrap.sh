@@ -47,14 +47,17 @@ HOOK="$MIND_DIR/policy/session_start_hook.sh"
 # take the parent. An explicit PYAUTO_ROOT is the operator's word and is never
 # second-guessed.
 WORKSPACE_ROOT="$(dirname "$MIND_DIR")"
+[ "$(basename "$WORKSPACE_ROOT")" = organs ] && WORKSPACE_ROOT="$(dirname "$WORKSPACE_ROOT")"
 _root_helper="$WORKSPACE_ROOT/PyAutoBrain/bin/_pyauto_root.sh"
+[ -r "$_root_helper" ] || _root_helper="$WORKSPACE_ROOT/organs/PyAutoBrain/bin/_pyauto_root.sh"
 if [ -r "$_root_helper" ]; then
     _pyauto_root_declared="${PYAUTO_ROOT:-}"
     _pyauto_wt_declared="${PYAUTO_WT_ROOT:-}"
     # shellcheck source=/dev/null
     . "$_root_helper"
     if [ -n "$_pyauto_root_declared" ] \
-        || [ "$(readlink -f "$PYAUTO_ROOT/$(basename "$MIND_DIR")")" = "$MIND_DIR" ]; then
+        || [ "$(readlink -f "$PYAUTO_ROOT/$(basename "$MIND_DIR")")" = "$MIND_DIR" ] \
+        || [ "$(readlink -f "$PYAUTO_ROOT/organs/$(basename "$MIND_DIR")")" = "$MIND_DIR" ]; then
         WORKSPACE_ROOT="$PYAUTO_ROOT"
     else
         # The resolver landed on another workspace. Put the environment back
@@ -70,11 +73,12 @@ VENV="${PYAUTO_SESSION_VENV:-$HOME/.pyauto/session-py312}"
 # The shared iterator stops at checkout boundaries and deduplicates bundle
 # links. Before Brain exists, a Mind-only bootstrap can still handle flat CI.
 _repo_resolver="$WORKSPACE_ROOT/PyAutoBrain/agents/_repo_paths.py"
+[ -r "$_repo_resolver" ] || _repo_resolver="$WORKSPACE_ROOT/organs/PyAutoBrain/agents/_repo_paths.py"
 if [ -r "$_repo_resolver" ]; then
     _checkout_list="$(python3 "$_repo_resolver" list --root "$WORKSPACE_ROOT")" || exit 1
 else
     _checkout_list=""
-    for _checkout in "$WORKSPACE_ROOT"/*/; do
+    for _checkout in "$WORKSPACE_ROOT"/*/ "$WORKSPACE_ROOT"/organs/*/; do
         [ -e "${_checkout}.git" ] || continue
         _checkout_list="${_checkout_list}${_checkout_list:+$'\n'}$(basename "${_checkout%/}")"$'\t'"${_checkout%/}"
     done

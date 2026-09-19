@@ -33,6 +33,31 @@ def hands(root, body="VALUE = 'local'\n"):
     return path.parent
 
 
+def test_grouped_hands_local_fallback(tmp_path):
+    root = tmp_path / "tree"
+    root.mkdir()
+    (root / ".pyauto-root").touch()
+    path = install_repo(root)
+    hand = hands(root / "organs")
+    path.write_text(sync.render(path.read_text(), SOURCE))
+    result = run_shim(path)
+    assert result.returncode == 0, result.stderr
+    assert json.loads(result.stdout)["hands"] == str(hand)
+
+
+def test_distinct_flat_and_grouped_hands_are_ambiguous(tmp_path):
+    root = tmp_path / "tree"
+    root.mkdir()
+    (root / ".pyauto-root").touch()
+    path = install_repo(root)
+    hands(root)
+    hands(root / "organs")
+    path.write_text(sync.render(path.read_text(), SOURCE))
+    result = run_shim(path)
+    assert result.returncode != 0
+    assert "distinct flat and grouped checkouts" in result.stderr
+
+
 def run_shim(path, env_extra=None, main=False):
     env = {k: v for k, v in os.environ.items()
            if k not in ("PYAUTO_ROOT", "PYTHONPATH", "PYAUTO_BRAIN", "PYAUTO_WT_ROOT")}

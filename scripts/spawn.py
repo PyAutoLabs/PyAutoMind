@@ -742,9 +742,18 @@ def canary_scan(out_dir):
     return hits
 
 
+def bootstrap_checkout(root, name):
+    """Locate seed sources in flat and grouped workspaces."""
+    flat = root / name
+    grouped = root / "organs" / name
+    if flat.is_dir() and grouped.is_dir() and flat.resolve() != grouped.resolve():
+        raise ValueError(f"{name}: ambiguous flat and grouped checkouts")
+    return grouped if grouped.is_dir() else flat
+
+
 def generate_all(root, out_root):
-    mind_root = root / "PyAutoMind"
-    memory_root = root / "PyAutoMemory"
+    mind_root = bootstrap_checkout(root, "PyAutoMind")
+    memory_root = bootstrap_checkout(root, "PyAutoMemory")
     results = {}
     for name, gen, src in (
         ("PyAutoMind-template", generate_mind, mind_root),
@@ -784,7 +793,7 @@ def diff_trees(a, b):
 def stamp_family(root, family_dir):
     """Stamp the family's mechanical layers (spec: workflows deferred to the
     reusable-smoke work; the workspace pin stamps the family's own version)."""
-    license_text = (root / "PyAutoMind" / "LICENSE").read_text()
+    license_text = (bootstrap_checkout(root, "PyAutoMind") / "LICENSE").read_text()
     stamped = []
     for repo in ("PyAutoProject", "autoproject_workspace", "autoproject_workspace_test"):
         rdir = family_dir / repo
@@ -877,7 +886,7 @@ def workspace_root(mind_root):
     try:
         from repos_sync import workspace_root as resolve
     except ImportError:
-        return mind_root.parent
+        return mind_root.parent.parent if mind_root.parent.name == "organs" else mind_root.parent
     return resolve(mind_root)
 
 
