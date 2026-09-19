@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_prototypes.md">Move PyAutoReduce lensing prototypes to flat fields</a> — <a href="https://github.com/PyAutoLabs/PyAutoReduce/issues/76">issue #76</a> — issued 2026-09-19 — library-dev</summary>
+<details><summary>📋 <a href="active/mass_field_prototypes.md">Move PyAutoReduce lensing prototypes to flat fields</a> — <a href="https://github.com/PyAutoLabs/PyAutoReduce/issues/76">issue #76</a> — issued 2026-09-19 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoReduce/pull/77">PyAutoReduce#77</a></summary>
 
 ```
 /start_dev active/mass_field_prototypes.md
