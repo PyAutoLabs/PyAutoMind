@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/273">issue #273</a> — issued 2026-09-16 — library-dev</summary>
+<details><summary>📋 <a href="active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md">HST GPU residue phase 2 — vmap vs jit for the production…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/273">issue #273</a> — issued 2026-09-16 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/294">autolens_profiling#294</a></summary>
 
 ```
 /start_dev active/hst_gpu_residue_p2_vmap_vs_jit_and_batched_callback.md
