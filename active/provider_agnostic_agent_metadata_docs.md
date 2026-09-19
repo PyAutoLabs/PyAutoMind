@@ -108,3 +108,7 @@ Canonical instruction migrations, both guarded ledger namespaces, provider-aware
 - https://github.com/PyAutoLabs/autolens_workspace_test/pull/324
 
 Phase 4 shared-repository PRs stack on phase 3. Merge phase 3 first; Memory before running the updated Mind template generator, Brain smoke documentation before assistant documentation links. Worktrees retained until merge.
+
+### CI integration follow-up
+
+The initial CI run found tenant-firewall instance names and missing clone classifications for generated adapters. Fixed in both phase branches: discovery naming now uses body-map categories; generated wrappers are omitted from clone copy sets and regenerated for each newborn. Installer tests: 22 passed; clone tests: 37 passed; scoped discovery, tenant firewall and the lensing assistant boundary pass locally. All new inference-assistant adapters classify; 11 pre-existing unclassified scripts/notebooks remain outside this task. Brain must merge before the assistant boundary consumer; its PR declares the paired Brain ref. Updated-head CI remains a merge gate.
