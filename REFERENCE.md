@@ -5,6 +5,16 @@ Moved verbatim from `README.md` on 2026-07-10 — agent docs that point at
 README sections ("Prompt taxonomy", "Prompt file format", the `active.md` /
 completion-record schemas) resolve here, one link from the README.
 
+The read-only context check is `python3 scripts/token_load.py report --root
+<workspace-root>`; `check` applies the same measurement to the configured
+budgets. It supports grouped main and flat bundle roots, and reports mandatory
+AGENTS and core skill files separately from conditional references. In the
+September 2026 context pass, Mind `AGENTS.md` fell from 12,507 bytes / 214 lines
+to about 5,100 bytes / 94 lines. The broader
+`draft/maintenance/organs/reduce_session_token_load.md` remains draft; this
+measurement does not imply its Cortex, Memory, or completion-record goals are
+done.
+
 ---
 
 ## What a prompt looks like
@@ -923,3 +933,150 @@ bash PyAutoBrain/bin/install.sh                        # symlinks skills + comma
 `PyAutoHeart/skills/`, `autolens_profiling/skills/`) and creates symlinks under
 `~/.claude/skills/` and `~/.claude/commands/`. Roots that aren't checked out are
 skipped. Re-run any time after pulling new skills from any of those repos.
+
+## Agent operational walkthrough
+
+This longer walkthrough is loaded when a Mind operation needs its detail;
+`AGENTS.md` holds the immediately applicable rules.
+
+## Layout (operational)
+
+- **Prompt lifecycle (issue #71)** — a prompt file advances through three
+  top-level state folders, mirroring the task ledger:
+  - `draft/<work-type>/<target>/<name>.md` — intaken, **not started**. The
+    first folder under `draft/` is the *kind of work*; the second is the
+    *target repo or domain*. Work-types: `feature/`, `bug/`, `refactor/`,
+    `docs/`, `test/`, `release/`, `maintenance/`, `research/`
+    (plus `triage/` for prompts whose classification is still unclear, and
+    `human_review/` for work that already shipped and a human wants to sign
+    off — declaration-only, see below).
+    PyAutoBrain routes by the work-type folder — see [Prompt taxonomy](#prompt-taxonomy) and `ROUTING.md`.
+  - `active/<name>.md` — **issued** (an open GitHub issue / in flight). The
+    ship skills advance the file to `complete/` on merge.
+  - `complete/<YYYY>/<MM>/<slug>.md` — **shipped**; the rich completion record
+    (see `complete/AGENTS.md`). Months are zero-padded so lexical order is
+    numerical order. `scripts/lifecycle.py` owns the moves and drift-checks
+    them.
+
+  Retired non-record material lives in **`complete/archive/`** (skipped by
+  `lifecycle.py check`/`index`): `archive/epics/` (former `z_features/`
+  multi-task trackers) and `archive/shelved/` (former `z_vault/` deferred
+  prompts + dev notes). The old `z_features/`, `z_vault/` and `autoprompt/`
+  top-level folders were retired here on 2026-07-13.
+- **Registry** — root-level markdown files, each with one job: `active.md`
+  (in-flight tasks), `planned.md` (scoped, not started), `parked.md` (started
+  but not in flight), `condemned.md` (self-material staged for the Gut's
+  transit-and-void lifecycle — see PyAutoGut), `epics.md` (long-running
+  multi-phase programmes and the ledger file that holds each one's state),
+  `ideas.md` (raw inbox swept by
+  `$intake`, `/intake` in Claude). Mutate these only via the skills in `skills/` so commit
+  messages stay consistent.
+  `dashboard.md` is the **generated** read-only view over all of it (the page
+  the README links): regenerate with `pyauto-brain intake --apply dashboard`
+  after any registry or `draft/` change you want reflected immediately — never
+  hand-edit it. `dashboard_refresh.yml` self-heals it on pushes to `main`, so a
+  missed regeneration is drift that fixes itself, not a broken page — but it
+  heals only the **render**. A prompt that shipped and was never retired to
+  `complete/` renders faithfully, as pickable backlog, and no workflow can tell
+  the difference; retiring it is a human/skill judgement. Per task that is
+  `/prm`'s close-out (it sweeps the shipped prompt's folder and regenerates the
+  page in the same commit); across the whole backlog it is
+  `pyauto-brain intake reconcile` plus the refresh payload on the dashboard
+  itself.
+  `parked.md` holds tasks that were started or scoped but are not currently
+  in flight (e.g. work parked in a stash, orphan worktrees); move back to
+  `active.md` (or `planned.md` if re-scoping) when resuming.
+- **Body map** — `repos.yaml` is the single source of repo *identity* (GitHub
+  home, category, one-line role) and explicit generated-adapter rollout for
+  every repo in the workspace. The routing
+  table in the workspace-root `AGENTS.md` and the owner map in
+  `PyAutoBrain/skills/WORKFLOW.md` are generated from it, and the repo lists in
+  Heart/Build/admin scripts are drift-checked against it:
+  `python3 scripts/repos_sync.py --write`.
+- **Policy** — `policy/` holds the universal rules single-sourced here and
+  generated verbatim into every repo's AGENTS.md by `repos_sync.py --write`:
+  `never_rewrite_history.md`, `remote_sessions.md`, `end_at_deliverable.md`
+  (plus the hooks that enforce them, `session_start_hook.sh` and
+  `end_at_deliverable_hook.sh`). Edit the canonical file, never a generated copy.
+  `repos_sync.py --write --only "generated Codex hooks"` renders opted-in
+  `.codex/hooks.json` adapters without touching the broader generated surface.
+  Codex users must review and trust the exact current hook hash with `/hooks`;
+  changed or untrusted project hooks are skipped. These adapters register the
+  reviewed PreToolUse safety guards only. The remote Python SessionStart
+  bootstrap remains Claude-specific and is not silently copied into Codex.
+  `community_surface.md` is the one policy page that is *not* generated
+  anywhere: it decides where users go (one Discussions hub) and where the
+  development flow stays (per-repo issues); the Ears and the README Support
+  sections read it as doctrine.
+- **Skills** — `skills/<name>/` are agent skills and command bodies tightly
+  coupled to the registry. Claude and Codex discovery is installed by
+  PyAutoBrain; they source `scripts/prompt_sync.sh` for commit/push.
+- **Ledger auto-merge** — a push to `claude/**` or `codex/**` whose whole diff is *ledger*
+  (`draft/`, `active/`, `complete/`, the root registry files, the dashboard
+  pages) is merged into `main` by `.github/workflows/mind_ledger_merge.yml` and
+  the branch deleted — no PR, no session step, no "please merge that" prompt.
+  Anything touching `scripts/`, `tests/`, `.github/`, `skills/`, `policy/`,
+  `docs/`, `repos.yaml` or the prose pages is left for a human, as is anything
+  unclassified (the gate is default deny). So: **push your Mind work and move
+  on** — do not leave a ledger branch hanging, and do not expect a code branch
+  to land by itself. `python3 scripts/ledger_merge.py classify --base
+  origin/main` tells you which side you are on before you push; the full
+  contract is in [REFERENCE.md](REFERENCE.md) "How the ledger lands". A
+  conflict on the registries or the generated pages is settled by the
+  ledger's own grammar (`ledger_merge.py resolve`: entries merge by slug,
+  renders take main and are regenerated); a branch that still cannot land
+  gets an issue labelled `ledger-merge`, never a silent red run.
+  Optional `active.md` session metadata records the actual harness and a known
+  resume command when available; existing `claude --resume` values remain valid.
+- **Scripts** — `scripts/status.sh` (inventory), `scripts/prompt_sync.sh`
+  (commit/push helpers), `scripts/lifecycle.py` (state moves + drift checks;
+  `lifecycle.py dates [--write]` reports/backfills the date every registry
+  entry and issued prompt carries — see [REFERENCE.md](REFERENCE.md) "Task
+  dates").
+
+## When you are asked to add a new prompt
+
+Write the file under `draft/<work-type>/<target>/<name>.md` — pick the work-type
+from the list above (use `triage/` if genuinely unsure — never `human_review/`,
+see below) and the target
+repo/domain as the second folder, e.g. `draft/feature/autolens/potential_corrections.md`
+or `draft/bug/autoarray/mask_edge_case.md`. Don't touch `active.md`, `active/`
+or `complete/` directly — those are managed by `$start-dev`, `$create-issue`
+and the ship skills (`/start_dev` and `/create_issue` in Claude).
+
+To skip the manual filing, run **`$intake`** (`/intake` in Claude), the
+PyAutoBrain Intake/Conception Agent. It classifies a raw idea into the right
+`draft/<work-type>/<target>/` folder,
+writes the light header (incl. the optional `Difficulty:/Autonomy:/Priority:`
+keys — see [Prompt file format](#prompt-file-format)), and files the prompt for you. It files a
+prompt only; `$start-dev` (`/start_dev` in Claude) remains the separate next step.
+
+## When you are asked for a human review
+
+`draft/human_review/<target>/<name>.md` holds work that has already **shipped**
+and that a human wants to read and sign off before it counts as done. It is the
+one work-type nothing may infer: file one only when a human asks for it, by
+declaring `Type: human review` (`human-review`/`human_review` read the same) —
+`/intake` will never choose it, and no completed task acquires it by default.
+Review is opt-in, not a lifecycle stage: `/prm` and the ship skills close a task
+out exactly as before and never file a review.
+
+It renders as its own **Human review** section on `dashboard.md`, directly under
+*In flight*, and is deliberately not counted as backlog — a review is not work to
+pick up, it is work waiting on a person. Its 📋 hands out a read-and-report
+prompt, not a `/start_dev`. Sign one off by retiring the prompt the usual way
+(`scripts/lifecycle.py record …`, then regenerate the dashboard); if it does not
+pass, the follow-up is an ordinary `$intake`.
+
+## When you are asked to start work on an existing prompt
+
+Use `$start-dev draft/<work-type>/<target>/<name>.md` (`/start_dev` in Claude).
+Older `<work-type>/<target>/<name>.md` and bare `<target>/<name>.md` paths from
+before the lifecycle migration still resolve. It
+routes to `$start-library` or `$start-workspace` (`/start_library` or
+`/start_workspace` in Claude) based on the repos referenced in the prompt body;
+routing keys off `@RepoName` references in the content, not the folder.
+
+## When in doubt
+
+Read [README.md](README.md). It is current as of the last commit on this branch.
