@@ -1,3 +1,12 @@
+## mass-field-profiling-live
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/287 (closed completed 2026-09-19)
+- completed: 2026-09-19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/288 (merge 5584028a)
+- epic: mass-field (live profiling consumer sweep)
+- summary: Migrated all 47 live, non-chaining profiling builders from galaxy-attached shear to top-level `MassField` models passed through flat `fields=` collections and manually assembled tracers. Five inline historical witnesses and five staged `scripts/misc/pipeline_resume/slam_resume.py` calls remain intentionally unchanged. Validation included the AST audit, Ruff, README and wall checks, 665 passing tests with 5 skips, the profiling smoke set, and imaging/interferometer runtime witnesses. CI passed after its timing-only real-likelihood threshold received the approved minimal relaxation from 3.0% to 3.1%. The staged pipeline remains tracked in `draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md` until the chaining helper is publicly released.
+
+## Original prompt
+
 # Move live profiling builders to flat fields
 
 Type: maintenance

@@ -1,6 +1,6 @@
 # Remaining code consumers move to the flat `fields=` form: profiling, inference, JOSS benchmarks, Reduce prototypes
 
-**2026-09-19 update:** This four-repo survey is now historical context. PyAutoReduce#77 and the independent autolens_inference simulator PR #8 are open and green; the inference SLaM runner has its own draft. The user confirmed the deleted local `autolens_jax_joss` checkout is outside this sweep. Profiling is split into `mass_field_live_builders.md` (47 live non-chaining calls) and `mass_field_pipeline_resume.md` (5 staged calls); 5 inline witnesses remain historical. Do not issue this broad prompt as a single task.
+**2026-09-19 update:** This four-repo survey is now historical context. PyAutoReduce#77 and both autolens_inference consumers (#8 and #10) merged. The user confirmed the deleted local `autolens_jax_joss` checkout is outside this sweep. The 47 live non-chaining profiling calls and all 5 staged resume calls shipped in `complete/2026/09/mass-field-profiling-live.md` and `complete/2026/09/mass-field-pipeline-resume.md`; 5 inline witnesses remain historical. Do not issue this broad prompt as a single task.
 
 Type: maintenance
 Target: autolens_profiling
@@ -22,7 +22,7 @@ Witness: an AST re-walk (never a grep — memory `ASTwitness`) over each repo's 
 Review-minutes: 10
 Unattended: needs-slicing
 Epic: mass-field
-Superseded-by: `draft/maintenance/autolens_profiling/mass_field_live_builders.md` and `draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md`; helper merged in PyAutoGalaxy#625 / PyAutoLens#745, publication pending
+Superseded-by: `complete/2026/09/mass-field-profiling-live.md`, `complete/2026/09/mass-field-pipeline-resume.md`, and `complete/2026/09/mass-field-inference-slam.md`; helper merged in PyAutoGalaxy#625 / PyAutoLens#745 and consumed from current source `main`
 Filed: 2026-09-18
 
 ## The trap, stated first

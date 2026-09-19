@@ -1,28 +1,15 @@
 # Active Tasks
 
-## mass-field-profiling-live
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/287
-- issued: 2026-09-19
-- prompt: active/mass_field_live_builders.md
-- session: Codex (session ID unavailable)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/mass-field-profiling-live
-- repos:
-  - autolens_profiling: feature/mass-field-profiling-live
-- parallel-claim-waiver: Human approved 2026-09-19. `hst-gpu-residue-p2` retains its disjoint HPC submit, `fixed_light_trace.py`, and result artifacts; this task excludes those paths and every inline witness.
-- summary: Move 47 independent live profiling model builders to MassField and fields=.
-
 ## mass-field-developer
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142
 - issued: 2026-09-19
 - prompt: active/mass_field_flat_adoption_developer.md
 - session: Codex (session ID unavailable)
-- status: workspace-shipped, awaiting-release-and-merge
+- status: workspace-shipped, ready-for-merge
 - worktree: ~/Code/PyAutoLabs-wt/mass-field-developer
 - repos:
   - autolens_workspace_developer: feature/mass-field-developer
-- release-gate: PyAutoGalaxy
-- release-gate: PyAutoLens
+- source-gate-cleared: 2026-09-19 — helper merged on PyAutoGalaxy/PyAutoLens `main`; human approved current-source consumption
 - summary: Migrate live developer scripts, preserve archives and re-measure the two pinned likelihoods.
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143
 - validation: 0 live legacy Galaxy shear AST sites; HST MGE, imaging simulator, search fit, plotting alignment and 32 LOS tests passed; point-source pin drift is preexisting and separate.
@@ -131,7 +118,7 @@
 - status: awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/406
 - pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/406
-- validation: 72 community/board tests passed; independent review CLEAN.
+- validation: 19 tests passed for the five-category follow-up; initial 72 community/board tests passed; independent review CLEAN on both revisions.
 - next: Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
@@ -158,11 +145,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-pyautolens.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input, PR-open
+- status: awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/747
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/747
 - validation: Documentation/template checks passed; independent review CLEAN.
-- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
+- next: Five live categories verified; draft gate cleared. Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoLens: feature/community-surface
@@ -173,11 +160,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-pyautogalaxy.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input, PR-open
+- status: awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627
 - validation: Documentation/template checks passed; independent review CLEAN.
-- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
+- next: Five live categories verified; draft gate cleared. Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoGalaxy: feature/community-surface
@@ -188,11 +175,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-pyautofit.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input, PR-open
+- status: awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1640
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1640
 - validation: Documentation/template checks passed; independent review CLEAN.
-- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
+- next: Five live categories verified; draft gate cleared. Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoFit: feature/community-surface
@@ -203,11 +190,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-pyautoarray.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input, PR-open
+- status: awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/563
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/563
 - validation: Documentation/template checks passed; independent review CLEAN.
-- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
+- next: Five live categories verified; draft gate cleared. Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - PyAutoArray: feature/community-surface
@@ -218,11 +205,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-autolens-workspace.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input, PR-open
+- status: awaiting-merge
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/570
 - pending-release: autolens_workspace@https://github.com/PyAutoLabs/autolens_workspace/pull/570
 - validation: Documentation/template checks passed; independent review CLEAN.
-- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
+- next: Five live categories verified; draft gate cleared. Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - autolens_workspace: feature/community-surface
@@ -233,11 +220,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-autogalaxy-workspace.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input, PR-open
+- status: awaiting-merge
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248
 - pending-release: autogalaxy_workspace@https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248
 - validation: Documentation/template checks passed; independent review CLEAN.
-- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
+- next: Five live categories verified; draft gate cleared. Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - autogalaxy_workspace: feature/community-surface
@@ -248,11 +235,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-autofit-workspace.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input, PR-open
+- status: awaiting-merge
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/162
 - pending-release: autofit_workspace@https://github.com/PyAutoLabs/autofit_workspace/pull/162
 - validation: Documentation/template checks passed; independent review CLEAN.
-- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
+- next: Five live categories verified; draft gate cleared. Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - autofit_workspace: feature/community-surface
@@ -278,11 +265,11 @@
 - issued: 2026-09-19
 - prompt: active/community-surface-profile.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input, PR-open
+- status: awaiting-merge
 - workspace-pr: https://github.com/PyAutoLabs/.github/pull/16
 - pending-release: .github@https://github.com/PyAutoLabs/.github/pull/16
 - validation: Documentation/template checks passed; independent review CLEAN.
-- next: Human configures answerable Proposals (slug proposals), then mark draft ready and review CI.
+- next: Five live categories verified; draft gate cleared. Review required GitHub checks, then human merge via /prm.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
 - repos:
   - .github: feature/community-surface

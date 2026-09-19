@@ -17,13 +17,13 @@ Witness: FIRST, the human's scope ruling recorded on the issue. IF in scope: an 
 Review-minutes: 30
 Unattended: never
 Epic: mass-field
-Release-gate: PyAutoGalaxy#625 and PyAutoLens#745 for the three SLaM pipelines
+Source-gate: PyAutoGalaxy#625 and PyAutoLens#745 merged; current source `main` is sufficient for this developer workspace
 Filed: 2026-09-18
 Issued: 2026-09-19
 
 ## Human scope ruling, 2026-09-19
 
-The human approved the cross-repository flat-fields migration and confirmed the deleted `autolens_jax_joss` checkout is out of the sweep. Migrate the live modelling trees in this developer workspace, preserving the exclusions below for committed measurements, frozen archives and Euclid-owned debug scripts. The initial work plan was presented and approved in this session. The new chaining helper is in open library PRs, so the three SLaM scripts may be prepared in a branch but their workspace PR cannot merge before the library-first release gate clears.
+The human approved the cross-repository flat-fields migration and confirmed the deleted `autolens_jax_joss` checkout is out of the sweep. Migrate the live modelling trees in this developer workspace, preserving the exclusions below for committed measurements, frozen archives and Euclid-owned debug scripts. The initial work plan was presented and approved in this session. The chaining helper is merged on the current PyAutoGalaxy/PyAutoLens source branches; on 2026-09-19 the human confirmed that these source workspaces may consume the current source API without waiting for a packaged release.
 
 Implementation scope correction: preserve all of `source_science/**`, including shared `fit_helpers.py`, `sim_helpers.py`, and `extract_mge_truth.py`. `run_all_tests.py` imports the shared helpers and is explicitly idempotent against cached fit identifiers behind committed measurement rows. Migrating those helpers would change the archived run contract even with `results/**` byte-unchanged. The live-code AST witness excludes this measurement tree.
 
@@ -95,8 +95,8 @@ pipelines), `plotting_alignment/**`, `source_science/*`.
 
 - Three live SLaM pipelines (`slam_pipeline/{dspl,light_dark_mge,mgl_slam_batch}.py`)
   chain stages, so the **silent-drop** failure mode applies: a stage carrying galaxies
-  forward without `fields=` loses the external field with no error. They wait on
-  `complete/2026/09/mass-field-chaining-helper.md` (merged, pending publication).
+  forward without `fields=` loses the external field with no error. They use the helper
+  recorded in `complete/2026/09/mass-field-chaining-helper.md`, merged on current source `main`.
 - Target idiom is the flat form:
   `field = af.Model(al.MassField, redshift=..., shear=af.Model(al.mp.ExternalShear))`
   then `fields=field`; prior paths read `fields.shear.gamma_1`.

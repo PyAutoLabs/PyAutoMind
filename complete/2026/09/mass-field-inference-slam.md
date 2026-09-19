@@ -1,3 +1,12 @@
+## mass-field-inference-slam
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/9 (closed completed 2026-09-19)
+- completed: 2026-09-19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/10 (merge f9266f57)
+- epic: mass-field (staged inference consumer)
+- summary: Migrated all five inference SLaM stages to a top-level `MassField`. Source LP creates the free field, source PIX 1 and mass total carry model fields through `mass_and_fields_from`, and source PIX 2 plus light LP use fixed instance fields. The helper is consumed from current PyAutoGalaxy/PyAutoLens source `main`; no packaged release is required. Validation: the five-stage runtime field witness and 56 tests passed, with Ruff, formatting, README, wall, smoke, and required CI checks green.
+
+## Original prompt
+
 # Move inference SLaM stages to flat fields
 
 Type: maintenance
@@ -7,8 +16,12 @@ Repos:
 Epic: mass-field
 Status: draft
 Autonomy: supervised
+Difficulty: medium
+Consequence: judge
+Witness: each of the five SLaM builder stages returns a root collection with the expected free or fixed field, and repository lint, tests, and the SLaM smoke entry pass without changing committed science results
 Filed: 2026-09-19
-Blocked-by: PyAutoGalaxy#625 and PyAutoLens#745 merged/released for the new `mass_and_fields_from` helper; autolens_inference#8 simulator task claim released
+Issued: 2026-09-19
+Unblocked: 2026-09-19 — PyAutoGalaxy#625 and PyAutoLens#745 are merged, the human approved consuming the helper from current source `main`, and the autolens_inference#8 simulator task is complete.
 
 ## Original user request
 
@@ -21,6 +34,8 @@ Blocked-by: PyAutoGalaxy#625 and PyAutoLens#745 merged/released for the new `mas
 Migrate all five staged model builders in `scripts/misc/slam/_runner.py` so `fields=field` survives source LP, both source PIX stages, light LP, and mass total. Use `al.util.chaining.mass_and_fields_from` for mass-chaining stages, with explicit prior versus fixed-instance choices at every stage. Validate each stage and the repository lint/smoke checks; do not alter committed science result rows without a new run. The two independent simulators are tracked in a separate task so they can land before the helper is released.
 
 This is the inference slice of `draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md`.
+
+This is a one-file consumer migration using an existing merged API. It adds no public API and needs no design, library, or documentation phase.
 
 ## Stage mapping from the 2026-09-19 code review
 
