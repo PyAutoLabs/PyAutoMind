@@ -110,4 +110,4 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/425
 - pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/404
 - pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/425
-- note: Independent review CLEAN; Brain 982 tests passed; Mind full 579 plus final targeted 36 passed. Maintained AGENTS footprint 43,365 to 25,731 bytes after root activation. After both merges, follow Brain docs/context_efficiency.md to activate the prepared root instructions; live root is unchanged.
+- note: Independent review CLEAN; Brain 982 and Mind 582 tests passed; applicable GitHub checks green on both PRs. Maintained AGENTS footprint 43,365 to 25,731 bytes after root activation. After both merges, follow Brain docs/context_efficiency.md to activate the prepared root instructions; live root is unchanged.
