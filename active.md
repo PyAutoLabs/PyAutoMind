@@ -95,3 +95,16 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## workspace-family-regroup
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/394
+- issued: 2026-09-19
+- prompt: active/workspace_family_regroup.md
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/workspace-family-regroup
+- approval: Human approved the complete migration in chat 2026-09-19, including caller updates, physical moves and retained-worktree repair. Existing untracked/ignored content must be preserved.
+- repos:
+  - PyAutoBrain: feature/workspace-family-regroup
+  - PyAutoMind: feature/workspace-family-regroup
+  - PyAutoHeart: feature/workspace-family-regroup
+  - PyAutoHands: feature/workspace-family-regroup

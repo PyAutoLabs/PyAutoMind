@@ -11,8 +11,10 @@ Difficulty: large
 Autonomy: supervised
 Consequence: judge
 Priority: high
-Status: planned — implementation approval requested 2026-09-19
+Status: approved — human: Approve and complete the migration (2026-09-19)
 Filed: 2026-09-19
+Issued: 2026-09-19
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/394
 Witness: the same repository identities resolve in a flat CI fixture, a grouped canonical fixture and a flat task bundle; after the local move all 38 declared checkouts remain covered, library imports originate at the intended checkouts, all 12 smoke bootstraps import Hands, and every retained Git worktree remains usable.
 
 ## Original request
