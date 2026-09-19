@@ -95,3 +95,14 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
+## codex-context-efficiency
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/403
+- issued: 2026-09-19
+- prompt: active/codex_context_efficiency.md
+- session: Codex; current thread
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-context-efficiency
+- repos:
+  - PyAutoBrain: feature/codex-context-efficiency
+  - PyAutoMind: feature/codex-context-efficiency
