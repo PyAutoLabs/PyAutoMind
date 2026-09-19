@@ -60,7 +60,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - affected-repos:
   - euclid_strong_lens_modeling_pipeline
 
-
 ## trim-external-shear-narrative
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571
 - issued: 2026-09-19
