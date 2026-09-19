@@ -1,5 +1,14 @@
 # Active Tasks
 
+## notify-slack-community-discussions
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/408
+- issued: 2026-09-20
+- prompt: active/notify_slack_general_when_a_community_discussion.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/notify-slack-community-discussions
+- repos:
+
 ## remove-empty-modeling-headings
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/574
 - issued: 2026-09-20
