@@ -22,6 +22,9 @@ The same conventions as the repos_sync tests next door:
 """
 
 import sys
+import shutil
+
+import pytest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -142,6 +145,40 @@ def test_the_counts_say_what_was_seen_and_whether_it_was_enforced(tmp_path):
     assert repos_sync.checkout_counts(root, REPOS, MARKER) == (1, 2, True)
     (root / MARKER).unlink()
     assert repos_sync.checkout_counts(root, REPOS, MARKER) == (1, 2, False)
+
+
+def test_grouped_manifest_is_checked_in_both_directions(tmp_path):
+    root = make_root(tmp_path, names=("OrganOne",))
+    brain = root / "PyAutoBrain" / "agents"
+    brain.mkdir(parents=True)
+    shutil.copyfile(Path(__file__).resolve().parents[2] /
+                    "PyAutoBrain/agents/_repo_paths.py", brain / "_repo_paths.py")
+    write_manifest(root / "PyAutoMind", """categories: {}
+repos:
+  OrganOne:
+    category: organ
+  LibTwo:
+    path: family/LibTwo
+    category: library
+""")
+    make_checkout(root / "family", "LibTwo")
+    assert check(root) == []
+    make_checkout(root / "family", "stray_tool")
+    assert "stray_tool" in check(root)[0]
+    (root / "family" / "LibTwo" / ".git").rmdir()
+    assert any("LibTwo" in problem and "not checked out" in problem
+               for problem in check(root))
+
+
+def test_grouped_and_flat_duplicate_identity_fails(tmp_path):
+    root = make_root(tmp_path)
+    brain = root / "PyAutoBrain" / "agents"
+    brain.mkdir(parents=True)
+    shutil.copyfile(Path(__file__).resolve().parents[2] /
+                    "PyAutoBrain/agents/_repo_paths.py", brain / "_repo_paths.py")
+    make_checkout(root / "family", "LibTwo")
+    with pytest.raises(ValueError, match="ambiguous"):
+        check(root)
 
 
 # --- the marker is generated, and generating it is what arms the leg -------

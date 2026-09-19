@@ -145,6 +145,7 @@ repos:
     public_role: "Holds stale branches, dead code and other condemned material as recoverable Git references before it is permanently removed."
   # --- scientific libraries ----------------------------------------------
   PyAutoFit:
+    path: fit/PyAutoFit
     github: PyAutoLabs/PyAutoFit
     package: autofit
     category: library
@@ -155,21 +156,25 @@ repos:
     category: library
     role: "Data structures (arrays, grids, masks), inversions, interferometry."
   PyAutoGalaxy:
+    path: galaxy/PyAutoGalaxy
     github: PyAutoLabs/PyAutoGalaxy
     package: autogalaxy
     category: library
     role: "Galaxy light/mass profiles and galaxy modelling."
   PyAutoLens:
+    path: lens/PyAutoLens
     github: PyAutoLabs/PyAutoLens
     package: autolens
     category: library
     role: "Strong-lensing modelling built on the libraries above."
   PyAutoReduce:
+    path: reduce/PyAutoReduce
     github: PyAutoLabs/PyAutoReduce
     package: autoreduce
     category: library
     role: "Data reduction of HST (and future JWST/other) imaging into modeling-ready datasets for PyAutoLens/PyAutoGalaxy."
   PyAutoCTI:
+    path: cti/PyAutoCTI
     github: PyAutoLabs/PyAutoCTI
     package: autocti
     category: library
@@ -177,92 +182,114 @@ repos:
 
   # --- workspaces ---------------------------------------------------------
   autofit_workspace:
+    path: fit/autofit_workspace
     smoke_bootstrap: true
     github: PyAutoLabs/autofit_workspace
     category: workspace
   autogalaxy_workspace:
+    path: galaxy/autogalaxy_workspace
     smoke_bootstrap: true
     github: PyAutoLabs/autogalaxy_workspace
     category: workspace
   autolens_workspace:
+    path: lens/autolens_workspace
     smoke_bootstrap: true
     github: PyAutoLabs/autolens_workspace
     category: workspace
   autocti_workspace:
+    path: cti/autocti_workspace
     smoke_bootstrap: true
     github: PyAutoLabs/autocti_workspace
     category: workspace
   autoreduce_workspace:
+    path: reduce/autoreduce_workspace
     github: PyAutoLabs/autoreduce_workspace
     category: workspace
   autofit_workspace_test:
+    path: fit/autofit_workspace_test
     smoke_bootstrap: true
     github: PyAutoLabs/autofit_workspace_test
     category: workspace_test
   autogalaxy_workspace_test:
+    path: galaxy/autogalaxy_workspace_test
     smoke_bootstrap: true
     github: PyAutoLabs/autogalaxy_workspace_test
     category: workspace_test
   autolens_workspace_test:
+    path: lens/autolens_workspace_test
     smoke_bootstrap: true
     github: PyAutoLabs/autolens_workspace_test
     category: workspace_test
   autocti_workspace_test:
+    path: cti/autocti_workspace_test
     smoke_bootstrap: true
     github: PyAutoLabs/autocti_workspace_test
     category: workspace_test
   autofit_workspace_developer:
+    path: fit/autofit_workspace_developer
     github: PyAutoLabs/autofit_workspace_developer
     category: workspace_developer
   autolens_workspace_developer:
+    path: lens/autolens_workspace_developer
     github: PyAutoLabs/autolens_workspace_developer
     category: workspace_developer
 
   # --- tutorials ----------------------------------------------------------
   HowToFit:
+    path: fit/HowToFit
     smoke_bootstrap: true
     github: PyAutoLabs/HowToFit
     category: howto
   HowToGalaxy:
+    path: galaxy/HowToGalaxy
     smoke_bootstrap: true
     github: PyAutoLabs/HowToGalaxy
     category: howto
   HowToLens:
+    path: lens/HowToLens
     smoke_bootstrap: true
     github: PyAutoLabs/HowToLens
     category: howto
 
   # --- assistants / pipelines / projects ----------------------------------
   autocti_assistant:
+    path: cti/autocti_assistant
     github: PyAutoLabs/autocti_assistant
     category: assistant
     codex_hooks: [pyauto-api-gate, end-at-deliverable]
   autofit_assistant:
+    path: fit/autofit_assistant
     github: PyAutoLabs/autofit_assistant
     category: assistant
     codex_hooks: [pyauto-api-gate, end-at-deliverable]
   autogalaxy_assistant:
+    path: galaxy/autogalaxy_assistant
     github: PyAutoLabs/autogalaxy_assistant
     category: assistant
     codex_hooks: [pyauto-api-gate, end-at-deliverable]
   autolens_assistant:
+    path: lens/autolens_assistant
     github: PyAutoLabs/autolens_assistant
     category: assistant
     codex_hooks: [pyauto-api-gate, end-at-deliverable]
   euclid_assistant:
+    path: lens/euclid_assistant
     github: Jammy2211/euclid_assistant
     category: assistant
     session_hook: false
   euclid_strong_lens_modeling_pipeline:
+    path: lens/euclid_strong_lens_modeling_pipeline
     smoke_bootstrap: true
     github: PyAutoLabs/euclid_strong_lens_modeling_pipeline
     category: pipeline
     role: "Euclid pipeline glue — library and pipeline changes for the Euclid strong-lensing work go here."
   autolens_profiling:
+    path: lens/autolens_profiling
     github: PyAutoLabs/autolens_profiling
     category: project
     role: "JAX likelihood-profiling runs and results."
   autolens_inference:
+    path: lens/autolens_inference
     github: PyAutoLabs/autolens_inference
     category: project
     role: "Non-linear search and inference benchmarking runs and results — which searches, with or without gradients, on CPU and A100, find the right answer fastest."

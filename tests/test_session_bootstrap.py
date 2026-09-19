@@ -683,6 +683,7 @@ def test_check_names_a_compiled_tool_rather_than_leaving_a_blank(tmp_path):
 def test_check_reports_declared_extras_that_never_installed(tmp_path):
     mind = _fake_mind(tmp_path)
     sibling = tmp_path / "FakeHands"
+    (sibling / ".git").mkdir(parents=True)
     (sibling / ".claude").mkdir(parents=True)
     (sibling / ".claude" / "session-python.txt").write_text("some-package\n")
 
@@ -694,9 +695,23 @@ def test_check_reports_declared_extras_that_never_installed(tmp_path):
     assert r.returncode != 0
 
 
+def test_checkout_resolver_failure_stops_bootstrap(tmp_path):
+    mind = _fake_mind(tmp_path)
+    resolver = tmp_path / "PyAutoBrain/agents/_repo_paths.py"
+    resolver.parent.mkdir(parents=True)
+    resolver.write_text("import sys\nprint('ambiguous checkouts', file=sys.stderr)\nraise SystemExit(2)\n")
+    result = subprocess.run(
+        ["bash", str(mind / "scripts/session_bootstrap.sh"), "--check"],
+        capture_output=True, text=True, timeout=30,
+    )
+    assert result.returncode != 0
+    assert "ambiguous checkouts" in result.stderr
+
+
 def test_check_is_quiet_once_the_declared_extras_are_installed(tmp_path):
     mind = _fake_mind(tmp_path)
     sibling = tmp_path / "FakeHands"
+    (sibling / ".git").mkdir(parents=True)
     (sibling / ".claude").mkdir(parents=True)
     extras = sibling / ".claude" / "session-python.txt"
     extras.write_text("some-package\n")
@@ -731,6 +746,7 @@ def test_bootstrap_runs_every_sibling_repos_hook(tmp_path):
     ran.mkdir()
     for name in ("FakeHeart", "FakeHands"):
         sibling = tmp_path / name
+        (sibling / ".git").mkdir(parents=True)
         (sibling / ".claude" / "hooks").mkdir(parents=True)
         stub = sibling / ".claude" / "hooks" / "session-start.sh"
         stub.write_text(f'#!/bin/sh\ntouch "{ran}/{name}"\n')

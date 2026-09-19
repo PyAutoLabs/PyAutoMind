@@ -105,6 +105,7 @@ Exit code 0 = no drift; 1 = drift found (each mismatch printed).
 
 import argparse
 import ast
+import importlib.util
 import json
 import os
 import re
@@ -115,6 +116,54 @@ from pathlib import Path
 import smoke_bootstrap_sync as smoke_sync
 
 import yaml
+
+
+def _repo_resolver(root):
+    root = Path(root)
+    module_path = root / "PyAutoBrain/agents/_repo_paths.py"
+    if module_path.is_file():
+        spec = importlib.util.spec_from_file_location("_pyauto_repo_paths", module_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+    return None
+
+
+def repo_checkout(root, name):
+    """Resolve a manifest identity, retaining standalone flat CI checkouts."""
+    root = Path(root)
+    resolver = _repo_resolver(root)
+    if resolver is not None:
+        return resolver.repo_path(root, name)
+    flat = root / name
+    if flat.exists():
+        return flat
+    # A family directory containing checkouts needs the shared resolver. It
+    # must not silently turn a grouped checkout into an absent flat one.
+    for family in root.iterdir() if root.is_dir() else ():
+        if family.is_dir() and not (family / ".git").exists() and (family / name).exists():
+            raise RuntimeError(f"{name}: grouped checkout requires PyAutoBrain/agents/_repo_paths.py")
+    return flat
+
+
+def all_checkouts(root):
+    """Checkouts at the root or one family level below it."""
+    root = Path(root)
+    resolver = _repo_resolver(root)
+    if resolver is not None:
+        return resolver.iter_checkouts(root)
+    if not root.is_dir():
+        return []
+    checkouts = []
+    for entry in root.iterdir():
+        if not entry.is_dir():
+            continue
+        if is_checkout(entry):
+            checkouts.append(entry)
+        elif not entry.is_symlink():
+            checkouts.extend(child for child in entry.iterdir()
+                             if child.is_dir() and is_checkout(child))
+    return sorted(checkouts)
 
 MARK_BEGIN = "<!-- repos_sync:begin -->"
 MARK_END = "<!-- repos_sync:end -->"
@@ -407,18 +456,22 @@ def owner_of(repo_spec):
 
 def routing_table(categories, repos):
     lines = [
-        "| Repo | Role — go here when the task is about… |",
-        "|------|----------------------------------------|",
+        "| Repo | Canonical location | Role — go here when the task is about… |",
+        "|------|--------------------|----------------------------------------|",
     ]
     for cat, spec in categories.items():
         members = {n: r for n, r in repos.items() if r["category"] == cat}
         if not members:
             continue
         if spec and spec.get("collapse"):
-            lines.append(f"| **{spec['label']}** | {spec['role']} |")
+            locations = sorted({Path(repo.get('path', name)).parent.as_posix()
+                                for name, repo in members.items()})
+            label = ', '.join(f'`{location}/`' for location in locations)
+            lines.append(f"| **{spec['label']}** | {label} | {spec['role']} |")
         else:
             for name, repo in members.items():
-                lines.append(f"| **{name}** | {repo['role']} |")
+                location = repo.get('path', name)
+                lines.append(f"| **{name}** | `{location}` | {repo['role']} |")
     provenance = (
         "Generated from `PyAutoMind/repos.yaml` (the body map — the single "
         "source of repo identity). Edit that file, then run "
@@ -832,7 +885,7 @@ def check_map_blocks(root, repos, smap):
     for name, repo in repos.items():
         if repo["category"] != "organ":
             continue
-        agents = root / name / "AGENTS.md"
+        agents = repo_checkout(root, name) / "AGENTS.md"
         if not agents.exists():
             continue  # not checked out, or an organ without its own AGENTS.md
         text = agents.read_text()
@@ -853,7 +906,7 @@ def check_history_blocks(root, repos, hpol):
     drifting."""
     problems = []
     for name in repos:
-        agents = root / name / "AGENTS.md"
+        agents = repo_checkout(root, name) / "AGENTS.md"
         if not agents.exists():
             continue
         text = agents.read_text()
@@ -877,7 +930,7 @@ def check_remote_blocks(root, repos, remote):
     REMOTE_SESSIONS_FILE."""
     problems = []
     for name in repos:
-        agents = root / name / "AGENTS.md"
+        agents = repo_checkout(root, name) / "AGENTS.md"
         if not agents.exists():
             continue
         text = agents.read_text()
@@ -907,7 +960,7 @@ def check_deliverable_blocks(root, repos, policy):
     """
     problems = []
     for name in repos:
-        agents = root / name / "AGENTS.md"
+        agents = repo_checkout(root, name) / "AGENTS.md"
         if not agents.exists():
             continue  # not checked out here
         text = agents.read_text()
@@ -941,7 +994,7 @@ def insert_deliverable_markers(root, repos):
     belongs. A repo with neither pair is left alone (there is no non-arbitrary
     place to put it) and named by `check_deliverable_blocks` instead."""
     for name in repos:
-        agents = root / name / "AGENTS.md"
+        agents = repo_checkout(root, name) / "AGENTS.md"
         if not agents.exists():
             continue
         text = agents.read_text()
@@ -1020,7 +1073,7 @@ def claude_md_is_pointer(text):
 def check_claude_md_pointers(root, repos):
     problems = []
     for name in repos:
-        repo_dir = root / name
+        repo_dir = repo_checkout(root, name)
         if not repo_dir.is_dir():
             # Not checked out here, so there is nothing for THIS leg to
             # read. Absence itself is no longer silent — the "workspace
@@ -1048,7 +1101,7 @@ def repos_without_agents_md(root, repos):
     return [
         name
         for name in repos
-        if (root / name).is_dir() and not (root / name / "AGENTS.md").exists()
+        if repo_checkout(root, name).is_dir() and not (repo_checkout(root, name) / "AGENTS.md").exists()
     ]
 
 
@@ -1058,7 +1111,7 @@ def write_claude_md_pointers(root, repos):
     the `@AGENTS.md` import is left untouched; a repo with no AGENTS.md is
     skipped (nothing to point at)."""
     for name in repos:
-        repo_dir = root / name
+        repo_dir = repo_checkout(root, name)
         if not repo_dir.is_dir():
             continue
         if not (repo_dir / "AGENTS.md").exists():
@@ -1200,7 +1253,7 @@ def check_structure_lints(root, repos):
     """
     problems = []
     for name in repos:
-        repo_dir = root / name
+        repo_dir = repo_checkout(root, name)
         if not repo_dir.is_dir():
             continue  # not checked out in this environment
         lint, forbidden, unreadable = structure_lint_verdict(repo_dir)
@@ -1466,7 +1519,7 @@ def is_checkout(path):
 def check_origins(root, repos):
     problems = []
     for name, repo in repos.items():
-        checkout = root / name
+        checkout = repo_checkout(root, name)
         if not is_checkout(checkout):
             # Not checked out here, so there is nothing for THIS leg to
             # read. Absence itself is no longer silent — the "workspace
@@ -1490,20 +1543,14 @@ def check_origins(root, repos):
 
 
 def root_checkouts(root):
-    """Every git checkout sitting directly at the workspace root."""
-    if not root.is_dir():
-        return []
-    return sorted(
-        entry.name
-        for entry in root.iterdir()
-        if entry.is_dir() and is_checkout(entry)
-    )
+    """Every checkout at the root or directly inside a family directory."""
+    return [entry.name for entry in all_checkouts(root)]
 
 
 def checkout_counts(root, repos, marker):
     """`(checked_out, declared, enforced)` — the denominator for the leg below,
     and whether this root is one the leg can hold to it."""
-    checked_out = sum(1 for name in repos if (root / name).is_dir())
+    checked_out = sum(1 for name in repos if repo_checkout(root, name).is_dir())
     return checked_out, len(repos), (root / marker).is_file()
 
 
@@ -1535,13 +1582,16 @@ def check_checkouts(root, repos, unmapped, marker):
         f"'{name}': declared in repos.yaml but not checked out at the "
         f"workspace root"
         for name in repos
-        if not (root / name).is_dir()
+        if not is_checkout(repo_checkout(root, name))
     ]
+    declared_paths = {repo_checkout(root, name).resolve() for name in repos}
     problems += [
         f"'{name}': a checkout at the workspace root that repos.yaml does not "
         f"declare (add it to repos.yaml, or to unmapped_checkouts:)"
-        for name in root_checkouts(root)
-        if name not in repos and name not in unmapped
+        for path in all_checkouts(root)
+        for name in [path.name]
+        if path.resolve() not in declared_paths and not (
+            path.parent == root and name in unmapped)
     ]
     return problems
 
@@ -1641,7 +1691,7 @@ def session_hook_counts(root, repos):
     """
     excluded = sum(1 for spec in repos.values() if session_hook_excluded(spec))
     in_scope = [n for n, spec in repos.items() if not session_hook_excluded(spec)]
-    checked_out = sum(1 for name in in_scope if (root / name).is_dir())
+    checked_out = sum(1 for name in in_scope if repo_checkout(root, name).is_dir())
     return checked_out, len(in_scope), excluded
 
 
@@ -1666,7 +1716,7 @@ def check_session_hooks(root, repos, hook_text, deliverable_text):
     for name, spec in repos.items():
         if session_hook_excluded(spec):
             continue  # recorded manifest exclusion — see session_hook_excluded
-        repo_dir = root / name
+        repo_dir = repo_checkout(root, name)
         if not repo_dir.is_dir():
             continue  # not checked out in this environment
         if structure_lint_forbids(repo_dir, ".claude"):
@@ -1715,7 +1765,7 @@ def write_session_hooks(root, repos, hook_text, deliverable_text):
     for name, spec in repos.items():
         if session_hook_excluded(spec):
             continue  # recorded manifest exclusion — see session_hook_excluded
-        repo_dir = root / name
+        repo_dir = repo_checkout(root, name)
         if not repo_dir.is_dir():
             continue
         if structure_lint_forbids(repo_dir, ".claude"):
@@ -1816,7 +1866,7 @@ def check_codex_hooks(root, repos):
         except ValueError as error:
             problems.append(f"'{name}': {error}")
             continue
-        repo_dir = root / name
+        repo_dir = repo_checkout(root, name)
         if not repo_dir.is_dir():
             # Not checked out here, so there is nothing for THIS leg to
             # read. Absence itself is no longer silent — the "workspace
@@ -1845,7 +1895,7 @@ def write_codex_hooks(root, repos):
             text = render_codex_hooks(spec)
         except ValueError as error:
             raise SystemExit(f"repos_sync: '{name}': {error}") from error
-        repo_dir = root / name
+        repo_dir = repo_checkout(root, name)
         if not repo_dir.is_dir():
             continue
         path = repo_dir / CODEX_HOOKS_REL
@@ -1921,7 +1971,7 @@ def main():
         for name, repo in repos.items():
             if repo["category"] != "organ":
                 continue
-            write_block(root / name / "AGENTS.md", smap, MAP_BEGIN, MAP_END,
+            write_block(repo_checkout(root, name) / "AGENTS.md", smap, MAP_BEGIN, MAP_END,
                         required=False)
         # The history policy is universal — written into every repo (not just
         # organs) that has added the markers.
@@ -1933,11 +1983,11 @@ def main():
         # each repo to opt in is how the long tail stays unprotected.)
         insert_deliverable_markers(root, repos)
         for name in repos:
-            write_block(root / name / "AGENTS.md", hpol,
+            write_block(repo_checkout(root, name) / "AGENTS.md", hpol,
                         HISTORY_BEGIN, HISTORY_END, required=False)
-            write_block(root / name / "AGENTS.md", remote,
+            write_block(repo_checkout(root, name) / "AGENTS.md", remote,
                         REMOTE_BEGIN, REMOTE_END, required=False)
-            write_block(root / name / "AGENTS.md", deliverable,
+            write_block(repo_checkout(root, name) / "AGENTS.md", deliverable,
                         DELIVERABLE_BEGIN, DELIVERABLE_END, required=False)
         for rel, bold in PUBLIC_TABLE_TARGETS:
             write_block(root / rel, organ_public_table(repos, bold=bold),
