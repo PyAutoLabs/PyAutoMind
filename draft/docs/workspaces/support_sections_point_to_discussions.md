@@ -22,6 +22,17 @@ Witness: each of the seven repos' README "Community & Support" section carries t
 Review-minutes: 10
 Filed: 2026-09-17
 
+## Merge progress (2026-09-19)
+
+The four library members and the Galaxy/Fit workspace members have shipped;
+their records are `complete/2026/09/community-surface-*.md`. Do not reimplement
+those six members. Only autolens_workspace#570 remains awaiting its smoke CI
+and merge; retire this umbrella once that seventh member has shipped.
+The approved contact links now target Help & Questions, Ideas & Proposals,
+and Bugs & Errors, superseding the category names below.
+
+## Original scope
+
 Spawned by `policy/community_surface.md` (PyAutoMind#403), decision 4. Today
 every README says "For installation issues, bug reports, or feature requests,
 please raise an issue on the GitHub issues page" and none of the repos has an

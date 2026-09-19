@@ -1,3 +1,25 @@
+# Completed: PyAutoBrain community surface
+
+Merged: 2026-09-19
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/405
+PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/406
+
+## Shipped
+
+Corrected community broadcast/pending semantics, accepted-answer handling, proposal routing, and readable/HTML board visibility with regression tests.
+
+Uses the human-approved five categories: Announcements, Help & Questions, Ideas & Proposals, Bugs & Errors, and Show and tell.
+
+## Validation and close-out
+
+All workflows and jobs for the exact PR head were audited before merging; required jobs passed, with only conditional skips inside successful workflows. Independent review was CLEAN. Git ancestry confirms the feature head is contained in origin/main with zero unmerged commits. Human authorized merging all PRs on 2026-09-19.
+
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/406
+
+Only this repository member is complete. The shared community-surface worktree remains because Mind, Lens workspace, website, and organization-profile PRs are still open. The policy and migration umbrella tasks remain active.
+
+## Original prompt
+
 # fix: keep broadcast discussions out of awaiting-response
 
 Type: bug
