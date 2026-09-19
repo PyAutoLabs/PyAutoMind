@@ -8,6 +8,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/notify-slack-community-discussions
 - repos:
+  - PyAutoBrain: feature/community-slack-notifications
 
 ## remove-empty-modeling-headings
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/574
