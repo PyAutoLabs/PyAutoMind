@@ -113,3 +113,14 @@
   - PyAutoNerves: feature/workspace-organs-regroup
   - PyAutoGut: feature/workspace-organs-regroup
   - PyAutoScientist: feature/workspace-organs-regroup
+  - autofit_workspace: feature/workspace-organs-regroup
+  - autogalaxy_workspace: feature/workspace-organs-regroup
+  - autolens_workspace: feature/workspace-organs-regroup
+  - autocti_workspace: feature/workspace-organs-regroup
+  - autofit_workspace_test: feature/workspace-organs-regroup
+  - autogalaxy_workspace_test: feature/workspace-organs-regroup
+  - autolens_workspace_test: feature/workspace-organs-regroup
+  - autocti_workspace_test: feature/workspace-organs-regroup
+  - HowToFit: feature/workspace-organs-regroup
+  - HowToGalaxy: feature/workspace-organs-regroup
+  - HowToLens: feature/workspace-organs-regroup
