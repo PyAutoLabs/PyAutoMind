@@ -101,8 +101,13 @@
 - issued: 2026-09-19
 - prompt: active/codex_context_efficiency.md
 - session: Codex; current thread
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/codex-context-efficiency
 - repos:
   - PyAutoBrain: feature/codex-context-efficiency
   - PyAutoMind: feature/codex-context-efficiency
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/404
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/425
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/404
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/425
+- note: Independent review CLEAN; Brain 982 tests passed; Mind full 579 plus final targeted 36 passed. Maintained AGENTS footprint 43,365 to 25,731 bytes after root activation. After both merges, follow Brain docs/context_efficiency.md to activate the prepared root instructions; live root is unchanged.
