@@ -1,5 +1,15 @@
 # Active Tasks
 
+## trim-external-shear-narrative
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/571
+- issued: 2026-09-19
+- prompt: active/trim_external_shear_narrative.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/trim-external-shear-narrative
+- repos:
+  - autolens_workspace: feature/trim-external-shear-narrative
+
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12
