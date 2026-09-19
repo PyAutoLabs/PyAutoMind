@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets — the same tile/band…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88">issue #88</a> — issued 2026-09-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/datasetmodel_grid_offset_prior_0_2_clips.md">DatasetModel grid_offset prior ±0.2" clips real multi-band offsets — the same tile/band…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88">issue #88</a> — issued 2026-09-17 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/94">euclid_strong_lens_modeling_pipeline#94</a></summary>
 
 ```
 /start_dev active/datasetmodel_grid_offset_prior_0_2_clips.md
