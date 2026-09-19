@@ -65,16 +65,31 @@ org page. PyAutoLens's one announcement thread is transferred there and
 PyAutoLens's Discussions switched off; every other repo keeps Discussions
 **off**, with README and issue chooser pointing at the hub.
 
-**Categories** (GitHub's defaults plus one):
+**Categories** (GitHub's defaults plus Scientific analysis and Proposals):
 
 | Category | Answerable | For |
 |---|---|---|
 | Announcements | no | releases, breaking changes (exists) |
 | Q&A | yes | installation, usage, "why does this error", help with code |
 | Scientific analysis | yes | lens modelling, inference, "is this result right" — the ask that never fitted an issue |
-| Ideas | no | feature requests and proposals, before anyone commits to work |
+| Ideas | no | feature requests before there is a design or an offer to build them |
+| Proposals | yes | a concrete plan someone means to implement — design, API sketch or a reference implementation; further along than an Idea |
 | Show and tell | no | results, papers, figures |
 | General | no | everything else |
+
+**Ideas** is "it would be good if…" — no design, and no offer from the author
+to build it. **Proposals** is a design the author has thought through and
+usually intends to write. Anyone can open a proposal. The thread argues the
+design; the issue, when the work is accepted, is still where the work is
+tracked.
+
+Proposals is **answerable** on purpose. Settle a proposal by marking the
+verdict comment — "yes, open the issue" or a recorded no — as the accepted
+answer. The Ears read `answer_chosen_at`, so accepting that verdict is what
+stops the thread being chased; a closing comment alone does not settle it
+against later replies. An accepted proposal gets an issue with a link back
+to the thread, exactly as a confirmed bug does, and routes through
+`/start_dev_for_user`.
 
 ### 2. Does the development flow stay on library issues?
 
@@ -92,7 +107,8 @@ picks up. Anything short of that ("this doesn't work", "how do I", "is this
 right") is a **Discussion**; if it turns out to be a bug, the Ears open the
 issue with a link back and mark the thread answered with the issue link.
 Each user-facing repo's issue chooser (`.github/ISSUE_TEMPLATE/config.yml`)
-carries the two contact links and one bug-report template so the choice is
+carries three contact links (questions, feature ideas, implementation
+proposals) and one bug-report template so the choice is
 made at the moment of filing; blank issues stay enabled because the
 development flow files by API and the maintainer occasionally by hand.
 
@@ -102,8 +118,11 @@ development flow files by API and the maintainer occasionally by hand.
 the REST endpoint `repos/PyAutoLabs/.github/discussions` (read-only, and
 served to a remote session — see "Measured" below) alongside the external
 issues and PRs it already hears. A thread is **awaiting our response** when it
-has no accepted answer and its last word is not a self login; the board
-renders each such thread as a `/community triage <url>` chip.
+has no accepted answer and its last word is not a self login, except for
+**Announcements** and **Show and tell**, which are ours to watch rather than
+threads to chase. They remain visible and explicit triage still emits their
+context surface. The board renders each thread awaiting a response as a
+`/community triage <url>` chip.
 `pyauto-brain community triage <discussion url>` emits the same
 context-sufficiency surface as for an issue, with the route: **answer in the
 thread** (drafted in the session, posted by the human), or, for a confirmed
@@ -129,9 +148,9 @@ Follow-ups filed: `draft/docs/workspaces/support_sections_point_to_discussions.m
 ### 5. Migration of the external threads
 
 The threads worth moving are the **user-filed feature requests and
-proposals** — they are conversations about direction, which is what Ideas is
-for, and a hub that opens with real requests and their outcomes is a hub
-people post to. Bug reports (fixed or open) stay issues: a fixed bug is a
+proposals** — they are conversations about direction, which is what Ideas
+and Proposals are for, and a hub that opens with real requests and their
+outcomes is a hub people post to. Bug reports (fixed or open) stay issues: a fixed bug is a
 record, an open one with a reproducer is dev work.
 
 Move them with GitHub's native **Convert to discussion** (issue sidebar). It
@@ -142,17 +161,18 @@ maintainer's name and lose the thread. Conversion lands in the issue's own
 repo, so a non-hub repo's thread is converted there (Discussions enabled
 for the minute it takes) and then **Transfer discussion** moves it to the
 hub; discussions never move when the org's source repository changes, which
-is why the host repo is decided *before* the migration, not after. Manifest (all → **Ideas**; the two
-closed-as-shipped ones keep the shipped status in their last comment):
+is why the host repo is decided *before* the migration, not after. Manifest:
+the open design goes to **Proposals**; the five shipped requests stay in
+**Ideas**, retaining their outcomes in the last comment.
 
-| Thread | Author | State | Why Ideas |
-|---|---|---|---|
-| PyAutoArray#551 — Streaming visibilities for memory efficiency | @HRSAstro | open | proposal with a reference implementation, not yet committed work |
-| PyAutoArray#499 — Sparse interferometer inversion with linear function lists | @HRSAstro | shipped (#500) | request → shipped; shows the loop closes |
-| PyAutoLens#631 — Yang+2024 SIDM profile as default for subhalos/LOS halos | @mwiet | shipped (PyAutoGalaxy#556, #691) | request with deferred items still open for discussion |
-| PyAutoLens#564 — Kaplinghat, Tulin & Yu (2016) cored-NFW profile | @mwiet | shipped (PyAutoGalaxy#471) | request → shipped |
-| PyAutoLens#542 — end-to-end `jax.jit`/`vmap` multi-plane substructure simulator | @mwiet | shipped (jax_substructure series) | request → shipped |
-| PyAutoGalaxy#419 — External potential (Powell 2022) | @Sketos | shipped (PyAutoGalaxy#422) | request → shipped |
+| Thread | Author | State | Category | Why |
+|---|---|---|---|---|
+| PyAutoArray#551 — Streaming visibilities for memory efficiency | @HRSAstro | open | Proposals | proposal with a reference implementation, not yet committed work |
+| PyAutoArray#499 — Sparse interferometer inversion with linear function lists | @HRSAstro | shipped (#500) | Ideas | request → shipped; shows the loop closes |
+| PyAutoLens#631 — Yang+2024 SIDM profile as default for subhalos/LOS halos | @mwiet | shipped (PyAutoGalaxy#556, #691) | Ideas | request with deferred items still open for discussion |
+| PyAutoLens#564 — Kaplinghat, Tulin & Yu (2016) cored-NFW profile | @mwiet | shipped (PyAutoGalaxy#471) | Ideas | request → shipped |
+| PyAutoLens#542 — end-to-end `jax.jit`/`vmap` multi-plane substructure simulator | @mwiet | shipped (jax_substructure series) | Ideas | request → shipped |
+| PyAutoGalaxy#419 — External potential (Powell 2022) | @Sketos | shipped (PyAutoGalaxy#422) | Ideas | request → shipped |
 
 Stays an issue: PyAutoArray#535 (@ClarkGuilty, `imshow_origin` overlay
 mirror — open, full reproducer, dev work); the fixed bug reports
