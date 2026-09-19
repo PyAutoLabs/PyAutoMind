@@ -435,6 +435,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [autogalaxy_workspace#248](https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248) — `complete/2026/09/community-surface-autogalaxy-workspace.md`
 
+**autolens_profiling**
+
+- [autolens_profiling#293](https://github.com/PyAutoLabs/autolens_profiling/pull/293) — `complete/2026/09/point-source-shared-breakdown.md`
+
 **autolens_workspace**
 
 - [autolens_workspace#570](https://github.com/PyAutoLabs/autolens_workspace/pull/570) — `complete/2026/09/community-surface-autolens-workspace.md`
@@ -1601,7 +1605,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>research</b> — 16</summary>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: shared likelihood breakdown first, then measured iteration</a> — autolens_profiling · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the shared breakdown</a> — autolens_profiling · large · supervised · high</summary>
 
 ```
 /start_dev draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md
@@ -2116,7 +2120,7 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: shared likelihood breakdown…</a> | autolens_profiling | large | high | formalised |
+| <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> | autolens_profiling | large | high | formalised |
 | <a href="draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md">One construction path for plane-bound lensing quantities</a> | autolens | medium | normal | formalised |
 | <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> | pyautolens | medium | low | formalised |
 
@@ -2345,7 +2349,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
-| 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: shared likelihood breakdown…</a> |
+| 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
 | 2026-09-17 | issued | <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |

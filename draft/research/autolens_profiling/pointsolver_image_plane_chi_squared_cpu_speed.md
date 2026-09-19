@@ -25,7 +25,8 @@ Updated: 2026-09-19
 ## Campaign contract (2026-09-19)
 
 This execution plan supersedes the earlier deliverable/gate wording retained below.
-This is one of two existing prompts expanded in place, not another duplicate task.
+This is one of two optimization campaigns in a three-task plan. The independent
+shared breakdown task is their common prerequisite.
 It is a phased campaign: at start-dev, issue only the next bounded phase (one task /
 one PR per member), retaining this prompt as the campaign intent until all phases
 are resolved. Do not attempt a cross-library, multi-PR campaign as a single task.
@@ -65,19 +66,25 @@ implementation was performed during this consolidation.
   or a concrete external blocker prevents the next experiment. Do not promise the
   historical speedup, optimize indefinitely, or weaken correctness to hit a target.
 
+### Split request (verbatim)
+
+break into 3, with the first build the shared likelihood breakdown first, which I guess is CPU or GPU agnostic but maybe not, then PR them into main
+
 ### Original consolidation request (verbatim)
 
 We did two reviews or assessments of the point source likelihood function recently one for CPU which was JAX and numba sparse (it concluded numba spaerse not worth it) and one for GPU. We may of made some prompts but I want you to assess all that the review put forward and ultimately end with two mind task or prompts, which could be epics, which will profile them with autolens_profiling and iteratively work on the speed up. One was focused in particular on writing an autolens_profiling likelihood_breakdown script, which it may of wrote or just planned, this would likely be the task before we go into specific CPU or GPU speed up
 
 ## CPU campaign: dependencies and phase order
 
-**Start condition:** GPU prompt
-`draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md`
-phase 0 owns the shared `scripts/point_source/likelihood_breakdown/` instrument.
-CPU source optimization waits for that instrument and its CPU baseline; it does
-not wait for completion of the A100 campaign. Acquire untouched A100 baseline
-provenance before shared library changes, or retain the exact baseline commit so
-it can be measured later. Avoid two branches changing the same solver at once.
+**Start condition:** task 1 shipped in
+[autolens_profiling#293](https://github.com/PyAutoLabs/autolens_profiling/pull/293)
+and is recorded in `complete/2026/09/point-source-shared-breakdown.md`; it owns
+the shared `scripts/point_source/likelihood_breakdown/` instrument and CPU
+reference results under `results/breakdown/point_source/`.
+CPU source optimization waits for that merged instrument and CPU baseline, not
+for the GPU campaign. Preserve the exact unoptimized library revisions and
+configuration so task 3 can reproduce an A100 baseline even if CPU fixes land
+first. Avoid two branches changing the same solver at once.
 
 1. **Reproduce and publish the CPU evidence.** Re-run the simple solved likelihood
    and the 13-component, two-source cluster case with the shared harness. The

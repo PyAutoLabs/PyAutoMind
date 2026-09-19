@@ -1,4 +1,4 @@
-# Point-source A100 speed-up campaign: shared likelihood breakdown first, then measured iteration
+# Point-source A100 speed-up campaign: profile and optimize with the shared breakdown
 
 Type: research
 Target: autolens_profiling
@@ -23,7 +23,8 @@ Updated: 2026-09-19
 ## Campaign contract (2026-09-19)
 
 This execution plan supersedes the earlier deliverable/gate wording retained below.
-This is one of two existing prompts expanded in place, not another duplicate task.
+This is one of two optimization campaigns in a three-task plan. The independent
+shared breakdown task is their common prerequisite.
 It is a phased campaign: at start-dev, issue only the next bounded phase (one task /
 one PR per member), retaining this prompt as the campaign intent until all phases
 are resolved. Do not attempt a cross-library, multi-PR campaign as a single task.
@@ -63,11 +64,15 @@ implementation was performed during this consolidation.
   or a concrete external blocker prevents the next experiment. Do not promise the
   historical speedup, optimize indefinitely, or weaken correctness to hit a target.
 
+### Split request (verbatim)
+
+break into 3, with the first build the shared likelihood breakdown first, which I guess is CPU or GPU agnostic but maybe not, then PR them into main
+
 ### Original consolidation request (verbatim)
 
 We did two reviews or assessments of the point source likelihood function recently one for CPU which was JAX and numba sparse (it concluded numba spaerse not worth it) and one for GPU. We may of made some prompts but I want you to assess all that the review put forward and ultimately end with two mind task or prompts, which could be epics, which will profile them with autolens_profiling and iteratively work on the speed up. One was focused in particular on writing an autolens_profiling likelihood_breakdown script, which it may of wrote or just planned, this would likely be the task before we go into specific CPU or GPU speed up
 
-## GPU campaign: shared breakdown first, then measured A100 optimization
+## GPU campaign: depends on the shared breakdown, then measured A100 optimization
 
 ### Evidence audit (2026-09-19)
 
@@ -82,34 +87,23 @@ The CPU sibling preserves reported scratch gains, not landed profiling artifacts
 Its redundant vertex sort is distinct from necessary triangle deduplication;
 GPU benefit must be measured rather than extrapolated from CPU ratios.
 
-### Phase 0 — shared instrumentation and unmodified baselines (first task)
+### Prerequisite — separate shared breakdown task
 
-Own and ship `scripts/point_source/likelihood_breakdown/image_plane.py`, or a
-clearly documented solved sibling, matching the existing profiling harness.
-Include the exact `image_plane_solved` fit class/configuration used by the CPU
-assessment and a separately identified plain image-plane control. Reuse existing
-simulators and cluster configurations; pass each source's plane_redshift explicitly.
+Task 1 shipped in [autolens_profiling#293](https://github.com/PyAutoLabs/autolens_profiling/pull/293)
+and is recorded in `complete/2026/09/point-source-shared-breakdown.md`.
+Use its merged instrument, CPU reference results under
+`results/breakdown/point_source/` and reproducible baseline revisions; do not
+rebuild the harness here.
+The harness shares stages/schema across devices, but A100 execution and timing
+must be validated here. A CPU run is not proof of GPU correctness or performance.
 
-Open the solver loop: initial lattice/vertex-index construction, each refinement
-step's ray tracing, containment, selection, neighborhood, deduplication and
-up-sampling, followed by magnification filtering, analytic source-centre work
-where applicable and pairing/chi-squared. Report step shapes/capacity and actual
-vertex counts so padding, geometry and deflection work can be distinguished.
-Use prefix-walk timing where valid with fused controls and a trace; preserve
-production semantics rather than replacing the solver with a simplified benchmark.
-
-Deliver local CPU fp64 baseline JSON + PNG in `results/breakdown/point_source/`,
-end-to-end agreement, smoke integration and dashboard visibility. Establish an
-A100 fp64 baseline on the same unmodified commits before GPU optimization;
-record mixed precision separately with accuracy results. CPU campaign may begin
-as soon as the shared harness and CPU baseline land; hardware queue availability
-must not force it to wait for all GPU investigation. Retain baseline commits for
-paired A100 runs if shared fixes land before a GPU slot is available.
-
-This phase is the shared prerequisite, owned here exactly once. The sibling
-`point_solver_profiling_cells.md` owns broader quasar/flux and cluster runtime
-catalogue expansion; reuse any landed cells but do not absorb or duplicate that
-separate task. No dependency cycle with that catalogue expansion is required.
+First validate the harness on A100 and acquire fp64 and separately labelled
+mixed-precision reference rows on the preserved unoptimized library commits.
+This remains possible if CPU improvements have already landed. Check numerical
+agreement against the CPU reference and production likelihood, recording
+precision-specific tolerances. Begin GPU optimization only after that baseline.
+The CPU campaign does not depend on this campaign finishing or obtaining a GPU slot.
+Coordinate changes to the shared solver with the CPU campaign to avoid conflicts.
 
 ### Phase 1 — A100 bottleneck map
 
@@ -153,13 +147,13 @@ Jacobian-cost claims remain hypotheses until phase 1 measures them.
 
 ### Completion evidence
 
-Ship the shared harness, committed CPU/A100 baseline and final artifact pairs,
+Reuse the shared harness and its CPU reference; ship A100 baseline/final artifact pairs,
 trace-derived bottleneck map, batching/precision/compile/gradient tables, and
 `results/notes/point_source_gpu_breakdown_2026_09.md` with phase PRs and commands.
 Finish warranted optimization iterations, not just filing another list of
 follow-ups. Explicitly record rejected levers and residual bottlenecks. If A100
-access is unavailable, phase 0 CPU delivery can stand but GPU phases remain
-pending; never label CPU timing as A100 evidence.
+access is unavailable, the separate shared task and CPU campaign can proceed
+but this campaign remains pending; never label CPU timing as A100 evidence.
 
 ## Preserved September 17 assessment and provenance
 
