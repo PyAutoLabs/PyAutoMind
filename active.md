@@ -108,3 +108,6 @@
   - PyAutoMind: feature/workspace-family-regroup
   - PyAutoHeart: feature/workspace-family-regroup
   - PyAutoHands: feature/workspace-family-regroup
+  - autolens_workspace_developer: feature/workspace-family-regroup
+  - autolens_profiling: feature/workspace-family-regroup
+- parallel-claim: Approved complete migration includes the caller audit. Profiling scope is scripts/misc/hazards path lookup plus its tests, disjoint from hst-gpu-residue-p2 imaging vmap/probe/results work. Existing profiling worktrees and branches remain intact.
