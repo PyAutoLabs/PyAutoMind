@@ -362,7 +362,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_flat_adoption_developer.md">Is <code>autolens_workspace_developer</code> in the MassField epic</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142">issue #142</a> — issued 2026-09-19 — workspace-shipped, ready-for-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143">autolens_workspace_developer#143</a></summary>
+<details><summary>📋 <a href="active/mass_field_flat_adoption_developer.md">Is <code>autolens_workspace_developer</code> in the MassField epic</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142">issue #142</a> — issued 2026-09-19 — workspace-shipped, awaiting-release-and-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143">autolens_workspace_developer#143</a> — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/mass_field_flat_adoption_developer.md
@@ -487,6 +487,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoGalaxy#621](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621) — `complete/2026/09/mass-field-class.md`
 - [PyAutoGalaxy#616](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616) — `complete/2026/09/model-figures-lens.md`
 - [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
+- ⏸ waiting: [Is <code>autolens_workspace_developer</code> in the MassField epic](active/mass_field_flat_adoption_developer.md)
 
 **PyAutoLens**
 
@@ -502,6 +503,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `complete/2026/09/pixelized-source-magnification-latent.md`
 - [PyAutoLens#728](https://github.com/PyAutoLabs/PyAutoLens/pull/728) — `complete/2026/09/pixelized-source-magnification-latent.md`
 - [PyAutoLens#734](https://github.com/PyAutoLabs/PyAutoLens/pull/734) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
+- ⏸ waiting: [Is <code>autolens_workspace_developer</code> in the MassField epic](active/mass_field_flat_adoption_developer.md)
 
 **PyAutoMind**
 

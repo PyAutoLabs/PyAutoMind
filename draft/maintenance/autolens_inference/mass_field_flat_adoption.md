@@ -7,6 +7,9 @@ Repos:
 Epic: mass-field
 Status: draft
 Autonomy: supervised
+Difficulty: medium
+Consequence: judge
+Witness: each of the five SLaM builder stages returns a root collection with the expected free or fixed field, and repository lint, tests, and the SLaM smoke entry pass without changing committed science results
 Filed: 2026-09-19
 Unblocked: 2026-09-19 — PyAutoGalaxy#625 and PyAutoLens#745 are merged, the human approved consuming the helper from current source `main`, and the autolens_inference#8 simulator task is complete.
 
@@ -21,6 +24,8 @@ Unblocked: 2026-09-19 — PyAutoGalaxy#625 and PyAutoLens#745 are merged, the hu
 Migrate all five staged model builders in `scripts/misc/slam/_runner.py` so `fields=field` survives source LP, both source PIX stages, light LP, and mass total. Use `al.util.chaining.mass_and_fields_from` for mass-chaining stages, with explicit prior versus fixed-instance choices at every stage. Validate each stage and the repository lint/smoke checks; do not alter committed science result rows without a new run. The two independent simulators are tracked in a separate task so they can land before the helper is released.
 
 This is the inference slice of `draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md`.
+
+This is a one-file consumer migration using an existing merged API. It adds no public API and needs no design, library, or documentation phase.
 
 ## Stage mapping from the 2026-09-19 code review
 
