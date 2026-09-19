@@ -53,7 +53,7 @@ Per repo, one small PR:
   categories Q&A and Ideas), plus "Propose an implementation" → Proposals.
 - `.github/ISSUE_TEMPLATE/bug_report.md`: title prefix `bug:`, label `bug`,
   sections Reproducer / Traceback / Versions (`pip show autolens autogalaxy
-  autofit autoarray autonerves`) / Expected vs actual — the five signals the
+  autofit autoarray autonerves`) / Expected vs actual — core context signals the
   Ears' triage looks for.
 
 Order: PyAutoLens first, then the other three
