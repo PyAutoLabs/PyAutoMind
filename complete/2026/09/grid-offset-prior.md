@@ -1,3 +1,13 @@
+## grid-offset-prior
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/88
+- completed: 2026-09-20
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/94
+- summary: Widened both waveband DatasetModel grid-offset priors from ±0.2 to ±0.5 arcsec and added prior_edge_y/x to astrometric_offsets.csv from each fit's own model limits and 3σ bounds. Updated the header pin, known-answer tests, and catalogue documentation. The sep1 nir_j witness moved off the previous prior edge (x=0.2727 arcsec, 3σ [0.1672, 0.3873], no edge flag).
+- validation: 230 local tests; 32 focused post-main-merge tests; 9/9 Euclid smoke scripts; all nine PR CI jobs passed.
+- follow-up: Existing sep1/prelim science SED wavebands need refitting before their catalogues contain offsets from the wider prior. The separate nir_h Nautilus exploration issue remains open.
+
+## Original prompt
+
 # DatasetModel grid_offset prior ±0.2" clips real multi-band offsets — the same tile/band pairs sit at the edge in prelim and sep1; widen the prior and flag prior-edge rows in astrometric_offsets.csv
 
 Type: bug
