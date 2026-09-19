@@ -1,17 +1,5 @@
 # Active Tasks
 
-## mass-field-profiling-live
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/287
-- issued: 2026-09-19
-- prompt: active/mass_field_live_builders.md
-- session: Codex (session ID unavailable)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/mass-field-profiling-live
-- repos:
-  - autolens_profiling: feature/mass-field-profiling-live
-- parallel-claim-waiver: Human approved 2026-09-19. `hst-gpu-residue-p2` retains its disjoint HPC submit, `fixed_light_trace.py`, and result artifacts; this task excludes those paths and every inline witness.
-- summary: Move 47 independent live profiling model builders to MassField and fields=.
-
 ## mass-field-developer
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142
 - issued: 2026-09-19
