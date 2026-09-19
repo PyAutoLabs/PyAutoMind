@@ -44,13 +44,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 220 |
+| [Backlog](#backlog) (`draft/`) | 219 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
 
@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/161">issue #161</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/161">issue #161</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/162">autofit_workspace#162</a> — ⏳ pending release: autofit_workspace</summary>
 
 ```
 /start_dev active/community-surface-autofit-workspace.md
@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/247">issue #247</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/247">issue #247</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248">autogalaxy_workspace#248</a> — ⏳ pending release: autogalaxy_workspace</summary>
 
 ```
 /start_dev active/community-surface-autogalaxy-workspace.md
@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/569">issue #569</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/569">issue #569</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/570">autolens_workspace#570</a> — ⏳ pending release: autolens_workspace</summary>
 
 ```
 /start_dev active/community-surface-autolens-workspace.md
@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-brain.md">fix: keep broadcast discussions out of awaiting-response</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/405">issue #405</a> — issued 2026-09-19 — library-dev</summary>
+<details><summary>📋 <a href="active/community-surface-brain.md">fix: keep broadcast discussions out of awaiting-response</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/405">issue #405</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/406">PyAutoBrain#406</a> — ⏳ pending release: PyAutoBrain</summary>
 
 ```
 /start_dev active/community-surface-brain.md
@@ -290,7 +290,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-policy.md">docs: distinguish implementation proposals from ideas</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/426">issue #426</a> — issued 2026-09-19 — library-dev</summary>
+<details><summary>📋 <a href="active/community-surface-policy.md">docs: distinguish implementation proposals from ideas</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/426">issue #426</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/427">PyAutoMind#427</a> — ⏳ pending release: PyAutoMind</summary>
 
 ```
 /start_dev active/community-surface-policy.md
@@ -298,7 +298,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-profile.md">docs: put scientific software first on the org profile</a> — <a href="https://github.com/PyAutoLabs/.github/issues/15">issue #15</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/community-surface-profile.md">docs: put scientific software first on the org profile</a> — <a href="https://github.com/PyAutoLabs/.github/issues/15">issue #15</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/.github/pull/16">.github#16</a> — ⏳ pending release: .github</summary>
 
 ```
 /start_dev active/community-surface-profile.md
@@ -306,7 +306,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/562">issue #562</a> — issued 2026-09-19 — library-dev</summary>
+<details><summary>📋 <a href="active/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/562">issue #562</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/563">PyAutoArray#563</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/community-surface-pyautoarray.md
@@ -314,7 +314,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1639">issue #1639</a> — issued 2026-09-19 — library-dev</summary>
+<details><summary>📋 <a href="active/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1639">issue #1639</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1640">PyAutoFit#1640</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/community-surface-pyautofit.md
@@ -322,7 +322,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-pyautogalaxy.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/626">issue #626</a> — issued 2026-09-19 — library-dev</summary>
+<details><summary>📋 <a href="active/community-surface-pyautogalaxy.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/626">issue #626</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627">PyAutoGalaxy#627</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 /start_dev active/community-surface-pyautogalaxy.md
@@ -330,7 +330,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-pyautolens.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/746">issue #746</a> — issued 2026-09-19 — library-dev</summary>
+<details><summary>📋 <a href="active/community-surface-pyautolens.md">docs: direct community support to the Discussions hub</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/746">issue #746</a> — issued 2026-09-19 — awaiting-input, PR-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/747">PyAutoLens#747</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/community-surface-pyautolens.md
@@ -338,7 +338,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/community-surface-website.md">docs: add community links and clarify PyAutoScientist</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/8">issue #8</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/community-surface-website.md">docs: add community links and clarify PyAutoScientist</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/8">issue #8</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9">pyautolabs.github.io#9</a> — ⏳ pending release: pyautolabs.github.io</summary>
 
 ```
 /start_dev active/community-surface-website.md
@@ -406,8 +406,13 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
 
+**.github**
+
+- [.github#16](https://github.com/PyAutoLabs/.github/pull/16) — `active/community-surface-profile.md`
+
 **PyAutoArray**
 
+- [PyAutoArray#563](https://github.com/PyAutoLabs/PyAutoArray/pull/563) — `active/community-surface-pyautoarray.md`
 - [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
@@ -431,12 +436,14 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `active/community-surface-brain.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
 - [PyAutoBrain#384](https://github.com/PyAutoLabs/PyAutoBrain/pull/384) — `complete/2026/09/provider-neutral-bundle-prompts.md`
 
 **PyAutoFit**
 
+- [PyAutoFit#1640](https://github.com/PyAutoLabs/PyAutoFit/pull/1640) — `active/community-surface-pyautofit.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
@@ -478,6 +485,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#627](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627) — `active/community-surface-pyautogalaxy.md`
 - [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoGalaxy#619](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619) — `complete/2026/09/config-priors-drift.md`
 - [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
@@ -491,6 +499,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#747](https://github.com/PyAutoLabs/PyAutoLens/pull/747) — `active/community-surface-pyautolens.md`
 - [PyAutoLens#740](https://github.com/PyAutoLabs/PyAutoLens/pull/740) — `complete/2026/09/coolest-observation-grid.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
 - [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
@@ -506,6 +515,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoMind**
 
+- [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `active/community-surface-policy.md`
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#406](https://github.com/PyAutoLabs/PyAutoMind/pull/406) — `complete/2026/09/provider-neutral-bundle-prompts.md`
 
@@ -518,10 +528,26 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [PyAutoReduce#77](https://github.com/PyAutoLabs/PyAutoReduce/pull/77) — `complete/2026/09/mass-field-reduce.md`
 
+**autofit_workspace**
+
+- [autofit_workspace#162](https://github.com/PyAutoLabs/autofit_workspace/pull/162) — `active/community-surface-autofit-workspace.md`
+
 **autofit_workspace_test**
 
 - [autofit_workspace_test#98](https://github.com/PyAutoLabs/autofit_workspace_test/pull/98) — `complete/2026/09/ep-stale-tracking-per-variable.md`
 - [autofit_workspace_test#99](https://github.com/PyAutoLabs/autofit_workspace_test/pull/99) — `complete/2026/09/samples-errors-at-sigma-instance.md`
+
+**autogalaxy_workspace**
+
+- [autogalaxy_workspace#248](https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248) — `active/community-surface-autogalaxy-workspace.md`
+
+**autolens_workspace**
+
+- [autolens_workspace#570](https://github.com/PyAutoLabs/autolens_workspace/pull/570) — `active/community-surface-autolens-workspace.md`
+
+**pyautolabs.github.io**
+
+- [pyautolabs.github.io#9](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9) — `active/community-surface-website.md`
 
 ## Human review
 
@@ -661,7 +687,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**220** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
+**219** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -1498,7 +1524,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 22</summary>
+<summary><b>maintenance</b> — 21</summary>
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
 
@@ -1512,14 +1538,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/organs/reduce_session_token_load.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the hardcoded paths</a> — pyautobrain · large · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/pyautobrain/workspace_resolver_fanout.md
 ```
 
 </details>
@@ -2219,40 +2237,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pyautobrain — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'pyautobrain — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/maintenance/pyautobrain/workspace_resolver_fanout.md
-- draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
-- draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
-- draft/bug/pyautobrain/cortex_test_worktree_symlink.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the…</a> | large | high | formalised |
-| <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
-| <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
-| <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails…</a> | small | low | formalised |
-
-</details>
-
-<details>
 <summary><b>workspaces — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2413,6 +2397,38 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> | pyautoheart | small | high | formalised |
 | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> | pyautomind | small | high | formalised |
 | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> | pyautomemory | small | medium | formalised |
+
+</details>
+
+<details>
+<summary><b>pixelization</b> — 3 task(s) · 8 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'pixelization' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/refactor/autoarray/matern_vendor_bessel_kve.md
+- draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
+- draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/refactor/autoarray/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the…</a> | autoarray | large | medium | formalised |
+| <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate…</a> | autoarray | medium | normal | formalised |
+| <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move…</a> | workspaces | medium | normal | draft |
 
 </details>
 
