@@ -362,7 +362,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_flat_adoption_developer.md">Is <code>autolens_workspace_developer</code> in the MassField epic</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142">issue #142</a> — issued 2026-09-19 — workspace-shipped, awaiting-release-and-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143">autolens_workspace_developer#143</a> — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
+<details><summary>📋 <a href="active/mass_field_flat_adoption_developer.md">Is <code>autolens_workspace_developer</code> in the MassField epic</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/142">issue #142</a> — issued 2026-09-19 — workspace-shipped, ready-for-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/pull/143">autolens_workspace_developer#143</a></summary>
 
 ```
 /start_dev active/mass_field_flat_adoption_developer.md
@@ -487,7 +487,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoGalaxy#621](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621) — `complete/2026/09/mass-field-class.md`
 - [PyAutoGalaxy#616](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616) — `complete/2026/09/model-figures-lens.md`
 - [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
-- ⏸ waiting: [Is <code>autolens_workspace_developer</code> in the MassField epic](active/mass_field_flat_adoption_developer.md)
 
 **PyAutoLens**
 
@@ -503,7 +502,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `complete/2026/09/pixelized-source-magnification-latent.md`
 - [PyAutoLens#728](https://github.com/PyAutoLabs/PyAutoLens/pull/728) — `complete/2026/09/pixelized-source-magnification-latent.md`
 - [PyAutoLens#734](https://github.com/PyAutoLabs/PyAutoLens/pull/734) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
-- ⏸ waiting: [Is <code>autolens_workspace_developer</code> in the MassField epic](active/mass_field_flat_adoption_developer.md)
 
 **PyAutoMind**
 
@@ -2891,7 +2889,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/autolens_inference/mass_field_flat_adoption.md">Move inference SLaM stages to flat fields</a> — autolens_inference · supervised</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_inference/mass_field_flat_adoption.md">Move inference SLaM stages to flat fields</a> — autolens_inference · medium · supervised</summary>
 
 ```
 /start_dev draft/maintenance/autolens_inference/mass_field_flat_adoption.md
@@ -2907,7 +2905,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md">Carry flat fields through profiling pipeline resume</a> — autolens_profiling · supervised</summary>
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md">Carry flat fields through profiling pipeline resume</a> — autolens_profiling · medium · supervised</summary>
 
 ```
 /start_dev draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md
@@ -2945,7 +2943,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-55 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+53 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2987,10 +2985,10 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/test/workspaces/smoke_workspace_fixes.md`
 - `draft/release/autocti/cti_release_train_wiring.md`
 - `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
-- `draft/maintenance/autolens_inference/mass_field_flat_adoption.md`
-- `draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md`
 - `draft/maintenance/organs/reduce_session_token_load.md`
-- _… and 15 more_
+- `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
+- `draft/maintenance/workspaces/read_through_issues.md`
+- _… and 13 more_
 
 </details>
 
