@@ -1,5 +1,17 @@
 # Active Tasks
 
+## mass-field-chaining-helper
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/624
+- issued: 2026-09-19
+- prompt: active/mass_from_grows_a_fields_argument.md
+- session: Codex CLI (session ID unavailable)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mass-field-chaining-helper
+- repos:
+  - PyAutoGalaxy: feature/mass-field-chaining-helper
+  - PyAutoLens: feature/mass-field-chaining-helper
+- note: "Add a required-field companion helper; preserve `mass_from` return contract. HowToLens#90 and autolens_assistant#131 are open phase-5 PRs."
+
 ## mass-field-sibling-sweep
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/89
 - issued: 2026-09-19
