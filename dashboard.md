@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/org_community_guidance_and_welcome.md">Make organization-wide community guidance visible and canonical</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/30">issue #30</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/org_community_guidance_and_welcome.md">Make organization-wide community guidance visible and canonical</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/30">issue #30</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/32">PyAutoScientist#32</a></summary>
 
 ```
 /start_dev active/org_community_guidance_and_welcome.md
@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/org_community_guidance_hub.md">Publish organization community guidance and welcome</a> — <a href="https://github.com/PyAutoLabs/.github/issues/17">issue #17</a> — issued 2026-09-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/org_community_guidance_hub.md">Publish organization community guidance and welcome</a> — <a href="https://github.com/PyAutoLabs/.github/issues/17">issue #17</a> — issued 2026-09-19 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/.github/pull/20">.github#20</a></summary>
 
 ```
 /start_dev active/org_community_guidance_hub.md

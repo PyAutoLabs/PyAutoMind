@@ -95,22 +95,35 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+
 ## org-community-guidance-scientist
+- heart-red-override:
+  - authorization: Live user, 2026-09-19, "Yes, open both documentation PRs", explicitly replying to .github#17 and PyAutoScientist#30 development-only override.
+  - reasons: "PyAutoFit: 4 commit(s) behind origin"; "PyAutoArray: 3 commit(s) behind origin"; "PyAutoGalaxy: 3 commit(s) behind origin"; "PyAutoLens: 3 commit(s) behind origin"
+  - gates: Scientist tests 8 passed; independent review CLEAN; YAML and diff checks passed; script smoke not applicable (docs/template-only).
+  - scope: Push and open these two pending-release PRs only; no merge, release or CI bypass.
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/30
 - issued: 2026-09-19
 - prompt: active/org_community_guidance_and_welcome.md
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/32
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/org-community-guidance
 - repos:
   - PyAutoScientist: feature/org-community-guidance
-- note: Approved compatibility pointers and README update; .github canonical source must publish first.
+- note: Commit 9727bbb published under explicit Heart RED override; 8 tests passed and review CLEAN. PR 32 draft until .github PR 20 merges. No merge authorized; no GitHub checks reported at PR-open.
 
 ## org-community-guidance-hub
+- heart-red-override:
+  - authorization: Live user, 2026-09-19, "Yes, open both documentation PRs", explicitly replying to .github#17 and PyAutoScientist#30 development-only override.
+  - reasons: "PyAutoFit: 4 commit(s) behind origin"; "PyAutoArray: 3 commit(s) behind origin"; "PyAutoGalaxy: 3 commit(s) behind origin"; "PyAutoLens: 3 commit(s) behind origin"
+  - gates: Scientist tests 8 passed; independent review CLEAN; YAML and diff checks passed; script smoke not applicable (docs/template-only).
+  - scope: Push and open these two pending-release PRs only; no merge, release or CI bypass.
 - issue: https://github.com/PyAutoLabs/.github/issues/17
 - issued: 2026-09-19
 - prompt: active/org_community_guidance_hub.md
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/.github/pull/20
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/org-community-guidance
 - repos:
   - .github: feature/org-community-guidance
-- note: Approved organization defaults, welcome and signposts; Slack and historical thread conversion excluded.
+- note: Commit b7c3376 published under explicit Heart RED override; review CLEAN. Merge PR 20 before Scientist PR 32. Welcome Discussion 18 published (manual pin remains); all 45 issue signposts pinned. No merge authorized; no GitHub checks reported at PR-open.
