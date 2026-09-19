@@ -22,8 +22,6 @@ The same conventions as the repos_sync tests next door:
 """
 
 import sys
-import shutil
-
 import pytest
 from pathlib import Path
 
@@ -147,12 +145,8 @@ def test_the_counts_say_what_was_seen_and_whether_it_was_enforced(tmp_path):
     assert repos_sync.checkout_counts(root, REPOS, MARKER) == (1, 2, False)
 
 
-def test_grouped_manifest_is_checked_in_both_directions(tmp_path):
+def test_grouped_manifest_is_checked_in_both_directions(tmp_path, monkeypatch):
     root = make_root(tmp_path, names=("OrganOne",))
-    brain = root / "PyAutoBrain" / "agents"
-    brain.mkdir(parents=True)
-    shutil.copyfile(Path(__file__).resolve().parents[2] /
-                    "PyAutoBrain/agents/_repo_paths.py", brain / "_repo_paths.py")
     write_manifest(root / "PyAutoMind", """categories: {}
 repos:
   OrganOne:
@@ -161,22 +155,38 @@ repos:
     path: family/LibTwo
     category: library
 """)
-    make_checkout(root / "family", "LibTwo")
+    grouped = make_checkout(root / "family", "LibTwo")
+
+    class Resolver:
+        def repo_path(self, _root, name):
+            return {"OrganOne": root / "OrganOne", "LibTwo": grouped}[name]
+
+        def iter_checkouts(self, _root):
+            return [path for path in (root / "OrganOne", grouped,
+                                      root / "family" / "stray_tool")
+                    if (path / ".git").exists()]
+
+    monkeypatch.setattr(repos_sync, "_repo_resolver", lambda _root: Resolver())
     assert check(root) == []
     make_checkout(root / "family", "stray_tool")
     assert "stray_tool" in check(root)[0]
+    assert "stray_tool" in check(root, unmapped=["stray_tool"])[0]
     (root / "family" / "LibTwo" / ".git").rmdir()
     assert any("LibTwo" in problem and "not checked out" in problem
                for problem in check(root))
 
 
-def test_grouped_and_flat_duplicate_identity_fails(tmp_path):
+def test_grouped_and_flat_duplicate_identity_fails(tmp_path, monkeypatch):
     root = make_root(tmp_path)
-    brain = root / "PyAutoBrain" / "agents"
-    brain.mkdir(parents=True)
-    shutil.copyfile(Path(__file__).resolve().parents[2] /
-                    "PyAutoBrain/agents/_repo_paths.py", brain / "_repo_paths.py")
     make_checkout(root / "family", "LibTwo")
+
+    class AmbiguousResolver:
+        def repo_path(self, _root, name):
+            if name == "LibTwo":
+                raise ValueError("LibTwo: ambiguous checkouts")
+            return root / name
+
+    monkeypatch.setattr(repos_sync, "_repo_resolver", lambda _root: AmbiguousResolver())
     with pytest.raises(ValueError, match="ambiguous"):
         check(root)
 
