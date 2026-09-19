@@ -105,3 +105,22 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+## org-community-guidance-scientist
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/30
+- issued: 2026-09-19
+- prompt: active/org_community_guidance_and_welcome.md
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/org-community-guidance
+- repos:
+  - PyAutoScientist: feature/org-community-guidance
+- note: Approved compatibility pointers and README update; .github canonical source must publish first.
+
+## org-community-guidance-hub
+- issue: https://github.com/PyAutoLabs/.github/issues/17
+- issued: 2026-09-19
+- prompt: active/org_community_guidance_hub.md
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/org-community-guidance
+- repos:
+  - .github: feature/org-community-guidance
+- note: Approved organization defaults, welcome and signposts; Slack and historical thread conversion excluded.

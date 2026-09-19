@@ -9,6 +9,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Consequence: judge
+Issued: 2026-09-19
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/30
+Approved: 2026-09-19 — user: "go"
 
 ## Original user request
 
@@ -23,7 +26,7 @@ Do 1 and 2 and then also update this https://github.com/PyAutoLabs/PyAutoScienti
    questions and ideas to that hub, while retaining confirmed reproducible
    defects on the appropriate repository tracker.
 
-## Proposed plan (approval pending)
+## Approved plan
 
 - Inventory existing pins and public non-archived PyAutoLabs repositories
   with Issues enabled. Reuse existing equivalent welcome/pointer posts;
