@@ -1,5 +1,17 @@
 # Active Tasks
 
+## mass-field-sibling-sweep
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/89
+- issued: 2026-09-19
+- prompt: active/mass_field_sibling_sweep.md
+- session: Codex CLI (session ID unavailable)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/mass-field-sibling-sweep
+- repos:
+  - HowToLens: feature/mass-field-sibling-sweep
+  - autolens_assistant: feature/mass-field-sibling-sweep
+- note: "Phase 5 of mass-field; autolens_workspace#562 and autolens_workspace_test#322 merged, and PyAutoGalaxy/PyAutoLens v2026.9.19.1 released. Original assistant checkout has two unrelated untracked files; preserve them."
+
 ## sersic-variants
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74
 - issued: 2026-09-12

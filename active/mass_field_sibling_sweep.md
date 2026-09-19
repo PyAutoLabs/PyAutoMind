@@ -16,9 +16,10 @@ Review-minutes: 3
 Unattended: ready
 Epic: mass-field
 Phase: 5
-Blocked-by: autolens_workspace#562 and autolens_workspace_test#322 merged (both DRAFT pending the PyAutoGalaxy/PyAutoLens PyPI release)
+Gate: cleared 2026-09-19 — autolens_workspace#562 and autolens_workspace_test#322 merged; PyAutoGalaxy and PyAutoLens v2026.9.19.1 released
 Filed: 2026-09-17
 Amended: 2026-09-18
+Issued: 2026-09-19
 
 Fifth phase of `draft/feature/autogalaxy/mass_field_epic.md`. Re-scoped 2026-09-17 on
 the human's ruling that the user-facing API is `fields=` everywhere (no shear or other
