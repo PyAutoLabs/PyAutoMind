@@ -22,6 +22,7 @@ The same conventions as the repos_sync tests next door:
 """
 
 import sys
+import pytest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -142,6 +143,52 @@ def test_the_counts_say_what_was_seen_and_whether_it_was_enforced(tmp_path):
     assert repos_sync.checkout_counts(root, REPOS, MARKER) == (1, 2, True)
     (root / MARKER).unlink()
     assert repos_sync.checkout_counts(root, REPOS, MARKER) == (1, 2, False)
+
+
+def test_grouped_manifest_is_checked_in_both_directions(tmp_path, monkeypatch):
+    root = make_root(tmp_path, names=("OrganOne",))
+    write_manifest(root / "PyAutoMind", """categories: {}
+repos:
+  OrganOne:
+    category: organ
+  LibTwo:
+    path: family/LibTwo
+    category: library
+""")
+    grouped = make_checkout(root / "family", "LibTwo")
+
+    class Resolver:
+        def repo_path(self, _root, name):
+            return {"OrganOne": root / "OrganOne", "LibTwo": grouped}[name]
+
+        def iter_checkouts(self, _root):
+            return [path for path in (root / "OrganOne", grouped,
+                                      root / "family" / "stray_tool")
+                    if (path / ".git").exists()]
+
+    monkeypatch.setattr(repos_sync, "_repo_resolver", lambda _root: Resolver())
+    assert check(root) == []
+    make_checkout(root / "family", "stray_tool")
+    assert "stray_tool" in check(root)[0]
+    assert "stray_tool" in check(root, unmapped=["stray_tool"])[0]
+    (root / "family" / "LibTwo" / ".git").rmdir()
+    assert any("LibTwo" in problem and "not checked out" in problem
+               for problem in check(root))
+
+
+def test_grouped_and_flat_duplicate_identity_fails(tmp_path, monkeypatch):
+    root = make_root(tmp_path)
+    make_checkout(root / "family", "LibTwo")
+
+    class AmbiguousResolver:
+        def repo_path(self, _root, name):
+            if name == "LibTwo":
+                raise ValueError("LibTwo: ambiguous checkouts")
+            return root / name
+
+    monkeypatch.setattr(repos_sync, "_repo_resolver", lambda _root: AmbiguousResolver())
+    with pytest.raises(ValueError, match="ambiguous"):
+        check(root)
 
 
 # --- the marker is generated, and generating it is what arms the leg -------

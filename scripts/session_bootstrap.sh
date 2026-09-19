@@ -67,6 +67,22 @@ if [ -r "$_root_helper" ]; then
 fi
 VENV="${PYAUTO_SESSION_VENV:-$HOME/.pyauto/session-py312}"
 
+# The shared iterator stops at checkout boundaries and deduplicates bundle
+# links. Before Brain exists, a Mind-only bootstrap can still handle flat CI.
+_repo_resolver="$WORKSPACE_ROOT/PyAutoBrain/agents/_repo_paths.py"
+if [ -r "$_repo_resolver" ]; then
+    _checkout_list="$(python3 "$_repo_resolver" list --root "$WORKSPACE_ROOT")" || exit 1
+else
+    _checkout_list=""
+    for _checkout in "$WORKSPACE_ROOT"/*/; do
+        [ -e "${_checkout}.git" ] || continue
+        _checkout_list="${_checkout_list}${_checkout_list:+$'\n'}$(basename "${_checkout%/}")"$'\t'"${_checkout%/}"
+    done
+fi
+checkout_paths() {
+    [ -n "$_checkout_list" ] && printf '%s\n' "$_checkout_list" | cut -f2-
+}
+
 say() { printf '[bootstrap] %s\n' "$*" >&2; }
 
 # What a suite here needs before it can even collect: pytest itself, PyYAML
@@ -119,9 +135,10 @@ resolve_interpreter() {
 extras_state() {
     local extras repo marker root rc=0
     root="$WORKSPACE_ROOT"
-    for extras in "$root"/*/.claude/session-python.txt; do
+    while IFS= read -r repo; do
+        extras="$repo/.claude/session-python.txt"
         [ -r "$extras" ] || continue
-        repo="$(basename "$(dirname "$(dirname "$extras")")")"
+        repo="$(basename "$repo")"
         marker="$VENV/.extras-$(cksum <"$extras" | tr -d ' /')"
         if [ -e "$marker" ]; then
             say "$repo extras: installed"
@@ -129,16 +146,16 @@ extras_state() {
             say "$repo extras: declared but NOT installed — run this script with no arguments"
             rc=1
         fi
-    done
+    done < <(checkout_paths)
     return "$rc"
 }
 
 shallow_repos() {
     local root repo out=""
     root="$WORKSPACE_ROOT"
-    for repo in "$root"/*/; do
-        [ -e "${repo}.git/shallow" ] && out="$out $(basename "$repo")"
-    done
+    while IFS= read -r repo; do
+        [ -e "$repo/.git/shallow" ] && out="$out $(basename "$repo")"
+    done < <(checkout_paths)
     printf '%s' "${out# }"
 }
 
@@ -278,12 +295,12 @@ CLAUDE_PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$WORKSPACE_ROOT}" "$HOOK" || {
 # the fan-out has never run in. Each hook is idempotent (~0.2s warm), so doing it
 # here unconditionally costs about a second and removes the dependency.
 root="$WORKSPACE_ROOT"
-for repo in "$root"/*/; do
-    [ "${repo%/}" = "$MIND_DIR" ] && continue
-    hook="${repo}.claude/hooks/session-start.sh"
+while IFS= read -r repo; do
+    [ "$repo" = "$MIND_DIR" ] && continue
+    hook="$repo/.claude/hooks/session-start.sh"
     [ -x "$hook" ] || continue
-    CLAUDE_PROJECT_DIR="${repo%/}" "$hook" || say "WARNING: ${repo%/} hook failed"
-done
+    CLAUDE_PROJECT_DIR="$repo" "$hook" || say "WARNING: $repo hook failed"
+done < <(checkout_paths)
 
 # The hook rebuilds uv's tools on 3.12 and repairs the link that rebuild cannot
 # fix from inside, so every hook run above has already done this. Kept anyway,

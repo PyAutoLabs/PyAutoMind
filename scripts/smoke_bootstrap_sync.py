@@ -75,22 +75,30 @@ def installations(root, repos, require_all=False):
     identities fail rather than silently selecting a checkout to write.
     """
     root = root.absolute()
+    import importlib.util
+    resolver_file = root / "PyAutoBrain/agents/_repo_paths.py"
+    resolver = None
+    if resolver_file.is_file():
+        spec = importlib.util.spec_from_file_location("_pyauto_repo_paths", resolver_file)
+        resolver = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(resolver)
     for name, _ in targets(repos):
-        candidates = [root / name] if (root / name).exists() else []
-        for family in root.iterdir():
-            if (family.is_dir() and not family.is_symlink()
-                    and not (family / ".git").exists()
-                    and not family.name.startswith(".")):
-                candidate = family / name
-                if candidate.exists():
-                    candidates.append(candidate)
-        if len(candidates) > 1:
-            raise ValueError(f"{name}: ambiguous checkouts: {candidates}")
-        if not candidates:
+        if resolver is not None:
+            candidate = resolver.repo_path(root, name)
+        else:
+            candidate = root / name
+            grouped = [family / name for family in root.iterdir()
+                if family.is_dir() and not (family / ".git").exists()
+                and (family / name).exists()] if root.is_dir() else []
+            if grouped and candidate.exists():
+                raise ValueError(f"{name}: ambiguous checkouts: {[candidate, *grouped]}")
+            if grouped:
+                raise ValueError(f"{name}: grouped checkout requires PyAutoBrain/agents/_repo_paths.py")
+        if not candidate.exists():
             if require_all:
                 raise ValueError(f"{name}: checkout missing")
             continue
-        yield name, candidates[0] / REL
+        yield name, candidate / REL
 
 
 def changes(root, repos, source, require_all=False):
