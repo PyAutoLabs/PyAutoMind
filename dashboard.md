@@ -370,7 +370,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_inference_slam.md">Move inference SLaM stages to flat fields</a> — issued 2026-09-19</summary>
+<details><summary>📋 <a href="active/mass_field_inference_slam.md">Move inference SLaM stages to flat fields</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/9">issue #9</a> — issued 2026-09-19 — workspace-dev</summary>
 
 ```
 /start_dev active/mass_field_inference_slam.md
@@ -378,7 +378,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mass_field_pipeline_resume.md">Carry flat fields through profiling pipeline resume</a> — issued 2026-09-19</summary>
+<details><summary>📋 <a href="active/mass_field_pipeline_resume.md">Carry flat fields through profiling pipeline resume</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/289">issue #289</a> — issued 2026-09-19 — workspace-dev</summary>
 
 ```
 /start_dev active/mass_field_pipeline_resume.md
