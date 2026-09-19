@@ -44,106 +44,106 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 3 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 220 |
+| [Backlog](#backlog) (`draft/`) | 231 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 32
+
+<details><summary>📋 <a href="draft/bug/community/community-surface-brain.md">fix: keep broadcast discussions out of awaiting-response</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/community/community-surface-brain.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-autofit-workspace.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-autogalaxy-workspace.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-autolens-workspace.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-policy.md">docs: distinguish implementation proposals from ideas</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-profile.md">docs: put scientific software first on the org profile</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-profile.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-pyautoarray.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-pyautofit.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-pyautogalaxy.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-pyautogalaxy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-pyautolens.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-pyautolens.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-website.md">docs: add community links and clarify PyAutoScientist</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-website.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
 
 ```
 /start_dev draft/maintenance/community/migrate_user_threads_to_discussions.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> / <code>slow</code> pytest…</a> — pyautoheart · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a 406 only delays…</a> — pyautomind · small · supervised · high</summary>
-
-```
-/start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue chooser…</a> — workspaces · small · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/support_sections_point_to_discussions.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the docstring's…</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"><code>@PyAutoArray</code> rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment</a> — autoarray · medium · human-required · high</summary>
-
-```
-/start_dev draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autolens_assistant/benchmark_forward_model_consistency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a simulated lens</a> — autolens_assistant · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
-
-```
-/start_dev draft/maintenance/organs/reduce_session_token_load.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
-
-```
-/start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
 ```
 
 </details>
@@ -573,10 +573,18 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**220** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
+**231** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 64</summary>
+<summary><b>bug</b> — 65</summary>
+
+<details><summary>📋 <a href="draft/bug/community/community-surface-brain.md">fix: keep broadcast discussions out of awaiting-response</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/community/community-surface-brain.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -1410,6 +1418,227 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
+<summary><b>docs</b> — 27</summary>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-autofit-workspace.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-autogalaxy-workspace.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-autolens-workspace.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-policy.md">docs: distinguish implementation proposals from ideas</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-profile.md">docs: put scientific software first on the org profile</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-profile.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-pyautoarray.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-pyautofit.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-pyautogalaxy.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-pyautogalaxy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-pyautolens.md">docs: direct community support to the Discussions hub</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-pyautolens.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/community/community-surface-website.md">docs: add community links and clarify PyAutoScientist</a> — community · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/community/community-surface-website.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue chooser…</a> — workspaces · small · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/support_sections_point_to_discussions.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
+
+```
+/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a> — pyautolabs_github_io · small · supervised · normal</summary>
+
+```
+/start_dev draft/docs/pyautolabs_github_io/front_door_community_link.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
+
+```
+/start_dev draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
+
+```
+/start_dev draft/docs/autolens/plot_rst_missing_exports.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/docs/workspaces/demo_subplot_ellipse_errors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — howtofit · small · safe · low</summary>
+
+```
+/start_dev draft/docs/howtofit/tutorial_4_runtime_claim.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter counts do not match…</a> — workspaces · small · safe · low</summary>
+
+```
+/start_dev draft/docs/workspaces/model_bullet_parameter_count_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+
+```
+/start_dev draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — autofit · trivial · safe · low</summary>
+
+```
+/start_dev draft/docs/autofit/howtofit_chapter_3_prose_references.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/community/migrate_user_threads_to_discussions.md">Migrate the six user-filed feature threads to the Discussions hub (Ideas)</a> — community · small · human-required · high</summary>
@@ -1717,147 +1946,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>docs</b> — 17</summary>
-
-<details><summary>📋 <a href="draft/docs/workspaces/support_sections_point_to_discussions.md">Point every user-facing "Community &amp; Support" section and issue chooser…</a> — workspaces · small · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/support_sections_point_to_discussions.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/autolens/split_lensing_regimes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/preloads_advanced_workspace_guide.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
-
-```
-/start_dev draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-/start_dev draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautolabs_github_io/front_door_community_link.md">Front door: a Community link to the Discussions hub</a> — pyautolabs_github_io · small · supervised · normal</summary>
-
-```
-/start_dev draft/docs/pyautolabs_github_io/front_door_community_link.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
-
-```
-/start_dev draft/docs/autocti/api_rst_rewrite.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
-
-```
-/start_dev draft/docs/autolens/plot_rst_missing_exports.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
-
-```
-/start_dev draft/docs/workspaces/demo_subplot_ellipse_errors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — howtofit · small · safe · low</summary>
-
-```
-/start_dev draft/docs/howtofit/tutorial_4_runtime_claim.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter counts do not match…</a> — workspaces · small · safe · low</summary>
-
-```
-/start_dev draft/docs/workspaces/model_bullet_parameter_count_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-/start_dev draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — autofit · trivial · safe · low</summary>
-
-```
-/start_dev draft/docs/autofit/howtofit_chapter_3_prose_references.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
-
-```
-/start_dev draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
 ```
 
 </details>
@@ -2267,16 +2355,18 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>inversion</b> — 2 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: correctness, inversion, performance, sparse-operator</summary>
+<summary><b>community — bundle 1</b> — 4 task(s) · 4 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the judgment tier for the PyAutoMind bundle 'inversion' — 2 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'community — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md
-- draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
+- draft/bug/community/community-surface-brain.md
+- draft/docs/community/community-surface-autofit-workspace.md
+- draft/docs/community/community-surface-autogalaxy-workspace.md
+- draft/docs/community/community-surface-autolens-workspace.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -2289,25 +2379,28 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> | autoarray | medium | high | - |
-| <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> | autoarray | medium | high | formalised |
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/community/community-surface-brain.md">fix: keep broadcast discussions out of awaiting-response</a> | small | high | - |
+| <a href="draft/docs/community/community-surface-autofit-workspace.md">docs: direct community support to the Discussions hub</a> | small | high | - |
+| <a href="draft/docs/community/community-surface-autogalaxy-workspace.md">docs: direct community support to the Discussions hub</a> | small | high | - |
+| <a href="draft/docs/community/community-surface-autolens-workspace.md">docs: direct community support to the Discussions hub</a> | small | high | - |
 
 </details>
 
 <details>
-<summary><b>ci</b> — 3 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: ci, robustness</summary>
+<summary><b>community — bundle 2</b> — 4 task(s) · 4 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the judgment tier for the PyAutoMind bundle 'ci' — 3 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'community — bundle 2' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
-- draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-- draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md
+- draft/docs/community/community-surface-policy.md
+- draft/docs/community/community-surface-profile.md
+- draft/docs/community/community-surface-pyautoarray.md
+- draft/docs/community/community-surface-pyautofit.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -2320,15 +2413,16 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> | pyautoheart | small | high | formalised |
-| <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> | pyautomind | small | high | formalised |
-| <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> | pyautomemory | small | medium | formalised |
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/docs/community/community-surface-policy.md">docs: distinguish implementation proposals from ideas</a> | small | high | - |
+| <a href="draft/docs/community/community-surface-profile.md">docs: put scientific software first on the org profile</a> | small | high | - |
+| <a href="draft/docs/community/community-surface-pyautoarray.md">docs: direct community support to the Discussions hub</a> | small | high | - |
+| <a href="draft/docs/community/community-surface-pyautofit.md">docs: direct community support to the Discussions hub</a> | small | high | - |
 
 </details>
 
-_Showing 8 of 37 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2839,7 +2933,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 
 ## Hygiene
 
-55 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+66 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2864,6 +2958,7 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
+- `draft/bug/community/community-surface-brain.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
 - `draft/bug/priors/12_single_source_density_refactor.md`
@@ -2872,19 +2967,18 @@ Continue the 'MassField — external shear, mass sheets and external potentials 
 - `draft/bug/priors/z_features.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
+- `draft/docs/community/community-surface-autofit-workspace.md`
+- `draft/docs/community/community-surface-autogalaxy-workspace.md`
+- `draft/docs/community/community-surface-autolens-workspace.md`
+- `draft/docs/community/community-surface-policy.md`
+- `draft/docs/community/community-surface-profile.md`
+- `draft/docs/community/community-surface-pyautoarray.md`
+- `draft/docs/community/community-surface-pyautofit.md`
+- `draft/docs/community/community-surface-pyautogalaxy.md`
+- `draft/docs/community/community-surface-pyautolens.md`
+- `draft/docs/community/community-surface-website.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
-- `draft/test/workspaces/mesh_magnification_correctness.md`
-- `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
-- `draft/test/workspaces/smoke_workspace_fixes.md`
-- `draft/release/autocti/cti_release_train_wiring.md`
-- `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
-- `draft/maintenance/autolens_inference/mass_field_flat_adoption.md`
-- `draft/maintenance/autolens_profiling/mass_field_pipeline_resume.md`
-- `draft/maintenance/organs/reduce_session_token_load.md`
-- _… and 15 more_
+- _… and 26 more_
 
 </details>
 
