@@ -1,3 +1,38 @@
+# Completed: community policy and final community-surface close-out
+
+Merged: 2026-09-19
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/426
+PR: https://github.com/PyAutoLabs/PyAutoMind/pull/427
+
+## Shipped
+
+Updated community policy and the migration plan for the five live categories:
+Announcements, Help & Questions, Ideas & Proposals, Bugs & Errors, and Show
+and tell. Preserved the exact shared support paragraph, clarified accepted
+answers and development-issue routing, and retained historical-thread migration
+as its own unfinished human task.
+
+All eleven community-surface PRs are merged. Individual sibling records hold
+their evidence and release obligations; duplicate support and front-door
+prompts were retired. With human approval, two issued-but-idle tasks were
+reconciled from planned.md to parked.md without restarting or claiming them.
+
+## Validation
+
+582 tests passed in a clean CI-like environment. Lifecycle, completion index,
+registry contents and dashboard freshness passed. All three exact-head GitHub
+workflows succeeded; all jobs passed except the expected non-PR drift job skip.
+Merge commit: b86f5b26503b59cab2e4100c3dc5242a4d5b7c01.
+Git ancestry confirms the complete PR head is contained in origin/main.
+
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/427
+
+Historical user-thread conversion remains in
+draft/maintenance/community/migrate_user_threads_to_discussions.md;
+this record does not assert those manual conversions have been performed.
+
+## Original prompt
+
 # docs: distinguish implementation proposals from ideas
 
 Type: docs

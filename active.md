@@ -95,18 +95,3 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
-
-## community-surface-policy
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/426
-- issued: 2026-09-19
-- prompt: active/community-surface-policy.md
-- session: Codex (session ID unavailable)
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/427
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/427
-- validation: Documentation/template checks passed; independent review CLEAN.
-- next: Review required GitHub checks, then human merge via /prm.
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-surface
-- repos:
-  - PyAutoMind: feature/community-surface
-- note: Approved community-surface plan; shared worktree bundle, separate issue and PR per repository. No library API changes.

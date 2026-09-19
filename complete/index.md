@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1525 records across 8 buckets.
+1526 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -162,6 +162,7 @@ markers; everything below GENERATED is rebuilt.
 - [community-surface-autogalaxy-workspace](2026/09/community-surface-autogalaxy-workspace.md)
 - [community-surface-autolens-workspace](2026/09/community-surface-autolens-workspace.md)
 - [community-surface-brain](2026/09/community-surface-brain.md)
+- [community-surface-policy](2026/09/community-surface-policy.md)
 - [community-surface-profile](2026/09/community-surface-profile.md)
 - [community-surface-pyautoarray](2026/09/community-surface-pyautoarray.md)
 - [community-surface-pyautofit](2026/09/community-surface-pyautofit.md)
