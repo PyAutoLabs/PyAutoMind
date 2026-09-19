@@ -11,6 +11,7 @@ Difficulty: medium
 Consequence: judge
 Witness: each of the five SLaM builder stages returns a root collection with the expected free or fixed field, and repository lint, tests, and the SLaM smoke entry pass without changing committed science results
 Filed: 2026-09-19
+Issued: 2026-09-19
 Unblocked: 2026-09-19 — PyAutoGalaxy#625 and PyAutoLens#745 are merged, the human approved consuming the helper from current source `main`, and the autolens_inference#8 simulator task is complete.
 
 ## Original user request

@@ -11,6 +11,7 @@ Difficulty: medium
 Consequence: judge
 Witness: each of the five resumed stage models contains the expected free or fixed top-level field, and the resume smoke completes without changing committed result artifacts
 Filed: 2026-09-19
+Issued: 2026-09-19
 Unblocked: 2026-09-19 — PyAutoGalaxy#625 and PyAutoLens#745 are merged; the human approved consuming the helper from current source `main`. The profiling parallel-worktree waiver remains in force.
 
 ## Original user request
