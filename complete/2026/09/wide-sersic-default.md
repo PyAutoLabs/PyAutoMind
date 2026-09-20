@@ -1,3 +1,13 @@
+## wide-sersic-default
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/96
+- completed: 2026-09-20
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/97
+- summary: Set the lens-light Sersic index prior in `scripts/sersic_lens_model.py` to `UniformPrior(0.5, 10.0)`, matching the experiments' `wide_n` variant. The source-light prior, global Sersic configuration, and output tag remain unchanged. PR #97 merged as `5c5c0b0`. The matching `euclid_dr1` science-clone script was committed locally as `c7ac145`; its unrelated science ledger and run data were preserved.
+- validation: Both scripts compile and the installed-model probe confirms lens 0.5–10.0 and source 0.8–5.0. Repository invariants 12/12 and Euclid smoke 9/9 passed; formal branch review was CLEAN. Both GitHub Actions workflows passed, including unit, slow, and smoke jobs on Python 3.12 and 3.13.
+- release: PR carried the `pending-release` label. Heart release validation remained RED (`stage integrate`) with YELLOW manifest drift; the user explicitly authorized the task-specific development override, then invoked `/prm` after CI passed to authorize merge and closeout. This is not a release of the pipeline or libraries.
+
+## Original prompt
+
 # Wider lens Sersic index prior as the default for DR1
 
 Type: feature

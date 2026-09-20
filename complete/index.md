@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1533 records across 8 buckets.
+1534 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -400,6 +400,7 @@ markers; everything below GENERATED is rebuilt.
 - [vis-lp-latent-jit-assertions](2026/09/vis-lp-latent-jit-assertions.md)
 - [vis-lp-latent-jit-trace](2026/09/vis-lp-latent-jit-trace.md) — The JAX (GPU) `vis_lp` stage wrote **no** latents at all — RAL job
 - [wcs-json-slow-suite-pixelized-fit](2026/09/wcs-json-slow-suite-pixelized-fit.md) — the pipeline's one real-mode CI fit (`tests/test_latent_run_level.py`,
+- [wide-sersic-default](2026/09/wide-sersic-default.md) — Set the lens-light Sersic index prior in `scripts/sersic_lens_model.py` to `UniformPrior(0.5, 10.0)`, matching…
 - [witness-campaign](2026/09/witness-campaign.md)
 - [witt-wynne-catalogue](2026/09/witt-wynne-catalogue.md)
 - [witt-wynne-guide-fixes](2026/09/witt-wynne-guide-fixes.md)
