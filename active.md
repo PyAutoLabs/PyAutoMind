@@ -1,5 +1,14 @@
 # Active Tasks
 
+## wide-sersic-default
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/96
+- issued: 2026-09-20
+- prompt: active/wide_sersic_default.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/wide-sersic-default
+- repos:
+
 ## notify-slack-community-discussions
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/408
 - issued: 2026-09-20
