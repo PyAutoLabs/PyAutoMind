@@ -48,9 +48,17 @@ Completed locally during planning:
   `autolens_profiling/dataset/abell_1201/`.
 - Verified every copied file byte-for-byte using SHA-256. Both F390W and F814W
   trees, auxiliary images, masks and positions are preserved unchanged.
-- The assistant source directory is untracked; the profiling destination is
-  gitignored. This is a local staging copy, NOT a remotely published dataset.
-  A mobile checkout cannot recover these files from either repository yet.
+- Data publication follow-up: all 40 files are committed in `autolens_profiling`
+  on branch `codex/abell-1201-data`, commit
+  `9a65b1ea58269274984040f028b7ed3ef2d63108`. This explicitly stages the ignored
+  files; the source assistant directory remains untracked. Data bytes are unchanged.
+- Dataset: https://github.com/PyAutoLabs/autolens_profiling/tree/9a65b1ea58269274984040f028b7ed3ef2d63108/dataset/abell_1201
+- From an existing profiling checkout, fetch the branch with
+  `git fetch origin codex/abell-1201-data`. Read or export
+  `dataset/abell_1201/` from the pinned commit, without changing the current
+  source branch. Alternatively clone with
+  `git clone --single-branch --branch codex/abell-1201-data https://github.com/PyAutoLabs/autolens_profiling.git`.
+  With GitHub tools, read files at that commit/ref. Do not assume main has the data.
 
 Implementation:
 - Inspect the variants before selecting inputs: there are original, scaled,
@@ -162,8 +170,9 @@ branch `feature/abell-1201-guided-tour`. Register/issue through Mind's existing
 primitive; do not assume this draft claims the assistant repository. Readiness
 and the normal ship-workspace gates apply when implementing/shipping.
 
-First dependency to resolve: access to the locally staged dataset and the two
-previously tuned model exports. Mobile must not assume either is already online.
+The dataset is available from the pinned profiling commit above. The remaining
+scientific dependency is the two previously tuned model exports; those have not
+been identified or published by this handoff.
 
 ## Historical intake — superseded where it conflicts with current scope
 
