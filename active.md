@@ -5,8 +5,10 @@
 - issued: 2026-09-20
 - prompt: active/wide_sersic_default.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-input
 - worktree: ~/Code/PyAutoLabs-wt/wide-sersic-default
+- question: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/96#issuecomment-5749901567
+- resume: "Approved implementation and validation complete; Euclid smoke 9/9 and repo invariants 12/12. Heart is RED: release validation FAILED (stage integrate). Await live task-specific authorization under AUTONOMY.md Human override for Heart RED (development only) before commit, push or pending-release PR. After authorization, run formal branch review immediately after commit and before push."
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/wide-sersic-default
 

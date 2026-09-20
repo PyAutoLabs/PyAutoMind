@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/wide_sersic_default.md">Wider lens Sersic index prior as the default for DR1</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/96">issue #96</a> — issued 2026-09-20 — workspace-dev</summary>
+<details><summary>📋 <a href="active/wide_sersic_default.md">Wider lens Sersic index prior as the default for DR1</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/96">issue #96</a> — issued 2026-09-20 — awaiting-input</summary>
 
 ```
 /start_dev active/wide_sersic_default.md
