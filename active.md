@@ -1,17 +1,5 @@
 # Active Tasks
 
-## chatgpt-orchestrator-capability-routing
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/410
-- issued: 2026-09-20
-- prompt: active/chatgpt_orchestrator_capability_routing.md
-- session: ChatGPT Chat (GitHub connected; session ID unavailable)
-- location: github-api-only (no local clone or task worktree)
-- status: library-dev
-- repos:
-  - PyAutoBrain: feature/chatgpt-orchestrator-routing
-  - PyAutoMind: feature/chatgpt-orchestrator-routing
-  - PyAutoScientist: feature/chatgpt-orchestrator-route
-
 ## euclid-single-rgb-vis-lp
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/98
 - issued: 2026-09-20
@@ -19,7 +7,7 @@
 - session: Codex (session ID unavailable)
 - status: awaiting-merge
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/99
-- heart-red-override: User authorized issue #98 development override in this session: "Authorize issue #98 development override" in response to commit, push, pending-release PR, and RAL deployment for this branch. Heart RED: `release validation FAILED (stage integrate)`. Branch gates: 222 fast tests passed (10 deselected); 36 focused tests passed; Euclid smoke 9/9 passed; Ruff check/format and diff check passed; real DR1 JPG rendered to two-panel `rgb.png`; review faculty surface at 3748697 judged CLEAN. Development shipping only; no merge or release.
+- heart-red-override: User authorized issue #98 development override in this session: "Authorize issue #98 development override" in response to commit, push, pending-release PR, and RAL deployment for this branch. Heart RED: `release validation FAILED (stage integrate)`. Final branch gates: 223 fast tests passed (10 deselected); 37 focused tests passed; Euclid smoke 9/9 passed; Ruff check/format and diff check passed; real DR1 JPG rendered to two-panel `rgb.png`; review faculty surface at f28e3cf judged CLEAN. Development shipping only; no merge or release.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/euclid-single-rgb-vis-lp
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-single-rgb-vis-lp
