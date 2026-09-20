@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/notify_slack_general_when_a_community_discussion.md">Notify Slack general when a community discussion is posted</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/408">issue #408</a> — issued 2026-09-20 — paused</summary>
+<details><summary>📋 <a href="active/notify_slack_general_when_a_community_discussion.md">Notify Slack general when a community discussion is posted</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/408">issue #408</a> — issued 2026-09-20 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/409">PyAutoBrain#409</a> — ⏳ pending release: PyAutoBrain</summary>
 
 ```
 /start_dev active/notify_slack_general_when_a_community_discussion.md
@@ -308,6 +308,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#409](https://github.com/PyAutoLabs/PyAutoBrain/pull/409) — `active/notify_slack_general_when_a_community_discussion.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
 - [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `complete/2026/09/community-surface-brain.md`
