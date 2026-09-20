@@ -10,23 +10,6 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-single-rgb-vis-lp
 
-## notify-slack-community-discussions
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/408
-- issued: 2026-09-20
-- prompt: active/notify_slack_general_when_a_community_discussion.md
-- session: Codex (session ID unavailable)
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/notify-slack-community-discussions
-- repos:
-  - PyAutoBrain: feature/community-slack-notifications
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/409
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/409
-- heart-red-override: |
-    2026-09-20 live user authorization: "yes override i authorize" for issue #408's documentation branch, permitting commit, push and PR-open only; recorded at https://github.com/PyAutoLabs/PyAutoBrain/issues/408#issuecomment-5750713819.
-    Exact RED reason: "release validation FAILED (stage integrate)". Also YELLOW: "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml".
-    Branch gates: live Discussion #21 to Slack #general PASS; discussions-only feature list PASS; diff and generated-agent-surface checks PASS; docs review CLEAN. No runtime tests or downstream smoke apply. Merge, release and bypassing required checks remain unauthorized.
-- resume: "GitHub Discussions → Slack #general is live and tested (issue #408). PR #409 is open with pending-release; judge current CI and merge only on a separate human /prm request. Heart RED development override applies to PR-open only."
-
 ## oneshot-benchmark-harness
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126
 - issued: 2026-09-17
