@@ -148,7 +148,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 113
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 112
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1300,7 +1300,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/workspaces/add_an_abell_1201_central_point_mass.md">Add an Abell 1201 central point-mass fitting benchmark to @autolens_assistant</a> — workspaces · large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/workspaces/add_an_abell_1201_central_point_mass.md">Abell 1201 guided SMBH demonstration and Gemini Colab follow-on</a> — workspaces · large · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/workspaces/add_an_abell_1201_central_point_mass.md
