@@ -8,6 +8,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/wide-sersic-default
 - repos:
+  - euclid_strong_lens_modeling_pipeline: feature/wide-sersic-default
 
 ## notify-slack-community-discussions
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/408
