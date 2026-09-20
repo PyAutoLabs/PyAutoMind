@@ -48,6 +48,11 @@ on:
         description: "Rolling look-back window (hours) instead of the announcement band — for a manual test-fire or a backfill (e.g. 168 to sweep a week). Blank = the normal announcement band."
         required: false
         default: ""
+      memory_only:
+        description: "Backfill PyAutoMemory without POSTing the digest to Slack. Scheduled runs ignore this and always post."
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -275,6 +280,11 @@ jobs:
             `arxiv_survivors.json`.
 
       - name: POST to Slack
+        # Manual recovery can deliberately skip the shared-channel post while
+        # still filing survivors into PyAutoMemory. This makes a wide lookback
+        # safe: Memory dedupes, Slack does not. Scheduled runs have no input and
+        # therefore always take this step.
+        if: ${{ inputs.memory_only != true }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_PAPERS_WEBHOOK_URL }}
         run: |

@@ -46,6 +46,7 @@ and `cat:` clause before assuming either.
 import datetime as dt
 import json
 import os
+import subprocess
 import sys
 import time
 import urllib.error
@@ -133,10 +134,10 @@ API_URL = "https://export.arxiv.org/api/query"
 # this one carries the repo URL the way PyAutoMemory/scripts/arxiv_refs.py does.
 # Courtesy, not a fix: on 2026-09-18 all four combinations of {bare UA, contact
 # UA} x {no Accept, application/atom+xml} were probed live against the API and
-# every one answered HTTP 200 from a home IP, so the headers were never what the
-# 406s were about (the shared GitHub Actions egress is the discriminator — see
-# RETRY_STATUSES below). Do not mistake these two lines for the retry fix, and
-# do not "revert the fix" by tightening them further.
+# every one answered HTTP 200. Later cache-busted probes showed the real
+# discriminator: uncached urllib/raw-http requests could get 406 while curl and
+# requests/urllib3 got 200 from the same host. That points at the transport/TLS
+# fingerprint, not these headers. Do not mistake these two lines for the fix.
 USER_AGENT = (
     "PyAutoLabs-papers-digest/1.0 (+https://github.com/PyAutoLabs/PyAutoMind)"
 )
@@ -147,18 +148,91 @@ ACCEPT = "application/atom+xml"  # what the API returns anyway; declared explici
 # rate-limit window (it asks for 3 s between requests; a 429 from a shared
 # egress can take minutes to clear).
 RETRY_DELAYS = (5, 15, 45, 90, 180)
-# 429 and 406 are both arXiv *edge mitigation* against a shared runner egress,
-# not verdicts about this request: 09-15 was refused with a 429 and 09-17/09-18
-# with a 406, from the same job, the same query and the same headers that answer
-# 200 from a home IP seconds later. A 406 from this endpoint is therefore not
-# the content-negotiation failure its name implies — treating it as one is what
-# let three of four nights die unretried — so it climbs the same ladder as the
-# 429. 5xx is arXiv's own side. Every *other* 4xx stays unretried: a genuine
-# 400 is a malformed query and retrying it would only mask the bug.
+# 429 and 406 are both arXiv edge-mitigation responses, not reliable verdicts
+# about this request. A 406 from urllib is special: cache-busted probes showed
+# curl succeeding on the same URL, so _request_once() immediately retries that
+# one request through curl before spending the back-off ladder. If curl is also
+# refused, 406 still climbs the same ladder as 429. 5xx is arXiv's own side.
+# Every other 4xx stays unretried: a genuine 400 is a malformed query.
 RETRY_STATUSES = {406, 429, 500, 502, 503, 504}
 
 # Transient failures that a retry may cure. Everything else raises at once.
 TRANSIENT = (urllib.error.URLError, TimeoutError, ConnectionError)
+
+_CURL_STATUS_MARKER = b"\n__PYAUTO_HTTP_STATUS__:"
+
+
+def _curl_get(url: str) -> bytes:
+    """Fetch one arXiv URL through curl and preserve HTTP errors for _get().
+
+    Fastly began returning persistent 406s to Python's stdlib HTTP/TLS client
+    in September 2026 while the same uncached URL succeeded through curl.
+    GitHub's Ubuntu runner already provides curl (this workflow uses it for the
+    Slack POST), so this is a dependency-free alternate transport rather than
+    a second arXiv endpoint or a bot-mitigation bypass.
+    """
+    try:
+        result = subprocess.run(
+            [
+                "curl",
+                "--silent",
+                "--show-error",
+                "--location",
+                "--connect-timeout",
+                "20",
+                "--max-time",
+                "60",
+                "--user-agent",
+                USER_AGENT,
+                "--header",
+                f"Accept: {ACCEPT}",
+                "--write-out",
+                _CURL_STATUS_MARKER.decode() + "%{http_code}",
+                url,
+            ],
+            capture_output=True,
+            check=False,
+        )
+    except FileNotFoundError as e:
+        raise urllib.error.URLError("curl is not installed") from e
+
+    if result.returncode != 0:
+        detail = result.stderr.decode("utf-8", "replace").strip()
+        raise urllib.error.URLError(detail or f"curl exited {result.returncode}")
+
+    body, marker, status_raw = result.stdout.rpartition(_CURL_STATUS_MARKER)
+    if not marker:
+        raise urllib.error.URLError("curl returned no HTTP status marker")
+    try:
+        status = int(status_raw.strip())
+    except ValueError as e:
+        raise urllib.error.URLError(
+            f"curl returned invalid HTTP status {status_raw!r}"
+        ) from e
+
+    if not 200 <= status < 300:
+        raise urllib.error.HTTPError(
+            url, status, f"curl HTTP {status}", {}, None
+        )
+    return body
+
+
+def _request_once(url: str) -> bytes:
+    """Try urllib once, falling back to curl only for the known 406 refusal."""
+    req = urllib.request.Request(
+        url, headers={"User-Agent": USER_AGENT, "Accept": ACCEPT}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            return resp.read()
+    except urllib.error.HTTPError as e:
+        if e.code != 406:
+            raise
+        print(
+            "  arXiv API urllib HTTP 406 — retrying this request with curl",
+            file=sys.stderr,
+        )
+        return _curl_get(url)
 
 
 def _get(params: dict, *, delays: tuple = None) -> bytes:
@@ -175,14 +249,10 @@ def _get(params: dict, *, delays: tuple = None) -> bytes:
     if delays is None:
         delays = RETRY_DELAYS
     url = f"{API_URL}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(
-        url, headers={"User-Agent": USER_AGENT, "Accept": ACCEPT}
-    )
     attempts = len(delays) + 1
     for attempt in range(1, attempts + 1):
         try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
-                return resp.read()
+            return _request_once(url)
         except urllib.error.HTTPError as e:
             if e.code not in RETRY_STATUSES or attempt == attempts:
                 raise

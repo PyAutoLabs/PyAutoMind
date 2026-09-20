@@ -55,6 +55,21 @@ def _stub_urlopen(monkeypatch, answers):
     return calls
 
 
+def _stub_curl(monkeypatch, answers):
+    """Stub the alternate transport at its Python boundary."""
+    calls = []
+
+    def fake(url):
+        calls.append(url)
+        a = answers.pop(0)
+        if isinstance(a, BaseException):
+            raise a
+        return a
+
+    monkeypatch.setattr(af, "_curl_get", fake)
+    return calls
+
+
 def test_get_retries_429_then_succeeds(monkeypatch, no_sleep):
     calls = _stub_urlopen(monkeypatch, [_http_error(429), _http_error(429), b"<feed/>"])
     assert af._get({"q": 1}, delays=(1, 2, 3)) == b"<feed/>"
@@ -116,31 +131,57 @@ def test_fetch_goes_through_the_retrying_get(monkeypatch, no_sleep):
     assert "start=10" in calls[0] and "max_results=5" in calls[0]
 
 
-def test_get_retries_406_like_a_429(monkeypatch, no_sleep):
-    """406 is edge mitigation against the shared runner egress, not a bad request.
+def test_get_uses_curl_immediately_on_urllib_406(monkeypatch, no_sleep):
+    """A client-fingerprint 406 should switch transport before sleeping."""
+    urllib_calls = _stub_urlopen(monkeypatch, [_http_error(406)])
+    curl_calls = _stub_curl(monkeypatch, [b"<feed/>"])
 
-    2026-09-17 and 2026-09-18 both died on an HTTP 406 where 09-15 died on a
-    429 — same first request, same runner, same silence in #papers. The headers
-    were probed live on 2026-09-18 and all four {bare UA, contact UA} x {no
-    Accept, application/atom+xml} combinations answered 200 from a home IP, so
-    the 406 is not content negotiation: it is the same throttle wearing a
-    different status code, and it has to climb the same ladder.
-    """
-    calls = _stub_urlopen(monkeypatch, [_http_error(406)] * 3 + [b"<feed/>"])
     assert af._get({"q": 1}, delays=(1, 2, 3)) == b"<feed/>"
-    assert len(calls) == 4
+    assert len(urllib_calls) == 1
+    assert len(curl_calls) == 1
+    assert no_sleep == []
+
+
+def test_get_still_backs_off_if_curl_is_also_refused(monkeypatch, no_sleep):
+    """A real edge throttle still gets the existing retry ladder."""
+    urllib_calls = _stub_urlopen(monkeypatch, [_http_error(406)] * 4)
+    curl_calls = _stub_curl(
+        monkeypatch, [_http_error(406)] * 3 + [b"<feed/>"]
+    )
+
+    assert af._get({"q": 1}, delays=(1, 2, 3)) == b"<feed/>"
+    assert len(urllib_calls) == 4
+    assert len(curl_calls) == 4
     assert no_sleep == [1, 2, 3]
 
 
-def test_fetch_survives_a_406_sequence(monkeypatch, no_sleep):
-    """The *fetch* step, not just the guard — this is what killed 09-17/18.
+def test_fetch_survives_urllib_406_via_curl(monkeypatch, no_sleep):
+    """The fetch path is shared by both the lensing and interests digests."""
+    urllib_calls = _stub_urlopen(monkeypatch, [_http_error(406)])
+    curl_calls = _stub_curl(monkeypatch, [b"page"])
 
-    `_livecheck()` warns and returns 0 on any HTTPError, so it survived the 406
-    on its own; the run then died one step later in `fetch()`, which is also the
-    entry point `arxiv_interests.py` calls. Both digests need this path.
-    """
-    calls = _stub_urlopen(monkeypatch, [_http_error(406)] * 3 + [b"page"])
-    monkeypatch.setattr(af, "RETRY_DELAYS", (1, 2, 3))
     assert af.fetch("q", 5, start=10) == b"page"
-    assert len(calls) == 4 and no_sleep == [1, 2, 3]
-    assert "start=10" in calls[0] and "max_results=5" in calls[0]
+    assert len(urllib_calls) == 1 and len(curl_calls) == 1
+    assert no_sleep == []
+    assert "start=10" in urllib_calls[0] and "max_results=5" in urllib_calls[0]
+
+
+def test_curl_get_parses_body_and_status(monkeypatch):
+    seen = {}
+
+    class Result:
+        returncode = 0
+        stdout = b"<feed/>\n__PYAUTO_HTTP_STATUS__:200"
+        stderr = b""
+
+    def fake_run(command, capture_output, check):
+        seen["command"] = command
+        assert capture_output is True
+        assert check is False
+        return Result()
+
+    monkeypatch.setattr(af.subprocess, "run", fake_run)
+    assert af._curl_get("https://example.test/query") == b"<feed/>"
+    command = seen["command"]
+    assert af.USER_AGENT in command
+    assert f"Accept: {af.ACCEPT}" in command
