@@ -1,24 +1,5 @@
 # Active Tasks
 
-## wide-sersic-default
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/96
-- issued: 2026-09-20
-- prompt: active/wide_sersic_default.md
-- session: Codex (session ID unavailable)
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/wide-sersic-default
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/97
-- resume: "PR #97 is open with pending-release label under the live Heart RED development override; commit a4e6466, formal review CLEAN, Euclid smoke 9/9, repo invariants 12/12. Initial CI is running. No merge or release authorized; re-run /prm for a later merge decision when required checks are green. Local euclid_dr1 science clone has matching script commit c7ac145."
-- heart-red-override: |
-    Live user replied "I authorize" on 2026-09-20 to the task-specific Heart RED development override request for euclid_strong_lens_modeling_pipeline#96.
-    Authorization and evidence: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/96#issuecomment-5749918493
-    Exact current RED reason: release validation FAILED (stage integrate)
-    Also YELLOW: manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml
-    Passed branch gates: both scripts compile; installed model probe lens 0.5–10.0/source 0.8–5.0; repository invariants 12/12; Euclid smoke 9/9; git diff --check; formal review CLEAN at a4e6466.
-    Scope: development commit, push and pending-release PR only; no merge, release or CI bypass.
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/wide-sersic-default
-
 ## notify-slack-community-discussions
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/408
 - issued: 2026-09-20
