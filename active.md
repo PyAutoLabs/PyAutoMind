@@ -1,5 +1,15 @@
 # Active Tasks
 
+## euclid-single-rgb-vis-lp
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/98
+- issued: 2026-09-20
+- prompt: active/single_rgb_dr1_vis_lp_pilot.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/euclid-single-rgb-vis-lp
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-single-rgb-vis-lp
+
 ## notify-slack-community-discussions
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/408
 - issued: 2026-09-20
