@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/single_rgb_dr1_vis_lp_pilot.md">Single RGB visualisation for the Euclid DR1 VIS-LP pilot</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/98">issue #98</a> — issued 2026-09-20 — workspace-dev</summary>
+<details><summary>📋 <a href="active/single_rgb_dr1_vis_lp_pilot.md">Single RGB visualisation for the Euclid DR1 VIS-LP pilot</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/98">issue #98</a> — issued 2026-09-20 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/99">euclid_strong_lens_modeling_pipeline#99</a></summary>
 
 ```
 /start_dev active/single_rgb_dr1_vis_lp_pilot.md
