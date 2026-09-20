@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [vis-magnitude-catalogue-top1000](#vis-magnitude-catalogue-top1000)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
@@ -9,6 +10,16 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 
 <!-- toc:end -->
+
+## vis-magnitude-catalogue-top1000
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/95
+- planned: 2026-09-20
+- classification: workspace
+- suggested-branch: feature/vis-magnitude-catalogue-top1000
+- blocked-by: sersic-variants and sersic-variants-analysis (using euclid_strong_lens_modeling_pipeline)
+- affected-repos:
+  - euclid_strong_lens_modeling_pipeline
+- note: Human approved the VIS export plan and coordination on 2026-09-20; start_workspace's conflict guard remains non-zero until the existing claims are released. Reassess live vis_lp and vis_pix result counts from the actual science output before reporting coverage.
 
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
