@@ -8,6 +8,8 @@ Themes:
 - euclid
 - catalogue
 Status: draft
+Issued: 2026-09-20
+Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/95
 
 User request (verbatim):
 
