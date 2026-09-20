@@ -3,6 +3,7 @@
 Work type: feature
 Target: euclid_strong_lens_modeling_pipeline
 Repo: @euclid_strong_lens_modeling_pipeline
+Issued: 2026-09-20
 
 ## Original request
 
