@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 215 |
+| [Backlog](#backlog) (`draft/`) | 216 |
 
 > **No batch in flight.**
 
@@ -569,7 +569,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**215** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**216** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -1089,7 +1089,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 40</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1399,6 +1399,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/euclid/single_rgb_dr1_vis_lp_pilot.md">Single RGB visualisation for the Euclid DR1 VIS-LP pilot</a> — euclid</summary>
+
+```
+/start_dev draft/feature/euclid/single_rgb_dr1_vis_lp_pilot.md
 ```
 
 </details>
@@ -2785,7 +2793,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 ## Hygiene
 
-52 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+53 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2801,6 +2809,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
+- `draft/feature/euclid/single_rgb_dr1_vis_lp_pilot.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/workspaces/add_an_abell_1201_central_point_mass.md`
@@ -2829,8 +2838,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/maintenance/organs/reduce_session_token_load.md`
 - `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
 - `draft/maintenance/workspaces/read_through_issues.md`
-- `draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`
-- _… and 12 more_
+- _… and 13 more_
 
 </details>
 
