@@ -3,10 +3,10 @@ name: Mind Ledger Merge
 # Lands PyAutoMind's own ledger work without anyone having to ask for it.
 #
 # THE PROBLEM. A branch-scoped session — the phone, claude.ai/code, any
-# `claude/**` or `codex/**` flow — pushes its Mind changes to a feature branch and they stop
+# `claude/**`, `codex/**` or `chatgpt/**` flow — pushes its Mind changes to a feature branch and they stop
 # there. `prompt_sync.sh` pushes HEAD on purpose (a cloud session must not push
 # straight to main), but nothing downstream moves the branch on: no workflow so
-# much as *looks* at a `claude/**` or `codex/**` push, because lifecycle_drift,
+# much as *looks* at a `claude/**`, `codex/**` or `chatgpt/**` push, because lifecycle_drift,
 # dashboard_refresh, firewall_gate and spawn_drift all trigger on `push: main`
 # or `pull_request` only. So a filed prompt, a shipped task moved to
 # `complete/`, a regenerated dashboard — all of it waits for a human to write an
@@ -47,7 +47,7 @@ name: Mind Ledger Merge
 
 on:
   push:
-    branches: ["claude/**", "codex/**"]
+    branches: ["claude/**", "codex/**", "chatgpt/**"]
   workflow_dispatch:
     inputs:
       branch:

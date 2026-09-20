@@ -348,11 +348,11 @@ def test_resolve_cli_exit_code_follows_unresolved(tmp_path):
     assert "resolved: active.md" in r.stdout
 
 
-@pytest.mark.parametrize("namespace", ["claude", "codex"])
+@pytest.mark.parametrize("namespace", ["claude", "codex", "chatgpt"])
 def test_workflow_namespaces_use_same_ledger_gate(tmp_path, namespace):
     workflow = (SCRIPT.resolve().parents[1] / ".github/workflows/mind_ledger_merge.yml").read_text()
     triggers = yaml.load(workflow, Loader=yaml.BaseLoader)['on']['push']['branches']
-    assert set(triggers) == {'claude/**', 'codex/**'}
+    assert set(triggers) == {'claude/**', 'codex/**', 'chatgpt/**'}
     assert "python3 scripts/ledger_merge.py classify --base origin/main" in workflow
     repo = tmp_path / "repo"
     repo.mkdir()
