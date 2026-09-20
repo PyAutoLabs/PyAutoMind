@@ -18,7 +18,7 @@
 - suggested-branch: feature/vis-magnitude-catalogue-top1000
 - affected-repos:
   - euclid_strong_lens_modeling_pipeline
-- note: Human approved the VIS export plan and coordination on 2026-09-20; start_workspace's conflict guard remains non-zero until the existing claims are released. Reassess live vis_lp and vis_pix result counts from the actual science output before reporting coverage.
+- note: Human approved the VIS export plan and coordination on 2026-09-20. The two Sersic variant claims were retired on 2026-09-20, so they no longer block start_workspace. Reassess live vis_lp and vis_pix result counts from the actual science output before reporting coverage.
 
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
