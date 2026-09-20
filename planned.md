@@ -20,7 +20,6 @@
   - euclid_strong_lens_modeling_pipeline
 - note: Human approved the VIS export plan and coordination on 2026-09-20. The two Sersic variant claims were retired on 2026-09-20, so they no longer block start_workspace. Reassess live vis_lp and vis_pix result counts from the actual science output before reporting coverage.
 
-
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
 - found: 2026-08-09, while pinning B10 of the @rhayes777 audit (`complete/2026/08/autogalaxy-profile-validation-guards.md`)
