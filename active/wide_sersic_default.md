@@ -4,7 +4,8 @@ Type: feature
 Target: euclid
 Repos:
 - euclid_strong_lens_modeling_pipeline
-Status: draft
+Status: active
+Issued: 2026-09-20
 
 User request (verbatim, 2026-09-20):
 
