@@ -1,3 +1,22 @@
+## notify-slack-community-discussions
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/408
+- completed: 2026-09-20
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/409
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/409
+
+## Shipped
+
+The GitHub for Slack app now sends new Discussions from the shared `PyAutoLabs/.github` hub to the PyAutoLabs Slack workspace's `#general` channel. `/github subscribe list features` showed `discussions` as the only enabled feature, both before and after the workspace was renamed to `pyautolabs.slack.com`. The subscription has no category filter. The public Discussion remains the source of truth.
+
+PyAutoBrain's Community Agent runbook documents setup, event scope, live verification, and rollback. GitHub's native feature also reports accepted answers; it does not promise every reply, edit, or reaction. No custom webhook or token was added.
+
+## Validation and close-out
+
+[Test Discussion #21](https://github.com/orgs/PyAutoLabs/discussions/21) in Help & Questions produced one operator-observed Slack message with author, title, category, and repository context. The post-rename feature-list check confirmed the subscription persisted; no second Discussion was posted solely for that check. The exact PR head had one expected pull-request workflow run with Python 3.12 and 3.13 jobs both successful, and Git reported the feature branch wholly contained in `main` with zero unmerged commits. The human invoked `/prm` for this merge. The prior Heart RED development override is recorded on issue #408 and in the PR; it did not clear Heart or authorize a release.
+
+## Original prompt
+
 # Notify Slack general when a community discussion is posted
 
 Type: maintenance
