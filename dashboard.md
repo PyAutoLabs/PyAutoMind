@@ -40,11 +40,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 5 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 215 |
+| [Backlog](#backlog) (`draft/`) | 216 |
 
 > **No batch in flight.**
 
@@ -262,22 +262,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/oneshot_benchmark_harness.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes (<code>scripts/analysis/sersic_variants.py</code>)</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/76">issue #76</a> — issued 2026-09-12 — workspace-dev</summary>
-
-```
-/start_dev active/sersic_variants_analysis.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses (<code>--variant</code>)</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/74">issue #74</a> — issued 2026-09-12 — paused — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/75">euclid_strong_lens_modeling_pipeline#75</a></summary>
-
-```
-/start_dev active/sersic_variants_prior_edge.md
 ```
 
 </details>
@@ -585,7 +569,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**215** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**216** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 64</summary>
@@ -1105,7 +1089,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 40</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1415,6 +1399,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/euclid/wide_sersic_default.md">Wider lens Sersic index prior as the default for DR1</a> — euclid</summary>
+
+```
+/start_dev draft/feature/euclid/wide_sersic_default.md
 ```
 
 </details>
@@ -2392,14 +2384,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
-| 2026-09-12 | issued | <a href="active/sersic_variants_analysis.md">Per-variant comparison of the four Sersic scrapes…</a> |
-| 2026-09-12 | issued | <a href="active/sersic_variants_prior_edge.md">Four Sersic-stage variants on the 100 euclid_sersics core lenses…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 | 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as…</a> |
 | 2026-09-10 | filed | <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier…</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autoarray/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-09-10 | filed | <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> |
+| 2026-09-10 | filed | <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> |
+| 2026-09-10 | filed | <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> |
 
 </details>
 
@@ -2801,7 +2793,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 ## Hygiene
 
-52 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+53 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2817,6 +2809,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
+- `draft/feature/euclid/wide_sersic_default.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/workspaces/add_an_abell_1201_central_point_mass.md`
@@ -2845,8 +2838,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/maintenance/organs/reduce_session_token_load.md`
 - `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
 - `draft/maintenance/workspaces/read_through_issues.md`
-- `draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`
-- _… and 12 more_
+- _… and 13 more_
 
 </details>
 
