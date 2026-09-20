@@ -1,5 +1,17 @@
 # Active Tasks
 
+## chatgpt-orchestrator-capability-routing
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/410
+- issued: 2026-09-20
+- prompt: active/chatgpt_orchestrator_capability_routing.md
+- session: ChatGPT Chat (GitHub connected; session ID unavailable)
+- location: github-api-only (no local clone or task worktree)
+- status: library-dev
+- repos:
+  - PyAutoBrain: feature/chatgpt-orchestrator-routing
+  - PyAutoMind: feature/chatgpt-orchestrator-routing
+  - PyAutoScientist: feature/chatgpt-orchestrator-route
+
 ## euclid-single-rgb-vis-lp
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/98
 - issued: 2026-09-20
