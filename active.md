@@ -5,9 +5,10 @@
 - issued: 2026-09-20
 - prompt: active/wide_sersic_default.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/wide-sersic-default
-- resume: "Pipeline commit a4e6466 made under the live Heart RED development override; formal review CLEAN. Next: push feature/wide-sersic-default and open the pending-release PR. Merge and release remain separately gated."
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/97
+- resume: "PR #97 is open with pending-release label under the live Heart RED development override; commit a4e6466, formal review CLEAN, Euclid smoke 9/9, repo invariants 12/12. Initial CI is running. No merge or release authorized; re-run /prm for a later merge decision when required checks are green. Local euclid_dr1 science clone has matching script commit c7ac145."
 - heart-red-override: |
     Live user replied "I authorize" on 2026-09-20 to the task-specific Heart RED development override request for euclid_strong_lens_modeling_pipeline#96.
     Authorization and evidence: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/96#issuecomment-5749918493
