@@ -16,7 +16,6 @@
 - planned: 2026-09-20
 - classification: workspace
 - suggested-branch: feature/vis-magnitude-catalogue-top1000
-- blocked-by: sersic-variants and sersic-variants-analysis (using euclid_strong_lens_modeling_pipeline)
 - affected-repos:
   - euclid_strong_lens_modeling_pipeline
 - note: Human approved the VIS export plan and coordination on 2026-09-20; start_workspace's conflict guard remains non-zero until the existing claims are released. Reassess live vis_lp and vis_pix result counts from the actual science output before reporting coverage.

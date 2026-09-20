@@ -24,6 +24,8 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [Lifecycle](#lifecycle)
 - [Entry schema](#entry-schema)
 - [feature/abandoned-spike](#featureabandoned-spike)
+- [euclid-sersic-variants](#euclid-sersic-variants)
+- [euclid-sersic-variants-analysis](#euclid-sersic-variants-analysis)
 - [release-datasets/autolens-regenerable](#release-datasetsautolens-regenerable)
 - [release-datasets/autogalaxy-regenerable](#release-datasetsautogalaxy-regenerable)
 - [release-datasets-group-b/all-four](#release-datasets-group-ball-four)
@@ -109,6 +111,28 @@ One `##` block per item. Fields:
 - breaks-if-wrong: loses ~3 exploratory commits (delaunay prototype)
 - archive-ref: refs/heads/archive/condemned/abandoned-spike @ 0de4514
 -->
+
+## euclid-sersic-variants
+- type: branch
+- locator: euclid_strong_lens_modeling_pipeline `feature/sersic-variants` (issue #74, closed unplanned; PR #75, closed unmerged)
+- confidence: 1.0 (explicit user withdrawal)
+- reason: The user retired the four-variant Sersic experiment on 2026-09-20. It no longer claims the pipeline repository.
+- merged: no
+- condemned: 2026-09-20
+- sweep-after: 2026-10-20
+- breaks-if-wrong: Loses the variant runner and model changes if both this archive and the original source branch are deleted; recover from Gut during transit.
+- archive-ref: refs/heads/archive/condemned/euclid-sersic-variants on PyAutoGut origin @ 81f31393be89d0f3239bcbaf4c9696c1a23c8c6c
+
+## euclid-sersic-variants-analysis
+- type: branch
+- locator: euclid_strong_lens_modeling_pipeline `claude/sersic-variants-analysis-3iqibr` (issue #76, closed unplanned)
+- confidence: 1.0 (explicit user withdrawal)
+- reason: The user retired the comparison analysis on 2026-09-20. It no longer claims the pipeline repository.
+- merged: no
+- condemned: 2026-09-20
+- sweep-after: 2026-10-20
+- breaks-if-wrong: Loses the unmerged comparison script and tests if both this archive and the original source branch are deleted; recover from Gut during transit.
+- archive-ref: refs/heads/archive/condemned/euclid-sersic-variants-analysis on PyAutoGut origin @ 480c107cca8a66e85b12015ae6181005bac5fd72
 
 ## release-datasets/autolens-regenerable
 - type: file

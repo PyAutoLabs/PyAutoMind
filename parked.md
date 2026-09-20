@@ -55,6 +55,5 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - prompt: active/catalogue_inspection_before_vis_pix.md
 - classification: workspace
 - suggested-branch: feature/catalogue-before-vis-pix
-- blocked-by: sersic-variants, sersic-variants-analysis (using euclid_strong_lens_modeling_pipeline)
 - affected-repos:
   - euclid_strong_lens_modeling_pipeline

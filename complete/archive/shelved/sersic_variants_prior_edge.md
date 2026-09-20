@@ -10,7 +10,7 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: active
+Status: withdrawn
 Consequence: judge
 Witness: `--variant` omitted reproduces today's path/unique_tag/model exactly; four `sersic_lens_model_<variant>/vis` dirs per lens
 Review-minutes: 25
@@ -106,3 +106,8 @@ is what pins "nothing else changed".
 - PR 2: `scripts/analysis/sersic_variants.py` — per-variant `n` histograms,
   fractions above 4.5 / 4.9 / 9.5, paired deltas against `baseline` and against
   June, and the nucleus flux fraction for `sersic_point`.
+
+## Retirement (2026-09-20)
+
+The user withdrew this task. It did not ship; its code is retained for recovery.
+The PyAutoMind repo claim and GitHub issue were closed as withdrawn.

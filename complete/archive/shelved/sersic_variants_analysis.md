@@ -10,7 +10,7 @@ Themes:
 Difficulty: easy
 Autonomy: supervised
 Priority: high
-Status: active
+Status: withdrawn
 Consequence: judge
 Witness: four synthetic scrapes in, per-variant fractions + paired medians + W1-W4 readings out, with the inner-join losses named
 Review-minutes: 15
@@ -78,3 +78,8 @@ is not available from these CSVs and the report says so rather than inventing it
 `pytest -q -m "not slow" tests` green; the script runs end to end on the
 synthetic fixture and writes both artefacts; no PyAuto library import, so it
 stays in the fast suite.
+
+## Retirement (2026-09-20)
+
+The user withdrew this task. It did not ship; its code is retained for recovery.
+The PyAutoMind repo claim and GitHub issue were closed as withdrawn.
