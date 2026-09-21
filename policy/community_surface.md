@@ -147,45 +147,32 @@ Follow-ups filed: `draft/docs/workspaces/support_sections_point_to_discussions.m
 (the seven READMEs and issue choosers) and
 `draft/docs/pyautolabs_github_io/front_door_community_link.md`.
 
-### 5. Migration of the external threads
+### 5. Historical migration is optional; route new community work correctly
 
-The threads worth moving are the **user-filed feature requests and
-proposals** — they are conversations about direction, which is what
-Ideas & Proposals is for, and a hub that opens with real requests and their
-outcomes is a hub people post to. Bug reports (fixed or open) stay issues: a fixed bug is a
-record, an open one with a reproducer is dev work.
+The hub does **not** need to be backfilled exhaustively. On 2026-09-21 the
+maintainer explicitly waived the remaining migration of old, already-shipped
+feature-request issues. PyAutoArray#499, PyAutoLens#631/#564/#542 and
+PyAutoGalaxy#419 may remain as historical issues. Do not surface them as
+unfinished maintenance work and do not recreate or copy them into Discussions.
 
-Move them with GitHub's native **Convert to discussion** (issue sidebar). It
-keeps the author, every comment and every timestamp, and locks the issue
-with a redirect; nothing else does — the REST Discussions API is read-only,
-`createDiscussion` is GraphQL, and a GraphQL copy would be posted under the
-maintainer's name and lose the thread. Conversion lands in the issue's own
-repo, so a non-hub repo's thread is converted there (Discussions enabled
-for the minute it takes) and then **Transfer discussion** moves it to the
-hub; discussions never move when the org's source repository changes, which
-is why the host repo is decided *before* the migration, not after. Manifest:
-all six go to **Ideas & Proposals**, retaining shipped outcomes in the last
-comment. The live streaming-visibilities thread is already on the hub as
-[discussion #13](https://github.com/orgs/PyAutoLabs/discussions/13).
+Preserve native conversions that have already happened: the live
+streaming-visibilities proposal remains
+[discussion #13](https://github.com/orgs/PyAutoLabs/discussions/13), and the
+PyAutoLens announcement remains
+[discussion #11](https://github.com/orgs/PyAutoLabs/discussions/11).
 
-| Thread | Author | State | Category | Why |
-|---|---|---|---|---|
-| PyAutoArray#551 — Streaming visibilities for memory efficiency | @HRSAstro | open | Ideas & Proposals | proposal with a reference implementation, not yet committed work |
-| PyAutoArray#499 — Sparse interferometer inversion with linear function lists | @HRSAstro | shipped (#500) | Ideas & Proposals | request → shipped; shows the loop closes |
-| PyAutoLens#631 — Yang+2024 SIDM profile as default for subhalos/LOS halos | @mwiet | shipped (PyAutoGalaxy#556, #691) | Ideas & Proposals | request with deferred items still open for discussion |
-| PyAutoLens#564 — Kaplinghat, Tulin & Yu (2016) cored-NFW profile | @mwiet | shipped (PyAutoGalaxy#471) | Ideas & Proposals | request → shipped |
-| PyAutoLens#542 — end-to-end `jax.jit`/`vmap` multi-plane substructure simulator | @mwiet | shipped (jax_substructure series) | Ideas & Proposals | request → shipped |
-| PyAutoGalaxy#419 — External potential (Powell 2022) | @Sketos | shipped (PyAutoGalaxy#422) | Ideas & Proposals | request → shipped |
+The important contract is prospective: questions, ideas and proposals enter via
+the org Discussions hub; reproducible development work is tracked by an issue
+on the target repository. A confirmed bug raised in Discussions gets a linked
+development issue rather than requiring historical thread migration.
 
-Reproducible defects belong on issues: PyAutoArray#535 (@ClarkGuilty,
-`imshow_origin` overlay mirror) was intended to remain an issue. The live
-hub now contains [discussion #14](https://github.com/orgs/PyAutoLabs/discussions/14)
-with that report in Ideas & Proposals; move it to Bugs & Errors and link a
-PyAutoArray development issue as appropriate. The fixed bug reports
-PyAutoLens#724, autolens_workspace#524, PyAutoArray#521/#459, PyAutoLens#495/#470,
-PyAutoGalaxy#451 stay issues. Follow-up filed:
-`draft/maintenance/community/migrate_user_threads_to_discussions.md`
-(human-required: the button is UI-only).
+PyAutoArray's `imshow_origin` report was converted to
+[discussion #14](https://github.com/orgs/PyAutoLabs/discussions/14). Its
+development tracker is now
+[PyAutoArray#565](https://github.com/PyAutoLabs/PyAutoArray/issues/565).
+If convenient in the GitHub UI, Discussion #14 can be categorized as
+**Bugs & Errors** and settled with the tracker/fix link, but this UI tidying is
+not a blocker for the community-surface rollout.
 
 ## Measured, 2026-09-17, from a Claude Code remote session
 
