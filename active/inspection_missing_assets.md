@@ -179,3 +179,16 @@ Reviewer: independent `gpt-5.6-sol`, task `/root/review_missing_assets`, read-on
 3. **HIGH — stale Witt-Wynne products.** Empty/skip paths retain old master and per-lens `witt_wynne.csv` and potentially `witt_wynne.in`. Reviewer reproduced stale master/split surviving `built=0 skipped=3`. Clear stale master/splits on empty refresh and skipped-lens `.in`; add regression.
 
 Reviewer verified the staged science deployment's older astrometric schema is preserved and its missing-WCS handling matches the fix. Compilation, lint, manifest hashes passed. Claim dispositions: continuation and row alignment supported by regression evidence; universal corruption propagation and stale-output claims have the findings above. Review is **not CLEAN**. No fixes to these findings were started after the user's pause request. Resume at finding 1, then re-review the corrected patch and deployment overlay.
+
+
+## Implementation and independent review complete — 2026-09-22
+
+Resolved all three review findings: PNG/JSON collector corruption now fails before publication (including reused output); an incomplete multi-wavelength refresh invalidates its old composite; skipped Witt–Wynne projections clear stale CSV rows/splits and solver inputs.
+
+- Validation: **249 passed, 10 fitting tests deselected** (`.scratch/unit-final.log`); independent reviewer reran all **26** missing-asset regressions. The real ten-stage catalogue shell smoke reaches stage 10 with missing FITS/PNG/WCS in an intermediate lens. Ruff check/format and diff check pass. No model fits rerun.
+- Independent Sol re-review: **CLEAN**. Claim dispositions cite collector corruption tests, added-band invalidation, parametrized Witt cleanup, real shell continuation and CSV row alignment. Full record: `.scratch/review-clean.md`.
+- Worktree remains `/home/jammy/Code/PyAutoLabs/.worktrees/inspection-missing-assets/euclid_strong_lens_modeling_pipeline`, branch `feature/inspection-missing-assets`, base `1c67027`. Source changes are not committed/pushed yet.
+- Ship body prepared at `.scratch/pr-body.md`. Heart refreshed 2026-09-22T07:04:11Z: RED reason **`release validation FAILED (stage integrate)`**. Task-specific development override requested after passing tests/review; pending user response. No override inferred from plan approval or resume.
+- Deployment preflight: all **11** scoped files on RAL match recorded local science preimages. `.scratch/deploy` preserves existing science astrometry schema; manifest `.scratch/deployment_manifest.json`. No fitting/config/data files included. No deployment performed.
+- Read-only RAL baseline verified: **4 FITS files, each 17 HDUs; 0 CSV, 0 PNG; no validation errors**, in `inspect/dr1_sep1_rest_sersic100_20260922`. Hashes and extensions saved in `.scratch/ral-before-products.json` for post-rerun comparison. Inventory tool: `.scratch/verify_bundle.py`.
+- Next: receive issue #100 development override, record it in four required sinks, commit/push/open pending-release PR, checksum-guard file-only deployment, rerun the exact original catalogue job, then verify actual FITS/CSV/PNG counts and skips. Merge requires separate human authorization. No RAL jobs submitted so far.
