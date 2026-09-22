@@ -1,5 +1,8 @@
 # Inspection bundle tolerates missing optional result assets
 
+Issued: 2026-09-22
+Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/100
+Plan-approved: 2026-09-22 (user: go)
 Type: bug
 Lane: local-dev
 Autonomy: human-required

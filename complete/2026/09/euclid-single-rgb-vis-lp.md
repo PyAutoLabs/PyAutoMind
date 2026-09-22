@@ -1,3 +1,21 @@
+## euclid-single-rgb-vis-lp
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/98
+- issued: 2026-09-20
+- prompt: active/single_rgb_dr1_vis_lp_pilot.md
+- session: Codex (session ID unavailable)
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/99
+- heart-red-override: User authorized issue #98 development override in this session: "Authorize issue #98 development override" in response to commit, push, pending-release PR, and RAL deployment for this branch. Heart RED: `release validation FAILED (stage integrate)`. Final branch gates: 223 fast tests passed (10 deselected); 37 focused tests passed; Euclid smoke 9/9 passed; Ruff check/format and diff check passed; real DR1 JPG rendered to two-panel `rgb.png`; review faculty surface at f28e3cf judged CLEAN. Development shipping only; no merge or release.
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/euclid-single-rgb-vis-lp
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-single-rgb-vis-lp
+
+- completed: 2026-09-21
+- merge: 1c67027fa1cda094ba614ef795b924f00eb7271d
+- reconciliation: PR #99 verified MERGED through GitHub; clear stale awaiting-merge claim only. Existing worktree and local science data remain untouched.
+
+## Original prompt
+
 # Single RGB visualisation for the Euclid DR1 VIS-LP pilot
 
 Work type: feature
