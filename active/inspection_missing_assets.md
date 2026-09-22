@@ -153,3 +153,29 @@ then separate deployment/verification phases, not unrelated PRs.
 
 Next action: obtain explicit user plan approval, then create_issue and worktree
 setup. This record is a proposal, not approval or an implementation claim.
+
+
+## Paused at user request — 2026-09-22
+
+Plan approved ("go"); user then asked to pause at a good checkpoint while offline.
+
+- Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/inspection-missing-assets/euclid_strong_lens_modeling_pipeline`
+- Branch: `feature/inspection-missing-assets`, base `1c67027`; implementation remains local and uncommitted pending the Heart shipping gate.
+- Implemented optional-asset checks, product/row skip diagnostics and counts, staged FITS/CSV/PNG writes, stale CSV cleanup, and explicit structural-error propagation across the catalogue producers. Completed-result regressions added in `tests/test_catalogue_missing_assets.py`.
+- Validation: 241 passed, 10 fitting tests deselected (`.scratch/unit.log`); 18 new regressions passed (`.scratch/regression.log`), including the real ten-stage shell bundle with missing FITS/PNG/WCS and healthy eight-band 17-HDU output. Ruff and diff checks passed. No model fits rerun.
+- Independent Sol review was requested; its final disposition is recorded separately below when available. Brain review surface CLI requires a committed diff and currently returns no reviewable diff; reviewer directly inspects the local diff and test source.
+- Code snapshot: `.scratch/implementation.patch`, `.scratch/checkpoint_hashes.json`; new test file is present in worktree but untracked and is NOT included in the ordinary git diff patch.
+- Deployment is prepared ONLY in `.scratch/deploy`, with `.scratch/deployment_manifest.json`. Science astrometry predates prior-edge columns, so its staged version ports this fix while preserving the existing schema; verified on the real regression fixture (5 aligned rows). No files copied into science or RAL.
+- RAL SSH works. `/mnt/ral/jnightin/euclid_dr1` has no `.git`; deployment must verify preimage file hashes. Existing SED and VIS fits are running; only catalogue tooling may be transferred, never broad sync or config/fitting scripts. No new jobs submitted.
+- Heart remains RED: `release validation FAILED (stage integrate)`. Plan approval did not grant a development shipping override. Before commit/push/PR, finish independent review, refresh Heart, present passing tests/review and request a task-specific development override if still RED. Follow four-sink recording. Merge needs separate authorization.
+- Resume: resolve review findings, revalidate changed scope, obtain the required shipping gate approval, ship workspace PR, checksum-guard the staged file-only deployment, rerun the exact job exports in the approved plan, verify actual FITS/CSV/PNG products and report counts/skipped lenses. Science dirty/untracked data and existing model results remain untouched.
+
+### Independent review — FINDINGS; resolve before shipping
+
+Reviewer: independent `gpt-5.6-sol`, task `/root/review_missing_assets`, read-only.
+
+1. **HIGH — collector accepts corrupt copied assets.** `scripts/tools/build_inspect.py` copies PNG/JSON bytes and checks existence. Reviewer reproduced `process_dataset` returning `built` after copying `b'not a png'` and `b'not json'`. Validate assets before reporting built; add corruption regression. The documentation's universal corruption-propagation claim is currently false here.
+2. **HIGH — stale multi-wavelength PNG on incomplete refresh.** After a valid two-band build, adding a completed `nir_y` result without `fit.png` causes a skip while retaining the old `fit_multi_wavelength.png`. Invalidate/quarantine the stale generated composite when current inputs are incomplete; test that transition.
+3. **HIGH — stale Witt-Wynne products.** Empty/skip paths retain old master and per-lens `witt_wynne.csv` and potentially `witt_wynne.in`. Reviewer reproduced stale master/split surviving `built=0 skipped=3`. Clear stale master/splits on empty refresh and skipped-lens `.in`; add regression.
+
+Reviewer verified the staged science deployment's older astrometric schema is preserved and its missing-WCS handling matches the fix. Compilation, lint, manifest hashes passed. Claim dispositions: continuation and row alignment supported by regression evidence; universal corruption propagation and stale-output claims have the findings above. Review is **not CLEAN**. No fixes to these findings were started after the user's pause request. Resume at finding 1, then re-review the corrected patch and deployment overlay.
