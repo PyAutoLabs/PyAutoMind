@@ -41,9 +41,11 @@
 - issued: 2026-09-22
 - prompt: active/inspection_missing_assets.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input
+- status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inspection-missing-assets
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/inspection-missing-assets
 - summary: Implementation complete; independent Sol re-review CLEAN. 249 fast tests passed, 10 fitting tests deselected; 26 regression tests. Heart RED `release validation FAILED (stage integrate)`; issue-specific development override requested and pending. No deployment or jobs.
 - resume: Await issue #100 Heart development override; then record four sinks, ship pending-release PR, deploy 11 checksum-guarded tooling files from .scratch/deploy (preserving science CSV schema), rerun catalogue-only job and verify products. RAL baseline 4 valid FITS/17 HDUs each, 0 CSV/PNG. Detailed evidence in active/inspection_missing_assets.md and issue #100.
+- heart-red-override: |
+    User: "Authorize issue #100 development override". Heart RED: `release validation FAILED (stage integrate)`. 249 fast tests, 26 targeted regressions, ten-stage catalogue smoke, Ruff/format/diff checks PASS; independent Sol review CLEAN. Commit/push/pending-release PR only; deployment/catalogue rerun separately authorized by approved plan. No merge or release.

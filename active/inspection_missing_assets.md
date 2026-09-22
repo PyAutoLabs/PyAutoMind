@@ -192,3 +192,13 @@ Resolved all three review findings: PNG/JSON collector corruption now fails befo
 - Deployment preflight: all **11** scoped files on RAL match recorded local science preimages. `.scratch/deploy` preserves existing science astrometry schema; manifest `.scratch/deployment_manifest.json`. No fitting/config/data files included. No deployment performed.
 - Read-only RAL baseline verified: **4 FITS files, each 17 HDUs; 0 CSV, 0 PNG; no validation errors**, in `inspect/dr1_sep1_rest_sersic100_20260922`. Hashes and extensions saved in `.scratch/ral-before-products.json` for post-rerun comparison. Inventory tool: `.scratch/verify_bundle.py`.
 - Next: receive issue #100 development override, record it in four required sinks, commit/push/open pending-release PR, checksum-guard file-only deployment, rerun the exact original catalogue job, then verify actual FITS/CSV/PNG counts and skips. Merge requires separate human authorization. No RAL jobs submitted so far.
+
+
+## Heart development override — issue #100
+
+User authorization (verbatim): "Authorize issue #100 development override".
+
+Current Heart RED reason: `release validation FAILED (stage integrate)`.
+Passed branch evidence: 249 fast tests; 10 fitting tests deselected; 26 missing-asset regressions independently rerun; real ten-stage catalogue smoke; Ruff/format/diff checks; independent Sol review CLEAN.
+
+Scope: commit, push, and pending-release PR for issue #100. The user also already approved the file-scoped RAL tooling deployment and catalogue-only rerun. No merge, release, fitting reruns, CI bypass or claim to fix Heart.
