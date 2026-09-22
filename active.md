@@ -10,7 +10,7 @@
 - repos:
   - autolens_assistant: feature/abell-1201-point-mass
 - summary: Human approved plan and branch on 2026-09-22. Inspect supplied F390W/F814W data, obtain mask/contaminant confirmation before composing fit, freeze baseline and point-mass inference, add benchmark and website image. Full-run compute budget and scientific inputs remain checkpoints. Heart RED is not overridden.
-- resume: Inspection script and provenance README implemented and validated; local dataset.png and inventory.json under assistant scripts/scratch/abell_1201. Core files match published data; confirm contaminants and mask (published 3.7 arcsec versus processed ~4 arcsec) before composing fit. Baseline, authoritative variants, units, redistribution and full-run budget remain checkpoints. Issue #133 holds plan and inspection findings. Assistant changes are local, unpushed; Heart RED not overridden. Original untracked data is untouched in canonical checkout.
+- resume: Inspection and website_image scripts implemented, run and locally committed; previews under scripts/scratch/abell_1201/website. Human confirmed existing contaminant-removal images for fit, separate attractive presentation image for website and prompt. Await mask choice (published 3.7 arcsec vs local ~4 arcsec) and pre-removal image path for seamless website RGB. Baseline, authoritative variants/noise pairing, units, redistribution and full-run budget remain checkpoints. Issue #133 has detailed progress. Assistant branch is local/unpushed; Heart RED not overridden. Original data untouched.
 
 ## euclid-single-rgb-vis-lp
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/98
