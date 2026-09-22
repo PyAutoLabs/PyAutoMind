@@ -4,6 +4,8 @@ Type: feature
 Lane: local-dev
 Autonomy: human-required
 Target: @euclid_strong_lens_modeling_pipeline
+Issued: 2026-09-22
+Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 
 ## Original request (verbatim)
 
