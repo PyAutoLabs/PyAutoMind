@@ -9,7 +9,13 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/abell-1201-point-mass
 - repos:
   - autolens_assistant: feature/abell-1201-point-mass
-- summary: Human approved plan and branch on 2026-09-22. Inspect supplied F390W/F814W data, obtain mask/contaminant confirmation before composing fit, freeze baseline and point-mass inference, add benchmark and website image. Full-run compute budget and scientific inputs remain checkpoints. Heart RED is not overridden.
+- summary: Approved Abell 1201 preparation/smoke implementation; full posterior budget and science validation remain checkpoints. Development-only Heart RED override and public processed-data redistribution authorised on 2026-09-22. Shipping stopped at failed clone-boundary check; no assistant push or PR.
+- heart-red-override:
+  - authorization: User "continue i suthorize" in direct response to development-only shipping override for issue #133; no release, merge, posterior run or CI bypass.
+  - red-reasons: "release validation FAILED (stage integrate)"
+  - passed: 129 tests at refreshed head 79854cc; refreshed data preparation, finite coarse likelihood smoke and freeze-check pass.
+  - blocked: clone-boundary check rejects scripts/abell_1201/README.md as unclassified; override cannot bypass this failure. Requires coordinated assistant template-policy and Brain clone-profile classification.
+- latest-shipping-attempt: Local head 79854cc records user permission ("yeah do it") to publish supplied processed data with Nightingale et al. (2023)/HST credit. No assistant push or PR; earlier resume below is the pre-override checkpoint.
 - resume: Preparation/smoke checkpoint complete at local assistant commit 9251b40; 129 tests passed. Approved F390W power-law + shear + point mass, nuisance parameters fitted, cleaned inputs with exact processed 4 arcsec support (31417 pixels). Bundled data manifest, separate RGB, setup-only benchmark card/scorer, model builder and opt-in future posterior driver prepared. Finite 12x12-source likelihood smoke passed; no posterior or headless benchmark run authorised/executed. Pre-removal originals deferred; retain/disclose cut-out, no inpainting. Await full-run budget and scientific calibration; units/redistribution still to confirm before publication. Assistant branch local/unpushed: Heart RED, release validation FAILED (stage integrate), no override. Issue #133 tracks progress; artifacts under scripts/scratch/abell_1201. Originals untouched.
 
 ## oneshot-benchmark-harness
