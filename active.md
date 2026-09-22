@@ -35,3 +35,13 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+## vis-lp-inspection-bundle
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
+- issued: 2026-09-22
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/vis-lp-inspection-bundle
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
+- summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
+- resume: Plan approved. Issue #102 filed. Implement and test in the isolated workspace, then ship and refresh the existing catalogue without rerunning fits.
