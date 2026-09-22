@@ -209,6 +209,20 @@ A new user can find the data and prerequisites, submit the documented prompt and
 
 ## Development decisions — 2026-09-22
 
+### Approved shipping repair
+
+Original user request (verbatim): "go" — answering "May I fix the classification
+in the assistant and Brain, then retry shipping?"
+
+Extend this same task to @PyAutoBrain. The clone-boundary check rejects
+`scripts/abell_1201/README.md`. Classify that exact path as domain-specific in
+`agents/conductors/clone/_clone.py`, clarify the matching policy in
+`autolens_assistant/modes/maintainer.md`, and add classifier regression coverage
+without changing the generic status of `scripts/README.md`. Attach Brain to the
+existing task worktree after checking claims. Run clone tests and the boundary
+checker; ship paired PRs with a Brain-ref declaration until Brain is merged.
+No library, posterior, or release work is included.
+
 - Plan and branch `feature/abell-1201-point-mass` approved in this session.
 - Use the existing contaminant-removal images and exact processed 4 arcsec boundary.
 - Separate the RGB/presentation output from likelihood inputs; pre-removal originals

@@ -9,6 +9,8 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/abell-1201-point-mass
 - repos:
   - autolens_assistant: feature/abell-1201-point-mass
+  - PyAutoBrain: feature/abell-1201-point-mass
+- repair-plan: Human "go" approved classifying the exact Abell README as domain in Brain and assistant template policy, with regression tests, then retrying shipping. Brain attached to existing task root; fresh Mind has no competing Brain claim (stale canonical claim belongs to merged Brain PR 409).
 - summary: Approved Abell 1201 preparation/smoke implementation; full posterior budget and science validation remain checkpoints. Development-only Heart RED override and public processed-data redistribution authorised on 2026-09-22. Shipping stopped at failed clone-boundary check; no assistant push or PR.
 - heart-red-override:
   - authorization: User "continue i suthorize" in direct response to development-only shipping override for issue #133; no release, merge, posterior run or CI bypass.
