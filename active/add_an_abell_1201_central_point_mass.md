@@ -207,6 +207,19 @@ A new user can find the data and prerequisites, submit the documented prompt and
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-19 from user-intake -->
 
+## Development decisions — 2026-09-22
+
+- Plan and branch `feature/abell-1201-point-mass` approved in this session.
+- Use the existing contaminant-removal images and exact processed 4 arcsec boundary.
+- Separate the RGB/presentation output from likelihood inputs; pre-removal originals
+  are unavailable and explicitly deferred, not a blocker.
+- Baseline: F390W power-law galaxy mass + external shear + central point mass,
+  with lens/source nuisance parameters fitted alongside the black hole.
+- Execution limit: "Prepare and smoke-test only for now". No full posterior
+  search or real headless benchmark run has been authorised/executed.
+- Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/abell-1201-point-mass/autolens_assistant`.
+- Scope remains the point-mass fit, not model comparison or detection significance.
+
 ## Website image follow-up
 
 User request (verbatim):
