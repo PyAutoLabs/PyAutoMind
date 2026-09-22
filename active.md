@@ -35,19 +35,3 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
-
-## inspection-missing-assets
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/100
-- issued: 2026-09-22
-- prompt: active/inspection_missing_assets.md
-- session: Codex (session ID unavailable)
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inspection-missing-assets
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/inspection-missing-assets
-- summary: PR #101 at 3e5357d, all 9 CI checks green, 249 fast tests/26 regressions and independent review CLEAN. Deployed 11 tooling files with checksum guards; RAL catalogue job 350452 COMPLETED 0:0 (7m18s). Verified 194 FITS/97 PNG/394 CSV; four old FITS byte-identical. Three lenses skipped for FITS/PNG (two missing VIS assets, one no completed result); science dirt/data preserved.
-- resume: Requested implementation/deployment/catalogue verification complete. Await explicit human /prm for PR #101; no merge authorized. Refresh CI/Heart as required by prm. Final inventory, CSV row counts and skipped lens IDs in active/inspection_missing_assets.md and issue #100; local .scratch/inspection-report.md and ral-products.json hold evidence. No monitoring or further jobs armed.
-- heart-red-override: |
-    User: "Authorize issue #100 development override". Heart RED: `release validation FAILED (stage integrate)`. 249 fast tests, 26 targeted regressions, ten-stage catalogue smoke, Ruff/format/diff checks PASS; independent Sol review CLEAN. Commit/push/pending-release PR only; deployment/catalogue rerun separately authorized by approved plan. No merge or release.
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/101
-- catalogue-job: 350452
