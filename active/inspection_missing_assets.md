@@ -202,3 +202,14 @@ Current Heart RED reason: `release validation FAILED (stage integrate)`.
 Passed branch evidence: 249 fast tests; 10 fitting tests deselected; 26 missing-asset regressions independently rerun; real ten-stage catalogue smoke; Ruff/format/diff checks; independent Sol review CLEAN.
 
 Scope: commit, push, and pending-release PR for issue #100. The user also already approved the file-scoped RAL tooling deployment and catalogue-only rerun. No merge, release, fitting reruns, CI bypass or claim to fix Heart.
+
+
+## PR opened and catalogue rerun submitted — 2026-09-22
+
+- PR: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/101 (`pending-release`), commit `3e5357da48d5d7e9194cc3c3af29f3d239426ec8`. No merge/release performed.
+- User override: "Authorize issue #100 development override", exact Heart RED `release validation FAILED (stage integrate)`; recorded on issue, PR, active registry and autonomy log.
+- Deployed 11 reviewed tooling files to science clone and RAL, checking all preimage and replacement SHA-256 hashes. Preserved science astrometry's older schema. `.gitignore`, `util.py`, `wiki/project/state.md` hashes and all unrelated dirty/untracked entries unchanged.
+- Rollback preimages: local worktree `.scratch/science-preimages-3e5357d`; RAL `/mnt/ral/jnightin/euclid_dr1/.catalogue-tooling-backups/issue100-3e5357d`. Full deployment manifest in `.scratch/deployment_manifest.json`.
+- Submitted **RAL catalogue job 350452**, exact original invocation:
+  `hpc/sync submit cpu submit_build_inspection_bundle --export=ALL,SAMPLE=dr1_sep1_rest,RUN_TAG=sersic100_20260922,OUTPUT_DIR=output_sed,SED_OUTPUT_DIR=output_sed,CREATE_ARCHIVE=0,DATASET_PREFIX=Tile`
+- Verification pending job completion. No model fits submitted or rerun. No persistent monitor armed.
