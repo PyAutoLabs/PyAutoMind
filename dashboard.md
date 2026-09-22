@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 213 |
+| [Backlog](#backlog) (`draft/`) | 214 |
 
 > **No batch in flight.**
 
@@ -578,10 +578,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**213** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
+**214** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 64</summary>
+<summary><b>bug</b> — 65</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -1091,6 +1091,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/euclid_strong_lens_modeling_pipeline/inspection_missing_assets.md">Inspection bundle tolerates missing optional result assets</a> — euclid_strong_lens_modeling_pipeline · human-required</summary>
+
+```
+/start_dev draft/bug/euclid_strong_lens_modeling_pipeline/inspection_missing_assets.md
 ```
 
 </details>
@@ -2778,7 +2786,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 ## Hygiene
 
-51 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+52 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2801,6 +2809,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
+- `draft/bug/euclid_strong_lens_modeling_pipeline/inspection_missing_assets.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
 - `draft/bug/priors/12_single_source_density_refactor.md`
@@ -2822,8 +2831,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/maintenance/workspaces/pynufft_removal_downstream_residue.md`
 - `draft/maintenance/workspaces/read_through_issues.md`
 - `draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md`
-- `draft/research/autoarray/delaunay_research.md`
-- _… and 11 more_
+- _… and 12 more_
 
 </details>
 
