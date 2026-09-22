@@ -1,5 +1,17 @@
 # Active Tasks
 
+## abell-1201-point-mass
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/133
+- issued: 2026-09-22
+- prompt: active/add_an_abell_1201_central_point_mass.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/abell-1201-point-mass
+- repos:
+  - autolens_assistant: feature/abell-1201-point-mass
+- summary: Human approved plan and branch on 2026-09-22. Inspect supplied F390W/F814W data, obtain mask/contaminant confirmation before composing fit, freeze baseline and point-mass inference, add benchmark and website image. Full-run compute budget and scientific inputs remain checkpoints. Heart RED is not overridden.
+- resume: Issue #133 holds the detailed plan. Original untracked dataset remains in canonical assistant checkout. Mind registration is isolated in .task-ledger/abell-1201 on codex/abell-1201-point-mass to preserve unrelated dirty checkout.
+
 ## euclid-single-rgb-vis-lp
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/98
 - issued: 2026-09-20

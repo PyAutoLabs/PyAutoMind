@@ -1,6 +1,8 @@
 # Abell 1201 guided SMBH demonstration and Gemini Colab follow-on
 
 Type: feature
+Issued: 2026-09-22
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/133
 Target: workspaces
 Repos:
 - autolens_assistant
