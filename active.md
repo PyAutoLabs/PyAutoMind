@@ -5,23 +5,23 @@
 - issued: 2026-09-22
 - prompt: active/add_an_abell_1201_central_point_mass.md
 - session: Codex (session ID unavailable)
-- status: awaiting-merge
+- status: awaiting-input
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/134
 - brain-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/414
 - merge-order: Brain 414 first, assistant 134 second; assistant declares Brain-ref. Full scientific task remains open after these preparation PRs merge.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/abell-1201-point-mass
 - repos:
-  - autolens_assistant: feature/abell-1201-point-mass
-  - PyAutoBrain: feature/abell-1201-point-mass
+- preparation-record: complete/2026/09/abell-1201-preparation.md
+- claims-released: Both preparation branches merged; worktree retained for science continuation and ignored plots/reports (4.2 MB).
 - repair-plan: Human "go" approved classifying the exact Abell README as domain in Brain and assistant template policy, with regression tests, then retrying shipping. Brain attached to existing task root; fresh Mind has no competing Brain claim (stale canonical claim belongs to merged Brain PR 409).
-- summary: Abell preparation/smoke implementation shipped to paired PRs under the live development-only Heart RED override; clone boundary repaired. Public processed-data redistribution authorised. Full posterior budget and science validation remain checkpoints; no merge or release authorised this turn.
+- summary: Preparation phase merged via human prm on 2026-09-22 (Brain 414 then assistant 134), all four CI jobs green. Full posterior budget and science validation remain checkpoints; no release or posterior execution authorised.
 - heart-red-override:
   - authorization: User "continue i suthorize" in direct response to development-only shipping override for issue #133; no release, merge, posterior run or CI bypass.
   - red-reasons: "release validation FAILED (stage integrate)"
   - passed: 129 tests at refreshed head 79854cc; refreshed data preparation, finite coarse likelihood smoke and freeze-check pass.
   - repaired: Clone-boundary now passes with paired Brain classification; 56 clone tests pass. User "go" approved coordinated repair and shipping retry. Separate independent review not required on supervised path; no independent CLEAN verdict claimed.
 - latest-shipping-attempt: Assistant f14293d (PR 134), Brain b1c8d89 (PR 414), both pushed with pending-release labels and dependency comments. Publication permission recorded at 79854cc with Nightingale et al. (2023)/HST credit. Heart remains RED for release purposes.
-- resume: Run prm on paired PRs when authorised, judging all GitHub checks and merging Brain first. Retain issue 133 and the science task after preparation merges: full-run budget, posterior/scientific calibration and absolute photometric units remain unresolved. Approved F390W power-law + shear + point mass with nuisance parameters, cleaned 4 arcsec mask (31417 pixels). No posterior or headless run authorised/executed. Pre-removal originals deferred; RGB retains/discloses cut-out. Artifacts under scripts/scratch/abell_1201; preserve during cleanup. Originals untouched.
+- resume: Preparation PRs are MERGED; do not rerun shipping. Retain issue 133 for full-run budget, posterior/scientific calibration and unresolved absolute photometric units. Approved F390W power-law + shear + point mass with nuisance parameters, cleaned 4 arcsec mask (31417 pixels). No posterior or headless run authorised/executed. Pre-removal originals deferred; RGB retains/discloses cut-out. Worktree retained, artifacts under scripts/scratch/abell_1201; preserve during cleanup. Originals untouched. Re-survey claims and branch before further implementation.
 
 ## oneshot-benchmark-harness
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126
