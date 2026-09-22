@@ -213,3 +213,65 @@ Scope: commit, push, and pending-release PR for issue #100. The user also alread
 - Submitted **RAL catalogue job 350452**, exact original invocation:
   `hpc/sync submit cpu submit_build_inspection_bundle --export=ALL,SAMPLE=dr1_sep1_rest,RUN_TAG=sersic100_20260922,OUTPUT_DIR=output_sed,SED_OUTPUT_DIR=output_sed,CREATE_ARCHIVE=0,DATASET_PREFIX=Tile`
 - Verification pending job completion. No model fits submitted or rerun. No persistent monitor armed.
+
+
+# Euclid inspection bundle — verified run 350452
+
+PR: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/101  
+Commit: `3e5357da48d5d7e9194cc3c3af29f3d239426ec8`  
+RAL job: **350452 COMPLETED, exit 0:0, elapsed 00:07:18**  
+Bundle: `/mnt/ral/jnightin/euclid_dr1/inspect/dr1_sep1_rest_sersic100_20260922`
+
+## Verified products
+
+| Product | Count / rows | Per-lens files |
+|---|---:|---:|
+| Deblended FITS | 194 files | 97 pairs |
+| Multi-wavelength PNG | 97 files | 97 |
+| astrometric_offsets.csv | 601 rows | 93 |
+| lens_sersic.csv | 99 rows | 99 |
+| magnitudes.csv | 698 rows | 99 |
+| source_sersic.csv | 99 rows | 99 |
+
+CSV total: **394 files** (4 masters + 390 per-lens tables). All FITS data/HDUs
+readable and structurally valid, all PNGs verified and fully decoded, all CSVs
+have consistent row shapes, no duplicate lens/band rows, and per-lens row totals
+match their master. FITS-pair and PNG lens sets match exactly (97 lenses).
+The four existing 17-HDU FITS files are byte-identical to their pre-rerun checksums.
+
+Band coverage follows completed selected results, not a claim of eight-band
+completion for every lens: 82 lenses have eight bands (17 HDUs/file); 1 has six,
+1 has four, 3 have three, 4 have two, and 6 have one. No fits were rerun.
+
+## Incomplete products / skips
+
+- `Tile102006997RA0602279119243DECNEG0663160559050`: missing assets; lens=Tile102006997RA0602279119243DECNEG0663160559050 band=vis result=a8ffb46501480d922a5e322a0bdf7cff: galaxy_images.fits, model_galaxy_images.fits
+- `Tile102007287RA0559861410321DECNEG0659978613159`: no matching completed results
+- `Tile102007544RA0046967284897DECNEG0653123592991`: missing assets; lens=Tile102007544RA0046967284897DECNEG0653123592991 band=vis result=fe2ce737c6035fb236d35abea516cc10: galaxy_images.fits, model_galaxy_images.fits
+
+The same three lenses lack FITS/PNG bundle products. The two completed VIS
+results lack generated image/FITS assets and latent summaries; magnitudes drops
+those two VIS rows. Their model-parameter summaries remain in the Sersic tables,
+which does not establish scientific fit success. The third lens has no matching
+completed result.
+
+Stages depending on `initial_lens_model/vis_lp` or `vis_pix` have no inputs in the
+requested `output_sed` tree: inspection-image collection, mass maps and Witt–Wynne
+skip all 100 lenses; lens-mass has zero matching rows. These are explicit skips,
+not successful scientific products. All stages report zero errors.
+
+## Evidence and preservation
+
+- 249 fast tests passed; 10 fitting tests deselected. 26 missing-asset regressions;
+  real ten-stage shell smoke, Ruff/format/diff checks, independent Sol review CLEAN.
+- All 9 PR checks were SUCCESS on the reviewed commit; PR remains open, unmerged.
+- Eleven tooling files deployed with verified preimages/replacements and backups;
+  science astrometry schema preserved. Existing science dirty/untracked state and
+  `.gitignore`, `util.py`, `wiki/project/state.md` unchanged outside those files.
+- No data/config/fitting-script sync, no model-fit submission, no archive generated.
+- Local evidence: `ral-products.json`, `ral-before-products.json`,
+  `skipped-lenses.csv` (308 stage-specific warnings), `ral-run/output.350452.out`,
+  `ral-run/error.350452.err`, and `deployment_manifest.json` beside this report.
+- RAL rollback: `.catalogue-tooling-backups/issue100-3e5357d` inside the project.
+- Heart RED `release validation FAILED (stage integrate)` remains; user authorized
+  issue #100 development override. No release or merge performed.
