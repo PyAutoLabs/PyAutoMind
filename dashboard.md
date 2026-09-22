@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/inspection_missing_assets.md">Inspection bundle tolerates missing optional result assets</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/100">issue #100</a> — issued 2026-09-22 — awaiting-input</summary>
+<details><summary>📋 <a href="active/inspection_missing_assets.md">Inspection bundle tolerates missing optional result assets</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/100">issue #100</a> — issued 2026-09-22 — workspace-dev</summary>
 
 ```
 /start_dev active/inspection_missing_assets.md

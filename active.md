@@ -41,9 +41,9 @@
 - issued: 2026-09-22
 - prompt: active/inspection_missing_assets.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input
+- status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inspection-missing-assets
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/inspection-missing-assets
-- summary: PAUSED at explicit user request (going offline). Local implementation on approved branch; 241 fast tests passed/10 fitting tests deselected. Independent review FINDINGS: collector validates existence only, stale multi-wavelength PNG on incomplete refresh, stale Witt-Wynne CSV/in on skip. No deployment/jobs; Heart RED not overridden.
-- resume: Fix the three independent review findings documented in active/inspection_missing_assets.md and issue #100; update staged .scratch/deploy overlay, rerun affected tests and independent review, then address Heart shipping gate. User plan remains approved; wait for user to resume. Science dirt/data untouched.
+- summary: RESUMED by explicit user request on 2026-09-22; correcting independent review findings. Local implementation on approved branch; 241 fast tests passed/10 fitting tests deselected. Independent review FINDINGS: collector validates existence only, stale multi-wavelength PNG on incomplete refresh, stale Witt-Wynne CSV/in on skip. No deployment/jobs; Heart RED not overridden.
+- resume: Fix the three independent review findings documented in active/inspection_missing_assets.md and issue #100; update staged .scratch/deploy overlay, rerun affected tests and independent review, then address Heart shipping gate. User plan remains approved; resume authorized. Science dirt/data untouched.
