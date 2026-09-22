@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1539 records across 8 buckets.
+1540 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,6 +122,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/09
 
 - [a100-pixelized-baseline](2026/09/a100-pixelized-baseline.md)
+- [abell-1201-preparation](2026/09/abell-1201-preparation.md) — Preparation phase only. Cleaned data with provenance/permission, exact processed 4 arcsec mask, power-law + sh…
 - [adapt-image-snr-cap](2026/09/adapt-image-snr-cap.md)
 - [agent-harness-agnostic-setup](2026/09/agent-harness-agnostic-setup.md) — All four planned phases merged; shared instructions and skill bodies now have provider-specific discovery and …
 - [aggregate-csv-latent-sigma3](2026/09/aggregate-csv-latent-sigma3.md)

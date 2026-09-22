@@ -209,6 +209,15 @@ A new user can find the data and prerequisites, submit the documented prompt and
 
 ## Development decisions — 2026-09-22
 
+### Preparation phase merged — remaining task only
+
+Brain PR #414 and assistant PR #134 merged after all four CI jobs passed,
+under the user's `$prm` instruction. Shipped preparation is recorded in
+`complete/2026/09/abell-1201-preparation.md`; do not offer it as unstarted work.
+Issue #133 stays open solely for the agreed-budget posterior run, scientific
+robustness/convergence validation and full-fit benchmark calibration. No such
+run is authorised yet. Preserve the local presentation and smoke artifacts.
+
 ### Approved shipping repair
 
 Original user request (verbatim): "go" — answering "May I fix the classification

@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/add_an_abell_1201_central_point_mass.md">Abell 1201 guided SMBH demonstration and Gemini Colab follow-on</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/133">issue #133</a> — issued 2026-09-22 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/134">autolens_assistant#134</a></summary>
+<details><summary>📋 <a href="active/add_an_abell_1201_central_point_mass.md">Abell 1201 guided SMBH demonstration and Gemini Colab follow-on</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/133">issue #133</a> — issued 2026-09-22 — awaiting-input — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/134">autolens_assistant#134</a></summary>
 
 ```
 /start_dev active/add_an_abell_1201_central_point_mass.md
