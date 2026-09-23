@@ -12,7 +12,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued — autolens_profiling#295, plan approved 2026-09-23 (Fable start_dev), routed to start_workspace
 Epic: hst-gpu-non-solver-residue
 Phase: 3
 Consequence: judge
@@ -28,6 +28,7 @@ PyAutoArray prompt filed via /intake naming the exact `convolver.py` change.
 Review-minutes: 25
 Unattended: needs-slicing
 Filed: 2026-09-23
+Issued: 2026-09-23
 
 ## Why this phase exists
 
