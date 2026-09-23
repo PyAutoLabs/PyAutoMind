@@ -53,10 +53,12 @@ or the `ConvolverState` it consumes, the same way `library_solver_injection.py` 
 inside the SAME fused whole-call jit the control runs. **No PyAutoArray edit in this phase.**
 
 1. **The FFT frame (`fft_shape`).** `ConvolverState` pads to `scipy.fft.next_fast_len(..., real=True)`
-   and then — per its own docstring — *increments even sizes to odd*. cuFFT prefers powers of two and
-   small-prime even sizes; an odd frame is a live suspect. Rows: the shipped frame (control); the plain
-   `next_fast_len` frame without the odd increment; the next power of two (256); the minimal linear
-   frame. Any frame change alters the compiled program, so compile time is a column, not a footnote.
+   of the linear frame; for HST (180 grid, 21x21 PSF) that is 200 = 2^3 * 5^2, already cuFFT-friendly
+   (the docstring's "even sizes are incremented to odd" note is STALE — the code does not do it; record
+   that as an erratum, do not chase it). Rows: the shipped frame (control), the next power of two (256),
+   and the frame the cell's actual mask produces (record `fft_shape` from the state). Expect no lever;
+   it is one cheap row and it bounds the frame question. Any frame change alters the compiled program,
+   so compile time is a column, not a footnote.
 2. **Cube layout for the batched FFT.** The cube is `(ny, nx, n_src)` with the transforms over
    `axes=(0, 1)` — a strided batched transform with the batch axis LAST. Row: transpose to
    `(n_src, ny, nx)` (batch leading, contiguous planes) before the `rfft2`, and the matching layout on
@@ -99,8 +101,10 @@ fused program does not show is not a lever (fusion moves the scatter; phase 1's 
 
 ## Known traps
 
-- `convolver.py` already picks `next_fast_len`; the odd increment is deliberate somewhere — find the
-  commit/comment that introduced it before removing it in a row, and record why it exists.
+- `xla_attribution.py` `StageRule` line ranges for `convolver.py` are pinned to source lines and drift with
+  PyAutoArray; the real-space path (`convolved_mapping_matrix_via_real_space_from`, ~line 1348+) is NOT
+  covered by the current `psf_convolution_mapping_matrix` rules. Re-pin against the installed revision
+  and add rules for every candidate's code path, or its kernels land in `other` and the 5 % gate fails.
 - The mapping-matrix path deliberately keeps the kernel multiply in complex128 (`convolver.py:1195-1205`).
 - A non-uniform over-sample map triples jit compile time; do not touch over-sampling.
 - `reg_adapt` cannot jit on the Delaunay family; `adapt_split` is the cell's shipped regularization.
