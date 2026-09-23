@@ -12,11 +12,11 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft — blocked on phase A (PyAutoArray certified solver, opt-in) merging AND releasing
+Status: draft — phase A (PyAutoArray certified solver, opt-in) MERGED 2026-09-23 as PyAutoArray#567, unreleased; blocked on the release that ships it
 Epic: certified-positive-solver
 Phase: B
 Consequence: judge
-Blocked-by: PyAutoMind/draft/feature/autoarray/implement_and_optimize_certified_positive_solver.md (phase A)
+Blocked-by: PyAutoMind/complete/2026/09/certified-positive-solver.md (phase A) — PyAutoArray#567 merged 2026-09-23, unreleased — blocked on the release that ships it
 Witness: On the A100 (HST Delaunay N=1500 and rectangular, fp64, production budget) one matched
 table of the exact production composition `jax.jit(jax.vmap(fn))` at B = 4/8/16 for: library PDIP
 (today's default — the never-measured baseline), certified with `pdip` fallback, certified with

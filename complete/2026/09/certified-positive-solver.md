@@ -1,3 +1,46 @@
+## certified-positive-solver
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/566
+- completed: 2026-09-23
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/567 (merged `11b93476b`)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/299 (merged `043518479`)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/567
+- summary: |
+    Phase A shipped the certified active-set positive solver into PyAutoArray:
+    `autoarray/util/jax_active_set.py`; `solver`/`stats` kwargs on
+    `reconstruction_positive_only_from`; Settings/config keys
+    `positive_only_solver` (default pdip), `certified_pass_budget` (16),
+    `certified_fallback`, `certified_tau_rel`;
+    `AbstractInversion.positive_only_solver_used`. Dispatch only JAX +
+    mapper-only; NumPy untouched. Exact implicit gradient via stop_gradient
+    search + autodiffed final solve. autolens_profiling#299 migrated both
+    harness injections to the new kwargs (the #566-dependent test skips on a
+    pre-#566 library; 795/794 pass vs new/old).
+- evidence: 1616 tests (+32); SciPy nnls 2e-16; PDIP 8e-12; fallback
+  bit-exact; gradient FD 3e-9; downstream JAX parity identical (Delaunay
+  2.3e-14, dispatch proven); GPU tests 24 pass; RTX 734.9 → 566.1 ms via the
+  library setting (harness monkeypatch was 618.2). Review CLEAN at 233cfc0d
+  (one minor finding fixed: no-jax import guard test moved to its own file).
+- merge: both PRs merged 2026-09-23 on the human's typed `/prm` on green
+  checks, library first, under the human's Heart-RED development override
+  ("i authorize,"); Heart freeze not frozen; Heart remained RED for release
+  purposes. Merged ≠ released.
+- traps:
+  - `lax.while_loop` is not reverse-differentiable — hence the gradient design.
+  - `lax.cond` fallback runs both branches under vmap (phase B concern).
+  - The profiling CI checks out PyAutoArray MAIN, so a library-dependent
+    harness test must skip pre-release.
+- follow-ups:
+  - Phase B `draft/research/autolens_profiling/certified_solver_production_default.md`
+    (default flip + batched policy; blocked on the release that ships #567).
+  - Optional `custom_jvp` to reuse the loop's final Cholesky factor (one extra
+    factorization per solve today).
+  - Pre-existing `multi_dataset/jax_likelihood/delaunay.py` failure filed as
+    `draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md`.
+  - fixed_light_trace cell's pin label still says "library PDIP" for route b
+    even when the library runs certified (cosmetic, phase B).
+
+## Original prompt
+
 # Implement and optimize certified positive solver with structure-aware CPU and JAX dispatch
 
 Type: feature
