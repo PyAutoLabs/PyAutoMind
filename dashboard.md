@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/implement_and_optimize_certified_positive_solver.md">Implement and optimize certified positive solver with structure-aware CPU and JAX dispatch</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/566">issue #566</a> — issued 2026-09-23 — library-dev</summary>
+<details><summary>📋 <a href="active/implement_and_optimize_certified_positive_solver.md">Implement and optimize certified positive solver with structure-aware CPU and JAX dispatch</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/566">issue #566</a> — issued 2026-09-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/567">PyAutoArray#567</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/299">autolens_profiling#299</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/implement_and_optimize_certified_positive_solver.md
@@ -308,6 +308,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#567](https://github.com/PyAutoLabs/PyAutoArray/pull/567) — `active/implement_and_optimize_certified_positive_solver.md`
 - [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
 - [PyAutoArray#563](https://github.com/PyAutoLabs/PyAutoArray/pull/563) — `complete/2026/09/community-surface-pyautoarray.md`
