@@ -60,13 +60,13 @@
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
-- session: Codex (session ID unavailable)
+- session: claude (Fable CLI, 2026-09-23; resumed from Codex 2026-09-22)
 - status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/vis-lp-inspection-bundle
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
-- resume: Plan approved. Issue #102 filed. Implement and test in the isolated workspace, then ship and refresh the existing catalogue without rerunning fits.
+- resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
 
 ## certified-positive-solver
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/566
