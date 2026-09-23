@@ -1,3 +1,29 @@
+## hst-gpu-residue-p3
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/295
+- completed: 2026-09-23
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/296
+- summary: |
+    HST GPU non-solver residue programme, phase 3: harness-injected candidates for
+    the PSF convolution of the mapping-matrix cube, pinned at 1e-9 against the
+    library answer inside the fused whole-call jit (RTX screening, then A100 array
+    350573, 7/7 tasks). Verdict: no fp64 lever for this stage — control 31.66 ms;
+    layout ties; frame-space and real-space/cuDNN variants are slower. The two fp32
+    diagnostic rows are 7 % / 13 % faster but fail the 1e-9 pin, so any gain there
+    is a human precision-policy decision point, not an optimisation. Note
+    results/notes/hst_gpu_residue_phase3_psf_2026_09.md, sidecar
+    hst_gpu_residue_phase3_job350573.json.
+- merge: merged (8cebf318d) after human merge command on green lint; Heart remained RED for release purposes (development override recorded on issue #295).
+- follow-ups:
+    - three stale census anchors in xla_attribution.py STAGE_MAP for inversion/abstract.py
+    - stale convolver docstring (convolver.py:65-66)
+    - fp32 precision policy question (fp32 rows -7/-13 % fail the 1e-9 pin)
+    - batching reproducibility study gains evidence: the phase-2 draw-7 residual is jit(vmap) vs scalar jit, not the solver
+- traps:
+    - JAX_PLATFORMS=cuda,cpu alone runs on CPU under the workspace shell; also set JAX_PLATFORM_NAME=cuda
+    - the PSF cube frame is (180,180,1500) for the masked dataset
+
+## Original prompt
+
 # HST GPU residue phase 3 — the PSF convolution of the mapping-matrix cube (7.12 ms, 22 %)
 
 Type: research

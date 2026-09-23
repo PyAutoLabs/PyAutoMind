@@ -136,7 +136,7 @@ The table above is superseded:
 1. **Device batch size decoupled from the Nautilus proposal batch** (chunked vmap / `lax.map(batch_size)` / scalar jit
    with `use_jax_jit=True`) — decided by phase 2's numbers. PyAutoFit `fitness.py` + Nautilus `search.py`; needs a
    cond-free fallback design for the batched path.
-2. **Phase 3 — completed, no fp64 lever.** Seven harness-injected convolutions of the padded `(180, 180, 1500)` cube were
+2. **Phase 3 — COMPLETE, no fp64 lever (merged autolens_profiling#296, record `complete/2026/09/hst-gpu-residue-p3.md`).** Seven harness-injected convolutions of the padded `(180, 180, 1500)` cube were
    run inside the fused whole-call jit on the A100 (array 350573, #295), pinned at `1e-9` against the unmodified library
    (fiducial plus 8 draws, gate pre-registered at e2b46f3). The shipped FFT path is the fastest fp64 implementation:
    `layout_src_first` ties (+0.13 ms), `frame_pow2` is +4.52 ms at 2x peak memory, and real-space convolution is
