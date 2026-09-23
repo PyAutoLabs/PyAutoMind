@@ -74,13 +74,17 @@
 - issued: 2026-09-23
 - prompt: active/implement_and_optimize_certified_positive_solver.md
 - session: claude (Fable CLI, 2026-09-23)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/certified-positive-solver
 - repos:
   - PyAutoArray: feature/certified-positive-solver
   - autolens_profiling: feature/certified-positive-solver
 - parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p1 (#297, point_source/cluster cells + provenance tooling); this task edits only scripts/misc/likelihood_breakdown/library_solver_injection.py + its test — disjoint file sets, recorded 2026-09-23 as the residue-p1/#267 precedent"
-- library-pr: (pending — Heart RED development override awaited)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/567
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/299
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/567
+- resume: "Both PRs open under human RED override; merge order: PyAutoArray PR first (library-first gate) then autolens_profiling; /prm when lint/tests green; phase B draft = draft/research/autolens_profiling/certified_solver_production_default.md"
+- heart-red-override: "2026-09-23 live user 'i authorize,' to the issue-#566 (+ linked autolens_profiling) development override; RED: release validation FAILED (stage integrate) | YELLOW: workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more) | YELLOW: manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; gates: PyAutoArray 1616 tests PASS at 233cfc0d (+32 new), downstream JAX parity identical, GPU 24 PASS, profiling 795 PASS vs new lib (794 + 1 skip vs old), independent review CLEAN at 233cfc0d / 0473c6a; scope: commit/push/PR only, no merge/release"
 - summary: |
     Phase A of the certified-positive-solver epic: port the harness certified
     active-set positive solver into PyAutoArray (autoarray/util/jax_active_set.py,
