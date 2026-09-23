@@ -400,7 +400,7 @@ jobs:
           survivors = []
           for paper in papers:
               arxiv_id = (paper.get("url") or "").rstrip("/").rsplit("/", 1)[-1]
-              arxiv_id = re.sub(r"v\\d+$", "", arxiv_id)
+              arxiv_id = re.sub(r"v\d+$", "", arxiv_id)
               survivors.append(
                   {
                       "title": paper.get("title") or "",
@@ -424,14 +424,12 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_PAPERS_WEBHOOK_URL }}
         run: |
-          # Every path now writes slack_payload.json: the count=0 step writes the
-          # "no new papers" heartbeat, and the Claude step writes either a digest
-          # or that same notice. A MISSING file here is therefore no longer an
-          # empty day — it means the Claude step failed silently (e.g. an expired
-          # CLAUDE_CODE_OAUTH_TOKEN, the failure mode show_full_output guards
-          # against). Fail loudly rather than masquerade as "nothing found".
+          # Every path now writes slack_payload.json: count=0 writes the
+          # heartbeat; non-empty days get either the curated Claude digest or
+          # the deterministic fallback. Missing here therefore means BOTH the
+          # preferred curator and the local fallback failed.
           if [ ! -s slack_payload.json ]; then
-            echo "::error::slack_payload.json missing — the Claude summarise step failed to write it (check for an expired CLAUDE_CODE_OAUTH_TOKEN). Empty days write the no-papers notice, so this is a real failure, not a quiet day."
+            echo "::error::slack_payload.json missing after both Claude curation and the deterministic fallback. Empty days write the no-papers notice, so this is a real failure, not a quiet day."
             exit 1
           fi
           if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
@@ -477,7 +475,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ ! -s arxiv_survivors.json ]; then
-            echo "::warning::arxiv_survivors.json missing — the Claude step did not write it, so nothing was filed into the Memory inbox. The Slack digest above is unaffected."
+            echo "::warning::arxiv_survivors.json missing after curation/fallback, so nothing was filed into the Memory inbox. The Slack digest above is unaffected."
             exit 0
           fi
           if [ -z "${PAT:-}" ]; then
