@@ -7,11 +7,40 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: issued — PyAutoArray#566 (phase A, 2026-09-23, Fable start_dev, routed to start_library); phase B filed as draft/research/autolens_profiling/certified_solver_production_default.md
+Epic: certified-positive-solver
+Phase: A
 Consequence: judge
 Witness: Representative mapper-only and MGE-inclusive fits preserve constrained reconstruction/evidence within declared tolerances, including forced fallback and JAX jit/vmap; benchmark records justify every automatically selected solver against its backend's current baseline.
 Review-minutes: 20
 Unattended: needs-slicing
+Filed: 2026-09-15
+Issued: 2026-09-23
+
+## Scoped 2026-09-23 (Fable start_dev) — phase A is THIS issue, phase B is filed separately
+
+Phase A (PyAutoArray only, opt-in): a JAX certified active-set positive solver in a new
+`autoarray/util/jax_active_set.py` (budgeted `lax.while_loop` that stops at certification; primal +
+dual KKT certification; permanent fixed set; `lax.cond` PDIP fallback on an exhausted budget); the
+active set is searched under `stop_gradient` and the final masked Cholesky solve is autodiffed, so
+the gradient is the exact implicit active-set derivative (tested against finite differences and
+PDIP's `custom_vjp`). Wired behind `Settings` / `general.yaml` keys `positive_only_solver`
+(`pdip` default | `certified`), `certified_pass_budget` (16), `certified_fallback` (`pdip` | `none`),
+`certified_tau_rel` (1e-9); selected only on the JAX backend for mapper-only inversions
+(`has(Mapper) and not has(AbstractLinearObjFuncList)`) — MGE-inclusive systems never certified
+(fixed_light_probe: 40 passes, cond 4e10) and keep PDIP; the NumPy path is untouched (the NumPy
+certified scheme measured 3-7 % slower than fnnls, factor-reuse lost to the memo).
+
+Phase B (autolens_profiling, maybe PyAutoFit): measure the production composition
+`jax.jit(jax.vmap(fn))` with PDIP (the never-measured baseline) against the shipped certified solver
+with fallback `pdip` and `none`, decide the production default and the batched policy (the
+`lax.cond` fallback runs both branches under vmap: 44.6 vs 31.1 ms/lane at B=16 in residue phase 2).
+Only phase B may flip the default.
+
+Evidence added since filing: residue phases 1-3 (autolens_profiling#268/#273/#295) — the certified
+solve at budget 7 is 10.2 ms of a 31.6 ms A100 call; whole-call 31.7 vs 50.8 ms PDIP; the harness
+kernel is `active_set_steps.active_set_masked_jax` (static `lax.scan`, no gradient rule) and
+`library_solver_injection.certified_reconstruction_from` (Jacobi scaling + `lax.cond` fallback).
 
 ## Original request
 

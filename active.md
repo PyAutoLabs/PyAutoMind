@@ -67,3 +67,21 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Plan approved. Issue #102 filed. Implement and test in the isolated workspace, then ship and refresh the existing catalogue without rerunning fits.
+
+## certified-positive-solver
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/566
+- issued: 2026-09-23
+- prompt: active/implement_and_optimize_certified_positive_solver.md
+- session: claude (Fable CLI, 2026-09-23)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/certified-positive-solver
+- repos:
+  - PyAutoArray: feature/certified-positive-solver
+- summary: |
+    Phase A of the certified-positive-solver epic: port the harness certified
+    active-set positive solver into PyAutoArray (autoarray/util/jax_active_set.py,
+    budgeted while_loop, KKT certification, PDIP fallback, stop_gradient search +
+    autodiffed final solve), wired behind Settings/general.yaml as OPT-IN
+    (positive_only_solver: pdip default) and dispatched only for JAX mapper-only
+    inversions; NumPy path untouched. Phase B (production jit(vmap) benchmark and
+    default flip) is draft/research/autolens_profiling/certified_solver_production_default.md.
