@@ -1,9 +1,10 @@
 name: pyauto-arxiv-papers
 
-# A daily digest of new strong-lensing papers from arXiv, summarised by Claude
-# and posted to Slack #papers. Sibling of morning_status.yml (the commit
-# digest) — same three-step shape: fetch data → Claude summarises into
-# slack_payload.json → POST to a Slack incoming webhook. The only new secret is
+# A daily digest of new strong-lensing papers from arXiv, curated by Claude
+# when subscription OAuth is available and posted to Slack #papers. If Claude
+# is unavailable, a deterministic candidate digest keeps the channel heartbeat
+# and Memory filing alive rather than dropping the whole morning run. The only
+# new secret is
 # the #papers webhook; the Claude step reuses CLAUDE_CODE_OAUTH_TOKEN (the
 # Claude subscription OAuth token already set for the commit digest — no
 # Anthropic API key, no metered billing).
@@ -141,6 +142,10 @@ jobs:
           PY
 
       - name: Summarise papers with Claude
+        # The digest must not disappear just because the optional AI curator is
+        # unavailable. A later step builds a deterministic fallback if this one
+        # fails or does not write both expected files.
+        continue-on-error: true
         # Skip Claude on empty days to spend zero subscription usage — the
         # heartbeat above already wrote the notice. This runs only when there is
         # something to summarise.
@@ -279,6 +284,137 @@ jobs:
             any file other than `slack_payload.json` and
             `arxiv_survivors.json`.
 
+      - name: Build deterministic fallback when Claude is unavailable
+        # Non-empty days normally arrive here with both files written by Claude.
+        # Subscription OAuth can be disabled at the Anthropic organisation
+        # level (oauth_not_allowed_for_organization), and other Claude failures
+        # should not turn that into silence in #papers. In that case post the
+        # fetched candidates directly, clearly labelled as uncurated, and file
+        # the same candidates into Memory. This path uses no API key and cannot
+        # incur Anthropic API billing.
+        if: ${{ steps.fetch.outputs.count != '0' }}
+        run: |
+          set -euo pipefail
+          if [ -s slack_payload.json ] && [ -s arxiv_survivors.json ]; then
+            echo "Claude produced both digest files — fallback not needed."
+            exit 0
+          fi
+
+          echo "::warning::Claude curation unavailable — building deterministic #papers fallback."
+          python3 - <<'PY'
+          import html
+          import json
+          import re
+
+          with open("arxiv_papers.json") as f:
+              data = json.load(f)
+
+          papers = data["papers"]
+          uk_date = data["uk_date"]
+
+          def esc(value):
+              return html.escape(str(value), quote=False)
+
+          blocks = [
+              {
+                  "type": "header",
+                  "text": {
+                      "type": "plain_text",
+                      "text": f"New strong-lensing candidates — {uk_date}",
+                  },
+              },
+              {
+                  "type": "section",
+                  "text": {
+                      "type": "mrkdwn",
+                      "text": (
+                          f"*{len(papers)}* arXiv candidate(s) matched the strong-lensing "
+                          "query. _AI curation is temporarily unavailable, so this is the "
+                          "uncurated fallback list._"
+                      ),
+                  },
+              },
+          ]
+
+          for paper in papers[:12]:
+              authors = paper.get("authors") or []
+              byline = ", ".join(authors[:5])
+              if len(authors) > 5:
+                  byline += " et al."
+              if not byline:
+                  byline = "Authors unavailable"
+
+              abstract = " ".join((paper.get("abstract") or "").split())
+              if len(abstract) > 600:
+                  excerpt = abstract[:597].rsplit(" ", 1)[0] + "…"
+              else:
+                  excerpt = abstract
+
+              title = esc(paper.get("title") or "Untitled")
+              url = paper.get("url") or "https://arxiv.org/"
+              blocks.append(
+                  {
+                      "type": "section",
+                      "text": {
+                          "type": "mrkdwn",
+                          "text": (
+                              f"*{title}*  <{url}|arXiv>\n"
+                              f"_{esc(byline)}_\n"
+                              f"{esc(excerpt)}"
+                          ),
+                      },
+                  }
+              )
+
+          if len(papers) > 12:
+              blocks.append(
+                  {
+                      "type": "section",
+                      "text": {
+                          "type": "mrkdwn",
+                          "text": f"_Plus {len(papers) - 12} additional matched candidate(s)._",
+                      },
+                  }
+              )
+
+          blocks.append(
+              {
+                  "type": "section",
+                  "text": {
+                      "type": "mrkdwn",
+                      "text": (
+                          "*📥 In your <https://pyautolabs.github.io/PyAutoMemory/|Memory inbox>*\n"
+                          "— add to the reading queue, file, or dismiss. Lapses in 7 days."
+                      ),
+                  },
+              }
+          )
+
+          payload = {
+              "text": f"New strong-lensing candidates — {uk_date} (uncurated fallback)",
+              "blocks": blocks,
+          }
+          with open("slack_payload.json", "w") as f:
+              json.dump(payload, f, indent=2)
+
+          survivors = []
+          for paper in papers:
+              arxiv_id = (paper.get("url") or "").rstrip("/").rsplit("/", 1)[-1]
+              arxiv_id = re.sub(r"v\d+$", "", arxiv_id)
+              survivors.append(
+                  {
+                      "title": paper.get("title") or "",
+                      "id": arxiv_id,
+                  }
+              )
+          with open("arxiv_survivors.json", "w") as f:
+              json.dump({"papers": survivors}, f, indent=2)
+
+          print(
+              f"Wrote deterministic fallback for {len(papers)} candidate(s) on {uk_date}."
+          )
+          PY
+
       - name: POST to Slack
         # Manual recovery can deliberately skip the shared-channel post while
         # still filing survivors into PyAutoMemory. This makes a wide lookback
@@ -288,14 +424,12 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_PAPERS_WEBHOOK_URL }}
         run: |
-          # Every path now writes slack_payload.json: the count=0 step writes the
-          # "no new papers" heartbeat, and the Claude step writes either a digest
-          # or that same notice. A MISSING file here is therefore no longer an
-          # empty day — it means the Claude step failed silently (e.g. an expired
-          # CLAUDE_CODE_OAUTH_TOKEN, the failure mode show_full_output guards
-          # against). Fail loudly rather than masquerade as "nothing found".
+          # Every path now writes slack_payload.json: count=0 writes the
+          # heartbeat; non-empty days get either the curated Claude digest or
+          # the deterministic fallback. Missing here therefore means BOTH the
+          # preferred curator and the local fallback failed.
           if [ ! -s slack_payload.json ]; then
-            echo "::error::slack_payload.json missing — the Claude summarise step failed to write it (check for an expired CLAUDE_CODE_OAUTH_TOKEN). Empty days write the no-papers notice, so this is a real failure, not a quiet day."
+            echo "::error::slack_payload.json missing after both Claude curation and the deterministic fallback. Empty days write the no-papers notice, so this is a real failure, not a quiet day."
             exit 1
           fi
           if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
@@ -341,7 +475,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ ! -s arxiv_survivors.json ]; then
-            echo "::warning::arxiv_survivors.json missing — the Claude step did not write it, so nothing was filed into the Memory inbox. The Slack digest above is unaffected."
+            echo "::warning::arxiv_survivors.json missing after curation/fallback, so nothing was filed into the Memory inbox. The Slack digest above is unaffected."
             exit 0
           fi
           if [ -z "${PAT:-}" ]; then
