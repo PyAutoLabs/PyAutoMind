@@ -1,17 +1,5 @@
 # Active Tasks
 
-## point-source-cpu-p1
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/297
-- issued: 2026-09-23
-- prompt: active/pointsolver_image_plane_chi_squared_cpu_speed.md
-- session: Claude Code CLI (Fable 5.1), 2026-09-23
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-cpu-p1
-- repos:
-  - autolens_profiling: feature/point-source-cpu-p1
-- branch-state: 2026-09-23 all phase-1 work pushed to feature/point-source-cpu-p1 (head 6c3a083); gates green; RAL job 350580 COMPLETED. PR-open awaits the human Heart-RED override (verdict red at 15:35 UTC+2); merge is a separate /prm act.
-- summary: Phase 1 of the point-source CPU campaign: reproduce the CPU breakdown evidence (simple solved likelihood + 13-component two-source cluster cell) on a quiet RAL CPU host, recover the 2026-09-17 reported note/JSONs, freeze the unoptimized library revisions (PyAutoArray 22e6d608, PyAutoLens 2aaa1c1a8). No library edits; phase 2 is the throwaway jnp.unique lever.
-
 ## abell-1201-point-mass
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/133
 - issued: 2026-09-22

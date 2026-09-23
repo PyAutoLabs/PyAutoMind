@@ -1,3 +1,34 @@
+# Point-source CPU speed-up campaign — phase 1: RAL fp64 baseline
+
+Reproduced and published the point-source CPU breakdown evidence on a quiet RAL CPU host, recovered the 2026-09-17 reported research note, and froze the unoptimized library revisions the GPU campaign must reproduce first. Phase 1 of the phased CPU campaign; the campaign prompt's phases 2–4 remain open and are re-filed as a fresh draft pointing at this record.
+
+## Shipped
+
+- Merged [autolens_profiling#298](https://github.com/PyAutoLabs/autolens_profiling/pull/298) into `main` at `9f5a3ba49209e96d200fc299b6f5eb1879b7da22` (branch head `6c3a083`, six commits).
+- New RAL CPU submit `hpc/batch_cpu/submit_breakdown_point_source_image_plane_ral_cpu_fp64` (partition `ral`, 8 CPUs, `gpu` CPUs-only fallback documented, fresh per-job JAX compile cache, full provenance block).
+- Cluster image-plane breakdown cell: fused full-likelihood rows (plain `FitPositionsImagePairRepeat` and solved `...RepeatSolved`, JIT phases, eager parity check), `cell="image_plane"` output naming under `--config-name`, `config_name` / `thread_environment` / `source_revisions` / `n_repeats` in the JSON; model, grid and steps unchanged. One-line `cell="source_plane"` fix in the sibling cell.
+- Shared `scripts/misc/likelihood_breakdown/provenance.py`: library SHAs resolved from the imported module path (the old `<root>/../PyAuto*` lookup would have crashed leg A on RAL). Point-source harness switched to it (provenance-only change).
+- `build_readme.py` registers the `hpc_ral_cpu_fp64` label; README dashboards regenerated with the RAL rows and a laptop cluster row.
+- Results: `results/breakdown/point_source/image_plane_hpc_ral_cpu_fp64.{json,png}`, `results/breakdown/cluster/image_plane_{local,hpc_ral}_cpu_fp64.{json,png}`, SLURM log `results/notes/point_source_cpu_2026_09_23_ral_job_350580.out`.
+- Campaign ledger `results/notes/point_source_cpu_campaign.md` (phase 1 filled, phases 2–4 stubbed); recovered `results/notes/point_source_cpu_2026_09_17_reported/` (note + bench JSONs, labelled reported, monkeypatched laptop evidence).
+
+## Evidence
+
+- RAL job 350580, `ral` partition, euclid-ral-compute-10-2 (Intel Xeon Platinum 8490H), entry loadavg 0.00, COMPLETED 0:0 in 7:06; library revisions PyAutoArray `22e6d6082e3365b10fb08d96e19ab02a5420e935`, PyAutoLens `2aaa1c1a8bb4a5923edf30a18451fcea330a6bd4` (identical on laptop and RAL) — the frozen unoptimized baseline.
+- Fused likelihood steady ms/call, laptop → RAL: point-source solved 62.69 → 24.69; point-source plain control 74.35 → 24.72; cluster plain 218.93 → 128.05; cluster solved 215.98 → 134.52. Log-likelihoods bit-identical across hosts and eager/JIT; all solved positions finite.
+- Only the RAL rows are quotable baselines (laptop rows load-inflated). Standalone per-source cluster solves (110 + 115 ms) exceed the fused 128 ms: a fusion-boundary effect, not additive components. On RAL the step-0 ray-trace prefix is 22.5 of the 24.7 ms call, consistent with the September claim that the throwaway `jnp.unique` sort dominates; the reported 4.9× / 2.4× gains remain hypotheses for phase 2.
+- Branch gates: ruff check/format, `build_readme.py --check`, `check_submits.py --check`, pytest 790 passed / 5 skipped, smoke early-exit on three cells; PR lint run 35871945857 success; 22/22 JSON validation checks.
+- Heart RED development override: live user "/prm and I authorize anything." (2026-09-23) after the exact RED reasons were surfaced for #297 — `release validation FAILED (stage integrate)`; YELLOW `workspace validation not passing (4 failed, cloud#35579888156: …)`, `manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml`. Development shipping and same-turn merge only; no release, no CI bypass; Heart remains RED for release purposes.
+
+## Handoff
+
+- Phase 2 (remove the JAX-only throwaway `jnp.unique` at `_vertices_and_indices` / `_plane_triangles`, PyAutoArray + PyAutoLens, red control bit-identical likelihood + cluster positions + gradient/vmap parity, interleaved A/B on RAL `ral` with medians and dispersion) is the next bounded task; re-filed as a draft pointing here.
+- GPU campaign must take its A100 baseline on the frozen revisions above before phase 2 merges, or from those SHAs afterwards.
+- Follow-ups found, not fixed: `check_submits.py` regex skips `python3 -u` submits (87 files) so its WALL-BASIS coverage rule never fires for them; canonical `activate.sh` PYTHONPATH pointed at the `certified-positive-solver` library worktree; point-source/cluster cells absent from the CI smoke step; `cache_fresh` counts GPU autotune entries only; XLA thread-pool vs 8-CPU affinity unverified (phase 2 protocol now records it).
+- pending-release: autolens_profiling@https://github.com/PyAutoLabs/autolens_profiling/pull/298
+
+## Original prompt
+
 # Point-source CPU speed-up campaign: shared breakdown, redundant-sort removal and measured iteration
 
 Type: research
