@@ -62,12 +62,13 @@
 - issued: 2026-09-23
 - prompt: active/hst_gpu_residue_p3_psf_cube.md
 - session: claude (Fable CLI, 2026-09-23)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/hst-gpu-residue-p3
 - repos:
   - autolens_profiling: feature/hst-gpu-residue-p3
-- workspace-pr: (none yet — branch pushed, PR after harvest)
-- resume: "A100 array 350573 harvested 2026-09-23; verdict note + sidecar + campaign status + README + map on feature/hst-gpu-residue-p3; next /ship_workspace"
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/296
+- resume: "PR open under human RED override; merge is a separate human /prm command once lint is green; then lifecycle record + worktree cleanup"
+- heart-red-override: "2026-09-23 live user 'ok contonue,' to the issue-#295 development override ask; RED: release validation FAILED (stage integrate) | workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more) | manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; gates: pytest 790 passed/5 skipped, ruff+format+build_readme+check_submits clean, import smoke PASS, independent review CLEAN at f3a5faa, RTX 7/7, A100 350573 7/7 gated pins PASS; scope: commit/push/PR only, no merge/release"
 - summary: |
     HST GPU residue phase 3: harness-injected candidates for the PSF convolution
     of the mapping-matrix cube (7.12 ms, 22 % of the 31.6 ms A100 call) — frame,
