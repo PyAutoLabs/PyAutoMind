@@ -136,10 +136,21 @@ The table above is superseded:
 1. **Device batch size decoupled from the Nautilus proposal batch** (chunked vmap / `lax.map(batch_size)` / scalar jit
    with `use_jax_jit=True`) — decided by phase 2's numbers. PyAutoFit `fitness.py` + Nautilus `search.py`; needs a
    cond-free fallback design for the batched path.
-2. **PSF convolution of the mapping-matrix cube (7.12 ms)** — harness experiment first (fft_shape, real-space for a
-   compact PSF, complex64 on the mapping path); PyAutoArray only if it wins.
+2. **Phase 3 — completed, no fp64 lever.** Seven harness-injected convolutions of the padded `(180, 180, 1500)` cube were
+   run inside the fused whole-call jit on the A100 (array 350573, #295), pinned at `1e-9` against the unmodified library
+   (fiducial plus 8 draws, gate pre-registered at e2b46f3). The shipped FFT path is the fastest fp64 implementation:
+   `layout_src_first` ties (+0.13 ms), `frame_pow2` is +4.52 ms at 2x peak memory, and real-space convolution is
+   1.45x / 3.82x slower. No PyAutoArray prompt. Record:
+   `autolens_profiling/results/notes/hst_gpu_residue_phase3_psf_2026_09.md` (+ sidecar `..._phase3_job350573.json`).
+   **Human decision point, not a lever:** the fp32-cube and full-complex64 rows are faster (−2.14 / −3.98 ms, 7-13 %)
+   but miss the pin by ~1e-3 nats. Accepting that would be a separate prompt that must re-measure on a full inference
+   (`convolver.py:1198-1210` records O(1) figure-of-merit drift for fp32 end to end on `delaunay_mge`).
 3. **The log-det Cholesky reuse (0.89 ms)** — only an initial unrestricted factor is reusable, with scaling/index care.
    Small; last.
+- **Revision after phase 3 (2026-09-23):** the PSF convolution is closed with no fp64 lever (item 2). Seed-0 draw 7
+  agrees scalar-vs-scalar at 1.05e-10, so phase 2's 2.6e-9 residual sits between `jit(vmap)` and scalar `jit`, not in
+  the certified solver; that is evidence for the parked reproducibility study. Next listed lever: item 3, the second
+  Cholesky (0.89 ms, phase 4).
 - Not levers: mesh/mapper/weights, border relocator, mixed fusions, the F GEMM alone (fp64 dense floor; a symmetric
   rank-k custom call is the only idea). Overlap of qhull with the ray trace is blocked (border relocation consumes the
   traced grid first). Device triangulation: defer. Settled: matrix-free log-det (#247).

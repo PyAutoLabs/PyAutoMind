@@ -67,7 +67,7 @@
 - repos:
   - autolens_profiling: feature/hst-gpu-residue-p3
 - workspace-pr: (none yet — branch pushed, PR after harvest)
-- resume: "A100 array 350573 submitted 2026-09-23 09:50 UTC from feature/hst-gpu-residue-p3 @ e2b46f3; 7 tasks (control, frame_pow2, layout_src_first, real_space_direct, conv_cudnn_batched, mp_cube_c64, c64_full). Next: hpc/sync pull, verify 7 JSON/PNG + CELL_EXIT footers, then Step 8 of #295 (note + sidecar + campaign status + map + README bullet), then /ship_workspace."
+- resume: "A100 array 350573 harvested 2026-09-23; verdict note + sidecar + campaign status + README + map on feature/hst-gpu-residue-p3; next /ship_workspace"
 - summary: |
     HST GPU residue phase 3: harness-injected candidates for the PSF convolution
     of the mapping-matrix cube (7.12 ms, 22 % of the 31.6 ms A100 call) — frame,
