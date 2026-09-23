@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/hst_gpu_residue_p3_psf_cube.md">HST GPU residue phase 3 — the PSF convolution of the mapping-matrix…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/295">issue #295</a> — issued 2026-09-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/hst_gpu_residue_p3_psf_cube.md">HST GPU residue phase 3 — the PSF convolution of the mapping-matrix…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/295">issue #295</a> — issued 2026-09-23 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/296">autolens_profiling#296</a></summary>
 
 ```
 /start_dev active/hst_gpu_residue_p3_psf_cube.md
