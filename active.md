@@ -1,5 +1,18 @@
 # Active Tasks
 
+## point-source-cpu-p2
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/568
+- issued: 2026-09-23
+- prompt: active/pointsolver_cpu_speed_phases_2_4.md
+- session: Claude Code CLI (Fable 5.1), 2026-09-23
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-cpu-p2
+- repos:
+  - PyAutoArray: feature/point-source-cpu-p2
+  - autolens_profiling: feature/point-source-cpu-p2
+- parallel-claim: "PyAutoArray and autolens_profiling are also claimed by certified-positive-solver (PyAutoArray#566; PRs #567/#299 MERGED, awaiting its close-out). Disjoint file sets: that task edits autoarray/util/jax_active_set.py, settings/inversion dispatch and scripts/misc/likelihood_breakdown/library_solver_injection.py; this task edits autoarray/structures/triangles/coordinate_array.py + new JAX triangle tests, and scripts/point_source/likelihood_breakdown/vertex_dedup_ab.py + a submit + results/notes. Recorded 2026-09-23 per the residue-p1/#267 precedent."
+- summary: Phase 2 of the point-source CPU campaign: remove the throwaway jnp.unique vertex dedup on the JAX PointSolver path (PyAutoArray only, API unchanged, NumPy sibling untouched), add JAX triangle unit tests, measure with an interleaved in-process A/B cell on RAL `ral`, record in results/notes/point_source_cpu_campaign.md. Library-first: PyAutoArray PR then autolens_profiling PR.
+
 ## abell-1201-point-mass
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/133
 - issued: 2026-09-22
