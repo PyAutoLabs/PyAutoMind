@@ -21,6 +21,8 @@ Unattended: ready
 Epic: cluster-strong-lensing
 Filed: 2026-09-17
 Updated: 2026-09-19
+Issued: 2026-09-23
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/297
 
 ## Campaign contract (2026-09-19)
 
