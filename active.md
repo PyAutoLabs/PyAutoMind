@@ -77,6 +77,9 @@
 - worktree: ~/Code/PyAutoLabs-wt/certified-positive-solver
 - repos:
   - PyAutoArray: feature/certified-positive-solver
+  - autolens_profiling: feature/certified-positive-solver
+- parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p1 (#297, point_source/cluster cells + provenance tooling); this task edits only scripts/misc/likelihood_breakdown/library_solver_injection.py + its test — disjoint file sets, recorded 2026-09-23 as the residue-p1/#267 precedent"
+- library-pr: (pending — Heart RED development override awaited)
 - summary: |
     Phase A of the certified-positive-solver epic: port the harness certified
     active-set positive solver into PyAutoArray (autoarray/util/jax_active_set.py,
