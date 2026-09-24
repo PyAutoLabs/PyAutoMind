@@ -12,6 +12,7 @@ Autonomy: supervised
 Priority: high
 Memory: wiki/lensing/sources/dark-matter-substructure.md; reading-queue.md; wiki/lensing/sources/lens-modeling-methods.md
 Status: formalised
+Issued: 2026-09-24
 Scheduled: 2026-09-24
 Consequence: glance
 Witness: the gate run on the 5 output_locked exemplar tiles resolves 4 to T = 0.3" and sends Tile102014702RA0131539972904DECNEG0557431062995 to review; on the census sample (inspect/positions_census) its pass/fail reproduces the RAL lock verdicts for >= 97% of locked and 100% of clean unlocked tiles and drops no image from a clean unlocked tile; unit tests cover the 0.15" cut, the one-drop rule, the T clamp and the SNR >= 2 walk-down floor.

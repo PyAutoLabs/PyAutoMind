@@ -92,6 +92,17 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
+## euclid-dr1-positions-gate
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/103
+- issued: 2026-09-24
+- prompt: active/euclid_dr1_positions_gate.md
+- session: claude (Fable CLI, 2026-09-24)
+- status: workspace-dev
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-gate
+- summary: Pre-submit positions gate: 0.15" central cut, quick SIE+shear fit with one-image leave-one-out drop, per-tile threshold T=min(max(2 s_min,0.3),0.5) in a positions_meta.json sidecar read by load_vis_dataset. Phase 1/3; runs in its own worktree alongside #102 (disjoint files).
+- resume: Issue filed with the full plan; next start_workspace creates .worktrees/euclid-dr1-positions-gate and implementation is delegated to Opus.
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
