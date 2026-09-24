@@ -11,6 +11,8 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-09-24
+Issued: 2026-09-24
+Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/105
 Related: euclid-dr1-positions-gate (#103, PR #104) — phase 1; this phase refactors the gate's numpy tracer and quick fit into a shared module, so it stacks on `feature/euclid-dr1-positions-gate` until #104 merges
 Witness: on the 10-lens calibration sample (euclid_dr1 `inspect/positions_sample/`, human-approved 2026-09-24) the new finder returns the 5 good tiles' positions unchanged or as a traceable superset (quick-fit s_min <= 0.1"), and on the 5 locked tiles removes the nucleus position (Tile102008208, Tile102014701), the neighbour (Tile102014701, Tile102022005), adds a model-predicted counter-image or sends the tile to review (Tile102012741), and breaks Tile102023528 (probably not a lens) to no positions or a review flag; unit tests cover each reconcile rule; then the census witness: over the 14,032-tile census the fraction failing the gate's quick-fit trace drops from 16.6% (2,325 tiles) and no SNR < 2 counter-image is emitted without a model prediction behind it.
 

@@ -73,7 +73,20 @@
 - pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/104
 - status: awaiting-merge
 - heart-red-override: 2026-09-24 live user "I authorise you to continue" for the named #103 development override (push + PR-open only; merge excluded). "Heart RED reasons at the time: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more); manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml. Branch gates: pytest 296 PASS (37 gate tests), exemplar witness verdicts reproduced, in-session review of util.py wiring."
-- resume: PR #104 open (4 commits 1fb1a42..485eb9a on feature/euclid-dr1-positions-gate). Next: human /prm when CI is green (merge stays human); then runs with the gate to confirm it is OK BEFORE phase 2 (human sequencing 2026-09-24). Phase 2 (draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md) and phase 3 (draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md) blocked on this.
+- resume: PR #104 open (4 commits 1fb1a42..485eb9a on feature/euclid-dr1-positions-gate). Next: human /prm when CI is green (merge stays human); then runs with the gate to confirm it is OK BEFORE phase 2 (human sequencing 2026-09-24). Phase 2 started 2026-09-24 as #105 (euclid-dr1-positions-finder, stacked on this branch by human go); phase 3 (draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md) still waits on the merge.
+
+## euclid-dr1-positions-finder
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/105
+- issued: 2026-09-24
+- prompt: active/euclid_dr1_positions_finder.md
+- session: claude (Fable CLI, 2026-09-24)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/euclid-dr1-positions-finder
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-finder
+- summary: Phase 2/3 of the positions work: model-guided finder (compute peaks, fixed-centre SIE+shear quick fit, numpy forward solve, reconcile, iterate) in a shared pure-numpy module used by segmentation.py, util.py and the gate. Witness: human-approved 10-lens sample in euclid_dr1 inspect/positions_sample, then the census.
+- parallel-claim: "2026-09-24 human go: own worktree alongside #103 (branch stacked on feature/euclid-dr1-positions-gate, PR #104 open unmerged, deliberate dependency; retarget to main after merge) and #102 (disjoint files: catalogue/, inspection bundle). Brain sized too-large/4-phase; human approved one task, one PR."
+- resume: issue #105 filed, worktree not yet created; next start_workspace then implementation via Opus.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
