@@ -114,7 +114,7 @@
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-gate
 - summary: Pre-submit positions gate: 0.15" central cut, quick SIE+shear fit with one-image leave-one-out drop, per-tile threshold T=min(max(2 s_min,0.3),0.5) in a positions_meta.json sidecar read by load_vis_dataset. Phase 1/3; runs in its own worktree alongside #102 (disjoint files).
-- resume: Worktree created; implementation (scripts/tools/positions_gate.py, util.py sidecar read, tests, submitter) delegated to Opus in-session; then /ship_workspace.
+- resume: Implemented + committed locally as 1fb1a42..485eb9a (4 commits) on feature/euclid-dr1-positions-gate (296 tests green incl. 37 gate tests; 4/5 exemplars -> T=0.3, Tile102014702 -> review), NOT pushed, no PR. ship_workspace stopped at Heart RED 2026-09-24 (release integrate FAILED; autolens workspace cluster/weak notebooks 4 failed; manifest drift) — none touches this repo. Awaiting the human RED override to push + open the PR; PR body drafted in the session scratchpad (research/pr_body.md).
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
