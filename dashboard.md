@@ -2244,7 +2244,7 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, euclid, hpc</summary>
+<summary><b>euclid</b> — 4 task(s) · 6 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, euclid, hpc</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
@@ -2255,7 +2255,7 @@ Members:
 - draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
 - draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md
 - draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
-- draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
+- draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -2273,7 +2273,7 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> | euclid | small | high | formalised |
 | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> | euclid | small | medium | draft |
 | <a href="draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md">euclid_dr1: every dataset rgb.jpg is upside down relative to the VIS…</a> | euclid | - | - | - |
-| <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> | euclid | small | medium | formalised |
+| <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> | euclid | medium | high | formalised |
 
 </details>
 
@@ -2371,7 +2371,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 37 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 38 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
