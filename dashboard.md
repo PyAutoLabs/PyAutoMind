@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/pointsolver_cpu_speed_phases_2_4.md">Point-source CPU speed-up campaign — phases 2–4: redundant-sort removal and measured iteration</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/568">issue #568</a> — issued 2026-09-23 — library-dev</summary>
+<details><summary>📋 <a href="active/pointsolver_cpu_speed_phases_2_4.md">Point-source CPU speed-up campaign — phases 2–4: redundant-sort removal and measured iteration</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/568">issue #568</a> — issued 2026-09-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/569">PyAutoArray#569</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/301">autolens_profiling#301</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/pointsolver_cpu_speed_phases_2_4.md
@@ -308,6 +308,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#569](https://github.com/PyAutoLabs/PyAutoArray/pull/569) — `active/pointsolver_cpu_speed_phases_2_4.md`
 - [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#567](https://github.com/PyAutoLabs/PyAutoArray/pull/567) — `complete/2026/09/certified-positive-solver.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
