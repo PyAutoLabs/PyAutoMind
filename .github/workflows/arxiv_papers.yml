@@ -577,3 +577,12 @@ jobs:
           done
           echo "::error::could not push the Memory inbox commit after 3 attempts — today's papers were NOT filed into the Memory inbox, so the board shows nothing waiting. The Slack digest above is unaffected; re-file with a workflow_dispatch carrying lookback_hours=168 once the cause is fixed."
           exit 1
+
+      - name: Preserve failed status after a source outage
+        # The fetch was made non-fatal only long enough to tell #papers what
+        # happened. Keep the Actions run red so the outage remains actionable
+        # and can be safely re-run once arXiv recovers.
+        if: ${{ steps.fetch.outcome == 'failure' }}
+        run: |
+          echo "::error::arXiv source fetch failed after retries; the Slack outage heartbeat was sent."
+          exit 1
