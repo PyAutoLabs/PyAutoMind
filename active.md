@@ -86,7 +86,7 @@
   - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-finder
 - summary: Phase 2/3 of the positions work: model-guided finder (compute peaks, fixed-centre SIE+shear quick fit, numpy forward solve, reconcile, iterate) in a shared pure-numpy module used by segmentation.py, util.py and the gate. Witness: human-approved 10-lens sample in euclid_dr1 inspect/positions_sample, then the census.
 - parallel-claim: "2026-09-24 human go: own worktree alongside #103 (branch stacked on feature/euclid-dr1-positions-gate, PR #104 open unmerged, deliberate dependency; retarget to main after merge) and #102 (disjoint files: catalogue/, inspection bundle). Brain sized too-large/4-phase; human approved one task, one PR."
-- resume: issue #105 filed, worktree not yet created; next start_workspace then implementation via Opus.
+- resume: worktree created 2026-09-24 at 485eb9a (gate tip); implementation delegated to Opus per the issue plan; next ship_workspace (stacked PR, base feature/euclid-dr1-positions-gate).
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
