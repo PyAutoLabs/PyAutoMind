@@ -21,6 +21,8 @@ Unattended: ready
 Epic: cluster-strong-lensing
 Filed: 2026-09-17
 Updated: 2026-09-24
+Issued: 2026-09-24
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/568
 Parent-record: complete/2026/09/point-source-cpu-p2.md
 
 ## Phase 2 shipped — remainder re-filed (2026-09-24)

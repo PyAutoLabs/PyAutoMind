@@ -1,5 +1,20 @@
 # Active Tasks
 
+## point-source-cpu-p3
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/568
+- issued: 2026-09-24
+- prompt: active/pointsolver_cpu_speed_phases_3_4.md
+- session: Claude Code CLI (Opus 5.5), 2026-09-24
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-24 (tolerance gate, geometric 11 859-vertex table, on-by-default for the JAX PointSolver if the A/B accepts)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-cpu-p3
+- repos:
+  - PyAutoArray: feature/point-source-cpu-p3
+  - PyAutoLens: feature/point-source-cpu-p3
+  - autolens_profiling: feature/point-source-cpu-p3
+- parallel-claim: "autolens_profiling is also claimed by certified-solver-phase-b (feature/certified-solver-phase-b). Disjoint file sets: that task edits scripts/imaging/likelihood_breakdown/fixed_light_trace.py, adds hpc/batch_gpu/submit_breakdown_imaging_fixed_light_certified_policy_a100_hst_fp64 and results/notes/certified_solver_policy_phase_b_2026_09.md; this task adds scripts/point_source/likelihood_breakdown/static_lattice_ab.py, RAL CPU + A100 submits, results/breakdown/point_source/static_lattice_ab_* and the phase-3 section of results/notes/point_source_cpu_campaign.md. Recorded 2026-09-24 per the residue-p1/#267 precedent."
+- summary: Phase 3 of the point-source CPU campaign: precompute the static step-0 triangle lattice of the JAX PointSolver as a cached geometric unique-vertex table (11 859 of 69 849 slots for the ±9.9/0.2 lattice) so step 0 deflects only unique vertices. PyAutoArray adds the cached builder + opt-in static_vertices; PyAutoLens turns it on in the JAX _initial_triangles; autolens_profiling measures with static_lattice_ab.py (laptop witness, RAL CPU host-pinned + A100). Library-first ship; reject by the stop rule.
+
 ## certified-solver-phase-b
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/300
 - issued: 2026-09-24
