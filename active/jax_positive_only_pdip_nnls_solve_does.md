@@ -4,15 +4,14 @@ Type: bug
 Target: PyAutoArray
 Repos:
 - PyAutoArray
-- PyAutoFit
-- PyAutoLens
 - autolens_profiling
-- autolens_workspace
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Memory: reading-queue.md; wiki/lensing/sources/dark-matter-substructure.md; wiki/lensing/sources/lens-modeling-methods.md
 Status: formalised
+Issued: 2026-09-24
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/571
 Consequence: glance
 Witness: A PyAutoArray regression test builds the 2-basis SLaM MGE model (2 x 20 lens Gaussians with sigma_min = pixel_scale/10 plus 20 source Gaussians) and, at every one of a fixed set of >= 48 near-truth parameter vectors, the JAX positive-only reconstruction reports converged=True and its log-likelihood agrees with NumPy fnnls within 1 nat on CPU fp64; the test fails red on current main (14/48 unconverged).
 Review-minutes: 3

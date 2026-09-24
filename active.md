@@ -1,5 +1,19 @@
 # Active Tasks
 
+## mge-pdip-nnls-convergence
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/571
+- issued: 2026-09-24
+- prompt: active/jax_positive_only_pdip_nnls_solve_does.md
+- session: Claude Code CLI (Fable 5.1), 2026-09-24
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-24 (Plan Mode); mid-task checkpoint with the human after the diagnosis step, before the fix is chosen
+- worktree: /home/jammy/Code/PyAutoLabs-wt/mge-pdip-nnls-convergence
+- repos:
+  - PyAutoArray: feature/mge-pdip-nnls-convergence
+  - autolens_profiling: feature/mge-pdip-nnls-convergence
+- parallel-claim: "autolens_profiling is also claimed by certified-solver-phase-c1-lane-rate, hst-gpu-residue-p4 and point-source-cpu-p3. Disjoint file set: this task adds only scripts/imaging/hazards/mge_nnls_capture.py and results/hazards/component/mge/nnls_capture_slam_hst_*.{json,npz}; the library work is in PyAutoArray. Recorded 2026-09-24 per the residue-p1/#267 precedent, plan approved by the human in-session."
+- summary: JAX PDIP positive-only solve (max_iter 50) returns unconverged garbage logL on 14/48 near-truth vectors of the SLaM source_lp[1] 60-column MGE model; capture (Q,q) fixture, red regression test vs fnnls_cholesky, diagnose plateau-vs-blow-up + certified-solver certification, then fix so non-convergence is never silent (PyAutoArray#571).
+
 ## ep-factor-search-overhead
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1642
 - issued: 2026-09-24
