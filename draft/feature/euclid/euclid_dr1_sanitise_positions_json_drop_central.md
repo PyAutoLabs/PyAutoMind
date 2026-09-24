@@ -14,39 +14,26 @@ Memory: wiki/lensing/sources/dark-matter-substructure.md; reading-queue.md; wiki
 Status: formalised
 Scheduled: 2026-09-24
 Consequence: glance
-Witness: sanitised positions.json for the 5 output_locked example tiles trace to a max source-plane separation < 0.2" under the adopted check, and the check reproduces the census verdicts on locked_tiles.csv / completed_tiles.csv (≥99% of locked flagged, ≤0.5% of clean unlocked flagged).
+Witness: the gate run on the 5 output_locked exemplar tiles resolves 4 to T = 0.3" and sends Tile102014702RA0131539972904DECNEG0557431062995 to review; on the census sample (inspect/positions_census) its pass/fail reproduces the RAL lock verdicts for >= 97% of locked and 100% of clean unlocked tiles and drops no image from a clean unlocked tile; unit tests cover the 0.15" cut, the one-drop rule, the T clamp and the SNR >= 2 walk-down floor.
 Review-minutes: 3
 Unattended: needs-slicing
 
 
 Scheduled for 2026-09-24. Code: the positions.json producer lives in euclid_strong_lens_modeling_pipeline (preprocess/segmentation.py, util.py load path); then port it to the euclid_dr1 science project (/mnt/c/Users/Jammy/Science/euclid_dr1) and apply it to its dataset/dr1_sep1_rest tiles.
 
-Do all three steps:
-1. Reject any image within 0.3" of the lens light, or one dominated by lens flux.
-2. Merge images closer than 0.2" apart.
-3. Run the tracing check and drop the one image that makes the set traceable.
+## Method (research settled 2026-09-24; supersedes the 2026-09-23 three-step draft)
+Full reports and prototype scripts: euclid_dr1 `inspect/positions_census/research/` (A_central_radius.md, B_final_method.md, SYNTHESIS.md, quickfit3.py, policy.py, guard.py). Census data alongside in `inspect/positions_census/`.
 
-Tiles where no single drop fixes the set, or where any drop does, go to a by-eye review list rather than being auto-dropped.
+Per tile, as a standalone pre-submit gate in `hpc/` writing a `positions_meta.json` sidecar; `positions.json` stays raw and untouched; `load_vis_dataset` reads the per-tile threshold from the sidecar and falls back to 0.2 when absent:
 
-## Research first: how best to set up the ray-tracing check
-The 2026-09-23 prototype is a numpy SIE + external shear point-tracing check. It fixes the mass centre at the brightest-pixel light centre, runs multi-start Nelder-Mead over (einstein_radius, ell_comps, gamma) within the vis_lp bounds, minimises the max pairwise source-plane separation, and fails the set if the best is > 0.2". It reproduces PyAutoLens positions.info to 1e-11 at fixed parameters, and predicts 99.0% of locked / 0.1% of unlocked fits (13/4882 disagreements). Open questions to research before adopting it:
-- Honour the sigma=0.3 Gaussian ellipticity prior (currently bounds only, so it is too permissive).
-- Optimiser robustness (local multi-start; the 13 disagreements).
-- The fixed-centre assumption (should the centre be free within a small box?).
-- Whether the 0.2" threshold is too tight for 0.1" pixels: 22% of even clean unlocked fits finish pinned at the 0.2" wall.
-- Should it use PyAutoLens's own tracer rather than a numpy re-implementation, and where should it live (segmentation writer vs load_vis_dataset vs a standalone pre-submit gate)?
+1. **Hard reject** positions within **0.15"** (one PSF FWHM) of the brightest-pixel light centre that vis_lp fixes its mass centre to. NOT 0.3": real counter-images of compact doubles (thetaE 0.5-0.66", inner/outer radius ratio >= 0.26) sit at 0.2-0.3"; the flat 0.3" cut costs 7 clean tiles and fixes only 114/734 locked, the 0.15" cut plus the step-3 drop fixes 201/734 at zero genuine cost.
+2. **Quick fit in exactly vis_lp's model space**: SIE with the centre fixed at the light centre plus external shear, thetaE in [0,8], gamma_i in [-0.3,0.3], |e|<0.95. A multi-start `least_squares` on the source-plane chi^2 (sigma 0.05") with the ell_comps N(0,0.3) prior and a weak shear term gives a plausibility cost J; an SLSQP minimax seeded from it gives s_min, the exact max pairwise source-plane separation `PositionsLH` penalises. Take the minimum over these and the census Nelder-Mead starts plus a thetaE grid (the new fit alone misses the census minimum on ~5% of sets by <= 0.05").
+3. **Outlier drop**: if s_min <= 0.2" keep all. Else, for n >= 3, leave one image out in turn; candidates are drops giving s <= 0.2". One candidate: drop it. Several: lowest J if it beats the next by dJ >= 4, else geometry (nearest if r < 0.3" or r < 0.6 x median radius of the others; outermost if r > 1.5 x that median); else review `ambiguous`. No candidate: review `no_single_drop`; n == 2 failing: review `n2_fail`. Never drop more than one image automatically, never leave fewer than 2; if fewer than 2 would survive step 1, run with the positions penalty off and flag `n_lt_2` (101 tiles).
+4. **Plausibility flag, list only, no drop**: a traceable set where one drop lowers J by >= 10 uniquely (a mass model bending to absorb a central image at 0.15-0.3"; ~176 bent `pass_central` fits). Decision 2026-09-24: flag only.
+5. **Per-tile threshold** T = min(max(2 x s_final, 0.3"), 0.5"); 2 x s_final > 0.5" goes to review. Factor 2: 0/3796 traceable fits locked when 0.2/s_min >= 2, the 7 traceable-but-locked all had a smaller margin. Floor 0.3": 22.7% of clean fits are pinned at the 0.2" wall (16% even at s_min ~ 0), pinned fits have median |gamma| 0.20 vs 0.14 and e 0.30 vs 0.23; a 0.1" floor would newly bind 50% of clean fits. Cap 0.5": the penalty rejects 99.9% of vis_lp prior volume at 0.2", 99.4% at 0.3", 97.6% at 0.5", 89% at 1.0"; uncapped, unresolved locked tiles get median T = 0.96". Decision 2026-09-24: floor 0.3" accepted.
+6. **Review list** `positions_review.csv` per batch (~282 tiles, 2%); review tiles are held back from submission by default (decision 2026-09-24). vis_pix is unaffected: it re-derives its threshold from the vis_lp result via `positions_likelihood_from(factor=3, minimum_threshold=0.2)`.
+7. **Fix the root cause in the finder** in the same task (decision 2026-09-24): `preprocess/segmentation.py:174-196` and `util._compute_positions_from_source_flux` walk the counter-image SNR threshold down in 0.1 steps to 0, and the "opposite side" test flips sign about the cutout centre (0,0), not the light centre. 59-80% of offending near-centre positions have source-flux SNR < 3. Floor the walk-down at SNR >= 2 and test about the light centre.
 
-## Evidence (2026-09-23 census)
-- 736 / 4,912 completed vis_lp fits (15.0%) are positions-penalty locked (the manifest's 741/4922 includes 10 completed tiles with no zip). Causes: central/nucleus <0.3" 108 (15%); inner spurious image on the lens-light wings 322 (44%); outer/neighbour 142 (19%); other or by-eye 155 (21%); traceable but locked anyway 7 (1%).
-- Raw arcsec distance barely discriminates (median min_r_light 0.63" locked vs 0.65" unlocked). Distance relative to the Einstein-radius proxy does: min_r/thetaE < 0.5 in 68% of locked vs 20% of unlocked.
-- 294 unlocked fits (7.1%) carry an image within 0.3" of the light centre and bent the mass model to absorb it. Compared with clean fits, 34% vs 22% have separation pinned at 0.2", 60% vs 25% have |gamma| > 0.25, and the median thetaE/ring is 0.81 vs 0.96. Six RAL spot-checks confirm the pattern.
-- Of roughly 9,000 tiles not yet on RAL, about 1,650 are predicted to lock and 573 more carry a central image. 76 of the 85 unfinished RAL runs are predicted to lock.
-
-## Deliverables
-- Copy the census into the project (e.g. inspect/positions_census/). Source (session scratchpad, ephemeral): /tmp/claude-1000/-home-jammy-Code-PyAutoLabs/f6d9d1ab-336c-4bd3-adb2-ec380b7ed943/scratchpad/census. It contains trace.py, geometry.py, analyse.py, ral_extract.py, figures.py, per_tile.csv (with suggested_drop_index and category), affected_tiles_by_category.csv, locked_tiles.csv, completed_tiles.csv, summary_numbers.txt and fig1-4.
-- Implement the three-step sanitiser, keeping the original positions.json recoverable (e.g. write positions_raw.json).
-- Remodel set: 736 locked + 294 unlocked-central + 5 unlocked failing the check + 85 unfinished. Pending (unsubmitted) tiles get sanitised positions before submission.
-- Spot-check a sample of "inner" drops by eye before bulk-dropping, because some could be genuine counter-images.
-- Record the census and outcome in the euclid_dr1 Cortex ledger / wiki/project.
+Expected on 14,032 tiles: 11,639 keep, 2,043 drop one image, 282 review; T at the floor for 96.4% (p95 0.30"); the drop resolves 647/735 locked. Prototype on 213 tiles: pass/fail matches RAL for 114/117 locked and 96/96 unlocked, drops nothing from unlocked fits, resolves 4/5 output_locked exemplars to T = 0.3 (Tile102014702... -> review); ~1 CPU-s per full-set fit, ~9 CPU-s per quad needing leave-one-out, ~12 CPU-h for the full set.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-23 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/f6d9d1ab-336c-4bd3-adb2-ec380b7ed943/scratchpad/intake_raw.md -->
