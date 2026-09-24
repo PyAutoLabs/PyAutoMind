@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/ep_factor_search_wrapper_overhead.md">EP: cut the per-factor-search wrapper overhead…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1642">issue #1642</a> — issued 2026-09-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1643">PyAutoFit#1643</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/ep_factor_search_wrapper_overhead.md">EP: cut the per-factor-search wrapper overhead…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1642">issue #1642</a> — issued 2026-09-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1643">PyAutoFit#1643</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/ep_factor_search_wrapper_overhead.md
@@ -368,6 +368,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoFit**
 
 - [PyAutoFit#1643](https://github.com/PyAutoLabs/PyAutoFit/pull/1643) — `active/ep_factor_search_wrapper_overhead.md`
+- [PyAutoFit#1644](https://github.com/PyAutoLabs/PyAutoFit/pull/1644) — `active/ep_factor_search_wrapper_overhead.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
