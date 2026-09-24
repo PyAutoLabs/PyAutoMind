@@ -1,0 +1,126 @@
+total tottime 109.12s
+  a_dynesty                        7.95s   7.3%
+  b_likelihood+mapping            21.38s  19.6%
+  c_search_wrapper+output         22.54s  20.7%
+  d_ep_maths                       6.72s   6.2%
+  e_other                         50.53s  46.3%
+e_other top:
+   numpy                                       7.91
+   scipy                                       6.60
+   stdlib                                      3.93
+   <method 'reduce' of 'numpy.ufunc' objects>    2.61
+   <method 'encode' of 'ImagingEncoder' objects>    1.87
+   <built-in method gc.collect>                1.78
+   <built-in method builtins.isinstance>       1.70
+   <built-in method builtins.sum>              1.46
+   <built-in method numpy.array>               1.09
+   pandas                                      0.90
+   <built-in method builtins.getattr>          0.83
+   <built-in method builtins.hasattr>          0.83
+   <frozen importlib._bootstrap>               0.70
+                                               0.67
+   <built-in method numpy.asarray>             0.64
+=== TOP 30 cumtime
+ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       30    0.004    0.000   50.303    1.677 autofit/non_linear/search/nest/dynesty/search/abstract.py:413(run_search_internal)
+       30    0.051    0.002   50.124    1.671 SP/dynesty/sampler.py:920(run_nested)
+     6691    0.504    0.000   47.989    0.007 SP/dynesty/sampler.py:599(sample)
+     6661    0.340    0.000   42.432    0.006 SP/dynesty/sampler.py:413(_new_point)
+    55007    0.273    0.000   32.615    0.001 SP/dynesty/sampler.py:399(_get_point_value)
+    55007    2.452    0.000   32.287    0.001 SP/dynesty/sampler.py:336(_fill_queue)
+   119178    0.587    0.000   26.534    0.000 SP/dynesty/dynesty.py:905(__call__)
+    53878    0.352    0.000   24.318    0.000 SP/dynesty/sampling.py:30(sample_unif)
+    59589    0.234    0.000   21.877    0.000 SP/dynesty/utils.py:183(__call__)
+    61089    0.172    0.000   21.699    0.000 SP/timeout_decorator/timeout_decorator.py:71(new_function)
+    61089    0.070    0.000   21.499    0.000 autofit/non_linear/fitness.py:764(__call__)
+    61119    0.326    0.000   21.444    0.000 autofit/non_linear/fitness.py:552(call_wrap)
+    61119    2.420    0.000   19.277    0.000 autofit/non_linear/fitness.py:351(call)
+    62649    0.570    0.000   10.969    0.000 autofit/mapper/prior_model/abstract.py:990(instance_from_vector)
+    55007    0.059    0.000    9.304    0.000 SP/dynesty/sampler.py:294(update_bound_if_needed)
+       82    0.003    0.000    9.244    0.113 SP/dynesty/nestedsamplers.py:668(update)
+    64220    0.446    0.000    9.185    0.000 autofit/mapper/prior_model/abstract.py:1818(instance_for_arguments)
+       82    0.006    0.000    9.159    0.112 SP/dynesty/bounding.py:536(update)
+  5664/82    0.371    0.000    8.711    0.106 SP/dynesty/bounding.py:1368(_bounding_ellipsoids)
+    64220    2.723    0.000    8.020    0.000 autofit/mapper/prior_model/prior_model.py:483(_instance_for_arguments)
+    12115    0.796    0.000    6.975    0.001 SP/scipy/special/_logsumexp.py:15(logsumexp)
+ 10826/11    0.084    0.000    6.492    0.590 SP/matplotlib/text.py:65(_get_text_metrics_with_cache)
+    413/6    0.010    0.000    6.491    1.082 SP/matplotlib/text.py:73(_get_text_metrics_with_cache_impl)
+  1771/22    0.022    0.000    6.182    0.281 <frozen importlib._bootstrap>:1349(_find_and_load)
+  1729/22    0.017    0.000    6.181    0.281 <frozen importlib._bootstrap>:1304(_find_and_load_unlocked)
+  1677/23    0.014    0.000    6.170    0.268 <frozen importlib._bootstrap>:911(_load_unlocked)
+  1452/23    0.008    0.000    6.168    0.268 <frozen importlib._bootstrap_external>:993(exec_module)
+  4033/41    0.011    0.000    6.157    0.150 <frozen importlib._bootstrap>:480(_call_with_frames_removed)
+     1407    0.118    0.000    6.018    0.004 SP/matplotlib/axis.py:1276(_update_ticks)
+107861/105294    1.460    0.000    5.999    0.000 {built-in method builtins.sum}
+
+
+
+=== TOP 30 tottime
+ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    64220    2.723    0.000    8.020    0.000 autofit/mapper/prior_model/prior_model.py:483(_instance_for_arguments)
+   359323    2.614    0.000    2.618    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    55007    2.452    0.000   32.287    0.001 SP/dynesty/sampler.py:336(_fill_queue)
+    61119    2.420    0.000   19.277    0.000 autofit/non_linear/fitness.py:351(call)
+    506/6    2.100    0.004    4.513    0.752 SP/matplotlib/backends/backend_agg.py:206(get_text_width_height_descent)
+    61154    2.087    0.000    2.087    0.000 autofit/example/model.py:65(model_data_from)
+       80    1.866    0.023    1.866    0.023 {method 'encode' of 'ImagingEncoder' objects}
+485820/482427    1.780    0.000    3.150    0.000 autofit/mapper/model.py:30(cache)
+       15    1.780    0.119    1.781    0.119 {built-in method gc.collect}
+4117601/4116698    1.704    0.000    2.648    0.000 {built-in method builtins.isinstance}
+    242/0    1.633    0.007    0.000          SP/matplotlib/backends/backend_agg.py:185(draw_text)
+107861/105294    1.460    0.000    5.999    0.000 {built-in method builtins.sum}
+481330/481315    1.398    0.000    5.760    0.000 autofit/mapper/prior_model/attribute_pair.py:6(wrapper)
+    12115    1.249    0.000    4.370    0.000 SP/scipy/special/_logsumexp.py:201(_logsumexp)
+   284917    1.092    0.000    1.180    0.000 {built-in method numpy.array}
+    18598    1.036    0.000    3.452    0.000 SP/scipy/stats/_distn_infrastructure.py:2132(cdf)
+    61119    1.025    0.000    1.818    0.000 autofit/non_linear/fitness.py:601(manage_quick_update)
+    61119    0.847    0.000    3.571    0.000 autofit/example/analysis.py:152(model_data_1d_from)
+1275694/1274269    0.831    0.000    1.329    0.000 {built-in method builtins.getattr}
+   122178    0.829    0.000    1.090    0.000 autofit/mapper/prior/_erf_helpers.py:17(_norm_cdf)
+2175963/2174688    0.828    0.000    1.618    0.000 {built-in method builtins.hasattr}
+     1425    0.799    0.001    2.662    0.002 autofit/non_linear/samples/samples.py:257(parameter_lists)
+    12115    0.796    0.000    6.975    0.001 SP/scipy/special/_logsumexp.py:15(logsumexp)
+     4466    0.773    0.000    1.092    0.000 SP/matplotlib/lines.py:758(draw)
+531330/531060    0.643    0.000    0.665    0.000 {built-in method numpy.asarray}
+    33440    0.641    0.000    1.707    0.000 SP/scipy/cluster/vq.py:150(vq)
+    42011    0.638    0.000    1.437    0.000 SP/scipy/_lib/array_api_extra/_lib/_at.py:224(_op)
+   615536    0.637    0.000    0.810    0.000 autofit/non_linear/samples/sample.py:104(parameter_lists_for_paths)
+266403/3600    0.632    0.000    1.608    0.000 STDLIB/copy.py:118(deepcopy)
+  1950730    0.620    0.000    0.620    0.000 {method 'append' of 'list' objects}
+
+
+
+=== bucket c top cumtime
+ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       30    0.004    0.000   50.303    1.677 autofit/non_linear/search/nest/dynesty/search/abstract.py:413(run_search_internal)
+    59589    0.298    0.000    4.485    0.000 autofit/non_linear/search/nest/dynesty/search/abstract.py:58(prior_transform)
+       30    0.001    0.000    4.236    0.141 autofit/non_linear/search/updater.py:195(_save_samples)
+ 1470/510    0.009    0.000    3.303    0.006 autofit/non_linear/samples/interface.py:38(wrapper)
+       60    0.007    0.000    2.707    0.045 autofit/non_linear/search/abstract_search.py:1572(samples_from)
+       60    0.032    0.001    2.700    0.045 autofit/non_linear/search/nest/dynesty/search/abstract.py:329(samples_via_internal_from)
+       60    0.003    0.000    2.690    0.045 autofit/non_linear/samples/pdf.py:56(summary)
+     1290    0.036    0.000    2.673    0.002 autofit/non_linear/samples/samples.py:286(parameters_extract)
+     1425    0.799    0.001    2.662    0.002 autofit/non_linear/samples/samples.py:257(parameter_lists)
+      450    0.027    0.000    2.233    0.005 autofit/non_linear/samples/pdf.py:152(values_at_sigma)
+      120    0.001    0.000    1.896    0.016 autofit/non_linear/samples/pdf.py:235(errors_at_sigma)
+       30    0.000    0.000    1.146    0.038 autofit/non_linear/paths/directory.py:303(save_samples)
+
+
+
+=== bucket d top cumtime
+ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       36    0.002    0.000    4.149    0.115 autofit/graphical/laplace/optimiser.py:365(optimise)
+       36    0.001    0.000    4.147    0.115 autofit/graphical/laplace/optimiser.py:272(optimise_approx)
+       36    0.000    0.000    3.297    0.092 autofit/graphical/laplace/optimiser.py:158(optimise_state)
+       36    0.004    0.000    3.297    0.092 autofit/graphical/laplace/newton.py:309(optimise_quasi_newton)
+      182    0.003    0.000    2.966    0.016 autofit/graphical/laplace/newton.py:219(take_quasi_newton_step)
+      182    0.002    0.000    2.749    0.015 autofit/graphical/laplace/line_search.py:380(line_search)
+      143    0.001    0.000    2.565    0.018 autofit/graphical/mean_field.py:435(kl)
+     1144    0.009    0.000    2.561    0.002 autofit/graphical/mean_field.py:447(<genexpr>)
+     1001    0.044    0.000    2.520    0.003 autofit/messages/truncated_normal.py:312(kl)
+     1325    0.002    0.000    2.517    0.002 autofit/graphical/laplace/line_search.py:148(gradient)
+      412    0.008    0.000    2.512    0.006 autofit/graphical/laplace/line_search.py:154(value_gradient)
+      412    0.017    0.000    2.504    0.006 autofit/graphical/mean_field.py:735(func_gradient)
+
+
+
