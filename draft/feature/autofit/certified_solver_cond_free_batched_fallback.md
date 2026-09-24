@@ -14,11 +14,11 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: draft — blocked on the PyAutoArray release that ships the certified solver (PR 567, merged 2026-09-23, unreleased)
+Status: draft — blocked on the PyAutoArray release that ships the certified solver (PyAutoArray#567, merged 2026-09-23, unreleased)
 Epic: certified-positive-solver
 Phase: C
 Consequence: judge
-Blocked-by: the PyAutoArray PyPI release that ships the certified solver (PR 567, merged 2026-09-23, unreleased)
+Blocked-by: the PyAutoArray release shipping PyAutoArray#567
 Witness: (1) a measured uncertified-lane rate on real Nautilus batches spread across the prior
 (not near-fiducial draws) for HST Delaunay N=1500 and rectangular, A100 fp64, at the Nautilus batch
 size production actually uses; (2) if the rate justifies it, one matched A100 table where the
@@ -68,9 +68,10 @@ worth building.
 
 ## Context
 
-- Epic: certified-positive-solver. Phase A = PyAutoArray#566 / PR #567 (opt-in certified solver).
+- Epic: certified-positive-solver. Phase A = PyAutoArray#566 / PyAutoArray#567 (opt-in certified solver).
   Phase B = autolens_profiling#300 (policy grid, A100 array 350588).
 - The scalar default flip (certified + PDIP fallback) is a separate PyAutoArray config PR tracked
-  by `active/certified_solver_production_default.md`; it also waits for the #567 release.
+  by `draft/feature/autoarray/certified_solver_scalar_default_flip.md` (phase B record:
+  `complete/2026/09/certified-solver-phase-b.md`); it also waits for the PyAutoArray#567 release.
 - Delaunay carries a ~2e-10 run-to-run nondeterminism floor and a ~2.5e-9 cross-composition
   residual (program properties, not solver); do not draw pins tighter than 1e-9 on Delaunay.
