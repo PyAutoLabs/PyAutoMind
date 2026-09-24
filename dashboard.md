@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/jax_positive_only_pdip_nnls_solve_does.md">JAX positive-only (PDIP NNLS) solve does not converge on the SLaM source_lp[1]…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/571">issue #571</a> — issued 2026-09-24 — library-dev</summary>
+<details><summary>📋 <a href="active/jax_positive_only_pdip_nnls_solve_does.md">JAX positive-only (PDIP NNLS) solve does not converge on the SLaM source_lp[1]…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/571">issue #571</a> — issued 2026-09-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/572">PyAutoArray#572</a></summary>
 
 ```
 /start_dev active/jax_positive_only_pdip_nnls_solve_does.md
