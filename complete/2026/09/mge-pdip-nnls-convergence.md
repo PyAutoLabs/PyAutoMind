@@ -1,3 +1,29 @@
+## mge-pdip-nnls-convergence
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/571
+- completed: 2026-09-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/572 (merge 3de624b5)
+- profiling-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/307 (merge 00211d36)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/572
+- summary: |
+    **Bug.** The jaxnnls PDIP positive-only solve (max_iter 50) diverged on signal-free,
+    floor-only MGE source-Gaussian columns after Jacobi scaling, returning garbage logL on
+    14/48 near-truth SLaM `source_lp[1]` vectors.
+
+    **Fix.** Mapper-less JAX inversions run PDIP on the raw forward system with a data-scaled
+    tolerance `1e-2·n·EPSILON·max(1,‖q‖∞)`; the Jacobi-space backward pass is kept; Mapper
+    inversions are bit-identical. `converged` / `iterations` are surfaced in the solver stats;
+    `Settings.nnls_preconditioning_no_mapper` (default `raw`) selects the mode.
+
+    **Evidence.** Red regression fixture (8 real systems, 158 KB) 15 failed → green; PyAutoArray
+    suite 1681 passed; capture re-run 0/48 unconverged, max |ΔlogL| 5.6e-7; 14 workspace_test
+    mapper-less pins ≤2.5e-11 (4 fail identically pre/post — pre-existing vmap rtol 1e-4
+    mismatch, unfiled).
+- governance: shipped under the human's Heart RED development override ("I authorise you to continue", 2026-09-24), recorded on #571/#572/active.md/autonomy_log; merged on the human's "ok merge it" via /prm.
+- follow-ups: draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md (GPU timing/parity, blocked on release); draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md (already filed).
+- not-done: GPU timing/parity; the certified active-set solver certifies only 3/7 of these systems.
+
+## Original prompt
+
 # JAX positive-only (PDIP NNLS) solve does not converge on the SLaM source_lp[1]…
 
 Type: bug

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1549 records across 8 buckets.
+1550 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -315,6 +315,7 @@ markers; everything below GENERATED is rebuilt.
 - [mge-group-source-basis-scale](2026/09/mge-group-source-basis-scale.md)
 - [mge-jit-regression-rebaseline](2026/09/mge-jit-regression-rebaseline.md)
 - [mge-label-degeneracy](2026/09/mge-label-degeneracy.md)
+- [mge-pdip-nnls-convergence](2026/09/mge-pdip-nnls-convergence.md)
 - [mgl-slam-batch-home](2026/09/mgl-slam-batch-home.md)
 - [migrate-user-threads-to-discussions](2026/09/migrate-user-threads-to-discussions.md)
 - [mind-post-cortex-p1](2026/09/mind-post-cortex-p1.md)
