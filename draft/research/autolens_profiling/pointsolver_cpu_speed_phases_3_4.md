@@ -1,4 +1,4 @@
-# Point-source CPU speed-up campaign — phases 2–4: redundant-sort removal and measured iteration
+# Point-source CPU speed-up campaign — phases 3–4: static-lattice precompute and measured iteration
 
 Type: research
 Target: autolens_profiling
@@ -20,10 +20,63 @@ Review-minutes: 20
 Unattended: ready
 Epic: cluster-strong-lensing
 Filed: 2026-09-17
-Updated: 2026-09-23
-Issued: 2026-09-23
-Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/568
-Parent-record: complete/2026/09/point-source-cpu-p1.md
+Updated: 2026-09-24
+Parent-record: complete/2026/09/point-source-cpu-p2.md
+
+## Phase 2 shipped — remainder re-filed (2026-09-24)
+
+Phase 2 ("Remove redundant vertex deduplication") is COMPLETE and ACCEPTED:
+[PyAutoArray#569](https://github.com/PyAutoLabs/PyAutoArray/pull/569) merged at `681938ae`
+(**pending release**) and [autolens_profiling#301](https://github.com/PyAutoLabs/autolens_profiling/pull/301)
+at `93757902`, record `complete/2026/09/point-source-cpu-p2.md`, ledger
+`autolens_profiling/results/notes/point_source_cpu_campaign.md` (phase 2 section).
+RAL CPU job 350582: simple 24.00 → 5.38 ms (4.47×), two-source cluster 155 → 78 ms (1.98×);
+RAL A100 job 350587: no GPU regression (1.71–2.05× faster); every gate bit-identical.
+This prompt now carries **phases 3–4 only**. Issue
+[PyAutoArray#568](https://github.com/PyAutoLabs/PyAutoArray/issues/568) was deliberately
+left open to track them (its title is phase-2 scoped; re-title or file a fresh issue at
+start-dev if preferred).
+
+**Next steps, in order:**
+
+1. Wait for the PyAutoArray release carrying #569 (`pending-release` in the record).
+2. `HPCPullPyAuto` on RAL so the shared install carries the fix.
+3. Re-run the phase-1 breakdown cells (`scripts/point_source/likelihood_breakdown/image_plane.py`
+   and the `cluster` cell) on RAL under a **new label** so the README dashboard rows move;
+   record the node's CPU model. Re-run `vertex_dedup_ab.py`: its `library` route must read
+   `library_matches: nodedup` (sort count 7 / 12) — a `control` reading means a stale install.
+4. **Phase 3 (next bounded task) — precompute the static initial lattice**, ranked first
+   because deflections are **70 %** of the post-fix simple call's FLOPs (4.94M of 7.05M).
+   Build the step-0 unique vertices + index map in NumPy at construction and pass them as
+   immutable JAX inputs: step-0 trace 69 849 → 28 665 points on `simple` (≈ 1.56M FLOP,
+   ≈ 22 % of the call), scaling with the cluster's 276 507-point input. Report setup cost,
+   memory and cache invalidation on geometry change; never cache model-dependent deflections.
+   The `constant_folding` flag A/B belongs here (the step-0 lattice is a compile-time
+   constant). Measure against a control refreshed on the **same node**.
+5. Phase 4 ranking after phase 3: (a) grid-extent guidance, (b) initial scale vs steps
+   (step 0 = 2.92M of 4.94M deflection FLOPs; each extra step ≈ 0.29M), (c)
+   `MAX_CONTAINING_SIZE` / neighbourhood fan-out (smallest share, correctness knob),
+   (d) cluster dPIE/NFW deflections (separately scoped PyAutoGalaxy phase).
+
+**Phase-2 follow-ups carried here (not fixed):**
+
+- CPU A/B ran **5 calls/round**, not the planned ≥ 20 (the A100 leg ran 20 × 20); the cell
+  does not record the XLA intra-op thread count or per-route memory — add both before the
+  phase-3 run.
+- **Host pinning:** `ral` jobs land on different CPU models (Xeon Platinum 8490H in phase 1,
+  EPYC 7763 in phase 2; cluster control +15–20 % from the host alone). Use `--nodelist` /
+  `--constraint` on the submits or always take an in-job control.
+- **RAL cleanup:** remove the `/mnt/ral/jnightin/autolens_profiling_wt/PyAutoArray_point-source-cpu-p2`
+  clone and the `_p2_untracked_backup_20260924` dir once the release is synced.
+- **Library follow-up candidate (PyAutoFit / PyAutoLens):** `jax.grad` of an `AnalysisPoint`
+  likelihood silently returns all zeros without `autofit.jax.register_model(model)` (forward
+  values stay right) — raise or warn on an unregistered model. File via intake, separately
+  from this campaign.
+- Still open from phase 1: `check_submits.py` `python3 -u` regex gap (also hits the phase-2
+  submit), `activate.sh` worktree-leak guard (phase 2 swapped `PYTHONPATH` by hand again),
+  CI smoke coverage for the breakdown cells (now incl. `vertex_dedup_ab.py`).
+- Still-unmeasured controls: vmap batches 1/16, post-fix grid/`n_steps`/capacity sweeps,
+  direct deflections on the 276 507-point cluster input.
 
 ## Phase 1 shipped — remainder re-filed (2026-09-23)
 
