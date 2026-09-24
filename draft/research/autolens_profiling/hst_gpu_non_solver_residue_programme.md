@@ -151,6 +151,18 @@ The table above is superseded:
   agrees scalar-vs-scalar at 1.05e-10, so phase 2's 2.6e-9 residual sits between `jit(vmap)` and scalar `jit`, not in
   the certified solver; that is evidence for the parked reproducibility study. Next listed lever: item 3, the second
   Cholesky (0.89 ms, phase 4).
+- **Revision after phase 4 (2026-09-24):** item 3 (the log-det Cholesky reuse) is closed with **no lever** (autolens_profiling#303,
+  PR #306 pending merge). A harness rebind kept the library certified solve's masked Cholesky and computed
+  `log det(F + λH)` via the block-determinant identity (exact for any partition, so PDIP-fallback lanes are safe) with a
+  k_max-slot Schur complement and a dense `lax.cond` overflow. RAL A100 array 350651: gate 8/8 rows at 1e-9, but in-task
+  interleaved savings were Delaunay −0.27 / −0.31 / −0.45 ms (k32/k64/k256) and rectangular +0.09 / +0.09 / −0.38 against a
+  ±0.25 ms noise floor (threshold 0.5): the triangular solve against the 1500×1500 factor costs 0.97–1.05 ms at every
+  k ≥ 32, more than the 0.90 ms dense Cholesky. Fixed-set sizes also defeat small k (Delaunay fiducial |Z| = 4 but draws
+  51–250; rectangular 232 at the fiducial incl. 152 edges, draws 366–943). Note:
+  `autolens_profiling/results/notes/hst_gpu_residue_phase4_logdet_2026_09.md` (+ sidecar `..._phase4_job350651.json`).
+  **The fp64 levers in this map are exhausted.** Remaining, all outside this map: the human fp32-cube precision decision
+  (phase 3), the cond-free batched fallback (`draft/feature/autofit/certified_solver_cond_free_batched_fallback.md`) and the
+  qhull callback / batching work filed elsewhere.
 - Not levers: mesh/mapper/weights, border relocator, mixed fusions, the F GEMM alone (fp64 dense floor; a symmetric
   rank-k custom call is the only idea). Overlap of qhull with the ray trace is blocked (border relocation consumes the
   traced grid first). Device triangulation: defer. Settled: matrix-free log-det (#247).

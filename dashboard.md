@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/hst_gpu_residue_p4_logdet_cholesky_reuse.md">HST GPU residue phase 4 — reuse the certified solve's Cholesky…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/303">issue #303</a> — issued 2026-09-24 — workspace-dev</summary>
+<details><summary>📋 <a href="active/hst_gpu_residue_p4_logdet_cholesky_reuse.md">HST GPU residue phase 4 — reuse the certified solve's Cholesky…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/303">issue #303</a> — issued 2026-09-24 — awaiting-merge</summary>
 
 ```
 /start_dev active/hst_gpu_residue_p4_logdet_cholesky_reuse.md

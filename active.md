@@ -108,13 +108,14 @@
 - issued: 2026-09-24
 - prompt: active/hst_gpu_residue_p4_logdet_cholesky_reuse.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-24
-- status: workspace-dev
+- status: awaiting-merge
 - autonomy: supervised (header); plan approved in-session 2026-09-24
 - worktree: /home/jammy/Code/PyAutoLabs-wt/hst-gpu-residue-p4
 - repos:
   - autolens_profiling: feature/hst-gpu-residue-p4
 - parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p3 (feature/point-source-cpu-p3). Disjoint file sets: this task edits scripts/imaging/likelihood_breakdown/fixed_light_trace.py and scripts/misc/likelihood_breakdown/xla_attribution.py, adds scripts/misc/likelihood_breakdown/logdet_reuse_injection.py, hpc/batch_gpu/submit_breakdown_imaging_fixed_light_logdet_reuse_a100_hst_fp64, tests under scripts/misc/test/ and results/notes/hst_gpu_residue_phase4_logdet_2026_09.md; that task touches point-source scripts/results. Recorded 2026-09-24 per the residue-p1/#267 precedent."
-- commit: autolens_profiling a621160 (feature/hst-gpu-residue-p4, pushed; no PR yet) — 71e3f21 cell+injection+gate, 5f6f8c7 amendment (schur_k256 + timed-point |Z|, pre-registered before submit), a621160 RTX screen results
-- hpc: RAL A100 array 350651 (8 tasks: {delaunay,rectangular} x {control,schur_k32,schur_k64,schur_k256}, submitted 2026-09-24, 8/8 RUNNING; delaunay gpu-1, rectangular gpu-2); RAL autolens_profiling checkout on feature/hst-gpu-residue-p4 @ a621160; PyAuto mirror on mains (Array 7fa8d271, Lens 86054bbc1)
-- next: "HUMAN RESUME POINT: harvest 350651 (8/8 rc, gate per row, in-task library_control vs candidate whole-call ms, fiducial |Z| + timed branch, draw overflow), write results/notes/hst_gpu_residue_phase4_logdet_2026_09.md (lever >= 0.5 ms → PyAutoArray prompt via /intake; else no lever), /ship_workspace, switch RAL checkout back to main. RTX screen: all 4 rows pass; fiducial |Z|=4 but draws |Z| 51-250 (k256 0/8 overflow)."
+- commit: autolens_profiling 83e27e1 (feature/hst-gpu-residue-p4, pushed) — PR https://github.com/PyAutoLabs/autolens_profiling/pull/306 (pending-release, lint green); 71e3f21 cell+injection+gate, 5f6f8c7 schur_k256 amendment, a621160 RTX screen, 83e27e1 A100 harvest + verdict note
+- hpc: RAL A100 array 350651 (8 tasks) harvested 2026-09-24, 8/8 rc 0, gate PASS 8/8; RAL autolens_profiling checkout back on main 9ad12ab
+- heart-red-override: "2026-09-24 live human \"yes i authorize\" to the named #303 development-only override (push + open PR + four-sink record + campaign-map update; merge excluded). RED reasons at push: `release validation FAILED (stage integrate)`; `workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more)`; `manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml`. Branch gates passed on 83e27e1: pre-registered gate 8/8 rows (72/72 pins, worst 3.7e-10), recon -0.43..-0.60 %, unjoined 0; ruff check+format, build_readme --check, check_submits clean; pytest scripts/misc/test 886 passed / 5 skipped. Recorded on #303 (issuecomment-5817533377) and PR #306."
+- next: "human /prm 306 (merge + close #303). Verdict NO LEVER: the Schur path's triangular solve vs the 1500x1500 factor costs 0.97-1.05 ms at every k >= 32, more than the 0.90 ms dense Cholesky; campaign fp64 levers exhausted."
 - summary: Phase 4 of hst-gpu-non-solver-residue: harness-only reuse of the library certified solve's masked Cholesky + a bounded Schur complement over the fixed set for log det(F+λH) (0.89 ms ceiling, 2.8 %), pinned at 1e-9 vs the library; PyAutoArray prompt only if >= 0.5 ms whole-call.
