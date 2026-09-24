@@ -70,8 +70,8 @@ worth building.
 
 - Epic: certified-positive-solver. Phase A = PyAutoArray#566 / PyAutoArray#567 (opt-in certified solver).
   Phase B = autolens_profiling#300 (policy grid, A100 array 350588).
-- The scalar default flip (certified + PDIP fallback) is a separate PyAutoArray config PR tracked
-  by `draft/feature/autoarray/certified_solver_scalar_default_flip.md` (phase B record:
-  `complete/2026/09/certified-solver-phase-b.md`); it also waits for the PyAutoArray#567 release.
+- The scalar default flip (certified + PDIP fallback on `jit(fn)` only) was retired 2026-09-24 as
+  superseded by this phase (`complete/2026/09/certified-solver-scalar-default-flip.md`): production
+  always runs `jit(vmap)`, so this phase is the lever that reaches real fits.
 - Delaunay carries a ~2e-10 run-to-run nondeterminism floor and a ~2.5e-9 cross-composition
   residual (program properties, not solver); do not draw pins tighter than 1e-9 on Delaunay.
