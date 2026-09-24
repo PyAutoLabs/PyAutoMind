@@ -23,12 +23,11 @@ name: pyauto-arxiv-papers
 #
 # Timing: arXiv announces new astro-ph at 20:00 US Eastern, Sun–Thu, which is
 # ~01:00 UK (00:00 UTC in summer / 01:00 UTC in winter) — the papers are live in
-# the small hours, NOT the morning. GitHub cron only ever jitters *later* (0–3 h
-# under load), never earlier, so there is no way to pin an exact delivery time;
-# the nominal is set early enough that even a worst-case slip still lands before
-# a UK scientist wakes. Nominal 02:00 UTC (03:00 BST / 02:00 GMT) → worst case
-# ~05:00–06:00 UK, so the digest is already waiting in #papers over morning
-# coffee, ~2 h after the overnight announcement. Mon–Fri only: arXiv does not
+# the small hours, NOT the morning. GitHub cron can start hours late (the
+# 2026-09-24 02:07 UTC schedule started at 07:32 UTC), so there is no defensible
+# hard upper bound on delivery time. The early nominal still gives the digest
+# headroom to land in the UK morning on ordinary days, and the announcement band
+# below stays stable across long cron slips. Mon–Fri only: arXiv does not
 # announce at weekends; the Tuesday run's band covers Friday→Monday in one
 # 3-day sweep.
 #
@@ -87,6 +86,10 @@ jobs:
 
       - name: Fetch newly announced strong-lensing papers from arXiv
         id: fetch
+        # A source outage must not turn into a silent #papers channel. Preserve
+        # the real pre-continue-on-error result in steps.fetch.outcome; a later
+        # step turns failure into an explicit Slack outage heartbeat.
+        continue-on-error: true
         run: |
           set -euo pipefail
           # No window logic here: arxiv_fetch.py derives the announcement band
@@ -106,6 +109,47 @@ jobs:
           echo "count=$count" >> "$GITHUB_OUTPUT"
           echo "Fetched $count strong-lensing paper(s) (window mode: $mode)."
 
+      - name: Build the "arXiv unavailable" notice
+        # The fetch retries 406/429/5xx and connection errors. If that whole
+        # ladder is exhausted, say so in #papers instead of disappearing. Do
+        # not fabricate an empty arxiv_survivors.json here: the Memory stamp
+        # must remain stale so its board still distinguishes "quiet day" from
+        # "source could not be read".
+        if: ${{ steps.fetch.outcome == 'failure' }}
+        run: |
+          set -euo pipefail
+          export UK_DATE="$(TZ=Europe/London date '+%Y-%m-%d (%a)')"
+          python3 - <<'PY'
+          import json
+          import os
+
+          uk_date = os.environ["UK_DATE"]
+          title = f"arXiv digest unavailable — {uk_date}"
+          payload = {
+              "text": title,
+              "blocks": [
+                  {
+                      "type": "header",
+                      "text": {"type": "plain_text", "text": title},
+                  },
+                  {
+                      "type": "section",
+                      "text": {
+                          "type": "mrkdwn",
+                          "text": (
+                              "arXiv did not return the daily feed after retries, "
+                              "so today's strong-lensing digest could not be built. "
+                              "_This is a source outage, not a no-papers day._"
+                          ),
+                      },
+                  },
+              ],
+          }
+          with open("slack_payload.json", "w") as f:
+              json.dump(payload, f, indent=2)
+          print(f"Wrote arXiv-unavailable heartbeat for {uk_date}.")
+          PY
+
       - name: Build the "no new papers" notice
         # A genuinely empty day (zero keyword hits). We skip Claude entirely to
         # spend no subscription usage, but still write the heartbeat payload so
@@ -114,10 +158,10 @@ jobs:
         #
         # It also writes an EMPTY arxiv_survivors.json — the same file the
         # Claude step writes on its own no-papers day. Every path therefore
-        # produces one, so the inbox step below can run unconditionally and
-        # stamp the quiet day, and a MISSING survivors file there stays what it
-        # has always been: a real failure, not an empty day.
-        if: ${{ steps.fetch.outputs.count == '0' }}
+        # produces one after a successful source fetch, so the inbox step can
+        # stamp a quiet day. A source outage deliberately produces no survivors
+        # file and skips Memory rather than recording a false successful digest.
+        if: ${{ steps.fetch.outcome == 'success' && steps.fetch.outputs.count == '0' }}
         run: |
           set -euo pipefail
           python3 - <<'PY'
@@ -158,7 +202,7 @@ jobs:
         # is skipped. The error names an expired CLAUDE_CODE_OAUTH_TOKEN, which
         # is the wrong cause. Test edits to this file by merging them, or
         # dispatch main and read the logs.
-        if: ${{ steps.fetch.outputs.count != '0' }}
+        if: ${{ steps.fetch.outcome == 'success' && steps.fetch.outputs.count != '0' }}
         uses: anthropics/claude-code-action@v1
         with:
           # Claude subscription OAuth token — NOT an API key. Reused from the
@@ -292,7 +336,7 @@ jobs:
         # fetched candidates directly, clearly labelled as uncurated, and file
         # the same candidates into Memory. This path uses no API key and cannot
         # incur Anthropic API billing.
-        if: ${{ steps.fetch.outputs.count != '0' }}
+        if: ${{ steps.fetch.outcome == 'success' && steps.fetch.outputs.count != '0' }}
         run: |
           set -euo pipefail
           if [ -s slack_payload.json ] && [ -s arxiv_survivors.json ]; then
@@ -424,12 +468,13 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_PAPERS_WEBHOOK_URL }}
         run: |
-          # Every path now writes slack_payload.json: count=0 writes the
-          # heartbeat; non-empty days get either the curated Claude digest or
-          # the deterministic fallback. Missing here therefore means BOTH the
-          # preferred curator and the local fallback failed.
+          # Every scheduled path now writes slack_payload.json: a source
+          # failure writes an explicit outage heartbeat, count=0 writes the
+          # quiet-day heartbeat, and non-empty days get either the curated
+          # Claude digest or the deterministic fallback. Missing here therefore
+          # means the recovery path itself is broken.
           if [ ! -s slack_payload.json ]; then
-            echo "::error::slack_payload.json missing after both Claude curation and the deterministic fallback. Empty days write the no-papers notice, so this is a real failure, not a quiet day."
+            echo "::error::slack_payload.json missing after the source/curation recovery paths. Empty days and source outages both write explicit notices, so this is a real workflow failure."
             exit 1
           fi
           if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
@@ -470,6 +515,10 @@ jobs:
       # all live in PyAutoMemory's scripts/inbox_actions.py — this step only
       # supplies the papers, so the line format is never re-expressed here.
       - name: File the survivors into the PyAutoMemory arXiv inbox
+        # Do not stamp a source-outage day as successfully digested. A stale
+        # Memory stamp remains the independent evidence that no source data was
+        # ingested, while Slack carries the explicit human-facing warning.
+        if: ${{ steps.fetch.outcome == 'success' }}
         env:
           PAT: ${{ secrets.PAT_PYAUTOLABS }}
         run: |
@@ -526,4 +575,13 @@ jobs:
             git pull --rebase origin main || break
           done
           echo "::error::could not push the Memory inbox commit after 3 attempts — today's papers were NOT filed into the Memory inbox, so the board shows nothing waiting. The Slack digest above is unaffected; re-file with a workflow_dispatch carrying lookback_hours=168 once the cause is fixed."
+          exit 1
+
+      - name: Preserve failed status after a source outage
+        # The fetch was made non-fatal only long enough to tell #papers what
+        # happened. Keep the Actions run red so the outage remains actionable
+        # and can be safely re-run once arXiv recovers.
+        if: ${{ steps.fetch.outcome == 'failure' }}
+        run: |
+          echo "::error::arXiv source fetch failed after retries; the Slack outage heartbeat was sent."
           exit 1
