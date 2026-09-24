@@ -40,7 +40,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
@@ -266,14 +266,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/ep_factor_search_wrapper_overhead.md">EP: cut the per-factor-search wrapper overhead…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1642">issue #1642</a> — issued 2026-09-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1643">PyAutoFit#1643</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoFit</summary>
-
-```
-/start_dev active/ep_factor_search_wrapper_overhead.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/euclid_dr1_positions_gate.md">euclid_dr1: sanitise positions.json (drop central/spurious multiple images) before modelling</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/103">issue #103</a> — issued 2026-09-24 — workspace-dev</summary>
 
 ```
@@ -359,9 +351,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
-- [PyAutoFit#1643](https://github.com/PyAutoLabs/PyAutoFit/pull/1643) — `active/ep_factor_search_wrapper_overhead.md`
-- [PyAutoFit#1644](https://github.com/PyAutoLabs/PyAutoFit/pull/1644) — `active/ep_factor_search_wrapper_overhead.md`
-- [PyAutoFit#1645](https://github.com/PyAutoLabs/PyAutoFit/pull/1645) — `active/ep_factor_search_wrapper_overhead.md`
 - [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
 - [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
 - [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
@@ -372,6 +361,9 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1640](https://github.com/PyAutoLabs/PyAutoFit/pull/1640) — `complete/2026/09/community-surface-pyautofit.md`
 - [PyAutoFit#1566](https://github.com/PyAutoLabs/PyAutoFit/pull/1566) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
 - [PyAutoFit#1632](https://github.com/PyAutoLabs/PyAutoFit/pull/1632) — `complete/2026/09/dynesty-single-core-no-pool.md`
+- [PyAutoFit#1643](https://github.com/PyAutoLabs/PyAutoFit/pull/1643) — `complete/2026/09/ep-factor-search-overhead.md`
+- [PyAutoFit#1644](https://github.com/PyAutoLabs/PyAutoFit/pull/1644) — `complete/2026/09/ep-factor-search-overhead.md`
+- [PyAutoFit#1645](https://github.com/PyAutoLabs/PyAutoFit/pull/1645) — `complete/2026/09/ep-factor-search-overhead.md`
 - [PyAutoFit#1574](https://github.com/PyAutoLabs/PyAutoFit/pull/1574) — `complete/2026/09/ep-full-revert-not-updated.md`
 - [PyAutoFit#1573](https://github.com/PyAutoLabs/PyAutoFit/pull/1573) — `complete/2026/09/ep-laplace-deterministic-hessian.md`
 - [PyAutoFit#1610](https://github.com/PyAutoLabs/PyAutoFit/pull/1610) — `complete/2026/09/ep-no-multiprocessing-pool.md`
@@ -2391,17 +2383,16 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-24 | filed | <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> |
 | 2026-09-24 | filed | <a href="draft/bug/autofit/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op…</a> |
 | 2026-09-24 | issued | <a href="active/jax_positive_only_pdip_nnls_solve_does.md">JAX positive-only (PDIP NNLS) solve does not converge on the SLaM…</a> |
-| 2026-09-24 | issued | <a href="active/ep_factor_search_wrapper_overhead.md">EP: cut the per-factor-search wrapper overhead…</a> |
 | 2026-09-24 | issued | <a href="active/certified_solver_phase_c1_lane_rate.md">Certified solver phase C1 — uncertified-lane rate and batched timing…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 | 2026-09-22 | issued | <a href="active/add_an_abell_1201_central_point_mass.md">Abell 1201 guided SMBH demonstration and Gemini Colab follow-on</a> |
+| 2026-09-20 | planned | <a href="planned.md#vis-magnitude-catalogue-top1000">vis-magnitude-catalogue-top1000</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-20 | planned | <a href="planned.md#vis-magnitude-catalogue-top1000">vis-magnitude-catalogue-top1000</a> |
 | 2026-09-20 | issued | <a href="active/vis_magnitude_catalogue_top1000.md">Export VIS magnitudes for the Euclid DR1 top-1000 fits</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
@@ -2411,12 +2402,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
@@ -2426,12 +2417,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
@@ -2441,12 +2432,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
+| 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
@@ -2456,6 +2447,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
+| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
 
 </details>
 

@@ -21,8 +21,9 @@ Filed: 2026-09-24
 Dynesty's: `finished` is only set when `total_iterations == iterations_after_run`
 or the global `n_like_max` is hit, so a first pass that converges is never
 recognised as finished and every fit does a `perform_update(during_analysis=True)`
-followed by a second no-op `run()`. The Dynesty side is fixed under
-https://github.com/PyAutoLabs/PyAutoFit/issues/1642 (PR 1a).
+followed by a second no-op `run()`. The Dynesty side was fixed under
+https://github.com/PyAutoLabs/PyAutoFit/issues/1642 (PR 1a, merged 2026-09-24 as
+PyAutoFit#1643 `0e2c09748`; record `complete/2026/09/ep-factor-search-overhead.md`).
 
 The Dynesty fix cannot be copied verbatim: Nautilus's `iterations_from`
 counts posterior samples, not likelihood calls, so the Dynesty budget
@@ -43,4 +44,4 @@ case still loops.
 
 ## Links
 
-- Sibling fix: https://github.com/PyAutoLabs/PyAutoFit/issues/1642 (`active/ep_factor_search_wrapper_overhead.md`)
+- Sibling fix: https://github.com/PyAutoLabs/PyAutoFit/issues/1642 (shipped 2026-09-24, PyAutoFit#1643; record `complete/2026/09/ep-factor-search-overhead.md`)

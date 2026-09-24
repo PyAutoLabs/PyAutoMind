@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1548 records across 8 buckets.
+1549 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -211,6 +211,7 @@ markers; everything below GENERATED is rebuilt.
 - [einstein-radius-jit-seed-finder](2026/09/einstein-radius-jit-seed-finder.md)
 - [emcee-log-prob-alignment](2026/09/emcee-log-prob-alignment.md)
 - [ep-collapse-unpark](2026/09/ep-collapse-unpark.md)
+- [ep-factor-search-overhead](2026/09/ep-factor-search-overhead.md)
 - [ep-full-revert-not-updated](2026/09/ep-full-revert-not-updated.md) — closed completed 2026-09-07
 - [ep-laplace-deterministic-hessian](2026/09/ep-laplace-deterministic-hessian.md) — closed completed 2026-09-07
 - [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
