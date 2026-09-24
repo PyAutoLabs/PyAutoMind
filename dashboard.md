@@ -40,17 +40,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 9 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 218 |
+| [Backlog](#backlog) (`draft/`) | 219 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -116,6 +116,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> — euclid · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -136,14 +144,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the shared breakdown</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md
 ```
 
 </details>
@@ -270,6 +270,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/ep_factor_search_wrapper_overhead.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/euclid_dr1_positions_gate.md">euclid_dr1: sanitise positions.json (drop central/spurious multiple images) before modelling</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/103">issue #103</a> — issued 2026-09-24 — workspace-dev</summary>
+
+```
+/start_dev active/euclid_dr1_positions_gate.md
 ```
 
 </details>
@@ -615,7 +623,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**218** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
+**219** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -1185,10 +1193,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/euclid/euclid_dr1_sanitise_positions_json_drop_central.md">euclid_dr1: sanitise positions.json (drop central/spurious multiple images) before modelling</a> — euclid · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> — euclid · medium · supervised · high</summary>
 
 ```
-/start_dev draft/feature/euclid/euclid_dr1_sanitise_positions_json_drop_central.md
+/start_dev draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md
 ```
 
 </details>
@@ -1476,12 +1484,20 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 16</summary>
+<summary><b>research</b> — 17</summary>
 
 <details><summary>📋 <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the shared breakdown</a> — autolens_profiling · large · supervised · high</summary>
 
 ```
 /start_dev draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+/start_dev draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -2376,6 +2392,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-24 | issued | <a href="active/euclid_dr1_positions_gate.md">euclid_dr1: sanitise positions.json (drop central/spurious multiple…</a> |
+| 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
+| 2026-09-24 | filed | <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> |
 | 2026-09-24 | filed | <a href="draft/bug/autofit/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op…</a> |
 | 2026-09-24 | issued | <a href="active/jax_positive_only_pdip_nnls_solve_does.md">JAX positive-only (PDIP NNLS) solve does not converge on the SLaM…</a> |
 | 2026-09-24 | issued | <a href="active/hst_gpu_residue_p4_logdet_cholesky_reuse.md">HST GPU residue phase 4 — reuse the certified solve's Cholesky…</a> |
@@ -2383,14 +2402,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-24 | issued | <a href="active/certified_solver_phase_c1_lane_rate.md">Certified solver phase C1 — uncertified-lane rate and batched timing…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
-| 2026-09-22 | issued | <a href="active/add_an_abell_1201_central_point_mass.md">Abell 1201 guided SMBH demonstration and Gemini Colab follow-on</a> |
-| 2026-09-20 | planned | <a href="planned.md#vis-magnitude-catalogue-top1000">vis-magnitude-catalogue-top1000</a> |
-| 2026-09-20 | issued | <a href="active/vis_magnitude_catalogue_top1000.md">Export VIS magnitudes for the Euclid DR1 top-1000 fits</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-22 | issued | <a href="active/add_an_abell_1201_central_point_mass.md">Abell 1201 guided SMBH demonstration and Gemini Colab follow-on</a> |
+| 2026-09-20 | planned | <a href="planned.md#vis-magnitude-catalogue-top1000">vis-magnitude-catalogue-top1000</a> |
+| 2026-09-20 | issued | <a href="active/vis_magnitude_catalogue_top1000.md">Export VIS magnitudes for the Euclid DR1 top-1000 fits</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
@@ -2398,14 +2417,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
@@ -2413,14 +2432,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
-| 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
@@ -2428,14 +2447,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
-| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
-| 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
-| 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
+| 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
+| 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
@@ -2443,9 +2462,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
-| 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
-| 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
-| 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
 
 </details>
 
@@ -2909,7 +2925,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-50 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+51 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2921,8 +2937,8 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/feature/autolens_assistant/benchmark_forward_model_consistency.md — unknown theme keyword(s): assistant, benchmarks`
 - `draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md — unknown theme keyword(s): assistant, benchmarks`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
+- `draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
-- `draft/feature/euclid/euclid_dr1_sanitise_positions_json_drop_central.md — unknown theme keyword(s): euclid, hpc`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md — unknown theme keyword(s): inversion, performance`
@@ -2963,6 +2979,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
 - `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md — unknown theme keyword(s): jax`
+- `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
 </details>
