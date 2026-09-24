@@ -102,12 +102,13 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/103
 - issued: 2026-09-24
 - prompt: active/euclid_dr1_positions_gate.md
-- session: claude (Fable CLI, 2026-09-24)
+- session: claude (Fable CLI, 2026-09-24, https://claude.ai/code/session_018LZi93FBcwjRdYx1Qe7Epy)
 - status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/euclid-dr1-positions-gate
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-gate
 - summary: Pre-submit positions gate: 0.15" central cut, quick SIE+shear fit with one-image leave-one-out drop, per-tile threshold T=min(max(2 s_min,0.3),0.5) in a positions_meta.json sidecar read by load_vis_dataset. Phase 1/3; runs in its own worktree alongside #102 (disjoint files).
-- resume: Issue filed with the full plan; next start_workspace creates .worktrees/euclid-dr1-positions-gate and implementation is delegated to Opus.
+- resume: Worktree created; implementation (scripts/tools/positions_gate.py, util.py sidecar read, tests, submitter) delegated to Opus in-session; then /ship_workspace.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
