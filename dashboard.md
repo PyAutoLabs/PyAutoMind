@@ -44,13 +44,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 217 |
+| [Backlog](#backlog) (`draft/`) | 219 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -148,7 +148,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 112
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 113
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -606,10 +606,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**217** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
+**219** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 67</summary>
+<summary><b>bug</b> — 69</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -655,6 +655,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/jax_positive_only_pdip_nnls_solve_does.md">JAX positive-only (PDIP NNLS) solve does not converge on the SLaM source_lp[1]…</a> — autoarray · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/jax_positive_only_pdip_nnls_solve_does.md
 ```
 
 </details>
@@ -1127,6 +1135,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md">MGE likelihood_breakdown steps are cumulative and <code>linear_gaussians</code> is reported as 0</a> — workspaces · medium · safe · low</summary>
+
+```
+/start_dev draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md
 ```
 
 </details>
@@ -2190,7 +2206,7 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>workspaces — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
+<summary><b>workspaces — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
@@ -2201,7 +2217,7 @@ Members:
 - draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
 - draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md
 - draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md
-- draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md
+- draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -2219,7 +2235,7 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> | medium | high | formalised |
 | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> | easy | medium | formalised |
 | <a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> | small | medium | formalised |
-| <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the…</a> | small | low | formalised |
+| <a href="draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md">MGE likelihood_breakdown steps are cumulative and <code>linear_gaussians</code>…</a> | medium | low | formalised |
 
 </details>
 
