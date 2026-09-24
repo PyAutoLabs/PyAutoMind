@@ -25,8 +25,10 @@
   - PyAutoFit: feature/ep-factor-search-overhead
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1643
 - library-pr-2: https://github.com/PyAutoLabs/PyAutoFit/pull/1644 (stacked on #1643, base feature/ep-factor-search-overhead; retarget to main after #1643 merges)
+- library-pr-3: https://github.com/PyAutoLabs/PyAutoFit/pull/1645 (stacked on #1644, base feature/ep-factor-search-overhead-p2; retarget to main after #1644 merges)
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1643
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1644
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1645
 - heart-red-override:
   - authorization: Live human 2026-09-24 (Claude Code CLI) selected "Yes, override and open PR 1" for the development-only Heart RED override on PR 1 of #1642; commit/push/pending-release PR only, no merge or release.
   - red-reasons: "release validation FAILED (stage integrate)"; "workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more)"; "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml" (readiness red, score 45, ts 2026-09-24T15:11:12Z)
@@ -35,7 +37,11 @@
   - authorization: Live human 2026-09-24 (Claude Code CLI), asked whether the override extends to opening PR 2 as a stacked PR (base = PR 1 branch, retargeted to main after PR 1 merges) and PR 3 the same way once green, selected "Yes, same override for PR 2 and PR 3"; commit/push/stacked pending-release PR only, no merge or release.
   - red-reasons: same three as PR 1 (readiness red, score 45, ts 2026-09-24T15:11:12Z).
   - passed: full serial test_autofit 2885 passed / 2 skipped at 1cd4a5b85; new EP-visuals tests red on PR 1 source; EP harness moments bit-identical to PR 1; downstream impact (iii) none. Heart remains RED for release purposes.
-- resume: PR 1 (#1643) open awaiting human /prm; PR 2 (#1644, EP visuals) open stacked on #1643, retarget to main after #1643 merges then /prm; PR 3 (mapper fast path) in progress on feature/ep-factor-search-overhead-p3.
+- heart-red-override-pr-3:
+  - authorization: Live human 2026-09-24 (Claude Code CLI), same answer as PR 2: "Yes, same override for PR 2 and PR 3" (PR 3 opened once green); commit/push/stacked pending-release PR only, no merge or release.
+  - red-reasons: same three as PR 1 (readiness red, score 45, ts 2026-09-24T15:11:12Z).
+  - passed: full serial test_autofit 2895 passed / 2 skipped at b3deab4a7; 10 new frozen-path tests (mutation caught); EP harness moments bit-identical to PR 2; autofit workspace smoke on the stacked PR 2 + PR 3 head 8/8 scripts + 2/2 notebooks (autofit imported from the PR 3 worktree); downstream impact (iii) none. Heart remains RED for release purposes.
+- resume: all three PRs open; /prm #1643 first, then retarget #1644 -> main and /prm, then retarget #1645 -> main and /prm; smoke on the stacked head (b3deab4a7, covers PR 2 + PR 3) passed 8/8 scripts + 2/2 notebooks. Worktrees to remove at close-out: scratchpad pf_p2 and pf_p3 (registered on the PyAutoFit bundle worktree).
 
 ## certified-solver-phase-c1-lane-rate
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
