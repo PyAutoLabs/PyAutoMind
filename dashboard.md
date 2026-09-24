@@ -116,14 +116,6 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> — euclid · medium · supervised · high</summary>
-
-```
-/start_dev draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -144,6 +136,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the shared breakdown</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md
 ```
 
 </details>
@@ -1172,7 +1172,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> — euclid · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: model-guided multiple-image finder (compute, fit, solve, reconcile loop)</a> — euclid · hard · supervised · high</summary>
 
 ```
 /start_dev draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md
@@ -2273,7 +2273,7 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> | euclid | small | high | formalised |
 | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> | euclid | small | medium | draft |
 | <a href="draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md">euclid_dr1: every dataset rgb.jpg is upside down relative to the VIS…</a> | euclid | - | - | - |
-| <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> | euclid | medium | high | formalised |
+| <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: model-guided multiple-image finder (compute, fit, solve…</a> | euclid | hard | high | formalised |
 
 </details>
 
@@ -2381,7 +2381,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-24 | issued | <a href="active/euclid_dr1_positions_gate.md">euclid_dr1: sanitise positions.json (drop central/spurious multiple…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
-| 2026-09-24 | filed | <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: fix the segmentation counter-image finder…</a> |
+| 2026-09-24 | filed | <a href="draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md">euclid_dr1: model-guided multiple-image finder (compute, fit, solve…</a> |
 | 2026-09-24 | filed | <a href="draft/bug/autofit/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op…</a> |
 | 2026-09-24 | issued | <a href="active/certified_solver_phase_c1_lane_rate.md">Certified solver phase C1 — uncertified-lane rate and batched timing…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
