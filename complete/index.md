@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1545 records across 8 buckets.
+1546 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -153,6 +153,7 @@ markers; everything below GENERATED is rebuilt.
 - [catalogue-mass-maps-fits](2026/09/catalogue-mass-maps-fits.md)
 - [certified-positive-solver](2026/09/certified-positive-solver.md)
 - [certified-solver-phase-b](2026/09/certified-solver-phase-b.md)
+- [certified-solver-scalar-default-flip](2026/09/certified-solver-scalar-default-flip.md)
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
 - [codex-context-efficiency](2026/09/codex-context-efficiency.md)
 - [codex-hook-parity](2026/09/codex-hook-parity.md)
