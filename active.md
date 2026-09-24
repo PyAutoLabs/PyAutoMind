@@ -74,3 +74,17 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
+
+## hst-gpu-residue-p4
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/303
+- issued: 2026-09-24
+- prompt: active/hst_gpu_residue_p4_logdet_cholesky_reuse.md
+- session: Claude Code CLI (Opus 5.5), 2026-09-24
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-24
+- worktree: /home/jammy/Code/PyAutoLabs-wt/hst-gpu-residue-p4
+- repos:
+  - autolens_profiling: feature/hst-gpu-residue-p4
+- parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p3 (feature/point-source-cpu-p3). Disjoint file sets: this task edits scripts/imaging/likelihood_breakdown/fixed_light_trace.py and scripts/misc/likelihood_breakdown/xla_attribution.py, adds scripts/misc/likelihood_breakdown/logdet_reuse_injection.py, hpc/batch_gpu/submit_breakdown_imaging_fixed_light_logdet_reuse_a100_hst_fp64, tests under scripts/misc/test/ and results/notes/hst_gpu_residue_phase4_logdet_2026_09.md; that task touches point-source scripts/results. Recorded 2026-09-24 per the residue-p1/#267 precedent."
+- next: "implement steps 0-5 (stage-map re-anchor, logdet_reuse_injection, --logdet-candidate, gate, tests, RTX screen), then submit the 6-task A100 array; harvest is the human resume point"
+- summary: Phase 4 of hst-gpu-non-solver-residue: harness-only reuse of the library certified solve's masked Cholesky + a bounded Schur complement over the fixed set for log det(F+λH) (0.89 ms ceiling, 2.8 %), pinned at 1e-9 vs the library; PyAutoArray prompt only if >= 0.5 ms whole-call.
