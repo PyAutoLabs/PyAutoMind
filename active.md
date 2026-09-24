@@ -1,5 +1,18 @@
 # Active Tasks
 
+## certified-solver-phase-c1-lane-rate
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
+- issued: 2026-09-24
+- prompt: active/certified_solver_phase_c1_lane_rate.md
+- session: Claude Code CLI (Opus 5.5), 2026-09-24
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-24 (measurement only; release block overridden by the human, runs against library mains incl. unreleased PyAutoArray#567)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/certified-solver-phase-c1-lane-rate
+- repos:
+  - autolens_profiling: feature/certified-solver-phase-c1-lane-rate
+- parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p3 (feature/point-source-cpu-p3). Disjoint file sets: that task adds scripts/point_source/likelihood_breakdown/static_lattice_ab.py, point-source RAL submits, results/breakdown/point_source/static_lattice_ab_* and results/notes/point_source_cpu_campaign.md; this task adds scripts/imaging/likelihood_breakdown/nautilus_batch_capture.py, a --lanes captured mode in scripts/imaging/likelihood_breakdown/fixed_light_trace.py, hpc/batch_gpu/submit_breakdown_imaging_fixed_light_certified_lane_rate_a100_hst_fp64 (+ static test), results/breakdown/imaging/nautilus_batches_* and results/notes/certified_solver_phase_c1_lane_rate_2026_09.md. Recorded 2026-09-24 per the residue-p1/#267 precedent."
+- summary: Certified-positive-solver phase C1: capture real Nautilus proposal batches at production n_batch=20 (HST fixed-light, Delaunay N=1500 + rectangular), replay on A100 fp64 under certified+fallback none jit(vmap) for the uncertified-lane rate, matched timing at B=16/20/50/100, verdict gates C2 (draft/feature/autofit/certified_solver_batched_guard_c2.md).
+
 ## point-source-cpu-p3
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/568
 - issued: 2026-09-24

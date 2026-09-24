@@ -1,34 +1,33 @@
-# Cond-free batched fallback for the certified solver under jit(vmap)
+# Certified solver phase C1 — uncertified-lane rate and batched timing on real Nautilus batches
 
 Type: feature
-Target: PyAutoFit
+Target: autolens_profiling
 Repos:
-- PyAutoFit
-- PyAutoArray
-- PyAutoGalaxy
 - autolens_profiling
 Themes:
 - profiling
 - inversion
 - hpc-gpu
-Difficulty: large
+Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft — blocked on the PyAutoArray release that ships the certified solver (PyAutoArray#567, merged 2026-09-23, unreleased)
+Status: sliced 2026-09-24 — measurement only; release block overridden by the human ("Build it now against main", then "yes meaurement only"): runs against library mains incl. unreleased PyAutoArray#567, no library edits
 Epic: certified-positive-solver
-Phase: C
+Phase: C1
 Consequence: judge
-Blocked-by: the PyAutoArray release shipping PyAutoArray#567
-Witness: (1) a measured uncertified-lane rate on real Nautilus batches spread across the prior
-(not near-fiducial draws) for HST Delaunay N=1500 and rectangular, A100 fp64, at the Nautilus batch
-size production actually uses; (2) if the rate justifies it, one matched A100 table where the
-guarded batch (certified + fallback none under `jax.jit(jax.vmap(fn))`, uncertified lanes re-run
-through the scalar certified+PDIP program) runs within a few percent of the certified+none batch
-cost, every lane pinned to <= 1e-9 against scalar library PDIP, with an injected-uncertified-lane
-test proving the re-run path fires and replaces the lane's value.
-Review-minutes: 30
-Unattended: needs-slicing
+Witness: captured real Nautilus proposal batches at production n_batch=20 (euclid pipeline source_pix stages) for HST Delaunay N=1500 and rectangular; A100 fp64 replay under library certified+fallback none jit(vmap) reporting the uncertified-lane rate (overall and by Nautilus phase) and max passes vs budget 16; matched timing table at B=16/20/50/100 (PDIP vmap, certified+none vmap, scalar certified+PDIP, scalar PDIP) with every lane <= 1e-9 against scalar library PDIP; a verdict note deciding C2 (`draft/feature/autofit/certified_solver_batched_guard_c2.md`).
+Review-minutes: 20
+Unattended: no
 Filed: 2026-09-24
+Issued: 2026-09-24
+
+## Scope (sliced 2026-09-24)
+
+Only item 1 (measure) and item 4 (vmap policy stated with batch size) of the original What below.
+Items 2-3 (flag + Fitness fallback) moved to C2. Verdict rule: build C2 only if projected guarded
+cost (certified+none batch + rate x scalar certified+PDIP re-run) at B=20 is >= 15% below the best
+zero-code option (library PDIP vmap; or scalar certified via config opt-in + use_jax_vmap=False on
+the pixelized stages), with the rate near zero.
 
 ## Why
 
