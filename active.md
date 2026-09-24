@@ -20,16 +20,24 @@
 - issued: 2026-09-24
 - prompt: active/certified_solver_production_default.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-24
-- status: workspace-dev
+- status: awaiting-merge
 - autonomy: supervised (header); plan approved in-session 2026-09-24
 - worktree: /home/jammy/Code/PyAutoLabs-wt/certified-solver-phase-b
 - repos:
   - autolens_profiling: feature/certified-solver-phase-b
 - parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p2 (feature/point-source-cpu-p2). The file sets are disjoint: this task edits scripts/imaging/likelihood_breakdown/fixed_light_trace.py, adds hpc/batch_gpu/submit_breakdown_imaging_fixed_light_certified_policy_a100_hst_fp64 and adds results/notes/certified_solver_policy_phase_b_2026_09.md. Recorded 2026-09-24 per the residue-p1/#267 precedent."
 - blocked-by-override: "Human 2026-09-24: measure phase B now against the RAL library mains (PyAutoArray#567 merged, unreleased). The Blocked-by gates only the default-flip config PR, which waits for the release."
-- commit: autolens_profiling 24e734c (feature/certified-solver-phase-b, pushed; no PR yet)
-- hpc: RAL array 350588 (20 tasks, submitted 2026-09-24); RAL autolens_profiling checkout on feature/certified-solver-phase-b; PyAuto mirror synced to mains (PyAutoArray 11b93476)
-- next: "HUMAN RESUME POINT: once 350588 finishes, pull results/breakdown/imaging/*_lib*_fb*_b16_* JSONs + .out, check 20/20 rc and the per-composition gate, write results/notes/certified_solver_policy_phase_b_2026_09.md, /ship_workspace, then switch the RAL checkout back to main."
+- commit: autolens_profiling 6a5c11f (feature/certified-solver-phase-b, pushed) — PR https://github.com/PyAutoLabs/autolens_profiling/pull/302 (pending-release)
+- hpc: RAL array 350588 (20 tasks) COMPLETED 0:0 and harvested into PR #302; RAL autolens_profiling checkout switched back to main (9375790, ff-pulled 2026-09-24); PyAuto mirror synced to mains (PyAutoArray 11b93476)
+- next: "Human /prm on PR #302 (CI green required; Heart remains RED for release). Then, after the PyAutoArray release that ships #567, the PyAutoArray config-flip PR: scalar JAX default positive_only_solver=certified + certified_fallback=pdip (vmap stays library PDIP). Follow-up guard filed as draft/feature/autofit/certified_solver_cond_free_batched_fallback.md."
+- release-gate: PyAutoArray
+- heart-red-override:
+  - date: 2026-09-24
+  - authorization: User "I authorize" (verbatim) in direct reply to an explicit request to authorize the development-only Heart-RED override for the #300 PR (push + open PR; merge excluded).
+  - red-reasons: "release validation FAILED (stage integrate)"; "workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more)"; "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml"
+  - passed: pre-registered 1e-9 per-composition gate 20/20 PASS (worst gated rel 5.2e-10, 0 uncertified lanes); ruff check/format, build_readme.py --check, check_submits.py --check clean; pytest scripts/misc/test 808 passed / 5 skipped at 6a5c11f; no workspace smoke applies (profiling repo, no library change).
+  - scope: push + pending-release PR #302 only; merge needs a separate human /prm with green checks; Heart remains RED for release.
+- policy-adopted: User 2026-09-24 "This sounds good, follow the proposed plan." — scalar JAX certified+pdip default (config flip after #567 release); vmap keep PDIP until an uncertified-lane guard exists; NumPy unchanged.
 - summary: Phase B of certified-positive-solver, continuing the HST imaging GPU campaign. A library-Settings-driven solver arm in the fixed_light_trace --vmap-batch cell compares library PDIP, certified+pdip and certified+none against scalar jit at B=4/8/16 for Delaunay and rectangular on an A100 (20-task array), with a per-composition 1e-9 gate. The harvest session writes the policy note; the session ends at submit.
 
 ## abell-1201-point-mass

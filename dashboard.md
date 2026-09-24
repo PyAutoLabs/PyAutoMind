@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 213 |
+| [Backlog](#backlog) (`draft/`) | 214 |
 
 > **No batch in flight.**
 
@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/certified_solver_production_default.md">Certified positive solver — production default and batched (vmap) policy (phase B)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/300">issue #300</a> — issued 2026-09-24 — workspace-dev</summary>
+<details><summary>📋 <a href="active/certified_solver_production_default.md">Certified positive solver — production default and batched (vmap) policy (phase B)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/300">issue #300</a> — issued 2026-09-24 — awaiting-merge — ⏸ waiting on PyAutoArray's release</summary>
 
 ```
 /start_dev active/certified_solver_production_default.md
@@ -331,6 +331,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#550](https://github.com/PyAutoLabs/PyAutoArray/pull/550) — `complete/2026/09/model-figures-lens.md`
 - [PyAutoArray#569](https://github.com/PyAutoLabs/PyAutoArray/pull/569) — `complete/2026/09/point-source-cpu-p2.md`
 - [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `complete/2026/09/sibson-single-concatenated-walk.md`
+- ⏸ waiting: [Certified positive solver — production default and batched (vmap) policy (phase B)](active/certified_solver_production_default.md)
 
 **PyAutoBrain**
 
@@ -596,7 +597,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**213** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **36** of them belong to an epic and are listed only under [Epics](#epics) below.
+**214** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **37** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 65</summary>
@@ -2756,6 +2757,19 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 </details>
 
 <details>
+<summary><b>certified-positive-solver</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autofit/certified_solver_cond_free_batched_fallback.md">Cond-free batched fallback for the certified solver under jit(vmap)</a> — autofit · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autofit/certified_solver_cond_free_batched_fallback.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>image-source-mappings</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
@@ -2845,13 +2859,14 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-47 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+48 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
+- `draft/feature/autofit/certified_solver_cond_free_batched_fallback.md — unknown theme keyword(s): inversion`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
 - `draft/feature/autolens_assistant/benchmark_forward_model_consistency.md — unknown theme keyword(s): assistant, benchmarks`
 - `draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md — unknown theme keyword(s): assistant, benchmarks`
