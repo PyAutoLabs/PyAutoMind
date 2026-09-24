@@ -73,7 +73,7 @@
 - pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/104
 - status: awaiting-merge
 - heart-red-override: 2026-09-24 live user "I authorise you to continue" for the named #103 development override (push + PR-open only; merge excluded). "Heart RED reasons at the time: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more); manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml. Branch gates: pytest 296 PASS (37 gate tests), exemplar witness verdicts reproduced, in-session review of util.py wiring."
-- resume: PR #104 open (4 commits 1fb1a42..485eb9a on feature/euclid-dr1-positions-gate). Next: human /prm when CI is green (merge stays human). Phase 2 (draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md) and phase 3 (draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md) blocked on this.
+- resume: PR #104 open (4 commits 1fb1a42..485eb9a on feature/euclid-dr1-positions-gate). Next: human /prm when CI is green (merge stays human); then runs with the gate to confirm it is OK BEFORE phase 2 (human sequencing 2026-09-24). Phase 2 (draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md) and phase 3 (draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md) blocked on this.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
