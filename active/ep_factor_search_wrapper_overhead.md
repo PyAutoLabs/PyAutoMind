@@ -16,6 +16,8 @@ Review-minutes: 5
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-24
+Issued: 2026-09-24
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1642
 
 ## Why
 
@@ -27,7 +29,7 @@ N=50 repeat carries ~15-20 min of pure overhead; best case on the toy is ~2x.
 
 Profile (2026-09-24, laptop, PyAutoFit at the RAL mirror a73684012, N=5,
 max_steps=3, 15 factor searches, cProfile total 109 s; files in
-`ep_factor_search_wrapper_overhead_assets/`):
+`draft/refactor/autofit/ep_factor_search_wrapper_overhead_assets/`):
 
 - **Per search 2.45 s = ~1.47 s dynesty `run_nested` + ~0.98 s autofit wrapper**
   (plots, a redundant second `run_nested` pass, samples writes).
@@ -85,4 +87,4 @@ matched repeats within their spread and say so.
 - Campaign ledger: `draft/research/graphical_ep/ep_campaign.md` (row 1b; phase 6 epic 2, EP profiling)
 - Sibling: `draft/refactor/autofit/ep_analysis_level_compile_cache.md` (the JAX recompile per factor search)
 - EMFILE fix that preceded this profile: PyAutoFit#1632 (dynesty single-core no pool), #1634 (release factor search internals)
-- Evidence: `ep_factor_search_wrapper_overhead_assets/ep_profile_report.txt`, `ep_pstats_cumulative.txt`, `ep_pstats_tottime.txt` (paths shortened: `SP/` = site-packages, `PyAutoFit/`, `STDLIB/`, `SCRATCH/` = the profiling scratch dir)
+- Evidence: `draft/refactor/autofit/ep_factor_search_wrapper_overhead_assets/ep_profile_report.txt`, `ep_pstats_cumulative.txt`, `ep_pstats_tottime.txt` (paths shortened: `SP/` = site-packages, `PyAutoFit/`, `STDLIB/`, `SCRATCH/` = the profiling scratch dir)

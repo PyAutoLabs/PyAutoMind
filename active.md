@@ -1,5 +1,14 @@
 # Active Tasks
 
+## ep-factor-search-overhead
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1642
+- issued: 2026-09-24
+- prompt: active/ep_factor_search_wrapper_overhead.md
+- session: Claude Code CLI (Fable 5.1), session id unavailable
+- status: library-dev
+- repos:
+  - PyAutoFit: feature/ep-factor-search-overhead
+
 ## certified-solver-phase-c1-lane-rate
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
 - issued: 2026-09-24
