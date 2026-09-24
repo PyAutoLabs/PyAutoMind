@@ -1,3 +1,49 @@
+# Point-source CPU speed-up campaign — phase 3: static step-0 lattice precompute
+
+Precomputed the static step-0 triangle lattice of the JAX `PointSolver` as a cached geometric unique-vertex table, so step 0 deflects only the unique lattice vertices, and measured it with an interleaved in-process A/B on RAL CPU (host-pinned, constant folding off and on) and a RAL A100. Phase 3 of the phased CPU campaign only; phase 4 remains open and is re-filed as `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md`, pointing at this record. Issue PyAutoArray#568 is closed (phases 2 and 3 done); phase 4 gets its own issue at start_dev.
+
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/568
+- completed: 2026-09-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/570
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/749
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/305
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/570
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/749
+
+## Shipped
+
+- Merged [PyAutoArray#570](https://github.com/PyAutoLabs/PyAutoArray/pull/570) at `7fa8d2714f7da43fec2b23c31bff580764831670` (branch head `d6c5e524`), then [PyAutoLens#749](https://github.com/PyAutoLabs/PyAutoLens/pull/749) at `86054bbc19baa2f710a12e04a94fa27ab37cc354` (branch head `c9ba49fb2`), then [autolens_profiling#305](https://github.com/PyAutoLabs/autolens_profiling/pull/305) at `9ad12abdaa44659c95b59ec024dfbbad378b415d` (branch head `629ce0c1`) — library first, human `/prm` 2026-09-24, every CI leg green, no freeze. Each feature head proven an ancestor of `origin/main` (0 commits ahead) per repo at close-out.
+- PyAutoArray (`ad0bf97b`): `static_vertex_table(y_min, y_max, x_min, x_max, scale)` — an `lru_cache`d NumPy builder keyed on the integer lattice position, first-occurrence floats, read-only; `CoordinateArrayTriangles(vertex_table=None)` and `for_limits_and_scale(..., static_vertices=False)` (opt-in). 11 859 of 69 849 slots on the simple ±9.9″ / 0.2″ lattice (28 665 exact-float distinct), 46 516 of 276 507 on the cluster 200×200 @ 0.7″ lattice. Derived lattices and pytree round-trips drop the table.
+- PyAutoLens (`b346b6a0`, tie test `972d454e`): `AbstractSolver._initial_triangles` passes `static_vertices=True` on the JAX path only — on by default for the JAX PointSolver, as decided by the human on 2026-09-24.
+- CI fix after the first ship: `d6c5e524` (PyAutoArray) / `c9ba49fb2` (PyAutoLens) define the parametrize constants outside the jax guard — fixes test collection on the `unittest-nojax` leg.
+- autolens_profiling: `scripts/point_source/likelihood_breakdown/static_lattice_ab.py` (control / exact / lattice / library routes, fresh closures + `jax.clear_caches()`, 20 rounds × 20 calls, FLOPs / `memory_analysis` / RSS / compile / table-build provenance, `--constant-folding` with an HLO `c @ c` probe), RAL CPU + A100 submits, results `results/breakdown/point_source/static_lattice_ab_{hpc_ral_cpu,constant_folding_hpc_ral_cpu,hpc_ral_a100,laptop_cpu,constant_folding_laptop_cpu}_fp64.{json,png}`, job logs, campaign ledger `results/notes/point_source_cpu_campaign.md` phase 3 (DONE, ACCEPTED).
+
+## Evidence
+
+- RAL CPU job 350636 (`ral`, pinned `--nodelist=euclid-ral-compute-10-2`, Intel Xeon Platinum 8490H — the phase-1 host; 8 CPUs, fp64, JAX 0.10.2). Folding off: simple solved 3.540 → 1.758 ms (**2.01×**, 90 % CI 1.63–2.09), simple plain 2.08×, vmap-4 1.43×, two-source cluster solved 47.36 → 9.085 ms (**5.21×**, CI 5.10–5.30), cluster plain 5.16×. Folding on: simple 2.1–2.4×, vmap-4 1.39×, cluster 3.9–4.5×.
+- RAL A100 job 350637 (`euclid-ral-gpu-1`, fp64): **1.01–1.07×** — no GPU regression (the GPU call is launch/latency-bound, not FLOP-bound).
+- FLOPs simple 7.05M → 3.38M (−52 %), cluster 139.4M → 39.5M (−72 %). XLA temp memory 4.82 → 1.69 MB (simple), 91.6 → 22.6 MB (cluster), A100 3.36 → 0.39 / 42.1 → 6.35 MB — 3–4× lower. Compile `compile_s` +3.3 % to +12.2 % folding off, +1.9 % to **+16.5 %** folding on, −1.6 % to +13.2 % A100: every row under the +20 % stop rule (single cold compile per route, not a median).
+- Correctness: 31 / 31 gates bit-identical in all three RAL JSONs (log L every route/instance, fiducial simple solved `7.743201200876812`, solved positions and image counts, `jax.grad` finite and non-zero, vmap-4 vs scalar, step-0 `containing_indices`); `library_matches: lattice` on every row. PyAutoArray suite 1645 passed; PyAutoLens suite 756 passed, 1 xfailed; step-0 shape guard red on main (69 849) green on branch (11 859); autolens_workspace_test point-source `jax_likelihood` ×4 + `jax_grad` identical to main.
+- **Tie case PASSED by human decision 2026-09-24:** a source placed bit-exactly on a traced step-0 vertex made the flat control return a duplicate third image (control 3 vs lattice 2 in 1 / 13 constructed ties); the lattice path returns exactly the 2 true images. Main's own flat path is not self-consistent at such ties (eager vs jit differ on 22 / 25). Pinned as PyAutoLens `test_autolens/point/triangles/test_static_lattice_jax.py::test__source_on_a_step_0_vertex_returns_the_two_true_images`.
+- Post-fix budget (FLOP estimate): simple — step 0 ≈ 22 %, seven refinement steps ≈ 60 %, rest ≈ 18 %; cluster — step 0 ≈ 51 %, deflections of the 13-component lens dominate both halves.
+
+## Heart RED development override (history)
+
+- heart-red-override:
+  - authorization: "2026-09-24 live human, this session: asked 'When ingestion finishes, how should I ship? Heart is RED...' with options 'Ship with RED override (Recommended): Authorize the development-only Heart RED override for PyAutoArray#568 phase 3...' or hold; the human selected 'Ship with RED override (Recommended)'. Scope commit/push/pending-release PRs only (PyAutoArray#570, PyAutoLens#749, autolens_profiling#305); no merge, no release."
+  - red-reasons: "release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more); manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml"
+  - passed: "pytest test_autoarray 1645 passed at ad0bf97b; pytest test_autolens 756 passed, 1 xfailed at 972d454e (both re-run at ship); step-0 shape guard red on main (69 849) green on branch (11 859); workspace_test point-source jax_likelihood x4 + jax_grad identical to main; A/B 31/31 gates bit-identical on RAL CPU 350636 (folding off+on) and A100 350637; tie case pinned as test__source_on_a_step_0_vertex_returns_the_two_true_images; build_readme and check_submits --check pass. Branch does not fix Heart; Heart stays RED for release."
+- The merge itself was the human's `/prm` on 2026-09-24 (override recorded at ship in Mind `eccdb368`); Heart remains RED for release purposes.
+
+## Handoff
+
+- Remainder (phase 4) re-filed: `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md`; issue PyAutoArray#568 closed — phase 4 gets its own issue at start_dev.
+- First step after the PyAutoArray + PyAutoLens release: `HPCPullPyAuto` on RAL, re-run the phase-1 `point_source` and `cluster` `likelihood_breakdown/image_plane.py` cells under a new label (record node CPU model) so the per-step wall-time split backs the phase-4 ranking.
+- Phase-4 re-ranking (campaign note, phase-3 handoff): simple — initial scale vs refinement steps first (refinement ≈ 60 % of FLOPs); cluster — dPIE/NFW deflections first (separately scoped PyAutoGalaxy phase); then grid-extent guidance, then `MAX_CONTAINING_SIZE` / neighbourhood fan-out.
+- Follow-ups found, not fixed: RAL cleanup after release of `/mnt/ral/jnightin/autolens_profiling_wt/{PyAutoArray,PyAutoLens}_point-source-cpu-p{2,3}` clones, the `point-source-cpu-p3` RAL worktree and `_p2_untracked_backup_20260924`; RAL compute-1..19 NOT_RESPONDING on 09-24; compile figures are single cold compiles; the PyAutoLens JAX unit test file (~85–100 s) departs from the no-JAX-in-unit-tests convention — consider moving to autolens_workspace_test; `jax.grad`/`register_model` zero-gradient library candidate; phase-1 leftovers (`check_submits.py` regex gap, `activate.sh` worktree-leak guard, CI smoke coverage for the breakdown cells).
+
+## Original prompt
+
 # Point-source CPU speed-up campaign — phases 3–4: static-lattice precompute and measured iteration
 
 Type: research
