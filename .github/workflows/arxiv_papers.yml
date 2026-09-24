@@ -87,6 +87,10 @@ jobs:
 
       - name: Fetch newly announced strong-lensing papers from arXiv
         id: fetch
+        # A source outage must not turn into a silent #papers channel. Preserve
+        # the real pre-continue-on-error result in steps.fetch.outcome; a later
+        # step turns failure into an explicit Slack outage heartbeat.
+        continue-on-error: true
         run: |
           set -euo pipefail
           # No window logic here: arxiv_fetch.py derives the announcement band
@@ -106,6 +110,47 @@ jobs:
           echo "count=$count" >> "$GITHUB_OUTPUT"
           echo "Fetched $count strong-lensing paper(s) (window mode: $mode)."
 
+      - name: Build the "arXiv unavailable" notice
+        # The fetch retries 406/429/5xx and connection errors. If that whole
+        # ladder is exhausted, say so in #papers instead of disappearing. Do
+        # not fabricate an empty arxiv_survivors.json here: the Memory stamp
+        # must remain stale so its board still distinguishes "quiet day" from
+        # "source could not be read".
+        if: ${{ steps.fetch.outcome == 'failure' }}
+        run: |
+          set -euo pipefail
+          export UK_DATE="$(TZ=Europe/London date '+%Y-%m-%d (%a)')"
+          python3 - <<'PY'
+          import json
+          import os
+
+          uk_date = os.environ["UK_DATE"]
+          title = f"arXiv digest unavailable — {uk_date}"
+          payload = {
+              "text": title,
+              "blocks": [
+                  {
+                      "type": "header",
+                      "text": {"type": "plain_text", "text": title},
+                  },
+                  {
+                      "type": "section",
+                      "text": {
+                          "type": "mrkdwn",
+                          "text": (
+                              "arXiv did not return the daily feed after retries, "
+                              "so today's strong-lensing digest could not be built. "
+                              "_This is a source outage, not a no-papers day._"
+                          ),
+                      },
+                  },
+              ],
+          }
+          with open("slack_payload.json", "w") as f:
+              json.dump(payload, f, indent=2)
+          print(f"Wrote arXiv-unavailable heartbeat for {uk_date}.")
+          PY
+
       - name: Build the "no new papers" notice
         # A genuinely empty day (zero keyword hits). We skip Claude entirely to
         # spend no subscription usage, but still write the heartbeat payload so
@@ -117,7 +162,7 @@ jobs:
         # produces one, so the inbox step below can run unconditionally and
         # stamp the quiet day, and a MISSING survivors file there stays what it
         # has always been: a real failure, not an empty day.
-        if: ${{ steps.fetch.outputs.count == '0' }}
+        if: ${{ steps.fetch.outcome == 'success' && steps.fetch.outputs.count == '0' }}
         run: |
           set -euo pipefail
           python3 - <<'PY'
@@ -158,7 +203,7 @@ jobs:
         # is skipped. The error names an expired CLAUDE_CODE_OAUTH_TOKEN, which
         # is the wrong cause. Test edits to this file by merging them, or
         # dispatch main and read the logs.
-        if: ${{ steps.fetch.outputs.count != '0' }}
+        if: ${{ steps.fetch.outcome == 'success' && steps.fetch.outputs.count != '0' }}
         uses: anthropics/claude-code-action@v1
         with:
           # Claude subscription OAuth token — NOT an API key. Reused from the
@@ -292,7 +337,7 @@ jobs:
         # fetched candidates directly, clearly labelled as uncurated, and file
         # the same candidates into Memory. This path uses no API key and cannot
         # incur Anthropic API billing.
-        if: ${{ steps.fetch.outputs.count != '0' }}
+        if: ${{ steps.fetch.outcome == 'success' && steps.fetch.outputs.count != '0' }}
         run: |
           set -euo pipefail
           if [ -s slack_payload.json ] && [ -s arxiv_survivors.json ]; then
@@ -424,10 +469,11 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.PYAUTO_PAPERS_WEBHOOK_URL }}
         run: |
-          # Every path now writes slack_payload.json: count=0 writes the
-          # heartbeat; non-empty days get either the curated Claude digest or
-          # the deterministic fallback. Missing here therefore means BOTH the
-          # preferred curator and the local fallback failed.
+          # Every scheduled path now writes slack_payload.json: a source
+          # failure writes an explicit outage heartbeat, count=0 writes the
+          # quiet-day heartbeat, and non-empty days get either the curated
+          # Claude digest or the deterministic fallback. Missing here therefore
+          # means the recovery path itself is broken.
           if [ ! -s slack_payload.json ]; then
             echo "::error::slack_payload.json missing after both Claude curation and the deterministic fallback. Empty days write the no-papers notice, so this is a real failure, not a quiet day."
             exit 1
@@ -470,6 +516,10 @@ jobs:
       # all live in PyAutoMemory's scripts/inbox_actions.py — this step only
       # supplies the papers, so the line format is never re-expressed here.
       - name: File the survivors into the PyAutoMemory arXiv inbox
+        # Do not stamp a source-outage day as successfully digested. A stale
+        # Memory stamp remains the independent evidence that no source data was
+        # ingested, while Slack carries the explicit human-facing warning.
+        if: ${{ steps.fetch.outcome == 'success' }}
         env:
           PAT: ${{ secrets.PAT_PYAUTOLABS }}
         run: |
