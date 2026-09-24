@@ -83,12 +83,14 @@
 - issued: 2026-09-24
 - prompt: active/euclid_dr1_positions_gate.md
 - session: claude (Fable CLI, 2026-09-24, https://claude.ai/code/session_018LZi93FBcwjRdYx1Qe7Epy)
-- status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs-wt/euclid-dr1-positions-gate
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-gate
 - summary: Pre-submit positions gate: 0.15" central cut, quick SIE+shear fit with one-image leave-one-out drop, per-tile threshold T=min(max(2 s_min,0.3),0.5) in a positions_meta.json sidecar read by load_vis_dataset. Phase 1/3; runs in its own worktree alongside #102 (disjoint files).
-- resume: Implemented + committed locally as 1fb1a42..485eb9a (4 commits) on feature/euclid-dr1-positions-gate (296 tests green incl. 37 gate tests; 4/5 exemplars -> T=0.3, Tile102014702 -> review), NOT pushed, no PR. ship_workspace stopped at Heart RED 2026-09-24 (release integrate FAILED; autolens workspace cluster/weak notebooks 4 failed; manifest drift) — none touches this repo. Awaiting the human RED override to push + open the PR; PR body drafted in the session scratchpad (research/pr_body.md).
+- pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/104
+- status: awaiting-merge
+- heart-red-override: 2026-09-24 live user "I authorise you to continue" for the named #103 development override (push + PR-open only; merge excluded). "Heart RED reasons at the time: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more); manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml. Branch gates: pytest 296 PASS (37 gate tests), exemplar witness verdicts reproduced, in-session review of util.py wiring."
+- resume: PR #104 open (4 commits 1fb1a42..485eb9a on feature/euclid-dr1-positions-gate). Next: human /prm when CI is green (merge stays human). Phase 2 (draft/feature/euclid/euclid_dr1_positions_finder_snr_floor.md) and phase 3 (draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md) blocked on this.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
