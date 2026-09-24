@@ -19,10 +19,17 @@
 - issued: 2026-09-24
 - prompt: active/ep_factor_search_wrapper_overhead.md
 - session: Claude Code CLI (Fable 5.1), session id unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/ep-factor-search-overhead
 - repos:
   - PyAutoFit: feature/ep-factor-search-overhead
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1643
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1643
+- heart-red-override:
+  - authorization: Live human 2026-09-24 (Claude Code CLI) selected "Yes, override and open PR 1" for the development-only Heart RED override on PR 1 of #1642; commit/push/pending-release PR only, no merge or release.
+  - red-reasons: "release validation FAILED (stage integrate)"; "workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more)"; "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml" (readiness red, score 45, ts 2026-09-24T15:11:12Z)
+  - passed: full serial test_autofit 2881 passed / 2 skipped at 16789050a; autofit workspace smoke 8/8 scripts + 2/2 notebooks; PyAutoFit main CI green; downstream impact (iii) none. Heart remains RED for release purposes.
+- resume: PR 1 (#1643) open awaiting human /prm; PRs 2 (EP visuals) and 3 (mapper fast path) still to do on this task.
 
 ## certified-solver-phase-c1-lane-rate
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
