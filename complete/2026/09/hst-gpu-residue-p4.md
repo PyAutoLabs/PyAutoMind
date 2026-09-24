@@ -1,3 +1,43 @@
+## hst-gpu-residue-p4
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/303
+- completed: 2026-09-24
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/306 (merged `1fae64e`, head `83e27e1`)
+- epic: hst-gpu-non-solver-residue (phase 4; campaign map `draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md`)
+- summary: |
+    Phase 4 tested reusing the library certified solve's masked Cholesky
+    factor for log det(F + λH): block-determinant identity with a
+    k_max-slot Schur complement over the fixed (+ edge) set and a dense
+    `lax.cond` overflow, as a harness-only scoped rebind
+    (`scripts/misc/likelihood_breakdown/logdet_reuse_injection.py`) in
+    `fixed_light_trace.py`, library certified solver via `al.Settings`
+    under scalar jit (phase B policy). New A100 submit
+    `hpc/batch_gpu/submit_breakdown_imaging_fixed_light_logdet_reuse_a100_hst_fp64`,
+    16 result rows (A100 + RTX 2060 screen), verdict note
+    `results/notes/hst_gpu_residue_phase4_logdet_2026_09.md` (+ job350651
+    provenance JSON), campaign status note updated.
+- verdict: NO LEVER. No candidate reached the pre-registered >= 0.5 ms
+  saving on both jit_profile and interleaved bases.
+- evidence: RAL A100 fp64 array 350651, 8/8 `COMPLETED 0:0`; gate 8/8 PASS
+  at 1e-9 (72/72 pins) vs the unmodified library route. In-task
+  interleaved savings: Delaunay N=1500 −0.27 / −0.31 / −0.45 ms
+  (k32/k64/k256); rectangular +0.09 / +0.09 (dense overflow) / −0.38 ms.
+  The triangular solve against the 1500x1500 factor costs 0.97-1.05 ms at
+  every k >= 32, more than the 0.90 ms dense Cholesky; fixed-set sizes
+  (draws |Z| 51-943) also defeat small k. Library mains: PyAutoArray
+  `7fa8d271`, profiling source `a621160`.
+- merge: PR #306 merged by the human; pushed under the human's
+  development-only Heart-RED override ("yes i authorize", 2026-09-24);
+  Heart remained RED for release.
+- not-shipped: none — the PyAutoArray prompt was conditional on a lever
+  and is correctly not filed.
+- follow-ups: the campaign map's fp64 levers are exhausted. Remaining,
+  outside this map: the human fp32-cube precision decision (phase 3), the
+  cond-free batched fallback
+  (`draft/feature/autofit/certified_solver_cond_free_batched_fallback.md`),
+  and the qhull callback / batching work filed elsewhere.
+
+## Original prompt
+
 # HST GPU residue phase 4 — reuse the certified solve's Cholesky for `log det(F + λH)` (0.89 ms, 2.8 %)
 
 Type: research

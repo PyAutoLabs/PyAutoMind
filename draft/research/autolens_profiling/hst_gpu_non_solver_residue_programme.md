@@ -152,7 +152,7 @@ The table above is superseded:
   the certified solver; that is evidence for the parked reproducibility study. Next listed lever: item 3, the second
   Cholesky (0.89 ms, phase 4).
 - **Revision after phase 4 (2026-09-24):** item 3 (the log-det Cholesky reuse) is closed with **no lever** (autolens_profiling#303,
-  PR #306 pending merge). A harness rebind kept the library certified solve's masked Cholesky and computed
+  PR #306 merged; record `complete/2026/09/hst-gpu-residue-p4.md`). A harness rebind kept the library certified solve's masked Cholesky and computed
   `log det(F + λH)` via the block-determinant identity (exact for any partition, so PDIP-fallback lanes are safe) with a
   k_max-slot Schur complement and a dense `lax.cond` overflow. RAL A100 array 350651: gate 8/8 rows at 1e-9, but in-task
   interleaved savings were Delaunay −0.27 / −0.31 / −0.45 ms (k32/k64/k256) and rectangular +0.09 / +0.09 / −0.38 against a
