@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 216 |
+| [Backlog](#backlog) (`draft/`) | 217 |
 
 > **No batch in flight.**
 
@@ -588,7 +588,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**216** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
+**217** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **39** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 66</summary>
@@ -2536,7 +2536,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 8 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -2590,6 +2590,14 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/ep_factor_search_wrapper_overhead.md">EP: cut the per-factor-search wrapper overhead…</a> — autofit · medium · supervised · high</summary>
+
+```
+/start_dev draft/refactor/autofit/ep_factor_search_wrapper_overhead.md
 ```
 
 </details>
