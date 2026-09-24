@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/euclid_dr1_positions_gate.md">euclid_dr1: sanitise positions.json (drop central/spurious multiple images) before modelling</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/103">issue #103</a> — issued 2026-09-24 — workspace-dev</summary>
+<details><summary>📋 <a href="active/euclid_dr1_positions_gate.md">euclid_dr1: sanitise positions.json (drop central/spurious multiple images) before modelling</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/103">issue #103</a> — issued 2026-09-24 — awaiting-merge</summary>
 
 ```
 /start_dev active/euclid_dr1_positions_gate.md
