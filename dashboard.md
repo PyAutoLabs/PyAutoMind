@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 219 |
+| [Backlog](#backlog) (`draft/`) | 220 |
 
 > **No batch in flight.**
 
@@ -609,7 +609,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**219** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
+**220** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -1470,7 +1470,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 17</summary>
+<summary><b>research</b> — 18</summary>
 
 <details><summary>📋 <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the shared breakdown</a> — autolens_profiling · large · supervised · high</summary>
 
@@ -1516,6 +1516,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autolens/quick_update_plotting_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md">MGE NNLS fix (PyAutoArray#571): SLaM 60-column GPU timing and parity, single…</a> — autoarray · too-large · supervised · medium</summary>
+
+```
+/start_dev draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md
 ```
 
 </details>
