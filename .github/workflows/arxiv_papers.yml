@@ -159,9 +159,9 @@ jobs:
         #
         # It also writes an EMPTY arxiv_survivors.json — the same file the
         # Claude step writes on its own no-papers day. Every path therefore
-        # produces one, so the inbox step below can run unconditionally and
-        # stamp the quiet day, and a MISSING survivors file there stays what it
-        # has always been: a real failure, not an empty day.
+        # produces one after a successful source fetch, so the inbox step can
+        # stamp a quiet day. A source outage deliberately produces no survivors
+        # file and skips Memory rather than recording a false successful digest.
         if: ${{ steps.fetch.outcome == 'success' && steps.fetch.outputs.count == '0' }}
         run: |
           set -euo pipefail
@@ -475,7 +475,7 @@ jobs:
           # Claude digest or the deterministic fallback. Missing here therefore
           # means the recovery path itself is broken.
           if [ ! -s slack_payload.json ]; then
-            echo "::error::slack_payload.json missing after both Claude curation and the deterministic fallback. Empty days write the no-papers notice, so this is a real failure, not a quiet day."
+            echo "::error::slack_payload.json missing after the source/curation recovery paths. Empty days and source outages both write explicit notices, so this is a real workflow failure."
             exit 1
           fi
           if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
