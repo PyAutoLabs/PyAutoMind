@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/pointsolver_cpu_speed_phases_3_4.md">Point-source CPU speed-up campaign — phases 3–4: static-lattice precompute and measured iteration</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/568">issue #568</a> — issued 2026-09-24 — library-dev</summary>
+<details><summary>📋 <a href="active/pointsolver_cpu_speed_phases_3_4.md">Point-source CPU speed-up campaign — phases 3–4: static-lattice precompute and measured iteration</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/568">issue #568</a> — issued 2026-09-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/570">PyAutoArray#570</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/749">PyAutoLens#749</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/305">autolens_profiling#305</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/pointsolver_cpu_speed_phases_3_4.md
@@ -316,6 +316,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#570](https://github.com/PyAutoLabs/PyAutoArray/pull/570) — `active/pointsolver_cpu_speed_phases_3_4.md`
 - [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#567](https://github.com/PyAutoLabs/PyAutoArray/pull/567) — `complete/2026/09/certified-positive-solver.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
@@ -405,6 +406,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#749](https://github.com/PyAutoLabs/PyAutoLens/pull/749) — `active/pointsolver_cpu_speed_phases_3_4.md`
 - [PyAutoLens#747](https://github.com/PyAutoLabs/PyAutoLens/pull/747) — `complete/2026/09/community-surface-pyautolens.md`
 - [PyAutoLens#740](https://github.com/PyAutoLabs/PyAutoLens/pull/740) — `complete/2026/09/coolest-observation-grid.md`
 - [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
