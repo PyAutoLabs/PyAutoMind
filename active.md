@@ -6,6 +6,7 @@
 - prompt: active/ep_factor_search_wrapper_overhead.md
 - session: Claude Code CLI (Fable 5.1), session id unavailable
 - status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ep-factor-search-overhead
 - repos:
   - PyAutoFit: feature/ep-factor-search-overhead
 
