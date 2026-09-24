@@ -27,6 +27,7 @@ the PyAutoArray config PR that flips it.
 Review-minutes: 25
 Unattended: needs-slicing
 Filed: 2026-09-23
+Issued: 2026-09-24
 
 ## Why
 
