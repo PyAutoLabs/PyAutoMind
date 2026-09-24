@@ -1,0 +1,410 @@
+Thu Sep 24 14:49:27 2026    ep.prof
+
+         51419624 function calls (50728443 primitive calls) in 109.119 seconds
+
+   Ordered by: internal time
+   List reduced from 10814 to 400 due to restriction <400>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    64220    2.723    0.000    8.020    0.000 PyAutoFit/autofit/mapper/prior_model/prior_model.py:483(_instance_for_arguments)
+   359323    2.614    0.000    2.618    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    55007    2.452    0.000   32.287    0.001 SP/dynesty/sampler.py:336(_fill_queue)
+    61119    2.420    0.000   19.277    0.000 PyAutoFit/autofit/non_linear/fitness.py:351(call)
+    506/6    2.100    0.004    4.513    0.752 SP/matplotlib/backends/backend_agg.py:206(get_text_width_height_descent)
+    61154    2.087    0.000    2.087    0.000 PyAutoFit/autofit/example/model.py:65(model_data_from)
+       80    1.866    0.023    1.866    0.023 {method 'encode' of 'ImagingEncoder' objects}
+485820/482427    1.780    0.000    3.150    0.000 PyAutoFit/autofit/mapper/model.py:30(cache)
+       15    1.780    0.119    1.781    0.119 {built-in method gc.collect}
+4117601/4116698    1.704    0.000    2.648    0.000 {built-in method builtins.isinstance}
+    242/0    1.633    0.007    0.000          SP/matplotlib/backends/backend_agg.py:185(draw_text)
+107861/105294    1.460    0.000    5.999    0.000 {built-in method builtins.sum}
+481330/481315    1.398    0.000    5.760    0.000 PyAutoFit/autofit/mapper/prior_model/attribute_pair.py:6(wrapper)
+    12115    1.249    0.000    4.370    0.000 SP/scipy/special/_logsumexp.py:201(_logsumexp)
+   284917    1.092    0.000    1.180    0.000 {built-in method numpy.array}
+    18598    1.036    0.000    3.452    0.000 SP/scipy/stats/_distn_infrastructure.py:2132(cdf)
+    61119    1.025    0.000    1.818    0.000 PyAutoFit/autofit/non_linear/fitness.py:601(manage_quick_update)
+    61119    0.847    0.000    3.571    0.000 PyAutoFit/autofit/example/analysis.py:152(model_data_1d_from)
+1275694/1274269    0.831    0.000    1.329    0.000 {built-in method builtins.getattr}
+   122178    0.829    0.000    1.090    0.000 PyAutoFit/autofit/mapper/prior/_erf_helpers.py:17(_norm_cdf)
+2175963/2174688    0.828    0.000    1.618    0.000 {built-in method builtins.hasattr}
+     1425    0.799    0.001    2.662    0.002 PyAutoFit/autofit/non_linear/samples/samples.py:257(parameter_lists)
+    12115    0.796    0.000    6.975    0.001 SP/scipy/special/_logsumexp.py:15(logsumexp)
+     4466    0.773    0.000    1.092    0.000 SP/matplotlib/lines.py:758(draw)
+531330/531060    0.643    0.000    0.665    0.000 {built-in method numpy.asarray}
+    33440    0.641    0.000    1.707    0.000 SP/scipy/cluster/vq.py:150(vq)
+    42011    0.638    0.000    1.437    0.000 SP/scipy/_lib/array_api_extra/_lib/_at.py:224(_op)
+   615536    0.637    0.000    0.810    0.000 PyAutoFit/autofit/non_linear/samples/sample.py:104(parameter_lists_for_paths)
+266403/3600    0.632    0.000    1.608    0.000 STDLIB/copy.py:118(deepcopy)
+  1950730    0.620    0.000    0.620    0.000 {method 'append' of 'list' objects}
+  2279/23    0.606    0.000    0.047    0.002 SP/matplotlib/backends/backend_agg.py:248(_prepare_font)
+     3344    0.605    0.000    2.739    0.001 SP/scipy/cluster/vq.py:648(kmeans2)
+   119178    0.587    0.000   26.534    0.000 SP/dynesty/dynesty.py:905(__call__)
+   293313    0.578    0.000    0.968    0.000 PyAutoFit/autofit/mapper/prior_model/attribute_pair.py:8(<lambda>)
+    61119    0.577    0.000    5.403    0.000 PyAutoFit/autofit/example/analysis.py:121(log_likelihood_function)
+    62649    0.570    0.000   10.969    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:990(instance_from_vector)
+    54168    0.570    0.000    0.734    0.000 SP/numpy/lib/_twodim_base_impl.py:163(eye)
+    28581    0.567    0.000    0.734    0.000 SP/numpy/lib/_stride_tricks_impl.py:340(_broadcast_to)
+   230054    0.543    0.000    0.543    0.000 {method 'copy' of 'numpy.ndarray' objects}
+   766957    0.529    0.000    0.571    0.000 {built-in method _abc._abc_instancecheck}
+     6691    0.504    0.000   47.989    0.007 SP/dynesty/sampler.py:599(sample)
+    64869    0.502    0.000    0.502    0.000 {built-in method numpy.arange}
+    11891    0.500    0.000    1.088    0.000 SP/scipy/linalg/_decomp.py:284(eigh)
+  1177919    0.494    0.000    0.528    0.000 {method 'get' of 'dict' objects}
+  1263290    0.485    0.000    0.485    0.000 {method 'items' of 'dict' objects}
+     1747    0.472    0.000    0.658    0.000 SP/matplotlib/backends/backend_agg.py:93(draw_path)
+1623971/1608355    0.453    0.000    0.468    0.000 {built-in method builtins.len}
+   993630    0.446    0.000    0.446    0.000 {method 'startswith' of 'str' objects}
+    64220    0.446    0.000    9.185    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1818(instance_for_arguments)
+   109486    0.427    0.000    1.471    0.000 SP/numpy/_core/fromnumeric.py:69(_wrapreduction)
+       30    0.418    0.014    0.424    0.014 {built-in method _pickle.dump}
+  194/191    0.414    0.002    0.422    0.002 {built-in method _imp.create_dynamic}
+   550101    0.410    0.000    0.583    0.000 PyAutoFit/autofit/non_linear/fitness.py:337(_xp)
+    61089    0.404    0.000    4.259    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:838(vector_from_unit_vector)
+   615536    0.398    0.000    0.513    0.000 PyAutoFit/autofit/non_linear/samples/sample.py:119(is_path_kwargs)
+   4836/4    0.384    0.000    2.953    0.738 SP/matplotlib/text.py:358(_get_layout)
+    61089    0.379    0.000    2.596    0.000 PyAutoFit/autofit/mapper/prior/truncated_gaussian.py:147(value_for)
+  5664/82    0.371    0.000    8.711    0.106 SP/dynesty/bounding.py:1368(_bounding_ellipsoids)
+257983/256914    0.362    0.000    3.929    0.000 <frozen importlib._bootstrap>:1390(_handle_fromlist)
+    28517    0.355    0.000    1.608    0.000 SP/matplotlib/artist.py:1190(_update_props)
+    61089    0.354    0.000    1.864    0.000 PyAutoFit/autofit/mapper/prior/_erf_helpers.py:35(truncated_normal_value_for)
+   766957    0.353    0.000    0.924    0.000 <frozen abc>:117(__instancecheck__)
+    53878    0.352    0.000   24.318    0.000 SP/dynesty/sampling.py:30(sample_unif)
+     6661    0.340    0.000   42.432    0.006 SP/dynesty/sampler.py:413(_new_point)
+   153968    0.338    0.000    1.358    0.000 SP/numpy/_core/fromnumeric.py:51(_wrapfunc)
+     5664    0.334    0.000    4.182    0.001 SP/dynesty/bounding.py:1291(bounding_ellipsoid)
+    61119    0.326    0.000   21.444    0.000 PyAutoFit/autofit/non_linear/fitness.py:552(call_wrap)
+     5724    0.324    0.000    0.954    0.000 SP/numpy/lib/_function_base_impl.py:2680(cov)
+   195294    0.323    0.000    0.323    0.000 {built-in method numpy.zeros}
+    81902    0.320    0.000    0.841    0.000 SP/numpy/_core/numerictypes.py:381(isdtype)
+    61089    0.317    0.000    0.420    0.000 PyAutoFit/autofit/mapper/prior/_erf_helpers.py:26(_norm_ppf)
+   197273    0.315    0.000    0.462    0.000 PyAutoNerves/autonerves/conf.py:57(__getitem__)
+    23651    0.307    0.000    0.371    0.000 SP/matplotlib/cbook.py:1752(normalize_kwargs)
+    64463    0.306    0.000    0.306    0.000 {method 'argmax' of 'numpy.ndarray' objects}
+    16352    0.303    0.000    0.486    0.000 PyAutoFit/autofit/text/formatter.py:247(write_row)
+   260022    0.302    0.000    0.302    0.000 {built-in method numpy.asanyarray}
+    59589    0.298    0.000    4.485    0.000 PyAutoFit/autofit/non_linear/search/nest/dynesty/search/abstract.py:58(prior_transform)
+       97    0.292    0.003    0.293    0.003 SP/matplotlib/collections.py:352(draw)
+    53894    0.287    0.000    1.170    0.000 SP/numpy/_core/numeric.py:2195(identity)
+     1451    0.285    0.000    0.285    0.000 {built-in method marshal.loads}
+     5938    0.277    0.000    1.332    0.000 SP/dynesty/bounding.py:1215(improve_covar_mat)
+    81902    0.273    0.000    0.405    0.000 SP/numpy/_core/numerictypes.py:368(_preprocess_dtype)
+    55007    0.273    0.000   32.615    0.001 SP/dynesty/sampler.py:399(_get_point_value)
+    10604    0.272    0.000    0.519    0.000 STDLIB/inspect.py:882(cleandoc)
+49335/3590    0.271    0.000    0.602    0.000 PyAutoFit/autofit/mapper/model.py:338(path_instances_of_class)
+    12145    0.270    0.000    0.843    0.000 SP/scipy/_lib/_array_api.py:524(xp_promote)
+   274103    0.268    0.000    0.615    0.000 SP/matplotlib/__init__.py:781(__getitem__)
+    64463    0.262    0.000    0.762    0.000 SP/numpy/_core/fromnumeric.py:1251(argmax)
+    72485    0.248    0.000    0.641    0.000 STDLIB/copy.py:61(copy)
+    32644    0.248    0.000    0.256    0.000 PyAutoFit/autofit/messages/truncated_normal.py:522(log_prior_from_value)
+    81910    0.247    0.000    0.260    0.000 PyAutoFit/autofit/text/formatter.py:240(<genexpr>)
+    12016    0.247    0.000    1.523    0.000 SP/scipy/_lib/_util.py:1149(wrapper)
+    22128    0.241    0.000    0.302    0.000 SP/numpy/_core/shape_base.py:380(stack)
+     2376    0.240    0.000    0.240    0.000 {method 'read' of '_io.BufferedReader' objects}
+   733458    0.239    0.000    0.239    0.000 PyAutoFit/autofit/non_linear/analysis/analysis.py:128(_xp)
+   615776    0.238    0.000    0.385    0.000 PyAutoFit/autofit/non_linear/samples/interface.py:98(paths)
+    59589    0.234    0.000   21.877    0.000 SP/dynesty/utils.py:183(__call__)
+   293304    0.233    0.000    0.421    0.000 PyAutoFit/autofit/mapper/prior/abstract.py:245(__getattr__)
+   225295    0.230    0.000    0.407    0.000 PyAutoFit/autofit/mapper/prior_model/attribute_pair.py:20(__iter__)
+   279265    0.229    0.000    0.401    0.000 {built-in method builtins.issubclass}
+334375/290835    0.228    0.000    0.431    0.000 SP/matplotlib/artist.py:317(stale)
+    63647    0.226    0.000    0.881    0.000 SP/numpy/_core/fromnumeric.py:89(_wrapreduction_any_all)
+    97767    0.222    0.000    0.701    0.000 SP/scipy/_lib/array_api_compat/numpy/_aliases.py:70(asarray)
+    20658    0.221    0.000    1.485    0.000 SP/scipy/stats/_distn_infrastructure.py:612(argsreduce)
+    18598    0.216    0.000    0.353    0.000 SP/scipy/stats/_distn_infrastructure.py:1044(_open_support_mask)
+     2790    0.213    0.000    1.130    0.000 SP/matplotlib/ticker.py:2159(_raw_ticks)
+    64338    0.213    0.000    0.429    0.000 PyAutoFit/autofit/mapper/model.py:86(_cached_property_names)
+     9661    0.211    0.000    5.887    0.001 SP/dynesty/utils.py:1338(progress_integration)
+     1451    0.210    0.000    0.500    0.000 <frozen importlib._bootstrap_external>:755(_compile_bytecode)
+    40878    0.208    0.000    0.318    0.000 SP/matplotlib/font_manager.py:700(__hash__)
+    64604    0.206    0.000    0.307    0.000 SP/matplotlib/cbook.py:2020(_setattr_cm)
+   646919    0.206    0.000    0.206    0.000 PyAutoFit/autofit/mapper/prior_model/prior_model.py:348(constructor_argument_names)
+    57884    0.205    0.000    0.350    0.000 SP/matplotlib/cbook.py:348(process)
+  194/133    0.203    0.001    0.660    0.005 {built-in method _imp.exec_dynamic}
+   138957    0.202    0.000    0.347    0.000 SP/scipy/_lib/_array_api.py:75(_asarray)
+    11723    0.201    0.000    0.402    0.000 SP/numpy/_core/_methods.py:118(_mean)
+   279228    0.201    0.000    0.276    0.000 PyAutoFit/autofit/mapper/prior/abstract.py:261(__hash__)
+     4358    0.200    0.000    1.459    0.000 SP/matplotlib/lines.py:301(__init__)
+     5645    0.198    0.000    0.514    0.000 SP/dynesty/sampling.py:270(propose_ball_point)
+    32613    0.197    0.000    0.980    0.000 SP/numpy/lib/_stride_tricks_impl.py:481(broadcast_arrays)
+       31    0.194    0.006    0.758    0.024 SP/matplotlib/font_manager.py:1453(_findfont_cached)
+     5679    0.192    0.000    1.122    0.000 SP/dynesty/bounding.py:115(__init__)
+   274428    0.190    0.000    0.347    0.000 SP/matplotlib/__init__.py:701(_get)
+    19774    0.189    0.000    0.210    0.000 {built-in method posix.stat}
+    58830    0.186    0.000    0.997    0.000 SP/numpy/_core/fromnumeric.py:2338(sum)
+    27636    0.185    0.000    0.582    0.000 PyAutoFit/autofit/messages/truncated_normal.py:72(__init__)
+   944949    0.185    0.000    0.185    0.000 PyAutoFit/autofit/mapper/prior_model/prior_model.py:74(__hash__)
+   184889    0.184    0.000    0.264    0.000 SP/scipy/_lib/array_api_compat/common/_helpers.py:683(_check_device)
+    32619    0.180    0.000    0.191    0.000 SP/numpy/lib/_stride_tricks_impl.py:413(_broadcast_shape)
+    24230    0.174    0.000    0.462    0.000 SP/scipy/_lib/array_api_compat/common/_aliases.py:631(sign)
+   120619    0.174    0.000    0.219    0.000 SP/matplotlib/_api/__init__.py:100(check_in_list)
+9616/7678    0.172    0.000    0.334    0.000 SP/matplotlib/transforms.py:2432(get_affine)
+    61089    0.172    0.000   21.699    0.000 SP/timeout_decorator/timeout_decorator.py:71(new_function)
+31199/28231    0.167    0.000    1.133    0.000 STDLIB/copy.py:247(_reconstruct)
+    58855    0.167    0.000    0.167    0.000 {built-in method numpy._core._multiarray_umath._place}
+365928/365901    0.164    0.000    0.166    0.000 {built-in method builtins.iter}
+    57868    0.163    0.000    0.163    0.000 {method 'nonzero' of 'numpy.ndarray' objects}
+      541    0.163    0.000    0.163    0.000 {method 'compress' of 'zlib.Compress' objects}
+151103/150368    0.162    0.000    0.184    0.000 {built-in method __new__ of type object at 0xa1eb20}
+    15357    0.161    0.000    0.161    0.000 {built-in method numpy._core._multiarray_umath.c_einsum}
+   275715    0.161    0.000    0.163    0.000 {function ConvertingDict.__getitem__ at 0x7f7fca500360}
+14356/6142    0.159    0.000    1.442    0.000 STDLIB/copy.py:217(_deepcopy_dict)
+    90594    0.157    0.000    0.173    0.000 SP/scipy/_lib/array_api_compat/common/_helpers.py:149(is_torch_array)
+    50891    0.157    0.000    0.498    0.000 {method 'any' of 'numpy.generic' objects}
+    61089    0.156    0.000    2.768    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:859(<lambda>)
+    11891    0.156    0.000    0.291    0.000 SP/scipy/linalg/lapack.py:1028(_compute_lwork)
+    12146    0.155    0.000    0.262    0.000 SP/scipy/_lib/_array_api.py:471(xp_result_type)
+    25482    0.155    0.000    0.177    0.000 SP/matplotlib/font_manager.py:1233(score_stretch)
+    60504    0.154    0.000    0.154    0.000 {method 'reshape' of 'numpy.ndarray' objects}
+    12115    0.154    0.000    0.555    0.000 SP/scipy/special/_logsumexp.py:169(_elements_and_indices_with_max_real)
+49335/3590    0.153    0.000    0.622    0.000 PyAutoFit/autofit/mapper/prior_model/recursion.py:96(wrapper)
+    10952    0.152    0.000    0.302    0.000 SP/matplotlib/artist.py:179(__init__)
+    25443    0.151    0.000    0.354    0.000 SP/matplotlib/transforms.py:750(__init__)
+    26292    0.147    0.000    1.256    0.000 PyAutoFit/autofit/messages/abstract.py:204(__mul__)
+75890/72594    0.146    0.000    0.149    0.000 {built-in method _abc._abc_subclasscheck}
+    19122    0.146    0.000    0.146    0.000 {built-in method matplotlib._path.affine_transform}
+     9329    0.143    0.000    0.343    0.000 SP/dynesty/bounding.py:424(contains)
+     2766    0.141    0.000    0.473    0.000 SP/matplotlib/lines.py:686(recache)
+    16284    0.137    0.000    0.137    0.000 {method 'sub' of 're.Pattern' objects}
+    56527    0.135    0.000    0.196    0.000 SP/matplotlib/transforms.py:1770(__init__)
+    22905    0.135    0.000    0.147    0.000 SP/matplotlib/transforms.py:180(set_children)
+     1339    0.135    0.000    2.990    0.002 SP/matplotlib/axis.py:59(__init__)
+    65736    0.134    0.000    0.544    0.000 PyAutoNerves/autonerves/conf.py:188(__getitem__)
+    42011    0.134    0.000    0.147    0.000 SP/scipy/_lib/array_api_compat/common/_helpers.py:957(is_writeable_array)
+    93285    0.133    0.000    0.283    0.000 {built-in method builtins.any}
+359341/329631    0.131    0.000    0.299    0.000 {built-in method builtins.hash}
+    54126    0.128    0.000    0.225    0.000 SP/scipy/_lib/array_api_compat/common/_helpers.py:217(is_jax_array)
+    29226    0.128    0.000    0.183    0.000 PyAutoFit/autofit/messages/abstract.py:41(__init__)
+    41913    0.125    0.000    0.280    0.000 {built-in method builtins.sorted}
+    60247    0.124    0.000    0.183    0.000 SP/dynesty/utils.py:87(__gt__)
+    40268    0.122    0.000    0.145    0.000 STDLIB/contextlib.py:104(__init__)
+   262408    0.122    0.000    0.122    0.000 {method 'lower' of 'str' objects}
+    64338    0.122    0.000    0.215    0.000 PyAutoNerves/autonerves/tools/decorators.py:29(cached_property_names)
+   134732    0.121    0.000    0.190    0.000 SP/numpy/lib/_function_base_impl.py:339(iterable)
+    62949    0.120    0.000    0.933    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1955(prior_count)
+     6202    0.119    0.000    2.322    0.000 PyAutoFit/autofit/messages/truncated_normal.py:29(log_partition)
+     8120    0.119    0.000    0.605    0.000 SP/scipy/_lib/array_api_extra/_lib/_funcs.py:146(_apply_where)
+     1407    0.118    0.000    6.018    0.004 SP/matplotlib/axis.py:1276(_update_ticks)
+   486888    0.118    0.000    0.118    0.000 {built-in method builtins.id}
+96889/90249    0.115    0.000    0.979    0.000 {built-in method builtins.next}
+     2340    0.112    0.000    0.112    0.000 PyAutoFit/autofit/non_linear/samples/samples.py:270(weight_list)
+   157023    0.112    0.000    0.156    0.000 {built-in method builtins.setattr}
+     1290    0.111    0.000    0.391    0.000 PyAutoFit/autofit/non_linear/samples/pdf.py:485(quantile)
+    64220    0.111    0.000    0.616    0.000 PyAutoFit/autofit/mapper/prior_model/prior_model.py:478(is_deferred_arguments)
+    82655    0.110    0.000    0.110    0.000 {method 'astype' of 'numpy.ndarray' objects}
+     3582    0.109    0.000    0.152    0.000 {built-in method _io.open}
+    48222    0.108    0.000    0.246    0.000 SP/numpy/_core/_ufunc_config.py:440(__enter__)
+    31199    0.108    0.000    0.124    0.000 {method '__reduce_ex__' of 'object' objects}
+    15068    0.108    0.000    0.280    0.000 SP/numpy/_core/fromnumeric.py:41(_wrapit)
+     8429    0.107    0.000    0.107    0.000 {method 'findall' of 're.Pattern' objects}
+    98369    0.107    0.000    0.107    0.000 SP/matplotlib/transforms.py:109(__init__)
+    78997    0.106    0.000    0.306    0.000 SP/scipy/_lib/array_api_compat/numpy/_aliases.py:97(astype)
+    21776    0.105    0.000    0.187    0.000 SP/scipy/_lib/array_api_extra/_delegation.py:34(atleast_nd)
+    22196    0.102    0.000    0.165    0.000 SP/matplotlib/_api/__init__.py:65(check_isinstance)
+11013/10461    0.102    0.000    0.605    0.000 SP/matplotlib/axes/_base.py:887(_unstale_viewLim)
+   1855/0    0.102    0.000    0.000          {built-in method builtins.exec}
+    64326    0.100    0.000    0.465    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1742(tuple_prior_tuples)
+     5645    0.099    0.000    0.180    0.000 SP/dynesty/bounding.py:1192(randsphere)
+     8120    0.098    0.000    0.799    0.000 SP/scipy/_lib/array_api_extra/_lib/_funcs.py:60(apply_where)
+     2030    0.098    0.000    1.023    0.001 SP/scipy/stats/_continuous_distns.py:10423(_truncnorm_stats_scalar)
+    64220    0.098    0.000    0.116    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:193(check_assertions)
+    46815    0.097    0.000    0.238    0.000 SP/numpy/_core/shape_base.py:21(atleast_1d)
+     9661    0.097    0.000    0.155    0.000 SP/dynesty/utils.py:293(append)
+     5724    0.096    0.000    0.573    0.000 SP/numpy/lib/_function_base_impl.py:415(average)
+   209557    0.096    0.000    0.101    0.000 {built-in method builtins.min}
+      120    0.096    0.001    0.180    0.002 PyAutoFit/autofit/non_linear/samples/sample.py:147(from_lists)
+     5679    0.095    0.000    0.095    0.000 SP/dynesty/bounding.py:1175(logvol_prefactor)
+    68896    0.095    0.000    0.095    0.000 {method 'get' of 'mappingproxy' objects}
+    32644    0.095    0.000    0.796    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1533(log_prior_list_from_vector)
+     1422    0.094    0.000    0.135    0.000 SP/numpy/_core/numeric.py:2337(isclose)
+    24552    0.094    0.000    0.256    0.000 SP/matplotlib/transforms.py:1887(__init__)
+111404/111224    0.094    0.000    0.095    0.000 {method 'update' of 'dict' objects}
+    61119    0.093    0.000    0.274    0.000 PyAutoFit/autofit/non_linear/fitness.py:341(_is_jax)
+   293313    0.093    0.000    0.093    0.000 PyAutoFit/autofit/mapper/prior_model/attribute_pair.py:16(__init__)
+    62246    0.093    0.000    0.102    0.000 SP/scipy/_lib/array_api_compat/common/_helpers.py:72(_is_jax_zero_gradient_array)
+    14253    0.092    0.000    0.153    0.000 SP/numpy/ma/core.py:3024(_update_from)
+    83213    0.092    0.000    0.093    0.000 {method 'update' of 'set' objects}
+   2986/4    0.091    0.000    3.048    0.762 SP/matplotlib/text.py:926(get_window_extent)
+     3708    0.091    0.000    0.177    0.000 SP/matplotlib/transforms.py:2838(nonsingular)
+     3210    0.089    0.000    0.090    0.000 {built-in method posix.listdir}
+    82571    0.089    0.000    0.135    0.000 STDLIB/copy.py:231(_keep_alive)
+3491/3389    0.089    0.000    1.385    0.000 {built-in method builtins.__build_class__}
+    24546    0.089    0.000    0.203    0.000 SP/numpy/_core/numerictypes.py:471(issubdtype)
+    41470    0.088    0.000    0.088    0.000 {method 'match' of 're.Pattern' objects}
+    16354    0.088    0.000    0.108    0.000 {method 'writerow' of '_csv.writer' objects}
+     3030    0.086    0.000    1.598    0.001 SP/dynesty/sampler.py:447(add_live_points)
+    60990    0.086    0.000    0.086    0.000 {method 'split' of 'str' objects}
+    20628    0.086    0.000    0.086    0.000 SP/scipy/stats/_continuous_distns.py:370(_norm_cdf)
+    24125    0.085    0.000    0.201    0.000 SP/matplotlib/colors.py:278(to_rgba)
+   225355    0.085    0.000    0.085    0.000 PyAutoFit/autofit/mapper/prior_model/attribute_pair.py:23(tuple)
+    32884    0.085    0.000    0.560    0.000 SP/numpy/_core/fromnumeric.py:3052(max)
+85858/85798    0.085    0.000    0.085    0.000 {method 'format' of 'str' objects}
+    25482    0.084    0.000    0.137    0.000 SP/matplotlib/font_manager.py:1175(score_family)
+ 10826/11    0.084    0.000    6.492    0.590 SP/matplotlib/text.py:65(_get_text_metrics_with_cache)
+   183532    0.083    0.000    0.083    0.000 {method 'values' of 'dict' objects}
+    16244    0.082    0.000    0.330    0.000 PyAutoFit/autofit/messages/truncated_normal.py:185(calc_natural_parameters)
+    12071    0.082    0.000    0.176    0.000 SP/scipy/_lib/_util.py:423(_asarray_validated)
+81441/81336    0.082    0.000    0.224    0.000 {method 'join' of 'str' objects}
+    42011    0.080    0.000    1.517    0.000 SP/scipy/_lib/array_api_extra/_lib/_at.py:362(set)
+    31028    0.080    0.000    0.080    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+     1453    0.079    0.000    0.079    0.000 {built-in method _io.open_code}
+    45794    0.079    0.000    0.439    0.000 {method 'all' of 'numpy.ndarray' objects}
+     1045    0.079    0.000    0.358    0.000 SP/scipy/stats/_distn_infrastructure.py:2051(pdf)
+    40268    0.079    0.000    0.224    0.000 STDLIB/contextlib.py:299(helper)
+   266110    0.079    0.000    0.079    0.000 {method 'lstrip' of 'str' objects}
+    91517    0.078    0.000    0.103    0.000 STDLIB/enum.py:202(__get__)
+     4313    0.078    0.000    0.714    0.000 SP/matplotlib/text.py:157(_reset_visual_defaults)
+    55372    0.078    0.000    0.110    0.000 STDLIB/weakref.py:451(get)
+40268/38608    0.078    0.000    0.586    0.000 STDLIB/contextlib.py:132(__enter__)
+    48462    0.078    0.000    0.078    0.000 {method 'reset' of '_contextvars.ContextVar' objects}
+    53064    0.077    0.000    0.120    0.000 STDLIB/enum.py:720(__call__)
+    36800    0.077    0.000    0.611    0.000 SP/numpy/_core/fromnumeric.py:2477(any)
+    44714    0.076    0.000    0.357    0.000 {built-in method builtins.max}
+     1129    0.076    0.000    0.250    0.000 SP/dynesty/nestedsamplers.py:719(propose_live)
+    11274    0.075    0.000    0.159    0.000 SP/scipy/_lib/_docscrape.py:168(_is_at_section)
+     6527    0.075    0.000    0.076    0.000 PyAutoFit/autofit/messages/truncated_normal.py:216(invert_natural_parameters)
+    48462    0.075    0.000    0.075    0.000 {built-in method numpy._core._multiarray_umath._make_extobj}
+   136578    0.075    0.000    0.106    0.000 STDLIB/inspect.py:302(isclass)
+     6427    0.074    0.000    0.161    0.000 PyAutoFit/autofit/messages/interface.py:242(_combined_support)
+    57028    0.074    0.000    0.416    0.000 SP/matplotlib/artist.py:416(pchanged)
+     2939    0.074    0.000    0.410    0.000 SP/psutil/_pslinux.py:2299(open_files)
+    53267    0.074    0.000    0.129    0.000 <frozen importlib._bootstrap>:645(parent)
+    85824    0.074    0.000    0.074    0.000 {method 'pop' of 'list' objects}
+    10142    0.074    0.000    0.105    0.000 SP/matplotlib/font_manager.py:876(set_size)
+    17873    0.073    0.000    0.073    0.000 {built-in method posix.readlink}
+    11599    0.073    0.000    0.463    0.000 SP/matplotlib/transforms.py:805(from_extents)
+    57808    0.073    0.000    0.361    0.000 SP/numpy/_core/fromnumeric.py:2018(nonzero)
+    32363    0.072    0.000    0.642    0.000 SP/scipy/_lib/array_api_compat/_internal.py:33(wrapped_f)
+    42011    0.072    0.000    0.078    0.000 SP/scipy/_lib/array_api_compat/common/_helpers.py:194(is_dask_array)
+   8504/0    0.072    0.000    0.000          SP/matplotlib/artist.py:53(draw_wrapper)
+   252455    0.072    0.000    0.072    0.000 SP/numpy/_core/multiarray.py:383(where)
+     2808    0.071    0.000    0.204    0.000 STDLIB/inspect.py:2397(_signature_from_function)
+    18803    0.071    0.000    0.108    0.000 SP/scipy/_lib/array_api_compat/common/_helpers.py:923(size)
+    64220    0.071    0.000    0.352    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1762(direct_deferred_tuples)
+    11806    0.071    0.000    0.083    0.000 SP/numpy/_core/_methods.py:76(_count_reduce_items)
+    24230    0.071    0.000    0.288    0.000 SP/scipy/_lib/array_api_compat/common/_aliases.py:574(isdtype)
+75890/72594    0.071    0.000    0.218    0.000 <frozen abc>:121(__subclasscheck__)
+    14528    0.070    0.000    0.189    0.000 SP/scipy/_lib/_docscrape.py:67(read_to_condition)
+    61089    0.070    0.000   21.499    0.000 PyAutoFit/autofit/non_linear/fitness.py:764(__call__)
+     9784    0.070    0.000    0.075    0.000 SP/numpy/_core/numeric.py:367(full_like)
+      287    0.070    0.000    0.214    0.001 SP/matplotlib/artist.py:1435(get_aliases)
+     1129    0.070    0.000    3.466    0.003 SP/dynesty/sampling.py:154(generic_random_walk)
+    66908    0.069    0.000    0.069    0.000 SP/dynesty/utils.py:111(__float__)
+40268/38608    0.068    0.000    0.507    0.000 STDLIB/contextlib.py:141(__exit__)
+    64250    0.068    0.000    0.339    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1730(direct_prior_model_tuples)
+       15    0.068    0.005    0.087    0.006 {built-in method _pickle.load}
+    23782    0.066    0.000    0.066    0.000 SP/scipy/linalg/lapack.py:1062(_check_work_float)
+    12195    0.066    0.000    0.077    0.000 SP/matplotlib/cbook.py:259(__init__)
+4634/2886    0.065    0.000    0.344    0.000 STDLIB/inspect.py:2501(_signature_from_callable)
+     1215    0.065    0.000    0.178    0.000 SP/matplotlib/ticker.py:819(_set_format)
+      618    0.064    0.000    0.064    0.000 {built-in method builtins.dir}
+    64280    0.063    0.000    0.330    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1752(direct_prior_tuples)
+     3181    0.063    0.000    0.080    0.000 SP/numpy/lib/_shape_base_impl.py:621(column_stack)
+    48462    0.063    0.000    0.063    0.000 {method 'set' of '_contextvars.ContextVar' objects}
+     2639    0.063    0.000    0.149    0.000 SP/numpy/lib/_type_check_impl.py:373(nan_to_num)
+18959/18919    0.062    0.000    0.182    0.000 PyAutoFit/autofit/mapper/model.py:65(wrapper)
+     8794    0.062    0.000    0.117    0.000 SP/matplotlib/_api/__init__.py:147(check_shape)
+    62153    0.062    0.000    0.062    0.000 {method 'rpartition' of 'str' objects}
+    25226    0.062    0.000    0.325    0.000 SP/matplotlib/cbook.py:871(get_siblings)
+32902/26456    0.061    0.000    0.077    0.000 SP/matplotlib/transforms.py:165(_invalidate_internal)
+     9266    0.061    0.000    0.912    0.000 SP/matplotlib/markers.py:299(_set_marker)
+    24098    0.061    0.000    0.143    0.000 SP/matplotlib/lines.py:1309(set_ydata)
+    19954    0.061    0.000    0.174    0.000 {method 'all' of 'numpy.generic' objects}
+     7272    0.061    0.000    0.061    0.000 SP/matplotlib/transforms.py:2918(_interval_contains_close)
+    18575    0.061    0.000    0.141    0.000 SP/matplotlib/lines.py:1290(set_xdata)
+    13995    0.060    0.000    0.060    0.000 {method 'search' of 're.Pattern' objects}
+   119326    0.060    0.000    0.065    0.000 {method 'pop' of 'dict' objects}
+    55007    0.059    0.000    9.304    0.000 SP/dynesty/sampler.py:294(update_bound_if_needed)
+     8043    0.059    0.000    0.126    0.000 SP/matplotlib/transforms.py:1973(rotate)
+    17664    0.058    0.000    0.096    0.000 SP/scipy/linalg/blas.py:395(getter)
+    65748    0.058    0.000    0.473    0.000 SP/numpy/_core/_methods.py:67(_all)
+     5645    0.058    0.000    0.080    0.000 SP/scipy/linalg/_misc.py:17(norm)
+19122/19077    0.058    0.000    0.246    0.000 SP/matplotlib/transforms.py:1849(transform_affine)
+   364318    0.058    0.000    0.058    0.000 STDLIB/typing.py:2187(cast)
+     1407    0.057    0.000    1.183    0.001 SP/matplotlib/axis.py:1527(get_minorticklocs)
+      406    0.057    0.000    1.640    0.004 PyAutoFit/autofit/graphical/factor_graphs/abstract.py:270(_numerical_factor_jacobian)
+    17459    0.057    0.000    0.107    0.000 STDLIB/inspect.py:2743(__init__)
+    11756    0.057    0.000    0.130    0.000 SP/psutil/__init__.py:478(oneshot)
+    48222    0.057    0.000    0.134    0.000 SP/numpy/_core/_ufunc_config.py:456(__exit__)
+    49092    0.057    0.000    0.107    0.000 SP/numpy/_core/numerictypes.py:289(issubclass_)
+     1015    0.057    0.000    1.698    0.002 SP/scipy/stats/_distn_infrastructure.py:1148(stats)
+     9519    0.056    0.000    0.084    0.000 SP/matplotlib/transforms.py:2041(scale)
+     1561    0.056    0.000    0.056    0.000 {method 'argsort' of 'numpy.ndarray' objects}
+       60    0.056    0.001    0.983    0.016 PyAutoFit/autofit/mapper/prior_model/abstract.py:2196(log_prior_list_from)
+     8429    0.055    0.000    0.344    0.000 STDLIB/textwrap.py:419(dedent)
+    36222    0.055    0.000    0.313    0.000 {method 'max' of 'numpy.ndarray' objects}
+36128/18828    0.054    0.000    0.119    0.000 PyAutoFit/autofit/graphical/utils.py:131(nested_zip)
+    32644    0.054    0.000    0.357    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1552(<lambda>)
+    26847    0.054    0.000    0.400    0.000 SP/numpy/_core/fromnumeric.py:2589(all)
+     4181    0.053    0.000    0.053    0.000 {method 'cumsum' of 'numpy.ndarray' objects}
+     7921    0.053    0.000    0.134    0.000 SP/numpy/_core/_methods.py:235(_ptp)
+     2148    0.052    0.000    1.313    0.001 {built-in method _functools.reduce}
+     6427    0.052    0.000    0.885    0.000 PyAutoFit/autofit/messages/interface.py:275(sum_natural_parameters)
+     8472    0.052    0.000    0.074    0.000 STDLIB/pathlib.py:358(__init__)
+ 2340/525    0.052    0.000    0.141    0.000 STDLIB/re/_parser.py:512(_parse)
+     6081    0.052    0.000    0.288    0.000 SP/matplotlib/font_manager.py:656(__init__)
+     5951    0.052    0.000    0.173    0.000 PyAutoFit/autofit/mapper/variable.py:305(__op__)
+       30    0.051    0.002   50.124    1.671 SP/dynesty/sampler.py:920(run_nested)
+     4792    0.051    0.000    0.093    0.000 {method '__exit__' of '_io._IOBase' objects}
+    34065    0.050    0.000    0.126    0.000 SP/matplotlib/colors.py:219(_is_nth_color)
+    19483    0.050    0.000    1.310    0.000 SP/matplotlib/artist.py:1239(set)
+    47243    0.050    0.000    0.050    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+     9178    0.050    0.000    0.081    0.000 SP/numpy/_core/shape_base.py:80(atleast_2d)
+     4237    0.050    0.000    0.959    0.000 SP/matplotlib/font_manager.py:1293(findfont)
+      480    0.049    0.000    1.528    0.003 SP/dynesty/sampler.py:228(results)
+     2634    0.049    0.000    0.425    0.000 SP/matplotlib/patches.py:800(get_patch_transform)
+    34204    0.049    0.000    0.068    0.000 PyAutoFit/autofit/non_linear/samples/sample.py:13(__init__)
+    25793    0.048    0.000    0.261    0.000 SP/matplotlib/artist.py:102(_stale_axes_callback)
+     4387    0.048    0.000    0.113    0.000 SP/matplotlib/artist.py:1169(update_from)
+     4138    0.048    0.000    0.109    0.000 STDLIB/pathlib.py:387(_parse_path)
+   176885    0.048    0.000    0.048    0.000 {method 'strip' of 'str' objects}
+   111052    0.048    0.000    0.048    0.000 SP/scipy/_lib/_array_api_override.py:69(array_namespace)
+     3389    0.047    0.000    0.082    0.000 SP/numpy/_core/shape_base.py:220(vstack)
+    85493    0.047    0.000    0.093    0.000 PyAutoFit/autofit/mapper/model.py:239(<lambda>)
+     4692    0.047    0.000    0.169    0.000 SP/matplotlib/backend_bases.py:680(__init__)
+     3344    0.047    0.000    2.786    0.001 SP/scipy/_lib/_util.py:291(wrapper)
+     3707    0.047    0.000    0.047    0.000 SP/numpy/_core/getlimits.py:598(smallest_normal)
+    21457    0.046    0.000    0.262    0.000 {method 'sum' of 'numpy.ndarray' objects}
+     5890    0.046    0.000    0.059    0.000 SP/numpy/_core/numeric.py:1386(normalize_axis_tuple)
+    25482    0.046    0.000    0.150    0.000 SP/matplotlib/font_manager.py:1251(score_weight)
+    24620    0.046    0.000    0.282    0.000 {method 'min' of 'numpy.ndarray' objects}
+     3111    0.046    0.000    0.080    0.000 SP/matplotlib/transforms.py:617(translated)
+    30672    0.046    0.000    0.053    0.000 SP/yaml/reader.py:99(forward)
+      287    0.045    0.000    0.146    0.001 SP/matplotlib/artist.py:1513(get_setters)
+     4358    0.045    0.000    0.088    0.000 SP/matplotlib/lines.py:1158(set_linestyle)
+     5241    0.045    0.000    0.045    0.000 {built-in method builtins.round}
+     3344    0.045    0.000    0.087    0.000 SP/dynesty/bounding.py:190(major_axis_endpoints)
+   114394    0.045    0.000    0.045    0.000 {built-in method _operator.index}
+       30    0.044    0.001    0.056    0.002 SP/anesthetic/boundary.py:200(_kde_eval)
+     1001    0.044    0.000    2.520    0.003 PyAutoFit/autofit/messages/truncated_normal.py:312(kl)
+     2790    0.044    0.000    0.052    0.000 SP/matplotlib/ticker.py:1984(scale_range)
+     1468    0.043    0.000    0.046    0.000 {built-in method posix.mkdir}
+     3274    0.043    0.000    0.220    0.000 <frozen importlib._bootstrap_external>:1597(find_spec)
+     1816    0.043    0.000    0.063    0.000 SP/numpy/_core/_methods.py:99(_clip)
+     3142    0.043    0.000    0.105    0.000 PyAutoFit/autofit/messages/normal.py:179(calc_natural_parameters)
+     6690    0.042    0.000    0.137    0.000 PyAutoFit/autofit/mapper/model.py:235(direct_tuples_with_type)
+     1560    0.042    0.000    0.089    0.000 PyAutoFit/autofit/mapper/variable.py:285(__op__)
+     2393    0.042    0.000    0.615    0.000 SP/matplotlib/artist.py:786(set_clip_path)
+   126002    0.042    0.000    0.042    0.000 SP/matplotlib/artist.py:294(axes)
+    53447    0.042    0.000    0.371    0.000 SP/numpy/_core/_methods.py:58(_any)
+    17643    0.042    0.000    0.080    0.000 PyAutoFit/autofit/mapper/prior_model/collection.py:242(__setattr__)
+7014/7012    0.041    0.000    0.471    0.000 SP/matplotlib/transforms.py:1473(transform)
+     8731    0.041    0.000    0.489    0.000 SP/matplotlib/path.py:99(__init__)
+    10522    0.041    0.000    0.117    0.000 SP/matplotlib/transforms.py:2342(__init__)
+    19483    0.040    0.000    1.351    0.000 SP/matplotlib/artist.py:146(<lambda>)
+    62649    0.040    0.000    0.055    0.000 PyAutoFit/autofit/mapper/prior_model/abstract.py:1014(<lambda>)
+    35673    0.040    0.000    0.107    0.000 SP/scipy/linalg/lapack.py:1058(<genexpr>)
+     1215    0.040    0.000    0.148    0.000 SP/matplotlib/ticker.py:746(_compute_offset)
+     4757    0.040    0.000    0.064    0.000 <frozen posixpath>:71(join)
+    17684    0.040    0.000    0.334    0.000 STDLIB/re/__init__.py:280(_compile)
+     4293    0.040    0.000    0.056    0.000 STDLIB/inspect.py:3029(__init__)
+    31997    0.040    0.000    0.061    0.000 PyAutoFit/autofit/messages/interface.py:25(shape)
+     5999    0.040    0.000    0.446    0.000 SP/matplotlib/artist.py:1463(get_valid_values)
+    47931    0.040    0.000    0.040    0.000 {built-in method sys.intern}
+     2814    0.040    0.000    0.564    0.000 SP/matplotlib/ticker.py:214(format_ticks)
+     7036    0.040    0.000    0.171    0.000 SP/matplotlib/markers.py:250(_recache)
+    50554    0.039    0.000    0.045    0.000 SP/matplotlib/artist.py:725(get_figure)
+     1152    0.039    0.000    0.408    0.000 SP/matplotlib/axis.py:2810(get_tick_space)
+27266/27265    0.039    0.000    0.236    0.000 {method 'view' of 'numpy.ndarray' objects}
+    24360    0.039    0.000    0.039    0.000 SP/scipy/_lib/array_api_extra/_lib/_funcs.py:160(<genexpr>)
+
+
