@@ -23,12 +23,11 @@ name: pyauto-arxiv-papers
 #
 # Timing: arXiv announces new astro-ph at 20:00 US Eastern, Sun–Thu, which is
 # ~01:00 UK (00:00 UTC in summer / 01:00 UTC in winter) — the papers are live in
-# the small hours, NOT the morning. GitHub cron only ever jitters *later* (0–3 h
-# under load), never earlier, so there is no way to pin an exact delivery time;
-# the nominal is set early enough that even a worst-case slip still lands before
-# a UK scientist wakes. Nominal 02:00 UTC (03:00 BST / 02:00 GMT) → worst case
-# ~05:00–06:00 UK, so the digest is already waiting in #papers over morning
-# coffee, ~2 h after the overnight announcement. Mon–Fri only: arXiv does not
+# the small hours, NOT the morning. GitHub cron can start hours late (the
+# 2026-09-24 02:07 UTC schedule started at 07:32 UTC), so there is no defensible
+# hard upper bound on delivery time. The early nominal still gives the digest
+# headroom to land in the UK morning on ordinary days, and the announcement band
+# below stays stable across long cron slips. Mon–Fri only: arXiv does not
 # announce at weekends; the Tuesday run's band covers Friday→Monday in one
 # 3-day sweep.
 #
