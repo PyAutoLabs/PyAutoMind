@@ -12,6 +12,9 @@
   - autolens_profiling: feature/certified-solver-phase-b
 - parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p2 (feature/point-source-cpu-p2). The file sets are disjoint: this task edits scripts/imaging/likelihood_breakdown/fixed_light_trace.py, adds hpc/batch_gpu/submit_breakdown_imaging_fixed_light_certified_policy_a100_hst_fp64 and adds results/notes/certified_solver_policy_phase_b_2026_09.md. Recorded 2026-09-24 per the residue-p1/#267 precedent."
 - blocked-by-override: "Human 2026-09-24: measure phase B now against the RAL library mains (PyAutoArray#567 merged, unreleased). The Blocked-by gates only the default-flip config PR, which waits for the release."
+- commit: autolens_profiling 24e734c (feature/certified-solver-phase-b, pushed; no PR yet)
+- hpc: RAL array 350588 (20 tasks, submitted 2026-09-24); RAL autolens_profiling checkout on feature/certified-solver-phase-b; PyAuto mirror synced to mains (PyAutoArray 11b93476)
+- next: "HUMAN RESUME POINT: once 350588 finishes, pull results/breakdown/imaging/*_lib*_fb*_b16_* JSONs + .out, check 20/20 rc and the per-composition gate, write results/notes/certified_solver_policy_phase_b_2026_09.md, /ship_workspace, then switch the RAL checkout back to main."
 - summary: Phase B of certified-positive-solver, continuing the HST imaging GPU campaign. A library-Settings-driven solver arm in the fixed_light_trace --vmap-batch cell compares library PDIP, certified+pdip and certified+none against scalar jit at B=4/8/16 for Delaunay and rectangular on an A100 (20-task array), with a per-composition 1e-9 gate. The harvest session writes the policy note; the session ends at submit.
 
 ## point-source-cpu-p2
