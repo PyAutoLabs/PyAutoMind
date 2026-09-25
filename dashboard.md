@@ -40,11 +40,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 7 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 229 |
+| [Backlog](#backlog) (`draft/`) | 230 |
 
 > **No batch in flight.**
 
@@ -148,7 +148,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 114
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 115
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -262,14 +262,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/eyes_birth_organ_row.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/hpc_cache_off_home_phase2.md">Keep caches off <code>$HOME</code> on HPC — phase 2: autolens_profiling + euclid…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/310">issue #310</a> — issued 2026-09-25 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/311">autolens_profiling#311</a></summary>
-
-```
-/start_dev active/hpc_cache_off_home_phase2.md
 ```
 
 </details>
@@ -611,7 +603,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**229** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **48** of them belong to an epic and are listed only under [Epics](#epics) below.
+**230** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **48** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -1613,7 +1605,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 21</summary>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -1627,6 +1619,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/maintenance/pyautobrain/workspace_resolver_fanout.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> — workspaces · small · supervised · medium</summary>
+
+```
+/start_dev draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md
 ```
 
 </details>
@@ -2380,7 +2380,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | issued | <a href="active/eyes_birth_organ_row.md">PyAutoEyes phase 0 — organ row, boundary prose, local move</a> |
-| 2026-09-25 | issued | <a href="active/hpc_cache_off_home_phase2.md">Keep caches off <code>$HOME</code> on HPC — phase 2: autolens_profiling + euclid…</a> |
+| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-25 | issued | <a href="active/interferometer_mge_breakdown_jax_cpu_gpu.md">Interferometer likelihood campaign 1/3: MGE breakdown on JAX CPU and…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/bug/autofit/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op…</a> |
