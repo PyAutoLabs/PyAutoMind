@@ -14,18 +14,26 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: draft — gated on the phase C1 verdict (autolens_profiling, certified-solver-phase-c1-lane-rate) and the PyAutoArray#567 release
+Status: draft — C1 verdict recorded 2026-09-25 (human: proceed; build rule passes in 3/4 cells, rectangular pix1 11% — see "C1 findings"); still blocked on the PyAutoArray#567 release
 Epic: certified-positive-solver
 Phase: C2
 Consequence: judge
-Blocked-by: phase C1 verdict (build only if the projected guarded cost at production B=20 is >= 15% below the best zero-code option and the uncertified-lane rate is near zero); the PyAutoArray release shipping PyAutoArray#567
-Witness: (1) a measured uncertified-lane rate on real Nautilus batches spread across the prior
-(not near-fiducial draws) for HST Delaunay N=1500 and rectangular, A100 fp64, at the Nautilus batch
-size production actually uses; (2) if the rate justifies it, one matched A100 table where the
-guarded batch (certified + fallback none under `jax.jit(jax.vmap(fn))`, uncertified lanes re-run
-through the scalar certified+PDIP program) runs within a few percent of the certified+none batch
-cost, every lane pinned to <= 1e-9 against scalar library PDIP, with an injected-uncertified-lane
-test proving the re-run path fires and replaces the lane's value.
+Blocked-by: the PyAutoArray release shipping PyAutoArray#567 (the C1 verdict is recorded: human chose to proceed on 2026-09-25)
+Witness: (1) DONE by C1 (autolens_profiling#304): uncertified-lane rate measured on real
+Nautilus batches, 1.9-4.9% overall, 0 in the late half. (2) One matched A100 fp64 table (HST
+Delaunay N=1500 and rectangular, production B=20) where the guarded batch (certified + fallback
+none under `jax.jit(jax.vmap(fn))`, uncertified lanes re-run through the scalar certified+PDIP
+program) runs within a few percent of the certified+none batch cost, gated by a gate
+PRE-REGISTERED before the run: (a) a near-peak nats pin — every finite lane with log L within
+Δ of the batch maximum agrees with scalar library PDIP to within a pinned tolerance in nats
+(PROPOSAL for the human, not yet decided: Δ = 100 nats, pin 0.1 nats); (b) a gated
+cross-composition check (vmap vs per-lane scalar jit of the same Settings) and a gated capture
+check (vs the capture's own Fitness value) on the same near-peak lanes, so a B=50-style
+composition fault (draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md) fails
+the gate instead of passing it; (c) PDIP `converged` / `iterations` recorded per lane from the
+`stats=` dict (PyAutoArray#572); (d) stated NaN handling (a NaN lane is counted and reported per
+composition; whether a NaN on a lane outside Δ fails the gate is decided at pre-registration);
+plus an injected-uncertified-lane test proving the re-run path fires and replaces the lane's value.
 Review-minutes: 30
 Unattended: no
 Filed: 2026-09-24
@@ -48,7 +56,7 @@ worth building.
 
 ## What
 
-1. **Measure first (autolens_profiling).** The phase-B lanes were one seeded draw family near the
+1. **DONE by C1 (autolens_profiling#304, 2026-09-25) — see "C1 findings".** **Measure first (autolens_profiling).** The phase-B lanes were one seeded draw family near the
    fiducial. Measure the uncertified-lane rate (and max passes vs the packaged budget 16) on real
    Nautilus batches: lanes drawn across the prior / from an actual Nautilus run's proposal batches,
    Delaunay and rectangular, at the batch size Nautilus uses in production. At a rate near zero the
@@ -75,6 +83,48 @@ worth building.
   always runs `jit(vmap)`, so this phase is the lever that reaches real fits.
 - Delaunay carries a ~2e-10 run-to-run nondeterminism floor and a ~2.5e-9 cross-composition
   residual (program properties, not solver); do not draw pins tighter than 1e-9 on Delaunay.
+
+## C1 findings (autolens_profiling#304, RAL array 350768)
+
+Note: `autolens_profiling/results/notes/certified_solver_phase_c1_lane_rate_2026_09.md` (its
+"Decisions (human, 2026-09-25)" section records the choices below).
+
+- The C1 pre-registered gate (own-composition 1e-9 pin) FAILED and stays recorded as failed. The
+  failures are lanes about 6e4-2.2e5 nats below the batch peak, where PDIP disagrees with itself
+  between compilations (<= 0.86 nats gated, up to 1.8 nats across programs), and the designed
+  uncertified iterates of `certified_fallback=none` (up to 57 nats timed, 141 nats in the rate
+  replay), which the PDIP fallback catches.
+- Uncertified rate (certified+none, B=20 chunks, budget 16): 1.97% / 4.88% / 1.88% / 2.46%
+  (Delaunay pix1 / Delaunay pix2 / rectangular pix1 / rectangular pix2); prior phase 11.7-20.6%;
+  late half 0 in every cell. "Near zero" is arguable.
+- At B=50 `jit(vmap)` returns wrong values on 44-50/50 lanes and the own-composition gate is blind
+  to it: filed as `draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md`.
+- Build rule, from the C1 B=20 timings. Guarded = certified+none vmap + overall rate x scalar
+  certified+PDIP. Best safe zero-code option = library PDIP `jit(vmap)` (unguarded certified+none
+  is not safe, so it is excluded):
+
+  | cell | certified+none vmap | rate | scalar cert+PDIP | guarded | library PDIP vmap | saving | >= 15%? |
+  |---|---:|---:|---:|---:|---:|---:|---|
+  | Delaunay pix1 | 30.5 | 1.97% | 44.3 | 31.4 | 43.0 | 27% | yes |
+  | Delaunay pix2 | 13.2 | 4.88% | 43.6 | 15.3 | 22.8 | 33% | yes |
+  | rectangular pix1 | 26.5 | 1.88% | 44.7 | 27.3 | 30.6 | 11% | **no** |
+  | rectangular pix2 | 11.5 | 2.46% | 35.7 | 12.4 | 17.0 | 27% | yes |
+
+  At the prior-phase rates the guard loses on rectangular (pix1 26.5 + 14.3% x 44.7 = 32.9 vs 30.6;
+  pix2 11.5 + 20.0% x 35.7 = 18.6 vs 17.0) and roughly ties on Delaunay pix2 (22.2 vs 22.8).
+  The human chose to proceed with 3/4 cells passing.
+
+## Open questions for C2
+
+- **Per-mesh policy:** rectangular pix1 misses the 15% rule (11%). Should rectangular pix1 (or
+  all rectangular stages during the prior phase) stay on library PDIP `jit(vmap)` while Delaunay
+  and rectangular pix2 move to the guarded batch?
+- Gate parameters Δ and the nats pin (proposal above: Δ = 100, pin 0.1 nats) — human decision at
+  pre-registration.
+- Do the catastrophic-lane PDIP disagreements coincide with `converged=False` / `iterations =
+  max_iter` (C1 open question 4)? Does one executable re-run on those lanes return identical bits?
+- NaN on catastrophic lanes in some compositions only (C1 open question 5): does production care,
+  given Fitness resamples non-finite values?
 
 ## Design sketched at C1 planning (2026-09-24)
 
