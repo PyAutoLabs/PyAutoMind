@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/eyes_birth_organ_row.md">PyAutoEyes phase 0 — organ row, boundary prose, local move</a> — issued 2026-09-25</summary>
+<details><summary>📋 <a href="active/eyes_birth_organ_row.md">PyAutoEyes phase 0 — organ row, boundary prose, local move</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/437">issue #437</a> — issued 2026-09-25 — workspace-dev</summary>
 
 ```
 /start_dev active/eyes_birth_organ_row.md

@@ -1,5 +1,21 @@
 # Active Tasks
 
+## pyautoeyes-birth-organ-row
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/437
+- issued: 2026-09-25
+- prompt: active/eyes_birth_organ_row.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-25; session ID unavailable
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-25 (Fable architect); human-only: gh repo rename, .github row, Heart RED override
+- worktree: /home/jammy/Code/PyAutoLabs-wt/pyautoeyes-birth-organ-row
+- repos:
+  - PyAutoMind: feature/pyautoeyes-birth-organ-row
+  - PyAutoBrain: feature/pyautoeyes-birth-organ-row
+  - PyAutoHeart: feature/pyautoeyes-birth-organ-row
+  - PyAutoHands: feature/pyautoeyes-birth-organ-row
+  - pyautolabs.github.io: feature/pyautoeyes-birth-organ-row
+  - PyAutoScientist: feature/pyautoeyes-birth-organ-row
+
 ## certified-solver-phase-c1-lane-rate
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
 - issued: 2026-09-24
