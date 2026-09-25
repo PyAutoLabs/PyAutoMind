@@ -86,7 +86,12 @@
   - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-finder
 - summary: Phase 2/3 of the positions work: model-guided finder (compute peaks, fixed-centre SIE+shear quick fit, numpy forward solve, reconcile, iterate) in a shared pure-numpy module used by segmentation.py, util.py and the gate. Witness: human-approved 10-lens sample in euclid_dr1 inspect/positions_sample, then the census.
 - parallel-claim: "2026-09-24 human go: own worktree alongside #103 (branch stacked on feature/euclid-dr1-positions-gate, PR #104 open unmerged, deliberate dependency; retarget to main after merge) and #102 (disjoint files: catalogue/, inspection bundle). Brain sized too-large/4-phase; human approved one task, one PR."
-- resume: branch pushed 2026-09-24 (12 commits a397337..4174ab8 on feature/euclid-dr1-positions-finder, stacked on gate 485eb9a; 342 tests pass + 1 pre-existing unrelated fail). Plan revised in-session (issue comment): production = SNR>=3 peaks + 0.7" de-dup + phase 1 gate + pair floor; solver/reconcile loop kept as diagnostics. NO PR yet. Next: human /ship_workspace (Heart RED → explicit override needed), PR base feature/euclid-dr1-positions-gate, retarget after #104 merges; census run is phase 3.
+- pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/106 (base feature/euclid-dr1-positions-gate; retarget to main after #104 merges)
+- heart-red-override:
+  - authorization: live user 2026-09-25 answered "Override, open the PR" to the named #105 development override (push + open PR; merge stays human via /prm)
+  - red-reasons: `release validation FAILED (stage integrate)`; `workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more)`; `manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml`
+  - passed: pytest 139 (not slow) incl. 9 new rewrite_positions tests at 53cc0d3; 150/150 regression vs the human-approved old-vs-new comparison
+- resume: PR #106 open (3 new commits a195033/b8e8d79/53cc0d3 add rewrite_positions.py + segmentation.write_positions). Rollout plan approved 2026-09-25: human /prm #104 then #106 -> sync RAL pipeline -> rewrite_positions priority pass on the first 250 dr1_sep1_rest tiles (sorted) -> full dr1_sep1_rest + dr1_sep1_top1000 CPU array -> rsync rest positions back to local. RAL output for the 10 rest_01 lenses deleted for a fresh start (Tile102004820… left: job 350664_6 still running, human to scancel).
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
