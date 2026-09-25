@@ -23,6 +23,7 @@ Review-minutes: 15
 Epic: pyautoeyes-birth
 Phase: 0
 Filed: 2026-09-25
+Issued: 2026-09-25
 
 Phase 0 of 6 in the `pyautoeyes-birth` epic. **Human-gated** (the GitHub rename
 and the org-profile row are human acts). Gates phase 1 (the restructure needs
