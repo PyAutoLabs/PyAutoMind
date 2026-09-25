@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 219 |
+| [Backlog](#backlog) (`draft/`) | 220 |
 
 > **No batch in flight.**
 
@@ -610,10 +610,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**219** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **38** of them belong to an epic and are listed only under [Epics](#epics) below.
+**220** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **40** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 68</summary>
+<summary><b>bug</b> — 67</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
 
@@ -699,14 +699,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autogalaxy/sersiccoresph_has_no_mass_to_light_ratio.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md"><code>scripts/interferometer/likelihood_breakdown/delaunay.py</code> is OOM-killed on <code>sma</code>…</a> — autolens_profiling · small · safe · medium</summary>
-
-```
-/start_dev draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md
 ```
 
 </details>
@@ -2849,12 +2841,28 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 </details>
 
 <details>
-<summary><b>numba-interferometer-revisit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>interferometer-likelihood-campaign</b> — 3 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_numba_library_dispatch_insitu.md">Re-measure the numba interferometer crossover in situ, through the library dispatch</a> — autolens_profiling · medium · supervised · medium</summary>
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md">Interferometer likelihood campaign 2/3: Delaunay-1500 and rectangular mesh breakdown on JAX A100…</a> — autolens_profiling · large · supervised · high</summary>
 
 ```
-/start_dev draft/research/autolens_profiling/interferometer_numba_library_dispatch_insitu.md
+/start_dev draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md">Interferometer likelihood campaign 3/3: mesh breakdown on numba sparse CPU…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_mge_breakdown_jax_cpu_gpu.md">Interferometer likelihood campaign 1/3: MGE breakdown on JAX CPU and A100 GPU…</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_mge_breakdown_jax_cpu_gpu.md
 ```
 
 </details>
@@ -2912,7 +2920,7 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 
 </details>
 
-50 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+52 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2940,7 +2948,6 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md — unknown theme keyword(s): caustics, lens-calc`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
-- `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
 - `draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/bug/euclid/drawer_pix_initializer_exception_flake.md — unknown theme keyword(s): euclid, ci, source-reconstruction`
@@ -2963,6 +2970,9 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
+- `draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
+- `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md — unknown theme keyword(s): likelihood-profiling`
+- `draft/research/autolens_profiling/interferometer_mge_breakdown_jax_cpu_gpu.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
 - `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md — unknown theme keyword(s): jax`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
