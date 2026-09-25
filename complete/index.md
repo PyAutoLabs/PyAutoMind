@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1556 records across 8 buckets.
+1557 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -272,6 +272,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtofit-tutorials-1-3](2026/09/howtofit-tutorials-1-3.md)
 - [howtolens-ch3-mask-overlay](2026/09/howtolens-ch3-mask-overlay.md)
 - [hpc-cache-off-home](2026/09/hpc-cache-off-home.md)
+- [hpc-cache-off-home-phase2](2026/09/hpc-cache-off-home-phase2.md)
 - [hst-gpu-residue-p1](2026/09/hst-gpu-residue-p1.md)
 - [hst-gpu-residue-p2](2026/09/hst-gpu-residue-p2.md)
 - [hst-gpu-residue-p3](2026/09/hst-gpu-residue-p3.md)
