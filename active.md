@@ -19,11 +19,15 @@
 - issued: 2026-09-25
 - prompt: active/mge_nnls_grad_nan.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-25
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - autonomy: human-required (header); plan approved in-session 2026-09-25 (choose polish vs effective-kappa on evidence; runtime vs autolens_profiling from a detached scratch worktree, no profiling claim)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/mge-nnls-grad-nan
 - repos:
   - PyAutoArray: feature/mge-nnls-grad-nan
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/574
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/574
+- corrective-red: "release validation FAILED (stage integrate) — clears the autolens_workspace_test imaging/jax_grad/mge.py NaN-gradient failure (siblings a2744/lenstool fixed by autolens_workspace#577); human authorization https://github.com/PyAutoLabs/PyAutoArray/issues/573#issuecomment-5837171428; merge is a separate /prm; Heart stays RED until a fresh Release Integrate passes"
+- resume: polish chosen (kappa_eff rejected, 6/48 NaN); smoke 159 PASS + 1 pre-existing-on-main fail (autolens_workspace_test interferometer/jax_likelihood/mge.py vmap logL -4.556e7 vs pin -3152.65, identical on 3de624b5 — needs its own bug task); worktree activate.sh PYTHONPATH points at autolens-visualization-birth worktree (tooling bug).
 
 ## certified-solver-phase-c1-lane-rate
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
