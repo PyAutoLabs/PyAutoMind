@@ -9,6 +9,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Filed: 2026-09-25
 Consequence: glance
 Witness: same as phase 1 (`draft/maintenance/workspaces/hpc_cache_off_home.md`): each `activate.sh` HPC branch exports every cache under `${PYAUTO_HPC_CACHE:-$PYAUTO_HPC_BASE/../.cache}`; `git grep -E "(NUMBA_CACHE_DIR|MPLCONFIGDIR)=/tmp" -- hpc/` returns nothing in autolens_profiling (103 files on 2026-09-25) — keep any per-task `JAX_COMPILATION_CACHE_DIR` the profiling scripts set deliberately (fresh-cache autotune discipline).
 

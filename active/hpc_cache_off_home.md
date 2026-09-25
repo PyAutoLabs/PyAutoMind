@@ -11,6 +11,8 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Status: formalised
+Issued: 2026-09-25
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/13
 Consequence: glance
 Witness: sourcing each repo's `activate.sh` with `PYAUTO_HPC_BASE` set exports `XDG_CACHE_HOME`, `PIP_CACHE_DIR`, `MPLCONFIGDIR`, `NUMBA_CACHE_DIR`, `CUDA_CACHE_PATH`, `TRITON_CACHE_DIR` and `JAX_COMPILATION_CACHE_DIR` under `${PYAUTO_HPC_CACHE:-$PYAUTO_HPC_BASE/../.cache}` (a preset value still wins); `git grep -E "(NUMBA_CACHE_DIR|MPLCONFIGDIR)=/tmp" -- hpc/` returns nothing in autolens_inference.
 

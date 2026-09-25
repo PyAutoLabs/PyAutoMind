@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [hpc-cache-off-home-phase2](#hpc-cache-off-home-phase2)
 - [vis-magnitude-catalogue-top1000](#vis-magnitude-catalogue-top1000)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
@@ -10,6 +11,17 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 
 <!-- toc:end -->
+
+## hpc-cache-off-home-phase2
+- prompt: draft/maintenance/workspaces/hpc_cache_off_home_phase2.md
+- planned: 2026-09-25
+- classification: workspace
+- suggested-branch: feature/hpc-cache-off-home-p2
+- affected-repos:
+  - autolens_profiling
+  - euclid_strong_lens_modeling_pipeline
+- blocked-by: certified-solver-phase-c1-lane-rate (autolens_profiling); euclid-dr1-positions-gate, euclid-dr1-positions-finder, vis-lp-inspection-bundle (euclid_strong_lens_modeling_pipeline)
+- note: Phase 2 of autolens_inference#13 — apply phase 1's activate.sh block and drop the 103 /tmp cache lines in autolens_profiling hpc/ submits once the claims clear.
 
 ## vis-magnitude-catalogue-top1000
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/95

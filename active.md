@@ -1,5 +1,20 @@
 # Active Tasks
 
+## hpc-cache-off-home
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/13
+- issued: 2026-09-25
+- prompt: active/hpc_cache_off_home.md
+- session: Claude Code CLI (Opus 5.5), 2026-09-25
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-25 (tracked activate.sh block + autolens_inference /tmp tidy; phase 2 in planned.md)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/hpc-cache-off-home
+- repos:
+  - autolens_inference: feature/hpc-cache-off-home
+  - autolens_assistant: feature/hpc-cache-off-home
+  - autogalaxy_assistant: feature/hpc-cache-off-home
+  - autofit_assistant: feature/hpc-cache-off-home
+- resume: RAL hot-fix already live in /mnt/ral/jnightin/PyAuto/PyAuto/bin/activate (backup .bak_20260925); this task makes it durable in tracked activate.sh.
+
 ## certified-solver-phase-c1-lane-rate
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
 - issued: 2026-09-24
