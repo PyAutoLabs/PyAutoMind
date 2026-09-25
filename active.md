@@ -1,5 +1,26 @@
 # Active Tasks
 
+## hpc-cache-off-home-phase2
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/310
+- issued: 2026-09-25
+- prompt: active/hpc_cache_off_home_phase2.md
+- session: Claude Code CLI (Opus 5.5 subagent), 2026-09-25; session ID unavailable
+- status: awaiting-merge
+- autonomy: supervised (header); plan approved live 2026-09-25 ("ok push it through")
+- worktree: /home/jammy/Code/PyAutoLabs-wt/hpc-cache-off-home-phase2
+- repos:
+  - autolens_profiling: feature/hpc-cache-off-home-p2
+  - euclid_strong_lens_modeling_pipeline: feature/hpc-cache-off-home-p2
+- parallel-claim: "autolens_profiling is also claimed by interferometer-mge-breakdown (feature/interferometer-mge-breakdown); disjoint files: this task edits activate.sh, AGENTS.md, scripts/misc/test/test_fixed_light_s4.py and the 107 main-branch hpc/ submits; the six hpc/batch_gpu/submit_breakdown_interferometer_mge_a100_* exist only on that branch and are untouched here. euclid_strong_lens_modeling_pipeline is also claimed by vis-lp-inspection-bundle (feature/vis-lp-inspection-bundle); its diff (catalogue/, scripts/build_inspection_bundle.sh, scripts/tools/build_inspect.py, hpc/batch_cpu/submit_build_inspection_bundle, tests/, READMEs) does not touch activate.sh, the only file this task edits there. Recorded 2026-09-25 per the #177 / residue-p1 precedent."
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/311
+- heart-red-override:
+  - authorization: live human "ok push it through" (2026-09-25) to "Go ahead with this plan, including the override for phase 2?" — development shipping only (push + pending-release PRs); merge needs separate /prm with green checks; no release.
+  - red-reasons: "release validation FAILED (stage integrate)"
+  - passed: autolens_profiling @ 0ed55f2 — bash -n 108 files, check_submits --check 14/0 failing, pytest scripts/misc/test 912 PASS / 5 skipped, build_readme --check, ruff check+format, fake-base activate.sh witness, /tmp git grep empty.
+- blocked: euclid_strong_lens_modeling_pipeline commit a7f0d0a (activate.sh block only) is LOCAL, NOT pushed — repo test gate fails: tests/test_compute_latent_variable.py::test_latent_euclid_variables_traces_under_jax_jit (total_source_flux jit 3.511 vs eager 3.320), identical on main 94f9244 locally and in main CI "Tests" (red since a89a468, 2026-09-25). Not caused by this branch (no test sources activate.sh); needs a human call: fix main first, or authorise pushing this PR onto a red main.
+- resume: human /prm autolens_profiling#311; then decide the euclid PR (push a7f0d0a from the worktree + open PR with the override record).
+- summary: Phase 2 of autolens_inference#13: phase 1's activate.sh cache block in autolens_profiling + euclid pipeline; /tmp numba/matplotlib cache exports removed from 107 autolens_profiling hpc/ submits.
+
 ## pyautoeyes-birth-organ-row
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/437
 - issued: 2026-09-25
@@ -90,4 +111,5 @@
 - parallel-claim: "autolens_profiling is also claimed by certified-solver-phase-c1-lane-rate (feature/certified-solver-phase-c1-lane-rate). Disjoint file sets: that task is imaging/nautilus capture + imaging submits + results/breakdown/imaging/nautilus_batches_*; this task adds scripts/interferometer/likelihood_breakdown/mge.py, hpc/batch_gpu/submit_breakdown_interferometer_mge_*, results/breakdown/interferometer/mge_*, results/notes/interferometer_mge_breakdown_2026_09.md and edits scripts/misc/vram/config.py. Only shared surface is the generated README dashboard (regenerate at ship). Recorded 2026-09-25 per the #177 precedent."
 - ral-jobs: RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/interferometer-mge-breakdown @ 0dd0d20 (git bundle, not on GitHub). First A100 pass 351054-351059 INVALID except sma (RAL venv nufftax 0.4.0 < PyAutoArray floor 0.6.1 auto-dispatches fp32 Pallas on GPU; probe 351062: type2 1.05e-4 rel, pure-JAX fp64 2.9e-13 and 13x faster). jvla 351058/9 cancelled.
 - resume: BLOCKED on the human running `ssh euclid_jump '/mnt/ral/jnightin/PyAuto/PyAuto/bin/pip install "nufftax==0.6.1"'` (dry-run: only nufftax moves; classifier blocks agents from the shared venv). Then resubmit the 6 hpc/batch_gpu/submit_breakdown_interferometer_mge_a100_* from the RAL worktree (jvla_mp afterok jvla_fp64), pull, set configuration.nufftax_version=0.6.1, lint, commit; then phase C (note + vram/config.py + follow-up prompts incl. RAL venv floor drift: anesthetic/dynesty/psutil/tfp-nightly). Laptop phase A committed 3924280; uncommitted 0.4.0-flagged A100 JSONs in the laptop worktree.
+- hpc-cache-cleanup: "hpc-cache-off-home-phase2 (autolens_profiling#310, PR #311) removed every NUMBA_CACHE_DIR/MPLCONFIGDIR=/tmp export from main's hpc/ submits and added the cache block to activate.sh; the six hpc/batch_gpu/submit_breakdown_interferometer_mge_a100_* on this branch were excluded — drop their /tmp cache exports before this task merges (activate.sh now sets them under /mnt/ral/jnightin/.cache)."
 - summary: Interferometer likelihood campaign 1/3: interferometer MGE breakdown cell on the shared harness (+ exploratory W~ func-list arm), JAX CPU + RAL A100 fp64 (mp on A100) across sma/alma/alma_high(/jvla), VRAM block re-test, ranked lever note + follow-up prompts.
