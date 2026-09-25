@@ -18,7 +18,7 @@ Status: draft — C1 verdict recorded 2026-09-25 (human: proceed; build rule pas
 Epic: certified-positive-solver
 Phase: C2
 Consequence: judge
-Blocked-by: the PyAutoArray release shipping PyAutoArray#567 (the C1 verdict is recorded: human chose to proceed on 2026-09-25)
+Blocked-by: the PyAutoArray release shipping PyAutoArray#567 (C1 is COMPLETE: `complete/2026/09/certified-solver-phase-c1-lane-rate.md`, autolens_profiling#309 merged 2026-09-25; human chose to proceed)
 Witness: (1) DONE by C1 (autolens_profiling#304): uncertified-lane rate measured on real
 Nautilus batches, 1.9-4.9% overall, 0 in the late half. (2) One matched A100 fp64 table (HST
 Delaunay N=1500 and rectangular, production B=20) where the guarded batch (certified + fallback

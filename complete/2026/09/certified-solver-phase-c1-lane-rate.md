@@ -1,3 +1,20 @@
+## certified-solver-phase-c1-lane-rate
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
+- completed: 2026-09-25
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/309 (merge 21875f37)
+- heart-red-override: shipped under a recorded development-only Heart RED override (2026-09-25; release validation FAILED at stage integrate, not from this branch; merge authorized separately via /prm).
+- summary: Certified-positive-solver phase C1 captured real Nautilus proposal batches at production n_batch=20 (HST fixed-light, Delaunay N=1500 + rectangular pix1/pix2; RAL captures 350659/350766, replay 350768) and replayed them on A100 fp64 under certified + fallback none jit(vmap).
+- result: the uncertified-lane rate is 1.9–4.9% overall and 0 in the late half of the run.
+- gate: the pre-registered 1e-9 own-composition per-lane gate FAILED. That is recorded, and the gate was not loosened. The failing lanes sit 6e4–2.2e5 nats below the peak, plus the uncertified `none` iterates.
+- trap: B=50 jit(vmap) is silently wrong. Filed as draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md.
+- memory: B=100 runs out of memory at ~74 GiB. This is the pre-registered memory-limit row (no JSON).
+- decision (human, 2026-09-25): C2 goes ahead with a near-peak gate of Δ=100 nats and a 0.1 nat pin. Rectangular pix1 stays on library PDIP.
+- also: re-pinned the xla_attribution log-det anchors to PyAutoArray 5f8a8dee. They had been stale since PyAutoArray#571, and the re-pin makes autolens_profiling main's lint green.
+- note: results/notes/certified_solver_phase_c1_lane_rate_2026_09.md
+- next: draft/feature/autofit/certified_solver_batched_guard_c2.md
+
+## Original prompt
+
 # Certified solver phase C1 — uncertified-lane rate and batched timing on real Nautilus batches
 
 Type: feature

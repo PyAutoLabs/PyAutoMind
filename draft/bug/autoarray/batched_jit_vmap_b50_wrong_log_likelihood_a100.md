@@ -55,7 +55,7 @@ not a solver question: every solver shows it (library PDIP, certified+PDIP, cert
 
 ## Evidence
 
-- autolens_profiling commit `e38f645` (branch `feature/certified-solver-phase-c1-lane-rate`):
+- autolens_profiling commit `e38f645` (on main via autolens_profiling#309; record `complete/2026/09/certified-solver-phase-c1-lane-rate.md`):
   JSONs `results/breakdown/imaging/*jitvmap50_captured_pix1*` (six tasks: 14-16 Delaunay, 26-28
   rectangular), per-lane `vmap.lane_construction.lane_rows`.
 - Sidecar: `results/notes/certified_solver_phase_c1_job350768.json` (sacct rows, allocator

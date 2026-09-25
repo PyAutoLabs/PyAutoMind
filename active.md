@@ -19,29 +19,6 @@
   - PyAutoNerves: feature/pyautoeyes-birth-organ-row
   - PyAutoGut: feature/pyautoeyes-birth-organ-row
 
-## certified-solver-phase-c1-lane-rate
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
-- issued: 2026-09-24
-- prompt: active/certified_solver_phase_c1_lane_rate.md
-- session: Claude Code CLI (Opus 5.5), 2026-09-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/309
-- autonomy: supervised (header); plan approved in-session 2026-09-24 (measurement only; release block overridden by the human, runs against library mains incl. unreleased PyAutoArray#567)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/certified-solver-phase-c1-lane-rate
-- repos:
-  - autolens_profiling: feature/certified-solver-phase-c1-lane-rate
-- parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p3 (feature/point-source-cpu-p3). Disjoint file sets: that task adds scripts/point_source/likelihood_breakdown/static_lattice_ab.py, point-source RAL submits, results/breakdown/point_source/static_lattice_ab_* and results/notes/point_source_cpu_campaign.md; this task adds scripts/imaging/likelihood_breakdown/nautilus_batch_capture.py, a --lanes captured mode in scripts/imaging/likelihood_breakdown/fixed_light_trace.py, hpc/batch_gpu/submit_breakdown_imaging_fixed_light_certified_lane_rate_a100_hst_fp64 (+ static test), results/breakdown/imaging/nautilus_batches_* and results/notes/certified_solver_phase_c1_lane_rate_2026_09.md. Recorded 2026-09-24 per the residue-p1/#267 precedent."
-- ral-jobs: 2026-09-25 RESUBMIT @ be01a52 (rect pix1+pix2 now free al.reg.Adapt as production; #572 `preconditioning` forwarded by the harness wrappers) — capture 350766 (array 1,3: rectangular pix1/pix2) → replay 350768 (array 4-37, afterok:350766). Delaunay captures from 350659_0/_2 reused (AdaptSplit, fingerprint unchanged). Old run: 350659_3 failed (rect pix2 had 1 free param → Nautilus needs ≥2), 350663 cancelled (DependencyNeverSatisfied); stale Constant rect captures moved to results/breakdown/imaging/stale_constant_350659/ on RAL. OUTCOME (checked 2026-09-25): 350766_1/_3 COMPLETED (16m/6m, no OOM); 350768_4-7 rate COMPLETED; 350768 time B=16/20/50 (24 tasks) exit 1 BY DESIGN — pre-registered per-lane gate (arm vs own-composition library-PDIP ref, 1e-9) FAILED on 2-40 lanes/task incl. pdip/on rows, JSONs written first (28 captured JSONs on RAL); B=100 (17-19, 29-31) OOM ~74 GiB = the pre-registered memory-limit row, no JSON. Nothing to resubmit; gate not loosened.
-- ral-jobs-prev: capture 350659 (array 0-3: delaunay/rectangular x pix1/pix2) → replay 350663 (array 4-37, afterok:350659), submitted 2026-09-24 from RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/certified-solver-phase-c1-lane-rate @ f59f84d; libs on RAL = local mains (PyAutoArray 7fa8d271 incl. #567). lensed_source.fits seeded from RAL main (sha 5256cba0…, differs from laptop 091c9052…; phase B read the RAL copy).
-- resume: awaiting human /prm merge
-- heart-red-override:
-  - date: 2026-09-25
-  - authorization: live human replied "do these:" to the agent's item "Heart RED override for shipping C1. The RED is release validation FAILED (stage integrate), and the YELLOW reasons are the autolens cluster/weak notebook failures and manifest drift. None of it is from this branch. The PR body is drafted and ready, and on your go I push and open the PR. Merging still waits for green CI and your /prm."
-  - red-reasons: "release validation FAILED (stage integrate)"
-  - passed: build_readme.py --check exit 0; check_submits.py --check 11 contracted / 0 failing; pytest scripts/misc/test 834 passed / 5 skipped at 78cd546
-  - scope: commit/push/pending-release PR only; merge not authorized; Heart remains RED for release; the PR does not fix Heart. Recorded on issue #304 (issuecomment-5838071395) and in the PR body.
-- summary: Certified-positive-solver phase C1: capture real Nautilus proposal batches at production n_batch=20 (HST fixed-light, Delaunay N=1500 + rectangular), replay on A100 fp64 under certified+fallback none jit(vmap) for the uncertified-lane rate, matched timing at B=16/20/50/100, verdict gates C2 (draft/feature/autofit/certified_solver_batched_guard_c2.md).
-
 ## abell-1201-point-mass
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/133
 - issued: 2026-09-22

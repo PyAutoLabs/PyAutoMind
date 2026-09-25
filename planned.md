@@ -20,7 +20,7 @@
 - affected-repos:
   - autolens_profiling
   - euclid_strong_lens_modeling_pipeline
-- blocked-by: certified-solver-phase-c1-lane-rate (autolens_profiling); vis-lp-inspection-bundle (euclid_strong_lens_modeling_pipeline)
+- blocked-by: vis-lp-inspection-bundle (euclid_strong_lens_modeling_pipeline) — the autolens_profiling claim (certified-solver-phase-c1-lane-rate) cleared 2026-09-25
 - note: Phase 2 of autolens_inference#13 — apply phase 1's activate.sh block and drop the 103 /tmp cache lines in autolens_profiling hpc/ submits once the claims clear.
 
 ## vis-magnitude-catalogue-top1000
